@@ -131,23 +131,23 @@ manager: dougeby
 
 #### Verify that synclets are distributed and compiled on the client (they will be stored in root\ccm\cimodels namespace)  
 
-1.  Load Windows Management Instrumentation Tester (WBEMTEST.EXE).  
+1. Load Windows Management Instrumentation Tester (WBEMTEST.EXE).  
 
-2.  Connect to the root\ccm\cimodels namespace.  
+2. Connect to the root\ccm\cimodels namespace.  
 
-3.  Click **Query**, and then enter the below query:  
+3. Click **Query**, and then enter the below query:  
 
-    ```  
-    select * from ccm_handlersynclet  
-    ```  
+   ```  
+   select * from ccm_handlersynclet  
+   ```  
 
-4.  The results should appear similar to the below list:  
+4. The results should appear similar to the below list:  
 
-     \<*Technology*>_Detect_Synclet.ActionType="Detect",AppDeliveryTypeId="ScopeId\_ …  
+    \<*Technology*>*Detect_Synclet.ActionType="Detect",AppDeliveryTypeId="ScopeId\\* …  
 
-     \<*Technology*>_Install_Synclet.ActionType="Install" ,AppDeliveryTypeId="ScopeId\_ …  
+    \<*Technology*>*Install_Synclet.ActionType="Install" ,AppDeliveryTypeId="ScopeId\\* …  
 
-     \<*Technology*>_Uninstall_Synclet.ActionType="Uninstall" ,AppDeliveryTypeId="ScopeId_ …  
+    \<*Technology*>_Uninstall_Synclet.ActionType="Uninstall" ,AppDeliveryTypeId="ScopeId_ …  
 
 #### Ensure that each action performs as expected on the client  
 
@@ -155,9 +155,9 @@ manager: dougeby
 
 > [!NOTE]
 >  The deployment settings will impact validation of each action on the client.  
->   
->  -   **Available** - If the application is deployed to a user, the user sees the published application in the Application Catalog and can request it on demand. If the application is deployed to a device, the user will see it in the Software Center and can install it on demand.  
-> -   **Required** - The application is deployed automatically, according to the configured schedule. However, a user can track the application deployment status and install the application before the deadline by using the Software Center.  
+> 
+> - **Available** - If the application is deployed to a user, the user sees the published application in the Application Catalog and can request it on demand. If the application is deployed to a device, the user will see it in the Software Center and can install it on demand.  
+>   -   **Required** - The application is deployed automatically, according to the configured schedule. However, a user can track the application deployment status and install the application before the deadline by using the Software Center.  
 
 ## See Also  
  [Scenario: Extending Application Management](../../develop/apps/scenario--extending-application-management.md)   

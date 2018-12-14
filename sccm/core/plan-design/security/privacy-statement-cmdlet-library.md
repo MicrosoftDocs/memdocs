@@ -36,11 +36,11 @@ This usage data feature is enabled by default. The System Center Configuration M
 
  To fully opt out, set these two registry key values. They are for each of the Event Tracing for Windows (ETW) providers:  
 
--   HKLM\Software\Microsoft\ConfigMgr10\PowerShell\Microsoft.ConfigurationManagement.PowerShell.Provider:CeipLevel=0 (opts out of usage data for the drive provider)  
+- HKLM\Software\Microsoft\ConfigMgr10\PowerShell\Microsoft.ConfigurationManagement.PowerShell.Provider:CeipLevel=0 (opts out of usage data for the drive provider)  
 
--   HKLM\Software\Microsoft\ConfigMgr10\PowerShell\Microsoft.ConfigurationManagement.PowerShell.Cmdlets:CeipLevel=0 (opts out of usage data for the cmdlets)  
+- HKLM\Software\Microsoft\ConfigMgr10\PowerShell\Microsoft.ConfigurationManagement.PowerShell.Cmdlets:CeipLevel=0 (opts out of usage data for the cmdlets)  
 
- Changes to the usage data settings are specific to the computer where they're made.  
+  Changes to the usage data settings are specific to the computer where they're made.  
 
 
 ## Next steps

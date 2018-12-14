@@ -15,13 +15,13 @@ ms.author: aaroncz
 # Create user data and profiles configuration items in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 User data and profiles configuration items in System Center Configuration Manager contain settings that can manage folder redirection, offline files and roaming profiles on computers that run Windows 8 and later for users in your hierarchy. For example, you can:  
 
--   Redirect a user’s Documents folder to a network share.  
+- Redirect a user’s Documents folder to a network share.  
 
--   Ensure that specified files stored on the network are available on a user’s computer when the network connection is unavailable.  
+- Ensure that specified files stored on the network are available on a user’s computer when the network connection is unavailable.  
 
--   Configure which files in a user’s roaming profile are synchronized with a network share when the user logs on and off.  
+- Configure which files in a user’s roaming profile are synchronized with a network share when the user logs on and off.  
 
- Unlike other configuration items in Configuration Manager, you do not add user data and profile configuration items to a configuration baseline which you then deploy. Instead, you deploy the configuration item directly by using the **Deploy User Data and Profiles Configuration Item** dialog box.  
+  Unlike other configuration items in Configuration Manager, you do not add user data and profile configuration items to a configuration baseline which you then deploy. Instead, you deploy the configuration item directly by using the **Deploy User Data and Profiles Configuration Item** dialog box.  
 
 > [!IMPORTANT]  
 >  You can only deploy user data and profiles configuration items to user collections.  
@@ -41,40 +41,40 @@ User data and profiles configuration items in System Center Configuration Manage
 
 ## Create a user data and profiles configuration item  
 
-1.  In the Configuration Manager console, click **Assets and Compliance** > **Compliance Settings** > **User Data and Profiles**.  
+1. In the Configuration Manager console, click **Assets and Compliance** > **Compliance Settings** > **User Data and Profiles**.  
 
-3.  On the **Home** tab, in the **Create** group, click **Create User Data and Profiles Configuration Item**.  
+2. On the **Home** tab, in the **Create** group, click **Create User Data and Profiles Configuration Item**.  
 
-4.  On the **General** page of the **Create User Data and Profiles Configuration Item Wizard**, specify the following information:  
+3. On the **General** page of the **Create User Data and Profiles Configuration Item Wizard**, specify the following information:  
 
-    -   **Name:** Enter a unique name for the configuration item. You can use a maximum of 256 characters.  
+   -   **Name:** Enter a unique name for the configuration item. You can use a maximum of 256 characters.  
 
-    -   **Description:** Provide a description that gives an overview of the configuration item and other relevant information that helps to identify it in the Configuration Manager console. You can use a maximum of 256 characters.  
+   -   **Description:** Provide a description that gives an overview of the configuration item and other relevant information that helps to identify it in the Configuration Manager console. You can use a maximum of 256 characters.  
 
-    -   **Folder redirection:** Check this box if you want to configure settings for folder redirection for this configuration item.  
+   -   **Folder redirection:** Check this box if you want to configure settings for folder redirection for this configuration item.  
 
-    -   **Offline files:** Check this box if you want to configure settings for offline files for this configuration item.  
+   -   **Offline files:** Check this box if you want to configure settings for offline files for this configuration item.  
 
-    -   **Roaming user profiles:** Check this box if you want to configure settings for roaming user profiles for this configuration item.  
+   -   **Roaming user profiles:** Check this box if you want to configure settings for roaming user profiles for this configuration item.  
 
-5.  On the **Folder Redirection** page of the **Create User Data and Profiles Configuration Item Wizard**, specify how you want the client computers of users that receive this configuration item to manage folder redirection. You can configure settings for any device the user logs onto or for only the user’s primary devices. For more information about folder redirection, see your Windows Server documentation.  
+4. On the **Folder Redirection** page of the **Create User Data and Profiles Configuration Item Wizard**, specify how you want the client computers of users that receive this configuration item to manage folder redirection. You can configure settings for any device the user logs onto or for only the user’s primary devices. For more information about folder redirection, see your Windows Server documentation.  
 
-    > [!NOTE]  
-    >  This page only appears if you checked **Folder redirection** on the **General** page of the wizard.  
+   > [!NOTE]  
+   >  This page only appears if you checked **Folder redirection** on the **General** page of the wizard.  
 
-6.  On the **Offline Files** page of the **Create User Data and Profiles Configuration Item Wizard**, you can enable or disable the use of offline files for users that receive this configuration item and configure settings for the behavior of the offline files. You can also specify offline files that will always be available on any computer that the user logs on to. For more information about offline files, see your Windows Server documentation.  
+5. On the **Offline Files** page of the **Create User Data and Profiles Configuration Item Wizard**, you can enable or disable the use of offline files for users that receive this configuration item and configure settings for the behavior of the offline files. You can also specify offline files that will always be available on any computer that the user logs on to. For more information about offline files, see your Windows Server documentation.  
 
-    > [!NOTE]  
-    >  This page only appears if you checked the box **Offline files** on the **General** page of the wizard.  
+   > [!NOTE]  
+   >  This page only appears if you checked the box **Offline files** on the **General** page of the wizard.  
 
-7.  On the **Roaming Profiles** page of the **Create User Data and Profiles Configuration Item Wizard**, you can configure whether roaming profiles are available on computers that the user logs onto and also configure further information about how these profiles behave. For more information about roaming profiles, see your Windows Server documentation.  
+6. On the **Roaming Profiles** page of the **Create User Data and Profiles Configuration Item Wizard**, you can configure whether roaming profiles are available on computers that the user logs onto and also configure further information about how these profiles behave. For more information about roaming profiles, see your Windows Server documentation.  
 
-    > [!NOTE]  
-    >  This page only appears if you checked the box **Roaming user profiles** on the **General** page of the wizard.  
+   > [!NOTE]  
+   >  This page only appears if you checked the box **Roaming user profiles** on the **General** page of the wizard.  
 
-8.  Complete the wizard.  
+7. Complete the wizard.  
 
- The new user data and profiles configuration item is shown in the **User Data and Profiles** node of the **Assets and Compliance** workspace.  
+   The new user data and profiles configuration item is shown in the **User Data and Profiles** node of the **Assets and Compliance** workspace.  
 
 ## Deploy a user data and profiles configuration item  
 

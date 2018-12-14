@@ -18,21 +18,21 @@ Use the System Center Configuration Manager**Mac OS X (custom)** configuration i
   
 ### To create a custom Mac OS X configuration item  
   
-1.  In the Configuration Manager console, click **Assets and compliance**.  
+1. In the Configuration Manager console, click **Assets and compliance**.  
   
-2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then click **Configuration Items**.  
+2. In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then click **Configuration Items**.  
   
-3.  On the **Home** tab, in the **Create** group, click **Create Configuration Item**.  
+3. On the **Home** tab, in the **Create** group, click **Create Configuration Item**.  
   
-4.  On the **General** page of the **Create Configuration Item Wizard**, specify a name, and optional description for the configuration item.  
+4. On the **General** page of the **Create Configuration Item Wizard**, specify a name, and optional description for the configuration item.  
   
-5.  Under **Specify the type of configuration item that you want to create**, select **Mac OS X (custom)**.  
+5. Under **Specify the type of configuration item that you want to create**, select **Mac OS X (custom)**.  
   
-6.  Click **Categories** if you create and assign categories to help you search and filter configuration items in the Configuration Manager console.  
+6. Click **Categories** if you create and assign categories to help you search and filter configuration items in the Configuration Manager console.  
   
-7.  On the **Supported Platforms** page of the wizard, select the specific Mac OS X versions that will evaluate the configuration item.  
+7. On the **Supported Platforms** page of the wizard, select the specific Mac OS X versions that will evaluate the configuration item.  
   
-8.  On the **Settings** page of the wizard, you'll add new settings that will be evaluated for compliance on Mac computers. Click **New** to open the **Create Setting** dialog box.  
+8. On the **Settings** page of the wizard, you'll add new settings that will be evaluated for compliance on Mac computers. Click **New** to open the **Create Setting** dialog box.  
   
 9. In the **Create Setting** dialog box, enter a unique name and a description for the setting.  
   
@@ -157,9 +157,9 @@ Use the System Center Configuration Manager**Mac OS X (custom)** configuration i
   
 15. On the **Summary** page, confirm the settings for the new configuration item then, complete the wizard.  
   
- The new configuration item is displayed in the **Configuration Items** node of the **Assets and Compliance** workspace.  
+    The new configuration item is displayed in the **Configuration Items** node of the **Assets and Compliance** workspace.  
   
- If you now want to add this configuration item to a configuration baseline, see [How to create configuration baselines in System Center Configuration Manager](../../compliance/deploy-use/create-configuration-baselines.md).  
+    If you now want to add this configuration item to a configuration baseline, see [How to create configuration baselines in System Center Configuration Manager](../../compliance/deploy-use/create-configuration-baselines.md).  
   
 ## See Also  
  [Configuration items for devices managed with the System Center Configuration Manager client](../../compliance/deploy-use/configuration-items-for-devices-managed-with-the-client.md)

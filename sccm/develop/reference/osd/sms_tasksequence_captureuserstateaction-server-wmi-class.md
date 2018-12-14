@@ -117,93 +117,93 @@ Class SMS_TaskSequence_CaptureUserStateAction : SMS_TaskSequence_Action
 
  FileAccess ….  Possible values are:  
 
--   Normal (default)  
+- Normal (default)  
 
--   VSS  
+- VSS  
 
- `Mode`  
- Data type: `String`  
+  `Mode`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [Not_Null]  
+  Qualifiers: [Not_Null]  
 
- Mode that allows customization of the files captured by the USMT. Possible values are:  
+  Mode that allows customization of the files captured by the USMT. Possible values are:  
 
--   Simple (default)  
+- Simple (default)  
 
--   Advanced  
+- Advanced  
 
- This property is required.  
+  This property is required.  
 
- `Name`  
- Data type: `String`  
+  `Name`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [AllowedLen("1-100")]  
+  Qualifiers: [AllowedLen("1-100")]  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- `OfflineUserState`  
- Data type: `Boolean`  
+  `OfflineUserState`  
+  Data type: `Boolean`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [Not_Null, VariableName("_OSDMigrateOfflineUserState")]  
+  Qualifiers: [Not_Null, VariableName("_OSDMigrateOfflineUserState")]  
 
- `true` to migrate offline user state.  The default value is `false`.  
+  `true` to migrate offline user state.  The default value is `false`.  
 
- `SkipEncryptedFiles`  
- Data type: `Boolean`  
+  `SkipEncryptedFiles`  
+  Data type: `Boolean`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [Not_Null, VariableName("OSDMigrateSkipEncryptedFiles")]  
+  Qualifiers: [Not_Null, VariableName("OSDMigrateSkipEncryptedFiles")]  
 
- `true` to skip encrypted files. The default value is `false`.  
+  `true` to skip encrypted files. The default value is `false`.  
 
- The task sequence variable associated with this property is OSDMigrateSkipEncryptedFiles. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+  The task sequence variable associated with this property is OSDMigrateSkipEncryptedFiles. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
 
- `SupportedEnvironment`  
- Data type: `String`  
+  `SupportedEnvironment`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [Not_Null:ToInstance]  
+  Qualifiers: [Not_Null:ToInstance]  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- The default value of this property for this task sequence action is FullOS.  
+  The default value of this property for this task sequence action is FullOS.  
 
- `Timeout`  
- Data type: `UInt32`  
+  `Timeout`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- `UseHardlinks`  
- Data type: `Boolean`  
+  `UseHardlinks`  
+  Data type: `Boolean`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [Not_Null, VariableName("_OSDMigrateUseHardlinks")]  
+  Qualifiers: [Not_Null, VariableName("_OSDMigrateUseHardlinks")]  
 
- `true` to ….  The default value is `false`.  
+  `true` to ….  The default value is `false`.  
 
- `UsmtPackageID`  
- Data type: `String`  
+  `UsmtPackageID`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [Not_Null, VariableName("_OSDMigrateUsmtPackageID"), TaskSequencePackage]  
+  Qualifiers: [Not_Null, VariableName("_OSDMigrateUsmtPackageID"), TaskSequencePackage]  
 
- The ID of the Configuration Manager package that contains USMT binaries. This property is required.  
+  The ID of the Configuration Manager package that contains USMT binaries. This property is required.  
 
- The task sequence variable associated with this property is _OSDMigrateUsmtPackageID. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+  The task sequence variable associated with this property is _OSDMigrateUsmtPackageID. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
 
 ## Remarks  
  Class qualifiers for this class include:  

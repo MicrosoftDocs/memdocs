@@ -141,29 +141,29 @@ Before you can create, modify, and run reports in the System Center Configuratio
 > [!IMPORTANT]  
 >  The actions in the following list are performed by using the credentials of the account that is configured for the SMS_Executive service, which typically is the site server local system account.  
 
--   Installs the reporting services point site role.  
+- Installs the reporting services point site role.  
 
--   Creates the data source in Reporting Services with the stored credentials that you specified in the wizard. This is the Windows user account and password that Reporting Services uses to connect to the site database when you run reports.  
+- Creates the data source in Reporting Services with the stored credentials that you specified in the wizard. This is the Windows user account and password that Reporting Services uses to connect to the site database when you run reports.  
 
--   Creates the Configuration Manager root folder in Reporting Services.  
+- Creates the Configuration Manager root folder in Reporting Services.  
 
--   Adds the **ConfigMgr Report Users** and **ConfigMgr Report Administrators** security roles in Reporting Services.  
+- Adds the **ConfigMgr Report Users** and **ConfigMgr Report Administrators** security roles in Reporting Services.  
 
--   Creates subfolders and deploys Configuration Manager reports from %ProgramFiles%\SMS_SRSRP to Reporting Services.  
+- Creates subfolders and deploys Configuration Manager reports from %ProgramFiles%\SMS_SRSRP to Reporting Services.  
 
--   Adds the **ConfigMgr Report Users** role in Reporting Services to the root folders for all user accounts in Configuration Manager that have **Site Read** rights.  
+- Adds the **ConfigMgr Report Users** role in Reporting Services to the root folders for all user accounts in Configuration Manager that have **Site Read** rights.  
 
--   Adds the **ConfigMgr Report Administrators** role in Reporting Services to the root folders for all user accounts in Configuration Manager that have **Site Modify** rights.  
+- Adds the **ConfigMgr Report Administrators** role in Reporting Services to the root folders for all user accounts in Configuration Manager that have **Site Modify** rights.  
 
--   Retrieves the mapping between report folders and Configuration Manager secured object types (maintained in the Configuration Manager site database).  
+- Retrieves the mapping between report folders and Configuration Manager secured object types (maintained in the Configuration Manager site database).  
 
--   Configures the following rights for administrative users in Configuration Manager to specific report folders in Reporting Services:  
+- Configures the following rights for administrative users in Configuration Manager to specific report folders in Reporting Services:  
 
-    -   Adds users and assigns the **ConfigMgr Report Users** role to the associated report folder for administrative users who have **Run Report** permissions for the Configuration Manager object.  
+  - Adds users and assigns the **ConfigMgr Report Users** role to the associated report folder for administrative users who have **Run Report** permissions for the Configuration Manager object.  
 
-    -   Adds users and assigns the **ConfigMgr Report Administrators** role to the associated report folder for administrative users who have **Modify Report** permissions for the Configuration Manager object.  
+  - Adds users and assigns the **ConfigMgr Report Administrators** role to the associated report folder for administrative users who have **Modify Report** permissions for the Configuration Manager object.  
 
-     Configuration Manager connects to Reporting Services and sets the permissions for users on the Configuration Manager and Reporting Services root folders and specific report folders. After the initial installation of the reporting services point, Configuration Manager connects to Reporting Services in a 10-minute interval to verify that the user rights configured on the report folders are the associated rights that are set for Configuration Manager users. When users are added or user rights are modified on the report folder by using Reporting Services Report Manager, Configuration Manager overwrites those changes by using the role-based assignments stored in the site database. Configuration Manager also removes users that do not have Reporting rights in Configuration Manager.  
+    Configuration Manager connects to Reporting Services and sets the permissions for users on the Configuration Manager and Reporting Services root folders and specific report folders. After the initial installation of the reporting services point, Configuration Manager connects to Reporting Services in a 10-minute interval to verify that the user rights configured on the report folders are the associated rights that are set for Configuration Manager users. When users are added or user rights are modified on the report folder by using Reporting Services Report Manager, Configuration Manager overwrites those changes by using the role-based assignments stored in the site database. Configuration Manager also removes users that do not have Reporting rights in Configuration Manager.  
 
 ##  <a name="BKMK_SecurityRoles"></a> Reporting Services security roles for Configuration Manager  
  When Configuration Manager installs the reporting services point, adds the following security roles in Reporting Services:  

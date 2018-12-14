@@ -47,13 +47,13 @@ Class SMS_ObjectToClassPermissions_a : SMS_BaseAssociation
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Read (read-only)  
+- Read (read-only)  
 
--   Association: ToInstance  
+- Association: ToInstance  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- This class relates an instance of [SMS_SecuredObject Server WMI Class](../../../develop/reference/misc/sms_securedobject-server-wmi-class.md) with an instance of [SMS_UserClassPermissions Server WMI Class](../../../develop/reference/misc/sms_userclasspermissions-server-wmi-class.md).  
+  This class relates an instance of [SMS_SecuredObject Server WMI Class](../../../develop/reference/misc/sms_securedobject-server-wmi-class.md) with an instance of [SMS_UserClassPermissions Server WMI Class](../../../develop/reference/misc/sms_userclasspermissions-server-wmi-class.md).  
 
 ## Requirements  
 

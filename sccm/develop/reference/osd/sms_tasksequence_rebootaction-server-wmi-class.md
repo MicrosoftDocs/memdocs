@@ -120,18 +120,18 @@ Class SMS_TaskSequence_RebootAction : SMS_TaskSequence_Action
 
  The operating system to use for reboot. Possible values are:  
 
--   HD  
+- HD  
 
--   WinPE  
+- WinPE  
 
- `Timeout`  
- Data type: `UInt32`  
+  `Timeout`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
 ## Remarks  
  Class qualifiers for this class include:  

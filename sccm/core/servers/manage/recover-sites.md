@@ -97,9 +97,9 @@ Use this option when you've already recovered the Configuration Manager site dat
 
 - Configuration Manager can recover the site database from any of the following processes:  
 
-    - The Configuration Manager backup maintenance task  
-    - A site database backup using Data Protection Manager (DPM)  
-    - Another backup process   
+  - The Configuration Manager backup maintenance task  
+  - A site database backup using Data Protection Manager (DPM)  
+  - Another backup process   
 
     After you restore the site database by using a method outside Configuration Manager, run Setup, and select this option to complete the site database recovery.  
 

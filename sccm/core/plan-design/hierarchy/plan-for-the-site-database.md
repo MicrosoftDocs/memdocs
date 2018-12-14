@@ -25,7 +25,7 @@ The site database server is a computer that runs a supported version of Microsof
 
 -  For non-SQL Availability Group usage the Database Recovery Model must be set to SIMPLE  
 
-Further information on SQL Recovery Modes can be found in [Recovery Models (SQL Server)] (https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server).
+Further information on SQL Recovery Modes can be found in [Recovery Models (SQL Server)](https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server).
 
 The following SQL Server configurations can be used to host the site database:  
 

@@ -29,17 +29,17 @@ This topic contains security and privacy information for software inventory in S
 ### Security issues for software inventory  
  Collecting inventory exposes potential vulnerabilities. Attackers can perform the following:  
 
--   Send invalid data, which will be accepted by the management point even when the software inventory client setting is disabled and file collection is not enabled.  
+- Send invalid data, which will be accepted by the management point even when the software inventory client setting is disabled and file collection is not enabled.  
 
--   Send excessively large amounts of data in a single file and in lots of files, which might cause a denial of service.  
+- Send excessively large amounts of data in a single file and in lots of files, which might cause a denial of service.  
 
--   Access inventory information as it is transferred to Configuration Manager.  
+- Access inventory information as it is transferred to Configuration Manager.  
 
- If users know that they can create a hidden file named **Skpswi.dat** and place it in the root of a client hard drive to exclude it from software inventory, you will not be able to collect software inventory data from that computer.  
+  If users know that they can create a hidden file named **Skpswi.dat** and place it in the root of a client hard drive to exclude it from software inventory, you will not be able to collect software inventory data from that computer.  
 
- Because a user with local administrative privileges can send any information as inventory data, do not consider inventory data that is collected by Configuration Manager to be authoritative.  
+  Because a user with local administrative privileges can send any information as inventory data, do not consider inventory data that is collected by Configuration Manager to be authoritative.  
 
- Software inventory is enabled by default as a client setting.  
+  Software inventory is enabled by default as a client setting.  
 
 ##  <a name="BKMK_Privacy_HardwareInventory"></a> Privacy information for software inventory  
  Hardware inventory allows you to retrieve any information that is stored in the registry and in WMI on Configuration Manager clients. Software inventory allows you to discover all files of a specified type or to collect any specified files from clients. Asset Intelligence enhances the inventory capabilities by extending hardware and software inventory and adding new license management functionality.  

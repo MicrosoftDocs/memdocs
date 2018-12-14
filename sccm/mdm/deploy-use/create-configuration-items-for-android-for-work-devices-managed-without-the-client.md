@@ -15,47 +15,47 @@ ms.author: aaroncz
 
 ### To create an Android for Work configuration item  
 
-1.  In the Configuration Manager console, click **Assets and compliance**.  
+1. In the Configuration Manager console, click **Assets and compliance**.  
 
-2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then click **Configuration Items**.  
+2. In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then click **Configuration Items**.  
 
-3.  On the **Home** tab, in the **Create** group, click **Create Configuration Item**.  
+3. On the **Home** tab, in the **Create** group, click **Create Configuration Item**.  
 
-4.  On the **General** page of the **Create Configuration Item Wizard**, specify a name, and optional description for the configuration item.  
+4. On the **General** page of the **Create Configuration Item Wizard**, specify a name, and optional description for the configuration item.  
 
-5.  Under **Specify the type of configuration item that you want to create**, select **Android for Work**.  
+5. Under **Specify the type of configuration item that you want to create**, select **Android for Work**.  
 
-6.  Choose **Categories** if you create and assign categories to help you search and filter configuration items in the Configuration Manager console.  
+6. Choose **Categories** if you create and assign categories to help you search and filter configuration items in the Configuration Manager console.  
 
-  Click **Next**.
+   Click **Next**.
 
-7.  On the **Device Settings** page of the wizard, select the settings groups that you want to configure. See [Android for Work configuration item settings](#android-for-work-configuration-item-settings-reference) for details, and then click **Next**.  
+7. On the **Device Settings** page of the wizard, select the settings groups that you want to configure. See [Android for Work configuration item settings](#android-for-work-configuration-item-settings-reference) for details, and then click **Next**.  
 
-  > [!TIP]  
-  >  If the setting that you want is not listed, select the **Configure additional settings that are not in the default setting groups check box**.  
+   > [!TIP]  
+   >  If the setting that you want is not listed, select the **Configure additional settings that are not in the default setting groups check box**.  
 
-9. On each settings page, configure the settings you require, and whether you want to remediate them when they are not compliant on devices (when this is supported).  
+8. On each settings page, configure the settings you require, and whether you want to remediate them when they are not compliant on devices (when this is supported).  
 
-10. For each settings group, you can also configure the severity that will be reported when a configuration item is found to be noncompliant from:  
+9. For each settings group, you can also configure the severity that will be reported when a configuration item is found to be noncompliant from:  
 
-    -   **None** - Devices that fail this compliance rule do not report a failure severity for Configuration Manager reports.  
+   -   **None** - Devices that fail this compliance rule do not report a failure severity for Configuration Manager reports.  
 
-    -   **Information** - Devices that fail this compliance rule report a failure severity of **Information** for Configuration Manager reports.  
+   -   **Information** - Devices that fail this compliance rule report a failure severity of **Information** for Configuration Manager reports.  
 
-    -   **Warning** - Devices that fail this compliance rule report a failure severity of **Warning** for Configuration Manager reports.  
+   -   **Warning** - Devices that fail this compliance rule report a failure severity of **Warning** for Configuration Manager reports.  
 
-    -   **Critical** - Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports.  
+   -   **Critical** - Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports.  
 
-    -   **Critical with event** - Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. This severity level is also be logged as a Windows event in the application event log.  
+   -   **Critical with event** - Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. This severity level is also be logged as a Windows event in the application event log.  
 
-11. On the **Platform Applicability** page of the wizard, review any settings that are not compatible with the supported platforms you selected earlier. You can go back and remove these settings, or you can continue.  
+10. On the **Platform Applicability** page of the wizard, review any settings that are not compatible with the supported platforms you selected earlier. You can go back and remove these settings, or you can continue.  
 
     > [!TIP]  
     >  Unsupported settings are not assessed for compliance.  
 
-12. Complete the wizard.  
+11. Complete the wizard.  
 
- You can view the new configuration item in the **Configuration Items** node of the **Assets and Compliance** workspace.  
+    You can view the new configuration item in the **Configuration Items** node of the **Assets and Compliance** workspace.  
 
 ##  Android for Work configuration item settings reference  
 

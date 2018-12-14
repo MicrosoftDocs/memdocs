@@ -20,11 +20,11 @@ The `CCM_ServiceWindow` Client WMI class is a client class, in Configuration Man
 ```  
 class CCM_ServiceWindow  
 {  
-    UInt32 Duration;  
-    Datetime EndTime;  
-    String ID;   
-    Datetime StartTime;  
-    UInt32 Type;   
+    UInt32 Duration;  
+    Datetime EndTime;  
+    String ID;   
+    Datetime StartTime;  
+    UInt32 Type;   
 };  
 ```  
 

@@ -40,16 +40,16 @@ Clients that are on the Internet or configured as Internet-only clients do not u
 
 ##  <a name="BKMK_BoundaryBestPractices"></a> Best practices for boundaries and boundary groups  
 
--   **Use a mix of the fewest boundaries that meet your needs:**  
-   In the past, we recommended the use of some boundary types over others. With changes to improve performance, we now recommend you use whichever boundary type or types you choose that work for your environment, and that let you use the fewest number of boundaries you can to simplify your management tasks.      
+- **Use a mix of the fewest boundaries that meet your needs:**  
+  In the past, we recommended the use of some boundary types over others. With changes to improve performance, we now recommend you use whichever boundary type or types you choose that work for your environment, and that let you use the fewest number of boundaries you can to simplify your management tasks.      
 
--   **Avoid overlapping boundaries for automatic site assignment:**  
-     Although each boundary group supports both site assignment configurations and those for content location, it is a best practice to create a separate set of  boundary groups to use only for site assignment. Meaning: ensure that each boundary in a boundary group is not a member of another boundary group with a different site assignment. This is because:  
+- **Avoid overlapping boundaries for automatic site assignment:**  
+   Although each boundary group supports both site assignment configurations and those for content location, it is a best practice to create a separate set of  boundary groups to use only for site assignment. Meaning: ensure that each boundary in a boundary group is not a member of another boundary group with a different site assignment. This is because:  
 
-    -   A single  boundary can be included in multiple boundary groups  
+  - A single  boundary can be included in multiple boundary groups  
 
-    -   Each boundary group can be associated with a different primary site for site assignment  
+  - Each boundary group can be associated with a different primary site for site assignment  
 
-    -   A client on a boundary that is a member of two different boundary groups with different site assignments will randomly select a site to join, which might not be the site you intend the client to join.  This configuration is called overlapping boundaries.  
+  - A client on a boundary that is a member of two different boundary groups with different site assignments will randomly select a site to join, which might not be the site you intend the client to join.  This configuration is called overlapping boundaries.  
 
-     Overlapping boundaries is not a problem for content location, and instead is often a desired  configuration that provides clients additional resources or content locations they can use.  
+    Overlapping boundaries is not a problem for content location, and instead is often a desired  configuration that provides clients additional resources or content locations they can use.  

@@ -57,51 +57,51 @@ Use this information to help decide whether to reload the boot image. The **Boot
 
  During site installation, Configuration Manager automatically adds boot images that are based on a WinPE version from the supported version of the Windows ADK. Depending on the version of Configuration Manager, you might be able to add boot images based on a different WinPE version from the supported version the Windows ADK. An error occurs when you try to add a boot image that contains an unsupported version of WinPE. The following list is the currently supported Windows ADK and WinPE versions: 
 
--   **Windows ADK version**  
+- **Windows ADK version**  
 
-     Windows ADK for Windows 10  
+   Windows ADK for Windows 10  
 
--   **Windows PE versions for boot images customizable from the Configuration Manager console**  
+- **Windows PE versions for boot images customizable from the Configuration Manager console**  
 
-     Windows PE 10  
+   Windows PE 10  
 
--   **Supported Windows PE versions for boot images not customizable from the Configuration Manager console**  
+- **Supported Windows PE versions for boot images not customizable from the Configuration Manager console**  
 
-     Windows PE 3.1<sup>1</sup> and Windows PE 5  
+   Windows PE 3.1<sup>1</sup> and Windows PE 5  
 
-     <sup>1</sup> You can only add a boot image to Configuration Manager when it is based on Windows PE 3.1. Upgrade the Windows AIK for Windows 7 (based on Windows PE 3.0) with the Windows AIK Supplement for Windows 7 SP1 (based on Windows PE 3.1). Download the Windows AIK Supplement for Windows 7 SP1 from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=5188).  
+   <sup>1</sup> You can only add a boot image to Configuration Manager when it is based on Windows PE 3.1. Upgrade the Windows AIK for Windows 7 (based on Windows PE 3.0) with the Windows AIK Supplement for Windows 7 SP1 (based on Windows PE 3.1). Download the Windows AIK Supplement for Windows 7 SP1 from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=5188).  
 
-     For example, use the Configuration Manager console to customize boot images based on Windows PE 10 from the Windows ADK for Windows 10. For a boot image based on Windows PE 5, customize it from a different computer using the version of DISM from the Windows ADK for Windows 8. Then add the custom boot image to the Configuration Manager console. For more information, see [Customize boot images](customize-boot-images.md).
+   For example, use the Configuration Manager console to customize boot images based on Windows PE 10 from the Windows ADK for Windows 10. For a boot image based on Windows PE 5, customize it from a different computer using the version of DISM from the Windows ADK for Windows 8. Then add the custom boot image to the Configuration Manager console. For more information, see [Customize boot images](customize-boot-images.md).
 
- Use the following procedure to manually add a boot image.  
+  Use the following procedure to manually add a boot image.  
 
 #### To add a boot image  
 
-1.  In the Configuration Manager console, click **Software Library**.  
+1. In the Configuration Manager console, click **Software Library**.  
 
-2.  In the **Software Library** workspace, expand **Operating Systems**, and then click **Boot Images**.  
+2. In the **Software Library** workspace, expand **Operating Systems**, and then click **Boot Images**.  
 
-3.  On the **Home** tab, in the **Create** group, click **Add Boot Image** to start the Add Boot Image Wizard.  
+3. On the **Home** tab, in the **Create** group, click **Add Boot Image** to start the Add Boot Image Wizard.  
 
-4.  On the **Data Source** page, specify the following options, and then click **Next**.  
+4. On the **Data Source** page, specify the following options, and then click **Next**.  
 
-    -   In the **Path** box, specify the path to the boot image WIM file.  
+   -   In the **Path** box, specify the path to the boot image WIM file.  
 
-         The specified path must be a valid network path in the UNC format. For example: \\\\<*servername*\\<*sharename*>\\<*bootimagename*>.wim.  
+        The specified path must be a valid network path in the UNC format. For example: \\\\<*servername*\\<*sharename*>\\<*bootimagename*>.wim.  
 
-    -   Select the boot image from the **Boot Image** drop-down list. If the WIM file contains multiple boot images, select the  appropriate image.  
+   -   Select the boot image from the **Boot Image** drop-down list. If the WIM file contains multiple boot images, select the  appropriate image.  
 
-5.  On the **General**  page, specify the following options, and then click **Next**.  
+5. On the **General**  page, specify the following options, and then click **Next**.  
 
-    -   In the **Name** box, specify a unique name for the boot image.  
+   -   In the **Name** box, specify a unique name for the boot image.  
 
-    -   In the **Version** box, specify a version number for the boot image.  
+   -   In the **Version** box, specify a version number for the boot image.  
 
-    -   In the **Comment** box, specify a brief description of how the boot image is used.  
+   -   In the **Comment** box, specify a brief description of how the boot image is used.  
 
-6.  Complete the wizard.  
+6. Complete the wizard.  
 
- The boot image is now listed in the **Boot Image** node of the Configuration Manager console. Before using the boot image to deploy an operating system, distribute the boot image to distribution points. 
+   The boot image is now listed in the **Boot Image** node of the Configuration Manager console. Before using the boot image to deploy an operating system, distribute the boot image to distribution points. 
 
 > [!NOTE]  
 >  In the **Boot Image** node of the console, the **Size (KB)** column displays the decompressed size for each boot image. When the site sends a boot image over the network, it sends a compressed copy. This copy is typically smaller than the size listed in the **Size (KB)** column.  
@@ -122,13 +122,13 @@ Use this information to help decide whether to reload the boot image. The **Boot
 ##  <a name="BKMK_ModifyBootImages"></a> Modify a boot image  
  You can add or remove device drivers to the image or edit the properties associated with the boot image. The device drivers that you add or remove can include network adapters or mass storage device drivers. Consider the following factors when you modify boot images:  
 
--   Import and enable the device drivers in the device driver catalog before adding them to the boot image.  
+- Import and enable the device drivers in the device driver catalog before adding them to the boot image.  
 
--   When you modify a boot image, the boot image does not change any of the associated packages that the boot image references.  
+- When you modify a boot image, the boot image does not change any of the associated packages that the boot image references.  
 
--   After you make changes to a boot image, **update** the boot image on the distribution points that already have it. This process makes the most current version of the boot image available to clients. For more information, see [Manage content you have distributed](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_manage).  
+- After you make changes to a boot image, **update** the boot image on the distribution points that already have it. This process makes the most current version of the boot image available to clients. For more information, see [Manage content you have distributed](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_manage).  
 
- Use the following procedure to modify a boot image.  
+  Use the following procedure to modify a boot image.  
 
 #### To modify the properties of a boot image  
 
@@ -244,14 +244,14 @@ Use this information to help decide whether to reload the boot image. The **Boot
 ##  <a name="BKMK_BootImageLanguage"></a> Configure multiple languages for boot image deployment  
  Boot images are language neutral. This functionality allows you to use one boot image to display the task sequence text in multiple languages while in WinPE. Include the appropriate language support from the boot image **Optional Components** tab. Then set the appropriate task sequence variable to indicate which language to display. The language of the deployed operating system is independent from the language in WinPE. The language that WinPE displays to the user is determined as follows:  
 
--   When a user runs the task sequence from an existing operating system, Configuration Manager automatically uses the language configured for the user. When the task sequence automatically runs as the result of a mandatory deployment deadline, Configuration Manager uses the language of the operating system.  
+- When a user runs the task sequence from an existing operating system, Configuration Manager automatically uses the language configured for the user. When the task sequence automatically runs as the result of a mandatory deployment deadline, Configuration Manager uses the language of the operating system.  
 
--   For operating system deployments that use PXE or media, set the language ID value in the **SMSTSLanguageFolder** variable as part of a prestart command. When the computer boots to WinPE, messages are displayed in the language that you specified in the variable. If there is an error accessing the language resource file in the specified folder, or you do not set the variable, WinPE displays messages in the default language.  
+- For operating system deployments that use PXE or media, set the language ID value in the **SMSTSLanguageFolder** variable as part of a prestart command. When the computer boots to WinPE, messages are displayed in the language that you specified in the variable. If there is an error accessing the language resource file in the specified folder, or you do not set the variable, WinPE displays messages in the default language.  
 
-    > [!NOTE]  
-    >  When the media is protected with a password, the text that prompts the user for the password is always displayed in the WinPE language.  
+  > [!NOTE]  
+  >  When the media is protected with a password, the text that prompts the user for the password is always displayed in the WinPE language.  
 
- Use the following procedure to set the WinPE language for PXE or media-initiated operating system deployments.  
+  Use the following procedure to set the WinPE language for PXE or media-initiated operating system deployments.  
 
 #### To set the Windows PE language for a PXE or media-initiated operating system deployment  
 

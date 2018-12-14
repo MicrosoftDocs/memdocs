@@ -53,6 +53,6 @@ After hybrid setup is complete, devices can be enrolled in Configuration Manager
 
 Looking for Intune without Configuration Manager?
 > [!div class="button"]
-[View Intune docs >](https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune)
+> [View Intune docs >](https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune)
 
 

@@ -34,6 +34,7 @@ System Center Configuration Manager provides comprehensive control over feature 
 
 
 ## Key articles about adopting Windows as a service
+
 | Article        | Description          | 
 | ------------- |-------------|
 |[Manage Windows as a service](/sccm/osd/deploy-use/manage-windows-as-a-service)|Explains how to use servicing plans to deploy Windows 10 feature updates.|

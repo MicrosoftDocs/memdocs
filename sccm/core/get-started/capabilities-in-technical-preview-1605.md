@@ -16,11 +16,11 @@ This article introduces the features that are available in the Technical Preview
 
  **Known Issues in this Technical Preview:**  
 
--   With Technical Preview 1605, if you update the properties of a management point after it is installed, you might see a console error which forces the console to close.  If this happens, you can uninstall the management point and then reinstall the management point using the desired settings. Alternately, you  can modify the management point prior to installing  Technical Preview 1605.  
+- With Technical Preview 1605, if you update the properties of a management point after it is installed, you might see a console error which forces the console to close.  If this happens, you can uninstall the management point and then reinstall the management point using the desired settings. Alternately, you  can modify the management point prior to installing  Technical Preview 1605.  
 
--   When you use the Windows Store for Business feature with the Technical Preview 1604 and then upgrade to Technical Preview 1605, you can no longer view  the onboarding data. All other functionally continues to work. If you onboarded with the Technical Preview 1604, you remain onboarded after you install Technical Preview 1605 and need take no further action.  
+- When you use the Windows Store for Business feature with the Technical Preview 1604 and then upgrade to Technical Preview 1605, you can no longer view  the onboarding data. All other functionally continues to work. If you onboarded with the Technical Preview 1604, you remain onboarded after you install Technical Preview 1605 and need take no further action.  
 
- **The following are new features you can try out with this version.**  
+  **The following are new features you can try out with this version.**  
 
 ##  <a name="BKMK_PerAppVPN"></a> Per-app VPN for Windows 10 devices  
  For Windows 10 devices managed using Configuration Manager with Intune, you can add a list of apps that automatically open a VPN connection that you have configured through the Configuration Manager admin console. You have the option of restricting VPN traffic to those apps, or you can continue to allow all traffic through the VPN connection.  
@@ -48,15 +48,15 @@ This article introduces the features that are available in the Technical Preview
 
  To configure the grace period, take the following actions:  
 
-1.  On the **Computer Agent** page of client settings, configure the new property **Grace period for enforcement after deployment deadline (hours)** with a value between **1** and **120** hours.  
+1. On the **Computer Agent** page of client settings, configure the new property **Grace period for enforcement after deployment deadline (hours)** with a value between **1** and **120** hours.  
 
-2.  In a new application deployment, or in the properties of an existing deployment, on the **Scheduling** page, select the checkbox **Delay enforcement of this deployment according to user preferences**, up to the grace period defined in client settings.  
+2. In a new application deployment, or in the properties of an existing deployment, on the **Scheduling** page, select the checkbox **Delay enforcement of this deployment according to user preferences**, up to the grace period defined in client settings.  
 
-     All deployments that have this check-box selected and are which are targeted to devices to which you also deployed the client setting will use the grace period.  
+    All deployments that have this check-box selected and are which are targeted to devices to which you also deployed the client setting will use the grace period.  
 
- In this release, the grace period you configure is not used by client devices. If you configure a grace period and select the checkbox, the application will be installed in the first non-business window that the user configured after the deadline.  
+   In this release, the grace period you configure is not used by client devices. If you configure a grace period and select the checkbox, the application will be installed in the first non-business window that the user configured after the deadline.  
 
- Similar options have been added to the software updates deployment wizard,  automatic deployment rules wizard, and properties pages. However, these are not currently implemented in this technical preview.  
+   Similar options have been added to the software updates deployment wizard,  automatic deployment rules wizard, and properties pages. However, these are not currently implemented in this technical preview.  
 
 ##  <a name="BKMK_Remote"></a> New experience for remote device actions  
  The experience for performing remote device actions from the Configuration Manager console has been improved.  
@@ -66,24 +66,24 @@ Common actions such as **Retire/Wipe**, **Reset Passcode**, **Remote Lock**, and
 
  You can find the status for each of these operations in the following places:  
 
--   In the details pane when you select a device from the **Devices** node.  
+- In the details pane when you select a device from the **Devices** node.  
 
--   On the **Properties** page for a device.  
+- On the **Properties** page for a device.  
 
--   On the main page of the **Devices** node (not all columns might be visible by default).  
+- On the main page of the **Devices** node (not all columns might be visible by default).  
 
- For more information about iOS Activation Lock bypass, see [Help protect iOS devices with Activation Lock bypass for Configuration Manager](/sccm/mdm/deploy-use/manage-ios-activation-lock), in particular, the **Current known issues with Activation Lock bypass in the Configuration Manager Technical Preview** section.  
+  For more information about iOS Activation Lock bypass, see [Help protect iOS devices with Activation Lock bypass for Configuration Manager](/sccm/mdm/deploy-use/manage-ios-activation-lock), in particular, the **Current known issues with Activation Lock bypass in the Configuration Manager Technical Preview** section.  
 
 ##  <a name="BKMK_WSFB"></a> Windows Store for Business apps  
  The [Windows Store for Business](https://www.microsoft.com/business-store) is where you can find and purchase apps for your organization, individually or in volume. By connecting the store to Configuration Manager, you can manage volume-purchased apps from the Configuration Manager console, for example:  
 
--   You can synchronize the list of purchased apps with Configuration Manager  
+- You can synchronize the list of purchased apps with Configuration Manager  
 
--   Apps that are synchronized appear in the Configuration Manager console and you can deploy these like any other apps  
+- Apps that are synchronized appear in the Configuration Manager console and you can deploy these like any other apps  
 
--   Every 24 hours, Configuration Manager downloads app licensing information from the store, and you can review this in the Configuration Manager console  
+- Every 24 hours, Configuration Manager downloads app licensing information from the store, and you can review this in the Configuration Manager console  
 
- In the 1604 technical preview release, you could synchronize and view apps from the Windows Store for Business in the Configuration Manager console. In this release, we have added the ability to create and deploy Configuration Manager applications from synchronized store apps.  
+  In the 1604 technical preview release, you could synchronize and view apps from the Windows Store for Business in the Configuration Manager console. In this release, we have added the ability to create and deploy Configuration Manager applications from synchronized store apps.  
 
 ### Set up Windows Store for Business synchronization  
 
@@ -134,11 +134,11 @@ Common actions such as **Retire/Wipe**, **Reset Passcode**, **Remote Lock**, and
 
  Create and deploy a Configuration Manager application from a Windows Store for Business offline licensed app.  
 
-1.  In the **Software Library** workspace of the Configuration Manager console, expand **Application Management**, then click **License Information for Store Apps**.  
+1. In the **Software Library** workspace of the Configuration Manager console, expand **Application Management**, then click **License Information for Store Apps**.  
 
-2.  Choose the app you want to deploy, then, in the **Home** tab, in the **Create** group, click **Create Application**.  
+2. Choose the app you want to deploy, then, in the **Home** tab, in the **Create** group, click **Create Application**.  
 
- A Configuration Manager application is created containing the Windows Store for Business app. You can then deploy and monitor this application as you would any other Configuration Manager application.  
+   A Configuration Manager application is created containing the Windows Store for Business app. You can then deploy and monitor this application as you would any other Configuration Manager application.  
 
 > [!IMPORTANT]  
 >  When you create a Configuration Manager application with a single deployment type from an offline licensed app, this can be deployed to devices that are MDM managed and also managed with the Configuration Manager client. If you try to deploy an app with multiple deployment types, the installation will fail.  
@@ -222,29 +222,29 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 
 ### Deploy the Company Portal application and configuration  
 
-1.  Use the configuration script included with the technical preview to prepare the Company Portal deployment and configuration:  
+1. Use the configuration script included with the technical preview to prepare the Company Portal deployment and configuration:  
 
-    1.  Open an elevated PowerShell command window.  
+   1. Open an elevated PowerShell command window.  
 
-    2.  Run **set-executionPolicy RemoteSigned**  
+   2. Run **set-executionPolicy RemoteSigned**  
 
-    3.  From the folder **&lt;SCCM installation directory\>\cd.latest\SMSSETUP\TOOLS\MDM** run **.\ConfigurationScript.ps1**  
+   3. From the folder **&lt;SCCM installation directory\>\cd.latest\SMSSETUP\TOOLS\MDM** run **.\ConfigurationScript.ps1**  
 
-     The configuration script does the following:  
+      The configuration script does the following:  
 
-    1.  Creates a Configuration Manager application with a Windows app package deployment type using **CompanyPortalOnPremisesMDM.appx** in the same folder.  
+   4. Creates a Configuration Manager application with a Windows app package deployment type using **CompanyPortalOnPremisesMDM.appx** in the same folder.  
 
-    2.  Creates a configuration item and configuration baseline that configures the Company Portal.  
+   5. Creates a configuration item and configuration baseline that configures the Company Portal.  
 
-    3.  Deploys both the configuration baseline and the application, and adds the application to all distribution points.  
+   6. Deploys both the configuration baseline and the application, and adds the application to all distribution points.  
 
-    > [!NOTE]  
-    >  If the Application Catalog roles are not co-located with the primary site, take the following actions:  
-    >   
-    >  -   In the **Assets and Compliance** workspace, locate the **OnPremMDM Portal Configuration CI - server urls** configuration item  
-    > -   Change the **Compliance Rules** value to the fully-qualified domain name of the site system where the Application Catalog roles are located.  
+   > [!NOTE]
+   >  If the Application Catalog roles are not co-located with the primary site, take the following actions:  
+   > 
+   > - In the **Assets and Compliance** workspace, locate the **OnPremMDM Portal Configuration CI - server urls** configuration item  
+   >   -   Change the **Compliance Rules** value to the fully-qualified domain name of the site system where the Application Catalog roles are located.  
 
-2.  Once the Company Portal application and its configuration are both deployed, verify the application and configuration baseline are compliant for the given device using **Deployments** section of the Configuration Manager console. The Company Portal will appear as **Company Portal (Technical Preview)** in the Start menu on the device.  
+2. Once the Company Portal application and its configuration are both deployed, verify the application and configuration baseline are compliant for the given device using **Deployments** section of the Configuration Manager console. The Company Portal will appear as **Company Portal (Technical Preview)** in the Start menu on the device.  
 
 ### Try it out!  
  Try to complete the following tasks and then let us know how it worked by using our feedback form on the [Configuration Manager feedback program](https://connect.microsoft.com/ConfigurationManagervnext/ConfigMgr%20Customer%20Feedback) page on the Microsoft Connect site:  
@@ -333,48 +333,48 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 ### Try it now!  
  Try to complete the following tasks and then let us know how it worked by using our feedback form on the [Configuration Manager feedback program](https://connect.microsoft.com/ConfigurationManagervnext/ConfigMgr%20Customer%20Feedback) page on the Microsoft Connect site:  
 
--   Onboard devices to the Windows Defender Advanced Threat Protection (ATP) online service  
+- Onboard devices to the Windows Defender Advanced Threat Protection (ATP) online service  
 
--   Monitor Windows Defender ATP deployment to managed devices  
+- Monitor Windows Defender ATP deployment to managed devices  
 
- **Prerequisites**  
+  **Prerequisites**  
 
--   Subscription to the Windows Defender Advanced Threat Protection online service  
+- Subscription to the Windows Defender Advanced Threat Protection online service  
 
--   Clients running Windows 10, Anniversary Edition (build 14328 and greater)  
+- Clients running Windows 10, Anniversary Edition (build 14328 and greater)  
 
--   Create a client onboarding configuration file  
+- Create a client onboarding configuration file  
 
-    ##### How to create an onboarding configuration file  
+  ##### How to create an onboarding configuration file  
 
-    1.  Logon to the Windows Defender ATP online service  
+  1.  Logon to the Windows Defender ATP online service  
 
-    2.  Click on the **Client On-boarding** menu item  
+  2.  Click on the **Client On-boarding** menu item  
 
-    3.  Select **System Center Configuration Manager** and click **Download package**.  
+  3.  Select **System Center Configuration Manager** and click **Download package**.  
 
-    4.  Download the compressed archive (.zip) file and extract the contents.  
+  4.  Download the compressed archive (.zip) file and extract the contents.  
 
 
 ##### Onboard devices for Windows Defender ATP  
 
-1.  In the Configuration Manager console, navigate **Assets and Compliance** > **Overview** > **Endpoint Protection** > **Windows Defender ATP Policies** and click **Create Windows Defender ATP Policy**. The Windows Defender ATP Policy Wizard opens.  
+1. In the Configuration Manager console, navigate **Assets and Compliance** > **Overview** > **Endpoint Protection** > **Windows Defender ATP Policies** and click **Create Windows Defender ATP Policy**. The Windows Defender ATP Policy Wizard opens.  
 
-2.  Type the **Name** and **Description** for the Windows Defender ATP policy and select **Onboarding**. Click Next.  
+2. Type the **Name** and **Description** for the Windows Defender ATP policy and select **Onboarding**. Click Next.  
 
-3.  **Browse** to the Configuration file provided by your organization’s Windows Defender ATP cloud service tenant. Click **Next**.  
+3. **Browse** to the Configuration file provided by your organization’s Windows Defender ATP cloud service tenant. Click **Next**.  
 
-4.  Specify the file samples that are collected and shared from managed devices for analysis.  
+4. Specify the file samples that are collected and shared from managed devices for analysis.  
 
-    -   **None** – No sample files are collected for analysis  
+   - **None** – No sample files are collected for analysis  
 
-    -   **Portable executable files** – Files such as program files (.exe), dynamic-library link (.dll) files, font files, and similar files that can be exploited in cyberattacks are collected and shared for analysis  
+   - **Portable executable files** – Files such as program files (.exe), dynamic-library link (.dll) files, font files, and similar files that can be exploited in cyberattacks are collected and shared for analysis  
 
      Click **Next**.  
 
-5.  Review the summary and complete the wizard.  
+5. Review the summary and complete the wizard.  
 
-6.  You can now deploy the Windows Defender ATP policy to managed client computers by clicking **Deploy**.  
+6. You can now deploy the Windows Defender ATP policy to managed client computers by clicking **Deploy**.  
 
 ##### Monitor Windows Defender ATP  
 
@@ -421,38 +421,38 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 
 ##### Pre-declare corporate-owned devices with IMEI or iOS serial number  
 
-1.  In the Configuration Manager console, go **Assets and Compliance** > **Overview** > **All Corporate-owned Devices** > **Pre-declared Devices**, and then click **Create Pre-declared Devices**. The Pre-declared Devices wizard opens.  
+1. In the Configuration Manager console, go **Assets and Compliance** > **Overview** > **All Corporate-owned Devices** > **Pre-declared Devices**, and then click **Create Pre-declared Devices**. The Pre-declared Devices wizard opens.  
 
-2.  Specify how you want to add device information:  
+2. Specify how you want to add device information:  
 
-    -   **Upload a .csv file containing IMEI numbers and details** - To upload a list of numbers, see Step #3.  
+   -   **Upload a .csv file containing IMEI numbers and details** - To upload a list of numbers, see Step #3.  
 
-    -   **Manually add IMEI numbers and details** - To manually enter information, type the IMEI number or iOS serial number and details for the devices, and then proceed to Step #4.  
+   -   **Manually add IMEI numbers and details** - To manually enter information, type the IMEI number or iOS serial number and details for the devices, and then proceed to Step #4.  
 
-3.  For uploaded files, Browse to the .csv file containing information to pre-declare corporate-owned devices. The file must have the following format, excluding the top row (provided for guidance only):  
+3. For uploaded files, Browse to the .csv file containing information to pre-declare corporate-owned devices. The file must have the following format, excluding the top row (provided for guidance only):  
 
-    |**IMEI #**|**iOS Serial**|**OS**|**Details**|
-    |---|---|---|---|
-    |123456789012345||WINDOWS|Company-owned Windows device|
-    |123456789012|A0BCD0EFGH0J|IOS|Company-owned iOS devices|
-    |123456789012346||ANDROID|Company-owned Android device|
+   |**IMEI #**|**iOS Serial**|**OS**|**Details**|
+   |---|---|---|---|
+   |123456789012345||WINDOWS|Company-owned Windows device|
+   |123456789012|A0BCD0EFGH0J|IOS|Company-owned iOS devices|
+   |123456789012346||ANDROID|Company-owned Android device|
 
-     **Columns:**  
+    **Columns:**  
 
-    -   Column 1: IMEI number – Either an IMEI number or iOS serial number is required for each row  
+   - Column 1: IMEI number – Either an IMEI number or iOS serial number is required for each row  
 
-    -   Column 2: iOS serial number – Only iOS serial numbers can be pre-declared. Use IMEI number for other device platforms  
+   - Column 2: iOS serial number – Only iOS serial numbers can be pre-declared. Use IMEI number for other device platforms  
 
-    -   Column 3: Operating system of the device (capitalization required):  
+   - Column 3: Operating system of the device (capitalization required):  
 
-        -   IOS – All iOS devices  
+     -   IOS – All iOS devices  
 
-        -   WINDOWS – Includes Windows Phone, Window 10 Mobile, and Windows PCs  
+     -   WINDOWS – Includes Windows Phone, Window 10 Mobile, and Windows PCs  
 
-        -   ANDROID – All Android devices  
+     -   ANDROID – All Android devices  
 
-    -   Column 4: Details – Additional device information that appears in the Configuration Manager console  
+   - Column 4: Details – Additional device information that appears in the Configuration Manager console  
 
      Click **Next**.  
 
-4.  Review the results of the file import. Previously imported IMEI or serial numbers will have their details updated with new details.  Click **Next** to continue or **Back** to preserve updated details, and then complete the wizard.  
+4. Review the results of the file import. Previously imported IMEI or serial numbers will have their details updated with new details.  Click **Next** to continue or **Back** to preserve updated details, and then complete the wizard.  

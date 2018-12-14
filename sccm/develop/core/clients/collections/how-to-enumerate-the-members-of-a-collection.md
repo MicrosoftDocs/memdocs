@@ -26,9 +26,9 @@ In System Center Configuration Manager, the preferred method to enumerate throug
 
  These examples require the following values:  
 
--   A Windows Management Instrumentation (WMI) connection object.  
+- A Windows Management Instrumentation (WMI) connection object.  
 
- Example of the subroutine call in Visual Basic:  
+  Example of the subroutine call in Visual Basic:  
 
 ```  
 Call EnumerateCollectionMembers(swbemServices)  

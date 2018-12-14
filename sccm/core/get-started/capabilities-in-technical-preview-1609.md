@@ -228,38 +228,38 @@ The following sections detail the changes introduced with this preview, how the 
 
 ### Changes in UI and behavior for boundary groups and content locations
 The following are key changes to boundary groups and how clients find content. Many of these changes and concepts work together.
--	**Configurations for Fast or Slow are removed:** You no longer configure individual distribution points to be fast or slow.  Instead, each site system associated with a boundary group is treated the same. Because of this change, the **References** tab of the boundary group properties no longer supports the configuration of Fast or Slow.
-- 	**New default boundary group at each site:**  Each primary site has a new default boundary group named ***Default-Site-Boundary-Group\<sitecode>***.  When a client is not on a network location that is assigned to a boundary group, that client will use the site systems associated with the default group from its assigned site. Plan to use this boundary group as a replacement to the concept of fallback content location.  	
- -	**‘Allow fallback source locations for content’** is removed: You no longer explicitly configure a distribution point to be used for fallback, and the options to set this are removed from the UI.
+- **Configurations for Fast or Slow are removed:** You no longer configure individual distribution points to be fast or slow.  Instead, each site system associated with a boundary group is treated the same. Because of this change, the **References** tab of the boundary group properties no longer supports the configuration of Fast or Slow.
+- **New default boundary group at each site:**  Each primary site has a new default boundary group named ***Default-Site-Boundary-Group\<sitecode>***.  When a client is not on a network location that is assigned to a boundary group, that client will use the site systems associated with the default group from its assigned site. Plan to use this boundary group as a replacement to the concept of fallback content location.    
+  -  **‘Allow fallback source locations for content’** is removed: You no longer explicitly configure a distribution point to be used for fallback, and the options to set this are removed from the UI.
 
-	Additionally, the result of setting **Allow clients to use a fallback source location for content** on a deployment type for applications has changed. This setting on a deployment type now enables a client to use the default site boundary group as a content source location.
+  Additionally, the result of setting **Allow clients to use a fallback source location for content** on a deployment type for applications has changed. This setting on a deployment type now enables a client to use the default site boundary group as a content source location.
 
- -	**Boundary groups relationships:** Each boundary group can be linked to one or more additional boundary groups. These links form relationships that are configured on the new boundary group properties tab named **Relationships**:
- 	-	Each boundary group that a client is directly associated with is called a **current** boundary group.  
-	- 	Any boundary group a client can use due to an association between that client’s *current* boundary group and another group is called a **neighbor** boundary group.
-	-  It is on the **Relationships** tab that you add boundary groups that can be used as a *neighbor* boundary group. You can also configure a time in minutes that determines when a client that fails to find content from a distribution point in the *current* group will begin to search content locations from those *neighbor* boundary groups.
+  -  **Boundary groups relationships:** Each boundary group can be linked to one or more additional boundary groups. These links form relationships that are configured on the new boundary group properties tab named **Relationships**:
+  -   Each boundary group that a client is directly associated with is called a **current** boundary group.  
+  -   Any boundary group a client can use due to an association between that client’s *current* boundary group and another group is called a **neighbor** boundary group.
+  -  It is on the **Relationships** tab that you add boundary groups that can be used as a *neighbor* boundary group. You can also configure a time in minutes that determines when a client that fails to find content from a distribution point in the *current* group will begin to search content locations from those *neighbor* boundary groups.
 
-		When you add or change a boundary group configuration, you will have the option to block fallback to that specific boundary group from the current group you are configuring.
+      When you add or change a boundary group configuration, you will have the option to block fallback to that specific boundary group from the current group you are configuring.
 
-	To use the new configuration, you define explicit associations (links) from one boundary group to another, and configure all distribution points in that associated group with the same time in minutes. The time you configure determines when a client that fails to find a content source from its *current* boundary group can begin to search for content sources from that neighbor boundary group.
+  To use the new configuration, you define explicit associations (links) from one boundary group to another, and configure all distribution points in that associated group with the same time in minutes. The time you configure determines when a client that fails to find a content source from its *current* boundary group can begin to search for content sources from that neighbor boundary group.
 
-	In addition to boundary groups you explicitly configure, each boundary group has an implied link to the default site boundary group. This link becomes active after 120 minutes at which time the default site boundary group becomes a neighbor boundary group which allows the clients to use the distribution points associated with that boundary group as content source locations.
+  In addition to boundary groups you explicitly configure, each boundary group has an implied link to the default site boundary group. This link becomes active after 120 minutes at which time the default site boundary group becomes a neighbor boundary group which allows the clients to use the distribution points associated with that boundary group as content source locations.
 
-	This behavior replaces what was previously referred to as fallback for content.  You can override this default behavior of 120 minutes by explicitly associating the default site boundary group to a *current* group, and setting a specific time in minutes, or blocking fallback entirely to prevent its use.
+  This behavior replaces what was previously referred to as fallback for content.  You can override this default behavior of 120 minutes by explicitly associating the default site boundary group to a *current* group, and setting a specific time in minutes, or blocking fallback entirely to prevent its use.
 
 
-- 	**Clients attempt to get content from each distribution point for up to 2 minutes:** When a client searches for a content source location, it attempts to access each distribution point for 2 minutes before then trying another distribution point. This is a change from previous versions where clients attempted to connect to a distribution point for up to 2 hours.
+- **Clients attempt to get content from each distribution point for up to 2 minutes:** When a client searches for a content source location, it attempts to access each distribution point for 2 minutes before then trying another distribution point. This is a change from previous versions where clients attempted to connect to a distribution point for up to 2 hours.
 
-	- The first distribution point that a client attempts to use is randomly selected from the pool of available distribution points in the client’s *current* boundary group (or groups).
+  - The first distribution point that a client attempts to use is randomly selected from the pool of available distribution points in the client’s *current* boundary group (or groups).
 
-	- After two minutes, if the client has not found the content, it switches to a new distribution point and attempts to get content from that server. This process repeats every two minutes until the client finds the content or reaches the last server in its pool.
+  - After two minutes, if the client has not found the content, it switches to a new distribution point and attempts to get content from that server. This process repeats every two minutes until the client finds the content or reaches the last server in its pool.
 
-	- If a client cannot find a valid content source location from its *current* pool before the period for fallback to a *neighbor* boundary group is reached, the client then adds the distribution points from that *neighbor* group to the end of its current list, and will then search the expanded group of source locations that includes the distribution points from both boundary groups.
+  - If a client cannot find a valid content source location from its *current* pool before the period for fallback to a *neighbor* boundary group is reached, the client then adds the distribution points from that *neighbor* group to the end of its current list, and will then search the expanded group of source locations that includes the distribution points from both boundary groups.
 
-		> [!TIP]  
-		> When you create an explicit link from the current boundary group to the default site boundary group and define a fallback time that is less than the fallback time for a link to a neighbor boundary group, clients will begin searching source locations from the default site boundary group before including the neighbor group.
+      > [!TIP]  
+      > When you create an explicit link from the current boundary group to the default site boundary group and define a fallback time that is less than the fallback time for a link to a neighbor boundary group, clients will begin searching source locations from the default site boundary group before including the neighbor group.
 
-	- When the client fails to get content from the last server in the pool, it begins the process again.
+  - When the client fails to get content from the last server in the pool, it begins the process again.
 
 
 ### How the new model works
@@ -309,13 +309,13 @@ By configuring the different neighbor groups to be available at different times 
 
 ### <a name="bkmk_update"></a>Update existing boundary groups to the new model
 When you install version 1609 and update your site, the following configurations are automatically made. These are intended to ensure your current fallback behavior remains available, until you configure new boundary groups and relationships.  
--	Unprotected distribution points at a site are added to the *Default-Site-Boundary-Group\<sitecode>* boundary group of that site.
--	A copy is made of each existing boundary group that includes a site server configured with a slow connection. The name of the new group is ***\<original boundary group name>-Slow-Tmp***:  
-	-	Site systems that have a fast connection are left in the original boundary group.
-	-	A copy of site systems that have a slow connection are added to the copy of the boundary group. The original site systems configured as slow remain in the original boundary group for backward compatibility, but are not used from that boundary group.
-	- 	This boundary group copy does not have boundaries associated with it. However, A fallback link is created between the original group and the new boundary group copy that has the fallback time set to zero.
+- Unprotected distribution points at a site are added to the *Default-Site-Boundary-Group\<sitecode>* boundary group of that site.
+- A copy is made of each existing boundary group that includes a site server configured with a slow connection. The name of the new group is ***\<original boundary group name>-Slow-Tmp***:  
+  -   Site systems that have a fast connection are left in the original boundary group.
+  -   A copy of site systems that have a slow connection are added to the copy of the boundary group. The original site systems configured as slow remain in the original boundary group for backward compatibility, but are not used from that boundary group.
+  -   This boundary group copy does not have boundaries associated with it. However, A fallback link is created between the original group and the new boundary group copy that has the fallback time set to zero.
 
- The following table identifies the new fallback behavior you can expect from the combination the original deployment settings and distribution point configurations:
+  The following table identifies the new fallback behavior you can expect from the combination the original deployment settings and distribution point configurations:
 
 Original deployment configuration for “Do not run program” in slow network  |Original distribution point configuration for “Allow client to use a fallback source location for content”  |New fallback behavior  
 ---------|---------|---------

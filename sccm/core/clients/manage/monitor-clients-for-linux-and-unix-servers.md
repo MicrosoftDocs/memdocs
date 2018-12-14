@@ -19,13 +19,13 @@ You can view information from Linux and UNIX servers in the System Center Config
 
  The information you can view includes:  
 
--   Status details from clients, in the Configuration Manager console dashboards  
+- Status details from clients, in the Configuration Manager console dashboards  
 
--   Details about clients in the default Configuration Manager reports  
+- Details about clients in the default Configuration Manager reports  
 
--   Inventory details in the Resource Explorer  
+- Inventory details in the Resource Explorer  
 
- The following sections describe how to get these details from the resource explorer and reports.  
+  The following sections describe how to get these details from the resource explorer and reports.  
 
 ##  <a name="BKMK_UseResourceExpforLnU"></a> Use resource explorer to view inventory for Linux and UNIX servers  
 

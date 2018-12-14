@@ -61,33 +61,33 @@ These procedures help you to configure the default client settings for hardware 
 
 You can only add inventory classes from the hierarchy's top level server by modifying the default client settings. This option is not available when you create custom device settings.
 
-1.  In the Configuration Manager console, choose **Administration** > **Client Settings** > **Default Client Settings**.  
+1. In the Configuration Manager console, choose **Administration** > **Client Settings** > **Default Client Settings**.  
 
-4.  On the **Home** tab, in the **Properties** group, choose **Properties**.  
+2. On the **Home** tab, in the **Properties** group, choose **Properties**.  
 
-5.  In the **Default Client Settings** dialog box, choose **Hardware Inventory**.  
+3. In the **Default Client Settings** dialog box, choose **Hardware Inventory**.  
 
-6.  In the **Device Settings** list, choose **Set Classes**.  
+4. In the **Device Settings** list, choose **Set Classes**.  
 
-7.  In the **Hardware Inventory Classes** dialog box, choose **Add**.  
+5. In the **Hardware Inventory Classes** dialog box, choose **Add**.  
 
-8.  In the **Add Hardware Inventory Class** dialog box, click **Connect**.  
+6. In the **Add Hardware Inventory Class** dialog box, click **Connect**.  
 
-9. In the **Connect to Windows Management Instrumentation (WMI)** dialog box, specify the name of the computer from which you will retrieve the WMI classes and the WMI namespace to use for retrieving the classes. If you want to retrieve all classes below the WMI namespace that you specified, click **Recursive**. If the computer you are connecting to is not the local computer, supply login credentials for an account that has permission to access WMI on the remote computer.  
+7. In the **Connect to Windows Management Instrumentation (WMI)** dialog box, specify the name of the computer from which you will retrieve the WMI classes and the WMI namespace to use for retrieving the classes. If you want to retrieve all classes below the WMI namespace that you specified, click **Recursive**. If the computer you are connecting to is not the local computer, supply login credentials for an account that has permission to access WMI on the remote computer.  
 
-10. Choose **Connect**.  
+8. Choose **Connect**.  
 
-11. In the **Add Hardware Inventory Class** dialog box, in the **Inventory classes** list, select the WMI classes that you want to add to Configuration Manager hardware inventory.  
+9. In the **Add Hardware Inventory Class** dialog box, in the **Inventory classes** list, select the WMI classes that you want to add to Configuration Manager hardware inventory.  
 
-12. If you want to edit information about the selected WMI class, choose **Edit**, and in the **Class qualifiers** dialog box, provide the following information:  
+10. If you want to edit information about the selected WMI class, choose **Edit**, and in the **Class qualifiers** dialog box, provide the following information:  
 
-    -   **Display name** - This name will be displayed in Resource Explorer.  
+    - **Display name** - This name will be displayed in Resource Explorer.  
 
-    -   **Properties** - Specify the units in which each property of the WMI class will be displayed.  
+    - **Properties** - Specify the units in which each property of the WMI class will be displayed.  
 
-     You can also designate properties as a key property to help uniquely identify each instance of the class. If no key is defined for the class and multiple instances of the class are reported from the client, only the latest instance that is found is stored in the database.  
+      You can also designate properties as a key property to help uniquely identify each instance of the class. If no key is defined for the class and multiple instances of the class are reported from the client, only the latest instance that is found is stored in the database.  
 
-     When you've finished configuring the properties, click **OK** to close the **Class qualifiers** dialog box and the other open dialogs. 
+      When you've finished configuring the properties, click **OK** to close the **Class qualifiers** dialog box and the other open dialogs. 
 
 ###  <a name="BKMK_Import"></a> To import hardware inventory classes  
 

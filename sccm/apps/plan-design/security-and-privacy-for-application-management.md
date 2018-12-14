@@ -209,11 +209,11 @@ If you configure a web application deployment type, use HTTPS to secure the conn
     > [!Note]  
     > Starting in Configuration Manager 1802, the primary functionality of the Application Catalog is now included in Software Center. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex).  
 
--  **Software Center** is installed automatically on a device when you install the Configuration Manager client. Users change settings, browse for applications, and install applications from Software Center.  
+- **Software Center** is installed automatically on a device when you install the Configuration Manager client. Users change settings, browse for applications, and install applications from Software Center.  
 
- View the following sections for privacy information about [user device affinity](#bkmk_privacy-uda) and [Software Center and Application Catalog](#bkmk_privacy-userex).  
+  View the following sections for privacy information about [user device affinity](#bkmk_privacy-uda) and [Software Center and Application Catalog](#bkmk_privacy-userex).  
 
- Before you configure application management, consider your privacy requirements.  
+  Before you configure application management, consider your privacy requirements.  
 
 
 ### <a name="bkmk_privacy-uda"></a> User device affinity  

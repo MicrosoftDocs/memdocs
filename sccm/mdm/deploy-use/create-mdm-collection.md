@@ -25,4 +25,4 @@ For testing purposes you can set up a **Direct rule** and add specific users who
 ![Create a user collection for MDM](../media/mdm-create-user-collection.png)
 
 > [!div class="button"]
-[Next step >](confirm-dns.md)
+> [Next step >](confirm-dns.md)

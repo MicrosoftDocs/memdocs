@@ -78,173 +78,173 @@ Use the System Center Configuration Manager **custom Windows Desktops and Server
 
  Settings represent the business or technical conditions that are used to assess compliance on client devices. You can configure a new setting or browse to an existing setting on a reference computer.  
 
-1.  On the **Settings** page of the **Create Configuration Item Wizard**, click **New**.  
+1. On the **Settings** page of the **Create Configuration Item Wizard**, click **New**.  
 
-2.  On the **General** tab of the **Create Setting** dialog box, provide the following information:  
+2. On the **General** tab of the **Create Setting** dialog box, provide the following information:  
 
-    -   **Name:** Enter a unique name for the setting. You can use a maximum of 256 characters.  
+   - **Name:** Enter a unique name for the setting. You can use a maximum of 256 characters.  
 
-    -   **Description:** Enter a description for the setting. You can use a maximum of 256 characters.  
+   - **Description:** Enter a description for the setting. You can use a maximum of 256 characters.  
 
-    -   **Setting type:** In the list, choose and configure one of the following setting types to use for this setting:  
+   - **Setting type:** In the list, choose and configure one of the following setting types to use for this setting:  
 
-        -   **Active Directory query**  
+     - **Active Directory query**  
 
-             **LDAP prefix** - Specify a valid prefix to the Active Directory Domain Services query to assess compliance on client computers. You can use either **LDAP://** for a or **GC://** to perform a global catalog search..  
+        **LDAP prefix** - Specify a valid prefix to the Active Directory Domain Services query to assess compliance on client computers. You can use either **LDAP://** for a or **GC://** to perform a global catalog search..  
 
-             **Distinguished Name (DN)** - Specify the distinguished name of the Active Directory Domain Services object that is assessed for compliance on client computers.  
+        **Distinguished Name (DN)** - Specify the distinguished name of the Active Directory Domain Services object that is assessed for compliance on client computers.  
 
-             For example, if you want to evaluate a value related to a user named John Smith in the corp.contoso.com domain, enter the following:  
+        For example, if you want to evaluate a value related to a user named John Smith in the corp.contoso.com domain, enter the following:  
 
-            -   **Search filter** - Specify an optional LDAP filter to refine the results from the Active Directory Domain Services query to assess compliance on client computers.  
+       - **Search filter** - Specify an optional LDAP filter to refine the results from the Active Directory Domain Services query to assess compliance on client computers.  
 
-                 To return all results from the query, enter **(objectclass=\*)**.  
+          To return all results from the query, enter **(objectclass=\*)**.  
 
-            -   **Search scope** - Specify the search scope in Active Directory Domain Services/ You can choose from:  
+       - **Search scope** - Specify the search scope in Active Directory Domain Services/ You can choose from:  
 
-                -   **Base** - Queries only the object that is specified.  
+         -   **Base** - Queries only the object that is specified.  
 
-                -   **One Level** - This option is not used in this version of Configuration Manager.  
+         -   **One Level** - This option is not used in this version of Configuration Manager.  
 
-                -   **Subtree** - Queries the object that is specified and its complete subtree in the directory.  
+         -   **Subtree** - Queries the object that is specified and its complete subtree in the directory.  
 
-            -   **Property** - Specify the property of the Active Directory Domain Services object that is used to assess compliance on client computers.  
+       - **Property** - Specify the property of the Active Directory Domain Services object that is used to assess compliance on client computers.  
 
-                 For example, if you want to query the Active Directory property **badPwdCount**, which stores the number of times a user incorrectly enters a password, enter **badPwdCount** in this field.  
+          For example, if you want to query the Active Directory property **badPwdCount**, which stores the number of times a user incorrectly enters a password, enter **badPwdCount** in this field.  
 
-            -   **Query** - Displays the query constructed from the entries in **LDAP prefix**, **Distinguished name (DN)**, **Search Filter** (if specified), and **Property**, which are used to assess compliance on client computers.  
+       - **Query** - Displays the query constructed from the entries in **LDAP prefix**, **Distinguished name (DN)**, **Search Filter** (if specified), and **Property**, which are used to assess compliance on client computers.  
 
-             For more information about constructing LDAP queries, see your Windows Server documentation.  
+         For more information about constructing LDAP queries, see your Windows Server documentation.  
 
-        -   **Assembly**  
+     - **Assembly**  
 
-             Configure the following for this setting type:  
+        Configure the following for this setting type:  
 
-            -   **Assembly name:** Specifies the name of the assembly object that you want to search for. The name cannot be the same as other assembly objects of the same type and must be registered in the Global Assembly Cache. The assembly name can be up to 256 characters long.  
+       - **Assembly name:** Specifies the name of the assembly object that you want to search for. The name cannot be the same as other assembly objects of the same type and must be registered in the Global Assembly Cache. The assembly name can be up to 256 characters long.  
 
-             An assembly is a piece of code that can be shared between applications. Assemblies can have the file name extension .dll or .exe. The Global Assembly Cache is a folder named *%systemroot%\Assembly* on client computers where all shared assemblies are stored.  
+         An assembly is a piece of code that can be shared between applications. Assemblies can have the file name extension .dll or .exe. The Global Assembly Cache is a folder named *%systemroot%\Assembly* on client computers where all shared assemblies are stored.  
 
-        -   **File system**  
+     - **File system**  
 
-            -   **Type** – In the list, select whether you want to search for a **File** or a **Folder**.  
+       - **Type** – In the list, select whether you want to search for a **File** or a **Folder**.  
 
-            -   **Path** - Specify the path of the specified file or folder on client computers. You can specify system environment variables and the *%USERPROFILE%* environment variable in the path.  
+       - **Path** - Specify the path of the specified file or folder on client computers. You can specify system environment variables and the *%USERPROFILE%* environment variable in the path.  
 
-                > [!NOTE]  
-                >  If you use the *%USERPROFILE%* environment variable in the **Path** or **File or folder name** boxes, all user profiles on the client computer are searched, which could result in multiple instances of the file or folder that is found.  
-                >   
-                >  If compliance settings do not have access to the specified path, a discovery error is generated. Additionally, if the file you are searching for is currently in use, a discovery error is generated.  
+         > [!NOTE]  
+         >  If you use the *%USERPROFILE%* environment variable in the **Path** or **File or folder name** boxes, all user profiles on the client computer are searched, which could result in multiple instances of the file or folder that is found.  
+         >   
+         >  If compliance settings do not have access to the specified path, a discovery error is generated. Additionally, if the file you are searching for is currently in use, a discovery error is generated.  
 
-            -   **File or folder name** - Specify the name of the file or folder object to search for. You can specify system environment variables and the *%USERPROFILE%* environment variable in the file or folder name. You can also use the wildcards * and ? in the file name.  
+       - **File or folder name** - Specify the name of the file or folder object to search for. You can specify system environment variables and the *%USERPROFILE%* environment variable in the file or folder name. You can also use the wildcards * and ? in the file name.  
 
-                > [!NOTE]  
-                >  If you specify a file or folder name and use wildcards, this combination might produce a high numbers of results and could result in high resource use on the client computer and high network traffic when reporting results to Configuration Manager.  
+         > [!NOTE]  
+         >  If you specify a file or folder name and use wildcards, this combination might produce a high numbers of results and could result in high resource use on the client computer and high network traffic when reporting results to Configuration Manager.  
 
-            -   **Include subfolders** – Enable this option if you also want to search any subfolders under the specified path.  
+       - **Include subfolders** – Enable this option if you also want to search any subfolders under the specified path.  
 
-            -   **This file or folder is associated with a 64-bit application** - If enabled, only 64-bit file locations (such as *%ProgramFiles%*) will be checked on 64-bit computers. If this option is not enabled, both 32-bit (such as *%ProgramFiles(x86)%*) and 64-bit locations will be checked.  
+       - **This file or folder is associated with a 64-bit application** - If enabled, only 64-bit file locations (such as *%ProgramFiles%*) will be checked on 64-bit computers. If this option is not enabled, both 32-bit (such as *%ProgramFiles(x86)%*) and 64-bit locations will be checked.  
 
-                > [!NOTE]  
-                >  If the same file or folder exists in both the 64-bit and 32-bit system file locations on the same 64-bit computer, multiple files are discovered by the global condition.  
+         > [!NOTE]  
+         >  If the same file or folder exists in both the 64-bit and 32-bit system file locations on the same 64-bit computer, multiple files are discovered by the global condition.  
 
-             The **File system** setting type does not support specifying a UNC path to a network share in the **Path** box.  
+         The **File system** setting type does not support specifying a UNC path to a network share in the **Path** box.  
 
-        -   **IIS metabase**  
+     - **IIS metabase**  
 
-            -   **Metabase path** - Specify a valid path to the Internet Information Services (IIS) Metabase.  
+       -   **Metabase path** - Specify a valid path to the Internet Information Services (IIS) Metabase.  
 
-            -   **Property ID** - Specify the numeric property of the IIS Metabase setting.  
+       -   **Property ID** - Specify the numeric property of the IIS Metabase setting.  
 
-        -   **Registry key**  
+     - **Registry key**  
 
-            -   **Hive** – In the list, select the registry hive that you want to search in.  
+       -   **Hive** – In the list, select the registry hive that you want to search in.  
 
-            -   **Key** - Specify the registry key name that you want to search for. Use the format *key\subkey*.  
+       -   **Key** - Specify the registry key name that you want to search for. Use the format *key\subkey*.  
 
-            -   **This registry key is associated with a 64-bit application** - Specifies whether the 64-bit registry keys should be searched in addition to the 32-bit registry keys on clients that are running a 64-bit version of Windows.  
+       -   **This registry key is associated with a 64-bit application** - Specifies whether the 64-bit registry keys should be searched in addition to the 32-bit registry keys on clients that are running a 64-bit version of Windows.  
 
-                > [!NOTE]  
-                >  If the same registry key exists in both the 64-bit and 32-bit registry locations on the same 64-bit computer, both registry keys are discovered by the global condition.  
+           > [!NOTE]  
+           >  If the same registry key exists in both the 64-bit and 32-bit registry locations on the same 64-bit computer, both registry keys are discovered by the global condition.  
 
-        -   **Registry value**  
+     - **Registry value**  
 
-            -   **Hive** - In the list, select the registry hive that you want to search in.  
+       - **Hive** - In the list, select the registry hive that you want to search in.  
 
-            -   **Key** - Specify the registry key name that you want to search for. Use the format *key\subkey*.  
+       - **Key** - Specify the registry key name that you want to search for. Use the format *key\subkey*.  
 
-            -   **Value** – Specify the value that must be contained within the specified registry key.  
+       - **Value** – Specify the value that must be contained within the specified registry key.  
 
-            -   **This registry key is associated with a 64-bit application** - Specifies whether the 64-bit registry keys should be searched in addition to the 32-bit registry keys on clients that are running a 64-bit version of Windows.  
+       - **This registry key is associated with a 64-bit application** - Specifies whether the 64-bit registry keys should be searched in addition to the 32-bit registry keys on clients that are running a 64-bit version of Windows.  
 
-                > [!NOTE]  
-                >  If the same registry key exists in both the 64-bit and 32-bit registry locations on the same 64-bit computer, both registry keys are discovered by the global condition.  
+         > [!NOTE]  
+         >  If the same registry key exists in both the 64-bit and 32-bit registry locations on the same 64-bit computer, both registry keys are discovered by the global condition.  
 
-             You can also click **Browse** to browse to a registry location on the computer or on a remote computer. To browse a remote computer, you must have administrator rights on the remote computer and the remote computer must be running the remote registry service.  
+         You can also click **Browse** to browse to a registry location on the computer or on a remote computer. To browse a remote computer, you must have administrator rights on the remote computer and the remote computer must be running the remote registry service.  
 
-        -   **Script**  
+     - **Script**  
 
-            -   **Discovery script** – Click **Add** to enter, or browse to the script you want to use. You can use Windows PowerShell, VBScript, or Microsoft JScript scripts.  
+       -   **Discovery script** – Click **Add** to enter, or browse to the script you want to use. You can use Windows PowerShell, VBScript, or Microsoft JScript scripts.  
 
-            -   **Run scripts by using the logged on user credentials** – If you enable this option, the script runs on client computers that use the credentials of the logged-on users.  
+       -   **Run scripts by using the logged on user credentials** – If you enable this option, the script runs on client computers that use the credentials of the logged-on users.  
 
-                > [!NOTE]  
-                >  The value returned by the script is used to assess the compliance of the global condition. For example, when using VBScript, you could use the command **WScript.Echo Result** to return the *Result* variable value to the global condition.  
+           > [!NOTE]  
+           >  The value returned by the script is used to assess the compliance of the global condition. For example, when using VBScript, you could use the command **WScript.Echo Result** to return the *Result* variable value to the global condition.  
 
-        -   **SQL query**  
+     - **SQL query**  
 
-            -   **SQL Server instance** – Choose whether you want the SQL query to run on the default instance, all instances, or a specified database instance name.  
+       -   **SQL Server instance** – Choose whether you want the SQL query to run on the default instance, all instances, or a specified database instance name.  
 
-                > [!NOTE]  
-                >  The instance name must refer to a local instance of SQL Server. To refer to a clustered SQL server instance, you should use a script setting.  
+           > [!NOTE]  
+           >  The instance name must refer to a local instance of SQL Server. To refer to a clustered SQL server instance, you should use a script setting.  
 
-            -   **Database** - Specify the name of the Microsoft SQL Server database against which you want to run the SQL query.  
+       -   **Database** - Specify the name of the Microsoft SQL Server database against which you want to run the SQL query.  
 
-            -   **Column** - Specify the column name returned by the Transact-SQL statement that is used to assess the compliance of the global condition.  
+       -   **Column** - Specify the column name returned by the Transact-SQL statement that is used to assess the compliance of the global condition.  
 
-            -   **Transact-SQL statement** – Specify the full SQL query you want to use for the global condition. You can also click **Open** to open an existing SQL query.  
+       -   **Transact-SQL statement** – Specify the full SQL query you want to use for the global condition. You can also click **Open** to open an existing SQL query.  
 
-                > [!IMPORTANT]  
-                >  SQL Query settings do not support any SQL commands that modify the database. You can only use SQL commands that read information from the database.  
+           > [!IMPORTANT]  
+           >  SQL Query settings do not support any SQL commands that modify the database. You can only use SQL commands that read information from the database.  
 
-        -   **WQL query**  
+     - **WQL query**  
 
-            -   **Namespace** - Specify the Windows Management Instrumentation (WMI) namespace which is used to build a WQL query that is assessed for compliance on client computers. The default value is Root\cimv2.  
+       -   **Namespace** - Specify the Windows Management Instrumentation (WMI) namespace which is used to build a WQL query that is assessed for compliance on client computers. The default value is Root\cimv2.  
 
-            -   **Class** - Specifies the WMI class which is used to build a WQL query that is assessed for compliance on client computers.  
+       -   **Class** - Specifies the WMI class which is used to build a WQL query that is assessed for compliance on client computers.  
 
-            -   **Property** - Specifies the WMI property which is used to build a WQL query that is assessed for compliance on client computers.  
+       -   **Property** - Specifies the WMI property which is used to build a WQL query that is assessed for compliance on client computers.  
 
-            -   **WQL query WHERE clause** - You can use the **WQL query WHERE clause** item to specify a WHERE clause to be applied to the specified namespace, class, and property on client computers.  
+       -   **WQL query WHERE clause** - You can use the **WQL query WHERE clause** item to specify a WHERE clause to be applied to the specified namespace, class, and property on client computers.  
 
-        -   **XPath query**  
+     - **XPath query**  
 
-            -   **Path** - Specify the path of the .xml file on client computers that is used to assess compliance. Configuration Manager supports the use of all Windows system environment variables and the *%USERPROFILE%* user variable in the path name.  
+       - **Path** - Specify the path of the .xml file on client computers that is used to assess compliance. Configuration Manager supports the use of all Windows system environment variables and the *%USERPROFILE%* user variable in the path name.  
 
-            -   **XML file name** - Specify the file name containing the XML query that is used to assess compliance on client computers.  
+       - **XML file name** - Specify the file name containing the XML query that is used to assess compliance on client computers.  
 
-            -   **Include subfolders** - Enable this option if you also want to search any subfolders under the specified path.  
+       - **Include subfolders** - Enable this option if you also want to search any subfolders under the specified path.  
 
-            -   **This file is associated with a 64-bit application** - Choose whether the 64-bit system file location (*%windir%*\System32) should be searched in addition to the 32-bit system file location (*%windir%*\Syswow64) on Configuration Manager clients that are running a 64-bit version of Windows.  
+       - **This file is associated with a 64-bit application** - Choose whether the 64-bit system file location (*%windir%*\System32) should be searched in addition to the 32-bit system file location (*%windir%*\Syswow64) on Configuration Manager clients that are running a 64-bit version of Windows.  
 
-            -   **XPath query** - Specify a valid full XML path language (XPath) query that is used to assess compliance on client computers.  
+       - **XPath query** - Specify a valid full XML path language (XPath) query that is used to assess compliance on client computers.  
 
-            -   **Namespaces** - Opens the **XML Namespaces** dialog box to identify namespaces and prefixes to be used during the XPath query.  
+       - **Namespaces** - Opens the **XML Namespaces** dialog box to identify namespaces and prefixes to be used during the XPath query.  
 
-             If you attempt to discover an encrypted .xml file, compliance settings find the file, but the XPath query produces no results, and no error is generated.  
+         If you attempt to discover an encrypted .xml file, compliance settings find the file, but the XPath query produces no results, and no error is generated.  
 
-             If the XPath query is not valid, the setting is evaluated as noncompliant on client computers.  
+         If the XPath query is not valid, the setting is evaluated as noncompliant on client computers.  
 
-    -   **Data type:** In the list, choose the format in which the condition returns the data before it is used to assess the setting. The **Data type** list is not displayed for all setting types.  
+   - **Data type:** In the list, choose the format in which the condition returns the data before it is used to assess the setting. The **Data type** list is not displayed for all setting types.  
 
-        > [!NOTE]  
-        >  The **Floating point** data type supports only 3 digits after the decimal point.  
+     > [!NOTE]  
+     >  The **Floating point** data type supports only 3 digits after the decimal point.  
 
-3.  Configure additional details about this setting under the **Setting type** list. The items you can configure vary depending on the setting type you have selected.  
+3. Configure additional details about this setting under the **Setting type** list. The items you can configure vary depending on the setting type you have selected.  
 
-    > [!NOTE]  
-    >  When you create settings of the type **File system**, **Registry key**, and **Registry value**, you can click **Browse** to configure the setting from values on a reference computer. To browse to a registry key or value on a remote computer, the remote computer must have the Remote Registry service enabled.  
+   > [!NOTE]  
+   >  When you create settings of the type **File system**, **Registry key**, and **Registry value**, you can click **Browse** to configure the setting from values on a reference computer. To browse to a registry key or value on a remote computer, the remote computer must have the Remote Registry service enabled.  
 
-4.  Click **OK** to save the setting and close the **Create Setting** dialog box.  
+4. Click **OK** to save the setting and close the **Create Setting** dialog box.  
 
 ##  Configure compliance rules  
  Use the following procedure to configure compliance rules for the configuration item.  

@@ -128,81 +128,81 @@ Class SMS_SoftwareUpdateSource : SMS_BaseClass
 
  Type of scan to use for the source. Possible values are:  
 
--   WSUS  
+- WSUS  
 
--   Offline source  
+- Offline source  
 
- `SourceContentType`  
- Data type: `UInt32`  
+  `SourceContentType`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Type of content distributed by the update source.  
+  Type of content distributed by the update source.  
 
- `SourceSite`  
- Data type: `String`  
+  `SourceSite`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [not_null]  
+  Qualifiers: [not_null]  
 
- Site code for the update source site.  
+  Site code for the update source site.  
 
- `UpdateSourceDescription`  
- Data type: `String`  
+  `UpdateSourceDescription`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Description of the update source.  
+  Description of the update source.  
 
- `UpdateSourceID`  
- Data type: `UInt32`  
+  `UpdateSourceID`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [key, not_null]  
+  Qualifiers: [key, not_null]  
 
- The unique ID of the software update source. This ID is unique only for the site.  
+  The unique ID of the software update source. This ID is unique only for the site.  
 
- `UpdateSourceName`  
- Data type: `String`  
+  `UpdateSourceName`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [not_null]  
+  Qualifiers: [not_null]  
 
- Name of the update source.  
+  Name of the update source.  
 
- `UpdateSourceUniqueID`  
- Data type: `String`  
+  `UpdateSourceUniqueID`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [not_null]  
+  Qualifiers: [not_null]  
 
- The unique ID for the update source. This ID is unique across sites.  
+  The unique ID for the update source. This ID is unique across sites.  
 
- `UpdateSourceVersion`  
- Data type: `String`  
+  `UpdateSourceVersion`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [not_null]  
+  Qualifiers: [not_null]  
 
- Version of the update source.  
+  Version of the update source.  
 
- `UpdateType`  
- Data type: `String`  
+  `UpdateType`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [not_null]  
+  Qualifiers: [not_null]  
 
- Type of the update source.  
+  Type of the update source.  
 
 ## Remarks  
  There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  

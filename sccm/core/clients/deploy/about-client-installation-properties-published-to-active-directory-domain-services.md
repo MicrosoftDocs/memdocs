@@ -29,29 +29,29 @@ When you extend the Active Directory schema for System Center Configuration Mana
 ## Client installation properties published to Active Directory Domain Services  
 The following is a list of client installation properties. For more information about each item listed below, see [About client installation properties in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
 
--   The Configuration Manager site code.  
+- The Configuration Manager site code.  
 
--   The site server signing certificate.  
+- The site server signing certificate.  
 
--   The trusted root key.  
+- The trusted root key.  
 
--   The client communication ports for HTTP and HTTPS.  
+- The client communication ports for HTTP and HTTPS.  
 
--   The fallback status point. If the site has multiple fallback status points, only the first one that was installed is published to Active Directory Domain Services.  
+- The fallback status point. If the site has multiple fallback status points, only the first one that was installed is published to Active Directory Domain Services.  
 
--   A setting to indicate that the client must communicate by using HTTPS only.  
+- A setting to indicate that the client must communicate by using HTTPS only.  
 
--   Settings related to PKI certificates:  
+- Settings related to PKI certificates:  
 
-   -   Whether to use a client PKI certificate.  
+  -   Whether to use a client PKI certificate.  
 
-   -   The selection criteria for certificate selection. This may be required because the client has more than one valid PKI certificate that can be used for Configuration Manager.  
+  -   The selection criteria for certificate selection. This may be required because the client has more than one valid PKI certificate that can be used for Configuration Manager.  
 
-   -   A setting to determine which certificate to use if the client has multiple valid certificates after the certificate selection process.  
+  -   A setting to determine which certificate to use if the client has multiple valid certificates after the certificate selection process.  
 
-   -   The certificate issuers list that contains a list of trusted root CA certificates.  
+  -   The certificate issuers list that contains a list of trusted root CA certificates.  
 
--   Client.msi installation properties that are specified in the **Client** tab of the **Client Push Installation Properties** dialog box.
+- Client.msi installation properties that are specified in the **Client** tab of the **Client Push Installation Properties** dialog box.
 
 Client installation (CCMSetup) uses the properties that are published to Active Directory Domain Services only if no other properties are specified by using either of the following:  
 

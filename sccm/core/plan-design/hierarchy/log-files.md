@@ -211,19 +211,19 @@ The following table lists the log files located on the Configuration Manager cli
 ###  <a name="BKMK_LogFilesforLnU"></a> Client for Linux and UNIX  
  The Configuration Manager client for Linux and UNIX records information in the following log files:  
 
-> [!TIP]  
+> [!TIP]
 >  Use CMTrace to view the log files for the client for Linux and UNIX.  
-
-> [!NOTE]  
+> 
+> [!NOTE]
 >  When you use the initial release of the client for Linux and UNIX and reference the documentation in this section, replace the following references for each file or process:  
->   
->  -   Replace **omiserver.bin** with **nwserver.bin**  
-> -   Replace **omi** with **nanowbem**  
+> 
+> - Replace **omiserver.bin** with **nwserver.bin**  
+>   -   Replace **omi** with **nanowbem**  
 
-|Log name|Details|  
-|--------------|-------------|  
-|Scxcm.log|The log file for the core service of the Configuration Manager client for Linux and UNIX (ccmexec.bin). This log file contains information about the installation and ongoing operations of ccmexec.bin.<br /><br /> By default, this log file is located at **/var/opt/microsoft/scxcm.log**<br /><br /> To change the location of the log file, edit **/opt/microsoft/configmgr/etc/scxcm.conf** and change the **PATH** field. You do not need to restart the client computer or service for the change to take effect.<br /><br /> You can set the log level to one of four different settings.|  
-|Scxcmprovider.log|The log file for the CIM service of the Configuration Manager client for Linux and UNIX (omiserver.bin). This log file contains information about the ongoing operations of nwserver.bin.<br /><br /> This log is located at**/var/opt/microsoft/configmgr/scxcmprovider.log**<br /><br /> To change the location of the log file, edit **/opt/microsoft/omi/etc/scxcmprovider.conf** and change the **PATH** field. You do not need to restart the client computer or service for the change to take effect.<br /><br /> You can set the log level to one of three settings.|  
+|     Log name      |                                                                                                                                                                                                                                                                                               Details                                                                                                                                                                                                                                                                                               |
+|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     Scxcm.log     | The log file for the core service of the Configuration Manager client for Linux and UNIX (ccmexec.bin). This log file contains information about the installation and ongoing operations of ccmexec.bin.<br /><br /> By default, this log file is located at **/var/opt/microsoft/scxcm.log**<br /><br /> To change the location of the log file, edit **/opt/microsoft/configmgr/etc/scxcm.conf** and change the **PATH** field. You do not need to restart the client computer or service for the change to take effect.<br /><br /> You can set the log level to one of four different settings. |
+| Scxcmprovider.log |     The log file for the CIM service of the Configuration Manager client for Linux and UNIX (omiserver.bin). This log file contains information about the ongoing operations of nwserver.bin.<br /><br /> This log is located at<strong>/var/opt/microsoft/configmgr/scxcmprovider.log</strong><br /><br /> To change the location of the log file, edit **/opt/microsoft/omi/etc/scxcmprovider.conf** and change the **PATH** field. You do not need to restart the client computer or service for the change to take effect.<br /><br /> You can set the log level to one of three settings.      |
 
  Both log files support several levels of logging:  
 

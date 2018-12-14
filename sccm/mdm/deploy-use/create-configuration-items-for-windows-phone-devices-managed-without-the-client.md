@@ -15,24 +15,24 @@ Use the System Center Configuration Manager**Windows Phone** configuration item 
   
 ### To create a Windows Phone configuration item  
   
-1.  In the Configuration Manager console, click **Assets and compliance**.  
+1. In the Configuration Manager console, click **Assets and compliance**.  
   
-2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then click **Configuration Items**.  
+2. In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then click **Configuration Items**.  
   
-3.  On the **Home** tab, in the **Create** group, click **Create Configuration Item**.  
+3. On the **Home** tab, in the **Create** group, click **Create Configuration Item**.  
   
-4.  On the **General** page of the **Create Configuration Item Wizard**, specify a name, and optional description for the configuration item.  
+4. On the **General** page of the **Create Configuration Item Wizard**, specify a name, and optional description for the configuration item.  
   
-5.  Under **Specify the type of configuration item that you want to create**, select **Windows Phone**.  
+5. Under **Specify the type of configuration item that you want to create**, select **Windows Phone**.  
   
-6.  Click **Categories** if you create and assign categories to help you search and filter configuration items in the Configuration Manager console.  
+6. Click **Categories** if you create and assign categories to help you search and filter configuration items in the Configuration Manager console.  
   
-7.  On the **Supported Platforms** page of the wizard, select the specific Windows Phone platforms that will evaluate the configuration item.  
+7. On the **Supported Platforms** page of the wizard, select the specific Windows Phone platforms that will evaluate the configuration item.  
   
-8.  On the **Device Settings** page of the wizard, select the settings group that you want to configure. See [Windows Phone configuration item settings reference](#BKMK_Setref) in this topic for details, and then click **Next**.  
+8. On the **Device Settings** page of the wizard, select the settings group that you want to configure. See [Windows Phone configuration item settings reference](#BKMK_Setref) in this topic for details, and then click **Next**.  
   
-    > [!TIP]  
-    >  If the setting that you want is not listed, select the **Configure additional settings that are not in the default setting groups check box**.  
+   > [!TIP]  
+   >  If the setting that you want is not listed, select the **Configure additional settings that are not in the default setting groups check box**.  
   
 9. On each settings page, configure the settings you require, and whether you want to remediate them when they are not compliant on devices (when this is supported).  
   
@@ -55,7 +55,7 @@ Use the System Center Configuration Manager**Windows Phone** configuration item 
   
 12. Complete the wizard.  
   
- You can view the new configuration item in the **Configuration Items** node of the **Assets and Compliance** workspace.  
+    You can view the new configuration item in the **Configuration Items** node of the **Assets and Compliance** workspace.  
   
 ##  Windows Phone configuration item settings reference  
   

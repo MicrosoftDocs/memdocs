@@ -88,35 +88,35 @@ Class SMS_TaskSequence_Action : SMS_TaskSequence_Step
 
  The environment required to run the task sequence action. Possible values are:  
 
--   WinPE  
+- WinPE  
 
--   FullOS  
+- FullOS  
 
--   WinPEandFullOS  
+- WinPEandFullOS  
 
- The default value is WinPEandFullOS.  
+  The default value is WinPEandFullOS.  
 
- `Timeout`  
- Data type: `UInt32`  
+  `Timeout`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- The user-specified timeout value, in seconds. If the step does not finish in the specified time period, the client execution engine explicitly terminates the step.  
+  The user-specified timeout value, in seconds. If the step does not finish in the specified time period, the client execution engine explicitly terminates the step.  
 
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Abstract  
+- Abstract  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- Configuration Manager supports a number of built-in action classes that are derived from `SMS_TaskSequence_Action` that represent operations available to the administrator in the Configuration Manager console. An example is [SMS_TaskSequence_ApplyDataImageAction Server WMI Class](../../../develop/reference/osd/sms_tasksequence_applydataimageaction-server-wmi-class.md).  
+  Configuration Manager supports a number of built-in action classes that are derived from `SMS_TaskSequence_Action` that represent operations available to the administrator in the Configuration Manager console. An example is [SMS_TaskSequence_ApplyDataImageAction Server WMI Class](../../../develop/reference/osd/sms_tasksequence_applydataimageaction-server-wmi-class.md).  
 
- By using the Operating System Deployment task sequence object model, your application can create and use task sequences that use the built-in actions. For more information, see About Operating System Deployment Task Sequences.  
+  By using the Operating System Deployment task sequence object model, your application can create and use task sequences that use the built-in actions. For more information, see About Operating System Deployment Task Sequences.  
 
- You also use this class to create a custom task sequence action. For more information, see About Configuration Manager Custom Actions  
+  You also use this class to create a custom task sequence action. For more information, see About Configuration Manager Custom Actions  
 
 ## Requirements  
 

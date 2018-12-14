@@ -16,13 +16,13 @@ This topic provides an example scenario of how you can use software updates in S
 
  In this scenario, John is the Configuration Manager administrator at Woodgrove Bank. John needs to create a software update deployment strategy with the following conditions and requirements:  
 
--   Active software update deployment occurs one week after Microsoft releases the security software updates on the second Tuesday of each month. This event is typically referred to as Patch Tuesday.  
+- Active software update deployment occurs one week after Microsoft releases the security software updates on the second Tuesday of each month. This event is typically referred to as Patch Tuesday.  
 
--   Software updates are downloaded and staged on distribution points. Then a deployment is tested to a subset of clients before John fully deploys the software updates in his production environment.  
+- Software updates are downloaded and staged on distribution points. Then a deployment is tested to a subset of clients before John fully deploys the software updates in his production environment.  
 
--   John must be able to monitor the software updates' compliance by month or by year.  
+- John must be able to monitor the software updates' compliance by month or by year.  
 
- This scenario assumes that the software update point infrastructure has already been implemented. Use the following information to plan for and configure software updates in Configuration Manager.  
+  This scenario assumes that the software update point infrastructure has already been implemented. Use the following information to plan for and configure software updates in Configuration Manager.  
 
 |Process|Reference|  
 |-------------|---------------|  

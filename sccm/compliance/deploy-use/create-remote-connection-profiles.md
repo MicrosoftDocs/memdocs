@@ -78,37 +78,37 @@ Microsoft Intune is required if you want users to connect to their work PCs by u
 
 ## Create a remote connection profile
 
-1.  In the Configuration Manager console, click **Assets and Compliance** > **Compliance Settings** > **Remote Connection Profiles**.  
+1. In the Configuration Manager console, click **Assets and Compliance** > **Compliance Settings** > **Remote Connection Profiles**.  
 
-3.  On the **Home** tab, in the **Create** group, click **Create Remote Connection Profile**.  
+2. On the **Home** tab, in the **Create** group, click **Create Remote Connection Profile**.  
 
-4.  On the **General** page of the **Create Remote Connection Profile Wizard**, specify a name and optional description for the profile using a maximum of 256 characters for each.  
+3. On the **General** page of the **Create Remote Connection Profile Wizard**, specify a name and optional description for the profile using a maximum of 256 characters for each.  
 
-5.  On the **Profile** settings page, specify the following settings for the remote connection profile:  
+4. On the **Profile** settings page, specify the following settings for the remote connection profile:  
 
-    -   **Full name and port of the Remote Desktop Gateway server (optional)** - Specify the name of the Remote Desktop Gateway Server to be used for connections.  
+   -   **Full name and port of the Remote Desktop Gateway server (optional)** - Specify the name of the Remote Desktop Gateway Server to be used for connections.  
 
-        > [!NOTE]  
-        >  Configuration Manager does not support an internationalized domain name to be used to specify a server in this box.  
-        >   
-        >  The server name must be no longer than 256 characters and can contain uppercase characters, lowercase characters, numeric characters, and the **–** and **_** characters, which are separated by periods.  
+       > [!NOTE]  
+       >  Configuration Manager does not support an internationalized domain name to be used to specify a server in this box.  
+       >   
+       >  The server name must be no longer than 256 characters and can contain uppercase characters, lowercase characters, numeric characters, and the **–** and **_** characters, which are separated by periods.  
 
-    -   **Allow connections only from computers that run Remote Desktop with Network Level Authentication**  
+   -   **Allow connections only from computers that run Remote Desktop with Network Level Authentication**  
 
-6.  Select **Enabled** or **Disabled** for each of the following connection settings:  
+5. Select **Enabled** or **Disabled** for each of the following connection settings:  
 
-    -   **Allow remote connections to work computers**  
+   -   **Allow remote connections to work computers**  
 
-    -   **Allow all primary users of the work computer to remotely connect**  
+   -   **Allow all primary users of the work computer to remotely connect**  
 
-    -   **Allow Windows Firewall exception for connections on Windows domains and on private networks**  
+   -   **Allow Windows Firewall exception for connections on Windows domains and on private networks**  
 
-    > [!IMPORTANT]  
-    >  All three settings must be the same before you can proceed past this page of the wizard.  
+   > [!IMPORTANT]  
+   >  All three settings must be the same before you can proceed past this page of the wizard.  
 
-7.  On the **Summary** page, review the actions to be taken, and then complete the wizard.  
+6. On the **Summary** page, review the actions to be taken, and then complete the wizard.  
 
- The new remote connection profile is displayed in the **Remote Connection Profiles** node in the **Assets and Compliance** workspace.  
+   The new remote connection profile is displayed in the **Remote Connection Profiles** node in the **Assets and Compliance** workspace.  
 
 Deploy a remote connection profile  
 

@@ -203,47 +203,47 @@ For an example scenario that shows how you might deploy software updates in your
 ###  <a name="BKMK_AutomaticDeployment"></a> Automatic deployment of software updates  
  Automatic software updates deployment is configured by using an automatic deployment rule (ADR). You typically use this method of deployment for your monthly software updates (generally known as Patch Tuesday) and for managing definition updates. When the rule runs, software updates are removed from the software update group (if using an existing group), the software updates that meet a specified criteria (for example, all security software updates released in the last week) are added to a software update group, the content files for the software updates are downloaded and copied to distribution points, and the software updates are deployed to client computers in the target collection. The following list provides the general workflow for automatic deployment of software updates:  
 
-1.  Create an ADR that specifies deployment settings such as the following:  
+1. Create an ADR that specifies deployment settings such as the following:  
 
-    -   Target collection  
+   -   Target collection  
 
-    -   Decide whether to enable the deployment or report on software updates compliance for the client computers in the target collection  
+   -   Decide whether to enable the deployment or report on software updates compliance for the client computers in the target collection  
 
-    -   Software updates criteria  
+   -   Software updates criteria  
 
-    -   Evaluation and deployment schedules  
+   -   Evaluation and deployment schedules  
 
-    -   User experience  
+   -   User experience  
 
-    -   Download properties  
+   -   Download properties  
 
-2.  The software updates are added to a software update group.  
+2. The software updates are added to a software update group.  
 
-3.  The software update group is deployed to the client computers in the target collection, if it is specified.  
+3. The software update group is deployed to the client computers in the target collection, if it is specified.  
 
- You must determine what deployment strategy to use in your environment. For example, you might create the ADR and target a collection of test clients. After you verify that the software updates are installed on the test group, you can add a new deployment to the rule or change the collection in the existing deployment  to a target collection that includes a larger set of clients. The software update objects that are created by the ADRs are interactive.  
+   You must determine what deployment strategy to use in your environment. For example, you might create the ADR and target a collection of test clients. After you verify that the software updates are installed on the test group, you can add a new deployment to the rule or change the collection in the existing deployment  to a target collection that includes a larger set of clients. The software update objects that are created by the ADRs are interactive.  
 
--   Software updates that were deployed by using an ADR are automatically deployed to new clients added to the target collection.  
+- Software updates that were deployed by using an ADR are automatically deployed to new clients added to the target collection.  
 
--   New software updates added to a software update group are automatically deployed to the clients in the target collection.  
+- New software updates added to a software update group are automatically deployed to the clients in the target collection.  
 
--   You can enable or disable deployments at any time for the ADR.  
+- You can enable or disable deployments at any time for the ADR.  
 
- After you create an ADR, you can add additional deployments to the rule. This can help you manage the complexity of deploying different updates to different collections. Each new deployment has the full range of functionality and deployment monitoring experience, and each new deployment that you add:  
+  After you create an ADR, you can add additional deployments to the rule. This can help you manage the complexity of deploying different updates to different collections. Each new deployment has the full range of functionality and deployment monitoring experience, and each new deployment that you add:  
 
--   Uses the same update group and package which is created when the ADR first runs  
+- Uses the same update group and package which is created when the ADR first runs  
 
--   Can specify a different collection  
+- Can specify a different collection  
 
--   Supports unique deployment properties including:  
+- Supports unique deployment properties including:  
 
-    -   Activation time  
+  -   Activation time  
 
-    -   Deadline  
+  -   Deadline  
 
-    -   Show or hide end user experience  
+  -   Show or hide end user experience  
 
-    -   Separate alerts for this deployment  
+  -   Separate alerts for this deployment  
 
 ##  <a name="BKMK_DeploymentProcess"></a> Software update deployment process  
  After you deploy software updates or when an automatic deployment rule runs and deploys software updates, a deployment assignment policy is added to the machine policy for the site. The software updates are downloaded from the download location, the Internet, or network shared folder, to the package source. The software updates are copied from the package source to the content library on the site server, and then copied to the content library on the distribution point.  

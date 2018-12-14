@@ -276,15 +276,15 @@ Class SMS_AISoftwareList : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   DisplayName("AI Software List Table")  
+- DisplayName("AI Software List Table")  
 
--   Dynamic  
+- Dynamic  
 
--   Provider("ExtnProv")  
+- Provider("ExtnProv")  
 
--   Secured  
+- Secured  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
 ## Return Values  
  An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  

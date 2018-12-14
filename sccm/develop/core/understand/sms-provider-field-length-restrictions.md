@@ -15,40 +15,40 @@ The SMS Provider places restrictions on the width of character fields for schema
 
  You can determine the schema class table column width from the corresponding SQL Server views. For information about mapping schema classes to SQL Server views, see SMS Schema View Mapping. The steps for obtaining the table column width from the SQL Server view in SQL Server are:  
 
--   Open the SQL Server view's properties to see which table and table columns it uses.  
+- Open the SQL Server view's properties to see which table and table columns it uses.  
 
--   Open the corresponding table in the database Tables view to discover the column width.  
+- Open the corresponding table in the database Tables view to discover the column width.  
 
- Classes that are commonly affected by this restriction are:  
+  Classes that are commonly affected by this restriction are:  
 
--   SMS_Package  
+- SMS_Package  
 
--   SMS_Advertisement  
+- SMS_Advertisement  
 
--   SMS_Program  
+- SMS_Program  
 
--   SMS_DistributionPoint  
+- SMS_DistributionPoint  
 
--   SMS_PDF_Package  
+- SMS_PDF_Package  
 
--   SMS_PDF_Program  
+- SMS_PDF_Program  
 
--   SMS_Query  
+- SMS_Query  
 
--   SMS_Report  
+- SMS_Report  
 
--   SMS_ReportDashboard  
+- SMS_ReportDashboard  
 
--   SMS_ReportViewSchema  
+- SMS_ReportViewSchema  
 
--   SMS_CollectionRuleQuery  
+- SMS_CollectionRuleQuery  
 
--   SMS_Collection  
+- SMS_Collection  
 
--   SMS_UserInstancePermissions  
+- SMS_UserInstancePermissions  
 
--   SMS_UserClassPermissions  
+- SMS_UserClassPermissions  
 
--   SMS_UserInstancePermissionNames  
+- SMS_UserInstancePermissionNames  
 
--   SMS_UserClassPermissionNames
+- SMS_UserClassPermissionNames

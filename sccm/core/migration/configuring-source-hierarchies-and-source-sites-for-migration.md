@@ -35,27 +35,27 @@ To enable migration of data to your System Center Configuration Manager environm
 
 ### To configure a source hierarchy   
 
-1.  In the Configuration Manager console, click **Administration**.  
+1. In the Configuration Manager console, click **Administration**.  
 
-2.  In the **Administration** workspace, expand **Migration**, and then click **Source Hierarchy**.  
+2. In the **Administration** workspace, expand **Migration**, and then click **Source Hierarchy**.  
 
-3.  On the **Home** tab, in the **Migration** group, click **Specify Source Hierarchy**.  
+3. On the **Home** tab, in the **Migration** group, click **Specify Source Hierarchy**.  
 
-4.  In the **Specify Source Hierarchy** dialog box, for **Source Hierarchy**, select **New source hierarchy**.  
+4. In the **Specify Source Hierarchy** dialog box, for **Source Hierarchy**, select **New source hierarchy**.  
 
-5.  For **Top-level Configuration Manager site server**, enter the name or IP address of the top-level site of a supported source hierarchy.  
+5. For **Top-level Configuration Manager site server**, enter the name or IP address of the top-level site of a supported source hierarchy.  
 
-6.  Specify source site access accounts that have the following permissions:  
+6. Specify source site access accounts that have the following permissions:  
 
-    -   Source Site Account: **Read** permission to the SMS Provider for the specified top-level site in the source hierarchy. Distribution point sharing and upgrades require **Modify** and **Delete** permissions to the site in the source hierarchy.
+   - Source Site Account: **Read** permission to the SMS Provider for the specified top-level site in the source hierarchy. Distribution point sharing and upgrades require **Modify** and **Delete** permissions to the site in the source hierarchy.
 
-    -   Source Site Database Account: **Read** and **Execute** permission to the SQL Server database for the specified top-level site in the source hierarchy.  
+   - Source Site Database Account: **Read** and **Execute** permission to the SQL Server database for the specified top-level site in the source hierarchy.  
 
      If you specify the use of the computer account, Configuration Manager uses the computer account of the top-level site of the destination hierarchy. For this option, ensure that this account is a member of the security group **Distributed COM Users** in the domain where the top-level site of the source hierarchy resides.  
 
-7.  To share distribution points between the source and destination hierarchies, select the **Enable distribution point sharing for the source site server** check box. If you do not enable distribution point sharing at this time, you can do so by editing the credentials of the source site after data gathering has finished.  
+7. To share distribution points between the source and destination hierarchies, select the **Enable distribution point sharing for the source site server** check box. If you do not enable distribution point sharing at this time, you can do so by editing the credentials of the source site after data gathering has finished.  
 
-8.  Click **OK** to save the configuration. This opens the **Data Gathering Status** dialog box, and data gathering starts automatically.  
+8. Click **OK** to save the configuration. This opens the **Data Gathering Status** dialog box, and data gathering starts automatically.  
 
 9. When data gathering finishes, click **Close** to close the **Data Gathering Status** dialog box and complete the configuration.  
 
@@ -82,7 +82,7 @@ Use the following procedure to configure additional source sites for Configurati
 
 5.  In the **Source Site Credentials** dialog box, for the source site access accounts, specify accounts that have the following permissions:  
 
-    -   Source Site Account: **Read** permission to the SMS Provider for the specified top-level site in the source hierarchy. Distribution point sharing and upgrades require **Modify** and **Delete** permissions to the site in the source hierarchy.  
+    -   Source Site Account: **Read** permission to the SMS Provider for the specified top-level site in the source hierarchy. Distribution point sharing and upgrades require **Modify** and **Delete** permissions to the site in the source hierarchy.  
 
     -   Source Site Database Account: **Read** and **Execute** permission to the SQL Server database for the specified top-level site in the source hierarchy.  
 

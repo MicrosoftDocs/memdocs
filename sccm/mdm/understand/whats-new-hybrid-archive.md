@@ -170,7 +170,7 @@ The following additional hybrid features are also included in version 1702 of Co
   You can now create and deploy PFX certificates to users in a hybrid environment. These certificates can then be used for S/MIME email encryption and decryption by devices that the user has enrolled. For more information, see [Create PFX certificates with S MIME support](/sccm/core/get-started/capabilities-in-technical-preview-1702#create-pfx-certificates-with-s-mime-support).
 
 - **Support for additional iOS configuration settings**
-   
+   
     You now have 42 additional iOS settings that you can configure as part of a configuration item. Most of the settings (35 in all) have been added for supervised iOS devices. For more information, see  [New compliance settings for iOS devices](/sccm/core/get-started/capabilities-in-technical-preview-1702#new-compliance-settings-for-ios-devices).
 
 
@@ -201,7 +201,7 @@ The following additional hybrid features are also included in version 1702 of Co
 
 - **Multi-Factor authentication (MFA) on enrollment is moving to the Azure portal**
 
-  Previously, you would go to either the Intune console or the Configuration Manager console to set MFA for Intune enrollments. With this updated feature, you now login to the [Microsoft Azure portal] (https://manage.windowsazure.com) using your Intune credentials and configure MFA settings through Azure AD. To learn more, see [Multi-factor authentication for Microsoft Intune] (https://aka.ms/mfa_ad).
+  Previously, you would go to either the Intune console or the Configuration Manager console to set MFA for Intune enrollments. With this updated feature, you now login to the [Microsoft Azure portal](https://manage.windowsazure.com) using your Intune credentials and configure MFA settings through Azure AD. To learn more, see [Multi-factor authentication for Microsoft Intune](https://aka.ms/mfa_ad).
 
 - **Company Portal app for Android now available in China**
 
@@ -285,7 +285,7 @@ The following Intune features introduced in October 2016 work in hybrid deployme
 
   You can restrict access to Exchange Online so that access comes only from apps that support Intune mobile application management policies such as Outlook. [This new feature](/intune/deploy-use/allow-policy-managed-apps-access-to-o365) pairs up perfectly with Intune mobile app management (MAM) policies as you can block access to built-in mail clients or other apps that have not been configured with the Intune MAM policies. This ensures your users are accessing your organization’s data with apps that can be protected using Intune MAM. You can get started in Intune mobile app management via the Azure portal. Look for the new Conditional Access section in the “Settings” blade.
 
--	**Intune App Wrapping Tool for Android**
+- **Intune App Wrapping Tool for Android**
 
   You can enable your apps to use Intune mobile application management (MAM) policies by using the Intune App Wrapping Tool.
 
@@ -423,7 +423,7 @@ The following Intune features introduced in July 2016 work in hybrid deployments
 
   When you are using conditional access, the enrollment steps for Windows 8.1, Windows 10 Desktop, and Windows 10 Mobile have been clarified in the Company Portal website. Users will now see separate **Device enrollment** and **Workplace Join** steps, making it easier for them to see the status of their device and to complete the process if they experience a Workplace Join (WPJ) failure. The separate steps are also expected to simplify the troubleshooting process for IT administrators. Previously, when end users tried to enroll and all enrollment steps succeeded except for WPJ, the enrolled device would not appear on the list of devices for users to identify, causing confusion for users.
 
- - **Full wipe now available for Windows 10 devices**
+  - **Full wipe now available for Windows 10 devices**
 
     Windows 10 PCs and laptops enrolled as mobile devices can be wiped to reset the device to its factory settings. For more information, see [How to protect your devices with remote wipe](/sccm/mdm/deploy-use/wipe-lock-reset).
 

@@ -35,9 +35,9 @@ From the **Publication Workspace**, you can modify the **publication type** of u
 
 2. Next, on the **Home** tab, choose one of the following options. The options that are available depend on the publication type of the updates you have selected.
 
-  -   **Automatic**
-  -   **Full Content**
-  -   **Metadata only**
+   -   **Automatic**
+   -   **Full Content**
+   -   **Metadata only**
 
 After making a change, you might need to refresh the publication view to see the new values.
 
@@ -61,13 +61,13 @@ Before you have the option to publish, you must configure the [Update Server](/s
 
 ### To publish a publication
 
-1.  Go to the **Publications Workspace**, and then select a publication that contains the group of updates and bundles that you want to publish or export. Then choose **Publish** from **Home** tab of the ribbon.
+1. Go to the **Publications Workspace**, and then select a publication that contains the group of updates and bundles that you want to publish or export. Then choose **Publish** from **Home** tab of the ribbon.
 
-2.  On the **Select** page of the **Publish** wizard you can choose to sign all updates with a new publishing certificate, but you cannot change the publication type.
+2. On the **Select** page of the **Publish** wizard you can choose to sign all updates with a new publishing certificate, but you cannot change the publication type.
 
-3.  Complete the wizard.
+3. Complete the wizard.
 
-  If publishing fails, you are presented with a link to the UpdatesPublisher.log file that can provide more information.
+   If publishing fails, you are presented with a link to the UpdatesPublisher.log file that can provide more information.
 
 ## Export a publication
 You can export a publication from your Updates Publisher repository. Doing so exports the updates and bundles that are assigned to that publication and creates an update catalog. You can then [add](/sccm/sum/tools/updates-publisher-catalogs#add-software-update-catalogs) and then [import](/sccm/sum/tools/updates-publisher-catalogs#mport-updates) that catalog to another instance of Updates Publisher. You can also [export updates](/sccm/sum/tools/manage-updates-with-updates-publisher#export-updates) that are not part of a publication.

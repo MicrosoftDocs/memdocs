@@ -20,15 +20,15 @@ The `CCM_ClientAgentSettings` WMI class is a client class, in Configuration Mana
 ```  
 class CCM_ClientAgentSettings  
 {  
-     String BrandingTitle;  
-     UInt32 DayReminderInterval;  
-     Boolean DisplayNewProgramNotification;  
-     UInt32 EnableThirdPartyOrchestration;  
-     UInt32 HourReminderInterval;  
-     UInt32 InstallRestriction;  
-     UInt32 ReminderInterval;  
-     UInt32 SuspendBitLocker;  
-     UInt32 SystemRestartTurnaroundTime;  
+     String BrandingTitle;  
+     UInt32 DayReminderInterval;  
+     Boolean DisplayNewProgramNotification;  
+     UInt32 EnableThirdPartyOrchestration;  
+     UInt32 HourReminderInterval;  
+     UInt32 InstallRestriction;  
+     UInt32 ReminderInterval;  
+     UInt32 SuspendBitLocker;  
+     UInt32 SystemRestartTurnaroundTime;  
 };  
 ```  
 

@@ -38,196 +38,198 @@ Packages can use some new features of Configuration Manager, including distribut
 
 ### Create a package and program using the Create Package and Program wizard  
 
-1.  In the Configuration Manager console, choose **Software Library** > **Application Management** > **Packages**.  
+1. In the Configuration Manager console, choose **Software Library** > **Application Management** > **Packages**.  
 
-3.  In the **Home** tab, in the **Create** group, choose **Create Package**.  
+2. In the **Home** tab, in the **Create** group, choose **Create Package**.  
 
-4.  On the **Package** page of the **Create Package and Program Wizard**, specify the following information:  
+3. On the **Package** page of the **Create Package and Program Wizard**, specify the following information:  
 
-    -   **Name**: Specify a name for the package with a maximum of 50 characters.  
+   -   **Name**: Specify a name for the package with a maximum of 50 characters.  
 
-    -   **Description**: Specify a description for this package with a maximum of 128 characters.  
+   -   **Description**: Specify a description for this package with a maximum of 128 characters.  
 
-    -   **Manufacturer** (optional): Specify a manufacturer name to help you identify the package in the Configuration Manager console. This name can be a maximum of 32 characters.
+   -   **Manufacturer** (optional): Specify a manufacturer name to help you identify the package in the Configuration Manager console. This name can be a maximum of 32 characters.
 
-    -   **Language** (optional): Specify the language version of the package with a maximum of 32 characters.  
+   -   **Language** (optional): Specify the language version of the package with a maximum of 32 characters.  
 
-    -   **Version** (optional):  Specify a version number for the package with a maximum of 32 characters.
+   -   **Version** (optional):  Specify a version number for the package with a maximum of 32 characters.
 
-    -   **This package contains source files**: This setting indicates whether the package requires source files to be present on client devices. By default, this check box is cleared, and Configuration Manager does not use distribution points for the package. When this check box is selected, distribution points are used.  
+   -   **This package contains source files**: This setting indicates whether the package requires source files to be present on client devices. By default, this check box is cleared, and Configuration Manager does not use distribution points for the package. When this check box is selected, distribution points are used.  
 
-    -   **Source folder**: If the package contains source files, choose **Browse** to open the **Set Source Folder** dialog box, and then specify the location of the source files for the package.  
+   -   **Source folder**: If the package contains source files, choose **Browse** to open the **Set Source Folder** dialog box, and then specify the location of the source files for the package.  
 
-        > [!NOTE]  
-        >  The computer account of the site server must have read access permissions to the source folder that you specify.  
+       > [!NOTE]  
+       >  The computer account of the site server must have read access permissions to the source folder that you specify.  
 
-5.  On the **Program Type** page of the **Create Package and Program Wizard**, select the type of program to create, and then choose **Next**. You can create a program for a computer or device, or you can skip this step and create a program later.  
+4. On the **Program Type** page of the **Create Package and Program Wizard**, select the type of program to create, and then choose **Next**. You can create a program for a computer or device, or you can skip this step and create a program later.  
 
-    > [!TIP]  
-    >  To create a new program for an existing package, first select the package. Then, in the **Home** tab, in the **Package** group, choose **Create Program** to open the **Create Program Wizard**.  
+   > [!TIP]  
+   >  To create a new program for an existing package, first select the package. Then, in the **Home** tab, in the **Package** group, choose **Create Program** to open the **Create Program Wizard**.  
 
-6.  Use one of the following procedures to create a standard program or a device program.  
+5. Use one of the following procedures to create a standard program or a device program.  
 
-    #### Create a standard program  
+   #### Create a standard program  
 
-  1.  On the **Program Type** page of the **Create Package and Program Wizard**, choose **Standard Program**, and then choose **Next**.     
+   1.  On the **Program Type** page of the **Create Package and Program Wizard**, choose **Standard Program**, and then choose **Next**.     
 
-    2.  On the **Standard Program** page, specify the following information:  
+   2.  On the **Standard Program** page, specify the following information:  
 
-        -   **Name:** Specify a name for the program with a maximum of 50 characters.  
+       -   **Name:** Specify a name for the program with a maximum of 50 characters.  
 
-            > [!NOTE]  
-            >  The program name must be unique within a package. After you create a program, you cannot modify its name.  
+           > [!NOTE]  
+           >  The program name must be unique within a package. After you create a program, you cannot modify its name.  
 
-        -   **Command Line**: Enter the command line to use to start this program, or choose **Browse** to browse to the file location.  
+       -   **Command Line**: Enter the command line to use to start this program, or choose **Browse** to browse to the file location.  
 
-            If a file name does not have an extension that's specified, Configuration Manager attempts to use .com, .exe, and .bat as possible extensions.  
+           If a file name does not have an extension that's specified, Configuration Manager attempts to use .com, .exe, and .bat as possible extensions.  
 
-             When the program is run on a client, Configuration Manager first searches for the command-line file name within the package,  searches next in the local Windows folder, and then searches in local *%path%*. If the file cannot be found, the program fails.  
+            When the program is run on a client, Configuration Manager first searches for the command-line file name within the package,  searches next in the local Windows folder, and then searches in local *%path%*. If the file cannot be found, the program fails.  
 
-        -   **Startup folder** (optional): Specify the folder from which the program runs, up to 127 characters. This folder can be an absolute path on the client or a path that's relative to the distribution point folder that contains the package.
+       -   **Startup folder** (optional): Specify the folder from which the program runs, up to 127 characters. This folder can be an absolute path on the client or a path that's relative to the distribution point folder that contains the package.
 
-        -   **Run**: Specify the mode in which the program runs on client computers. Select one of the following:  
+       -   **Run**: Specify the mode in which the program runs on client computers. Select one of the following:  
 
-            -   **Normal**: The program runs in the normal mode based on system and program defaults. This is the default mode.  
+           -   **Normal**: The program runs in the normal mode based on system and program defaults. This is the default mode.  
 
-            -   **Minimized**: The program runs minimized on client devices. Users might see installation activity in the notification area or on the taskbar.  
+           -   **Minimized**: The program runs minimized on client devices. Users might see installation activity in the notification area or on the taskbar.  
 
-            -   **Maximized**: The program runs maximized on client devices. Users see all installation activity.  
+           -   **Maximized**: The program runs maximized on client devices. Users see all installation activity.  
 
-            -   **Hidden**: The program runs hidden on client devices. Users don't see any installation activity.  
+           -   **Hidden**: The program runs hidden on client devices. Users don't see any installation activity.  
 
-        -   **Program can run**: Specify whether the program runs only when a user is signed in, only when no user is signed in, or regardless of whether  a user is signed in to the client computer.  
+       -   **Program can run**: Specify whether the program runs only when a user is signed in, only when no user is signed in, or regardless of whether  a user is signed in to the client computer.  
 
-        -   **Run mode**: Specify whether the program runs with administrative permissions or with the permissions of the user who's currently signed in.  
+       -   **Run mode**: Specify whether the program runs with administrative permissions or with the permissions of the user who's currently signed in.  
 
-        -   **Allow users to view and interact with the program installation**: Use this setting, if available, to specify whether to allow users to interact with the program installation. This check box is available only when **Only when no user is logged on** or **Whether or not a user is logged on** is selected for **Program can run** and when **Run with administrative rights** is selected for **Run mode**.  
+       -   **Allow users to view and interact with the program installation**: Use this setting, if available, to specify whether to allow users to interact with the program installation. This check box is available only when **Only when no user is logged on** or **Whether or not a user is logged on** is selected for **Program can run** and when **Run with administrative rights** is selected for **Run mode**.  
 
-        -   **Drive mode**: Specify information about how this program runs on the network. Choose one of the following:  
+       -   **Drive mode**: Specify information about how this program runs on the network. Choose one of the following:  
 
-            -   **Runs with UNC name**: Specify that the program runs with a Universal Naming Convention (UNC) name. This is the default setting.  
+           -   **Runs with UNC name**: Specify that the program runs with a Universal Naming Convention (UNC) name. This is the default setting.  
 
-            -   **Requires drive letter**: Specify that the program requires a drive letter to fully qualify its location. For this setting, Configuration Manager can use any available drive letter on the client.  
+           -   **Requires drive letter**: Specify that the program requires a drive letter to fully qualify its location. For this setting, Configuration Manager can use any available drive letter on the client.  
 
-            -   **Requires specific drive letter** : Specify that the program requires a specific drive letter that you specify to fully qualify its location (for example, **Z:**). If the specified drive letter is already used on a client, the program does not run.  
+           -   **Requires specific drive letter** : Specify that the program requires a specific drive letter that you specify to fully qualify its location (for example, **Z:**). If the specified drive letter is already used on a client, the program does not run.  
 
-        -   **Reconnect to distribution point at log on**: Use this check box to indicate whether the client computer reconnects to the distribution point when the user signs in. By default, this check box is cleared.  
+       -   **Reconnect to distribution point at log on**: Use this check box to indicate whether the client computer reconnects to the distribution point when the user signs in. By default, this check box is cleared.  
 
-  3.  On the **Requirements** page of the **Create Package and Program Wizard,** specify the following information:  
+   3.  On the **Requirements** page of the **Create Package and Program Wizard,** specify the following information:  
 
-        -   **Run another program first**: Use this setting to identify a package and program that runs before this package and program runs.  
+       -   **Run another program first**: Use this setting to identify a package and program that runs before this package and program runs.  
 
-        -   **Platform requirements**: Select **This program can run on any platform** or  **This program can run only on specified platforms**, and then choose the operating systems that clients must be running to be able to install the package and program.  
+       -   **Platform requirements**: Select **This program can run on any platform** or  **This program can run only on specified platforms**, and then choose the operating systems that clients must be running to be able to install the package and program.  
 
-        -   **Estimated disk space**: Specify the amount of disk space that the software program requires to run on the computer. This can be specified as **Unknown** (the default setting) or as a whole number greater than or equal to zero. If a value is specified, units for the value must also be specified.  
+       -   **Estimated disk space**: Specify the amount of disk space that the software program requires to run on the computer. This can be specified as **Unknown** (the default setting) or as a whole number greater than or equal to zero. If a value is specified, units for the value must also be specified.  
 
-        -   **Maximum allowed run time (minutes)**: Specify the maximum time that the program is expected to run on the client computer. This can be specified as **Unknown** (the default setting) or as a whole number greater than zero.  
+       -   **Maximum allowed run time (minutes)**: Specify the maximum time that the program is expected to run on the client computer. This can be specified as **Unknown** (the default setting) or as a whole number greater than zero.  
 
-             By default, this value is set to 120 minutes.  
+            By default, this value is set to 120 minutes.  
 
-            > [!IMPORTANT]  
-            >  If you are using maintenance windows for the collection on which this program is run, a conflict could occur if the **Maximum allowed run time** is longer than the scheduled maintenance window. However, if the maximum run time is set to **Unknown**, the program starts to run during the maintenance window and continues to run as needed after the maintenance window is closed. If the user sets the maximum run time to a specific period that exceeds the length of any available maintenance window, then the program doesn't run.  
+           > [!IMPORTANT]  
+           >  If you are using maintenance windows for the collection on which this program is run, a conflict could occur if the **Maximum allowed run time** is longer than the scheduled maintenance window. However, if the maximum run time is set to **Unknown**, the program starts to run during the maintenance window and continues to run as needed after the maintenance window is closed. If the user sets the maximum run time to a specific period that exceeds the length of any available maintenance window, then the program doesn't run.  
 
-             If the value is set to **Unknown**, Configuration Manager sets the maximum allowed run time as 12 hours (720 minutes).  
+            If the value is set to **Unknown**, Configuration Manager sets the maximum allowed run time as 12 hours (720 minutes).  
 
-            > [!NOTE]  
-            >  If the maximum run time (whether set by the user or as the default value) is exceeded, Configuration Manager stops the program if **run with administrative rights** is selected and **Allow users to view and interact with the program installation** is not selected.  
+           > [!NOTE]  
+           >  If the maximum run time (whether set by the user or as the default value) is exceeded, Configuration Manager stops the program if **run with administrative rights** is selected and **Allow users to view and interact with the program installation** is not selected.  
 
-  4.  Choose **Next**.  
+   4.  Choose **Next**.  
 
-    #### Create a device program  
+   #### Create a device program  
 
-  1.  On the **Program Type** page of the **Create Package and Program Wizard**, select **Program for device**, and then choose **Next**.  
+   1.  On the **Program Type** page of the **Create Package and Program Wizard**, select **Program for device**, and then choose **Next**.  
 
-  2.  On the **Program for Device** page, specify the following:  
+   2.  On the **Program for Device** page, specify the following:  
 
-        -   **Name**: Specify a name for the program with a maximum of 50 characters.  
+       -   **Name**: Specify a name for the program with a maximum of 50 characters.  
 
-            > [!NOTE]  
-            >  The program name must be unique within a package. After you create a program, you cannot modify its name.  
+           > [!NOTE]  
+           >  The program name must be unique within a package. After you create a program, you cannot modify its name.  
 
-        -   **Comment** (optional): Specify a comment for this device program with a maximum of 127 characters.  
+       -   **Comment** (optional): Specify a comment for this device program with a maximum of 127 characters.  
 
-        -   **Download folder**: Specify the name of the folder on the Windows CE device in which the package source files will be stored. The default value is **\Temp\\**.  
+       -   **Download folder**: Specify the name of the folder on the Windows CE device in which the package source files will be stored. The default value is **\Temp\\**.  
 
-        -   **Command Line**: Enter the command line to use to start this program, or choose **Browse** to browse to the file location.  
+       -   **Command Line**: Enter the command line to use to start this program, or choose **Browse** to browse to the file location.  
 
-        -   **Run command line in download folder**: Select this option to run the program from the previously specified download folder.  
+       -   **Run command line in download folder**: Select this option to run the program from the previously specified download folder.  
 
-        -   **Run command line from this folder**: Select this option to specify a different folder from which to run the program.  
+       -   **Run command line from this folder**: Select this option to specify a different folder from which to run the program.  
 
-    3.  On the **Requirements** page, specify the following:  
+   3.  On the **Requirements** page, specify the following:  
 
-        -   **Estimated disk space**: Specify the amount of disk space that's required for the software. This is displayed to users of mobile devices before they install the program.  
+       -   **Estimated disk space**: Specify the amount of disk space that's required for the software. This is displayed to users of mobile devices before they install the program.  
 
-        -   **Download program**: Specify information regarding when this program can be downloaded to mobile devices. You can specify **As soon as possible**, **Only over a fast network**, or **Only when the device is docked**.  
+       -   **Download program**: Specify information regarding when this program can be downloaded to mobile devices. You can specify **As soon as possible**, **Only over a fast network**, or **Only when the device is docked**.  
 
-        -   **Additional requirements**: Specify any additional requirements for this program. These are displayed to users before they install the software. For example, you could notify users that they need to close all other applications before running the program.  
+       -   **Additional requirements**: Specify any additional requirements for this program. These are displayed to users before they install the software. For example, you could notify users that they need to close all other applications before running the program.  
 
-  4.  Choose **Next**.  
+   4.  Choose **Next**.  
 
-  7.  On the **Summary** page, review the actions that will be taken, and then complete the wizard.  
+   7.  On the **Summary** page, review the actions that will be taken, and then complete the wizard.  
 
- Verify that the new package and program are displayed in the **Packages** node of the **Software Library** workspace.  
+   Verify that the new package and program are displayed in the **Packages** node of the **Software Library** workspace.  
 
 ## Create a package and program from a package definition file  
 
-1.  In the Configuration Manager console, choose **Software Library** > **Application Management** > **Packages**.  
+1. In the Configuration Manager console, choose **Software Library** > **Application Management** > **Packages**.  
 
-3.  On the **Home** tab, in the **Create** group, choose **Create Package from Definition**.  
+2. On the **Home** tab, in the **Create** group, choose **Create Package from Definition**.  
 
-4.  On the **Package Definition** page of the **Create Package from Definition Wizard**, choose an existing package definition file, or choose **Browse** to open a new package definition file. After you have specified a new package definition file, select it from the **Package definition** list, and then choose **Next**.  
+3. On the **Package Definition** page of the **Create Package from Definition Wizard**, choose an existing package definition file, or choose **Browse** to open a new package definition file. After you have specified a new package definition file, select it from the **Package definition** list, and then choose **Next**.  
 
-5.  On the **Source Files** page, specify information about any required source files for the package and program, and then choose **Next**.  
+4. On the **Source Files** page, specify information about any required source files for the package and program, and then choose **Next**.  
 
-6.  If the package requires source files, on the **Source Folder** page, specify the location from which the source files are to be obtained, and then choose **Next**.  
+5. If the package requires source files, on the **Source Folder** page, specify the location from which the source files are to be obtained, and then choose **Next**.  
 
-7.  On the **Summary** page, review the actions that will be taken, and then complete the wizard. The new package and program are displayed in the **Packages** node of the **Software Library** workspace.  
+6. On the **Summary** page, review the actions that will be taken, and then complete the wizard. The new package and program are displayed in the **Packages** node of the **Software Library** workspace.  
 
- For more information about package definition files, see [About the package definition file format](/sccm/apps/deploy-use/packages-and-programs#about-the-package-definition-file-format) in this topic.  
+   For more information about package definition files, see [About the package definition file format](/sccm/apps/deploy-use/packages-and-programs#about-the-package-definition-file-format) in this topic.  
 
 ##  Deploy packages and programs  
 
-1.  In the Configuration Manager console, choose **Software Library** > **Application Management** > **Packages**.  
+1. In the Configuration Manager console, choose **Software Library** > **Application Management** > **Packages**.  
 
-2.  Select the package that you want to deploy, and then in the **Home** tab in the **Deployment** group, choose **Deploy**.  
+2. Select the package that you want to deploy, and then in the **Home** tab in the **Deployment** group, choose **Deploy**.  
 
-3.  On the **General** page of the **Deploy Software Wizard**, specify the name of the package and program that you want to deploy, the collection to which you want to deploy the package and program, and optional comments for the deployment.  
+3. On the **General** page of the **Deploy Software Wizard**, specify the name of the package and program that you want to deploy, the collection to which you want to deploy the package and program, and optional comments for the deployment.  
 
-     Select **Use default distribution point groups associated to this collection** if you want to store the package content on the collections default distribution point group. If you did not associate the selected collection with a distribution point group, this option is unavailable.  
+    Select **Use default distribution point groups associated to this collection** if you want to store the package content on the collections default distribution point group. If you did not associate the selected collection with a distribution point group, this option is unavailable.  
 
-4.  On the **Content** page, choose **Add**, and then select the distribution points or distribution point groups to which you want to deploy the content that is associated with this package and program.  
+4. On the **Content** page, choose **Add**, and then select the distribution points or distribution point groups to which you want to deploy the content that is associated with this package and program.  
 
-5.  On the **Deployment Settings** page, choose a purpose for this deployment, and specify options for wake-up packets and metered connections:  
+5. On the **Deployment Settings** page, choose a purpose for this deployment, and specify options for wake-up packets and metered connections:  
 
-    -   **Purpose**: Choose from:  
+   - **Purpose**: Choose from:  
 
-        -   **Available**: If the application is deployed to a user, the user sees the published package and program in the Application Catalog and can request it on demand. If the package and program is deployed to a device, the user sees it in Software Center and can install it on demand.  
+     -   **Available**: If the application is deployed to a user, the user sees the published package and program in the Application Catalog and can request it on demand. If the package and program is deployed to a device, the user sees it in Software Center and can install it on demand.  
 
-        -   **Required**: The package and program is deployed automatically, according to the configured schedule. However, a user can track the package and program deployment status and install it before the deadline by using Software Center.  
+     -   **Required**: The package and program is deployed automatically, according to the configured schedule. However, a user can track the package and program deployment status and install it before the deadline by using Software Center.  
 
-        >  [!NOTE]  
-        >  If multiple users are signed into the device, package and task sequence deployments may not appear in Software Center.
-        
-    -   **Send wake-up packets**: If the deployment purpose is set to **Required** and this option is selected, a wake-up packet is sent to computers before the deployment is installed to wake the computer from sleep at the installation deadline time. Before you can use this option, computers must be configured for Wake On LAN.  
+     > [!NOTE]
+     >  If multiple users are signed into the device, package and task sequence deployments may not appear in Software Center.
 
-    -  **Allow clients on a metered Internet connection to download content after the installation deadline, which might incur additional costs**: Select this if it's required.  
+   - **Send wake-up packets**: If the deployment purpose is set to **Required** and this option is selected, a wake-up packet is sent to computers before the deployment is installed to wake the computer from sleep at the installation deadline time. Before you can use this option, computers must be configured for Wake On LAN.  
 
-    > [!NOTE]  
-    >  The **Pre-deploy software to the user's primary device** option is not available when you deploy a package and program.  
+   - **Allow clients on a metered Internet connection to download content after the installation deadline, which might incur additional costs**: Select this if it's required.  
 
-6.  On the **Scheduling** page, configure when this package and program will be deployed or made available to client devices.  
+   > [!NOTE]  
+   >  The **Pre-deploy software to the user's primary device** option is not available when you deploy a package and program.  
 
-     The options on this page vary depending on whether the deployment action is set to **Available** or **Required**.  
+6. On the **Scheduling** page, configure when this package and program will be deployed or made available to client devices.  
 
-7.  If the deployment purpose is set to **Required**, configure the rerun behavior for the program from the **Rerun behavior** drop-down menu. Choose from the following options:  
+    The options on this page vary depending on whether the deployment action is set to **Available** or **Required**.  
 
-    |Rerun behavior|More information|  
-    |--------------------|----------------------|  
-    |Never rerun deployed program|The program won't be rerun on the client, even if the program originally failed or if the program files are changed.|  
-    |Always rerun program|The program is always rerun on the client when the deployment is scheduled, even if the program has already successfully run. This can be useful when you use recurring deployments in which the program is updated, for example with antivirus software.|  
-    |Rerun if failed previous attempt|The program is rerun when the deployment is scheduled only if it failed on the previous run attempt.|  
-    |Rerun if succeeded on previous attempt|The program is rerun only if it previously ran successfully on the client. This is useful when you use recurring advertisements in which the program is routinely updated, and in which each update requires the previous update to be successfully installed.|  
+7. If the deployment purpose is set to **Required**, configure the rerun behavior for the program from the **Rerun behavior** drop-down menu. Choose from the following options:  
+
+
+   |             Rerun behavior             |                                                                                                                        More information                                                                                                                        |
+   |----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+   |      Never rerun deployed program      |                                                                      The program won't be rerun on the client, even if the program originally failed or if the program files are changed.                                                                      |
+   |          Always rerun program          |   The program is always rerun on the client when the deployment is scheduled, even if the program has already successfully run. This can be useful when you use recurring deployments in which the program is updated, for example with antivirus software.    |
+   |    Rerun if failed previous attempt    |                                                                              The program is rerun when the deployment is scheduled only if it failed on the previous run attempt.                                                                              |
+   | Rerun if succeeded on previous attempt | The program is rerun only if it previously ran successfully on the client. This is useful when you use recurring advertisements in which the program is routinely updated, and in which each update requires the previous update to be successfully installed. |
+
 
 8. On the **User Experience** page, specify the following information:  
 

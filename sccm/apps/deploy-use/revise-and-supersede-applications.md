@@ -67,13 +67,13 @@ In this topic, you'll learn how to work with System Center Configuration Manager
 
  You can create a supersedence relationship that updates the dependent application to a new version.  
 
-1.  Ensure that the new dependent application and the original dependent application are in the same dependency group of the master application.  
+1. Ensure that the new dependent application and the original dependent application are in the same dependency group of the master application.  
 
-2.  Create a supersedence relationship that supersedes the original dependent application with the new dependent application.  
+2. Create a supersedence relationship that supersedes the original dependent application with the new dependent application.  
 
- During new installations of the master application, the new dependent application is installed. Existing installations of the master application are updated with the new dependent application.  
+   During new installations of the master application, the new dependent application is installed. Existing installations of the master application are updated with the new dependent application.  
 
- The end result is that all deployments of the master application use the new dependent application.  
+   The end result is that all deployments of the master application use the new dependent application.  
 
 ### Further considerations  
 

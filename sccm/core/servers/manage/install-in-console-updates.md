@@ -160,18 +160,18 @@ Install the update outside of normal business hours for each site to minimize th
 #### 1. When the update installation starts  
 You're presented with the Updates Wizard that displays a list of the product areas that the update applies to.  
 
--   On the **General** page of the wizard, configure **Prerequisite warnings** as necessary:  
+- On the **General** page of the wizard, configure **Prerequisite warnings** as necessary:  
 
-    -   Prerequisite errors always stop the update installation. Fix errors before you can successfully retry the update installation. For more information, see [Retry installation of a failed update](#bkmk_retry).  
+  - Prerequisite errors always stop the update installation. Fix errors before you can successfully retry the update installation. For more information, see [Retry installation of a failed update](#bkmk_retry).  
 
-    -   Prerequisite warnings can also stop the update installation. Fix warnings before you retry the update installation. For more information, see [Retry installation of a failed update](#bkmk_retry).  
+  - Prerequisite warnings can also stop the update installation. Fix warnings before you retry the update installation. For more information, see [Retry installation of a failed update](#bkmk_retry).  
 
-    -   **Ignore any prerequisite check warnings and install this update regardless of missing requirements**: Set a condition for the update installation to ignore prerequisite warnings. This option allows the update installation to continue. If you don't select this option, the update installation stops when the process encounters a warning. Unless you've previously run the prerequisite check and fixed prerequisite warnings for a site, don't use this option.  
+  - **Ignore any prerequisite check warnings and install this update regardless of missing requirements**: Set a condition for the update installation to ignore prerequisite warnings. This option allows the update installation to continue. If you don't select this option, the update installation stops when the process encounters a warning. Unless you've previously run the prerequisite check and fixed prerequisite warnings for a site, don't use this option.  
 
-      In both the **Administration** and **Monitoring** workspaces, the Updates and Servicing node includes a button on the ribbon named **Ignore prerequisite warnings**. This button becomes available when an update package fails to complete installation due to prerequisite check warnings. For example, you install an update without using the option to ignore prerequisite warnings (from within the Updates Wizard). The update installation stops with a state of prerequisite warning but no errors. Later you click **Ignore prerequisite warnings** in the ribbon. This action triggers an automatic continuation of that update installation, which ignores prerequisite warnings. When you use this option, the update installation automatically continues after a few minutes.  
+    In both the **Administration** and **Monitoring** workspaces, the Updates and Servicing node includes a button on the ribbon named **Ignore prerequisite warnings**. This button becomes available when an update package fails to complete installation due to prerequisite check warnings. For example, you install an update without using the option to ignore prerequisite warnings (from within the Updates Wizard). The update installation stops with a state of prerequisite warning but no errors. Later you click **Ignore prerequisite warnings** in the ribbon. This action triggers an automatic continuation of that update installation, which ignores prerequisite warnings. When you use this option, the update installation automatically continues after a few minutes.  
 
 
--   When an update applies to the Configuration Manager client, choose to test the client update with a limited set of clients. For more information, see [How to test client upgrades in a pre-production collection](/sccm/core/clients/manage/upgrade/test-client-upgrades).  
+- When an update applies to the Configuration Manager client, choose to test the client update with a limited set of clients. For more information, see [How to test client upgrades in a pre-production collection](/sccm/core/clients/manage/upgrade/test-client-upgrades).  
 
 
 #### 2. During the update installation  
@@ -261,54 +261,54 @@ Not all tasks complete immediately. Some tasks don't start until each site compl
 
 The post installation tasks include:
 
--   **Installing SMS_EXECUTIVE service**
+- **Installing SMS_EXECUTIVE service**
   -   Critical service that runs on the site server.
   -   Reinstallation of this service should complete quickly.
 
 
--   **Installing SMS_DATABASE_NOTIFICATION_MONITOR component**
+- **Installing SMS_DATABASE_NOTIFICATION_MONITOR component**
   -   Critical site component thread of SMS_EXECUTIVE service.
   -   Reinstallation of this service should complete quickly.
 
 
--   **Installing SMS_HIERARCHY_MANAGER component**
+- **Installing SMS_HIERARCHY_MANAGER component**
   -   Critical site component that runs on the site server.
   -   Responsible for reinstalling roles on site system servers. Status for individual site system role reinstallation doesn't display.
   -   Reinstallation of this service should complete quickly.
 
 
--   **Installing SMS_REPLICATION_CONFIGURATION_MONITOR component**
+- **Installing SMS_REPLICATION_CONFIGURATION_MONITOR component**
   -   Critical site component that runs on the site server.
   -   Reinstallation of this service should complete quickly.
 
 
--   **Installing SMS_POLICY_PROVIDER component**
+- **Installing SMS_POLICY_PROVIDER component**
   -   Critical site component that runs only on primary sites.
   -   Reinstallation of this service should complete quickly.
 
 
--   **Monitoring replication initialization**   
+- **Monitoring replication initialization**   
   -   This task only displays at the central administration site and child primary sites.
   -   Dependent on the SMS_REPLICATION_CONFIGURATION_MONITOR.
   -   Should complete quickly.
 
 
--   **Updating Configuration Manager Client Preproduction Package**    
+- **Updating Configuration Manager Client Preproduction Package**    
   -   This task displays even when client preproduction (also called client piloting) isn't enabled for use.
   -   Doesn't start until all sites in the hierarchy finish installing the update.
 
 
--   **Updating Client folder on Site Server**
+- **Updating Client folder on Site Server**
   -   This task doesn't display if you use the client in preproduction.  
   -   Should complete quickly.
 
 
--   **Updating Configuration Manager Client Package**
+- **Updating Configuration Manager Client Package**
   -   This task doesn't display if you use the client in preproduction.  
   -   Finishes only after all sites install the update.  
 
 
--   **Turning on Features**
+- **Turning on Features**
   -   This task displays only at the top-tier site of the hierarchy.
   -   Doesn't start until all sites in the hierarchy finish installing the update.
   -   Individual features aren't displayed.

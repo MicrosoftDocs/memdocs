@@ -39,38 +39,38 @@ Make sure that you've reviewed the information in [Introduction to application m
 
 ### To start the Create Application Wizard and create the application  
 
-1.  In the Configuration Manager console, choose **Software Library** > **Application Management** > **Applications**.  
+1. In the Configuration Manager console, choose **Software Library** > **Application Management** > **Applications**.  
 
-3.  On the **Home** tab, in the **Create** group, choose **Create Application**.  
+2. On the **Home** tab, in the **Create** group, choose **Create Application**.  
 
-4.  On the **General** page of the **Create Application Wizard**, choose **Automatically detect information about this application from installation files**. This pre-populates some of the information in the wizard with information that's extracted from the installation .msi file. Then specify the following information:  
+3. On the **General** page of the **Create Application Wizard**, choose **Automatically detect information about this application from installation files**. This pre-populates some of the information in the wizard with information that's extracted from the installation .msi file. Then specify the following information:  
 
-    -   **Type**: Choose **Windows Installer (\*.msi file)**.  
+   -   **Type**: Choose **Windows Installer (\*.msi file)**.  
 
-    -   **Location**: Type the location (or choose **Browse** to select the location) of the installation file **Contoso.msi**. Note that the location must be specified in the form *\\\Server\Share\File* for Configuration Manager to locate the installation files.  
+   -   **Location**: Type the location (or choose **Browse** to select the location) of the installation file **Contoso.msi**. Note that the location must be specified in the form *\\\Server\Share\File* for Configuration Manager to locate the installation files.  
 
-	You'll end up with something that looks like the following screenshot:  
+   You'll end up with something that looks like the following screenshot:  
 
-	![App management wizard general page](/sccm/apps/get-started/media/App-management-wizard-general-page.png)  
+   ![App management wizard general page](/sccm/apps/get-started/media/App-management-wizard-general-page.png)  
 
-5.  Choose **Next**. On the **Import Information** page, you'll see some information about the app and any associated files that were imported to Configuration Manager. Once you are done, choose **Next** again.  
+4. Choose **Next**. On the **Import Information** page, you'll see some information about the app and any associated files that were imported to Configuration Manager. Once you are done, choose **Next** again.  
 
-6.  On the **General Information** page, you can supply further information about the application to help you sort and locate it in the Configuration Manager console.  
+5. On the **General Information** page, you can supply further information about the application to help you sort and locate it in the Configuration Manager console.  
 
-     Additionally, the **Installation program** field lets you specify the full command line that will be used to install the application on PCs. You can edit this to add your own properties (for example **/q** for an unattended installation).  
+    Additionally, the **Installation program** field lets you specify the full command line that will be used to install the application on PCs. You can edit this to add your own properties (for example **/q** for an unattended installation).  
 
-    > [!TIP]  
-    >  Some of the fields on this page of the wizard might have been filled in automatically when you imported the application installation files.  
+   > [!TIP]  
+   >  Some of the fields on this page of the wizard might have been filled in automatically when you imported the application installation files.  
 
-     You'll end up with a screen that looks similar to the following screenshot:  
+    You'll end up with a screen that looks similar to the following screenshot:  
 
-     ![App management wizard general information page](/sccm/apps/get-started/media/App-management-wizard-general-information-page.png)  
+    ![App management wizard general information page](/sccm/apps/get-started/media/App-management-wizard-general-information-page.png)  
 
-7.  Choose **Next**. On the Summary page, you can confirm your application settings and then complete the wizard.  
+6. Choose **Next**. On the Summary page, you can confirm your application settings and then complete the wizard.  
 
- You've finished creating the app. To find it, in the **Software Library** workspace, expand **Application Management**, and then choose **Applications**. For this example, you'll see:  
+   You've finished creating the app. To find it, in the **Software Library** workspace, expand **Application Management**, and then choose **Applications**. For this example, you'll see:  
 
- ![Final app graphic](/sccm/apps/get-started/media/Final-app-graphic.png)  
+   ![Final app graphic](/sccm/apps/get-started/media/Final-app-graphic.png)  
 
 ## Examine the properties of the application and its deployment type  
 

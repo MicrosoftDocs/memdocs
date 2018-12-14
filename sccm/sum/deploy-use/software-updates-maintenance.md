@@ -63,7 +63,7 @@ All WSUS Maintenance needs to be run manually on secondary site WSUS databases. 
 - Computers not contacting the server
 - Unneeded update files
 
- For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://blogs.technet.microsoft.com/configurationmgr/2016/01/26/the-complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maintenance/) blog post. 
+  For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://blogs.technet.microsoft.com/configurationmgr/2016/01/26/the-complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maintenance/) blog post. 
 
 ## Updates cleanup log entries
  

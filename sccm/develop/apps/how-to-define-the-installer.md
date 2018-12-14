@@ -111,14 +111,14 @@ To define the application management deployment technology installer, use an ins
         installationAction.Arguments.Add(new Argument("RedirectPrinters", typeof(int), (true == this.RedirectPrinters) ? 1 : 0));   
         installationAction.Arguments.Add(new Argument("RedirectSmartCards", typeof(int), (true == this.RedirectSmartCards) ? 1 : 0));   
         installationAction.Arguments.Add(new Argument("Username", typeof(string), this.Username));   
-        //  Adds any references to content to the action.   
-        if (this.ConstructRdpOnClient == false && this.Contents.Count > 0)   
-        {  
-            foreach (Content content in this.Contents)   
-            {  
-                 installationAction.Contents.Add(new ContentRef(content));   
-            }  
-        }  
+        //  Adds any references to content to the action.   
+        if (this.ConstructRdpOnClient == false && this.Contents.Count > 0)   
+        {  
+            foreach (Content content in this.Contents)   
+            {  
+                 installationAction.Contents.Add(new ContentRef(content));   
+            }  
+        }  
         return installationAction;   
     }  
     ```  

@@ -140,28 +140,28 @@ For details of all Windows 10 settings, see [How to create configuration items f
 
 * **Required password type**. Specify whether the user must create an alphanumeric password or a numeric password. For alphanumeric passwords, you also specify the minimum number of character sets that the password must have. The four character sets are: Lowercase, uppercase letters, symbols and numbers.
 
- **Supported on:**
- * Windows Phone 8+
- * Windows 8.1+
- * iOS 6+
-<br></br>
+  **Supported on:**
+  * Windows Phone 8+
+  * Windows 8.1+
+  * iOS 6+
+  <br></br>
 * **Block USB debugging on device**. You do not have to configure this settings as USB debugging is already disabled on Android for Work devices.
 
- **Supported on:**
- * Android 4.0+
- * Samsung KNOX Standard 4.0+
-<br></br>
+  **Supported on:**
+  * Android 4.0+
+  * Samsung KNOX Standard 4.0+
+  <br></br>
 * **Block apps from unknown sources**. Require that devices prevent installation of apps from unknown sources. You do not have to configure this setting as Android for Work devices always restrict installation from unknown sources.
 
   **Supported on:**
   * Android 4.0+
   * Samsung KNOX Standard 4.0+
-<br></br>
+  <br></br>
 * **Require threat scan on apps**. This setting specifies that the Verify apps feature is enabled on the device.
 
- **Supported on:**
- * Android 4.2 through 4.4
- * Samsung KNOX Standard 4.0+
+  **Supported on:**
+  * Android 4.2 through 4.4
+  * Samsung KNOX Standard 4.0+
 
 See [create and deploy a device compliance policy](https://docs.microsoft.com/sccm/mdm/deploy-use/create-compliance-policy) to try the new device compliance rules
 

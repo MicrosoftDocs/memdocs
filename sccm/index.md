@@ -21,7 +21,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardText">
                                                 <h3>Core infrastructure</h3>
-                                                <p><a href="/sccm/core/plan-design/changes/whats-new-incremental-versions">What's new in Configuration Manager incremental versions</a></p>
+                                                <p><a href="/sccm/core/plan-design/changes/whats-new-incremental-versions">What&#39;s new in Configuration Manager incremental versions</a></p>
                                                 <p><a href="/sccm/core/servers/manage/updates">Updates for Configuration Manager</a></p>
                                                 <p><a href="/sccm/core/plan-design/configs/supported-configurations">Supported configurations for Configuration Manager</a></p>
                                             </div>
@@ -156,8 +156,8 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>What's new in Configuration Manager incremental versions</h3>
-                                                <p>Learn about what's new in the latest update for Configuration Manager.</p>
+                                                <h3>What&#39;s new in Configuration Manager incremental versions</h3>
+                                                <p>Learn about what&#39;s new in the latest update for Configuration Manager.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -572,7 +572,7 @@ ms.topic: hub-page
                                             </div>
                                             <div class="cardText">
                                                 <h3>Ensure device compliance</h3>
-                                                <p>Configure settings and evaluate compliance on devices that you're managing.</p>
+                                                <p>Configure settings and evaluate compliance on devices that you&#39;re managing.</p>
                                             </div>
                                         </div>
                                     </div>

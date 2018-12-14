@@ -34,7 +34,7 @@ The co-management dashboard shows different tiles depending upon the site versio
 *Applies to versions 1802 and 1806*
 
 Shows the percentage of co-managed devices throughout your environment.
- ![Co-managed devices tile](media\co-management-dashboard\Percent-Co-managed-graph.PNG)
+ ![Co-managed devices tile](media/co-management-dashboard/Percent-Co-managed-graph.PNG)
 
 
 ### Client OS distribution
@@ -50,7 +50,7 @@ Shows the number of client devices per OS by version. It uses the following grou
     > Windows 10, version 1709 and later, is a prerequisite for co-management.  
 
 Hover over a graph section to show the percentage of devices in that OS group.
- ![Client OS distribution tile](media\co-management-dashboard\Co-management-OS-distribution-graph.PNG)
+ ![Client OS distribution tile](media/co-management-dashboard/Co-management-OS-distribution-graph.PNG)
 
 
 ### Co-management status (donut)
@@ -63,10 +63,10 @@ Shows the breakdown of device success or failure in the following categories:
 - Failure: Auto-enrollment failed  
 
 Hover over a graph section to show the percentage of devices in that category. 
- ![Co-management status (donut) tile](media\co-management-dashboard\Co-management-status-graph.PNG)
+ ![Co-management status (donut) tile](media/co-management-dashboard/Co-management-status-graph.PNG)
 
 Select a graph section to view the device list for that category.
- ![Enrollment failure device list](media\co-management-dashboard\Enrollment-Failure_Device-List.PNG)
+ ![Enrollment failure device list](media/co-management-dashboard/Enrollment-Failure_Device-List.PNG)
 
 
 ### Co-management status (funnel)
@@ -79,7 +79,7 @@ A funnel chart that shows the number of devices with the following states from t
 - Enrollment initiated  
 - Enrolled  
 
-![Co-management status (funnel) tile](media\co-management-dashboard\1358980-status-funnel.png)
+![Co-management status (funnel) tile](media/co-management-dashboard/1358980-status-funnel.png)
 
 
 ### Co-management enrollment status
@@ -96,7 +96,7 @@ Shows the breakdown of device status in the following categories:
 
 Select a state in the tile to drill through to a list of devices in that state.  
 
-![Co-management enrollment status tile](media\co-management-dashboard\1358980-enrollment-status.png)
+![Co-management enrollment status tile](media/co-management-dashboard/1358980-enrollment-status.png)
 
 
 ### Enrollment errors
@@ -113,7 +113,7 @@ A table that shows the count of enrollment errors from devices.
 Displays a bar chart with the number of devices that you've transitioned to Microsoft Intune for the available workloads. (The list of workloads varies by version of Configuration Manager. For more information, see [Workloads able to be transitioned to Intune](/sccm/core/clients/manage/co-management-switch-workloads#workloads-able-to-be-transitioned-to-intune).)
 
 Hover over a chart section to show the number of devices transitioned for the workload. 
- ![Workload transition bar graph](media\co-management-dashboard\Workload-Transition.PNG)
+ ![Workload transition bar graph](media/co-management-dashboard/Workload-Transition.PNG)
 
 
 ## Next steps

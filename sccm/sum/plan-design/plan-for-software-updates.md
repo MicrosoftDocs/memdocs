@@ -337,15 +337,15 @@ You might need to add the addresses below to the firewall that's located between
 - If child sites have a software update point 
 - If there is a remote active internet-based software update point at a site
 
- **Software update point on the child site**  
+  **Software update point on the child site**  
 
--   `http://<FQDN for software update point on child site>`  
+- `http://<FQDN for software update point on child site>`  
 
--   `https://<FQDN for software update point on child site>`  
+- `https://<FQDN for software update point on child site>`  
 
--   `http://<FQDN for software update point on parent site>`  
+- `http://<FQDN for software update point on parent site>`  
 
--   `https://<FQDN for software update point on parent site>`  
+- `https://<FQDN for software update point on parent site>`  
 
 
 

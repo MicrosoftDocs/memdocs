@@ -96,78 +96,78 @@ Class SMS_TaskSequence_PartitionDiskAction : SMS_TaskSequence_Action
 
  The type of disk. Possible values are:  
 
--   DYNAMIC  
+- DYNAMIC  
 
--   BASIC  
+- BASIC  
 
- `Enabled`  
- Data type: `Boolean`  
+  `Enabled`  
+  Data type: `Boolean`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- `GPTBootDisk`  
- Data type: `Boolean`  
+  `GPTBootDisk`  
+  Data type: `Boolean`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- `true` to create an extensible firmware interface (EFI) partition so that an EFI system can boot from the disk. The default value is `false`. Set this property if `PartitionStyle` is set to GPT.  
+  `true` to create an extensible firmware interface (EFI) partition so that an EFI system can boot from the disk. The default value is `false`. Set this property if `PartitionStyle` is set to GPT.  
 
- `Name`  
- Data type: `String`  
+  `Name`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [AllowedLen("1-100")]  
+  Qualifiers: [AllowedLen("1-100")]  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- `Partitions`  
- Data type: `SMS_TaskSequence_PartitionSettings`Array  
+  `Partitions`  
+  Data type: `SMS_TaskSequence_PartitionSettings`Array  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [Not_null]  
+  Qualifiers: [Not_null]  
 
- [SMS_TaskSequence_PartitionSettings Server WMI Class](../../../develop/reference/osd/sms_tasksequence_partitionsettings-server-wmi-class.md) objects representing partition settings.  
+  [SMS_TaskSequence_PartitionSettings Server WMI Class](../../../develop/reference/osd/sms_tasksequence_partitionsettings-server-wmi-class.md) objects representing partition settings.  
 
- `PartitionStyle`  
- Data type: `String`  
+  `PartitionStyle`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [Not_null]  
+  Qualifiers: [Not_null]  
 
- The partition style. Possible values are:  
+  The partition style. Possible values are:  
 
--   GPT. GUID partition table format.  
+- GPT. GUID partition table format.  
 
--   MBR. Master boot record format.  
+- MBR. Master boot record format.  
 
- `SupportedEnvironment`  
- Data type: `String`  
+  `SupportedEnvironment`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [Not_Null:ToInstance]  
+  Qualifiers: [Not_Null:ToInstance]  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- The default value of this property for this task sequence action is WinPE.  
+  The default value of this property for this task sequence action is WinPE.  
 
- `Timeout`  
- Data type: `UInt32`  
+  `Timeout`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
 ## Remarks  
  Class qualifiers for this class include:  

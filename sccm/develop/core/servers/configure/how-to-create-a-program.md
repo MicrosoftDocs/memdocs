@@ -18,27 +18,30 @@ The following example shows how to create a program, in System Center Configurat
 
 ### To create a program  
 
-1.  Set up a connection to the SMS Provider.  
+1. Set up a connection to the SMS Provider.  
 
-2.  Create the new program object by using the `SMS_Program` class.  
+2. Create the new program object by using the `SMS_Program` class.  
 
-3.  Populate the new program properties.  
+3. Populate the new program properties.  
 
-    > [!TIP]
-    >  When you create a program for a Task Sequence or a Virtual Application Package, the SMS_Program properties must be set to specific values. The following tables outline what those settings should be configured to.  
+   > [!TIP]
+   >  When you create a program for a Task Sequence or a Virtual Application Package, the SMS_Program properties must be set to specific values. The following tables outline what those settings should be configured to.  
 
-     Task Sequence  
-     |Property Name|Property Value|  
-    |-------------------|--------------------|  
-    |ProgramName|*|  
+    Task Sequence  
 
-     Virtual Application Package  
-     |Property Name|Property Value|  
-    |-------------------|--------------------|  
-    |CommandLine|PkgGUID={E742FFD6-D539-42CC-9827-73535FC81E06}:VersionGUID={19366289-8C55-44E2-A5EC-7B385EFB4C30}<br /><br /> **Note:** The GUID values are taken from the virtual application’s XML manifest file.|  
-    |ProgramName|[Virtual application]|  
+    |Property Name|Property Value|  
+   |-------------------|--------------------|  
+   |ProgramName|*|  
 
-4.  Save the new program and properties.  
+    Virtual Application Package  
+
+   | Property Name |                                                                                           Property Value                                                                                            |
+   |---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+   |  CommandLine  | PkgGUID={E742FFD6-D539-42CC-9827-73535FC81E06}:VersionGUID={19366289-8C55-44E2-A5EC-7B385EFB4C30}<br /><br /> **Note:** The GUID values are taken from the virtual application’s XML manifest file. |
+   |  ProgramName  |                                                                                        [Virtual application]                                                                                        |
+
+
+4. Save the new program and properties.  
 
 ## Example  
  The following example method creates a new program and populates its properties for use in software distribution.  

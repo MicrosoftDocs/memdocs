@@ -56,15 +56,15 @@ manager: dougeby
 
 ##  <a name="bkmk_allStatus"></a> Monitor the status of all clients  
 
-1.  In the Configuration Manager console, click **Monitoring** > **Client Status**. On this page of the console, you can review the overall statistics for client activity and client checks across the site.  You can also change the scope of the information by choosing a different collection.  
+1. In the Configuration Manager console, click **Monitoring** > **Client Status**. On this page of the console, you can review the overall statistics for client activity and client checks across the site.  You can also change the scope of the information by choosing a different collection.  
 
-2.  To drill down into detail about the reported statistics, click the name of the reported information (such as **Active clients that have passed client check or no results**) and review the information about the individual clients.  
+2. To drill down into detail about the reported statistics, click the name of the reported information (such as **Active clients that have passed client check or no results**) and review the information about the individual clients.  
 
-3.  Click **Client Activity** to see charts depicting the client activity in your Configuration Manager site.  
+3. Click **Client Activity** to see charts depicting the client activity in your Configuration Manager site.  
 
-4.  Click **Client Check** to see charts depicting the status of client checks in your Configuration Manager site.  
+4. Click **Client Check** to see charts depicting the status of client checks in your Configuration Manager site.  
 
- You can configure alerts to notify you when clients check results or client activity drops below a specified percentage of clients in a collection or when remediation fails on a specified percentage of clients. For information about how to configure client status, see [How to configure client status in System Center Configuration Manager](../../../core/clients/deploy/configure-client-status.md).  
+   You can configure alerts to notify you when clients check results or client activity drops below a specified percentage of clients in a collection or when remediation fails on a specified percentage of clients. For information about how to configure client status, see [How to configure client status in System Center Configuration Manager](../../../core/clients/deploy/configure-client-status.md).  
 
 ##  <a name="BKMK_ClientHealth"></a> Checks and remediations made by client check  
  The following checks and remediations can be performed by client check.  
