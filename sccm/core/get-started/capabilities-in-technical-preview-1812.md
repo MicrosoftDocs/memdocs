@@ -34,10 +34,16 @@ Review the [technical preview](/sccm/core/get-started/technical-preview) article
 
 **The following sections describe the new features to try out in this version:**  
 
-[!INCLUDE [Improvements to Run PowerShell Script task sequence step](includes/1812/3556028.md)]<!--fka 1359389-->
-[!INCLUDE [Improvements to email app approvals](includes/1812/3594063.md)]
+<!--fka 1359389-->
+[!INCLUDE [Improvements to Run PowerShell Script task sequence step](includes/1812/3556028.md)]
+
+[!INCLUDE [Improvements to application approvals via email](includes/1812/3594063.md)]
+
 [!INCLUDE [Configure user device affinity in Software Center](includes/1812/3485366.md)]
-[!INCLUDE [MMS DE cabana features](includes/1812/3594151.md)]
+
+[!INCLUDE [Improvements to Configuration Manager console](includes/1812/3594151.md)]
+
+[!INCLUDE [Download reports from the Community Hub](includes/1812/3555936.md)]
 
 
 
