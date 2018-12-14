@@ -44,11 +44,11 @@ Use the following procedures on the top-level site to manually initiate software
 
 #### To manually start software updates synchronization  
 
-  1.  In the Configuration Manager console that is connected to the central administration site or stand-alone primary site, click **Software Library**.  
+1. In the Configuration Manager console that is connected to the central administration site or stand-alone primary site, click **Software Library**.  
 
-  2.  In the Software Library workspace, expand **Software Updates** and click **All Software Updates** or **Software Update Groups**.  
+2. In the Software Library workspace, expand **Software Updates** and click **All Software Updates** or **Software Update Groups**.  
 
-  3.  On the **Home** tab, in the **Create** group, click **Synchronize Software Updates**. Click **Yes** in the dialog box to confirm that you want to initiate the synchronization process.  
+3. On the **Home** tab, in the **Create** group, click **Synchronize Software Updates**. Click **Yes** in the dialog box to confirm that you want to initiate the synchronization process.  
 
    After you initiate the synchronization process on the software update point, you can monitor the synchronization process from the Configuration Manager console for all software update points in your hierarchy. Use the following procedure to monitor the software updates synchronization process.  
 
@@ -58,11 +58,11 @@ After you initiate the synchronization process, you can use the Configuration Ma
 
 #### To monitor the software updates synchronization process  
 
-  1.  In the Configuration Manager console, click **Monitoring**.  
+1. In the Configuration Manager console, click **Monitoring**.  
 
-  2.  In the **Monitoring** workspace, click **Software Update Point Synchronization Status**.  
+2. In the **Monitoring** workspace, click **Software Update Point Synchronization Status**.  
 
-    The software update points in your Configuration Manager hierarchy are displayed in the results pane. From this view, you can monitor the synchronization status for all software update points. When you want more detailed information about the synchronization process, you can review the wsyncmgr.log file that is located in <*ConfigMgrInstallationPath*>\Logs on each site server.  
+   The software update points in your Configuration Manager hierarchy are displayed in the results pane. From this view, you can monitor the synchronization status for all software update points. When you want more detailed information about the synchronization process, you can review the wsyncmgr.log file that is located in <*ConfigMgrInstallationPath*>\Logs on each site server.  
 
 ## Next steps
 After you synchronize software updates for the first time, or after there are new classifications or products available, you must [configure the new classifications and products](configure-classifications-and-products.md) to synchronize software updates with the new criteria.

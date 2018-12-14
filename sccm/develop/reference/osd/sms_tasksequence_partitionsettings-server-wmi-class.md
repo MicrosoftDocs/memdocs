@@ -65,36 +65,36 @@ Class SMS_TaskSequence_PartitionSettings
 
  File system to use when formatting the partition. Possible values are:  
 
--   FAT32  
+- FAT32  
 
--   NTFS  
+- NTFS  
 
- `QuickFormat`  
- Data type: `Boolean`  
+  `QuickFormat`  
+  Data type: `Boolean`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [not_null]  
+  Qualifiers: [not_null]  
 
- `true` to perform a quick format. Set this property to `false` to perform a full format.  
+  `true` to perform a quick format. Set this property to `false` to perform a full format.  
 
- `Size`  
- Data type: `UInt32`  
+  `Size`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Size of the partition to create. The units are defined by the `SizeUnits` property.  
+  Size of the partition to create. The units are defined by the `SizeUnits` property.  
 
- `SizeUnits`  
- Data type: `String`  
+  `SizeUnits`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Units in which the `Size` property is specified. Possible values are:  
+  Units in which the `Size` property is specified. Possible values are:  
 
 |||  
 |-|-|  
@@ -111,35 +111,35 @@ Class SMS_TaskSequence_PartitionSettings
 
  Type of partition to create. Possible values are:  
 
--   Primary  
+- Primary  
 
--   Extended  
+- Extended  
 
--   Logical  
+- Logical  
 
--   Hidden  
+- Hidden  
 
--   EFI  
+- EFI  
 
--   MSR  
+- MSR  
 
- `VolumeLetterVariable`  
- Data type: `String`  
+  `VolumeLetterVariable`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Name of a task sequence variable that receives the drive letter of the newly created partition.  
+  Name of a task sequence variable that receives the drive letter of the newly created partition.  
 
- `VolumeName`  
- Data type: `String`  
+  `VolumeName`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Name to assign to the volume when it is formatted.  
+  Name to assign to the volume when it is formatted.  
 
 ## Remarks  
  There are no class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  

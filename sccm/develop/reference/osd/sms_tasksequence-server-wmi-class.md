@@ -58,19 +58,19 @@ Class SMS_TaskSequence
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Dynamic  
+- Dynamic  
 
--   Provider("TaskSequenceProvider")  
+- Provider("TaskSequenceProvider")  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- A task sequence is a series of steps and conditions that are processed during operating system deployment.  
+  A task sequence is a series of steps and conditions that are processed during operating system deployment.  
 
- A step in the task sequence is usually an action, represented by the [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md) or a derived class. A task sequence step can also be a set of actions in a group, represented by [SMS_TaskSequence_Group Server WMI Class](../../../develop/reference/osd/sms_tasksequence_group-server-wmi-class.md). For more information, see [SMS_TaskSequence_Step Server WMI Class](../../../develop/reference/osd/sms_tasksequence_step-server-wmi-class.md).  
+  A step in the task sequence is usually an action, represented by the [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md) or a derived class. A task sequence step can also be a set of actions in a group, represented by [SMS_TaskSequence_Group Server WMI Class](../../../develop/reference/osd/sms_tasksequence_group-server-wmi-class.md). For more information, see [SMS_TaskSequence_Step Server WMI Class](../../../develop/reference/osd/sms_tasksequence_step-server-wmi-class.md).  
 
- Task sequence steps are managed using WMI. The sequence steps are processed in order and can have conditions associated with them that determine how the action, or group of actions, is processed. For more information, see Operating System Deployment Task Sequence Object Model.  
+  Task sequence steps are managed using WMI. The sequence steps are processed in order and can have conditions associated with them that determine how the action, or group of actions, is processed. For more information, see Operating System Deployment Task Sequence Object Model.  
 
- Your application uses `SMS_TaskSequence` objects through a [SMS_TaskSequencePackage Server WMI Class](../../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md) object, which supports a `Sequence` property to wrap the task sequence in the database. The application sets up a new task sequence by calling the [SetSequence Method in Class SMS_TaskSequencePackage](../../../develop/reference/osd/setsequence-method-in-class-sms_tasksequencepackage.md) and accesses an existing task sequence using the [GetSequence Method in Class SMS_TaskSequencePackage](../../../develop/reference/osd/getsequence-method-in-class-sms_tasksequencepackage.md). For more information about working with a task sequence, see How to Create an Operating System Deployment Task Sequence and How to Create an Operating System Deployment Task Sequence Package.  
+  Your application uses `SMS_TaskSequence` objects through a [SMS_TaskSequencePackage Server WMI Class](../../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md) object, which supports a `Sequence` property to wrap the task sequence in the database. The application sets up a new task sequence by calling the [SetSequence Method in Class SMS_TaskSequencePackage](../../../develop/reference/osd/setsequence-method-in-class-sms_tasksequencepackage.md) and accesses an existing task sequence using the [GetSequence Method in Class SMS_TaskSequencePackage](../../../develop/reference/osd/getsequence-method-in-class-sms_tasksequencepackage.md). For more information about working with a task sequence, see How to Create an Operating System Deployment Task Sequence and How to Create an Operating System Deployment Task Sequence Package.  
 
 ## Requirements  
 

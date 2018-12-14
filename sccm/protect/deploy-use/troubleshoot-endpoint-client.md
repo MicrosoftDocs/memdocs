@@ -31,17 +31,17 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 
  This article addresses common issues with automatic updates, including the following situations:  
 
--   You see error messages indicating that updates have failed.  
+- You see error messages indicating that updates have failed.  
 
--   When you check for updates, you receive an error message that the virus and spyware definition updates cannot be checked, downloaded, or installed.  
+- When you check for updates, you receive an error message that the virus and spyware definition updates cannot be checked, downloaded, or installed.  
 
--   Even though you are connected to the Internet, the updates fail.  
+- Even though you are connected to the Internet, the updates fail.  
 
--   Updates are not automatically installing as scheduled.  
+- Updates are not automatically installing as scheduled.  
 
- **Cause**  
+  **Cause**  
 
- The most common causes for update issues are problems with Internet connectivity. However, if you know you are connected to the Internet because you can browse to other Web sites, the issue might be caused by conflicts with your settings in Windows Internet Explorer.  
+  The most common causes for update issues are problems with Internet connectivity. However, if you know you are connected to the Internet because you can browse to other Web sites, the issue might be caused by conflicts with your settings in Windows Internet Explorer.  
 
 > [!IMPORTANT]  
 >  You have to exit Internet Explorer to complete these steps. Therefore, print them, write them down, or copy them to another file, and then bookmark this topic for future access.  
@@ -248,15 +248,15 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 
  If your computer is running Windows XP Service Pack 2 (SP2), you might see one or more of the following error messages:  
 
--   Installation Wizard is missing a filter manager rollup package needed to complete the installation.  
+- Installation Wizard is missing a filter manager rollup package needed to complete the installation.  
 
--   KB914882 Setup Error, Setup cannot update your Windows XP files because the language installed on your system is different from the update language.  
+- KB914882 Setup Error, Setup cannot update your Windows XP files because the language installed on your system is different from the update language.  
 
- **Cause**  
+  **Cause**  
 
- Endpoint Protection cannot be installed on a computer that is running other security programs. Sometimes, even if you remove other security programs, they do not completely uninstall. You must be running a genuine version of the Windows operating system to install Endpoint Protection.  
+  Endpoint Protection cannot be installed on a computer that is running other security programs. Sometimes, even if you remove other security programs, they do not completely uninstall. You must be running a genuine version of the Windows operating system to install Endpoint Protection.  
 
- **Solution**  
+  **Solution**  
 
 > [!IMPORTANT]  
 >  You will need to restart your computer while resolving this issue. Bookmark this page (mark it as a Favorite) to make it easier to find this topic again or print it for easy reference.  

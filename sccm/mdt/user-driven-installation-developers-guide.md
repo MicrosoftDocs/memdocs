@@ -55,19 +55,19 @@ Figure 1. Relationship between the UDI Wizard and UDI Wizard Designer
 
  At a conceptual level, UDI development includes the creation of:  
 
--   **Custom wizard pages**. Wizard pages are displayed in the UDI Wizard and collect the information required to complete the deployment process. You create wizard pages using C++ in Microsoft Visual Studio®. The custom wizard pages are implemented as DLLs that the UDI Wizard reads. The UDI software development kit (SDK) includes an example of how to create custom wizard pages.  
+- **Custom wizard pages**. Wizard pages are displayed in the UDI Wizard and collect the information required to complete the deployment process. You create wizard pages using C++ in Microsoft Visual Studio®. The custom wizard pages are implemented as DLLs that the UDI Wizard reads. The UDI software development kit (SDK) includes an example of how to create custom wizard pages.  
 
--   **Custom wizard page editors**. You use wizard page editors to configure the behavior of your custom wizard page. The custom wizard page editors are implemented as DLLs that the UDI Wizard Designer reads. You create wizard page editors using:  
+- **Custom wizard page editors**. You use wizard page editors to configure the behavior of your custom wizard page. The custom wizard page editors are implemented as DLLs that the UDI Wizard Designer reads. You create wizard page editors using:  
 
-    -   [WPF](http://msdn.microsoft.com/library/ms754130.aspx) version 4.0  
+  - [WPF](http://msdn.microsoft.com/library/ms754130.aspx) version 4.0  
 
-    -   [Microsoft Prism](http://compositewpf.codeplex.com/) version 4.0  
+  - [Microsoft Prism](http://compositewpf.codeplex.com/) version 4.0  
 
-    -   [Microsoft Unity Application Block](http://unity.codeplex.com/) (Unity) version 2.1  
+  - [Microsoft Unity Application Block](http://unity.codeplex.com/) (Unity) version 2.1  
 
-     MDT includes all the assemblies necessary to create a custom wizard page editor for use in the UDI Wizard Designer. The UDI SDK includes an example of how to create custom wizard page editors.  
+    MDT includes all the assemblies necessary to create a custom wizard page editor for use in the UDI Wizard Designer. The UDI SDK includes an example of how to create custom wizard page editors.  
 
- In addition, the UDI Wizard Designer consumes supporting wizard page editor configuration files. You create the wizard page editor configuration files as a part of the process for creating your custom wizard pages and custom wizard page editors. The UDI Wizard Designer creates the necessary XML information in the UDI Wizard configuration file and corresponding .app file.  
+  In addition, the UDI Wizard Designer consumes supporting wizard page editor configuration files. You create the wizard page editor configuration files as a part of the process for creating your custom wizard pages and custom wizard page editors. The UDI Wizard Designer creates the necessary XML information in the UDI Wizard configuration file and corresponding .app file.  
 
 ### Preparing the UDI Development Environment  
  Before you begin creating your own custom wizard pages and wizard page editors, perform the following steps to prepare the UDI development environment:  
@@ -364,27 +364,27 @@ Figure 2. Folder structure for UDI development
 
  The top-level elements in the Config.xml file are the  
 
--   [DLLs](#DLLs) element  
+- [DLLs](#DLLs) element  
 
--   [Style](#Style) element  
+- [Style](#Style) element  
 
--   [Pages](#Pages) element  
+- [Pages](#Pages) element  
 
--   [StageGroups](#StageGroups) element  
+- [StageGroups](#StageGroups) element  
 
- For more information about the schema of the UDI Wizard configuration file and each of these elements, see [UDI Wizard Configuration File Schema Reference](#UDIWizardConfigurationFileSchemaReference).  
+  For more information about the schema of the UDI Wizard configuration file and each of these elements, see [UDI Wizard Configuration File Schema Reference](#UDIWizardConfigurationFileSchemaReference).  
 
- The UDI Wizard scans the **DLLs** element looking for the .dll files to load. In the example, two .dll files are listed: SamplePage.dll and SharedPages.dll. These .dll files must reside in the same folder as OSDSetupWizard.exe—the Tools\\*platform* folder (where *platform* is x86 for the 32-bit version or x64 for the 64-bit version).  
+  The UDI Wizard scans the **DLLs** element looking for the .dll files to load. In the example, two .dll files are listed: SamplePage.dll and SharedPages.dll. These .dll files must reside in the same folder as OSDSetupWizard.exe—the Tools\\*platform* folder (where *platform* is x86 for the 32-bit version or x64 for the 64-bit version).  
 
- The UDI Wizard scans the **Pages** element looking for the pages that are defined. In the example, two pages are defined: **Custom** and **SummaryPage**. The **Type** attribute of the **Page** element is defined in the PageClassIDs.h file and uniquely defines the type of your custom page.  
+  The UDI Wizard scans the **Pages** element looking for the pages that are defined. In the example, two pages are defined: **Custom** and **SummaryPage**. The **Type** attribute of the **Page** element is defined in the PageClassIDs.h file and uniquely defines the type of your custom page.  
 
- In the example, the defined type is **Microsoft.SamplePage.LocationPage**. For your custom page, substitute the following to avoid any potential conflicts with other pages you may create in the future:  
+  In the example, the defined type is **Microsoft.SamplePage.LocationPage**. For your custom page, substitute the following to avoid any potential conflicts with other pages you may create in the future:  
 
--   Your organization name in the place of **Microsoft**.  
+- Your organization name in the place of **Microsoft**.  
 
--   Your project name in the place of **SamplePage**.  
+- Your project name in the place of **SamplePage**.  
 
--   Your custom wizard page name in the place of **LocationPage**.  
+- Your custom wizard page name in the place of **LocationPage**.  
 
 #####  <a name="UDIWizardLoadstheDLLforCustomWizardPage"></a> Step 2: The UDI Wizard Loads the DLL for the Custom Wizard Page  
  When the UDI Wizard loads your DLL, it calls the **RegisterFactories** function, which must be implemented in your .dll file. In the example, this function is implemented in the dllmain.ccp file. Each wizard page you create must implement the **RegisterFactories** function.  
@@ -411,39 +411,39 @@ Figure 2. Folder structure for UDI development
 
  For a list of the available:  
 
--   Template classes for wizard pages, see [Wizard Page Helper Classes](#WizardPageHelperClasses)  
+- Template classes for wizard pages, see [Wizard Page Helper Classes](#WizardPageHelperClasses)  
 
--   Interfaces for the wizard page template classes, see [Wizard Page Interfaces](#WizardPageInterfaces)  
+- Interfaces for the wizard page template classes, see [Wizard Page Interfaces](#WizardPageInterfaces)  
 
- The custom wizard page in the example is derived from the [WizardPageImpl Template Class](#WizardPageImplTemplateClass) and implements the [IWizardPage Interface](#IWizardPageInterface). In addition, the custom wizard page implements the **IFieldCallback** interface. Both of these are implemented in the LocationPage.cpp file.  
+  The custom wizard page in the example is derived from the [WizardPageImpl Template Class](#WizardPageImplTemplateClass) and implements the [IWizardPage Interface](#IWizardPageInterface). In addition, the custom wizard page implements the **IFieldCallback** interface. Both of these are implemented in the LocationPage.cpp file.  
 
- The example custom wizard page overrides the following methods:  
+  The example custom wizard page overrides the following methods:  
 
--   **OnWindowCreated**. The **OnWindowCreated** method in the example wizard page calls the following methods:  
+- **OnWindowCreated**. The **OnWindowCreated** method in the example wizard page calls the following methods:  
 
-    -   [AddField](#AddField). This method relates the **IDC_COMBO_LOCATION** box control in the **IDD_LOCATION_PAGE** resource with the [Data](#Data) element named **Location** in the Config.xml file.  
+  - [AddField](#AddField). This method relates the **IDC_COMBO_LOCATION** box control in the **IDD_LOCATION_PAGE** resource with the [Data](#Data) element named **Location** in the Config.xml file.  
 
-         In addition to the **AddField** method, you could use the [AddRadioGroup](#AddRadioGroup) and [AddToGroup](#AddToGroup) methods to support other controls and behaviors.  
+     In addition to the **AddField** method, you could use the [AddRadioGroup](#AddRadioGroup) and [AddToGroup](#AddToGroup) methods to support other controls and behaviors.  
 
-        > [!NOTE]
-        >  Ensure that you call the [AddField](#AddField), [AddRadioGroup](#AddRadioGroup), or [AddToGroup](#AddToGroup) method prior to calling the [InitFields](#InitFields) method.  
+    > [!NOTE]
+    >  Ensure that you call the [AddField](#AddField), [AddRadioGroup](#AddRadioGroup), or [AddToGroup](#AddToGroup) method prior to calling the [InitFields](#InitFields) method.  
 
-    -   [InitFields](#InitFields). Use this method to initialize the fields (controls) that you have added to the form. The pointer of the page is a parameter. In the example, the **this** pointer is passed, which refers to the current page.  
+  - [InitFields](#InitFields). Use this method to initialize the fields (controls) that you have added to the form. The pointer of the page is a parameter. In the example, the **this** pointer is passed, which refers to the current page.  
 
-        > [!NOTE]
-        >  To support the use of the **this** pointer, you must implement the **IFieldCallback** interface in addition to the interfaces that the [WizardPageImpl Template Class](#WizardPageImplTemplateClass) supports.  
+    > [!NOTE]
+    >  To support the use of the **this** pointer, you must implement the **IFieldCallback** interface in addition to the interfaces that the [WizardPageImpl Template Class](#WizardPageImplTemplateClass) supports.  
 
-         The **IFieldCallback** interface calls the **SetFieldDefault** method, which is used to set the default values for controls other than text box and check box controls. In the example, the **SetFieldDefault** method sets the initial index of the combo box control based on the default value specified in the **Default** element for the [Field](#Field) element in the Config.xml file.  
+     The **IFieldCallback** interface calls the **SetFieldDefault** method, which is used to set the default values for controls other than text box and check box controls. In the example, the **SetFieldDefault** method sets the initial index of the combo box control based on the default value specified in the **Default** element for the [Field](#Field) element in the Config.xml file.  
 
-     The **OnWindowCreated** method sets up the form controller using the [IFormController interface](#IFormController-Interface). For more information about setting up the form controller, see [Setting up the Form](#SettingUptheForm).  
+    The **OnWindowCreated** method sets up the form controller using the [IFormController interface](#IFormController-Interface). For more information about setting up the form controller, see [Setting up the Form](#SettingUptheForm).  
 
--   **InitLocations**. This method populates the combo box from the list of locations in the Config.xml file. The [Data](#Data) element and child [DataItem](#DataItem) elements the Confg.xml file provide the list of possible values.  
+- **InitLocations**. This method populates the combo box from the list of locations in the Config.xml file. The [Data](#Data) element and child [DataItem](#DataItem) elements the Confg.xml file provide the list of possible values.  
 
--   **OnNextClicked**. This method performs the following tasks:  
+- **OnNextClicked**. This method performs the following tasks:  
 
-    -   Updates the **TSLocation** task sequence variable with the value selected in the combo box using the **SaveFields** method  
+  -   Updates the **TSLocation** task sequence variable with the value selected in the combo box using the **SaveFields** method  
 
-    -   Adds information that will be shown on the **Summary** page using the **SaveFields** method  
+  -   Adds information that will be shown on the **Summary** page using the **SaveFields** method  
 
 #####  <a name="TheNextButtonisClickedinCustomWizardPage"></a> Step 4: The Next Button Is Clicked in the Custom Wizard Page  
  When the user completes the fields on the custom wizard page, he or she clicks **Next**, which calls the **OnNextClicked** method. The **OnNextClicked** method performs any necessary tasks before proceeding to the next wizard page, such as recording any configuration changes made on the custom wizard page.  
@@ -479,26 +479,26 @@ Figure 2. Folder structure for UDI development
 
  The following is a list of the typical configuration settings that you can manage using the UDI Wizard Designer:  
 
--   **Field**. Use fields allow users to provide input. Fields appear as [Field](#Field) elements in the UDI Wizard configuration file (UDIWizard_Config.xml), which contains the configuration settings for each field. The corresponding wizard page editor needs to provide a method for editing the field configuration settings for the field using the [FieldElementControl](#FieldElementControl).  
+- **Field**. Use fields allow users to provide input. Fields appear as [Field](#Field) elements in the UDI Wizard configuration file (UDIWizard_Config.xml), which contains the configuration settings for each field. The corresponding wizard page editor needs to provide a method for editing the field configuration settings for the field using the [FieldElementControl](#FieldElementControl).  
 
--   **Properties**. Setters help create properties for entities on the page, such as pages in the [Page](#Page) element, fields in the [Field](#Field) element, or data in the [Data](#Data) or [DataItem](#DataItem) elements. You configure properties in the [Setter]() elements. Add a separate [Setter]() element for each property you want to define. You edit the properties using the [SetterControl](#SetterControl) and configure other [Setter]() elements using other controls.  
+- **Properties**. Setters help create properties for entities on the page, such as pages in the [Page](#Page) element, fields in the [Field](#Field) element, or data in the [Data](#Data) or [DataItem](#DataItem) elements. You configure properties in the [Setter]() elements. Add a separate [Setter]() element for each property you want to define. You edit the properties using the [SetterControl](#SetterControl) and configure other [Setter]() elements using other controls.  
 
--   **Data**. Data is used to store information for use by the wizard page and other components. You can define data for pages or fields using the [Data](#Data) or [DataItem](#DataItem) elements. The data can be defined in a flat or hierarchical structure through the proper use of the [Data](#Data) or [DataItem](#DataItem) elements. The Config.xml in the example in the SDK shows how to build flat data structures.  
+- **Data**. Data is used to store information for use by the wizard page and other components. You can define data for pages or fields using the [Data](#Data) or [DataItem](#DataItem) elements. The data can be defined in a flat or hierarchical structure through the proper use of the [Data](#Data) or [DataItem](#DataItem) elements. The Config.xml in the example in the SDK shows how to build flat data structures.  
 
- The custom wizard page editor that you create must be able to manage these configuration settings.  
+  The custom wizard page editor that you create must be able to manage these configuration settings.  
 
 ####  <a name="ReviewEditorPageExample"></a> Review the EditorPage Example  
  The EditorPage example is used to configure the configuration settings for the **SamplePage** wizard page in the UDI Wizard configuration file. The EditorPage example has the following primary components:  
 
--   UI to configure the **Location** combo box settings  
+- UI to configure the **Location** combo box settings  
 
--   UI to add or edit a location in the list of possible locations, which are shown in the **Location** combo box  
+- UI to add or edit a location in the list of possible locations, which are shown in the **Location** combo box  
 
--   Configuration settings read from and saved to the UDI Wizard configuration file  
+- Configuration settings read from and saved to the UDI Wizard configuration file  
 
--   Supporting code for the other components  
+- Supporting code for the other components  
 
- Review the EditorPage example in Visual Studio by performing the following steps:  
+  Review the EditorPage example in Visual Studio by performing the following steps:  
 
 1.  Review how the **SampleEditor** wizard page editor is loaded and initialized in the UDI Wizard Designer as described in [Review Wizard Page Editor Loading and Initialization](#ReviewWizardPageEditorLoadingInitialization).  
 
@@ -588,11 +588,11 @@ Figure 2. Folder structure for UDI development
 ######  <a name="ReviewCodeUsedtoManageConfigurationInformation"></a> Review the Code Used to Manage Configuration Information  
  The configuration information for your custom wizard page is stored in the UDI Wizard configuration file, which is the:  
 
--   Config.xml file in the example provided with the UDI SDK (This file contains only the configuration settings for the example.)  
+- Config.xml file in the example provided with the UDI SDK (This file contains only the configuration settings for the example.)  
 
--   UDIWizard_Config.xml file provided with MDT, stored in the *installation_folder*\Templates\Distribution\Scripts folder (where *installation_folder* is the folder in which you installed MDT); this file contains the configuration settings for all the built-in wizard pages and stages  
+- UDIWizard_Config.xml file provided with MDT, stored in the *installation_folder*\Templates\Distribution\Scripts folder (where *installation_folder* is the folder in which you installed MDT); this file contains the configuration settings for all the built-in wizard pages and stages  
 
- In the SampleEditor example, the **Locations** routine helps manage the configuration information and is located in the LocationPageEditorViewModel.cs file. The **Locations** routine returns a list of the locations from the UDI Wizard configuration file. Specifically, the list returned contains an item for each [DataItem](#DataItem) element in the UDI Wizard configuration file.  
+  In the SampleEditor example, the **Locations** routine helps manage the configuration information and is located in the LocationPageEditorViewModel.cs file. The **Locations** routine returns a list of the locations from the UDI Wizard configuration file. Specifically, the list returned contains an item for each [DataItem](#DataItem) element in the UDI Wizard configuration file.  
 
 ## Creating Custom UDI Wizard Pages  
  The high-level process for creating custom UDI wizard pages is as follows:  
@@ -719,50 +719,50 @@ Figure 2. Folder structure for UDI development
 
  **To create custom UDI validators**  
 
-1.  Write code that creates a subclass of the **BaseValidator** class and implements the following methods:  
+1. Write code that creates a subclass of the **BaseValidator** class and implements the following methods:  
 
-    -   **Init(IControl \*pControl, IWizardPageContainer \*pContainer, IStringProperties \*pProperties)**. The form controller calls the **Init** member to initialize the validator. This method must call the **Init** method for the **BaseValidator** class. It typically reads any properties set for the validator from the UDI Wizard configuration file. For example, the **InvalidCharactersValidator** validator retrieves the value of the **InvalidChars** property using this method.  
+   - **Init(IControl \*pControl, IWizardPageContainer \*pContainer, IStringProperties \*pProperties)**. The form controller calls the **Init** member to initialize the validator. This method must call the **Init** method for the **BaseValidator** class. It typically reads any properties set for the validator from the UDI Wizard configuration file. For example, the **InvalidCharactersValidator** validator retrieves the value of the **InvalidChars** property using this method.  
 
-    -   **IsValid**. The form controller calls this method to see whether the control contains valid text. The following is an example of the **IsValid** method for a validator that validates that the field is not empty:  
+   - **IsValid**. The form controller calls this method to see whether the control contains valid text. The following is an example of the **IsValid** method for a validator that validates that the field is not empty:  
 
-        ```cpp
-        BOOL IsValid(LPBSTR pMessage)  
-        {  
-            __super::IsValid(pMessage);  
+     ```cpp
+     BOOL IsValid(LPBSTR pMessage)  
+     {  
+         __super::IsValid(pMessage);  
 
-            _bstr_t text;  
-            m_pText->GetText(text.GetAddress());  
-            return (text.length() > 0);  
-        }  
-        ```  
+         _bstr_t text;  
+         m_pText->GetText(text.GetAddress());  
+         return (text.length() > 0);  
+     }  
+     ```  
 
-    -   **Init(IControl \*pControl, LPCTSTR message)**. The form controller calls this member for each keystroke and other events so that the validator can validate the contents of the control and updated messages at the bottom of the wizard page (or clear them).  
+   - **Init(IControl \*pControl, LPCTSTR message)**. The form controller calls this member for each keystroke and other events so that the validator can validate the contents of the control and updated messages at the bottom of the wizard page (or clear them).  
 
      Typically, these are the only methods that you need to override. However, depending on the validator, you may need to override other methods in the subclass of the **BaseValidator** class you create. For more information about these other methods, see the **BaseValidator** class.  
 
-2.  Write code that registers the custom task class with the registry factory.  
+2. Write code that registers the custom task class with the registry factory.  
 
-3.  Build the solution for your custom task.  
+3. Build the solution for your custom task.  
 
-    > [!NOTE]
-    >  Ensure that the version of the DLL you create is the same processor platform as the installation of MDT. For example, if you install the 64-bit version of MDT, then build a 64-bit version of your custom UDI task.  
+   > [!NOTE]
+   >  Ensure that the version of the DLL you create is the same processor platform as the installation of MDT. For example, if you install the 64-bit version of MDT, then build a 64-bit version of your custom UDI task.  
 
-4.  Create a [Validator](#Validator) element under the **ValidatorLibrary** element in the UDI Wizard Designer configuration file similar to the following excerpt:  
+4. Create a [Validator](#Validator) element under the **ValidatorLibrary** element in the UDI Wizard Designer configuration file similar to the following excerpt:  
 
-    ```xml
-    <Validator   
-    <Validator DLL="" Description="Must follow a pre-defined pattern" Type="Microsoft.Wizard.Validation.RegEx" Name="NamedPattern">  
-       <Param Description="Enter the message you want displayed when the text in this field doesn't match the pattern:" Name="Message" DisplayName="Message"/>  
-       <Param Description="The name of a pre-defined regular expression pattern. Must be Username, ComputerName, or Workgroup" Name="NamedPattern" DisplayName="Named Pattern"/>  
-    </Validator>  
-    ```  
+   ```xml
+   <Validator   
+   <Validator DLL="" Description="Must follow a pre-defined pattern" Type="Microsoft.Wizard.Validation.RegEx" Name="NamedPattern">  
+      <Param Description="Enter the message you want displayed when the text in this field doesn't match the pattern:" Name="Message" DisplayName="Message"/>  
+      <Param Description="The name of a pre-defined regular expression pattern. Must be Username, ComputerName, or Workgroup" Name="NamedPattern" DisplayName="Named Pattern"/>  
+   </Validator>  
+   ```  
 
-    > [!WARNING]
-    >  All [Validator](#Validator) elements should include the **Message** parameter. Specify all other parameters as required by the validator. For example, in the previous excerpt, the **NamedPattern** parameter is used to specify a parameter for the name of a predefined regular expression pattern.  
+   > [!WARNING]
+   >  All [Validator](#Validator) elements should include the **Message** parameter. Specify all other parameters as required by the validator. For example, in the previous excerpt, the **NamedPattern** parameter is used to specify a parameter for the name of a predefined regular expression pattern.  
 
-5.  Copy the UDI Wizard Designer configuration file created in the previous step to the *installation_folder*\Bin\Config folder (where *installation_folder* is the folder in which you installed MDT).  
+5. Copy the UDI Wizard Designer configuration file created in the previous step to the *installation_folder*\Bin\Config folder (where *installation_folder* is the folder in which you installed MDT).  
 
-6.  Copy the DLL for your custom task to the *installation_folder*\Templates\Distribution\Tools\ platform folder (where *installation_folder* is the folder in which you installed MDT and *platform* is **x86** for the 32-bit version or **x64** is for the 64-bit version).  
+6. Copy the DLL for your custom task to the *installation_folder*\Templates\Distribution\Tools\ platform folder (where *installation_folder* is the folder in which you installed MDT and *platform* is **x86** for the 32-bit version or **x64** is for the 64-bit version).  
 
 ## UDI Wizard Reference  
 
@@ -1646,13 +1646,13 @@ HRESULT Init(IStringProperties *pProperties, ISettingsProperties *pTaskSetti
 
 ```xml
 <Task DisplayName="Check Windows Scripting Host" Type="Microsoft.Wizard.ShellExecuteTask">  
-  <Setter Property="filename">%windir%\system32\cscript.exe</Setter>  
-  <Setter Property="parameters">Preflight\OSDCheckWSH.vbs</Setter>  
-  <Setter Property="BitmapFilename">images\WinScriptHost.bmp</Setter>  
-  <ExitCodes>  
-    <ExitCode State="Success" Type="0" Value="0" Text="" />  
-    <ExitCode State="Error" Type="-1" Value="*" Text="Windows Scripting Host not installed." />  
-  </ExitCodes>  
+  <Setter Property="filename">%windir%\system32\cscript.exe</Setter>  
+  <Setter Property="parameters">Preflight\OSDCheckWSH.vbs</Setter>  
+  <Setter Property="BitmapFilename">images\WinScriptHost.bmp</Setter>  
+  <ExitCodes>  
+    <ExitCode State="Success" Type="0" Value="0" Text="" />  
+    <ExitCode State="Error" Type="-1" Value="*" Text="Windows Scripting Host not installed." />  
+  </ExitCodes>  
 </Task>  
 ```  
 
@@ -2373,16 +2373,16 @@ __interface IDataNodes : IUnknown
  Data in a page’s XML can look something like this  
 
 ```xml
-      <Data Name="Network">  
-        <DataItem>  
-          <Setter Property="DisplayName">Public</Setter>  
-          <Setter Property="Share">\\servername\Share</Setter>  
-        </DataItem>  
-        <DataItem>  
-          <Setter Property="DisplayName">Dev Team</Setter>  
-          <Setter Property="Share">\\servername\DevShare</Setter>  
-        </DataItem>  
-      </Data>  
+      <Data Name="Network">  
+        <DataItem>  
+          <Setter Property="DisplayName">Public</Setter>  
+          <Setter Property="Share">\\servername\Share</Setter>  
+        </DataItem>  
+        <DataItem>  
+          <Setter Property="DisplayName">Dev Team</Setter>  
+          <Setter Property="Share">\\servername\DevShare</Setter>  
+        </DataItem>  
+      </Data>  
 ```  
 
  Calling **Settings()->GetDataNode(L"Network", &pData)** gives you an **IDataNodes** instance with two data items (each of which in turn has two properties).  
@@ -2709,16 +2709,16 @@ __interface ISettingsProperties : IUnknown
 
 ```xml
     <Page …>  
-      <Data Name="Network">  
-        <DataItem>  
-          <Setter Property="DisplayName">Public</Setter>  
-          <Setter Property="Share">\\servername\Share</Setter>  
-        </DataItem>  
-        <DataItem>  
-          <Setter Property="DisplayName">Dev Team</Setter>  
-          <Setter Property="Share">\\servername\DevShare</Setter>  
-        </DataItem>  
-      </Data>  
+      <Data Name="Network">  
+        <DataItem>  
+          <Setter Property="DisplayName">Public</Setter>  
+          <Setter Property="Share">\\servername\Share</Setter>  
+        </DataItem>  
+        <DataItem>  
+          <Setter Property="DisplayName">Dev Team</Setter>  
+          <Setter Property="Share">\\servername\DevShare</Setter>  
+        </DataItem>  
+      </Data>  
 ```
 
 ```cpp
@@ -3533,8 +3533,8 @@ InstructionText="Here you can configure the behavior of the location co
 HideValidationTab="True">  
 
 <TextBox Text="{Binding FieldData.DefaultValue,  
- UpdateSourceTrigger=PropertyChanged,  
- Mode=TwoWay}"/>  
+ UpdateSourceTrigger=PropertyChanged,  
+ Mode=TwoWay}"/>  
 </Controls:FieldElementControl>  
 ```  
 
@@ -3613,16 +3613,16 @@ FieldData="{Binding DataContext.Location, ElementName=ControlRoot}"
 
 ```xaml
 <Controls:SetterControl Margin="5"  
-        Width="450"  
-        HeaderText="Title text"  
-        SetterData="{Binding KeyLocationSetter}"   
+        Width="450"  
+        HeaderText="Title text"  
+        SetterData="{Binding KeyLocationSetter}"   
         InstructionText="What this means…"  
         HorizontalAlignment="Left">  
 
-    <TextBox  
-                   Margin="0,3"  
-                   Text="{Binding SetterData.SetterValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  
-    />  
+    <TextBox  
+                   Margin="0,3"  
+                   Text="{Binding SetterData.SetterValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  
+    />  
 
 </Controls:SetterControl>  
 ```  
@@ -3777,15 +3777,15 @@ void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);
 ###  <a name="UDIWizardConfigurationFileSchemaReference"></a> UDI Wizard Configuration File Schema Reference  
  This file is consumed by the UDI Wizard and configured by the UDI Wizard Designer. This file is used to configure the:  
 
--   Wizard pages displayed in the UDI Wizard  
+- Wizard pages displayed in the UDI Wizard  
 
--   The sequence of the wizard pages in the UDI Wizard  
+- The sequence of the wizard pages in the UDI Wizard  
 
--   Settings for the fields on each wizard page  
+- Settings for the fields on each wizard page  
 
--   Available StageGroups in the UDI Wizard Designer  
+- Available StageGroups in the UDI Wizard Designer  
 
--   Available Stages within each deployment wizard in the UDI Wizard Designer  
+- Available Stages within each deployment wizard in the UDI Wizard Designer  
 
   77 lists the elements in the UDI Wizard Configuration File and their descriptions. The **Wizard** element is the root node for this reference.  
 
@@ -3981,12 +3981,12 @@ Table 84 provides information about the [DLLs](#DLLs) element.
 
 ###  
 
-|**Attribute**|**Description**|  
-|-|-|  
-|**State**|Specifies the return state of a task that encountered an error. Typically, the value for this attribute is set to Error. This value is displayed in the **State** column on the wizard page in the UDI Wizard.|  
-|**Text**|Specifies the descriptive text about the error condition that the task encountered.|  
-|**Type**|Specifies whether this element represents an error, warning, or success. The value specified in**Type** must be unique within an [ExitCodes](#ExitCodes) element. The following are valid values for this element:<br /><br /> -   **0.**The element represent a success.<br />-   **1.** The element represents a warning.<br />-   **-1.** The element represents an error.|  
-|**Value**|Specifies the value of the code that the task returned as a numeric value. Specifying the value of an asterisk (*) indicates the default element for return codes that are not listed in other [Error](#Error) elements.|  
+| **Attribute** |                                                                                                                                                                                      **Description**                                                                                                                                                                                       |
+|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|   **State**   |                                                                                       Specifies the return state of a task that encountered an error. Typically, the value for this attribute is set to Error. This value is displayed in the **State** column on the wizard page in the UDI Wizard.                                                                                       |
+|   **Text**    |                                                                                                                                                    Specifies the descriptive text about the error condition that the task encountered.                                                                                                                                                     |
+|   **Type**    | Specifies whether this element represents an error, warning, or success. The value specified in**Type** must be unique within an [ExitCodes](#ExitCodes) element. The following are valid values for this element:<br /><br /> -   <strong>0.</strong>The element represent a success.<br />-   **1.** The element represents a warning.<br />-   **-1.** The element represents an error. |
+|   **Value**   |                                                                                  Specifies the value of the code that the task returned as a numeric value. Specifying the value of an asterisk (*) indicates the default element for return codes that are not listed in other [Error](#Error) elements.                                                                                  |
 
 ##### Remarks  
  None.  

@@ -71,119 +71,119 @@ For more information about the checks that Prerequisite Checker performs, see [L
 
 ## Run Prerequisite Checker from a command prompt to use options  
 
-1.  Open a Command Prompt window and change directories to one of the following locations:  
+1. Open a Command Prompt window and change directories to one of the following locations:  
 
-    -   **&lt;*Configuration Manager installation media*\>\SMSSETUP\BIN\X64**  
-    -   **&lt;*Configuration Manager installation path*\>\BIN\X64**  
+   -   **&lt;*Configuration Manager installation media*\>\SMSSETUP\BIN\X64**  
+   -   **&lt;*Configuration Manager installation path*\>\BIN\X64**  
 
-2.  Enter  **prereqchk.exe** with the addition of one or more of the following command-line options.  
+2. Enter  **prereqchk.exe** with the addition of one or more of the following command-line options.  
 
-    For example, to check a primary site, you might use the following:  
+   For example, to check a primary site, you might use the following:  
 
-       **prereqchk.exe [/NOUI] /PRI /SQL &lt;FQDN of SQL Server\> /SDK &lt;FQDN of SMS Provider\> [/JOIN &lt;FQDN of central administration site\>] [/MP &lt;FQDN of management point\>] [/DP &lt;FQDN of distribution point\>]**  
+      **prereqchk.exe [/NOUI] /PRI /SQL &lt;FQDN of SQL Server\> /SDK &lt;FQDN of SMS Provider\> [/JOIN &lt;FQDN of central administration site\>] [/MP &lt;FQDN of management point\>] [/DP &lt;FQDN of distribution point\>]**  
 
-    **Central administration site server:**  
+   **Central administration site server:**  
 
-    -   **/NOUI**  
-
-         Not required. Starts Prerequisite Checker without displaying the user interface. You must specify this option before any other option in the command line.  
-
-    -   **/CAS**  
-
-         Required. Verifies that the local computer meets the requirements for the central administration site.  
-
-    -   **/SQL &lt;*FQDN of SQL Server*>**  
-
-         Required. Using the fully qualified domain name (FQDN), verifies that the specified computer meets the requirements for SQL Server to host the Configuration Manager site database.  
-
-    -   **/SDK &lt;*FQDN of SMS Provider*>**  
-
-         Required. Verifies that the specified computer meets the requirements for the SMS Provider.  
-
-    -   **/Ssbport**  
-
-         Not required. Verifies that a firewall exception is in effect to allow communication on the SQL Server Service Broker (SSB) port. The default SSB port is 4022.  
-
-    -   **InstallDir &lt;*Configuration Manager installation path*>**  
-
-         Not required. Verifies the minimum disk space on requirements for site installation.  
-
-    **Primary site server:**  
-
-    -   **/NOUI**  
+   -   **/NOUI**  
 
         Not required. Starts Prerequisite Checker without displaying the user interface. You must specify this option before any other option in the command line.  
 
-    -   **/PRI**  
+   -   **/CAS**  
 
-         Required. Verifies that the local computer meets the requirements for the primary site.  
+        Required. Verifies that the local computer meets the requirements for the central administration site.  
 
-    -   **/SQL &lt;*FQDN of SQL Server*>**  
+   -   **/SQL &lt;*FQDN of SQL Server*>**  
 
-         Required. Verifies that the specified computer meets the requirements for SQL Server to host the Configuration Manager site database.  
+        Required. Using the fully qualified domain name (FQDN), verifies that the specified computer meets the requirements for SQL Server to host the Configuration Manager site database.  
 
-    -   **/SDK &lt;*FQDN of SMS Provider*>**  
+   -   **/SDK &lt;*FQDN of SMS Provider*>**  
 
-         Required. Verifies that the specified computer meets the requirements for the SMS Provider.  
+        Required. Verifies that the specified computer meets the requirements for the SMS Provider.  
 
-    -   **/JOIN &lt;*FQDN of central administration site*>**  
+   -   **/Ssbport**  
 
-         Not required. Verifies that the local computer meets the requirements for connecting to the central administration site server.  
+        Not required. Verifies that a firewall exception is in effect to allow communication on the SQL Server Service Broker (SSB) port. The default SSB port is 4022.  
 
-    -   **/MP &lt;*FQDN of management point*>**  
+   -   **InstallDir &lt;*Configuration Manager installation path*>**  
 
-         Not required. Verifies that the specified computer meets the requirements for the management point site system role. This option is only supported when you use the **/PRI** option.  
+        Not required. Verifies the minimum disk space on requirements for site installation.  
 
-    -   **/DP &lt;*FQDN of distribution point*>**  
+   **Primary site server:**  
 
-         Not required. Verifies that the specified computer meets the requirements for the distribution point site system role. This option is only supported when you use the **/PRI** option.  
+   -   **/NOUI**  
 
-    -   **/Ssbport**  
+       Not required. Starts Prerequisite Checker without displaying the user interface. You must specify this option before any other option in the command line.  
 
-         Not required. Verifies that a firewall exception is in effect to allow communication on the SSB port. The default SSB port is 4022.  
+   -   **/PRI**  
 
-    -   **InstallDir &lt;*Configuration Manager installation path*>**  
+        Required. Verifies that the local computer meets the requirements for the primary site.  
 
-         Not required. Verifies the minimum disk space on requirements for site installation.  
+   -   **/SQL &lt;*FQDN of SQL Server*>**  
 
-    **Secondary site server:**  
+        Required. Verifies that the specified computer meets the requirements for SQL Server to host the Configuration Manager site database.  
 
-    -   **/NOUI**  
+   -   **/SDK &lt;*FQDN of SMS Provider*>**  
 
-         Not required. Starts Prerequisite Checker without displaying the user interface. You must specify this option before any other option in the command line.  
+        Required. Verifies that the specified computer meets the requirements for the SMS Provider.  
 
-    -   **/SEC &lt;*FQDN of secondary site server*>**  
+   -   **/JOIN &lt;*FQDN of central administration site*>**  
 
-         Required. Verifies that the specified computer meets the requirements for the secondary site.  
+        Not required. Verifies that the local computer meets the requirements for connecting to the central administration site server.  
 
-    -   **/INSTALLSQLEXPRESS**  
+   -   **/MP &lt;*FQDN of management point*>**  
 
-         Not required. Verifies that SQL Server Express can be installed on the specified computer.  
+        Not required. Verifies that the specified computer meets the requirements for the management point site system role. This option is only supported when you use the **/PRI** option.  
 
-    -   **/Ssbport**  
+   -   **/DP &lt;*FQDN of distribution point*>**  
 
-         Not required. Verifies that a firewall exception is in effect to allow communication for the SSB port. The default SSB port is 4022.  
+        Not required. Verifies that the specified computer meets the requirements for the distribution point site system role. This option is only supported when you use the **/PRI** option.  
 
-    -   **/Sqlport**  
+   -   **/Ssbport**  
 
-         Not required. Verifies that a firewall exception is in effect to allow communication for the SQL Server service port, and that the port is not in use by another named instance of SQL Server. The default port is 1433.  
+        Not required. Verifies that a firewall exception is in effect to allow communication on the SSB port. The default SSB port is 4022.  
 
-    -   **InstallDir &lt;*Configuration Manager installation path*>**  
+   -   **InstallDir &lt;*Configuration Manager installation path*>**  
 
-         Not required. Verifies the minimum disk space on requirements for site installation.  
+        Not required. Verifies the minimum disk space on requirements for site installation.  
 
-    -   **/SourceDir**  
+   **Secondary site server:**  
 
-         Not required. Verifies that the computer account of the secondary site can access the folder that hosts the source files for Setup.  
+   -   **/NOUI**  
+
+        Not required. Starts Prerequisite Checker without displaying the user interface. You must specify this option before any other option in the command line.  
+
+   -   **/SEC &lt;*FQDN of secondary site server*>**  
+
+        Required. Verifies that the specified computer meets the requirements for the secondary site.  
+
+   -   **/INSTALLSQLEXPRESS**  
+
+        Not required. Verifies that SQL Server Express can be installed on the specified computer.  
+
+   -   **/Ssbport**  
+
+        Not required. Verifies that a firewall exception is in effect to allow communication for the SSB port. The default SSB port is 4022.  
+
+   -   **/Sqlport**  
+
+        Not required. Verifies that a firewall exception is in effect to allow communication for the SQL Server service port, and that the port is not in use by another named instance of SQL Server. The default port is 1433.  
+
+   -   **InstallDir &lt;*Configuration Manager installation path*>**  
+
+        Not required. Verifies the minimum disk space on requirements for site installation.  
+
+   -   **/SourceDir**  
+
+        Not required. Verifies that the computer account of the secondary site can access the folder that hosts the source files for Setup.  
 
    **Configuration Manager console:**  
 
-    -   **/Adminui**  
+   -   **/Adminui**  
 
-         Required. Verifies that the local computer meets the requirements for installing Configuration Manager.  
+        Required. Verifies that the local computer meets the requirements for installing Configuration Manager.  
 
-3.  In the Prerequisite Checker user interface, Prerequisite Checker creates a list of discovered problems in the **Prerequisite result** section.  
+3. In the Prerequisite Checker user interface, Prerequisite Checker creates a list of discovered problems in the **Prerequisite result** section.  
 
-    -   Click an item in the list for details about how to resolve the problem.  
-    -   You must resolve all items in the list that have an **Error** status before you install the site server, site system, or the Configuration Manager console.  
-    -   You also can open the **ConfigMgrPrereq.log** file in the root of the system drive to review Prerequisite Checker results. The log file might contain additional information that is not displayed in the Prerequisite Checker user interface.  
+   -   Click an item in the list for details about how to resolve the problem.  
+   -   You must resolve all items in the list that have an **Error** status before you install the site server, site system, or the Configuration Manager console.  
+   -   You also can open the **ConfigMgrPrereq.log** file in the root of the system drive to review Prerequisite Checker results. The log file might contain additional information that is not displayed in the Prerequisite Checker user interface.  

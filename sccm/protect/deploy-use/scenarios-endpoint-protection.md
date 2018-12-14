@@ -31,23 +31,23 @@ John has been asked to upgrade the Woodgrove Bank antimalware software to System
 
 This implementation has the following requirements:  
 
--   Use Configuration Manager to manage the Windows Firewall settings that are currently managed by Group Policy.  
+- Use Configuration Manager to manage the Windows Firewall settings that are currently managed by Group Policy.  
 
--   Use Configuration Manager software updates to download malware definitions to computers. If software updates are not available, for example if the computer is not connected to the corporate network, computers must download definition updates from Microsoft Update.  
+- Use Configuration Manager software updates to download malware definitions to computers. If software updates are not available, for example if the computer is not connected to the corporate network, computers must download definition updates from Microsoft Update.  
 
--   Users' computers must perform a quick malware scan every day. Servers, however, must run a full scan every Saturday, outside business hours, at 1 A.M.  
+- Users' computers must perform a quick malware scan every day. Servers, however, must run a full scan every Saturday, outside business hours, at 1 A.M.  
 
--   Send an email alert whenever any one of the following events occurs:  
+- Send an email alert whenever any one of the following events occurs:  
 
-    -   Malware is detected on any computer  
+  -   Malware is detected on any computer  
 
-    -   The same malware threat is detected on more than 5 percent of computers  
+  -   The same malware threat is detected on more than 5 percent of computers  
 
-    -   The same malware threat is detected more than 5 times in any 24-hour period  
+  -   The same malware threat is detected more than 5 times in any 24-hour period  
 
-    -   More than 3 different types of malware are detected in any 24-hour period  
+  -   More than 3 different types of malware are detected in any 24-hour period  
 
- John then does the following steps to implement Endpoint Protection:  
+  John then does the following steps to implement Endpoint Protection:  
 
 
 

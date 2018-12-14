@@ -17,13 +17,13 @@ manager: dougeby
 
 You can use System Center Configuration Manager task sequences to capture and restore the user state data in operating system deployment scenarios where you want to retain the user state of the current operating system. For example:  
 
--   Deployments where you want to capture the user state from one computer to restore it on another computer.  
+- Deployments where you want to capture the user state from one computer to restore it on another computer.  
 
--   Update deployments where you want to capture and restore the user state on the same computer.  
+- Update deployments where you want to capture and restore the user state on the same computer.  
 
- Configuration Manager uses the User State Migration Tool (USMT) 10.0 to manage the migration of user state data from a source computer to a destination computer after the operating system installation completes. For more information about common migration scenarios for the USMT 10.0, see  [Common Migration Scenarios](https://technet.microsoft.com/library/mt299169\(v=vs.85\).aspx).  
+  Configuration Manager uses the User State Migration Tool (USMT) 10.0 to manage the migration of user state data from a source computer to a destination computer after the operating system installation completes. For more information about common migration scenarios for the USMT 10.0, see  [Common Migration Scenarios](https://technet.microsoft.com/library/mt299169\(v=vs.85\).aspx).  
 
- Use the folowing sections to help you capture and restore user data.
+  Use the folowing sections to help you capture and restore user data.
 
 
 ##  <a name="BKMK_StoringUserData"></a> Store user state data  
@@ -75,23 +75,23 @@ You can use System Center Configuration Manager task sequences to capture and re
 ##  <a name="BKMK_StateMigrationPoint"></a> Configure a state migration point  
  The state migration point stores user state data that is captured on one computer and then restored on another computer. However, when you capture user settings for an operating system deployment on the  same computer, such as a deployment where you refresh the operating system on the destination computer, you can store the data on the same computer by using hard-links or on a state migration point. For some computer deployments, when you create the state store, Configuration Manager automatically creates an association between the state store and the destination computer. You can use the following methods to configure a state migration point to store the user state data:  
 
--   Use the **Create Site System Server Wizard** to create a new site system server for the state migration point.  
+- Use the **Create Site System Server Wizard** to create a new site system server for the state migration point.  
 
--   Use the **Add Site System Roles Wizard** to add a state migration point to an existing server.  
+- Use the **Add Site System Roles Wizard** to add a state migration point to an existing server.  
 
- When you use these wizards, you are prompted to provide the following information for the state migration point:  
+  When you use these wizards, you are prompted to provide the following information for the state migration point:  
 
--   The folders to store the user state data.  
+- The folders to store the user state data.  
 
--   The maximum number of clients that can store data on the state migration point.  
+- The maximum number of clients that can store data on the state migration point.  
 
--   The minimum free space for the state migration point to store user state data.  
+- The minimum free space for the state migration point to store user state data.  
 
--   The deletion policy for the role. You can specify that the user state data is deleted immediately after it is restored on a computer, or after a specific number of days after the user data is restored on a computer.  
+- The deletion policy for the role. You can specify that the user state data is deleted immediately after it is restored on a computer, or after a specific number of days after the user data is restored on a computer.  
 
--   Whether the state migration point responds only to requests to restore user state data. When you enable this option, you cannot use the state migration point to store user state data.  
+- Whether the state migration point responds only to requests to restore user state data. When you enable this option, you cannot use the state migration point to store user state data.  
 
- For more information about the state migration point and the steps to configure it, see [State migration point](prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints).  
+  For more information about the state migration point and the steps to configure it, see [State migration point](prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints).  
 
 ##  <a name="BKMK_ComputerAssociation"></a> Create a computer association  
  Create a computer association to define a relationship between a source computer and a destination computer when you install an operating system on new hardware and want to capture and restore user data settings. The source computer is an existing computer that Configuration Manager manages. When you deploy the new operating system to the destination computer, the source computer contains the user state that is migrated to the destination computer.  

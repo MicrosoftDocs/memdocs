@@ -86,9 +86,9 @@ On the **Deployment Settings** page, specify the following information:
 
 - **Purpose**: From the drop-down list, choose one of the following options:  
 
-	- **Available**: The user sees the application in Software Center. They can install it on demand.  
+  - **Available**: The user sees the application in Software Center. They can install it on demand.  
 
-	- **Required**: The client automatically installs the app according to the schedule that you set. If the application isn't hidden, a user can track its deployment status. They can also use Software Center to install the application before the deadline.  
+  - **Required**: The client automatically installs the app according to the schedule that you set. If the application isn't hidden, a user can track its deployment status. They can also use Software Center to install the application before the deadline.  
 
 	> [!NOTE]   
 	>  When you set the deployment action to **Uninstall**, the deployment purpose is automatically set to **Required**. You can't change this behavior.  

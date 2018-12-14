@@ -226,31 +226,31 @@ Class SMS_TaskSequence_ApplyOperatingSystemAction : SMS_TaskSequence_Action
 
  The following properties can be set for the target of this task sequence action:  
 
--   `DestinationDisk`  
+- `DestinationDisk`  
 
--   `DestinationPartition`  
+- `DestinationPartition`  
 
--   `DestinationLogicalDrive`  
+- `DestinationLogicalDrive`  
 
--   `DestinationVariable`  
+- `DestinationVariable`  
 
- To install to a specific disk or partition, set `DestinationDisk` and `DestinationPartition` and set the other destination properties to `null`.  
+  To install to a specific disk or partition, set `DestinationDisk` and `DestinationPartition` and set the other destination properties to `null`.  
 
- To install to a logical volume, such as c:\\, set `DestinationLogicalDrive` and set the other properties to `null`.  
+  To install to a logical volume, such as c:\\, set `DestinationLogicalDrive` and set the other properties to `null`.  
 
- `DestinationVariable` can be set to a task sequence variable that contains the destination in the form of "1,1" to target disk 1, partition 1, or contains "c:" to target a logical volume.  
+  `DestinationVariable` can be set to a task sequence variable that contains the destination in the form of "1,1" to target disk 1, partition 1, or contains "c:" to target a logical volume.  
 
- Set all the destination properties to `null`, to use the "next available" formatted volume as the target.  
+  Set all the destination properties to `null`, to use the "next available" formatted volume as the target.  
 
- The following properties are specific to a particular type of installation:  
+  The following properties are specific to a particular type of installation:  
 
--   The `ImagePackageID` and `ImageIndex` properties are used for an image-based installation.  
+- The `ImagePackageID` and `ImageIndex` properties are used for an image-based installation.  
 
--   The `InstallPackageID` and `InstallEditionIndex` properties are used for a scripted installation.  
+- The `InstallPackageID` and `InstallEditionIndex` properties are used for a scripted installation.  
 
--   The `ConfigFilePackage` and `ConfigFileName` properties are used for installation from a configuration file.  
+- The `ConfigFilePackage` and `ConfigFileName` properties are used for installation from a configuration file.  
 
- The `InstallEditionIndex` property is set by the `SMS_TaskSequence_ApplyOperatingSystemAction` class. It is retrieved by [SMS_TaskSequence_SetupWindowsAndSMSAction Server WMI Class](../../../develop/reference/osd/sms_tasksequence_setupwindowsandsmsaction-server-wmi-class.md).  
+  The `InstallEditionIndex` property is set by the `SMS_TaskSequence_ApplyOperatingSystemAction` class. It is retrieved by [SMS_TaskSequence_SetupWindowsAndSMSAction Server WMI Class](../../../develop/reference/osd/sms_tasksequence_setupwindowsandsmsaction-server-wmi-class.md).  
 
 > [!NOTE]
 >  The value supplied for the `ImageIndex` property can be problematic if your application has to range-check the property against a maximum value that is greater than 0x7fffffff (2147483647). In this case, your application cannot use the range qualifier on the property.  

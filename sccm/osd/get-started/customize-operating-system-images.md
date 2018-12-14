@@ -26,34 +26,34 @@ Operating system images in System Center Configuration Manager are WIM files and
 #### Automated configuration  
  **Advantages**  
 
--   The configuration can be completely unattended, which eliminates the requirement for an administrator or user to be present.  
+- The configuration can be completely unattended, which eliminates the requirement for an administrator or user to be present.  
 
--   You can reuse the task sequence to repeat the configuration of additional reference computers with a high level of confidence.  
+- You can reuse the task sequence to repeat the configuration of additional reference computers with a high level of confidence.  
 
--   You can modify the task sequence to accommodate differences in reference computers without having to recreate the entire task sequence.  
+- You can modify the task sequence to accommodate differences in reference computers without having to recreate the entire task sequence.  
 
- **Disadvantages**  
+  **Disadvantages**  
 
--   The initial action to build a task sequence can take a long time to create and test.  
+- The initial action to build a task sequence can take a long time to create and test.  
 
--   If the reference computer requirements change significantly, it can take a long time to rebuild and retest the task sequence.  
+- If the reference computer requirements change significantly, it can take a long time to rebuild and retest the task sequence.  
 
 #### Manual configuration  
  **Advantages**  
 
--   You do not have to create a task sequence or take the time to test and troubleshoot the task sequence.  
+- You do not have to create a task sequence or take the time to test and troubleshoot the task sequence.  
 
--   You can install directly from CDs without putting all the software packages (including Windows itself) into a Configuration Manager package.  
+- You can install directly from CDs without putting all the software packages (including Windows itself) into a Configuration Manager package.  
 
- **Disadvantages**  
+  **Disadvantages**  
 
--   The accuracy of the reference computer configuration depends on the administrator or user who configures the computer.  
+- The accuracy of the reference computer configuration depends on the administrator or user who configures the computer.  
 
--   You must still verify and test that the reference computer is configured correctly.  
+- You must still verify and test that the reference computer is configured correctly.  
 
--   You cannot reuse the configuration method.  
+- You cannot reuse the configuration method.  
 
--   Requires a person to be actively involved throughout the process.  
+- Requires a person to be actively involved throughout the process.  
 
 ###  <a name="BKMK_RefComputerConsiderations"></a> Considerations for the reference computer  
  The following lists the basic items to consider when you configure a reference computer.  
@@ -107,20 +107,20 @@ Operating system images in System Center Configuration Manager are WIM files and
 
 #### To manually build the reference computer  
 
-1.  Identify the computer to use as the reference computer.  
+1. Identify the computer to use as the reference computer.  
 
-2.  Configure the reference computer with the appropriate operating system and any other software that is required to create the operating system image that you want to deploy.  
+2. Configure the reference computer with the appropriate operating system and any other software that is required to create the operating system image that you want to deploy.  
 
-    > [!WARNING]  
-    >  At a minimum, install the appropriate operating system and service pack, support drivers, and required software updates.  
+   > [!WARNING]  
+   >  At a minimum, install the appropriate operating system and service pack, support drivers, and required software updates.  
 
-3.  Configure the reference computer to be a member of a workgroup.  
+3. Configure the reference computer to be a member of a workgroup.  
 
-4.  Reset the local Administrator password on the reference computer so that the password value is blank.  
+4. Reset the local Administrator password on the reference computer so that the password value is blank.  
 
-5.  Run Sysprep by using the command:  **sysprep /quiet /generalize /reboot**. The /generalize option instructs Sysprep to remove system-specific data from the Windows installation. System-specific information includes event logs, unique security IDs (SIDs), and other unique information. After the unique system information is removed, the computer restarts.  
+5. Run Sysprep by using the command:  **sysprep /quiet /generalize /reboot**. The /generalize option instructs Sysprep to remove system-specific data from the Windows installation. System-specific information includes event logs, unique security IDs (SIDs), and other unique information. After the unique system information is removed, the computer restarts.  
 
- After the reference computer is ready, use a task sequence to capture the operating system image from the reference computer.  For detailed steps, see [Capture an operating system image from an existing reference computer](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_CaptureExistingRefComputer).  
+   After the reference computer is ready, use a task sequence to capture the operating system image from the reference computer.  For detailed steps, see [Capture an operating system image from an existing reference computer](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_CaptureExistingRefComputer).  
 
 ##  <a name="BKMK_UseTSToBuildReference"></a> Use a task sequence to build a reference computer  
  You can automate the process to create a reference computer by using a task sequence to deploy the operating system, drivers, applications, and so on.  Use the following steps to build the reference computer and then to capture the operating system image from the reference computer.  

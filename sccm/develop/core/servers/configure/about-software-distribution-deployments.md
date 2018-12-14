@@ -15,13 +15,13 @@ In System Center Configuration Manager, after a software distribution package ha
 
  Advertisements are evaluated by Configuration Manager to determine which clients will receive a specific program to run on their computers. An advertisement specifies the following information:  
 
--   The specific program to run on the client.  
+- The specific program to run on the client.  
 
--   The target collection of computers, users, or user groups that are to receive the program.  
+- The target collection of computers, users, or user groups that are to receive the program.  
 
--   The schedule that specifies when the program is available to clients. In the case of assigned (mandatory) advertisements, additional options such as Wake On LAN and ignoring maintenance windows can be used with this schedule.  
+- The schedule that specifies when the program is available to clients. In the case of assigned (mandatory) advertisements, additional options such as Wake On LAN and ignoring maintenance windows can be used with this schedule.  
 
- The site's clients cannot receive advertised programs until you enable the software distribution advertised programs client agent on the site's clients. The **Advertised Programs Client Agent** performs the necessary software distribution-related tasks on these clients, primarily allowing the clients to receive and run the programs that you advertise.  
+  The site's clients cannot receive advertised programs until you enable the software distribution advertised programs client agent on the site's clients. The **Advertised Programs Client Agent** performs the necessary software distribution-related tasks on these clients, primarily allowing the clients to receive and run the programs that you advertise.  
 
 ## See Also  
  [Software Distribution Advertisements](../../../../develop/core/servers/configure/software-distribution-advertisements.md)   

@@ -21,17 +21,17 @@ To use Remote Assistance or Remote Desktop, it must be installed and configured 
 
 #### To enable remote control and configure client settings  
 
-1.  In the Configuration Manager console, choose **Administration** > **Client Settings** > **Default Client Settings**.  
+1. In the Configuration Manager console, choose **Administration** > **Client Settings** > **Default Client Settings**.  
 
-4.  On the **Home** tab, in the **Properties** group, choose **Properties**.  
+2. On the **Home** tab, in the **Properties** group, choose **Properties**.  
 
-5.  In the **Default**  dialog box, choose **Remote Tools**.  
+3. In the **Default**  dialog box, choose **Remote Tools**.  
 
-6.  Configure the remote control, Remote Assistance and Remote Desktop client settings. For a list of remote tools client settings that you can configure, see [Remote Tools](../../../../core/clients/deploy/about-client-settings.md#remote-tools).  
+4. Configure the remote control, Remote Assistance and Remote Desktop client settings. For a list of remote tools client settings that you can configure, see [Remote Tools](../../../../core/clients/deploy/about-client-settings.md#remote-tools).  
 
-    You can change the company name that appears in the **ConfigMgr Remote Control** dialog box by configuring a value for **Organization name displayed in Software Center** in the **Computer Agent** client settings.  
+   You can change the company name that appears in the **ConfigMgr Remote Control** dialog box by configuring a value for **Organization name displayed in Software Center** in the **Computer Agent** client settings.  
 
- Client computers are configured with these settings the next time they download client policy. To initiate policy retrieval for a single client, see [How to manage clients in System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md).  
+   Client computers are configured with these settings the next time they download client policy. To initiate policy retrieval for a single client, see [How to manage clients in System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md).  
 
 #### Enable keyboard translation
 

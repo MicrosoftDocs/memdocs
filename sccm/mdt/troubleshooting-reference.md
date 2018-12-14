@@ -37,32 +37,32 @@ manager: angrobe
 
  MDT creates the following log files:  
 
--   **BDD.log**. This is the aggregated MDT log file that is copied to a network location at the end of the deployment if you specify the **SLShare** property in the Customsettings.ini file.  
+- **BDD.log**. This is the aggregated MDT log file that is copied to a network location at the end of the deployment if you specify the **SLShare** property in the Customsettings.ini file.  
 
--   **LiteTouch.log**. This file is created during LTI deployments. It resides in %WINDIR%\TEMP\DeploymentLogs unless you specify the **/debug:true** option.  
+- **LiteTouch.log**. This file is created during LTI deployments. It resides in %WINDIR%\TEMP\DeploymentLogs unless you specify the **/debug:true** option.  
 
--   **Scriptname*.log**. This file is created by each MDT script. *Scriptname* represents the name of the script in question.  
+- <strong>Scriptname*.log</strong>. This file is created by each MDT script. *Scriptname* represents the name of the script in question.  
 
--   **SMSTS.log**. This file is created by the Task Sequencer and describes all Task Sequencer transactions. Depending on the deployment scenario, it may reside in %TEMP%, %WINDIR%\System32\ccm\logs, or C:\\\_SMSTaskSequence, or C:\SMSTSLog.  
+- **SMSTS.log**. This file is created by the Task Sequencer and describes all Task Sequencer transactions. Depending on the deployment scenario, it may reside in %TEMP%, %WINDIR%\System32\ccm\logs, or C:\\\_SMSTaskSequence, or C:\SMSTSLog.  
 
--   **Wizard.log**. The deployment wizards create and update this file.  
+- **Wizard.log**. The deployment wizards create and update this file.  
 
--   **WPEinit.log**. This file is created during the Windows PE initialization process and is useful for troubleshooting errors encountered while starting Windows PE.  
+- **WPEinit.log**. This file is created during the Windows PE initialization process and is useful for troubleshooting errors encountered while starting Windows PE.  
 
--   **DeploymentWorkbench_*id*.log**. This log file is created in the %temp% folder when you specify **a /debug** when starting the Deployment Workbench.  
+- **DeploymentWorkbench_*id*.log**. This log file is created in the %temp% folder when you specify **a /debug** when starting the Deployment Workbench.  
 
 ### Configuration Manager Operating System Deployment Logs  
  For information about which operating system deployment log files created by Microsoft System Center 2012 R2 Configuration Manager, see [Technical Reference for Log Files in Configuration Manager](http://technet.microsoft.com/library/hh427342.aspx).  
 
  When running the Windows User State Migration Tool (USMT), MDT automatically adds the logging options to save the USMT log files to the MDT log file locations. The log files and when they are created are as follows:  
 
--   **USMTEstimate.log**. Created when estimating the USMT requirements  
+- **USMTEstimate.log**. Created when estimating the USMT requirements  
 
--   **USMTCapture.log**. Created by the USMT when capturing data  
+- **USMTCapture.log**. Created by the USMT when capturing data  
 
--   **USMTRestore.log**. Created by the USMT when restoring data  
+- **USMTRestore.log**. Created by the USMT when restoring data  
 
- The ZeroTouchInstallation.vbs script automatically scans the USMT progress log files for errors and warnings. The script generates event ID 41010 to Microsoft System Center Operations Manager with the following summary (where *usmt_type* is **ESTIMATE**, **SCANSTATE**, or **LOADSTATE**; *error_count* is the total number of errors found; and *warning_count* is the total number of warnings found):  
+  The ZeroTouchInstallation.vbs script automatically scans the USMT progress log files for errors and warnings. The script generates event ID 41010 to Microsoft System Center Operations Manager with the following summary (where *usmt_type* is **ESTIMATE**, **SCANSTATE**, or **LOADSTATE**; *error_count* is the total number of errors found; and *warning_count* is the total number of warnings found):  
 
 ```  
 ZTI USMT <usmt_type> reported <error_count> errors and <warning_count> warnings  
@@ -75,156 +75,156 @@ Table 1 lists the error codes that the MDT scripts create and provides a descrip
 
 ### Table 1. Error Codes and Their Description  
 
-|**Error code**|**Description**|  
-|-|-|  
-|5201|A connection to the deployment share could not be made. The deployment will not proceed.|  
-|5203|A connection to the deployment share could not be made. The deployment will not proceed.|  
-|5205|A connection to the deployment share could not be made. The deployment will not proceed.|  
-|5206|The Deployment Wizard was canceled or did not complete successfully. The deployment will not proceed.|  
-|5207|A connection to the deployment share could not be made. The deployment will not proceed.|  
-|5208|**DeploymentType** is not set. Must set some value for **SkipWizard**.|  
-|5208|Unable to find the SMS Task Sequencer. The deployment will not proceed.|  
-|5400|Create object: **Set *class_instance* = New *class_name***|  
-|5490|Create MSXML2.DOMDocument.|  
-|5495|Create MSXML2.DOMDocument.ParseErr.ErrCode.|  
-|5496|LoadControlFile.FindFile: *ConfigFile*|  
-|5601|Verify OS guid: %OSGUID% exists.|  
-|5602|Open XML with OSGUID: %OSGUID%.|  
-|5610|Verify file.|  
-|5630|Verify file: *ImagePath*.|  
-|5640|Verify file: *ImagePath*.|  
-|5641|FindFile: ImageX.exe.|  
-|5643|Find BootSect.exe.|  
-|5650|Verify directory: *SourcePath*.|  
-|5651|Verify directory: *SourcePath*\Platform.|  
-|5652|FindFile: bootsect.exe.|  
-|6001|Verify drive.|  
-|6002|Verify drive.|  
-|6010|Test for TSGUID.|  
-|6020|Robocopy returned value: *Value*.|  
-|6021|Robocopy returned value: *Value*.|  
-|6101|Check for file: *DeployCab*.|  
-|6102|Expand Sysprep files from DEPLOY.CAB.|  
-|6111|Run Sysprep.exe.|  
-|6121|Run Sysprep.|  
-|6191|Test for **CloneTag** in registry to verify Sysprep completed.|  
-|6192|Test for **SystemSetupInProgress** in registry to verify Sysprep completed.|  
-|6401|Authorized DHCP server.|  
-|6501|Computer backup not possible, no network path (**BackupShare**, **BackupDir**) specified.|  
-|6502|ERROR - Unable to locate IMAGEX, unable to perform backup.|  
-|6601|GetObject(... root/wmi:BCDStore).|  
-|6602|BCD.OpenStore (*BCDStore*).|  
-|6701|Configured protectors.|  
-|6702|Moved boot files.|  
-|6703|Create BDE partition.|  
-|6704|Defragment drive.|  
-|6705|Shrink drive.|  
-|6706|Testing for more than 1 partition.|  
-|6707|Create boot files.|  
-|6708|Encrypt the disk.|  
-|6709|Connect to MicrosoftVolumeEncryption WMI provider.|  
-|6710|Encrypting the disk.|  
-|6711|**ProtectKeyWithTPM**.|  
-|6712|**ProtectKeyWithTPMAndPIN**.|  
-|6713|**ProtectKeyWithTPMAndStartupKey**.|  
-|6714|Save external key to file.|  
-|6715|Protect with external key.|  
-|6716|Save external key to file.|  
-|6717|Protect key with numerical password.|  
-|6718|**GetKeyProtectorNumberialP@ssword.**|  
-|6718|Save password to file.|  
-|6719|Open *PasswordFile*.|  
-|6720|Encrypt the drive.|  
-|6721|Open *DiskPartFile*.|  
-|6722|Create partition.|  
-|6723|Get existing BDE drive.|  
-|6724|Open *DiskPartFile*.|  
-|6727|Attempt to open *DiskPartFile*.|  
-|6729|Create text file *DiskPartFile*.|  
-|6730|Execute **cmd /c DISKPART.EXE /s *DiskPartFile* >> *LogPath*\ZTIMarkActive_diskpart.log 2>&1**|  
-|6731|Find bcdboot.exe.|  
-|6732|Connect to Microsoft TPM provider.|  
-|6733|Get a TPM instance in the provider class.|  
-|6734|Get TPM instance.|  
-|6735|Check to see if TPM is enabled.|  
-|6736|Check to see if TPM is activated.|  
-|6737|Check to see if TPM is owned.|  
-|6738|Check to see if TPM ownership is allowed.|  
-|6739|Check to see if TPM is enabled.|  
-|6740|Check to see if TPM is activated.|  
-|6741|Check to see if TPM is owned and ownership is allowed.|  
-|6741|TPM Owner Password set|  
-|6742|TPM Owner P@ssword set to **AdminP@ssword**.|  
-|6743|Set TPM Owner P@ssword to value.|  
-|6744|Check to see if TPM is enabled.|  
-|6745|Check TPM owner.|  
-|6746|Check for endorsement key pair.|  
-|6747|Check to see if TPM is activated.|  
-|6748|Check to see if TPM ownership is allowed.|  
-|6749|Convert owner p@ssword to owner authorization.|  
-|6750|Create endorsement key pair.|  
-|6751|Change owner authorization.|  
-|6752|Run **Cmd**.|  
-|6753|Validate TPM.|  
-|6754|Get BDE instance.|  
-|6755|Protect key with TPM.|  
-|6756|Check for removable media to configure. **ProtectKeyWithTpmAndStartupKey**.|  
-|6757|Protect key with TPM and startup key.|  
-|6758|Look for BDE pin.|  
-|6759|Protect key with TPM and Pin.|  
-|6760|Find removable media for **BDEKeyLocation**.|  
-|6761|Protect with external key.|  
-|6762|Recovery P@ssword being saved to *PasswordFile*.|  
-|6764|Configure BitLocker policy.|  
-|7000|Unable to locate ZTIConfigure.xml; aborting.|  
-|7001|Looking for unattend AnswerFile.|  
-|7100|ERROR - This script should only run in the full OS.|  
-|7101|ERROR - Not enough values supplied for generating DCPromo answer file.|  
-|7102|ERROR - Mandatory properties for creating a new replica DC were not specified.|  
-|7103|ERROR - Mandatory properties for creating a new child domain were not specified.|  
-|7104|ERROR - Mandatory properties for creating a new forest were not specified.|  
-|7105|ERROR - Mandatory properties for creating a new forest were not specified.|  
-|7200|Unable to configure DHCP server because the service is not installed.|  
-|7201|Unable to read the scope details; `GetScopeDetails()` failed.|  
-|7202|Not enough values specified for scope creation.|  
-|7203|Not enough values provided to set the IP range for this scope.|  
-|7204|No value specified for scope exclusion range.|  
-|7300|Unable to issue DNS commands.|  
-|7700|Not a New Computer scenario; exiting disk partition.|  
-|7701|Disk is not large enough for System and BDE partitions, Required = 1.5 GB.|  
-|7702|Disk is not large enough for System and WinRE partitions, Required = 10 GB.|  
-|7703|DeployRoot is on disk # *DiskIndex*. Running an OEM Scenario: Skip.|  
-|7704|Running an OEM Scenario: Skip.|  
-|7704|Extended and logical partitions are not allowed with BitLocker.|  
-|7712|Verify Drive/*Volume Drive* is present. Format.|  
-|7900|Findfile: Microsoft.BDD.PnpEnum.exe.|  
-|7901|**AllDrivers.Exists("*GUID*").**|  
-|7904|**AllDrivers.Exists("*GUID*").**|  
-|9200|Findfile(PkgMgr.exe).|  
-|9601|ERROR - ZTITatoo state restore task should be running in the full OS; aborting.|  
-|9701|Nonzero return code from USMT estimate, rc = *Error*.|  
-|9702|User state capture not possible; insufficient local space and no network path (UDShare, UDDir) specified.|  
-|9703|Nonzero return code from USMT capture, rc = *Error*.|  
-|9704|No valid command line option was specified.|  
-|9801|ERROR - Attempting to deploy a client operating system to a machine running a server operating system.|  
-|9802|ERROR - Attempting to deploy a server operating system to a machine running a client operating system.|  
-|9803|ERROR - Machine is not authorized for upgrading (OSInstall=*OSInstall*); aborting.|  
-|9804|ERROR - *Memory* MB of memory is insufficient. At least *Memory* MB of memory is required.|  
-|9805|ERROR - Processor speed of *ProcessorSpeed* MHz is insufficient.  At least a *ProcessorSpeed* MHz processor is required.|  
-|9806|ERROR - insufficient space is available on *Drive*. An additional *Size* MB is required.|  
-|9807|ERROR - insufficient space is available on *Drive*. An additional *Size* MB is required.|  
-|9901|The ZTIWindowsUpdate script should not run in Windows PE.|  
-|9902|ZTIWindowsUpdate has run and failed too many times. Count = *Count*.|  
-|9903|Unexpected issue installing the updated Windows Update Agent, rc = *Error*.|  
-|9904|Failed to create object: **Microsoft.Update.Session**.|  
-|9905|Failed to create object: **Microsoft.Update.UpdateColl**.|  
-|9906|Critical file *File* was not found; aborting.|  
-|10000|Create object: **Set oLTICleanup = New LTICleanup**.|  
-|10201|Unable to Join Domain *Domain*. Stop installation.|  
-|10203|FindFile(LTISuspend.wsf).|  
-|10204|Run Program *LTISuspend*.|  
-|41024|Run ImageX.|  
-|52012|All the wizard parameters are not set.|  
+| **Error code** |                                                     **Description**                                                      |
+|----------------|--------------------------------------------------------------------------------------------------------------------------|
+|      5201      |                 A connection to the deployment share could not be made. The deployment will not proceed.                 |
+|      5203      |                 A connection to the deployment share could not be made. The deployment will not proceed.                 |
+|      5205      |                 A connection to the deployment share could not be made. The deployment will not proceed.                 |
+|      5206      |          The Deployment Wizard was canceled or did not complete successfully. The deployment will not proceed.           |
+|      5207      |                 A connection to the deployment share could not be made. The deployment will not proceed.                 |
+|      5208      |                          **DeploymentType** is not set. Must set some value for **SkipWizard**.                          |
+|      5208      |                         Unable to find the SMS Task Sequencer. The deployment will not proceed.                          |
+|      5400      |                                Create object: **Set *class_instance* = New *class_name***                                |
+|      5490      |                                                Create MSXML2.DOMDocument.                                                |
+|      5495      |                                       Create MSXML2.DOMDocument.ParseErr.ErrCode.                                        |
+|      5496      |                                          LoadControlFile.FindFile: *ConfigFile*                                          |
+|      5601      |                                             Verify OS guid: %OSGUID% exists.                                             |
+|      5602      |                                             Open XML with OSGUID: %OSGUID%.                                              |
+|      5610      |                                                       Verify file.                                                       |
+|      5630      |                                                Verify file: *ImagePath*.                                                 |
+|      5640      |                                                Verify file: *ImagePath*.                                                 |
+|      5641      |                                                  FindFile: ImageX.exe.                                                   |
+|      5643      |                                                    Find BootSect.exe.                                                    |
+|      5650      |                                             Verify directory: *SourcePath*.                                              |
+|      5651      |                                         Verify directory: *SourcePath*\Platform.                                         |
+|      5652      |                                                 FindFile: bootsect.exe.                                                  |
+|      6001      |                                                      Verify drive.                                                       |
+|      6002      |                                                      Verify drive.                                                       |
+|      6010      |                                                     Test for TSGUID.                                                     |
+|      6020      |                                            Robocopy returned value: *Value*.                                             |
+|      6021      |                                            Robocopy returned value: *Value*.                                             |
+|      6101      |                                               Check for file: *DeployCab*.                                               |
+|      6102      |                                          Expand Sysprep files from DEPLOY.CAB.                                           |
+|      6111      |                                                     Run Sysprep.exe.                                                     |
+|      6121      |                                                       Run Sysprep.                                                       |
+|      6191      |                              Test for **CloneTag** in registry to verify Sysprep completed.                              |
+|      6192      |                       Test for **SystemSetupInProgress** in registry to verify Sysprep completed.                        |
+|      6401      |                                                 Authorized DHCP server.                                                  |
+|      6501      |                Computer backup not possible, no network path (**BackupShare**, **BackupDir**) specified.                 |
+|      6502      |                                ERROR - Unable to locate IMAGEX, unable to perform backup.                                |
+|      6601      |                                            GetObject(... root/wmi:BCDStore).                                             |
+|      6602      |                                               BCD.OpenStore (*BCDStore*).                                                |
+|      6701      |                                                  Configured protectors.                                                  |
+|      6702      |                                                    Moved boot files.                                                     |
+|      6703      |                                                  Create BDE partition.                                                   |
+|      6704      |                                                    Defragment drive.                                                     |
+|      6705      |                                                      Shrink drive.                                                       |
+|      6706      |                                            Testing for more than 1 partition.                                            |
+|      6707      |                                                    Create boot files.                                                    |
+|      6708      |                                                    Encrypt the disk.                                                     |
+|      6709      |                                    Connect to MicrosoftVolumeEncryption WMI provider.                                    |
+|      6710      |                                                   Encrypting the disk.                                                   |
+|      6711      |                                                  **ProtectKeyWithTPM**.                                                  |
+|      6712      |                                               **ProtectKeyWithTPMAndPIN**.                                               |
+|      6713      |                                           **ProtectKeyWithTPMAndStartupKey**.                                            |
+|      6714      |                                                Save external key to file.                                                |
+|      6715      |                                                Protect with external key.                                                |
+|      6716      |                                                Save external key to file.                                                |
+|      6717      |                                           Protect key with numerical password.                                           |
+|      6718      |                                    <strong>GetKeyProtectorNumberialP@ssword.</strong>                                    |
+|      6718      |                                                  Save password to file.                                                  |
+|      6719      |                                                   Open *PasswordFile*.                                                   |
+|      6720      |                                                    Encrypt the drive.                                                    |
+|      6721      |                                                   Open *DiskPartFile*.                                                   |
+|      6722      |                                                    Create partition.                                                     |
+|      6723      |                                                 Get existing BDE drive.                                                  |
+|      6724      |                                                   Open *DiskPartFile*.                                                   |
+|      6727      |                                             Attempt to open *DiskPartFile*.                                              |
+|      6729      |                                             Create text file *DiskPartFile*.                                             |
+|      6730      |              Execute **cmd /c DISKPART.EXE /s *DiskPartFile* >> *LogPath*\ZTIMarkActive_diskpart.log 2>&1**              |
+|      6731      |                                                    Find bcdboot.exe.                                                     |
+|      6732      |                                            Connect to Microsoft TPM provider.                                            |
+|      6733      |                                        Get a TPM instance in the provider class.                                         |
+|      6734      |                                                    Get TPM instance.                                                     |
+|      6735      |                                             Check to see if TPM is enabled.                                              |
+|      6736      |                                            Check to see if TPM is activated.                                             |
+|      6737      |                                              Check to see if TPM is owned.                                               |
+|      6738      |                                        Check to see if TPM ownership is allowed.                                         |
+|      6739      |                                             Check to see if TPM is enabled.                                              |
+|      6740      |                                            Check to see if TPM is activated.                                             |
+|      6741      |                                  Check to see if TPM is owned and ownership is allowed.                                  |
+|      6741      |                                                  TPM Owner Password set                                                  |
+|      6742      |                                TPM Owner P@ssword set to <strong>AdminP@ssword</strong>.                                 |
+|      6743      |                                             Set TPM Owner P@ssword to value.                                             |
+|      6744      |                                             Check to see if TPM is enabled.                                              |
+|      6745      |                                                     Check TPM owner.                                                     |
+|      6746      |                                             Check for endorsement key pair.                                              |
+|      6747      |                                            Check to see if TPM is activated.                                             |
+|      6748      |                                        Check to see if TPM ownership is allowed.                                         |
+|      6749      |                                      Convert owner p@ssword to owner authorization.                                      |
+|      6750      |                                               Create endorsement key pair.                                               |
+|      6751      |                                               Change owner authorization.                                                |
+|      6752      |                                                       Run **Cmd**.                                                       |
+|      6753      |                                                      Validate TPM.                                                       |
+|      6754      |                                                    Get BDE instance.                                                     |
+|      6755      |                                                  Protect key with TPM.                                                   |
+|      6756      |                       Check for removable media to configure. **ProtectKeyWithTpmAndStartupKey**.                        |
+|      6757      |                                          Protect key with TPM and startup key.                                           |
+|      6758      |                                                    Look for BDE pin.                                                     |
+|      6759      |                                              Protect key with TPM and Pin.                                               |
+|      6760      |                                       Find removable media for **BDEKeyLocation**.                                       |
+|      6761      |                                                Protect with external key.                                                |
+|      6762      |                                     Recovery P@ssword being saved to *PasswordFile*.                                     |
+|      6764      |                                               Configure BitLocker policy.                                                |
+|      7000      |                                       Unable to locate ZTIConfigure.xml; aborting.                                       |
+|      7001      |                                             Looking for unattend AnswerFile.                                             |
+|      7100      |                                   ERROR - This script should only run in the full OS.                                    |
+|      7101      |                          ERROR - Not enough values supplied for generating DCPromo answer file.                          |
+|      7102      |                      ERROR - Mandatory properties for creating a new replica DC were not specified.                      |
+|      7103      |                     ERROR - Mandatory properties for creating a new child domain were not specified.                     |
+|      7104      |                        ERROR - Mandatory properties for creating a new forest were not specified.                        |
+|      7105      |                        ERROR - Mandatory properties for creating a new forest were not specified.                        |
+|      7200      |                          Unable to configure DHCP server because the service is not installed.                           |
+|      7201      |                              Unable to read the scope details; `GetScopeDetails()` failed.                               |
+|      7202      |                                     Not enough values specified for scope creation.                                      |
+|      7203      |                              Not enough values provided to set the IP range for this scope.                              |
+|      7204      |                                      No value specified for scope exclusion range.                                       |
+|      7300      |                                              Unable to issue DNS commands.                                               |
+|      7700      |                                   Not a New Computer scenario; exiting disk partition.                                   |
+|      7701      |                        Disk is not large enough for System and BDE partitions, Required = 1.5 GB.                        |
+|      7702      |                       Disk is not large enough for System and WinRE partitions, Required = 10 GB.                        |
+|      7703      |                           DeployRoot is on disk # *DiskIndex*. Running an OEM Scenario: Skip.                            |
+|      7704      |                                              Running an OEM Scenario: Skip.                                              |
+|      7704      |                             Extended and logical partitions are not allowed with BitLocker.                              |
+|      7712      |                                     Verify Drive/*Volume Drive* is present. Format.                                      |
+|      7900      |                                           Findfile: Microsoft.BDD.PnpEnum.exe.                                           |
+|      7901      |                                             **AllDrivers.Exists("*GUID*").**                                             |
+|      7904      |                                             **AllDrivers.Exists("*GUID*").**                                             |
+|      9200      |                                                  Findfile(PkgMgr.exe).                                                   |
+|      9601      |                     ERROR - ZTITatoo state restore task should be running in the full OS; aborting.                      |
+|      9701      |                                  Nonzero return code from USMT estimate, rc = *Error*.                                   |
+|      9702      |        User state capture not possible; insufficient local space and no network path (UDShare, UDDir) specified.         |
+|      9703      |                                   Nonzero return code from USMT capture, rc = *Error*.                                   |
+|      9704      |                                       No valid command line option was specified.                                        |
+|      9801      |          ERROR - Attempting to deploy a client operating system to a machine running a server operating system.          |
+|      9802      |          ERROR - Attempting to deploy a server operating system to a machine running a client operating system.          |
+|      9803      |                    ERROR - Machine is not authorized for upgrading (OSInstall=*OSInstall*); aborting.                    |
+|      9804      |                ERROR - *Memory* MB of memory is insufficient. At least *Memory* MB of memory is required.                |
+|      9805      | ERROR - Processor speed of *ProcessorSpeed* MHz is insufficient.  At least a *ProcessorSpeed* MHz processor is required. |
+|      9806      |                 ERROR - insufficient space is available on *Drive*. An additional *Size* MB is required.                 |
+|      9807      |                 ERROR - insufficient space is available on *Drive*. An additional *Size* MB is required.                 |
+|      9901      |                                The ZTIWindowsUpdate script should not run in Windows PE.                                 |
+|      9902      |                           ZTIWindowsUpdate has run and failed too many times. Count = *Count*.                           |
+|      9903      |                       Unexpected issue installing the updated Windows Update Agent, rc = *Error*.                        |
+|      9904      |                                  Failed to create object: **Microsoft.Update.Session**.                                  |
+|      9905      |                                Failed to create object: **Microsoft.Update.UpdateColl**.                                 |
+|      9906      |                                      Critical file *File* was not found; aborting.                                       |
+|     10000      |                                   Create object: **Set oLTICleanup = New LTICleanup**.                                   |
+|     10201      |                                    Unable to Join Domain *Domain*. Stop installation.                                    |
+|     10203      |                                                FindFile(LTISuspend.wsf).                                                 |
+|     10204      |                                                Run Program *LTISuspend*.                                                 |
+|     41024      |                                                       Run ImageX.                                                        |
+|     52012      |                                          All the wizard parameters are not set.                                          |
 
  Listing 1 provides an excerpt from a log file that illustrates how to find the error code. In this excerpt, the error code reported is 5001.  
 
@@ -252,30 +252,30 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
 
  **To convert an error code**  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Accessories**, and then click **Calculator**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Accessories**, and then click **Calculator**.  
 
-2.  From the **View** menu, click **Scientific**.  
+2. From the **View** menu, click **Scientific**.  
 
-3.  Select **Hex**, and then enter the last four digits of the code—in this case, **0040**, as shown in Figure 1.  
+3. Select **Hex**, and then enter the last four digits of the code—in this case, **0040**, as shown in Figure 1.  
 
-     ![TroubleshootingReference1](media/TroubleshootingReference1.jpg "TroubleshootingReference1")  
-Figure 1. Error conversion  
+    ![TroubleshootingReference1](media/TroubleshootingReference1.jpg "TroubleshootingReference1")  
+   Figure 1. Error conversion  
 
-     **Figure 1. Error conversion**  
+    **Figure 1. Error conversion**  
 
-     Notice that leading zeros are not displayed while the calculator is in Hexadecimal mode.  
+    Notice that leading zeros are not displayed while the calculator is in Hexadecimal mode.  
 
-4.  Select **Dec**.  
+4. Select **Dec**.  
 
-     The hexadecimal value *40* is converted to a decimal value of *64*.  
+    The hexadecimal value *40* is converted to a decimal value of *64*.  
 
-5.  Open a Command Prompt window, type **NET HELPMSG 64**, and then press ENTER.  
+5. Open a Command Prompt window, type **NET HELPMSG 64**, and then press ENTER.  
 
-     The **NET HELPMSG** command translates the numerical error code into meaningful text. In the case of the error code provided here, it translates to “The specified network name is no longer available.”  
+    The **NET HELPMSG** command translates the numerical error code into meaningful text. In the case of the error code provided here, it translates to “The specified network name is no longer available.”  
 
- This information indicates that a networking problem may exist on the target computer or between the target computer and the server on which the deployment share resides. These problems might include network drivers not being installed properly or a mismatch in speed and duplex settings.  
+   This information indicates that a networking problem may exist on the target computer or between the target computer and the server on which the deployment share resides. These problems might include network drivers not being installed properly or a mismatch in speed and duplex settings.  
 
- **Possible Solution 2:** Use the Microsoft Exchange Server Error Code Look-up utility. This command-line utility is valuable in assisting with error code translation. It is available for download from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=985).  
+   **Possible Solution 2:** Use the Microsoft Exchange Server Error Code Look-up utility. This command-line utility is valuable in assisting with error code translation. It is available for download from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=985).  
 
 ### Review of Sample Logs  
  MDT creates log files that you can use to troubleshoot problems in the MDT deployment process. The following sections provide examples of how to use the MDT log files to troubleshoot the deployment process:  
@@ -340,21 +340,21 @@ Figure 2. NTFS data streams
 
  Further investigation in the ZTIApplications.log shows the following messages:  
 
--   ```  
-    About to run command: \\Server\Deployment$\Tools\X86\bddrun.exe \\Server\Share\Microsoft\Office\2007\Professional\setup.exe /adminfile \\Server\Share\Microsoft\Office\2007\Professional\file.msp  
-    ```  
+- ```  
+  About to run command: \\Server\Deployment$\Tools\X86\bddrun.exe \\Server\Share\Microsoft\Office\2007\Professional\setup.exe /adminfile \\Server\Share\Microsoft\Office\2007\Professional\file.msp  
+  ```  
 
--   ```  
-    ZTI Heartbeat: command has been running for 12 minutes (process ID 1600) Return code from command = 30029  
-    ```  
+- ```  
+  ZTI Heartbeat: command has been running for 12 minutes (process ID 1600) Return code from command = 30029  
+  ```  
 
--   ```  
-    Application Microsoft Office 2007 Professional returned an unexpected return code: 30029  
-    ```  
+- ```  
+  Application Microsoft Office 2007 Professional returned an unexpected return code: 30029  
+  ```  
 
- **Possible Solution 1:** Relocate the MSP file to the Updates directory, and then run setup.exe without specifying the **\/adminfile** option. For more information about deploying updates during the installation, see [Deploying the 2007 Office system](http://technet.microsoft.com/library/cc303395\(v=Office.12\).aspx).  
+  **Possible Solution 1:** Relocate the MSP file to the Updates directory, and then run setup.exe without specifying the **\/adminfile** option. For more information about deploying updates during the installation, see [Deploying the 2007 Office system](http://technet.microsoft.com/library/cc303395\(v=Office.12\).aspx).  
 
- **Possible Solution 2:** Verify that the MSP file does not have the **Suppress modal** check box selected. For more information about configuring this setting, see [Overview of 2007 Office System Deployment](http://technet.microsoft.com/library/bb490141.aspx).  
+  **Possible Solution 2:** Verify that the MSP file does not have the **Suppress modal** check box selected. For more information about configuring this setting, see [Overview of 2007 Office System Deployment](http://technet.microsoft.com/library/bb490141.aspx).  
 
 ### AutoLogon  
  Review the problems and solutions for automatic logon issues:  
@@ -409,21 +409,21 @@ Figure 2. NTFS data streams
 #####  <a name="EnableNamedPipeConnectionsinSQLServer"></a> Enable Named Pipe Connections in SQL Server 2008 R2  
  To enable named pipe connections in SQL Server 2008 R2, perform the following steps:  
 
-1.  On the computer running SQL Server 2008 R2 that hosts the database to be queried, click **Start**, and then point to **All Programs**. Point to **Microsoft SQL Server 2008 R2**, and then click **SQL Server Management Studio**.  
+1. On the computer running SQL Server 2008 R2 that hosts the database to be queried, click **Start**, and then point to **All Programs**. Point to **Microsoft SQL Server 2008 R2**, and then click **SQL Server Management Studio**.  
 
-2.  In the **Microsoft SQL Server Management Studio** console, in the **Object Explorer,** right\-click ***sql\_server\_name***, and then click **Properties** \(where *sql\_server\_name* is the name of the computer running SQL Server to be configured\).  
+2. In the **Microsoft SQL Server Management Studio** console, in the **Object Explorer,** right\-click ***sql\_server\_name***, and then click **Properties** \(where *sql\_server\_name* is the name of the computer running SQL Server to be configured\).  
 
-3.  The Server Properties \- ***sql\_server\_name*** dialog box is displayed.  
+3. The Server Properties \- ***sql\_server\_name*** dialog box is displayed.  
 
-4.  In the **Server Properties** \- ***sql\_server\_name*** dialog box, in **Select a page**, click **Connections**.  
+4. In the **Server Properties** \- ***sql\_server\_name*** dialog box, in **Select a page**, click **Connections**.  
 
-5.  On the **Connections** page, ensure the **Allow remote connections to this server** check box is selected and then click **OK**.  
+5. On the **Connections** page, ensure the **Allow remote connections to this server** check box is selected and then click **OK**.  
 
-6.  Close the Microsoft SQL Server Management Studio console.  
+6. Close the Microsoft SQL Server Management Studio console.  
 
-7.  On the computer running SQL Server 2008 R2 that hosts the database to be queried, click **Start**, and then point to **All Programs**. Point to **Microsoft SQL Server 2008 R2**, point to **Configuration Tools**, and then click **SQL Server Configuration Manager**.  
+7. On the computer running SQL Server 2008 R2 that hosts the database to be queried, click **Start**, and then point to **All Programs**. Point to **Microsoft SQL Server 2008 R2**, point to **Configuration Tools**, and then click **SQL Server Configuration Manager**.  
 
-8.  In the **Sql Server Configuration Manager** console, go to SQL Server Configuration Manager \(Local\) \/ SQL Server Network Configuration \/ Protocols for *sql\_instance* \(where *sql\_instance* in the name of the SQL Server instance to be configured\).  
+8. In the **Sql Server Configuration Manager** console, go to SQL Server Configuration Manager \(Local\) \/ SQL Server Network Configuration \/ Protocols for *sql\_instance* \(where *sql\_instance* in the name of the SQL Server instance to be configured\).  
 
 9. In the details pane, right\-click **Named Pipes**, and then click **Enable**.  
 
@@ -433,40 +433,40 @@ Figure 2. NTFS data streams
 
 11. In the **Sql Server Configuration Manager** console, go to SQL Server Configuration Manager \(Local\) \/ SQL Server Services.  
 
-12. In the details pane, right\-click **SQL Server*\(sql\_instance\)***, and then click **Restart** \(where *sql\_instance* in the name of the SQL Server instance that you configured in step 2\).  
+12. In the details pane, right\-click <strong>SQL Server*\(sql\_instance\)</strong><em>, and then click **Restart</em>* \(where *sql\_instance* in the name of the SQL Server instance that you configured in step 2\).  
 
      The SQL Server Configuration Manager progress bar is displayed that shows the status of restarting the services. After the service restarts, the progress bar closes.  
 
 13. Close the SQL Server Configuration Manager console.  
 
- For additional information, [How to enable remote connections in SQL Server 2008](http://blogs.msdn.com/b/walzenbach/archive/2010/04/14/how-to-enable-remote-connections-in-sql-server-2008.aspx).  
+    For additional information, [How to enable remote connections in SQL Server 2008](http://blogs.msdn.com/b/walzenbach/archive/2010/04/14/how-to-enable-remote-connections-in-sql-server-2008.aspx).  
 
 #####  <a name="EnableNamedPipeConnectionsinSQL"></a> Enable Named Pipe Connections in SQL Server 2005  
  To enable named pipe connections in SQL Server 2005, perform the following steps:  
 
-1.  On the computer running SQL Server 2005 that hosts the database to be queried, click **Start**, and then point to **All Programs**. Point to **Microsoft SQL Server 2005**, point to **Configuration Tools**, and then click **SQL Server Surface Area Configuration**.  
+1. On the computer running SQL Server 2005 that hosts the database to be queried, click **Start**, and then point to **All Programs**. Point to **Microsoft SQL Server 2005**, point to **Configuration Tools**, and then click **SQL Server Surface Area Configuration**.  
 
-2.  In the **SQL Server 2005 Surface Area Configuration** dialog box, click **Surface Area Configuration for Services and Connections**.  
+2. In the **SQL Server 2005 Surface Area Configuration** dialog box, click **Surface Area Configuration for Services and Connections**.  
 
-3.  In the **Surface Area Configuration for Services and Connections – *server\_name*** dialog box \(where *server\_name* is the name of the computer running SQL Server 2005\), in **Select a component and then configure its services and connections**, go to MSSQLSERVER\\Database Engine, and then click **Remote Connections**.  
+3. In the **Surface Area Configuration for Services and Connections – *server\_name*** dialog box \(where *server\_name* is the name of the computer running SQL Server 2005\), in **Select a component and then configure its services and connections**, go to MSSQLSERVER\\Database Engine, and then click **Remote Connections**.  
 
-4.  Click **Local and remote connections**, click **Using both TCP\/IP and named pipes**, and then click **Apply**.  
+4. Click **Local and remote connections**, click **Using both TCP\/IP and named pipes**, and then click **Apply**.  
 
-5.  In the **Surface Area Configuration for Services and Connections – *server\_name*** dialog box \(where *server\_name* is the name of the computer running SQL Server 2005\), in **Select a component and then configure its services and connections**, go to MSSQLSERVER\\Database Engine, and then click **Service**.  
+5. In the **Surface Area Configuration for Services and Connections – *server\_name*** dialog box \(where *server\_name* is the name of the computer running SQL Server 2005\), in **Select a component and then configure its services and connections**, go to MSSQLSERVER\\Database Engine, and then click **Service**.  
 
-6.  Click **Stop**.  
+6. Click **Stop**.  
 
-     The MSSQLSERVER service stops.  
+    The MSSQLSERVER service stops.  
 
-7.  Click **Start**.  
+7. Click **Start**.  
 
-     The MSSQLSERVER service starts.  
+    The MSSQLSERVER service starts.  
 
-8.  Click **OK**.  
+8. Click **OK**.  
 
 9. Close SQL Server 2005 Surface Area Configuration.  
 
- For additional information, see the Microsoft Support article [How to configure SQL Server 2005 to allow remote connections](http://support.microsoft.com/kb/914277)  
+   For additional information, see the Microsoft Support article [How to configure SQL Server 2005 to allow remote connections](http://support.microsoft.com/kb/914277)  
 
 ### Deployment Scripts  
  Review MDT\-related problems and solutions:  
@@ -498,13 +498,13 @@ Figure 2. NTFS data streams
 ####  <a name="FailuretoUpdateWIMFiles"></a> Failure to Update WIM Files  
  In a “simple” environment:  
 
--   MDT typically picks up WIMGAPI.DLL from C:\\Windows\\system32 \(always in the path\). The version of this WIMGAPI.DLL must match the version \(build\) of the operating system.  
+- MDT typically picks up WIMGAPI.DLL from C:\\Windows\\system32 \(always in the path\). The version of this WIMGAPI.DLL must match the version \(build\) of the operating system.  
 
--   On a 64\-bit operating system, MDT always uses the x64 WIMGAPI.DLL file; only that file should be in the system PATH. On a 32\-bit operating system, MDT always uses the x86 WIMGAPI.DLL file; only that file should be in the system PATH. \(Other products, such as Configuration Manager, use the 32\-bit version of WIMGAPI.DLL, even on a 64\-bit operating system, but they manage and install that version.\)  
+- On a 64\-bit operating system, MDT always uses the x64 WIMGAPI.DLL file; only that file should be in the system PATH. On a 32\-bit operating system, MDT always uses the x86 WIMGAPI.DLL file; only that file should be in the system PATH. \(Other products, such as Configuration Manager, use the 32\-bit version of WIMGAPI.DLL, even on a 64\-bit operating system, but they manage and install that version.\)  
 
- **Problem:** When attempting to update a deployment share, the user will be informed that the mounting of one or more .wim files did not succeed.  
+  **Problem:** When attempting to update a deployment share, the user will be informed that the mounting of one or more .wim files did not succeed.  
 
- **Possible Solution:** Open a Command Prompt window and run **where WIMGAPI.DLL**. For the first entry in the list \(the first location found by searching the path\), ensure that the **Version** property matches the build of the Windows Assessment and Deployment Kit \(Windows ADK\) that is installed. Also ensure that the property matches the operating system build number.  
+  **Possible Solution:** Open a Command Prompt window and run **where WIMGAPI.DLL**. For the first entry in the list \(the first location found by searching the path\), ensure that the **Version** property matches the build of the Windows Assessment and Deployment Kit \(Windows ADK\) that is installed. Also ensure that the property matches the operating system build number.  
 
 ### The Windows Deployment Wizard  
  Review Windows Deployment Wizard–related problems and solutions:  
@@ -551,19 +551,19 @@ Figure 2. NTFS data streams
 
  One possible solution to this problem is to defragment drive C. To do so, perform the following steps:  
 
-1.  Run the Diskpart **shrink querymax** command to identify the maximum amount of disk space that can be unallocated.  
+1. Run the Diskpart **shrink querymax** command to identify the maximum amount of disk space that can be unallocated.  
 
-2.  If the value returned in step 1 is less than 2 GB, clean drive C of any unnecessary files, and then defragment it.  
+2. If the value returned in step 1 is less than 2 GB, clean drive C of any unnecessary files, and then defragment it.  
 
-3.  Run the Diskpart **shrink querymax** command again to verify that more than 2 GB of disk space can be unallocated.  
+3. Run the Diskpart **shrink querymax** command again to verify that more than 2 GB of disk space can be unallocated.  
 
-4.  If the value returned in step 3 is still less than 2 GB, perform one of the following tasks:  
+4. If the value returned in step 3 is still less than 2 GB, perform one of the following tasks:  
 
-    -   Defragment drive C multiple times to ensure that it is fully optimized.  
+   -   Defragment drive C multiple times to ensure that it is fully optimized.  
 
-    -   Back up the data on drive C, delete the existing partition, create a new partition, and then restore the data to the new partition.  
+   -   Back up the data on drive C, delete the existing partition, create a new partition, and then restore the data to the new partition.  
 
- **Possible Solution 2:** The ZTIBDE.wsf script runs the Disk Preparation Tool \(bdehdcfg.exe\) and configures the system volume partition size to 2 GB by default. You can customize the ZTIBDE.wsf script to change the default, if necessary. However, modifying the MDT scripts is not recommended.  
+   **Possible Solution 2:** The ZTIBDE.wsf script runs the Disk Preparation Tool \(bdehdcfg.exe\) and configures the system volume partition size to 2 GB by default. You can customize the ZTIBDE.wsf script to change the default, if necessary. However, modifying the MDT scripts is not recommended.  
 
 ####  <a name="SupportforLoogicalandDynamicDisks"></a> Support for Logical and Dynamic Disks  
  **Problem:** When performing a Refresh Computer deployment scenario, the deployment process may fail when deploying to a target computer that is using logical drives or dynamic disks.  
@@ -701,19 +701,19 @@ Figure  SEQ Figure \\\* ARABIC 3. PXE service point error
 
  Two task sequence groups have been created, and either group contains more than one task sequence step:  
 
--   Group A  
+- Group A  
 
-    -   Step A  
+  -   Step A  
 
-    -   Step B  
+  -   Step B  
 
--   Group B  
+- Group B  
 
-    -   Step A  
+  -   Step A  
 
-    -   Step B  
+  -   Step B  
 
- If Group A\\Step A is configured not to continue on error, then Group A\\Step B will not be processed. However, all task sequence steps in Group B will be processed.  
+  If Group A\\Step A is configured not to continue on error, then Group A\\Step B will not be processed. However, all task sequence steps in Group B will be processed.  
 
 ### The User State Migration Tool  
  Review USMT\-related problems and solutions:  
@@ -745,21 +745,21 @@ Figure  SEQ Figure \\\* ARABIC 3. PXE service point error
 ####  <a name="CorruptWIMFile"></a> Corrupt WIM File  
  **Problem:** When deploying an image, the deployment fails with the following entries in the BDD.log file:  
 
--   ```  
-    The image \\Server\Deployment$\Operating Systems\Windows\version1.wim was not applied successfully by ImageX, rc = 2  
-    ```  
+- ```  
+  The image \\Server\Deployment$\Operating Systems\Windows\version1.wim was not applied successfully by ImageX, rc = 2  
+  ```  
 
--   ```  
-    LTIApply COMPLETED.  Return Value = 2  
-    ```  
+- ```  
+  LTIApply COMPLETED.  Return Value = 2  
+  ```  
 
--   ```  
-    ZTI ERROR - Non-zero return code by LTIApply, rc = 2  
-    ```  
+- ```  
+  ZTI ERROR - Non-zero return code by LTIApply, rc = 2  
+  ```  
 
- Investigate the issue by mounting the WIM file using ImageX results in the error, “The data is invalid.” Further investigation shows that the date stamp of the .wim file is many years before the current date. It is possible that another process, such as a virus scanner, was holding the .wim file open after it was previously closed at the conclusion of a Read or Write process.  
+  Investigate the issue by mounting the WIM file using ImageX results in the error, “The data is invalid.” Further investigation shows that the date stamp of the .wim file is many years before the current date. It is possible that another process, such as a virus scanner, was holding the .wim file open after it was previously closed at the conclusion of a Read or Write process.  
 
- **Possible Solution:** Restore the .wim file from backup media.  
+  **Possible Solution:** Restore the .wim file from backup media.  
 
 ### Windows PE  
  Review Windows PE–related problems and solutions:  
@@ -773,7 +773,7 @@ Figure  SEQ Figure \\\* ARABIC 3. PXE service point error
 ####  <a name="LimitedRamorWirelessNetworkAdapter"></a> Deployment Process Not Initiated—Limited RAM or Wireless Network Adapter  
  **Problem:** When deploying an image to certain target computers, Windows PE starts, runs **wpeinit**, opens a Command Prompt window but does not actually start the deployment process. Troubleshooting the problem by mapping a network drive from the target computer indicates that the network adapter drivers are not loaded.  
 
- **Possible Solution 1:**The Deployment Wizard is not starting, because there is insufficient RAM. Verify that the target computer has at least 512 MB of RAM and that no shared video memory consumes more than 64 MB of the 512 MB.  
+ <strong>Possible Solution 1:</strong>The Deployment Wizard is not starting, because there is insufficient RAM. Verify that the target computer has at least 512 MB of RAM and that no shared video memory consumes more than 64 MB of the 512 MB.  
 
  The versions of Windows PE that MDT supports are unable to run on a target computer that has less than 512 MB of RAM.  
 
@@ -808,146 +808,146 @@ ERROR - Unable to create ADODB.Connection object, impossible to query SQL Server
 ###  <a name="LTIDeploymentProcessFlowcharts"></a> LTI Deployment Process Flowcharts  
  Flow charts are provided for the following phases:  
 
--   Validation (Figure 4)  
+- Validation (Figure 4)  
 
--   State Capture (Figure 5 and Figure 6)  
+- State Capture (Figure 5 and Figure 6)  
 
--   Preinstall (Figure 7, Figure 8, and Figure 9)  
+- Preinstall (Figure 7, Figure 8, and Figure 9)  
 
--   Install (Figure 10)  
+- Install (Figure 10)  
 
--   Postinstall (Figure 11 and Figure 12)  
+- Postinstall (Figure 11 and Figure 12)  
 
--   State Restore (Figure 13, Figure 14, Figure 15, and Figure 16)  
+- State Restore (Figure 13, Figure 14, Figure 15, and Figure 16)  
 
- ![TroubleshootingReference4](media/TroubleshootingReference4.jpg "TroubleshootingReference4")  
-Figure 4. Flow chart for the Validation Phase  
+  ![TroubleshootingReference4](media/TroubleshootingReference4.jpg "TroubleshootingReference4")  
+  Figure 4. Flow chart for the Validation Phase  
 
- **Figure 4. Flow chart for the Validation Phase**  
+  **Figure 4. Flow chart for the Validation Phase**  
 
- ![TroubleshootingReference5](media/TroubleshootingReference5.jpg "TroubleshootingReference5")  
-Figure 5. Flow chart for the State Capture Phase (1 of 2)  
+  ![TroubleshootingReference5](media/TroubleshootingReference5.jpg "TroubleshootingReference5")  
+  Figure 5. Flow chart for the State Capture Phase (1 of 2)  
 
- **Figure 5. Flow chart for the State Capture Phase (1 of 2)**  
+  **Figure 5. Flow chart for the State Capture Phase (1 of 2)**  
 
- ![TroubleshootingReference6](media/TroubleshootingReference6.jpg "TroubleshootingReference6")  
-Figure 6. Flow chart for the State Capture Phase (2 of 2)  
+  ![TroubleshootingReference6](media/TroubleshootingReference6.jpg "TroubleshootingReference6")  
+  Figure 6. Flow chart for the State Capture Phase (2 of 2)  
 
- **Figure 6. Flow chart for the State Capture Phase (2 of 2)**  
+  **Figure 6. Flow chart for the State Capture Phase (2 of 2)**  
 
- ![TroubleshootingReference7](media/TroubleshootingReference7.jpg "TroubleshootingReference7")  
-Figure 7. Flow chart for the Preinstall Phase (1 of 3)  
+  ![TroubleshootingReference7](media/TroubleshootingReference7.jpg "TroubleshootingReference7")  
+  Figure 7. Flow chart for the Preinstall Phase (1 of 3)  
 
- **Figure 7. Flow chart for the Preinstall Phase (1 of 3)**  
+  **Figure 7. Flow chart for the Preinstall Phase (1 of 3)**  
 
- ![TroubleshootingReference8](media/TroubleshootingReference8.jpg "TroubleshootingReference8")  
-Figure 8. Flow chart for the Preinstall Phase (2 of 3)  
+  ![TroubleshootingReference8](media/TroubleshootingReference8.jpg "TroubleshootingReference8")  
+  Figure 8. Flow chart for the Preinstall Phase (2 of 3)  
 
- **Figure 8. Flow chart for the Preinstall Phase (2 of 3)**  
+  **Figure 8. Flow chart for the Preinstall Phase (2 of 3)**  
 
- ![TroubleshootingReference9](media/TroubleshootingReference9.jpg "TroubleshootingReference9")  
-Figure 9. Flow chart for the Preinstall Phase (3 of 3)  
+  ![TroubleshootingReference9](media/TroubleshootingReference9.jpg "TroubleshootingReference9")  
+  Figure 9. Flow chart for the Preinstall Phase (3 of 3)  
 
- **Figure 9. Flow chart for the Preinstall Phase (3 of 3)**  
+  **Figure 9. Flow chart for the Preinstall Phase (3 of 3)**  
 
- ![TroubleshootingReference10](media/TroubleshootingReference10.jpg "TroubleshootingReference10")  
-Figure 10. Flow chart for the Install Phase  
+  ![TroubleshootingReference10](media/TroubleshootingReference10.jpg "TroubleshootingReference10")  
+  Figure 10. Flow chart for the Install Phase  
 
- **Figure 10. Flow chart for the Install Phase**  
+  **Figure 10. Flow chart for the Install Phase**  
 
- ![TroubleshootingReference11](media/TroubleshootingReference11.jpg "TroubleshootingReference11")  
-Figure 11. Flow chart for the Postinstall Phase (1 of 2)  
+  ![TroubleshootingReference11](media/TroubleshootingReference11.jpg "TroubleshootingReference11")  
+  Figure 11. Flow chart for the Postinstall Phase (1 of 2)  
 
- **Figure 11. Flow chart for the Postinstall Phase (1 of 2)**  
+  **Figure 11. Flow chart for the Postinstall Phase (1 of 2)**  
 
- ![TroubleshootingReference12](media/TroubleshootingReference12.jpg "TroubleshootingReference12")  
-Figure 12 Flow chart for the Postinstall Phase (2 of 2)  
+  ![TroubleshootingReference12](media/TroubleshootingReference12.jpg "TroubleshootingReference12")  
+  Figure 12 Flow chart for the Postinstall Phase (2 of 2)  
 
- **Figure 12 Flow chart for the Postinstall Phase (2 of 2)**  
+  **Figure 12 Flow chart for the Postinstall Phase (2 of 2)**  
 
- ![TroubleshootingReference13](media/TroubleshootingReference13.jpg "TroubleshootingReference13")  
-Figure 13. Flow chart for the State Restore Phase (1 of 4)  
+  ![TroubleshootingReference13](media/TroubleshootingReference13.jpg "TroubleshootingReference13")  
+  Figure 13. Flow chart for the State Restore Phase (1 of 4)  
 
- **Figure 13. Flow chart for the State Restore Phase (1 of 4)**  
+  **Figure 13. Flow chart for the State Restore Phase (1 of 4)**  
 
- ![TroubleshootingReference14](media/TroubleshootingReference14.jpg "TroubleshootingReference14")  
-Figure 14. Flow chart for the State Restore Phase (2 of 4)  
+  ![TroubleshootingReference14](media/TroubleshootingReference14.jpg "TroubleshootingReference14")  
+  Figure 14. Flow chart for the State Restore Phase (2 of 4)  
 
- **Figure 14. Flow chart for the State Restore Phase (2 of 4)**  
+  **Figure 14. Flow chart for the State Restore Phase (2 of 4)**  
 
- ![TroubleshootingReference15](media/TroubleshootingReference15.jpg "TroubleshootingReference15")  
-Figure 15. Flow chart for the State Restore Phase (3 of 4)  
+  ![TroubleshootingReference15](media/TroubleshootingReference15.jpg "TroubleshootingReference15")  
+  Figure 15. Flow chart for the State Restore Phase (3 of 4)  
 
- **Figure 15. Flow chart for the State Restore Phase (3 of 4)**  
+  **Figure 15. Flow chart for the State Restore Phase (3 of 4)**  
 
- ![TroubleshootingReference16](media/TroubleshootingReference16.jpg "TroubleshootingReference16")  
-Figure 16. Flow chart for the State Restore Phase (4 of 4)  
+  ![TroubleshootingReference16](media/TroubleshootingReference16.jpg "TroubleshootingReference16")  
+  Figure 16. Flow chart for the State Restore Phase (4 of 4)  
 
- **Figure 16. Flow chart for the State Restore Phase (4 of 4)**  
+  **Figure 16. Flow chart for the State Restore Phase (4 of 4)**  
 
 ###  <a name="ZTIDevelopmentProcessFlowcharts"></a> ZTI Deployment Process Flowcharts  
  Flow charts are provided for the following phases of ZTI deployment with Configuration Manager:  
 
--   Initialization (Figure 17)  
+- Initialization (Figure 17)  
 
--   Validation (Figure 18)  
+- Validation (Figure 18)  
 
--   State Capture (Figure 19)  
+- State Capture (Figure 19)  
 
--   Preinstall (Figure 20)  
+- Preinstall (Figure 20)  
 
--   Install (Figure 21)  
+- Install (Figure 21)  
 
--   Postinstall (Figure 22)  
+- Postinstall (Figure 22)  
 
--   State Restore (Figure 23 and Figure 24)  
+- State Restore (Figure 23 and Figure 24)  
 
--   Capture (Figure 25)  
+- Capture (Figure 25)  
 
- ![TroubleshootingReference17](media/TroubleshootingReference17.jpg "TroubleshootingReference17")  
-Figure 17. Flow chart for the Initialization Phase  
+  ![TroubleshootingReference17](media/TroubleshootingReference17.jpg "TroubleshootingReference17")  
+  Figure 17. Flow chart for the Initialization Phase  
 
- **Figure 17. Flow chart for the Initialization Phase**  
+  **Figure 17. Flow chart for the Initialization Phase**  
 
- ![TroubleshootingReference18](media/TroubleshootingReference18.jpg "TroubleshootingReference18")  
-Figure 18. Flow chart for the Validation Phase  
+  ![TroubleshootingReference18](media/TroubleshootingReference18.jpg "TroubleshootingReference18")  
+  Figure 18. Flow chart for the Validation Phase  
 
- **Figure 18. Flow chart for the Validation Phase**  
+  **Figure 18. Flow chart for the Validation Phase**  
 
- ![TroubleshootingReference19](media/TroubleshootingReference19.jpg "TroubleshootingReference19")  
-Figure 19. Flow chart for the State Capture Phase  
+  ![TroubleshootingReference19](media/TroubleshootingReference19.jpg "TroubleshootingReference19")  
+  Figure 19. Flow chart for the State Capture Phase  
 
- **Figure 19. Flow chart for the State Capture Phase**  
+  **Figure 19. Flow chart for the State Capture Phase**  
 
- ![TroubleshootingReference20](media/TroubleshootingReference20.jpg "TroubleshootingReference20")  
-Figure 20. Flow chart for the Preinstall Phase  
+  ![TroubleshootingReference20](media/TroubleshootingReference20.jpg "TroubleshootingReference20")  
+  Figure 20. Flow chart for the Preinstall Phase  
 
- **Figure 20. Flow chart for the Preinstall Phase**  
+  **Figure 20. Flow chart for the Preinstall Phase**  
 
- ![TroubleshootingReference21](media/TroubleshootingReference21.jpg "TroubleshootingReference21")  
-Figure 21. Flow chart for the Install Phase  
+  ![TroubleshootingReference21](media/TroubleshootingReference21.jpg "TroubleshootingReference21")  
+  Figure 21. Flow chart for the Install Phase  
 
- **Figure 21. Flow chart for the Install Phase**  
+  **Figure 21. Flow chart for the Install Phase**  
 
- ![TroubleshootingReference22](media/TroubleshootingReference22.jpg "TroubleshootingReference22")  
-Figure 22. Flow chart for the Postinstall Phase  
+  ![TroubleshootingReference22](media/TroubleshootingReference22.jpg "TroubleshootingReference22")  
+  Figure 22. Flow chart for the Postinstall Phase  
 
- **Figure 22. Flow chart for the Postinstall Phase**  
+  **Figure 22. Flow chart for the Postinstall Phase**  
 
- ![TroubleshootingReference23](media/TroubleshootingReference23.jpg "TroubleshootingReference23")  
-Figure 23. Flow chart for the State Restore Phase (1 of 2)  
+  ![TroubleshootingReference23](media/TroubleshootingReference23.jpg "TroubleshootingReference23")  
+  Figure 23. Flow chart for the State Restore Phase (1 of 2)  
 
- **Figure 23. Flow chart for the State Restore Phase (1 of 2)**  
+  **Figure 23. Flow chart for the State Restore Phase (1 of 2)**  
 
- ![TroubleshootingReference24](media/TroubleshootingReference24.jpg "TroubleshootingReference24")  
-Figure 24. Flow chart for the State Restore Phase (2 of 2)  
+  ![TroubleshootingReference24](media/TroubleshootingReference24.jpg "TroubleshootingReference24")  
+  Figure 24. Flow chart for the State Restore Phase (2 of 2)  
 
- **Figure 24. Flow chart for the State Restore Phase (2 of 2)**  
+  **Figure 24. Flow chart for the State Restore Phase (2 of 2)**  
 
- ![TroubleshootingReference25](media/TroubleshootingReference25.jpg "TroubleshootingReference25")  
-Figure 25. Flow chart for the Capture Phase  
+  ![TroubleshootingReference25](media/TroubleshootingReference25.jpg "TroubleshootingReference25")  
+  Figure 25. Flow chart for the Capture Phase  
 
- **Figure 25. Flow chart for the Capture Phase**  
+  **Figure 25. Flow chart for the Capture Phase**  
 
 ## Finding Additional Help  
  Find additional help in resolving MDT deployment problems by:  

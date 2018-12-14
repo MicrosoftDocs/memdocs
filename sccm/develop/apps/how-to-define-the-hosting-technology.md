@@ -22,11 +22,11 @@ To define a custom application management hosting technology, implement the `Mic
 
 ### To define a custom hosting technology  
 
-1.  Implement the `Microsoft.ConfigurationManagement.ApplicationManagement.HostingTechnology` class using the `Microsoft.ConfigurationManagement.ApplicationManagement.HostingTechnology` constructor.  
+1. Implement the `Microsoft.ConfigurationManagement.ApplicationManagement.HostingTechnology` class using the `Microsoft.ConfigurationManagement.ApplicationManagement.HostingTechnology` constructor.  
 
-     In the example, a string constant, defined in the Common class of the local project, is used for the string parameter.  While the boolean parameter (`Microsoft.ConfigurationManagement.ApplicationManagement.HostingTechnology.IsRemote`) is set directly to true.  
+    In the example, a string constant, defined in the Common class of the local project, is used for the string parameter.  While the boolean parameter (`Microsoft.ConfigurationManagement.ApplicationManagement.HostingTechnology.IsRemote`) is set directly to true.  
 
- The following example from the RDP sample project demonstrates how to define a hosting technology.  
+   The following example from the RDP sample project demonstrates how to define a hosting technology.  
 
 ```  
 // Defines the hosting technology for RDP files. Hosting support for RDP files is not built-in, so a custom  

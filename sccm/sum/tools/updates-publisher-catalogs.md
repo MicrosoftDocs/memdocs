@@ -63,32 +63,32 @@ You can view the list catalogs you have imported in the **My Software Update Cat
 When you import a catalog, Updates Manager adds the updates from that catalog to the Updates Publisher repository. After updates are imported, you can publish them to your update server to make them available to managed devices.
 
 ### To import updates
-1.  To start the **Import Catalog** wizard, choose **Import** from the Ribbon in one of the following workspaces:
+1. To start the **Import Catalog** wizard, choose **Import** from the Ribbon in one of the following workspaces:
 
-    -   Catalogs Workspace
+   -   Catalogs Workspace
 
-    -   Updates Workspace
+   -   Updates Workspace
 
-2.  On the **Import Type** page, select one or more catalogs you've added to Updates Publisher, or specify a path to a catalog you have not yet added as a subscription. Chose **Next** to view the summary screen, and when ready, choose **Next** to start the import.
+2. On the **Import Type** page, select one or more catalogs you've added to Updates Publisher, or specify a path to a catalog you have not yet added as a subscription. Chose **Next** to view the summary screen, and when ready, choose **Next** to start the import.
 
-3.  On the **Security Warning – Catalog Validation** window, review the catalog certificate, and when ready, chose **Accept** to import the updates.
+3. On the **Security Warning – Catalog Validation** window, review the catalog certificate, and when ready, chose **Accept** to import the updates.
 
-    > [!CAUTION]    
-    > Accept updates only from publishers that you trust. Software updates from publishers who are not trusted can potentially harm client computers when scanning for updates.
+   > [!CAUTION]
+   > Accept updates only from publishers that you trust. Software updates from publishers who are not trusted can potentially harm client computers when scanning for updates.
+   > 
+   >  If you no longer trust a publisher, remove that publisher from the trusted publishers list. To find more information about accepting catalogs, click **Tell Me More** in the **Security Warning – Catalog Validation** dialog box.
 
-    >  If you no longer trust a publisher, remove that publisher from the trusted publishers list. To find more information about accepting catalogs, click **Tell Me More** in the **Security Warning – Catalog Validation** dialog box.
+   If you choose to always accept catalogs from a publisher, that publisher is added to the [trusted publishers list](/sccm/sum/tools/updates-publisher-options#trusted-publishers). You can review and edit this list as an Updates Publisher option.
 
-    If you choose to always accept catalogs from a publisher, that publisher is added to the [trusted publishers list](/sccm/sum/tools/updates-publisher-options#trusted-publishers). You can review and edit this list as an Updates Publisher option.
+4. Import skips import of an update when the update is already in the repository and one of the following is true:
 
-4.  Import skips import of an update when the update is already in the repository and one of the following is true:
+   -   The update is unchanged from the last time it was imported.
 
-    -   The update is unchanged from the last time it was imported.
+   -   The update has been edited and has a new digital hash. Editing an update prevents a new update from overwriting the original as doing so would overwrite changes you might have deployed.
 
-    -   The update has been edited and has a new digital hash. Editing an update prevents a new update from overwriting the original as doing so would overwrite changes you might have deployed.
+5. On the **Confirmation** page review the import results.
 
-5.  On the **Confirmation** page review the import results.
-
-6.  Click **Close** to complete the wizard. You can now view the updates for this catalog in the Updates Workspace.
+6. Click **Close** to complete the wizard. You can now view the updates for this catalog in the Updates Workspace.
 
 ## Next steps
 After you import updates, common actions include:

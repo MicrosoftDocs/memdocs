@@ -80,27 +80,27 @@ Class SMS_ResIDValueLookup
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Static  
+- Static  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- The System Center Configuration Manager console uses this class to convert enumerated property values into localized text strings. The console uses the ResIDValueLookup qualifier value and the property value of the class instance to look up the location of the localized string.  
+  The System Center Configuration Manager console uses this class to convert enumerated property values into localized text strings. The console uses the ResIDValueLookup qualifier value and the property value of the class instance to look up the location of the localized string.  
 
- For example, to get the location of the localized string for the `Priority` property of [SMS_Package Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md), the property must contain a ResIDValueLookup property qualifier:  
+  For example, to get the location of the localized string for the `Priority` property of [SMS_Package Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md), the property must contain a ResIDValueLookup property qualifier:  
 
-1.  Get the property value.  
+1. Get the property value.  
 
-2.  Either query `SMS_ResIDValueLookup` or get the object directly by specifying the full path. The query and the object path are as follows.  
+2. Either query `SMS_ResIDValueLookup` or get the object directly by specifying the full path. The query and the object path are as follows.  
 
-    ```  
-    SELECT * FROM SMS_ResIDValueLookup  
-    WHERE LookupName = < property qualifier value>  
-    AND IntLookupValue = <property value>  
+   ```  
+   SELECT * FROM SMS_ResIDValueLookup  
+   WHERE LookupName = < property qualifier value>  
+   AND IntLookupValue = <property value>  
 
-    SMS_ResIDValueLookup.IntLookupValue=<property value>,LookupName="<qualifier value>",StringLookupValue=""  
-    ```  
+   SMS_ResIDValueLookup.IntLookupValue=<property value>,LookupName="<qualifier value>",StringLookupValue=""  
+   ```  
 
- When you have the location and resource identifier, you can use the `LoadString` Win32 function to return the localized text string for the Priority value.  
+   When you have the location and resource identifier, you can use the `LoadString` Win32 function to return the localized text string for the Priority value.  
 
 ## Requirements  
 

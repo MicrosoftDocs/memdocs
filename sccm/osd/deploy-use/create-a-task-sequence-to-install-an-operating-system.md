@@ -35,60 +35,60 @@ Use task sequences in System Center Configuration Manager to automatically insta
 
 #### To create a task sequence that installs an operating system  
 
-1.  In the Configuration Manager console, click **Software Library**.  
+1. In the Configuration Manager console, click **Software Library**.  
 
-2.  In the **Software Library** workspace, expand **Operating Systems**, and then click **Task Sequences**.  
+2. In the **Software Library** workspace, expand **Operating Systems**, and then click **Task Sequences**.  
 
-3.  On the **Home** tab, in the **Create** group, click **Create Task Sequence** to start the Create Task Sequence Wizard.  
+3. On the **Home** tab, in the **Create** group, click **Create Task Sequence** to start the Create Task Sequence Wizard.  
 
-4.  On the **Create a New Task Sequence** page, click **Install an existing Image package**, and then click **Next**.  
+4. On the **Create a New Task Sequence** page, click **Install an existing Image package**, and then click **Next**.  
 
-5.  On the **Task Sequence Information** page, specify the following settings, and then click **Next**.  
+5. On the **Task Sequence Information** page, specify the following settings, and then click **Next**.  
 
-    -   **Task sequence name**: Specify a name that identifies the task sequence.  
+   -   **Task sequence name**: Specify a name that identifies the task sequence.  
 
-    -   **Description**: Specify a description of the task that is performed by the task sequence.  
+   -   **Description**: Specify a description of the task that is performed by the task sequence.  
 
-    -   **Boot image**: Specify the boot image that installs the operating system on the destination computer. The boot image contains a contain a version of Windows PE that is used to install the operating system, as well as any additional device drivers that are required. For information, see [Manage boot images](../get-started/manage-boot-images.md).  
+   -   **Boot image**: Specify the boot image that installs the operating system on the destination computer. The boot image contains a contain a version of Windows PE that is used to install the operating system, as well as any additional device drivers that are required. For information, see [Manage boot images](../get-started/manage-boot-images.md).  
 
-        > [!IMPORTANT]  
-        >  The architecture of the boot image must be compatible with the hardware architecture of the destination computer.  
+       > [!IMPORTANT]  
+       >  The architecture of the boot image must be compatible with the hardware architecture of the destination computer.  
 
-6.  On the **Install Windows** page, specify the following settings, and then click **Next**.  
+6. On the **Install Windows** page, specify the following settings, and then click **Next**.  
 
-    -   **Image package**: Specify the package that contains the operating system image to install. For more information, see [Manage operating system images](../get-started/manage-operating-system-images.md).  
+   -   **Image package**: Specify the package that contains the operating system image to install. For more information, see [Manage operating system images](../get-started/manage-operating-system-images.md).  
 
-    -   **Image**: If the operating system image package has multiple images, specify the index of the operating system image to install.  
+   -   **Image**: If the operating system image package has multiple images, specify the index of the operating system image to install.  
 
-    -   **Partition and format the target computer installing the operating system**: Specify whether you want the task sequence to partition and format the destination computer before the operating system is installed.  
+   -   **Partition and format the target computer installing the operating system**: Specify whether you want the task sequence to partition and format the destination computer before the operating system is installed.  
 
-    -   **Product key**: Specify the product key for the Windows operating system to install. You can specify encoded volume license keys and standard product keys. If you use a non-encoded product key, each group of 5 characters must be separated by a dash (-). For example: *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
+   -   **Product key**: Specify the product key for the Windows operating system to install. You can specify encoded volume license keys and standard product keys. If you use a non-encoded product key, each group of 5 characters must be separated by a dash (-). For example: *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
 
-    -   **Server licensing mode**: Specify that the server license is **Per seat**, **Per server**, or that no license is specified. If the server license is **Per server**, also specify the maximum number of server connections.  
+   -   **Server licensing mode**: Specify that the server license is **Per seat**, **Per server**, or that no license is specified. If the server license is **Per server**, also specify the maximum number of server connections.  
 
-    -   Specify how to handle the administrator account that is used when the operating system image is deployed.  
+   -   Specify how to handle the administrator account that is used when the operating system image is deployed.  
 
-        -   **Disable local administrator account**: Specify whether the local administrator account is disabled when the operating system image is deployed.  
+       -   **Disable local administrator account**: Specify whether the local administrator account is disabled when the operating system image is deployed.  
 
-        -   **Always use the same administrator password**: Specify whether the same password is used for the local administrator account on all computers where the operating system image is deployed.  
+       -   **Always use the same administrator password**: Specify whether the same password is used for the local administrator account on all computers where the operating system image is deployed.  
 
-7.  On the **Configure Network** page, specify the following settings, and then click **Next**.  
+7. On the **Configure Network** page, specify the following settings, and then click **Next**.  
 
-    -   **Join a workgroup**: Specify whether to add the destination computer to a workgroup.  
+   -   **Join a workgroup**: Specify whether to add the destination computer to a workgroup.  
 
-    -   **Join a domain**: Specify whether to add the destination computer to a domain. In **Domain**, specify the name of the domain.  
+   -   **Join a domain**: Specify whether to add the destination computer to a domain. In **Domain**, specify the name of the domain.  
 
-        > [!IMPORTANT]  
-        >  You can browse to locate domains in the local forest, but you must specify the domain name for a remote forest.  
+       > [!IMPORTANT]  
+       >  You can browse to locate domains in the local forest, but you must specify the domain name for a remote forest.  
 
-         You can also specify an organizational unit (OU). This is an optional setting that specifies the LDAP X.500-distinguished name of the OU in which to create the computer account if it does not already exist.  
+        You can also specify an organizational unit (OU). This is an optional setting that specifies the LDAP X.500-distinguished name of the OU in which to create the computer account if it does not already exist.  
 
-    -   **Account**: Specify the user name and password for the account that has permissions to join the specified domain. For example: *domain\user* or *%variable%*.  
+   -   **Account**: Specify the user name and password for the account that has permissions to join the specified domain. For example: *domain\user* or *%variable%*.  
 
-        > [!IMPORTANT]  
-        >  You must enter the appropriate domain credentials if you plan to migrate either the domain settings or the workgroup settings.  
+       > [!IMPORTANT]  
+       >  You must enter the appropriate domain credentials if you plan to migrate either the domain settings or the workgroup settings.  
 
-8.  On the **Install Configuration Manager** page, specify the Configuration Manager client package to install on the destination computer, and then click **Next**.  
+8. On the **Install Configuration Manager** page, specify the Configuration Manager client package to install on the destination computer, and then click **Next**.  
 
 9. On the **State Migration** page, specify the following information, and then click **Next**.  
 
@@ -104,7 +104,7 @@ Use task sequences in System Center Configuration Manager to automatically insta
 
 12. Complete the wizard.  
 
- You can now deploy the task sequence to a collection of computers.  For more information, see [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  
+    You can now deploy the task sequence to a collection of computers.  For more information, see [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  
 
 ##  <a name="BKMK_InstallExistingOSImageTSExample"></a> Example task sequence to install an existing operating system image  
  Use the following table as a guide as you create a task sequence that deploys an operating system using an existing operating system image. The table will help you decide the general sequence for your task sequence steps and how to organize and structure those task sequence steps into logical groups. The task sequence that you create may vary from this sample and can contain more or less task sequence steps and groups.  

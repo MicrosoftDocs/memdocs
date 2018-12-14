@@ -35,19 +35,19 @@ In System Center Configuration Manager, the SMS Provider and associated technolo
 ## Configuration Manager Console User Interface Extension  
  Programming Configuration Manager console extensions has the following requirements:  
 
--   Installed Configuration Manager site server  
+- Installed Configuration Manager site server  
 
--   Installed Configuration Manager console  
+- Installed Configuration Manager console  
 
--   Microsoft Visual Studio 2010  
+- Microsoft Visual Studio 2010  
 
--   Microsoft.ConfigurationManagement.ManagementProvider .NET Framework assembly.  
+- Microsoft.ConfigurationManagement.ManagementProvider .NET Framework assembly.  
 
--   Microsoft .NET Framework 4  
+- Microsoft .NET Framework 4  
 
- For more information, see [Configuration Manager Console Extension](../../../develop/core/servers/console/console-extension.md)  
+  For more information, see [Configuration Manager Console Extension](../../../develop/core/servers/console/console-extension.md)  
 
- For specific information about deploying System Center Configuration Manager console extensions, see [Configuration Manager Console Extension Deployment](../../../develop/core/servers/console/console-extension-deployment.md)  
+  For specific information about deploying System Center Configuration Manager console extensions, see [Configuration Manager Console Extension Deployment](../../../develop/core/servers/console/console-extension-deployment.md)  
 
 ## VBScript  
  You can use Windows Management Instrumentation (WMI) to access the SMS Provider.  
@@ -56,11 +56,11 @@ In System Center Configuration Manager, the SMS Provider and associated technolo
 
  Programming the SMS Provider with VBScript has the following requirements:  
 
--   Installed Configuration Manager site server  
+- Installed Configuration Manager site server  
 
--   Windows Script Host  
+- Windows Script Host  
 
- For more information about scripting with WMI, see [Windows Management Instrumentation](http://go.microsoft.com/fwlink/?LinkID=276770).  
+  For more information about scripting with WMI, see [Windows Management Instrumentation](http://go.microsoft.com/fwlink/?LinkID=276770).  
 
 ## C++  
  C++ examples are provided for some Configuration Manager technologies where C++ is the most appropriate development language. In most cases, C++ developers should use the VBScript samples as a guide. For more information about using WMI with C++, see [Creating a WMI Application Using C++](http://go.microsoft.com/fwlink/?LinkId=276780).  

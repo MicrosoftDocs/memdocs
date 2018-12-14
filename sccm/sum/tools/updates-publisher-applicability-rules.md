@@ -45,30 +45,30 @@ You can create rules in two locations in Updates Publisher:
 ## Create applicability rule
 The following information is similar to how you create rules from within the [Create Update wizard](/sccm/sum/tools/create-updates-with-updates-publisher#the-create-update-wizard). But unlike the wizard, you have the option to save your rule sets for future use.
 
-1.  In the **Rules Workspace**, choose **Create** to open the **Create Rule** wizard.
+1. In the **Rules Workspace**, choose **Create** to open the **Create Rule** wizard.
 
-2.  Specify a name for the rule, and then click ![New Rule](media/newrule.png). This opens the **Applicability Rule** page where you can configure rules.
+2. Specify a name for the rule, and then click ![New Rule](media/newrule.png). This opens the **Applicability Rule** page where you can configure rules.
 
-3.  For **Rule type,** select one of the following. The options you must configure vary for each type:
+3. For **Rule type,** select one of the following. The options you must configure vary for each type:
 
-    -   **File** – Use this rule to require that a device have a file with properties that meet one or more criteria you specify before this update can be applied.
+   - **File** – Use this rule to require that a device have a file with properties that meet one or more criteria you specify before this update can be applied.
 
-    -   **Registry –** Use this type to specify registry details that must be present before a device qualifies to install this update.
+   - **Registry –** Use this type to specify registry details that must be present before a device qualifies to install this update.
 
-    -   **System –** This rule uses system details to determine applicability. You can choose between defining a Windows version, a Windows language, processor architecture, or specify a WMI query to identify the devices operating system.
+   - **System –** This rule uses system details to determine applicability. You can choose between defining a Windows version, a Windows language, processor architecture, or specify a WMI query to identify the devices operating system.
 
-    -   **Windows Installer –** Use this rule type to determine applicability based on an installed .MSI or Windows Installer patch (.MSP). You can also determine if specific components or features are installed as part of the requirement.
+   - **Windows Installer –** Use this rule type to determine applicability based on an installed .MSI or Windows Installer patch (.MSP). You can also determine if specific components or features are installed as part of the requirement.
 
-       > [!IMPORTANT]   
-       > On managed deices, the Windows Update Agent cannot detect Windows Install packages that are installed per-user. When you use this rule type, configure additional applicability rules, like file versions or registry key values, so that the Windows Installer package can be properly detected regardless of a per-user or per-system basis.
+     > [!IMPORTANT]   
+     > On managed deices, the Windows Update Agent cannot detect Windows Install packages that are installed per-user. When you use this rule type, configure additional applicability rules, like file versions or registry key values, so that the Windows Installer package can be properly detected regardless of a per-user or per-system basis.
 
-    -   **Saved rule –** This option lets you find and use rules that you previously configured and saved.
+   - **Saved rule –** This option lets you find and use rules that you previously configured and saved.
 
-4.  Continue to add and configure additional rules as desired.
+4. Continue to add and configure additional rules as desired.
 
-5.  Use the logical operation buttons to order and group different rules to create more complex prerequisite checks.
+5. Use the logical operation buttons to order and group different rules to create more complex prerequisite checks.
 
-6.  When the rule set is complete, click **OK** to save it. The rule set now appears in the **My saved rules** list.
+6. When the rule set is complete, click **OK** to save it. The rule set now appears in the **My saved rules** list.
 
 ## Edit applicability rule sets
 To edit an applicability rule, in the **Rules Workspace** select any rule that is saved in the **My saved rules** list, and then choose **Edit** from the ribbon. This opens the **Edit Rule** wizard.

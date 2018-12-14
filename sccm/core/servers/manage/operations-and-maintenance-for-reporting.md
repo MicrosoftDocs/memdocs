@@ -115,33 +115,33 @@ After the infrastructure is in place for reporting in System Center Configuratio
 
 #### To create a model\-based report  
 
-1.  In the Configuration Manager console, click **Monitoring**.  
+1. In the Configuration Manager console, click **Monitoring**.  
 
-2.  In the **Monitoring** workspace, expand **Reporting** and click **Reports**.  
+2. In the **Monitoring** workspace, expand **Reporting** and click **Reports**.  
 
-3.  On the **Home** tab, in the **Create** section, click **Create Report** to open the **Create Report Wizard**.  
+3. On the **Home** tab, in the **Create** section, click **Create Report** to open the **Create Report Wizard**.  
 
-4.  On the **Information** page, configure the following settings:  
+4. On the **Information** page, configure the following settings:  
 
-    -   **Type**: Select **Model\-based Report** to create a report in Report Builder by using a Reporting Services model.  
+   - **Type**: Select **Model\-based Report** to create a report in Report Builder by using a Reporting Services model.  
 
-    -   **Name**: Specify a name for the report.  
+   - **Name**: Specify a name for the report.  
 
-    -   **Description**: Specify a description for the report.  
+   - **Description**: Specify a description for the report.  
 
-    -   **Server**: Displays the name of the report server on which you are creating this report.  
+   - **Server**: Displays the name of the report server on which you are creating this report.  
 
-    -   **Path**: Click **Browse** to specify a folder in which you want to store the report.  
+   - **Path**: Click **Browse** to specify a folder in which you want to store the report.  
 
      Click **Next**.  
 
-5.  On the **Model Selection** page, select an available model in the list that you use to create this report. When you select the report model, the **Preview** section displays the SQL Server views and entities that are made available by the selected report model.  
+5. On the **Model Selection** page, select an available model in the list that you use to create this report. When you select the report model, the **Preview** section displays the SQL Server views and entities that are made available by the selected report model.  
 
-6.  On the **Summary** page, review the settings. Click **Previous** to change the settings or click **Next** to create the report in Configuration Manager.  
+6. On the **Summary** page, review the settings. Click **Previous** to change the settings or click **Next** to create the report in Configuration Manager.  
 
-7.  On the **Confirmation** page, click **Close** to exit the wizard, and then open Report Builder to configure the report settings. Enter your user account and password if you are prompted, and then click **OK**. If Report Builder is not installed on the computer, you are prompted to install it. Click **Run** to install Report Builder, which is required to modify and create reports.  
+7. On the **Confirmation** page, click **Close** to exit the wizard, and then open Report Builder to configure the report settings. Enter your user account and password if you are prompted, and then click **OK**. If Report Builder is not installed on the computer, you are prompted to install it. Click **Run** to install Report Builder, which is required to modify and create reports.  
 
-8.  In Microsoft Report Builder, create the report layout, select data in the available SQL Server views, add parameters to the report, and so on. For more information about using Report Builder to create a new report, see the Report Builder Help.  
+8. In Microsoft Report Builder, create the report layout, select data in the available SQL Server views, add parameters to the report, and so on. For more information about using Report Builder to create a new report, see the Report Builder Help.  
 
 9. Click **Run** to run your report. Verify that the report provides the information that you expect. Click **Design** to return to the Design view to modify the report, if needed.  
 
@@ -160,33 +160,33 @@ After the infrastructure is in place for reporting in System Center Configuratio
 
 #### To create a SQL\-based report  
 
-1.  In the Configuration Manager console, click **Monitoring**.  
+1. In the Configuration Manager console, click **Monitoring**.  
 
-2.  In the **Monitoring** workspace, expand **Reporting**, and then click **Reports**.  
+2. In the **Monitoring** workspace, expand **Reporting**, and then click **Reports**.  
 
-3.  On the **Home** tab, in the **Create** section, click **Create Report** to open the **Create Report Wizard**.  
+3. On the **Home** tab, in the **Create** section, click **Create Report** to open the **Create Report Wizard**.  
 
-4.  On the **Information** page, configure the following settings:  
+4. On the **Information** page, configure the following settings:  
 
-    -   **Type**: Select **SQL\-based Report** to create a report in Report Builder by using a SQL statement.  
+   - **Type**: Select **SQL\-based Report** to create a report in Report Builder by using a SQL statement.  
 
-    -   **Name**: Specify a name for the report.  
+   - **Name**: Specify a name for the report.  
 
-    -   **Description**: Specify a description for the report.  
+   - **Description**: Specify a description for the report.  
 
-    -   **Server**: Displays the name of the report server on which you are creating this report.  
+   - **Server**: Displays the name of the report server on which you are creating this report.  
 
-    -   **Path**: Click **Browse** to specify a folder in which you want to store the report.  
+   - **Path**: Click **Browse** to specify a folder in which you want to store the report.  
 
      Click **Next**.  
 
-5.  On the **Summary** page, review the settings. Click **Previous** to change the settings or click **Next** to create the report in Configuration Manager.  
+5. On the **Summary** page, review the settings. Click **Previous** to change the settings or click **Next** to create the report in Configuration Manager.  
 
-6.  On the **Confirmation** page, click **Close** to exit the wizard and open Report Builder to configure the report settings. Enter your user account and password if you are prompted, and then click **OK**. If Report Builder is not installed on the computer, you are prompted to install it. Click **Run** to install Report Builder, which is required to modify and create reports.  
+6. On the **Confirmation** page, click **Close** to exit the wizard and open Report Builder to configure the report settings. Enter your user account and password if you are prompted, and then click **OK**. If Report Builder is not installed on the computer, you are prompted to install it. Click **Run** to install Report Builder, which is required to modify and create reports.  
 
-7.  In Microsoft Report Builder, provide the SQL statement for the report or build the SQL statement by using columns in available SQL Server views, add parameters to the report, and so on.  
+7. In Microsoft Report Builder, provide the SQL statement for the report or build the SQL statement by using columns in available SQL Server views, add parameters to the report, and so on.  
 
-8.  Click **Run** to run your report. Verify that the report provides the information that you expect. Click **Design** to return to the Design view to modify the report, if needed.  
+8. Click **Run** to run your report. Verify that the report provides the information that you expect. Click **Design** to return to the Design view to modify the report, if needed.  
 
 9. Click **Save** to save the report to the report server. You can run the new report in the **Reports** node in the **Monitoring** workspace.  
 
@@ -206,73 +206,73 @@ After the infrastructure is in place for reporting in System Center Configuratio
 
 #### To create a report subscription to deliver a report to a file share  
 
-1.  In the Configuration Manager console, click **Monitoring**.  
+1. In the Configuration Manager console, click **Monitoring**.  
 
-2.  In the **Monitoring** workspace, expand **Reporting** and click **Reports** to list the available reports. You can select a report folder to list only the reports that are associated with the folder.  
+2. In the **Monitoring** workspace, expand **Reporting** and click **Reports** to list the available reports. You can select a report folder to list only the reports that are associated with the folder.  
 
-3.  Select the report that you want to add to the subscription, and then on the **Home** tab, in the **Report Group** section, click **Create Subscription** to open the **Create Subscription Wizard**.  
+3. Select the report that you want to add to the subscription, and then on the **Home** tab, in the **Report Group** section, click **Create Subscription** to open the **Create Subscription Wizard**.  
 
-4.  On the **Subscription Delivery** page, configure the following settings:  
+4. On the **Subscription Delivery** page, configure the following settings:  
 
-    -   Report delivered by: Select **Windows File Share** to deliver the report to a file share.  
+   - Report delivered by: Select **Windows File Share** to deliver the report to a file share.  
 
-    -   **File Name**: Specify the file name for the report. By default, the report file does not include a file name extension. Select **Add file extension when created** to automatically add a file name extension to this report based on the render format.  
+   - **File Name**: Specify the file name for the report. By default, the report file does not include a file name extension. Select **Add file extension when created** to automatically add a file name extension to this report based on the render format.  
 
-    -   **Path**: Specify a UNC path to an existing folder where you want to deliver this report \(for example, \\\\&lt;server name\>\\&lt;server share\>\\&lt;report folder\>\).  
+   - **Path**: Specify a UNC path to an existing folder where you want to deliver this report \(for example, \\\\&lt;server name\>\\&lt;server share\>\\&lt;report folder\>\).  
 
-        > [!NOTE]  
-        >  The user name specified later on this page must have access to this server share and have Write permissions on the destination folder.  
+     > [!NOTE]  
+     >  The user name specified later on this page must have access to this server share and have Write permissions on the destination folder.  
 
-    -   **Render Format**: Select one of the following formats for the report file:  
+   - **Render Format**: Select one of the following formats for the report file:  
 
-        -   **XML file with report data**: Saves the report in Extensible Markup Language format.  
+     -   **XML file with report data**: Saves the report in Extensible Markup Language format.  
 
-        -   **CSV \(comma delimited\)**: Saves the report in comma\-separated\-value format.  
+     -   **CSV \(comma delimited\)**: Saves the report in comma\-separated\-value format.  
 
-        -   **TIFF file**: Saves the report in Tagged Image File Format.  
+     -   **TIFF file**: Saves the report in Tagged Image File Format.  
 
-        -   **Acrobat \(PDF\) file**: Saves the report in Acrobat Portable Document Format.  
+     -   **Acrobat \(PDF\) file**: Saves the report in Acrobat Portable Document Format.  
 
-        -   **HTML 4.0**: Saves the report as a webpage viewable only in browsers that support HTML 4.0. Internet Explorer 5 and later versions support HTML 4.0.  
+     -   **HTML 4.0**: Saves the report as a webpage viewable only in browsers that support HTML 4.0. Internet Explorer 5 and later versions support HTML 4.0.  
 
-            > [!NOTE]  
-            >  If you have images in your report, the HTML 4.0 format does not include them in the file.  
+         > [!NOTE]  
+         >  If you have images in your report, the HTML 4.0 format does not include them in the file.  
 
-        -   **MHTML \(web archive\)**: Saves the report in MIME HTML format \(mhtml\), which is viewable in many web browsers.  
+     -   **MHTML \(web archive\)**: Saves the report in MIME HTML format \(mhtml\), which is viewable in many web browsers.  
 
-        -   **RPL Renderer**: Saves the report in Report Page Layout \(RPL\) format.  
+     -   **RPL Renderer**: Saves the report in Report Page Layout \(RPL\) format.  
 
-        -   **Excel**: Saves the report as a Microsoft Excel spreadsheet.  
+     -   **Excel**: Saves the report as a Microsoft Excel spreadsheet.  
 
-        -   **Word**: Saves the report as a Microsoft Word document.  
+     -   **Word**: Saves the report as a Microsoft Word document.  
 
-    -   **User Name**: Specify a Windows user account with permissions to access the destination server share and folder. The user account must have access to this server share and have Write permission on the destination folder.  
+   - **User Name**: Specify a Windows user account with permissions to access the destination server share and folder. The user account must have access to this server share and have Write permission on the destination folder.  
 
-    -   **Password**: Specify the password for the Windows user account. In **Confirm Password**, re\-enter the password.  
+   - **Password**: Specify the password for the Windows user account. In **Confirm Password**, re\-enter the password.  
 
-    -   Select one of the following options to configure the behavior when a file of the same name exists in the destination folder:  
+   - Select one of the following options to configure the behavior when a file of the same name exists in the destination folder:  
 
-        -   **Overwrite an existing file with a newer version**: Specifies that when the report file already exists, the new version overwrites it.  
+     -   **Overwrite an existing file with a newer version**: Specifies that when the report file already exists, the new version overwrites it.  
 
-        -   **Do not overwrite an existing file**: Specifies that when the report file already exists, there is no action.  
+     -   **Do not overwrite an existing file**: Specifies that when the report file already exists, there is no action.  
 
-        -   **Increment file names as newer versions are added**: Specifies that when the report file already exists, a number is added to the new report to the file name to distinguish it from other versions.  
+     -   **Increment file names as newer versions are added**: Specifies that when the report file already exists, a number is added to the new report to the file name to distinguish it from other versions.  
 
-    -   **Description**: Specifies the description for the report subscription.  
+   - **Description**: Specifies the description for the report subscription.  
 
      Click **Next**.  
 
-5.  On the **Subscription Schedule** page, select one of the following delivery schedule options for the report subscription:  
+5. On the **Subscription Schedule** page, select one of the following delivery schedule options for the report subscription:  
 
-    -   **Use shared schedule**: A shared schedule is a previously defined schedule that can be used by other report subscriptions. Select this check box, and then select a shared schedule in the list if any have been specified.  
+   -   **Use shared schedule**: A shared schedule is a previously defined schedule that can be used by other report subscriptions. Select this check box, and then select a shared schedule in the list if any have been specified.  
 
-    -   **Create new schedule**: Configure the schedule on which this report runs, including the interval, start time and date, and the end date for this subscription.  
+   -   **Create new schedule**: Configure the schedule on which this report runs, including the interval, start time and date, and the end date for this subscription.  
 
-6.  On the **Subscription Parameters** page, specify the parameters for this report that are used when it is run unattended. When there are no parameters for the report, this page is not displayed.  
+6. On the **Subscription Parameters** page, specify the parameters for this report that are used when it is run unattended. When there are no parameters for the report, this page is not displayed.  
 
-7.  On the **Summary** page, review the report subscription settings. Click **Previous** to change the settings or click **Next** to create the report subscription.  
+7. On the **Summary** page, review the report subscription settings. Click **Previous** to change the settings or click **Next** to create the report subscription.  
 
-8.  On the **Completion** page, click **Close** to exit the wizard. Verify that the report subscription was created successfully. You can view and modify report subscriptions in the **Subscriptions** node under **Reporting** in the **Monitoring** workspace.  
+8. On the **Completion** page, click **Close** to exit the wizard. Verify that the report subscription was created successfully. You can view and modify report subscriptions in the **Subscriptions** node under **Reporting** in the **Monitoring** workspace.  
 
 ###  <a name="BKMK_ReportSubscriptionEmail"></a> Create a report subscription to deliver a report by email  
  When you create a report subscription to deliver a report by email, an email is sent to the recipients that you configure, and the report is included as an attachment. The report server does not validate email addresses or obtain email addresses from an email server. You must know in advance which email addresses you want to use. By default, you can email reports to any valid email account within or outside of your organization. You can select one or both of the following email delivery options:  

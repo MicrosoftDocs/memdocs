@@ -115,19 +115,19 @@ The information we collect from you will be used by Microsoft and its controlled
 
 ##### To disable the synchronization of software updates with Microsoft Update  
 
-1.  In the Configuration Manager console, click **Administration**.  
+1. In the Configuration Manager console, click **Administration**.  
 
-2.  In the **Administration** workspace, expand **Site Configuration**, and then click **Sites**.  
+2. In the **Administration** workspace, expand **Site Configuration**, and then click **Sites**.  
 
-3.  In the results pane, click the central administration site or stand-alone primary site.  
+3. In the results pane, click the central administration site or stand-alone primary site.  
 
-4.  On the **Home** tab, in the **Settings** group, expand **Configure Site Components**, and then click **Software Update Point**.  
+4. On the **Home** tab, in the **Settings** group, expand **Configure Site Components**, and then click **Software Update Point**.  
 
-5.  In the **Software Update Point Component Properties** dialog box, on the **Sync Settings** tab, click **Do not synchronize from Microsoft Update or the upstream software update point**, and then click **OK**.  
+5. In the **Software Update Point Component Properties** dialog box, on the **Sync Settings** tab, click **Do not synchronize from Microsoft Update or the upstream software update point**, and then click **OK**.  
 
- When you have a software update point that is configured to accept connections from the Internet, Configuration Manager Internet-based clients on the Internet always scan against this software update point, to determine which software updates are required. When these clients are on the Internet, they first try to download the software updates from Microsoft Update, rather than from an Internet-based distribution point. Only if this fails, will they try to download the required software updates from an Internet-based distribution point.  
+   When you have a software update point that is configured to accept connections from the Internet, Configuration Manager Internet-based clients on the Internet always scan against this software update point, to determine which software updates are required. When these clients are on the Internet, they first try to download the software updates from Microsoft Update, rather than from an Internet-based distribution point. Only if this fails, will they try to download the required software updates from an Internet-based distribution point.  
 
- The administrator can configure software deployments so that clients on the intranet can download update content from Microsoft Update if they cannot download the content from a distribution point.  
+   The administrator can configure software deployments so that clients on the intranet can download update content from Microsoft Update if they cannot download the content from a distribution point.  
 
 ## **Silverlight**  
 

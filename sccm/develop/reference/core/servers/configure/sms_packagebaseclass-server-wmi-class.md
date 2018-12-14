@@ -386,90 +386,90 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  Preferred sender to use when copying the package source files to distribution points. Possible values are listed below. Configuration Manager determines which sender to use if a value is not specified.  
 
--   ADDR_NONE()  
+- ADDR_NONE()  
 
--   ADR_LAN(MS_LAN)  
+- ADR_LAN(MS_LAN)  
 
--   ADDR_MAPI(MS_MAPI)  
+- ADDR_MAPI(MS_MAPI)  
 
--   ADDR_RAS_ASYNC(MS_ASYNC_RAS)  
+- ADDR_RAS_ASYNC(MS_ASYNC_RAS)  
 
--   ADDR_RAS_ISDN(MS_ISDN_RAS)  
+- ADDR_RAS_ISDN(MS_ISDN_RAS)  
 
--   ADDR_RAS_X25(MS_X25_RAS)  
+- ADDR_RAS_X25(MS_X25_RAS)  
 
--   ADDR_RAS_SNA(MS_SNA_RAS)  
+- ADDR_RAS_SNA(MS_SNA_RAS)  
 
--   ADDR_SNA_BATCH(MS_BATCH_SNA)  
+- ADDR_SNA_BATCH(MS_BATCH_SNA)  
 
--   ADDR_SNA_INTER(MS_INTER_SNA)  
+- ADDR_SNA_INTER(MS_INTER_SNA)  
 
--   ADDR_COURIER(MS_COURIER)  
+- ADDR_COURIER(MS_COURIER)  
 
- `Priority`  
- Data type: `UInt32`  
+  `Priority`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Sending priority of the package. Possible values are defined for the `Priority` property of [SMS_Advertisement Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_advertisement-server-wmi-class.md).  
+  Sending priority of the package. Possible values are defined for the `Priority` property of [SMS_Advertisement Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_advertisement-server-wmi-class.md).  
 
- `RefreshPkgSourceFlag`  
- Data type: `Boolean`  
+  `RefreshPkgSourceFlag`  
+  Data type: `Boolean`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [lazy]  
+  Qualifiers: [lazy]  
 
- `true` if Configuration Manager should refresh the package source files. The default value is `false`. This property always contains `false` when read.  
+  `true` if Configuration Manager should refresh the package source files. The default value is `false`. This property always contains `false` when read.  
 
- Setting this property to `true` has the same effect as calling the [RefreshPkgSource Method in Class SMS_Package](../../../../../develop/reference/core/servers/configure/refreshpkgsource-method-in-class-sms_package.md).  
+  Setting this property to `true` has the same effect as calling the [RefreshPkgSource Method in Class SMS_Package](../../../../../develop/reference/core/servers/configure/refreshpkgsource-method-in-class-sms_package.md).  
 
- Do not use this property to update the package source files. Instead, use the `RefreshPkgSource` method.  
+  Do not use this property to update the package source files. Instead, use the `RefreshPkgSource` method.  
 
- `RefreshSchedule`  
- Data type: `SMS_ScheduleToken` Array  
+  `RefreshSchedule`  
+  Data type: `SMS_ScheduleToken` Array  
 
- Access type: [max(15), lazy]  
+  Access type: [max(15), lazy]  
 
- An embedded array of `SMS_ScheduleToken` objects that define when Configuration Manager will update the package source files at the distribution points. You can specify a refresh schedule only when `PkgSourceFlag` is STORAGE_DIRECT.  
+  An embedded array of `SMS_ScheduleToken` objects that define when Configuration Manager will update the package source files at the distribution points. You can specify a refresh schedule only when `PkgSourceFlag` is STORAGE_DIRECT.  
 
- `SecuredScopeNames`  
- Data type: `String` Array  
+  `SecuredScopeNames`  
+  Data type: `String` Array  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- Represents the security scopes that the package belongs to.  
+  Represents the security scopes that the package belongs to.  
 
- `SedoObjectVersion`  
- Data type: `String`  
+  `SedoObjectVersion`  
+  Data type: `String`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- Object version used to compare to the object version in the database when updating the object. If the object version does not match, the update fails.  
+  Object version used to compare to the object version in the database when updating the object. If the object version does not match, the update fails.  
 
- `ShareName`  
- Data type: `String`  
+  `ShareName`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Share to use on the distribution point. The name can include directories. If the directories do not exist, Configuration Manager creates them. You must specify a share name if you set `ShareType` to SHARE_SPECIFIC.  
+  Share to use on the distribution point. The name can include directories. If the directories do not exist, Configuration Manager creates them. You must specify a share name if you set `ShareType` to SHARE_SPECIFIC.  
 
- `ShareType`  
- Data type: `UInt32`  
+  `ShareType`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- The type of share used by the distribution point when sharing the package. Possible values are listed below, with the default value SHARE_COMMON. If you specify SHARE_SPECIFIC, you must provide a value for `ShareName`.  
+  The type of share used by the distribution point when sharing the package. Possible values are listed below, with the default value SHARE_COMMON. If you specify SHARE_SPECIFIC, you must provide a value for `ShareName`.  
 
 |Value|Description|  
 |-----------|-----------------|  
@@ -533,11 +533,11 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Abstract  
+- Abstract  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- If you set the USE_SPECIAL_MIF flag of the `PkgFlags` property, Configuration Manager looks in the %*TEMP*% directory or the %*windir*% directory for the install status MIF file that is specified in the `MIFFileName` property. If Configuration Manager does not find the file, it searches for all MIF files in those directories. A case-insensitive comparison is made of the values for `MIFName`, `MIFPublisher`, and `MIFVersion` to those specified in the MIF file. If a match is found, the status that is specified in the MIF file is used as the install status for the program, which indicates whether the program successfully executed. If Configuration Manager cannot find a match, or if USE_SPECIAL_MIF is not specified, Configuration Manager uses the program exit code to set the install status for the program. An exit code of zero is considered successful. Any other values are considered application-specific error codes.  
+  If you set the USE_SPECIAL_MIF flag of the `PkgFlags` property, Configuration Manager looks in the %*TEMP*% directory or the %*windir*% directory for the install status MIF file that is specified in the `MIFFileName` property. If Configuration Manager does not find the file, it searches for all MIF files in those directories. A case-insensitive comparison is made of the values for `MIFName`, `MIFPublisher`, and `MIFVersion` to those specified in the MIF file. If a match is found, the status that is specified in the MIF file is used as the install status for the program, which indicates whether the program successfully executed. If Configuration Manager cannot find a match, or if USE_SPECIAL_MIF is not specified, Configuration Manager uses the program exit code to set the install status for the program. An exit code of zero is considered successful. Any other values are considered application-specific error codes.  
 
 ## Requirements  
 

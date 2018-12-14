@@ -17,19 +17,19 @@ manager: dougeby
 
 You can install the System Center Configuration Manager client on computers that run Linux or UNIX. This client is designed for servers that operate as a workgroup computer, and the client does not support interaction with logged-on users. After you install the client software and the client establishes communication with the Configuration Manager site, you manage the client by using the Configuration Manager console and reports.  
 
-> [!NOTE]  
+> [!NOTE]
 >  The Configuration Manager client for Linux and UNIX computers does not support the following management capabilities:  
->   
->  -   Client push installation  
-> -   Operating system deployment  
-> -   Application deployment; instead, deploy software by using packages and programs.  
-> -   Software inventory  
-> -   Software updates  
-> -   Compliance settings  
-> -   Remote control  
-> -   Power management  
-> -   Client status client check and remediation  
-> -   Internet-based client management  
+> 
+> - Client push installation  
+>   -   Operating system deployment  
+>   -   Application deployment; instead, deploy software by using packages and programs.  
+>   -   Software inventory  
+>   -   Software updates  
+>   -   Compliance settings  
+>   -   Remote control  
+>   -   Power management  
+>   -   Client status client check and remediation  
+>   -   Internet-based client management  
 
  For information about the supported Linux and UNIX distributions and the hardware required to support the client for Linux and UNIX, see [Recommended hardware for System Center Configuration Manager](../../../../core/plan-design/configs/recommended-hardware.md).  
 

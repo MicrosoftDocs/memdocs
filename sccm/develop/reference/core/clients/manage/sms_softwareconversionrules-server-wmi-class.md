@@ -38,38 +38,38 @@ Class SMS_SoftwareConversionRules : SMS_BaseClass
 
  Type of resource string to convert. Possible values are:  
 
--   Manufacturer (default)  
+- Manufacturer (default)  
 
--   Product  
+- Product  
 
- `NewName`  
- Data type: **String**  
+  `NewName`  
+  Data type: **String**  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [Not_Null]  
+  Qualifiers: [Not_Null]  
 
- Name reported to software inventory. The default value is "".  
+  Name reported to software inventory. The default value is "".  
 
- `OriginalName`  
- Data type: **String**  
+  `OriginalName`  
+  Data type: **String**  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [Not_Null]  
+  Qualifiers: [Not_Null]  
 
- Original company or product name. The default value is "".  
+  Original company or product name. The default value is "".  
 
- The original name can contain SQL wildcard characters (&, _, [], and [^]), but the `OriginalName` and `ConvertType`combination must be unique.  
+  The original name can contain SQL wildcard characters (&, _, [], and [^]), but the `OriginalName` and `ConvertType`combination must be unique.  
 
- `RuleId`  
- Data type: **UInt32**  
+  `RuleId`  
+  Data type: **UInt32**  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [key, read, Not_Null]  
+  Qualifiers: [key, read, Not_Null]  
 
- Unique ID of the rule. The default value is 0.  
+  Unique ID of the rule. The default value is 0.  
 
 ## Remarks  
  There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  

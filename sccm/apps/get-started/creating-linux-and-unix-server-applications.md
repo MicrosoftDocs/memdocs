@@ -91,15 +91,15 @@ The following table lists the properties for packages and programs that are not 
 ### Deploy software to a Linux or UNIX server
  To deploy software to a Linux or UNIX server by using a package and program, you can use the **Deploy Software Wizard** from the Configuration Manager console. Most deployment settings are supported by the client for Linux and UNIX. However several settings are not supported. When you deploy software, consider the following:  
 
--   You must provision the package on at least one distribution point that is associated with a boundary group that is configured for content location.  
+- You must provision the package on at least one distribution point that is associated with a boundary group that is configured for content location.  
 
--   The client for Linux and UNIX that receives this deployment must be able to access this distribution point from its network location.  
+- The client for Linux and UNIX that receives this deployment must be able to access this distribution point from its network location.  
 
--   The client for Linux and UNIX downloads the package from the distribution point and runs the program on the local computer.  
+- The client for Linux and UNIX downloads the package from the distribution point and runs the program on the local computer.  
 
--   The client for Linux and UNIX cannot download packages from shared folders. It downloads packages from IIS-enabled distribution points that support HTTP or HTTPS.  
+- The client for Linux and UNIX cannot download packages from shared folders. It downloads packages from IIS-enabled distribution points that support HTTP or HTTPS.  
 
- The following table lists properties for deployments that are not supported:  
+  The following table lists properties for deployments that are not supported:  
 
 |Deployment property|Behavior|More information|  
 |-------------------------|--------------|----------------------|  
@@ -122,23 +122,23 @@ The following table lists the properties for packages and programs that are not 
 
  To configure a client to use network bandwidth controls, you configure client settings for **Background Intelligent Transfer** and then apply the settings to the client computer. To use bandwidth controls, the client must receive client settings for **Background Intelligent Transfer** with the following settings configured as **Yes**:  
 
--   **Limit the maximum network bandwidth for BITS background transfers**  
+- **Limit the maximum network bandwidth for BITS background transfers**  
 
- The client supports the following configurations for Background Intelligent Transfer:  
+  The client supports the following configurations for Background Intelligent Transfer:  
 
-    -   **Throttling window start time**  
+  -   **Throttling window start time**  
 
-    -   **Throttling window end time**  
+  -   **Throttling window end time**  
 
-    -   **Maximum transfer rate during throttling window (Kbps)**  
+  -   **Maximum transfer rate during throttling window (Kbps)**  
 
-    -   **Maximum transfer rate outside the throttling window (Kbps)**  
+  -   **Maximum transfer rate outside the throttling window (Kbps)**  
 
 The following configuration for Background Intelligent Transfer is not supported, and is ignored by the client for Linux and UNIX:  
 
--   **Allow BITS downloads outside the throttling window**  
+- **Allow BITS downloads outside the throttling window**  
 
- If the download of software to the client from a distribution point is interrupted, the client for Linux and UNIX does not resume the download. Instead, it restarts the download of the entire software package.  
+  If the download of software to the client from a distribution point is interrupted, the client for Linux and UNIX does not resume the download. Instead, it restarts the download of the entire software package.  
 
 ##  Configure operations for software deployments  
  Similarly to the Windows client, the Configuration Manager client for Linux and UNIX discovers new software deployments when it polls and checks for new policy. The frequency at which the client checks for new policy depends on client settings. You can configure maintenance windows to control when software deployments occur.  

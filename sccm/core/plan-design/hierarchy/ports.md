@@ -174,7 +174,7 @@ For more information, see [CMG Ports and data flow](/sccm/core/clients/manage/cm
 
 > [!Important]  
 > If you enable a host-based firewall, make sure that the rules allow the server to send and receive on these ports. When you enable a distribution point for PXE, Configuration Manager can enable the inbound (receive) rules on the Windows Firewall. It doesn't configure the outbound (send) rules.<!--SCCMDocs issue #744-->  
-  
+
 
 ###  <a name="BKMK_PortsClient-FSP"></a> Client -- > Fallback status point  
 
@@ -232,12 +232,14 @@ Configuration Manager uses these connections to build the CMG channel. For more 
 
 #### Version 1706 or 1710
 The specific port depends upon the management point configuration. 
+
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
 |HTTPS|--|443|
 |HTTP|--|80|  
 
 #### Version 1802
+
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
 |HTTPS|--|443|
@@ -248,6 +250,7 @@ For more information, see [CMG Ports and data flow](/sccm/core/clients/manage/cm
 ###  <a name="bkmk_cmgcp-sup"></a> CMG connection point -- > Software update point  
 
 The specific port depends upon the software update point configuration. 
+
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
 |HTTPS|--|443|

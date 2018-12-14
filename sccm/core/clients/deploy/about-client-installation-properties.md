@@ -153,17 +153,17 @@ Example: `ccmsetup.exe /logon`
 
  Specifies the download priority when client installation files are downloaded over an HTTP connection. Possible values are as follows:  
 
--   FOREGROUND  
+- FOREGROUND  
 
--   HIGH  
+- HIGH  
 
--   NORMAL  
+- NORMAL  
 
--   LOW  
+- LOW  
 
- The default value is NORMAL.  
+  The default value is NORMAL.  
 
- Example: `ccmsetup.exe /BITSPriority:HIGH`  
+  Example: `ccmsetup.exe /BITSPriority:HIGH`  
 
 ### /downloadtimeout:&lt;Minutes\>
 
@@ -280,8 +280,8 @@ Specifies the Azure AD tenant identifier. This tenant is linked to Configuration
 - Run the following command: `dsregcmd.exe /status`
 - In the Device State section, find the **TenantId** value. For example, `TenantId : 607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
- > [!Note]
- > An Azure administrator can also obtain this value in the Azure portal. For more information, see [get tenant ID](/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-tenant-id)
+  > [!Note]
+  > An Azure administrator can also obtain this value in the Azure portal. For more information, see [get tenant ID](/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-tenant-id)
 
 Example: `ccmsetup.exe AADTENANTID=607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
@@ -350,10 +350,10 @@ Example: **CCMSetup.exe  CCMALLOWSILENTREBOOT**
 
  `CCMCERTSEL="SubjectAttr:OU = Computers"` searches for the organizational unit attribute expressed as a distinguished name, and named Computers.  
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  If you use the Subject Name box, the **Subject:** is case-sensitive, and the  **SubjectStr:** is case-insensitive.  
->   
->  If you use the Subject Alternative Name box, the **Subject:**and the **SubjectStr:** are case-insensitive.  
+> 
+>  If you use the Subject Alternative Name box, the <strong>Subject:</strong>and the **SubjectStr:** are case-insensitive.  
 
  The complete list of attributes that you can use for certificate selection is listed in [Supported attribute values for the PKI certificate selection criteria](#BKMK_attributevalues).  
 
@@ -570,19 +570,19 @@ Example: `CCMSetup.exe SMSCACHESIZE=100`
 
 Specifies the location and order that the Configuration Manager Installer checks for configuration settings. The property is a string of one or more characters, each defining a specific configuration source. Use the character values R, P, M, and U, alone or in combination:  
 
--   R: Check for configuration settings in the registry.  
+- R: Check for configuration settings in the registry.  
 
-   For more information, see [information about storing client installation properties in the registry](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision).  
+  For more information, see [information about storing client installation properties in the registry](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision).  
 
--   P: Check for configuration settings in the installation properties provided at the command prompt.  
+- P: Check for configuration settings in the installation properties provided at the command prompt.  
 
--   M: Check for existing settings when upgrading an older client with the Configuration Manager client software.  
+- M: Check for existing settings when upgrading an older client with the Configuration Manager client software.  
 
--   U: Upgrade the installed client to a newer version (and use  the assigned site code).  
+- U: Upgrade the installed client to a newer version (and use  the assigned site code).  
 
- By default, the client installation uses `PU` to check first the installation properties and then the existing settings.  
+  By default, the client installation uses `PU` to check first the installation properties and then the existing settings.  
 
- Example: `CCMSetup.exe SMSCONFIGSOURCE=RP`  
+  Example: `CCMSetup.exe SMSCONFIGSOURCE=RP`  
 
 ### SMSDIRECTORYLOOKUP
 

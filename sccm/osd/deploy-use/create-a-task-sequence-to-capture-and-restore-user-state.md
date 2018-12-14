@@ -64,20 +64,20 @@ manager: dougeby
 
  To add task sequence steps to restore the user state, use the following steps:
 
- 1.  In the **Task Sequence** list, select a task sequence, and then click **Edit**.  
+1. In the **Task Sequence** list, select a task sequence, and then click **Edit**.  
 
- 2.  Add the **Restore User State** step to the task sequence. In the **Task Sequence Editor**, click **Add**. Point to **User State**, and then click **Restore User State**. This step establishes a connection to the state migration point if necessary. Configure the properties and options for this step, and then click **Apply**. For more information about the available settings, see [Restore User State](/sccm/osd/understand/task-sequence-steps#BKMK_RestoreUserState).  
+2. Add the **Restore User State** step to the task sequence. In the **Task Sequence Editor**, click **Add**. Point to **User State**, and then click **Restore User State**. This step establishes a connection to the state migration point if necessary. Configure the properties and options for this step, and then click **Apply**. For more information about the available settings, see [Restore User State](/sccm/osd/understand/task-sequence-steps#BKMK_RestoreUserState).  
 
-    > [!Important]  
-    >  When you use the [Capture User State](/sccm/osd/understand/task-sequence-steps#BKMK_CaptureUserState) step with the option to **Capture all user profiles with standard options**, you must select the **Restore local computer user profiles** setting in the **Restore User State** step. Otherwise the task sequence will fail.  
+   > [!Important]  
+   >  When you use the [Capture User State](/sccm/osd/understand/task-sequence-steps#BKMK_CaptureUserState) step with the option to **Capture all user profiles with standard options**, you must select the **Restore local computer user profiles** setting in the **Restore User State** step. Otherwise the task sequence will fail.  
 
-    > [!Note]  
-    > If you store the user state by using local hardlinks and the restore isn't successful, you can manually delete the hardlinks that were created to store the data. The task sequence can run the USMTUtils tool to automate this action with a [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step. If you use USMTUtils to delete the hardlink, add a [Restart Computer](/sccm/osd/understand/task-sequence-steps#BKMK_RestartComputer) step after you run USMTUtils.  
+   > [!Note]  
+   > If you store the user state by using local hardlinks and the restore isn't successful, you can manually delete the hardlinks that were created to store the data. The task sequence can run the USMTUtils tool to automate this action with a [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step. If you use USMTUtils to delete the hardlink, add a [Restart Computer](/sccm/osd/understand/task-sequence-steps#BKMK_RestartComputer) step after you run USMTUtils.  
 
- 3.  If you're using a state migration point to store the user state, add the **Release State Store** step to the task sequence. In the **Task Sequence Editor**, click **Add**. Point to **User State**, and then click **Release State Store**. Configure the properties and options for this step, and then click **Apply**. For more information about the available settings, see [Release State Store](/sccm/osd/understand/task-sequence-steps#BKMK_ReleaseStateStore).  
+3. If you're using a state migration point to store the user state, add the **Release State Store** step to the task sequence. In the **Task Sequence Editor**, click **Add**. Point to **User State**, and then click **Release State Store**. Configure the properties and options for this step, and then click **Apply**. For more information about the available settings, see [Release State Store](/sccm/osd/understand/task-sequence-steps#BKMK_ReleaseStateStore).  
 
-    > [!IMPORTANT]  
-    >  The task sequence action that runs before the **Release State Store** step must be successful before the **Release State Store** step starts.  
+   > [!IMPORTANT]  
+   >  The task sequence action that runs before the **Release State Store** step must be successful before the **Release State Store** step starts.  
 
 
  Deploy this task sequence to restore the user state on a destination computer. For information about deploying task sequences, see [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS).  

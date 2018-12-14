@@ -36,34 +36,34 @@ Options are divided into the following:
 ## Update Server
 You must configure Updates Publisher to work with update server like Windows Server Update Services (WSUS) before you can [publish updates](/sccm/sum/tools/manage-updates-with-updates-publisher#publish-updates-and-bundles). This includes specifying the server, methods to connect to that server when it is remote from the console, and a certificate to use to digitally sign updates you publish.
 
--   **Configure an update server**. When you configure an update server, select the top-level WSUS server (update server) in your Configuration Manager hierarchy so that all child sites have access to the updates that you publish.
+- **Configure an update server**. When you configure an update server, select the top-level WSUS server (update server) in your Configuration Manager hierarchy so that all child sites have access to the updates that you publish.
 
   If your update server is remote from your Updates Publisher server, specify the fully qualified domain name (FQDN) of the server, and if you will connect by SSL. When you connect by SSL, the default port changes from 8530 to 8531. Ensure the port you set matches what is in use by your update server.
 
-    > [!TIP]  
-    > If you do not configure an update server, you can still use Updates Publisher to author software updates.
+  > [!TIP]  
+  > If you do not configure an update server, you can still use Updates Publisher to author software updates.
 
--   **Configure the signing certificate**. You must configure and successfully connect to an update server before you can configure the signing certificate.
+- **Configure the signing certificate**. You must configure and successfully connect to an update server before you can configure the signing certificate.
 
-    Updates Publisher uses the signing certificate to sign the software updates that are published to the update server. Publishing fails if the digital certificate is not available in the certificate store of the update server or the computer that runs Updates Publisher.
+  Updates Publisher uses the signing certificate to sign the software updates that are published to the update server. Publishing fails if the digital certificate is not available in the certificate store of the update server or the computer that runs Updates Publisher.
 
-    For more information about adding the certificate to the certificate store, see [Certificates and security for Updates Publisher](/sccm/sum/tools/updates-publisher-security).
+  For more information about adding the certificate to the certificate store, see [Certificates and security for Updates Publisher](/sccm/sum/tools/updates-publisher-security).
 
-    If a digital certificate is not automatically detected for the update server, choose one of the following:
+  If a digital certificate is not automatically detected for the update server, choose one of the following:
 
-    -   **Browse**: Browse is only available when the update server is installed on the server where you run the console. After you select a certificate you must choose **Create** to add that certificate to the WSUS certificate store on the update server. You must enter the **.pfx** file password for certificates that you select by this method.
+  -   **Browse**: Browse is only available when the update server is installed on the server where you run the console. After you select a certificate you must choose **Create** to add that certificate to the WSUS certificate store on the update server. You must enter the **.pfx** file password for certificates that you select by this method.
 
-    -   **Create:** Use this option to create a new certificate. This also adds the certificate to the WSUS certificate store on the update server.
+  -   **Create:** Use this option to create a new certificate. This also adds the certificate to the WSUS certificate store on the update server.
 
-    **If you create your own signing certificate**, configure the following:
+  **If you create your own signing certificate**, configure the following:
 
-    -   Enable the **Allow private key to be exported** option.
+  -   Enable the **Allow private key to be exported** option.
 
-    -   Set **Key Usage** to digital signature.
+  -   Set **Key Usage** to digital signature.
 
-    -   Set **Minimum key size** to a value equal to or greater than 2048 bit.
+  -   Set **Minimum key size** to a value equal to or greater than 2048 bit.
 
-    Use the **Remove** option to remove a certificate from the WSUS certificate store. This option is available when the update server is local to the Updates Publisher console you use, or when you used **SSL** to connect to a remote update server.
+  Use the **Remove** option to remove a certificate from the WSUS certificate store. This option is available when the update server is local to the Updates Publisher console you use, or when you used **SSL** to connect to a remote update server.
 
 ## ConfigMgr Server
 Use these options when you use Configuration Manager with Updates Publisher.

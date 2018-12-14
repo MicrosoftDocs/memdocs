@@ -47,9 +47,9 @@ Use the following procedure to open software update properties.
 
 #### To open software update properties  
 
-1.  In the Configuration Manager console, click **Software Library**.  
-2.  In the Software Library workspace, expand **Software Updates**, and click **All Software Updates**.  
-3.  Select one or more software updates, and then, on the **Home** tab, click **Properties** in the **Properties** group.  
+1. In the Configuration Manager console, click **Software Library**.  
+2. In the Software Library workspace, expand **Software Updates**, and click **All Software Updates**.  
+3. Select one or more software updates, and then, on the **Home** tab, click **Properties** in the **Properties** group.  
 
    > [!NOTE]  
    >  On the **All Software Updates** node, Configuration Manager displays only the software updates that have a **Critical** and **Security** classification and that have been released in the last 30 days.  

@@ -20,7 +20,7 @@ The `CCM_Program` WMI class is a client class, in Configuration Manager, that re
 ```  
 class CCM_Program : CCM_SoftwareBase  
 {  
-     Datetime ActivationTime;  
+     Datetime ActivationTime;  
      Boolean AdvertisedDirectly;  
      String Categories[];  
      UInt32 CompletionAction;  
@@ -28,27 +28,27 @@ class CCM_Program : CCM_SoftwareBase
      String DependentPackageID;  
      String DependentProgramID;  
      String DiskSpaceRequired;  
-     UInt32 Duration;  
+     UInt32 Duration;  
      Datetime ExpirationTime;  
      Boolean ForceDependencyToRun;  
-     Boolean HighImpact;   
-     UInt32 LastExitCode;  
-     String LastRunStatus;  
-     Datetime LastRunTime;  
-     UInt32 Level;  
-     Boolean NotifyUser;  
-     String PackageID;  
-     String PackageLanguage;  
-     String PackageName;  
-     Boolean Published;  
+     Boolean HighImpact;   
+     UInt32 LastExitCode;  
+     String LastRunStatus;  
+     Datetime LastRunTime;  
+     UInt32 Level;  
+     Boolean NotifyUser;  
+     String PackageID;  
+     String PackageLanguage;  
+     String PackageName;  
+     Boolean Published;  
      String ProgramID;  
-     String RepeatRunBehavior;  
-     Boolean RequiresUserInput;  
-     Boolean RunAtLogoff;  
-     Boolean RunAtLogon;  
-     Boolean RunDependent;   
-     Boolean TaskSequence;  
-     String Version;  
+     String RepeatRunBehavior;  
+     Boolean RequiresUserInput;  
+     Boolean RunAtLogoff;  
+     Boolean RunAtLogon;  
+     Boolean RunDependent;   
+     Boolean TaskSequence;  
+     String Version;  
 };  
 ```  
 

@@ -17,8 +17,8 @@ manager: dougeby
 
 When you use the current branch of System Center Configuration Manager, you can install the in-console update for version 1702 to update your hierarchy from a previous version.
 
-> [!TIP]  
-Version 1702 is also available as [baseline media](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions) that you can use to install the first site of a new hierarchy.
+> [!TIP]
+> Version 1702 is also available as [baseline media](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions) that you can use to install the first site of a new hierarchy.
 
 To get the update for version 1702, you must use a service connection point site system role at the top-level site of your hierarchy. This can be in online or offline mode. After your hierarchy downloads the update package from Microsoft, you can find it in the console under **Administration &gt; Overview &gt; Cloud Services &gt; Updates and Servicing**.
 
@@ -183,10 +183,10 @@ For more information, see [Updates for System Center Configuration Manager](/sc
 
 ## Post update Checklist
 Review the following actions to take after the update installation is finished.
-1.	Make sure that site-to-site replication is active. In the console, view **Monitoring** > **Site Hierarchy**, and **Monitoring** > **Database Replication** for indications of problems or confirmation that replication links are active.
-2.	Make sure each site server and site system role has updated to version 1702. In the console, you can add the optional column **Version** to the display of some nodes including **Sites** and **Distribution Points**.
+1. Make sure that site-to-site replication is active. In the console, view **Monitoring** > **Site Hierarchy**, and **Monitoring** > **Database Replication** for indications of problems or confirmation that replication links are active.
+2. Make sure each site server and site system role has updated to version 1702. In the console, you can add the optional column **Version** to the display of some nodes including **Sites** and **Distribution Points**.
 
- When necessary, a site system role will reinstall automatically to update to the new version. Consider restarting remote site systems that do not update successfully.
-3.	Reconfigure database replicas for management points at primary sites that you disabled before starting the update.
-4.  Reconfigure database maintenance tasks that you disabled before starting the update.
-5.	If you configured client piloting before installing the update, upgrade clients per the plan you created.
+   When necessary, a site system role will reinstall automatically to update to the new version. Consider restarting remote site systems that do not update successfully.
+3. Reconfigure database replicas for management points at primary sites that you disabled before starting the update.
+4. Reconfigure database maintenance tasks that you disabled before starting the update.
+5. If you configured client piloting before installing the update, upgrade clients per the plan you created.

@@ -15,13 +15,13 @@ In System Center Configuration Manager, compliance settings (DCM) server Windows
 
  The main classes supporting the compliance settings feature are:  
 
--   [SMS_ConfigurationItem Server WMI Class](../../../develop/reference/compliance/sms_configurationitem-server-wmi-class.md), representing a generic configuration item.  
+- [SMS_ConfigurationItem Server WMI Class](../../../develop/reference/compliance/sms_configurationitem-server-wmi-class.md), representing a generic configuration item.  
 
--   [SMS_ConfigurationBaselineInfo Server WMI Class](../../../develop/reference/compliance/sms_configurationbaselineinfo-server-wmi-class.md), representing information for a baseline configuration item.  
+- [SMS_ConfigurationBaselineInfo Server WMI Class](../../../develop/reference/compliance/sms_configurationbaselineinfo-server-wmi-class.md), representing information for a baseline configuration item.  
 
--   [SMS_BaselineAssignment Server WMI Class](../../../develop/reference/compliance/sms_baselineassignment-server-wmi-class.md), representing an assignment of a baseline configuration item.  
+- [SMS_BaselineAssignment Server WMI Class](../../../develop/reference/compliance/sms_baselineassignment-server-wmi-class.md), representing an assignment of a baseline configuration item.  
 
- For more information, see Desired Configuration Management Configuration Baselines and Configuration Items.  
+  For more information, see Desired Configuration Management Configuration Baselines and Configuration Items.  
 
 > [!NOTE]
 >  Some of the classes that are defined for desired configuration management, for example, [SMS_ConfigurationBaselineInfo Server WMI Class](../../../develop/reference/compliance/sms_configurationbaselineinfo-server-wmi-class.md), are specific to baseline configuration items. Some of the classes can also be used to reference software update configuration items, although applications use the software updates feature to manipulate these items. For more information, see [Configuration Manager Software Updates](../../../develop/sum/software-updates.md).  

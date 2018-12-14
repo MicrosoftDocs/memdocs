@@ -19,28 +19,28 @@ manager: dougeby
 
 You can supplement the traditional wake-up packet method by using the wake-up proxy client settings. Wake-up proxy uses a peer-to-peer protocol and elected computers to check whether other computers on the subnet are awake, and to wake them if necessary. When the site is configured for Wake On LAN and clients are configured for wake-up proxy, the process works as follows:  
 
-1.  Computers with the Configuration Manager client installed and that are not asleep on the subnet check whether other computers on the subnet are awake. They do this check by sending each other a TCP/IP ping command every five seconds.  
+1. Computers with the Configuration Manager client installed and that are not asleep on the subnet check whether other computers on the subnet are awake. They do this check by sending each other a TCP/IP ping command every five seconds.  
 
-2.  If there is no response from other computers, they are assumed to be asleep. The computers that are awake become *manager computer* for the subnet.  
+2. If there is no response from other computers, they are assumed to be asleep. The computers that are awake become *manager computer* for the subnet.  
 
-     Because it is possible that a computer might not respond because of a reason other than it is asleep (for example, it is turned off, removed from the network, or the proxy wake-up client setting is no longer applied), the computers are sent a wake-up packet every day at 2 P.M. local time. Computers that do not respond will no longer be assumed to be asleep and will not be woken up by wake-up proxy.  
+    Because it is possible that a computer might not respond because of a reason other than it is asleep (for example, it is turned off, removed from the network, or the proxy wake-up client setting is no longer applied), the computers are sent a wake-up packet every day at 2 P.M. local time. Computers that do not respond will no longer be assumed to be asleep and will not be woken up by wake-up proxy.  
 
-     To support wake-up proxy, at least three computers must be awake for each subnet. To achieve this requirement, three computers are non-deterministically chosen to be *guardian computers* for the subnet. This state means that they stay awake, despite any configured power policy to sleep or hibernate after a period of inactivity. Guardian computers honor shutdown or restart commands, for example, as a result of maintenance tasks. If this action happens, the remaining guardian computers wake up another computer on the subnet so that the subnet continues to have three guardian computers.  
+    To support wake-up proxy, at least three computers must be awake for each subnet. To achieve this requirement, three computers are non-deterministically chosen to be *guardian computers* for the subnet. This state means that they stay awake, despite any configured power policy to sleep or hibernate after a period of inactivity. Guardian computers honor shutdown or restart commands, for example, as a result of maintenance tasks. If this action happens, the remaining guardian computers wake up another computer on the subnet so that the subnet continues to have three guardian computers.  
 
-3.  Manager computers ask the network switch to redirect network traffic for the sleeping computers to themselves.  
+3. Manager computers ask the network switch to redirect network traffic for the sleeping computers to themselves.  
 
-     The redirection is achieved by the manager computer broadcasting an Ethernet frame that uses the sleeping computer's MAC address as the source address. This behavior makes the network switch behave as if the sleeping computer has moved to the same port that the manager computer is on. The manager computer also sends ARP packets for the sleeping computers to keep the entry fresh in the ARP cache. The manager computer also responds to ARP requests on behalf of the sleeping computer and replys with the MAC address of the sleeping computer.  
+    The redirection is achieved by the manager computer broadcasting an Ethernet frame that uses the sleeping computer's MAC address as the source address. This behavior makes the network switch behave as if the sleeping computer has moved to the same port that the manager computer is on. The manager computer also sends ARP packets for the sleeping computers to keep the entry fresh in the ARP cache. The manager computer also responds to ARP requests on behalf of the sleeping computer and replys with the MAC address of the sleeping computer.  
 
-    > [!WARNING]  
-    >  During this process, the IP-to-MAC mapping for the sleeping computer remains the same. Wake-up proxy works by informing the network switch that a different network adapter is using the port that was registered by another network adapter. However, this behavior is known as a MAC flap and is unusual for standard network operation. Some network monitoring tools look for this behavior and can assume that something is wrong. Consequently, these monitoring tools can generate alerts or shut down ports when you use wake-up proxy.  
-    >   
-    >  Do not use wake-up proxy if your network monitoring tools and services do not allow MAC flaps.  
+   > [!WARNING]  
+   >  During this process, the IP-to-MAC mapping for the sleeping computer remains the same. Wake-up proxy works by informing the network switch that a different network adapter is using the port that was registered by another network adapter. However, this behavior is known as a MAC flap and is unusual for standard network operation. Some network monitoring tools look for this behavior and can assume that something is wrong. Consequently, these monitoring tools can generate alerts or shut down ports when you use wake-up proxy.  
+   >   
+   >  Do not use wake-up proxy if your network monitoring tools and services do not allow MAC flaps.  
 
-4.  When a manager computer sees a new TCP connection request for a sleeping computer and the request is to a port that the sleeping computer was listening on before it went to sleep, the manager computer sends a wake-up packet to the sleeping computer, and then stops redirecting traffic for this computer.  
+4. When a manager computer sees a new TCP connection request for a sleeping computer and the request is to a port that the sleeping computer was listening on before it went to sleep, the manager computer sends a wake-up packet to the sleeping computer, and then stops redirecting traffic for this computer.  
 
-5.  The sleeping computer receives the wake-up packet and wakes up. The sending computer automatically retries the connection and this time, the computer is awake and can respond.  
+5. The sleeping computer receives the wake-up packet and wakes up. The sending computer automatically retries the connection and this time, the computer is awake and can respond.  
 
- Wake-up proxy has the following prerequisites and limitations:  
+   Wake-up proxy has the following prerequisites and limitations:  
 
 > [!IMPORTANT]  
 >  If you have a separate team that is responsible for the network infrastructure and network services, notify and include this team during your evaluation and testing period. For example, on a network that uses 802.1X network access control, wake-up proxy will not work and can disrupt the network service. In addition, wake-up proxy could cause some network monitoring tools to generate alerts when the tools detect the traffic to wake-up other computers.  
