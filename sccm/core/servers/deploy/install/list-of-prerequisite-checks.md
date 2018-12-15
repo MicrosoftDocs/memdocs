@@ -2,7 +2,7 @@
 title: Prerequisite checks
 titleSuffix: Configuration Manager
 description: Reference of the specific prerequisite checks for Configuration Manager updates.
-ms.date: 11/27/2018
+ms.date: 12/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -546,13 +546,12 @@ This command starts a cleanup of syscommittab and all of the associated side tab
 SELECT * FROM vLogs WHERE ProcedureName = 'spDiagChangeTracking'
 ```
 
-<!-- #### SQL Native Client
-<!--SCCMDocs-pr issue 3094->
+#### SQL Native Client
+<!--SCCMDocs-pr issue 3094-->
 *Applies to: Central administration site, primary site, secondary site*
 
-A supported version of the SQL Native Client. Starting in version 1810, the minimum version is 11.4.7001.0. 
+When you install a new site, Configuration Manager automatically installs SQL Native Client as a redistributable component. Configuration Manager doesn't support upgrading SQL Native Client. This check makes sure the site has a supported version of the SQL Native Client. Starting in version 1810, the minimum version is SQL 2012 SP4 (`11.*.7001.0`). 
 
 This SQL Native Client version supports TLS 1.2. For more information, see the following articles:
 - [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)  
 - [How to enable TLS 1.2 for Configuration Manager](https://support.microsoft.com/help/4040243/how-to-enable-tls-1-2-for-configuration-manager)  
- -->

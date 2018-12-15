@@ -84,7 +84,7 @@ Articles with a recent and significant update.
 ## Troubleshooting articles
 Guided walkthroughs to assist with troubleshooting Configuration Manager components and features.
 
-- [Troubleshooting PXE boot issues](https://support.microsoft.com/help/10082)
+- [Troubleshooting PXE boot issues](https://support.microsoft.com/help/4468612)
 - [Troubleshooting software update synchronization issues](https://support.microsoft.com/help/10059)
 - [Understanding and troubleshooting content distribution](https://support.microsoft.com/help/4000401)
 - [Understanding and troubleshooting the Microsoft Store for Business integration](https://support.microsoft.com/help/4010214)
