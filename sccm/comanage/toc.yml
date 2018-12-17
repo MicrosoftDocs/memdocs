@@ -16,11 +16,9 @@
     - name: Client health
       href: quickstart-client-health.md
     - name: Windows Autopilot
-      href: quickstart-autopilot.md
   - name: Tutorials
     items:
     - name: Enable co-management for Configuration Manager clients
-      href: tutorial-path1.md
   - name: How-to guides
     items:
     - name: Prepare Windows 10 devices
@@ -29,9 +27,7 @@
       href: how-to-switch-workloads.md
     - name: Monitor co-management
       href: how-to-monitor.md
-    - name: Solve technical blockers
-      href: how-to-unblock.md
   - name: Resources
     items:
+    - name: Solve technical blockers
     - name: Get help from FastTrack
-      href: resource-fasttrack.md

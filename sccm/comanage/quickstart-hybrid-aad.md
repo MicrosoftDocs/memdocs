@@ -16,6 +16,8 @@ manager: dougeby
 
 In the cloud, identity is the new control plane. Azure Active Directory (Azure AD) allows you to link your users, devices, and applications across both cloud and on-premises environments. Registering your devices to Azure AD enables you to improve productivity for your users and security for your resources. Having devices in Azure AD is the foundation for both co-management and device-based conditional access. 
 
+> [!VIDEO https://www.youtube.com/embed/gA5q0_3bxPs]
+
 Azure AD provides two options for company-owned devices to suit your organization's needs:  
 
 - **Azure AD-joined device**: Join your Windows 10 devices to Azure AD without needing to join them to your on-premises Active Directory  

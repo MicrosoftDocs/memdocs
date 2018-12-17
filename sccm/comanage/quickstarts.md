@@ -29,12 +29,12 @@ Co-management can help you right now with the following scenarios:
 
 ## Immediate value
 
-| Scenario | Description | Video |
-|----------|-------------|-------|
-| **Hybrid Azure AD** | Azure Active Directory allows you to link your users, devices, and applications between cloud and on-premises environments | {video thumbnail} |
-| **Conditional access** | Control user access to corporate resources based on compliance rules from Intune. | {video thumbnail} |
-| **Real-time actions from Intune** | Make sure that every device is manageable no matter where or when it connects.| {video thumbnail} |
-| **Client health** | Use Intune to increase visibility of devices that connect to your environment. | {video thumbnail} |
+| | | |
+|-|-|-|
+| **Hybrid Azure AD** | Azure Active Directory allows you to link your users, devices, and applications between cloud and on-premises environments | [![Thumbnail of hybrid Azure AD video](media/thumbnail-hybrid-aad.jpg)](/sccm/comanage/quickstart-hybrid-aad) |
+| **Conditional access** | Control user access to corporate resources based on compliance rules from Intune. | [![Thumbnail of conditional access video](media/thumbnail-hybrid-aad.jpg)](/sccm/comanage/quickstart-conditional-access) |
+| **Real-time actions from Intune** | Make sure that every device is manageable no matter where or when it connects.| [![Thumbnail of real-time actions video](media/thumbnail-hybrid-aad.jpg)](/sccm/comanage/quickstart-real-time-actions) |
+| **Client health** | Use Intune to increase visibility of devices that connect to your environment. | [![Thumbnail of client health video](media/thumbnail-hybrid-aad.jpg)](/sccm/comanage/quickstart-client-health) |
 
 
 
