@@ -185,4 +185,4 @@ For Windows 10 devices that are already enrolled in Intune, create an app in Int
 
 ## Next steps
 
-[Switch Configuration Manager workloads to Intune](co-management-switch-workloads.md)
+[Switch Configuration Manager workloads to Intune](/sccm/comanage/co-management-switch-workloads)

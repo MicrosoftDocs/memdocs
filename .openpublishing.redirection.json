@@ -279,6 +279,26 @@
             "source_path": "sccm/core/plan-design/hierarchy/manage-accounts-to-access-content.md",
             "redirect_url": "/sccm/core/plan-design/hierarchy/accounts",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/clients/manage/co-management-overview.md",
+            "redirect_url": "/sccm/comanage/overview",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/clients/manage/co-management-prepare.md",
+            "redirect_url": "/sccm/comanage/how-to-prepare-Win10",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/clients/manage/co-management-switch-workloads.md",
+            "redirect_url": "/sccm/comanage/how-to-switch-workloads",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/clients/manage/co-management-dashboard.md",
+            "redirect_url": "/sccm/comanage/how-to-monitor",
+            "redirect_document_id": false
         }
     ]
 }
