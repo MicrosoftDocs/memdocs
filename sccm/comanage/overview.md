@@ -154,4 +154,4 @@ When you use Intune to install the Configuration Manager client, enable a [cloud
 
 ## Next steps
 
-[Prepare Windows 10 devices for co-management](co-management-prepare.md)
+[Prepare Windows 10 devices for co-management](/sccm/comanage/co-management-prepare)
