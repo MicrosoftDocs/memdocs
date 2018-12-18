@@ -115,7 +115,10 @@ One of the following approval settings appears, depending upon your version of C
 
 - **Require administrator approval if users request this application**: For versions 1710 and prior, the administrator approves any user requests for the application before the user can install it. This option is grayed out when the deployment purpose is **Required**, or when you deploy the application to a device collection.  
 
-- **An administrator must approve a request for this application on the device**: Starting in version 1802, the administrator approves any user requests for the application before the user can install it on the requested device. If the administrator approves the request, the user is only able to install the application on that device. The user must submit another request to install the application on another device. This option is grayed out when the deployment purpose is **Required**, or when you deploy the application to a device collection. <!--1357015-->  
+- **An administrator must approve a request for this application on the device**: Starting in version 1802, the administrator approves any user requests for the application before the user can install it on the requested device. If the administrator approves the request, the user is only able to install the application on that device. The user must submit another request to install the application on another device. This option is grayed out when the deployment purpose is **Required**, or when you deploy the application to a device collection.
+
+Starting in version 1810, you can also define a list of email addresses of users, who will be notificed about the approval requests. 
+<!--1357015-->  
 
 For more information, see [Approve applications](/sccm/apps/deploy-use/app-approval).
 
