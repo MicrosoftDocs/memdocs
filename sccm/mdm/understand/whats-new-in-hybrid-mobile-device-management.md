@@ -46,7 +46,7 @@ Each section of this article lists hybrid features under three different categor
 
 ### New in Microsoft Intune
 
-#### Microsoft Auto Update version 4.50 required for macOS devices
+#### Microsoft Auto Update version 4.5.0 required for macOS devices
 <!--3503442-->
 To continue receiving updates for the Company Portal and other Office applications, macOS devices managed by Intune must upgrade to Microsoft Auto Update 4.5.0. Users might already have this version for their Office apps.
 
