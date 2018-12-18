@@ -18,58 +18,106 @@ robots: noindex,nofollow
 > [!Note]  
 > This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
 
-"Upgrade Assessment" from Windows Analytic were generic (Attention Needed or Fix available) in nature and doesn't provide an IT admin a visual indicator on how to prioritize apps with issues or upgrade insights. In the new desktop analytics experience "Upgrade Assessment" is replaced with "Compatibility Risk". The app risk assessment will be shown for apps only in deployment view for a pre-upgrade scenario. Apps will be categorized into High/Medium/Low/Unknown based on insights we get from the machines included in a current deployment plan.
+Upgrade assessments in Windows Analytics were generic, for example: Attention Needed or Fix available. It doesn't provide any visual indicator on how to prioritize apps with issues or upgrade insights. Desktop Analytics replaces this feature with **Compatibility Risk**. Desktop Analytics shows the app risk assessment for apps only in the deployment view for a pre-upgrade scenario. It categorizes the apps based on insights Microsoft gets from the machines included in a current deployment plan.
 
-#### LOW
-Analytics indicates no signals were found to put this app at an upgrade risk. It is likely to work on the target OS as-is.
+Desktop Analytics uses the following compatibility risk categories:
 
-#### MEDIUM
-Analytics indicates that the application may have impaired functionality, although remediation is likely possible.
+- **Low**: The service found no signals to put this app at risk for a Windows upgrade. It's likely to work on the target OS as-is.  
 
-#### HIGH
-Analytics indicates that the application is almost certain to fail during or after upgrade and the application may need a remediation.
+- **Medium**: Analytics indicates that the application may have impaired functionality, although remediation is likely possible.  
 
-#### Unknown
-App(s) which was not assessed by App Health Analyzer and had no other insights from analytics such as "MS Known Issues" and "Ready for Windows" 
+- **High**: The application is almost certain to fail during or after upgrade. It may need a remediation.  
+
+- **Unknown**: The app wasn't assessed by App Health Analyzer. There are no other insights such as *MS Known Issues* or *Ready for Windows*.  
 
 
 
-## Risk Assessment Engine
+## Risk assessment engine
 
-Current sources which are used for risk rating generation (H/M/L) are documented in this section
-{diagram}
+There are several sources that the App Health Analyzer uses to generate the risk rating.
 
-1. MS Known issues
-To determine any existing compatibility blocks applicable for 1st & 3rd party apps, we look at compatibility database for any known issues for the target OS the deployment plan is set for.  
-
-2. Ready for windows datastore
-For apps RFW datastore not only checks for compatibility blocks on a device but also correlates data from other commercial entities reporting similar apps. So, if an app foo seems to be blocked on a specific device, we have seen instances where in general population (similar OS build/version) the app reported no issues (blocks/crashes) from those devices. 
-
-3. App Health Analyzer signals for compatibility assessment
-App Health Analyzer toolkit for Desktop analytics is built on core solutions & methodology which Microsoft has built to evaluate desktop apps for compatibility issues. It uses innovative techniques to focus your validation efforts for desktop apps including LOB's by providing risk rating along with remediations you can take. It also has great integration story with desktop analytics to help customers mitigate upgrade issues through actionable insights. You can download the Toolkit from [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=57276). The most current version was released on Oct 31, 2018. We recommend that you always download and use the most current version.
-
-#### Learn more about the toolkit from this link.
-Here are the existing signals in the current version of the toolkit along with guidance's to help you with remediation/fixes for your compatibility issues.
-
-| Signal | Guidance | 
-|--------|----------|
-| Adopted version available | There is an alternate version of this app which is highly adopted or adopted on other commercial devices according to Ready for Windows. You can consider deploying this version if there are any upgrade blockers. |
-| 16 Bit | It is recommended to remove all 16-bit components from applications and replace with 32-bit or 64-bit equivalents, more Information. The other option is to enable NTVDM for support on Win 10. |
-| Requires admin privileges | App is recommended for pilot testing to discover any regressions as it should work fine. If found affected, IT admin must allow the user of the application to have admin access. More information on how to fix app manifest for these privileges that require Administrator permissions. |
-| Java Dependency | Many Java applications rely on a separately installed Java Runtime Environment (JRE). While older JRE versions may continue to work on Windows 10, Oracle only supports the latest JRE versions Oracle Support Statement. Although there is the option to continue running your application on older unsupported JREs, for security reasons it may be preferable to run on the latest supported JRE versions. Check that your application runs on the latest JRE versions. |
-| Not-dpi Aware | App is recommended for pilot testing to discover any regressions as it should work fine. If found affected, manifest the application to avoid any issues when your app runs on advanced screen resolutions on Windows 10. |
-| VB6 | App is recommended for pilot testing as VB6 applications are generally compatible. If the app regresses during pilot due to any additional dependencies or widgets, then used then they should be updated to VB .NET |
-| OS version dependency | App is recommended for pilot testing to discover any regressions as it should work fine. If found affected, consider redeveloping the application to use Version Helpers API or manifest the application by targeting Windows 10. |
-| Silverlight Framework | App is recommended for pilot testing to discover any regressions as it should work fine. However, it is recommended for out of browser apps not to use Silverlight technology. Microsoft has set the support end date of Silverlight 5 to be October 2021. Silverlight is no longer supported in Google Chrome as of September 2015, and in Firefox as of March 2017. There is no Silverlight plugin available for Microsoft Edge. |
-| 1.0/1.1 .NET framework | .NET 1.0 is not supported on Win10, .NET 1.1 is also not compatible on Win10. If it is a third-party application, contact the vendor to request a Windows 10-compliant version. Otherwise, redevelop the application so that it uses a supported version of .NET Framework. |
-| 2.0/3.0 .NET framework | .NET 2.0 and 3.5 frameworks are supported on 10 but are sometime needed to be enabled as Feature on Demand |
-| UI Access | Set this flag in manifest to false, if you are not intending to use accessibility features in your app. Applications with UI access can bypass user interface control levels to drive input to higher privilege windows on the desktop. This setting should only be used for user interface Assistive Technology applications. |
-| Driver Dependency | App is dependent on drivers, is recommended for pilot testing to discover any regressions as it should work fine. If found affected contact the vendor to request a Windows 10-compliant version. |
+![Diagram of App Health Analyzer risk assessment engine areas](media/aha-risk-assessment-engine.png)
 
 
+### MS known issues
 
-## App Confidence simulation for a sample population
-Here is a sample case study to showcase how adopting App Health Analyzer in your windows migration workflow with Desktop analytics can help with reducing time and efforts with data driven app validation approach. This is before/after app confidence metrics for a sample commercial device which ran App Health Analyzer toolkit. Self-hosted devices which ran AHA (60 machines) & desktop apps on these devices including LOB (899).
+The App Health Analyzer looks at the Microsoft app compatibility database for any known issues. It uses this database to determine any existing compatibility blocks for publicly available applications from Microsoft or other publishers. This check only applies to the target OS for the deployment plan you select.
 
-{screenshot/diagram}
 
+### Ready for Windows
+
+The Ready for Windows datastore checks for compatibility blocks on a device. It also correlates data from other customers reporting similar apps. Microsoft uses data from other similar devices where this app reported no issues. 
+
+
+### App Health Analyzer signals for compatibility assessment
+
+Use the App Health Analyzer toolkit to collect additional signals for app compatibility. For more information, see [App Health Analyzer](/sccm/desktop-analytics/app-health-analyzer). 
+
+The following signals are currently available:
+
+#### Adopted version available
+There's another version of this app that's highly adopted by other customers. This signal uses data from Ready for Windows. If there are any upgrade blockers with your current version, consider deploying the alternative version instead.
+
+#### 16-bit
+Remove all 16-bit components from applications, and replace with 32-bit or 64-bit equivalents. For more information, see [The Windows Vista and Windows Server 2008 Developer Story: Application Compatibility Cookbook](https://msdn.microsoft.com/library/aa480152.aspx). 
+
+The other option is to enable NT Virtual DOS Machine (NTVDM) for support on Windows 10.
+
+#### Requires admin privileges
+The app requires the user to have administrative access to the device. Use an app manifest for these apps that require administrator permissions. For more information, see [Create and embed an application manifest](https://msdn.microsoft.com/library/bb756929.aspx).
+<!--Is this a better, more current link? https://docs.microsoft.com/windows/desktop/sbscs/application-manifests-->
+
+Desktop Analytics recommends the app for pilot testing. It should work fine for pilot, but you'll find any regressions. 
+
+#### Java dependency
+Many Java applications rely on a separately installed Java Runtime Environment (JRE). While older JRE versions may continue to work on Windows 10, Oracle only supports the latest JRE versions. Using an older unsupported JRE may have security vulnerabilities. Check that your application runs on the latest JRE versions.
+
+#### Not-DPI aware
+The app may have display issues with advanced screen resolutions on Windows 10. Use an app manifest to avoid any issues with high DPI resolutions. For more information, see [Application manifests](https://docs.microsoft.com/windows/desktop/SbsCs/application-manifests).
+
+Desktop Analytics recommends the app for pilot testing. It should work fine for pilot, but you'll find any regressions. 
+
+#### Visual Basic version 6 (VB6)
+Desktop Analytics recommends the app for pilot testing. VB6 applications are often compatible. If the app regresses during pilot because of any additional dependencies or widgets, then you should update the app to Visual Basic .NET 
+
+#### OS version dependency
+Consider redeveloping the application to use Version Helpers API, or manifest the application to target Windows 10.
+
+Desktop Analytics recommends the app for pilot testing. It should work fine for pilot, but you'll find any regressions. 
+
+#### Silverlight framework
+Microsoft recommends that non-browser-based apps don't use Silverlight. The support end date for Silverlight 5 is October 2021. 
+
+Most current web browsers don't support Silverlight.
+
+| Browser | Support |
+|---------|---------|
+| Google Chrome | End of support: September 2015 |
+| Firefox | End of support: March 2017 |
+| Microsoft Edge | No plugin available |
+
+Desktop Analytics recommends the app for pilot testing. It should work fine for pilot, but you'll find any regressions. 
+
+#### .NET framework 1.0/1.1 
+The .NET framework version 1.0 isn't supported on Windows 10. Version 1.1 isn't compatible on Windows 10. If the app is from a third-party publisher, contact the vendor to request a version that's compliant with Windows 10. Otherwise, redevelop the application to use a supported version of .NET.
+
+#### .NET framework 2.0/3.0 
+.NET 2.0 and 3.5 frameworks are supported on Windows 10. You may need to enable the Windows feature. For more information, see [Install the .NET Framework 3.5 on Windows 10](https://docs.microsoft.com/dotnet/framework/install/dotnet-35-windows-10).
+
+#### UI access
+Applications with UI access can bypass user interface control levels to drive input to higher privilege windows on the desktop. Only use this setting for user interface assistive technology applications.
+
+If you're not using accessibility features in your app, set the UI access flag in the app manifest to false. For more information, see [Create and embed an application manifest](https://msdn.microsoft.com/library/bb756929.aspx).
+
+#### Driver dependency
+The app is dependent on a driver. Desktop Analytics recommends the app for pilot testing. It should work fine for pilot, but you'll find any regressions. If you have any problems, contact the publisher to request a version that's compliant with Windows 10.
+
+
+
+## App confidence simulation for a sample population
+
+The following charts are from a sample case study. This data highlights the use of the App Health Analyzer with Desktop Analytics to take a data-driven approach to app validation. This approach can help reduce the time and effort in testing your applications during your Windows 10 upgrade.
+
+This data shows the confidence metrics for 60 devices with 899 applications, including line-of-business apps.
+
+![Before and after charts showing app confidence](media/aha-app-confidence-simulation.png)
