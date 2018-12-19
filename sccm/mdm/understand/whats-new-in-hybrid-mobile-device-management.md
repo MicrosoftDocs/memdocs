@@ -591,6 +591,9 @@ For more information, see [Enroll your macOS device in Intune with the Company P
 
 ### Plan for Change: New Intune support experience for Premier customers 
 <!--2828727-->
+
+12/4/2018 update: We're trying to make this process better for you. Support request creation in MPO won't be disabled on December 3. We'll let you know through the Message Center and update this post soon to share timelines for this change.
+
 As a Microsoft Premier customer, you can currently use the [Microsoft Premier Online (MPO) portal](https://premier.microsoft.com) and [Intune on Azure](https://portal.azure.com) to create support requests for Intune. Starting on December 3, 2018, to continue enhancing the Premier support experience, you will be able to create support requests only in Intune on Azure.
 
 #### How does this affect me?
