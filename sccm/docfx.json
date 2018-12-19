@@ -40,7 +40,8 @@
       },
     "fileMetadata": {
       "feedback_system": {
-        "core/misc/**/*": "None"
+        "core/misc/**/*": "None",
+        "desktop-analytics/**/*": "None"
       }
     },
     "template": [],
