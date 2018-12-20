@@ -113,6 +113,9 @@ To enable operation, the computer that hosts the service connection point and an
 
 - `https://go.microsoft.com/fwlink/?LinkID=619849`  
 
+#### Azure Services
+
+- `management.azure.com`  
 
 ## Install the service connection point
 When you run **Setup** to install the top-tier site of a hierarchy, you have the option to install the service connection point.
