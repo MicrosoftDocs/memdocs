@@ -209,6 +209,12 @@ Select **Sign in** to authenticate to Azure as an administrative user. These cre
 
 Select **OK** to create the native app in Azure AD and close the Create Client Application dialog. This action returns to the [Client App dialog](#client-app-dialog).
 
+### Renew secret key Azure AD apps
+Prior to 1806 version, to renew secret key of an Azure App, you need to recreate the App.
+On 1806 and above:
+Created App --> renewal will be done by entering azure credentials, and adding the info on the renew secret key wizard
+Imported App --> Get new secret key and expiry date from Azure Portal
+
 
 ## Configuration or Discovery
 
