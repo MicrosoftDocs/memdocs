@@ -113,7 +113,7 @@ To enable operation, the computer that hosts the service connection point and an
 
 - `https://go.microsoft.com/fwlink/?LinkID=619849`  
 
-#### Azure Services
+#### Azure services
 
 - `management.azure.com`  
 
