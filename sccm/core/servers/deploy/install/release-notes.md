@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 11/27/2018
+ms.date: 12/21/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -83,6 +83,26 @@ Move the service connection point role to another server.
 
 
 ## Software updates
+
+### Security roles can't manage phased deployments
+<!--3479337, SCCMDocs-pr issue 3095-->
+*Applies to: Configuration Manager version 1810*
+
+The **OS Deployment Manager** built-in security role has permissions to [phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence). The following roles are missing these permissions:  
+
+- Application Administrator  
+- Application Deployment Manager  
+- Software Update Manager  
+
+#### Workaround
+Create a custom security role. Copy an existing security role, and add the following permissions on the **Phased Deployment** object class:
+- Create  
+- Delete  
+- Modify  
+- Read  
+
+For more information, see [Create custom security roles](/sccm/core/servers/deploy/configure/configure-role-based-administration#BKMK_CreateSecRole)
+
 
 ### Changing Office 365 client setting doesn’t apply 
 <!--511551-->
