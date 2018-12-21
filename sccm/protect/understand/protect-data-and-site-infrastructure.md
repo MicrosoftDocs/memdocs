@@ -28,5 +28,5 @@ You want your users to be able to securely access your organization's resources,
 
 - Use conditional access to help secure email and other services on devices that are enrolled with Microsoft Intune. For more information, see [Manage access to services](/sccm/protect/deploy-use/manage-access-to-services).  
 
-- Email profiles provide a set of tools and resources to help you create, deploy, and monitor email settings on devices. This feature enables users to access corporate email on their personal devices without any required setup on their part. For more information, see [Email profiles](sccm/protect/deploy-use/introduction-to-email-profiles).  
+- Email profiles provide a set of tools and resources to help you create, deploy, and monitor email settings on devices. This feature enables users to access corporate email on their personal devices without any required setup on their part. For more information, see [Email profiles](/sccm/protect/deploy-use/introduction-to-email-profiles).  
 
