@@ -104,7 +104,7 @@ When you use PKI certificates with Configuration Manager, plan for use of a cert
 
 IIS always checks the CRL for client certificates, and you can't change this configuration in Configuration Manager. By default, Configuration Manager clients always check the CRL for site systems. Disable this setting by specifying a site property and by specifying a CCMSetup property.  
 
-Computers that use certificate revocation checking but can't locate the CRL behave as if all certificates in the certification chain are revoked. This behavior is because they can't verify if the certificates are in the list. In this scenario, all connections fail that require certificates and use a CRL.  
+Computers that use certificate revocation checking but can't locate the CRL behave as if all certificates in the certification chain are revoked. This behavior is due to the fact that they can't verify if the certificates are in the certificate revocation list. In this scenario, all connections fail that require certificates and include CRL checking. When validating that your CRL is accessible by browsing to its http location, it is important to note that the Configuration Manager client runs as LOCAL SYSTEM. Therefore, testing CRL accessibility with a web browser running under user context may succeed, however the computer account may be blocked when attempting to make an http connection to the same CRL URL due to the internal web filtering solution. Whitelisting the CRL URL on any web filtering solutions may be necessary in this situation.
 
 Checking the CRL every time that a certificate is used offers more security against using a certificate that's revoked. Although it introduces a connection delay and additional processing on the client. Your organization may require this additional security check for clients on the internet or an untrusted network.  
 
@@ -183,7 +183,7 @@ In most cases, the Configuration Manager client correctly identifies a unique an
   > 
   >   Use a partial string match in the SAN only when you install clients manually and when they don't retrieve site information from Active Directory Domain Services. For example, these conditions apply to internet-only clients.  
 
-- A match on the client certificate subject name attribute values or the subject alternative name (SAN) attribute values. This method is a case-sensitive match. It's appropriate if you're using an X500 distinguished name or equivalent object ddentifiers (OIDs) in compliance with RFC 3280, and you want the certificate selection to be based on the attribute values. You can specify only the attributes and their values that you require to uniquely identify or validate the certificate and differentiate the certificate from others in the certificate store.  
+- A match on the client certificate subject name attribute values or the subject alternative name (SAN) attribute values. This method is a case-sensitive match. It's appropriate if you're using an X500 distinguished name or equivalent object identifiers (OIDs) in compliance with RFC 3280, and you want the certificate selection to be based on the attribute values. You can specify only the attributes and their values that you require to uniquely identify or validate the certificate and differentiate the certificate from others in the certificate store.  
 
 The following table shows the attribute values that Configuration Manager supports for the client certificate selection criteria.  
 
