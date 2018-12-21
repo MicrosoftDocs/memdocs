@@ -90,7 +90,7 @@ Each replica member must have the following configuration:
 
 - Use the *default instance* or a *named instance*  
 
-- The **Connections in Primary Role** setting is **Yes**  
+- The **Connections in Primary Role** setting is **Allow all connections**  
 
 - THe **Readable Secondary** setting is **Yes**  
 
@@ -140,7 +140,7 @@ For example, consider the following scenario:
 
 - You upgraded both of your secondary replica servers to SQL Server 2014 from previous versions. With the upgrade, these servers keep the original file path to store database files: `C:\Program Files\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA`.  
 
-- Before move the site database to this availability group, on each secondary replica server, create the following file path: `C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA`. This path is a duplicate of the path in use on the primary replica, even if the secondary replicas won't use this file location.  
+- Before moving the site database to this availability group, on each secondary replica server, create the following file path: `C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA`. This path is a duplicate of the path in use on the primary replica, even if the secondary replicas won't use this file location.  
 
 - You then grant the SQL Server service account on each secondary replica full control access to the newly created file location on that server.  
 
