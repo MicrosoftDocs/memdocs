@@ -57,7 +57,7 @@ If you're syncing express installation files in your environment, then ConfigMgr
 If you aren't syncing express installation files in your environment, then ConfigMgr 1810 UUP Hotfix on top of 1810 GA is required for production environments, or 1812 Technical Preview for Technical Preview environments.
 
 
-#### ConfigMgr 1810 UUP HOTFIX (KB4482615) from 1810 GA (Slow Ring)
+#### ConfigMgr 1810 UUP hotfix (KB4482615) from 1810 GA (Slow Ring)
 If you're currently on ConfigMgr 1810 GA (Slow Ring), then you'll need to upgrade ConfigMgr to the UUP rollup.
 
 1. Apply “Configuration Manager 1810 Hotfix (KB4482615)” package GUI 86450B7D-3574-4CF7-8B11-486A2C1F62A6) – this hotfix will enable UUP for non-express scenarios.  
@@ -66,11 +66,11 @@ If you're currently on ConfigMgr 1810 GA (Slow Ring), then you'll need to upgrad
 
     2. After you download this hotfix, see the following Microsoft Docs webpage for installation instructions: [Use the Update Registration Tool to import hotfixes](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
 
-    3. For information about how to download Microsoft support files, click the following article number to view the article in the Microsoft Knowledge Base: [119591 How to obtain Microsoft support files from online services](https://support.microsoft.com/help/119591/how-to-obtain-microsoft-support-files-from-online-services)  
+    3. For information about how to download Microsoft support files, click the following article number to view the article in the Microsoft Knowledge Base: [How to obtain Microsoft support files from online services](https://support.microsoft.com/help/119591/how-to-obtain-microsoft-support-files-from-online-services)  
 
 2. Once upgraded to the UUP hotfix, upgrade your ConfigMgr clients to match. All clients you target UUP updates to must be upgraded to prevent **unnecessarily downloading around 6 GB** of unused content to the client.
 
-#### ConfigMgr 1810 UUP HOTFIX (KB4482615) from 1810 Fast Ring
+#### ConfigMgr 1810 UUP hotfix (KB4482615) from 1810 Fast Ring
 If you're currently on a ConfigMgr 1810 fast ring, then you'll need to upgrade ConfigMgr with two servicing updates but hold off on deploying client upgrades until you've done both so that you only need to upgrade clients once.
 
 1. A hotfix to roll up to 1810 GA will be available to you soon (anticipate early January), hold off until you see the update appear in Updates and Servicing.  
@@ -83,7 +83,7 @@ If you're currently on a ConfigMgr 1810 fast ring, then you'll need to upgrade C
 
     2. After you download this hotfix, see the following Microsoft Docs webpage for installation instructions: [Use the Update Registration Tool to import hotfixes](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
 
-    3. For information about how to download Microsoft support files, click the following article number to view the article in the Microsoft Knowledge Base: [119591 How to obtain Microsoft support files from online services](https://support.microsoft.com/help/119591/how-to-obtain-microsoft-support-files-from-online-services)  
+    3. For information about how to download Microsoft support files, click the following article number to view the article in the Microsoft Knowledge Base: [How to obtain Microsoft support files from online services](https://support.microsoft.com/help/119591/how-to-obtain-microsoft-support-files-from-online-services)  
 
 4. Once upgraded to the UUP hotfix, upgrade your ConfigMgr clients to match. All clients you target UUP updates to must be upgraded to prevent **unnecessarily downloading around 6 GB** of unused content to the client.
 
