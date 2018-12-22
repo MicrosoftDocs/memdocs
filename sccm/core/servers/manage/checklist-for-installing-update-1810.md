@@ -85,6 +85,9 @@ The version of the Windows 10 Assessment and Deployment Kit (ADK) should be supp
 
 If you update the site before you update the Windows ADK, see [Update distribution points with the boot image](/sccm/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image).
 
+#### Review SQL Server Native Client version
+A SQL Server Native Client version which supports a minimum of TLS 1.2 needs to be installed prior to upgrading to 1810. SQL Server 2012 Native Client v11.0 is installed when installing SQL 2012 or higher and supports connectivity to SQL Server 2012 and higher. If a site server is installed with a SQL Server 2012 Native Client version which does not support TLS 1.2, a warning will be generated during the 1810 upgrade pre-requisite check. It is recommended to upgrade each site server's SQL Server 2012 Native client to a version which supports TLS 1.2 to avoid this warning. See https://www.microsoft.com/en-us/download/details.aspx?id=50402 to download the latest servicing update for the SQL Server 2012 Native Client which provides support for TLS 1.2. See https://support.microsoft.com/en-us/help/3135244/tls-1-2-support-for-microsoft-sql-server for more information.
+
 #### Review the site and hierarchy status for unresolved issues 
 A site update can fail due to existing operational problems. Before you update a site, resolve all operational issues for the following systems:  
 - The site server  
