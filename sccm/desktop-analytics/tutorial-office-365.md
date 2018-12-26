@@ -2,7 +2,7 @@
 title: Tutorial - Deploy Office 365
 titleSuffix: Configuration Manager
 description: A tutorial on using Desktop Analytics and Configuration Manager to deploy Office 365 to a pilot group.
-ms.date: 12/03/2018
+ms.date: 12/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: tutorial
@@ -28,45 +28,54 @@ In this tutorial, you learn how to:
 > * Connect Configuration Manager and configure device settings  
 > * Create a Desktop Analytics deployment plan for Office 365 ProPlus  
 > * Deploy Office 365 ProPlus in Configuration Manager to the pilot group  
-<!---Required:
-The outline of the tutorial should be included in the beginning and at
-the end of every tutorial. These will align to the **procedural** H2
-headings for the activity. You do not need to include all H2 headings.
-Leave out the prerequisites, clean-up resources and next steps--->
-
 
 If you don’t have an Azure subscription, create a [free account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) before you begin.
-<!--- Required, if a free trial account exists
-Because tutorials are intended to help new customers use the product or
-service to complete a top task, include a link to a free trial before the
-first H2, if one exists. 
---->
 
-Desktop Analytics uses a *Log Analytics workspace* in your Azure subscription. A workspace is essentially a container that includes account information and simple configuration information for the account. You can use more than one workspace to manage different sets of data collected from your environment. For more information, see [Manage workspaces](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor/toc.json).
+Desktop Analytics uses a *Log Analytics workspace* in your Azure subscription. A workspace is essentially a container that includes account information and simple configuration information for the account. For more information, see [Manage workspaces](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor/toc.json).
 
 
 
 ## Prerequisites
-<!---If you need them, make Prerequisites your first H2 in a tutorial. If
-there’s something a customer needs to take care of before they start (for
-example, creating a VM) it’s OK to link to that content before they
-begin.--->
 
-Before you start, make sure you have the following prerequisites:  
+Before you start this tutorial, make sure you have the following prerequisites:  
 
-### Technical
+<!-- ### Technical -->
 
 - An active Azure subscription, with **Company Admin** permissions  
 
 - Configuration Manager, version 1810 or later, with **Full administrator** role  
 
-- At least one Windows device with a Windows installer-based version of Office, such as Office 2013  
+- At least one Windows 10 device with the following configurations:  
 
-- Business approval to configure Windows diagnostics and usage data level to **Enhanced**  
+    - Windows 10, version 1709, or later
 
+    - The latest Windows 10 cumulative quality update  
 
-### Licensing
-<!--what's the minimum licensing that's needed for this tutorial?-->
+    - A Windows installer-based version of Office, such as Office 2013  
+
+- Business approval to configure Windows diagnostic data level to **Enhanced** on the pilot devices  
+
+    For more information, see [Desktop Analytics privacy]().
+
+- Network connectivity from the device to the following internet endpoints:
+
+    - `https://v10.events.data.microsoft.com`  
+    - `https://v10.vortex-win.data.microsoft.com`  
+    - `https://vortex-win.data.microsoft.com`  
+    - `https://settings-win.data.microsoft.com`  
+    - `http://adl.windows.com`  
+    - `https://watson.telemetry.microsoft.com`  
+    - `https://oca.telemetry.microsoft.com`  
+    - `https://login.live.com`  
+    - `https://nexusrules.officeapps.live.com`  
+    - `https://nexus.officeapps.live.com`  
+    - `https://mobile.pipe.aria.microsoft.com/Collector/3.0/`  
+    - `https://browser.pipe.aria.microsoft.com/Collector/3.0`  
+
+    For more information, see [How to enable data sharing for Desktop Analytics](/sccm/desktop-analytics/enable-data-sharing).  
+
+<!-- ### Licensing
+<!--what's the minimum licensing that's needed for this tutorial?
 These qualifying licenses only apply to the **Device Health** portion of Desktop Analytics:  
 
 - Windows 10 Enterprise or Windows 10 Education: per-device with active Software Assurance  
@@ -76,7 +85,10 @@ These qualifying licenses only apply to the **Device Health** portion of Desktop
 - Windows 10 Education A3 or A5 (included with Microsoft 365 Education A3 or A5)  
 
 - Windows Virtual Desktop Access E3 or E5: per-device of per-user subscription  
+ -->
 
+> [!Note]  
+> These prerequisites are for the purposes of this tutorial. For more information about the general prerequisites for Desktop Analytics with Configuration Manager, see [Prerequisites](/sccm/desktop-analytics/overview#prerequisites).  
 
 
 
@@ -88,7 +100,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
 2. On the **Accept service agreement** page, review the service agreement, and select **Accept**.  
 
-3. On the **Confirm your subscription** page, review the list of required qualifying licenses. Switch the setting to **Yes** next to **Do you have one of the supported or higher subscriptions**, and then select **Next**.  
+3. On the **Confirm your subscription** page, the list of required qualifying licenses are for Windows device health features of Desktop Analytics.<!--Switch the setting to **Yes** next to **Do you have one of the supported or higher subscriptions**--> Select **Next** to continue.  
 
 4. On the **Give users access** page, Desktop Analytics pre-configures two security groups in Azure Active Directory:  
 
@@ -100,7 +112,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
 5. On the page to **Set up your workspace**:  
 
-    - To use an existing workspace for Desktop Analytics, select it, and continue with the next step. If you're already using Windows Analytics, select that workspace. Desktop Analytics transfers your data and configurations.  
+    - To use an existing workspace for Desktop Analytics, select it, and continue with the next step. <!--If you're already using Windows Analytics, select that workspace. Desktop Analytics transfers your data and configurations.-->  
 
     - To create a workspace for Desktop Analytics, select **Add workspace**.  
 
@@ -118,6 +130,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
 9. On the **Last steps** page, select **Go to Desktop Analytics**. The Azure portal shows the Desktop Analytics **Home** page.  
 
+<!-- per Dhiren, this action happens automatically during onboarding
 10. Assign the MALogAnalyticsReader application the Log Analytics Reader role for the workspace.  
 
     1. Go to the [Azure portal](http://portal.azure.com), and select **All resources**. Select the workspace of type **Log Analytics**.  
@@ -133,6 +146,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
         - **Select**: **MALogAnalyticsReader**  
   
    Select **Save**. The portal shows a notification that it added the role assignment.  
+-->
 
 11. Create an app in Azure AD for Configuration Manager.  
 
@@ -364,19 +378,6 @@ Use this procedure to deploy Office 365 ProPlus in Configuration Manager to the 
 -->
 
 
-<!--
-## Clean up resources
-
-If you're not going to continue to use this service, delete
-<resources> with the following steps:
-
-1. From the left-hand menu...
-2. ...click Delete, type...and then click Delete
-
-<!---Required:
-To avoid any costs associated with following the tutorial procedure, a
-Clean up resources (H2) should come just before Next steps (H2)
---->
 
 
 ## Next steps
@@ -385,11 +386,3 @@ Advance to the next article to learn more about Desktop Analytics deployment pla
 > [!div class="nextstepaction"]  
 > [Deployment plans](/sccm/desktop-analytics/deployment-plans)  
 
-<!--- Required:
-Tutorials should always have a Next steps H2 that points to the next
-logical tutorial in a series, or, if there are no other tutorials, to
-some other cool thing the customer can do. A single link in the blue box
-format should direct the customer to the next article - and you can
-shorten the title in the boxes if the original one doesn’t fit.
-Do not use a "More info section" or a "Resources section" or a "See also
-section". --->
