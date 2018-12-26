@@ -117,8 +117,6 @@ You can use different methods to upgrade the System Center Configuration Manager
 
 - Can only be used to upgrade the client software and cannot be used to install a new client.  
 
-- Not suitable for upgrading many clients simultaneously.  
-
 - Applies to all clients in the hierarchy that are assigned to a site. Cannot be scoped by collection.  
 
 - Limited scheduling options.  
