@@ -37,7 +37,7 @@ Desktop Analytics uses a *Log Analytics workspace* in your Azure subscription. A
 
 ## Prerequisites
 
-Before you start, make sure you have the following prerequisites:  
+Before you start this tutorial, make sure you have the following prerequisites:  
 
 <!-- ### Technical -->
 
@@ -46,6 +46,8 @@ Before you start, make sure you have the following prerequisites:
 - Configuration Manager, version 1810 or later, with **Full administrator** role  
 
 - At least one Windows 10 device with the following configurations:  
+
+    - Windows 10, version 1709, or later
 
     - The latest Windows 10 cumulative quality update  
 
@@ -84,6 +86,9 @@ These qualifying licenses only apply to the **Device Health** portion of Desktop
 
 - Windows Virtual Desktop Access E3 or E5: per-device of per-user subscription  
  -->
+
+> [!Note]  
+> These prerequisites are for the purposes of this tutorial. For more information about the general prerequisites for Desktop Analytics with Configuration Manager, see [Prerequisites](/sccm/desktop-analytics/overview#prerequisites).  
 
 
 
