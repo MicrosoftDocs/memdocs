@@ -2,7 +2,7 @@
 title: Desktop Analytics
 titleSuffix: Configuration Manager
 description: An overview of the Desktop Analytics service integrated with Configuration Manager.
-ms.date: 12/03/2018
+ms.date: 12/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: overview
@@ -30,22 +30,12 @@ Desktop Analytics is a cloud-based service that integrates with Configuration Ma
 
 - Deploy Windows 10 and Office 365 ProPlus to pilot and production-managed devices  
 
+![Screenshot of the Desktop Analytics home page in the Azure portal](media/portal-home.png)
 
-<!--
-> **editorial notes during development; not for publishing**  
-> *From [Write an overview](https://review.docs.microsoft.com/en-us/help/contribute/contribute-how-to-write-overview?branch=master) in the contributor guide:*  
-> *The introductory paragraph helps customers quickly determine whether an article is relevant.*  
-> *Describe in customer-friendly terms what the service is and does, and why the customer should care. Keep it short for the intro.*  
-> *You can go into more detail later in the article. Many services add artwork or videos below the introduction.*
--->
 
 
 ## Benefits
-<!-- 
-> *After the intro, you can develop your overview by discussing the features that answer the "Why should I care" question with a bit more depth.*  
-> *Be sure to call out any basic requirements and dependencies, as well as limitations or overhead.*  
-> *Don't catalog every feature, and some may only need to be mentioned as available, without any discussion.*  
- -->
+
 Many customers have challenges with getting and staying current with Windows 10 and Office 365 ProPlus. The primary challenge is testing applications. This process is typically manual. It's time-consuming for IT administrators and application owners to continually analyze existing applications. Then remediate any issues that arise. 
 
 Desktop Analytics provides the following benefits:
@@ -59,7 +49,10 @@ Desktop Analytics provides the following benefits:
 - **Configuration Manager integration**: The service cloud-enables your existing on-premises infrastructure. Use this data and analysis to deploy and manage Windows and Office on your devices.  
 
 
+
 ## Prerequisites
+
+To use Desktop Analytics, make sure your environment meets the following prerequisites. 
 
 
 ### Technical
@@ -68,9 +61,13 @@ Desktop Analytics provides the following benefits:
 
 - Configuration Manager, version 1810 or later  
 
-- Devices running Windows 7, Windows 8.1, or Windows 10  
+- Devices running Windows 7, Windows 8.1, or Windows 10 with the latest updates. For more information, see [Compatibility updates](/sccm/desktop-analytics/set-up#compatibility-updates)  
 
-- Windows diagnostics and usage data level **Enhanced**  
+- Windows diagnostics data. For more information, see the following articles:  
+    - [Diagnostic data levels](/sccm/desktop-analytics/enable-data-sharing#diagnostic-data-levels)
+    - [Desktop Analytics privacy]()<!--need a link-->
+
+- Network connectivity from devices to the Microsoft cloud. For more information, see [How to enable data sharing](/sccm/desktop-analytics/enable-data-sharing)  
 
 
 ### Licensing
@@ -86,6 +83,7 @@ These qualifying licenses only apply to the **Device Health** portion of Desktop
 - Windows Virtual Desktop Access E3 or E5: per-device of per-user subscription  
 
 
+
 <!-- 
 ## Top task
 > *Optional*  
@@ -96,10 +94,6 @@ These qualifying licenses only apply to the **Device Health** portion of Desktop
 
 
 ## Next steps
-<!---
-Use regular links; do not use a blue box link. What you link to will depend on what is really a next step for the customer.
-Do not use a "More info section" or a "Resources section" or a "See also section".
---->
 
 The following tutorial provides a step-by-step guide to getting started with Desktop Analytics and Configuration Manager:  
 
