@@ -85,6 +85,9 @@ The version of the Windows 10 Assessment and Deployment Kit (ADK) should be supp
 
 If you update the site before you update the Windows ADK, see [Update distribution points with the boot image](/sccm/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image).
 
+#### Review SQL Server Native Client version
+A minimum version of SQL Server 2012 Native Client which includes support for TLS 1.2 must be installed. For more information, see the [List of prerequisite checks](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client).
+
 #### Review the site and hierarchy status for unresolved issues 
 A site update can fail due to existing operational problems. Before you update a site, resolve all operational issues for the following systems:  
 - The site server  
