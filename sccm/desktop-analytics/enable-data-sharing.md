@@ -73,9 +73,7 @@ The basic functionality of Desktop Analytics works at the **Basic** diagnostic d
 
 On devices running Windows 10, version 1709 (or later), the Enhanced diagnostic data setting includes the **Limited enhanced** data level. For more information, see [Windows 10 enhanced diagnostic data events and fields used by Windows Analytics](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)). 
 
-For more information, see [Windows Analytics and privacy](https://docs.microsoft.com/windows/deployment/update/windows-analytics-privacy).
-
-<!--{DO WE NEED TO ADDRESS PRIVACY ISSUES IN SOME WAY ANALOGOUS TO THE WA PRIVACY TOPIC?}-->
+For more information, see [Desktop Analytics privacy](/sccm/desktop-analytics/privacy).
 
 
 

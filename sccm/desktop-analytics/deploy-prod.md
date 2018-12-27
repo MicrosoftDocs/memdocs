@@ -20,6 +20,9 @@ robots: noindex,nofollow
 
 After you've [deployed to pilot](/sccm/desktop-analytics/deploy-pilot) and have reviewed the status of your assets, you're ready to update the rest of your production environment. 
 
+[!INCLUDE [Definition of pilot and production](includes/define-pilot-prod.md)]
+
+
 There are three main parts to accomplishing the deployment of updates to production devices:
 
 1. [Review assets that need an upgrade decision](#bkmk_review): To make devices ready for production deployment, their assets (apps, Office apps, Office add-ins, and Office macros) must have their upgrade decision set to **Ready** or **Ready, remediations required**.  
