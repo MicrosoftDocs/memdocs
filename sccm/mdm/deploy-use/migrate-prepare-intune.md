@@ -16,7 +16,7 @@ ms.assetid: db97ae9e-34f4-4e10-a282-cd211f612bb4
 
 *Applies to: System Center Configuration Manager (Current Branch)*    
 
-Before you migrate users from hybrid MDM (Intune integrated with Configuration Manager) to Intune standalone, you must take steps to prepare Intune. These steps help to ensure that your migrated users and their devices continue to be managed. When you complete these steps and start the migration to Intune, it should be transparent to your users.  
+Before you migrate users from hybrid MDM (Intune integrated with Configuration Manager) to Intune standalone, you must take steps to prepare Intune. These steps help to ensure that your migrated users and their devices continue to be managed. When you complete these steps and start the migration to Intune, there is no signifcant impact to your users.  
 
 ## Fix issues found during data collection and import
 If you went through the process to [import Configuration Manager data to Microsoft Intune](migrate-import-data.md), the Intune Data Importer tool provided you with a summary of all the objects that it was not able to import. Some of the typical issues that you likely ran across, as well as steps you can take to fix the issue in Intune, are listed in the following table: 
