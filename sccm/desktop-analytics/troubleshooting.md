@@ -45,18 +45,22 @@ Use the **Connection Health** dashboard in Configuration Manager to drill down i
 If you think some devices aren't showing in Desktop Analytics, first check the percentage of **Connected devices**. If it's less than 100%, make sure the missing devices are included in your targeted collection. For more information on configuring the target collection, see [Connect Configuration Manager](/sccm/desktop-analytics/connect-configmgr).
 
 Next review the **Connection health** chart. It displays the number of devices in the following health categories:  
-<!--need details of what these mean from Bryan-->
-- **Properly enrolled**: 
 
-- **Configuration issues**: 
+- **Properly enrolled**: The device has the following attributes:  
+    - A Configuration Manager client  
+    - There are no configuration errors  
+    - Desktop Analytics received diagnostic data from this device in the past 28 days  
+    - InventoryCompleteness is true<!--what's this?-->  
 
-- **Client not installed**: 
+- **Configuration issues**: Configuration Manager detects one or more issues with the configuration required for Desktop Analytics. For more information, see the list of [Desktop Analytics device properties in Configuration Manager](#bkmk_config-issues).  
 
-- **Waiting for enrollment**: 
+- **Client not installed**: The device is targeted for Desktop Analytics but isn't a Configuration Manager client. The Configuration Manager client is required to configure and manage the device for Desktop Analytics. For more information, see [Client installation methods](/sccm/core/clients/deploy/plan/client-installation-methods).  
 
-- **Missing prerequisites**: 
+- **Waiting for enrollment**: Desktop Analytics doesn't have diagnostic data for this device. This issue can be because the device was recently added to the target collection and has not yet sent data. It can also mean the device isn't properly communicating with the service, and the latest diagnostic data is more than 28 days old.  
 
-- **Missing data**: 
+- **Missing prerequisites**: One or more of the Desktop Analytics prerequisites are missing. For more information, see [Confirm prerequisites](#confirm-prerequisites).  
+
+- **Missing data**: Desktop Analytics doesn't include data for this device, or InventoryCompleteness is false<!--what's this?-->
 
 Select the category name to remove or add it from the chart. This action helps to zoom the chart so you can see the relative sizes of smaller segments. 
 
@@ -74,7 +78,7 @@ These columns correspond to the key [prerequisites](/sccm/desktop-analytics/over
 
 Select a device to see the full list of available properties in the detail pane. You can also add any of these properties as columns to the device list. 
 
-### Desktop Analytics device properties in Configuration Manager
+### <a name="bkmk_config-issues"></a> Desktop Analytics device properties in Configuration Manager
 <!--need more details from Bryan-->
 - Appraiser configuration
 - Minimum compatibility update

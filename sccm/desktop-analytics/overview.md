@@ -61,11 +61,17 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 - Configuration Manager, version 1810 or later  
 
-- Devices running Windows 7, Windows 8.1, or Windows 10 with the latest updates. For more information, see [Compatibility updates](/sccm/desktop-analytics/set-up#compatibility-updates)  
+- Devices running Windows 7, Windows 8.1, or Windows 10.  
+
+   - Install the latest updates. For more information, see [Compatibility updates](/sccm/desktop-analytics/set-up#compatibility-updates).  
+
+    - Devices also need to have the Configuration Manager client to configure and manage Desktop Analytics.  
 
 - Windows diagnostics data. For more information, see the following articles:  
-    - [Diagnostic data levels](/sccm/desktop-analytics/enable-data-sharing#diagnostic-data-levels)
-    - [Desktop Analytics privacy](/sccm/desktop-analytics/privacy)<!--need a link-->
+
+    - [Diagnostic data levels](/sccm/desktop-analytics/enable-data-sharing#diagnostic-data-levels)  
+
+    - [Desktop Analytics privacy](/sccm/desktop-analytics/privacy)  
 
 - Network connectivity from devices to the Microsoft cloud. For more information, see [How to enable data sharing](/sccm/desktop-analytics/enable-data-sharing)  
 
