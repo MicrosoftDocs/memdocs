@@ -12,6 +12,10 @@
       href: about-assets.md
     - name: Quality and feature updates
       href: about-updates.md
+    - name: Compatibility risk for Windows apps
+      href: compat-risk.md
+    - name: Health status monitoring
+      href: health-status-monitoring.md
   - name: How-to guides
     items:
     - name: Set up Desktop Analytics
@@ -28,8 +32,6 @@
       href: deploy-prod.md
     - name: Compatibility assessment with App Health Analyzer
       href: app-health-analyzer.md
-    - name: Compatibility risk for Windows apps
-      href: compat-risk.md
   - name: Technical references
     items:
       - name: Troubleshooting
