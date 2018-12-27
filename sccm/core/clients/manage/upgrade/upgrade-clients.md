@@ -108,7 +108,10 @@ You can use different methods to upgrade the System Center Configuration Manager
  **Supported client platform:** Windows  
 
  **Advantages**  
+- Because of the randomization over the specified period, only auto-upgrade is suitable for large-scale client upgrades. Other methods are either too slow on large scale, or don’t have randomization. 
 
+    > [!Note]
+    > Client piloting isn’t good for large scale as it doesn’t randomize at all.  
 - Can be used to automatically keep clients in your site at the latest version.  
 
 - Requires minimal administration.  
