@@ -2,8 +2,10 @@
   items:
   - name: Overview
     href: overview.md
-  - name: Pilot Office 365
-    href: tutorial-office-365.md
+  - name: Tutorials
+    items:
+    - name: Pilot Office 365
+      href: tutorial-office-365.md
   - name: Concepts
     items:
     - name: Deployment plans
@@ -32,8 +34,12 @@
       href: deploy-prod.md
     - name: Compatibility assessment with App Health Analyzer
       href: app-health-analyzer.md
-  - name: Technical references
+  - name: Reference
     items:
       - name: Troubleshooting
+        href: troubleshooting.md
       - name: User flow diagram
       - name: System diagram
+  - name: Resources
+    items:
+      - name: Privacy
