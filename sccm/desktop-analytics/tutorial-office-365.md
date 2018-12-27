@@ -148,44 +148,45 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
    Select **Save**. The portal shows a notification that it added the role assignment.  
 -->
 
-11. Create an app in Azure AD for Configuration Manager.  
 
-    1. In the [Azure portal](http://portal.azure.com), go to **Azure Active Directory**, and select **App registrations**. Then select **New application registration**.  
+### Create an app in Azure AD for Configuration Manager  
 
-    2. In the **Create** panel, configure the following settings:  
+1. In the [Azure portal](http://portal.azure.com), go to **Azure Active Directory**, and select **App registrations**. Then select **New application registration**.  
 
-        - **Name**: a unique name that identifies the app, for example: `Desktop-Analytics-Connection`  
+2. In the **Create** panel, configure the following settings:  
 
-        - **Application type**: **Web app / API**  
+    - **Name**: a unique name that identifies the app, for example: `Desktop-Analytics-Connection`  
 
-        - **Sign-on URL**: this value isn't used by Configuration Manager, but required by Azure AD. Enter a unique and valid URL, for example: `https://configmgrapp`  
+    - **Application type**: **Web app / API**  
+
+    - **Sign-on URL**: this value isn't used by Configuration Manager, but required by Azure AD. Enter a unique and valid URL, for example: `https://configmgrapp`  
   
-       Select **Create**.  
+    Select **Create**.  
 
-    3. Select the app, and note the **Application ID**. This value is a GUID that's used to configure the Configuration Manager connection.  
+3. Select the app, and note the **Application ID**. This value is a GUID that's used to configure the Configuration Manager connection.  
 
-    4. Select **Settings** on the app, and then select **Keys**. In the **Passwords** section, enter a **Key description**, specify an expiration **Duration**, and then select **Save**. Copy the **Value** of the key, which is used to configure the Configuration Manager connection. 
+4. Select **Settings** on the app, and then select **Keys**. In the **Passwords** section, enter a **Key description**, specify an expiration **Duration**, and then select **Save**. Copy the **Value** of the key, which is used to configure the Configuration Manager connection. 
 
-        > [!Important]  
-        > This is the only opportunity to copy the key value. If you don't copy it now, you need to create another key.  
-        > 
-        > Save the key value in a secure location.  
+    > [!Important]  
+    > This is the only opportunity to copy the key value. If you don't copy it now, you need to create another key.  
+    > 
+    > Save the key value in a secure location.  
 
-    5. On the app **Settings** panel, select **Required permissions**.  
+5. On the app **Settings** panel, select **Required permissions**.  
 
-        1. On the **Required permissions** panel, select **Add**.  
+    1. On the **Required permissions** panel, select **Add**.  
 
-        2. In the **Add API access** panel, **Select an API**.  
+    2. In the **Add API access** panel, **Select an API**.  
 
-        3. Search for the **Configuration Manager Microservice** API. Select it, and then choose **Select**.  
+    3. Search for the **Configuration Manager Microservice** API. Select it, and then choose **Select**.  
 
-        4. On the **Enable Access** panel, select both of the application permissions: **Write CM Collection Data** and **Read CM Collection Data**. Then choose **Select**.  
+    4. On the **Enable Access** panel, select both of the application permissions: **Write CM Collection Data** and **Read CM Collection Data**. Then choose **Select**.  
 
-        5. On the **Add API access** panel, select **Done**.  
+    5. On the **Add API access** panel, select **Done**.  
 
-    6. On the **Required permissions** page, select **Grant permissions**. Select **Yes**.  
+6. On the **Required permissions** page, select **Grant permissions**. Select **Yes**.  
 
-    7. Copy the Azure AD tenant ID. This value is a GUID that's used to configure the Configuration Manager connection. Select **Azure Active Directory** in the main menu, and then select **Properties**. Copy the **Directory ID** value.  
+7. Copy the Azure AD tenant ID. This value is a GUID that's used to configure the Configuration Manager connection. Select **Azure Active Directory** in the main menu, and then select **Properties**. Copy the **Directory ID** value.  
 
 
 
