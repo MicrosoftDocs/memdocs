@@ -15,7 +15,6 @@ ms.assetid: db97ae9e-34f4-4e10-a282-cd211f612bb4
 # Prepare Intune for user migration 
 
 *Applies to: System Center Configuration Manager (Current Branch)*    
-
 Before you migrate users from hybrid MDM (Intune integrated with Configuration Manager) to Intune standalone, you must take steps to prepare Intune. These steps help to ensure that your migrated users and their devices continue to be managed. When you complete these steps and start the migration to Intune, it should be transparent to your users.  
 
 ## Fix issues found during data collection and import
@@ -26,7 +25,6 @@ If you went through the process to [import Configuration Manager data to Microso
 |Collections based on direct membership or on a complex are not be migrated automatically.|You must create Azure Active Directory (AAD) groups in Azure to replace the collection that was not imported. Then, you must assign the object to the group.|
 |Policies were not importable |You must recreate the policy in Intune.|
 |Deployment for an object not imported|You must assign the object to the group. The group should contain the same users from the collection for the deployment.|
-
 ## Create Intune objects 
 If you went through the process to [import Configuration Manager data to Microsoft Intune](migrate-import-data.md) and fixed issues during the import process, you should verify the imported objects are correctly configured. In addition, create any additional objects (policies, profiles, apps, etc.) in Intune that you need in your organization. 
 
@@ -41,9 +39,11 @@ As part of the migration, configure all the necessary RBAC roles in Intune and a
 [Role-based administration control (RBAC) with Intune](https://docs.microsoft.com/intune/role-based-access-control).
 
 ## Assign apps and policies to AAD groups
-If you went through the [Import Configuration Manager data to Microsoft Intune](migrate-import-data.md) phase of the migration process to migrate different Configuration Manager objects to Intune, many of your objects might already be assigned to AAD groups. However, you should verify that all objects (apps, policies, profiles, etc.) are assigned to the correct AAD groups. If you assign objects correctly, user’s devices are automatically configured after the user is migrated and the migration should be transparent to users. For details about assigning the objects to an AAD group, see the following: 
+If you went through the [Import Configuration Manager data to Microsoft Intune](migrate-import-data.md) phase of the migration process to migrate different Configuration Manager objects to Intune, many of your objects might already be assigned to AAD groups. However, you should verify that all objects (apps, policies, profiles, etc.) are assigned to the correct AAD groups. If you assign objects correctly, user’s devices are automatically configured after the user is migrated and the migration should not have any signifcant impact to users. For details about assigning the objects to an AAD group, see the following: 
 - [Assign policies](https://docs.microsoft.com/intune/get-started-policies) 
 - [Assign profiles](https://docs.microsoft.com/intune/device-profile-assign) 
+  > [!NOTE]
+  > Users will receive a ptompt to re-enter their password when the new email profile is deployed
 - [Assign apps](https://docs.microsoft.com/intune/get-started-apps) 
 
 ## Terms and conditions policy
