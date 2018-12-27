@@ -15,7 +15,6 @@ ms.assetid: db97ae9e-34f4-4e10-a282-cd211f612bb4
 # Prepare Intune for user migration 
 
 *Applies to: System Center Configuration Manager (Current Branch)*    
-
 Before you migrate users from hybrid MDM to Intune standalone, take steps to prepare Intune. These steps help to make sure that your migrated users and their devices continue to be managed. When you complete these steps and start the migration to Intune, there's no signifcant impact to your users.  
 
 ## Fix issues found during data collection and import
@@ -43,9 +42,11 @@ As part of the migration, configure all the necessary RBAC roles in Intune and a
 [Role-based administration control (RBAC) with Intune](https://docs.microsoft.com/intune/role-based-access-control).
 
 ## Assign apps and policies to AAD groups
-If you [imported Configuration Manager data to Microsoft Intune](migrate-import-data.md), many of your objects might already be assigned to Azure AD groups. Verify that all objects (apps, policies, and profiles) are assigned to the correct Azure AD groups. If you assign objects correctly, user’s devices are automatically configured after the user is migrated and the migration should be transparent to users. For more information about assigning the objects to an Azure AD group, see the following articles: 
-- [Assign policies](https://docs.microsoft.com/intune/get-started-policies) 
-- [Assign profiles](https://docs.microsoft.com/intune/device-profile-assign) 
+If you [imported Configuration Manager data to Microsoft Intune](migrate-import-data.md), many of your objects might already be assigned to Azure AD groups. Verify that all objects (apps, policies, and profiles) are assigned to the correct Azure AD groups. If you assign objects correctly, user’s devices are automatically configured after the user is migrated and the migration should not have any signifcant impact to users. For more information about assigning the objects to an Azure AD group, see the following articles: 
+- [Assign policies](https://docs.microsoft.com/intune/get-started-policies)  
+- [Assign profiles](https://docs.microsoft.com/intune/device-profile-assign)  
+    > [!NOTE]  
+    > When Intune deploys the new email profile, users receive a prompt to reenter their password.  
 - [Assign apps](https://docs.microsoft.com/intune/get-started-apps) 
 
 ## Terms and conditions policy
