@@ -20,6 +20,8 @@ robots: noindex,nofollow
 
 One of the benefits of Desktop Analytics is to help identify the smallest set of devices that provide the widest coverage of factors. It focuses on the factors that are most important to a pilot of Windows and Office upgrades and updates. Making sure the pilot is more successful allows you to move more quickly and confidently to broad deployments in production.  
 
+[!INCLUDE [Definition of pilot and production](includes/define-pilot-prod.md)]
+
 
 
 ## Address issues
