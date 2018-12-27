@@ -134,8 +134,10 @@ The following log files are on the Configuration Manager client in the following
 1. On the service connection point, go to the following registry key: `HKLM\Software\Microsoft\SMS\Tracing\SMS_SERVICE_CONNECTOR`  
 2. Set the **LogLevel** value to `0`  
 3. Run the following SQL command on the site database:  
+
     ```SQL
-    DELETE FROM M365AProperties WHERE Name = ‘M365ATenantUpdateInfo_LastUpdateTime’
+    DELETE FROM M365AProperties WHERE Name = 'M365ATenantUpdateInfo_LastUpdateTime'
     ```
+
 4. Restart the **SMS_EXECUTIVE** service on the site server
 
