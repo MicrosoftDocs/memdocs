@@ -102,8 +102,6 @@ System Center Configuration Manager uses signing and encryption to help protect 
 
 - When you use cloud-based distribution points.  
 
-- When you manage Intel AMT-based computers out of band.  
-
   For most other Configuration Manager communications that require certificates for authentication, signing, or encryption, Configuration Manager automatically uses PKI certificates if they are available. If they are not available, Configuration Manager generates self-signed certificates.  
 
   Configuration Manager does not use PKI certificates when it manages mobile devices by using the Exchange Server connector.  
@@ -156,7 +154,7 @@ System Center Configuration Manager uses signing and encryption to help protect 
 
  Certificate revocation list (CRL) checking is enabled by default in IIS, so if you are using a CRL with your PKI deployment, there is nothing additional to configure on most Configuration Manager site systems that run IIS. The exception is for software updates, which requires a manual step to enable CRL checking to verify the signatures on software update files.  
 
- CRL checking is enabled by default for client computers when they use HTTPS client connections. CRL checking is not enabled by default when you run the Out of Band Management console to connect to AMT-based computer, and you can enable this option. You cannot disable CRL checking for clients on Mac computers in Configuration Manager SP1 or later.  
+ CRL checking is enabled by default for client computers when they use HTTPS client connections. You cannot disable CRL checking for clients on Mac computers in Configuration Manager SP1 or later.  
 
  CRL checking is not supported for the following connections in Configuration Manager:  
 
