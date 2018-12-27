@@ -65,7 +65,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 - Windows diagnostics data. For more information, see the following articles:  
     - [Diagnostic data levels](/sccm/desktop-analytics/enable-data-sharing#diagnostic-data-levels)
-    - [Desktop Analytics privacy]()<!--need a link-->
+    - [Desktop Analytics privacy](/sccm/desktop-analytics/privacy)<!--need a link-->
 
 - Network connectivity from devices to the Microsoft cloud. For more information, see [How to enable data sharing](/sccm/desktop-analytics/enable-data-sharing)  
 

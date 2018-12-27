@@ -55,7 +55,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
 - Business approval to configure Windows diagnostic data level to **Enhanced** on the pilot devices  
 
-    For more information, see [Desktop Analytics privacy]().
+    For more information, see [Desktop Analytics privacy](/sccm/desktop-analytics/privacy).
 
 - Network connectivity from the device to the following internet endpoints:
 
