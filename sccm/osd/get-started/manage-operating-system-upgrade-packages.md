@@ -16,10 +16,10 @@ manager: dougeby
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-An OS upgrade package in Configuration Manager contains the Windows setup source files to upgrade an existing OS on a computer. OS upgrade packages can also be used for new installations of Windows, but is is highly recommeneded to instead use [OS images](sccm/osd/get-started/manage-operating-system-images) such as **install.wim** when deploying new installations of Windows.
+An OS upgrade package in Configuration Manager contains the Windows setup source files to upgrade an existing OS on a computer.
 
 >[!NOTE]
->Deploying new installations of Windows via OS upgrade packages is still supported, but it is dependant on drivers being compatible with this method. When performing new installations of Windows from an OS upgrade package, drivers are installed while still in Windows PE vs. simply being injected while in Windows PE. For this reason, drivers must supprt not only being injected while in Windows PE, but also to be installed while in Windows PE. Some drivers are not compatible with being installed while in Windows PE. If drivers are not compatible with being installed while in Windows PE, then use an [OS image](sccm/osd/get-started/manage-operating-system-images) instead.
+>OS upgrade packages can also be used for new installations of Windows. However it is dependant on drivers being compatible with this method. When performing new installations of Windows from an OS upgrade package, drivers are installed while still in Windows PE vs. simply being injected while in Windows PE. Some drivers are not compatible with being installed while in Windows PE. If drivers are not compatible with being installed while in Windows PE, then use an [OS image](sccm/osd/get-started/manage-operating-system-images), such as install.wim, instead.
 
 This article describes how to add, distribute, and service an OS upgrade package.
 
