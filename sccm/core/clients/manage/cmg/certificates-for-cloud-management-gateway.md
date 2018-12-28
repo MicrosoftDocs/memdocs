@@ -246,7 +246,7 @@ Configure an on-premises management point with the following client connection m
 - *Hybrid-joined*: You join the device to both an Active Directory domain and an Azure AD tenant  
 - *HTTP*: On the management point properties, you set the client connections to **HTTP**  
 - *HTTPS*: On the management point properties, you set the client connections to **HTTPS**  
-- *E-HTTP*: On the site properties, Client Computer Communication tab, you set the site system settings to **HTTPS or HTTP**, and you enable the option to **Use Configuration Manager-generated certificates for HTTP site systems**. You configure the management point for HTTP or HTTPS.  
+- *E-HTTP*: On the site properties, Client Computer Communication tab, you set the site system settings to **HTTPS or HTTP**, and you enable the option to **Use Configuration Manager-generated certificates for HTTP site systems**. You configure the management point for HTTP, the HTTP management point is ready for both HTTP and HTTPS communication (token auth scenarios).   
 
 
 
