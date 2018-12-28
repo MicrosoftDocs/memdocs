@@ -4037,7 +4037,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|  
 |`[Settings] Priority=Default  [Default] DisableTaskMgr=YES HideShell=YES`|  
 
-####  <a name="OSHome_Page"></a> OSHome_Page  
+####  <a name="Home_Page"></a> Home_Page  
  The URL to be used as the Windows Internet Explorer® home page after the target operating system is deployed.  
 
 |**Property configured by**|||**Property applies to**||  
