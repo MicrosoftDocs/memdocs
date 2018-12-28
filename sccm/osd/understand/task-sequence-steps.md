@@ -233,11 +233,11 @@ manager: dougeby
  Installs an OS using an OS upgrade package, which is also an original installation source. Click **Browse** to open the **Select an Operating System Upgrade Package** dialog box. Then select the existing OS upgrade package you want to use. You can view basic information about each existing image source by clicking on it. The results pane at the bottom of the dialog box displays the associated image source properties. If there are multiple editions associated with the specified package, use the drop-down list to select the **Edition** you want to use.  
 
 >[!NOTE]
->**Operating System Upgrade Packages** are primarily meant for use with in-place upgrades and not for new installations of Windows. When deploying new installations of Windows, use the **Apply operating System from a captured image** option and **install.wim** from the installation source files.
+>**Operating System Upgrade Packages** are primarily meant for use with in-place upgrades and not for new installations of Windows. When deploying new installations of Windows, use the **Apply operating system from a captured image** option and **install.wim** from the installation source files.
 >
 >Deploying new installations of Windows via **Operating System Upgrade Packages** is still supported, but it is dependant on drivers being compatible with this method. When installing Windows from an **Operating System Upgrade Packages**, drivers are installed while still in Windows PE versus simply being injected while in Windows PE. Some drivers are not compatible with being installed while in Windows PE.
 >
->If drivers are not compatible with being installed while in Windows PE, then package **install.wim** from the original installation source files as an **Operating System Image**. Then deploy via the **Apply operating System from a captured image** option instead.
+>If drivers are not compatible with being installed while in Windows PE, then package **install.wim** from the original installation source files as an **Operating System Image**. Then deploy via the **Apply operating system from a captured image** option instead.
 
 #### Use an unattended or sysprep answer file for a custom installation
  Use this option to provide a Windows setup answer file (**unattend.xml**, **unattend.txt**, or **sysprep.inf**) depending on the OS version and installation method. The file you specify can include any of the standard configuration options supported by Windows answer files. For example, you can use it to specify the default Internet Explorer home page. Specify the package that contains the answer file and the associated path to the file in the package.  
