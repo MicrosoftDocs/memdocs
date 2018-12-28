@@ -18,7 +18,29 @@ robots: noindex,nofollow
 > [!Note]  
 > This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
 
-To enroll devices to Desktop Analytics, they need to send diagnostic data to Microsoft. If your environment uses a proxy server, use the following information to help configure the proxy. 
+To enroll devices to Desktop Analytics, they need to send diagnostic data to Microsoft. If your environment uses a proxy server, use this information to help configure the proxy. 
+
+
+## Diagnostic data levels
+
+![Diagram of diagnostic data levels for Desktop Analytics](media/diagnostic-data-levels.png)
+
+When you integrate Configuration Manager with Desktop Analytics, you also use it to manage the diagnostic data level on devices. For the best experience, use Configuration Manager. 
+
+You can also set the diagnostic data level on devices with the Desktop Analytics deployment script, by group policy, or Microsoft Intune. For more information, see [Methods to enroll devices](/sccm/desktop-analytics/set-up#methods-to-enroll-devices). 
+
+The basic functionality of Desktop Analytics works at the **Basic** diagnostic data level. You won't get usage or health data for your updated devices without enabling the **Enhanced** level. Microsoft recommends that you enable the **Enhanced** diagnostic data level. 
+
+On devices running Windows 10, version 1709 (or later), the Enhanced diagnostic data setting includes the **Limited enhanced** data level. For more information, see [Windows 10 enhanced diagnostic data events and fields used by Windows Analytics](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)). 
+
+For more information, see [Desktop Analytics privacy](/sccm/desktop-analytics/privacy).
+
+The following articles are also good resources for better understanding Windows diagnostic data levels: 
+
+- [Windows 10 and the GDPR for IT Decision Makers](https://docs.microsoft.com/windows/privacy/gdpr-it-guidance)  
+
+- [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
+
 
 
 ## Endpoints
@@ -41,8 +63,7 @@ To enable data sharing, configure your proxy server to whitelist the following e
 | `https://browser.pipe.aria.microsoft.com/Collector/3.0` | Used by Office web clients to send diagnostic data events. This endpoint is also used by Office add-ins and other extensions within Office clients. |
 
 
-
-## SSL inspection
+### SSL inspection
 
 To ensure privacy and data integrity, Windows checks for a Microsoft SSL certificate when communicating with the diagnostic data endpoints. SSL interception and inspection isn't possible. To use Desktop Analytics, exclude the above endpoints from SSL inspection.
 
@@ -60,20 +81,6 @@ Make sure that a proxy doesn't block the diagnostic data because of authenticati
     - Configure a system-level proxy server on the devices.  
     - Configure these devices to use device-based outbound proxy authentication.  
     - Configure proxy servers to allow the machine accounts to access the diagnostic data endpoints.  
-
-
-
-## Diagnostic data levels
-
-When you integrate Configuration Manager with Desktop Analytics, you also use it to manage the diagnostic data level on devices. For the best experience, use Configuration Manager. 
-
-You can also set the diagnostic data level on devices with the Desktop Analytics deployment script, by group policy, or Microsoft Intune. For more information, see [Methods to enroll devices](/sccm/desktop-analytics/set-up#methods-to-enroll-devices). 
-
-The basic functionality of Desktop Analytics works at the **Basic** diagnostic data level. You won't get usage or health data for your updated devices without enabling the **Enhanced** level. Microsoft recommends that you enable the **Enhanced** diagnostic data level. 
-
-On devices running Windows 10, version 1709 (or later), the Enhanced diagnostic data setting includes the **Limited enhanced** data level. For more information, see [Windows 10 enhanced diagnostic data events and fields used by Windows Analytics](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)). 
-
-For more information, see [Desktop Analytics privacy](/sccm/desktop-analytics/privacy).
 
 
 
