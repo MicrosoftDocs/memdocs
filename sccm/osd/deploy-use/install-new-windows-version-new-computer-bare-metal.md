@@ -46,6 +46,11 @@ Use the following sections to refresh an existing computer with a new version of
 
     -   Distribute the operating system image to distribution points. For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).
 
+>[!NOTE]
+>New installations of Windows can also be performed from installation source files via OS upgrade packages, but is is highly recommended to instead use OS images such as **install.wim**.
+>
+>Deploying new installations of Windows via OS upgrade packages is still supported, but it is dependant on drivers being compatible with this method. When installing Windows from an OS upgrade packages, drivers are installed while still in Windows PE vs. simply being injected while in Windows PE. For this reason, drivers must supprt not only being injected from Windows PE, but also to be installed while in Windows PE. Some drivers are not compatible with being installed while in Windows PE. If drivers are not compatible with being installed while in Windows PE, then use an OS image instead.
+
 3.  **Create a task sequence to deploy operating systems over the network**  
 
      Use a task sequence to automate the installation of the operating system over the network. Use the steps in [Create a task sequence to install an operating system](create-a-task-sequence-to-install-an-operating-system.md) to create the task sequence to deploy the operating system. Depending on the deployment method that you choose, there might be additional considerations for the task sequence.  
