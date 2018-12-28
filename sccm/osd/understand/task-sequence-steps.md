@@ -233,7 +233,7 @@ manager: dougeby
  Installs an OS using an OS upgrade package, which is also an original installation source. Click **Browse** to open the **Select an Operating System Upgrade Package** dialog box. Then select the existing OS upgrade package you want to use. You can view basic information about each existing image source by clicking on it. The results pane at the bottom of the dialog box displays the associated image source properties. If there are multiple editions associated with the specified package, use the drop-down list to select the **Edition** you want to use.  
 
 >[!NOTE]
->**Operating System Upgrade Packages** are primarily meant for use with In-Place Upgrades and not for new installations of Windows. It is highly recommended to use the **Apply operating System from a captured image** option and **install.wim** from the installation source files when deploying new installations of Windows.
+>**Operating System Upgrade Packages** are primarily meant for use with in-place upgrades and not for new installations of Windows. When deploying new installations of Windows, use the **Apply operating System from a captured image** option and **install.wim** from the installation source files.
 >
 >Deploying new installations of Windows via **Operating System Upgrade Packages** is still supported, but it is dependant on drivers being compatible with this method. When installing Windows from an **Operating System Upgrade Packages**, drivers are installed while still in Windows PE versus simply being injected while in Windows PE. Some drivers are not compatible with being installed while in Windows PE.
 >
