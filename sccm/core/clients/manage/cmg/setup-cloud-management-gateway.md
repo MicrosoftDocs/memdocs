@@ -37,7 +37,7 @@ Use the following checklist to make sure you have the necessary information and 
 
     - Integration with [Azure AD](/sccm/core/servers/deploy/configure/azure-services-wizard) for **Cloud Management**. Azure AD user discovery isn't required.  
     
-    - The **Microsoft.ClassicCompute** resource provider must be registered within the Azure subscription. If you are also enabling CMG for use as a Cloud Distribution Point, the **Microsoft.ClassicStorage** resource provider must also be registered. For more information, see [Azure Resource Manager](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-supported-services).
+    - The **Microsoft.ClassicCompute** resource provider must be registered within the Azure subscription. For more information, see [Azure Resource Manager](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-supported-services).
 
     - A subscription admin needs to sign in.  
 
