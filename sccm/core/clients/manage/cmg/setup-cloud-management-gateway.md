@@ -36,6 +36,8 @@ Use the following checklist to make sure you have the necessary information and 
 - Starting in version 1802, select the **Azure Resource Manager deployment**. For more information, see [Azure Resource Manager](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager). You need the following requirements for an Azure Resource Manager deployment of CMG:  
 
     - Integration with [Azure AD](/sccm/core/servers/deploy/configure/azure-services-wizard) for **Cloud Management**. Azure AD user discovery isn't required.  
+    
+    - The **Microsoft.ClassicCompute** resource provider must be registered within the Azure subscription. For more information, see [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services).
 
     - A subscription admin needs to sign in.  
 
