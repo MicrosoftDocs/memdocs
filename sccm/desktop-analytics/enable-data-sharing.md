@@ -2,7 +2,7 @@
 title: Enable data sharing
 titleSuffix: Configuration Manager
 description: A how-to guide for sharing diagnostics data with Desktop Analytics.
-ms.date: 12/03/2018
+ms.date: 01/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -49,18 +49,23 @@ To enable data sharing, configure your proxy server to whitelist the following e
 
 | Endpoint  | Function  |
 |-----------|-----------|
-| `https://v10.events.data.microsoft.com` | Connected user experience and diagnostic component endpoint for use with Windows 10, version 1803, or later |
-| `https://v10.vortex-win.data.microsoft.com` | Connected user experience and diagnostic component endpoint for Windows 10, version 1709 or earlier |
-| `https://vortex-win.data.microsoft.com` | Connected user experience and diagnostic component endpoint for Windows 7 and Windows 8.1 |
+| `https://v10c.events.data.microsoft.com` | Connected user experience and diagnostic component endpoint. Used by devices running Windows 10, version 1703 or later, with the 2018-09 cumulative update or later installed. This update is one of the following IDs: KB4458469, KB4457136, KB4457141. |
+| `https://v10.events.data.microsoft.com` | Connected user experience and diagnostic component endpoint. Used by devices running Windows 10, version 1803, or later, _without_ the 2018-09 cumulative update installed. |
+| `https://v10.vortex-win.data.microsoft.com` | Connected user experience and diagnostic component endpoint. Used by devices running Windows 10, version 1709 or earlier. |
+| `https://vortex-win.data.microsoft.com` | Connected user experience and diagnostic component endpoint. Used by devices running Windows 7 and Windows 8.1 |
 | `https://settings-win.data.microsoft.com` | Enables the compatibility update to send data to Microsoft. |
 | `http://adl.windows.com` | Allows the compatibility update to receive the latest compatibility data from Microsoft. |
-| `https://watson.telemetry.microsoft.com` | Windows Error Reporting (WER). Required for device health and update compliance antivirus reports. Not used by Desktop Analytics. |<!--then why is it here?-->
-| `https://oca.telemetry.microsoft.com`  | Online Crash Analysis (OCA). Required for device health and update compliance antivirus reports. Not used by Desktop Analytics. |<!--then why is it here?-->
-| `https://login.live.com` | Windows Error Reporting (WER). Required to obtain a unique device ID. <br>**Note:** WER doesn't use this endpoint to access Microsoft account consumer services such as Xbox Live. WER uses an anti-spoofing API at that address to enhance the integrity of error reports. |
+| `https://watson.telemetry.microsoft.com` | Windows Error Reporting (WER). Required for device health and update compliance antivirus reports. |
+| `https://umwatsonc.events.data.microsoft.com` | Windows Error Reporting (WER). Required for device health reports in Windows 10, version 1809 or later. |
+| `https://ceuswatcab01.blob.core.windows.net`<br> `https://ceuswatcab02.blob.core.windows.net`<br> `https://eaus2watcab01.blob.core.windows.net`<br> `https://eaus2watcab02.blob.core.windows.net`<br> `https://weus2watcab01.blob.core.windows.net`<br> `https://weus2watcab02.blob.core.windows.net` | Windows Error Reporting (WER). Required for device health and update compliance antivirus reports in Windows 10, version 1809 or later. |
+| `https://www.msftncsi.com` | Windows Error Reporting (WER). Required for device health to check connectivity. |
+| `https://www.msftconnecttest.com` | Windows Error Reporting (WER). Required for device health to check connectivity. | 
+| `https://kmwatsonc.events.data.microsoft.com` | Online Crash Analysis. Required for device health reports in Windows 10, version 1809 or later. |
+| `https://oca.telemetry.microsoft.com`  | Online Crash Analysis (OCA). Required for device health and update compliance antivirus reports. |
+| `https://login.live.com` | Required for device health to ensure data integrity. It provides a more reliable device identity for Desktop Analytics. <br> <br>To disable end-user Microsoft account access, use policy settings instead of blocking this endpoint. For more information, see [The Microsoft account in the enterprise](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication). |
 | `https://nexusrules.officeapps.live.com` | Used to request dynamic diagnostic data events from Office clients. This data is useful for drill-down and diagnostics purposes in the Desktop Analytics portal |
 | `https://nexus.officeapps.live.com` | Used by Office clients to send diagnostic data events from Office 14, Office 15, and versions of Office 16 prior to 16.0.8702. It's used to collect usage and reliability signals events for Desktop Analytics. |
-| `https://mobile.pipe.aria.microsoft.com/Collector/3.0/` | Used by Office clients to send diagnostic data events from universal/modern Office apps, and Win32 Office 16 versions later than 16.0.8702. It's used to collect usage and reliability signals events for Desktop Analytics. |
-| `https://browser.pipe.aria.microsoft.com/Collector/3.0` | Used by Office web clients to send diagnostic data events. This endpoint is also used by Office add-ins and other extensions within Office clients. |
+| `https://office.pipe.aria.microsoft.com` | Used by Office clients to send diagnostic data events from universal/modern Office apps, and Win32 Office 16 versions later than 16.0.8702. It's used to collect usage and reliability signals events for Desktop Analytics. |
 
 
 ### SSL inspection
