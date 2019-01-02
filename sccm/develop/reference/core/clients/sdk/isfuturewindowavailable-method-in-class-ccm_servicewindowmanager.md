@@ -19,10 +19,10 @@ The `IsFutureWindowAvailable` WMI class method, in Configuration Manager, determ
 
 ```  
 uint32 IsFutureWindowAvailable(  
-     [IN]  UInt32 ServiceWindowType,  
-     [IN]  Boolean FallbackToAllProgramsWindow,  
-     [IN]  UInt32 MaxRuntime,  
-     [OUT] Boolean WillProgramRunInFuture  
+     [IN]  UInt32 ServiceWindowType,  
+     [IN]  Boolean FallbackToAllProgramsWindow,  
+     [IN]  UInt32 MaxRuntime,  
+     [OUT] Boolean WillProgramRunInFuture  
 );  
 ```  
 

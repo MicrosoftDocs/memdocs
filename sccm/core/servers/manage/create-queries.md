@@ -107,7 +107,7 @@ SMS_R_System.OperatingSystemNameandVersion like "%Workstation 6.1%"
 
 ### Computers with a specific software package installed  
 
-Use the following query to return the NetBIOS name and software package name of all computers that have a specific software package installed. This example displays all computers with a version of Microsoft Visio installed. Replace `%Visio%` with the software package that you want to query for.  
+Use the following query to return the NetBIOS name and software package name of all computers that have a specific software package installed. This example displays all computers with a version of Microsoft Visio installed. Replace `Microsoft%Visio%` with the software package that you want to query for.  
 
 > [!TIP]  
 > This query searches for the software package by using the names that are displayed in the programs list in Windows Control Panel.  
@@ -118,7 +118,7 @@ SMS_G_System_ADD_REMOVE_PROGRAMS.DisplayName from
 SMS_R_System inner join SMS_G_System_ADD_REMOVE_PROGRAMS on   
 SMS_G_System_ADD_REMOVE_PROGRAMS.ResourceId =   
 SMS_R_System.ResourceId where   
-SMS_G_System_ADD_REMOVE_PROGRAMS.DisplayName like "%Visio%"  
+SMS_G_System_ADD_REMOVE_PROGRAMS.DisplayName like "Microsoft%Visio%"  
 ```  
 
 ### Computers that are in a specific Active Directory Domain Services organizational unit

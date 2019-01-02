@@ -2,7 +2,7 @@
 title: Log files for troubleshooting
 titleSuffix: Configuration Manager
 description: Use log files to troubleshoot issues with Configuration Manager clients and site systems.
-ms.date: 09/10/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -211,19 +211,19 @@ The following table lists the log files located on the Configuration Manager cli
 ###  <a name="BKMK_LogFilesforLnU"></a> Client for Linux and UNIX  
  The Configuration Manager client for Linux and UNIX records information in the following log files:  
 
-> [!TIP]  
+> [!TIP]
 >  Use CMTrace to view the log files for the client for Linux and UNIX.  
-
-> [!NOTE]  
+> 
+> [!NOTE]
 >  When you use the initial release of the client for Linux and UNIX and reference the documentation in this section, replace the following references for each file or process:  
->   
->  -   Replace **omiserver.bin** with **nwserver.bin**  
-> -   Replace **omi** with **nanowbem**  
+> 
+> - Replace **omiserver.bin** with **nwserver.bin**  
+>   -   Replace **omi** with **nanowbem**  
 
-|Log name|Details|  
-|--------------|-------------|  
-|Scxcm.log|The log file for the core service of the Configuration Manager client for Linux and UNIX (ccmexec.bin). This log file contains information about the installation and ongoing operations of ccmexec.bin.<br /><br /> By default, this log file is located at **/var/opt/microsoft/scxcm.log**<br /><br /> To change the location of the log file, edit **/opt/microsoft/configmgr/etc/scxcm.conf** and change the **PATH** field. You do not need to restart the client computer or service for the change to take effect.<br /><br /> You can set the log level to one of four different settings.|  
-|Scxcmprovider.log|The log file for the CIM service of the Configuration Manager client for Linux and UNIX (omiserver.bin). This log file contains information about the ongoing operations of nwserver.bin.<br /><br /> This log is located at**/var/opt/microsoft/configmgr/scxcmprovider.log**<br /><br /> To change the location of the log file, edit **/opt/microsoft/omi/etc/scxcmprovider.conf** and change the **PATH** field. You do not need to restart the client computer or service for the change to take effect.<br /><br /> You can set the log level to one of three settings.|  
+|     Log name      |                                                                                                                                                                                                                                                                                               Details                                                                                                                                                                                                                                                                                               |
+|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     Scxcm.log     | The log file for the core service of the Configuration Manager client for Linux and UNIX (ccmexec.bin). This log file contains information about the installation and ongoing operations of ccmexec.bin.<br /><br /> By default, this log file is located at **/var/opt/microsoft/scxcm.log**<br /><br /> To change the location of the log file, edit **/opt/microsoft/configmgr/etc/scxcm.conf** and change the **PATH** field. You do not need to restart the client computer or service for the change to take effect.<br /><br /> You can set the log level to one of four different settings. |
+| Scxcmprovider.log |     The log file for the CIM service of the Configuration Manager client for Linux and UNIX (omiserver.bin). This log file contains information about the ongoing operations of nwserver.bin.<br /><br /> This log is located at<strong>/var/opt/microsoft/configmgr/scxcmprovider.log</strong><br /><br /> To change the location of the log file, edit **/opt/microsoft/omi/etc/scxcmprovider.conf** and change the **PATH** field. You do not need to restart the client computer or service for the change to take effect.<br /><br /> You can set the log level to one of three settings.      |
 
  Both log files support several levels of logging:  
 
@@ -309,6 +309,7 @@ The log file SMS_DM.log on the site system server also records communication bet
 |mpMSI.log|Records details about the management point installation.|Site server|  
 |MPSetup.log|Records the management point installation wrapper process.|Site server|  
 |netdisc.log|Records Network Discovery actions.|Site server|  
+|NotiCtrl.log|Application request notifications.|Site server|  
 |ntsvrdis.log|Records the discovery activity of site system servers.|Site server|  
 |Objreplmgr|Records the processing of object change notifications for replication.|Site server|  
 |offermgr.log|Records advertisement updates.|Site server|  
@@ -329,7 +330,7 @@ The log file SMS_DM.log on the site system server also records communication bet
 |sitectrl.log|Records site setting changes made to site control objects in the database.|Site server|  
 |sitestat.log|Records the availability and disk space monitoring process of all site systems.|Site server|
 |SMS_ISVUPDATES_SYNCAGENT.log| Log file for synchronization of third-party software updates starting in Configuration Manager version 1806.| Top-level software update point in the Configuration Manager hierarchy.|
-|SMS_PhasedDeployment.log| Log file for phased deployments, a pre-release feature starting in Configuration Manager version 1802.|Top-level site in the Configuration Manager hierarchy|   
+|SMS_PhasedDeployment.log| Log file for phased deployments|Top-level site in the Configuration Manager hierarchy|   
 |SmsAdminUI.log|Records Configuration Manager console activity.|Computer that runs the Configuration Manager console|  
 |SMSAWEBSVCSetup.log|Records the installation activities of the Application Catalog web service.|Site system server|  
 |smsbkup.log|Records output from the site backup process.|Site server|  
@@ -431,6 +432,7 @@ The log file SMS_DM.log on the site system server also records communication bet
 |Ccmsdkprovider.log|Records the activities of the application management SDK.|Client|  
 |colleval.log|Records details about when collections are created, changed, and deleted by the Collection Evaluator.|Site system server|  
 |ConfigMgrSoftwareCatalog.log|Records the activity of the Application Catalog, which includes its use of Silverlight.|Client|  
+|NotiCtrl.log|Application request notifications.|Site server|  
 |portlctl.log|Records the monitoring activities for the Application Catalog website point site system role.|Site system server|  
 |portlwebMSI.log|Records the MSI installation activity for the Application Catalog website role.|Site system server|  
 |PrestageContent.log|Records details about the use of the ExtractContent.exe tool on a remote, prestaged distribution point. This tool extracts content that has been exported to a file.|Site system server|  
@@ -703,7 +705,7 @@ The following table lists the log files that contain information related to Disc
 |smpperf.log|Records the state migration point performance counter updates.|Site system server|  
 |smspxe.log|Records details about the responses to clients that use PXE boot, and details about the expansion of boot images and boot files.|Site system server|  
 |smssmpsetup.log|Records installation and configuration details about the state migration point.|Site system server|
-| SMS_PhasedDeployment.log| Log file for phased deployments, a pre-release feature starting in Configuration Manager version 1802.|Top-level site in the Configuration Manager hierarchy| 
+| SMS_PhasedDeployment.log| Log file for phased deployments|Top-level site in the Configuration Manager hierarchy| 
 |Smsts.log|Records task sequence activities.|Client|  
 |TSAgent.log|Records the outcome of task sequence dependencies before starting a task sequence.|Client|  
 |TaskSequenceProvider.log|Records details about task sequences when they are imported, exported, or edited.|Site system server|  

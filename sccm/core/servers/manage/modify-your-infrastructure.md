@@ -23,36 +23,36 @@ After you install one or more sites, you might have need to modify configuration
 
  At each Configuration Manager site, you can re-run Setup to:  
 
--   Add an additional instance of the SMS Provider (Each additional instance of the SMS Provider must be on a separate computer)  
+- Add an additional instance of the SMS Provider (Each additional instance of the SMS Provider must be on a separate computer)  
 
--   Remove an instance of the SMS Provider (To remove the last SMS Provider for a site, you must uninstall the site)  
+- Remove an instance of the SMS Provider (To remove the last SMS Provider for a site, you must uninstall the site)  
 
- You can monitor the installation or removal of the SMS Provider by viewing the **ConfigMgrSetup.log** in the root folder of the site server on which you run Setup.  
+  You can monitor the installation or removal of the SMS Provider by viewing the **ConfigMgrSetup.log** in the root folder of the site server on which you run Setup.  
 
- Before modifying the SMS Provider at a site, be familiar with the information in [Plan for the SMS Provider for System Center Configuration Manager](../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
+  Before modifying the SMS Provider at a site, be familiar with the information in [Plan for the SMS Provider for System Center Configuration Manager](../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
 
 #### To manage the SMS Provider configuration for a site  
 
-1.  Run **Configuration Manager Setup** from **&lt;Configuration Manager site installation folder\>\BIN\X64\setup.exe**.  
+1. Run **Configuration Manager Setup** from **&lt;Configuration Manager site installation folder\>\BIN\X64\setup.exe**.  
 
-2.  On the **Getting Started** page, select **Perform site maintenance or reset this site**, and then click **Next**  
+2. On the **Getting Started** page, select **Perform site maintenance or reset this site**, and then click **Next**  
 
-3.  On the **Site Maintenance** page, select **Modify SMS Provider configuration**, and then click **Next**.  
+3. On the **Site Maintenance** page, select **Modify SMS Provider configuration**, and then click **Next**.  
 
-4.  On the **Manage SMS Providers** page, select one of the following options and complete the wizard by using one of the following options:  
+4. On the **Manage SMS Providers** page, select one of the following options and complete the wizard by using one of the following options:  
 
-    -   To add an additional SMS Provider at this site:  
+   -   To add an additional SMS Provider at this site:  
 
-         Select **Add a new SMS Provider**, specify the FQDN for a computer that will host the SMS Provider and does not currently host a SMS Provider, and then click **Next**.  
+        Select **Add a new SMS Provider**, specify the FQDN for a computer that will host the SMS Provider and does not currently host a SMS Provider, and then click **Next**.  
 
-    -   To remove an SMS Provider from a server:  
+   -   To remove an SMS Provider from a server:  
 
-         Select **Uninstall the specified SMS Provider**, select the name of the computer from which you want to remove the SMS Provider, click **Next**, and then confirm the action.  
+        Select **Uninstall the specified SMS Provider**, select the name of the computer from which you want to remove the SMS Provider, click **Next**, and then confirm the action.  
 
-        > [!TIP]  
-        >  To move the SMS Provider between two computers, you must install the SMS Provider to the new computer, and remove the SMS Provider from the original location. There is no dedicated option to move the SMS Provider between computers in a single process.  
+       > [!TIP]  
+       >  To move the SMS Provider between two computers, you must install the SMS Provider to the new computer, and remove the SMS Provider from the original location. There is no dedicated option to move the SMS Provider between computers in a single process.  
 
- After the Setup Wizard finishes, the SMS Provider configuration is completed. On the **General** tab in the site **Properties** dialog box, you can verify the computers that have an SMS Provider installed for a site.  
+   After the Setup Wizard finishes, the SMS Provider configuration is completed. On the **General** tab in the site **Properties** dialog box, you can verify the computers that have an SMS Provider installed for a site.  
 
 ##  <a name="bkmk_Console"></a> Manage the Configuration Manager console  
  The following are tasks you can do to manage the Configuration Manager console:  
@@ -104,11 +104,11 @@ For example, consider a scenario where you install the Configuration Manager con
 ##  <a name="BKMK_ConfigDCOMforRemoteConsole"></a> Configure DCOM permissions for remote Configuration Manager consoles  
  The user account that runs the Configuration Manager console requires permission to access the site database by using the SMS Provider. However, an administrative user who uses a remote Configuration Manager console also requires **Remote Activation** DCOM permissions on:  
 
--   The site server computer  
+- The site server computer  
 
--   Each computer that hosts an instance of the SMS Provider  
+- Each computer that hosts an instance of the SMS Provider  
 
- The  security group named **SMS Admins** grants access to the SMS Provider on a computer, and can also be used to grant the required DCOM permissions. (This group is local to the computer when the SMS Provider runs on a member server, and is a domain local group when the SMS Provider runs on a domain controller.)  
+  The  security group named **SMS Admins** grants access to the SMS Provider on a computer, and can also be used to grant the required DCOM permissions. (This group is local to the computer when the SMS Provider runs on a member server, and is a domain local group when the SMS Provider runs on a domain controller.)  
 
 > [!IMPORTANT]  
 >  The Configuration Manager console uses Windows Management Instrumentation (WMI) to connect to the SMS Provider, and WMI internally uses DCOM. Therefore, Configuration Manager requires permissions to activate a DCOM server on the SMS Provider computer if the Configuration Manager console is running on a computer other than the SMS Provider computer. By default, Remote Activation is granted only to the members of the built-in Administrators group. If you allow the SMS Admins group to have Remote Activation permission, a member of this group could attempt DCOM attacks against the SMS Provider computer. This configuration also increases the attack surface of the computer. To mitigate this threat, carefully monitor the membership of the SMS Admins group.  
@@ -117,24 +117,24 @@ For example, consider a scenario where you install the Configuration Manager con
 
 #### To configure DCOM permissions for remote Configuration Manager console connections  
 
-1.  Open  **Component Services** by running **Dcomcnfg.exe**.  
+1. Open  **Component Services** by running **Dcomcnfg.exe**.  
 
-2.  In **Component Services**, click **Console root** >  **Component Services** > **Computers**, and then click **My Computer**. On the **Action** menu, click **Properties**.  
+2. In **Component Services**, click **Console root** >  **Component Services** > **Computers**, and then click **My Computer**. On the **Action** menu, click **Properties**.  
 
-3.  In the **My Computer Properties** dialog box, on the **COM Security** tab, in the **Launch and Activation Permissions** section, click **Edit Limits**.  
+3. In the **My Computer Properties** dialog box, on the **COM Security** tab, in the **Launch and Activation Permissions** section, click **Edit Limits**.  
 
-4.  In the **Launch and Activation Permissions** dialog box, click **Add**.  
+4. In the **Launch and Activation Permissions** dialog box, click **Add**.  
 
-5.  In the **Select User, Computers, Service Accounts, or Groups** dialog box, in the **Enter the object names to select (examples)** box, type **SMS Admins**, and then click **OK**.  
+5. In the **Select User, Computers, Service Accounts, or Groups** dialog box, in the **Enter the object names to select (examples)** box, type **SMS Admins**, and then click **OK**.  
 
-    > [!NOTE]  
-    >  You might have to change the setting for **From this Location** to locate the SMS Admins group. This group is local to the computer when the SMS Provider runs on a member server, and is a domain local group when the SMS Provider runs on a domain controller.  
+   > [!NOTE]  
+   >  You might have to change the setting for **From this Location** to locate the SMS Admins group. This group is local to the computer when the SMS Provider runs on a member server, and is a domain local group when the SMS Provider runs on a domain controller.  
 
-6.  In the **Permissions for SMS Admins** section, to allow remote activation, select the **Remote Activation** check box.  
+6. In the **Permissions for SMS Admins** section, to allow remote activation, select the **Remote Activation** check box.  
 
-7.  Click **OK** and click **OK** again, and then close **Computer Management**. Your computer is now configured to allow remote Configuration Manager console access to members of the SMS Admins group.  
+7. Click **OK** and click **OK** again, and then close **Computer Management**. Your computer is now configured to allow remote Configuration Manager console access to members of the SMS Admins group.  
 
- Repeat this procedure on each SMS Provider computer that might support remote Configuration Manager consoles.  
+   Repeat this procedure on each SMS Provider computer that might support remote Configuration Manager consoles.  
 
 ##  <a name="bkmk_dbconfig"></a> Modify the site database configuration  
  After you install a site, you can modify the configuration of the site database and site database server by running Setup on a central administration site server or primary site server. You can move the site database to a new instance of SQL Server on the same computer, or to a different computer that runs a supported version of SQL Server. These and related changes are not supported for the database configuration at secondary sites.  
@@ -176,9 +176,9 @@ You can choose the account that runs  SQL Services for the site database:
 
 SQL Server documentation can help you [manually register the SPN](https://technet.microsoft.com/library/ms191153\(v=sql.120\).aspx), and provide additional background about SPNs and Kerberos connections.  
 
-> [!IMPORTANT]  
->  -   When you create an SPN for a clustered SQL Server, you must specify the virtual name of the SQL Server Cluster as the SQL Server computer name  
-> -   The command to register an SPN for a SQL Server named instance is the same as that you use when you register an SPN for a default instance except that the port number must match the port that is used by the named instance  
+> [!IMPORTANT]
+> - When you create an SPN for a clustered SQL Server, you must specify the virtual name of the SQL Server Cluster as the SQL Server computer name  
+>   -   The command to register an SPN for a SQL Server named instance is the same as that you use when you register an SPN for a default instance except that the port number must match the port that is used by the named instance  
 
 You can register an SPN for the SQL Server service account of the site database server by using the **Setspn** tool. You must run the Setspn tool on a computer that resides in the domain of SQL Server, and it must use Domain Administrator credentials to run.  
 
@@ -278,7 +278,7 @@ The account that you use to perform a site reset must have the following permiss
     -   **Primary site**: The account that you use to run a site reset at this site must be a local administrator on the primary site server and must have privileges that are equivalent to the **Full Administrator** role-based administration security role. If the primary site is in a hierarchy with a central administration site, this account must also be a local administrator on the central administration site server.  
 
 **Limitations for a site reset**
-  -	Beginning with version 1602, you cannot use a site reset to change the Server or Client language packs that installed at sties so long as the hierarchy is configured to support [testing client upgrades in a pre-production collection](/sccm/core/clients/manage/upgrade/test-client-upgrades).
+  -	Beginning with version 1602, you cannot use a site reset to change the Server or Client language packs that installed at sites so long as the hierarchy is configured to support [testing client upgrades in a pre-production collection](/sccm/core/clients/manage/upgrade/test-client-upgrades).
 
 #### To perform a site reset  
 

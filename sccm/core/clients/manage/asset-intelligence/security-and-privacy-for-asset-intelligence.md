@@ -32,18 +32,18 @@ This topic contains security and privacy information for Asset Intelligence in S
 
  Asset Intelligence does not send information about users and computers or license usage to Microsoft. You can choose to send System Center Online requests for categorization, which means that you can tag one or more software titles that are uncategorized and send them to System Center Online for research and categorization. After a software title is uploaded, Microsoft researchers identify, categorize, and then make that knowledge available to all customers who use the on-line service. You should be aware of the following privacy implications of submitting information to System Center Online:  
 
--   Upload applies only to generic software title information (name, publisher, and so on) that you choose to send to System Center Online. Inventory information is not sent with an upload.  
+- Upload applies only to generic software title information (name, publisher, and so on) that you choose to send to System Center Online. Inventory information is not sent with an upload.  
 
--   Upload never occurs automatically, and the system is not designed for this task to be automated. You must manually select and approve the upload of each software title.  
+- Upload never occurs automatically, and the system is not designed for this task to be automated. You must manually select and approve the upload of each software title.  
 
--   A dialog box shows you exactly what data is going to be uploaded, before the upload process starts.  
+- A dialog box shows you exactly what data is going to be uploaded, before the upload process starts.  
 
--   License information is not sent to Microsoft. The license information is stored in a separate area of the Configuration Manager database, and it cannot be sent to Microsoft.  
+- License information is not sent to Microsoft. The license information is stored in a separate area of the Configuration Manager database, and it cannot be sent to Microsoft.  
 
--   Any software title that is uploaded becomes public, in the sense that the knowledge of that given application and its categorization become part of the System Center Online Asset Intelligence catalog, and then is downloaded to other consumers of the catalog.  
+- Any software title that is uploaded becomes public, in the sense that the knowledge of that given application and its categorization become part of the System Center Online Asset Intelligence catalog, and then is downloaded to other consumers of the catalog.  
 
--   The source of the software title is not recorded in the Asset Intelligence catalog, and it is not made available to other customers. However, you must still verify that you do not load any application titles that contain any private information.  
+- The source of the software title is not recorded in the Asset Intelligence catalog, and it is not made available to other customers. However, you must still verify that you do not load any application titles that contain any private information.  
 
--   Uploaded data cannot be recalled.  
+- Uploaded data cannot be recalled.  
 
- Before you configure Asset Intelligence data collection and decide whether to submit information to System Center Online, consider the privacy requirements of your organization.  
+  Before you configure Asset Intelligence data collection and decide whether to submit information to System Center Online, consider the privacy requirements of your organization.  

@@ -1,8 +1,8 @@
 ---
-title: "Configure security"
-titleSuffix: "Configuration Manager"
-description: "Configure security-related options for System Center Configuration Manager."
-ms.date: 12/30/2016
+title: Configure security
+titleSuffix: Configuration Manager
+description: Configure security-related options for Configuration Manager.
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,109 +11,153 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
-# Configure security in System Center Configuration Manager
+
+# Configure security in Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Use the information in this article to help you set up security-related options for System Center Configuration Manager.  
+Use the information in this article to help you set up security-related options for Configuration Manager. It covers the following security options:
+- [Client computer communication](#BKMK_ConfigureClientPKI) for client PKI certificates  
+- [Signing and encryption](#BKMK_ConfigureSigningEncryption)  
+- [Role-based administration](#BKMK_ConfigureRBA)  
+- [Manage accounts](#BKMK_ManageAccounts)  
+- [Configure Azure Active Directory](#bkmk_azuread)  
+- [Configure SMS Provider authentication](#bkmk_auth)  
+
+
 
 ##  <a name="BKMK_ConfigureClientPKI"></a> Configure settings for client PKI certificates  
+
 If you want to use public key infrastructure (PKI) certificates for client connections to site systems that use Internet Information Services (IIS), use the following procedure to configure settings for these certificates.  
 
 #### To configure client PKI certificate settings  
 
-1.  In the Configuration Manager console, choose **Administration**.  
+1.  In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node. Select the primary site to configure.  
 
-2.  In the **Administration** workspace, expand **Site Configuration**, choose **Sites**, and then choose the primary site to configure.  
+2.  In the ribbon, choose **Properties**. Then switch to the **Client Computer Communication** tab.  
 
-3.  On the **Home** tab, in the **Properties** group, choose **Properties**, and then choose the **Client Computer Communication** tab.  
+    This tab is available on a primary site only. If you don't see the **Client Computer Communication** tab, make sure that you're not connected to a central administration site or a secondary site.  
 
-    This tab is available on a primary site only. If you do not see the **Client Computer Communication** tab, check that you are not connected to a central administration site or a secondary site.  
+3.  Select the settings for site systems that use IIS.  
 
-4.  Choose **HTTPS only** when you want clients that are assigned to the site to always use a client PKI certificate when they connect to site systems that use IIS. Or, choose **HTTPS or HTTP** when you do not require clients to use PKI certificates.  
+    - **HTTPS only**: Clients that are assigned to the site always use a client PKI certificate when they connect to site systems that use IIS.  
 
-5.  If you chose **HTTPS or HTTP**, choose **Use client PKI certificate (client authentication capability) when available** when you want to use a client PKI certificate for HTTP connections. The client uses this certificate instead of a self-signed certificate to authenticate itself to site systems. This option is automatically chosen if you choose **HTTPS only**.  
+    - **HTTPS or HTTP**: You don't require clients to use PKI certificates.  
 
-    When clients are detected to be on the Internet, or they are configured for Internet-only client management, they always use a client PKI certificate.  
+    - **Use Configuration Manager-generated certificates for HTTP site systems**: For more information on this setting, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).  
 
-6.  Choose **Modify** to configure your chosen client selection method for when more than one valid PKI client certificate is available on a client, and then choose **OK**.  
+4.  Select the settings for client computers.  
 
-    For more about the client certificate selection method, see [Planning for PKI client certificate selection](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForClientCertificateSelection).  
+    - **Use client PKI certificate (client authentication capability) when available**: If you chose the **HTTPS or HTTP** site server setting, choose this option to use a client PKI certificate for HTTP connections. The client uses this certificate instead of a self-signed certificate to authenticate itself to site systems. If you chose **HTTPS only**, this option is automatically chosen.  
 
-7.  Select or clear the check box for clients to check the Certificate Revocation list (CRL).  
+    When more than one valid PKI client certificate is available on a client, choose **Modify** to configure the client certificate selection methods.  
 
-    For more about CRL checking for clients, see [Planning for PKI certificate revocation](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs).  
+    For more information about the client certificate selection method, see [Planning for PKI client certificate selection](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForClientCertificateSelection).  
 
-8.  If you must specify trusted root certification authority (CA) certificates for clients, choose **Set**, import the root CA certificate files, and then choose **OK**.  
+    - **Clients check the certificate revocation list (CRL) for site systems**: Enable this setting for clients to check your organization's CRL for revoked certificates.  
 
-    For more about this setting, see [Planning for the PKI Trusted Root certificates and the Certificate Issuers List](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRootCAs).  
+    For more information about CRL checking for clients, see [Planning for PKI certificate revocation](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForCRLs).  
 
-9. Choose **OK** to close the properties dialog box for the site.  
+5.  To import, view, and delete the certificates for trusted root certification authorities, choose **Set**.  
+
+    For more information, see [Planning for the PKI trusted root certificates and the certificate issuers List](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForRootCAs).  
+
 
 Repeat this procedure for all primary sites in the hierarchy.  
 
+
+
 ##  <a name="BKMK_ConfigureSigningEncryption"></a> Configure signing and encryption  
+
 Configure the most secure signing and encryption settings for site systems that all clients in the site can support. These settings are especially important when you let clients communicate with site systems by using self-signed certificates over HTTP.  
 
 #### To configure signing and encryption for a site  
 
-1.  In the Configuration Manager console, choose **Administration**.  
+1.  In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node. Select the primary site to configure.  
 
-2.  In the **Administration** workspace, expand **Site Configuration**, choose **Sites**, and then choose the primary site to configure.  
+2.  In the ribbon, select **Properties**, and then switch to the **Signing and Encryption** tab.  
 
-3.  On the **Home** tab, in the **Properties** group, choose **Properties**, and then choose the **Signing and Encryption** tab.  
+    This tab is available on a primary site only. If you don't see the **Signing and Encryption** tab, make sure that you're not connected to a central administration site or a secondary site.  
 
-    This tab is available on a primary site only. If you do not see the **Signing and Encryption** tab, check that you are not connected to a central administration site or a secondary site.  
+3.  Configure the signing and encryption options for clients to communicate with the site.  
 
-4.  Configure the signing and encryption options that you want, and then choose **OK**.  
+    - **Require signing**: Clients sign data before sending to the management point.  
+
+    - **Require SHA-256**: Clients use the SHA-256 algorithm when signing data.  
 
     > [!WARNING]  
-    >  Do not choose **Require SHA-256** without first checking that all clients that might be assigned to the site can support this hash algorithm or they have a valid PKI client authentication certificate. You might have to install updates or hotfixes on clients to support SHA-256. For example, computers that run Windows Server 2003 SP2 must install a hotfix that is referenced in the [KB article 938397](http://go.microsoft.com/fwlink/p/?LinkId=226666).  
+    >  Don't **Require SHA-256** without first confirming that all clients support this hash algorithm. These clients include ones that might be assigned to the site in the future.  
     >   
-    >  If you choose this option and clients cannot support SHA-256 and use self-signed certificates, Configuration Manager rejects them. In this scenario, the SMS_MP_CONTROL_MANAGER component logs the message ID 5443.  
+    >  If you choose this option, and clients with self-signed certificates can't support SHA-256, Configuration Manager rejects them. The SMS_MP_CONTROL_MANAGER component logs the message ID 5443.  
 
-5.  Choose **OK** to close the **Properties** dialog box for the site.  
+    - **Use encryption**: Clients encrypt client inventory data and status messages before sending to the management point. They use the 3DES algorithm.  
 
 Repeat this procedure for all primary sites in the hierarchy.  
 
+
+
 ##  <a name="BKMK_ConfigureRBA"></a> Configure role-based administration  
-Role-based administration combines security roles, security scopes, and assigned collections to define the administrative scope for each administrative user. An administrative scope includes the objects that an administrative user can view in the Configuration Manager console, and the tasks related to those objects that the administrative user has permission to do. Role-based administration configurations are applied at each site in a hierarchy.  
 
-The following links are to the relevant sections from the [Configure role-based administration for System Center Configuration Manager](../../../core/servers/deploy/configure/configure-role-based-administration.md) article:  
+Role-based administration combines security roles, security scopes, and assigned collections to define the administrative scope for each administrative user. A scope includes the objects that a user can view in the console, and the tasks related to those objects that they have permission to do. Role-based administration configurations are applied at each site in a hierarchy.  
 
--   [Create custom security roles](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_CreateSecRole)  
+For more information, see [Configure role-based administration](/sccm/core/servers/deploy/configure/configure-role-based-administration). This article details the following actions:  
 
--   [Configure security roles](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecRole)  
+- Create custom security roles  
 
--   [Configure security scopes for an object](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecScope)  
+- Configure security roles  
 
--   [Configure collections to manage security](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigColl)  
+- Configure security scopes for an object  
 
--   [Create a new administrative user](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_Create_AdminUser)  
+- Configure collections to manage security  
 
--   [Modify the administrative scope of an administrative user](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ModAdminUser)  
+- Create a new administrative user  
+
+- Modify the administrative scope of an administrative user  
 
 > [!IMPORTANT]  
->  Your own administrative scope defines the objects and settings that you can assign when you configure role-based administration for another administrative user. For information about planning for role-based administration, see [Fundamentals of role-based administration for System Center Configuration Manager](../../../core/understand/fundamentals-of-role-based-administration.md).  
+>  Your own administrative scope defines the objects and settings that you can assign when you configure role-based administration for another administrative user. For information about planning for role-based administration, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).  
 
-##  <a name="BKMK_ManageAccounts"></a> Manage accounts that are used by Configuration Manager  
-Configuration Manager supports Windows accounts for many different tasks and uses.  
 
-Use the following procedure to view accounts that are configured for different tasks and to manage the password that Configuration Manager uses for each account.  
 
-#### To manage accounts that are used by Configuration Manager  
+##  <a name="BKMK_ManageAccounts"></a> Manage accounts that Configuration Manager uses  
 
-1.  In the Configuration Manager console, choose **Administration**.  
+Configuration Manager supports Windows accounts for many different tasks and uses. To view accounts that are configured for different tasks, and to manage the password that Configuration Manager uses for each account, use the following procedure:  
 
-2.  In the **Administration** workspace, expand **Security**, and then choose **Accounts** to view the accounts that are configured for Configuration Manager.  
+#### To manage accounts that Configuration Manager uses  
 
-3.  To change the password for an account that is configured for Configuration Manager, choose the account.  
+1.  In the Configuration Manager console, go to the **Administration** workspace, expand **Security**, and then choose the **Accounts** node.  
 
-4.  On the **Home** tab, in the **Properties** group, choose **Properties**.  
+2.  To change the password for an account, select the account in the list. Then choose **Properties** in the ribbon.  
 
-5.  Choose **Set** to open the **Windows User Account** dialog box and specify the new password for Configuration Manager to use for the account.  
+3.  Choose **Set** to open the **Windows User Account** dialog box. Specify the new password for Configuration Manager to use for this account.  
 
     > [!NOTE]  
-    >  The password that you specify must match the password that is specified for the account in Active Directory Users and Computers.  
+    >  The password that you specify must match this account's password in Active Directory.  
 
-6.  Choose **OK** to complete the procedure.  
+For more information, see [Accounts used in Configuration Manager](/sccm/core/plan-design/hierarchy/accounts).
+
+
+
+##  <a name="bkmk_azuread"></a> Configure Azure Active Directory
+
+Integrate Configuration Manager with Azure Active Directory (Azure AD) to simplify and cloud-enable your environment. Enable the site and clients to authenticate by using Azure AD. For more information, see the **Cloud Management** service in [Configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard).
+
+
+
+## <a name="bkmk_auth"></a> Configure SMS Provider authentication
+
+Starting in version 1810, you can specify the minimum authentication level for administrators to access Configuration Manager sites. This feature enforces administrators to sign in to Windows with the required level. For more information, see [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_auth). <!--1357013-->  
+
+
+
+## See also
+
+- [Plan for security](/sccm/core/plan-design/security/plan-for-security)  
+
+- [Security and privacy for Configuration Manager clients](/sccm/core/clients/deploy/plan/security-and-privacy-for-clients)  
+
+- [Communication between endpoints](/sccm/core/plan-design/hierarchy/communications-between-endpoints)  
+
+- [Cryptographic controls technical reference](/sccm/core/plan-design/security/cryptographic-controls-tehnical-reference)  
+
+- [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements)  

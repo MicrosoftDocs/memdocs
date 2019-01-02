@@ -2,7 +2,7 @@
 title: Install cloud distribution points
 titleSuffix: Configuration Manager
 description: Use these steps to set up a cloud distribution point in Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -38,7 +38,7 @@ Use the following checklist to make sure you have the necessary information and 
 
 - The **Azure environment** to use. For example, the Azure Public Cloud or the Azure US Government Cloud.  
 
-- Starting in version 1806 and *recommended*, if you plan to use the **Azure Resource Manager deployment**, you need the following requirements:<!--1322209-->  
+- Starting in version 1806 and *recommended*, use the **Azure Resource Manager deployment**. It has the following requirements:<!--1322209-->  
 
     - Integration with [Azure Active Directory](/sccm/core/servers/deploy/configure/azure-services-wizard) for **Cloud Management**. Azure AD user discovery isn't required.  
 
@@ -49,6 +49,8 @@ Use the following checklist to make sure you have the necessary information and 
     - A **subscription admin account** needs to sign in during the wizard.  
 
 - If you plan to use the Azure **classic service deployment**, you need the following requirements:  
+    > [!Important]  
+    > Starting in version 1810, classic service deployments in Azure are deprecated in Configuration Manager. Start using Azure Resource Manager deployments for the cloud management gateway. For more information, see [Plan for CMG](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).  
 
     - The Azure **Subscription ID**.  
 
@@ -59,7 +61,7 @@ Use the following checklist to make sure you have the necessary information and 
 - A globally unique **service name** for the cloud distribution point.  
 
     > [!TIP]  
-    > Before requesting the server authentication certificate that uses this service name, confirm that the desired Azure domain name is unique. For example, *WallaceFalls.CloudApp.Net*. Log on to the [Microsoft Azure portal](https://portal.azure.com). Click **Create a resource**, select the **Compute** category, then click **Cloud Service**. In the **DNS name** field, type the desired prefix, for example *WallaceFalls*. The interface reflects whether the domain name is available or already in use by another service. Don't create the service in the portal, just use this process to check the name availability.  
+    > Before requesting the server authentication certificate that uses this service name, confirm that the desired Azure domain name is unique. For example, *WallaceFalls.CloudApp.Net*. Sign in to the [Microsoft Azure portal](https://portal.azure.com). Select **Create a resource**, choose the **Compute** category, then select **Cloud Service**. In the **DNS name** field, type the desired prefix, for example *WallaceFalls*. The interface reflects whether the domain name is available or already in use by another service. Don't create the service in the portal, just use this process to check the name availability.  
  
 - The Azure **region** for this deployment.  
 
@@ -69,21 +71,22 @@ Use the following checklist to make sure you have the necessary information and 
 
 Perform this procedure on the site to host this cloud distribution point as determined by your [design](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_topology).  
 
-1.  In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select **Cloud Distribution Points**. In the ribbon, click **Create Cloud Distribution Point**.  
+1.  In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select **Cloud Distribution Points**. In the ribbon, select **Create Cloud Distribution Point**.  
 
 2.  On the **General** page of the Create Cloud Distribution Point Wizard, configure the following settings:  
 
-    a. First specify the **Azure environment**.  
+    1. First specify the **Azure environment**.  
 
-    b. Choose the Azure deployment method, and then configure the associated settings.  
+    2. Starting in version 1806 and *recommended*, select **Azure Resource Manager deployment** as the deployment method. Select **Sign in** to authenticate with an Azure subscription admin account. The wizard auto-populates the remaining fields from the information stored during the Azure AD integration prerequisite. If you own multiple subscriptions, select the **Subscription ID** of the desired subscription to use.  
 
-       - **Azure Resource Manager deployment** (starting in version 1806, and *recommended*): Click **Sign in** to authenticate with an Azure subscription admin account. The wizard auto-populates the remaining fields from the information stored during the Azure AD integration prerequisite. If you own multiple subscriptions, select the **Subscription ID** of the desired subscription to use.  
+    > [!Note]  
+    > Starting in version 1810, classic service deployments in Azure are deprecated in Configuration Manager. 
+    > 
+    > If you need to use a classic service deployment, select that option on this page. First enter your Azure **Subscription ID**. Then select **Browse** and select the .PFX file for the Azure management certificate.  
 
-       - **Classic service deployment** (and in Configuration Manager versions 1802 and earlier): Enter your Azure **Subscription ID**. Then click **Browse** and select the .PFX file for the Azure management certificate.  
+3.  Select **Next**. Wait as the site tests the connection to Azure.  
 
-3.  Click **Next**. Wait as the site tests the connection to Azure.  
-
-4.  On the **Settings** page, specify the following settings, and then click **Next**:  
+4.  On the **Settings** page, specify the following settings, and then select **Next**:  
 
     - **Region**: Select the Azure region where you want to create the cloud distribution point.  
 
@@ -95,12 +98,12 @@ Perform this procedure on the site to host this cloud distribution point as dete
 
     - **Primary site**: Select the primary site to distribute content to this distribution point.
 
-    - **Certificate file**: Click **Browse** and select the .PFX file for this cloud distribution point's server authentication certificate. The common name from this certificate populates the required **Service FQDN** and **Service name** fields.  
+    - **Certificate file**: Select **Browse** and select the .PFX file for this cloud distribution point's server authentication certificate. The common name from this certificate populates the required **Service FQDN** and **Service name** fields.  
 
         > [!NOTE]  
-        > The cloud distribution point server authentication certificate supports wildcards. If you use a wildcard certificate, replace the asterisk (*) in the **Service FQDN** field with the desired hostname for the service.  
+        > The cloud distribution point server authentication certificate supports wildcards. If you use a wildcard certificate, replace the asterisk (\*) in the **Service FQDN** field with the desired hostname for the service.  
 
-5. On the **Alerts** page, set up storage quotas, transfer quotas, and at what percentage of these quotas you want Configuration Manager to generate alerts. Then click **Next**.  
+5. On the **Alerts** page, set up storage quotas, transfer quotas, and at what percentage of these quotas you want Configuration Manager to generate alerts. Then select **Next**.  
 
 6. Complete the wizard.  
 
@@ -217,7 +220,7 @@ In an hourly cycle, the primary site that monitors the cloud distribution point 
 
 ## <a name="bkmk_modify"></a> Modify
 
-View high-level information about the distribution point in the **Cloud Distribution Points** node under **Cloud Services** in the **Administration** workspace of the Configuration Manager console. Select a distribution point and click **Properties** to see more details.  
+View high-level information about the distribution point in the **Cloud Distribution Points** node under **Cloud Services** in the **Administration** workspace of the Configuration Manager console. Select a distribution point and select **Properties** to see more details.  
 
 When you edit the properties of a cloud distribution point, the following tabs include settings to edit:  
 
@@ -277,9 +280,9 @@ Use the following procedure to stop a cloud distribution point:
 
 1. In the Configuration Manager console, go to the **Administration** workspace. Expand **Cloud Services**, and select the **Cloud Distribution Points** node.  
 
-2. Select the cloud distribution point. To stop the cloud service that runs in Azure, Click **Stop service** in the ribbon.  
+2. Select the cloud distribution point. To stop the cloud service that runs in Azure, select **Stop service** in the ribbon.  
 
-3. Click **Start service** to restart the cloud distribution point.  
+3. Select **Start service** to restart the cloud distribution point.  
 
 
 ### Delete a cloud distribution point

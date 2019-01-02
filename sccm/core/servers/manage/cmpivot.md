@@ -30,7 +30,7 @@ The following components are required to use CMPivot:
 
 - Upgrade the target devices to the latest version of the Configuration Manager client.  
 
-- The Configuration Manager administrator needs the **Read** permission on the **SMS Scripts** object, and the **Run Scripts** permission on the **Collection** object. The **Scripts Runner** role has these permissions. For more information, see [Security roles for scripts](/sccm/apps/deploy-use/create-deploy-scripts#bkmk_ScriptRoles).  
+- The Configuration Manager administrator needs the **Read** permission on the **SMS Scripts** object, the **Run Scripts** permission on the **Collection**, and the default scope. The **Scripts Runner** role has these permissions. For more information, see [Security roles for scripts](/sccm/apps/deploy-use/create-deploy-scripts#bkmk_ScriptRoles).  
 
 - To gather data for the following entities, target clients require PowerShell version 5.0:  
     - Administrators
@@ -73,7 +73,7 @@ The following components are required to use CMPivot:
 
      - Click one of the **Entities** to add it to the query string.  
 
-     - The links for **Table Operators**, **Aggregation Functions**, and **Scalar Functions** open language reference documentation in the web browser. CMPivot uses the same query language as [Azure Log Analytics](https://docs.loganalytics.io/docs/Language-Reference/Change-log).  
+     - The links for **Table Operators**, **Aggregation Functions**, and **Scalar Functions** open language reference documentation in the web browser. CMPivot uses the same query language as [Azure Log Analytics](https://docs.microsoft.com/azure/kusto/query/).  
 
 3. Keep the CMPivot window open to view results from clients. When you close the CMPivot window, the session is complete.  
 
@@ -108,7 +108,7 @@ The CMPivot window contains the following elements:
 
 5. The query pane is where you build or type a query to run on clients in the collection.  
 
-    - CMPivot uses a subset of the same query language as [Azure Log Analytics](https://docs.loganalytics.io/docs/Language-Reference/Change-log).  
+    - CMPivot uses a subset of the same query language as [Azure Log Analytics](https://docs.microsoft.com/azure/kusto/query/).  
 
     - Cut, copy, or paste content in the query pane.  
 
@@ -126,51 +126,51 @@ The CMPivot window contains the following elements:
 
 6. The results pane displays the data returned by active clients for the query.  
 
-    - The available columns vary based upon the entity and the query.  
+   - The available columns vary based upon the entity and the query.  
 
-    - Click a column name to sort the results by that property.  
+   - Click a column name to sort the results by that property.  
 
-    - Right-click on any column name to group the results by the same information in that column, or sort the results.  
+   - Right-click on any column name to group the results by the same information in that column, or sort the results.  
 
-    - Right-click on a device name to take the following additional actions on the device:  
+   - Right-click on a device name to take the following additional actions on the device:  
 
-       - **Pivot to**: Query for another entity on this device.  
+      - **Pivot to**: Query for another entity on this device.  
 
-       - **Run Script**: Launch the Run Script wizard to run an existing PowerShell script on this device. For more information, see [Run a script](/sccm/apps/deploy-use/create-deploy-scripts#run-a-script).  
+      - **Run Script**: Launch the Run Script wizard to run an existing PowerShell script on this device. For more information, see [Run a script](/sccm/apps/deploy-use/create-deploy-scripts#run-a-script).  
 
-       - **Remote Control**: Launch a Configuration Manager Remote Control session on this device. For more information, see [How to remotely administer a Windows client computer](/sccm/core/clients/manage/remote-control/remotely-administer-a-windows-client-computer).  
+      - **Remote Control**: Launch a Configuration Manager Remote Control session on this device. For more information, see [How to remotely administer a Windows client computer](/sccm/core/clients/manage/remote-control/remotely-administer-a-windows-client-computer).  
 
-       - **Resource Explorer**: Launch Configuration Manager Resource Explorer for this device. For more information, see [View hardware inventory](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory) or [View software inventory](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory).  
+      - **Resource Explorer**: Launch Configuration Manager Resource Explorer for this device. For more information, see [View hardware inventory](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory) or [View software inventory](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory).  
 
-    - Right-click on any non-device cell to take the following additional actions:  
+   - Right-click on any non-device cell to take the following additional actions:  
 
-       - **Copy**: Copy the text of the cell to the clipboard.  
+     - **Copy**: Copy the text of the cell to the clipboard.  
 
-       - **Show devices with**: Query for devices with this value for this property. For example, from the results of the `OS` query, select this option on a cell in the Version row: `OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ > 0)`  
+     - **Show devices with**: Query for devices with this value for this property. For example, from the results of the `OS` query, select this option on a cell in the Version row: `OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ > 0)`  
 
-       - **Show devices without**: Query for devices without this value for this property. For example, from the results of the `OS` query, select this option on a cell in the Version row: `OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ == 0) | project Device`  
+     - **Show devices without**: Query for devices without this value for this property. For example, from the results of the `OS` query, select this option on a cell in the Version row: `OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ == 0) | project Device`  
 
-       - **Bing it**: Launch the default web browser to www.bing.com with this value as the query string.  
+     - **Bing it**: Launch the default web browser to www.bing.com with this value as the query string.  
 
-    - Click any hyperlinked text to pivot the view on that specific information.  
+   - Click any hyperlinked text to pivot the view on that specific information.  
 
-    - The results pane doesn't show more than 20,000 rows. Either adjust the query to further filter the data, or restart CMPivot on a smaller collection.  
+   - The results pane doesn't show more than 20,000 rows. Either adjust the query to further filter the data, or restart CMPivot on a smaller collection.  
 
 7. The status bar shows the following information (from left to right):  
 
-    - The status of the current query to the target collection. This status includes:  
-        - The number of active clients that completed the query (3)  
-        - The number of total clients (5)  
-        - The number of offline clients (2)  
-        - Any clients that returned failure (0)  
+   - The status of the current query to the target collection. This status includes:  
+     - The number of active clients that completed the query (3)  
+     - The number of total clients (5)  
+     - The number of offline clients (2)  
+     - Any clients that returned failure (0)  
 
-        For example: `Query completed on 3 of 5 clients (2 clients offline and 0 failure)`  
+       For example: `Query completed on 3 of 5 clients (2 clients offline and 0 failure)`  
 
-    - The ID of the client operation. For example: `id(16780221)`  
+   - The ID of the client operation. For example: `id(16780221)`  
 
-    - The current collection. For example: `PM_Team_Machines`  
+   - The current collection. For example: `PM_Team_Machines`  
 
-    - The total number of rows in the results pane. For example, `1 objects`  
+   - The total number of rows in the results pane. For example, `1 objects`  
 
 
 

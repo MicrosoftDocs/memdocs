@@ -78,7 +78,7 @@ You will also need to copy the ServiceConnectionTool folder with all of its cont
 
 2.  **Connect**: For this step you run the tool on a remote computer that connects to the Internet so you can upload your usage data and then download updates.  
 
-3.  **Import**: This step runs on the computer that hosts the service connection point. When run, the tool imports the you downloaded and adds them to your site so you can then view and install those updates from the Configuration Manager console.  
+3.  **Import**: This step runs on the computer that hosts the service connection point. When run, the tool imports the updates you downloaded and adds them to your site so you can then view and install those updates from the Configuration Manager console.  
 
 Beginning with version 1606, when connecting to Microsoft you can upload multiple .cab files at one time (each from a different hierarchy), and specify a proxy server and a user for the proxy server.   
 
@@ -89,7 +89,7 @@ Beginning with version 1606, when connecting to Microsoft you can upload multipl
 
 #### To specify a proxy server
 You can use the following optional parameters to specify a proxy server (More information about using these parameters is available in the Command line parameters section of this topic):
-  - **-proxyserveruri [FQDN_of_proxy_sever]**  Use this parameter to specify the proxy server to use for this connection.
+  - **-proxyserveruri [FQDN_of_proxy_server]**  Use this parameter to specify the proxy server to use for this connection.
   -  **-proxyusername [username]**  Use this parameter when  you must specify a user for the proxy server.
 
 #### Specify the type of updates to download
@@ -115,51 +115,51 @@ Example command line that uses *-downloadsiteversion*:
 
 ### To use the service connection tool  
 
-1.  On the computer that hosts the service connection point:  
+1. On the computer that hosts the service connection point:  
 
-    -   Open a command prompt  with administrative privileges, and then change directories to the location that contains **serviceconnectiontool.exe**.   
+   -   Open a command prompt  with administrative privileges, and then change directories to the location that contains **serviceconnectiontool.exe**.   
 
-2.  Run the following command to have the tool prepare a .cab file that contains usage information and to copy it  to a location you specify:  
+2. Run the following command to have the tool prepare a .cab file that contains usage information and to copy it  to a location you specify:  
 
-    -   **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
+   -   **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
 
-    If you will upload .cab files from more than one hierarchy at the same time, each .cab file in the folder must have a unique name. You can manually rename files that you add to the folder.
+   If you will upload .cab files from more than one hierarchy at the same time, each .cab file in the folder must have a unique name. You can manually rename files that you add to the folder.
 
-    If you want to  view the usage information that is gathered to be uploaded to the Configuration Manager cloud service, run the following command to export the same data as a .csv file which you can then view using an application like Excel:  
+   If you want to  view the usage information that is gathered to be uploaded to the Configuration Manager cloud service, run the following command to export the same data as a .csv file which you can then view using an application like Excel:  
 
-    -   **serviceconnectiontool.exe -export -dest D:\USB\UsageData.csv**  
+   -   **serviceconnectiontool.exe -export -dest D:\USB\UsageData.csv**  
 
-3.  After the prepare step is complete, move the USB drive (or transfer the exported data by another method) to a computer that has access to the Internet.  
+3. After the prepare step is complete, move the USB drive (or transfer the exported data by another method) to a computer that has access to the Internet.  
 
-4.  On the computer with Internet access, open a command prompt  with administrative privileges, and then change directories to the location that contains a copy of the tool  **serviceconnectiontool.exe** and the additional files from that folder.  
+4. On the computer with Internet access, open a command prompt  with administrative privileges, and then change directories to the location that contains a copy of the tool  **serviceconnectiontool.exe** and the additional files from that folder.  
 
-5.  Run the following command to begin the upload of usage information and the download of updates for Configuration Manager:  
+5. Run the following command to begin the upload of usage information and the download of updates for Configuration Manager:  
 
-    -   **serviceconnectiontool.exe -connect -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks**
+   -   **serviceconnectiontool.exe -connect -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks**
 
-    For more examples of this command line, see the [Command line options](../../../core/servers/manage/use-the-service-connection-tool.md#bkmk_cmd) section later in this topic.
+   For more examples of this command line, see the [Command line options](../../../core/servers/manage/use-the-service-connection-tool.md#bkmk_cmd) section later in this topic.
 
-    > [!NOTE]  
-    >  When you run the command line to connect to the Configuration Manager cloud service, an error similar to the following might occur:  
-    >   
-    >  -   Unhandled Exception: System.UnauthorizedAccessException:  
-    >   
-    >      Access to the path 'C:\  
-    >     Users\br\AppData\Local\Temp\extractmanifestcab\95F8A562.sql' is denied.  
-    >   
-    > This error can be safely ignored and you can close the error window, and continue.  
+   > [!NOTE]  
+   >  When you run the command line to connect to the Configuration Manager cloud service, an error similar to the following might occur:  
+   >   
+   >  -   Unhandled Exception: System.UnauthorizedAccessException:  
+   >   
+   >      Access to the path 'C:\  
+   >     Users\br\AppData\Local\Temp\extractmanifestcab\95F8A562.sql' is denied.  
+   >   
+   > This error can be safely ignored and you can close the error window, and continue.  
 
-6.  After the download of updates for Configuration Manager  is complete, move the USB drive (or transfer the exported data by another method) to the computer that hosts the service connection point.  
+6. After the download of updates for Configuration Manager  is complete, move the USB drive (or transfer the exported data by another method) to the computer that hosts the service connection point.  
 
-7.  On the computer that hosts the service connection point, open a command prompt  with administrative privileges, change directories to the location that contains **serviceconnectiontool.exe**, and then run the following command:  
+7. On the computer that hosts the service connection point, open a command prompt  with administrative privileges, change directories to the location that contains **serviceconnectiontool.exe**, and then run the following command:  
 
-    -   **serviceconnectiontool.exe -import -updatepacksrc D:\USB\UpdatePacks**  
+   -   **serviceconnectiontool.exe -import -updatepacksrc D:\USB\UpdatePacks**  
 
-8.  After the import completes, you can close the command prompt. (Only updates for the applicable hierarchy are imported).  
+8. After the import completes, you can close the command prompt. (Only updates for the applicable hierarchy are imported).  
 
 9. Open  the Configuration Manager console and navigate to **Administration** > **Updates and Servicing**. Updates that were imported are now available to install. (Prior to version 1702, Updates and Servicing was under **Administration** > **Cloud Services**.)
 
- For information about installing updates, see  [Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md).  
+   For information about installing updates, see  [Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md).  
 
 ## <a name="bkmk_cmd"></a> Log Files
 

@@ -2,7 +2,7 @@
 title: Deploy applications
 titleSuffix: Configuration Manager
 description: Create or simulate a deployment of an application to a device or user collection
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -86,12 +86,14 @@ On the **Deployment Settings** page, specify the following information:
 
 - **Purpose**: From the drop-down list, choose one of the following options:  
 
-	- **Available**: The user sees the application in Software Center. They can install it on demand.  
+  - **Available**: The user sees the application in Software Center. They can install it on demand.  
 
-	- **Required**: The client automatically installs the app according to the schedule that you set. If the application isn't hidden, a user can track its deployment status. They can also use Software Center to install the application before the deadline.  
+  - **Required**: The client automatically installs the app according to the schedule that you set. If the application isn't hidden, a user can track its deployment status. They can also use Software Center to install the application before the deadline.  
 
 	> [!NOTE]   
 	>  When you set the deployment action to **Uninstall**, the deployment purpose is automatically set to **Required**. You can't change this behavior.  
+
+- **Allow end users to attempt to repair this application**: Starting in version 1810, if you created the application with a repair command line, enable this option. Users see an option in Software Center to **Repair** the application.<!--1357866-->  
 
 - **Pre-deploy software to the user's primary device**: If the deployment is to a user, select this option to deploy the application to the user’s primary device. This setting doesn't require the user to sign in before the deployment runs. If the user must interact with the installation, don't select this option. This option is only available when the deployment is **Required**.  
 
@@ -113,25 +115,12 @@ One of the following approval settings appears, depending upon your version of C
 
 - **Require administrator approval if users request this application**: For versions 1710 and prior, the administrator approves any user requests for the application before the user can install it. This option is grayed out when the deployment purpose is **Required**, or when you deploy the application to a device collection.  
 
-	Application approval requests are displayed in the **Approval Requests** node, under **Application Management** in the **Software Library** workspace. If a request isn't approved within 45 days, it's removed. Reinstalling the client might cancel any pending approval requests.  
+- **An administrator must approve a request for this application on the device**: Starting in version 1802, the administrator approves any user requests for the application before the user can install it on the requested device. If the administrator approves the request, the user is only able to install the application on that device. The user must submit another request to install the application on another device. This option is grayed out when the deployment purpose is **Required**, or when you deploy the application to a device collection.
 
-	After you've approved an application for installation, you can **Deny** the request in the Configuration Manager console. This action doesn't cause the client to uninstall the application from any devices. It stops users from installing new copies of the application from Software Center.  
+ Starting in version 1810, you can also define a list of email addresses to notify about the approval request. 
+<!--1357015-->  
 
-- **An administrator must approve a request for this application on the device**: Starting in version 1802, the administrator approves any user requests for the application before the user can install it on the requested device. If the administrator approves the request, the user is only able to install the application on that device. The user must submit another request to install the application on another device. This option is grayed out when the deployment purpose is **Required**, or when you deploy the application to a device collection. <!--1357015-->  
-
-    This feature is optional. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options). If you don't enable this feature, you see the prior experience.  
-
-    > [!Note]  
-    > To take advantage of new Configuration Manager features, first update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.<!--SCCMDocs issue 646-->  
-
-    View **Approval Requests** under **Application Management** in the **Software Library** workspace of the Configuration Manager console. There's now a **Device** column in the list for each request. When you take action on the request, the Application Request dialog also includes the device name from which the user submitted the request.  
-
-    If a request isn't approved within 45 days, it's removed. Reinstalling the client might cancel any pending approval requests.  
-
-	After you've approved an application for installation, you can **Deny** the request in the Configuration Manager console. This action doesn't cause the client to uninstall the application from any devices. It stops users from installing new copies of the application from Software Center.  
-
-    > [!Important]  
-    > Starting in version 1806, *the behavior has changed* when you revoke approval for an application that was previously approved and installed. Now when you **Deny** the request for the application, the client uninstalls the application from the user's device.<!--1357891-->  
+For more information, see [Approve applications](/sccm/apps/deploy-use/app-approval).
 
 
 #### Deployment properties **Deployment Settings**

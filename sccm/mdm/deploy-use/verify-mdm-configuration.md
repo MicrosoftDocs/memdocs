@@ -24,4 +24,4 @@ You can verify certain device management components by checking the following lo
 You can review [Log files in System Center Configuration Manager](../../core/plan-design/hierarchy/log-files.md##BKMK_FunctionLogs) for more information about these specific log files and how to view them. 
 
 > [!div class="button"]
-[< Previous step](set-up-additional-management.md)
+> [< Previous step](set-up-additional-management.md)

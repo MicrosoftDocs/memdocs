@@ -28,15 +28,15 @@ The following limitations apply to devices managed using a device enrollment man
 
 - The store manager cannot reset the device from the company portal.  
 - Devices cannot be workplace joined or Azure Active Directory joined. This prevents these devices from using conditional access.
--  To deploy company apps to devices managed with the device enrollment manager, deploy Company Portal app as a **Required Install** to the device enrollment manager's user account. The device enrollment manager can then launch the Company Portal app to install additional apps.
+- To deploy company apps to devices managed with the device enrollment manager, deploy Company Portal app as a **Required Install** to the device enrollment manager's user account. The device enrollment manager can then launch the Company Portal app to install additional apps.
 - To improve performance, the Company Portal app only shows the local device. Remote management of other DEM devices can only be done from the Configuration Manager console by and administrator
 - The Company Portal website is not available for device enrollment manager accounts. Use the Company Portal app.
 - If you use DEM to enroll iOS devices, you can't use the Apple Configurator or Apple Device Enrollment Program (DEP) to enroll devices. (iOS only) 
 
- **Examples of device enrollment manager scenario:**   
-A restaurant wants point-of-sale tablets for its wait staff and order-monitors for its kitchen staff. The employees never need access to company data or to log on as a user. The Intune administrator creates a device enrollment manager account and enrolls the company-owned devices using that account. Alternatively, the administrator could give the device enrollment manager credentials to a restaurant manager, allowing him or her to enroll and manage the devices.  
+  **Examples of device enrollment manager scenario:**   
+  A restaurant wants point-of-sale tablets for its wait staff and order-monitors for its kitchen staff. The employees never need access to company data or to log on as a user. The Intune administrator creates a device enrollment manager account and enrolls the company-owned devices using that account. Alternatively, the administrator could give the device enrollment manager credentials to a restaurant manager, allowing him or her to enroll and manage the devices.  
 
- The administrator or manager can deploy role-specific apps to the restaurant devices. An administrator can also select a device in the console and retire it from mobile device management.  
+  The administrator or manager can deploy role-specific apps to the restaurant devices. An administrator can also select a device in the console and retire it from mobile device management.  
 
 #### Add a device enrollment manager  
 

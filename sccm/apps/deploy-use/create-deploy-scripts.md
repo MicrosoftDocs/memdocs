@@ -90,7 +90,7 @@ This approval is primarily used for the testing phase of script development.
 1. In the Configuration Manager console, click **Administration**.
 2. In the **Administration** workspace, expand **Site Configuration**, and then click **Sites**.
 3. In the list of sites, choose your site and then, on the **Home** tab, in the **Sites** group, click **Hierarchy Settings**.
-4. On the **General** tab of the **Hierarchy Settings Properties** dialog box, clear the checkbox **Do not allow script authors to approve their own scripts**.
+4. On the **General** tab of the **Hierarchy Settings Properties** dialog box, clear the checkbox **Script authors require additional script approver**.
 
 >[!IMPORTANT]
 >As a best practice, you shouldn't allow a script author to approve their own scripts. It should only be allowed in a lab setting. Carefully consider the potential impact of changing this setting in a production environment.
@@ -168,8 +168,8 @@ The three security roles used for running scripts are not created by default in 
 5. Complete the wizard. The new script is displayed in the **Script** list with a status of **Waiting for approval**. Before you can run this script on client devices, you must approve it. 
 
 > [!IMPORTANT]
-    >Avoid scripting a device reboot or a restart of the Configuration Manager agent when using the Run Scripts feature. Doing so could lead to a continuous rebooting state. If needed, there are enhancements to the client notification feature that enable restarting devices, starting in Configuration Manager version 1710. The [pending restart column](/sccm/core/clients/manage/manage-clients#Restart-clients) can help identify devices that need a restart. 
-<!--SMS503978  -->
+> Avoid scripting a device reboot or a restart of the Configuration Manager agent when using the Run Scripts feature. Doing so could lead to a continuous rebooting state. If needed, there are enhancements to the client notification feature that enable restarting devices, starting in Configuration Manager version 1710. The [pending restart column](/sccm/core/clients/manage/manage-clients#Restart-clients) can help identify devices that need a restart. 
+> <!--SMS503978  -->
 
 ## Script parameters
 *(Introduced with version 1710)*  
@@ -222,7 +222,7 @@ Param(
 [Parameter(Mandatory=$True)]
 [string]$FolderName,
 [Parameter(Mandatory=$True)]
-[string]$FileName,
+[string]$FileName
 )
 
 New-Item $FolderName -type directory

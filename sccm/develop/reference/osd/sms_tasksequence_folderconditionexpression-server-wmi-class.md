@@ -50,26 +50,26 @@ Class SMS_TaskSequence_FolderConditionExpression : SMS_TaskSequence_ConditionExp
 
  The date and time operator. Possible values are:  
 
--   equals  
+- equals  
 
--   notEquals  
+- notEquals  
 
--   less  
+- less  
 
--   lessEqual  
+- lessEqual  
 
--   greater  
+- greater  
 
--   greaterEqual  
+- greaterEqual  
 
- `Path`  
- Data type: `String`  
+  `Path`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [Not_Null]  
+  Qualifiers: [Not_Null]  
 
- The path on the target computer for the folder that is being verified. The path can contain embedded task sequence and system environment variables, for example, %*windir*%\Temp.  
+  The path on the target computer for the folder that is being verified. The path can contain embedded task sequence and system environment variables, for example, %*windir*%\Temp.  
 
 ## Remarks  
  There are no class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  

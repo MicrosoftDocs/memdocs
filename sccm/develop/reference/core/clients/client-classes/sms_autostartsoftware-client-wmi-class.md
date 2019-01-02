@@ -148,55 +148,55 @@ Class SMS_AutoStartSoftware
 
  The point from which the software is automatically launched. Possible values are:  
 
--   Registry:Current User  
+- Registry:Current User  
 
--   Registry:Local Machine  
+- Registry:Local Machine  
 
--   Win.ini  
+- Win.ini  
 
--   All Users Startup Folder  
+- All Users Startup Folder  
 
--   User Profile Startup Folder  
+- User Profile Startup Folder  
 
- `StartupValue`  
- Data type: `String`  
+  `StartupValue`  
+  Data type: `String`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- The application command string that is associated with the shortcut.  
+  The application command string that is associated with the shortcut.  
 
 ## Remarks  
  Much system-dependent software is loaded separately from the system due to the nature of the application. Most software requires the operating system to be running before being loaded. Along with many applications intended for useful purposes, such as sound driver, mouse driver, and other interfaces, items such as malware and viruses tend to place themselves within the same load areas. You can enumerate these applications to monitor the health of some of their security policies and procedures.  
 
  There are eight areas in the registry where applications can be run at the startup of the operating system. Enumeration of the following keys provides a list of applications and their associated paths from which header information can be retrieved:  
 
--   HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run  
+- HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run  
 
--   HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunOnce  
+- HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunOnce  
 
--   HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunOnceEx  
+- HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunOnceEx  
 
--   HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Windows\run  
+- HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Windows\run  
 
--   HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Windows\load  
+- HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Windows\load  
 
--   HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run  
+- HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run  
 
--   HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunOnce  
+- HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunOnce  
 
--   HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunOnceEx  
+- HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunOnceEx  
 
- The `SMS_AutoStartSoftware` class enumerates all items in the %*systemdir*%\Win.ini file, to identify older applications in addition to malicious software that might use this nontraditional method of activation. This class enumerates applications in the following file entries:  
+  The `SMS_AutoStartSoftware` class enumerates all items in the %*systemdir*%\Win.ini file, to identify older applications in addition to malicious software that might use this nontraditional method of activation. This class enumerates applications in the following file entries:  
 
--   win.ini [windows] run=  
+- win.ini [windows] run=  
 
--   win.ini [windows] load=  
+- win.ini [windows] load=  
 
- The `SMS_AutoStartSoftware` class enumerates the contents of the **Startup** folder in the **Start** menu to provide the path to the binaries from which header information can be retrieved. If the binary is Rundll32.exe or Rundll64.exe, then the class retrieves the header information from the DLL file that is the first command line parameter for execution of Rundll32.exe.  
+  The `SMS_AutoStartSoftware` class enumerates the contents of the **Startup** folder in the **Start** menu to provide the path to the binaries from which header information can be retrieved. If the binary is Rundll32.exe or Rundll64.exe, then the class retrieves the header information from the DLL file that is the first command line parameter for execution of Rundll32.exe.  
 
- For example:  
+  For example:  
 
 ```  
 RUNDLL32.EXE C:\WINDOWS\System32\NvCpl.dll,NvStartup  

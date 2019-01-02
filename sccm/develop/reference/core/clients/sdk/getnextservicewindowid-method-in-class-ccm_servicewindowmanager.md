@@ -19,7 +19,7 @@ The `GetNextServiceWindowID` WMI class method, in Configuration Manager, gets th
 
 ```  
 uint32 GetNextServiceWindowID(  
-     [OUT] String NextServiceWindowID  
+     [OUT] String NextServiceWindowID  
 );  
 ```  
 

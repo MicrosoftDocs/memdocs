@@ -69,27 +69,27 @@ Class SMS_SCI_Address : SMS_SiteControlItem
 
  Destination site code with which the sender communicates. The default value is "".  
 
--   If `DestinationType` is 0, this value is the destination site code.  
+- If `DestinationType` is 0, this value is the destination site code.  
 
--   If `DestinationType` is 1, this value is the FQDN of the destination distribution point.  
+- If `DestinationType` is 1, this value is the FQDN of the destination distribution point.  
 
- `DesSiteName`  
- Data type: `String`  
+  `DesSiteName`  
+  Data type: `String`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- Destination site name with which the sender communicates.  
+  Destination site name with which the sender communicates.  
 
- `DestinationType`  
- Data type: `UInt32`  
+  `DestinationType`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [none]  
+  Qualifiers: [none]  
 
- Destination site type. Possible values are:  
+  Destination site type. Possible values are:  
 
 |||  
 |-|-|  

@@ -75,7 +75,7 @@ Class SMS_DPStatusInfo : SMS_BaseClass
 
  Qualifiers: [not_null, read]  
 
- `true` if this this distribution point is PXE enabled.  
+ `true` if this distribution point is PXE enabled.  
 
  `LastStatusTime`  
  Data type: `DateTime`  

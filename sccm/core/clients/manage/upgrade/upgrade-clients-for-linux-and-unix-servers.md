@@ -32,27 +32,27 @@ You can upgrade the version of the client for Linux and UNIX on a computer to a 
 
 #### To use a software deployment to upgrade the client on Linux and UNIX servers  
 
-1.  Copy the new client installation package to the computer that runs the Configuration Manager client to upgrade.  
+1. Copy the new client installation package to the computer that runs the Configuration Manager client to upgrade.  
 
-     For example, place the client installation package and install script for cumulative update 1 in the following location on the client computer: **/tmp/PATCH**  
+    For example, place the client installation package and install script for cumulative update 1 in the following location on the client computer: **/tmp/PATCH**  
 
-2.  Create a script to manage the upgrade of the Configuration Manager client. Then place a copy of the script in the same folder on the client computer as the client installation files from step 1.  
+2. Create a script to manage the upgrade of the Configuration Manager client. Then place a copy of the script in the same folder on the client computer as the client installation files from step 1.  
 
-     The script doesn't require a specific name. It must contain command lines sufficient to use the client installation files from a local folder on the client computer, and to install the client installation package by using the **-keepdb** command-line property. Use the **-keepdb** command-line property to maintain the unique identifier of the current client for use by the new client you're installing.  
+    The script doesn't require a specific name. It must contain command lines sufficient to use the client installation files from a local folder on the client computer, and to install the client installation package by using the **-keepdb** command-line property. Use the **-keepdb** command-line property to maintain the unique identifier of the current client for use by the new client you're installing.  
 
-     For example, create a script named **upgrade.sh** that contains the following lines:  
+    For example, create a script named **upgrade.sh** that contains the following lines:  
 
-    ```  
-    #!/bin/sh  
-    #  
-    /tmp/PATCH/install -sitecode <code> -mp <hostname> -keepdb /tmp/PATCH/ccm-Universal-x64.<build>.tar  
+   ```  
+   #!/bin/sh  
+   #  
+   /tmp/PATCH/install -sitecode <code> -mp <hostname> -keepdb /tmp/PATCH/ccm-Universal-x64.<build>.tar  
 
-    ```  
+   ```  
 
-     Then copy it to the **/tmp/PATCH** folder on the client computer.
+    Then copy it to the **/tmp/PATCH** folder on the client computer.
 
-3.  Use software deployment to have each client use the computers built-in **at** command to run the **upgrade.sh** script with a short delay before the script runs.  
+3. Use software deployment to have each client use the computers built-in **at** command to run the **upgrade.sh** script with a short delay before the script runs.  
 
-     For example, use the following command line to run the script: **at -f /tmp/upgrade.sh -m now + 5 minutes**  
+    For example, use the following command line to run the script: **at -f /tmp/upgrade.sh -m now + 5 minutes**  
 
- After the client successfully schedules the **upgrade.sh** script to run, the client submits a status message indicating the software deployment completed successfully. However, the actual client installation is then managed by the computer, after the delay. After the client upgrade completes, validate the install by reviewing the **/var/opt/microsoft/scxcm.log** file on the client computer. Confirm the client is installed and communicating with the site by viewing details for the client in the **Devices** node of the **Assets and Compliance** workspace in the Configuration Manager console.  
+   After the client successfully schedules the **upgrade.sh** script to run, the client submits a status message indicating the software deployment completed successfully. However, the actual client installation is then managed by the computer, after the delay. After the client upgrade completes, validate the install by reviewing the **/var/opt/microsoft/scxcm.log** file on the client computer. Confirm the client is installed and communicating with the site by viewing details for the client in the **Devices** node of the **Assets and Compliance** workspace in the Configuration Manager console.  

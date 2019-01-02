@@ -133,21 +133,21 @@ manager: dougeby
 
  Determine the storage requirements for each of the following items in the deployment share:  
 
--   Windows operating system  
+- Windows operating system  
 
--   Operating system language pack  
+- Operating system language pack  
 
--   Device drivers  
+- Device drivers  
 
--   Applications  
+- Applications  
 
- Determine the size of each image and the number of images required in the deployment. Create a unique image for each:  
+  Determine the size of each image and the number of images required in the deployment. Create a unique image for each:  
 
--   **Version of the Windows operating system to be deployed.** A separate image is required for each version of Windows, such as Windows 8.1, Windows 7, Windows Server 2012 R2, or Windows Server 2008 R2.  
+- **Version of the Windows operating system to be deployed.** A separate image is required for each version of Windows, such as Windows 8.1, Windows 7, Windows Server 2012 R2, or Windows Server 2008 R2.  
 
--   **Edition of the Windows operating system to be deployed.** A separate image is required for each edition of Windows, such as Tablet PC, Ultimate, Business, Enterprise, or Datacenter.  
+- **Edition of the Windows operating system to be deployed.** A separate image is required for each edition of Windows, such as Tablet PC, Ultimate, Business, Enterprise, or Datacenter.  
 
--   **Processor type.** A separate image is required for 32-bit and 64-bit versions of Windows.  
+- **Processor type.** A separate image is required for 32-bit and 64-bit versions of Windows.  
 
 ####  <a name="EstimateStorageRequirementsforConfigurationManagerDistributionPoints"></a> Estimate Storage Requirements for Configuration Manager Distribution Points  
  Estimate the storage requirements for Configuration Manager distribution points using the same calculations described in [Estimate Storage Requirements for MDT Deployment Shares](#EstimateStorageRequirementsforMDTDeploymentShares). If the images are distributed to multiple distribution points, the storage requirements apply to each distribution point.  
@@ -164,25 +164,25 @@ manager: dougeby
 #####  <a name="DetermineWheretoStoreUserStateMigrationData"></a> Determine Where to Store User State Migration Data  
  After determining the storage requirements for the user state migration data, determine where to store the data. Store user state migration data in these locations:  
 
--   On the local computer to reduce the time to deploy Windows as well as network utilization (recommended)  
+- On the local computer to reduce the time to deploy Windows as well as network utilization (recommended)  
 
-    > [!NOTE]
-    >  This option can be used only in a Refresh Computer scenario.  
+  > [!NOTE]
+  >  This option can be used only in a Refresh Computer scenario.  
 
--   On a shared folder located on a local server to provide a consistent method of storing user state migration data or when local storage is not available.  
+- On a shared folder located on a local server to provide a consistent method of storing user state migration data or when local storage is not available.  
 
- If user state migration data will be stored locally on the target computers, designate a shared folder in which the deploy process can store the data. By default, the process attempts to store user state data on the local hard disk for the Replace Computer and Refresh Computer scenarios. However, you can override this behavior with configuration settings in CustomSettings.ini. In the event that there is insufficient disk space for the user state data and new image, the deployment scripts attempt to store the information in a shared folder. Providing the shared folder as an alternate storage location makes the deployment process more reliable.  
+  If user state migration data will be stored locally on the target computers, designate a shared folder in which the deploy process can store the data. By default, the process attempts to store user state data on the local hard disk for the Replace Computer and Refresh Computer scenarios. However, you can override this behavior with configuration settings in CustomSettings.ini. In the event that there is insufficient disk space for the user state data and new image, the deployment scripts attempt to store the information in a shared folder. Providing the shared folder as an alternate storage location makes the deployment process more reliable.  
 
- Create a share on a server designated during the planning process for holding the USMT store files. MDT uses values found in CustomSettings.ini to locate the user state store folder.  
+  Create a share on a server designated during the planning process for holding the USMT store files. MDT uses values found in CustomSettings.ini to locate the user state store folder.  
 
 #####  <a name="DetermineStorageRequirementsforUserStateMigrationData"></a> Determine Storage Requirements for User State Migration Data  
  For planning purposes, complete the following tasks to estimate the user state migration storage requirements:  
 
--   Run Scanstate.exe in the USMT with the **/p** option to estimate the size of the user state migration data. By using the **/p** option, you can estimate the disk space requirements without actually performing the migration.  
+- Run Scanstate.exe in the USMT with the **/p** option to estimate the size of the user state migration data. By using the **/p** option, you can estimate the disk space requirements without actually performing the migration.  
 
--   View the size of the contents of the folders in the user profile. Randomly sample targeted computers to determine a typical amount of storage required to back up the user state migration. Keep in mind that there may be several profiles (user name folders) on each target computer, so include each profile to be migrated.  
+- View the size of the contents of the folders in the user profile. Randomly sample targeted computers to determine a typical amount of storage required to back up the user state migration. Keep in mind that there may be several profiles (user name folders) on each target computer, so include each profile to be migrated.  
 
- Calculate the total capacity required by multiplying the average size of the user state migration data by the number of days to retain the data, and then multiplying that result by the number of users to be migrated during the retention period. For example, if the average user state migration size is 3 GB, data must be stored for five days, 100 users are being migrated each day, and the total storage requirement is 1,500 GB (3 GB × 5 days × 100 users per day).  
+  Calculate the total capacity required by multiplying the average size of the user state migration data by the number of days to retain the data, and then multiplying that result by the number of users to be migrated during the retention period. For example, if the average user state migration size is 3 GB, data must be stored for five days, 100 users are being migrated each day, and the total storage requirement is 1,500 GB (3 GB × 5 days × 100 users per day).  
 
 ####  <a name="EstimateStorageRequirementsforTargetComputerBackup"></a> Estimate Storage Requirements for Target Computer Backup  
  As an optional step in the deployment process for the Refresh Computer scenario, you can perform a backup of a target computer before deploying the target operating system.  
@@ -214,13 +214,13 @@ manager: dougeby
 
  For each operating system image, determine the:  
 
--   **Operating system components.**Select the components required for the applications and user roles performed on the target computers. Install only the components that are required to help reduce the attack surface of the target computer and the image size.  
+- <strong>Operating system components.</strong>Select the components required for the applications and user roles performed on the target computers. Install only the components that are required to help reduce the attack surface of the target computer and the image size.  
 
--   **Server roles.** Select the server roles required for the server computers. Install only the server roles that are required to help reduce the attack surface of the target computer and the image size.  
+- **Server roles.** Select the server roles required for the server computers. Install only the server roles that are required to help reduce the attack surface of the target computer and the image size.  
 
--   **Windows PE components.** These components include Microsoft ActiveX® Data Objects (ADO) support, fonts, and the necessary drivers and packages. You can select the components for 32-bit and 64-bit versions of Windows PE.  
+- **Windows PE components.** These components include Microsoft ActiveX® Data Objects (ADO) support, fonts, and the necessary drivers and packages. You can select the components for 32-bit and 64-bit versions of Windows PE.  
 
--   **Configuration settings.** Identify the configuration settings for components included in the images. Select configuration settings that meet the business and security requirements of the organization. For more information about target computer security, see [Planning Target Computer Security](#PlanningTargetComputerSecurity).  
+- **Configuration settings.** Identify the configuration settings for components included in the images. Select configuration settings that meet the business and security requirements of the organization. For more information about target computer security, see [Planning Target Computer Security](#PlanningTargetComputerSecurity).  
 
 ###  <a name="ChoosingaDeploymentMethod"></a> Choosing a Deployment Method  
  Typically, target computers have high-speed, persistent connections to the deployment infrastructure. However, some target computers may connect to an intranet remotely or not at all. MDT includes the following methods for deploying operating systems and applications using LTI based on the network connectivity:  
@@ -237,15 +237,15 @@ manager: dougeby
 
  If the organization cannot provide sufficient network capacity to deploy images, software, and migration data to computers, perform one of the following actions:  
 
--   Temporarily place the appropriate servers (for example, servers hosting the various shared folders or the server running Windows Deployment Services) closer to the target computers for the duration of the migration.  
+- Temporarily place the appropriate servers (for example, servers hosting the various shared folders or the server running Windows Deployment Services) closer to the target computers for the duration of the migration.  
 
--   Temporarily move the target computers to a staging area where the computers can be deployed, and then return them to their original location.  
+- Temporarily move the target computers to a staging area where the computers can be deployed, and then return them to their original location.  
 
--   Store user state migration data locally on the target computers.  
+- Store user state migration data locally on the target computers.  
 
--   Perform automated deployments locally using media deployments in LTI.  
+- Perform automated deployments locally using media deployments in LTI.  
 
- In addition to network capacity, you must enable the appropriate network protocols and traffic. For example, if you want to initiate LTI, ZTI, or UDI deployment using Windows Deployment Services and multicast deployment, you must enable multicast traffic between the MDT infrastructure and target computers.  
+  In addition to network capacity, you must enable the appropriate network protocols and traffic. For example, if you want to initiate LTI, ZTI, or UDI deployment using Windows Deployment Services and multicast deployment, you must enable multicast traffic between the MDT infrastructure and target computers.  
 
 ###  <a name="UsingReferenceComputersinMDTDeployments"></a> Using Reference Computers in MDT Deployments  
  The MDT deployment process uses the reference computer as a baseline for the configuration of target computers when the deployment process is complete. You configure the reference computer to comply with the business, technical, and security requirements of the organization. After configuring the reference computer, capture an image of the reference computer that you can then deploy to the target computers.  
@@ -280,15 +280,15 @@ Table 4 lists the advantages and disadvantages of the thick, thin, and hybrid im
 
  The costs associated with building, maintaining, and deploying disk images includes:  
 
--   **Development costs.** Development costs include creating a well-engineered image to lower future support costs and improve security and reliability. Higher levels of automation reduce development costs.  
+- **Development costs.** Development costs include creating a well-engineered image to lower future support costs and improve security and reliability. Higher levels of automation reduce development costs.  
 
--   **Test costs.** These costs include the time and labor involved in testing the standard image and the applications that might reside inside it in addition to applications applied after deployment. Test costs also include the development time required to stabilize disk images.  
+- **Test costs.** These costs include the time and labor involved in testing the standard image and the applications that might reside inside it in addition to applications applied after deployment. Test costs also include the development time required to stabilize disk images.  
 
--   **Storage costs.** Storage costs include storing the distribution points, disk images, migration data, and backup images. Storage costs can be significant depending on the number of disk images, the number of computers in each deployment run, and so on.  
+- **Storage costs.** Storage costs include storing the distribution points, disk images, migration data, and backup images. Storage costs can be significant depending on the number of disk images, the number of computers in each deployment run, and so on.  
 
--   **Network costs.** Network costs include moving disk images to distribution points and to computers. The disk-imaging technologies that Microsoft provides do not support multicasting, so network costs scale linearly with the number of distribution points you must replicate and the number of computers in the deployment project.  
+- **Network costs.** Network costs include moving disk images to distribution points and to computers. The disk-imaging technologies that Microsoft provides do not support multicasting, so network costs scale linearly with the number of distribution points you must replicate and the number of computers in the deployment project.  
 
- As the size of image files increases, costs increase. Large images have more updating, testing, distribution, network, and storage costs associated with them. Even if only a small portion of the image is updated, the entire image must be redistributed.  
+  As the size of image files increases, costs increase. Large images have more updating, testing, distribution, network, and storage costs associated with them. Even if only a small portion of the image is updated, the entire image must be redistributed.  
 
 ###  <a name="IdentifyingDeploymentScenarios"></a> Identifying Deployment Scenarios  
  Table 5 lists the deployment scenarios and provides a brief description of each.  
@@ -303,34 +303,34 @@ Table 4 lists the advantages and disadvantages of the thick, thin, and hybrid im
 
  MDT does not support in-place upgrade deployments. You can perform:  
 
--   An in-place upgrade manually by running Setup.exe from the original Windows media  
+- An in-place upgrade manually by running Setup.exe from the original Windows media  
 
-    > [!NOTE]
-    >  To perform an in-place upgrade manually by running Setup.exe from the original Windows media, use the original install.wim file. Custom .wim files are not supported for in-place upgrades.  
+  > [!NOTE]
+  >  To perform an in-place upgrade manually by running Setup.exe from the original Windows media, use the original install.wim file. Custom .wim files are not supported for in-place upgrades.  
 
--   The Refresh Computer scenario as an alternative for deploying a new operating system and applications on the target computer  
+- The Refresh Computer scenario as an alternative for deploying a new operating system and applications on the target computer  
 
- As part of the Replace Computer deployment scenario, wipe the disk partitions of the original computer. The standard format as performed by Windows operating systems does not perform a secure wipe of the disk as defined by U.S. Department of Defense standard 5520.22M. If required, perform secure wipes of hard disks in target computers using tools provided by non-Microsoft vendors.  
+  As part of the Replace Computer deployment scenario, wipe the disk partitions of the original computer. The standard format as performed by Windows operating systems does not perform a secure wipe of the disk as defined by U.S. Department of Defense standard 5520.22M. If required, perform secure wipes of hard disks in target computers using tools provided by non-Microsoft vendors.  
 
 ###  <a name="PlanningforBitLockerDriveEncryption"></a> Planning for BitLocker Drive Encryption  
  BitLocker is included in Windows so include planning decisions for BitLocker in your environment. One BitLocker decision you must make is the storage of the recovery keys. You can store BitLocker recovery keys in:  
 
--   `A local folder.` Select this option to store the recovery key on UFDs, which each user manages.  
+- `A local folder.` Select this option to store the recovery key on UFDs, which each user manages.  
 
--   **A network folder.** Select this option to centrally store the recovery keys in a network shared folder, which network administrators manage.  
+- **A network folder.** Select this option to centrally store the recovery keys in a network shared folder, which network administrators manage.  
 
--   **Active Directory® Domain Services (AD DS).** Select this option to store the recovery keys in AD DS, which Active Directory administrators manage.  
+- **Active Directory® Domain Services (AD DS).** Select this option to store the recovery keys in AD DS, which Active Directory administrators manage.  
 
- Also, elect the methods users will employ to start their computers after BitLocker is enabled. Users can start their computers using one of the following methods:  
+  Also, elect the methods users will employ to start their computers after BitLocker is enabled. Users can start their computers using one of the following methods:  
 
--   **Trusted Platform Module (TPM) version 1.2 or later.** TPM is a cryptographic hardware chip installed on the target computer. If the target computer does not support TPM, a UFD or PIN must be used to start the computer. This is the preferred method if the target computer supports TPM.  
+- **Trusted Platform Module (TPM) version 1.2 or later.** TPM is a cryptographic hardware chip installed on the target computer. If the target computer does not support TPM, a UFD or PIN must be used to start the computer. This is the preferred method if the target computer supports TPM.  
 
-    > [!NOTE]
-    >  You can provide a PIN that users can enter in conjunction with TPM, or you can use a UFD to strengthen the security when starting a computer.  
+  > [!NOTE]
+  >  You can provide a PIN that users can enter in conjunction with TPM, or you can use a UFD to strengthen the security when starting a computer.  
 
--   **UFD.** In this method, the required encryption keys are stored on a UFD, which must be present in the computer when the computer starts. This is the preferred method if the target computer does not support TPM.  
+- **UFD.** In this method, the required encryption keys are stored on a UFD, which must be present in the computer when the computer starts. This is the preferred method if the target computer does not support TPM.  
 
- For more information on BitLocker, see [BitLocker Drive Encryption Overview](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10).  
+  For more information on BitLocker, see [BitLocker Drive Encryption Overview](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10).  
 
 ###  <a name="EvaluatingTargetComputerReadiness"></a> Evaluating Target Computer Readiness  
  As part of the planning process, evaluate target computer readiness for the deployment of the target operating system, device drivers, applications, and other components. Evaluate target computer readiness using automated hardware and software inventory tools, such as Configuration Manager or the Microsoft Assessment and Planning (MAP) Toolkit.  
@@ -356,37 +356,37 @@ Table 4 lists the advantages and disadvantages of the thick, thin, and hybrid im
 ###  <a name="VerifyAdequateTargetComputerResources"></a> Verify Adequate Target Computer Resources  
  After ZTIPrereq.vbs determines that the computer meets the requirements for running the remaining scripts, ZTIValidate.wsf determines whether the target computer has the appropriate software and hardware system resources to deploy the target operating system. These requirements include:  
 
--   The target computer has WSH 5.6 or later installed  
+- The target computer has WSH 5.6 or later installed  
 
--   In any scenario except New Computer (which does not migrate user data), the existing operating system must be a client operating system if the new operating system is a client operating system. Similarly, only a server operating system can be deployed to a computer currently running a server operating system.  
+- In any scenario except New Computer (which does not migrate user data), the existing operating system must be a client operating system if the new operating system is a client operating system. Similarly, only a server operating system can be deployed to a computer currently running a server operating system.  
 
--   The `OSInstall` property, if defined, must be set to `YES` for the deployment to continue  
+- The `OSInstall` property, if defined, must be set to `YES` for the deployment to continue  
 
--   The target computer memory must meet the requirements of the operating system  
+- The target computer memory must meet the requirements of the operating system  
 
-    > [!NOTE]
-    >  The minimum recommended amount of physical memory for the target computer is 1 GB.  
+  > [!NOTE]
+  >  The minimum recommended amount of physical memory for the target computer is 1 GB.  
 
--   The target computer processor must meet the requirements of the operating system  
+- The target computer processor must meet the requirements of the operating system  
 
--   The target computer must have sufficient available disk space for the image being deployed to it  
+- The target computer must have sufficient available disk space for the image being deployed to it  
 
--   The current operating system on the target computer must be running on the C partition (Refresh Computer scenario only)  
+- The current operating system on the target computer must be running on the C partition (Refresh Computer scenario only)  
 
--   Drive C must be the first partition on the first disk of the target computer (Refresh Computer scenario only)  
+- Drive C must be the first partition on the first disk of the target computer (Refresh Computer scenario only)  
 
--   Additional available disk space is required when user state migration data and deployment logs are stored locally on the target computer  
+- Additional available disk space is required when user state migration data and deployment logs are stored locally on the target computer  
 
--   The target computer must have sufficient free disk space (approximately 150 MB) to hold Windows PE log files  
+- The target computer must have sufficient free disk space (approximately 150 MB) to hold Windows PE log files  
 
--   The target computer must have sufficient total disk space to hold Windows PE and the image (expanded image size plus 150 MB)  
+- The target computer must have sufficient total disk space to hold Windows PE and the image (expanded image size plus 150 MB)  
 
--   The target computer must have a direct network connection to Windows Deployment Services servers and deployment shares (Unsupported network connections include virtual private network [VPN] and wireless connections.)  
+- The target computer must have a direct network connection to Windows Deployment Services servers and deployment shares (Unsupported network connections include virtual private network [VPN] and wireless connections.)  
 
-    > [!NOTE]
-    >  Target computers that attempt to install an image over a VPN or wireless connection will not be able to connect to a deployment share after restarting in Windows PE, causing the deployment process to fail.  
+  > [!NOTE]
+  >  Target computers that attempt to install an image over a VPN or wireless connection will not be able to connect to a deployment share after restarting in Windows PE, causing the deployment process to fail.  
 
- Determine whether any existing computers have inadequate system resources using Configuration Manager or another software inventory tool. Upgrade the system resources on these target computers prior to deploying Windows, if necessary.  
+  Determine whether any existing computers have inadequate system resources using Configuration Manager or another software inventory tool. Upgrade the system resources on these target computers prior to deploying Windows, if necessary.  
 
 ###  <a name="IdentifyDifferencesin64-bitand32-bitDeployments"></a> Identify Differences in 64-bit and 32-bit Deployments  
  Most functions and features found in 32-bit versions of Windows are the same in 64-bit versions of Windows. However, take the following differences into consideration when deploying 64-bit versions of Windows:  
@@ -484,135 +484,135 @@ Table 4 lists the advantages and disadvantages of the thick, thin, and hybrid im
 ####  <a name="ReviewGeneralKnownIssuesLimitationsandRecommendationsforMDT"></a> Review General Known Issues, Limitations, and Recommendations for MDT  
  The following are a list of known general issues, limitations, and recommendations that relate to MDT:  
 
--   MDT supports the Windows Assessment and Deployment Kit (Windows ADK) for Windows 8.1, Windows PE version 5.0, System Center 2012 R2 Configuration Manager.  
+- MDT supports the Windows Assessment and Deployment Kit (Windows ADK) for Windows 8.1, Windows PE version 5.0, System Center 2012 R2 Configuration Manager.  
 
--   Language packs, applications, and device drivers that are disabled in the Deployment Workbench are not installed, unless you add them manually to the CustomSettings.ini file.  
+- Language packs, applications, and device drivers that are disabled in the Deployment Workbench are not installed, unless you add them manually to the CustomSettings.ini file.  
 
--   When you select the **Install Language Pack Offline** action, you must select language pack CAB files within subfolders of the main package.  
+- When you select the **Install Language Pack Offline** action, you must select language pack CAB files within subfolders of the main package.  
 
--   When you specify IP addresses (for example, when identifying Domain Name System [DNS] and Windows Internet Naming Service [WINS] servers), they must exclude unnecessary zero prefixes, which will be misevaluated. For example, if the IP address is typed **10.010.10.1**, the Deployment Workbench evaluates it as **10.8.10.1**. To avoid this problem, enter IP addresses carefully, and do not add unnecessary zeroes.  
+- When you specify IP addresses (for example, when identifying Domain Name System [DNS] and Windows Internet Naming Service [WINS] servers), they must exclude unnecessary zero prefixes, which will be misevaluated. For example, if the IP address is typed **10.010.10.1**, the Deployment Workbench evaluates it as **10.8.10.1**. To avoid this problem, enter IP addresses carefully, and do not add unnecessary zeroes.  
 
--   When specifying a Run As account, you must specify a user who is a member of the Administrators group on the server. Otherwise, the account will not have sufficient privileges to access network connections established by administrators.  
+- When specifying a Run As account, you must specify a user who is a member of the Administrators group on the server. Otherwise, the account will not have sufficient privileges to access network connections established by administrators.  
 
--   When creating deployment shares on computers that have 8.3 file names disabled (see the Microsoft Support article [How to Disable the 8.3 Name Creation on NTFS Partitions](https://support.microsoft.com/kb/121007/)), the Deployment Workbench fails to generate the Windows PE image. If 8.3 file names have been disabled, re-enable them by setting the **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem\NtfsDisable8dot3NameCreation** registry value to **0**.  
+- When creating deployment shares on computers that have 8.3 file names disabled (see the Microsoft Support article [How to Disable the 8.3 Name Creation on NTFS Partitions](https://support.microsoft.com/kb/121007/)), the Deployment Workbench fails to generate the Windows PE image. If 8.3 file names have been disabled, re-enable them by setting the **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem\NtfsDisable8dot3NameCreation** registry value to **0**.  
 
--   Within a folder, avoid creating a subfolder and a file with the same name. For example, within the Files folder, you should not name a subfolder Item, and then create a file named Item.  
+- Within a folder, avoid creating a subfolder and a file with the same name. For example, within the Files folder, you should not name a subfolder Item, and then create a file named Item.  
 
--   When performing an upgrade, network and media deployment shares created in earlier versions of MDT must have valid shares.  
+- When performing an upgrade, network and media deployment shares created in earlier versions of MDT must have valid shares.  
 
--   If custom images captured by directly running ImageX (without using MDT to capture the image) do not work properly, troubleshoot the issues by capturing and adding the image using MDT to ensure that all prerequisites are configured properly. Add Setup files to the Deployment Workbench by adding a complete operating system distribution or by pointing the Deployment Wizard to the location of source files. When manually capturing images, use the Wimscript.ini file that MDT supplies in the \Distribution\tools\\*_platform* folder, where *platform* is either x86 (for 32-bit) or x64 (for 64-bit), to exclude the folders or files from the image. Also be aware of preexisting Unattend.xml files in the image. Specify the correct **/FLAGS** value when capturing Windows images using ImageX or Windows Deployment Services capture processes.  
+- If custom images captured by directly running ImageX (without using MDT to capture the image) do not work properly, troubleshoot the issues by capturing and adding the image using MDT to ensure that all prerequisites are configured properly. Add Setup files to the Deployment Workbench by adding a complete operating system distribution or by pointing the Deployment Wizard to the location of source files. When manually capturing images, use the Wimscript.ini file that MDT supplies in the \Distribution\tools\\*_platform* folder, where *platform* is either x86 (for 32-bit) or x64 (for 64-bit), to exclude the folders or files from the image. Also be aware of preexisting Unattend.xml files in the image. Specify the correct **/FLAGS** value when capturing Windows images using ImageX or Windows Deployment Services capture processes.  
 
--   At the completion of MDT deployment, a summary page displays warnings about errors encountered during the process. (This page is not displayed when conducting the Server Core installation because it does not include the required Windows Internet Explorer® components.) It is possible for deployment to finish but still trigger several errors or warnings if the errors are nonfatal. It is useful to inspect these errors and warnings—for example, by opening corresponding logs files and running verification tests—and determine whether they are unexpected.  
+- At the completion of MDT deployment, a summary page displays warnings about errors encountered during the process. (This page is not displayed when conducting the Server Core installation because it does not include the required Windows Internet Explorer® components.) It is possible for deployment to finish but still trigger several errors or warnings if the errors are nonfatal. It is useful to inspect these errors and warnings—for example, by opening corresponding logs files and running verification tests—and determine whether they are unexpected.  
 
--   Some device drivers can stall the deployment process. If this happens, isolate the device driver and remove it from the target computer, or contact the vendor for an updated version of the device driver.  
+- Some device drivers can stall the deployment process. If this happens, isolate the device driver and remove it from the target computer, or contact the vendor for an updated version of the device driver.  
 
--   The error “Cannot Find Driver Path” can appear if you choose to optimize a Windows PE image and select drivers that are not available from the distribution point. To work around this problem, select the**Completely Regenerate The Boot Images** option.  
+- The error “Cannot Find Driver Path” can appear if you choose to optimize a Windows PE image and select drivers that are not available from the distribution point. To work around this problem, select the**Completely Regenerate The Boot Images** option.  
 
--   The USMT fails if you enter a path surrounded by quotation marks that also ends in a backslash (\\). To prevent problems, simply leave off the final backslash when specifying a folder. For example, the following paths will cause an error:  
+- The USMT fails if you enter a path surrounded by quotation marks that also ends in a backslash (\\). To prevent problems, simply leave off the final backslash when specifying a folder. For example, the following paths will cause an error:  
 
-    -   "D:\\"  
+  - "D:\\"  
 
-    -   "D:\folder\\"  
+  - "D:\folder\\"  
 
-     However, these paths will not cause an error:  
+    However, these paths will not cause an error:  
 
-    -   D:  
+  - D:  
 
-    -   D:\  
+  - D:\  
 
-    -   D:\folder\  
+  - D:\folder\  
 
-    -   D:\folder  
+  - D:\folder  
 
-    -   “D:\folder”  
+  - “D:\folder”  
 
-    -   “D:\\\”  
+  - “D:\\\”  
 
-    -   “D:”  
+  - “D:”  
 
--   Configure the Internet Explorer home page using CustomSettings.ini, in the MDT DB, or by using the Windows Internet Explorer Administration Kit (IEAK). Configuring the Internet Explorer home page works only in Windows unattended installation.  
+- Configure the Internet Explorer home page using CustomSettings.ini, in the MDT DB, or by using the Windows Internet Explorer Administration Kit (IEAK). Configuring the Internet Explorer home page works only in Windows unattended installation.  
 
--   During LTI deployments to new computers, some pages (such as the **User Locale** and **Keyboard Locale** pages) do not display text correctly if required fonts are not installed in Windows PE. In the Refresh Computer scenario, the same symptoms appear if required fonts are not installed in the operating system being replaced.  
+- During LTI deployments to new computers, some pages (such as the **User Locale** and **Keyboard Locale** pages) do not display text correctly if required fonts are not installed in Windows PE. In the Refresh Computer scenario, the same symptoms appear if required fonts are not installed in the operating system being replaced.  
 
--   Some keyboard layouts might require language packs or input method editors that MDT does not automatically include in the Windows PE startup image. MDT does not verify that the keyboard layout is valid. For more information, see the Microsoft Support article [How to add Input Method Editor (IME) support to Windows PE 2.0](https://support.microsoft.com/kb/926181).  
+- Some keyboard layouts might require language packs or input method editors that MDT does not automatically include in the Windows PE startup image. MDT does not verify that the keyboard layout is valid. For more information, see the Microsoft Support article [How to add Input Method Editor (IME) support to Windows PE 2.0](https://support.microsoft.com/kb/926181).  
 
--   A maximum of two WINS server addresses can be added when configuring static IP configuration settings for a network adapter. If more than two WINS server addresses are added using MDT, only the first two WINS server addresses are used.  
+- A maximum of two WINS server addresses can be added when configuring static IP configuration settings for a network adapter. If more than two WINS server addresses are added using MDT, only the first two WINS server addresses are used.  
 
--   Hash value errors may occur in Configuration Manager during download on demand or when creating a media deployment DVD. This can occur if the packages on the distribution points are inconsistent with the information in the Configuration Manager database.  
+- Hash value errors may occur in Configuration Manager during download on demand or when creating a media deployment DVD. This can occur if the packages on the distribution points are inconsistent with the information in the Configuration Manager database.  
 
-    ###### To correct hash value errors for Configuration Manager  
+  ###### To correct hash value errors for Configuration Manager  
 
-    1.  Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
+  1.  Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
-    2.  In the Configuration Manager console, in the **Navigation** pane, click **Software Library**.  
+  2.  In the Configuration Manager console, in the **Navigation** pane, click **Software Library**.  
 
-    3.  In the Software Library workspace, go to Overview/Application Management/Packages.  
+  3.  In the Software Library workspace, go to Overview/Application Management/Packages.  
 
-    4.  In the preview pane, click ***package_name*** (where *package_name* is the name of the package that is inconsistent).  
+  4.  In the preview pane, click ***package_name*** (where *package_name* is the name of the package that is inconsistent).  
 
-    5.  On the Ribbon, on the **Home** tab, in the **Properties** group, click **Properties**.  
+  5.  On the Ribbon, on the **Home** tab, in the **Properties** group, click **Properties**.  
 
-         The ***package_name*****Properties** dialog box opens (where *package_name* is the name of the package).  
+       The ***package_name*****Properties** dialog box opens (where *package_name* is the name of the package).  
 
-    6.  In the ***package_name*****Properties** dialog box (where *package_name* is the name of the package), on the **Content Locations** tab, in **Distribution points or distribution point groups** box, click ***distribution_point*** (where *distribution_point* is the name of the distribution point or distribution point group), then click **Redistribute**.  
+  6.  In the ***package_name*****Properties** dialog box (where *package_name* is the name of the package), on the **Content Locations** tab, in **Distribution points or distribution point groups** box, click ***distribution_point*** (where *distribution_point* is the name of the distribution point or distribution point group), then click **Redistribute**.  
 
-    7.  In the **Configuration Manager** dialog box, click **OK**.  
+  7.  In the **Configuration Manager** dialog box, click **OK**.  
 
-    8.  Repeat steps f through g for each distribution point or distribution point group.  
+  8.  Repeat steps f through g for each distribution point or distribution point group.  
 
-    9. In the ***package_name*****Properties** dialog box, click **OK**.  
+  9. In the ***package_name*****Properties** dialog box, click **OK**.  
 
-    10. Repeat steps d through i for each package that is inconsistent.  
+  10. Repeat steps d through i for each package that is inconsistent.  
 
--   In LTI deployments, you set several kinds of information in the Create Task Sequence Wizard. The UI does not provide an option to edit this information at a later time. However, you can edit the information directly in the Unattend.xml file. The information includes:  
+- In LTI deployments, you set several kinds of information in the Create Task Sequence Wizard. The UI does not provide an option to edit this information at a later time. However, you can edit the information directly in the Unattend.xml file. The information includes:  
 
-    -   Organization name  
+  -   Organization name  
 
-    -   Full name  
+  -   Full name  
 
-    -   Internet Explorer home page  
+  -   Internet Explorer home page  
 
-    -   Local Administrator password  
+  -   Local Administrator password  
 
--   No user state configuration settings can be or need to be specified using the CustomSettings.ini file for Configuration Manager scenarios. The network location is determined automatically by the **Request State Store** task.  
+- No user state configuration settings can be or need to be specified using the CustomSettings.ini file for Configuration Manager scenarios. The network location is determined automatically by the **Request State Store** task.  
 
--   In Configuration Manager deployments, you can install multiple application packages on a computer by specifying them in the CustomSettings.ini file according to the following parameters:  
+- In Configuration Manager deployments, you can install multiple application packages on a computer by specifying them in the CustomSettings.ini file according to the following parameters:  
 
-    -   Specify a base variable named PACKAGES in the task sequence in the **Install Software** task.  
+  -   Specify a base variable named PACKAGES in the task sequence in the **Install Software** task.  
 
-    -   Each PACKAGES variable name should have a suffix starting with *001*.  
+  -   Each PACKAGES variable name should have a suffix starting with *001*.  
 
-    -   The **PACKAGESxxx** value should have the format *PACKAGEID:ProgramName* (use a colon between items).  
+  -   The **PACKAGESxxx** value should have the format *PACKAGEID:ProgramName* (use a colon between items).  
 
-    -   The **ProgramName** value is case-sensitive.  
+  -   The **ProgramName** value is case-sensitive.  
 
-         The following is an example of specifying packages in CustomSettings.ini:  
+       The following is an example of specifying packages in CustomSettings.ini:  
 
-        ```  
-        PACKAGES001=DEP0002B:Install Office 2007  
-        PACKAGES002=DEP00011:Install Office Communicator  
+      ```  
+      PACKAGES001=DEP0002B:Install Office 2007  
+      PACKAGES002=DEP00011:Install Office Communicator  
 
-        ```  
+      ```  
 
--   In LTI New Computer deployments, applications marked as hidden in the Deployment Workbench are not installed when you do not skip the Application page in the Deployment Wizard and specify the application globally unique identifier (GUID) in CustomSettings.ini. Specify hidden applications using the **MandatoryApplications** property instead of the **Applications** property.  
+- In LTI New Computer deployments, applications marked as hidden in the Deployment Workbench are not installed when you do not skip the Application page in the Deployment Wizard and specify the application globally unique identifier (GUID) in CustomSettings.ini. Specify hidden applications using the **MandatoryApplications** property instead of the **Applications** property.  
 
--   Close the Configuration Manager console before running the integration option from MDT. Otherwise, some files may not be properly updated.  
+- Close the Configuration Manager console before running the integration option from MDT. Otherwise, some files may not be properly updated.  
 
--   During the Scanstate and Loadstate processes, multiple copies of log files may be created. You can use a new USMT template for excluding the log files or log directories while running Scanstate and Loadstate.  
+- During the Scanstate and Loadstate processes, multiple copies of log files may be created. You can use a new USMT template for excluding the log files or log directories while running Scanstate and Loadstate.  
 
--   New Computer and Replace Computer deployment scenarios format Disk 0 by default. Using MDT on computers with original equipment manufacturer (OEM) partitions or multiple fixed or external hard disks may require additional configuration and scripting in addition to thorough testing.  
+- New Computer and Replace Computer deployment scenarios format Disk 0 by default. Using MDT on computers with original equipment manufacturer (OEM) partitions or multiple fixed or external hard disks may require additional configuration and scripting in addition to thorough testing.  
 
--   The Task Sequencer will not accept XML files that contain Unicode content (from an XML file encoded as UTF-8). Attempting to do use XML files results in a task sequence failure. The Task Sequencer does not properly deal with encoded UTF-7 data: It does not cause a failure, but it does cause the data to be translated unexpectedly.  
+- The Task Sequencer will not accept XML files that contain Unicode content (from an XML file encoded as UTF-8). Attempting to do use XML files results in a task sequence failure. The Task Sequencer does not properly deal with encoded UTF-7 data: It does not cause a failure, but it does cause the data to be translated unexpectedly.  
 
--   After uninstalling MDT using the Control Panel Add or Remove Programs item, the Distribution share directory (if created) must be removed manually. MDT does not remove files or folders that it did not initially install.  
+- After uninstalling MDT using the Control Panel Add or Remove Programs item, the Distribution share directory (if created) must be removed manually. MDT does not remove files or folders that it did not initially install.  
 
--   When using MDT extensions (add-in wizards) with Configuration Manager, MDT must be installed on every server running Configuration Manager used to administer operating system deployments.  
+- When using MDT extensions (add-in wizards) with Configuration Manager, MDT must be installed on every server running Configuration Manager used to administer operating system deployments.  
 
--   The **Priority** property in CustomSettings.ini has no maximum line length. However, if the property name is longer than 55 characters when the Configure Database Wizard runs, the wizard will truncate the **Priority** property, and you will need to manually edit the property. As a workaround, run the Configure Database Wizard before performing any other customization, or clear the check boxes for queries in the wizard that are not needed.  
+- The **Priority** property in CustomSettings.ini has no maximum line length. However, if the property name is longer than 55 characters when the Configure Database Wizard runs, the wizard will truncate the **Priority** property, and you will need to manually edit the property. As a workaround, run the Configure Database Wizard before performing any other customization, or clear the check boxes for queries in the wizard that are not needed.  
 
--   MDT supports deployment from a UFD. See the Windows ADK for information about preparing the device, then copy (using the**xcopy** command) all files and folders from the \Media\content folder to the UFD.  
+- MDT supports deployment from a UFD. See the Windows ADK for information about preparing the device, then copy (using the**xcopy** command) all files and folders from the \Media\content folder to the UFD.  
 
--   Dialing properties that are not configured, even if present in the answer file, include the country/region code, area code, long-distance access, and dialing rules. To work around this issue, configure dialing rules by creating and testing a .reg file in a lab environment, and then import that .reg file as a custom task during the task sequence.  
+- Dialing properties that are not configured, even if present in the answer file, include the country/region code, area code, long-distance access, and dialing rules. To work around this issue, configure dialing rules by creating and testing a .reg file in a lab environment, and then import that .reg file as a custom task during the task sequence.  
 
 ####  <a name="ReviewGeneralKnownIssuesLimitationsandRecommendationsThatRelatetoWindows"></a> Review Known Issues, Limitations, and Recommendations That Relate to Windows  
  The following is a list of known issues, limitations, and recommendations that relate to Windows:  
@@ -689,23 +689,23 @@ Table 4 lists the advantages and disadvantages of the thick, thin, and hybrid im
 ####  <a name="ReviewGeneralKnownIssuesLimitationsandRecommendationsThatRelatetoBitLocker"></a> Review Known Issues, Limitations, and Recommendations That Relate to BitLocker  
  The following is a list of known issues, limitations, and recommendations that relate to BitLocker:  
 
--   Windows Server may crash if the operating system image used to perform the deployment does not have the optional BitLocker component. This situation can occur in the following scenarios:  
+- Windows Server may crash if the operating system image used to perform the deployment does not have the optional BitLocker component. This situation can occur in the following scenarios:  
 
-    -   Performing the MDT Refresh Computer deployment scenario (in LTI, ZTI, or UDI), where BitLocker is enabled on the existing operating system. In this situation, BitLocker is suspended in the existing operating system by MDT, but without the optional component in the new operating system image, Windows is unable to boot from the disk on which BitLocker is suspended.  
+  - Performing the MDT Refresh Computer deployment scenario (in LTI, ZTI, or UDI), where BitLocker is enabled on the existing operating system. In this situation, BitLocker is suspended in the existing operating system by MDT, but without the optional component in the new operating system image, Windows is unable to boot from the disk on which BitLocker is suspended.  
 
-    -   Performing the MDT New Computer deployment scenario (in LTI, ZTI, or UDI) on a Trusted Platform Module–enabled server on which BitLocker has been enabled. In this situation, BitLocker will be enabled offline using BitLocker pre-provisioning, but without the BitLocker optional component in the new operating system image, the new operating system is unable to boot from the disk on which BitLocker has been pre-provisioned.  
+  - Performing the MDT New Computer deployment scenario (in LTI, ZTI, or UDI) on a Trusted Platform Module–enabled server on which BitLocker has been enabled. In this situation, BitLocker will be enabled offline using BitLocker pre-provisioning, but without the BitLocker optional component in the new operating system image, the new operating system is unable to boot from the disk on which BitLocker has been pre-provisioned.  
 
-     The workaround for any of these situations is to deploy a custom operating system image that includes the BitLocker component in the image.  
+    The workaround for any of these situations is to deploy a custom operating system image that includes the BitLocker component in the image.  
 
--   If you want to use an alphanumeric PIN for BitLocker during deployment, you must enable the **Allow enhanced PINs for Startup** group policy setting. The**Allow enhanced PINs for Startup** group policy setting is located in Computer Configuration/Policies/Administrative Templates/Windows Components/BitLocker Drive Encryption/Operating System Drives.  
+- If you want to use an alphanumeric PIN for BitLocker during deployment, you must enable the **Allow enhanced PINs for Startup** group policy setting. The**Allow enhanced PINs for Startup** group policy setting is located in Computer Configuration/Policies/Administrative Templates/Windows Components/BitLocker Drive Encryption/Operating System Drives.  
 
--   If a BitLocker recovery prompt appears after restarting the target computer (because the BitLocker key required to unlock the volume could not be obtained), work around the problem by using one of the following approaches:  
+- If a BitLocker recovery prompt appears after restarting the target computer (because the BitLocker key required to unlock the volume could not be obtained), work around the problem by using one of the following approaches:  
 
-    -   Remove the media (such as the deployment DVD) while Windows PE is still running. Doing so prevents the operating system from seeing the DVD when it starts.  
+  -   Remove the media (such as the deployment DVD) while Windows PE is still running. Doing so prevents the operating system from seeing the DVD when it starts.  
 
-    -   Change the boot order of the computer so that the DVD drive follows the hard disk.  
+  -   Change the boot order of the computer so that the DVD drive follows the hard disk.  
 
-    -   Deploy the computer with no startup media; for example, use a Pre-Boot Execution Environment (PXE) deployment.  
+  -   Deploy the computer with no startup media; for example, use a Pre-Boot Execution Environment (PXE) deployment.  
 
 ####  <a name="ReviewKnownIssuesLimitationsandRecommendationsforLTIDeployments"></a> Review Known Issues, Limitations, and Recommendations for LTI Deployments  
  The following is a list of known issues, limitations, and recommendations that relate to LTI deployments:  
@@ -761,37 +761,37 @@ Table 4 lists the advantages and disadvantages of the thick, thin, and hybrid im
 ####  <a name="ReviewKnownIssuesLimitationsandRecommendationsforSavingandRestoringUserInformation"></a> Review Known Issues, Limitations, and Recommendations for Saving and Restoring User Information  
  The following is a list of known issues, limitations, and recommendations for saving and restoring user information in MDT:  
 
--   For LTI deployments, do not add any of the following USMT command-line parameters to the **ScanStateArgs** or **LoadStateArgs** properties, as they cause the saving and restoration of user state information to fail:  
+- For LTI deployments, do not add any of the following USMT command-line parameters to the **ScanStateArgs** or **LoadStateArgs** properties, as they cause the saving and restoration of user state information to fail:  
 
-    -   **/hardlink**  
+  -   **/hardlink**  
 
-    -   **/nocompress**  
+  -   **/nocompress**  
 
-    -   **/encrypt**  
+  -   **/encrypt**  
 
-    -   **/key**  
+  -   **/key**  
 
-    -   **/keyfile**  
+  -   **/keyfile**  
 
-    -   **/vsc**  
+  -   **/vsc**  
 
-    -   **/l**  
+  -   **/l**  
 
-    -   **/I**  
+  -   **/I**  
 
--   User state migration data may not be restored properly depending on the disk configuration of the target computer when deploying Windows.  
+- User state migration data may not be restored properly depending on the disk configuration of the target computer when deploying Windows.  
 
-     This issue can occur when the target computer has two physical hard disks, Disk_0 and Disk_1. Disk_0 contains the C volume, which is encrypted using BitLocker. The MDT deployment process is configured to deploy a new operating system to Disk_1. The problems in the deployment process occur as follows:  
+   This issue can occur when the target computer has two physical hard disks, Disk_0 and Disk_1. Disk_0 contains the C volume, which is encrypted using BitLocker. The MDT deployment process is configured to deploy a new operating system to Disk_1. The problems in the deployment process occur as follows:  
 
-    -   Early the deployment process, the minint and smstasksequence folders are copied to the existing C volume, which is encrypted.  
+  - Early the deployment process, the minint and smstasksequence folders are copied to the existing C volume, which is encrypted.  
 
-    -   Disk_1 is partitioned and formatted properly in preparation for deploying the target operating system.  
+  - Disk_1 is partitioned and formatted properly in preparation for deploying the target operating system.  
 
-    -   The target operating system is installed on the new partition and disk volume on Disk_1.  
+  - The target operating system is installed on the new partition and disk volume on Disk_1.  
 
-    -   During the State Restore Phase, the original C volume is not assigned a drive letter, so the task sequence steps in the State Restore Phase cannot access the minint and smstasksequence folders on the BitLocker-encrypted drive. The restoration of the user state migration data fails.  
+  - During the State Restore Phase, the original C volume is not assigned a drive letter, so the task sequence steps in the State Restore Phase cannot access the minint and smstasksequence folders on the BitLocker-encrypted drive. The restoration of the user state migration data fails.  
 
-     The result is that the target operating system is installed, but the restoration of the user state migration data fails.  
+    The result is that the target operating system is installed, but the restoration of the user state migration data fails.  
 
 ### Overview of UDI  
  Typically, when deploying operating systems using the OSD feature in Configuration Manager and ZTI in MDT you must provide all the information necessary to deploy the operating system. Prior to performing the deployment, the information is configured in configuration files or in databases (such as the CustomSettings.ini file or the MDT DB). During the ZTI deployment process, ZTI converts the appropriate configuration settings to task sequence variables, which are consumed by the MDT task sequences for UDI. All of the configuration settings must be provided before you can initiate the deployment.  
@@ -822,33 +822,33 @@ Table 4 lists the advantages and disadvantages of the thick, thin, and hybrid im
 ###  <a name="ReviewingKnownIssuesLimitationsandRecommendationsforInstallingorUpgradingtoMDT"></a> Reviewing Known Issues, Limitations, and Recommendations for Installing or Upgrading to MDT  
  The following is a list of known issues, limitations, and recommendations for installing MDT:  
 
--   Ensure that the disk volume that contains the temporary folder that the Deployment Workbench uses has at least 20 GB of available disk space.  
+- Ensure that the disk volume that contains the temporary folder that the Deployment Workbench uses has at least 20 GB of available disk space.  
 
-     The Deployment Workbench creates large images and requires temporary storage during the image-creation process. The Deployment Workbench determines the temporary folder to use by performing the following steps:  
+   The Deployment Workbench creates large images and requires temporary storage during the image-creation process. The Deployment Workbench determines the temporary folder to use by performing the following steps:  
 
-    1.  Use the temporary folder specified in the **Temp_Dir** registry subkey, which is located at **HKEY_LOCAL_MACHINE\Software\Microsoft\Deployment 4**. Create the **Temp_Dir** registry subkey as a **REG_SZ** type that contains the fully qualified path to the folder to be used as the temporary folder.  
+  1. Use the temporary folder specified in the **Temp_Dir** registry subkey, which is located at **HKEY_LOCAL_MACHINE\Software\Microsoft\Deployment 4**. Create the **Temp_Dir** registry subkey as a **REG_SZ** type that contains the fully qualified path to the folder to be used as the temporary folder.  
 
-    2.  If the **TEMP_DIR** registry subkey does not exist, then the Deployment Workbench uses the folder specified in the %TEMP% environment variable.  
+  2. If the **TEMP_DIR** registry subkey does not exist, then the Deployment Workbench uses the folder specified in the %TEMP% environment variable.  
 
      Ensure that the disk volume specified in the **TEMP_DIR** registry subkey or in the %TEMP% environment variable has sufficient available disk space.  
 
 ###  <a name="PreparingthePrerequisiteInfrastructureforAllMDTDeploymentMethods"></a> Preparing the Prerequisite Infrastructure for All MDT Deployment Methods  
  MDT requires installation of the following software for LTI, ZTI, and UDI:  
 
--   Microsoft .NET Framework version 3.5 with SP1  
+- Microsoft .NET Framework version 3.5 with SP1  
 
--   Windows PowerShell version 2.0  
+- Windows PowerShell version 2.0  
 
- For specifics about how to prepare your environment specifically for LTI, ZTI, or UDI, see the following sections:  
+  For specifics about how to prepare your environment specifically for LTI, ZTI, or UDI, see the following sections:  
 
--   [Preparing the LTI Deployment Environment](#PreparingtheLTIDeploymentEnvironment)  
+- [Preparing the LTI Deployment Environment](#PreparingtheLTIDeploymentEnvironment)  
 
--   [Preparing the ZTI Deployment Environment for Configuration Manager](#PreparingtheZTIDeploymentEnvironmentforConfigurationManager)  
+- [Preparing the ZTI Deployment Environment for Configuration Manager](#PreparingtheZTIDeploymentEnvironmentforConfigurationManager)  
 
--   [Preparing the UDI Deployment Environment](#PreparingtheUDIDeploymentEnvironment)  
+- [Preparing the UDI Deployment Environment](#PreparingtheUDIDeploymentEnvironment)  
 
 ###  <a name="InstallingaNewInstanceofMDT"></a> Installing a New Instance of MDT  
- With all the prerequisite software installed, perform the following steps to install MDT (MicrosoftDeploymentToolkit_*platform.*msi, where *platform* is either x86 or x64):  
+ With all the prerequisite software installed, perform the following steps to install MDT (MicrosoftDeploymentToolkit_<em>platform.</em>msi, where *platform* is either x86 or x64):  
 
 1.  Double-click **MicrosoftDeploymentToolkit2012_x64.msi** (for 64-bit operating systems) or **MicrosoftDeploymentToolkit2012_x86.msi** (for 32-bit operating systems).  
 
@@ -872,9 +872,9 @@ Table 4 lists the advantages and disadvantages of the thick, thin, and hybrid im
 ###  <a name="UpgradingtoMDT"></a> Upgrading to MDT  
  MDT automatically uninstalls previous versions before installing, including the following versions:  
 
--   MDT 2012 Update 1  
+- MDT 2012 Update 1  
 
- In addition to upgrading the MDT installation, upgrade any existing deployment shares. For more information on this process, see [Upgrade an Existing Deployment Share in the Deployment Workbench](#UpgradeanExistingDeploymentShareintheDeploymentWorkbench).  
+  In addition to upgrading the MDT installation, upgrade any existing deployment shares. For more information on this process, see [Upgrade an Existing Deployment Share in the Deployment Workbench](#UpgradeanExistingDeploymentShareintheDeploymentWorkbench).  
 
 ##  <a name="PerformingLTIDeployments"></a> Performing LTI Deployments  
  You perform LTI deployments using only MDT and supporting components. You can perform LTI deployments over a network or from removable media. This flexibility makes LTI deployments appropriate for a wide range of organizations.  
@@ -945,51 +945,51 @@ Table 10 lists the top-level nodes in the Deployment Workbench and the types of 
 
 ###### To download and install Deployment Workbench components  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Information Center/Components.  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Information Center/Components.  
 
-3.  In the Components pane, in the **Available for Download** section, click **component_name** (where *component_name* is the name of the component you want to download).  
+3. In the Components pane, in the **Available for Download** section, click **component_name** (where *component_name* is the name of the component you want to download).  
 
-4.  In the details pane, click **Download**.  
+4. In the details pane, click **Download**.  
 
-     After downloading the component from the Internet, the component is listed in the **Downloaded** section in the details pane.  
+    After downloading the component from the Internet, the component is listed in the **Downloaded** section in the details pane.  
 
-5.  In the details pane, in the **Download** section, click the downloaded component, and then click **Install**.  
+5. In the details pane, in the **Download** section, click the downloaded component, and then click **Install**.  
 
-    > [!NOTE]
-    >  If there is no **Install** button, the component cannot be installed or the installation is not necessary.  
+   > [!NOTE]
+   >  If there is no **Install** button, the component cannot be installed or the installation is not necessary.  
 
-     The installation process for the respective component is initiated. Complete the installation process for the component using the instructions provided for the component.  
+    The installation process for the respective component is initiated. Complete the installation process for the component using the instructions provided for the component.  
 
-     After the component is installed, the component appears in the **Installed** section of the details pane. If the component cannot be installed or you did not choose to install it, the component remains in the **Downloaded** section.  
+    After the component is installed, the component appears in the **Installed** section of the details pane. If the component cannot be installed or you did not choose to install it, the component remains in the **Downloaded** section.  
 
- MDT uses the Windows ADK for Windows 8.1 which includes USMT.  
+   MDT uses the Windows ADK for Windows 8.1 which includes USMT.  
 
 ####  <a name="ObtaintheSoftwareThattheLTIDeploymentProcessRequiresh"></a> Obtain the Software That the LTI Deployment Process Requires  
  Collect the software that LTI will deploy. LTI will import or add this software to deployment shares. The software that can be deployed includes:  
 
--   Operating system source files or image files for each operating system to be deployed to the reference and target computers  
+- Operating system source files or image files for each operating system to be deployed to the reference and target computers  
 
--   Operating system packages for the operating systems, such as security updates, feature packs, or language packs  
+- Operating system packages for the operating systems, such as security updates, feature packs, or language packs  
 
--   Device drivers for the reference and target computers that are not included as a part of the operating system  
+- Device drivers for the reference and target computers that are not included as a part of the operating system  
 
--   Applications that are to be installed as a part of the operating system image or during the deployment of the reference image  
+- Applications that are to be installed as a part of the operating system image or during the deployment of the reference image  
 
- The Task Sequencer used in MDT deployments requires that the Create Global Object right be assigned to credentials used to access and run the Deployment Workbench and the deployment process. This right is typically available to accounts with Administrator-level permissions (unless explicitly removed). Also, the Specialized Security – Limited Functionality (SSLF) security profile, which is part of the Windows security baselines, removes the Create Global Object right and should not be applied to computers being deployed using MDT.  
+  The Task Sequencer used in MDT deployments requires that the Create Global Object right be assigned to credentials used to access and run the Deployment Workbench and the deployment process. This right is typically available to accounts with Administrator-level permissions (unless explicitly removed). Also, the Specialized Security – Limited Functionality (SSLF) security profile, which is part of the Windows security baselines, removes the Create Global Object right and should not be applied to computers being deployed using MDT.  
 
- In addition, LTI requires that the:  
+  In addition, LTI requires that the:  
 
--   Local Administrator account on the target computer be enabled  
+- Local Administrator account on the target computer be enabled  
 
--   Local Administrator account be granted the Create Global Objects right  
+- Local Administrator account be granted the Create Global Objects right  
 
--   Local Administrator account not have UAC enabled  
+- Local Administrator account not have UAC enabled  
 
--   Ability to have an account automatically log on to the target computer be enabled and not blocked using Group Policy or a local security policy  
+- Ability to have an account automatically log on to the target computer be enabled and not blocked using Group Policy or a local security policy  
 
--   Logon banner for the target computers not be enabled using Group Policy or a local security policy  
+- Logon banner for the target computers not be enabled using Group Policy or a local security policy  
 
 ###  <a name="PreparingforLTIDeploymenttotheReferenceComputer"></a> Preparing for LTI Deployment to the Reference Computer  
  For many of the LTI deployment scenarios, best practice is to create a reference computer as described in [Choosing Thick, Thin, or Hybrid Images](#ChoosingThickThinorHybridImages), and then capture an image of that computer. Later in the LTI deployment process, you will deploy the captured image of your reference computer to the appropriate target computers.  
@@ -1003,46 +1003,46 @@ Table 10 lists the top-level nodes in the Deployment Workbench and the types of 
 
 ##### To prepare for deployment to the reference computer  
 
-1.  Create a new deployment share, or upgrade an existing deployment share.For more information about:  
+1. Create a new deployment share, or upgrade an existing deployment share.For more information about:  
 
-    -   Creating a new deployment share, see [Create a New Deployment Share in the Deployment Workbench](#CreateaNewDeploymentShareintheDeploymentWorkbench)  
+   -   Creating a new deployment share, see [Create a New Deployment Share in the Deployment Workbench](#CreateaNewDeploymentShareintheDeploymentWorkbench)  
 
-    -   Upgrading an existing deployment share, see [Upgrade an Existing Deployment Share in the Deployment Workbench](#UpgradeanExistingDeploymentShareintheDeploymentWorkbench)  
+   -   Upgrading an existing deployment share, see [Upgrade an Existing Deployment Share in the Deployment Workbench](#UpgradeanExistingDeploymentShareintheDeploymentWorkbench)  
 
-2.  Configure the deployment share to contain the appropriate software for deployment to the reference computer, including the following:  
+2. Configure the deployment share to contain the appropriate software for deployment to the reference computer, including the following:  
 
-    -   Configuring operating systems as described in [Configuring Operating Systems in the Deployment Workbench](#ConfiguringOperatingSystemsintheDeploymentWorkbench)  
+   -   Configuring operating systems as described in [Configuring Operating Systems in the Deployment Workbench](#ConfiguringOperatingSystemsintheDeploymentWorkbench)  
 
-    -   Configuring applications as described in [View and Configure an Application in the Deployment Workbench](#ViewandConfigureanApplicationintheDeploymentWorkbench)  
+   -   Configuring applications as described in [View and Configure an Application in the Deployment Workbench](#ViewandConfigureanApplicationintheDeploymentWorkbench)  
 
-    -   Configuring operating system packages as described in [Configuring Packages in the Deployment Workbench](#ConfiguringPackagesintheDeploymentWorkbench)  
+   -   Configuring operating system packages as described in [Configuring Packages in the Deployment Workbench](#ConfiguringPackagesintheDeploymentWorkbench)  
 
-    -   Configuring device drivers as described in [Configuring Device Drivers in the Deployment Workbench](#ConfiguringDeviceDriversintheDeploymentWorkbench)  
+   -   Configuring device drivers as described in [Configuring Device Drivers in the Deployment Workbench](#ConfiguringDeviceDriversintheDeploymentWorkbench)  
 
-3.  Create a new task sequence that will deploy the target operating system to the reference computer as described in:  
+3. Create a new task sequence that will deploy the target operating system to the reference computer as described in:  
 
-    -   [Configuring Task Sequences in the Deployment Workbench](#ConfiguringTaskSequencesintheDeploymentWorkbench)  
+   - [Configuring Task Sequences in the Deployment Workbench](#ConfiguringTaskSequencesintheDeploymentWorkbench)  
 
-    -   [Configuring LTI Task Sequence Steps in the Deployment Workbench](#ConfiguringLTITaskSequenceStepsintheDeploymentWorkbench)  
+   - [Configuring LTI Task Sequence Steps in the Deployment Workbench](#ConfiguringLTITaskSequenceStepsintheDeploymentWorkbench)  
 
      The LTI deployment process is unable to perform Sysprep operations on a target computer that is encrypted using BitLocker. Ensure that you do not enable BitLocker on the reference computer. Enable BitLocker on the target computers only after the target operating system is completely deployed.  
 
-    > [!TIP]
-    >  Create the task sequence for deploying to the reference computer based on the Standard Client Task Sequence template, included in MDT.  
+   > [!TIP]
+   >  Create the task sequence for deploying to the reference computer based on the Standard Client Task Sequence template, included in MDT.  
 
-4.  Customize the MDT configuration files to the needs of your organization as described in [Configuring MDT Deployments](#ConfiguringMDTDeployments).  
+4. Customize the MDT configuration files to the needs of your organization as described in [Configuring MDT Deployments](#ConfiguringMDTDeployments).  
 
-5.  Configure any Windows PE options for the deployment share as described in:  
+5. Configure any Windows PE options for the deployment share as described in:  
 
-    -   [Configure the Deployment Share Properties Windows PE x86 Settings Tab](#ConfiguretheDeploymentSharePropertiesWindowsPEx86SettingsTab)  
+   -   [Configure the Deployment Share Properties Windows PE x86 Settings Tab](#ConfiguretheDeploymentSharePropertiesWindowsPEx86SettingsTab)  
 
-    -   [Configure the Deployment Share Properties Windows PE x86 Components Tab](#ConfiguretheDeploymentSharePropertiesWindowsPEx86ComponentsTab)  
+   -   [Configure the Deployment Share Properties Windows PE x86 Components Tab](#ConfiguretheDeploymentSharePropertiesWindowsPEx86ComponentsTab)  
 
-    -   [Configure the Deployment Share Properties Windows PE x64 Settings Tab](#ConfiguretheDeploymentSharePropertiesWindowsPEx64SettingsTab)  
+   -   [Configure the Deployment Share Properties Windows PE x64 Settings Tab](#ConfiguretheDeploymentSharePropertiesWindowsPEx64SettingsTab)  
 
-    -   [Configure the Deployment Share Properties Windows PE x64 Components Tab](#ConfiguretheDeploymentSharePropertiesWindowsPEx64ComponentsTab)  
+   -   [Configure the Deployment Share Properties Windows PE x64 Components Tab](#ConfiguretheDeploymentSharePropertiesWindowsPEx64ComponentsTab)  
 
-6.  Update the deployment share to create the Windows PE images used to start LTI deployment as described in [Update a Deployment Share in the Deployment Workbench](#UpdateaDeploymentShareintheDeploymentWorkbench).  
+6. Update the deployment share to create the Windows PE images used to start LTI deployment as described in [Update a Deployment Share in the Deployment Workbench](#UpdateaDeploymentShareintheDeploymentWorkbench).  
 
 ###  <a name="DeployingToandCapturinganImageoftheReferenceComputerinLTI"></a> Deploying To and Capturing an Image of the Reference Computer in LTI  
  After you have configured the deployment share, updated the deployment share, and created the Windows PE images that include the LTI scripts, start the reference computer with the Windows PE image, and complete the Deployment Wizard. The task sequence you created earlier in the process will deploy the target operating system, device drivers, operating system packages, and applications to the reference computer, and then capture an image of the reference computer.  
@@ -1079,29 +1079,29 @@ Table 10 lists the top-level nodes in the Deployment Workbench and the types of 
 
 ###### To complete the Deployment Wizard  
 
-1.  Start the reference computer with the LTI bootable media you created earlier in the process.  
+1. Start the reference computer with the LTI bootable media you created earlier in the process.  
 
-     Windows PE starts, and then the Deployment Wizard starts.  
+    Windows PE starts, and then the Deployment Wizard starts.  
 
-2.  Complete the Deployment Wizard as described in [Running the Deployment Wizard](#RunningtheDeploymentWizard), ensuring that you specifically follow the configuration settings on the wizard pages listed in Table 11 and selecting the values on the other wizard pages appropriate to your organization.  
+2. Complete the Deployment Wizard as described in [Running the Deployment Wizard](#RunningtheDeploymentWizard), ensuring that you specifically follow the configuration settings on the wizard pages listed in Table 11 and selecting the values on the other wizard pages appropriate to your organization.  
 
-    ### Table 11. Information for Completing the Deployment Wizard  
+   ### Table 11. Information for Completing the Deployment Wizard  
 
-    |**On this wizard page** |**Do this** |  
-    |-----------------------------|-----------------|  
-    |**Select a task sequence to execute on this computer** |Select the task sequence you created for the reference computer deployment.|  
-    |**Join the computer to a domain or workgroup** |Join a workgroup.<br /><br /> Joining the reference computer to a domain causes problems when deploying the captured image of the reference computer to target computers. The most common symptom of trouble is that the deployment process halts, because the LTI process is not able to automatically log on.|  
-    |**Specify whether to capture an image** |Click **Capture an image of this reference computer**, and provide the fully qualified Universal Naming Convention (UNC) path for the name of the captured Windows Imaging Format (WIM) image, including the WIM file name.|  
+   |**On this wizard page** |**Do this** |  
+   |-----------------------------|-----------------|  
+   |**Select a task sequence to execute on this computer** |Select the task sequence you created for the reference computer deployment.|  
+   |**Join the computer to a domain or workgroup** |Join a workgroup.<br /><br /> Joining the reference computer to a domain causes problems when deploying the captured image of the reference computer to target computers. The most common symptom of trouble is that the deployment process halts, because the LTI process is not able to automatically log on.|  
+   |**Specify whether to capture an image** |Click **Capture an image of this reference computer**, and provide the fully qualified Universal Naming Convention (UNC) path for the name of the captured Windows Imaging Format (WIM) image, including the WIM file name.|  
 
-     The wizard starts, and the operating system deployment starts. At the end of the deployment process, the **Deployment Summary** dialog box appears.  
+    The wizard starts, and the operating system deployment starts. At the end of the deployment process, the **Deployment Summary** dialog box appears.  
 
-3.  In the **Deployment Summary** dialog box, click **Details**.  
+3. In the **Deployment Summary** dialog box, click **Details**.  
 
-     If any errors or warnings occur, review them, and record any diagnostic information. For more information about the errors or warnings, see the MDT document *Troubleshooting Reference.*  
+    If any errors or warnings occur, review them, and record any diagnostic information. For more information about the errors or warnings, see the MDT document *Troubleshooting Reference.*  
 
-4.  In the **Deployment Summary** dialog box, click **Finish**.  
+4. In the **Deployment Summary** dialog box, click **Finish**.  
 
- The reference computer is now deployed, and the captured WIM file of the reference computer is stored in the location you specified on the **Specify whether to capture an image** wizard page.  
+   The reference computer is now deployed, and the captured WIM file of the reference computer is stored in the location you specified on the **Specify whether to capture an image** wizard page.  
 
 ####  <a name="AddtheCapturedImageoftheReferenceComputertotheDeploymentWorkbench"></a> Add the Captured Image of the Reference Computer to the Deployment Workbench  
  To deploy the captured image of the reference computer to the target computer, add the captured image to the list of operating systems in the Operating Systems node in the Deployment Workbench. The Import Operating System Wizard copies the operating system files to the *deployment_share*\Operating Systems\\*operating_system* folder (where *deployment_share* is the deployment share folder created earlier in the process and *operating_system* is the name of the operating system added to the deployment share).  
@@ -1121,19 +1121,19 @@ Table 10 lists the top-level nodes in the Deployment Workbench and the types of 
 
 ##### To prepare for deployment to the target computers  
 
-1.  Prepare network shares for storing migration data and MDT deployment logs as described in [Preparing the MDT Migration Resources](#PreparingtheMDTMigrationResources).  
+1. Prepare network shares for storing migration data and MDT deployment logs as described in [Preparing the MDT Migration Resources](#PreparingtheMDTMigrationResources).  
 
-2.  Create additional deployment shares to help in larger deployments as described in [Create a New Deployment Share in the Deployment Workbench](#CreateaNewDeploymentShareintheDeploymentWorkbench).  
+2. Create additional deployment shares to help in larger deployments as described in [Create a New Deployment Share in the Deployment Workbench](#CreateaNewDeploymentShareintheDeploymentWorkbench).  
 
-3.  Optionally, prepare Windows Deployment Services to start the appropriate Windows PE images that will in turn start LTI deployment to the target computers as described in [Preparing Windows Deployment Services for LTI Deployments](#PreparingWindowsDeploymentServicesforLTIDeployments) (if you are using Windows Deployment Services to start the process).  
+3. Optionally, prepare Windows Deployment Services to start the appropriate Windows PE images that will in turn start LTI deployment to the target computers as described in [Preparing Windows Deployment Services for LTI Deployments](#PreparingWindowsDeploymentServicesforLTIDeployments) (if you are using Windows Deployment Services to start the process).  
 
-4.  Prepare the MDT task sequences, the MDT configuration files, and the MDT DB for each deployment scenario as described in:  
+4. Prepare the MDT task sequences, the MDT configuration files, and the MDT DB for each deployment scenario as described in:  
 
-    -   [Prepare for the New Computer Deployment Scenario to Target Computers Using LTI](#PreparefortheNewComputerDeploymentScenariotoTargetComputersUsingLTI)  
+   - [Prepare for the New Computer Deployment Scenario to Target Computers Using LTI](#PreparefortheNewComputerDeploymentScenariotoTargetComputersUsingLTI)  
 
-    -   [Prepare for a Refresh Computer Deployment Scenario to Target Computers Using LTI](#PrepareforaRefreshComputerDeploymentScenariotoTargetComputersUsingLTI)  
+   - [Prepare for a Refresh Computer Deployment Scenario to Target Computers Using LTI](#PrepareforaRefreshComputerDeploymentScenariotoTargetComputersUsingLTI)  
 
-    -   [Prepare for a Replace Computer Deployment Scenario to Target Computers Using LTI](#PrepareforaReplaceComputerDeploymentScenariotoTargetComputersUsingLTI)  
+   - [Prepare for a Replace Computer Deployment Scenario to Target Computers Using LTI](#PrepareforaReplaceComputerDeploymentScenariotoTargetComputersUsingLTI)  
 
      Depending on the target computers in your organization, any combination of the deployments scenarios might be necessary. For more information about the MDT deployment scenarios, see [Identifying Deployment Scenarios](#IdentifyingDeploymentScenarios).  
 
@@ -1285,69 +1285,69 @@ Table 10 lists the top-level nodes in the Deployment Workbench and the types of 
 ###  <a name="DeployingCapturedImagestoTargetComputersinLTI"></a> Deploying Captured Images to Target Computers in LTI  
  The deployment of the captured images to the target computers is slightly different for LTI. Deploy the captured image of the reference computer to target computers for each of the deployment scenarios in your organization as described in:  
 
--   [Deploy Captured Images to Target Computers in the New Computer Deployment Scenario Using LTI](#DeployCapturedImagestoTargetComputersintheNewComputerDeploymentScenarioUsingLTI)  
+- [Deploy Captured Images to Target Computers in the New Computer Deployment Scenario Using LTI](#DeployCapturedImagestoTargetComputersintheNewComputerDeploymentScenarioUsingLTI)  
 
--   [Deploy Captured Images to Target Computers in a Refresh Computer Deployment Scenario Using LTI](#DeployCapturedImagestoTargetComputersinaRefreshComputerDeploymentScenarioUsingLTI)  
+- [Deploy Captured Images to Target Computers in a Refresh Computer Deployment Scenario Using LTI](#DeployCapturedImagestoTargetComputersinaRefreshComputerDeploymentScenarioUsingLTI)  
 
--   [Deploy Captured Images to Target Computers in a Replace Computer Deployment Scenario Using LTI](#DeployCapturedImagestoTargetComputersinaReplaceComputerDeploymentScenarioUsingLTI)  
+- [Deploy Captured Images to Target Computers in a Replace Computer Deployment Scenario Using LTI](#DeployCapturedImagestoTargetComputersinaReplaceComputerDeploymentScenarioUsingLTI)  
 
- Depending on the target computers in your organization, any combination of the deployment scenarios might be necessary. For more information about the MDT deployment scenarios, see [Identifying Deployment Scenarios](#IdentifyingDeploymentScenarios).  
+  Depending on the target computers in your organization, any combination of the deployment scenarios might be necessary. For more information about the MDT deployment scenarios, see [Identifying Deployment Scenarios](#IdentifyingDeploymentScenarios).  
 
 ####  <a name="DeployCapturedImagestoTargetComputersintheNewComputerDeploymentScenarioUsingLTI"></a> Deploy Captured Images to Target Computers in the New Computer Deployment Scenario Using LTI  
  Start the target computer with the LTI bootable media you created earlier in the process or from Windows Deployment Services. The LTI bootable media starts Windows PE on the target computer and initiates deployment. At the end of the process, the captured image of the reference computer is deployed on the target computers.  
 
 ###### To complete the Deployment Wizard  
 
-1.  Start the reference computer with the LTI bootable media you created earlier in the process or from Windows Deployment Services.  
+1. Start the reference computer with the LTI bootable media you created earlier in the process or from Windows Deployment Services.  
 
-     Windows PE starts, and then the Deployment Wizard starts.  
+    Windows PE starts, and then the Deployment Wizard starts.  
 
-2.  Complete the Deployment Wizard as described in [Running the Deployment Wizard](#RunningtheDeploymentWizard), ensuring that you specifically follow the configuration settings on the wizard pages listed in Table 16 and select the values on the other wizard pages appropriate to your organization.  
+2. Complete the Deployment Wizard as described in [Running the Deployment Wizard](#RunningtheDeploymentWizard), ensuring that you specifically follow the configuration settings on the wizard pages listed in Table 16 and select the values on the other wizard pages appropriate to your organization.  
 
-    ### Table 16. Information for Completing the Deployment Wizard for the New Computer Deployment Scenario Using LTI  
+   ### Table 16. Information for Completing the Deployment Wizard for the New Computer Deployment Scenario Using LTI  
 
-    |**On this wizard page** |**Do this** |  
-    |-----------------------------|-----------------|  
-    |**Select a task sequence to execute on this computer** |Select the task sequence you created for the target computer deployment for the New Computer deployment scenario.|  
+   |**On this wizard page** |**Do this** |  
+   |-----------------------------|-----------------|  
+   |**Select a task sequence to execute on this computer** |Select the task sequence you created for the target computer deployment for the New Computer deployment scenario.|  
 
-     The wizard starts, and the operating system deployment starts. At the end of the process, the **Deployment Summary** dialog box appears.  
+    The wizard starts, and the operating system deployment starts. At the end of the process, the **Deployment Summary** dialog box appears.  
 
-3.  In the **Deployment Summary** dialog box, click **Details**.  
+3. In the **Deployment Summary** dialog box, click **Details**.  
 
-     If any errors or warnings occur, review them, and record any diagnostic information. For more information about the errors or warnings, see the MDT document *Troubleshooting Reference.*  
+    If any errors or warnings occur, review them, and record any diagnostic information. For more information about the errors or warnings, see the MDT document *Troubleshooting Reference.*  
 
-4.  In the **Deployment Summary** dialog box, click **Finish**.  
+4. In the **Deployment Summary** dialog box, click **Finish**.  
 
- The target computers are now deployed.  
+   The target computers are now deployed.  
 
 ####  <a name="DeployCapturedImagestoTargetComputersinaRefreshComputerDeploymentScenarioUsingLTI"></a> Deploy Captured Images to Target Computers in a Refresh Computer Deployment Scenario Using LTI  
  Start the Deployment Wizard on the existing operating system on the target computer to start the **Standard Client** task sequence or **Standard Server** task sequence created earlier in the process. The Deployment Wizard saves the user state migration data of the existing target computer to the location you specify. Later in the task sequence, the user state migration data is restored to the target computer.  
 
 ###### To complete the Deployment Wizard  
 
-1.  Start the Deployment Wizard by connecting to the appropriate deployment share (for example, *\\\server_name\\*Distribution$\Scripts) and typing **cscript litetouch.vbs**.  
+1. Start the Deployment Wizard by connecting to the appropriate deployment share (for example, <em>\\\server_name\\</em>Distribution$\Scripts) and typing **cscript litetouch.vbs**.  
 
-     The Deployment Wizard starts.  
+    The Deployment Wizard starts.  
 
-2.  Complete the Deployment Wizard as described in [Running the Deployment Wizard](#RunningtheDeploymentWizard), ensuring that you specifically follow the configuration settings on the wizard pages listed in Table 17 and select the values on the other wizard pages appropriate to your organization.  
+2. Complete the Deployment Wizard as described in [Running the Deployment Wizard](#RunningtheDeploymentWizard), ensuring that you specifically follow the configuration settings on the wizard pages listed in Table 17 and select the values on the other wizard pages appropriate to your organization.  
 
-    ### Table 17. Information for Completing the Deployment Wizard for the Refresh Computer Deployment Scenario Using LTI  
+   ### Table 17. Information for Completing the Deployment Wizard for the Refresh Computer Deployment Scenario Using LTI  
 
-    |On this wizard page|Do this|  
-    |-------------------------|-------------|  
-    |**Select a task sequence to execute on this computer** |Select the task sequence you created for the target computer deployment for the Refresh Computer deployment scenario.|  
-    |**Choose a migration type.** |Click **Refresh this computer**.|  
-    |**Specify where to save your data and settings.** |Select one of the following options based on the requirements of your organization:<br /><br /> **- Automatically determine the location**<br /><br /> **- Specify a location** |  
+   |On this wizard page|Do this|  
+   |-------------------------|-------------|  
+   |**Select a task sequence to execute on this computer** |Select the task sequence you created for the target computer deployment for the Refresh Computer deployment scenario.|  
+   |**Choose a migration type.** |Click **Refresh this computer**.|  
+   |**Specify where to save your data and settings.** |Select one of the following options based on the requirements of your organization:<br /><br /> **- Automatically determine the location**<br /><br /> **- Specify a location** |  
 
-     The wizard starts, and the operating system deployment starts. At the end of the process, the **Deployment Summary** dialog box appears.  
+    The wizard starts, and the operating system deployment starts. At the end of the process, the **Deployment Summary** dialog box appears.  
 
-3.  In the **Deployment Summary** dialog box, click **Details**.  
+3. In the **Deployment Summary** dialog box, click **Details**.  
 
-     If any errors or warnings occur, review them, and record any diagnostic information. For more information about the errors or warnings, see the MDT document *Troubleshooting Reference*.  
+    If any errors or warnings occur, review them, and record any diagnostic information. For more information about the errors or warnings, see the MDT document *Troubleshooting Reference*.  
 
-4.  In the **Deployment Summary** dialog box, click **Finish**.  
+4. In the **Deployment Summary** dialog box, click **Finish**.  
 
- The target computer is now deployed.  
+   The target computer is now deployed.  
 
 ####  <a name="DeployCapturedImagestoTargetComputersinaReplaceComputerDeploymentScenarioUsingLTI"></a> Deploy Captured Images to Target Computers in a Replace Computer Deployment Scenario Using LTI  
  The Replace Computer deployment scenario requires that you run the Deployment Wizard twice. Run the wizard the first time to capture the user state migration data from the existing target computer (old computer). Then, run it again to deploy the captured image of the reference computer to the new target computer (new computer) and restore the user state saved earlier in the process.  
@@ -1365,29 +1365,29 @@ Table 10 lists the top-level nodes in the Deployment Workbench and the types of 
 
 ###### To complete the Deployment Wizard  
 
-1.  Start the Deployment Wizard by connecting to the appropriate deployment share (for example, *\\\server_name\\*Distribution$\Scripts) and typing **cscript litetouch.vbs**.  
+1. Start the Deployment Wizard by connecting to the appropriate deployment share (for example, <em>\\\server_name\\</em>Distribution$\Scripts) and typing **cscript litetouch.vbs**.  
 
-     The Deployment Wizard starts.  
+    The Deployment Wizard starts.  
 
-2.  Complete the Deployment Wizard as described in [Running the Deployment Wizard](#RunningtheDeploymentWizard), ensuring that you specifically follow the configuration settings on the wizard pages listed in Table 18 and select the values on the other wizard pages that are appropriate to your organization.  
+2. Complete the Deployment Wizard as described in [Running the Deployment Wizard](#RunningtheDeploymentWizard), ensuring that you specifically follow the configuration settings on the wizard pages listed in Table 18 and select the values on the other wizard pages that are appropriate to your organization.  
 
-    ### Table 18. Information for Completing the Deployment Wizard for the Replace Computer Deployment Scenario for Saving User State Migration Data Using LTI  
+   ### Table 18. Information for Completing the Deployment Wizard for the Replace Computer Deployment Scenario for Saving User State Migration Data Using LTI  
 
-    |**On this wizard page** |**Do this** |  
-    |-----------------------------|-----------------|  
-    |**Select a task sequence to execute on this computer** |Select the task sequence you created for the target computer in the Replace Computer deployment scenario to save the user state migration data.|  
-    |**Specify where to save your data and settings.** |In the **Location** box, type the fully qualified path to the location in which you want to store the user state migration data. This location must be accessible to the new target computer.|  
-    |**Specify where to save a complete computer backup** |Click **Specify a location**, and then type the fully qualified path to the location in which you want to store the backup.<br /><br /> This backup is for use in restoring user state migration data that might have been missed, not as a rollback method for the target computer. If you want to have rollback capability for the target computer, perform a full backup using your organization’s backup software.|  
+   |**On this wizard page** |**Do this** |  
+   |-----------------------------|-----------------|  
+   |**Select a task sequence to execute on this computer** |Select the task sequence you created for the target computer in the Replace Computer deployment scenario to save the user state migration data.|  
+   |**Specify where to save your data and settings.** |In the **Location** box, type the fully qualified path to the location in which you want to store the user state migration data. This location must be accessible to the new target computer.|  
+   |**Specify where to save a complete computer backup** |Click **Specify a location**, and then type the fully qualified path to the location in which you want to store the backup.<br /><br /> This backup is for use in restoring user state migration data that might have been missed, not as a rollback method for the target computer. If you want to have rollback capability for the target computer, perform a full backup using your organization’s backup software.|  
 
-     The wizard starts, and the operating system deployment starts. At the end of the process, the **Deployment Summary** dialog box appears.  
+    The wizard starts, and the operating system deployment starts. At the end of the process, the **Deployment Summary** dialog box appears.  
 
-3.  In the **Deployment Summary** dialog box, click **Details**.  
+3. In the **Deployment Summary** dialog box, click **Details**.  
 
-     If any errors or warnings occur, review them, and record any diagnostic information. For more information about the errors or warnings, see the MDT document Troubleshooting Reference.  
+    If any errors or warnings occur, review them, and record any diagnostic information. For more information about the errors or warnings, see the MDT document Troubleshooting Reference.  
 
-4.  In the **Deployment Summary** dialog box, click **Finish**.  
+4. In the **Deployment Summary** dialog box, click **Finish**.  
 
- The user state migration data of the existing target computer is saved.  
+   The user state migration data of the existing target computer is saved.  
 
 #####  <a name="DeploytheCapturedImageoftheReferenceComputertotheNewTargetComputerUsingLTI"></a> Deploy the Captured Image of the Reference Computer to the New Target Computer Using LTI  
  Start the target computer with the LTI bootable media you created earlier in the process or from Windows Deployment Services. The LTI bootable media starts Windows PE on the target computer and initiates LTI deployment. At the end of the process, the captured image of the reference computer is deployed to the target computer.  
@@ -1420,90 +1420,90 @@ Table 10 lists the top-level nodes in the Deployment Workbench and the types of 
 
  Manage LTI deployments in the Deployment Workbench by:  
 
--   Managing shares as described in [Managing Deployment Shares in the Deployment Workbench](#ManagingDeploymentSharesintheDeploymentWorkbench)  
+- Managing shares as described in [Managing Deployment Shares in the Deployment Workbench](#ManagingDeploymentSharesintheDeploymentWorkbench)  
 
--   Configuring the operating systems as described in [Configuring Operating Systems in the Deployment Workbench](#ConfiguringOperatingSystemsintheDeploymentWorkbench)  
+- Configuring the operating systems as described in [Configuring Operating Systems in the Deployment Workbench](#ConfiguringOperatingSystemsintheDeploymentWorkbench)  
 
--   Configuring the applications to be deployed as described in [Configuring Applications in the Deployment Workbench](#ConfiguringApplicationsintheDeploymentWorkbench)  
+- Configuring the applications to be deployed as described in [Configuring Applications in the Deployment Workbench](#ConfiguringApplicationsintheDeploymentWorkbench)  
 
--   Configuring packages as described in [Configuring Packages in the Deployment Workbench](#ConfiguringPackagesintheDeploymentWorkbench)  
+- Configuring packages as described in [Configuring Packages in the Deployment Workbench](#ConfiguringPackagesintheDeploymentWorkbench)  
 
--   Configuring device drivers as described in [Configuring Device Drivers in the Deployment Workbench](#ConfiguringDeviceDriversintheDeploymentWorkbench)  
+- Configuring device drivers as described in [Configuring Device Drivers in the Deployment Workbench](#ConfiguringDeviceDriversintheDeploymentWorkbench)  
 
--   Configuring task sequences as described in [Configuring Task Sequences in the Deployment Workbench](#ConfiguringTaskSequencesintheDeploymentWorkbench)  
+- Configuring task sequences as described in [Configuring Task Sequences in the Deployment Workbench](#ConfiguringTaskSequencesintheDeploymentWorkbench)  
 
--   Performing common administrative tasks as described in [Performing Common Management Tasks in the Deployment Workbench](#PerformingCommonManagementTasksintheDeploymentWorkbench)  
+- Performing common administrative tasks as described in [Performing Common Management Tasks in the Deployment Workbench](#PerformingCommonManagementTasksintheDeploymentWorkbench)  
 
--   Performing advanced configuration tasks as described in [Performing Advanced Configuration Tasks in the Deployment Workbench](#PerformingAdvancedConfigurationTasksintheDeploymentWorkbench)  
+- Performing advanced configuration tasks as described in [Performing Advanced Configuration Tasks in the Deployment Workbench](#PerformingAdvancedConfigurationTasksintheDeploymentWorkbench)  
 
--   Performing common administrative tasks as described in [Configuring LTI Task Sequence Steps in the Deployment Workbench](#ConfiguringLTITaskSequenceStepsintheDeploymentWorkbench)  
+- Performing common administrative tasks as described in [Configuring LTI Task Sequence Steps in the Deployment Workbench](#ConfiguringLTITaskSequenceStepsintheDeploymentWorkbench)  
 
- In addtion to managing LTI deployments in the Deployment Workbench, you can manage LTI deployments using the MDT Windows PowerShell cmdlets. For more information on managing LTI deployments using the MDT Windows PowerShell cmdlets, see:  
+  In addtion to managing LTI deployments in the Deployment Workbench, you can manage LTI deployments using the MDT Windows PowerShell cmdlets. For more information on managing LTI deployments using the MDT Windows PowerShell cmdlets, see:  
 
--   The section, "MDT Windows PowerShell Cmdlets", in the MDT document, *Toolkit Reference*  
+- The section, "MDT Windows PowerShell Cmdlets", in the MDT document, *Toolkit Reference*  
 
--   The section, "Managing MDT Using Windows PowerShell", in the MDT document, *Microsoft Deployment Toolkit Samples Guide*  
+- The section, "Managing MDT Using Windows PowerShell", in the MDT document, *Microsoft Deployment Toolkit Samples Guide*  
 
 ###  <a name="ManagingDeploymentSharesintheDeploymentWorkbench"></a> Managing Deployment Shares in the Deployment Workbench  
  MDT uses the Deployment Workbench to manage the deployment shares in your organization. You configure the deployment shares by:  
 
--   Creating a new deployment share as described in [Create a New Deployment Share in the Deployment Workbench](#CreateaNewDeploymentShareintheDeploymentWorkbench)  
+- Creating a new deployment share as described in [Create a New Deployment Share in the Deployment Workbench](#CreateaNewDeploymentShareintheDeploymentWorkbench)  
 
--   Opening an existing deployment share as described in [Open an Existing Deployment Share in the Deployment Workbench](#OpenanExistingDeploymentShareintheDeploymentWorkbench)  
+- Opening an existing deployment share as described in [Open an Existing Deployment Share in the Deployment Workbench](#OpenanExistingDeploymentShareintheDeploymentWorkbench)  
 
--   Upgrading an existing deployment share to MDT as described in [Upgrade an Existing Deployment Share in the Deployment Workbench](#UpgradeanExistingDeploymentShareintheDeploymentWorkbench)  
+- Upgrading an existing deployment share to MDT as described in [Upgrade an Existing Deployment Share in the Deployment Workbench](#UpgradeanExistingDeploymentShareintheDeploymentWorkbench)  
 
--   Configuring a deployment share as described in [Configure a Deployment Share in the Deployment Workbench](#ConfigureaDeploymentShareintheDeploymentWorkbench)  
+- Configuring a deployment share as described in [Configure a Deployment Share in the Deployment Workbench](#ConfigureaDeploymentShareintheDeploymentWorkbench)  
 
--   Copying a deployment share as described in [Copy a Deployment Share](#CopyaDeploymentShare)  
+- Copying a deployment share as described in [Copy a Deployment Share](#CopyaDeploymentShare)  
 
--   Closing a deployment share as described in [Close a Deployment Share in the Deployment Workbench](#CloseaDeploymentShareintheDeploymentWorkbench)  
+- Closing a deployment share as described in [Close a Deployment Share in the Deployment Workbench](#CloseaDeploymentShareintheDeploymentWorkbench)  
 
--   Updating a deployment share as described in [Update a Deployment Share in the Deployment Workbench](#UpdateaDeploymentShareintheDeploymentWorkbench)  
+- Updating a deployment share as described in [Update a Deployment Share in the Deployment Workbench](#UpdateaDeploymentShareintheDeploymentWorkbench)  
 
--   Creating bootable devices to start LTI from the MDT boot images as described in [Create Bootable Devices from MDT Boot Images](#CreateBootableDevicesfromMDTBootImages)  
+- Creating bootable devices to start LTI from the MDT boot images as described in [Create Bootable Devices from MDT Boot Images](#CreateBootableDevicesfromMDTBootImages)  
 
- In addtion to managing deployment shares in the Deployment Workbench, you can manage deployment shares using the MDT Windows PowerShell cmdlets. For more information on managing deployment shares using the MDT Windows PowerShell cmdlets, see the following sections beneath the section, "MDT Windows PowerShell Cmdlets", in the MDT document Toolkit Reference:  
+  In addtion to managing deployment shares in the Deployment Workbench, you can manage deployment shares using the MDT Windows PowerShell cmdlets. For more information on managing deployment shares using the MDT Windows PowerShell cmdlets, see the following sections beneath the section, "MDT Windows PowerShell Cmdlets", in the MDT document Toolkit Reference:  
 
--   **Add-MDTPersistentDrive**  
+- **Add-MDTPersistentDrive**  
 
--   **Get-MDTDeploymentShareStatistics**  
+- **Get-MDTDeploymentShareStatistics**  
 
--   **Get-MDTPersistentDrive**  
+- **Get-MDTPersistentDrive**  
 
--   **Remove-MDTPersistentDrive**  
+- **Remove-MDTPersistentDrive**  
 
--   **Restore-MDTPersistentDrive**  
+- **Restore-MDTPersistentDrive**  
 
--   **Update-MDTDeploymentShare**  
+- **Update-MDTDeploymentShare**  
 
 ####  <a name="CreateaNewDeploymentShareintheDeploymentWorkbench"></a> Create a New Deployment Share in the Deployment Workbench  
  To create a new deployment share, perform the following steps:  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares.  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares.  
 
-3.  In the Actions pane, click **New Deployment Share**.  
+3. In the Actions pane, click **New Deployment Share**.  
 
-     The New Deployment Share Wizard starts.  
+    The New Deployment Share Wizard starts.  
 
-4.  Complete the New Deployment Share Wizard using the information in Table 20.  
+4. Complete the New Deployment Share Wizard using the information in Table 20.  
 
-    ### Table 20. Information for Completing the New Deployment Share Wizard  
+   ### Table 20. Information for Completing the New Deployment Share Wizard  
 
-    |On this wizard page|Do this|  
-    |-------------------------|-------------|  
-    |**Path** |In **Deployment share path**, type **path** (where *path* is the fully qualified path to an existing folder on a local drive or a network shared folder created earlier in the deployment process), and then click **Next**.<br /><br /> Alternatively, click **Browse** to find the existing folder on a local drive or network shared folder.|  
-    |**Share** |This page is displayed only if you entered a path to a folder on a local drive on the Path wizard page.<br /><br /> - In **Share name**, type **share_name** (where *share_name* is the share name for the folder on a local drive specified on the Path wizard page).<br /><br /> - Note the fully qualified to UNC path to the share being created listed immediately below the **Share name** box, and then click **Next**.<br /><br /> The wizard grants the local group Everyone Full Control access at the share level. Based on your security requirements, you may want to restrict the security of the share.|  
-    |**Descriptive Name** |In **Deployment share description**, type **description** (where *description* is a descriptive name that for the deployment share specified on previous wizard pages), and then click **Next**.|  
-    |**Allow Image Capture** |Select or clear the **Ask if an image should be captured** check box based on requirements, and then click **Next**.<br /><br /> This check box configures the Deployment Wizard to allow the user to optionally capture an image of the target computer, which is usually the reference computer. If the check box is:<br /><br /> - Selected, the path for storing the image and the image name can be configured in the Deployment Wizard<br /><br /> - Cleared, an image is not capture or the image-capture information must be set in the MDT configuration file or database<br /><br /> By default, this check box is selected.|  
-    |**Allow Admin Password** |Select or clear the **Ask user to set the local Administrator Password** check box based on requirements, and then click **Next**.<br /><br /> This check box configures the Deployment Wizard to allow the user to provide the password for the local Administrator account during the deployment process. If the check box is:<br /><br /> - Selected, the password can be configured in the Deployment Wizard<br /><br /> - Cleared, the password must be set in the MDT configuration file or database<br /><br /> By default, this check box is cleared.|  
-    |**Allow Product Key** |Select or clear the **Ask user for a product key** check box based on your requirements, and then click **Next**.<br /><br /> This check box configures the Deployment Wizard to allow the user to provide a product key for the target operating system during the deployment process. If the check box is:<br /><br /> - Selected, the product key can be configured in the Deployment Wizard<br /><br /> - Cleared, the product key must be set in the MDT configuration file or database<br /><br /> By default, this check box is cleared.|  
-    |**Summary** |Review the information in the **Details** box, and then click **Next**.|  
-    |**Confirmation** |Click **Save Output** to save the output of the wizard to a file, or click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Close**.|  
+   |On this wizard page|Do this|  
+   |-------------------------|-------------|  
+   |**Path** |In **Deployment share path**, type **path** (where *path* is the fully qualified path to an existing folder on a local drive or a network shared folder created earlier in the deployment process), and then click **Next**.<br /><br /> Alternatively, click **Browse** to find the existing folder on a local drive or network shared folder.|  
+   |**Share** |This page is displayed only if you entered a path to a folder on a local drive on the Path wizard page.<br /><br /> - In **Share name**, type **share_name** (where *share_name* is the share name for the folder on a local drive specified on the Path wizard page).<br /><br /> - Note the fully qualified to UNC path to the share being created listed immediately below the **Share name** box, and then click **Next**.<br /><br /> The wizard grants the local group Everyone Full Control access at the share level. Based on your security requirements, you may want to restrict the security of the share.|  
+   |**Descriptive Name** |In **Deployment share description**, type **description** (where *description* is a descriptive name that for the deployment share specified on previous wizard pages), and then click **Next**.|  
+   |**Allow Image Capture** |Select or clear the **Ask if an image should be captured** check box based on requirements, and then click **Next**.<br /><br /> This check box configures the Deployment Wizard to allow the user to optionally capture an image of the target computer, which is usually the reference computer. If the check box is:<br /><br /> - Selected, the path for storing the image and the image name can be configured in the Deployment Wizard<br /><br /> - Cleared, an image is not capture or the image-capture information must be set in the MDT configuration file or database<br /><br /> By default, this check box is selected.|  
+   |**Allow Admin Password** |Select or clear the **Ask user to set the local Administrator Password** check box based on requirements, and then click **Next**.<br /><br /> This check box configures the Deployment Wizard to allow the user to provide the password for the local Administrator account during the deployment process. If the check box is:<br /><br /> - Selected, the password can be configured in the Deployment Wizard<br /><br /> - Cleared, the password must be set in the MDT configuration file or database<br /><br /> By default, this check box is cleared.|  
+   |**Allow Product Key** |Select or clear the **Ask user for a product key** check box based on your requirements, and then click **Next**.<br /><br /> This check box configures the Deployment Wizard to allow the user to provide a product key for the target operating system during the deployment process. If the check box is:<br /><br /> - Selected, the product key can be configured in the Deployment Wizard<br /><br /> - Cleared, the product key must be set in the MDT configuration file or database<br /><br /> By default, this check box is cleared.|  
+   |**Summary** |Review the information in the **Details** box, and then click **Next**.|  
+   |**Confirmation** |Click **Save Output** to save the output of the wizard to a file, or click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Close**.|  
 
- Upon completion, the new deployment share is created in the target folder you selected in the wizard and appears in the Deployment Workbench.  
+   Upon completion, the new deployment share is created in the target folder you selected in the wizard and appears in the Deployment Workbench.  
 
 ####  <a name="OpenanExistingDeploymentShareintheDeploymentWorkbench"></a> Open an Existing Deployment Share in the Deployment Workbench  
  The Deployment Workbench can open an existing deployment share using the Open Deployment Share Wizard. Start the Open Deployment Share Wizard by:  
@@ -1516,23 +1516,23 @@ Table 10 lists the top-level nodes in the Deployment Workbench and the types of 
 
 ###### To open an existing deployment share not already listed in the Deployment Workbench  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares.  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares.  
 
-3.  In the Actions pane, click **Open Deployment Share**.  
+3. In the Actions pane, click **Open Deployment Share**.  
 
-     The Open Deployment Share Wizard starts.  
+    The Open Deployment Share Wizard starts.  
 
-4.  Complete the Open Deployment Share Wizard using the information in Table 21.  
+4. Complete the Open Deployment Share Wizard using the information in Table 21.  
 
-    ### Table 21. Information for Completing the Open Deployment Share Wizard  
+   ### Table 21. Information for Completing the Open Deployment Share Wizard  
 
-    |On this wizard page|Do this|  
-    |-------------------------|-------------|  
-    |**Path** |a. In **Deployment share path**, type **share_path** (where *share_path* is the fully qualified path to the existing deployment share).<br /><br /> You can alternatively click Browse to find the local or network shared folder.<br /><br /> b. Select the **Upgrade the content of the deployment share (if required)**check box. If the check box is:<br /><br /> - Selected, the Open Deployment Share Wizard upgrades the deployment share<br /><br /> - Cleared, the Open Deployment Share Wizard will not upgrade the deployment share<br /><br /> c. Click **Next**.|  
-    |**Summary** |Review the information in the **Details** box, and then click **Next**.|  
-    |**Confirmation** |You can click Save Output to save the output of the wizard to a file. You can also click View Script to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Finish**.|  
+   | On this wizard page |                                                                                                                                                                                                                                                                                          Do this                                                                                                                                                                                                                                                                                           |
+   |---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+   |      **Path**       | a. In **Deployment share path**, type **share_path** (where *share_path* is the fully qualified path to the existing deployment share).<br /><br /> You can alternatively click Browse to find the local or network shared folder.<br /><br /> b. Select the <strong>Upgrade the content of the deployment share (if required)</strong>check box. If the check box is:<br /><br /> - Selected, the Open Deployment Share Wizard upgrades the deployment share<br /><br /> - Cleared, the Open Deployment Share Wizard will not upgrade the deployment share<br /><br /> c. Click **Next**. |
+   |     **Summary**     |                                                                                                                                                                                                                                                          Review the information in the **Details** box, and then click **Next**.                                                                                                                                                                                                                                                           |
+   |  **Confirmation**   |                                                                                                                                                                                        You can click Save Output to save the output of the wizard to a file. You can also click View Script to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Finish**.                                                                                                                                                                                         |
 
 ####  <a name="UpgradeanExistingDeploymentShareintheDeploymentWorkbench"></a> Upgrade an Existing Deployment Share in the Deployment Workbench  
  MDT can upgrade an existing deployment share by:  
@@ -1544,65 +1544,65 @@ Table 10 lists the top-level nodes in the Deployment Workbench and the types of 
 #####  <a name="UpgradeDeploymentSharesNotAlreadyListedintheDeploymentWorkbench"></a> Upgrade Deployment Shares Not Already Listed in the Deployment Workbench  
  Upgrade deployment shares not listed in the Deployment Workbench using the Open Deployment Share Wizard. Start the wizard by:  
 
--   Right-clicking the deployment share, and then clicking **Open Deployment Share**  
+- Right-clicking the deployment share, and then clicking **Open Deployment Share**  
 
--   Clicking the deployment share, and then, from the **Actions** menu, clicking **Open Deployment Share**  
+- Clicking the deployment share, and then, from the **Actions** menu, clicking **Open Deployment Share**  
 
--   Clicking the deployment share, and then, in the Actions pane, clicking **Open Deployment Share**  
+- Clicking the deployment share, and then, in the Actions pane, clicking **Open Deployment Share**  
 
- To upgrade deployment shares that are not already listed in the Deployment Workbench, perform the following steps:  
+  To upgrade deployment shares that are not already listed in the Deployment Workbench, perform the following steps:  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares.  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares.  
 
-3.  In the Actions pane, click **Open Deployment Share**.  
+3. In the Actions pane, click **Open Deployment Share**.  
 
-     The Open Deployment Share Wizard starts.  
+    The Open Deployment Share Wizard starts.  
 
-4.  Complete the Open Deployment Share Wizard using the information in Table 22.  
+4. Complete the Open Deployment Share Wizard using the information in Table 22.  
 
-    ### Table 22. Information for Completing the Open Deployment Share Wizard  
+   ### Table 22. Information for Completing the Open Deployment Share Wizard  
 
-    |**On this wizard page** |**Do this** |  
-    |-----------------------------|-----------------|  
-    |**Path** |- In **Deployment share path**, type **share_path** (where *share_path* is the fully qualified path to the existing deployment share).<br /><br /> Alternatively, click Browse to find the local or network shared folder.<br /><br /> - Select the **Upgrade the content of the deployment share (if required)** check box, and then click **Next**.|  
-    |**Summary** |Review the information in the **Details** box, and then click **Next**.|  
-    |**Confirmation** |Click **Save Output** to save the output of the wizard to a file, or click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click Finish.|  
+   |**On this wizard page** |**Do this** |  
+   |-----------------------------|-----------------|  
+   |**Path** |- In **Deployment share path**, type **share_path** (where *share_path* is the fully qualified path to the existing deployment share).<br /><br /> Alternatively, click Browse to find the local or network shared folder.<br /><br /> - Select the **Upgrade the content of the deployment share (if required)** check box, and then click **Next**.|  
+   |**Summary** |Review the information in the **Details** box, and then click **Next**.|  
+   |**Confirmation** |Click **Save Output** to save the output of the wizard to a file, or click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click Finish.|  
 
- After the wizard finishes, the existing deployment share is upgraded (if required), and the **Upgrade the content of the deployment share (if required)** check box is selected. The deployment share is added to the details pane in the Deployment Workbench.  
+   After the wizard finishes, the existing deployment share is upgraded (if required), and the **Upgrade the content of the deployment share (if required)** check box is selected. The deployment share is added to the details pane in the Deployment Workbench.  
 
- In addition to upgrading existing deployment shares, any existing installations of previous versions of MDT must be upgraded to MDT. For more information on upgrading any previous installations to MDT, see [Upgrading to MDT](#UpgradingtoMDT).  
+   In addition to upgrading existing deployment shares, any existing installations of previous versions of MDT must be upgraded to MDT. For more information on upgrading any previous installations to MDT, see [Upgrading to MDT](#UpgradingtoMDT).  
 
 #####  <a name="UpgradeDeploymentSharesAlreadyListedintheDeploymentWorkbench"></a> Upgrade Deployment Shares Already Listed in the Deployment Workbench  
  Upgrade existing deployment shares already listed in the Deployment Workbench using the Upgrade Deployment Share Wizard. Start the wizard by:  
 
--   Right-clicking the deployment share, and then clicking **Upgrade Deployment Share**  
+- Right-clicking the deployment share, and then clicking **Upgrade Deployment Share**  
 
--   Clicking the deployment share, and then, from the **Actions** menu, clicking **Upgrade Deployment Share**  
+- Clicking the deployment share, and then, from the **Actions** menu, clicking **Upgrade Deployment Share**  
 
--   Clicking the deployment share, and then, in the Actions pane, clicking **Upgrade Deployment Share**  
+- Clicking the deployment share, and then, in the Actions pane, clicking **Upgrade Deployment Share**  
 
- To upgrade existing deployment shares already listed in the Deployment Workbench, perform the following steps:  
+  To upgrade existing deployment shares already listed in the Deployment Workbench, perform the following steps:  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares.  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares.  
 
-3.  In the Actions pane, click **Upgrade Deployment Share**.  
+3. In the Actions pane, click **Upgrade Deployment Share**.  
 
-     The Upgrade Deployment Share Wizard starts.  
+    The Upgrade Deployment Share Wizard starts.  
 
-4.  Complete the Upgrade Deployment Share Wizard using the information in Table 23.  
+4. Complete the Upgrade Deployment Share Wizard using the information in Table 23.  
 
-    ### Table 23. Information for Completing the Upgrade Deployment Share Wizard  
+   ### Table 23. Information for Completing the Upgrade Deployment Share Wizard  
 
-    |On this wizard page|Do this|  
-    |-------------------------|-------------|  
-    |**Summary** |Review the information in the **Details** box, and then click **Next**.|  
-    |**Confirmation** |Click **Save Output** to save the output of the wizard to a file, or click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Finish**.|  
+   |On this wizard page|Do this|  
+   |-------------------------|-------------|  
+   |**Summary** |Review the information in the **Details** box, and then click **Next**.|  
+   |**Confirmation** |Click **Save Output** to save the output of the wizard to a file, or click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Finish**.|  
 
- After the wizard finishes, the existing deployment share is upgraded and now can be accessed in the Deployment Workbench.  
+   After the wizard finishes, the existing deployment share is upgraded and now can be accessed in the Deployment Workbench.  
 
 ####  <a name="ConfigureaDeploymentShareintheDeploymentWorkbench"></a> Configure a Deployment Share in the Deployment Workbench  
  You can view the properties of deployment shares beneath the Deployment Shares node in the Deployment Workbench by using the **Properties** actions as described in [View Item Properties in the Deployment Workbench](#ViewItemPropertiesintheDeploymentWorkbench).  
@@ -1626,193 +1626,193 @@ Table 10 lists the top-level nodes in the Deployment Workbench and the types of 
 
 ###### To configure the General tab  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares.  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares.  
 
-3.  In the details pane, click ***deployment_share*** (where *deployment_share* is the name of the deployment share).  
+3. In the details pane, click ***deployment_share*** (where *deployment_share* is the name of the deployment share).  
 
-4.  In the Actions pane, click **Properties**.  
+4. In the Actions pane, click **Properties**.  
 
-     The ***deployment_share*** **Properties*** dialog box opens (where *deployment_share* is the name of the deployment share you want to configure).  
+    The ***deployment_share*** **Properties*** dialog box opens (where *deployment_share* is the name of the deployment share you want to configure).  
 
-5.  On the **General** tab, configure the settings listed in Table 24 based on the requirements of your organization, and then click **OK**.  
+5. On the **General** tab, configure the settings listed in Table 24 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 24. Configuration Settings on the General Tab of Deployment Share Properties  
+   ### Table 24. Configuration Settings on the General Tab of Deployment Share Properties  
 
-    |**Setting** |**Description** |  
-    |-----------------|---------------------|  
-    |**Description** |Contains the name of the deployment share displayed in the Deployment Workbench. The default value is **MDT Deployment Share**.|  
-    |**Comments** |Provides information about the deployment share.|  
-    |**Network (UNC) path** |Text box that contains fully qualified UNC path to the deployment share. This value is used only to enable multicast and is required if you want to do so by selecting the **Enable multicast for this deployment share** check box.<br /><br /> If the deployment share was created from an existing network shared folder, this value is displayed in the details pane of the Deployment Workbench.|  
-    |**Local path** |Contains the fully qualified path to the local folder in which the deployment share was created. This value is used only to enable multicast and is required if you want to do so by selecting the **Enable multicast for this deployment share** check box. If you created the deployment share from:<br /><br /> - A local path, then this text box contains the local path used in the creation process<br /><br /> - An existing network shared folder, then this text box is empty<br /><br /> If you created the deployment share from a local path, the local path rather than the UNC path is displayed in the details pane of the Deployment Workbench.|  
-    |**Platforms supported: x86** |Select to configure the Update Deployment Share Wizard to create WIM files and bootable media for 32-bit target computers.|  
-    |**Platforms supported: x64** |Select to configure the Update Deployment Share Wizard to create WIM files and bootable media for 64-bit target computers.|  
-    |**Enable multicast for this deployment share** |Select to configure Windows Deployment Services to enable multicast deployment of images generated in this deployment share. If you select this check box, you must provide values for the **Network (UNC) path** and **Local path** boxes. For more information about enabling multicast-based deployments, see [Enable Windows Deployment Services Multicast Deployment for LTI Deployments](#EnableWindowsDeploymentServicesMulticastDeploymentforLTIDeployments).<br /><br /> The multicast features of MDT are available using Windows Deployment Services in Windows Server.|  
+   |**Setting** |**Description** |  
+   |-----------------|---------------------|  
+   |**Description** |Contains the name of the deployment share displayed in the Deployment Workbench. The default value is **MDT Deployment Share**.|  
+   |**Comments** |Provides information about the deployment share.|  
+   |**Network (UNC) path** |Text box that contains fully qualified UNC path to the deployment share. This value is used only to enable multicast and is required if you want to do so by selecting the **Enable multicast for this deployment share** check box.<br /><br /> If the deployment share was created from an existing network shared folder, this value is displayed in the details pane of the Deployment Workbench.|  
+   |**Local path** |Contains the fully qualified path to the local folder in which the deployment share was created. This value is used only to enable multicast and is required if you want to do so by selecting the **Enable multicast for this deployment share** check box. If you created the deployment share from:<br /><br /> - A local path, then this text box contains the local path used in the creation process<br /><br /> - An existing network shared folder, then this text box is empty<br /><br /> If you created the deployment share from a local path, the local path rather than the UNC path is displayed in the details pane of the Deployment Workbench.|  
+   |**Platforms supported: x86** |Select to configure the Update Deployment Share Wizard to create WIM files and bootable media for 32-bit target computers.|  
+   |**Platforms supported: x64** |Select to configure the Update Deployment Share Wizard to create WIM files and bootable media for 64-bit target computers.|  
+   |**Enable multicast for this deployment share** |Select to configure Windows Deployment Services to enable multicast deployment of images generated in this deployment share. If you select this check box, you must provide values for the **Network (UNC) path** and **Local path** boxes. For more information about enabling multicast-based deployments, see [Enable Windows Deployment Services Multicast Deployment for LTI Deployments](#EnableWindowsDeploymentServicesMulticastDeploymentforLTIDeployments).<br /><br /> The multicast features of MDT are available using Windows Deployment Services in Windows Server.|  
 
- The deployment share configuration settings are saved, and the deployment share appears in the details pane of the Deployment Workbench.  
+   The deployment share configuration settings are saved, and the deployment share appears in the details pane of the Deployment Workbench.  
 
 #####  <a name="ConfiguretheDeploymentSharePropertiesRulesTab"></a> Configure the Deployment Share Properties Rules Tab  
  The deployment share properties stored on the **Rules** tab are mostly configured when you run the New Deployment Share Wizard. These settings reside in CustomSettings.ini, which is in the deployment share’s Control folder. For more information about the settings that you can configure on this tab, see the MDT document *Toolkit Reference*.  
 
 ###### To configure the Rules tab  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares.  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares.  
 
-3.  In the details pane, click ***deployment_share*** (where *deployment_share* is the name of the deployment share).  
+3. In the details pane, click ***deployment_share*** (where *deployment_share* is the name of the deployment share).  
 
-4.  In the Actions pane, click **Properties**.  
+4. In the Actions pane, click **Properties**.  
 
-     The ***deployment_share*** **Properties** dialog box opens (where *deployment_share* is the name of the deployment share you want to configure).  
+    The ***deployment_share*** **Properties** dialog box opens (where *deployment_share* is the name of the deployment share you want to configure).  
 
-5.  On the **Rules** tab, configure the settings listed in Table 25 based on the requirements of your organization, and then click **OK**.  
+5. On the **Rules** tab, configure the settings listed in Table 25 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 25. Configuration Settings on the Rules Tab of Deployment Share Properties  
+   ### Table 25. Configuration Settings on the Rules Tab of Deployment Share Properties  
 
-    |**Setting** |**Description** |  
-    |-----------------|---------------------|  
-    |**CustomSettings.ini** |Contains the current configuration of the CustomSetting.ini file for the deployment share.|  
-    |**Edit Bootstrap.ini** |Click to modify the contents of the Bootstrap.ini file that the Deployment Workbench generates.|  
+   |**Setting** |**Description** |  
+   |-----------------|---------------------|  
+   |**CustomSettings.ini** |Contains the current configuration of the CustomSetting.ini file for the deployment share.|  
+   |**Edit Bootstrap.ini** |Click to modify the contents of the Bootstrap.ini file that the Deployment Workbench generates.|  
 
- The deployment share configuration settings are saved, and the deployment share appears in the details pane of the Deployment Workbench.  
+   The deployment share configuration settings are saved, and the deployment share appears in the details pane of the Deployment Workbench.  
 
 #####  <a name="ConfiguretheDeploymentSharePropertiesWindowsPEx86SettingsTab"></a> Configure the Deployment Share Properties Windows PE x86 Settings Tab  
  The deployment share properties stored on the **Windows PE x86 Settings** tab are mostly configured when you run the New Deployment Share Wizard.  
 
 ###### To configure the Windows PE x86 Settings tab  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares.  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares.  
 
-3.  In the details pane, click ***deployment_share*** (where *deployment_share* is the name of the deployment share).  
+3. In the details pane, click ***deployment_share*** (where *deployment_share* is the name of the deployment share).  
 
-4.  In the Actions pane, click **Properties**.  
+4. In the Actions pane, click **Properties**.  
 
-     The ***deployment_share**Properties** dialog box opens (where *deployment_share* is the name of the deployment share you want to configure).  
+    The <strong><em>deployment_share</em>*Properties</strong> dialog box opens (where *deployment_share* is the name of the deployment share you want to configure).  
 
-5.  On the **Windows PE x86 Settings** tab, configure the settings listed in  REF _Ref304458789 \h Table 26 based on the requirements of your organization, and then click **OK**.  
+5. On the **Windows PE x86 Settings** tab, configure the settings listed in  REF _Ref304458789 \h Table 26 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 26. Configuration Settings on the Windows PE x86 Settings Tab of Deployment Share Properties  
+   ### Table 26. Configuration Settings on the Windows PE x86 Settings Tab of Deployment Share Properties  
 
-    |**Setting** |**Description** |  
-    |-----------------|---------------------|  
-    |**Generate a Lite Touch Windows PE WIM file** |Select to configure the Update Deployment Share Wizard to create a Windows PE WIM file that includes the LTI deployment scripts. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard creates the LiteTouchPE_x86.wim file with the image description specified in the **Image description** text box<br /><br /> - Cleared, the Update Deployment Share Wizard will not create the WIM file|  
-    |**Image description** |Contains the image description for the Windows PE WIM file that the Update Deployment Share Wizard creates. The default value is **Lite Touch Windows PE (x86)**.|  
-    |**Generate a Lite Touch bootable ISO image** |Select to configure the Update Deployment Share Wizard to create a bootable Windows PE ISO file that includes the LTI deployment scripts. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard creates the ISO file with the name specified in the **ISO file name** text box<br /><br /> - Cleared, the Update Deployment Share Wizard will not create the ISO file|  
-    |**ISO file name** |Contains the file name for the Windows PE ISO file that the Update Deployment Share Wizard creates. The default value for this text box is **LiteTouchPE_x86.iso**.<br /><br /> This text box is enabled only if you select **Generate a Lite Touch bootable ISO image**.|  
-    |**Generate a generic Windows PE WIM file** |Select to configure the Update Deployment Share Wizard to create a Windows PE WIM file that does not include the LTI deployment scripts. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard creates the GenericPE_x86.wim file with the image description specified in the Image description text box<br /><br /> - Cleared, the Update Deployment Share Wizard will not create the WIM file|  
-    |**Image description** |Contains the image description for the generic Windows PE WIM file that the Update Deployment Share Wizard creates. The default value for this text box is **Generic Windows PE (x86)**.<br /><br /> This text box is enabled only if you select **Generate a generic Windows PE WIM file**.|  
-    |**Generate a generic bootable ISO image** |Select to configure the Update Deployment Share Wizard to create a bootable Windows PE ISO file that does not include the LTI deployment scripts. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard creates the Generic_x86.iso file with the image description specified in the **ISO file name** text box<br /><br /> - Cleared, the Update Deployment Share Wizard will not create the ISO file<br /><br /> This box is enabled only if you select **Generate a generic Windows PE WIM file**.|  
-    |**ISO file name** |Contains the file name for the generic Windows PE ISO file that the Update Deployment Share Wizard creates. The default value for this text box is **Generic_x86.iso**.<br /><br /> This text box is enabled only if you select **Generate a generic bootable ISO image**.|  
-    |**Custom background bitmap file** |Contains the fully qualified path to the BMP file that is to be used as the custom background bitmap. The default value for this text box is **%INSTALLDIR%\Samples\Background.bmp**.|  
-    |**Extra directories to add** |Contains the fully qualified path to a folder structure to be included in the Windows PE images. The default value for the text box is empty.|  
-    |**Scratch space size** |Configures the size of the scratch space in megabytes; you can select a value of **32**, **64**, **128**, **256**, or **512** MB. The default value is **32**.|  
+   |**Setting** |**Description** |  
+   |-----------------|---------------------|  
+   |**Generate a Lite Touch Windows PE WIM file** |Select to configure the Update Deployment Share Wizard to create a Windows PE WIM file that includes the LTI deployment scripts. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard creates the LiteTouchPE_x86.wim file with the image description specified in the **Image description** text box<br /><br /> - Cleared, the Update Deployment Share Wizard will not create the WIM file|  
+   |**Image description** |Contains the image description for the Windows PE WIM file that the Update Deployment Share Wizard creates. The default value is **Lite Touch Windows PE (x86)**.|  
+   |**Generate a Lite Touch bootable ISO image** |Select to configure the Update Deployment Share Wizard to create a bootable Windows PE ISO file that includes the LTI deployment scripts. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard creates the ISO file with the name specified in the **ISO file name** text box<br /><br /> - Cleared, the Update Deployment Share Wizard will not create the ISO file|  
+   |**ISO file name** |Contains the file name for the Windows PE ISO file that the Update Deployment Share Wizard creates. The default value for this text box is **LiteTouchPE_x86.iso**.<br /><br /> This text box is enabled only if you select **Generate a Lite Touch bootable ISO image**.|  
+   |**Generate a generic Windows PE WIM file** |Select to configure the Update Deployment Share Wizard to create a Windows PE WIM file that does not include the LTI deployment scripts. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard creates the GenericPE_x86.wim file with the image description specified in the Image description text box<br /><br /> - Cleared, the Update Deployment Share Wizard will not create the WIM file|  
+   |**Image description** |Contains the image description for the generic Windows PE WIM file that the Update Deployment Share Wizard creates. The default value for this text box is **Generic Windows PE (x86)**.<br /><br /> This text box is enabled only if you select **Generate a generic Windows PE WIM file**.|  
+   |**Generate a generic bootable ISO image** |Select to configure the Update Deployment Share Wizard to create a bootable Windows PE ISO file that does not include the LTI deployment scripts. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard creates the Generic_x86.iso file with the image description specified in the **ISO file name** text box<br /><br /> - Cleared, the Update Deployment Share Wizard will not create the ISO file<br /><br /> This box is enabled only if you select **Generate a generic Windows PE WIM file**.|  
+   |**ISO file name** |Contains the file name for the generic Windows PE ISO file that the Update Deployment Share Wizard creates. The default value for this text box is **Generic_x86.iso**.<br /><br /> This text box is enabled only if you select **Generate a generic bootable ISO image**.|  
+   |**Custom background bitmap file** |Contains the fully qualified path to the BMP file that is to be used as the custom background bitmap. The default value for this text box is **%INSTALLDIR%\Samples\Background.bmp**.|  
+   |**Extra directories to add** |Contains the fully qualified path to a folder structure to be included in the Windows PE images. The default value for the text box is empty.|  
+   |**Scratch space size** |Configures the size of the scratch space in megabytes; you can select a value of **32**, **64**, **128**, **256**, or **512** MB. The default value is **32**.|  
 
- The deployment share configuration settings are saved, and the deployment share appears in the details pane of the Deployment Workbench.  
+   The deployment share configuration settings are saved, and the deployment share appears in the details pane of the Deployment Workbench.  
 
 #####  <a name="ConfiguretheDeploymentSharePropertiesWindowsPEx86ComponentsTab"></a> Configure the Deployment Share Properties Windows PE x86 Components Tab  
  The deployment share properties stored on the **Windows PE x86 Components** tab are mostly configured when you run the New Deployment Share Wizard.  
 
 ###### To configure the Windows PE x86 Components tab  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares.  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares.  
 
-3.  In the details pane, click ***deployment_share*** (where *deployment_share* is the name of the deployment share).  
+3. In the details pane, click ***deployment_share*** (where *deployment_share* is the name of the deployment share).  
 
-4.  In the Actions pane, click **Properties**.  
+4. In the Actions pane, click **Properties**.  
 
-     The ***deployment_share*** Properties** dialog box opens (where *deployment_share* is the name of the deployment share you want to configure).  
+    The ***deployment_share*** Properties** dialog box opens (where *deployment_share* is the name of the deployment share you want to configure).  
 
-5.  On the **Windows PE x86 Components** tab, configure the settings listed in Table 29 based on the requirements of your organization, and then click **OK**.  
+5. On the **Windows PE x86 Components** tab, configure the settings listed in Table 29 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 27. Configuration Settings on the Windows PE x86 Components Tab of Deployment Share Properties  
+   ### Table 27. Configuration Settings on the Windows PE x86 Components Tab of Deployment Share Properties  
 
-    |Setting|**Description** |  
-    |-------------|---------------------|  
-    |**Selection profile** |Use to select the device drivers and packages to be included in the Windows PE images based on the selection profile you choose. The default value is **All Drivers and Packages**. For more information about selection profiles, see [Manage Selection Profiles](#ManageSelectionProfiles).|  
-    |**Include all drivers from the selected driver group** |Select to configure the Update Deployment Share Wizard to include all the device drivers in the selection profile specified in the **Selection profile** box.|  
-    |**Include only drivers of the following types** |Select to configure the Update Deployment Share Wizard to include only the device drivers in the chosen selection profile that are specified in the following check boxes:<br /><br /> **- Include all network drivers in the selected group**<br /><br /> **- Include all video drivers in the selected group**<br /><br /> **- Include all mass storage drivers in the selected group**<br /><br /> **- Include all system-class drivers in the selected group** |  
-    |**Include all network drivers in the selected group** |Select to configure the Update Deployment Share Wizard to include all network drivers in the chosen selection profile. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard includes all network drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> - Cleared, the Update Deployment Share Wizard will not include all network drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> This check box is enabled only if you select **Include only drivers of the following types**.|  
-    |**Include all video drivers in the selected group** |Select to configure the Update Deployment Share Wizard to include all video drivers in the chosen selection profile. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard includes all video drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> - Cleared, the Update Deployment Share Wizard will not include all video drivers in the selection profile specified in the **Selection profile** list box in the Windows PE images<br /><br /> This check box is enabled only if you select **Include only drivers of the following types**.|  
-    |**Include all mass storage drivers in the selected group** |Select to configure the Update Deployment Share Wizard to include all mass storage drivers in chosen the selection profile. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard includes all mass storage drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> - Cleared, the Update Deployment Share Wizard will not include all mass storage drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> This check box is enabled only if you select **Include only drivers of the following types**.|  
-    |**Include all system-class drivers in the selected group** |Select to configure the Update Deployment Share Wizard to include all system-class drivers in the chosen selection profile. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard includes all system-class drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> - Cleared, the Update Deployment Share Wizard will not include all system-class drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> This check box is enabled only if you select **Include only drivers of the following types**.|  
-    |**ADO** |Select to add optional ADO components to the Windows PE images. These components are necessary for accessing Microsoft SQL Server® databases, such as the MDT DB. If the check box is:<br /><br /> - Selected, the ADO components are added to the Windows PE images<br /><br /> - Cleared, the ADO components are not added to the Windows PE images|  
-    |**Optional Fonts** |Select to configure the Update Deployment Share Wizard to include the following fonts:<br /><br /> - Chinese (ZH-CN)<br /><br /> - Chinese (ZH-HK)<br /><br /> - Chinese (ZH-TW)<br /><br /> - Japanese (JA-JP)<br /><br /> - Korean (KO-KR)<br /><br /> Add these fonts when performing an LTI deployment of Windows Server images and the Setup files are Japanese, Korean, or Chinese. If the check box for a corresponding font is:<br /><br /> - Selected, the Update Deployment Share Wizard includes the font in the Windows PE images<br /><br /> - Cleared, the Update Deployment Share Wizard will not include the font in the Windows PE images<br /><br /> Adding fonts to Windows PE boot images increases the size of the images. Add fonts only if necessary.|  
+   |Setting|**Description** |  
+   |-------------|---------------------|  
+   |**Selection profile** |Use to select the device drivers and packages to be included in the Windows PE images based on the selection profile you choose. The default value is **All Drivers and Packages**. For more information about selection profiles, see [Manage Selection Profiles](#ManageSelectionProfiles).|  
+   |**Include all drivers from the selected driver group** |Select to configure the Update Deployment Share Wizard to include all the device drivers in the selection profile specified in the **Selection profile** box.|  
+   |**Include only drivers of the following types** |Select to configure the Update Deployment Share Wizard to include only the device drivers in the chosen selection profile that are specified in the following check boxes:<br /><br /> **- Include all network drivers in the selected group**<br /><br /> **- Include all video drivers in the selected group**<br /><br /> **- Include all mass storage drivers in the selected group**<br /><br /> **- Include all system-class drivers in the selected group** |  
+   |**Include all network drivers in the selected group** |Select to configure the Update Deployment Share Wizard to include all network drivers in the chosen selection profile. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard includes all network drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> - Cleared, the Update Deployment Share Wizard will not include all network drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> This check box is enabled only if you select **Include only drivers of the following types**.|  
+   |**Include all video drivers in the selected group** |Select to configure the Update Deployment Share Wizard to include all video drivers in the chosen selection profile. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard includes all video drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> - Cleared, the Update Deployment Share Wizard will not include all video drivers in the selection profile specified in the **Selection profile** list box in the Windows PE images<br /><br /> This check box is enabled only if you select **Include only drivers of the following types**.|  
+   |**Include all mass storage drivers in the selected group** |Select to configure the Update Deployment Share Wizard to include all mass storage drivers in chosen the selection profile. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard includes all mass storage drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> - Cleared, the Update Deployment Share Wizard will not include all mass storage drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> This check box is enabled only if you select **Include only drivers of the following types**.|  
+   |**Include all system-class drivers in the selected group** |Select to configure the Update Deployment Share Wizard to include all system-class drivers in the chosen selection profile. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard includes all system-class drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> - Cleared, the Update Deployment Share Wizard will not include all system-class drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> This check box is enabled only if you select **Include only drivers of the following types**.|  
+   |**ADO** |Select to add optional ADO components to the Windows PE images. These components are necessary for accessing Microsoft SQL Server® databases, such as the MDT DB. If the check box is:<br /><br /> - Selected, the ADO components are added to the Windows PE images<br /><br /> - Cleared, the ADO components are not added to the Windows PE images|  
+   |**Optional Fonts** |Select to configure the Update Deployment Share Wizard to include the following fonts:<br /><br /> - Chinese (ZH-CN)<br /><br /> - Chinese (ZH-HK)<br /><br /> - Chinese (ZH-TW)<br /><br /> - Japanese (JA-JP)<br /><br /> - Korean (KO-KR)<br /><br /> Add these fonts when performing an LTI deployment of Windows Server images and the Setup files are Japanese, Korean, or Chinese. If the check box for a corresponding font is:<br /><br /> - Selected, the Update Deployment Share Wizard includes the font in the Windows PE images<br /><br /> - Cleared, the Update Deployment Share Wizard will not include the font in the Windows PE images<br /><br /> Adding fonts to Windows PE boot images increases the size of the images. Add fonts only if necessary.|  
 
- The deployment share configuration settings are saved, and the deployment share appears in the details pane of the Deployment Workbench.  
+   The deployment share configuration settings are saved, and the deployment share appears in the details pane of the Deployment Workbench.  
 
 #####  <a name="ConfiguretheDeploymentSharePropertiesWindowsPEx64SettingsTab"></a> Configure the Deployment Share Properties Windows PE x64 Settings Tab  
  The deployment share properties stored on the Windows PE x64 Settings tab are mostly configured when you run the New Deployment Share Wizard.  
 
 ###### To configure the Windows PE x64 Settings tab  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares.  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares.  
 
-3.  In the details pane, click **deployment_share** (where *deployment_share* is the name of the deployment share).  
+3. In the details pane, click **deployment_share** (where *deployment_share* is the name of the deployment share).  
 
-4.  In the Actions pane, click **Properties**.  
+4. In the Actions pane, click **Properties**.  
 
-     The ***deployment_share*** **Properties** dialog box opens (where *deployment_share* is the name of the deployment share you want to configure).  
+    The ***deployment_share*** **Properties** dialog box opens (where *deployment_share* is the name of the deployment share you want to configure).  
 
-5.  On the **Windows PE x64 Settings** tab, configure the settings listed in Table 28 based on the requirements of your organization, and then click **OK**.  
+5. On the **Windows PE x64 Settings** tab, configure the settings listed in Table 28 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 28. Configuration Settings on the Windows PE x64 Settings Tab of Deployment Share Properties  
+   ### Table 28. Configuration Settings on the Windows PE x64 Settings Tab of Deployment Share Properties  
 
-    |**Setting** |**Description** |  
-    |-----------------|---------------------|  
-    |**Generate a Lite Touch Windows PE WIM file** |Select to configure the Update Deployment Share Wizard to create a Windows PE WIM file that includes the LTI deployment scripts. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard creates the LiteTouchPE_x86.wim file with the image description specified in the **Image description** box<br /><br /> - Cleared, the Update Deployment Share Wizard will not create the WIM file|  
-    |**Image description** |Contains the image description for the Windows PE WIM file that the Update Deployment Share Wizard creates. The default value is **Lite Touch Windows PE (x64)**.|  
-    |**Generate a Lite Touch bootable ISO image** |Select to configure the Update Deployment Share Wizard to create a bootable Windows PE ISO file that includes the LTI deployment scripts. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard creates the ISO file with the name specified in the **ISO file name** box<br /><br /> - Cleared, the Update Deployment Share Wizard will not create the ISO file|  
-    |**ISO file name** |Contains the file name for the Windows PE ISO file that the Update Deployment Share Wizard creates. The default value for this text box is **LiteTouchPE_x64.iso**.<br /><br /> This box is enabled only if you select **Generate a Lite Touch bootable ISO image**.|  
-    |**Generate a generic Windows PE WIM file** |Select to configure the Update Deployment Share Wizard to create a Windows PE WIM file that does not include the LTI deployment scripts. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard creates the GenericPE_x64.wim file with the image description specified in the **Image description** box<br /><br /> - Cleared, the Update Deployment Share Wizard will not create the WIM file|  
-    |**Image description** |Contains the image description for the generic Windows PE WIM file that the Update Deployment Share Wizard creates. The default value for this text box is **Generic Windows PE (x64)**.<br /><br /> This box is enabled only if you select **Generate a generic bootable ISO Windows PE WIM file**.|  
-    |**Generate a generic bootable ISO image** |Select to configure the Update Deployment Share Wizard to create a bootable Windows PE ISO file that does not include the LTI deployments scripts. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard creates the Generic_x64.iso file with the image description specified in the **ISO file name** box<br /><br /> - Cleared, the Update Deployment Share Wizard will not create the ISO file<br /><br /> This box is enabled only if you select **Generate a generic Windows PE WIM file**.|  
-    |**ISO file name** |Contains the file name for the generic Windows PE ISO file that the Update Deployment Share Wizard creates. The default value for this text box is **Generic_x64.iso**.<br /><br /> This text box is enabled only if the **Generate a generic bootable ISO image** check box is selected.|  
-    |**Custom background bitmap file** |Contains the fully qualified path to the BMP file that is to be used as the custom background bitmap. The default value for this text box is **%INSTALLDIR%\Samples\Background.bmp**.|  
-    |**Custom background bitmap file** |Contains the fully qualified path to a folder structure to be included in the Windows PE images. The default value for the text box is empty.|  
-    |**Custom background bitmap file** |Configures the size of the scratch space in megabytes; you can select a value of **32**, **64**, **128**, **256**, or **512** MB. The default value is **32**.|  
+   |**Setting** |**Description** |  
+   |-----------------|---------------------|  
+   |**Generate a Lite Touch Windows PE WIM file** |Select to configure the Update Deployment Share Wizard to create a Windows PE WIM file that includes the LTI deployment scripts. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard creates the LiteTouchPE_x86.wim file with the image description specified in the **Image description** box<br /><br /> - Cleared, the Update Deployment Share Wizard will not create the WIM file|  
+   |**Image description** |Contains the image description for the Windows PE WIM file that the Update Deployment Share Wizard creates. The default value is **Lite Touch Windows PE (x64)**.|  
+   |**Generate a Lite Touch bootable ISO image** |Select to configure the Update Deployment Share Wizard to create a bootable Windows PE ISO file that includes the LTI deployment scripts. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard creates the ISO file with the name specified in the **ISO file name** box<br /><br /> - Cleared, the Update Deployment Share Wizard will not create the ISO file|  
+   |**ISO file name** |Contains the file name for the Windows PE ISO file that the Update Deployment Share Wizard creates. The default value for this text box is **LiteTouchPE_x64.iso**.<br /><br /> This box is enabled only if you select **Generate a Lite Touch bootable ISO image**.|  
+   |**Generate a generic Windows PE WIM file** |Select to configure the Update Deployment Share Wizard to create a Windows PE WIM file that does not include the LTI deployment scripts. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard creates the GenericPE_x64.wim file with the image description specified in the **Image description** box<br /><br /> - Cleared, the Update Deployment Share Wizard will not create the WIM file|  
+   |**Image description** |Contains the image description for the generic Windows PE WIM file that the Update Deployment Share Wizard creates. The default value for this text box is **Generic Windows PE (x64)**.<br /><br /> This box is enabled only if you select **Generate a generic bootable ISO Windows PE WIM file**.|  
+   |**Generate a generic bootable ISO image** |Select to configure the Update Deployment Share Wizard to create a bootable Windows PE ISO file that does not include the LTI deployments scripts. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard creates the Generic_x64.iso file with the image description specified in the **ISO file name** box<br /><br /> - Cleared, the Update Deployment Share Wizard will not create the ISO file<br /><br /> This box is enabled only if you select **Generate a generic Windows PE WIM file**.|  
+   |**ISO file name** |Contains the file name for the generic Windows PE ISO file that the Update Deployment Share Wizard creates. The default value for this text box is **Generic_x64.iso**.<br /><br /> This text box is enabled only if the **Generate a generic bootable ISO image** check box is selected.|  
+   |**Custom background bitmap file** |Contains the fully qualified path to the BMP file that is to be used as the custom background bitmap. The default value for this text box is **%INSTALLDIR%\Samples\Background.bmp**.|  
+   |**Custom background bitmap file** |Contains the fully qualified path to a folder structure to be included in the Windows PE images. The default value for the text box is empty.|  
+   |**Custom background bitmap file** |Configures the size of the scratch space in megabytes; you can select a value of **32**, **64**, **128**, **256**, or **512** MB. The default value is **32**.|  
 
- The deployment share configuration settings are saved, and the deployment share appears in the details pane of the Deployment Workbench.  
+   The deployment share configuration settings are saved, and the deployment share appears in the details pane of the Deployment Workbench.  
 
 #####  <a name="ConfiguretheDeploymentSharePropertiesWindowsPEx64ComponentsTab"></a> Configure the Deployment Share Properties Windows PE x64 Components Tab  
  The deployment share properties stored on the **Windows PE x64 Components** tab are mostly configured when you run the New Deployment Share Wizard.  
 
 ###### To configure the Windows PE x64 Components tab  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares.  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares.  
 
-3.  In the details pane, click ***deployment_share*** (where *deployment_share* is the name of the deployment share).  
+3. In the details pane, click ***deployment_share*** (where *deployment_share* is the name of the deployment share).  
 
-4.  In the Actions pane, click **Properties**.  
+4. In the Actions pane, click **Properties**.  
 
-     The ***deployment_share*** **Properties** dialog box opens (where *deployment_share* is the name of the deployment share you want to configure).  
+    The ***deployment_share*** **Properties** dialog box opens (where *deployment_share* is the name of the deployment share you want to configure).  
 
-5.  On the **Windows PE x86 Components** tab, configure the settings listed in Table 29 based on the requirements of your organization, and then click **OK**.  
+5. On the **Windows PE x86 Components** tab, configure the settings listed in Table 29 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 29. Configuration Settings on the Windows PE x64 Components Tab of Deployment Share Properties  
+   ### Table 29. Configuration Settings on the Windows PE x64 Components Tab of Deployment Share Properties  
 
-    |**Setting** |**Description** |  
-    |-----------------|---------------------|  
-    |**Selection profile** |Selects the device drivers and packages to be included in the Windows PE images based on the selection profile you choose. The default value is **All Drivers and Packages**. For more information about selection profiles, see [Manage Selection Profiles](#ManageSelectionProfiles).|  
-    |**Include all drivers from the selected driver group** |Select to configure the Update Deployment Share Wizard to include all the device drivers in the selection profile specified in the **Selection profile** box.|  
-    |**Include only drivers of the following types** |Select to configure the Update Deployment Share Wizard to include only the device drivers in the chosen selection profile that are specified in the following check boxes:<br /><br /> **- Include all network drivers in the selected group**<br /><br /> **- Include all video drivers in the selected group**<br /><br /> **- Include all mass storage drivers in the selected group**<br /><br /> **- Include all system-class drivers in the selected group** |  
-    |**Include all network drivers in the selected group** |Select to configure the Update Deployment Share Wizard to include all network drivers in the chosen selection profile. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard includes all network drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> - Cleared, the Update Deployment Share Wizard will not include all network drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> This check box is enabled only if you select **Include only drivers of the following types**.|  
-    |**Include all video drivers in the selected group** |Select to configure the Update Deployment Share Wizard to include all video drivers in the chosen selection profile. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard includes all video drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> - Cleared, the Update Deployment Share Wizard will not include all video drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> This check box is enabled only if you select **include only drivers of the following types**.|  
-    |**Include all mass storage drivers in the selected group** |Select to configure the Update Deployment Share Wizard to include all mass storage drivers in the chosen selection profile. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard includes all mass storage drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> - Cleared, the Update Deployment Share Wizard will not include all mass storage drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> This check box is enabled only if you select **include only drivers of the following types**.|  
-    |**Include all system-class drivers in the selected group** |Select to configure the Update Deployment Share Wizard to include all system-class drivers in chosen the selection profile. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard includes all system-class drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> - Cleared, the Update Deployment Share Wizard will not include all system-class drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> This check box is enabled only if you select **Include only drivers of the following types**.|  
-    |**ADO** |Select to add the optional ADO components to the Windows PE images. These components are necessary for accessing SQL Server databases, such as the MDT DB. If this check box is:<br /><br /> - Selected, the ADO components are added to the Windows PE images<br /><br /> - Cleared, the ADO components are not added to the Windows PE images|  
-    |**Optional Fonts** |Use to configure the Update Deployment Share Wizard to include the following fonts:<br /><br /> - Chinese (ZH-CN)<br /><br /> - Chinese (ZH-HK)<br /><br /> - Chinese (ZH-TW)<br /><br /> - Japanese (JA-JP)<br /><br /> - Korean (KO-KR)<br /><br /> Add these fonts when performing an LTI deployment of Windows Server images when the Setup files are Japanese, Korean, or Chinese. If the check box for a corresponding font is:<br /><br /> - Selected, the Update Deployment Share Wizard includes the font in the Windows PE images<br /><br /> - Cleared, the Update Deployment Share Wizard will not include the font in the Windows PE images<br /><br /> Adding fonts to Windows PE boot images increases the size of the images. Add fonts only if necessary.|  
+   |**Setting** |**Description** |  
+   |-----------------|---------------------|  
+   |**Selection profile** |Selects the device drivers and packages to be included in the Windows PE images based on the selection profile you choose. The default value is **All Drivers and Packages**. For more information about selection profiles, see [Manage Selection Profiles](#ManageSelectionProfiles).|  
+   |**Include all drivers from the selected driver group** |Select to configure the Update Deployment Share Wizard to include all the device drivers in the selection profile specified in the **Selection profile** box.|  
+   |**Include only drivers of the following types** |Select to configure the Update Deployment Share Wizard to include only the device drivers in the chosen selection profile that are specified in the following check boxes:<br /><br /> **- Include all network drivers in the selected group**<br /><br /> **- Include all video drivers in the selected group**<br /><br /> **- Include all mass storage drivers in the selected group**<br /><br /> **- Include all system-class drivers in the selected group** |  
+   |**Include all network drivers in the selected group** |Select to configure the Update Deployment Share Wizard to include all network drivers in the chosen selection profile. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard includes all network drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> - Cleared, the Update Deployment Share Wizard will not include all network drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> This check box is enabled only if you select **Include only drivers of the following types**.|  
+   |**Include all video drivers in the selected group** |Select to configure the Update Deployment Share Wizard to include all video drivers in the chosen selection profile. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard includes all video drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> - Cleared, the Update Deployment Share Wizard will not include all video drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> This check box is enabled only if you select **include only drivers of the following types**.|  
+   |**Include all mass storage drivers in the selected group** |Select to configure the Update Deployment Share Wizard to include all mass storage drivers in the chosen selection profile. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard includes all mass storage drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> - Cleared, the Update Deployment Share Wizard will not include all mass storage drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> This check box is enabled only if you select **include only drivers of the following types**.|  
+   |**Include all system-class drivers in the selected group** |Select to configure the Update Deployment Share Wizard to include all system-class drivers in chosen the selection profile. If the check box is:<br /><br /> - Selected, the Update Deployment Share Wizard includes all system-class drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> - Cleared, the Update Deployment Share Wizard will not include all system-class drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> This check box is enabled only if you select **Include only drivers of the following types**.|  
+   |**ADO** |Select to add the optional ADO components to the Windows PE images. These components are necessary for accessing SQL Server databases, such as the MDT DB. If this check box is:<br /><br /> - Selected, the ADO components are added to the Windows PE images<br /><br /> - Cleared, the ADO components are not added to the Windows PE images|  
+   |**Optional Fonts** |Use to configure the Update Deployment Share Wizard to include the following fonts:<br /><br /> - Chinese (ZH-CN)<br /><br /> - Chinese (ZH-HK)<br /><br /> - Chinese (ZH-TW)<br /><br /> - Japanese (JA-JP)<br /><br /> - Korean (KO-KR)<br /><br /> Add these fonts when performing an LTI deployment of Windows Server images when the Setup files are Japanese, Korean, or Chinese. If the check box for a corresponding font is:<br /><br /> - Selected, the Update Deployment Share Wizard includes the font in the Windows PE images<br /><br /> - Cleared, the Update Deployment Share Wizard will not include the font in the Windows PE images<br /><br /> Adding fonts to Windows PE boot images increases the size of the images. Add fonts only if necessary.|  
 
- The deployment share configuration settings are saved, and the deployment share appears in the details pane of the Deployment Workbench.  
+   The deployment share configuration settings are saved, and the deployment share appears in the details pane of the Deployment Workbench.  
 
 ####  <a name="CopyaDeploymentShare"></a> Copy a Deployment Share  
  Deployment shares are local or network shared folders. You can make a copy of a deployment share using any file-copy process, such as in Windows Explorer. When copying a deployment share to another computer, ensure that you share the folder with the appropriate permissions.  
@@ -1837,25 +1837,25 @@ Table 10 lists the top-level nodes in the Deployment Workbench and the types of 
 
 ###### To update a deployment share in the Deployment Workbench  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares.  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares.  
 
-3.  In the details pane, click ***deployment_share***, and then in the Actions pane, click **Update Deployment Share** (where *deployment_share* is the name of the deployment share you want to update).  
+3. In the details pane, click ***deployment_share***, and then in the Actions pane, click **Update Deployment Share** (where *deployment_share* is the name of the deployment share you want to update).  
 
-     The Update Deployment Share Wizard starts.  
+    The Update Deployment Share Wizard starts.  
 
-4.  Complete the Update Deployment Share Wizard using the information in Table 30. Accept the default values unless otherwise specified.  
+4. Complete the Update Deployment Share Wizard using the information in Table 30. Accept the default values unless otherwise specified.  
 
-    ### Table 30. Information for Completing the Update Deployment Share Wizard  
+   ### Table 30. Information for Completing the Update Deployment Share Wizard  
 
-    |**On this wizard page** |**Do this** |  
-    |-----------------------------|-----------------|  
-    |**Options** |a. Select one of the following options based on your requirements:<br /><br /> **- Optimize the boot image updating process**. This option configures the Update Deployment Share Wizard to update existing versions of the image files. Select this option when you want to reduce the amount of time required to update the boot images. Typically, this process takes less time than the **Completely regenerate the boot images** option.<br /><br /> You can optionally select the **Compress the boot image contents to recover space used by removed or modified content** check box to reduce the size of the boot images. Over time, the process of adding and removing content (such as drivers, components, and packages) can increase the size of the Windows PE image. Selecting this option reduces the image size to the minimum for the current content. However, it may also increase the time required to generate the images.<br /><br /> **- Completely regenerate the boot images**. This option configures the Update Deployment Share Wizard to create a new version of all the image files. Select this option when you want to force the creation of new images. This process can take longer than the **Optimize the boot image updating process** option.<br /><br /> By default, the **Optimize the boot image updating process** option is selected and the **Compress the boot image contents to recover space used by removed or modified content** check box is cleared.<br /><br /> b. Click **Next**.|  
-    |**Summary** |Review the information in the **Details** box, and then click **Next**.|  
-    |**Confirmation** |You can click **Save Output** to save the output of the wizard to a file. You can also click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Close**.|  
+   |**On this wizard page** |**Do this** |  
+   |-----------------------------|-----------------|  
+   |**Options** |a. Select one of the following options based on your requirements:<br /><br /> **- Optimize the boot image updating process**. This option configures the Update Deployment Share Wizard to update existing versions of the image files. Select this option when you want to reduce the amount of time required to update the boot images. Typically, this process takes less time than the **Completely regenerate the boot images** option.<br /><br /> You can optionally select the **Compress the boot image contents to recover space used by removed or modified content** check box to reduce the size of the boot images. Over time, the process of adding and removing content (such as drivers, components, and packages) can increase the size of the Windows PE image. Selecting this option reduces the image size to the minimum for the current content. However, it may also increase the time required to generate the images.<br /><br /> **- Completely regenerate the boot images**. This option configures the Update Deployment Share Wizard to create a new version of all the image files. Select this option when you want to force the creation of new images. This process can take longer than the **Optimize the boot image updating process** option.<br /><br /> By default, the **Optimize the boot image updating process** option is selected and the **Compress the boot image contents to recover space used by removed or modified content** check box is cleared.<br /><br /> b. Click **Next**.|  
+   |**Summary** |Review the information in the **Details** box, and then click **Next**.|  
+   |**Confirmation** |You can click **Save Output** to save the output of the wizard to a file. You can also click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Close**.|  
 
- The Deployment Workbench starts updating the deployment share and creates the LiteTouchPE_x86.iso and LiteTouchPE_x86.wim files (for 32-bit target computers) or LiteTouchPE_x64.iso and LiteTouchPE_x64.wim files (for 64-bit target computers) in the *deployment_share*\Boot folder (where *deployment_share* is the network shared folder used as the deployment share) based on the configuration settings on the **Windows PE x86 Settings** and **Windows PE x64 Settings** tabs.  
+   The Deployment Workbench starts updating the deployment share and creates the LiteTouchPE_x86.iso and LiteTouchPE_x86.wim files (for 32-bit target computers) or LiteTouchPE_x64.iso and LiteTouchPE_x64.wim files (for 64-bit target computers) in the *deployment_share*\Boot folder (where *deployment_share* is the network shared folder used as the deployment share) based on the configuration settings on the **Windows PE x86 Settings** and **Windows PE x64 Settings** tabs.  
 
 > [!NOTE]
 >  Optionally, create a bootable device, such as a UFD or USB hard disk, from the ISO file so that you can start the target computer from the device as described in [Create Bootable Devices from MDT Boot Images](#CreateBootableDevicesfromMDTBootImages).  
@@ -1911,25 +1911,25 @@ Table 10 lists the top-level nodes in the Deployment Workbench and the types of 
 ###  <a name="ConfiguringOperatingSystemsintheDeploymentWorkbench"></a> Configuring Operating Systems in the Deployment Workbench  
  MDT uses the Deployment Workbench to manage the operating systems that you can deploy to the reference and target computers in your organization. Configure the operating systems in the Deployment Workbench by:  
 
--   Importing an operating system as described in [Import an Operating System into the Deployment Workbench](#ImportanOperatingSystemintotheDeploymentWorkbench)  
+- Importing an operating system as described in [Import an Operating System into the Deployment Workbench](#ImportanOperatingSystemintotheDeploymentWorkbench)  
 
--   Viewing an operating system’s properties as described in [View Operating System Properties in the Deployment Workbench](#ViewOperatingSystemPropertiesintheDeploymentWorkbench)  
+- Viewing an operating system’s properties as described in [View Operating System Properties in the Deployment Workbench](#ViewOperatingSystemPropertiesintheDeploymentWorkbench)  
 
--   Copying an operating system as described in [Copy an Operating System in the Deployment Workbench](#CopyanOperatingSystemintheDeploymentWorkbench)  
+- Copying an operating system as described in [Copy an Operating System in the Deployment Workbench](#CopyanOperatingSystemintheDeploymentWorkbench)  
 
--   Moving an operating system as described in [Move an Operating System in the Deployment Workbench](#MoveanOperatingSystemintheDeploymentWorkbench)  
+- Moving an operating system as described in [Move an Operating System in the Deployment Workbench](#MoveanOperatingSystemintheDeploymentWorkbench)  
 
--   Renaming an operating system as described in [Rename an Operating System in the Deployment Workbench](#RenameanOperatingSystemintheDeploymentWorkbench)  
+- Renaming an operating system as described in [Rename an Operating System in the Deployment Workbench](#RenameanOperatingSystemintheDeploymentWorkbench)  
 
--   Deleting an operating system as described in [Delete an Operating System from the Deployment Workbench](#DeleteanOperatingSystemfromtheDeploymentWorkbench)  
+- Deleting an operating system as described in [Delete an Operating System from the Deployment Workbench](#DeleteanOperatingSystemfromtheDeploymentWorkbench)  
 
--   Managing folders for operating systems as described in [Manage Folders for Operating Systems in the Deployment Workbench](#ManageFoldersforOperatingSystemsintheDeploymentWorkbench)  
+- Managing folders for operating systems as described in [Manage Folders for Operating Systems in the Deployment Workbench](#ManageFoldersforOperatingSystemsintheDeploymentWorkbench)  
 
- In addtion to configuring operating systems in the Deployment Workbench, you can configure operating systems using the MDT Windows PowerShell cmdlets. For more information on configuring operating systems using the MDT Windows PowerShell cmdlets, see the following sections beneath the section, "MDT Windows PowerShell Cmdlets", in the MDT document *Toolkit Reference*:  
+  In addtion to configuring operating systems in the Deployment Workbench, you can configure operating systems using the MDT Windows PowerShell cmdlets. For more information on configuring operating systems using the MDT Windows PowerShell cmdlets, see the following sections beneath the section, "MDT Windows PowerShell Cmdlets", in the MDT document *Toolkit Reference*:  
 
--   **Get-MDTOperatingSystemCatalog**  
+- **Get-MDTOperatingSystemCatalog**  
 
--   **Import-MDTOperatingSystem**  
+- **Import-MDTOperatingSystem**  
 
 ####  <a name="ImportanOperatingSystemintotheDeploymentWorkbench"></a> Import an Operating System into the Deployment Workbench  
  You can import operating systems into the Deployment Workbench using the options listed in Table 31. You manage this import in the Import Operating System Wizard in the Deployment Workbench.  
@@ -1947,19 +1947,19 @@ Table 10 lists the top-level nodes in the Deployment Workbench and the types of 
 
  Start the Import Operating System Wizard using one of the following methods:  
 
--   In the Deployment Workbench console tree, click the Operating System node or a folder beneath the Operating System node. Then, in the Actions pane, click **Import Operating System**.  
+- In the Deployment Workbench console tree, click the Operating System node or a folder beneath the Operating System node. Then, in the Actions pane, click **Import Operating System**.  
 
--   In the Deployment Workbench console tree, click the Operating System node or a folder beneath the Operating System node. Then, from the **Action** menu, click **Import Operating System**.  
+- In the Deployment Workbench console tree, click the Operating System node or a folder beneath the Operating System node. Then, from the **Action** menu, click **Import Operating System**.  
 
--   In the Deployment Workbench console tree, click the Operating System node or a folder beneath the Operating System node. Then, click **Import Operating System**.  
+- In the Deployment Workbench console tree, click the Operating System node or a folder beneath the Operating System node. Then, click **Import Operating System**.  
 
- You can also import operating systems into the Deployment Workbench from:  
+  You can also import operating systems into the Deployment Workbench from:  
 
--   Windows distribution media as described in [Import an Operating System from Windows Distribution Media](#ImportanOperatingSystemfromWindowsDistributionMedia)  
+- Windows distribution media as described in [Import an Operating System from Windows Distribution Media](#ImportanOperatingSystemfromWindowsDistributionMedia)  
 
--   WIM images previously captured from reference computers as described in [Import a Previously Captured Image of a Reference Computer](#ImportaPreviouslyCapturedImageofaReferenceComputer)  
+- WIM images previously captured from reference computers as described in [Import a Previously Captured Image of a Reference Computer](#ImportaPreviouslyCapturedImageofaReferenceComputer)  
 
--   Existing WIM images in Windows Deployment Services as described in [Import an Operating System from an Existing Windows Deployment Services Image](#ImportanOperatingSystemfromanExistingWindowsDeploymentServicesImage)  
+- Existing WIM images in Windows Deployment Services as described in [Import an Operating System from an Existing Windows Deployment Services Image](#ImportanOperatingSystemfromanExistingWindowsDeploymentServicesImage)  
 
 #####  <a name="ImportanOperatingSystemfromWindowsDistributionMedia"></a> Import an Operating System from Windows Distribution Media  
  MDT allows you to import operating systems into the Deployment Workbench from Windows distribution media, which includes product DVDs, CDs, or folders containing the distribution files. Import the operating system using the Import Operating System Wizard in the Deployment Workbench.  
@@ -1989,28 +1989,28 @@ Table 10 lists the top-level nodes in the Deployment Workbench and the types of 
 
 ###### To import an operating system from a previously captured image of a reference computer  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Operating Systems (where *deployment_share* is the name of the deployment share to which the operating system will be added).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Operating Systems (where *deployment_share* is the name of the deployment share to which the operating system will be added).  
 
-3.  In the Actions pane, click **Import Operating System**.  
+3. In the Actions pane, click **Import Operating System**.  
 
-     The Import Operating System Wizard starts.  
+    The Import Operating System Wizard starts.  
 
-4.  Complete the Import Operating System Wizard using the information in Table 33.  
+4. Complete the Import Operating System Wizard using the information in Table 33.  
 
-    |**On this wizard page** |**Do this** |  
-    |-----------------------------|-----------------|  
-    |**OS Type** |Click **Custom image file**, and then click **Next**.|  
-    |**Source** |In **Source file**, type ***source_file*** (where *source_file* is the fully qualified path to the WIM image file containing the operating system source files), and then click **Next**.<br /><br /> Alternatively, click **Browse** to find the source WIM image.|  
-    |**Setup** |Select one of the following options based on your requirements, and then click **Next**:<br /><br /> **- Setup files are not needed**. Select this option when no Setup files are needed for an image.<br /><br /> **- Copy Windows 7, Windows Server 2008 R2, or later setup files from the specified path**. Select this option to copy the Setup files from a folder containing the Windows setup files when those files are not available in another operating system in the Deployment Workbench. In **Setup source directory**, type or click **Browse** to find the folder containing the Setup files.<br /><br /> The default option is **Setup and Sysprep files are not needed**.|  
-    |**Destination** |In **Destination directory name**, type ***destination_folder*** (where *destination_folder* is the name of the folder in the deployment share that will contain the operating system source files), and then click **Next**.|  
-    |**Summary** |Click **Next**.|  
-    |**Confirmation** |Click **Save Output** to save the output of the wizard to a file, or click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Finish**.|  
+   |**On this wizard page** |**Do this** |  
+   |-----------------------------|-----------------|  
+   |**OS Type** |Click **Custom image file**, and then click **Next**.|  
+   |**Source** |In **Source file**, type ***source_file*** (where *source_file* is the fully qualified path to the WIM image file containing the operating system source files), and then click **Next**.<br /><br /> Alternatively, click **Browse** to find the source WIM image.|  
+   |**Setup** |Select one of the following options based on your requirements, and then click **Next**:<br /><br /> **- Setup files are not needed**. Select this option when no Setup files are needed for an image.<br /><br /> **- Copy Windows 7, Windows Server 2008 R2, or later setup files from the specified path**. Select this option to copy the Setup files from a folder containing the Windows setup files when those files are not available in another operating system in the Deployment Workbench. In **Setup source directory**, type or click **Browse** to find the folder containing the Setup files.<br /><br /> The default option is **Setup and Sysprep files are not needed**.|  
+   |**Destination** |In **Destination directory name**, type ***destination_folder*** (where *destination_folder* is the name of the folder in the deployment share that will contain the operating system source files), and then click **Next**.|  
+   |**Summary** |Click **Next**.|  
+   |**Confirmation** |Click **Save Output** to save the output of the wizard to a file, or click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Finish**.|  
 
- The Import Operating System Wizard finishes. The operating system is added to the list of operating systems in the details pane of the Deployment Workbench.  
+   The Import Operating System Wizard finishes. The operating system is added to the list of operating systems in the details pane of the Deployment Workbench.  
 
- If you attempt to import a custom image that does not have an Edition ID, the wizard fails with an error similar to the following:  
+   If you attempt to import a custom image that does not have an Edition ID, the wizard fails with an error similar to the following:  
 
 ```  
 Setup failed applying image F:\Deploy\Operating Systems\W2K8R2RTM\W2K8R2RTM.wim, rc = 31  
@@ -2028,26 +2028,26 @@ imagex /flags <edition_id> /info <wim_file> 1 <new_image_name> <new_image_descri
 
 ###### To import an operating system from an existing image in Windows Deployment Services  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Operating Systems (where *deployment_share* is the name of the deployment share to which the operating system will be added).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Operating Systems (where *deployment_share* is the name of the deployment share to which the operating system will be added).  
 
-3.  In the Actions pane, click **Import Operating System**.  
+3. In the Actions pane, click **Import Operating System**.  
 
-     The Import Operating System Wizard starts.  
+    The Import Operating System Wizard starts.  
 
-4.  Complete the Import Operating System Wizard using the information in Table 34.  
+4. Complete the Import Operating System Wizard using the information in Table 34.  
 
-    ### Table 34. Information for Completing the Import Operating System Wizard  
+   ### Table 34. Information for Completing the Import Operating System Wizard  
 
-    |**On this wizard page** |**Do this** |  
-    |-----------------------------|-----------------|  
-    |**OS Type** |Click **Custom image file**, and then click **Next**.|  
-    |**WDS Server** |In **Server name**, type ***server_name*** (where *server_name* is the name of the Windows Deployment Services server that contains the existing WIM images), and then click Next.|  
-    |**Summary** |Click **Next**.|  
-    |**Confirmation** |Click **Save Output** to save the output of the wizard to a file, or click View Script to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Finish**.|  
+   |**On this wizard page** |**Do this** |  
+   |-----------------------------|-----------------|  
+   |**OS Type** |Click **Custom image file**, and then click **Next**.|  
+   |**WDS Server** |In **Server name**, type ***server_name*** (where *server_name* is the name of the Windows Deployment Services server that contains the existing WIM images), and then click Next.|  
+   |**Summary** |Click **Next**.|  
+   |**Confirmation** |Click **Save Output** to save the output of the wizard to a file, or click View Script to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Finish**.|  
 
- The Import Operating System Wizard finishes. The operating system is added to the list of operating systems in the details pane but is not is copied to the deployment share. The Deployment Workbench leaves the operating system image on the Windows Deployment Services server, but the image is now available to LTI.  
+   The Import Operating System Wizard finishes. The operating system is added to the list of operating systems in the details pane but is not is copied to the deployment share. The Deployment Workbench leaves the operating system image on the Windows Deployment Services server, but the image is now available to LTI.  
 
 ####  <a name="ViewOperatingSystemPropertiesintheDeploymentWorkbench"></a> View Operating System Properties in the Deployment Workbench  
  You view operating system properties beneath the Operating System node in the Deployment Workbench using the **Properties** actions as described in [View Item Properties in the Deployment Workbench](#ViewItemPropertiesintheDeploymentWorkbench).  
@@ -2094,33 +2094,33 @@ Table 35 lists the configuration settings on the **General** tab of the operatin
 ###  <a name="ConfiguringApplicationsintheDeploymentWorkbench"></a> Configuring Applications in the Deployment Workbench  
  MDT uses the Deployment Workbench to manage the applications deployed to the reference and target computers in your organization. Configure the applications in the Deployment Workbench by:  
 
--   Creating a new application as described in [Create a New Application in the Deployment Workbench](#CreateaNewApplicationintheDeploymentWorkbench)  
+- Creating a new application as described in [Create a New Application in the Deployment Workbench](#CreateaNewApplicationintheDeploymentWorkbench)  
 
--   Viewing and configuring an application as described in [View and Configure an Application in the Deployment Workbench](#ViewandConfigureanApplicationintheDeploymentWorkbench)  
+- Viewing and configuring an application as described in [View and Configure an Application in the Deployment Workbench](#ViewandConfigureanApplicationintheDeploymentWorkbench)  
 
--   Copying an application as described in [Copy an Application in the Deployment Workbench](#CopyanApplicationintheDeploymentWorkbench)  
+- Copying an application as described in [Copy an Application in the Deployment Workbench](#CopyanApplicationintheDeploymentWorkbench)  
 
--   Moving an application as described in [Move an Application in the Deployment Workbench](#MoveanApplicationintheDeploymentWorkbench)  
+- Moving an application as described in [Move an Application in the Deployment Workbench](#MoveanApplicationintheDeploymentWorkbench)  
 
--   Renaming an application as described in [Rename an Application in the Deployment Workbench](#RenameanApplicationintheDeploymentWorkbench)  
+- Renaming an application as described in [Rename an Application in the Deployment Workbench](#RenameanApplicationintheDeploymentWorkbench)  
 
--   Deleting an application as described in [Delete an Application from the Deployment Workbench](#DeleteanApplicationfromtheDeploymentWorkbench)  
+- Deleting an application as described in [Delete an Application from the Deployment Workbench](#DeleteanApplicationfromtheDeploymentWorkbench)  
 
--   Managing folders for applications as described in [Manage Folders for Applications in the Deployment Workbench](#ManageFoldersforApplicationsintheDeploymentWorkbench)  
+- Managing folders for applications as described in [Manage Folders for Applications in the Deployment Workbench](#ManageFoldersforApplicationsintheDeploymentWorkbench)  
 
--   Enabling or disabling an application as described in [Enable or Disable an Application in the Deployment Workbench](#EnableorDisableanApplicationintheDeploymentWorkbench)  
+- Enabling or disabling an application as described in [Enable or Disable an Application in the Deployment Workbench](#EnableorDisableanApplicationintheDeploymentWorkbench)  
 
--   Preventing an application from being visible as described in [Prevent an Application from Being Visible in the Deployment Wizard](#PreventanApplicationfromBeingVisibleintheDeploymentWizard)  
+- Preventing an application from being visible as described in [Prevent an Application from Being Visible in the Deployment Wizard](#PreventanApplicationfromBeingVisibleintheDeploymentWizard)  
 
--   Configuring the computer to restart as described in [Configure the Computer to Restart After Application Installation](#ConfiguretheComputertoRestartAfterApplicationInstallation)  
+- Configuring the computer to restart as described in [Configure the Computer to Restart After Application Installation](#ConfiguretheComputertoRestartAfterApplicationInstallation)  
 
--   Customizing application installation as described in [Customize Application Installation in Task Sequences](#CustomizeApplicationInstallationinTaskSequences)  
+- Customizing application installation as described in [Customize Application Installation in Task Sequences](#CustomizeApplicationInstallationinTaskSequences)  
 
- In addtion to managing applications in the Deployment Workbench, you can manage applications using the MDT Windows PowerShell cmdlets. For more information on managing applications using the MDT Windows PowerShell cmdlets, see the following sections beneath the section, "MDT Windows PowerShell Cmdlets", in the MDT document *Toolkit Reference*:  
+  In addtion to managing applications in the Deployment Workbench, you can manage applications using the MDT Windows PowerShell cmdlets. For more information on managing applications using the MDT Windows PowerShell cmdlets, see the following sections beneath the section, "MDT Windows PowerShell Cmdlets", in the MDT document *Toolkit Reference*:  
 
--   **Get-MDTDeploymentShareStatistics**  
+- **Get-MDTDeploymentShareStatistics**  
 
--   **Import-MDTApplication**  
+- **Import-MDTApplication**  
 
 ####  <a name="CreateaNewApplicationintheDeploymentWorkbench"></a> Create a New Application in the Deployment Workbench  
  You can create new applications in the Deployment Workbench using one of the options listed in Table 36. You import operating systems into the Deployment Workbench using the New Application Wizard.  
@@ -2135,99 +2135,99 @@ Table 35 lists the configuration settings on the **General** tab of the operatin
 
  Start the New Application Wizard using one of the following methods:  
 
--   In the Deployment Workbench console tree, click the Applications node or a folder beneath the Applications node. Then, in the Actions pane, click **New Application**.  
+- In the Deployment Workbench console tree, click the Applications node or a folder beneath the Applications node. Then, in the Actions pane, click **New Application**.  
 
--   In the Deployment Workbench console tree, click the Applications node or a folder beneath the Applications node. Then, from the **Action** menu, click **New Application**.  
+- In the Deployment Workbench console tree, click the Applications node or a folder beneath the Applications node. Then, from the **Action** menu, click **New Application**.  
 
--   In the Deployment Workbench console tree, click the Applications node or a folder beneath the Applications node. Then, click **New Application**.  
+- In the Deployment Workbench console tree, click the Applications node or a folder beneath the Applications node. Then, click **New Application**.  
 
- You can create a new application in the Deployment Workbench for:  
+  You can create a new application in the Deployment Workbench for:  
 
--   Applications to be deployed from the deployment share as described in [Create a New Application That Is Deployed from the Deployment Share](#CreateaNewApplicationThatIsDeployedfromtheDeploymentShare)  
+- Applications to be deployed from the deployment share as described in [Create a New Application That Is Deployed from the Deployment Share](#CreateaNewApplicationThatIsDeployedfromtheDeploymentShare)  
 
--   Applications to be deployed from another network shared folder as described in [Create a New Application That Is Deployed from Another Network Shared Folder](#CreateaNewApplicationThatIsDeployedfromAnotherNetworkSharedFolder)  
+- Applications to be deployed from another network shared folder as described in [Create a New Application That Is Deployed from Another Network Shared Folder](#CreateaNewApplicationThatIsDeployedfromAnotherNetworkSharedFolder)  
 
--   Deploying application dependencies as described in [Create a New Application for Deploying Application Dependencies](#CreateaNewApplicationforDeployingApplicationDependencies)  
+- Deploying application dependencies as described in [Create a New Application for Deploying Application Dependencies](#CreateaNewApplicationforDeployingApplicationDependencies)  
 
 #####  <a name="CreateaNewApplicationThatIsDeployedfromtheDeploymentShare"></a> Create a New Application That Is Deployed from the Deployment Share  
  MDT allows you to use the New Application Wizard in the Deployment Workbench to create new applications that are deployed from the deployment share. The New Application Wizard copies source files for this type of applications to the deployment share.  
 
 ###### To create a new application that is deployed from the deployment share  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Applications (where *deployment_share* is the name of the deployment share to which the application will be added).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Applications (where *deployment_share* is the name of the deployment share to which the application will be added).  
 
-3.  In the Actions pane, click **New Application**.  
+3. In the Actions pane, click **New Application**.  
 
-     The New Application Wizard starts.  
+    The New Application Wizard starts.  
 
-4.  Complete the New Application Wizard using the information in Table 37.  
+4. Complete the New Application Wizard using the information in Table 37.  
 
-    ### Table 37. Information for Completing the New Application Wizard  
+   ### Table 37. Information for Completing the New Application Wizard  
 
-    |**On this wizard page** |**Do this** |  
-    |-----------------------------|-----------------|  
-    |**Application Type** |Click **Application with source files**, and then click **Next**.|  
-    |**Details** |- In **Publisher**, type ***publisher_name*** (where *publisher_name* is the name of the application’s publisher).<br /><br /> - In **Application Name**, type ***application_name*** (where *application_name* is the descriptive name of the application).<br /><br /> - In **Version**, type **version** (where *version* is the version of the application).<br /><br /> - In **Language**, type **language** (where *language* is the language of the application).<br /><br /> - Click **Next**.|  
-    |**Source** |a. In **Source directory**, type ***source_folder*** (where *source_folder* is the fully qualified path to the folder containing the application source files).<br /><br /> Alternatively, click **Browse** to find the source folder.<br /><br /> b. Select or clear the **Move the files to the deployment share instead of copying them** check box based on your requirements, and then click **Next**.<br /><br /> This check box determines whether the wizard copies or moves the application source files to the deployment share. If the check box is:<br /><br /> - Selected, the wizard moves the source files to the deployment share<br /><br /> - Cleared, the wizard copies the source files to the deployment share<br /><br /> By default, this check box is cleared.|  
-    |**Destination** |In **Specify the name of the directory that should be created**, type ***destination_folder*** (where *destination_folder* is the name of the folder in the deployment share that will contain the application source files), and then click **Next**.|  
-    |**Command Details** |- In **Command line**, type ***command_line*** (where *command_line* is the command line to be run to start the installation of the application, including any command-line parameters).<br /><br /> - In **Working directory**, type ***working_directory*** (where *working_directory* is the fully qualified or relative path for the folder designated as the working directory for the application).<br /><br /> - Click **Next**.|  
-    |**Summary** |Click **Next**.|  
-    |**Confirmation** |Click **Save Output** to save the output of the wizard to a file, or click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Finish**.|  
+   |**On this wizard page** |**Do this** |  
+   |-----------------------------|-----------------|  
+   |**Application Type** |Click **Application with source files**, and then click **Next**.|  
+   |**Details** |- In **Publisher**, type ***publisher_name*** (where *publisher_name* is the name of the application’s publisher).<br /><br /> - In **Application Name**, type ***application_name*** (where *application_name* is the descriptive name of the application).<br /><br /> - In **Version**, type **version** (where *version* is the version of the application).<br /><br /> - In **Language**, type **language** (where *language* is the language of the application).<br /><br /> - Click **Next**.|  
+   |**Source** |a. In **Source directory**, type ***source_folder*** (where *source_folder* is the fully qualified path to the folder containing the application source files).<br /><br /> Alternatively, click **Browse** to find the source folder.<br /><br /> b. Select or clear the **Move the files to the deployment share instead of copying them** check box based on your requirements, and then click **Next**.<br /><br /> This check box determines whether the wizard copies or moves the application source files to the deployment share. If the check box is:<br /><br /> - Selected, the wizard moves the source files to the deployment share<br /><br /> - Cleared, the wizard copies the source files to the deployment share<br /><br /> By default, this check box is cleared.|  
+   |**Destination** |In **Specify the name of the directory that should be created**, type ***destination_folder*** (where *destination_folder* is the name of the folder in the deployment share that will contain the application source files), and then click **Next**.|  
+   |**Command Details** |- In **Command line**, type ***command_line*** (where *command_line* is the command line to be run to start the installation of the application, including any command-line parameters).<br /><br /> - In **Working directory**, type ***working_directory*** (where *working_directory* is the fully qualified or relative path for the folder designated as the working directory for the application).<br /><br /> - Click **Next**.|  
+   |**Summary** |Click **Next**.|  
+   |**Confirmation** |Click **Save Output** to save the output of the wizard to a file, or click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Finish**.|  
 
- The New Application Wizard finishes. The application is added to the list of operating systems in the details pane in the Deployment Workbench.  
+   The New Application Wizard finishes. The application is added to the list of operating systems in the details pane in the Deployment Workbench.  
 
 #####  <a name="CreateaNewApplicationThatIsDeployedfromAnotherNetworkSharedFolder"></a> Create a New Application That Is Deployed from Another Network Shared Folder  
  MDT allows for the creation of new applications that you deploy from a network shared folder other than the deployment share. Create a new application using the New Application Wizard in the Deployment Workbench. The New Application Wizard does not copy the source files for this type of application.  
 
 ###### To create a new application that is deployed from a network shared folder other than the deployment share  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Applications (where *deployment_share* is the name of the deployment share to which the application will be added).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Applications (where *deployment_share* is the name of the deployment share to which the application will be added).  
 
-3.  In the Actions pane, click **New Application**.  
+3. In the Actions pane, click **New Application**.  
 
-     The New Application Wizard starts.  
+    The New Application Wizard starts.  
 
-4.  Complete the New Application Wizard using the information in Table 38.  
+4. Complete the New Application Wizard using the information in Table 38.  
 
-    |**On this wizard page** |**Do this** |  
-    |-----------------------------|-----------------|  
-    |**Application Type** |Click **Application without source files or elsewhere on the network**, and then click **Next**.|  
-    |**Details** |- In **Publisher**, type ***publisher_name*** (where *publisher_name* is the name of the application’s publisher).<br /><br /> - In **Application Name**, type ***application_name*** (where *application_name* is the descriptive name of the application).<br /><br /> - In **Version**, type ***version*** (where *version* is the version of the application).<br /><br /> - In **Language**, type ***language*** (where *language* is the language of the application).<br /><br /> - Click **Next**.|  
-    |**Command Details** |- In **Command line**, type ***command_line*** (where *command_line* is the command line to be run to start the installation of the application, including any command-line parameters).<br /><br /> - In **Working directory**, type ***working_directory*** (where *working_directory* is the fully qualified or relative path for the folder designated as the working directory for the application).<br /><br /> - Click **Next**.|  
-    |**Summary** |Click **Next**.|  
-    |**Confirmation** |Click **Save Output** to save the output of the wizard to a file, or click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Finish**.|  
+   |**On this wizard page** |**Do this** |  
+   |-----------------------------|-----------------|  
+   |**Application Type** |Click **Application without source files or elsewhere on the network**, and then click **Next**.|  
+   |**Details** |- In **Publisher**, type ***publisher_name*** (where *publisher_name* is the name of the application’s publisher).<br /><br /> - In **Application Name**, type ***application_name*** (where *application_name* is the descriptive name of the application).<br /><br /> - In **Version**, type ***version*** (where *version* is the version of the application).<br /><br /> - In **Language**, type ***language*** (where *language* is the language of the application).<br /><br /> - Click **Next**.|  
+   |**Command Details** |- In **Command line**, type ***command_line*** (where *command_line* is the command line to be run to start the installation of the application, including any command-line parameters).<br /><br /> - In **Working directory**, type ***working_directory*** (where *working_directory* is the fully qualified or relative path for the folder designated as the working directory for the application).<br /><br /> - Click **Next**.|  
+   |**Summary** |Click **Next**.|  
+   |**Confirmation** |Click **Save Output** to save the output of the wizard to a file, or click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Finish**.|  
 
- The New Application Wizard finishes. The application is added to the list of operating systems in the details pane of the Deployment Workbench.  
+   The New Application Wizard finishes. The application is added to the list of operating systems in the details pane of the Deployment Workbench.  
 
 #####  <a name="CreateaNewApplicationforDeployingApplicationDependencies"></a> Create a New Application for Deploying Application Dependencies  
  MDT allows for the creation of new applications used to deploy only the dependencies for an application instead of installing the application itself. Create a new application using the New Application Wizard in the Deployment Workbench. The New Application Wizard does not copy source files to the deployment share.  
 
 ###### To create a new application for deploying application dependencies  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Applications (where *deployment_share* is the name of the deployment share to which the application will be added).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Applications (where *deployment_share* is the name of the deployment share to which the application will be added).  
 
-3.  In the Actions pane, click **New Application**.  
+3. In the Actions pane, click **New Application**.  
 
-     The New Application Wizard starts.  
+    The New Application Wizard starts.  
 
-4.  Complete the New Application Wizard by using the information in Table 39.  
+4. Complete the New Application Wizard by using the information in Table 39.  
 
-    ### Table 39. Information for Completing the New Application Wizard  
+   ### Table 39. Information for Completing the New Application Wizard  
 
-    |**On this wizard page** |**Do this** |  
-    |-----------------------------|-----------------|  
-    |**Application Type** |Click **Application bundle**, and then click **Next**.|  
-    |**Details** |- In **Publisher**, type ***publisher_name*** (where *publisher_name* is the name of the application’s publisher).<br /><br /> - In **Application Name**, type ***application_name*** (where *application_name* is the descriptive name of the application).<br /><br /> - In **Version**, type ***version*** (where *version* is the version of the application).<br /><br /> - In **Language**, type ***language*** (where *language* is the language of the application).<br /><br /> - Click **Next**.|  
-    |**Summary** |Click **Next**.|  
-    |**Confirmation** |Click **Save Output** to save the output of the wizard to a file, or click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Finish**.|  
+   |**On this wizard page** |**Do this** |  
+   |-----------------------------|-----------------|  
+   |**Application Type** |Click **Application bundle**, and then click **Next**.|  
+   |**Details** |- In **Publisher**, type ***publisher_name*** (where *publisher_name* is the name of the application’s publisher).<br /><br /> - In **Application Name**, type ***application_name*** (where *application_name* is the descriptive name of the application).<br /><br /> - In **Version**, type ***version*** (where *version* is the version of the application).<br /><br /> - In **Language**, type ***language*** (where *language* is the language of the application).<br /><br /> - Click **Next**.|  
+   |**Summary** |Click **Next**.|  
+   |**Confirmation** |Click **Save Output** to save the output of the wizard to a file, or click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Finish**.|  
 
- The New Application Wizard finishes. The application is added to the list of operating systems in the details pane of the Deployment Workbench.  
+   The New Application Wizard finishes. The application is added to the list of operating systems in the details pane of the Deployment Workbench.  
 
 ####  <a name="ViewandConfigureanApplicationintheDeploymentWorkbench"></a> View and Configure an Application in the Deployment Workbench  
  View the properties of applications beneath the Applications node in the Deployment Workbench using the **Properties** actions as described in [View Item Properties in the Deployment Workbench](#ViewItemPropertiesintheDeploymentWorkbench). Configure an application in the Deployment Workbench by performing the following steps in the **Application Properties** dialog box:  
@@ -2245,67 +2245,67 @@ Table 35 lists the configuration settings on the **General** tab of the operatin
 
 ###### To configure the General tab for application properties  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Applications (where *deployment_share* is the name of the deployment share to which the application will be added).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Applications (where *deployment_share* is the name of the deployment share to which the application will be added).  
 
-3.  In the details pane, click ***application_name*** (where *application_name* is the name of the application to configure).  
+3. In the details pane, click ***application_name*** (where *application_name* is the name of the application to configure).  
 
-4.  In the Actions pane, click **Properties**.  
+4. In the Actions pane, click **Properties**.  
 
-     The ***application_name*** **Properties** dialog box opens (where *application_name* is the name of the application to configure).  
+    The ***application_name*** **Properties** dialog box opens (where *application_name* is the name of the application to configure).  
 
-5.  On the **General** tab, configure the settings listed in Table 40 based on the requirements of your organization, and then click **OK**.  
+5. On the **General** tab, configure the settings listed in Table 40 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 40. Configuration Settings on the General Tab of Application Properties  
+   ### Table 40. Configuration Settings on the General Tab of Application Properties  
 
-    |**Setting** |**Description** |  
-    |-----------------|---------------------|  
-    |**Name** |Contains the name of the application displayed in the Deployment Workbench. If **Display name** is not configured, this value is also displayed in the Deployment Wizard.|  
-    |**Comments** |Provides information about the application.|  
-    |**Display name** |(Optional) Contains the name displayed in the Deployment Wizard instead of the value in **Name**. If no value is specified, the value in **Name** is displayed in the Deployment Wizard.|  
-    |**Short name** |Contains the name of the folder in which the application resides.|  
-    |**Version** |Contains the version number of the application.<br /><br /> Enter the version number in this box; it is not validated against the actual application version number but is provided for informational purposes.|  
-    |**Publisher** |Contains the name of the application’s publisher.<br /><br /> Enter the publisher in this box; it is not validated against the actual application version number but is provided for informational purposes.|  
-    |**Language** |Contains the language of the application.<br /><br /> Enter the language in this box; it is not validated against the actual application language but is provided for informational purposes.|  
-    |**Source directory** |Configures the folder in which the source of the application files resides.|  
-    |**Application GUID** |Contains the GUID for the application.|  
-    |**Hide this application in the Deployment Wizard** |Select to control when this application appears in the Deployment Wizard. If the check box is:<br /><br /> - Selected, the Deployment Wizard will not display this application.<br /><br /> - Cleared, the Deployment Wizard displays this application.<br /><br /> This check box is cleared by default.<br /><br /> This setting is also shown in the **Hide** column in the details pane of the Deployment Workbench.|  
-    |**Enable this application** |Select to control when this application is available to other wizards and dialog boxes in the Deployment Workbench. If the check box is:<br /><br /> - Selected, other wizards and dialog boxes in the Deployment Workbench are able to select this application<br /><br /> - Cleared, other wizards and dialog boxes in the Deployment Workbench are unable to select this application<br /><br /> This check box is selected by default.|  
+   |**Setting** |**Description** |  
+   |-----------------|---------------------|  
+   |**Name** |Contains the name of the application displayed in the Deployment Workbench. If **Display name** is not configured, this value is also displayed in the Deployment Wizard.|  
+   |**Comments** |Provides information about the application.|  
+   |**Display name** |(Optional) Contains the name displayed in the Deployment Wizard instead of the value in **Name**. If no value is specified, the value in **Name** is displayed in the Deployment Wizard.|  
+   |**Short name** |Contains the name of the folder in which the application resides.|  
+   |**Version** |Contains the version number of the application.<br /><br /> Enter the version number in this box; it is not validated against the actual application version number but is provided for informational purposes.|  
+   |**Publisher** |Contains the name of the application’s publisher.<br /><br /> Enter the publisher in this box; it is not validated against the actual application version number but is provided for informational purposes.|  
+   |**Language** |Contains the language of the application.<br /><br /> Enter the language in this box; it is not validated against the actual application language but is provided for informational purposes.|  
+   |**Source directory** |Configures the folder in which the source of the application files resides.|  
+   |**Application GUID** |Contains the GUID for the application.|  
+   |**Hide this application in the Deployment Wizard** |Select to control when this application appears in the Deployment Wizard. If the check box is:<br /><br /> - Selected, the Deployment Wizard will not display this application.<br /><br /> - Cleared, the Deployment Wizard displays this application.<br /><br /> This check box is cleared by default.<br /><br /> This setting is also shown in the **Hide** column in the details pane of the Deployment Workbench.|  
+   |**Enable this application** |Select to control when this application is available to other wizards and dialog boxes in the Deployment Workbench. If the check box is:<br /><br /> - Selected, other wizards and dialog boxes in the Deployment Workbench are able to select this application<br /><br /> - Cleared, other wizards and dialog boxes in the Deployment Workbench are unable to select this application<br /><br /> This check box is selected by default.|  
 
- The application configuration settings are saved, and the modifications are displayed in the details pane of the Deployment Workbench.  
+   The application configuration settings are saved, and the modifications are displayed in the details pane of the Deployment Workbench.  
 
 #####  <a name="ConfiguretheApplicationPropertiesDetailsTab"></a> Configure the Application Properties Details Tab  
  The application configuration settings stored on the **Details** tab are initially configured when the New Application Wizard runs. Update the application properties on the **Details** tab through the ***application_name*** **Properties** dialog box (where *application_name* is the name of the application in the Deployment Workbench).  
 
 ###### To configure the Details tab for application properties  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Applications (where *deployment_share* is the name of the deployment share to which the application will be added).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Applications (where *deployment_share* is the name of the deployment share to which the application will be added).  
 
-3.  In the details pane, click ***application_name*** (where *application_name* is the name of the application to configure).  
+3. In the details pane, click ***application_name*** (where *application_name* is the name of the application to configure).  
 
-4.  In the Actions pane, click **Properties**.  
+4. In the Actions pane, click **Properties**.  
 
-     The ***application_name*** **Properties** dialog box opens (where *application_name* is the name of the application to configure).  
+    The ***application_name*** **Properties** dialog box opens (where *application_name* is the name of the application to configure).  
 
-5.  On the **Details** tab, configure the settings listed in Table 41 based on the requirements of your organization, and then click **OK**.  
+5. On the **Details** tab, configure the settings listed in Table 41 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 41. Configuration Settings on the Details Tab of Application Properties  
+   ### Table 41. Configuration Settings on the Details Tab of Application Properties  
 
-    |**Setting** |**Description** |  
-    |-----------------|---------------------|  
-    |**Application bundle** |Select to configure the application to install application dependencies but not the application. The other available option is **Standard application**.|  
-    |**Standard application** |Select to configure the application to be a standard application that has source files, a command line, and other options listed on this tab. The other available option is **Application bundle**.|  
-    |**Quiet install command** |Configures the command line to run for performing an unattended, or quiet, installation of the application. This text box is enabled only when you select the **Standard application** option.|  
-    |**Working directory** |Configures the working directory of the application and is enabled only when you select **Standard application**.|  
-    |**Uninstall registry key name** |Configures the registry subkey **HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall**, used to determine whether the application is already installed on the target computer. If MDT detects the presence of the subkey, it assumes that the application is already installed and skips the installation of the application and any dependencies. This text box is enabled only when you select **Standard application**.|  
-    |**Reboot the computer after installing this application** |Select to configure the MDT deployment process to restart the target computer after installing this application. If the check box is:<br /><br /> - Selected, the target computer restarts after installing the application<br /><br /> - Cleared, the target computer will not restart after installing the application<br /><br /> This check box is cleared by default.|  
-    |**This can run on any platform** |Select to configure the application to run on any supported 32-bit or 64-bit Windows operating system. The other available option is **This can run only on the specified client platforms**.|  
-    |**This can run only on the specified client platforms** |Select to configure the application to run on any supported 32-bit or 64-bit Windows operating system. The other available option is **This can run on any platform**.|  
+   |**Setting** |**Description** |  
+   |-----------------|---------------------|  
+   |**Application bundle** |Select to configure the application to install application dependencies but not the application. The other available option is **Standard application**.|  
+   |**Standard application** |Select to configure the application to be a standard application that has source files, a command line, and other options listed on this tab. The other available option is **Application bundle**.|  
+   |**Quiet install command** |Configures the command line to run for performing an unattended, or quiet, installation of the application. This text box is enabled only when you select the **Standard application** option.|  
+   |**Working directory** |Configures the working directory of the application and is enabled only when you select **Standard application**.|  
+   |**Uninstall registry key name** |Configures the registry subkey **HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall**, used to determine whether the application is already installed on the target computer. If MDT detects the presence of the subkey, it assumes that the application is already installed and skips the installation of the application and any dependencies. This text box is enabled only when you select **Standard application**.|  
+   |**Reboot the computer after installing this application** |Select to configure the MDT deployment process to restart the target computer after installing this application. If the check box is:<br /><br /> - Selected, the target computer restarts after installing the application<br /><br /> - Cleared, the target computer will not restart after installing the application<br /><br /> This check box is cleared by default.|  
+   |**This can run on any platform** |Select to configure the application to run on any supported 32-bit or 64-bit Windows operating system. The other available option is **This can run only on the specified client platforms**.|  
+   |**This can run only on the specified client platforms** |Select to configure the application to run on any supported 32-bit or 64-bit Windows operating system. The other available option is **This can run on any platform**.|  
 
- The application configuration settings are saved, and the modifications are displayed in the details pane of the Deployment Workbench.  
+   The application configuration settings are saved, and the modifications are displayed in the details pane of the Deployment Workbench.  
 
 #####  <a name="ConfiguretheApplicationPropertiesDependenciesTab"></a> Configure the Application Properties Dependencies Tab  
  MDT checks the dependencies of an application before installing the application. Similarly, MDT ensures that all application dependencies are installed before installing the application.  
@@ -2317,28 +2317,28 @@ Table 35 lists the configuration settings on the **General** tab of the operatin
 
 ###### To configure the Dependencies tab for application properties  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Applications (where *deployment_share* is the name of the deployment share to which you will add the application).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Applications (where *deployment_share* is the name of the deployment share to which you will add the application).  
 
-3.  In the details pane, click ***application_name*** (where *application_name* is the name of the application you are configuring).  
+3. In the details pane, click ***application_name*** (where *application_name* is the name of the application you are configuring).  
 
-4.  In the Actions pane, click **Properties**.  
+4. In the Actions pane, click **Properties**.  
 
-     The ***application_name*** **Properties** dialog box opens (where *application_name* is the name of the application to configure).  
+    The ***application_name*** **Properties** dialog box opens (where *application_name* is the name of the application to configure).  
 
-5.  On the **Dependencies** tab, configure the settings by performing one of the actions in Table 42 based on the requirements of your organization, and then click **OK**.  
+5. On the **Dependencies** tab, configure the settings by performing one of the actions in Table 42 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 42. Actions on the Dependencies Tab of Application Properties  
+   ### Table 42. Actions on the Dependencies Tab of Application Properties  
 
-    |**Action** |**Description** |  
-    |----------------|---------------------|  
-    |**Add** |Adds a new application dependency to the list of dependencies using the **Select an item** dialog box. You can add any applications that already exist in the deployment share.|  
-    |**Remove** |Removes an application dependency from the list of dependencies.|  
-    |**Up** |Moves an application dependency higher in the sequence of installed dependencies.<br /><br /> Application dependencies are installed from the top of the list to the bottom.|  
-    |**Down** |Moves an application dependency lower in the sequence of installed dependencies.<br /><br /> Application dependencies are installed from the top of the list to the bottom.|  
+   |**Action** |**Description** |  
+   |----------------|---------------------|  
+   |**Add** |Adds a new application dependency to the list of dependencies using the **Select an item** dialog box. You can add any applications that already exist in the deployment share.|  
+   |**Remove** |Removes an application dependency from the list of dependencies.|  
+   |**Up** |Moves an application dependency higher in the sequence of installed dependencies.<br /><br /> Application dependencies are installed from the top of the list to the bottom.|  
+   |**Down** |Moves an application dependency lower in the sequence of installed dependencies.<br /><br /> Application dependencies are installed from the top of the list to the bottom.|  
 
- The application configuration settings are saved, and the modifications are displayed in the details pane of the Deployment Workbench.  
+   The application configuration settings are saved, and the modifications are displayed in the details pane of the Deployment Workbench.  
 
 #####  <a name="ConfiguretheApplicationPropertiesOfficeProductsTab"></a> Configure the Application Properties Office Products Tab  
  The application properties stored on the **Office Products** tab are mostly configured when the New Application Wizard runs. Update the application properties on the **Office Products** tab through the ***application_name*** **Properties** dialog box (where *application_name* is the name of the application in the Deployment Workbench).  
@@ -2348,34 +2348,34 @@ Table 35 lists the configuration settings on the **General** tab of the operatin
 
 ###### To configure the Office Products tab for application properties  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Applications (where *deployment_share* is the name of the deployment share to which the application will be added).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Applications (where *deployment_share* is the name of the deployment share to which the application will be added).  
 
-3.  In the details pane, click ***application_name*** (where *application_name* is the name of the application to configure).  
+3. In the details pane, click ***application_name*** (where *application_name* is the name of the application to configure).  
 
-4.  In the Actions pane, click **Properties**.  
+4. In the Actions pane, click **Properties**.  
 
-     The ***application_name*** **Properties** dialog box opens (where *application_name* is the name of the application to configure).  
+    The ***application_name*** **Properties** dialog box opens (where *application_name* is the name of the application to configure).  
 
-5.  On the **Office Products** tab, configure the settings listed in Table 43 based on the requirements of your organization, and then click **OK**.  
+5. On the **Office Products** tab, configure the settings listed in Table 43 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 43. Configuration Settings on the Office Products Tab of Application Properties  
+   ### Table 43. Configuration Settings on the Office Products Tab of Application Properties  
 
-    |Setting|Description|  
-    |-------------|-----------------|  
-    |**Office product to install** |Selects the Microsoft Office products to be installed.|  
-    |**Office languages** |Use to select each language included in the source image.<br /><br /> By default, Microsoft Office Setup installs the same language as the target operating system. Use these check boxes to force the installation of specific language packs.|  
-    |**Product key** |Select to determine whether the Deployment Workbench configures the Config.xml file for Microsoft Office Setup to provide a product key. If the check box is:<br /><br /> - Selected, enter the product key in the associated box to automatically configure the Config.xml file<br /><br /> - Cleared, the product key is provided during Microsoft Office Setup or in a Windows Installer (MSP) configuration file|  
-    |**Customer name** |Select to determine whether the Deployment Workbench configures the Config.xml for Microsoft Office Setup to provide the customer name. If the check box is:<br /><br /> - Selected, enter the customer name in the associated box to automatically configure the Config.xml file<br /><br /> - Cleared, the customer name is provided during Microsoft Office Setup or in an MSP configuration file|  
-    |**Display level** |Select to determine whether the Deployment Workbench configures Config.xml for Microsoft Office Setup to configure the display level of the setup process. If the check box is:<br /><br /> - Selected, select the display level in the associated box to automatically configure the Config.xml file<br /><br /> - Cleared, the display level is provided during Microsoft Office Setup or in an MSP configuration file|  
-    |**Accept EULA** |Select to determine whether the Deployment Workbench configures Config.xml for Microsoft Office Setup to automatically accept the end user license agreement (EULA) during the Setup process. If the check box is:<br /><br /> - Selected, the Config.xml file is configured to automatically accept the EULA<br /><br /> - Cleared, EULA acceptance is provided during Microsoft Office Setup or in an MSP configuration file|  
-    |**Cache only** |Select to determine whether the Deployment Workbench configures Config.xml for Microsoft Office Setup to install the local installation source (LIS) cache to the target computer during the setup process but not install Microsoft Office. If the check box is:<br /><br /> - Selected, the Config.xml file is configured to copy the LIS cache during Microsoft Office Setup but not install Microsoft Office products<br /><br /> - Cleared, the LIS cache is copied and Microsoft Office products are installed during Microsoft Office Setup|  
-    |**Always suppress reboot** |Select to determine whether the Deployment Workbench configures Config.xml for Microsoft Office Setup to prevent restarting the target computer during the setup process. If the check box is:<br /><br /> - Selected, the Config.xml file is configured to prevent a restart of the target computer during Microsoft Office Setup<br /><br /> - Cleared, the target computer can be restarted during Microsoft Office Setup|  
-    |**Add** |Click to add Microsoft Office language packs.|  
-    |**Edit Config.xml** |Click to modify the contents of the Config.xml file that the Deployment Workbench generates.|  
+   |Setting|Description|  
+   |-------------|-----------------|  
+   |**Office product to install** |Selects the Microsoft Office products to be installed.|  
+   |**Office languages** |Use to select each language included in the source image.<br /><br /> By default, Microsoft Office Setup installs the same language as the target operating system. Use these check boxes to force the installation of specific language packs.|  
+   |**Product key** |Select to determine whether the Deployment Workbench configures the Config.xml file for Microsoft Office Setup to provide a product key. If the check box is:<br /><br /> - Selected, enter the product key in the associated box to automatically configure the Config.xml file<br /><br /> - Cleared, the product key is provided during Microsoft Office Setup or in a Windows Installer (MSP) configuration file|  
+   |**Customer name** |Select to determine whether the Deployment Workbench configures the Config.xml for Microsoft Office Setup to provide the customer name. If the check box is:<br /><br /> - Selected, enter the customer name in the associated box to automatically configure the Config.xml file<br /><br /> - Cleared, the customer name is provided during Microsoft Office Setup or in an MSP configuration file|  
+   |**Display level** |Select to determine whether the Deployment Workbench configures Config.xml for Microsoft Office Setup to configure the display level of the setup process. If the check box is:<br /><br /> - Selected, select the display level in the associated box to automatically configure the Config.xml file<br /><br /> - Cleared, the display level is provided during Microsoft Office Setup or in an MSP configuration file|  
+   |**Accept EULA** |Select to determine whether the Deployment Workbench configures Config.xml for Microsoft Office Setup to automatically accept the end user license agreement (EULA) during the Setup process. If the check box is:<br /><br /> - Selected, the Config.xml file is configured to automatically accept the EULA<br /><br /> - Cleared, EULA acceptance is provided during Microsoft Office Setup or in an MSP configuration file|  
+   |**Cache only** |Select to determine whether the Deployment Workbench configures Config.xml for Microsoft Office Setup to install the local installation source (LIS) cache to the target computer during the setup process but not install Microsoft Office. If the check box is:<br /><br /> - Selected, the Config.xml file is configured to copy the LIS cache during Microsoft Office Setup but not install Microsoft Office products<br /><br /> - Cleared, the LIS cache is copied and Microsoft Office products are installed during Microsoft Office Setup|  
+   |**Always suppress reboot** |Select to determine whether the Deployment Workbench configures Config.xml for Microsoft Office Setup to prevent restarting the target computer during the setup process. If the check box is:<br /><br /> - Selected, the Config.xml file is configured to prevent a restart of the target computer during Microsoft Office Setup<br /><br /> - Cleared, the target computer can be restarted during Microsoft Office Setup|  
+   |**Add** |Click to add Microsoft Office language packs.|  
+   |**Edit Config.xml** |Click to modify the contents of the Config.xml file that the Deployment Workbench generates.|  
 
- The application configuration settings are saved, and the modifications are displayed in the details pane of the Deployment Workbench.  
+   The application configuration settings are saved, and the modifications are displayed in the details pane of the Deployment Workbench.  
 
 ####  <a name="CopyanApplicationintheDeploymentWorkbench"></a> Copy an Application in the Deployment Workbench  
  Copy and paste applications and folders beneath the Applications node in the Deployment Workbench by using the **Copy** and **Paste** actions as described in [Copy Items in the Deployment Workbench](#CopyItemsintheDeploymentWorkbench).  
@@ -2444,34 +2444,34 @@ Table 35 lists the configuration settings on the **General** tab of the operatin
 
 ###### To configure an existing Install Applications task sequence step  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Task Sequences (where *deployment_share* is the name of the deployment share to which the application will be added).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Task Sequences (where *deployment_share* is the name of the deployment share to which the application will be added).  
 
-3.  In the details pane, click ***task_sequence*** (where *task_sequence* is the name of the task sequence to configure).  
+3. In the details pane, click ***task_sequence*** (where *task_sequence* is the name of the task sequence to configure).  
 
-4.  In the Actions pane, click **Properties**.  
+4. In the Actions pane, click **Properties**.  
 
-     The ***task_sequence*** **Properties** dialog box opens (where *task_sequence* is the name of the application to configure).  
+    The ***task_sequence*** **Properties** dialog box opens (where *task_sequence* is the name of the application to configure).  
 
-5.  In the ***task_sequence*** **Properties** dialog box (where *task_sequence* is the name of the application you want to configure), click the **Task Sequence** tab.  
+5. In the ***task_sequence*** **Properties** dialog box (where *task_sequence* is the name of the application you want to configure), click the **Task Sequence** tab.  
 
-6.  In the hierarchy of the task sequence, go to State Restore/Install Applications.  
+6. In the hierarchy of the task sequence, go to State Restore/Install Applications.  
 
-7.  On the **Properties** tab, configure the settings listed in Table 45 based on the requirements of your organization, and then click **OK**.  
+7. On the **Properties** tab, configure the settings listed in Table 45 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 45. Configuration Settings on the Properties Tab of the Install Applications Task Sequence  
+   ### Table 45. Configuration Settings on the Properties Tab of the Install Applications Task Sequence  
 
-    |**Setting** |**Description** |  
-    |-----------------|---------------------|  
-    |**Name** |Configures the name of the task sequence step displayed in the task sequence hierarchy.|  
-    |**Description** |Configures the description text for the task sequence step.|  
-    |**Install multiple applications** |Select to configure the task sequence step to install any applications that you:<br /><br /> - Select in the Deployment Wizard<br /><br /> - Specify in the **Applications** property in CustomSettings.ini or the MDT DB<br /><br /> - Specify in the **MandatoryApplications** property in CustomSettings.ini or the MDT DB|  
-    |**Success codes** |Configures the list of success codes for the application-installation software. Each success code is separated by a space. This text box is only enabled when you select the **Install multiple applications** option.|  
-    |**Install a single application** |Configures the task sequence step to install only the application listed in the **Application to install** box.|  
-    |**Application to install** |Configures the application to be installed when you select the **Install a single application** option. Select the application to install by clicking **Browse**. This text box is enabled only when you select **Install a single application**.|  
+   |**Setting** |**Description** |  
+   |-----------------|---------------------|  
+   |**Name** |Configures the name of the task sequence step displayed in the task sequence hierarchy.|  
+   |**Description** |Configures the description text for the task sequence step.|  
+   |**Install multiple applications** |Select to configure the task sequence step to install any applications that you:<br /><br /> - Select in the Deployment Wizard<br /><br /> - Specify in the **Applications** property in CustomSettings.ini or the MDT DB<br /><br /> - Specify in the **MandatoryApplications** property in CustomSettings.ini or the MDT DB|  
+   |**Success codes** |Configures the list of success codes for the application-installation software. Each success code is separated by a space. This text box is only enabled when you select the **Install multiple applications** option.|  
+   |**Install a single application** |Configures the task sequence step to install only the application listed in the **Application to install** box.|  
+   |**Application to install** |Configures the application to be installed when you select the **Install a single application** option. Select the application to install by clicking **Browse**. This text box is enabled only when you select **Install a single application**.|  
 
- The updated task sequence appears in the details pane of the Deployment Workbench.  
+   The updated task sequence appears in the details pane of the Deployment Workbench.  
 
 #####  <a name="CreateaNewTaskSequenceStepforInstallingApplications"></a> Create a New Task Sequence Step for Installing Applications  
  In most instances, the existing **Install Applications** task sequence step is sufficient for installing applications to target computers. However, there are instances in which the existing **Install Applications** task sequence step may not be sufficient for your organization’s requirements, or you may need to install an application at a different sequence in the task sequence.  
@@ -2490,31 +2490,31 @@ Table 35 lists the configuration settings on the **General** tab of the operatin
 ###  <a name="ConfiguringPackagesintheDeploymentWorkbench"></a> Configuring Packages in the Deployment Workbench  
  Packages in MDT are operating system software installed on the target computers and stored in CAB or MSU files, such as security updates, service packs, feature packs, or language packs. Manage the packages to be deployed to the reference and target computers in your organization using the Deployment Workbench. You configure packages in the Deployment Workbench in a deployment share’s Packages node by:  
 
--   Importing a new package as described in [Import a New Package into the Deployment Workbench](#ImportaNewPackageintotheDeploymentWorkbench)  
+- Importing a new package as described in [Import a New Package into the Deployment Workbench](#ImportaNewPackageintotheDeploymentWorkbench)  
 
--   Modifying an existing package as described in [Modify an Existing Package in the Deployment Workbench](#ModifyanExistingPackageintheDeploymentWorkbench)  
+- Modifying an existing package as described in [Modify an Existing Package in the Deployment Workbench](#ModifyanExistingPackageintheDeploymentWorkbench)  
 
--   Copying a package as described in [Copy a Package in the Deployment Workbench](#CopyaPackageintheDeploymentWorkbench)  
+- Copying a package as described in [Copy a Package in the Deployment Workbench](#CopyaPackageintheDeploymentWorkbench)  
 
--   Moving a package as described in [Move a Package in the Deployment Workbench](#MoveaPackageintheDeploymentWorkbench)  
+- Moving a package as described in [Move a Package in the Deployment Workbench](#MoveaPackageintheDeploymentWorkbench)  
 
--   Renaming a package as described in [Rename a Package in the Deployment Workbench](#RenameaPackageintheDeploymentWorkbench)  
+- Renaming a package as described in [Rename a Package in the Deployment Workbench](#RenameaPackageintheDeploymentWorkbench)  
 
--   Deleting a package as described in [Delete a Package from the Deployment Workbench](#DeleteaPackagefromtheDeploymentWorkbench)  
+- Deleting a package as described in [Delete a Package from the Deployment Workbench](#DeleteaPackagefromtheDeploymentWorkbench)  
 
--   Managing folders for packages as described in [Manage Folders for Packages in the Deployment Workbench](#ManageFoldersforPackagesintheDeploymentWorkbench)  
+- Managing folders for packages as described in [Manage Folders for Packages in the Deployment Workbench](#ManageFoldersforPackagesintheDeploymentWorkbench)  
 
--   Enabling or disabling a package [Enable or Disable a Package in the Deployment Workbench](#EnableorDisableaPackageintheDeploymentWorkbench)  
+- Enabling or disabling a package [Enable or Disable a Package in the Deployment Workbench](#EnableorDisableaPackageintheDeploymentWorkbench)  
 
--   Preventing a package from being visible as described in [Prevent a Package from Being Visible in the Deployment Wizard](#PreventaPackagefromBeingVisibleintheDeploymentWizard)  
+- Preventing a package from being visible as described in [Prevent a Package from Being Visible in the Deployment Wizard](#PreventaPackagefromBeingVisibleintheDeploymentWizard)  
 
--   Customizing package installation as described in [Customize Package Installation in Task Sequences](#CustomizePackageInstallationinTaskSequences)  
+- Customizing package installation as described in [Customize Package Installation in Task Sequences](#CustomizePackageInstallationinTaskSequences)  
 
- In addtion to managing operating system packages in the Deployment Workbench, you can manage operating system packages using the MDT Windows PowerShell cmdlets. For more information on managing operating system packages using the MDT Windows PowerShell cmdlets, see the following sections beneath the section, "MDT Windows PowerShell Cmdlets", in the MDT document *Toolkit Reference*:  
+  In addtion to managing operating system packages in the Deployment Workbench, you can manage operating system packages using the MDT Windows PowerShell cmdlets. For more information on managing operating system packages using the MDT Windows PowerShell cmdlets, see the following sections beneath the section, "MDT Windows PowerShell Cmdlets", in the MDT document *Toolkit Reference*:  
 
--   **Get-MDTDeploymentShareStatistics**  
+- **Get-MDTDeploymentShareStatistics**  
 
--   **Import-MDTPackage**  
+- **Import-MDTPackage**  
 
 ####  <a name="ImportaNewPackageintotheDeploymentWorkbench"></a> Import a New Package into the Deployment Workbench  
  Import packages into the Deployment Workbench by using the Import OS Packages Wizard. Start the Import OS Packages Wizard using one of the following methods:  
@@ -2527,61 +2527,61 @@ Table 35 lists the configuration settings on the **General** tab of the operatin
 
 ###### To import a new package  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Packages (where *deployment_share* is the name of the deployment share to which you will add the application).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Packages (where *deployment_share* is the name of the deployment share to which you will add the application).  
 
-3.  In the Actions pane, click **Import OS Packages**.The Import OS Packages Wizard starts.  
+3. In the Actions pane, click **Import OS Packages**.The Import OS Packages Wizard starts.  
 
-4.  Complete the Import OS Packages Wizard using the information in Table 46.  
+4. Complete the Import OS Packages Wizard using the information in Table 46.  
 
-    ### Table 46. Information for Completing the Import OS Packages Wizard  
+   ### Table 46. Information for Completing the Import OS Packages Wizard  
 
-    |**On this wizard page** |**Do this** |  
-    |-----------------------------|-----------------|  
-    |**Specify Directory** |In **Package source directory**, type ***path*** (where *path* is the fully qualified path to the folder that contains the package you want to import), and then click **Next**.<br /><br /> You can alternatively click **Browse** to find the folder on a local drive or network shared folder.|  
-    |**Summary** |View the information in the **Details** box, and then click **Next**.|  
-    |**Confirmation** |You can click **Save Output** to save the output of the wizard to a file. You can also click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click Finish.|  
+   |**On this wizard page** |**Do this** |  
+   |-----------------------------|-----------------|  
+   |**Specify Directory** |In **Package source directory**, type ***path*** (where *path* is the fully qualified path to the folder that contains the package you want to import), and then click **Next**.<br /><br /> You can alternatively click **Browse** to find the folder on a local drive or network shared folder.|  
+   |**Summary** |View the information in the **Details** box, and then click **Next**.|  
+   |**Confirmation** |You can click **Save Output** to save the output of the wizard to a file. You can also click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click Finish.|  
 
- The Import OS Packages Wizard finishes. The package is added to the list of packages in the details pane of the Deployment Workbench.  
+   The Import OS Packages Wizard finishes. The package is added to the list of packages in the details pane of the Deployment Workbench.  
 
 ####  <a name="ModifyanExistingPackageintheDeploymentWorkbench"></a> Modify an Existing Package in the Deployment Workbench  
  Modify packages in the Packages node in the Deployment Workbench using the **Properties** actions as described in [View Item Properties in the Deployment Workbench](#ViewItemPropertiesintheDeploymentWorkbench). The package properties are mostly configured when you run the Import OS Packages Wizard. Update the package properties on the **General** tab through the ***package_name*** **Properties** dialog box (where *package_name* is the name of the application in the Deployment Workbench).  
 
 ###### To modify an existing package  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Packages (where *deployment_share* is the name of the deployment share in which you will configure the package).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Packages (where *deployment_share* is the name of the deployment share in which you will configure the package).  
 
-3.  In the details pane, click ***package_name*** (where *package_name* is the name of the package you want to configure).  
+3. In the details pane, click ***package_name*** (where *package_name* is the name of the package you want to configure).  
 
-4.  In the Actions pane, click **Properties**.  
+4. In the Actions pane, click **Properties**.  
 
-     The ***package_name*** **Properties** dialog box opens (where *package_name* is the name of the package you want to configure).  
+    The ***package_name*** **Properties** dialog box opens (where *package_name* is the name of the package you want to configure).  
 
-5.  On the **General** tab, configure the settings listed in Table 47 based on the requirements of your organization, and then click **OK**.  
+5. On the **General** tab, configure the settings listed in Table 47 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 47. Configuration Settings on the General Tab of the Package Properties  
+   ### Table 47. Configuration Settings on the General Tab of the Package Properties  
 
-    |**Setting** |**Description** |  
-    |-----------------|---------------------|  
-    |**Name** |Contains the name of the package displayed in the Deployment Workbench. If **Display name** is not configured, this value is also displayed in the Deployment Wizard.|  
-    |**Comments** |Provides information about the package.|  
-    |**Display name** |(Optional) Contains the name displayed in the Deployment Wizard instead of the value in **Name**. If no value is specified, the value in **Name** is displayed in the Deployment Wizard.|  
-    |**Type** |Type of package, which typically includes the following high-level types of packages:<br /><br /> - Language packs<br /><br /> - Hotfix patches<br /><br /> - Feature packs<br /><br /> The package type in this text box is automatically determined by the Deployment Workbench and cannot be modified.|  
-    |**Processor architecture** |Target processor architecture for the package; it can be x86, amd64, or ia64.<br /><br /> The processor architecture in this box is automatically determined by the Deployment Workbench and cannot be modified.|  
-    |**Language** |Contains the language of the application.<br /><br /> The language in this box is automatically determined by the Deployment Workbench and cannot be modified.|  
-    |**Keyword** |Used to identify the version of the language pack.<br /><br /> The keyword in this text box is automatically determined by the Deployment Workbench and cannot be modified.|  
-    |**Public key token** |Contains the public key token that MDT uses to updated the unattended.xml file.<br /><br /> The public key token in this text box is automatically determined by the Deployment Workbench and cannot be modified.|  
-    |**Version** |Contains the version number of the package.<br /><br /> The version number in this text box is automatically determined by the Deployment Workbench and cannot be modified.|  
-    |**Product name** |Contains the name of the product for which the package is intended.<br /><br /> The product name in this text box is automatically determined by the Deployment Workbench and cannot be modified.|  
-    |**Product version** |Contains the version number of the product for which the package is intended.<br /><br /> The product version number in this text box is automatically determined by the Deployment Workbench and cannot be modified.|  
-    |**Package path** |Contains the path of the package relative to the root of the deployment share.<br /><br /> The path in this text box is automatically determined by the Deployment Workbench and cannot be modified.|  
-    |**Hide this package in the Deployment Wizard** |Select to control when this package appears in the Deployment Wizard. If the check box is:<br /><br /> - Selected, the Deployment Wizard will not display this package<br /><br /> - Cleared, the Deployment Wizard displays this package<br /><br /> The check box is cleared by default.|  
-    |**Enable (approve) this package** |Select to control when this package is available to other wizards and dialog boxes in the Deployment Workbench. If the check box is:<br /><br /> - Selected, other wizards and dialog boxes in the Deployment Workbench are able to select this package<br /><br /> - Cleared, other wizards and dialog boxes in the Deployment Workbench are unable to select this package<br /><br /> The check box is selected by default.|  
+   |**Setting** |**Description** |  
+   |-----------------|---------------------|  
+   |**Name** |Contains the name of the package displayed in the Deployment Workbench. If **Display name** is not configured, this value is also displayed in the Deployment Wizard.|  
+   |**Comments** |Provides information about the package.|  
+   |**Display name** |(Optional) Contains the name displayed in the Deployment Wizard instead of the value in **Name**. If no value is specified, the value in **Name** is displayed in the Deployment Wizard.|  
+   |**Type** |Type of package, which typically includes the following high-level types of packages:<br /><br /> - Language packs<br /><br /> - Hotfix patches<br /><br /> - Feature packs<br /><br /> The package type in this text box is automatically determined by the Deployment Workbench and cannot be modified.|  
+   |**Processor architecture** |Target processor architecture for the package; it can be x86, amd64, or ia64.<br /><br /> The processor architecture in this box is automatically determined by the Deployment Workbench and cannot be modified.|  
+   |**Language** |Contains the language of the application.<br /><br /> The language in this box is automatically determined by the Deployment Workbench and cannot be modified.|  
+   |**Keyword** |Used to identify the version of the language pack.<br /><br /> The keyword in this text box is automatically determined by the Deployment Workbench and cannot be modified.|  
+   |**Public key token** |Contains the public key token that MDT uses to updated the unattended.xml file.<br /><br /> The public key token in this text box is automatically determined by the Deployment Workbench and cannot be modified.|  
+   |**Version** |Contains the version number of the package.<br /><br /> The version number in this text box is automatically determined by the Deployment Workbench and cannot be modified.|  
+   |**Product name** |Contains the name of the product for which the package is intended.<br /><br /> The product name in this text box is automatically determined by the Deployment Workbench and cannot be modified.|  
+   |**Product version** |Contains the version number of the product for which the package is intended.<br /><br /> The product version number in this text box is automatically determined by the Deployment Workbench and cannot be modified.|  
+   |**Package path** |Contains the path of the package relative to the root of the deployment share.<br /><br /> The path in this text box is automatically determined by the Deployment Workbench and cannot be modified.|  
+   |**Hide this package in the Deployment Wizard** |Select to control when this package appears in the Deployment Wizard. If the check box is:<br /><br /> - Selected, the Deployment Wizard will not display this package<br /><br /> - Cleared, the Deployment Wizard displays this package<br /><br /> The check box is cleared by default.|  
+   |**Enable (approve) this package** |Select to control when this package is available to other wizards and dialog boxes in the Deployment Workbench. If the check box is:<br /><br /> - Selected, other wizards and dialog boxes in the Deployment Workbench are able to select this package<br /><br /> - Cleared, other wizards and dialog boxes in the Deployment Workbench are unable to select this package<br /><br /> The check box is selected by default.|  
 
- The package configuration settings are saved, and the modifications are displayed in the details pane of the Deployment Workbench.  
+   The package configuration settings are saved, and the modifications are displayed in the details pane of the Deployment Workbench.  
 
 ####  <a name="CopyaPackageintheDeploymentWorkbench"></a> Copy a Package in the Deployment Workbench  
  You can copy and paste packages and folders beneath the Packages node in the Deployment Workbench using the **Copy** and **Paste** actions as described in [Copy Items in the Deployment Workbench](#CopyItemsintheDeploymentWorkbench).  
@@ -2631,31 +2631,31 @@ Table 35 lists the configuration settings on the **General** tab of the operatin
 
 ###### To configure an existing Apply Patches task sequence step  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Task Sequences (where *deployment_share* is the name of the deployment share to which you will add the application).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Task Sequences (where *deployment_share* is the name of the deployment share to which you will add the application).  
 
-3.  In the details pane, click ***task_sequence*** (where *task_sequence* is the name of the task sequence you want to configure).  
+3. In the details pane, click ***task_sequence*** (where *task_sequence* is the name of the task sequence you want to configure).  
 
-4.  In the Actions pane, click **Properties**.  
+4. In the Actions pane, click **Properties**.  
 
-     The ***task_sequence*** **Properties** dialog box opens (where *task_sequence* is the name of the application you want to configure).  
+    The ***task_sequence*** **Properties** dialog box opens (where *task_sequence* is the name of the application you want to configure).  
 
-5.  In the ***task_sequence*** **Properties** dialog box, click the **Task Sequence** tab (where *task_sequence* is the name of the application you want to configure).  
+5. In the ***task_sequence*** **Properties** dialog box, click the **Task Sequence** tab (where *task_sequence* is the name of the application you want to configure).  
 
-6.  In the hierarchy of the task sequence, go to Preinstall/Apply Patches.  
+6. In the hierarchy of the task sequence, go to Preinstall/Apply Patches.  
 
-7.  On the **Properties** tab, configure the settings listed in Table 48 based on the requirements of your organization, and then click **OK**.  
+7. On the **Properties** tab, configure the settings listed in Table 48 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 48. Configuration Settings on the Properties Tab of the Install Applications Task Sequence Step  
+   ### Table 48. Configuration Settings on the Properties Tab of the Install Applications Task Sequence Step  
 
-    |**Setting** |**Description** |  
-    |-----------------|---------------------|  
-    |**Name** |Configures the name of the task sequence step displayed in the task sequence hierarchy.|  
-    |**Description** |Configures the description text for the task sequence step.|  
-    |**Selection profile** |Used to select the selection profile that contains the updates you want to deploy in this task sequence step. The selection profile can contain one or more packages to be deployed.|  
+   |**Setting** |**Description** |  
+   |-----------------|---------------------|  
+   |**Name** |Configures the name of the task sequence step displayed in the task sequence hierarchy.|  
+   |**Description** |Configures the description text for the task sequence step.|  
+   |**Selection profile** |Used to select the selection profile that contains the updates you want to deploy in this task sequence step. The selection profile can contain one or more packages to be deployed.|  
 
- The updated task sequence appears in the details pane of the Deployment Workbench.  
+   The updated task sequence appears in the details pane of the Deployment Workbench.  
 
 #####  <a name="CreateaNewTaskSequenceStepforInstallingPackages"></a> Create a New Task Sequence Step for Installing Packages  
  In most instances, the existing **Apply Patches** task sequence step is sufficient for installing packages to target computers. However, there are instances in which the existing **Apply Patches** task sequence step may not be sufficient for your requirements or you may need to install a package at a different place in the task sequence.  
@@ -2687,29 +2687,29 @@ Table 35 lists the configuration settings on the **General** tab of the operatin
 
  Configure device drivers in the Deployment Workbench in a deployment share’s Out-of-Box node by:  
 
--   Importing device drivers as described in [Import Device Drivers into the Deployment Workbench](#ImportDeviceDriversintotheDeploymentWorkbench)  
+- Importing device drivers as described in [Import Device Drivers into the Deployment Workbench](#ImportDeviceDriversintotheDeploymentWorkbench)  
 
--   Modifying existing device drivers as described in [Modify Existing Device Drivers in the Deployment Workbench](#ModifyExistingDeviceDriversintheDeploymentWorkbench)  
+- Modifying existing device drivers as described in [Modify Existing Device Drivers in the Deployment Workbench](#ModifyExistingDeviceDriversintheDeploymentWorkbench)  
 
--   Copying device drivers as described in [Copy Device Drivers in the Deployment Workbench](#CopyDeviceDriversintheDeploymentWorkbench)  
+- Copying device drivers as described in [Copy Device Drivers in the Deployment Workbench](#CopyDeviceDriversintheDeploymentWorkbench)  
 
--   Moving device drivers as described in [Move Device Drivers in the Deployment Workbench](#MoveDeviceDriversintheDeploymentWorkbench)  
+- Moving device drivers as described in [Move Device Drivers in the Deployment Workbench](#MoveDeviceDriversintheDeploymentWorkbench)  
 
--   Renaming device drivers as described in [Rename Device Drivers in the Deployment Workbench](#RenameDeviceDriversintheDeploymentWorkbench)  
+- Renaming device drivers as described in [Rename Device Drivers in the Deployment Workbench](#RenameDeviceDriversintheDeploymentWorkbench)  
 
--   Deleting device drivers as described in [Delete Device Drivers from the Deployment Workbench](#DeleteDeviceDriversfromtheDeploymentWorkbench)  
+- Deleting device drivers as described in [Delete Device Drivers from the Deployment Workbench](#DeleteDeviceDriversfromtheDeploymentWorkbench)  
 
--   Managing folders for device drivers as described in [Manage Folders for Device Drivers in the Deployment Workbench](#ManageFoldersforDeviceDriversintheDeploymentWorkbench)  
+- Managing folders for device drivers as described in [Manage Folders for Device Drivers in the Deployment Workbench](#ManageFoldersforDeviceDriversintheDeploymentWorkbench)  
 
--   Enabling or disabling device drivers as described in [Enable or Disable Device Drivers in the Deployment Workbench](#EnableorDisableDeviceDriversintheDeploymentWorkbench)  
+- Enabling or disabling device drivers as described in [Enable or Disable Device Drivers in the Deployment Workbench](#EnableorDisableDeviceDriversintheDeploymentWorkbench)  
 
--   Deploy specific device drivers to target computers for LTI deployments as described in [Deploy Specific Device Drivers to Target Computers in LTI](#DeploySpecificDeviceDriverstoTargetComputersinLTI)  
+- Deploy specific device drivers to target computers for LTI deployments as described in [Deploy Specific Device Drivers to Target Computers in LTI](#DeploySpecificDeviceDriverstoTargetComputersinLTI)  
 
- In addtion to managing device drivers in the Deployment Workbench, you can manage device drivers using the MDT Windows PowerShell cmdlets. For more information on managing device drivers using the MDT Windows PowerShell cmdlets, see the following sections beneath the section, "MDT Windows PowerShell Cmdlets", in the MDT document *Toolkit Reference*:  
+  In addtion to managing device drivers in the Deployment Workbench, you can manage device drivers using the MDT Windows PowerShell cmdlets. For more information on managing device drivers using the MDT Windows PowerShell cmdlets, see the following sections beneath the section, "MDT Windows PowerShell Cmdlets", in the MDT document *Toolkit Reference*:  
 
--   **Import-MDTDriver**  
+- **Import-MDTDriver**  
 
--   **Get-MDTDeploymentShareStatistics**  
+- **Get-MDTDeploymentShareStatistics**  
 
 ####  <a name="ImportDeviceDriversintotheDeploymentWorkbench"></a> Import Device Drivers into the Deployment Workbench  
  Import device drivers into the Deployment Workbench using the Import Drivers Wizard. Start the Import Drivers Wizard using one of the following methods:  
@@ -2722,25 +2722,25 @@ Table 35 lists the configuration settings on the **General** tab of the operatin
 
 ###### To import device drivers  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Out-of-box Drivers node (where *deployment_share* is the name of the deployment share to which you will add the device drivers) or a folder beneath that node.  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Out-of-box Drivers node (where *deployment_share* is the name of the deployment share to which you will add the device drivers) or a folder beneath that node.  
 
-3.  In the Actions pane, click **Import Drivers**.  
+3. In the Actions pane, click **Import Drivers**.  
 
-     The Import Driver Wizard starts.  
+    The Import Driver Wizard starts.  
 
-4.  Complete the Import Driver Wizard using the information in Table 49.  
+4. Complete the Import Driver Wizard using the information in Table 49.  
 
-    ### Table 49. Information for Completing the Import Driver Wizard  
+   ### Table 49. Information for Completing the Import Driver Wizard  
 
-    |On this wizard page|Do this|  
-    |-------------------------|-------------|  
-    |**Specify Directory** |a. In **Driver source directory**, type **path** (where *path* is the fully qualified path to the folder that contains the device drivers you want to import).<br /><br /> You can alternatively click **Browse** to find the folder on a local drive or network shared folder.<br /><br /> b. Select or clear the **Import drivers even if they are duplicates of an existing driver** check box based on the requirements of your organization.<br /><br /> If the check box is:<br /><br /> - Selected, the wizard will import the drivers even if the same drivers already exist<br /><br /> - Cleared, the wizard will not import the drivers if the same drivers already exist<br /><br /> In most instances, do not select this check box, as doing so increases the size of the deployment share and makes driver management more complex.<br /><br /> c. Click **Next**.|  
-    |**Summary** |Click **Next**.|  
-    |**Confirmation** |You can click **Save Output** to save the output of the wizard to a file. You can also click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Finish**.|  
+   |On this wizard page|Do this|  
+   |-------------------------|-------------|  
+   |**Specify Directory** |a. In **Driver source directory**, type **path** (where *path* is the fully qualified path to the folder that contains the device drivers you want to import).<br /><br /> You can alternatively click **Browse** to find the folder on a local drive or network shared folder.<br /><br /> b. Select or clear the **Import drivers even if they are duplicates of an existing driver** check box based on the requirements of your organization.<br /><br /> If the check box is:<br /><br /> - Selected, the wizard will import the drivers even if the same drivers already exist<br /><br /> - Cleared, the wizard will not import the drivers if the same drivers already exist<br /><br /> In most instances, do not select this check box, as doing so increases the size of the deployment share and makes driver management more complex.<br /><br /> c. Click **Next**.|  
+   |**Summary** |Click **Next**.|  
+   |**Confirmation** |You can click **Save Output** to save the output of the wizard to a file. You can also click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Finish**.|  
 
- The Import Drivers Wizard finishes. The device drivers are added to the list of device drivers in the details pane of the Deployment Workbench.  
+   The Import Drivers Wizard finishes. The device drivers are added to the list of device drivers in the details pane of the Deployment Workbench.  
 
 ####  <a name="ModifyExistingDeviceDriversintheDeploymentWorkbench"></a> Modify Existing Device Drivers in the Deployment Workbench  
  Modify device drivers in the Out-of-Box Drivers node in the Deployment Workbench using the **Properties** action as described in [View Item Properties in the Deployment Workbench](#ViewItemPropertiesintheDeploymentWorkbench). Configure device drivers in the Deployment Workbench by performing the following steps in the device driver **Properties** dialog box:  
@@ -2754,29 +2754,29 @@ Table 35 lists the configuration settings on the **General** tab of the operatin
 
 ###### To modify existing device drivers properties on the General tab  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Out-of-Box Drivers (where *deployment_share* is the name of the deployment share in which you will configure the device driver).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Out-of-Box Drivers (where *deployment_share* is the name of the deployment share in which you will configure the device driver).  
 
-3.  In the details pane, click ***driver_name*** (where *driver_name* is the name of the device driver you want to configure).  
+3. In the details pane, click ***driver_name*** (where *driver_name* is the name of the device driver you want to configure).  
 
-4.  In the Actions pane, click **Properties**.  
+4. In the Actions pane, click **Properties**.  
 
-     The ***driver_name*** **Properties** dialog box opens (where *driver_name* is the name of the device driver you want to configure).  
+    The ***driver_name*** **Properties** dialog box opens (where *driver_name* is the name of the device driver you want to configure).  
 
-5.  On the **General** tab, configure the settings listed in Table 50 based on the requirements of your organization, and then click **OK**.  
+5. On the **General** tab, configure the settings listed in Table 50 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 50. Configuration Settings on the General Tab of the Device Driver Properties  
+   ### Table 50. Configuration Settings on the General Tab of the Device Driver Properties  
 
-    |**Setting** |**Description** |  
-    |-----------------|---------------------|  
-    |**Driver name** |Contains the name of the device driver displayed in the Deployment Workbench and the Deployment Wizard.|  
-    |**Comments** |Provides information about the device driver.|  
-    |**Platforms: x86** |Select to control whether this device driver is for 32-bit operating system. If the check box is:<br /><br /> - Selected, the device driver is available for deployment to 32-bit operating systems<br /><br /> - Cleared, the device driver is unavailable for deployment to 32-bit operating systems<br /><br /> If the Deployment Workbench incorrectly detects the platforms that the device driver supports, you can clear the platform selection. For example, if the Deployment Workbench incorrectly detects 32-bit and 64-bit device drivers, clear the x64 selection; the driver will then only be used for 32-bit deployments.|  
-    |**Platforms: x64** |Select to control whether this device driver is for 64-bit operating system. If the check box is:<br /><br /> - Selected, the device driver is available for deployment to 64-bit operating systems<br /><br /> - Cleared, the device driver is unavailable for deployment to 64-bit operating systems<br /><br /> If the Deployment Workbench incorrectly detects the platforms that the device driver supports, you can clear the platform selection. For example, if the Deployment Workbench incorrectly detects 32-bit and 64-bit device drivers, clear the x64 selection; the driver will then only be used for 32-bit deployments.|  
-    |**Enable this driver** |Select to control whether this device driver is available to other wizards and dialog boxes in the Deployment Workbench. If the check box is:<br /><br /> - Selected, the device driver is available to other wizards and dialog boxes in the Deployment Workbench<br /><br /> - Cleared, the device driver is unavailable to other wizards and dialog boxes in the Deployment Workbench<br /><br /> The check box is selected by default.|  
+   |**Setting** |**Description** |  
+   |-----------------|---------------------|  
+   |**Driver name** |Contains the name of the device driver displayed in the Deployment Workbench and the Deployment Wizard.|  
+   |**Comments** |Provides information about the device driver.|  
+   |**Platforms: x86** |Select to control whether this device driver is for 32-bit operating system. If the check box is:<br /><br /> - Selected, the device driver is available for deployment to 32-bit operating systems<br /><br /> - Cleared, the device driver is unavailable for deployment to 32-bit operating systems<br /><br /> If the Deployment Workbench incorrectly detects the platforms that the device driver supports, you can clear the platform selection. For example, if the Deployment Workbench incorrectly detects 32-bit and 64-bit device drivers, clear the x64 selection; the driver will then only be used for 32-bit deployments.|  
+   |**Platforms: x64** |Select to control whether this device driver is for 64-bit operating system. If the check box is:<br /><br /> - Selected, the device driver is available for deployment to 64-bit operating systems<br /><br /> - Cleared, the device driver is unavailable for deployment to 64-bit operating systems<br /><br /> If the Deployment Workbench incorrectly detects the platforms that the device driver supports, you can clear the platform selection. For example, if the Deployment Workbench incorrectly detects 32-bit and 64-bit device drivers, clear the x64 selection; the driver will then only be used for 32-bit deployments.|  
+   |**Enable this driver** |Select to control whether this device driver is available to other wizards and dialog boxes in the Deployment Workbench. If the check box is:<br /><br /> - Selected, the device driver is available to other wizards and dialog boxes in the Deployment Workbench<br /><br /> - Cleared, the device driver is unavailable to other wizards and dialog boxes in the Deployment Workbench<br /><br /> The check box is selected by default.|  
 
- The device driver configuration settings are saved, and the modifications are displayed in the details pane of the Deployment Workbench.  
+   The device driver configuration settings are saved, and the modifications are displayed in the details pane of the Deployment Workbench.  
 
 #####  <a name="ViewtheDeviceDriverPropertiesDetailsTab"></a> View the Device Driver Properties Details Tab  
  The device driver properties stored on the **Details** tab are configured when you run the Import Device Drivers Wizard. All the information on the **Details** tab is read only and cannot be modified. View the device driver properties on the **Details** tab through the ***driver_name*** **Properties** dialog box (where *driver_name* is the name of the device driver in the Deployment Workbench).  
@@ -2849,42 +2849,42 @@ Table 35 lists the configuration settings on the **General** tab of the operatin
 
  Configure task sequences in the Deployment Workbench in a deployment share’s Packages node by:  
 
--   Creating a new task sequence as described in [Create a New Task Sequence in the Deployment Workbench](#CreateaNewTaskSequenceintheDeploymentWorkbench)  
+- Creating a new task sequence as described in [Create a New Task Sequence in the Deployment Workbench](#CreateaNewTaskSequenceintheDeploymentWorkbench)  
 
--   Modifying an existing task sequence as described in [Modify an Existing Task Sequence in the Deployment Workbench](#ModifyanExistingTaskSequenceintheDeploymentWorkbench)  
+- Modifying an existing task sequence as described in [Modify an Existing Task Sequence in the Deployment Workbench](#ModifyanExistingTaskSequenceintheDeploymentWorkbench)  
 
--   Copying task sequences as described in [Copy Task Sequences in the Deployment Workbench](#CopyTaskSequencesintheDeploymentWorkbench)  
+- Copying task sequences as described in [Copy Task Sequences in the Deployment Workbench](#CopyTaskSequencesintheDeploymentWorkbench)  
 
--   Moving task sequences as described in [Move Task Sequences in the Deployment Workbench](#MoveTaskSequencesintheDeploymentWorkbench)  
+- Moving task sequences as described in [Move Task Sequences in the Deployment Workbench](#MoveTaskSequencesintheDeploymentWorkbench)  
 
--   Renaming task sequences as described in [Rename Task Sequences in the Deployment Workbench](#RenameTaskSequencesintheDeploymentWorkbench)  
+- Renaming task sequences as described in [Rename Task Sequences in the Deployment Workbench](#RenameTaskSequencesintheDeploymentWorkbench)  
 
--   Deleting task sequences as described in [Delete Task Sequences from the Deployment Workbench](#DeleteTaskSequencesfromtheDeploymentWorkbench)  
+- Deleting task sequences as described in [Delete Task Sequences from the Deployment Workbench](#DeleteTaskSequencesfromtheDeploymentWorkbench)  
 
--   Managing folders for task sequences as described in [Manage Folders for Task Sequences in the Deployment Workbench](#ManageFoldersforTaskSequencesintheDeploymentWorkbench)  
+- Managing folders for task sequences as described in [Manage Folders for Task Sequences in the Deployment Workbench](#ManageFoldersforTaskSequencesintheDeploymentWorkbench)  
 
--   Enabling or disabling a task sequence as described in [Enable or Disable a Task Sequence in the Deployment Workbench](#EnableorDisableaTaskSequenceintheDeploymentWorkbench)  
+- Enabling or disabling a task sequence as described in [Enable or Disable a Task Sequence in the Deployment Workbench](#EnableorDisableaTaskSequenceintheDeploymentWorkbench)  
 
--   Preventing task sequences from being visible in the Deployment Wizard as described in [Prevent a Task Sequence from Being Visible in the Deployment Wizard](#PreventaTaskSequencefromBeingVisibleintheDeploymentWizard)  
+- Preventing task sequences from being visible in the Deployment Wizard as described in [Prevent a Task Sequence from Being Visible in the Deployment Wizard](#PreventaTaskSequencefromBeingVisibleintheDeploymentWizard)  
 
--   Modifying the unattended setup answer file for a task sequence as described in [Modify the Unattended Setup Answer File Associated with the Task Sequence](#ModifytheUnattendedSetupAnswerFileAssociatedwiththeTaskSequence)  
+- Modifying the unattended setup answer file for a task sequence as described in [Modify the Unattended Setup Answer File Associated with the Task Sequence](#ModifytheUnattendedSetupAnswerFileAssociatedwiththeTaskSequence)  
 
- In addtion to managing task sequences in the Deployment Workbench, you can manage task sequences using the MDT Windows PowerShell cmdlets. For more information on managing task sequences using the MDT Windows PowerShell cmdlets, see the following sections beneath the section, "MDT Windows PowerShell Cmdlets", in the MDT document *Toolkit Reference*:  
+  In addtion to managing task sequences in the Deployment Workbench, you can manage task sequences using the MDT Windows PowerShell cmdlets. For more information on managing task sequences using the MDT Windows PowerShell cmdlets, see the following sections beneath the section, "MDT Windows PowerShell Cmdlets", in the MDT document *Toolkit Reference*:  
 
--   **Import-MDTTaskSequence**  
+- **Import-MDTTaskSequence**  
 
--   **Get-MDTDeploymentShareStatistics**  
+- **Get-MDTDeploymentShareStatistics**  
 
 ####  <a name="CreateaNewTaskSequenceintheDeploymentWorkbench"></a> Create a New Task Sequence in the Deployment Workbench  
  Using the New Task Sequence Wizard in the Deployment Workbench to create new task sequences. Start the New task Sequence Wizard using one of the following methods:  
 
--   In the console tree, click the Task Sequences node or a folder beneath the Task Sequences node, and then, in the Actions pane, click **New Task Sequence**.  
+- In the console tree, click the Task Sequences node or a folder beneath the Task Sequences node, and then, in the Actions pane, click **New Task Sequence**.  
 
--   In the console tree, click the Task Sequences node or a folder beneath the Task Sequences node, and then, from the **Action** menu, click **New Task Sequence**.  
+- In the console tree, click the Task Sequences node or a folder beneath the Task Sequences node, and then, from the **Action** menu, click **New Task Sequence**.  
 
--   In the console tree, click the Task Sequences node or a folder beneath the Task Sequences node, and then click **New Task Sequence**.  
+- In the console tree, click the Task Sequences node or a folder beneath the Task Sequences node, and then click **New Task Sequence**.  
 
- MDT includes task sequence templates that you can use for common deployment scenarios. In many instances, you can use the templates without any modification to the task sequence. However, you can modify task sequences created from the templates to meet the requirements of your organization.  
+  MDT includes task sequence templates that you can use for common deployment scenarios. In many instances, you can use the templates without any modification to the task sequence. However, you can modify task sequences created from the templates to meet the requirements of your organization.  
 
 Table 52 lists the task sequence templates in MDT.  
 
@@ -2905,30 +2905,30 @@ Table 52 lists the task sequence templates in MDT.
 
 ###### To create a new task sequence  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Task Sequences (where *deployment_share* is the name of the deployment share to which you will add the task sequence).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Task Sequences (where *deployment_share* is the name of the deployment share to which you will add the task sequence).  
 
-3.  In the Actions pane, click **New Task Sequence**.  
+3. In the Actions pane, click **New Task Sequence**.  
 
-     The New Task Sequence Wizard starts.  
+    The New Task Sequence Wizard starts.  
 
-4.  Complete the New Task Sequence Wizard using the information in Table 53.  
+4. Complete the New Task Sequence Wizard using the information in Table 53.  
 
-    ### Table 53. Information for Completing the New Task Sequence Wizard  
+   ### Table 53. Information for Completing the New Task Sequence Wizard  
 
-    |**On this wizard page** |**Do this** |  
-    |-----------------------------|-----------------|  
-    |**General Settings** |- In **Task sequence ID**, type ***task_sequence_id*** (where *task_sequence_id* is a unique identifier for the task sequence you are creating).<br /><br /> Although you can change a task sequence’s name and comments later, you cannot change a task sequence’s ID. Before creating task sequences, create a naming scheme to use in creating task sequence IDs that will provide meaningful information about each task sequence. An example naming scheme is *Version-Edition-Level-Label*, where *Version* is the operating system version (Win8, Win2012), *Edition* is the operating system edition (Enterprise, Standard, Ultimate), *Level* is the service pack level (SP1, SP2), and *Label* is a descriptive label that identifies the customizations.<br /><br /> - In **Task sequence name**, type ***task_sequence_name*** (where *task_sequence_name* is a descriptive name for the task sequence you are creating).<br /><br /> - In **Task sequence comments**, type ***task_sequence_comment*** (where *task_sequence_comment* is text that describes the purpose or usage of the task sequence).<br /><br /> - Click **Next**.|  
-    |**Select Template** |In **The following task sequence templates are available. Select the one you would like to use as a starting point**, select ***task_sequence***, and then click **Next**.|  
-    |**Select OS** |In **The following operating system images are available to be deployed with this task sequence. Select one to use**, select ***operating_system*** (where *operating_system* is the operating system in the Operating Systems node in the Deployment Workbench that you want to deploy to the resource or target computer), and then click **Next**.|  
-    |**Specify Product Key** |a. Click one of the following options based on the requirements of your organization:<br /><br /> - **Do not specify a product key at this time**. Select this option when a product key is not required when deploying Windows; when the product key will be provided in the Deployment Wizard; or when using volume licenses that are activated using KMS.<br /><br /> -                                          **Specify a multiple activation key (MAK) for activating this operating system**. Select this option when deploying Windows using MAK product keys in the deployment. MAK product keys are used by Microsoft Volume Licensing customers.<br /><br /> -                                          **Specify the product key for this operating system**. Select this option when deploying retail product key.<br /><br /> For more information about Volume Activation and product keys in MDT, see [Volume Activation Overview](https://technet.microsoft.com/library/hh831612.aspx).<br /><br /> b. Click **Next**.|  
-    |**OS Settings** |- In **Full Name**, type ***user_full_name*** (where *user_full_name* is the name of the user of the target computer).<br /><br /> - In **Organization**, type ***organization_name*** (where *organization_name* is the name of the organization).<br /><br /> - In **Internet Explorer Home Page**, type ***home_url*** (where *home_url* is the Uniform Resource Locator [URL] of the website to be the default site when starting Internet Explorer).<br /><br /> - Click **Next**.|  
-    |**Admin Password** |In **Administrator Password** and **Please confirm Administrator Password**, type ***password*** (where *password* is the password to be assigned to the built-in Administrator account on the reference or target computer), and then click **Next**.|  
-    |**Summary** |Click **Next**.|  
-    |**Confirmation** |Click **Finish**.|  
+   |**On this wizard page** |**Do this** |  
+   |-----------------------------|-----------------|  
+   |**General Settings** |- In **Task sequence ID**, type ***task_sequence_id*** (where *task_sequence_id* is a unique identifier for the task sequence you are creating).<br /><br /> Although you can change a task sequence’s name and comments later, you cannot change a task sequence’s ID. Before creating task sequences, create a naming scheme to use in creating task sequence IDs that will provide meaningful information about each task sequence. An example naming scheme is *Version-Edition-Level-Label*, where *Version* is the operating system version (Win8, Win2012), *Edition* is the operating system edition (Enterprise, Standard, Ultimate), *Level* is the service pack level (SP1, SP2), and *Label* is a descriptive label that identifies the customizations.<br /><br /> - In **Task sequence name**, type ***task_sequence_name*** (where *task_sequence_name* is a descriptive name for the task sequence you are creating).<br /><br /> - In **Task sequence comments**, type ***task_sequence_comment*** (where *task_sequence_comment* is text that describes the purpose or usage of the task sequence).<br /><br /> - Click **Next**.|  
+   |**Select Template** |In **The following task sequence templates are available. Select the one you would like to use as a starting point**, select ***task_sequence***, and then click **Next**.|  
+   |**Select OS** |In **The following operating system images are available to be deployed with this task sequence. Select one to use**, select ***operating_system*** (where *operating_system* is the operating system in the Operating Systems node in the Deployment Workbench that you want to deploy to the resource or target computer), and then click **Next**.|  
+   |**Specify Product Key** |a. Click one of the following options based on the requirements of your organization:<br /><br /> - **Do not specify a product key at this time**. Select this option when a product key is not required when deploying Windows; when the product key will be provided in the Deployment Wizard; or when using volume licenses that are activated using KMS.<br /><br /> -                                          **Specify a multiple activation key (MAK) for activating this operating system**. Select this option when deploying Windows using MAK product keys in the deployment. MAK product keys are used by Microsoft Volume Licensing customers.<br /><br /> -                                          **Specify the product key for this operating system**. Select this option when deploying retail product key.<br /><br /> For more information about Volume Activation and product keys in MDT, see [Volume Activation Overview](https://technet.microsoft.com/library/hh831612.aspx).<br /><br /> b. Click **Next**.|  
+   |**OS Settings** |- In **Full Name**, type ***user_full_name*** (where *user_full_name* is the name of the user of the target computer).<br /><br /> - In **Organization**, type ***organization_name*** (where *organization_name* is the name of the organization).<br /><br /> - In **Internet Explorer Home Page**, type ***home_url*** (where *home_url* is the Uniform Resource Locator [URL] of the website to be the default site when starting Internet Explorer).<br /><br /> - Click **Next**.|  
+   |**Admin Password** |In **Administrator Password** and **Please confirm Administrator Password**, type ***password*** (where *password* is the password to be assigned to the built-in Administrator account on the reference or target computer), and then click **Next**.|  
+   |**Summary** |Click **Next**.|  
+   |**Confirmation** |Click **Finish**.|  
 
- The New Task Sequence Wizard finishes. The package is added to the list of packages in the details pane of the Deployment Workbench.  
+   The New Task Sequence Wizard finishes. The package is added to the list of packages in the details pane of the Deployment Workbench.  
 
 ####  <a name="ModifyanExistingTaskSequenceintheDeploymentWorkbench"></a> Modify an Existing Task Sequence in the Deployment Workbench  
  Modify task sequences in the Task Sequences node in the Deployment Workbench using the **Properties** actions as described in [View Item Properties in the Deployment Workbench](#ViewItemPropertiesintheDeploymentWorkbench). Configure task sequences in the Deployment Workbench by performing the following steps in the task sequence **Properties** dialog box:  
@@ -2944,32 +2944,32 @@ Table 52 lists the task sequence templates in MDT.
 
 ###### To modify existing task sequence properties on the General tab  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Task Sequences (where *deployment_share* is the name of the deployment share in which you will configure the task sequence).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Task Sequences (where *deployment_share* is the name of the deployment share in which you will configure the task sequence).  
 
-3.  In the details pane, click ***task_sequence_name*** (where *task_sequence_name* is the name of the task sequence you want to configure).  
+3. In the details pane, click ***task_sequence_name*** (where *task_sequence_name* is the name of the task sequence you want to configure).  
 
-4.  In the Actions pane, click **Properties**.  
+4. In the Actions pane, click **Properties**.  
 
-     The ***task_sequence_name*** **Properties** dialog box opens (where *task_sequence_name* is the name of the task sequence you want to configure).  
+    The ***task_sequence_name*** **Properties** dialog box opens (where *task_sequence_name* is the name of the task sequence you want to configure).  
 
-5.  On the **General** tab, configure the settings listed in Table 54 based on the requirements of your organization, and then click OK.  
+5. On the **General** tab, configure the settings listed in Table 54 based on the requirements of your organization, and then click OK.  
 
-    ### Table 54. Configuration Settings on the General Tab of Task Sequence Properties  
+   ### Table 54. Configuration Settings on the General Tab of Task Sequence Properties  
 
-    |**Setting** |**Description** |  
-    |-----------------|---------------------|  
-    |**Task sequence ID** |Contains the task sequence identifier that the New Task Sequence Wizard provided.<br /><br /> The information in this text box is automatically generated by Deployment Workbench and cannot be modified.|  
-    |**Task sequence name** |Contains the name of the task sequence displayed in the Deployment Workbench and the Deployment Wizard.|  
-    |**Comments** |Provides information about the task sequence.|  
-    |**Task sequence version** |Contains the version number of the task sequence. You can type any version number that is appropriate for your organization’s versioning standards.|  
-    |**This can run on any platform** |Select to configure the task sequence to run on any supported 32-bit or 64-bit Windows operating system. The other available option is **This can run only on the specified client platforms**.|  
-    |**This can run only on the specified client platforms** |Select to configure the task sequence to run on any supported 32-bit or 64-bit Windows operating system. The other available option is **This can run only any platform**.|  
-    |**Hide this task sequence in the Deployment Wizard** |Select to control when this task sequence appears in the Deployment Wizard. If the check box is:<br /><br /> - Selected, the Deployment Wizard will not display this task sequence<br /><br /> - Cleared, the Deployment Wizard displays this task sequence<br /><br /> This check box is cleared by default.|  
-    |**Enable this task sequence** |Select to control when this task sequence is available to other wizards and dialog boxes in the Deployment Workbench. If the check box is:<br /><br /> - Selected, other wizards and dialog boxes in the Deployment Workbench can select this task sequence<br /><br /> - Cleared, other wizards and dialog boxes in the Deployment Workbench cannot select this task sequence<br /><br /> This check box is selected by default.|  
+   |**Setting** |**Description** |  
+   |-----------------|---------------------|  
+   |**Task sequence ID** |Contains the task sequence identifier that the New Task Sequence Wizard provided.<br /><br /> The information in this text box is automatically generated by Deployment Workbench and cannot be modified.|  
+   |**Task sequence name** |Contains the name of the task sequence displayed in the Deployment Workbench and the Deployment Wizard.|  
+   |**Comments** |Provides information about the task sequence.|  
+   |**Task sequence version** |Contains the version number of the task sequence. You can type any version number that is appropriate for your organization’s versioning standards.|  
+   |**This can run on any platform** |Select to configure the task sequence to run on any supported 32-bit or 64-bit Windows operating system. The other available option is **This can run only on the specified client platforms**.|  
+   |**This can run only on the specified client platforms** |Select to configure the task sequence to run on any supported 32-bit or 64-bit Windows operating system. The other available option is **This can run only any platform**.|  
+   |**Hide this task sequence in the Deployment Wizard** |Select to control when this task sequence appears in the Deployment Wizard. If the check box is:<br /><br /> - Selected, the Deployment Wizard will not display this task sequence<br /><br /> - Cleared, the Deployment Wizard displays this task sequence<br /><br /> This check box is cleared by default.|  
+   |**Enable this task sequence** |Select to control when this task sequence is available to other wizards and dialog boxes in the Deployment Workbench. If the check box is:<br /><br /> - Selected, other wizards and dialog boxes in the Deployment Workbench can select this task sequence<br /><br /> - Cleared, other wizards and dialog boxes in the Deployment Workbench cannot select this task sequence<br /><br /> This check box is selected by default.|  
 
- The task sequence configuration settings are saved, and the modifications are displayed in the details pane of the Deployment Workbench.  
+   The task sequence configuration settings are saved, and the modifications are displayed in the details pane of the Deployment Workbench.  
 
 #####  <a name="ConfiguretheTaskSequencePropertiesTaskSequenceTab"></a> Configure the Task Sequence Properties Task Sequence Tab  
  The task sequence properties stored on the **Task Sequence** tab are mostly configured when you run the New Task Sequence Wizard. However, you can update the task sequence properties on the **Task Sequence** tab through the ***task_sequence_name*** **Properties** dialog box (where *task_sequence_name* is the name of the task sequence in the Deployment Workbench).  
@@ -3018,21 +3018,21 @@ Table 52 lists the task sequence templates in MDT.
 
 ###### To modify existing task sequence steps and step sequence  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Task Sequences (where *deployment_share* is the name of the deployment share in which you will configure the task sequence).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Task Sequences (where *deployment_share* is the name of the deployment share in which you will configure the task sequence).  
 
-3.  In the details pane, click ***task_sequence_name*** (where *task_sequence_name* is the name of the task sequence you want to configure).  
+3. In the details pane, click ***task_sequence_name*** (where *task_sequence_name* is the name of the task sequence you want to configure).  
 
-4.  In the Actions pane, click **Properties**.  
+4. In the Actions pane, click **Properties**.  
 
-     The ***task_sequence_name*** **Properties** dialog box opens (where *task_sequence_name* is the name of the task sequence you want to configure).  
+    The ***task_sequence_name*** **Properties** dialog box opens (where *task_sequence_name* is the name of the task sequence you want to configure).  
 
-5.  On the **Task Sequence** tab, in the task sequence hierarchy, configure the task sequence steps and step sequences based on the requirements of your organization, and then click **OK**.  
+5. On the **Task Sequence** tab, in the task sequence hierarchy, configure the task sequence steps and step sequences based on the requirements of your organization, and then click **OK**.  
 
- The task sequence configuration settings are saved, and the modifications are displayed in the details pane of the Deployment Workbench.  
+   The task sequence configuration settings are saved, and the modifications are displayed in the details pane of the Deployment Workbench.  
 
- For more information about customizing task sequence steps for installing:  
+   For more information about customizing task sequence steps for installing:  
 
 -   Applications, see [Customize Application Installation in Task Sequences](#CustomizeApplicationInstallationinTaskSequences)  
 
@@ -3041,11 +3041,11 @@ Table 52 lists the task sequence templates in MDT.
 ######  <a name="ConfiguretheTaskSequenceStepProperties"></a> Configure the Task Sequence Step Properties  
  On the **Properties** tab, you configure the properties for task sequence groups or individual task sequence steps. The configuration settings for:  
 
--   Task sequence groups are the same for all groups  
+- Task sequence groups are the same for all groups  
 
--   Task sequence steps are different for each task sequence step type  
+- Task sequence steps are different for each task sequence step type  
 
- Table 56 lists the properties common to task sequence groups and steps. In addition to these properties, most task sequence steps have properties that are specific to the task sequence type.  
+  Table 56 lists the properties common to task sequence groups and steps. In addition to these properties, most task sequence steps have properties that are specific to the task sequence type.  
 
 ### Table 56. Properties Common to Task Sequence Groups and Steps  
 
@@ -3082,11 +3082,11 @@ Table 52 lists the task sequence templates in MDT.
 
  The configuration settings on the **Options** tab for:  
 
-1.  A task sequence group affect all the steps with the group  
+1. A task sequence group affect all the steps with the group  
 
-2.  An individual task sequence step affect only that step  
+2. An individual task sequence step affect only that step  
 
- For example, if you configure a condition for a task sequence group, that condition affects all the task sequence steps within the group.  
+   For example, if you configure a condition for a task sequence group, that condition affects all the task sequence steps within the group.  
 
 ###### To modify existing task sequence group and individual step options  
 
@@ -3120,28 +3120,28 @@ Table 52 lists the task sequence templates in MDT.
 
 ###### To modify existing task sequence properties on the OS Info tab  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Task Sequences (where *deployment_share* is the name of the deployment share in which you will configure the task sequence).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Task Sequences (where *deployment_share* is the name of the deployment share in which you will configure the task sequence).  
 
-3.  In the details pane, click ***task_sequence_name*** (where *task_sequence_name* is the name of the task sequence you want to configure).  
+3. In the details pane, click ***task_sequence_name*** (where *task_sequence_name* is the name of the task sequence you want to configure).  
 
-4.  In the Actions pane, click **Properties**.  
+4. In the Actions pane, click **Properties**.  
 
-     The ***task_sequence_name*** **Properties** dialog box opens (where *task_sequence_name* is the name of the task sequence you want to configure).  
+    The ***task_sequence_name*** **Properties** dialog box opens (where *task_sequence_name* is the name of the task sequence you want to configure).  
 
-5.  On the **OS Info** tab, configure the settings listed in Table 58 based on the requirements of your organization, and then click **OK**.  
+5. On the **OS Info** tab, configure the settings listed in Table 58 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 58. Configuration Settings on the OS Info Tab of Task Sequence Properties  
+   ### Table 58. Configuration Settings on the OS Info Tab of Task Sequence Properties  
 
-    |**Setting** |**Description** |  
-    |-----------------|---------------------|  
-    |**Operating system description** |Contains the name of the operating system that you provided when creating the task sequence—for example Windows 8 ENTERPRISE.<br /><br /> The information in this text box is automatically generated by the Deployment Workbench and cannot be modified.|  
-    |**Build** |Contains the build number of the operating system.<br /><br /> The information in this text box is automatically generated by the Deployment Workbench and cannot be modified.|  
-    |**Platform** |Contains the processor architecture of the operating system—for example, x86.<br /><br /> The information in this text box is automatically generated by the Deployment Workbench and cannot be modified.|  
-    |**Edit Unattend.xml** |Click to modify the contents of the Unattended.xml file that the Deployment Workbench generates for Windows.<br /><br /> The Deployment Workbench cannot create catalog files for some Windows images of different architecture types. The following list describes the architecture types running the Deployment Workbench and catalogs that you can create for each architecture:<br /><br /> -                                          **Deployment Workbench running on x86**. Creates catalogs for x86 and x64 Windows images<br /><br /> -                                          **Deployment Workbench running on x64**. Creates catalogs only for x64 Windows images<br /><br /> The Get Operating System Catalog Wizard may appear if an operating system does not yet have a catalog. You will see a progress bar in the Get Operating System Catalog Wizard, but no user interaction is required. The wizard may take a few minutes to finish.|  
+   |**Setting** |**Description** |  
+   |-----------------|---------------------|  
+   |**Operating system description** |Contains the name of the operating system that you provided when creating the task sequence—for example Windows 8 ENTERPRISE.<br /><br /> The information in this text box is automatically generated by the Deployment Workbench and cannot be modified.|  
+   |**Build** |Contains the build number of the operating system.<br /><br /> The information in this text box is automatically generated by the Deployment Workbench and cannot be modified.|  
+   |**Platform** |Contains the processor architecture of the operating system—for example, x86.<br /><br /> The information in this text box is automatically generated by the Deployment Workbench and cannot be modified.|  
+   |**Edit Unattend.xml** |Click to modify the contents of the Unattended.xml file that the Deployment Workbench generates for Windows.<br /><br /> The Deployment Workbench cannot create catalog files for some Windows images of different architecture types. The following list describes the architecture types running the Deployment Workbench and catalogs that you can create for each architecture:<br /><br /> -                                          **Deployment Workbench running on x86**. Creates catalogs for x86 and x64 Windows images<br /><br /> -                                          **Deployment Workbench running on x64**. Creates catalogs only for x64 Windows images<br /><br /> The Get Operating System Catalog Wizard may appear if an operating system does not yet have a catalog. You will see a progress bar in the Get Operating System Catalog Wizard, but no user interaction is required. The wizard may take a few minutes to finish.|  
 
- The task sequence configuration settings are saved, and the modifications are displayed in the details pane of the Deployment Workbench.  
+   The task sequence configuration settings are saved, and the modifications are displayed in the details pane of the Deployment Workbench.  
 
 ####  <a name="CopyTaskSequencesintheDeploymentWorkbench"></a> Copy Task Sequences in the Deployment Workbench  
  You can copy and paste task sequences and folders beneath the Task Sequences node in the Deployment Workbench using the **Copy** and **Paste** actions as described in [Copy Items in the Deployment Workbench](#CopyItemsintheDeploymentWorkbench).  
@@ -3225,52 +3225,52 @@ Table 52 lists the task sequence templates in MDT.
 
 ###### To create a new folder  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share/node_or_folder* (where *deployment_share* is the name of the deployment share in which you will create the folder and *node_or_folder* is the name of the node or folder in which you will create the folder).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share/node_or_folder* (where *deployment_share* is the name of the deployment share in which you will create the folder and *node_or_folder* is the name of the node or folder in which you will create the folder).  
 
-3.  In the Actions pane, click **New Folder**.  
+3. In the Actions pane, click **New Folder**.  
 
-     The New Folder Wizard starts.  
+    The New Folder Wizard starts.  
 
-4.  Complete the New Folder Wizard using the information in Table 59.  
+4. Complete the New Folder Wizard using the information in Table 59.  
 
-    ### Table 59. Information for Completing the New Folder Wizard  
+   ### Table 59. Information for Completing the New Folder Wizard  
 
-    |**On this wizard page** |**Do this** |  
-    |-----------------------------|-----------------|  
-    |**General Settings** |a. In **Folder name**, type ***folder_name*** (where *folder_name* is the name of the folder you want to create).<br /><br /> b. In **Folder comment**, type ***folder_comment*** (where *folder_comment* is text that describes the user of the folder in the deployment share).<br /><br /> c. Select or clear the **Enable this folder** check box based on the needs of your organization. If this check box is:<br /><br /> - Selected, the folder, subfolders, and content can be included in selection profiles<br /><br /> - Cleared, the folder, subfolders, and content cannot be included in selection profiles<br /><br /> d. Click **Next**.|  
-    |**Summary** |Review the information, then click **Next**.|  
-    |**Confirmation** |You can click **Save Output** to save the output of the wizard to a file. You can also click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Finish**.|  
+   |**On this wizard page** |**Do this** |  
+   |-----------------------------|-----------------|  
+   |**General Settings** |a. In **Folder name**, type ***folder_name*** (where *folder_name* is the name of the folder you want to create).<br /><br /> b. In **Folder comment**, type ***folder_comment*** (where *folder_comment* is text that describes the user of the folder in the deployment share).<br /><br /> c. Select or clear the **Enable this folder** check box based on the needs of your organization. If this check box is:<br /><br /> - Selected, the folder, subfolders, and content can be included in selection profiles<br /><br /> - Cleared, the folder, subfolders, and content cannot be included in selection profiles<br /><br /> d. Click **Next**.|  
+   |**Summary** |Review the information, then click **Next**.|  
+   |**Confirmation** |You can click **Save Output** to save the output of the wizard to a file. You can also click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Finish**.|  
 
- After the New Folder Wizard finishes, the new folder appears in the deployment share in the Deployment Workbench.  
+   After the New Folder Wizard finishes, the new folder appears in the deployment share in the Deployment Workbench.  
 
 #####  <a name="ModifyanExistingFolderintheDeploymentWorkbench"></a> Modify an Existing Folder in the Deployment Workbench  
  Modify existing folders in the Deployment Workbench using the **Properties** actions as described in [View Item Properties in the Deployment Workbench](#ViewItemPropertiesintheDeploymentWorkbench). The folder properties are mostly configured when you run the New Folder Wizard. Update the folder properties on the **General** tab through the ***folder_name*** **Properties** dialog box (where *folder_name* is the name of the folder in the Deployment Workbench).  
 
 ###### To modify an existing folder  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/*node_or_folder* (where *deployment_share* is the name of the deployment share in which you will modify the folder and *node_or_folder* is the name of the node or folder that contains the folder to be modified).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/*node_or_folder* (where *deployment_share* is the name of the deployment share in which you will modify the folder and *node_or_folder* is the name of the node or folder that contains the folder to be modified).  
 
-3.  In the details pane, click ***folder_name*** (where *folder_name* is the name of the folder you want to modify).  
+3. In the details pane, click ***folder_name*** (where *folder_name* is the name of the folder you want to modify).  
 
-4.  In the Actions pane, click **Properties**.  
+4. In the Actions pane, click **Properties**.  
 
-     The ***folder_name*** **Properties** dialog box opens (where *folder_name* is the name of the folder to be modified).  
+    The ***folder_name*** **Properties** dialog box opens (where *folder_name* is the name of the folder to be modified).  
 
-5.  On the **General** tab, configure the settings listed in Table 60 based on the requirements of your organization, and then click **OK**.  
+5. On the **General** tab, configure the settings listed in Table 60 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 60. Configuration Settings on the General Tab of Folder Properties  
+   ### Table 60. Configuration Settings on the General Tab of Folder Properties  
 
-    |**Setting** |**Description** |  
-    |-----------------|---------------------|  
-    |**Name** |Contains the name of the folder that is displayed in the Deployment Workbench.|  
-    |**Comments** |Provides information about the folder.|  
-    |**Enable this folder** |Select to enable or disable the folder. If the check box is:<br /><br /> - Selected, you can select the folder in selection profiles<br /><br /> - Cleared, you cannot select the folder in selection profiles|  
+   |**Setting** |**Description** |  
+   |-----------------|---------------------|  
+   |**Name** |Contains the name of the folder that is displayed in the Deployment Workbench.|  
+   |**Comments** |Provides information about the folder.|  
+   |**Enable this folder** |Select to enable or disable the folder. If the check box is:<br /><br /> - Selected, you can select the folder in selection profiles<br /><br /> - Cleared, you cannot select the folder in selection profiles|  
 
- The folder configuration settings are saved, and the modifications are displayed in the details pane of the Deployment Workbench.  
+   The folder configuration settings are saved, and the modifications are displayed in the details pane of the Deployment Workbench.  
 
 #####  <a name="CopyaFolderintheDeploymentWorkbench"></a> Copy a Folder in the Deployment Workbench  
  You can copy and paste folders in the Deployment Workbench using the **Copy** and **Paste** actions as described in [Copy Items in the Deployment Workbench](#CopyItemsintheDeploymentWorkbench).  
@@ -3290,38 +3290,38 @@ Table 52 lists the task sequence templates in MDT.
 ####  <a name="ViewItemPropertiesintheDeploymentWorkbench"></a> View Item Properties in the Deployment Workbench  
  You can view the properties of operating systems, device drivers, and other items from the Deployment Workbench using one of the following methods:  
 
--   In the details pane, click an item. Then, in the Actions pane, click **Properties**.  
+- In the details pane, click an item. Then, in the Actions pane, click **Properties**.  
 
--   In the details pane, click an item. Then, from the **Action** menu, click **Properties**.  
+- In the details pane, click an item. Then, from the **Action** menu, click **Properties**.  
 
--   In the details pane, right-click an item, and then click **Properties**.  
+- In the details pane, right-click an item, and then click **Properties**.  
 
--   In the details pane, double-click an item.  
+- In the details pane, double-click an item.  
 
- To set the properties of an item in a deployment share  
+  To set the properties of an item in a deployment share  
 
 ###### To set the properties of an item in a deployment share  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/*item_type* (where *deployment_share* is the name of the deployment share in which you will copy the item and *item_type* is the type of item you will copy, such as an operating system or device driver).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/*item_type* (where *deployment_share* is the name of the deployment share in which you will copy the item and *item_type* is the type of item you will copy, such as an operating system or device driver).  
 
-3.  In the details pane, click ***item*** (where *item* is the name of the item to be renamed).  
+3. In the details pane, click ***item*** (where *item* is the name of the item to be renamed).  
 
-4.  In the Actions pane, click **Properties**.  
+4. In the Actions pane, click **Properties**.  
 
- The ***item*** **Properties** dialog box is displayed (where *item* is the name of the item you selected).  
+   The ***item*** **Properties** dialog box is displayed (where *item* is the name of the item you selected).  
 
 ####  <a name="CopyItemsintheDeploymentWorkbench"></a> Copy Items in the Deployment Workbench  
  Use the Deployment Workbench to copy operating systems, device drivers, and other items within a deployment share or between two deployments shares. When you copy an item, the Deployment Workbench creates a link to the original item instead of creating a separate copy of the item. This reduces the size of the deployment share. If you want to create a duplicate of an item, import the item again in the target folder.  
 
  When you copy an item between deployment shares and an item with the same:  
 
--   GUID already exists in the target deployment share, the configuration settings for the source item will be applied to the target item, including the name (if the items do not already have the same name)  
+- GUID already exists in the target deployment share, the configuration settings for the source item will be applied to the target item, including the name (if the items do not already have the same name)  
 
--   Name already exists in the target deployment share, an error is generated, because two items of the same type cannot have the same name  
+- Name already exists in the target deployment share, an error is generated, because two items of the same type cannot have the same name  
 
- You can copy items by using:  
+  You can copy items by using:  
 
 1.  **Cut** and **Paste** actions as described in [Copy Items Using the Cut and Paste Actions](#CopyItemsUsingtheCutandPasteActions)  
 
@@ -3330,48 +3330,48 @@ Table 52 lists the task sequence templates in MDT.
 #####  <a name="CopyItemsUsingtheCutandPasteActions"></a> Copy Items Using the Cut and Paste Actions  
  You can copy an item using the **Cut** and **Paste** actions in the Deployment Workbench. Copy the item from the source location using one of the following methods:  
 
--   In the details pane, click an item. Then, in the Actions pane, click **Copy**.  
+- In the details pane, click an item. Then, in the Actions pane, click **Copy**.  
 
--   In the details pane, click an item. Then, from the **Action** menu, click **Copy**.  
+- In the details pane, click an item. Then, from the **Action** menu, click **Copy**.  
 
--   In the details pane, right-click an item, and then click **Copy**.  
+- In the details pane, right-click an item, and then click **Copy**.  
 
- Paste the item that you have copied using one of the following methods:  
+  Paste the item that you have copied using one of the following methods:  
 
--   In the details pane, click the target location. Then, in the Actions pane, click **Paste**.  
+- In the details pane, click the target location. Then, in the Actions pane, click **Paste**.  
 
--   In the details pane, click the target location. Then, from the **Action** menu, click **Paste**.  
+- In the details pane, click the target location. Then, from the **Action** menu, click **Paste**.  
 
--   In the details pane, right-click the target location, and then click **Paste**.  
+- In the details pane, right-click the target location, and then click **Paste**.  
 
 ###### To copy and paste items in a deployment share  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/*item_type* (where *deployment_share* is the name of the deployment share in which you will copy the item and *item_type* is the type of item you will copy, such as an operating system or device driver).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/*item_type* (where *deployment_share* is the name of the deployment share in which you will copy the item and *item_type* is the type of item you will copy, such as an operating system or device driver).  
 
-3.  In the details pane, click ***item*** (where *item* is the name of the item to be copied).  
+3. In the details pane, click ***item*** (where *item* is the name of the item to be copied).  
 
-4.  In the Actions pane, click **Copy**.  
+4. In the Actions pane, click **Copy**.  
 
-5.  In the details pane, go to ***target_folder*** (where *target_folder* is the name of the folder where you want to copy the item).  
+5. In the details pane, go to ***target_folder*** (where *target_folder* is the name of the folder where you want to copy the item).  
 
-6.  In the Actions pane, click **Paste**.  
+6. In the Actions pane, click **Paste**.  
 
- The new copy of the item appears in the details pane of the Deployment Workbench.  
+   The new copy of the item appears in the details pane of the Deployment Workbench.  
 
 #####  <a name="CopyItemsUsingDragandDropFunctionality"></a> Copy Items Using Drag-and-Drop Functionality  
  You can copy items by dragging an item from the source location to the target location.  
 
 ###### To copy items in the Deployment Workbench using drag-and-drop functionality  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/*item_type* (where *deployment_share* is the name of the deployment share to which you will copy the item and *item_type* is the type of item you will copy, such as an operating system or device driver).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/*item_type* (where *deployment_share* is the name of the deployment share to which you will copy the item and *item_type* is the type of item you will copy, such as an operating system or device driver).  
 
-3.  In the details pane, drag ***item*** (where *item* is the name of the item to be copied) to the target location, press CTRL, and then release the mouse button.  
+3. In the details pane, drag ***item*** (where *item* is the name of the item to be copied) to the target location, press CTRL, and then release the mouse button.  
 
- The item is copied to the target location in the details pane of the Deployment Workbench.  
+   The item is copied to the target location in the details pane of the Deployment Workbench.  
 
 ####  <a name="MoveItemsintheDeploymentWorkbench"></a> Move Items in the Deployment Workbench  
  Use the Deployment Workbench to move operating systems, device drivers, and other items within a deployment share or between two deployments shares. You can move items by using:  
@@ -3393,62 +3393,62 @@ Table 52 lists the task sequence templates in MDT.
 
 ###### To set the properties of an item in a deployment share  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/*item_type* (where *deployment_share* is the name of the deployment share in which you will copy the item and *item_type* is the type of item you will copy, such as an operating system or device driver).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/*item_type* (where *deployment_share* is the name of the deployment share in which you will copy the item and *item_type* is the type of item you will copy, such as an operating system or device driver).  
 
-3.  In the details pane, click item (where *item* is the name of the item to be renamed).  
+3. In the details pane, click item (where *item* is the name of the item to be renamed).  
 
-4.  In the Actions pane, click **Properties**.  
+4. In the Actions pane, click **Properties**.  
 
- The **item Properties** dialog box is displayed (where *item* is the name of the item you selected).  
+   The **item Properties** dialog box is displayed (where *item* is the name of the item you selected).  
 
 #####  <a name="MoveItemsUsingDragandDropFunctionality"></a> Move Items Using Drag-and-Drop Functionality  
  You can move items by dragging them from the source location to the target location.  
 
 ###### To move items in the Deployment Workbench using drag-and-drop functionality  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/*item_type* (where *deployment_share* is the name of the deployment share to which you will move the item and *item_type* is the type of item you will move, such as an operating system or device driver).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/*item_type* (where *deployment_share* is the name of the deployment share to which you will move the item and *item_type* is the type of item you will move, such as an operating system or device driver).  
 
-3.  In the details pane, drag ***item*** (where *item* is the name of the item to be moved) to the target location.  
+3. In the details pane, drag ***item*** (where *item* is the name of the item to be moved) to the target location.  
 
- The item is moved to the target location.  
+   The item is moved to the target location.  
 
 ####  <a name="RenameItemsintheDeploymentWorkbench"></a> Rename Items in the Deployment Workbench  
  You can rename operating systems, device drivers, and other items in the Deployment Workbench by using one of the following methods:  
 
--   In the details pane, click an item. Then, in the Actions pane, click **Rename**.  
+- In the details pane, click an item. Then, in the Actions pane, click **Rename**.  
 
--   In the details pane, click an item. Then, from the **Action** menu, click **Rename**.  
+- In the details pane, click an item. Then, from the **Action** menu, click **Rename**.  
 
--   In the details pane, right-click an item, and then click **Rename**.  
+- In the details pane, right-click an item, and then click **Rename**.  
 
- Because the **Copy** and **Paste** actions in the Deployment Workbench create a link to the original item rather than a separate copy. So, when you rename an item, the Deployment Workbench automatically renames any copies of an item in other folders.  
+  Because the **Copy** and **Paste** actions in the Deployment Workbench create a link to the original item rather than a separate copy. So, when you rename an item, the Deployment Workbench automatically renames any copies of an item in other folders.  
 
 ###### To rename an item in a deployment share  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/*item_type* (where *deployment_share* is the name of the deployment share in which you will rename the item and *item_type* is the type of item you will rename, such as an operating system or device driver).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/*item_type* (where *deployment_share* is the name of the deployment share in which you will rename the item and *item_type* is the type of item you will rename, such as an operating system or device driver).  
 
-3.  In the details pane, click ***item*** (where *item* is the name of the item to be renamed). Then, in the Actions pane, click **Rename**.  
+3. In the details pane, click ***item*** (where *item* is the name of the item to be renamed). Then, in the Actions pane, click **Rename**.  
 
-4.  In the details pane, type ***new_item_name*** (where *new_item_name* is the new name of the item), and then press ENTER.  
+4. In the details pane, type ***new_item_name*** (where *new_item_name* is the new name of the item), and then press ENTER.  
 
- The new name of the item appears in the details pane of the Deployment Workbench.  
+   The new name of the item appears in the details pane of the Deployment Workbench.  
 
 ####  <a name="DeleteItemsfromtheDeploymentWorkbench"></a> Delete Items from the Deployment Workbench  
  You can delete operating systems, device drivers, and other items from the Deployment Workbench using the Delete Selected Items Wizard. Start the Delete Selected Items Wizard using one of the following methods:  
 
--   In the details pane, click an item. Then, in the Actions pane, click **Delete**.  
+- In the details pane, click an item. Then, in the Actions pane, click **Delete**.  
 
--   In the details pane, click an item. Then, from the **Action** menu, click **Delete**.  
+- In the details pane, click an item. Then, from the **Action** menu, click **Delete**.  
 
--   In the details pane, right-click an item, and then click **Delete**.  
+- In the details pane, right-click an item, and then click **Delete**.  
 
- You can delete individual items or folders that contain one or more items or subfolders. You can also delete items that have copies in multiple folders. The Delete Selected Items Wizard’s **Options** page includes the check boxes shown in Table 61.  
+  You can delete individual items or folders that contain one or more items or subfolders. You can also delete items that have copies in multiple folders. The Delete Selected Items Wizard’s **Options** page includes the check boxes shown in Table 61.  
 
 ### Table 61. Information for Completing the Delete Selected Items Wizard  
 
@@ -3462,27 +3462,27 @@ Table 52 lists the task sequence templates in MDT.
 
 ###### To delete an item from a deployment share  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/*item_type* (where *deployment_share* is the name of the deployment share to which you will add the operating system and *item_type* is the type of item you are deleting, such as an operating system or device driver).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/*item_type* (where *deployment_share* is the name of the deployment share to which you will add the operating system and *item_type* is the type of item you are deleting, such as an operating system or device driver).  
 
-3.  In the details pane, click ***item*** (where *item* is the name of the item to be deleted, such as a folder, an operating system, or a device driver).  
+3. In the details pane, click ***item*** (where *item* is the name of the item to be deleted, such as a folder, an operating system, or a device driver).  
 
-4.  In the Actions pane, click **Delete**.  
+4. In the Actions pane, click **Delete**.  
 
-     The Delete Selected Items Wizard starts.  
+    The Delete Selected Items Wizard starts.  
 
-5.  Complete the Delete Selected Items Wizard using the information in Table 62.  
+5. Complete the Delete Selected Items Wizard using the information in Table 62.  
 
-    ### Table 62. Information for Completing the Delete Selected Items Wizard  
+   ### Table 62. Information for Completing the Delete Selected Items Wizard  
 
-    |**On this wizard page** |**Do this** |  
-    |-----------------------------|-----------------|  
-    |**Options** |- Select or clear the **Completely delete these items, even if there are copies in other folders** check box based on your requirements.<br /><br /> By default, this check box is cleared.|  
-    |**Summary** |Click Next.|  
-    |**Confirmation** |You can click **Save Output** to save the output of the wizard to a file. You can also click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Finish**.|  
+   |**On this wizard page** |**Do this** |  
+   |-----------------------------|-----------------|  
+   |**Options** |- Select or clear the **Completely delete these items, even if there are copies in other folders** check box based on your requirements.<br /><br /> By default, this check box is cleared.|  
+   |**Summary** |Click Next.|  
+   |**Confirmation** |You can click **Save Output** to save the output of the wizard to a file. You can also click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Finish**.|  
 
- After the Delete Selected Items Wizard finishes, the item and other affected items are removed from the Deployment Workbench and from the deployment share.  
+   After the Delete Selected Items Wizard finishes, the item and other affected items are removed from the Deployment Workbench and from the deployment share.  
 
 ###  <a name="PerformingAdvancedConfigurationTasksintheDeploymentWorkbench"></a> Performing Advanced Configuration Tasks in the Deployment Workbench  
  The Deployment Workbench includes advanced configuration options that extend the features provided in basic LTI deployments. These configuration options provide more granular selection of the content you want to include in the deployment, support deployments in larger organizations, and support deployments from stand-alone media without the need to connect to a deployment share.  
@@ -3552,53 +3552,53 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 ###### To create a new selection profile  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Selection Profiles (where *deployment_share* is the name of the deployment share to which you will add the application).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Selection Profiles (where *deployment_share* is the name of the deployment share to which you will add the application).  
 
-3.  In the Actions pane, click **New Selection Profile**.  
+3. In the Actions pane, click **New Selection Profile**.  
 
-     The New Selection Profile Wizard starts.  
+    The New Selection Profile Wizard starts.  
 
-4.  Complete the New Selection Profile Wizard using the information in Table 64.  
+4. Complete the New Selection Profile Wizard using the information in Table 64.  
 
-    ### Table 64. Information for Completing the New Selection Profile Wizard  
+   ### Table 64. Information for Completing the New Selection Profile Wizard  
 
-    |**On this wizard page** |**Do this** |  
-    |-----------------------------|-----------------|  
-    |**General Settings** |- In **Selection profile name**, type ***profile_name*** (where *profile_name* is the name of the new profile).<br /><br /> - In **Selection profile comments**, type ***comment*** (where *comment* is descriptive text that provides information about the selection profile).<br /><br /> - Click Next.|  
-    |**Folders** |In **Select the folders that should be included in this selection profile**, select ***folders*** (where *folders* is the name of the folders that contain the Deployment Workbench items you want to include in this selection profile), and then click **Next**.|  
-    |**Summary** |Review in the information in **Details**, and then click **Next**.|  
-    |**Confirmation** |You can click **Save Output** to save the output of the wizard to a file. You can also click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Finish**.|  
+   |**On this wizard page** |**Do this** |  
+   |-----------------------------|-----------------|  
+   |**General Settings** |- In **Selection profile name**, type ***profile_name*** (where *profile_name* is the name of the new profile).<br /><br /> - In **Selection profile comments**, type ***comment*** (where *comment* is descriptive text that provides information about the selection profile).<br /><br /> - Click Next.|  
+   |**Folders** |In **Select the folders that should be included in this selection profile**, select ***folders*** (where *folders* is the name of the folders that contain the Deployment Workbench items you want to include in this selection profile), and then click **Next**.|  
+   |**Summary** |Review in the information in **Details**, and then click **Next**.|  
+   |**Confirmation** |You can click **Save Output** to save the output of the wizard to a file. You can also click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Finish**.|  
 
- The New Selection Profile Wizard finishes. The selection profile is added to the list of selection profiles in the details pane of the Deployment Workbench.  
+   The New Selection Profile Wizard finishes. The selection profile is added to the list of selection profiles in the details pane of the Deployment Workbench.  
 
 #####  <a name="ModifyanExistingSelectionProfileintheDeploymentWorkbench"></a> Modify an Existing Selection Profile in the Deployment Workbench  
  Modify existing selection profiles in the Deployment Workbench’s Selection Profiles node using the **Properties** actions as described in [View Item Properties in the Deployment Workbench](#ViewItemPropertiesintheDeploymentWorkbench). The selection profile properties are mostly configured when you run the New Selection Profile Wizard. However, you can update the selection profile properties on the **General** tab of the ***profile_name*** **Properties** dialog box (where *profile_name* is the name of the selection profile in the Deployment Workbench).  
 
 ###### To configure the General tab for package properties  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Selection Profiles (where *deployment_share* is the name of the deployment share where you will configure the package).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Selection Profiles (where *deployment_share* is the name of the deployment share where you will configure the package).  
 
-3.  In the details pane, click ***profile_name*** (where *profile_name* is the name of the selection profile you want to configure).  
+3. In the details pane, click ***profile_name*** (where *profile_name* is the name of the selection profile you want to configure).  
 
-4.  In the Actions pane, click **Properties**.  
+4. In the Actions pane, click **Properties**.  
 
-     The ***profile_name*** **Properties** dialog box opens (where *profile_name* is the name of the selection profile you want to configure).  
+    The ***profile_name*** **Properties** dialog box opens (where *profile_name* is the name of the selection profile you want to configure).  
 
-5.  On the **General** tab, configure the settings listed in Table 65 based on the requirements of your organization, and then click **OK**.  
+5. On the **General** tab, configure the settings listed in Table 65 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 65. Configuration Settings on the General Tab of Package Properties  
+   ### Table 65. Configuration Settings on the General Tab of Package Properties  
 
-    |**Setting** |**Description** |  
-    |-----------------|---------------------|  
-    |**Name** |Contains the name of the selection displayed in the Deployment Workbench and the Deployment Wizard.|  
-    |**Comments** |Provides information about the selection profile.|  
-    |**Folders** |Hierarchical list of the folders and their selection status.|  
+   |**Setting** |**Description** |  
+   |-----------------|---------------------|  
+   |**Name** |Contains the name of the selection displayed in the Deployment Workbench and the Deployment Wizard.|  
+   |**Comments** |Provides information about the selection profile.|  
+   |**Folders** |Hierarchical list of the folders and their selection status.|  
 
- The selection profile configuration settings are saved, the modifications are displayed in the details pane of the Deployment Workbench, and the *deployment_share*\Control\SelectionProfiles.xml file (where *deployment_share* is the name of the deployment share) is updated with the selection profile configuration settings.  
+   The selection profile configuration settings are saved, the modifications are displayed in the details pane of the Deployment Workbench, and the *deployment_share*\Control\SelectionProfiles.xml file (where *deployment_share* is the name of the deployment share) is updated with the selection profile configuration settings.  
 
 #####  <a name="CopyaSelectionProfileintheDeploymentWorkbench"></a> Copy a Selection Profile in the Deployment Workbench  
  You can copy and paste selection profiles in the Deployment Workbench using the **Copy** and **Paste** actions as described in [Copy Items in the Deployment Workbench](#CopyItemsintheDeploymentWorkbench).  
@@ -3617,61 +3617,61 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
  The relationship between items and folders in a selection profile is stored in the following files in the *deployment_share*\Control folder (where *deployment_share* is the location of the deployment share):  
 
--   **itemGroups.xml**. There is a separate file for each type of item, including:  
+- **itemGroups.xml**. There is a separate file for each type of item, including:  
 
-    -   ApplicationGroups.xml  
+  - ApplicationGroups.xml  
 
-    -   DriverGroups.xml  
+  - DriverGroups.xml  
 
-    -   LinkedDeploymentShareGroups.xml  
+  - LinkedDeploymentShareGroups.xml  
 
-    -   MediaGroups.xml  
+  - MediaGroups.xml  
 
-    -   OperatingSystemGroups.xml  
+  - OperatingSystemGroups.xml  
 
-    -   PackageGroups.xml  
+  - PackageGroups.xml  
 
-    -   SelectionProfileGroups.xml  
+  - SelectionProfileGroups.xml  
 
-    -   TaskSequenceGroups.xml  
+  - TaskSequenceGroups.xml  
 
-     For example, consider a selection profile for device drivers called *WinPEAndFullOS* that are stored in a folder created immediately beneath the Out-of-Box Drivers node. The following code is an excerpt from the DriverGroups.xml file generated when you created the selection profile:  
+    For example, consider a selection profile for device drivers called *WinPEAndFullOS* that are stored in a folder created immediately beneath the Out-of-Box Drivers node. The following code is an excerpt from the DriverGroups.xml file generated when you created the selection profile:  
 
-    ```  
-    <groups>  
-    …  
-     <group_quid="{e5143c1c-24e4-466d-9b56-b0db693c8619}" enable="True">  
-       <Name>WinPEAndFullOS</Name>  
-    …  
-       <Member>{1eca45a5-d7ef-475a-bb0d-7f7747f16b3a}</Member>  
-    ```  
+  ```  
+  <groups>  
+  …  
+   <group_quid="{e5143c1c-24e4-466d-9b56-b0db693c8619}" enable="True">  
+     <Name>WinPEAndFullOS</Name>  
+  …  
+     <Member>{1eca45a5-d7ef-475a-bb0d-7f7747f16b3a}</Member>  
+  ```  
 
--   **SelectionProfiles.xml**. This file contains the definitions for all the selection profiles defined for the deployment share. The following code is an excerpt from the SelectionProfile.xml file generated when you created the WinPEAndFullOS selection profile:  
+- **SelectionProfiles.xml**. This file contains the definitions for all the selection profiles defined for the deployment share. The following code is an excerpt from the SelectionProfile.xml file generated when you created the WinPEAndFullOS selection profile:  
 
-    ```  
-    <selectionProfile quid="{46a3e6a2-694c-4c2f-afd8-a2986e6e252e}" enable="True">  
-      <Name>Drivers Safe For WinPE</Name>  
-      <Comments>Include Driver packages safe for WinPE.</Comments>  
-      <ReadOnly>True</ReadOnly>  
-      <Definition><SelectionProfile><Include path="Out-of-Box Drivers\WinPEAndFullOS" /><Include path="Out-of-Box Drivers\WinPEOnly" /></SelectionProfile></Definition>  
-    </selectionProfile>  
-    ```  
+  ```  
+  <selectionProfile quid="{46a3e6a2-694c-4c2f-afd8-a2986e6e252e}" enable="True">  
+    <Name>Drivers Safe For WinPE</Name>  
+    <Comments>Include Driver packages safe for WinPE.</Comments>  
+    <ReadOnly>True</ReadOnly>  
+    <Definition><SelectionProfile><Include path="Out-of-Box Drivers\WinPEAndFullOS" /><Include path="Out-of-Box Drivers\WinPEOnly" /></SelectionProfile></Definition>  
+  </selectionProfile>  
+  ```  
 
- By default, if you do not specify a selection profile or group in the CustomSettings.ini file or in the MDT DB, LTI uses all items. If you specify both selection profiles and groups in the CustomSettings.ini file or the MDT DB, LTI uses all the items from both the selection profile and the group.  
+  By default, if you do not specify a selection profile or group in the CustomSettings.ini file or in the MDT DB, LTI uses all items. If you specify both selection profiles and groups in the CustomSettings.ini file or the MDT DB, LTI uses all the items from both the selection profile and the group.  
 
- For example, if you specify a selection profile and use the default group (which includes all items), the end result is that LTI uses all items, because the default group includes all items, regardless of what you specify in the selection profile. To restrict the items to a selection profile, specify a group that contains no items (that is, is empty). The reverse is true if you want to use a group.  
+  For example, if you specify a selection profile and use the default group (which includes all items), the end result is that LTI uses all items, because the default group includes all items, regardless of what you specify in the selection profile. To restrict the items to a selection profile, specify a group that contains no items (that is, is empty). The reverse is true if you want to use a group.  
 
- Because of the introduction of folders in MDT, groups include all folders and subfolders by default. You can override this behavior using the **SkipGroupSubFolders**property. For more information on this property, see the corresponding section in the MDT document *Toolkit Reference*.  
+  Because of the introduction of folders in MDT, groups include all folders and subfolders by default. You can override this behavior using the **SkipGroupSubFolders**property. For more information on this property, see the corresponding section in the MDT document *Toolkit Reference*.  
 
- In most instances, you can use selection profiles and groups to perform most deployments. However, the following properties are available for more advanced scenarios—such as if you want to exclude a parent folder but include a child folder:  
+  In most instances, you can use selection profiles and groups to perform most deployments. However, the following properties are available for more advanced scenarios—such as if you want to exclude a parent folder but include a child folder:  
 
--   **CustomDriverSelectionProfile**  
+- **CustomDriverSelectionProfile**  
 
--   **CustomPackageSelectionProfile**  
+- **CustomPackageSelectionProfile**  
 
--   **CustomWizardSelectionProfile**  
+- **CustomWizardSelectionProfile**  
 
-     For more information on these properties, see the corresponding sections in the MDT document *Toolkit Reference*.  
+   For more information on these properties, see the corresponding sections in the MDT document *Toolkit Reference*.  
 
 ####  <a name="ManageLinkedDeploymentShares"></a> Manage Linked Deployment Shares  
  Linked deployment shares in MDT allow you to provide a logical connection between two deployment shares: a source and a target deployment share. A selection profile determines the items to be linked. When creating the link between the deployment shares, you can choose whether to merge or replace content in the target deployment share.  
@@ -3680,25 +3680,25 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
  Manage linked deployment shares by performing the following tasks in the Deployment Workbench:  
 
--   Create a new linked deployment share as described in [Create a New Linked Deployment Share in the Deployment Workbench](#CreateaNewLinkedDeploymentShareintheDeploymentWorkbench).  
+- Create a new linked deployment share as described in [Create a New Linked Deployment Share in the Deployment Workbench](#CreateaNewLinkedDeploymentShareintheDeploymentWorkbench).  
 
--   Modify an existing linked deployment share as described in [Modify an Existing Linked Deployment Share in the Deployment Workbench](#ModifyanExistingLinkedDeploymentShareintheDeploymentWorkbench).  
+- Modify an existing linked deployment share as described in [Modify an Existing Linked Deployment Share in the Deployment Workbench](#ModifyanExistingLinkedDeploymentShareintheDeploymentWorkbench).  
 
--   Copy a linked deployment share as described in [Copy a Linked Deployment Share in the Deployment Workbench](#CopyaLinkedDeploymentShareintheDeploymentWorkbench).  
+- Copy a linked deployment share as described in [Copy a Linked Deployment Share in the Deployment Workbench](#CopyaLinkedDeploymentShareintheDeploymentWorkbench).  
 
--   Move a linked deployment share as described in [Move a Linked Deployment Share in the Deployment Workbench](#MoveaLinkedDeploymentShareintheDeploymentWorkbench).  
+- Move a linked deployment share as described in [Move a Linked Deployment Share in the Deployment Workbench](#MoveaLinkedDeploymentShareintheDeploymentWorkbench).  
 
--   Rename a linked deployment share as described in [Rename a Linked Deployment Share in the Deployment Workbench](#RenameaLinkedDeploymentShareintheDeploymentWorkbench).  
+- Rename a linked deployment share as described in [Rename a Linked Deployment Share in the Deployment Workbench](#RenameaLinkedDeploymentShareintheDeploymentWorkbench).  
 
--   Delete a linked deployment share as described in [Delete a Linked Deployment Share from the Deployment Workbench](#DeleteaLinkedDeploymentSharefromtheDeploymentWorkbench).  
+- Delete a linked deployment share as described in [Delete a Linked Deployment Share from the Deployment Workbench](#DeleteaLinkedDeploymentSharefromtheDeploymentWorkbench).  
 
--   Replicate linked deployment shares as described in [Replicate Linked Deployment Shares in the Deployment Workbench](#ReplicateLinkedDeploymentSharesintheDeploymentWorkbench).  
+- Replicate linked deployment shares as described in [Replicate Linked Deployment Shares in the Deployment Workbench](#ReplicateLinkedDeploymentSharesintheDeploymentWorkbench).  
 
- In addtion to managing linked deployement shares in the Deployment Workbench, you can manage linked deployment shares using the MDT Windows PowerShell cmdlets. For more information on managing linked deployment shares using the MDT Windows PowerShell cmdlets, see the following sections beneath the section, "MDT Windows PowerShell Cmdlets", in the MDT document *Toolkit Reference*:  
+  In addtion to managing linked deployement shares in the Deployment Workbench, you can manage linked deployment shares using the MDT Windows PowerShell cmdlets. For more information on managing linked deployment shares using the MDT Windows PowerShell cmdlets, see the following sections beneath the section, "MDT Windows PowerShell Cmdlets", in the MDT document *Toolkit Reference*:  
 
--   **Update-MDTLinkedDS**  
+- **Update-MDTLinkedDS**  
 
--   **Get-MDTDeploymentShareStatistics**  
+- **Get-MDTDeploymentShareStatistics**  
 
 #####  <a name="CreateaNewLinkedDeploymentShareintheDeploymentWorkbench"></a> Create a New Linked Deployment Share in the Deployment Workbench  
  Create new linked deployment shares in the Deployment Workbench using the New Linked Deployment Share Wizard. Start the New Linked Deployment Share Wizard using one of the following methods:  
@@ -3711,58 +3711,58 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 ###### To create a new linked deployment share  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Linked Deployment Share (where *deployment_share* is the name of the deployment share you want to configure).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Linked Deployment Share (where *deployment_share* is the name of the deployment share you want to configure).  
 
-3.  In the Actions pane, click **New Linked Deployment Share**.  
+3. In the Actions pane, click **New Linked Deployment Share**.  
 
-     The New Linked Deployment Share Wizard starts.  
+    The New Linked Deployment Share Wizard starts.  
 
-4.  Complete the New Linked Deployment Share Wizard using the information in Table 66.  
+4. Complete the New Linked Deployment Share Wizard using the information in Table 66.  
 
-    ### Table 66. Information for Completing the New Linked Deployment Share Wizard  
+   ### Table 66. Information for Completing the New Linked Deployment Share Wizard  
 
-    |**On this wizard page** |**Do this** |  
-    |-----------------------------|-----------------|  
-    |**General Settings** |a. In **Linked deployment share UNC path**, type ***unc_path*** (where *unc_path* is the fully qualified UNC path to the target deployment share).<br /><br /> You can alternatively click Browse to find the network shared folder.<br /><br /> b. In **Comments**, type ***comment*** (where *comment* is descriptive text that provides information about the linked deployment share).<br /><br /> c. In **Selection profile**, click ***profile*** (where *profile* is the name of the selection profile that will be used to establish the items to be linked between the source and target deployment shares).<br /><br /> d. Under **Selection profile**, click one of the following options based on your requirements:<br /><br /> -                                              **Merge the selected content into the target deployment share**. Select to configure the wizard to copy the content in the selection profile into an existing target deployment share without deleting or overwriting any folders or items in the target deployment share. Selecting this option also copies the standard folders from the source deployment share, including the Scripts, Tools, USMT, and $OEM$ folders.<br /><br /> -                                              **Replace the contents of the target deployment share folders with those selected**. Select to configure the wizard to copy the content in the selection profile into an existing target deployment share and overwrite any existing folders or items in the target deployment share. Selecting this option also copies the standard folders from the source deployment share, including the Scripts, Tools, USMT, and $OEM$ folders.<br /><br /> By default, the **Merge the selected content into the target deployment share** option is selected.<br /><br /> e. Click **Next**.|  
-    |**Summary** |Review in the information in **Details**, and then click **Next**.|  
-    |**Confirmation** |You can click **Save Output** to save the output of the wizard to a file. You can also click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Finish**.|  
+   |**On this wizard page** |**Do this** |  
+   |-----------------------------|-----------------|  
+   |**General Settings** |a. In **Linked deployment share UNC path**, type ***unc_path*** (where *unc_path* is the fully qualified UNC path to the target deployment share).<br /><br /> You can alternatively click Browse to find the network shared folder.<br /><br /> b. In **Comments**, type ***comment*** (where *comment* is descriptive text that provides information about the linked deployment share).<br /><br /> c. In **Selection profile**, click ***profile*** (where *profile* is the name of the selection profile that will be used to establish the items to be linked between the source and target deployment shares).<br /><br /> d. Under **Selection profile**, click one of the following options based on your requirements:<br /><br /> -                                              **Merge the selected content into the target deployment share**. Select to configure the wizard to copy the content in the selection profile into an existing target deployment share without deleting or overwriting any folders or items in the target deployment share. Selecting this option also copies the standard folders from the source deployment share, including the Scripts, Tools, USMT, and $OEM$ folders.<br /><br /> -                                              **Replace the contents of the target deployment share folders with those selected**. Select to configure the wizard to copy the content in the selection profile into an existing target deployment share and overwrite any existing folders or items in the target deployment share. Selecting this option also copies the standard folders from the source deployment share, including the Scripts, Tools, USMT, and $OEM$ folders.<br /><br /> By default, the **Merge the selected content into the target deployment share** option is selected.<br /><br /> e. Click **Next**.|  
+   |**Summary** |Review in the information in **Details**, and then click **Next**.|  
+   |**Confirmation** |You can click **Save Output** to save the output of the wizard to a file. You can also click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Finish**.|  
 
- The New Linked Deployment Share Wizard finishes, and the linked deployment share is added to the list of linked deployments shares in the details pane of the Deployment Workbench.  
+   The New Linked Deployment Share Wizard finishes, and the linked deployment share is added to the list of linked deployments shares in the details pane of the Deployment Workbench.  
 
 #####  <a name="ModifyanExistingLinkedDeploymentShareintheDeploymentWorkbench"></a> Modify an Existing Linked Deployment Share in the Deployment Workbench  
  Modify existing linked deployment share in the Deployment Workbench’s Linked Deployment Shares node using the **Properties** actions as described in [View Item Properties in the Deployment Workbench](#ViewItemPropertiesintheDeploymentWorkbench). The linked deployment share properties are configured when you run the New Linked Deployment Share Wizard. However, you can update the linked deployment share properties on the **General** tab of the ***linked_deployment_share*** **Properties** dialog box (where *linked_deployment_share* is the name of the linked deployment share in the Deployment Workbench).  
 
 ###### To modify an existing linked deployment share  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Linked Deployment Share (where *deployment_share* is the name of the deployment share in which you will configure the package).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Linked Deployment Share (where *deployment_share* is the name of the deployment share in which you will configure the package).  
 
-3.  In the details pane, click ***linked_deployment_share*** (where *linked_deployment_share* is the name of the linked deployment share you want to configure).  
+3. In the details pane, click ***linked_deployment_share*** (where *linked_deployment_share* is the name of the linked deployment share you want to configure).  
 
-4.  In the Actions pane, click **Properties**.  
+4. In the Actions pane, click **Properties**.  
 
-     The ***linked_deployment_share*** **Properties** dialog box opens (where *linked_deployment_share* is the name of the selection profile you want to configure).  
+    The ***linked_deployment_share*** **Properties** dialog box opens (where *linked_deployment_share* is the name of the selection profile you want to configure).  
 
-5.  On the **General** tab, configure the settings listed in Table 67 based on the requirements of your organization, and then click **OK**.  
+5. On the **General** tab, configure the settings listed in Table 67 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 67. Configuration Settings on the General Tab of Linked Deployment Share Properties  
+   ### Table 67. Configuration Settings on the General Tab of Linked Deployment Share Properties  
 
-    |**Setting** |**Description** |  
-    |-----------------|---------------------|  
-    |**Link identifier** |Contains the identifier of the linked deployment share.<br /><br /> The identifier in this text box is automatically generated by the Deployment Workbench and cannot be modified.|  
-    |**Comments** |Provides information about the linked deployment share.|  
-    |**Linked deployment share UNC path** |Contains the fully qualified UNC path to the target deployment share.|  
-    |**Choose a selection profile** |Contains the selection profile that identifies the content to be replicated between the source and target deployment shares.|  
-    |**Merge the selected content into the target deployment share** |Click to configure the wizard to copy the content in the selection profile into an existing target deployment share without deleting or overwriting any folders or items in the target deployment share. Selecting this option also copies the standard folders from the source deployment share, including the Scripts, Tools, USMT, and $OEM$ folders.|  
-    |**Replace the contents of the target deployment share folders with those selected** |Click to configure the wizard to copy the content in the selection profile into an existing target deployment share and overwrite any existing folders or items in the target deployment share. Selecting this option also copies the standard folders from the source deployment share, including the Scripts, Tools, USMT, and $OEM$ folders.|  
-    |**Copy standard folders (Scripts, Tools, USMT, $OEM$) to this linked deployment share** |Select to configure the Replicate to Linked Deployment Share Wizard to share. If this check box is:<br /><br /> - Selected, the standard folders are copied to the linked deployment share<br /><br /> - Cleared, the standard folders are not copied to the linked deployment share<br /><br /> This check box is cleared by default.|  
-    |**Automatically update boot images after replicating content to this linked deployment share** |Select to configure the Replicate to Linked Deployment Share Wizard to automatically update any boot images in the linked deployment share after the content is replicated from the source deployment share. If this check box is:<br /><br /> - Selected, the boot images in the linked deployment share are automatically updated when replication is complete<br /><br /> - Cleared, the boot images in the linked deployment share are not automatically updated when replication is complete<br /><br /> This check box is cleared by default.<br /><br /> By default, the linked deployment share is configured to generate 32-bit and 64-bit boot images. Open the linked deployment share in the Deployment Workbench to change this default behavior as described in [Open an Existing Deployment Share in the Deployment Workbench](#OpenanExistingDeploymentShareintheDeploymentWorkbench).|  
-    |**Access the linked deployment share in single-user mode in order to improve replication performance** |Select to configure the Replicate to Linked Deployment Share Wizard to open the linked deployment share in *single-user mode* while replicating the content to the linked deployment share. Single-user mode improves replication performance, If this check box is:<br /><br /> - Selected, the linked deployment share is opened in single-user mode as replication is performed and replication performance is improved<br /><br /> If you select this check box, changes that other users make in the linked deployment share may be overwritten and lost during the replication process.<br /><br /> - Cleared, the linked deployment share is not opened in single-user mode as replication is performed and replication performance is unimproved<br /><br /> This check box is cleared by default.|  
+   |**Setting** |**Description** |  
+   |-----------------|---------------------|  
+   |**Link identifier** |Contains the identifier of the linked deployment share.<br /><br /> The identifier in this text box is automatically generated by the Deployment Workbench and cannot be modified.|  
+   |**Comments** |Provides information about the linked deployment share.|  
+   |**Linked deployment share UNC path** |Contains the fully qualified UNC path to the target deployment share.|  
+   |**Choose a selection profile** |Contains the selection profile that identifies the content to be replicated between the source and target deployment shares.|  
+   |**Merge the selected content into the target deployment share** |Click to configure the wizard to copy the content in the selection profile into an existing target deployment share without deleting or overwriting any folders or items in the target deployment share. Selecting this option also copies the standard folders from the source deployment share, including the Scripts, Tools, USMT, and $OEM$ folders.|  
+   |**Replace the contents of the target deployment share folders with those selected** |Click to configure the wizard to copy the content in the selection profile into an existing target deployment share and overwrite any existing folders or items in the target deployment share. Selecting this option also copies the standard folders from the source deployment share, including the Scripts, Tools, USMT, and $OEM$ folders.|  
+   |**Copy standard folders (Scripts, Tools, USMT, $OEM$) to this linked deployment share** |Select to configure the Replicate to Linked Deployment Share Wizard to share. If this check box is:<br /><br /> - Selected, the standard folders are copied to the linked deployment share<br /><br /> - Cleared, the standard folders are not copied to the linked deployment share<br /><br /> This check box is cleared by default.|  
+   |**Automatically update boot images after replicating content to this linked deployment share** |Select to configure the Replicate to Linked Deployment Share Wizard to automatically update any boot images in the linked deployment share after the content is replicated from the source deployment share. If this check box is:<br /><br /> - Selected, the boot images in the linked deployment share are automatically updated when replication is complete<br /><br /> - Cleared, the boot images in the linked deployment share are not automatically updated when replication is complete<br /><br /> This check box is cleared by default.<br /><br /> By default, the linked deployment share is configured to generate 32-bit and 64-bit boot images. Open the linked deployment share in the Deployment Workbench to change this default behavior as described in [Open an Existing Deployment Share in the Deployment Workbench](#OpenanExistingDeploymentShareintheDeploymentWorkbench).|  
+   |**Access the linked deployment share in single-user mode in order to improve replication performance** |Select to configure the Replicate to Linked Deployment Share Wizard to open the linked deployment share in *single-user mode* while replicating the content to the linked deployment share. Single-user mode improves replication performance, If this check box is:<br /><br /> - Selected, the linked deployment share is opened in single-user mode as replication is performed and replication performance is improved<br /><br /> If you select this check box, changes that other users make in the linked deployment share may be overwritten and lost during the replication process.<br /><br /> - Cleared, the linked deployment share is not opened in single-user mode as replication is performed and replication performance is unimproved<br /><br /> This check box is cleared by default.|  
 
- The linked deployment share configuration settings are saved. The modifications are displayed in the details pane in the Deployment Workbench.  
+   The linked deployment share configuration settings are saved. The modifications are displayed in the details pane in the Deployment Workbench.  
 
 #####  <a name="CopyaLinkedDeploymentShareintheDeploymentWorkbench"></a> Copy a Linked Deployment Share in the Deployment Workbench  
  You can copy and paste linked deployment shares in the Deployment Workbench using the **Copy** and **Paste** actions as described in [Copy Items in the Deployment Workbench](#CopyItemsintheDeploymentWorkbench).  
@@ -3815,25 +3815,25 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
  Manage deployment media by performing the following tasks in the Deployment Workbench:  
 
--   Create new deployment media as described in [Create New Deployment Media in the Deployment Workbench](#CreateNewDeploymentMediaintheDeploymentWorkbench).  
+- Create new deployment media as described in [Create New Deployment Media in the Deployment Workbench](#CreateNewDeploymentMediaintheDeploymentWorkbench).  
 
--   Modify existing media as described in [Modify Existing Media in the Deployment Workbench](#ModifyExistingMediaintheDeploymentWorkbench).  
+- Modify existing media as described in [Modify Existing Media in the Deployment Workbench](#ModifyExistingMediaintheDeploymentWorkbench).  
 
--   Copy media as described in [Copy Media in the Deployment Workbench](#CopyMediaintheDeploymentWorkbench).  
+- Copy media as described in [Copy Media in the Deployment Workbench](#CopyMediaintheDeploymentWorkbench).  
 
--   Move media as described in [Move Media in the Deployment Workbench](#MoveMediaintheDeploymentWorkbench).  
+- Move media as described in [Move Media in the Deployment Workbench](#MoveMediaintheDeploymentWorkbench).  
 
--   Delete media as described in [Delete Media from the Deployment Workbench](#DeleteMediafromtheDeploymentWorkbench).  
+- Delete media as described in [Delete Media from the Deployment Workbench](#DeleteMediafromtheDeploymentWorkbench).  
 
--   Generate media images as described in [Generate Media Images in the Deployment Workbench](#GenerateMediaImagesintheDeploymentWorkbench).  
+- Generate media images as described in [Generate Media Images in the Deployment Workbench](#GenerateMediaImagesintheDeploymentWorkbench).  
 
--   Create bootable devices from deployment media as described in [Create Bootable Devices from Deployment Media](#CreateBootableDevicesfromDeploymentMedia).  
+- Create bootable devices from deployment media as described in [Create Bootable Devices from Deployment Media](#CreateBootableDevicesfromDeploymentMedia).  
 
- In addtion to managing deployment media in the Deployment Workbench, you can manage deployment media using the MDT Windows PowerShell cmdlets. For more information on managing deployment media using the MDT Windows PowerShell cmdlets, see the following sections beneath the section, "MDT Windows PowerShell Cmdlets", in the MDT document *Toolkit Reference*:  
+  In addtion to managing deployment media in the Deployment Workbench, you can manage deployment media using the MDT Windows PowerShell cmdlets. For more information on managing deployment media using the MDT Windows PowerShell cmdlets, see the following sections beneath the section, "MDT Windows PowerShell Cmdlets", in the MDT document *Toolkit Reference*:  
 
--   **Update-MDTMedia**  
+- **Update-MDTMedia**  
 
--   **Get-MDTDeploymentShareStatistics**  
+- **Get-MDTDeploymentShareStatistics**  
 
 #####  <a name="CreateNewDeploymentMediaintheDeploymentWorkbench"></a> Create New Deployment Media in the Deployment Workbench  
  Create new deployment media in the Deployment Workbench using the New Media Wizard. Start the New Media Wizard using one of the following methods:  
@@ -3846,25 +3846,25 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 ###### To create new deployment media  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Media (where *deployment_share* is the name of the deployment share to which you will add the application).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Media (where *deployment_share* is the name of the deployment share to which you will add the application).  
 
-3.  In the Actions pane, click **New Media**.  
+3. In the Actions pane, click **New Media**.  
 
-     The New Media Wizard starts.  
+    The New Media Wizard starts.  
 
-4.  Complete the New Media Wizard using the information in Table 69.  
+4. Complete the New Media Wizard using the information in Table 69.  
 
-    ### Table 69. Information for Completing the New Media Wizard  
+   ### Table 69. Information for Completing the New Media Wizard  
 
-    |**On this wizard page** |**Do this** |  
-    |-----------------------------|-----------------|  
-    |**General Settings** |- In **Media path**, type ***media_path*** (where *media_path* is the fully qualified path to an empty local or network shared folder that is the source folder for creating the media).<br /><br /> You can alternatively click **Browse** to find the folder on a local drive or network shared folder.<br /><br /> Do not use a subfolder of an existing deployment share as the media path. This will result in the following error when updating the media: "Invalid top level folder"<br /><br /> - In **Comments**, type ***comment*** (where *comment* is descriptive text that provides information about the media).<br /><br /> - In **Selection profile**, click ***profile*** (where *profile* is the name of the selection profile that will be used to establish the items to be stored on the media).<br /><br /> - Click **Next**.|  
-    |**Summary** |Review in the information in **Details**, and then click **Next**.|  
-    |**Confirmation** |You can click **Save Output** to save the output of the wizard to a file. You can also click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Finish**.|  
+   |**On this wizard page** |**Do this** |  
+   |-----------------------------|-----------------|  
+   |**General Settings** |- In **Media path**, type ***media_path*** (where *media_path* is the fully qualified path to an empty local or network shared folder that is the source folder for creating the media).<br /><br /> You can alternatively click **Browse** to find the folder on a local drive or network shared folder.<br /><br /> Do not use a subfolder of an existing deployment share as the media path. This will result in the following error when updating the media: "Invalid top level folder"<br /><br /> - In **Comments**, type ***comment*** (where *comment* is descriptive text that provides information about the media).<br /><br /> - In **Selection profile**, click ***profile*** (where *profile* is the name of the selection profile that will be used to establish the items to be stored on the media).<br /><br /> - Click **Next**.|  
+   |**Summary** |Review in the information in **Details**, and then click **Next**.|  
+   |**Confirmation** |You can click **Save Output** to save the output of the wizard to a file. You can also click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Finish**.|  
 
- The New Media Wizard finishes. The media are added to the list of media in the details pane of the Deployment Workbench. The *media_path*\Content\Deploy folder is created (where *media_path* is the name of the media path you specified in the wizard), and some base folders are created. The folders and content you specified in the selection profile are copied to the Deploy folder when the Update Media Content Wizard runs.  
+   The New Media Wizard finishes. The media are added to the list of media in the details pane of the Deployment Workbench. The *media_path*\Content\Deploy folder is created (where *media_path* is the name of the media path you specified in the wizard), and some base folders are created. The folders and content you specified in the selection profile are copied to the Deploy folder when the Update Media Content Wizard runs.  
 
 #####  <a name="ModifyExistingMediaintheDeploymentWorkbench"></a> Modify Existing Media in the Deployment Workbench  
  Modify existing media in the Media node in the Deployment Workbench using the **Properties** actions as described in [View Item Properties in the Deployment Workbench](#ViewItemPropertiesintheDeploymentWorkbench). Configure media in the Deployment Workbench by performing the following steps in the media **Properties** dialog box:  
@@ -3886,193 +3886,193 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 ###### To modify existing media properties on the General tab  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Media (where *deployment_share* is the name of the deployment share in which you will configure the media).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Media (where *deployment_share* is the name of the deployment share in which you will configure the media).  
 
-3.  In the details pane, click ***media*** (where *media* is the name of the media you want to configure).  
+3. In the details pane, click ***media*** (where *media* is the name of the media you want to configure).  
 
-4.  In the Actions pane, click **Properties**.  
+4. In the Actions pane, click **Properties**.  
 
-     The ***media*** **Properties** dialog box opens (where *media* is the name of the media you want to configure).  
+    The ***media*** **Properties** dialog box opens (where *media* is the name of the media you want to configure).  
 
-5.  On the **General** tab, configure the settings listed in Table 70 based on the requirements of your organization, and then click **OK**.  
+5. On the **General** tab, configure the settings listed in Table 70 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 70. Configuration Settings on the General Tab of Media Properties  
+   ### Table 70. Configuration Settings on the General Tab of Media Properties  
 
-    |**Setting** |**Description** |  
-    |-----------------|---------------------|  
-    |**Media identifier** |Contains the identifier of the media.<br /><br /> The identifier in this text box is automatically generated by the Deployment Workbench and cannot be modified.|  
-    |**Comments** |Provides information about the media.|  
-    |**Media path** |Contains the fully qualified UNC path to the target folder for the media source files and generated images.|  
-    |**Selection profile** |Contains the selection profile that identifies the content to be included in the WIM and ISO image files that the Deployment Workbench generates.|  
-    |**Platforms Supported: Generate x86 boot image** |Select to configure the Update Media Content Wizard to create WIM files and bootable media for 32-bit target computers.<br /><br /> Selecting both the **x86** and **x64** check boxes generates a dual-boot ISO file. When started, a menu appears from which you can specify which boot image to use.|  
-    |**Platforms Supported: Generate x64 boot image** |Select to configure the Update Media Content Wizard to create WIM files and bootable media for 64-bit target computers.<br /><br /> Selecting both the **x86** and **x64** check boxes generates a dual-boot ISO file. When started, a menu appears from which you can specify which boot image to use.|  
-    |**Generate a Lite Touch bootable ISO image** |Select to configure the Update Media Content Wizard to create ISO files that you can use to boot VMs or create bootable DVDs.<br /><br /> If this check box is selected, then you can specify the name of the ISO file to be generated in the **ISO file name**text box. The ISO file is created in the *media_folder* folder (where *media_folder* is the name of the folder that you specified for the media).|  
+   |**Setting** |**Description** |  
+   |-----------------|---------------------|  
+   |**Media identifier** |Contains the identifier of the media.<br /><br /> The identifier in this text box is automatically generated by the Deployment Workbench and cannot be modified.|  
+   |**Comments** |Provides information about the media.|  
+   |**Media path** |Contains the fully qualified UNC path to the target folder for the media source files and generated images.|  
+   |**Selection profile** |Contains the selection profile that identifies the content to be included in the WIM and ISO image files that the Deployment Workbench generates.|  
+   |**Platforms Supported: Generate x86 boot image** |Select to configure the Update Media Content Wizard to create WIM files and bootable media for 32-bit target computers.<br /><br /> Selecting both the **x86** and **x64** check boxes generates a dual-boot ISO file. When started, a menu appears from which you can specify which boot image to use.|  
+   |**Platforms Supported: Generate x64 boot image** |Select to configure the Update Media Content Wizard to create WIM files and bootable media for 64-bit target computers.<br /><br /> Selecting both the **x86** and **x64** check boxes generates a dual-boot ISO file. When started, a menu appears from which you can specify which boot image to use.|  
+   |**Generate a Lite Touch bootable ISO image** |Select to configure the Update Media Content Wizard to create ISO files that you can use to boot VMs or create bootable DVDs.<br /><br /> If this check box is selected, then you can specify the name of the ISO file to be generated in the **ISO file name**text box. The ISO file is created in the *media_folder* folder (where *media_folder* is the name of the folder that you specified for the media).|  
 
- The media configuration settings are saved. The modifications are displayed in the details pane of the Deployment Workbench, and the content in the *media_folder* folder is updated (where *media_folder* is the name of the folder that you specified for the media).  
+   The media configuration settings are saved. The modifications are displayed in the details pane of the Deployment Workbench, and the content in the *media_folder* folder is updated (where *media_folder* is the name of the folder that you specified for the media).  
 
 ######  <a name="ConfiguretheMediaPropertiesRulesTab"></a> Configure the Media Properties Rules Tab  
  The media properties on the **Rules** tab are configured when you run the New Media Wizard. However, you can update the linked deployment share properties on the **Rules** tab of the ***media*** **Properties** dialog box (where *media* is the name of the media in the Deployment Workbench).  
 
 ###### To modify existing media properties on the Rules tab  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Media (where *deployment_share* is the name of the deployment share in which you will configure the media).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Media (where *deployment_share* is the name of the deployment share in which you will configure the media).  
 
-3.  In the details pane, click ***media*** (where *media* is the name of the media you want to configure).  
+3. In the details pane, click ***media*** (where *media* is the name of the media you want to configure).  
 
-4.  In the Actions pane, click **Properties**.  
+4. In the Actions pane, click **Properties**.  
 
-     The ***media*** **Properties** dialog box opens (where *media* is the name of the media you want to configure).  
+    The ***media*** **Properties** dialog box opens (where *media* is the name of the media you want to configure).  
 
-5.  On the **Rules** tab, configure the settings listed in Table 71 based on the requirements of your organization, and then click **OK**.  
+5. On the **Rules** tab, configure the settings listed in Table 71 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 71. Configuration Settings on the Rules Tab of Media Properties  
+   ### Table 71. Configuration Settings on the Rules Tab of Media Properties  
 
-    |**Setting** |**Description** |  
-    |-----------------|---------------------|  
-    |**CustomSettings.ini** |Contains the current configuration of the CustomSetting.ini file for the deployment media|  
-    |**Edit Bootstrap.ini** |Click to modify the contents of the Bootstrap.ini file that the Deployment Workbench generates for the deployment media|  
+   |**Setting** |**Description** |  
+   |-----------------|---------------------|  
+   |**CustomSettings.ini** |Contains the current configuration of the CustomSetting.ini file for the deployment media|  
+   |**Edit Bootstrap.ini** |Click to modify the contents of the Bootstrap.ini file that the Deployment Workbench generates for the deployment media|  
 
- The media configuration settings are saved. The modifications are displayed in the details pane of the Deployment Workbench, and the content in the *media_folder* folder (where *media_folder* is the name of the folder that you specified for the media)is updated.  
+   The media configuration settings are saved. The modifications are displayed in the details pane of the Deployment Workbench, and the content in the *media_folder* folder (where *media_folder* is the name of the folder that you specified for the media)is updated.  
 
 ######  <a name="ConfiguretheMediaPropertiesWindowsPEx86SettingsTab"></a> Configure the Media Properties Windows PE x86 Settings Tab  
  The media properties on the **Windows PE x86 Settings** tab are configured when you run the New Media Wizard. However, you can update the linked deployment share properties on the **Windows PE x86** tab of the ***media*** **Properties** dialog box (where *media* is the name of the media in the Deployment Workbench).  
 
 ###### To configure the Windows PE x86 Settings tab  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Media (where *deployment_share* is the name of the deployment share in which you will configure the media).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Media (where *deployment_share* is the name of the deployment share in which you will configure the media).  
 
-3.  In the details pane, click ***media*** (where *media* is the name of the media you want to configure).  
+3. In the details pane, click ***media*** (where *media* is the name of the media you want to configure).  
 
-4.  In the Actions pane, click **Properties**.  
+4. In the Actions pane, click **Properties**.  
 
-     The ***media*** **Properties** dialog box opens (where *media* is the name of the media you want to configure).  
+    The ***media*** **Properties** dialog box opens (where *media* is the name of the media you want to configure).  
 
-5.  On the **Windows PE x86 Settings** tab, configure the settings listed in Table 72 based on the requirements of your organization, and then click **OK**.  
+5. On the **Windows PE x86 Settings** tab, configure the settings listed in Table 72 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 72. Configuration Settings on the Windows PE x86 Settings Tab of Media Properties  
+   ### Table 72. Configuration Settings on the Windows PE x86 Settings Tab of Media Properties  
 
-    |**Setting** |**Description** |  
-    |-----------------|---------------------|  
-    |**Generate a Lite Touch Windows PE WIM file** |Select to configure the Update Media Content Wizard to create a Windows PE WIM file that includes the LTI deployment scripts. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard creates the LiteTouchPE_x86.wim file with the image description specified in the **Image description** text box<br /><br /> - Cleared, the Update Media Content Wizard will not create the WIM file|  
-    |**Image description** |Contains the image description for the Windows PE WIM file that the Update Media Content Wizard creates. The default value is **Lite Touch Windows PE (x86)**.|  
-    |**Generate a Lite Touch bootable ISO image** |Select to configure the Update Media Content Wizard to create a bootable Windows PE ISO file that includes the LTI deployment scripts. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard creates the ISO file with the name specified in the **ISO file name** text box<br /><br /> - Cleared, the Update Media Content Wizard will not create the ISO file|  
-    |**ISO file name** |Contains the file name for the Windows PE ISO file that the Update Media Content Wizard creates. The default value for this text box is **LiteTouchPE_x86.iso**.<br /><br /> This text box is enabled only if you select **Generate a Lite Touch bootable ISO image**.|  
-    |**Generate a generic Windows PE WIM file** |Select to configure the Update Media Content Wizard to create a Windows PE WIM file that does not include the LTI deployment scripts. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard creates the GenericPE_x86.wim file with the image description specified in the **Image description** text box<br /><br /> - Cleared, the Update Media Content Wizard will not create the WIM file|  
-    |**Image description** |Contains the image description for the generic Windows PE WIM file that the Update Media Content Wizard creates. The default value for this text box is **Generic Windows PE (x86)**.<br /><br /> This text box is enabled only if you select **Generate a generic Windows PE WIM file**.|  
-    |**Generate a generic bootable ISO image** |Select to configure the Update Media Content Wizard to create a bootable Windows PE ISO file that does not include the LTI deployment scripts. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard creates the Generic_x86.iso file with the image description specified in the **ISO file name** text box<br /><br /> - Cleared, the Update Media Content Wizard will not create the ISO file<br /><br /> This box is enabled only if you select **Generate a generic Windows PE WIM file**.|  
-    |**ISO file name** |Contains the file name for the generic Windows PE ISO file that the Update Media Content Wizard creates. The default value for this text box is **Generic_x86.iso**.<br /><br /> This text box is enabled only if you select Generate a **generic bootable ISO image**.|  
-    |**Custom background bitmap file** |Contains the fully qualified path to the BMP file that is to be used as the custom background bitmap. The default value for this text box is **%INSTALLDIR%\Samples\Background.bmp**.|  
-    |**Extra directories to add** |Contains the fully qualified path to a folder structure to be included in the Windows PE images. The default value for the text box is empty.|  
-    |**Scratch space size** |Configures the size of the scratch space in megabytes; you can select a value of **32**, **64**, **128**, **256**, or **512** MB. The default value is **32**.|  
+   |**Setting** |**Description** |  
+   |-----------------|---------------------|  
+   |**Generate a Lite Touch Windows PE WIM file** |Select to configure the Update Media Content Wizard to create a Windows PE WIM file that includes the LTI deployment scripts. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard creates the LiteTouchPE_x86.wim file with the image description specified in the **Image description** text box<br /><br /> - Cleared, the Update Media Content Wizard will not create the WIM file|  
+   |**Image description** |Contains the image description for the Windows PE WIM file that the Update Media Content Wizard creates. The default value is **Lite Touch Windows PE (x86)**.|  
+   |**Generate a Lite Touch bootable ISO image** |Select to configure the Update Media Content Wizard to create a bootable Windows PE ISO file that includes the LTI deployment scripts. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard creates the ISO file with the name specified in the **ISO file name** text box<br /><br /> - Cleared, the Update Media Content Wizard will not create the ISO file|  
+   |**ISO file name** |Contains the file name for the Windows PE ISO file that the Update Media Content Wizard creates. The default value for this text box is **LiteTouchPE_x86.iso**.<br /><br /> This text box is enabled only if you select **Generate a Lite Touch bootable ISO image**.|  
+   |**Generate a generic Windows PE WIM file** |Select to configure the Update Media Content Wizard to create a Windows PE WIM file that does not include the LTI deployment scripts. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard creates the GenericPE_x86.wim file with the image description specified in the **Image description** text box<br /><br /> - Cleared, the Update Media Content Wizard will not create the WIM file|  
+   |**Image description** |Contains the image description for the generic Windows PE WIM file that the Update Media Content Wizard creates. The default value for this text box is **Generic Windows PE (x86)**.<br /><br /> This text box is enabled only if you select **Generate a generic Windows PE WIM file**.|  
+   |**Generate a generic bootable ISO image** |Select to configure the Update Media Content Wizard to create a bootable Windows PE ISO file that does not include the LTI deployment scripts. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard creates the Generic_x86.iso file with the image description specified in the **ISO file name** text box<br /><br /> - Cleared, the Update Media Content Wizard will not create the ISO file<br /><br /> This box is enabled only if you select **Generate a generic Windows PE WIM file**.|  
+   |**ISO file name** |Contains the file name for the generic Windows PE ISO file that the Update Media Content Wizard creates. The default value for this text box is **Generic_x86.iso**.<br /><br /> This text box is enabled only if you select Generate a **generic bootable ISO image**.|  
+   |**Custom background bitmap file** |Contains the fully qualified path to the BMP file that is to be used as the custom background bitmap. The default value for this text box is **%INSTALLDIR%\Samples\Background.bmp**.|  
+   |**Extra directories to add** |Contains the fully qualified path to a folder structure to be included in the Windows PE images. The default value for the text box is empty.|  
+   |**Scratch space size** |Configures the size of the scratch space in megabytes; you can select a value of **32**, **64**, **128**, **256**, or **512** MB. The default value is **32**.|  
 
- The media configuration settings are saved, and the media appears in the details pane of the Deployment Workbench.  
+   The media configuration settings are saved, and the media appears in the details pane of the Deployment Workbench.  
 
 ######  <a name="ConfiguretheMediaPropertiesWindowsPEx86ComponentsTab"></a> Configure the Media Properties Windows PE x86 Components Tab  
  The media properties on the **Windows PE x86 Components** tab are configured when you run the New Media Wizard. However, you can update the linked deployment share properties on the **Windows PE x86 Components** tab of the ***media*** **Properties** dialog box (where *media* is the name of the media in the Deployment Workbench).  
 
 ###### To configure the Windows PE x86 Components tab  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Media (where *deployment_share* is the name of the deployment share in which you will configure the media).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Media (where *deployment_share* is the name of the deployment share in which you will configure the media).  
 
-3.  In the details pane, click ***media*** (where *media* is the name of the media you want to configure).  
+3. In the details pane, click ***media*** (where *media* is the name of the media you want to configure).  
 
-4.  In the Actions pane, click **Properties**.  
+4. In the Actions pane, click **Properties**.  
 
-     The ***media*** **Properties** dialog box opens (where *media* is the name of the media you want to configure).  
+    The ***media*** **Properties** dialog box opens (where *media* is the name of the media you want to configure).  
 
-5.  On the **Windows PE x86 Components** tab, configure the settings listed in Table 73 based on the requirements of your organization, and then click **OK**.  
+5. On the **Windows PE x86 Components** tab, configure the settings listed in Table 73 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 73. Configuration Settings on the Windows PE x86 Components Tab of Media Properties  
+   ### Table 73. Configuration Settings on the Windows PE x86 Components Tab of Media Properties  
 
-    |**Setting** |**Description** |  
-    |-----------------|---------------------|  
-    |**Selection profile** |Use to select the device drivers and packages to be included in the Windows PE images based on the selection profile you choose. The default value is **All Drivers and Packages**. For more information about selection profiles, see [Manage Selection Profiles](#ManageSelectionProfiles).|  
-    |**Include all drivers from the selected driver group** |Select to configure the Update Media Content Wizard to include all the device drivers in the selection profile specified in the **Selection profile** box.|  
-    |**Include only drivers of the following types** |Select to configure the Update Media Content Wizard to include only the device drivers in the chosen selection profile that are specified in the following check boxes:<br /><br /> -                                              **Include all network drivers in the selected group**<br /><br /> -                                              **Include all video drivers in the selected group**<br /><br /> -                                              **Include all mass storage drivers in the selected group**<br /><br /> -                                              **Include all system-class drivers in the selected group** |  
-    |**Include all network drivers in the selected group** |Select to configure the Update Media Content Wizard to include all network drivers in the chosen selection profile. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard includes all network drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> - Cleared, the Update Media Content Wizard will not include all network drivers in the selection profile specified in the **Selection profile**box in the Windows PE images<br /><br /> This check box is enabled only if you select **Include only drivers of the following types**.|  
-    |**Include all video drivers in the selected group** |Select to configure the Update Media Content Wizard to include all video drivers in the chosen selection profile. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard includes all video drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> - Cleared, the Update Media Content Wizard will not include all video drivers in the selection profile specified in the **Selection profile** list box in the Windows PE images<br /><br /> This check box is enabled only if you select **Include only drivers of the following types**.|  
-    |**Include all mass storage drivers in the selected group** |Select to configure the Update Media Content Wizard to include all mass storage drivers in chosen the selection profile. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard includes all mass storage drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> - Cleared, the Update Media Content Wizard will not include all mass storage drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> This check box is enabled only if you select **Include only drivers of the following types**.|  
-    |**Include all system-class drivers in the selected group** |Select to configure the Update Media Content Wizard to include all system-class drivers in the chosen selection profile. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard includes all system-class drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> - Cleared, the Update Media Content Wizard will not include all system-class drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> This check box is enabled only if you select **Include only drivers of the following types**.|  
-    |**ADO** |Select to add optional ADO components to the Windows PE images. These components are necessary for accessing SQL Server databases, such as the MDT DB. If the check box is:<br /><br /> - Selected, the ADO components are added to the Windows PE images<br /><br /> - Cleared, the ADO components are not added to the Windows PE images<br /><br /> This check box is selected by default.|  
-    |**Optional Fonts** |Select to configure the Update Media Content Wizard to include the following fonts:<br /><br /> - Chinese (ZH-CN)<br /><br /> - Chinese (ZH-HK)<br /><br /> - Chinese (ZH-TW)<br /><br /> - Japanese (JA-JP)<br /><br /> - Korean (KO-KR)<br /><br /> Add these fonts when performing an LTI deployment of Windows Server images and the Setup files are Japanese, Korean, or Chinese. If the check box for a corresponding font is:<br /><br /> - Selected, the Update Media Content Wizard includes the font in the Windows PE images<br /><br /> - Cleared, the Update Media Content Wizard will not include the font in the Windows PE images<br /><br /> Adding fonts to Windows PE boot images increases the size of the images. Add fonts only if necessary.|  
+   |**Setting** |**Description** |  
+   |-----------------|---------------------|  
+   |**Selection profile** |Use to select the device drivers and packages to be included in the Windows PE images based on the selection profile you choose. The default value is **All Drivers and Packages**. For more information about selection profiles, see [Manage Selection Profiles](#ManageSelectionProfiles).|  
+   |**Include all drivers from the selected driver group** |Select to configure the Update Media Content Wizard to include all the device drivers in the selection profile specified in the **Selection profile** box.|  
+   |**Include only drivers of the following types** |Select to configure the Update Media Content Wizard to include only the device drivers in the chosen selection profile that are specified in the following check boxes:<br /><br /> -                                              **Include all network drivers in the selected group**<br /><br /> -                                              **Include all video drivers in the selected group**<br /><br /> -                                              **Include all mass storage drivers in the selected group**<br /><br /> -                                              **Include all system-class drivers in the selected group** |  
+   |**Include all network drivers in the selected group** |Select to configure the Update Media Content Wizard to include all network drivers in the chosen selection profile. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard includes all network drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> - Cleared, the Update Media Content Wizard will not include all network drivers in the selection profile specified in the **Selection profile**box in the Windows PE images<br /><br /> This check box is enabled only if you select **Include only drivers of the following types**.|  
+   |**Include all video drivers in the selected group** |Select to configure the Update Media Content Wizard to include all video drivers in the chosen selection profile. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard includes all video drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> - Cleared, the Update Media Content Wizard will not include all video drivers in the selection profile specified in the **Selection profile** list box in the Windows PE images<br /><br /> This check box is enabled only if you select **Include only drivers of the following types**.|  
+   |**Include all mass storage drivers in the selected group** |Select to configure the Update Media Content Wizard to include all mass storage drivers in chosen the selection profile. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard includes all mass storage drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> - Cleared, the Update Media Content Wizard will not include all mass storage drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> This check box is enabled only if you select **Include only drivers of the following types**.|  
+   |**Include all system-class drivers in the selected group** |Select to configure the Update Media Content Wizard to include all system-class drivers in the chosen selection profile. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard includes all system-class drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> - Cleared, the Update Media Content Wizard will not include all system-class drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> This check box is enabled only if you select **Include only drivers of the following types**.|  
+   |**ADO** |Select to add optional ADO components to the Windows PE images. These components are necessary for accessing SQL Server databases, such as the MDT DB. If the check box is:<br /><br /> - Selected, the ADO components are added to the Windows PE images<br /><br /> - Cleared, the ADO components are not added to the Windows PE images<br /><br /> This check box is selected by default.|  
+   |**Optional Fonts** |Select to configure the Update Media Content Wizard to include the following fonts:<br /><br /> - Chinese (ZH-CN)<br /><br /> - Chinese (ZH-HK)<br /><br /> - Chinese (ZH-TW)<br /><br /> - Japanese (JA-JP)<br /><br /> - Korean (KO-KR)<br /><br /> Add these fonts when performing an LTI deployment of Windows Server images and the Setup files are Japanese, Korean, or Chinese. If the check box for a corresponding font is:<br /><br /> - Selected, the Update Media Content Wizard includes the font in the Windows PE images<br /><br /> - Cleared, the Update Media Content Wizard will not include the font in the Windows PE images<br /><br /> Adding fonts to Windows PE boot images increases the size of the images. Add fonts only if necessary.|  
 
- The media configuration settings are saved, and the media appears in the details pane of the Deployment Workbench.  
+   The media configuration settings are saved, and the media appears in the details pane of the Deployment Workbench.  
 
 ######  <a name="ConfiguretheMediaPropertiesWindowsPEx64SettingsTab"></a> Configure the Media Properties Windows PE x64 Settings Tab  
  The media properties on the **Windows PE x64 Settings** tab are configured when you run the New Media Wizard. However, you can update the linked deployment share properties on the **Windows PE x64 Settings** tab of the ***media*** **Properties** dialog box (where *media* is the name of the media in the Deployment Workbench).  
 
 ###### To configure the Windows PE x64 Settings tab  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Media (where *deployment_share* is the name of the deployment share in which you will configure the media).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Media (where *deployment_share* is the name of the deployment share in which you will configure the media).  
 
-3.  In the details pane, click ***media*** (where *media* is the name of the media you want to configure).  
+3. In the details pane, click ***media*** (where *media* is the name of the media you want to configure).  
 
-4.  In the Actions pane, click **Properties**.  
+4. In the Actions pane, click **Properties**.  
 
-     The ***media*** **Properties** dialog box opens (where *media* is the name of the media you want to configure).  
+    The ***media*** **Properties** dialog box opens (where *media* is the name of the media you want to configure).  
 
-5.  On the **Windows PE x64 Settings** tab, configure the settings listed in Table 74 based on the requirements of your organization, and then click **OK**.  
+5. On the **Windows PE x64 Settings** tab, configure the settings listed in Table 74 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 74. Configuration Settings on the Windows PE x64 Settings Tab of Media Properties  
+   ### Table 74. Configuration Settings on the Windows PE x64 Settings Tab of Media Properties  
 
-    |**Setting** |**Description** |  
-    |-----------------|---------------------|  
-    |**Generate a Lite Touch Windows PE WIM file** |Select to configure the Update Media Content Wizard to create a Windows PE WIM file that includes the LTI deployment scripts. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard creates the LiteTouchPE_x86.wim file with the image description specified in the **Image description** box<br /><br /> - Cleared, the Update Media Content Wizard will not create the WIM file|  
-    |**Image description** |Contains the image description for the Windows PE WIM file that the Update Media Content Wizard creates. The default value is **Lite Touch Windows PE (x64)**.|  
-    |**Generate a Lite Touch bootable ISO image** |Select to configure the Update Media Content Wizard to create a bootable Windows PE ISO file that includes the LTI deployment scripts. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard creates the ISO file with the name specified in the **ISO file name** box<br /><br /> - Cleared, the Update Media Content Wizard will not create the ISO file|  
-    |**ISO file name** |Contains the file name for the Windows PE ISO file that the Update Media Content Wizard creates. The default value for this text box is **LiteTouchPE_x64.iso**.<br /><br /> This box is enabled only if you select **Generate a Lite Touch bootable ISO image** |  
-    |**Generate a generic Windows PE WIM file** |Select to configure the Update Media Content Wizard to create a Windows PE WIM file that does not include the LTI deployment scripts. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard creates the GenericPE_x64.wim file with the image description specified in the **Image description** box<br /><br /> - Cleared, the Update Media Content Wizard will not create the WIM file|  
-    |**Image description** |Contains the image description for the generic Windows PE WIM file that the Update Media Content Wizard creates. The default value for this text box is **Generic Windows PE (x64).**<br /><br /> This box is enabled only if you select **Generate a generic bootable ISO Windows PE WIM file**.|  
-    |**Generate a generic bootable ISO image** |Select to configure the Update Media Content Wizard to create a bootable Windows PE ISO file that does not include the LTI deployments scripts. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard creates the Generic_x64.iso file with the image description specified in the **ISO file name** box<br /><br /> - Cleared, the Update Media Content Wizard will not create the ISO file<br /><br /> This box is enabled only if you select **Generate a generic Windows PE WIM file**.|  
-    |**ISO file name** |Contains the file name for the generic Windows PE ISO file that the Update Media Content Wizard creates. The default value for this text box is **Generic_x64.iso**.<br /><br /> This text box is enabled only if the Generate a generic bootable ISO image check box is selected.|  
-    |**Custom background bitmap file** |Contains the fully qualified path to the BMP file that is to be used as the custom background bitmap. The default value for this text box is **%INSTALLDIR%\Samples\Background.bmp**.|  
-    |**Extra directories to add** |Contains the fully qualified path to a folder structure to be included in the Windows PE images. The default value for the text box is empty.|  
-    |**Scratch space size** |Configures the size of the scratch space in megabytes; you can select a value of **32**, **64**, **128**, **256**, or **512** MB. The default value is **32**.|  
+   |**Setting** |**Description** |  
+   |-----------------|---------------------|  
+   |**Generate a Lite Touch Windows PE WIM file** |Select to configure the Update Media Content Wizard to create a Windows PE WIM file that includes the LTI deployment scripts. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard creates the LiteTouchPE_x86.wim file with the image description specified in the **Image description** box<br /><br /> - Cleared, the Update Media Content Wizard will not create the WIM file|  
+   |**Image description** |Contains the image description for the Windows PE WIM file that the Update Media Content Wizard creates. The default value is **Lite Touch Windows PE (x64)**.|  
+   |**Generate a Lite Touch bootable ISO image** |Select to configure the Update Media Content Wizard to create a bootable Windows PE ISO file that includes the LTI deployment scripts. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard creates the ISO file with the name specified in the **ISO file name** box<br /><br /> - Cleared, the Update Media Content Wizard will not create the ISO file|  
+   |**ISO file name** |Contains the file name for the Windows PE ISO file that the Update Media Content Wizard creates. The default value for this text box is **LiteTouchPE_x64.iso**.<br /><br /> This box is enabled only if you select **Generate a Lite Touch bootable ISO image** |  
+   |**Generate a generic Windows PE WIM file** |Select to configure the Update Media Content Wizard to create a Windows PE WIM file that does not include the LTI deployment scripts. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard creates the GenericPE_x64.wim file with the image description specified in the **Image description** box<br /><br /> - Cleared, the Update Media Content Wizard will not create the WIM file|  
+   |**Image description** |Contains the image description for the generic Windows PE WIM file that the Update Media Content Wizard creates. The default value for this text box is **Generic Windows PE (x64).**<br /><br /> This box is enabled only if you select **Generate a generic bootable ISO Windows PE WIM file**.|  
+   |**Generate a generic bootable ISO image** |Select to configure the Update Media Content Wizard to create a bootable Windows PE ISO file that does not include the LTI deployments scripts. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard creates the Generic_x64.iso file with the image description specified in the **ISO file name** box<br /><br /> - Cleared, the Update Media Content Wizard will not create the ISO file<br /><br /> This box is enabled only if you select **Generate a generic Windows PE WIM file**.|  
+   |**ISO file name** |Contains the file name for the generic Windows PE ISO file that the Update Media Content Wizard creates. The default value for this text box is **Generic_x64.iso**.<br /><br /> This text box is enabled only if the Generate a generic bootable ISO image check box is selected.|  
+   |**Custom background bitmap file** |Contains the fully qualified path to the BMP file that is to be used as the custom background bitmap. The default value for this text box is **%INSTALLDIR%\Samples\Background.bmp**.|  
+   |**Extra directories to add** |Contains the fully qualified path to a folder structure to be included in the Windows PE images. The default value for the text box is empty.|  
+   |**Scratch space size** |Configures the size of the scratch space in megabytes; you can select a value of **32**, **64**, **128**, **256**, or **512** MB. The default value is **32**.|  
 
- The media configuration settings are saved, and the media appears in the details pane of the Deployment Workbench.  
+   The media configuration settings are saved, and the media appears in the details pane of the Deployment Workbench.  
 
 ######  <a name="ConfiguretheMediaPropertiesWindowsPEx64ComponentsTab"></a> Configure the Media Properties Windows PE x64 Components Tab  
  The media properties on the **Windows PE x64 Components** tab are configured when you run the New Media Wizard. However, you can update the linked deployment share properties on the **Windows PE x64 Components** tab of the ***media*** **Properties** dialog box (where *media* is the name of the media in the Deployment Workbench).  
 
 ###### To configure the Windows PE x64 Components tab  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Media (where *deployment_share* is the name of the deployment share in which you will configure the media).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Media (where *deployment_share* is the name of the deployment share in which you will configure the media).  
 
-3.  In the details pane, click ***media*** (where *media* is the name of the media you want to configure).  
+3. In the details pane, click ***media*** (where *media* is the name of the media you want to configure).  
 
-4.  In the Actions pane, click **Properties**.  
+4. In the Actions pane, click **Properties**.  
 
-     The ***media*** **Properties** dialog box opens (where *media* is the name of the media you want to configure).  
+    The ***media*** **Properties** dialog box opens (where *media* is the name of the media you want to configure).  
 
-5.  On the **Windows PE x86 Components** tab, configure the settings listed in Table 75 based on the requirements of your organization, and then click **OK**.  
+5. On the **Windows PE x86 Components** tab, configure the settings listed in Table 75 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 75. Configuration Settings on the Windows PE x64 Components Tab of Media Properties  
+   ### Table 75. Configuration Settings on the Windows PE x64 Components Tab of Media Properties  
 
-    |**Setting** |**Description** |  
-    |-----------------|---------------------|  
-    |**Selection profile** |Selects the device drivers and packages to be included in the Windows PE images based on the selection profile you choose. The default value is **All Drivers and Packages**. For more information about selection profiles, see [Manage Selection Profiles](#ManageSelectionProfiles).|  
-    |**Include all drivers from the selected driver group** |Select to configure the Update Media Content Wizard to include all the device drivers in the selection profile specified in the **Selection profile** box.|  
-    |**Include only drivers of the following types** |Select to configure the Update Media Content Wizard to include only the device drivers in the chosen selection profile that are specified in the following check boxes:<br /><br /> -                                              **Include all network drivers in the selected group**<br /><br /> -                                              **Include all video drivers in the selected group**<br /><br /> -                                              **Include all mass storage drivers in the selected group**<br /><br /> -                                              **Include all system-class drivers in the selected group** |  
-    |**Include all network drivers in the selected group** |Select to configure the Update Media Content Wizard to include all network drivers in the chosen selection profile. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard includes all network drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> - Cleared, the Update Media Content Wizard will not include all network drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> This check box is enabled only if you select **Include only drivers of the following types**.|  
-    |**Include all video drivers in the selected group** |Select to configure the Update Media Content Wizard to include all video drivers in the chosen selection profile. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard includes all video drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> - Cleared, the Update Media Content Wizard will not include all video drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> This check box is enabled only if you select **include only drivers of the following types**.|  
-    |**Include all mass storage drivers in the selected group** |Select to configure the Update Media Content Wizard to include all mass storage drivers in the chosen selection profile. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard includes all mass storage drivers in the selection profile specified in the **Selection profile**box in the Windows PE images<br /><br /> - Cleared, the Update Media Content Wizard will not include all mass storage drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> This check box is enabled only if you select **include only drivers of the following types**.|  
-    |**Include all system-class drivers in the selected group** |Select to configure the Update Media Content Wizard to include all system-class drivers in chosen the selection profile. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard includes all system-class drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> - Cleared, the Update Media Content Wizard will not include all system-class drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> This check box is enabled only if you select **Include only drivers of the following types**.|  
-    |**ADO** |Select to add the optional ADO components to the Windows PE images. These components are necessary for accessing SQL Server databases, such as the MDT DB. If this check box is:<br /><br /> - Selected, the ADO components are added to the Windows PE images<br /><br /> - Cleared, the ADO components are not added to the Windows PE images<br /><br /> This check box is selected by default.|  
-    |**Optional Fonts** |Use to configure the Update Media Content Wizard to include the following fonts:<br /><br /> - Chinese (ZH-CN)<br /><br /> - Chinese (ZH-HK)<br /><br /> - Chinese (ZH-TW)<br /><br /> - Japanese (JA-JP)<br /><br /> - Korean (KO-KR)<br /><br /> Add these fonts when performing an LTI deployment of Windows Server images when the Setup files are Japanese, Korean, or Chinese. If the check box for a corresponding font is:<br /><br /> - Selected, the Update Media Content Wizard includes the font in the Windows PE images<br /><br /> - Cleared, the Update Media Content Wizard will not include the font in the Windows PE images<br /><br /> Adding fonts to Windows PE boot images increases the size of the images. Add fonts only if necessary.|  
+   |**Setting** |**Description** |  
+   |-----------------|---------------------|  
+   |**Selection profile** |Selects the device drivers and packages to be included in the Windows PE images based on the selection profile you choose. The default value is **All Drivers and Packages**. For more information about selection profiles, see [Manage Selection Profiles](#ManageSelectionProfiles).|  
+   |**Include all drivers from the selected driver group** |Select to configure the Update Media Content Wizard to include all the device drivers in the selection profile specified in the **Selection profile** box.|  
+   |**Include only drivers of the following types** |Select to configure the Update Media Content Wizard to include only the device drivers in the chosen selection profile that are specified in the following check boxes:<br /><br /> -                                              **Include all network drivers in the selected group**<br /><br /> -                                              **Include all video drivers in the selected group**<br /><br /> -                                              **Include all mass storage drivers in the selected group**<br /><br /> -                                              **Include all system-class drivers in the selected group** |  
+   |**Include all network drivers in the selected group** |Select to configure the Update Media Content Wizard to include all network drivers in the chosen selection profile. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard includes all network drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> - Cleared, the Update Media Content Wizard will not include all network drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> This check box is enabled only if you select **Include only drivers of the following types**.|  
+   |**Include all video drivers in the selected group** |Select to configure the Update Media Content Wizard to include all video drivers in the chosen selection profile. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard includes all video drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> - Cleared, the Update Media Content Wizard will not include all video drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> This check box is enabled only if you select **include only drivers of the following types**.|  
+   |**Include all mass storage drivers in the selected group** |Select to configure the Update Media Content Wizard to include all mass storage drivers in the chosen selection profile. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard includes all mass storage drivers in the selection profile specified in the **Selection profile**box in the Windows PE images<br /><br /> - Cleared, the Update Media Content Wizard will not include all mass storage drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> This check box is enabled only if you select **include only drivers of the following types**.|  
+   |**Include all system-class drivers in the selected group** |Select to configure the Update Media Content Wizard to include all system-class drivers in chosen the selection profile. If the check box is:<br /><br /> - Selected, the Update Media Content Wizard includes all system-class drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> - Cleared, the Update Media Content Wizard will not include all system-class drivers in the selection profile specified in the **Selection profile** box in the Windows PE images<br /><br /> This check box is enabled only if you select **Include only drivers of the following types**.|  
+   |**ADO** |Select to add the optional ADO components to the Windows PE images. These components are necessary for accessing SQL Server databases, such as the MDT DB. If this check box is:<br /><br /> - Selected, the ADO components are added to the Windows PE images<br /><br /> - Cleared, the ADO components are not added to the Windows PE images<br /><br /> This check box is selected by default.|  
+   |**Optional Fonts** |Use to configure the Update Media Content Wizard to include the following fonts:<br /><br /> - Chinese (ZH-CN)<br /><br /> - Chinese (ZH-HK)<br /><br /> - Chinese (ZH-TW)<br /><br /> - Japanese (JA-JP)<br /><br /> - Korean (KO-KR)<br /><br /> Add these fonts when performing an LTI deployment of Windows Server images when the Setup files are Japanese, Korean, or Chinese. If the check box for a corresponding font is:<br /><br /> - Selected, the Update Media Content Wizard includes the font in the Windows PE images<br /><br /> - Cleared, the Update Media Content Wizard will not include the font in the Windows PE images<br /><br /> Adding fonts to Windows PE boot images increases the size of the images. Add fonts only if necessary.|  
 
- The media configuration settings are saved, and the media appears in the details pane of the Deployment Workbench.  
+   The media configuration settings are saved, and the media appears in the details pane of the Deployment Workbench.  
 
 #####  <a name="CopyMediaintheDeploymentWorkbench"></a> Copy Media in the Deployment Workbench  
  You can copy and paste media in the Deployment Workbench using the **Copy** and **Paste** actions as described in [Copy Items in the Deployment Workbench](#CopyItemsintheDeploymentWorkbench).  
@@ -4115,15 +4115,15 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
  The Update Media Content Wizard finishes, and the following files are created:  
 
--   An ISO file in the *media_folder* folder (where *media_folder* is the name of the folder that you specified for the media)  
+- An ISO file in the *media_folder* folder (where *media_folder* is the name of the folder that you specified for the media)  
 
-     Generating the ISO file is an option that you configure by selecting the **Generate a Lite Touch bootable ISO image** check box on the **General** tab of the ***media*** **Properties** dialog box. Clear this check box to reduce the time needed to generate the media unless you need to create bootable DVDs or start VMs from the ISO file.  
+   Generating the ISO file is an option that you configure by selecting the **Generate a Lite Touch bootable ISO image** check box on the **General** tab of the ***media*** **Properties** dialog box. Clear this check box to reduce the time needed to generate the media unless you need to create bootable DVDs or start VMs from the ISO file.  
 
--   WIM files in the *media_folder*\Content\Deploy\Boot folder (where *media_folder* is the name of the folder that you specified for the media).  
+- WIM files in the *media_folder*\Content\Deploy\Boot folder (where *media_folder* is the name of the folder that you specified for the media).  
 
- The folders and the content you specified in the selection profile in the media are stored in the image files.  
+  The folders and the content you specified in the selection profile in the media are stored in the image files.  
 
- You can also create a bootable device that contains a copy of the *media_folder*\Content folder (where *media_folder* is the name of the folder you specified for the media) so that you can start a target computer from a UFD or USB hard disk. For more information, see [Create Bootable Devices from Deployment Media](#CreateBootableDevicesfromDeploymentMedia).  
+  You can also create a bootable device that contains a copy of the *media_folder*\Content folder (where *media_folder* is the name of the folder you specified for the media) so that you can start a target computer from a UFD or USB hard disk. For more information, see [Create Bootable Devices from Deployment Media](#CreateBootableDevicesfromDeploymentMedia).  
 
 #####  <a name="CreateBootableDevicesfromDeploymentMedia"></a> Create Bootable Devices from Deployment Media  
  You may need to deploy images to target computers using a bootable device (such as a UFD or a USB hard disk) when the target computer does not have a high-speed, persistent connection to a deployment share.  
@@ -4133,29 +4133,29 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 ###### To create bootable devices from deployment media  
 
-1.  On a computer running Windows 7 or later, insert the UFD or USB hard disk.  
+1. On a computer running Windows 7 or later, insert the UFD or USB hard disk.  
 
-2.  Run Diskpart.exe, and type **list disk** to determine the disk number associated with the device.  
+2. Run Diskpart.exe, and type **list disk** to determine the disk number associated with the device.  
 
-3.  Type the following commands, where *N* is the disk number identified in step 2:  
+3. Type the following commands, where *N* is the disk number identified in step 2:  
 
-    -   **select disk *N***  
+   - **select disk *N***  
 
-    -   **clean**  
+   - **clean**  
 
-    -   **create partition primary**  
+   - **create partition primary**  
 
-    -   **select partition 1**  
+   - **select partition 1**  
 
-    -   **active**  
+   - **active**  
 
-    -   **format fs=ntfs**  
+   - **format fs=ntfs**  
 
-    -   **assign**  
+   - **assign**  
 
-    -   **exit**  
+   - **exit**  
 
-4.  Copy the contents of the *media_folder*\Content folder (where *media_folder* is the name of the folder you specified in the media) to the device.  
+4. Copy the contents of the *media_folder*\Content folder (where *media_folder* is the name of the folder you specified in the media) to the device.  
 
 ####  <a name="ManagetheMDTDB"></a> Manage the MDT DB  
  The MDT DB augments the configuration that CustomSettings.ini provides for both LTI and ZTI deployments. The MDT DB allows you to centrally manage configuration settings for the target computers. Although you can perform large-scale deployments using the CustomSettings.ini file, the MDT DB can help reduce the effort need to manage such deployments.  
@@ -4283,37 +4283,37 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 #####  <a name="AddRegistrySettingstoTaskSequenceStepConditions"></a> Add Registry Settings to Task Sequence Step Conditions  
  Evaluate registry settings during the task sequence; based on defined criteria, choose whether to run additional processes. The registry contains two basic elements: keys and values.  
 
--   Registry keys are similar to folders. Each key can contain subkeys, which in turn can contain further subkeys, all of which might contain values. Keys are referenced with syntax similar to Windows path names, using backslashes (\\) to indicate levels of hierarchy. For example, **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows** refers to the subkey **Windows** of the subkey **Microsoft** of the key **Software** of the subtree **HKEY_LOCAL_MACHINE**.  
+- Registry keys are similar to folders. Each key can contain subkeys, which in turn can contain further subkeys, all of which might contain values. Keys are referenced with syntax similar to Windows path names, using backslashes (\\) to indicate levels of hierarchy. For example, **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows** refers to the subkey **Windows** of the subkey **Microsoft** of the key **Software** of the subtree **HKEY_LOCAL_MACHINE**.  
 
--   Registry values are name–data pairs stored within but referenced separately from these keys. Value names can contain backslashes, but including backslashes so makes the values difficult to distinguish from their key paths.  
+- Registry values are name–data pairs stored within but referenced separately from these keys. Value names can contain backslashes, but including backslashes so makes the values difficult to distinguish from their key paths.  
 
- To configure a condition based on a registry setting condition, provide the following information in the **Registry Setting** dialog box:  
+  To configure a condition based on a registry setting condition, provide the following information in the **Registry Setting** dialog box:  
 
--   **Root key**. The subtree of the registry key. Base the condition on one of the following:  
+- **Root key**. The subtree of the registry key. Base the condition on one of the following:  
 
-    -   **HKEY_CURRENT_USER**  
+  -   **HKEY_CURRENT_USER**  
 
-    -   **HKEY_LOCAL_MACHINE**  
+  -   **HKEY_LOCAL_MACHINE**  
 
-    -   **HKEY_USERS**  
+  -   **HKEY_USERS**  
 
-    -   **HKEY_CURRENT_CONFIG**  
+  -   **HKEY_CURRENT_CONFIG**  
 
--   **Key**. The value of the registry key to use in the condition  
+- **Key**. The value of the registry key to use in the condition  
 
--   **Condition**. A logical operator, such as `AND` or `OR`  
+- **Condition**. A logical operator, such as `AND` or `OR`  
 
--   **Value name**. The name of the value to use in the condition  
+- **Value name**. The name of the value to use in the condition  
 
--   **Value type**. The value type, which can be one of the following:  
+- **Value type**. The value type, which can be one of the following:  
 
-    -   **REG_SZ**  
+  -   **REG_SZ**  
 
-    -   **REG_EXPAND_SZ**  
+  -   **REG_EXPAND_SZ**  
 
-    -   **REF_DWORD**  
+  -   **REF_DWORD**  
 
--   **Value**. The value of the value type for the provided registry key to use in the condition  
+- **Value**. The value of the value type for the provided registry key to use in the condition  
 
 ###### To add a Registry Setting condition to a task sequence step  
 
@@ -4465,33 +4465,33 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
  Select one of the following methods of enabling BitLocker:  
 
--   In a task sequence, enable the **BitLocker** task.  
+- In a task sequence, enable the **BitLocker** task.  
 
-     In addition, configure the partition in the **Format and Partition** task, which is necessary for New Computer scenarios but not in Refresh Computer scenario. The most common configurations are:  
+   In addition, configure the partition in the **Format and Partition** task, which is necessary for New Computer scenarios but not in Refresh Computer scenario. The most common configurations are:  
 
-    -   One partition: 100%  
+  -   One partition: 100%  
 
-    -   One partition and some unallocated space  
+  -   One partition and some unallocated space  
 
--   In the Deployment Wizard, configure the **BitLocker** page. This requires that the **Enable BitLocker** task be enabled in the task sequence used for deployment.  
+- In the Deployment Wizard, configure the **BitLocker** page. This requires that the **Enable BitLocker** task be enabled in the task sequence used for deployment.  
 
--   In the CustomSettings.ini file, set the following properties:  
+- In the CustomSettings.ini file, set the following properties:  
 
-    -   BDEInstall=TPM  
+  -   BDEInstall=TPM  
 
-    -   BdeInstallSuppress=NO  
+  -   BdeInstallSuppress=NO  
 
-    -   BDeWaitForEncryption=False  
+  -   BDeWaitForEncryption=False  
 
-    -   BDEDriveSize=2000  
+  -   BDEDriveSize=2000  
 
-    -   BDEDriveLetter=S:  
+  -   BDEDriveLetter=S:  
 
-    -   BDEKeyLocation=C:  
+  -   BDEKeyLocation=C:  
 
-    -   SkipBitLocker=YES  
+  -   SkipBitLocker=YES  
 
- For more information about enabling BitLocker, see [BitLocker Frequently Asked Questions](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-frequently-asked-questions).  
+  For more information about enabling BitLocker, see [BitLocker Frequently Asked Questions](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-frequently-asked-questions).  
 
 ####  <a name="ConfigureNetworkTaskSequenceSteps"></a> Configure Network Task Sequence Steps  
  You can customize task sequences in the Deployment Workbench to configure the network settings on the target computer. To configure task sequence steps that perform network-related functions, perform the following steps:  
@@ -4544,78 +4544,78 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 ###### To configure task sequence steps based on the Apply Network Settings task sequence step type  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Task Sequences (where *deployment_share* is the name of the deployment share where you will configure the task sequence).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Task Sequences (where *deployment_share* is the name of the deployment share where you will configure the task sequence).  
 
-3.  In the details pane, click ***task_sequence_name*** (where *task_sequence_name* is the name of the task sequence you want to configure).  
+3. In the details pane, click ***task_sequence_name*** (where *task_sequence_name* is the name of the task sequence you want to configure).  
 
-4.  In the Actions pane, click **Properties**.  
+4. In the Actions pane, click **Properties**.  
 
-     The ***task_sequence_name*** **Properties** dialog box opens (where *task_sequence_name* is the name of the task sequence you want to configure).  
+    The ***task_sequence_name*** **Properties** dialog box opens (where *task_sequence_name* is the name of the task sequence you want to configure).  
 
-5.  On the **Task Sequence** tab, in the task sequence hierarchy, go to *task_sequence_step* (where *task_sequence_step* is the name of a task sequence that is an **Apply Network Setting** task sequence step type), and then click the **Properties** tab.  
+5. On the **Task Sequence** tab, in the task sequence hierarchy, go to *task_sequence_step* (where *task_sequence_step* is the name of a task sequence that is an **Apply Network Setting** task sequence step type), and then click the **Properties** tab.  
 
-6.  On the **Properties** tab, configure the settings listed in Table 81 based on the requirements of your organization, and then click **OK**.  
+6. On the **Properties** tab, configure the settings listed in Table 81 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 81. Configuration Settings on the Properties Tab of the Apply Network Settings Task Sequence Step Type  
+   ### Table 81. Configuration Settings on the Properties Tab of the Apply Network Settings Task Sequence Step Type  
 
-    |Setting|**Description** |  
-    |-------------|---------------------|  
-    |**Type** |Contains the task sequence type, which is always set to **Capture Network Settings**.|  
-    |**Name** |Contains the name of the task sequence step that appears in the task sequence hierarchy.|  
-    |**Description** |Provides descriptive information about the task sequence step.|  
-    |**Create new network adapter setting button** |Click to create a new network adapter setting definition and access the **Network Settings** dialog box. For information about completing the tabs of the **Network Settings** dialog box, see Table 82, Table 83, and Table 84.|  
-    |**Network adapter setting properties button** |Click to display the **Network Settings** dialog box for the network adapter you selected. For information about completing the tabs of the **Network Settings** dialog box, see Table 82, Table 83, and Table 84.|  
-    |**Network adapter settings delete button** |Click to delete the network adapter setting you selected. In the **Confirm Adapter Delete** dialog, confirm (**Yes**) or cancel (**No**) the deletion.|  
+   |Setting|**Description** |  
+   |-------------|---------------------|  
+   |**Type** |Contains the task sequence type, which is always set to **Capture Network Settings**.|  
+   |**Name** |Contains the name of the task sequence step that appears in the task sequence hierarchy.|  
+   |**Description** |Provides descriptive information about the task sequence step.|  
+   |**Create new network adapter setting button** |Click to create a new network adapter setting definition and access the **Network Settings** dialog box. For information about completing the tabs of the **Network Settings** dialog box, see Table 82, Table 83, and Table 84.|  
+   |**Network adapter setting properties button** |Click to display the **Network Settings** dialog box for the network adapter you selected. For information about completing the tabs of the **Network Settings** dialog box, see Table 82, Table 83, and Table 84.|  
+   |**Network adapter settings delete button** |Click to delete the network adapter setting you selected. In the **Confirm Adapter Delete** dialog, confirm (**Yes**) or cancel (**No**) the deletion.|  
 
    Table 82 lists the configuration settings for the **General** tab of the **Network Settings** dialog box. Configure the settings in Table 82 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 82. Configuration Settings on the General tab of the Network Settings Dialog Box  
+   ### Table 82. Configuration Settings on the General tab of the Network Settings Dialog Box  
 
-    |**Setting** |**Description** |  
-    |-----------------|---------------------|  
-    |**Name** |Contains the name of the network adapter, which appears in the box on the **Apply Network Settings** task sequence step type’s **Properties** tab.|  
-    |**Obtain an IP address automatically** |Select to configure the task sequence step to configure the IP address of the network adapter on the target computer using DHCP.|  
-    |**Use the following IP address** |Select to configure the task sequence step to configure the IP address of the network adapter on the target computer using the values you specify in the **Network Settings** and **Gateway Settings** boxes.|  
-    |**Network Settings** |Contains a list of IP addresses and subnet masks to be configured for the network adapter. Click one of the following to modify the IP addresses and subnet masks in this list:<br /><br /> -                                          **Add**. Add an IP address and subnet mask combination to the list box.<br /><br /> -                                          **Properties**. Modify the IP address and subnet mask for an existing entry.<br /><br /> -                                          **Delete**. Delete an existing entry.<br /><br /> This box is enabled only if you select **Use the following IP address**.|  
-    |**Gateway Settings** |Contains a list of gateway IP addresses and routing cost metrics to be configured for the network adapter. Click one of the following to modify the gateway IP address and routing cost metric in this list:<br /><br /> -                                          **Add**. Add the IP address and cost metric for a gateway to the list box.<br /><br /> -                                          **Properties**. Modify the IP address and cost metric for a gateway an existing entry.<br /><br /> -                                          **Delete**. Delete an existing entry.<br /><br /> This box is enabled only if you select **Use the following IP address**.|  
+   |**Setting** |**Description** |  
+   |-----------------|---------------------|  
+   |**Name** |Contains the name of the network adapter, which appears in the box on the **Apply Network Settings** task sequence step type’s **Properties** tab.|  
+   |**Obtain an IP address automatically** |Select to configure the task sequence step to configure the IP address of the network adapter on the target computer using DHCP.|  
+   |**Use the following IP address** |Select to configure the task sequence step to configure the IP address of the network adapter on the target computer using the values you specify in the **Network Settings** and **Gateway Settings** boxes.|  
+   |**Network Settings** |Contains a list of IP addresses and subnet masks to be configured for the network adapter. Click one of the following to modify the IP addresses and subnet masks in this list:<br /><br /> -                                          **Add**. Add an IP address and subnet mask combination to the list box.<br /><br /> -                                          **Properties**. Modify the IP address and subnet mask for an existing entry.<br /><br /> -                                          **Delete**. Delete an existing entry.<br /><br /> This box is enabled only if you select **Use the following IP address**.|  
+   |**Gateway Settings** |Contains a list of gateway IP addresses and routing cost metrics to be configured for the network adapter. Click one of the following to modify the gateway IP address and routing cost metric in this list:<br /><br /> -                                          **Add**. Add the IP address and cost metric for a gateway to the list box.<br /><br /> -                                          **Properties**. Modify the IP address and cost metric for a gateway an existing entry.<br /><br /> -                                          **Delete**. Delete an existing entry.<br /><br /> This box is enabled only if you select **Use the following IP address**.|  
 
-    Table 83 lists the configuration settings for the **DNS** tab of the **Network Settings** dialog box. Configure the settings in Table 83 based on the requirements of your organization, and then click **OK**.  
+   Table 83 lists the configuration settings for the **DNS** tab of the **Network Settings** dialog box. Configure the settings in Table 83 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 83. Configuration Settings on the DNS tab of the Network Settings Dialog Box  
+   ### Table 83. Configuration Settings on the DNS tab of the Network Settings Dialog Box  
 
-    |**Setting** |**Description** |  
-    |-----------------|---------------------|  
-    |**Obtain DNS server automatically** |Select to configure the task sequence step to configure the DNS settings of the network adapter on the target computer using DHCP.|  
-    |**Use the following DNS Servers** |Select to configure the task sequence step to configure the DNS settings of the network adapter on the target computer using the values specified in the **DNS Server addresses in order of use** box.|  
-    |**DNS Server addresses in order of use** |Contains a list of DNS server IP addresses to be configured for the network adapter. Click one of the following to modify the list of DNS servers:<br /><br /> -                                          **Add**. Add the DNS Server IP address to the list box.<br /><br /> -                                          **Properties**. Modify the DNS server IP address for an existing entry.<br /><br /> -                                          **Delete**. Delete an existing entry.|  
-    |**DNS Suffix** |Contains the DNS domain name suffix to be added to any DNS queries.|  
-    |**Register this connection’s address in DNS** |Select to configure the network adapter to register the network adapters IP address of the primary DNS server. If the check box is:<br /><br /> - Selected, the IP address of the network adapter is registered in DNS<br /><br /> - Cleared, the IP address of the network adapter is not registered in DNS<br /><br /> By default, this check box is selected.|  
-    |**Use this connection’s suffix in DNS registration** |Select to configure the network adapter to register the network adapter’s IP address using the suffix listed in **DNS Suffix**. If the check box is:<br /><br /> - Selected, the IP address of the network adapter is registered using the suffix listed in **DNS Suffix**<br /><br /> - Cleared, the IP address of the network adapter is not registered using the suffix listed in **DNS Suffix**<br /><br /> By default, this check box is cleared.|  
+   |**Setting** |**Description** |  
+   |-----------------|---------------------|  
+   |**Obtain DNS server automatically** |Select to configure the task sequence step to configure the DNS settings of the network adapter on the target computer using DHCP.|  
+   |**Use the following DNS Servers** |Select to configure the task sequence step to configure the DNS settings of the network adapter on the target computer using the values specified in the **DNS Server addresses in order of use** box.|  
+   |**DNS Server addresses in order of use** |Contains a list of DNS server IP addresses to be configured for the network adapter. Click one of the following to modify the list of DNS servers:<br /><br /> -                                          **Add**. Add the DNS Server IP address to the list box.<br /><br /> -                                          **Properties**. Modify the DNS server IP address for an existing entry.<br /><br /> -                                          **Delete**. Delete an existing entry.|  
+   |**DNS Suffix** |Contains the DNS domain name suffix to be added to any DNS queries.|  
+   |**Register this connection’s address in DNS** |Select to configure the network adapter to register the network adapters IP address of the primary DNS server. If the check box is:<br /><br /> - Selected, the IP address of the network adapter is registered in DNS<br /><br /> - Cleared, the IP address of the network adapter is not registered in DNS<br /><br /> By default, this check box is selected.|  
+   |**Use this connection’s suffix in DNS registration** |Select to configure the network adapter to register the network adapter’s IP address using the suffix listed in **DNS Suffix**. If the check box is:<br /><br /> - Selected, the IP address of the network adapter is registered using the suffix listed in **DNS Suffix**<br /><br /> - Cleared, the IP address of the network adapter is not registered using the suffix listed in **DNS Suffix**<br /><br /> By default, this check box is cleared.|  
 
-     Table 84 lists the configuration settings for the **WINS** tab of the **Network Settings** dialog box. Configure the settings in Table 84 based on the requirements of your organization, and then click **OK**.  
+    Table 84 lists the configuration settings for the **WINS** tab of the **Network Settings** dialog box. Configure the settings in Table 84 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 84. Configuration Settings on the WINS tab of the Network Settings Dialog Box  
+   ### Table 84. Configuration Settings on the WINS tab of the Network Settings Dialog Box  
 
-    |Setting|**Description** |  
-    |-------------|---------------------|  
-    |**WINS server addresses in order of use** |Contains a list of WINS server IP addresses to be configured for the network adapter. Click one of the following to modify the list of WINS servers:<br /><br /> -                                          **Add**. Add the WINS server IP address to the box.<br /><br /> -                                          **Properties**. Modify the WINS server IP address for an existing entry.<br /><br /> -                                          **Delete**. Delete an existing entry.|  
-    |**Enable LMHOSTS lookup** |Select to configure the network adapter to enable lookups in the LMHOSTS file on the target computer. If the check box is:<br /><br /> - Selected, the LMHOSTS file is used for Network BIOS (NetBIOS) name resolution on the network adapter<br /><br /> - Cleared, the LMHOSTS file is not used for NetBIOS name resolution on the network adapter<br /><br /> By default, this check box is cleared.|  
-    |**Default** |Select to configure the network adapter to use the default NetBIOS over TCP/IP settings of the target operating system. The other options are **Enable NetBIOS over TCP/IP** and **Disable NetBIOS over TCP/IP**.|  
-    |**Enable NetBIOS over TCP/IP** |Select to enable NetBIOS over TCP/IP for the network adapter. The other options are **Default** and **Disable NetBIOS over TCP/IP**.|  
-    |**Disable NetBIOS over TCP/IP** |Select to disable NetBIOS over TCP/IP for the network adapter. The other options are **Default** and **Enable NetBIOS over TCP/IP**.|  
+   |Setting|**Description** |  
+   |-------------|---------------------|  
+   |**WINS server addresses in order of use** |Contains a list of WINS server IP addresses to be configured for the network adapter. Click one of the following to modify the list of WINS servers:<br /><br /> -                                          **Add**. Add the WINS server IP address to the box.<br /><br /> -                                          **Properties**. Modify the WINS server IP address for an existing entry.<br /><br /> -                                          **Delete**. Delete an existing entry.|  
+   |**Enable LMHOSTS lookup** |Select to configure the network adapter to enable lookups in the LMHOSTS file on the target computer. If the check box is:<br /><br /> - Selected, the LMHOSTS file is used for Network BIOS (NetBIOS) name resolution on the network adapter<br /><br /> - Cleared, the LMHOSTS file is not used for NetBIOS name resolution on the network adapter<br /><br /> By default, this check box is cleared.|  
+   |**Default** |Select to configure the network adapter to use the default NetBIOS over TCP/IP settings of the target operating system. The other options are **Enable NetBIOS over TCP/IP** and **Disable NetBIOS over TCP/IP**.|  
+   |**Enable NetBIOS over TCP/IP** |Select to enable NetBIOS over TCP/IP for the network adapter. The other options are **Default** and **Disable NetBIOS over TCP/IP**.|  
+   |**Disable NetBIOS over TCP/IP** |Select to disable NetBIOS over TCP/IP for the network adapter. The other options are **Default** and **Enable NetBIOS over TCP/IP**.|  
 
 ####  <a name="ConfigureServerRoleTaskSequenceStepsforLTI"></a> Configure Server Role Task Sequence Steps for LTI  
  LTI can help automate the deployment of server roles in Windows Server. Configure LTI task sequence steps to deploy the supported server roles, which include:  
 
--   AD DS  
+- AD DS  
 
--   DNS Server  
+- DNS Server  
 
--   DHCP Server  
+- DHCP Server  
 
- The process for configuring the server role task sequence steps is similar for LTI and ZTI. For more information about configuring server role task sequence steps for LTI, see [Configuring Server Role Task Sequence Steps](#ConfiguringServerRoleTaskSequenceSteps).  
+  The process for configuring the server role task sequence steps is similar for LTI and ZTI. For more information about configuring server role task sequence steps for LTI, see [Configuring Server Role Task Sequence Steps](#ConfiguringServerRoleTaskSequenceSteps).  
 
 ####  <a name="ConfiguretheCheckBIOSTaskSequenceStepfortheListofIncompatibleBIOSVersions"></a> Configure the Check BIOS Task Sequence Step for the List of Incompatible BIOS Versions  
  The default task order for a task sequence includes the **Check BIOS** task in the **Non-Replace** group in the **Validation** group. The **Check BIOS** task runs the ZTIBIOSCheck.wsf script, which checks the BIOS version of the target computers against the list of incompatible BIOS versions in the ZTIBIOSCheck.xml file.  
@@ -4654,124 +4654,125 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 #### To deploy the new operating system to the target computer using the Deployment Wizard  
 
-1.  Verify that the folders in Table 86 no longer exist on the target computer.  
+1. Verify that the folders in Table 86 no longer exist on the target computer.  
 
-     The Deployment Wizard creates and uses the folders listed in Table 86 during the deployment process. If a previous deployment was terminated because of an error, these folders might still exist on the target computer. If these folders are not removed, the process will continue from the point where the previous process terminated instead of starting from the beginning. Remove these folders before initiating a new deployment. These folders exist on *target_drive* (where *target_drive* is the drive on the target computer that has the most available disk space).  
+    The Deployment Wizard creates and uses the folders listed in Table 86 during the deployment process. If a previous deployment was terminated because of an error, these folders might still exist on the target computer. If these folders are not removed, the process will continue from the point where the previous process terminated instead of starting from the beginning. Remove these folders before initiating a new deployment. These folders exist on *target_drive* (where *target_drive* is the drive on the target computer that has the most available disk space).  
 
-    ### Table 86. Folders to Remove Before Initiating the Deployment Wizard  
+   ### Table 86. Folders to Remove Before Initiating the Deployment Wizard  
 
-    |**Folder** |**Description** |  
-    |----------------|---------------------|  
-    |*target_drive:*\MININT|This folder is preserved through the deployment process and contains deployment state information (such as user state migration information and log files).|  
-    |*target_drive:\\_SMSTaskSequence* |This folder contains state information specific to the Task Sequencer.|  
+   |            **Folder**             |                                                                       **Description**                                                                       |
+   |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+   |      *target_drive:*\MININT       | This folder is preserved through the deployment process and contains deployment state information (such as user state migration information and log files). |
+   | *target_drive:\\_SMSTaskSequence* |                                           This folder contains state information specific to the Task Sequencer.                                            |
 
-2.  Initiate the Deployment Wizard.  
 
-    1.  Start the target computer with LTI bootable media from a CD, DVD, removable device, or Windows Deployment Services.  
+2. Initiate the Deployment Wizard.  
 
-    2.  Connect to the appropriate deployment share (for example, \\\server_name\Distribution$\Scripts), and then type **cscript litetouch.vbs**.  
+   1.  Start the target computer with LTI bootable media from a CD, DVD, removable device, or Windows Deployment Services.  
 
-3.  The Deployment Wizard starts. This wizard is responsible for initialing the Windows PE environment prior to running the Deployment Wizard. The Initializing wizard page appears, which displays the initialization status. The Windows Deployment wizard connects to the deployment share and displays the **Welcome** wizard page when the conditions in Table 87 are met.   
+   2.  Connect to the appropriate deployment share (for example, \\\server_name\Distribution$\Scripts), and then type **cscript litetouch.vbs**.  
 
-    ### Table 87. Welcome Wizard page Conditions  
+3. The Deployment Wizard starts. This wizard is responsible for initialing the Windows PE environment prior to running the Deployment Wizard. The Initializing wizard page appears, which displays the initialization status. The Windows Deployment wizard connects to the deployment share and displays the **Welcome** wizard page when the conditions in Table 87 are met.   
 
-    |**Property** |**Condition** |  
-    |------------------|-------------------|  
-    |**DeployRoot** |Begins when the **DeployRoot** property equals “ ” (blank) or **X:\\**. Typically, the Windows Deployment console automatically sets this value.|  
-    |**SkipBDDWelcome** |Not equal to "YES"|  
+   ### Table 87. Welcome Wizard page Conditions  
 
-     The **Welcome** wizard page in the Deployment Wizard is displayed.  
+   |**Property** |**Condition** |  
+   |------------------|-------------------|  
+   |**DeployRoot** |Begins when the **DeployRoot** property equals “ ” (blank) or **X:\\**. Typically, the Windows Deployment console automatically sets this value.|  
+   |**SkipBDDWelcome** |Not equal to "YES"|  
 
-4.  On the **Welcome** page, click one of the options listed in Table 88 based on the environment’s requirements. To proceed with the Deployment Wizard, click **Run the Deployment Wizard to install a new Operating System**.  
+    The **Welcome** wizard page in the Deployment Wizard is displayed.  
 
-    ### Table 88. Welcome Wizard Page Options  
+4. On the **Welcome** page, click one of the options listed in Table 88 based on the environment’s requirements. To proceed with the Deployment Wizard, click **Run the Deployment Wizard to install a new Operating System**.  
 
-    |**Option** |**Select this option to** |  
-    |----------------|-------------------------------|  
-    |**Run the Deployment Wizard to install a new Operating System** |Start the Deployment Wizard and complete the LTI deployment process.|  
-    |**Run the Windows Recovery Wizard** |Open the **System Recovery Options** dialog box in Windows Recovery Environment. From here, run the Recovery Wizard to help repair an existing Windows installation.|  
-    |**Exit to Command Prompt** |Open a Command Prompt window in Windows PE for troubleshooting prior to completing the LTI deployment process.|  
-    |**Keyboard Layout** |Select the keyboard layout for Windows PE prior to completing the LTI deployment process.|  
-    |**Configure with Static IP Address** |Configure the IP configuration settings for Windows PE when DHCP configuration is not available. Click this button to open the **Configure Static IP Network Settings**dialog box.<br /><br /> The IP configuration settings configured in the **Configure Static IP Network Settings** dialog box override any IP configuration settings specified in the CustomSettings.ini file or in the MDT DB.|  
+   ### Table 88. Welcome Wizard Page Options  
 
-     The **Specify credentials for connecting to network shares** wizard page in the Deployment Wizard is displayed.  
+   |**Option** |**Select this option to** |  
+   |----------------|-------------------------------|  
+   |**Run the Deployment Wizard to install a new Operating System** |Start the Deployment Wizard and complete the LTI deployment process.|  
+   |**Run the Windows Recovery Wizard** |Open the **System Recovery Options** dialog box in Windows Recovery Environment. From here, run the Recovery Wizard to help repair an existing Windows installation.|  
+   |**Exit to Command Prompt** |Open a Command Prompt window in Windows PE for troubleshooting prior to completing the LTI deployment process.|  
+   |**Keyboard Layout** |Select the keyboard layout for Windows PE prior to completing the LTI deployment process.|  
+   |**Configure with Static IP Address** |Configure the IP configuration settings for Windows PE when DHCP configuration is not available. Click this button to open the **Configure Static IP Network Settings**dialog box.<br /><br /> The IP configuration settings configured in the **Configure Static IP Network Settings** dialog box override any IP configuration settings specified in the CustomSettings.ini file or in the MDT DB.|  
 
-5.  Complete the **Specify credentials for connecting to network shares** page, and then click **OK**.  
+    The **Specify credentials for connecting to network shares** wizard page in the Deployment Wizard is displayed.  
 
-     Complete the **Specify credentials for connecting to network shares** page, and then click **OK**.  
+5. Complete the **Specify credentials for connecting to network shares** page, and then click **OK**.  
 
-     This wizard appears when the conditions in Table 89 are met.  
+    Complete the **Specify credentials for connecting to network shares** page, and then click **OK**.  
 
-    ### Table 89. Specify Credentials for Connecting to Network Shares Page Conditions  
+    This wizard appears when the conditions in Table 89 are met.  
 
-    |**Property** |**Condition** |  
-    |------------------|-------------------|  
-    |**UserID_isDirty** |Equal to TRUE|  
-    |**UserID** |Equal to “”|  
-    |**DeploymentType** |Not equal to REPLACE|  
-    |**DeploymentMethod** |Not equal to MEDIA|  
+   ### Table 89. Specify Credentials for Connecting to Network Shares Page Conditions  
 
-     You use these credentials to access network shared folders used during the deployment process. These shared folders include folders used to store user state migration data or image backups of the target computer.  
+   |**Property** |**Condition** |  
+   |------------------|-------------------|  
+   |**UserID_isDirty** |Equal to TRUE|  
+   |**UserID** |Equal to “”|  
+   |**DeploymentType** |Not equal to REPLACE|  
+   |**DeploymentMethod** |Not equal to MEDIA|  
 
-    ### Table 90. Credentials Options  
+    You use these credentials to access network shared folders used during the deployment process. These shared folders include folders used to store user state migration data or image backups of the target computer.  
 
-    |**Option** |**Type** |  
-    |----------------|--------------|  
-    |**User Name** |***user_name***  (where *user_name* is the user name of the account that has the appropriate permissions for the network shared folders that the deployment scripts use).|  
-    |**Password** |***password***  (where *password* is the password for the user account specified in the **User Name** box).|  
-    |**Domain** |domain (where domain is the name of the domain in which the user account, specified in the User Name box, is located).|  
+   ### Table 90. Credentials Options  
 
-     The **Task Sequence** page is displayed.  
+   |**Option** |**Type** |  
+   |----------------|--------------|  
+   |**User Name** |***user_name***  (where *user_name* is the user name of the account that has the appropriate permissions for the network shared folders that the deployment scripts use).|  
+   |**Password** |***password***  (where *password* is the password for the user account specified in the **User Name** box).|  
+   |**Domain** |domain (where domain is the name of the domain in which the user account, specified in the User Name box, is located).|  
 
-6.  On the **Task Sequence** page, beneath **Select a task sequence to execute on this computer**, select ***task_sequence*** (where *task_sequence* is the name of the task sequence to run).  
+    The **Task Sequence** page is displayed.  
 
-    > [!NOTE]
-    >  If a task sequence based on the Litetouch OEM task sequence template appears in the list, ensure that the deployment is being performed from a removable media (MEDIA) deployment share. Although task sequences based on the Litetouch OEM task sequence template can be selected from other deployment shares, the task sequence will not finish successfully.  
+6. On the **Task Sequence** page, beneath **Select a task sequence to execute on this computer**, select ***task_sequence*** (where *task_sequence* is the name of the task sequence to run).  
 
-7.  On the **Computer Details** page, in the **Computer name** box, type ***computer_name*** (where *computer_name* is the computer name to assign to the target computer), click one of the options listed in Table 92 based on your environment’s requirements and then click **Next**.  
+   > [!NOTE]
+   >  If a task sequence based on the Litetouch OEM task sequence template appears in the list, ensure that the deployment is being performed from a removable media (MEDIA) deployment share. Although task sequences based on the Litetouch OEM task sequence template can be selected from other deployment shares, the task sequence will not finish successfully.  
 
-     This wizard appears when the conditions in Table 91 are met.  
+7. On the **Computer Details** page, in the **Computer name** box, type ***computer_name*** (where *computer_name* is the computer name to assign to the target computer), click one of the options listed in Table 92 based on your environment’s requirements and then click **Next**.  
 
-    ### Table 91. Configure the Computer Details Page Conditions  
+    This wizard appears when the conditions in Table 91 are met.  
 
-    |**Property** |**Condition** |  
-    |------------------|-------------------|  
-    |**SkipComputerName** |Not equal to YES|  
-    |**SkipDomainMembership** |Not equal to YES|  
-    |**DeploymentType** |Not equal to StateRestore or REPLACE or CUSTOM|  
-    |**DeploymentType** |Not equal to REPLACE|  
+   ### Table 91. Configure the Computer Details Page Conditions  
 
-    ### Table 92. Specify Computer Membership Configuration  
+   |**Property** |**Condition** |  
+   |------------------|-------------------|  
+   |**SkipComputerName** |Not equal to YES|  
+   |**SkipDomainMembership** |Not equal to YES|  
+   |**DeploymentType** |Not equal to StateRestore or REPLACE or CUSTOM|  
+   |**DeploymentType** |Not equal to REPLACE|  
 
-    |**For this option** |**Perform this task to** |  
-    |-------------------------|------------------------------|  
-    |**Join a domain** |Join an existing AD DS domain:<br /><br /> - In the **Domain to join** box, type ***domain*** (where *domain* is the name of the domain to be joined).<br /><br /> - In the **Organizational Unit** box, type ***organizational_unit*** (where *organizational_unit* is the name of the organizational unit [OU] in the AD DS domain in which the computer account will be created).<br /><br /> - In the **User Name** box, type ***user_name*** (where *user_name* is the name of a user account that has sufficient permissions to create the computer account in the domain).<br /><br /> - In the **Password** box, type ***password*** (where *password* is the password for the user account specified in the **User Name** box).<br /><br /> - In the **Domain** box, type ***domain*** (where *domain* is the name of the domain in the user account specified in the **User Name** box is located).|  
-    |**Join a workgroup** |Join a Windows workgroup:<br /><br /> - In the **Workgroup** box, type ***workgroup*** (where *workgroup* is the name of the workgroup to join).|  
+   ### Table 92. Specify Computer Membership Configuration  
 
-     The **User Data** page is displayed.  
+   |**For this option** |**Perform this task to** |  
+   |-------------------------|------------------------------|  
+   |**Join a domain** |Join an existing AD DS domain:<br /><br /> - In the **Domain to join** box, type ***domain*** (where *domain* is the name of the domain to be joined).<br /><br /> - In the **Organizational Unit** box, type ***organizational_unit*** (where *organizational_unit* is the name of the organizational unit [OU] in the AD DS domain in which the computer account will be created).<br /><br /> - In the **User Name** box, type ***user_name*** (where *user_name* is the name of a user account that has sufficient permissions to create the computer account in the domain).<br /><br /> - In the **Password** box, type ***password*** (where *password* is the password for the user account specified in the **User Name** box).<br /><br /> - In the **Domain** box, type ***domain*** (where *domain* is the name of the domain in the user account specified in the **User Name** box is located).|  
+   |**Join a workgroup** |Join a Windows workgroup:<br /><br /> - In the **Workgroup** box, type ***workgroup*** (where *workgroup* is the name of the workgroup to join).|  
 
-8.  On the **User Data** page, click one of the options listed in Table 94 based on your environment’s requirements, and then click **Next**.  
+    The **User Data** page is displayed.  
 
-     This wizard appears when the conditions in Table 93 are met.  
+8. On the **User Data** page, click one of the options listed in Table 94 based on your environment’s requirements, and then click **Next**.  
 
-    ### Table 93. User Data Page Conditions  
+    This wizard appears when the conditions in Table 93 are met.  
 
-    |**Property** |Condition|  
-    |------------------|---------------|  
-    |**SkipUserData** |**Not equal to YES** |  
-    |**DeploymentType** |Not equal to REFRESH or REPLACE or StateRestore|  
-    |**ImageFlags** |Does not contain SERVER|  
-    |**IsServerOS** |Not equal to TRUE|  
+   ### Table 93. User Data Page Conditions  
 
-    ### Table 94. User Data Page Options  
+   |**Property** |Condition|  
+   |------------------|---------------|  
+   |**SkipUserData** |**Not equal to YES** |  
+   |**DeploymentType** |Not equal to REFRESH or REPLACE or StateRestore|  
+   |**ImageFlags** |Does not contain SERVER|  
+   |**IsServerOS** |Not equal to TRUE|  
 
-    |**Option** |**Select this option to** |  
-    |----------------|-------------------------------|  
-    |**Automatically determine the location** |- Allow the MDT scripts and process rules to automatically determine the best location based on local available disk space on the target computer.<br /><br /> - Optionally, select the **Allow data and settings to be stored locally when possible** check box to give preference to storing the data locally.|  
-    |**Specify a location** |Save the user state migration data to a specific location.<br /><br /> In the Location box, type location (where location is the fully qualified path to the locations for storing the user state migration data).<br /><br /> Alternatively, click **Browse** to go to the location.|  
-    |**Do not save data and settings** |Discard any existing user state migration data or deploy a new computer with no existing data.|  
+   ### Table 94. User Data Page Options  
 
-     The **Move Data and Settings** page is displayed.  
+   |**Option** |**Select this option to** |  
+   |----------------|-------------------------------|  
+   |**Automatically determine the location** |- Allow the MDT scripts and process rules to automatically determine the best location based on local available disk space on the target computer.<br /><br /> - Optionally, select the **Allow data and settings to be stored locally when possible** check box to give preference to storing the data locally.|  
+   |**Specify a location** |Save the user state migration data to a specific location.<br /><br /> In the Location box, type location (where location is the fully qualified path to the locations for storing the user state migration data).<br /><br /> Alternatively, click **Browse** to go to the location.|  
+   |**Do not save data and settings** |Discard any existing user state migration data or deploy a new computer with no existing data.|  
+
+    The **Move Data and Settings** page is displayed.  
 
 9. On the **Move Data and Settings** page, click one of the options listed in Table 96 based on your environment’s requirements, and then click **Next**.  
 
@@ -4811,10 +4812,11 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
     ### Table 98. User Data (Restore) Options  
 
-    |**Option** |**Select this option if** |  
-    |----------------|-------------------------------|  
-    |**Do not restore user data and settings** |The migration type is New Computer and there is no user state migration data to restore.|  
-    |**Specify a location** |The migration type is Replace Computer.In the **Location** box, type ***location*** (where *location* is the fully qualified path to the location in which the user state migration back files are stored).|  
+    |                **Option**                 |                                                                                          **Select this option if**                                                                                          |
+    |-------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+    | **Do not restore user data and settings** |                                                          The migration type is New Computer and there is no user state migration data to restore.                                                           |
+    |          **Specify a location**           | The migration type is Replace Computer.In the **Location** box, type ***location*** (where *location* is the fully qualified path to the location in which the user state migration back files are stored). |
+
 
 11. On the **Computer Backup** page, click one of the options listed in Table 100 based on requirements, and then click **Next**.  
 
@@ -4853,11 +4855,12 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
     ### Table 102. Product Key Options  
 
-    |**Option** |**Select this option to** |  
-    |----------------|-------------------------------|  
-    |**No product key is required** |Assign product keys to target computers using a KMS key.|  
-    |**Activate the machine with a Multiple Activation Key (MAK)** |Assign a MAK to the target computer and activate the computer over the Internet.<br /><br /> In the **Multiple activation key** box, type ***mak*** (where *mak* is the MAK to be assigned to the target computer).|  
-    |**Use a specific product key** |Assign a specific license key for installation or retail activation.<br /><br /> In the **Product_key** box, type ***product_key*** (where *product_key* is the product key to be assigned to the target computer).|  
+    |                          **Option**                           |                                                                                              **Select this option to**                                                                                              |
+    |---------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+    |                **No product key is required**                 |                                                                              Assign product keys to target computers using a KMS key.                                                                               |
+    | **Activate the machine with a Multiple Activation Key (MAK)** | Assign a MAK to the target computer and activate the computer over the Internet.<br /><br /> In the **Multiple activation key** box, type ***mak*** (where *mak* is the MAK to be assigned to the target computer). |
+    |                **Use a specific product key**                 | Assign a specific license key for installation or retail activation.<br /><br /> In the **Product_key** box, type ***product_key*** (where *product_key* is the product key to be assigned to the target computer). |
+
 
 13. On the **Language Packs** page, in the **Select the language packs to install** box, select the check box next to ***language_pack*** (where *language_pack* is the language pack to be installed), and then click **Next**.  
 
@@ -4890,12 +4893,13 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
     ### Table 105. Locale and Time Options  
 
-    |**In this box** |**Select** |  
-    |---------------------|----------------|  
-    |**Language to install** |The default language for the target operating system.|  
-    |**Time and currency format (Locale)** |The default locale for the target operating system.|  
-    |**Keyboard layout** |Keyboard layout to be used with the target operating system.|  
-    |**Time zone** |The time zone in which the target computer is located.|  
+    |            **In this box**            |                          **Select**                          |
+    |---------------------------------------|--------------------------------------------------------------|
+    |        **Language to install**        |    The default language for the target operating system.     |
+    | **Time and currency format (Locale)** |     The default locale for the target operating system.      |
+    |          **Keyboard layout**          | Keyboard layout to be used with the target operating system. |
+    |             **Time zone**             |    The time zone in which the target computer is located.    |
+
 
 15. On the **Roles and Features** page, select the appropriate values for each option listed in Table 107 based on your requirements, and then click **Next**.  
 
@@ -4912,11 +4916,12 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
     ### Table 107. Roles and Features Options  
 
-    |**In this box** |**Select** |  
-    |---------------------|----------------|  
-    |**The following roles and role services are available** |The check boxes that correspond to the desired Windows roles, role services, or features.|  
-    |**Select All** |Click this button to select all the check boxes associated with the Windows roles, role services, or features.|  
-    |**Select None** |Click this button to deselect all the check boxes associated with the Windows roles, role services, or features.|  
+    |                     **In this box**                     |                                                    **Select**                                                    |
+    |---------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
+    | **The following roles and role services are available** |            The check boxes that correspond to the desired Windows roles, role services, or features.             |
+    |                     **Select All**                      |  Click this button to select all the check boxes associated with the Windows roles, role services, or features.  |
+    |                     **Select None**                     | Click this button to deselect all the check boxes associated with the Windows roles, role services, or features. |
+
 
 16. On the **Applications** page, select the check box next to ***application_name*** (where *application_name* is the name of the application you want to deploy, and then click **Next**.  
 
@@ -4927,11 +4932,12 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
     ### Table 108. Applications Page Conditions  
 
-    |**Property** |**Condition** |  
-    |------------------|-------------------|  
-    |**SkipApplications** |Not equal to YES|  
-    |**DeploymentType** |Not equal to REPLACE|  
-    |**IsThereAtLeastOneApplicationPresent** |Greater than one|  
+    |              **Property**               |    **Condition**     |
+    |-----------------------------------------|----------------------|
+    |          **SkipApplications**           |   Not equal to YES   |
+    |           **DeploymentType**            | Not equal to REPLACE |
+    | **IsThereAtLeastOneApplicationPresent** |   Greater than one   |
+
 
 17. On the **Administrator Password** page, in the **Administrator Password** and **Confirm Administrator Password** boxes, type ***password*** (where *password* is the password for the local built-in Administrator account on the target computer), and then click **Next**.  
 
@@ -4939,11 +4945,12 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
     ### Table 109. Administrator Password Page Conditions  
 
-    |**Property** |**Condition** |  
-    |------------------|-------------------|  
-    |**SkipAdminPassword** |Not equal to YES|  
-    |**DeploymentType** |Not equal to REPLACE or CUSTOM|  
-    |**TaskSequenceTemplate** |Not equal LTIOEM.XML|  
+    |       **Property**       |         **Condition**          |
+    |--------------------------|--------------------------------|
+    |  **SkipAdminPassword**   |        Not equal to YES        |
+    |    **DeploymentType**    | Not equal to REPLACE or CUSTOM |
+    | **TaskSequenceTemplate** |      Not equal LTIOEM.XML      |
+
 
 18. On the **Local Administrators** page, in the **Administrator Accounts**box, type ***admin_accounts*** (where *admin_accounts* are the accounts that you want to add to the local built-in Administrator account on the target computer), and then click **Next**.  
 
@@ -4974,12 +4981,13 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
     ### Table 112. Capture Image Options  
 
-    |**Option** |**Select this option to** |  
-    |----------------|-------------------------------|  
-    |**Capture an image of this reference computer** |Run Sysprep, and then capture an image of the target computer. Then, store the image in the location specified.<br /><br /> In the **Location** box, type ***location*** (where *location* is the fully qualified path to the location for storing the image of the target computer).In the **File name** box, type ***file_name*** (where *file_name* is the name of the image file).|  
-    |**Sysprep this computer** |Copy the required Sysprep files to the target computer, initiate Sysprep, but do not capture an image of the target computer.|  
-    |**Prepare to capture the machine** |Copy the required Sysprep files to the target computer, but do not initiate Sysprep.|  
-    |**Do not capture an image of this computer** |Deploy the target operating system to the target computer without capturing a Sysprep image of the computer.|  
+    |                   **Option**                    |                                                                                                                                                                               **Select this option to**                                                                                                                                                                                |
+    |-------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+    | **Capture an image of this reference computer** | Run Sysprep, and then capture an image of the target computer. Then, store the image in the location specified.<br /><br /> In the **Location** box, type ***location*** (where *location* is the fully qualified path to the location for storing the image of the target computer).In the **File name** box, type ***file_name*** (where *file_name* is the name of the image file). |
+    |            **Sysprep this computer**            |                                                                                                                             Copy the required Sysprep files to the target computer, initiate Sysprep, but do not capture an image of the target computer.                                                                                                                              |
+    |       **Prepare to capture the machine**        |                                                                                                                                                  Copy the required Sysprep files to the target computer, but do not initiate Sysprep.                                                                                                                                                  |
+    |  **Do not capture an image of this computer**   |                                                                                                                                      Deploy the target operating system to the target computer without capturing a Sysprep image of the computer.                                                                                                                                      |
+
 
 20. On the **BitLocker** page, click one of the options listed in Table 114 based on your environment’s requirements, and then click **Next**.  
 
@@ -5010,7 +5018,7 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
     > [!NOTE]
     >  To expand the details of this deployment, click **Details**.  
 
- The Deployment Wizard closes, and deployment of the new operating system begins.  
+    The Deployment Wizard closes, and deployment of the new operating system begins.  
 
 ##  <a name="PerformingZTIDeploymentsUsingConfigurationManager"></a> Performing ZTI Deployments Using Configuration Manager  
  You perform ZTI deployments using Configuration Manager and MDT within an AD DS domain, within a Windows workgroup, or from removable media. Perform ZTI deployments by:  
@@ -5093,23 +5101,23 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 ###### To run the Configure ConfigMgr Integration Wizard  
 
-1.  > [!NOTE]
-    >  The Configuration Manager console should be closed when performing this procedure.  
+1. > [!NOTE]
+   >  The Configuration Manager console should be closed when performing this procedure.  
 
-     Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Configure ConfigMgr Integration**.  
+    Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Configure ConfigMgr Integration**.  
 
-     The Configure ConfigMgr Integration Wizard starts.  
+    The Configure ConfigMgr Integration Wizard starts.  
 
-2.  Complete the Configure ConfigMgr Integration Wizard using the information in Table 115. Accept the default values unless otherwise specified.  
+2. Complete the Configure ConfigMgr Integration Wizard using the information in Table 115. Accept the default values unless otherwise specified.  
 
-    ### Table 115. Information for Completing the Configure ConfigMgr Integration Wizard  
+   ### Table 115. Information for Completing the Configure ConfigMgr Integration Wizard  
 
-    |On this wizard page|Do this|  
-    |-------------------------|-------------|  
-    |**Options** |- Verify that the **Install the MDT extensions for Configuration Manager** option is selected.<br /><br /> - Verify that the **Install the MDT console extensions for System Center 2012 R2 Configuration Manager** check box is selected.<br /><br /> - Verify that the **Add the MDT task sequence actions to a System Center 2012 R2 Configuration Manager server** check box is selected.<br /><br /> - In **Site Server Name**, type ***ConfigMgr_server_name*** (where *ConfigMgr_server_name* is the name of the Configuration Manager server on which to install MDT integration).<br /><br /> - In **Site Code**, type ***ConfigMgr_site_code*** (where *ConfigMgr_site_code* is the Configuration Manager site code that installs MDT integration), and then click **Next**.<br /><br /> The Site Server Name and Site Code fields will be automatically populated with the most recent connection details if the Configuration Manager console has been opened once.|  
-    |**Confirmation** |Review the completion status of the wizard, and then click **Finish**.|  
+   |On this wizard page|Do this|  
+   |-------------------------|-------------|  
+   |**Options** |- Verify that the **Install the MDT extensions for Configuration Manager** option is selected.<br /><br /> - Verify that the **Install the MDT console extensions for System Center 2012 R2 Configuration Manager** check box is selected.<br /><br /> - Verify that the **Add the MDT task sequence actions to a System Center 2012 R2 Configuration Manager server** check box is selected.<br /><br /> - In **Site Server Name**, type ***ConfigMgr_server_name*** (where *ConfigMgr_server_name* is the name of the Configuration Manager server on which to install MDT integration).<br /><br /> - In **Site Code**, type ***ConfigMgr_site_code*** (where *ConfigMgr_site_code* is the Configuration Manager site code that installs MDT integration), and then click **Next**.<br /><br /> The Site Server Name and Site Code fields will be automatically populated with the most recent connection details if the Configuration Manager console has been opened once.|  
+   |**Confirmation** |Review the completion status of the wizard, and then click **Finish**.|  
 
- When the wizard finishes, the Configuration Manager console is configured for MDT integration.  
+   When the wizard finishes, the Configuration Manager console is configured for MDT integration.  
 
 ###  <a name="PreparingforZTIDeploymenttotheReferenceComputerUsingConfigurationManager"></a> Preparing for ZTI Deployment to the Reference Computer Using Configuration Manager  
  Regardless of the ZTI deployment scenario you are performing, always start by creating a reference computer, and then capturing an image of that computer. Later in the ZTI deployment process, you will deploy the captured image of your reference computer to the appropriate target computers.  
@@ -5173,21 +5181,21 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 ##### To prepare for ZTI deployment to target computers  
 
-1.  Prepare network shares for storing migration data and MDT deployment logs as described in [Preparing the MDT Migration Resources](#PreparingtheMDTMigrationResources).  
+1. Prepare network shares for storing migration data and MDT deployment logs as described in [Preparing the MDT Migration Resources](#PreparingtheMDTMigrationResources).  
 
-2.  Optionally, prepare Windows Deployment Services to start the appropriate Windows PE images that will in turn start the ZTI deployment process to the target computers as described in [Preparing Windows Deployment Services for ZTI Deployments Using Configuration Manager](#PreparingWindowsDeploymentServicesforZTIDeploymentsUsingConfigurationManager).  
+2. Optionally, prepare Windows Deployment Services to start the appropriate Windows PE images that will in turn start the ZTI deployment process to the target computers as described in [Preparing Windows Deployment Services for ZTI Deployments Using Configuration Manager](#PreparingWindowsDeploymentServicesforZTIDeploymentsUsingConfigurationManager).  
 
-3.  Create additional distribution points to help in larger deployments as described in [Managing Distribution Points in Configuration Manager](#ManagingDistributionPointsinConfigurationManager).  
+3. Create additional distribution points to help in larger deployments as described in [Managing Distribution Points in Configuration Manager](#ManagingDistributionPointsinConfigurationManager).  
 
-4.  Prepare the ZTI task sequences, the MDT configuration files, and the MDT DB for each deployment scenario as described in the following:  
+4. Prepare the ZTI task sequences, the MDT configuration files, and the MDT DB for each deployment scenario as described in the following:  
 
-    -   [Prepare for the ZTI New Computer Deployment Scenario to Target Computers Using Configuration Manager](#PreparefortheZTINewComputerDeploymentScenariotoTargetComputersUsingConfigurationManager)  
+   -   [Prepare for the ZTI New Computer Deployment Scenario to Target Computers Using Configuration Manager](#PreparefortheZTINewComputerDeploymentScenariotoTargetComputersUsingConfigurationManager)  
 
-    -   [Prepare for the ZTI Refresh Computer Deployment Scenario to Target Computers Using Configuration Manager](#PreparefortheZTIRefreshComputerDeploymentScenariotoTargetComputersUsingConfigurationManager)  
+   -   [Prepare for the ZTI Refresh Computer Deployment Scenario to Target Computers Using Configuration Manager](#PreparefortheZTIRefreshComputerDeploymentScenariotoTargetComputersUsingConfigurationManager)  
 
-    -   [Prepare for the ZTI Replace Computer Deployment Scenario to Target Computers Using Configuration Manager](#PreparefortheZTIReplaceComputerDeploymentScenariotoTargetComputersUsingConfigurationManager)  
+   -   [Prepare for the ZTI Replace Computer Deployment Scenario to Target Computers Using Configuration Manager](#PreparefortheZTIReplaceComputerDeploymentScenariotoTargetComputersUsingConfigurationManager)  
 
- Depending on the target computers in your organization, any combination of these deployments scenarios might be necessary. For more information about MDT deployment scenarios, see [Identifying Deployment Scenarios](#IdentifyingDeploymentScenarios).  
+   Depending on the target computers in your organization, any combination of these deployments scenarios might be necessary. For more information about MDT deployment scenarios, see [Identifying Deployment Scenarios](#IdentifyingDeploymentScenarios).  
 
 ####  <a name="PreparefortheZTINewComputerDeploymentScenariotoTargetComputersUsingConfigurationManager"></a> Prepare for the ZTI New Computer Deployment Scenario to Target Computers Using Configuration Manager  
  In the New Computer deployment scenario, you deploy a new installation of a Windows operating system to a new computer. There is no user migration information to save and restore and no existing file systems to preserve. Use the Client Task Sequence template to deploy the captured image of the reference computer to the target computer.  
@@ -5343,32 +5351,32 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 ##### To deploy the capture image of the reference computer to the target computers  
 
-1.  Add the target computer to the Configuration Manager site database:  
+1. Add the target computer to the Configuration Manager site database:  
 
-    -   Manually, as described in [Manually Adding Computers to the Site Database in Configuration Manager](#ManuallyAddingComputerstotheSiteDatabaseinConfigurationManager)  
+   -   Manually, as described in [Manually Adding Computers to the Site Database in Configuration Manager](#ManuallyAddingComputerstotheSiteDatabaseinConfigurationManager)  
 
-    -   Automatically as described in the section, “How to Manage Unknown Computer Deployments in Configuration Manager,” in the Configuration Manager Documentation Library, which is installed with Configuration Manager  
+   -   Automatically as described in the section, “How to Manage Unknown Computer Deployments in Configuration Manager,” in the Configuration Manager Documentation Library, which is installed with Configuration Manager  
 
-2.  Create a collection that contains the target computers as described in [Managing Computer Collections in Configuration Manager](#ManagingComputerCollectionsinConfigurationManager).  
+2. Create a collection that contains the target computers as described in [Managing Computer Collections in Configuration Manager](#ManagingComputerCollectionsinConfigurationManager).  
 
-    > [!NOTE]
-    >  Create a collection for each MDT deployment scenario to be performed, and ensure that the collection includes the target computers requiring the corresponding deployment scenario.  
+   > [!NOTE]
+   >  Create a collection for each MDT deployment scenario to be performed, and ensure that the collection includes the target computers requiring the corresponding deployment scenario.  
 
-3.  Deploy the task sequence to the target computers as described in [Managing Task Sequence Deployment in Configuration Manager](#ManagingTaskSequenceDeploymentinConfigurationManager).  
+3. Deploy the task sequence to the target computers as described in [Managing Task Sequence Deployment in Configuration Manager](#ManagingTaskSequenceDeploymentinConfigurationManager).  
 
-4.  Provide a method for starting the target computers by doing any combination of the following:  
+4. Provide a method for starting the target computers by doing any combination of the following:  
 
-    -   Create a task sequence bootable media disk using the Task Sequence Media Wizard as described in [Creating Task Sequence Bootable Media in Configuration Manager](#CreatingTaskSequenceBootableMediainConfigurationManager).  
+   -   Create a task sequence bootable media disk using the Task Sequence Media Wizard as described in [Creating Task Sequence Bootable Media in Configuration Manager](#CreatingTaskSequenceBootableMediainConfigurationManager).  
 
-    -   Prepare Windows Deployment Services to start the appropriate Windows PE images that will in turn start the ZTI deployment process to the target computers as described in [Preparing Windows Deployment Services for ZTI Deployments Using Configuration Manager](#PreparingWindowsDeploymentServicesforZTIDeploymentsUsingConfigurationManager).  
+   -   Prepare Windows Deployment Services to start the appropriate Windows PE images that will in turn start the ZTI deployment process to the target computers as described in [Preparing Windows Deployment Services for ZTI Deployments Using Configuration Manager](#PreparingWindowsDeploymentServicesforZTIDeploymentsUsingConfigurationManager).  
 
-5.  Deploy the captured reference computer image to the target computers for each deployment scenario as described in:  
+5. Deploy the captured reference computer image to the target computers for each deployment scenario as described in:  
 
-    -   [Deploy Captured Images to Target Computers in the ZTI New Computer Deployment Scenario Using Configuration Manager](#DeployCapturedImagestoTargetComputersintheZTINewComputerDeploymentScenarioUsingConfigurationManager)  
+   - [Deploy Captured Images to Target Computers in the ZTI New Computer Deployment Scenario Using Configuration Manager](#DeployCapturedImagestoTargetComputersintheZTINewComputerDeploymentScenarioUsingConfigurationManager)  
 
-    -   [Deploy Captured Images to Target Computers in the ZTI Refresh Computer Deployment Scenario Using Configuration Manager](#DeployCapturedImagestoTargetComputersintheZTINewComputerDeploymentScenarioUsingConfigurationManager)  
+   - [Deploy Captured Images to Target Computers in the ZTI Refresh Computer Deployment Scenario Using Configuration Manager](#DeployCapturedImagestoTargetComputersintheZTINewComputerDeploymentScenarioUsingConfigurationManager)  
 
-    -   [Deploy Captured Images to Target Computers in the Replace Computer Deployment Scenario Using Configuration Manager](#DeployCapturedImagestoTargetComputersintheZTINewComputerDeploymentScenarioUsingConfigurationManager)  
+   - [Deploy Captured Images to Target Computers in the Replace Computer Deployment Scenario Using Configuration Manager](#DeployCapturedImagestoTargetComputersintheZTINewComputerDeploymentScenarioUsingConfigurationManager)  
 
      Depending on the target computers in your organization, any combination of deployments scenarios might be necessary. For more information about the MDT deployment scenarios, see [Identifying Deployment Scenarios](#IdentifyingDeploymentScenarios).  
 
@@ -5403,13 +5411,13 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 ###### To deploy the capture images to the target computers in the Refresh Computer Deployment Scenario Using ZTI  
 
-1.  Run the Configuration Manager advertisement for capturing the Refresh Computer deployment scenario that you created earlier in the deployment process.  
+1. Run the Configuration Manager advertisement for capturing the Refresh Computer deployment scenario that you created earlier in the deployment process.  
 
-2.  Optionally, view the MDT deployment process using the Monitoring node in the Deployment Workbench or using the **Get-MDTMonitorData** cmdlet.  
+2. Optionally, view the MDT deployment process using the Monitoring node in the Deployment Workbench or using the **Get-MDTMonitorData** cmdlet.  
 
-     For more information about monitoring MDT deployments, see [View MDT Deployment Progress](#ViewMDTDeploymentProgress).  
+    For more information about monitoring MDT deployments, see [View MDT Deployment Progress](#ViewMDTDeploymentProgress).  
 
- The task sequence runs in the current operating system to capture user state migration data. The task sequence restarts the computer, starts Windows PE, and then initiates installation of the new operating system. Finally, the task sequence restarts the computer, starts the new operating system, restores the user state migration data, installs any packages, installs any applications, and performs any other actions configured in the task sequence. The target computer is now deployed.  
+   The task sequence runs in the current operating system to capture user state migration data. The task sequence restarts the computer, starts Windows PE, and then initiates installation of the new operating system. Finally, the task sequence restarts the computer, starts the new operating system, restores the user state migration data, installs any packages, installs any applications, and performs any other actions configured in the task sequence. The target computer is now deployed.  
 
 #### Deploy Captured Images to Target Computers in the Replace Computer Deployment Scenario Using Configuration Manager  
  The Replace Computer deployment scenario requires two separate steps to complete the migration. First, run the advertisement for the task sequence you created to capture the user state migration data from the existing target computer (old computer). Second, run the Task Sequence Wizard to deploy the captured image of the reference computer to the new target computer (new computer) and restore the user state saved earlier in the process.  
@@ -5425,13 +5433,13 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 ###### To deploy the capture images to the target computers in the Replace Computer Deployment Scenario Using Configuration Manager  
 
-1.  Run the Configuration Manager advertisement for capturing the Refresh Computer deployment scenario that you created earlier in the process.  
+1. Run the Configuration Manager advertisement for capturing the Refresh Computer deployment scenario that you created earlier in the process.  
 
-2.  Optionally, view the MDT deployment process using the Monitoring node in the Deployment Workbench or using the **Get-MDTMonitorData** cmdlet.  
+2. Optionally, view the MDT deployment process using the Monitoring node in the Deployment Workbench or using the **Get-MDTMonitorData** cmdlet.  
 
-     For more information about monitoring MDT deployments, see [View MDT Deployment Progress](#ViewMDTDeploymentProgress).  
+    For more information about monitoring MDT deployments, see [View MDT Deployment Progress](#ViewMDTDeploymentProgress).  
 
- The task sequence runs in the current operating system to capture user state migration data. At the end of the task sequence, the user state migration data of the existing target computer is saved to the Configuration Manager state migration point.  
+   The task sequence runs in the current operating system to capture user state migration data. At the end of the task sequence, the user state migration data of the existing target computer is saved to the Configuration Manager state migration point.  
 
 #####  <a name="DeploytheCapturedImagetotheNewTargetComputerwiththeUserStateMigrationDatafromtheExistingComputerUsingConfigurationManager"></a> Deploy the Captured Image to the New Target Computer with the User State Migration Data from the Existing Computer Using Configuration Manager  
  Start the target computer with the ZTI bootable media created earlier in the process or from Windows Deployment Services. The ZTI bootable media starts Windows PE on the target computer and initiates the ZTI. At the end of the deployment process, the captured image of the reference computer is deployed on the target computer, and the user state migration data is restored from the Configuration Manager state migration point.  
@@ -5609,11 +5617,11 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 ###  <a name="ManagingOperatingSystemsinConfigurationManager"></a> Managing Operating Systems in Configuration Manager  
  Manage operating systems in the Operating Systems node in the Software Library workspace. The operating systems are contained and managed in the following nodes beneath the Operating Systems node:  
 
--   **Operating System Installers**. This node contains operating systems that are used to deploy reference computers and are based on the install.wim file from the original operating system media.  
+- **Operating System Installers**. This node contains operating systems that are used to deploy reference computers and are based on the install.wim file from the original operating system media.  
 
--   **Operating System Images**. This node contains captured operating system images from reference computers and that are deployed to your target computers.  
+- **Operating System Images**. This node contains captured operating system images from reference computers and that are deployed to your target computers.  
 
- For more information about managing operating systems in the Configuration Manager console, see the section, “Configuring Configuration Manager for Operating System Deployments,” in the Configuration Manager Documentation Library, which is installed with Configuration Manager.  
+  For more information about managing operating systems in the Configuration Manager console, see the section, “Configuring Configuration Manager for Operating System Deployments,” in the Configuration Manager Documentation Library, which is installed with Configuration Manager.  
 
 ###  <a name="ManagingDeviceDriversinConfigurationManager"></a> Managing Device Drivers in Configuration Manager  
  Manage device drivers in the Configuration Manager console in Configuration Manager by:  
@@ -5679,31 +5687,31 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 ##### To create a ZTI boot image in Configuration Manager  
 
-1.  Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
+1. Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
-2.  In the Configuration Manager console, in the navigation pane, click **Software Library**.  
+2. In the Configuration Manager console, in the navigation pane, click **Software Library**.  
 
-3.  In the Software Library workspace, go to Overview/Operating Systems/Boot Images.  
+3. In the Software Library workspace, go to Overview/Operating Systems/Boot Images.  
 
-4.  On the Ribbon, on the **Home** tab, in the **Task Sequences** group, click **Create Boot Image using MDT**.  
+4. On the Ribbon, on the **Home** tab, in the **Task Sequences** group, click **Create Boot Image using MDT**.  
 
-     The Create Boot Image Using MDT Wizard starts.  
+    The Create Boot Image Using MDT Wizard starts.  
 
-5.  Complete the Create Boot Image Using MDT Wizard using the information in Table 124. Accept the default values unless otherwise specified.  
+5. Complete the Create Boot Image Using MDT Wizard using the information in Table 124. Accept the default values unless otherwise specified.  
 
-    ### Table 124. Information for Completing the Create Boot Image using MDT Wizard  
+   ### Table 124. Information for Completing the Create Boot Image using MDT Wizard  
 
-    |**On this wizard page** |**Do this** |  
-    |-----------------------------|-----------------|  
-    |**Package Source** |a. In **Package source folder to be created (UNC) path**, type ***unc_path*** (where *unc_path* is the fully qualified UNC path to the folder you want to use as the source for the boot image package).<br /><br /> The Configuration Manager service account must have permission to modify the contents of this UNC path to update the boot images. Ensure that the Configuration Manager service account has the appropriate permission on this network shared folder.<br /><br /> Alternatively, click **Browse** to find the network shared folder.<br /><br /> b. Click **Next**.|  
-    |**General Settings** |a. In **Name**, type ***package_name*** (where *package_name* is descriptive name displayed in the Configuration Manager Console).<br /><br /> b. In **Version**, type ***package_version*** (where *package_version* is version number that you want to assign to the package).<br /><br /> c. In **Comments**, type ***package_comments*** (where *package_comments* is text that describes the purpose of the boot image).<br /><br /> d. Click **Next**.|  
-    |**General Settings: Options** |a. In **Platform**, click ***platform*** (where *platform* is the platform architecture for the boot image—x86 or x64).<br /><br /> b. In **Scratch Space**, select ***scratch_space*** (where *scratch_space* is the amount of writeable space available on the Windows PE system volume when booted in ramdisk mode and is specified in MB).<br /><br /> c. Click **Next**.|  
-    |**General Settings: Components** |a. In **Platform**, click ***platform*** (where *platform* is the platform architecture for the boot image—x86 or x64).<br /><br /> b. Select or clear the ***component*** check box  (where component is the name of the component to be selected). If the check box is:<br /><br /> - Selected, the component is added to the boot image<br /><br /> - Cleared, the component is not added to the boot image<br /><br /> Scripting, HTA, XML, and WMI support are always added to the boot image.<br /><br /> c. Click **Next**.|  
-    |**Customization** |a. Select or clear the **Add prestart command files to enable the Deployment Wizard for this boot media** check box. If this check box is:<br /><br /> - Selected, the prestart command files are added to the boot image. In **Command line**, type the prestart command script to run, which defaults to ZTIMediaHook.wsf. In **Folder for prestart command files**, type ***unc_path*** (where *unc_path* is the fully qualified UNC path to a writable folder).<br /><br /> Alternatively, click **Browse** to find the folder in which the prestart command files reside.<br /><br /> - Cleared, the prestart command files are not added to the boot image.<br /><br /> b. Select or clear the **Add extra files to the new boot image** check box. If this check box is:<br /><br /> - Selected, the extra files are added to the boot image. In **Path**, type ***path*** (where *path* is the fully qualified or relative local or UNC path to a writable folder).<br /><br /> Alternatively, click **Browse** to find the folder in which the extra files reside.<br /><br /> - Cleared, the extra files are not added to the boot image.<br /><br /> c. In **Use a custom background bitmap file (UNC Path)**, type ***unc_path*** (where *unc_path* is the fully qualified UNC path to the bitmap file that you want to use as the background).<br /><br /> Alternatively, click **Browse** to find the bitmap file.<br /><br /> d. Select or clear the **Enable command support (F8)** check box.<br /><br /> e. Click **Next**.|  
-    |**Summary** |Review the information in **Details**, and then click **Next**.|  
-    |**Confirmation** |You can click **Save Output** to save the output of the wizard to a file. You can also click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Close**.|  
+   |**On this wizard page** |**Do this** |  
+   |-----------------------------|-----------------|  
+   |**Package Source** |a. In **Package source folder to be created (UNC) path**, type ***unc_path*** (where *unc_path* is the fully qualified UNC path to the folder you want to use as the source for the boot image package).<br /><br /> The Configuration Manager service account must have permission to modify the contents of this UNC path to update the boot images. Ensure that the Configuration Manager service account has the appropriate permission on this network shared folder.<br /><br /> Alternatively, click **Browse** to find the network shared folder.<br /><br /> b. Click **Next**.|  
+   |**General Settings** |a. In **Name**, type ***package_name*** (where *package_name* is descriptive name displayed in the Configuration Manager Console).<br /><br /> b. In **Version**, type ***package_version*** (where *package_version* is version number that you want to assign to the package).<br /><br /> c. In **Comments**, type ***package_comments*** (where *package_comments* is text that describes the purpose of the boot image).<br /><br /> d. Click **Next**.|  
+   |**General Settings: Options** |a. In **Platform**, click ***platform*** (where *platform* is the platform architecture for the boot image—x86 or x64).<br /><br /> b. In **Scratch Space**, select ***scratch_space*** (where *scratch_space* is the amount of writeable space available on the Windows PE system volume when booted in ramdisk mode and is specified in MB).<br /><br /> c. Click **Next**.|  
+   |**General Settings: Components** |a. In **Platform**, click ***platform*** (where *platform* is the platform architecture for the boot image—x86 or x64).<br /><br /> b. Select or clear the ***component*** check box  (where component is the name of the component to be selected). If the check box is:<br /><br /> - Selected, the component is added to the boot image<br /><br /> - Cleared, the component is not added to the boot image<br /><br /> Scripting, HTA, XML, and WMI support are always added to the boot image.<br /><br /> c. Click **Next**.|  
+   |**Customization** |a. Select or clear the **Add prestart command files to enable the Deployment Wizard for this boot media** check box. If this check box is:<br /><br /> - Selected, the prestart command files are added to the boot image. In **Command line**, type the prestart command script to run, which defaults to ZTIMediaHook.wsf. In **Folder for prestart command files**, type ***unc_path*** (where *unc_path* is the fully qualified UNC path to a writable folder).<br /><br /> Alternatively, click **Browse** to find the folder in which the prestart command files reside.<br /><br /> - Cleared, the prestart command files are not added to the boot image.<br /><br /> b. Select or clear the **Add extra files to the new boot image** check box. If this check box is:<br /><br /> - Selected, the extra files are added to the boot image. In **Path**, type ***path*** (where *path* is the fully qualified or relative local or UNC path to a writable folder).<br /><br /> Alternatively, click **Browse** to find the folder in which the extra files reside.<br /><br /> - Cleared, the extra files are not added to the boot image.<br /><br /> c. In **Use a custom background bitmap file (UNC Path)**, type ***unc_path*** (where *unc_path* is the fully qualified UNC path to the bitmap file that you want to use as the background).<br /><br /> Alternatively, click **Browse** to find the bitmap file.<br /><br /> d. Select or clear the **Enable command support (F8)** check box.<br /><br /> e. Click **Next**.|  
+   |**Summary** |Review the information in **Details**, and then click **Next**.|  
+   |**Confirmation** |You can click **Save Output** to save the output of the wizard to a file. You can also click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Close**.|  
 
- After the Create Boot Image using MDT Wizard finishes, the new boot image appears in the preview pane in the Configuration Manager console.  
+   After the Create Boot Image using MDT Wizard finishes, the new boot image appears in the preview pane in the Configuration Manager console.  
 
 ###  <a name="ManagingSoftwarePackagesinConfigurationManager"></a> Managing Software Packages in Configuration Manager  
  Manage software packages in the Configuration Manager console in Configuration Manager by:  
@@ -5725,52 +5733,52 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 ###### To create a Configuration Manager package that contains one or more language packs  
 
-1.  Create a folder that will contain the package source for the language pack (.cab file).  
+1. Create a folder that will contain the package source for the language pack (.cab file).  
 
-    > [!NOTE]
-    >  Create this folder where previously created packages are stored or where space is available.  
+   > [!NOTE]
+   >  Create this folder where previously created packages are stored or where space is available.  
 
-2.  Create a subfolder beneath the folder you created in step 1 for the language pack (.cab file).  
+2. Create a subfolder beneath the folder you created in step 1 for the language pack (.cab file).  
 
-3.  Add the language pack (.cab file) downloaded from Microsoft into the subfolder created in step 2.  
+3. Add the language pack (.cab file) downloaded from Microsoft into the subfolder created in step 2.  
 
-    > [!NOTE]
-    >  Language packs already in .cab format are available for download from the Microsoft Volume Licensing website.  
+   > [!NOTE]
+   >  Language packs already in .cab format are available for download from the Microsoft Volume Licensing website.  
 
-4.  Repeat steps 2 and 3 for each language pack that you want to be a part of the package.  
+4. Repeat steps 2 and 3 for each language pack that you want to be a part of the package.  
 
-5.  Run the **New Package Wizard** in the Configuration Manager console, ensuring the following options are selected during the wizard:  
+5. Run the **New Package Wizard** in the Configuration Manager console, ensuring the following options are selected during the wizard:  
 
-    -   On the **Data Source** wizard page, click **This package contains source files**, and then click **Set** to set the source directory to the folder you created in step 1.  
+   - On the **Data Source** wizard page, click **This package contains source files**, and then click **Set** to set the source directory to the folder you created in step 1.  
 
-    -   On the **Data Source** wizard page, select the **Enable binary differential replication** check box.  
+   - On the **Data Source** wizard page, select the **Enable binary differential replication** check box.  
 
      For more information about how to create a Configuration Manager package, see the section, “How to Create a Package and Program by using the Create Package and Program Wizard ,” in the Configuration Manager Documentation Library, which is installed with Configuration Manager.  
 
- **To add language packs offline to Windows**  
+   **To add language packs offline to Windows**  
 
 > [!NOTE]
 >  When used with MDT, the term *offline* means that the computer is booted into Windows PE, and thus the image can be modified offline—not in the currently booted operating system.  
 
-1.  Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
+1. Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
-2.  In the Configuration Manager console, in the navigation pane, click **Software Library**.  
+2. In the Configuration Manager console, in the navigation pane, click **Software Library**.  
 
-3.  In the Software Library workspace, go to Overview/Operating Systems/Task Sequences.  
+3. In the Software Library workspace, go to Overview/Operating Systems/Task Sequences.  
 
-4.  In the preview pane, click ***task_sequence*** (where *task_sequence* is the name of the task sequence for which you want to add the language pack).  
+4. In the preview pane, click ***task_sequence*** (where *task_sequence* is the name of the task sequence for which you want to add the language pack).  
 
-5.  On the Ribbon, on the **Home** tab, in the **Task Sequences** group, click **Edit**.  
+5. On the Ribbon, on the **Home** tab, in the **Task Sequences** group, click **Edit**.  
 
-     The ***task_sequence_name*** **Task Sequence Editor** dialog box opens (where *task_sequence_name* is the name of the task sequence to which you want to add language packs offline).  
+    The ***task_sequence_name*** **Task Sequence Editor** dialog box opens (where *task_sequence_name* is the name of the task sequence to which you want to add language packs offline).  
 
-6.  In the ***task_sequence_name*** **ask Sequence Editor** dialog box, under the **Postinstall** phase, go to the **Setup Windows and ConfigMgr** task.  
+6. In the ***task_sequence_name*** **ask Sequence Editor** dialog box, under the **Postinstall** phase, go to the **Setup Windows and ConfigMgr** task.  
 
-7.  Click the task immediately above this task so that the new added task will be positioned immediately before the **Setup Windows and ConfigMgr** task.  
+7. Click the task immediately above this task so that the new added task will be positioned immediately before the **Setup Windows and ConfigMgr** task.  
 
-8.  On the menu bar, click **Add**, click **MDT**, and then click **Install Language Packs Offline**.  
+8. On the menu bar, click **Add**, click **MDT**, and then click **Install Language Packs Offline**.  
 
-     The **Install Language Packs Offline** task sequence step is added to the task sequence.  
+    The **Install Language Packs Offline** task sequence step is added to the task sequence.  
 
 9. On the **Properties** tab of the newly added task sequence step, type the relevant information in the **Name** and **Description** boxes.  
 
@@ -5782,7 +5790,7 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 12. In the ***task_sequence_name*** **Task Sequence Editor** dialog box, click **OK**.  
 
- **To add language packs online to Windows**  
+    **To add language packs online to Windows**  
 
 > [!NOTE]
 >  When used in MDT, the term *online* means that the computer is booted into an operating system but run as an Administrator user so that final configurations can be made to the running operating system.  
@@ -5828,28 +5836,28 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 ###### To add offline updates to Windows  
 
-1.  Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
+1. Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
-2.  In the Configuration Manager console, in the navigation pane, click **Software Library**.  
+2. In the Configuration Manager console, in the navigation pane, click **Software Library**.  
 
-3.  In the Software Library workspace, go to Overview/Operating Systems/Task Sequences  
+3. In the Software Library workspace, go to Overview/Operating Systems/Task Sequences  
 
-4.  In the preview pane, click ***task_sequence*** (where *task_sequence* is the name of the task sequence for which you want to add the language pack).  
+4. In the preview pane, click ***task_sequence*** (where *task_sequence* is the name of the task sequence for which you want to add the language pack).  
 
-5.  On the Ribbon, on the **Home** tab, in the **Task Sequences** group, click **Edit**.  
+5. On the Ribbon, on the **Home** tab, in the **Task Sequences** group, click **Edit**.  
 
-     The ***task_sequence_name*** **Task Sequence Editor** dialog box opens (where *task_sequence_name* is the name of the task sequence to which you want to add language packs offline).  
+    The ***task_sequence_name*** **Task Sequence Editor** dialog box opens (where *task_sequence_name* is the name of the task sequence to which you want to add language packs offline).  
 
-6.  In the ***task_sequence_name*** **Task Sequence Editor** dialog box, under the **Postinstall** phase, go to the **Setup Windows and ConfigMgr** task.  
+6. In the ***task_sequence_name*** **Task Sequence Editor** dialog box, under the **Postinstall** phase, go to the **Setup Windows and ConfigMgr** task.  
 
-7.  Click the task immediately above this task so that the new added task will be positioned just above the **Setup Windows and ConfigMgr** task.  
+7. Click the task immediately above this task so that the new added task will be positioned just above the **Setup Windows and ConfigMgr** task.  
 
-    > [!NOTE]
-    >  Only updates in CAB files are supported using the **Install Updates Offline** task sequence type. Other formats of update files are ignore, such as MSI, MSP, or executable (.exe) files.  
+   > [!NOTE]
+   >  Only updates in CAB files are supported using the **Install Updates Offline** task sequence type. Other formats of update files are ignore, such as MSI, MSP, or executable (.exe) files.  
 
-8.  On the menu bar, click **Add**, click **MDT**, and then click **Install Updates Offline**.  
+8. On the menu bar, click **Add**, click **MDT**, and then click **Install Updates Offline**.  
 
-     The **Install Updates Offline** task sequence step is added to the task sequence.  
+    The **Install Updates Offline** task sequence step is added to the task sequence.  
 
 9. On the **Properties** tab of the newly added task sequence step, type the relevant information in the **Name** and **Description** boxes.  
 
@@ -5859,7 +5867,7 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 12. In the ***task_sequence_name*** **Task Sequence Editor** dialog box, click **OK**.  
 
- **To add online updates to Windows**  
+    **To add online updates to Windows**  
 
 > [!NOTE]
 >  The task sequence templates in MDT include the **Install Software Updates** task sequence step to perform online updates. This step is only necessary when creating custom task sequences.  
@@ -5928,28 +5936,28 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 ###  <a name="ConfiguringZTITaskSequenceStepsinConfigurationManager"></a> Configuring ZTI Task Sequence Steps in Configuration Manager  
  After you create a ZTI task sequence using the Create MDT Task Sequence Wizard in Configuration Manager, you can customize it using the Configuration Manager console. The Configuration Manager console allows you to:  
 
--   Add new task sequence steps  
+- Add new task sequence steps  
 
--   Modify existing task sequence steps  
+- Modify existing task sequence steps  
 
--   Delete existing task sequence steps  
+- Delete existing task sequence steps  
 
- You perform these tasks using the standard methods available in the Configuration Manager console. For more information about:  
+  You perform these tasks using the standard methods available in the Configuration Manager console. For more information about:  
 
--   Configuring ZTI task sequence steps using the Configuration Manager console in Configuration Manager, see the section, “How to Edit an Existing Task Sequence,” in the section, “How to Manage Task Sequences in Configuration Manager,” in the Configuration Manager Documentation Library, which is installed with Configuration Manager.  
+- Configuring ZTI task sequence steps using the Configuration Manager console in Configuration Manager, see the section, “How to Edit an Existing Task Sequence,” in the section, “How to Manage Task Sequences in Configuration Manager,” in the Configuration Manager Documentation Library, which is installed with Configuration Manager.  
 
--   Task sequences, see the section, “Planning a Task Sequences Strategy in Configuration Manager,” in the Configuration Manager Documentation Library, which is installed with Configuration Manager.  
+- Task sequences, see the section, “Planning a Task Sequences Strategy in Configuration Manager,” in the Configuration Manager Documentation Library, which is installed with Configuration Manager.  
 
 ###  <a name="ConfiguringZTIServerRoleTaskSequenceStepsinConfigurationManager"></a> Configuring ZTI Server Role Task Sequence Steps in Configuration Manager  
  ZTI can help automate the deployment of server roles in Windows Server. Configure ZTI task sequence steps in Configuration Manager to deploy the supported server roles, which include:  
 
--   AD DS  
+- AD DS  
 
--   DNS Server  
+- DNS Server  
 
--   DHCP Server  
+- DHCP Server  
 
- The process for configuring the server role task sequence steps is similar for ZTI and LTI. For more information about configuring server role task sequence steps for ZTI in Configuration Manager, see [Configuring Server Role Task Sequence Steps](#ConfiguringServerRoleTaskSequenceSteps).  
+  The process for configuring the server role task sequence steps is similar for ZTI and LTI. For more information about configuring server role task sequence steps for ZTI in Configuration Manager, see [Configuring Server Role Task Sequence Steps](#ConfiguringServerRoleTaskSequenceSteps).  
 
 ##  <a name="PerformingUDIDeployments"></a> Performing UDI Deployments  
  You perform UDI deployments in MDT using Configuration Manager within an AD DS domain, within a Windows workgroup, or from removable media.  
@@ -5981,11 +5989,11 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
  Review the overview information about UDI deployments in the subsequent sections:  
 
--   [Overview of UDI in MDT Deployment Scenarios](#OverviewofUDIinMDTDeploymentScenarios)  
+- [Overview of UDI in MDT Deployment Scenarios](#OverviewofUDIinMDTDeploymentScenarios)  
 
--   [Overview of Built-in UDI Components](#OverviewofBuiltinUDIComponents)  
+- [Overview of Built-in UDI Components](#OverviewofBuiltinUDIComponents)  
 
- Table 135 lists additional content resources for UDI administration and development.  
+  Table 135 lists additional content resources for UDI administration and development.  
 
 ### Table 135. Additional Content Resources for UDI Administration and Development  
 
@@ -6011,32 +6019,32 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
  The UDI Wizard is run by the **UDI Wizard** task sequence step in these task sequences at the appropriate place in the task sequence. To identify how UDI performs each of the MDT deployment scenarios, see the subsequent sections:  
 
--   [UDI in the New Computer Deployment Scenario](#UDIintheNewComputerDeploymentScenario)  
+- [UDI in the New Computer Deployment Scenario](#UDIintheNewComputerDeploymentScenario)  
 
--   [UDI in the Refresh Computer Deployment Scenario](#UDIintheRefreshComputerDeploymentScenario)  
+- [UDI in the Refresh Computer Deployment Scenario](#UDIintheRefreshComputerDeploymentScenario)  
 
--   [UDI in the Replace Computer Deployment Scenario](#UDIintheReplaceComputerDeploymentScenario)  
+- [UDI in the Replace Computer Deployment Scenario](#UDIintheReplaceComputerDeploymentScenario)  
 
- For more details about how UDI operates in each of these MDT deployment scenarios, see the corresponding sections in "UDI Stage Reference" in *Microsoft Deployment Toolkit Reference*.  
+  For more details about how UDI operates in each of these MDT deployment scenarios, see the corresponding sections in "UDI Stage Reference" in *Microsoft Deployment Toolkit Reference*.  
 
 #####  <a name="UDIintheNewComputerDeploymentScenario"></a> UDI in the New Computer Deployment Scenario  
  For the New Computer Deployment Wizard, the operating system images can be in the following locations:  
 
--   **On a distribution point**. This method uses the traditional OSD deployment methodology in Configuration Manager.  
+- **On a distribution point**. This method uses the traditional OSD deployment methodology in Configuration Manager.  
 
--   **On a local disk on the target computer**. This method leverages the prestaged media feature in Configuration Manager.  
+- **On a local disk on the target computer**. This method leverages the prestaged media feature in Configuration Manager.  
 
- Task sequences created using the **User Driven Installation Task Sequence** task sequence template automatically detect which method to use and perform the deployment accordingly. The New Computer deployment scenario always begins with the target computer running Windows PE, which is how the tasks sequence knows the difference between the New Computer deployment scenario and the Refresh Computer deployments scenario. Figure 2 illustrates how UDI is used in the New Computer deployment scenario using the traditional OSD deployment methodology in Configuration Manager with the operating system image located on a distribution point.  
+  Task sequences created using the **User Driven Installation Task Sequence** task sequence template automatically detect which method to use and perform the deployment accordingly. The New Computer deployment scenario always begins with the target computer running Windows PE, which is how the tasks sequence knows the difference between the New Computer deployment scenario and the Refresh Computer deployments scenario. Figure 2 illustrates how UDI is used in the New Computer deployment scenario using the traditional OSD deployment methodology in Configuration Manager with the operating system image located on a distribution point.  
 
- ![MDTDevToolkit2](media/MDTDevToolkit2.jpg "MDTDevToolkit2")  
+  ![MDTDevToolkit2](media/MDTDevToolkit2.jpg "MDTDevToolkit2")  
 
- **Figure 2. Process flow for UDI performing the New Computer deployment scenario for images stored on distribution points**  
+  **Figure 2. Process flow for UDI performing the New Computer deployment scenario for images stored on distribution points**  
 
- Figure 3 illustrates how UDI is used in the New Computer deployment scenario using the prestaged media feature in Configuration Manager with the operating system image located on a local disk on the target computer.  
+  Figure 3 illustrates how UDI is used in the New Computer deployment scenario using the prestaged media feature in Configuration Manager with the operating system image located on a local disk on the target computer.  
 
- ![MDTDevToolkit3](media/MDTDevToolkit3.jpg "MDTDevToolkit3")  
+  ![MDTDevToolkit3](media/MDTDevToolkit3.jpg "MDTDevToolkit3")  
 
- **Figure 3. Process flow for UDI performing the New Computer deployment scenario for prestaged media**  
+  **Figure 3. Process flow for UDI performing the New Computer deployment scenario for prestaged media**  
 
 #####  <a name="UDIintheRefreshComputerDeploymentScenario"></a> UDI in the Refresh Computer Deployment Scenario  
  Task sequences used to perform the Refresh Computer scenario use the same task sequence template as the New Computer scenario, the **User Driven Installation Task Sequence** task sequence template. The Refresh Computer deployment scenario always begins with the target computer running the existing Windows operating system, which is how the tasks sequence knows the difference between the Refresh Computer deployment scenario and the New Computer deployments scenario. Figure 4 illustrates how UDI is used in the Refresh Computer deployment scenario.  
@@ -6048,30 +6056,30 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 #####  <a name="UDIintheReplaceComputerDeploymentScenario"></a> UDI in the Replace Computer Deployment Scenario  
  The Replace Computer scenario requires the following task sequences.  
 
--   A task sequence created using the **User Driven Installation Replace Task Sequence** task sequence template. This task sequence is run first on the existing computer and is used to capture user state migration data to a network shared folder or to a USB disk that is attached to the existing computer.  
+- A task sequence created using the **User Driven Installation Replace Task Sequence** task sequence template. This task sequence is run first on the existing computer and is used to capture user state migration data to a network shared folder or to a USB disk that is attached to the existing computer.  
 
--   A task sequence created using the **User Driven Installation Task Sequence** task sequence template. This task sequence is run second on the replacement computer and is used to install the operating system, install the applications, and to restore user state migration data saved by the task sequence run on the existing computer.  
+- A task sequence created using the **User Driven Installation Task Sequence** task sequence template. This task sequence is run second on the replacement computer and is used to install the operating system, install the applications, and to restore user state migration data saved by the task sequence run on the existing computer.  
 
   Figure 5 illustrates how UDI is used in the Replace Computer deployment scenario.  
 
- ![MDTDevToolkit5](media/MDTDevToolkit5.jpg "MDTDevToolkit5")  
+  ![MDTDevToolkit5](media/MDTDevToolkit5.jpg "MDTDevToolkit5")  
 
- **Figure 5. Process flow for UDI performing the Replace Computer deployment scenario**  
+  **Figure 5. Process flow for UDI performing the Replace Computer deployment scenario**  
 
 ####  <a name="OverviewofBuiltinUDIComponents"></a> Overview of Built-in UDI Components  
  UDI comes with built-in Configuration Manager task sequences, stage groups, stages, tasks, validators, and wizard pages that can perform most common deployment scenarios without the assistance of a developer. These built-in components can be configured using the UDI Wizard Designer:  
 
  For more information about the built-in UDI components, see the following sections in the *Microsoft Deployment Toolkit Reference*:  
 
--   "UDI Stage Reference"  
+- "UDI Stage Reference"  
 
--   "UDI Wizard Page Reference"  
+- "UDI Wizard Page Reference"  
 
--   "UDI Task Reference"  
+- "UDI Task Reference"  
 
--   "UDI Validator Reference"  
+- "UDI Validator Reference"  
 
- In addition to these built-in components, you can create custom wizard pages, wizard page editors, tasks, and validators using the UDI software development kit (SDK). The UDI SDK is installed with MDT and contains example solutions for Microsoft Visual Studio 2010. For more information about extending UDI using the UDI SDK, see the MDT document *User-Driven Installation Developers Guide*.  
+  In addition to these built-in components, you can create custom wizard pages, wizard page editors, tasks, and validators using the UDI software development kit (SDK). The UDI SDK is installed with MDT and contains example solutions for Microsoft Visual Studio 2010. For more information about extending UDI using the UDI SDK, see the MDT document *User-Driven Installation Developers Guide*.  
 
 ###  <a name="PreparingtheUDIDeploymentEnvironment"></a> Preparing the UDI Deployment Environment  
  After you have prepared the prerequisite infrastructure for MDT, you are ready to prepare the MDT deployment environment for UDI.  
@@ -6139,20 +6147,20 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 > [!NOTE]
 >  The Configuration Manager console should be closed when performing this procedure.  
 
--   Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Configure ConfigMgr Integration**.  
+- Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Configure ConfigMgr Integration**.  
 
-     The Configure ConfigMgr Integration Wizard starts.  
+   The Configure ConfigMgr Integration Wizard starts.  
 
--   Complete the Configure ConfigMgr Integration Wizard using the information in Table 137. Accept the default values unless otherwise specified.  
+- Complete the Configure ConfigMgr Integration Wizard using the information in Table 137. Accept the default values unless otherwise specified.  
 
-    ### Table 137. Information for Completing the Configure ConfigMgr Integration Wizard  
+  ### Table 137. Information for Completing the Configure ConfigMgr Integration Wizard  
 
-    |**On this wizard page** |**Do this** |  
-    |-----------------------------|-----------------|  
-    |**Options** |1. Verify that the **Install the MDT console extensions for System Center 2012 R2 Configuration Manager** check box is selected.<br /><br /> 2. Verify that the **Add the MDT task sequence actions to a System Center 2012 R2 Configuration Manager server** check box is selected.<br /><br /> 3. In **Site server name**, type ***ConfigMgr_server_name*** (where *ConfigMgr_server_name* is the name of the Configuration Manager server on which to install MDT integration).<br /><br /> 4. In **Site code**, type ***ConfigMgr_site_code*** (where *ConfigMgr_site_code* is the Configuration Manager site code that installs MDT integration).<br /><br /> 5. Click **Next**.<br /><br /> The Site Server Name and Site Code fields will be automatically populated with the most recent connection details if the Configuration Manager console has been opened once.|  
-    |**Confirmation** |Click **Finish**.|  
+  |**On this wizard page** |**Do this** |  
+  |-----------------------------|-----------------|  
+  |**Options** |1. Verify that the **Install the MDT console extensions for System Center 2012 R2 Configuration Manager** check box is selected.<br /><br /> 2. Verify that the **Add the MDT task sequence actions to a System Center 2012 R2 Configuration Manager server** check box is selected.<br /><br /> 3. In **Site server name**, type ***ConfigMgr_server_name*** (where *ConfigMgr_server_name* is the name of the Configuration Manager server on which to install MDT integration).<br /><br /> 4. In **Site code**, type ***ConfigMgr_site_code*** (where *ConfigMgr_site_code* is the Configuration Manager site code that installs MDT integration).<br /><br /> 5. Click **Next**.<br /><br /> The Site Server Name and Site Code fields will be automatically populated with the most recent connection details if the Configuration Manager console has been opened once.|  
+  |**Confirmation** |Click **Finish**.|  
 
- The Configure ConfigMgr Integration Wizard finishes, and MDT is integrated with Configuration Manager.  
+  The Configure ConfigMgr Integration Wizard finishes, and MDT is integrated with Configuration Manager.  
 
 ###  <a name="PreparingforUDIDeploymenttotheReferenceComputer"></a> Preparing for UDI Deployment to the Reference Computer  
  Regardless of the MDT deployment scenario you are performing using UDI, always start by creating a reference computer, and then capturing an image of that computer. Later in the MDT deployment process, you will deploy the captured image of your reference computer to the appropriate target computers. In addition, you can use existing operating system images in WIM format.  
@@ -6211,19 +6219,19 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 ##### To prepare for UDI deployment to target computers  
 
-1.  Prepare network shares for storing migration data and MDT deployment logs as described in [Preparing the MDT Migration Resources](#PreparingtheMDTMigrationResources).  
+1. Prepare network shares for storing migration data and MDT deployment logs as described in [Preparing the MDT Migration Resources](#PreparingtheMDTMigrationResources).  
 
-2.  Optionally, prepare Windows Deployment Services to start the appropriate Windows PE images that will in turn start the UDI deployment process to the target computers as described in [Preparing Windows Deployment Services for UDI Deployments](#PreparingWindowsDeploymentServicesforUDIDeployments).  
+2. Optionally, prepare Windows Deployment Services to start the appropriate Windows PE images that will in turn start the UDI deployment process to the target computers as described in [Preparing Windows Deployment Services for UDI Deployments](#PreparingWindowsDeploymentServicesforUDIDeployments).  
 
-3.  Create additional distribution points to help in larger deployments as described in [Managing Distribution Points in Configuration Manager](#ManagingDistributionPointsinConfigurationManager), which is the same process for UDI and ZTI deployments.  
+3. Create additional distribution points to help in larger deployments as described in [Managing Distribution Points in Configuration Manager](#ManagingDistributionPointsinConfigurationManager), which is the same process for UDI and ZTI deployments.  
 
-4.  Prepare the UDI task sequences, the MDT configuration files, the UDI Wizard configuration files, and the MDT DB for each deployment scenario as described in the following sections:  
+4. Prepare the UDI task sequences, the MDT configuration files, the UDI Wizard configuration files, and the MDT DB for each deployment scenario as described in the following sections:  
 
-    -   [Prepare for the New Computer Deployment Scenario to Target Computers Using UDI](#PreparefortheNewComputerDeploymentScenariotoTargetComputersUsingUDI)  
+   - [Prepare for the New Computer Deployment Scenario to Target Computers Using UDI](#PreparefortheNewComputerDeploymentScenariotoTargetComputersUsingUDI)  
 
-    -   [Prepare for the Refresh Computer Deployment Scenario to Target Computers Using UDI](#PreparefortheRefreshComputerDeploymentScenariotoTargetComputersUsingUDI)  
+   - [Prepare for the Refresh Computer Deployment Scenario to Target Computers Using UDI](#PreparefortheRefreshComputerDeploymentScenariotoTargetComputersUsingUDI)  
 
-    -   [Prepare for the Replace Computer Deployment Scenario to Target Computers Using UDI](#PreparefortheReplaceComputerDeploymentScenariotoTargetComputersUsingUDI)  
+   - [Prepare for the Replace Computer Deployment Scenario to Target Computers Using UDI](#PreparefortheReplaceComputerDeploymentScenariotoTargetComputersUsingUDI)  
 
      Depending on the target computers in your organization, any combination of these deployments scenarios might be necessary. For more information about MDT deployment scenarios, see [Identifying Deployment Scenarios](#IdentifyingDeploymentScenarios).  
 
@@ -6390,35 +6398,35 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 ##### To deploy the capture image of the reference computer to the target computers using UDI  
 
-1.  Add the target computer to the Configuration Manager site database:  
+1. Add the target computer to the Configuration Manager site database:  
 
-    -   Manually, as described in [Manually Adding Computers to the Site Database in Configuration Manager](#ManuallyAddingComputerstotheSiteDatabaseinConfigurationManager), which is the same process for UDI and ZTI deployments.  
+   -   Manually, as described in [Manually Adding Computers to the Site Database in Configuration Manager](#ManuallyAddingComputerstotheSiteDatabaseinConfigurationManager), which is the same process for UDI and ZTI deployments.  
 
-    -   Automatically in Configuration Manager as described in the section, “How to Manage Unknown Computer Deployments in Configuration Manager,” in the Configuration Manager Documentation Library, which is installed with Configuration Manager.  
+   -   Automatically in Configuration Manager as described in the section, “How to Manage Unknown Computer Deployments in Configuration Manager,” in the Configuration Manager Documentation Library, which is installed with Configuration Manager.  
 
-    > [!NOTE]
-    >  If the target computers already exist in the Configuration Manager Site database, then this step is not necessary.  
+   > [!NOTE]
+   >  If the target computers already exist in the Configuration Manager Site database, then this step is not necessary.  
 
-2.  Create a collection that contains the target computers as described in [Managing Computer Collections in Configuration Manager](#ManagingComputerCollectionsinConfigurationManager), which is the same process for UDI and ZTI deployments.  
+2. Create a collection that contains the target computers as described in [Managing Computer Collections in Configuration Manager](#ManagingComputerCollectionsinConfigurationManager), which is the same process for UDI and ZTI deployments.  
 
-    > [!NOTE]
-    >  Create a collection for each MDT deployment scenario to be performed, and ensure that the collection includes the target computers requiring the corresponding deployment scenario.  
+   > [!NOTE]
+   >  Create a collection for each MDT deployment scenario to be performed, and ensure that the collection includes the target computers requiring the corresponding deployment scenario.  
 
-3.  Create an advertisement for the target computer task sequences as described in [Managing Task Sequence Deployment in Configuration Manager](#ManagingTaskSequenceDeploymentinConfigurationManager), which is the same process for UDI and ZTI deployments.  
+3. Create an advertisement for the target computer task sequences as described in [Managing Task Sequence Deployment in Configuration Manager](#ManagingTaskSequenceDeploymentinConfigurationManager), which is the same process for UDI and ZTI deployments.  
 
-4.  Provide a method for starting the target computers by doing any combination of the following:  
+4. Provide a method for starting the target computers by doing any combination of the following:  
 
-    -   Create a task sequence bootable media disk using the Task Sequence Media Wizard as described in [Creating Task Sequence Bootable Media in Configuration Manager](#CreatingTaskSequenceBootableMediainConfigurationManager), which is the same process for UDI and ZTI deployments.  
+   -   Create a task sequence bootable media disk using the Task Sequence Media Wizard as described in [Creating Task Sequence Bootable Media in Configuration Manager](#CreatingTaskSequenceBootableMediainConfigurationManager), which is the same process for UDI and ZTI deployments.  
 
-    -   Prepare Windows Deployment Services to start the appropriate Windows PE images that will in turn start the UDI deployment process to the target computers as described in [Preparing Windows Deployment Services for ZTI Deployments Using Configuration Manager](#PreparingWindowsDeploymentServicesforZTIDeploymentsUsingConfigurationManager), which is the same process for UDI and ZTI deployments.  
+   -   Prepare Windows Deployment Services to start the appropriate Windows PE images that will in turn start the UDI deployment process to the target computers as described in [Preparing Windows Deployment Services for ZTI Deployments Using Configuration Manager](#PreparingWindowsDeploymentServicesforZTIDeploymentsUsingConfigurationManager), which is the same process for UDI and ZTI deployments.  
 
-5.  Deploy the captured reference computer image to the target computers for each deployment scenario as described in:  
+5. Deploy the captured reference computer image to the target computers for each deployment scenario as described in:  
 
-    -   [Deploy Captured Images to Target Computers in the New Computer Deployment Scenario Using UDI](#DeployCapturedImagestoTargetComputersintheNewComputerDeploymentScenarioUsingUDI)  
+   - [Deploy Captured Images to Target Computers in the New Computer Deployment Scenario Using UDI](#DeployCapturedImagestoTargetComputersintheNewComputerDeploymentScenarioUsingUDI)  
 
-    -   [Deploy Captured Images to Target Computers in the Refresh Computer Deployment Scenario Using UDI](#DeployCapturedImagestoTargetComputersintheRefreshComputerDeploymentScenarioUsingUDI)  
+   - [Deploy Captured Images to Target Computers in the Refresh Computer Deployment Scenario Using UDI](#DeployCapturedImagestoTargetComputersintheRefreshComputerDeploymentScenarioUsingUDI)  
 
-    -   [Deploy Captured Images to Target Computers in the Replace Computer Deployment Scenario Using UDI](#DeployCapturedImagestoTargetComputersintheReplaceComputerDeploymentScenarioUsingUDI)  
+   - [Deploy Captured Images to Target Computers in the Replace Computer Deployment Scenario Using UDI](#DeployCapturedImagestoTargetComputersintheReplaceComputerDeploymentScenarioUsingUDI)  
 
      Depending on the target computers in your organization, any combination of deployments scenarios might be necessary. For more information about the MDT deployment scenarios, see [Identifying Deployment Scenarios](#IdentifyingDeploymentScenarios).  
 
@@ -6455,17 +6463,17 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 ###### To deploy the capture images to the target computers in the Refresh Computer Deployment Scenario Using UDI  
 
-1.  On the target computer, run the Configuration Manager deployment (advertisement) for capturing the Refresh Computer deployment scenario that you created earlier in the deployment process.  
+1. On the target computer, run the Configuration Manager deployment (advertisement) for capturing the Refresh Computer deployment scenario that you created earlier in the deployment process.  
 
-     The task sequence starts. Eventually, the task sequence starts the UDI Wizard.  
+    The task sequence starts. Eventually, the task sequence starts the UDI Wizard.  
 
-2.  Complete the UDI Wizard by selecting the appropriate values on the wizard pages for your organization’s requirements, as described in [Running the UDI Wizard](#RunningtheUDIWizard).  
+2. Complete the UDI Wizard by selecting the appropriate values on the wizard pages for your organization’s requirements, as described in [Running the UDI Wizard](#RunningtheUDIWizard).  
 
-3.  Optionally, view the MDT deployment process using the Monitoring node in the Deployment Workbench or using the **Get-MDTMonitorData** cmdlet.  
+3. Optionally, view the MDT deployment process using the Monitoring node in the Deployment Workbench or using the **Get-MDTMonitorData** cmdlet.  
 
-     For more information about monitoring MDT deployments, see [View MDT Deployment Progress](#ViewMDTDeploymentProgress).  
+    For more information about monitoring MDT deployments, see [View MDT Deployment Progress](#ViewMDTDeploymentProgress).  
 
- The task sequence runs in Windows PE to capture user state migration data. The task sequence restarts the computer, starts Windows PE, and then initiates installation of the new operating system. The task sequence restarts the computer, starts the new operating system, restores the user state migration data, installs any packages, installs any applications, and performs any other actions configured in the task sequence. Finally, the OSD Results program, OSDResults.exe, runs and displays the results of the deployment. The target computer is now deployed.  
+   The task sequence runs in Windows PE to capture user state migration data. The task sequence restarts the computer, starts Windows PE, and then initiates installation of the new operating system. The task sequence restarts the computer, starts the new operating system, restores the user state migration data, installs any packages, installs any applications, and performs any other actions configured in the task sequence. Finally, the OSD Results program, OSDResults.exe, runs and displays the results of the deployment. The target computer is now deployed.  
 
 ####  <a name="DeployCapturedImagestoTargetComputersintheReplaceComputerDeploymentScenarioUsingUDI"></a> Deploy Captured Images to Target Computers in the Replace Computer Deployment Scenario Using UDI  
  The Replace Computer deployment scenario requires two separate steps to complete the migration. First, run the deployment (advertisement) for the task sequence you created to capture the user state migration data from the existing target computer (old computer). Second, run the UDI Wizard to deploy the captured image of the reference computer to the new target computer (new computer) and restore the user state saved earlier in the process.  
@@ -6481,43 +6489,43 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 ###### To save the user state migration data from the existing target computers in the Replace Computer Deployment Scenario using UDI  
 
-1.  Run the task sequence deployment (advertisement) for capturing user state migration data that you created earlier in the process Refresh Computer deployment scenario.  
+1. Run the task sequence deployment (advertisement) for capturing user state migration data that you created earlier in the process Refresh Computer deployment scenario.  
 
-2.  Optionally, view the MDT deployment process using the Monitoring node in the Deployment Workbench or using the **Get-MDTMonitorData** cmdlet.  
+2. Optionally, view the MDT deployment process using the Monitoring node in the Deployment Workbench or using the **Get-MDTMonitorData** cmdlet.  
 
-     For more information about monitoring MDT deployments, see [View MDT Deployment Progress](#ViewMDTDeploymentProgress).  
+    For more information about monitoring MDT deployments, see [View MDT Deployment Progress](#ViewMDTDeploymentProgress).  
 
- The task sequence runs in the current operating system to capture user state migration data. At the end of the task sequence, the user state migration data of the existing target computer is saved to the Configuration Manager state migration point.  
+   The task sequence runs in the current operating system to capture user state migration data. At the end of the task sequence, the user state migration data of the existing target computer is saved to the Configuration Manager state migration point.  
 
 #####  <a name="DeploytheCapturedImageandUserStateMigrationDataintheReplaceComputerDeploymentScenarioUsingUDI"></a> Deploy the Captured Image and User State Migration Data in the Replace Computer Deployment Scenario Using UDI  
  Start the target computer with the ZTI bootable media created earlier in the process or from Windows Deployment Services. The ZTI bootable media starts Windows PE on the target computer and initiates the UDI deployment process. At the end of the deployment process, the captured image of the reference computer is deployed on the target computer, and the user state migration data is restored from the Configuration Manager state migration point.  
 
 ###### To complete the Windows Deployment Wizard in the Replace Computer deployment scenario for deploying the captured image using UDI  
 
-1.  Start the reference computer with the ZTI bootable media created earlier in the process or from Windows Deployment Services.  
+1. Start the reference computer with the ZTI bootable media created earlier in the process or from Windows Deployment Services.  
 
-     Windows PE starts, and then the Windows Deployment Wizard starts.  
+    Windows PE starts, and then the Windows Deployment Wizard starts.  
 
-2.  Complete the Task Sequence Wizard, ensuring that you follow the configuration settings for the wizard pages listed in Table 142 and select values on the other wizard pages for your organization’s requirements.  
+2. Complete the Task Sequence Wizard, ensuring that you follow the configuration settings for the wizard pages listed in Table 142 and select values on the other wizard pages for your organization’s requirements.  
 
-    > [!NOTE]
-    >  This wizard will not appear if you configure ZTI to perform a PXE boot and have configured a mandatory advertisement or if only one task sequence is advertised to the target computer.  
+   > [!NOTE]
+   >  This wizard will not appear if you configure ZTI to perform a PXE boot and have configured a mandatory advertisement or if only one task sequence is advertised to the target computer.  
 
-    ### Table 142. Information for Completing the Task Sequence Wizard for the Replace Computer Deployment Scenario Using UDI  
+   ### Table 142. Information for Completing the Task Sequence Wizard for the Replace Computer Deployment Scenario Using UDI  
 
-    |**On this wizard page** |**Do this** |  
-    |-----------------------------|-----------------|  
-    |**Select a Task Sequence** |Select the task sequence you created for the target computer deployment in the Replace Computer deployment scenario to deploy the captured image of the reference computer to the new target computer.|  
+   |**On this wizard page** |**Do this** |  
+   |-----------------------------|-----------------|  
+   |**Select a Task Sequence** |Select the task sequence you created for the target computer deployment in the Replace Computer deployment scenario to deploy the captured image of the reference computer to the new target computer.|  
 
-     The task sequence starts. Eventually, the task sequence starts the UDI Wizard.  
+    The task sequence starts. Eventually, the task sequence starts the UDI Wizard.  
 
-3.  Complete the UDI Wizard by selecting the appropriate values on the wizard pages for your organization’s requirements, as described in [Running the UDI Wizard](#RunningtheUDIWizard).  
+3. Complete the UDI Wizard by selecting the appropriate values on the wizard pages for your organization’s requirements, as described in [Running the UDI Wizard](#RunningtheUDIWizard).  
 
-4.  Optionally, view the MDT deployment process using the Monitoring node in the Deployment Workbench or using the **Get-MDTMonitorData** cmdlet.  
+4. Optionally, view the MDT deployment process using the Monitoring node in the Deployment Workbench or using the **Get-MDTMonitorData** cmdlet.  
 
-     For more information about monitoring MDT deployments, see [View MDT Deployment Progress](#ViewMDTDeploymentProgress).  
+    For more information about monitoring MDT deployments, see [View MDT Deployment Progress](#ViewMDTDeploymentProgress).  
 
- The task sequence starts Windows PE and then initiates installation of the new operating system. The task sequence restarts the computer, starts the new operating system, restores the user state migration data, installs any packages, installs any applications, and performs any other actions configured in the task sequence. Finally, the OSD Results program, OSDResults.exe, runs and displays the results of the deployment. The target computer is now deployed.  
+   The task sequence starts Windows PE and then initiates installation of the new operating system. The task sequence restarts the computer, starts the new operating system, restores the user state migration data, installs any packages, installs any applications, and performs any other actions configured in the task sequence. Finally, the OSD Results program, OSDResults.exe, runs and displays the results of the deployment. The target computer is now deployed.  
 
 ##  <a name="ManagingUDIDeployments"></a> Managing UDI Deployments  
  You manage UDI deployments through the Configuration Manager console and the UDI Wizard Designer. You use the Deployment Workbench in UDI deployments only to configure the MDT DB. The wizard used to create UDI task sequences are integrated into the Configuration Manager console. You can use the UDI Wizard Designer to configure the behavior of the UDI Wizard.  
@@ -6540,7 +6548,7 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 -   Managing software packages for UDI in the Configuration Manager console as described in [Managing Software Packages in Configuration Manager](#ManagingSoftwarePackagesinConfigurationManager), which is the same process for UDI and ZTI deployments  
 
--   Managing advertisements for UDI as described in in [Managing Task Sequence Deployment in Configuration Manager](#ManagingTaskSequenceDeploymentinConfigurationManager), which is the same process for UDI and ZTI deployments  
+-   Managing advertisements for UDI as described in [Managing Task Sequence Deployment in Configuration Manager](#ManagingTaskSequenceDeploymentinConfigurationManager), which is the same process for UDI and ZTI deployments  
 
 -   Manually adding computers to the site database for UDI as described in [Manually Adding Computers to the Site Database in Configuration Manager](#ManuallyAddingComputerstotheSiteDatabaseinConfigurationManager), which is the same process for UDI and ZTI deployments  
 
@@ -6613,15 +6621,15 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
  Of the templates described in [Identify the Task Sequence Templates in MDT in Configuration Manager](#IdentifytheTaskSequenceTemplatesinMDTinConfigurationManager), the following are used in MDT deployment scenarios using UDI:  
 
--   **Client Task Sequence**. This task sequence template is used for the MDT New Computer, Refresh Computer, and Replace Computer deployment scenarios. This task sequence template is also used to build and capture images of the reference computers.  
+- **Client Task Sequence**. This task sequence template is used for the MDT New Computer, Refresh Computer, and Replace Computer deployment scenarios. This task sequence template is also used to build and capture images of the reference computers.  
 
--   **User Driven Installation Replace Task Sequence**. This task sequence template is the first step in a two-step process in the MDT Replace Computer deployment scenario and is used to capture user state migration data. The second step in the two step process is the User Driven Installation Task Sequence task sequence template, which is used to:  
+- **User Driven Installation Replace Task Sequence**. This task sequence template is the first step in a two-step process in the MDT Replace Computer deployment scenario and is used to capture user state migration data. The second step in the two step process is the User Driven Installation Task Sequence task sequence template, which is used to:  
 
-    -   Deploy the target applications and operating system  
+  -   Deploy the target applications and operating system  
 
-    -   Restore the user state migration data saved during the User Driven Installation Replace task Sequence task sequence template in the first step of the process  
+  -   Restore the user state migration data saved during the User Driven Installation Replace task Sequence task sequence template in the first step of the process  
 
- For more information on the MDT deployment scenarios, see [Identifying Deployment Scenarios](#IdentifyingDeploymentScenarios).  
+  For more information on the MDT deployment scenarios, see [Identifying Deployment Scenarios](#IdentifyingDeploymentScenarios).  
 
 > [!NOTE]
 >  Always use the Create MDT Task Sequence Wizard to create task sequences. Although you can manually create the task sequences, doing so is not recommended.  
@@ -6646,17 +6654,17 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
  You can configure a UDI task sequence to support the operating systems you have added to the **VolumePage** page by performing the following steps:  
 
-1.  Rename the existing **Apply Operating System Image** task sequence step to reflect the name of the operating system image being deployed.  
+1. Rename the existing **Apply Operating System Image** task sequence step to reflect the name of the operating system image being deployed.  
 
-2.  Configure a condition for the existing **Apply Operating System Image** task sequence step that will only run the step when the **OSDImageName** task sequence variable is equal to the name of the operating system image being deployed.  
+2. Configure a condition for the existing **Apply Operating System Image** task sequence step that will only run the step when the **OSDImageName** task sequence variable is equal to the name of the operating system image being deployed.  
 
-3.  For each operating system that has been added to the **VolumePage** page, perform the following steps:  
+3. For each operating system that has been added to the **VolumePage** page, perform the following steps:  
 
-    1.  Add a new **Apply Operating System Image** task sequence step that reflects the name of the operating system image to be deployed.  
+   1.  Add a new **Apply Operating System Image** task sequence step that reflects the name of the operating system image to be deployed.  
 
-    2.  Configure a condition for the new **Apply Operating System Image** task sequence step that will only run the step when the **OSDImageName** task sequence variable is equal to the name of the operating system image to be deployed.  
+   2.  Configure a condition for the new **Apply Operating System Image** task sequence step that will only run the step when the **OSDImageName** task sequence variable is equal to the name of the operating system image to be deployed.  
 
- After performing these steps, when the user selected an operating system image on the **VolumePage** page, the corresponding **Apply Operating System Image** task sequence step will be run and deploy the appropriate operating system image.  
+   After performing these steps, when the user selected an operating system image on the **VolumePage** page, the corresponding **Apply Operating System Image** task sequence step will be run and deploy the appropriate operating system image.  
 
 ###  <a name="ConfiguringUDIWizardBehavior"></a> Configuring UDI Wizard Behavior  
  The User-Driven Installation Task Sequence and User-Driven Installation Replace Task Sequence templates include task sequence steps that run the UDI Wizard. When a task sequence step runs the UDI Wizard, the step also references the UDIWizard_Config.xml file, which controls the behavior of the UDI Wizard and is stored in the Scripts folder of the MDT files package. You can customize the UDIWizard_Config.xml file using the UDI Wizard Designer.  
@@ -6711,13 +6719,13 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
  At a high-level, the UDI Wizard Designer allows you to configure the:  
 
--   Types of wizard pages that are displayed in the UDI Wizard  
+- Types of wizard pages that are displayed in the UDI Wizard  
 
--   Sequence of the wizard pages as they will appear in the UDI Wizard  
+- Sequence of the wizard pages as they will appear in the UDI Wizard  
 
--   Configuration settings for each wizard page  
+- Configuration settings for each wizard page  
 
- For more detailed information about the tasks that can be performed in the UDI Wizard Designer, see Configuring UDI Wizard Behavior.  
+  For more detailed information about the tasks that can be performed in the UDI Wizard Designer, see Configuring UDI Wizard Behavior.  
 
 ####  <a name="IdentifyUDIDeploymentProcessComponents"></a> Identify UDI Deployment Process Components  
  The UDI deployment process is based on ZTI deployments in MDT and requires Configuration Manager. The UDI process runs as any other MDT task sequence, except that the UDI-specific task sequences run the UDI Wizard at the appropriate steps in the task sequence.  
@@ -6752,19 +6760,19 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 ####  <a name="ReviewtheUDIWizardDesignerUserInterface"></a> Review the UDI Wizard Designer User Interface  
  The UDI Wizard Designer is used to customize the user experience in the UDI Wizard, including the:  
 
--   Wizard pages that are displayed in the UDI Wizard (wizard pages can be added or removed)  
+- Wizard pages that are displayed in the UDI Wizard (wizard pages can be added or removed)  
 
--   Sequence of the wizard pages as they are displayed in the UDI Wizard  
+- Sequence of the wizard pages as they are displayed in the UDI Wizard  
 
--   Controls on each wizard page, such as:  
+- Controls on each wizard page, such as:  
 
-    -   Enabling a control for user interaction  
+  -   Enabling a control for user interaction  
 
-    -   Disabling a control for user interaction  
+  -   Disabling a control for user interaction  
 
-    -   Specifying a default value  
+  -   Specifying a default value  
 
- Review the UDI Wizard Designer UI by completing the following steps:  
+  Review the UDI Wizard Designer UI by completing the following steps:  
 
 1.  Review the UDI Wizard Designer high-level UI elements as described in [Review the UDI Wizard Designer High-Level User Interface Elements](#ReviewtheUDIWizardDesignerHighLevelUserInterfaceElements).  
 
@@ -6813,15 +6821,15 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 #####  <a name="ReviewtheFlowTabintheUDIWizardDesigner"></a> Review the Flow Tab in the UDI Wizard Designer  
   Figure 10 illustrates the UI elements in the **Flow** tab in the details pane. The **Flow** tab is used to configure the:  
 
-1.  Wizard pages that will be displayed in the UDI Wizard for a specific stage within a specific stage group  
+1. Wizard pages that will be displayed in the UDI Wizard for a specific stage within a specific stage group  
 
-2.  Sequence of the wizard pages as they are displayed in the UDI Wizard  
+2. Sequence of the wizard pages as they are displayed in the UDI Wizard  
 
- ![MDTDevToolkit10](media/MDTDevToolkit10.jpg "MDTDevToolkit10")  
+   ![MDTDevToolkit10](media/MDTDevToolkit10.jpg "MDTDevToolkit10")  
 
- **Figure 10. Flow tab in the UDI Wizard Designer**  
+   **Figure 10. Flow tab in the UDI Wizard Designer**  
 
-  Table 146 lists the UI elements on the **Flow** tab, which is illustrated in Figure 10, and provides a brief description of each element.  
+   Table 146 lists the UI elements on the **Flow** tab, which is illustrated in Figure 10, and provides a brief description of each element.  
 
 ### Table 146. UDI Wizard Designer Flow Tab UI Elements  
 
@@ -6883,21 +6891,21 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 ###### To create a new UDI Wizard configuration file using the UDI Wizard Designer  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **UDI Wizard Designer**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **UDI Wizard Designer**.  
 
-     The UDI Wizard Designer starts.  
+    The UDI Wizard Designer starts.  
 
-2.  In the **UDI Wizard Designer** console, on the Ribbon, in the **File Menu** group, click **New**.  
+2. In the **UDI Wizard Designer** console, on the Ribbon, in the **File Menu** group, click **New**.  
 
-3.  Make the appropriate changes in the UDI Wizard Designer console.  
+3. Make the appropriate changes in the UDI Wizard Designer console.  
 
-4.  In the **UDI Wizard Designer** console, on the Ribbon, in the **File Menu**group, click **Save As**.  
+4. In the **UDI Wizard Designer** console, on the Ribbon, in the **File Menu**group, click **Save As**.  
 
-     The **Save As** dialog box opens.  
+    The **Save As** dialog box opens.  
 
-5.  In the **Save As** dialog box, go to ***folder_path*** (where *folder_path* is the fully qualified path to the Scripts folder in the MDT files package source), in **File name**, type ***file_name*** (where *file_name* is the file name for the configuration file), and then click **Save**.  
+5. In the **Save As** dialog box, go to ***folder_path*** (where *folder_path* is the fully qualified path to the Scripts folder in the MDT files package source), in **File name**, type ***file_name*** (where *file_name* is the file name for the configuration file), and then click **Save**.  
 
- After creating the new UDI Wizard configuration file, create a new task sequence or modify an existing task sequence steps to use the appropriate MDT files package. You also need to update the distribution points with the modified MDT files package as described in in [Managing Distribution Points in Configuration Manager](#ManagingDistributionPointsinConfigurationManager), which is the same process for UDI and ZTI deployments.  
+   After creating the new UDI Wizard configuration file, create a new task sequence or modify an existing task sequence steps to use the appropriate MDT files package. You also need to update the distribution points with the modified MDT files package as described in [Managing Distribution Points in Configuration Manager](#ManagingDistributionPointsinConfigurationManager), which is the same process for UDI and ZTI deployments.  
 
 ####  <a name="OpenanExistingUDIWizardConfigurationFile"></a> Open an Existing UDI Wizard Configuration File  
  The UDI Wizard displays pages based on the configuration options specified in the UDIWizard_Config.xml file in the Scripts folder of the MDT files package specified in the task sequence. Open an existing UDI Wizard configuration file using the UDI Wizard Designer.  
@@ -6938,30 +6946,30 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 ###### To override the configuration file that the UDI Wizard uses  
 
-1.  In the Configuration Manager console, in the navigation pane, click **Software Library**.  
+1. In the Configuration Manager console, in the navigation pane, click **Software Library**.  
 
-2.  In the Software Library, go to Overview/Operating Systems/Task Sequences.  
+2. In the Software Library, go to Overview/Operating Systems/Task Sequences.  
 
-3.  In the preview pane, click ***task_sequence*** (where *task_sequence* is the name of the task sequence you want to edit).  
+3. In the preview pane, click ***task_sequence*** (where *task_sequence* is the name of the task sequence you want to edit).  
 
-4.  On the Ribbon, on the **Home** tab, in the **Task Sequence** group, click **Edit**.  
+4. On the Ribbon, on the **Home** tab, in the **Task Sequence** group, click **Edit**.  
 
-     The ***task_sequence*** **task_sequence_name* TaskTask Sequence Editor** dialog box opens (where *task_sequence* is the name of the task sequence you want to edit).  
+    The ***task_sequence*** <strong>task_sequence_name* TaskTask Sequence Editor</strong> dialog box opens (where *task_sequence* is the name of the task sequence you want to edit).  
 
-5.  In the ***task_sequence*** **Task Sequence Editor** dialog box (where *task_sequence* is the name of the task sequence you want to edit), in the task sequence hierarchy, go to the **State Capture** phase.  
+5. In the ***task_sequence*** **Task Sequence Editor** dialog box (where *task_sequence* is the name of the task sequence you want to edit), in the task sequence hierarchy, go to the **State Capture** phase.  
 
-6.  Beneath the **State Capture** phase, click the **UDI Wizard** task sequence step.  
+6. Beneath the **State Capture** phase, click the **UDI Wizard** task sequence step.  
 
-7.  On the **Properties** tab for the **UDI Wizard** task sequence step in **Command line**, modify the text as follows (where *path* is the path to the configuration file, which is relative to the Scripts folder and *file_name* is the name of the configuration file):  
+7. On the **Properties** tab for the **UDI Wizard** task sequence step in **Command line**, modify the text as follows (where *path* is the path to the configuration file, which is relative to the Scripts folder and *file_name* is the name of the configuration file):  
 
-    ```  
-    cscript.exe “%DeployRoot%\Scripts\UDIWizard.wsf” /definition:<path\file_name>.xml.  
-    ```  
+   ```  
+   cscript.exe “%DeployRoot%\Scripts\UDIWizard.wsf” /definition:<path\file_name>.xml.  
+   ```  
 
-    > [!NOTE]
-    >  The above text appears on one line. The line wrap seen here is the result of document formatting constraints.  
+   > [!NOTE]
+   >  The above text appears on one line. The line wrap seen here is the result of document formatting constraints.  
 
-8.  Repeat steps 3 and 4, substituting **State Capture** with **Preinstall/New Computer Only**.  
+8. Repeat steps 3 and 4, substituting **State Capture** with **Preinstall/New Computer Only**.  
 
 9. Repeat steps 3 and 4 for any custom task sequence steps that run UDIWizard.wsf.  
 
@@ -7108,15 +7116,15 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 ###### To preview the wizard pages and wizard page sequence flow for a stage using the UDI Wizard Designer  
 
-1.  In the **UDI Wizard Designer** console, in the details pane, expand ***stage*** (where *stage* is the stage you want to customize).  
+1. In the **UDI Wizard Designer** console, in the details pane, expand ***stage*** (where *stage* is the stage you want to customize).  
 
-2.  On the Ribbon, on the **Home** tab, in the **Preview Wizard** group, click **Preview**.  
+2. On the Ribbon, on the **Home** tab, in the **Preview Wizard** group, click **Preview**.  
 
-     The UDI Wizard opens and allows you to navigate through (preview) the wizard pages. For each wizard page, you can see the controls displayed and whether the controls are enabled.  
+    The UDI Wizard opens and allows you to navigate through (preview) the wizard pages. For each wizard page, you can see the controls displayed and whether the controls are enabled.  
 
-3.  After reviewing the wizard pages, close the UDI Wizard.  
+3. After reviewing the wizard pages, close the UDI Wizard.  
 
- You can also preview the wizard pages and the wizard page sequence flow for a stage by clicking the **Preview** hyperlink on the stage within a stage.  
+   You can also preview the wizard pages and the wizard page sequence flow for a stage by clicking the **Preview** hyperlink on the stage within a stage.  
 
 ####  <a name="AddaWizardPagetothePageLibrary"></a> Add a Wizard Page to the Page Library  
  The Page Library in the UDI Wizard Designer contains a list of the wizard pages that you can add to stages. Each wizard page in the Page Library maintains a count of the number of instances in which the wizard page is used in the current version of the UDI Wizard configuration file.  
@@ -7125,22 +7133,22 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 ###### To add a wizard page to the Page Library using the UDI Wizard Designer  
 
-1.  In the **UDI Wizard Designer** console, on the Ribbon, on the **Home** tab, in the **Page Library** group, click **Add Page**.  
+1. In the **UDI Wizard Designer** console, on the Ribbon, on the **Home** tab, in the **Page Library** group, click **Add Page**.  
 
-     The **Add New Page** dialog box appears.  
+    The **Add New Page** dialog box appears.  
 
-2.  Complete the **Add New Page** dialog box by performing the following steps:  
+2. Complete the **Add New Page** dialog box by performing the following steps:  
 
-    1.  In **Select the page that you want to add**, click ***page_type*** (where *page_type* is the page type that you want to add to the stage).  
+   1. In **Select the page that you want to add**, click ***page_type*** (where *page_type* is the page type that you want to add to the stage).  
 
-    2.  In **Page Name**, type ***unique_name*** (where *unique_name* is a unique name for the wizard page).  
+   2. In **Page Name**, type ***unique_name*** (where *unique_name* is a unique name for the wizard page).  
 
-        > [!TIP]
-        >  An error message appears directly above **Display Name** if the **Page Name** is not unique.  
+      > [!TIP]
+      >  An error message appears directly above **Display Name** if the **Page Name** is not unique.  
 
-    3.  Click **OK**.  
+   3. Click **OK**.  
 
-     The wizard page appears in the list of wizard pages in the Page Library.  
+      The wizard page appears in the list of wizard pages in the Page Library.  
 
 > [!TIP]
 >  Remember to save the UDI Wizard configuration file after making any changes.  
@@ -7175,44 +7183,44 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 ####  <a name="ChangetheSequenceofaStageGrouporaStage"></a> Change the Sequence of a Stage Group or a Stage  
  The details pane contains a list of the stage groups and stages that the UDI Wizard configuration file (UDIWizard_Config.xml) supports. Each stage group listed in the details pane is used in one or more of the following MDT deployment scenarios:  
 
--   New Computer  
+- New Computer  
 
--   Refresh Computer  
+- Refresh Computer  
 
--   Replace Computer  
+- Replace Computer  
 
- You can change the sequence of a stage group or the stages within in the details pane.  
+  You can change the sequence of a stage group or the stages within in the details pane.  
 
 ###### To change the sequence of a stage group using the UDI Wizard Designer  
 
-1.  In the **UDI Wizard Designer** console, in the details pane, click ***stage_group*** (where *stage_group* is the name of the stage group for which you want to change the sequence).  
+1. In the **UDI Wizard Designer** console, in the details pane, click ***stage_group*** (where *stage_group* is the name of the stage group for which you want to change the sequence).  
 
-2.  On the Ribbon, on the **Home** tab, in the **Flow Designer** group, click one of the following:  
+2. On the Ribbon, on the **Home** tab, in the **Flow Designer** group, click one of the following:  
 
-    -   **Move Up** to make the stage group appear earlier in the list of scenarios  
+   - **Move Up** to make the stage group appear earlier in the list of scenarios  
 
-    -   **Move Down** to make the stage group appear later in the list of scenarios  
+   - **Move Down** to make the stage group appear later in the list of scenarios  
 
      The stage group moves up or down in the list of stage group based on the option you select.  
 
- You can also change the sequence of a stage group by right-clicking the stage group, and then clicking **Move Up** or **Move Down** based on the desired result.  
+   You can also change the sequence of a stage group by right-clicking the stage group, and then clicking **Move Up** or **Move Down** based on the desired result.  
 
 > [!TIP]
 >  Remember to save the UDI Wizard configuration file after making any changes.  
 
 ###### To change the sequence of a stage within a stage group using the UDI Wizard Designer  
 
-1.  In the **UDI Wizard Designer** console, in the details pane, expand ***stage_group***, and then click ***stage*** (where *stage_group* is the name of the stage group that contains the stage and *stage* is the name of the stage for which you want to change the sequence).  
+1. In the **UDI Wizard Designer** console, in the details pane, expand ***stage_group***, and then click ***stage*** (where *stage_group* is the name of the stage group that contains the stage and *stage* is the name of the stage for which you want to change the sequence).  
 
-2.  On the Ribbon, on the **Home** tab, in the **Flow Designer** group, click one of the following:  
+2. On the Ribbon, on the **Home** tab, in the **Flow Designer** group, click one of the following:  
 
-    -   **Move Up** to make the stage appear earlier in the list of stages within the stage group  
+   - **Move Up** to make the stage appear earlier in the list of stages within the stage group  
 
-    -   **Move Down** to make the stage appear later in the list of stages within the stage group  
+   - **Move Down** to make the stage appear later in the list of stages within the stage group  
 
      The stage moves up or down in the list of stages within the stage group based on the option you select.  
 
- You can also change the sequence of a stage by right-clicking the stage, and then clicking **Move Up** or **Move Down** based on the desired result.  
+   You can also change the sequence of a stage by right-clicking the stage, and then clicking **Move Up** or **Move Down** based on the desired result.  
 
 > [!TIP]
 >  Remember to save the UDI Wizard configuration file after making any changes.  
@@ -7220,28 +7228,28 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 ####  <a name="PrepareforLanguagePackDeploymentinUDI"></a> Prepare for Language Pack Deployment in UDI  
  One the UDI Wizard page types available in the Page Library in the UDI Wizard Designer is the **LanguagePage** wizard page type. The **LanguagePage** wizard page type allows you to select the:  
 
--   Default language  
+- Default language  
 
--   Time and currency format (locale)  
+- Time and currency format (locale)  
 
--   Keyboard layout  
+- Keyboard layout  
 
--   Time zone  
+- Time zone  
 
- Specifically, the **LanguagePage** wizard page allows you select the default language of the target operating system. However, additional steps must be performed to support the selection and subsequent deployment of the language pack for the target operating system.  
+  Specifically, the **LanguagePage** wizard page allows you select the default language of the target operating system. However, additional steps must be performed to support the selection and subsequent deployment of the language pack for the target operating system.  
 
 ###### To support the deployment of multiple languages as the default language for target computers  
 
-1.  Add a language pack that you want to support in UDI using the **Install Language Packs Offline** task sequence as described in [Add Language Packs in Configuration Manager](#AddLanguagePacksinConfigurationManager)  
+1. Add a language pack that you want to support in UDI using the **Install Language Packs Offline** task sequence as described in [Add Language Packs in Configuration Manager](#AddLanguagePacksinConfigurationManager)  
 
-2.  For the **Install Language Packs Offline** task sequence step created in step 1, configure the task sequence step to run on the condition that the **UILanguage** task sequence variable is equal to the language pack added in step 1  
+2. For the **Install Language Packs Offline** task sequence step created in step 1, configure the task sequence step to run on the condition that the **UILanguage** task sequence variable is equal to the language pack added in step 1  
 
-    > [!TIP]
-    >  You configure conditions on the **Options** tab of the task sequence step. Add a **Task Sequence Variable** condition.  
+   > [!TIP]
+   >  You configure conditions on the **Options** tab of the task sequence step. Add a **Task Sequence Variable** condition.  
 
-     For example, if you add a Japanese language pack, then the condition for the corresponding **Install Language Packs Offline** task sequence step will be for the **UILanguage** task sequence variable to be equal to **JA-JP**.  
+    For example, if you add a Japanese language pack, then the condition for the corresponding **Install Language Packs Offline** task sequence step will be for the **UILanguage** task sequence variable to be equal to **JA-JP**.  
 
- For more information on the **LanguagePage** wizard page type in the UDI Wizard Designer, see the corresponding section in the *User-Driven Installation Developers Guide*.  
+   For more information on the **LanguagePage** wizard page type in the UDI Wizard Designer, see the corresponding section in the *User-Driven Installation Developers Guide*.  
 
 ####  <a name="SkipaWizardPage"></a> Skip a Wizard Page  
  In some instances, you may want to further control and simplify the UDI Wizard experience by skipping (removing) wizard pages. Skipping a wizard page allows you to provide configuration values usually provided by the user for the wizard page. Also, skipping a wizard page is simpler and less confusing than disabling (locking) all the controls on a wizard page.  
@@ -7259,29 +7267,29 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 ###  <a name="CreatingCustomWizardPagesUsingtheBuildYourOwnPageFeature"></a> Creating Custom Wizard Pages Using the Build Your Own Page Feature  
  There may be instances in which you want to collect additional deployment information to be used in UDI. You must collect this additional information in the UDI Wizard using a custom wizard page. You can create custom wizard pages using the:  
 
--   **Build Your Own Page feature**. This feature allows you to create a custom wizard page for collecting deployment information without requiring you to write code or have developer skills. Use this feature if you need to collect basic information without advanced user interaction. For example, you cannot add any code or customize UI fonts using this feature.  
+- **Build Your Own Page feature**. This feature allows you to create a custom wizard page for collecting deployment information without requiring you to write code or have developer skills. Use this feature if you need to collect basic information without advanced user interaction. For example, you cannot add any code or customize UI fonts using this feature.  
 
--   **UDI SDK and Visual Studio**. Use this SDK if you want to create an advanced, fully customized wizard page in Visual Studio for collecting deployment information. Although the UDI SDK allows you to create customized wizard pages, such as adding custom code or changing fonts, this method requires developer skills.  
+- **UDI SDK and Visual Studio**. Use this SDK if you want to create an advanced, fully customized wizard page in Visual Studio for collecting deployment information. Although the UDI SDK allows you to create customized wizard pages, such as adding custom code or changing fonts, this method requires developer skills.  
 
-     For more information on using the UDI SDK to create custom wizard pages, see "Creating Custom UDI Wizard Pages" in the *User-Driven Installation Developers Guide*.  
+   For more information on using the UDI SDK to create custom wizard pages, see "Creating Custom UDI Wizard Pages" in the *User-Driven Installation Developers Guide*.  
 
- Create custom wizard pages using the Build Your Own Page Feature in UDI by performing the following tasks:  
+  Create custom wizard pages using the Build Your Own Page Feature in UDI by performing the following tasks:  
 
--   Create a new custom wizard page in a stage group as described in [Create a New Custom Wizard Page](#CreateaNewCustomWizardPage).  
+- Create a new custom wizard page in a stage group as described in [Create a New Custom Wizard Page](#CreateaNewCustomWizardPage).  
 
--   Add a control to a custom wizard page as described in [Add a Control to a Custom Wizard Page](#AddaControltoaCustomWizardPage).  
+- Add a control to a custom wizard page as described in [Add a Control to a Custom Wizard Page](#AddaControltoaCustomWizardPage).  
 
--   Position a control on a custom wizard page as described in [Position a Control on a Custom Wizard Page](#PositionaControlonaCustomWizardPage).  
+- Position a control on a custom wizard page as described in [Position a Control on a Custom Wizard Page](#PositionaControlonaCustomWizardPage).  
 
--   Change the size of a control on a custom wizard page as described in [Change the Size of a Control on a Custom Wizard Page](#ChangetheSizeofaControlonaCustomWizardPage).  
+- Change the size of a control on a custom wizard page as described in [Change the Size of a Control on a Custom Wizard Page](#ChangetheSizeofaControlonaCustomWizardPage).  
 
--   Remove a control from a custom wizard page as described in [Remove a Control from a Custom Wizard Page](#RemoveaControlfromaCustomWizardPage).  
+- Remove a control from a custom wizard page as described in [Remove a Control from a Custom Wizard Page](#RemoveaControlfromaCustomWizardPage).  
 
--   Edit the properties of a control on a custom wizard page as described in [Edit Custom Wizard Page Control Properties](#EditCustomWizardPageControlProperties).  
+- Edit the properties of a control on a custom wizard page as described in [Edit Custom Wizard Page Control Properties](#EditCustomWizardPageControlProperties).  
 
--   Show or hide the gridlines on a custom wizard page as described in [Show or Hide Custom Wizard Page Gridlines](#ShoworHideCustomWizardPageGridlines).  
+- Show or hide the gridlines on a custom wizard page as described in [Show or Hide Custom Wizard Page Gridlines](#ShoworHideCustomWizardPageGridlines).  
 
--   Verify and test the custom wizard page after you create it as described in [Verify and Test a Custom Wizard Page](#VerifyandTestaCustomWizardPage).  
+- Verify and test the custom wizard page after you create it as described in [Verify and Test a Custom Wizard Page](#VerifyandTestaCustomWizardPage).  
 
 ####  <a name="CreateaNewCustomWizardPage"></a> Create a New Custom Wizard Page  
  UDI custom wizard pages created using the Build Your Own Page feature allow you to collect deployment information in addition to the information collected on other UDI Wizard pages. You create custom wizard pages based on the **Build Your Own Page wizard page** type. After you create the custom wizard page, you can add controls to the wizard page and configure the task sequence variables that the controls set.  
@@ -7363,11 +7371,11 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 #####  <a name="PositionaControlonaCustomWizardPageUsingDragandDrop"></a> Position a Control on a Custom Wizard Page Using Drag and Drop  
  You can position a control on a custom wizard page using drag and drop for one of the following situations:  
 
-1.  Initially placing the control from the Build Your Own Page to the custom wizard page  
+1. Initially placing the control from the Build Your Own Page to the custom wizard page  
 
-2.  Moving the control to an approximate location on the custom wizard page  
+2. Moving the control to an approximate location on the custom wizard page  
 
- To position a control more precisely, position the control using the **X** and **Y** properties on the **Layout** properties of the control. For more information on positioning a control on a custom wizard page using control properties, see [Position a Control on a Custom Wizard Page Using Control Properties](#PositionaControlonaCustomWizardPageUsingControlProperties).  
+   To position a control more precisely, position the control using the **X** and **Y** properties on the **Layout** properties of the control. For more information on positioning a control on a custom wizard page using control properties, see [Position a Control on a Custom Wizard Page Using Control Properties](#PositionaControlonaCustomWizardPageUsingControlProperties).  
 
 ###### To position a control on a custom wizard page using drag and drop  
 
@@ -7518,24 +7526,24 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 #### To run the UDI Wizard  
 
-1.  Initiate the task sequence created using a UDI-based task sequence template and one of the following methods:  
+1. Initiate the task sequence created using a UDI-based task sequence template and one of the following methods:  
 
-    -   Task sequence bootable media disk using the Task Sequence Media Wizard as described in [Creating Task Sequence Bootable Media in Configuration Manager](#CreatingTaskSequenceBootableMediainConfigurationManager).  
+   - Task sequence bootable media disk using the Task Sequence Media Wizard as described in [Creating Task Sequence Bootable Media in Configuration Manager](#CreatingTaskSequenceBootableMediainConfigurationManager).  
 
-    -   Windows Deployment Services to start the appropriate Windows PE images that will in turn start the UDI deployment process to the target computers as described in [Preparing Windows Deployment Services for UDI Deployments](#PreparingWindowsDeploymentServicesforUDIDeployments).  
+   - Windows Deployment Services to start the appropriate Windows PE images that will in turn start the UDI deployment process to the target computers as described in [Preparing Windows Deployment Services for UDI Deployments](#PreparingWindowsDeploymentServicesforUDIDeployments).  
 
      Windows PE starts, and then the Task Sequence Wizard starts.  
 
-2.  Complete the Task Sequence Wizard by selecting the appropriate UDI-based task sequence.  
+2. Complete the Task Sequence Wizard by selecting the appropriate UDI-based task sequence.  
 
-     At the appropriate task sequence step, the UDI Wizard starts.  
+    At the appropriate task sequence step, the UDI Wizard starts.  
 
-3.  Complete the UDI Wizard based on the wizard pages selected and the sequence of the wizard pages.  
+3. Complete the UDI Wizard based on the wizard pages selected and the sequence of the wizard pages.  
 
-    > [!TIP]
-    >  Ensure that you preview the user experience of the wizard pages in the UDI Wizard using the Preview feature in the UDI Wizard Designer prior to performing deployments in your production environment.  
+   > [!TIP]
+   >  Ensure that you preview the user experience of the wizard pages in the UDI Wizard using the Preview feature in the UDI Wizard Designer prior to performing deployments in your production environment.  
 
- After you complete the UDI Wizard, the deployment of the new operating system begins. When the deployment process is complete, the **OSD Results** page is displayed just prior to the first user logging on to the target computer. For more information about how to configure the **OSD Results** page, see the section, "OSDResults.exe.config File Element Values", in the MDT document *Toolkit Reference*.  
+   After you complete the UDI Wizard, the deployment of the new operating system begins. When the deployment process is complete, the **OSD Results** page is displayed just prior to the first user logging on to the target computer. For more information about how to configure the **OSD Results** page, see the section, "OSDResults.exe.config File Element Values", in the MDT document *Toolkit Reference*.  
 
 ##  <a name="ConfiguringMDTDeployments"></a> Configuring MDT Deployments  
  Configure MDT deployments by:  
@@ -7600,15 +7608,15 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 ####  <a name="IdentifytheCustomSettings.iniFileSyntax"></a> Identify the CustomSettings.ini File Syntax  
  The syntax of the CustomSettings.ini file is similar to many .ini files. A CustomSettings.ini file includes:  
 
--   Sections  
+- Sections  
 
--   Properties  
+- Properties  
 
--   Settings  
+- Settings  
 
   Listing 1 shows a CustomSettings.ini file customized for ZTI for Configuration Manager. For more information about the CustomSettings.ini file in Listing 1, see [Basic CustomSettings.ini File for ZTI Deployments Using Configuration Manger](#BasicCustomSettings.iniFileforZTIDeploymentsUsingConfigurationManger), later in this guide.  
 
- **Listing 1. CustomSettings.ini File Customized for ZTI Deployment for Configuration Manager**  
+  **Listing 1. CustomSettings.ini File Customized for ZTI Deployment for Configuration Manager**  
 
 ```  
 [Settings]  
@@ -7653,17 +7661,17 @@ CustomProperty=FALSE
 
  The types of properties that you can use in deploying target computers include properties that are:  
 
--   **Automatically declared in ZTIGather.wsf**. These predefined properties are declared in the ZTIGather.wsf code and are documented in the MDT document *Toolkit Reference*. In addition, the ZTIGather.wsf file automatically sets the values for these properties. These properties are not configured in CustomSettings.ini and should be treated as read only.  
+- **Automatically declared in ZTIGather.wsf**. These predefined properties are declared in the ZTIGather.wsf code and are documented in the MDT document *Toolkit Reference*. In addition, the ZTIGather.wsf file automatically sets the values for these properties. These properties are not configured in CustomSettings.ini and should be treated as read only.  
 
--   **Declared in the ZTIGather.xml file**. These predefined properties are listed in the ZTIGather.xml file and are documented in the MDT document *Toolkit Reference*. The ZTIGather.wsf file retrieves these properties by scanning the ZTIGather.xml file. Divide the properties in this file into properties that:  
+- **Declared in the ZTIGather.xml file**. These predefined properties are listed in the ZTIGather.xml file and are documented in the MDT document *Toolkit Reference*. The ZTIGather.wsf file retrieves these properties by scanning the ZTIGather.xml file. Divide the properties in this file into properties that:  
 
-    -   **ZTIGather.wsf automatically assigns values to**. ZTIGather.wsf automatically sets the values for these properties, which must be treated as read only.  
+  -   **ZTIGather.wsf automatically assigns values to**. ZTIGather.wsf automatically sets the values for these properties, which must be treated as read only.  
 
-    -   **Must be assigned values in CustomSettings.ini**. Ensure that the value for any property to be used is set in CustomSettings.ini and is considered modifiable.  
+  -   **Must be assigned values in CustomSettings.ini**. Ensure that the value for any property to be used is set in CustomSettings.ini and is considered modifiable.  
 
--   **Declared in the Properties property**. These are custom properties that can be declared, and they are in addition to the properties automatically declared in ZTIGather.wsf and in ZTIGather.xml.  
+- **Declared in the Properties property**. These are custom properties that can be declared, and they are in addition to the properties automatically declared in ZTIGather.wsf and in ZTIGather.xml.  
 
- The way you use properties for ZTI and LTI are identical. However, some properties are unique to ZTI or LTI deployment. Like ZTI deployments, LTI deployments also have unique properties. Most of the LTI-specific properties relate to the Deployment Wizard (such as **SkipAdministratorPassword**, **SkipCapture**, or **SkipUserData**). Although these properties use the same syntax as other properties, the reserved properties perform specific functions in the deployment processing rules.  
+  The way you use properties for ZTI and LTI are identical. However, some properties are unique to ZTI or LTI deployment. Like ZTI deployments, LTI deployments also have unique properties. Most of the LTI-specific properties relate to the Deployment Wizard (such as **SkipAdministratorPassword**, **SkipCapture**, or **SkipUserData**). Although these properties use the same syntax as other properties, the reserved properties perform specific functions in the deployment processing rules.  
 
 > [!NOTE]
 >  Property values must be specified in upper case so that the deployment scripts can properly identify them—for example, YES, TRUE, or FALSE. This is true for property values specified in the CustomSettings.ini file, BootStrap.ini file, and MDT DB.  
@@ -7787,33 +7795,33 @@ End Function
 
 ###### To create the user exit script  
 
-1.  Create and test the custom script to be used.  
+1. Create and test the custom script to be used.  
 
-2.  Locate the MDT Scripts folder (for example, D:\Production Deployment Share\Scripts).  
+2. Locate the MDT Scripts folder (for example, D:\Production Deployment Share\Scripts).  
 
-3.  Copy the custom script to the Scripts folder.  
+3. Copy the custom script to the Scripts folder.  
 
- With the user exit script added to the deployment share (in this case, Z*-RAMTest.wsf*), it must then be referenced in the CustomSettings.ini file for the deployment share so it is called during deployment.  
+   With the user exit script added to the deployment share (in this case, Z*-RAMTest.wsf*), it must then be referenced in the CustomSettings.ini file for the deployment share so it is called during deployment.  
 
 ###### To call the user exit script from CustomSettings.ini  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share* (where *deployment_share* is the name of the deployment share to configure).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share* (where *deployment_share* is the name of the deployment share to configure).  
 
-3.  In the Actions pane, click **Properties**.  
+3. In the Actions pane, click **Properties**.  
 
-4.  Click the **Rules** tab to display the CustomSettings.ini file.  
+4. Click the **Rules** tab to display the CustomSettings.ini file.  
 
-5.  Add sections to UserExit.vbs to call the required functionality using the principles described in the previous section. An example CustomSetting.ini file is shown in Listing 4.  
+5. Add sections to UserExit.vbs to call the required functionality using the principles described in the previous section. An example CustomSetting.ini file is shown in Listing 4.  
 
-6.  Click **OK** to submit the changes.  
+6. Click **OK** to submit the changes.  
 
-7.  In the details pane, click *deployment_share* (where *deployment_share* is the name of the deployment share to configure).  
+7. In the details pane, click *deployment_share* (where *deployment_share* is the name of the deployment share to configure).  
 
-8.  In the Actions pane, click **Update Deployment Share**.  
+8. In the Actions pane, click **Update Deployment Share**.  
 
-     The Update Deployment Share Wizard starts.  
+    The Update Deployment Share Wizard starts.  
 
 9. On the **Options** page, select **Optimize the boot image updating process**, and then click **Next**.  
 
@@ -7821,9 +7829,9 @@ End Function
 
 11. On the **Confirmation** page, click **Finish**.  
 
- Another common use for the user exit script is to dynamically set the computer name from known MDT properties such as **SerialNumber**, **Model**, or **Product**.  
+    Another common use for the user exit script is to dynamically set the computer name from known MDT properties such as **SerialNumber**, **Model**, or **Product**.  
 
- **Listing 4. Example CustomSettings.ini for Calling the User Exit Script**  
+    **Listing 4. Example CustomSettings.ini for Calling the User Exit Script**  
 
 ```  
 [Settings]  
@@ -7980,28 +7988,28 @@ Table 154 explains the properties and corresponding values used in Listing 9.
 
  The syntax of the BootStrap.ini file is identical to the CustomSettings.ini file. The BootStrap.ini file contains a subset of the properties used in CustomSettings.ini as follows:  
 
--   `DeployRoot`  
+- `DeployRoot`  
 
-    > [!NOTE]
-    >  Ensure that the **DeployRoot** property is specified in the BootStrap.ini file, as the LTI deployment process will not be able to locate the CustomSettings.ini file in the deployment share. If not configured correctly, errors and warnings are displayed when running the Deployment Wizard.  
+  > [!NOTE]
+  >  Ensure that the **DeployRoot** property is specified in the BootStrap.ini file, as the LTI deployment process will not be able to locate the CustomSettings.ini file in the deployment share. If not configured correctly, errors and warnings are displayed when running the Deployment Wizard.  
 
--   `SkipBDDWelcome`  
+- `SkipBDDWelcome`  
 
--   `UserDomain`  
+- `UserDomain`  
 
--   `UserID`  
+- `UserID`  
 
--   `UserPassword`  
+- `UserPassword`  
 
--   `KeyboardLocale`  
+- `KeyboardLocale`  
 
- For more information about each of these properties, see the corresponding section in the MDT document *Toolkit Reference*.  
+  For more information about each of these properties, see the corresponding section in the MDT document *Toolkit Reference*.  
 
- The Deployment Workbench creates the BootStrap.ini file when you create a deployment share. After the initial creation, make all further customizations manually.  
+  The Deployment Workbench creates the BootStrap.ini file when you create a deployment share. After the initial creation, make all further customizations manually.  
 
   Listing 10 shows the BootStrap.ini file that the Deployment Workbench creates automatically for a deployment share. You may need to customize the BootStrap.ini file in Listing 10.  
 
- **Listing 10. BootStrap.ini File As Created by the Deployment Workbench for Deployment Shares**  
+  **Listing 10. BootStrap.ini File As Created by the Deployment Workbench for Deployment Shares**  
 
 ```  
 [Settings]  
@@ -8020,21 +8028,21 @@ DeployRoot=\\NYC-MDT-01\Distribution$
 
  The MDT process occurs in the phases defined in the TS.xml file. The Task Sequencer parses the TS.xml file to identify the appropriate sequence for performing the deployment process. The phases defined in the TS.xml file include:  
 
--   **Validate Phase**. Performs validation checks to make sure that the operating system installation can proceed; specifically blocks installation on server operating systems.  
+- **Validate Phase**. Performs validation checks to make sure that the operating system installation can proceed; specifically blocks installation on server operating systems.  
 
--   **State Capture Phase**. Gathers information from the configuration file, databases, and the local machine to determine how the image installation process should proceed, including whether there is enough space to do a local USMT state backup. The scripts also invoke the USMT Scanstate.exe command as appropriate.  
+- **State Capture Phase**. Gathers information from the configuration file, databases, and the local machine to determine how the image installation process should proceed, including whether there is enough space to do a local USMT state backup. The scripts also invoke the USMT Scanstate.exe command as appropriate.  
 
--   **Preinstall Phase**. Confirms that the necessary information has been gathered in the State Capture Phase for the Refresh Computer scenario. In the New Computer and Replace Computer scenarios, the script gathers the necessary information in this phase, because these scenarios do not perform the State Capture Phase. Also, a backup of the computer can be optionally performed for the Refresh Computer scenario.  
+- **Preinstall Phase**. Confirms that the necessary information has been gathered in the State Capture Phase for the Refresh Computer scenario. In the New Computer and Replace Computer scenarios, the script gathers the necessary information in this phase, because these scenarios do not perform the State Capture Phase. Also, a backup of the computer can be optionally performed for the Refresh Computer scenario.  
 
--   **Install Phase**. Installs the target operating system on the target computers.  
+- **Install Phase**. Installs the target operating system on the target computers.  
 
--   **Post Install Phase**. Updates the Unattend.xml with information gathered in the previous custom actions based on the operating system being deployed.  
+- **Post Install Phase**. Updates the Unattend.xml with information gathered in the previous custom actions based on the operating system being deployed.  
 
--   **State Restore Phase**. Invokes the USMT Loadstate.exe command to restore the user state that was previously backed up.  
+- **State Restore Phase**. Invokes the USMT Loadstate.exe command to restore the user state that was previously backed up.  
 
- The TS.xml file identifies the appropriate steps in each phase based on each type of deployment scenario (Refresh Computer, Replace Computer, and New Computer). Select the properties required during each phase of the deployment process.  
+  The TS.xml file identifies the appropriate steps in each phase based on each type of deployment scenario (Refresh Computer, Replace Computer, and New Computer). Select the properties required during each phase of the deployment process.  
 
- For more information on each of the properties used in each phase, see the section, "Properties", in the MDT document *Toolkit Reference*.  
+  For more information on each of the properties used in each phase, see the section, "Properties", in the MDT document *Toolkit Reference*.  
 
 ###  <a name="ApplyingMDTPropertiestoGroupsofComputers"></a> Applying MDT Properties to Groups of Computers  
  Whenever possible, use group-based rules to apply most computer configuration settings. Group-based rules allow the same configuration settings to be applied to a group of client computers. After applying group-based rules, you can supply computer-specific configuration settings using computer-based rules.  
@@ -8101,41 +8109,41 @@ Administrator1=WOODGROVEBANK\DAL Help Desk Staff
 
  Some examples of properties that are typically applied to groups of computers include:  
 
--   **BackupDir**  
+- **BackupDir**  
 
--   **BackupShare**  
+- **BackupShare**  
 
--   **CaptureGroups**  
+- **CaptureGroups**  
 
--   **ComputerBackupLocation**  
+- **ComputerBackupLocation**  
 
--   **Packages**  
+- **Packages**  
 
--   **SLShare**  
+- **SLShare**  
 
--   **UDDir**  
+- **UDDir**  
 
--   **UDShare**  
+- **UDShare**  
 
--   **UDProfiles**  
+- **UDProfiles**  
 
- Properties that are not applied to groups of computers are those specific to a particular computer. Examples of properties that are not appropriate to apply to groups of computers include:  
+  Properties that are not applied to groups of computers are those specific to a particular computer. Examples of properties that are not appropriate to apply to groups of computers include:  
 
--   **OSDAdapter0IPAddress**  
+- **OSDAdapter0IPAddress**  
 
--   **OSDNewMachineName**  
+- **OSDNewMachineName**  
 
- **Example: Group-based Configuration Settings Selected by Woodgrove Bank**  
+  **Example: Group-based Configuration Settings Selected by Woodgrove Bank**  
 
   Listing 11 showed an example in which Woodgrove Bank selects group-based configuration settings:  
 
--   In the NYC and DALLAS locations, `UDShare`, `SLShare`, and `Administrator1` are specified for each location.  
+- In the NYC and DALLAS locations, `UDShare`, `SLShare`, and `Administrator1` are specified for each location.  
 
--   The servers that `UDShare` and `SLSShare` (`NYC-AM-FIL-01` and`DAL-AM-FIL-01`) reference are within each respective location.  
+- The servers that `UDShare` and `SLSShare` (`NYC-AM-FIL-01` and`DAL-AM-FIL-01`) reference are within each respective location.  
 
--   The Administrator accounts that `Administrator1` (`WOODGROVEBANK\NYC Help Desk Staff` and `WOODGROVEBANK\DAL Help Desk Staff`) reference are unique to each respective location.  
+- The Administrator accounts that `Administrator1` (`WOODGROVEBANK\NYC Help Desk Staff` and `WOODGROVEBANK\DAL Help Desk Staff`) reference are unique to each respective location.  
 
--   In NYC, location-specific packages are designated by `Packages1` and `Packages2`.  
+- In NYC, location-specific packages are designated by `Packages1` and `Packages2`.  
 
 ###  <a name="ApplyingMDTPropertiestoIndividualComputers"></a> Applying MDT Properties to Individual Computers  
  After determining the groupings of target computers and configuration settings to be applied to each group, determine the method for identifying individual computers and the configuration settings to assign to each computer. The rules for target computers allow the override or augmentation of group-based processing rules based on the priority of the computer-based rules.  
@@ -8205,22 +8213,22 @@ OverRideProductKey=11111-22222-33333-44444-55555
 ####  <a name="ConfiguretheRulesintheMDTDB"></a> Configure the Rules in the MDT DB  
  Use the Deployment Workbench to configure the rules for LTI and ZTI deployments in the MDT DB. The benefits of using the MDT DB include:  
 
--   **It has a more generic version of CustomSettings.ini**. Storing the configuration settings in the MDT DB removes most of the detail from the CustomSettings.ini file. This change helps make the CustomSettings.ini file more generic so that you can use the same file in multiple deployment shares.  
+- **It has a more generic version of CustomSettings.ini**. Storing the configuration settings in the MDT DB removes most of the detail from the CustomSettings.ini file. This change helps make the CustomSettings.ini file more generic so that you can use the same file in multiple deployment shares.  
 
--   **It is a centralized repository for all property configuration settings**. Centralizing the configuration for all property settings ensures consistency across all deployment shares.  
+- **It is a centralized repository for all property configuration settings**. Centralizing the configuration for all property settings ensures consistency across all deployment shares.  
 
- For information about the MDT DB and using it to perform deployments, see [Performing Deployments Using the MDT DB](#PerformingDeploymentsUsingtheMDTDB).  
+  For information about the MDT DB and using it to perform deployments, see [Performing Deployments Using the MDT DB](#PerformingDeploymentsUsingtheMDTDB).  
 
 ###  <a name="PreparingDisksonTargetComputers"></a> Preparing Disks on Target Computers  
  Prior to deploying the target operating system on a target computer, the MDT deployment process prepares the disks on the target computer for deployment. The disk-preparation process includes the following steps:  
 
-1.  Create partitions on one or more drives on the target computers.  
+1. Create partitions on one or more drives on the target computers.  
 
-2.  Format one or more partitions on the target computers.  
+2. Format one or more partitions on the target computers.  
 
-3.  Prepare the disks on the target computers for BitLocker.  
+3. Prepare the disks on the target computers for BitLocker.  
 
- Disk preparation occurs during the State Capture and Preinstall phases in the MDT deployment process. The disk-preparation step completed in the State Capture Phase is the disabling of BitLocker on the target computer. The disk-preparation steps completed in the Preinstall Phase create and format the partitions on the target computer.  
+   Disk preparation occurs during the State Capture and Preinstall phases in the MDT deployment process. The disk-preparation step completed in the State Capture Phase is the disabling of BitLocker on the target computer. The disk-preparation steps completed in the Preinstall Phase create and format the partitions on the target computer.  
 
 ##### To prepare the disks on target computers in MDT  
 
@@ -8266,25 +8274,25 @@ OverRideProductKey=11111-22222-33333-44444-55555
 
  Native VHD boot has the following dependencies:  
 
--   The local disk must have at least two partitions: a system partition that contains the Windows boot environment files and Boot Configuration Data (BCD) store and a partition to store the VHD file.  
+- The local disk must have at least two partitions: a system partition that contains the Windows boot environment files and Boot Configuration Data (BCD) store and a partition to store the VHD file.  
 
--   The local disk partition that contains the VHD file must have enough free disk space for expanding a dynamic VHD to its maximum size and for the page file created when booting the VHD. The page file is created outside of the VHD file, unlike in a VM, where the page file is contained inside the VHD.  
+- The local disk partition that contains the VHD file must have enough free disk space for expanding a dynamic VHD to its maximum size and for the page file created when booting the VHD. The page file is created outside of the VHD file, unlike in a VM, where the page file is contained inside the VHD.  
 
- You can create LTI task sequences based on the following LTI task sequence templates to deploy to VHDs with native boot:  
+  You can create LTI task sequences based on the following LTI task sequence templates to deploy to VHDs with native boot:  
 
-1.  **Deploy to VHD Client Task Sequence**. Select this LTI task sequence template to deploy Windows in a VHD with native boot.  
+1. **Deploy to VHD Client Task Sequence**. Select this LTI task sequence template to deploy Windows in a VHD with native boot.  
 
-2.  **Deploy to VHD Server Task Sequence**. Select this LTI task sequence template to deploy Windows Server in a VHD with native boot.  
+2. **Deploy to VHD Server Task Sequence**. Select this LTI task sequence template to deploy Windows Server in a VHD with native boot.  
 
- These tasks sequences contain the following task sequence steps, which are used to perform deployment to VHDs:  
+   These tasks sequences contain the following task sequence steps, which are used to perform deployment to VHDs:  
 
--   **Create VHD Disk**. The step creates the VHD file after the physical partition has been created and formatted. For more information about this task sequence step, see [Configure the Create VHD Disk Task Sequence Step Type](#ConfiguretheCreateVHDDiskTaskSequenceStepType).  
+- **Create VHD Disk**. The step creates the VHD file after the physical partition has been created and formatted. For more information about this task sequence step, see [Configure the Create VHD Disk Task Sequence Step Type](#ConfiguretheCreateVHDDiskTaskSequenceStepType).  
 
--   **Format and Partition VHD**. This step formats the .vhd file and is built using the **Format and Partition Disk** task sequence step type. For more information about task sequence step type, see [Configure Disk Preparation Task Sequence Steps](#ConfigureDiskPreparationTaskSequenceSteps).  
+- **Format and Partition VHD**. This step formats the .vhd file and is built using the **Format and Partition Disk** task sequence step type. For more information about task sequence step type, see [Configure Disk Preparation Task Sequence Steps](#ConfigureDiskPreparationTaskSequenceSteps).  
 
--   **Clear OSDDiskIndexVariable**. This step clears the **OSDDiskIndexVariable** task sequence variable that was set during the **Create VHD Disk** task sequence step. Clearing the **OSDDiskIndexVariable** task sequence variable allows other disks to be partitioned and formatted as a part of the task sequence.  
+- **Clear OSDDiskIndexVariable**. This step clears the **OSDDiskIndexVariable** task sequence variable that was set during the **Create VHD Disk** task sequence step. Clearing the **OSDDiskIndexVariable** task sequence variable allows other disks to be partitioned and formatted as a part of the task sequence.  
 
- For more information about VHDs with native boot, see [Understanding Virtual Hard Disks with Native Boot](https://technet.microsoft.com/library/hh825689.aspx).  
+  For more information about VHDs with native boot, see [Understanding Virtual Hard Disks with Native Boot](https://technet.microsoft.com/library/hh825689.aspx).  
 
 ####  <a name="ConfiguretheCreateVHDDiskTaskSequenceStepType"></a> Configure the Create VHD Disk Task Sequence Step Type  
  The **Create VHD Disk** task sequence step type creates a .vhd file in preparation to performing a deployment to a VHD with native boot support. Table 160 describes how to configure the **Create VHD Disk** task sequence step type.  
@@ -8447,23 +8455,23 @@ OSDMigrateConfigFiles=MigApp.xml,MigUser.xml
 ####  <a name="ConfigureUSMTOfflineUserStateMigration"></a> Configure USMT Offline User State Migration  
  USMT can perform offline migration of user state from a computer. In an offline migration, the capture is performed in Windows PE instead of the existing operating system. The advantages of performing an offline user state migration are:  
 
--   You do not need to log on to the computer on which you are capturing user state.  
+- You do not need to log on to the computer on which you are capturing user state.  
 
--   Hardware resources and files are more readily accessible by ScanState and other USMT tools.  
+- Hardware resources and files are more readily accessible by ScanState and other USMT tools.  
 
--   Performance may increase on older computers that have limited hardware resources and numerous software applications.  
+- Performance may increase on older computers that have limited hardware resources and numerous software applications.  
 
--   Doing so may help avoid conflicts where a file is in use by another application or service.  
+- Doing so may help avoid conflicts where a file is in use by another application or service.  
 
--   You may be able to use an offline migration to recover files and settings if a computer no longer starts properly.  
+- You may be able to use an offline migration to recover files and settings if a computer no longer starts properly.  
 
- The disadvantage of performing an offline user state migration is that some user settings are not captured but rather can only be captured while running USMT in the target operating system. For a list of the settings that are not captured when performing an offline user state capture, see [What Does USMT Migrate?](https://technet.microsoft.com/library/hh825238.aspx)  
+  The disadvantage of performing an offline user state migration is that some user settings are not captured but rather can only be captured while running USMT in the target operating system. For a list of the settings that are not captured when performing an offline user state capture, see [What Does USMT Migrate?](https://technet.microsoft.com/library/hh825238.aspx)  
 
- You can perform USMT offline user state migration in the MDT:  
+  You can perform USMT offline user state migration in the MDT:  
 
--   In a Refresh Computer deployment scenario using LTI, ZTI, or UDI when the value of the **USMTOfflineMigration** property is set to **"TRUE"**  
+- In a Refresh Computer deployment scenario using LTI, ZTI, or UDI when the value of the **USMTOfflineMigration** property is set to **"TRUE"**  
 
--   In a New Computer deployment scenario using LTI with the **Move Data and Settings** wizard page in the **Deployment Wizard** or if the value of the **USMTOfflineMigration** property is set to **"TRUE"**  
+- In a New Computer deployment scenario using LTI with the **Move Data and Settings** wizard page in the **Deployment Wizard** or if the value of the **USMTOfflineMigration** property is set to **"TRUE"**  
 
 > [!NOTE]
 >  You cannot perform USMT offline user state migration in the MDT New Computer deployment scenario using ZTI.8  
@@ -8502,13 +8510,13 @@ OSDMigrateConfigFiles=MigApp.xml,MigUser.xml
 
 ### Table 166. Properties in CustomSettings.ini to Modify for Joining a Domain  
 
-|Property|Description|  
-|--------------|-----------------|  
-|**DomainAdmin** |The user account credentials used to join the target computer to the domain specified in **JoinDomain**; specify as *domain\user_name* or *user_name@domain.com*|  
-|**DomainAdminDomain** |The domain in which the user’s credentials specified in **DomainAdmin** reside|  
-|**DomainAdminPassword** |The password used for the domain Administrator account specified in the **DomainAdmin** property to join the computer to the domain|  
-|**JoinDomain** |The domain that the target computer joins after the target operating system is deployed (This is the domain in which the computer account for the target computer is created. The **JoinDomain** property can contain alphanumeric characters, hyphens [-], and underscores [_]. The **JoinDomain** property cannot be blank or contain spaces.)|  
-|**MachineObjectOU** |The AD DS OU in the target domain in which the computer account for the target computer is created|  
+|        Property         |                                                                                                                                                                   Description                                                                                                                                                                    |
+|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     **DomainAdmin**     |                                                                                     The user account credentials used to join the target computer to the domain specified in **JoinDomain**; specify as *domain\user_name* or <em>user_name@domain.com</em>                                                                                      |
+|  **DomainAdminDomain**  |                                                                                                                                  The domain in which the user’s credentials specified in **DomainAdmin** reside                                                                                                                                  |
+| **DomainAdminPassword** |                                                                                                       The password used for the domain Administrator account specified in the **DomainAdmin** property to join the computer to the domain                                                                                                        |
+|     **JoinDomain**      | The domain that the target computer joins after the target operating system is deployed (This is the domain in which the computer account for the target computer is created. The **JoinDomain** property can contain alphanumeric characters, hyphens [-], and underscores [_]. The **JoinDomain** property cannot be blank or contain spaces.) |
+|   **MachineObjectOU**   |                                                                                                                        The AD DS OU in the target domain in which the computer account for the target computer is created                                                                                                                        |
 
 ####  <a name="JoinDomainsbyModifyingtheUnattended.xmlFile"></a> Join Domains by Modifying the Unattended.xml File  
  You can automate the domain-join process for LTI or ZTI deployments by modifying the settings listed in Table 167 in the Unattended.xml file used in the MDT deployment process.  
@@ -8640,9 +8648,9 @@ Cscript.exe "%SCRIPTROOT%\ZTIWindowsUpdate.wsf"
 ####  <a name="SelecttheDeviceDriverManagementStrategy"></a> Select the Device Driver Management Strategy  
  The following are the high-level strategies for performing device driver management:  
 
--   **Include all device drivers**. This is the default behavior for LTI and ZTI deployments. In this strategy, all the drivers are deployed to the target computer. Then, Windows PE and the target operating system use Plug-and-Play IDs to identify the device drivers needed for the devices on the target computers.  
+- **Include all device drivers**. This is the default behavior for LTI and ZTI deployments. In this strategy, all the drivers are deployed to the target computer. Then, Windows PE and the target operating system use Plug-and-Play IDs to identify the device drivers needed for the devices on the target computers.  
 
--   **Include only the device drivers specifically required for the target computer**. In this strategy, only the device drivers specific to the target computer are deployed to the target computer. This requires that you configure the ZTI and LTI process to control which device drivers are deployed to the target computer.  
+- **Include only the device drivers specifically required for the target computer**. In this strategy, only the device drivers specific to the target computer are deployed to the target computer. This requires that you configure the ZTI and LTI process to control which device drivers are deployed to the target computer.  
 
   Table 170 lists the advantages and disadvantages of these device driver management strategies.  
 
@@ -8671,68 +8679,68 @@ Cscript.exe "%SCRIPTROOT%\ZTIWindowsUpdate.wsf"
 
  Select any combination of the following methods for creating folder structures:  
 
--   **Target operating system**. Select this method to deploy only the device drivers to the target computer based on the respective target operating system.  
+- **Target operating system**. Select this method to deploy only the device drivers to the target computer based on the respective target operating system.  
 
--   **Processor architecture of the target computers**. Select this method to deploy only the device drivers to the target computers based on the respective processor architecture (32-bit or 64-bit).  
+- **Processor architecture of the target computers**. Select this method to deploy only the device drivers to the target computers based on the respective processor architecture (32-bit or 64-bit).  
 
--   **Manufacturer (make) and model of the target computers**. Select this method to deploy device drivers to the target computer based on the respective make and model of the target computer.  
+- **Manufacturer (make) and model of the target computers**. Select this method to deploy device drivers to the target computer based on the respective make and model of the target computer.  
 
-    > [!TIP]
-    >  If the name of the folder matches the value that the BIOS returned for make and model, you can select the appropriate folder structure based on task sequence variables later in the process.  
+  > [!TIP]
+  >  If the name of the folder matches the value that the BIOS returned for make and model, you can select the appropriate folder structure based on task sequence variables later in the process.  
 
- The complexity of the folder structure that you create is based on the level of precision you want for deploying the device drivers. The more precision you want, the more complex the folder structure.  
+  The complexity of the folder structure that you create is based on the level of precision you want for deploying the device drivers. The more precision you want, the more complex the folder structure.  
 
- You can also select a method for creating folder structures based on specific problems you may be having or to mitigate an existing problem. For example, you may have or expect to have one of the following problems:  
+  You can also select a method for creating folder structures based on specific problems you may be having or to mitigate an existing problem. For example, you may have or expect to have one of the following problems:  
 
--   **Device drivers are being selected for the wrong operating system**. In this case, you could organize your device drivers by creating the following folder structure in the Out-of-Box Drivers node in the Deployment Workbench based on operating systems, and then place the device drivers in the corresponding folders:  
+- **Device drivers are being selected for the wrong operating system**. In this case, you could organize your device drivers by creating the following folder structure in the Out-of-Box Drivers node in the Deployment Workbench based on operating systems, and then place the device drivers in the corresponding folders:  
 
-    -   Windows 7  
+  -   Windows 7  
 
-    -   Windows Server 2008 R2  
+  -   Windows Server 2008 R2  
 
-    -   Windows Server 2012  
+  -   Windows Server 2012  
 
-    -   Windows 8  
+  -   Windows 8  
 
--   **Device drivers are being selected for the wrong processor architecture**. In this case, you could organize your device drivers by creating the following folder structure in the Out-of-Box Drivers node in the Deployment Workbench based on processor architecture, and then place the device drivers in the corresponding folders:  
+- **Device drivers are being selected for the wrong processor architecture**. In this case, you could organize your device drivers by creating the following folder structure in the Out-of-Box Drivers node in the Deployment Workbench based on processor architecture, and then place the device drivers in the corresponding folders:  
 
-    -   x86  
+  -   x86  
 
-    -   x64  
+  -   x64  
 
--   **Device drivers are being selected for the wrong make and model of target computer**. In this case, you could organize your device drivers by creating the following folder structure in the Out-of-Box Drivers node in the Deployment Workbench based on the make and model of the target computer, and then place the device drivers in the corresponding folders:  
+- **Device drivers are being selected for the wrong make and model of target computer**. In this case, you could organize your device drivers by creating the following folder structure in the Out-of-Box Drivers node in the Deployment Workbench based on the make and model of the target computer, and then place the device drivers in the corresponding folders:  
 
-    -   make_01\  
+  -   make_01\  
 
-         …\model_01  
+       …\model_01  
 
-         …\model_02  
+       …\model_02  
 
-         …\model_03  
+       …\model_03  
 
-    -   make_02\  
+  -   make_02\  
 
-         …\model_aa  
+       …\model_aa  
 
-         …\model_ab  
+       …\model_ab  
 
-    -   make_03\  
+  -   make_03\  
 
-         …\model_xx  
+       …\model_xx  
 
-         …\model_xy  
+       …\model_xy  
 
- **Example: Woodgrove Bank Device Driver Folder Structure for LTI**  
+  **Example: Woodgrove Bank Device Driver Folder Structure for LTI**  
 
- Woodgrove Bank has decided that it wants to maintain precise control over the device drivers deployed to target computers. So, its IP pros create a folder structure in the Out-of-Box Drivers node in the Deployment Workbench that organizes the device drivers by make and model, operating system, and processor architecture:  
+  Woodgrove Bank has decided that it wants to maintain precise control over the device drivers deployed to target computers. So, its IP pros create a folder structure in the Out-of-Box Drivers node in the Deployment Workbench that organizes the device drivers by make and model, operating system, and processor architecture:  
 
- make\model\operating_system\architecture  
+  make\model\operating_system\architecture  
 
   Figure 14 illustrates the folder structure Woodgrove Bank created.  
 
- ![Dev Toolkit 14](media/DevToolkit14.png "DevToolkit14")  
+  ![Dev Toolkit 14](media/DevToolkit14.png "DevToolkit14")  
 
- **Figure 14. Device driver folder structure created by Woodgrove Bank**  
+  **Figure 14. Device driver folder structure created by Woodgrove Bank**  
 
 #####  <a name="CreateSelectionProfilestoSelecttheDeviceDriversforLTIDeployments"></a> Create Selection Profiles to Select the Device Drivers for LTI Deployments  
  Create selection profiles to identify the combination of device drivers that you want to deploy to specific target computers based on the folder structure you created in the Out-of-Box Drivers node in the Deployment Workbench. The LTI deployment process uses selection profiles to determine the device drivers to deploy in the **Inject Drivers** task sequence step type, in CustomSettings.ini, and in the MDT DB.  
@@ -8763,45 +8771,45 @@ Cscript.exe "%SCRIPTROOT%\ZTIWindowsUpdate.wsf"
 #####  <a name="ConfigureTaskSequencestoDeployDeviceDriversinSelectionProfilesforLTIDeployments"></a> Configure Task Sequences to Deploy Device Drivers in Selection Profiles for LTI Deployments  
  Modify The configuration for your task sequences to reference the selection profiles and deploy the appropriate device drivers to the target computers. Selection profiles are exposed to the LTI deployment process as:  
 
--   Selection profiles that can be configured in the Deployment Workbench, the CustomSettings.ini file, or the MDT DB  
+- Selection profiles that can be configured in the Deployment Workbench, the CustomSettings.ini file, or the MDT DB  
 
--   Device driver groups that can be configured in the CustomSettings.ini file or the MDT DB  
+- Device driver groups that can be configured in the CustomSettings.ini file or the MDT DB  
 
- Selection profiles and device driver groups are additive. The LTI deployment process creates the list of device drivers to deploy based on the union of both selection profiles and device driver groups, which can cause unpredictable results, because the default selection profile and default device driver group include all device drivers. For example, if you specify a selection profile that contains only 64-bit device drivers and leave the default device driver group, the result will include all device drivers.  
+  Selection profiles and device driver groups are additive. The LTI deployment process creates the list of device drivers to deploy based on the union of both selection profiles and device driver groups, which can cause unpredictable results, because the default selection profile and default device driver group include all device drivers. For example, if you specify a selection profile that contains only 64-bit device drivers and leave the default device driver group, the result will include all device drivers.  
 
- To change this behavior, specify:  
+  To change this behavior, specify:  
 
--   The**Nothing** device driver group in the CustomSettings.ini file or the MDT DB to allow the selection profile to control the device drivers deployed to the target computer  
+- The**Nothing** device driver group in the CustomSettings.ini file or the MDT DB to allow the selection profile to control the device drivers deployed to the target computer  
 
--   The**Nothing** selection profile in the Inject Driver task sequence step, the CustomSettings.ini file, or the MDT DB to allow the device driver group to control the device drivers deployed to the target computer  
+- The**Nothing** selection profile in the Inject Driver task sequence step, the CustomSettings.ini file, or the MDT DB to allow the device driver group to control the device drivers deployed to the target computer  
 
--   A specific set of device drivers for the selection profile and the device driver group so that a known set of device drivers is deployed  
+- A specific set of device drivers for the selection profile and the device driver group so that a known set of device drivers is deployed  
 
- The following are strategies for configuring task sequences to control the deployment of device drivers for LTI deployments:  
+  The following are strategies for configuring task sequences to control the deployment of device drivers for LTI deployments:  
 
--   For a single selection profile, modify the **Inject Driver** task sequence step, which is in most of the LTI task sequence templates, to use the selection profile.  
+- For a single selection profile, modify the **Inject Driver** task sequence step, which is in most of the LTI task sequence templates, to use the selection profile.  
 
--   For a limited number of selection profiles, add an **Inject Driver** task sequence step for each selection profile, and then configure each task sequence step with the corresponding selection profile.  
+- For a limited number of selection profiles, add an **Inject Driver** task sequence step for each selection profile, and then configure each task sequence step with the corresponding selection profile.  
 
--   Configure a single **Inject Driver** task sequence step in your task sequence, and then override the selection profile specified in the **Inject Driver** task sequence step using the **DriverSelectionProfile** task sequence variable in the CustomSettings.ini file or the MDT DB.  
+- Configure a single **Inject Driver** task sequence step in your task sequence, and then override the selection profile specified in the **Inject Driver** task sequence step using the **DriverSelectionProfile** task sequence variable in the CustomSettings.ini file or the MDT DB.  
 
-    > [!NOTE]
-    >  The selection profile you specify in the **DriverSelectionProfile** task sequence variable overrides all **Inject Driver** task sequence steps in a task sequence. If you have multiple all **Inject Driver** task sequence steps in your task sequence, they all will be overridden.  
+  > [!NOTE]
+  >  The selection profile you specify in the **DriverSelectionProfile** task sequence variable overrides all **Inject Driver** task sequence steps in a task sequence. If you have multiple all **Inject Driver** task sequence steps in your task sequence, they all will be overridden.  
 
--   Configure a single **Inject Driver** task sequence step in the task sequence (which already exists in most of the LTI task sequence templates), but specify additional device drivers to be added using the **DriverGroup** task sequence variable. Because selection profiles and device driver groups are additive, the device drivers specified in the **DriverGroup** task sequence variable are deployed in addition to the device drivers in the selection profile.  
+- Configure a single **Inject Driver** task sequence step in the task sequence (which already exists in most of the LTI task sequence templates), but specify additional device drivers to be added using the **DriverGroup** task sequence variable. Because selection profiles and device driver groups are additive, the device drivers specified in the **DriverGroup** task sequence variable are deployed in addition to the device drivers in the selection profile.  
 
--   If you want to use the **DriverGroup** task sequence variable for backward compatibility with previous versions of MDT, configure the **Inject Driver** task sequence step to use the **Nothing** selection profile.  
+- If you want to use the **DriverGroup** task sequence variable for backward compatibility with previous versions of MDT, configure the **Inject Driver** task sequence step to use the **Nothing** selection profile.  
 
-    > [!NOTE]
-    >  You can also use the **DriverPaths** property to specify the UNC path to the folders containing the device drivers to deploy. However, this method is provided for backward compatibility with previous versions of MDT. Instead, use selection profiles or the **DriverGroup** task sequence variable.  
+  > [!NOTE]
+  >  You can also use the **DriverPaths** property to specify the UNC path to the folders containing the device drivers to deploy. However, this method is provided for backward compatibility with previous versions of MDT. Instead, use selection profiles or the **DriverGroup** task sequence variable.  
 
- **Example: Woodgrove Bank Device Driver Task Sequence Configuration for LTI Deployments**  
+  **Example: Woodgrove Bank Device Driver Task Sequence Configuration for LTI Deployments**  
 
- Woodgrove Bank has decided that it wants to maintain precise control over the device drivers deployed to target computers. Its IT pros have created a device driver folder structure and selection profile strategy that allows detailed control of device drivers.  
+  Woodgrove Bank has decided that it wants to maintain precise control over the device drivers deployed to target computers. Its IT pros have created a device driver folder structure and selection profile strategy that allows detailed control of device drivers.  
 
- The IT pros configured their task sequences using the **Inject Driver** task sequence step in their task sequences with the most common configuration in their organization, and then used the **DriverSelectionProfile** task sequence variable in the CustomSettings.ini file and the MDT DB to override the selection profile specified in the **Inject Driver** task sequence step as necessary.  
+  The IT pros configured their task sequences using the **Inject Driver** task sequence step in their task sequences with the most common configuration in their organization, and then used the **DriverSelectionProfile** task sequence variable in the CustomSettings.ini file and the MDT DB to override the selection profile specified in the **Inject Driver** task sequence step as necessary.  
 
- The IT pros added the following line in their CustomSettings.ini file for the **DriverSelectionProfile** task sequence variable:  
+  The IT pros added the following line in their CustomSettings.ini file for the **DriverSelectionProfile** task sequence variable:  
 
 ```  
 DriverSelectionProfile =%MAKE%-%MODEL%-Win8-%ARCHITECTURE%  
@@ -8813,74 +8821,74 @@ DriverSelectionProfile =%MAKE%-%MODEL%-Win8-%ARCHITECTURE%
 ####  <a name="ControlDeviceDriverDeploymentsUsingConfigurationManagerforZTI"></a> Control Device Driver Deployments Using Configuration Manager for ZTI  
  ZTI deployments in Configuration Manager use the driver catalog in Configuration Manager as the central repository for device drivers. After you import device drivers into the driver catalog, you can organize them by:  
 
--   **Device driver packages**. Like software packages, device driver packages are distributed to distribution points so that they are accessible to the target computers. You can create multiple device driver packages to group device drivers to be deployed to the target computer, such as the make and model of target computer. You can control the device drivers deployed based on the device driver packages using the **Apply Driver Package** task sequence step.  
+- **Device driver packages**. Like software packages, device driver packages are distributed to distribution points so that they are accessible to the target computers. You can create multiple device driver packages to group device drivers to be deployed to the target computer, such as the make and model of target computer. You can control the device drivers deployed based on the device driver packages using the **Apply Driver Package** task sequence step.  
 
--   **Device driver categories**. Device driver categories allow you to specify a category for each device driver you import into the driver catalog. Categories allow you to group device drivers based common characteristics, such as all network adapter drivers or by processor architecture. You can control the device drivers deployed to the target computer based on the device driver categories using the **Auto Apply Drivers** task sequence step.  
+- **Device driver categories**. Device driver categories allow you to specify a category for each device driver you import into the driver catalog. Categories allow you to group device drivers based common characteristics, such as all network adapter drivers or by processor architecture. You can control the device drivers deployed to the target computer based on the device driver categories using the **Auto Apply Drivers** task sequence step.  
 
- Most of the ZTI task sequences created using the MDT task sequence templates include the **Auto Apply Drivers** task sequence step. By default, this step configures the task sequence to deploy all device drivers to the target computer, allowing the target operating system to select the device drivers required.  
+  Most of the ZTI task sequences created using the MDT task sequence templates include the **Auto Apply Drivers** task sequence step. By default, this step configures the task sequence to deploy all device drivers to the target computer, allowing the target operating system to select the device drivers required.  
 
- The list that follows provides strategies for configuring task sequences to control the deployment of device drivers for ZTI deployments in Configuration Manager:  
+  The list that follows provides strategies for configuring task sequences to control the deployment of device drivers for ZTI deployments in Configuration Manager:  
 
--   Create multiple device driver categories that are configured in multiple Auto **Apply Drivers** task sequence steps. Control the deployment of device drivers by performing the following steps:  
+- Create multiple device driver categories that are configured in multiple Auto **Apply Drivers** task sequence steps. Control the deployment of device drivers by performing the following steps:  
 
-    1.  Create device driver categories based on the level of granularity you want in controlling the device drivers to be deployed.  
+  1. Create device driver categories based on the level of granularity you want in controlling the device drivers to be deployed.  
 
-    2.  Add multiple **Auto Apply Drivers** task sequence steps based on the number of combination categories you want to deploy.  
+  2. Add multiple **Auto Apply Drivers** task sequence steps based on the number of combination categories you want to deploy.  
 
-    3.  Configure the **Auto Apply Drivers** task sequence step to use the proper combination of device driver categories using the **Limit driver matching to only consider drivers in selected categories** list box.  
+  3. Configure the **Auto Apply Drivers** task sequence step to use the proper combination of device driver categories using the **Limit driver matching to only consider drivers in selected categories** list box.  
 
-    4.  Configure the task sequence step conditions based on the contents of the device driver package.  
+  4. Configure the task sequence step conditions based on the contents of the device driver package.  
 
      For example, if the device driver packages are based on the make and model of the target computer, configure the task sequence step to run when the **Make** and **Model** task sequence variables equal the make and model for the device driver package.  
 
--   Create multiple device driver packages that are configured in multiple **Apply Driver Package** task sequence steps. Control the deployment of device drivers by performing the following steps:  
+- Create multiple device driver packages that are configured in multiple **Apply Driver Package** task sequence steps. Control the deployment of device drivers by performing the following steps:  
 
-    1.  Create device driver packages based on the criteria for limiting the device drivers to be deployed.  
+  1. Create device driver packages based on the criteria for limiting the device drivers to be deployed.  
 
-    2.  For each device driver package, add an **Apply Driver Package** task sequence step for each category.  
+  2. For each device driver package, add an **Apply Driver Package** task sequence step for each category.  
 
-    3.  Configure the **Apply Driver Package** task sequence step to use the corresponding device driver package.  
+  3. Configure the **Apply Driver Package** task sequence step to use the corresponding device driver package.  
 
-    4.  Configure the task sequence step conditions based on the contents of the device driver package.  
+  4. Configure the task sequence step conditions based on the contents of the device driver package.  
 
      For example, if the device driver packages are based on the make and model of the target computer, configure the task sequence step to run when the Make and **Model** task sequence variables equal the make and model for the device driver package.  
 
--   Configure a single **Auto Apply Drivers** task sequence step in your task sequence, and then override the selection profile specified in the **Auto Apply Drivers** task sequence step using the **OSDAutoApplyDriverCategoryList** task sequence variable in the CustomSettings.ini file or the MDT DB. Control the deployment of device drivers by performing the following steps:  
+- Configure a single **Auto Apply Drivers** task sequence step in your task sequence, and then override the selection profile specified in the **Auto Apply Drivers** task sequence step using the **OSDAutoApplyDriverCategoryList** task sequence variable in the CustomSettings.ini file or the MDT DB. Control the deployment of device drivers by performing the following steps:  
 
-    1.  Create device driver categories based on the level of granularity you want in controlling the device drivers to be deployed.  
+  1.  Create device driver categories based on the level of granularity you want in controlling the device drivers to be deployed.  
 
-    2.  Add a new or an existing **Auto Apply Drivers** task sequence step in your task sequence.  
+  2.  Add a new or an existing **Auto Apply Drivers** task sequence step in your task sequence.  
 
-    3.  Configure the **Auto Apply Drivers** task sequence step to use any of the device driver categories using the **Limit driver matching to only consider drivers in selected categories** list box.  
+  3.  Configure the **Auto Apply Drivers** task sequence step to use any of the device driver categories using the **Limit driver matching to only consider drivers in selected categories** list box.  
 
-        > [!NOTE]
-        >  The device driver category you select is not important, as the category will be overridden by the **OSDAutoApplyDriverCategoryList** task sequence variable.  
+      > [!NOTE]
+      >  The device driver category you select is not important, as the category will be overridden by the **OSDAutoApplyDriverCategoryList** task sequence variable.  
 
-    4.  Determine GUIDs for each device driver category you created by running the following script, substituting *strSiteCode* with your site code, *strServer* with you Configuration Manager site server, and *strDriverCatName* with the name of a device driver category you created:  
+  4.  Determine GUIDs for each device driver category you created by running the following script, substituting *strSiteCode* with your site code, *strServer* with you Configuration Manager site server, and *strDriverCatName* with the name of a device driver category you created:  
 
-        ```  
-        strSiteCode = "NYC"  
-        strServer = "CMSERVER"  
-        strDriverCatName = "Fabrikam"  
-        set objWMIService= GetObject("winmgmts:{impersonationlevel=impersonate}!\\" & strServer & "\root\sms\site_" & strSiteCode)  
+      ```  
+      strSiteCode = "NYC"  
+      strServer = "CMSERVER"  
+      strDriverCatName = "Fabrikam"  
+      set objWMIService= GetObject("winmgmts:{impersonationlevel=impersonate}!\\" & strServer & "\root\sms\site_" & strSiteCode)  
 
-        set DriverGUIDS = objWMIService.ExecQuery("select CategoryInstance_UniqueID from CMDB_categoryinstance where LocalizedCategoryInstanceName = '" & strDriverCatName & "'")   
-        For each DriverGuid in DriverGuids  
-            wscript.echo DriverGuid.CategoryInstance_UniqueID  
-        Next  
-        ```  
+      set DriverGUIDS = objWMIService.ExecQuery("select CategoryInstance_UniqueID from CMDB_categoryinstance where LocalizedCategoryInstanceName = '" & strDriverCatName & "'")   
+      For each DriverGuid in DriverGuids  
+          wscript.echo DriverGuid.CategoryInstance_UniqueID  
+      Next  
+      ```  
 
-    5.  Modify the CustomSettings.ini file as follows, substituting *SECTION* with the name of a section (such as `[Default]`) and *GUID* with the GUID you retrieved in the previous step:  
+  5.  Modify the CustomSettings.ini file as follows, substituting *SECTION* with the name of a section (such as `[Default]`) and *GUID* with the GUID you retrieved in the previous step:  
 
-        ```  
-        [Settings]  
-        Properties=OSDAutoAPplyDriverCategoryList  
+      ```  
+      [Settings]  
+      Properties=OSDAutoAPplyDriverCategoryList  
 
-        [SECTION]  
-        OSDAutoApplyDriverCategoryList=DriverCategories:GUID  
-        ```  
+      [SECTION]  
+      OSDAutoApplyDriverCategoryList=DriverCategories:GUID  
+      ```  
 
--   When performing deployments using stand-alone media, use an **Apply Driver Package** task sequence step, because the **Auto Apply Drivers** task sequence requires connectivity to a management point, and the stand-alone media will not attempt a connection to a management point.  
+- When performing deployments using stand-alone media, use an **Apply Driver Package** task sequence step, because the **Auto Apply Drivers** task sequence requires connectivity to a management point, and the stand-alone media will not attempt a connection to a management point.  
 
 ####  <a name="ResolveDeviceDriverSigningIssues"></a> Resolve Device Driver Signing Issues  
  Digital signatures tell you whether a device driver is provided by a legitimate publisher. Windows features take advantage of code-signing technologies, and requirements for security in the operating system enforce the use of digital signatures for some kinds of code.  
@@ -8898,46 +8906,46 @@ DriverSelectionProfile =%MAKE%-%MODEL%-Win8-%ARCHITECTURE%
 
  You can carry out the following tasks using Orchestrator:  
 
--   Automate processes in your data center, regardless of hardware or platform.  
+- Automate processes in your data center, regardless of hardware or platform.  
 
--   Automate your IT operations and standardize best practices to improve operational efficiency.  
+- Automate your IT operations and standardize best practices to improve operational efficiency.  
 
--   Connect different systems from different vendors without having to know how to use scripting and programming languages.  
+- Connect different systems from different vendors without having to know how to use scripting and programming languages.  
 
- An Orchestrator *runbook* is the sequence of activities that orchestrate actions on computers and networks. You can initiate Orchestrator runbooks in MDT using the **Execute Runbook** task sequence step type.  
+  An Orchestrator *runbook* is the sequence of activities that orchestrate actions on computers and networks. You can initiate Orchestrator runbooks in MDT using the **Execute Runbook** task sequence step type.  
 
 > [!NOTE]
 >  The **Execute Runbook** task sequence step is not included any MDT task sequence templates. You must add the **Execute Runbook** task sequence step to any task sequences you create.  
 
 ##### To configure the Execute Runbook task sequence step type to run Orchestrator runbooks  
 
-1.  Edit ***task_sequence_name*** (where *task_sequence_name* is the name of the task sequence to which you want to add the task sequence step) for:  
+1. Edit ***task_sequence_name*** (where *task_sequence_name* is the name of the task sequence to which you want to add the task sequence step) for:  
 
-    -   LTI as described in [Configure the Task Sequence Properties Task Sequence Tab](#ConfiguretheTaskSequencePropertiesTaskSequenceTab)  
+   -   LTI as described in [Configure the Task Sequence Properties Task Sequence Tab](#ConfiguretheTaskSequencePropertiesTaskSequenceTab)  
 
-    -   ZTI using Configuration Manager as described in [Configuring ZTI Task Sequence Steps in Configuration Manager](#ConfiguringZTITaskSequenceStepsinConfigurationManager)  
+   -   ZTI using Configuration Manager as described in [Configuring ZTI Task Sequence Steps in Configuration Manager](#ConfiguringZTITaskSequenceStepsinConfigurationManager)  
 
-2.  Add a new task sequence step based on the **Execute Runbook** task sequence type for:  
+2. Add a new task sequence step based on the **Execute Runbook** task sequence type for:  
 
-    1.  LTI on the **Task Sequence** tab (In the task sequence hierarchy, click **Add**, click **General**, and then click **Execute Runbook**.)  
+   1.  LTI on the **Task Sequence** tab (In the task sequence hierarchy, click **Add**, click **General**, and then click **Execute Runbook**.)  
 
-    2.  ZTI in the task sequence hierarchy (Click **Add**, point to **MDT**, and then click **Execute Runbook**.)  
+   2.  ZTI in the task sequence hierarchy (Click **Add**, point to **MDT**, and then click **Execute Runbook**.)  
 
-3.  On the **Properties** tab, configure the settings listed in Table 171 based on the requirements of your organization, and then click **OK**.  
+3. On the **Properties** tab, configure the settings listed in Table 171 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 171. Configuration Settings on the Properties Tab of the Execute Runbook Task Sequence Step Type  
+   ### Table 171. Configuration Settings on the Properties Tab of the Execute Runbook Task Sequence Step Type  
 
-    |Setting|Description|  
-    |-------------|-----------------|  
-    |**Name** |Type a name for the task.|  
-    |**Description** |Type a description of the task—for example, ***runbook_name*** (where *runbook_name* is the name of the Orchestrator runbook that this task sequence step will run).|  
-    |**Orchestrator Server** |Type the URL for the Orchestrator web service, which includes the server name. The Orchestrator web service can use either Hypertext Transfer Protocol (HTTP) or HTTP over Secure Sockets Layer (HTTPS). The Orchestrator web service defaults to port 81.<br /><br /> The Orchestrator web service supports multiple runbook servers. By default, a runbook can run on any runbook server. A runbook can be configured to specify which runbook servers should be used to run the runbook.<br /><br /> The Orchestrator web service supports the ability to run a runbook on a specific runbook server. This feature is not supported in MDT.<br /><br /> Specify the URL in any of the following formats:<br /><br /> -                                  **servername**. When using this format, the URL defaults to:<br /><br /> `https://<servername>:81/Orchestrator2012/Orchestrator.svc`<br /><br /> -                                  **servername:port**. When using this format, the URL defaults to:<br /><br /> `https://<servername:port>/Orchestrator2012/Orchestrator.svc.`<br /><br /> -                                  **https://servername:port**. When using this format, the URL defaults to:<br /><br /> `https://<servername:port>/Orchestrator2012/Orchestrator.svc.`<br /><br /> -                                  **https://servername:port**. When using this format, the URL defaults to:<br /><br /> `https://<servername:port>/Orchestrator2012/Orchestrator.svc.`<br /><br /> -                                  **https://servername:port/Orchestrator2012/Orchestrator.svc**. When using this format, MDT assumes that you are providing the fully qualified URL, because the value ends with *.svc*.<br /><br /> -                                  **https://servername:port/Orchestrator2012/Orchestrator.svc**. When using this format, MDT assumes that you are providing the fully qualified URL, because the value ends with *.svc*.|  
-    |**Runbook** |Click **Browse**, and then select the name of the Orchestrator runbook that this task sequence should run.<br /><br /> To successfully browse for Orchestrator runbooks, install the [ADO.NET Data Services Update for .NET Framework 3.5 SP1 for Windows 7 and Windows Server 2008 R2](https://www.microsoft.com/download/details.aspx?id=2343).|  
-    |**Automatically provide runbook parameter values** |Select this option to automatically provide the Orchestrator runbook input parameter values( which assumes that the runbook parameter values are task sequence variables). For example, if a runbook has an input parameter named **OSDComputerName**, then the **OSDComputerName** task sequence variable value is passed to the runbook.<br /><br /> This option works only for input parameters that are valid task sequence variable names and do not contain spaces or other special characters. Although spaces and other special characters are supported as Orchestrator parameter names, they are not valid task sequence variable names. If you need to pass values to parameters with spaces or other special characters, use the **Specify explicit runbook parameters** option.<br /><br /> The other option is **Specify explicit runbook parameters**.<br /><br /> The values provided for the runbook input parameters to the Orchestrator web service are formatted as XML. Passing values that contain data that is or resembles XML-formatted data may cause errors.|  
-    |**Specify explicit runbook parameters** |Select this option to explicitly provide the Orchestrator runbook input parameters.<br /><br /> You must configure the following settings for each input parameter that the Orchestrator runbook requires:<br /><br /> -                                  **Name**. This is the name of the input runbook parameter.<br /><br /> If you change the parameters for an existing Orchestrator runbook, you need to browse (reselect) for the runbook again, because MDT only retrieves the parameter list when initially adding the Orchestrator runbook.<br /><br /> -                                  **Value**. This can be a constant or a variable, such as a task sequence variable or an environment variable. For example, you can specify a value of **%OSDComputerName%**, which will pass the value of the **OSDComputerName** task sequence variable to the runbook input parameter.|  
-    |**Wait for the runbook to finish before continuing** |This check box controls whether the task sequence step will wait for the runbook to finish before proceeding to the next task sequence step.If this check box is:<br /><br /> -                                  **Selected**, then the task sequence step will wait for the runbook to finish before proceeding on to the next task sequence step.<br /><br /> When this check box is selected, the task sequence step will poll the Orchestrator web service for the runbook to finish. The amount of time between polls starts at 1 second, then increases to 2, 4, 8, 16, 32, and 64 seconds between each poll. Once the amount of time reaches 64 seconds, the task sequence step continues to poll every 64 seconds.<br /><br /> -                                  **Cleared**, then the task sequence step will not wait for the runbook to finish before proceeding to the next task sequence step.<br /><br /> This check box must be selected if the runbook returns output parameters.|  
+   |                       Setting                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+   |------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+   |                       **Name**                       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Type a name for the task.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+   |                   **Description**                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Type a description of the task—for example, ***runbook_name*** (where *runbook_name* is the name of the Orchestrator runbook that this task sequence step will run).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+   |               **Orchestrator Server**                | Type the URL for the Orchestrator web service, which includes the server name. The Orchestrator web service can use either Hypertext Transfer Protocol (HTTP) or HTTP over Secure Sockets Layer (HTTPS). The Orchestrator web service defaults to port 81.<br /><br /> The Orchestrator web service supports multiple runbook servers. By default, a runbook can run on any runbook server. A runbook can be configured to specify which runbook servers should be used to run the runbook.<br /><br /> The Orchestrator web service supports the ability to run a runbook on a specific runbook server. This feature is not supported in MDT.<br /><br /> Specify the URL in any of the following formats:<br /><br /> -                                  **servername**. When using this format, the URL defaults to:<br /><br /> `https://<servername>:81/Orchestrator2012/Orchestrator.svc`<br /><br /> -                                  **servername:port**. When using this format, the URL defaults to:<br /><br /> `https://<servername:port>/Orchestrator2012/Orchestrator.svc.`<br /><br /> -                                  <strong>https://servername:port</strong>. When using this format, the URL defaults to:<br /><br /> `https://<servername:port>/Orchestrator2012/Orchestrator.svc.`<br /><br /> -                                  <strong>https://servername:port</strong>. When using this format, the URL defaults to:<br /><br /> `https://<servername:port>/Orchestrator2012/Orchestrator.svc.`<br /><br /> -                                  <strong>https://servername:port/Orchestrator2012/Orchestrator.svc</strong>. When using this format, MDT assumes that you are providing the fully qualified URL, because the value ends with *.svc*.<br /><br /> -                                  <strong>https://servername:port/Orchestrator2012/Orchestrator.svc</strong>. When using this format, MDT assumes that you are providing the fully qualified URL, because the value ends with *.svc*. |
+   |                     **Runbook**                      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Click **Browse**, and then select the name of the Orchestrator runbook that this task sequence should run.<br /><br /> To successfully browse for Orchestrator runbooks, install the [ADO.NET Data Services Update for .NET Framework 3.5 SP1 for Windows 7 and Windows Server 2008 R2](https://www.microsoft.com/download/details.aspx?id=2343).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+   |  **Automatically provide runbook parameter values**  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Select this option to automatically provide the Orchestrator runbook input parameter values( which assumes that the runbook parameter values are task sequence variables). For example, if a runbook has an input parameter named **OSDComputerName**, then the **OSDComputerName** task sequence variable value is passed to the runbook.<br /><br /> This option works only for input parameters that are valid task sequence variable names and do not contain spaces or other special characters. Although spaces and other special characters are supported as Orchestrator parameter names, they are not valid task sequence variable names. If you need to pass values to parameters with spaces or other special characters, use the **Specify explicit runbook parameters** option.<br /><br /> The other option is **Specify explicit runbook parameters**.<br /><br /> The values provided for the runbook input parameters to the Orchestrator web service are formatted as XML. Passing values that contain data that is or resembles XML-formatted data may cause errors.                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+   |       **Specify explicit runbook parameters**        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Select this option to explicitly provide the Orchestrator runbook input parameters.<br /><br /> You must configure the following settings for each input parameter that the Orchestrator runbook requires:<br /><br /> -                                  **Name**. This is the name of the input runbook parameter.<br /><br /> If you change the parameters for an existing Orchestrator runbook, you need to browse (reselect) for the runbook again, because MDT only retrieves the parameter list when initially adding the Orchestrator runbook.<br /><br /> -                                  **Value**. This can be a constant or a variable, such as a task sequence variable or an environment variable. For example, you can specify a value of **%OSDComputerName%**, which will pass the value of the **OSDComputerName** task sequence variable to the runbook input parameter.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+   | **Wait for the runbook to finish before continuing** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 This check box controls whether the task sequence step will wait for the runbook to finish before proceeding to the next task sequence step.If this check box is:<br /><br /> -                                  **Selected**, then the task sequence step will wait for the runbook to finish before proceeding on to the next task sequence step.<br /><br /> When this check box is selected, the task sequence step will poll the Orchestrator web service for the runbook to finish. The amount of time between polls starts at 1 second, then increases to 2, 4, 8, 16, 32, and 64 seconds between each poll. Once the amount of time reaches 64 seconds, the task sequence step continues to poll every 64 seconds.<br /><br /> -                                  **Cleared**, then the task sequence step will not wait for the runbook to finish before proceeding to the next task sequence step.<br /><br /> This check box must be selected if the runbook returns output parameters.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
- If the Orchestrator runbook returns parameters, the values of the return parameters are set to corresponding task sequence variable names. If an Orchestrator runbook return parameter name contains spaces, the **ZTIExecuteRunbook.wsf** script will strip the spaces from the parameter name when creating the corresponding task sequence variable name.  
+   If the Orchestrator runbook returns parameters, the values of the return parameters are set to corresponding task sequence variable names. If an Orchestrator runbook return parameter name contains spaces, the **ZTIExecuteRunbook.wsf** script will strip the spaces from the parameter name when creating the corresponding task sequence variable name.  
 
 > [!NOTE]
 >  If a runbook return parameter name contains other special characters, the return parameter may be ignored or generate errors.  
@@ -9000,15 +9008,15 @@ DriverSelectionProfile =%MAKE%-%MODEL%-Win8-%ARCHITECTURE%
 
  If the security configuration settings that the Security Compliance Manager GPO packs provide are too stringent, perform one of the following tasks:  
 
--   Modify the existing GPO templates to be less restrictive.  
+- Modify the existing GPO templates to be less restrictive.  
 
--   Provide a custom GPO template that you have created that is less restrictive.  
+- Provide a custom GPO template that you have created that is less restrictive.  
 
--   Disable the **Apply Local GPO Package** task sequence step in your task sequence.  
+- Disable the **Apply Local GPO Package** task sequence step in your task sequence.  
 
- For example, the GPO pack for Windows 7 can enforce Server Message Block (SMB) configuration settings that could prevent Windows 7 from communicating with other devices running Common Internet File System (CIFS) or SAMBA.  
+  For example, the GPO pack for Windows 7 can enforce Server Message Block (SMB) configuration settings that could prevent Windows 7 from communicating with other devices running Common Internet File System (CIFS) or SAMBA.  
 
- Apply GPO packs templates by performing the following steps:  
+  Apply GPO packs templates by performing the following steps:  
 
 1.  Identify or create the GPO packs required by your organization as described in [Identify or Create the GPO Packs.](#IdentifyorCreatetheGPOPacks)  
 
@@ -9051,17 +9059,17 @@ DriverSelectionProfile =%MAKE%-%MODEL%-Win8-%ARCHITECTURE%
 
  The **Opt In to CEIP and WER** task sequence step is included in the following MDT task sequence templates but is disabled by default:  
 
--   **Standard Client Task Sequence** in LTI and ZTI  
+- **Standard Client Task Sequence** in LTI and ZTI  
 
--   **Standard Server Task Sequence** in LTI and ZTI  
+- **Standard Server Task Sequence** in LTI and ZTI  
 
--   **Deploy to VHD Client Task Sequence** in LTI  
+- **Deploy to VHD Client Task Sequence** in LTI  
 
--   **Deploy to VHD Server Task Sequence** in LTI  
+- **Deploy to VHD Server Task Sequence** in LTI  
 
--   **User Driven Installation Task Sequence** in UDI  
+- **User Driven Installation Task Sequence** in UDI  
 
- The **Opt In to CEIP and WER** task sequence step runs the ZTIOptIn.wsf script as shown in the following example:  
+  The **Opt In to CEIP and WER** task sequence step runs the ZTIOptIn.wsf script as shown in the following example:  
 
 ```  
 cscript.exe %SCRIPTROOT%\ZTIOptIn.wsf /CEIP:YES /WER:YES  
@@ -9104,30 +9112,30 @@ cscript.exe %SCRIPTROOT%\ZTIOptIn.wsf /CEIP:YES /WER:YES
 
 ###### To configure the Install Roles and Features task sequence step type to install Windows roles and features  
 
-1.  Edit ***task_sequence_name*** (where *task_sequence_name* is the name of the task sequence to which you want to add the task sequence step) for:  
+1. Edit ***task_sequence_name*** (where *task_sequence_name* is the name of the task sequence to which you want to add the task sequence step) for:  
 
-    -   LTI as described in [Configure the Task Sequence Properties Task Sequence Tab](#ConfiguretheTaskSequencePropertiesTaskSequenceTab)  
+   -   LTI as described in [Configure the Task Sequence Properties Task Sequence Tab](#ConfiguretheTaskSequencePropertiesTaskSequenceTab)  
 
-    -   ZTI using Configuration Manager as described in [Configuring ZTI Task Sequence Steps in Configuration Manager](#ConfiguringZTITaskSequenceStepsinConfigurationManager)  
+   -   ZTI using Configuration Manager as described in [Configuring ZTI Task Sequence Steps in Configuration Manager](#ConfiguringZTITaskSequenceStepsinConfigurationManager)  
 
-2.  Add a new task sequence step based on the **Install Roles and Features** task sequence type for:  
+2. Add a new task sequence step based on the **Install Roles and Features** task sequence type for:  
 
-    -   LTI on the **Task Sequence** tab (In the task sequence hierarchy, click **Add**, point to **Roles**, and then click **Install Roles and Features**.)  
+   -   LTI on the **Task Sequence** tab (In the task sequence hierarchy, click **Add**, point to **Roles**, and then click **Install Roles and Features**.)  
 
-    -   ZTI in the task sequence hierarchy (Click **Add**, point to **MDT**, and then click **Install Roles and Features**.)  
+   -   ZTI in the task sequence hierarchy (Click **Add**, point to **MDT**, and then click **Install Roles and Features**.)  
 
-3.  On the **Properties** tab, configure the settings listed in Table 173 based on the requirements of your organization, and then click **OK**.  
+3. On the **Properties** tab, configure the settings listed in Table 173 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 173. Configuration Settings on the Properties Tab of the Install Roles and Features Task Sequence Step Type  
+   ### Table 173. Configuration Settings on the Properties Tab of the Install Roles and Features Task Sequence Step Type  
 
-    |Setting|Description|  
-    |-------------|-----------------|  
-    |**Name** |Type a name for the task.|  
-    |**Description** |Type a description of the task.|  
-    |**Select the operating system for which roles are to be installed** |Select the target operating system to be deployed from the following list:<br /><br /> - Windows 7<br /><br /> - Windows 8<br /><br /> - Windows 8.1<br /><br /> - Windows Server 2008 R2<br /><br /> - Windows Server 2008 R2 Core<br /><br /> - Windows Server 2012<br /><br /> - Windows Server 2012 Core<br /><br /> - Windows Server 2012 R2<br /><br /> - Windows Server 2012 R2 Core|  
-    |**Select the roles and features that should be installed** |Select the check box next to the roles or features to be installed.<br /><br /> You can click **Select All** to select all the roles and features, or you can click **Select None** to clear all the roles and features.|  
+   |Setting|Description|  
+   |-------------|-----------------|  
+   |**Name** |Type a name for the task.|  
+   |**Description** |Type a description of the task.|  
+   |**Select the operating system for which roles are to be installed** |Select the target operating system to be deployed from the following list:<br /><br /> - Windows 7<br /><br /> - Windows 8<br /><br /> - Windows 8.1<br /><br /> - Windows Server 2008 R2<br /><br /> - Windows Server 2008 R2 Core<br /><br /> - Windows Server 2012<br /><br /> - Windows Server 2012 Core<br /><br /> - Windows Server 2012 R2<br /><br /> - Windows Server 2012 R2 Core|  
+   |**Select the roles and features that should be installed** |Select the check box next to the roles or features to be installed.<br /><br /> You can click **Select All** to select all the roles and features, or you can click **Select None** to clear all the roles and features.|  
 
- For information on how to uninstall Windows roles and features, see [Configure Uninstall Roles and Features Task Sequence Steps](#ConfigureUninstallRolesandFeaturesTaskSequenceSteps).  
+   For information on how to uninstall Windows roles and features, see [Configure Uninstall Roles and Features Task Sequence Steps](#ConfigureUninstallRolesandFeaturesTaskSequenceSteps).  
 
 #####  <a name="ConfigureUninstallRolesandFeaturesTaskSequenceSteps"></a> Configure Uninstall Roles and Features Task Sequence Steps  
  MDT automates the removal (uninstallation) of operating system roles and features in Windows using the **Uninstall Roles and Features** task sequence step. This task sequence step must be run in the target operating system, not in Windows PE.  
@@ -9139,30 +9147,30 @@ cscript.exe %SCRIPTROOT%\ZTIOptIn.wsf /CEIP:YES /WER:YES
 
 ###### To configure the Uninstall Roles and Features task sequence step type to install Windows roles and features  
 
-1.  Edit ***task_sequence_name*** (where *task_sequence_name* is the name of the task sequence to which you want to add the task sequence step) for:  
+1. Edit ***task_sequence_name*** (where *task_sequence_name* is the name of the task sequence to which you want to add the task sequence step) for:  
 
-    -   LTI as described in [Configure the Task Sequence Properties Task Sequence Tab](#ConfiguretheTaskSequencePropertiesTaskSequenceTab)  
+   -   LTI as described in [Configure the Task Sequence Properties Task Sequence Tab](#ConfiguretheTaskSequencePropertiesTaskSequenceTab)  
 
-    -   ZTI using Configuration Manager as described in [Configuring ZTI Task Sequence Steps in Configuration Manager](#ConfiguringZTITaskSequenceStepsinConfigurationManager)  
+   -   ZTI using Configuration Manager as described in [Configuring ZTI Task Sequence Steps in Configuration Manager](#ConfiguringZTITaskSequenceStepsinConfigurationManager)  
 
-2.  Add a new task sequence step based on the **Uninstall Roles and Features** task sequence type for:  
+2. Add a new task sequence step based on the **Uninstall Roles and Features** task sequence type for:  
 
-    -   LTI on the **Task Sequence** tab (In the task sequence hierarchy, click **Add**, point to **Roles**, and then click **Uninstall Roles and Features**.)  
+   -   LTI on the **Task Sequence** tab (In the task sequence hierarchy, click **Add**, point to **Roles**, and then click **Uninstall Roles and Features**.)  
 
-    -   ZTI in the task sequence hierarchy (Click **Add**, point to **MDT**, and then click **Uninstall Roles and Features**.)  
+   -   ZTI in the task sequence hierarchy (Click **Add**, point to **MDT**, and then click **Uninstall Roles and Features**.)  
 
-3.  On the **Properties** tab, configure the settings listed in Table 174 based on the requirements of your organization, and then click **OK**.  
+3. On the **Properties** tab, configure the settings listed in Table 174 based on the requirements of your organization, and then click **OK**.  
 
-    ### Table 174. Configuration Settings on the Properties Tab of the Uninstall Roles and Features Task Sequence Step Type  
+   ### Table 174. Configuration Settings on the Properties Tab of the Uninstall Roles and Features Task Sequence Step Type  
 
-    |Setting|Description|  
-    |-------------|-----------------|  
-    |**Name** |Type a name for the task.|  
-    |**Description** |Type a description of the task.|  
-    |**Select the operating system for which roles are to be uninstalled** |Select the target operating system to be deployed from the following list:<br /><br /> - Windows 7<br /><br /> - Windows 8<br /><br /> - Windows 8.1<br /><br /> - Windows Server 2008 R2<br /><br /> - Windows Server 2008 R2 Core<br /><br /> - Windows Server 2012<br /><br /> - Windows Server 2012 Core<br /><br /> - Windows Server 2012 R2<br /><br /> - Windows Server 2012 R2 Core|  
-    |**Select the roles and features that should be uninstalled** |Select the check box next to the roles or features to be uninstalled.<br /><br /> You can click **Select All** to select all the roles and features or click **Select None** to clear all the roles and features.|  
+   |Setting|Description|  
+   |-------------|-----------------|  
+   |**Name** |Type a name for the task.|  
+   |**Description** |Type a description of the task.|  
+   |**Select the operating system for which roles are to be uninstalled** |Select the target operating system to be deployed from the following list:<br /><br /> - Windows 7<br /><br /> - Windows 8<br /><br /> - Windows 8.1<br /><br /> - Windows Server 2008 R2<br /><br /> - Windows Server 2008 R2 Core<br /><br /> - Windows Server 2012<br /><br /> - Windows Server 2012 Core<br /><br /> - Windows Server 2012 R2<br /><br /> - Windows Server 2012 R2 Core|  
+   |**Select the roles and features that should be uninstalled** |Select the check box next to the roles or features to be uninstalled.<br /><br /> You can click **Select All** to select all the roles and features or click **Select None** to clear all the roles and features.|  
 
- For information on how to install Windows roles and features, see [Configure Install Roles and Features Task Sequence Steps](#ConfigureUninstallRolesandFeaturesTaskSequenceSteps).  
+   For information on how to install Windows roles and features, see [Configure Install Roles and Features Task Sequence Steps](#ConfigureUninstallRolesandFeaturesTaskSequenceSteps).  
 
 ###  <a name="ConfiguringServerRoleTaskSequenceSteps"></a> Configuring Server Role Task Sequence Steps  
  MDT automates the deployment of server roles in Windows Server. Configure task sequence steps in MDT to deploy the server roles that are supported in MDT.  
@@ -9205,113 +9213,113 @@ cscript.exe %SCRIPTROOT%\ZTIOptIn.wsf /CEIP:YES /WER:YES
 
 ###### To deploy a domain controller with a new forest  
 
-1.  Edit ***task_sequence_name*** (where *task_sequence_name* is the name of the task sequence to which you want to add the task sequence step) for:  
+1. Edit ***task_sequence_name*** (where *task_sequence_name* is the name of the task sequence to which you want to add the task sequence step) for:  
 
-    -   LTI as described in [Configure the Task Sequence Properties Task Sequence Tab](#ConfiguretheTaskSequencePropertiesTaskSequenceTab)  
+   -   LTI as described in [Configure the Task Sequence Properties Task Sequence Tab](#ConfiguretheTaskSequencePropertiesTaskSequenceTab)  
 
-    -   ZTI using Configuration Manager as described in [Configuring ZTI Task Sequence Steps in Configuration Manager](#ConfiguringZTITaskSequenceStepsinConfigurationManager)  
+   -   ZTI using Configuration Manager as described in [Configuring ZTI Task Sequence Steps in Configuration Manager](#ConfiguringZTITaskSequenceStepsinConfigurationManager)  
 
-2.  Add a new task sequence step based on the **Configure ADDS** task sequence type for:  
+2. Add a new task sequence step based on the **Configure ADDS** task sequence type for:  
 
-    -   LTI on the **Task Sequence** tab (In the task sequence hierarchy, click **Add**, click **Roles**, and then click **Configure ADDS**.)  
+   -   LTI on the **Task Sequence** tab (In the task sequence hierarchy, click **Add**, click **Roles**, and then click **Configure ADDS**.)  
 
-    -   ZTI in the task sequence hierarchy (Click **Add**, click **MDT**, and then click **Configure ADDS**.)  
+   -   ZTI in the task sequence hierarchy (Click **Add**, click **MDT**, and then click **Configure ADDS**.)  
 
-3.  On the **Properties** tab, type the relevant information in the following boxes:  
+3. On the **Properties** tab, type the relevant information in the following boxes:  
 
-    -   **Name**. Type a name for the task.  
+   -   **Name**. Type a name for the task.  
 
-    -   **Description**. Type a description of the task—for example, ***Server_Name Site_Name*** (where *Server_Name* is the name of the server and *Site_Name* is the name of the domain).  
+   -   **Description**. Type a description of the task—for example, ***Server_Name Site_Name*** (where *Server_Name* is the name of the server and *Site_Name* is the name of the domain).  
 
-4.  In the **Create** box, click **New Forest**.  
+4. In the **Create** box, click **New Forest**.  
 
-5.  In the **New forest domain DNS name** box, type a name for the new domain—for example, **woodgrove.com**.  
+5. In the **New forest domain DNS name** box, type a name for the new domain—for example, **woodgrove.com**.  
 
-     You must include the extension of the domain—for example, .com, .net, .int.  
+    You must include the extension of the domain—for example, .com, .net, .int.  
 
-6.  In the **NetBIOS name** box, type a name for the NetBIOS.  
+6. In the **NetBIOS name** box, type a name for the NetBIOS.  
 
-     This name is usually the domain name without .com or any other type of extension. For example, the forest domain name woodgrove.com might have the NetBIOS name WOODGROVE.  
+    This name is usually the domain name without .com or any other type of extension. For example, the forest domain name woodgrove.com might have the NetBIOS name WOODGROVE.  
 
-7.  In the **Recovery (safe mode) password** box, type a password to use for safe mode recovery.  
+7. In the **Recovery (safe mode) password** box, type a password to use for safe mode recovery.  
 
-     You use this password to recover from a failed AD DS service. Make note of this password in case AD DS must be recovered.  
+    You use this password to recover from a failed AD DS service. Make note of this password in case AD DS must be recovered.  
 
-8.  In the **Advanced Properties** section, complete the task configuration as described in [Configure AD DS Advanced Properties](#ConfigureADDSAdvancedProperties), and then click **OK**.  
+8. In the **Advanced Properties** section, complete the task configuration as described in [Configure AD DS Advanced Properties](#ConfigureADDSAdvancedProperties), and then click **OK**.  
 
- For more information about **DCPROMO** command-line options, see [Dcpromo](https://docs.microsoft.com/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-#BKMK_PS).  
+   For more information about **DCPROMO** command-line options, see [Dcpromo](https://docs.microsoft.com/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-#BKMK_PS).  
 
 #####  <a name="DeployaNewDomainControllerasaReplicainanExistingDomain"></a> Deploy a New Domain Controller as a Replica in an Existing Domain  
  Using this option, deploy an existing domain controller as a new domain controller by replicating it into an existing environment. Use this option when deploying a new domain controller into an existing environment if replication will obtain the existing domain information from AD DS.  
 
 ###### To deploy a domain controller as a new domain controller replica  
 
-1.  Edit ***task_sequence_name*** (where *task_sequence_name* is the name of the task sequence to which you want to add the task sequence step) for:  
+1. Edit ***task_sequence_name*** (where *task_sequence_name* is the name of the task sequence to which you want to add the task sequence step) for:  
 
-    -   LTI as described in [Configure the Task Sequence Properties Task Sequence Tab](#ConfiguretheTaskSequencePropertiesTaskSequenceTab)  
+   -   LTI as described in [Configure the Task Sequence Properties Task Sequence Tab](#ConfiguretheTaskSequencePropertiesTaskSequenceTab)  
 
-    -   ZTI using Configuration Manager as described in [Configuring ZTI Task Sequence Steps in Configuration Manager](#ConfiguringZTITaskSequenceStepsinConfigurationManager)  
+   -   ZTI using Configuration Manager as described in [Configuring ZTI Task Sequence Steps in Configuration Manager](#ConfiguringZTITaskSequenceStepsinConfigurationManager)  
 
-2.  Add a new task sequence step based on the **Configure ADDS** task sequence type for:  
+2. Add a new task sequence step based on the **Configure ADDS** task sequence type for:  
 
-    -   LTI on the **Task Sequence** tab (In the task sequence hierarchy, click **Add**, click **Roles**, and then click **Configure ADDS**.)  
+   -   LTI on the **Task Sequence** tab (In the task sequence hierarchy, click **Add**, click **Roles**, and then click **Configure ADDS**.)  
 
-    -   ZTI in the task sequence hierarchy (Click **Add**, click **MDT**, and then click **Configure ADDS**.)  
+   -   ZTI in the task sequence hierarchy (Click **Add**, click **MDT**, and then click **Configure ADDS**.)  
 
-3.  On the **Properties** tab, type the relevant information in the following boxes:  
+3. On the **Properties** tab, type the relevant information in the following boxes:  
 
-    -   **Name**. Type a name for the task.  
+   -   **Name**. Type a name for the task.  
 
-    -   **Description**. Type a description of the task—for example, ***Server_Name Site_Name*** (where *Server_Name* is the name of the server, and *Site_Name* is the name of the domain).  
+   -   **Description**. Type a description of the task—for example, ***Server_Name Site_Name*** (where *Server_Name* is the name of the server, and *Site_Name* is the name of the domain).  
 
-4.  In the **Create** box, click **New domain controller replica**.  
+4. In the **Create** box, click **New domain controller replica**.  
 
-5.  In the **Existing domain DNS name** box, type the FQDN of an existing domain controller.  
+5. In the **Existing domain DNS name** box, type the FQDN of an existing domain controller.  
 
-6.  In the **Replication source domain controller** box, type the name of a domain controller the new server will replicate within the existing environment. The directory services database replicates this domain controller.  
+6. In the **Replication source domain controller** box, type the name of a domain controller the new server will replicate within the existing environment. The directory services database replicates this domain controller.  
 
-7.  In the **Account** box, type the name of an account that has permissions to add a domain controller to the existing network (typically, a domain Administrator account), and then click **Set**.  
+7. In the **Account** box, type the name of an account that has permissions to add a domain controller to the existing network (typically, a domain Administrator account), and then click **Set**.  
 
-8.  In the **Recovery (safe mode) password** box, type a password to use for safe mode recovery.  
+8. In the **Recovery (safe mode) password** box, type a password to use for safe mode recovery.  
 
-     This password is used to recover from a failed AD DS service. Make note of this password in case AD DS must be recovered.  
+    This password is used to recover from a failed AD DS service. Make note of this password in case AD DS must be recovered.  
 
 9. In the **Advanced Properties** section, complete the task configuration as described in [Configure AD DS Advanced Properties](#ConfigureADDSAdvancedProperties), and then click **OK**.  
 
- For more information about **DCPROMO** command-line options, see [Dcpromo](https://docs.microsoft.com/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-#BKMK_PS).  
+   For more information about **DCPROMO** command-line options, see [Dcpromo](https://docs.microsoft.com/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-#BKMK_PS).  
 
 #####  <a name="DeployaNewDomainControllerinaNewDomainTreeinanExistingForest"></a> Deploy a New Domain Controller in a New Domain Tree in an Existing Forest  
  Using this option, deploy a domain controller that contains a new tree into an existing forest environment. Use this option when deploying a child domain into an existing forest environment.  
 
 ###### To deploy a domain controller with a new domain tree in an existing forest  
 
-1.  Edit ***task_sequence_name*** (where *task_sequence_name* is the name of the task sequence to which you want to add the task sequence step) for:  
+1. Edit ***task_sequence_name*** (where *task_sequence_name* is the name of the task sequence to which you want to add the task sequence step) for:  
 
-    -   LTI as described in [Configure the Task Sequence Properties Task Sequence Tab](#ConfiguretheTaskSequencePropertiesTaskSequenceTab)  
+   -   LTI as described in [Configure the Task Sequence Properties Task Sequence Tab](#ConfiguretheTaskSequencePropertiesTaskSequenceTab)  
 
-    -   ZTI using Configuration Manager as described in [Configuring ZTI Task Sequence Steps in Configuration Manager](#ConfiguringZTITaskSequenceStepsinConfigurationManager)  
+   -   ZTI using Configuration Manager as described in [Configuring ZTI Task Sequence Steps in Configuration Manager](#ConfiguringZTITaskSequenceStepsinConfigurationManager)  
 
-2.  Add a new task sequence step based on the **Configure ADDS** task sequence type for:  
+2. Add a new task sequence step based on the **Configure ADDS** task sequence type for:  
 
-    -   LTI on the **Task Sequence** tab (In the task sequence hierarchy, click **Add**, click **Roles**, and then click **Configure ADDS**.)  
+   -   LTI on the **Task Sequence** tab (In the task sequence hierarchy, click **Add**, click **Roles**, and then click **Configure ADDS**.)  
 
-    -   ZTI in the task sequence hierarchy (Click **Add**, click **MDT**, and then click **Configure ADDS**.)  
+   -   ZTI in the task sequence hierarchy (Click **Add**, click **MDT**, and then click **Configure ADDS**.)  
 
-3.  On the **Properties** tab, type the relevant information in the following boxes:  
+3. On the **Properties** tab, type the relevant information in the following boxes:  
 
-    -   **Name**: Type a name for the task.  
+   -   **Name**: Type a name for the task.  
 
-    -   **Description**. Type a description of the task—for example, ***Server_Name Site_Name*** (where *Server_Name* is the name of the server and *Site_Name* is the name of the domain).  
+   -   **Description**. Type a description of the task—for example, ***Server_Name Site_Name*** (where *Server_Name* is the name of the server and *Site_Name* is the name of the domain).  
 
-4.  In the **Create box**, click **New domain in existing forest**.  
+4. In the **Create box**, click **New domain in existing forest**.  
 
-5.  In the **Existing forest (parent) domain DNS name** box, type the name of an existing domain in the network.  
+5. In the **Existing forest (parent) domain DNS name** box, type the name of an existing domain in the network.  
 
-6.  In the **NetBIOS name** box, type the NetBIOS name of an existing domain in the network, usually the domain name without .com or any other type of extension—for example, the domain woodgrove.com might have the NetBIOS name WOODGROVE.  
+6. In the **NetBIOS name** box, type the NetBIOS name of an existing domain in the network, usually the domain name without .com or any other type of extension—for example, the domain woodgrove.com might have the NetBIOS name WOODGROVE.  
 
-7.  In the **New domain tree (child) DNS name** box, type a name for the child domain being created—for example, ***child.woodgrove.com*** (where *child* is the name of the child domain).  
+7. In the **New domain tree (child) DNS name** box, type a name for the child domain being created—for example, ***child.woodgrove.com*** (where *child* is the name of the child domain).  
 
-8.  In the **Replication source domain controller** box, type the name of the domain controller to which the new child domain will replicate.  
+8. In the **Replication source domain controller** box, type the name of the domain controller to which the new child domain will replicate.  
 
 9. In the **Account** box, type the name of an account with permissions to add a domain controller to the existing network (typically, a domain Administrator account), and then click **Set**.  
 
@@ -9321,40 +9329,40 @@ cscript.exe %SCRIPTROOT%\ZTIOptIn.wsf /CEIP:YES /WER:YES
 
 11. In the **Advanced Properties** section, complete the task configuration as described in [Configure AD DS Advanced Properties](#ConfigureADDSAdvancedProperties), and then click **OK**.  
 
- For more information about **DCPROMO** command-line options, see [Dcpromo](https://docs.microsoft.com/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-#BKMK_PS).  
+    For more information about **DCPROMO** command-line options, see [Dcpromo](https://docs.microsoft.com/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-#BKMK_PS).  
 
 #####  <a name="DeployaNewDomainControllerinaNewDomaininanExistingForest"></a> Deploy a New Domain Controller in a New Domain in an Existing Forest  
  Using this option, deploy a domain controller that contains a new domain into an existing forest environment. Use this option when deploying a new child domain into an existing forest environment.  
 
 ###### To deploy a domain controller with a new domain in an existing forest  
 
-1.  Edit ***task_sequence_name*** (where *task_sequence_name* is the name of the task sequence to which you want to add the task sequence step) for:  
+1. Edit ***task_sequence_name*** (where *task_sequence_name* is the name of the task sequence to which you want to add the task sequence step) for:  
 
-    -   LTI as described in [Configure the Task Sequence Properties Task Sequence Tab](#ConfiguretheTaskSequencePropertiesTaskSequenceTab)  
+   -   LTI as described in [Configure the Task Sequence Properties Task Sequence Tab](#ConfiguretheTaskSequencePropertiesTaskSequenceTab)  
 
-    -   ZTI using Configuration Manager as described in [Configuring ZTI Task Sequence Steps in Configuration Manager](#ConfiguringZTITaskSequenceStepsinConfigurationManager)  
+   -   ZTI using Configuration Manager as described in [Configuring ZTI Task Sequence Steps in Configuration Manager](#ConfiguringZTITaskSequenceStepsinConfigurationManager)  
 
-2.  Add a new task sequence step based on the **Configure ADDS** task sequence type for:  
+2. Add a new task sequence step based on the **Configure ADDS** task sequence type for:  
 
-    -   LTI on the **Task Sequence** tab (In the task sequence hierarchy, click **Add**, click **Roles**, and then click **Configure ADDS**.)  
+   -   LTI on the **Task Sequence** tab (In the task sequence hierarchy, click **Add**, click **Roles**, and then click **Configure ADDS**.)  
 
-    -   ZTI in the task sequence hierarchy (Click **Add**, click **MDT**, and then click **Configure ADDS**.)  
+   -   ZTI in the task sequence hierarchy (Click **Add**, click **MDT**, and then click **Configure ADDS**.)  
 
-3.  On the **Properties** tab, type the relevant information in the following boxes:  
+3. On the **Properties** tab, type the relevant information in the following boxes:  
 
-    -   **Name**. Type a name for the task.  
+   -   **Name**. Type a name for the task.  
 
-    -   **Description**. Type a description of the task—for example, ***Server_Name Site_Name*** (where *Server_Name* is the name of the server and *Site_Name* is the name of the domain).  
+   -   **Description**. Type a description of the task—for example, ***Server_Name Site_Name*** (where *Server_Name* is the name of the server and *Site_Name* is the name of the domain).  
 
-4.  In the **Create box**, click **New domain in existing forest**.  
+4. In the **Create box**, click **New domain in existing forest**.  
 
-5.  In the **Existing forest (parent) domain DNS name** box, type the name of an existing domain in the network.  
+5. In the **Existing forest (parent) domain DNS name** box, type the name of an existing domain in the network.  
 
-6.  In the **NetBIOS name** box, type the NetBIOS name of an existing domain in the network, usually the domain name without .com or any other type of extension—for example, the domain woodgrove.com might have the NetBIOS name WOODGROVE.  
+6. In the **NetBIOS name** box, type the NetBIOS name of an existing domain in the network, usually the domain name without .com or any other type of extension—for example, the domain woodgrove.com might have the NetBIOS name WOODGROVE.  
 
-7.  In the **New domain (child) DNS name** box, type a name for the child domain being created—for example, ***child.woodgrove.com*** (where *child* is the name of the child domain).  
+7. In the **New domain (child) DNS name** box, type a name for the child domain being created—for example, ***child.woodgrove.com*** (where *child* is the name of the child domain).  
 
-8.  In the **Replication source domain controller** box, type the name of the domain controller to which the new child domain will be replicated.  
+8. In the **Replication source domain controller** box, type the name of the domain controller to which the new child domain will be replicated.  
 
 9. In the **Account** box, type the name of an account with permissions to add a domain controller to the existing network (typically, a domain Administrator account), and then click **Set**.  
 
@@ -9364,94 +9372,94 @@ cscript.exe %SCRIPTROOT%\ZTIOptIn.wsf /CEIP:YES /WER:YES
 
 11. In the **Advanced Properties** section, complete the task configuration as described in [Configure AD DS Advanced Properties](#ConfigureADDSAdvancedProperties), and then click **OK**.  
 
- For more information about **DCPROMO** command-line options, see [Dcpromo](https://docs.microsoft.com/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-#BKMK_PS).  
+    For more information about **DCPROMO** command-line options, see [Dcpromo](https://docs.microsoft.com/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-#BKMK_PS).  
 
 #####  <a name="DeployanRODCinanExistingDomain"></a> Deploy an RODC in an Existing Domain  
  Using this option, deploy a domain controller that contains a read-only replica of the existing domain into an existing forest environment. Use this option to deploy a domain controller that contains an un-editable replica of a domain structure into an existing forest environment.  
 
 ###### To deploy an RODC in an existing domain  
 
-1.  Edit ***task_sequence_name*** (where *task_sequence_name* is the name of the task sequence to which you want to add the task sequence step) for:  
+1. Edit ***task_sequence_name*** (where *task_sequence_name* is the name of the task sequence to which you want to add the task sequence step) for:  
 
-    -   LTI as described in [Configure the Task Sequence Properties Task Sequence Tab](#ConfiguretheTaskSequencePropertiesTaskSequenceTab)  
+   -   LTI as described in [Configure the Task Sequence Properties Task Sequence Tab](#ConfiguretheTaskSequencePropertiesTaskSequenceTab)  
 
-    -   ZTI using Configuration Manager as described in [Configuring ZTI Task Sequence Steps in Configuration Manager](#ConfiguringZTITaskSequenceStepsinConfigurationManager)  
+   -   ZTI using Configuration Manager as described in [Configuring ZTI Task Sequence Steps in Configuration Manager](#ConfiguringZTITaskSequenceStepsinConfigurationManager)  
 
-2.  Add a new task sequence step based on the **Configure ADDS** task sequence type for:  
+2. Add a new task sequence step based on the **Configure ADDS** task sequence type for:  
 
-    -   LTI on the **Task Sequence** tab (In the task sequence hierarchy, click **Add**, click **Roles**, and then click **Configure ADDS**.)  
+   -   LTI on the **Task Sequence** tab (In the task sequence hierarchy, click **Add**, click **Roles**, and then click **Configure ADDS**.)  
 
-    -   ZTI in the task sequence hierarchy (Click **Add**, click **MDT**, and then click **Configure ADDS**.)  
+   -   ZTI in the task sequence hierarchy (Click **Add**, click **MDT**, and then click **Configure ADDS**.)  
 
-3.  On the **Properties** tab, type the relevant information in the following boxes:  
+3. On the **Properties** tab, type the relevant information in the following boxes:  
 
-    -   **Name**. Type a name for the task.  
+   -   **Name**. Type a name for the task.  
 
-    -   **Description**. Type a description of the task; for example, ***Server_Name Site_Name*** (where *Server_Name* is the name of the server and *Site_Name* is the name of the domain).  
+   -   **Description**. Type a description of the task; for example, ***Server_Name Site_Name*** (where *Server_Name* is the name of the server and *Site_Name* is the name of the domain).  
 
-4.  In the **Create** box, click **New read-only domain controller (RODC) replica**.  
+4. In the **Create** box, click **New read-only domain controller (RODC) replica**.  
 
-5.  In the **Existing domain DNS name** box, type the name of an existing DNS server.  
+5. In the **Existing domain DNS name** box, type the name of an existing DNS server.  
 
-6.  In the **Replication source domain controller** box, type the name of the domain controller to be replicated within the existing environment. The directory services database replicates this domain controller.  
+6. In the **Replication source domain controller** box, type the name of the domain controller to be replicated within the existing environment. The directory services database replicates this domain controller.  
 
-7.  In the **Account** box, type the name of an account with permissions to add a domain controller to the existing network (typically, a domain Administrator account), and then click **Set**.  
+7. In the **Account** box, type the name of an account with permissions to add a domain controller to the existing network (typically, a domain Administrator account), and then click **Set**.  
 
-8.  In the **Recovery (safe mode) password** box, type a password to use for safe mode recovery.  
+8. In the **Recovery (safe mode) password** box, type a password to use for safe mode recovery.  
 
-     You use this password to recover from a failed AD DS service. Make note of this password in case AD DS must be recovered.  
+    You use this password to recover from a failed AD DS service. Make note of this password in case AD DS must be recovered.  
 
 9. In the **Advanced Properties** section, complete the task configuration as described in [Configure AD DS Advanced Properties](#ConfigureADDSAdvancedProperties), and then click **OK**.  
 
- For more information about **DCPROMO** command-line options, go to [Dcpromo](https://docs.microsoft.com/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-#BKMK_PS).  
+   For more information about **DCPROMO** command-line options, go to [Dcpromo](https://docs.microsoft.com/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-#BKMK_PS).  
 
 #####  <a name="ConfigureADDSAdvancedProperties"></a> Configure AD DS Advanced Properties  
  To configure AD DS advanced properties, perform the following steps:  
 
-1.  Edit ***task_sequence_name*** (where *task_sequence_name* is the name of the task sequence to which you want to add the task sequence step) for:  
+1. Edit ***task_sequence_name*** (where *task_sequence_name* is the name of the task sequence to which you want to add the task sequence step) for:  
 
-    -   LTI as described in [Configure the Task Sequence Properties Task Sequence Tab](#ConfiguretheTaskSequencePropertiesTaskSequenceTab)  
+   -   LTI as described in [Configure the Task Sequence Properties Task Sequence Tab](#ConfiguretheTaskSequencePropertiesTaskSequenceTab)  
 
-    -   ZTI using Configuration Manager as described in [Configuring ZTI Task Sequence Steps in Configuration Manager](#ConfiguringZTITaskSequenceStepsinConfigurationManager)  
+   -   ZTI using Configuration Manager as described in [Configuring ZTI Task Sequence Steps in Configuration Manager](#ConfiguringZTITaskSequenceStepsinConfigurationManager)  
 
-2.  Modify the **Configure ADDS** task sequence step you created for:  
+2. Modify the **Configure ADDS** task sequence step you created for:  
 
-    -   LTI on the **Task Sequence** tab (In the task sequence hierarchy, click ***task_sequence_step*** [where *task_sequence_step* is the **Configure ADDS** task sequence step].)  
+   -   LTI on the **Task Sequence** tab (In the task sequence hierarchy, click ***task_sequence_step*** [where *task_sequence_step* is the **Configure ADDS** task sequence step].)  
 
-    -   ZTI in the task sequence hierarchy (Click **Add**, click **MDT**, and then click ***task_sequence_step*** [where *task_sequence_step* is the **Configure ADDS** task sequence step].)  
+   -   ZTI in the task sequence hierarchy (Click **Add**, click **MDT**, and then click ***task_sequence_step*** [where *task_sequence_step* is the **Configure ADDS** task sequence step].)  
 
-3.  On the **Properties** tab, click **Advanced**.  
+3. On the **Properties** tab, click **Advanced**.  
 
-4.  In the **AD DS Advanced Properties** dialog box, in the **Options**, **Functional Levels**, and **Folders** sections, select the following options as required for your environment and AD DS scenario:  
+4. In the **AD DS Advanced Properties** dialog box, in the **Options**, **Functional Levels**, and **Folders** sections, select the following options as required for your environment and AD DS scenario:  
 
-     **Options** section:  
+    **Options** section:  
 
-    -   **Install DNS if not already present**. Select this option when creating a new forest or new domain.  
+   - **Install DNS if not already present**. Select this option when creating a new forest or new domain.  
 
-    -   **Make this domain controller a global catalog (GC) server**. This is the default option and should be selected for new domains or forests and domains without a GC server.  
+   - **Make this domain controller a global catalog (GC) server**. This is the default option and should be selected for new domains or forests and domains without a GC server.  
 
-    -   **Wait for critical replication only**. Select this option to populate only the directory services database using replication.  
+   - **Wait for critical replication only**. Select this option to populate only the directory services database using replication.  
 
      **Functional levels** section:  
 
-    -   **Forest Functional Level**. Windows Server 2003, Windows Server 2008 (2 = Windows Server 2003; 3 = Windows Server 2008; 4 = Windows Server 2008 R2)  
+   - **Forest Functional Level**. Windows Server 2003, Windows Server 2008 (2 = Windows Server 2003; 3 = Windows Server 2008; 4 = Windows Server 2008 R2)  
 
-    -   **Domain Functional Level**. Windows Server 2003, Windows Server 2008 (2 = Windows Server 2003; 3 = Windows Server 2008; 4 = Windows Server 2008 R2)  
+   - **Domain Functional Level**. Windows Server 2003, Windows Server 2008 (2 = Windows Server 2003; 3 = Windows Server 2008; 4 = Windows Server 2008 R2)  
 
      **Folders** section:  
 
-    -   **Database**. Contains the fully qualified path on the target computer to the location for the NTDS database. The default value is %SYSTEMROOT%NTDS. You can also configure this value using the **DatabasePath** property in the CustomSettings.ini file or the MDT DB.  
+   - **Database**. Contains the fully qualified path on the target computer to the location for the NTDS database. The default value is %SYSTEMROOT%NTDS. You can also configure this value using the **DatabasePath** property in the CustomSettings.ini file or the MDT DB.  
 
-    -   **Log Files**. Contains the fully qualified path on the target computer to the location for the log files. The default value is %SYSTEMROOT%NTDS. You can also configure this value using the **LogPath** property in the CustomSettings.ini file or the MDT DB.  
+   - **Log Files**. Contains the fully qualified path on the target computer to the location for the log files. The default value is %SYSTEMROOT%NTDS. You can also configure this value using the **LogPath** property in the CustomSettings.ini file or the MDT DB.  
 
-    -   **SYSVOL**. Contains the fully qualified path on the target computer to the location for the SYSVOL folder. The default value is %SYSTEMROOT%SYSVOL. You can also configure this value using the **SysVolPath** property in the CustomSettings.ini file or the MDT DB.  
+   - **SYSVOL**. Contains the fully qualified path on the target computer to the location for the SYSVOL folder. The default value is %SYSTEMROOT%SYSVOL. You can also configure this value using the **SysVolPath** property in the CustomSettings.ini file or the MDT DB.  
 
-    > [!NOTE]
-    >  If you configure values in the CustomSettings.ini or the MDT DB, use the %DESTINATIONLOGICALDRIVE% task sequence variable instead of the %SYSTEMROOT% variable. For LTI deployments, the variables are evaluated while running Windows PE, so the %SYSTEMROOT% variable will return the SystemRoot folder for Windows PE, not the target operating system. The %SYSTEMROOT% variable for Windows PE typically is set to X:\WINDOWS.  
+   > [!NOTE]
+   >  If you configure values in the CustomSettings.ini or the MDT DB, use the %DESTINATIONLOGICALDRIVE% task sequence variable instead of the %SYSTEMROOT% variable. For LTI deployments, the variables are evaluated while running Windows PE, so the %SYSTEMROOT% variable will return the SystemRoot folder for Windows PE, not the target operating system. The %SYSTEMROOT% variable for Windows PE typically is set to X:\WINDOWS.  
 
-5.  In the **Site name** box, type the name of the site in which to install the domain controller.  
+5. In the **Site name** box, type the name of the site in which to install the domain controller.  
 
-     The default name for a new forest or site is *default_first_site*; however, this value does not appear in the **Site name** box by default—you must type it. Then, click **OK** to complete the configuration of the **AD DS Advanced Properties** dialog box, and then click **OK** in the ***Task Name*** **Properties** dialog box to complete configuration of the task.  
+    The default name for a new forest or site is *default_first_site*; however, this value does not appear in the **Site name** box by default—you must type it. Then, click **OK** to complete the configuration of the **AD DS Advanced Properties** dialog box, and then click **OK** in the ***Task Name*** **Properties** dialog box to complete configuration of the task.  
 
 ####  <a name="ConfigureDNSServerRoleSettings"></a> Configure DNS Server Role Settings  
  Using this option, configure and deploy the DNS server role to a new computer or a DNS server operating on an existing computer. By assigning the DNS server role, you can configure standard DNS primary, secondary, and stub zones as well as AD DS-integrated primary and stub zones. There is also an option to manage aging, updates, types, and multiple zones—all in an automated process. This is not a migration process from an existing DNS server; rather, it is a new installation of DNS zones of all types.  
@@ -9718,23 +9726,23 @@ cscript.exe %SCRIPTROOT%\ZTIOptIn.wsf /CEIP:YES /WER:YES
 
  MDT looks in the following locations within the deployment share, in the order specified, to find an $OEM$ folder:  
 
--   **Control\\*task_sequence*** (where *task_sequence* is the name or ID of the task sequence that MDT is installing). Create $OEM$ folders in this location to create a custom folder for each build.  
+- **Control\\*task_sequence*** (where *task_sequence* is the name or ID of the task sequence that MDT is installing). Create $OEM$ folders in this location to create a custom folder for each build.  
 
--   **Operating Systems\\*Name*** (where Name is the name of the operating system MDT is installing). Create $OEM$ folders in this location to create a custom folder for each operating system.  
+- **Operating Systems\\*Name*** (where Name is the name of the operating system MDT is installing). Create $OEM$ folders in this location to create a custom folder for each operating system.  
 
--   ***Platform***  (where *Platform* is either x86 or x64). Create $OEM$ folders in this location to create a custom folder for each platform.  
+- ***Platform***  (where *Platform* is either x86 or x64). Create $OEM$ folders in this location to create a custom folder for each platform.  
 
--   **$OEM$**, which is at the root of the deployment share and is the default $OEM$ folder if a folder is not found in the previous locations.  
+- **$OEM$**, which is at the root of the deployment share and is the default $OEM$ folder if a folder is not found in the previous locations.  
 
- An $OEM$ folder contains supplemental files. The following list describes each folder that you can create within an $OEM$ folder to organize these files:  
+  An $OEM$ folder contains supplemental files. The following list describes each folder that you can create within an $OEM$ folder to organize these files:  
 
--   **$$**. Windows Setup copies the contents of this folder to %SystemRoot% on each destination computer. It replicates all the folders, subfolders, and files that this folder contains in the %SystemRoot% folder of each destination computer. For Windows Setup to copy a file to %SystemRoot%\System32 on each destination computer, for example, put the file in $OEM$\\$$\System32.  
+- **$$**. Windows Setup copies the contents of this folder to %SystemRoot% on each destination computer. It replicates all the folders, subfolders, and files that this folder contains in the %SystemRoot% folder of each destination computer. For Windows Setup to copy a file to %SystemRoot%\System32 on each destination computer, for example, put the file in $OEM$\\$$\System32.  
 
--   **$1**. Windows Setup copies the contents of this folder to %SystemDrive% on each destination computer. It replicates all the folders, subfolders, and files that this folder contains in the %SystemDrive% folder on each destination computer. This is typically drive C on most computers.  
+- **$1**. Windows Setup copies the contents of this folder to %SystemDrive% on each destination computer. It replicates all the folders, subfolders, and files that this folder contains in the %SystemDrive% folder on each destination computer. This is typically drive C on most computers.  
 
--   **Drive**. Drive is a drive letter (C, D, E, and so on). Windows Setup copies the contents of this folder to the root of the corresponding drive on each destination computer. It replicates all the folders, subfolders, and files that this folder contains in the corresponding drive during the setup process. For example, Windows Setup copies any files put in $OEM$\D to the root of drive D on each destination computer.  
+- **Drive**. Drive is a drive letter (C, D, E, and so on). Windows Setup copies the contents of this folder to the root of the corresponding drive on each destination computer. It replicates all the folders, subfolders, and files that this folder contains in the corresponding drive during the setup process. For example, Windows Setup copies any files put in $OEM$\D to the root of drive D on each destination computer.  
 
-     Microsoft recommends that these folders not be used. The folders rely on a very specific disk configuration on the destination computer. Use $1 to represent %SystemDrive%, instead. In most installations, $OEM$\\$1 and $OEM$\C write to the same location: the root of drive C.  
+   Microsoft recommends that these folders not be used. The folders rely on a very specific disk configuration on the destination computer. Use $1 to represent %SystemDrive%, instead. In most installations, $OEM$\\$1 and $OEM$\C write to the same location: the root of drive C.  
 
 ###  <a name="CreatingCustomScriptsforMDT"></a> Creating Custom Scripts for MDT  
  Scripts provide automation of the image-build and overall deployment process. They scan the configuration files, query the configuration database, evaluate environment variables to determine the rules to be used when deploying the images to the target computers, and perform many other intricate deployment tasks. MDT uses both Microsoft Visual Basic® Scripting Edition (VBScript [.vbs]) and Windows Script file (.wsf) scripts. Typically, there is no need to modify one of the delivered scripts. If a modification is necessary, instead of modifying one of the delivered scripts, copy the script to a new file, update it, and thoroughly test the effect of any change.  
@@ -9757,33 +9765,33 @@ cscript.exe %SCRIPTROOT%\ZTIOptIn.wsf /CEIP:YES /WER:YES
 
  The scripts define several standard objects that need not be declared in the script:  
 
--   **oFSO**. File System Object  
+- **oFSO**. File System Object  
 
--   **oShell**. WScript Shell object  
+- **oShell**. WScript Shell object  
 
--   **oEnv**. Process Environment object  
+- **oEnv**. Process Environment object  
 
--   **oNetwork**. WScript Network object  
+- **oNetwork**. WScript Network object  
 
- The following classes are defined that perform several standard tasks:  
+  The following classes are defined that perform several standard tasks:  
 
--   **Environment**. Configures environment variables gathered through WMI and MDT rule processing, allowing for direct reference from the script, and is defined in ZTIUtility.vbs as described in [Environment Class](#EnvironmentClass).  
+- **Environment**. Configures environment variables gathered through WMI and MDT rule processing, allowing for direct reference from the script, and is defined in ZTIUtility.vbs as described in [Environment Class](#EnvironmentClass).  
 
--   **Logging**. Provides the logging functionality that all MDT scripts use, creating a single log file for each script and a consolidated log file of all scripts and is defined in ZTIUtility.vbs as described in [Logging Class](#LoggingClass).  
+- **Logging**. Provides the logging functionality that all MDT scripts use, creating a single log file for each script and a consolidated log file of all scripts and is defined in ZTIUtility.vbs as described in [Logging Class](#LoggingClass).  
 
--   **Utility**. Provides general utility functionality and is defined in ZTIUtility.vbs as described in [Utility Class](#UtilityClass).  
+- **Utility**. Provides general utility functionality and is defined in ZTIUtility.vbs as described in [Utility Class](#UtilityClass).  
 
--   **Database**. Provide access to databases and is defined in ZTIDataAccess.vbs as described in [Database Class](#DatabaseClass). The **Database** class:  
+- **Database**. Provide access to databases and is defined in ZTIDataAccess.vbs as described in [Database Class](#DatabaseClass). The **Database** class:  
 
-    -   Is used by ZTIGather.wsf when processing database rules from the CustomSettings.ini or BootStrap.ini files  
+  -   Is used by ZTIGather.wsf when processing database rules from the CustomSettings.ini or BootStrap.ini files  
 
-    -   Can be used to access databases in scripts instead of configuring the CustomSettings.ini or BootStrap.ini files; you can specify the parameters for accessing the database in the scripts  
+  -   Can be used to access databases in scripts instead of configuring the CustomSettings.ini or BootStrap.ini files; you can specify the parameters for accessing the database in the scripts  
 
--   **WebService**. Provides access to web services and is defined in ZTIDataAccess.vbs as described in [WebService Class](#WebServiceClass). The **WebService** class:  
+- **WebService**. Provides access to web services and is defined in ZTIDataAccess.vbs as described in [WebService Class](#WebServiceClass). The **WebService** class:  
 
-    -   Is used by ZTIGather.wsf when processing web service rules from the CustomSettings.ini or BootStrap.ini files  
+  -   Is used by ZTIGather.wsf when processing web service rules from the CustomSettings.ini or BootStrap.ini files  
 
-    -   Can be used to access web services in scripts instead of configuring the CustomSettings.ini or BootStrap.ini files; you can specify the parameters for accessing the web services in the scripts  
+  -   Can be used to access web services in scripts instead of configuring the CustomSettings.ini or BootStrap.ini files; you can specify the parameters for accessing the web services in the scripts  
 
 #####  <a name="EnvironmentClass"></a> Environment Class  
  Reference this class in scripts through the **oEnvironment** object. For example, change the computer name to **Example** using the command:  
@@ -9950,19 +9958,19 @@ End Function
 
  At a high level, complete the following steps to add a custom script:  
 
-1.  Create the script based on the template.  
+1. Create the script based on the template.  
 
-2.  Place the script in the Scripts folder of the:  
+2. Place the script in the Scripts folder of the:  
 
-    -   Deployment share for LTI deployments  
+   -   Deployment share for LTI deployments  
 
-    -   Package source for the Microsoft Deployment Toolkit Files package  
+   -   Package source for the Microsoft Deployment Toolkit Files package  
 
-3.  Create a task sequence step based on the **Run Command Line** task sequence step type in your task sequence.  
+3. Create a task sequence step based on the **Run Command Line** task sequence step type in your task sequence.  
 
-4.  Configure the task sequence step created in the previous step to run your script.  
+4. Configure the task sequence step created in the previous step to run your script.  
 
- Follow these guidelines when creating a script:  
+   Follow these guidelines when creating a script:  
 
 -   Always declare variables.  
 
@@ -9992,16 +10000,16 @@ End Function
 
  Including the **ZTIUtility.psm1** module at the beginning of your script provides the following features:  
 
-1.  Creates the **TSENV**: and **TSENVLIST**: Windows PowerShell drives so that you can test your script outside a task sequence  
+1. Creates the **TSENV**: and **TSENVLIST**: Windows PowerShell drives so that you can test your script outside a task sequence  
 
-2.  Provides support for Windows PowerShell task sequence module features that may be provided in future releases  
+2. Provides support for Windows PowerShell task sequence module features that may be provided in future releases  
 
- For more information on the **TSENV**: and **TSENVLIST**: Windows PowerShell drives, see [Use Task Sequence Variables Within Windows PowerShell Scripts](#UseTaskSequenceVariablesWithinWindowsPowerShellScripts).  
+   For more information on the **TSENV**: and **TSENVLIST**: Windows PowerShell drives, see [Use Task Sequence Variables Within Windows PowerShell Scripts](#UseTaskSequenceVariablesWithinWindowsPowerShellScripts).  
 
 > [!NOTE]
 >  For Configuration Manager task sequences, run the **Use Toolkit Package** task sequence step prior to running the **Run PowerShell Script** task sequence step.  
 
- If your script needs to load other custom modules, places those modules in a subfolder beneath the Tools\Modules folder. By default, the module path is modified to include the Tools\Modules folder and all subfolders. For example, if you have a module in the MyCustomModule.psm1 file, create the Tools\Modules\MyCustomModule folder and the place MyCustomModule.psm1 file in that folder. To load your custom module in your script, include the following line in in your script:  
+ If your script needs to load other custom modules, places those modules in a subfolder beneath the Tools\Modules folder. By default, the module path is modified to include the Tools\Modules folder and all subfolders. For example, if you have a module in the MyCustomModule.psm1 file, create the Tools\Modules\MyCustomModule folder and the place MyCustomModule.psm1 file in that folder. To load your custom module in your script, include the following line in your script:  
 
 ```  
 Import-Module MyCustomModule  
@@ -10010,30 +10018,30 @@ Import-Module MyCustomModule
 #####  <a name="UseTaskSequenceVariablesWithinWindowsPowerShellScripts"></a> Use Task Sequence Variables Within Windows PowerShell Scripts  
  Your Windows PowerShell script can get or set task sequence variables that can be consumed by MDT. You get or set task sequence variables using the following Windows PowerShell drives:  
 
--   **TSENV**:. This drive is a list of all the task sequence variables and their current values. You can access this drive as you would any other Windows drive. For example, you could type the following command within Windows PowerShell to list all the task sequence variables and their current values:dir tsenv:  
+- **TSENV**:. This drive is a list of all the task sequence variables and their current values. You can access this drive as you would any other Windows drive. For example, you could type the following command within Windows PowerShell to list all the task sequence variables and their current values:dir tsenv:  
 
--   **TSENVLIST**:. This drive lists all the task sequence variables and their current values as an array.  
+- **TSENVLIST**:. This drive lists all the task sequence variables and their current values as an array.  
 
-    > [!NOTE]
-    >  Any values in the TSENV: and TSENVLIST: drives are lost after the task sequence completes as any values are stored in memory and are not persisted after the task sequence finishes.  
+  > [!NOTE]
+  >  Any values in the TSENV: and TSENVLIST: drives are lost after the task sequence completes as any values are stored in memory and are not persisted after the task sequence finishes.  
 
- The following are examples that illustrate how to access task sequence variables using these drives:  
+  The following are examples that illustrate how to access task sequence variables using these drives:  
 
--   `$tsenv:GPOPackPath = "\\WDG-MDT-01\Packages$\GPOPacks"`  
+- `$tsenv:GPOPackPath = "\\WDG-MDT-01\Packages$\GPOPacks"`  
 
-     This command updates the **ApplyGPOPack** task sequence variable to "\\\WDG-MDT-01\Packages$\GPOPacks"  
+   This command updates the **ApplyGPOPack** task sequence variable to "\\\WDG-MDT-01\Packages$\GPOPacks"  
 
--   `Write-Host $tsenv:ScriptRoot`  
+- `Write-Host $tsenv:ScriptRoot`  
 
-     This command displays the contents of the **ScriptRoot** task sequence variable to the Windows PowerShell console.  
+   This command displays the contents of the **ScriptRoot** task sequence variable to the Windows PowerShell console.  
 
--   `$packages = $tsenvlist:PACKAGES`  
+- `$packages = $tsenvlist:PACKAGES`  
 
-     This command sets the **$packages** Windows PowerShell variable to the current value of the **PACKAGES** task sequence variable.  
+   This command sets the **$packages** Windows PowerShell variable to the current value of the **PACKAGES** task sequence variable.  
 
--   `$tsenvlist:PACKAGES = @("XXX00001:Program","XXX00002:Program")`  
+- `$tsenvlist:PACKAGES = @("XXX00001:Program","XXX00002:Program")`  
 
-     This command sets the value of the **PACKAGES** task sequence variable to `"XXX00001:Program","XXX00002:Program"`.  
+   This command sets the value of the **PACKAGES** task sequence variable to `"XXX00001:Program","XXX00002:Program"`.  
 
 ####  <a name="UpdateMDTLogsUsingWindowsPowerShellScripts"></a> Update MDT Logs Using Windows PowerShell Scripts  
  By default, the output from your Windows PowerShell scripts is written to BDD.LOG. Table 175 lists the message types that appear in the BDD.LOG file and how those types of messages are generated by your script.  
@@ -10123,29 +10131,29 @@ Import-Module MyCustomModule
 
 ###### To create the MDT DB in an existing database  
 
-1.  The DBA creates the database and grants you DBA permission on the database.  
+1. The DBA creates the database and grants you DBA permission on the database.  
 
-2.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+2. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-3.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Database (where *deployment_share* is the name of the deployment share in which you will add the application).  
+3. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Database (where *deployment_share* is the name of the deployment share in which you will add the application).  
 
-4.  In the Actions pane, click **New Database**.  
+4. In the Actions pane, click **New Database**.  
 
-     The New DB Wizard starts.  
+    The New DB Wizard starts.  
 
-5.  Complete the New DB Wizard using the information in Table 177.  
+5. Complete the New DB Wizard using the information in Table 177.  
 
-    ### Table 177. Information for Completing the New DB Wizard  
+   ### Table 177. Information for Completing the New DB Wizard  
 
-    |On this wizard page|Do this|  
-    |-------------------------|-------------|  
-    |**SQL Server Details** |a. In **SQL Server name**, type ***computer_name*** (where *computer_name* is the name of the computer running SQL Server).<br /><br /> b. In **Instance**, type ***instance_name*** (where *instance_name* is the name of SQL Server instance on the computer running SQL Server).<br /><br /> If you are using SQL Server installed as the default instance, you can leave **Instance** blank. If you are using Microsoft SQL Server Express, type **SQLExpress** for the instance name.<br /><br /> c. In **Port**, type ***port_number*** (where *port_number* is the TCP port number for the SQL Server instances if different than the default value).<br /><br /> If you are using the default value, you can leave **Port** blank.<br /><br /> d. In **Network Library**, select ***network_library*** (where *network_library* is the network library used to communicate with SQL Server and can be either **Named Pipes** or **TCP/IP Sockets**).|  
-    |**Database** |a. Select **Create (or recreate) the tables and views in an existing database**.<br /><br /> b. In **Database**, select ***database_name*** (where *database_name* is the name of the database in which you want to store the MDT DB).<br /><br /> If you select a database that has an existing MDT DB, the information in the existing MDT DB tables and views will be lost.<br /><br /> c. Click **Next**.|  
-    |**SQL Share** |a. In **SQL Share**, type ***share_name*** (where *share_name* is the name of a network shared folder on the computer specified on the **SQL Server Details** wizard page).<br /><br /> This text box is required for Windows PE to connect to the database using the Windows Integrated Security with Named Pipes protocol. Windows PE connects to the network shared folder, establishing a network connection to the server so that Windows Integrated Security in SQL Server authenticates correctly.<br /><br /> b. If Windows PE is not connecting to the database using this protocol, you can leave **SQL Share** blank.<br /><br /> c. Click **Next**.|  
-    |**Summary** |Review the information in the **Details** box, and then click **Next**.|  
-    |**Confirmation** |You can click **Save Output** to save the output of the wizard to a file. You can also click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Finish**.|  
+   |On this wizard page|Do this|  
+   |-------------------------|-------------|  
+   |**SQL Server Details** |a. In **SQL Server name**, type ***computer_name*** (where *computer_name* is the name of the computer running SQL Server).<br /><br /> b. In **Instance**, type ***instance_name*** (where *instance_name* is the name of SQL Server instance on the computer running SQL Server).<br /><br /> If you are using SQL Server installed as the default instance, you can leave **Instance** blank. If you are using Microsoft SQL Server Express, type **SQLExpress** for the instance name.<br /><br /> c. In **Port**, type ***port_number*** (where *port_number* is the TCP port number for the SQL Server instances if different than the default value).<br /><br /> If you are using the default value, you can leave **Port** blank.<br /><br /> d. In **Network Library**, select ***network_library*** (where *network_library* is the network library used to communicate with SQL Server and can be either **Named Pipes** or **TCP/IP Sockets**).|  
+   |**Database** |a. Select **Create (or recreate) the tables and views in an existing database**.<br /><br /> b. In **Database**, select ***database_name*** (where *database_name* is the name of the database in which you want to store the MDT DB).<br /><br /> If you select a database that has an existing MDT DB, the information in the existing MDT DB tables and views will be lost.<br /><br /> c. Click **Next**.|  
+   |**SQL Share** |a. In **SQL Share**, type ***share_name*** (where *share_name* is the name of a network shared folder on the computer specified on the **SQL Server Details** wizard page).<br /><br /> This text box is required for Windows PE to connect to the database using the Windows Integrated Security with Named Pipes protocol. Windows PE connects to the network shared folder, establishing a network connection to the server so that Windows Integrated Security in SQL Server authenticates correctly.<br /><br /> b. If Windows PE is not connecting to the database using this protocol, you can leave **SQL Share** blank.<br /><br /> c. Click **Next**.|  
+   |**Summary** |Review the information in the **Details** box, and then click **Next**.|  
+   |**Confirmation** |You can click **Save Output** to save the output of the wizard to a file. You can also click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Finish**.|  
 
- The New DB Wizard finishes. The database configuration information is listed in the details pane of the Deployment Workbench.  
+   The New DB Wizard finishes. The database configuration information is listed in the details pane of the Deployment Workbench.  
 
 ######  <a name="CreatetheMDTDBinaNewDatabase"></a> Create the MDT DB in a New Database  
  In instances where you are the SQL Server DBA or have the necessary permissions, you can create the new MDT DB, and then create the MDT DB database objects in the new database using the Deployment Workbench.  
@@ -10155,27 +10163,27 @@ Import-Module MyCustomModule
 
 ###### To create the MDT DB in a new database  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Database (where *deployment_share* is the name of the deployment share in which you will add the application).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Database (where *deployment_share* is the name of the deployment share in which you will add the application).  
 
-3.  In the Actions pane, click **New Database**.  
+3. In the Actions pane, click **New Database**.  
 
-     The New DB Wizard starts.  
+    The New DB Wizard starts.  
 
-4.  Complete the New DB Wizard using the information in Table 178.  
+4. Complete the New DB Wizard using the information in Table 178.  
 
-    ### Table 178. Information for Completing the New DB Wizard  
+   ### Table 178. Information for Completing the New DB Wizard  
 
-    |On this wizard page|Do this|  
-    |-------------------------|-------------|  
-    |**SQL Server Details** |a. In **SQL Server name**, type ***computer_name*** (where *computer_name* is the name of the computer running SQL Server).<br /><br /> b. In **Instance**, type ***instance_name*** (where *instance_name* is the name of the SQL Server instance on the computer running SQL Server).<br /><br /> If you are using SQL Server installed as the default instance, you can leave **Instance** blank. If you are using SQL Server Express, type **SQLExpress** for the instance name.<br /><br /> c. In **Port**, type ***port_number*** (where *port_number* is the TCP port number for the SQL Server instance if different than the default value).<br /><br /> d. In **Network Library**, select ***network_library*** (where *network_library* is the network library used to communicate with SQL Server and can be either **Named Pipes** or **TCP/IP Sockets**).<br /><br /> e. Click **Next**.|  
-    |**Database** |a. Select **Create a new database**.<br /><br /> b. In **Database**, type ***database_name*** (where *database_name* is the name of the database in which you want to store the MDT DB).<br /><br /> c. Click **Next**.|  
-    |**SQL Share** |a. In **SQL Share**, type ***share_name*** (where *share_name* is the name of a network shared folder on the computer specified on the **SQL Server Details** wizard page).<br /><br /> This text box is required for Windows PE to connect to the database using the Windows Integrated Security with Named Pipes protocol. Windows PE connects to the network shared folder, establishing a network connection to the server so that Windows Integrated Security in SQL Server authenticates correctly.<br /><br /> If Windows PE is not connecting to the database using this protocol, you can leave **SQL Share** blank.<br /><br /> b. Click **Next**.|  
-    |**Summary** |Review the information in the Details box, and then click **Next**.|  
-    |**Confirmation** |You can click **Save Output** to save the output of the wizard to a file. You can also click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click Finish.|  
+   |On this wizard page|Do this|  
+   |-------------------------|-------------|  
+   |**SQL Server Details** |a. In **SQL Server name**, type ***computer_name*** (where *computer_name* is the name of the computer running SQL Server).<br /><br /> b. In **Instance**, type ***instance_name*** (where *instance_name* is the name of the SQL Server instance on the computer running SQL Server).<br /><br /> If you are using SQL Server installed as the default instance, you can leave **Instance** blank. If you are using SQL Server Express, type **SQLExpress** for the instance name.<br /><br /> c. In **Port**, type ***port_number*** (where *port_number* is the TCP port number for the SQL Server instance if different than the default value).<br /><br /> d. In **Network Library**, select ***network_library*** (where *network_library* is the network library used to communicate with SQL Server and can be either **Named Pipes** or **TCP/IP Sockets**).<br /><br /> e. Click **Next**.|  
+   |**Database** |a. Select **Create a new database**.<br /><br /> b. In **Database**, type ***database_name*** (where *database_name* is the name of the database in which you want to store the MDT DB).<br /><br /> c. Click **Next**.|  
+   |**SQL Share** |a. In **SQL Share**, type ***share_name*** (where *share_name* is the name of a network shared folder on the computer specified on the **SQL Server Details** wizard page).<br /><br /> This text box is required for Windows PE to connect to the database using the Windows Integrated Security with Named Pipes protocol. Windows PE connects to the network shared folder, establishing a network connection to the server so that Windows Integrated Security in SQL Server authenticates correctly.<br /><br /> If Windows PE is not connecting to the database using this protocol, you can leave **SQL Share** blank.<br /><br /> b. Click **Next**.|  
+   |**Summary** |Review the information in the Details box, and then click **Next**.|  
+   |**Confirmation** |You can click **Save Output** to save the output of the wizard to a file. You can also click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click Finish.|  
 
- The New DB Wizard finishes. The database configuration information is shown in the details pane of the Deployment Workbench.  
+   The New DB Wizard finishes. The database configuration information is shown in the details pane of the Deployment Workbench.  
 
 #####  <a name="ConnecttoanExistingMDTDB"></a> Connect to an Existing MDT DB  
  You can connect the Deployment Workbench to an existing MDT DB, which allows you to copy, or replicate, the MDT DB to another SQL Server instance, and then configure CustomSettings.ini to access the MDT DB.  
@@ -10185,27 +10193,27 @@ Import-Module MyCustomModule
 
 ###### To connect to an existing MDT DB  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Database (where *deployment_share* is the name of the deployment share in which you will add the application).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Database (where *deployment_share* is the name of the deployment share in which you will add the application).  
 
-3.  In the Actions pane, click **New Database**.  
+3. In the Actions pane, click **New Database**.  
 
-     The New DB Wizard starts.  
+    The New DB Wizard starts.  
 
-4.  Complete the New DB Wizard using the information in Table 179.  
+4. Complete the New DB Wizard using the information in Table 179.  
 
-    ### Table 179. Information for Completing the New DB Wizard  
+   ### Table 179. Information for Completing the New DB Wizard  
 
-    |On this wizard page|Do this|  
-    |-------------------------|-------------|  
-    |**SQL Server Details** |a. In **SQL Server name**, type ***computer_name*** (where *computer_name* is the name of the computer running SQL Server).<br /><br /> b. In **Instance**, type ***instance_name*** (where *instance_name* is the name of SQL Server instance on the computer running SQL Server).<br /><br /> If you are using SQL Server installed as the default instance, you can leave **Instance** blank. If you are using SQL Server Express, type **SQL Express** for the instance name.<br /><br /> c. In **Port**, type ***port_number*** (where *port_number* is the TCP port number for the SQL Server if different than the default value).<br /><br /> If you are using the default value, you can leave **Port** blank.<br /><br /> d. In **Network Library**, select ***network_library*** (where *network_library* is the network library used to communicate with SQL Server and can be either Named Pipes or TCP/IP Sockets).<br /><br /> e. Click **Next**.|  
-    |**Database** |a. Select **Use an existing database that already contains the required tables and views**.<br /><br /> b. In **Database**, select ***database_name*** (where *database_name* is the name of the existing MDT DB).<br /><br /> c. Click**Next**.|  
-    |**SQL Share** |a. In **SQL Share**, type ***share_name*** (where *share_name* is the name of a network shared folder on the computer specified on the **SQL Server Details** wizard page).<br /><br /> This text box is required for Windows PE to connect to the database using the Windows Integrated Security with Named Pipes protocol. Windows PE connects to the network shared folder, establishing a network connection to the server so that Windows Integrated Security in SQL Server authenticates correctly.<br /><br /> If Windows PE is not connecting to the database using this protocol, you can leave **SQL Share** blank.<br /><br /> b. Click **Next**.|  
-    |**Summary** |Review the information in the **Details** box, and then click **Next**.|  
-    |**Confirmation** |You can click **Save Output** to save the output of the wizard to a file. You can also click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Finish**.|  
+   |On this wizard page|Do this|  
+   |-------------------------|-------------|  
+   |**SQL Server Details** |a. In **SQL Server name**, type ***computer_name*** (where *computer_name* is the name of the computer running SQL Server).<br /><br /> b. In **Instance**, type ***instance_name*** (where *instance_name* is the name of SQL Server instance on the computer running SQL Server).<br /><br /> If you are using SQL Server installed as the default instance, you can leave **Instance** blank. If you are using SQL Server Express, type **SQL Express** for the instance name.<br /><br /> c. In **Port**, type ***port_number*** (where *port_number* is the TCP port number for the SQL Server if different than the default value).<br /><br /> If you are using the default value, you can leave **Port** blank.<br /><br /> d. In **Network Library**, select ***network_library*** (where *network_library* is the network library used to communicate with SQL Server and can be either Named Pipes or TCP/IP Sockets).<br /><br /> e. Click **Next**.|  
+   |**Database** |a. Select **Use an existing database that already contains the required tables and views**.<br /><br /> b. In **Database**, select ***database_name*** (where *database_name* is the name of the existing MDT DB).<br /><br /> c. Click**Next**.|  
+   |**SQL Share** |a. In **SQL Share**, type ***share_name*** (where *share_name* is the name of a network shared folder on the computer specified on the **SQL Server Details** wizard page).<br /><br /> This text box is required for Windows PE to connect to the database using the Windows Integrated Security with Named Pipes protocol. Windows PE connects to the network shared folder, establishing a network connection to the server so that Windows Integrated Security in SQL Server authenticates correctly.<br /><br /> If Windows PE is not connecting to the database using this protocol, you can leave **SQL Share** blank.<br /><br /> b. Click **Next**.|  
+   |**Summary** |Review the information in the **Details** box, and then click **Next**.|  
+   |**Confirmation** |You can click **Save Output** to save the output of the wizard to a file. You can also click **View Script** to view the Windows PowerShell scripts used to perform the wizard tasks.<br /><br /> Click **Finish**.|  
 
- The New DB Wizard finishes. The database configuration information is shown in the details pane of the Deployment Workbench.  
+   The New DB Wizard finishes. The database configuration information is shown in the details pane of the Deployment Workbench.  
 
 ####  <a name="UpgradinganExistingMDTDB"></a> Upgrading an Existing MDT DB  
  The MDT DB is automatically upgraded from a previous version of MDT when you upgrade the deployment share. The upgrade process preserves any schema modification in the existing MDT DB when you upgrade to the new MDT DB.  
@@ -10279,10 +10287,10 @@ Import-Module MyCustomModule
 
     |For this method|Do this|  
     |---------------------|-------------|  
-    |**Computers** |a. In **Description**, type type ***description_name*** (where *description_name* is a descriptive name of the computer).<br /><br /> b. Provide any combination of the following information (you must configure at least one of the following):<br /><br /> - In **Asset tag**, type ***asset_tag*** (where *asset_tag* is the asset tag or inventory control tag assigned to the computer).<br /><br /> - In **UUID**, type ***uuid*** (where *uuid* is the UUID assigned to the target computer).<br /><br /> - In **Serial number**, type ***serial_number*** (where *serial_number* is the serial number assigned to the target computer).<br /><br /> - In **MAC address**, type ***mac_address*** (where *mac_address* is the MAC address of the primary network adapter for the target computer).|  
+    |**Computers** |a. In **Description**, type ***description_name*** (where *description_name* is a descriptive name of the computer).<br /><br /> b. Provide any combination of the following information (you must configure at least one of the following):<br /><br /> - In **Asset tag**, type ***asset_tag*** (where *asset_tag* is the asset tag or inventory control tag assigned to the computer).<br /><br /> - In **UUID**, type ***uuid*** (where *uuid* is the UUID assigned to the target computer).<br /><br /> - In **Serial number**, type ***serial_number*** (where *serial_number* is the serial number assigned to the target computer).<br /><br /> - In **MAC address**, type ***mac_address*** (where *mac_address* is the MAC address of the primary network adapter for the target computer).|  
     |**Roles** |In **Role name**, type ***role_name*** (where *role_name* is a descriptive name of the role).|  
     |**Locations** |a. In **Location**, type ***location_name*** (where *location_name* is a descriptive name of the location).<br /><br /> b. In **Default Gateways**, add the IP addresses for all default gateways that exist within the location.|  
-    |**Make and Models** |a. In **Make**, type ***make_name*** (where *make_name* is is the exact make [manufacturer] name returned by the BIOS of the target computer using WMI).<br /><br /> b. In **Model**, type ***model_name*** (where *model_name* is the exact model name returned by the BIOS of the target computer using WMI).|  
+    |**Make and Models** |a. In **Make**, type ***make_name*** (where *make_name* is the exact make [manufacturer] name returned by the BIOS of the target computer using WMI).<br /><br /> b. In **Model**, type ***model_name*** (where *model_name* is the exact model name returned by the BIOS of the target computer using WMI).|  
 
 5.  Complete the **Details** tab by performing the following steps:  
 
@@ -10343,13 +10351,13 @@ Import-Module MyCustomModule
 
  Perform bulk import and update of configuration settings in the MDT DB using:  
 
--   **Microsoft Office system applications**. Microsoft Office Access® or Office Excel have data-manipulation features that allow you to directly modify tables in the MDT DB using tools with which you are already familiar.  
+- **Microsoft Office system applications**. Microsoft Office Access® or Office Excel have data-manipulation features that allow you to directly modify tables in the MDT DB using tools with which you are already familiar.  
 
--   **bcp utility (Bcp.exe)**. This bulk import/export tool allows you to import configuration settings to and export configuration settings from the tables in the MDT DB.  
+- **bcp utility (Bcp.exe)**. This bulk import/export tool allows you to import configuration settings to and export configuration settings from the tables in the MDT DB.  
 
--   **Transact-SQL language in SQL Server**. The Transact-SQL language allows you to add, update, or delete entries in tables in the MDT DB.  
+- **Transact-SQL language in SQL Server**. The Transact-SQL language allows you to add, update, or delete entries in tables in the MDT DB.  
 
- You can review the tables, views, and other database objects in the MDT DB to determine the tables that you want to update. For more information on the tables and views in the MDT DB, see the section, "Tables and Views in the MDT DB", in the MDT document*Toolkit Reference*.  
+  You can review the tables, views, and other database objects in the MDT DB to determine the tables that you want to update. For more information on the tables and views in the MDT DB, see the section, "Tables and Views in the MDT DB", in the MDT document*Toolkit Reference*.  
 
 ###  <a name="ConfiguringtheMDTDeploymentProcesstoRetreiveConfigurationSettingsfromtheMDTDB"></a> Configuring the MDT Deployment Process to Retreive Configuration Settings from the MDT DB  
  Configure the MDT deployment process to access the MDT DB and retrieve the configuration settings stored in it by modifying CustomSettings.ini. You can modify CustomSettings.ini to allow the MDT deployment process to access the MDT DB using any combination of the following methods:  
@@ -10361,97 +10369,97 @@ Import-Module MyCustomModule
 ####  <a name="ConfiguretheRetreivalofConfigurationSettingsfromtheMDTDBUsingtheConfigureDBWizard"></a> Configure the Retrieval of Configuration Settings from the MDT DB Using the Configure DB Wizard  
  The Configure DB Wizard in Deployment Workbench provides a graphical interface for configuring the MDT deployment process to access the MDT DB. The advantages of using this wizard is that it helps reduce the:  
 
-1.  Possibility of configuration errors in the CustomSettings.ini file  
+1. Possibility of configuration errors in the CustomSettings.ini file  
 
-2.  Effort required to modify the CustomSettings.ini file to enable retrieval of configuration settings from the MDT DB  
+2. Effort required to modify the CustomSettings.ini file to enable retrieval of configuration settings from the MDT DB  
 
- The disadvantage of using the Configure DB Wizard is that it does not allow you to access any additional database objects that you have created, such as tables, views, or stored procedures. However, the wizard recognizes any columns that you have added to the existing tables and views.  
+   The disadvantage of using the Configure DB Wizard is that it does not allow you to access any additional database objects that you have created, such as tables, views, or stored procedures. However, the wizard recognizes any columns that you have added to the existing tables and views.  
 
- In most instances, use the Configure DB Wizard to modify the CustomSettings.ini file. Only make direct modifications to the CustomSettings.ini file if you have added database objects, such as tables, views, or stored procedures.  
+   In most instances, use the Configure DB Wizard to modify the CustomSettings.ini file. Only make direct modifications to the CustomSettings.ini file if you have added database objects, such as tables, views, or stored procedures.  
 
- Run the Configure DB Wizard for each deployment share defined in the Deployment Workbench that will be updated.  
+   Run the Configure DB Wizard for each deployment share defined in the Deployment Workbench that will be updated.  
 
 ###### To configure CustomSettings.ini for database queries using the Configure DB Wizard in the Deployment Workbench  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Database (where *deployment_share* is the name of the deployment share to which you will add the application).  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Database (where *deployment_share* is the name of the deployment share to which you will add the application).  
 
-3.  In the Actions pane, click **Configure Database Rules**.  
+3. In the Actions pane, click **Configure Database Rules**.  
 
-     The Configure DB Wizard starts.  
+    The Configure DB Wizard starts.  
 
-4.  Complete the **Computer Options** wizard page using the information in Table 187, and then click **Next**.  
+4. Complete the **Computer Options** wizard page using the information in Table 187, and then click **Next**.  
 
-    ### Table 187. Information to Complete the Computer Options Wizard Page  
+   ### Table 187. Information to Complete the Computer Options Wizard Page  
 
-    |Select this check box|To do this|  
-    |---------------------------|----------------|  
-    |**Query for computer-specific settings** |Query the MDT DB for settings configured on the **Details** tab of the computer item’s **Properties** dialog box.|  
-    |**Query for roles assigned to this computer** |Query the MDT DB for roles associated with the computer on the **Roles** tab of the computer item’s **Properties** dialog box.|  
-    |**Query for applications to be installed on this computer** |Query the MDT DB for Lite Touch and Configuration Manager applications to be installed on the computer as configured on the **Applications** tab of the computer item’s **Properties** dialog box.|  
-    |**Query for SMS packages to be installed on this computer** |Query the MDT DB for Configuration Manager packages and programs  to be installed on the computer as configured on the **ConfigMgr Packages** tab of the computer item’s **Properties** dialog box.|  
-    |**Query for administrators to be assigned to this computer** |Query the MDT DB for user or group accounts that are to be made members of the local Administrators group on the target computer as configured on the **Administrators** tab of the computer item’s **Properties** dialog box.|  
+   |Select this check box|To do this|  
+   |---------------------------|----------------|  
+   |**Query for computer-specific settings** |Query the MDT DB for settings configured on the **Details** tab of the computer item’s **Properties** dialog box.|  
+   |**Query for roles assigned to this computer** |Query the MDT DB for roles associated with the computer on the **Roles** tab of the computer item’s **Properties** dialog box.|  
+   |**Query for applications to be installed on this computer** |Query the MDT DB for Lite Touch and Configuration Manager applications to be installed on the computer as configured on the **Applications** tab of the computer item’s **Properties** dialog box.|  
+   |**Query for SMS packages to be installed on this computer** |Query the MDT DB for Configuration Manager packages and programs  to be installed on the computer as configured on the **ConfigMgr Packages** tab of the computer item’s **Properties** dialog box.|  
+   |**Query for administrators to be assigned to this computer** |Query the MDT DB for user or group accounts that are to be made members of the local Administrators group on the target computer as configured on the **Administrators** tab of the computer item’s **Properties** dialog box.|  
 
-    > [!TIP]
-    >  You can click **Select All** or **Deselect All** to correspondingly select or deselect all the check boxes on the **Computer Options** wizard page.  
+   > [!TIP]
+   >  You can click **Select All** or **Deselect All** to correspondingly select or deselect all the check boxes on the **Computer Options** wizard page.  
 
-5.  Complete the **Location Options** wizard page using the information in Table 188, and then click **Next**.  
+5. Complete the **Location Options** wizard page using the information in Table 188, and then click **Next**.  
 
-    ### Table 188. Information to Complete the Location Options Wizard Page  
+   ### Table 188. Information to Complete the Location Options Wizard Page  
 
-    |Select this check box|To do this|  
-    |---------------------------|----------------|  
-    |**Query for location names based on default gateways** |Query the MDT DB for location names based on the IP addresses of the default gateways configured on the **Identity** tab of the location item’s **Properties** dialog box.|  
-    |**Query for location-specific settings** |Query the MDT DB for settings configured on the **Details** tab of the location item’s **Properties** dialog box.|  
-    |**Query for roles assigned for this location** |Query the MDT DB for roles associated with the location as configured on the **Roles** tab of the location item’s **Properties** dialog box.|  
-    |**Query for applications to be installed for this location** |Query the MDT DB for Lite Touch and Configuration Manager applications to be installed on the target computers within the location as configured on the **Applications** tab of the location item’s **Properties** dialog box.|  
-    |**Query for SMS packages to be installed for this location** |Query the MDT DB for Configuration Manager packages and programs to be installed on the target computers within the location as configured on the **ConfigMgr Packages** tab of the location item’s **Properties** dialog box.|  
-    |**Query for administrators to be assigned for this location** |Query the MDT DB for user and group accounts that are to be made members of the local Administrators group on the target computers within the location as configured on the **Administrators** tab of the location item’s **Properties** dialog box.|  
+   |Select this check box|To do this|  
+   |---------------------------|----------------|  
+   |**Query for location names based on default gateways** |Query the MDT DB for location names based on the IP addresses of the default gateways configured on the **Identity** tab of the location item’s **Properties** dialog box.|  
+   |**Query for location-specific settings** |Query the MDT DB for settings configured on the **Details** tab of the location item’s **Properties** dialog box.|  
+   |**Query for roles assigned for this location** |Query the MDT DB for roles associated with the location as configured on the **Roles** tab of the location item’s **Properties** dialog box.|  
+   |**Query for applications to be installed for this location** |Query the MDT DB for Lite Touch and Configuration Manager applications to be installed on the target computers within the location as configured on the **Applications** tab of the location item’s **Properties** dialog box.|  
+   |**Query for SMS packages to be installed for this location** |Query the MDT DB for Configuration Manager packages and programs to be installed on the target computers within the location as configured on the **ConfigMgr Packages** tab of the location item’s **Properties** dialog box.|  
+   |**Query for administrators to be assigned for this location** |Query the MDT DB for user and group accounts that are to be made members of the local Administrators group on the target computers within the location as configured on the **Administrators** tab of the location item’s **Properties** dialog box.|  
 
-    > [!TIP]
-    >  You can click **Select All** or **Deselect All** to correspondingly select or deselect all the check boxes on the **Location Options** wizard page.  
+   > [!TIP]
+   >  You can click **Select All** or **Deselect All** to correspondingly select or deselect all the check boxes on the **Location Options** wizard page.  
 
-6.  Complete the **Make/Model Options** wizard page using the information in Table 189, and then click **Finish**.  
+6. Complete the **Make/Model Options** wizard page using the information in Table 189, and then click **Finish**.  
 
-    ### Table 189. Information to Complete the Make/Model Options Wizard Page  
+   ### Table 189. Information to Complete the Make/Model Options Wizard Page  
 
-    |Select this check box|To do this|  
-    |---------------------------|----------------|  
-    |**Query for model-specific settings** |Query the MDT DB for settings configured on the **Details** tab of the make and model item’s **Properties** dialog box.|  
-    |**Query for roles assigned to computers with this make and model** |Query the MDT DB for roles associated with the make and model on the **Roles** tab of the make and model item’s **Properties** dialog box.|  
-    |**Query for applications to be installed on computers with this make and model** |Query the MDT DB for Lite Touch and Configuration Manager applications to be installed on the target computers with the make and model as configured on the **Applications** tab of the make and model item’s **Properties** dialog box.|  
-    |**Query for SMS packages to be installed for this make and model** |Query the MDT DB for Configuration Manager packages and programs to be installed on the target computers with the make and model as configured on the **ConfigMgr Packages** tab of the make and model item’s **Properties** dialog box.|  
-    |**Query for administrators to be assigned to machines with this make and model** |Query the MDT DB for user and group accounts that are to be made members of the local Administrators group on the target computer with the make and model as configured on the **Administrators** tab of the make and model item’s **Properties** dialog box.|  
+   |Select this check box|To do this|  
+   |---------------------------|----------------|  
+   |**Query for model-specific settings** |Query the MDT DB for settings configured on the **Details** tab of the make and model item’s **Properties** dialog box.|  
+   |**Query for roles assigned to computers with this make and model** |Query the MDT DB for roles associated with the make and model on the **Roles** tab of the make and model item’s **Properties** dialog box.|  
+   |**Query for applications to be installed on computers with this make and model** |Query the MDT DB for Lite Touch and Configuration Manager applications to be installed on the target computers with the make and model as configured on the **Applications** tab of the make and model item’s **Properties** dialog box.|  
+   |**Query for SMS packages to be installed for this make and model** |Query the MDT DB for Configuration Manager packages and programs to be installed on the target computers with the make and model as configured on the **ConfigMgr Packages** tab of the make and model item’s **Properties** dialog box.|  
+   |**Query for administrators to be assigned to machines with this make and model** |Query the MDT DB for user and group accounts that are to be made members of the local Administrators group on the target computer with the make and model as configured on the **Administrators** tab of the make and model item’s **Properties** dialog box.|  
 
-    > [!TIP]
-    >  You can click **Select All** or **Deselect All** to correspondingly select or deselect all the check boxes on the **Make/Model Options** wizard page.  
+   > [!TIP]
+   >  You can click **Select All** or **Deselect All** to correspondingly select or deselect all the check boxes on the **Make/Model Options** wizard page.  
 
-7.  Complete the **Role Options** wizard page using the information in Table 190, and then click **Next**.  
+7. Complete the **Role Options** wizard page using the information in Table 190, and then click **Next**.  
 
-    ### Table 190. Information to Complete the Role Options Wizard Page  
+   ### Table 190. Information to Complete the Role Options Wizard Page  
 
-    |Select this check box|To do this|  
-    |---------------------------|----------------|  
-    |**Query for role-specific settings** |Query the MDT DB for settings configured on the **Details** tab of the role item’s **Properties** dialog box.|  
-    |**Query for applications to be installed for this role** |Query the MDT DB for Lite Touch and Configuration Manager applications to be installed on computers that perform this role as configured on the **Applications** tab of the role item’s **Properties** dialog box.|  
-    |**Query for SMS packages to be installed for this role** |Query the MDT DB for Configuration Manager  packages and programs to be installed on the target computers that perform this role as configured on the **ConfigMgr Packages** tab of the role item’s **Properties** dialog box.|  
-    |**Query for administrators to be assigned for this role** |Query the MDT DB for user and group accounts that are to be made members of the local Administrators group on computers that perform this role as configured on the **Administrators** tab of the role item’s **Properties** dialog box.|  
+   |Select this check box|To do this|  
+   |---------------------------|----------------|  
+   |**Query for role-specific settings** |Query the MDT DB for settings configured on the **Details** tab of the role item’s **Properties** dialog box.|  
+   |**Query for applications to be installed for this role** |Query the MDT DB for Lite Touch and Configuration Manager applications to be installed on computers that perform this role as configured on the **Applications** tab of the role item’s **Properties** dialog box.|  
+   |**Query for SMS packages to be installed for this role** |Query the MDT DB for Configuration Manager  packages and programs to be installed on the target computers that perform this role as configured on the **ConfigMgr Packages** tab of the role item’s **Properties** dialog box.|  
+   |**Query for administrators to be assigned for this role** |Query the MDT DB for user and group accounts that are to be made members of the local Administrators group on computers that perform this role as configured on the **Administrators** tab of the role item’s **Properties** dialog box.|  
 
-    > [!TIP]
-    >  You can click **Select All** or **Deselect All** to correspondingly select or deselect all the check boxes on the **Role Options** wizard page.  
+   > [!TIP]
+   >  You can click **Select All** or **Deselect All** to correspondingly select or deselect all the check boxes on the **Role Options** wizard page.  
 
-8.  On the **Summary** wizard page, review the information in the **Details** box, and then click **Next**.  
+8. On the **Summary** wizard page, review the information in the **Details** box, and then click **Next**.  
 
 9. On the **Confirmation** wizard page, review the information, and then click **Finish**.  
 
- When the Configure DB Wizard has finished, the CustomSettings.ini file is configured to perform the selected queries. For more information about how the CustomSettings.ini file is configured using the Configure DB Wizard, see [Review the CustomSettings.ini File After Running the Configure DB Wizard](#ReviewtheCustomSettings.iniFileAfterRunningtheConfigureDBWizard).  
+   When the Configure DB Wizard has finished, the CustomSettings.ini file is configured to perform the selected queries. For more information about how the CustomSettings.ini file is configured using the Configure DB Wizard, see [Review the CustomSettings.ini File After Running the Configure DB Wizard](#ReviewtheCustomSettings.iniFileAfterRunningtheConfigureDBWizard).  
 
- For more information about customizing each property, see:  
+   For more information about customizing each property, see:  
 
--   The corresponding section for each property in the section, "Properties", in the MDT document Toolkit Reference  
+- The corresponding section for each property in the section, "Properties", in the MDT document Toolkit Reference  
 
- For more information about customizing tables and views in the configuration database, see:  
+  For more information about customizing tables and views in the configuration database, see:  
 
 1.  The section, "Tables and Views in the MDT DB", in the MDT document *Toolkit Reference*  
 
@@ -10804,11 +10812,11 @@ ParameterCondition=OR
 
  If so, you must extend the schema for one or more of the tables and views in the MDT DB. If you extend the schema for the tables, you might also need to modify the views that depend on those tables. You extend the schema for the:  
 
--   Tables using the Microsoft SQL Server Management Studio or the **ALTER TABLE** Transact-SQL statement  
+- Tables using the Microsoft SQL Server Management Studio or the **ALTER TABLE** Transact-SQL statement  
 
--   Views using the SQL Server Management Studio or the **ALTER VIEW** Transact-SQL statement  
+- Views using the SQL Server Management Studio or the **ALTER VIEW** Transact-SQL statement  
 
- To extend the schema of the MDT DB, review the tables and views in the MDT DB to determine which you need to modify. For more information on the tables and views in the MDT DB, see the section, "Tables and Views in the MDT DB", in the MDT document *Toolkit Reference*.  
+  To extend the schema of the MDT DB, review the tables and views in the MDT DB to determine which you need to modify. For more information on the tables and views in the MDT DB, see the section, "Tables and Views in the MDT DB", in the MDT document *Toolkit Reference*.  
 
 ##### To extend the schema of the MDT DB  
 
@@ -10855,29 +10863,29 @@ ParameterCondition=OR
 ####  <a name="ModifytheTable"></a> Modify the Table  
  You modify the table by adding new columns to it. You add new columns to tables in the MDT DB using:  
 
--   **SQL Server Management Studio**. For more information on how to add a column using SQL Server Management Studio, see “How to: Insert Columns into Tables (Visual Database Tools)” in SQL Server Books Online, included with SQL Server.  
+- **SQL Server Management Studio**. For more information on how to add a column using SQL Server Management Studio, see “How to: Insert Columns into Tables (Visual Database Tools)” in SQL Server Books Online, included with SQL Server.  
 
--   **ALTER TABLE Transact-SQL statement**. For more information on how to add a column using the **ALTER TABLE** Transact-SQL statement, see “ALTER TABLE (Transact-SQL)” in SQL Server Books Online, included with SQL Server.  
+- **ALTER TABLE Transact-SQL statement**. For more information on how to add a column using the **ALTER TABLE** Transact-SQL statement, see “ALTER TABLE (Transact-SQL)” in SQL Server Books Online, included with SQL Server.  
 
--   **Other SQL Server management tools**. For more information on how to perform this task using other SQL Server management tools, see the documentation for the corresponding tool.  
+- **Other SQL Server management tools**. For more information on how to perform this task using other SQL Server management tools, see the documentation for the corresponding tool.  
 
- To add a new column to a table, you need to know:  
+  To add a new column to a table, you need to know:  
 
--   The columns that you will add to the table  
+- The columns that you will add to the table  
 
--   The SQL data type for each column you will add to the table  
+- The SQL data type for each column you will add to the table  
 
--   If the new column allows Null values  
+- If the new column allows Null values  
 
--   The default value for the new column (optional)  
+- The default value for the new column (optional)  
 
--   Check constraints for the new column (optional)  
+- Check constraints for the new column (optional)  
 
- For more information on how to determine what to use for each item in the previous list, see the section, “Table Column Properties (SQL Server Management Studio),” in SQL Server Books Online, included with SQL Server.  
+  For more information on how to determine what to use for each item in the previous list, see the section, “Table Column Properties (SQL Server Management Studio),” in SQL Server Books Online, included with SQL Server.  
 
- **Example: How Woodgrove Bank Modified Tables**  
+  **Example: How Woodgrove Bank Modified Tables**  
 
- Woodgrove Bank will add a new column to the **Settings** table called **AVServer**. The **AVServer** column will contain the computer name of the antivirus server for each location specified in the **LocationIdentity** table. Woodgrove Bank has decided to create the **AVServer** column using the information in Table 196.  
+  Woodgrove Bank will add a new column to the **Settings** table called **AVServer**. The **AVServer** column will contain the computer name of the antivirus server for each location specified in the **LocationIdentity** table. Woodgrove Bank has decided to create the **AVServer** column using the information in Table 196.  
 
 ### Table 196. Information for the AVServer Column  
 
@@ -10895,44 +10903,44 @@ ParameterCondition=OR
 
  Modify the dependent views in the MDT DB using:  
 
--   **SQL Server Management Studio**. For more information on how to add a column using SQL Server Management Studio, see the section, “Working with Views (Visual Database Tools),” in SQL Server Books Online, included with SQL Server.  
+- **SQL Server Management Studio**. For more information on how to add a column using SQL Server Management Studio, see the section, “Working with Views (Visual Database Tools),” in SQL Server Books Online, included with SQL Server.  
 
--   **ALTER VIEW Transact-SQL statement**. For more information on how to drop a view using the **ALTER VIEW** Transact-SQL statement, see the section, “ALTER View (Transact-SQL),” in SQL Server Books Online, included with SQL Server.  
+- **ALTER VIEW Transact-SQL statement**. For more information on how to drop a view using the **ALTER VIEW** Transact-SQL statement, see the section, “ALTER View (Transact-SQL),” in SQL Server Books Online, included with SQL Server.  
 
--   **Other SQL Server management tools**. For more information on how to perform this task using other SQL Server management tools, see the documentation for the corresponding tool.  
+- **Other SQL Server management tools**. For more information on how to perform this task using other SQL Server management tools, see the documentation for the corresponding tool.  
 
- To modify the dependent view, you need to know:  
+  To modify the dependent view, you need to know:  
 
--   The columns that you will add to the view  
+- The columns that you will add to the view  
 
--   The SQL **SELECT** statement used to create the view  
+- The SQL **SELECT** statement used to create the view  
 
- For more information on determining what to use of each of the items in the previous list, see the section, ”Modifying Views,” in SQL Server Books Online, included with SQL Server.  
+  For more information on determining what to use of each of the items in the previous list, see the section, ”Modifying Views,” in SQL Server Books Online, included with SQL Server.  
 
- Even if the views do not require modification, refresh all views that reference modified tables by running the **sp_refreshview** stored procedure. The**sp_refreshview** stored procedure is required to update views when the columns in dependent tables or views have changed. For more information about the **sp_refreshview** stored procedure, see the section, "sp_refreshview (Transact-SQL),” in SQL Server Books Online, included with SQL Server.  
+  Even if the views do not require modification, refresh all views that reference modified tables by running the **sp_refreshview** stored procedure. The**sp_refreshview** stored procedure is required to update views when the columns in dependent tables or views have changed. For more information about the **sp_refreshview** stored procedure, see the section, "sp_refreshview (Transact-SQL),” in SQL Server Books Online, included with SQL Server.  
 
- **Example: How Woodgrove Bank Modified the Dependent Views**  
+  **Example: How Woodgrove Bank Modified the Dependent Views**  
 
- Woodgrove Bank does not need to modify any views, as the **LocationSettings** view already returns all columns from the **Settings** table. However, Woodgrove Bank ran the **sp_refreshview** stored procedure to refresh the **ComputerSettings**, **LocationSettings**, **MakeModelSettings**, or **RoleSettings** views, which reference the Settings table. This allows all the views to return the computer name of the antivirus server, if required.  
+  Woodgrove Bank does not need to modify any views, as the **LocationSettings** view already returns all columns from the **Settings** table. However, Woodgrove Bank ran the **sp_refreshview** stored procedure to refresh the **ComputerSettings**, **LocationSettings**, **MakeModelSettings**, or **RoleSettings** views, which reference the Settings table. This allows all the views to return the computer name of the antivirus server, if required.  
 
 ####  <a name="ReferencetheNewColumnintheCustomSettings.iniFile"></a> Reference the New Column in the CustomSettings.ini File  
  After you have added the column to the table and modified the appropriate views, configure the CustomSettings.ini file to reference the new column. To reference the new column in the CustomSettings.ini file, perform the following steps:  
 
-1.  Add a reference to the query section on the **Priority** line in the CustomSettings.ini file, if required.  
+1. Add a reference to the query section on the **Priority** line in the CustomSettings.ini file, if required.  
 
-     This reference initiates the query defined in the query section that you will create in a later step. This step may not be necessary if CustomSettings.ini already has an existing query for the view or table referenced in the query.  
+    This reference initiates the query defined in the query section that you will create in a later step. This step may not be necessary if CustomSettings.ini already has an existing query for the view or table referenced in the query.  
 
-2.  Add the new column name to the **Properties** line in the CustomSettings.ini file.  
+2. Add the new column name to the **Properties** line in the CustomSettings.ini file.  
 
-     This reference informs MDT to resolve the value for **AVServer** and create a task sequence variable of the same name. The task sequence variable can then be referenced in a task sequence step.  
+    This reference informs MDT to resolve the value for **AVServer** and create a task sequence variable of the same name. The task sequence variable can then be referenced in a task sequence step.  
 
-3.  Create a query section that was referenced in step 1, which queries the appropriate table or view.  
+3. Create a query section that was referenced in step 1, which queries the appropriate table or view.  
 
- **Example: How Woodgrove Bank Referenced the New Column in the CustomSettings.ini File**  
+   **Example: How Woodgrove Bank Referenced the New Column in the CustomSettings.ini File**  
 
- Woodgrove Bank queries the **LocationSettings** view to return the antivirus server for a particular location. The **LSettings** query already exists in the CustomSettings.ini file after running the Configure DB Wizard. As shown in Listing 16, all Woodgrove Bank needs to do is add **AVServer** to the `Priority` line so that MDT creates a task sequence variable of the same name.  
+   Woodgrove Bank queries the **LocationSettings** view to return the antivirus server for a particular location. The **LSettings** query already exists in the CustomSettings.ini file after running the Configure DB Wizard. As shown in Listing 16, all Woodgrove Bank needs to do is add **AVServer** to the `Priority` line so that MDT creates a task sequence variable of the same name.  
 
- **Listing 16. CustomSettings.ini File to Retrieve Antivirus Server for Woodgrove Bank**  
+   **Listing 16. CustomSettings.ini File to Retrieve Antivirus Server for Woodgrove Bank**  
 
 ```  
 [Settings]  
@@ -11177,30 +11185,30 @@ Parameters=DefaultGateway
 
  While running the LTI task sequence, the **Add Windows Recovery (WinRE)** task sequence step is responsible for:
 
--   Installing the appropriate .wim image to the active partition  
+- Installing the appropriate .wim image to the active partition  
 
--   Modifying the BCD file so that a user can choose to start Windows RE by pressing F8 as Windows is starting.  
+- Modifying the BCD file so that a user can choose to start Windows RE by pressing F8 as Windows is starting.  
 
- The **Add Windows Recovery (WinRE)** task sequence step runs when the **PrepareWinRE** property is set to a value of **YES**. For more information about the **PrepareWinRE** property, see the "PrepareWinRE" property in the MDT document *Toolkit Reference*.  
+  The **Add Windows Recovery (WinRE)** task sequence step runs when the **PrepareWinRE** property is set to a value of **YES**. For more information about the **PrepareWinRE** property, see the "PrepareWinRE" property in the MDT document *Toolkit Reference*.  
 
 ####  <a name="EnableDaRTSupportinLTI"></a> Enable DaRT Support in LTI  
  DaRT is included as a part of the [Microsoft Desktop Optimization Package](https://technet.microsoft.com/windows/mdop.aspx), which is provided as a part of Microsoft Software Assurance. You can include DaRT in the Windows RE partitions.  
 
  The following is a summary of the DaRT features:  
 
--   Includes 14 administrative, system, and network tools.  
+- Includes 14 administrative, system, and network tools.  
 
--   Provides many options for recovery, even when Windows Safe mode or normal startup will not function  
+- Provides many options for recovery, even when Windows Safe mode or normal startup will not function  
 
--   Provides an easy-to-use, offline boot environment that helps IT teams quickly restart computers  
+- Provides an easy-to-use, offline boot environment that helps IT teams quickly restart computers  
 
--   Helps recover deleted files and reset lost or forgotten local passwords, even the administrator’s  
+- Helps recover deleted files and reset lost or forgotten local passwords, even the administrator’s  
 
- Enable DaRT support in LTI for:  
+  Enable DaRT support in LTI for:  
 
--   DaRT version 7 (used with Windows 7) as described in [Enable DaRT 7 Support in LTI](#EnableDaRT7SupportinLTI)  
+- DaRT version 7 (used with Windows 7) as described in [Enable DaRT 7 Support in LTI](#EnableDaRT7SupportinLTI)  
 
--   DaRT version 8 (used with Windows 8) as described in [Enable DaRT 8 Support in LTI](#EnableDaRT8SupportinLTI)  
+- DaRT version 8 (used with Windows 8) as described in [Enable DaRT 8 Support in LTI](#EnableDaRT8SupportinLTI)  
 
 #####  <a name="EnableDaRT7SupportinLTI"></a> Enable DaRT 7 Support in LTI  
  DaRT version 7 is for use with Windows 7. For information on how to enable DaRT version 8 for use with Windows 8, see [Enable DaRT 8 Support in LTI](#EnableDaRT8SupportinLTI).  
@@ -11453,21 +11461,21 @@ Parameters=DefaultGateway
 
 ##### To configure the shared folder permissions for the folders listed in Table 198  
 
-1.  In Windows Explorer, right-click ***shared_folder*** (where *shared_folder* is one of the shared folders listed in Table 198), and then click **Properties**.  
+1. In Windows Explorer, right-click ***shared_folder*** (where *shared_folder* is one of the shared folders listed in Table 198), and then click **Properties**.  
 
-2.  On the **Security** tab, click **Advanced**.  
+2. On the **Security** tab, click **Advanced**.  
 
-3.  On the **Permissions** tab, clear the **Allow inheritable permissions from the parent to propagate to this object and all child objects** check box.  
+3. On the **Permissions** tab, clear the **Allow inheritable permissions from the parent to propagate to this object and all child objects** check box.  
 
-4.  In the **Security** dialog box, click **Remove**.  
+4. In the **Security** dialog box, click **Remove**.  
 
-5.  On the **Permissions** tab, click **Add**.  
+5. On the **Permissions** tab, click **Add**.  
 
-6.  In the **Enter the object name to select** box, type **Authenticated Users**, and then click **OK**.  
+6. In the **Enter the object name to select** box, type **Authenticated Users**, and then click **OK**.  
 
-7.  In the **Permission Entry for *shared_folder*** dialog box (where *shared_folder* is one of the shared folders listed in Table 198), in the **Apply onto** list, click **This folder only**.  
+7. In the **Permission Entry for *shared_folder*** dialog box (where *shared_folder* is one of the shared folders listed in Table 198), in the **Apply onto** list, click **This folder only**.  
 
-8.  In the **Permission Entry for *shared_folder*** dialog box (where *shared_folder* is one of the shared folders listed in Table 198), in the **Permissions** list, click **Allow for the Create Folders/Append Data permission**, and then click **OK**.  
+8. In the **Permission Entry for *shared_folder*** dialog box (where *shared_folder* is one of the shared folders listed in Table 198), in the **Permissions** list, click **Allow for the Create Folders/Append Data permission**, and then click **OK**.  
 
 9. On the **Permissions** tab, click **Add**.  
 
@@ -11481,7 +11489,7 @@ Parameters=DefaultGateway
 
 13. Repeat steps 10–13 for each group that will receive Administrator privileges.  
 
- The permissions set in these steps work for both LTI and ZTI deployments. In some instances, you may want to further restrict the user accounts that can access the shared folder. You can restrict user accounts for:  
+    The permissions set in these steps work for both LTI and ZTI deployments. In some instances, you may want to further restrict the user accounts that can access the shared folder. You can restrict user accounts for:  
 
 -   LTI deployments by substituting **Authenticated Users** in the steps above with each account you want to have access  
 
@@ -11492,25 +11500,25 @@ Parameters=DefaultGateway
 
  Access is granted to the credentials specified in the:  
 
--   **UserID**, **UserPassword**, and **UserDomain** properties for LTI deployments  
+- **UserID**, **UserPassword**, and **UserDomain** properties for LTI deployments  
 
--   Deployment Wizard for LTI deployments  
+- Deployment Wizard for LTI deployments  
 
--   Network access account used by the Configuration Manager client for ZTI deployments  
+- Network access account used by the Configuration Manager client for ZTI deployments  
 
- Grant access to the following resources:  
+  Grant access to the following resources:  
 
--   **MDT deployment share for LTI deployments**. Configure access to the deployment share created in the Deployment Workbench.  
+- **MDT deployment share for LTI deployments**. Configure access to the deployment share created in the Deployment Workbench.  
 
--   **Any resources accessed using the ZTIConnect.wsf script for LTI or ZTI deployments**. Configure access to resources that are referenced using the ZTIConnect.wsf script.  
+- **Any resources accessed using the ZTIConnect.wsf script for LTI or ZTI deployments**. Configure access to resources that are referenced using the ZTIConnect.wsf script.  
 
-    > [!NOTE]
-    >  For further guidance on using the ZTIConnect.wsf script, see the MDT document *Microsoft Deployment Toolkit Samples Guide*.  
+  > [!NOTE]
+  >  For further guidance on using the ZTIConnect.wsf script, see the MDT document *Microsoft Deployment Toolkit Samples Guide*.  
 
--   **Any resources on application or database servers for LTI or ZTI deployments**. Configure access to applications or databases that are accessed through the **SQLServer**, **SQLShare**, and **Database** properties.  
+- **Any resources on application or database servers for LTI or ZTI deployments**. Configure access to applications or databases that are accessed through the **SQLServer**, **SQLShare**, and **Database** properties.  
 
-    > [!NOTE]
-    >  Other connections to the same servers, such as Named Pipes and RPC, use the same credentials listed above. Use the ZTIConnect.wsf script to establish these connections.  
+  > [!NOTE]
+  >  Other connections to the same servers, such as Named Pipes and RPC, use the same credentials listed above. Use the ZTIConnect.wsf script to establish these connections.  
 
 ##  <a name="PreparingWindowsDeploymentServices"></a> Preparing Windows Deployment Services  
  You can use Windows Deployment Services in conjunction with MDT to automatically initiate boot images on target computers. These boot images can be Windows PE images or custom images that can deploy operating systems directly to the target computers.  
@@ -11526,23 +11534,23 @@ Parameters=DefaultGateway
 ###  <a name="PreparingWindowsDeploymentServicesforLTIDeployments"></a> Preparing Windows Deployment Services for LTI Deployments  
  You can use Windows Deployment Services in LTI deployments in the following ways:  
 
--   **Start Windows PE on the target computers**. The beginning of the New Computer deployment scenario and the second half of the Replace Computer deployment scenario both start the target computer in Windows PE. For these scenarios, you can automate starting Windows PE using Windows Deployment Services.  
+- **Start Windows PE on the target computers**. The beginning of the New Computer deployment scenario and the second half of the Replace Computer deployment scenario both start the target computer in Windows PE. For these scenarios, you can automate starting Windows PE using Windows Deployment Services.  
 
--   **Install images created in the Deployment Workbench on the target computers**. You can create custom WIM images in the Deployment Workbench that you can deploy directly to target computers using Windows Deployment Services.  
+- **Install images created in the Deployment Workbench on the target computers**. You can create custom WIM images in the Deployment Workbench that you can deploy directly to target computers using Windows Deployment Services.  
 
- For more information about setting up and configuring Windows Deployment Services, see:  
+  For more information about setting up and configuring Windows Deployment Services, see:  
 
--   [Windows Deployment Services](https://technet.microsoft.com/library/hh831764.aspx)  
+- [Windows Deployment Services](https://technet.microsoft.com/library/hh831764.aspx)  
 
--   The Windows Deployment Services Help file, included in Windows Deployment Services  
+- The Windows Deployment Services Help file, included in Windows Deployment Services  
 
- Prepare Windows Deployment Services for LTI deployments by:  
+  Prepare Windows Deployment Services for LTI deployments by:  
 
--   Adding boot images created in the Deployment Workbench for LTI deployments to Windows Deployment Services as described in [Add LTI Boot Images to Windows Deployment Services](#AddLTIBootImagestoWindowsDeploymentServices)  
+- Adding boot images created in the Deployment Workbench for LTI deployments to Windows Deployment Services as described in [Add LTI Boot Images to Windows Deployment Services](#AddLTIBootImagestoWindowsDeploymentServices)  
 
--   Pre-staging target computers in Windows Deployment Services for LTI deployments as described in [Pre-stage Target Computers for Windows Deployment Services for LTI Deployments](#PrestageTargetComputersforWindowsDeploymentServicesforLTIDeployments)  
+- Pre-staging target computers in Windows Deployment Services for LTI deployments as described in [Pre-stage Target Computers for Windows Deployment Services for LTI Deployments](#PrestageTargetComputersforWindowsDeploymentServicesforLTIDeployments)  
 
--   Enabling Windows Deployment Services multicast deployment of images in Windows Deployment Services for LTI deployments as described in [Enable Windows Deployment Services Multicast Deployment for LTI Deployments](#EnableWindowsDeploymentServicesMulticastDeploymentforLTIDeployments)  
+- Enabling Windows Deployment Services multicast deployment of images in Windows Deployment Services for LTI deployments as described in [Enable Windows Deployment Services Multicast Deployment for LTI Deployments](#EnableWindowsDeploymentServicesMulticastDeploymentforLTIDeployments)  
 
 ####  <a name="AddLTIBootImagestoWindowsDeploymentServices"></a> Add LTI Boot Images to Windows Deployment Services  
  You can add the LTI boot image WIM files in the Boot folder of a deployment share to Windows Deployment Services. Doing so allows Windows Deployment Services to automatically initiate LTI deployment by starting LTI boot images.  
@@ -11599,18 +11607,18 @@ Parameters=DefaultGateway
 
  The multicast types available for use in LTI deployments include:  
 
--   **Auto-Cast**. In this option, as soon as an applicable client computer requests an installation image, a multicast transmission of the selected image begins. Then, as other client computers request the same image, they are joined to the transmission that has already started.  
+- **Auto-Cast**. In this option, as soon as an applicable client computer requests an installation image, a multicast transmission of the selected image begins. Then, as other client computers request the same image, they are joined to the transmission that has already started.  
 
--   **Scheduled-Cast**. This option sets the start criteria for the transmission based on the number of client computers requesting an image or a specific day and time.  
+- **Scheduled-Cast**. This option sets the start criteria for the transmission based on the number of client computers requesting an image or a specific day and time.  
 
- MDT supports multicast-based deployments when MDT and the deployment share are installed on:  
+  MDT supports multicast-based deployments when MDT and the deployment share are installed on:  
 
--   **The computer running Windows Deployment Services**. In this scenario, MDT is installed on a computer running Windows Server with the Windows Deployment Services role as described in [Enable Multicast Deployments with MDT Installed on the Same Computer as Windows Deployment Services](#EnableMulticastDeploymentswithMDTInstalledontheSameComputerasWindowsDeploymentServices).  
+- **The computer running Windows Deployment Services**. In this scenario, MDT is installed on a computer running Windows Server with the Windows Deployment Services role as described in [Enable Multicast Deployments with MDT Installed on the Same Computer as Windows Deployment Services](#EnableMulticastDeploymentswithMDTInstalledontheSameComputerasWindowsDeploymentServices).  
 
--   **A computer other than the computer Windows Deployment Services is running on**. In this scenario, MDT and the deployment share are installed on a separate computer from the one running Windows Server with the Windows Deployment Services role as described in [Enable Multicast Deployments with MDT Installed on a Different Computer from Windows Deployment Services](#EnableMulticastDeploymentswithMDTInstalledonaDifferentComputerfromWindowsDeploymentServices).  
+- **A computer other than the computer Windows Deployment Services is running on**. In this scenario, MDT and the deployment share are installed on a separate computer from the one running Windows Server with the Windows Deployment Services role as described in [Enable Multicast Deployments with MDT Installed on a Different Computer from Windows Deployment Services](#EnableMulticastDeploymentswithMDTInstalledonaDifferentComputerfromWindowsDeploymentServices).  
 
-    > [!NOTE]
-    >  If MDT is installed on a separate computer, you must install the Remote Server Administration Tools feature so that the WDSUTIL command-line utility is available.  
+  > [!NOTE]
+  >  If MDT is installed on a separate computer, you must install the Remote Server Administration Tools feature so that the WDSUTIL command-line utility is available.  
 
 > [!NOTE]
 >  You cannot use these scenarios to allow multicast for boot images, as the multicast client is not loaded until after Windows PE is running. LTI only uses multicast to transfer operating system WIM files.  
@@ -11620,47 +11628,47 @@ Parameters=DefaultGateway
 
 ###### To enable multicast deployments with MDT installed on the same computer as Windows Deployment Services  
 
-1.  Install Windows Server on the computer that is to be the deployment server.  
+1. Install Windows Server on the computer that is to be the deployment server.  
 
-2.  Install the Windows Deployment Services server role on the computer that is to be the deployment server.  
+2. Install the Windows Deployment Services server role on the computer that is to be the deployment server.  
 
-3.  Install Windows ADK for Windows 8.1 on the computer that is to be the deployment server.  
+3. Install Windows ADK for Windows 8.1 on the computer that is to be the deployment server.  
 
-4.  Install MDT on the computer that is to be the deployment server.  
+4. Install MDT on the computer that is to be the deployment server.  
 
-5.  Start the Deployment Workbench.  
+5. Start the Deployment Workbench.  
 
-6.  In the Deployment Workbench console tree, click **Deployment Shares**.  
+6. In the Deployment Workbench console tree, click **Deployment Shares**.  
 
-7.  In the details pane, right-click ***deployment_share*** (where *deployment_share* is the name of an existing deployment share for which multicast deployments will be enabled), and then click **Properties**.  
+7. In the details pane, right-click ***deployment_share*** (where *deployment_share* is the name of an existing deployment share for which multicast deployments will be enabled), and then click **Properties**.  
 
-8.  In the ***deployment_share*** **Properties** dialog box (where *deployment_share* is the name of an existing deployment share), on the **General** tab, select the **Enable multicast for this deployment share** check box, and then click **OK**.  
+8. In the ***deployment_share*** **Properties** dialog box (where *deployment_share* is the name of an existing deployment share), on the **General** tab, select the **Enable multicast for this deployment share** check box, and then click **OK**.  
 
-    > [!NOTE]
-    >  The **Network (UNC) path** and **Local Path** text boxes on the **General** tab must contain valid paths for multicasting to function properly.  
+   > [!NOTE]
+   >  The **Network (UNC) path** and **Local Path** text boxes on the **General** tab must contain valid paths for multicasting to function properly.  
 
 9. In the Actions pane, click **Update Deployment Share**.  
 
- When completed, the Deployment Workbench creates an Auto-Cast Windows Deployment Services multicast transmission from the deployment share.  
+   When completed, the Deployment Workbench creates an Auto-Cast Windows Deployment Services multicast transmission from the deployment share.  
 
 #####  <a name="EnableMulticastDeploymentswithMDTInstalledonaDifferentComputerfromWindowsDeploymentServices"></a> Enable Multicast Deployments with MDT Installed on a Different Computer from Windows Deployment Services  
  In this scenario, Windows Deployment Services and Windows Server are all installed on the computer acting as the deployment server, but MDT is installed on another computer. In this configuration, remotely run the **WDSUTIL** command on the computer running Windows Deployment Services and Windows Server.  
 
 ###### To enable multicast deployments with MDT Installed on a different computer than Windows Deployment Services  
 
-1.  Install Windows Server on the computer hosting the deployment share.  
+1. Install Windows Server on the computer hosting the deployment share.  
 
-2.  Install the Windows Deployment Services server role on the computer hosting the deployment share.  
+2. Install the Windows Deployment Services server role on the computer hosting the deployment share.  
 
-3.  Install Windows ADK for Windows 8.1 on a computer other than the computer hosting the deployment share.  
+3. Install Windows ADK for Windows 8.1 on a computer other than the computer hosting the deployment share.  
 
-4.  Install MDT on the same computer as in step 3.  
+4. Install MDT on the same computer as in step 3.  
 
-5.  On the computer hosting the deployment share, in a Command Prompt window, type the following command, and then press ENTER (where *remote_server* is the name of the computer running Windows Server with the Windows Deployment Services server role and *deploy_share_path* is the fully qualified path to the root of the deployment share).  
+5. On the computer hosting the deployment share, in a Command Prompt window, type the following command, and then press ENTER (where *remote_server* is the name of the computer running Windows Server with the Windows Deployment Services server role and *deploy_share_path* is the fully qualified path to the root of the deployment share).  
 
-     `wdsutil.exe /new-namespace /friendlyname:"BDD Share Deploy$" /server:remote_server /namespace:"Deploy$" /contentprovider:WDS /configstring:"deploy_share_path" /namespacetype:AutoCast`  
+    `wdsutil.exe /new-namespace /friendlyname:"BDD Share Deploy$" /server:remote_server /namespace:"Deploy$" /contentprovider:WDS /configstring:"deploy_share_path" /namespacetype:AutoCast`  
 
- When completed, the WDSUTIL tool creates an Auto-Cast Windows Deployment Services multicast transmission from the deployment share.  
+   When completed, the WDSUTIL tool creates an Auto-Cast Windows Deployment Services multicast transmission from the deployment share.  
 
 ###  <a name="PreparingWindowsDeploymentServicesforZTIDeploymentsUsingConfigurationManager"></a> Preparing Windows Deployment Services for ZTI Deployments Using Configuration Manager  
  For ZTI deployments using Configuration Manager, configure a Configuration Manager PXE service point on the computer on which Windows Deployment Services is installed. Doing so allows Configuration Manager to directly service PXE boot requests received by Windows Deployment Services as a PXE service point, which in turn allows target computers to boot images that Configuration Manager manages using PXE. The PXE service point is a feature of the distribution point site system role, which means that you will configure the computer running Windows Deployment Services as a distribution point site system role.  

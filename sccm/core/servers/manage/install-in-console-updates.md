@@ -2,7 +2,7 @@
 title: In-console updates
 titleSuffix: Configuration Manager
 description: Install updates to Configuration Manager from the Microsoft cloud
-ms.date: 08/22/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -100,11 +100,11 @@ Review the following steps before you install an update from within the Configur
 
 Review the applicable update checklist for actions to take before you start the update:
 
+- [Checklist for installing update 1810](/sccm/core/servers/manage/checklist-for-installing-update-1810)  
+
 - [Checklist for installing update 1806](/sccm/core/servers/manage/checklist-for-installing-update-1806)  
 
 - [Checklist for installing update 1802](/sccm/core/servers/manage/checklist-for-installing-update-1802)
-
-- [Checklist for installing update 1710](/sccm/core/servers/manage/checklist-for-installing-update-1710)  
 
 
 ###  <a name="bkmk_step2"></a> Step 2: Run the prerequisite checker before installing an update  
@@ -160,18 +160,18 @@ Install the update outside of normal business hours for each site to minimize th
 #### 1. When the update installation starts  
 You're presented with the Updates Wizard that displays a list of the product areas that the update applies to.  
 
--   On the **General** page of the wizard, configure **Prerequisite warnings** as necessary:  
+- On the **General** page of the wizard, configure **Prerequisite warnings** as necessary:  
 
-    -   Prerequisite errors always stop the update installation. Fix errors before you can successfully retry the update installation. For more information, see [Retry installation of a failed update](#bkmk_retry).  
+  - Prerequisite errors always stop the update installation. Fix errors before you can successfully retry the update installation. For more information, see [Retry installation of a failed update](#bkmk_retry).  
 
-    -   Prerequisite warnings can also stop the update installation. Fix warnings before you retry the update installation. For more information, see [Retry installation of a failed update](#bkmk_retry).  
+  - Prerequisite warnings can also stop the update installation. Fix warnings before you retry the update installation. For more information, see [Retry installation of a failed update](#bkmk_retry).  
 
-    -   **Ignore any prerequisite check warnings and install this update regardless of missing requirements**: Set a condition for the update installation to ignore prerequisite warnings. This option allows the update installation to continue. If you don't select this option, the update installation stops when the process encounters a warning. Unless you've previously run the prerequisite check and fixed prerequisite warnings for a site, don't use this option.  
+  - **Ignore any prerequisite check warnings and install this update regardless of missing requirements**: Set a condition for the update installation to ignore prerequisite warnings. This option allows the update installation to continue. If you don't select this option, the update installation stops when the process encounters a warning. Unless you've previously run the prerequisite check and fixed prerequisite warnings for a site, don't use this option.  
 
-      In both the **Administration** and **Monitoring** workspaces, the Updates and Servicing node includes a button on the ribbon named **Ignore prerequisite warnings**. This button becomes available when an update package fails to complete installation due to prerequisite check warnings. For example, you install an update without using the option to ignore prerequisite warnings (from within the Updates Wizard). The update installation stops with a state of prerequisite warning but no errors. Later you click **Ignore prerequisite warnings** in the ribbon. This action triggers an automatic continuation of that update installation, which ignores prerequisite warnings. When you use this option, the update installation automatically continues after a few minutes.  
+    In both the **Administration** and **Monitoring** workspaces, the Updates and Servicing node includes a button on the ribbon named **Ignore prerequisite warnings**. This button becomes available when an update package fails to complete installation due to prerequisite check warnings. For example, you install an update without using the option to ignore prerequisite warnings (from within the Updates Wizard). The update installation stops with a state of prerequisite warning but no errors. Later you click **Ignore prerequisite warnings** in the ribbon. This action triggers an automatic continuation of that update installation, which ignores prerequisite warnings. When you use this option, the update installation automatically continues after a few minutes.  
 
 
--   When an update applies to the Configuration Manager client, choose to test the client update with a limited set of clients. For more information, see [How to test client upgrades in a pre-production collection](/sccm/core/clients/manage/upgrade/test-client-upgrades).  
+- When an update applies to the Configuration Manager client, choose to test the client update with a limited set of clients. For more information, see [How to test client upgrades in a pre-production collection](/sccm/core/clients/manage/upgrade/test-client-upgrades).  
 
 
 #### 2. During the update installation  
@@ -261,54 +261,54 @@ Not all tasks complete immediately. Some tasks don't start until each site compl
 
 The post installation tasks include:
 
--   **Installing SMS_EXECUTIVE service**
+- **Installing SMS_EXECUTIVE service**
   -   Critical service that runs on the site server.
   -   Reinstallation of this service should complete quickly.
 
 
--   **Installing SMS_DATABASE_NOTIFICATION_MONITOR component**
+- **Installing SMS_DATABASE_NOTIFICATION_MONITOR component**
   -   Critical site component thread of SMS_EXECUTIVE service.
   -   Reinstallation of this service should complete quickly.
 
 
--   **Installing SMS_HIERARCHY_MANAGER component**
+- **Installing SMS_HIERARCHY_MANAGER component**
   -   Critical site component that runs on the site server.
   -   Responsible for reinstalling roles on site system servers. Status for individual site system role reinstallation doesn't display.
   -   Reinstallation of this service should complete quickly.
 
 
--   **Installing SMS_REPLICATION_CONFIGURATION_MONITOR component**
+- **Installing SMS_REPLICATION_CONFIGURATION_MONITOR component**
   -   Critical site component that runs on the site server.
   -   Reinstallation of this service should complete quickly.
 
 
--   **Installing SMS_POLICY_PROVIDER component**
+- **Installing SMS_POLICY_PROVIDER component**
   -   Critical site component that runs only on primary sites.
   -   Reinstallation of this service should complete quickly.
 
 
--   **Monitoring replication initialization**   
+- **Monitoring replication initialization**   
   -   This task only displays at the central administration site and child primary sites.
   -   Dependent on the SMS_REPLICATION_CONFIGURATION_MONITOR.
   -   Should complete quickly.
 
 
--   **Updating Configuration Manager Client Preproduction Package**    
+- **Updating Configuration Manager Client Preproduction Package**    
   -   This task displays even when client preproduction (also called client piloting) isn't enabled for use.
   -   Doesn't start until all sites in the hierarchy finish installing the update.
 
 
--   **Updating Client folder on Site Server**
+- **Updating Client folder on Site Server**
   -   This task doesn't display if you use the client in preproduction.  
   -   Should complete quickly.
 
 
--   **Updating Configuration Manager Client Package**
+- **Updating Configuration Manager Client Package**
   -   This task doesn't display if you use the client in preproduction.  
   -   Finishes only after all sites install the update.  
 
 
--   **Turning on Features**
+- **Turning on Features**
   -   This task displays only at the top-tier site of the hierarchy.
   -   Doesn't start until all sites in the hierarchy finish installing the update.
   -   Individual features aren't displayed.
@@ -362,11 +362,11 @@ Go to the **Monitoring** workspace, and select the **Site Servicing Status** nod
 
 After the site updates, review the post-update checklist for the applicable version:  
 
+- [Post-update checklist for version 1810](/sccm/core/servers/manage/checklist-for-installing-update-1810#post-update-checklist)  
+
 - [Post-update checklist for version 1806](/sccm/core/servers/manage/checklist-for-installing-update-1806#post-update-checklist)  
 
 - [Post-update checklist for version 1802](/sccm/core/servers/manage/checklist-for-installing-update-1802#post-update-checklist)  
-
-- [Post-update checklist for version 1710](/sccm/core/servers/manage/checklist-for-installing-update-1710#post-update-checklist)  
 
 
 
@@ -394,23 +394,23 @@ The following features are optional in the latest version of Configuration Manag
 
 -->
 
-- [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability)<!--1128774-->
+- [Package conversion manager](/sccm/apps/pcm/package-conversion-manager) <!--1357861-->
 - [Third-party software updates](/sccm/sum/deploy-use/third-party-software-updates)<!--1357605,1352101,1358714-->
 - [Approve application requests for users per device](/sccm/apps/deploy-use/deploy-applications#specify-deployment-settings) <!--1357015-->  
 - [Support for Cisco AnyConnect 4.0.07x and later for iOS](/sccm/mdm/deploy-use/create-vpn-profiles)<!--1357393-->
-- [Device Health Attestation assessment for compliance policies for conditional access](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616-->
+- [Device health attestation assessment for compliance policies for conditional access](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616-->
 - [Create and run scripts](/sccm/apps/deploy-use/create-deploy-scripts) <!--1236459-->
-- [Run Task Sequence Step](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence) <!--1261338-->
-- [Task Sequence content pre-caching](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) <!--1021244-->
-- [Surface Driver Updates](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490-->
-- [Cloud Management Gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) <!--1101764-->
+- [Run task sequence step](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence) <!--1261338-->
+- [Task sequence content pre-caching](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) <!--1021244-->
+- [Surface driver updates](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490-->
+- [Cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) <!--1101764-->
 - [Data warehouse service point](/sccm/core/servers/manage/data-warehouse) <!--1277922-->
-- [Client Peer Cache](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436-->
-- [PFX Create](/sccm/protect/deploy-use/introduction-to-certificate-profiles) <!--1321368-->
-- [Azure Log Analytics Connector](/sccm/core/clients/manage/sync-data-log-analytics) <!--1258052-->
+- [Client peer cache](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436-->
+- [PFX create](/sccm/protect/deploy-use/introduction-to-certificate-profiles) <!--1321368-->
+- [Azure Log Analytics connector](/sccm/core/clients/manage/sync-data-log-analytics) <!--1258052-->
 - [Windows Defender Exploit Guard policy](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468-->
 - [VPN for Windows 10](/sccm/protect/deploy-use/vpn-profiles) <!--1283610-->
-- [Passport for Work](/sccm/protect/deploy-use/windows-hello-for-business-settings) (also known as *Windows Hello for Business*) <!--1245704-->
+- [Windows Hello for Business](/sccm/protect/deploy-use/windows-hello-for-business-settings) (previously known as *Passport for Work*) <!--1245704-->
 - [Conditional access for managed PCs](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)  <!--1191496-->
 
 

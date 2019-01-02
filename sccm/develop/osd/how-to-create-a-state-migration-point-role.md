@@ -45,12 +45,12 @@ You create the state migration point role, in System Center Configuration Manage
 
 > [!IMPORTANT]
 >  This example makes use of other state migration point code snippets to set various values. The methods `AddSmpFolder`, `SetRestoreOnlyMode`, `SetDeletionPolicy` are described in the below topics:  
->   
->  -   [How to Add a State Migration Point Folder](../../develop/osd/how-to-add-a-state-migration-point-folder.md)  
-> -   [How to Set the Restore-Only Mode for a State Migration Point](../../develop/osd/how-to-set-the-restore-only-mode-for-a-state-migration-point.md)  
-> -   [How to Set the Deletion Policy for a State Migration Point](../../develop/osd/how-to-set-the-deletion-policy-for-a-state-migration-point.md)  
->   
->  The methods `AddSmpFolder`, `SetRestoreOnlyMode`, `SetDeletionPolicy` must be included for the example to work. The methods are not included in the code snippets below.  
+> 
+> - [How to Add a State Migration Point Folder](../../develop/osd/how-to-add-a-state-migration-point-folder.md)  
+>   -   [How to Set the Restore-Only Mode for a State Migration Point](../../develop/osd/how-to-set-the-restore-only-mode-for-a-state-migration-point.md)  
+>   -   [How to Set the Deletion Policy for a State Migration Point](../../develop/osd/how-to-set-the-deletion-policy-for-a-state-migration-point.md)  
+> 
+>   The methods `AddSmpFolder`, `SetRestoreOnlyMode`, `SetDeletionPolicy` must be included for the example to work. The methods are not included in the code snippets below.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 

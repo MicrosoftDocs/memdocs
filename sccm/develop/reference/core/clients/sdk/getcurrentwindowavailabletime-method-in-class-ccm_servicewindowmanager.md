@@ -19,9 +19,9 @@ The `GetCurrentWindowAvailableTime` WMI class method, in Configuration Manager, 
 
 ```  
 uint32 GetCurrentWindowAvailableTime(  
-     [IN]  UInt32 ServiceWindowType,  
-     [IN]  Boolean FallbackToAllProgramsWindow,  
-     [OUT] UInt32 WindowAvailableTime  
+     [IN]  UInt32 ServiceWindowType,  
+     [IN]  Boolean FallbackToAllProgramsWindow,  
+     [OUT] UInt32 WindowAvailableTime  
 );  
 ```  
 

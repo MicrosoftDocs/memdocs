@@ -41,45 +41,45 @@ Class SMS_TaskSequence_SoftwareConditionExpression : SMS_TaskSequence_ConditionE
 
  The condition operator to use for the comparison. Possible values are:  
 
--   AnyVersion  
+- AnyVersion  
 
--   ThisVersion  
+- ThisVersion  
 
- `ProductCode`  
- Data type: `String`  
+  `ProductCode`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [Not_Null]  
+  Qualifiers: [Not_Null]  
 
- The Windows Installer package product code to be compared.  
+  The Windows Installer package product code to be compared.  
 
- `ProductName`  
- Data type: `String`  
+  `ProductName`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- The product name.  
+  The product name.  
 
- `UpgradeCode`  
- Data type: `String`  
+  `UpgradeCode`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- The upgrade code for the product to be compared.  
+  The upgrade code for the product to be compared.  
 
- `Version`  
- Data type: `String`  
+  `Version`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Version …   
+  Version …   
 
 ## Remarks  
  There are no class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
@@ -88,19 +88,19 @@ Class SMS_TaskSequence_SoftwareConditionExpression : SMS_TaskSequence_ConditionE
 
  Check for the existence of a specific product.  
 
--   `Operator` should be ThisVersion.  
+- `Operator` should be ThisVersion.  
 
--   `ProductCode` should the product code.  
+- `ProductCode` should the product code.  
 
- Check for existence of a product family.  
+  Check for existence of a product family.  
 
--   `Operator` should be AnyVersion  
+- `Operator` should be AnyVersion  
 
--   `UpgradeCode` should be the upgrade code.  
+- `UpgradeCode` should be the upgrade code.  
 
- Either the product code or upgrade code must be specified, otherwise an error will occur.  
+  Either the product code or upgrade code must be specified, otherwise an error will occur.  
 
- The software on the destination computer must be installed using a Windows Installer package for this expression to work. In usage, the class properties are obtained from the Windows Installer package of the software that is to be compared against. For more information, see [Windows Installer](http://go.microsoft.com/fwlink/?LinkId=110314).  
+  The software on the destination computer must be installed using a Windows Installer package for this expression to work. In usage, the class properties are obtained from the Windows Installer package of the software that is to be compared against. For more information, see [Windows Installer](http://go.microsoft.com/fwlink/?LinkId=110314).  
 
 ## Requirements  
 

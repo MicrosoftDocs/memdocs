@@ -30,15 +30,15 @@ manager: angrobe
 
  The following information is provided for each task sequence group and step:  
 
--   **Name**. The name of the task sequence group or step  
+- **Name**. The name of the task sequence group or step  
 
--   **Description**. A description of the purpose of the task sequence group or step and any pertinent information regarding its customization  
+- **Description**. A description of the purpose of the task sequence group or step and any pertinent information regarding its customization  
 
--   **Properties**. Indicates the valid configuration properties that you can specify for the task sequence group or step that define how the task is performed  
+- **Properties**. Indicates the valid configuration properties that you can specify for the task sequence group or step that define how the task is performed  
 
--   **Options**. Indicates the valid configuration options that you can specify for the task sequence group or step that define if and when the task is performed and what is considered a successful exit code from the task  
+- **Options**. Indicates the valid configuration options that you can specify for the task sequence group or step that define if and when the task is performed and what is considered a successful exit code from the task  
 
- For more information about the Task Sequence Editor, see [Operating System Deployment: Task Sequence Editor](http://technet.microsoft.com/library/bb680396.aspx).  
+  For more information about the Task Sequence Editor, see [Operating System Deployment: Task Sequence Editor](http://technet.microsoft.com/library/bb680396.aspx).  
 
 ###  <a name="CommonPropertiesandOptionsforTaskSequenceStepTypes"></a> Common Properties and Options for Task Sequence Step Types  
  Each task sequence group and step has configurable settings on the **Properties** and **Options** tabs that are common to all task sequence groups and steps. These common settings are briefly described in the following sections.  
@@ -81,11 +81,13 @@ manager: angrobe
  The unique properties and settings for the **Apply Network Settings** task sequence step type are:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Apply Network Settings|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Name**|The name to be assigned to the network connection.|  
@@ -114,6 +116,7 @@ manager: angrobe
 |**Type**|Set this read-only type to **Authorize DHCP Server**.|  
 
 ##### Settings  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Name**|**Description**|  
@@ -125,12 +128,14 @@ manager: angrobe
  The unique properties and settings for the **Capture Network Settings** task sequence step type are:  
 
 ##### Properties  
+
 |**Name**|**Description**|
 |-|-|  
 |**Name**|**Description**|  
 |**Type**|Set this read-only type to **Capture Network Settings**.|  
 
 ##### Settings  
+
 |**Name**|**Description**|  
 |-|-|  
 |None|None|  
@@ -141,11 +146,13 @@ manager: angrobe
  The unique properties and settings for the **Configure ADDS** task sequence step type are:  
 
 ##### Properties  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Type**|Set this read-only type to **Configure ADDS**.|  
 
 ##### Settings  
+
 |**Name**|**Description**|  
 |-|-|  
 |Create|Specifies the configuration set that will be used to configure the target computer. The configuration sets are:<br /><br /> - **New domain controller replica**. Creates an additional domain controller in an existing AD DS domain<br /><br /> - **New read-only domain controller (RODC) replica**. Creates an RODC<br /><br /> - **New domain in existing forest**. Creates a domain in an existing AD DS forest<br /><br /> - **New domain tree in existing forest**. Creates a new tree in an existing AD DS forest<br /><br /> - **New forest**. Creates a new AD DS forest|  
@@ -171,11 +178,13 @@ manager: angrobe
  The unique properties and settings for the **Configure DHCP** task sequence step type are:  
 
 ##### Properties  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Type**|Set this read-only type to **Configure DHCP Server**.|  
 
 ##### Settings  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Name**|Configure DHCP|  
@@ -188,11 +197,13 @@ manager: angrobe
  The unique properties and settings for the **Configure DNS** task sequence step type are:  
 
 ##### Properties  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Type**|Set this read-only type to **Configure DNS Server**.|  
 
 ##### Settings  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Name**|Configure DNS|  
@@ -211,11 +222,13 @@ manager: angrobe
  The unique properties and settings for the **Enable BitLocker** task sequence step type are:  
 
 ##### Properties  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Type**|Set this read-only type to **Enable BitLocker**.|  
 
 ##### Settings  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Current operating system drive**|When selected, the operating system drive will be configured. This is the default selection.|  
@@ -236,6 +249,7 @@ manager: angrobe
  The unique properties and settings for the **Execute Runbook** task sequence step type are:  
 
 ##### Properties  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Type**|Set this read-only type to **Execute Runbook**.|  
@@ -243,13 +257,14 @@ manager: angrobe
 |**Description**|Informative text that provides additional information about the task sequence step|  
 
 ##### Settings  
-|**Name**|**Description**|  
-|-|-|   
-|**Orchestrator Server**|Type the URL for the Orchestrator web service, which includes the server name. The Orchestrator web service can use either Hypertext Transfer Protocol (HTTP) or HTTP over Secure Sockets Layer (HTTPS). The Orchestrator web service defaults to port 81.<br /><br /> The Orchestrator web service supports multiple runbook servers. By default, a runbook can run on any runbook server. A runbook can be configured to specify which runbook servers should be used to run the runbook.<br /><br /> Note:<br /><br /> The Orchestrator web service supports the ability to run a runbook on a specific runbook server. This feature is not supported in MDT.<br /><br /> Specify the URL in any of the following formats:<br /><br /> - ***servername***. When using this format, the URL defaults to:<br /><br /> `http://<servername>:81/Orchestrator2012/Orchestrator.svc`<br /><br /> - ***servername:port***. When using this format, the URL defaults to:<br /><br /> `http://<servername:port>/Orchestrator2012/Orchestrator.svc.`<br /><br /> - **http://*servername:port***. When using this format, the URL defaults to:<br /><br /> `http://<servername:port>/Orchestrator2012/Orchestrator.svc.`<br /><br /> - **http://*servername:port***. When using this format, the URL defaults to:<br /><br /> `https://<servername:port>/Orchestrator2012/Orchestrator.svc.`<br /><br /> - **http://*servername:port*/Orchestrator2012/Orchestrator.svc**. When using this format, MDT assumes that you are providing the fully qualified URL, because the value ends with .svc.<br /><br /> -                                 **https://*servername:port*/Orchestrator2012/Orchestrator.svc**. When using this format, MDT assumes that you are providing the fully qualified URL, because the value ends with .svc.|  
-|**Runbook**|Click **Browse**, and then select the name of the Orchestrator runbook that this task sequence should run.<br /><br /> Note:<br /><br /> To successfully browse for Orchestrator runbooks, install the [ADO.NET Data Services Update for .NET Framework 3.5 SP1 for Windows 7 and Windows Server 2008 R2](http://www.microsoft.com/download/details.aspx?displaylang=en&id=2343).|  
-|**Automatically provide runbook parameters**|Select this option to automatically provide the Orchestrator runbook input parameter values( which assumes that the runbook parameter values are task sequence variables). For example, if a runbook has an input parameter named **OSDComputerName**, then the **OSDComputerName** task sequence variable value is passed to the runbook.<br /><br /> Note:<br /><br /> This option works only for input parameters that are valid task sequence variable names and do not contain spaces or other special characters. Although spaces and other special characters are supported as Orchestrator parameter names, they are not valid task sequence variable names. If you need to pass values to parameters with spaces or other special characters, use the **Specify explicit runbook parameters** option.<br /><br /> The other option is **Specify explicit runbook parameters**.<br /><br /> Note:<br /><br /> The values provided for the runbook input parameters to the Orchestrator web service are formatted as XML. Passing values that contain data that is or resembles XML-formatted data may cause errors.|  
-|**Specify explicit  runbook parameters**|Select this option to explicitly provide the Orchestrator runbook input parameters.<br /><br /> You must configure the following settings for each input parameter that the Orchestrator runbook requires:<br /><br /> -                                 **Name**. This is the name of the input runbook parameter.<br /><br /> Note:<br /><br /> If you change the parameters for an existing Orchestrator runbook, you need to browse (reselect) for the runbook again, because MDT only retrieves the parameter list when initially adding the Orchestrator runbook.<br /><br /> - **Value**. This can be a constant or a variable, such as a task sequence variable or an environment variable. For example, you can specify a value of **%OSDComputerName%**, which will pass the value of the **OSDComputerName** task sequence variable to the runbook input parameter.|  
-|**Wait for the runbook to finish before continuing**|This check box controls whether the task sequence step will wait for the runbook to finish before proceeding to the next task sequence step.<br /><br /> If this check box is:<br /><br /> - **Selected**, then the task sequence step will wait for the runbook to finish before proceeding on to the next task sequence step.<br /><br /> When this check box is selected, the task sequence step will poll the Orchestrator web service for the runbook to finish. The amount of time between polls starts at 1 second, then increases to 2, 4, 8, 16, 32, and 64 seconds between each poll. Once the amount of time reaches 64 seconds, the task sequence step continues to poll every 64 seconds.<br /><br /> - **Cleared**, then the task sequence step will not wait for the runbook to finish before proceeding to the next task sequence step.<br /><br /> Note:<br /><br /> This check box must be selected if the runbook returns output parameters.|  
+
+|                       **Name**                       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|               **Orchestrator Server**                | Type the URL for the Orchestrator web service, which includes the server name. The Orchestrator web service can use either Hypertext Transfer Protocol (HTTP) or HTTP over Secure Sockets Layer (HTTPS). The Orchestrator web service defaults to port 81.<br /><br /> The Orchestrator web service supports multiple runbook servers. By default, a runbook can run on any runbook server. A runbook can be configured to specify which runbook servers should be used to run the runbook.<br /><br /> Note:<br /><br /> The Orchestrator web service supports the ability to run a runbook on a specific runbook server. This feature is not supported in MDT.<br /><br /> Specify the URL in any of the following formats:<br /><br /> - ***servername***. When using this format, the URL defaults to:<br /><br /> `http://<servername>:81/Orchestrator2012/Orchestrator.svc`<br /><br /> - ***servername:port***. When using this format, the URL defaults to:<br /><br /> `http://<servername:port>/Orchestrator2012/Orchestrator.svc.`<br /><br /> - <strong>http://*servername:port</strong><em>. When using this format, the URL defaults to:<br /><br /> `http://<servername:port>/Orchestrator2012/Orchestrator.svc.`<br /><br /> - **http://</em>servername:port<strong><em>. When using this format, the URL defaults to:<br /><br /> `https://<servername:port>/Orchestrator2012/Orchestrator.svc.`<br /><br /> - *</em>http://*servername:port*/Orchestrator2012/Orchestrator.svc</strong>. When using this format, MDT assumes that you are providing the fully qualified URL, because the value ends with .svc.<br /><br /> -                                 **https://<em>servername:port</em>/Orchestrator2012/Orchestrator.svc**. When using this format, MDT assumes that you are providing the fully qualified URL, because the value ends with .svc. |
+|                     **Runbook**                      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Click **Browse**, and then select the name of the Orchestrator runbook that this task sequence should run.<br /><br /> Note:<br /><br /> To successfully browse for Orchestrator runbooks, install the [ADO.NET Data Services Update for .NET Framework 3.5 SP1 for Windows 7 and Windows Server 2008 R2](http://www.microsoft.com/download/details.aspx?displaylang=en&id=2343).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|     **Automatically provide runbook parameters**     |                                                                                                                                                                                                                                                                                                                                                                         Select this option to automatically provide the Orchestrator runbook input parameter values( which assumes that the runbook parameter values are task sequence variables). For example, if a runbook has an input parameter named **OSDComputerName**, then the **OSDComputerName** task sequence variable value is passed to the runbook.<br /><br /> Note:<br /><br /> This option works only for input parameters that are valid task sequence variable names and do not contain spaces or other special characters. Although spaces and other special characters are supported as Orchestrator parameter names, they are not valid task sequence variable names. If you need to pass values to parameters with spaces or other special characters, use the **Specify explicit runbook parameters** option.<br /><br /> The other option is **Specify explicit runbook parameters**.<br /><br /> Note:<br /><br /> The values provided for the runbook input parameters to the Orchestrator web service are formatted as XML. Passing values that contain data that is or resembles XML-formatted data may cause errors.                                                                                                                                                                                                                                                                                                                                                                          |
+|       **Specify explicit  runbook parameters**       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Select this option to explicitly provide the Orchestrator runbook input parameters.<br /><br /> You must configure the following settings for each input parameter that the Orchestrator runbook requires:<br /><br /> -                                 **Name**. This is the name of the input runbook parameter.<br /><br /> Note:<br /><br /> If you change the parameters for an existing Orchestrator runbook, you need to browse (reselect) for the runbook again, because MDT only retrieves the parameter list when initially adding the Orchestrator runbook.<br /><br /> - **Value**. This can be a constant or a variable, such as a task sequence variable or an environment variable. For example, you can specify a value of **%OSDComputerName%**, which will pass the value of the **OSDComputerName** task sequence variable to the runbook input parameter.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Wait for the runbook to finish before continuing** |                                                                                                                                                                                                                                                                                                                                                                                                                                                       This check box controls whether the task sequence step will wait for the runbook to finish before proceeding to the next task sequence step.<br /><br /> If this check box is:<br /><br /> - **Selected**, then the task sequence step will wait for the runbook to finish before proceeding on to the next task sequence step.<br /><br /> When this check box is selected, the task sequence step will poll the Orchestrator web service for the runbook to finish. The amount of time between polls starts at 1 second, then increases to 2, 4, 8, 16, 32, and 64 seconds between each poll. Once the amount of time reaches 64 seconds, the task sequence step continues to poll every 64 seconds.<br /><br /> - **Cleared**, then the task sequence step will not wait for the runbook to finish before proceeding to the next task sequence step.<br /><br /> Note:<br /><br /> This check box must be selected if the runbook returns output parameters.                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 #### Format and Partition Disk  
  This task sequence step partitions and formats disks on the target computer. For more information about this step type, see [Format and Partition Disk](http://technet.microsoft.com/library/bb680345.aspx).  
@@ -257,11 +272,13 @@ manager: angrobe
  The unique properties and settings for the **Format and Partition Disk** task sequence step type are:  
 
 ##### Properties  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Type**|Set this read-only type to **Format and Partition Disk**.|  
 
 ##### Settings  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Disk number**|The physical number of the disk to be configured.|  
@@ -275,11 +292,13 @@ manager: angrobe
  This task sequence step gathers data and processing rules for the target computer. The unique properties and settings for the **Gather** task sequence step type are:  
 
 ##### Properties  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Type**|Set this read\-only type to **Gather**.|  
 
 ##### Settings  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Gather only local data**|When selected, this step processes only the properties contained in the ZTIGather.xml file.|  
@@ -293,11 +312,13 @@ manager: angrobe
  This task sequence step injects drivers that have been configured for deployment to the target computer. The unique properties and settings for the **Inject Drivers** task sequence step type are:  
 
 ##### Properties  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Type**|Set this read\-only type to **Inject Drivers**.|  
 
 ##### Settings  
+
 |**Name**|**Description**|  
 |-|-|   
 |**Install only matching drivers**|Injects only the drivers that the target computer requires and that match what is available in Out\-of\-Box Drivers|  
@@ -310,11 +331,13 @@ manager: angrobe
  The unique properties and settings for the **Install Application** task sequence step type are:  
 
 ##### Properties  
+
 |**Name**|**Description**|  
 |-|-|   
 |**Type**|Set this read\-only type to **Install Application**.|  
 
 ##### Settings  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Install multiple applications**|Install mandatory applications that the **MandatoryApplications** property has specified and optional applications that the **Applications** property has specified. These properties are configured by rules or are specified during the Deployment Wizard interview process. This is the default selection.|  
@@ -324,20 +347,22 @@ manager: angrobe
 #### Install Operating System  
  This task sequence step installs an operating system on the target computer. MDT can deploy Windows 8.1, Windows 8, Windows 7, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2 using:  
 
--   **setup.exe**. This method is the traditional method used, initiated by running setup.exe from the installation media. MDT uses setup.exe by default.  
+- **setup.exe**. This method is the traditional method used, initiated by running setup.exe from the installation media. MDT uses setup.exe by default.  
 
--   **imagex.exe**. This method installs the operating system image using imagex.exe with the **\/apply** option. MDT uses this method when the setup.exe method cannot be used \(i.e., it falls back to using imagex.exe\).  
+- **imagex.exe**. This method installs the operating system image using imagex.exe with the **\/apply** option. MDT uses this method when the setup.exe method cannot be used \(i.e., it falls back to using imagex.exe\).  
 
- You can control which of these methods is used by using the **ForceApplyFallback** property, which also affects which operating system task sequences are listed in the Deployment Wizard for a specific processor architecture boot image. For more information, see the [ForceApplyFallback](#ForceApplyFallback) property.  
+  You can control which of these methods is used by using the **ForceApplyFallback** property, which also affects which operating system task sequences are listed in the Deployment Wizard for a specific processor architecture boot image. For more information, see the [ForceApplyFallback](#ForceApplyFallback) property.  
 
- The unique properties and settings for the **Install Operating System** task sequence step type are:  
+  The unique properties and settings for the **Install Operating System** task sequence step type are:  
 
 ##### Properties  
+
 |**Name**|**Description**|  
 |-|-|   
 |**Type**|Set this read\-only type to **Install Operating System**.|  
 
 ##### Settings  
+
 |**Name**|**Description**|  
 |-|-|   
 |**Operating system to install**|The name of the operating system to be installed on the target computer. You select the operating system from a drop\-down list compiled from operating systems that have been configured in the Operating Systems node of the Deployment Workbench.|  
@@ -350,12 +375,14 @@ manager: angrobe
  The unique properties and settings for the **Install Roles and Features** task sequence step type are:  
 
 ##### Properties  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Type**|Set this read\-only type to **Install Roles and Features**.|  
 |**Description**|Informative text that describes the purpose of the task sequence step.|  
 
 ##### Settings  
+
 |**Name**|**Description**|  
 |-|-|    
 |**Select the operating system for which the roles are to be installed**|Select the operating system to be deployed to the target computer.|  
@@ -367,11 +394,13 @@ manager: angrobe
  The unique properties and settings for the **Install Language Packs Offline** task sequence step type are:  
 
 ##### Properties  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Type**|Set this read\-only type to **Install Updates Offline**.|  
 
 ##### Settings  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Package Name**|The name of the language pack package that should be applied to the target computer|  
@@ -385,11 +414,13 @@ manager: angrobe
  The unique properties and settings for the **Install Language Packs Online** task sequence step type are:  
 
 ##### Properties  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Type**|Set this read\-only type to **Install Language Packs Online**.|  
 
 ##### Settings  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Package Name**|The name of the language pack package that should be applied to the target computer|  
@@ -403,11 +434,13 @@ manager: angrobe
  The unique properties and settings for the **Install Updates Offline** task sequence step type are:  
 
 ##### Properties  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Type**|Set this read\-only type to **Install Updates Offline**.|  
 
 ##### Settings  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Selection Profile**|The name of the selection profile that should be applied to the target computer<br /><br /> Note:<br /><br /> When using MDT with Configuration Manager, specify the name of the update package that should be applied.|  
@@ -416,11 +449,13 @@ manager: angrobe
  This task sequence step verifies that the target computer has joined a domain. The unique properties and settings for the **Recover from Domain Join Failure** task sequence step type are:  
 
 ##### Properties  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Type**|Set this read\-only type to Recover from **Domain Join Failure**.|  
 
 ##### Settings  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Auto recover**|The task sequence step attempts to join the target computer to a domain.|  
@@ -431,11 +466,13 @@ manager: angrobe
  This task sequence step restarts the target computer. The unique properties and settings for the **Restart computer** task sequence step type are:  
 
 ##### Properties  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Type**|Set this read\-only type to **Restart computer**.|  
 
 ##### Settings  
+
 |**Name**|**Description**|  
 |-|-|  
 |**None**|None|  
@@ -446,11 +483,13 @@ manager: angrobe
  The unique properties and settings for the **Run Command Line** task sequence step type are:  
 
 ##### Properties  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Type**|Set this read\-only type to **Run Command Line**.|  
 
 ##### Settings  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Command Line**|The commands to be run when this task sequence step is processed|  
@@ -465,11 +504,13 @@ manager: angrobe
  The unique properties and settings for the **Run PowerShell Script** task sequence step type are:  
 
 ##### Properties  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Type**|Set this read\-only type to **Run PowerShell Script**.|  
 
 ##### Settings  
+
 |**Name**|**Description**|  
 |-|-|  
 |**PowerShell script**|The Windows PowerShell script to be run when this task sequence step is processed|  
@@ -484,11 +525,13 @@ manager: angrobe
  The unique properties and settings for the **Set Task Sequence Variable** task sequence step type are:  
 
 ##### Properties  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Type**|Set this read\-only type to **Set Task Sequence Variable**.|  
 
 ##### Settings  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Task Sequence Variable**|The name of the variable to modify|  
@@ -500,12 +543,14 @@ manager: angrobe
  The unique properties and settings for the **Uninstall Roles and Features** task sequence step type are:  
 
 ##### Properties  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Type**|Set this read\-only type to **Uninstall Roles and Features**.|  
 |**Description**|Informative text that describes the purpose of the task sequence step.|  
 
 ##### Settings  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Select the operating system for which the roles are to be installed**|Select the operating system to be deployed to the target computer.|  
@@ -515,11 +560,13 @@ manager: angrobe
  This task sequence step verifies that the target computer meets the specified deployment prerequisite conditions. The unique properties and settings for the **Validate** task sequence step type are:  
 
 ##### Properties  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Type**|Set this read\-only type to **Validate**.|  
 
 ##### Settings  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Ensure minimum memory**|When selected, this step verifies that the amount of memory, in megabytes, installed on the target computer meets or exceeds the amount specified. This is a default selection.|  
@@ -544,6 +591,7 @@ manager: angrobe
  The default configuration of the **Apply Network Settings** task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Apply Network Settings|  
@@ -551,11 +599,13 @@ manager: angrobe
 |**Description**|Not specified|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 ||No parameters are preconfigured for this step. This causes this step, by default, to configure the network adapter to use DHCP.|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -572,6 +622,7 @@ manager: angrobe
  The default configuration of the **Install Updates Offline** task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Install Updates Offline|  
@@ -579,11 +630,13 @@ manager: angrobe
 |**Description**|Not specified|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Selection profile**|The name of the profile used when selecting the patches to install on the target computer|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -597,6 +650,7 @@ manager: angrobe
  The default configuration of the **Apply Windows PE** task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Run Command Line|  
@@ -604,6 +658,7 @@ manager: angrobe
 |**Description**|Not specified|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\LTIApply.wsf" /PE`|  
@@ -611,6 +666,7 @@ manager: angrobe
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -624,6 +680,7 @@ manager: angrobe
  The default configuration of the **Backup** task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Run Command Line|  
@@ -631,6 +688,7 @@ manager: angrobe
 |**Description**|Not specified|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\ZTIBackup.wsf"`|  
@@ -638,6 +696,7 @@ manager: angrobe
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -651,6 +710,7 @@ manager: angrobe
  The default configuration of the **Capture Groups** task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Run Command Line|  
@@ -658,6 +718,7 @@ manager: angrobe
 |**Description**|Not specified|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\ZTIGroups.wsf" /capture`|  
@@ -665,6 +726,7 @@ manager: angrobe
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -678,6 +740,7 @@ manager: angrobe
  The default configuration of the **Capture User State** task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Run Command Line|  
@@ -685,6 +748,7 @@ manager: angrobe
 |**Description**|Not specified|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\ZTIUserState.wsf" /capture`|  
@@ -692,6 +756,7 @@ manager: angrobe
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -705,6 +770,7 @@ manager: angrobe
  The default configuration of the **Check BIOS** task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Run Command Line|  
@@ -712,6 +778,7 @@ manager: angrobe
 |**Description**|Not specified|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\ZTIBIOSCheck.wsf"`|  
@@ -719,6 +786,7 @@ manager: angrobe
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -732,6 +800,7 @@ manager: angrobe
  The default configuration of the **Configure** task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Run Command Line|  
@@ -739,6 +808,7 @@ manager: angrobe
 |**Description**|Not specified|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\ZTIConfigure.wsf"`|  
@@ -746,6 +816,7 @@ manager: angrobe
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -759,6 +830,7 @@ manager: angrobe
  The default configuration of the **Copy Scripts** task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Run Command Line|  
@@ -766,6 +838,7 @@ manager: angrobe
 |**Description**|Not specified|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\LTICopyScripts.wsf"`|  
@@ -773,6 +846,7 @@ manager: angrobe
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -786,6 +860,7 @@ manager: angrobe
  The default configuration of the **Copy Sysprep Files** task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Run Command Line|  
@@ -793,6 +868,7 @@ manager: angrobe
 |**Description**|Not specified|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\LTISysprep.wsf"`|  
@@ -800,6 +876,7 @@ manager: angrobe
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -811,6 +888,7 @@ manager: angrobe
  This task sequence step sets the **BDEInstall** property to True, indicating that BitLocker should be installed on the target computer. The unique properties and settings for the **Create BitLocker Partition** task sequence step type are:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|   
 |**Type**|Set Task Sequence Variable|  
@@ -818,12 +896,14 @@ manager: angrobe
 |**Description**|None|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Task Sequence Variable**|BDE Install|  
 |**Value**|True|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -835,6 +915,7 @@ manager: angrobe
  This task sequence step creates a backup of the target computer. The unique properties and settings for the **Create WIM** task sequence step type are:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Run Command Line|  
@@ -842,6 +923,7 @@ manager: angrobe
 |**Description**|None|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\ZTIBackup.wsf"`|  
@@ -849,6 +931,7 @@ manager: angrobe
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -862,6 +945,7 @@ manager: angrobe
  The unique properties and settings for the **Disable BDE Protectors** task sequence step type are:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Run Command Line|  
@@ -869,6 +953,7 @@ manager: angrobe
 |**Description**|None|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\ZTIDisableBDEProtectors.wsf"`|  
@@ -876,6 +961,7 @@ manager: angrobe
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -889,6 +975,7 @@ manager: angrobe
  The default configuration of the **Enable BitLocker** task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Enable BitLocker|  
@@ -896,6 +983,7 @@ manager: angrobe
 |**Description**|None|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Current operating system drive**|Selected|  
@@ -908,6 +996,7 @@ manager: angrobe
 |**Wait for BitLocker to complete**|Not selected|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -921,6 +1010,7 @@ manager: angrobe
  The unique properties and settings for the **Enable OEM Disk Configuration** task sequence step type are:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Set Task Sequence Variable |  
@@ -928,12 +1018,14 @@ manager: angrobe
 |**Description**|None|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Task Sequence Variable**|DeploymentType|  
 |**Value**|NEWCOMPUTER|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -947,6 +1039,7 @@ manager: angrobe
  The default configuration of the **End Phase** task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Restart computer|  
@@ -954,11 +1047,13 @@ manager: angrobe
 |**Description**|Not specified|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |None|None|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -972,6 +1067,7 @@ manager: angrobe
  The default configuration of the **Execute Sysprep** task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Run Command Line|  
@@ -979,6 +1075,7 @@ manager: angrobe
 |**Description**|None|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\LTISysprep.wsf"`|  
@@ -986,6 +1083,7 @@ manager: angrobe
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -999,6 +1097,7 @@ manager: angrobe
  The default configuration of the **Force Diskpart Action** task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Run Command Line|  
@@ -1006,6 +1105,7 @@ manager: angrobe
 |**Description**|Not specified|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Command line**|`cmd.exe /c if exist c:\oem.wsf del /q c:\oem.wsf`|  
@@ -1013,6 +1113,7 @@ manager: angrobe
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -1028,6 +1129,7 @@ manager: angrobe
  The default configuration of the **Format and Partition Disk** task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Format and Partition Disk|  
@@ -1035,6 +1137,7 @@ manager: angrobe
 |**Description**|Not specified|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disk number**|0|  
@@ -1042,6 +1145,7 @@ manager: angrobe
 |**Volume**|Within the Volume setting, the following sub\-settings are configured:<br /><br /> \-                                 **Partition Name**. OSDisk<br /><br /> \- **Partition Type**. Primary<br /><br /> \-                                 **Use a percentage of remaining space**. Selected<br /><br /> \-                                 **Size\(%\)**. 100<br /><br /> \- **Use specific drive size**. Not selected<br /><br /> \-                                 **Make this a boot partition**. Selected<br /><br /> \- **File System**. NTFS<br /><br /> \- **Quick Format**. Selected<br /><br /> \- **Variable**. Not specified|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -1060,6 +1164,7 @@ manager: angrobe
  The default configuration of the **Gather local only** task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Gather|  
@@ -1067,6 +1172,7 @@ manager: angrobe
 |**Description**|Not specified|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Gather only local data**|Selected|  
@@ -1074,6 +1180,7 @@ manager: angrobe
 |**Rules file**|Not specified|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -1089,6 +1196,7 @@ manager: angrobe
  The default configuration of the **Generate Application Migration** File task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Run Command Line|  
@@ -1096,6 +1204,7 @@ manager: angrobe
 |**Description**|Not specified|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Command Line**|`cscript.exe "%SCRIPTROOT%\ZTIAppXmlGen.wsf" /capture`|  
@@ -1103,6 +1212,7 @@ manager: angrobe
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -1118,6 +1228,7 @@ manager: angrobe
  The default configuration of the **Inject Drivers** task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Inject Drivers|  
@@ -1125,6 +1236,7 @@ manager: angrobe
 |**Description**|Not specified|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Install only matching drivers**|Injects only the drivers which are required by the target computer and match with what is available in Out\-of\-Box Drivers|  
@@ -1132,6 +1244,7 @@ manager: angrobe
 |**Selection profile**|Injects drivers which are associated with the selected profile|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -1147,6 +1260,7 @@ manager: angrobe
  The default configuration of the **Install Applications** task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Install Applications|  
@@ -1154,12 +1268,14 @@ manager: angrobe
 |**Description**|Not specified|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Install multiple applications**|Selected|  
 |**Install a single application**|Not selected|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -1173,6 +1289,7 @@ manager: angrobe
  The default configuration of the **Install Operating System** task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Install Operating System|  
@@ -1180,6 +1297,7 @@ manager: angrobe
 |**Description**|Not specified|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Operating system to install**|This value corresponds to the operating system that was selected when the task sequence was created.|  
@@ -1187,6 +1305,7 @@ manager: angrobe
 |**Partition**|The partition where the operating system is to be installed.|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -1202,6 +1321,7 @@ manager: angrobe
  The default configuration of the **Next Phase** task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Run Command Line|  
@@ -1209,6 +1329,7 @@ manager: angrobe
 |**Description**|Not specified|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\ZTINextPhase.wsf"`|  
@@ -1216,6 +1337,7 @@ manager: angrobe
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -1231,6 +1353,7 @@ manager: angrobe
  The default configuration of the **Post\-Apply Cleanup** task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Run Command Line|  
@@ -1238,6 +1361,7 @@ manager: angrobe
 |**Description**|Not specified|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\LTIApply.wsf" /post`|  
@@ -1245,6 +1369,7 @@ manager: angrobe
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -1258,11 +1383,13 @@ manager: angrobe
  The unique properties and settings for the Recover from Domain task sequence step type are:  
 
 ##### Properties  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Type**|This read\-only type is set to Recover from Domain Join Failure.|  
 
 ##### Settings  
+
 |**Name**|**Description**|  
 |-|-|  
 |**Auto recover**|The task sequence step will attempt to join the target computer to a domain.|  
@@ -1275,6 +1402,7 @@ manager: angrobe
  The default configuration of the **Restart computer** task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Restart computer|  
@@ -1282,11 +1410,13 @@ manager: angrobe
 |**Description**|Not specified|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |None|None|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -1302,6 +1432,7 @@ manager: angrobe
  The default configuration of the **Restore Groups** task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Run Command Line|  
@@ -1309,6 +1440,7 @@ manager: angrobe
 |**Description**|Not specified|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\ZTIGroups.wsf" /restore`|  
@@ -1316,6 +1448,7 @@ manager: angrobe
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -1333,6 +1466,7 @@ manager: angrobe
  The default configuration of the **Restore User State** task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Run Command Line|  
@@ -1340,6 +1474,7 @@ manager: angrobe
 |**Description**|Not specified|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Command Line**|`cscript.exe "%SCRIPTROOT%\ZTIUserState.wsf" /restore`|  
@@ -1347,6 +1482,7 @@ manager: angrobe
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -1360,6 +1496,7 @@ manager: angrobe
  The default configuration of the **Set Image Build** task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Set Task Sequence Variable|  
@@ -1367,12 +1504,14 @@ manager: angrobe
 |**Description**|Not specified|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Task Sequence Variable**|**ImageBuild**|  
 |**Value**|**%OSCurrentVersion%**|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -1386,6 +1525,7 @@ manager: angrobe
  The default configuration of the **Set Image Flags** task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Set Task Sequence Variable|  
@@ -1393,12 +1533,14 @@ manager: angrobe
 |**Description**|Not specified|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Task Sequence Variable**|ImageFlags|  
 |**Value**|%OSSKU%|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -1414,6 +1556,7 @@ manager: angrobe
  The default configuration of the **Tattoo** task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Run Command Line|  
@@ -1421,6 +1564,7 @@ manager: angrobe
 |**Description**|Not specified|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\ZTITatoo.wsf"`|  
@@ -1428,6 +1572,7 @@ manager: angrobe
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -1443,6 +1588,7 @@ manager: angrobe
  The default configuration of the **Validate** task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Validate|  
@@ -1450,6 +1596,7 @@ manager: angrobe
 |**Description**|Not specified|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Ensure minimum memory \(MB\)**|Selected. The value selector is set to **768**.|  
@@ -1458,6 +1605,7 @@ manager: angrobe
 |**Ensure current operating system to be refreshed**|Selected. The value selector is set to **Server** or **Client**, depending on the template used to create the task sequence.|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -1473,6 +1621,7 @@ manager: angrobe
  The default configuration of the **Windows Update \(Pre\-Application Installation\)** task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|   
 |**Type**|Run Command Line|  
@@ -1480,6 +1629,7 @@ manager: angrobe
 |**Description**|Not specified|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\ZTIWindowsUpdate.wsf"`|  
@@ -1487,6 +1637,7 @@ manager: angrobe
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|   
 |**Disable this step**|Not selected|  
@@ -1505,6 +1656,7 @@ manager: angrobe
  The default configuration of the **Wipe Disk** task sequence step is:  
 
 ##### Properties  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Type**|Run Command Line|  
@@ -1512,6 +1664,7 @@ manager: angrobe
 |**Description**|This will only run if **WipeDisk**=TRUE in CustomSettings.ini|  
 
 ##### Settings  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Command line**|`cscript.exe "%SCRIPTROOT%\ZTIWipeDisk.wsf"`|  
@@ -1519,6 +1672,7 @@ manager: angrobe
 |**Run this step as the following account**|Not specified|  
 
 ##### Options  
+
 |**Name**|**Value**|  
 |-|-|  
 |**Disable this step**|Not selected|  
@@ -1529,28 +1683,28 @@ manager: angrobe
 ## Properties  
  The scripts used in Lite Touch Installation (LTI) and ZTI reference properties to determine the process steps and configuration settings used during the deployment process. The scripts create some of these properties automatically. Other properties must be configured in the CustomSettings.ini file. Some of these properties are:  
 
--   Specific to ZTI only  
+- Specific to ZTI only  
 
--   Specific to LTI only  
+- Specific to LTI only  
 
--   For use in both ZTI and LTI  
+- For use in both ZTI and LTI  
 
- Use this reference to help determine the correct properties to configure and the valid values to include for each property.  
+  Use this reference to help determine the correct properties to configure and the valid values to include for each property.  
 
- For each property the following information is provided:  
+  For each property the following information is provided:  
 
--   **Description**.Provides a description of the purpose of the property and any pertinent information regarding the customization of the property.  
+- **Description**.Provides a description of the purpose of the property and any pertinent information regarding the customization of the property.  
 
-    > [!NOTE]
-    >  Unless explicitly specified for ZTI or LTI only, a property is valid for both ZTI and LTI.  
+  > [!NOTE]
+  >  Unless explicitly specified for ZTI or LTI only, a property is valid for both ZTI and LTI.  
 
--   **Value and Description**.Indicates the valid values to be specified for the property and a brief description of what each value means. (Values in italics indicate that a value is substituted—for example the value *user1*, *user2* indicates that *user1* and *user2* would be replaced with the actual name of user accounts.)  
+- **Value and Description**.Indicates the valid values to be specified for the property and a brief description of what each value means. (Values in italics indicate that a value is substituted—for example the value *user1*, *user2* indicates that *user1* and *user2* would be replaced with the actual name of user accounts.)  
 
--   **Example**.Provides an example of a property use as it might appear in the .ini files.  
+- **Example**.Provides an example of a property use as it might appear in the .ini files.  
 
- For more information about these and other task sequence properties that might be referenced while performing a ZTI deployment, see [Operating System Deployment Task Sequence Variables](http://technet.microsoft.com/library/bb632442.aspx).  
+  For more information about these and other task sequence properties that might be referenced while performing a ZTI deployment, see [Operating System Deployment Task Sequence Variables](http://technet.microsoft.com/library/bb632442.aspx).  
 
- The deployment scripts generally require values to be specified in upper case so that they are properly read. Therefore, when specifying property values, use uppercase letters.  
+  The deployment scripts generally require values to be specified in upper case so that they are properly read. Therefore, when specifying property values, use uppercase letters.  
 
 ### Property Definition  
  The following sections describe the properties that are available for LTI and ZTI deployments in MDT.  
@@ -1560,6 +1714,7 @@ manager: angrobe
 
 ####  <a name="\_SMSTSOrgName"></a> \_SMSTSOrgName  
  Customizes the Task Sequencer engine's display banner  
+
 |**Property configured by**|||**Property applies to**||  
 |-|-|-|-|-|  
 |BootStrap.ini|-||LTI|-|  
@@ -1876,17 +2031,17 @@ manager: angrobe
 
  The credentials used to access this shared folder for:  
 
--   LTI are the credentials entered in the Deployment Wizard.  
+- LTI are the credentials entered in the Deployment Wizard.  
 
--   ZTI are the credentials used by the Configuration Manager Advanced Client Network Access account.  
+- ZTI are the credentials used by the Configuration Manager Advanced Client Network Access account.  
 
- The permissions required on this share are as follows:  
+  The permissions required on this share are as follows:  
 
--   **Domain Computers**. Allow the Create Folders/Append Data permission.  
+- **Domain Computers**. Allow the Create Folders/Append Data permission.  
 
--   **Domain Users**. Allow the Create Folders/Append Data permission.  
+- **Domain Users**. Allow the Create Folders/Append Data permission.  
 
--   **Creator Owner**. Allow the Full Control permission.  
+- **Creator Owner**. Allow the Full Control permission.  
 
 |**Property configured by**|||**Property applies to**||  
 |-|-|-|-|-|  
@@ -3761,11 +3916,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ####  <a name="ForceApplyFallback"></a> ForceApplyFallback  
  Controls the method used for installed Windows:  
 
--   **setup.exe**. This method is the traditional method, initiated by running setup.exe from the installation media. MDT uses this method by default.  
+- **setup.exe**. This method is the traditional method, initiated by running setup.exe from the installation media. MDT uses this method by default.  
 
--   imagex.exe. This method installs the operating system image using imagex.exe with the **/apply** option. MDT uses this method when the setup.exe method cannot be used (i.e., MDT falls back to using imagex.exe).  
+- imagex.exe. This method installs the operating system image using imagex.exe with the **/apply** option. MDT uses this method when the setup.exe method cannot be used (i.e., MDT falls back to using imagex.exe).  
 
- Besides controlling the method used to install these operating systems, this property affects which operating system task sequences are listed in the Deployment Wizard for a specific processor architecture boot image. When the value of this property is set to **NEVER**, only operating system task sequences that match the processor architecture of the boot image are displayed. If the value of this property is set to any other value or is blank, all task sequences that can use the imagex.exe installation method are shown, regardless of the processor architecture.  
+  Besides controlling the method used to install these operating systems, this property affects which operating system task sequences are listed in the Deployment Wizard for a specific processor architecture boot image. When the value of this property is set to **NEVER**, only operating system task sequences that match the processor architecture of the boot image are displayed. If the value of this property is set to any other value or is blank, all task sequences that can use the imagex.exe installation method are shown, regardless of the processor architecture.  
 
 |**Property configured by**|||**Property applies to**||  
 |-|-|-|-|-|  
@@ -3882,7 +4037,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|  
 |`[Settings] Priority=Default  [Default] DisableTaskMgr=YES HideShell=YES`|  
 
-####  <a name="OSHome_Page"></a> OSHome_Page  
+####  <a name="Home_Page"></a> Home_Page  
  The URL to be used as the Windows Internet Explorer® home page after the target operating system is deployed.  
 
 |**Property configured by**|||**Property applies to**||  
@@ -3987,9 +4142,9 @@ cscript.exe LiteTouch.vbs /debug:true
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|**Value**|**Description**|  
-|-|-|
-||*instance*|The name of the instance of SQL Server to be used for querying property values|  
+| **Value** | **Description** |
+|-----------|-----------------|
+|           |   *instance*    |
 
 |**Example**|  
 |-|  
@@ -4355,9 +4510,9 @@ cscript.exe LiteTouch.vbs /debug:true
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|**Value**|**Description**|  
-|-|-|
-|*location1,*location2|The list of locations to be assigned to an individual computer or a group of computers|  
+|          **Value**           |                                    **Description**                                     |
+|------------------------------|----------------------------------------------------------------------------------------|
+| <em>location1,</em>location2 | The list of locations to be assigned to an individual computer or a group of computers |
 
 |**Example**|  
 |-|  
@@ -6262,9 +6417,9 @@ BackupDir=Client01
 |CustomSettings.ini|-||||  
 |MDT DB|||ZTI|-|  
 
-|**Value**|**Description**|  
-|-|-|
-|*custom_property1,*custom_property2|Custom, user-defined properties to be resolved|  
+|                 **Value**                  |                **Description**                 |
+|--------------------------------------------|------------------------------------------------|
+| <em>custom_property1,</em>custom_property2 | Custom, user-defined properties to be resolved |
 
 |**Example**|  
 |-|  
@@ -7079,9 +7234,9 @@ PackageGroup001=TopFolder\SecondFolder
 |CustomSettings.ini|-||||  
 |MDT DB|-||ZTI|-|  
 
-|**Value**|**Description**|  
-|-|-|
-|*user1, user2, …*|The comma-separated list of users in *Domain\User_Name* format that will be assigned affinity with the target device.<br /><br /> Note:<br /><br /> You can only use the NetBIOS domain name in this value, such as *Fabrikam\Ken*. You cannot use the fully qualified domain name (fabrikam.com\Ken) or the UPN notation (ken@fabrikam.com).|  
+|     **Value**     |                                                                                                                                                                **Description**                                                                                                                                                                |
+|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| *user1, user2, …* | The comma-separated list of users in *Domain\User_Name* format that will be assigned affinity with the target device.<br /><br /> Note:<br /><br /> You can only use the NetBIOS domain name in this value, such as *Fabrikam\Ken*. You cannot use the fully qualified domain name (fabrikam.com\Ken) or the UPN notation (ken@fabrikam.com). |
 
 |**Example**|  
 |-|  
@@ -7166,25 +7321,25 @@ PackageGroup001=TopFolder\SecondFolder
 ####  <a name="SupportsHyperVRole"></a> SupportsHyperVRole  
  Specifies whether the processor resources on the target computer can support the Hyper-V server role in Windows Server. This property is True if the value for the following properties is set to **TRUE**:  
 
--   **SupportsNX**  
+- **SupportsNX**  
 
--   **SupportsVT**  
+- **SupportsVT**  
 
--   **Supports64Bit**  
+- **Supports64Bit**  
 
- Each of the previous properties is set using information from the **CPUID** interface. For further information collected about VMs and information returned from the **CPUID** interface, see the following properties:  
+  Each of the previous properties is set using information from the **CPUID** interface. For further information collected about VMs and information returned from the **CPUID** interface, see the following properties:  
 
--   **IsHypervisorRunning**  
+- **IsHypervisorRunning**  
 
--   **IsVM**  
+- **IsVM**  
 
--   **SupportsNX**  
+- **SupportsNX**  
 
--   **SupportsVT**  
+- **SupportsVT**  
 
--   **Supports64Bit**  
+- **Supports64Bit**  
 
--   **VMPlatform**  
+- **VMPlatform**  
 
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
@@ -7696,20 +7851,20 @@ PackageGroup001=TopFolder\SecondFolder
 
  Offline migration is using USMT is performed for:  
 
--   UDI always, regardless of the setting of the **USMTOfflineMigration** property  
+- UDI always, regardless of the setting of the **USMTOfflineMigration** property  
 
--   ZTI only for the MDT Refresh Computer deployment scenario and only when the **USMTOfflineMigration** property is set to **"TRUE"**  
+- ZTI only for the MDT Refresh Computer deployment scenario and only when the **USMTOfflineMigration** property is set to **"TRUE"**  
 
-    > [!NOTE]
-    >  You cannot perform USMT offline user state migration in the MDT New Computer deployment scenario using ZTI.  
+  > [!NOTE]
+  >  You cannot perform USMT offline user state migration in the MDT New Computer deployment scenario using ZTI.  
 
--   LTI for the:  
+- LTI for the:  
 
-    1.  MDT New Computer deployment scenario using the **Move Data and Settings** wizard page in the Deployment Wizard  
+  1.  MDT New Computer deployment scenario using the **Move Data and Settings** wizard page in the Deployment Wizard  
 
-    2.  MDT Refresh Computer deployment scenario and only when the **USMTOfflineMigration** property is set to **"TRUE"**  
+  2.  MDT Refresh Computer deployment scenario and only when the **USMTOfflineMigration** property is set to **"TRUE"**  
 
- For more information about using MDT and USMT to perform an offline user state migration, see "Configure USMT Offline User State Migration".  
+  For more information about using MDT and USMT to perform an offline user state migration, see "Configure USMT Offline User State Migration".  
 
 |**Property configured by**|||**Property applies to**||  
 |-|-|-|-|-|  
@@ -7903,7 +8058,7 @@ PackageGroup001=TopFolder\SecondFolder
 ####  <a name="VHDCreateSource"></a> VHDCreateSource  
  This property is used to specify the name of a VHD file that is used as a template (source) for creating a new VHD file. You can specify the file name using a UNC path, local path, relative path, or just the file name. If just the file name is specified, then MDT attempts to find the VHD file on the target computer. This property is valid only for the MDT New Computer deployment scenario.  
 
- This property is commonly set using a task sequence step created using the **Create Virtual Hard Disk (VHD)** task sequence type. You can override the value that the **Create Virtual Hard Disk (VHD)**task sequence step sets by configuring this property in CustomSettings.ini.  
+ This property is commonly set using a task sequence step created using the **Create Virtual Hard Disk (VHD)** task sequence type. You can override the value that the <strong>Create Virtual Hard Disk (VHD)</strong>task sequence step sets by configuring this property in CustomSettings.ini.  
 
 > [!NOTE]
 >  To configure this property in CustomSettings.ini, you must add this property to the **Properties** line in CustomSettings.ini.  
@@ -7943,11 +8098,11 @@ PackageGroup001=TopFolder\SecondFolder
 ####  <a name="VHDCreateType"></a> VHDCreateType  
  This property is used to specify the type of VHD file that is specified in the **VHDCreateFileName** property and can be one of the following VHD file types:  
 
--   **Fixed VHD file**. For this VHD type, the size of the VHD specified at creation is allocated and does not change automatically after creation. For example, if you create a 24\-gigabyte \(GB\) fixed VHD file, the file will be approximately 24 GB in size \(with some space used for the internal VHD structure\) regardless of how much information is stored in the VHD file.  
+- **Fixed VHD file**. For this VHD type, the size of the VHD specified at creation is allocated and does not change automatically after creation. For example, if you create a 24\-gigabyte \(GB\) fixed VHD file, the file will be approximately 24 GB in size \(with some space used for the internal VHD structure\) regardless of how much information is stored in the VHD file.  
 
--   **Dynamically expanding VHD file**. For this VHD type, only a small percentage of the size of the VHD specified at creation time is allocated. Then, the VHD file continues to grow as more and more information is stored in it. However, the VHD file cannot grow beyond the size specified at creation. For example, if you create a 24 GB dynamically expanding VHD, it will be small at creation. However, as information is stored in the VHD file, the file will continue to grow but never exceed the maximum size of 24 GB.  
+- **Dynamically expanding VHD file**. For this VHD type, only a small percentage of the size of the VHD specified at creation time is allocated. Then, the VHD file continues to grow as more and more information is stored in it. However, the VHD file cannot grow beyond the size specified at creation. For example, if you create a 24 GB dynamically expanding VHD, it will be small at creation. However, as information is stored in the VHD file, the file will continue to grow but never exceed the maximum size of 24 GB.  
 
- This property is only valid for the MDT New Computer deployment scenario.  
+  This property is only valid for the MDT New Computer deployment scenario.  
 
 > [!NOTE]
 >  The maximum size of the VHD file is specified in the **VHDCreateSizeMax** property.  
@@ -8297,13 +8452,13 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 ####  <a name="WindowsSource"></a> WindowsSource  
  MDT uses this property to set the location of the sources\sxs folder in a network shared folder that contains the operating system source files. This property is used when:  
 
--   MDT is running a custom task sequence or deploying a custom image  
+- MDT is running a custom task sequence or deploying a custom image  
 
--   MDT is installing roles or features in Windows 8 and Windows Server 2012  
+- MDT is installing roles or features in Windows 8 and Windows Server 2012  
 
--   The computer does not have access to the Internet  
+- The computer does not have access to the Internet  
 
- When the situation described in the bulleted list above occurs, MDT may be unable to find the operating system source files locally, and the installation will attempt to download the files from the Internet. Because the computer does not have Internet access, the process will fail. Setting this property to the appropriate value helps prevent this problem from occurring.  
+  When the situation described in the bulleted list above occurs, MDT may be unable to find the operating system source files locally, and the installation will attempt to download the files from the Internet. Because the computer does not have Internet access, the process will fail. Setting this property to the appropriate value helps prevent this problem from occurring.  
 
 |**Property configured by**|||**Property applies to**||  
 |-|-|-|-|-|  
@@ -8843,9 +8998,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> - **TRUE**, event messages are sent to the console and the .log files<br /><br /> - **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided)|  
+|     **Value**      |                                                                                                                                                     **Description**                                                                                                                                                     |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> - **TRUE**, event messages are sent to the console and the .log files<br /><br /> - **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided) |
 
 #### Properties  
 
@@ -8870,10 +9025,10 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided)|  
-|**/Start**|Creates a shortcut in the new operating system that runs once the shell starts|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                  |
+|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided) |
+|     **/Start**     |                                                                                                                                                  Creates a shortcut in the new operating system that runs once the shell starts                                                                                                                                                   |
 
 #### Properties  
 
@@ -8933,11 +9088,11 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/pe**|Uses the process for installing the Windows PE image on the target computer|  
-|**/post**|Cleans up unnecessary files after the installation of an image|  
-|**/debug:*value***|Outputs the event messages to the console and to the .log files; if the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided)|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                  |
+|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|      **/pe**       |                                                                                                                                                    Uses the process for installing the Windows PE image on the target computer                                                                                                                                                    |
+|     **/post**      |                                                                                                                                                          Cleans up unnecessary files after the installation of an image                                                                                                                                                           |
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files; if the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided) |
 
 #### Properties  
 
@@ -8974,9 +9129,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided)|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                  |
+|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided) |
 
 #### Properties  
 
@@ -9000,9 +9155,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided)|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                  |
+|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided) |
 
 #### Properties  
 
@@ -9047,11 +9202,11 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided)|  
-|**/BITLOCKER**|Enables BitLocker|  
-|**/BDE**|Enables BitLocker|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                  |
+|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided) |
+|   **/BITLOCKER**   |                                                                                                                                                                                 Enables BitLocker                                                                                                                                                                                 |
+|      **/BDE**      |                                                                                                                                                                                 Enables BitLocker                                                                                                                                                                                 |
 
 #### Properties  
 
@@ -9078,10 +9233,10 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided)|  
-|**/Resume**|–|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                  |
+|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided) |
+|    **/Resume**     |                                                                                                                                                                                         –                                                                                                                                                                                         |
 
 #### Properties  
 
@@ -9103,9 +9258,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
 
 #### Properties  
 
@@ -9219,11 +9374,11 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
-|**/NotWizard**|Used to bypass wizard page prompts|  
-|**/Definition:*filename***|Specifies the XML file that is to be loaded into the wizard|  
+|         **Value**          |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
+|----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     **/debug:*value***     | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
+|       **/NotWizard**       |                                                                                                                                                                         Used to bypass wizard page prompts                                                                                                                                                                         |
+| **/Definition:*filename*** |                                                                                                                                                            Specifies the XML file that is to be loaded into the wizard                                                                                                                                                             |
 
 #### Properties  
 
@@ -9288,9 +9443,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided)|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                  |
+|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided) |
 
 #### Properties  
 
@@ -9325,9 +9480,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
 
 #### Properties  
 
@@ -9354,9 +9509,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
 
 #### Properties  
 
@@ -9377,9 +9532,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided)|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                  |
+|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided) |
 
 #### Properties  
 
@@ -9443,9 +9598,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided)|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                  |
+|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided) |
 
 #### Properties  
 
@@ -9495,9 +9650,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided)|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                  |
+|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided) |
 
 #### Properties  
 
@@ -9512,25 +9667,25 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
  For example, if the following variables were defined (using computer variables, collection variables, or in CustomSettings.ini or the MDT DB, for example):  
 
--   **ComputerPackages100=XXX00001:Program**  
+- **ComputerPackages100=XXX00001:Program**  
 
--   **ComputerPackages110=XXX00002:Program**  
+- **ComputerPackages110=XXX00002:Program**  
 
--   **CollectionPackages150=XXX00003:Program**  
+- **CollectionPackages150=XXX00003:Program**  
 
--   **Packages001=XXX00004:Program**  
+- **Packages001=XXX00004:Program**  
 
- After the script runs, the list would be:  
+  After the script runs, the list would be:  
 
--   **PACKAGES001=XXX00004:Program**  
+- **PACKAGES001=XXX00004:Program**  
 
--   **PACKAGES002=XXX00001:Program**  
+- **PACKAGES002=XXX00001:Program**  
 
--   **PACKAGES003=XXX00002:Program**  
+- **PACKAGES003=XXX00002:Program**  
 
--   **PACKAGES004=XXX00003:Program**  
+- **PACKAGES004=XXX00003:Program**  
 
- Configuration Manager would then be able to run all four programs.  
+  Configuration Manager would then be able to run all four programs.  
 
 |**Value**|**Description**|  
 |-|-|
@@ -9542,10 +9697,10 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
-|**/CoalesceDigits:*value***|Specifies the number of digits that need to be provided when creating the numbering sequence. For example, a value of:<br /><br /> -                              **2** would create PACKAGE03<br /><br /> -                              **3**would create PACKAGE003<br /><br /> The default value if this argument is not provided is **3**.|  
+|          **Value**          |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     **/debug:*value***      | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
+| **/CoalesceDigits:*value*** |                  Specifies the number of digits that need to be provided when creating the numbering sequence. For example, a value of:<br /><br /> -                              **2** would create PACKAGE03<br /><br /> -                              **3**would create PACKAGE003<br /><br /> The default value if this argument is not provided is **3**.                   |
 
 #### Properties  
 
@@ -9594,9 +9749,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
 
 #### Properties  
 
@@ -9627,9 +9782,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
 
 #### Properties  
 
@@ -9673,9 +9828,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
 
 #### Properties  
 
@@ -9724,9 +9879,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
 
 #### Properties  
 
@@ -9763,10 +9918,10 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/UNCPath:uncpath**|Specifies a fully qualified UNC path to a network shared folder|  
-|**/debug:*value***|Outputs the event messages to the console and to the .log files; if the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
+|      **Value**       |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
+|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/UNCPath:uncpath** |                                                                                                                                                          Specifies a fully qualified UNC path to a network shared folder                                                                                                                                                           |
+|  **/debug:*value***  | Outputs the event messages to the console and to the .log files; if the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
 
 #### Properties  
 
@@ -9787,9 +9942,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug: *value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
+|      **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug: *value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
 
 #### Properties  
 
@@ -9838,9 +9993,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
 
 #### Properties  
 
@@ -9855,25 +10010,25 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 ###  <a name="ZTIDiskpart.wsf"></a> ZTIDiskpart.wsf  
  This script creates the disk partitions on the target computer by calling the Diskpart utility. The parameters used to configure the disk are specified by the Task Sequencer or in CustomSettings.ini. ZTIDiskpart.wsf is primarily run in New Computer scenarios. The process works like this:  
 
-1.  The MDT deployment process runs the ZTIDiskpart.wsf script based on the steps and sequence of steps in the Task Sequencer.  
+1. The MDT deployment process runs the ZTIDiskpart.wsf script based on the steps and sequence of steps in the Task Sequencer.  
 
-2.  ZTIDiskpart.wsf starts the Diskpart utility and sends it the required configuration commands.  
+2. ZTIDiskpart.wsf starts the Diskpart utility and sends it the required configuration commands.  
 
-3.  ZTIDiskpart.wsf runs Diskpart.exe and provides a .txt file as a command-line parameter.  
+3. ZTIDiskpart.wsf runs Diskpart.exe and provides a .txt file as a command-line parameter.  
 
-4.  The disk is initially cleaned by sending Diskpart the **CLEAN** command.  
+4. The disk is initially cleaned by sending Diskpart the **CLEAN** command.  
 
-5.  If this is the first disk and no disk configuration has been specified by the Task Sequencer or in CustomSettings.ini, a single partition is created to store the operating system. However, if a disk configuration has been specified, the disk will be configured according to the specified configuration.  
+5. If this is the first disk and no disk configuration has been specified by the Task Sequencer or in CustomSettings.ini, a single partition is created to store the operating system. However, if a disk configuration has been specified, the disk will be configured according to the specified configuration.  
 
-6.  If BitLocker is to be enabled, space is reserved at the end of the first disk.  
+6. If BitLocker is to be enabled, space is reserved at the end of the first disk.  
 
-7.  All format commands are queued until after Diskpart has finished. If not explicitly specified by the Task Sequencer or in CustomSettings.ini, ZTIDiskpart.wsf performs a quick format of drive C using the following command: `FORMAT C: /FS:NTFS /V:OSDisk /Q /Y`.  
+7. All format commands are queued until after Diskpart has finished. If not explicitly specified by the Task Sequencer or in CustomSettings.ini, ZTIDiskpart.wsf performs a quick format of drive C using the following command: `FORMAT C: /FS:NTFS /V:OSDisk /Q /Y`.  
 
-8.  ZTIDiskpart.wsf copies the ZTIDiskpart_diskpart.log and BDD.log files from the RAM disk back to the hard drive.  
+8. ZTIDiskpart.wsf copies the ZTIDiskpart_diskpart.log and BDD.log files from the RAM disk back to the hard drive.  
 
- Customize the disk configuration of the target computer by providing the required information in the Task Sequencer or in CustomSettings.ini.  
+   Customize the disk configuration of the target computer by providing the required information in the Task Sequencer or in CustomSettings.ini.  
 
- For more information about configuring disks, see the MDT document *Using the Microsoft Deployment Toolkit*.  
+   For more information about configuring disks, see the MDT document *Using the Microsoft Deployment Toolkit*.  
 
 |**Value**|**Description**|  
 |-|-|
@@ -9885,9 +10040,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
 
 #### Properties  
 
@@ -9947,10 +10102,10 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug: *value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
-|**/DomainErrorRecovery: *value***|Attempts to join the computer to the domain. If the value specified in value is:<br /><br /> -                              **AUTO**. Retry the domain join process. Restart and retry. This is the default script behavior.<br /><br /> -                              **FAIL**. Stops all processing. All task sequence processing stops.<br /><br /> -                              **MANUAL**. Stop processing; allows the user to manually join the computer to the domain.|  
+|             **Value**             |                                                                                                                                                                                                                                 **Description**                                                                                                                                                                                                                                  |
+|-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|        **/debug: *value***        |                                                Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)                                                |
+| **/DomainErrorRecovery: *value*** | Attempts to join the computer to the domain. If the value specified in value is:<br /><br /> -                              **AUTO**. Retry the domain join process. Restart and retry. This is the default script behavior.<br /><br /> -                              **FAIL**. Stops all processing. All task sequence processing stops.<br /><br /> -                              **MANUAL**. Stop processing; allows the user to manually join the computer to the domain. |
 
 #### Properties  
 
@@ -9981,9 +10136,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
 
 #### Properties  
 
@@ -10018,9 +10173,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
 
 #### Properties  
 
@@ -10058,11 +10213,11 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
-|**/localonly**|Returns only information about the target computer and the current operating system installed on the target computer; does not parse the input .ini file (specified in the **/inifile** argument); returns properties and rules specified in the .ini file<br /><br /> If not specified, the script returns information about the target computer and the currently installed operating system; parses the .ini file|  
-|**/inifile:ini_file_name**|Name and path of the input .ini file that contains the properties and rules used in the deployment processIf not specified, the script uses the default value in CustomSettings.ini|  
+|         **Value**          |                                                                                                                                                                                                   **Description**                                                                                                                                                                                                    |
+|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     **/debug:*value***     |                  Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)                  |
+|       **/localonly**       | Returns only information about the target computer and the current operating system installed on the target computer; does not parse the input .ini file (specified in the **/inifile** argument); returns properties and rules specified in the .ini file<br /><br /> If not specified, the script returns information about the target computer and the currently installed operating system; parses the .ini file |
+| **/inifile:ini_file_name** |                                                                                                                 Name and path of the input .ini file that contains the properties and rules used in the deployment processIf not specified, the script uses the default value in CustomSettings.ini                                                                                                                  |
 
 #### Properties  
 
@@ -10071,7 +10226,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 |**All**|-|-|  
 
 ###  <a name="ZTIGroups.wsf"></a> ZTIGroups.wsf  
- This script captures and restores the local group membership on the target computer. This script is called with the**/capture** argument to back up the group membership from the target computer before deploying the operating system. The **CaptureGroups** property contains the list of groups that script backs up. The script is called with the**/restore** argument to restore the group membership after the operating system is deployed. When performing a restore operation, it restores the membership of all groups that were backed up when the script was run using the **/capture** argument.  
+ This script captures and restores the local group membership on the target computer. This script is called with the<strong>/capture</strong> argument to back up the group membership from the target computer before deploying the operating system. The **CaptureGroups** property contains the list of groups that script backs up. The script is called with the<strong>/restore</strong> argument to restore the group membership after the operating system is deployed. When performing a restore operation, it restores the membership of all groups that were backed up when the script was run using the **/capture** argument.  
 
 > [!NOTE]
 >  When restoring group membership, the script does not create any destination groups that do not already exist on the target computer. Therefore, be sure to include all required groups in the reference computer when building the image file.  
@@ -10086,11 +10241,11 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
-|**/capture**|Backs up the group membership of the local groups on the target computer as specified in the **CaptureGroups** property|  
-|**/restore**|Restores the group membership to the local groups backed up earlier in the deployment process|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
+|    **/capture**    |                                                                                                                              Backs up the group membership of the local groups on the target computer as specified in the **CaptureGroups** property                                                                                                                               |
+|    **/restore**    |                                                                                                                                           Restores the group membership to the local groups backed up earlier in the deployment process                                                                                                                                            |
 
 #### Properties  
 
@@ -10113,9 +10268,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
 
 #### Properties  
 
@@ -10144,10 +10299,10 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/UtilityVol:*value***|Provides the drive letter of the volume that needs to be configured for a Windows RE Tools partition for use with computers with UEFI (for example, "E:")|  
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
+|        **Value**        |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
+|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/UtilityVol:*value*** |                                                                                                             Provides the drive letter of the volume that needs to be configured for a Windows RE Tools partition for use with computers with UEFI (for example, "E:")                                                                                                              |
+|   **/debug:*value***    | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
 
 #### Properties  
 
@@ -10171,9 +10326,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
 
 #### Properties  
 
@@ -10184,19 +10339,19 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 ###  <a name="ZTINextPhase.wsf"></a> ZTINextPhase.wsf  
  This script updates the **Phase** property to the next phase in the deployment process. The Task Sequencer uses these phases to determine the sequence in which each task must be completed. The **Phase** property includes the following values:  
 
--   **VALIDATION**. Identify that the target computer is capable of running the scripts necessary to complete the deployment process.  
+- **VALIDATION**. Identify that the target computer is capable of running the scripts necessary to complete the deployment process.  
 
--   **STATECAPTURE**. Save any user state migration data before deploying the new target operating system.  
+- **STATECAPTURE**. Save any user state migration data before deploying the new target operating system.  
 
--   **PREINSTALL**. Complete any tasks that need to be done (such as creating new partitions) before the target operating system is deployed.  
+- **PREINSTALL**. Complete any tasks that need to be done (such as creating new partitions) before the target operating system is deployed.  
 
--   **INSTALL**. Install the target operating system on the target computer.  
+- **INSTALL**. Install the target operating system on the target computer.  
 
--   **POSTINSTALL**. Complete any tasks that need to be done before restoring the user state migration data. These tasks customize the target operating system before starting the target computer the first time after deployment (such as installing updates or adding drivers).  
+- **POSTINSTALL**. Complete any tasks that need to be done before restoring the user state migration data. These tasks customize the target operating system before starting the target computer the first time after deployment (such as installing updates or adding drivers).  
 
--   **STATERESTORE**. Restore the user state migration data saved during the State Capture Phase.  
+- **STATERESTORE**. Restore the user state migration data saved during the State Capture Phase.  
 
- For more information about the **Phase** property, see the corresponding topic in [Properties](#Properties).  
+  For more information about the **Phase** property, see the corresponding topic in [Properties](#Properties).  
 
 |**Value**|**Description**|  
 |-|-|
@@ -10208,9 +10363,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
 
 #### Properties  
 
@@ -10232,11 +10387,11 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
-|**/ForceCapture**|If there are any local networking adapters with static IP addresses saved, this script captures those settings and saves them to the local environment—for example, C:\MININT\SMSOSD\OSDLogs\Variables.dat. This script can be useful in capturing static IP settings for a large number of computers for automation.|  
-|/RestoreWithinWinPE|When specified, applies any saved static IP network settings to the local computer, when appropriate; used for internal processing only.|  
+|      **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value***  | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
+|  **/ForceCapture**  |                               If there are any local networking adapters with static IP addresses saved, this script captures those settings and saves them to the local environment—for example, C:\MININT\SMSOSD\OSDLogs\Variables.dat. This script can be useful in capturing static IP settings for a large number of computers for automation.                                |
+| /RestoreWithinWinPE |                                                                                                                      When specified, applies any saved static IP network settings to the local computer, when appropriate; used for internal processing only.                                                                                                                      |
 
 #### Properties  
 
@@ -10270,9 +10425,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Properties  
 
-|**Name**|**Read**|**Write**|  
-|-|-|-|  
-|**OSDAdapter*AdapterIndexAdapterName***|-|-|  
+|                **Name**                 | **Read** | **Write** |
+|-----------------------------------------|----------|-----------|
+| **OSDAdapter*AdapterIndexAdapterName*** |    -     |     -     |
 
 > [!NOTE]
 >  *AdapterIndex*in this property is a placeholder for a zero-based array that contains network adapter information.  
@@ -10293,10 +10448,10 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
-|**/Uninstall**|If provided, this argument indicates that the roles and features will be uninstalled. If not provided, the script assumes the roles and features will be installed.|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
+|   **/Uninstall**   |                                                                                                        If provided, this argument indicates that the roles and features will be uninstalled. If not provided, the script assumes the roles and features will be installed.                                                                                                         |
 
 #### Properties  
 
@@ -10312,11 +10467,11 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 ###  <a name="ZTIPatches.wsf"></a> ZTIPatches.wsf  
  This script installs updates (language packs, security updates, and so on) that are listed in the Packages.xml file. The script self-terminates if the deployment is not in one of the following states:  
 
--   **Phase** equals **PREINSTALL**  
+- **Phase** equals **PREINSTALL**  
 
--   **DeploymentMethod** equals **SCCM**  
+- **DeploymentMethod** equals **SCCM**  
 
- The script starts Pkgmgr if **DeploymentMethod** equals **SCCM**.  
+  The script starts Pkgmgr if **DeploymentMethod** equals **SCCM**.  
 
 |**Value**|**Description**|  
 |-|-|
@@ -10328,9 +10483,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
 
 #### Properties  
 
@@ -10375,11 +10530,11 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 ###  <a name="ZTIPrereq.vbs"></a> ZTIPrereq.vbs  
  This script verifies that the target computer has the prerequisite software installed and that it is functional. The checks the script performs are:  
 
--   Determine whether the Windows Script version is equal to or greater than version 5.6.  
+- Determine whether the Windows Script version is equal to or greater than version 5.6.  
 
--   Verify that errors do not occur when object references are instantiated to Wscript.Shell, Wscript.Network, Scripting.FileSystemObject MSXML2.DOMDocument, and the Process environment.  
+- Verify that errors do not occur when object references are instantiated to Wscript.Shell, Wscript.Network, Scripting.FileSystemObject MSXML2.DOMDocument, and the Process environment.  
 
- If any one of the checks fails, an error is raised and the script exits the **ValidatePrereq** procedure.  
+  If any one of the checks fails, an error is raised and the script exits the **ValidatePrereq** procedure.  
 
 |**Value**|**Description**|  
 |-|-|
@@ -10404,37 +10559,37 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 ###  <a name="ZTISCCM.wsf"></a> ZTISCCM.wsf  
  This script initializes ZTI when deploying using Configuration Manager. The script performs the following procedure:  
 
-1.  If debugging is activated, the script creates the OSD.Debug file.  
+1. If debugging is activated, the script creates the OSD.Debug file.  
 
-2.  The script configures these properties:  
+2. The script configures these properties:  
 
-    -   **ScriptRoot**is set to the parent folder of the currently running script.  
+   -   **ScriptRoot**is set to the parent folder of the currently running script.  
 
-    -   **DeployRoot** is set to the parent folder of **ScriptRoot**.  
+   -   **DeployRoot** is set to the parent folder of **ScriptRoot**.  
 
-    -   **ResourceRoot** is set to **DeployRoot**.  
+   -   **ResourceRoot** is set to **DeployRoot**.  
 
-    -   **DeploySystemDrive** is set to **C:**.  
+   -   **DeploySystemDrive** is set to **C:**.  
 
-    -   **DeploymentMethod** is set to **SCCM**.  
+   -   **DeploymentMethod** is set to **SCCM**.  
 
-3.  When **DeployRoot**contains **:\\***:*  
+3. When **DeployRoot**contains **:\\***:*  
 
-    -   The **DeployRoot** folder is copied to **_SMSTSMDataPath**\WDPackage  
+   -   The **DeployRoot** folder is copied to **_SMSTSMDataPath**\WDPackage  
 
-    -   **ScriptRoot** is set to **_SMSTSMDataPath**\WDPackage\Scripts  
+   -   **ScriptRoot** is set to **_SMSTSMDataPath**\WDPackage\Scripts  
 
-    -   **DeployRoot** is set to the parent folder of **ScriptRoot**  
+   -   **DeployRoot** is set to the parent folder of **ScriptRoot**  
 
-    -   **ResourceRoot** is set to **DeployRoot**  
+   -   **ResourceRoot** is set to **DeployRoot**  
 
-4.  When **Phase** is **NULL**:  
+4. When **Phase** is **NULL**:  
 
-    -   If the %SystemDrive% environment variable is **X:**, then **DeploymentType**is set to **NEWCOMPUTER** and **Phase** is set to **PREINSTALL**. Otherwise,**DeploymentType** is set to **REPLACE** and **Phase** is set to **VALIDATION**.  
+   -   If the %SystemDrive% environment variable is **X:**, then **DeploymentType**is set to **NEWCOMPUTER** and **Phase** is set to **PREINSTALL**. Otherwise,**DeploymentType** is set to **REPLACE** and **Phase** is set to **VALIDATION**.  
 
-    -   If the **OldComputer**.tag file exists in the parent folder of the current running script, **DeploymentType** is set to **REPLACE** and **Phase** is set to **VALIDATION**. Otherwise,**DeploymentType** is set to **REFRESH** and **Phase** is set to **VALIDATION**.  
+   -   If the **OldComputer**.tag file exists in the parent folder of the current running script, **DeploymentType** is set to **REPLACE** and **Phase** is set to **VALIDATION**. Otherwise,**DeploymentType** is set to **REFRESH** and **Phase** is set to **VALIDATION**.  
 
- For more information about these properties, see the corresponding topics in [Properties](#Properties).  
+   For more information about these properties, see the corresponding topics in [Properties](#Properties).  
 
 |**Value**|**Description**|  
 |-|-|
@@ -10446,9 +10601,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
 
 #### Properties  
 
@@ -10478,9 +10633,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
 
 #### Properties  
 
@@ -10492,66 +10647,66 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 ###  <a name="ZTITatoo.wsf"></a> ZTITatoo.wsf  
  This script tattoos the target computer with identification and version information. The script performs the following procedure:  
 
-1.  Locate and copy the ZTITatoo.mof file to the %SystemRoot%\System32\Wbem folder. Any preexisting ZTITatoo.mof that exists at the destination will be deleted before starting the copy operation.  
+1. Locate and copy the ZTITatoo.mof file to the %SystemRoot%\System32\Wbem folder. Any preexisting ZTITatoo.mof that exists at the destination will be deleted before starting the copy operation.  
 
-2.  Mofcomp.exe will be run using the following command:  
+2. Mofcomp.exe will be run using the following command:  
 
-    ```  
-    %SystemRoot%\System32\Wbem\Mofcomp.exe -autorecover %SystemRoot%\System32\Wbem\ZTITatoo.mof.  
-    ```  
+   ```  
+   %SystemRoot%\System32\Wbem\Mofcomp.exe -autorecover %SystemRoot%\System32\Wbem\ZTITatoo.mof.  
+   ```  
 
-3.  For all deployment methods (LTI, ZTI, and UDI), these deployment details are written for all deployment methods to the registry at **HKEY_LOCAL_MACHINE\Software\Microsoft\Deployment 4**:  
+3. For all deployment methods (LTI, ZTI, and UDI), these deployment details are written for all deployment methods to the registry at **HKEY_LOCAL_MACHINE\Software\Microsoft\Deployment 4**:  
 
-    -   **Deployment Method** is set to the deployment method being used and can be set to **LTI**, **ZTI**, or **UDI**, depending on the deployment method being performed.  
+   -   **Deployment Method** is set to the deployment method being used and can be set to **LTI**, **ZTI**, or **UDI**, depending on the deployment method being performed.  
 
-    -   **Deployment Source** is set to the source for the deployment and can be set to **OEM**, **MEDIA**, or the value in the **DeploymentMethod** property.  
+   -   **Deployment Source** is set to the source for the deployment and can be set to **OEM**, **MEDIA**, or the value in the **DeploymentMethod** property.  
 
-    -   **Deployment Type** is set to the **DeploymentType** property.  
+   -   **Deployment Type** is set to the **DeploymentType** property.  
 
-    -   **Deployment Timestamp** is set to the current date in WMI date format.  
+   -   **Deployment Timestamp** is set to the current date in WMI date format.  
 
-    -   **Deployment Toolkit Version** is set to the **Version** property.  
+   -   **Deployment Toolkit Version** is set to the **Version** property.  
 
-4.  For LTI deployments, these deployment details are written  to the registry at **HKEY_LOCAL_MACHINE\Software\Microsoft\Deployment 4**:  
+4. For LTI deployments, these deployment details are written  to the registry at **HKEY_LOCAL_MACHINE\Software\Microsoft\Deployment 4**:  
 
-    -   **Task Sequence ID** is set to the **TaskSequenceID**property.  
+   -   **Task Sequence ID** is set to the **TaskSequenceID**property.  
 
-    -   **Task Sequence Name** is set to the **TaskSequenceName** property.  
+   -   **Task Sequence Name** is set to the **TaskSequenceName** property.  
 
-    -   **Task Sequence Version** is set to the **TaskSequenceVersion** property.  
+   -   **Task Sequence Version** is set to the **TaskSequenceVersion** property.  
 
-5.  For all Configuration Manager deployments (ZTI and UDI for Configuration Manager), these deployment details are written to the registry at **HKEY_LOCAL_MACHINE\Software\Microsoft\Deployment 4**:  
+5. For all Configuration Manager deployments (ZTI and UDI for Configuration Manager), these deployment details are written to the registry at **HKEY_LOCAL_MACHINE\Software\Microsoft\Deployment 4**:  
 
-    -   OSD Package ID is set to the **_SMSTSPackageID** task sequence variable.  
+   - OSD Package ID is set to the **_SMSTSPackageID** task sequence variable.  
 
-    -   **OSD Program Name** is always set to "**\***".  
+   - **OSD Program Name** is always set to "**\\***".  
 
-    -   **OSD Advertisement ID** is set to the **_SMSTSAdvertID** task sequence variable.  
+   - **OSD Advertisement ID** is set to the **_SMSTSAdvertID** task sequence variable.  
 
-6.  For LTI deployments where an image is being captured, these deployment details are written to the registry at **HKEY_LOCAL_MACHINE\Software\Microsoft\Deployment 4**:  
+6. For LTI deployments where an image is being captured, these deployment details are written to the registry at **HKEY_LOCAL_MACHINE\Software\Microsoft\Deployment 4**:  
 
-    -   **Capture Method** is set to the deployment method being used and can be set to **LTI**, **ZTI**, or **UDI**, depending on the deployment method being performed.  
+   -   **Capture Method** is set to the deployment method being used and can be set to **LTI**, **ZTI**, or **UDI**, depending on the deployment method being performed.  
 
-    -   **Capture Timestamp** is set to the current date in WMI date format.  
+   -   **Capture Timestamp** is set to the current date in WMI date format.  
 
-    -   **Capture Toolkit Version** is set to the **Version** property.  
+   -   **Capture Toolkit Version** is set to the **Version** property.  
 
-    -   **Capture Task Sequence ID** is set to the **TaskSequenceID**property.  
+   -   **Capture Task Sequence ID** is set to the **TaskSequenceID**property.  
 
-    -   **Capture Task Sequence Name** is set to the **TaskSequenceName** property.  
+   -   **Capture Task Sequence Name** is set to the **TaskSequenceName** property.  
 
-    -   **Capture Task Sequence Version** is set to the **TaskSequenceVersion** property.  
+   -   **Capture Task Sequence Version** is set to the **TaskSequenceVersion** property.  
 
-7.  For all Configuration Manager deployments (ZTI and UDI for Configuration Manager) in which an image is being captured, these deployment details are written to the registry at **HKEY_LOCAL_MACHINE\Software\Microsoft\Deployment 4**:  
+7. For all Configuration Manager deployments (ZTI and UDI for Configuration Manager) in which an image is being captured, these deployment details are written to the registry at **HKEY_LOCAL_MACHINE\Software\Microsoft\Deployment 4**:  
 
-    -   **Capture OSD Package ID** is set to the **_SMSTSPackageID** task sequence variable.  
+   -   **Capture OSD Package ID** is set to the **_SMSTSPackageID** task sequence variable.  
 
-    -   **Capture OSD Program Name** is always set to "*****".  
+   -   **Capture OSD Program Name** is always set to "*****".  
 
-    -   **Capture OSD Advertisement ID** is set to the **_SMSTSAdvertID**task sequence variable.  
+   -   **Capture OSD Advertisement ID** is set to the **_SMSTSAdvertID**task sequence variable.  
 
-    > [!NOTE]
-    >  This script is not designed to run on Windows PE.  
+   > [!NOTE]
+   >  This script is not designed to run on Windows PE.  
 
 |**Value**|**Description**|  
 |-|-|
@@ -10563,9 +10718,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
 
 #### Properties  
 
@@ -10742,9 +10897,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
 
 #### Properties  
 
@@ -10794,9 +10949,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
 
 #### Properties  
 
@@ -10843,49 +10998,49 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
  Obtain the latest version of the WUA stand-alone installer for:  
 
--   x86 versions (WindowsUpdateAgent30-x86.exe) at [http://go.microsoft.com/fwlink/?LinkID=100334](http://go.microsoft.com/fwlink/?LinkID=100334)  
+- x86 versions (WindowsUpdateAgent30-x86.exe) at [http://go.microsoft.com/fwlink/?LinkID=100334](http://go.microsoft.com/fwlink/?LinkID=100334)  
 
--   x64 version (WindowsUpdateAgent30-x64.exe) at [http://go.microsoft.com/fwlink/?LinkID=100335](http://go.microsoft.com/fwlink/?LinkID=100335)  
+- x64 version (WindowsUpdateAgent30-x64.exe) at [http://go.microsoft.com/fwlink/?LinkID=100335](http://go.microsoft.com/fwlink/?LinkID=100335)  
 
- Windows 7 and later include the most recent version of WUA, so no upgrade is necessary.  
+  Windows 7 and later include the most recent version of WUA, so no upgrade is necessary.  
 
- For more information, see [Updating Windows Update Agent](http://msdn2.microsoft.com/library/aa387285.aspx).  
+  For more information, see [Updating Windows Update Agent](http://msdn2.microsoft.com/library/aa387285.aspx).  
 
- When enabled in the Task Sequencer, this script runs multiple times while in the State Restore Phase of operating system deployment. It is first run after the operating system has started for the first time. Ensure that the latest updates and service packs are installed before the installation of any applications that might depend on specific updates or service packs being installed on the target computer. For example, an application might be dependent on the latest version of the Microsoft .NET Framework being installed.  
+  When enabled in the Task Sequencer, this script runs multiple times while in the State Restore Phase of operating system deployment. It is first run after the operating system has started for the first time. Ensure that the latest updates and service packs are installed before the installation of any applications that might depend on specific updates or service packs being installed on the target computer. For example, an application might be dependent on the latest version of the Microsoft .NET Framework being installed.  
 
- This script also runs after the installation of applications, which ensures that the latest application service packs and updates have been applied. For example, use this script to ensure that the latest updates are applied to Microsoft Office 2010 or the 2007 Office system.  
+  This script also runs after the installation of applications, which ensures that the latest application service packs and updates have been applied. For example, use this script to ensure that the latest updates are applied to Microsoft Office 2010 or the 2007 Office system.  
 
- It is possible, during the installation of one or more updates, the target computer will need to be restarted to allow an update installation to finish fully. To ensure that updates are properly installed, if the script detects that the installation of an update requires the target computer to be restarted, the script automatically restarts the target computer and resumes if additional updates have been detected and are pending installation. The script exits if it determines that the target computer is fully up to date. An error will be logged if, while updating the target computer, the script has seven unsuccessful attempts to install the updates and the target computer still requires a restart.  
+  It is possible, during the installation of one or more updates, the target computer will need to be restarted to allow an update installation to finish fully. To ensure that updates are properly installed, if the script detects that the installation of an update requires the target computer to be restarted, the script automatically restarts the target computer and resumes if additional updates have been detected and are pending installation. The script exits if it determines that the target computer is fully up to date. An error will be logged if, while updating the target computer, the script has seven unsuccessful attempts to install the updates and the target computer still requires a restart.  
 
- During run time, the script performs the following tasks:  
+  During run time, the script performs the following tasks:  
 
--   Configure the target computer to use a WSUS server, if the **WSUSServer** property was specified.  
+- Configure the target computer to use a WSUS server, if the **WSUSServer** property was specified.  
 
--   Verify that the latest version ofthe WUA is installed on the target computer.  
+- Verify that the latest version ofthe WUA is installed on the target computer.  
 
--   Search the target computer for applicable updates that are not already installed and that might be typically hidden.  
+- Search the target computer for applicable updates that are not already installed and that might be typically hidden.  
 
--   Each update has an associated **UpdateID** and **QNumber** property:  
+- Each update has an associated **UpdateID** and **QNumber** property:  
 
-    -   The **UpdateID** property is in GUID form, such as *67da2176-5c57-4614-a514-33abbdd51f67*.  
+  -   The **UpdateID** property is in GUID form, such as *67da2176-5c57-4614-a514-33abbdd51f67*.  
 
-    -   The **QNumber** property is a numerical value, such as *987654*.  
+  -   The **QNumber** property is a numerical value, such as *987654*.  
 
--   The script compares the **UpdateID** and **KBArticle** property values against the list of exclusions specified in the following MDT properties:  
+- The script compares the **UpdateID** and **KBArticle** property values against the list of exclusions specified in the following MDT properties:  
 
-    -   **WUMU_ExcludeID**. A list of UpdateIDs to exclude; any update with an **UpdateID** found in this list will not be installed.  
+  -   **WUMU_ExcludeID**. A list of UpdateIDs to exclude; any update with an **UpdateID** found in this list will not be installed.  
 
-    -   **WUMU_ExcludeKB**. A list of **QNumbers** to exclude; any update with a **QNumber** found in this list will not be installed.  
+  -   **WUMU_ExcludeKB**. A list of **QNumbers** to exclude; any update with a **QNumber** found in this list will not be installed.  
 
-    -   In addition, any update that requires user input will be excluded and not installed.  
+  -   In addition, any update that requires user input will be excluded and not installed.  
 
--   All updates that require approval of an End User License Agreement (EULA) will automatically be approved by the script. Be sure to manually read and check each EULA before running this script in a production environment.  
+- All updates that require approval of an End User License Agreement (EULA) will automatically be approved by the script. Be sure to manually read and check each EULA before running this script in a production environment.  
 
--   The activity for each update is written to the ZTIWindowsUpdate.log file, with the string INSTALL or SKIP if the update has been approved for installation, along with the UpdateID, a short description of the update, and the QNumber.  
+- The activity for each update is written to the ZTIWindowsUpdate.log file, with the string INSTALL or SKIP if the update has been approved for installation, along with the UpdateID, a short description of the update, and the QNumber.  
 
--   Each update to be installed is downloaded and installed in batches.  
+- Each update to be installed is downloaded and installed in batches.  
 
--   The target computer might require more than one restart during the update installation.  
+- The target computer might require more than one restart during the update installation.  
 
 > [!NOTE]
 >  Windows Internet Explorer 7 requires user interaction, so it is not installed using this script.  
@@ -10906,11 +11061,11 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
-|**/UpdateCommand:*param***|-                              **IsInstalled**. Set to **0** to query for updates that are not installed.<br /><br /> -                              **IsHidden**. Set to **0** to query for updates that are hidden.|  
-|**/Query:*value***|-                              **True**. Query only for required updates. Do not download and install any binaries.<br /><br /> -                              **False**. Query for and install required updates. Download and install binaries.|  
+|         **Value**          |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
+|----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     **/debug:*value***     | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
+| **/UpdateCommand:*param*** |                                                     -                              <strong>IsInstalled</strong>. Set to <strong>0</strong> to query for updates that are not installed.<br /><br /> -                              <strong>IsHidden</strong>. Set to <strong>0</strong> to query for updates that are hidden.                                                      |
+|     **/Query:*value***     |                                                     -                              <strong>True</strong>. Query only for required updates. Do not download and install any binaries.<br /><br /> -                              <strong>False</strong>. Query for and install required updates. Download and install binaries.                                                     |
 
 > [!NOTE]
 >  When specified, **UpdateCommand** requires at least one option.  
@@ -10958,9 +11113,9 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**/debug:*value***|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|  
+|     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                   |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.) |
 
 #### Properties  
 
@@ -11375,13 +11530,13 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
 #### Arguments  
 
-|**Value**|**Description**|  
-|-|-|
-|**-r**|Renames expanded files|  
-|**-D**|Displays the list of files in the source directory|  
-|***Source***|Source file specification (Wildcards can be used.)|  
-|**-F:*Files***|Name of files to expand from a .cab file|  
-|***Destination***|Destination file &#124; path specification (**Destination** can be a directory. If **Source** is multiple files and **-r** is not specified, **Destination** must be a directory.)|  
+|     **Value**     |                                                                                  **Description**                                                                                   |
+|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|      **-r**       |                                                                               Renames expanded files                                                                               |
+|      **-D**       |                                                                 Displays the list of files in the source directory                                                                 |
+|   ***Source***    |                                                                 Source file specification (Wildcards can be used.)                                                                 |
+|  **-F:*Files***   |                                                                      Name of files to expand from a .cab file                                                                      |
+| ***Destination*** | Destination file &#124; path specification (**Destination** can be a directory. If **Source** is multiple files and **-r** is not specified, **Destination** must be a directory.) |
 
 ###  <a name="ImageX.exe"></a> ImageX.exe  
  ImageX is a command-line utility that enables OEMs and corporations to capture, modify, and apply file-based disk images for rapid deployment. ImageX works with WIM files for copying to a network, or it can work with other technologies that use WIM images, such as Windows Setup and Windows Deployment Services.  
@@ -11611,13 +11766,13 @@ Disable-MDTMonitorService [<CommonParameters>]
 #### Description  
  This cmdlet disables the MDT monitoring service, which runs on the computer where MDT is installed. The MDT monitoring service collects monitoring information that can be displayed:  
 
--   In the Monitoring node in a deployment share in the Deployment Workbench  
+- In the Monitoring node in a deployment share in the Deployment Workbench  
 
--   Using the [Get-MDTMonitorData](#Get-MDTMonitorData) cmdlet  
+- Using the [Get-MDTMonitorData](#Get-MDTMonitorData) cmdlet  
 
- The MDT monitoring service can subsequently be enabled using the [Enable-MDTMonitorService](#Enable-MDTMonitorService).  
+  The MDT monitoring service can subsequently be enabled using the [Enable-MDTMonitorService](#Enable-MDTMonitorService).  
 
- For more information on the MDT monitoring service, see the section "Monitoring MDT Deployments" in the MDT document, *Using the Microsoft Deployment Toolkit*.  
+  For more information on the MDT monitoring service, see the section "Monitoring MDT Deployments" in the MDT document, *Using the Microsoft Deployment Toolkit*.  
 
 #### Parameters  
  This subsection provides information about the various parameters that can be used with the **Disable-MDTMonitorService** cmdlet.  
@@ -11653,13 +11808,13 @@ Enable-MDTMonitorService [-EventPort] <Int32> [-DataPort] <Int32> [<CommonParame
 #### Description  
  This cmdlet enables the MDT monitoring service, which runs on the computer where MDT is installed. The MDT monitoring service collects monitoring information that can be displayed:  
 
--   In the Monitoring node in a deployment share in the Deployment Workbench.  
+- In the Monitoring node in a deployment share in the Deployment Workbench.  
 
--   Using the [Get-MDTMonitorData](#Get-MDTMonitorData) cmdlet  
+- Using the [Get-MDTMonitorData](#Get-MDTMonitorData) cmdlet  
 
- The MDT monitoring service can be disabled using the [Disable-MDTMonitorService](#Disable-MDTMonitorService).  
+  The MDT monitoring service can be disabled using the [Disable-MDTMonitorService](#Disable-MDTMonitorService).  
 
- For more information on the MDT monitoring service, see the section "Monitoring MDT Deployments" in the MDT document, *Using the Microsoft Deployment Toolkit*.  
+  For more information on the MDT monitoring service, see the section "Monitoring MDT Deployments" in the MDT document, *Using the Microsoft Deployment Toolkit*.  
 
 #### Parameters  
  This subsection provides information about the various parameters that can be used with the **Enable-MDTMonitorService** cmdlet.  
@@ -11977,11 +12132,11 @@ Get-MDTPersistentDrive [<CommonParameters>]
 
  The output from this cmdlet contains the following information:  
 
--   Windows PowerShell drive name, such as DS001  
+- Windows PowerShell drive name, such as DS001  
 
--   Directory path, such as \\\WDG-MDT-01\DeploymentShare$  
+- Directory path, such as \\\WDG-MDT-01\DeploymentShare$  
 
- Persisted MDT Windows PowerShell drives are similar to persisted network drive mappings.  
+  Persisted MDT Windows PowerShell drives are similar to persisted network drive mappings.  
 
 > [!NOTE]
 >  This list of persisted MDT Windows PowerShell drives is maintained on a per user basis and are stored in the user profile.  
@@ -12093,11 +12248,11 @@ Import-MDTApplication [-Path <String>] -Name <String> Bundle [<CommonParameters>
 
  If this parameter is:  
 
--   Specified, then the files are moved and the files in the folder specified in the *ApplicationSourcePath* parameter are deleted  
+- Specified, then the files are moved and the files in the folder specified in the *ApplicationSourcePath* parameter are deleted  
 
--   Not specified, then the files are copied and the files in the folder specified in the *ApplicationSourcePath* parameter are retained  
+- Not specified, then the files are copied and the files in the folder specified in the *ApplicationSourcePath* parameter are retained  
 
- This parameter is only valid for use in the first syntax example.  
+  This parameter is only valid for use in the first syntax example.  
 
 |**Parameter**|**Value**|  
 |-|-|  
@@ -12110,11 +12265,11 @@ Import-MDTApplication [-Path <String>] -Name <String> Bundle [<CommonParameters>
 ##### -NoSource [<SwitchParameter\>]  
  This parameter specifies that the application being imported is an application that has no source files to be copied. When using this parameter, the application source files are:  
 
--   On a network shared folder, which is specified in the application installation command line or working directory configuration settings  
+- On a network shared folder, which is specified in the application installation command line or working directory configuration settings  
 
--   Already present in the operating system image  
+- Already present in the operating system image  
 
- This parameter is only valid for use in the second syntax example.  
+  This parameter is only valid for use in the second syntax example.  
 
 |**Parameter**|**Value**|  
 |-|-|  
@@ -12346,11 +12501,11 @@ Import-MDTOperatingSystem [-Path <String>] -WDSServer <String> [<CommonParameter
 
  If this parameter is:  
 
--   Specified, then the files are moved and the files in the folder specified in the *DestinationFolder* parameter are deleted  
+- Specified, then the files are moved and the files in the folder specified in the *DestinationFolder* parameter are deleted  
 
--   Not specified, then the files are copied and the files in the folder specified in the *DestinationFolder* parameter are retained  
+- Not specified, then the files are copied and the files in the folder specified in the *DestinationFolder* parameter are retained  
 
- This parameter is only valid for use in the first and second syntax examples.  
+  This parameter is only valid for use in the first and second syntax examples.  
 
 |**Parameter**|**Value**|  
 |-|-|  
@@ -12532,11 +12687,11 @@ Import-MDTTaskSequence [-Path <String>] -Template <String> -Name <String> -ID <S
 ##### -Template <String\>  
  This parameter specifies the task sequence template to be used for importing the new task sequence. Task sequence templates are .xml files that contain the task sequence steps for a particular type of task sequence. If the task sequence template is located in:  
 
--   The *installation_folder*\Templates folder (where *installation_folder* is the folder in which MDT is installed), then only the .xml file name is required.  
+- The *installation_folder*\Templates folder (where *installation_folder* is the folder in which MDT is installed), then only the .xml file name is required.  
 
--   Another folder, then the fully qualified path, including the name of the task sequence template .xml, is required.  
+- Another folder, then the fully qualified path, including the name of the task sequence template .xml, is required.  
 
- For more information on the task sequence templates that are included with MDT for LTI deployments, see the section "Create a New Task Sequence in the Deployment Workbench" in the MDT document, *Using the Microsoft Deployment Toolkit*.  
+  For more information on the task sequence templates that are included with MDT for LTI deployments, see the section "Create a New Task Sequence in the Deployment Workbench" in the MDT document, *Using the Microsoft Deployment Toolkit*.  
 
 |**Parameter**|**Value**|  
 |-|-|  
@@ -12720,7 +12875,7 @@ Import-MDTTaskSequence -Path "DS001:\Control" –Template "Client.xml" –Name "
 ##### Description  
  This example imports a task sequence named *Deploy Windows 8 to Reference Computer* and creates the task sequence in the DS001:\Control\WIN8REFERENCE folder in the deployment share. The comment, “Task sequence for deploying Windows 8 to the reference computer (WDG-REF-01),” is assigned to the task sequence. The version number of the task sequence is set to **1.00**.  
 
- The operating system associated with the task sequence is located at DS001:\Operating Systems\Windows 8_x64 in the deployment share. The registered owner of the operating system will be set to **Woodgrove Bank Employee**. The registered organization of the operating system will be set to **Woodgrove Bank**. The Internet Explorer home page will default to **http://www.woodgrovebank.com**. The password for the local, built-in Administrator account will be set to a value of **P@ssw0rd**. The product key for the operating system will be set to **1234512345123451234512345**.  
+ The operating system associated with the task sequence is located at DS001:\Operating Systems\Windows 8_x64 in the deployment share. The registered owner of the operating system will be set to **Woodgrove Bank Employee**. The registered organization of the operating system will be set to **Woodgrove Bank**. The Internet Explorer home page will default to **<http://www.woodgrovebank.com>**. The password for the local, built-in Administrator account will be set to a value of <strong>P@ssw0rd</strong>. The product key for the operating system will be set to **1234512345123451234512345**.  
 
 #### Example 2  
 
@@ -12734,7 +12889,7 @@ Import-MDTTaskSequence -Path "DS001:\Control" –Template "Client.xml" –Name "
 
  The operating system associated with the task sequence is located at DS001:\Operating Systems\Windows 8_x64 in the deployment share, which is passed to the cmdlet using the *$OSObject* variable. The *$OSObject* variable is set to an existing operating system object using the **Get-Item** cmdlet.  
 
- The registered owner of the operating system will be set to **Woodgrove Bank Employee**. The registered organization of the operating system will be set to **Woodgrove Bank**. The Internet Explorer home page will default to **http://www.woodgrovebank.com**. The password for the local, built-in Administrator account will be set to a value of **P@ssw0rd**. The product key for the operating system will need to be provided when deploying this task sequence in the Deployment Wizard, in the CustomSettings.ini file, or in the MDT DB.  
+ The registered owner of the operating system will be set to **Woodgrove Bank Employee**. The registered organization of the operating system will be set to **Woodgrove Bank**. The Internet Explorer home page will default to **<http://www.woodgrovebank.com>**. The password for the local, built-in Administrator account will be set to a value of <strong>P@ssw0rd</strong>. The product key for the operating system will need to be provided when deploying this task sequence in the Deployment Wizard, in the CustomSettings.ini file, or in the MDT DB.  
 
 ###  <a name="New-MDTDatabase"></a> New-MDTDatabase  
  This section describes the **New-MDTDatabase** Windows PowerShell cmdlet. Run this cmdlet from a Windows PowerShell console that has the MDT PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".  
@@ -12819,11 +12974,11 @@ New-MDTDatabase [-Path <String>] [-Force] -SQLServer <String> [-Instance <String
 ##### -Netlib <String\>  
  This parameter specifies the SQL network library used in communication with the SQL Server instance specified in the *SQLServer* parameter. The parameter can be set to one of the following values:  
 
--   **DBNMPNTW**, which is used to specify named pipes communication  
+- **DBNMPNTW**, which is used to specify named pipes communication  
 
--   **DBSMSOCN**, which is used to specify TCP/IP sockets communication  
+- **DBSMSOCN**, which is used to specify TCP/IP sockets communication  
 
- If this parameter is not provided, the named pipes SQL network library (DBNMPNTW) is used.  
+  If this parameter is not provided, the named pipes SQL network library (DBNMPNTW) is used.  
 
 |**Parameter**|**Value**|  
 |-|-|  
@@ -13247,11 +13402,11 @@ Test-MDTMonitorData -ServerName <String> -EventPort <Int32> -DataPort <Int32> [<
 #### Description  
  This cmdlet validates if the MDT monitoring service, which runs on the computer on which MDT is installed, is enabled and running properly. The MDT monitoring service collects monitoring information that can be displayed:  
 
--   In the Monitoring node in a deployment share in the Deployment Workbench  
+- In the Monitoring node in a deployment share in the Deployment Workbench  
 
--   Using the [Get-MDTMonitorData](#Get-MDTMonitorData) cmdlet  
+- Using the [Get-MDTMonitorData](#Get-MDTMonitorData) cmdlet  
 
- The MDT monitoring service can be disabled using the [Disable-MDTMonitorService](#Disable-MDTMonitorService). Monitoring information can be written to the MDT monitoring service using the [Set-MDTMonitorData](#Set-MDTMonitorData) cmdlet.  
+  The MDT monitoring service can be disabled using the [Disable-MDTMonitorService](#Disable-MDTMonitorService). Monitoring information can be written to the MDT monitoring service using the [Set-MDTMonitorData](#Set-MDTMonitorData) cmdlet.  
 
 > [!NOTE]
 >  For this cmdlet to function properly there must be at least one MDT monitoring data item in the deployment share. If no MDT monitoring information has been recorded, the deployment share will fail the test.  
@@ -13369,11 +13524,11 @@ Update-MDTDatabaseSchema -SQLServer <String> [-Instance <String>] [-Port <String
 ##### -Netlib <String\>  
  This parameter specifies the SQL network library that is used in communication with the SQL Server instance specified in the *SQLServer* parameter. The parameter can be set to one of the following values:  
 
--   **DBNMPNTW**, which is used to specify named pipes communication  
+- **DBNMPNTW**, which is used to specify named pipes communication  
 
--   **DBSMSOCN**, which is used to specify TCP/IP sockets communication  
+- **DBSMSOCN**, which is used to specify TCP/IP sockets communication  
 
- If this parameter is not provided, the named pipes SQL network library (**DBNMPNTW**) is used.  
+  If this parameter is not provided, the named pipes SQL network library (**DBNMPNTW**) is used.  
 
 > [!NOTE]
 >  The Deployment Workbench does not provide the option for configuring the SQL network library. The Deployment Workbench always uses named pipes communication. However, the SQL network library can be configured in the CustomSettings.ini file.  
@@ -13714,21 +13869,21 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 ## UDI Reference  
  This reference provides further information about UDI and includes topics on:  
 
--   UDI concepts as described in [UDI Concepts](#UDIConcepts)  
+- UDI concepts as described in [UDI Concepts](#UDIConcepts)  
 
--   OSDResults as described in [OSDResults Reference](#OSDResultsReference)  
+- OSDResults as described in [OSDResults Reference](#OSDResultsReference)  
 
--   User Centric App Installer as described in [User-Centric App Installer Reference](#UserCentricAppInstallerReference)  
+- User Centric App Installer as described in [User-Centric App Installer Reference](#UserCentricAppInstallerReference)  
 
--   UDI stages as described in [UDI Stage Reference](#UDIStageReference)  
+- UDI stages as described in [UDI Stage Reference](#UDIStageReference)  
 
--   UDI tasks as described in [UDI Task Reference](#UDITaskReference)  
+- UDI tasks as described in [UDI Task Reference](#UDITaskReference)  
 
--   UDI validators as described in [UDI Validator Reference](#UDIValidatorReference)  
+- UDI validators as described in [UDI Validator Reference](#UDIValidatorReference)  
 
--   UDI Wizard Pages as described in [UDI Wizard Page Reference](#UDIWizardPageReference)  
+- UDI Wizard Pages as described in [UDI Wizard Page Reference](#UDIWizardPageReference)  
 
- Each of these reference topics are discussed in subsequent sections.  
+  Each of these reference topics are discussed in subsequent sections.  
 
 ###  <a name="UDIConcepts"></a> UDI Concepts  
  This section contains concepts that help describe UDI, the UDI Wizard, and the UDI Wizard Designer.  
@@ -13787,11 +13942,11 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 ####  <a name="UDITaskSequence"></a> UDI Task Sequence  
  You create a UDI task sequence using one of the following UDI-specific MDT task sequence templates, which run the UDI Wizard at the appropriate step in the task sequence:  
 
--   **User-Driven Installation Task Sequence.** This task sequence template is used for the New Computer, Refresh Computer, and Replace Computer MDT deployment scenarios.  
+- **User-Driven Installation Task Sequence.** This task sequence template is used for the New Computer, Refresh Computer, and Replace Computer MDT deployment scenarios.  
 
--   **User-Driven Installation Replace Task Sequence.** This task sequence template is the first step in a two-step process in the Replace Computer deployment scenario and is used to capture user state migration data. The second step in the two-step process is the User-Driven Installation Task Sequence task sequence template, which you use to deploy the target applications and operating system and restore the user state migration data saved during the first step of the process.  
+- **User-Driven Installation Replace Task Sequence.** This task sequence template is the first step in a two-step process in the Replace Computer deployment scenario and is used to capture user state migration data. The second step in the two-step process is the User-Driven Installation Task Sequence task sequence template, which you use to deploy the target applications and operating system and restore the user state migration data saved during the first step of the process.  
 
- For more information about UDI task sequence templates, see the section, "Identify the UDI Task Sequence Templates in MDT", in the MDT document *Using the Microsoft Deployment Toolkit*. For more information about these components, see the section, "Identify UDI Deployment Process Components", in the MDT document *Using the Microsoft Deployment Toolkit*, which is included with MDT.  
+  For more information about UDI task sequence templates, see the section, "Identify the UDI Task Sequence Templates in MDT", in the MDT document *Using the Microsoft Deployment Toolkit*. For more information about these components, see the section, "Identify UDI Deployment Process Components", in the MDT document *Using the Microsoft Deployment Toolkit*, which is included with MDT.  
 
 ####  <a name="UDIWizard"></a> UDI Wizard  
  The UDI Wizard provides the UI for collecting deployment settings that the UDI task sequences consume. The UDI Wizard is initiated as a part of a UDI task sequence and collects the necessary configuration information for customizing the deployment of the Windows client operating systems and applications. The wizard pages read their configuration settings from the UDI Wizard configuration file, which is customized using the UDI Wizard Designer.  
@@ -13848,13 +14003,13 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
  If your requirements go beyond the built-in UDI wizard pages and corresponding wizard page editors, you can write custom UDI wizard pages and wizard page editors. UDI wizard page editors are implemented as DLLs that the UDI Wizard Designer reads. Create wizard page editors using:  
 
--   [Windows Presentation Foundation](http://msdn.microsoft.com/library/ms754130.aspx) version 4.0  
+- [Windows Presentation Foundation](http://msdn.microsoft.com/library/ms754130.aspx) version 4.0  
 
--   [Microsoft Prism](http://compositewpf.codeplex.com/) version 4.0  
+- [Microsoft Prism](http://compositewpf.codeplex.com/) version 4.0  
 
--   [Microsoft Unity Application Block](http://unity.codeplex.com/) (Unity) version 2.1  
+- [Microsoft Unity Application Block](http://unity.codeplex.com/) (Unity) version 2.1  
 
- For more information on developing custom UDI wizard page editors, see the section, "Creating Custom Wizard Page Editors", in the MDT document *User-Driven Installation Developers Guide*.  
+  For more information on developing custom UDI wizard page editors, see the section, "Creating Custom Wizard Page Editors", in the MDT document *User-Driven Installation Developers Guide*.  
 
 ###  <a name="OSDResultsReference"></a> OSDResults Reference  
  **OSDResults** is a part of UDI that displays the results of a deployment performed using UDI. **OSDResults** displays the **Deployment Complete** dialog box. **OSDResults** is displayed prior to Windows logon the first time the target computer is started. The user can use **OSDResults** and the information in the **Deployment Complete** dialog box to determine the completion status of the deployment process and the configuration of the computer prior to logging on for the first time. In addition, the information in **OSDResults** can be used for troubleshooting any problems encountered during the deployment process.  
@@ -13873,40 +14028,40 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
  The following is the high-level process for how the **OSDResults** feature works in UDI:  
 
-1.  A task sequence runs on the target computer.  
+1. A task sequence runs on the target computer.  
 
-     The task sequence is based on one of the followUDI task sequence templates:  
+    The task sequence is based on one of the followUDI task sequence templates:  
 
-    -   **User Driven Installation Task Sequence**. This task sequence template is used for the MDT New Computer, Refresh Computer, and Replace Computer MDT deployment scenarios.  
+   - **User Driven Installation Task Sequence**. This task sequence template is used for the MDT New Computer, Refresh Computer, and Replace Computer MDT deployment scenarios.  
 
-    -   **User-Driven Installation Replace Task Sequence**. This task sequence template is the first step in a two-step process in the MDT Replace Computer deployment scenario and is used to capture user state migration data. The second step in the two step process is the MDT New Computer deployment scenario using the **User Driven Installation Task Sequence** task sequence template, which is used to deploy the target applications and operating system and restore the user state migration data saved during the first step of the process  
+   - **User-Driven Installation Replace Task Sequence**. This task sequence template is the first step in a two-step process in the MDT Replace Computer deployment scenario and is used to capture user state migration data. The second step in the two step process is the MDT New Computer deployment scenario using the **User Driven Installation Task Sequence** task sequence template, which is used to deploy the target applications and operating system and restore the user state migration data saved during the first step of the process  
 
      For more information about the:  
 
-    -   UDI task sequence templates, see the section, "Identify the UDI Task Sequence Templates in MDT", in the MDT document *Using the Microsoft Deployment Toolkit*  
+   - UDI task sequence templates, see the section, "Identify the UDI Task Sequence Templates in MDT", in the MDT document *Using the Microsoft Deployment Toolkit*  
 
-    -   Relationship between MDT deployment scenarios and UDI stages, see [UDI Stage Reference](#UDIStageReference)  
+   - Relationship between MDT deployment scenarios and UDI stages, see [UDI Stage Reference](#UDIStageReference)  
 
-2.  During the task sequence, the configuration settings provided by task sequence variables and from user input in the UDI Wizard are saved in the *%DEPLOYROOT%*\Tools\OSDResults folder on the target computer (where *%DEPLOYROOT%* is the root of the folder in which the MDT files are locally cached on the target computer).  
+2. During the task sequence, the configuration settings provided by task sequence variables and from user input in the UDI Wizard are saved in the *%DEPLOYROOT%*\Tools\OSDResults folder on the target computer (where *%DEPLOYROOT%* is the root of the folder in which the MDT files are locally cached on the target computer).  
 
-3.  In the **OSD Results and Branding** group in the task sequence, the following task sequence steps are run that affect **OSDResults**:  
+3. In the **OSD Results and Branding** group in the task sequence, the following task sequence steps are run that affect **OSDResults**:  
 
-    -   **Cache OSD Results.** This task sequence step copies the contents of the *%DEPLOYROOT%*\Tools\OSDResults folder to the %WINDIR%\UDI folder on the target computer. This ensures that the contents of the OSDResults folder will be persisted after the task sequence finishes.  
+   -   **Cache OSD Results.** This task sequence step copies the contents of the *%DEPLOYROOT%*\Tools\OSDResults folder to the %WINDIR%\UDI folder on the target computer. This ensures that the contents of the OSDResults folder will be persisted after the task sequence finishes.  
 
-    -   **Run OSD Results.** This tasks sequence step configures the target computer to run **OSDResults** the first time the computer starts.  
+   -   **Run OSD Results.** This tasks sequence step configures the target computer to run **OSDResults** the first time the computer starts.  
 
-4.  The target computer starts for the first time, and OSDResults.exe is run prior to the Windows logon screen.  
+4. The target computer starts for the first time, and OSDResults.exe is run prior to the Windows logon screen.  
 
-     The **Welcome** tab in the **Deployment Complete** dialog box is displayed. The **Welcome** tab provides helpful information about the deployment and contact information in the event that issues with the deployment are discovered.  
+    The **Welcome** tab in the **Deployment Complete** dialog box is displayed. The **Welcome** tab provides helpful information about the deployment and contact information in the event that issues with the deployment are discovered.  
 
-     Review the information on the **Deployment Summary** and **Applications Installed** tabs to verify that the operating system and applications were installed correctly. When you have completed reviewing these tables, click **Start Windows** to log on to Windows 7 for the first time.  
+    Review the information on the **Deployment Summary** and **Applications Installed** tabs to verify that the operating system and applications were installed correctly. When you have completed reviewing these tables, click **Start Windows** to log on to Windows 7 for the first time.  
 
-    > [!NOTE]
-    >  Configuration Manager applications are not displayed on the **Applications Installed** tab. The Configuration Manager applications are detected after the user logs on to the target computer the first time.  
+   > [!NOTE]
+   >  Configuration Manager applications are not displayed on the **Applications Installed** tab. The Configuration Manager applications are detected after the user logs on to the target computer the first time.  
 
-5.  The Windows logon screen is displayed, and the logon process continues normally.  
+5. The Windows logon screen is displayed, and the logon process continues normally.  
 
-     AppInstall.exe is run the first time a user logs on to the target computer. For more information on this process, see [User-Centric App Installer Reference](#UserCentricAppInstallerReference).  
+    AppInstall.exe is run the first time a user logs on to the target computer. For more information on this process, see [User-Centric App Installer Reference](#UserCentricAppInstallerReference).  
 
 ###  <a name="UserCentricAppInstallerReference"></a> User-Centric App Installer Reference  
  The User-Centric App Installer feature in UDI is used to report any applications installed during the UDI deployment process to the Application Catalog feature in Configuration Manager. The User-Centric App Installer feature provides the link between the applications selected on the **ApplicatonPage** wizard page in the UDI Wizard and any optional Configuration Manager applications advertised to the users.  
@@ -13915,70 +14070,70 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
  The following is the high-level process for how the App Install feature works in UDI:  
 
-1.  Configuration Manager applications are created in Configuration Manager.  
+1. Configuration Manager applications are created in Configuration Manager.  
 
-     For more information about creating and managing Configuration Manager applications, see the following resources:  
+    For more information about creating and managing Configuration Manager applications, see the following resources:  
 
-    -   [How to Create Applications in Configuration Manager](http://technet.microsoft.com/library/gg682159.aspx)  
+   -   [How to Create Applications in Configuration Manager](http://technet.microsoft.com/library/gg682159.aspx)  
 
-    -   [Operations and Maintenance for Application Management in Configuration Manager](http://technet.microsoft.com/library/gg681963.aspx)  
+   -   [Operations and Maintenance for Application Management in Configuration Manager](http://technet.microsoft.com/library/gg681963.aspx)  
 
-2.  The Configuration Manager user collections are created, and users are added to the collection.  
+2. The Configuration Manager user collections are created, and users are added to the collection.  
 
-     For more information about creating and managing user collections and adding users to collections, see the following resources:  
+    For more information about creating and managing user collections and adding users to collections, see the following resources:  
 
-    -   [Collections in Configuration Manager](http://technet.microsoft.com/library/gg682169.aspx)  
+   -   [Collections in Configuration Manager](http://technet.microsoft.com/library/gg682169.aspx)  
 
-    -   [How to Create Collections in Configuration Manager](http://technet.microsoft.com/library/gg712295.aspx)  
+   -   [How to Create Collections in Configuration Manager](http://technet.microsoft.com/library/gg712295.aspx)  
 
-3.  The Configuration Manager applications are deployed to the user collections.  
+3. The Configuration Manager applications are deployed to the user collections.  
 
-     For more information about how to deploy the applications to user collections, see [How to Deploy Applications in Configuration Manager](http://technet.microsoft.com/library/gg682082.aspx).  
+    For more information about how to deploy the applications to user collections, see [How to Deploy Applications in Configuration Manager](http://technet.microsoft.com/library/gg682082.aspx).  
 
-4.  The Configuration Manager applications are made available on the **ApplicatonPage** wizard page using the UDI Wizard Designer.  
+4. The Configuration Manager applications are made available on the **ApplicatonPage** wizard page using the UDI Wizard Designer.  
 
-     For more information about how to make Configuration Manager applications available on the **ApplicatonPage** wizard page, see the section, "Step 5-11: Customize the UDI Wizard Configuration File for the Target Computer", in the MDT document *Quick Start Guide for User-Driven Installation*.  
+    For more information about how to make Configuration Manager applications available on the **ApplicatonPage** wizard page, see the section, "Step 5-11: Customize the UDI Wizard Configuration File for the Target Computer", in the MDT document *Quick Start Guide for User-Driven Installation*.  
 
-5.  UDA is configured using one of the following methods:  
+5. UDA is configured using one of the following methods:  
 
-    -   In the Configuration Manger console (For more information about configuring UDA in the Configuration Manager console, see [How to Manage User Device Affinity in Configuration Manager](http://technet.microsoft.com/library/gg699365.aspx).)  
+   - In the Configuration Manger console (For more information about configuring UDA in the Configuration Manager console, see [How to Manage User Device Affinity in Configuration Manager](http://technet.microsoft.com/library/gg699365.aspx).)  
 
-    -   On the **UDAPage** wizard page in the UDI Wizard (For more information about the **UDAPage** wizard page, see [UDAPage](#UDAPage).)  
+   - On the **UDAPage** wizard page in the UDI Wizard (For more information about the **UDAPage** wizard page, see [UDAPage](#UDAPage).)  
 
      After UDA is configured, the specified user account will be the primary user for the target computer.  
 
-    > [!NOTE]
-    >  UDA can only be configured by UDI in the New Computer deployment scenario. It cannot be configured in the Refresh Computer or Replace Computer deployment scenarios.  
+   > [!NOTE]
+   >  UDA can only be configured by UDI in the New Computer deployment scenario. It cannot be configured in the Refresh Computer or Replace Computer deployment scenarios.  
 
-6.  The task sequence is run, and the user selects the Configuration Manager applications on the **ApplicatonPage** wizard page in the UDI Wizard.  
+6. The task sequence is run, and the user selects the Configuration Manager applications on the **ApplicatonPage** wizard page in the UDI Wizard.  
 
-     The UDI Wizard is run in the **UDI Wizard** task sequence step in the **Preinstall** group of the task sequence. When the user selects Configuration Manager applications on the **ApplicatonPage** wizard page, the wizard page creates a separate task sequence variable for each application selected.  
+    The UDI Wizard is run in the **UDI Wizard** task sequence step in the **Preinstall** group of the task sequence. When the user selects Configuration Manager applications on the **ApplicatonPage** wizard page, the wizard page creates a separate task sequence variable for each application selected.  
 
-     For more information on selecting the Configuration Manager applications on the **ApplicatonPage** wizard page in the UDI Wizard, see the section, "Step 6-4: Start the Target Computer with the Task Sequence Bootable Media", in the MDT document *Quick Start Guide for User-Driven Installation*.  
+    For more information on selecting the Configuration Manager applications on the **ApplicatonPage** wizard page in the UDI Wizard, see the section, "Step 6-4: Start the Target Computer with the Task Sequence Bootable Media", in the MDT document *Quick Start Guide for User-Driven Installation*.  
 
-7.  The task sequence installs the Configuration Manager applications that were selected in the previous step.  
+7. The task sequence installs the Configuration Manager applications that were selected in the previous step.  
 
-     The Configuration Manager applications are installed using the following task sequence steps in the **Install Applications** group in the task sequence:  
+    The Configuration Manager applications are installed using the following task sequence steps in the **Install Applications** group in the task sequence:  
 
-    -   **Convert list to two digits**  
+   -   **Convert list to two digits**  
 
-    -   **Install Application**  
+   -   **Install Application**  
 
-8.  The task sequence performs the following tasks in the **OSD Results and Branding** group prior to starting the target operating system for the first time:  
+8. The task sequence performs the following tasks in the **OSD Results and Branding** group prior to starting the target operating system for the first time:  
 
-    -   Copies the information used for OSDResults.exe to the %WINDIR%\UDI folder on the target computer in the **Cache OSD Results** task sequence step  
+   -   Copies the information used for OSDResults.exe to the %WINDIR%\UDI folder on the target computer in the **Cache OSD Results** task sequence step  
 
-    -   Records the task sequence variables created in step 6 for the Configuration Manager applications in the registry on the target computer in the **Branding to Reg** and **Branding to Reg x64** task sequence steps  
+   -   Records the task sequence variables created in step 6 for the Configuration Manager applications in the registry on the target computer in the **Branding to Reg** and **Branding to Reg x64** task sequence steps  
 
-         The tasks sequence variables are saved in the following location in the registry:  
+        The tasks sequence variables are saved in the following location in the registry:  
 
-         **HKEY_LOCAL_MACHINE\Software\Microsoft\MPSD\OSD**  
+        **HKEY_LOCAL_MACHINE\Software\Microsoft\MPSD\OSD**  
 
-    -   Configures the target operating system to automatically run OSDResults.exe when the computer starts prior to the Windows logon screen in the **Run OSD Results** task sequence step  
+   -   Configures the target operating system to automatically run OSDResults.exe when the computer starts prior to the Windows logon screen in the **Run OSD Results** task sequence step  
 
-    -   Configures the target operating system to automatically run AppInstall.exe when a user logs on to the computer for the first time in the **Run OSD Results** task sequence step  
+   -   Configures the target operating system to automatically run AppInstall.exe when a user logs on to the computer for the first time in the **Run OSD Results** task sequence step  
 
-    -   Configures a task on the target operating system to remove the %WINDIR%\UDI folder one month from the date of the deployment  
+   -   Configures a task on the target operating system to remove the %WINDIR%\UDI folder one month from the date of the deployment  
 
 9. The target computer is started, and OSDResults.exe is run.  
 
@@ -13998,15 +14153,15 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 12. AppIntaller connects to Configuration Manager and reads the Application Catalog using the following steps:  
 
-    1.  AppInstall will wait 5 minutes after it starts to allow the Configuration Manager policies to be available.  
+    1. AppInstall will wait 5 minutes after it starts to allow the Configuration Manager policies to be available.  
 
-    2.  After 5 minutes, AppInstall attempts to connect to the Application Catalog.  
+    2. After 5 minutes, AppInstall attempts to connect to the Application Catalog.  
 
-    3.  If AppInstall is unable to connect, then it will wait for a period of time before attempting to connect again.  
+    3. If AppInstall is unable to connect, then it will wait for a period of time before attempting to connect again.  
 
-    4.  AppInstall attempts to connect up to five times before exiting.  
+    4. AppInstall attempts to connect up to five times before exiting.  
 
-     You can configure the connection time-out delay and the number of retries for AppInstall using the AppInstall.exe.config file, which resides in the Tools\OSDResults folder in the MDT files Configuration Manager package. Table 11 lists the configuration settings in the AppInstall.exe.config file.  
+       You can configure the connection time-out delay and the number of retries for AppInstall using the AppInstall.exe.config file, which resides in the Tools\OSDResults folder in the MDT files Configuration Manager package. Table 11 lists the configuration settings in the AppInstall.exe.config file.  
 
 ### Table 11. Configuration Settings in the AppInstall.exe.config File  
 
@@ -14065,7 +14220,7 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
  **Figure 2. Process flow for the NEWCOMPUTER.Prestaged stage**  
 
 ####  <a name="REFRESHStage"></a> REFRESH Stage  
- Figure 3 illustrates the high\-level process flow for the REFRESH stage in in a task sequence created using the User\-Driven Installation Task Sequence task sequence template.  
+ Figure 3 illustrates the high\-level process flow for the REFRESH stage in a task sequence created using the User\-Driven Installation Task Sequence task sequence template.  
 
  ![UDI Reference 3](media/UDIReference3.jpg)  
 
@@ -14132,10 +14287,10 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 15. Error and Exit Codes for the AC Power Check Task  
 
-|**Exit or error code**|**Value**|**Status**|  
-|-|-|-|  
-|Exit|**0**|**Success**, which indicates that the target computer is plugged into AC power|  
-|Exit|**\***|**Error**, which indicates that the target computer is not plugged into AC power|  
+| **Exit or error code** | **Value** |                                    **Status**                                    |
+|------------------------|-----------|----------------------------------------------------------------------------------|
+|          Exit          |   **0**   |  **Success**, which indicates that the target computer is plugged into AC power  |
+|          Exit          |  **\\***  | **Error**, which indicates that the target computer is not plugged into AC power |
 
 #####  <a name="ApplicationDiscovery"></a> Application Discovery  
  Use this UDI task to discover applications that are installed on the target computer.  
@@ -14156,13 +14311,13 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 17. Error and Exit Codes for the Application Discovery Task  
 
-|**Exit or error code**|**Value**|**Status and description**|  
-|-|-|-|  
-|Exit|**0**|**Success**, which indicates that the task successfully scanned for applications|  
-|Exit|**\***|**Warning**, which indicates that the application discovery engine could not be run for some unknown reason|  
-|Exit|**1**|**Warning**, which indicates that the application discovery engine encountered one or more warnings|  
-|Exit|**16777216**|**Warning**, which indicates that critical problems were encountered while initializing the application discovery engine|  
-|Exit|**33554432**|**Warning**, which indicates that critical problems were encountered while processing the application master list|  
+| **Exit or error code** |  **Value**   |                                                **Status and description**                                                |
+|------------------------|--------------|--------------------------------------------------------------------------------------------------------------------------|
+|          Exit          |    **0**     |                     **Success**, which indicates that the task successfully scanned for applications                     |
+|          Exit          |   **\\***    |       **Warning**, which indicates that the application discovery engine could not be run for some unknown reason        |
+|          Exit          |    **1**     |           **Warning**, which indicates that the application discovery engine encountered one or more warnings            |
+|          Exit          | **16777216** | **Warning**, which indicates that critical problems were encountered while initializing the application discovery engine |
+|          Exit          | **33554432** |    **Warning**, which indicates that critical problems were encountered while processing the application master list     |
 
 #####  <a name="CheckSMSFolderOnUSB"></a> CheckSMSFolderOnUSB  
  Use this UDI task to identify whether the \_SMSTaskSequence folder is located on a USB drive on the target computer. By default, the Configuration Manager task sequencer places the \_SMSTaskSequence folder on the drive with the most available free disk space. This can cause problems later in the deployment process if the USB drive is removed.  
@@ -14171,24 +14326,24 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
  If the \_SMSTaskSequence folder is located on a USB drive, this task fails and prevents the deployment from continuing. To resolve this issue and perform the deployment, complete the following steps:  
 
-1.  Disconnect the USB drive from the target computer before starting the task sequence.  
+1. Disconnect the USB drive from the target computer before starting the task sequence.  
 
-2.  Start the task sequence.  
+2. Start the task sequence.  
 
-3.  Wait until the UDI Wizard starts.  
+3. Wait until the UDI Wizard starts.  
 
-4.  Connect the USB drive.  
+4. Connect the USB drive.  
 
-5.  Complete the UDI Wizard.  
+5. Complete the UDI Wizard.  
 
- Table 18 lists the error and exit codes that the **CheckSMSFolderOnUSB** task generates.  
+   Table 18 lists the error and exit codes that the **CheckSMSFolderOnUSB** task generates.  
 
 ### Table 18. Error and Exit Codes for the CheckSMSFolderOnUSB Task  
 
-|**Exit or error code**|**Value**|**Status**|  
-|-|-|-|  
-|Exit|**0**|**Success**, which indicates that the \_SMSTaskSequence folder is not located on a USB drive and the deployment can continue.|  
-|Exit|**\***|**Error**, which indicates that the \_SMSTaskSequence folder is located on a USB drive and the deployment cannot continue.|  
+| **Exit or error code** | **Value** |                                                          **Status**                                                           |
+|------------------------|-----------|-------------------------------------------------------------------------------------------------------------------------------|
+|          Exit          |   **0**   | **Success**, which indicates that the \_SMSTaskSequence folder is not located on a USB drive and the deployment can continue. |
+|          Exit          |  **\\***  |  **Error**, which indicates that the \_SMSTaskSequence folder is located on a USB drive and the deployment cannot continue.   |
 
 #####  <a name="CopyFilesTask"></a> Copy Files Task  
  Use this UDI task to copy files while the UDI Wizard is running on the target computer.  
@@ -14208,11 +14363,11 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 20. Error and Exit Codes for the Copy Files Task  
 
-|**Exit or error code**|**Value**|**Status and description**|  
-|-|-|-|  
-|Exit|**0**|**Success**, which indicates that the copy process succeed|  
-|Exit|**\***|**Error**, which indicates that the copy process failed|  
-|Error|**\-1**|**Error**, which indicates that the copy process failed|  
+| **Exit or error code** | **Value** |                 **Status and description**                 |
+|------------------------|-----------|------------------------------------------------------------|
+|          Exit          |   **0**   | **Success**, which indicates that the copy process succeed |
+|          Exit          |  **\\***  |  **Error**, which indicates that the copy process failed   |
+|         Error          |  **\-1**  |  **Error**, which indicates that the copy process failed   |
 
 #####  <a name="ShellExecuteTask"></a> Shell Execute Task  
  Use this UDI task to run software that can be initiated from a command line.  
@@ -14230,31 +14385,31 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
  You can also run custom Visual Basic scripts designed to run in cscript.exe using the **Shell Execute** task. To run Visual Basic scripts, perform the following steps:  
 
-1.  Type the following text in the **Filename** parameter:  
+1. Type the following text in the **Filename** parameter:  
 
-    ```  
-    %windir%\system32\cscript.exe  
-    ```  
+   ```  
+   %windir%\system32\cscript.exe  
+   ```  
 
-2.  Type name of the Visual Basic script file \(.vbs file\) in the **Parameters** parameter, including any command\-line parameters for the script.  
+2. Type name of the Visual Basic script file \(.vbs file\) in the **Parameters** parameter, including any command\-line parameters for the script.  
 
-     For example, to run a Visual Basic script named *SelfTest.vbs* with a parameter value of **Debug**, type the following \(where *script\_path* is the fully qualified path to the SelfTest.vbs file\):  
+    For example, to run a Visual Basic script named *SelfTest.vbs* with a parameter value of **Debug**, type the following \(where *script\_path* is the fully qualified path to the SelfTest.vbs file\):  
 
-    ```  
-    <script_path>\SelfTest.vbs Debug  
-    ```  
+   ```  
+   <script_path>\SelfTest.vbs Debug  
+   ```  
 
- Table 22 lists the common error and exit codes that the **Shell Execute** task generates.  
+   Table 22 lists the common error and exit codes that the **Shell Execute** task generates.  
 
 > [!NOTE]
 >  Each specific task based on the **Shell Execute** task has a unique set of error and exit codes. Please check the return codes for the software you are running using this task.  
 
 ### Table 22. Common Error and Exit Codes for the Shell Execute Task  
 
-|**Exit or error code**|**Value**|**Status and description**|  
-|-|-|-|  
-|Exit|**0**|**Success**, which indicates that the task finished successfully|  
-|Exit|**\***|**Error**, which indicates that the task failed|  
+| **Exit or error code** | **Value** |                    **Status and description**                    |
+|------------------------|-----------|------------------------------------------------------------------|
+|          Exit          |   **0**   | **Success**, which indicates that the task finished successfully |
+|          Exit          |  **\\***  |         **Error**, which indicates that the task failed          |
 
 #####  <a name="WiredNetworkCheck"></a> Wired Network Check  
  Use this UDI task to determine whether the target computer is connected to a wired network, not using a wireless network connection. This task only uses parameters common to all UDI tasks. For more information about these parameters, see [UDI Task Configuration Settings](#UDITaskConfigurationSettings).  
@@ -14263,10 +14418,10 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 ### Table 23. Error and Exit Codes for the Wired Network Check Task  
 
-|**Exit or error code**|**Value**|**Status and description**|  
-|-|-|-|  
-|Exit|**0**|**Success**, which indicates that the target computer is connected to a wired network|  
-|Exit|**\***|**Error**, which indicates that the target computer is not connected to a wired network|  
+| **Exit or error code** | **Value** |                               **Status and description**                                |
+|------------------------|-----------|-----------------------------------------------------------------------------------------|
+|          Exit          |   **0**   |  **Success**, which indicates that the target computer is connected to a wired network  |
+|          Exit          |  **\\***  | **Error**, which indicates that the target computer is not connected to a wired network |
 
 ###  <a name="UDIValidatorReference"></a> UDI Validator Reference  
  UDI validators are used to validate values entered in text fields on wizard pages. When a UDI validator detects an invalid entry, a message is displayed for the first error encountered at the bottom of the wizard page. The next validation error message, if any, is displayed after you resolve the first validation error. This process continues until all validation errors are resolved. The **Next** button is disabled until all validation errors on the wizard page are resolved.  
@@ -14324,13 +14479,13 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
  Each wizard page can reference the following types of variables:  
 
--   Task sequence variables  
+- Task sequence variables  
 
--   Memory variables  
+- Memory variables  
 
--   Environment variables  
+- Environment variables  
 
- You can reference task sequence and environment variables by bracketing the variable using percent signs (%), such as *%OSDImageIndex%.* You can reference memory variables by bracketing the variable using dollar signs ($), such as *$VolumeArchitecture$.*  
+  You can reference task sequence and environment variables by bracketing the variable using percent signs (%), such as *%OSDImageIndex%.* You can reference memory variables by bracketing the variable using dollar signs ($), such as *$VolumeArchitecture$.*  
 
 > [!NOTE]
 >  If a task sequence variable and an environment variable both have the same name, then the task sequence variable takes precedence over the environment variable.  
@@ -14542,11 +14697,11 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 ######  <a name="NEWCOMPUTERStageBehavior"></a> NEWCOMPUTER Stage Behavior  
  The NEWCOMPUTER stage is used for computers on which no user state migration data exists. The New Computer deployment scenario can be used as the second part of the Replace Computer deployment scenario. If the user selects to:  
 
--   Format the disk on the target computer, then the **UserStatePage** assumes that no user state migration data is located on the local hard disk, so the **Local** option is disabled and all other options are enabled  
+- Format the disk on the target computer, then the **UserStatePage** assumes that no user state migration data is located on the local hard disk, so the **Local** option is disabled and all other options are enabled  
 
--   Not format the disk on the target computer, then the **UserStatePage** assumes that there is user state migration data to be restored, and all options are disabled other than the **Local** option \(Using the **Local** option provides a faster method for restoring the user state migration data than the USB or network shared folder methods.\)  
+- Not format the disk on the target computer, then the **UserStatePage** assumes that there is user state migration data to be restored, and all options are disabled other than the **Local** option \(Using the **Local** option provides a faster method for restoring the user state migration data than the USB or network shared folder methods.\)  
 
- Table 36 lists the behavior of the options on the wizard page for the NEWCOMPUTER stage. The **Format** column indicates whether the target hard disk is to be formatted as a part of the deployment. The other columns indicate the configuration of the options when the **UserStatePage** is loaded.  
+  Table 36 lists the behavior of the options on the wizard page for the NEWCOMPUTER stage. The **Format** column indicates whether the target hard disk is to be formatted as a part of the deployment. The other columns indicate the configuration of the options when the **UserStatePage** is loaded.  
 
 ### Table 36. Behavior of Options for the NEWCOMPUTER Stage  
 
@@ -14569,11 +14724,11 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 ######  <a name="REFRESHStageBehavior"></a> REFRESH Stage Behavior  
  The REFRESH stage is initiated in a full Windows operating system, instead of Windows PE. If the user selects to:  
 
--   Format the disk on the target computer, then the **UserStatePage** assumes that no user state migration data is to be restored, and all options are disabled other than the **NoData** option  
+- Format the disk on the target computer, then the **UserStatePage** assumes that no user state migration data is to be restored, and all options are disabled other than the **NoData** option  
 
--   Not format the disk on the target computer, then the **UserStatePage** assumes that there is user state migration data to be restored, and all options are disabled other than the **Local** option \(Using the **Local** option provides a faster method for restoring the user state migration data than the USB or network shared folder methods.\)  
+- Not format the disk on the target computer, then the **UserStatePage** assumes that there is user state migration data to be restored, and all options are disabled other than the **Local** option \(Using the **Local** option provides a faster method for restoring the user state migration data than the USB or network shared folder methods.\)  
 
- Table 38 lists the behavior of the options on the wizard page for the REFRESH stage. The **Format** column indicates whether the target hard disk is to be formatted as a part of the deployment. The other columns indicate the configuration of the options when the **UserStatePage** is loaded.  
+  Table 38 lists the behavior of the options on the wizard page for the REFRESH stage. The **Format** column indicates whether the target hard disk is to be formatted as a part of the deployment. The other columns indicate the configuration of the options when the **UserStatePage** is loaded.  
 
 ### Table 38. Behavior of Options for the REFRESH Stage  
 
@@ -14667,15 +14822,15 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 ### UDI Build Your Own Page Toolbox Control Reference  
  The Build Your Own Page feature in UDI allows you to create custom wizard pages that you can use to collect additional deployment information for use in UDI. You can create custom wizard pages using the:  
 
--   **Build Your Own Page feature.** This feature allows you to create a custom wizard page for collecting deployment information without requiring you to write code or have developer skills. Use this feature if you need to collect basic information without advanced user interaction. For example, you cannot add any code or customize UI fonts using this feature.  
+- **Build Your Own Page feature.** This feature allows you to create a custom wizard page for collecting deployment information without requiring you to write code or have developer skills. Use this feature if you need to collect basic information without advanced user interaction. For example, you cannot add any code or customize UI fonts using this feature.  
 
--   **UDI SDK and Visual Studio**. Use this SDK if you want to create an advanced, fully customized wizard page in Visual Studio for collecting deployment information. Although the UDI SDK allows you to create customized wizard pages, such as adding custom code or changing fonts, this method requires developer skills.  
+- **UDI SDK and Visual Studio**. Use this SDK if you want to create an advanced, fully customized wizard page in Visual Studio for collecting deployment information. Although the UDI SDK allows you to create customized wizard pages, such as adding custom code or changing fonts, this method requires developer skills.  
 
-     For more information on using the UDI SDK to create custom wizard pages, see "Creating Custom UDI Wizard Pages" in the *User-Drive Installation Developers Guide*.  
+   For more information on using the UDI SDK to create custom wizard pages, see "Creating Custom UDI Wizard Pages" in the *User-Drive Installation Developers Guide*.  
 
- The Build Your Own Page feature includes a toolbox of controls that you can add to your custom wizard page from the Build Your Own Page toolbox, which is displayed when you view the custom wizard page on the **Configure** tab in the UDI Wizard Designer.  
+  The Build Your Own Page feature includes a toolbox of controls that you can add to your custom wizard page from the Build Your Own Page toolbox, which is displayed when you view the custom wizard page on the **Configure** tab in the UDI Wizard Designer.  
 
- Table 45 lists the types of controls to your custom wizard page, which is illustrated in Figure 5. Each of these controls is discussed in further detail in a subordinate section.  
+  Table 45 lists the types of controls to your custom wizard page, which is illustrated in Figure 5. Each of these controls is discussed in further detail in a subordinate section.  
 
 ### Table 45. Types of Controls in the UDI Build Your Own Page Toolbox  
 

@@ -84,7 +84,7 @@ System Center Configuration Manager uses signing and encryption to help protect 
  When you import configuration data, Configuration Manager verifies the file's digital signature. If the files have not been signed, or if the digital signature verification check fails, you will be warned and prompted whether to continue with the import. Continue to import the configuration data only if you explicitly trust the publisher and the integrity of the files.  
 
 ### Encryption and hashing for client notification  
- If you use client notification, all communication uses TLS and the highest encryption that the server and client operating systems can negotiate. For example, a client computer running Windows 7 and a management point running Windows Server 2008 R2 can support 128-bit AES encryption, whereas a client computer running Vista to the same management point but will negotiate down to 3DES encryption. The same negotiation occurs for hashing the packets that are transferred during client notification, which uses SHA-1 or SHA-2.  
+ If you use client notification, all communication uses TLS and the highest encryption that the server and client operating systems can negotiate. For example, a client computer running Windows 7 and a management point running Windows Server 2008 R2 can support 128-bit AES encryption, whereas a client computer running Vista to the same management point will negotiate down to 3DES encryption. The same negotiation occurs for hashing the packets that are transferred during client notification, which uses SHA-1 or SHA-2.  
 
 ##  Certificates used by Configuration Manager  
  For a list of the public key infrastructure (PKI) certificates that can be used by Configuration Manager, any special requirements or limitations, and how the certificates are used, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements). This list includes the supported hash algorithms and key lengths. Most certificates support SHA-256 and 2048 bits key length.  
@@ -94,19 +94,17 @@ System Center Configuration Manager uses signing and encryption to help protect 
 
  PKI certificates are required for the following scenarios:  
 
--   When you manage Configuration Manager clients on the Internet.  
+- When you manage Configuration Manager clients on the Internet.  
 
--   When you manage Configuration Manager clients on mobile devices.  
+- When you manage Configuration Manager clients on mobile devices.  
 
--   When you manage Mac computers.  
+- When you manage Mac computers.  
 
--   When you use cloud-based distribution points.  
+- When you use cloud-based distribution points.  
 
--   When you manage Intel AMT-based computers out of band.  
+  For most other Configuration Manager communications that require certificates for authentication, signing, or encryption, Configuration Manager automatically uses PKI certificates if they are available. If they are not available, Configuration Manager generates self-signed certificates.  
 
- For most other Configuration Manager communications that require certificates for authentication, signing, or encryption, Configuration Manager automatically uses PKI certificates if they are available. If they are not available, Configuration Manager generates self-signed certificates.  
-
- Configuration Manager does not use PKI certificates when it manages mobile devices by using the Exchange Server connector.  
+  Configuration Manager does not use PKI certificates when it manages mobile devices by using the Exchange Server connector.  
 
 ### Mobile device management and PKI certificates  
  If the mobile device has not been locked by the mobile operator, you can use Configuration Manager or Microsoft Intune to request and install a client certificate. This certificate provides mutual authentication between the client on the mobile device and Configuration Manager site systems or Microsoft Intune services. If your mobile device is locked, you cannot use Configuration Manager or Intune to deploy certificates.  
@@ -114,7 +112,7 @@ System Center Configuration Manager uses signing and encryption to help protect 
  If you enable hardware inventory for mobile devices, Configuration Manager or Intune also inventories the certificates that are installed on the mobile device.   
 
 ### Operating system deployment and PKI certificates  
- When you use Configuration Manager to deploy operating systems and a management point requires HTTPS client connections, the client computer must also have a certificate to communicate with the management point, even though it is in a transitional phase such as booting from task sequence media or a PXE-enabled distribution point. To support this scenario, you must create a PKI client authentication certificate and export it with the private key and then import it to the site server properties and also add the management pointâ€™s trusted root CA certificate.  
+ When you use Configuration Manager to deploy operating systems and a management point requires HTTPS client connections, the client computer must also have a certificate to communicate with the management point, even though it is in a transitional phase such as booting from task sequence media or a PXE-enabled distribution point. To support this scenario, you must create a PKI client authentication certificate and export it with the private key and then import it to the site server properties and also add the management point's trusted root CA certificate.  
 
  If you create bootable media, you import the client authentication certificate when you create the bootable media. Configure a password on the bootable media to help protect the private key and other sensitive data configured in the task sequence. Every computer that boots from the bootable media will present the same certificate to the management point as required for client functions such as requesting client policy.  
 
@@ -156,7 +154,7 @@ System Center Configuration Manager uses signing and encryption to help protect 
 
  Certificate revocation list (CRL) checking is enabled by default in IIS, so if you are using a CRL with your PKI deployment, there is nothing additional to configure on most Configuration Manager site systems that run IIS. The exception is for software updates, which requires a manual step to enable CRL checking to verify the signatures on software update files.  
 
- CRL checking is enabled by default for client computers when they use HTTPS client connections. CRL checking is not enabled by default when you run the Out of Band Management console to connect to AMT-based computer, and you can enable this option. You cannot disable CRL checking for clients on Mac computers in Configuration Manager SP1 or later.  
+ CRL checking is enabled by default for client computers when they use HTTPS client connections. You cannot disable CRL checking for clients on Mac computers in Configuration Manager SP1 or later.  
 
  CRL checking is not supported for the following connections in Configuration Manager:  
 
@@ -174,39 +172,39 @@ System Center Configuration Manager uses signing and encryption to help protect 
 
  In addition to this certificate for each site system server, Configuration Manager generates a self-signed certificate for most site system roles. When there is more than one instance of the site system role in the same site, they share the same certificate. For example, you might have multiple management points or multiple enrollment points in the same site. This self-signed certificate also uses SHA-256 and has a key length of 2048 bits. It is also copied to the Trusted People Store on site system servers that might need to trust it. The following site system roles generate this certificate:  
 
--   Application Catalog web service point  
+- Application Catalog web service point  
 
--   Application Catalog website point  
+- Application Catalog website point  
 
--   Asset Intelligence synchronization point  
+- Asset Intelligence synchronization point  
 
--   Certificate registration point  
+- Certificate registration point  
 
--   Endpoint Protection point  
+- Endpoint Protection point  
 
--   Enrollment point  
+- Enrollment point  
 
--   Fallback status point  
+- Fallback status point  
 
--   Management point  
+- Management point  
 
--   Multicast-enabled distribution point  
+- Multicast-enabled distribution point  
 
--   Out of band service point  
+- Out of band service point  
 
--   Reporting services point  
+- Reporting services point  
 
--   Software update point  
+- Software update point  
 
--   State migration point  
+- State migration point  
 
--   System Health Validator point  
+- System Health Validator point  
 
--   Microsoft Intune connector  
+- Microsoft Intune connector  
 
- These certificates are managed automatically by Configuration Manager, and where necessary, automatically generated.  
+  These certificates are managed automatically by Configuration Manager, and where necessary, automatically generated.  
 
- Configuration Manager also uses a client authentication certificate to send status messages from the distribution point to the management point. When the management point is configured for HTTPS client connections only, you must use a PKI certificate. If the management point accepts HTTP connections, you can use a PKI certificate or select the option to use a self-signed certificate that has client authentication capability, uses SHA-256, and has a key length of 2048 bits.  
+  Configuration Manager also uses a client authentication certificate to send status messages from the distribution point to the management point. When the management point is configured for HTTPS client connections only, you must use a PKI certificate. If the management point accepts HTTP connections, you can use a PKI certificate or select the option to use a self-signed certificate that has client authentication capability, uses SHA-256, and has a key length of 2048 bits.  
 
 ### Server communication between sites  
  Configuration Manager transfers data between sites by using database replication and file-based replication. For more information, see [Communications between endpoints](/sccm/core/plan-design/hierarchy/communications-between-endpoints).  
@@ -217,11 +215,11 @@ System Center Configuration Manager uses signing and encryption to help protect 
 
  Database replication in Configuration Manager uses the SQL Server Service Broker to transfer data between sites by using the following mechanisms:  
 
--   SQL Server to SQL Server connection: This uses Windows credentials for server authentication and self-signed certificates with 1024 bits to sign and encrypt the data by using Advanced Encryption Standard (AES). If PKI certificates with server authentication capability are available, these will be used. The certificate must be located in the Personal store for the Computer certificate store.  
+- SQL Server to SQL Server connection: This uses Windows credentials for server authentication and self-signed certificates with 1024 bits to sign and encrypt the data by using Advanced Encryption Standard (AES). If PKI certificates with server authentication capability are available, these will be used. The certificate must be located in the Personal store for the Computer certificate store.  
 
--   SQL Service Broker: This uses self-signed certificates with 2048 bits for authentication and to sign and encrypt the data by using Advanced Encryption Standard (AES). The certificate must be located in the SQL Server master database.  
+- SQL Service Broker: This uses self-signed certificates with 2048 bits for authentication and to sign and encrypt the data by using Advanced Encryption Standard (AES). The certificate must be located in the SQL Server master database.  
 
- File-based replication uses the Server Message Block (SMB) protocol, and uses SHA-256 to sign this data that is not encrypted but does not contain any sensitive data. If you want to encrypt this data, you can use IPsec and must implement this independently from Configuration Manager.  
+  File-based replication uses the Server Message Block (SMB) protocol, and uses SHA-256 to sign this data that is not encrypted but does not contain any sensitive data. If you want to encrypt this data, you can use IPsec and must implement this independently from Configuration Manager.  
 
 ##  Cryptographic controls for clients that use HTTPS communication to site systems  
  When site system roles accept client connections, you can configure them to accept HTTPS and HTTP connections, or only HTTPS connections. Site system roles that accept connections from the Internet only accept client connections over HTTPS.  
@@ -234,17 +232,17 @@ System Center Configuration Manager uses signing and encryption to help protect 
 ### Communication that is unencrypted when clients use HTTPS communication  
  When clients communicate with site systems by using HTTPS, communications are usually encrypted over SSL. However, in the following situations, clients communicate with site systems without using encryption:  
 
--   Client fails to make an HTTPS connection on the intranet and fall back to using HTTP when site systems allow this configuration  
+- Client fails to make an HTTPS connection on the intranet and fall back to using HTTP when site systems allow this configuration  
 
--   Communication to the following site system roles:  
+- Communication to the following site system roles:  
 
-    -   Client sends state messages to the fallback status point  
+  -   Client sends state messages to the fallback status point  
 
-    -   Client sends PXE requests to a PXE-enabled distribution point  
+  -   Client sends PXE requests to a PXE-enabled distribution point  
 
-    -   Client sends notification data to a management point  
+  -   Client sends notification data to a management point  
 
- Reporting services points are configured to use HTTP or HTTPS independently from the client communication mode.  
+  Reporting services points are configured to use HTTP or HTTPS independently from the client communication mode.  
 
 ##  Cryptographic controls for clients chat use HTTP communication to site systems  
  When clients use HTTP communication to site system roles, they can use PKI certificates for client authentication, or self-signed certificates that Configuration Manager generates. When Configuration Manager generates self-signed certificates, they have a custom object identifier for signing and encryption, and these certificates are used to uniquely identify the client. For all supported operating systems except Windows Server 2003, these self-signed certificates use SHA-256, and have a key length of 2048 bits. For Windows Server 2003, SHA1 is used with a key length of 1024 bits.  

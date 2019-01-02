@@ -68,6 +68,8 @@
       href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
     - name: What’s new in incremental versions
       href: plan-design/changes/whats-new-incremental-versions.md
+    - name: What's new in version 1810
+      href: plan-design/changes/whats-new-in-version-1810.md
     - name: What's new in version 1806
       href: plan-design/changes/whats-new-in-version-1806.md
     - name: What's new in version 1802
@@ -132,8 +134,6 @@
         href: plan-design/hierarchy/manage-content-library-flowchart.md
       - name: Content library cleanup tool
         href: plan-design/hierarchy/content-library-cleanup-tool.md
-      - name: Manage accounts to access content
-        href: plan-design/hierarchy/manage-accounts-to-access-content.md
       - name: Peer Cache for Configuration Manager clients
         href: plan-design/hierarchy/client-peer-cache.md
       - name: Package Transfer Manager
@@ -167,6 +167,8 @@
     items:
     - name: How diagnostics and usage data is used
       href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md
+    - name: Diagnostic data for 1810
+      href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1810.md
     - name: Diagnostic data for 1806
       href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1806.md
     - name: Diagnostic data for 1802
@@ -204,16 +206,16 @@
   - name: Technical Preview
     href: get-started/technical-preview.md
     items:
+    - name: Capabilities in 1812
+      href: get-started/capabilities-in-technical-preview-1812.md
+    - name: Capabilities in 1811
+      href: get-started/capabilities-in-technical-preview-1811.md
+    - name: Capabilities in 1810.2
+      href: get-started/capabilities-in-technical-preview-1810-2.md
+    - name: Capabilities in 1810
+      href: get-started/capabilities-in-technical-preview-1810.md
     - name: Capabilities in 1809
       href: get-started/capabilities-in-technical-preview-1809.md
-    - name: Capabilities in 1808
-      href: get-started/capabilities-in-technical-preview-1808.md
-    - name: Capabilities in 1807
-      href: get-started/capabilities-in-technical-preview-1807.md
-    - name: Capabilities in 1806.2
-      href: get-started/capabilities-in-technical-preview-1806-2.md
-    - name: Capabilities in 1806
-      href: get-started/capabilities-in-technical-preview-1806.md
   - name: Migrate data between hierarchies
     href: migration/migrate-data-between-hierarchies.md
     items:
@@ -332,6 +334,8 @@
         href: servers/deploy/configure/boundaries.md
       - name: Boundary groups
         href: servers/deploy/configure/boundary-groups.md
+      - name: Procedures for boundary groups
+        href: servers/deploy/configure/boundary-group-procedures.md
     - name: High availability options
       href: servers/deploy/configure/high-availability-options.md
       items:
@@ -361,6 +365,8 @@
       href: plan-design/hierarchy/accounts.md
     - name: Communications between endpoints
       href: plan-design/hierarchy/communications-between-endpoints.md
+    - name: Enhanced HTTP site systems
+      href: plan-design/hierarchy/enhanced-http.md
     - name: Hierarchy maintenance tool
       href: servers/manage/hierarchy-maintenance-tool-preinst.exe.md
     - name: International support
@@ -421,6 +427,8 @@
       href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
     - name: Use the Hotfix Installer
       href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+    - name: Checklist for installing update 1810
+      href: servers/manage/checklist-for-installing-update-1810.md
     - name: Checklist for installing update 1806
       href: servers/manage/checklist-for-installing-update-1806.md
     - name: Checklist for installing update 1802
@@ -488,6 +496,17 @@
         href: servers/manage/security-and-privacy-for-reporting.md
     - name: Data warehouse
       href: servers/manage/data-warehouse.md
+  - name: Support Center
+    href: support/support-center.md
+    items:
+    - name: Quickstart guide
+      href: support/support-center-quickstart.md
+    - name: Accessibility
+      href: support/support-center-accessibility.md
+    - name: User interface reference
+      href: support/support-center-ui-reference.md
+    - name: Customizations
+      href: support/support-center-customize.md
   - name: Configuration Manager tools
     href: support/tools.md
     items:
@@ -592,7 +611,6 @@
   href: clients/manage/monitor-and-manage-clients.md
   items:
   - name: Monitor and manage clients
-    href: clients/manage/monitor-clients.md
     items:
     - name: How to monitor clients
       href: clients/manage/monitor-clients.md
@@ -604,6 +622,8 @@
       href: clients/manage/monitor-clients-for-linux-and-unix-servers.md
     - name: How to manage clients
       href: clients/manage/manage-clients.md
+    - name: Client notification
+      href: clients/manage/client-notification.md
     - name: How to manage Linux and UNIX clients
       href: clients/manage/manage-clients-for-linux-and-unix-servers.md
     - name: Sync data to Log Analytics

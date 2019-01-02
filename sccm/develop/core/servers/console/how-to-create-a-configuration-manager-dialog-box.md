@@ -19,11 +19,11 @@ These procedures show you how to create a modeless dialog box assembly, in Syste
 
  After you have successfully built the dialog box assembly, you must do the following to integrate it into the Configuration Manager console:  
 
-1.  Define and deploy the form XML that links the selected action to the assembly you create in this topic. For more information, see [How to Create Form XML for a Configuration Manager Dialog Box](../../../../develop/core/servers/console/how-to-create-form-xml-for-a-configuration-manager-dialog-box.md).  
+1. Define and deploy the form XML that links the selected action to the assembly you create in this topic. For more information, see [How to Create Form XML for a Configuration Manager Dialog Box](../../../../develop/core/servers/console/how-to-create-form-xml-for-a-configuration-manager-dialog-box.md).  
 
-2.  Define and deploy the action XML for displaying the context menu that the user selects. For more information, see [How to Create Action XML for a Configuration Manager Dialog Box](../../../../develop/core/servers/console/how-to-create-action-xml-for-a-configuration-manager-dialog-box.md).  
+2. Define and deploy the action XML for displaying the context menu that the user selects. For more information, see [How to Create Action XML for a Configuration Manager Dialog Box](../../../../develop/core/servers/console/how-to-create-action-xml-for-a-configuration-manager-dialog-box.md).  
 
- When you have created the dialog assembly and XML, right-click a package in the Configuration Manager console tree **Packages** node, and then click **Show my Dialog Box**. A dialog box appears with a button on it. Clicking the button displays a message box containing the name of the package you selected.  
+   When you have created the dialog assembly and XML, right-click a package in the Configuration Manager console tree **Packages** node, and then click **Show my Dialog Box**. A dialog box appears with a button on it. Clicking the button displays a message box containing the name of the package you selected.  
 
 ## Create the Control Class  
  The following procedure creates the control for the dialog box.  

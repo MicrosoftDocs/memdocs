@@ -39,13 +39,13 @@ Great question, here are the areas that are most important when making this deci
 ### What about networking requirements, should I use ExpressRoute or an Azure VPN Gateway?
 Networking is a very important decision. Network speeds and latency can affect functionality between the site server and remote site systems and any client communication to the site systems. Our recommendation is to use ExpressRoute. But there is no Configuration Manager limitation to stop you from using Azure VPN Gateway. You should carefully review your requirements (performance, patching, software distribution, operation system deployment) from this infrastructure and then make your decision. Some things to consider for each solution include:
 
- - **ExpressRoute** (recommended)
+- **ExpressRoute** (recommended)
   - Natural extension to your datacenter (can tie together multiple datacenters)
   - Private connections between Azure datacenters and your infrastructure
   - Doesn’t go over the public Internet
   - Offers reliability, fast speeds, lower latency, high security
   - Offers up to 10gbps speeds and Unlimited Data plan options
- - **VPN Gateway**
+- **VPN Gateway**
   - Site-to-site/point-to-site VPNs
   - Traffic goes over the public Internet
   - Uses Internet Protocol Security (IPsec) and Internet Key Exchange (IKE)

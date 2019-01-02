@@ -71,4 +71,4 @@ You can limit devices that can enroll by blocking personally owned devices. This
 3.	Choose **Block personally owned devices** to limit enrollment to company-owned devices.
 
 > [!div class="button"]
-[< Previous step](create-service-connection-point.md)  [Next step >](set-up-additional-management.md)
+> [< Previous step](create-service-connection-point.md)  [Next step >](set-up-additional-management.md)

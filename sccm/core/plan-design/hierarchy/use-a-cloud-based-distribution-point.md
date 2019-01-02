@@ -2,7 +2,7 @@
 title: Cloud distribution point
 titleSuffix: Configuration Manager
 description: Plan and design for distributing software content through Microsoft Azure with cloud distribution points in Configuration Manager.
-ms.date: 09/10/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -83,12 +83,15 @@ Deployment and operation of the cloud distribution point includes the following 
 <!--1322209-->
 Starting in version 1806, create a cloud distribution point using an **Azure Resource Manager deployment**. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying a cloud distribution point with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment doesn't require the classic Azure management certificate.  
 
+> [!Note]  
+> This feature doesn't enable support for Azure Cloud Service Providers (CSP). The cloud distribution point deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
+
 The cloud distribution point wizard still provides the option for a **classic service deployment** using an Azure management certificate. To simplify the deployment and management of resources, Microsoft recommends using the Azure Resource Manager deployment model for all new cloud distribution points. If possible, redeploy existing cloud distribution points through Resource Manager.
 
-Configuration Manager doesn't migrate existing classic cloud distribution points to the Azure Resource Manager deployment model. Create new cloud distribution points using Azure Resource Manager deployments, and then remove classic cloud distribution points. 
+> [!Important]  
+> Starting in version 1810, the classic service deployment in Azure is deprecated for use in Configuration Manager. This version is the last to support creation of these Azure deployments. This functionality will be removed in the first Configuration Manager version released after July 1, 2019. Move your CMG and cloud distribution points to Azure Resource Manager deployments before this time. <!--SCCMDocs-pr issue #2993-->  
 
-> [!IMPORTANT]  
-> This feature doesn't enable support for Azure Cloud Service Providers (CSP). The cloud distribution point deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
+Configuration Manager doesn't migrate existing classic cloud distribution points to the Azure Resource Manager deployment model. Create new cloud distribution points using Azure Resource Manager deployments, and then remove classic cloud distribution points. 
 
 
 ### Hierarchy design
@@ -130,12 +133,14 @@ When you use a cloud distribution point in your hierarchy, use the following inf
 
 - The site server requires **internet access** to deploy and manage the cloud service.  
 
+- When using the **Azure Resource Manager** deployment method, integrate Configuration Manager with [Azure AD](/sccm/core/servers/deploy/configure/azure-services-wizard) for **Cloud Management**. Azure AD *user discovery* isn't required.  
+
 - If using the Azure classic deployment method, you need an **Azure management certificate**. For more information, see the [Certificates](#bkmk_certs) section below.   
 
     > [!TIP]  
     > Starting with Configuration Manager version 1806, use the **Azure Resource Manager** deployment model. It doesn't require this management certificate.  
-
-- If using the **Azure Resource Manager** deployment method, integrate Configuration Manager with [Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure). Azure AD user discovery isn't required.  
+    > 
+    > The classic deployment method is deprecated as of version 1810.   
 
 - A **server authentication certificate**. For more information, see the [Certificates](#bkmk_certs) section below.  
 
@@ -152,10 +157,10 @@ When you use a cloud distribution point in your hierarchy, use the following inf
 - The cloud distribution point supports all Windows versions listed in [Supported operating systems for clients and devices](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices).  
 
 - An administrator distributes the following types of supported software content:  
-    - Applications
-    - Packages
-    - OS upgrade packages
-    - Third-party software updates  
+  - Applications
+  - Packages
+  - OS upgrade packages
+  - Third-party software updates  
 
     > [!Important]  
     > While the Configuration Manager console doesn't block the distribution of Microsoft software updates to a cloud distribution point, you're paying Azure costs to store content that clients don't use. Internet-based clients always get Microsoft software update content from the Microsoft Update cloud service. Don't distribute Microsoft software updates to a cloud distribution point.    
@@ -194,11 +199,11 @@ Configuration Manager includes the following options to help control costs and m
 - Configure Configuration Manager to alert you when thresholds for client downloads meet or exceed monthly limits. For more information, see [Data transfer threshold alerts](/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure#bkmk_alerts).   
 
 - To help reduce the number of data transfers from cloud distribution points by clients, use one of the following peer caching technologies:  
-    - Configuration Manager peer cache
-    - Windows BranchCache
-    - Windows 10 Delivery Optimization  
+  - Configuration Manager peer cache
+  - Windows BranchCache
+  - Windows 10 Delivery Optimization  
 
-   For more information, see [Fundamental concepts for content management](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management).   
+    For more information, see [Fundamental concepts for content management](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management).   
 
 
 ### Components
@@ -324,6 +329,8 @@ If using the Azure classic deployment method, you need an **Azure management cer
 
 > [!TIP]  
 > Starting with Configuration Manager version 1806, use the **Azure Resource Manager** deployment model. It doesn't require this management certificate.  
+> 
+> The classic deployment method is deprecated as of version 1810.   
 
 To reduce complexity, use the same Azure management certificate for all classic deployments of cloud distribution points and cloud management gateways, across all Azure subscriptions and all Configuration Manager sites.
 

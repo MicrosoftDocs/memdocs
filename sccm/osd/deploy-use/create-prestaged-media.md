@@ -19,13 +19,13 @@ manager: dougeby
 Prestaged media in System Center Configuration Manager is a Windows Imaging Format (WIM) file that can be installed on a bare-metal computer by the manufacturer or at an enterprise staging center that is not connected to the Configuration Manager environment.  
 Prestaged media contains the boot image used to start the destination computer and the operating system image that is applied to the destination computer. You can also specify applications, packages, and driver packages to include as part of the prestaged media. The task sequence that deploys the operating system is not included in the media. Prestaged media is applied to the hard drive of a new computer before the computer is sent to the end user. Use prestaged media for the following operating system deployment scenarios:  
 
--   [Create an image for an OEM in factory or a local depot](../../osd/deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md)  
+- [Create an image for an OEM in factory or a local depot](../../osd/deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md)  
 
--   [Install a new version of Windows on a new computer (bare metal)](install-new-windows-version-new-computer-bare-metal.md)  
+- [Install a new version of Windows on a new computer (bare metal)](install-new-windows-version-new-computer-bare-metal.md)  
 
--   [Deploy Windows to Go](deploy-windows-to-go.md)  
+- [Deploy Windows to Go](deploy-windows-to-go.md)  
 
- When the computer starts for the first time after the prestaged media has been applied, the computer boots to Windows PE and connects to a management point to locate the task sequence that completes the operating system deployment process. You can specify applications, packages, and driver packages to include as part of the prestaged media. When you deploy a task sequence that uses prestaged media, the wizard checks the local task sequence cache for valid content first, and if the content cannot be found or has been revised, the wizard downloads the content from the distribution point.  
+  When the computer starts for the first time after the prestaged media has been applied, the computer boots to Windows PE and connects to a management point to locate the task sequence that completes the operating system deployment process. You can specify applications, packages, and driver packages to include as part of the prestaged media. When you deploy a task sequence that uses prestaged media, the wizard checks the local task sequence cache for valid content first, and if the content cannot be found or has been revised, the wizard downloads the content from the distribution point.  
 
 ##  <a name="BKMK_CreatePrestagedMedia"></a> How to Create Prestaged Media  
  Before you create prestaged media by using the Create Task Sequence Media Wizard, be sure that all the following conditions are met:  

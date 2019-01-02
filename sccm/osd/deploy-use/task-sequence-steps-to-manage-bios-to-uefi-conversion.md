@@ -27,18 +27,18 @@ In an existing task sequence to install an operating system, you will add a new 
 1. Create a new task sequence group after the steps to capture files and settings, and before the steps to install the operating system. For example, create a group after the **Capture Files and Settings** group named **BIOS-to-UEFI**.
 2. On the **Options** tab of the new group, add a new task sequence variable as a condition where **_SMSTSBootUEFI** is **not equal** to **true**. This prevents the steps in the group from running when a computer is already in UEFI mode.
 
-  ![BIOS to UEFI group](../../core/get-started/media/BIOS-to-UEFI-group.png)
+   ![BIOS to UEFI group](../../core/get-started/media/BIOS-to-UEFI-group.png)
 3. Under the new group, add the **Restart Computer** task sequence step. In **Specify what to run after restart**, select **The boot image assigned to this task sequence is selected** to start the computer in Windows PE.  
 4. On the **Options** tab, add a task sequence variable as a condition where **_SMSTSInWinPE equals false**. This prevents this step from running if the computer is already in Windows PE.
 
-  ![Restart Computer step](../../core/get-started/media/restart-in-windows-pe.png)
+   ![Restart Computer step](../../core/get-started/media/restart-in-windows-pe.png)
 5. Add a step to start the OEM tool that will convert the firmware from BIOS to UEFI. This will typically be a **Run Command Line** task sequence step with a command line to start the OEM tool.
 6. Add the Format and Partition Disk task sequence step that will partition and format the hard drive. In the step, do the following:
-  1. Create the FAT32 partition that will be converted to UEFI before the operating system is installed. Choose **GPT** for **Disk type**.
+   1. Create the FAT32 partition that will be converted to UEFI before the operating system is installed. Choose **GPT** for **Disk type**.
     ![Format and partition disk step](../media/format-and-partition-disk.png)
-  2. Go to the properties for the FAT32 partition. Enter **TSUEFIDrive** in the **Variable** field. When the task sequence detects this variable, it will prepare for the UEFI transition before restarting the computer.
+   2. Go to the properties for the FAT32 partition. Enter **TSUEFIDrive** in the **Variable** field. When the task sequence detects this variable, it will prepare for the UEFI transition before restarting the computer.
     ![Partition properties](../../core/get-started/media/partition-properties.png)
-  3. Create an NTFS partition that the task sequence engine uses to save its state and to store log files.
+   3. Create an NTFS partition that the task sequence engine uses to save its state and to store log files.
 7. Add the **Restart Computer** task sequence step. In **Specify what to run after restart**, select **The boot image assigned to this task sequence is selected** to start the computer in Windows PE.  
 
 ## Convert from BIOS to UEFI during an in-place upgrade

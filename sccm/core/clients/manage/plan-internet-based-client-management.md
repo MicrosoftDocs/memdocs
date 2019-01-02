@@ -26,49 +26,52 @@ Internet-based client management (sometimes referred to as IBCM) lets you manage
 
  The following features are not supported when clients are managed on the Internet:  
 
--   Client deployment over the Internet, such as client push and software update-based client deployment. Instead, use manual client installation.  
+- Client deployment over the Internet, such as client push and software update-based client deployment. Instead, use manual client installation.  
 
--   Automatic site assignment.  
+- Automatic site assignment.  
 
--   Wake-on-LAN.  
+- Wake-on-LAN.  
 
--   Operating system deployment. However, you can deploy task sequences that do not deploy an operating system; for example, task sequences that run scripts and maintenance tasks on clients.  
+- Operating system deployment. However, you can deploy task sequences that do not deploy an operating system; for example, task sequences that run scripts and maintenance tasks on clients.  
 
--   Remote control.  
+- Remote control.  
 
--   Software deployment to users unless the Internet-based management point can authenticate the user in Active Directory Domain Services by using Windows authentication (Kerberos or NTLM). This is possible when the Internet-based management point trusts the forest where the user account resides.  
+- Software deployment to users unless the Internet-based management point can authenticate the user in Active Directory Domain Services by using Windows authentication (Kerberos or NTLM). This is possible when the Internet-based management point trusts the forest where the user account resides.  
 
- Additionally, Internet-based client management does not support roaming. Roaming enables clients to always find the closest distribution points to download content. Clients that are managed on the Internet communicate with site systems from their assigned site when these site systems are configured to use an Internet FQDN and the site system roles allow client connections from the Internet. Clients non-deterministically select one of the Internet-based site systems, regardless of bandwidth or physical location.  
+  Additionally, Internet-based client management does not support roaming. Roaming enables clients to always find the closest distribution points to download content. Clients that are managed on the Internet communicate with site systems from their assigned site when these site systems are configured to use an Internet FQDN and the site system roles allow client connections from the Internet. Clients non-deterministically select one of the Internet-based site systems, regardless of bandwidth or physical location.  
 
- When you have a software update point that is configured to accept connections from the Internet, Configuration Manager Internet-based clients on the Internet always scan against this software update point, to determine which software updates are required. However, when these clients are on the Internet, they first try to download the software updates from Microsoft Update, rather than from an Internet-based distribution point. Only if this fails, will they then try to download the required software updates from an Internet-based distribution point. Clients that are not configured for Internet-based client management never try to download the software updates from Microsoft Update, but always use Configuration Manager distribution points.  
+  When you have a software update point that is configured to accept connections from the Internet, Configuration Manager Internet-based clients on the Internet always scan against this software update point, to determine which software updates are required. However, when these clients are on the Internet, they first try to download the software updates from Microsoft Update, rather than from an Internet-based distribution point. Only if this fails, will they then try to download the required software updates from an Internet-based distribution point. Clients that are not configured for Internet-based client management never try to download the software updates from Microsoft Update, but always use Configuration Manager distribution points.  
+ 
+[!Tip]  
+The Configuration Manager client automatically determines whether it’s on the intranet or the internet. If the client can contact a domain controller or an on-premises management point, it sets its connection type to Currently intranet. Otherwise, it switches to Currently Internet, and the client uses the management points, software update points, and distribution points assigned to its site for communication.
 
 ##  Considerations for client communications from the Internet or untrusted forest  
  The following site system roles installed at primary sites support connections from clients that are in untrusted locations, like the Internet or an untrusted forest (secondary sites do not support client connections from untrusted locations):  
 
--   Application Catalog website point  
+- Application Catalog website point  
 
--   Configuration Manager Policy Module  
+- Configuration Manager Policy Module  
 
--   Distribution point (HTTPS is required by cloud-based distribution points)  
+- Distribution point (HTTPS is required by cloud-based distribution points)  
 
--   Enrollment proxy point  
+- Enrollment proxy point  
 
--   Fallback status point  
+- Fallback status point  
 
--   Management point  
+- Management point  
 
--   Software update point  
+- Software update point  
 
- **About internet facing site systems:**   
-Although there is no requirement to have a trust between a client's forest and that of the site system server, when the forest that contains an Internet facing site system trusts the forest that contains the user accounts, this configuration supports user-based policies for devices on the Internet when you enable the **Client Policy** client setting **Enable user policy requests from Internet clients**.  
+  **About internet facing site systems:**   
+  Although there is no requirement to have a trust between a client's forest and that of the site system server, when the forest that contains an Internet facing site system trusts the forest that contains the user accounts, this configuration supports user-based policies for devices on the Internet when you enable the **Client Policy** client setting **Enable user policy requests from Internet clients**.  
 
- For example, the following configurations illustrate when Internet-based client management supports user policies for devices on the Internet:  
+  For example, the following configurations illustrate when Internet-based client management supports user policies for devices on the Internet:  
 
--   The Internet-based management point is in the perimeter network where a read-only domain controller resides to authenticate the user and an intervening firewall allows Active Directory packets.  
+- The Internet-based management point is in the perimeter network where a read-only domain controller resides to authenticate the user and an intervening firewall allows Active Directory packets.  
 
--   The user account is in Forest A (the intranet) and the Internet-based management point is in Forest B (the perimeter network). Forest B trusts Forest A, and an intervening firewall allows the authentication packets.  
+- The user account is in Forest A (the intranet) and the Internet-based management point is in Forest B (the perimeter network). Forest B trusts Forest A, and an intervening firewall allows the authentication packets.  
 
--   The user account and the Internet-based management point are in Forest A (the intranet). The management point is published to the Internet by using a web proxy server (like Forefront Threat Management Gateway).  
+- The user account and the Internet-based management point are in Forest A (the intranet). The management point is published to the Internet by using a web proxy server (like Forefront Threat Management Gateway).  
 
 > [!NOTE]  
 >  If Kerberos authentication fails, NTLM authentication is then automatically tried.  
@@ -109,82 +112,82 @@ Although there is no requirement to have a trust between a client's forest and t
 ##  Prerequisites for Internet-Based Client Management  
  Internet-based client management in Configuration Manager has the following external dependencies:  
 
--   Clients that will be managed on the Internet must have an Internet connection.  
+- Clients that will be managed on the Internet must have an Internet connection.  
 
-     Configuration Manager uses existing Internet Service Provider (ISP) connections to the Internet, which can be either permanent or temporary connections. Client mobile devices must have a direct Internet connection, but client computers can have either a direct Internet connection or connect by using a proxy web server.  
+   Configuration Manager uses existing Internet Service Provider (ISP) connections to the Internet, which can be either permanent or temporary connections. Client mobile devices must have a direct Internet connection, but client computers can have either a direct Internet connection or connect by using a proxy web server.  
 
--   Site systems that support Internet-based client management must have connectivity to the Internet and must be in an Active Directory domain.  
+- Site systems that support Internet-based client management must have connectivity to the Internet and must be in an Active Directory domain.  
 
-     The Internet-based site systems do not require a trust relationship with the Active Directory forest of the site server. However, when the Internet-based management point can authenticate the user by using Windows authentication, user policies are supported. If Windows authentication fails, only computer policies are supported.  
+   The Internet-based site systems do not require a trust relationship with the Active Directory forest of the site server. However, when the Internet-based management point can authenticate the user by using Windows authentication, user policies are supported. If Windows authentication fails, only computer policies are supported.  
 
-    > [!NOTE]  
-    >  To support user policies, you also must set to **True** the two **Client Policy** client settings:  
-    >   
-    >  -   **Enable user policy polling on clients**  
-    > -   **Enable user policy requests from Internet clients**  
+  > [!NOTE]
+  >  To support user policies, you also must set to **True** the two **Client Policy** client settings:  
+  > 
+  > - **Enable user policy polling on clients**  
+  >   -   **Enable user policy requests from Internet clients**  
 
-     An Internet-based Application Catalog website point also requires Windows authentication to authenticate users when their computer is on the Internet. This requirement is independent from user policies.  
+   An Internet-based Application Catalog website point also requires Windows authentication to authenticate users when their computer is on the Internet. This requirement is independent from user policies.  
 
--   You must have a supporting public key infrastructure (PKI) that can deploy and manage the certificates that the clients require and that are managed on the Internet and the Internet-based site system servers.  
+- You must have a supporting public key infrastructure (PKI) that can deploy and manage the certificates that the clients require and that are managed on the Internet and the Internet-based site system servers.  
 
-     For more information about the PKI certificates, see [PKI certificate requirements for System Center Configuration Manager](/sccm/core/plan-design/network/pki-certificate-requirements).  
+   For more information about the PKI certificates, see [PKI certificate requirements for System Center Configuration Manager](/sccm/core/plan-design/network/pki-certificate-requirements).  
 
--   The Internet fully qualified domain name (FQDN) of site systems that support Internet-based client management must be registered as host entries on public DNS servers.  
+- The Internet fully qualified domain name (FQDN) of site systems that support Internet-based client management must be registered as host entries on public DNS servers.  
 
--   Intervening firewalls or proxy servers must allow the client communication that is associated with Internet-based site systems.  
+- Intervening firewalls or proxy servers must allow the client communication that is associated with Internet-based site systems.  
 
-     Client communication requirements:  
+   Client communication requirements:  
 
-    -   Support HTTP 1.1  
+  - Support HTTP 1.1  
 
-    -   Allow HTTP content type of multipart MIME attachment (multipart/mixed and application/octet-stream)  
+  - Allow HTTP content type of multipart MIME attachment (multipart/mixed and application/octet-stream)  
 
-    -   Allow the following verbs for the Internet-based management point:  
+  - Allow the following verbs for the Internet-based management point:  
 
-        -   HEAD  
+    -   HEAD  
 
-        -   CCM_POST  
+    -   CCM_POST  
 
-        -   BITS_POST  
+    -   BITS_POST  
 
-        -   GET  
+    -   GET  
 
-        -   PROPFIND  
+    -   PROPFIND  
 
-    -   Allow the following verbs for the Internet-based distribution point:  
+  - Allow the following verbs for the Internet-based distribution point:  
 
-        -   HEAD  
+    -   HEAD  
 
-        -   GET  
+    -   GET  
 
-        -   PROPFIND  
+    -   PROPFIND  
 
-    -   Allow the following verbs for the Internet-based fallback status point:  
+  - Allow the following verbs for the Internet-based fallback status point:  
 
-        -   POST  
+    -   POST  
 
-    -   Allow the following verbs for the Internet-based Application Catalog website point:  
+  - Allow the following verbs for the Internet-based Application Catalog website point:  
 
-        -   POST  
+    -   POST  
 
-        -   GET  
+    -   GET  
 
-    -   Allow the following HTTP headers for the Internet-based management point:  
+  - Allow the following HTTP headers for the Internet-based management point:  
 
-        -   Range:  
+    -   Range:  
 
-        -   CCMClientID:  
+    -   CCMClientID:  
 
-        -   CCMClientIDSignature:  
+    -   CCMClientIDSignature:  
 
-        -   CCMClientTimestamp:  
+    -   CCMClientTimestamp:  
 
-        -   CCMClientTimestampsSignature:  
+    -   CCMClientTimestampsSignature:  
 
-    -   Allow the following HTTP header for the Internet-based distribution point:  
+  - Allow the following HTTP header for the Internet-based distribution point:  
 
-        -   Range:  
+    -   Range:  
 
-     For configuration information to support these requirements, refer to your firewall or proxy server documentation.  
+    For configuration information to support these requirements, refer to your firewall or proxy server documentation.  
 
-     For similar communication requirements when you use the software update point for client connections from the Internet, see the documentation for Windows Server Update Services (WSUS). For example, for WSUS on Windows Server 2003, see [Appendix D: Security Settings](http://go.microsoft.com/fwlink/p/?LinkId=143368), the deployment appendix for security settings.
+    For similar communication requirements when you use the software update point for client connections from the Internet, see the documentation for Windows Server Update Services (WSUS). For example, for WSUS on Windows Server 2003, see [Appendix D: Security Settings](http://go.microsoft.com/fwlink/p/?LinkId=143368), the deployment appendix for security settings.

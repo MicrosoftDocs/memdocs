@@ -1,8 +1,8 @@
 ---
-title: "Endpoint Protection"
-titleSuffix: "Configuration Manager"
-description: "Learn how to manage antimalware policies and Windows Firewall security for client computers in your Configuration Manager hierarchy."
-ms.date: 02/09/2018
+title: Endpoint Protection
+titleSuffix: Configuration Manager
+description: Learn how to manage antimalware policies and Windows Firewall security for clients.
+ms.date: 10/26/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -11,6 +11,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
+
 # Endpoint Protection
 
 *Applies to: System Center Configuration Manager (Current Branch)*
@@ -79,18 +80,24 @@ Endpoint Protection manages and monitors Windows Defender Advanced Threat Protec
 
  ![Endpoint Protection Workflow](../media/Endpoint-Protection-Workflow.gif)  
 
-## Endpoint Protection Client for Mac Computers and Linux Servers  
- System Center Endpoint Protection includes an Endpoint Protection client for Linux and for Mac computers. These clients are not supplied with Configuration Manager; instead, you must download the following products from the [Microsoft Volume Licensing Service Center](https://www.microsoft.com/licensing/servicecenter/default.aspx).  
 
--   System Center Endpoint Protection for the Mac  
+
+## Endpoint Protection Client for Mac Computers and Linux Servers  
+
+> [!Important]  
+> Support for System Center Endpoint Protection (SCEP) for Mac and Linux (all versions) ends on December 31, 2018. Availability of new virus definitions for SCEP for Mac and SCEP for Linux may be discontinued after the end of support. For more information, see [End of support blog post](https://go.microsoft.com/fwlink/?linkid=870182).  
+
+ System Center Endpoint Protection includes an Endpoint Protection client for Linux and for Mac computers. These clients aren't supplied with Configuration Manager. Download the following products from the [Microsoft Volume Licensing Service Center](https://www.microsoft.com/licensing/servicecenter/default.aspx):  
+
+-   System Center Endpoint Protection for Mac  
 
 -   System Center Endpoint Protection for Linux  
 
 
-> [!IMPORTANT]  
+> [!Note]  
 >  You must be a Microsoft Volume License customer to download the Endpoint Protection installation files for Linux and the Mac.  
 
- These products cannot be managed from the Configuration Manager console. However, a System Center Operations Manager management pack is supplied with the installation files, which allows you to manage the client for Linux by using Operations Manager.  
+ These products can't be managed from the Configuration Manager console. A System Center Operations Manager management pack is supplied with the installation files, which allows you to manage the client for Linux.  
 
 ### How to get the Endpoint Protection client for Mac computers and Linux servers
 
@@ -107,4 +114,4 @@ The January 2018 update (X21-67050) includes the following versions:
 - System Center Endpoint Protection for Mac 4.5.32.0 (support for macOS 10.13 High Sierra)
 - System Center Endpoint Protection for Linux 4.5.20.0 
 
- For more information about how to install and manage the Endpoint Protection clients for Linux and Mac computers, use the documentation that accompanies these products. This product documentation is in the **Documentation** folder of the .ISO file.
+  For more information about how to install and manage the Endpoint Protection clients for Linux and Mac computers, use the documentation that accompanies these products. This product documentation is in the **Documentation** folder of the .ISO file.

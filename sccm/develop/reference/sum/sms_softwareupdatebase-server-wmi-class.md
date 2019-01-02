@@ -486,266 +486,266 @@ class SMS_SoftwareUpdateBase : SMS_ConfigurationItemBaseClass
 
  A list of language-specific localized information about the software update:  
 
--   String  DisplayName  
+- String  DisplayName  
 
--   String  Description  
+- String  Description  
 
--   String  InformativeURL  
+- String  InformativeURL  
 
--   UInt32  LocaleID  
+- UInt32  LocaleID  
 
- `LocalizedInformativeURL`  
- Data type: `String`  
+  `LocalizedInformativeURL`  
+  Data type: `String`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
+  See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
 
- `LocalizedPropertyLocaleID`  
- Data type: `UInt32`  
+  `LocalizedPropertyLocaleID`  
+  Data type: `UInt32`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- See [SMS_ConfigurationItemBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitembaseclass-server-wmi-class.md).  
+  See [SMS_ConfigurationItemBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitembaseclass-server-wmi-class.md).  
 
- `MaxExecutionTime`  
- Data type: `UInt32`  
+  `MaxExecutionTime`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Maximum time required for the software update to run. The default value is 30.  
+  Maximum time required for the software update to run. The default value is 30.  
 
- `ModelID`  
- Data type: `UInt32`  
+  `ModelID`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [not_null]  
+  Qualifiers: [not_null]  
 
- See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
+  See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
 
- `ModelName`  
- Data type: `String`  
+  `ModelName`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [unique, not_null]  
+  Qualifiers: [unique, not_null]  
 
- See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
+  See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
 
- `NumMissing`  
- Data type: `UInt32`  
+  `NumMissing`  
+  Data type: `UInt32`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- Number of computers in the targeted collections on which the software update is missing.  
+  Number of computers in the targeted collections on which the software update is missing.  
 
- `NumNotApplicable`  
- Data type: `UInt32`  
+  `NumNotApplicable`  
+  Data type: `UInt32`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- Number of computers in the targeted collections on which the software update is not applicable.  
+  Number of computers in the targeted collections on which the software update is not applicable.  
 
- `NumPresent`  
- Data type: `UInt32`  
+  `NumPresent`  
+  Data type: `UInt32`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- Number of computers in the targeted collections on which the software update is already installed.  
+  Number of computers in the targeted collections on which the software update is already installed.  
 
- `NumTotal`  
- Data type: `UInt32`  
+  `NumTotal`  
+  Data type: `UInt32`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- Total number of computers in the targeted collections for the software update.  
+  Total number of computers in the targeted collections for the software update.  
 
- `NumUnknown`  
- Data type: `UInt32`  
+  `NumUnknown`  
+  Data type: `UInt32`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- Number of computers in the targeted collections on which the state for the software update is known.  
+  Number of computers in the targeted collections on which the state for the software update is known.  
 
- `PercentCompliant`  
- Data type: `UInt32`  
+  `PercentCompliant`  
+  Data type: `UInt32`  
 
- Access type: Read  
+  Access type: Read  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- Percentage of client machines that are compliant for this configuration item.  
+  Percentage of client machines that are compliant for this configuration item.  
 
- `PermittedUses`  
- Data type: `UInt32`  
+  `PermittedUses`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [not_null]  
+  Qualifiers: [not_null]  
 
- See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
+  See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
 
- `PlatformCategoryInstance_UniqueIDs`  
- Data type: `String` array  
+  `PlatformCategoryInstance_UniqueIDs`  
+  Data type: `String` array  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: none  
+  Qualifiers: none  
 
- See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
+  See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
 
- `PlatformType`  
- Data type: `UInt32`  
+  `PlatformType`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: none  
+  Qualifiers: none  
 
- See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
+  See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
 
- `RequiresExclusiveHandling`  
- Data type: `Boolean`  
+  `RequiresExclusiveHandling`  
+  Data type: `Boolean`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- `true` if the software update must be installed separately. The default value is `false`.  
+  `true` if the software update must be installed separately. The default value is `false`.  
 
- `RevisionNumber`  
- Data type: `UInt32`  
+  `RevisionNumber`  
+  Data type: `UInt32`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read, not_null]  
+  Qualifiers: [read, not_null]  
 
- Revision number for the update.  
+  Revision number for the update.  
 
- `SDMPackageLocalizedData`  
- Data type: `SMS_SDMPackageLocalizedData` Array  
+  `SDMPackageLocalizedData`  
+  Data type: `SMS_SDMPackageLocalizedData` Array  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [lazy]  
+  Qualifiers: [lazy]  
 
- See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
+  See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
 
- `SDMPackageVersion`  
- Data type: `UInt32`  
+  `SDMPackageVersion`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [not_null]  
+  Qualifiers: [not_null]  
 
- See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
+  See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
 
- `SDMPackageXML`  
- Data type: `String`  
+  `SDMPackageXML`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [lazy]  
+  Qualifiers: [lazy]  
 
- See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
+  See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
 
- `SecuredScopeNames`  
- Data type: `String` Array  
+  `SecuredScopeNames`  
+  Data type: `String` Array  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: none  
+  Qualifiers: none  
 
- See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
+  See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
 
- `SedoObjectVersion`  
- Data type: `String`  
+  `SedoObjectVersion`  
+  Data type: `String`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: none  
+  Qualifiers: none  
 
- See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
+  See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
 
- `Severity`  
- Data type: `UInt32`  
+  `Severity`  
+  Data type: `UInt32`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- Severity rating for the software update. The default value is 0.  
+  Severity rating for the software update. The default value is 0.  
 
- `SeverityName`  
- Data type: `String`  
+  `SeverityName`  
+  Data type: `String`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- Text for the severity rating.  
+  Text for the severity rating.  
 
- `Size`  
- Data type: `SInt64`  
+  `Size`  
+  Data type: `SInt64`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- Size of the software update.  
+  Size of the software update.  
 
- `SourceSite`  
- Data type: `String`  
+  `SourceSite`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [SizeLimit("3")]  
+  Qualifiers: [SizeLimit("3")]  
 
- See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
+  See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
 
- For this class, the possible source sites are defined by the `UpdateSource_ID` property of [SMS_CIUpdateSources Server WMI Class](../../../develop/reference/sum/sms_ciupdatesources-server-wmi-class.md).  
+  For this class, the possible source sites are defined by the `UpdateSource_ID` property of [SMS_CIUpdateSources Server WMI Class](../../../develop/reference/sum/sms_ciupdatesources-server-wmi-class.md).  
 
- `UpdateLocales`  
- Data type: `String Array`  
+  `UpdateLocales`  
+  Data type: `String Array`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- Locales applicable to the software update.  
+  Locales applicable to the software update.  
 
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Dynamic  
+- Dynamic  
 
--   Abstract  
+- Abstract  
 
--   Secured  
+- Secured  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see Configuration Manager Class and Property Qualifiers.  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see Configuration Manager Class and Property Qualifiers.  
 
- An `SMS_SoftwareUpdate` object is a type of configuration item, defined by SMS_ConfigurationItemBaseClass Server WMI Class. Use `SMS_SoftwareUpdate` to determine the compliance of software updates using the Software Updates feature in System Center Configuration Manager.  
+  An `SMS_SoftwareUpdate` object is a type of configuration item, defined by SMS_ConfigurationItemBaseClass Server WMI Class. Use `SMS_SoftwareUpdate` to determine the compliance of software updates using the Software Updates feature in System Center Configuration Manager.  
 
- Software update content must be downloaded manually. To identify which contents need to be downloaded, your application queries [SMS_CIToContent Server WMI Class](../../../develop/reference/sum/sms_citocontent-server-wmi-class.md) and obtains the list of `ContentID` properties matching the specific language criteria. With this list, the application can obtain the associated download URL and the related properties for the content files from [SMS_CIContentFiles Server WMI Class](../../../develop/reference/sum/sms_cicontentfiles-server-wmi-class.md).  
+  Software update content must be downloaded manually. To identify which contents need to be downloaded, your application queries [SMS_CIToContent Server WMI Class](../../../develop/reference/sum/sms_citocontent-server-wmi-class.md) and obtains the list of `ContentID` properties matching the specific language criteria. With this list, the application can obtain the associated download URL and the related properties for the content files from [SMS_CIContentFiles Server WMI Class](../../../develop/reference/sum/sms_cicontentfiles-server-wmi-class.md).  
 
- When the update content has been determined, the application optionally prepares the update for deployment using an [SMS_AuthorizationList Server WMI Class](../../../develop/reference/sum/sms_authorizationlist-server-wmi-class.md) object to create an authorized list of updates. Your application also has the option of implementing [SMS_Template Server WMI Class](../../../develop/reference/sum/sms_template-server-wmi-class.md) to create a custom deployment template.  
+  When the update content has been determined, the application optionally prepares the update for deployment using an [SMS_AuthorizationList Server WMI Class](../../../develop/reference/sum/sms_authorizationlist-server-wmi-class.md) object to create an authorized list of updates. Your application also has the option of implementing [SMS_Template Server WMI Class](../../../develop/reference/sum/sms_template-server-wmi-class.md) to create a custom deployment template.  
 
 > [!NOTE]
 >  When it is building an authorization list to include the software update, the application must set the `IsBundle` property of `SMS_SoftwareUpdate` to `true` to indicate that the update is part of a bundle. For more information, see [SMS_AuthorizationList Server WMI Class](../../../develop/reference/sum/sms_authorizationlist-server-wmi-class.md).  

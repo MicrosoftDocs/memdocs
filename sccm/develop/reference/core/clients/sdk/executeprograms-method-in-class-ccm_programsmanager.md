@@ -19,8 +19,8 @@ The `ExecutePrograms` WMI class method, in Configuration Manager, manages downlo
 
 ```  
 uint32 ExecutePrograms(  
-     [IN]  CCM_Program CCMPrograms[],  
-     [IN]  String SDKCallerId  
+     [IN]  CCM_Program CCMPrograms[],  
+     [IN]  String SDKCallerId  
 );  
 ```  
 

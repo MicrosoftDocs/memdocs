@@ -2,7 +2,7 @@
 title: Hybrid MDM with Microsoft Intune
 titleSuffix: Configuration Manager
 description: Learn about hybrid mobile device management (MDM) with Configuration Manager and Microsoft Intune.
-ms.date: 08/14/2018
+ms.date: 11/02/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -18,7 +18,7 @@ manager: dougeby
 
 > [!Important]  
 > As of August 14, 2018, hybrid mobile device management is a [deprecated feature](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).
-> <!--Intune feature 2683117--> 
+> <!--Intune feature 2683117-->  
 > Since launching on Azure over a year ago, Intune has added hundreds of new customer-requested and market-leading service capabilities. It now offers far more capabilities than those offered through hybrid mobile device management (MDM). Intune on Azure provides a more integrated, streamlined administrative experience for your enterprise mobility needs.
 > 
 > As a result, most customers choose Intune on Azure over hybrid MDM. The number of customers using hybrid MDM continues to decrease as more customers move to the cloud. Therefore, on September 1, 2019, Microsoft will retire the hybrid MDM service offering. Please plan your [migration to Intune on Azure](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa) for your MDM needs. 
@@ -33,7 +33,7 @@ manager: dougeby
 > 
 > - Licensing remains the same. Intune on Azure licenses are included with hybrid MDM.  
 > 
-> - Microsoft will begin to block the onboarding of new hybrid MDM customers starting in November 2018.  
+> - The conditional access and on-premises MDM features in Configuration Manager aren't deprecated. Upcoming changes to Configuration Manager will allow these features to function without hybrid MDM. 
 > 
 > - On September 1, 2019, any remaining hybrid MDM devices will no longer receive policy, apps, or security updates.  
 > 

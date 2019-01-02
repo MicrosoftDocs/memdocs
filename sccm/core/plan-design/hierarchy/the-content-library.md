@@ -2,7 +2,7 @@
 title: The content library
 titleSuffix: Configuration Manager
 description: Learn about the content library that Configuration Manager uses to reduce the overall size of distributed content.
-ms.date: 07/30/2018
+ms.date: 09/19/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,6 +11,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
+
 # The content library in Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
@@ -39,7 +40,7 @@ Configuration Manager copies content files to the drive with the highest priorit
 For more information about how to configure the drive settings for the distribution point, see [Manage content and content infrastructure](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).  
 
 
->  [!IMPORTANT]  
+> [!IMPORTANT]
 >  To move the content library to a different location on a distribution point after the installation, use the **Content Library Transfer** tool in the Configuration Manager tools. For more information, see the [Content Library Transfer tool](/sccm/core/support/content-library-transfer).  
 
 
@@ -96,6 +97,9 @@ A remote content library is a prerequisite for [site server high availability](/
 
 1. Create a folder in a network share as the target for the content library. For example, `\\server\share\folder`.  
 
+    > [!Warning]  
+    > Don't reuse an existing folder with content. For example, don't use the same folder as your package sources. Before copying the content library, Configuration Manager removes any existing content from the location you specify.  
+
 2. In the Configuration Manager console, switch to the **Administration** workspace. Expand **Site Configuration**, select the **Sites** node, and select the site. On the **Summary** tab at the bottom of the details pane, notice a new column for the **Content Library**.  
 
 3. Click **Manage Content Library** on the ribbon.   
@@ -104,13 +108,13 @@ A remote content library is a prerequisite for [site server high availability](/
 
 5. Note the **Status** value in the Content Library column on the Summary tab of the details pane. It updates to show the site's progress in moving the content library.  
 
-    - While **In progress**, the **Move Progress (%)** value displays the percentage complete.  
+   - While **In progress**, the **Move Progress (%)** value displays the percentage complete.  
 
-    - If there's an error state, the status displays the error. Common errors include **access denied** or **disk full**.  
+   - If there's an error state, the status displays the error. Common errors include **access denied** or **disk full**.  
 
-    - When complete it displays **Complete**.  
+   - When complete it displays **Complete**.  
     
-    See the **distmgr.log** for details. For more information, see [Site server and site system server logs](/sccm/core/plan-design/hierarchy/log-files#BKMK_SiteSiteServerLog).  
+     See the **distmgr.log** for details. For more information, see [Site server and site system server logs](/sccm/core/plan-design/hierarchy/log-files#BKMK_SiteSiteServerLog).  
 
 For more information on this process, see [Flowchart - Manage content library](/sccm/core/plan-design/hierarchy/manage-content-library-flowchart).
 

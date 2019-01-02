@@ -32,21 +32,21 @@ Software metering has no external dependencies, only dependencies within the pro
 ##  Configure software metering
  This procedure configures the default client settings for software metering and applies to all computers in your hierarchy. If you want these settings to apply to only some computers, create a custom device client setting and deploy it to a collection that contains the computers on which you want to use software metering. For more information about how to create custom device settings, see [Configure client settings](../../core/clients/deploy/configure-client-settings.md).
 
-1.  In the Configuration Manager console, click **Administration** > **Client Settings** > **Default Client Settings**.
+1. In the Configuration Manager console, click **Administration** > **Client Settings** > **Default Client Settings**.
 
-2.  On the **Home** tab, in the **Properties** group, click **Properties**.
+2. On the **Home** tab, in the **Properties** group, click **Properties**.
 
-3.  In the **Default Settings** dialog box, click **Software Metering**.
+3. In the **Default Settings** dialog box, click **Software Metering**.
 
-4.  In the **Device Settings** list, configure the following:
+4. In the **Device Settings** list, configure the following:
 
-    -   **Enable software metering on clients**: Select **True** to enable software metering.
+   -   **Enable software metering on clients**: Select **True** to enable software metering.
 
-    -   **Schedule data collection**: Configure how often software metering data is collected from client computers. Use the default value of every **7 days** or click **Schedule** to specify a custom schedule.
+   -   **Schedule data collection**: Configure how often software metering data is collected from client computers. Use the default value of every **7 days** or click **Schedule** to specify a custom schedule.
 
-5.  Click **OK** to close the **Default Settings** dialog box.
+5. Click **OK** to close the **Default Settings** dialog box.
 
- Client computers are configured with these settings the next time they download client policy. To initiate policy retrieval for a single client, see [Manage clients](../../core/clients/manage/manage-clients.md).
+   Client computers are configured with these settings the next time they download client policy. To initiate policy retrieval for a single client, see [Manage clients](../../core/clients/manage/manage-clients.md).
 
 ##  Create software metering rules
  Use the Create Software Metering Rule wizard to create a new software metering rule for your Configuration Manager site.
@@ -149,15 +149,15 @@ Software metering has no external dependencies, only dependencies within the pro
 ## Example scenario for using software metering
  In this section, you'll create an example software metering rule that can help you solve the following business requirements:
 
--   Determine how many copies of a particular app are in your company
+- Determine how many copies of a particular app are in your company
 
--   Discover any unused copies of an app
+- Discover any unused copies of an app
 
--   Determine which users regularly use a particular app
+- Determine which users regularly use a particular app
 
- Woodgrove Bank has deployed Microsoft Office 2010 as its standard office productivity suite. However, to support a legacy application, some computers must continue to run Microsoft Office Word 2003. The IT department wants to reduce support and licensing costs by removing these copies of Word 2003 if the legacy application is no longer used. The help desk also wants to identify which users use the legacy application.
+  Woodgrove Bank has deployed Microsoft Office 2010 as its standard office productivity suite. However, to support a legacy application, some computers must continue to run Microsoft Office Word 2003. The IT department wants to reduce support and licensing costs by removing these copies of Word 2003 if the legacy application is no longer used. The help desk also wants to identify which users use the legacy application.
 
- John is Woodgrove Bank's IT Systems Manager who uses software metering in Configuration Manager to achieve these business objectives. He performs the following actions:
+  John is Woodgrove Bank's IT Systems Manager who uses software metering in Configuration Manager to achieve these business objectives. He performs the following actions:
 
 - John checks the prerequisites for software metering and confirms that the reporting services point is installed and operational.
 - John configures the default client settings for software metering:<br>He enables software metering and uses the default data collection schedule of once every seven days.<br>He configures software inventory to inventory files that have the extension .exe by configuring the software inventory client setting **Inventory these file types**.<br>He adds a new software metering rule, named **woodgrove.exe**, to monitor the legacy application.
@@ -167,4 +167,4 @@ Software metering has no external dependencies, only dependencies within the pro
 - John makes some further checks to confirm that the legacy application is not required on the identified computers. He then uninstalls the legacy application and the copy of Word 2003 from these computers.<br>John runs the report **Users that have run a specific metered software program** to provide the help desk with a list of users who continue to use the legacy application.
 - John continues to check the software metering reports weekly and takes remedial action if necessary.
 
- As a result of this course of action, IT support and licensing costs are reduced by removing the applications that are no longer required. In addition, the help desk now has the list that it wanted of the users who run the legacy application.
+  As a result of this course of action, IT support and licensing costs are reduced by removing the applications that are no longer required. In addition, the help desk now has the list that it wanted of the users who run the legacy application.

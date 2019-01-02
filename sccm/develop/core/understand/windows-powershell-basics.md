@@ -17,9 +17,9 @@ System Center 2012 Configuration Manager SP1 introduced native PowerShell suppor
 
  To get started:  
 
-1.  Hit your Windows key and type “PowerShell��?.  
+1.  Hit your Windows key and type "PowerShell".  
 
-2.  From the results, right-click Windows PowerShell and choose “Run as administrator��?.  
+2.  From the results, right-click Windows PowerShell and choose "Run as administrator".  
 
 3.  You should now see a Windows PowerShell command prompt.  
 
@@ -38,7 +38,7 @@ System Center 2012 Configuration Manager SP1 introduced native PowerShell suppor
 -   The Module  
 
 ## The Cmdlet  
- “Cmdlet��? is also sometimes referred to as “Command-let��?.  The cmdlet is a basic instruction that you give Windows PowerShell.  All cmdlets are made up of two parts: a verb and a noun. They are separated by a hyphen ‘-‘ character. Cmdlets are the building blocks of Windows PowerShell and are what do all the work for you.  Some cmdlets come with Windows, and others are installed with programs like Configuration Manager. An example of a Windows cmdlet that restarts a print job is: **Restart-PrintJob**. An example of a Configuration Manager cmdlet that retrieves a Configuration Manager site is: **Get-CMSite**.  
+ “Cmdlet" is also sometimes referred to as “Command-let".  The cmdlet is a basic instruction that you give Windows PowerShell.  All cmdlets are made up of two parts: a verb and a noun. They are separated by a hyphen ‘-‘ character. Cmdlets are the building blocks of Windows PowerShell and are what do all the work for you.  Some cmdlets come with Windows, and others are installed with programs like Configuration Manager. An example of a Windows cmdlet that restarts a print job is: **Restart-PrintJob**. An example of a Configuration Manager cmdlet that retrieves a Configuration Manager site is: **Get-CMSite**.  
 
  Before we jump into our second concept, let’s try a few cmdlets that retrieve (**Get**) data.  
 
@@ -113,7 +113,7 @@ Enabled
  `Get-WindowsErrorReporting` returns the current state, which in this case is `Enabled`. There are specific cmdlets to enable or disable Windows Error Reporting. As an example of taking action using a cmdlet, use the `Disable-WindowsErrorReporting` cmdlet to disable Windows Error Reporting.  
 
 > [!NOTE]
->  If you are not running Windows PowerShell as an administrator, you may not be able to change the value. In this case, the the `Disable-WindowsErrorReporting` cmdlet will return `False`, instead of `True` after running the cmdlet.  
+>  If you are not running Windows PowerShell as an administrator, you may not be able to change the value. In this case, the `Disable-WindowsErrorReporting` cmdlet will return `False`, instead of `True` after running the cmdlet.  
 
  Go to your Windows PowerShell window, and type `Disable-WindowsErrorReporting`:  
 

@@ -142,13 +142,13 @@ Class SMS_PackageStatus : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Read (read-only)  
+- Read (read-only)  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- This class is used internally by the server Distribution Manager component and is not used directly to produce any of the package status information that you see in the Configuration Manager console.  
+  This class is used internally by the server Distribution Manager component and is not used directly to produce any of the package status information that you see in the Configuration Manager console.  
 
- You can distribute multiple packages concurrently to multiple destinations. `SMS_PackageStatus` allows monitoring when packages arrive at distribution points. All the displayed dates are based on the time zone in which the Configuration Manager console is running.  
+  You can distribute multiple packages concurrently to multiple destinations. `SMS_PackageStatus` allows monitoring when packages arrive at distribution points. All the displayed dates are based on the time zone in which the Configuration Manager console is running.  
 
 ## Requirements  
 

@@ -94,7 +94,7 @@ Class SMS_AMTCertificate : SMS_BaseClass
 
  Access type: Read-only  
 
- Qualifiers: enumeration("RequestPending(1), ReqestSuccess(2),IssuedToAMT(3),Revoked(4),Active(5)")  
+ Qualifiers: enumeration("RequestPending(1), RequestSuccess(2),IssuedToAMT(3),Revoked(4),Active(5)")  
 
  Certificate status. Possible values are:  
 
@@ -190,15 +190,15 @@ Class SMS_AMTCertificate : SMS_BaseClass
 
  Class qualifiers for this class include:  
 
--   DisplayName("AMT Certificates")  
+- DisplayName("AMT Certificates")  
 
--   Dynamic  
+- Dynamic  
 
--   Provider("ExtnProv")  
+- Provider("ExtnProv")  
 
--   Read  
+- Read  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
 ## Requirements  
 

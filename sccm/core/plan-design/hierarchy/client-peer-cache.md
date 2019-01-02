@@ -2,7 +2,7 @@
 title: Client Peer Cache
 titleSuffix: Configuration Manager
 description: Use client peer cache for source locations when deploying content with Configuration Manager.
-ms.date: 08/29/2018
+ms.date: 09/19/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -60,7 +60,7 @@ Starting in version 1806, boundary groups include additional settings to give yo
 > [!NOTE]  
 > If the client falls back to a neighbor boundary group for content, the management point doesn't add the peer cache sources from the neighbor boundary group to the list of potential content source locations.  
 
-Choose only clients best suited as peer cache sources. Evaluate client suitability based on attributes such as chassis type, disk space, and network connectivity. For more information that can help you select the best clients to use for peer cache, see [this blog by a Microsoft consultant](https://blogs.technet.microsoft.com/setprice/2016/06/29/pe-peer-cache-custom-reporting-examples/).
+Choose only clients best suited as peer cache sources. Evaluate client suitability based on attributes such as chassis type, disk space, and network connectivity. For more information that can help you select the best clients to use for peer cache, see [this blog by a Microsoft consultant](https://blogs.technet.microsoft.com/askpfeplat/2018/11/21/configuration-manager-peer-cache-custom-reporting-examples/).
 
 
 ### Limited access to a peer cache source  
@@ -90,15 +90,18 @@ When the peer cache source rejects a request for the content, the peer cache cli
 
 - Clients can only download content from peer cache sources in their current boundary group.  
 
-- A [network access account](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account) isn't required with the following exception:  
+- A [network access account](/sccm/core/plan-design/hierarchy/accounts#network-access-account) isn't required with the following exception:  
 
     - Configure a network access account in the site when a peer cache-enabled client runs a task sequence from Software Center, and it reboots to a boot image. When the device is in Windows PE, it uses the network access account to get content from the peer cache source.  
 
     - When required, the peer cache source uses the network access account to authenticate download requests from peers. This account requires only domain user permissions for this purpose.  
 
-- The client's last heartbeat discovery submission determines the current boundary of a peer cache source. A client that roams to a different boundary group might still be a member of its former boundary group for the purposes of peer cache. This behavior results in a client being offered a peer cache source that isn't in its immediate network location. Don't enable roaming clients as a peer cache source.<!--SCCMDocs issue 641-->  
+- With version 1802 and prior, the client's last heartbeat discovery submission determines the current boundary of a peer cache source. A client that roams to a different boundary group might still be a member of its former boundary group for the purposes of peer cache. This behavior results in a client being offered a peer cache source that isn't in its immediate network location. Don't enable roaming clients as a peer cache source.<!--SCCMDocs issue 641-->  
 
-- Before attempting to download content, the peer cache client first validates that the peer cache source is online.<!--sms.498675--> This validation happens via the "fast channel" for client notification, which uses TCP port 10123.<!--511673-->  
+    > [!Important]  
+    > Starting in version 1806, Configuration Manager is more efficient at determining if a peer cache source has roamed to another location. This behavior makes sure the management point offers it as a content source to clients in the new location and not the old location. If you're using the peer cache feature with roaming peer cache sources, after updating the site to version 1806, also update all peer cache sources to the latest client version. The management point doesn't include these peer cache sources in the list of content locations until they are updated to at least version 1806.<!--SCCMDocs issue 850-->  
+
+- Before attempting to download content, the management point first validates that the peer cache source is online.<!--sms.498675--> This validation happens via the "fast channel" for client notification, which uses TCP port 10123.<!--511673-->  
 
 > [!Note]  
 > To take advantage of new Configuration Manager features, first update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.  

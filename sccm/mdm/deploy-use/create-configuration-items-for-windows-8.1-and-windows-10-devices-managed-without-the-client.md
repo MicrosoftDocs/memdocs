@@ -13,58 +13,58 @@ manager: dougeby
 ---
 # How to create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client
 
-  
+
  Use the System Center Configuration Manager**Windows 8.1 and Windows 10** configuration item to manage settings  for Windows 8.1, and Windows 10 devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
-  
+
 ### To create a Windows 8.1 and Windows 10 configuration item  
-  
-1.  In the Configuration Manager console, click **Assets and compliance**.  
-  
-2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then click **Configuration Items**.  
-  
-3.  On the **Home** tab, in the **Create** group, click **Create Configuration Item**.  
-  
-4.  On the **General** page of the **Create Configuration Item Wizard**, specify a name, and optional description for the configuration item.  
-  
-5.  Under **Specify the type of configuration item that you want to create**, select **Windows 8.1 and Windows 10**.  
-  
-6.  Click **Categories** if you create and assign categories to help you search and filter configuration items in the Configuration Manager console.  
-  
-7.  On the **Supported Platforms** page of the wizard, select the specific Windows platforms that evaluate the configuration item.  
-  
-8.  On the **Device Settings** page of the wizard, select the settings group that you want to configure. See [Windows 8.1 and Windows 10 configuration item settings reference](#BKMK_Setref) in this topic for details, and then click **Next**.  
-  
-    > [!TIP]  
-    >  If the setting that you want is not listed, select the **Configure additional settings that are not in the default setting groups check box**.  
-  
+
+1. In the Configuration Manager console, click **Assets and compliance**.  
+
+2. In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then click **Configuration Items**.  
+
+3. On the **Home** tab, in the **Create** group, click **Create Configuration Item**.  
+
+4. On the **General** page of the **Create Configuration Item Wizard**, specify a name, and optional description for the configuration item.  
+
+5. Under **Specify the type of configuration item that you want to create**, select **Windows 8.1 and Windows 10**.  
+
+6. Click **Categories** if you create and assign categories to help you search and filter configuration items in the Configuration Manager console.  
+
+7. On the **Supported Platforms** page of the wizard, select the specific Windows platforms that evaluate the configuration item.  
+
+8. On the **Device Settings** page of the wizard, select the settings group that you want to configure. See [Windows 8.1 and Windows 10 configuration item settings reference](#BKMK_Setref) in this topic for details, and then click **Next**.  
+
+   > [!TIP]  
+   >  If the setting that you want is not listed, select the **Configure additional settings that are not in the default setting groups check box**.  
+
 9. On each settings page, configure the settings you require, and whether you want to remediate them when they are not compliant on devices (when this is supported).  
-  
+
 10. For each settings group, you can also configure the severity that is reported when a configuration item is found to be noncompliant from:  
-  
+
     -   **None** - Devices that fail this compliance rule do not report a failure severity for Configuration Manager reports.  
-  
+
     -   **Information** - Devices that fail this compliance rule report a failure severity of **Information** for Configuration Manager reports.  
-  
+
     -   **Warning** - Devices that fail this compliance rule report a failure severity of **Warning** for Configuration Manager reports.  
-  
+
     -   **Critical** - Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports.  
-  
+
     -   **Critical with event** - Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. This severity level is also be logged as a Windows event in the application event log.  
-  
+
 11. On the **Platform Applicability** page of the wizard, review any settings that are not compatible with the supported platforms you selected earlier. You can go back and remove these settings, or you can continue.  
-  
+
     > [!TIP]  
     >  Unsupported settings are not assessed for compliance.  
-  
+
 12. Complete the wizard.  
-  
- You can view the new configuration item in the **Configuration Items** node of the **Assets and Compliance** workspace.  
-  
+
+    You can view the new configuration item in the **Configuration Items** node of the **Assets and Compliance** workspace.  
+
 ##  Windows 8.1 and Windows 10 configuration item settings reference  
-  
+
 ### Password  
  These settings are for devices running Windows 10 and later only.  
-  
+
 |Setting|Details|  
 |-------------|-------------|  
 |**Require password settings on devices**|Require a password on supported devices.|  
@@ -77,9 +77,9 @@ manager: dougeby
 |**Password quality**|Select the password complexity level required and also whether biometric devices can be used.|  
 |**Send password recovery PIN to Exchange Server**|-|
 |**Device Encryption**|Enable encryption on targeted devices.|  
-  
+
 ###  Device  
-  
+
 |Setting name|Details|  
 |------------------|-------------|  
 |**Screen capture**|Allows you to take a screenshot of the device display.<br /><br /> (Windows 10 only)|  
@@ -99,10 +99,10 @@ manager: dougeby
 |**Language settings modification (desktop only)**|Prevents the user from changing the language settings on the device.|
 |**System time modification**|Prevents the end user from changing the device date and time.|
 |**Device name modification**|Prevents the end user from changing the device name.|
-  
+
 ### Email management  
  These settings are for devices running Windows 8.1 and Windows 10.  
-  
+
 |Setting|Details|  
 |-------------|-------------|  
 |**POP and IMAP email**|Allows connection to email accounts that use the POP and IMAP standards.|  
@@ -114,10 +114,10 @@ manager: dougeby
 |**Calendar synchronization**|Allow synchronization of calendars to the device.|  
 |**Custom email account**|Allow using a non-Microsoft account on the device.|  
 |**Make Microsoft Account optional in Windows Mail app**|Configure this to remove the requirement for a Microsoft account in Windows Mail.|  
-  
+
 ### Store  
  These settings are for devices running Windows 10 and later only.  
-  
+
 |Setting|Details|  
 |-------------|-------------|  
 |**Application store**|Allows access to the app store on the device.|  
@@ -126,10 +126,10 @@ manager: dougeby
 |**Auto-update apps from store**|Allows apps installed from the Windows Store to be automatically updated.|
 |**Use private store only**|Enable this to only allow end users to download apps from your private store.|
 |**Store originated app launch**|Used to disable all apps that were pre-installed on the device, or downloaded from the Windows Store.|
-  
+
 ### Browser  
  These settings are for devices running Windows 8.1 and Windows 10.  
-  
+
 |Setting|Details|  
 |-------------|-------------|  
 |**Allow web browser**|Allow the use of the web browser on the device.|  
@@ -139,10 +139,10 @@ manager: dougeby
 |**Pop-up blocker**|Enables or disables the browser pop-up blocker.|  
 |**Cookies**|Allow cookies to be saved on the device.|  
 |**Fraud warning**|Enable or disable warnings of potential fraudulent websites.|  
-  
+
 ###  Internet Explorer  
  These settings are for devices running Windows 8.1 and Windows 10.  
-  
+
 |Setting name|Details|  
 |------------------|-------------|  
 |**Always send Do Not Track header**|Prevents browsing information from being sent to third-party sites.|  
@@ -156,19 +156,19 @@ manager: dougeby
 |**Enterprise Mode menu option**|Allow users to activate and deactivate Enterprise Mode from the Internet Explorer **Tools** menu.|  
 |**Logging report location (URL)**|Specify a URL where visited websites are logged when Enterprise Mode is active.|  
 |**Enterprise Mode site list location (URL)**|Specify the location of the list of websites that use Enterprise Mode when it is active.|  
-  
+
 ###  Cloud  
  These settings are for devices running Windows 8.1 and Windows 10.  
-  
+
 |Setting name|Details|Windows 8.1|Windows 10|  
 |------------------|-------------|-----------------|----------------|  
 |**Settings synchronization**|Allows synchronization of settings between devices.|Yes|Yes|  
 |**Credentials synchronization**|Allows synchronization of credentials between devices.|Yes|Yes|  
 |**Microsoft Account**|Allow the use of a Microsoft account on the device.|Yes|Yes|  
 |**Settings synchronization over metered connections**|Allow settings to be synchronized when the Internet connection is metered.|Yes|Yes|  
-  
+
 ###  Security  
-  
+
 |Setting name|Details|  
 |------------------|-------------|  
 |**Unsigned file installation**|Allows the loading of unsigned files.<br /><br /> (Windows 10 only)|  
@@ -182,18 +182,18 @@ manager: dougeby
 |**Profile file**|Provisions a VPN profile for Windows RT devices.<br /><br /> Windows 8.1 only)|  
 |**Profile name**|Provisions a VPN profile for Windows RT devices.<br /><br /> Windows 8.1 only)|  
 |**Profile for all users**|Provisions a VPN profile for Windows RT devices.<br /><br /> Windows 8.1 only)|  
-  
+
 ###  Peak synchronization  
  These settings are for devices running Windows 10 and later only.  
-  
+
 |Setting name|Details|  
 |------------------|-------------|  
 |**Specify peak time**|Configure the peak time for mobile device synchronization.|  
 |**Peak synchronization frequency**|Configure how often synchronization occurs during the peak hours you configured.|  
 |**Off-peak synchronization frequency**|Configure how often synchronization occurs outside of the peak hours you configured.|  
-  
+
 ###  Roaming  
-  
+
 |Setting name|Details|  
 |------------------|-------------|  
 |**Device management while roaming**|Allows the device to be managed by Configuration Manager when it is roaming.<br /><br /> (Windows 10 only)|  
@@ -202,9 +202,9 @@ manager: dougeby
 |**Data roaming**|Allow roaming between networks when accessing data.| 
 |**VPN over cellular**|Lets the device access VPN connections while connected to a cellular network.<br /><br /> (Windows 10 only)|
 |**VPN roaming over cellular**|Lets the device access VPN connections while roaming on a cellular network.<br /><br /> (Windows 10 only)| 
-  
+
 ###  Encryption  
-  
+
 |Setting name|Details|  
 |------------------|-------------|  
 |**Storage card encryption**|Require any storage cards used with the device to be encrypted.<br /><br /> (Windows 10 only)|  
@@ -213,10 +213,10 @@ manager: dougeby
 |**Signing algorithm**|Select the signing algorithm for signed emails.|  
 |**Require email encryption**|Requires that emails are encrypted before they are sent.|  
 |**Encryption algorithm**|Select the algorithm for encrypting emails.|  
-  
+
 ###  Wireless communications  
  These settings are for devices running Windows 10 and later only.  
-  
+
 |Setting name|Details|  
 |------------------|-------------|  
 |**Wireless network connection**|Enable or disable the devices Wi-Fi capability.|  
@@ -224,13 +224,13 @@ manager: dougeby
 |**Offload data to Wi-Fi when possible**|Configure this to use the Wi-Fi connection on the device when possible.|  
 |**Wi-Fi hotspot reporting**|-|  
 |**Manual Wi-Fi configuration**|-|  
-  
+
 #### To configure a wireless network connection  
-  
+
 1.  On the **Configure mobile device wireless communication settings** page, click **Add**.  
-  
+
 2.  In the **Wireless Network Connection** dialog box, specify the following information about the wireless connection that are provisioned on mobile devices:  
-  
+
 |Setting|More information|  
 |-------------|----------------------|  
 |**Network name (SSID)**|Enter the name of the Wi-Fi network.|  
@@ -242,46 +242,46 @@ manager: dougeby
 |**Proxy server settings**|Specify as required, **Server** and **Port** settings for **HTTP**, **WAP** and **Sockets**.|  
 |**Enable 802.1X network access**|Select this option if you want to secure the connection by specifying an EAP type.|  
 |**EAP type**|Choose the EAP type to use from:<br /><br /> - **PEAP**<br> - **Smart card or certificate**|  
-  
-  
-  
+
+
+
 ### Certificates  
  Let’s you import certificates to install on mobile devices.  
-  
+
  Click **Import**, and then specify the following values:  
-  
+
 -   **Certificate file** – Click Browse and then select the certificate file with the extension **.cer** that you want to import.  
-  
+
 -   **Destination store** – Choose one or more destination stores where the imported certificate is added on the mobile device from:  
-  
+
     -   **Root**  
-  
+
     -   **CA**  
-  
+
     -   **Normal**  
-  
+
     -   **Privileged**  
-  
+
     -   **SPC**  
-  
+
     -   **Peer**  
-  
+
 -   **Role** – If **SPC** (Software Publisher Certificate) is selected as the destination store, choose the role that is associated with the certificate from:  
-  
+
     -   **Mobile Operator**  
-  
+
     -   **Manager**  
-  
+
     -   **User Authenticated**  
-  
+
     -   **IT Administrator**  
-  
+
     -   **User Unauthenticated**  
-  
+
     -   **Trusted Provisioning Server**  
-  
+
 ### System security  
-  
+
 |Setting|Details|  
 |-------------|-------------|  
 |**User Account Control**|Enables or disables Windows User Account Control on the device.|  
@@ -297,45 +297,47 @@ manager: dougeby
 |**Pre-release features**|Allows Microsoft to deploy pre-release settings and features to the device.<br /><br /> (Windows 10 only)|  
 |**Manual root certificate installation**|(Windows 10 only)| 
 |**Allow manual unenrollment**|Lets the user unenroll themselves from management by an MDM solution.| 
-  
+
 ###  Windows Server Work Folders  
  These settings are for devices running Windows 8.1 and Windows 10.  
-  
+
 |Setting name|Details|  
 |------------------|-------------|  
 |**Work Folders URL**|Configures the location of a Windows Server work folder that users can connect to from their device.|  
-  
+
 ### Allowed and blocked apps (Windows Phone only)  
  Let’s you specify a list of Intune managed apps that are compliant, or not compliant in your company. Windows Phone can allow, or block the installation of these apps.  
-  
+
  You cannot specify both compliant and noncompliant apps in the same configuration item.  
-  
+
 #### To specify apps that are allowed or blocked  
-  
+
 On the **Allowed and Blocked Apps list** page, specify the following information:  
-  
-|Setting|More information|  
-    |-------------|----------------------|  
-    |**Blocked apps list**|Select this option if you want to specify a list of apps that users are not allowed to install.|  
-    |**Allowed apps list**|Select this option if you want to specify a list of apps that users are allowed to install. Any other apps are blocked from installing.|  
-    |**Add**|Adds an app to the selected list. Specify a name of your choice, optionally the app publisher, and the URL to the app in the app store.<br /><br /> To specify the URL, from the Windows Store, search for the app you want to use.<br /><br /> Open the app’s page, and copy the URL to the clipboard. You can now use this as the URL in either the allowed or blocked apps list.<br /><br /> **Example:** Search the store for the **Skype** app. The URL you use is **http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.|  
-    |**Edit**|Let’s you edit the name, publisher and URL of the selected app.|  
-    |**Remove**|Deletes the selected app from the list.|  
-    |**Import**|Imports a list of apps you have specified in a comma-separated values file. Use the format, application name, publisher, app URL in the file.|  
-  
+
+
+|        Setting        |                                                                                                                                                                                                                                                                        More information                                                                                                                                                                                                                                                                         |
+|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Blocked apps list** |                                                                                                                                                                                                                                 Select this option if you want to specify a list of apps that users are not allowed to install.                                                                                                                                                                                                                                 |
+| **Allowed apps list** |                                                                                                                                                                                                             Select this option if you want to specify a list of apps that users are allowed to install. Any other apps are blocked from installing.                                                                                                                                                                                                             |
+|        **Add**        | Adds an app to the selected list. Specify a name of your choice, optionally the app publisher, and the URL to the app in the app store.<br /><br /> To specify the URL, from the Windows Store, search for the app you want to use.<br /><br /> Open the app’s page, and copy the URL to the clipboard. You can now use this as the URL in either the allowed or blocked apps list.<br /><br /> **Example:** Search the store for the **Skype** app. The URL you use is **<http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51>**. |
+|       **Edit**        |                                                                                                                                                                                                                                                 Let’s you edit the name, publisher and URL of the selected app.                                                                                                                                                                                                                                                 |
+|      **Remove**       |                                                                                                                                                                                                                                                             Deletes the selected app from the list.                                                                                                                                                                                                                                                             |
+|      **Import**       |                                                                                                                                                                                                          Imports a list of apps you have specified in a comma-separated values file. Use the format, application name, publisher, app URL in the file.                                                                                                                                                                                                          |
+
 ### Windows 10 Team  
  These settings are for devices running Windows 10 Team only.  
-  
-|Setting name|Details|  
-|------------------|-------------|  
-|**Allow screen to wake automatically when sensors detect someone in the room**|Allows the device to wake automatically when its sensor detects someone in the room.|  
-|**Required PIN for wireless projection**|Specifies whether you must enter a PIN before you can use the wireless projection capabilities of the device.|  
-|**Maintenance Window**|Configures the window when updates can take place to the device. You can configure the start time of the window and the duration (from 1-5 hours).|
-|**Azure Operational Insights**|Azure Operational Insights, part of the Microsoft Operations Manager suite collects, stores, and analyzes log file data from Windows 10 Team devices.<br>To connect to Azure Operational insights, you must specify a Workspace ID and a Workspace Key.| 
-|**Miracast wireless projection**|Enable this option if you want to let the Windows 10 Team device use Miracast enabled devices to project.<br>If you enable this option, from **Choose Miracast channel** select the Miracast channel used to project content.|
-|**Meeting information displayed on welcome screen**|If you enable this option, you can choose the information that is displayed on the **Meetings** tile of the **Welcome** screen. You can:<br><br>- **Show organizer and time only**<br>- **Show organizer, time and subject (subject hidden for private meetings)**|
-|**Lockscreen background image URL**|Use this setting to display a custom background on the **Welcome** screen of Windows 10 Team devices from the URL you specify.<br>The image must be in PNG format and the URL must begin with **https://**.| 
-  
+
+
+|                                  Setting name                                  |                                                                                                                              Details                                                                                                                               |
+|--------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Allow screen to wake automatically when sensors detect someone in the room** |                                                                                        Allows the device to wake automatically when its sensor detects someone in the room.                                                                                        |
+|                    **Required PIN for wireless projection**                    |                                                                           Specifies whether you must enter a PIN before you can use the wireless projection capabilities of the device.                                                                            |
+|                             **Maintenance Window**                             |                                                         Configures the window when updates can take place to the device. You can configure the start time of the window and the duration (from 1-5 hours).                                                         |
+|                         **Azure Operational Insights**                         |      Azure Operational Insights, part of the Microsoft Operations Manager suite collects, stores, and analyzes log file data from Windows 10 Team devices.<br>To connect to Azure Operational insights, you must specify a Workspace ID and a Workspace Key.       |
+|                        **Miracast wireless projection**                        |                   Enable this option if you want to let the Windows 10 Team device use Miracast enabled devices to project.<br>If you enable this option, from **Choose Miracast channel** select the Miracast channel used to project content.                    |
+|              **Meeting information displayed on welcome screen**               | If you enable this option, you can choose the information that is displayed on the **Meetings** tile of the **Welcome** screen. You can:<br><br>- **Show organizer and time only**<br>- **Show organizer, time and subject (subject hidden for private meetings)** |
+|                      **Lockscreen background image URL**                       |                            Use this setting to display a custom background on the **Welcome** screen of Windows 10 Team devices from the URL you specify.<br>The image must be in PNG format and the URL must begin with **https://**.                             |
+
 ### Windows Information Protection  
 
 With the increase of employee-owned devices in the enterprise, there’s also an increasing risk of accidental data leaks through apps and services, like email, social media, and the public cloud, which are outside of the enterprise’s control. For example, when an employee sends the latest engineering pictures from their personal email account, copies and pastes product info into a tweet, or saves an in-progress sales report to their public cloud storage.
@@ -349,7 +351,7 @@ For information about how to configure enterprise data protection with Configura
 
 ### Microsoft Edge  
 These settings are for devices running Windows 10 and later.  
-  
+
 |Setting name|Details|  
 |------------------|-------------| 
 |Microsoft Edge|Allow the use of the Edge web browser on the device.| 
@@ -373,7 +375,7 @@ These settings are for devices running Windows 10 and later.
 
 ### Windows Defender
 These settings are for devices running Windows 10 and later.
- 
+
 |Setting name|Details|  
 |------------------|-------------|  
 |**Allow real-time monitoring**|Enables real-time scanning for malware, spyware, and other unwanted software.|
@@ -400,6 +402,6 @@ These settings are for devices running Windows 10 and later.
 |**File extension exclusions**|Add one or more file extensions like jpg or txt to the exclusions list. Any files with these extensions are not included in any real-time or scheduled scans.|
 |**Process exclusions**|Adds one or more processes of the type .exe, .com, or .scr to the exclusions list. These processes are not included in any real-time or scheduled scans.|
 
-  
+
 ## See Also  
  [Configuration items for devices managed without the System Center Configuration Manager client](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)

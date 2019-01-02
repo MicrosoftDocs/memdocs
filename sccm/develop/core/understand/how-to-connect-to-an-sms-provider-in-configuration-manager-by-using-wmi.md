@@ -15,11 +15,11 @@ Before connecting to the SMS Provider for a local or remote System Center Config
 
  You can connect to the SMS Provider on a Configuration Manager site server by using the WMI [SWbemLocator](http://go.microsoft.com/fwlink/?LinkId=44022) object or by using the Windows Script Host `GetObject` method. Both approaches work equally well on local or remote connections, with the following limitations:  
 
--   You must use `SWbemLocator` if you need to pass user credentials to a remote computer.  
+- You must use `SWbemLocator` if you need to pass user credentials to a remote computer.  
 
--   You cannot use `SWbemLocator` to explicitly pass user credentials to a local computer.  
+- You cannot use `SWbemLocator` to explicitly pass user credentials to a local computer.  
 
- There are several different syntaxes that you can use to make the connection, depending on whether the connection is local or remote. After you are connected to the SMS Provider, you will have an [SWbemServices](http://go.microsoft.com/fwlink/?LinkId=44023) object that you use to access System Center Configuration Manager objects.  
+  There are several different syntaxes that you can use to make the connection, depending on whether the connection is local or remote. After you are connected to the SMS Provider, you will have an [SWbemServices](http://go.microsoft.com/fwlink/?LinkId=44023) object that you use to access System Center Configuration Manager objects.  
 
 > [!NOTE]
 >  If you need to add context qualifiers for the connection, see [How to Add a Configuration Manager Context Qualifier by Using WMI](../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md).  

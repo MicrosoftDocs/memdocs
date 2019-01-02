@@ -281,13 +281,13 @@ Class SMS_CollectionMember_a : SMS_BaseAssociation
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Association: ToInstance  
+- Association: ToInstance  
 
--   Read (read-only)  
+- Read (read-only)  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- The `CollectionID` and `ResourceID` properties can be used in a WMI Query Language (WQL) WHERE clause. However, you are limited to using an OR condition. Your query might not use the other properties in the relationship.  
+  The `CollectionID` and `ResourceID` properties can be used in a WMI Query Language (WQL) WHERE clause. However, you are limited to using an OR condition. Your query might not use the other properties in the relationship.  
 
 ## Requirements  
 

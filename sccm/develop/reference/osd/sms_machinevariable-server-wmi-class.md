@@ -62,11 +62,11 @@ Class SMS_MachineVariable
 
  Class qualifiers for this class include:  
 
--   Embedded  
+- Embedded  
 
- For more information about both the class qualifiers and the property qualifiers that are included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers that are included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- Your application uses this class to create objects that are embedded by the [SMS_MachineSettings Server WMI Class](../../../develop/reference/osd/sms_machinesettings-server-wmi-class.md) and accessed by using the `MachineVariables` property. For an example of the use of this class, see How to Create a Computer Variable in Configuration Manager.  
+  Your application uses this class to create objects that are embedded by the [SMS_MachineSettings Server WMI Class](../../../develop/reference/osd/sms_machinesettings-server-wmi-class.md) and accessed by using the `MachineVariables` property. For an example of the use of this class, see How to Create a Computer Variable in Configuration Manager.  
 
 ## Requirements  
 

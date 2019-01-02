@@ -80,52 +80,54 @@ The new policy is displayed in the **Application Management Policies** node of t
 
 Use the following information to learn about the allowed formats and wildcards you can use when specifying URLs in the allowed and blocked lists.  
 
--   Use the wildcard symbol `*` (asterisk) according to the rules in the permitted patterns list below.  
+- Use the wildcard symbol `*` (asterisk) according to the rules in the permitted patterns list below.  
 
--   Prefix all URLs with **http** or **https** when entering them into the list.  
+- Prefix all URLs with **http** or **https** when entering them into the list.  
 
--   Specify port numbers in the address. If you don't specify a port number, the following values are used:  
+- Specify port numbers in the address. If you don't specify a port number, the following values are used:  
 
-    -   Port 80 for http  
+  - Port 80 for http  
 
-    -   Port 443 for https  
+  - Port 443 for https  
 
-     Don't use wildcards for the port number, which isn't supported. For example, `http://www.contoso.com:*`   
+    Don't use wildcards for the port number, which isn't supported. For example, `http://www.contoso.com:*`   
 
--   Use the following table to learn about the permitted patterns you can use when you specify URLs:  
+- Use the following table to learn about the permitted patterns you can use when you specify URLs:  
 
-    |URL|Matches|Does not match|  
-    |---------|-------------|--------------------|  
-    |`http://www.contoso.com`<br /><br /> Matches a single page|`www.contoso.com`|`host.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `contoso.com/`|  
-    |`http://contoso.com`<br /><br /> Matches a single page|`contoso.com`|`host.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `www.contoso.com`|  
-    |`http://www.contoso.com/*`<br /><br /> Matches all URLs beginning with `www.contoso.com`|`www.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `www.contoso.com/videos/tvshows`|`host.contoso.com`<br /><br /> `host.contoso.com/images`|  
-    |`http://*.contoso.com/*`<br /><br /> Matches all sub-domains under contoso.com|`developer.contoso.com/resources`<br /><br /> `news.contoso.com/images`<br /><br /> `news.contoso.com/videos`|`contoso.host.com`|  
-    |`http://www.contoso.com/images`<br /><br /> Matches a single folder|`www.contoso.com/images`|`www.contoso.com/images/dogs`|  
-    |`http://www.contoso.com:80`<br /><br /> Matches a single page, using a port number|`http://www.contoso.com:80`||  
-    |`https://www.contoso.com`<br /><br /> Matches a single, secure page|`https://www.contoso.com`|`http://www.contoso.com`|  
-    |`http://www.contoso.com/images/*`<br /><br /> Matches a single folder and all subfolders|`www.contoso.com/images/dogs`<br /><br /> `www.contoso.com/images/cats`|`www.contoso.com/videos`|  
 
--   The following are examples of some of the inputs you cannot specify:  
+  |                                           URL                                            |                                                    Matches                                                    |                                    Does not match                                     |
+  |------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
+  |                `http://www.contoso.com`<br /><br /> Matches a single page                |                                               `www.contoso.com`                                               |  `host.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `contoso.com/`   |
+  |                  `http://contoso.com`<br /><br /> Matches a single page                  |                                                 `contoso.com`                                                 | `host.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `www.contoso.com` |
+  | `http://www.contoso.com/*`<br /><br /> Matches all URLs beginning with `www.contoso.com` |      `www.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `www.contoso.com/videos/tvshows`      |               `host.contoso.com`<br /><br /> `host.contoso.com/images`                |
+  |      `http://*.contoso.com/*`<br /><br /> Matches all sub-domains under contoso.com      | `developer.contoso.com/resources`<br /><br /> `news.contoso.com/images`<br /><br /> `news.contoso.com/videos` |                                  `contoso.host.com`                                   |
+  |           `http://www.contoso.com/images`<br /><br /> Matches a single folder            |                                           `www.contoso.com/images`                                            |                             `www.contoso.com/images/dogs`                             |
+  |    `http://www.contoso.com:80`<br /><br /> Matches a single page, using a port number    |                                          `http://www.contoso.com:80`                                          |                                                                                       |
+  |           `https://www.contoso.com`<br /><br /> Matches a single, secure page            |                                           `https://www.contoso.com`                                           |                               `http://www.contoso.com`                                |
+  | `http://www.contoso.com/images/*`<br /><br /> Matches a single folder and all subfolders |                    `www.contoso.com/images/dogs`<br /><br /> `www.contoso.com/images/cats`                    |                               `www.contoso.com/videos`                                |
 
-    -   `*.com`  
 
-    -   `*.contoso/*`  
+- The following are examples of some of the inputs you cannot specify:  
 
-    -   `www.contoso.com/*images`  
+  -   `*.com`  
 
-    -   `www.contoso.com/*images*pigs`  
+  -   `*.contoso/*`  
 
-    -   `www.contoso.com/page*`  
+  -   `www.contoso.com/*images`  
 
-    -   IP addresses  
+  -   `www.contoso.com/*images*pigs`  
 
-    -   `https://*`  
+  -   `www.contoso.com/page*`  
 
-    -   `http://*`  
+  -   IP addresses  
 
-    -   `http://www.contoso.com:*`  
+  -   `https://*`  
 
-    -   `http://www.contoso.com: /*`  
+  -   `http://*`  
+
+  -   `http://www.contoso.com:*`  
+
+  -   `http://www.contoso.com: /*`  
 
 > [!NOTE]  
 >  `*.microsoft.com` is always allowed.  

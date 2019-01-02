@@ -337,15 +337,15 @@ You might need to add the addresses below to the firewall that's located between
 - If child sites have a software update point 
 - If there is a remote active internet-based software update point at a site
 
- **Software update point on the child site**  
+  **Software update point on the child site**  
 
--   `http://<FQDN for software update point on child site>`  
+- `http://<FQDN for software update point on child site>`  
 
--   `https://<FQDN for software update point on child site>`  
+- `https://<FQDN for software update point on child site>`  
 
--   `http://<FQDN for software update point on parent site>`  
+- `http://<FQDN for software update point on parent site>`  
 
--   `https://<FQDN for software update point on parent site>`  
+- `https://<FQDN for software update point on parent site>`  
 
 
 
@@ -449,7 +449,7 @@ Consider the following scenarios in which you might need to deploy a superseded 
 -   If a superseding software update wasn't approved for deployment in your production environment.  
 
     > [!NOTE]  
-    > When Configuration Manager sets a superseded software update to **Expired**, it doesn't set the update to **Declined** in WSUS. However, when the WSUS cleanup task runs, the updates set to **Expired** in Configuration Manager are set to a status of **Declined** on the WSUS server. Thus the Windows Update Agent on clients no longer scan for these updates. Clients continue to scan for an expired update until the cleanup task runs. For more information about the WSUS cleanup task, see [Software updates maintenance](/sccm/sum/deploy-use/software-updates-maintenance).  
+    > Before Configuration Manager version 1806, when Configuration Manager sets a superseded software update to **Expired**, it doesn't set the update to **Declined** in WSUS. Clients continue to scan for an expired update until the update is declined manually or via a custom script.  After Configuration Manager version 1806, Configuration Manager will also decline the superseded updates in WSUS. For more information about the WSUS cleanup task, see [Software updates maintenance](/sccm/sum/deploy-use/software-updates-maintenance).
 
 
 ###  <a name="BKMK_UpdateLanguages"></a> Languages  

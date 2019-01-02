@@ -39,89 +39,89 @@ Bootable media in Configuration Manager contains the boot image, optional presta
 
 ### To create bootable media  
 
-1.  In the Configuration Manager console, click **Software Library**.  
+1. In the Configuration Manager console, click **Software Library**.  
 
-2.  In the **Software Library** workspace, expand **Operating Systems**, and then click **Task Sequences**.  
+2. In the **Software Library** workspace, expand **Operating Systems**, and then click **Task Sequences**.  
 
-3.  On the **Home** tab, in the **Create** group, click **Create Task Sequence Media** to start the Create Task Sequence Media Wizard.  
+3. On the **Home** tab, in the **Create** group, click **Create Task Sequence Media** to start the Create Task Sequence Media Wizard.  
 
-4.  On the **Select Media Type** page, specify the following options, and then click **Next**.  
+4. On the **Select Media Type** page, specify the following options, and then click **Next**.  
 
-    -   Select **Bootable media**.  
+   -   Select **Bootable media**.  
 
-    -   Optionally, if you want to only allow the operating system to be deployed without requiring user input, select **Allow unattended operating system deployment**.  
+   -   Optionally, if you want to only allow the operating system to be deployed without requiring user input, select **Allow unattended operating system deployment**.  
 
-        > [!IMPORTANT]  
-        >  When you select this option, the user is not prompted for network configuration information or for optional task sequences. However, the user is still prompted for a password if the media is configured for password protection.  
+       > [!IMPORTANT]  
+       >  When you select this option, the user is not prompted for network configuration information or for optional task sequences. However, the user is still prompted for a password if the media is configured for password protection.  
 
-5.  On the **Media Management** page, specify one of the following options, and then click **Next**.  
+5. On the **Media Management** page, specify one of the following options, and then click **Next**.  
 
-    -   Select **Dynamic media** if you want to allow a management point to redirect the media to another management point, based on the client location in the site boundaries.  
+   -   Select **Dynamic media** if you want to allow a management point to redirect the media to another management point, based on the client location in the site boundaries.  
 
-    -   Select **Site-based media** if you want the media to contact only the specified management point.  
+   -   Select **Site-based media** if you want the media to contact only the specified management point.  
 
-6.  On the **Media Type** page, specify whether the media is a flash drive or a CD/DVD set, and then click configure the following:  
+6. On the **Media Type** page, specify whether the media is a flash drive or a CD/DVD set, and then click configure the following:  
 
-    > [!IMPORTANT]  
-    >  Stand-alone media uses a FAT32 file system. You cannot create stand-alone media on a USB flash drive whose content contains a file over 4 GB in size.  
+   > [!IMPORTANT]  
+   >  Stand-alone media uses a FAT32 file system. You cannot create stand-alone media on a USB flash drive whose content contains a file over 4 GB in size.  
 
-    -   If you select **USB flash drive**, specify the drive where you want to store the content.  
+   - If you select **USB flash drive**, specify the drive where you want to store the content.  
 
-    -   If you select **CD/DVD set**, specify the capacity of the media and the name and path of the output files. The wizard writes the output files to this location. For example: **\\\servername\folder\outputfile.iso**  
+   - If you select **CD/DVD set**, specify the capacity of the media and the name and path of the output files. The wizard writes the output files to this location. For example: **\\\servername\folder\outputfile.iso**  
 
-         If the capacity of the media is too small to store the entire content, multiple files are created and you must store the content on multiple CDs or DVDs. When multiple media is required, Configuration Manager adds a sequence number to the name of each output file that it creates. In addition, if you deploy an application along with the operating system and the application cannot fit on a single media, Configuration Manager stores the application across multiple media. When the stand-alone media is run, Configuration Manager prompts the user for the next media where the application is stored.  
+      If the capacity of the media is too small to store the entire content, multiple files are created and you must store the content on multiple CDs or DVDs. When multiple media is required, Configuration Manager adds a sequence number to the name of each output file that it creates. In addition, if you deploy an application along with the operating system and the application cannot fit on a single media, Configuration Manager stores the application across multiple media. When the stand-alone media is run, Configuration Manager prompts the user for the next media where the application is stored.  
 
-        > [!IMPORTANT]  
-        >  If you select an existing .iso image, the Task Sequence Media Wizard deletes that image from the drive or share as soon as you proceed to the next page of the wizard. The existing image is deleted, even if you then cancel the wizard.  
+     > [!IMPORTANT]  
+     >  If you select an existing .iso image, the Task Sequence Media Wizard deletes that image from the drive or share as soon as you proceed to the next page of the wizard. The existing image is deleted, even if you then cancel the wizard.  
 
      Click **Next**.  
 
-7.  On the **Security** page, specify the following options, and then click **Next**.  
+7. On the **Security** page, specify the following options, and then click **Next**.  
 
-    -   Select the **Enable unknown computer support** check box to allow the media to deploy an operating system to a computer that is not managed by Configuration Manager. There is no record of these computers in the Configuration Manager database.  
+   -   Select the **Enable unknown computer support** check box to allow the media to deploy an operating system to a computer that is not managed by Configuration Manager. There is no record of these computers in the Configuration Manager database.  
 
-         Unknown computers include the following:  
+        Unknown computers include the following:  
 
-        -   A computer where the Configuration Manager client is not installed  
+       -   A computer where the Configuration Manager client is not installed  
 
-        -   A computer that is not imported into Configuration Manager  
+       -   A computer that is not imported into Configuration Manager  
 
-        -   A computer that is not discovered by Configuration Manager  
+       -   A computer that is not discovered by Configuration Manager  
 
-    -   Select the **Protect the media with a password** check box and enter a strong password to help protect the media from unauthorized access. When you specify a password, the user must provide that password to use the bootable media.  
+   -   Select the **Protect the media with a password** check box and enter a strong password to help protect the media from unauthorized access. When you specify a password, the user must provide that password to use the bootable media.  
 
-        > [!IMPORTANT]  
-        >  As a security best practice, always assign a password to help protect the bootable media.  
+       > [!IMPORTANT]  
+       >  As a security best practice, always assign a password to help protect the bootable media.  
 
-    -   For HTTP communications, select **Create self-signed media certificate**, and then specify the start and expiration date for the certificate.  
+   -   For HTTP communications, select **Create self-signed media certificate**, and then specify the start and expiration date for the certificate.  
 
-    -   For HTTPS communications, select **Import PKI certificate**, and then specify the certificate to import and its password.  
+   -   For HTTPS communications, select **Import PKI certificate**, and then specify the certificate to import and its password.  
 
-         For more information about this client certificate that is used for boot images, see [PKI certificate requirements](../../core/plan-design/network/pki-certificate-requirements.md).  
+        For more information about this client certificate that is used for boot images, see [PKI certificate requirements](../../core/plan-design/network/pki-certificate-requirements.md).  
 
-    -   **User Device Affinity**: To support user-centric management in Configuration Manager, specify how you want the media to associate users with the destination computer. For more information about how operating system deployment supports user device affinity, see [Associate users with a destination computer](../get-started/associate-users-with-a-destination-computer.md).  
+   -   **User Device Affinity**: To support user-centric management in Configuration Manager, specify how you want the media to associate users with the destination computer. For more information about how operating system deployment supports user device affinity, see [Associate users with a destination computer](../get-started/associate-users-with-a-destination-computer.md).  
 
-        -   Specify **Allow user device affinity with auto-approval** if you want the media to automatically associate users with the destination computer. This functionality is based on the actions of the task sequence that deploys the operating system. In this scenario, the task sequence creates a relationship between the specified users and destination computer when it deploys the operating system to the destination computer.  
+       -   Specify **Allow user device affinity with auto-approval** if you want the media to automatically associate users with the destination computer. This functionality is based on the actions of the task sequence that deploys the operating system. In this scenario, the task sequence creates a relationship between the specified users and destination computer when it deploys the operating system to the destination computer.  
 
-        -   Specify **Allow user device affinity pending administrator approval** if you want the media to associate users with the destination computer after approval is granted. This functionality is based on the scope of the task sequence that deploys the operating system.  In this scenario, the task sequence creates a relationship between the specified users and the destination computer, but waits for approval from an administrative user before the operating system is deployed.  
+       -   Specify **Allow user device affinity pending administrator approval** if you want the media to associate users with the destination computer after approval is granted. This functionality is based on the scope of the task sequence that deploys the operating system.  In this scenario, the task sequence creates a relationship between the specified users and the destination computer, but waits for approval from an administrative user before the operating system is deployed.  
 
-        -   Specify **Do not allow user device affinity** if you do not want the media to associate users with the destination computer. In this scenario, the task sequence does not associate users with the destination computer when it deploys the operating system.  
+       -   Specify **Do not allow user device affinity** if you do not want the media to associate users with the destination computer. In this scenario, the task sequence does not associate users with the destination computer when it deploys the operating system.  
 
-8.  On the **Boot image** page, specify the following options, and then click **Next**.  
+8. On the **Boot image** page, specify the following options, and then click **Next**.  
 
-    > [!IMPORTANT]  
-    >  The architecture of the boot image that is distributed must be appropriate for the architecture of the destination computer. For example, an x64 destination computer can boot and run an x86 or x64 boot image. However, an x86 destination computer can boot and run only an x86 boot image.  
+   > [!IMPORTANT]  
+   >  The architecture of the boot image that is distributed must be appropriate for the architecture of the destination computer. For example, an x64 destination computer can boot and run an x86 or x64 boot image. However, an x86 destination computer can boot and run only an x86 boot image.  
 
-    -   In the **Boot image** box, specify the boot image to start the destination computer.  
+   -   In the **Boot image** box, specify the boot image to start the destination computer.  
 
-    -   In the **Distribution point** box, specify the distribution point where the boot image resides. The wizard retrieves the boot image from the distribution point and writes it to the media.  
+   -   In the **Distribution point** box, specify the distribution point where the boot image resides. The wizard retrieves the boot image from the distribution point and writes it to the media.  
 
-        > [!NOTE]  
-        >  You must have **Read** access rights to the content library on the distribution point.  
+       > [!NOTE]  
+       >  You must have **Read** access rights to the content library on the distribution point.  
 
-    -   If you create site-based bootable media on the **Media Management** page of the wizard, specify a management point from a primary site in the **Management point** box.  
+   -   If you create site-based bootable media on the **Media Management** page of the wizard, specify a management point from a primary site in the **Management point** box.  
 
-    -   If you create dynamic bootable media on the **Media Management** page of the wizard, specify the primary site management points to use, and a priority order for the initial communications in **Associated management points**.  
+   -   If you create dynamic bootable media on the **Media Management** page of the wizard, specify the primary site management points to use, and a priority order for the initial communications in **Associated management points**.  
 
 9. On the **Customization** page, specify the following options, and then click **Next**.  
 

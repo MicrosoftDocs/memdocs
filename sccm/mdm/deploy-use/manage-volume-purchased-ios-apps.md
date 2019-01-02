@@ -93,19 +93,19 @@ You can fully sync the data held by Apple with Configuration Manager at any time
 
 ## Step 2 - Deploy a volume-purchased app  
 
-1.  In the Configuration Manager console, choose **Software Library** > **Application Management** > **License Information for Store Apps**.  
+1. In the Configuration Manager console, choose **Software Library** > **Application Management** > **License Information for Store Apps**.  
 
-3.  Choose the app that you want to deploy, and then, in the **Home** tab, in the **Create** group, choose **Create Application**.
-The Configuration Manager application that is created has the Microsoft Store for Business app. You can then deploy and monitor this application as you would any other Configuration Manager application.  
+2. Choose the app that you want to deploy, and then, in the **Home** tab, in the **Create** group, choose **Create Application**.
+   The Configuration Manager application that is created has the Microsoft Store for Business app. You can then deploy and monitor this application as you would any other Configuration Manager application.  
 
-    > [!IMPORTANT]  
-    > You must choose a deployment purpose of **Required**. Available installations are not currently supported.
+   > [!IMPORTANT]  
+   > You must choose a deployment purpose of **Required**. Available installations are not currently supported.
 
- When you deploy the app, a license is used by each user, or for device installs, each device that installs the app. If you target a device collection with an app that supports device licensing, a device license is claimed. If you target a device collection with an app that doesn't support device licensing, a user license is claimed. 
+   When you deploy the app, a license is used by each user, or for device installs, each device that installs the app. If you target a device collection with an app that supports device licensing, a device license is claimed. If you target a device collection with an app that doesn't support device licensing, a user license is claimed. 
 
- When you create an app from the **License Information for Store Apps** node, the app is associated with licenses from the token for the app you selected. For example, you might see two versions of the same app in the node. This behavior is because each version of the app is associated with a different Apple VPP token. You could then create apps from each token, and deploy them separately.
+   When you create an app from the **License Information for Store Apps** node, the app is associated with licenses from the token for the app you selected. For example, you might see two versions of the same app in the node. This behavior is because each version of the app is associated with a different Apple VPP token. You could then create apps from each token, and deploy them separately.
 
- To reclaim a license, you must create a new deployment for the app with a deployment action of **Uninstall**. You can't change the deployment action in the original deployment. The license is reclaimed after the app uninstalls.  
+   To reclaim a license, you must create a new deployment for the app with a deployment action of **Uninstall**. You can't change the deployment action in the original deployment. The license is reclaimed after the app uninstalls.  
 
 
 

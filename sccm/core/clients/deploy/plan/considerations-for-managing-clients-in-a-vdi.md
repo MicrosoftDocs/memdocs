@@ -17,13 +17,13 @@ manager: dougeby
 
 System Center Configuration Manager supports installing the Configuration Manager client on the following virtual desktop infrastructure (VDI) scenarios:  
 
--   **Personal virtual machines** - Personal virtual machines are generally used when you want to make sure that user data and settings are maintained on the virtual machine between sessions.  
+- **Personal virtual machines** - Personal virtual machines are generally used when you want to make sure that user data and settings are maintained on the virtual machine between sessions.  
 
--   **Remote Desktop Services sessions** - Remote Desktop Services enables a server to host multiple, concurrent client sessions. Users can connect to a session and then run applications on that server.  
+- **Remote Desktop Services sessions** - Remote Desktop Services enables a server to host multiple, concurrent client sessions. Users can connect to a session and then run applications on that server.  
 
--   **Pooled virtual machines** - Pooled virtual machines are not persisted between sessions. When a session is closed, all data and settings are discarded. Pooled virtual machines are useful when Remote Desktop Services cannot be used because a required business application cannot run on the Windows Server that hosts the client sessions.  
+- **Pooled virtual machines** - Pooled virtual machines are not persisted between sessions. When a session is closed, all data and settings are discarded. Pooled virtual machines are useful when Remote Desktop Services cannot be used because a required business application cannot run on the Windows Server that hosts the client sessions.  
 
- The following table lists considerations for managing the Configuration Manager client in a virtual desktop infrastructure.  
+  The following table lists considerations for managing the Configuration Manager client in a virtual desktop infrastructure.  
 
 |Virtual machine type|Considerations|  
 |--------------------------|--------------------|  
@@ -36,4 +36,4 @@ System Center Configuration Manager supports installing the Configuration Manage
 > [!NOTE]  
 >  With the exception of Windows Embedded clients that are in servicing mode, Configuration Manager clients that are not running in virtualized environments also use this randomized delay. When you have many deployed clients, this behavior helps avoid peaks in network bandwidth and reduces the CPU processing requirement on the Configuration Manager site systems, such as the management point and site server. The delay interval varies according to the Configuration Manager capability.  
 >   
->  The randomization delay is disabled by default for required software updates and required application deployments by using the following client setting: **Computer Agent**: **Disable deadline randomization**.
+>  The randomization delay is disabled by default for required software updates by using the following client setting: **Computer Agent**: **Disable deadline randomization**.

@@ -2,7 +2,7 @@
 title: Content management fundamentals
 titleSuffix: Configuration Manager
 description: Use tools and options in Configuration Manager to manage the content that you deploy.
-ms.date: 07/30/2018
+ms.date: 10/26/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,6 +11,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
+
 # Fundamental concepts for content management in Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
@@ -27,15 +28,19 @@ The following topics are key concepts for content management. When a concept req
 ## Accounts used for content management  
  The following accounts can be used with content management:  
 
--   **Network access account**: Used by clients to connect to a distribution point and access content. By default, the computer account is tried first.  
+#### Network access account
+Used by clients to connect to a distribution point and access content. By default, the computer account is tried first.  
 
-     This account is also used by pull-distribution points to download content from a source distribution point in a remote forest.  
+This account is also used by pull-distribution points to download content from a source distribution point in a remote forest.  
 
--   **Package access account**: By default, Configuration Manager grants access to content on a distribution point to the generic access accounts Users and Administrators. However, you can configure additional permissions to restrict access.   
+Starting in version 1806, some scenarios no longer require a network access account. You can enable the site to use Enhanced HTTP with Azure Active Directory authentication.<!--1358228--> 
 
--   **Multicast connection account**: Used for OS deployments.  
+For more information, see [Network access account](/sccm/core/plan-design/hierarchy/accounts#network-access-account).
 
-For more information about these accounts, see [Manage accounts to access content](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content).
+#### Package access account
+By default, Configuration Manager grants access to content on a distribution point to the generic access accounts Users and Administrators. However, you can configure additional permissions to restrict access.   
+
+For more information, see [Package access account](/sccm/core/plan-design/hierarchy/accounts#package-access-account).
 
 
 
@@ -142,11 +147,9 @@ When a client needs content, it makes a content location request to the manageme
 1.	The distribution point on the same computer as the client
 2.	A peer source in the same network subnet
 3.	A distribution point in the same network subnet
-4.	A peer source in the same Active Directory site
-5.	A distribution point in the same Active Directory site
-6.	A peer source in the same boundary group
-7.	A distribution point in the current boundary group
-8.	A distribution point in a neighbor boundary group configured for fallback
+4.	A peer source in the same boundary group
+5.	A distribution point in the current boundary group
+6.	A distribution point in a neighbor boundary group configured for fallback
 9.	A distribution point in the default site boundary group 
 10.	The Windows Update cloud service
 11.	An internet-facing distribution point

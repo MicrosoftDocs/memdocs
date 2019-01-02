@@ -60,11 +60,11 @@ Class SMS_UserVariable
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Embedded  
+- Embedded  
 
- For more information about both the class qualifiers and the property qualifiers that are included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers that are included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- Your application uses this class to create objects that are embedded by the SMS_UserSettings Server WMI Class and accessed by using the `UserVariables` property.  
+  Your application uses this class to create objects that are embedded by the SMS_UserSettings Server WMI Class and accessed by using the `UserVariables` property.  
 
 ## Requirements  
 

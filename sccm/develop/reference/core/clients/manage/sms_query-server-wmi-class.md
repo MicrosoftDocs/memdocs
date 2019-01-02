@@ -127,15 +127,15 @@ Class SMS_Query : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Secured  
+- Secured  
 
--   DisplayName("Query")  
+- DisplayName("Query")  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- You can use `SMS_Query` to persist valid queries that can be used later in an application or that can be run from the System Center Configuration Manager console.  
+  You can use `SMS_Query` to persist valid queries that can be used later in an application or that can be run from the System Center Configuration Manager console.  
 
- Instances of this class with the `TargetClassName` property set to an [SMS_StatusMessage Server WMI Class](../../../../../develop/reference/core/servers/manage/sms_statusmessage-server-wmi-class.md) object appear in the System Status node in the System Center Configuration Manager console. All other instances appear in the Queries node.  
+  Instances of this class with the `TargetClassName` property set to an [SMS_StatusMessage Server WMI Class](../../../../../develop/reference/core/servers/manage/sms_statusmessage-server-wmi-class.md) object appear in the System Status node in the System Center Configuration Manager console. All other instances appear in the Queries node.  
 
 ## Requirements  
 

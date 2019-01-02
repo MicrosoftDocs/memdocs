@@ -2,7 +2,7 @@
 title: Plan for cloud management gateway
 titleSuffix: Configuration Manager
 description: Plan and design the cloud management gateway (CMG) to simplify management of internet-based clients.
-ms.date: 09/10/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -96,22 +96,25 @@ Deployment and operation of the CMG includes the following components:
 
 ### Azure Resource Manager
 <!-- 1324735 -->
-Starting in version 1802, you can create the CMG using an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment doesn't require the classic Azure management certificate.  
+Starting in version 1802, you can create the CMG using an **Azure Resource Manager deployment**. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment doesn't require the classic Azure management certificate.  
+
+> [!Note]  
+> This capability doesn't enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [available Azure services in Azure CSP](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services). 
 
 The CMG wizard still provides the option for a **classic service deployment** using an Azure management certificate. To simplify the deployment and management of resources, using the Azure Resource Manager deployment model is recommended for all new CMG instances. If possible, redeploy existing CMG instances through Resource Manager. For more information, see [Modify a CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg).
 
-> [!IMPORTANT]  
-> This capability does not enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP does not support. For more information, see [available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services). 
+> [!Important]  
+> Starting in version 1810, the classic service deployment in Azure is deprecated for use in Configuration Manager. This version is the last to support creation of these Azure deployments. This functionality will be removed in the first Configuration Manager version released after July 1, 2019. Move your CMG and cloud distribution points to Azure Resource Manager deployments before this time. <!--SCCMDocs-pr issue #2993-->  
 
 
 ### Hierarchy design
 
-Create the CMG at the top-tier site of your hierarchy. If that is a central administration site, then create CMG connection points at child primary sites. The cloud service manager component is on the service connection point, which is also on the central administration site. This design can share the service across different primary sites if needed.
+Create the CMG at the top-tier site of your hierarchy. If that's a central administration site, then create CMG connection points at child primary sites. The cloud service manager component is on the service connection point, which is also on the central administration site. This design can share the service across different primary sites if needed.
 
 You can create multiple CMG services in Azure, and you can create multiple CMG connection points. Multiple CMG connection points provide load balancing of client traffic from the CMG to the on-premises roles. To reduce network latency, assign the associated CMG to the same geographical region as the primary site.
 
  > [!Note]  
- > Internet-based clients and the CMG do not fall into any boundary group.
+ > Internet-based clients and the CMG don't fall into any boundary group.
 
 Other factors, such as the number of clients to manage, also impact your CMG design. For more information, see [Performance and scale](#performance-and-scale).
 
@@ -137,7 +140,7 @@ As Seattle-based clients roam onto the internet, they communicate with the CMG i
 Similarly, as Paris-based clients roam onto the internet, they communicate with the CMG in the West Europe Azure region. The CMG forwards this communication to the Paris-based CMG connection point. When Paris-based users travel to the company headquarters in Seattle, their computers continue to communicate with the CMG in the West Europe Azure region. 
 
  > [!Note]  
- > Fourth Coffee considered creating another CMG connection point on the Paris-based primary site linked to the West US CMG. Paris-based clients would then use both CMGs, regardless of their location. While this configuration helps load balance traffic and provide service redundancy, it can also cause delays when Paris-based clients communicate with the US-based CMG. Configuration Manager clients are not currently aware of their geographical region, so do not prefer a CMG that is geographically closer. Clients randomly use an available CMG.
+ > Fourth Coffee considered creating another CMG connection point on the Paris-based primary site linked to the West US CMG. Paris-based clients would then use both CMGs, regardless of their location. While this configuration helps load balance traffic and provide service redundancy, it can also cause delays when Paris-based clients communicate with the US-based CMG. Configuration Manager clients aren't currently aware of their geographical region, so don't prefer a CMG that's geographically closer. Clients randomly use an available CMG.
 
 
 
@@ -147,20 +150,25 @@ Similarly, as Paris-based clients roam onto the internet, they communicate with 
 
     - An **Azure administrator** needs to participate in the initial creation of certain components, depending upon your design. This persona doesn't require permissions in Configuration Manager.  
 
-- At least one on-premises Windows server to host the **CMG connection point**. You can co-locate this role with other Configuration Manager site system roles.  
+- At least one on-premises Windows server to host the **CMG connection point**. You can colocate this role with other Configuration Manager site system roles.  
 
 - The **service connection point** must be in [online mode](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_modes).   
 
-- A [**server authentication certificate**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-server-authentication-certificate) for the CMG.  
+- A [**server authentication certificate**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_serverauth) for the CMG.  
 
-- If using the Azure classic deployment method, you must use an [**Azure management certificate**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#azure-management-certificate).  
+- If using the Azure classic deployment method, you must use an [**Azure management certificate**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_azuremgmt).  
 
     > [!TIP]  
-    > Starting with Configuration Manager version 1802, using the **Azure Resource Manager** deployment model is recommended. It does not require this management certificate.  
+    > Starting with Configuration Manager version 1802, Microsoft recommends using the **Azure Resource Manager** deployment model. It doesn't require this management certificate. 
+    > 
+    > The classic deployment method is deprecated as of version 1810.   
 
 - **Other certificates** may be required, depending upon your client OS version and authentication model. For more information, see [CMG certificates](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway).  
 
-    - Starting in version 1802, you must configure all CMG-enabled [**management points to use HTTPS**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#enable-management-point-for-https).  
+    - Starting in version 1802, you must configure all CMG-enabled [**management points to use HTTPS**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps).  
+
+    - Starting in version 1806, when using the site option to **Use Configuration Manager-generated certificates for HTTP site systems**, the management point can be HTTP. For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).  
+
 
 - Integration with **Azure AD** may be required for Windows 10 clients. For more information, see [Configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard).  
 
@@ -178,7 +186,7 @@ Similarly, as Paris-based clients roam onto the internet, they communicate with 
 
 - Software update points using a network load balancer don't work with CMG. <!--505311-->  
 
-- Starting in version 1802, CMG deployments using the Azure Resource Model don't enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services)  
+- Starting in version 1802, CMG deployments using the Azure Resource Model don't enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [available Azure services in Azure CSP](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services)  
 
 
 ### Support for Configuration Manager features
@@ -324,8 +332,8 @@ This table lists the required network ports and protocols. The *Client* is the d
 |---------|---------|---------|---------|---------|
 | Service connection point     | HTTPS | 443        | Azure        | CMG deployment |
 | CMG connection point     |  TCP-TLS | 10140-10155        | CMG service        | Preferred protocol to build CMG channel <sup>1</sup> |
-| CMG connection point     | HTTPS | 443        | CMG service       | Fallback to build CMG channel to only one VM instance<sup>2</sup> |
-| CMG connection point     |  HTTPS   | 10124-10139     | CMG service       | Fallback to build CMG channel to two or more VM instances<sup>3</sup> |
+| CMG connection point     | HTTPS | 443        | CMG service       | Fallback protocol to build CMG channel to only one VM instance<sup>2</sup> |
+| CMG connection point     |  HTTPS   | 10124-10139     | CMG service       | Fallback protocol to build CMG channel to two or more VM instances<sup>3</sup> |
 | Client     |  HTTPS | 443         | CMG        | General client communication |
 | CMG connection point      | HTTPS or HTTP | 443 or 80         | Management point<br>(version 1706 or 1710) | On-premises traffic, port depends upon management point configuration |
 | CMG connection point      | HTTPS | 443      | Management point<br>(version 1802) | On-premises traffic must be HTTPS |

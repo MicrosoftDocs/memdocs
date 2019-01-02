@@ -19,10 +19,10 @@ The `IsWindowAvailableNow` WMI class method, in Configuration Manager, determine
 
 ```  
 uint32 IsWindowAvailableNow(  
-     [IN]  UInt32 ServiceWindowType,  
-     [IN]  Boolean FallbackToAllProgramsWindow,  
-     [IN]  UInt32 MaxRuntime,  
-     [OUT] Boolean CanProgramRunNow  
+     [IN]  UInt32 ServiceWindowType,  
+     [IN]  Boolean FallbackToAllProgramsWindow,  
+     [IN]  UInt32 MaxRuntime,  
+     [OUT] Boolean CanProgramRunNow  
 );  
 ```  
 

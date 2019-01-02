@@ -107,57 +107,57 @@ Class SMS_SiteSystemSummarizer : SMS_BaseClass
 
  Configuration Manager role performed by the site system, for example:  
 
--   Distribution point  
+- Distribution point  
 
--   SQL Server  
+- SQL Server  
 
--   Software metering server  
+- Software metering server  
 
--   Component server  
+- Component server  
 
--   Site server  
+- Site server  
 
- `SiteCode`  
- Data type: `String`  
+  `SiteCode`  
+  Data type: `String`  
 
- Access type: Read  
+  Access type: Read  
 
- Qualifiers: [key]  
+  Qualifiers: [key]  
 
- Site code of Configuration Manager site.  
+  Site code of Configuration Manager site.  
 
- `SiteObject`  
- Data type: `String`  
+  `SiteObject`  
+  Data type: `String`  
 
- Access type: Read  
+  Access type: Read  
 
- Qualifiers: [key]  
+  Qualifiers: [key]  
 
- Network abstraction layer (NAL) path to a storage object that is one of the following:  
+  Network abstraction layer (NAL) path to a storage object that is one of the following:  
 
--   Directory that contains files  
+- Directory that contains files  
 
--   Name of the database  
+- Name of the database  
 
--   Transaction log  
+- Transaction log  
 
- `SiteSystem`  
- Data type: `String`  
+  `SiteSystem`  
+  Data type: `String`  
 
- Access type: Read  
+  Access type: Read  
 
- Qualifiers: [key]  
+  Qualifiers: [key]  
 
- Name of the computer containing the storage object.  
+  Name of the computer containing the storage object.  
 
- `Status`  
- Data type: `UInt32`  
+  `Status`  
+  Data type: `UInt32`  
 
- Access type: Read  
+  Access type: Read  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Status value indicating the health of the component. Possible values are:  
+  Status value indicating the health of the component. Possible values are:  
 
 |||  
 |-|-|  
@@ -168,11 +168,11 @@ Class SMS_SiteSystemSummarizer : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Read (read-only)  
+- Read (read-only)  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- An instance of this class is created for every storage object used by Configuration Manager. Storage objects are defined by the `SiteObject` property.  
+  An instance of this class is created for every storage object used by Configuration Manager. Storage objects are defined by the `SiteObject` property.  
 
 ## Requirements  
 

@@ -14,11 +14,11 @@ The SMS Provider, in System Center Configuration Manager, places restrictions on
 
  You can determine the schema class table column width from the corresponding SQL Server views. For information about mapping schema classes to SQL Server views, see [Configuration Manager Schema View Mapping](../../../develop/core/understand/configuration-manager-schema-view-mapping.md). The steps for obtaining the table column width from the SQL Server view in Microsoft SQL Server are:  
 
-1.  Open the properties of the SQL Server view to see which table and table columns it uses.  
+1. Open the properties of the SQL Server view to see which table and table columns it uses.  
 
-2.  Open the corresponding table in the database tables view to discover the column width.  
+2. Open the corresponding table in the database tables view to discover the column width.  
 
- Classes that are commonly affected by this restriction are:  
+   Classes that are commonly affected by this restriction are:  
 
 -   `SMS_Package`  
 

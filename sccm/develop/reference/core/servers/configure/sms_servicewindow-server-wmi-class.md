@@ -153,11 +153,11 @@ Class SMS_ServiceWindow
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Embedded  
+- Embedded  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- The maintenance window represented by this class has start and end times that can span days. The time span allows you to select certain hours of the week during which the client can execute the targeted programs and software updates. You can define maintenance windows for all Data Center computers by modifying the `Service Window` property of the Data Center collection.  
+  The maintenance window represented by this class has start and end times that can span days. The time span allows you to select certain hours of the week during which the client can execute the targeted programs and software updates. You can define maintenance windows for all Data Center computers by modifying the `Service Window` property of the Data Center collection.  
 
 ## Requirements  
 

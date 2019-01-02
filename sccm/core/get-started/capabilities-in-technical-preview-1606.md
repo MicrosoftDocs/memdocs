@@ -89,8 +89,8 @@ Further reading:
 - [Device Guard certification and compliance](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-certification-and-compliance)
 - [Device Guard deployment guide](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide)
 
- ##  <a name="dmp_onprem"></a> Multiple device management points for On-premises Mobile Device Management  
- With Technical Preview 1606, On\-premises Mobile Device Management (MDM) supports a new capability in Windows 10 Anniversary Update that automatically configures an enrolled device to have more than one device management point available for use. This capability allows the device to fallback to another device management point when the one it normal uses is not available. This capability only works for PCs with Windows 10 Anniversary Update installed.  
+  ##  <a name="dmp_onprem"></a> Multiple device management points for On-premises Mobile Device Management  
+  With Technical Preview 1606, On\-premises Mobile Device Management (MDM) supports a new capability in Windows 10 Anniversary Update that automatically configures an enrolled device to have more than one device management point available for use. This capability allows the device to fallback to another device management point when the one it normal uses is not available. This capability only works for PCs with Windows 10 Anniversary Update installed.  
 
 ### Try it out!  
 

@@ -17,7 +17,7 @@ manager: dougeby
 
 When you run Setup from the version 1606 baseline media for Configuration Manager, you can install the Long-Term Servicing Branch or a Current branch site of System Center Configuration Manager.
 
-The baseline media is available on DVD as part of Microsoft System Center 2016, or from System Center Configuration Manager (Current Branch and Long-Term Servicing Branch 1606) release. To learn about baseline media, see [Baseline and update versions](/sccm/core/servers/manage/updates#baseline-and-udpate-versions).
+The baseline media is available on DVD as part of Microsoft System Center 2016, or from System Center Configuration Manager (Current Branch and Long-Term Servicing Branch 1606) release. To learn about baseline media, see [Baseline and update versions](../servers/manage/updates.md#bkmk_Baselines).
 
 
 When you use the version 1606 baseline media, the site you install or upgrade to is:
@@ -65,7 +65,7 @@ The version 1606 baseline media supports a new unattended script file key for sc
 When using an unattended script to install a licensed branch, you must add the following section, key names, and values to the Options section of your script. You don't need to use these values to script the install of an Evaluation edition of the Current Branch:  
 
  **SABranchOptions**
-- 	**Key Name: SAActive**
+- **Key Name: SAActive**
   - Values: 0 or 1.  
   - Details:  0 installs a non-licensed Evaluation edition of Current Branch, and 1 installs a licensed edition.   
 

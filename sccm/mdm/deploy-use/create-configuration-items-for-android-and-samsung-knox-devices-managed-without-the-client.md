@@ -57,7 +57,7 @@ Use the System Center Configuration Manager **Android and Samsung KNOX** configu
 
 12. Finish the wizard.  
 
- You can view the new configuration item in the **Configuration Items** node of the **Assets and Compliance** workspace.  
+    You can view the new configuration item in the **Configuration Items** node of the **Assets and Compliance** workspace.  
 
 ## Android and Samsung KNOX configuration item settings reference  
 
@@ -78,17 +78,17 @@ These settings apply to both Android and Samsung KNOX devices.
 
 ### Device   
 
-|Setting|Details|  
-|------------------|-------------|  
-|**Voice dialing**|Enables or disables the voice dialing feature on the device.|
-|**Voice assistant**|Allows the use of voice assistant software on the device.|
-|**Screen capture**|Lets the user capture the screen contents as an image.|
-|**Diagnostic data submission**|Lets the device submit diagnostic information to Google.|
-|**Geolocation**|Lets the device use location information.|
-|**Copy and Paste**|Allows copy and paste functions on the device.|
-|**Factory reset**|Lets the user perform a factory reset on the device.|  |
-|**Clipboard share between applications**|Lets the user use the clipboard to copy and paste between apps.|  |
-|**Bluetooth**|Allows the use of Bluetooth on the device.|
+|                 Setting                  |                             Details                             |
+|------------------------------------------|-----------------------------------------------------------------|
+|            **Voice dialing**             |  Enables or disables the voice dialing feature on the device.   |
+|           **Voice assistant**            |    Allows the use of voice assistant software on the device.    |
+|            **Screen capture**            |     Lets the user capture the screen contents as an image.      |
+|      **Diagnostic data submission**      |    Lets the device submit diagnostic information to Google.     |
+|             **Geolocation**              |            Lets the device use location information.            |
+|            **Copy and Paste**            |         Allows copy and paste functions on the device.          |
+|            **Factory reset**             |      Lets the user perform a factory reset on the device.       |
+| **Clipboard share between applications** | Lets the user use the clipboard to copy and paste between apps. |
+|              **Bluetooth**               |           Allows the use of Bluetooth on the device.            |
 
 ### Store
 
@@ -157,14 +157,15 @@ You cannot specify both compliant and noncompliant apps in the same configuratio
 
 On the **Compliant and Noncompliant Apps (Android)** page, specify the following information:  
 
-|Setting|More information|  
-|-------------|----------------------|  
-|**Noncompliant apps list**|Specifies a list of apps that will be reported as noncompliant if installed by users.|  
-|**Compliant apps list**|Specifies a list of apps that users are allowed to install. Any other installed apps will be reported as noncompliant.|  
-|**Add**|Adds an app to the selected list. Specify a name of your choice, optionally the app publisher, and the URL to the app in the app store.<br /><br /> To specify the URL, from the [apps section of Google Play](https://play.google.com/store/apps), search for the app that you want to use.<br /><br /> Open the app’s page, and copy the URL to the clipboard. You can now use this as the URL in either the compliant or noncompliant apps list.<br /><br /> **Example:** Search Google Play for **Microsoft Office Mobile**. The URL that you use will be **https://play.google.com/store/apps/details?id=com.microsoft.office.officehub**.|  
-|**Edit**|Lets you edit the name, publisher, and URL of the selected app.|  
-|**Remove**|Deletes the selected app from the list.|  
-|**Import**|Imports a list of apps that you have specified in a comma-separated values file. Use the format application name, publisher, app URL in the file.|  
+
+|          Setting           |                                                                                                                                                                                                                                                                                                                 More information                                                                                                                                                                                                                                                                                                                  |
+|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Noncompliant apps list** |                                                                                                                                                                                                                                                                               Specifies a list of apps that will be reported as noncompliant if installed by users.                                                                                                                                                                                                                                                                               |
+|  **Compliant apps list**   |                                                                                                                                                                                                                                                              Specifies a list of apps that users are allowed to install. Any other installed apps will be reported as noncompliant.                                                                                                                                                                                                                                                               |
+|          **Add**           | Adds an app to the selected list. Specify a name of your choice, optionally the app publisher, and the URL to the app in the app store.<br /><br /> To specify the URL, from the [apps section of Google Play](https://play.google.com/store/apps), search for the app that you want to use.<br /><br /> Open the app’s page, and copy the URL to the clipboard. You can now use this as the URL in either the compliant or noncompliant apps list.<br /><br /> **Example:** Search Google Play for **Microsoft Office Mobile**. The URL that you use will be **<https://play.google.com/store/apps/details?id=com.microsoft.office.officehub>**. |
+|          **Edit**          |                                                                                                                                                                                                                                                                                          Lets you edit the name, publisher, and URL of the selected app.                                                                                                                                                                                                                                                                                          |
+|         **Remove**         |                                                                                                                                                                                                                                                                                                      Deletes the selected app from the list.                                                                                                                                                                                                                                                                                                      |
+|         **Import**         |                                                                                                                                                                                                                                                 Imports a list of apps that you have specified in a comma-separated values file. Use the format application name, publisher, app URL in the file.                                                                                                                                                                                                                                                 |
 
 ## Android for Work configuration items
 Android for Work has two setting groups for configuration items:
@@ -172,9 +173,9 @@ Android for Work has two setting groups for configuration items:
 - **Password**. Identical to settings for Android "classic."
 
 - **Work Profile**. Enables the following Android for Work settings:
-  -	**Allow data sharing between work and personal profiles**
+  - **Allow data sharing between work and personal profiles**
   - **Hide work profile notifications when device is locked** (Android 6.0+)
-  -	**Set up default app permission policy** (Android 6.0+)
+  - **Set up default app permission policy** (Android 6.0+)
 
 To create a configuration item in the Android work profile, choose **Android for Work** on the **General** page and configure settings for each of the setting groups. Add the configuration item to a baseline, and deploy as usual. These settings will apply only to devices enrolled as Android for Work, and not to devices enrolled as Android.
 

@@ -1,6 +1,6 @@
 ---
 title: Surface Device Dashboard
-titleSuffix: Configuraton Manager
+titleSuffix: Configuration Manager
 description: Review information about Surface devices using the dashboard.
 author: aczechowski
 ms.author: aaroncz
@@ -26,7 +26,7 @@ To open the Surface device dashboard, use the following steps:
 3. To load the dashboard, click on **Surface Devices**.
 
 **Surface device dashboard**
-![Surface device dashboard](media\Surface-device-dashboard.PNG)
+![Surface device dashboard](media/Surface-device-dashboard.PNG)
 
 
 
@@ -36,17 +36,17 @@ The Surface device dashboard shows three graphs for your environment.
 
 - **Percent of Surface devices** -Gives you the percentage of Surface devices throughout your environment.
 
-    ![Percent of Surface devices graph](media\Percent-Surface-Devices.PNG)
+    ![Percent of Surface devices graph](media/Percent-Surface-Devices.PNG)
 - **Surface Models** -Shows the number of devices per Surface model. 
-    - Hovering over a graph section will give you the percentage of Surface devices that are the model selected. 
+  - Hovering over a graph section will give you the percentage of Surface devices that are the model selected. 
 
-         ![Surface models graph](media\Surface-Models-Hover.PNG)
-    - Clicking on a graph section will take you to a device list for the model. 
-        ![Surface model device list](media\Surface-Model-Device-List.PNG)
+       ![Surface models graph](media/Surface-Models-Hover.PNG)
+  - Clicking on a graph section will take you to a device list for the model. 
+      ![Surface model device list](media/Surface-Model-Device-List.PNG)
 
 - **Top five firmware versions**- Displays a chart with the top five firmware models in your environment. 
-    - Hovering over a graph section will give you the number of Surface devices that are the firmware version selected. Starting in Configuration Manager version 1806, clicking on a graph section displays a list of relevant devices. <!--1358654-->
-       ![Surface model device list](media\Surface-Firmware-Hover.PNG)
+  - Hovering over a graph section will give you the number of Surface devices that are the firmware version selected. Starting in Configuration Manager version 1806, clicking on a graph section displays a list of relevant devices. <!--1358654-->
+     ![Surface model device list](media/Surface-Firmware-Hover.PNG)
 
 
 ## More information
