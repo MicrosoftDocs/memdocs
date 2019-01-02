@@ -86,7 +86,7 @@ Do this procedure on the top-level site. That site is either a standalone primar
 7. Select the **Region** drop-down list to choose the Azure region for this CMG.  
 
 8. In version 1802, and are using an Azure Resource Manager deployment, select a **Resource Group** option. 
-   1. If you choose **Use existing**, then select an existing resource group from the drop-down list.
+   1. If you choose **Use existing**, then select an existing resource group from the drop-down list. The selected resource group must already exist in the region you selected in step 7. If you select an existing resource group and it is in a different region than the previously selected region, CMG will fail to provision.
    2. If you choose **Create new**, then enter the new resource group name.
 
 9. In the **VM Instance** field, enter the number of VMs for this service. The default is one, but you can scale up to 16 VMs per CMG.  
