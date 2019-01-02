@@ -50,6 +50,8 @@ Use the following checklist to make sure you have the necessary information and 
 
 - A globally unique name for the service. This name is from the [CMG server authentication certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-server-authentication-certificate).  
 
+- If enabling CMG as a Cloud Distribution Point, the same globally unique CMG service name chosen also needs to be available as a globally unique storage account name. This name is from the [CMG server authentication certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-server-authentication-certificate).
+
 - The Azure region for this CMG deployment.  
 
 - How many VM instances you need for scale and redundancy.  
