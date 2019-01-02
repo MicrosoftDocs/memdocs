@@ -41,7 +41,7 @@ You can upgrade the client on Windows computers using client installation method
 
  A client can be automatically upgraded in the following scenarios:  
 
--   The client version is lower that the version being used in the hierarchy.  
+-   The client version is lower than the version being used in the hierarchy.  
 
 -   The client on the central administration site has a language pack installed and the existing client does not.  
 

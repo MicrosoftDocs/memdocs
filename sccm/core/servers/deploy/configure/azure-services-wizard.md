@@ -156,7 +156,7 @@ When you select **Import** from the Server app dialog or the App page of the Azu
 - **Client ID**
 - **Secret Key**
 - **Secret Key Expiry**: Select a future date from the calendar. 
-- **App ID URI**: This value needs to be unique in your Azure AD tenant. It is in the access token used by the Configuration Manager client to request access to the service. By default this value is https://ConfigMgrService.  
+- **App ID URI**: This value needs to be unique in your Azure AD tenant. It is in the access token used by the Configuration Manager client to request access to the service. By default this value is https\://ConfigMgrService.  
 
 After entering the information, select **Verify**. Then select **OK** to close the Import apps dialog. This action returns to either the [App page](#azure-app-properties) of the Azure Services Wizard, or the [Server app dialog](#server-app-dialog).
 
@@ -164,8 +164,8 @@ After entering the information, select **Verify**. Then select **OK** to close t
 
 When you select **Create** from the Server app dialog, it opens the Create Server Application dialog. This page automates the creation of a web app in Azure AD. Specify the following information:
 - **Application Name**: A friendly name for the app.
-- **HomePage URL**: This value isn't used by Configuration Manager, but required by Azure AD. By default this value is https://ConfigMgrService.  
-- **App ID URI**: This value needs to be unique in your Azure AD tenant. It is in the access token used by the Configuration Manager client to request access to the service. By default this value is https://ConfigMgrService.  
+- **HomePage URL**: This value isn't used by Configuration Manager, but required by Azure AD. By default this value is https\://ConfigMgrService.  
+- **App ID URI**: This value needs to be unique in your Azure AD tenant. It is in the access token used by the Configuration Manager client to request access to the service. By default this value is https\://ConfigMgrService.  
 - **Secret Key validity period**: choose either **1 year** or **2 years** from the drop-down list. One year is the default value.
 
 Select **Sign in** to authenticate to Azure as an administrative user. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager, and doesn't need to be the same account that runs the Azure Services Wizard. After successfully authenticating to Azure, the page shows the **Azure AD Tenant Name** for reference. 
@@ -203,11 +203,28 @@ After entering the information, select **Verify**. Then select **OK** to close t
 
 When you select **Create** from the Client App dialog, it opens the Create Client Application dialog. This page automates the creation of a native app in Azure AD. Specify the following information:
 - **Application Name**: A friendly name for the app.
-- **Reply URL**: This value isn't used by Configuration Manager, but required by Azure AD. By default this value is https://ConfigMgrService. 
+- **Reply URL**: This value isn't used by Configuration Manager, but required by Azure AD. By default this value is https\://ConfigMgrService. 
 
 Select **Sign in** to authenticate to Azure as an administrative user. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager, and doesn't need to be the same account that runs the Azure Services Wizard. After successfully authenticating to Azure, the page shows the **Azure AD Tenant Name** for reference. 
 
 Select **OK** to create the native app in Azure AD and close the Create Client Application dialog. This action returns to the [Client App dialog](#client-app-dialog).
+
+
+### Renew secret key Azure AD apps
+Prior to version 1806, to renew the secret key of an Azure app, you need to recreate the app.
+
+On version 1806 and later:
+
+- Created app: Under **Cloud Services node** go to **Azure Active Directory Tenants**. On the Details pane, select the tenant on which the application was created, and select **Renew Secret Key**.  
+
+    - Select **Sign in** to authenticate to Azure as an administrative user.  
+
+    - Select **OK** to create the native app in Azure AD and close the Create Client Application dialog. This action returns to the [Client App dialog](#client-app-dialog).  
+
+- Imported app: Use the Azure portal to renew and note the new secret key and expiry date. Add this information on the **Renew Secret Key** wizard.  
+
+> [!Note]  
+> Save the secret key before closing the Azure application properties **Key** page. This information is removed when you close the page.
 
 
 ## Configuration or Discovery
