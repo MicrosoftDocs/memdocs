@@ -23,7 +23,7 @@ You can use different methods to upgrade the System Center Configuration Manager
 ## Group Policy installation  
  **Supported client platform:** Windows  
 
- **Advantages**  
+#### Advantages  
 
 - Does not require computers to be discovered before the client can be upgraded.  
 
@@ -33,7 +33,7 @@ You can use different methods to upgrade the System Center Configuration Manager
 
 - Does not require you to configure and maintain an installation account for the intended client computer.  
 
-  **Disadvantages**  
+#### Disadvantages  
 
 - Can cause high network traffic if you're upgrading a lot of clients.  
 
@@ -43,7 +43,7 @@ You can use different methods to upgrade the System Center Configuration Manager
 ## Logon script installation  
  **Supported client platform:** Windows  
 
- **Advantages**  
+#### Advantages  
 
 - Does not require computers to be discovered before the client can be installed.  
 
@@ -51,7 +51,7 @@ You can use different methods to upgrade the System Center Configuration Manager
 
 - Supports using command-line properties for CCMSetup.  
 
-  **Disadvantages**  
+#### Disadvantages  
 
 - Can cause high network traffic if you're upgrading a lot of clients in a short time.  
 
@@ -62,7 +62,7 @@ You can use different methods to upgrade the System Center Configuration Manager
 ## Manual installation  
  **Supported client platform:** Windows, UNIX/Linus, Mac OS X  
 
- **Advantages**  
+#### Advantages  
 
 - Does not require computers to be discovered before the client can be upgraded.  
 
@@ -70,7 +70,7 @@ You can use different methods to upgrade the System Center Configuration Manager
 
 - Supports using command-line properties for CCMSetup.  
 
-  **Disadvantages**  
+#### Disadvantages  
 
 - No automation, therefore time consuming.  
 
@@ -88,11 +88,11 @@ You can use different methods to upgrade the System Center Configuration Manager
 > [!NOTE]  
 >  You cannot upgrade Configuration Manager 2007 clients with this method. In this scenario, you can deploy the Configuration Manager client as a package from the Configuration Manager 2007 site, or you can use automatic client upgrade which automatically creates and deploys a package that contains the latest version of the client.  
 
- **Advantages**  
+#### Advantages  
 
 - Supports using command-line properties for CCMSetup.  
 
-  **Disadvantages**  
+#### Disadvantages  
 
 - Can cause high network traffic if you distribute the client to large collections.  
 
@@ -107,17 +107,19 @@ You can use different methods to upgrade the System Center Configuration Manager
 
  **Supported client platform:** Windows  
 
- **Advantages**  
+#### Advantages  
 
+- Because of the randomization over the specified period, only auto-upgrade is suitable for large-scale client upgrades. Other methods are either too slow on large scale, or don’t have randomization. 
+
+    > [!Note]
+    > Client piloting isn’t good for large scale as it doesn’t randomize at all.  
 - Can be used to automatically keep clients in your site at the latest version.  
 
 - Requires minimal administration.  
 
-  **Disadvantages**  
+#### Disadvantages  
 
 - Can only be used to upgrade the client software and cannot be used to install a new client.  
-
-- Not suitable for upgrading many clients simultaneously.  
 
 - Applies to all clients in the hierarchy that are assigned to a site. Cannot be scoped by collection.  
 
@@ -128,13 +130,13 @@ You can use different methods to upgrade the System Center Configuration Manager
 ## Client testing  
  **Supported client platform:** Windows  
 
- **Advantages**  
+#### Advantages  
 
 - Can be used to test new client versions in a smaller pre-production collection.  
 
 - When testing is complete, clients in pre-production are promoted to production and automatically upgraded across the Configuration Manager site.  
 
-  **Disadvantages**  
+#### Disadvantages  
 
 - Can only be used to upgrade the client software and cannot be used to install a new client.  
 
