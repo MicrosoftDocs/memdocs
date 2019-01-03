@@ -338,6 +338,9 @@ Select the option to **Enable PXE support for clients**, and then configure the 
 
 - **Enable a PXE responder without Windows Deployment Service**: Starting in version 1806, this option enables a PXE responder on the distribution point, which doesn't require WDS. This PXE responder supports IPv6 networks. If you enable this option on a distribution point that's already PXE-enabled, Configuration Manager suspends the WDS service. If you disable this option, but still **Enable PXE support for clients**, then the distribution point enables WDS again.<!--1357580-->  
 
+    > [!Note]
+    >It is not supported to use the PXE responder without WDS on servers that are also running a DHCP server.
+
 - **Require a password when computers use PXE**: To provide additional security for your PXE deployments, specify a strong password.  
 
 - **User device affinity**: Specify how you want the distribution point to associate users with the destination computer for PXE deployments. Choose one of the following options:  
