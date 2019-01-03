@@ -42,6 +42,14 @@ The following articles are also good resources for better understanding Windows 
 - [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
 
 
+> [!Note]  
+> At the Enhanced (Limited) level, when each client does the initial full scan, it sends approximately 2 MB of data to the Microsoft cloud. The daily delta varies between 250-400 KB per day. 
+> 
+> The daily delta scan happens at 3:00 AM (device local time). Some events are sent at the first available time throughout the day. These times aren't configurable.
+> 
+> For more information, see [Configure Windows diagnostic data in your organization](https://aka.ms/enterprisetelemetry).  
+
+
 
 ## Endpoints
 

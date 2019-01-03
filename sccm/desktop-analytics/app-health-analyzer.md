@@ -155,5 +155,5 @@ Run the tool in verbose mode with the run_verbose.cmd script. By default, the sc
 
 Verbose mode generates additional logs, which can help you troubleshoot the potential issues. It saves the logs to the `LogCollection` folder in the installed location. For example, the default log collection path is: `C:\Program Files\Microsoft Corporation\Microsoft App Health Analyzer\LogCollection\`
 
-Send the logs to AHASupport, who will follow up for further investigations. <!--do we really want to include this in public documentation?-->
+<!--Send the logs to AHASupport, who will follow up for further investigations. --do we really want to include this in public documentation?-->
 

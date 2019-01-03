@@ -26,7 +26,7 @@ In the Desktop Analytics portal, view the status of security and feature updates
 
 To review the current status of security updates, select **Security updates** in the **Monitor** section of Desktop Analytics:
 
-<!--screenshot-->
+![Security updates node of Desktop Analytics](media/security-updates.png)
 
 This view summarizes *security* updates for devices that are running Windows 10 or Office 365 ProPlus. Devices in the bar chart are categorized by the following labels:
 
@@ -58,9 +58,7 @@ Desktop Analytics hasn't assessed the device.
 
 To review the current status of feature updates, select **Feature updates** in the **Monitor** section of Desktop Analytics:
 
-<!-- screenshot
-[![feature update status view](UDRimages/UDR-feature-update.png)](UDRimages/UDR-feature-update.png)
- -->
+![Feature updates node of Desktop Analytics](media/feature-updates.png)
 
 This view summarizes *feature* updates for devices that are running Windows 10 or Office 365 ProPlus. 
 

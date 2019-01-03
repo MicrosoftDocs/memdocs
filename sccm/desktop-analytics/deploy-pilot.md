@@ -40,8 +40,6 @@ Use the Desktop Analytics portal to review any reported issues with assets that 
 
 6. Repeat this review for other assets.  
 
-<!-- {OUR MASSIVE DISCUSSION OF UNDERSTANDING THE HEALTH STUFF IS CURRENTLY IN ‘DEPLOY TO PRODUCTION’—SHOULD IT GO HERE INSTEAD?}
- -->
 
 
 
@@ -85,6 +83,8 @@ If your deployment plan is for both Windows 10 and Office 365, repeat this proce
 
 ## Monitor
 
+### Configuration Manager console
+
 Use Configuration Manager deployment monitoring the same as any other application and task sequence deployment. For more information, see the following articles:  
 
 - [Monitor application from the Configuration Manager console](/sccm/apps/deploy-use/monitor-applications-from-the-console)  
@@ -92,11 +92,11 @@ Use Configuration Manager deployment monitoring the same as any other applicatio
 - [Monitor OS deployments](/sccm/osd/deploy-use/monitor-operating-system-deployments)  
 
 
+### Desktop Analytics portal
+
 Use the Desktop Analytics portal to view the status of any deployment plan. Select the deployment plan, and then select **Plan overview**. 
 
-<!-- screenshot
-[![deployment plan main view](UDRimages/UDR-dep-prog-master.png)](UDRimages/UDR-dep-prog-master.png)
- -->
+![Screenshot of deployment plan overview in Desktop Analytics](media/deployment-plan-overview.png)
 
 Select the **Pilot** tile. It summarizes the current state of the pilot deployment. This tile also displays data for the number of devices not started, in progress, completed, or returning issues.
 
@@ -119,6 +119,8 @@ As you address these deployment issues, the dashboard continues to show the prog
 
 
 ## Next steps
+
+Let the pilot run for a period of time to collect operational data. Encourage users of pilot devices to test apps, add-ins, and macros. 
 
 When your pilot deployment meets your success criteria, go to the next article to deploy to production.
 > [!div class="nextstepaction"]  
