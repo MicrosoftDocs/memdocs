@@ -40,23 +40,25 @@ Follow the steps in this article to use Desktop Analytics to create a plan for d
 
     - **Completion date**: Choose the date by which Windows and Office should be fully deployed to all the targeted devices.  
 
-5. Select **Create**. The new plan appears in the list of deployment plans.  
+5. Select **Create**. The new plan appears in the list of deployment plans while its being processed. Processing can take up to 48 hours before you can proceed to the next step.   
 
 6. Open the deployment plan by selecting its name.  
 
-7. Select **Identify importance** in the Prepare group of the deployment plan menu.  
+7. On the deployment plan menu, in the **Prepare** group, select **Identify importance**.  
 
     1. On the **Apps** tab, select to show only **Not Reviewed** assets.  
 
     2. Select each app, and then select **Edit**. You can select more than one app to edit at the same time.   
 
-    3. Choose **Critical**, **Important**, or **Not Important** from the **Importance** list. When assigning importance levels, you can also choose the Upgrade decision.  
+    3. Choose an importance level from the **Importance** list. If you want Desktop Analytics to validate the add-in during the pilot, select **Critical** or **Important**. It doesn't validate add-ins marked as **Not Important**. Consider the compatibility risk and other plan insights when assigning importance levels.  
+
+        When assigning importance levels, you can also choose the Upgrade decision.  
 
     4. Select **Save** when complete.  
 
     5. Repeat these steps for the **Office Add-ins**.  
 
-8. Select **Identify pilot** in the Prepare group of the deployment plan menu.  
+8. On the deployment plan menu, in the **Prepare** group, select **Identify pilot**.  
 
     1. Review the recommended devices for the pilot.  
 

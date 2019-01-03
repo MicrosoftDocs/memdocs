@@ -84,6 +84,31 @@ The portal shows a notification that it added the role assignment.
 
 
 
+## <a name="bkmk_hotfix"></a> Update Configuration Manager
+
+First, make sure that your Configuration Manager site is running at least version 1810. For more information, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates).
+
+You also need to install hotfix KB4482615 to support integration with Desktop Analytics. 
+
+1. Update the site  
+
+    1. If you opted into the 1810 update by running a PowerShell script in late November or early December 2018, then first update to the generally available version.  
+
+        1. First disable [automatic client upgrade](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#to-configure-automatic-client-upgrades). This action makes sure that clients don't upgrade twice.  
+
+        2. Install the prerequisite 1810 GA rollup update **KB4479288**. (Package ID 930FA45E-530F-4B08-B1BF-DE3F5267B03C) This update is generally available in early January to all customers on the "fast ring" version of 1810.  
+
+        > [!Note]  
+        > If you updated to version 1810 when it was generally available after 19 December 2018, you don't need update KB4479288.  
+
+    2. Download hotfix **KB4482615** from the [Microsoft Download Center](). (Package ID 86450B7D-3574-4CF7-8B11-486A2C1F62A6) <!--link will be available once the package is published-->  
+
+    2. [Use the update registration tool to import hotfixes](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
+
+2. Update clients. To simplify this process, consider using automatic client upgrade. For more information, see [Upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).  
+
+
+
 ## Create app for Configuration Manager
 
 Create an app in Azure AD for Configuration Manager.

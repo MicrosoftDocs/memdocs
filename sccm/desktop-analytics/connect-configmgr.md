@@ -56,7 +56,9 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
 
     - **Allow Device Name in diagnostic data**: select **Enable**  
   
-   Select **Next**. The **Available functionality** page shows the Desktop Analytics functionality that's available with the diagnostic data settings from the previous page. Select **Next**.<!--screenshot-->  
+   Select **Next**. The **Available functionality** page shows the Desktop Analytics functionality that's available with the diagnostic data settings from the previous page. Select **Next** to continue or **Previous** to make changes.   
+
+    ![Example Available Functionality page in the Azure Services Wizard](media/available-functionality.png)
 
 5. On the **Collections** page, configure the following settings:  
 
@@ -69,9 +71,6 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
     - **Select specific collections to synchronize with Desktop Analytics**: Select **Add** to include additional collections. These collections are available in the Desktop Analytics portal for grouping with deployment plans. Make sure to include pilot and pilot exclusion collections.  
 
         These collections continue to sync as their membership changes. For example, your deployment plan uses a collection with a Windows 7 membership rule. As those devices upgrade to Windows 10, and Configuration Manager evaluates the collection membership, those devices drop out of the collection and deployment plan.  
-
-        > [!Warning]  
-        > For the Desktop Analytics private preview, the total membership of all collections shouldn't be more than 10,000 devices. These collections include the Target Collection and each additional collection.  
 
 6. Complete the wizard.  
 

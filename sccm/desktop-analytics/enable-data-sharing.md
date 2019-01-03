@@ -55,22 +55,22 @@ To enable data sharing, configure your proxy server to whitelist the following e
 | `https://vortex-win.data.microsoft.com` | Connected user experience and diagnostic component endpoint. Used by devices running Windows 7 and Windows 8.1 |
 | `https://settings-win.data.microsoft.com` | Enables the compatibility update to send data to Microsoft. |
 | `http://adl.windows.com` | Allows the compatibility update to receive the latest compatibility data from Microsoft. |
-| `https://watson.telemetry.microsoft.com` | Windows Error Reporting (WER). Required for device health and update compliance antivirus reports. |
+| `https://watson.telemetry.microsoft.com` | Windows Error Reporting (WER). Required to monitor deployment health in Windows 10, version 1803 or earlier. |
 | `https://umwatsonc.events.data.microsoft.com` | Windows Error Reporting (WER). Required for device health reports in Windows 10, version 1809 or later. |
-| `https://ceuswatcab01.blob.core.windows.net`<br> `https://ceuswatcab02.blob.core.windows.net`<br> `https://eaus2watcab01.blob.core.windows.net`<br> `https://eaus2watcab02.blob.core.windows.net`<br> `https://weus2watcab01.blob.core.windows.net`<br> `https://weus2watcab02.blob.core.windows.net` | Windows Error Reporting (WER). Required for device health and update compliance antivirus reports in Windows 10, version 1809 or later. |
+| `https://ceuswatcab01.blob.core.windows.net`<br> `https://ceuswatcab02.blob.core.windows.net`<br> `https://eaus2watcab01.blob.core.windows.net`<br> `https://eaus2watcab02.blob.core.windows.net`<br> `https://weus2watcab01.blob.core.windows.net`<br> `https://weus2watcab02.blob.core.windows.net` | Windows Error Reporting (WER). Required to monitor deployment health in Windows 10, version 1809 or later. |
 | `https://www.msftncsi.com` | Windows Error Reporting (WER). Required for device health to check connectivity. |
 | `https://www.msftconnecttest.com` | Windows Error Reporting (WER). Required for device health to check connectivity. | 
 | `https://kmwatsonc.events.data.microsoft.com` | Online Crash Analysis. Required for device health reports in Windows 10, version 1809 or later. |
-| `https://oca.telemetry.microsoft.com`  | Online Crash Analysis (OCA). Required for device health and update compliance antivirus reports. |
-| `https://login.live.com` | Required for device health to ensure data integrity. It provides a more reliable device identity for Desktop Analytics. <br> <br>To disable end-user Microsoft account access, use policy settings instead of blocking this endpoint. For more information, see [The Microsoft account in the enterprise](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication). |
+| `https://oca.telemetry.microsoft.com`  | Online Crash Analysis (OCA). Required to monitor deployment health in Windows 10, version 1803 or earlier. |
+| `https://login.live.com` | Required for better integrity of device health data. It provides a more reliable device identity for Desktop Analytics. <br> <br>To disable end-user Microsoft account access, use policy settings instead of blocking this endpoint. For more information, see [The Microsoft account in the enterprise](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication). |
 | `https://nexusrules.officeapps.live.com` | Used to request dynamic diagnostic data events from Office clients. This data is useful for drill-down and diagnostics purposes in the Desktop Analytics portal |
-| `https://nexus.officeapps.live.com` | Used by Office clients to send diagnostic data events from Office 14, Office 15, and versions of Office 16 prior to 16.0.8702. It's used to collect usage and reliability signals events for Desktop Analytics. |
+| `https://nexus.officeapps.live.com` | Used by Office clients to send diagnostic data events from Office 14, Office 15, and versions of Office 16 earlier than 16.0.8702. It's used to collect usage and reliability signals events for Desktop Analytics. |
 | `https://office.pipe.aria.microsoft.com` | Used by Office clients to send diagnostic data events from universal/modern Office apps, and Win32 Office 16 versions later than 16.0.8702. It's used to collect usage and reliability signals events for Desktop Analytics. |
 
 
 ### SSL inspection
 
-To ensure privacy and data integrity, Windows checks for a Microsoft SSL certificate when communicating with the diagnostic data endpoints. SSL interception and inspection isn't possible. To use Desktop Analytics, exclude the above endpoints from SSL inspection.
+For privacy and data integrity, Windows checks for a Microsoft SSL certificate when communicating with the diagnostic data endpoints. SSL interception and inspection aren't possible. To use Desktop Analytics, exclude the above endpoints from SSL inspection.
 
 
 
