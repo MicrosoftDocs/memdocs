@@ -129,7 +129,7 @@ Create an app in Azure AD for Configuration Manager.
 
 ## Compatibility updates
 
-The compatibility update scans your devices and enables application usage tracking. 
+The compatibility update runs diagnostics on the Windows device to evaluate its compatibility status with the latest versions of the Windows 10.
 
 <!-- {NEED LINK TO OPTIONAL UPDATE THAT LOWERS LATENCY (AND DESCRIPTION) FROM ZANE SZAFRANIEC, PRABHU PADHI, OR DAVID MEBANE}
  -->
@@ -174,9 +174,9 @@ The Desktop Analytics service has no agents to install. Device enrollment requir
 
 ### Commercial ID
 
-Microsoft uses a unique commercial ID to map information from user computers to your Desktop Analytics workspace. The service should automatically generate this ID. When you integrate Configuration Manager with Desktop Analytics, it automatically queries the service for this ID. 
+Microsoft uses a unique commercial ID to map information from user computers to your Desktop Analytics workspace. The service should automatically generate this ID. 
 
-If you're not using Configuration Manager, use the following procedure to copy your Commercial ID:  
+When you integrate Configuration Manager with Desktop Analytics, it automatically queries the service for this ID. If you're not using Configuration Manager, use the following procedure to copy your Commercial ID:  
 
 1. Go to the Desktop Analytics portal, and select **Connected services** in the Global Settings group.  
 

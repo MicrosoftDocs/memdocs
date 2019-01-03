@@ -65,7 +65,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
     - Install the latest updates. For more information, see [Compatibility updates](/sccm/desktop-analytics/set-up#compatibility-updates).  
 
-    - Devices also need to have the Configuration Manager client to configure and manage Desktop Analytics.  
+    - Devices also need to have the Configuration Manager client, version 1810 or later, to configure and manage Desktop Analytics.  
 
 - Windows diagnostics data. For more information, see the following articles:  
 
@@ -78,7 +78,9 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 ### Licensing
 
-These qualifying licenses only apply to the **Device Health** portion of Desktop Analytics:  
+Most features in Desktop Analytics don't require any additional licenses or subscriptions. 
+
+To access Windows health insights or to export data, there are additional license requirements. If you don't have one of the following subscriptions, you can still set up and use Desktop Analytics, but you aren't licensed to use Windows health insights or to export data:
 
 - Windows 10 Enterprise or Windows 10 Education: per-device with active Software Assurance  
 
@@ -88,6 +90,8 @@ These qualifying licenses only apply to the **Device Health** portion of Desktop
 
 - Windows Virtual Desktop Access E3 or E5: per-device of per-user subscription  
 
+> [!Note]  
+> For per-device licenses, you don't have to activate each device with a license. You just need enough licenses for devices enrolled in Desktop Analytics.  
 
 
 <!-- 
