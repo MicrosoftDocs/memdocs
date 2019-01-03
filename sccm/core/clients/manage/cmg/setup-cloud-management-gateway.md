@@ -36,6 +36,8 @@ Use the following checklist to make sure you have the necessary information and 
 - Starting in version 1802, select the **Azure Resource Manager deployment**. For more information, see [Azure Resource Manager](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager). You need the following requirements for an Azure Resource Manager deployment of CMG:  
 
     - Integration with [Azure AD](/sccm/core/servers/deploy/configure/azure-services-wizard) for **Cloud Management**. Azure AD user discovery isn't required.  
+    
+    - The **Microsoft.ClassicCompute** resource provider must be registered within the Azure subscription. For more information, see [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services).
 
     - A subscription admin needs to sign in.  
 
@@ -49,6 +51,8 @@ Use the following checklist to make sure you have the necessary information and 
     - Azure management certificate  
 
 - A globally unique name for the service. This name is from the [CMG server authentication certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-server-authentication-certificate).  
+
+- If enabling CMG as a Cloud Distribution Point, the same globally unique CMG service name chosen also needs to be available as a globally unique storage account name. This name is from the [CMG server authentication certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-server-authentication-certificate).
 
 - The Azure region for this CMG deployment.  
 
@@ -86,7 +90,7 @@ Do this procedure on the top-level site. That site is either a standalone primar
 7. Select the **Region** drop-down list to choose the Azure region for this CMG.  
 
 8. In version 1802, and are using an Azure Resource Manager deployment, select a **Resource Group** option. 
-   1. If you choose **Use existing**, then select an existing resource group from the drop-down list.
+   1. If you choose **Use existing**, then select an existing resource group from the drop-down list. The selected resource group must already exist in the region you selected in step 7. If you select an existing resource group and it is in a different region than the previously selected region, CMG will fail to provision.
    2. If you choose **Create new**, then enter the new resource group name.
 
 9. In the **VM Instance** field, enter the number of VMs for this service. The default is one, but you can scale up to 16 VMs per CMG.  
