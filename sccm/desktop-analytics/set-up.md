@@ -156,9 +156,6 @@ Create an app in Azure AD for Configuration Manager.
 
 The compatibility update runs diagnostics on the Windows device to evaluate its compatibility status with the latest versions of the Windows 10.
 
-<!-- {NEED LINK TO OPTIONAL UPDATE THAT LOWERS LATENCY (AND DESCRIPTION) FROM ZANE SZAFRANIEC, PRABHU PADHI, OR DAVID MEBANE}
- -->
-
 Microsoft regularly increments these updates, but the associated KB number doesn't change. Make sure that you always have the latest version of the update.
 
 Restart devices after you install the compatibility updates for the first time.
@@ -207,10 +204,10 @@ When you integrate Configuration Manager with Desktop Analytics, it automaticall
 
 2. In the **Connected services** pane, the **Enroll devices** pane is selected by default. In the Enroll devices pane, the Information section displays your Commercial ID key.  
 
-    > [!Important]  
-    > Only **Get new ID key** when you can't use the current one. If you regenerate the commercial ID, deploy the new ID to your devices. This process might result in loss of diagnostic data during the transition.  
+![Screenshot of commercial ID in Desktop Analytics portal](media/commercial-id.png)
 
-<!--screenshot-->
+> [!Important]  
+> Only **Get new ID key** when you can't use the current one. If you regenerate the commercial ID, deploy the new ID to your devices. This process might result in loss of diagnostic data during the transition.  
 
 
 ### Methods to enroll devices

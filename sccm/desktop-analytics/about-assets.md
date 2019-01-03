@@ -33,11 +33,9 @@ In the service portal, select **Assets** in the Desktop Analytics menu.
 
 The **Devices** tab displays key information about all devices in your organization that you enroll to Desktop Analytics. You can sort on any column or filter for particular values.
 
-
-<!-- 
 > [!NOTE]  
 > If the dashboard isn't reporting the number of devices you expect to see for your environment, see [Desktop Analytics troubleshooting](/sccm/desktop-analytics/troubleshooting).  
- -->
+
 
 
 ## Apps
