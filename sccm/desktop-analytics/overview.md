@@ -18,7 +18,9 @@ robots: noindex,nofollow
 > [!Note]  
 > This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
 
-Desktop Analytics is a cloud-based service that integrates with Configuration Manager. The service provides insight and intelligence for you to make more informed decisions about the update readiness of your Windows and Office clients. It combines data from your organization with data aggregated from millions of devices connected to Microsoft cloud services. Use Desktop Analytics with Configuration Manager to:  
+Desktop Analytics is a cloud-based service that integrates with Configuration Manager. The service provides insight and intelligence for you to make more informed decisions about the update readiness of your Windows and Office clients. It combines data from your organization with data aggregated from millions of devices connected to Microsoft cloud services. 
+
+Use Desktop Analytics with Configuration Manager to:  
 
 - Create an inventory of apps running in your organization  
 
@@ -31,6 +33,11 @@ Desktop Analytics is a cloud-based service that integrates with Configuration Ma
 - Deploy Windows 10 and Office 365 ProPlus to pilot and production-managed devices  
 
 ![Screenshot of the Desktop Analytics home page in the Azure portal](media/portal-home.png)
+
+> [!Note]  
+> Desktop Analytics is a successor of Windows Analytics. The *Windows Analytics* service includes Upgrade Readiness, Update Compliance, and Device Health. 
+> 
+> All of these capabilities are combined in the *Desktop Analytics* service. Desktop Analytics also is more tightly integrated with Configuration Manager, and includes both Windows and Office. 
 
 
 

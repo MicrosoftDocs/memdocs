@@ -120,6 +120,8 @@ As you address these deployment issues, the dashboard continues to show the prog
 
 ## Next steps
 
+Let the pilot run for a period of time to collect operational data. Encourage users of pilot devices to test apps, add-ins, and macros. 
+
 When your pilot deployment meets your success criteria, go to the next article to deploy to production.
 > [!div class="nextstepaction"]  
 > [Deploy to production](/sccm/desktop-analytics/deploy-prod)  
