@@ -55,7 +55,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
     - A Windows installer-based version of Office, such as Office 2013  
 
-- Business approval to configure Windows diagnostic data level to **Enhanced** on the pilot devices  
+- Business approval to configure Windows diagnostic data level to **Enhanced (Limited)** on the pilot devices  
 
     For more information, see [Desktop Analytics privacy](/sccm/desktop-analytics/privacy).
 
@@ -257,7 +257,7 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
 
     - **Commercial ID**: this value should automatically populate with your organization's ID  
 
-    - **Windows 10 diagnostic data level**: select at least **Enhanced**  
+    - **Windows 10 diagnostic data level**: select at least **Enhanced (Limited)**  
 
     - **Allow Device Name in diagnostic data**: select **Enable**  
   

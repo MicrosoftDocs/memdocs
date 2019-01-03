@@ -29,9 +29,9 @@ When you integrate Configuration Manager with Desktop Analytics, you also use it
 
 You can also set the diagnostic data level on devices with the Desktop Analytics deployment script, by group policy, or Microsoft Intune. For more information, see [Methods to enroll devices](/sccm/desktop-analytics/set-up#methods-to-enroll-devices). 
 
-The basic functionality of Desktop Analytics works at the **Basic** diagnostic data level. You won't get usage or health data for your updated devices without enabling the **Enhanced** level. Microsoft recommends that you enable the **Enhanced** diagnostic data level. 
+The basic functionality of Desktop Analytics works at the **Basic** diagnostic data level. You won't get usage or health data for your updated devices without enabling the **Enhanced (Limited)** level. Microsoft recommends that you enable the **Enhanced (Limited)** diagnostic data level. 
 
-On devices running Windows 10, version 1709 (or later), the Enhanced diagnostic data setting includes the **Limited enhanced** data level. For more information, see [Windows 10 enhanced diagnostic data events and fields used by Windows Analytics](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)). 
+On devices running Windows 10, version 1709 (or later), the Enhanced diagnostic data setting includes the **Enhanced (Limited)** data level. For more information, see [Windows 10 enhanced diagnostic data events and fields used by Windows Analytics](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)). 
 
 For more information, see [Desktop Analytics privacy](/sccm/desktop-analytics/privacy).
 

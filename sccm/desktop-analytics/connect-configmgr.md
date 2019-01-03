@@ -52,7 +52,7 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
 
     - **Commercial ID**: this value should automatically populate with your organization's ID  
 
-    - **Windows 10 diagnostic data level**: select at least **Enhanced**  
+    - **Windows 10 diagnostic data level**: select at least **Enhanced (Limited)**  
 
     - **Allow Device Name in diagnostic data**: select **Enable**  
   
