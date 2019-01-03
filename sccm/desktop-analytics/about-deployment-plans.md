@@ -64,7 +64,9 @@ The following readiness rules are available in deployment plans:
 
 - When updating from an older version of Office, leave older Office apps, even if those apps don't exist in the newer version of Office. This behavior isn't on by default.  
 
-- Low install count threshold for your Office add-ins. If an add-in is installed on a higher percentage of computers than this threshold, the deployment plan marks the add-in as **Noteworthy**. This tag means you can decide how important it is to test during the pilot phase.  
+- Low install count threshold for your Office add-ins. The default threshold is `2%`. Add-ins below this threshold are automatically set to *Low install count*. Desktop Analytics doesn't validate these add-ins during the pilot. 
+
+    If an add-in is installed on a higher percentage of computers than this threshold, the deployment plan marks the add-in as *Noteworthy*. Then you can decide its importance to test during the pilot phase.   
 
 
 

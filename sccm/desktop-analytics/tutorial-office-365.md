@@ -43,13 +43,15 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
 - An active Azure subscription, with **Company Admin** permissions  
 
-- Configuration Manager, version 1810 or later, with **Full administrator** role  
+- Configuration Manager, version 1810 with hotfix KB4482615 or later, with **Full administrator** role  
 
 - At least one Windows 10 device with the following configurations:  
 
     - Windows 10, version 1709, or later
 
     - The latest Windows 10 cumulative quality update  
+
+    - Configuration Manager client version 1810 with hotfix KB4482615  
 
     - A Windows installer-based version of Office, such as Office 2013  
 
@@ -59,20 +61,27 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
 - Network connectivity from the device to the following internet endpoints:
 
-    - `https://v10.events.data.microsoft.com`  
-    - `https://v10.vortex-win.data.microsoft.com`  
-    - `https://vortex-win.data.microsoft.com`  
+    - `https://v10c.events.data.microsoft.com`  
     - `https://settings-win.data.microsoft.com`  
     - `http://adl.windows.com`  
     - `https://watson.telemetry.microsoft.com`  
+    - `https://umwatsonc.events.data.microsoft.com`  
+    - `https://ceuswatcab01.blob.core.windows.net`  
+    - `https://ceuswatcab02.blob.core.windows.net`  
+    - `https://eaus2watcab01.blob.core.windows.net`  
+    - `https://eaus2watcab02.blob.core.windows.net`  
+    - `https://weus2watcab01.blob.core.windows.net`  
+    - `https://weus2watcab02.blob.core.windows.net`  
+    - `https://www.msftncsi.com`  
+    - `https://www.msftconnecttest.com`  
+    - `https://kmwatsonc.events.data.microsoft.com`  
     - `https://oca.telemetry.microsoft.com`  
     - `https://login.live.com`  
     - `https://nexusrules.officeapps.live.com`  
     - `https://nexus.officeapps.live.com`  
-    - `https://mobile.pipe.aria.microsoft.com/Collector/3.0/`  
-    - `https://browser.pipe.aria.microsoft.com/Collector/3.0`  
+    - `https://office.pipe.aria.microsoft.com`  
 
-    For more information, see [How to enable data sharing for Desktop Analytics](/sccm/desktop-analytics/enable-data-sharing).  
+    For more information, see [How to enable data sharing for Desktop Analytics](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
 
 <!-- ### Licensing
 <!--what's the minimum licensing that's needed for this tutorial?
@@ -147,6 +156,28 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
   
    Select **Save**. The portal shows a notification that it added the role assignment.  
 -->
+
+
+### Update Configuration Manager
+
+Install Configuration Manager hotfix KB4482615 to support integration with Desktop Analytics. 
+
+1. Update the site  
+
+    1. If you opted into the 1810 update by running a PowerShell script in late November or early December 2018, then first update to the generally available version.  
+
+        1. First disable [automatic client upgrade](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#to-configure-automatic-client-upgrades). This action makes sure that clients don't upgrade twice.  
+
+        2. Install the prerequisite 1810 GA rollup update **KB4479288**. (Package ID 930FA45E-530F-4B08-B1BF-DE3F5267B03C) This update is generally available in early January to all customers on the "fast ring" version of 1810.  
+
+        > [!Note]  
+        > If you updated to version 1810 when it was generally available after 19 December 2018, you don't need update KB4479288.  
+
+    2. Download hotfix **KB4482615** from the [Microsoft Download Center](). (Package ID 86450B7D-3574-4CF7-8B11-486A2C1F62A6) <!--link will be available once the package is published-->  
+
+    2. [Use the update registration tool to import hotfixes](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
+
+2. Update clients. To simplify this process, consider using automatic client upgrade. For more information, see [Upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).  
 
 
 ### Create an app in Azure AD for Configuration Manager  
@@ -244,9 +275,9 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
 
         These collections continue to sync as their membership changes. For example, your deployment plan uses a collection with a Windows 7 membership rule. As those devices upgrade to Windows 10, and Configuration Manager evaluates the collection membership, those devices drop out of the collection and deployment plan.  
 
-        > [!Warning]  
+<!--         > [!Warning]  
         > For the Desktop Analytics private preview, the total membership of all collections shouldn't be more than 10,000 devices. These collections include the Target Collection and each additional collection.  
-
+ -->
 6. Complete the wizard.  
 
 Configuration Manager creates a settings policy to configure devices in the Target Collection. This policy includes the diagnostic data settings to enable devices to send data to Microsoft. By default, clients update policy every hour. After receiving the new settings, it can be several hours more before the data is available in Desktop Analytics.
@@ -281,25 +312,29 @@ Use this procedure to create a deployment plan in Desktop Analytics.
 
         - When updating from an older version of Office, leave older deprecated Office apps. This behavior applies even if those apps don't exist in the newer version of Office. The default setting is **No**.  
 
-        - Low install count threshold for your Office add-ins. If an add-in is installed on a higher percentage of computers than this threshold, the deployment plan marks the add-in as *Noteworthy*. Then you can decide its importance to test during the pilot phase. The default threshold is `2%`.  
+        - Low install count threshold for your Office add-ins. The default threshold is `2%`. Add-ins below this threshold are automatically set to *Low install count*. Desktop Analytics doesn't validate these add-ins during the pilot. 
+
+            If an add-in is installed on a higher percentage of computers than this threshold, the deployment plan marks the add-in as *Noteworthy*. Then you can decide its importance to test during the pilot phase.   
 
     - **Completion date**: Choose the date by which Office should be fully deployed to all the targeted devices.  
 
-5. Select **Create**. The new plan appears in the list of deployment plans.  
+5. Select **Create**. The new plan appears in the list of deployment plans while its being processed. Processing can take up to 48 hours before you can proceed to the next step.  
 
 6. Open the deployment plan by selecting its name.  
 
-7. Select **Identify importance** in the Prepare group of the deployment plan menu.  
+7. On the deployment plan menu, in the **Prepare** group, select **Identify importance**.  
 
     1. On the **Office Add-ins** tab, select to show only **Not Reviewed** assets.  
 
     2. Select each add-in, and then select **Edit**. You can select more than one app to edit at the same time.   
 
-    3. Choose **Critical**, **Important**, or **Not Important** from the **Importance** list. When assigning importance levels, you can also choose the Upgrade decision.  
+    3. Choose an importance level from the **Importance** list. If you want Desktop Analytics to validate the add-in during the pilot, select **Critical** or **Important**. It doesn't validate add-ins marked as **Not Important**. Consider the compatibility risk and other plan insights when assigning importance levels.  
+
+        When assigning importance levels, you can also choose the Upgrade decision.  
 
     4. Select **Save** when complete.  
 
-8. Select **Identify pilot** in the Prepare group of the deployment plan menu.  
+8. On the deployment plan menu, in the **Prepare** group, select **Identify pilot**.  
 
     1. Review the recommended devices for the pilot.  
 
