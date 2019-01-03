@@ -38,6 +38,9 @@ To deploy operating systems to Configuration Manager clients that make PXE boot 
 > [!NOTE]  
 >  When configuring a single PXE enabled distribution point to support multiple subnets it is not supported to use DHCP options. Configure IP helpers on the routers to allow PXE requests to be forwarded to your PXE enabled distribution points.
 
+> [!NOTE]  
+>  It is not supported to use the PXE responder without WDS on servers that are also running a DHCP server.
+
 ## Prepare a PXE-enabled boot image
 
 To use PXE to deploy an OS, you must have both x86 and x64 PXE-enabled boot images distributed to one or more PXE-enabled distribution points. Use the information to enable PXE on a boot image and distribute the boot image to distribution points:
