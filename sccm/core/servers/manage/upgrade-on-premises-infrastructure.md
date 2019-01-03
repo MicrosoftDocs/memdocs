@@ -118,6 +118,12 @@ After you upgrade the site server, or an instance of the SMS Provider, you can't
 5. Save the permissions to restore access for the Configuration Manager console.  
 
 
+#### Known issue for remote site systems
+After you upgrade a server that hosts a site system role, the value `Software\Microsoft\SMS` may be missing from the following registry key: `HKLM\SYSTEM\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths` 
+
+If this value is missing after you upgrade Windows on the server, manually add it. Otherwise site system roles can have issues uploading files to the site server inboxes.
+
+
 ### <a name="bkmk_2012r2"></a> Upgrade to Windows Server 2012 R2
 
 When you upgrade from either Windows Server 2008 R2 or Windows Server 2012 to Windows Server 2012 R2, the following conditions apply:
