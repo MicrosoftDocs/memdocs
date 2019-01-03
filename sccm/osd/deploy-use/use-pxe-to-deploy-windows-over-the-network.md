@@ -47,7 +47,7 @@ To use PXE to deploy an OS, you must have both x86 and x64 PXE-enabled boot imag
 
 -   To enable PXE on a boot image, select **Deploy this boot image from the PXE-enabled distribution point** from the **Data Source** tab in the boot image properties.
 
--   If you change the properties for the boot image, redistribute the boot image to distribution points. For more information, see [Distribute content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).
+-   If you change the properties for the boot image, update and redistribute the boot image to distribution points. For more information, see [Distribute content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).
 
 
 
