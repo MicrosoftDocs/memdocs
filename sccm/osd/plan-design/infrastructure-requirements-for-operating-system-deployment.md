@@ -255,6 +255,8 @@ If you plan to co-host the distribution point on a server running DHCP, consider
 
      `WDSUTIL /Set-Server /UseDHCPPorts:No /DHCPOption60:Yes`  
 
+> [!NOTE]
+> When using the PXE responder without WDS instead of WDS, it is not supported to also run DHCP on the same server.
 
 
 ##  <a name="BKMK_SupportedOS"></a> Supported operating systems  
