@@ -162,18 +162,14 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
 Install Configuration Manager hotfix KB4482615 to support integration with Desktop Analytics. 
 
+> [!Important]  
+> The following process is for current branch sites that updated to version 1810 when it was generally available after 19 December 2018.
+> 
+> If you opted into the 1810 update by running a PowerShell script in late November or early December 2018, this hotfix isn't available. For more information, contact your Microsoft representative for Desktop Analytics.  
+
 1. Update the site  
 
-    1. If you opted into the 1810 update by running a PowerShell script in late November or early December 2018, then first update to the generally available version.  
-
-        1. First disable [automatic client upgrade](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#to-configure-automatic-client-upgrades). This action makes sure that clients don't upgrade twice.  
-
-        2. Install the prerequisite 1810 GA rollup update **KB4479288**. (Package ID 930FA45E-530F-4B08-B1BF-DE3F5267B03C) This update is generally available in early January to all customers on the "fast ring" version of 1810.  
-
-        > [!Note]  
-        > If you updated to version 1810 when it was generally available after 19 December 2018, you don't need update KB4479288.  
-
-    2. Download hotfix **KB4482615** from the [Microsoft Download Center](). (Package ID 86450B7D-3574-4CF7-8B11-486A2C1F62A6) <!--link will be available once the package is published-->  
+    1. Download hotfix **KB4482615** from the [Microsoft Download Center](https://download.microsoft.com/download/0/9/0/09081E12-A2CF-40B6-82D8-9B8914A1C2D3/KB4482615/CM1810-KB4482615.ConfigMgr.Update.exe)   
 
     2. [Use the update registration tool to import hotfixes](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
 

@@ -88,20 +88,18 @@ The portal shows a notification that it added the role assignment.
 
 First, make sure that your Configuration Manager site is running at least version 1810. For more information, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates).
 
+<!--Once the 1810 hotfix rollup is available, that becomes the minimum requirement. Also update prereqs and tutorial.-->
+
 You also need to install hotfix KB4482615 to support integration with Desktop Analytics. 
+
+> [!Important]  
+> The following process is for current branch sites that updated to version 1810 when it was generally available after 19 December 2018.
+> 
+> If you opted into the 1810 update by running a PowerShell script in late November or early December 2018, this hotfix isn't available. For more information, contact your Microsoft representative for Desktop Analytics.  
 
 1. Update the site  
 
-    1. If you opted into the 1810 update by running a PowerShell script in late November or early December 2018, then first update to the generally available version.  
-
-        1. First disable [automatic client upgrade](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#to-configure-automatic-client-upgrades). This action makes sure that clients don't upgrade twice.  
-
-        2. Install the prerequisite 1810 GA rollup update **KB4479288**. (Package ID 930FA45E-530F-4B08-B1BF-DE3F5267B03C) This update is generally available in early January to all customers on the "fast ring" version of 1810.  
-
-        > [!Note]  
-        > If you updated to version 1810 when it was generally available after 19 December 2018, you don't need update KB4479288.  
-
-    2. Download hotfix **KB4482615** from the [Microsoft Download Center](). (Package ID 86450B7D-3574-4CF7-8B11-486A2C1F62A6) <!--link will be available once the package is published-->  
+    1. Download hotfix **KB4482615** from the [Microsoft Download Center](https://download.microsoft.com/download/0/9/0/09081E12-A2CF-40B6-82D8-9B8914A1C2D3/KB4482615/CM1810-KB4482615.ConfigMgr.Update.exe)  
 
     2. [Use the update registration tool to import hotfixes](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
 
@@ -244,6 +242,17 @@ These group policy objects are under `Microsoft\Windows\DataCollection`:
 | **AllowDeviceNameInTelemetry** | To enable Windows 10, version 1803, devices to send the device name, enable this separate opt-in setting. |
 
 Configure these settings in **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Data Collection and Preview Builds**. 
+
+
+### Conflict resolution
+
+In general, use Configuration Manager collections to target Desktop Analytics settings and enrollment. Use direct membership or queries to include or exclude devices from the collection. For more information, see [How to create collections](/sccm/core/clients/manage/collections/create-collections).
+
+Configuration Manager only configures the Windows settings if a value doesn't already exist. If you need to configure different settings for a unique group of devices, you can use [group policy](#group-policy). Settings targeted by group policy take precedence over Configuration Manager settings.
+
+If you target Configuration Manager clients with both Windows Analytics and Desktop Analytics settings, the settings for Desktop Analytics take precedence. 
+
+When you configure the diagnostic data level, you set the upper boundary for the device. By default, users can choose to set a lower level. You can control this behavior using the group policy setting, **Configure telemetry opt-in setting user interface**. For more information, see [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management).
 
 
 
