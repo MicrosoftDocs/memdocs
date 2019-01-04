@@ -2,7 +2,7 @@
 title: App Health Analyzer
 titleSuffix: Configuration Manager
 description: A how-to guide for assessing compatibility with the App Health Analyzer in Desktop Analytics.
-ms.date: 12/03/2018
+ms.date: 01/03/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -24,7 +24,7 @@ Use the App Health Analyzer toolkit for Desktop Analytics to evaluate desktop ap
 
 ## Download
 
-Download the toolkit from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=57276). Always use the most current version.
+Download the toolkit from the [Microsoft Download Center](http://download.microsoft.com/download/3/7/D/37D7E378-D805-4822-A712-4EADBF50FC08/AppHealthAnalyzer.zip)<!-- (https://www.microsoft.com/download/details.aspx?id=57276) -->. Always use the most current version.
 
 The download is a Windows Installer (MSI) file. Install the App Health Analyzer toolkit on a user's computer. When you run the toolkit, a wizard guides you through the process of creating an app readiness report. 
 
@@ -65,19 +65,16 @@ Before installing and using the toolkit, make sure the device meets the followin
 
 1. Install the App Health Analyzer to the target device. By default, it installs to the following path: `C:\Program Files\Microsoft Corporation\Microsoft App Health Analyzer`  
 
-2. Go to the Windows **Start** menu, expand the **Microsoft App Health Analyzer** group, and open the **App Health Analyzer** as an administrator.  
+2. Go to the Windows **Start** menu, expand the **Microsoft App Health Analyzer** group, and open the **App Health Analyzer** as an administrator. It can take several minutes to generate the report.  
 
     > [!Note]  
     > If any of the required diagnostic data settings aren't configured, you'll see an error. Make sure you properly configure the prerequisite settings. For more information, see [Diagnostic data levels](/sccm/desktop-analytics/enable-data-sharing#diagnostic-data-levels).  
 
-3. When the toolkit starts, a wizard guides you through all the apps assessed.  
+3. When the app readiness report opens, it starts evaluating applications. Wait for the toolkit to finish, which can take time depending upon the number of applications on the device.   
 
-![Screenshot of the App Health Analyzer toolkit](media/aha-toolkit.png)
-
-<!--Need a new screenshot that follows guidelines-->
+![Screenshot of the app readiness report of the App Health Analyzer](media/app-readiness-report-evaluating.png)
 
 You can minimize the window and continue with other tasks while the toolkit runs in the background.
-
 
 
 ### App readiness report features
@@ -129,8 +126,6 @@ The following screenshot from Desktop Analytics shows the details of the Contoso
 - It has a **Medium** risk assessment  
 - An adopted version is available  
 - It has a driver dependency  
-
-<!--need a current screenshot, red highlight the entire compatibility risk factors section?-->
 
 ![Desktop Analytics showing the compatibility risk factors of an app](media/aha-desktop-analytics-compat-risk-factors.png)
 
