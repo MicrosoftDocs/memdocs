@@ -106,7 +106,7 @@ Either host all replicas in an availability group on-premises, or host them all 
 
 Configuration Manager Setup needs to connect to each replica. When you set up an availability group in Azure, and the group is behind an internal or external load balancer, open the following default ports:   
 
-- RCP Endpoint Mapper: **TCP 135**   
+- RPC Endpoint Mapper: **TCP 135**   
 
 - SQL Server Service Broker: **TCP 4022**  
 
