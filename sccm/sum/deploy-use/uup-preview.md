@@ -22,13 +22,16 @@ robots: noindex,nofollow
 
 ### Feature updates
 
-Feature updates with UUP are designed to alleviate multiple problems that customers have with servicing today. Try UUP feature updates, including:
+Feature updates with the Windows 10 Unified Update Platform (UUP) are designed to alleviate multiple problems that customers have with servicing today. Try UUP feature updates, including:
 
 - Upgrade straight to the latest security compliance level, you no longer need to install security updates immediately after upgrading to be compliant. Each month a new feature update will be published to include the latest cumulative security update. You won't need to redownload or distribute majority of the feature update content each month, only the security update component, which is also shared with the cumulative update.
 
-- All FODs and language packs should be preserved and not lost during the upgrade process.
+- All Features on Demand (FODs) and language packs should be preserved and not lost during the upgrade process.
 
 - Feature updates with UUP support express installation files, enabling clients to reduce the amount of content each client must download.
+
+For more information on UUP, see the Windows blog post [An update on our Unified Update Platform (UUP)](https://blogs.windows.com/windowsexperience/2017/03/02/an-update-on-our-unified-update-platform-uup/).
+
 
 ### Cumulative updates
 
@@ -60,9 +63,9 @@ If you aren't syncing express installation files in your environment, then Confi
 #### ConfigMgr 1810 UUP hotfix (KB4482615)
 
 > [!Important]  
-> The following process is for current branch sites that updated to version 1810 when it was generally available after 19 December 2018 ("slow ring").
+> The following process is for current branch sites that updated to version 1810 when it was generally available after 19 December 2018.
 >
-> If you opted into the 1810 update by running a PowerShell script in late November or early December 2018 ("fast ring"), this hotfix isn't available yet. 
+> If you opted into the 1810 update by running a PowerShell script in late November or early December 2018, this hotfix isn't available yet. 
 
 
 1. Update the site
@@ -113,7 +116,7 @@ For non-express content, an additional patch must be applied. This path became a
 
 ### 4. Enable express installation on clients in client settings
 
-The client setting to enable express installation must be set for UUP updates, regardless of whether express content is synced or not. This setting enables ConfigMgr to let WUA determine the necessary content to download to clients, rather than having ConfigMgr download all content associated with the UUP update. This setting is required even for non-express scenarios as there's optional FOD and Language Pack content, resulting in a non-significant amount extra data that is not required by all clients associated with the update.
+The client setting to enable express installation must be set for UUP updates, regardless of whether express content is synced or not. This setting enables ConfigMgr to let the Windows Update Agent (WUA) determine the necessary content to download to clients, rather than having ConfigMgr download all content associated with the UUP update. This setting is required even for non-express scenarios as there's optional FOD and Language Pack content, resulting in a non-significant amount extra data that is not required by all clients associated with the update.
 
 Enabling this setting won't affect server content downloads, only client download behaviors. It's important that you have the ConfigMgr and Windows client versions articulated above before enabling this setting if you didn't already have it enabled, as those versions fix some compatibility issues with approval of updates directly in WSUS and enable ConfigMgr to use this channel for UUP updates even if express content isn't synced.
 
@@ -130,7 +133,7 @@ To enable express installation on clients:
 
 ### 5. Make sure your ADRs are set as desired 
 
-Before enabling sync of UUP updates, consider your ADRs and any other update infrastructure you have in place. If you don’t want these updates to automatically deploy as part of your existing ADRs and Servicing Plans, be sure to update your ADRs to filter them out, see [How to find synced UUP updates](#how-to-find-synced-uup-updates). Existing Servicing Plans will deploy non-UUP only by default, but you can update them to change this behavior.
+Before enabling sync of UUP updates, consider your automatic deployment rules (ADRs) and any other update infrastructure you have in place. If you don’t want these updates to automatically deploy as part of your existing ADRs and Servicing Plans, be sure to update your ADRs to filter them out, see [How to find synced UUP updates](#how-to-find-synced-uup-updates). Existing Servicing Plans will deploy non-UUP only by default, but you can update them to change this behavior.
 
 Also consider if these updates will affect any of your compliance reports or other infrastructure just by syncing them and make any desired modifications in advance. For example, if you measure compliance across all products, you’ll now see both the UUP and non-UUP cumulative Windows 10 update as non-compliant or compliant therefore skewing your numbers.
 
@@ -146,7 +149,7 @@ Once you're ready to start syncing UUP updates and trying them out, and you have
 
 2. In the Configuration Manager console, browse to **Administration** \ **Site Configuration** \ **Sites**  
 
-3. Select your top-level site (CAS or standalone primary)  
+3. Select your top-level site, which is either a central administration site (CAS) or standalone primary  
 
 4. Open **Configure Site Components** \ **Software Update Point**  
 
@@ -229,7 +232,7 @@ For the preview, test with what you use in your real enterprise environments. UU
 - Windows Delivery Optimization
 - Configuration Manager peer cache
 - Windows BranchCache
-- Deploy without downloading to server (no deployment package) to download straight from MU, which if you're using, we recommended using DO in conjunction
+- Deploy without downloading to server (no deployment package) to download straight from Microsoft Update, which if you're using, we recommended using delivery optimization in conjunction
 - Third-party alternate content providers
 
 For more information, see [Optimize Windows 10 update delivery](/sccm/sum/deploy-use/optimize-windows-10-update-delivery).
