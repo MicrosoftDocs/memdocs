@@ -19,12 +19,12 @@ manager: dougeby
 Use this article to prepare Configuration Manager to use SQL Server Always On availability groups. This feature provides a high availability and disaster recovery solution for the site database.  
 
 Configuration Manager supports using availability groups:
--     At primary sites and the central administration site.
--     On-premises, or in Microsoft Azure.
+- At primary sites and the central administration site.
+- On-premises, or in Microsoft Azure.
 
 When you use availability groups in Microsoft Azure, you can further increase availability of your site database by using *Azure Availability Sets*. For more information on Azure Availability Sets, see [Manage the availability of virtual machines](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-manage-availability/).
 
->  [!Important]   
+> [!Important]
 >  Before you continue, be comfortable with configuring SQL Server and SQL Server availability groups. The information that follows references the SQL Server documentation library and procedures.
 
 
@@ -33,12 +33,12 @@ When you use availability groups in Microsoft Azure, you can further increase av
 
 The following scenarios are supported for using availability groups with Configuration Manager. For more information and procedures for each scenario, see [Configure availability groups for Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag).
 
--      [Create an availability group for use with Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag#create-and-configure-an-availability-group)  
--     [Configure a site to use an availability group](/sccm/core/servers/deploy/configure/configure-aoag#configure-a-site-to-use-the-database-in-the-availability-group)  
--     [Add or remove synchronous replica members from an availability group that hosts a site database](/sccm/core/servers/deploy/configure/configure-aoag#add-and-remove-synchronous-replica-members)  
--     [Configure asynchronous commit replicas](/sccm/core/servers/deploy/configure/configure-aoag#configure-an-asynchronous-commit-repilca)  
--     [Recover a site from an asynchronous commit replica](/sccm/core/servers/deploy/configure/configure-aoag#use-the-asynchronous-replica-to-recover-your-site)  
--     [Move a site database out of an availability group to a default or named instance of a standalone SQL Server](/sccm/core/servers/deploy/configure/configure-aoag#stop-using-an-availability-group)  
+- [Create an availability group for use with Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag#create-and-configure-an-availability-group)  
+- [Configure a site to use an availability group](/sccm/core/servers/deploy/configure/configure-aoag#configure-a-site-to-use-the-database-in-the-availability-group)  
+- [Add or remove synchronous replica members from an availability group that hosts a site database](/sccm/core/servers/deploy/configure/configure-aoag#add-and-remove-synchronous-replica-members)  
+- [Configure asynchronous commit replicas](/sccm/core/servers/deploy/configure/configure-aoag#configure-an-asynchronous-commit-repilca)  
+- [Recover a site from an asynchronous commit replica](/sccm/core/servers/deploy/configure/configure-aoag#use-the-asynchronous-replica-to-recover-your-site)  
+- [Move a site database out of an availability group to a default or named instance of a standalone SQL Server](/sccm/core/servers/deploy/configure/configure-aoag#stop-using-an-availability-group)  
 
 
 
@@ -90,23 +90,23 @@ Each replica member must have the following configuration:
 
 - Use the *default instance* or a *named instance*  
 
-- The **Connections in Primary Role** setting is **Yes**  
+- The **Connections in Primary Role** setting is **Allow all connections**  
 
 - THe **Readable Secondary** setting is **Yes**  
 
 - Enabled for **Manual Failover** 	  
 
-    >  [!TIP]  
-    >  Configuration Manager supports using the availability group synchronous replicas when set to **Automatic Failover**. Set **Manual Failover** when:
-    >  -  You run Configuration Manager Setup to specify use of the site database in the availability group.  
-    >  -  You install any update to Configuration Manager. (Not just updates that apply to the site database).  
+  > [!TIP]
+  >  Configuration Manager supports using the availability group synchronous replicas when set to **Automatic Failover**. Set **Manual Failover** when:
+  >  -  You run Configuration Manager Setup to specify use of the site database in the availability group.  
+  >  -  You install any update to Configuration Manager. (Not just updates that apply to the site database).  
 
 #### Replica member location
 Either host all replicas in an availability group on-premises, or host them all on Microsoft Azure. A group that includes an on-premises member and a member in Azure isn't supported.     
 
 Configuration Manager Setup needs to connect to each replica. When you set up an availability group in Azure, and the group is behind an internal or external load balancer, open the following default ports:   
 
-- RCP Endpoint Mapper: **TCP 135**   
+- RPC Endpoint Mapper: **TCP 135**   
 
 - SQL Server Service Broker: **TCP 4022**  
 
@@ -140,7 +140,7 @@ For example, consider the following scenario:
 
 - You upgraded both of your secondary replica servers to SQL Server 2014 from previous versions. With the upgrade, these servers keep the original file path to store database files: `C:\Program Files\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA`.  
 
-- Before move the site database to this availability group, on each secondary replica server, create the following file path: `C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA`. This path is a duplicate of the path in use on the primary replica, even if the secondary replicas won't use this file location.  
+- Before moving the site database to this availability group, on each secondary replica server, create the following file path: `C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA`. This path is a duplicate of the path in use on the primary replica, even if the secondary replicas won't use this file location.  
 
 - You then grant the SQL Server service account on each secondary replica full control access to the newly created file location on that server.  
 

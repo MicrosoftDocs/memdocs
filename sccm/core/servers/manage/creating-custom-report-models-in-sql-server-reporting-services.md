@@ -127,37 +127,37 @@ Sample report models are included in System Center Configuration Manager, but yo
 
 ###  <a name="BKMK_DeployReportModel"></a> To deploy the custom report model to Configuration Manager  
 
-1.  Locate the folder in which you created the report model project. For example, %*USERPROFILE*%\Documents\Visual Studio 2008\Projects\\*&lt;Project Name\>.*  
+1. Locate the folder in which you created the report model project. For example, %*USERPROFILE*%\Documents\Visual Studio 2008\Projects\\*&lt;Project Name\>.*  
 
-2.  Copy the following files from the report model project folder to a temporary folder on your computer:  
+2. Copy the following files from the report model project folder to a temporary folder on your computer:  
 
-    -   *&lt;Model Name\>* **.dsv**  
+   -   *&lt;Model Name\>* **.dsv**  
 
-    -   *&lt;Model Name\>* **.smdl**  
+   -   *&lt;Model Name\>* **.smdl**  
 
-3.  Open the preceding files by using a text editor, such as Notepad.  
+3. Open the preceding files by using a text editor, such as Notepad.  
 
-4.  In the file *&lt;Model Name\>***.dsv**, locate the first line of the file, which reads as follows:  
+4. In the file *&lt;Model Name\>***.dsv**, locate the first line of the file, which reads as follows:  
 
-     **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
+    **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
 
-     Edit this line to read as follows:  
+    Edit this line to read as follows:  
 
-     **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine" xmlns:xsi="RelationalDataSourceView"\>**  
+    **&lt;DataSourceView xmlns="<http://schemas.microsoft.com/analysisservices/2003/engine>" xmlns:xsi="RelationalDataSourceView"\>**  
 
-5.  Copy the entire contents of the file to the Windows Clipboard.  
+5. Copy the entire contents of the file to the Windows Clipboard.  
 
-6.  Close the file *&lt;Model Name\>***.dsv**.  
+6. Close the file *&lt;Model Name\>***.dsv**.  
 
-7.  In the file *&lt;Model Name\>***.smdl**, locate the last three lines of the file, which appear as follows:  
+7. In the file *&lt;Model Name\>***.smdl**, locate the last three lines of the file, which appear as follows:  
 
-     `</Entity>`  
+    `</Entity>`  
 
-     `</Entities>`  
+    `</Entities>`  
 
-     `</SemanticModel>`  
+    `</SemanticModel>`  
 
-8.  Paste the contents of the file *&lt;Model Name\>***.dsv** directly before the last line of the file (**&lt;SemanticModel\>**).  
+8. Paste the contents of the file *&lt;Model Name\>***.dsv** directly before the last line of the file (**&lt;SemanticModel\>**).  
 
 9. Save and close the file *&lt;Model Name\>***.smdl**.  
 
@@ -169,13 +169,13 @@ Sample report models are included in System Center Configuration Manager, but yo
 ##  <a name="AdvancedReportModel"></a> Steps for Creating an Advanced Report Model in SQL Server Reporting Services  
  You can use the following procedures to create an advanced report model that users in your site can use to build particular model-based reports based on data in multiple views of the Configuration Manager database. You create a report model that presents information about the client computers and the operating system installed on these computers to the report author. This information is taken from the following views in the Configuration Manager database:  
 
--   **V_R_System**: Contains information about discovered computers and the Configuration Manager client.  
+- **V_R_System**: Contains information about discovered computers and the Configuration Manager client.  
 
--   **V_GS_OPERATING_SYSTEM**: Contains information about the operating system installed on the client computer.  
+- **V_GS_OPERATING_SYSTEM**: Contains information about the operating system installed on the client computer.  
 
- Selected items from the preceding views are consolidated into one list, given friendly names, and then presented to the report author in Report Builder for inclusion in particular reports.  
+  Selected items from the preceding views are consolidated into one list, given friendly names, and then presented to the report author in Report Builder for inclusion in particular reports.  
 
- On the computer where you perform these procedures, ensure that you have installed SQL Server Business Intelligence Development Studio and that the computer has network connectivity to the reporting services point server. For detailed information about SQL Server Business Intelligence Development Studio, see the SQL Server documentation.  
+  On the computer where you perform these procedures, ensure that you have installed SQL Server Business Intelligence Development Studio and that the computer has network connectivity to the reporting services point server. For detailed information about SQL Server Business Intelligence Development Studio, see the SQL Server documentation.  
 
 #### To create the report model project  
 
@@ -225,28 +225,28 @@ Sample report models are included in System Center Configuration Manager, but yo
 
 #### To define the data source view for the report model  
 
-1.  In **Solution Explorer**, right-click **Data Source Views** to select **Add New Data Source View**.  
+1. In **Solution Explorer**, right-click **Data Source Views** to select **Add New Data Source View**.  
 
-2.  On the **Welcome to the Data Source View Wizard** page, click **Next**. The **Select a Data Source** page is displayed.  
+2. On the **Welcome to the Data Source View Wizard** page, click **Next**. The **Select a Data Source** page is displayed.  
 
-3.  In the **Relational data sources** window, verify that the **Advanced_Model** data source is selected, and then click **Next**.  
+3. In the **Relational data sources** window, verify that the **Advanced_Model** data source is selected, and then click **Next**.  
 
-4.  On the **Select Tables and Views** page, select the following views in the **Available objects** list to be used in the report model:  
+4. On the **Select Tables and Views** page, select the following views in the **Available objects** list to be used in the report model:  
 
-    -   **v_R_System (dbo)**  
+   - **v_R_System (dbo)**  
 
-    -   **v_GS_OPERATING_SYSTEM (dbo)**  
+   - **v_GS_OPERATING_SYSTEM (dbo)**  
 
      After selecting each view, click **>** to transfer the object to the **Included objects** list.  
 
-    > [!TIP]  
-    >  To help locate views in the **Available objects** list, click the **Name** heading at the top of the list to sort the objects in alphabetical order.  
+   > [!TIP]  
+   >  To help locate views in the **Available objects** list, click the **Name** heading at the top of the list to sort the objects in alphabetical order.  
 
-5.  If the **Name Matching** dialog box appears, accept the default selections, and click **Next**.  
+5. If the **Name Matching** dialog box appears, accept the default selections, and click **Next**.  
 
-6.  When you have selected the objects you require, click **Next**, and then specify a name for the data source view. For this example, type **Advanced_Model**.  
+6. When you have selected the objects you require, click **Next**, and then specify a name for the data source view. For this example, type **Advanced_Model**.  
 
-7.  Click **Finish**. The **Advanced_Model.dsv** data source view is displayed in the **Data Source Views** folder of **Solution Explorer**.  
+7. Click **Finish**. The **Advanced_Model.dsv** data source view is displayed in the **Data Source Views** folder of **Solution Explorer**.  
 
 #### To define relationships in the data source view  
 
@@ -370,37 +370,37 @@ Sample report models are included in System Center Configuration Manager, but yo
 
 #### To deploy the custom report model to Configuration Manager  
 
-1.  Locate the folder in which you created the report model project. For example, %*USERPROFILE*%\Documents\Visual Studio 2008\Projects\\*&lt;Project Name\>.*  
+1. Locate the folder in which you created the report model project. For example, %*USERPROFILE*%\Documents\Visual Studio 2008\Projects\\*&lt;Project Name\>.*  
 
-2.  Copy the following files from the report model project folder to a temporary folder on your computer:  
+2. Copy the following files from the report model project folder to a temporary folder on your computer:  
 
-    -   *&lt;Model Name\>* **.dsv**  
+   -   *&lt;Model Name\>* **.dsv**  
 
-    -   *&lt;Model Name\>* **.smdl**  
+   -   *&lt;Model Name\>* **.smdl**  
 
-3.  Open the preceding files by using a text editor, such as Notepad.  
+3. Open the preceding files by using a text editor, such as Notepad.  
 
-4.  In the file *&lt;Model Name\>***.dsv**, locate the first line of the file, which reads as follows:  
+4. In the file *&lt;Model Name\>***.dsv**, locate the first line of the file, which reads as follows:  
 
-     **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
+    **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
 
-     Edit this line to read as follows:  
+    Edit this line to read as follows:  
 
-     **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine" xmlns:xsi="RelationalDataSourceView"\>**  
+    **&lt;DataSourceView xmlns="<http://schemas.microsoft.com/analysisservices/2003/engine>" xmlns:xsi="RelationalDataSourceView"\>**  
 
-5.  Copy the entire contents of the file to the Windows Clipboard.  
+5. Copy the entire contents of the file to the Windows Clipboard.  
 
-6.  Close the file *&lt;Model Name\>***.dsv**.  
+6. Close the file *&lt;Model Name\>***.dsv**.  
 
-7.  In the file *&lt;Model Name\>***.smdl**, locate the last three lines of the file, which appear as follows:  
+7. In the file *&lt;Model Name\>***.smdl**, locate the last three lines of the file, which appear as follows:  
 
-     `</Entity>`  
+    `</Entity>`  
 
-     `</Entities>`  
+    `</Entities>`  
 
-     `</SemanticModel>`  
+    `</SemanticModel>`  
 
-8.  Paste the contents of the file *&lt;Model Name\>***.dsv** directly before the last line of the file (**&lt;SemanticModel\>**).  
+8. Paste the contents of the file *&lt;Model Name\>***.dsv** directly before the last line of the file (**&lt;SemanticModel\>**).  
 
 9. Save and close the file *&lt;Model Name\>***.smdl**.  
 

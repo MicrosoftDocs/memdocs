@@ -38,23 +38,23 @@ Use the Exchange Server connector in System Center Configuration Manager when yo
 ## Required Security Permissions  
  You must have the following security permissions to configure the Exchange Server connector:  
 
--   To add, modify, and delete the Exchange Server connector: **Modify** permission for the **Site** object.  
+- To add, modify, and delete the Exchange Server connector: **Modify** permission for the **Site** object.  
 
--   To configure the mobile device settings: **ModifyConnectorPolicy** permission for the **Site** object.  
+- To configure the mobile device settings: **ModifyConnectorPolicy** permission for the **Site** object.  
 
- The **Full Administrator** security role includes the required permissions to configure the Exchange Server connector.  
+  The **Full Administrator** security role includes the required permissions to configure the Exchange Server connector.  
 
- You must have the following security permissions to manage mobile devices:  
+  You must have the following security permissions to manage mobile devices:  
 
--   To wipe a mobile device: **Delete resource** for the **Collection** object.  
+- To wipe a mobile device: **Delete resource** for the **Collection** object.  
 
--   To cancel a wipe command: **Modify resource** for the **Collection** object.  
+- To cancel a wipe command: **Modify resource** for the **Collection** object.  
 
--   To allow and block mobile devices: **Modify resource** for the **Collection** object.  
+- To allow and block mobile devices: **Modify resource** for the **Collection** object.  
 
- The **Operations Administrator** security role includes the required permissions to manage mobile devices by using the Exchange Server connector.  
+  The **Operations Administrator** security role includes the required permissions to manage mobile devices by using the Exchange Server connector.  
 
- For more information about how to configure security permissions, see [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).  
+  For more information about how to configure security permissions, see [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).  
 
 ## Installing and Configuring an Exchange Server Connector  
  Use the following procedure to install and configure an Exchange Server connector to manage mobile devices. Configuration Manager supports only one connector in an Exchange organization. After you complete these steps, you can monitor the mobile devices that are found and managed by the connector when you view the collections that display mobile devices, and by using the reports for mobile devices.  

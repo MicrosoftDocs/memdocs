@@ -420,222 +420,222 @@ Class SMS_AuthorizationList : SMS_ConfigurationItemBaseClass
 
  Language-specific localized information about the authorization list:  
 
--   String  DisplayName  
+- String  DisplayName  
 
--   String  Description  
+- String  Description  
 
--   String  InformativeURL  
+- String  InformativeURL  
 
--   UInt32  LocaleID  
+- UInt32  LocaleID  
 
- `LocalizedInformativeURL`  
- Data type: `String`  
+  `LocalizedInformativeURL`  
+  Data type: `String`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
+  See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
 
- `LocalizedPropertyLocaleID`  
- Data type: `UInt32`  
+  `LocalizedPropertyLocaleID`  
+  Data type: `UInt32`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
+  See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
 
- `ModelID`  
- Data type: `UInt32`  
+  `ModelID`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [not_null]  
+  Qualifiers: [not_null]  
 
- See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
+  See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
 
- `ModelName`  
- Data type: `String`  
+  `ModelName`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [unique, not_null]  
+  Qualifiers: [unique, not_null]  
 
- See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
+  See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
 
- `NumberOfCollectionsDeployed`  
- Data type: `UInt32`  
+  `NumberOfCollectionsDeployed`  
+  Data type: `UInt32`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- Count of collections that the Authorization List has been deployed to.  
+  Count of collections that the Authorization List has been deployed to.  
 
- `NumberOfExpiredUpdates`  
- Data type: `UInt32`  
+  `NumberOfExpiredUpdates`  
+  Data type: `UInt32`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- Count of expired updates in the update group.  
+  Count of expired updates in the update group.  
 
- `NumberOfUpdates`  
- Data type: `UInt32`  
+  `NumberOfUpdates`  
+  Data type: `UInt32`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- Count of updates in the update group.  
+  Count of updates in the update group.  
 
- `NumCompliant`  
- Data type: `UInt32`  
+  `NumCompliant`  
+  Data type: `UInt32`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- Count of client machines where this Authorization List is compliant.  
+  Count of client machines where this Authorization List is compliant.  
 
- `NumNonCompliant`  
- Data type: `UInt32`  
+  `NumNonCompliant`  
+  Data type: `UInt32`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- Count of client machines where this Authorization List is non-compliant.  
+  Count of client machines where this Authorization List is non-compliant.  
 
- `NumTotal`  
- Data type: `UInt32`  
+  `NumTotal`  
+  Data type: `UInt32`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- Total count of client machines for this Authorization List.  
+  Total count of client machines for this Authorization List.  
 
- `NumUnknown`  
- Data type: `UInt32`  
+  `NumUnknown`  
+  Data type: `UInt32`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- Count of client machines where this Authorization List is in an unknown state.  
+  Count of client machines where this Authorization List is in an unknown state.  
 
- `PercentCompliant`  
- Data type: `UInt32`  
+  `PercentCompliant`  
+  Data type: `UInt32`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- Percentage of client machines that are compliant for this configuration item.  
+  Percentage of client machines that are compliant for this configuration item.  
 
- `PermittedUses`  
- Data type: `UInt32`  
+  `PermittedUses`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [not_null]  
+  Qualifiers: [not_null]  
 
- See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
+  See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
 
- `PlatformCategoryInstance_UniqueIDs`  
- Data type: `String Array`  
+  `PlatformCategoryInstance_UniqueIDs`  
+  Data type: `String Array`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: none  
+  Qualifiers: none  
 
- See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
+  See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
 
- `PlatformType`  
- Data type: `UInt32`  
+  `PlatformType`  
+  Data type: `UInt32`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [bitmap, bitvalues, read]  
+  Qualifiers: [bitmap, bitvalues, read]  
 
- See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
+  See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
 
- `SDMPackageLocalizedData`  
- Data type: `SMS_SDMPackageLocalizedData` Array  
+  `SDMPackageLocalizedData`  
+  Data type: `SMS_SDMPackageLocalizedData` Array  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [lazy]  
+  Qualifiers: [lazy]  
 
- See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
+  See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
 
- `SDMPackageVersion`  
- Data type: `UInt32`  
+  `SDMPackageVersion`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [not_null]  
+  Qualifiers: [not_null]  
 
- See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
+  See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
 
- `SDMPackageXML`  
- Data type: `String`  
+  `SDMPackageXML`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [lazy]  
+  Qualifiers: [lazy]  
 
- See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
+  See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
 
- `SecuredScopeNames`  
- Data type: `String Array`  
+  `SecuredScopeNames`  
+  Data type: `String Array`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
+  See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
 
- `SedoObjectVersion`  
- Data type: `String`  
+  `SedoObjectVersion`  
+  Data type: `String`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
+  See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
 
- `SourceSite`  
- Data type: `String`  
+  `SourceSite`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [SizeLimit("3")]  
+  Qualifiers: [SizeLimit("3")]  
 
- See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
+  See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
 
- `Updates`  
- Data type: `UInt32` Array  
+  `Updates`  
+  Data type: `UInt32` Array  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [lazy]  
+  Qualifiers: [lazy]  
 
- Collection of IDs of `SMS_SoftwareUpdate` objects. Each ID is represented by the `CI_ID` property of the corresponding update object.  
+  Collection of IDs of `SMS_SoftwareUpdate` objects. Each ID is represented by the `CI_ID` property of the corresponding update object.  
 
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Secured  
+- Secured  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- Use of this class is optional. An `SMS_AuthorizationList` object is created based on criteria that are chosen by the administrator for deployment of selected `SMS_SoftwareUpdate` objects. The authorization list is used by an [SMS_UpdatesAssignment Server WMI Class](../../../develop/reference/sum/sms_updatesassignment-server-wmi-class.md) object to create a deployment.  
+  Use of this class is optional. An `SMS_AuthorizationList` object is created based on criteria that are chosen by the administrator for deployment of selected `SMS_SoftwareUpdate` objects. The authorization list is used by an [SMS_UpdatesAssignment Server WMI Class](../../../develop/reference/sum/sms_updatesassignment-server-wmi-class.md) object to create a deployment.  
 
- An `SMS_AuthorizationList` object is a type of configuration item, as is each software update. Therefore, the authorization list is an example of a configuration item that bundles other configuration items. Both `SMS_AuthorizationList` and `SMS_SoftwareUpdate` are derived from SMS_ConfigurationItemBaseClass Server WMI Class, which defines an `IsBundle` property. When building an authorization list, this property of each update is set to `true` to indicate that the update is part of a bundle.  
+  An `SMS_AuthorizationList` object is a type of configuration item, as is each software update. Therefore, the authorization list is an example of a configuration item that bundles other configuration items. Both `SMS_AuthorizationList` and `SMS_SoftwareUpdate` are derived from SMS_ConfigurationItemBaseClass Server WMI Class, which defines an `IsBundle` property. When building an authorization list, this property of each update is set to `true` to indicate that the update is part of a bundle.  
 
 ## Requirements  
 

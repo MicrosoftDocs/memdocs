@@ -730,15 +730,15 @@ Class SMS_SoftwareUpdate : SMS_ConfigurationItemBaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Secured  
+- Secured  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see Configuration Manager Class and Property Qualifiers.  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see Configuration Manager Class and Property Qualifiers.  
 
- An `SMS_SoftwareUpdate` object is a type of configuration item, defined by SMS_ConfigurationItemBaseClass Server WMI Class. Use `SMS_SoftwareUpdate` to determine the compliance of software updates using the Software Updates feature in System Center Configuration Manager.  
+  An `SMS_SoftwareUpdate` object is a type of configuration item, defined by SMS_ConfigurationItemBaseClass Server WMI Class. Use `SMS_SoftwareUpdate` to determine the compliance of software updates using the Software Updates feature in System Center Configuration Manager.  
 
- Software update content must be downloaded manually. To identify which contents need to be downloaded, your application queries [SMS_CIToContent Server WMI Class](../../../develop/reference/sum/sms_citocontent-server-wmi-class.md) and obtains the list of `ContentID` properties matching the specific language criteria. With this list, the application can obtain the associated download URL and the related properties for the content files from [SMS_CIContentFiles Server WMI Class](../../../develop/reference/sum/sms_cicontentfiles-server-wmi-class.md).  
+  Software update content must be downloaded manually. To identify which contents need to be downloaded, your application queries [SMS_CIToContent Server WMI Class](../../../develop/reference/sum/sms_citocontent-server-wmi-class.md) and obtains the list of `ContentID` properties matching the specific language criteria. With this list, the application can obtain the associated download URL and the related properties for the content files from [SMS_CIContentFiles Server WMI Class](../../../develop/reference/sum/sms_cicontentfiles-server-wmi-class.md).  
 
- When the update content has been determined, the application optionally prepares the update for deployment using an [SMS_AuthorizationList Server WMI Class](../../../develop/reference/sum/sms_authorizationlist-server-wmi-class.md) object to create an authorized list of updates. Your application also has the option of implementing [SMS_Template Server WMI Class](../../../develop/reference/sum/sms_template-server-wmi-class.md) to create a custom deployment template.  
+  When the update content has been determined, the application optionally prepares the update for deployment using an [SMS_AuthorizationList Server WMI Class](../../../develop/reference/sum/sms_authorizationlist-server-wmi-class.md) object to create an authorized list of updates. Your application also has the option of implementing [SMS_Template Server WMI Class](../../../develop/reference/sum/sms_template-server-wmi-class.md) to create a custom deployment template.  
 
 > [!NOTE]
 >  When it is building an authorization list to include the software update, the application must set the `IsBundle` property of `SMS_SoftwareUpdate` to `true` to indicate that the update is part of a bundle. For more information, see [SMS_AuthorizationList Server WMI Class](../../../develop/reference/sum/sms_authorizationlist-server-wmi-class.md).  

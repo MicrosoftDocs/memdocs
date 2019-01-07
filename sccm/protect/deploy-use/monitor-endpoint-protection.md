@@ -19,23 +19,23 @@ You can monitor Endpoint Protection in your Microsoft System Center Configuratio
 
 ##  <a name="BKMK_1"></a> How to Monitor Endpoint Protection by Using the Endpoint Protection Status Node  
 
-1.  In the Configuration Manager console, click **Monitoring**.  
+1. In the Configuration Manager console, click **Monitoring**.  
 
-2.  In the **Monitoring** workspace, expand **Security** and then click **Endpoint Protection Status**.  
+2. In the **Monitoring** workspace, expand **Security** and then click **Endpoint Protection Status**.  
 
-3.  In the **Collection** list, select the collection for which you want to view status information.  
+3. In the **Collection** list, select the collection for which you want to view status information.  
 
-    > [!IMPORTANT]  
-    >  Collections are available for selection in the following cases:  
-    >   
-    >  -   When you select **View this collection in the Endpoint Protection dashboard** on the **Alerts** tab of the *<collection name\>***Properties** dialog box.  
-    > -   When you deploy an Endpoint Protection antimalware policy to the collection.  
-    > -   When you enable and deploy Endpoint Protection client settings to the collection.  
+   > [!IMPORTANT]
+   >  Collections are available for selection in the following cases:  
+   > 
+   > - When you select **View this collection in the Endpoint Protection dashboard** on the **Alerts** tab of the <em><collection name\></em>**Properties** dialog box.  
+   >   -   When you deploy an Endpoint Protection antimalware policy to the collection.  
+   >   -   When you enable and deploy Endpoint Protection client settings to the collection.  
 
-4.  Review the information that is displayed in the **Security State** and **Operational State** sections. You can click any status link to create a temporary collection in the **Devices** node in the **Assets and Compliance** workspace. The temporary collection contains the computers with the selected status.  
+4. Review the information that is displayed in the **Security State** and **Operational State** sections. You can click any status link to create a temporary collection in the **Devices** node in the **Assets and Compliance** workspace. The temporary collection contains the computers with the selected status.  
 
-    > [!IMPORTANT]  
-    >  Information that is displayed in the **Endpoint Protection Status** node is based on the last data that was summarized from the Configuration Manager database and might not be current. If you want to retrieve the latest data, on the **Home** tab, click **Run Summarization**, or click **Schedule Summarization** to adjust the summarization interval.  
+   > [!IMPORTANT]  
+   >  Information that is displayed in the **Endpoint Protection Status** node is based on the last data that was summarized from the Configuration Manager database and might not be current. If you want to retrieve the latest data, on the **Home** tab, click **Run Summarization**, or click **Schedule Summarization** to adjust the summarization interval.  
 
 ##  <a name="BKMK_2"></a> How to Monitor Endpoint Protection in the Assets and Compliance Workspace  
 

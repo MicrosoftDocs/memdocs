@@ -40,23 +40,23 @@ Windows Defender ATP is a service in the [Windows Defender Security Center](http
 
 ## Onboard devices for Windows Defender ATP  
 
-1.  In the Configuration Manager console, navigate **Assets and Compliance** > **Overview** > **Endpoint Protection** > **Windows Defender ATP Policies** and click **Create Windows Defender ATP Policy**. The Windows Defender ATP Policy Wizard opens.  
+1. In the Configuration Manager console, navigate **Assets and Compliance** > **Overview** > **Endpoint Protection** > **Windows Defender ATP Policies** and click **Create Windows Defender ATP Policy**. The Windows Defender ATP Policy Wizard opens.  
 
-2.  Type the **Name** and **Description** for the Windows Defender ATP policy and select **Onboarding**. Click **Next**.  
+2. Type the **Name** and **Description** for the Windows Defender ATP policy and select **Onboarding**. Click **Next**.  
 
-3.  **Browse** to the Configuration file provided by your organization’s Windows Defender ATP cloud service tenant. Click **Next**.  
+3. **Browse** to the Configuration file provided by your organization’s Windows Defender ATP cloud service tenant. Click **Next**.  
 
-4.  Specify the file samples that are collected and shared from managed devices for analysis.  
+4. Specify the file samples that are collected and shared from managed devices for analysis.  
 
-    -   **None**   
+   - **None**   
 
-    -   **All file types**  
+   - **All file types**  
 
      Click **Next**.  
 
-5.  Review the summary and complete the wizard.  
+5. Review the summary and complete the wizard.  
 
-6.  You can now deploy the Windows Defender ATP policy to managed client computers by clicking **Deploy**.  
+6. You can now deploy the Windows Defender ATP policy to managed client computers by clicking **Deploy**.  
 
 ## Monitor Windows Defender ATP  
 

@@ -39,21 +39,21 @@ The upgrade test is run against a backup of your site database that you restored
 If an update install fails, you should not need to recover the site. Instead, you can retry the update installation from within the console.
 
 ##  Run the test upgrade    
-1.  Use Configuration Manager Setup and the source files from the **CD.Latest** folder of a site that runs the version that you plan to update to. 	
+1. Use Configuration Manager Setup and the source files from the **CD.Latest** folder of a site that runs the version that you plan to update to.  
 
-2.  Copy the **CD.Latest** folder to a location on the SQL Server instance that you will use to run the test database upgrade.
+2. Copy the **CD.Latest** folder to a location on the SQL Server instance that you will use to run the test database upgrade.
 
-3.  Create a backup of the site database that you want to test upgrade. Next, restore a copy of that database to an instance of SQL Server that does not host a Configuration Manager site. The SQL Server instance must use the same edition of SQL Server as your site database.  
+3. Create a backup of the site database that you want to test upgrade. Next, restore a copy of that database to an instance of SQL Server that does not host a Configuration Manager site. The SQL Server instance must use the same edition of SQL Server as your site database.  
 
-4.  After you restore the database copy, run **Setup** from the CD.Latest folder that contains the source files from the version you are updating to. When you run Setup, use the **/TESTDBUPGRADE** command-line option. If the SQL Server instance that hosts the database copy is not the default instance, provide the command-line arguments to identify the instance that hosts the site database copy.   
+4. After you restore the database copy, run **Setup** from the CD.Latest folder that contains the source files from the version you are updating to. When you run Setup, use the **/TESTDBUPGRADE** command-line option. If the SQL Server instance that hosts the database copy is not the default instance, provide the command-line arguments to identify the instance that hosts the site database copy.   
 
-  For example, you have a site database with the database name *SMS_ABC*. You restore a copy of this site database to a supported instance of SQL Server with the instance name *DBTest*. To test an upgrade of this copy of the site database, use the following command line: **Setup.exe /TESTDBUPGRADE DBtest\CM_ABC**.  
+   For example, you have a site database with the database name *SMS_ABC*. You restore a copy of this site database to a supported instance of SQL Server with the instance name *DBTest*. To test an upgrade of this copy of the site database, use the following command line: **Setup.exe /TESTDBUPGRADE DBtest\CM_ABC**.  
 
-  You can find Setup.exe in the following location on the source media for System Center Configuration Manager: **SMSSETUP\BIN\X64**.  
+   You can find Setup.exe in the following location on the source media for System Center Configuration Manager: **SMSSETUP\BIN\X64**.  
 
-5.  On the instance of SQL Server where you run the upgrade test, monitor the *ConfigMgrSetup.log* in the root of the system drive for progress and success.  
+5. On the instance of SQL Server where you run the upgrade test, monitor the *ConfigMgrSetup.log* in the root of the system drive for progress and success.  
 
-     If the test upgrade fails, fix any issues related to the site database upgrade failure. Then, create a new backup of the site database and  test the upgrade of the new copy of the database.  
+    If the test upgrade fails, fix any issues related to the site database upgrade failure. Then, create a new backup of the site database and  test the upgrade of the new copy of the database.  
 
 
 

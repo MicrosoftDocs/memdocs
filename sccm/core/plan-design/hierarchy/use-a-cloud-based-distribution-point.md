@@ -157,10 +157,10 @@ When you use a cloud distribution point in your hierarchy, use the following inf
 - The cloud distribution point supports all Windows versions listed in [Supported operating systems for clients and devices](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices).  
 
 - An administrator distributes the following types of supported software content:  
-    - Applications
-    - Packages
-    - OS upgrade packages
-    - Third-party software updates  
+  - Applications
+  - Packages
+  - OS upgrade packages
+  - Third-party software updates  
 
     > [!Important]  
     > While the Configuration Manager console doesn't block the distribution of Microsoft software updates to a cloud distribution point, you're paying Azure costs to store content that clients don't use. Internet-based clients always get Microsoft software update content from the Microsoft Update cloud service. Don't distribute Microsoft software updates to a cloud distribution point.    
@@ -199,11 +199,11 @@ Configuration Manager includes the following options to help control costs and m
 - Configure Configuration Manager to alert you when thresholds for client downloads meet or exceed monthly limits. For more information, see [Data transfer threshold alerts](/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure#bkmk_alerts).   
 
 - To help reduce the number of data transfers from cloud distribution points by clients, use one of the following peer caching technologies:  
-    - Configuration Manager peer cache
-    - Windows BranchCache
-    - Windows 10 Delivery Optimization  
+  - Configuration Manager peer cache
+  - Windows BranchCache
+  - Windows 10 Delivery Optimization  
 
-   For more information, see [Fundamental concepts for content management](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management).   
+    For more information, see [Fundamental concepts for content management](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management).   
 
 
 ### Components

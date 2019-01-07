@@ -329,6 +329,7 @@ Configuration Manager checks the results from the script. It reads the values wr
 Use the following tables to check whether an application is installed from the output from a script:  
 
 **Zero exit code:**  
+
 |STDOUT|STDERR|Script result|Application detection state|
 |---------|---------|---------|---------|
 |Empty|Empty|Success|Not installed|
@@ -338,6 +339,7 @@ Use the following tables to check whether an application is installed from the o
 
 
 **Non-zero exit code:**  
+
 |STDOUT|STDERR|Script result|Application detection state|
 |---------|---------|---------|---------|
 |Empty|Empty|Failure|Unknown|
@@ -396,11 +398,11 @@ On the **User Experience** page, specify the following information:
 
 - **Logon requirement**: Select one of the following options:  
 
-    - **Only when a user is logged on**  
+  - **Only when a user is logged on**  
 
-    - **Whether or not a user is logged on**  
+  - **Whether or not a user is logged on**  
 
-    - **Only when no user is logged on**  
+  - **Only when no user is logged on**  
 
     > [!NOTE]  
     >  This option defaults to **Only when a user is logged on**. If you select **Install for user** in the **Installation behavior** drop-down list, you can't change this option.  
@@ -429,9 +431,9 @@ On the **User Experience** page, specify the following information:
 
     Use this value for the following actions:  
 
-    - To monitor the results from the deployment type.  
+  - To monitor the results from the deployment type.  
 
-    - To check whether a deployment type is installed when you define maintenance windows on client devices. When a maintenance window is in place, a deployment type only starts if enough time is available in the maintenance window to accommodate the **Maximum Allowed Run Time** setting.  
+  - To check whether a deployment type is installed when you define maintenance windows on client devices. When a maintenance window is in place, a deployment type only starts if enough time is available in the maintenance window to accommodate the **Maximum Allowed Run Time** setting.  
 
     > [!IMPORTANT]  
     >  A conflict might occur if the **Maximum allowed run time** is longer than the scheduled maintenance window. If the user sets the maximum run time to a period greater than the length of any available maintenance window, that deployment type doesn't run.  
@@ -513,7 +515,7 @@ Dependencies define one or more deployment types from another application that t
 > [!Note]  
 > This page isn't in the Create Deployment Type wizard. It's only a tab on the properties of an existing deployment type.  
 
-Specify return codes to control behaviors after the deployment type completes. For example, signal that a restart is required, the installation is complete, or customize the text shown to users. 
+Specify return codes to control behaviors after the deployment type completes. For example, signal that a restart is required, the installation is complete. 
 
 1. On the **Return Codes** tab of the deployment type properties window, click **Add**.  
 
@@ -531,7 +533,7 @@ Specify return codes to control behaviors after the deployment type completes. F
 
     - **Fast Retry**: Another installation is already in progress on the device. The client retries every two hours, for a total of 10 times.  
 
-4. Optionally, enter a **Name** and **Description** for this return code. This text is shown to the user.  
+4. Optionally, enter a **Name** and **Description** for this return code.
 
 5. Click **OK** to close the Add Return Code window.  
 
@@ -544,6 +546,7 @@ You're deploying an application that returns an exit code of `1` when it success
 When you create some deployment types, Configuration Manager automatically adds the following return codes that are common to that technology:  
 
 **Windows Installer (\*.msi file)**  
+
 |Value    |Code Type|
 |---------|---------|
 |0        |Success (no reboot)|
@@ -553,6 +556,7 @@ When you create some deployment types, Configuration Manager automatically adds 
 |1618     |Fast Retry|
 
 **Script Installer**  
+
 |Value    |Code Type|
 |---------|---------|
 |0        |Success (no reboot)|
@@ -561,6 +565,7 @@ When you create some deployment types, Configuration Manager automatically adds 
 |1618     |Fast Retry|
 
 **Windows app package (\*.appx, \*.appxbundle, \*.msix, \*.msixbundle)**  
+
 |Value    |Code Type|
 |---------|---------|
 |15605    |Fast Retry|

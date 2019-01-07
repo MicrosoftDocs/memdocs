@@ -69,7 +69,8 @@ Class SMS_PackageBaseclass : SMS_BaseClass
  The `SMS_PackageBaseclass` class does not define any methods.  
 
 ## Properties  
- `ActionInProgress`  
+
+### ActionInProgress`  
  Data type: `UInt32`  
 
  Access type: Read-only  
@@ -85,7 +86,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 |2|ADD|  
 |3|DELETE|  
 
- `AlternateContentProviders`  
+### AlternateContentProviders  
  Data type: `String`  
 
  Access type: Read/Write  
@@ -94,7 +95,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  An XML string to set alternate content provider settings. This property does not apply to a software update package or a driver package.  
 
- `Description`  
+### Description  
  Data type: `String`  
 
  Access type: Read/Write  
@@ -103,7 +104,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  The long description of the package.  
 
- `ExtendedData`  
+### ExtendedData  
  Data type: `UInt8` Array  
 
  Access type: Read/Write  
@@ -112,7 +113,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  The XML blob for image deployment.  
 
- `ExtendedDataSize`  
+### ExtendedDataSize  
  Data type: `UInt32`  
 
  Access type: Read/Write  
@@ -121,7 +122,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  The size of extended data for the package. The default value is 0.  
 
- `ForcedDisconnectDelay`  
+### ForcedDisconnectDelay  
  Data type: `UInt32`  
 
  Access type: Read/Write  
@@ -130,7 +131,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  The time, in minutes, that Configuration Manager waits before forcibly disconnecting users from the distribution point share. The default value is 5 minutes.  
 
- `ForcedDisconnectEnabled`  
+### ForcedDisconnectEnabled  
  Data type: `Boolean`  
 
  Access type: Read/Write  
@@ -142,7 +143,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 > [!NOTE]
 >  Enable this property with caution. Forcibly disconnecting users can have adverse effects on the client.  
 
- `ForcedDisconnectNumRetries`  
+### ForcedDisconnectNumRetries  
  Data type: `UInt32`  
 
  Access type: Read/Write  
@@ -151,7 +152,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  The number of times Configuration Manager attempts to disconnect a user from the distribution point share. The default number of retries is 2.  
 
- `Icon`  
+### Icon  
  Data type: `UInt8` Array  
 
  Access type: Read/Write  
@@ -160,7 +161,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  Optional. Array representing the file that contains the icon to use for the package. If it is used, this icon replaces the default package icon in the Configuration Manager console.  
 
- `IconSize`  
+### IconSize  
  Data type: `UInt32`  
 
  Access type: Read/Write  
@@ -169,7 +170,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  The size of the icon, in bytes. The default value is 0. Set this property to 0 to clear the icon.  
 
- `IgnoreAddressSchedule`  
+### IgnoreAddressSchedule  
  Data type: `Boolean`  
 
  Access type: Read/Write  
@@ -178,7 +179,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  `true` if Configuration Manager ignores any schedule of the sender specified by `PreferredAddressType`. The default value is `false`.  
 
- `ISVData`  
+### ISVData  
  Data type: `UInt8` Array  
 
  Access type: Read/Write  
@@ -187,7 +188,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  ISV extensibility data.  
 
- `ISVDataSize`  
+### ISVDataSize  
  Data type: `UInt32`  
 
  Access type: Read/Write  
@@ -196,7 +197,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  The size, in bytes, of `ISVData`. The default value is 0.  
 
- `ISVString`  
+### ISVString  
  Data type: `String`  
 
  Access type: Read/Write  
@@ -205,7 +206,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  String for partner extensibility.  
 
- `Language`  
+### Language  
  Data type: `String`  
 
  Access type: Read/Write  
@@ -214,7 +215,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  The language of the package. This property is used with `Manufacturer`, `Name`, and `Version` to identify a package in the console. For example, you might have an English version and a German version of the same package.  
 
- `LastRefreshTime`  
+### LastRefreshTime  
  Data type: `DateTime`  
 
  Access type: Read-only  
@@ -223,7 +224,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  The last date and time when the package source was refreshed at its distribution points.  
 
- `LocalizedCategoryInstanceNames`  
+### LocalizedCategoryInstanceNames  
  Data type: `String` Array  
 
  Access type: Read-only  
@@ -232,7 +233,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  Localized names of the categories to which the configuration item belongs.  
 
- `Manufacturer`  
+### Manufacturer  
  Data type: `String`  
 
  Access type: Read/Write  
@@ -241,7 +242,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  The manufacturer (publisher) of the package.  
 
- `MIFFilename`  
+### MIFFilename  
  Data type: `String`  
 
  Access type: Read/Write  
@@ -250,7 +251,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  The name of the Management Information Format (MIF) file that contains the package status.  
 
- `MIFName`  
+### MIFName  
  Data type: `String`  
 
  Access type: Read/Write  
@@ -259,7 +260,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  Name of the MIF file that contains the program status for the package. The file name extension must be .mif. For more information, see the Remarks section later in this topic.  
 
- `MIFPublisher`  
+### MIFPublisher  
  Data type: `String`  
 
  Access type: Read/Write  
@@ -268,7 +269,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  The name of the software publisher of the package.  
 
- `MIFVersion`  
+### MIFVersion  
  Data type: `String`  
 
  Access type: Read/Write  
@@ -277,7 +278,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  The version number of the package.  
 
- `Name`  
+### Name  
  Data type: `String`  
 
  Access type: Read/Write  
@@ -286,7 +287,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  The name of the package. The default name is "".  
 
- `NumOfPrograms`  
+### NumOfPrograms  
  Data type: `UInt32`  
 
  Access type: Read/Write  
@@ -295,21 +296,21 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  The number of programs the package has. The default value is …  
 
- `PackageID`  
+### PackageID  
  Data type: `String`  
 
  Access type: [key]  
 
  A unique, auto-generated key that is used to relate programs, advertisements, and distribution points to the package.  
 
- `PackageSize`  
+ ### PackageSize  
  Data type: `UInt32`  
 
  Access type: Read  
 
  Size of the package.  
 
- `PackageType`  
+### PackageType  
  Data type: `UInt32`  
 
  Access type: Read/Write  
@@ -332,7 +333,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 |259|Operating system install package.|
 |260|VHD package.|   
 
- `PkgFlags`  
+### PkgFlags  
  Data type: `UInt32`  
 
  Access type: Read/Write  
@@ -351,7 +352,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 |0x20000000 (29)|USE_SPECIAL_MIF. This value determines if Configuration Manager uses `MIFName`, `MIFPublisher`, and `MIFVersion` for MIF file status matching. Otherwise, Configuration Manager uses `Name`, `Manufacturer`, and `Version` for status matching. For more information, see the Remarks section later in this topic.|  
 |0x40000000 (30)|DISTRIBUTE_ON_DEMAND. The package is allowed to be distributed on demand to branch distribution points.|  
 
- `PkgSourceFlag`  
+### PkgSourceFlag  
  Data type: `UInt32`  
 
  Access type: Read/Write  
@@ -368,7 +369,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 |3|STORAGE_COMPRESS. This flag is obsolete.|  
 |4|STORAGE_LOCAL. Take source files from a local source.|  
 
- `PkgSourcePath`  
+### PkgSourcePath  
  Data type: `String`  
 
  Access type: Read/Write  
@@ -377,7 +378,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  Location of the files of update contents represented by the package. The location can be either a full local path or a UNC path. Make sure that this location contains all the files and subdirectories needed to complete the program, including any scripts.  
 
- `PreferredAddressType`  
+### PreferredAddressType  
  Data type: `String`  
 
  Access type: Read/Write  
@@ -386,27 +387,18 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  Preferred sender to use when copying the package source files to distribution points. Possible values are listed below. Configuration Manager determines which sender to use if a value is not specified.  
 
--   ADDR_NONE()  
+ - ADDR_NONE()
+ - ADR_LAN(MS_LAN)  
+ - ADDR_MAPI(MS_MAPI)  
+ - ADDR_RAS_ASYNC(MS_ASYNC_RAS)  
+ - ADDR_RAS_ISDN(MS_ISDN_RAS)  
+ - ADDR_RAS_X25(MS_X25_RAS)  
+ - ADDR_RAS_SNA(MS_SNA_RAS)  
+ - ADDR_SNA_BATCH(MS_BATCH_SNA)  
+ - ADDR_SNA_INTER(MS_INTER_SNA)  
+ - ADDR_COURIER(MS_COURIER)  
 
--   ADR_LAN(MS_LAN)  
-
--   ADDR_MAPI(MS_MAPI)  
-
--   ADDR_RAS_ASYNC(MS_ASYNC_RAS)  
-
--   ADDR_RAS_ISDN(MS_ISDN_RAS)  
-
--   ADDR_RAS_X25(MS_X25_RAS)  
-
--   ADDR_RAS_SNA(MS_SNA_RAS)  
-
--   ADDR_SNA_BATCH(MS_BATCH_SNA)  
-
--   ADDR_SNA_INTER(MS_INTER_SNA)  
-
--   ADDR_COURIER(MS_COURIER)  
-
- `Priority`  
+### Priority  
  Data type: `UInt32`  
 
  Access type: Read/Write  
@@ -415,7 +407,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  Sending priority of the package. Possible values are defined for the `Priority` property of [SMS_Advertisement Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_advertisement-server-wmi-class.md).  
 
- `RefreshPkgSourceFlag`  
+### RefreshPkgSourceFlag  
  Data type: `Boolean`  
 
  Access type: Read/Write  
@@ -428,14 +420,14 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  Do not use this property to update the package source files. Instead, use the `RefreshPkgSource` method.  
 
- `RefreshSchedule`  
+### RefreshSchedule  
  Data type: `SMS_ScheduleToken` Array  
 
  Access type: [max(15), lazy]  
 
  An embedded array of `SMS_ScheduleToken` objects that define when Configuration Manager will update the package source files at the distribution points. You can specify a refresh schedule only when `PkgSourceFlag` is STORAGE_DIRECT.  
 
- `SecuredScopeNames`  
+### SecuredScopeNames  
  Data type: `String` Array  
 
  Access type: Read-only  
@@ -444,7 +436,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  Represents the security scopes that the package belongs to.  
 
- `SedoObjectVersion`  
+### SedoObjectVersion  
  Data type: `String`  
 
  Access type: Read-only  
@@ -453,7 +445,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  Object version used to compare to the object version in the database when updating the object. If the object version does not match, the update fails.  
 
- `ShareName`  
+### ShareName  
  Data type: `String`  
 
  Access type: Read/Write  
@@ -462,7 +454,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  Share to use on the distribution point. The name can include directories. If the directories do not exist, Configuration Manager creates them. You must specify a share name if you set `ShareType` to SHARE_SPECIFIC.  
 
- `ShareType`  
+### ShareType  
  Data type: `UInt32`  
 
  Access type: Read/Write  
@@ -476,7 +468,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 |1|SHARE_COMMON|  
 |2|SHARE_SPECIFIC|  
 
- `SourceDate`  
+### SourceDate  
  Data type: `DateTime`  
 
  Access type: Read-only  
@@ -485,7 +477,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  Date and time the package source files were last updated on the distribution points.  
 
- `SourceSite`  
+### SourceSite  
  Data type: `String`  
 
  Access type: Read-only  
@@ -494,7 +486,8 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  The site code of the site where the package originated.  
 
- `SourceVersion`  
+
+### SourceVersion  
  Data type: `UInt32`  
 
  Access type: Read-only  
@@ -503,7 +496,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  The version of the package available at the site. Incremented when the package is updated or the source files are refreshed.  
 
- `StoredPkgPath`  
+### StoredPkgPath  
  Data type: `String`  
 
  Access type: Read/Write  
@@ -512,7 +505,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  Full path to the location where Configuration Manager stores the compressed version of the source files on the site server. This path is set by Configuration Manager when the value of `PkgSourceFlag` is STORAGE_COMPRESS.  
 
- `StoredPkgVersion`  
+### StoredPkgVersion  
  Data type: `UInt32`  
 
  Access type: Read/Write  
@@ -521,7 +514,7 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
  The version of the compressed source files for the stored package. The default value is 0.  
 
- `Version`  
+### Version  
  Data type: `String`  
 
  Access type: Read/Write  
@@ -533,18 +526,18 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Abstract  
+ - Abstract  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- If you set the USE_SPECIAL_MIF flag of the `PkgFlags` property, Configuration Manager looks in the %*TEMP*% directory or the %*windir*% directory for the install status MIF file that is specified in the `MIFFileName` property. If Configuration Manager does not find the file, it searches for all MIF files in those directories. A case-insensitive comparison is made of the values for `MIFName`, `MIFPublisher`, and `MIFVersion` to those specified in the MIF file. If a match is found, the status that is specified in the MIF file is used as the install status for the program, which indicates whether the program successfully executed. If Configuration Manager cannot find a match, or if USE_SPECIAL_MIF is not specified, Configuration Manager uses the program exit code to set the install status for the program. An exit code of zero is considered successful. Any other values are considered application-specific error codes.  
+  If you set the USE_SPECIAL_MIF flag of the `PkgFlags` property, Configuration Manager looks in the %*TEMP*% directory or the %*windir*% directory for the install status MIF file that is specified in the `MIFFileName` property. If Configuration Manager does not find the file, it searches for all MIF files in those directories. A case-insensitive comparison is made of the values for `MIFName`, `MIFPublisher`, and `MIFVersion` to those specified in the MIF file. If a match is found, the status that is specified in the MIF file is used as the install status for the program, which indicates whether the program successfully executed. If Configuration Manager cannot find a match, or if USE_SPECIAL_MIF is not specified, Configuration Manager uses the program exit code to set the install status for the program. An exit code of zero is considered successful. Any other values are considered application-specific error codes.  
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  

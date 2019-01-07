@@ -43,20 +43,20 @@ Review the following information to prepare for the change to the MDM authority:
 ## Change the MDM authority to Intune
 Use the following procedure to change the tenant-level MDM authority to Intune.
 
-1.	In the Configuration Manager console, go to **Administration** &gt; **Overview** &gt; **Cloud Services** &gt; **Microsoft Intune Subscription**, and delete your existing Intune Subscription.
-2.	Select **Change MDM Authority to Microsoft Intune**, and then click **Next**.
+1. In the Configuration Manager console, go to **Administration** &gt; **Overview** &gt; **Cloud Services** &gt; **Microsoft Intune Subscription**, and delete your existing Intune Subscription.
+2. Select **Change MDM Authority to Microsoft Intune**, and then click **Next**.
 
-    ![Remove Microsoft Intune subscription dialog](media/mdm-change-delete-subscription.png)
-3.	Sign in to the Intune tenant that you originally used when you set the MDM authority in Configuration Manager.
-4.	Click **Next** and complete the wizard.
-5.	The MDM authority is now reset. The Intune Subscription is no longer displayed in the Microsoft Intune Subscriptions node of the Configuration Manager console.
-6.  Log in to the [Intune portal](https://aka.ms/IntunePortal).
-7.  In the Microsoft Intune blade, click on **Device enrollment**.
-8.  In the Device enrollment Overview blade, see the **MDM authority** property.
+   ![Remove Microsoft Intune subscription dialog](media/mdm-change-delete-subscription.png)
+3. Sign in to the Intune tenant that you originally used when you set the MDM authority in Configuration Manager.
+4. Click **Next** and complete the wizard.
+5. The MDM authority is now reset. The Intune Subscription is no longer displayed in the Microsoft Intune Subscriptions node of the Configuration Manager console.
+6. Log in to the [Intune portal](https://aka.ms/IntunePortal).
+7. In the Microsoft Intune blade, click on **Device enrollment**.
+8. In the Device enrollment Overview blade, see the **MDM authority** property.
 
-  > [!Important]    
-  > Do not use the Intune classic console. You must log in to Intune in the Azure portal.
-7.	Confirm that the MDM authority has been changed to **Microsoft Intune**. 
+   > [!Important]    
+   > Do not use the Intune classic console. You must log in to Intune in the Azure portal.
+9. Confirm that the MDM authority has been changed to **Microsoft Intune**. 
 
 ## Next steps
 After the change in MDM authority is complete, review the following information:

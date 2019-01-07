@@ -19,11 +19,11 @@ Power management in System Center Configuration Manager enables you to apply pow
 
  If a computer is a member of multiple collections, each applying different power plans, then the following actions will be taken:  
 
--   Power plan: If multiple values for power settings are applied to a computer, the least restrictive value is used.  
+- Power plan: If multiple values for power settings are applied to a computer, the least restrictive value is used.  
 
--   Wakeup time: If multiple wakeup times are applied to a desktop computer, the time closest to midnight is used.  
+- Wakeup time: If multiple wakeup times are applied to a desktop computer, the time closest to midnight is used.  
 
- Use the **Computers with Multiple Power Plans** report to display all computers that have multiple power plans applied to them. This can help you discover computers that have power conflicts. For more information about power management reports, see [How to monitor and plan for power management in System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).  
+  Use the **Computers with Multiple Power Plans** report to display all computers that have multiple power plans applied to them. This can help you discover computers that have power conflicts. For more information about power management reports, see [How to monitor and plan for power management in System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).  
 
 > [!IMPORTANT]  
 >  Power settings configured by using Windows Group Policy will override settings configured by Configuration Manager power management.  
@@ -32,48 +32,48 @@ Power management in System Center Configuration Manager enables you to apply pow
 
 ### To create and apply a power plan  
 
-1.  In the Configuration Manager console, click **Assets and Compliance**.  
+1. In the Configuration Manager console, click **Assets and Compliance**.  
 
-2.  In the **Assets and Compliance** workspace, click **Device Collections**.  
+2. In the **Assets and Compliance** workspace, click **Device Collections**.  
 
-3.  In the **Device Collections** list, click the collection to which you want to apply power management settings and then, in the **Home** tab, in the **Properties** group, click **Properties**.  
+3. In the **Device Collections** list, click the collection to which you want to apply power management settings and then, in the **Home** tab, in the **Properties** group, click **Properties**.  
 
-4.  In the **Power Management** tab of the *<Collection Name\>***Properties** dialog box, select **Specify power management settings for this collection**.  
+4. In the **Power Management** tab of the <em><Collection Name\></em>**Properties** dialog box, select **Specify power management settings for this collection**.  
 
-    > [!NOTE]  
-    >  You can also click **Browse** and then copy the power management settings from a selected collection to the selected collection.  
+   > [!NOTE]  
+   >  You can also click **Browse** and then copy the power management settings from a selected collection to the selected collection.  
 
-5.  In the **Start** and **End** fields, specify the start and end time for peak (or business) hours.  
+5. In the **Start** and **End** fields, specify the start and end time for peak (or business) hours.  
 
-6.  Enable **Wakeup time (desktop computers)** to specify a time when a desktop computer will wake from sleep or wake from hibernate to install scheduled updates or software installations.  
+6. Enable **Wakeup time (desktop computers)** to specify a time when a desktop computer will wake from sleep or wake from hibernate to install scheduled updates or software installations.  
 
-    > [!IMPORTANT]  
-    >  Power management uses the internal Windows wakeup time feature to wake computers from sleep or hibernate. Wakeup time settings are not applied to portable computers to prevent scenarios in which they might wake when not plugged in. The wake up time is randomized and computers will be woken over a one hour period from the specified wakeup time.  
+   > [!IMPORTANT]  
+   >  Power management uses the internal Windows wakeup time feature to wake computers from sleep or hibernate. Wakeup time settings are not applied to portable computers to prevent scenarios in which they might wake when not plugged in. The wake up time is randomized and computers will be woken over a one hour period from the specified wakeup time.  
 
-7.  If you want to configure a custom power plan for peak (or business) hours, select **Customized Peak (ConfigMgr)** from the **Peak plan** drop-down list, and then click **Edit**. If you want to configure a power plan for non-peak (or nonbusiness) hours, select **Customized Non-Peak (ConfigMgr)** from the **Non-peak plan** drop-down list, and then click **Edit**.  
+7. If you want to configure a custom power plan for peak (or business) hours, select **Customized Peak (ConfigMgr)** from the **Peak plan** drop-down list, and then click **Edit**. If you want to configure a power plan for non-peak (or nonbusiness) hours, select **Customized Non-Peak (ConfigMgr)** from the **Non-peak plan** drop-down list, and then click **Edit**.  
 
-    > [!NOTE]  
-    >  You can use the **Computer Activity** report to help you decide the schedules to use for peak and non-peak hours when you apply power plans to collections of computers. For more information, see [How to monitor and plan for power management in System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).  
+   > [!NOTE]  
+   >  You can use the **Computer Activity** report to help you decide the schedules to use for peak and non-peak hours when you apply power plans to collections of computers. For more information, see [How to monitor and plan for power management in System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).  
 
-     You can also select from the built-in power plans, **Balanced (ConfigMgr)**, **High Performance (ConfigMgr)** and **Power Saver (ConfigMgr)**, and then click **View** to display the properties of each power plan.  
+    You can also select from the built-in power plans, **Balanced (ConfigMgr)**, **High Performance (ConfigMgr)** and **Power Saver (ConfigMgr)**, and then click **View** to display the properties of each power plan.  
 
-    > [!NOTE]  
-    >  You cannot modify the built-in power plans.  
+   > [!NOTE]  
+   >  You cannot modify the built-in power plans.  
 
-8.  In the *<power plan name\>***Properties** dialog box, configure the following settings:  
+8. In the <em><power plan name\></em>**Properties** dialog box, configure the following settings:  
 
-    -   **Name:** Specify a name for this power plan or use the supplied default value.  
+   -   **Name:** Specify a name for this power plan or use the supplied default value.  
 
-    -   **Description:**  Specify a description for this power plan or use the supplied default value.  
+   -   **Description:**  Specify a description for this power plan or use the supplied default value.  
 
-    -   **Specify the properties for this power plan:** Configure the power plan properties. To disable a property, clear its check box. For information about the available settings, see [Available power management plan settings](#BKMK_Plans) in this topic.  
+   -   **Specify the properties for this power plan:** Configure the power plan properties. To disable a property, clear its check box. For information about the available settings, see [Available power management plan settings](#BKMK_Plans) in this topic.  
 
-        > [!IMPORTANT]  
-        >  Enabled settings are applied to computers when the power plan is applied. If you clear a power setting check box, the value on the client computer is not changed when the power plan is applied. Clearing a check box does not restore the power setting to its previous value before a power plan was applied.  
+       > [!IMPORTANT]  
+       >  Enabled settings are applied to computers when the power plan is applied. If you clear a power setting check box, the value on the client computer is not changed when the power plan is applied. Clearing a check box does not restore the power setting to its previous value before a power plan was applied.  
 
-9. Click **OK** to close the *<power plan name\>***Properties** dialog box.  
+9. Click **OK** to close the <em><power plan name\></em>**Properties** dialog box.  
 
-10. Click **OK** to close the *<Collection Name\>***Settings** dialog box and to apply the power plan.  
+10. Click **OK** to close the <em><Collection Name\></em>**Settings** dialog box and to apply the power plan.  
 
 ##  <a name="BKMK_Plans"></a> Available power management plan settings  
  The following table lists the power management settings available in Configuration Manager. You can configure separate settings for when the computer is plugged in or running on battery power. Depending on the version of Windows you are using, some settings might not be configurable.  

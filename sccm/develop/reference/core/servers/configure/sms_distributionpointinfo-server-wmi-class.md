@@ -364,99 +364,99 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  Resource type of the distribution point. Possible values are listed below. The default value is "".  
 
--   Server  
+- Server  
 
--   Server Share  
+- Server Share  
 
- `ResponseDelay`  
- Data type: `UInt32`  
+  `ResponseDelay`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: none  
+  Qualifiers: none  
 
- PXE response delay.  
+  PXE response delay.  
 
- `ServerName`  
- Data type: `String`  
+  `ServerName`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Server name of the distribution point computer. The default value is "".  
+  Server name of the distribution point computer. The default value is "".  
 
- `ServiceType`  
- Data type: `UInt32`  
+  `ServiceType`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: none  
+  Qualifiers: none  
 
- Service type. For cloud-based distribution points only.  
+  Service type. For cloud-based distribution points only.  
 
- This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
+  This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
 
- `ShareName`  
- Data type: `String`  
+  `ShareName`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Obsolete. Shared distribution points are not supported in System Center Configuration Manager.  
+  Obsolete. Shared distribution points are not supported in System Center Configuration Manager.  
 
- `SiteCode`  
- Data type: `String`  
+  `SiteCode`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [key, SizeLimit("3")]  
+  Qualifiers: [key, SizeLimit("3")]  
 
- Site code of the site that owns the distribution point. The default value is "".  
+  Site code of the site that owns the distribution point. The default value is "".  
 
- `SiteName`  
- Data type: `String`  
+  `SiteName`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Site name. The default value is "".  
+  Site name. The default value is "".  
 
- `SupportUnknownMachines`  
- Data type: `Boolean`  
+  `SupportUnknownMachines`  
+  Data type: `Boolean`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: none  
+  Qualifiers: none  
 
- `true` if PXE supports unknown computers. The default value is `false`.  
+  `true` if PXE supports unknown computers. The default value is `false`.  
 
- `TransferRate`  
- Data type: `UInt32`  
+  `TransferRate`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: none  
+  Qualifiers: none  
 
- The average transfer rate in Kbps. The default value is 0.  
+  The average transfer rate in Kbps. The default value is 0.  
 
- `UdaSetting`  
- Data type: `UInt32`  
+  `UdaSetting`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: none  
+  Qualifiers: none  
 
- PXE UDA setting.  
+  PXE UDA setting.  
 
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Read (read-only)  
+- Read (read-only)  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
 ## Requirements  
 

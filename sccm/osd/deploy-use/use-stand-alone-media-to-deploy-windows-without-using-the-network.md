@@ -24,13 +24,13 @@ Stand-alone media in System Center Configuration Manager contains everything tha
 
 You can use stand-alone media in the following operating system deployment scenarios:  
 
--   [Refresh an existing computer with a new version of Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
+- [Refresh an existing computer with a new version of Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
 
--   [Install a new version of Windows on a new computer (bare metal)](install-new-windows-version-new-computer-bare-metal.md)  
+- [Install a new version of Windows on a new computer (bare metal)](install-new-windows-version-new-computer-bare-metal.md)  
 
--   [Upgrade Windows to the latest version](upgrade-windows-to-the-latest-version.md)  
+- [Upgrade Windows to the latest version](upgrade-windows-to-the-latest-version.md)  
 
- Complete the steps in one of the operating system deployment scenarios and then use the following sections to prepare for and create the stand-alone media.  
+  Complete the steps in one of the operating system deployment scenarios and then use the following sections to prepare for and create the stand-alone media.  
 
 ## Task sequence actions not supported when using stand-alone media  
  If  you have completed the steps in one of the supported operating system deployment scenarios, the task sequence to deploy, or upgrade, the operating system has been created and  all associated content has been distributed to a distribution point. When you use stand-alone media, the following actions are not supported in the task sequence:  

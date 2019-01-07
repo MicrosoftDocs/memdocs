@@ -53,7 +53,7 @@ In addition to installing and configuring the data warehouse database, several n
 - The computer where you install the site system role requires .NET Framework 4.5.2 or later.
 - The computer account of the computer where you install the site system role must have local admin permissions to the computer that will host the data warehouse database.
 - The administrative account you use to install the site system role must be a DBO on the instance of SQL Server that will host the data warehouse database.  
--  The database is supported:
+- The database is supported:
   - With SQL Server 2012 or later, Enterprise or Datacenter edition.
   - On a default or named instance
   - On a *SQL Server Cluster*. Although this configuration should work, it has not been tested and support is best effort.
@@ -116,21 +116,21 @@ After you install a Data Warehouse site system role, the following reports are a
 ### Move the Data Warehouse database
 Use the following steps to move the data warehouse database to a new SQL Server:
 
-  1. Review the current database configuration and record the configuration details, including:  
+1. Review the current database configuration and record the configuration details, including:  
    - The data groups you synchronize
    - Tables you include or exclude from synchronization       
 
    You will reconfigure these data groups and tables after you restore the database to a new server and reinstall the site system role.  
 
-  2. Use SQL Server Management Studio to backup the data warehouse database, and then again to restore that database to a SQL server on the new computer that will host the data warehouse.
+2. Use SQL Server Management Studio to backup the data warehouse database, and then again to restore that database to a SQL server on the new computer that will host the data warehouse.
 
-  After you restore the database to the new server, ensure that the database access permissions are the same on the new data warehouse database as they were on the original data warehouse database.
+   After you restore the database to the new server, ensure that the database access permissions are the same on the new data warehouse database as they were on the original data warehouse database.
 
-  3. Use the Configuration Manager console to remove the Data Warehouse Service point site system role from the current server.
+3. Use the Configuration Manager console to remove the Data Warehouse Service point site system role from the current server.
 
-  4. Install a new Data Warehouse Service point and specify the name of the new SQL Server and instance that hosts the Data Warehouse database you restored.
+4. Install a new Data Warehouse Service point and specify the name of the new SQL Server and instance that hosts the Data Warehouse database you restored.
 
-  5. After the site system role installs, the move is complete.
+5. After the site system role installs, the move is complete.
 
 You can review the following Configuration Manager logs to confirm the site system role has successfully reinstalled:  
 - **DWSSMSI.log** and **DWSSSetup.log**  - Use these logs to investigate errors when installing the Data warehouse service point.
@@ -152,23 +152,23 @@ The tool released with this Technical Preview is intended to replace older versi
 
 ### Modes of operation
 The tool can be run in two modes:
-  1.	**What-If mode**:   
-      When you do not specify the **/delete** switch, the tool runs in What-If mode and identifies the content that would be deleted from the distribution point but does not actually delete any data.
+1. **What-If mode**:   
+   When you do not specify the **/delete** switch, the tool runs in What-If mode and identifies the content that would be deleted from the distribution point but does not actually delete any data.
 
-      - When the tool runs in this mode, information about the content that would be deleted is automatically written to the tools log file. The user is not prompted to confirm each potential deletion.
-      - By default, the log file is written to the users temp folder on the computer where you run the tool, however you can use the /log switch to redirect the log file to another location.  
-      </br>
+   - When the tool runs in this mode, information about the content that would be deleted is automatically written to the tools log file. The user is not prompted to confirm each potential deletion.
+   - By default, the log file is written to the users temp folder on the computer where you run the tool, however you can use the /log switch to redirect the log file to another location.  
+   </br>
 
-    We recommend you run the tool in this mode and review the resulting log file before you run the tool with the /delete switch.  
+   We recommend you run the tool in this mode and review the resulting log file before you run the tool with the /delete switch.  
 
-  2. **Delete mode**:
-    When you run the tool with the **/delete** switch, the tool runs in delete mode.
+2. **Delete mode**:
+   When you run the tool with the **/delete** switch, the tool runs in delete mode.
 
-     - When the tool runs in this mode, orphaned content that is found on the specified distribution point can be deleted from the distribution point’s content library.
-     - 	Before deleting each file, the user is prompted to confirm that the file should be deleted.  You can select, **Y** for yes, **N** for no, or **Yes to all** to skip further prompts and delete all orphaned content.  
-     </br>
+   - When the tool runs in this mode, orphaned content that is found on the specified distribution point can be deleted from the distribution point’s content library.
+   -  Before deleting each file, the user is prompted to confirm that the file should be deleted.  You can select, **Y** for yes, **N** for no, or **Yes to all** to skip further prompts and delete all orphaned content.  
+   </br>
 
-     We recommend you run the tool in What-If mode and review the resulting log file before you run the tool with the /delete switch.  
+   We recommend you run the tool in What-If mode and review the resulting log file before you run the tool with the /delete switch.  
 
 When the content library cleanup tool runs in either mode, it automatically creates a log with a name that includes the mode the tool runs in, distribution point name, date, and time of operation. The log file automatically opens when the tool finishes. By default, this log is written to the users **temp** folder on the computer where you run the tool., However, you can use a command line switch to redirect the log file to another location, including a network share.   
 

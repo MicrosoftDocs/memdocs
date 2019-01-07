@@ -33,19 +33,19 @@ For more information about app installation types, see the [introduction to appl
 1. In the Configuration Manager console, choose **Software Library** > **Application Management** > **App Configuration Policies**.
 2. On the **Home** tab, in the **App Configuration Policies** group, choose **Create App Configuration Policy**.
 3. In the Create App Configuration Policy Wizard, on the **General** page, set this policy information:
-  - **Name**. Enter a unique name for the policy.
-  - **Description**. (Optional) To make it easier to identify the policy, you can add a description.
-  -  **Select a configuration policy type**. Specify the platform targeted by the app configuration policy: **Configuration policy for Android for Work apps**.
-  -  **Assigned categories to improve searching and filtering**. (Optional) To create and assign categories to the policy, choose **Categories**. Categories make it easier for you to sort and find items in the Configuration Manager console.
+   - **Name**. Enter a unique name for the policy.
+   - **Description**. (Optional) To make it easier to identify the policy, you can add a description.
+   -  **Select a configuration policy type**. Specify the platform targeted by the app configuration policy: **Configuration policy for Android for Work apps**.
+   -  **Assigned categories to improve searching and filtering**. (Optional) To create and assign categories to the policy, choose **Categories**. Categories make it easier for you to sort and find items in the Configuration Manager console.
 4. On the **Android for Work Policy** page, choose how to set the configuration policy information:
-  - **Specify name and value pairs**. You can use this option for property list files that do not use nesting. To specify a name and value pair:
+   - **Specify name and value pairs**. You can use this option for property list files that do not use nesting. To specify a name and value pair:
         1. To add a new JSON pair, choose **New**.
         2. In the **Add Name/Value Pair** dialog box, specify the following details:
             - **Type**. From the list, select the type of value that you want to specify.
             - **Name**. Enter the name of the property list key for which you want to specify a value.
             - **Value**. Enter the value that will be applied to the key you entered.
 
-  - **Browse to a property list JSON file**. Use this option if you already have an app configuration JSON file, or for more complex files that use nesting. In the **App configuration policy** field, enter the property list information in the correct JSON format.
+   - **Browse to a property list JSON file**. Use this option if you already have an app configuration JSON file, or for more complex files that use nesting. In the **App configuration policy** field, enter the property list information in the correct JSON format.
 5. To import a JSON file that you created earlier, choose **Select file**.
 6. Choose **Next**. If there are errors in the JSON code, correct them before you continue.
 7. Finish the steps shown in the wizard.

@@ -129,12 +129,12 @@ When you extend the schema for System Center Configuration Manager, the followin
 
     -   cn=MS-SMS-Site  
 
-> [!NOTE]  
-
+> [!NOTE]
+> 
 >  The  schema extensions might include attributes and classes that are carried forward from previous versions of the product but not used by System Center Configuration Manager. For example:  
-
->   
->  -   Attribute: cn=MS-SMS-Site-Boundaries  
-> -   Class: cn=MS-SMS-Server-Locator-Point  
+> 
+> 
+> - Attribute: cn=MS-SMS-Site-Boundaries  
+>   -   Class: cn=MS-SMS-Server-Locator-Point  
 
 You can ensure the preceding lists are current by viewing the **ConfigMgr_ad_schema.LDF** file from the **\SMSSETUP\BIN\x64** folder of the System Center Configuration Manager installation media.  

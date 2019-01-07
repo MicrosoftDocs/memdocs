@@ -114,4 +114,4 @@ The January 2018 update (X21-67050) includes the following versions:
 - System Center Endpoint Protection for Mac 4.5.32.0 (support for macOS 10.13 High Sierra)
 - System Center Endpoint Protection for Linux 4.5.20.0 
 
- For more information about how to install and manage the Endpoint Protection clients for Linux and Mac computers, use the documentation that accompanies these products. This product documentation is in the **Documentation** folder of the .ISO file.
+  For more information about how to install and manage the Endpoint Protection clients for Linux and Mac computers, use the documentation that accompanies these products. This product documentation is in the **Documentation** folder of the .ISO file.

@@ -72,11 +72,11 @@ Class SMS_G_System_Current : SMS_G_System
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Abstract  
+- Abstract  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- Your application can query classes derived from `SMS_G_System_Current` to get the current state of individual client hardware components. Alternatively the application can query `SMS_G_System_Current` itself to get the current state of all client hardware components. For example, the following query retrieves all hardware components for the given client.  
+  Your application can query classes derived from `SMS_G_System_Current` to get the current state of individual client hardware components. Alternatively the application can query `SMS_G_System_Current` itself to get the current state of all client hardware components. For example, the following query retrieves all hardware components for the given client.  
 
 ```  
 SELECT * FROM SMS_G_System_Current  

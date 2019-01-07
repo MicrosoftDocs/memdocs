@@ -2,7 +2,7 @@
 title: What's new in version 1810
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1810 of Configuration Manager current branch.
-ms.date: 11/27/2018
+ms.date: 12/20/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -23,9 +23,9 @@ Always review the latest checklist for installing this update. For more informat
 > [!Note]  
 > This article currently lists all significant features in this version. However, not all sections yet link to updated content with further information on the new features. Keep checking this page regularly for updates. Changes are noted with the ***[Updated]*** tag. This note will be removed when the content is finalized.  
 
-<!--
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4459701).
+Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4482169).
 
+<!--
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell 1810 Release Notes](https://docs.microsoft.com/powershell/sccm/1810_release_notes?view=sccm-ps).
 
 The following additional updates to this release are also now available:
@@ -78,8 +78,8 @@ When you install or update to version 1810, Configuration Manager setup now incl
 
 - **SQL change tracking cleanup**: A new check if the site database has a backlog of SQL change tracking data. For more information, including a procedure to verify and clear this backlog, see [SQL change tracking cleanup](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#bkmk_changetracking). <!--SCCMDocs-pr issue 3023-->  
 
-<!-- - **SQL Native Client version**: This prerequisite check is updated for versions of SQL Native Client that support TLS 1.2. The minimum version is 11.4.7001.0. For more information, see [SQL Native Client version](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client). <!--SCCMDocs-pr issue 3094->  
- -->
+- **SQL Native Client version**: This prerequisite check is updated for versions of SQL Native Client that support TLS 1.2. The minimum version is [SQL 2012 SP4](https://www.microsoft.com/download/details.aspx?id=50402). For more information, see [SQL Native Client version](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client). <!--SCCMDocs-pr issue 3094-->  
+
 - **Site system on Windows cluster node**: The Configuration Manager setup process no longer blocks installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Always On requires this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using SQL Always On and a site server in passive mode. For more information, see [Windows Failover Cluster](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#windows-failover-cluster). <!--1359132-->  
 
 
@@ -223,7 +223,7 @@ A PowerShell profile is a script that runs when PowerShell starts. You can creat
 ### Task sequence support of Windows Autopilot for existing devices
 <!--1358333-->
 
-[Windows Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430), is now available with Windows 10 Insider Preview. This new feature allows you to reimage and provision a Windows 7 device for [Windows Autopilot user-driven mode](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) using a single, native Configuration Manager task sequence. 
+[Windows Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430), is now available with Windows 10, version 1809 or later. This new feature allows you to reimage and provision a Windows 7 device for [Windows Autopilot user-driven mode](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) using a single, native Configuration Manager task sequence. 
 
 <!--For more information, see []().--> 
 

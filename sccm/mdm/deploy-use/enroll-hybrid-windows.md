@@ -20,20 +20,20 @@ This topic tells IT admins how they can enable their users to bring Windows PCs 
 ## Enable Windows device management
 To enable Windows device management for either PCs or mobile devices, use the following steps:
 
-1.  Before you set up enrollment for any platform, complete the prerequisites and procedures in [Setup hybrid MDM](setup-hybrid-mdm.md).  
-2.  In the Configuration Manager console in the **Administration** workspace, go to **Overview** > **Cloud Services** > **Microsoft Intune Subscriptions**.  
-3.  In the ribbon, click **Configure Platforms**, and then select the Windows platform:
-    - **Windows** for Windows PCs and laptops, then perform the following steps:
-      1. In the **General** tab, click the **Enable Windows enrollment** checkbox.
-      2. If you use a certificate to code-sign and deploy the Company Portal app, browse to the **Code-signing certificate**. Device users can also install the Company Portal app from the Microsoft Store or you can deploy the app from the Microsoft Store for Business without code-signing.
-      3. You can also configure [Windows Hello for Business settings](windows-hello-for-business-settings.md).
-    - **Windows Phone** for Windows phones and tablets, then perform the following steps:
-      1. In the **General** tab, click the **Windows Phone 8.1 and Windows 10 Mobile** checkbox. Windows Phone 8.0 is no longer supported.
-      2. If your organization needs to sideload company apps, you can upload the required token or file. For more information about sideloading apps, see [Create Windows apps](https://docs.microsoft.com/sccm/apps/get-started/creating-windows-applications).
+1. Before you set up enrollment for any platform, complete the prerequisites and procedures in [Setup hybrid MDM](setup-hybrid-mdm.md).  
+2. In the Configuration Manager console in the **Administration** workspace, go to **Overview** > **Cloud Services** > **Microsoft Intune Subscriptions**.  
+3. In the ribbon, click **Configure Platforms**, and then select the Windows platform:
+   - **Windows** for Windows PCs and laptops, then perform the following steps:
+     1. In the **General** tab, click the **Enable Windows enrollment** checkbox.
+     2. If you use a certificate to code-sign and deploy the Company Portal app, browse to the **Code-signing certificate**. Device users can also install the Company Portal app from the Microsoft Store or you can deploy the app from the Microsoft Store for Business without code-signing.
+     3. You can also configure [Windows Hello for Business settings](windows-hello-for-business-settings.md).
+   - **Windows Phone** for Windows phones and tablets, then perform the following steps:
+     1. In the **General** tab, click the **Windows Phone 8.1 and Windows 10 Mobile** checkbox. Windows Phone 8.0 is no longer supported.
+     2. If your organization needs to sideload company apps, you can upload the required token or file. For more information about sideloading apps, see [Create Windows apps](https://docs.microsoft.com/sccm/apps/get-started/creating-windows-applications).
         - **Application enrollment token**
         - **.pfx file**
         - **None**
-      If you use a Symantec certificate, you can specify **Show an alert before Symantec certificates expire**.
+        If you use a Symantec certificate, you can specify **Show an alert before Symantec certificates expire**.
 4. Click **OK** to close the dialog box.  To simplify the enrollment process using the Company Portal, you should create a DNS alias for device enrollment. You can then tell users how to enroll their devices.
 
 ## Choose how to enroll Windows devices
@@ -62,15 +62,15 @@ Automatic enrollment lets users enroll either company-owned or personal Windows 
 
 1. Sign in to the [Azure management portal](https://portal.azure.com) (https://manage.windowsazure.com), and select **Azure Active Directory**.
 
-  ![Screenshot of the Azure portal](../media/auto-enroll-azure-main.png)
+   ![Screenshot of the Azure portal](../media/auto-enroll-azure-main.png)
 
 2. Select **Mobility (MDM and MAM)**.
 
-  ![Screenshot of the Azure portal](../media/auto-enroll-mdm.png)
+   ![Screenshot of the Azure portal](../media/auto-enroll-mdm.png)
 
 3. Select **Microsoft Intune**.
 
-  ![Screenshot of the Azure portal](../media/auto-enroll-intune.png)
+   ![Screenshot of the Azure portal](../media/auto-enroll-intune.png)
 
 4. Configure **MDM User scope**. Specify which users’ devices should be managed by Microsoft Intune. These users’ Windows 10 devices will be automatically enrolled for management with Microsoft Intune.
 
@@ -119,4 +119,4 @@ Changes to DNS records might take up to 72 hours to propagate. You cannot verify
  Once you're set up, you'll need to let your users know how to enroll their devices. See [What to tell users about enrolling their devices](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune) for guidance. You can direct users to [Enroll your Windows device in Intune](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-windows). This information applies to both Microsoft Intune and Configuration Manager-managed mobile devices.
 
 > [!div class="button"]
-[< Previous step](create-service-connection-point.md)  [Next step >](set-up-additional-management.md)
+> [< Previous step](create-service-connection-point.md)  [Next step >](set-up-additional-management.md)

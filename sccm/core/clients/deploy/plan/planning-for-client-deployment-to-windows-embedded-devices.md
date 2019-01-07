@@ -40,61 +40,61 @@ manager: dougeby
 
  Configuration Manager supports managing the following types of write filters:  
 
--   File-Based Write Filter (FBWF) -  For more information, see [File-Based Write Filter](http://go.microsoft.com/fwlink/?LinkID=204717).  
+- File-Based Write Filter (FBWF) -  For more information, see [File-Based Write Filter](http://go.microsoft.com/fwlink/?LinkID=204717).  
 
--   Enhanced Write Filter (EWF) RAM - For more information, see [Enhanced Write Filter](http://go.microsoft.com/fwlink/?LinkId=204718).  
+- Enhanced Write Filter (EWF) RAM - For more information, see [Enhanced Write Filter](http://go.microsoft.com/fwlink/?LinkId=204718).  
 
--   Unified Write Filter (UWF) - For more information, see [Unified Write Filter](http://go.microsoft.com/fwlink/?LinkId=309236).  
+- Unified Write Filter (UWF) - For more information, see [Unified Write Filter](http://go.microsoft.com/fwlink/?LinkId=309236).  
 
- Configuration Manager does not support write filter operations when the Windows Embedded device is in EWF RAM Reg mode.  
+  Configuration Manager does not support write filter operations when the Windows Embedded device is in EWF RAM Reg mode.  
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  If you have the choice, use File-Based Write Filters (FBWF) with Configuration Manager for increased efficiency and higher scalability.
->
+> 
 > **For devices that use FBWF only:** Configure the following exceptions to persist client state and inventory data between device restarts:  
->   
->  -   CCMINSTALLDIR\\*.sdf  
-> -   CCMINSTALLDIR\ServiceData  
-> -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
->   
->  Devices that run Windows Embedded 8.0 and later do not support exclusions that contain wildcard characters. On these devices, you must configure the following exclusions individually:  
->   
->  -   All files in CCMINSTALLDIR with the extension .sdf, typically:  
->   
->     -   UserAffinityStore.sdf  
->     -   InventoryStore.sdf  
->     -   CcmStore.sdf  
->     -   StateMessageStore.sdf  
->     -   CertEnrollmentStore.sdf  
-> -   CCMINSTALLDIR\ServiceData  
-> -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
->   
+> 
+> - CCMINSTALLDIR\\*.sdf  
+>   -   CCMINSTALLDIR\ServiceData  
+>   -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
+> 
+>   Devices that run Windows Embedded 8.0 and later do not support exclusions that contain wildcard characters. On these devices, you must configure the following exclusions individually:  
+> 
+> - All files in CCMINSTALLDIR with the extension .sdf, typically:  
+> 
+>   -   UserAffinityStore.sdf  
+>   -   InventoryStore.sdf  
+>   -   CcmStore.sdf  
+>   -   StateMessageStore.sdf  
+>   -   CertEnrollmentStore.sdf  
+>   -   CCMINSTALLDIR\ServiceData  
+>   -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
+> 
 > **For devices that use FBWF and UWF only:**
 > When clients in a workgroup use certificates for authentication to management points, you must also exclude the private key to ensure the client continues to communicate with the management point. On these devices, configure the following exceptions:  
->   
->  -   c:\Windows\System32\Microsoft\Protect  
-> -   c:\ProgramData\Microsoft\Crypto  
-> -   HKEY_LOCAL_MACHINE\Software\Microsoft\SystemCertificates\SMS\Certificates  
+> 
+> - c:\Windows\System32\Microsoft\Protect  
+>   -   c:\ProgramData\Microsoft\Crypto  
+>   -   HKEY_LOCAL_MACHINE\Software\Microsoft\SystemCertificates\SMS\Certificates  
 
  For an example scenario to deploy and manage write-filter-enabled Windows Embedded devices in Configuration Manager see [Example scenario for deploying and managing System Center Configuration Manager clients on Windows Embedded devices](../../../../core/clients/deploy/example-scenario-for-deploying-and-managing-clients-on-windows-embedded-devices.md).  
 
  For more information about how to build images for Windows Embedded devices and configure write filters, see your Windows Embedded documentation, or contact your OEM.  
 
-> [!NOTE]  
+> [!NOTE]
 >  When you select the applicable platforms for software deployments and configuration items, these display the Windows Embedded families rather than specific versions. Use the following list to map the specific version of Windows Embedded to the options in the list box:  
->   
->  -   **Embedded Operating Systems based on Windows XP (32-bit)** includes the following:  
->   
->      -   Windows XP Embedded  
->     -   Windows Embedded for Point of Service  
->     -   Windows Embedded Standard 2009  
->     -   Windows Embedded POSReady 2009  
-> -   **Embedded operating systems based on Windows 7 (32-bit)** includes the following:  
->   
->      -   Windows Embedded Standard 7 (32-bit)  
->     -   Windows Embedded POSReady 7 (32-bit)  
->     -   Windows ThinPC  
-> -   **Embedded operating systems based on Windows 7 (64-bit)** includes the following:  
->   
->      -   Windows Embedded Standard 7 (64-bit)  
->     -   Windows Embedded POSReady 7 (64-bit)
+> 
+> - **Embedded Operating Systems based on Windows XP (32-bit)** includes the following:  
+> 
+>   -   Windows XP Embedded  
+>   -   Windows Embedded for Point of Service  
+>   -   Windows Embedded Standard 2009  
+>   -   Windows Embedded POSReady 2009  
+>   -   **Embedded operating systems based on Windows 7 (32-bit)** includes the following:  
+> 
+>   -   Windows Embedded Standard 7 (32-bit)  
+>   -   Windows Embedded POSReady 7 (32-bit)  
+>   -   Windows ThinPC  
+>   -   **Embedded operating systems based on Windows 7 (64-bit)** includes the following:  
+> 
+>   -   Windows Embedded Standard 7 (64-bit)  
+>   -   Windows Embedded POSReady 7 (64-bit)

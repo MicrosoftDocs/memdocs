@@ -264,7 +264,7 @@ To improve performance, the Configuration Manager database indexes are frequentl
 -   **Primary site**: Not enabled    
 -   **Secondary site**: Not enabled  
 
-**Summarize Installed Software Data**: Use this task to summarize the data for installed software from multiple records into one general record. Data summarization can compress the amount of data that is stored in the Configuration Manager database. For more information, see [Introduction to software inventory in System Center Configuration Manager](../../clients/manage/inventory\introduction-to-software-inventory.md).  
+**Summarize Installed Software Data**: Use this task to summarize the data for installed software from multiple records into one general record. Data summarization can compress the amount of data that is stored in the Configuration Manager database. For more information, see [Introduction to software inventory in System Center Configuration Manager](../../clients/manage/inventory/introduction-to-software-inventory.md).  
 
 -   Central administration site: Not available    
 -   **Primary site**: Enabled    

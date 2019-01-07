@@ -67,113 +67,113 @@ Class SMS_TaskSequence_EnableBitLockerAction : SMS_TaskSequence_Action
 
  Value indicating whether a recovery password should be created in Active Directory. Possible values are:  
 
--   None  
+- None  
 
--   AD (default)  
+- AD (default)  
 
- `Description`  
- Data type: `String`  
+  `Description`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [AllowedLen("0-255")]  
+  Qualifiers: [AllowedLen("0-255")]  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- `Enabled`  
- Data type: `Boolean`  
+  `Enabled`  
+  Data type: `Boolean`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- `Mode`  
- Data type: `String`  
+  `Mode`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [CommandLineArg(3), RequiredIfNull("TargetDrive")]  
+  Qualifiers: [CommandLineArg(3), RequiredIfNull("TargetDrive")]  
 
- Key protector mode. Possible values are:  
+  Key protector mode. Possible values are:  
 
--   TPM  
+- TPM  
 
--   Key  
+- Key  
 
--   TPMAndKey  
+- TPMAndKey  
 
--   TPMAndPIN  
+- TPMAndPIN  
 
- The default value is `null`. This property is required if `TargetDrive` is set to `null`.  
+  The default value is `null`. This property is required if `TargetDrive` is set to `null`.  
 
- `Name`  
- Data type: `String`  
+  `Name`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [AllowedLen("1-100")]  
+  Qualifiers: [AllowedLen("1-100")]  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- `PIN`  
- Data type: `String`  
+  `PIN`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [VariableName(“OSDBitLockerPIN��?), Secret, AllowedLen("0-255")]  
+  Qualifiers: [VariableName(“OSDBitLockerPIN��?), Secret, AllowedLen("0-255")]  
 
- The PIN for BitLocker encryption. Only valid, if the `Mode` property is set to “TPMAndPIN��?.  
+  The PIN for BitLocker encryption. Only valid, if the `Mode` property is set to “TPMAndPIN��?.  
 
- This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
+  This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
 
- `StartupKeyDrive`  
- Data type: `String`  
+  `StartupKeyDrive`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [CommandLineArg(4)]  
+  Qualifiers: [CommandLineArg(4)]  
 
- Drive letter of removable USB drive on which to store key protectors. This property is ignored unless the `Mode` property is set to Key or TPMAndKey. Set this property to `null` (default) to use the first available USB drive.  
+  Drive letter of removable USB drive on which to store key protectors. This property is ignored unless the `Mode` property is set to Key or TPMAndKey. Set this property to `null` (default) to use the first available USB drive.  
 
- `SupportedEnvironment`  
- Data type: `String`  
+  `SupportedEnvironment`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [Not_Null:ToInstance]  
+  Qualifiers: [Not_Null:ToInstance]  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- The default value of this property for this task sequence action is FullOS.  
+  The default value of this property for this task sequence action is FullOS.  
 
- `TargetDrive`  
- Data type: `String`  
+  `TargetDrive`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [CommandLineArg(1)]  
+  Qualifiers: [CommandLineArg(1)]  
 
- Drive letter of the volume on which to enable the BitLocker encryption. Set this property to `null` (default) to use the current operating system volume.  
+  Drive letter of the volume on which to enable the BitLocker encryption. Set this property to `null` (default) to use the current operating system volume.  
 
- `Timeout`  
- Data type: `UInt32`  
+  `Timeout`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- `WaitForEncryption`  
- Data type: `Boolean`  
+  `WaitForEncryption`  
+  Data type: `Boolean`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [CommandLineArg(2), Not_Null]  
+  Qualifiers: [CommandLineArg(2), Not_Null]  
 
- `true` to wait for disk encryption to complete before continuing with the task sequence. Set this property to false (default) to continue the task sequence while encryption proceeds in the background.  
+  `true` to wait for disk encryption to complete before continuing with the task sequence. Set this property to false (default) to continue the task sequence while encryption proceeds in the background.  
 
 ## Remarks  
  Class qualifiers for this class include:  

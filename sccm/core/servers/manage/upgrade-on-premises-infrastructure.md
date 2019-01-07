@@ -50,7 +50,7 @@ To upgrade a server, use the upgrade procedures provided by the OS you're upgrad
 
 - [Upgrade and conversion options for Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths)  
 
-- [Upgrade Options for Windows Server 2012 R2](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416\(v=ws.11))   
+- [Upgrade Options for Windows Server 2012 R2](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11))   
 
 
 ### <a name="bkmk_2016-2019"></a> Upgrade to Windows Server 2016 or 2019
@@ -118,6 +118,12 @@ After you upgrade the site server, or an instance of the SMS Provider, you can't
 5. Save the permissions to restore access for the Configuration Manager console.  
 
 
+#### Known issue for remote site systems
+After you upgrade a server that hosts a site system role, the value `Software\Microsoft\SMS` may be missing from the following registry key: `HKLM\SYSTEM\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths` 
+
+If this value is missing after you upgrade Windows on the server, manually add it. Otherwise site system roles can have issues uploading files to the site server inboxes.
+
+
 ### <a name="bkmk_2012r2"></a> Upgrade to Windows Server 2012 R2
 
 When you upgrade from either Windows Server 2008 R2 or Windows Server 2012 to Windows Server 2012 R2, the following conditions apply:
@@ -125,7 +131,7 @@ When you upgrade from either Windows Server 2008 R2 or Windows Server 2012 to Wi
 #### Before upgrade  
 - On Windows Server 2012: Remove the WSUS role from the server if it's installed. You may keep the SUSDB and reattach it once WSUS is reinstalled.  
 
-- On Windows Server 2008 R2: Before you upgrade to Windows Server 2012 R2, you must uninstall WSUS 3.2 from the server. You may keep the SUSDB and reattach it once WSUS is reinstalled. For more information, see [Windows Server Update Services Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345\(v=ws.11)#new-and-changed-functionality).  
+- On Windows Server 2008 R2: Before you upgrade to Windows Server 2012 R2, you must uninstall WSUS 3.2 from the server. You may keep the SUSDB and reattach it once WSUS is reinstalled. For more information, see [Windows Server Update Services Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality).  
 
 #### After upgrade  
 - The upgrade process disables the Windows Deployment Services. Make sure this service is started and running for the following site system roles:  

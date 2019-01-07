@@ -162,38 +162,38 @@ Class SMS_TaskSequence_ApplyWindowsSettingsAction : SMS_TaskSequence_Action
 
  The server licensing mode. Possible values for Windows Server 2003 are:  
 
--   PerSeat  
+- PerSeat  
 
--   PerServer  
+- PerServer  
 
- `SupportedEnvironment`  
- Data type: `String`  
+  `SupportedEnvironment`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [Not_Null:ToInstance]  
+  Qualifiers: [Not_Null:ToInstance]  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- The default value of this property for this task sequence action is WinPE.  
+  The default value of this property for this task sequence action is WinPE.  
 
- `Timeout`  
- Data type: `UInt32`  
+  `Timeout`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- `TimeZone`  
- Data type: `String`  
+  `TimeZone`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [Not_Null]  
+  Qualifiers: [Not_Null]  
 
- Time zone for the new operating system. This property must be set to an English language string. A non-English localized string causes the time zone setting to fail and default to Universal Coordinated Time (UTC).  
+  Time zone for the new operating system. This property must be set to an English language string. A non-English localized string causes the time zone setting to fail and default to Universal Coordinated Time (UTC).  
 
 ## Remarks  
  Class qualifiers for this class include:  

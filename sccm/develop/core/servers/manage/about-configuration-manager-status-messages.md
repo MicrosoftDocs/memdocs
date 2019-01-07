@@ -28,13 +28,13 @@ In System Center Configuration Manager, status messages are the universal means 
 ### User-defined Generic Status Messages  
  Configuration Manager provides three types of user-defined generic status messages.  
 
--   Information  
+- Information  
 
--   Warning  
+- Warning  
 
--   Error  
+- Error  
 
- Along with the message type, insertion strings and attributes can be supplied. The text that is provided as the insertion string, when creating the status message, is the text seen in the user interface. This makes using generic messages simple, but it does not allow for localization. For more information, see [How to Read User-Defined Status Messages](../../../../develop/core/servers/manage/how-to-read-user-defined-status-messages.md).  
+  Along with the message type, insertion strings and attributes can be supplied. The text that is provided as the insertion string, when creating the status message, is the text seen in the user interface. This makes using generic messages simple, but it does not allow for localization. For more information, see [How to Read User-Defined Status Messages](../../../../develop/core/servers/manage/how-to-read-user-defined-status-messages.md).  
 
 ## Creating Status Messages on the Client  
  You can create events on client computers in the following ways:  

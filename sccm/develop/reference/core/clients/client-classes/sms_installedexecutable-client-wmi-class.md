@@ -204,17 +204,17 @@ Class SMS_InstalledExecutable
 
  This class identifies executable files associated with a software installation to:  
 
--   Confirm that the application is installed by looking at Configuration Manager file inventory.  
+- Confirm that the application is installed by looking at Configuration Manager file inventory.  
 
--   Indicate what metering rules, based on the executable files, have to be set to meter the application.  
+- Indicate what metering rules, based on the executable files, have to be set to meter the application.  
 
--   Perform an application impact analysis.  
+- Perform an application impact analysis.  
 
- Because the Windows Installer (.msi) file contains a record of the installed executable files, it can be used as the source for the mapping between installed applications and executable files.  
+  Because the Windows Installer (.msi) file contains a record of the installed executable files, it can be used as the source for the mapping between installed applications and executable files.  
 
- This class retrieves data from two sources. For each [SMS_InstalledSoftware Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_installedsoftware-client-wmi-class.md) object, the class identifies the .msi package by looking in the `LocalPackage` property, and queries the .msi database for all .exe and .com files.  
+  This class retrieves data from two sources. For each [SMS_InstalledSoftware Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_installedsoftware-client-wmi-class.md) object, the class identifies the .msi package by looking in the `LocalPackage` property, and queries the .msi database for all .exe and .com files.  
 
- For any [SMS_InstalledSoftware Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_installedsoftware-client-wmi-class.md) object that has the `LocalPackage` property set to `null`, the `SMS_InstalledExecutable` class inventories all executable files in the directory that are identified by the `InstallLocation` property. Executable files that are installed outside of the main installation directory are not inventoried.  
+  For any [SMS_InstalledSoftware Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_installedsoftware-client-wmi-class.md) object that has the `LocalPackage` property set to `null`, the `SMS_InstalledExecutable` class inventories all executable files in the directory that are identified by the `InstallLocation` property. Executable files that are installed outside of the main installation directory are not inventoried.  
 
 > [!NOTE]
 >  This class does not inventory executable files located in the %*windir*% and %*systemroot*% directories.  

@@ -33,75 +33,75 @@ robots: noindex,nofollow
 
  **If you comply with these license terms, you have the rights below.**  
 
-1.  **INSTALLATION AND USE RIGHTS.** You may install and use any number of copies of the software on your devices.  
+1. **INSTALLATION AND USE RIGHTS.** You may install and use any number of copies of the software on your devices.  
 
-2.  **ADDITIONAL LICENSING REQUIREMENTS AND/OR USE RIGHTS.**  
+2. **ADDITIONAL LICENSING REQUIREMENTS AND/OR USE RIGHTS.**  
 
-    1.  **Distributable Code.**  
+   1.  **Distributable Code.**  
 
-        1.  **Right to Use and Distribute.  If you comply with the terms below:**  
+       1.  **Right to Use and Distribute.  If you comply with the terms below:**  
 
-            -   You may copy and distribute the object code form of the software ("**Distributable Code**") in programs you develop;  
+           -   You may copy and distribute the object code form of the software ("**Distributable Code**") in programs you develop;  
 
-            -   You may combine the object code form of the Distributable Code with your programs to develop a unified web solution and permit others via online methods to access and use that unified web solution, provided that the Distributable Code is only used as part of and in conjunction with your programs; and  
+           -   You may combine the object code form of the Distributable Code with your programs to develop a unified web solution and permit others via online methods to access and use that unified web solution, provided that the Distributable Code is only used as part of and in conjunction with your programs; and  
 
-            -   You may permit distributors of your programs to copy and distribute the Distributable Code as part of those programs.  
+           -   You may permit distributors of your programs to copy and distribute the Distributable Code as part of those programs.  
 
-        2.  **Distribution Requirements. For any Distributable Code you distribute, you must**  
+       2.  **Distribution Requirements. For any Distributable Code you distribute, you must**  
 
-            -   add significant primary functionality to it in your programs;  
+           -   add significant primary functionality to it in your programs;  
 
-            -   for any Distributable Code having a filename extension of .lib, distribute only the results of running such Distributable Code through a linker with your program;  
+           -   for any Distributable Code having a filename extension of .lib, distribute only the results of running such Distributable Code through a linker with your program;  
 
-            -   distribute Distributable Code included in a setup program only as part of that setup program without modification;  
+           -   distribute Distributable Code included in a setup program only as part of that setup program without modification;  
 
-            -   require distributors and external end users to agree to terms that protect it at least as much as this agreement;  
+           -   require distributors and external end users to agree to terms that protect it at least as much as this agreement;  
 
-            -   display your valid copyright notice on your programs; and  
+           -   display your valid copyright notice on your programs; and  
 
-            -   indemnify, defend, and hold harmless Microsoft from any claims, including attorneys' fees, related to the distribution or use of your programs.  
+           -   indemnify, defend, and hold harmless Microsoft from any claims, including attorneys' fees, related to the distribution or use of your programs.  
 
-        3.  **Distribution Restrictions. You may not**  
+       3.  **Distribution Restrictions. You may not**  
 
-            -   alter any copyright, trademark or patent notice in the Distributable Code;  
+           -   alter any copyright, trademark or patent notice in the Distributable Code;  
 
-            -   use Microsoft's trademarks in your programs' names or in a way that suggests your programs come from or are endorsed by Microsoft;  
+           -   use Microsoft's trademarks in your programs' names or in a way that suggests your programs come from or are endorsed by Microsoft;  
 
-            -   distribute Distributable Code to run on a platform other than the Windows platform;  
+           -   distribute Distributable Code to run on a platform other than the Windows platform;  
 
-            -   include Distributable Code in malicious, deceptive or unlawful programs; or  
+           -   include Distributable Code in malicious, deceptive or unlawful programs; or  
 
-            -   modify or distribute the source code of any Distributable Code so that any part of it becomes subject to an Excluded License. An Excluded License is one that requires, as a condition of use, modification or distribution, that  
+           -   modify or distribute the source code of any Distributable Code so that any part of it becomes subject to an Excluded License. An Excluded License is one that requires, as a condition of use, modification or distribution, that  
 
-                -   the code be disclosed or distributed in source code form; or  
+               -   the code be disclosed or distributed in source code form; or  
 
-                -   others have the right to modify it.  
+               -   others have the right to modify it.  
 
-3.  **SCOPE OF LICENSE.** The software is licensed, not sold. Unless applicable law gives you more rights, Microsoft reserves all other rights not expressly granted under this agreement, whether by implication, estoppel or otherwise. In doing so, you must comply with any technical limitations in the software that only allow you to use it in certain ways. You may not  
+3. **SCOPE OF LICENSE.** The software is licensed, not sold. Unless applicable law gives you more rights, Microsoft reserves all other rights not expressly granted under this agreement, whether by implication, estoppel or otherwise. In doing so, you must comply with any technical limitations in the software that only allow you to use it in certain ways. You may not  
 
-    -   disclose the results of any benchmark tests of the software to any third party without Microsoft's prior written approval;  
+   -   disclose the results of any benchmark tests of the software to any third party without Microsoft's prior written approval;  
 
-    -   work around any technical limitations in the software;  
+   -   work around any technical limitations in the software;  
 
-    -   reverse engineer, decompile or disassemble the software, except and only to the extent that applicable law expressly permits, despite this limitation;  
+   -   reverse engineer, decompile or disassemble the software, except and only to the extent that applicable law expressly permits, despite this limitation;  
 
-    -   make more copies of the software than specified in this agreement or allowed by applicable law, despite this limitation;  
+   -   make more copies of the software than specified in this agreement or allowed by applicable law, despite this limitation;  
 
-    -   publish the software for others to copy;  
+   -   publish the software for others to copy;  
 
-    -   rent, lease or lend the software; or  
+   -   rent, lease or lend the software; or  
 
-    -   use the software for commercial software hosting services.  
+   -   use the software for commercial software hosting services.  
 
-4.  **THIRD PARTY NOTICES.** The software may include third party code, that Microsoft, not the third party, licenses to you under the terms set forth in this agreement. Notices, if any, for any third party code are included for your information only. Additionally, any third party scripts, linked to, called or referenced from this software, are licensed to you by the third parties that own such code, not by Microsoft, see ASP.NET Ajax CDN Terms of Use: [http://www.asp.net/ajaxlibrary/CDN.ashx](http://www.asp.net/ajaxlibrary/CDN.ashx).  
+4. **THIRD PARTY NOTICES.** The software may include third party code, that Microsoft, not the third party, licenses to you under the terms set forth in this agreement. Notices, if any, for any third party code are included for your information only. Additionally, any third party scripts, linked to, called or referenced from this software, are licensed to you by the third parties that own such code, not by Microsoft, see ASP.NET Ajax CDN Terms of Use: [http://www.asp.net/ajaxlibrary/CDN.ashx](http://www.asp.net/ajaxlibrary/CDN.ashx).  
 
-5.  **BACKUP COPY.** You may make one backup copy of the software. You may use it only to reinstall the software.  
+5. **BACKUP COPY.** You may make one backup copy of the software. You may use it only to reinstall the software.  
 
-6.  **DOCUMENTATION.** Any person that has valid access to your computer or internal network may copy and use the documentation for your internal, reference purposes.  
+6. **DOCUMENTATION.** Any person that has valid access to your computer or internal network may copy and use the documentation for your internal, reference purposes.  
 
-7.  **TRANSFER TO A THIRD PARTY.** The first user of the software may transfer it and this agreement directly to a third party. Before the transfer, that party must agree that this agreement applies to the transfer and use of the software. The first user must uninstall the software before transferring it separately from the device. The first user may not retain any copies.  
+7. **TRANSFER TO A THIRD PARTY.** The first user of the software may transfer it and this agreement directly to a third party. Before the transfer, that party must agree that this agreement applies to the transfer and use of the software. The first user must uninstall the software before transferring it separately from the device. The first user may not retain any copies.  
 
-8.  **EXPORT RESTRICTIONS.** The software is subject to United States export laws and regulations. You must comply with all domestic and international export laws and regulations that apply to the software. These laws include restrictions on destinations, end users and end use. For additional information, see [www.microsoft.com/exporting](http://www.microsoft.com/exporting).  
+8. **EXPORT RESTRICTIONS.** The software is subject to United States export laws and regulations. You must comply with all domestic and international export laws and regulations that apply to the software. These laws include restrictions on destinations, end users and end use. For additional information, see [www.microsoft.com/exporting](http://www.microsoft.com/exporting).  
 
 9. **SUPPORT SERVICES.** Because this software is "as is," we may not provide support services for it.  
 
@@ -131,4 +131,4 @@ robots: noindex,nofollow
 
     -   claims for breach of contract, breach of warranty, guarantee or condition, strict liability, negligence, or other tort to the extent permitted by applicable law.  
 
- It also applies even if Microsoft knew or should have known about the possibility of the damages. The above limitation or exclusion may not apply to you because your country may not allow the exclusion or limitation of incidental, consequential or other damages.
+    It also applies even if Microsoft knew or should have known about the possibility of the damages. The above limitation or exclusion may not apply to you because your country may not allow the exclusion or limitation of incidental, consequential or other damages.

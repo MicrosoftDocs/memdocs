@@ -335,7 +335,7 @@ For the procedure to install the Configuration Manager client on a modern Window
 
 2. In the Intune Software Publisher, enter command-line parameters. For example, use the following command line with a traditional client on the intranet:  
 
-  `CCMSETUPCMD="/MP:<FQDN of management point> SMSMP=<FQDN of management point> SMSSITECODE=<Your site code> DNSSUFFIX=<DNS Suffix of management point>"`  
+   `CCMSETUPCMD="/MP:<FQDN of management point> SMSMP=<FQDN of management point> SMSSITECODE=<Your site code> DNSSUFFIX=<DNS Suffix of management point>"`  
 
    > [!Note]  
    > For an example command line to use with a modern Windows 10 client using Azure AD authentication, see [Prepare Windows 10 devices for co-management](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client).  

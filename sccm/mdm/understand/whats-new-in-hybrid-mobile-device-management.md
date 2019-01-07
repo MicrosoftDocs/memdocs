@@ -2,7 +2,7 @@
 title: What's new in hybrid MDM
 titleSuffix: Configuration Manager
 description: Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune.
-ms.date: 12/05/2018
+ms.date: 12/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -39,6 +39,26 @@ Each section of this article lists hybrid features under three different categor
 |**New in Microsoft Intune** | In general, all the features listed under this category should work with all Configuration Manager releases. This including System Center 2012 R2 Configuration Manager releases, since these features only require the Intune service and don't require additional functionality in Configuration Manager.|
 |**New in Configuration Manager Technical Preview**| All the features listed under this category only work with the specified technical preview branch. To try out these features, you must install the technical preview version specified in the feature description. For more information, see [Technical preview for Configuration Manager](/sccm/core/get-started/technical-preview).|
 |**New in Configuration Manager (current branch)**| All the features listed under this category only work with the specified version of Configuration Manager (current branch). If you're using an older version of Configuration Manager for your hybrid deployment, upgrade to the Configuration Manager (current branch)  version specified in the feature description. For more information, see [Upgrade to Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager).|
+
+
+
+## December 2018
+
+### New in Microsoft Intune
+
+#### Microsoft Auto Update version 4.5.0 required for macOS devices
+<!--3503442-->
+To continue receiving updates for the Company Portal and other Office applications, macOS devices managed by Intune must upgrade to Microsoft Auto Update 4.5.0. Users might already have this version for their Office apps.
+
+#### The Intune App SDK will support 256-bit encryption keys 
+<!--1832174-->
+The Intune App SDK for Android now uses 256-bit encryption keys when encryption is enabled by App Protection Policies. The SDK will continue to provide support of 128-bit keys for compatibility with content and apps that use older SDK versions.
+
+#### Intune requires macOS 10.12 or later 
+<!--2827778-->
+Intune now requires macOS version 10.12 or later. Devices using prior macOS versions can't use the Company Portal to enroll into Intune. To receive support and new features, users must upgrade their device to macOS 10.12 or later and upgrade the Company Portal to the latest version.
+
+For more information, see [Plan for Change: Intune supports macOS 10.12 and higher in December](#plan-for-change-intune-supports-macos-1012-and-higher-in-december).
 
 
 
@@ -510,7 +530,7 @@ Using Azure Active Directory (Azure AD), you can now restrict access to web site
     <!-- 1132468 -->     
 
 - **Inform end users what device information can be seen for iOS**   
-    We added  **Ownership Type** to the Device Details screen on the Company Portal app for iOS. This information allows users to find out more about privacy directly from the Intune end-user docs. They can also locate this information on the About screen. 
+    We added **Ownership Type** to the Device Details screen on the Company Portal app for iOS. This information allows users to find out more about privacy directly from the Intune end-user docs. They can also locate this information on the About screen. 
     <!--739894-->    
 
 - **Easier-to-understand phrasing for the Company Portal app for Android**   
@@ -571,6 +591,9 @@ For more information, see [Enroll your macOS device in Intune with the Company P
 
 ### Plan for Change: New Intune support experience for Premier customers 
 <!--2828727-->
+
+12/4/2018 update: We're trying to make this process better for you. Support request creation in MPO won't be disabled on December 3. We'll let you know through the Message Center and update this post soon to share timelines for this change.
+
 As a Microsoft Premier customer, you can currently use the [Microsoft Premier Online (MPO) portal](https://premier.microsoft.com) and [Intune on Azure](https://portal.azure.com) to create support requests for Intune. Starting on December 3, 2018, to continue enhancing the Premier support experience, you will be able to create support requests only in Intune on Azure.
 
 #### How does this affect me?

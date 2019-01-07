@@ -16,10 +16,10 @@ ms.author: aaroncz
 
 > [!IMPORTANT]
 >  Clients must have access to Microsoft Update on the Internet to be able use this method to download definition updates.
-
-
+> 
+> 
 > [!div class="button"]
-[Next step >](endpoint-antimalware-policies.md)
-
+> [Next step >](endpoint-antimalware-policies.md)
+> 
 > [!div class="button"]
-[Back >](endpoint-configure-alerts.md)
+> [Back >](endpoint-configure-alerts.md)

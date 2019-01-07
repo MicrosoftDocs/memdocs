@@ -37,80 +37,80 @@ These scenarios give you an introduction to using System Center Configuration Ma
 ### Scenario: Restrict access to the app store on all Windows PCs  
  In this scenario, you are the IT admin for a company that deals with highly sensitive information. Because of this, you restrict the apps that users can install. You want to stop users of all Windows 10 PCs from downloading apps from the Windows Store, so you take the following actions.  
 
-1.  On the **General** page of the Create Configuration Item wizard, select the **Windows 8.1 and Windows 10** configuration item type, then click **Next**.  
+1. On the **General** page of the Create Configuration Item wizard, select the **Windows 8.1 and Windows 10** configuration item type, then click **Next**.  
 
-2.  On the **Supported Platforms** page, select all of the Windows 10 platforms.  
+2. On the **Supported Platforms** page, select all of the Windows 10 platforms.  
 
-3.  On the **Device Settings** page, select **Store**, then click **Next**.  
+3. On the **Device Settings** page, select **Store**, then click **Next**.  
 
-4.  On the **Store** page, select **Prohibited** as the value for **Application store**.  
+4. On the **Store** page, select **Prohibited** as the value for **Application store**.  
 
-5.  Select **Remediate noncompliant settings** to ensure the change is applied to all PCs.  
+5. Select **Remediate noncompliant settings** to ensure the change is applied to all PCs.  
 
-6.  Complete the wizard to create the configuration item.  
+6. Complete the wizard to create the configuration item.  
 
- You can now use the information in the [Common tasks for creating and deploying configuration baselines](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) topic to help you deploy the configuration you have created to devices.  
+   You can now use the information in the [Common tasks for creating and deploying configuration baselines](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) topic to help you deploy the configuration you have created to devices.  
 
 ## Scenarios for Windows Phone devices managed with Intune  
 
 ### Scenario: Disable the use of screen capture on a Windows Phone  
  In this scenario, you use Windows Phone 8.1 devices in your company. These devices run a sales app that contains sensitive information. To protect your company, you want to disable the use of screen capture on the device which could potentially be used to transmit sensitive information outside of your company.  
 
-1.  On the **General** page of the Create Configuration Item wizard, select the **Windows Phone** configuration item type, then click **Next**.  
+1. On the **General** page of the Create Configuration Item wizard, select the **Windows Phone** configuration item type, then click **Next**.  
 
-2.  On the **Supported Platforms** page, select **All Windows Phone 8.1** platforms.  
+2. On the **Supported Platforms** page, select **All Windows Phone 8.1** platforms.  
 
-3.  On the **Device Settings** page, select **Device**, then click **Next**.  
+3. On the **Device Settings** page, select **Device**, then click **Next**.  
 
-4.  On the **Device** page, select **Disabled** as the value for **Screen capture**.  
+4. On the **Device** page, select **Disabled** as the value for **Screen capture**.  
 
-5.  Select **Remediate noncompliant settings** to ensure the change is applied to all Windows Phone 8.1 devices.  
+5. Select **Remediate noncompliant settings** to ensure the change is applied to all Windows Phone 8.1 devices.  
 
-6.  Complete the wizard to create the configuration item.  
+6. Complete the wizard to create the configuration item.  
 
- You can now use the information in the [Common tasks for creating and deploying configuration baselines with System Center Configuration Manager](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) topic to help you deploy the configuration you have created to devices.  
+   You can now use the information in the [Common tasks for creating and deploying configuration baselines with System Center Configuration Manager](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) topic to help you deploy the configuration you have created to devices.  
 
 ## Scenarios for iOS and Mac OS X devices managed with Intune  
 
 ### Scenario: Disable the camera on iOS devices  
  In this scenario, your company produces blueprints for new product designs. These contain sensitive information that must not be leaked. As your company issues iPhones or iPads to all employees, you want to disable the use of the camera on these devices to prevent them being used to photograph the blueprints.  
 
-1.  On the **General** page of the Create Configuration Item wizard, select the **iOS and Mac OS X** configuration item type, then click **Next**.  
+1. On the **General** page of the Create Configuration Item wizard, select the **iOS and Mac OS X** configuration item type, then click **Next**.  
 
-2.  On the **Supported Platforms** page, select all iPhone and all iPad device platforms.  
+2. On the **Supported Platforms** page, select all iPhone and all iPad device platforms.  
 
-3.  On the **Device Settings** page, select **Security**, then click **Next**.  
+3. On the **Device Settings** page, select **Security**, then click **Next**.  
 
-4.  On the **Security** page, select **Prohibited** as the value for **Camera**.  
+4. On the **Security** page, select **Prohibited** as the value for **Camera**.  
 
-5.  Select **Remediate noncompliant settings** to ensure the change is applied to all iOS devices.  
+5. Select **Remediate noncompliant settings** to ensure the change is applied to all iOS devices.  
 
-6.  Complete the wizard to create the configuration item.  
+6. Complete the wizard to create the configuration item.  
 
- You can now use the information in the [Common tasks for creating and deploying configuration baselines with System Center Configuration Manager](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) topic to help you deploy the configuration you have created to devices.  
+   You can now use the information in the [Common tasks for creating and deploying configuration baselines with System Center Configuration Manager](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) topic to help you deploy the configuration you have created to devices.  
 
 ## Scenarios for Android and Samsung KNOX Standard devices managed with Intune  
 
 ### Scenario: Require a password on all Android 5 devices  
  In this scenario, you'll create a configuration item for Android 5 devices only that requires users to configure a password of at least 6 characters on their devices. Additionally, if a user enters an incorrect password 5 times, then the device will be wiped.  
 
-1.  On the **General** page of the Create Configuration Item wizard, select the **Android and Samsung KNOX** configuration item type, then click **Next**.  
+1. On the **General** page of the Create Configuration Item wizard, select the **Android and Samsung KNOX** configuration item type, then click **Next**.  
 
-2.  On the **Supported Platforms** page, select only **Android 5** (to ensure that the settings only get applied to that platform).  
+2. On the **Supported Platforms** page, select only **Android 5** (to ensure that the settings only get applied to that platform).  
 
-3.  On the **Device Settings** page, select **Password**, then click **Next**.  
+3. On the **Device Settings** page, select **Password**, then click **Next**.  
 
-4.  On the **Password** page, configure the following settings:  
+4. On the **Password** page, configure the following settings:  
 
-    -   **Require password settings on devices** > **Required**  
+   -   **Require password settings on devices** > **Required**  
 
-    -   **Minimum password length (characters)** > **6**  
+   -   **Minimum password length (characters)** > **6**  
 
-    -   **Number of failed logon attempts before device is wiped** > **5**  
+   -   **Number of failed logon attempts before device is wiped** > **5**  
 
-5.  Complete the wizard to create the configuration item.  
+5. Complete the wizard to create the configuration item.  
 
- You can now use the information in the [Common tasks for creating and deploying configuration baselines](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) topic to help you deploy the configuration you have created to devices.  
+   You can now use the information in the [Common tasks for creating and deploying configuration baselines](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) topic to help you deploy the configuration you have created to devices.  
 
 ## Configuration items for devices managed with Intune
 

@@ -645,17 +645,17 @@ Class SMS_TaskSequencePackage : SMS_PackageBaseclass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Secured  
+- Secured  
 
--   Icon("Package.ico")  
+- Icon("Package.ico")  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- To get started using this class, see How to Create an Operating System Deployment Task Sequence Package.  
+  To get started using this class, see How to Create an Operating System Deployment Task Sequence Package.  
 
- You create an operating system deployment task sequence package by creating an instance of the `SMS_TaskSequencePackage` class to hold a task sequence. The task sequence itself is created by using the Operating System Deployment Task Sequence Object Model, and it is associated with the task sequence package by using the [SetSequence Method in Class SMS_TaskSequencePackage](../../../develop/reference/osd/setsequence-method-in-class-sms_tasksequencepackage.md) method. The package is advertised to clients who can then run the task sequence. For more information, see How to Create an Operating System Deployment Task Sequence Package.  
+  You create an operating system deployment task sequence package by creating an instance of the `SMS_TaskSequencePackage` class to hold a task sequence. The task sequence itself is created by using the Operating System Deployment Task Sequence Object Model, and it is associated with the task sequence package by using the [SetSequence Method in Class SMS_TaskSequencePackage](../../../develop/reference/osd/setsequence-method-in-class-sms_tasksequencepackage.md) method. The package is advertised to clients who can then run the task sequence. For more information, see How to Create an Operating System Deployment Task Sequence Package.  
 
- For more information about the task sequence WMI objects, see About Operating System Deployment Task Sequences.  
+  For more information about the task sequence WMI objects, see About Operating System Deployment Task Sequences.  
 
 ## Requirements  
 

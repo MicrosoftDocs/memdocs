@@ -116,27 +116,27 @@ Be aware of the following changes to software updates:
 
 Be aware of the following changes to compliance settings:
 
--   System Center Configuration Manager improves the workflow for creating configuration items. Now, when you create a configuration item, and select supported platforms, only the settings relevant to that platform are available. See [Get started with compliance settings in System Center Configuration Manager](../../../compliance/get-started/get-started-with-compliance-settings.md).  
+- System Center Configuration Manager improves the workflow for creating configuration items. Now, when you create a configuration item, and select supported platforms, only the settings relevant to that platform are available. See [Get started with compliance settings in System Center Configuration Manager](../../../compliance/get-started/get-started-with-compliance-settings.md).  
 
--   The **Create Configuration Item** wizard now makes it easier to choose the configuration item type you want to create. Additionally, new and updated configuration items are available for:  
+- The **Create Configuration Item** wizard now makes it easier to choose the configuration item type you want to create. Additionally, new and updated configuration items are available for:  
 
-    -   Windows 10 devices managed with the Configuration Manager client.  
+  -   Windows 10 devices managed with the Configuration Manager client.  
 
-    -   Mac OS X devices managed with the Configuration Manager client.  
+  -   Mac OS X devices managed with the Configuration Manager client.  
 
-    -   Windows desktop and server computers managed with the Configuration Manager client.  
+  -   Windows desktop and server computers managed with the Configuration Manager client.  
 
-    -   Windows 8.1 and Windows 10 devices managed without the Configuration Manager client.  
+  -   Windows 8.1 and Windows 10 devices managed without the Configuration Manager client.  
 
-    -   Windows Phone devices managed without the Configuration Manager client.  
+  -   Windows Phone devices managed without the Configuration Manager client.  
 
-    -   iOS and Mac OS X devices managed without the Configuration Manager client.  
+  -   iOS and Mac OS X devices managed without the Configuration Manager client.  
 
-    -   Android and Samsung KNOX Standard devices managed without the Configuration Manager client.  
+  -   Android and Samsung KNOX Standard devices managed without the Configuration Manager client.  
 
- See [How to create configuration items in System Center Configuration Manager](../../../compliance/deploy-use/create-configuration-items.md).  
+  See [How to create configuration items in System Center Configuration Manager](../../../compliance/deploy-use/create-configuration-items.md).  
 
--   Support for managing settings on Mac OS X computers that are either enrolled with Microsoft Intune or managed using the Configuration Manager client. See [How to create configuration items for iOS and Mac OS X devices managed without the System Center Configuration Manager client](../../../compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md).  
+- Support for managing settings on Mac OS X computers that are either enrolled with Microsoft Intune or managed using the Configuration Manager client. See [How to create configuration items for iOS and Mac OS X devices managed without the System Center Configuration Manager client](../../../compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md).  
 
 ## Protect data and site infrastructure  
 System Center Configuration Manager lets you integrate with Windows Hello for Business (formerly Microsoft Passport for Work). Windows Hello for Business is an alternative sign-in method that uses Active Directory, or an Azure Active Directory account, to replace a password, smart card, or virtual smart card on devices running Windows 10. See [Windows Hello for Business settings in System Center Configuration Manager](../../../protect/deploy-use/windows-hello-for-business-settings.md).

@@ -471,13 +471,13 @@ Class SMS_DriverPackage : SMS_PackageBaseclass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Secured  
+- Secured  
 
--   Icon("Package.ico")  
+- Icon("Package.ico")  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- Your application uses this class to create a driver package that contains the content for one or more device drivers. When the application adds a new driver, the content is added to the driver package share. The driver package can then be copied to a distribution point so that computers can install the drivers. For more information, see How to Create a Driver Package for a Windows Driver in Configuration Manager.  
+  Your application uses this class to create a driver package that contains the content for one or more device drivers. When the application adds a new driver, the content is added to the driver package share. The driver package can then be copied to a distribution point so that computers can install the drivers. For more information, see How to Create a Driver Package for a Windows Driver in Configuration Manager.  
 
 ## Requirements  
 

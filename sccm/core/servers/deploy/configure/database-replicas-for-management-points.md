@@ -134,74 +134,74 @@ Use the following procedure as an example of how to configure a database replica
 
 ##### To configure the database replica server  
 
-1.  On the database replica server, set the SQL Server Agent to automatic startup.  
+1. On the database replica server, set the SQL Server Agent to automatic startup.  
 
-2.  On the database replica server, use **SQL Server Management Studio** to connect to the local server, browse to the **Replication** folder, click Local Subscriptions, and select **New Subscriptions** to start the **New Subscription Wizard**:  
+2. On the database replica server, use **SQL Server Management Studio** to connect to the local server, browse to the **Replication** folder, click Local Subscriptions, and select **New Subscriptions** to start the **New Subscription Wizard**:  
 
-    1.  On the **Publication** page, in the **Publisher** list box, select **Find SQL Server Publisher**, enter the name of the sites database server, and then click **Connect**.  
+   1. On the **Publication** page, in the **Publisher** list box, select **Find SQL Server Publisher**, enter the name of the sites database server, and then click **Connect**.  
 
-    2.  Select **ConfigMgr_MPReplica**, and then click **Next**.  
+   2. Select **ConfigMgr_MPReplica**, and then click **Next**.  
 
-    3.  On the **Distribution Agent Location** page, select **Run each agent at its Subscriber (pull subscriptions)**, and click **Next**.  
+   3. On the **Distribution Agent Location** page, select **Run each agent at its Subscriber (pull subscriptions)**, and click **Next**.  
 
-    4.  On the **Subscribers** page do one of the following:  
+   4. On the **Subscribers** page do one of the following:  
 
-        -   Select an existing database from the database replica server to use for the database replica, and then click **OK**.  
+      -   Select an existing database from the database replica server to use for the database replica, and then click **OK**.  
 
-        -   Select **New database** to create a new database for the database replica. On the **New Database** page, specify a database name, and then click **OK**.  
+      -   Select **New database** to create a new database for the database replica. On the **New Database** page, specify a database name, and then click **OK**.  
 
-    5.  Click **Next** to continue.  
+   5. Click **Next** to continue.  
 
-    6.  On the **Distribution Agent Security** page, click the properties button **(....)** in the Subscriber Connection row of the dialog box, and then configure the security settings for the connection.  
+   6. On the **Distribution Agent Security** page, click the properties button **(....)** in the Subscriber Connection row of the dialog box, and then configure the security settings for the connection.  
 
-        > [!TIP]  
-        >  The properties button, **(....)**, is in the fourth column of the display box.  
+      > [!TIP]  
+      >  The properties button, **(....)**, is in the fourth column of the display box.  
 
-        **Security settings:**  
+      **Security settings:**  
 
-        -   Configure the account that runs the Distribution Agent process (the process account):  
+      - Configure the account that runs the Distribution Agent process (the process account):  
 
-            -   If the SQL Server Agent runs as local system, select **Run under the SQL Server Agent service account (This is not a recommended security best practice.)**  
+        -   If the SQL Server Agent runs as local system, select **Run under the SQL Server Agent service account (This is not a recommended security best practice.)**  
 
-            -   If the SQL Server Agent runs by using a different account, select **Run under the following Windows account**, and then configure that account. You can specify a Windows account or a SQL Server account.  
+        -   If the SQL Server Agent runs by using a different account, select **Run under the following Windows account**, and then configure that account. You can specify a Windows account or a SQL Server account.  
 
-            > [!IMPORTANT]  
-            >  You must grant the account that runs the Distribution Agent permissions to the publisher as a pull subscription. For information about configuring these permissions, see [Distribution Agent Security](http://go.microsoft.com/fwlink/p/?LinkId=238463) in the SQL Server TechNet Library.  
+        > [!IMPORTANT]  
+        >  You must grant the account that runs the Distribution Agent permissions to the publisher as a pull subscription. For information about configuring these permissions, see [Distribution Agent Security](http://go.microsoft.com/fwlink/p/?LinkId=238463) in the SQL Server TechNet Library.  
 
-        -   For **Connect to the Distributor**, select **By impersonating the process account**.  
+      - For **Connect to the Distributor**, select **By impersonating the process account**.  
 
-        -   For **Connect to the Subscriber**, select **By impersonating the process account**.  
+      - For **Connect to the Subscriber**, select **By impersonating the process account**.  
 
-         After you configure the connection security settings, click **OK** to save them, and then click **Next**.  
+        After you configure the connection security settings, click **OK** to save them, and then click **Next**.  
 
-    7.  On the **Synchronization Schedule** page, in the **Agent Schedule** list box, select **Define schedule**, and then configure the **New Job Schedule**. Set the frequency to occur **Daily**, recur every **5 minute(s)**, and the duration to have **No end date**. Click **Next** to save the schedule, and then click **Next** again.  
+   7. On the **Synchronization Schedule** page, in the **Agent Schedule** list box, select **Define schedule**, and then configure the **New Job Schedule**. Set the frequency to occur **Daily**, recur every **5 minute(s)**, and the duration to have **No end date**. Click **Next** to save the schedule, and then click **Next** again.  
 
-    8.  On the **Wizard Actions** page, select the check box for **Create the subscriptions(s)**, and then click **Next**.  
+   8. On the **Wizard Actions** page, select the check box for **Create the subscriptions(s)**, and then click **Next**.  
 
-    9. On the **Complete the Wizard** page, click **Finish**, and then click **Close** to complete the Wizard.  
+   9. On the **Complete the Wizard** page, click **Finish**, and then click **Close** to complete the Wizard.  
 
-3.  Immediately after completing the New Subscription Wizard, use **SQL Server Management Studio** to connect to the database replica server database and run the following query to enable the TRUSTWORTHY database property:  `ALTER DATABASE <MP Replica Database Name> SET TRUSTWORTHY ON;`  
+3. Immediately after completing the New Subscription Wizard, use **SQL Server Management Studio** to connect to the database replica server database and run the following query to enable the TRUSTWORTHY database property:  `ALTER DATABASE <MP Replica Database Name> SET TRUSTWORTHY ON;`  
 
-4.  Review the synchronization status to validate that the subscription is successful:  
+4. Review the synchronization status to validate that the subscription is successful:  
 
-    -   On the subscriber computer:  
+   -   On the subscriber computer:  
 
-        -   In **SQL Server Management Studio**, connect to the database replica server and expand **Replication**.  
+       -   In **SQL Server Management Studio**, connect to the database replica server and expand **Replication**.  
 
-        -   Expand **Local Subscriptions**, right-click the subscription to the site database publication, and then select **View Synchronization Status**.  
+       -   Expand **Local Subscriptions**, right-click the subscription to the site database publication, and then select **View Synchronization Status**.  
 
-    -   On the publisher computer:  
+   -   On the publisher computer:  
 
-        -   In **SQL Server Management Studio**, connect to the site database computer, right-click the **Replication** folder, and then select **Launch Replication Monitor**.  
+       -   In **SQL Server Management Studio**, connect to the site database computer, right-click the **Replication** folder, and then select **Launch Replication Monitor**.  
 
-5.  To enable common language runtime (CLR) integration for the database replica, use **SQL Server Management Studio** to connect to the database replica on the database replica server, and run the following stored procedure as a query: **exec sp_configure 'clr enabled', 1; RECONFIGURE WITH OVERRIDE**  
+5. To enable common language runtime (CLR) integration for the database replica, use **SQL Server Management Studio** to connect to the database replica on the database replica server, and run the following stored procedure as a query: **exec sp_configure 'clr enabled', 1; RECONFIGURE WITH OVERRIDE**  
 
-6.  For each management point that uses a database replica server, add that management points computer account to the local **Administrators** group on that database replica server.  
+6. For each management point that uses a database replica server, add that management points computer account to the local **Administrators** group on that database replica server.  
 
-    > [!TIP]  
-    >  This step is not necessary for a management point that runs on the database replica server.  
+   > [!TIP]  
+   >  This step is not necessary for a management point that runs on the database replica server.  
 
- The database replica is now ready for a management point to use.  
+   The database replica is now ready for a management point to use.  
 
 ###  <a name="BKMK_DBReplica_ConfigMP"></a> Step 3 - Configure management points to use the database replica  
  You can configure a management point at a primary site to use a database replica when you install the management point role, or you can reconfigure an existing management point to use a database replica.  
@@ -415,33 +415,33 @@ To support client notification with a database replica for a management point, y
 
 ##### To configure the service broker for a database replica  
 
-1.  Use **SQL Server Management Studio** to connect to database replica server database, and then run the following query to enable the Service Broker on the database replica server: **ALTER DATABASE &lt;Replica Database Name\> SET ENABLE_BROKER, HONOR_BROKER_PRIORITY ON WITH ROLLBACK IMMEDIATE**  
+1. Use **SQL Server Management Studio** to connect to database replica server database, and then run the following query to enable the Service Broker on the database replica server: **ALTER DATABASE &lt;Replica Database Name\> SET ENABLE_BROKER, HONOR_BROKER_PRIORITY ON WITH ROLLBACK IMMEDIATE**  
 
-2.  Next, on the database replica server, configure the Service Broker for client notification and export the Service Broker certificate. To do this, run a SQL Server stored procedure that configures the Service Broker and exports the certificate as a single action. When you run the stored procedure, you must specify the FQDN of the database replica server, the name of the database replicas database, and specify a location for the export of the certificate file.  
+2. Next, on the database replica server, configure the Service Broker for client notification and export the Service Broker certificate. To do this, run a SQL Server stored procedure that configures the Service Broker and exports the certificate as a single action. When you run the stored procedure, you must specify the FQDN of the database replica server, the name of the database replicas database, and specify a location for the export of the certificate file.  
 
-     Run the following query to configure the required details on the database replica server, and to export the certificate for the database replica server: **EXEC sp_BgbConfigSSBForReplicaDB '&lt;Replica SQL Server FQDN\>', '&lt;Replica Database Name\>', '&lt;Certificate Backup File Path\>'**  
+    Run the following query to configure the required details on the database replica server, and to export the certificate for the database replica server: **EXEC sp_BgbConfigSSBForReplicaDB '&lt;Replica SQL Server FQDN\>', '&lt;Replica Database Name\>', '&lt;Certificate Backup File Path\>'**  
 
-    > [!NOTE]  
-    >  When the database replica server is not on the default instance of SQL Server, for this step you must specify the instance name in addition to the replica database name. To do so, replace **&lt;Replica Database Name\>** with **&lt;Instance name\\Replica Database Name\>**.  
+   > [!NOTE]  
+   >  When the database replica server is not on the default instance of SQL Server, for this step you must specify the instance name in addition to the replica database name. To do so, replace **&lt;Replica Database Name\>** with **&lt;Instance name\\Replica Database Name\>**.  
 
-     After you export the certificate from the database replica server, place a copy of the certificate on the primary sites database server.  
+    After you export the certificate from the database replica server, place a copy of the certificate on the primary sites database server.  
 
-3.  Use **SQL Server Management Studio** to connect to the primary site database. After you connect to the primary sites database, run a query to import the certificate and specify the Service Broker port that is in use on the database replica server, the FQDN of the database replica server, and name of the database replicas database. This configures the primary sites database to use the Service Broker to communicate to the database of the database replica server.  
+3. Use **SQL Server Management Studio** to connect to the primary site database. After you connect to the primary sites database, run a query to import the certificate and specify the Service Broker port that is in use on the database replica server, the FQDN of the database replica server, and name of the database replicas database. This configures the primary sites database to use the Service Broker to communicate to the database of the database replica server.  
 
-     Run the following query to import the certificate from the database replica server and specify the required details: **EXEC sp_BgbConfigSSBForRemoteService 'REPLICA', '&lt;SQL Service Broker Port\>', '&lt;Certificate File Path\>', '&lt;Replica SQL Server FQDN\>', '&lt;Replica Database Name\>'**  
+    Run the following query to import the certificate from the database replica server and specify the required details: **EXEC sp_BgbConfigSSBForRemoteService 'REPLICA', '&lt;SQL Service Broker Port\>', '&lt;Certificate File Path\>', '&lt;Replica SQL Server FQDN\>', '&lt;Replica Database Name\>'**  
 
-    > [!NOTE]  
-    >  When the database replica server is not on the default instance of SQL Server, for this step you must specify the instance name in addition to the replica database name. To do so, replace **&lt;Replica Database Name\>** with **\Instance name\\Replica Database Name\>**.  
+   > [!NOTE]  
+   >  When the database replica server is not on the default instance of SQL Server, for this step you must specify the instance name in addition to the replica database name. To do so, replace **&lt;Replica Database Name\>** with **\Instance name\\Replica Database Name\>**.  
 
-4.  Next, on the site database server, run the following command to export the certificate for the site database server: **EXEC sp_BgbCreateAndBackupSQLCert '&lt;Certificate Backup File Path\>'**  
+4. Next, on the site database server, run the following command to export the certificate for the site database server: **EXEC sp_BgbCreateAndBackupSQLCert '&lt;Certificate Backup File Path\>'**  
 
-     After you export the certificate from the site database server, place a copy of the certificate on the database replica server.  
+    After you export the certificate from the site database server, place a copy of the certificate on the database replica server.  
 
-5.  Use **SQL Server Management Studio** to connect to the database replica server database. After you connect to the database replica server database, run a query to import the certificate and specify the site code of the primary site and the Service Broker port that is in use on the site database server. This configures the database replica server to use the Service Broker to communicate to the database of the primary site.  
+5. Use **SQL Server Management Studio** to connect to the database replica server database. After you connect to the database replica server database, run a query to import the certificate and specify the site code of the primary site and the Service Broker port that is in use on the site database server. This configures the database replica server to use the Service Broker to communicate to the database of the primary site.  
 
-     Run the following query to import the certificate from the site database server: **EXEC sp_BgbConfigSSBForRemoteService '&lt;Site Code\>', '&lt;SQL Service Broker Port\>', '&lt;Certificate File Path\>'**  
+    Run the following query to import the certificate from the site database server: **EXEC sp_BgbConfigSSBForRemoteService '&lt;Site Code\>', '&lt;SQL Service Broker Port\>', '&lt;Certificate File Path\>'**  
 
- A few minutes after you complete the configuration of the site database and the database replica database, the notification manager at the primary site sets up the Service Broker conversation for client notification from the primary site database to the database replica.  
+   A few minutes after you complete the configuration of the site database and the database replica database, the notification manager at the primary site sets up the Service Broker conversation for client notification from the primary site database to the database replica.  
 
 ###  <a name="bkmk_supscript"></a> Supplemental script for additional database replicas on a single SQL Server  
  When you use the script from step 4 to  configure a self-signed certificate for the database replica server on a SQL Server that already has a database replica you plan to continue using, you must use a modified version of the  original script. The following modifications prevent the script from deleting an existing certificate on the server, and create subsequent certificates with unique Friendly names.  Edit the original script as follows:  

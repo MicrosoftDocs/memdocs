@@ -80,19 +80,19 @@ Class SMS_TaskSequence_Step
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Abstract  
+- Abstract  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- Each step in the task sequence is one of the following:  
+  Each step in the task sequence is one of the following:  
 
--   An individual action that is run on a computer, represented by a [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md) or derived class. For example, the [SMS_TaskSequence_InstallSoftwareAction Server WMI Class](../../../develop/reference/osd/sms_tasksequence_installsoftwareaction-server-wmi-class.md) class represents an action that specifies a package and a program to install as part of a task sequence.  
+- An individual action that is run on a computer, represented by a [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md) or derived class. For example, the [SMS_TaskSequence_InstallSoftwareAction Server WMI Class](../../../develop/reference/osd/sms_tasksequence_installsoftwareaction-server-wmi-class.md) class represents an action that specifies a package and a program to install as part of a task sequence.  
 
--   A set of actions in a group, represented by [SMS_TaskSequence_Group Server WMI Class](../../../develop/reference/osd/sms_tasksequence_group-server-wmi-class.md). Groups are useful ways to organize actions. For example, to conditionally process a set of actions, you could organize the actions into a group and add a condition to the group.  
+- A set of actions in a group, represented by [SMS_TaskSequence_Group Server WMI Class](../../../develop/reference/osd/sms_tasksequence_group-server-wmi-class.md). Groups are useful ways to organize actions. For example, to conditionally process a set of actions, you could organize the actions into a group and add a condition to the group.  
 
- Each step can be associated with a condition, represented by [SMS_TaskSequence_Condition Server WMI Class](../../../develop/reference/osd/sms_tasksequence_condition-server-wmi-class.md) that determines whether the step is processed.  
+  Each step can be associated with a condition, represented by [SMS_TaskSequence_Condition Server WMI Class](../../../develop/reference/osd/sms_tasksequence_condition-server-wmi-class.md) that determines whether the step is processed.  
 
- For more information, see Operating System Deployment Task Sequence Object Model.  
+  For more information, see Operating System Deployment Task Sequence Object Model.  
 
 ## Requirements  
 

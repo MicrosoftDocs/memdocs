@@ -137,47 +137,47 @@ Class SMS_TaskSequence_RestoreUserStateAction : SMS_TaskSequence_Action
 
  Mode for customizing the USMT file list. Possible values are shown below. The default value is Simple.  
 
--   Simple  
+- Simple  
 
--   Advanced  
+- Advanced  
 
- `Name`  
- Data type: `String`  
+  `Name`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- `SupportedEnvironment`  
- Data type: `String`  
+  `SupportedEnvironment`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [Not_Null:ToInstance]  
+  Qualifiers: [Not_Null:ToInstance]  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- The default value of this property for this task sequence action is FullOS.  
+  The default value of this property for this task sequence action is FullOS.  
 
- `Timeout`  
- Data type: `UInt32`  
+  `Timeout`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- `UsmtRestorePackageID`  
- Data type: `String`  
+  `UsmtRestorePackageID`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [Not_Null, TaskSequencePackage, VariableName("_OSDMigrateUsmtRestorePackageID")]  
+  Qualifiers: [Not_Null, TaskSequencePackage, VariableName("_OSDMigrateUsmtRestorePackageID")]  
 
- ID of the task sequence package containing the USMT program.  
+  ID of the task sequence package containing the USMT program.  
 
- The task sequence variable associated with this property is _OSDMigrateUsmtRestorePackageID. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+  The task sequence variable associated with this property is _OSDMigrateUsmtRestorePackageID. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
 
 ## Remarks  
  Class qualifiers for this class include:  

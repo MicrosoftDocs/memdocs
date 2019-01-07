@@ -191,74 +191,74 @@ Class SMS_AdvertisementStatusRootSummarizer : SMS_BaseClass
 
  Total number of users, user groups, or client computers that reported errors while running the advertised program. A program is considered in error when it produces either:  
 
--   A nonzero exit code.  
+- A nonzero exit code.  
 
--   An install status Management Information Format (MIF) file with a failure-status attribute. This file, if present, overrides an exit code.  
+- An install status Management Information Format (MIF) file with a failure-status attribute. This file, if present, overrides an exit code.  
 
- `ProgramsFailedMIF`  
- Data type: `UInt32`  
+  `ProgramsFailedMIF`  
+  Data type: `UInt32`  
 
- Access type: Read Only  
+  Access type: Read Only  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Programs that have failed relative to the install status MIF file.  
+  Programs that have failed relative to the install status MIF file.  
 
- `ProgramsStarted`  
- Data type: `UInt32`  
+  `ProgramsStarted`  
+  Data type: `UInt32`  
 
- Access type: Read Only  
+  Access type: Read Only  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Total number of users, user groups, or client computers in the site that were able to successfully start running the advertised program.  
+  Total number of users, user groups, or client computers in the site that were able to successfully start running the advertised program.  
 
- `ProgramsSucceeded`  
- Data type: `UInt32`  
+  `ProgramsSucceeded`  
+  Data type: `UInt32`  
 
- Access type: Read Only  
+  Access type: Read Only  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Total number of users, user groups, or client computers, or both, that are reporting that the program ran successfully. A program is considered successful when it produces either:  
+  Total number of users, user groups, or client computers, or both, that are reporting that the program ran successfully. A program is considered successful when it produces either:  
 
--   An exit code of zero.  
+- An exit code of zero.  
 
--   An install status MIF file with a success-status attribute. This file, if present, overrides an exit code.  
+- An install status MIF file with a success-status attribute. This file, if present, overrides an exit code.  
 
- `ProgramsSucceededMIF`  
- Data type: `UInt32`  
+  `ProgramsSucceededMIF`  
+  Data type: `UInt32`  
 
- Access type: Read Only  
+  Access type: Read Only  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Programs that have succeeded relative to the install status MIF file.  
+  Programs that have succeeded relative to the install status MIF file.  
 
- `SourceSite`  
- Data type: `String`  
+  `SourceSite`  
+  Data type: `String`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- Site code of the site where the advertisement originates.  
+  Site code of the site where the advertisement originates.  
 
- `TimeEnableFlag`  
- Data type: `UInt32`  
+  `TimeEnableFlag`  
+  Data type: `UInt32`  
 
- Access type: Read Only  
+  Access type: Read Only  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Reserved for future use.  
+  Reserved for future use.  
 
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Read (read-only)  
+- Read (read-only)  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
 ## Requirements  
 

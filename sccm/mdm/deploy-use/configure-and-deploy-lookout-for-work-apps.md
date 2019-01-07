@@ -49,7 +49,7 @@ This article explains how to configure and deploy the Lookout for Work app for A
 3. Enable Azure Active Directory (Azure AD) authentication for the iOS users.
    1.  Sign in to the [Azure AD blade of the Azure portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview), and navigate to the app registrations page.  
    2.  Specify the Name as **Lookout for Work iOS app**, and select **Native** as the Application Type.  
-  ![screenshot of the add apps dialog showing the native client app option](media/aad-add-app-reg.png)
+   ![screenshot of the add apps dialog showing the native client app option](media/aad-add-app-reg.png)
 
    3.  For this Redirect URI, use the following format: `lookoutwork://com.lookout.enterprise.<yourcompanyname>`, replacing `<yourcompanyname>` with your company name. For example: `lookoutwork://com.lookout.enterprise.contoso`
    4. Click **Create** to create the app. 
@@ -72,7 +72,7 @@ This article explains how to configure and deploy the Lookout for Work app for A
 
 6. Deploy the Lookout for Work app to users. For more information, see [Deploy applications](/sccm/apps/deploy-use/deploy-applications).  
 
-  Select the same users that were added to the Enrollment Management option in the Lookout console. Choose the **Required Install** option. This option requires the Lookout app to install on the user’s device.
+   Select the same users that were added to the Enrollment Management option in the Lookout console. Choose the **Required Install** option. This option requires the Lookout app to install on the user’s device.
 
 
 

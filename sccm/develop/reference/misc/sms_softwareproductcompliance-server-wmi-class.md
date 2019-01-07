@@ -60,165 +60,165 @@ Class SMS_SoftwareProductCompliance : SMS_BaseClass
 
  Product compliance category. This property cannot be left blank. For the "Year 2000" value of `Type`, the possible values for `Category` are:  
 
--   Compliant  
+- Compliant  
 
--   Compliant with minor issues  
+- Compliant with minor issues  
 
--   Compliant with prerequisites  
+- Compliant with prerequisites  
 
--   Compliant with minor issues with prerequisites  
+- Compliant with minor issues with prerequisites  
 
--   Not compliant  
+- Not compliant  
 
--   Testing yet to be completed  
+- Testing yet to be completed  
 
--   Will not test  
+- Will not test  
 
- `Comment`  
- Data type: **String**  
+  `Comment`  
+  Data type: **String**  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Additional information about product compliance. When an update for the product is available, but not necessary to reach compliance, this property contains the string "Fixes available".  
+  Additional information about product compliance. When an update for the product is available, but not necessary to reach compliance, this property contains the string "Fixes available".  
 
- `FileName`  
- Data type: **String**  
+  `FileName`  
+  Data type: **String**  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Executable file name, not including the path.  
+  Executable file name, not including the path.  
 
- `FileSize`  
- Data type: **UInt32**  
+  `FileSize`  
+  Data type: **UInt32**  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Size, in bytes, of the file specified in `FileName`.  
+  Size, in bytes, of the file specified in `FileName`.  
 
- `ProdCompany`  
- Data type: **String**  
+  `ProdCompany`  
+  Data type: **String**  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- The name of the company that produced the product.  
+  The name of the company that produced the product.  
 
- `ProdLang`  
- Data type: **String**  
+  `ProdLang`  
+  Data type: **String**  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Product language. If this property is blank, the [Import Method in Class SMS_SoftwareProductCompliance](../../../develop/reference/misc/import-method-in-class-sms_softwareproductcompliance.md) tries to create the language String by converting the `ResProdLangID` value to a text string .  
+  Product language. If this property is blank, the [Import Method in Class SMS_SoftwareProductCompliance](../../../develop/reference/misc/import-method-in-class-sms_softwareproductcompliance.md) tries to create the language String by converting the `ResProdLangID` value to a text string .  
 
- `ProdName`  
- Data type: **String**  
+  `ProdName`  
+  Data type: **String**  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Product name. If this property is blank, the `Import` method creates the name by using `ResProdName` or by using `FileName` and `FileSize`.  
+  Product name. If this property is blank, the `Import` method creates the name by using `ResProdName` or by using `FileName` and `FileSize`.  
 
- `ProdPlatform`  
- Data type: **String**  
+  `ProdPlatform`  
+  Data type: **String**  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Platform for which the product was written.  
+  Platform for which the product was written.  
 
- `ProdRev`  
- Data type: **String**  
+  `ProdRev`  
+  Data type: **String**  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Specific revision within the product version.  
+  Specific revision within the product version.  
 
- `ProdVer`  
- Data type: **String**  
+  `ProdVer`  
+  Data type: **String**  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Version level of the product. If this property is blank, the `Import` method creates the version by using the `ResProdVer` property.  
+  Version level of the product. If this property is blank, the `Import` method creates the version by using the `ResProdVer` property.  
 
- `RecordID`  
- Data type: **UInt32**  
+  `RecordID`  
+  Data type: **UInt32**  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Unique ID for the instance.  
+  Unique ID for the instance.  
 
- `ResProdLangID`  
- Data type: **UInt32**  
+  `ResProdLangID`  
+  Data type: **UInt32**  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Product language ID, taken from the executable file resource or the DLL resource. A locale ID of 65535 (xFFFF) is a special value used by the predefined Configuration Manager software inventory queries. This value has the effect of matching any language ID found in software discovery.  
+  Product language ID, taken from the executable file resource or the DLL resource. A locale ID of 65535 (xFFFF) is a special value used by the predefined Configuration Manager software inventory queries. This value has the effect of matching any language ID found in software discovery.  
 
- `ResProdName`  
- Data type: **String**  
+  `ResProdName`  
+  Data type: **String**  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Product name from the executable file resource or the DLL resource. The name is often different from the name specified in `ProdName`.  
+  Product name from the executable file resource or the DLL resource. The name is often different from the name specified in `ProdName`.  
 
- `ResProdVer`  
- Data type: **String**  
+  `ResProdVer`  
+  Data type: **String**  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Version from the executable file resource or the DLL resource. The version is often different from the version specified in `ProdVer`.  
+  Version from the executable file resource or the DLL resource. The version is often different from the version specified in `ProdVer`.  
 
- `Source`  
- Data type: **String**  
+  `Source`  
+  Data type: **String**  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Source of the compliance information. Multiple sources can supply compliance information about the same `ProdName` property. If this property is blank, the `Import` method creates the data source by using the domain\user name of the user.  
+  Source of the compliance information. Multiple sources can supply compliance information about the same `ProdName` property. If this property is blank, the `Import` method creates the data source by using the domain\user name of the user.  
 
- `Type`  
- Data type: **String**  
+  `Type`  
+  Data type: **String**  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Type of compliance. This property cannot be left blank.  
+  Type of compliance. This property cannot be left blank.  
 
- Example: "Year 2000"  
+  Example: "Year 2000"  
 
- `URL`  
- Data type: **String**  
+  `URL`  
+  Data type: **String**  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- URL (Web site address) where additional information about the product, its compliance, and any updates might be found.  
+  URL (Web site address) where additional information about the product, its compliance, and any updates might be found.  
 
 ## Remarks  
  Use this class to track whether your software meets company or industry standards or supports known date and currency issues.  

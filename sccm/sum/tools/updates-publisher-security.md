@@ -54,24 +54,24 @@ You can use one of several methods for configuring certificates on client comput
 The following is provided as one example of how to configure the signing certificate on client computers.
 
 ### To configure a self-signing certificate on client computers
-1.  On a computer with access to the update server, click **Start**, click **Run**, type **MMC** in the text box, and then click **OK** to open the Microsoft Management Console (MMC).
+1. On a computer with access to the update server, click **Start**, click **Run**, type **MMC** in the text box, and then click **OK** to open the Microsoft Management Console (MMC).
 
-2.  Click **File**, click **Add/Remove Snap-in**, click **Add**, click **Certificates**, click **Add**, select **Computer account**, and then click **Next**.
+2. Click **File**, click **Add/Remove Snap-in**, click **Add**, click **Certificates**, click **Add**, select **Computer account**, and then click **Next**.
 
-3.  Select **Another computer**, type the name of the update server or click **Browse** to find the update server computer, click **Finish**, click **Close**, and then click **OK**.
+3. Select **Another computer**, type the name of the update server or click **Browse** to find the update server computer, click **Finish**, click **Close**, and then click **OK**.
 
-4.  Expand **Certificates (*update server name*)**, expand **WSUS**, and then click **Certificates**.
+4. Expand **Certificates (*update server name*)**, expand **WSUS**, and then click **Certificates**.
 
-5.  Right-click the certificate in the results pane, click **All Tasks**, and then click **Export**. Complete the **Certificate Export Wizard** using the default settings to create an export certificate file with the name and location specified in the wizard.
+5. Right-click the certificate in the results pane, click **All Tasks**, and then click **Export**. Complete the **Certificate Export Wizard** using the default settings to create an export certificate file with the name and location specified in the wizard.
 
-6.  Use one of the following methods to add the certificate used to sign the updates catalog to each client computer that will use WUA to scan for the updates in the catalog. Add the certificate on the client computer as follows:
+6. Use one of the following methods to add the certificate used to sign the updates catalog to each client computer that will use WUA to scan for the updates in the catalog. Add the certificate on the client computer as follows:
 
-    -   For self-signed certificates: Add the certificate to the **Trusted Root Certification Authorities** and **Trusted Publishers** certificate stores.
+   -   For self-signed certificates: Add the certificate to the **Trusted Root Certification Authorities** and **Trusted Publishers** certificate stores.
 
-    -   For certification authority (CA) issued certificates: Add the certificate to the **Trusted Publishers** certificate store.
+   -   For certification authority (CA) issued certificates: Add the certificate to the **Trusted Publishers** certificate store.
 
-    > [!NOTE]
-    > The WUA also checks whether the **Allow signed content from intranet Microsoft update service location** Group Policy setting is enabled on the local computer. This policy setting must be enabled for WUA to scan for the updates that were created and published with Updates Publisher. For more information about enabling this Group Policy setting, see [How to Configure the Group Policy on Client Computers](https://technet.microsoft.com/library/bb530967.aspx(d=robot).
+   > [!NOTE]
+   > The WUA also checks whether the **Allow signed content from intranet Microsoft update service location** Group Policy setting is enabled on the local computer. This policy setting must be enabled for WUA to scan for the updates that were created and published with Updates Publisher. For more information about enabling this Group Policy setting, see [How to Configure the Group Policy on Client Computers](<https://technet.microsoft.com/library/bb530967.aspx(d=robot>).
 
 
 

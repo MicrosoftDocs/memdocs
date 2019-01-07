@@ -26,13 +26,13 @@ Microsoft System Center Configuration Manager server applications that are devel
 ## Configuration Manager Console User Interface Extension  
  Programming System Center Configuration Manager console extensions has the following requirements:  
 
--   Installed Configuration Manager site server  
+- Installed Configuration Manager site server  
 
--   Installed Configuration Manager console  
+- Installed Configuration Manager console  
 
--   .NET Framework 4.0  
+- .NET Framework 4.0  
 
- For more information, see [Configuration Manager Console Extension](../../../develop/core/servers/console/console-extension.md)  
+  For more information, see [Configuration Manager Console Extension](../../../develop/core/servers/console/console-extension.md)  
 
 ## VBScript  
 

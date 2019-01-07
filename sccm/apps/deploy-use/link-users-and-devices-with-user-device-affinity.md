@@ -46,10 +46,10 @@ User device affinity in System Center Configuration Manager (Configuration Manag
 ## Automatically create user device affinities (Windows PCs only)  
  Configuration Manager reads data about user logons from the Windows Event log. To automatically create user device affinities, you must turn on these two options in the local security policy on client computers to store logon events in the Windows Event log:  
 
--   **Audit account logon events**  
--   **Audit logon events**  
+- **Audit account logon events**  
+- **Audit logon events**  
 
- To configure these settings, use Windows Group Policy.  
+  To configure these settings, use Windows Group Policy.  
 
 > [!IMPORTANT]  
 > If an error causes the Windows event log to generate a high number of entries, a new event log might be created. If this occurs, existing logon events might be no longer be available to Configuration Manager.  

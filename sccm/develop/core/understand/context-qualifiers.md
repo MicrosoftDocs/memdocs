@@ -39,25 +39,25 @@ Context objects are used, in System Center Configuration Manager, to provide add
 ## ContextHandle  
  The `ContextHandle` context qualifier is a string value that identifies where the SMS Provider has stored your cached context qualifiers. The managed SMS Provider manages data transfer. When using VBScript, You can use the following steps to reduce the amount of data that is passed over the network.  
 
-1.  Create [SWBemNamedValue](https://msdn.microsoft.com/library/aa393731.aspx) value set.
+1. Create [SWBemNamedValue](https://msdn.microsoft.com/library/aa393731.aspx) value set.
 
-2.  Add your qualifiers to the context object. For more information, see [How to Add a Configuration Manager Context Qualifier by Using WMI](../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md).  
+2. Add your qualifiers to the context object. For more information, see [How to Add a Configuration Manager Context Qualifier by Using WMI](../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md).  
 
-3.  Call the [GetContextHandle](https://msdn.microsoft.com/library/hh469122.aspx) method to cache your qualifiers on the server. The SMS Provider caches the context object that you pass as a parameter of [ExecMethod](https://msdn.microsoft.com/library/aa392103.aspx) when you call [GetContextHandle](https://msdn.microsoft.com/library/hh469122.aspx).  
+3. Call the [GetContextHandle](https://msdn.microsoft.com/library/hh469122.aspx) method to cache your qualifiers on the server. The SMS Provider caches the context object that you pass as a parameter of [ExecMethod](https://msdn.microsoft.com/library/aa392103.aspx) when you call [GetContextHandle](https://msdn.microsoft.com/library/hh469122.aspx).  
 
-4.  Remove all the qualifiers from your context object.  
+4. Remove all the qualifiers from your context object.  
 
-5.  Add the `ContextHandle` qualifier and value to your context object.  
+5. Add the `ContextHandle` qualifier and value to your context object.  
 
-6.  Pass the context object on all calls to [IWbemServices](https://msdn.microsoft.com/library/aa392093.aspx).  
+6. Pass the context object on all calls to [IWbemServices](https://msdn.microsoft.com/library/aa392093.aspx).  
 
- You must call the [ClearContextHandle](https://msdn.microsoft.com/library/hh458295.aspx) method to remove your cached qualifiers before you exit your application. You can create as many `ContextHandle` values as you want, with each providing varying information for your application.  
+   You must call the [ClearContextHandle](https://msdn.microsoft.com/library/hh458295.aspx) method to remove your cached qualifiers before you exit your application. You can create as many `ContextHandle` values as you want, with each providing varying information for your application.  
 
 > [!NOTE]
 >  After you cache your context qualifiers, you can override your cached values by adding the same context qualifiers, with different values, to your context object.  
 
 ## InstanceCount  
- The `InstanceCount` context qualifier is an integer value that is used to limit the number of instances returned from the [ExecQuery](https://msdn.microsoft.com/library/aa392107.aspx) and CreateInstanceEnum](https://msdn.microsoft.com/library/aa392097.aspx) methods. You set `InstanceCount` equal to the maximum number of instances that you want returned from the query or enumerator. For example, setting `InstanceCount` to 10 returns, at most, 10 instances.  
+The `InstanceCount` context qualifier is an integer value that is used to limit the number of instances returned from the [ExecQuery](https://msdn.microsoft.com/library/aa392107.aspx) and [CreateInstanceEnum](https://msdn.microsoft.com/library/aa392097.aspx) methods. You set `InstanceCount` equal to the maximum number of instances that you want returned from the query or enumerator. For example, setting `InstanceCount` to 10 returns, at most, 10 instances.  
 
 ## LimitToCollectionIDs  
  The `LimitToCollectionIDs` context qualifier is a string array that contains a list of `CollectionID` values. Currently, you can specify only one `CollectionID` value. You use this qualifier to limit the results of a resource query to the members of the named collection. A resource query is a query that includes classes derived from [SMS_Resource](https://msdn.microsoft.com/library/cc143626.aspx) or [SMS_Group](https://msdn.microsoft.com/library/hh458257.aspx).  
@@ -67,7 +67,7 @@ Context objects are used, in System Center Configuration Manager, to provide add
  You cannot use this qualifier when querying collections.  
 
 ## LocaleID  
- The `LocaleID` context qualifier is a string value that accepts either a hexadecimal value or a decimal value in the form MS\x, where x is the locale ID. For example, you can enter the English `LocaleID` value as ms\0x0409 or ms\1033. The SMS Provider only accepts `LocaleID` values that use the Microsoft format. You can find a list of `locale IDs` at [Locale IDs Assigned by Microsoft](http://go.microsoft.com/fwlink/?LinkId=110805).  
+ The `LocaleID` context qualifier is a string value that accepts either a hexadecimal value or a decimal value in the form MS\x, where x is the locale ID. For example, you can enter the English `LocaleID` value as ms\0x0409 or ms\1033. The SMS Provider only accepts `LocaleID` values that use the Microsoft format. You can find a list of `locale IDs` at [Locale IDs Assigned by Microsoft](https://go.microsoft.com/fwlink/?LinkId=110805).  
 
  If you need the locale for non-U.S. installations, you can get it from the [SMS_Identification Server WMI Class](../../../develop/reference/core/servers/configure/sms_identification-server-wmi-class.md) `LocaleID` property.  
 

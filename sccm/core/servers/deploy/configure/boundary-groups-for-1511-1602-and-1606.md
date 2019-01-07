@@ -103,15 +103,15 @@ When you set up boundary groups, you add one or more boundaries to the boundary 
 
 #### To set up a fallback site for automatic site assignment  
 
-1.  In the Configuration Manager console, choose **Administration** > **Site Configuration** >  **Sites**.  
+1. In the Configuration Manager console, choose **Administration** > **Site Configuration** >  **Sites**.  
 
-2.  On the **Home** tab, in the **Sites** group, choose **Hierarchy Settings**.  
+2. On the **Home** tab, in the **Sites** group, choose **Hierarchy Settings**.  
 
-3.  On the **General** tab, check the check box for **Use a fallback site**, and then choose a site from the **Fallback site** drop-down list.  
+3. On the **General** tab, check the check box for **Use a fallback site**, and then choose a site from the **Fallback site** drop-down list.  
 
-4.  Choose **OK** to save the configuration.  
+4. Choose **OK** to save the configuration.  
 
- The following sections provide additional details about boundary group configurations.  
+   The following sections provide additional details about boundary group configurations.  
 
 ###  <a name="BKMK_BoundarySiteAssignment"></a> About site assignment  
  You can set up each boundary group with an assigned site for clients.  

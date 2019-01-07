@@ -17,11 +17,11 @@ This article introduces the features that are available in the Technical Preview
 
  **Known Issues for this Technical Preview:**  
 
--   This release includes updates for previously released features but does not introduce new features. Therefore, the Features page of the Update Wizard will be empty if you have previously upgraded to 1602 and enabled all of the features included in 1602.  
+- This release includes updates for previously released features but does not introduce new features. Therefore, the Features page of the Update Wizard will be empty if you have previously upgraded to 1602 and enabled all of the features included in 1602.  
 
--   After your site server updates to the Technical Preview 1603, clients are unable to use any remote control features until they also update to version 1603.  
+- After your site server updates to the Technical Preview 1603, clients are unable to use any remote control features until they also update to version 1603.  
 
- **The following are new features you can try out with this version.**  
+  **The following are new features you can try out with this version.**  
 
 ##  <a name="BKMK_SC1603"></a> Improvements to Software Center  
 
@@ -57,26 +57,26 @@ You will need to test the customized settings in your environment to determine w
 
 ### To modify the RamDisk TFTP window size  
 
--   Add the following registry key on PXE-enabled distribution points to customize the RamDisk TFTP window size:  
+- Add the following registry key on PXE-enabled distribution points to customize the RamDisk TFTP window size:  
 
-     **Location**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP  
-    Name: RamDiskTFTPWindowSize  
+   **Location**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP  
+  Name: RamDiskTFTPWindowSize  
 
-     **Type**: REG_DWORD  
+   **Type**: REG_DWORD  
 
-     **Value**: &lt;customized window size\>  
+   **Value**: &lt;customized window size\>  
 
- The default value is 1 (1 data block fills the window)  
+  The default value is 1 (1 data block fills the window)  
 
 ### To modify the RamDisk TFTP block size  
 
--   Add the following registry key on PXE-enabled distribution points to customize the RamDisk TFTP window size:  
+- Add the following registry key on PXE-enabled distribution points to customize the RamDisk TFTP window size:  
 
-     **Location**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP  
-    Name: RamDiskTFTPBlockSize  
+   **Location**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP  
+  Name: RamDiskTFTPBlockSize  
 
-     **Type**: REG_DWORD  
+   **Type**: REG_DWORD  
 
-     **Value**: &lt;customized block size\>  
+   **Value**: &lt;customized block size\>  
 
- The default value is 4096 (4k).  
+  The default value is 4096 (4k).  

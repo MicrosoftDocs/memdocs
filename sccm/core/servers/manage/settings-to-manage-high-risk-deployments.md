@@ -26,15 +26,15 @@ For example, a task sequence with a purpose of **Required** that deploys an oper
 
 To reduce the risk of an unwanted high-risk deployment, you can configure size limits in these deployment verification settings:  
 
--   **Collection size limits**: When you create a deployment, hide collections that include more clients than your limit.  
+- **Collection size limits**: When you create a deployment, hide collections that include more clients than your limit.  
 
-     -   **Default size**: When you create a deployment, this setting hides collections by default that include more clients than this limit. You can still see these collections when creating the deployment, but they're hidden by default. The default value is **100**. To ignore this setting, enter a value of **0**.  
+  - **Default size**: When you create a deployment, this setting hides collections by default that include more clients than this limit. You can still see these collections when creating the deployment, but they're hidden by default. The default value is **100**. To ignore this setting, enter a value of **0**.  
 
-     -   **Maximum size**: When you create a deployment, this setting always hides collections with more clients than this limit. The default value is **0**, which ignores this setting. The **Maximum size** value must be greater than the **Default size** value.  
+  - **Maximum size**: When you create a deployment, this setting always hides collections with more clients than this limit. The default value is **0**, which ignores this setting. The **Maximum size** value must be greater than the **Default size** value.  
 
-     For example, you set **Default size** to 100 and the **Maximum size** to 1000. When you create a high-risk deployment, the **Select Collection** window only displays collections that include fewer than 100 clients. If you clear the setting to **Hide collections with a member count greater than the site's minimum size configuration**, the window displays collections that include fewer than 1000 clients.  
+    For example, you set **Default size** to 100 and the **Maximum size** to 1000. When you create a high-risk deployment, the **Select Collection** window only displays collections that include fewer than 100 clients. If you clear the setting to **Hide collections with a member count greater than the site's minimum size configuration**, the window displays collections that include fewer than 1000 clients.  
 
--   **Collections with site system servers**: When the target collection includes a computer with a site system role, block deployments or require verification before creating the deployment. When a deployment is blocked, select a different collection that meets the deployment verification criteria to continue creating the deployment.  
+- **Collections with site system servers**: When the target collection includes a computer with a site system role, block deployments or require verification before creating the deployment. When a deployment is blocked, select a different collection that meets the deployment verification criteria to continue creating the deployment.  
 
 > [!NOTE]  
 >  High-risk deployments are always limited to custom collections, collections that you create, and the built-in **Unknown Computers** collection. When you create a high-risk deployment, you can't select a built-in collection such as **All Systems**.  

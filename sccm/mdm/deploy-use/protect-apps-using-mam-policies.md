@@ -24,10 +24,10 @@ System Center Configuration Manager application management policies let you modi
 You can also use mobile app management policies to protect apps on devices that are not managed by Intune. Using this new capability, you can apply mobile app management policies to apps that connect to Office 365 services. This is not supported for apps that connect to on-premises Exchange or SharePoint.  
 
 To use this new capability, you need to use the Azure preview portal. The following topics can help you get started:  
--   [Get started with mobile app management policies in the Azure portal](https://technet.microsoft.com/library/mt627830.aspx)  
--   [Create and deploy mobile app management policies with Microsoft Intune](https://technet.microsoft.com/library/mt627829.aspx)  
+- [Get started with mobile app management policies in the Azure portal](https://technet.microsoft.com/library/mt627830.aspx)  
+- [Create and deploy mobile app management policies with Microsoft Intune](https://technet.microsoft.com/library/mt627829.aspx)  
 
- You don't deploy an application management policy directly as you do with configuration items and baselines in Configuration Manager. Instead, you associate the policy with the application deployment type that you want to restrict. When the app deployment type is deployed and installed on devices, the settings you specify take effect.  
+  You don't deploy an application management policy directly as you do with configuration items and baselines in Configuration Manager. Instead, you associate the policy with the application deployment type that you want to restrict. When the app deployment type is deployed and installed on devices, the settings you specify take effect.  
 
 To apply restrictions to an app, the app must incorporate the Microsoft Intune App Software Development Kit (SDK). There are two methods of obtaining this type of app:  
 
@@ -53,43 +53,43 @@ To apply restrictions to an app, the app must incorporate the Microsoft Intune A
 ##  Step 2: Create a Configuration Manager application that contains an app  
  The procedure to create the Configuration Manager application differs depending on whether you are using a policy managed app (external link), or an app that was created by using the Microsoft Intune App Wrapping Tool for iOS (App package for iOS). Use one of the following procedures to create the Configuration Manager application.  
 
-1.  In the Configuration Manager console, choose **Software Library** > **Application Management** > **Applications**.  
+1. In the Configuration Manager console, choose **Software Library** > **Application Management** > **Applications**.  
 
-3.  In the **Home** tab, in the **Create** group, choose **Create Application** to open the **Create Application** Wizard.  
+2. In the **Home** tab, in the **Create** group, choose **Create Application** to open the **Create Application** Wizard.  
 
-4.  On the **General** page, select **Automatically detect information about this application from installation files**.  
+3. On the **General** page, select **Automatically detect information about this application from installation files**.  
 
-5.  In the **Type** drop-down list, select **App package for iOS (\*.ipa file)**.  
+4. In the **Type** drop-down list, select **App package for iOS (\*.ipa file)**.  
 
-6.  Choose **Browse** to select the app package you want to import, and then choose **Next**.  
+5. Choose **Browse** to select the app package you want to import, and then choose **Next**.  
 
-7.  On the **General Information** page, enter the descriptive text and category information that you want users to see in the company portal.  
+6. On the **General Information** page, enter the descriptive text and category information that you want users to see in the company portal.  
 
-8.  Complete the wizard.  
+7. Complete the wizard.  
 
- The new application is displayed in the **Applications** node of the **Software Library** workspace.  
+   The new application is displayed in the **Applications** node of the **Software Library** workspace.  
 
 ### Create an application that contains a link to a policy managed app  
 
-1.  In the Configuration Manager console, choose **Software Library** > **Application Management** > **Applications**.  
+1. In the Configuration Manager console, choose **Software Library** > **Application Management** > **Applications**.  
 
-3.  In the **Home** tab, in the **Create** group, choose **Create Application** to open the **Create Application** Wizard.  
+2. In the **Home** tab, in the **Create** group, choose **Create Application** to open the **Create Application** Wizard.  
 
-4.  On the **General** page, select **Automatically detect information about this application from installation files**.  
+3. On the **General** page, select **Automatically detect information about this application from installation files**.  
 
-5.  In the **Type** drop-down, select one of the following:  
+4. In the **Type** drop-down, select one of the following:  
 
-    -   For iOS: **App Package for iOS from App Store**  
+   -   For iOS: **App Package for iOS from App Store**  
 
-    -   For Android: **App Package for Android on Google Play**  
+   -   For Android: **App Package for Android on Google Play**  
 
-6.  Enter the URL for the app (from step 1), and then choose **Next**.  
+5. Enter the URL for the app (from step 1), and then choose **Next**.  
 
-7.  On the **General Information** page, enter the descriptive text and category information that you want users to see in the company portal.  
+6. On the **General Information** page, enter the descriptive text and category information that you want users to see in the company portal.  
 
-8.  Complete the wizard.  
+7. Complete the wizard.  
 
- The new application is displayed in the **Applications** node of the **Software Library** workspace.  
+   The new application is displayed in the **Applications** node of the **Software Library** workspace.  
 
 ##  Step 3: Create an application management policy  
  Next, create an application management policy that you associate with the application. You can create a general or managed browser policy.  
@@ -148,13 +148,13 @@ For more information, see [Manage Internet access using managed browser policies
 ##  Step 5: Monitor the app deployment  
  Once you have created and deployed an app that's associated with a mobile application management policy, you can monitor the app and resolve any policy conflicts.  
 
-1.  In the Configuration Manager console, choose **Software Library** > **Overview** > **Deployments**.  
+1. In the Configuration Manager console, choose **Software Library** > **Overview** > **Deployments**.  
 
-3.  Select the deployment that you created. Then, on the **Home** tab, choose **Properties**.  
+2. Select the deployment that you created. Then, on the **Home** tab, choose **Properties**.  
 
-4.  In the details pane for the deployment, under **Related Objects**, choose **Application Management Policies**.  
+3. In the details pane for the deployment, under **Related Objects**, choose **Application Management Policies**.  
 
- For more information about monitoring applications, see [Monitor applications](/sccm/apps/deploy-use/monitor-applications-from-the-console).  
+   For more information about monitoring applications, see [Monitor applications](/sccm/apps/deploy-use/monitor-applications-from-the-console).  
 
 ##  Learn how policy conflicts are resolved  
  When there is a mobile application management policy conflict on the first deployment to the user or device, the specific setting value that's in conflict is removed from the policy that's deployed to the app. Then the app uses a built-in conflict value.  

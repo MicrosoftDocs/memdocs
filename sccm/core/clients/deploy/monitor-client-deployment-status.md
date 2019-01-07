@@ -22,33 +22,33 @@ Deploying clients across your site takes time and some installations are not suc
 
  In the **Monitoring** workspace of the console, you can monitor the following statuses for client deployments taking place within a collection that you specify:  
 
--   Compliant  
+- Compliant  
 
--   In progress  
+- In progress  
 
--   Not compliant  
+- Not compliant  
 
--   Failed  
+- Failed  
 
--   Unknown  
+- Unknown  
 
- Configuration Manager reports on deployments for production clients or pre-production clients. The Configuration Manager console also provides a chart of failed client deployments over a specified period of time to help you determine if actions you to take to troubleshoot deployments are improving the deployment success rate over time.  
+  Configuration Manager reports on deployments for production clients or pre-production clients. The Configuration Manager console also provides a chart of failed client deployments over a specified period of time to help you determine if actions you to take to troubleshoot deployments are improving the deployment success rate over time.  
 
 ## To monitor client deployments  
 
--   In the Configuration Manager console, click **Monitoring** > **Client Status**.  
+- In the Configuration Manager console, click **Monitoring** > **Client Status**.  
 
--   Click **Production Client Deployment** or **Pre-production Client Deployment** depending on the version of client you want to monitor.  
+- Click **Production Client Deployment** or **Pre-production Client Deployment** depending on the version of client you want to monitor.  
 
--   Review the charts of client deployment status and client deployment failure.  
+- Review the charts of client deployment status and client deployment failure.  
 
--   If you want to change the scope of the report, click **Browse...** and choose a different collection.  
+- If you want to change the scope of the report, click **Browse...** and choose a different collection.  
 
- To learn more about pre-production client deployments, see [How to test client upgrades in a pre-production collection in System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md).
+  To learn more about pre-production client deployments, see [How to test client upgrades in a pre-production collection in System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md).
 
- > [!NOTE]
- > The deployment status on computers hosting site system roles in a pre-production collection may be reported as **Not compliant** even when the client was successfully deployed. When you promote the client to production, the deployment status is reported correctly.   
+  > [!NOTE]
+  > The deployment status on computers hosting site system roles in a pre-production collection may be reported as **Not compliant** even when the client was successfully deployed. When you promote the client to production, the deployment status is reported correctly.   
 
- To monitor the status of deployed clients, see [How to monitor clients in System Center Configuration Manager](../../../core/clients/manage/monitor-clients.md)  
+  To monitor the status of deployed clients, see [How to monitor clients in System Center Configuration Manager](../../../core/clients/manage/monitor-clients.md)  
 
- You can use Configuration Manager reports to find out more information about the status of clients in your site. For more information about how to run reports, see [Reporting in System Center Configuration Manager](../../../core/servers/manage/reporting.md).  
+  You can use Configuration Manager reports to find out more information about the status of clients in your site. For more information about how to run reports, see [Reporting in System Center Configuration Manager](../../../core/servers/manage/reporting.md).  

@@ -50,11 +50,11 @@ Class SMS_PackageToAdvert_a : SMS_BaseAssociation
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Association: ToInstance  
+- Association: ToInstance  
 
--   Read (read-only)  
+- Read (read-only)  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
 ## Requirements  
 
