@@ -126,7 +126,7 @@ You can now wake up clients from the Configuration Manager console, even if the 
 
 ### New option to perform client notification from devices node
 <!--1317364-->
-Up until 1810 the **Client Notification** option was only available from either the Device Collection node or when you were viewing membership of a Device Collection. It is now possible to perform a **Client Notification** from the **Devices** node directly. There is no longer a requirement of being within a collection membership view. 
+Up until 1810, the **Client Notification** option was only available from either the Device Collection node or when you viewed the membership of a Device Collection. It's now possible to perform a **Client Notification** from the **Devices** node directly. There's no longer a requirement to be within a collection membership view. 
 
 For more information, see [Client notifications](/sccm/core/clients/manage/client-notification).
 
