@@ -2,7 +2,7 @@
 title: Troubleshooting Desktop Analytics
 titleSuffix: Configuration Manager
 description: Technical details to help you troubleshoot issues with Desktop Analytics.
-ms.date: 12/30/2018
+ms.date: 01/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -105,15 +105,50 @@ These columns correspond to the key [prerequisites](/sccm/desktop-analytics/over
 
 Select a device to see the full list of available properties in the detail pane. You can also add any of these properties as columns to the device list. 
 
+
 ### <a name="bkmk_config-issues"></a> Desktop Analytics device properties in Configuration Manager
 
+The following columns are available in the device list:
+- [Appraiser configuration](#appraiser-configuration)  
+- [Minimum compatibility update](#minimum-compatibility-update)  
+- [Appraiser version](#appraiser-version)  
+- [Last successful full run of Appraiser](#last-successful-full-run-of-appraiser)  
+- [Appraiser data collection](#appraiser-data-collection)  
+- [Last successful full run of Census](#last-successful-full-run-of-census)  
+- [Census data collection](#census-data-collection)  
+- [Windows diagnostic endpoint connectivity](#windows-diagnostic-endpoint-connectivity)  
+- [Check end-user diagnostic data](#check-end-user-diagnostic-data)  
+- [Check user proxy](#check-user-proxy)  
+- [Commercial ID configuration](#commercial-id-configuration)  
+- [Windows commercial data opt-in](#windows-commercial-data-opt-in)  
+- [Check device name in diagnostic data](#check-device-name-in-diagnostic-data)  
+- [DiagTrack service configuration](#diagtrack-service-configuration)  
+- [DiagTrack version](#diagtrack-version)  
+- [SQM ID retrieval](#sqm-id-retrieval)  
+- [Unique device identifier retrieval](#unique-device-identifier-retrieval)  
+- [Windows diagnostic data opt-in](#windows-diagnostic-data-opt-in)  
+- [Office diagnostic endpoint connectivity](#office-diagnostic-endpoint-connectivity)  
+
 #### Appraiser configuration
-<!--not sure which checks this covers-->
+<!--20,21-->
+If this check is successful, then the appraiser component is properly configured on the device. 
+
+Otherwise, it might display one of the following errors:
+
+- Can't configure device app compatiblity data collection (SetRequestAllAppraiserVersions). Check the logs for the exception details  
+
+- Can't configure device app compatiblity data collection (SetRequestAllAppraiserVersions). Check the logs for the exception details  
+
+- Can't write the RequestAllAppraiserVersions to registry key `HKLM:\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\AppCompatFlags\Appraiser`. Check permissions  
+
+Check the permissions on this registry key. Make sure that the local System account can access this key for the Configuration Manager client to set.  
+
+For more information, review M365AHandler.log on the client.  
 
 
 #### Minimum compatibility update
-<!--32-->
-The compatibility update (appraiser.dll) is out of date on the device. It's older than the minimum requirement for Desktop Analytics. 
+<!--18,19,32-->
+The compatibility update (appraiser.dll) isn't installed or out of date on the device. It's older than the minimum requirement for Desktop Analytics. 
 
 Install the latest compatibility update. For more information, see [Compatibility updates](/sccm/desktop-analytics/set-up#compatibility-updates).
 
@@ -122,98 +157,153 @@ Install the latest compatibility update. For more information, see [Compatibilit
 This property displays the current version of the Appraiser component on the device. It shows the file version on `%windir%\System32\appraiser.dll`, without the decimal points. For example, file version 10.0.17763 displays as 10017763. 
 
 
-#### Appraiser run status
-<!--22-->
-This property shows the latest result from the appraiser component. It might show one of the following entries:
-- Successful
-- Error
-- Can't collect app compatibility data (RunAppraiser). Check the logs for details
-
-Check the logs<!--which ones?--> for the exception message and HResult. 
-
-Check for the following file: `%windir%\System32\CompatTelRunner.exe`. If it doesn't exist, reinstall the required [compatibility updates](/sccm/desktop-analytics/set-up#compatibility-updates). Make sure no other system component is removing this file, such as group policy or an antimalware service. 
-
-
 #### Last successful full run of Appraiser
 This property displays the date and time that the device last successfully ran Appraiser.
 
 
 #### Appraiser data collection
-<!--what's the difference between this and Appraiser run status, which seems to have the same errors?-->
+<!--Appraiser run status-->
+<!--22,33-->
+This property shows the latest result from Windows running the appraiser component. 
 
-#### Census run status
-<!--51? 52?-->
+If not successful, it might show one of the following errors: 
+
+- Can't collect app compatibility data (RunAppraiser). Check the logs for details  
+
+- App compatibility data collection (CompatTelRunner.exe) ended with an error code  
+
+For more information, review M365AHandler.log on the client. 
+
+Check for the following file: `%windir%\System32\CompatTelRunner.exe`. If it doesn't exist, reinstall the required [compatibility updates](/sccm/desktop-analytics/set-up#compatibility-updates). Make sure no other system component is removing this file, such as group policy or an antimalware service. 
+
 
 
 #### Last successful full run of Census
 This property displays the date and time that the device last successfully ran Census. 
 
 #### Census data collection
-<!--what's the difference between this and Census run status? How can this be successful is Census run status shows error?-->
+<!-- Census run status -->
+<!--51,52-->
+This property shows the latest result from Windows running the census component.
+
+If not successful, it might show one of the following errors: 
+
+- Can't collect data about the device and its configuration (RunCensus). Check the logs for the exception details  
+
+- Device and configuration data collection tool (devicecensus.exe) not found  
+
+For more information, review M365AHandler.log on the client. 
+
+Check for the following file: `%windir%\System32\DeviceCensus.exe`. If it doesn't exist, reinstall the required [compatibility updates](/sccm/desktop-analytics/set-up#compatibility-updates). Make sure no other system component is removing this file, such as group policy or an antimalware service. 
 
 
 #### Windows diagnostic endpoint connectivity
-<!--12, 15-->
+<!--12,15-->
 If this check is successful, then the device is able to connect to the connected user experience and telemetry endpoint (Vortex). 
 
-Otherwise, it may show one of the following errors:
-- Can't connect to the connected user experience and telemetry endpoint (Vortex). Check your network/proxy settings  
-- Can't check connectivity to the connected user experience and telemetry endpoint (CheckVortexConnectivity). Check the logs for the exception details<!--which specific logs?-->  
+Otherwise, it may show one of the following errors:  
 
-Windows 10 devices verify connectivity with a GET request to `https://v10.vortex-win.data.microsoft.com/health/keepalive`. Windows 7 and Windows 8.1 devices verify connectivity with a GET request to `https://vortex-win.data.microsoft.com/health/keepalive`. 
+- Can't connect to the connected user experience and telemetry endpoint (Vortex). Check your network/proxy settings  
+
+- Can't check connectivity to the connected user experience and telemetry endpoint (CheckVortexConnectivity). Check the logs for the exception details  
+
+Windows 10 devices verify connectivity with a GET request to `https://v10.vortex-win.data.microsoft.com/health/keepalive` or `https://v10c.vortex-win.data.microsoft.com/health/keepalive`. Windows 7 and Windows 8.1 devices verify connectivity with a GET request to `https://vortex-win.data.microsoft.com/health/keepalive`. 
 
 Make sure the device is able to communicate with the service. For more information, see [Endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
 
+For more information, review M365AHandler.log on the client.  
+
 
 #### Check end-user diagnostic data
-<!--1004?-->
+<!--1004-->
 
-<!-- End user disabled Windows diagnostic data on the device -->
+If this check isn't successful, a user selected a lower Windows diagnostic data on the device.
+
+Depending upon your business requirements, you can disable user choice via group policy. Use the setting to **Configure telemetry opt-in setting user interface**. For more information, see [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management).
 
 
-#### Check User Proxy
-<!--30, 35?-->
+#### Check user proxy
+<!--30,35-->
 
-<!-- 
-Authentication proxy is enabled. Set DisableEnterpriseAuthProxy to 0 in HKLM\Software\Policies\Microsoft\Windows\DataCollection 
+The DisableEnterpriseAuthProxy setting is enabled by default for Windows 7. For Windows 8.1 computers, Configuration Manager sets the DisableEnterpriseAuthProxy setting to 0 (not disabled).
 
-Can't check for the Authentication proxy status. Check the logs for the exception details
+This property may display the following errors:
 
--->
+- Authentication proxy is enabled. Set DisableEnterpriseAuthProxy to 0 in `HKLM\Software\Policies\Microsoft\Windows\DataCollection` 
+
+- Can't check for the Authentication proxy status. Check the logs for the exception details
+
+For more information, review M365AHandler.log on the client.  
+
+Check the permissions on this registry key. Make sure that the local System account can access this key for the Configuration Manager client to set.  
 
 
 #### Commercial ID configuration
-<!--9, 11, 53, 64 -->
+<!--9, 11, 53-->
+Microsoft uses a unique commercial ID to map information from devices to your Desktop Analytics workspace. Configuration Manager should automatically apply this ID to clients to which you target Desktop Analytics settings. 
 
-<!-- 
-Failed to write Commercial Id to registry. Error creating or updating registry key: CommercialId at HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection	Can't write the CommercialId to registry key HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection. Check permissions
+If this check is successful, then the device is properly configured with a commercial ID.
 
-Function SetupCommercialId failed with an unexpected exception	Can't update the CommercialId in registry key HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection. Check the logs for the exception details
+Otherwise, it may show one of the following errors:
 
-There is a different CommercialID present at the GPO path: HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection. This will take precedence over the CommercialID provided in the script.	Provide the correct CommercialId value at HKLM:\SOFTWARE\Policies\Microsoft \Windows\DataCollection
+- Can't write the CommercialId to registry key `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`. Check permissions  
 
-An error occurred when creating or updating the registry key CommercialDataOptIn at HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection	Can't write CommercialDataOptIn to registry key HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection. Check permissions 
--->
+- Can't update the CommercialId in registry key `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`. Check the logs for the exception details   
+
+- Provide the correct CommercialId value at `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`  
+
+For more information, review M365AHandler.log on the client.  
+
+Check the permissions on this registry key. Make sure that the local System account can access this key for the Configuration Manager client to set.  
+
+There's a different ID for the device. This registry key is used by group policy. It takes precedence over the ID provided by Configuration Manager.  
 
 
 #### Windows commercial data opt-in
-<!--?-->
+<!--64-->
+
+This property is specific to devices running Windows 7 or Windows 8.1. It runs similar tests as [Windows diagnostic data opt-in](#windows-diagnostic-data-opt-in), except for the CommercialDataOptIn value.
 
 
 #### Check device name in diagnostic data
-<!--58-->
+<!--56,58-->
 
-Can't check for the device name to be sent to Microsoft as part of the Windows diagnostic data. Check the logs for the exception details<!-- which specific log? -->
+If this check is successful, then the device is properly configured to share the device name.
+
+Otherwise, it may show one of the following errors:
+
+- Can't check for the device name to be sent to Microsoft as part of the Windows diagnostic data. Check the logs for the exception details  
+
+- Can't write AllowDeviceNameInTelemetry to registry key `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`. Check permissions  
+
+For more information, review M365AHandler.log on the client.  
+
+Check the permissions on this registry key. Make sure that the local System account can access this key for the Configuration Manager client to set.  
+
+Make sure that another policy mechanism, such as group policy, isn't disabling this setting. 
 
 
 #### DiagTrack service configuration
-<!--44, 45, 50-->
+<!--44,45,50-->
+If this check is successful, then the DiagTrack component is properly configured on the device. 
 
-- Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements
-- Can't find the Connected User Experience and telemetry (diagtrack.dll) component. Check requirements
-- Enable and start the Connected User Experiences and Telemetry service to send data to Microsoft
-- An updated Connected User Experience and Telemetry (diagtrack.dll) component is available. Check requirements
+Otherwise, it might display one of the following errors:
 
+- Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements  
+
+- Can't find the Connected User Experience and telemetry (diagtrack.dll) component. Check requirements  
+
+- Enable and start the Connected User Experiences and Telemetry service to send data to Microsoft  
+
+<!--
+ - An updated Connected User Experience and Telemetry (diagtrack.dll) component is available. Check requirements - this is for the newer version that improves performance
+ -->
+
+<!--include something about diagtrack perf update https://go.microsoft.com/fwlink/?linkid=2011593-->
+
+Install the latest compatibility update. For more information, see [Compatibility updates](/sccm/desktop-analytics/set-up#compatibility-updates).
+
+Make sure that the **Connected User Experiences and Telemetry** service on the device is running.
 
 #### DiagTrack version
 This property displays the current version of the Connected User Experience and Telemetry component on the device. It shows the file version on `%windir%\System32\diagtrack.dll`, without the decimal points. For example, file version 10.0.10242 displays as 10010242. 
@@ -221,18 +311,50 @@ This property displays the current version of the Connected User Experience and 
 #### SQM ID retrieval
 <!--38-->
 
+This property is primarily for Windows 7 devices. It may be used by later OS versions as a fallback identifier. 
+
+If not successful, it may display the following error:
+
 - Can't retrieve the legacy device telemetry identifier (SQM ID)
+
+For more information, review M365AHandler.log on the client.  
+
+Make sure you don't have duplicate IDs in your environment. For example, if devices were deployed with an OS image that wasn't generalized. 
+
+
+#### Unique device identifier retrieval
+<!--54-->
+Desktop Analytics uses the Microsoft Account service for a more reliable device identity. 
+
+Make sure the **Microsoft Account Sign-In Assistant** service isn't disabled. The startup type should be **Manual (Trigger Start)**.
+
+To disable end-user Microsoft account access, use policy settings instead of blocking this endpoint. For more information, see [The Microsoft account in the enterprise](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication).
 
 
 #### Windows diagnostic data opt-in
-<!-- ? -->
+<!--8,40,55,62-->
+This property checks that Windows is properly configured to allow diagnostic data. It checks the AllowTelemetry value in the following registry keys:
+
+- `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`
+- `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
+
+Check the permissions on these registry keys. Make sure that the local System account can access these keys for the Configuration Manager client to set.  
+
+For more information, review M365AHandler.log on the client.  
+
 
 #### Office diagnostic endpoint connectivity
 <!-- 1001,1002,1003 -->
 
-- Can't connect to the Office diagnostic endpoint (Aria). Check your network/proxy settings
-- Can't connect to the Office diagnostic endpoint (Nexusrules). Check your network/proxy settings
-- Can't connect to the Office diagnostic endpoint (Nexus). Check your network/proxy settings
+If this check is successful, then the device is able to connect to the Office diagnostic endpoints. 
+
+Otherwise, it may show one of the following errors:
+
+- Can't connect to the Office diagnostic endpoint (Aria). Check your network/proxy settings  
+
+- Can't connect to the Office diagnostic endpoint (Nexusrules). Check your network/proxy settings  
+
+- Can't connect to the Office diagnostic endpoint (Nexus). Check your network/proxy settings  
 
 Make sure the device is able to communicate with the service. For more information, see [Endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
 
