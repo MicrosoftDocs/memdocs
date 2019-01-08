@@ -124,7 +124,11 @@ For more information, see [Management insights](/sccm/core/servers/manage/manage
 <!--1317364-->
 You can now wake up clients from the Configuration Manager console, even if the client isn't on the same subnet as the site server. If you need to do maintenance or query devices, you're not limited by remote clients that are asleep. The site server uses the client notification channel to identify another client that's awake on the same remote subnet. The awake client then sends a wake on LAN request (magic packet).
 
-<!--For more information, see [Plan how to wake up clients](/sccm/core/clients/deploy/plan/plan-wake-up-clients).-->
+### New option to perform client notification from devices node
+<!--1317364-->
+Up until 1810 the **Client Notification** option was only available from either the Device Collection node or when you were viewing membership of a Device Collection. It is now possible to perform a **Client Notification** from the **Devices** node directly. There is no longer a requirement of being within a collection membership view. 
+
+For more information, see [Client notifications](/sccm/core/clients/manage/client-notification).
 
 
 ### Improvements to collection evaluation
