@@ -18,7 +18,7 @@ ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
 <!-- 1350871 -->
 Co-management enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune. It lets you cloud-attach your existing investment in Configuration Manager by adding new functionality. By using co-management, you have the flexibility to use the technology solution that works best for your organization. 
 
-When a Windows 10 device has the Configuration Manager client and is enrolled to Intune, you get the benefits of both services. You control which workloads, if any, you switch the authority from Configuration Manager to Intune. Configuration Manager continues to manage all other workloads. These workloads include those that you don't switch to Intune, and all other features of Configuration Manager that co-management doesn't support.
+When a Windows 10 device has the Configuration Manager client and is enrolled to Intune, you get the benefits of both services. You control which workloads, if any, you switch the authority from Configuration Manager to Intune. Configuration Manager continues to manage all other workloads, including those workloads that you don't switch to Intune, and all other features of Configuration Manager that co-management doesn't support.
 
 You're also able to pilot a workload with a separate collection of devices. Piloting allows you to test the Intune functionality with a subset of devices before switching a larger group. 
 
@@ -69,6 +69,9 @@ Co-management also enables you to orchestrate with Intune for several workloads.
 
 Update to Configuration Manager version 1710 or later.
 
+Starting in Configuration Manager version 1802, to enable co-management, your administrative user account in Configuration Manager must be a **Full Administrator** with **All** security scopes. For more information, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).<!--SCCMDoc issue 626-->  
+
+
 
 ### Azure AD
 
@@ -88,6 +91,9 @@ For more information, see [Set up Intune](/intune/setup-steps).
 > [!Note]  
 > If you have a hybrid MDM environment (Intune integrated with Configuration Manager), you can't enable co-management. However, you can start migrating users to Intune standalone and then enable their associated Windows 10 devices for co-management. For more information about migrating to Intune standalone, see [Start migrating from hybrid MDM to Intune standalone](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).  
 
+> [!Tip]  
+> Make sure you assign an Intune license to the account that you use to sign in to your tenant. Otherwise, sign in fails with the error message "User not recognized".  
+
 
 ### Windows 10, version 1709 or later
 
@@ -97,7 +103,7 @@ Upgrade your devices to Windows 10, version 1709 or later. For more information,
 
 ## Workloads 
 
-You don't have to switch the workloads, or you can do them individually when you're ready. Configuration Manager continues to manage all other workloads. These workloads include those that you don't switch to Intune, and all other features of Configuration Manager that co-management doesn't support.
+You don't have to switch the workloads, or you can do them individually when you're ready. Configuration Manager continues to manage all other workloads, including those workloads that you don't switch to Intune, and all other features of Configuration Manager that co-management doesn't support.
 
 Co-management supports the following workloads:
 

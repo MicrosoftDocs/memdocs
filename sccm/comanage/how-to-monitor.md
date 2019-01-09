@@ -16,6 +16,19 @@ manager: dougeby
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
+
+After you enable co-management, monitor co-management devices using the following methods:
+
+- [Co-management dashboard](#co-management-dashboard)  
+
+- [Deployment policies](#deployment-policies)
+
+- [WMI device data](#wmi-device-data)
+
+
+
+## Co-management dashboard
+
 Starting in version 1802, view a dashboard with information about co-management. The dashboard helps you review machines that are co-managed in your environment. The graphs can help identify devices that might need attention.<!--1356648-->
 
 In the Configuration Manager console, go to the **Monitoring** workspace, and select the **Co-management** node.
@@ -117,3 +130,25 @@ Hover over a chart section to show the number of devices transitioned for the wo
 ![Workload transition bar graph](media/co-management-dashboard/Workload-Transition.PNG)
 
 
+
+## Deployment policies
+
+Two policies are created in the **Deployments** node of the **Monitoring** workspace. One policy is for the pilot group and one for production. These policies report only the number of devices where Configuration Manager has applied the policy. They don't consider how many devices are enrolled in Intune, which is a requirement before devices can be co-managed.  
+
+
+
+## WMI device data
+
+Query the **SMS_Client_ComanagementState** WMI class. You can create custom collections in Configuration Manager, which help determine the status of your co-management deployment. For more information on creating custom collections, see [How to create collections](/sccm/core/clients/manage/collections/create-collections). 
+
+The following fields are available in the WMI class:  
+
+- **MachineId**: A unique device ID for the Configuration Manager client  
+
+- **MDMEnrolled**: Specifies whether the device is MDM-enrolled  
+
+- **Authority**: The authority for which the device is enrolled  
+
+- **ComgmtPolicyPresent**: Specifies whether the Configuration Manager co-management policy exists on the client. If the **MDMEnrolled** value is **0**, the device isn't co-managed regardless whether the co-management policy exists on the client.  
+
+A device is co-managed when the **MDMEnrolled** field and **ComgmtPolicyPresent** fields both have a value of **1**.  
