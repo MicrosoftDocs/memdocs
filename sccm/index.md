@@ -106,7 +106,7 @@ ms.topic: hub-page
                                                 <h3>Protect data and infrastructure</h3>
                                                 <p><a href="/sccm/protect/deploy-use/manage-access-to-services">Conditional access</a></p>
                                                 <p><a href="/sccm/protect/deploy-use/endpoint-protection">Endpoint protection for Windows Defender</a></p>
-                                                <p><a href="/sccm/protect/deploy-use/windows-hello-for-business-settings">Windows Hello for Business</a></p>
+                                                <p><a href="/sccm/protect/deploy-use/windows-defender-advanced-threat-protection">Windows Defender Advanced Threat Protection</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -537,18 +537,18 @@ ms.topic: hub-page
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/protect/deploy-use/windows-hello-for-business-settings">
+                                <a href="/sccm/protect/deploy-use/windows-defender-advanced-threat-protection">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/bcs-partner-advanced-management-password-3.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/bcs-partner-policies-view-policies-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Windows Hello for Business</h3>
-                                                <p>Create policies to manage alternative sign-in methods for Windows 10 devices.</p>
+                                                <h3>Windows Defender Advanced Threat Protection</h3>
+                                                <p>Integrate with the Windows Defender ATP cloud service to protect against advanced attacks.</p>
                                             </div>
                                         </div>
                                     </div>
