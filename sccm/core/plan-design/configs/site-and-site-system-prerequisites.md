@@ -323,6 +323,8 @@ For more information, see [Install and configure distribution points](/sccm/core
 
 -   .NET Framework 3.5 SP1 (or later)  
 
+-   Windows Defender features  
+
 
 
 ##  <a name="bkmk_2012Enrollpreq"></a> Enrollment point  
