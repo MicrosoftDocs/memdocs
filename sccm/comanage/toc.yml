@@ -1,6 +1,6 @@
 - name: Co-management
   items:
-  - name: Overview
+  - name: What is co-management?
     href: overview.md
   - name: Quickstarts
     href: quickstarts.md
