@@ -26,23 +26,23 @@ This information may change in the future. It might not include each deprecated 
 
 |**Operating systems**|**Deprecation first announced**|**Support removed** |  
 |-|-|-| 
-|Windows Server 2008 R2|July 10, 2015| Version 1702 <sup>[Note 1](#bkmk_note1)</sup>| 
-|Windows Server 2008|July 10, 2015|Version 1511 <sup>[Note 2](#bkmk_note2)</sup>|  
+|Windows Server 2008 R2 with SP1|July 10, 2015| Version 1702 <sup>[Note 1](#bkmk_note1)</sup>| 
+|Windows Server 2008 with SP2|July 10, 2015|Version 1511 <sup>[Note 2](#bkmk_note2)</sup>|  
 
-#### <a name="bkmk_note1"></a> Note 1: Windows Server 2008 R2
-Windows Server 2008 R2 isn't supported for site servers or most site system roles. This OS is still supported for the distribution point role. This support includes pull-distribution points, PXE, and multicast. 
+#### <a name="bkmk_note1"></a> Note 1: Windows Server 2008 R2 with SP1
+Windows Server 2008 R2 with Service Pack 1 isn't supported for site servers or most site system roles. This OS is still supported for the distribution point role. This support includes pull-distribution points, PXE, and multicast. 
 
 > [!Important]  
-> The extended support end date for Windows Server 2008 R2 is January 14, 2020. After this date, Configuration Manager won't support this OS in any capacity. 
+> The extended support end date for Windows Server 2008 R2 with SP1 is January 14, 2020. After this date, Configuration Manager won't support this OS in any capacity. 
 
 You can upgrade the site server OS from Windows Server 2008 R2 to Windows Server 2012 R2. For more information, see [In-place upgrade the operating system of site servers that run Windows Server 2008 R2](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#bkmk_from2008r2).  
 
 
-#### <a name="bkmk_note2"></a> Note 2: Windows Server 2008
-Windows Server 2008 isn't supported for site servers or most site system roles. This OS is still supported for the distribution point role. This support includes pull-distribution points, PXE, and multicast. 
+#### <a name="bkmk_note2"></a> Note 2: Windows Server 2008 with SP2
+Windows Server 2008 with Service Pack 2 isn't supported for site servers or most site system roles. This OS is still supported for the distribution point role. This support includes pull-distribution points, PXE, and multicast. 
 
 > [!Important]  
-> The extended support end date for Windows Server 2008 is January 14, 2020. After this date, Configuration Manager won't support this OS in any capacity.  
+> The extended support end date for Windows Server 2008 with SP2 is January 14, 2020. After this date, Configuration Manager won't support this OS in any capacity.  
 
 
 
