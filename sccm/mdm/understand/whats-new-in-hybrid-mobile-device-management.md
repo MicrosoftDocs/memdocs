@@ -65,9 +65,9 @@ The new [Tenant Status page](https://docs.microsoft.com/intune/tenant-status) pr
 The new Company Portal Help & Support page helps users troubleshoot and request help for app and access problems. From the new page, they can email error and diagnostic log details and find their organization's helpdesk details. They'll also find a FAQ section with links to the relevant Intune documentation. For more information and screenshots, see [Get help and support in Company Portal for Windows 10](https://docs.microsoft.com/intune-user-help/help-and-support-windows-cpapp).
 
 #### Some BitLocker settings support Windows 10 Pro edition
-<!--2727036-->​
-​You can create a configuration item that sets endpoint protection settings on Windows 10 devices, including BitLocker. This update adds support for Windows 10 Professional edition for some BitLocker settings. ​
-​
+<!--2727036-->
+You can create a configuration item that sets endpoint protection settings on Windows 10 devices, including BitLocker. This update adds support for Windows 10 Professional edition for some BitLocker settings.
+
 For more information, see [Encryption settings for Windows 10](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client#encryption).
 
 #### Intune app protection policies UI update 
