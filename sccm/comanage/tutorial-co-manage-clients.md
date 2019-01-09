@@ -20,7 +20,7 @@ ms.assetid:
 
 
 # Tutorial: Enable co-management for existing Configuration Manager clients
-With co-management, you can retain your well-established processes for using Configuration Manager to manage PCs in your organization. At the same time, your investing in the cloud through use of Intune for security and modern provisioning.  
+With co-management, you can retain your well-established processes for using Configuration Manager to manage PCs in your organization. At the same time, you're investing in the cloud through use of Intune for security and modern provisioning.  
 
 In this tutorial, you set up co-management of your Windows 10 devices that are already enrolled in Configuration Manager. This tutorial begins with the premise that you already use Configuration Manager to manage your Windows 10 devices.
 
@@ -66,7 +66,7 @@ Throughout this tutorial, use the following permissions to complete tasks:
 - An account that is a *full administrator* for *all* scopes in Configuration Manager   
 
 ## Set up hybrid Azure AD
-When you set up a hybrid Azure AD, your really setting up integration of an on-premises AD with Azure AD using Azure AD Connect and Active Directory Federated Services (ADFS). With successful configuration, your workers can seamlessly sign in to external systems using their on-premises AD credentials.
+When you set up a hybrid Azure AD, you're really setting up integration of an on-premises AD with Azure AD using Azure AD Connect and Active Directory Federated Services (ADFS). With successful configuration, your workers can seamlessly sign in to external systems using their on-premises AD credentials.
 
 > [!IMPORTANT]  
 > This tutorial details a bare-bones process to set up hybrid Azure AD for a managed domain. We recommend you be familiar with the process and not rely on this tutorial as your guide to understanding and deploying hybrid Azure AD.
@@ -212,7 +212,7 @@ With hybrid Azure AD set up, Configuration Manager client configurations in plac
 7. On the Summary page, select **Next**, and then **Close** to complete the Wizard.  
 
 
-## Next Steps
+## Next steps
 - Review the status of co-managed devices with the [Co-management dashboard](/sccm/core/clients/manage/co-management-dashboard)
 - Start getting [immediate value](quickstarts.md#immediate-value) from co-management
 - Use [conditional access](quickstart-conditional-access.md) and Intune compliance rules to manage user access to corporate resources
