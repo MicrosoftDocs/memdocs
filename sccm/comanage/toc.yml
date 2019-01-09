@@ -19,6 +19,7 @@
   - name: Tutorials
     items:
     - name: Enable co-management for Configuration Manager clients
+      href: tutorial-co-manage-clients.md
   - name: How-to guides
     items:
     - name: Prepare Windows 10 devices
