@@ -133,6 +133,9 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
     -   **User notifications**: Specify whether to display notification in Software Center at the configured **Software available time**. This setting also controls whether to notify users on the clients.  
 
     -   **Deadline behavior**: Specify the behaviors when the software update deployment reaches the deadline outside of any defined maintenance windows. The options include whether to install the software updates, and whether to perform a system restart after installation. For more information about maintenance windows, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows).  
+        
+        >[Note!]
+        > This applies only when maintenance window is configured for the client device. If no maintenance window is defined on the device, update installation and restart will always happen after deadline.
 
     -   **Device restart behavior**: Specify whether to suppress a system restart on servers and workstations if a restart is required to complete update installation.  
 
