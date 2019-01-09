@@ -42,7 +42,7 @@ Each section of this article lists hybrid features under three different categor
 
 
 
-## December 2018
+## January 2019
 
 ### New in Microsoft Intune
 
@@ -66,9 +66,9 @@ The new Company Portal Help & Support page helps users troubleshoot and request 
 
 #### Some BitLocker settings support Windows 10 Pro edition
 <!--2727036-->​
-​You can create a configuration profile that sets endpoint protection settings on Windows 10 devices, including BitLocker. This update adds support for Windows 10 Professional edition for some BitLocker settings. ​
+​You can create a configuration item that sets endpoint protection settings on Windows 10 devices, including BitLocker. This update adds support for Windows 10 Professional edition for some BitLocker settings. ​
 ​
-For more information, see [Endpoint protection settings for Windows 10](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption).
+For more information, see [Encryption settings for Windows 10](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client#encryption).
 
 #### Intune app protection policies UI update 
 <!--3251427-->
@@ -79,6 +79,12 @@ We've changed the labels for settings and buttons for Intune app protection to m
 - Settings are reformatted, so the setting and its label are side-by-side in the control, to provide better navigation.   
 
 The default settings and number of settings remain the same, but this change allows the user to understand, navigate, and utilize the settings more easily to apply selected app protection policies. For more information, see [iOS settings](https://docs.microsoft.com/intune/app-protection-policy-settings-ios#access-requirements) and [Android settings](https://docs.microsoft.com/intune/app-protection-policy-settings-android#access-requirements).
+
+
+
+## December 2018
+
+### New in Microsoft Intune
 
 #### Microsoft Auto Update version 4.5.0 required for macOS devices
 <!--3503442-->
