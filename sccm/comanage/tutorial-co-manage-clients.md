@@ -19,11 +19,10 @@ ms.assetid:
 ---
 
 
-
 # Tutorial: Enable co-management for existing Configuration Manager clients
-With co-management, you can retain your well-established processes for using Configuration Manager to manage PCs in your organization, while investing in the cloud through use of Intune for security and modern provisioning.  
+With co-management, you can retain your well-established processes for using Configuration Manager to manage PCs in your organization. ATthe same time, your investing in the cloud through use of Intune for security and modern provisioning.  
 
-In this tutorial, you’ll set up co-management of your Windows 10 devices that are already enrolled in Configuration Manager. This tutorial begins with the premise that you already use Configuration Manager to manage your Windows 10 devices.
+In this tutorial, you set up co-management of your Windows 10 devices that are already enrolled in Configuration Manager. This tutorial begins with the premise that you already use Configuration Manager to manage your Windows 10 devices.
 
 Use this tutorial when:  
 
@@ -50,7 +49,7 @@ Use this tutorial when:
   > [!TIP]  
   > An Enterprise Mobility + Security (EMS) Subscription includes both Azure Active Directory Premium and Microsoft Intune. EMS Subscription ([free trial](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-trial)).  
 
-If not present in your environment, you will configure the following during this tutorial:
+If not already present in your environment, during this tutorial you'll:
 - Assign users a license for *Intune* and for *Azure Active Directory Premium*
 - Configure [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-select-installation) between your on-premises Active Directory and your Azure Active Directory (AD) tenant
 
@@ -61,13 +60,13 @@ If not present in your environment, you will configure the following during this
 
 
 ### Permissions
-Throughout this tutorial, you'll need the following permissions to complete tasks:  
+Throughout this tutorial, use the following permissions to complete tasks:  
 - An account that is a *global administrator* in Azure  
 - An account that is a *domain admin* on your on-premises infrastructure  
 - An account that is a *full administrator* for *all* scopes in Configuration Manager   
 
 ## Set up hybrid Azure AD
-When we set up a hybrid Azure AD, we are really setting up integration of an on-premises AD with Azure AD using Azure AD Connect and Active Directory Federated Services (ADFS). With successful configuration, your end-users can seamlessly sign in to external systems using their on-premises AD credentials.
+When you set up a hybrid Azure AD, your really setting up integration of an on-premises AD with Azure AD using Azure AD Connect and Active Directory Federated Services (ADFS). With successful configuration, your workers can seamlessly sign in to external systems using their on-premises AD credentials.
 
 > [!IMPORTANT]  
 > This tutorial details a bare-bones process to set up hybrid Azure AD for a managed domain. We recommend you be familiar with the process and not rely on this tutorial as your guide to understanding and deploying hybrid Azure AD.
@@ -82,7 +81,7 @@ When we set up a hybrid Azure AD, we are really setting up integration of an on-
 ### Set up Azure AD Connect  
 Hybrid Azure AD requires configuration of Azure AD Connect to keep computer accounts in your on-premises Active Directory (AD) and the device object in Azure AD in sync.
 
-Beginning with version 1.1.819.0, Azure AD Connect provides you with a wizard to configure hybrid Azure AD join. We’ll use that wizard to simplify the configuration process.  
+Beginning with version 1.1.819.0, Azure AD Connect provides you with a wizard to configure hybrid Azure AD join. Use of that wizard simplifies the configuration process.  
 
 To configure Azure AD Connect, you need credentials of a global administrator for your Azure AD tenant.  
 
@@ -90,7 +89,7 @@ To configure Azure AD Connect, you need credentials of a global administrator fo
 > The following procedure should not be considered authoritative for set up of Azure AD Connect but is provided here to help streamline configuration of co-management between Intune and Configuration Manager. For the authoritative content on this and related procedures for set up of Azure AD, see [Configure hybrid Azure AD join for managed domains](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains) in the Azure AD documentation.  
 
 
-#### To configure a hybrid Azure AD join using Azure AD Connect:
+#### Configure a hybrid Azure AD join using Azure AD Connect
 
 1. Get and install the [latest version of Azure AD Connect](https://www.microsoft.com/download/details.aspx?id=47594) (1.1.819.0 or higher).  
 2. Launch Azure AD Connect, and then select **Configure**.
@@ -98,9 +97,9 @@ To configure Azure AD Connect, you need credentials of a global administrator fo
 4. On the **Overview** page, select **Next**.
 5. On the **Connect to Azure AD** page, enter the credentials of a global administrator for your Azure AD tenant.
 6. On the **Device options** page, select **Configure Hybrid Azure AD join**, and then select **Next**.
-7. On the **SCP** page, for each on-premises forest you want Azure AD Connect to configure the service connection point (SCP), perform the following steps, and then select **Next**:  
-   1 . Select the forest.  
-   2 . Select the authentication service.  If you have a federated domain, you must select AD FS server unless your organization has exclusively Windows 10 clients and you have configured computer/device sync or your organization is using [SeamlessSSO](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso).  
+7. On the **SCP** page, for each on-premises forest you want Azure AD Connect to configure the service connection point (SCP), do the following steps, and then select **Next**:  
+   1. Select the forest.  
+   2. Select the authentication service.  If you have a federated domain, select AD FS server unless your organization has exclusively Windows 10 clients and you have configured computer/device sync or your organization is using [SeamlessSSO](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso).  
    3. Click **Add** to enter the enterprise administrator credentials.  
 8. On the **Device operating systems** page, select the operating systems used by devices in your Active Directory environment, and then select **Next**.  
 
@@ -127,7 +126,7 @@ Use Client Settings to configure Configuration Manager clients to automatically 
 4. Select **OK** to save this configuration.  
 
 ## Configure auto-enrollment of devices to Intune   
-Next, we’ll set up auto-enrollment of devices with Intune. With automatic enrollment, devices you manage with Configuration Manager will automatically enroll with Intune.
+Next, we’ll set up auto-enrollment of devices with Intune. With automatic enrollment, devices you manage with Configuration Manager automatically enroll with Intune.
 
 Automatic enrollment also lets users enroll their Windows 10 devices to Intune. Devices enroll when a user adds their work account to their personally owned device, or when a corporate-owned device is joined to Azure Active Directory.  
 
@@ -161,15 +160,15 @@ To assign licenses to groups of users, use Azure Active Directory.
 
 3. On the **Azure Active Directory** pane, select **Licenses** to open a pane where you can see and manage all licensable products in the tenant.  
 
-4. Under **All products**, select product option you have that includes the Intune license, and then select **Assign** at the top of the pane.  
+4. Under **All products**, select your product option that includes the Intune license, and then select **Assign** at the top of the pane.  
 
    For example, you might select **Enterprise Mobility + Security E5** if that is how you obtain Intune.  
 
 5. On the **Assign license** pane, click **Users and groups** to open the **Users and groups** pane. Select the groups, and individual users to whom you want to assign a license.  Then, click **Select** at the bottom of the pane to confirm that selection.  
 
-6. On the **Assign license** pane, click **Assignment options**, which displays all service plans included in the product you selected previously. If you selected a single product like Intune, then only that product is shown.  
-   - Ensure **Microsoft Intune** is set to **On**.  
-   - In addition to Intune, ensure each user has a license for **Azure Active Directory Premium**.  
+6. On the **Assign license** pane, click **Assignment options** to display all service plans included in the product you selected previously. If you selected a single product like Intune, then only that product is shown.  
+   - Set **Microsoft Intune** to **On**.  
+   - Assign each user a license for **Azure Active Directory Premium**.  
 
    When the applicable licenses are assigned, select **OK**.  
 
@@ -194,7 +193,7 @@ With hybrid Azure AD set up, Configuration Manager client configurations in plac
 
 4. On the Enablement page, from the *Automatic enrollment in Intune* dropdown list, select one of the following options:  
 
-   - **Pilot**  - *(Recommended)* Members of the collection you specify are automatically enrolled into Intune and can then be co-managed. You'll specify the pilot collection on the *Staging* page of this wizard. This option allows you to test co-management on a subset of clients. You can then roll out co-management to additional clients using a phased approach.  
+   - **Pilot**  - *(Recommended)* Members of the collection you specify are automatically enrolled into Intune and can then be co-managed. You specify the pilot collection on the *Staging* page of this wizard. This option allows you to test co-management on a subset of clients. You can then roll out co-management to additional clients using a phased approach.  
 
    - **All** - Co-management is enabled for all clients.  
 
@@ -206,7 +205,7 @@ With hybrid Azure AD set up, Configuration Manager client configurations in plac
 
    You don't need to switch any workloads at the time you enable co-management. You can revisit this configuration from the Configuration Manager console later, after co-management is configured.  
 
-   Before you switch a workload, make sure the corresponding workload in Intune is configured and deployed. Doing so will keep the workloads managed.  
+   Before you switch a workload, make sure the corresponding workload in Intune is configured and deployed. Doing so keeps the workloads managed.  
 
 6. On the Staging page, specify a collection to use for the **Pilot collection**, and then click **Next**. The collection you specify is used as part of your phased rollout of co-management. You can change the collections in the pilot group at any time from the co-management properties.  
 
@@ -215,5 +214,5 @@ With hybrid Azure AD set up, Configuration Manager client configurations in plac
 
 ## Next Steps
 - Review the status of co-managed devices with the [Co-management dashboard](/sccm/core/clients/manage/co-management-dashboard)
-- Discover how you can start getting [immediate value](quickstarts#immediate-value) from co-management.
-- Use [conditional access](quickstart-conditional-access) and Intune compliance rules to manage user access to corporate resources
+- Start getting [immediate value](quickstarts.md#immediate-value) from co-management.
+- Use [conditional access](quickstart-conditional-access.md) and Intune compliance rules to manage user access to corporate resources
