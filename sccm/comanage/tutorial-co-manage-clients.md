@@ -20,7 +20,7 @@ ms.assetid:
 
 
 # Tutorial: Enable co-management for existing Configuration Manager clients
-With co-management, you can retain your well-established processes for using Configuration Manager to manage PCs in your organization. ATthe same time, your investing in the cloud through use of Intune for security and modern provisioning.  
+With co-management, you can retain your well-established processes for using Configuration Manager to manage PCs in your organization. At the same time, your investing in the cloud through use of Intune for security and modern provisioning.  
 
 In this tutorial, you set up co-management of your Windows 10 devices that are already enrolled in Configuration Manager. This tutorial begins with the premise that you already use Configuration Manager to manage your Windows 10 devices.
 
@@ -214,5 +214,5 @@ With hybrid Azure AD set up, Configuration Manager client configurations in plac
 
 ## Next Steps
 - Review the status of co-managed devices with the [Co-management dashboard](/sccm/core/clients/manage/co-management-dashboard)
-- Start getting [immediate value](quickstarts.md#immediate-value) from co-management.
+- Start getting [immediate value](quickstarts.md#immediate-value) from co-management
 - Use [conditional access](quickstart-conditional-access.md) and Intune compliance rules to manage user access to corporate resources
