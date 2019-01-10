@@ -75,7 +75,11 @@ Co-management has these prerequisites in the following areas:
 
 ### Licensing
 
+- Azure AD Premium 
 - EMS or Intune license for all users  
+
+    > [!Note]  
+    > An Enterprise Mobility + Security (EMS) subscription includes both Azure Active Directory Premium and Microsoft Intune.
 
 > [!Tip]  
 > Make sure you assign an Intune license to the account that you use to sign in to your tenant. Otherwise, sign in fails with the error message "User not recognized".  
