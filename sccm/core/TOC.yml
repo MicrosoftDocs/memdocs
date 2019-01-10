@@ -639,8 +639,6 @@
       href: clients/manage/co-management-prepare.md
     - name: Switch Configuration Manager workloads to Intune
       href: clients/manage/co-management-switch-workloads.md
-    - name: Tutorial - Enable co-management
-      href: clients/manage/co-management-tutorial.md
     - name: Co-management dashboard
       href: clients/manage/co-management-dashboard.md
   - name: Manage clients on the internet
