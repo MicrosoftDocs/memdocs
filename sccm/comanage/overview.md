@@ -64,13 +64,30 @@ Co-management also enables you to orchestrate with Intune for several workloads.
 
 ## Prerequisites
 
+Co-management has these prerequisites in the following areas:
+
+- [Licensing](#licensing)  
+- [Configuration Manager](#configuration-manager)  
+- [Azure Active Directory](#azure-ad) (Azure AD)  
+- [Microsoft Intune](#intune)  
+- [Windows 10](#windows-10)  
+- [Permissions and roles](#permissions-and-roles)  
+
+### Licensing
+
+- EMS or Intune license for all users  
+
+> [!Tip]  
+> Make sure you assign an Intune license to the account that you use to sign in to your tenant. Otherwise, sign in fails with the error message "User not recognized".  
+
 
 ### Configuration Manager
 
-Update to Configuration Manager version 1710 or later.
+Co-management requires Configuration Manager version 1710 or later.
 
-Starting in Configuration Manager version 1802, to enable co-management, your administrative user account in Configuration Manager must be a **Full Administrator** with **All** security scopes. For more information, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).<!--SCCMDoc issue 626-->  
+Starting in Configuration Manager version 1806, you can connect multiple Configuration Manager instances to a single Intune tenant. <!--1357944-->  
 
+Enabling co-management itself doesn't require that you onboard your site with Azure AD. For the [second path scenario](#paths-to-co-management), internet-based Configuration Manager clients require the [cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) (CMG). The CMG requires the site is [onboarded to Azure AD for cloud management]((/sccm/core/servers/deploy/configure/azure-services-wizard)). 
 
 
 ### Azure AD
@@ -81,7 +98,7 @@ Starting in Configuration Manager version 1802, to enable co-management, your ad
 
     - [Azure AD-joined](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan) only. (This type is sometimes referred to as "cloud domain-joined")<!--SCCMDocs issue 605-->  
 
-- [Enable Windows 10 automatic enrollment](https://docs.microsoft.com/intune/windows-enroll)  
+- [Enable Windows 10 automatic enrollment](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment)  
 
 
 ### Intune
@@ -90,15 +107,31 @@ For more information, see [Set up Intune](/intune/setup-steps).
 
 > [!Note]  
 > If you have a hybrid MDM environment (Intune integrated with Configuration Manager), you can't enable co-management. However, you can start migrating users to Intune standalone and then enable their associated Windows 10 devices for co-management. For more information about migrating to Intune standalone, see [Start migrating from hybrid MDM to Intune standalone](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).  
+> 
+> If you're using [mixed authority](/sccm/mdm/deploy-use/migrate-mixed-authority), first complete the migration to Intune standalone. Then, set the MDM authority to Intune before setting up co-management.<!--SCCMDocs issue #797-->
 
-> [!Tip]  
-> Make sure you assign an Intune license to the account that you use to sign in to your tenant. Otherwise, sign in fails with the error message "User not recognized".  
 
-
-### Windows 10, version 1709 or later
+### Windows 10
 
 Upgrade your devices to Windows 10, version 1709 or later. For more information, see [Adopting Windows as a service](/sccm/core/understand/configuration-manager-and-windows-as-service#key-articles-about-adopting-windows-as-a-service).
 
+> [!IMPORTANT]
+> Windows 10 mobile devices don't support co-management.
+
+
+### Permissions and roles
+<!--SCCMDocs issue #667-->
+
+| Action | Role needed |
+|----|----|
+| Set up a cloud management gateway in Configuration Manager | Azure **Subscription Manager** |
+| Create Azure AD apps from Configuration Manager | Azure AD **Global Administrator** |
+| Import Azure apps in Configuration Manager | Configuration Manager **Full Administrator**<br>No additional Azure roles needed |
+| Enable co-management in Configuration Manager | An Azure AD user<br>Configuration Manager **Full Administrator** with **All** scope rights.<!--SCCMDoc issue 626--> | 
+
+For more information about Azure roles, see [Understand the different roles](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles).
+
+For more information about Configuration Manager roles, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).
 
 
 ## Workloads 

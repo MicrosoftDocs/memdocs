@@ -22,7 +22,7 @@
     items:
     - name: Enable co-management
       href: how-to-enable.md
-    - name: Prepare Windows 10 devices
+    - name: Prepare internet-based devices
       href: how-to-prepare-Win10.md
     - name: Switch workloads to Intune
       href: how-to-switch-workloads.md
