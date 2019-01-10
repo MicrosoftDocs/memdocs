@@ -14,9 +14,11 @@ manager: dougeby
 
 # Cloud-attach with co-management
 
-| | |
-|-|-|
-|![Blastoff series icon](media/blastoff-icon.png) | Co-management adds new functionality to your existing Configuration Manager deployment, without changing how you already work. When you enable co-management, you immediately begin benefitting from the cloud. You can apply that value to your existing management infrastructure and processes.<br> <br>In this co-management quickstart series, you'll find how you can quickly drive new management value. Co-management is built to create features and tools you can use right now. |
+![Blastoff series banner](media/blastoff-banner.png)
+
+Co-management adds new functionality to your existing Configuration Manager deployment, without changing how you already work. When you enable co-management, you immediately begin benefitting from the cloud. You can apply that value to your existing management infrastructure and processes.
+
+In this co-management quickstart series, you'll find how you can quickly drive new management value. Co-management is built to create features and tools you can use right now.
 
 
 <!--update with final video for this overview, with some intro text-->
