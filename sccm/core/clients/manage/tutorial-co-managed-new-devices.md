@@ -378,9 +378,9 @@ With the Azure configurations, site system roles, and client settings in place, 
 
 
 ## Configure auto-enrollment of devices to Intune   
-Next, we’ll set up auto-enrollment of devices with Intune. With automatic enrollment, devices you manage with Configuration Manager automatically enroll with Intune.  
+Next, we’ll set up auto-enrollment of devices with Intune. With automatic enrollment, devices you manage with Configuration Manager automatically enroll with Intune. 
 
-Automatic enrollment also lets users enroll their Windows 10 devices to Intune. Devices enroll when a user adds their work account to their personally owned device, or when a corporate-owned device is joined to Azure Active Directory.
+Automatic enrollment also lets users enroll their Windows 10 devices to Intune. Devices enroll when a user adds their work account to their personally owned device, or when a corporate-owned device is joined to Azure Active Directory. 
 
 1. Sign in to the [Azure portal](https://portal.azure.com/) and select **Azure Active Directory** > **Mobility (MDM and MAM)** > **Microsoft Intune**.  
 
@@ -392,7 +392,7 @@ Automatic enrollment also lets users enroll their Windows 10 devices to Intune. 
 when set to **None**, Mobile Device Management (MDM) automatic enrollment is disabled 
 
    > [!IMPORTANT]  
-   > If both **MAM user scope** and automatic MDM enrollment (**MDM user scope**) are enabled for a group, only MAM is enabled. Only Mobile Application Management (MAM) is added for users in that group when they workplace join personal device. Devices are not automatically MDM  enrolled.  
+   > If both **MAM user scope** and automatic MDM enrollment (**MDM user scope**) are enabled for a group, only Mobile Application Management (MAM) is enabled. Only MAM is added for users in that group when they workplace join personal device. Devices are not automatically MDM enrolled.  
 
 3. Select **Save** to complete configuration of automatic enrollment.  
 
@@ -469,7 +469,8 @@ To assign licenses to groups of users, use Azure Active Directory.
 
 For more information about assigning licenses for Intune to users, see [Assign licenses](https://docs.microsoft.com/intune/licenses-assign). 
 
-
+## Summary 
+After completing the configuration steps of this tutorial, including the last action to ensure licenses are assigned, your devices can successfully be co-managed. 
 
 ## Next Steps
 - Review the status of co-managed devices with the [Co-management dashboard](https://docs.microsoft.com/sccm/core/clients/manage/co-management-dashboard)
