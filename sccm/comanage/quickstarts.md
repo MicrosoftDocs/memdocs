@@ -1,5 +1,5 @@
 ---
-title: Co-management quickstarts
+title: Cloud-attach with co-management
 titleSuffix: Configuration Manager
 description: Co-management offers immediate value when you enable it.
 ms.date: 01/14/2019
@@ -12,14 +12,16 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Co-management quickstarts
+# Cloud-attach with co-management
+
+| | |
+|-|-|
+|![Blastoff series icon](media/blastoff-icon.png) | Co-management adds new functionality to your existing Configuration Manager deployment, without changing how you already work. When you enable co-management, you immediately begin benefitting from the cloud. You can apply that value to your existing management infrastructure and processes.<br> <br>In this co-management quickstart series, you'll find how you can quickly drive new management value. Co-management is built to create features and tools you can use right now. |
 
 
-Co-management adds new functionality to your existing Configuration Manager deployment, without changing how you already work. When you enable co-management, you immediately begin benefitting from the cloud. You can apply that value to your existing management infrastructure and processes. 
+<!--update with final video for this overview, with some intro text-->
+> [!VIDEO https://www.youtube.com/embed/gA5q0_3bxPs]
 
-In this co-management quickstart series, you'll find how you can quickly drive new management value. Co-management is built to create features and tools you can use right now.
-
-{embed thumbnail of Brad video}
 
 | Immediate value | Getting started |
 |-----------------|-----------------|
