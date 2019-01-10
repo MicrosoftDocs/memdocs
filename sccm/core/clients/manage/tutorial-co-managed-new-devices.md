@@ -18,7 +18,7 @@ ms.assetid:
 # optional metadata
 ---
 
-# Tutorial: Enable co-management for existing Configuration Manager clients
+# Tutorial: Enable co-management for new internet-based devices
 With co-management, you can retain your well-established processes for using Configuration Manager to manage PCs in your organization. At the same time, you're investing in the cloud through use of Intune for security and modern provisioning.
 
   
