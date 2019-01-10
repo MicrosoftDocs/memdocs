@@ -35,7 +35,7 @@ Make sure the co-management prerequisites are set up before you start this proce
 
     If you have internet-based devices that are already enrolled in Intune, copy the command line on this page. You can use this command line to install the Configuration Manager client as an app in Intune.
 
-4. On the **Workloads** page, for each workload, choose which device group to move over for management with Intune. For more information, see [Workloads](/sccm/comanage/overview#workloads).  
+4. On the **Workloads** page, for each workload, choose which device group to move over for management with Intune. For more information, see [Workloads](/sccm/comanage/workloads).  
 
     If you only want to enable co-management, you don't need to switch workloads now. You can switch workloads later. For more information, see [How to switch workloads](/sccm/comanage/how-to-switch-workloads).  
 

@@ -213,6 +213,6 @@ With hybrid Azure AD set up, Configuration Manager client configurations in plac
 
 
 ## Next steps
-- Review the status of co-managed devices with the [Co-management dashboard](/sccm/core/clients/manage/co-management-dashboard)
+- Review the status of co-managed devices with the [Co-management dashboard](/sccm/comanage/how-to-monitor)
 - Start getting [immediate value](quickstarts.md#immediate-value) from co-management
 - Use [conditional access](quickstart-conditional-access.md) and Intune compliance rules to manage user access to corporate resources

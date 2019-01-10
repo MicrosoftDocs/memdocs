@@ -18,6 +18,10 @@
     items:
     - name: Enable co-management for Configuration Manager clients
       href: tutorial-co-manage-clients.md
+  - name: Concepts
+    items:
+    - name: Workloads
+      href: workloads.md
   - name: How-to guides
     items:
     - name: Enable co-management

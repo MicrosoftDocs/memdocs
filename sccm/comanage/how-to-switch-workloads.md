@@ -16,7 +16,7 @@ ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
 
 One of the benefits of co-management is switching workloads from Configuration Manager to Microsoft Intune. When a Windows 10 device has the Configuration Manager client and is enrolled to Intune, you get the benefits of both services. You control which workloads, if any, you switch the authority from Configuration Manager to Intune. Configuration Manager continues to manage all other workloads, including those workloads that you don't switch to Intune, and all other features of Configuration Manager that co-management doesn't support.
 
-For more information on the supported workloads, see [Workloads](/sccm/comanage/overview#workloads).
+For more information on the supported workloads, see [Workloads](/sccm/comanage/workloads).
 
 You can switch workloads when you enable co-management, or later when you're ready. If you haven't already enabled co-management, do that first. For more information, see [How to enable co-management](/sccm/comanage/how-to-enable).
 
