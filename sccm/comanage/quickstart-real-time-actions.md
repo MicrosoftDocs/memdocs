@@ -14,22 +14,24 @@ manager: dougeby
 
 # Real-time actions with co-management
 
-You need to make sure that every device you manage is reachable, no matter where it is, whenever it connects. You also also need to provide each user with everything they need to stay productive, while protecting the apps and data. With the device actions supported by Intune, you can remotely solve these critical functions.
+You need to make sure that every device you manage is reachable, no matter where it is, whenever it connects. You also need to provide each user with everything they need to stay productive, while protecting the apps and data. With the device actions supported by Intune, you can remotely solve these critical functions.
 
 
 
 ## Benefits
 
 Remote device actions give you management controls on the device without interfering with personal data. These remote device actions allow you to: 
-- [Delete company data on lost or stolen devices](https://docs.microsoft.com/intune/devices-wipe)  
+- Delete company data on lost or stolen devices  
 - Rename a device  
 - Restart a device  
 - Review device inventory  
 - Remotely control a device  
-- Wipe out pre-installed OEM apps with the a [fresh start reboot](https://docs.microsoft.com/intune/device-fresh-start)  
-- Perform a [factory reset](https://docs.microsoft.com/intune/devices-wipe#factory-reset) on any Windows 10 device  
+- Wipe out pre-installed OEM apps with a fresh start reboot  
+- Do a factory reset on any Windows 10 device  
 
 These functions are an important and simple way to protect corporate data stored on these devices, whether in e-mail or OneDrive.
+
+For more information on these actions, see [Available remote actions](#available-remote-actions). 
 
 
 
@@ -45,11 +47,11 @@ For more information on how to use these remote actions, see [Available device a
 
 ## Value proposition
 
-As soon as a Configuration Manager device is co-managed, it immediately adds these functions that Configuration Manager doesn't natively have. Now you can now do any remote action that's supported by Intune. 
+When a Configuration Manager device is co-managed, it immediately adds these functions that Configuration Manager doesn't natively have. Now you can now do any remote action that's supported by Intune. 
 
 With co-management, the Configuration Manager devices are now just like any other Intune-managed device. For example, they have a full presence in the cloud, and you can reach them as long as they have internet access. You can do all of these actions without taking any additional steps beyond enabling co-management.
 
-Since the auto-enrollment process is transparent to the user, there's no impact to their productivity. The user doesn't need to take any actions.
+Since the auto-enrollment process is transparent to the user, there's no impact to their productivity. The user doesn't need to do anything.
 
 
 ### Available remote actions
@@ -87,7 +89,7 @@ If you have predetermined standards regarding what apps should be on the device,
 For more information, see [Use Fresh Start to reset Windows 10 devices with Intune](https://docs.microsoft.com/intune/device-fresh-start). 
 
 #### Remote control
-Devices managed by Intune can be administered remotely using [TeamViewer](https://www.teamviewer.com/). TeamViewer is a third-party program that you purchase separately.
+Devices managed by Intune can be administered remotely using [TeamViewer](https://www.teamviewer.com/). TeamViewer is a third-party program that you acquire separately.
 
 For more information, see [Use TeamViewer to remotely administer Intune devices](https://docs.microsoft.com/intune/device-profile-android-teamviewer). 
 
