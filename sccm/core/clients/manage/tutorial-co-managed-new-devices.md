@@ -403,7 +403,7 @@ when set to **None**, Mobile Device Management (MDM) automatic enrollment is dis
 ## Use Intune to deploy the Configuration Manager client
 You can use Intune to install the Configuration Manager client on Windows 10 devices that are only managed with Intune.  
 
-Then, when a previously unmanaged Windows 10 device enrolls with Intune, it automatically installs the Configuration Manager client and become co-managed.
+Then, when a previously unmanaged Windows 10 device enrolls with Intune, it automatically installs the Configuration Manager client.
 
 ### Create an Intune app to install the Configuration Manager client
 
