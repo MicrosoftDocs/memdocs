@@ -431,7 +431,7 @@ For example, *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetup
 5. Select **OK > Add**.  The app is created and becomes available in the Intune console. After the app is available, you can use the following section to configure Intune to assign it to Windows 10 devices.
 
 ### Assign the Intune app to install the Configuration Manager client
-The following procedure deploys the app for installing the Configuration Manager client that you created in the previous procedure. After a Windows 10 device that's managed by Intune runs this app to install the Configuration Manager client, the device will be co-managed.
+The following procedure deploys the app for installing the Configuration Manager client that you created in the previous procedure. 
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).  Select **All services > Intune > Client apps > Apps**, and then select **ConfigMgr Client Setup Bootstrap**, the app you created to deploy the Configuration Manager client.  
 
