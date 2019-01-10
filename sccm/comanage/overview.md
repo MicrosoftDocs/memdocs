@@ -87,7 +87,7 @@ Co-management requires Configuration Manager version 1710 or later.
 
 Starting in Configuration Manager version 1806, you can connect multiple Configuration Manager instances to a single Intune tenant. <!--1357944-->  
 
-Enabling co-management itself doesn't require that you onboard your site with Azure AD. For the [second path scenario](#paths-to-co-management), internet-based Configuration Manager clients require the [cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) (CMG). The CMG requires the site is [onboarded to Azure AD for cloud management]((/sccm/core/servers/deploy/configure/azure-services-wizard)). 
+Enabling co-management itself doesn't require that you onboard your site with Azure AD. For the [second path scenario](#paths-to-co-management), internet-based Configuration Manager clients require the [cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) (CMG). The CMG requires the site is [onboarded to Azure AD for cloud management](/sccm/core/servers/deploy/configure/azure-services-wizard). 
 
 
 ### Azure AD
@@ -103,7 +103,7 @@ Enabling co-management itself doesn't require that you onboard your site with Az
 
 ### Intune
 
-For more information, see [Set up Intune](/intune/setup-steps).  
+For more information, see [Set up Intune](https://docs.microsoft.com/intune/setup-steps).  
 
 > [!Note]  
 > If you have a hybrid MDM environment (Intune integrated with Configuration Manager), you can't enable co-management. However, you can start migrating users to Intune standalone and then enable their associated Windows 10 devices for co-management. For more information about migrating to Intune standalone, see [Start migrating from hybrid MDM to Intune standalone](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).  
