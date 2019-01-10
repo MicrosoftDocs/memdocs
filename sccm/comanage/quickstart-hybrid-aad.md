@@ -63,9 +63,3 @@ Joining devices to Azure AD provides the following benefits to your organization
 If you already have an on-premises Active Directory environment, and you want to join your domain-joined devices to Azure AD, configure hybrid Azure AD-joined devices. For more information, [How to plan your hybrid Azure Active Directory join implementation](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan). 
 
 
-
-## Next steps
-
-> [!div class="nextstepaction"]
-> [Enable co-management](/sccm/comanage/quickstart-enable)
-
