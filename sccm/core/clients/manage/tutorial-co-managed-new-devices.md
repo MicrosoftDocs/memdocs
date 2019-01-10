@@ -40,10 +40,10 @@ Use this tutorial when:
 > * Enable Azure services in Configuration Manager
 > * Deploy and configure a cloud management gateway  
 > * Configure the management point and clients to use the CMG
+> * Enable co-management in Configuration Manager
 > * Configure Intune to auto-enroll devices
 > * Configure Intune to install the Configuration Manager client
 > * Assign license for cloud services
-> * Enable co-management in Configuration Manager
 
 
 
@@ -74,7 +74,7 @@ If not already present in your environment, during this tutorial you'll:
 ### External certificates:
 - CMG server authentication certificate. This certificate is an SSL certificate from a public and globally trusted certificate provider. For example, but not limited to, DigiCert, Thawte, or VeriSign. You'll export this certificate as .PFX file with Private Key.  
 
-We'll guide you on how to configure the request for this certificate.
+- Later in this tutorial we provide guidance on how to configure the request for this certificate.
 
 ### Permissions
 Throughout this tutorial, use the following permissions to complete tasks:
@@ -342,6 +342,41 @@ Use Client Settings to configure Configuration Manager clients to communicate wi
 
 
 
+## Enable co-management in Configuration Manager
+With the Azure configurations, site system roles, and client settings in place, you can configure Configuration Manager to enable co-management. However, you'll still need to make a few configurations in Intune after you enable co-management before this tutorial is complete. One of those tasks is to configure Intune to deploy the Configuration Manager client. That task is made easier by saving the command line for client deployment that is available from within the Co-management Configuration Wizard. That is why we enable co-management now, before we complete the configurations for Intune. 
+
+> [!TIP]  
+>  In step six of the following procedure, you'll assign a collection as a *Pilot group* for co-management. This is a group that contains a small number of clients to test your co-management configurations. We recommend you create a suitable collection before you start the procedure. Then you can select that collection without exiting the procedure to do so.  
+ 
+1. In the Configuration Manager console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.
+
+2. On the Home tab, in the Manage group, select **Configure co-management** to open the Co-management Configuration Wizard.
+
+3. On the *Subscription* page, select **Sign In** and sign in to your Intune tenant, and then select **Next**.
+
+4. On the *Enablement* page, from the *Automatic enrollment in Intune* dropdown list, select one of the following options:  
+
+   - **Pilot**  - *(Recommended)* Members of the collection you specify are automatically enrolled into Intune and can then be co-managed. You specify the pilot collection on the *Staging* page of this wizard. This option allows you to test co-management on a subset of clients. You can then roll out co-management to additional clients using a phased approach.  
+
+   - **All** - Co-management is enabled for all clients.  
+
+   Before proceeding to the next page of the wizard, select **Copy** and save the CCMSetup command line that is provided. You will use this later when you configure Intune to deploy the Configuration Manager client. If you don't save this command line now, you can review the co-management configuration at any time to get this command line. 
+
+5. On the *Workloads* page you can switch workloads from **Configuration Manager** to one of the following, and then when ready to continue, select **Next**.  
+   
+   - **Pilot Intune** - Switches a workload only for the devices in the Pilot group. You’ll assign a collection as the Pilot group on the next page of the wizard.  
+   
+   - **Intune** - Switches the associated workload for all co-managed Windows 10 devices.  
+
+   You don't need to switch any workloads at the time you enable co-management. You can revisit this configuration from the Configuration Manager console later, after co-management is configured.  
+
+   Before you switch a workload, make sure the corresponding workload in Intune is configured and deployed. Doing so keeps the workloads managed.  
+
+6. On the *Staging* page, specify a collection to use for the **Pilot collection**, and then click **Next**. The collection you specify is used as part of your phased rollout of co-management. You can change the collections in the pilot group at any time from the co-management properties.  
+
+7. On the *Summary* page, select **Next**, and then **Close** to complete the Wizard.  
+
+
 ## Configure auto-enrollment of devices to Intune   
 Next, we’ll set up auto-enrollment of devices with Intune. With automatic enrollment, devices you manage with Configuration Manager automatically enroll with Intune.  
 
@@ -434,38 +469,6 @@ To assign licenses to groups of users, use Azure Active Directory.
 
 For more information about assigning licenses for Intune to users, see [Assign licenses](https://docs.microsoft.com/intune/licenses-assign). 
 
-
-## Enable co-management in Configuration Manager
-With the Azure configurations, site system roles, and client settings in place, you're ready to flip the switch and enable co-management of your Windows 10 devices. 
-
-> [!TIP]  
->  In step six of the following procedure, you'll assign a collection as a *Pilot group* for co-management. This is a group that contains a small number of clients to test your co-management configurations. We recommend you create a suitable collection before you start the procedure. Then you can select that collection without exiting the procedure to do so.  
- 
-1. In the Configuration Manager console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.
-
-2. On the Home tab, in the Manage group, select **Configure co-management** to open the Co-management Configuration Wizard.
-
-3. On the Subscription page, select **Sign In** and sign in to your Intune tenant, and then select **Next**.
-
-4. On the Enablement page, from the *Automatic enrollment in Intune* dropdown list, select one of the following options:  
-
-   - **Pilot**  - *(Recommended)* Members of the collection you specify are automatically enrolled into Intune and can then be co-managed. You specify the pilot collection on the *Staging* page of this wizard. This option allows you to test co-management on a subset of clients. You can then roll out co-management to additional clients using a phased approach.  
-
-   - **All** - Co-management is enabled for all clients.  
-
-5. On the Workloads page you can switch workloads from **Configuration Manager** to one of the following, and then when ready to continue, select **Next**.  
-   
-   - **Pilot Intune** - Switches a workload only for the devices in the Pilot group. You’ll assign a collection as the Pilot group on the next page of the wizard.  
-   
-   - **Intune** - Switches the associated workload for all co-managed Windows 10 devices.  
-
-   You don't need to switch any workloads at the time you enable co-management. You can revisit this configuration from the Configuration Manager console later, after co-management is configured.  
-
-   Before you switch a workload, make sure the corresponding workload in Intune is configured and deployed. Doing so keeps the workloads managed.  
-
-6. On the Staging page, specify a collection to use for the **Pilot collection**, and then click **Next**. The collection you specify is used as part of your phased rollout of co-management. You can change the collections in the pilot group at any time from the co-management properties.  
-
-7. On the Summary page, select **Next**, and then **Close** to complete the Wizard.  
 
 
 ## Next Steps
