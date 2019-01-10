@@ -41,9 +41,11 @@ In this co-management quickstart series, you'll find how you can quickly drive n
 
 ## Getting started
 
+If you want to enable co-management, start here to unblock the technical concerns you may have.
+
 | | | |
 |-|-|-|
-| <a name="bkmk_paths"></a>**Paths to co-management** | There are two primary ways for you to setup Co-Management, and it’s important to understand the prerequisites for each path.  Each path requires some combination of Azure AD, ConfigMgr, Intune, and Windows client. | [![Thumbnail of conditional access video](media/thumbnail-hybrid-aad.jpg)](/sccm/comanage/quickstart-paths) |
+| <a name="bkmk_paths"></a>**Paths to co-management** | There are two primary ways for you to setup co-management, and it’s important to understand the prerequisites for each path.  Each path requires some combination of Azure AD, ConfigMgr, Intune, and Windows client. | [![Thumbnail of conditional access video](media/thumbnail-hybrid-aad.jpg)](/sccm/comanage/quickstart-paths) |
 | <a name="bkmk_setup-hybrid-aad"></a>**Set up hybrid Azure AD** | If your environment currently has domain-joined Windows 10 devices, set up hybrid Azure AD before you can enable co-management | [![Thumbnail of conditional access video](media/thumbnail-hybrid-aad.jpg)](/sccm/comanage/quickstart-setup-hybrid-aad) |
 | <a name="bkmk_upgrade-win10"></a>**Upgrade to Windows 10** | Windows 10 version 1709 is required for co-management | [![Thumbnail of conditional access video](media/thumbnail-hybrid-aad.jpg)](/sccm/comanage/quickstart-upgrade-win10) |
 | <a name="bkmk_migrate-hybrid-mdm"></a>**Migrate from hybrid MDM** | Hybrid MDM (Intune integrated with Configuration Manager) is deprecated. Intune standalone is required for co-management. | [![Thumbnail of conditional access video](media/thumbnail-hybrid-aad.jpg)](/sccm/comanage/quickstart-migrate-hybrid-mdm) |
