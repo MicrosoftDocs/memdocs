@@ -1,14 +1,12 @@
 - name: Co-management
   items:
-  - name: Overview
+  - name: What is co-management?
     href: overview.md
   - name: Quickstarts
     href: quickstarts.md
     items:
     - name: Hybrid Azure AD
       href: quickstart-hybrid-aad.md
-    - name: Enable co-management
-      href: quickstart-enable.md
     - name: Conditional access
       href: quickstart-conditional-access.md
     - name: Real-time actions from Intune
@@ -20,9 +18,15 @@
     items:
     - name: Enable co-management for Configuration Manager clients
       href: tutorial-co-manage-clients.md
+  - name: Concepts
+    items:
+    - name: Workloads
+      href: workloads.md
   - name: How-to guides
     items:
-    - name: Prepare Windows 10 devices
+    - name: Enable co-management
+      href: how-to-enable.md
+    - name: Prepare internet-based devices
       href: how-to-prepare-Win10.md
     - name: Switch workloads to Intune
       href: how-to-switch-workloads.md
