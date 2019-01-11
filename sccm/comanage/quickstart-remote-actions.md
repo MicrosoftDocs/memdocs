@@ -31,7 +31,7 @@ Remote device actions give you management controls on the device without interfe
 - Restart a device  
 - Review device inventory  
 - Remotely control a device  
-- Wipe out pre-installed OEM apps with a fresh start reboot  
+- Wipe out pre-installed OEM apps with a Fresh Start reboot  
 - Do a factory reset on any Windows 10 device  
 
 These functions are an important and simple way to protect corporate data stored on these devices, whether in e-mail or OneDrive.

@@ -44,12 +44,7 @@ When you enroll existing Configuration Manager clients in co-management, you gai
 
 - Conditional access with device compliance  
 
-- Intune-based remote actions:  
-    - [Factory reset](https://docs.microsoft.com/intune/devices-wipe#factory-reset)  
-    - [Selective wipe](https://docs.microsoft.com/intune/apps-selective-wipe)  
-    - [Delete devices](https://docs.microsoft.com/intune/devices-wipe#delete-devices-from-the-azure-active-directory-portal)  
-    - [Restart device](https://docs.microsoft.com/intune/device-restart)  
-    - [Fresh start](https://docs.microsoft.com/intune/device-fresh-start)   
+- Intune-based remote actions, for example: restart, remote control, or factory reset
 
 - Centralized visibility of device health  
 
