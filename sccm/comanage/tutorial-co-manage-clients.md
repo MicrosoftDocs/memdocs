@@ -1,23 +1,16 @@
 ---
-# required metadata
-
-title: Tutorial - Configure co-management when you already manage Windows 10 devices with Configuration Manager
+title: Tutorial&#58; Co-management path 1
 titleSuffix: Configuration Manager
-description: Configure co-management of Windows 10 devices for Configuration Manager and Intune.
-keywords:
+description: Configure co-management with Microsoft Intune when you already manage Windows 10 devices with Configuration Manager.
+ms.date: 01/14/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-client
+ms.topic: tutorial
+ms.assetid: 140c522f-d09a-40b6-a4b0-e0d14742834a
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/15/2019
-ms.topic: tutorial
-ms.prod:
-ms.service:  
-ms.technology:
-ms.assetid:
-
-# optional metadata
 ---
-
 
 # Tutorial: Enable co-management for existing Configuration Manager clients
 With co-management, you can retain your well-established processes for using Configuration Manager to manage PCs in your organization. At the same time, you're investing in the cloud through use of Intune for security and modern provisioning.  
@@ -73,7 +66,7 @@ When you set up a hybrid Azure AD, you're really setting up integration of an on
 >
 > For more information about hybrid Azure AD, start with the following articles in the Azure Active Directory documentation:
 > - [Plan your Azure AD join implementation](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)
-> -  [Plan your hybrid Azure AAD join implementation](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)
+> -  [Plan your hybrid Azure AD join implementation](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)
 > -  [Control the hybrid Azure AD join of your devices](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-control)
 > -  [Configure hybrid Azure AD join for federated domains](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
 
