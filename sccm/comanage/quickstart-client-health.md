@@ -16,6 +16,12 @@ manager: dougeby
 
 The health of your network is directly connected to the health of the devices moving in and out of it. Intune can communicate with an unhealthy client, even when it isn't on your network. Use co-management to combine this feature with Configuration Manager's ability to report back 98% of known healthy clients. Then you can detect, assess, and provide visibility across all clients in real time. Intune also adds the support needed for compliance upgrades across all connected clients.
 
+<!--update with final video for this quickstart-->
+In the following video, senior program manager Rob York and product marketing manager Locky Ainley discuss and demo client health with co-management:
+
+> [!VIDEO https://www.youtube.com/embed/gA5q0_3bxPs]
+
+
 
 ## Benefits
 
@@ -55,5 +61,22 @@ To get started with this feature, use the following steps:
 - [Enable co-management](/sccm/comanage/how-to-enable)  
     - You don't need to switch any workload to Intune  
 
-- Update Configuration Manager to version 1806 or later  
+- Update your Configuration Manager site and clients to *version 1806* or later  
 
+
+### Review Configuration Manager client health in Intune
+
+1. Sign into the [Azure portal](https://portal.azure.com/).  
+
+2. Choose **All services** > **Intune**. Intune is located in the **Monitoring + Management** section.  
+
+3. Once you've opened the **Microsoft Intune** pane, in the menu under **Help and support**, go to the **Troubleshooting** page.  
+
+4. Use the **Select user** option, find the specific device in the **Devices** list, and select it to open the device page.  
+
+5. Co-management information is shown at the bottom of the device page. This information includes the following fields for client health:  
+    - **Configuration Manager agent state**  
+    - **Last Configuration Manager agent check in time**  
+
+> [!Tip]  
+> Intune-enrolled devices connect to the cloud service three times a day, approximately every eight hours. 

@@ -1,7 +1,7 @@
 ---
-title: Windows AutoPilot with co-management
+title: Windows Autopilot with co-management
 titleSuffix: Configuration Manager
-description: Use Windows AutoPilot with co-management in Configuration Manager to simplify the set up of new Windows 10 devices.
+description: Use Windows Autopilot with co-management in Configuration Manager to simplify the set up of new Windows 10 devices.
 ms.date: 01/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Windows AutoPilot with co-management
+# Windows Autopilot with co-management
 
 Receiving a new Windows 10 device is exciting, but it can take time to get all your settings and apps just right so that you can be productive. Co-management solves this device provisioning problem with Windows Autopilot.
 
@@ -30,6 +30,11 @@ Windows Autopilot supports multiple scenarios, all of which are maximized with c
 
 - With Windows Autopilot for existing devices, use Configuration Manager to migrate an existing device from Windows 7 and Active Directory to Windows 10 and Azure AD  
 
+<!--update with final video for this quickstart-->
+In the following video, senior program manager Danny Guillory and principal program manager Andrew McMurray discuss and demo Windows Autopilot with co-maangement:
+
+> [!VIDEO https://www.youtube.com/embed/gA5q0_3bxPs]
+
 
 
 ## Benefits
@@ -38,7 +43,7 @@ When you use co-management and Autopilot together, you make sure that new device
 
 In all of these scenarios, you can automatically [enable co-management](/sccm/comanage/how-to-prepare-win10) by Intune. This automation assists with the provisioning process, and for ongoing management of the device.
 
-With AutoPilot you don't need to worry about images and drivers. Focus on provisioning devices by this automated process that can be driven by Intune and Configuration Manager via co-management.
+With Autopilot you don't need to worry about images and drivers. Focus on provisioning devices by this automated process that can be driven by Intune and Configuration Manager via co-management.
 
 
 Here's how using co-management and Autopilot together can help you right now:
@@ -52,23 +57,23 @@ The best user experience causes the least disruption and helps them get back to 
 #### Use Autopilot and Configuration Manager to migrate existing Windows 7 devices to Windows 10
 With Windows Autopilot for existing devices, you create a configuration file and deploy it with a Configuration Manager task sequence. This process easily migrates existing devices from Windows 7 to Windows 10. You use a signature Windows 10 image in Configuration Manager, and then apply it to the existing Windows 7 device with the Autopilot configuration. When the user starts the device, they use the Autopilot user-driven onboarding process.
 
-Here are the steps for AutoPilot for existing devices:
+Here are the steps for Autopilot for existing devices:
 
-![Process overview for Windows AutoPilot for existing devices](media/autopilot-for-existing-devices.png)
+![Process overview for Windows Autopilot for existing devices](media/autopilot-for-existing-devices.png)
 
 1. Deploy group policy to redirect known folders to OneDrive
-2. Generate AutoPilot configuration file
+2. Generate Autopilot configuration file
 3. Deploy task sequence to upgrade to Windows 10
-4. Windows 10 machine goes through AutoPilot on first boot
+4. Windows 10 machine goes through Autopilot on first boot
 
 #### Modernizing device provisioning for all types of workers
-With Autopilot, you can now provide a hands-free OS deployment to unmanned devices or shared devices using the self-deploying mode. This setup meets the needs of all your different types of workers. In addition, the Windows AutoPilot Reset function makes sure that reprovisioning of a device to a new user is seamless. This process simplifies what has traditionally been a very difficult task when you have seasonal or contract workers. 
+With Autopilot, you can now provide a hands-free OS deployment to unmanned devices or shared devices using the self-deploying mode. This setup meets the needs of all your different types of workers. In addition, the Windows Autopilot Reset function makes sure that reprovisioning of a device to a new user is seamless. This process simplifies what has traditionally been a very difficult task when you have seasonal or contract workers. 
 
 
 
 ## Case study
 
-The German logistics and rail freight company DB Shenker uses AutoPilot to increase employee productivity and free its IT teams from working on day-to-day support tasks. Shenker has moved away from traditional imaging and replaced it with provisioning via the cloud. They now use Azure AD-join and Intune to get new devices up and running quickly. 
+The German logistics and rail freight company DB Shenker uses Autopilot to increase employee productivity and free its IT teams from working on day-to-day support tasks. Shenker has moved away from traditional imaging and replaced it with provisioning via the cloud. They now use Azure AD-join and Intune to get new devices up and running quickly. 
 
 Rather than have their remote workers waste time traveling to a location with IT services, Shenker now uses Windows Autopilot to ship their workers hardware directly from the manufacturer to their local field office. The worker connects the new device to the internet, and they sign in with their Azure AD credentials. The device then connects to the applications and services designated for their individual profile by Schenker's IT department.
 
@@ -78,7 +83,7 @@ For more information, see [Global logistics firm centralizes IT, unites employee
 
 ## Value proposition
 
-Create satisfaction in your organization by creating a better user experience for your users. Use Windows AutoPilot to drive down costs. Free up your time to focus on other projects to drive more value and impact for your organization.
+Create satisfaction in your organization by creating a better user experience for your users. Use Windows Autopilot to drive down costs. Free up your time to focus on other projects to drive more value and impact for your organization.
 
 
 
