@@ -18,7 +18,7 @@ manager: dougeby
 
 Co-management adds new functionality to your existing Configuration Manager deployment, without changing how you already work. When you enable co-management, you immediately begin benefitting from the cloud. You can apply that value to your existing management infrastructure and processes.
 
-In this co-management quickstart series, you'll find how you can quickly drive new management value. Co-management is built to create features and tools you can use right now.
+In this co-management quickstart series, see how you can quickly drive new management value. Co-management is built to create features and tools you can use right now.
 
 
 <!--update with final video for this overview, with some intro text-->
@@ -49,7 +49,7 @@ If you want to enable co-management, start here to unblock the technical concern
 
 | | | |
 |-|-|-|
-| <a name="bkmk_paths"></a>**Paths to co-management** | There are two primary ways for you to setup co-management, and it’s important to understand the prerequisites for each path.  Each path requires some combination of Azure AD, ConfigMgr, Intune, and Windows client. | [![Thumbnail of conditional access video](media/thumbnail-hybrid-aad.jpg)](/sccm/comanage/quickstart-paths) |
+| <a name="bkmk_paths"></a>**Paths to co-management** | There are two primary ways for you to set up co-management, and it’s important to understand the prerequisites for each path.  Each path requires some combination of Azure AD, ConfigMgr, Intune, and Windows client. | [![Thumbnail of conditional access video](media/thumbnail-hybrid-aad.jpg)](/sccm/comanage/quickstart-paths) |
 | <a name="bkmk_setup-hybrid-aad"></a>**Set up hybrid Azure AD** | If your environment currently has domain-joined Windows 10 devices, set up hybrid Azure AD before you can enable co-management | [![Thumbnail of conditional access video](media/thumbnail-hybrid-aad.jpg)](/sccm/comanage/quickstart-setup-hybrid-aad) |
 | <a name="bkmk_upgrade-win10"></a>**Upgrade to Windows 10** | Windows 10 version 1709 is required for co-management | [![Thumbnail of conditional access video](media/thumbnail-hybrid-aad.jpg)](/sccm/comanage/quickstart-upgrade-win10) |
 | <a name="bkmk_migrate-hybrid-mdm"></a>**Migrate from hybrid MDM** | Hybrid MDM (Intune integrated with Configuration Manager) is deprecated. Intune standalone is required for co-management. | [![Thumbnail of conditional access video](media/thumbnail-hybrid-aad.jpg)](/sccm/comanage/quickstart-migrate-hybrid-mdm) |
