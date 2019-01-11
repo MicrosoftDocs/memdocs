@@ -1578,6 +1578,8 @@ Use the following variable names to define the properties for the *first* partit
 
  Control the timeout for the software updates scan during this step. For example, if you expect numerous updates during the scan, increase the value. The default value is `1800` seconds (30 minutes). The variable value is set in seconds.
 
+[!NOTE] 
+Starting in version 1802 the default value is `3600` seconds (60 minutes).
 
 ### <a name="SMSTSUDAUsers"></a> SMSTSUDAUsers
 
