@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Tutorial - Configure co-management for devices using PKI
+title: Tutorial - Configure co-management when you already manage Windows 10 devices with Configuration Manager
 titleSuffix: Configuration Manager
 description: Configure co-management of Windows 10 devices for Configuration Manager and Intune.
 keywords:
