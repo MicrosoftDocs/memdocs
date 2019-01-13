@@ -14,7 +14,12 @@ manager: dougeby
 
 # Conditional access with co-management
 
-Conditional access makes sure that organizational resources are only accessed by trusted users on trusted devices using trusted apps. It's built from scratch in the cloud. Whether you're managing devices with Intune or extending your Configuration Manager deployment with co-management, it works the same way.
+Conditional access makes sure that only trusted users can access organizational resources on trusted devices using trusted apps. It's built from scratch in the cloud. Whether you're managing devices with Intune or extending your Configuration Manager deployment with co-management, it works the same way.
+
+<!--update with final video for this quickstart-->
+In the following video, senior program manager Joey Glocke and product marketing manager Locky Ainley discuss and demo conditional access with co-management:
+
+> [!VIDEO https://www.youtube.com/embed/gA5q0_3bxPs]
 
 With co-management, Intune evaluates every device in your network to determine how trustworthy it is. It does this evaluation in the following two ways:
 
@@ -24,7 +29,7 @@ With co-management, Intune evaluates every device in your network to determine h
 
     - For co-managed devices, Configuration Manager also does configuration-based evaluation. For example, required updates or apps compliance. Intune combines this evaluation along with its own assessment.  
 
-2. Intune detects active security incidents on a device. It uses the intelligent security of [Windows Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/get-started) and other [mobile threat defense providers](https://www.lookout.com/about/partners/microsoft). These partners perform ongoing behavioral analysis on devices. This analysis detects active incidents, and then passes this information to Intune for real-time compliance evaluation.  
+2. Intune detects active security incidents on a device. It uses the intelligent security of [Windows Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/get-started) and other [mobile threat defense providers](https://www.lookout.com/about/partners/microsoft). These partners run ongoing behavioral analysis on devices. This analysis detects active incidents, and then passes this information to Intune for real-time compliance evaluation.  
 
     - This evaluation is post-security breach and incident-based  
 
@@ -45,7 +50,7 @@ Every IT team is obsessed with network security. It's mandatory to make sure tha
 
 Conditional access combines granular control over organizational data with a user experience that maximizes worker productivity on any device from any location.
 
-To see this behavior in action, check out how [Advanced Thread Protection](https://www.microsoft.com/windowsforbusiness/windows-atp) (ATP) has been integrated into common end-user scenarios that you likely encounter on a regular basis.
+The following video shows how [Advanced Thread Protection](https://www.microsoft.com/windowsforbusiness/windows-atp) (ATP) is integrated into common scenarios that you regularly experience:
 
 > [!VIDEO https://www.youtube.com/embed/A7IrxAH87wc?start=178]
 

@@ -1,5 +1,5 @@
 ---
-title: Real-time actions with co-management
+title: Remote actions with co-management
 titleSuffix: Configuration Manager
 description: Run remote actions from Intune for co-managed devices
 ms.date: 01/14/2019
@@ -12,9 +12,14 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Real-time actions with co-management
+# Remote actions with co-management
 
 You need to make sure that every device you manage is reachable, no matter where it is, whenever it connects. You also need to provide each user with everything they need to stay productive, while protecting the apps and data. With the device actions supported by Intune, you can remotely solve these critical functions.
+
+<!--update with final video for this quickstart-->
+In the following video, principal program manager Heidi Cheng and senior program manager Danny Guillory discuss and demo remote actions with co-management:
+
+> [!VIDEO https://www.youtube.com/embed/gA5q0_3bxPs]
 
 
 
@@ -26,7 +31,7 @@ Remote device actions give you management controls on the device without interfe
 - Restart a device  
 - Review device inventory  
 - Remotely control a device  
-- Wipe out pre-installed OEM apps with a fresh start reboot  
+- Wipe out pre-installed OEM apps with a Fresh Start reboot  
 - Do a factory reset on any Windows 10 device  
 
 These functions are an important and simple way to protect corporate data stored on these devices, whether in e-mail or OneDrive.

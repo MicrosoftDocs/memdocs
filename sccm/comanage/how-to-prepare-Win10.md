@@ -18,22 +18,22 @@ This article focuses on the second path to co-management, for new internet-based
 
 
 
-## Windows AutoPilot
+## Windows Autopilot
 
 For new Windows 10 devices, you can use the Autopilot service to configure the out of box experience (OOBE). This process includes joining the device to Azure AD and enrolling the device in Intune.  
 
-For more information, see [Overview of Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot).    
+For more information, see [Overview of Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot).    
 
 To configure your devices to be automatically enroll into Intune when they join Azure AD, see [Enroll Windows devices for Microsoft Intune](https://docs.microsoft.com/intune/windows-enroll).  
 
 
 ### Gather information from Configuration Manager
 
-Starting in version 1802, use Configuration Manager to collect and report the device information required by the Microsoft Store for Business and Education. This information includes the device serial number, Windows product identifier, and a hardware identifier. It's used to register the device in the Microsoft Store to support Windows AutoPilot. 
+Starting in version 1802, use Configuration Manager to collect and report the device information required by the Microsoft Store for Business and Education. This information includes the device serial number, Windows product identifier, and a hardware identifier. It's used to register the device in the Microsoft Store to support Windows Autopilot. 
 
 1. In the Configuration Manager console, go to the **Monitoring** workspace, expand the **Reporting** node, expand **Reports**, and select the **Hardware - General** node.  
 
-2. Run the report, **Windows AutoPilot Device Information**, and view the results.  
+2. Run the report, **Windows Autopilot Device Information**, and view the results.  
 
 3. In the report viewer, select the **Export** icon, and choose the **CSV (comma-delimited)** option.  
 
@@ -42,7 +42,7 @@ Starting in version 1802, use Configuration Manager to collect and report the de
 For more information, see [Add devices in Microsoft Store for Business and Education](https://docs.microsoft.com/microsoft-store/add-profile-to-devices#add-devices-and-apply-autopilot-deployment-profile).
 
 
-### AutoPilot for existing devices
+### Autopilot for existing devices
 <!--1358333-->
 
 [Windows Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) is available Windows 10, version 1809 or later. This feature allows you to reimage and provision a Windows 7 device for [Windows Autopilot user-driven mode](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) using a single, native Configuration Manager task sequence. 

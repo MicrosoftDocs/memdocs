@@ -9,8 +9,8 @@
       items:
       - name: Conditional access
         href: quickstart-conditional-access.md
-      - name: Real-time actions from Intune
-        href: quickstart-real-time-actions.md
+      - name: Remote actions from Intune
+        href: quickstart-remote-actions.md
       - name: Client health
         href: quickstart-client-health.md
       - name: Hybrid Azure AD

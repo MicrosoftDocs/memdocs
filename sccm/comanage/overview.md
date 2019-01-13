@@ -34,6 +34,8 @@ There are two main paths to reach to co-management:
 
 - **New internet-based devices**: You have new Windows 10 devices that join Azure AD and automatically enroll to Intune. You install the Configuration Manager client to reach a co-management state.  
 
+For more information on the paths, see [Paths to co-management](/sccm/comanage/quickstart-paths).
+
 
 
 ## Benefits 
@@ -42,12 +44,7 @@ When you enroll existing Configuration Manager clients in co-management, you gai
 
 - Conditional access with device compliance  
 
-- Intune-based remote actions:  
-    - [Factory reset](https://docs.microsoft.com/intune/devices-wipe#factory-reset)  
-    - [Selective wipe](https://docs.microsoft.com/intune/apps-selective-wipe)  
-    - [Delete devices](https://docs.microsoft.com/intune/devices-wipe#delete-devices-from-the-azure-active-directory-portal)  
-    - [Restart device](https://docs.microsoft.com/intune/device-restart)  
-    - [Fresh start](https://docs.microsoft.com/intune/device-fresh-start)   
+- Intune-based remote actions, for example: restart, remote control, or factory reset
 
 - Centralized visibility of device health  
 
@@ -57,8 +54,9 @@ When you enroll existing Configuration Manager clients in co-management, you gai
 
 - Remote actions
 
+For more information on this immediate value from co-management, see the quickstarts series to [Cloud-attach with co-management](/sccm/comanage/quickstarts).
 
-Co-management also enables you to orchestrate with Intune for several workloads. For more information, see the [Workloads](#workloads) section. 
+Co-management also enables you to orchestrate with Intune for several workloads. For more information, see the [Workloads](#workloads)  section. 
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: Migrate to hybrid MDM
+title: Migrate from hybrid MDM
 titleSuffix: Configuration Manager
 description: Hybrid MDM is deprecated, Intune standalone is required for co-management.
 ms.date: 01/14/2019
@@ -12,11 +12,16 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Migrate to hybrid MDM for co-management
+# Migrate from hybrid MDM for co-management
 
 Hybrid mobile device management (MDM) is a deprecated feature. Support for hybrid MDM ends on 1 September 2019. For more information, see [Hybrid MDM with Configuration Manager and Microsoft Intune](/sccm/mdm/understand/hybrid-mobile-device-management).
 
 Intune standalone is the recommended deployment topology, and is required for co-management. If you want to enable co-management, migrate from an Intune hybrid configuration to Intune standalone. 
+
+<!--update with final video for this quickstart-->
+In the following video, principal program manager Andrew McMurray and senior product marketing manager Mayunk Jain discuss and demo migrating from hybrid MDM:
+
+> [!VIDEO https://www.youtube.com/embed/gA5q0_3bxPs]
 
 
 

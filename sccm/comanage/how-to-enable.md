@@ -60,6 +60,6 @@ Now that you've enabled co-management, look at the following articles for immedi
 
 - [Conditional access](/sccm/comanage/quickstart-conditional-access)  
 
-- [Real-time actions from Intune](/sccm/comanage/quickstart-real-time-actions)  
+- [Remote actions from Intune](/sccm/comanage/quickstart-remote-actions)  
 
 - [Client health](/sccm/comanage/quickstart-client-health)  

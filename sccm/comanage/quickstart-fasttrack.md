@@ -16,6 +16,11 @@ manager: dougeby
 
 The FastTrack organization is a large group of Microsoft engineers who specialize in helping all types of organizations deploy Microsoft 365 apps, including setting up co-management. If you need assistance with co-management prerequisites, enabling co-management, or switching workloads, request assistance from [Microsoft FastTrack](https://Microsoft.com/FastTrack/). 
 
+<!--update with final video for this quickstart-->
+In the following video, senior program manager Patrick McSweeney and product marketing manager Locky Ainley discuss and demo FastTrack for Microsoft 365:
+
+> [!VIDEO https://www.youtube.com/embed/gA5q0_3bxPs]
+
 To make a request for assistance from FastTrack, first go to [FastTrack for Microsoft 365](https://fasttrack.microsoft.com/microsoft365/capabilities?view=security). Select **Sign In**, and enter your org ID. After you authenticate, go to the dashboard, and follow the prompts to find the **Request for Assistance** form.
 
 Your submission is reviewed and routed to the appropriate FastTrack team. They'll address your eligibility and specific needs. 
