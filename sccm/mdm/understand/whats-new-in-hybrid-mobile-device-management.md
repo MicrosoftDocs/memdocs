@@ -2,7 +2,7 @@
 title: What's new in hybrid MDM
 titleSuffix: Configuration Manager
 description: Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune.
-ms.date: 12/14/2018
+ms.date: 01/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -42,11 +42,41 @@ Each section of this article lists hybrid features under three different categor
 
 
 
+## January 2019
+
+### New in Microsoft Intune
+
+#### Tenant Status dashboard
+<!--1124854-->
+The new [Tenant Status page](https://docs.microsoft.com/intune/tenant-status) provides a single location where you can view status and related details for your tenant. The dashboard is divided into four areas:
+
+- **Tenant Details**: Displays information that includes your Tenant name and location, your MDM Authority, the total enrolled devices in your tenant, and your license counts. This section also lists the current service release for your tenant.  
+
+- **Connector Status**: Displays information about available connectors you have configured and can also list those which you have not yet enabled.  
+
+    Based on the current state of each connector, they are flagged as Healthy, Warning, or Unhealthy. Select a connector to drill through and view details or configure additional information for it.  
+
+- **Intune Service Health**: Displays details about active incidents or outages for your tenant. The information in this section is retrieved directly from the Office Message Center.  
+
+- **Intune News**: Displays active messages for your tenant. Messages include things like notifications when your tenant receives the latest Intune features.  The information in this section is retrieved directly from the Office Message Center.  
+
+#### New help and support experience in Company Portal for Windows 10 
+<!--1488939-->
+The new Company Portal Help & Support page helps users troubleshoot and request help for app and access problems. From the new page, they can email error and diagnostic log details and find their organization's helpdesk details. They'll also find a FAQ section with links to the relevant Intune documentation. For more information and screenshots, see [Get help and support in Company Portal for Windows 10](https://docs.microsoft.com/intune-user-help/help-and-support-windows-cpapp).
+
+#### Some BitLocker settings support Windows 10 Pro edition
+<!--2727036-->
+You can create a configuration item that sets endpoint protection settings on Windows 10 devices, including BitLocker. This update adds support for Windows 10 Professional edition for some BitLocker settings.
+
+For more information, see [Encryption settings for Windows 10](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client#encryption).
+
+
+
 ## December 2018
 
 ### New in Microsoft Intune
 
-#### Microsoft Auto Update version 4.50 required for macOS devices
+#### Microsoft Auto Update version 4.5.0 required for macOS devices
 <!--3503442-->
 To continue receiving updates for the Company Portal and other Office applications, macOS devices managed by Intune must upgrade to Microsoft Auto Update 4.5.0. Users might already have this version for their Office apps.
 
@@ -591,6 +621,9 @@ For more information, see [Enroll your macOS device in Intune with the Company P
 
 ### Plan for Change: New Intune support experience for Premier customers 
 <!--2828727-->
+
+12/4/2018 update: We're trying to make this process better for you. Support request creation in MPO won't be disabled on December 3. We'll let you know through the Message Center and update this post soon to share timelines for this change.
+
 As a Microsoft Premier customer, you can currently use the [Microsoft Premier Online (MPO) portal](https://premier.microsoft.com) and [Intune on Azure](https://portal.azure.com) to create support requests for Intune. Starting on December 3, 2018, to continue enhancing the Premier support experience, you will be able to create support requests only in Intune on Azure.
 
 #### How does this affect me?

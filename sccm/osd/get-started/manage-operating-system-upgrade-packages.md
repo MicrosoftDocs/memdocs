@@ -18,6 +18,8 @@ manager: dougeby
 
 An OS upgrade package in Configuration Manager contains the Windows setup source files to upgrade an existing OS on a computer. This article describes how to add, distribute, and service an OS upgrade package.
 
+>[!NOTE]
+>OS upgrade packages can also be used for new installations of Windows. However it is dependant on drivers being compatible with this method. When performing new installations of Windows from an OS upgrade package, drivers are installed while still in Windows PE versus simply being injected while in Windows PE. Some drivers are not compatible with being installed while in Windows PE. If drivers are not compatible with being installed while in Windows PE, then use an [OS image](/sccm/osd/get-started/manage-operating-system-images), such as **install.wim**, instead.
 
 
 ##  <a name="BKMK_AddOSUpgradePkgs"></a> Add an OS upgrade package  

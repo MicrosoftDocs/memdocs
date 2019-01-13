@@ -58,6 +58,9 @@ The CMG creates an HTTPS service to which internet-based clients connect. The se
  > [!TIP]
  > This certificate requires a globally unique name to identify the service in Azure. Before requesting a certificate, confirm that the desired Azure domain name is unique. For example, *GraniteFalls.CloudApp.Net*. Log on to the [Microsoft Azure portal](https://portal.azure.com). Select **Create a resource**, choose the **Compute** category, then select **Cloud Service**. In the **DNS name** field, type the desired prefix, for example *GraniteFalls*. The interface reflects whether the domain name is available or already in use by another service. Do not create the service in the portal, just use this process to check the name availability. 
   
+ > [!TIP]
+ > If CMG will also be enabled as a Cloud Distribution point, confirm that the CMG service name you have chosen is also a unique Azure Storage Account name. For example, *GraniteFalls*. Log on to the [Microsoft Azure portal] (https://portal.azure.com). Select **Create a resource**, choose the **Storage** category, then select **Storage account - blob, file, table, queue**. Click **Create**, and under **Instance Details** enter the same name chosen for the CMG service, for example *GraniteFalls*. The interface reflects whether the storage account name is available or already in use by another service. Do not create the storage account in the portal, just use this process to check the name availability. If the CMG cloud service name is unique, but the storage account name is not, provisioning will fail.
+ 
  > [!NOTE]
  > Starting in version 1802, the CMG server authentication certificate supports wildcards. Some certificate authorities issue certificates using a wildcard character for the hostname. For example, **\*.contoso.com**. Some organizations use wildcard certificates to simplify their PKI and reduce maintenance costs.<!--491233-->  
  > 
@@ -246,7 +249,7 @@ Configure an on-premises management point with the following client connection m
 - *Hybrid-joined*: You join the device to both an Active Directory domain and an Azure AD tenant  
 - *HTTP*: On the management point properties, you set the client connections to **HTTP**  
 - *HTTPS*: On the management point properties, you set the client connections to **HTTPS**  
-- *E-HTTP*: On the site properties, Client Computer Communication tab, you set the site system settings to **HTTPS or HTTP**, and you enable the option to **Use Configuration Manager-generated certificates for HTTP site systems**. You configure the management point for HTTP or HTTPS.  
+- *E-HTTP*: On the site properties, Client Computer Communication tab, you set the site system settings to **HTTPS or HTTP**, and you enable the option to **Use Configuration Manager-generated certificates for HTTP site systems**. You configure the management point for HTTP, the HTTP management point is ready for both HTTP and HTTPS communication (token auth scenarios).   
 
 
 

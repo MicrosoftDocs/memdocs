@@ -92,7 +92,7 @@ Use the following sections to manage Peer Cache.
    >   
    >  Also remember that when you configure this setting as part of the **Default Client Settings**, the configuration applies to all clients in your environment.  
 
-2. Under **Windows PE Peer Cache**, set **Enable Configuration Manager client in full OS to share content** to **Yes**.  
+2. Under **Client Cache Settings**, set **Enable Configuration Manager client in full OS to share content** to **Yes**.  
 
    -   By default, only HTTP is enabled. If you want to enable clients to download content over HTTPS, set **Enable HTTPS for client peer communication** to **Yes**.  
 
