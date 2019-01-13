@@ -1,8 +1,8 @@
 ---
 title: Windows Hello for Business settings
 titleSuffix: Configuration Manager
-description: Learn how to integrate Windows Hello for Business with System Center Configuration Manager.
-ms.date: 04/10/2018
+description: Learn how to integrate Windows Hello for Business with Configuration Manager.
+ms.date: 12/21/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -11,14 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
-# Windows Hello for Business settings in System Center Configuration Manager
+
+# Windows Hello for Business settings in Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 <!--1245704-->
-System Center Configuration Manager lets you integrate with Windows Hello for Business (formerly Microsoft Passport for Windows), which is an alternative sign-in method for Windows 10 devices. Hello for Business uses Active Directory, or an Azure Active Directory account to replace a password, smart card, or virtual smart card.  
+Configuration Manager lets you integrate with Windows Hello for Business (formerly Microsoft Passport for Windows), which is an alternative sign-in method for Windows 10 devices. Hello for Business uses Active Directory, or an Azure Active Directory account to replace a password, smart card, or virtual smart card. Hello for Business lets you use a **user gesture** to log in, instead of a password. A user gesture might be a simple PIN, biometric authentication, or an external device such as a fingerprint reader.
 
-Hello for Business lets you use a **user gesture** to log in, instead of a password. A user gesture might be a simple PIN, biometric authentication, or an external device such as a fingerprint reader.
+
+> [!Important]  
+> As of December 2017, Windows Hello for Business settings in Configuration Manager is a [deprecated feature](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Windows Server 2016 Active Directory Federation Services Registration Authority (ADFS RA) deployment is simpler, provides a better user experience, and has a more deterministic certificate enrollment experience.  
+
 
 For more information, see [Windows Hello for Business](https://docs.microsoft.com/windows/access-protection/hello-for-business/hello-identity-verification).
 
@@ -27,19 +31,24 @@ For more information, see [Windows Hello for Business](https://docs.microsoft.co
 > Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
 
 
- Configuration Manager integrates with Windows Hello for Business in two ways:  
+Configuration Manager integrates with Windows Hello for Business in two ways:  
 
--   You can use Configuration Manager to control which gestures users can and cannot use to sign in.  
+- You can use Configuration Manager to control which gestures users can and cannot use to sign in.  
 
--   You can store authentication certificates in the Windows Hello for Business key storage provider (KSP). For more information, see [Certificate profiles](introduction-to-certificate-profiles.md).  
+- You can store authentication certificates in the Windows Hello for Business key storage provider (KSP). For more information, see [Certificate profiles](introduction-to-certificate-profiles.md).  
 
-- You can deploy Windows Hello for Business policies to domain-joined Windows 10 devices that run the Configuration Manager client. This configuration is described in the [Configure Windows Hello for Business on domain-joined Windows 10 devices](#configure-windows-hello-for-business-on-domain-joined-windows-10-devices) section. When you use Configuration Manager with Microsoft Intune (hybrid), you can configure these settings on Windows 10, and Windows 10 Mobile devices. For more information, see [Configure Windows Hello for Business settings (hybrid)](../../mdm/deploy-use/windows-hello-for-business-settings.md).
+- You can deploy Windows Hello for Business policies to domain-joined Windows 10 devices that run the Configuration Manager client. This configuration is described in the [Configure Windows Hello for Business on domain-joined Windows 10 devices](#configure-windows-hello-for-business-on-domain-joined-windows-10-devices) section. When you use Configuration Manager with Microsoft Intune (hybrid), you can configure these settings on Windows 10, and Windows 10 Mobile devices. For more information, see [Configure Windows Hello for Business settings (hybrid)](/sccm/mdm/deploy-use/windows-hello-for-business-settings).
+
+
 
 ## Configure Windows Hello for Business on domain-joined Windows 10 devices
+
 You can control Windows Hello for Business settings on domain-joined Windows 10 devices by creating and deploying a Windows Hello for Business Profile. This approach is recommended.
 
 
 If you are using certificate-based authentication, you must also deploy a certificate profile, as described in [Configure a certificate profile](#configure-a-certificate-profile). If you are using key-based authentication, you do not need to deploy a certificate profile.
+
+
 
 ## Configure a Windows Hello for Business profile  
 
@@ -47,8 +56,11 @@ In the Configuration Manager console, under **Company Resource Access**, right-c
 
 ![Windows Hello for Business Policy wizard, showing the list of available settings](../media/Hello-for-Business-settings.png)
 
+
+
 ## Configure a certificate profile to enroll the Windows Hello for Business enrollment certificate in Configuration Manager  
- If you want to use Windows Hello for Business certificate-based logon, configure the following components:  
+
+If you want to use Windows Hello for Business certificate-based logon, configure the following components:  
 
 -   A Configuration Manager certificate profile.  
 

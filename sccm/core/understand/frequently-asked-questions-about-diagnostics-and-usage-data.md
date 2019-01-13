@@ -44,7 +44,7 @@ The current branch of Configuration Manager needs to be updated on a regular bas
  No. The stored procedures to collect data are limited to the site database.  
 
 ### <a name="bkmk_gdpr"></a> Is Configuration Manager subject to the General Data Protection Regulation (GDPR)?
- No. Configuration Manager isn't subject to GDPR oversight. It is an on-premises product that you directly deploy, manage, and operate. The diagnostics and usage data that Microsoft collects improves the installation experience, quality, and security of future releases. This data is subject to GDPR oversight. No end-user identification information (EUII) or end-user pseudonymous identifiers (EUPI) are collected and transmitted to Microsoft. For more information about GDPR, see the [Microsoft Trust Center on GDPR](https://microsoft.com/gdpr). For more information about Configuration Manager data, see [Diagnostics and usage data](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data).
+ No. Configuration Manager isn't subject to GDPR oversight. It is an on-premises product that you directly deploy, manage, and operate. The diagnostics and usage data that Microsoft collects improves the installation experience, quality, and security of future releases. This diagnostics and usage data is subject to GDPR oversight. However, no end-user identification information (EUII) or end-user pseudonymous identifiers (EUPI) are collected and transmitted to Microsoft. For more information about GDPR, see the [Microsoft Trust Center on GDPR](https://microsoft.com/gdpr). For more information about Configuration Manager data, see [Diagnostics and usage data](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data).
 
 
 ## See also  

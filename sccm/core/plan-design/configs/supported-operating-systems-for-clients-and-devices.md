@@ -355,10 +355,10 @@ Configuration Manager supports limited management of devices that connect to you
 
 ### Supported versions of Exchange Server
 
--   **Exchange Server 2010 SP1**  
+- **Exchange Online (Office 365)**: This version includes Business Productivity Online Standard Suite  
 
--   **Exchange Server 2010 SP2**  
+- **Exchange Server 2016** (starting with version 1802)  
 
--   **Exchange Server 2013**  
+- **Exchange Server 2013**  
 
--   **Exchange Online (Office 365)**: This version includes Business Productivity Online Standard Suite  
+- **Exchange Server 2010 SP1** or **Exchange Server 2010 SP2** 

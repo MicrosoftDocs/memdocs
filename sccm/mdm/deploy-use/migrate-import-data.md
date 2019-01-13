@@ -72,7 +72,9 @@ The import tool can collect information about the following object types in Conf
 
 - Specify the top-level site and run the tool with a user that has access to all objects in the site hierarchy. The tool only discovers objects accessible by the user running the tool.  
 
-- A Global Administrator must run the Data Importer tool the first time using the -GlobalConsent parameter. Then a Global Administrator or an Intune Administrator can run the tool.  
+- A Global Administrator must run the Data Importer tool the first time using the -GlobalConsent parameter. Then a Global Administrator or an Intune Administrator can run the tool. 
+
+- Run the Data Importer tool on Windows 10 or Windows Server 2016.
 
 
 <!-- ## Objects that cannot be imported

@@ -45,7 +45,7 @@ To complete this procedure, the account you use must be:
      -    **Will not be a member of the availability group:**   
      Restore a copy of the site database to the server that will host the primary replica of the group.
 
-   For information on how to complete this step, see [Create a Full Database Backup](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server) and [Restore a Database Backup using SSMS](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)in the SQL Server documentation.
+   For information on how to complete this step, see [Create a Full Database Backup](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server) and [Restore a Database Backup using SSMS](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms) in the SQL Server documentation.
 
 4. On the server that will host the initial primary replica of the group, use the [New Availability Group Wizard](/sql/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio) to create the availability group. In the wizard:
    - On the **Select Database** page, select the database for your Configuration Manager site.  
