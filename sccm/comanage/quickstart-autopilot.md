@@ -30,10 +30,9 @@ Windows Autopilot supports several scenarios, all of which are maximized with co
 
 - With Windows Autopilot for existing devices, use Configuration Manager to migrate an existing device from Windows 7 and Active Directory to Windows 10 and Azure AD  
 
-<!--update with final video for this quickstart-->
 In the following video, senior program manager Danny Guillory and principal program manager Andrew McMurray discuss and demo Windows Autopilot with co-management:
 
-> [!VIDEO https://www.youtube.com/embed/gA5q0_3bxPs]
+> [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/Using-Windows-Autopilot-with-Co-Management/player]
 
 
 

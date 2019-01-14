@@ -16,10 +16,9 @@ manager: dougeby
 
 The health of your network is directly connected to the health of the devices moving in and out of it. Intune can communicate with an unhealthy client, even when it isn't on your network. Use co-management to combine this feature with Configuration Manager's ability to report back 98% of known healthy clients. Then you can detect, assess, and provide visibility across all clients in real time. Intune also adds the support needed for compliance upgrades across all connected clients.
 
-<!--update with final video for this quickstart-->
 In the following video, senior program manager Rob York and product marketing manager Locky Ainley discuss and demo client health with co-management:
 
-> [!VIDEO https://www.youtube.com/embed/gA5q0_3bxPs]
+> [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/Client-Health-Monitoring-with-Co-Management/player]
 
 
 

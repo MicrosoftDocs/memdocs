@@ -16,10 +16,9 @@ manager: dougeby
 
 Conditional access makes sure that only trusted users can access organizational resources on trusted devices using trusted apps. It's built from scratch in the cloud. Whether you're managing devices with Intune or extending your Configuration Manager deployment with co-management, it works the same way.
 
-<!--update with final video for this quickstart-->
 In the following video, senior program manager Joey Glocke and product marketing manager Locky Ainley discuss and demo conditional access with co-management:
 
-> [!VIDEO https://www.youtube.com/embed/gA5q0_3bxPs]
+> [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/The-Security-Benefits-of-Conditional-Access/player]
 
 With co-management, Intune evaluates every device in your network to determine how trustworthy it is. It does this evaluation in the following two ways:
 

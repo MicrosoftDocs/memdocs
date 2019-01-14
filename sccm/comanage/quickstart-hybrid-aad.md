@@ -18,10 +18,9 @@ In the cloud, identity is the new control plane. Azure Active Directory (Azure A
 
 For more information on device-based conditional access, see [How To: Require managed devices for cloud app access with conditional access](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices)
 
-<!--update with final video for this quickstart-->
 In the following video, senior program manager Sandeep Deo and product marketing manager Adam Harbour discuss and demo Azure AD for co-management:
 
-> [!VIDEO https://www.youtube.com/embed/gA5q0_3bxPs]
+> [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/Embedding-Co-management-With-Azure-Active-Directory/player]
 
 Azure AD provides two options for company-owned devices to suit your organization's needs:  
 
