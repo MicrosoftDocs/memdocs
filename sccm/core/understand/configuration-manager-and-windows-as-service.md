@@ -43,7 +43,7 @@ System Center Configuration Manager provides comprehensive control over feature 
 |[Optimize Windows 10 update delivery](/sccm/sum/deploy-use/optimize-windows-10-update-delivery)|Use Configuration Manager to manage update content to stay current with Windows 10.|
 |[Integrate with Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics)|Upgrade Readiness allows you to assess and analyze the readiness of devices in your environment for an upgrade to Windows 10.| 
 |[Windows Update for Business integration (optional)](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10)|Explains how to define and deploy Windows Update for Business (WUfB) policies using Configuration Manager.|
-|[Use co-management with Microsoft Intune and Windows Update for Business (optional)](/sccm/core/clients/manage/co-management-overview)|Provides an overview of co-management| 
+|[Use co-management with Microsoft Intune and Windows Update for Business (optional)](/sccm/comanage/overview)|Provides an overview of co-management| 
 
 
 ## Related articles

@@ -209,7 +209,7 @@ Version 1806 includes the following improvements to the cloud management gateway
 <!--1358215-->
 When installing the Configuration Manager client on the internet via a CMG, the command-line now requires fewer properties. This improvement reduces the size of the command line used in Microsoft Intune when preparing for co-management. 
 
-For more information, see [Prepare Windows 10 devices for co-management](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client).
+For more information, see [How to prepare internet-based devices for co-management](/sccm/comanage/how-to-prepare-win10#install-the-configuration-manager-client).
 
 #### Download content from a CMG
 <!--1358651-->
@@ -229,7 +229,7 @@ When you create a CMG, you're no longer required to provide a [trusted root cert
 <!--1357377-->
 When you switch a co-management workload, the co-managed devices automatically synchronize MDM policy from Microsoft Intune. This sync also happens when you initiate the **Download Computer Policy** action from Client Notifications in the Configuration Manager console. 
 
-For more information, see [Switch Configuration Manager workloads to Intune](/sccm/core/clients/manage/co-management-switch-workloads).
+For more information, see [How to switch Configuration Manager workloads to Intune](/sccm/comanage/how-to-switch-workloads).
 
 
 ### Transition new workloads to Intune using co-management
@@ -243,14 +243,14 @@ The following workloads are now able to transition from Configuration Manager to
 
 To transition these workloads, go to the co-management properties page and move the workload slider bar from Configuration Manager to **Pilot** or **All**. 
 
-For more information, see [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).
+For more information, see [Co-management for Windows 10 devices](/sccm/comanage/overview).
 
 
 ### Support for multiple hierarchies to one Intune tenant
 <!--1357944-->
 Some customers have several Configuration Manager hierarchies and want to consolidate in the future to a single tenant for Azure Active Directory and Microsoft Intune. Co-management now supports connecting more than one Configuration Manager environment to the same Intune tenant.
 
-For more information, see [Prepare Windows 10 devices for co-management](/sccm/core/clients/manage/co-management-prepare).
+For more information, see [Co-management prerequisites](/sccm/comanage/overview#prerequisites).
  
 
 
