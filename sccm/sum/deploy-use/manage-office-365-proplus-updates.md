@@ -184,7 +184,7 @@ Use the following procedure on the software update point at the central administ
     ![Filenames with additional languages](../media/5-verification.png)
 
 ## Updating Office 365 during task sequences when Office 365 is installed in the base image
-When you install an operating system where Office 365 is already installed in the image, it's possible that the update channel registry key value has the original install location. In this case, the update scan won't show any Office 365 client updates as applicable. There's a scheduled Office automatic updates task that runs several times a week. After that task runs, the update channel will point to the configured Office CDN URL and the scan will then show these updates as applicable. <!--510452-->
+After installing Office 365 ProPlus, it is possible that the update channel registry key value has the original install location. In this case, the update scan won't show any Office 365 client updates as applicable. There's a scheduled Office automatic updates task that runs several times a week. After that task runs, the update channel will point to the configured Office CDN URL and the scan will then show these updates as applicable. <!--510452-->
 
 To ensure that the update channel is set so applicable updates will be found, do the following steps:
 1. On a machine with the same version of Office 365 as the OS base image, open Task Scheduler (taskschd.msc) and identify the Office 365 automatic updates task. Typically, it's located under **Task Scheduler Library** >**Microsoft**>**Office**.
