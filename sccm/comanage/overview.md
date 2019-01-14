@@ -54,7 +54,7 @@ When you enroll existing Configuration Manager clients in co-management, you gai
 
 - Remote actions
 
-For more information on this immediate value from co-management, see the quickstarts series to [Cloud-attach with co-management](/sccm/comanage/quickstarts).
+For more information on this immediate value from co-management, see the quickstarts series to [Cloud connect with co-management](/sccm/comanage/quickstarts).
 
 Co-management also enables you to orchestrate with Intune for several workloads. For more information, see the [Workloads](#workloads)  section. 
 
