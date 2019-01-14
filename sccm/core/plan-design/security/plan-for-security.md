@@ -376,7 +376,7 @@ The returned string is the trusted root key. Verify that it matches the **SMSPub
 
 - [Manage cloud domain-joined devices](/sccm/core/clients/deploy/deploy-clients-cmg-azure)  
 
-- [Co-management](/sccm/core/clients/manage/co-management-overview)  
+- [Co-management](/sccm/comanage/overview)  
 
 - [Deploy user-available apps](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)  
 
