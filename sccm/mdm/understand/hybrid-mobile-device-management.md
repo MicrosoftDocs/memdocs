@@ -23,7 +23,7 @@ manager: dougeby
 > 
 > As a result, most customers choose Intune on Azure over hybrid MDM. The number of customers using hybrid MDM continues to decrease as more customers move to the cloud. Therefore, on September 1, 2019, Microsoft will retire the hybrid MDM service offering. Please plan your [migration to Intune on Azure](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa) for your MDM needs. 
 > 
-> This change doesn't affect on-premises Configuration Manager or [co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview). If you're unsure whether you're using hybrid MDM, go to the **Administration** workspace of the Configuration Manager console, expand **Cloud Services**, and click **Microsoft Intune Subscriptions**. If you have a Microsoft Intune subscription set up, your tenant is configured for hybrid MDM.
+> This change doesn't affect on-premises Configuration Manager or [co-management for Windows 10 devices](/sccm/comanage/overview). If you're unsure whether you're using hybrid MDM, go to the **Administration** workspace of the Configuration Manager console, expand **Cloud Services**, and click **Microsoft Intune Subscriptions**. If you have a Microsoft Intune subscription set up, your tenant is configured for hybrid MDM.
 > 
 > **How does this affect me?**
 > 

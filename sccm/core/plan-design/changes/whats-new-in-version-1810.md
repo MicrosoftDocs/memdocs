@@ -179,7 +179,7 @@ The co-management dashboard is enhanced with the following more detailed informa
 
 ![Co-management dashboard screenshot showing the top four tiles](media/1358980-comgmt-dashboard.png)
 
-For more information, see [Co-management dashboard](/sccm/core/clients/manage/co-management-dashboard).
+For more information, see [Co-management dashboard](/sccm/comanage/how-to-monitor#co-management-dashboard).
 
 
 
