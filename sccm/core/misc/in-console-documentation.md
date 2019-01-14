@@ -1,6 +1,6 @@
 ---
 title: In-console documentation
-ms.date: 11/30/2018
+ms.date: 01/14/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -46,20 +46,20 @@ A manually curated list of important articles.
 
 
 ## Trending
-The most popular articles in November 2018.
+The most popular articles in December 2018.
 
  | Page views | Title | 
  |------------|-------| 
- | 16701 | [Log files for troubleshooting](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) | 
- | 11417 | [What's new in version 1806](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
- | 8346 | [Ports used for connections](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) | 
- | 8038 | [Deploy clients to Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) | 
- | 7104 | [Support for Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) | 
- | 6957 | [Install console](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) | 
- | 6765 | [Client installation parameters and properties](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-installation-properties) | 
- | 6091 | [Co-management for Windows 10 devices](https://docs.microsoft.com/sccm/comanage/overview) | 
- | 6043 | [Deploy applications](https://docs.microsoft.com/sccm/apps/deploy-use/deploy-applications) | 
- | 5833 | [Manage distribution points](https://docs.microsoft.com/sccm/core/servers/deploy/configure/install-and-configure-distribution-points) | 
+ | 16430 | [Log files for troubleshooting](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
+ | 15155 | [What's new in version 1810](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1810) |
+ | 8581 | [Deploy clients to Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
+ | 7866 | [Ports used for connections](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
+ | 7434 | [Support for Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
+ | 7088 | [What's new in version 1806](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1806) |
+ | 7086 | [Client installation parameters and properties](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-installation-properties) |
+ | 6914 | [Install console](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) |
+ | 6087 | [Deploy applications](https://docs.microsoft.com/sccm/apps/deploy-use/deploy-applications) |
+ | 5817 | [Updates and servicing](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
 
 
 
@@ -68,16 +68,16 @@ Articles with a recent and significant update.
 
  | Last reviewed | Title | 
  |---------------|-------|
- | 27 November 2018 | [Approve applications](https://docs.microsoft.com/sccm/apps/deploy-use/app-approval) | 
- | 27 November 2018 | [Procedures for boundary groups](https://docs.microsoft.com/sccm/core/servers/deploy/configure/boundary-group-procedures) | 
- | 27 November 2018 | [Support Center](https://docs.microsoft.com/sccm/core/support/support-center) | 
- | 26 November 2018 | [Plan for cloud management gateway](https://docs.microsoft.com/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) | 
- | 16 November 2018 | [Deploy software updates](https://docs.microsoft.com/sccm/sum/deploy-use/deploy-software-updates) | 
- | 16 November 2018 | [Client notification](https://docs.microsoft.com/sccm/core/clients/manage/client-notification) | 
- | 15 November 2018 | [Add-CMScriptDeploymentType](https://docs.microsoft.com/powershell/module/configurationmanager/add-cmscriptdeploymenttype) | 
- | 15 November 2018 | [Set-CMScriptDeploymentType](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmscriptdeploymenttype) | 
- | 15 November 2018 | [Invoke-CMScript](https://docs.microsoft.com/powershell/module/configurationmanager/invoke-cmscript) | 
- | 15 November 2018 | [Get-CMScript](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmscript) | 
+ | 12/26/2018 | [Prepare Intune for user migration](https://docs.microsoft.com/sccm/mdm/deploy-use/migrate-prepare-intune) |
+ | 12/21/2018 | [Deprecated features](https://docs.microsoft.com/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures) |
+ | 12/21/2018 | [Release notes](https://docs.microsoft.com/sccm/core/servers/deploy/install/release-notes) |
+ | 12/21/2018 | [Windows Hello for Business settings](https://docs.microsoft.com/sccm/mdm/deploy-use/windows-hello-for-business-settings) |
+ | 12/20/2018 | [Manage software updates synchronization](https://docs.microsoft.com/sccm/sum/get-started/synchronize-software-updates) |
+ | 12/14/2018 | [Prerequisite checks](https://docs.microsoft.com/sccm/core/servers/deploy/install/list-of-prerequisite-checks) |
+ | 12/14/2018 | [Technical preview releases](https://docs.microsoft.com/sccm/core/get-started/technical-preview) |
+ | 12/14/2018 | [Technical preview 1812](https://docs.microsoft.com/sccm/core/get-started/capabilities-in-technical-preview-1812) |
+ | 12/14/2018 | [Approve applications](https://docs.microsoft.com/sccm/apps/deploy-use/app-approval) |
+ | 12/14/2018 | [What's new in hybrid MDM](https://docs.microsoft.com/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management) |
 
 
 
