@@ -1,5 +1,5 @@
 ---
-title: Cloud-attach with co-management
+title: Cloud connecting with co-management
 titleSuffix: Configuration Manager
 description: Co-management offers immediate value when you enable it.
 ms.date: 01/14/2019
@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Cloud-attach with co-management
+# Cloud connecting with co-management
 
 ![Blastoff series banner](media/blastoff-banner.png)
 
