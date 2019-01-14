@@ -121,24 +121,25 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical Preview version 1901
 
-<!--2019/technical-preview-1901.md#bkmk_anchor-->
+<!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor)<!--ID-->
 
 
 <!-- resort and confirm titles -->
-- [Office on lifecycle dashboard](2019/technical-preview-1901.md)<!--3556026-->  
-- [OSD offline servicing](2019/technical-preview-1901.md)<!--3555951-->  
-- [NEO 1902 sliver](2019/technical-preview-1901.md)<!--3734525-->  
-- [console device view](2019/technical-preview-1901.md)<!--3600878-->  
-- [client health reporting](2019/technical-preview-1901.md)<!--3599209-->  
-- [CMPivot hierarchy support](2019/technical-preview-1901.md)<!--3610960-->  
-- [DP maintenance mode](2019/technical-preview-1901.md)<!--3555754-->  
-- [Improvements to Run PowerShell Script task sequence step](2019/technical-preview-1901.md)<!--3556028-->  
-- [User-defined WOL port](2019/technical-preview-1901.md)<!--3605925-->  
-- [Remote control multiple monitors](2019/technical-preview-1901.md)<!--3231732-->  
-- [OneDrive for Business settings](2019/technical-preview-1901.md)<!--3556021-->  
-- [Management insight rules for collections](2019/technical-preview-1901.md)<!--3555752-->  
-- [Task sequence debugger](2019/technical-preview-1901.md)<!--3612274-->  
-- [View active consoles](2019/technical-preview-1901.md)<!--3699367-->  
+- [Office on lifecycle dashboard](/sccm/core/get-started/2019/technical-preview-1901)<!--3556026-->  
+- [OSD offline servicing](/sccm/core/get-started/2019/technical-preview-1901)<!--3555951-->  
+- [NEO 1902 sliver](/sccm/core/get-started/2019/technical-preview-1901)<!--3734525-->  
+- [Console device view](/sccm/core/get-started/2019/technical-preview-1901)<!--3600878-->  
+- [Client health reporting](/sccm/core/get-started/2019/technical-preview-1901)<!--3599209-->  
+- [CMPivot hierarchy support](/sccm/core/get-started/2019/technical-preview-1901)<!--3610960-->  
+- [DP maintenance mode](/sccm/core/get-started/2019/technical-preview-1901)<!--3555754-->  
+- [Improvements to Run PowerShell Script task sequence step](/sccm/core/get-started/2019/technical-preview-1901)<!--3556028-->  
+- [User-defined WOL port](/sccm/core/get-started/2019/technical-preview-1901)<!--3605925-->  
+- [Remote control multiple monitors](/sccm/core/get-started/2019/technical-preview-1901)<!--3231732-->  
+- [Management insight rules for collections](/sccm/core/get-started/2019/technical-preview-1901)<!--3555752-->  
+- [Task sequence debugger](/sccm/core/get-started/2019/technical-preview-1901)<!--3612274-->  
+- [View active consoles](/sccm/core/get-started/2019/technical-preview-1901)<!--3699367-->  
+- [StartTime property to OSD provisioning mode](/sccm/core/get-started/2019/technical-preview-1901)<!--3197824-->
+- [Improvements to OS deployment task sequences](/sccm/core/get-started/2019/technical-preview-1901)<!--3633146,3641475-->
 
 
 > [!Note]  
