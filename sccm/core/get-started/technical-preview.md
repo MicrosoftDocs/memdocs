@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 12/14/2018
+ms.date: 01/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -20,7 +20,7 @@ This article provides details about the monthly technical preview branch of Conf
 
 Because this release is a technical preview, details and functionality are subject to change.  
 
-This information applies to all versions of the Configuration Manager technical preview branch. This article lists each new feature along with the technical preview version in which it first appears. For example, version **1809** for September (09) of 2018 (18). Separate articles dedicated to each preview version detail the individual features.  
+This information applies to all versions of the Configuration Manager technical preview branch. This article lists each new feature along with the technical preview version in which it first appears. For example, version **1901** for January (01) of 2019 (19). Separate articles dedicated to each preview version detail the individual features.  
 
 For information about what's new in the *current branch* of Configuration Manager, see [What's new in Configuration Manager incremental versions](/sccm/core/plan-design/changes/whats-new-incremental-versions).
 
@@ -119,15 +119,26 @@ The following features are available with the most recent Configuration Manager 
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### Technical Preview version 1812
+### Technical Preview version 1901
 
-<!--capabilities-in-technical-preview-1812.md#bkmk_anchor-->
+<!--2019/technical-preview-1901.md#bkmk_anchor-->
 
-- [Improvements to Run PowerShell Script task sequence step](capabilities-in-technical-preview-1812.md#bkmk_posh) <!--3556028 fka 1359389-->  
-- [Improvements to application approvals via email](capabilities-in-technical-preview-1812.md#bkmk_email) <!--3594063-->  
-- [Configure user device affinity in Software Center](capabilities-in-technical-preview-1812.md#bkmk_uda) <!--3485366-->  
-- [Improvements to Configuration Manager console](capabilities-in-technical-preview-1812.md#bkmk_console) <!--3594151-->  
-- [Download reports from the Community Hub](capabilities-in-technical-preview-1812.md#bkmk_hub)<!--3555936-->  
+
+<!-- resort and confirm titles -->
+- [Office on lifecycle dashboard](2019/technical-preview-1901.md)<!--3556026-->  
+- [OSD offline servicing](2019/technical-preview-1901.md)<!--3555951-->  
+- [NEO 1902 sliver](2019/technical-preview-1901.md)<!--3734525-->  
+- [console device view](2019/technical-preview-1901.md)<!--3600878-->  
+- [client health reporting](2019/technical-preview-1901.md)<!--3599209-->  
+- [CMPivot hierarchy support](2019/technical-preview-1901.md)<!--3610960-->  
+- [DP maintenance mode](2019/technical-preview-1901.md)<!--3555754-->  
+- [Improvements to Run PowerShell Script task sequence step](2019/technical-preview-1901.md)<!--3556028-->  
+- [User-defined WOL port](2019/technical-preview-1901.md)<!--3605925-->  
+- [Remote control multiple monitors](2019/technical-preview-1901.md)<!--3231732-->  
+- [OneDrive for Business settings](2019/technical-preview-1901.md)<!--3556021-->  
+- [Management insight rules for collections](2019/technical-preview-1901.md)<!--3555752-->  
+- [Task sequence debugger](2019/technical-preview-1901.md)<!--3612274-->  
+- [View active consoles](2019/technical-preview-1901.md)<!--3699367-->  
 
 
 > [!Note]  
@@ -146,6 +157,11 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  | Feature | Technical preview version | Current branch version |  
  |---------|---------------------------|------------------------|
+ | Improvements to Run PowerShell Script task sequence step <!--3556028 fka 1359389--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_posh) | ![Not added](media/Red_X.gif) | 
+ | Improvements to application approvals via email <!--3594063--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_email) | ![Not added](media/Red_X.gif) | 
+ | Configure user device affinity in Software Center <!--3485366--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_uda) | ![Not added](media/Red_X.gif) | 
+ | Improvements to Configuration Manager console <!--3594151--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_console) | ![Not added](media/Red_X.gif) | 
+ | Download reports from the Community Hub<!--3555936--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_hub) | ![Not added](media/Red_X.gif) | 
  | Don't load Windows PowerShell profiles <!--1359239--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_noprofile) | ![Not added](media/Red_X.gif) | 
  | An Intune connection is no longer required for on-premises MDM <!--1359124--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_opmdm) | ![Not added](media/Red_X.gif) | 
  | Configuration Manager console notifications <!--1318035--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_notify) | ![Not added](media/Red_X.gif) | 
@@ -156,19 +172,6 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  | Management insights rule for peer cache source client version <!--1358008--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_insights) | Version 1810 | 
  | Improvements to internet-based client setup <!--1359181--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_cmg) | Version 1810 | 
  | Convert applications to MSIX <!--1359029--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_msix) | Version 1810 | 
- | Improvement to client installation <!--1358840--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_ccmsetup) | Version 1810 | 
- | Required app compliance policy for co-managed devices <!--1358196--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_app-compliance) | Version 1810 | 
- | Improvement to co-management dashboard <!--1358980--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_comgmt-report) | Version 1810 | 
- | New boundary group options <!--1358749--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_bgoptions) | Version 1810 | 
- | Site system on Windows cluster node <!--1359132--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_cluster) | Version 1810 | 
- | Improvements to CMPivot <!--1359068--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_cmpivot) | Version 1810 | 
- | Improvements to scripts <!--1358239--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_scripts) | Version 1810 | 
- | New client notification action to wake up device <!--1317364--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_wakeup) | Version 1810 | 
- | Task sequence support for boundary groups <!--1359025--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_bgr-osd) | Version 1810 | 
- | Management insights dashboard <!--1357979--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_insights) | Version 1810 | 
- | In-console documentation dashboard <!--1357546--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_doc-dashboard) | ![Not added](media/Red_X.gif) | 
- | Improvements to driver maintenance <!--1358270--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_drivers) | Version 1810 | 
- | Task sequence support of Windows Autopilot for existing devices <!--1358333--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_autopilot) | Version 1810 | 
 
 
 
@@ -184,6 +187,7 @@ With each CB release, review and remove from this list for anything that's now a
 
 | Feature        | Technical preview version |  
 |----------------|---------------------------|
+| In-console documentation dashboard <!--1357546--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_doc-dashboard) | 
 | Community Hub <!--1357766--> | [Tech Preview 1807](capabilities-in-technical-preview-1807.md#bkmk_hub) | 
 | Co-managed device sync activity with Intune <!--1358565--> | [Tech Preview 1807](capabilities-in-technical-preview-1807.md#bkmk_comgmt) | 
 | Client-based PXE responder service <!--1357148--> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |
