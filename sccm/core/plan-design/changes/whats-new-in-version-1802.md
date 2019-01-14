@@ -151,7 +151,7 @@ Starting in this release, Silverlight is no longer installed on client devices a
 
 ### Transition Endpoint Protection workload to Intune using co-management
 <!-- 1357365 -->
- The Endpoint Protection workload can be transitioned to Intune after enabling co-management. To transition the Endpoint Protection workload, go to the co-management properties page and move the slider bar from Configuration Manager to **Pilot** or **All**. For details about the workloads, see [Workloads able to be transitioned to Intune](/sccm/core/clients/manage/co-management-switch-workloads#Workloads-able-to-be-transitioned-to-Intune). For more information about co-management, see [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).
+ The Endpoint Protection workload can be transitioned to Intune after enabling co-management. To transition the Endpoint Protection workload, go to the co-management properties page and move the slider bar from Configuration Manager to **Pilot** or **All**. For details about the workloads, see [Co-management workloads](/sccm/comanage/workloads). For more information about co-management, see [Co-management for Windows 10 devices](/sccm/comanage/overview).
  
 ### Co-management dashboard in System Center Configuration Manager
 <!--1356648-->
@@ -258,9 +258,9 @@ Automatic deployment rules can be scheduled to evaluate offset from a base day. 
 <!-- 1357830 -->
 Now there is a new report to show the count of clients with a specific web browser as the Windows default. See the **Default Browser counts** report in the **Software - Companies and Products** reports group. For more information, see the [List of reports](/sccm/core/servers/manage/list-of-reports#software---companies-and-products).
 
-### Report on Windows AutoPilot device information
+### Report on Windows Autopilot device information
 <!-- 1351442 -->
-Windows AutoPilot is a solution for onboarding and configuring new Windows 10 devices in a modern way. For more information, see an [Overview of Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot). One method of registering existing devices with Windows AutoPilot is to upload device information to the Microsoft Store for Business and Education. This information includes the device serial number, Windows product identifier, and a hardware identifier. Use Configuration Manager to collect and report this device information with the new report, **Windows AutoPilot Device Information**, in the **Hardware - General** reports node. For more information, see [New Windows 10 devices](/sccm/core/clients/manage/co-management-prepare#new-windows-10-devices) in preparing for co-management.
+Windows Autopilot is a solution for onboarding and configuring new Windows 10 devices in a modern way. For more information, see an [Overview of Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot). One method of registering existing devices with Windows Autopilot is to upload device information to the Microsoft Store for Business and Education. This information includes the device serial number, Windows product identifier, and a hardware identifier. Use Configuration Manager to collect and report this device information with the new report, **Windows Autopilot Device Information**, in the **Hardware - General** reports node. For more information, see [How to prepare internet-based devices for co-management](/sccm/comanage/how-to-prepare-win10#windows-autopilot) in preparing for co-management.
 
 ### Report on Windows 10 Servicing details for a specific collection
 <!--1357653-->
