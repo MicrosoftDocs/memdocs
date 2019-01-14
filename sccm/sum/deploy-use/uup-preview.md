@@ -2,7 +2,7 @@
 title: UUP Preview
 titleSuffix: Configuration Manager
 description: Instructions for preview of UUP integration
-ms.date: 01/04/2018
+ms.date: 01/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -155,8 +155,8 @@ Once you're ready to start syncing UUP updates and trying them out, and you have
 
 5. On the **Products** tab, once your WSUS server is added to the preview, two new products should appear. These products contain the preview UUP content.  
 
-    - **Windows 10 UUP Pilot**: Windows workstation UUP updates  
-    - **Windows Server 2016 UUP**: Windows Server UUP updates  
+    - **Windows 10 UUP Preview**  
+    - **Windows Server UUP Preview**  
 
 6. On the **Classifications** tab, make sure to select:  
 
