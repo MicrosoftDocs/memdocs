@@ -72,7 +72,7 @@ When you enable a pre-release feature, the Configuration Manager hierarchy manag
 |------------------|----------------------|-------------------------|
 | SMS Provider API <!--1359052--> | Version 1810 | ![Not yet](media/red_x.png) |
 | [Enhanced HTTP site system](/sccm/core/plan-design/hierarchy/enhanced-http) <!--1356889,1358228--> | Version 1806 | Version 1810 |
-| [Mobile apps for co-managed devices](/sccm/core/clients/manage/co-management-switch-workloads#workloads-able-to-be-transitioned-to-intune) <!--1357892--> | Version 1806 | ![Not yet](media/red_x.png) |
+| [Client apps for co-managed devices](/sccm/comanage/workloads#client-apps) <!--1357892--> | Version 1806 | ![Not yet](media/red_x.png) |
 | [Package conversion manager](/sccm/apps/pcm/package-conversion-manager) <!--1357861--> | Version 1806 | Version 1810 |
 | [Support for Cisco AnyConnect 4.0.07x and later for iOS](/sccm/mdm/deploy-use/create-vpn-profiles) <!--1357393--> | Version 1802 | Version 1802 <br>with update 4163547 |
 | [Phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) <!--1356837--> | Version 1802 | Version 1806 |

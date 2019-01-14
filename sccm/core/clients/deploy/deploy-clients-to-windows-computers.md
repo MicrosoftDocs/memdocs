@@ -326,7 +326,7 @@ For the procedure to install the Configuration Manager client on a modern Window
 > [!NOTE]  
 > By default, once the client software is installed, the device unenrolls from Intune.
 > 
-> Starting in version 1710, clients don't unenroll from Intune. They can have both the Configuration Manager client and MDM enrollment at the same time. For more information, see [Co-management overview](/sccm/core/clients/manage/co-management-overview).  
+> Starting in version 1710, clients don't unenroll from Intune. They can have both the Configuration Manager client and MDM enrollment at the same time. For more information, see [Co-management overview](/sccm/comanage/overview).  
 
 
 ###  Install clients with Intune  
@@ -338,7 +338,7 @@ For the procedure to install the Configuration Manager client on a modern Window
    `CCMSETUPCMD="/MP:<FQDN of management point> SMSMP=<FQDN of management point> SMSSITECODE=<Your site code> DNSSUFFIX=<DNS Suffix of management point>"`  
 
    > [!Note]  
-   > For an example command line to use with a modern Windows 10 client using Azure AD authentication, see [Prepare Windows 10 devices for co-management](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client).  
+   > For an example command line to use with a modern Windows 10 client using Azure AD authentication, see [How to prepare internet-based devices for co-management](/sccm/comanage/how-to-prepare-win10#install-the-configuration-manager-client).  
 
 3. [Assign the app](https://docs.microsoft.com/intune/deploy-use/deploy-apps-in-microsoft-intune) to a group of the enrolled Windows computers.  
 

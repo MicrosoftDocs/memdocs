@@ -31,7 +31,7 @@ For more information, see the following articles:
 ## Recommended 
 A manually curated list of important articles.
 
-- [Co-management for Windows 10 devices](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview)  
+- [Co-management for Windows 10 devices](https://docs.microsoft.com/sccm/comanage/overview)  
 - [CMPivot](https://docs.microsoft.com/sccm/core/servers/manage/cmpivot)  
 - [Create and run PowerShell scripts](https://docs.microsoft.com/sccm/apps/deploy-use/create-deploy-scripts)  
 - [Phased deployments](https://docs.microsoft.com/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)  
@@ -57,7 +57,7 @@ The most popular articles in November 2018.
  | 7104 | [Support for Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) | 
  | 6957 | [Install console](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) | 
  | 6765 | [Client installation parameters and properties](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-installation-properties) | 
- | 6091 | [Co-management for Windows 10 devices](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview) | 
+ | 6091 | [Co-management for Windows 10 devices](https://docs.microsoft.com/sccm/comanage/overview) | 
  | 6043 | [Deploy applications](https://docs.microsoft.com/sccm/apps/deploy-use/deploy-applications) | 
  | 5833 | [Manage distribution points](https://docs.microsoft.com/sccm/core/servers/deploy/configure/install-and-configure-distribution-points) | 
 
