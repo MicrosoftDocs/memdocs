@@ -33,6 +33,8 @@
     items:
     - name: Enable co-management for Configuration Manager clients
       href: tutorial-co-manage-clients.md
+    - name: Enable co-management for internet-based devices
+      href: tutorial-co-manage-new-devices.md
   - name: Concepts
     items:
     - name: Workloads

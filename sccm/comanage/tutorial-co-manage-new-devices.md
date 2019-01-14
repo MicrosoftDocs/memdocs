@@ -25,7 +25,7 @@ With co-management, you can retain your well-established processes for using Con
 
 In this tutorial, you set up co-management of new Windows 10 devices in an environment where you use both Azure AD and an on-premises AD but don't have a [hybrid Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/overview#hybrid-azure-ad-joined-devices) (AD).
 
-If you have a hybrid Azure Active Directory (AD) that joins your on-premises AD with Azure AD, we recommend following our companion tutorial, [Enable co-management for Configuration Manager clients](tutorial-co-manage-clientsmd). 
+If you have a hybrid Azure Active Directory (AD) that joins your on-premises AD with Azure AD, we recommend following our companion tutorial, [Enable co-management for Configuration Manager clients](/sccm/comanage/tutorial-co-manage-clients). 
  
 Use this tutorial when:  
 - You can't deploy a hybrid Azure AD.
