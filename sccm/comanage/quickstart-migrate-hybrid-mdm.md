@@ -18,10 +18,9 @@ Hybrid mobile device management (MDM) is a deprecated feature. Support for hybri
 
 Intune standalone is the recommended deployment topology, and is required for co-management. If you want to enable co-management, migrate from an Intune hybrid configuration to Intune standalone. 
 
-<!--update with final video for this quickstart-->
 In the following video, principal program manager Andrew McMurray and senior product marketing manager Mayunk Jain discuss and demo migrating from hybrid MDM:
 
-> [!VIDEO https://www.youtube.com/embed/gA5q0_3bxPs]
+> [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/Moving-From-Hybrid-MDM-To-Microsoft-Intune/player]
 
 
 

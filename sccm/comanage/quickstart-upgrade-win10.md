@@ -16,11 +16,9 @@ manager: dougeby
 
 As you work towards onboarding your organization to co-management, getting current is a significant hurdle for some customers. Co-management requires [Windows 10 version 1709](https://docs.microsoft.com/windows/whats-new/whats-new-windows-10-version-1709) or later. Once you update Windows and configure auto-enrollment, your clients are automatically enrolled to co-management.
 
-
-<!--update with final video for this quickstart-->
 In the following video, senior program manager Rob York and product marketing manager Locky Ainley discuss and demo upgrading to Windows 10 for co-management:
 
-> [!VIDEO https://www.youtube.com/embed/gA5q0_3bxPs]
+> [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/Upgrading-to-Windows-10-to-Enable-Co-Management/player]
 
 
 
