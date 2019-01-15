@@ -65,7 +65,9 @@ After you've approved an application for installation, you can **Deny** the requ
 
 Starting in version 1810, configure email notifications for application approval requests. When a user requests an application, you receive an email. Click links in the email to approve or deny the request, without requiring the Configuration Manager console.
 
-You can define email addresses of the users who can approve or deny the request while creating a new deployment for the application. If you need to change the list of email addresses afterwords, go to the **Monitoring** workspace, expand **Alerts**, and select **Subscriptions** node. Select **Properties** from one of the **Approve application via email** subscriptions that is related to your application deployment. 
+You can define email addresses of the users who can approve or deny the request while creating a new deployment for the application. If you need to change the list of email addresses afterwards, go to the **Monitoring** workspace, expand **Alerts**, and select the **Subscriptions** node. Select **Properties** from one of the **Approve application via email** subscriptions that's related to your application deployment. 
+
+If there is more than one alert, you can determine which alert goes with which deployment. Open the alert properties, and view the list of **Selected alerts** on the General tab. The deployment is enabled as the alert for this subscription. 
 
 
 ### Prerequisites
