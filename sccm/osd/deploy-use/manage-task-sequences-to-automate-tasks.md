@@ -115,6 +115,8 @@ You can return to a previous page when you run a task sequence and there's a fai
 
        > [!NOTE]    
        > If the selected program fails to run on a client, the task sequence doesn't run. If the selected program runs successfully, it doesn't run again, even if the task sequence is rerun on the same client.  
+   
+   - **Suppress task sequence notifications**: Select this option to hide the 'New Software is available' toast notification. You still see the 'new software' icon from Software Center in the notification area. By default, this check box is cleared.  
  
    - **Disable this task sequence on computers where it is deployed**: If you select this option, Configuration Manager temporarily disables all deployments that contain this task sequence. It also removes the task sequence from the list of deployments available to run. The task sequence doesn't run until you enable it. By default, this option is cleared.  
 
