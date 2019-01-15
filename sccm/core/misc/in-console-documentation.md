@@ -94,14 +94,13 @@ Guided walkthroughs to assist with troubleshooting Configuration Manager compone
 
 
 ## New and updated support articles
-Support articles that are new or updated in November 2018.
+Support articles that are new or updated in December 2018.
 
-- [KB 4468362: How to deploy a Windows language pack as an application in Configuration Manager](https://support.microsoft.com/help/4468362)
-- [KB 4469580: ConfigMgr PXE does not work because a self-signed certificate is not created](https://support.microsoft.com/help/4469580/)
+- [KB 4040243: How to enable TLS 1.2 for Configuration Manager](https://support.microsoft.com/help/4040243)
+- [KB 4477073: Error 0x800f0831 when you install an update](https://support.microsoft.com/help/4477073)
 - [KB 4471003: How to boot from a PXE server that's on a different network](https://support.microsoft.com/help/4471003)
-- [KB 4462978: Update rollup for System Center Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4462978)
-- [KB 4471061: A client computer can "steal" the Configuration Manager GUID of an Unknown Computer object during imaging](https://support.microsoft.com/help/4471061)
-- [KB 4471115: Dynamic Media in Configuration Manager cannot get management point locations when the Task Sequence Wizard runs in Windows PE](https://support.microsoft.com/help/4471115)
+- [KB 4474026: Enable BitLocker task fails with error 80070057 in Configuration Manager](https://support.microsoft.com/help/4474026)
+- [KB 4483868: Contributor role is no longer assigned for a web app at the subscription level in Azure](https://support.microsoft.com/help/4483868)
 
 
 To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **System Center Configuration Manager**.  
