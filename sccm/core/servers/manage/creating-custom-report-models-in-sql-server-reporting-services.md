@@ -11,7 +11,10 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ---
-# Creating custom report models for System Center Configuration Manager in SQL Server Reporting Services*Applies to: System Center Configuration Manager (Current Branch)*
+# Creating custom report models for System Center Configuration Manager in SQL Server Reporting Services
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Sample report models are included in System Center Configuration Manager, but you can also define report models to meet your own business requirements, and then deploy the report model to Configuration Manager to use when you create new model-based reports. The following table provides the steps to create and deploy a basic report model.  
 
 > [!NOTE]  
@@ -137,7 +140,7 @@ Sample report models are included in System Center Configuration Manager, but yo
 
 3. Open the preceding files by using a text editor, such as Notepad.  
 
-4. In the file *&lt;Model Name\>***.dsv**, locate the first line of the file, which reads as follows:  
+4. In the file _&lt;Model Name\>_**.dsv**, locate the first line of the file, which reads as follows:  
 
     **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
 
@@ -147,9 +150,9 @@ Sample report models are included in System Center Configuration Manager, but yo
 
 5. Copy the entire contents of the file to the Windows Clipboard.  
 
-6. Close the file *&lt;Model Name\>***.dsv**.  
+6. Close the file _&lt;Model Name\>_**.dsv**.  
 
-7. In the file *&lt;Model Name\>***.smdl**, locate the last three lines of the file, which appear as follows:  
+7. In the file _&lt;Model Name\>_**.smdl**, locate the last three lines of the file, which appear as follows:  
 
     `</Entity>`  
 
@@ -157,11 +160,11 @@ Sample report models are included in System Center Configuration Manager, but yo
 
     `</SemanticModel>`  
 
-8. Paste the contents of the file *&lt;Model Name\>***.dsv** directly before the last line of the file (**&lt;SemanticModel\>**).  
+8. Paste the contents of the file _&lt;Model Name\>_**.dsv** directly before the last line of the file (**&lt;SemanticModel\>**).  
 
-9. Save and close the file *&lt;Model Name\>***.smdl**.  
+9. Save and close the file _&lt;Model Name\>_**.smdl**.  
 
-10. Copy the file *&lt;Model Name\>***.smdl** to the folder *%programfiles%*\Microsoft Configuration Manager \AdminConsole\XmlStorage\Other on the Configuration Manager site server.  
+10. Copy the file _&lt;Model Name\>_**.smdl** to the folder *%programfiles%*\Microsoft Configuration Manager \AdminConsole\XmlStorage\Other on the Configuration Manager site server.  
 
     > [!IMPORTANT]  
     >  After copying the report model file to the Configuration Manager site server, you must exit and restart the Configuration Manager console before you can use the report model in the **Create Report Wizard**.  
@@ -380,7 +383,7 @@ Sample report models are included in System Center Configuration Manager, but yo
 
 3. Open the preceding files by using a text editor, such as Notepad.  
 
-4. In the file *&lt;Model Name\>***.dsv**, locate the first line of the file, which reads as follows:  
+4. In the file _&lt;Model Name\>_**.dsv**, locate the first line of the file, which reads as follows:  
 
     **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
 
@@ -390,9 +393,9 @@ Sample report models are included in System Center Configuration Manager, but yo
 
 5. Copy the entire contents of the file to the Windows Clipboard.  
 
-6. Close the file *&lt;Model Name\>***.dsv**.  
+6. Close the file _&lt;Model Name\>_**.dsv**.  
 
-7. In the file *&lt;Model Name\>***.smdl**, locate the last three lines of the file, which appear as follows:  
+7. In the file _&lt;Model Name\>_**.smdl**, locate the last three lines of the file, which appear as follows:  
 
     `</Entity>`  
 
@@ -400,11 +403,11 @@ Sample report models are included in System Center Configuration Manager, but yo
 
     `</SemanticModel>`  
 
-8. Paste the contents of the file *&lt;Model Name\>***.dsv** directly before the last line of the file (**&lt;SemanticModel\>**).  
+8. Paste the contents of the file _&lt;Model Name\>_**.dsv** directly before the last line of the file (**&lt;SemanticModel\>**).  
 
-9. Save and close the file *&lt;Model Name\>***.smdl**.  
+9. Save and close the file _&lt;Model Name\>_**.smdl**.  
 
-10. Copy the file *&lt;Model Name\>***.smdl** to the folder *%programfiles%*\Microsoft Configuration Manager\AdminConsole\XmlStorage\Other on the Configuration Manager site server.  
+10. Copy the file _&lt;Model Name\>_**.smdl** to the folder *%programfiles%*\Microsoft Configuration Manager\AdminConsole\XmlStorage\Other on the Configuration Manager site server.  
 
     > [!IMPORTANT]  
     >  After copying the report model file to the Configuration Manager site server, you must exit and restart the Configuration Manager console before you can use the report model in the **Create Report Wizard**.  
