@@ -52,7 +52,7 @@ For more information, see [Package access account](/sccm/core/plan-design/hierar
 
 
 ## Binary differential replication  
- Binary differential replication (BDR), sometimes known as delta replication, is used to distribute updates to content that you previously deployed to other sites or to remote distribution points. Distribution points [require](https://docs.microsoft.com/en-us/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012dppreq) the Remote Differential Compression feature to be installed to support BDR's reduction of bandwidth usage.
+ Binary differential replication (BDR) is sometimes known as delta replication. It's used to distribute updates to content that you previously deployed to other sites or to remote distribution points. To support BDR's reduction of bandwidth usage, install the **Remote Differential Compression** feature on distribution points. For more information, see [Distribution point prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012dppreq).
 
  BDR minimizes the network bandwidth used to send updates for distributed content. It resends only the new or changed content instead of sending the entire set of content source files each time you change those files.  
 
