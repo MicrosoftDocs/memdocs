@@ -323,7 +323,7 @@ For more information, see [Install and configure distribution points](/sccm/core
 
 -   .NET Framework 3.5 SP1 (or later)  
 
--   Windows Defender features  
+-   Windows Defender features (Windows Server 2016 or later)  
 
 
 
