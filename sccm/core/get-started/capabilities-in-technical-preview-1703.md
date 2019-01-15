@@ -47,7 +47,7 @@ This is available only for Configuration Manager applications, not packages and 
 
 Use the following URL format to open Software Center to a particular application:
 
-**Softwarecenter:SoftwareId=*Application Identifier***
+**Softwarecenter:SoftwareId=_Application Identifier_**
 
 ### How to get the application identifier of an application.
 
