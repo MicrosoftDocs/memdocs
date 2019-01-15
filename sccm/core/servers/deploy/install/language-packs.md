@@ -41,7 +41,6 @@ Use the following table to map a locale ID to a language that you want to suppor
 |Server language|Locale ID (LCID)|Three-letter code|  
 |---------------------|------------------------|-----------------------|  
 |English (default)|0409|ENU|  
-|Chinese (Traditional, Hong Kong SAR)|0c04|ZHH|  
 |Chinese (Simplified)|0804|CHS|  
 |Chinese (Traditional, Taiwan)|0404|CHT|  
 |Czech|0405|CSY|  
@@ -69,7 +68,6 @@ Use the following table to map a locale ID to a language that you want to suppor
 |Client language|Locale ID (LCID)|Three-letter code|  
 |---------------------|------------------------|-----------------------|  
 |English (default)|0409|ENG|  
-|Chinese (Traditional, Hong Kong SAR)|0c04|ZHH|  
 |Chinese -Simplified|0804|CHS|  
 |Chinese (Traditional, Taiwan)|0404|CHT|  
 |Czech|0405|CSY|  

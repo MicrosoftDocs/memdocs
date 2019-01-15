@@ -28,7 +28,7 @@ To use an app configuration policy in Configuration Manager, instead of deployin
 
 Currently, app configuration policies are available only on devices running iOS 8 and later, and for these application types:
 
-- **app package for iOS (*.ipa file)**
+- **app package for iOS (\*.ipa file)**
 - **app package for iOS from App Store**
 
 For more information about app installation types, see the [introduction to application management](/sccm/apps/understand/introduction-to-application-management).

@@ -76,7 +76,7 @@ Here are three ways to start the remote control viewer:
 
 ### To start the remote control viewer from the Windows command line  
 
--   At the Windows command prompt, type *<Configuration Manager Installation Folder\>***\AdminConsole\Bin\x64\CmRcViewer.exe**  
+-   At the Windows command prompt, type _<Configuration Manager Installation Folder\>_**\AdminConsole\Bin\x64\CmRcViewer.exe**  
 
 CmRcViewer.exe supports the following command-line options:  
 

@@ -152,12 +152,12 @@ Beginning in Configuration Manager 1802, you can specify the length of strings t
 > [!IMPORTANT]  
 >  When you create a NOIDMIF file, it must be saved in an ANSI encoded format. NOIDMIF files saved in UTF-8 encoded format cannot be read by Configuration Manager.  
 
- After you create a NOIDMIF file, store it in the *%Windir%***\CCM\Inventory\Noidmifs** folder on each client. Configuration Manager will collect information from NODMIF files in this folder during the next scheduled hardware inventory cycle.  
+ After you create a NOIDMIF file, store it in the _%Windir%_**\CCM\Inventory\Noidmifs** folder on each client. Configuration Manager will collect information from NODMIF files in this folder during the next scheduled hardware inventory cycle.  
 
 ###  <a name="BKMK_IDMIF"></a> To create IDMIF files  
  IDMIF files can be used to add information about assets that couldn't normally be inventoried by Configuration Manager and isn't associated with a particular client device, to the Configuration Manager database. For example, you could use IDMIFS to collect information about projectors, DVD players, photocopiers, or other equipment that doesn't have a Configuration Manager client. For information about creating IDMIF files, see the Configuration Manager SDK documentation.  
 
- After you create an IDMIF file, store it in the *%Windir%***\CCM\Inventory\Idmifs** folder on client computers. Configuration Manager will collect information from this file during the next scheduled hardware inventory cycle. You must declare new classes for information contained in the file by adding or importing them.  
+ After you create an IDMIF file, store it in the _%Windir%_**\CCM\Inventory\Idmifs** folder on client computers. Configuration Manager will collect information from this file during the next scheduled hardware inventory cycle. You must declare new classes for information contained in the file by adding or importing them.  
 
 > [!NOTE]
 > MIF files could contain large amounts of data and collecting this data could negatively affect the performance of your site. Enable MIF collection only when required and configure the option **Maximum custom MIF file size (KB)** in the hardware inventory settings. For more information, see [Introduction to hardware inventory in System Center Configuration Manager](introduction-to-hardware-inventory.md).
