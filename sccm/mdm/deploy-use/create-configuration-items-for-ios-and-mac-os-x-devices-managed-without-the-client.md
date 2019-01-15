@@ -269,7 +269,7 @@ Use the System Center Configuration Manager **iOS and Mac OS X** configuration i
      >  To find the bundle ID of an app, use the following steps on a Mac computer that has the app installed:  
      > 
      > 1. Open the folder in which the app is installed (for example, **/Applications**)  
-     >    2.  Select the *<App Name\>***.app** bundle, and choose **Show Package Contents**  
+     >    2.  Select the _<App Name\>_**.app** bundle, and choose **Show Package Contents**  
      >    3.  Open the **Info.plist** file  
      >    4.  Check the value associated with the key **CFBundleIdentifier**  
      > 
