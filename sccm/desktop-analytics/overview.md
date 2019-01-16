@@ -66,13 +66,13 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 - An active Azure subscription, with **Company Admin** permissions  
 
-- Configuration Manager, version 1810 with hotfix KB4482615 or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/set-up#bkmk_hotfix).  
+- Configuration Manager, version 1810 with hotfix KB4482615 or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
 
 - Devices running Windows 7, Windows 8.1, or Windows 10  
 
-    - Install the latest updates. For more information, see [Compatibility updates](/sccm/desktop-analytics/set-up#compatibility-updates).  
+    - Install the latest updates. For more information, see [Update devices](/sccm/desktop-analytics/enroll-devices#update-devices).  
 
-    - Devices also need to have the Configuration Manager client, version 1810 with hotfix KB4482615 or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/set-up#bkmk_hotfix).  
+    - Devices also need to have the Configuration Manager client, version 1810 with hotfix KB4482615 or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
 
 - Windows diagnostics data. For more information, see the following articles:  
 

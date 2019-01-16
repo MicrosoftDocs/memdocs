@@ -1,8 +1,8 @@
 ---
 title: Enable data sharing
 titleSuffix: Configuration Manager
-description: A how-to guide for sharing diagnostics data with Desktop Analytics.
-ms.date: 01/02/2019
+description: A reference guide for sharing diagnostics data with Desktop Analytics.
+ms.date: 01/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -26,8 +26,6 @@ To enroll devices to Desktop Analytics, they need to send diagnostic data to Mic
 ![Diagram of diagnostic data levels for Desktop Analytics](media/diagnostic-data-levels.png)
 
 When you integrate Configuration Manager with Desktop Analytics, you also use it to manage the diagnostic data level on devices. For the best experience, use Configuration Manager. 
-
-You can also set the diagnostic data level on devices with the Desktop Analytics deployment script, by group policy, or Microsoft Intune. For more information, see [Methods to enroll devices](/sccm/desktop-analytics/set-up#methods-to-enroll-devices). 
 
 The basic functionality of Desktop Analytics works at the **Basic** diagnostic data level. You won't get usage or health data for your updated devices without enabling the **Enhanced (Limited)** level. Microsoft recommends that you enable the **Enhanced (Limited)** diagnostic data level. For more information, see [Windows 10 enhanced diagnostic data events and fields used by Windows Analytics](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)). 
 
@@ -55,7 +53,7 @@ To enable data sharing, configure your proxy server to whitelist the following e
 
 | Endpoint  | Function  |
 |-----------|-----------|
-| `https://v10c.events.data.microsoft.com` | Connected user experience and diagnostic component endpoint. Used by devices running Windows 10, version 1703 or later, with the 2018-09 cumulative update or later installed. This update is one of the following IDs: KB4458469, KB4457136, KB4457141. |
+| `https://v10c.events.data.microsoft.com` | Connected user experience and diagnostic component endpoint. Used by devices running Windows 10, version 1703 or later, with the 2018-09 cumulative update or later installed. |
 | `https://v10.events.data.microsoft.com` | Connected user experience and diagnostic component endpoint. Used by devices running Windows 10, version 1803, or later, _without_ the 2018-09 cumulative update installed. |
 | `https://v10.vortex-win.data.microsoft.com` | Connected user experience and diagnostic component endpoint. Used by devices running Windows 10, version 1709 or earlier. |
 | `https://vortex-win.data.microsoft.com` | Connected user experience and diagnostic component endpoint. Used by devices running Windows 7 and Windows 8.1 |
@@ -95,8 +93,3 @@ Make sure that a proxy doesn't block the diagnostic data because of authenticati
 
 
 
-## Next steps
-
-Advance to the next article to connect Configuration Manager with Desktop Analytics.
-> [!div class="nextstepaction"]  
-> [Connect Configuration Manager](/sccm/desktop-analytics/connect-configmgr)  

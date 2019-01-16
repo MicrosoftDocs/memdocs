@@ -22,10 +22,10 @@
     items:
     - name: Set up Desktop Analytics
       href: set-up.md
-    - name: Enable data sharing
-      href: enable-data-sharing.md
     - name: Connect Configuration Manager
       href: connect-configmgr.md
+    - name: Enroll devices
+      href: enroll-devices.md
     - name: Create deployment plans
       href: create-deployment-plans.md
     - name: Deploy to pilot
@@ -36,11 +36,9 @@
       href: app-health-analyzer.md
   - name: Reference
     items:
-      - name: Troubleshooting
-        href: troubleshooting.md
-      - name: User flow diagram
-      - name: System diagram
-  - name: Resources
-    items:
-      - name: Privacy
-        href: privacy.md
+    - name: Enable data sharing
+      href: enable-data-sharing.md
+    - name: Troubleshooting
+      href: troubleshooting.md
+    - name: Privacy
+      href: privacy.md

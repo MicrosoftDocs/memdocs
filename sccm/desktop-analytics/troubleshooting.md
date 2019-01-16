@@ -2,7 +2,7 @@
 title: Troubleshooting Desktop Analytics
 titleSuffix: Configuration Manager
 description: Technical details to help you troubleshoot issues with Desktop Analytics.
-ms.date: 01/07/2019
+ms.date: 01/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -24,7 +24,7 @@ Many common issues are caused by missing prerequisites. First confirm the follow
 
 - [Prerequisites](/sccm/desktop-analytics/overview#prerequisites)  
 
-- [Compatibility updates](/sccm/desktop-analytics/set-up#compatibility-updates)  
+- [Windows component updates](/sccm/desktop-analytics/enroll-devices#update-devices)  
 
 - [How to enable data sharing](/sccm/desktop-analytics/enable-data-sharing), which covers the following topics:  
 
@@ -150,7 +150,7 @@ For more information, review M365AHandler.log on the client.
 <!--18,19,32-->
 The compatibility update (appraiser.dll) isn't installed or out of date on the device. It's older than the minimum requirement for Desktop Analytics. 
 
-Install the latest compatibility update. For more information, see [Compatibility updates](/sccm/desktop-analytics/set-up#compatibility-updates).
+Install the latest compatibility update. For more information, see [Compatibility updates](/sccm/desktop-analytics/enroll-devices#bkmk_appraiser).
 
 
 #### Appraiser version
@@ -174,7 +174,7 @@ If not successful, it might show one of the following errors:
 
 For more information, review M365AHandler.log on the client. 
 
-Check for the following file: `%windir%\System32\CompatTelRunner.exe`. If it doesn't exist, reinstall the required [compatibility updates](/sccm/desktop-analytics/set-up#compatibility-updates). Make sure no other system component is removing this file, such as group policy or an antimalware service. 
+Check for the following file: `%windir%\System32\CompatTelRunner.exe`. If it doesn't exist, reinstall the required [compatibility updates](/sccm/desktop-analytics/enroll-devices#bkmk_appraiser). Make sure no other system component is removing this file, such as group policy or an antimalware service. 
 
 If the M365Handler.log file on the client includes one of the following errors:
 `RunAppraiser failed. CompatTelRunner.exe exited with last error code: 0x800703F1`
@@ -183,14 +183,19 @@ If the M365Handler.log file on the client includes one of the following errors:
 To help remediate these errors, run the following commands from an elevated Windows PowerShell console on the affected client:
 
 ```PowerShell
+# stop associated services
 Stop-Service -Name diagtrack #Connected User Experiences and Telemetry
 Stop-Service -Name pcasvc #Program Compatibility Assistant Service
 Stop-Service -Name dps #Diagnostic Policy Service
 
+# regenerate diagnostic data cache
 Remove-Item -Path $Env:WinDir\appcompat\programs\amcache.hve
 Remove-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags" -Name AmiHivePermissionsCorrect -Force
+
+# set ASL logging level to output log files in %windir%\temp
 New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags" -Name LogFlags -Value 4 -PropertyType DWord -Force 
 
+# restart services
 Start-Service -Name diagtrack
 Start-Service -Name pcasvc
 Start-Service -Name dps
@@ -212,7 +217,7 @@ If not successful, it might show one of the following errors:
 
 For more information, review M365AHandler.log on the client. 
 
-Check for the following file: `%windir%\System32\DeviceCensus.exe`. If it doesn't exist, reinstall the required [compatibility updates](/sccm/desktop-analytics/set-up#compatibility-updates). Make sure no other system component is removing this file, such as group policy or an antimalware service. 
+Check for the following file: `%windir%\System32\DeviceCensus.exe`. If it doesn't exist, reinstall the required [compatibility updates](/sccm/desktop-analytics/enroll-devices#bkmk_appraiser). Make sure no other system component is removing this file, such as group policy or an antimalware service. 
 
 
 #### Windows diagnostic endpoint connectivity
@@ -338,7 +343,7 @@ Otherwise, it might display one of the following errors:
 
 <!--include something about diagtrack perf update https://go.microsoft.com/fwlink/?linkid=2011593-->
 
-Install the latest compatibility update. For more information, see [Compatibility updates](/sccm/desktop-analytics/set-up#compatibility-updates).
+Install the latest updates. For more information, see [Device updates](/sccm/desktop-analytics/enroll-devices#update-devices).
 
 Make sure that the **Connected User Experiences and Telemetry** service on the device is running.
 
@@ -433,4 +438,29 @@ The following log files are on the Configuration Manager client in the following
     ```
 
 4. Restart the **SMS_EXECUTIVE** service on the site server
+
+
+
+## <a name="bkmk_MALogAnalyticsReader"></a> MALogAnalyticsReader application role
+
+When you set up Desktop Analytics, you accept a consent on behalf of your organization. This consent is to assign the MALogAnalyticsReader application the Log Analytics Reader role for the workspace. This application role is required by Desktop Analytics. 
+
+If there is a problem with this process during set up, use the following process to manually add this permission:
+
+1. Go to the [Azure portal](http://portal.azure.com), and select **All resources**. Select the workspace of type **Log Analytics**.  
+
+2. In the workspace menu, select **Access control (IAM)**, then select **Add**.  
+
+3. In the **Add permissions** panel, configure the following settings:  
+
+    - **Role**: **Log Analytics Reader**  
+
+    - **Assign access to**: **Azure AD user, group, or application**  
+
+    - **Select**: **MALogAnalyticsReader**  
+  
+4. Select **Save**. 
+
+The portal shows a notification that it added the role assignment.
+
 
