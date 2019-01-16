@@ -55,7 +55,7 @@ Before installing and using the toolkit, make sure the device meets the followin
 
 - Enrolled in the Desktop Analytics service, which includes the following requirements:  
 
-    - Latest compatibility update. For more information, see [Compatibility updates](/sccm/desktop-analytics/set-up#compatibility-updates).  
+    - Latest updates. For more information, see [Update devices](/sccm/desktop-analytics/enroll-devices#update-devices).  
 
     - Diagnostic data level. For more information, see [Diagnostic data levels](/sccm/desktop-analytics/enable-data-sharing#diagnostic-data-levels).  
 

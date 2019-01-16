@@ -2,7 +2,7 @@
 title: Set up Desktop Analytics
 titleSuffix: Configuration Manager
 description: A how-to guide for setting up and onboarding to Desktop Analytics.
-ms.date: 12/03/2018
+ms.date: 01/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -40,7 +40,12 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
 5. On the page to **Set up your workspace**:  
 
-    - To use an existing workspace for Desktop Analytics, select it, and continue with the next step. If you're already using Windows Analytics, select that workspace. Desktop Analytics transfers your data and configurations.  
+    - To use an existing workspace for Desktop Analytics, select it, and continue with the next step.  
+
+        > [!Note]  
+        > If you're already using Windows Analytics, select that same workspace. You need to reenroll devices to Desktop Analytics that you previously enrolled in Windows Analytics. 
+        > 
+        > You can only have one Desktop Analytics workspace per Azure AD tenant. Devices can only send diagnostic data to one workspace.   
 
     - To create a workspace for Desktop Analytics, select **Add workspace**.  
 
@@ -54,56 +59,14 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
 7. In the new browser tab, pick an account to use to sign in. Select the option to **Consent on behalf of your organization** and select **Accept**.  
 
+    > [!Note]  
+    > This consent is to assign the MALogAnalyticsReader application the Log Analytics Reader role for the workspace. This application role is required by Desktop Analytics. For more information, see [MALogAnalyticsReader application role](/sccm/desktop-analytics/troubleshooting#bkmk_MALogAnalyticsReader).  
+
 8. Back on the page to **Set up your workspace**, select **Next**.  
 
 9. On the **Last steps** page, select **Go to Desktop Analytics**. 
 
 The Azure portal shows the Desktop Analytics **Home** page.
-
-
-
-## Assign application role
-
-Assign the MALogAnalyticsReader application the Log Analytics Reader role for the workspace.  
-
-1. Go to the [Azure portal](http://portal.azure.com), and select **All resources**. Select the workspace of type **Log Analytics**.  
-
-2. In the workspace menu, select **Access control (IAM)**, then select **Add**.  
-
-3. In the **Add permissions** panel, configure the following settings:  
-
-    - **Role**: **Log Analytics Reader**  
-
-    - **Assign access to**: **Azure AD user, group, or application**  
-
-    - **Select**: **MALogAnalyticsReader**  
-  
-4. Select **Save**. 
-
-The portal shows a notification that it added the role assignment.
-
-
-
-## <a name="bkmk_hotfix"></a> Update Configuration Manager
-
-First, make sure that your Configuration Manager site is running at least version 1810. For more information, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates).
-
-<!--Once the 1810 hotfix rollup is available, that becomes the minimum requirement. Also update prereqs and tutorial.-->
-
-You also need to install hotfix KB4482615 to support integration with Desktop Analytics. 
-
-> [!Important]  
-> The following process is for current branch sites that updated to version 1810 when it was generally available after 19 December 2018.
-> 
-> If you opted into the 1810 update by running a PowerShell script in late November or early December 2018, this hotfix isn't available. For more information, contact your Microsoft representative for Desktop Analytics.  
-
-1. Update the site  
-
-    1. Download hotfix **KB4482615** from the [Microsoft Download Center](https://download.microsoft.com/download/0/9/0/09081E12-A2CF-40B6-82D8-9B8914A1C2D3/KB4482615/CM1810-KB4482615.ConfigMgr.Update.exe)  
-
-    2. [Use the update registration tool to import hotfixes](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
-
-2. Update clients. To simplify this process, consider using automatic client upgrade. For more information, see [Upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).  
 
 
 
@@ -150,114 +113,8 @@ Create an app in Azure AD for Configuration Manager.
 
 
 
-## Compatibility updates
-
-The compatibility update runs diagnostics on the Windows device to evaluate its compatibility status with the latest versions of the Windows 10.
-
-Microsoft regularly increments these updates, but the associated KB number doesn't change. Make sure that you always have the latest version of the update.
-
-Restart devices after you install the compatibility updates for the first time.
-
-> [!Tip]  
-> Configure your update management tool to automatically install the latest version of these updates. 
-> 
-> There's a related optional update, [KB 3150513](https://catalog.update.microsoft.com/v7/site/Search.aspx?q=3150513). This update provides updated configuration and definitions for older compatibility updates. For more information, see [Latest compatibility definition update for Windows](https://support.microsoft.com/help/3150513).  
-
-#### Windows 10
-Windows 10 includes the compatibility update. To get the latest compatibility update, install the latest Windows 10 cumulative update.
-
-#### Windows 8.1
-Download the update: [KB 2976978](http://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB2976978) 
-
-Runs diagnostics on the Windows 8.1 systems that participate in the Windows Customer Experience Improvement Program. These diagnostics help determine whether you might have compatibility issues when upgrading to Windows 10.
-
-For more information, see [Compatibility update for keeping Windows up-to-date in Windows 8.1](https://support.microsoft.com/help/2976978).
-
-#### Windows 7 with Service Pack 1
-Download the update: [KB 2952664](http://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB2952664) 
-
-Runs diagnostics on the Windows 7 with Service Pack 1 (SP1) systems that participate in the Windows Customer Experience Improvement Program. These diagnostics help determine whether you might have compatibility issues when upgrading to Windows 10.
-
-For more information, see [Compatibility update for keeping Windows up-to-date in Windows 7](https://support.microsoft.com/help/2952664).
-
-
-
-## Device enrollment
-
-The Desktop Analytics service has no agents to install. Device enrollment requires configuring settings on the devices you want it to monitor. These settings control to which Desktop Analytics instance the device should send its data, and other configuration options.
-
-> [!NOTE]  
-> If you're already using Windows Analytics, select the same workspace from the displayed list. All of those devices automatically show up in your Desktop Analytics workspace. You don't need to reenroll them. 
-> 
-> If you chose to configure a different workspace, first split your entries between devices that you monitor with Windows Analytics and devices that you monitor with Desktop Analytics. Then enroll devices you want Desktop Analytics to monitor.  
-
-
-### Commercial ID
-
-Microsoft uses a unique commercial ID to map information from user computers to your Desktop Analytics workspace. The service should automatically generate this ID. 
-
-When you integrate Configuration Manager with Desktop Analytics, it automatically queries the service for this ID. If you're not using Configuration Manager, use the following procedure to copy your Commercial ID:  
-
-1. Go to the Desktop Analytics portal, and select **Connected services** in the Global Settings group.  
-
-2. In the **Connected services** pane, the **Enroll devices** pane is selected by default. In the Enroll devices pane, the Information section displays your Commercial ID key.  
-
-![Screenshot of commercial ID in Desktop Analytics portal](media/commercial-id.png)
-
-> [!Important]  
-> Only **Get new ID key** when you can't use the current one. If you regenerate the commercial ID, deploy the new ID to your devices. This process might result in loss of diagnostic data during the transition.  
-
-
-### Methods to enroll devices
-
-There are several methods to enroll devices with Desktop Analytics. Microsoft recommends using Configuration Manager.
-
-#### Configuration Manager
-Configuration Manager provides an integrated experience for managing and deploying these settings to clients. For the best experience, use Configuration Manager. 
-
-For more information, see [How to connect Configuration Manager with Desktop Analytics](/sccm/desktop-analytics/connect-configmgr).
-
-#### Microsoft Intune
-You can also configure devices by using a mobile device management tool such as Intune.
-
-Use Intune to set the Commercial ID on managed devices. Use a custom device configuration setting to add the following OMA-URI: `./Vendor/MSFT/DMClient/Provider/ProviderID/CommercialID`. Set your organization's commercial ID as the value. For more information, see [Use custom settings for Windows 10 devices in Intune](https://docs.microsoft.com/intune/custom-settings-windows-10).
-
-For more information on setting diagnostic data with Intune, see [Device restrictions for Windows 10 settings in Intune](https://docs.microsoft.com/intune/device-restrictions-windows-10#reporting-and-telemetry).
-
-Configure these and other settings using the Intune management extension for Windows PowerShell. For more information, see [Manage PowerShell scripts in Intune for Windows 10 devices](https://docs.microsoft.com/intune/intune-management-extension).
-
-#### Script
-For more information, see ["Understanding connectivity scenarios and the deployment script"](https://blogs.technet.microsoft.com/upgradeanalytics/2017/03/10/understanding-connectivity-scenarios-and-the-deployment-script/) on the Windows Analytics blog. This post includes a summary of setting the ClientProxy for the script. This setting enables the script to properly check for diagnostic data endpoint connectivity.
-
-#### Group policy
-All policies described in this section also have *preference* registry keys. Set these keys by using the deployment script. If both are set, policy settings override preference settings.
-
-These group policy objects are under `Microsoft\Windows\DataCollection`:
-
-| Policy   | Value  |
-|----------|--------|
-| **CommercialId** | In order for a device to show up in Desktop Analytics, configure it with your organization’s Commercial ID. |
-| **AllowTelemetry**  |	Set `1` for **Basic**, `2` for **Enhanced**, or `3` for **Full** diagnostic data. Desktop Analytics requires at least basic diagnostic data. More features are available when you use the Enhanced level. For example, Device Health requires Enhanced diagnostic data. Desktop Analytics only collects app usage and site discovery data on Windows 10 devices with Enhanced diagnostic data. For more information, see [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization). |
-| **LimitEnhancedDiagnosticDataWindowsAnalytics** |	This setting only applies when the AllowTelemetry setting is `2`. It limits the Enhanced diagnostic data events sent to Microsoft to just those events needed by Desktop Analytics. For more information, see [Windows 10, version 1709 enhanced diagnostic data events and fields used by Windows Analytics](https://docs.microsoft.com/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields).|
-| **AllowDeviceNameInTelemetry** | To enable Windows 10, version 1803, devices to send the device name, enable this separate opt-in setting. |
-
-Configure these settings in **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Data Collection and Preview Builds**. 
-
-
-### Conflict resolution
-
-In general, use Configuration Manager collections to target Desktop Analytics settings and enrollment. Use direct membership or queries to include or exclude devices from the collection. For more information, see [How to create collections](/sccm/core/clients/manage/collections/create-collections).
-
-Configuration Manager only configures the Windows settings if a value doesn't already exist. If you need to configure different settings for a unique group of devices, you can use [group policy](#group-policy). Settings targeted by group policy take precedence over Configuration Manager settings.
-
-If you target Configuration Manager clients with both Windows Analytics and Desktop Analytics settings, the settings for Desktop Analytics take precedence. 
-
-When you configure the diagnostic data level, you set the upper boundary for the device. By default, users can choose to set a lower level. You can control this behavior using the group policy setting, **Configure telemetry opt-in setting user interface**. For more information, see [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management).
-
-
-
 ## Next steps
 
-Advance to the next article to enable sharing diagnostic data with Desktop Analytics.
+Advance to the next article to connect Configuration Manager with Desktop Analytics.
 > [!div class="nextstepaction"]  
-> [Enable data sharing](/sccm/desktop-analytics/enable-data-sharing)  
+> [Connect Configuration Manager](/sccm/desktop-analytics/connect-configmgr)  

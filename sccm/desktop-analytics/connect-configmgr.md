@@ -2,7 +2,7 @@
 title: Connect Configuration Manager
 titleSuffix: Configuration Manager
 description: A how-to guide for connecting Configuration Manager with Desktop Analytics.
-ms.date: 12/03/2018
+ms.date: 01/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -17,6 +17,34 @@ robots: noindex,nofollow
 
 > [!Note]  
 > This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
+
+Desktop Analytics is tightly integrated with Configuration Manager. First, make sure the site is up to date to support the latest features. Then create the Desktop Analytics connection in Configuration Manager. Finally, monitor the health of the connection. 
+
+
+## <a name="bkmk_hotfix"></a> Update the site
+
+First, make sure that your Configuration Manager site is running at least version 1810. For more information, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates).
+
+<!--Once the 1810 hotfix rollup is available, that becomes the minimum requirement. Also update prereqs and tutorial.-->
+
+You also need to install hotfix KB4482615 to support integration with Desktop Analytics. 
+
+> [!Important]  
+> The following process is for current branch sites that updated to version 1810 when it was generally available after 19 December 2018.
+> 
+> If you opted into the 1810 update by running a PowerShell script in late November or early December 2018, this hotfix isn't available. For more information, contact your Microsoft representative for Desktop Analytics.  
+
+1. Update the site  
+
+    1. Download hotfix **KB4482615** from the [Microsoft Download Center](https://download.microsoft.com/download/0/9/0/09081E12-A2CF-40B6-82D8-9B8914A1C2D3/KB4482615/CM1810-KB4482615.ConfigMgr.Update.exe)  
+
+    2. [Use the update registration tool to import hotfixes](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
+
+2. Update clients. To simplify this process, consider using automatic client upgrade. For more information, see [Upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).  
+
+
+
+## <a name="bkmk_connect"></a> Connect to the service
 
 Use this procedure to connect Configuration Manager to Desktop Analytics, and configure device settings. This procedure is a one-time process to attach your hierarchy to the cloud service.  
 
@@ -55,7 +83,10 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
     - **Windows 10 diagnostic data level**: select at least **Enhanced (Limited)**  
 
     - **Allow Device Name in diagnostic data**: select **Enable**  
-  
+
+        > [!Note]  
+        > The device name isn't sent to Microsoft by default. If you don't send the device name, it appears in Desktop Analytics as "Unknown". This behavior can make it difficult to identify and assess devices.  
+
    Select **Next**. The **Available functionality** page shows the Desktop Analytics functionality that's available with the diagnostic data settings from the previous page. Select **Next** to continue or **Previous** to make changes.   
 
     ![Example Available Functionality page in the Azure Services Wizard](media/available-functionality.png)
@@ -77,7 +108,8 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
 Configuration Manager creates a settings policy to configure devices in the Target Collection. This policy includes the diagnostic data settings to enable devices to send data to Microsoft. By default, clients update policy every hour. After receiving the new settings, it can be several hours more before the data is available in Desktop Analytics.
 
 
-### Monitor connection health
+
+## <a name="bkmk_monitor"></a> Monitor connection health
 
 Monitor the configuration of your devices for Desktop Analytics. In the Configuration Manager console, go to the **Software Library** workspace, expand the **Microsoft 365 Servicing** node, and select the **Connection Health** dashboard.  
 
@@ -87,8 +119,9 @@ Configuration Manager synchronizes any Desktop Analytics deployment plans within
 
 
 
-### Next steps
+## Next steps
 
-Advance to the next article to create deployment plans in Desktop Analytics.
+Advance to the next article to enroll devices to Desktop Analytics.
 > [!div class="nextstepaction"]  
-> [Create deployment plans](/sccm/desktop-analytics/create-deployment-plans)  
+> [Enroll devices](/sccm/desktop-analytics/enroll-devices)  
+
