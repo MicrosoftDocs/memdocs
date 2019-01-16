@@ -58,13 +58,15 @@ Review the [technical preview](/sccm/core/get-started/technical-preview) article
 
 [!INCLUDE [Management insight rules for collections](includes/1901/3555752.md)]
 
-[!INCLUDE [Task sequence debugger](includes/1901/3612274.md)]
-
 [!INCLUDE [View active consoles](includes/1901/3699367.md)]
 
 [!INCLUDE [StartTime property to OSD provisioning mode](includes/1901/3197824.md)]
 
 [!INCLUDE [Improvements to OS deployment task sequences](includes/1901/3633146.md)] <!--3633146,3641475-->
+
+[!INCLUDE [Azure VM templates](includes/1901/3556017.md)]
+
+[!INCLUDE [Prevent classic cloud service deployment](includes/1901/3605704.md)]
 
 
 
