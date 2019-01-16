@@ -46,7 +46,7 @@ If you [imported Configuration Manager data to Microsoft Intune](migrate-import-
 - [Assign policies](https://docs.microsoft.com/intune/get-started-policies)  
 - [Assign profiles](https://docs.microsoft.com/intune/device-profile-assign)  
     > [!NOTE]  
-    > When Intune deploys the new email profile, users receive a prompt to reenter their password.  
+    > When Intune deploys the new email profile, users receive a prompt to reenter their password. This behavior results in emails being redownloaded on users' devices. Any custom modifications done by the user will need to be done again. 
 - [Assign apps](https://docs.microsoft.com/intune/get-started-apps) 
 
 ## Terms and conditions policy
