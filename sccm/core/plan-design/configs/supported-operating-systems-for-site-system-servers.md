@@ -2,7 +2,7 @@
 title: Supported site system servers
 titleSuffix: Configuration Manager
 description: Learn which Windows versions you can use to host a Configuration Manager site or site system role.
-ms.date: 11/27/2018
+ms.date: 01/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -177,6 +177,9 @@ This OS version is supported for the following roles:
 
 Windows Server 2008 R2 is now in extended support and no longer in mainstream support, as detailed in [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle). For more information about future support for these operating systems as site system servers with Configuration Manager, see [Deprecated server operating systems](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems).  
 
+> [!Important]  
+> The extended support end date for Windows Server 2008 R2 is January 14, 2020. After this date, Configuration Manager won't support this OS as any site system role. 
+
 This OS isn't supported for site servers or most site system roles. It's still supported for the distribution point site system role, including pull-distribution points and for PXE and multicast.
 
 #### Site system servers
@@ -191,6 +194,9 @@ This OS isn't supported for site servers or most site system roles. It's still s
 *Applies to Windows Server 2008 with Service Pack 2 (x86, x64): Standard, Enterprise, and Datacenter*
 
 Windows Server 2008 with Service Pack 2 (SP2) is now in extended support and no longer in mainstream support, as detailed in [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle). For more information about future support for these operating systems as site system servers with Configuration Manager, see [Deprecated server operating systems](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems).  
+
+> [!Important]  
+> The extended support end date for Windows Server 2008 R2 is January 14, 2020. After this date, Configuration Manager won't support this OS as any site system role. 
 
 This OS isn't supported for site servers or site system roles, except for the distribution point and pull-distribution point. Continue to use this OS as a distribution point until deprecation of this support is announced, or this OS's extended support period expires. For more information, see [Installation of Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095).
 
