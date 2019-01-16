@@ -39,8 +39,6 @@ Desktop Analytics uses a *Log Analytics workspace* in your Azure subscription. A
 
 Before you start this tutorial, make sure you have the following prerequisites:  
 
-<!-- ### Technical -->
-
 - An active Azure subscription, with **Company Admin** permissions  
 
 - Configuration Manager, version 1810 with hotfix KB4482615 or later, with **Full administrator** role  
@@ -83,20 +81,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
     For more information, see [How to enable data sharing for Desktop Analytics](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
 
-<!-- ### Licensing
-<!--what's the minimum licensing that's needed for this tutorial?
-These qualifying licenses only apply to the **Device Health** portion of Desktop Analytics:  
-
-- Windows 10 Enterprise or Windows 10 Education: per-device with active Software Assurance  
-
-- Windows 10 Enterprise E3 or E5: per-device or per-user subscription (included with Microsoft 365 F1, E3, or E5)  
-
-- Windows 10 Education A3 or A5 (included with Microsoft 365 Education A3 or A5)  
-
-- Windows Virtual Desktop Access E3 or E5: per-device of per-user subscription  
- -->
-
-> [!Note]  
+> [!Important]  
 > These prerequisites are for the purposes of this tutorial. For more information about the general prerequisites for Desktop Analytics with Configuration Manager, see [Prerequisites](/sccm/desktop-analytics/overview#prerequisites).  
 
 
@@ -109,7 +94,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
 2. On the **Accept service agreement** page, review the service agreement, and select **Accept**.  
 
-3. On the **Confirm your subscription** page, the list of required qualifying licenses are for Windows device health features of Desktop Analytics.<!--Switch the setting to **Yes** next to **Do you have one of the supported or higher subscriptions**--> Select **Next** to continue.  
+3. On the **Confirm your subscription** page, the list of required qualifying licenses are for Windows device health features of Desktop Analytics. Select **Next** to continue.  
 
 4. On the **Give users access** page, Desktop Analytics pre-configures two security groups in Azure Active Directory:  
 
@@ -121,11 +106,11 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
 5. On the page to **Set up your workspace**:  
 
-    - To use an existing workspace for Desktop Analytics, select it, and continue with the next step. <!--If you're already using Windows Analytics, select that workspace. Desktop Analytics transfers your data and configurations.-->  
+    - To use an existing workspace for Desktop Analytics, select it, and continue with the next step.  
 
     - To create a workspace for Desktop Analytics, select **Add workspace**.  
 
-        1. Enter a **Workspace name**.<!--do we have any guidance for this name?-->  
+        1. Enter a **Workspace name**.  
 
         2. Select the drop-down list to **Select the Azure subscription name for this workspace**, and choose the Azure subscription for this workspace.  
 
@@ -138,24 +123,6 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 8. Back on the page to **Set up your workspace**, select **Next**.  
 
 9. On the **Last steps** page, select **Go to Desktop Analytics**. The Azure portal shows the Desktop Analytics **Home** page.  
-
-<!-- per Dhiren, this action happens automatically during onboarding
-10. Assign the MALogAnalyticsReader application the Log Analytics Reader role for the workspace.  
-
-    1. Go to the [Azure portal](http://portal.azure.com), and select **All resources**. Select the workspace of type **Log Analytics**.  
-
-    2. In the workspace menu, select **Access control (IAM)**, then select **Add**.  
-
-    3. In the **Add permissions** panel, configure the following settings:  
-
-        - **Role**: **Log Analytics Reader**  
-
-        - **Assign access to**: **Azure AD user, group, or application**  
-
-        - **Select**: **MALogAnalyticsReader**  
-  
-   Select **Save**. The portal shows a notification that it added the role assignment.  
--->
 
 
 ### Update Configuration Manager
@@ -271,9 +238,6 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
 
         These collections continue to sync as their membership changes. For example, your deployment plan uses a collection with a Windows 7 membership rule. As those devices upgrade to Windows 10, and Configuration Manager evaluates the collection membership, those devices drop out of the collection and deployment plan.  
 
-<!--         > [!Warning]  
-        > For the Desktop Analytics private preview, the total membership of all collections shouldn't be more than 10,000 devices. These collections include the Target Collection and each additional collection.  
- -->
 6. Complete the wizard.  
 
 Configuration Manager creates a settings policy to configure devices in the Target Collection. This policy includes the diagnostic data settings to enable devices to send data to Microsoft. By default, clients update policy every hour. After receiving the new settings, it can be several hours more before the data is available in Desktop Analytics.

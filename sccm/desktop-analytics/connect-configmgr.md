@@ -55,7 +55,10 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
     - **Windows 10 diagnostic data level**: select at least **Enhanced (Limited)**  
 
     - **Allow Device Name in diagnostic data**: select **Enable**  
-  
+
+        > [!Note]  
+        > The device name isn't sent to Microsoft by default. If you don't send the device name, it appears in Desktop Analytics as "Unknown". This behavior can make it difficult to identify and assess devices.  
+
    Select **Next**. The **Available functionality** page shows the Desktop Analytics functionality that's available with the diagnostic data settings from the previous page. Select **Next** to continue or **Previous** to make changes.   
 
     ![Example Available Functionality page in the Azure Services Wizard](media/available-functionality.png)

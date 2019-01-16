@@ -40,7 +40,12 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
 5. On the page to **Set up your workspace**:  
 
-    - To use an existing workspace for Desktop Analytics, select it, and continue with the next step. If you're already using Windows Analytics, select that workspace. Desktop Analytics transfers your data and configurations.  
+    - To use an existing workspace for Desktop Analytics, select it, and continue with the next step.  
+
+        > [!Note]  
+        > If you're already using Windows Analytics, select that same workspace. You need to reenroll devices to Desktop Analytics that you previously enrolled in Windows Analytics. 
+        > 
+        > You can only have one Desktop Analytics workspace per Azure AD tenant. Devices can only send diagnostic data to one workspace.   
 
     - To create a workspace for Desktop Analytics, select **Add workspace**.  
 
@@ -63,6 +68,8 @@ The Azure portal shows the Desktop Analytics **Home** page.
 
 
 ## Assign application role
+
+<!--get details from RoshaK/ACabello on why this app needs this role-->
 
 Assign the MALogAnalyticsReader application the Log Analytics Reader role for the workspace.  
 
@@ -186,62 +193,32 @@ For more information, see [Compatibility update for keeping Windows up-to-date i
 
 The Desktop Analytics service has no agents to install. Device enrollment requires configuring settings on the devices you want it to monitor. These settings control to which Desktop Analytics instance the device should send its data, and other configuration options.
 
-> [!NOTE]  
-> If you're already using Windows Analytics, select the same workspace from the displayed list. All of those devices automatically show up in your Desktop Analytics workspace. You don't need to reenroll them. 
+> [!Note]  
+> If you're already using Windows Analytics, use that same workspace for Desktop Analytics. You need to reenroll devices to Desktop Analytics that you previously enrolled in Windows Analytics. 
 > 
-> If you chose to configure a different workspace, first split your entries between devices that you monitor with Windows Analytics and devices that you monitor with Desktop Analytics. Then enroll devices you want Desktop Analytics to monitor.  
+> You can only have one Desktop Analytics workspace per Azure AD tenant. Devices can only send diagnostic data to one workspace.   
 
-
-### Commercial ID
-
-Microsoft uses a unique commercial ID to map information from user computers to your Desktop Analytics workspace. The service should automatically generate this ID. 
-
-When you integrate Configuration Manager with Desktop Analytics, it automatically queries the service for this ID. If you're not using Configuration Manager, use the following procedure to copy your Commercial ID:  
-
-1. Go to the Desktop Analytics portal, and select **Connected services** in the Global Settings group.  
-
-2. In the **Connected services** pane, the **Enroll devices** pane is selected by default. In the Enroll devices pane, the Information section displays your Commercial ID key.  
-
-![Screenshot of commercial ID in Desktop Analytics portal](media/commercial-id.png)
-
-> [!Important]  
-> Only **Get new ID key** when you can't use the current one. If you regenerate the commercial ID, deploy the new ID to your devices. This process might result in loss of diagnostic data during the transition.  
-
-
-### Methods to enroll devices
-
-There are several methods to enroll devices with Desktop Analytics. Microsoft recommends using Configuration Manager.
-
-#### Configuration Manager
 Configuration Manager provides an integrated experience for managing and deploying these settings to clients. For the best experience, use Configuration Manager. 
 
 For more information, see [How to connect Configuration Manager with Desktop Analytics](/sccm/desktop-analytics/connect-configmgr).
 
-#### Microsoft Intune
-You can also configure devices by using a mobile device management tool such as Intune.
 
-Use Intune to set the Commercial ID on managed devices. Use a custom device configuration setting to add the following OMA-URI: `./Vendor/MSFT/DMClient/Provider/ProviderID/CommercialID`. Set your organization's commercial ID as the value. For more information, see [Use custom settings for Windows 10 devices in Intune](https://docs.microsoft.com/intune/custom-settings-windows-10).
+### Windows settings
 
-For more information on setting diagnostic data with Intune, see [Device restrictions for Windows 10 settings in Intune](https://docs.microsoft.com/intune/device-restrictions-windows-10#reporting-and-telemetry).
-
-Configure these and other settings using the Intune management extension for Windows PowerShell. For more information, see [Manage PowerShell scripts in Intune for Windows 10 devices](https://docs.microsoft.com/intune/intune-management-extension).
-
-#### Script
-For more information, see ["Understanding connectivity scenarios and the deployment script"](https://blogs.technet.microsoft.com/upgradeanalytics/2017/03/10/understanding-connectivity-scenarios-and-the-deployment-script/) on the Windows Analytics blog. This post includes a summary of setting the ClientProxy for the script. This setting enables the script to properly check for diagnostic data endpoint connectivity.
-
-#### Group policy
-All policies described in this section also have *preference* registry keys. Set these keys by using the deployment script. If both are set, policy settings override preference settings.
-
-These group policy objects are under `Microsoft\Windows\DataCollection`:
+Configuration Manager sets the following Windows settings under `Microsoft\Windows\DataCollection`:
 
 | Policy   | Value  |
 |----------|--------|
 | **CommercialId** | In order for a device to show up in Desktop Analytics, configure it with your organization’s Commercial ID. |
-| **AllowTelemetry**  |	Set `1` for **Basic**, `2` for **Enhanced**, or `3` for **Full** diagnostic data. Desktop Analytics requires at least basic diagnostic data. More features are available when you use the Enhanced level. For example, Device Health requires Enhanced diagnostic data. Desktop Analytics only collects app usage and site discovery data on Windows 10 devices with Enhanced diagnostic data. For more information, see [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization). |
+| **AllowTelemetry**  |	Set `1` for **Basic**, `2` for **Enhanced**, or `3` for **Full** diagnostic data. Desktop Analytics requires at least basic diagnostic data. Microsoft recommends that you use the Enhanced (Limited) level with Desktop Analytics. For more information, see [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization). |
 | **LimitEnhancedDiagnosticDataWindowsAnalytics** |	This setting only applies when the AllowTelemetry setting is `2`. It limits the Enhanced diagnostic data events sent to Microsoft to just those events needed by Desktop Analytics. For more information, see [Windows 10, version 1709 enhanced diagnostic data events and fields used by Windows Analytics](https://docs.microsoft.com/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields).|
-| **AllowDeviceNameInTelemetry** | To enable Windows 10, version 1803, devices to send the device name, enable this separate opt-in setting. |
+| **AllowDeviceNameInTelemetry** | *Applies to Windows 10, version 1803 or later*: A separate opt-in is required to enable devices to continue to send the device name. |
+| **CommercialDataOptIn** | *Applies to Windows 7 and Windows 8.1*: A value of `1` is required for Desktop Analytics. For more information, see [Commercial Data Opt-in in Windows 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\)). |
 
-Configure these settings in **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Data Collection and Preview Builds**. 
+View these settings in the group policy editor at the following path: **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Data Collection and Preview Builds**. 
+
+> [!Note]  
+> The device name isn't sent to Microsoft by default. If you don't send the device name, it appears in Desktop Analytics as "Unknown". This behavior can make it difficult to identify and assess devices.  
 
 
 ### Conflict resolution

@@ -176,7 +176,25 @@ For more information, review M365AHandler.log on the client.
 
 Check for the following file: `%windir%\System32\CompatTelRunner.exe`. If it doesn't exist, reinstall the required [compatibility updates](/sccm/desktop-analytics/set-up#compatibility-updates). Make sure no other system component is removing this file, such as group policy or an antimalware service. 
 
+If the M365Handler.log file on the client includes one of the following errors:
+`RunAppraiser failed. CompatTelRunner.exe exited with last error code: 0x800703F1`
+`RunAppraiser failed. CompatTelRunner.exe exited with last error code: 0x80070005`
+`RunAppraiser failed. CompatTelRunner.exe exited with last error code: 0x80080005`
+To help remediate these errors, run the following commands from an elevated Windows PowerShell console on the affected client:
 
+```PowerShell
+Stop-Service -Name diagtrack #Connected User Experiences and Telemetry
+Stop-Service -Name pcasvc #Program Compatibility Assistant Service
+Stop-Service -Name dps #Diagnostic Policy Service
+
+Remove-Item -Path $Env:WinDir\appcompat\programs\amcache.hve
+Remove-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags" -Name AmiHivePermissionsCorrect -Force
+New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags" -Name LogFlags -Value 4 -PropertyType DWord -Force 
+
+Start-Service -Name diagtrack
+Start-Service -Name pcasvc
+Start-Service -Name dps
+```
 
 #### Last successful full run of Census
 This property displays the date and time that the device last successfully ran Census. 
@@ -207,7 +225,14 @@ Otherwise, it may show one of the following errors:
 
 - Can't check connectivity to the connected user experience and telemetry endpoint (CheckVortexConnectivity). Check the logs for the exception details  
 
-Windows 10 devices verify connectivity with a GET request to `https://v10.vortex-win.data.microsoft.com/health/keepalive` or `https://v10c.vortex-win.data.microsoft.com/health/keepalive`. Windows 7 and Windows 8.1 devices verify connectivity with a GET request to `https://vortex-win.data.microsoft.com/health/keepalive`. 
+Devices verify connectivity with a GET request to the following endpoint based on OS version:
+
+| OS version | Endpoint |
+|------------|----------|
+| Windows 10, version 1803 or later with the latest cumulative update | `https://v10c.events.data.microsoft.com/health/keepalive` |
+| Windows 10, version 1803 or later without the 2018-09 or later cumulative update | `https://v10.events.data.microsoft.com/health/keepalive` |
+| Windows 10, version 1709 or earlier | `https://v10.vortex-win.data.microsoft.com/health/keepalive` |
+| Windows 7 or Windows 8.1 | `https://vortex-win.data.microsoft.com/health/keepalive` |
 
 Make sure the device is able to communicate with the service. For more information, see [Endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
 
@@ -240,7 +265,7 @@ Check the permissions on this registry key. Make sure that the local System acco
 
 #### Commercial ID configuration
 <!--9, 11, 53-->
-Microsoft uses a unique commercial ID to map information from devices to your Desktop Analytics workspace. Configuration Manager should automatically apply this ID to clients to which you target Desktop Analytics settings. 
+Microsoft uses a unique commercial ID to map information from devices to your Desktop Analytics workspace. When you integrate Configuration Manager with Desktop Analytics, it automatically queries the service for this ID. Configuration Manager should automatically apply this ID to clients to which you target Desktop Analytics settings. 
 
 If this check is successful, then the device is properly configured with a commercial ID.
 
@@ -257,6 +282,18 @@ For more information, review M365AHandler.log on the client.
 Check the permissions on this registry key. Make sure that the local System account can access this key for the Configuration Manager client to set.  
 
 There's a different ID for the device. This registry key is used by group policy. It takes precedence over the ID provided by Configuration Manager.  
+
+
+To view the commercial ID in the Desktop Analytics portal, use the following procedure: 
+
+1. Go to the Desktop Analytics portal, and select **Connected services** in the Global Settings group.  
+
+2. In the **Connected services** pane, the **Enroll devices** pane is selected by default. In the Enroll devices pane, the Information section displays your Commercial ID key.  
+
+![Screenshot of commercial ID in Desktop Analytics portal](media/commercial-id.png)
+
+> [!Important]  
+> Only **Get new ID key** when you can't use the current one. If you regenerate the commercial ID, deploy the new ID to your devices. This process might result in loss of diagnostic data during the transition.  
 
 
 #### Windows commercial data opt-in
