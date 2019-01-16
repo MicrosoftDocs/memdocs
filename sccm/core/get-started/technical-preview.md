@@ -139,6 +139,8 @@ The following features are available with the most recent Configuration Manager 
 - [View active consoles](/sccm/core/get-started/2019/technical-preview-1901)<!--3699367-->  
 - [StartTime property to OSD provisioning mode](/sccm/core/get-started/2019/technical-preview-1901)<!--3197824-->
 - [Improvements to OS deployment task sequences](/sccm/core/get-started/2019/technical-preview-1901)<!--3633146,3641475-->
+- [Azure VM templates](/sccm/core/get-started/2019/technical-preview-1901)<!--3556017-->  
+- [Prevent classic cloud service deployment](/sccm/core/get-started/2019/technical-preview-1901)<!--3605704-->  
 
 
 > [!Note]  

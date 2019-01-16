@@ -64,6 +64,10 @@ Review the [technical preview](/sccm/core/get-started/technical-preview) article
 
 [!INCLUDE [Improvements to OS deployment task sequences](includes/1901/3633146.md)] <!--3633146,3641475-->
 
+[!INCLUDE [Azure VM templates](includes/1901/3556017.md)]
+
+[!INCLUDE [Prevent classic cloud service deployment](includes/1901/3605704.md)]
+
 
 
 ## Next steps
