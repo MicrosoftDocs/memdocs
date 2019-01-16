@@ -2,7 +2,7 @@
 title: Deprecated for clients
 titleSuffix: Configuration Manager
 description: Learn about the client operating systems that Configuration Manager no longer supports.
-ms.date: 01/08/2019
+ms.date: 01/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -41,12 +41,7 @@ Unless noted otherwise, each supported OS is supported as a Configuration Manage
 |Nokia Symbian Belle|July 10, 2015|Version 1511|  
 |Windows CE 5.0 - 6.0|July 10, 2015|Version 1511|  
 
-<!-- 
-|Windows Server 2008 R2|January 14, 2019|The first version after January 14, 2020|
-|Windows Server 2008|January 14, 2019|The first version after January 14, 2020|
-|Windows 7|January 14, 2019|The first version after January 14, 2020|
-{any Win7 embedded versions?}
- -->
+
 
 ## More information
 

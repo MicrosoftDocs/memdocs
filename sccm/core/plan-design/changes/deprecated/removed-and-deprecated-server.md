@@ -2,7 +2,7 @@
 title: Deprecated for site servers
 titleSuffix: Configuration Manager
 description: Learn about the products and operating systems that Configuration Manager no longer supports for site servers.
-ms.date: 01/08/2019
+ms.date: 01/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -33,7 +33,7 @@ This information may change in the future. It might not include each deprecated 
 Windows Server 2008 R2 with Service Pack 1 isn't supported for site servers or most site system roles. This OS is still supported for the distribution point role. This support includes pull-distribution points, PXE, and multicast. 
 
 > [!Important]  
-> The extended support end date for Windows Server 2008 R2 with SP1 is January 14, 2020. After this date, Configuration Manager won't support this OS in any capacity. 
+> The extended support end date for Windows Server 2008 R2 with SP1 is January 14, 2020. After this date, Configuration Manager won't support this OS as any site system role. 
 
 You can upgrade the site server OS from Windows Server 2008 R2 to Windows Server 2012 R2. For more information, see [In-place upgrade the operating system of site servers that run Windows Server 2008 R2](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#bkmk_from2008r2).  
 
@@ -42,7 +42,7 @@ You can upgrade the site server OS from Windows Server 2008 R2 to Windows Server
 Windows Server 2008 with Service Pack 2 isn't supported for site servers or most site system roles. This OS is still supported for the distribution point role. This support includes pull-distribution points, PXE, and multicast. 
 
 > [!Important]  
-> The extended support end date for Windows Server 2008 with SP2 is January 14, 2020. After this date, Configuration Manager won't support this OS in any capacity.  
+> The extended support end date for Windows Server 2008 with SP2 is January 14, 2020. After this date, Configuration Manager won't support this OS as any site system role.  
 
 
 
