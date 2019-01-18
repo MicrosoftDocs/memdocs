@@ -73,7 +73,7 @@ Client computers in System Center Configuration Manager that run Windows Firewal
 ### Remote Control  
  To use Configuration Manager remote control, allow the following port:  
 
--   Inbound: TCP Port**2701**  
+-   Inbound: TCP Port **2701**  
 
 ### Remote Assistance and Remote Desktop  
  To initiate Remote Assistance from the Configuration Manager console, add the custom program **Helpsvc.exe** and the inbound custom port TCP **135** to the list of permitted programs and services in Windows Firewall on the client computer. You must also permit **Remote Assistance** and **Remote Desktop**. If you initiate Remote Assistance from the client computer, Windows Firewall automatically configures and permits **Remote Assistance** and **Remote Desktop**.  
