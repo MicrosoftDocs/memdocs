@@ -710,6 +710,11 @@ The Trivial FTP (TFTP) Daemon system service doesn't require a user name or pass
 
 TFTP is designed to support diskless boot environments. TFTP Daemons listen on UDP port 69 but respond from a dynamically allocated high port. Therefore, enabling this port allows the TFTP service to receive incoming TFTP requests but doesn't allow the selected server to respond to those requests. You can't enable the selected server to respond to inbound TFTP requests unless the TFTP server is configured to respond from port 69.  
 
+When selecting dynamically allocated high ports to perform TFTP transfers, the PXE Distribution Point and the client PC in Windows PE will adhere to the dynamically allocated high ports defined by Microsoft and select a port between 49152 and 65535.  For more information, see [Service overview and network port requirements for Windows](https://support.microsoft.com/en-us/help/832017/service-overview-and-network-port-requirements-for-windows)
+
+However, during the actual PXE boot, the NIC card on the PC is responsible for selecting the dynamically allocated high port it will use during the TFTP transfer. The NIC card on the PC is not bound to the dynamically allocated high ports as defined by Microsoft. It is only bound to the dynamically allocated high ports as defined in RFC 350. This can be any port from 0 to 65535. For information regarding what dynamically allocated high ports the NIC uses, please consult the hardware manufacturer of the PC.
+
+
 #### <a name="bkmk_note5"></a> Note 5: Communication between the site server and site systems
 By default, communication between the site server and site systems is bi-directional. The site server initiates communication to configure the site system, and then most site systems connect back to the site server to send status information. Reporting service points and distribution points don't send status information. If you select **Require the site server to initiate connections to this site system** on the site system properties after the site system has been installed, the site system won't initiate communication with the site server. Instead, the site server initiates the communication and uses the site system installation account for authentication to the site system server.  
 
