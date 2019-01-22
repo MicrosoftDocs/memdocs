@@ -186,7 +186,7 @@ Use the following procedure on the software update point at the central administ
     ![Filenames with additional languages](../media/5-verification.png)
 
 ## Updating Office 365 ProPlus in a task sequence
-When using [Install Software Updates](https://docs.microsoft.com/en-us/sccm/osd/understand/task-sequence-steps#BKMK_InstallSoftwareUpdates) task sequence step to Install Office 365 update, it is possible that deployed updates will be detected as not applicable.  This might happen if the scheduled Office Automatic Updates task hasn't run at least once. See the note in [Deploy Office 365 updates](https://docs.microsoft.com/en-us/sccm/sum/deploy-use/manage-office-365-proplus-updates#deploy-office-365-updates). For example, this might happen if Office 365 ProPlus was installed immediately before running this step.
+When using [Install Software Updates](https://docs.microsoft.com/en-us/sccm/osd/understand/task-sequence-steps#BKMK_InstallSoftwareUpdates) task sequence step to Install Office 365 updates, it is possible that deployed updates will be detected as not applicable.  This might happen if the scheduled Office Automatic Updates task hasn't run at least once. See the note in [Deploy Office 365 updates](https://docs.microsoft.com/en-us/sccm/sum/deploy-use/manage-office-365-proplus-updates#deploy-office-365-updates). For example, this might happen if Office 365 ProPlus was installed immediately before running this step.
 
 To ensure that the update channel is set so that deployed updates will be properly detected, use one of the following methods:
 
@@ -195,16 +195,16 @@ To ensure that the update channel is set so that deployed updates will be proper
 2. Right-click on the automatic updates task and select **Properties**.
 3. Go to the **Actions** tab and click **Edit**. Copy the command and any arguments. 
 4. In the Configuration Manager console, edit your task sequence.
-5. Add a new **Run Command Line** step before the **Install Software Updates** step in the task sequence. 
+5. Add a new **Run Command Line** step before the **Install Software Updates** step in the task sequence. If Office 365 ProPlus is installed as part of the same task sequence, make sure this step runs after Office is installed.
 6. Copy in the command and arguments that you gathered from the Office automatic updates scheduled task. 
 7. Click **OK**. 
 
 **Method 2:**
 1. On a machine with the same version of Office 365 ProPlus, open Task Scheduler (taskschd.msc) and identify the Office 365 automatic updates task. Typically, it is located under **Task Scheduler Library** >**Microsoft**>**Office**.
 2. In the Configuration Manager console, edit your task sequence.
-3. Add a new **Run Command Line** step before the **Install Software Updates** step in the task sequence. 
-6. Copy in the command and arguments that you gathered from the Office automatic updates scheduled task. 
-7. Click **OK**. 
+3. Add a new **Run Command Line** step before the **Install Software Updates** step in the task sequence. If Office 365 ProPlus is installed as part of the same task sequence, make sure this step runs after Office is installed.
+4. In the command line field, enter the command line that will run the scheduled task, e.g. 'schtasks /run /tn "\Microsoft\Office\Office Automatic Updates"', making sure the string in quotes matches the path and name of the task identified in step 1. 
+5. Click **OK**. 
 
 ## Change the update channel after you enable Office 365 clients to receive updates from Configuration Manager
 To change the update channel after you enable Office 365 clients to receive updates from Configuration Manager, use group policy to distribute a registry key value change to Office 365 clients. Change the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\CDNBaseUrl** registry key to use one of the following values:
