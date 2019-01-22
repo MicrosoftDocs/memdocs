@@ -103,7 +103,6 @@ After you deploy Office 365 apps, you can create automatic deployment rules to m
 
 
 ## Deploy Office 365 updates
-There is a scheduled [Automatic Updates task in Office 365](https://docs.microsoft.com/deployoffice/overview-of-the-update-process-for-office-365-proplus) that runs several times a week. If you recently installed Office 365, it's possible that the update channel has not been set yet and an update scan will not find applicable updates for it. For testing purposes, you can start the update task manually. 
 
 Use the following steps to deploy Office 365 updates with Configuration Manager:
 
@@ -129,6 +128,9 @@ Use the following steps to deploy Office 365 updates with Configuration Manager:
 > - Starting in Configuration Manager version 1706 Office 365 client updates have moved to the **Office 365 Client Management** >**Office 365 Updates** node. This move won't impact your current ADR configuration. 
 > - Prior to Configuration Manager version 1610 you must download and deploy updates in the same languages configured on Office 365 clients. For example, let's say you have an Office 365 client configured with the en-us and de-de languages. On the site server, you download and deploy only en-us content for an applicable Office 365 update. When the user starts the installation from Software Center for this update, the update hangs while downloading the content for de-de.   
 
+> [!NOTE]  
+>  If Office 365 Pro Plus was installed recently, and depending on how it was installed, it is possible that the update channel has not been set yet. In that case, deployed updates will be detected as not applicable. There is a [scheduled Automatic Updates task](https://docs.microsoft.com/deployoffice/overview-of-the-update-process-for-office-365-proplus) created when Office 365 Pro Plus is installed. In this situation, this task needs to run at least once in order for the update channel to be set and updates detected as applicable. 
+If Office 365 ProPlus was installed recently, and deployed updates are not detected, for testing purposes, you can start the Office Automatic Updates task manually and then start the [Software Updates Deployment Evaluation Cycle](https://docs.microsoft.com/en-us/sccm/sum/understand/software-updates-introduction#scan-for-software-updates-compliance-process) on the client. For instructions on how to do this in a task sequnce, see [Updating Office 365 Pro Plus in a task sequence](https://docs.microsoft.com/en-us/sccm/sum/deploy-use/manage-office-365-proplus-updates#updating-office-365-Pro-Plus-in-a-task-sequence).
 
 ## Restart behavior and client notifications for Office 365 updates
 When you deploy an update to an Office 365 client, the restart behavior and client notifications are different depending on the version of Configuration Manager. The following table provides information about the end-user experience when the client receives an Office 365 update:
@@ -183,7 +185,7 @@ Use the following procedure on the software update point at the central administ
 11. Now when you download Office 365 updates, the updates are downloaded in the languages that you select in the wizard and configured in this procedure. To verify that the updates download in the correct languages, go to the package source for the update and look for files with the language code in the filename.  
     ![Filenames with additional languages](../media/5-verification.png)
 
-## Updating Office 365 during task sequences when Office 365 is installed in the base image
+## Updating Office 365 Pro Plus in a task sequence
 After installing Office 365 ProPlus, it is possible that the update channel registry key value has the original install location. In this case, the update scan won't show any Office 365 client updates as applicable. There's a scheduled Office automatic updates task that runs several times a week. After that task runs, the update channel will point to the configured Office CDN URL and the scan will then show these updates as applicable. <!--510452-->
 
 To ensure that the update channel is set so applicable updates will be found, do the following steps:
