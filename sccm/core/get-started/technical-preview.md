@@ -141,7 +141,7 @@ The following features are available with the most recent Configuration Manager 
 - [Improvements to OS deployment task sequences](/sccm/core/get-started/2019/technical-preview-1901)<!--3633146,3641475-->
 - [Azure VM templates](/sccm/core/get-started/2019/technical-preview-1901)<!--3556017-->  
 - [Prevent classic cloud service deployment](/sccm/core/get-started/2019/technical-preview-1901)<!--3605704-->  
-
+- [Dedicated monitoring for phased deployments](/sccm/core/get-started/2019/technical-preview-1901)<!--3555949-->
 
 > [!Note]  
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.   

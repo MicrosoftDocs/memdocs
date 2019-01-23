@@ -68,6 +68,8 @@ Review the [technical preview](/sccm/core/get-started/technical-preview) article
 
 [!INCLUDE [Prevent classic cloud service deployment](includes/1901/3605704.md)]
 
+[!INCLUDE [Dedicated monitoring for phased deployments](includes/1901/3555949.md)]
+
 
 
 ## Next steps
