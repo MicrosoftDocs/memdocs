@@ -9,7 +9,7 @@ ms.assetid: a784d39d-ab55-439e-a147-e764bd17fa61
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 ---
 
 # Third-party notices

@@ -10,6 +10,7 @@ ms.assetid: 7def067e-845c-4db3-9d56-fa1dcf2fd7c7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ROBOTS: NOINDEX
 ---
 # Checklist for installing update 1706 for System Center Configuration Manager
 

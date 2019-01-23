@@ -8,7 +8,7 @@ ms.assetid: 955e56fa-6485-4a1a-90e6-77bc2cf8e326
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 ---
 
 <!-- 

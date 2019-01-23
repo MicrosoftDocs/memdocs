@@ -10,7 +10,7 @@ ms.assetid: 0b0da585-0096-410b-8035-6b7a312f37f5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 ---
 
 # UUP private preview instructions

@@ -9,7 +9,7 @@ ms.assetid: de4e7752-7490-4c3f-9550-ac7f476d99d8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 ---
 # System Center Configuration Manager privacy statement
 

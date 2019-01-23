@@ -10,6 +10,7 @@ ms.assetid: 409e26e1-7716-4f1d-a0ee-34feabf20792
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ROBOTS: NOINDEX
 ---
 # What&#39;s new in version 1702 of System Center Configuration Manager
 

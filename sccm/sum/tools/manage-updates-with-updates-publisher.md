@@ -10,7 +10,6 @@ ms.assetid: cd64994c-b426-4465-96cd-54b0edc2778d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: NOINDEX, NOFOLLOW
 ---
 # Manage software updates in Updates Publisher
 
