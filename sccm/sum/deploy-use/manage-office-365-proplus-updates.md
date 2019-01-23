@@ -205,7 +205,9 @@ To ensure that the update channel is set so that deployed updates will be proper
 1. On a machine with the same version of Office 365 ProPlus, open Task Scheduler (taskschd.msc) and identify the Office 365 automatic updates task. Typically, it is located under **Task Scheduler Library** >**Microsoft**>**Office**.
 2. In the Configuration Manager console, edit your task sequence.
 3. Add a new **Run Command Line** step before the **Install Software Updates** step in the task sequence. If Office 365 ProPlus is installed as part of the same task sequence, make sure this step runs after Office is installed.
-4. In the command line field, enter the command line that will run the scheduled task, e.g. 'schtasks /run /tn "\Microsoft\Office\Office Automatic Updates"', making sure the string in quotes matches the path and name of the task identified in step 1. 
+4. In the command line field, enter the command line that will run the scheduled task. See example below making sure the string in quotes matches the path and name of the task identified in step 1.  
+
+    Example: `schtasks /run /tn "\Microsoft\Office\Office Automatic Updates"`
 5. Click **OK**. 
 
 ## Change the update channel after you enable Office 365 clients to receive updates from Configuration Manager
