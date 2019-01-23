@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 01/22/2019
+ms.date: 01/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -124,24 +124,26 @@ The following features are available with the most recent Configuration Manager 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor)<!--ID-->
 
 
-<!-- resort and confirm titles -->
-- [Office on lifecycle dashboard](/sccm/core/get-started/2019/technical-preview-1901)<!--3556026-->  
-- [OSD offline servicing](/sccm/core/get-started/2019/technical-preview-1901)<!--3555951-->  
-- [NEO 1902 sliver](/sccm/core/get-started/2019/technical-preview-1901)<!--3734525-->  
-- [Console device view](/sccm/core/get-started/2019/technical-preview-1901)<!--3600878-->  
-- [Client health reporting](/sccm/core/get-started/2019/technical-preview-1901)<!--3599209-->  
-- [CMPivot hierarchy support](/sccm/core/get-started/2019/technical-preview-1901)<!--3610960-->  
-- [DP maintenance mode](/sccm/core/get-started/2019/technical-preview-1901)<!--3555754-->  
-- [Improvements to Run PowerShell Script task sequence step](/sccm/core/get-started/2019/technical-preview-1901)<!--3556028-->  
-- [User-defined WOL port](/sccm/core/get-started/2019/technical-preview-1901)<!--3605925-->  
-- [Remote control multiple monitors](/sccm/core/get-started/2019/technical-preview-1901)<!--3231732-->  
-- [Management insight rules for collections](/sccm/core/get-started/2019/technical-preview-1901)<!--3555752-->  
-- [View active consoles](/sccm/core/get-started/2019/technical-preview-1901)<!--3699367-->  
-- [StartTime property to OSD provisioning mode](/sccm/core/get-started/2019/technical-preview-1901)<!--3197824-->
-- [Improvements to OS deployment task sequences](/sccm/core/get-started/2019/technical-preview-1901)<!--3633146,3641475-->
-- [Azure VM templates](/sccm/core/get-started/2019/technical-preview-1901)<!--3556017-->  
-- [Prevent classic cloud service deployment](/sccm/core/get-started/2019/technical-preview-1901)<!--3605704-->  
-- [Dedicated monitoring for phased deployments](/sccm/core/get-started/2019/technical-preview-1901)<!--3555949-->
+- [Client health dashboard](/sccm/core/get-started/2019/technical-preview-1901#bkmk_health)<!--3599209-->  
+- [Specify priority for feature updates in Windows 10 servicing](/sccm/core/get-started/2019/technical-preview-1901#bkmk_neo)<!--3734525-->  
+- [Dedicated monitoring for phased deployments](/sccm/core/get-started/2019/technical-preview-1901#bkmk_pod)<!--3555949--> 
+- [Run CMPivot from the central administration site](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmpivot)<!--3610960-->  
+- [Improvements to Run PowerShell Script task sequence step](/sccm/core/get-started/2019/technical-preview-1901#bkmk_posh)<!--3556028-->  
+- [Office products on lifecycle dashboard](/sccm/core/get-started/2019/technical-preview-1901#bkmk_lifecycle)<!--3556026-->  
+- [Management insight rules for collections](/sccm/core/get-started/2019/technical-preview-1901#bkmk_micoll)<!--3555752-->  
+- [Search device views using MAC address](/sccm/core/get-started/2019/technical-preview-1901#bkmk_mac)<!--3600878-->  
+- [Distribution point maintenance mode](/sccm/core/get-started/2019/technical-preview-1901#bkmk_dpmaint)<!--3555754-->  
+- [Optimized image servicing](/sccm/core/get-started/2019/technical-preview-1901#bkmk_resetbase)<!--3555951-->  
+- [Import a single index of an OS image](/sccm/core/get-started/2019/technical-preview-1901#bkmk_index)<!--3719699--> 
+- [Use Azure Resource Manager for cloud services](/sccm/core/get-started/2019/technical-preview-1901#bkmk_arm)<!--3605704-->  
+- [Confirmation of console feedback](/sccm/core/get-started/2019/technical-preview-1901#bkmk_feedback)<!--3556010--> 
+- [Create a Configuration Manager technical preview lab in Azure](/sccm/core/get-started/2019/technical-preview-1901#bkmk_azurevm)<!--3556017-->  
+- [Specify a custom port for peer wakeup](/sccm/core/get-started/2019/technical-preview-1901#bkmk_sleep)<!--3605925-->  
+- [View recently connected consoles](/sccm/core/get-started/2019/technical-preview-1901#bkmk_console)<!--3699367-->  
+- [Stop cloud service when it exceeds threshold](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmg)<!--3735092--> 
+- [Client provisioning mode timeout](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osdprov)<!--3197824-->
+- [Improvements to OS deployment](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osd)<!--3633146,3641475,3654172,3734270-->
+
 
 > [!Note]  
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.   
