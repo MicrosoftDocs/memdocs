@@ -2,7 +2,7 @@
 title: Technical preview 1901
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 1901.
-ms.date: 01/22/2019
+ms.date: 01/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -34,41 +34,43 @@ Review the [technical preview](/sccm/core/get-started/technical-preview) article
 
 **The following sections describe the new features to try out in this version:**  
 
-<!-- resort and confirm titles -->
+[!INCLUDE [Client health dashboard](includes/1901/3599209.md)]
 
-[!INCLUDE [Office on lifecycle dashboard](includes/1901/3556026.md)]
+[!INCLUDE [Specify priority for feature updates in Windows 10 servicing](includes/1901/3734525.md)]
 
-[!INCLUDE [OSD offline servicing](includes/1901/3555951.md)]
+[!INCLUDE [Dedicated monitoring for phased deployments](includes/1901/3555949.md)]
 
-[!INCLUDE [NEO 1902 sliver](includes/1901/3734525.md)]
-
-[!INCLUDE [Console device view](includes/1901/3600878.md)]
-
-[!INCLUDE [Client health reporting](includes/1901/3599209.md)]
-
-[!INCLUDE [CMPivot hierarchy support](includes/1901/3610960.md)]
-
-[!INCLUDE [DP maintenance mode](includes/1901/3555754.md)]
+[!INCLUDE [Run CMPivot from the central administration site](includes/1901/3610960.md)]
 
 [!INCLUDE [Improvements to Run PowerShell Script task sequence step](includes/1901/3556028.md)]
 
-[!INCLUDE [User-defined WOL port](includes/1901/3605925.md)]
-
-[!INCLUDE [Remote control multiple monitors](includes/1901/3231732.md)]
+[!INCLUDE [Office products on lifecycle dashboard](includes/1901/3556026.md)]
 
 [!INCLUDE [Management insight rules for collections](includes/1901/3555752.md)]
 
-[!INCLUDE [View active consoles](includes/1901/3699367.md)]
+[!INCLUDE [Search device views using MAC address](includes/1901/3600878.md)]
 
-[!INCLUDE [StartTime property to OSD provisioning mode](includes/1901/3197824.md)]
+[!INCLUDE [Distribution point maintenance mode](includes/1901/3555754.md)]
 
-[!INCLUDE [Improvements to OS deployment task sequences](includes/1901/3633146.md)] <!--3633146,3641475-->
+[!INCLUDE [Optimized image servicing](includes/1901/3555951.md)]
 
-[!INCLUDE [Azure VM templates](includes/1901/3556017.md)]
+[!INCLUDE [Import a single index of an OS image](includes/1901/3719699.md)]
 
-[!INCLUDE [Prevent classic cloud service deployment](includes/1901/3605704.md)]
+[!INCLUDE [Use Azure Resource Manager for cloud services](includes/1901/3605704.md)]
 
-[!INCLUDE [Dedicated monitoring for phased deployments](includes/1901/3555949.md)]
+[!INCLUDE [Confirmation of console feedback](includes/1901/3556010.md)]
+
+[!INCLUDE [Create a Configuration Manager technical preview lab in Azure](includes/1901/3556017.md)]
+
+[!INCLUDE [Specify a custom port for peer wakeup](includes/1901/3605925.md)]
+
+[!INCLUDE [View recently connected consoles](includes/1901/3699367.md)]
+
+[!INCLUDE [Stop cloud service when it exceeds threshold](includes/1901/3735092.md)]
+
+[!INCLUDE [Client provisioning mode timeout](includes/1901/3197824.md)]
+
+[!INCLUDE [Improvements to OS deployment](includes/1901/3633146.md)] <!--3633146,3641475,3654172,3734270-->
 
 
 
