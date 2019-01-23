@@ -203,6 +203,8 @@
     items:
     - name: Set up your lab
       href: get-started/set-up-your-lab.md
+    - name: Create a lab in Azure
+      href: get-started/azure-template.md
   - name: Technical Preview
     href: get-started/technical-preview.md
     items:
