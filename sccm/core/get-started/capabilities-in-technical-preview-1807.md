@@ -10,6 +10,7 @@ ms.assetid: bcde47a7-433e-4944-964b-539b17d15d64
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ROBOTS: NOINDEX
 ---
 
 # Capabilities in Configuration Manager technical preview version 1807 

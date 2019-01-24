@@ -10,7 +10,6 @@ ms.assetid: 95c13c00-909f-4fbb-bbaa-1eba9d54d8c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex
 ---
 # Schema extensions for System Center Configuration Manager
 

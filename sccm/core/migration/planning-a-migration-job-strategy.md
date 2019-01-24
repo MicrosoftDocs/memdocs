@@ -10,7 +10,6 @@ ms.assetid: a70bfbd4-757a-4468-9312-1c3b373ef9fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex
 ---
 # Plan a migration job strategy in System Center Configuration Manager
 

@@ -9,7 +9,7 @@ ms.assetid: 980133ce-cf9d-46e8-a119-b8b960b2e25e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 ---
 # MICROSOFT SQL SERVER COMPACT 4.0 SERVICE PACK 1 (SP1)
 

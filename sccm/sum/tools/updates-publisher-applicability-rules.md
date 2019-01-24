@@ -10,7 +10,6 @@ ms.assetid: 3cf0c2cd-397a-4622-b11c-961f334fb7d7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: NOINDEX, NOFOLLOW
 ---
 
 # Manage Applicability rules in Updates Publisher
