@@ -712,7 +712,7 @@ TFTP is designed to support diskless boot environments. TFTP Daemons listen on U
 
 The PXE-enabled distribution point and the client in Windows PE select dynamically allocated high ports for TFTP transfers. These ports are defined by Microsoft between 49152 and 65535. For more information, see [Service overview and network port requirements for Windows](https://support.microsoft.com/help/832017/service-overview-and-network-port-requirements-for-windows)
 
-However, during the actual PXE boot, the NIC card on the PC is responsible for selecting the dynamically allocated high port it will use during the TFTP transfer. The NIC card on the PC is not bound to the dynamically allocated high ports as defined by Microsoft. It is only bound to the dynamically allocated high ports as defined in RFC 350. This can be any port from 0 to 65535. For information regarding what dynamically allocated high ports the NIC uses, please consult the hardware manufacturer of the PC.
+However, during the actual PXE boot, the network card on the device selects the dynamically allocated high port it uses during the TFTP transfer. The network card on the device isn't bound to the dynamically allocated high ports defined by Microsoft. It's only bound to the ports defined in RFC 350. This port can be any from 0 to 65535. For information regarding what dynamically allocated high ports the network card uses, contact the device hardware manufacturer.
 
 
 #### <a name="bkmk_note5"></a> Note 5: Communication between the site server and site systems
