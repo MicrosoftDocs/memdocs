@@ -234,7 +234,7 @@ Use the following steps to configure certificates:
 
     2. Open **SQL Server Configuration Manager**. Under **SQL Server Network Configuration**, right-click to select **Properties** under **Protocols for MSSQLSERVER**. Switch to the **Certificate** tab, select **Data Warehouse SQL Server Identification Certificate** as the certificate, and then save the changes.  
 
-    3. In **SQL Server Configuration Manager**, under **SQL Server Services**, restart the **SQL Server service** and **Reporting Service** services.  
+    3. In **SQL Server Configuration Manager**, under **SQL Server Services**, restart the **SQL Server service**. If SQL Reporting Services is also installed on the server that hosts the data warehouse database, restart **Reporting Service** services as well.  
 
     4. Open the Microsoft Management Console (MMC), and add the **Certificates** snap-in. Select **Computer account** of the local machine. Expand the **Personal** folder, and select **Certificates**. Export the **Data Warehouse SQL Server Identification Certificate** as a **DER encoded binary X.509 (.CER)** file.  
 
