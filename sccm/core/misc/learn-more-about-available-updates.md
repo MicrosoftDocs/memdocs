@@ -9,7 +9,7 @@ ms.assetid: 1fa7d0d9-4bb5-4475-82ff-0d5da4a3da61
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 ---
 # Learn more about available updates for System Center Configuration Manager
 

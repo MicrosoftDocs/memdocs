@@ -9,7 +9,7 @@ ms.assetid: 77580c83-3fc5-479e-9f94-6bc59ac0fa69
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 ---
 # MICROSOFT SQL SERVER 2014 SHARED MANAGEMENT OBJECTS
 

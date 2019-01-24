@@ -10,7 +10,7 @@ ms.assetid: 940cc075-4066-44d5-972a-927c0b0a1143
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 ---
 
 # Technical reference for the Package Conversion Manager plug-in configuration XML

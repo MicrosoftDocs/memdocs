@@ -10,6 +10,7 @@ ms.assetid: d2ad00e8-9f10-41b6-816a-d8542c23a22e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ROBOTS: NOINDEX
 ---
 # Capabilities in Technical Preview 1611 for System Center Configuration Manager
 

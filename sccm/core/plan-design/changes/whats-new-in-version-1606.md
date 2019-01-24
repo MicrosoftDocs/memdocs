@@ -10,6 +10,7 @@ ms.assetid: df2e57b9-6445-4067-98e7-ace85d4e6aa6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ROBOTS: NOINDEX
 ---
 # What&#39;s new in version 1606 of System Center Configuration Manager
 

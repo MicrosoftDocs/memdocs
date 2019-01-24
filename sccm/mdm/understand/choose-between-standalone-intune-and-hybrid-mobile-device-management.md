@@ -1,7 +1,7 @@
 ---
-title: Choose Intune standalone or hybrid MDM
+title: Choose Intune standalone
 titleSuffix: Configuration Manager
-description: Choose whether to deploy hybrid mobile device management with Intune and Configuration Manager or run Intune standalone.
+description: Choose Intune standalone
 ms.date: 08/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -10,20 +10,22 @@ ms.assetid: 73ff9bb9-e605-4b68-92a1-487684fed42d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 ---
 
 # Choose between Microsoft Intune standalone and hybrid MDM with Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
+
+As of August 14, 2018, hybrid mobile device management (MDM) is a [deprecated feature](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Intune on Azure is Microsoft's recommended MDM solution.  
+
+For more information, see [What is hybrid MDM](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
+
+
+<!--
 One of the most commonly asked questions regarding mobile device management (MDM) with Microsoft Intune is "Should I integrate Intune with Configuration Manager (hybrid MDM) or run Intune standalone in the cloud only configuration?" 
 
-Intune on Azure is Microsoft's recommended MDM solution.     
-
-
-> [!Important]  
-> As of August 14, 2018, hybrid mobile device management is a [deprecated feature](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). For more information, see [What is hybrid MDM](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
 
 
  
@@ -73,7 +75,7 @@ You may choose hybrid MDM for the following reasons:
 
 
 
-## Change the MDM authority
+#### Change the MDM authority
 
-If you need to change the MDM authority setting, you can change it yourself without having to contact Microsoft Support, and without having to unenroll and reenroll your existing managed devices. For details, see [Change your MDM authority](/sccm/mdm/deploy-use/change-mdm-authority).
+If you need to change the MDM authority setting, you can change it yourself without having to contact Microsoft Support, and without having to unenroll and reenroll your existing managed devices. For more information, see [Change your MDM authority](/sccm/mdm/deploy-use/change-mdm-authority).
 

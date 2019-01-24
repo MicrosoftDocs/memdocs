@@ -8,7 +8,7 @@ ms.assetid: 4d7b19db-a915-4bc8-9962-2d1515ddff6c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 ---
 # MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER EVALUATION
 

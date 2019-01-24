@@ -10,7 +10,7 @@ ms.assetid: 1210a1ca-78c7-4d17-81cf-ac1bc5c5cf3e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 ---
 # Levels of diagnostic usage data collection for version 1602 of System Center Configuration Manager
 

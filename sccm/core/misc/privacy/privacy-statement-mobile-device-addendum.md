@@ -9,7 +9,7 @@ ms.assetid: 41e8d1ed-ce41-4070-9bb9-de0fe4948f20
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 ---
 # System Center Configuration Manager privacy statement - Mobile device addendum
 

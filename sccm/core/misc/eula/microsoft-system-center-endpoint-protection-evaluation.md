@@ -9,7 +9,7 @@ ms.assetid: 906806fe-6d7b-4536-95fd-829290367c5c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 ---
 # MICROSOFT SYSTEM CENTER ENDPOINT PROTECTION EVALUATION
 

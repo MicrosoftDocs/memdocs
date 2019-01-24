@@ -8,7 +8,7 @@ ms.assetid: 067675e6-bfae-44d9-ac86-3bf91e4fc600
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 ---
 # SQL Server Branded Components included with System Center Configuration Manager
 

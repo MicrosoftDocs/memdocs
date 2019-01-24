@@ -10,7 +10,6 @@ ms.assetid: 2200b02b-e76b-4aa7-a77a-6dc5e70f1333
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: NOINDEX, NOFOLLOW
 ---
 # System Center Updates Publisher
 
