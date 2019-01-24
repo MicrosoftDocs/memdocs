@@ -8,11 +8,14 @@ ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 1b9265d1-b461-47f8-b7ef-885da0fdd969
 author: aczechowski
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
 ---
-# Capabilities in Technical Preview 1602 for System Center Configuration Manager*Applies to: System Center Configuration Manager (Technical Preview)*
+# Capabilities in Technical Preview 1602 for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Technical Preview)*
+
 This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1602. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.  
 
  The following are new features you can try out with this version.  

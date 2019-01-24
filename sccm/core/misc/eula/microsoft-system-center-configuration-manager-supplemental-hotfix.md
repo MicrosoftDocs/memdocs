@@ -8,7 +8,7 @@ ms.assetid: 874bec5b-e47f-4fcf-9615-87e1ae5cd75e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 ---
 
 # Configuration Manager Hotfix

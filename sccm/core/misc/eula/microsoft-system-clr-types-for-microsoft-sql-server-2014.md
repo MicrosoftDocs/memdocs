@@ -8,7 +8,7 @@ ms.assetid: a0539a3d-c56b-40e2-b291-55fb8f74d714
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 ms.prod: configuration-manager
 ---
 # MICROSOFT SYSTEM CLR TYPES FOR MICROSOFT SQL SERVER 2014

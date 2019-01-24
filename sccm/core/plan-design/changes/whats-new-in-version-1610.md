@@ -10,7 +10,7 @@ ms.assetid: f7eb0803-3f8f-4ab6-825a-99ac11f5ba7d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: "NOINDEX, NOFOLLOW"
+ROBOTS: NOINDEX
 ---
 # What&#39;s new in version 1610 of System Center Configuration Manager
 

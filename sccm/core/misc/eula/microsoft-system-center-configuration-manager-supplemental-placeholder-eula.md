@@ -8,7 +8,7 @@ ms.assetid: 4043e457-56c5-4b93-8dfd-87ad3277a7a1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 ---
 # MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER SUPPLEMENTAL PLACEHOLDER EULA
 

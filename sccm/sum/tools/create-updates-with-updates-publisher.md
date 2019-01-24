@@ -10,7 +10,6 @@ ms.assetid: 46a1a8ac-126c-4ee6-ae09-32dfbdb83368
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: NOINDEX, NOFOLLOW
 ---
 # Create  software updates and update bundles with Updates Publisher
 

@@ -10,7 +10,7 @@ ms.assetid: 422aa328-7d9c-47d9-ab54-49668085881b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 ---
 
 # Product end of support

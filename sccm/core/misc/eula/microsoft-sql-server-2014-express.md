@@ -9,7 +9,7 @@ ms.assetid: c147514c-e4bb-4c36-b8a6-b0ab2fef394a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 ---
 # MICROSOFT SQL SERVER 2014 EXPRESS
 

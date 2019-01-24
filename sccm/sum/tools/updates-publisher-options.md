@@ -10,7 +10,6 @@ ms.assetid: 4e620080-5400-45bb-87c2-fbdbc8aeacac
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: NOINDEX, NOFOLLOW
 ---
 # Configure options for Updates Publisher
 

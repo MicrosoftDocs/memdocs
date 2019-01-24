@@ -10,7 +10,6 @@ ms.assetid: e6c1df1d-7728-4980-9199-bc32cde5439e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: NOINDEX, NOFOLLOW
 ---
 # Manage publications in Updates Publisher
 
