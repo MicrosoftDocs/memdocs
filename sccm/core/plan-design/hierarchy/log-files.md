@@ -696,7 +696,7 @@ The following table lists the log files that contain information related to Disc
 |MP_ClientIDManager.log|Records management point responses to the client ID requests that task sequences initiate from PXE or boot media.|Site system server|  
 |MP_DriverManager.log|Records management point responses to Auto Apply Driver task sequence action requests.|Site system server|  
 |OfflineServicingMgr.log|Records details of offline servicing schedules and update apply actions on operating system Windows Imaging Format (WIM) files.|Site system server|  
-|Setupact.log|Records details about Windows Sysprep and setup logs.|Client|  
+|Setupact.log|Records details about Windows Sysprep and setup logs. For more information, see [Log Files](windows/deployment/upgrade/log-files).|Client|  
 |Setupapi.log|Records details about Windows Sysprep and setup logs.|Client|  
 |Setuperr.log|Records details about Windows Sysprep and setup logs.|Client|  
 |smpisapi.log|Records details about the client state capture and restore actions, and threshold information.|Client|  
@@ -806,25 +806,10 @@ The following table lists the log files that contain information related to Disc
 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
-|ccmperf.log|Records activities related to the maintenance and capture of data related to client performance counters.|Client|  
-|CcmRepair.log|Records the repair activities of the client agent.|Client|
-|PatchDownloader.log|Records details about the process of downloading software updates from the update source to the download destination on the site server.|Computer that hosts the Configuration Manager console from which downloads are initiated|  
-|PolicyEvaluator.log|Records details about the evaluation of policies on client computers, including policies from software updates.|Client|  
-|RebootCoordinator.log|Records details about the coordination of system restarts on client computers after software update installations.|Client|  
-|ScanAgent.log|Records details about scan requests for software updates, the WSUS location, and related actions.|Client|  
-|SdmAgent.log|Records details about the tracking of remediation and compliance. However, the software updates log file, UpdatesHandler.log, provides more informative details about installing the software updates that are required for compliance.<br /><br /> This log file is shared with compliance settings.|Client|  
-|ServiceWindowManager.log|Records details about the evaluation of maintenance windows.|Client|  
-|setupact.log|Primary log file for most errors that occur during the Windows installation process. The log file is located in the %windir%\$Windows.~BT\sources\panther folder.|Client|
-|SmsWusHandler.log|Records details about the scan process for the Inventory Tool for Microsoft Updates.|Client|  
-|StateMessage.log|Records details about software updates state messages that are created and sent to the management point.|Client|  
-|SUPSetup.log|Records details about the software update point installation. When the software update point installation completes, **Installation was successful** is written to this log file.|Site system server|  
-|UpdatesDeployment.log|Records details about deployments on the client, including software update activation, evaluation, and enforcement. Verbose logging shows additional information about the interaction with the client user interface.|Client|  
-|Updateshandler.log|Records details about software update compliance scanning and about the download and installation of software updates on the client.|Client|  
-|UpdatesStore.log|Records details about compliance status for the software updates that were assessed during the compliance scan cycle.|Client|  
-|WCM.log|Records details about software update point configurations and connections to the WSUS server for subscribed update categories, classifications, and languages.|Site server|  
-|WSUSCtrl.log|Records details about the configuration, database connectivity, and health of the WSUS server for the site.|Site system server|  
-|wsyncmgr.log|Records details about the software update sync process.|Site server|  
-|WUAHandler.log|Records details about the Windows Update Agent on the client when it searches for software updates.|Client|  
+|CBS.log|Records servicing failures related to changes for Windows Updates or roles and features.|Client|  
+|DISM.log|Records all actions using DISM. If necessary, DISM.log will point to CBS.log for more details.|Client|
+
+For more information, see [Online Servicing-Related Log Files](windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files).
 
 ###  <a name="BKMK_WULog"></a> Windows Update Agent  
  The following table lists the log files that contain information related to the Windows Update Agent.  
@@ -833,6 +818,8 @@ The following table lists the log files that contain information related to Disc
 |--------------|-----------------|----------------------------|  
 |WindowsUpdate.log|Records details about when the Windows Update Agent connects to the WSUS server and retrieves the software updates for compliance assessment, and whether there are updates to the agent components.|Client|  
 
+For more information, see [Windows Update log files](/windows/deployment/update/windows-update-logs).
+
 ###  <a name="BKMK_WSUSLog"></a> WSUS server  
  The following table lists the log files that contain information related to the WSUS server.  
 
@@ -840,3 +827,5 @@ The following table lists the log files that contain information related to Disc
 |--------------|-----------------|----------------------------|  
 |Change.log|Records details about WSUS server database information that has changed.|WSUS server|  
 |SoftwareDistribution.log|Records details about the software updates that are synced from the configured update source to the WSUS server database.|WSUS server|  
+
+These log files are located in the %ProgramFiles%\Update Services\LogFiles folder.
