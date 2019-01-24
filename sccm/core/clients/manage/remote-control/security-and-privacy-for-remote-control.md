@@ -15,7 +15,7 @@ manager: dougeby
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-This topic contains security and privacy information for remote control in System Center 2012 Configuration Manager.  
+This topic contains security and privacy information for remote control in System Center Configuration Manager.  
 
 ##  <a name="BKMK_Security_HardwareInventory"></a> Security best practices for remote control  
  Use the following security best practices when you manage client computers by using remote control.  
@@ -26,7 +26,7 @@ This topic contains security and privacy information for remote control in Syste
 |Do not enable Clipboard sharing in the remote control viewer.|The Clipboard supports objects such as executable files and text and could be used by the user on the host computer during the remote control session to run a program on the originating computer.|  
 |Do not enter passwords for privileged accounts when remotely administering a computer.|Software that observes keyboard input could capture the password. Or, if the program that is being run on the client computer is not the program that the remote control user assumes, the program might be capturing the password. When accounts and passwords are required, the end user should enter them.|  
 |Lock the keyboard and mouse during a remote control session.|If Configuration Manager detects that the remote control connection is terminated, Configuration Manager automatically locks the keyboard and mouse so that a user cannot take control of the open remote control session. However, this detection might not occur immediately and does not occur if the remote control service is terminated.<br /><br /> Select the action **Lock Remote Keyboard and Mouse** in the **ConfigMgr Remote Control** window.|  
-|Do not let users configure remote control settings in Software Center.|Do not enable the client setting **Users can change policy or notification settings in Software Center** to help prevent users from being spied on.<br /><br /> This setting is for the computer, not for the logged-on user.|  
+|Do not let users configure remote control settings in Software Center.|Do not enable the client setting **Users can change policy or notification settings in Software Center** to help prevent users from being spied on. If one user changes it, it can allow a different user on the same machine to be viewed remotely. <br /><br />**This setting is for the computer, not for the logged-on user**.|  
 |Enable the **Domain** Windows Firewall profile.|Enable the client setting **Enable remote control on clients Firewall exception profiles** and then select the **Domain** Windows Firewall for intranet computers.|  
 |If you log off during a remote control session and log on as a different user, ensure that you log off before you disconnect the remote control session.|If you do not log off in this scenario, the session remains open.|  
 |Do not give users local administrator rights.|When you give users local administrator rights, they might be able to take over your remote control session or compromise your credentials.|  
