@@ -2,7 +2,7 @@
 title: UUP Preview
 titleSuffix: Configuration Manager
 description: Instructions for preview of UUP integration
-ms.date: 01/14/2018
+ms.date: 01/24/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -51,7 +51,14 @@ To retrieve your WSUS ID:
 $server = Get-WsusServer
 $config = $server.GetConfiguration()
 $config.ServerId
+
+# also check MUUrl
+$config.MUUrl
 ```
+
+The **MUUrl** property should be `https://sws.update.microsoft.com`. To change it, see the resolution in the following support article: 
+[WSUS synchronization fails with SoapException](https://support.microsoft.com/help/4482416/wsus-synchronization-fails-with-soapexception)
+
 
 ### 2. Update ConfigMgr to a supported version
 
@@ -60,25 +67,17 @@ If you're syncing express installation files in your environment, then ConfigMgr
 If you aren't syncing express installation files in your environment, then ConfigMgr 1810 hotfix KB4482615 is also required for production environments, or 1812 technical preview branch for lab environments.
 
 
-#### ConfigMgr 1810 UUP hotfix (KB4482615)
+#### Update rollup for ConfigMgr 1810 (4486457)
 
-> [!Important]  
-> The following process is for current branch sites that updated to version 1810 when it was generally available after 19 December 2018.
->
-> If you opted into the 1810 update by running a PowerShell script in late November or early December 2018, this hotfix isn't available yet. 
-
-
-1. Update the site
-
-    1. Download hotfix KB4482615 from the [Microsoft Download Center]<!--(https://download.microsoft.com/download/0/9/0/09081E12-A2CF-40B6-82D8-9B8914A1C2D3/KB4482615/CM1810-KB4482615.ConfigMgr.Update.exe)-->. This hotfix enables UUP for non-express scenarios.  
-
-    2. [Use the update registration tool to import hotfixes](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
+1. Update the site with the update rollup for version 1810. For more information, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates).  
 
 2. Update clients.  
 
     - To simplify this process, consider using automatic client upgrade. For more information, see [Upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).  
 
     - All clients you target UUP updates to must be upgraded to prevent **unnecessarily downloading around 6 GB** of unused content to the client.
+
+For more information on this update, see [Update rollup for System Center Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4486457).
 
 
 #### 1812 Technical Preview
