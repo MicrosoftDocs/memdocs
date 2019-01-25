@@ -2,7 +2,7 @@
 title: UUP Preview
 titleSuffix: Configuration Manager
 description: Instructions for preview of UUP integration
-ms.date: 01/24/2019
+ms.date: 01/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -98,19 +98,15 @@ For express content, supported Windows versions include:
 - **Windows 10 version 1809** with yet to be released January cumulative non-security update (or the following February cumulative security update) or later
 
 #### For non-express installation file sync
-For non-express content, an additional patch must be applied. This path became available in a non-cumulative format on the catalog 12/20 and will be available in the normal cumulative format in late January.
+For non-express content, the January cumulative non-security update or later (including February security update) is required on all clients. The non-security updates are only available in the catalog and doesn't directly sync to WSUS. To import the update into your environment in order to deploy it, see [Import updates from the Microsoft Update Catalog](/sccm/sum/get-started/synchronize-software-updates#import-updates-from-the-microsoft-update-catalog). This update is critical to prevent unnecessarily downloading around 6 GB of unused content to the client.
 
-**Windows 10 version 1709** and **Windows 10 version 1803** with either:
-- December-January: Clients must have a base cumulative update level plus the non-cumulative update  
-    - Cumulative update  
-        - 1709: [KB4338825](https://support.microsoft.com/help/4338825) (July 2017 cumulative security update) through January 2019 security cumulative update, inclusive  
-        - 1803: [KB4284835](https://support.microsoft.com/help/4284835) (June 2017 cumulative security update) through January 2019 cumulative security update, inclusive  
-    - Non-cumulative update: This update is only available in the catalog and doesn't directly sync to WSUS. To import the update into your environment in order to deploy it, see [Import updates from the Microsoft Update Catalog](/sccm/sum/get-started/synchronize-software-updates#import-updates-from-the-microsoft-update-catalog).  
-        - 1709: [KB4483530](https://support.microsoft.com/help/4483530)  
-        - 1803: [KB4483541](https://support.microsoft.com/help/4483541)  
-- February and beyond: For cumulative update only the yet to be released January cumulative non-security update (or the following February cumulative security update) or later   
+Supported Windows versions include:
 
-**Windows 10 version 1809** with yet to be released January cumulative non-security update (or the following February cumulative security update) or later
+- Windows 10 version 1709 with non-security cumulative update [KB4480967](https://support.microsoft.com/help/4480967/windows-10-update-kb4480967) (released 1/15) or later  
+
+- Windows 10 version 1803 with non-security cumulative update [KB4480976](https://support.microsoft.com/help/4480976/windows-10-update-kb4480976) (released 1/15) or later  
+
+- Windows 10 version 1809 with non-security cumulative update [KB4476976](https://support.microsoft.com/help/4476976/windows-10-update-kb4476976) (released 1/22) or later  
 
 
 ### 4. Enable express installation on clients in client settings
