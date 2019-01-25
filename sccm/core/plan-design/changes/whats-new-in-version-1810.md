@@ -385,9 +385,9 @@ The SMS Provider now provides read-only API interoperability access to WMI over 
 
 ## <a name="bkmk_opmdm"></a> On-premises MDM
 
-### An Intune connection is no longer required for on-premises MDM
+### An Intune connection is no longer required for new on-premises MDM deployments
 <!--1359124-->
-The on-premises MDM prerequisite to configure a Microsoft Intune subscription is no longer required. Your organization still requires Intune licenses to use this feature. 
+The on-premises MDM prerequisite to configure a Microsoft Intune subscription is no longer required for new deployments. Your organization still requires Intune licenses to use this feature. You can’t currently remove the Intune connection from existing on-premises MDM deployments. For more information, see the [Intune support blog post](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).
 
 
 
