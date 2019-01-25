@@ -82,11 +82,12 @@ Consider increasing the Configuration Manager diagnostic and data usage level du
 For more information on this update, see [Update rollup for System Center Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4486457).
 
 
+<!-- 
 #### 1812 Technical Preview
 The 1812 Technical Preview is equivalent in supported UUP scenarios to the ConfigMgr 1810 UUP Hotfix (KB4482615).
 
 The only note is that client upgrade of 1812 Technical Preview is broken from 1810.1 TP or 1811 TP. To work around this issue, you'll need to uninstall 1810.1 TP and 1811 TP clients, then install the 1812 TP client cleanly. All clients you target UUP updates to must be on 1812 Technical Preview (or later) to prevent **unnecessarily downloading around 6 GB** of unused content to the client.
-
+ -->
 
 ### 3. Update Windows clients to supported versions
 
@@ -104,11 +105,16 @@ For non-express content, the January cumulative non-security update or later (in
 
 Supported Windows versions include:
 
-- Windows 10 version 1709 with non-security cumulative update [KB4480967](https://support.microsoft.com/help/4480967/windows-10-update-kb4480967) (released 1/15) or later  
+- **Windows 10 version 1809** with non-security cumulative update [KB4476976](https://support.microsoft.com/help/4476976/windows-10-update-kb4476976) (released 1/22) or later  
 
-- Windows 10 version 1803 with non-security cumulative update [KB4480976](https://support.microsoft.com/help/4480976/windows-10-update-kb4480976) (released 1/15) or later  
 
-- Windows 10 version 1809 with non-security cumulative update [KB4476976](https://support.microsoft.com/help/4476976/windows-10-update-kb4476976) (released 1/22) or later  
+- **Windows 10 version 1709** and **Windows 10 version 1803** clients must have a base cumulative update level plus the non-cumulative update:
+    - Cumulative update
+        - 1709: [KB4338825](https://support.microsoft.com/help/4338825) (July 2017 cumulative security update) through January 2019 security cumulative update, inclusive
+        - 1803: [KB4284835](https://support.microsoft.com/help/4284835) (June 2017 cumulative security update) through January 2019 cumulative security update, inclusive
+    - Non-cumulative update: This update is only available in the catalog and doesn't directly sync to WSUS. To import the update into your environment in order to deploy it, see [Import updates from the Microsoft Update Catalog](/sccm/sum/get-started/synchronize-software-updates#import-updates-from-the-microsoft-update-catalog).
+        - 1709: [KB4483530](https://support.microsoft.com/help/4483530)
+        - 1803: [KB4483541](https://support.microsoft.com/help/4483541)
 
 
 ### 4. Enable express installation on clients in client settings
