@@ -66,6 +66,8 @@ If you're syncing express installation files in your environment, then ConfigMgr
 
 If you aren't syncing express installation files in your environment, then ConfigMgr 1810 hotfix KB4482615 is also required for production environments, or 1812 technical preview branch for lab environments.
 
+Consider increasing the Configuration Manager diagnostic and data usage level during this preview. The **Full** level helps Microsoft better analyze and troubleshoot issues with this new feature. For more information, see [Levels of diagnostic usage data collection for version 1810](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1810).
+
 
 #### Update rollup for ConfigMgr 1810 (4486457)
 
