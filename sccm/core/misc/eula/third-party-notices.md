@@ -1,7 +1,7 @@
 ---
 title: Third-party notices
 titleSuffix: Configuration Manager
-ms.date: 11/27/2018
+ms.date: 01/25/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -39,7 +39,7 @@ THIRD-PARTY SOFTWARE NOTICES AND INFORMATION
 - [WINDOWSAZURE.CONFIGURATIONMANAGER v. 2.0.3](#windowsazureconfigurationmanager-v-203)
 - [Microsoft Azure Monitoring Services 4.1.0](#microsoft-azure-monitoring-services-410)
 - [Microsoft Azure Common Library 2.1.0](#microsoft-azure-common-library-210)
-- [Common Library for Hyak Code Generator 1.0.1](#common-library-for-hyak-code-generator-101)
+- [Common Library for Hyak Code Generator 1.0.1 and 1.1.3](#common-library-for-hyak-code-generator-101-and-113)
 - [Microsoft Azure Resource Manager Library 2.18.0.0](#microsoft-azure-resource-manager-library-21800)
 - [Microsoft Azure Management Authorization Library 2.0.0](#microsoft-azure-management-authorization-library-200)
 - [OPG-AvalonEdit v5.0.4](#opg-avalonedit-v504)
@@ -358,7 +358,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 
 
-## Common Library for Hyak Code Generator 1.0.1
+## Common Library for Hyak Code Generator 1.0.1 and 1.1.3
 **NOTICES AND INFORMATION BEGIN HERE**  
 
 Copyright 2016 Microsoft. All rights reserved.  
@@ -367,7 +367,7 @@ Licensed under the Apache License, Version 2.0 (the "License"); you may not use 
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS-IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.  
 
-**END OF Common Library for Hyak Code Generator 1.0.1 NOTICES AND INFORMATION**
+**END OF Common Library for Hyak Code Generator 1.0.1 and 1.1.3 NOTICES AND INFORMATION**
 
 
 
