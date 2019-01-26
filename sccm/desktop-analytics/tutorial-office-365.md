@@ -2,7 +2,7 @@
 title: Tutorial - Deploy Office 365
 titleSuffix: Configuration Manager
 description: A tutorial on using Desktop Analytics and Configuration Manager to deploy Office 365 to a pilot group.
-ms.date: 12/30/2018
+ms.date: 01/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: tutorial
@@ -10,7 +10,7 @@ ms.assetid: 0b2b633a-91d7-4497-8c2a-1fc7aa310bb1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 #Customer intent: As an IT Pro, I want to use Desktop Analytics to intelligently pilot Office 365 so that I can understand the best devices to start with getting current with Office.
 ---
 
@@ -29,7 +29,7 @@ In this tutorial, you learn how to:
 > * Create a Desktop Analytics deployment plan for Office 365 ProPlus  
 > * Deploy Office 365 ProPlus in Configuration Manager to the pilot group  
 
-If you don’t have an Azure subscription, create a [free account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) before you begin.
+If you don’t have an Azure subscription, create a [free account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) before you begin. When configured properly, use of Desktop Analytics doesn't incur any Azure cost. 
 
 Desktop Analytics uses a *Log Analytics workspace* in your Azure subscription. A workspace is essentially a container that includes account information and simple configuration information for the account. For more information, see [Manage workspaces](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor/toc.json).
 
@@ -41,7 +41,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
 - An active Azure subscription, with **Company Admin** permissions  
 
-- Configuration Manager, version 1810 with hotfix KB4482615 or later, with **Full administrator** role  
+- Configuration Manager, version 1810 with update rollup 4486457 or later, with **Full administrator** role  
 
 - At least one Windows 10 device with the following configurations:  
 
@@ -49,7 +49,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
     - The latest Windows 10 cumulative quality update  
 
-    - Configuration Manager client version 1810 with hotfix KB4482615  
+    - Configuration Manager client version 1810 with update rollup 4486457 or later  
 
     - A Windows installer-based version of Office, such as Office 2013  
 
@@ -127,20 +127,13 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
 ### Update Configuration Manager
 
-Install Configuration Manager hotfix KB4482615 to support integration with Desktop Analytics. 
+Install the Configuration Manager version 1810 update rollup (4486457) to support integration with Desktop Analytics. For more information on this update, see [Update rollup for Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4486457).
 
-> [!Important]  
-> The following process is for current branch sites that updated to version 1810 when it was generally available after 19 December 2018.
-> 
-> If you opted into the 1810 update by running a PowerShell script in late November or early December 2018, this hotfix isn't available. For more information, contact your Microsoft representative for Desktop Analytics.  
-
-1. Update the site  
-
-    1. Download hotfix **KB4482615** from the [Microsoft Download Center](https://download.microsoft.com/download/0/9/0/09081E12-A2CF-40B6-82D8-9B8914A1C2D3/KB4482615/CM1810-KB4482615.ConfigMgr.Update.exe)   
-
-    2. [Use the update registration tool to import hotfixes](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
+1. Update the site with the update rollup for version 1810. For more information, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates).  
 
 2. Update clients. To simplify this process, consider using automatic client upgrade. For more information, see [Upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).  
+
+
 
 
 ### Create an app in Azure AD for Configuration Manager  

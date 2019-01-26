@@ -2,7 +2,7 @@
 title: Troubleshooting Desktop Analytics
 titleSuffix: Configuration Manager
 description: Technical details to help you troubleshoot issues with Desktop Analytics.
-ms.date: 01/15/2019
+ms.date: 01/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,6 +10,7 @@ ms.assetid: 63e08f3f-9558-4ed7-9bf3-3a185ddaac5c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ROBOTS: NOINDEX
 ---
 
 # Troubleshooting Desktop Analytics
@@ -79,7 +80,7 @@ Desktop Analytics doesn't have diagnostic data for this device. This issue can b
 Make sure the device is able to communicate with the service. For more information, see [Endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
 
 #### Missing prerequisites
-The Configuration Manager client isn't at least version 1806 (5.0.8740). 
+The Configuration Manager client isn't at least version 1810 (5.0.8740). 
 
 Update the client to the latest version. Consider enabling automatic client upgrade for the Configuration Manager site. For more information, see [Upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).  
 
@@ -131,6 +132,8 @@ The following columns are available in the device list:
 
 #### Appraiser configuration
 <!--20,21-->
+Appraiser is the Windows component that corresponds to the [compatibility updates](/sccm/desktop-analytics/enroll-devices#update-devices). It assesses the apps and drivers on the device for compatibility with the latest version of Windows. 
+
 If this check is successful, then the appraiser component is properly configured on the device. 
 
 Otherwise, it might display one of the following errors:
@@ -148,7 +151,7 @@ For more information, review M365AHandler.log on the client.
 
 #### Minimum compatibility update
 <!--18,19,32-->
-The compatibility update (appraiser.dll) isn't installed or out of date on the device. It's older than the minimum requirement for Desktop Analytics. 
+The compatibility update (appraiser.dll) isn't installed or out of date on the device. It's older than the minimum requirement for Desktop Analytics, 10.0.17763. 
 
 Install the latest compatibility update. For more information, see [Compatibility updates](/sccm/desktop-analytics/enroll-devices#bkmk_appraiser).
 
@@ -208,6 +211,8 @@ This property displays the date and time that the device last successfully ran C
 #### Census data collection
 <!-- Census run status -->
 <!--51,52-->
+Census is the Windows component that inventories the device. This inventory data is used to understand the device and its configuration. 
+
 This property shows the latest result from Windows running the census component.
 
 If not successful, it might show one of the following errors: 
@@ -240,7 +245,7 @@ Devices verify connectivity with a GET request to the following endpoint based o
 | Windows 10, version 1709 or earlier | `https://v10.vortex-win.data.microsoft.com/health/keepalive` |
 | Windows 7 or Windows 8.1 | `https://vortex-win.data.microsoft.com/health/keepalive` |
 
-Make sure the device is able to communicate with the service. For more information, see [Endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
+Make sure the device is able to communicate with the service. This check validates some but not all of the required endpoints. For more information, see [Endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
 
 For more information, review M365AHandler.log on the client.  
 
@@ -328,7 +333,7 @@ Make sure that another policy mechanism, such as group policy, isn't disabling t
 
 #### DiagTrack service configuration
 <!--44,45,50-->
-If this check is successful, then the DiagTrack component is properly configured on the device. 
+If this check is successful, then the DiagTrack component is properly configured on the device. The minimum version required by Desktop Analytics is 10010586 (10.0.10586). 
 
 Otherwise, it might display one of the following errors:
 
@@ -349,12 +354,12 @@ Install the latest updates. For more information, see [Device updates](/sccm/des
 Make sure that the **Connected User Experiences and Telemetry** service on the device is running.
 
 #### DiagTrack version
-This property displays the current version of the Connected User Experience and Telemetry component on the device. It shows the file version on `%windir%\System32\diagtrack.dll`, without the decimal points. For example, file version 10.0.10242 displays as 10010242. 
+This property displays the current version of the Connected User Experience and Telemetry component on the device. It shows the file version on `%windir%\System32\diagtrack.dll`, without the decimal points. For example, file version 10.0.10586 displays as 10010586. 
 
 #### SQM ID retrieval
 <!--38-->
 
-This property is primarily for Windows 7 devices. It may be used by later OS versions as a fallback identifier. 
+This property is primarily for Windows 7 devices. It may be used by later OS versions as a fallback identifier for the device. 
 
 If not successful, it may display the following error:
 

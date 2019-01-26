@@ -2,7 +2,7 @@
 title: Desktop Analytics
 titleSuffix: Configuration Manager
 description: An overview of the Desktop Analytics service integrated with Configuration Manager.
-ms.date: 12/30/2018
+ms.date: 01/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: overview
@@ -10,7 +10,7 @@ ms.assetid: 38b2bed2-20dd-4ce1-abc0-219343d2c4b8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 ---
 
 # What is Desktop Analytics?
@@ -64,15 +64,19 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 ### Technical
 
-- An active Azure subscription, with **Company Admin** permissions  
+- An active Azure subscription  
 
-- Configuration Manager, version 1810 with hotfix KB4482615 or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
+    - **Company Admin** permissions in Azure  
+
+- Configuration Manager, version 1810 with update rollup 4486457 or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
+
+    - **Full Administrator** role in Configuration Manager  
 
 - Devices running Windows 7, Windows 8.1, or Windows 10  
 
     - Install the latest updates. For more information, see [Update devices](/sccm/desktop-analytics/enroll-devices#update-devices).  
 
-    - Devices also need to have the Configuration Manager client, version 1810 with hotfix KB4482615 or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
+    - Devices also need to have the Configuration Manager client, version 1810 with update rollup 4486457 or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
 
 - Windows diagnostics data. For more information, see the following articles:  
 
@@ -80,12 +84,12 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
     - [Desktop Analytics privacy](/sccm/desktop-analytics/privacy)  
 
-- Network connectivity from devices to the Microsoft cloud. For more information, see [How to enable data sharing](/sccm/desktop-analytics/enable-data-sharing)  
+- Network connectivity from devices to the Microsoft public cloud. For more information, see [How to enable data sharing](/sccm/desktop-analytics/enable-data-sharing)  
 
 
 ### Licensing
 
-Most features in Desktop Analytics don't require any additional licenses or subscriptions. 
+Most features in Desktop Analytics don't require any additional licenses or subscriptions. When configured properly, use of Desktop Analytics doesn't incur any Azure cost. 
 
 To access Windows health insights or to export data, there are additional license requirements. If you don't have one of the following subscriptions, you can still set up and use Desktop Analytics, but you aren't licensed to use Windows health insights or to export data:
 
