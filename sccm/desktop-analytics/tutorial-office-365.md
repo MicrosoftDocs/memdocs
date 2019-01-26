@@ -125,17 +125,6 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 9. On the **Last steps** page, select **Go to Desktop Analytics**. The Azure portal shows the Desktop Analytics **Home** page.  
 
 
-### Update Configuration Manager
-
-Install the Configuration Manager version 1810 update rollup (4486457) to support integration with Desktop Analytics. For more information on this update, see [Update rollup for Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4486457).
-
-1. Update the site with the update rollup for version 1810. For more information, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates).  
-
-2. Update clients. To simplify this process, consider using automatic client upgrade. For more information, see [Upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).  
-
-
-
-
 ### Create an app in Azure AD for Configuration Manager  
 
 1. In the [Azure portal](http://portal.azure.com), go to **Azure Active Directory**, and select **App registrations**. Then select **New application registration**.  
@@ -179,7 +168,19 @@ Install the Configuration Manager version 1810 update rollup (4486457) to suppor
 
 ## Connect Configuration Manager
 
-Use this procedure to connect Configuration Manager to Desktop Analytics, and configure device settings. This procedure is a one-time process to attach your hierarchy to the cloud service.  
+Use this procedure to update Configuration Manager, connect to Desktop Analytics, and configure device settings. This procedure is a one-time process to attach your hierarchy to the cloud service.  
+
+
+### Update Configuration Manager
+
+Install the Configuration Manager version 1810 update rollup (4486457) to support integration with Desktop Analytics. For more information on this update, see [Update rollup for Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4486457).
+
+1. Update the site with the update rollup for version 1810. For more information, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates).  
+
+2. Update clients. To simplify this process, consider using automatic client upgrade. For more information, see [Upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).  
+
+
+### Connect to the service
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Services** node. Select **Configure Azure Services** in the ribbon.  
 
