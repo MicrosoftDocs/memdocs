@@ -71,6 +71,12 @@ Use these remote actions from Intune once you [enable co-management](/sccm/coman
 
 For more information, see [Remove devices by using wipe, retire, or manually unenrolling the device](https://docs.microsoft.com/intune/devices-wipe).
 
+#### Selective wipe
+<!--SCCMDocs issue 973-->
+When you choose an **App selective wipe**, it removes company app data without removing personal data. Use this action when a device is reported as lost or stolen. 
+
+For more information, see [How to wipe only corporate data from Intune-managed apps](https://docs.microsoft.com/intune/apps-selective-wipe).
+
 #### Sync
 The **Sync** device action forces the selected device to immediately check in with Intune. When a device checks in, it immediately receives any pending actions or policies that you've assigned to it.
 

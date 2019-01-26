@@ -2,7 +2,7 @@
 title: UUP Preview
 titleSuffix: Configuration Manager
 description: Instructions for preview of UUP integration
-ms.date: 01/14/2018
+ms.date: 01/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -51,28 +51,29 @@ To retrieve your WSUS ID:
 $server = Get-WsusServer
 $config = $server.GetConfiguration()
 $config.ServerId
+
+# also check MUUrl
+$config.MUUrl
 ```
 
-### 2. Update ConfigMgr to a supported version
+The **MUUrl** property should be `https://sws.update.microsoft.com`. To change it, see the resolution in the following support article: 
+[WSUS synchronization fails with SoapException](https://support.microsoft.com/help/4482416/wsus-synchronization-fails-with-soapexception)
+
+
+### 2. Update ConfigMgr
 
 If you're syncing express installation files in your environment, then ConfigMgr 1810 current branch is required for production environments, or 1812 technical preview branch for lab environments.
 
 If you aren't syncing express installation files in your environment, then ConfigMgr 1810 hotfix KB4482615 is also required for production environments, or 1812 technical preview branch for lab environments.
 
 
-#### ConfigMgr 1810 UUP hotfix (KB4482615)
-
-> [!Important]  
-> The following process is for current branch sites that updated to version 1810 when it was generally available after 19 December 2018.
->
-> If you opted into the 1810 update by running a PowerShell script in late November or early December 2018, this hotfix isn't available yet. 
+#### Diagnostics and usage data level
+Consider increasing the Configuration Manager diagnostic and data usage level during this preview. The **Full** level helps Microsoft better analyze and troubleshoot issues with this new feature. For more information, see [Levels of diagnostic usage data collection for version 1810](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1810).
 
 
-1. Update the site
+#### Update rollup for ConfigMgr 1810 (4486457)
 
-    1. Download hotfix KB4482615 from the [Microsoft Download Center]<!--(https://download.microsoft.com/download/0/9/0/09081E12-A2CF-40B6-82D8-9B8914A1C2D3/KB4482615/CM1810-KB4482615.ConfigMgr.Update.exe)-->. This hotfix enables UUP for non-express scenarios.  
-
-    2. [Use the update registration tool to import hotfixes](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
+1. Update the site with the update rollup for version 1810. For more information, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates).  
 
 2. Update clients.  
 
@@ -80,11 +81,15 @@ If you aren't syncing express installation files in your environment, then Confi
 
     - All clients you target UUP updates to must be upgraded to prevent **unnecessarily downloading around 6 GB** of unused content to the client.
 
+For more information on this update, see [Update rollup for System Center Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4486457).
 
+
+<!-- 
 #### 1812 Technical Preview
 The 1812 Technical Preview is equivalent in supported UUP scenarios to the ConfigMgr 1810 UUP Hotfix (KB4482615).
 
 The only note is that client upgrade of 1812 Technical Preview is broken from 1810.1 TP or 1811 TP. To work around this issue, you'll need to uninstall 1810.1 TP and 1811 TP clients, then install the 1812 TP client cleanly. All clients you target UUP updates to must be on 1812 Technical Preview (or later) to prevent **unnecessarily downloading around 6 GB** of unused content to the client.
+ -->
 
 
 ### 3. Update Windows clients to supported versions
@@ -92,26 +97,26 @@ The only note is that client upgrade of 1812 Technical Preview is broken from 18
 #### For express installation file sync
 For express content, supported Windows versions include:
 
-- **Windows 10 version 1709** with [KB4338825](https://support.microsoft.com/help/4338825) (July 2017 cumulative security update) or later  
+- **Windows 10 version 1809** with non-security cumulative update [KB4476976](https://support.microsoft.com/help/4476976/windows-10-update-kb4476976) (released 1/22) or later. This update is only available in the catalog and doesn't directly sync to WSUS. To import the update into your environment in order to deploy it, see [Import updates from the Microsoft Update Catalog](/sccm/sum/get-started/synchronize-software-updates#import-updates-from-the-microsoft-update-catalog).
 
 - **Windows 10 version 1803** with [KB4284835](https://support.microsoft.com/help/4284835) (June 2017 cumulative security update) or later  
 
-- **Windows 10 version 1809** with yet to be released January cumulative non-security update (or the following February cumulative security update) or later
+- **Windows 10 version 1709** with [KB4338825](https://support.microsoft.com/help/4338825) (July 2017 cumulative security update) or later  
+
 
 #### For non-express installation file sync
-For non-express content, an additional patch must be applied. This path became available in a non-cumulative format on the catalog 12/20 and will be available in the normal cumulative format in late January.
+For non-express content, an additional patch must be applied. This update is critical to prevent unnecessarily downloading around 6 GB of unused content to the client. Supported Windows versions include the following builds:
 
-**Windows 10 version 1709** and **Windows 10 version 1803** with either:
-- December-January: Clients must have a base cumulative update level plus the non-cumulative update  
-    - Cumulative update  
-        - 1709: [KB4338825](https://support.microsoft.com/help/4338825) (July 2017 cumulative security update) through January 2019 security cumulative update, inclusive  
-        - 1803: [KB4284835](https://support.microsoft.com/help/4284835) (June 2017 cumulative security update) through January 2019 cumulative security update, inclusive  
-    - Non-cumulative update: This update is only available in the catalog and doesn't directly sync to WSUS. To import the update into your environment in order to deploy it, see [Import updates from the Microsoft Update Catalog](/sccm/sum/get-started/synchronize-software-updates#import-updates-from-the-microsoft-update-catalog).  
-        - 1709: [KB4483530](https://support.microsoft.com/help/4483530)  
-        - 1803: [KB4483541](https://support.microsoft.com/help/4483541)  
-- February and beyond: For cumulative update only the yet to be released January cumulative non-security update (or the following February cumulative security update) or later   
+- **Windows 10 version 1809** with non-security cumulative update [KB4476976](https://support.microsoft.com/help/4476976/windows-10-update-kb4476976) (released 1/22) or later. This update is only available in the catalog and doesn't directly sync to WSUS. To import the update into your environment in order to deploy it, see [Import updates from the Microsoft Update Catalog](/sccm/sum/get-started/synchronize-software-updates#import-updates-from-the-microsoft-update-catalog).
 
-**Windows 10 version 1809** with yet to be released January cumulative non-security update (or the following February cumulative security update) or later
+
+- **Windows 10 version 1803** and **Windows 10 version 1709** clients must have a base cumulative update level plus the non-cumulative update:
+    - Cumulative update
+        - 1803: [KB4284835](https://support.microsoft.com/help/4284835) (June 2017 cumulative security update) through January 2019 cumulative security update, inclusive
+        - 1709: [KB4338825](https://support.microsoft.com/help/4338825) (July 2017 cumulative security update) through January 2019 security cumulative update, inclusive
+    - Non-cumulative update: This update is only available in the catalog and doesn't directly sync to WSUS. To import the update into your environment in order to deploy it, see [Import updates from the Microsoft Update Catalog](/sccm/sum/get-started/synchronize-software-updates#import-updates-from-the-microsoft-update-catalog).
+        - 1803: [KB4483541](https://support.microsoft.com/help/4483541)
+        - 1709: [KB4483530](https://support.microsoft.com/help/4483530)
 
 
 ### 4. Enable express installation on clients in client settings
@@ -177,10 +182,7 @@ After you have synced UUP updates into your environment, you’ll want to find t
 
 ### Updates available during preview
 
-- Windows 10 1709 Cumulative Updates
-    - December security update (12/11)
-    - January security update (1/8)
-    - January non-security update (1/15)
+- Windows 10 1809 Cumulative Updates
     - February security update (2/12)  
 
 - Windows 10 1803 Cumulative Updates
@@ -189,17 +191,20 @@ After you have synced UUP updates into your environment, you’ll want to find t
     - January non-security update (1/15)
     - February security update (2/12)  
 
-- Windows 10 1809 Cumulative Updates
+- Windows 10 1709 Cumulative Updates
+    - December security update (12/11)
+    - January security update (1/8)
+    - January non-security update (1/15)
     - February security update (2/12)  
-
-- Windows 10 1803 Feature Updates (from 1709 or 1803)	
-    - December security update compliance (12/11)
-    - January security update compliance (1/8)
-    - February security update compliance (2/12)  
 
 - Windows 10 1809 Feature Updates (from 1709 or 1803)
     - December (12/11) security update compliance
     - January (1/8) security update compliance
+    - February security update compliance (2/12)  
+
+- Windows 10 1803 Feature Updates (from 1709 or 1803)	
+    - December security update compliance (12/11)
+    - January security update compliance (1/8)
     - February security update compliance (2/12)  
 
 If necessary, March and future security updates will continue to be published in all these areas for as long as UUP is still in preview (private or public). Once we complete preview, only Windows 10 Version 1809 Cumulative Updates and Feature Updates (from Windows 10 Version 1803) will be supported in production.
@@ -221,7 +226,7 @@ If necessary, March and future security updates will continue to be published in
 During the preview, keep clients compliant using the UUP type update for multiple consecutive updates to get the feel for ongoing expectations.
 
 #### Content
-The first update for each major version (1709, 1803, 1809), architecture, and language combination will appear to be large, in both number of files and disk space, compared to what you would have seen in non-UUP updates before. This extra content is primarily for all the FOD and language packs for cumulative updates. For feature updates, especially if express is enabled there's additional content that is large for that first update. 
+The first update for each major version (1809, 1803, 1709), architecture, and language combination will appear to be large, in both number of files and disk space, compared to what you would have seen in non-UUP updates before. This extra content is primarily for all the FOD and language packs for cumulative updates. For feature updates, especially if express is enabled there's additional content that is large for that first update. 
 
 However, the subsequent updates (both the cumulative updates and the monthly feature updates at higher compliance levels) the amount of new content that needs to be downloaded and distributed will be much smaller as all of the FOD and language pack content is intelligently shared across updates rather than redownloaded or redistributed. During the preview, in 1709 and 1803, this monthly download will be approximately equivalent to the size of the cumulative updates you see in non-UUP scenarios. However, in 1809, the story gets much better as the incremental download of the cumulative update is much smaller month to month. 
 
