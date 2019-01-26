@@ -2,7 +2,7 @@
 title: Health status monitoring
 titleSuffix: Configuration Manager
 description: Learn about how health status monitoring works in Desktop Analytics.
-ms.date: 12/30/2018
+ms.date: 01/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,7 +10,7 @@ ms.assetid: 343dbe2a-597c-4719-b7ac-45b1f39b49ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 ---
 
 

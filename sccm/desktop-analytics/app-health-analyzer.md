@@ -2,7 +2,7 @@
 title: App Health Analyzer
 titleSuffix: Configuration Manager
 description: A how-to guide for assessing compatibility with the App Health Analyzer in Desktop Analytics.
-ms.date: 01/03/2018
+ms.date: 01/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,7 +10,7 @@ ms.assetid: 2af150a4-0c18-4b40-8492-c04c5d154596
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 ---
 
 # How to assess compatibility with App Health Analyzer

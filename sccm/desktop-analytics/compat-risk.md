@@ -2,7 +2,7 @@
 title: Compatibility risk for Windows apps
 titleSuffix: Configuration Manager
 description: Learn about compatibility risk for Windows apps in Desktop Analytics.
-ms.date: 12/30/2018
+ms.date: 01/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,7 +10,7 @@ ms.assetid: ea78f726-b1b3-49b0-8141-d916be48c458
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 ---
 
 # Compatibility risk for Windows apps in Desktop Analytics 
