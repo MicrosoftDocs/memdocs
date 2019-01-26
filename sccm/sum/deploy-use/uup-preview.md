@@ -97,11 +97,12 @@ The only note is that client upgrade of 1812 Technical Preview is broken from 18
 #### For express installation file sync
 For express content, supported Windows versions include:
 
-- **Windows 10 version 1809** with yet to be released January cumulative non-security update (or the following February cumulative security update) or later
+- **Windows 10 version 1809** with non-security cumulative update [KB4476976](https://support.microsoft.com/help/4476976/windows-10-update-kb4476976) (released 1/22) or later. This update is only available in the catalog and doesn't directly sync to WSUS. To import the update into your environment in order to deploy it, see [Import updates from the Microsoft Update Catalog](/sccm/sum/get-started/synchronize-software-updates#import-updates-from-the-microsoft-update-catalog).
 
 - **Windows 10 version 1803** with [KB4284835](https://support.microsoft.com/help/4284835) (June 2017 cumulative security update) or later  
 
 - **Windows 10 version 1709** with [KB4338825](https://support.microsoft.com/help/4338825) (July 2017 cumulative security update) or later  
+
 
 #### For non-express installation file sync
 For non-express content, an additional patch must be applied. This update is critical to prevent unnecessarily downloading around 6 GB of unused content to the client. Supported Windows versions include the following builds:
