@@ -45,10 +45,14 @@ Configure these settings using Configuration Manager client settings. For more i
 
 Use the [Azure services wizard](/sccm/core/servers/deploy/configure/azure-services-wizard) to simplify the process of configuring Azure services you use with Configuration Manager. To connect Configuration Manager with Upgrade Readiness, create an Azure Active Directory (Azure AD) app registration of type *Web app / API* in the [Azure portal](https://portal.azure.com). For more information about how to create an app registration, see [Register your application with your Azure AD tenant](/azure/active-directory/active-directory-app-registration). 
 
-In the Azure portal, give *contributor* permissions to your newly registered web app. Set these permissions on the resource group that contains the Log Analytics workspace that hosts your Upgrade Readiness data. The Azure services wizard uses this app registration to allow Configuration Manager to communicate securely with Azure AD and connect your infrastructure to your Upgrade Readiness data.
+In the Azure portal, give following permissions to your newly registered web app:
+- *Reader* permissions to the resource group that contains the Log Analytics workspace with your Upgrade Readiness data
+- *Contributor* permissions to the Log Analytics workspace that hosts your Upgrade Readiness data
+
+The Azure services wizard uses this app registration to allow Configuration Manager to communicate securely with Azure AD and connect your infrastructure to your Upgrade Readiness data.
 
 > [!IMPORTANT]  
-> Grant *contributor* permissions to the app itself, not to an Azure AD user identity. It's the registered app that accesses the data on behalf of your Configuration Manager infrastructure. To grant the permissions, search for the name of the app registration in the **Add users** area when assigning the permission. 
+> Grant permissions to the app itself, not to an Azure AD user identity. It's the registered app that accesses the data on behalf of your Configuration Manager infrastructure. To grant the permissions, search for the name of the app registration in the **Add users** area when assigning the permission. 
 > 
 > This process is the same as when providing Configuration Manager with permissions to Log Analytics. These steps must be completed before the app registration is imported into Configuration Manager with the *Azure services wizard*.
 > 
