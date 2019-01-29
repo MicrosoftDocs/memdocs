@@ -1026,6 +1026,8 @@ manager: dougeby
 
  To add this step in the task sequence editor, click **Add**, select **Software**, and select **Install Software Updates**. 
 
+For more recommendations and a technical flow chart diagram for this step, see [Install Software Updates](/sccm/osd/understand/install-software-updates).
+
 
 ### Properties  
 

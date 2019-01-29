@@ -117,6 +117,8 @@
   items:
   - name: Task sequence steps
     href: understand/task-sequence-steps.md
+    - name: Install Software Updates
+      href: understand/install-software-updates.md
   - name: How to use task sequence variables
     href: understand/using-task-sequence-variables.md
   - name: Task sequence variables
