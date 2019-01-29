@@ -696,7 +696,7 @@ The following table lists the log files that contain information related to Disc
 |MP_ClientIDManager.log|Records management point responses to the client ID requests that task sequences initiate from PXE or boot media.|Site system server|  
 |MP_DriverManager.log|Records management point responses to Auto Apply Driver task sequence action requests.|Site system server|  
 |OfflineServicingMgr.log|Records details of offline servicing schedules and update apply actions on operating system Windows Imaging Format (WIM) files.|Site system server|  
-|Setupact.log|Records details about Windows Sysprep and setup logs. For more information, see [Log Files](windows/deployment/upgrade/log-files).|Client|  
+|Setupact.log|Records details about Windows Sysprep and setup logs. For more information, see [Log Files](https://docs.microsoft.com/windows/deployment/upgrade/log-files).|Client|  
 |Setupapi.log|Records details about Windows Sysprep and setup logs.|Client|  
 |Setuperr.log|Records details about Windows Sysprep and setup logs.|Client|  
 |smpisapi.log|Records details about the client state capture and restore actions, and threshold information.|Client|  
@@ -809,7 +809,7 @@ The following table lists the log files that contain information related to Disc
 |CBS.log|Records servicing failures related to changes for Windows Updates or roles and features.|Client|  
 |DISM.log|Records all actions using DISM. If necessary, DISM.log will point to CBS.log for more details.|Client|
 
-For more information, see [Online Servicing-Related Log Files](windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files).
+For more information, see [Online Servicing-Related Log Files](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files).
 
 ###  <a name="BKMK_WULog"></a> Windows Update Agent  
  The following table lists the log files that contain information related to the Windows Update Agent.  
@@ -818,7 +818,7 @@ For more information, see [Online Servicing-Related Log Files](windows-hardware/
 |--------------|-----------------|----------------------------|  
 |WindowsUpdate.log|Records details about when the Windows Update Agent connects to the WSUS server and retrieves the software updates for compliance assessment, and whether there are updates to the agent components.|Client|  
 
-For more information, see [Windows Update log files](/windows/deployment/update/windows-update-logs).
+For more information, see [Windows Update log files](https://docs.microsoft.com/windows/deployment/update/windows-update-logs).
 
 ###  <a name="BKMK_WSUSLog"></a> WSUS server  
  The following table lists the log files that contain information related to the WSUS server.  
