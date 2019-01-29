@@ -85,6 +85,8 @@ When connecting to remote clients using the [New-CMMachineConnection](https://go
 `net use <connection_name> /d` 
 where `<connection_name>` is the name of the remote connection.
 
+#### Application Deployment Evaluation Cycle request is not sent correctly to remote machines
+In Support Center if you select **Application deployment evaluation** from the **Invoke trigger** action on the **Content** tab, this starts a task that evaluates deployed applications. If you are connected to a local client, both machine application deployments and user application deployments are evaluated. However if you are connected to a remote client, only machine application deployments are evaluated.
 
 
 ## Next steps
