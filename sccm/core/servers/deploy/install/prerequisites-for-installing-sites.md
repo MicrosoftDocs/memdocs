@@ -110,7 +110,7 @@ All other site system roles can remain installed at the primary site.
 #### Open the SQL Server Service Broker port
 The network port must be open for the SQL Server Service Broker (SSB) between the stand-alone primary site and the server for the central administration site.  
 
-To successfully replicate data between a central administration site and a primary site, Configuration Manager requires an open port between the two sites for SSB to use. When you install a central administration site and expand a stand-alone primary site, the prerequisite check does'ot verify that the port you specify for the SSB is open on the primary site.  
+To successfully replicate data between a central administration site and a primary site, Configuration Manager requires an open port between the two sites for SSB to use. When you install a central administration site and expand a stand-alone primary site, the prerequisite check doesn't verify that the port you specify for the SSB is open on the primary site.  
 
 #### Known issues with Azure services
 When you use one of the following Azure services with Configuration Manager, after expanding the site, remove and then recreate the connection to that service.
