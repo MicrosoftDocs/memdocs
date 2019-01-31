@@ -2,7 +2,7 @@
 title: SCAP extensions
 titleSuffix: Configuration Manager
 description: Learn about the Security Content Automation Protocol (SCAP) extensions for Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 01/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -17,6 +17,13 @@ manager: dougeby
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 The SCAP extensions for Configuration Manager help you analyze and assess your network environment for compliance with the Security Content Automation Protocol (SCAP). SCAP is defined and maintained by the National Institute of Standards and Technology (NIST). For more information, see the [SCAP Project Overview](https://csrc.nist.gov/projects/security-content-automation-protocol).
+
+> [!Note]  
+> This version of the tool is a pre-release feature that's only available in version 1806. This version isn't certified by NIST. <!--SCCMDocs-pr issue 3323-->
+> 
+> If you require a certified tool, or are using another version of Configuration Manager current branch, use the following version of the SCAP extensions:
+> - [Download SCAP Extensions for System Center Configuration Manager](https://www.microsoft.com/download/details.aspx?id=48741)
+> - [Documentation for SCAP Extensions Version 3.0](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/mt228311\(v%3dtechnet.10\))
 
 The SCAP extensions for Configuration Manager use the compliance settings feature to first scan the computers in your environment. It then documents their level of compliance with the United States Government Configuration Baseline (USGCB).
 
