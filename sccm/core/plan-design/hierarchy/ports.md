@@ -2,7 +2,7 @@
 title: Ports used for connections
 titleSuffix: Configuration Manager
 description: Learn about the required and customizable network ports that Configuration Manager uses for connections.
-ms.date: 09/10/2018
+ms.date: 01/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -121,6 +121,10 @@ In addition to the ports that are listed in this table, wake-up proxy also uses 
 |-----------------|---------|---------|  
 |Wake On LAN|9 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|--|  
 |Wake-up proxy|25536 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|--|  
+|Windows PE Peer cache broadcast|8004|--|  
+|Windows PE Peer cache download|--|8003|  
+
+For more information, see [Windows PE Peer Cache](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md#-requirements-for-a-client-to-use-a--windows-pe-peer-cache-source).
 
 
 ###  <a name="BKMK_PortsClient-PolicyModule"></a> Client -- > Configuration Manager Network Device Enrollment Service (NDES) policy module   

@@ -2,7 +2,7 @@
 title: Support Center
 titleSuffix: Configuration Manager
 description: Troubleshoot Configuration Manager clients with the Support Center.
-ms.date: 11/27/2018
+ms.date: 01/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -85,6 +85,9 @@ When connecting to remote clients using the [New-CMMachineConnection](https://go
 `net use <connection_name> /d` 
 where `<connection_name>` is the name of the remote connection.
 
+#### Application deployment evaluation cycle request isn't sent correctly to remote machines
+<!--2849356-->
+In Support Center, if you select **Application deployment evaluation** from the **Invoke trigger** action on the **Content** tab, this action starts a task that evaluates deployed applications. If you're connected to a local client, it evaluates both machine and user application deployments. However, if you're connected to a remote client, it only evaluates machine application deployments.
 
 
 ## Next steps

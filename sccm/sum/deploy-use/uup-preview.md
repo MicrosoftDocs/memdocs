@@ -2,7 +2,7 @@
 title: UUP Preview
 titleSuffix: Configuration Manager
 description: Instructions for preview of UUP integration
-ms.date: 01/25/2019
+ms.date: 01/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -29,6 +29,8 @@ Feature updates with the Windows 10 Unified Update Platform (UUP) are designed t
 - All Features on Demand (FODs) and language packs should be preserved and not lost during the upgrade process.
 
 - Feature updates with UUP support express installation files, enabling clients to reduce the amount of content each client must download.
+
+- Cumulative updates with UUP bundle servicing stack updates with monthly cumulative security updates. This behavior solves difficulties with orchestrating these two updates. It makes sure that the servicing stack updates are in place to install cumulative updates without you needing to manage and orchestrate the relationships.
 
 For more information on UUP, see the Windows blog post [An update on our Unified Update Platform (UUP)](https://blogs.windows.com/windowsexperience/2017/03/02/an-update-on-our-unified-update-platform-uup/).
 
