@@ -803,7 +803,7 @@ The following table lists the log files that contain information related to Disc
 
 ###  <a name="BKMK_WindowsServicingLog"></a>Windows 10 servicing  
  The following table lists the log files that contain information related to Windows 10 servicing.  
-
+Servicing uses the same infrastructure and process as software updates. For other logs applicable to the servicing scenario, see [Software updates](#BKMK_SU_NAPLog).
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |CBS.log|Records servicing failures related to changes for Windows Updates or roles and features.|Client|  
