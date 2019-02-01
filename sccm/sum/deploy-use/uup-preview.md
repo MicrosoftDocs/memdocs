@@ -64,9 +64,7 @@ The **MUUrl** property should be `https://sws.update.microsoft.com`. To change i
 
 ### 2. Update ConfigMgr
 
-If you're syncing express installation files in your environment, then ConfigMgr 1810 current branch is required for production environments, or 1812 technical preview branch for lab environments.
-
-If you aren't syncing express installation files in your environment, then ConfigMgr 1810 hotfix KB4482615 is also required for production environments, or 1812 technical preview branch for lab environments.
+Make the following changes to your Configuration Manager site to support this UUP preview:
 
 
 #### Diagnostics and usage data level
