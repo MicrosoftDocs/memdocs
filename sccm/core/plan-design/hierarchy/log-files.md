@@ -808,6 +808,7 @@ Servicing uses the same infrastructure and process as software updates. For othe
 |--------------|-----------------|----------------------------|  
 |CBS.log|Records servicing failures related to changes for Windows Updates or roles and features.|Client|  
 |DISM.log|Records all actions using DISM. If necessary, DISM.log will point to CBS.log for more details.|Client|
+|setupact.log|Primary log file for most errors that occur during the Windows installation process. The log file is located in the %windir%\$Windows.~BT\sources\panther folder.|Client|
 
 For more information, see [Online Servicing-Related Log Files](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files).
 
