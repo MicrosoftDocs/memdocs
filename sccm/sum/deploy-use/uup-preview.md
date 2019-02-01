@@ -30,14 +30,14 @@ Feature updates with the Windows 10 Unified Update Platform (UUP) are designed t
 
 - Feature updates with UUP support express installation files, enabling clients to reduce the amount of content each client must download.
 
-- Cumulative updates with UUP bundle servicing stack updates with monthly cumulative security updates. This behavior solves difficulties with orchestrating these two updates. It makes sure that the servicing stack updates are in place to install cumulative updates without you needing to manage and orchestrate the relationships.
-
 For more information on UUP, see the Windows blog post [An update on our Unified Update Platform (UUP)](https://blogs.windows.com/windowsexperience/2017/03/02/an-update-on-our-unified-update-platform-uup/).
 
 
 ### Cumulative updates
 
-Cumulative updates with UUP allow content for FODs and Language Packs to be distributed offline to enable end users to acquire them on demand without needing to go to the internet or tedious staging efforts by administrators.
+- Cumulative updates with UUP allow content for FODs and Language Packs to be distributed offline to enable end users to acquire them on demand without needing to go to the internet or tedious staging efforts by administrators.
+
+- Cumulative updates with UUP include servicing stack updates with monthly cumulative security updates. This behavior solves difficulties with orchestrating these two updates. It makes sure that the servicing stack updates are in place to install cumulative updates without you needing to manage and orchestrate the relationships.
 
 
 
