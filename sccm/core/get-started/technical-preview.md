@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 01/23/2019
+ms.date: 02/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -64,10 +64,10 @@ The technical preview branch of Configuration Manager supports the following pro
 
 -   It only supports the following versions of **SQL Server**:  
 
-    -   SQL Server 2017 (with cumulative update 2, and later) beginning in Configuration Manager version 1710
-    -   SQL Server 2016 (with no Service Pack, and later)
-    -   SQL Server 2014 (with Service Pack 1, and later)
-    -   SQL Server 2012 (with Service Pack 3, or later)  
+    -   SQL Server 2017 (with cumulative update 2 or later) 
+    -   SQL Server 2016 (with no service pack or later)
+    -   SQL Server 2014 (with service pack 1 or later)
+    -   SQL Server 2012 (with service pack 3 or later)  
 
 
 -   The site supports up to 10 clients, which must run one of the following versions of Windows:  
@@ -119,30 +119,20 @@ The following features are available with the most recent Configuration Manager 
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### Technical Preview version 1901
+### Technical Preview version 1902
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor)<!--ID-->
 
-
-- [Client health dashboard](/sccm/core/get-started/2019/technical-preview-1901#bkmk_health)<!--3599209-->  
-- [Specify priority for feature updates in Windows 10 servicing](/sccm/core/get-started/2019/technical-preview-1901#bkmk_neo)<!--3734525-->  
-- [Dedicated monitoring for phased deployments](/sccm/core/get-started/2019/technical-preview-1901#bkmk_pod)<!--3555949--> 
-- [Run CMPivot from the central administration site](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmpivot)<!--3610960-->  
-- [Improvements to Run PowerShell Script task sequence step](/sccm/core/get-started/2019/technical-preview-1901#bkmk_posh)<!--3556028-->  
-- [Office products on lifecycle dashboard](/sccm/core/get-started/2019/technical-preview-1901#bkmk_lifecycle)<!--3556026-->  
-- [Management insight rules for collections](/sccm/core/get-started/2019/technical-preview-1901#bkmk_micoll)<!--3555752-->  
-- [Search device views using MAC address](/sccm/core/get-started/2019/technical-preview-1901#bkmk_mac)<!--3600878-->  
-- [Distribution point maintenance mode](/sccm/core/get-started/2019/technical-preview-1901#bkmk_dpmaint)<!--3555754-->  
-- [Optimized image servicing](/sccm/core/get-started/2019/technical-preview-1901#bkmk_resetbase)<!--3555951-->  
-- [Import a single index of an OS image](/sccm/core/get-started/2019/technical-preview-1901#bkmk_index)<!--3719699--> 
-- [Use Azure Resource Manager for cloud services](/sccm/core/get-started/2019/technical-preview-1901#bkmk_arm)<!--3605704-->  
-- [Confirmation of console feedback](/sccm/core/get-started/2019/technical-preview-1901#bkmk_feedback)<!--3556010--> 
-- [Create a Configuration Manager technical preview lab in Azure](/sccm/core/get-started/2019/technical-preview-1901#bkmk_azurevm)<!--3556017-->  
-- [Specify a custom port for peer wakeup](/sccm/core/get-started/2019/technical-preview-1901#bkmk_sleep)<!--3605925-->  
-- [View recently connected consoles](/sccm/core/get-started/2019/technical-preview-1901#bkmk_console)<!--3699367-->  
-- [Stop cloud service when it exceeds threshold](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmg)<!--3735092--> 
-- [Client provisioning mode timeout](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osdprov)<!--3197824-->
-- [Improvements to OS deployment](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osd)<!--3633146,3641475,3654172,3734270-->
+- [Add cloud management gateway to boundary groups](/sccm/core/get-started/2019/technical-preview-1902#bkmk_anchor)<!--3640932-->
+- [Configure default customizations in Software Center](/sccm/core/get-started/2019/technical-preview-1902#bkmk_anchor)<!--3612112-->
+- [Redirect and move Windows known folders to OneDrive](/sccm/core/get-started/2019/technical-preview-1902#bkmk_anchor)<!--3556021-->
+- [Office Analytics](/sccm/core/get-started/2019/technical-preview-1902#bkmk_anchor)<!--3735402-->
+- [Show Windows Upgrade progress during in-place upgrade task sequence](/sccm/core/get-started/2019/technical-preview-1902#bkmk_anchor)<!--3747129-->
+- [Improvements to client health dashboard](/sccm/core/get-started/2019/technical-preview-1902#bkmk_anchor)<!--3599209-->
+- [View first monitor only during Configuration Manager remote control session](/sccm/core/get-started/2019/technical-preview-1902#bkmk_anchor)<!--3231732-->
+- [Edit or copy PowerShell scripts](/sccm/core/get-started/2019/technical-preview-1902#bkmk_anchor)<!--3705507-->
+- [Replace toast notifications with dialog window](/sccm/core/get-started/2019/technical-preview-1902#bkmk_anchor)<!--3555947-->
+- [Analytics-informed phase deployments](/sccm/core/get-started/2019/technical-preview-1902#bkmk_anchor)<!--3555946-->
 
 
 > [!Note]  
@@ -161,6 +151,25 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  | Feature | Technical preview version | Current branch version |  
  |---------|---------------------------|------------------------|
+ | Client health dashboard <!--3599209--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_health) | ![Not added](media/Red_X.gif) | 
+ | Specify priority for feature updates in Windows 10 servicing <!--3734525--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_neo) | ![Not added](media/Red_X.gif) | 
+ | Dedicated monitoring for phased deployments <!--3555949--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_pod) | ![Not added](media/Red_X.gif) | 
+ | Run CMPivot from the central administration site <!--3610960--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmpivot) | ![Not added](media/Red_X.gif) | 
+ | Improvements to Run PowerShell Script task sequence step <!--3556028--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_posh) | ![Not added](media/Red_X.gif) | 
+ | Office products on lifecycle dashboard <!--3556026--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_lifecycle) | ![Not added](media/Red_X.gif) | 
+ | Management insight rules for collections <!--3555752--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_micoll) | ![Not added](media/Red_X.gif) | 
+ | Search device views using MAC address <!--3600878--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_mac) | ![Not added](media/Red_X.gif) | 
+ | Distribution point maintenance mode <!--3555754--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_dpmaint) | ![Not added](media/Red_X.gif) | 
+ | Optimized image servicing <!--3555951--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_resetbase) | ![Not added](media/Red_X.gif) | 
+ | Import a single index of an OS image <!--3719699--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_index) | ![Not added](media/Red_X.gif) | 
+ | Use Azure Resource Manager for cloud services <!--3605704--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_arm) | ![Not added](media/Red_X.gif) | 
+ | Confirmation of console feedback <!--3556010--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_feedback) | ![Not added](media/Red_X.gif) | 
+ | Create a Configuration Manager technical preview lab in Azure <!--3556017--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_azurevm) | ![Not added](media/Red_X.gif) | 
+ | Specify a custom port for peer wakeup <!--3605925--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_sleep) | ![Not added](media/Red_X.gif) | 
+ | View recently connected consoles <!--3699367--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_console) | ![Not added](media/Red_X.gif) | 
+ | Stop cloud service when it exceeds threshold <!--3735092--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmg) | ![Not added](media/Red_X.gif) | 
+ | Client provisioning mode timeout <!--3197824--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osdprov) | ![Not added](media/Red_X.gif) | 
+ | Improvements to OS deployment <!--3633146,3641475,3654172,3734270--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osd) | ![Not added](media/Red_X.gif) | 
  | Improvements to Run PowerShell Script task sequence step <!--3556028 fka 1359389--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_posh) | ![Not added](media/Red_X.gif) | 
  | Improvements to application approvals via email <!--3594063--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_email) | ![Not added](media/Red_X.gif) | 
  | Configure user device affinity in Software Center <!--3485366--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_uda) | ![Not added](media/Red_X.gif) | 
@@ -171,11 +180,6 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  | Configuration Manager console notifications <!--1318035--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_notify) | ![Not added](media/Red_X.gif) | 
  | Improvements to task sequence media creation <!--1359388--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_tsmedia) | ![Not added](media/Red_X.gif) | 
  | Improvement to Run PowerShell Script task sequence step <!--1359389--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_posh) | ![Not added](media/Red_X.gif) | 
- | Improvements to collection evaluation <!--1358981--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_colleval) | Version 1810 | 
- | Configuration Manager administrator authentication <!--1357013--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_auth) | Version 1810 | 
- | Management insights rule for peer cache source client version <!--1358008--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_insights) | Version 1810 | 
- | Improvements to internet-based client setup <!--1359181--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_cmg) | Version 1810 | 
- | Convert applications to MSIX <!--1359029--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_msix) | Version 1810 | 
 
 
 
