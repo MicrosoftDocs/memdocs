@@ -64,10 +64,10 @@ The technical preview branch of Configuration Manager supports the following pro
 
 -   It only supports the following versions of **SQL Server**:  
 
-    -   SQL Server 2017 (with cumulative update 2, and later) beginning in Configuration Manager version 1710
-    -   SQL Server 2016 (with no Service Pack, and later)
-    -   SQL Server 2014 (with Service Pack 1, and later)
-    -   SQL Server 2012 (with Service Pack 3, or later)  
+    -   SQL Server 2017 (with cumulative update 2 or later) 
+    -   SQL Server 2016 (with no service pack or later)
+    -   SQL Server 2014 (with service pack 1 or later)
+    -   SQL Server 2012 (with service pack 3 or later)  
 
 
 -   The site supports up to 10 clients, which must run one of the following versions of Windows:  
