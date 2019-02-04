@@ -30,7 +30,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
 3. On the **Confirm your subscription** page, review the list of required qualifying licenses. Switch the setting to **Yes** next to **Do you have one of the supported or higher subscriptions**, and then select **Next**.  
 
-4. On the **Give users access** page, Desktop Analytics pre-configures two security groups in Azure Active Directory:  
+4. On the **Give users and apps access** page, Desktop Analytics pre-configures two security groups in Azure Active Directory:  
 
     - **Workspace Owners**: Create and manage workspaces. These accounts need owner access to the Azure subscription.  
 
