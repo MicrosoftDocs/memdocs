@@ -35,7 +35,7 @@ manager: dougeby
 > 
 > - The on-premises MDM feature in Configuration Manager isn't deprecated. Starting in Configuration Manager version 1810, you can use on-premises MDM without an Intune connection. For more information, see [An Intune connection is no longer required for new on-premises MDM deployments](/sccm/core/plan-design/changes/whats-new-in-version-1810#bkmk_opmdm). 
 > 
-> - The on-premises conditional access feature of Configuration Manager is also deprecated with hybrid MDM. You should plan to use co-management for conditional access. For more information, see [Conditional access with co-management](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access). 
+> - The on-premises conditional access feature of Configuration Manager is also deprecated with hybrid MDM. If you use conditional access on devices managed with the Configuration Manager client, to make sure they are still protected, first enable conditional access in Intune for those devices before you migrate. Enable co-management in Configuration Manager, move the compliance policy workload to Intune, and then complete your migration from Intune hybrid to Intune standalone. For more information, see [Conditional access with co-management](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access). 
 > 
 > - On September 1, 2019, any remaining hybrid MDM devices will no longer receive policy, apps, or security updates.  
 > 
