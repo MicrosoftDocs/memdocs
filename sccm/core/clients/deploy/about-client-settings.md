@@ -620,7 +620,7 @@ For example, if your organization doesn't use compliance policies, and you want 
 Configure a schedule for when Configuration Manager reevaluates the requirement rules for all deployments. The default value is every seven days.  
 
 > [!IMPORTANT]  
->  This setting is much more invasive to the local client, than it is to the network or sitewerver. You could always set it faster, and carefully monitor the situation, and if it doesn’t work slow it back down.. A more aggressive reevaluation schedule negatively affects the performance of your network and client computers.  
+> This setting is more invasive to the local client than it is to the network or site server. A more aggressive reevaluation schedule negatively affects the performance of your network and client computers. Microsoft doesn't recommend setting a lower value than the default. If you change this value, closely monitor performance.  
 
 Initiate this action from a client as follows: in the **Configuration Manager** control panel, from the **Actions** tab, select **Application Deployment Evaluation Cycle**.  
 
