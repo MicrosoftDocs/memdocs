@@ -31,13 +31,20 @@ manager: dougeby
 > 
 > - If you migrate to Intune on Azure before the end of the hybrid MDM offering, there should be no end user impact.  
 > 
+> - On September 1, 2019, any remaining hybrid MDM devices will no longer receive policy, apps, or security updates.  
+> 
 > - Licensing remains the same. Intune on Azure licenses are included with hybrid MDM.  
 > 
 > - The on-premises MDM feature in Configuration Manager isn't deprecated. Starting in Configuration Manager version 1810, you can use on-premises MDM without an Intune connection. For more information, see [An Intune connection is no longer required for new on-premises MDM deployments](/sccm/core/plan-design/changes/whats-new-in-version-1810#bkmk_opmdm). 
 > 
-> - The on-premises conditional access feature of Configuration Manager is also deprecated with hybrid MDM. If you use conditional access on devices managed with the Configuration Manager client, to make sure they are still protected, first enable conditional access in Intune for those devices before you migrate. Enable co-management in Configuration Manager, move the compliance policy workload to Intune, and then complete your migration from Intune hybrid to Intune standalone. For more information, see [Conditional access with co-management](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access). 
-> 
-> - On September 1, 2019, any remaining hybrid MDM devices will no longer receive policy, apps, or security updates.  
+> - The on-premises conditional access feature of Configuration Manager is also deprecated with hybrid MDM. If you use conditional access on devices managed with the Configuration Manager client, make sure they are protected before you migrate. 
+>     1. Set up conditional access policies in Azure
+>     2. Set up compliance policies in Intune portal 
+>     3. Finish hybrid migration, and set the MDM authority to Intune
+>     4. Enable co-management
+>     5. Move the compliance policies co-management workload to Intune 
+>
+>     For more information, see [Conditional access with co-management](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access). 
 > 
 > **What do I need to do to prepare for this change?**
 > 
