@@ -78,6 +78,11 @@ Starting in version 1806, fewer command-line properties are now required.
 - If the client roams back to the intranet, the following property is required:  
     - SMSMP  
 
+- If using your own PKI SSL certificate and your CRL isn't published to the internet, the following parameter is required:  
+    - /noCRLCheck  
+    
+     For more information, see [Planning for CRLs](/sccm/core/plan-design/security/plan-for-security#-plan-for-the-site-server-signing-certificate-self-signed)  
+
 The following example includes all of these properties:   
 `ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com`
 
