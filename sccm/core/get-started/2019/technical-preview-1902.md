@@ -2,7 +2,7 @@
 title: Technical preview 1902
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 1902.
-ms.date: 02/07/2019
+ms.date: 02/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -34,25 +34,21 @@ Review the [technical preview](/sccm/core/get-started/technical-preview) article
 
 **The following sections describe the new features to try out in this version:**  
 
+[!INCLUDE [Replace toast notifications with dialog window](includes/1902/3555947.md)]
+
+[!INCLUDE [Progress status during in-place upgrade task sequence](includes/1902/3747129.md)]
+
+[!INCLUDE [Redirect Windows known folders to OneDrive](includes/1902/3556021.md)]
+
+[!INCLUDE [View first screen only during remote control](includes/1902/3231732.md)]
+
+[!INCLUDE [Edit or copy PowerShell scripts](includes/1902/3705507.md)]
+
 [!INCLUDE [Add cloud management gateway to boundary groups](includes/1902/3640932.md)]
 
 [!INCLUDE [Configure default customizations in Software Center](includes/1902/3612112.md)]
 
-[!INCLUDE [Redirect and move Windows known folders to OneDrive](includes/1902/3556021.md)]
-
-[!INCLUDE [Office Analytics](includes/1902/3735402.md)]
-
-[!INCLUDE [Show Windows Upgrade progress during in-place upgrade task sequence](includes/1902/3747129.md)]
-
 [!INCLUDE [Improvements to client health dashboard](includes/1902/3599209.md)]
-
-[!INCLUDE [View first monitor only during Configuration Manager remote control session](includes/1902/3231732.md)]
-
-[!INCLUDE [Edit or copy PowerShell scripts](includes/1902/3705507.md)]
-
-[!INCLUDE [Replace toast notifications with dialog window](includes/1902/3555947.md)]
-
-[!INCLUDE [Analytics-informed phase deployments](includes/1902/3555946.md)]
 
 
 

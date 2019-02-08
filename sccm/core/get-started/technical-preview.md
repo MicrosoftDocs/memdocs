@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 02/07/2019
+ms.date: 02/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -123,16 +123,15 @@ The following features are available with the most recent Configuration Manager 
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor)<!--ID-->
 
-- [Add cloud management gateway to boundary groups](/sccm/core/get-started/2019/technical-preview-1902#bkmk_anchor)<!--3640932-->
-- [Configure default customizations in Software Center](/sccm/core/get-started/2019/technical-preview-1902#bkmk_anchor)<!--3612112-->
-- [Redirect and move Windows known folders to OneDrive](/sccm/core/get-started/2019/technical-preview-1902#bkmk_anchor)<!--3556021-->
-- [Office Analytics](/sccm/core/get-started/2019/technical-preview-1902#bkmk_anchor)<!--3735402-->
-- [Show Windows Upgrade progress during in-place upgrade task sequence](/sccm/core/get-started/2019/technical-preview-1902#bkmk_anchor)<!--3747129-->
-- [Improvements to client health dashboard](/sccm/core/get-started/2019/technical-preview-1902#bkmk_anchor)<!--3599209-->
-- [View first monitor only during Configuration Manager remote control session](/sccm/core/get-started/2019/technical-preview-1902#bkmk_anchor)<!--3231732-->
-- [Edit or copy PowerShell scripts](/sccm/core/get-started/2019/technical-preview-1902#bkmk_anchor)<!--3705507-->
-- [Replace toast notifications with dialog window](/sccm/core/get-started/2019/technical-preview-1902#bkmk_anchor)<!--3555947-->
-- [Analytics-informed phase deployments](/sccm/core/get-started/2019/technical-preview-1902#bkmk_anchor)<!--3555946-->
+- [Replace toast notifications with dialog window](/sccm/core/get-started/2019/technical-preview-1902#bkmk_impact)<!--3555947-->
+- [Progress status during in-place upgrade task sequence](/sccm/core/get-started/2019/technical-preview-1902#bkmk_ipu)<!--3747129-->
+- [Redirect Windows known folders to OneDrive](/sccm/core/get-started/2019/technical-preview-1902#bkmk_odfb)<!--3556021-->
+- [View first screen only during remote control](/sccm/core/get-started/2019/technical-preview-1902#bkmk_rcmulti)<!--3231732-->
+- [Edit or copy PowerShell scripts](/sccm/core/get-started/2019/technical-preview-1902#bkmk_psedit)<!--3705507-->
+- [Add cloud management gateway to boundary groups](/sccm/core/get-started/2019/technical-preview-1902#bkmk_cmgbg)<!--3640932-->
+- [Configure default views in Software Center](/sccm/core/get-started/2019/technical-preview-1902#bkmk_swctr)<!--3612112-->
+- [Improvements to client health dashboard](/sccm/core/get-started/2019/technical-preview-1902#bkmk_health)<!--3599209-->
+
 
 
 > [!Note]  
