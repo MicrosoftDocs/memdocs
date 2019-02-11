@@ -70,8 +70,9 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 |-|-|  
 |[GetChainedPullDPs Method in Class SMSDistributionPointInfo](../../../../../develop/reference/core/servers/configure/getchainedpulldps-method-in-class-smsdistributionpointinfo.md)|Ensures that when a source distribution point is assigned, a looping chain is not generated.|  
 
-## Properties  
- `AddressScheduleEnabled`  
+## Properties 
+
+### AddressScheduleEnabled
  Data type: `Boolean`  
 
  Access type: Read/Write  
@@ -80,7 +81,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  `true`, if a schedule on this address is configured.  
 
- `BindExcept`  
+### BindExcept
  Data type: `String`  
 
  Access type: Read/Write  
@@ -89,7 +90,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  PXE bind exception.  
 
- `BindPolicy`  
+### BindPolicy
  Data type: `Boolean`  
 
  Access type: Read/Write  
@@ -98,7 +99,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  PXE bind policy.  
 
- `BitsEnabled`  
+### BitsEnabled
  Data type: `Boolean`  
 
  Access type: Read/Write  
@@ -107,7 +108,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  `true` if the distribution point is BITS-enabled. The default value is `false`.  
 
- `CertificateType`  
+### CertificateType
  Data type: `Boolean`  
 
  Access type: Read/Write  
@@ -116,7 +117,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  PXE certificate type.  
 
- `Communication`  
+### Communication
  Data type: `UInt32`  
 
  Access type: Read/Write  
@@ -125,7 +126,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  HTTP or HTTPS. The default value is 0.  
 
- `Description`  
+### Description
  Data type: `String`  
 
  Access type: Read/Write  
@@ -134,7 +135,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  Description of the distribution point.  
 
- `DPFlags`  
+### DPFlags
  Data type: `UInt32`  
 
  Access type: Read-only  
@@ -147,7 +148,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 |-|-|  
 |0|DP_TYPE_READONLY|  
 
- `Drive`  
+### Drive
  Data type: `String`  
 
  Access type: Read/Write  
@@ -156,7 +157,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  Drive that is to be used by the distribution point. The default value is "".  
 
- `GroupCount`  
+### GroupCount
  Data type: `UInt32`  
 
  Access type: Read/Write  
@@ -165,7 +166,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  Count of distribution point groups that have this distribution point.  
 
- `HasRelationship`  
+### HasRelationship
  Data type: `Boolean`  
 
  Access type: Read-only  
@@ -174,7 +175,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  `true`, if this distribution point is assigned to a distribution point group.  
 
- `HealthCheckEnabled`  
+### HealthCheckEnabled
  Data type: `Boolean`  
 
  Access type: Read/Write  
@@ -183,7 +184,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  `true`, if health check on this distribution point is enabled.  
 
- `HealthCheckPriority`  
+### HealthCheckPriority
  Data type: `UInt32`  
 
  Access type: Read/Write  
@@ -192,7 +193,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  Distribution point health thread manager thread priority. The default value is 4.  
 
- `HealthCheckSchedule`  
+### HealthCheckSchedule
  Data type: `String`  
 
  Access type: Read/Write  
@@ -201,7 +202,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  Schedule for health check.  
 
- `ID`  
+### ID
  Data type: `UInt32`  
 
  Access type: Read-only  
@@ -210,7 +211,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  Distribution point ID. This value is stored in the database. The default value is 0.  
 
- `IdentityGUID`  
+### IdentityGUID
  Data type: `String`  
 
  Access type: Read/Write  
@@ -219,7 +220,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  The distribution point identity, generated at the distribution point installation time. It is a GUID in `ClientKeyData` that identifies the distribution point. The GUID is associated with a certificate.  
 
- `InternetFacing`  
+### InternetFacing
  Data type: `Boolean`  
 
  Access type: Read/Write  
@@ -228,7 +229,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  `true` if this distribution point is internet facing. The default value is `false`.  
 
- `IsActive`  
+### IsActive
  Data type: `Boolean`  
 
  Access type: Read/Write  
@@ -237,7 +238,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  `true` if this PXE is active. The default value is `false`.  
 
- `IsMulticast`  
+### IsMulticast
  Data type: `Boolean`  
 
  Access type: Read/Write  
@@ -246,7 +247,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  `true` if multicast is enabled on this distribution point. The default value is `false`.  
 
- `IsPeerDP`  
+### IsPeerDP
  Data type: `Boolean`  
 
  Access type: Read/Write  
@@ -255,7 +256,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  `true` if the distribution point is a branch distribution point. The default value is `false`.  
 
- `IsProtected`  
+### IsProtected
  Data type: `Boolean`  
 
  Access type: Read/Write  
@@ -264,7 +265,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  `true` if the distribution point site system is protected. The default value is `false`.  
 
- `IsPullDP`  
+### IsPullDP
  Data type: `Boolean`  
 
  Access type: Read/Write  
@@ -273,7 +274,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  `true` if the distribution point is a pull distribution point. The default value is `false`.  
 
- `IsPXE`  
+### IsPXE
  Data type: `Boolean`  
 
  Access type: Read/Write  
@@ -282,7 +283,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  `true` if PXE is enabled. The default value is `false`.  
 
- `NALPath`  
+### NALPath
  Data type: `String`  
 
  Access type: Read/Write  
@@ -291,7 +292,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  Network abstraction layer (NAL) path to the distribution point. The default value is "".  
 
- `Name`  
+### `Name`  
  Data type: `String`  
 
  Access type: Read-only  
@@ -300,7 +301,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  Network operating system path.  
 
- `OperatingSystem`  
+### OperatingSystem
  Data type: `String`  
 
  Access type: Read/Write  
@@ -309,7 +310,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  The operating system of this computer.  
 
- `PreStagingAllowed`  
+### PreStagingAllowed
  Data type: `Boolean`  
 
  Access type: Read/Write  
@@ -318,7 +319,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  `true` if pre-staging is allowed.  
 
- `Priority`  
+### Priority
  Data type: `UInt32`  
 
  Access type: Read/Write  
@@ -327,7 +328,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  Distribution priority. The default value is 1.  
 
- `PXEPassword`  
+### PXEPassword
  Data type: `String`  
 
  Access type: Read/Write  
@@ -336,7 +337,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  PXE password. The default value is "".  
 
- `RateLimitsEnabled`  
+### RateLimitsEnabled
  Data type: `Boolean`  
 
  Access type: Read/Write  
@@ -345,7 +346,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  `true` if rate limits are enabled.  
 
- `Region`  
+### Region
  Data type: `String`  
 
  Access type: Read/Write  
@@ -356,7 +357,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
  This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
 
- `ResourceType`  
+### ResourceType
  Data type: `String`  
 
  Access type: Read/Write  
@@ -369,7 +370,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
 - Server Share  
 
-  `ResponseDelay`  
+### ResponseDelay
   Data type: `UInt32`  
 
   Access type: Read/Write  
@@ -378,7 +379,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
   PXE response delay.  
 
-  `ServerName`  
+### ServerName
   Data type: `String`  
 
   Access type: Read/Write  
@@ -387,7 +388,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
   Server name of the distribution point computer. The default value is "".  
 
-  `ServiceType`  
+### ServiceType
   Data type: `UInt32`  
 
   Access type: Read/Write  
@@ -398,7 +399,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
   This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
 
-  `ShareName`  
+### ShareName
   Data type: `String`  
 
   Access type: Read/Write  
@@ -407,7 +408,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
   Obsolete. Shared distribution points are not supported in System Center Configuration Manager.  
 
-  `SiteCode`  
+### SiteCode
   Data type: `String`  
 
   Access type: Read/Write  
@@ -416,7 +417,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
   Site code of the site that owns the distribution point. The default value is "".  
 
-  `SiteName`  
+### SiteName
   Data type: `String`  
 
   Access type: Read/Write  
@@ -425,7 +426,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
   Site name. The default value is "".  
 
-  `SupportUnknownMachines`  
+### SupportUnknownMachines
   Data type: `Boolean`  
 
   Access type: Read/Write  
@@ -434,7 +435,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
   `true` if PXE supports unknown computers. The default value is `false`.  
 
-  `TransferRate`  
+### TransferRate
   Data type: `UInt32`  
 
   Access type: Read/Write  
@@ -443,7 +444,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
   The average transfer rate in Kbps. The default value is 0.  
 
-  `UdaSetting`  
+### UdaSetting
   Data type: `UInt32`  
 
   Access type: Read/Write  
@@ -461,10 +462,10 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
