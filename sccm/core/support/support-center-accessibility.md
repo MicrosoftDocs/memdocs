@@ -10,6 +10,7 @@ ms.assetid: 1b931c9d-ffae-4d8e-baa7-c330a152674f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Accessibility features in Support Center

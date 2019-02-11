@@ -9,6 +9,7 @@ ms.assetid: 56e1f0d0-037a-421d-ada5-cf6309523daf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Software Distribution
 This section provides task-based topics that show how to manage software distribution, manage collections, and track product compliance in System Center Configuration Manager. Software distribution can be programmatically controlled on both the Configuration Manager server and the Configuration Manager client. The majority of software distribution topics focus on programmatic use on the server through the SMS Provider.  

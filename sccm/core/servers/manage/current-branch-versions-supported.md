@@ -10,6 +10,7 @@ ms.assetid: 35b5baec-d313-46aa-9d14-c443aa0d6c09
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Support for Configuration Manager current branch versions

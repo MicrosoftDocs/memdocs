@@ -9,6 +9,7 @@ ms.assetid: 0631a5e5-4f9c-4e14-b662-684439588b55
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_ARoleOperation Server WMI Class
 The `SMS_ARoleOperation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that is embedded by SMS_Role and describes the operation that is granted to this role.  

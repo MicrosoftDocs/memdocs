@@ -9,6 +9,7 @@ ms.assetid: aac8dcfa-8d65-46ff-a86d-9b62a2a16aef
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # GetOnlineCount Method in Class SMS_CN_ClientStatus
 The `GetOnlineCount` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that gets an online count of the selected clients of the target collection.  

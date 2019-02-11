@@ -10,6 +10,7 @@ ms.assetid: 54aa20d5-791e-4416-9db4-5aaea472c0b7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Define site boundaries and boundary groups for System Center Configuration Manager
 

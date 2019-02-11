@@ -10,6 +10,7 @@ ms.assetid: 7c3b9316-247b-490b-a363-8f8553821579
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Manage volume-purchased iOS apps with System Center Configuration Manager
 

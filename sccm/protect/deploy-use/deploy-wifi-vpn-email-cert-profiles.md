@@ -10,6 +10,7 @@ ms.assetid: 3753608d-b539-44dc-8e3f-b631319e7687
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
 # Deploy profiles in System Center Configuration Manager
 

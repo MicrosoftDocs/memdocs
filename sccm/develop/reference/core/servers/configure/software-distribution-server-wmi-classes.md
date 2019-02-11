@@ -9,6 +9,7 @@ ms.assetid: de2f9b43-9d3a-4d81-9db9-537a55817ca4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Software Distribution Server WMI Classes
 Microsoft System Center Configuration Manager allows you to distribute software across one or more sites in your Configuration Manager hierarchy. The following list shows some of the items you can distribute:  

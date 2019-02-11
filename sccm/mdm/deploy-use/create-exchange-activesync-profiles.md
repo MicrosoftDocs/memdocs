@@ -10,6 +10,7 @@ ms.assetid: 120442be-179e-450c-a0c4-284046895da3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Exchange ActiveSync email profiles in System Center Configuration Manager

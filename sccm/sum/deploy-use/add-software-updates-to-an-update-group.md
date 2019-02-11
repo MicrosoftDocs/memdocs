@@ -10,9 +10,13 @@ ms.technology: configmgr-sum
 ms.assetid: a0767664-fd60-46a8-9da5-86cc431ce53c
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
 
-# Add software updates to an update group  *Applies to: System Center Configuration Manager (Current Branch)*
+# Add software updates to an update group  
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
  Software update groups provide you with an effective method to organize software updates in your environment. You can manually add software updates to a software update group or automatically add software updates to a software update group by using an ADR. You can also deploy a software update group manually or deploy the group automatically by using an ADR. After you deploy a software update group, you can add new software updates to the group and Configuration Manager will automatically deploy them. Use the following procedures to add software updates to a new or existing software update group.  
 
 #### To add software updates to a new software update group  

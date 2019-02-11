@@ -10,6 +10,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
+ms.collection: M365-identity-device-management
 ---
 # MICROSOFT SQL SERVER 2014 EXPRESS
 

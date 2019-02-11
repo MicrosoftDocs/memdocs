@@ -9,6 +9,7 @@ ms.assetid: cd15f059-a89a-4990-8048-b8976237128a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_SoftwareInventoryAgentConfig Server WMI Class
 The `SMS_SoftwareInventoryAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that specifies how client computers retrieve software inventory.  

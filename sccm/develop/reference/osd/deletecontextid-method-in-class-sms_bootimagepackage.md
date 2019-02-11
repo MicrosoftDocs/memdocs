@@ -9,6 +9,7 @@ ms.assetid: 84bd0bb1-641d-418d-93ca-6f7720927005
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # DeleteContextID Method in Class SMS_BootImagePackage
 The `DeleteContextID` Windows Management Instrumentation (WMI) class method, in Configuration Manager, deletes the status queue that is associated with the specified context ID for the boot image package.  

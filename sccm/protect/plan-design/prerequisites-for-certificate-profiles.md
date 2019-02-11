@@ -10,6 +10,7 @@ ms.assetid: 0317fd02-3721-4634-b18b-7c976a4e92bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Prerequisites for certificate profiles in System Center Configuration Manager
 

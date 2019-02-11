@@ -9,6 +9,7 @@ ms.assetid: cd77676f-e824-47fe-bf6a-a78bc37a8d72
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # GetCIDocumentBody Method in Class SMS_Application
 The `GetCIDocumentBody` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the configuration item document body.  

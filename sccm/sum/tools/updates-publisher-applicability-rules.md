@@ -10,6 +10,7 @@ ms.assetid: 3cf0c2cd-397a-4622-b11c-961f334fb7d7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Manage Applicability rules in Updates Publisher

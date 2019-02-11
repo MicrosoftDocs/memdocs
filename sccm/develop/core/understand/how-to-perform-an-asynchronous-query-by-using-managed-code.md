@@ -9,6 +9,7 @@ ms.assetid: cfbb34e8-9b47-48db-a8ef-408a0a89ad17
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Perform an Asynchronous Configuration Manager Query by Using Managed Code
 In System Center Configuration Manager, to perform an asynchronous query by using the managed SMS Provider, you use the [ProcessQuery](https://msdn.microsoft.com/library/cc146295.aspx) method.  

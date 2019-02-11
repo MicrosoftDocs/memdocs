@@ -9,6 +9,7 @@ ms.assetid: c714a1cf-86af-4de2-9160-af360a484895
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Run a Configuration Manager Query
 In System Center Configuration Manager, you run a `SMS_Query` based query by getting the query instance and then by running WQL query in the `SMS_Query` object `Expression` property.  

@@ -9,6 +9,7 @@ ms.assetid: 734723a6-e7c8-43a6-8dbe-a8c11922bf80
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SmsGrantAdminRight
 In System Center Configuration Manager, the `SmsGrantAdminRight` function grants administrator credentials to the specified account.  

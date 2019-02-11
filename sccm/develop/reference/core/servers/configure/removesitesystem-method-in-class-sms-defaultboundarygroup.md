@@ -9,6 +9,7 @@ ms.assetid: 4cccccef-404a-4d15-adef-6cfc77502df5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # RemoveSiteSystem Method in Class SMS_DefaultBoundaryGroup
  The `RemoveSiteSystem` Windows Management Instrumentation (WMI) class method, in Configuration Manager, removes one or more site system servers from a default boundary group.    

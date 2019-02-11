@@ -9,6 +9,7 @@ ms.assetid: 51447f4f-dc60-428e-9ce7-25abdea37b7c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_ApplicationLatest Server WMI Class
 The `SMS_ApplicationLatest` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an application.  

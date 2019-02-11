@@ -9,6 +9,7 @@ ms.assetid: d8a9e6ba-f91e-4d2b-b215-8e4285f4eed9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # About Software Updates Setup and Configuration
 Before software update compliance assessment data is displayed in the System Center Configuration Manager console and before software updates can be deployed to client computers, you must install and configure a software update point. In addition, consider the configuration and settings for other software updates components, such as the Windows Server Update Services (WSUS) server and the software updates client agent. For more information about WSUS, see the MSDN documentation for [Windows Server Update Services](http://go.microsoft.com/fwlink/?LinkId=93575).  

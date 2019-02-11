@@ -8,6 +8,7 @@ ms.assetid: 67151abb-f882-4fd8-96ad-c91935a46bab
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # About the SMS Provider in Configuration Manager
 This section provides information about the SMS Provider in System Center Configuration Manager It discusses how the SMS Provider is a Windows Management Instrumentation (WMI) provider and also discusses the options for using different .NET Framework libraries with it. This section also covers the contextual information that an application can give to the SMS Provider and some field length restrictions that are imposed by the SMS Provider.  

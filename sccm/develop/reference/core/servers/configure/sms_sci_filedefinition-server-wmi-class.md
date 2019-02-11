@@ -9,6 +9,7 @@ ms.assetid: d8a6be76-8006-4237-881e-547b757bce7c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_SCI_FileDefinition Server WMI Class
 The `SMS_SCI_FileDefinition` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the basic properties of the site control file.  

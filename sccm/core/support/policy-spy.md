@@ -10,6 +10,7 @@ ms.assetid: 1012ec24-27d9-4193-8236-918d283c7448
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Policy Spy

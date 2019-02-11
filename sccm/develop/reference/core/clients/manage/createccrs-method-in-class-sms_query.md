@@ -9,6 +9,7 @@ ms.assetid: 7ad37be0-497c-4647-9c22-9097ea13bfc4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # CreateCCRs Method in Class SMS_Query
 The `CreateCCRs` Windows Management Instrumentation (WMI) class method, in Configuration Manager, generates client configuration requests (CCRs) for the query.  

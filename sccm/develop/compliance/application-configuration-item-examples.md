@@ -9,6 +9,7 @@ ms.assetid: aa65b08c-598f-4af0-8cee-791e46ac186d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Application Configuration Item Examples
 This section provides information about authoring application configuration items in System Center Configuration Manager.  

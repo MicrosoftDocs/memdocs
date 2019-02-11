@@ -10,8 +10,12 @@ ms.assetid: e562e2a0-8df8-4952-952f-e8c38461c612
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# How to manage queries in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# How to manage queries in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Use the information in this topic to help you manage queries in System Center Configuration Manager.  
 
  For information about how to create queries, see [How to create queries in System Center Configuration Manager](../../../core/servers/manage/create-queries.md).  

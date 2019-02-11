@@ -9,6 +9,7 @@ ms.assetid: 9114e3ac-a5b4-4204-8aba-afc3380cff69
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Installing the Application Management Extension
 This section provides task-based topics that show you how to install the custom application manager extension for application management in Configuration Manager.  

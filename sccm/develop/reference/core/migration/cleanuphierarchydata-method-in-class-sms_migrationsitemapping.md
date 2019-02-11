@@ -9,6 +9,7 @@ ms.assetid: a76a6a38-20ae-4292-adf9-8df0a3519a1c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # CleanupHierarchyData Method in Class SMS_MigrationSiteMapping
 The `CleanupHierarchyData` Windows Management Instrumentation (WMI) class method, in Configuration Manager, cleans up hierarchy data.  

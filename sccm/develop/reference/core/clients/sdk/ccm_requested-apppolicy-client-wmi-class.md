@@ -9,6 +9,7 @@ ms.assetid: 600ccdef-b722-4e0d-a7dc-4e3591afcf1b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # CCM_Requested AppPolicy Client WMI Class
 The `CCM_RequestedAppPolicy` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an application policy request.  

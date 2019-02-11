@@ -9,6 +9,7 @@ ms.assetid: b515e820-92f3-46b3-b22e-a3737f4e5596
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ITsMediaClass::CreateStandaloneMedia Method
 In Configuration Manager, the `CreateStandaloneMedia` method creates stand-alone media from which to run your operating system image deployment. The stand-alone media will contain all necessary data to run the specified operating system deployment task sequences without requiring a connection to a Configuration Manager site.  

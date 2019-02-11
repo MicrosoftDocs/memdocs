@@ -10,6 +10,7 @@ ms.assetid: c3cf9f64-c2b9-4ace-9527-2aba6d4eef04
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Install site system roles for On-premises Mobile Device Management in System Center Configuration Manager
 

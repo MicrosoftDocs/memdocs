@@ -10,6 +10,7 @@ ms.assetid: ab5cda93-b67c-4aa5-904d-7b63ce790aa0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Install Updates Publisher
 

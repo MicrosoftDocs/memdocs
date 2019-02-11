@@ -10,6 +10,7 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
+ms.collection: M365-identity-device-management
 ---
 # Best practices for software updates in Configuration Manager
 

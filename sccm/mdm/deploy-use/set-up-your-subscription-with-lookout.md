@@ -10,6 +10,7 @@ ms.assetid: 6087b279-ba05-4824-b5e3-3af14f3d3cfe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Set up your subscription for Lookout mobile threat defense
 

@@ -9,6 +9,7 @@ ms.assetid: 285d4adb-51a1-4b93-b254-fe4c2a1ca8ad
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # GetImageProperties Method in Class SMS_VhdPackage
 The `GetImageProperties` Windows Management Instrumentation (WMI) class method, in Configuration Manager, reads all the metadata from the specified .wim source file and returns an XML document containing the image metadata.  

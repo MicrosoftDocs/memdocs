@@ -10,6 +10,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
+ms.collection: M365-identity-device-management
 ---
 # System Center Configuration Manager privacy statement - Mobile device addendum
 

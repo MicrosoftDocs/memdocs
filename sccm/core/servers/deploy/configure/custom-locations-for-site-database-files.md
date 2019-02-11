@@ -10,6 +10,7 @@ ms.assetid: 500a9aa6-68aa-44eb-bf49-350c1314a697
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Custom locations for System Center Configuration Manager site database files
 

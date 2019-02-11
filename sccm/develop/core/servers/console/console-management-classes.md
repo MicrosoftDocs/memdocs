@@ -9,6 +9,7 @@ ms.assetid: 3b767f04-03e1-49b0-8533-1fcaff4fc48c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Console Management Classes
 This section provides information about System Center Configuration Manager management classes. It gives you an overview of a management class and what you must consider when writing an extension management class. It also shows you how to install a Configuration Manager console extension management class.  

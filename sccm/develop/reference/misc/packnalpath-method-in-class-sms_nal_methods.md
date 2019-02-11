@@ -9,6 +9,7 @@ ms.assetid: bd0d9061-a06f-4dbc-b9b4-8f103bf954fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # PackNALPath Method in Class SMS_NAL_Methods
 The `PackNALPath` method, in Configuration Manager, encodes a network abstraction layer (NAL) path from its components. A NAL path is an abstract representation of a network path or a user account.  

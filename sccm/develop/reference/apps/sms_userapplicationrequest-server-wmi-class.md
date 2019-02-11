@@ -9,6 +9,7 @@ ms.assetid: 74290916-947a-432f-ab33-cbf7358ee126
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_UserApplicationRequest Server WMI Class
 The `SMS_UserApplicationRequest` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a user’s application request.  

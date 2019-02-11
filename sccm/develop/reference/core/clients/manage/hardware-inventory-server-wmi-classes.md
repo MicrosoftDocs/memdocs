@@ -9,6 +9,7 @@ ms.assetid: 2cc63027-0dbd-4842-933d-171ee66d7c0d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Hardware Inventory Server WMI Classes
 The System Center Configuration Manager hardware inventory server Windows Management Instrumentation (WMI) classes are generated dynamically.  

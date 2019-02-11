@@ -9,6 +9,7 @@ ms.assetid: 04084a8f-dbd3-474c-94b9-f9958b8bba9c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # RemoveBoundary Method in Class SMS_DefaultBoundaryGroup
  The `RemoveBoundary` Windows Management Instrumentation (WMI) class method, in Configuration Manager, removes one or more boundaries from a default boundary group.  

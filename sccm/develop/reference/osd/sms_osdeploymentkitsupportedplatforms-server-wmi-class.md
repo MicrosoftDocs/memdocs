@@ -9,6 +9,7 @@ ms.assetid: c3db4103-1728-4135-8273-db37f5bd5f8b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_OSDeploymentKitSupportedPlatforms Server WMI Class
 The `SMS_OSDeploymentKitSupportedPlatforms` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that maps Assessment and Deployment Kit (ADK) versions to supported platforms.  

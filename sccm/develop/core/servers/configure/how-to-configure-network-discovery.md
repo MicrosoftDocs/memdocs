@@ -9,6 +9,7 @@ ms.assetid: 1b2a2766-1ada-4949-b548-af41454c0467
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Configure Network Discovery
 You configure the Network Discovery settings, in System Center Configuration Manager, by modifying the necessary site control file settings.  

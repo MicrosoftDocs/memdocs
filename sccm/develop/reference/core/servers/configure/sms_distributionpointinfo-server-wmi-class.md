@@ -9,6 +9,7 @@ ms.assetid: aa3fabb4-c0b4-4a99-a8c3-0889e8c99491
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_DistributionPointInfo Server WMI Class
 The `SMS_DistributionPointInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that provides information about a specific [SMS_DistributionPoint Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_distributionpoint-server-wmi-class.md) object.  

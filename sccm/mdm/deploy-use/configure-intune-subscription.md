@@ -10,6 +10,7 @@ ms.assetid: 99de8fe7-560e-401a-8ab2-6d87d091be17
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configure your Intune subscription with System Center Configuration Manager and Microsoft Intune
 

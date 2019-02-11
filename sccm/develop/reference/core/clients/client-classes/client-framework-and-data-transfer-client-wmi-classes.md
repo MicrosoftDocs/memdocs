@@ -9,6 +9,7 @@ ms.assetid: 939d7728-0e5c-4d98-8a70-0ffcfe41f479
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Client Framework and Data Transfer Client WMI Classes
 This section describes the Client Configuration Manager (CCM) framework and data transfer classes in System Center Configuration Manager for the client.  

@@ -10,8 +10,12 @@ ms.assetid: 3bd1e487-ea18-43c1-b7c3-acbd9b86d429
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# Create and deploy an application with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Create and deploy an application with System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 In this topic, you'll jump right in and create an application with System Center Configuration Manager. In this example, you'll create and deploy an application that contains a line-of-business app for Windows PCs called **Contoso.msi**, which must be installed on all PCs that are running Windows 10 in your company. Along the way, you'll learn about many of the things you can do to manage applications effectively.  
 
  This procedure is designed to give you an overview of how to create and deploy Configuration Manager applications. However, it does not cover all the configuration options, or how to create and deploy applications for other platforms.  

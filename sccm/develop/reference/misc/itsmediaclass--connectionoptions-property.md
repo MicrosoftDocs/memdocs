@@ -9,6 +9,7 @@ ms.assetid: e0f33384-2a25-46a2-8df6-09ec1d495534
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ITsMediaClass::ConnectionOptions Property
 In Configuration Manager, the `ConnectionOptions` property contains a comma-delimited list of name=value pairs to use when establishing the Windows Management Instrumentation (WMI) connection to the SMS Provider.  

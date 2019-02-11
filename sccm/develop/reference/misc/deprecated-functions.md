@@ -9,6 +9,7 @@ ms.assetid: e77a6a9a-c133-4484-901a-222983d39b88
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Deprecated Functions
 These functions, although functional in Systems Management Server 2003, Configuration Manager 2007 and System Center Configuration Manager, should not be used because they might not be available in future releases of Configuration Manager. For equivalent supported functions, see MSDN.  

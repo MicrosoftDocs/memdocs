@@ -9,6 +9,7 @@ ms.assetid: f1cf818c-711f-47d4-9cae-5e4f7aabc3c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SetDeviceCategory Method in Class SMS_Collection
 The `SetDeviceCategory` Windows Management Instrumentation (WMI) class method, in Configuration Manager, assigns a category to a set of devices.  

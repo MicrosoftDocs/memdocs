@@ -9,6 +9,7 @@ ms.assetid: cc02c9dc-9bc4-4ab5-a39d-12a76b93ad6d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_AppUnknownStatePerClient Server WMI Class
 The `SMS_AppUnknownStatePerClient` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents unknown application state per client.  

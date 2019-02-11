@@ -9,6 +9,7 @@ ms.assetid: 1d72e0a2-b590-4bc6-b5d4-6546a3290227
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_R_UserGroup Server WMI Class
 The `SMS_R_UserGroup` Windows Management (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that is generated dynamically at SMS Provider run time and contains discovery data for user group objects.  

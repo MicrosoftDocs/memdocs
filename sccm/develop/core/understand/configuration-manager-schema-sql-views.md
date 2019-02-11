@@ -9,6 +9,7 @@ ms.assetid: 0da896ff-441e-4ee3-af8b-ff79ccca73bc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Schema SQL Views
 In Configuration Manager, a number of schema information views are created to get information about the names of all the available views and the schema for the inventory and discovery classes. These are particularly useful for determining the names for custom inventory resource type (architecture) tables. The following table shows a list of these schema information views.  

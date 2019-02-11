@@ -9,6 +9,7 @@ ms.assetid: dcbcd570-3d2b-48ea-bec3-2a7273910e07
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ExportDefaultBootImage Method in Class SMS_BootImagePackage
 The `ExportDefaultBootImage` Windows Management Instrumentation (WMI) class method, in Configuration Manager, finalizes a boot image and then exports the image from the specified source to the specified location.  

@@ -9,6 +9,7 @@ ms.assetid: 91c5b0b7-b798-48dd-924e-ea41ff10fd4e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Asset Intelligence
 This section provides topics about programmatically managing Asset Intelligence in System Center Configuration Manager.  

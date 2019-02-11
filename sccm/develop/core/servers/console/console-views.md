@@ -8,6 +8,7 @@ ms.assetid: 05d652f6-d9e6-4de2-a203-47ac9e7abeb3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Console Views
 This section describes System Center Configuration Manager console views and shows how to create them.  

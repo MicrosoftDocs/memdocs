@@ -9,6 +9,7 @@ ms.assetid: 5bcdc5a5-1989-4c84-9df3-bdeb0c275eee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_DeploymentInfoFlat Server WMI Class
 The `SMS_DeploymentInfoFlat` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents all kinds of flattened deployment relations (includes dependence and supersedence).  

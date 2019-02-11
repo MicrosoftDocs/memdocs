@@ -9,6 +9,7 @@ ms.assetid: eccf8bc7-98bf-444d-b66d-6f782dfe355a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_SIIB_Component_FileList Server WMI Class
 The `SMS_SIIB_Component_FileList` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents file list information for a Configuration Manager component.  

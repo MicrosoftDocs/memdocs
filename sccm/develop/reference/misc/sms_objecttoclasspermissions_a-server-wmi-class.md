@@ -9,6 +9,7 @@ ms.assetid: da62ef7d-7f4e-4606-b659-7ad5510598f8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_ObjectToClassPermissions_a Server WMI Class
 The `SMS_ObjectToClassPermissions_a` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that relates a secured object with various users that have class permissions on it.  

@@ -9,6 +9,7 @@ ms.assetid: 3ee432d0-8fa2-4312-b7e9-f3822cc0b625
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Software Distribution Wake On LAN
 This section provides information about software distribution Wake On LAN in System Center Configuration Manager.  

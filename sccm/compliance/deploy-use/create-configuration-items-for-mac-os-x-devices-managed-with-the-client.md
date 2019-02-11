@@ -10,6 +10,7 @@ ms.assetid: 722d5bf5-bedc-4dfc-b324-6eeb773874e9
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
 # How to create configuration items for Mac OS X devices managed with the System Center Configuration Manager client
 Use the System Center Configuration Manager**Mac OS X (custom)** configuration item to manage settings  for Mac OS X devices that are managed by the Configuration Manager client.  

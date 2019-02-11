@@ -9,6 +9,7 @@ ms.assetid: 718afd29-a3cc-436a-9cb7-7e35e0e77f59
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_TaskSequence_RebootAction Server WMI Class
 The `SMS_TaskSequence_RebootAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that specifies restart options for the target computer.  

@@ -10,6 +10,7 @@ ms.assetid: b0adf873-2ff4-4a7b-b5e7-6047f146511f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Removed and deprecated items for System Center Configuration Manager
 

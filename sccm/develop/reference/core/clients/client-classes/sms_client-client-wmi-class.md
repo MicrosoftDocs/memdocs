@@ -9,6 +9,7 @@ ms.assetid: f5101684-bce9-4752-8742-31f01f36ff0c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_Client Client WMI Class
 The `SMS_Client` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that represents the client and facilitates manipulation and retrieval of client information.  

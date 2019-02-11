@@ -9,6 +9,7 @@ ms.assetid: e92a9306-129e-49d8-98fb-fdc391305073
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Status Classes
 This section contains detailed reference information about the status and state functionality in System Center Configuration Manager.  

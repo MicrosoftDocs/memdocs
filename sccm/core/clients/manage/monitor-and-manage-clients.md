@@ -10,6 +10,7 @@ ms.assetid: 110b65b3-2202-466f-bb5d-e5ee282506fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Monitor and manage clients in System Center Configuration Manager
 

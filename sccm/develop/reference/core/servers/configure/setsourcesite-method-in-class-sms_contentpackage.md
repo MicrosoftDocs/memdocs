@@ -9,6 +9,7 @@ ms.assetid: 6057c670-f3c8-4632-9a06-777f68a41dba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SetSourceSite Method in Class SMS_ContentPackage
 The `SetSourceSite` Windows Management Instrumentation (WMI) class method, in Configuration Manager, changes the source site code.  

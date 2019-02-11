@@ -9,6 +9,7 @@ ms.assetid: 0e4b2ecd-ebc1-4a38-af80-e3d198d6a1a7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # IAppManagementHandler::EnumerateApps Method
 The `IAppManagementHandler::EnumerateApps` method, in Configuration Manager, runs a synchronous discovery operation for the provided synclet.  

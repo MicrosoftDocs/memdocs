@@ -9,6 +9,7 @@ ms.assetid: efaa6ef5-e9a0-4939-bf9a-855e42d2df65
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_AppDeploymentRequirementsNotMetStatus Server WMI Class
 The `SMS_AppDeploymentRequirementsNotMetStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the status of application deployment where requirements are not met.  

@@ -9,6 +9,7 @@ ms.assetid: dbb9325d-7346-4ba5-8eb5-9f6245d82aa7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # AddDistributionPoints Method in Class SMS_SoftwareUpdatesPackage
 In System Center Configuration Manager, the `AddDistributionPoints` Windows Management Instrumentation (WMI) class method adds the distribution points for the software updates package.  

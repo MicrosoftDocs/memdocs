@@ -9,6 +9,7 @@ ms.assetid: d6ded6e9-1f9b-459a-8ef3-4b8f828e0232
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Privacy Information
 The System Center Configuration Manager SDK provides documentation and code samples demonstrating how to programmatically access Configuration Manager features. When you build a program or script by using the Configuration Manager SDK, Configuration Manager does not limit the types of information it transmits. For example, a program that identifies each computer and logon account could be used to transmit information between clients and servers.  

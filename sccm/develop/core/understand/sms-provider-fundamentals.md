@@ -9,6 +9,7 @@ ms.assetid: c308fa4a-8d8b-42dc-87ec-f42667e314fd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS Provider Fundamentals in Configuration Manager
 You use the SMS Provider to access and modify System Center Configuration Manager data. The SMS Provider is a Windows Management Instrumentation (WMI) provider that can be accessed through either WMI or managed classes.  

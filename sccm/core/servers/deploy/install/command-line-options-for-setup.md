@@ -10,6 +10,7 @@ ms.assetid: 0da167f1-52cf-4dfd-8f73-833ca3eb8478
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Command-line options for setup in System Center Configuration Manager
 

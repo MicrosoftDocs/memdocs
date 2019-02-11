@@ -9,6 +9,7 @@ ms.assetid: 247f1a76-062d-42b1-aa82-bad9763a0a1b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_TaskSequencePackageReference_All Server WMI Class
 The `SMS_TaskSequencePackageReference_All` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that allows the retrieval of all task sequence package or application references (including those that do not contain any content files).  

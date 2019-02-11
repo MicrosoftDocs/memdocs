@@ -9,6 +9,7 @@ ms.assetid: d4da35eb-a222-43fe-b8bd-992fd32f9b95
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ValidateQuery Method in Class SMS_Report
 The `ValidateQuery` Windows Management Instrumentation (WMI) class method, in Configuration Manager, verifies that a report query is a valid SQL statement and performs the same level of validation that occurs when the report is saved.  

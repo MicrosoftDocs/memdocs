@@ -9,6 +9,7 @@ ms.assetid: 30218637-dce3-4d83-9940-53bd5672e22a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Operating System Deployment Classes
 This section contains detailed reference information about the operating system deployment functionality in Microsoft System Center Configuration Manager.  

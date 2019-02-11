@@ -10,6 +10,7 @@ ms.assetid: 34024741-edfa-4088-8599-d6bafc331e62
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Manage access to O365 services for PCs managed by System Center Configuration Manager
 

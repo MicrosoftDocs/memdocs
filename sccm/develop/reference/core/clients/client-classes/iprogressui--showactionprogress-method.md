@@ -9,6 +9,7 @@ ms.assetid: 4f08f27a-bb32-4a86-b7ca-ef745c311323
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # IProgressUI::ShowActionProgress Method
 In Configuration Manager, the `ShowActionProgress` method displays custom action progress information in a dialog box while the custom action is running.  

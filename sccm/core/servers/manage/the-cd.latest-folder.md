@@ -10,6 +10,7 @@ ms.assetid: 8db92d67-5d9c-4e9c-80d0-ae6fa0dd4817
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # The CD.Latest folder for System Center Configuration Manager
 

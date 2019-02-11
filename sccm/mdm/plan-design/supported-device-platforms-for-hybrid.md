@@ -10,6 +10,7 @@ ms.assetid: 6b0732c8-1be8-44ba-8f8e-6fb2b67782e1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Supported device platforms for hybrid MDM

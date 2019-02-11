@@ -9,6 +9,7 @@ ms.assetid: 81dd40df-0e9f-49ef-a31f-70cfc4547baf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ITsMediaClass::NumSteps Property
 In Configuration Manager, the `NumSteps` property contains the number of steps necessary for task sequence media creation.  

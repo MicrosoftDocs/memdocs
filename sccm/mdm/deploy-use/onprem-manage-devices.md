@@ -10,6 +10,7 @@ ms.assetid: 6e233f17-8ead-4984-a3fa-12687c4381ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Manage devices for On-premises Mobile Device Management
 

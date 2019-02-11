@@ -10,6 +10,7 @@ ms.assetid: 54ef5fbb-521d-4ca5-a1c5-61e6f538d71e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Determine whether to block clients in System Center Configuration Manager
 

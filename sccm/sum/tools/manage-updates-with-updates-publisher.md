@@ -10,6 +10,7 @@ ms.assetid: cd64994c-b426-4465-96cd-54b0edc2778d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Manage software updates in Updates Publisher
 

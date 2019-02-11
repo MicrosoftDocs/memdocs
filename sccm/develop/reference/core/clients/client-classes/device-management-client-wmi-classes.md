@@ -9,6 +9,7 @@ ms.assetid: fd12558f-89ee-48fd-9d23-73f29c26dbf9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Device Management Client WMI Classes
 In System Center Configuration Manager, the device management client Windows Management Instrumentation (WMI) classes are used by client applications to manage device setting packages and items on the client computer. They concern client-side behavior only.  

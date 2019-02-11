@@ -9,6 +9,7 @@ ms.assetid: b7438a3c-7917-43a1-984d-d300ed86d963
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Unlock Method in Class SMS_OperatingSystemInstallPackage
 The `Unlock` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the source site to the current site, unlocking the operating system install package.  

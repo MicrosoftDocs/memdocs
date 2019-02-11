@@ -10,6 +10,7 @@ ms.assetid: 2e27b0b7-7bd3-45cd-bc99-9c991606c637
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Plan a client migration strategy in System Center Configuration Manager
 

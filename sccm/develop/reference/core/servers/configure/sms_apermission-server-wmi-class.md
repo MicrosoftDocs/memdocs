@@ -9,6 +9,7 @@ ms.assetid: a1491aa9-1def-4e35-923a-84bb1e1a1bf0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_APermission Server WMI Class
 The `SMS_APermission` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that is embedded by `SMS_Admin` and describes the permission granted to a specific admin.  

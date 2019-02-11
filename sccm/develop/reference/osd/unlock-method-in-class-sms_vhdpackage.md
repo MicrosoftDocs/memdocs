@@ -9,6 +9,7 @@ ms.assetid: 3b22d939-6d8d-4a91-928f-9b84e4b59a7c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Unlock Method in Class SMS_VhdPackage
 The `Unlock` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the source site to the current site, unlocking the VHD package.  

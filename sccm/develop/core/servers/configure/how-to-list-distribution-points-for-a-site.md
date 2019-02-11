@@ -9,6 +9,7 @@ ms.assetid: f70395dc-3266-4406-8189-2d741c746528
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to List Distribution Points for a Site
 The following example shows how to assign a distribution point to a package by using the [SMS_DistributionPoint Server WMI Class](../../../../develop/reference/core/servers/configure/sms_distributionpoint-server-wmi-class.md) class and class properties in System Center Configuration Manager.  

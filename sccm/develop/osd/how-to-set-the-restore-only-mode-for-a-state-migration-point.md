@@ -9,6 +9,7 @@ ms.assetid: e2cb40c3-7b94-4586-a5c2-75b1ed52f571
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Set the Restore-Only Mode for a State Migration Point
 In System Center Configuration Manager, you configure the operating system deployment state migration point to reject new requests to store user data by setting the **SMPQuiesceState** embedded property.  

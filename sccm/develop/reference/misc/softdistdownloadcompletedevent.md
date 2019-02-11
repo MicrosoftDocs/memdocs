@@ -9,6 +9,7 @@ ms.assetid: fc9e6152-e147-4818-a3cf-2f5f8cfd087e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SoftDistDownloadCompletedEvent
 In Configuration Manager, the `SoftDistDownloadCompletedEvent` message is sent when the download for a package is completed. The message appears in **Package Status** in the Configuration Manager console.  

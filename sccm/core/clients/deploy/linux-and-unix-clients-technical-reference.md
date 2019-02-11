@@ -10,6 +10,7 @@ ms.assetid: e5a8c79f-5791-49c5-8055-086d742e5559
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Linux and UNIX clients component services and commands for System Center Configuration Manager
 

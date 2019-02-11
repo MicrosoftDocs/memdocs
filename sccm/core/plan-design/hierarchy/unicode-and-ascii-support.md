@@ -10,6 +10,7 @@ ms.assetid: 2bdec799-905f-48bc-aed5-2d92134739e8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Unicode and ASCII support in System Center Configuration Manager
 

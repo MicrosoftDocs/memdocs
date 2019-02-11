@@ -9,6 +9,7 @@ ms.assetid: e31aefd2-bd7a-4501-b9c9-db66a361b72e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Authoring Compliance Settings Configuration Baselines and Configuration Items
 This section provides information about authoring Compliance Settings configuration baselines and configuration items in System Center Configuration Manager. Additional information about configuration baseline and configuration item authoring is available in the document that is provided as part of the System Center Configuration Manager 2007 Software Development Kit (SDK) download (Compliance_Settings_Digest_Authoring.doc).   

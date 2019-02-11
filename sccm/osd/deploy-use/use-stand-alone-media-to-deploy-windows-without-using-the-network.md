@@ -11,6 +11,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 
+ms.collection: M365-identity-device-management
 ---
 # Use stand-alone media to deploy Windows without using the network in System Center Configuration Manager
 

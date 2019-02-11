@@ -10,6 +10,7 @@ ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 #  Recover a Configuration Manager site

@@ -9,6 +9,7 @@ ms.assetid: 87fbeea2-3874-4b8e-a8f5-7bf829b0390f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # RaiseRawStatusMsg Method in Class SMS_StatusMessage
 The `RaiseRawStatusMsg` Windows Management Instrumentation (WMI) class method, in Configuration Manager, creates a status message from an external message DLL.  
