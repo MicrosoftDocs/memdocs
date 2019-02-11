@@ -86,7 +86,7 @@ Guided walkthroughs to assist with troubleshooting Configuration Manager compone
 
 - [Troubleshooting PXE boot issues](https://support.microsoft.com/help/4468612)
 - [Troubleshooting software update synchronization issues](https://support.microsoft.com/help/10059)
-- [Understanding and troubleshooting content distribution](https://support.microsoft.com/help/4000401)
+- [Understanding and troubleshooting content distribution](https://support.microsoft.com/help/4482728)
 - [Understanding and troubleshooting the Microsoft Store for Business integration](https://support.microsoft.com/help/4010214)
 - [Software update management troubleshooting](https://support.microsoft.com/help/10680)
 - [Troubleshooting the Install Application task sequence step](https://support.microsoft.com/help/18408/)
@@ -94,13 +94,13 @@ Guided walkthroughs to assist with troubleshooting Configuration Manager compone
 
 
 ## New and updated support articles
-Support articles that are new or updated in December 2018.
+Support articles that are new or updated in January 2019.
 
-- [KB 4040243: How to enable TLS 1.2 for Configuration Manager](https://support.microsoft.com/help/4040243)
-- [KB 4477073: Error 0x800f0831 when you install an update](https://support.microsoft.com/help/4477073)
-- [KB 4471003: How to boot from a PXE server that's on a different network](https://support.microsoft.com/help/4471003)
-- [KB 4474026: Enable BitLocker task fails with error 80070057 in Configuration Manager](https://support.microsoft.com/help/4474026)
-- [KB 4483868: Contributor role is no longer assigned for a web app at the subscription level in Azure](https://support.microsoft.com/help/4483868)
-
+- [KB 4490065: A task sequence is slow if the client in the media, or in the boot image, is earlier than the site version](https://support.microsoft.com/help/4490065)
+- [KB 4490414: Windows Server Update Services Best Practices](https://support.microsoft.com/help/4490414)
+- [KB 4489045: How to troubleshoot high CPU usage on a WSUS server](https://support.microsoft.com/help/4489045)
+- [KB 4486457: Update rollup for System Center Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4486457)
+- [KB 4487768: Error "Conversion failed" when you update to Configuration Manager version 1810](https://support.microsoft.com/help/4487768)
+- [KB 4487960: Microsoft Intune connector certificate does not renew in Configuration Manager](https://support.microsoft.com/help/4487960)
 
 To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **System Center Configuration Manager**.  
