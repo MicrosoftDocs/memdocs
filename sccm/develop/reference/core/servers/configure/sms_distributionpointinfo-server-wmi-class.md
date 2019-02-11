@@ -470,4 +470,6 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
 ## See Also  
  [Software Distribution Server WMI Classes](../../../../../develop/reference/core/servers/configure/software-distribution-server-wmi-classes.md)   
+
  [SMS_DistributionPoint Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_distributionpoint-server-wmi-class.md)
+
