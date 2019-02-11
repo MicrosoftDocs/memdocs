@@ -94,7 +94,7 @@ Guided walkthroughs to assist with troubleshooting Configuration Manager compone
 
 
 ## New and updated support articles
-Support articles that are new or updated in February 2019.
+Support articles that are new or updated in January 2019.
 
 - [KB 4490065: A task sequence is slow if the client in the media, or in the boot image, is earlier than the site version](https://support.microsoft.com/help/4490065)
 - [KB 4490414: Windows Server Update Services Best Practices](https://support.microsoft.com/help/4490414)
