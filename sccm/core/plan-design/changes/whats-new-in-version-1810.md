@@ -400,8 +400,6 @@ The following additional hotfixes are available to address specific issues:
 | ID | Title | Date | In-console |
 |---------|---------|---------|---------|
 | [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune connector certificate does not renew in Configuration Manager | 18 January 2019 | Yes |
-| [4486457](https://support.microsoft.com/help/4486457) | Update rollup for System Center Configuration Manager current branch, version 1810 | 25 January 2019 | Yes | 
-
 
 
 ## Next steps
