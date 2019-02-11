@@ -1,6 +1,6 @@
 ---
 title: In-console documentation
-ms.date: 01/14/2019
+ms.date: 02/11/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -20,7 +20,8 @@ ROBOTS: NOINDEX
 
 
 # Configuration Manager Documentation
-The links on this page represent curated content to assist you in learning and supporting Configuration Manager. 
+
+This content can assist you in learning and supporting Configuration Manager. 
 
 For more information, see the following articles:
 - [Configuration Manager documentation library](https://docs.microsoft.com/sccm)  
@@ -29,7 +30,7 @@ For more information, see the following articles:
 
 
 ## Recommended 
-A manually curated list of important articles.
+A curated list of important articles.
 
 - [Co-management for Windows 10 devices](https://docs.microsoft.com/sccm/comanage/overview)  
 - [CMPivot](https://docs.microsoft.com/sccm/core/servers/manage/cmpivot)  
@@ -46,38 +47,38 @@ A manually curated list of important articles.
 
 
 ## Trending
-The most popular articles in December 2018.
+The most popular articles in January 2019.
 
- | Page views | Title | 
- |------------|-------| 
- | 16430 | [Log files for troubleshooting](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
- | 15155 | [What's new in version 1810](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1810) |
- | 8581 | [Deploy clients to Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
- | 7866 | [Ports used for connections](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
- | 7434 | [Support for Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
- | 7088 | [What's new in version 1806](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1806) |
- | 7086 | [Client installation parameters and properties](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-installation-properties) |
- | 6914 | [Install console](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) |
- | 6087 | [Deploy applications](https://docs.microsoft.com/sccm/apps/deploy-use/deploy-applications) |
- | 5817 | [Updates and servicing](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
+| Page views | Title | 
+|------------|-------| 
+| 20862 | [Log files for troubleshooting](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
+| 19761 | [What's new in version 1810](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1810) |
+| 11327 | [Deploy clients to Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
+| 9963 | [Support for Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
+| 9684 | [Ports used for connections](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
+| 8870 | [Install console](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) |
+| 8296 | [Client installation parameters and properties](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-installation-properties) |
+| 7810 | [Checklist for 1810](https://docs.microsoft.com/sccm/core/servers/manage/checklist-for-installing-update-1810) |
+| 7758 | [Updates and servicing](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
+| 7530 | [Prerequisite checks](https://docs.microsoft.com/sccm/core/servers/deploy/install/list-of-prerequisite-checks) |
 
 
 
 ## Recently updated
 Articles with a recent and significant update.
 
- | Last reviewed | Title | 
- |---------------|-------|
- | 12/26/2018 | [Prepare Intune for user migration](https://docs.microsoft.com/sccm/mdm/deploy-use/migrate-prepare-intune) |
- | 12/21/2018 | [Deprecated features](https://docs.microsoft.com/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures) |
- | 12/21/2018 | [Release notes](https://docs.microsoft.com/sccm/core/servers/deploy/install/release-notes) |
- | 12/21/2018 | [Windows Hello for Business settings](https://docs.microsoft.com/sccm/mdm/deploy-use/windows-hello-for-business-settings) |
- | 12/20/2018 | [Manage software updates synchronization](https://docs.microsoft.com/sccm/sum/get-started/synchronize-software-updates) |
- | 12/14/2018 | [Prerequisite checks](https://docs.microsoft.com/sccm/core/servers/deploy/install/list-of-prerequisite-checks) |
- | 12/14/2018 | [Technical preview releases](https://docs.microsoft.com/sccm/core/get-started/technical-preview) |
- | 12/14/2018 | [Technical preview 1812](https://docs.microsoft.com/sccm/core/get-started/capabilities-in-technical-preview-1812) |
- | 12/14/2018 | [Approve applications](https://docs.microsoft.com/sccm/apps/deploy-use/app-approval) |
- | 12/14/2018 | [What's new in hybrid MDM](https://docs.microsoft.com/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management) |
+| Last reviewed | Title | 
+|---------------|-------|
+| 01/30/2019 | [Hybrid MDM with Microsoft Intune](https://docs.microsoft.com/sccm/mdm/understand/hybrid-mobile-device-management) |
+| 01/30/2019 | [Deprecated features](https://docs.microsoft.com/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures) |
+| 01/30/2019 | [Support Center](https://docs.microsoft.com/sccm/core/support/support-center) |
+| 01/29/2019 | [Ports used for connections](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
+| 01/25/2019 | [What's new in version 1810](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1810) |
+| 01/23/2019 | [Technical preview 1901](https://docs.microsoft.com/sccm/core/get-started/2019/technical-preview-1901) |
+| 01/23/2019 | [Technical preview releases](https://docs.microsoft.com/sccm/core/get-started/technical-preview) |
+| 01/22/2019 | [Create a lab in Azure](https://docs.microsoft.com/sccm/core/get-started/azure-template) |
+| 01/15/2019 | [Supported site system servers](https://docs.microsoft.com/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers) |
+| 01/15/2019 | [Cloud connecting with co-management](https://docs.microsoft.com/sccm/comanage/quickstarts) |
 
 
 
