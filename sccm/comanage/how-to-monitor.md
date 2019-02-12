@@ -138,7 +138,7 @@ There are hundreds of possible errors. The following table lists the most common
 |---------|---------|
 | 2147549183 (0x8000FFFF) | MDM enrollment hasn't been configured yet on Azure AD, or the enrollment URL isn't expected.<br><br>[Enable Windows 10 automatic enrollment](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment) |
 | 2149056536 (0x80180018)<br>MENROLL_E_USERLICENSE | License of user is in bad state blocking enrollment<br><br>[Assign licenses to users](https://docs.microsoft.com/intune/licenses-assign) |
-| 2149056555 (0x8018002B)<br>MENROLL_E_MDM_NOT_CONFIGURED | &nbsp; |
+| 2149056555 (0x8018002B)<br>MENROLL_E_MDM_NOT_CONFIGURED | When trying to automatically enroll to Intune, but the Azure AD configuration isn't fully applied. This issue should be transient, as the device retries after a short time. |
 | 2149056554 (0x‭8018002A‬)<br>&nbsp; | The user canceled the operation<br><br>If MDM enrollment requires multi-factor authentication, and the user hasn't signed in with a supported second factor, Windows displays a toast notification to the user to enroll. If the user doesn't respond to toast notification, this error occurs. This issue should be transient, as Configuration Manager will retry and prompt the user. Users should use multi-factor authentication when they sign in to Windows. Also educate them to expect this behavior, and if prompted, take action. | 
 | 2149056533 (0x80180015)<br>MENROLL_E_NOTSUPPORTED | Mobile device management generally not supported | 
 | 2149056514 (0x80180002)<br>MENROLL_E_DEVICE_AUTHENTICATION_ERROR | Server failed to authenticate the user<br><br> There's no Azure AD token for the user. Make sure the user can authenticate to Azure AD. |
@@ -151,10 +151,8 @@ There are hundreds of possible errors. The following table lists the most common
 | 3399942148 | The server or proxy was not found.<br><br>This issue should be transient, when the client can't communicate with cloud. If it persists, make sure the client has consistent connectivity to Azure. | 
 | 2149056532 | Specific platform or version is not supported<br><br>Make sure the device meets the [minimum requirements](/sccm/comanage/overview#windows-10) for co-management. |
 | 2147943568 | Element not found<br><br>This issue should be transient. If it persists, contact Microsoft Support. |
-| 2147549183 | Catastrophic failure<br><br>This issue should be transient. If it persists, contact Microsoft Support. |
 | 2192179208 | Not enough memory resources are available to process this command.<br><br>This issue should be transient, it should resolve itself when the client retries. |
 | 3399614467 | ADAL Authorization grant failed for this assertion<br><br>Check your Azure AD configuration, and make sure that users can successfully authenticate. |
-| 3400073236 | Server WS-Trust response reported fault exception and it failed to get assertion<br><br>This issue should be transient. If it persists, contact Microsoft Support. |
 | 2149056517 | Generic Failure from management server, such as DB access error<br><br>This issue should be transient. If it persists, contact Microsoft Support. |
 | 2149134055 | Winhttp name not resolved<br><br>The client can't resolve the name of the service. Check the DNS configuration. | 
 | 2149134050 | internet timeout<br><br>This issue should be transient, when the client can't communicate with cloud. If it persists, make sure the client has consistent connectivity to Azure. | 
