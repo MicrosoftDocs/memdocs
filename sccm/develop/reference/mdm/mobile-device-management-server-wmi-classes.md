@@ -9,6 +9,7 @@ ms.assetid: 1bb40967-db4b-4305-ae76-e1fa38b17df1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Mobile Device Management Server WMI Classes
 The mobile device management (MDM) classes, in Microsoft System Center Configuration Manager, are used to manage hybrid deployments with Configuration Manager and Microsoft Intune.  

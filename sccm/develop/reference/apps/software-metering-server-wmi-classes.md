@@ -9,6 +9,7 @@ ms.assetid: a7457b7e-62f5-4834-9fca-250072d32731
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Software Metering Server WMI Classes
 Software metering server Windows Management Instrumentation (WMI) classes in Microsoft System Center Configuration Manager support file metering on the server.  

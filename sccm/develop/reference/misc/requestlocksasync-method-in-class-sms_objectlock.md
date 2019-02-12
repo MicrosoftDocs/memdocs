@@ -9,6 +9,7 @@ ms.assetid: 7a21200b-5b0e-4d07-9899-842697b247f7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # RequestLocksAsync Method in Class SMS_ObjectLock
 The `RequestLocksAsync` Windows Management Instrumentation (WMI) class method, in Configuration Manager, asynchronously acquires locks to edit multiple global objects.  

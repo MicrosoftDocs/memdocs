@@ -9,6 +9,7 @@ ms.assetid: fc88625c-f02c-4711-a9de-4a5d76fc9371
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_AMTCertificate Server WMI Class
 The `SMS_AMTCertificate` Windows Management Instrumentation (WMI) class, in System Center Configuration Manager, contains the Intel Active Management technology (Intel AMT) certificates, which are registered to the server. This is a read-only class.  

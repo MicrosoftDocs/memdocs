@@ -4,6 +4,7 @@ hide_bc: true
 title: System Center Configuration Manager Documentation
 description: Learn how to use System Center Configuration Manager.
 ms.topic: hub-page
+ms.collection: M365-identity-device-management
 ---
 <div id="main" class="v2">
     <div class="container">

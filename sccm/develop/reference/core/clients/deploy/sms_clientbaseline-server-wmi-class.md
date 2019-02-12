@@ -9,6 +9,7 @@ ms.assetid: 524d8fd8-d226-4cb3-85d5-91ecfc45eef7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_ClientBaseline Server WMI Class
 The `SMS_ClientBaseline` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a client deployment baseline.  

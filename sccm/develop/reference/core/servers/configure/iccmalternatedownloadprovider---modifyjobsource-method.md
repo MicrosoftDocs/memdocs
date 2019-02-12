@@ -9,6 +9,7 @@ ms.assetid: 13498951-c8f6-437b-91c3-d37acce33d49
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ICcmAlternateDownloadProvider : ModifyJobSource Method
 The **ICcmAlternateDownloadProvider::ModifyJobSource** method, in Configuration Manager, instructs the provider to modify the source location for a given job.  

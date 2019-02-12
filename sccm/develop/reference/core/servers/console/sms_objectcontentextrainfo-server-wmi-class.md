@@ -9,6 +9,7 @@ ms.assetid: 48828bbd-5c57-4bdf-8511-71d548039e81
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_ObjectContentExtraInfo Server WMI Class
 The `SMS_ObjectContentExtraInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents Application or Package Content Information.  

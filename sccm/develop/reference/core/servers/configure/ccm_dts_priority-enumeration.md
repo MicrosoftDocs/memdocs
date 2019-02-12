@@ -9,6 +9,7 @@ ms.assetid: 9d14b0d3-1b61-4b17-9d36-855ddd1a9f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # CCM_DTS_PRIORITY Enumeration
 The **CCM_DTS_PRIORITY** enumeration indicates the priority of the download.  

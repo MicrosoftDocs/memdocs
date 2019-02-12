@@ -10,6 +10,7 @@ ms.assetid: 3359f254-dd48-42b7-9eab-c92a3417e3fb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Package Transfer Manager in System Center Configuration Manager
 

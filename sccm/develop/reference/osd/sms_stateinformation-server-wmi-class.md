@@ -9,6 +9,7 @@ ms.assetid: 7cf84467-bfe5-4517-8cec-c6a6380850cf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_StateInformation Server WMI Class
 The `SMS_StateInformation` WMI class is an SMS Provider server class, in Configuration Manager, that provides information about a state message.  

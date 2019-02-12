@@ -10,6 +10,7 @@ ms.assetid: 6c64f276-b88c-4b1e-8073-331876a03038
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Prepare Windows PE peer cache to reduce WAN traffic in System Center Configuration Manager
 

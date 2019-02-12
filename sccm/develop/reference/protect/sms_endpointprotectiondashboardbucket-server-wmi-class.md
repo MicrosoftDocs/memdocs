@@ -9,6 +9,7 @@ ms.assetid: 1db52c17-0665-45b4-963a-5c2d19e0b9b4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_EndpointProtectionDashboardBucket Server WMI Class
 The `SMS_EndpointProtectionDashboardBucket` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents ….  

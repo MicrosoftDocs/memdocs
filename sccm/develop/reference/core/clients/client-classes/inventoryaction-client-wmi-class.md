@@ -9,6 +9,7 @@ ms.assetid: 74ac1a03-44e0-477f-b5da-5e74e004a1e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # InventoryAction Client WMI Class
 In Configuration Manager, the `InventoryAction` class is a client Windows Management Instrumentation (WMI) class that associates a set of queries with reporting details, tying together the item to report and the destination of the report.  

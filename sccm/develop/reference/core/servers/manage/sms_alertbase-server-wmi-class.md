@@ -9,6 +9,7 @@ ms.assetid: 7de42b2c-4e70-4354-9bf0-ed9b829ff525
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_AlertBase Server WMI Class
 The `SMS_AlertBase` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the base class for `SMS_Alert`, `SMS_EPAlert`, and `SMS_SCHAlert` classes.  

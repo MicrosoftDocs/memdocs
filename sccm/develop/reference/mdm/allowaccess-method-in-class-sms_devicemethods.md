@@ -9,6 +9,7 @@ ms.assetid: 898b0e12-ffc3-4650-bf2a-08817ac06ce3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # AllowAccess Method in Class SMS_DeviceMethods
 The `AllowAccess` Windows Management Instrumentation (WMI) class method, in Configuration Manager, lets the Exchange ActiveSync device connect to Exchange.  

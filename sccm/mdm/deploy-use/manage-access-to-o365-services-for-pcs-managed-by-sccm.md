@@ -10,6 +10,7 @@ ms.assetid: 34024741-edfa-4088-8599-d6bafc331e62
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Manage access to O365 services for PCs managed by System Center Configuration Manager
 
@@ -81,7 +82,7 @@ For information on configuring conditional access for devices enrolled and manag
 
 -   **All required updates installed with a deadline older than a certain number of days:** Specify the value for the grace period from the deployment deadline for required updates on the user's device. Adding this rule also automatically installs any pending required updates. Specify the required updates in the **Required automatic updates** rule.   
 
--   **Require BitLocker drive encryption:** This rule checks if the primary drive (for example, C:\\) on the device is BitLocker encrypted. If Bitlocker encryption is not enabled on the primary device, access to email and SharePoint services is blocked.  
+-   **Require BitLocker drive encryption:** This rule checks if the primary drive (for example, C:\\) on the device is BitLocker encrypted. If BitLocker encryption is not enabled on the primary device, access to email and SharePoint services is blocked.  
 
 -   **Require Antimalware:** This rule checks if System Center Endpoint Protection or Windows Defender is enabled and running. If it is not enabled, access to email and SharePoint services is blocked.  
 

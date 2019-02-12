@@ -9,6 +9,7 @@ ms.assetid: 29a436bd-bb3d-4d00-9610-c0f876981d18
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # CCM_Policy_EmbeddedObject Client WMI Class
 In System Center Configuration Manager, the `CCM_Policy_EmbeddedObject` class is a client Windows Management Instrumentation (WMI) class that represents a policy setting embedded object. Use of embedded objects ensures that the class definition is correctly replicated throughout the policy tree.  

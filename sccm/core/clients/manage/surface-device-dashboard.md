@@ -10,6 +10,7 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
+ms.collection: M365-identity-device-management
 ---
 # Surface device dashboard in System Center Configuration Manager
 

@@ -9,6 +9,7 @@ ms.assetid: 39e47528-ea59-4d32-8baf-d017d3a44426
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # About Authoring Configuration Baselines and Configuration Items
 System Center Configuration Manager supports the authoring of configuration data, which consists of configuration baselines and configuration items, in the System Center Configuration Manager console. Configuration Manager is able to present this configuration data in a user-friendly format called DCM Digest, which is a specialized XML document that Configuration Manager uses. You can author configuration data by using the Configuration Manager console, or by directly authoring a DCM Digest XML file.  

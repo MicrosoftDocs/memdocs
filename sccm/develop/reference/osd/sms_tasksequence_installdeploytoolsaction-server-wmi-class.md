@@ -9,6 +9,7 @@ ms.assetid: 9b0fd68e-cb8f-4998-aef8-7c656dfd9d11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_TaskSequence_InstallDeployToolsAction Server WMI Class
 The `SMS_TaskSequence_InstallDeployToolsAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that specifies the Sysprep package to use with the operating system to capture the reference computer settings.  

@@ -9,6 +9,7 @@ ms.assetid: f75c8da7-58e1-4c09-86f1-162a8772e8f8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Compliance Settings Extensibility
 This section provides topics about compliance settings extensibility in System Center Configuration Manager.  

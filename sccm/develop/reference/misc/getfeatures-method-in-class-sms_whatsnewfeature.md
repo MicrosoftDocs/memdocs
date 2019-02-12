@@ -9,6 +9,7 @@ ms.assetid: 8ad3467f-9726-4ede-ab1f-60991ea16ce2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # GetFeatures Method in Class SMS_WhatsNewFeature
 For internal use only.  

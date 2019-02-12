@@ -8,6 +8,7 @@ ms.assetid: 7c76e6b8-6024-4ab9-8ae4-e3c29d09a6c3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Client Classes
 This section contains detailed reference information about the client-side functionality in System Center Configuration Manager.  

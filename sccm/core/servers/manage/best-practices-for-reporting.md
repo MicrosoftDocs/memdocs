@@ -10,8 +10,12 @@ ms.assetid: 64f9d931-33f1-456f-a4e4-0ec077465bd0
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# Best practices for reporting in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Best practices for reporting in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Use the following best practices for reporting in System Center Configuration Manager:  
 
 ## For best performance, install the reporting services point on a remote site system server  

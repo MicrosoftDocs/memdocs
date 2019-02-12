@@ -9,6 +9,7 @@ ms.assetid: ca40b886-729f-4390-aacf-64878811a96a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SubmitRegistrationRecord Method in Class SMS_Site
 The `SubmitRegistrationRecord` Windows Management Instrumentation (WMI) class method, in Configuration Manager, submits a registration record.  

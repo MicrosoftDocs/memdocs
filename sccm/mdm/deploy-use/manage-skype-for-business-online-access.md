@@ -10,6 +10,7 @@ ms.assetid: 71c44250-626e-482c-8794-434c6aeb2fb1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Manage Skype for Business Online access
 

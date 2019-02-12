@@ -9,6 +9,7 @@ ms.assetid: 4ce1e635-f5ee-4bca-9932-eb97b7c84341
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_ReportDashboard Server WMI Class
 The `SMS_ReportDashboard` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a collection of reports tiled across and displayed as a single page in Web reports.  

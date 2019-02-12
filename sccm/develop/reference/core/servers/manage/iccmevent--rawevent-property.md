@@ -9,6 +9,7 @@ ms.assetid: 4e952869-2e3f-45c8-a259-12898f5373f0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ICCMEvent::RawEvent Property
 `ICcmEvent::RawEvent` is a read-only property, in Configuration Manager, that indicates information to add to a raw event.  

@@ -9,6 +9,7 @@ ms.assetid: dc495673-5bc2-43d8-b5fc-4dc53424d8ad
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # GetTsPoliciesSaMedia Method in Class SMS_TaskSequencePackage
 The `GetTsPoliciesSaMedia` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets all policies associated with the specified task sequence.  The user must have rights to create stand-alone media.  

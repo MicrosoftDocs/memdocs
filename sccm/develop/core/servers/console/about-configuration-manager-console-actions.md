@@ -8,6 +8,7 @@ ms.assetid: 58df6152-bc8d-4ad1-bd4a-a73f05319a5e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # About Configuration Manager Console Actions
 This section provides information about System Center Configuration Manager console actions.  

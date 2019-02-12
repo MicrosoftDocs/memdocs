@@ -9,6 +9,7 @@ ms.assetid: fe906f97-a669-49aa-9fb3-09920f0d395e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # AddAttributeToSMSStatusMessage Function
 In Configuration Manager, the `AddAttributeToSMSStatusMessage` function adds a single optional status message attribute ID/value pair to a status message object.  

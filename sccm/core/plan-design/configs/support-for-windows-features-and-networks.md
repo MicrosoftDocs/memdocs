@@ -10,6 +10,7 @@ ms.assetid: 0cf4bacb-6b6d-4d4f-8640-b13fe15873de
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Support for Windows features and networks in Configuration Manager

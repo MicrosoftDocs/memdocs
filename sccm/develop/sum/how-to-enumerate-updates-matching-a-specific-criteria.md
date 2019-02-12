@@ -9,6 +9,7 @@ ms.assetid: 5a37eb14-bc75-4ecd-a48f-9dde3b901a02
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Enumerate Updates Matching a Specific Criteria
 This topic explains how to enumerate software updates that match specific criteria in System Center Configuration Manager by building a query and then using the `ExecuteQuery` method of the `QueryProcessor` class to run the query.  

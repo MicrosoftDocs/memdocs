@@ -9,6 +9,7 @@ ms.assetid: dba6e75e-f043-4e8d-a901-6bff9c9ac06a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Compliance Settings Baselines and Configuration Items
 This section provides topics about configuration baselines and configuration items in System Center Configuration Manager.  

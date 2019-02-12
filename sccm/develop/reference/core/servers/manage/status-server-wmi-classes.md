@@ -9,6 +9,7 @@ ms.assetid: 7b188e00-b566-4115-bb85-b8c6629e948f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Status Server WMI Classes
 The status server Windows Management Instrumentation (WMI) classes allow access to the Microsoft System Center Configuration Manager status system. You can use these classes to create and view status messages and to view status summarizers. The status system indicates the health of a Configuration Manager site and the progress of certain actions, such as software distribution. The status system includes three groups of classes:  

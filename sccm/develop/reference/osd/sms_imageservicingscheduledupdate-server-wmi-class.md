@@ -9,6 +9,7 @@ ms.assetid: 125f1a05-3bb4-4743-99c0-5ebca68cf324
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_ImageServicingScheduledUpdate Server WMI Class
 The `SMS_ImageServicingScheduledUpdate` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents all schedules for one software update in offline servicing image.  

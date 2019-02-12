@@ -9,6 +9,7 @@ ms.assetid: 6101f903-172b-4e59-8801-4a9c5975e3c9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Modify a Configuration Manager Object by Using WMI
 You modify a Configuration Manager object, in System Center Configuration Manager, by using the object's [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx) object to change its properties.  

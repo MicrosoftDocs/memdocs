@@ -9,6 +9,7 @@ ms.assetid: c8b466d3-3f6b-4f6b-a0fd-5928de665e60
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to View File Usage Summary Information
 You view file usage summary information, in System Center Configuration Manager, by using the [SMS_MeteredFiles](../../develop/reference/apps/sms_meteredfiles-server-wmi-class.md) and [SMS_FileUsageSummary](../../develop/reference/apps/sms_fileusagesummary-server-wmi-class.md) classes.  

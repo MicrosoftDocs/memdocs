@@ -9,6 +9,7 @@ ms.assetid: cdea7272-1dd8-4881-8aa5-692c57d223a1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # RequestRetire Method in Class SMS_DeviceMethods
 The `RequestRetire` Windows Management Instrumentation (WMI) class method, in Configuration Manager, requests the retirement of this device from Configuration Manager (the device will no longer be managed by Configuration Manager).  

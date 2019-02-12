@@ -9,6 +9,7 @@ ms.assetid: 79e82dd3-a3c1-434d-a5f8-60db7d3bc8db
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # FindResourceSite Method in Class SMS_Collection
 The `FindResourceSite` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, gets site code information for resources.  

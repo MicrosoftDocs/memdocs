@@ -9,6 +9,7 @@ ms.assetid: 19da2fc0-621b-4f59-95df-9ef23b46474a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_PackageStatusDetailSummarizer Server WMI Class
 The `SMS_PackageStatusDetailSummarizer` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that lists the distribution summary for a given package for a given site in a hierarchy.  

@@ -9,6 +9,7 @@ ms.assetid: 3aa1d771-6c93-4878-89cc-92d9afe1a350
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # GetImageProperties Method in Class SMS_BootImagePackage
 The `GetImageProperties` Windows Management Instrumentation (WMI) class method, in Configuration Manager, reads all metadata from the specified .wim source file for a boot image to an XML string.  

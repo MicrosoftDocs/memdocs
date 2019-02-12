@@ -9,6 +9,7 @@ ms.assetid: 5660503c-3bd2-415b-a090-77132e3da898
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ITsMediaClass::CreateBootMedia Method
 In Configuration Manager, the `CreateBootMedia` method creates task sequence boot media that download policy from a management point and allow a user to run a task sequence for operating system deployment.  

@@ -9,6 +9,7 @@ ms.assetid: 46cb95e6-9dae-4c08-9cfb-1a570e4c05bc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Call a Configuration Manager Object Class Method by Using Managed Code
 To call a SMS Provider class method, in System Center Configuration Manager, you use the [ExecuteMethod](https://msdn.microsoft.com/en-us/library/cc146186.aspx) method. You populate a [Dictionary](https://msdn.microsoft.com/library/aa239680.aspx) object with the method's parameters, and the return value is an [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) object that contains the result of the method call.  

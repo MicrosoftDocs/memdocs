@@ -9,6 +9,7 @@ ms.assetid: fc28e42f-09f5-41aa-870a-28a673dfe6bc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_SecondarySiteStatus Server WMI Class
 The `SMS_SecondarySiteStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents secondary site installation or uninstallation status.  

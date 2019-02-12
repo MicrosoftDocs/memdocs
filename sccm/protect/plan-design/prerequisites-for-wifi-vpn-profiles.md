@@ -10,8 +10,12 @@ ms.assetid: d2dacb2d-ab3b-42a2-8dc8-94da31f993c2
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# Prerequisites for Wi-Fi and VPN Profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Prerequisites for Wi-Fi and VPN Profiles in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Wi-Fi and VPN profiles in System Center Configuration Manager have dependencies only within the product.  
 
  You must have the following security permissions to manage company resource access settings, such as certificate profiles, Wi-Fi profiles, and VPN profiles:  

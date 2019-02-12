@@ -10,6 +10,7 @@ ms.assetid: 79eb49da-cd2b-4ffc-b355-b595aeba3aea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Introduction to software inventory in System Center Configuration Manager
 

@@ -10,6 +10,7 @@ ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Planning for client deployment to Windows Embedded devices in System Center Configuration Manager
 

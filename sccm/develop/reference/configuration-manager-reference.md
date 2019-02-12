@@ -8,6 +8,7 @@ ms.assetid: 28104ac0-39e0-476a-9417-99719ae72897
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Reference
 This reference contains detailed information about the Microsoft System Center Configuration Manager class schema, extended WMI Query Language (WQL), named values and qualifiers, and the System Center Configuration Manager console libraries. It also provides information about the managed SMS Provider library.  

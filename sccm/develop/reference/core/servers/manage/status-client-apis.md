@@ -9,6 +9,7 @@ ms.assetid: e266ffe0-c63b-4d04-9a16-43855215328e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Status Client APIs
 The status client APIs, in System Center Configuration Manager, are used by client applications to support Configuration Manager status operations on a client computer. They concern client-side behavior only.  

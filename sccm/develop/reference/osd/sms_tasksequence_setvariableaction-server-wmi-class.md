@@ -9,6 +9,7 @@ ms.assetid: 0fdecda3-7ed0-486f-a3a5-7a339979cad4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_TaskSequence_SetVariableAction Server WMI Class
 The `SMS_TaskSequence_SetVariableAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that sets the value of a task sequence environment variable.  

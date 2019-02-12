@@ -9,6 +9,7 @@ ms.assetid: 34c629ca-b0c6-4e58-9c5f-cb03f54759db
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_WindowsServicingStates Server WMI Class
 For internal use only.  

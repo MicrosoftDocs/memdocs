@@ -10,8 +10,12 @@ ms.assetid: 435c923c-ea30-4dce-8afd-48962ed85502
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# Configuring power management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Configuring power management in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Before you can use power management in System Center Configuration Manager, you must perform the following configuration steps.  
 
 ## Enable and configure power management client settings  

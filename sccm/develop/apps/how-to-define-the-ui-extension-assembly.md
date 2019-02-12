@@ -9,6 +9,7 @@ ms.assetid: 77311f19-a9dd-4383-8e21-fa460d45b28c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Define the UI Extension Assembly
 The custom wizard assembly is responsible for collecting any data passed in from the Configuration Manager console, and passing it on to the wizard.  The assembly should be named, AdminUI.DeploymentType.\< *AssemblySuffix*>.dll.  

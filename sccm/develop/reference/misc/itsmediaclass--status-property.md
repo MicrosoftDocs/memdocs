@@ -9,6 +9,7 @@ ms.assetid: 8b0c8021-92ca-49fe-b8b4-3f80b1b67c59
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ITsMediaClass::Status Property
 In Configuration Manager, the `Status` property contains the status for asynchronous task sequence media creation.  

@@ -10,6 +10,7 @@ ms.assetid: 539c7a89-3c03-4571-9cb4-02d455064eeb
 author: aczechowski
 ms.author: aaroncz
 manager: doubeby
+ms.collection: M365-identity-device-management
 ---
 
 # Example scenario: Use Endpoint Protection to protect computers from malware

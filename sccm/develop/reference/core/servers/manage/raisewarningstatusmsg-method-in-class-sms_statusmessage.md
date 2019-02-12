@@ -9,6 +9,7 @@ ms.assetid: 979ac4c3-03b9-41b2-9a3d-371ccbe0695e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # RaiseWarningStatusMsg Method in Class SMS_StatusMessage
 The `RaiseWarningStatusMsg` Windows Management Instrumentation (WMI) class method, in Configuration Manager, creates a warning status message.  

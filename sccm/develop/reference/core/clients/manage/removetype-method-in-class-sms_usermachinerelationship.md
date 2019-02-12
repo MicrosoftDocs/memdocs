@@ -9,6 +9,7 @@ ms.assetid: 9601f6bc-c383-40db-b1ec-cac40d6f3e9a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # RemoveType Method in Class SMS_UserMachineRelationship
 The `RemoveType` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, removes a type of the relationship between a user and a device.  

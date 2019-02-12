@@ -9,6 +9,7 @@ ms.assetid: 0e9491a9-32cb-4466-8da3-e5b2babc3c3d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # GetContextHandle Method in Class SMS_ContextMethods
 The `GetContextHandle` method, in Configuration Manager, stores context objects on the server.  

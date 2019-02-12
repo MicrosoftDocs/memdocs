@@ -9,6 +9,7 @@ ms.assetid: 26421f68-0708-4c5a-a0a3-f3a399ed9b8e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Delete a Software Metering Rule
 You delete a software metering rule, in System Center Configuration Manager, by loading the instance of the software metering rule that is identified by the software metering rule ID and calling the delete method.  

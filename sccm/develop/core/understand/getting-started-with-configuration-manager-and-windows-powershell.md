@@ -8,6 +8,7 @@ ms.assetid: 5c861c07-d6e9-42d0-9d90-6a8f69c8591b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Getting Started with Configuration Manager and Windows PowerShell
 In System Center Configuration Manager, Windows PowerShell allows you to manage a Configuration Manager hierarchy by using Windows PowerShell scripts, Windows PowerShell cmdlets, and the Windows PowerShell Drive Provider.  

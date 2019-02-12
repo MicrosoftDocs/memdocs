@@ -9,6 +9,7 @@ ms.assetid: c51f2209-2382-4005-a960-c87fea65d04c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_Authority Client WMI Class
 The `SMS_Authority` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that represents the Configuration Manager site that manages the client.  

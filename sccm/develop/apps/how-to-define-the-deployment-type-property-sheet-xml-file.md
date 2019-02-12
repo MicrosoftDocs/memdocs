@@ -9,6 +9,7 @@ ms.assetid: dd5151b2-09f0-4c8d-ad5f-727b8b3d4e56
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Define the Deployment Type Property Sheet XML File
 To define the custom deployment type property page XML file, create an XML file based on the `http://schemas.microsoft.com/SystemsManagementServer/2005/03/ConsoleFramework` schema. The XML file for the deployment type property sheet should be named \<*TechnologyID*>DeploymentTypePropertySheet.xml.  

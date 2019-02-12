@@ -9,6 +9,7 @@ ms.assetid: 74d39782-37a9-4358-8e39-7be750a13f98
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Create a Configuration Manager Custom Action Control
 In System Center Configuration Manager, to create a custom action control, you create a Windows control by using the following two classes:  

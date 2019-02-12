@@ -9,6 +9,7 @@ ms.assetid: 266be9c5-f6fe-4c92-a67b-0aabb3748c0f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Client Configuration Server WMI Classes
 In System Center Configuration Manager, client configuration Windows Management Instrumentation (WMI) server classes manage client configuration on the server. Client settings are enforced across the entire network of client computers unless otherwise specified by a custom settings deployment.  

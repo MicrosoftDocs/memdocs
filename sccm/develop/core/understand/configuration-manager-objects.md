@@ -8,6 +8,7 @@ ms.assetid: d22f99fe-8302-4307-97df-f4188d959948
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Objects
 This section describes System Center Configuration Manager objects and provides samples showing the basic tasks for creating, updating, querying, deleting and otherwise using them. The samples are in C# using the managed SMS Provider library and in VBScript using Windows Management Instrumentation (WMI).  

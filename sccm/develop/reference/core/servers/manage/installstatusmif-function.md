@@ -9,6 +9,7 @@ ms.assetid: 5ad7cfc6-4112-41ab-94fe-c0a125564e28
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # InstallStatusMIF Function
 The `InstallStatusMIF` function creates a status Management Information Format (MIF) file that Configuration Manager uses to correlate the install status for an advertisement.  

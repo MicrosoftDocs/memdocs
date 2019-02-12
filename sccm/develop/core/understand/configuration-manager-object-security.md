@@ -9,6 +9,7 @@ ms.assetid: 9df97bf6-6255-4348-a522-22e50af490b0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Object Security
 Although only the [SMS_UserInstancePermissions Server WMI Class](../../../develop/reference/misc/sms_userinstancepermissions-server-wmi-class.md) is commonly used in System Center Configuration Manager scripting, you can also use the following Configuration Manager classes for Configuration Manager object security:  

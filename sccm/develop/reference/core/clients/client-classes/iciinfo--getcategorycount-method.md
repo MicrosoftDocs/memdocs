@@ -9,6 +9,7 @@ ms.assetid: cd89fdf9-84ca-44d2-8dbe-2e95bcfc53e6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ICIINFO::GetCategoryCount Method
 The `ICIINFO::GetCategoryCount` method, in Configuration Manager, gets the count of categories that are associated with the configuration item.  

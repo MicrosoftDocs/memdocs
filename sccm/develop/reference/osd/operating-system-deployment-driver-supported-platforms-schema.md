@@ -9,6 +9,7 @@ ms.assetid: b45c883b-d9c3-4c88-a7c9-f38b421d475a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Operating System Deployment Driver Supported Platforms Schema
 The following reference section documents the XML schema that is used to specify the platforms that are supported by an operating system deployment driver in Microsoft System Center Configuration Manager.  

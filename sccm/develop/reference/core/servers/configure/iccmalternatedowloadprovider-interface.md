@@ -9,6 +9,7 @@ ms.assetid: 42eb99e9-6421-415d-8e80-7e8f8b322cb3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ICcmAlternateDownloadProvider Interface
 The **ICcmAlternateDownloadProvider** interface, in Configuration Manager, defines the interface for an alternative download provider to be invoked by Content Transfer Manager to download packages.  

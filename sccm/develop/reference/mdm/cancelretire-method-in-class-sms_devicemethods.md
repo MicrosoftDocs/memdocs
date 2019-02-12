@@ -9,6 +9,7 @@ ms.assetid: 5133539e-f4a6-48fa-a18a-f699ae587e76
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # CancelRetire Method in Class SMS_DeviceMethods
 The `CancelRetire` Windows Management Instrumentation (WMI) class method, in Configuration Manager, cancels the retirement of this device from Configuration Manager (the device will remain managed by Configuration Manager).  

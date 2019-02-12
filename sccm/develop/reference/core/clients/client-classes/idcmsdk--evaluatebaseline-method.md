@@ -9,6 +9,7 @@ ms.assetid: e66ba88a-2b78-4b36-b932-ac15d144291e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # IDCMSDK::EvaluateBaseline Method
 The `IDCMSDK::EvaluateBaseline` method, in Configuration Manager, runs the discover operation for the specified baseline configuration item.  

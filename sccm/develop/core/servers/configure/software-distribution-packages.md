@@ -9,6 +9,7 @@ ms.assetid: 71e06cd0-4534-4643-9419-157e64267150
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Software Distribution Packages
 This section provides topics that show you how to programmatically manage packages in System Center Configuration Manager.  

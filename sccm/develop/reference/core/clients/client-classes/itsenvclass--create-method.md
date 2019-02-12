@@ -9,6 +9,7 @@ ms.assetid: f61ff0ae-bf21-4ec1-a604-c45dce0c6fc6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ITSEnvClass::Create Method
 In Configuration Manager, the `Create` method creates an operating system deployment task sequence environment.  

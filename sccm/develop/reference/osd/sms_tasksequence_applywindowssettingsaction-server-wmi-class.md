@@ -9,6 +9,7 @@ ms.assetid: 62494ccd-da4c-430d-bad5-ed18c3067240
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_TaskSequence_ApplyWindowsSettingsAction Server WMI Class
 The `SMS_TaskSequence_ApplyWindowsSettingsAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that applies Windows settings configuration information for the target computer.  

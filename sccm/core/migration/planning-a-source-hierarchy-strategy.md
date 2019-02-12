@@ -10,6 +10,7 @@ ms.assetid: 4800a800-66c8-4c35-aebe-e413a23790c1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Plan a source hierarchy strategy in System Center Configuration Manager
 

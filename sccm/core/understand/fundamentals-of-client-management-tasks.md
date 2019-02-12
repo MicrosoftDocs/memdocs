@@ -10,6 +10,7 @@ ms.assetid: 8d4e5641-354e-4439-8b4f-620a760e233d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Fundamentals of client management tasks for System Center Configuration Manager
 

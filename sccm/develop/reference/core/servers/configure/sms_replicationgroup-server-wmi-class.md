@@ -9,6 +9,7 @@ ms.assetid: 66b11714-672c-4a84-80e4-8e173afee891
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_ReplicationGroup Server WMI Class
 The `SMS_ReplicationGroup` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains replication group data.  

@@ -9,6 +9,7 @@ ms.assetid: 75240595-d0c1-48d9-9279-f3165934b888
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # CCM_InstanceEvent Client WMI Class
 The `CCM_InstanceEvent` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an instance event.   

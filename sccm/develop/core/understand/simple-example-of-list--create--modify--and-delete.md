@@ -9,6 +9,7 @@ ms.assetid: 6f31059a-ec25-4113-b3a7-8de92269a351
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Simple Example of List, Create, Modify, and Delete
 The following example shows set of very basic methods using the `SMS_Package` class to demonstrate List, Create, Modify and Delete operations using the SMS Provider. This is a look at the structure of a basic Configuration Manager program – there are more useful method snippets in other areas of the SDK that accomplish specific tasks.  

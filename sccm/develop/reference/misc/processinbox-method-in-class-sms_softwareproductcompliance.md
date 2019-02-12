@@ -9,6 +9,7 @@ ms.assetid: f47e1a8e-387d-44be-b45f-8e75c19485a9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ProcessInBox Method in Class SMS_SoftwareProductCompliance
 The `ProcessInBox` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports all records, valid or invalid, found in the Software Product Compliance inbox, which is located in the \\*Smsinstalldir*\Y2k directory.  

@@ -9,6 +9,7 @@ ms.assetid: 7519ce9f-c724-4985-808f-24268cfeb60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_ClientSettingsDefault Server WMI Class
 The `SMS_ClientSettingsDefault` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents simple read-only default client settings properties.  

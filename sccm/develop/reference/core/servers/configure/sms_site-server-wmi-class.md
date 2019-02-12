@@ -9,6 +9,7 @@ ms.assetid: a8824024-5e6c-49f9-a54e-9b5ec597b86d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_Site Server WMI Class
 The `SMS_Site` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents identification and status data for a Configuration Manager site installation.  

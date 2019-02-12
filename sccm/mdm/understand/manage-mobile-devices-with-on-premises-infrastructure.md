@@ -10,6 +10,7 @@ ms.assetid: 497c05c7-fe9f-4b88-983b-1c5b3d59308e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # On-premises Mobile Device Management (MDM) in System Center Configuration Manager
 

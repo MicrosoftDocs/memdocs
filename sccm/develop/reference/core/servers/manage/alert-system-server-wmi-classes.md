@@ -9,6 +9,7 @@ ms.assetid: 30cc2797-070a-4f11-8a75-17207b545e26
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Alert System Server WMI Classes
 This section describes the System Center Configuration Manager Alert System server classes that help manage alerts.  

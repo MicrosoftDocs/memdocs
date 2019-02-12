@@ -10,6 +10,7 @@ ms.assetid: a53e4cf1-518a-4210-9c16-022c4261d2fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Prerequisites for collections in System Center Configuration Manager
 

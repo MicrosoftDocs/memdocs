@@ -9,6 +9,7 @@ ms.assetid: 3f1ecdf4-3188-4b9b-8f5d-2237a6c69010
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Operating System Deployment
 This section provides you with information about how to programmatically configure and use operating system deployment in System Center Configuration Manager.  

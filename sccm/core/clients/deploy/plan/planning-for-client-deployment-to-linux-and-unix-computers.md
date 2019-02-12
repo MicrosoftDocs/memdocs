@@ -10,6 +10,7 @@ ms.assetid: 44153689-70e8-42ad-9ae8-17ae35f6a2e3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Planning for client deployment to Linux and UNIX computers in System Center Configuration Manager
 

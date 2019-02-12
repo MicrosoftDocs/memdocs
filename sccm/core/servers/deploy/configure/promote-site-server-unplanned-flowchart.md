@@ -10,6 +10,7 @@ ms.assetid: f3df18c2-99eb-4606-a3ef-db31374af602
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Flowchart - Promote site server (unplanned)

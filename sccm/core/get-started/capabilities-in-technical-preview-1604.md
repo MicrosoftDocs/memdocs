@@ -11,6 +11,7 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
 # Capabilities in Technical Preview 1604 for System Center Configuration Manager
 

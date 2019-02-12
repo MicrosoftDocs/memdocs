@@ -9,6 +9,7 @@ ms.assetid: 6ecbb0a8-2ed4-40d0-ba75-5d0c7c484b58
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_MigrationJob Server WMI Class
 The `SMS_MigrationJob` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a migration job.  

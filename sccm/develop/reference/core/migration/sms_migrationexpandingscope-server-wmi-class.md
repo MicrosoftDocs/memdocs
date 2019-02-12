@@ -9,6 +9,7 @@ ms.assetid: f80595c2-73e9-4869-8e13-ab711783f9d9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_MigrationExpandingScope Server WMI Class
 The `SMS_MigrationExpandingScope` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the collections that have the problem of expanding scope when migrated to System Center 2012 Configuration Manager.  

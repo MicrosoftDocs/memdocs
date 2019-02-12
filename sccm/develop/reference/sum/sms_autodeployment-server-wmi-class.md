@@ -9,6 +9,7 @@ ms.assetid: fd4929f6-441f-4589-8325-3c0aff129fb1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_AutoDeployment Server WMI Class
 The  `SMS_AutoDeployment` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an automatic deployment.  

@@ -9,6 +9,7 @@ ms.assetid: 90f20778-f069-4af1-bcfd-c27230818a77
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # CCM_DTS_FLAG Enumeration
 The **CCM_DTS_FLAG** enumeration indicates special options on download jobs.  

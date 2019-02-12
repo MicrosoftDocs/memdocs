@@ -9,6 +9,7 @@ ms.assetid: 50a606a7-8f99-4c24-b59a-10f330fe017d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # AddLicense Method in Class SMS_DeploymentTypeLicenseAssociation
 The `AddLicense` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds license information to an application deployment type.  

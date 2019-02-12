@@ -9,6 +9,7 @@ ms.assetid: b3b83197-97f0-4d92-8b99-5b9954a6c3d4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # GetContentHash Method in Class SMS_TaskSequencePackage
 The `GetContentHash` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the hash of specific System Center Configuration Manager content.  

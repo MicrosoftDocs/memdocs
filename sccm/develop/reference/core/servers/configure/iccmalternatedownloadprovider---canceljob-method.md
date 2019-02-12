@@ -9,6 +9,7 @@ ms.assetid: 51a8436a-a9ef-449f-aaa3-49bd9768bd54
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ICcmAlternateDownloadProvider : CancelJob Method
 The **ICcmAlternateDownloadProvider::CancelJob** method, in Configuration Manager, cancels a job.  

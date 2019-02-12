@@ -9,6 +9,7 @@ ms.assetid: 3f3335ad-f784-4bbc-bb98-a55726e07804
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_ADSite Server WMI Class
 The `SMS_ADSite` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains Active Directory sites discovered by Configuration Manager Forest Discovery.  

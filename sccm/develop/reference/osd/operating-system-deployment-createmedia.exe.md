@@ -9,6 +9,7 @@ ms.assetid: 41417409-6c56-4099-bafc-3700c6761de3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Operating System Deployment CreateMedia.exe
 Use `CreateMedia.exe` binary to create media from the command-line or through a script that was implemented by System Center Configuration Manager Operating System Deployment.  

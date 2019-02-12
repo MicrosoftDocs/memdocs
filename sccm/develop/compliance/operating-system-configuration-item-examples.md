@@ -9,6 +9,7 @@ ms.assetid: c298f263-f3f9-4a06-887a-bb30e9585e3d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Operating System Configuration Item Examples
 This section provides information about authoring operating system configuration items in System Center Configuration Manager.  

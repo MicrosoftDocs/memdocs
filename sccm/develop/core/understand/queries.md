@@ -8,6 +8,7 @@ ms.assetid: fdcecca0-63aa-4c60-bbdf-ac2decfa023e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Queries
 Many System Center Configuration Manager features use queries against objects within the System Center Configuration Manager site database. System Center Configuration Manager queries define and store the criteria for sets of database objects that you want to find. When used against a Configuration Manager site database, a query is a specific set of instructions that extract information about a defined set of objects. You can create queries and store them in the Configuration Manager site database. By running a query, you search the database for information about the objects that match the query criteria.  

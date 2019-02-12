@@ -10,6 +10,7 @@ ms.assetid: 604ab835-bce3-4fe3-a7f3-3f059cfc0ecf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Removed and deprecated items for Configuration Manager clients

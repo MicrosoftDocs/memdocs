@@ -9,6 +9,7 @@ ms.assetid: 7963e19d-8f82-4d7d-b850-af376a85e41b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_TaskSequenceExecutionStatus Server WMI Class
 The `SMS_TaskSequenceExecutionStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the status of an execution of a task sequence.  

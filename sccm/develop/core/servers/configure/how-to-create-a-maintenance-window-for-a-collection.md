@@ -9,6 +9,7 @@ ms.assetid: 4be75225-213b-4a32-a704-71c1fbc700e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Create a Maintenance Window for a Collection
 Your application can create a System Center Configuration Manager maintenance window by using the [SMS_CollectionSettings Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collectionsettings-server-wmi-class.md) and [SMS_ServiceWindow Server WMI Class](../../../../develop/reference/core/servers/configure/sms_servicewindow-server-wmi-class.md) classes and properties.  

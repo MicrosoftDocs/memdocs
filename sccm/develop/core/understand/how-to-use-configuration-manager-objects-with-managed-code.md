@@ -9,6 +9,7 @@ ms.assetid: 33ff7a4d-6189-4c7e-92e3-8d861c3eb871
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Use Configuration Manager Objects with Managed Code
 This section provides code examples for using the managed SMS Provider library with Configuration Manager objects. The examples generally use packages for illustration, but they can be easily adapted to use other Configuration Manager objects.  

@@ -9,6 +9,7 @@ ms.assetid: 47c084e5-af3c-4953-85bf-6b9cb4b9303f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SmsGrantServiceLogonRight
 In System Center Configuration Manager, the `SmsGrantServiceLogonRight` function grants service logon credentials to the specified account.  

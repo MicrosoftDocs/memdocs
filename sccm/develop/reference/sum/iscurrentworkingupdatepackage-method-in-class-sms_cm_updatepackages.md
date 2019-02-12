@@ -9,6 +9,7 @@ ms.assetid: 01f3462e-0d03-455d-a05e-375fb8681337
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # IsCurrentWorkingUpdatePackage Method in Class SMS_CM_UpdatePackages
 The `IsCurrentWorkingUpdatePackage` Windows Management Instrumentation (WMI) class method, in Configuration Manager, checks whether the update package is the package that setup is currently working on.  

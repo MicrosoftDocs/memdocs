@@ -9,6 +9,7 @@ ms.assetid: 56f1a21f-3f6d-47b9-924a-ebb47ff49bd5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_PolicyAgentConfig Server WMI Class
 The `SMS_PolicyAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents how the client policy system is configured. These settings affect which policies are retrieved, when and how often they are retrieved, and how the client policy processing component takes action on policy updates.  

@@ -9,6 +9,7 @@ ms.assetid: fbabd2ed-c3ee-48f0-8d9d-7d0c48f69af6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Enable Unknown Computer Support for a PXE Service Point
 In System Center Configuration Manager, you set the operating system deployment PXE service point response to incoming PXE requests from unknown computers by setting the **SupportUnknownMachines** embedded property.  
