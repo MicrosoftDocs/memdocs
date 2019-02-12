@@ -9,6 +9,7 @@ ms.assetid: c93b11dc-e63e-4620-8ae1-83f4bea0969a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SetBusinessHours Method in Class CCM_ClientUXSettings
 The `SetBusinessHours` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that sets the values for business hours.    

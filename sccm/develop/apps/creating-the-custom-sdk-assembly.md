@@ -9,6 +9,7 @@ ms.assetid: 720a16bf-6cb5-4643-974f-d81c0799a4b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Creating the Custom SDK Assembly
 This section provides task-based topics that show you how to create the custom SDK assembly for application management in Configuration Manager.  

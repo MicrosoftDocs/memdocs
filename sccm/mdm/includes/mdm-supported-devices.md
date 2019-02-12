@@ -4,6 +4,7 @@ ms.author: aaroncz
 ms.prod: configuration-manager
 ms.topic: include
 ms.date: 11/30/2018
+ms.collection: M365-identity-device-management
 ---
 
 - Apple iOS 9.0 and later

@@ -9,6 +9,7 @@ ms.assetid: 96b4dfce-3e5f-4e88-a19c-2429b2b1aae4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # EvaluateAppPolicy Method in Class CCM_ApplicationPolicy
 The `EvaluateAppPolicy` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that evaluates application policy.   

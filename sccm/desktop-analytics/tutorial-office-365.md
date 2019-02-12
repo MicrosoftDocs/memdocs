@@ -12,6 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 #Customer intent: As an IT Pro, I want to use Desktop Analytics to intelligently pilot Office 365 so that I can understand the best devices to start with getting current with Office.
+ms.collection: M365-identity-device-management
 ---
 
 # Tutorial: Deploy Office 365 to pilot 

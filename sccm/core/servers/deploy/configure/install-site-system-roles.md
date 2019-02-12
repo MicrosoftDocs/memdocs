@@ -10,6 +10,7 @@ ms.assetid: 61f5c774-7667-44ae-b8e4-a4951318b183
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Install site system roles for System Center Configuration Manager
 

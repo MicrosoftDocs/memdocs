@@ -9,6 +9,7 @@ ms.assetid: da8257d2-4e32-4af9-9313-239127d0aab5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SyncToken Method in Class SMS_MDMAppleVppToken
 The `SyncToken` Windows Management Instrumentation (WMI) class method, in Configuration Manager, initiates a synchronization of the Apple Volume Purchase Program (VPP) token.  

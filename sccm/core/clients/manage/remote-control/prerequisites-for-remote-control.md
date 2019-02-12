@@ -10,6 +10,7 @@ ms.assetid: c1b2057e-b74f-43fa-a293-763a8f866d3d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Prerequisites for remote control in System Center Configuration Manager
 

@@ -9,6 +9,7 @@ ms.assetid: aa6b5aa8-1de9-4057-8c91-c996ed72c1a1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SoftDistDownloadStartedEvent
 In Configuration Manager, the `SoftDistDownloadStartedEvent` message is sent when the download for a package is completed. The message appears in **Package Status** in the Configuration Manager console.  

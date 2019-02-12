@@ -9,6 +9,7 @@ ms.assetid: 0690b0b3-4136-4aa9-bbbf-51f8572e42a8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # MDM_GenericAppConfiguration Server WMI Class
 The  `MDM_GenericAppConfiguration` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an application configuration.  

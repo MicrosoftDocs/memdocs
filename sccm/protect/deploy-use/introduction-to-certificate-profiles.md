@@ -10,6 +10,7 @@ ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Introduction to certificate profiles in System Center Configuration Manager

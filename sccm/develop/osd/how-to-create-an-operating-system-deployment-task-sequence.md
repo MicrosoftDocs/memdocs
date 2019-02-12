@@ -9,6 +9,7 @@ ms.assetid: 10cdc1b1-22b6-4d26-83e8-6f42580c985e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Create an Operating System Deployment Task Sequence
 You create a System Center Configuration Manager operating system deployment task sequence by creating an instance of the [SMS_TaskSequence](../../develop/reference/osd/sms_tasksequence-server-wmi-class.md) class.  

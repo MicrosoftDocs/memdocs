@@ -9,6 +9,7 @@ ms.assetid: adb0a5f9-0880-483a-aa87-ea9dba926125
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ITsMediaClass::CurrentStep Property
 Iin Configuration Manager, the `CurrentStep` property contains the current step in asynchronous task sequence media creation.  

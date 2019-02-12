@@ -10,6 +10,7 @@ ms.assetid: 01b30260-f03a-4851-a549-d1b76e8cfc69
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Evaluate System Center Configuration Manager by building your own lab environment
 

@@ -10,8 +10,12 @@ ms.assetid: 9ea20b01-676a-4cc2-b328-0098a41b202e
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# Plan for and configure compliance settings in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Plan for and configure compliance settings in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Before you start working with System Center Configuration Manager compliance settings, there are a few prerequisites you need to know about, and some configuration tasks you'll need to perform.  
 
 ## Prerequisites for compliance settings  

@@ -10,6 +10,7 @@ ms.assetid: a9163b77-a67d-4139-8272-bb1dfdb8707c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Enable platform enrollment with System Center Configuration Manager and Microsoft Intune
 

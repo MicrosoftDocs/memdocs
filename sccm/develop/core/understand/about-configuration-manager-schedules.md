@@ -8,6 +8,7 @@ ms.assetid: 030ee838-5a53-45d0-8fd0-d797743d7630
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # About Configuration Manager Schedules
 In System Center Configuration Manager, scheduling information is configured by using schedule tokens. The `SMS_ScheduleToken` Windows Management Instrumentation (WMI) class is an abstract parent class for the SMS_ST_ schedule token classes that handle the scheduling of events with differing frequencies such as daily, weekly, and monthly.  

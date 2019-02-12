@@ -9,6 +9,7 @@ ms.assetid: 55bd888c-93b7-49b8-98af-273953a5fa37
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_ClientDataSourcesPolicy Server WMI Class
 The  `SMS_ClientDataSourcesPolicy` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents client policy data sources.  

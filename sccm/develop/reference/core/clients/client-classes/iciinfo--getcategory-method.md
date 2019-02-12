@@ -9,6 +9,7 @@ ms.assetid: 76c96b11-787a-4a37-b592-f0bdd4e094ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ICIINFO::GetCategory Method
 The `ICIINFO::GetCategory` method, in Configuration Manager, gets a localized category name by index and the group name of the category.  

@@ -10,6 +10,7 @@ ms.assetid: dc1f70f5-64ab-42ab-aa91-d3858803e12f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Set up Windows hybrid device management with System Center Configuration Manager and Microsoft Intune
 

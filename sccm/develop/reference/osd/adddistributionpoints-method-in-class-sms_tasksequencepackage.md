@@ -9,6 +9,7 @@ ms.assetid: 56aed021-c205-4b29-9d2e-e67e279e044d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # AddDistributionPoints Method in Class SMS_TaskSequencePackage
 The `AddDistributionPoints` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds the distribution points for the task sequence package.  

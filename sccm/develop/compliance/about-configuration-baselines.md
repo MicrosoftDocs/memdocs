@@ -9,6 +9,7 @@ ms.assetid: 23847c17-73c3-44b8-a163-e1f62576d4bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # About Configuration Baselines
 In System Center Configuration Manager, baselines are used to define the configuration of a product or a system that is established at a specific point in time, capturing both structure and details. Configuration baselines in System Center Configuration Manager contain a defined set of desired configurations that are evaluated for compliance as a group.  

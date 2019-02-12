@@ -10,6 +10,7 @@ ms.assetid: 7b04727b-d563-422f-8d59-4dd66215d0b3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Manage access to services in System Center Configuration Manager

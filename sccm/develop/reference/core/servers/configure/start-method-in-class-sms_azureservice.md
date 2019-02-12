@@ -9,6 +9,7 @@ ms.assetid: f32f2b00-117d-498d-9d9b-5f3f47b1b865
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Start Method in Class SMS_AzureService
 The `Start` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that is invoked to start a Windows Azure service which represents a Cloud Distribution Point for Configuration Manager.  

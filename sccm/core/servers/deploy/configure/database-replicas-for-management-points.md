@@ -10,6 +10,7 @@ ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Database replicas for management points for System Center Configuration Manager
 

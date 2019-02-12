@@ -9,6 +9,7 @@ ms.assetid: ee4170d1-a439-4032-a134-a7c3b34cd9d9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_ImageUpdateHistory Server WMI Class
 The `SMS_ImageUpdateHistory` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents software update installation history of offline servicing image.  

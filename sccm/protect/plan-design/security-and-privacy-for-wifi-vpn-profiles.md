@@ -10,8 +10,12 @@ ms.assetid: ef3ab519-9cf7-47fc-8831-d400e0e96df8
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# Security and privacy for Wi-Fi and VPN profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Security and privacy for Wi-Fi and VPN profiles in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 ##  Security Best Practices for Wi-Fi  and VPN Profiles  
  Use the following security best practices when you manage Wi-Fi  and VPN profiles for devices.  
 

@@ -10,6 +10,7 @@ ms.assetid: 8e68e1fb-a8ec-4543-bb8a-cbbaf184a418
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Security and privacy for software inventory in System Center Configuration Manager
 

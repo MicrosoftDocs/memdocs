@@ -8,6 +8,7 @@ ms.assetid: e9894124-8e1a-4a89-8261-6e83a5a853aa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Compliance Settings (DCM)
 This section provides topics about programmatically managing compliance settings in System Center Configuration Manager.  

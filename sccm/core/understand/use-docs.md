@@ -12,6 +12,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 
+ms.collection: M365-identity-device-management
 ---
 # How to use the Configuration Manager docs
 

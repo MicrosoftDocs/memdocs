@@ -9,6 +9,7 @@ ms.assetid: c9246eea-5960-4ed8-a042-6e3ce5689eca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # AddDistributionPoints Method in Class SMS_ContentPackage
 The `AddDistributionPoints` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds the distribution points to the [SMS_ContentPackage Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_contentpackage-server-wmi-class.md) content package.  

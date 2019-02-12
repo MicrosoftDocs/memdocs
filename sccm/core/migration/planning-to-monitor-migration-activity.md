@@ -10,6 +10,7 @@ ms.assetid: fc731d3f-edd7-4049-b17b-653d6693a564
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Planning to monitor migration activity in System Center Configuration Manager
 

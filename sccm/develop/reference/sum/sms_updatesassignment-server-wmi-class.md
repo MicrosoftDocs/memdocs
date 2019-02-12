@@ -9,6 +9,7 @@ ms.assetid: e470bca9-d185-4d49-80c7-47802c515cf7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_UpdatesAssignment Server WMI Class
 The `SMS_UpdatesAssignment` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents a deployment.  

@@ -8,6 +8,7 @@ ms.assetid: a7dd267e-b110-458f-9547-5fb9b31695b7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # About Configuration Manager Status
 This section describes the System Center Configuration Manager status message feature.  

@@ -10,6 +10,7 @@ ms.assetid: b634ff68-b909-48d2-9e2c-0933486673c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Create phased deployments with Configuration Manager

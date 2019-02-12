@@ -9,6 +9,7 @@ ms.assetid: 8f9b69f0-2642-456f-8bbd-f945cd1be6f2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_SiteInstallItemBase Server WMI Class
 The `SMS_SiteInstallItemBase` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the abstract base class from which all specific site install item configuration classes are derived.  

@@ -9,6 +9,7 @@ ms.assetid: e9e410e4-78cb-490c-9a22-e12ddf2f2728
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SetIsExpired Method in Class SMS_ApplicationLatest
 The `SetIsExpired` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the expired status of this application.  

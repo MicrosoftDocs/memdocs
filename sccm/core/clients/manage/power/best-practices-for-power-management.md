@@ -10,8 +10,12 @@ ms.assetid: 9f7142e1-c972-4384-853b-2da1568cb3e3
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# Best practices for power management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Best practices for power management in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Use the following best practices for power management in System Center Configuration Manager.  
 
 ## Perform the monitoring phase at a representative time  

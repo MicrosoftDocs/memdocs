@@ -10,6 +10,7 @@ ms.assetid: 65c88e54-3574-48b0-a127-9cc914a89dca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # The content library in Configuration Manager

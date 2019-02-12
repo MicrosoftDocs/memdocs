@@ -10,6 +10,7 @@ ms.assetid: 2bfc4c51-b25c-4c70-b81e-8a3b6ddf02c8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Manage Dynamics CRM Online access in System Center Configuration Manager
 

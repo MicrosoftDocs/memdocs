@@ -8,6 +8,7 @@ ms.assetid: 05f58b9c-80df-4c11-a5bc-d19f0c19bc04
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Executable Action
 In System Center Configuration Manager, the executable action runs a program or opens a file by using the program registered with Windows for that file type.  

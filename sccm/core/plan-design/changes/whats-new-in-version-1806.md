@@ -10,6 +10,7 @@ ms.assetid: 0249dbd3-1e85-4d05-a9e5-420fbe44d850
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # What's new in version 1806 of Configuration Manager current branch

@@ -9,6 +9,7 @@ ms.assetid: 16d8b116-f852-48fb-9979-5d195397b0c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_G_System_EndpointProtectionStatus Server WMI Class
 The `SMS_G_System_EndpointProtectionStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents status of Endpoint Protection.  

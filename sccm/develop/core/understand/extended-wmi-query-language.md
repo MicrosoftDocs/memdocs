@@ -9,6 +9,7 @@ ms.assetid: ea9ebb36-8bd7-49ed-a0d5-8dc6dba104d0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Extended WMI Query Language
 System Center Configuration Manager supports a superset of the Windows Management Instrumentation (WMI) Query Language (WQL) known as Extended WQL. Both WQL and Extended WQL are retrieval-only languages that are used to create queries. Neither language can be used to create, modify, or delete classes or instances.  

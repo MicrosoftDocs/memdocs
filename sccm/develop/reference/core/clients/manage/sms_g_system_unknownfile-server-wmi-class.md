@@ -9,6 +9,7 @@ ms.assetid: 0e608a1a-e069-4cbe-be18-e2173a6b8563
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_G_System_UnknownFile Server WMI Class
 The `SMS_G_System_UnknownFile` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents an unknown software file, that is, a file that does not contain product resource information or is not related to a software product that contains product resource information.  

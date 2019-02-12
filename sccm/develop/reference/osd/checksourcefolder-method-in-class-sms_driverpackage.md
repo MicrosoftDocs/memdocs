@@ -9,6 +9,7 @@ ms.assetid: 6b72a1e3-42c3-4481-ab79-f1199d187a28
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # CheckSourceFolder Method in Class SMS_DriverPackage
 The `CheckSourceFolder` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that checks the state of an empty driver source folder.  

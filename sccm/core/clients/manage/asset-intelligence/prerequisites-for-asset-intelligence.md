@@ -10,6 +10,7 @@ ms.assetid: 23ab4f94-7bfe-436e-8a6a-029409a2730c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Prerequisites for Asset Intelligence in System Center Configuration Manager
 

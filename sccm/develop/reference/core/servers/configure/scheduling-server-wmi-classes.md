@@ -9,6 +9,7 @@ ms.assetid: 1e808a2c-9816-4635-97eb-6222e7b18d5f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Scheduling Server WMI Classes
 Scheduling server Windows Management Instrumentation (WMI) classes in Microsoft System Center Configuration Manager support scheduling on the server. The System Center Configuration Manager server class schema is a set of Windows Management Instrumentation (WMI) classes that represent the objects on a server that is running System Center Configuration Manager. Each System Center Configuration Manager class is a template for a managed object and all instances of the object use the template. Classes can contain properties and methods. The properties describe the class data and the methods typically perform data management. For more information about developing applications using these classes, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  

@@ -9,6 +9,7 @@ ms.assetid: 2cda7350-8683-4d7a-9ae0-f9e0ba2993f3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_NAPRestrictionErrorSummary Server WMI Class
 The `SMS_NAPRestrictionErrorSummary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a Network Access Protection (NAP) restriction error summary.  

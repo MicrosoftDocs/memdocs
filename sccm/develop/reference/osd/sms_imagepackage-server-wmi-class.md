@@ -9,6 +9,7 @@ ms.assetid: 64961afc-3dca-4223-a626-80a80c3664b0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_ImagePackage Server WMI Class
 The `SMS_ImagePackage` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that serves as the unit of distribution for image source files that are used to deploy a valid operating system, for example, Windows 10, in WIM format to a client computer.  

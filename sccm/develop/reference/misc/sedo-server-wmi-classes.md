@@ -9,6 +9,7 @@ ms.assetid: 6c604279-858f-4dd9-81d2-379d766fbc45
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager SEDO Server WMI Classes
 SEDO server Windows Management Instrumentation (WMI) classes in System Center Configuration Manager support global object locking.  

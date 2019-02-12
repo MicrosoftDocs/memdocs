@@ -9,6 +9,7 @@ ms.assetid: 71c37f65-c745-4f17-88f0-5bed1ba14d82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Add a Step to an Operating System Deployment Group
 You add a step (an action or a group) to an operating system deployment task sequence group, in System Center Configuration Manager, by adding the step to the `SMS_TaskSequenceGroup.Steps` array property.  

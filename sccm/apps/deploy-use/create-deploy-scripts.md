@@ -10,6 +10,7 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Create and run PowerShell scripts from the Configuration Manager console

@@ -9,6 +9,7 @@ ms.assetid: 843a2227-7adb-4472-a907-e4f02fb13bf2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SetIgnorePrereqWarning Method in Class SMS_CM_UpdatePackages
 The `SetIgnorePrereqWarning` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates the ignore pre-requisites  warning flag of the update packages.  

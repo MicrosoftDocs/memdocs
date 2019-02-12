@@ -10,6 +10,7 @@ ms.assetid: 9cc508a5-5023-4833-b776-ae9a6971138f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Prerequisites for reporting in System Center Configuration Manager
 

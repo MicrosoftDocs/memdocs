@@ -10,6 +10,7 @@ ms.assetid: 1cb96666-98bf-49a9-85ca-dbb53f0655e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Accessibility features in System Center Configuration Manager
 

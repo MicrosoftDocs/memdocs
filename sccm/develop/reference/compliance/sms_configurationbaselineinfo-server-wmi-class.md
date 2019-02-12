@@ -9,6 +9,7 @@ ms.assetid: e9332972-2d65-4d11-8ad0-b4456d7f33f4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_ConfigurationBaselineInfo Server WMI Class
 The `SMS_ConfigurationBaselineInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a baseline configuration item. For more information about this type of configuration item, see [SMS_BaselineAssignment Server WMI Class](../../../develop/reference/compliance/sms_baselineassignment-server-wmi-class.md).  

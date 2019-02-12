@@ -9,6 +9,7 @@ ms.assetid: 6647eed3-567d-47f2-a484-a749b3e37456
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # GetSummary Method in Class SMS_AISoftwareList
 The `GetSummary` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, returns a summary count of each of the states defined by the `SMS_AISoftwareList` WMI class records `State` property.  

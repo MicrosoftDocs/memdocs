@@ -10,6 +10,7 @@ ms.assetid: 20a573b3-53cb-4ed5-bae1-7542f533ed20
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to monitor client deployment status in System Center Configuration Manager
 

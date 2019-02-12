@@ -9,6 +9,7 @@ ms.assetid: 337178ac-9170-48ac-a249-7a674be459a2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ITsMediaClass::ExitCode Property
 In Configuration Manager, the `ExitCode` property contains the exit code for asynchronous task sequence media creation.  

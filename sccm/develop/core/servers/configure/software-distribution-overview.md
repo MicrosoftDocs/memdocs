@@ -9,6 +9,7 @@ ms.assetid: b3c66208-ef68-4e4f-9fd5-2baf0ea0b19f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Software Distribution Overview
 With this release, System Center Configuration Manager expands the abilities of system administrators to centrally manage computers effectively. Building on the capabilities provided by Configuration Manager 2007, System Center Configuration Manager provides a refined tool set for software distribution.  

@@ -9,6 +9,7 @@ ms.assetid: a3af06b4-8717-4d71-90e8-e0558fcb74a2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # AMTOperateForCollection Method in Class SMS_Collection
 The `AMTOperateForCollection` Windows Management Instrumentation (WMI) class method, in Configuration Manager, executes an Intel Active Management (AMT) operation on a collection.  

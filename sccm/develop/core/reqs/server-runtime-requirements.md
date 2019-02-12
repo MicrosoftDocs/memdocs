@@ -9,6 +9,7 @@ ms.assetid: 567e9945-ad60-4d10-8f67-edc4b31ee914
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Server Runtime Requirements
 Microsoft System Center Configuration Manager server applications that are developed by using the Configuration Manager SDK, have the following runtime requirements.  

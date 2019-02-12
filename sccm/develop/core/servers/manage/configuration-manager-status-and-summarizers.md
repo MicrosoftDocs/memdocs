@@ -8,6 +8,7 @@ ms.assetid: 8715bbb2-ab46-4f8c-b58a-b4c8d4fd45ff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Status and Summarizers
 This section provides topics that show you how to programmatically manage status in System Center Configuration Manager.  

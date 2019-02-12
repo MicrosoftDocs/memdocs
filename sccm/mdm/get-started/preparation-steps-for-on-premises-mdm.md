@@ -10,6 +10,7 @@ ms.assetid: 1ef60106-8f31-46d6-95a6-25a6495f22c7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Preparation steps for On-premises Mobile Device Management in System Center Configuration Manager
 

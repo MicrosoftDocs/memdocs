@@ -9,6 +9,7 @@ ms.assetid: 1e7abfe3-485a-4bf3-ac9a-5d374c460941
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ITsMediaClass::ProviderName Property
 In Configuration Manager, the `ProviderName` property contains the name of the SMS Provider to which to connect.  

@@ -10,6 +10,7 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: 6f0201d7-5714-4ba0-b2bf-d1acd0203e9a
+ms.collection: M365-identity-device-management
 ---
 
 # Change the MDM authority for specific users (mixed MDM authority) 

@@ -11,6 +11,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 
+ms.collection: M365-identity-device-management
 ---
 # Refresh an existing computer with a new version of Windows using System Center Configuration Manager
 

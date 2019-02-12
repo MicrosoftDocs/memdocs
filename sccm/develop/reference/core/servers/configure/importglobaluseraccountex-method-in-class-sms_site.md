@@ -9,6 +9,7 @@ ms.assetid: 444bc340-442b-465c-99e8-bbe766c6ceab
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ImportGlobalUserAccountEx Method in Class SMS_Site
 The `ImportGlobalUserAccountEx` Windows Management Instrumentation (WMI) class method, in Configuration Manager, encrypts data that is shared in the hierarchy.   

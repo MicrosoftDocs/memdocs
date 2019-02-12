@@ -9,6 +9,7 @@ ms.assetid: be3a4938-044d-464a-a77c-261a4531642b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # FileSystemFile Client WMI Class
 In Configuration Manager, the `FileSystemFile` class is a client Windows Management Instrumentation (WMI) class that represents local file information.  

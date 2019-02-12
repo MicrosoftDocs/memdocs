@@ -9,6 +9,7 @@ ms.assetid: e3cb7b2f-a1e7-4775-ace3-ed8d72d4f0e7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Software Updates Server WMI Classes
 The software updates server Windows Management Instrumentation (WMI) classes support the software updates feature in System Center Configuration Manager. The main class is [SMS_SoftwareUpdate Server WMI Class](../../../develop/reference/sum/sms_softwareupdate-server-wmi-class.md), representing a software update, which is a type of configuration item.  

@@ -10,6 +10,7 @@ ms.assetid: 3c9648c4-645e-4e47-ae10-2da817b8c83b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to remotely administer a Windows client computer by using System Center Configuration Manager
 

@@ -11,6 +11,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
+ms.collection: M365-identity-device-management
 ---
 # Checklist for installing update 1602 for System Center Configuration Manager
 

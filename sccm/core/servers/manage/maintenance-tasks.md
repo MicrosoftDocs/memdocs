@@ -10,6 +10,7 @@ ms.assetid: 625bb787-6d16-47a0-8b0f-b129cd909ca3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Maintenance tasks for System Center Configuration Manager
 

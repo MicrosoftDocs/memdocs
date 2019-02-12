@@ -9,6 +9,7 @@ ms.assetid: 2b49a2b8-b141-4ed3-9b94-925a6cca1711
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Determine the Health of a Configuration Manager Site
 You can determine the overall health or status of a site, in System Center Configuration Manager, by inspecting the `SMS_SummarizerSiteStatus` object `Status` property. The `Status` property has three possible values:  

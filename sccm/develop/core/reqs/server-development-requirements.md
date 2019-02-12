@@ -9,6 +9,7 @@ ms.assetid: 186d3283-419b-417f-a168-0b7fba5ec628
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Server Development Requirements
 In System Center Configuration Manager, the SMS Provider and associated technologies can be programmed by using the following programming languages.  

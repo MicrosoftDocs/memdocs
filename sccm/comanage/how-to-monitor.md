@@ -10,6 +10,7 @@ ms.assetid: e83a7b0d-b381-4b4a-8eca-850385abbebb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # How to monitor co-management in Configuration Manager

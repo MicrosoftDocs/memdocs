@@ -10,6 +10,7 @@ ms.assetid: 35586a85-4af9-4c8b-925a-0e32dc8b7346
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Scenarios to streamline your installation of System Center Configuration Manager
 

@@ -10,8 +10,12 @@ ms.assetid: 30170d70-489f-47f7-bebf-9ed0115db26b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# Revise and supersede applications in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Revise and supersede applications in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 In this topic, you'll learn how to work with System Center Configuration Manager application versions and how to supersede applications with a new version.  
 
 ##  Application revisions  

@@ -10,6 +10,7 @@ ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Manage OS images with Configuration Manager

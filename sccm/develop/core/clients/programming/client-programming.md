@@ -8,6 +8,7 @@ ms.assetid: 48e582ad-bf0b-4a31-8a5b-7523758c3bb6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Client Programming
 This section provides information about programming Windows Management Instrumentation (WMI) and local policy on the System Center Configuration Manager client.  

@@ -10,6 +10,7 @@ ms.assetid: 7341cc6e-9e08-41e4-bcc6-6c1ff12e85ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Use alerts and the status system for System Center Configuration Manager
 

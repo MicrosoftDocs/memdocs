@@ -10,6 +10,7 @@ ms.assetid: ed931751-18f2-4230-a09e-a0a329fbfa1c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # About discovery methods for System Center Configuration Manager
 

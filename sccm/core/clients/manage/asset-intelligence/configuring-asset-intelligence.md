@@ -10,6 +10,7 @@ ms.assetid: 08e0382d-de05-4a76-ba5c-7223173f7066
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configure Asset Intelligence in System Center Configuration Manager
 

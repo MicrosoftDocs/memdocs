@@ -10,6 +10,7 @@ ms.assetid: 7b66f3c4-e3bb-4f6a-abd5-55be649ff90d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to create configuration items for Android and Samsung KNOX devices managed without the System Center Configuration Manager client
 

@@ -9,6 +9,7 @@ ms.assetid: f6e605b3-2359-426c-80fa-6926565638bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_SIIB_UINALProvider Server WMI Class
 The `SMS_SIIB_UINALProvider` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the network abstraction layer (NAL) provider used by the Configuration Manager console.  

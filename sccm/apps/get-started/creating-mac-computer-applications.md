@@ -10,6 +10,7 @@ ms.assetid: ab1aecdd-d943-44f5-b0a9-e8fe7439e5d6
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
 # Create Mac computer applications with System Center Configuration Manager
 

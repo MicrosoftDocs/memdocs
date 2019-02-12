@@ -9,6 +9,7 @@ ms.assetid: 5cd73769-af3f-46c3-93d2-4b0391173b64
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # CancelWipe Method in Class SMS_DeviceMethods
 The `CancelWipe` Windows Management Instrumentation (WMI) class method, in Configuration Manager, cancels a pending wipe request on mobile devices or Exchange ActiveSync devices.  

@@ -9,6 +9,7 @@ ms.assetid: 620f5d89-b2ea-4546-8764-506de4a0a034
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Application Management Extension
 This section provides topics that show you how to extend Application Management in System Center Configuration Manager.  

@@ -9,6 +9,7 @@ ms.assetid: 377797dd-dd3c-476f-995c-647dbda78123
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # CheckPortalUrl Method for Class SMS_ClientSettings
 The `CheckPortalUrl` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, checks whether the default application catalog website point in the default or custom client agent settings is set to `portalUrl`.  

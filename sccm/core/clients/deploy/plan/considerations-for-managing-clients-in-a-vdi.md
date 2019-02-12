@@ -10,6 +10,7 @@ ms.assetid: abd45393-d84e-4583-bc80-74bbb3709577
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Considerations for managing System Center Configuration Manager clients  in a Virtual Desktop Infrastructure (VDI)
 

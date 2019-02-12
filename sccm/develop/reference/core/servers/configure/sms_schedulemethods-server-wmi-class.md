@@ -9,6 +9,7 @@ ms.assetid: e7ccc430-34b6-4c65-8933-d13bf8e8202f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_ScheduleMethods Server WMI Class
 The `SMS_ScheduleMethods` abstract Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents methods for decoding and encoding schedule tokens into and from a System Center Configuration Manager interval string.  

@@ -9,6 +9,7 @@ ms.assetid: 38fb7c0d-8420-4602-8b8d-3fa74e8df0d8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_PackageAccessByUsers Server WMI Class
 The `SMS_PackageAccessByUsers` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that controls which users are granted access rights to a package folder or to distribution points.  

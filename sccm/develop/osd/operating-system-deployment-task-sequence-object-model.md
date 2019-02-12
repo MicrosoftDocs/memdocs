@@ -9,6 +9,7 @@ ms.assetid: 4176f9e2-aa68-44e0-bf47-d3cac73ca737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Operating System Deployment Task Sequence Object Model
 In System Center Configuration Manager, operating system deployment task sequences are created and edited by using a Windows Management Instrumentation (WMI) class-based object model.  

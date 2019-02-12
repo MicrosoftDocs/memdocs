@@ -9,6 +9,7 @@ ms.assetid: 8666bb0c-1969-4c88-92db-853ed3128412
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Install Method in Class CCM_Application
 The `Install` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that installs an application.   

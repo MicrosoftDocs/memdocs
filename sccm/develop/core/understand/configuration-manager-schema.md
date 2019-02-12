@@ -8,6 +8,7 @@ ms.assetid: 0b6feabc-797c-4283-90a2-7c929cc76cb1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Schema
 This section provides information about the SQL Server database schema and some SQL Server views that are used by Microsoft System Center Configuration Manager.  

@@ -9,6 +9,7 @@ ms.assetid: 84ec99f1-1683-4bd7-b6cf-71361d1f87c6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Discovery Server WMI Classes
 Discovery, in System Center Configuration Manager, searches your network to find resources that you can use with Configuration Manager.  

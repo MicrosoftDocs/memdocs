@@ -10,6 +10,7 @@ ms.assetid: 3417ff88-7177-4a0d-8967-ab21fe7eba17
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 certification authority
 

@@ -9,6 +9,7 @@ ms.assetid: fac9263e-4e47-4e15-b07a-27a39c9ecd74
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Site Configuration Server WMI Classes
 This section contains detailed reference information about the site configuration server Windows Management Instrumentation (WMI) classes in System Center Configuration Manager. These classes include classes that relate to an installation of Configuration Manager that consists of one or more computers running the Configuration Manager components.  

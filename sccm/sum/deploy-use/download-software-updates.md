@@ -10,6 +10,7 @@ ms.technology: configmgr-sum
 ms.assetid: de78e8d3-043f-4cd3-97e0-4dfb824fd3fb
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
 
 

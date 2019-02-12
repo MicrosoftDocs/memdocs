@@ -10,6 +10,7 @@ ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Configure certificate infrastructure

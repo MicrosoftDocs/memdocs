@@ -9,6 +9,7 @@ ms.assetid: acf227ae-7008-4984-968b-d31d5d4d8e96
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Operating System Deployment Computer Management
 This section provides information about operating system deployment computer management in System Center Configuration Manager.  

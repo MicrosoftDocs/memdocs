@@ -9,6 +9,7 @@ ms.assetid: a80b7e72-031b-4b6d-9fb6-ee8b82cd8235
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Windows 10 Servicing Server WMI Classes
 This section provides information about classes used by System Center Configuration Manager to manage Windows as a service.  

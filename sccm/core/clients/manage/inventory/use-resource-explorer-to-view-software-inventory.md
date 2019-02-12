@@ -10,6 +10,7 @@ ms.assetid: 4b7aa5f6-5ebd-49be-b7f3-4206caadc187
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to use Resource Explorer to view software inventory in System Center Configuration Manager
 

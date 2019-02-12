@@ -10,6 +10,7 @@ ms.assetid: d09a82c6-bbd1-49ca-8ffe-e3ce87b85d33
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Use a SQL Server cluster for the System Center Configuration Manager site database
 

@@ -10,6 +10,7 @@ ms.assetid: a315489d-5e12-46d6-903e-3a35235b72c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # About the Security Content Automation Protocol (SCAP) extensions

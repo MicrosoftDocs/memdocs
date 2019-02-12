@@ -10,6 +10,7 @@ ms.assetid: 98feaa06-64b1-4e86-a122-93017c97cd4f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to monitor certificate profiles in System Center Configuration Manager
 

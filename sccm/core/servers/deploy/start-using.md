@@ -8,6 +8,7 @@ ms.assetid: 32609a30-465c-4406-b227-aca5c276e015
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Start using System Center Configuration Manager
 

@@ -9,6 +9,7 @@ ms.assetid: f158f87a-3607-4a5e-8c2a-2e8da8997c60
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_AIHardwareRequirements Server WMI Class
 The `SMS_AIHardwareRequirements` Windows Management Instrumentation (WMI) class, in System Center Configuration Manager, associates a software title with hardware requirements.  

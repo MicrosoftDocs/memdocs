@@ -9,6 +9,7 @@ ms.assetid: 11ec1d68-c5ee-4822-a519-b92011909d1d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Create an Application with the Script Deployment Type
 Applications are new to System Center Configuration Manager.  Prior to System Center Configuration Manager, a package was the basic object that was used to install software.  Now, a more flexible and complete model exists for applications in Configuration Manager.  Software based on this new model are referred to as Applications.  Packages still exist in System Center Configuration Manager, but they are defined and behave in much the same manner as packages did in Configuration Manager.  

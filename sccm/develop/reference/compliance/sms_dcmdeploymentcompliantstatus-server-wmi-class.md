@@ -9,6 +9,7 @@ ms.assetid: 15f5c573-86b5-477f-a3a5-082e7f23765e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_DCMDeploymentCompliantStatus Server WMI Class
 The `SMS_DCMDeploymentCompliantStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the compliant status of a deployment.  

@@ -11,6 +11,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 
+ms.collection: M365-identity-device-management
 ---
 # Create a task sequence for non-operating system deployments with System Center Configuration Manager
 

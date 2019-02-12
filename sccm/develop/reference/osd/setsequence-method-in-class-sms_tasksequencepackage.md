@@ -9,6 +9,7 @@ ms.assetid: 4bfe9c19-7045-46b7-9e72-32ac8e02e031
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SetSequence Method in Class SMS_TaskSequencePackage
 The `SetSequence` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, updates the task sequence package with the specified task sequence.  

@@ -9,6 +9,7 @@ ms.assetid: 4dbfce7f-1b58-4998-9b38-f5f3c3ba77c6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Compliance Settings (DCM) Server WMI Classes
 In System Center Configuration Manager, compliance settings (DCM) server Windows Management Instrumentation (WMI) classes, assist you in assessing computer compliance by considering a number of configurations, for example, installation and configuration of the correct versions of Microsoft Windows operating systems. You can also use these classes to check for compliance with software updates and security settings.  

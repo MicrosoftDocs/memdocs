@@ -9,6 +9,7 @@ ms.assetid: cdb7e542-877c-4fdc-865c-a0cab4953558
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Application Management Server WMI Classes
 Application Management, in System Center Configuration Manager, is used to manage applications.  

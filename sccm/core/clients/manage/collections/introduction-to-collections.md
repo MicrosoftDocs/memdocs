@@ -10,6 +10,7 @@ ms.assetid: d17e1188-d277-438f-9236-db9cd213b421
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Introduction to collections in System Center Configuration Manager
 

@@ -9,6 +9,7 @@ ms.assetid: 1cbfd6ec-21ef-45c0-ad62-ea3d78768616
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # CCM_Policy_AuthorityData Client WMI Class
 In System Center Configuration Manager, the `CCM_Policy_AuthorityData` class is a client Windows Management Instrumentation (WMI) class that stores information about policy from a particular authority.  

@@ -9,6 +9,7 @@ ms.assetid: b6eb9f5c-78a8-4ded-b032-5d8c4f533694
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Lazy Properties
 A small number of SMS object properties are described as lazy. This means that the property exists and contains data, but the data is not available through the SMS Administrator console. In practical terms, the property is not visible in Query Builder.  

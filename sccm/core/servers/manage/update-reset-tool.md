@@ -10,6 +10,7 @@ ms.assetid: 25fa89d6-7e47-45a6-8f4e-70b77560fba6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Update reset tool
 

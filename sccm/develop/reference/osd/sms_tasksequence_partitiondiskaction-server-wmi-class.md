@@ -9,6 +9,7 @@ ms.assetid: 17c5d9c3-b561-432c-bd69-7277c94f347c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_TaskSequence_PartitionDiskAction Server WMI Class
 The `SMS_TaskSequence_PartitionDiskAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that formats and partitions a specified disk on a target computer.  

@@ -10,8 +10,12 @@ ms.assetid: 738eddaa-52e2-467f-b453-821ef2884d47
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# How to create and apply power plans in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# How to create and apply power plans in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Power management in System Center Configuration Manager enables you to apply power plans that are supplied with Configuration Manager to collections of computers in your hierarchy, or to create your own custom power plans. Use the procedure in this topic to apply a built-in or custom power plan to computers.  
 
 > [!IMPORTANT]  

@@ -8,6 +8,7 @@ ms.assetid: 1e868de3-9b0f-4d9a-a100-c0459049455c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # About Configuration Manager Summarizers
 This section provides information about the System Center Configuration Manager summarizers that can be used to obtain summary information about System Center Configuration Manager.  

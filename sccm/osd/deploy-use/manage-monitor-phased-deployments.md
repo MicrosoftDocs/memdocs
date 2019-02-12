@@ -10,6 +10,7 @@ ms.assetid: dc245916-bc11-4983-9c4d-015f655007c1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Manage and monitor phased deployments

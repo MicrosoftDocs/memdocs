@@ -9,6 +9,7 @@ ms.assetid: 51870eea-f043-4bd3-a3cd-a68b7471681d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_WSfBConfigurationData Server WMI Class
 The `SMS_WSfBConfigurationData` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents Microsoft Store for Business configuration data.  

@@ -9,6 +9,7 @@ ms.assetid: 5fcf06b9-8f18-40a3-9286-d69c8cbc2512
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # DeleteClientOperation Method in Class SMS_ClientOperation
 The `DeleteClientOperation` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that deletes a client operation.   

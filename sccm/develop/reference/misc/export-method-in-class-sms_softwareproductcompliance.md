@@ -9,6 +9,7 @@ ms.assetid: d8eda89a-7ec0-4612-aa77-7db2c7c48140
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Export Method in Class SMS_SoftwareProductCompliance
 The `Export` Windows Management Instrumentation (WMI) class method, in Configuration Manager, exports program compliance information from the database in tab-delimited format. It also returns the number of valid records that were exported.  

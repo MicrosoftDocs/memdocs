@@ -9,6 +9,7 @@ ms.assetid: b9c93bcb-6f43-4236-9ae1-568579e9719d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # RefreshPkgSource Method in Class SMS_ImagePackage
 The `RefreshPkgSource` Windows Management Instrumentation (WMI) class method, in Configuration Manager, refreshes the package source at all distribution points.  

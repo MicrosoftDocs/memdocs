@@ -11,6 +11,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 
+ms.collection: M365-identity-device-management
 ---
 # Create an image for an OEM in factory or a local depot with System Center Configuration Manager
 

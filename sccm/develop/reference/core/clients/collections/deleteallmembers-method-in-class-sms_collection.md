@@ -9,6 +9,7 @@ ms.assetid: ae1b7baf-751d-49ab-9188-72d1816cd852
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # DeleteAllMembers Method in Class SMS_Collection
 The `DeleteAllMembers` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, deletes all members, that is, resources and discovery data, for the collection.  

@@ -9,6 +9,7 @@ ms.assetid: a1681a18-9456-4d91-b0d0-26831d469868
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_G_System_History Server WMI Class
 The `SMS_G_System_History` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that serves as an abstract base class representing hardware component state history for a client computer.  

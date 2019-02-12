@@ -10,6 +10,7 @@ ms.assetid: cc4cdb35-f0b4-42b5-9cec-6431a8c30793
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Fundamentals of System Center Configuration Manager
 

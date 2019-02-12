@@ -10,8 +10,12 @@ ms.assetid: b89bcfbf-f5b6-4fb1-bb5e-a5cc18ec0c78
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# Operations and maintenance for reporting in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Operations and maintenance for reporting in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 After the infrastructure is in place for reporting in System Center Configuration Manager, there are a number of operations that you typically perform to manage reports and report subscriptions.  
 
 ##  <a name="BKMK_ManageReports"></a> Manage Configuration Manager reports  

@@ -9,6 +9,7 @@ ms.assetid: 73b6a9b7-6d9b-4ca2-87bc-1e9c898a3fef
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Architectural Overview
 Configuration Manager is a configuration management product that requires servers to administer client computers. The following sections describe both Configuration Manager server and client architecture. Gaining an understanding of the concepts relating to both server and client architecture will help you understand how you can customize Configuration Manager for specific uses in your organization.  

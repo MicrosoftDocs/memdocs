@@ -10,6 +10,7 @@ ms.assetid: d5ce547d-3b3b-47d3-bcd7-6ff94692c046
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Send Schedule Tool

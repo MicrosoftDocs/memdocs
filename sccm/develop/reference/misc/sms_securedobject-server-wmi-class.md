@@ -9,6 +9,7 @@ ms.assetid: add642a3-26e1-4a6f-9d27-97297809a20a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_SecuredObject Server WMI Class
 The `SMS_SecuredObject` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a secured object.  

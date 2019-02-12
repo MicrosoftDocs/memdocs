@@ -9,6 +9,7 @@ ms.assetid: 5b6ca0d2-07a8-4627-9324-edbacb81b829
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Status Server API
 The status server API, in System Center Configuration Manager, provides functionality that supports the System Center Configuration Manager status system.  

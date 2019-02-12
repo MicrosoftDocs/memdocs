@@ -9,6 +9,7 @@ ms.assetid: ce81295e-34ff-4698-a973-9ecd44b03e04
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_VhdPackage Server WMI Class
 The `SMS_VhdPackage` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that serves as the unit of distribution for virtual hard drives used to deploy a valid operating system. For example, to distribute Windows 8 in VHD format to a client computer.  

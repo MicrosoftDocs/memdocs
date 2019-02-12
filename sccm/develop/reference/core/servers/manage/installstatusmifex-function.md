@@ -9,6 +9,7 @@ ms.assetid: c7f89ba4-eaf4-4755-bc4d-90064d1ad918
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # InstallStatusMIFEx Function
 The `InstallStatusMIFEx` function, in Configuration Manager, enhances the functionality of [InstallStatusMIF](../../../../../develop/reference/core/servers/manage/installstatusmif-function.md).  

@@ -9,6 +9,7 @@ ms.assetid: 18ad99a2-dd6e-4c1f-b452-464d0b65c8bd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_ScheduleToken Server WMI Class
 The `SMS_ScheduleToken` abstract Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents a schedule token that is used for the scheduling of events with different frequencies, for example, hourly and daily.  

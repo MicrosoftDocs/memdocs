@@ -9,6 +9,7 @@ ms.assetid: d7f92b65-9bc7-4a39-b610-abadf9e3d6fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_AppStatePerCollectionDT Server WMI Class
 The `SMS_AppStatePerCollectionDT` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents application state per collection deployment type.  

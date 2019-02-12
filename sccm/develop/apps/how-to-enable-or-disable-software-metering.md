@@ -9,6 +9,7 @@ ms.assetid: 8e706653-7627-4cd9-853d-3690be0d567b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Enable or Disable Software Metering
 You enable or disable the Software Metering Client Agent, in System Center Configuration Manager, by modifying the site control file settings.  
