@@ -551,7 +551,7 @@ SELECT * FROM vLogs WHERE ProcedureName = 'spDiagChangeTracking'
 <!--SCCMDocs-pr issue 3094-->
 *Applies to: Central administration site, primary site, secondary site*
 
-When you install a new site, Configuration Manager automatically installs SQL Native Client as a redistributable component. Configuration Manager doesn't support upgrading SQL Native Client. This check makes sure the site has a supported version of the SQL Native Client. Starting in version 1810, the minimum version is SQL 2012 SP4 (`11.*.7001.0`). 
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager does not upgrade SQL Server Native Client. This check makes sure the site has a supported version of the SQL Native Client. Starting in version 1810, the minimum version is SQL 2012 SP4 (`11.*.7001.0`). 
 
 This SQL Native Client version supports TLS 1.2. For more information, see the following articles:
 - [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)  
