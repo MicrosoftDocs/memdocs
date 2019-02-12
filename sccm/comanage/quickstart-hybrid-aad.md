@@ -73,7 +73,7 @@ For more information on device-based conditional access, see [How To: Require ma
 All Windows 10 devices joined to Azure AD go through license checks. These checks enable you to automatically upgrade them from Pro to Enterprise through the Microsoft cloud. When you remove the relevant subscription from the user, the device automatically downgrades its license. This feature provides a single pane of control for managing Windows licenses, without any complicated processes or on-premises systems.
 
 #### Self-service functionality
-Self-service functionality includes self-service password reset and Bitlocker recovery key. Azure AD also provides you with direct options to reset your password or access BitLocker recovery keys. You can use Azure AD to reset your password directly from the Windows lock screen, instead of from a web browser. These features reduce friction for users and help cut helpdesk costs for your organization.  
+Self-service functionality includes self-service password reset and BitLocker recovery key. Azure AD also provides you with direct options to reset your password or access BitLocker recovery keys. You can use Azure AD to reset your password directly from the Windows lock screen, instead of from a web browser. These features reduce friction for users and help cut helpdesk costs for your organization.  
 
 For more information, see [Quickstart: Self-service password reset](https://docs.microsoft.com/azure/active-directory/authentication/quickstart-sspr).
 
