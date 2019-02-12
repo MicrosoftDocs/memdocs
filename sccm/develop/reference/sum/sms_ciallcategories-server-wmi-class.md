@@ -9,6 +9,7 @@ ms.assetid: 57b6120e-a157-4bd4-8b52-8ebc31b4b41f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_CIAllCategories Server WMI Class
 The `SMS_CIAllCategories` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that lists all of the SMS_CategoryInstance Server WMI Class or [SMS_UpdateCategoryInstance Server WMI Class](../../../develop/reference/sum/sms_updatecategoryinstance-server-wmi-class.md) object instances for a given SMS_ConfigurationItem object.  

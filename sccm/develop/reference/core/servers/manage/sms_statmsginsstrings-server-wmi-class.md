@@ -9,6 +9,7 @@ ms.assetid: 731d9874-708d-4440-b312-7093d29f1c5e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_StatMsgInsStrings Server WMI Class
 The `SMS_StatMsgInsStrings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents insertion strings that are inserted into the status message.  

@@ -10,6 +10,7 @@ ms.assetid: 3fab4d67-8d2a-45ce-8b06-471280102cf6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Monitor hierarchy and replication infrastructure in System Center Configuration Manager
 

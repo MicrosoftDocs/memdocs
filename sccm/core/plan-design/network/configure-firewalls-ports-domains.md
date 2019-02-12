@@ -10,6 +10,7 @@ ms.assetid: d6993bba-f6bd-4639-adbf-efc1c638b2f3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Set up firewalls, ports, and domains for System Center Configuration Manager
 

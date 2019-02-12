@@ -9,6 +9,7 @@ ms.assetid: cf608c26-85b1-4ea8-bd06-c066693a9a17
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SetSourceSite Method in Class SMS_Advertisement
 The `SetSourceSite` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the source site code for the advertisement.  

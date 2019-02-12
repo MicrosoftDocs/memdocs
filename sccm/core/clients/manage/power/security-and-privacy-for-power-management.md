@@ -10,8 +10,12 @@ ms.assetid: 469ff35f-59a1-484d-902b-107dd6070baf
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# Security and privacy for power management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Security and privacy for power management in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 This section contains security and privacy information for power management in System Center Configuration Manager.  
 
 ## Security best practices for power management  

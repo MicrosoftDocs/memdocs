@@ -10,6 +10,7 @@ ms.assetid: 049b87b3-9449-4e61-90d1-441e50fc94f7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Features in Configuration Manager technical preview version 1901

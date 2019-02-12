@@ -10,6 +10,7 @@ ms.technology: configmgr-sum
 ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
 # Software updates maintenance
 

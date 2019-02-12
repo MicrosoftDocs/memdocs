@@ -9,6 +9,7 @@ ms.assetid: ed5fe79c-f44c-4672-86ed-60aa22a55624
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ITsMediaClass::StepProgress Property
 In Configuration Manager, the `StepProgress` property contains a value indicating the progress of the current step of task sequence media creation.  

@@ -8,6 +8,7 @@ ms.assetid: 6f43a577-e1dc-46d8-a22a-50fb24199583
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager SDK Samples
 The System Center Configuration Manager Software Development Kit (SDK) ships with the following sample projects. Each sample has a readme file that explains how the sample works.  

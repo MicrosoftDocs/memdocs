@@ -10,6 +10,7 @@ ms.assetid: 7e4ec207-bb49-401f-af1b-dd705ecb465d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configure SQL Server Always On availability groups for Configuration Manager
 

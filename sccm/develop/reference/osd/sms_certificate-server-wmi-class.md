@@ -9,6 +9,7 @@ ms.assetid: 1e35b0f1-e436-4358-b7e3-b970452ffb25
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_Certificate Server WMI Class
 The `SMS_Certificate` Windows Management Instrumentation (WMI) class is an SMS Provider server class that contains all of the certificates that are registered to the server.  

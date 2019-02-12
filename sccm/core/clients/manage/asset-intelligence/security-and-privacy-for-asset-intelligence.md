@@ -10,6 +10,7 @@ ms.assetid: d0c6f7a0-dcae-4e6d-aa28-35d464d97ff7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Security and privacy for Asset Intelligence in System Center Configuration Manager
 

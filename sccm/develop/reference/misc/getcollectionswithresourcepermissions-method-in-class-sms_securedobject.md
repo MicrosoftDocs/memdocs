@@ -9,6 +9,7 @@ ms.assetid: 31656a08-313b-4a42-a53c-6d9c97050fdf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # GetCollectionsWithResourcePermissions Method in Class SMS_SecuredObject
 The `GetCollectionsWithResourcePermissions` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the list of collection identifiers for which the user has the specified permissions. The collection must contain the specified resource.  

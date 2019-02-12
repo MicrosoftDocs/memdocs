@@ -11,6 +11,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 
+ms.collection: M365-identity-device-management
 ---
 
 # Use the Configuration Manager client software for extended interoperability with future versions of a Current Branch site

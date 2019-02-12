@@ -9,6 +9,7 @@ ms.assetid: 0b4faf3c-edff-4874-b998-3fc34810cf34
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Context Qualifiers
 Context objects are used, in System Center Configuration Manager, to provide additional information to the SMS Provider. Typically, you use context qualifiers to give the SMS Provider contextual information, such as your application's name. You can use context qualifiers when you connect to the SMS Provider and with individual SMS Provider objects.  

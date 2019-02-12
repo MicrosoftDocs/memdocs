@@ -10,6 +10,7 @@ ms.assetid: a7f91e63-4750-402e-9970-dd14be7f76a3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Manage certificates and security for Updates Publisher
 

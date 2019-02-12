@@ -10,6 +10,7 @@ ms.assetid: 9b0a7859-747f-4495-a2f4-13fd5991f897
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Interoperability between different versions of System Center Configuration Manager
 

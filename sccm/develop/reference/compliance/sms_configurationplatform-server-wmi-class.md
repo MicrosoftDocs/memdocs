@@ -9,6 +9,7 @@ ms.assetid: 2397f41d-657f-4f68-8475-c11c028937aa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_ConfigurationPlatform Server WMI Class
 The `SMS_ConfigurationPlatform` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents supported operating system platforms as configuration items and is referenced by other configuration items to define operating system applicability conditions.  

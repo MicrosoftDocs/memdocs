@@ -9,6 +9,7 @@ ms.assetid: fbd5743c-ff78-4890-9e32-5a133c02878c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # About Package Definition Files
 Package definition files are predefined scripts that you can use to help automate package creation with System Center Configuration Manager. These are files that contain the package and program information that is needed to distribute a package to clients, with the exception of the source file location.  

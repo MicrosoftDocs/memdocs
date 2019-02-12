@@ -9,6 +9,7 @@ ms.assetid: d01a7ab7-5edd-4534-926d-161ec05d813d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # CCM_SoftwareBase Client WMI Class
 The `CCM_SoftwareBase` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the base class for management entities like software updates. applications and so on. This class contains the common properties across these management entities. This class is listed here for completeness and to show the base class properties which derived classes would inherit. Client SDK users will always use the specific derived classes of interest to achieve the functionality.  

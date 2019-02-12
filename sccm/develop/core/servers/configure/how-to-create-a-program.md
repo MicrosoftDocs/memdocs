@@ -9,6 +9,7 @@ ms.assetid: de2289de-d10e-4454-be69-47209bf59113
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Create a Program
 The following example shows how to create a program, in System Center Configuration Manager, by using the `SMS_Program` class and class properties.  

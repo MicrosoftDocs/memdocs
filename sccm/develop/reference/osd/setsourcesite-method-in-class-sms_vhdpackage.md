@@ -9,6 +9,7 @@ ms.assetid: 19c87fc5-ea12-4641-86d0-ae0816988a58
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SetSourceSite Method in Class SMS_VhdPackage
 The `SetSourceSite` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the site code of the source site for the VHD package.  

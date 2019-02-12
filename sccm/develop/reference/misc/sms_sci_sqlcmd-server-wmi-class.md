@@ -9,6 +9,7 @@ ms.assetid: ea2baeeb-6d74-4c40-9452-0b4ae7b4b961
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_SCI_SQLCmd Server WMI Class
 The `SMS_SCI_SQLCmd` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that defines a Structured Query Language (SQL) command to be run periodically directly in the SQL Server database.  

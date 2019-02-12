@@ -9,6 +9,7 @@ ms.assetid: 51a21352-8184-4f0f-9fe0-365608ab1433
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ActivateHierarchy Method in Class SMS_MigrationSiteMapping
 The `ActivateHierarchy` Windows Management Instrumentation (WMI) class method, in Configuration Manager, activates the hierarchy.  

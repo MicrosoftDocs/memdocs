@@ -9,6 +9,7 @@ ms.assetid: 3d52902c-630b-4450-8cf5-3f58852c057c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_CN_ClientStatus Server WMI Class
 The `SMS_CN_ClientStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents client notification of agent status.  

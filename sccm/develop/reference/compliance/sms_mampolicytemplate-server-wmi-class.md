@@ -9,6 +9,7 @@ ms.assetid: 99486f0f-25c4-4ba5-8d3b-b4db13c2572a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_MAMPolicyTemplate Server WMI Class
 The `SMS_MAMPolicyTemplate` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents mobile application management (MAM) policy templates.  

@@ -9,6 +9,7 @@ ms.assetid: ae7c2e8f-06e9-487d-ba09-4b30cce7574c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Console Node XML
 The node XML for the System Center Configuration Manager console is in workspace XML files located in the %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\XmlStorage\ConsoleRoot\ folder. Your extension node XML files, however, are placed in the folder AdminConsole\XmlStorage\Extensions\Nodes\\<GUID\>, where \<GUID> is the namespace GUID identifier for the parent node.  

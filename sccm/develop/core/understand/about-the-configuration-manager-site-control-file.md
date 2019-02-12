@@ -8,6 +8,7 @@ ms.assetid: 1283e2a3-d4e2-4fba-a6c3-7dcd94598a0d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # About the Configuration Manager Site Control File
 The site control file in System Center Configuration Manager is an ASCII text file (Sitectrl.ct0) that contains the configuration of each site. There are two types of site control files:  

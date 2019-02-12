@@ -9,6 +9,7 @@ ms.assetid: 6ef970c3-7ff8-47cf-a6b1-cf0e2c8d88c1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Security Scope Management
 The following topics describe programmatically working with the role-based administration security scopes.  

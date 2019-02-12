@@ -10,6 +10,7 @@ ms.assetid: 518f9882-ce71-48c3-9f47-cd968cfb658d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Planning considerations for deploying clients in System Center Configuration Manager
 

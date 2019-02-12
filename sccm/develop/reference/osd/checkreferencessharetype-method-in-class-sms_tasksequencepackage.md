@@ -9,6 +9,7 @@ ms.assetid: 25ae479d-c63e-4b45-a8e7-2de6ff4b3222
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # CheckReferencesShareType Method in Class SMS_TaskSequencePackage
 The `CheckReferencesShareType` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that checks all referred packages for this task sequence and returns all packages that are not shared.  

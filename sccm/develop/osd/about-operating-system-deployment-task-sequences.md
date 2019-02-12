@@ -9,6 +9,7 @@ ms.assetid: 7cd2f4cf-120c-4234-85d8-da46295c90eb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # About Operating System Deployment Task Sequences
 This section provides an overview of operating system deployment task sequencing and the Windows Management Instrumentation (WMI) object model that it uses in System Center Configuration Manager.  

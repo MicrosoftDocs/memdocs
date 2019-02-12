@@ -9,6 +9,7 @@ ms.assetid: a8812aaa-31e5-46f6-bdae-cea5c24da9ed
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ICIINFO::GetProperty Method
 The `ICIINFO::GetProperty` method, in Configuration Manager, gets a named property value from the configuration item.  

@@ -10,6 +10,7 @@ ms.assetid: 9efb4061-f642-48bd-8332-3357ff5b3118
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configure sites and hierarchies for Configuration Manager
 

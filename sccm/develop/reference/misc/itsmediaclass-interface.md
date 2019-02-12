@@ -9,6 +9,7 @@ ms.assetid: d2e2146c-8c64-40ab-8b6f-6b7d1dd571c2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ITsMediaClass Interface
 The `ITsMediaClass` automation interface, in System Center Configuration Manager, enables the creation of task sequence media for operating system deployment. This interface inherits from `IDispatch`.  

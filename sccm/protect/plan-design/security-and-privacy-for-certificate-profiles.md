@@ -10,8 +10,12 @@ ms.assetid: 3393db41-900a-44c5-b950-2d46a35a198c
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# Security and privacy for certificate profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Security and privacy for certificate profiles in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 ##  Security Best Practices for Certificate Profiles  
  Use the following security best practices when you manage certificate profiles for users and devices.  

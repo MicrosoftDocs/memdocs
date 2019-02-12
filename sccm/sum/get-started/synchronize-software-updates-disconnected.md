@@ -10,9 +10,13 @@ ms.technology: configmgr-sum
 ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
 
-# Synchronize software updates from a disconnected software update point  *Applies to: System Center Configuration Manager (Current Branch)*
+# Synchronize software updates from a disconnected software update point  
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
  When the software update point at the top-level site is disconnected from the Internet, you must use the export and import functions of the WSUSUtil tool to synchronize software updates metadata. You can choose an existing WSUS server not in your Configuration Manager hierarchy as the synchronization source. This topic provides information about how to use the export and import functions of the WSUSUtil tool.  
 
  To export and import software updates metadata, you must export software updates metadata from the WSUS database on a specified export server, then copy the locally stored license terms files to the disconnected software update point, and then import the software updates metadata to the WSUS database on the disconnected software update point.  

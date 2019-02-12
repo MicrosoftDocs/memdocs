@@ -8,6 +8,7 @@ ms.assetid: aa91afee-45b5-46eb-ad8a-e9c7d3122b38
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # System Center Configuration Manager privacy statement - Microsoft Operations Management Suite addendum
 

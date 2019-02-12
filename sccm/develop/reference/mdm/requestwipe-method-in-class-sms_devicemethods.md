@@ -9,6 +9,7 @@ ms.assetid: 0035a1ee-f788-4f2d-b122-05f8d390f3c6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # RequestWipe Method in Class SMS_DeviceMethods
 The `RequestWipe` Windows Management Instrumentation (WMI) class method, in Configuration Manager, removes Microsoft Exchange and Configuration Manager software from the mobile device or Exchange ActiveSync device.  

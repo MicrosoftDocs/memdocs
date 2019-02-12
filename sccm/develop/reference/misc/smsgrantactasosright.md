@@ -9,6 +9,7 @@ ms.assetid: 8a89cee9-9708-40f8-b40e-4ad31d8a4ffb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SmsGrantActAsOSRight
 In System Center Configuration Manager, the `SmsGrantActAsOSRight` function grants the act as operating system credentials to the specified account.  

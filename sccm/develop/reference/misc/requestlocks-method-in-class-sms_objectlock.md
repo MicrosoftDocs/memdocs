@@ -9,6 +9,7 @@ ms.assetid: c7e2f093-bd48-4d8f-a06e-c3d731626145
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # RequestLocks Method in Class SMS_ObjectLock
 The `RequestLocks` Windows Management Instrumentation (WMI) class method, in Configuration Manager, synchronously acquires locks to edit multiple global objects.  

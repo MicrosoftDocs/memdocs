@@ -9,6 +9,7 @@ ms.assetid: 1a991175-646c-4dbc-b6b7-958f03f1b470
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Client SDK WMI Classes
 This section contains detailed reference information about the client-side SDK functionality in System Center Configuration Manager.  

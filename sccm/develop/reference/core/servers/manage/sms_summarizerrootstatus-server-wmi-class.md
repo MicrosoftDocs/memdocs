@@ -9,6 +9,7 @@ ms.assetid: 7b416c99-5c38-4257-ab39-2f4355eec4d9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_SummarizerRootStatus Server WMI Class
 The `SMS_SummarizerRootStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a summarizer for the overall health of the entire site hierarchy.  

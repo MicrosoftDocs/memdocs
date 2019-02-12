@@ -10,6 +10,7 @@ ms.assetid: e025c48c-1514-4ab7-836c-e0635aaa993a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Create Android applications in Configuration Manager

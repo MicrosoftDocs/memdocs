@@ -9,6 +9,7 @@ ms.assetid: 815a4ee8-b211-48de-ba9f-6eff7497dd2b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Read and Write to the Configuration Manager Site Control File by Using WMI
 In System Center Configuration Manager, you write to the site control file using Windows Management Instrumentation (WMI) by using the `SMS_SiteControlFile` class methods.  

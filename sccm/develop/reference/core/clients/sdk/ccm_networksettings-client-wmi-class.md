@@ -9,6 +9,7 @@ ms.assetid: 89c57d32-bb17-470a-82d5-93415fef6bfc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # CCM_NetworkSettings Client WMI Class
 The `CCM_NetworkSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents how clients behave on metered Internet connections.   

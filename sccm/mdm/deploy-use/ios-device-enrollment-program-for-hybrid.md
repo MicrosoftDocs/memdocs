@@ -10,6 +10,7 @@ ms.assetid: 78d44adc-9b1c-4bc6-b72d-e93873916ea6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # iOS Device Enrollment Program (DEP) enrollment for hybrid deployments with Configuration Manager
 

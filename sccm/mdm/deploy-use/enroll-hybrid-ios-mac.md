@@ -10,6 +10,7 @@ ms.assetid: 5eae4400-58ca-4c71-804c-6a585cd3df5d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Set up iOS hybrid device management with System Center Configuration Manager and Microsoft Intune
 

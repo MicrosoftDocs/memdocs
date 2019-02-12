@@ -10,6 +10,7 @@ ms.assetid: 2af37410-d04c-4059-801c-9edb8bf72d89
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Use Azure AD for co-management

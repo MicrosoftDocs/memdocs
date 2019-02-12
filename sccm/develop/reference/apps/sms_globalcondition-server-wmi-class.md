@@ -9,6 +9,7 @@ ms.assetid: 671a582b-ccd0-4e5c-a2ba-795a4766aa6b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_GlobalCondition Server WMI Class
 The `SMS_GlobalCondition` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that is used to create, retrieve, modify, or delete global conditions of type Setting or Expression.  

@@ -9,6 +9,7 @@ ms.assetid: 1601051a-73a6-4ac2-8f03-8d4558f658a0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_NAPSystemInfo Server WMI Class
 The `SMS_NAPSystemInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents Network Access Protection (NAP) related system information.  

@@ -10,6 +10,7 @@ ms.assetid: e80d1151-91db-4a27-8411-a957297b67d0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Manage network bandwidth for content

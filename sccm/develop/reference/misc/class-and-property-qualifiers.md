@@ -9,6 +9,7 @@ ms.assetid: 836a5204-4439-4fbd-a5d2-0b7796ae24ae
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Class and Property Qualifiers
 The following table shows the qualifiers that are specific to Microsoft System Center Configuration Manager.  

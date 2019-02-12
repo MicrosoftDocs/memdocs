@@ -9,6 +9,7 @@ ms.assetid: 55f59675-4c3a-4b36-aab3-b4099753ce20
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Out of Band Management Client WMI Classes
 In System Center Configuration Manager, the out of band management client Windows Management Instrumentation (WMI) classes provide Configuration Manager hardware inventory information.  

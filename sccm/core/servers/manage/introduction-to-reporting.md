@@ -10,8 +10,12 @@ ms.assetid: 230be984-d2cd-4d53-bd7a-bc24dd93fc22
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# Introduction to reporting in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Introduction to reporting in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Reporting in System Center Configuration Manager provides a set of tools and resources that help you use the advanced reporting capabilities of SQL Server Reporting Services (SSRS) and the rich authoring experience that Reporting Services Report Builder provides. Reporting helps you gather, organize, and present information about users, hardware and software inventory, software updates, applications, site status, and other Configuration Manager operations in your organization. Reporting provides you with a number of predefined reports that you can use without changes, or that you can modify to meet your requirements, and you can create custom reports. Use the following sections to help you manage reporting in Configuration Manager.  
 
 ##  <a name="BKMK_SQLServerReportingServices"></a> SQL Server Reporting Services  

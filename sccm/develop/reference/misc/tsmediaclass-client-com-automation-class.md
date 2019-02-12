@@ -9,6 +9,7 @@ ms.assetid: 5b1e716f-3fb1-430d-8b00-7edfa846fa3d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # TsMediaClass Client COM Automation Class
 `TsMediaClass` is a COM automation class, in System Center Configuration Manager, that supports client task sequence media creation for operating system deployment. The class implements the `ITsMediaClass` interface.  

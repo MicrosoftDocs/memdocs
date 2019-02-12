@@ -9,6 +9,7 @@ ms.assetid: f9e46b28-e6dc-48c8-aa0e-24079774d129
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Conditional Actions
 System Center Configuration Manager actions can be displayed according to specified conditions. The conditions are defined by the following:  

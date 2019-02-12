@@ -10,6 +10,7 @@ ms.assetid: 0fd76043-d7ee-423d-8c5f-aa7e9ed58ce0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Create and deploy a device compliance policy

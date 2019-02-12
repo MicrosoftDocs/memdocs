@@ -9,6 +9,7 @@ ms.assetid: 7a0619a5-338f-41e9-b3c6-383797533a83
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_SCI_RoamingBoundary Server WMI Class
 The `SMS_SCI_RoamingBoundary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that describes the Configuration Manager site boundary information.  

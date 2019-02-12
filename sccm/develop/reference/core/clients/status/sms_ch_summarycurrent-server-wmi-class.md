@@ -9,6 +9,7 @@ ms.assetid: 72003aea-633b-47c1-8817-3fca1da8d0a8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_CH_SummaryCurrent Server WMI Class
 The `SMS_CH_SummaryCurrent` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents client summary.  

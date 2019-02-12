@@ -9,6 +9,7 @@ ms.assetid: d4d6cae0-271e-4878-82ab-00b6734147e8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_SoftwareProductCompliance Server WMI Class
 The `SMS_SoftwareProductCompliance` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains compliance information about a software product.  

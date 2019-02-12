@@ -9,6 +9,7 @@ ms.assetid: 31ec804c-7dfa-41f5-9bac-2b2368cee254
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ValidateNewPackageSource Method in Class SMS_DriverPackage
 The `ValidateNewPackageSource` Windows Management Instrumentation (WMI) class method, in Configuration Manager, validates a new location for a driver update.  

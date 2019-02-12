@@ -9,6 +9,7 @@ ms.assetid: ab6691e4-7620-43a6-949c-4dec7e8cf871
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_ReportParameter Server WMI Class
 The `SMS_ReportParameter` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a user-supplied parameter that is required to run the report.  

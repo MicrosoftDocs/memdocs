@@ -9,6 +9,7 @@ ms.assetid: aaeefdd5-32ac-4b17-ad1d-fd9cb50b9ae0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_UserVariable Server WMI Class
 The `SMS_UserVariable` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that defines the settings of a specific user (such as IsCloudUser=True/False).  

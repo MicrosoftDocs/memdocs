@@ -10,6 +10,7 @@ ms.assetid: d27f88fe-817f-4af4-b290-c16f2e46cf31
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Run Meter Summarization Tool

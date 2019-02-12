@@ -9,6 +9,7 @@ ms.assetid: fef48c66-7544-45f5-a76a-89bd30efa91b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Client WMI Programming
 This section discusses System Center Configuration Manager Windows Management Instrumentation (WMI) programming, using VBScript or managed code.  

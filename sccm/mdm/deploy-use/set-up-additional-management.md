@@ -10,6 +10,7 @@ ms.assetid: 4877d674-6bbc-4e16-810c-daad70c74daa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Set up additional management with System Center Configuration Manager
 

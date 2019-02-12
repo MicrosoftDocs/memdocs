@@ -10,6 +10,7 @@ ms.assetid: 9089e1b5-cba4-42bd-a2de-126ef882a3af
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Prepare to install System Center Configuration Manager sites
 

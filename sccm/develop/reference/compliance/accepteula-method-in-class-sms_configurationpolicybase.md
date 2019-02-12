@@ -9,6 +9,7 @@ ms.assetid: 08353daf-f7eb-4334-886d-259320ecfa8d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # AcceptEULA Method in Class SMS_ConfigurationPolicyBase
 The `AcceptEULA` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, accepts or declines the Microsoft Software License Terms of a configuration item.  

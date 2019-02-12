@@ -9,6 +9,7 @@ ms.assetid: 3461eb99-928f-4290-9c18-29a7d73f0e5d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Console Command-Line Options
 The Microsoft System Center Configuration Manager console has the following command-line options that are useful to developers.  

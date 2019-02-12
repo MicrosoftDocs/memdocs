@@ -9,6 +9,7 @@ ms.assetid: f3ddf4dc-2acd-4d59-be88-b2296d9333cd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Objects Overview
 The System Center Configuration Manager objects are instances of Configuration Manager-specific Windows Management Instrumentation (WMI) classes that are managed by the SMS Provider. The Configuration Manager object class categories are described in the following table.  

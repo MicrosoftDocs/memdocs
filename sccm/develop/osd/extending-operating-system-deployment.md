@@ -9,6 +9,7 @@ ms.assetid: af9b9425-d9db-425f-bfe7-dcf4025f92aa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Extending Operating System Deployment
 This section provides information about operating system deployment custom actions in System Center Configuration Manager.  

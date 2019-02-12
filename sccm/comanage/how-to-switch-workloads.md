@@ -10,6 +10,7 @@ manager: dougeby
 ms.date: 01/14/2019
 ms.topic: conceptual
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
+ms.collection: M365-identity-device-management
 ---
 
 # How to switch Configuration Manager workloads to Intune

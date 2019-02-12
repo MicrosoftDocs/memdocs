@@ -10,6 +10,7 @@ ms.assetid: 10049c89-b37c-472b-b317-ce4f56cd4be7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Example scenario for deploying and managing System Center Configuration Manager clients on Windows Embedded devices
 

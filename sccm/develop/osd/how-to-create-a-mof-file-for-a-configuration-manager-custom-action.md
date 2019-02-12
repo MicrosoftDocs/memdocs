@@ -9,6 +9,7 @@ ms.assetid: c0e8adb8-58e6-4954-abeb-ba7d2344de06
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Create a MOF File for a Configuration Manager Custom Action
 You define a custom task sequence action, its properties and its user interface controls by creating a managed object format (MOF) file to describe the class. The MOF file is then compiled by using Mofcomp.exe.  

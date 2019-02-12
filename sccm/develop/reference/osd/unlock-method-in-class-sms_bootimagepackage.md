@@ -9,6 +9,7 @@ ms.assetid: 52d55b22-d3b7-43f2-8f85-f56719a3894a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Unlock Method in Class SMS_BootImagePackage
 The `Unlock` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the source site to the current site, unlocking the boot image package.  

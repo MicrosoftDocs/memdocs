@@ -9,6 +9,7 @@ ms.assetid: 13812f78-4627-4427-a32c-7c8bfe64a307
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Enable or Disable a Software Metering Rule
 You enable or disable a software metering rule, in System Center Configuration Manager, by loading the instance of the software metering rule that is identified by the software metering rule ID and then setting the Enabled value.  

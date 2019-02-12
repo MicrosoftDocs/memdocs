@@ -9,6 +9,7 @@ ms.assetid: 3a32d976-bd2b-4222-9837-53f192f2556e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Operating System Deployment Image Management
 This section provides information about managing operating system deployment images in System Center Configuration Manager.  

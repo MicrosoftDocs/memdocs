@@ -10,6 +10,7 @@ ms.assetid: e7cdb1a9-140a-436e-ac71-72d083110223
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Use a command-line to install System Center Configuration Manager sites
 

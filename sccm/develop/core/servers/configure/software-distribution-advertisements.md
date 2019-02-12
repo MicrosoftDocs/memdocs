@@ -9,6 +9,7 @@ ms.assetid: 3bc94f84-48b8-4ff2-af32-90d615e737d7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Software Distribution Advertisements
 Advertisements are evaluated by System Center Configuration Manager to determine which clients will receive a specific program to run on their computers.  

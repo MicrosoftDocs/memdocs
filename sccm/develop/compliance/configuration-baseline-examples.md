@@ -9,6 +9,7 @@ ms.assetid: 01ea3b16-7880-42d6-bca7-5110f6c56612
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Baseline Examples
 This section provides information about authoring configuration baselines in System Center Configuration Manager.  

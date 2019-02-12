@@ -10,6 +10,7 @@ ms.assetid: 49ef2ed2-2e15-4637-8b63-1d5b7f9c17e1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to test client upgrades in a pre-production collection in System Center Configuration Manager
 

@@ -8,6 +8,7 @@ ms.assetid: 4e5ccc20-b077-49ee-8462-0d4d2aa304ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Console Extension
 This section provides information about extending the System Center Configuration Manager console.  

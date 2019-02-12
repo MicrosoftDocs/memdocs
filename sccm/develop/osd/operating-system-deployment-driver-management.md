@@ -9,6 +9,7 @@ ms.assetid: 13e1e5e7-f633-4ca4-bad2-03d48bf9dada
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Operating System Deployment Driver Management
 This section shows how to manage Windows drivers in operating system deployment in System Center Configuration Manager.  

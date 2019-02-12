@@ -9,6 +9,7 @@ ms.assetid: 6cc27c1a-0e86-4727-8809-83c850c157cb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_G_USER_DCMDeploymentNonCompliantAssetDetails Server WMI Class
 The `SMS_G_USER_DCMDeploymentNonCompliantAssetDetails` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents non-compliant asset details for a deployment.  

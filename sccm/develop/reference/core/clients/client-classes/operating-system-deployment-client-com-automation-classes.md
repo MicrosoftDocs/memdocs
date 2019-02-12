@@ -9,6 +9,7 @@ ms.assetid: b341d3e6-8015-4718-b628-020e5a5d4914
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Operating System Deployment Client COM Automation Classes
 This section provides reference content for the operating system deployment task client COM automation classes in System Center Configuration Manager.  

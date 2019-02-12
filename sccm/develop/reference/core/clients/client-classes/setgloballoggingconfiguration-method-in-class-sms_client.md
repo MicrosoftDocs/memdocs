@@ -9,6 +9,7 @@ ms.assetid: e8bd00a9-c0a6-4b3c-9906-39fb2c342af4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SetGlobalLoggingConfiguration Method in Class SMS_Client
 The `SetGlobalLoggingConfiguration` method, in Configuration Manager, defines the global logging configuration for the client. This configuration represents either component-level logging or default logging if component-level logging is not defined.  

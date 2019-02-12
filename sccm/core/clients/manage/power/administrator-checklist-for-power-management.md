@@ -10,8 +10,12 @@ ms.assetid: 94e42cbe-9df8-4228-a04e-0ad7626180ca
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# Administrator checklist for power management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Administrator checklist for power management in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 This administrator checklist provides the recommended steps for using System Center Configuration Manager power management in your organization.  
 
 ## Configuring power management  

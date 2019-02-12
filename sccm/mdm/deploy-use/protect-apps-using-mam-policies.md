@@ -10,6 +10,7 @@ ms.assetid: 28115475-e563-4e16-bf30-f4c9fe704754
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Protect apps using mobile application management policies in System Center Configuration Manager
 

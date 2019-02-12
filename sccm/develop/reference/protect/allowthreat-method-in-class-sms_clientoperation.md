@@ -9,6 +9,7 @@ ms.assetid: 601d8cac-f0a7-4d98-82b6-60d3a8080b23
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # AllowThreat Method in Class SMS_ClientOperation
 The `AllowThreat` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that allows the specified threat (identified by `ThreatID`) to all members in a specific collection.  

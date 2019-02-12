@@ -10,6 +10,7 @@ ms.assetid: 45a10878-ff48-4318-9c6d-c014b38a4039
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Supported configurations for System Center Configuration Manager
 

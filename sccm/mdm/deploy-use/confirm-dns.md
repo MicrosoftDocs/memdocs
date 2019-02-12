@@ -10,6 +10,7 @@ ms.assetid: 522c2e82-20eb-4f38-859b-d55640b24e32
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Confirm domain name requirements with System Center Configuration Manager and Microsoft Intune
 

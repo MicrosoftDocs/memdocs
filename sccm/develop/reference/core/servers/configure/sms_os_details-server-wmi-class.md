@@ -9,6 +9,7 @@ ms.assetid: 1be82e7a-bb57-4ffa-a5c6-96c7f9739761
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_OS_Details Server WMI Class
 The `SMS_OS_Details` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that describes the supported platforms (operating system, architecture, and versions) on which a program can run.  

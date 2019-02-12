@@ -9,6 +9,7 @@ ms.assetid: a88c0d62-2288-48a6-814e-a91cabc44625
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Software Metering
 This section provides topics that show you how to programmatically manage Software Metering in System Center Configuration Manager.  

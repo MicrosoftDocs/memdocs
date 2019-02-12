@@ -9,6 +9,7 @@ ms.assetid: b03f13c1-d358-455b-a684-0bd8e8bd940a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Add an Operating System Deployment Task Sequence Action
 An operating system deployment task sequence action is added to a task sequence, in System Center Configuration Manager, by creating an instance of an [SMS_TaskSequence_Action](../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md) derived class and then adding it to the steps of the task sequence.  

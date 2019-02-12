@@ -10,6 +10,7 @@ ms.assetid: 27dd26d1-e99c-4431-b2f8-60406394b6db
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Set up hybrid Azure AD for co-management

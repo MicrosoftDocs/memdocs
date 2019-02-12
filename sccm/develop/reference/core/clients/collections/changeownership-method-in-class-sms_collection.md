@@ -9,6 +9,7 @@ ms.assetid: 41613023-d4e2-4933-a05a-ba84743c3b2b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ChangeOwnership Method in Class SMS_Collection
 The `ChangeOwnership` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, changes ownership of the devices.  

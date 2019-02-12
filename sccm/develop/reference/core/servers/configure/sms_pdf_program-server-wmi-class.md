@@ -9,6 +9,7 @@ ms.assetid: 5acde161-499a-43f3-9470-a83cebb7a3cd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_PDF_Program Server WMI Class
 The `SMS_PDF_Program` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a package definition file (PDF) template from which to create an initialized program.  

@@ -10,6 +10,7 @@ ms.assetid: 29350919-6a25-446b-a0da-05e8914fbb26
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Introduction to remote control in System Center Configuration Manager
 

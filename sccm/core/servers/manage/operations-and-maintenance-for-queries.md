@@ -10,8 +10,12 @@ ms.assetid: f050ee45-bcab-4a3b-9050-4952f5e2ec2e
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# Operations and maintenance for queries in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Operations and maintenance for queries in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Use the following topics in this section for operations and maintenance information for queries in System Center Configuration Manager.  
 
 ## In this section  

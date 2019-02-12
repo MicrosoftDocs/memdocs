@@ -9,6 +9,7 @@ ms.assetid: caf4341e-edbe-45e8-8bc1-eb205ba57ca4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Perform an Asynchronous Query by Using System.Management
 To perform an asynchronous query on a System Center Configuration Manager client Windows Instrumentation (WMI) namespace, create a `ManagementObjectSearcher` object that specifies a WQL query. You then create a `ManagementOperationObserver` that specifies an event handler for each query result and also for the end of the query.  

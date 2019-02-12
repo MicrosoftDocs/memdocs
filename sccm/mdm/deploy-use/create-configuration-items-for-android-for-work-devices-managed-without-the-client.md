@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.assetid: ab6784fd-8c57-4be9-858f-50fe39f2ff5f
 author: aczechowski
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
 # How to create configuration items for Android for Work devices managed with Intune
 

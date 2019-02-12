@@ -10,6 +10,7 @@ ms.assetid: 14226fbe-dd07-4432-910b-130790624a4e
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
 # How to create configuration items for Windows 10 devices managed with the System Center Configuration Manager Client
 Use the System Center Configuration Manager **Windows 10** configuration item to manage settings  for Windows 10 computers that are managed by the Configuration Manager client.  

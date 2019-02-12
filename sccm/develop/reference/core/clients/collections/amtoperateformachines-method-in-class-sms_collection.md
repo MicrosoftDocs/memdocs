@@ -9,6 +9,7 @@ ms.assetid: 2331c06d-65d8-4f20-961b-562afc88fc6b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # AMTOperateForMachines Method in Class SMS_Collection
 The `AMTOperateForMachines` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, executes an Intel Active Management (AMT) operation on a set of computers.  

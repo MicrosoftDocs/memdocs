@@ -9,6 +9,7 @@ ms.assetid: 01ad5660-fcae-4e18-bafd-453caa15bc30
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # GetAutoUpgradeConfigs Method in Class SMS_Site
 The `GetAutoUpgradeConfigs` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets configurations for auto-upgrade settings.  

@@ -2,7 +2,7 @@
 title: Log files for troubleshooting
 titleSuffix: Configuration Manager
 description: Use log files to troubleshoot issues with Configuration Manager clients and site systems.
-ms.date: 11/27/2018
+ms.date: 02/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,6 +10,7 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Log files in Configuration Manager
@@ -804,9 +805,10 @@ The following table lists the log files that contain information related to Disc
 ###  <a name="BKMK_WindowsServicingLog"></a>Windows 10 servicing  
  The following table lists the log files that contain information related to Windows 10 servicing.  
 Servicing uses the same infrastructure and process as software updates. For other logs applicable to the servicing scenario, see [Software updates](#BKMK_SU_NAPLog).
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
-|CBS.log|Records servicing failures related to changes for Windows Updates or roles and features.|Client|  
+|CBS.log|Records servicing failures related to changes for Windows Updates or roles and features.|Client|
 |DISM.log|Records all actions using DISM. If necessary, DISM.log will point to CBS.log for more details.|Client|
 |setupact.log|Primary log file for most errors that occur during the Windows installation process. The log file is located in the %windir%\$Windows.~BT\sources\panther folder.|Client|
 

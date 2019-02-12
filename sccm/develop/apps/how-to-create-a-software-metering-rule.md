@@ -9,6 +9,7 @@ ms.assetid: 9929aeac-7f48-4151-b228-d66be910a9c8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Create a Software Metering Rule
 You create a software metering rule, in System Center Configuration Manager, by creating an instance of the `SMS_MeteredProductRule` class and populating the properties.  

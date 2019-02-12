@@ -9,6 +9,7 @@ ms.assetid: eb11b75c-4a5d-47f5-81cb-8869156fdb1f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_PropertyDisplayNode Server WMI Class
 The `SMS_PropertyDisplayNode` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that defines the nodes that are displayed in Resource Explorer.  

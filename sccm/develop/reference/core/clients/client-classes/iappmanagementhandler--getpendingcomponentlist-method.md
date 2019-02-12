@@ -9,6 +9,7 @@ ms.assetid: d769f0da-1b46-4a3b-9dc7-f14d7a489020
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # IAppManagementHandler::GetPendingComponentList Method
 The `IAppManagementHandler::GetPendingComponentList` method, in Configuration Manager, gets the pending component list for a specified deployment type. This is an optional method for the application deployment type handler. It will be called if the handler returns a status of "PendingUpdate" for the `EnforceApp` method.  Software Center will present a list of these components to the end user, which need to be closed in order for the `EnforceApp` method to succeed.  

@@ -10,6 +10,7 @@ ms.assetid: e46ad501-5d73-44ac-92de-0de14ef72b83
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # How to deploy clients to Macs

@@ -9,6 +9,7 @@ ms.assetid: 2b9ed9ec-4f07-4d87-891c-773badf6a694
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Read a Configuration Manager Site Control File Embedded Property List
 In System Center Configuration Manager, you read an embedded property list from a site control file resource by getting the [SMS_EmbeddedPropertyList](../../../develop/reference/core/servers/configure/sms_embeddedpropertylist-server-wmi-class.md) object for the embedded object from the resources *PropLists* property array.  

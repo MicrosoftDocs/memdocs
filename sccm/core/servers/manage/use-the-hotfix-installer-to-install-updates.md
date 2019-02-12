@@ -10,6 +10,7 @@ ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Use the Hotfix Installer to install updates for System Center Configuration Manager
 

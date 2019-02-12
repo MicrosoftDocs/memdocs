@@ -10,6 +10,7 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
+ms.collection: M365-identity-device-management
 ---
 # Integration with Windows Update for Business in Windows 10
 

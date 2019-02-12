@@ -9,6 +9,7 @@ ms.assetid: 845956a1-e322-4a3a-bf7b-ed6dfd55da08
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_EndpointProtectionThreatData Server WMI Class
 The `SMS_EndpointProtectionThreatData` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents Microsoft official threats. This is a metadata table/view and all data is extracted from the signature update.  

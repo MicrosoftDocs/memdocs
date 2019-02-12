@@ -9,6 +9,7 @@ ms.assetid: 0a40d370-575f-480d-b998-9fd3c8cf7f1c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_FeatureExtension Server WMI Class
 The `SMS_FeatureExtension` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents feature extensions.  

@@ -9,6 +9,7 @@ ms.assetid: 9453f2e6-006a-4932-b67f-fda5e149133a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # CCM_RequestedAppPolicyActivation Client WMI Class
 The `CCM_RequestedAppPolicyActivation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a requested application policy activation.  

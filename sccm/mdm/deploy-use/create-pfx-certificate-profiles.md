@@ -10,6 +10,7 @@ ms.assetid: d240a836-c49b-49ab-a920-784c062d6748
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to create PFX certificate profiles using a certificate authority
 

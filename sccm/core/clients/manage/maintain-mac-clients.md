@@ -10,6 +10,7 @@ ms.assetid: cf6337a2-700c-47f3-b6f8-5814f9b81e59
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Maintain Mac clients

@@ -9,6 +9,7 @@ ms.assetid: e4387471-8956-42ed-85b2-fe53f6d8df1e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_MigrationDashboard Server WMI Class
 The `SMS_MigrationDashboard` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the migration feature dashboard.  

@@ -10,6 +10,7 @@ ms.assetid: 140c522f-d09a-40b6-a4b0-e0d14742834a
 author: brenduns
 ms.author: brenduns
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Tutorial: Enable co-management for existing Configuration Manager clients

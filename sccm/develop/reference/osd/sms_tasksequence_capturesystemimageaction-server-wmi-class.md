@@ -9,6 +9,7 @@ ms.assetid: e6e66344-a49d-4718-90e8-002e21c8aca5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_TaskSequence_CaptureSystemImageAction Server WMI Class
 The `SMS_TaskSequence_CaptureSystemImageAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that specifies an existing network share and WIM file to use when saving the image.  

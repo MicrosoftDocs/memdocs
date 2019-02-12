@@ -10,8 +10,12 @@ ms.assetid: 92c1ccca-a748-44cd-a52e-e41d34bf981d
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# Monitor compliance settings in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Monitor compliance settings in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 After you have deployed System Center Configuration Manager configuration baselines to devices in your hierarchy, you can use one or more of the procedures in this topic to display the compliance status of the configuration baseline:
 
 > [!NOTE]  

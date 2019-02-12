@@ -9,6 +9,7 @@ ms.assetid: a65b6385-f80f-4aa2-8e55-b8dc119e9673
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_SoftwareShortcut Client WMI Class
 The `SMS_SoftwareShortcut` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that defines a shortcut to executable files or a shortcut in a common system location.  
