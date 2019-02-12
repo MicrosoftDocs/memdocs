@@ -147,7 +147,7 @@ There are hundreds of possible errors. The following table lists the most common
 | 3399548929 | Need user sign-in<br><br>This issue should be transient. It occurs when the user quickly signs out before the enrollment task happens. | 
 | 3400073236 | ADAL security token request failed.<br><br>Check your Azure AD configuration, and make sure that users can successfully authenticate. |
 | 2149122477 | Generic HTTP issue |
-| 3400073247 | ADAL-integrated Windows authentication is only supported in federated flow<br><br>[Plan your hybrid Azure Active Directory join implementation](https://docs.microsoft.com/en-us/azure/active-directory/devices/hybrid-azuread-join-plan) | 
+| 3400073247 | ADAL-integrated Windows authentication is only supported in federated flow<br><br>[Plan your hybrid Azure Active Directory join implementation](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) | 
 | 3399942148 | The server or proxy was not found.<br><br>This issue should be transient, when the client can't communicate with cloud. If it persists, make sure the client has consistent connectivity to Azure. | 
 | 2149056532 | Specific platform or version is not supported<br><br>Make sure the device meets the [minimum requirements](/sccm/comanage/overview#windows-10) for co-management. |
 | 2147943568 | Element not found<br><br>This issue should be transient. If it persists, contact Microsoft Support. |
