@@ -6,10 +6,11 @@ ms.date: mm/dd/yyyy
 ms.prod: configuration-manager
 ms.technology: configmgr-other #app client compliance hybrid osd protect sum
 ms.topic: conceptual
-ms.assetid: [GET ONE FROM guidgenerator.com]
-author: [GITHUB USERNAME]
-ms.author: [ALIAS]
-manager: [ALIAS]
+ms.collection: M365-identity-device-management
+ms.assetid: [PowerShell New-Guid cmdlet]
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
 
 # Metadata and Markdown Template
