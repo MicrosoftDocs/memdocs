@@ -79,6 +79,8 @@ Before you start this tutorial, make sure you have the following prerequisites:
     - `https://nexusrules.officeapps.live.com`  
     - `https://nexus.officeapps.live.com`  
     - `https://office.pipe.aria.microsoft.com`  
+    - `https://graph.windows.net` (on Configuration Manager Server role only)
+    - `https://fef.bmsub01.manage-beta.microsoft.com` (on Configuration Manager Server role only)
 
     For more information, see [How to enable data sharing for Desktop Analytics](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
 
