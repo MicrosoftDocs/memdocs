@@ -135,17 +135,7 @@ After you verify that Intune standalone is functioning as you expect, start migr
 
 ## Migrate devices without user affinity
 
-Devices enrolled by using a device enrollment manager and devices without [user affinity](/sccm/mdm/deploy-use/user-affinity-for-hybrid-managed-devices) aren't automatically migrated to the new MDM authority. You can use the *Switch-MdmDeviceAuthority* PowerShell cmdlet to switch between Intune and Configuration Manager management authorities in the following scenarios: 
-
--	Scenario 1: Use the *Switch-MdmDeviceAuthority* cmdlet to migrate selected devices and validate that they can be managed using Intune in Azure. Then, when you're ready, [change the MDM authority to Intune for the tenant](migrate-change-mdm-authority.md) to complete the migration for the devices.  
-
--	Scenario 2: When you're ready to change the MDM authority to Intune for the tenant, take the following actions to migrate your devices without user affinity:  
-
-    - Use the cmdlet to change the MDM authority for your devices without user affinity before you [change the MDM authority to Intune for the tenant](migrate-change-mdm-authority.md).     
-
-    - Call support to have the devices without user affinity switched after you change the MDM authority to Intune for the tenant.  
-
-To switch the management authority for these MDM devices, you can use the *Switch-MdmDeviceAuthority* cmdlet to switch between Intune and Configuration Manager management authorities. 
+To migrate individual devices form Configuration Manager to Intune that were enrolled without user affinity, use the Switch-MdmDeviceAuthority PowerShell cmdlet.  After migrating selected devices using the cmdlet, validate in Intune in Azure that the migration occurred as expected for the selected devices. Then, when you're ready, change the MDM authority to Intune for the tenant to complete the migration for any remaining devices that have Configuration Manager as their MDM authority.
 
 ### Cmdlet *Switch-MdmDeviceAuthority*
 
