@@ -22,7 +22,16 @@ Windows 10 AADJ client uses AAD parameters to request AAD token.
 
 2.1 Request CCM Token:
 
-*Getting CCM Token from STS server 'CloudManagementGateway.cloudapp.net/CCM_PROXY_MUTUALAUTH/XXXXXX037938216'*
+*Getting CCM Token from STS server 'CloudManagementGateway.cloudapp.net/CCM_PROXY_MUTUALAUTH/XXXXXX037938216'* 
+
+
+2.2 CMG moves request to CMG Connector Point (IIS log, %CMG-Service.log)
+
+2.3 CMG Connector Point transforms CMG client request to MP client request: **https://myMP.Mylab.com/CCM_STS** (SMS_CLOUD_PROXYCONNECTOR.log)
+
+2.4 Management Point runs request against Database to verify AAD token and provide CCM token (CCM_STS.log)
+
+
 *Getting CCM Token from https://CloudManagementGateway.cloudapp.net/CCM_PROXY_MUTUALAUTH/XXXXXX037938216/CCM_STS*
 
 ## 3. Client request are done appending CCM token:
@@ -33,7 +42,7 @@ We cache the token and use it to request location, site information and content 
 *Sending location request to 'CloudManagementGateway.cloudapp.net/CCM_PROXY_MUTUALAUTH/XXXXXX037938216' with payload '< Request >*
 *Appending CCM Token to the header.*
 
-Once we are able to get client content from Distribution Point
+Once we are able to get client content from Distribution Point we run the install.
 
 Notes:
 
@@ -47,15 +56,7 @@ If AAD token cannot be retrieved from AAD we fallback to client certificate.
 
 
 
-2. CCM Token Request (Once we get AAD User token, we request CCM token):
 
-2.1 CMG Gets request -- _Getting CCM Token from https://myCMG.cloudapp.net/CCM_Proxy_ServerAuth/9/CCM_STS (CCMSetup.log)
-
-2.2 CMG moves request to CMG CP (IIS log, %CMGHttpHandler.log)
-
-2.3 CMG CP transforms CMG client request to MP client request -- https://myMP.Mylab.com/CCM_STS (SMS_CLOUD_PROXYCONNECTOR.log)
-
-2**.4 MP runs request against Database to verify user token** (CCM_STS.log)
 
 
 
@@ -81,4 +82,4 @@ CRL check enabled (use the /NoCRLcheck option in command line or publish CRL on 
 
 
 
-*Using /NoCRLCheck is only good for ccmsetup bootstrap . For the clients to fully functional, admins need to disable CRL check on that site’s client communication page. Otherwise after security settings refreshed by location service, the clients will not talk to the server anymoreEnvironment
+*Using /NoCRLCheck is only good for ccmsetup bootstrap. For the clients to fully functional, you need to disable CRL check on that site’s client communication page or publish it in internet.
