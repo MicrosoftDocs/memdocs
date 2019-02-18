@@ -118,7 +118,6 @@ The three security roles used for running scripts are not created by default in 
 |---|---|---|
 |Collection|Run Script|Yes|
 |Site|Read|Yes|
-|SMS Scripts|Create|Yes|
 |SMS Scripts|Read|Yes|
 
 

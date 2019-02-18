@@ -114,6 +114,8 @@ To enable operation, the computer that hosts the service connection point and an
 
 - `https://go.microsoft.com/fwlink/?LinkID=619849`  
 
+- `dl.delivery.mp.microsoft.com`  
+
 #### Azure services
 
 - `management.azure.com`  
