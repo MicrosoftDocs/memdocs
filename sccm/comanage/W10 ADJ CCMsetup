@@ -12,24 +12,26 @@ Windows 10 AADJ client uses AAD parameters to request AAD token.
 
 1.1 Request AAD Device token:
 
-Getting AAD (device) token with: ClientId = 22ed38d9-ba21-4036-be67-a98452fda4fc, ResourceUrl = https://ConfigMgrService, AccountId = https://login.microsoftonline.com/common/oauth2/token
+*Getting AAD (device) token with: ClientId = f1f9b14e-55b8-4f17-8c54-2593f6eee91e, ResourceUrl = https://ConfigMgrService, AccountId = https://login.microsoftonline.com/common/oauth2/token*
 
 1.2 If Device token is not retrieved, we request AAD user token:
-Getting AAD (user) token with: ClientId = f1f9b14e-55b8-4f17-8c54-2593f6eee91e, ResourceUrl = https://ConfigMgrService, AccountId = 649FC29A-ECE3-4A3B-A3C1-680A2F035A6E
+*Getting AAD (user) token with: ClientId = f1f9b14e-55b8-4f17-8c54-2593f6eee91e, ResourceUrl = https://ConfigMgrService, AccountId = 649FC29A-ECE3-4A3B-A3C1-680A2F035A6E*
 
 
 ## 2. CCM token request:
 
 2.1 Request CCM Token:
 
-Getting CCM Token from STS server 'CloudManagementGateway.cloudapp.net/CCM_PROXY_MUTUALAUTH/XXXXXX037938216'
-Getting CCM Token from https://CloudManagementGateway.cloudapp.net/CCM_PROXY_MUTUALAUTH/XXXXXX037938216/CCM_STS
+*Getting CCM Token from STS server 'CloudManagementGateway.cloudapp.net/CCM_PROXY_MUTUALAUTH/XXXXXX037938216'*
+*Getting CCM Token from https://CloudManagementGateway.cloudapp.net/CCM_PROXY_MUTUALAUTH/XXXXXX037938216/CCM_STS*
 
-## 3. We cache the token and use it to request location, site information and content location through Cloud Management Gateway:
+## 3. Client request are done appending CCM token:
 
-Cached encrypted token for 'S-1-5-18'. Will expire at '00/99/2999 00:00:00'
-Sending location request to 'CloudManagementGateway.cloudapp.net/CCM_PROXY_MUTUALAUTH/XXXXXX037938216' with payload '< Request >
-Appending CCM Token to the header.
+We cache the token and use it to request location, site information and content location through Cloud Management Gateway:
+
+*Cached encrypted token for 'S-1-5-18'. Will expire at '00/99/2999 00:00:00'*
+*Sending location request to 'CloudManagementGateway.cloudapp.net/CCM_PROXY_MUTUALAUTH/XXXXXX037938216' with payload '< Request >*
+*Appending CCM Token to the header.*
 
 Once we are able to get client content from Distribution Point
 
@@ -37,11 +39,11 @@ Notes:
 
 Traffics with invalid token will be blocked upfront on CMG service, We don’t route request to internal roles
 
-If WPJ certificate is not found, we do not try to request AAD token (client is not properly AAD joined)
+If WPJ certificate is not found, we do not try to request AAD token (client is not properly AAD joined).
 
-AAD (device) token is available from 1806. Previously, only AAD user token is used but we try Device as well (getting a failed request for device token).
+AAD (device) token is available from 1806. Previously, only AAD user token can be used but we try Device as well.
 
-If AAD token can be retrieved from AAD, we will use it, if not we will try AAD user token.
+If AAD token cannot be retrieved from AAD we fallback to client certificate.
 
 
 
@@ -57,7 +59,7 @@ If AAD token can be retrieved from AAD, we will use it, if not we will try AAD u
 
 
 
-- Communications Validation -
+### Communications Validation:
 
 CMG validates client token (via CMG, CMG CP and HTTP(S) and MP database request).
 
@@ -69,12 +71,14 @@ Third party CMG service certificate: Clients automatically validates certificate
 
 
 
-Common issues
-
-Root CA not present
-
-CRL check enabled (use the /NoCRLcheck option in command line or publish CRL on internet*)
+## Common issues:
 
 WPJ cert not found ( client Azure regsitered, not AAD joined)
 
-*Using /NoCRLCheck is only good for ccmsetup bootstrap for this case. For the clients to fully functional, admins need to disable CRL check on that site’s client communication page. Otherwise after security settings refreshed by location service, the clients will not talk to the server anymoreEnvironment
+Root CA certificate not present on Client Root CA store.
+
+CRL check enabled (use the /NoCRLcheck option in command line or publish CRL on internet*)
+
+
+
+*Using /NoCRLCheck is only good for ccmsetup bootstrap . For the clients to fully functional, admins need to disable CRL check on that site’s client communication page. Otherwise after security settings refreshed by location service, the clients will not talk to the server anymoreEnvironment
