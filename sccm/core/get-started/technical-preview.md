@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 02/08/2019
+ms.date: 02/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -100,7 +100,7 @@ Microsoft supports each technical preview version up until three successive vers
    
 Install a baseline version for up to one year after its release. When you install a new technical preview site, if more than one baseline version is currently available, use the latest baseline version.
 
--  **Technical preview version 1810.2**: The Configuration Manager technical preview version 1810.2 is available as both an in-console update and as a new baseline version. Download baseline versions from the [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
+-  **Technical preview version 1902.2**: The Configuration Manager technical preview version 1902.2 is available as both an in-console update and as a new baseline version. Download baseline versions from the [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
 
 
@@ -120,19 +120,14 @@ The following features are available with the most recent Configuration Manager 
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### Technical Preview version 1902
+### Technical Preview version 1902.2
 
-<!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor)<!--ID-->
+<!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID--> 
 
-- [Replace toast notifications with dialog window](/sccm/core/get-started/2019/technical-preview-1902#bkmk_impact)<!--3555947-->
-- [Progress status during in-place upgrade task sequence](/sccm/core/get-started/2019/technical-preview-1902#bkmk_ipu)<!--3747129-->
-- [Redirect Windows known folders to OneDrive](/sccm/core/get-started/2019/technical-preview-1902#bkmk_odfb)<!--3556021-->
-- [View first screen only during remote control](/sccm/core/get-started/2019/technical-preview-1902#bkmk_rcmulti)<!--3231732-->
-- [Edit or copy PowerShell scripts](/sccm/core/get-started/2019/technical-preview-1902#bkmk_psedit)<!--3705507-->
-- [Add cloud management gateway to boundary groups](/sccm/core/get-started/2019/technical-preview-1902#bkmk_cmgbg)<!--3640932-->
-- [Configure default views in Software Center](/sccm/core/get-started/2019/technical-preview-1902#bkmk_swctr)<!--3612112-->
-- [Improvements to client health dashboard](/sccm/core/get-started/2019/technical-preview-1902#bkmk_health)<!--3599209-->
-
+- [Additional languages for Office 365 updates](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_o365lang) <!--3555955--> 
+- [Integration with analytics for Office 365 ProPlus readiness](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_o365) <!--3735402--> 
+- [Improvement to phased deployment success criteria](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_pod) <!--3555946--> 
+- [Improvement to enhanced HTTP](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_ehttp) <!--3798957--> 
 
 
 > [!Note]  
@@ -151,6 +146,14 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  | Feature | Technical preview version | Current branch version |  
  |---------|---------------------------|------------------------|
+ | Replace toast notifications with dialog window <!--3555947--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_impact) | ![Not added](media/Red_X.gif) | 
+ | Progress status during in-place upgrade task sequence <!--3747129--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_ipu) | ![Not added](media/Red_X.gif) | 
+ | Redirect Windows known folders to OneDrive <!--3556021--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_odfb) | ![Not added](media/Red_X.gif) | 
+ | View first screen only during remote control <!--3231732--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_rcmulti) | ![Not added](media/Red_X.gif) | 
+ | Edit or copy PowerShell scripts <!--3705507--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_psedit) | ![Not added](media/Red_X.gif) | 
+ | Add cloud management gateway to boundary groups <!--3640932--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_cmgbg) | ![Not added](media/Red_X.gif) | 
+ | Configure default views in Software Center <!--3612112--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_swctr) | ![Not added](media/Red_X.gif) | 
+ | Improvements to client health dashboard <!--3599209--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_health) | ![Not added](media/Red_X.gif) | 
  | Client health dashboard <!--3599209--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_health) | ![Not added](media/Red_X.gif) | 
  | Specify priority for feature updates in Windows 10 servicing <!--3734525--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_neo) | ![Not added](media/Red_X.gif) | 
  | Dedicated monitoring for phased deployments <!--3555949--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_pod) | ![Not added](media/Red_X.gif) | 

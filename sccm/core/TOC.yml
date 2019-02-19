@@ -208,6 +208,8 @@
   - name: Technical Preview
     href: get-started/technical-preview.md
     items:
+    - name: 1902.2 features
+      href: get-started/2019/technical-preview-1902-2.md
     - name: 1902 features
       href: get-started/2019/technical-preview-1902.md
     - name: 1901 features
