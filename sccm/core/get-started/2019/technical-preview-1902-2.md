@@ -36,13 +36,13 @@ Review the [technical preview](/sccm/core/get-started/technical-preview) article
 **The following sections describe the new features to try out in this version:**  
 
 
-[!INCLUDE [Configuration Manager-generated certificates for the hierarchy](includes/1902-2/3798957.md)]
-
-[!INCLUDE [Integration with Office analytics for ProPlus readiness](includes/1902-2/3735402.md)]
-
 [!INCLUDE [Additional languages for Office 365 updates](includes/1902-2/3555955.md)]
 
+[!INCLUDE [Integration with analytics for Office 365 ProPlus readiness](includes/1902-2/3735402.md)]
+
 [!INCLUDE [Improvement to phased deployment success criteria](includes/1902-2/3555946.md)]
+
+[!INCLUDE [Improvement to enhanced HTTP](includes/1902-2/3798957.md)]
 
 
 
