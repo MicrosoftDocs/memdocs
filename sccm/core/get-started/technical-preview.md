@@ -124,10 +124,10 @@ The following features are available with the most recent Configuration Manager 
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID--> 
 
-- [Additional languages for Office 365 updates](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_anchor) <!--3555955--> 
-- [Integration with analytics for Office 365 ProPlus readiness](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_anchor) <!--3735402--> 
-- [Improvement to phased deployment success criteria](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_anchor) <!--3555946--> 
-- [Improvement to enhanced HTTP](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_anchor) <!--3798957--> 
+- [Additional languages for Office 365 updates](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_o365lang) <!--3555955--> 
+- [Integration with analytics for Office 365 ProPlus readiness](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_o365) <!--3735402--> 
+- [Improvement to phased deployment success criteria](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_pod) <!--3555946--> 
+- [Improvement to enhanced HTTP](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_ehttp) <!--3798957--> 
 
 
 > [!Note]  
