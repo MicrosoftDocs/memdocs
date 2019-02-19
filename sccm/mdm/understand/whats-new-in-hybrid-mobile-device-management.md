@@ -2,7 +2,7 @@
 title: What's new in hybrid MDM
 titleSuffix: Configuration Manager
 description: Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune.
-ms.date: 02/04/2019
+ms.date: 02/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -46,6 +46,11 @@ Each section of this article lists hybrid features under three different categor
 ## February 2019
 
 ### New in Microsoft Intune
+
+#### macOS users are prompted to update their password 
+<!--1873216-->
+On macOS devices, end users are prompted to update their password. This prompt happens whenever a user runs a task that requires authentication, such as signing in to the device. Users also prompted to update their password when doing anything that requires administrative privileges, such as requesting keychain access.  
+
 
 #### Intune macOS Company Portal Dark Mode
 <!--3300524-->
@@ -638,29 +643,6 @@ After December, end users who have devices other than the ones listed above can'
  
 #### Additional Information
 For more information, see [Enroll your macOS device in Intune with the Company Portal app](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos-cp).
-
-
-### Intune support experience for Premier customers now in Azure instead of MPO  
-<!--2828727-->
-
-We shared in MC147649 in September, that we would remove the ability to create Intune support requests from the Microsoft Premier Online (MPO) portal (premier.microsoft.com) in December. Now, after a slight delay, at the end of January, you'll be redirected to create support requests only in Intune on Azure.
-
-#### How does this affect me?
-After the end of January, to continue enhancing the Premier support experience, you won't be able to create support requests in MPO. When you try to do this action, you'll see a prompt that you can't dismiss redirecting you to Intune on Azure. Here, you can create a support request, which is routed to Intune-dedicated Microsoft Support. These support engineers will diagnose and resolve your issue in a timely manner. You can't view support requests in the Azure portal that you created in the MPO portal.
-
-The Azure portal has a new support experience as we announced recently in MC171941. For more information, see [How to get support for Microsoft Intune](https://aka.ms/new_support_experience).
-
-If you use hybrid MDM or co-management, continue to use MPO to create support requests for Configuration Manager. Use the Azure portal to create support requests for Intune. As a reminder, hybrid MDM is deprecated, and you should plan to move to Intune on Azure as soon as possible. For more information, see [Move from Hybrid Mobile Device Management to Intune on Azure](https://aka.ms/hybrid_notification).
-
-Only users with Global Administrator, Intune Service Administrator, and Service Support Administrator roles can create support tickets in the Azure portal.
-
-#### What can I do to prepare for this change?
-- Stop using MPO for Intune-related support requests. Use Intune on Azure to create and manage all your Intune support requests.  
-- Notify your helpdesk and update documentation, if necessary.  
-- If you have users without Global Administrator or Intune Service Administrator roles currently creating support requests in MPO, assign them the Service Support Administrator role in Azure Active Directory. Users require one of these roles to create support tickets in the Azure portal.  
-
-#### Additional Information
-For more information, see the [Microsoft Intune support team blog post](https://aka.ms/IntuneSupport_MPO_to_Azure).
 
 
 ### Plan for change: Use Intune on Azure now for your MDM management 
