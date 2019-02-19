@@ -2,7 +2,7 @@
 title: UUP Preview
 titleSuffix: Configuration Manager
 description: Instructions for preview of UUP integration
-ms.date: 01/30/2019
+ms.date: 02/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -242,3 +242,39 @@ For the preview, test with what you use in your real enterprise environments. UU
 - Third-party alternate content providers
 
 For more information, see [Optimize Windows 10 update delivery](/sccm/sum/deploy-use/optimize-windows-10-update-delivery).
+
+
+## Known issues
+
+### Additional resources are required on WSUS
+When synchronizing UUP updates, especially for the first time, additional resources are required on WSUS servers. In some cases, this behavior has blocked the update synchronization either with the top WSUS server or hierarchy sync to downlevel servers.
+
+This issue manifests as a synchronization failure in WSUS. Configuration Manager also shows it as a synchronization failure.
+
+#### Workaround
+Make the following changes on your top level WSUS server or any parent WSUS servers in your hierarchy:
+1. Increase the ServerSyncWebService timeout 
+
+    1. Make a backup copy of `C:\Program Files\Update Services\WebServices\serversyncwebservice\web.config` with a different name  
+
+    2. Open `C:\Program Files\Update Services\WebServices\serversyncwebservice\web.config` in Notepad  
+
+    3. Modify **httpRunTime** by adding an **executionTimeout** attribute, for example:  
+
+        `<httpRuntime maxRequestLength="4096" executionTimeout="3600" />`  
+
+    4. Save the web.config to a different location. This step is required because the config file is generally non-editable without taking ownership of the file.  
+
+    5. Then copy the modified web.config to the `C:\Program Files\Update Services\WebServices\serversyncwebservice` directory, replacing the older one.  
+
+    6. From an elevated command prompt, restart IIS: `IISReset`  
+
+        > [!Note]  
+        > This action temporarily stops the IIS server
+
+2. Increase the app pool memory for the WSUS server:  
+
+    1. Go to IIS Manager > Application Pools > Select WsusPool and select **Advanced Settings** in the right pane.  
+
+    2. Set both **Private Memory** and **Virtual Memory** limits to `0`.
+

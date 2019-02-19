@@ -632,15 +632,6 @@
       href: clients/manage/maintain-mac-clients.md
     - name: Surface device dashboard
       href: clients/manage/surface-device-dashboard.md
-  - name: Co-management for Windows 10 devices
-    href: clients/manage/co-management-overview.md
-    items:
-    - name: Prepare Windows 10 devices for co-management
-      href: clients/manage/co-management-prepare.md
-    - name: Switch Configuration Manager workloads to Intune
-      href: clients/manage/co-management-switch-workloads.md
-    - name: Co-management dashboard
-      href: clients/manage/co-management-dashboard.md
   - name: Manage clients on the internet
     href: clients/manage/manage-clients-internet.md
     items:
