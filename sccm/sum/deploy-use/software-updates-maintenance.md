@@ -74,7 +74,7 @@ All WSUS Maintenance needs to be run manually on secondary site WSUS databases. 
 
 ## WSUS cleanup behavior starting in version 1810
 
-WSUS cleanup is added for secondary sites starting in Configuration Manager version 1810. Starting version 1810, the WSUS cleanup option occurs after every sync and does the following cleanup items:
+Starting version 1810, the WSUS cleanup option occurs after every sync and does the following cleanup items:
 <!--2839349-->
 
 - The **Expired updates** option for WSUS servers on CAS, primary, and secondary sites.
