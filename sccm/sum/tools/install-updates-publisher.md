@@ -2,13 +2,13 @@
 title: "Install Updates Publisher"
 titleSuffix: "Configuration Manager"
 description: "Install System Center Updates Publisher in your environment"
-ms.date: 07/03/2017
+ms.date: 02/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
 ms.assetid: ab5cda93-b67c-4aa5-904d-7b63ce790aa0
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -16,11 +16,12 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Updates Publisher*
 
-The information in this topic can help you get, install, and set up Updates Publisher for use with your environment.
-
+The information in these articles can help you download, install, and set up Updates Publisher for use with your System Center Configuration Manager environment.
 
 ## Prerequisites and limitations
-The following sections detail requirements to install and use Updates Publisher, and limitations or known issues for its use.
+System Center Updates Publisher can only be used with System Center Configuration Manager. It isn't intended for use with stand-alone WSUS hierarchies.
+
+The following sections detail requirements to install and use Updates Publisher, and limitations or known issues for its use.  
 
 ### Operating systems
 Install and run Updates Publisher on a 64-bit editions of the following operating systems. There are no minimum cumulative update or service pack requirements.
@@ -110,5 +111,5 @@ After installation completes, run **UpdatesPublisher.exe** from the *UpdatesPubl
 ## Next steps
  After you install Updates Publisher, we recommend you [configuring the options](updates-publisher-options.md) for Updates Publisher. You must configure some options before you can use some features of Updates Publisher.
 
- However, if you want to use the defaults and do not plan to deploy updates to an update server or to managed devices, you can jump right to [managing software update catalogs](updates-publisher-catalogs.md), or [create software updates](create-updates-with-updates-publisher.md) and create update catalogs of your own.
+ However, if you want to use the defaults and don't plan to deploy updates to an update server or to managed devices, you can jump right to [managing software update catalogs](updates-publisher-catalogs.md), or [create software updates](create-updates-with-updates-publisher.md) and create update catalogs of your own.
 
