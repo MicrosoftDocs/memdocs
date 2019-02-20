@@ -2,7 +2,7 @@
 title: Install Software Updates
 titleSuffix: Configuration Manager
 description: Recommendations for using the task sequence step Install Software Updates in Configuration Manager.
-ms.date: 01/28/2019
+ms.date: 02/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -63,7 +63,7 @@ For more information on this process, see [Create a task sequence to capture an 
 
 
 #### Advantages
-- Few updates to apply at deployment time, which saves time during deployment
+- Fewer updates to apply at deployment time per client, which saves time and bandwidth during deployment
 - Fewer updates to worry about causing restarts
 - Customized image for the organization
 - Fewer variables at deployment time
@@ -82,7 +82,7 @@ For more information, see [Apply software updates to an image](/sccm/osd/get-sta
 
 
 #### Advantages
-- Few updates to apply at deployment time, which saves time during deployment
+- Fewer updates to apply at deployment time per client, which saves time and bandwidth during deployment
 - Fewer updates to worry about causing restarts
 - You can schedule the servicing process at the site
 
@@ -107,8 +107,22 @@ Use the default Windows install.wim image file in your deployment task sequences
 
 
 
-## Flow chart
+## Flowchart
 
-{insert flowchart diagram and text description}
+This flowchart diagram shows the process when you include the Install Software Updates step in a task sequence.
 
+![Flowchart diagram for the Install Software Updates task sequence step](media/ts-step-install-software-updates.png)
+
+[View the diagram at full size](media/ts-step-install-software-updates.png)
+
+
+### Timeouts
+
+The diagram includes two of the timeout variables that apply to this step. There are other standard timers from other components that can impact this process. 
+
+- Update scan timeout: 1 hour (smsts.log)  
+- Location request timeout: 1 hour (LocationServices.log, CAS.log)  
+- Content download timeout: 1 hour (DTS.log)  
+- Inactive distribution point timeout: 1 hour (LocationServices.log, CAS.log)  
+- Total install inactive timeout: 8 hours (smsts.log)  
 
