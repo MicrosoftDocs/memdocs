@@ -2,7 +2,7 @@
 title: What's new in version 1810
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1810 of Configuration Manager current branch.
-ms.date: 01/25/2019
+ms.date: 02/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -274,7 +274,11 @@ By default, this option is **No** to keep consistent with the existing behavior.
 
 <!--For more information, see []().-->
 
+### Improvement to software updates maintenance
+<!--2839349-->
+WSUS cleanup tasks now run on secondary sites. WSUS cleanup for expired updates is run and superceded updates are declined in WSUS for secondary sites.
 
+For more information, see [WSUS cleanup behavior starting in version 1810](/sccm/sum/deploy-use/software-updates-maintenance#wsus-cleanup-behavior-starting-in-version-1810)
 
 ## <a name="bkmk_report"></a> Reporting
 
