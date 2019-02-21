@@ -115,7 +115,7 @@ Use the default Windows install.wim image file in your deployment task sequences
 
 This flowchart diagram shows the process when you include the Install Software Updates step in a task sequence.
 
-![Flowchart diagram for the Install Software Updates task sequence step](media/ts-step-install-software-updates.png)
+![Flowchart diagram for the Install Software Updates task sequence step](media/ts-step-install-software-updates.svg)
 
 [View the diagram at full size](media/ts-step-install-software-updates.svg)
 
