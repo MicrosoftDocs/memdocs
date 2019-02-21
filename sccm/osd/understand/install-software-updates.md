@@ -94,7 +94,20 @@ For more information, see [Apply software updates to an image](/sccm/osd/get-sta
 - Only supports CBS-based updates. It can't apply Office updates
 
 > [!Tip]  
-> You can automate the selection of software updates using PowerShell. Use the [Get-CMSoftwareUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmsoftwareupdate?view=sccm-ps) cmdlet to get a list of updates. Then use the [New-CMOperatingSystemImageUpdateSchedule](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmoperatingsystemimageupdateschedule?view=sccm-ps) cmdlet to create the offline servicing schedule.  
+> You can automate the selection of software updates using PowerShell. Use the [Get-CMSoftwareUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmsoftwareupdate?view=sccm-ps) cmdlet to get a list of updates. Then use the [New-CMOperatingSystemImageUpdateSchedule](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmoperatingsystemimageupdateschedule?view=sccm-ps) cmdlet to create the offline servicing schedule. The following example shows one method to automate this action:
+> 
+> ```PowerShell
+> # Get the OS image
+> $Win10Image = Get-CMOperatingSystemImage -Name "Windows 10 Enterprise"
+> 
+> # Get the latest cumulative update for Windows 10 1809
+> $OSBuild = "1809"
+> $LatestUpdate = Get-CMSoftwareUpdate -Fast | Where {$_.LocalizedDisplayName -Like "*Cumulative Update for Windows 10 Version $OSBuild for x64*" -and $_.LocalizedDisplayName -notlike "*Dynamic*"} | Sort-Object ArticleID -Descending | Select -First 1 
+> Write-Host "Latest update for Windows 10 build" $OSBuild "is" $LatestUpdate.LocalizedDisplayName
+> 
+> # Create a new update schedule to apply the latest update
+> New-CMOperatingSystemImageUpdateSchedule -Name $Win10Image.Name -SoftwareUpdate $LatestUpdate -RunNow -ContinueOnError $True 
+> ```
 
 
 ### <a name="bkmk_installwim"></a> Use default image only
