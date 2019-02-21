@@ -2,7 +2,7 @@
 title: Configuration Manager Console
 titleSuffix: Configuration Manager
 description: Learn about navigating through the Configuration Manager console.
-ms.date: 11/27/2018
+ms.date: 2/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -151,6 +151,8 @@ Starting in version 1806, the following columns are available in the **Devices**
 - **Primary user(s)** <!--1357280-->  
 
 - **Currently logged on user** <!--1358202-->  
+    > [!NOTE]  
+    > Viewing the currently logged on user requires [user discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_config-adud) and [user device affinity](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).  
 
 For more information on how to show a non-default column, see [Columns](#columns).
 
