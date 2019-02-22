@@ -1537,6 +1537,9 @@ Specify the name of a task sequence built-in or action variable, or specify your
 <!--1358330-->
 Starting in version 1806, enable this option to mask sensitive data stored in task sequence variables. For example, when specifying a password. 
 
+> [!Note]  
+> Enable this option and then set the value of the task sequence variable. Otherwise the variable value isn't set as you intend, which may cause unexpected behaviors when the task sequence runs.<!--SCCMdocs issue #800--> 
+
 #### Value  
 The task sequence sets the variable to this value. Set this task sequence variable to the value of another task sequence variable with the syntax `%varname%`.  
 
