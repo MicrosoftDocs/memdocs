@@ -1112,9 +1112,9 @@ Starting in version 1806, this option instructs Sysprep to shutdown the computer
 
 Starting in version 1810, this step is used in the [Windows Autopilot for existing devices](/sccm/osd/deploy-use/windows-autopilot-for-existing-devices) task sequence.
 
-    - If you want the task sequence to refresh the device and then immediately start OOBE for Autopilot, leave this option off.  
+- If you want the task sequence to refresh the device and then immediately start OOBE for Autopilot, leave this option off.  
 
-    - Enable this option to shutdown the device after imaging. Then you can deliver the device to a user, who starts OOBE with Autopilot when they turn it on for the first time.  
+- Enable this option to shutdown the device after imaging. Then you can deliver the device to a user, who starts OOBE with Autopilot when they turn it on for the first time.  
 
 
 
