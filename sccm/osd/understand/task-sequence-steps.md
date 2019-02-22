@@ -1434,6 +1434,11 @@ Determine which PowerShell scripts (if any) you allow to run on the computer. Ch
 
 Beginning with Configuration Manager version 1710, you can add a new step that runs another task sequence. This step creates a parent-child relationship between the task sequences. With child task sequences, you can create more modular, reusable task sequences.
 
+To add this step in the task sequence editor, select **Add**, select **General**, and select **Run Task Sequence**. 
+
+
+### Specifications and limitations
+
 Consider the following points when you add a child task sequence to a task sequence:  
 
 - The parent and child task sequences are effectively combined into a single policy that the client runs.  
@@ -1444,8 +1449,14 @@ Consider the following points when you add a child task sequence to a task seque
 
 - The task sequence writes entries to the **smsts.log** file, with new log entries that make it clear when a child task sequence starts.  
 
+<!--the following points are from SCCMdocs issue #1079--> 
+- You can't select a task sequence with a boot image reference. For any deployment that requires a boot image, specify it on the parent task sequence.  
 
-To add this step in the task sequence editor, select **Add**, select **General**, and select **Run Task Sequence**. 
+- If a child task sequence is disabled, the deployment fails. You can't use the **Continue on error** option to work around this limitation.  
+
+- If a child task sequence contains steps that are considered *high impact*, Software Center doesn't detect it and show the high-impact notification. Modify the properties of the parent task sequence, on the User Notification tab, to specify that **This is a high-impact task sequence**.  
+
+- If a child task sequence has a missing package reference, viewing the parent task sequence doesn't detect this state. If you edit the parent task sequence, it detects any missing references in child task sequences when you make changes to the parent.  
 
 
 ### Properties
