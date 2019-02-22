@@ -79,13 +79,13 @@ Move the service connection point role to another server.
 
 
 
-## Operating system deployment
+## OS deployment
 
 ### After passive site server is promoted, the default boot image packages still have package source on the previous active server
 <!--3453224, SCCMDocs-pr issue 3097-->
-If you have a site server in passive mode (server B), after you promote it to active, the default boot image packages still have package source on the previous active server (server A).
+*Applies to: Configuration Manager version 1810*
 
-If yo have a site server in passive mode (server B), when you promote it to active, the content location for the default boot images continues to reference the previously active server (server A). If server A has a hardware failure, you can't update or change the default boot images.
+If you have a site server in passive mode (server B), when you promote it to active, the content location for the default boot images continues to reference the previously active server (server A). If server A has a hardware failure, you can't update or change the default boot images.
 
 #### Workaround
 None
