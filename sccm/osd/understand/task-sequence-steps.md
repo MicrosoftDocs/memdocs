@@ -1118,31 +1118,37 @@ ms.collection: M365-identity-device-management
 
 ##  <a name="BKMK_PrepareWindowsforCapture"></a> Prepare Windows for Capture  
 
- Use this step to specify the Sysprep options when capturing an OS image on the reference computer. This step runs Sysprep, and then reboots the computer into the Windows PE boot image specified for the task sequence. This action fails if the reference computer is joined to a domain.  
+Use this step to specify the Sysprep options when capturing an OS image on the reference computer. This step runs Sysprep, and then reboots the computer into the Windows PE boot image specified for the task sequence. This action fails if the reference computer is joined to a domain.  
 
- This step runs only in the full OS. It doesn't run in Windows PE.   
+This step runs only in the full OS. It doesn't run in Windows PE.   
 
- Use the following task sequence variables with this step:  
- - [OSDKeepActivation](/sccm/osd/understand/task-sequence-variables#OSDKeepActivation)  
- - [OSDTargetSystemRoot](/sccm/osd/understand/task-sequence-variables#OSDTargetSystemRoot-output)  
+Use the following task sequence variables with this step:  
+- [OSDKeepActivation](/sccm/osd/understand/task-sequence-variables#OSDKeepActivation)  
+- [OSDTargetSystemRoot](/sccm/osd/understand/task-sequence-variables#OSDTargetSystemRoot-output)  
 
 
- To add this step in the task sequence editor, click **Add**, select **Images**, and select **Prepare Windows for Capture**. 
+To add this step in the task sequence editor, click **Add**, select **Images**, and select **Prepare Windows for Capture**. 
 
 
 ### Properties  
 
- On the **Properties** tab for this step, configure the settings described in this section.  
+On the **Properties** tab for this step, configure the settings described in this section.  
 
 #### Automatically build mass storage driver list
- Select this option to have Sysprep automatically build a list of mass storage drivers from the reference computer. This option enables the Build Mass Storage Drivers option in the sysprep.inf file on the reference computer. For more information about this setting, see the Sysprep documentation.  
+Select this option to have Sysprep automatically build a list of mass storage drivers from the reference computer. This option enables the Build Mass Storage Drivers option in the sysprep.inf file on the reference computer. For more information about this setting, see the Sysprep documentation.  
 
 #### Do not reset activation flag
- Select this option to prevent Sysprep from resetting the product activation flag.  
+Select this option to prevent Sysprep from resetting the product activation flag.  
 
 #### Shutdown the computer after running this action
- <!--SCCMDocs-pr issue 2695-->
- Starting in version 1806, this option instructs Sysprep to shutdown the computer instead of its default restart behavior. 
+<!--SCCMDocs-pr issue 2695-->
+Starting in version 1806, this option instructs Sysprep to shutdown the computer instead of its default restart behavior. 
+
+Starting in version 1810, this step is used in the [Windows Autopilot for existing devices](/sccm/osd/deploy-use/windows-autopilot-for-existing-devices) task sequence.
+
+   - If you want the task sequence to refresh the device and then immediately start OOBE for Autopilot, leave this option off.  
+
+   - Enable this option to shutdown the device after imaging. Then you can deliver the device to a user, who starts OOBE with Autopilot when they turn it on for the first time.  
 
 
 
