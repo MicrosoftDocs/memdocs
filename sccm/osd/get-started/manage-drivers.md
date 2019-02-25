@@ -24,7 +24,7 @@ System Center Configuration Manager provides a driver catalog that you can use t
 ##  <a name="BKMK_ManagingDriverPackages"></a> Driver packages  
  You can group similar device drivers in packages to help streamline operating system deployments. For example, you might decide to create a driver package for each computer manufacturer on your network. You can create a driver package while you are importing drivers into the driver catalog directly in the **Driver Packages** node. After the driver package is created, it must be distributed to distribution points from which Configuration Manager client computers can install the drivers as they are required. Consider the following:  
 
-- When you create a driver package, the source location of the package must point to an empty network share that is not used by another driver package, and the SMS Provider must have Read and Write permissions to that location.  
+- When you create a driver package, the source location of the package must point to an empty network share that is not used by another driver package, and the SMS Provider must have Full Control permissions to that location.  
 
 - When you add device drivers to a driver package, Configuration Manager copies the device driver to the driver package source location. You can add only device drivers that have been imported and that are enabled in the driver catalog to a driver package.  
 
@@ -58,7 +58,7 @@ System Center Configuration Manager provides a driver catalog that you can use t
 6. In the **Path** box, specify an empty source folder for the driver package. Enter the path to the source folder in Universal Naming Convention (UNC) format. Each driver package must use a unique folder.  
 
    > [!IMPORTANT]  
-   >  The site server account must have **Read** and **Write** permissions to the specified source folder.  
+   >  The site server account must have **Full Control** permissions to the specified source folder.  
 
    The new driver package does not contain any drivers. The next step is to add drivers to the package.  
 
