@@ -2,7 +2,7 @@
 title: Windows Autopilot with co-management
 titleSuffix: Configuration Manager
 description: Use Windows Autopilot with co-management in Configuration Manager to simplify the set up of new Windows 10 devices.
-ms.date: 01/14/2019
+ms.date: 02/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -89,5 +89,9 @@ Create satisfaction in your organization by creating a better user experience fo
 
 ## Configure
 
-For more information, see [Enroll Windows devices in Intune by using the Windows Autopilot](https://docs.microsoft.com/intune/enrollment-autopilot).
+For more information, see the following articles:
+
+[Use Intune to create Windows Autopilot profiles](https://docs.microsoft.com/intune/enrollment-autopilot)
+
+[Windows Autopilot for existing devices](/sccm/osd/deploy-use/windows-autopilot-for-existing-devices) task sequence
 
