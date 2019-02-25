@@ -40,6 +40,8 @@ Here are some considerations to keep in mind when deploying and monitoring appli
 
 - MDM-enrolled devices do not support simulated deployments, user experience, or scheduling settings.
 
+- You can't add more than 100 locales to a single app. Adding now than 100 locales will prevent the app from syncing with Intune and from being installed or bring available to install on the device.
+
 - You can associate the deployment with an iOS app configuration policy if you have already congured one. See [Configure iOS apps with app configuration policies](configure-ios-apps-with-app-configuration-policies.md).
 
 ### Next Steps
