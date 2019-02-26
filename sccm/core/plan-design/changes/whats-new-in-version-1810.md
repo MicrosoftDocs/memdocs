@@ -2,7 +2,7 @@
 title: What's new in version 1810
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1810 of Configuration Manager current branch.
-ms.date: 02/19/2019
+ms.date: 02/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -182,10 +182,10 @@ For more information, see [Co-management dashboard](/sccm/comanage/how-to-monito
 ## <a name="bkmk_app"></a> Application management
 
 ### Convert applications to MSIX
-<!--1359029-->
-Starting in version 1806, Configuration Manager supports deployment of the new Windows 10 app package (.msix) format. Now you can convert your existing Windows Installer (.msi) applications to the MSIX format.
+<!--3607729, fka 1359029-->
+***[Updated]*** Starting in version 1806, Configuration Manager supports deployment of the new Windows 10 app package (.msix) format. Now you can convert your existing Windows Installer (.msi) applications to the MSIX format.
 
-<!--For more information, see [Create Windows applications](/sccm/apps/get-started/creating-windows-applications#bkmk_general).  this might move to a new section for msix-->
+For more information, see [Create Windows applications](/sccm/apps/get-started/creating-windows-applications#bkmk_msix).  
 
 
 ### Repair applications
@@ -217,11 +217,11 @@ A PowerShell profile is a script that runs when PowerShell starts. You can creat
 ## <a name="bkmk_osd"></a> OS deployment
 
 ### Task sequence support of Windows Autopilot for existing devices
-<!--1358333-->
+<!--3607717, fka 1358333-->
 
-[Windows Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430), is now available with Windows 10, version 1809 or later. This new feature allows you to reimage and provision a Windows 7 device for [Windows Autopilot user-driven mode](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) using a single, native Configuration Manager task sequence. 
+***[Updated]*** [Windows Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) is now available with Windows 10, version 1809 or later. This new feature allows you to reimage and provision a Windows 7 device for [Windows Autopilot user-driven mode](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) using a single, native Configuration Manager task sequence. 
 
-<!--For more information, see []().--> 
+For more information, see [Windows Autopilot for existing devices](/sccm/osd/deploy-use/windows-autopilot-for-existing-devices).
 
 
 ### Specify the drive for offline OS image servicing  

@@ -2,7 +2,7 @@
 title: Deprecated features
 titleSuffix: Configuration Manager
 description: Learn about the features that Configuration Manager no longer supports.
-ms.date: 01/30/2019
+ms.date: 02/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -27,6 +27,7 @@ This information is subject to change with future releases. It might not include
 
 |Feature|Deprecation first announced|Support&nbsp;removed|  
 |-----------|---|--------------|  
+|The implementation for sharing content from Azure has changed. Use a content-enabled cloud management gateway. You won't be able to create a traditional cloud distribution point in the future.|February 2019|The first version released after November 1, 2019|
 |Classic service deployment to Azure for cloud management gateway and cloud distribution point. For more information, see [Plan for CMG](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).|November 2018|The first version released after July 1, 2019| 
 |System Center Endpoint Protection for Mac and Linux<br>For more information, see [End of support blog post](https://go.microsoft.com/fwlink/?linkid=870182).|October 2018|December 31, 2018|
 |On-premises conditional access<br>For more information, see [What is hybrid MDM](/sccm/mdm/understand/hybrid-mobile-device-management).|January 30, 2019|September 1, 2019|

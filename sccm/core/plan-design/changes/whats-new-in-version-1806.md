@@ -298,7 +298,7 @@ For more information, see [Deploy Office 365 apps](/sccm/sum/deploy-use/manage-o
 <!--1357427-->
 Configuration Manager now supports the deployment of new Windows 10 app package (.msix) and app bundle (.msixbundle) formats. 
 
-For more information, see [Create Windows applications](/sccm/apps/get-started/creating-windows-applications#bkmk_general).
+For more information, see [Create Windows applications](/sccm/apps/get-started/creating-windows-applications#bkmk_msix).
 
 
 ### Uninstall application on approval revocation

@@ -1,8 +1,8 @@
 ---
-title: Prepare for operating system deployment
-titleSuffix: "Configuration Manager"
-description: "Read these articles to learn about what you must do in Configuration Manager to prepare for operating system deployments."
-ms.date: 10/06/2016
+title: Prepare for OS deployment
+titleSuffix: Configuration Manager
+description: Learn about how to prepare for operating system deployments in Configuration Manager
+ms.date: 02/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -12,17 +12,18 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Prepare for operating system deployment in System Center Configuration Manager
+
+# Prepare for OS deployment in Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-There are several things you must do in Configuration Manager before you can deploy operating systems. Use the following topics to prepare for operating system deployment:  
+There are several things you must do in Configuration Manager before you can deploy operating systems. Use the following articles to prepare for OS deployment:  
 
 -   [Manage boot images](manage-boot-images.md)  
 
--   [Manage operating system images](manage-operating-system-images.md)  
+-   [Manage OS images](manage-operating-system-images.md)  
 
--   [Manage operating system upgrade packages](manage-operating-system-upgrade-packages.md)  
+-   [Manage OS upgrade packages](manage-operating-system-upgrade-packages.md)  
 
 -   [Manage drivers](manage-drivers.md)  
 
@@ -31,3 +32,26 @@ There are several things you must do in Configuration Manager before you can dep
 -   [Prepare for unknown computer deployments](prepare-for-unknown-computer-deployments.md)  
 
 -   [Associate users with a destination computer](associate-users-with-a-destination-computer.md)  
+
+
+
+### OS image size  
+
+OS images are large in size. For example, the image size for Windows 7 is 3 GB or more. The size of the image and the number of computers to which you simultaneously deploy the OS affects the network performance and available bandwidth. Make sure to test the network performance. Testing the impact better gauges the effect the image deployment might have and the time it takes to complete the deployment. Configuration Manager activities that affect network performance include distributing the image to a distribution point, distributing the image from one site to another, and downloading the image to the client.  
+
+Also make sure that you plan for sufficient disk storage space on the distribution points that host the OS images.  
+
+For more information, see [Additional planning considerations for distribution points](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_AdditionalPlanning).
+
+
+### Client cache size  
+
+When Configuration Manager clients download content, they automatically use Background Intelligent Transfer Service (BITS), if it's available. When you deploy a task sequence that installs an OS, you can set an option on the deployment so that Configuration Manager clients download the full image to a local cache before the task sequence runs.  
+
+When a Configuration Manager client must download an OS image, but there isn't enough space in the cache, the client can clear space in its cache. It checks the other packages in the cache to determine whether deleting any of the oldest packages will free enough disk space to accommodate the image. If deleting packages doesn't free enough space, the client doesn't download the image, and the deployment fails. This behavior might occur if the cache has a large package that you configure to persist in the cache. If deleting packages does free enough disk space in the cache, the client deletes them, and then downloads the image into the cache.  
+
+The default cache size on Configuration Manager clients might not be large enough for most OS image deployments. If you plan to download the full image to the client cache, adjust the client cache size on the destination computers to accommodate the size of the image that you're deploying.  
+
+For more information, see [Configure the client cache](/sccm/core/clients/manage/manage-clients#BKMK_ClientCache).  
+
+
