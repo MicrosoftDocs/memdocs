@@ -403,6 +403,8 @@ The following additional hotfixes are available to address specific issues:
 | ID | Title | Date | In-console |
 |---------|---------|---------|---------|
 | [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune connector certificate does not renew in Configuration Manager | 18 January 2019 | Yes |
+| [4490434](https://support.microsoft.com/help/4490434) | Duplicate user discovery columns are created in Configuration Manager | 22 February 2019 | Yes |
+| [4490575](https://support.microsoft.com/help/4490575) | Update installations stop responding or never show completion in Configuration Manager, version 1810 | 22 February 2019 | Yes |
 
 
 ## Next steps
