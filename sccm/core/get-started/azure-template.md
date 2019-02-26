@@ -111,10 +111,10 @@ Active Directory domain controller
 - Internet Information Service (IIS)
 
 
-### `<prefix>MPDP`
+### `<prefix>DPMP`
 
-- Management point
 - Distribution point
+- Management point
 
 #### Windows features and roles
 - .NET
