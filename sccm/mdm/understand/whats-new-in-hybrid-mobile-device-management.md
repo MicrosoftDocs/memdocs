@@ -60,8 +60,6 @@ Some admins are faced with a BYOD landscape where users may root or jailbreak th
 
 With this release, Intune now leverages Google Play Protect APIs to add to our existing root detection checks for unenrolled devices. While Google doesn't share the entirety of the root detection checks that occur, we expect these APIs to detect users who have rooted their devices for any reason from device customization to being able to get newer OS updates on older devices. These users can then be blocked from accessing corporate data, or their corporate accounts can be wiped from their policy enabled apps. 
 
-For additional value, you now have several reporting updates within Intune App Protection. The "Flagged Users" report shows which users are detected via Google Play Protect's SafetyNet API scan. The "Potentially Harmful Apps" report shows which apps are detected via Google's Verify Apps API scanning. This feature is available on Android. 
-
 
 #### New **App categories** screen in the Company Portal app for Windows 10
 <!--3834780-->
