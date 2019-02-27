@@ -1,7 +1,7 @@
 ---
-title: State Messages in Configuration Manager
+title: State messages
 titleSuffix: Configuration Manager
-description: Descriptions of State Messages in the supported versions of System Center Configuration Manager.
+description: Descriptions of state messages in the supported versions of Configuration Manager.
 ms.date: 02/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -12,19 +12,19 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# State Messages in System Center Configuration Manager 
 
-*Applies To: All supported versions of System Center Configuration Manager.*
+# State messages in Configuration Manager 
 
-State messages contain concise information about conditions on the Configuration Manager 2012 client. The state messaging system is used by specific components of Configuration Manager, such as software updates, desired configuration management, and network access protection.
+*Applies To: System Center Configuration Manager (Current Branch)*
 
-Configuration Manager clients send state messages to fallback status point or management point site systems to report the current state of Configuration Manager  client operations. Reports can be created and used to view state messages sent by Configuration Manager clients.
+State messages contain concise information about conditions on the Configuration Manager client. The state messaging system is used by specific components of Configuration Manager, such as software updates and configuration settings.
 
-Each Configuration Manager feature that uses state messages is identified by the topic type of the state message. The state message topic types listed in the following table can be used to define the Configuration Manager feature that a state message relates to.
+Configuration Manager clients send state messages to fallback status point or management point site systems to report the current state of operations. You can create reports to view state messages sent by Configuration Manager clients.
 
-> [!NOTE}
->
-> A State Message ID value of zero (0) typically indicates topic type is in an unknown state.
+Each Configuration Manager feature that uses state messages is identified by the topic type of the state message. The state message topic types listed in this article can be used to define the Configuration Manager feature that a state message relates to.
+
+> [!NOTE]  
+> A state message ID value of zero (0) typically indicates topic type is in an unknown state.
 
 ## 300 STATE_TOPICTYPE_SUM_ASSIGNMENT_COMPLIANCE
 
@@ -148,7 +148,7 @@ Each Configuration Manager feature that uses state messages is identified by the
 |	301	|Unknown client deployment failure |	      
 |	302	|Failed to create the ccmsetup service  |	      
 |	303	|Failed to delete the ccmsetup service |	      
-|	304	|Cannot install over embedded operating system with File Based Write Filter (FBWF) enabled on the system drive |	      
+|	304	|Cannot install over embedded operating system with File-Based Write Filter (FBWF) enabled on the system drive |	      
 |	305	|Native security mode is not valid on Windows 2000  |	      
 |	306	|Failed to start ccmsetup download process  |	      
 |	307	|Non-valid ccmsetup command line |	      
@@ -169,9 +169,9 @@ Each Configuration Manager feature that uses state messages is identified by the
 |	322	|Source folder is unavailable				   |	      
 |	323	|Appv not supported			           |	      
 |	324	|Incorrect Site Version			           |	      
-|	325	|Prerequsite hash mismatch				   |	      
-|	326	|Mdm Deregistration Failed			   |	      
-|	327	|Mdm Registration Detected			   |	      
+|	325	|Prerequisite hash mismatch				   |	      
+|	326	|MDM Deregistration Failed			   |	      
+|	327	|MDM Registration Detected			   |	      
 |	328	|Intune Detected				   |	      
 |	329	|Metered Network Disallowed			   |	      
 |	400	|Client deployment succeeded |  
@@ -199,7 +199,7 @@ Each Configuration Manager feature that uses state messages is identified by the
 |:-------------|:------|
 |	100	| Enrollment status			|
 |	101	| Enrollment scheduled			|
-|	102	| Enrollment cancelled			|
+|	102	| Enrollment canceled			|
 |	105	| Enrollment started			|
 |	106	| Enrollment succeeded but is not provisioned	
 |	107	| Enrollment succeeded and is provisioned	
@@ -308,42 +308,15 @@ Each Configuration Manager feature that uses state messages is identified by the
 |	1	|Client not ready for native mode  |
 |	2	|Client ready for native mode	    |
 
-## 1200	STATE_TOPICTYPE_AMT_CLIENT_DATA_SYNCHRONIZE
-
-AMT is unsupported in System Center Configuration Manager 2012.
-
-|     State Message ID     |  State Message Description |
-|:-------------|:------|
-|	1	| Data Manufacturing	    |
-
-## 1201	STATE_TOPICTYPE_AMT_UPDATE_MACHINE_PROPERTY
-
-AMT is unsupported in System Center Configuration Manager 2012.
-
-|     State Message ID     |  State Message Description |
-|:-------------|:------|
-|	1	|Provision Start		  |
-|	2	| Provision Finish		  |
-|	3	|Unprovision Full		  |
-|	4	|Unprovision Partial		  |
-|	5	|Clear Suppress Auto		  |
-|	6	|Maintenance Finish	  |
-|	7	|Maintenance Kerb Finish	  |
-|	8	|Provision Miscdatafill	  |
-
 
 ## 1300	STATE_TOPICTYPE_CLIENT_HEALTH
 
 |     State Message ID     |  State Message Description |
 |:-------------|:------|
 |	1	|	Success|	
-|	2	|	Not successfull |	
+|	2	|	Not successful |	
 
 ## 1401 STATE_TOPICTYPE_STATE_REPORT
-
-	No State IDs.
-
-## 1500	State Topictype Cal Track Ut
 
 	No State IDs.
 
@@ -364,7 +337,7 @@ AMT is unsupported in System Center Configuration Manager 2012.
 |     State Message ID     |  State Message Description |
 |:-------------|:------|
 |	1	|User affinity set	      |
-|	2	|Useraffinity removed	      |
+|	2	|User affinity removed	      |
 
 ## 1700 STATE_TOPICTYPE_APP_CI_SCAN
 
@@ -394,8 +367,8 @@ AMT is unsupported in System Center Configuration Manager 2012.
 |	2009	|Configuration Item in progress content downloaded		       |
 |	2010	|Configuration Item in progress pending update		       |
 |	2011	|Configuration Item in progress waiting user reconnect	       |
-|	2012	|Configuration Item in progress waiting for user logoff		       |
-|	2013	|Configuration Item in progress waiting for user logon		       |
+|	2012	|Configuration Item in progress waiting for user sign out		       |
+|	2013	|Configuration Item in progress waiting for user sign in		       |
 |	2014	|Configuration Item in progress waiting for install		       |
 |	2015	|Configuration Item in progress waiting for retry		       |
 |	2016	|Configuration Item in progress waiting for presmode		       |
@@ -445,7 +418,7 @@ AMT is unsupported in System Center Configuration Manager 2012.
 
 	No State IDs.
 
-## 1901	State Topictype Ep Am Health
+## 1901	State_Topictype_Ep_Am_Health
 
 	No State IDs.
 
@@ -467,7 +440,7 @@ AMT is unsupported in System Center Configuration Manager 2012.
 |	4	|Endpoint Protection installation failed	 |
 |	5	|Endpoint Protection reboot pending	 |
 |	6	|Endpoint Protection not supported		 |
-|	7	|Endpoint Protection comanaged		 |
+|	7	|Endpoint Protection co-managed		 |
 
 ## 2002	STATE_TOPICTYPE_EP_CLIENT_POLICYAPPLICATION
 
@@ -481,7 +454,7 @@ AMT is unsupported in System Center Configuration Manager 2012.
 
 |     State Message ID     |  State Message Description |
 |:-------------|:------|
-|	0	|  Unkown			 |
+|	0	|  Unknown			 |
 |	1	|  Active			 |
 |	2	|  Inactive			 |
 
@@ -790,5 +763,5 @@ AMT is unsupported in System Center Configuration Manager 2012.
 
 ## Next steps
 
-- [Description of state messaging in System Center Configuration Manager](https://support.microsoft.com/help/4459394/description-of-state-messaging-in-system-center-configuration-manager)
-- [Software Updates Management whitepaper for System Center Configuration Manager](https://www.microsoft.com/download/details.aspx?id=44578)
+- [Description of state messaging in Configuration Manager](https://support.microsoft.com/help/4459394/description-of-state-messaging-in-system-center-configuration-manager)
+- [Software updates management whitepaper for Configuration Manager](https://www.microsoft.com/download/details.aspx?id=44578)
