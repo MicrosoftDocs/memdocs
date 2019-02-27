@@ -409,7 +409,7 @@ The following one report is listed under the **Hardware - Security** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
-|**Details of firmware states on devices**|Displays the details of the states of UEFI, SecureBoot, and TPM. NOTE: This report isn't in version 1810.<!--SCCMDocs issue #1189-->|  
+|**Details of firmware states on devices**|Displays the details of the states of UEFI, SecureBoot, and TPM. **Note**: This report isn't in version 1810.<!--SCCMDocs issue #1189-->|  
 
 
 
