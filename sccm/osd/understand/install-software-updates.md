@@ -129,9 +129,45 @@ Use the default Windows install.wim image file in your deployment task sequences
 
 This flowchart diagram shows the process when you include the Install Software Updates step in a task sequence.
 
-![Flowchart diagram for the Install Software Updates task sequence step](media/ts-step-install-software-updates.svg)
+![Flowchart diagram for the Install Software Updates task sequence step](media/ts-step-install-software-updates.svg)  
 
 [View the diagram at full size](media/ts-step-install-software-updates.svg)
+
+1. **Process starts on the client**: A task sequence running on a client includes the Install Software updates step.
+2. **Compile and evaluate policies**: The client compiles all software update policies into WMI RequestedConfigs namespace. (CIAgent.log)
+3. *Is this instance the first time it's called?*  
+    1. **Yes**: Go to **Full scan**  
+    2. **No**: *Is the step configured with the option to **Evaluate software updates from cached scan results**?*
+        1. **Yes**: Go to **Scan from cached results**
+        2. **No**: Go to **Full scan**
+4. Scan process: either a full scan or scan from cached results, with monitoring process in parallel.
+    1. **Full scan**: The task sequence engine calls the software update agent via Update Scan API to do a *full* scan. (WUAHandler.log, ScanAgent.log)  
+        1. **SUM agent scan - full**: Normal scan process via Windows Update Agent (WUA), which communicates with software update point running WSUS. It adds any applicable updates to the local update store. (WindowsUpdate.log, UpdateStore.log)
+    2. **Scan from cached results**: The task sequence engine calls the software update agent via Update Scan API to scan against cached metadata. (WUAHandler.log, ScanAgent.log) 
+        1. **SUM agent scan - cached**: The Windows Update Agent (WUA) checks against updates already cached in the local update store. (WindowsUpdate.log, UpdateStore.log)
+    3. **Start timer**: The task sequence engine starts a timer and waits. (This process happens in parallel with either the full scan or scan from cached results process.)
+        1. **Monitoring**: The task sequence engine monitors the SUM agent for status.
+        2. *What's the response from the SUM agent?*
+            - **In progress**: Has the timer reached the value in task sequence variable **SMSTSSoftwareUpdateScanTimeout**? (Default 1 hour)
+                - **Yes**: The step fails.
+                - **No**: Go to **Monitoring**
+            - **Failed**: The step fails.
+            - **Complete**: Go to **Enumerate update list**
+5. **Enumerate update list**: The SUM agent enumerates the list of updates returned by the scan, determining which are available or mandatory. This list is modified by task sequence variable **SMSInstallUpdateTarget**.
+6. *Are there any updates in the list of scan results?*
+    - **Yes**: Go to **Install updates**
+    - **No**: Nothing to install, the step successfully completes. 
+7. Deployment process: The install updates process happens in parallel with the deployment monitoring process.
+    1. **Install updates**: The task sequence engine calls the SUM agent via Update Deployment API to install all available or only mandatory updates.
+        1. **SUM agent install**: Normal install process using existing cached list of updates, with standard content download. Install update via Windows Update Agent (WUA). (UpdatesDeployment.log, UpdatesHandler.log, WuaHandler.log, WindowsUpdate.log)
+    2. **Start timer and show progress**: The task sequence engine starts an installation timer, shows sub-progress at 10% intervals in TS Progress UI, and waits.
+        1. **Monitoring**: The task sequence engine polls the SUM agent for status.
+        2. *What's the response from the SUM agent?*
+            - **In progress**: *Has the installation process been inactive for 8 hours?*
+                - **Yes**: The step fails.
+                - **No**: Go to **Monitoring**
+            - **Failed**: The step fails.
+            - **Complete**: Go to *Is the step configured with the option to **Evaluate software updates from cached scan results**?*
 
 
 ### Timeouts
