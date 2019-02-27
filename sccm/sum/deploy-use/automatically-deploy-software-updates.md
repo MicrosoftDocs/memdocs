@@ -191,7 +191,7 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
     - **No deployment package**: Starting in version 1806, deploy software updates to devices without first downloading and distributing content to distribution points. This setting is beneficial when dealing with extremely large update content. Also use it when you always want clients to get content from the Microsoft Update cloud service. Clients in this scenario can also download content from peers that already have the necessary content. The Configuration Manager client continues to manage the content download, thus can utilize the Configuration Manager peer cache feature, or other technologies such as Delivery Optimization. This feature supports any update type supported by Configuration Manager software updates management, including Windows and Office updates.<!--1357933-->  
 
         > [!Note]  
-        > Once the no deployment package option is slected it can no longer be changed and the other options will be greyed out.<!--SCCMDocs issue 741-->  
+        > Once you select this option and apply the settings, it can no longer be changed. The other options are greyed out.<!--SCCMDocs-pr issue 3003-->  
 
 12. On the **Distribution Points** page, specify the distribution points or distribution point groups to host the software update files. For more information about distribution points, see [Distribution point configurations](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_configs). This page is available only when you create a new software update deployment package.  
   
