@@ -2,7 +2,7 @@
 title: Checklist for 1810
 titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 1810.
-ms.date: 11/27/2018
+ms.date: 02/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -70,7 +70,7 @@ This value is optional. You can specify as a convenient reminder of your license
 For more information, see [Licensing and branches](/sccm/core/understand/learn-more-editions).
 
 #### Review Microsoft .NET versions 
-When a site installs this update, Configuration Manager automatically installs .NET Framework 4.5.2. When this prerequisite isn't already installed, the site installs it on each server that hosts one of the following site system roles:
+When a site installs this update, if the minimum requirement of .NET Framework 4.5 is not installed, Configuration Manager automatically installs .NET Framework 4.5.2. When this prerequisite isn't already installed, the site installs it on each server that hosts one of the following site system roles:
 
 -   Management point
 -   Service connection point
