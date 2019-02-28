@@ -73,7 +73,7 @@ Use the following procedure to change the tenant-level MDM authority to Intune.
 
 
 
-## Next steps
+## After migration
 
 After the change in MDM authority is complete, review the following information:
 
@@ -125,3 +125,11 @@ There are two workarounds:
     ```SQL
     Delete from MDMCorpOwnedDevices where DeviceType=8 and DiscoverySources=4
     ```
+
+
+
+## Next steps
+
+Now that your migration is complete, manage your mobile devices with Intune. For more information, see
+[What's new in Microsoft Intune](https://docs.microsoft.com/intune/whats-new).
+
