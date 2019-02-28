@@ -25,6 +25,9 @@ This information applies to all versions of the Configuration Manager technical 
 
 For information about what's new in the *current branch* of Configuration Manager, see [What's new in Configuration Manager incremental versions](/sccm/core/plan-design/changes/whats-new-incremental-versions).
 
+> [!Tip]  
+> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader: 
+> `https://docs.microsoft.com/api/search/rss?search=%22technical+preview+releases+-+Configuration+Manager%22&locale=en-us`
 
 
 ##  <a name="bkmk_reqs"></a> Requirements and limitations  
