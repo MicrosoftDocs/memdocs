@@ -2,7 +2,7 @@
 title: What's new in hybrid MDM
 titleSuffix: Configuration Manager
 description: Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune.
-ms.date: 02/19/2019
+ms.date: 02/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -46,6 +46,25 @@ Each section of this article lists hybrid features under three different categor
 ## February 2019
 
 ### New in Microsoft Intune
+
+#### Create new Intune tenants in Azure portal
+<!--3754067-->
+The ability to create a new hybrid MDM tenant has been removed as of the 1902 Intune update. Create all new Intune tenants in the Azure portal. As a reminder, [hybrid MDM is deprecated](/sccm/mdm/understand/hybrid-mobile-device-management). Current hybrid MDM customers should migrate to Intune standalone as soon as possible.
+
+For more information, see [the Intune support blog post](https://aka.ms/hybrid_notification).
+
+
+#### Intune uses Google Play Protect APIs on Android devices 
+<!--2577355-->
+Some admins are faced with a BYOD landscape where users may root or jailbreak their mobile phone. This behavior, while sometimes not ill-intentioned, results in a bypass of many Intune policies that are set in order to protect the organization's data on end user devices. Thus, Intune provides root and jailbreak detection for both enrolled and unenrolled devices. 
+
+With this release, Intune now leverages Google Play Protect APIs to add to our existing root detection checks for unenrolled devices. While Google doesn't share the entirety of the root detection checks that occur, we expect these APIs to detect users who have rooted their devices for any reason from device customization to being able to get newer OS updates on older devices. These users can then be blocked from accessing corporate data, or their corporate accounts can be wiped from their policy enabled apps. 
+
+
+#### New **App categories** screen in the Company Portal app for Windows 10
+<!--3834780-->
+To improve the app browsing and selection experience in Company Portal for Windows 10, it now includes a new screen called **App categories**. Users now see their apps sorted under categories such as **Featured**, **Education**, and **Productivity**. This change appears in Company Portal versions 10.3.3451.0 and later. To view the new screen, see [What's new in the app UI](https://docs.microsoft.com/intune/whats-new). For more information about apps in the Company Portal, see [Install and share apps on your device](https://docs.microsoft.com/intune-user-help/install-apps-cpapp-windows).  
+
 
 #### macOS users are prompted to update their password 
 <!--1873216-->
