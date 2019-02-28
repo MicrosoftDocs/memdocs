@@ -21,13 +21,16 @@ With Configuration Manager, product release notes are limited to urgent issues. 
 
 Feature-specific documentation includes information about known issues that affect core scenarios.  
 
-> [!TIP]  
->  This topic contains release notes for the current branch of Configuration Manager. For information on the technical preview branch, see [Technical Preview](/sccm/core/get-started/technical-preview)  
+This topic contains release notes for the current branch of Configuration Manager. For information on the technical preview branch, see [Technical Preview](/sccm/core/get-started/technical-preview)  
 
 For information about the new features introduced with different versions, see the following articles:
 - [What's new in version 1810](/sccm/core/plan-design/changes/whats-new-in-version-1810)
 - [What's new in version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806)  
 - [What's new in version 1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)
+
+> [!Tip]  
+> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader: 
+> `https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
 
 
 
