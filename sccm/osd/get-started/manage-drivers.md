@@ -204,11 +204,11 @@ Use the following procedures to modify driver packages and boot images. To add o
 
 4. To add a device driver, select the check box of the driver packages to which you want to add the device drivers. To remove a device driver, clear the check box of the driver packages from which you want to remove the device driver.  
 
-        If you're adding device drivers that are associated with driver packages, you can optionally create a new package. Select **New Package**, which opens the **New Driver Package** dialog box.  
+    If you're adding device drivers that are associated with driver packages, you can optionally create a new package. Select **New Package**, which opens the **New Driver Package** dialog box.  
 
 5. If the package has already been distributed to distribution points, select **Yes** in the dialog box to update the boot images on distribution points. You can't use device drivers until they're distributed to distribution points. If you select **No**, run the **Update Distribution Point** action before using the boot image. If the driver package has never been distributed, you must use the **Distribute Content** action in the **Driver Packages** node. Before the drivers are available, you must update the driver package on distribution points.  
 
-        Select **OK** when finished.  
+    Select **OK** when finished.  
 
 
 ### <a name="BKMK_ManageDriversBootImage"></a> Manage device drivers in a boot image  
@@ -285,7 +285,7 @@ When you use these task sequence steps, you can also specify how the drivers are
 
 
 
-## <a name="BKMK_DriverReports"></a> Driver management reports  
+## <a name="BKMK_DriverReports"></a> Driver reports  
 
 You can use several reports in the **Driver Management** reports category to determine general information about the device drivers in the driver catalog. For more information about reports, see [Reporting](/sccm/core/servers/manage/reporting).
 
