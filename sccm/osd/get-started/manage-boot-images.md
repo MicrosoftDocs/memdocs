@@ -23,7 +23,7 @@ A boot image in Configuration Manager is a [Windows PE](https://docs.microsoft.c
 
 ## <a name="BKMK_BootImageDefault"></a> Default boot images
 
-Configuration Manager provides two default boot images: One to support x86 platforms and one to support x64 platforms. These images are stored in the *x64* or *i386 folders in the following share on the site server: `\\<SiteServerName>\SMS_<sitecode>\osd\boot\`. The default boot images are updated or regenerated depending on the action that you take.
+Configuration Manager provides two default boot images: One to support x86 platforms and one to support x64 platforms. These images are stored in the *x64* or *i386* folders in the following share on the site server: `\\<SiteServerName>\SMS_<sitecode>\osd\boot\`. The default boot images are updated or regenerated depending on the action that you take.
 
 Consider the following behaviors for any of the actions described for default boot images:
 
@@ -38,7 +38,7 @@ Consider the following behaviors for any of the actions described for default bo
 - If you don't want your customized/default boot images automatically updated, don't store them in the default location.  
 
 > [!NOTE]
-> The Configuration Manager log tool (**CMTrace**) is added to all boot images in the **Software Library**. When you're in Windows PE, start the tool by typing `CMTrace` from the command prompt. 
+> The Configuration Manager log tool (**CMTrace**) is added to all boot images in the **Software Library**. When you're in Windows PE, start the tool by typing `cmtrace` from the command prompt. 
 > 
 > Starting in version 1802, when launching CMTrace in Windows PE, you're no longer prompted to choose whether to make this program the default viewer for log files.
 
@@ -91,8 +91,10 @@ During site installation, Configuration Manager automatically adds boot images t
 | Windows PE versions for boot images customizable from the Configuration Manager console | Windows PE 10 |
 | Supported Windows PE versions for boot images *not customizable* from the Configuration Manager console | - Windows PE 3.1<sup>[Note 1](#bkmk_note1)</sup> <br> - Windows PE 5 |
 
-For example, use the Configuration Manager console to customize boot images based on Windows PE 10 from the Windows ADK for Windows 10. For a boot image based on Windows PE 5, customize it from a different computer using the version of DISM from the Windows ADK for Windows 8. Then add the custom boot image to the Configuration Manager console. For more information, see [Customize boot images](customize-boot-images.md).
-
+For example, use the Configuration Manager console to customize boot images based on Windows PE 10 from the Windows ADK for Windows 10. For a boot image based on Windows PE 5, customize it from a different computer using the version of DISM from the Windows ADK for Windows 8. Then add the custom boot image to the Configuration Manager console. For more information, see the following articles:
+- [Customize boot images](/sccm/osd/get-started/customize-boot-images)
+- [Support for Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk)
+- [DISM supported platforms](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms)
 
 #### <a name="bkmk_note1"></a> Note 1: Support for Windows PE 3.1
 
