@@ -2,7 +2,7 @@
 title: Install Software Updates
 titleSuffix: Configuration Manager
 description: Recommendations for using the task sequence step Install Software Updates in Configuration Manager.
-ms.date: 02/25/2019
+ms.date: 03/01/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -17,7 +17,7 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-The **Install Software Updates** step is commonly used in Configuration Manager task sequences. When installing or updating the OS, it triggers the software updates component. This step can cause challenges for some customers, such as long timeout delays or missed updates. Use the information in this article to help mitigate common issues with this step, and better troubleshoot when things go wrong.
+The **Install Software Updates** step is commonly used in Configuration Manager task sequences. When installing or updating the OS, it triggers the software updates components to scan for and deploy updates. This step can cause challenges for some customers, such as long timeout delays or missed updates. Use the information in this article to help mitigate common issues with this step, and for better troubleshooting when things go wrong.
 
 For more information on the step, see [Install Software Updates](/sccm/osd/understand/task-sequence-steps#BKMK_InstallSoftwareUpdates)
 
@@ -26,18 +26,25 @@ For more information on the step, see [Install Software Updates](/sccm/osd/under
 ## Recommendations
 
 To help this process be successful, use the following recommendations:
+- [Use offline servicing](#use-offline-servicing)
+- [Single index](#single-index)
+- [Reduce image size](#bkmk_resetbase)
 
-#### Use offline servicing
+
+### Use offline servicing
+
 Use Configuration Manager to regularly install applicable software updates to your image files. This practice then reduces the number of updates that you need to install during the task sequence. 
 
 For more information, see [Apply software updates to an image](/sccm/osd/get-started/manage-operating-system-images#BKMK_OSImagesApplyUpdates).
 
 
-#### Single index
-Many image files include multiple indexes, such as for different editions of Windows. Reduce the image file to a single index that you require. This practice reduces the amount of time to apply software updates to the image. It also enables the next recommendation to [Reduce the image size](#bkmk_resetbase). 
+### Single index
+
+Many image files include multiple indexes, such as for different editions of Windows. Reduce the image file to a single index that you require. This practice reduces the amount of time to apply software updates to the image. It also enables the next recommendation to reduce the image size. 
 
 
-#### <a name="bkmk_resetbase"></a> Reduce image size
+### <a name="bkmk_resetbase"></a> Reduce image size
+
 When you apply software updates to the image, optimize the output by removing any superseded updates. Use the DISM command-line tool, for example: 
 
 ```
@@ -129,15 +136,15 @@ Use the default Windows install.wim image file in your deployment task sequences
 
 This flowchart diagram shows the process when you include the Install Software Updates step in a task sequence.
 
-![Flowchart diagram for the Install Software Updates task sequence step](media/ts-step-install-software-updates.svg)  
-
 [View the diagram at full size](media/ts-step-install-software-updates.svg)
+
+![Flowchart diagram for the Install Software Updates task sequence step](media/ts-step-install-software-updates.svg)  
 
 1. **Process starts on the client**: A task sequence running on a client includes the Install Software updates step.
 2. **Compile and evaluate policies**: The client compiles all software update policies into WMI RequestedConfigs namespace. (CIAgent.log)
 3. *Is this instance the first time it's called?*  
     1. **Yes**: Go to **Full scan**  
-    2. **No**: *Is the step configured with the option to **Evaluate software updates from cached scan results**?*
+    2. **No**: *Is the step configured with the option to [Evaluate software updates from cached scan results](/sccm/osd/understand/task-sequence-steps#evaluate-software-updates-from-cached-scan-results)?*
         1. **Yes**: Go to **Scan from cached results**
         2. **No**: Go to **Full scan**
 4. Scan process: either a full scan or scan from cached results, with monitoring process in parallel.
@@ -145,24 +152,24 @@ This flowchart diagram shows the process when you include the Install Software U
         1. **SUM agent scan - full**: Normal scan process via Windows Update Agent (WUA), which communicates with software update point running WSUS. It adds any applicable updates to the local update store. (WindowsUpdate.log, UpdateStore.log)
     2. **Scan from cached results**: The task sequence engine calls the software update agent via Update Scan API to scan against cached metadata. (WUAHandler.log, ScanAgent.log) 
         1. **SUM agent scan - cached**: The Windows Update Agent (WUA) checks against updates already cached in the local update store. (WindowsUpdate.log, UpdateStore.log)
-    3. **Start timer**: The task sequence engine starts a timer and waits. (This process happens in parallel with either the full scan or scan from cached results process.)
+    3. **Start scan timer**: The task sequence engine starts a timer and waits. (This process happens in parallel with either the full scan or scan from cached results process.)
         1. **Monitoring**: The task sequence engine monitors the SUM agent for status.
         2. *What's the response from the SUM agent?*
-            - **In progress**: Has the timer reached the value in task sequence variable **SMSTSSoftwareUpdateScanTimeout**? (Default 1 hour)
+            - **In progress**: Has the timer reached the value in task sequence variable [SMSTSSoftwareUpdateScanTimeout](/sccm/osd/understand/task-sequence-variables#SMSTSSoftwareUpdateScanTimeout)? (Default 1 hour)
                 - **Yes**: The step fails.
                 - **No**: Go to **Monitoring**
             - **Failed**: The step fails.
             - **Complete**: Go to **Enumerate update list**
-5. **Enumerate update list**: The SUM agent enumerates the list of updates returned by the scan, determining which are available or mandatory. This list is modified by task sequence variable **SMSInstallUpdateTarget**.
+5. **Enumerate update list**: The SUM agent enumerates the list of updates returned by the scan, determining which are available or mandatory.
 6. *Are there any updates in the list of scan results?*
     - **Yes**: Go to **Install updates**
     - **No**: Nothing to install, the step successfully completes. 
 7. Deployment process: The install updates process happens in parallel with the deployment monitoring process.
-    1. **Install updates**: The task sequence engine calls the SUM agent via Update Deployment API to install all available or only mandatory updates.
-        1. **SUM agent install**: Normal install process using existing cached list of updates, with standard content download. Install update via Windows Update Agent (WUA). (UpdatesDeployment.log, UpdatesHandler.log, WuaHandler.log, WindowsUpdate.log)
-    2. **Start timer and show progress**: The task sequence engine starts an installation timer, shows sub-progress at 10% intervals in TS Progress UI, and waits.
-        1. **Monitoring**: The task sequence engine polls the SUM agent for status.
-        2. *What's the response from the SUM agent?*
+    1. **Install updates**: The task sequence engine calls the SUM agent via Update Deployment API to install all available or only mandatory updates. This behavior is based on the configuration of the step, whether you select **Required for installation - Mandatory software updates only** or **Available for installation - All software updates**. You can also specify this behavior using the [SMSInstallUpdateTarget](/sccm/osd/understand/task-sequence-variables#SMSInstallUpdateTarget) variable.
+    2. **SUM agent install**: Normal install process using existing cached list of updates, with standard content download. Install update via Windows Update Agent (WUA). (UpdatesDeployment.log, UpdatesHandler.log, WuaHandler.log, WindowsUpdate.log)
+    3. **Start deployment timer and show progress**: The task sequence engine starts an installation timer, shows sub-progress at 10% intervals in TS Progress UI, and waits.
+    4. **Monitoring**: The task sequence engine polls the SUM agent for status.
+    5. *What's the response from the SUM agent?*
             - **In progress**: *Has the installation process been inactive for 8 hours?*
                 - **Yes**: The step fails.
                 - **No**: Go to **Monitoring**
@@ -204,5 +211,5 @@ Use the following resources and additional information to help you troubleshoot 
         - Beta
         - Version Next
         - ARM
-        - Version of Windows you aren't deploying
+        - Versions of Windows you aren't deploying
 
