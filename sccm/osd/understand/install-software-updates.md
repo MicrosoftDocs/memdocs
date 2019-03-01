@@ -166,10 +166,10 @@ This flowchart diagram shows the process when you include the Install Software U
     - **No**: Nothing to install, the step successfully completes. 
 7. Deployment process: The install updates process happens in parallel with the deployment monitoring process.
     1. **Install updates**: The task sequence engine calls the SUM agent via Update Deployment API to install all available or only mandatory updates. This behavior is based on the configuration of the step, whether you select **Required for installation - Mandatory software updates only** or **Available for installation - All software updates**. You can also specify this behavior using the [SMSInstallUpdateTarget](/sccm/osd/understand/task-sequence-variables#SMSInstallUpdateTarget) variable.
-    2. **SUM agent install**: Normal install process using existing cached list of updates, with standard content download. Install update via Windows Update Agent (WUA). (UpdatesDeployment.log, UpdatesHandler.log, WuaHandler.log, WindowsUpdate.log)
-    3. **Start deployment timer and show progress**: The task sequence engine starts an installation timer, shows sub-progress at 10% intervals in TS Progress UI, and waits.
-    4. **Monitoring**: The task sequence engine polls the SUM agent for status.
-    5. *What's the response from the SUM agent?*
+        1. **SUM agent install**: Normal install process using existing cached list of updates, with standard content download. Install update via Windows Update Agent (WUA). (UpdatesDeployment.log, UpdatesHandler.log, WuaHandler.log, WindowsUpdate.log)
+    2. **Start deployment timer and show progress**: The task sequence engine starts an installation timer, shows sub-progress at 10% intervals in TS Progress UI, and waits.
+        1. **Monitoring**: The task sequence engine polls the SUM agent for status.
+        2. *What's the response from the SUM agent?*
             - **In progress**: *Has the installation process been inactive for 8 hours?*
                 - **Yes**: The step fails.
                 - **No**: Go to **Monitoring**
