@@ -385,6 +385,8 @@
       href: plan-design/network/proxy-server-support.md
     - name: Release notes
       href: servers/deploy/install/release-notes.md
+    - name: State Messages in Configuration Manager
+      href: plan-design/hierarchy/state-messaging-system-center-configuration-manager.md   
     - name: Unicode and ASCII support
       href: plan-design/hierarchy/unicode-and-ascii-support.md
 - name: Manage infrastructure

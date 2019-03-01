@@ -2,7 +2,7 @@
 title: What's new in version 1810
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1810 of Configuration Manager current branch.
-ms.date: 02/19/2019
+ms.date: 02/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -17,17 +17,18 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Update 1810 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1710, 1802, or 1806. <!-- baseline only statement: When installing a new site, it's also available as a baseline version.-->
+Update 1810 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1710, 1802, or 1806. <!-- baseline only statement: When installing a new site, it's also available as a baseline version.--> This article summarizes the changes and new features in Configuration Manager, version 1810.  
 
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 1810](/sccm/core/servers/manage/checklist-for-installing-update-1810). After you update a site, also review the [Post-update checklist](/sccm/core/servers/manage/checklist-for-installing-update-1810#post-update-checklist).
+
+To take advantage of new Configuration Manager features, first update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
 > [!Note]  
 > This article currently lists all significant features in this version. However, not all sections yet link to updated content with further information on the new features. Keep checking this page regularly for updates. Changes are noted with the ***[Updated]*** tag. This note will be removed when the content is finalized.  
 
-> [!Important]  
-> To take advantage of new Configuration Manager features, first update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
-
-This article summarizes the changes and new features in Configuration Manager, version 1810.  
+> [!Tip]  
+> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader: 
+> `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1810+-+Configuration+Manager%22&locale=en-us`
 
 
 
@@ -182,10 +183,10 @@ For more information, see [Co-management dashboard](/sccm/comanage/how-to-monito
 ## <a name="bkmk_app"></a> Application management
 
 ### Convert applications to MSIX
-<!--1359029-->
-Starting in version 1806, Configuration Manager supports deployment of the new Windows 10 app package (.msix) format. Now you can convert your existing Windows Installer (.msi) applications to the MSIX format.
+<!--3607729, fka 1359029-->
+***[Updated]*** Starting in version 1806, Configuration Manager supports deployment of the new Windows 10 app package (.msix) format. Now you can convert your existing Windows Installer (.msi) applications to the MSIX format.
 
-<!--For more information, see [Create Windows applications](/sccm/apps/get-started/creating-windows-applications#bkmk_general).  this might move to a new section for msix-->
+For more information, see [Create Windows applications](/sccm/apps/get-started/creating-windows-applications#bkmk_msix).  
 
 
 ### Repair applications
@@ -217,11 +218,11 @@ A PowerShell profile is a script that runs when PowerShell starts. You can creat
 ## <a name="bkmk_osd"></a> OS deployment
 
 ### Task sequence support of Windows Autopilot for existing devices
-<!--1358333-->
+<!--3607717, fka 1358333-->
 
-[Windows Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430), is now available with Windows 10, version 1809 or later. This new feature allows you to reimage and provision a Windows 7 device for [Windows Autopilot user-driven mode](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) using a single, native Configuration Manager task sequence. 
+***[Updated]*** [Windows Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) is now available with Windows 10, version 1809 or later. This new feature allows you to reimage and provision a Windows 7 device for [Windows Autopilot user-driven mode](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) using a single, native Configuration Manager task sequence. 
 
-<!--For more information, see []().--> 
+For more information, see [Windows Autopilot for existing devices](/sccm/osd/deploy-use/windows-autopilot-for-existing-devices).
 
 
 ### Specify the drive for offline OS image servicing  
@@ -403,6 +404,8 @@ The following additional hotfixes are available to address specific issues:
 | ID | Title | Date | In-console |
 |---------|---------|---------|---------|
 | [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune connector certificate does not renew in Configuration Manager | 18 January 2019 | Yes |
+| [4490434](https://support.microsoft.com/help/4490434) | Duplicate user discovery columns are created in Configuration Manager | 22 February 2019 | Yes |
+| [4490575](https://support.microsoft.com/help/4490575) | Update installations stop responding or never show completion in Configuration Manager, version 1810 | 22 February 2019 | Yes |
 
 
 ## Next steps

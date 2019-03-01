@@ -33,7 +33,7 @@ Group similar device drivers in packages to help streamline OS deployments. For 
 
 Consider the following points:  
 
-- When you create a driver package, the source location of the package must point to an empty network share that's not used by another driver package. The SMS Provider must have **Read** and **Write** permissions to that location.  
+- When you create a driver package, the source location of the package must point to an empty network share that's not used by another driver package. The SMS Provider must have **Full control** permissions to that location.  
 
 - When you add device drivers to a driver package, Configuration Manager copies it to the package source location. You can add to a driver package only device drivers that you've imported and that are enabled in the driver catalog.  
 
@@ -58,7 +58,7 @@ Consider the following points:
 5. In the **Path** box, specify an empty source folder for the driver package. Each driver package must use a unique folder. This path is required as a network location.  
 
    > [!IMPORTANT]  
-   > The site server account must have **Read** and **Write** permissions to the specified source folder.  
+   > The site server account must have **Full control** permissions to the specified source folder.  
 
 The new driver package doesn't contain any drivers. The next step adds drivers to the package.  
 
