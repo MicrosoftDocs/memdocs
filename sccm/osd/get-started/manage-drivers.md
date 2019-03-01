@@ -21,7 +21,7 @@ Configuration Manager provides a driver catalog that you can use to manage the W
 
 
 
-## <a name="BKMK_DriverCategories"></a> Device driver categories
+## <a name="BKMK_DriverCategories"></a> Driver categories
 
 When you import device drivers, you can assign the device drivers to a category. Device driver categories help group similarly used device drivers together in the driver catalog. For example, set all network adapter device drivers to a specific category. Then, when you create a task sequence that includes the [Auto Apply Drivers](/sccm/osd/understand/task-sequence-steps#BKMK_AutoApplyDrivers) step, specify a category of device drivers. Configuration Manager then scans the hardware and selects the applicable drivers from that category to stage on the system for Windows Setup to use.  
 
@@ -92,6 +92,11 @@ Updates the device driver package on all the distribution points where the packa
 
 #### Properties
 Opens the **Properties** dialog box. Review and change the content and properties of the driver. For example, change the name and description of the driver, enable or disable it, and specify on which platforms it can run. 
+
+<!--3607716, fka 1358270-->
+Starting in version 1810, driver packages have metadata fields for **Manufacturer** and **Model**. Use these fields to tag driver packages with information to assist in general housekeeping, or to identify old and duplicate drivers that you can delete. On the **General** tab, select an existing value from the drop-down lists, or enter a string to create a new entry. 
+
+In the **Driver Packages** node, these fields display in the list as the **Driver Manufacturer** and **Driver Model** columns. They can also be used as search criteria. 
 
 
 
