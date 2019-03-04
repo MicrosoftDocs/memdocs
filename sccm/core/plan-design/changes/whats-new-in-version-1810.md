@@ -2,7 +2,7 @@
 title: What's new in version 1810
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1810 of Configuration Manager current branch.
-ms.date: 02/21/2019
+ms.date: 03/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -240,8 +240,10 @@ For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/
 
 
 ### Improvements to driver maintenance
-<!--1358270-->
-Driver packages now have additional metadata fields for **Manufacturer** and **Model**. Use these fields to tag driver packages with information to assist in general housekeeping, or to identify old and duplicate drivers that you can delete.
+<!--3607716, fka 1358270-->
+***[UPDATED]*** Driver packages now have additional metadata fields for **Manufacturer** and **Model**. Use these fields to tag driver packages with information to assist in general housekeeping, or to identify old and duplicate drivers that you can delete.
+
+For more information, see [Manage drivers](/sccm/osd/get-started/manage-drivers).
 
 
 ### New task sequence variable for last action name
