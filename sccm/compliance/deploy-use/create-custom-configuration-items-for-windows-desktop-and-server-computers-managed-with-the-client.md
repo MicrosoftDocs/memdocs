@@ -22,7 +22,7 @@ Use the Configuration Manager **custom Windows Desktops and Servers** configurat
 
 
 
-## Start the create configuration item wizard
+## Start the wizard
 
 1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, expand **Compliance Settings**, and select the **Configuration Items** node.  
 
@@ -39,7 +39,7 @@ Use the Configuration Manager **custom Windows Desktops and Servers** configurat
 
 
 
-## Provide detection method information  
+## Detection methods  
 
 Use this procedure to provide detection method information for the configuration item.  
 
@@ -80,7 +80,7 @@ A detection method in Configuration Manager contains rules that are used to dete
     - **PowerShell**  
 
         > [!Note]  
-        > Starting in version 1810, when a Windows PowerShell script runs as a app detection method, the Configuration Manager client calls PowerShell with the `-NoProfile` parameter. This option starts PowerShell without profiles. A PowerShell profile is a script that runs when PowerShell starts. <!--3607762-->  
+        > Starting in version 1810, when a Windows PowerShell script runs as a detection method, the Configuration Manager client calls PowerShell with the `-NoProfile` parameter. This option starts PowerShell without profiles. A PowerShell profile is a script that runs when PowerShell starts. <!--3607762-->  
 
 3. Select **Open**, browse to the script that you want to use, and then select **Open**.  
 
@@ -147,6 +147,7 @@ Settings represent the business or technical conditions that are used to assess 
     - **Subtree**: Queries the specified object and its complete subtree in the directory  
 
 - **Property**: Specify the property of the Active Directory Domain Services object that's used to assess compliance on client computers.  
+
     For example, if you want to query the Active Directory property that stores the number of times a user incorrectly enters a password, enter `badPwdCount` in this field.  
 
 - **Query**: Displays the query constructed from the entries in **LDAP prefix**, **Distinguished name (DN)**, **Search Filter** (if specified), and **Property**.  
@@ -156,7 +157,7 @@ Settings represent the business or technical conditions that are used to assess 
 
 An assembly is a piece of code that can be shared between applications. Assemblies can have the file name extension .dll or .exe. The global assembly cache is the folder `%SystemRoot%\Assembly` on client computers. This cache is where Windows stores all shared assemblies.  
 
-**Assembly name:** Specifies the name of the assembly object that you want to search for. The name can't be the same as other assembly objects of the same type. First register it in the global assembly cache. The assembly name can be up to 256 characters long.  
+- **Assembly name:** Specifies the name of the assembly object that you want to search for. The name can't be the same as other assembly objects of the same type. First register it in the global assembly cache. The assembly name can be up to 256 characters long.  
 
 
 ### <a name="bkmk_file"></a> File system
@@ -233,12 +234,12 @@ The value returned by the script is used to assess the compliance of the global 
 
 - **Discovery script**: Select **Add Script**, and enter or browse to a script. This script is used to find the value. You can use Windows PowerShell, VBScript, or Microsoft JScript scripts.  
 
-    > [!Note]  
-    > Starting in version 1810, when a Windows PowerShell script runs as a app detection method, the Configuration Manager client calls PowerShell with the `-NoProfile` parameter. This option starts PowerShell without profiles. A PowerShell profile is a script that runs when PowerShell starts. <!--3607762-->  
-
 - **Remediation script (optional)**: Select **Add Script**, and enter or browse to a script. This script is used to remediate non-compliant setting values. You can use Windows PowerShell, VBScript, or Microsoft JScript scripts.  
 
 - **Run scripts by using the logged on user credentials**: If you enable this option, the script runs on client computers that use the credentials of the signed-in user.  
+
+> [!Note]  
+> Starting in version 1810, when you use Windows PowerShell as a discovery or remediation script, the Configuration Manager client calls PowerShell with the `-NoProfile` parameter. This option starts PowerShell without profiles. A PowerShell profile is a script that runs when PowerShell starts. <!--3607762-->  
 
 
 ### <a name="bkmk_sql"></a> SQL query
