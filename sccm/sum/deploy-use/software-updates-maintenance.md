@@ -93,7 +93,7 @@ The following **WSUS Server Cleanup Wizard** options aren't run on the CAS, prim
 - Computers not contacting the server
 - Unneeded update files
 
-  For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://support.microsoft.com/en-us/help/4490644/complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maint/) blog post.
+  For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://support.microsoft.com/help/4490644/complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maint/) blog post.
 
 ## Updates cleanup log entries
 
