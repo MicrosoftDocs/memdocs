@@ -3,7 +3,7 @@ title: Software updates maintenance
 titleSuffix: "Configuration Manager"
 description: "To maintain updates in Configuration Manager, you can schedule the WSUS cleanup task, or you can run it manually."
 author: mestew
-ms.date: 02/19/2019
+ms.date: 03/05/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -46,7 +46,7 @@ Before Configuration Manager version 1806, the WSUS cleanup option runs the foll
 - A cleanup for software update configuration items in the Configuration Manager database occurs every seven days and removes unneeded updates from the console.
   - This cleanup won't remove expired updates from the Configuration Manager console if they're currently deployed.
 
-Additional maintenance is still needed on the top-level WSUS database and all other WSUS databases in the environment. For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://blogs.technet.microsoft.com/configurationmgr/2016/01/26/the-complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maintenance/) blog post.
+Additional maintenance is still needed on the top-level WSUS database and all other WSUS databases in the environment. For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://support.microsoft.com/help/4490644/complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maint/) blog post.
 
 ## WSUS cleanup behavior starting in version 1806
 
@@ -70,7 +70,7 @@ All WSUS Maintenance needs to be run manually on secondary site WSUS databases. 
 - Computers not contacting the server
 - Unneeded update files
 
-  For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://blogs.technet.microsoft.com/configurationmgr/2016/01/26/the-complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maintenance/) blog post.
+  For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://support.microsoft.com/help/4490644/complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maint/) blog post.
 
 ## WSUS cleanup behavior starting in version 1810
 
