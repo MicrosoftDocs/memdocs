@@ -2,7 +2,7 @@
 title: What's new in version 1810
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1810 of Configuration Manager current branch.
-ms.date: 03/02/2019
+ms.date: 03/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -204,15 +204,16 @@ For more information, see [Approve applications](/sccm/apps/deploy-use/app-appro
 
 
 ### Detection methods don't load Windows PowerShell profiles
-<!--1359239-->
-You can use Windows PowerShell scripts for detection methods on applications and settings in configuration items. When these scripts run on clients, the Configuration Manager client now calls PowerShell with the `-NoProfile` parameter. This option starts PowerShell without profiles. 
+<!--3607762, fka 1359239-->
+***[UPDATED]*** You can use Windows PowerShell scripts for detection methods on applications and settings in configuration items. When these scripts run on clients, the Configuration Manager client now calls PowerShell with the `-NoProfile` parameter. This option starts PowerShell without profiles. 
 
 A PowerShell profile is a script that runs when PowerShell starts. You can create a PowerShell profile to customize your environment and to add session-specific elements to every PowerShell session that you start. 
 
 > [!Note]  
 > This change in behavior doesn't apply to [Scripts](/sccm/apps/deploy-use/create-deploy-scripts) or [CMPivot](/sccm/core/servers/manage/cmpivot). Both of these features already use this PowerShell parameter.    
 
-<!--For more information, see []().-->
+For more information, see [Create applications](/sccm/apps/deploy-use/create-applications) and [Create custom configuration items](/sccm/compliance/deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client).
+
 
 
 ## <a name="bkmk_osd"></a> OS deployment
