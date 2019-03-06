@@ -2,7 +2,7 @@
 title: Plan for the SMS Provider
 titleSuffix: Configuration Manager
 description: Learn about the SMS Provider site system role in Configuration Manager.
-ms.date: 11/27/2018
+ms.date: 03/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -35,10 +35,12 @@ Configuration Manager administrative users use an SMS Provider to access informa
 
 The SMS Provider helps enforce Configuration Manager security. It returns only the information that the console user is authorized to view.  
 
+Starting in version 1810, the SMS Provider now provides read-only API interoperability access to WMI over HTTPS, called the **administration service**. This REST API can be used in place of a custom web service to access information from the site. For more information, see [Administration service](#bkmk_admin-service). 
+
 > [!IMPORTANT]  
 >  When each instance of the SMS Provider for a site is offline, Configuration Manager consoles can't connect to the site.  
 
- For more information about how to manage the SMS Provider, see [Manage the SMS Provider](/sccm/core/servers/manage/modify-your-infrastructure#BKMK_ManageSMSprovider).  
+For more information about how to manage the SMS Provider, see [Manage the SMS Provider](/sccm/core/servers/manage/modify-your-infrastructure#BKMK_ManageSMSprovider).  
 
 
 
@@ -241,3 +243,46 @@ When you manage OS deployments, the Windows ADK allows the SMS Provider to compl
 
 
 The Windows ADK installation can require up to 650 MB of free disk space on each computer that installs the SMS Provider. This high disk space requirement is necessary for Configuration Manager to install the Windows PE boot images.  
+
+
+
+## <a name="bkmk_admin-service"></a> Administration service
+<!--3607711, fka 1321523-->
+
+Starting in version 1810, the SMS Provider provides read-only API interoperability access to WMI over HTTPS, called the **administration service**. This REST API can be used in place of a custom web service to access information from the site.
+
+`https://servername/AdminService/wmi/<ClassName>` 
+
+Make direct calls to this service with the Windows PowerShell cmdlet [Invoke-RestMethod](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-restmethod).
+
+You can also use it to access site data from PowerBI using the OData connector option. 
+
+> [!Tip]  
+> You can use this cmdlet in a task sequence. This action lets you access information from the site without requiring a custom web service to interface with the WMI provider. 
+
+
+### Enable the administration service through the CMG
+
+The **SMS Provider** appears as a role with an option to allow communication over the cloud management gateway (CMG). The current use for this setting is to enable application approvals via email from a remote device. For more information, see [Approve applications](/sccm/apps/deploy-use/app-approval).
+
+#### Prerequisites
+- The server that hosts the SMS Provider requires .NET 4.5.2 or later.  
+
+- Enable the SMS Provider to use a certificate. Use one of the following options:  
+
+    - Enable [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http) (recommended)  
+
+        > [!Note]  
+        > When the site creates a certificate for the SMS Provider, it won't be trusted by the web browser on the client. Based on your security settings, accessing the REST provider, you may see a security warning.  
+
+    - Manually bind a PKI-based certificate to port 443 in IIS on the server that hosts the SMS Provider role  
+
+#### Process to enable the API through the CMG
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Servers and Site System Roles** node.  
+
+2. Select the server with the **SMS Provider** role.  
+
+3. In the details pane, select the **SMS Provider** role, and select **Properties** in the ribbon on the **Site Role** tab.  
+
+4. Select the option to **Allow Configuration Manager cloud management gateway traffic for administration service**.  
+
