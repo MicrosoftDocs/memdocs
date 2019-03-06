@@ -38,7 +38,7 @@ For more information about the different scenarios, see [plan for cloud manageme
 <!--SCCMDocs issue #779-->
 Certificates for the cloud management gateway support the following configurations:  
 
-- **4096-bit key length**  
+- 2048 or 4096-bit key length
 
 - Starting in version 1710, support for key storage providers for certificate private keys. For more information, see [CNG certificates overview](/sccm/core/plan-design/network/cng-certificates-overview).  
 
