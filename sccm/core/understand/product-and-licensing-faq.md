@@ -22,21 +22,6 @@ This FAQ addresses common licensing questions about Configuration Manager curren
 For more information about Configuration Manager features, see the [product page](https://www.microsoft.com/cloud-platform/system-center-configuration-manager).
 
 
-- [What's current branch?](#bkmk_cb)  
-- [What's the long-term servicing branch (LTSB)?](#bkmk_ltsb)  
-- [I've seen *SA* and *L&SA* used in licensing content. What do these acronyms mean in regard to Configuration Manager?](#bkmk_licensing-acronyms)  
-- [I read the term "equivalent subscription", what programs does that refer to?](#bkmk_equiv-sub)  
-- [I have Enterprise Mobility + Security and it expired, what must I do now?](#bkmk_ems-expires)  
-- [If my SA expires, and I had L&SA, what do I get?](#bkmk_sa-expires)  
-- [Do I "own" the current branch?](#bkmk_owncb)  
-- [Can I purchase Configuration Manager standalone without SA?](#bkmk_standalone)  
-- [I see updates for Configuration Manager offered from within my console, like version 1810. Do I have rights to install it?](#bkmk_update-rights)  
-- [I have purchased EMS or Microsoft 365 through a Cloud Solution Provider (CSP), do I have rights to use Configuration Manager?](#bkmk_csp)  
-- [Is my subscription end-date the same as an SA expiration date?](#bkmk_expiration-date)  
-- [What are the use rights associated with the SQL technology provided with Configuration Manager?](#bkmk_sql)  
-- [Does on-premises mobile device management (MDM) require an Intune subscription?](#bkmk_opmdm)  
-
-
 
 ### <a name="bkmk_cb"></a> What's current branch?  
 
