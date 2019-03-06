@@ -23,7 +23,7 @@ You can use a SQL Server cluster to host the Configuration Manager site database
 > Successful set up of SQL Server clusters relies on documentation and procedures provided in the SQL Server documentation library.  
 
 
-Before you install Configuration Manager, prepare the SQL Server cluster to support Configuration Manager. For more information, see [Prepare a clustered SQL Server instance](bkmk_prepare).
+Before you install Configuration Manager, prepare the SQL Server cluster to support Configuration Manager. For more information, see [Prepare a clustered SQL Server instance](#bkmk_prepare).
 
 During Configuration Manager setup, the Windows Volume Shadow Copy Service writer installs on each physical computer node of the Microsoft Windows Server cluster. This service supports the **Backup Site Server** maintenance task.  
 
