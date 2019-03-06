@@ -344,6 +344,8 @@ For more information, see [Install and configure distribution points](/sccm/core
 
     - ASP.NET 4.5  
 
+    - Windows Communication Foundation (WCF) Services<!-- SCCMDocs issue #1168 -->  
+
 #### IIS configuration  
 
 -   Common HTTP Features:  
