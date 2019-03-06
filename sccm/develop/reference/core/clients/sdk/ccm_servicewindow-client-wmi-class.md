@@ -80,7 +80,7 @@ class CCM_ServiceWindow
 
 |Value|Service Window Type|Description|  
 |-----------|-------------------------|-----------------|  
-|1|ALLPROGRAM_SERVICEWINDOW|All Programs Service Window|  
+|1|ALLPROGRAM_SERVICEWINDOW|All Deployment Service Window|  
 |2|PROGRAM_SERVICEWINDOW|Program Service Window|  
 |3|REBOOTREQUIRED_SERVICEWINDOW|Reboot Required Service Window|  
 |4|SOFTWAREUPDATE_SERVICEWINDOW|Software Update Service Window|  
