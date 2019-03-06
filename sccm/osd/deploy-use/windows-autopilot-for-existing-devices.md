@@ -2,7 +2,7 @@
 title: Windows Autopilot for existing devices
 titleSuffix: Configuration Manager
 description: Use a Configuration Manager task sequence to reimage and provision a Windows 7 device for Windows Autopilot user-driven mode
-ms.date: 02/22/2019
+ms.date: 03/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -26,9 +26,12 @@ manager: dougeby
 
 ## Prerequisites
 
-Acquire the installation media for Windows 10 version 1809, or later. Then create a Configuration Manager OS image. For more information, see [Manage OS images](/sccm/osd/get-started/manage-operating-system-images).
+- Acquire the installation media for Windows 10 version 1809, or later. Then create a Configuration Manager OS image. For more information, see [Manage OS images](/sccm/osd/get-started/manage-operating-system-images).
 
-In Microsoft Intune, create profiles for Windows Autopilot. For more information, see [Enroll Windows devices in Intune by using Windows Autopilot](https://docs.microsoft.com/intune/enrollment-autopilot).
+- In Microsoft Intune, create profiles for Windows Autopilot. For more information, see [Enroll Windows devices in Intune by using Windows Autopilot](https://docs.microsoft.com/intune/enrollment-autopilot).
+
+- A device not already registered with the Windows Autopilot service. If the device is already registered, the assigned profile takes precedence. The Autopilot for existing devices profile only applies if that the online profile times out.
+
 
 
 ## Create the configuration file
