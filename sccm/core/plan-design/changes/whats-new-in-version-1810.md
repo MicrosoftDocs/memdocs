@@ -2,7 +2,7 @@
 title: What's new in version 1810
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1810 of Configuration Manager current branch.
-ms.date: 03/04/2019
+ms.date: 03/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -142,14 +142,6 @@ When installing the Configuration Manager client, the ccmsetup process contacts 
 For more information, see [Configure boundary groups](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_ccmsetup).
 
 
-### Improvements to internet-based client setup
-<!--1359181-->
-<!--move this under co-management?-->  
-This release further simplifies the Configuration Manager client setup process for clients on the internet. The site publishes additional Azure Active Directory (Azure AD) information to the cloud management gateway (CMG). An Azure AD-joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies enrolling devices to co-management in an environment with more than one Azure AD tenant. Now the only two required ccmsetup properties are **CCMHOSTNAME** and **SMSSiteCode**.
-
-<!--For more information, see [Prepare Windows 10 devices for co-management](https://docs.microsoft.com/en-us/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client).-->
-
-
 
 ## <a name="bkmk_comgmt"></a> Co-management
 
@@ -173,6 +165,13 @@ The co-management dashboard is enhanced with the following more detailed informa
 ![Co-management dashboard screenshot showing the top four tiles](media/1358980-comgmt-dashboard.png)
 
 For more information, see [Co-management dashboard](/sccm/comanage/how-to-monitor#co-management-dashboard).
+
+
+### Improvements to internet-based client setup
+<!--3607731, fka 1359181-->
+***[UPDATED]*** This release further simplifies the Configuration Manager client setup process for clients on the internet. The site publishes additional Azure Active Directory (Azure AD) information to the cloud management gateway (CMG). An Azure AD-joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies enrolling devices to co-management in an environment with more than one Azure AD tenant. Now the only two required ccmsetup properties are **CCMHOSTNAME** and **SMSSiteCode**.
+
+For more information, see [How to prepare internet-based devices for co-management](/sccm/comanage/how-to-prepare-Win10#install-the-configuration-manager-client).
 
 
 
