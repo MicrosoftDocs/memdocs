@@ -125,14 +125,14 @@ For more information, see [Client notifications](/sccm/core/clients/manage/clien
 
 
 ### Improvements to collection evaluation
-<!--1358981-->
-The following changes in collection evaluation behavior can improve site performance:  
- 
+<!--3607726, fka 1358981-->
+***[UPDATED]*** The following changes in collection evaluation behavior can improve site performance:  
+
 - Previously, when you configured a schedule on a query-based collection, the site would continue to evaluate the query whether or not you enabled the collection setting to **Schedule a full update on this collection**. To fully disable the schedule, you had to change the schedule to **None**. Now the site clears the schedule when you disable this setting. To specify a schedule for collection evaluation, enable the option to **Schedule a full update on this collection**.  
 
 - You can't disable the evaluation of built-in collections like **All Systems**, but now you can configure the schedule. This behavior allows you to customize this action at a time that meets your business requirements. 
 
-<!--For more information, see [How to create collections](/sccm/core/clients/manage/collections/create-collections).-->
+For more information, see [How to create collections](/sccm/core/clients/manage/collections/create-collections#bkmk_create).
 
 
 ### Improvement to client installation
