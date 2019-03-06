@@ -168,7 +168,18 @@ In the **Query Rule Properties** dialog box, specify the following information:
 
 - **Edit Query Statement**: Opens the **Query Statement Properties** dialog box where you can author a query to use as the rule for the collection. For more information about queries, see [Queries technical reference](/sccm/core/servers/manage/queries-technical-reference).  
 
-    
+
+### <a name="bkmk-category"></a> Device category rule
+
+The following actions are available in the **Select Device Categories** window:
+
+- **Create**: Specify a name to create a new category
+- **Rename**: Rename the selected category
+- **Delete**: Select one or more categories, and use this action to remove them from the list
+
+For more information, see [Automatically categorize devices into collections](/sccm/core/clients/manage/collections/automatically-categorize-devices-into-collections).<!-- SCCMDocs issue 552 -->
+
+
 ### <a name="bkmk-include"></a> Configure an include collection rule  
 
 In the **Select Collections** dialog box, select the collections you want to include in the new collection, then choose **OK**.  
