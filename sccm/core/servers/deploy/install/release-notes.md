@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 02/21/2019
+ms.date: 03/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -121,7 +121,7 @@ Create a custom security role. Copy an existing security role, and add the follo
 For more information, see [Create custom security roles](/sccm/core/servers/deploy/configure/configure-role-based-administration#BKMK_CreateSecRole)
 
 
-### Changing Office 365 client setting doesn’t apply 
+### Changing Office 365 client setting doesn't apply 
 <!--511551-->
 *Applies to: Configuration Manager version 1802*  
 
@@ -138,6 +138,19 @@ Change the following registry value to `0` and restart the **Microsoft Office Cl
 
 
 ## Mobile device management  
+
+### Validation for iOS app link sometimes fails on valid link
+<!-- LSI 106004348 -->
+When you create a new application of type **App Package for iOS from App Store**, the validator doesn't accept some valid URLs for the **Location**. Specifically, the iOS App Store doesn't require a value for the app name section of the URL. For example, both of the following links are valid and point to the same app, but the **Create Application Wizard** only accepts the first:
+- `https://itunes.apple.com/us/app/app-name/id123456789?mt=8`
+- `https://itunes.apple.com/us/app//id123456789?mt=8`
+
+#### Workaround
+When you create an iOS app that's missing the app name from the URL, add any value as if it were the app name to the URL. For example:
+- `https://itunes.apple.com/us/app/any-string/id123456789?mt=8`
+
+This action allows you to complete the wizard. The app is still successfully deployed to iOS devices. The string you add to the URL appears as the **Name** on the **General Information** tab in the wizard. It's also the app's label in the Company Portal.
+
 
 ### You can no longer deploy Windows Phone 8.1 VPN profiles to Windows 10
 <!-- 503274  -->
