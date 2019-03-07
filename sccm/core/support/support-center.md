@@ -2,7 +2,7 @@
 title: Support Center
 titleSuffix: Configuration Manager
 description: Troubleshoot Configuration Manager clients with the Support Center.
-ms.date: 01/30/2019
+ms.date: 03/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -73,6 +73,10 @@ After you install it, find the following items on the Start menu in the **Micros
 
 
 ## Known issues 
+
+#### You can't install the latest version if an older version is already installed
+<!--SCCMDocs-pr issue #3090-->
+If you already have an older version of Support Center installed, the version 1810 installer fails. This issue is due to how the files are versioned between the original version and the latest version. To work around this issue, uninstall the older version of Support Center first. Then install the latest version from Configuration Manager version 1810.
 
 #### Remote connections must include computer name or domain as part of the user name
 If you connect to a remote client from Support Center, you must provide the machine name or domain name for the user account when establishing the connection. If you use a shorthand computer name or domain name (such as `.\administrator`), the connection succeeds, but Support Center doesn't collect data from the client. 
