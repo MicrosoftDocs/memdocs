@@ -2,7 +2,7 @@
 title: Client notification
 titleSuffix: Configuration Manager
 description: Manage clients by taking immediate action from the central Configuration Manager console.
-ms.date: 11/27/2018
+ms.date: 03/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -71,6 +71,7 @@ This action requires the same permissions as the [Run script](#run-script) actio
 
 These actions are under the **Client notification** menu, on the ribbon in the Device or Collection group of the Home tab.
 
+In version 1806 or earlier, the **Client Notification** option is only available from either the Device Collection node or when you viewed the membership of a Device Collection. Starting in version 1810, you can start a **Client Notification** directly from the **Devices** node. There's no longer a requirement to be within a collection membership view. <!--SCCMDocs-pr issue 2972-->
 
 #### Permissions
 <!--SCCMDocs-pr issue #2972-->
