@@ -295,21 +295,21 @@ Use the Configuration Manager console to install a secondary site.
 
     When you use CD.Latest source files that are shared on the network or copied locally to the target secondary site server:  
 
-    **Version 1802 and earlier**
+    - **Version 1802 and earlier**
 
-       - The CD.Latest source file location includes a folder named **Redist**. Move this **Redist** folder as a subfolder under the **SMSSETUP** folder.  
+        - The CD.Latest source file location includes a folder named **Redist**. Move this **Redist** folder as a subfolder under the **SMSSETUP** folder.  
 
-           > [!Note]  
-           > If hash mismatch errors occur during setup, update the **Redist** folder. Use the [Setup Downloader](/sccm/core/servers/deploy/install/setup-downloader) to get the latest files. For any files that cause a hash mismatch error, also copy them from the updated **Redist** folder to the **SMSSETUP\BIN\X64** folder. 
+            > [!Note]  
+            > If hash mismatch errors occur during setup, update the **Redist** folder. Use the [Setup Downloader](/sccm/core/servers/deploy/install/setup-downloader) to get the latest files. For any files that cause a hash mismatch error, also copy them from the updated **Redist** folder to the **SMSSETUP\BIN\X64** folder. 
 
-    **Version 1806 and later**<!-- SCCMDocs-pr issue 3164 -->
+    - **Version 1806 and later**<!-- SCCMDocs-pr issue 3164 -->
 
-       - The CD.Latest source file location includes a folder named **Redist**. Move this **Redist** folder as a subfolder under the **SMSSETUP** folder.  
+        - The CD.Latest source file location includes a folder named **Redist**. Move this **Redist** folder as a subfolder under the **SMSSETUP** folder.  
 
-       - Copy the following files from the **Redist** folder to the **SMSSETUP\BIN\X64** folder:   
-           - SharedManagementObjects.msi
-           - SQLSysClrTypes.msi
-           - sqlncli.msi
+        - Copy the following files from the **Redist** folder to the **SMSSETUP\BIN\X64** folder:   
+            - SharedManagementObjects.msi
+            - SQLSysClrTypes.msi
+            - sqlncli.msi
 
     - If any of the files from **Redist** aren't available, Setup fails to install the secondary site.  
 
@@ -320,45 +320,45 @@ Use the Configuration Manager console to install a secondary site.
     > [!NOTE]  
     > Setup doesn't validate the information that you enter on this page until it starts the installation. Before you continue, verify these settings.  
 
-    **Install and configure a local copy of SQL Express on the secondary site computer**  
+    - **Install and configure a local copy of SQL Express on the secondary site computer**  
 
-       - **SQL Server Service port**: Specify the SQL Server service port for SQL Server Express to use. The service port is typically configured to use TCP port 1433, but you can configure another port.  
+        - **SQL Server Service port**: Specify the SQL Server service port for SQL Server Express to use. The service port is typically configured to use TCP port 1433, but you can configure another port.  
 
-       - **SQL Server Broker port**: Specify the SQL Server Service Broker (SSB) port for SQL Server Express to use. The Service Broker is typically configured to use TCP port 4022, but you can configure a different port. Specify a valid port that no other site or service is using, and that no firewall restrictions are blocking.  
+        - **SQL Server Broker port**: Specify the SQL Server Service Broker (SSB) port for SQL Server Express to use. The Service Broker is typically configured to use TCP port 4022, but you can configure a different port. Specify a valid port that no other site or service is using, and that no firewall restrictions are blocking.  
 
-    **Use an existing SQL Server instance**  
+    - **Use an existing SQL Server instance**  
 
-       - **SQL Server FQDN**: Review the FQDN for the computer running SQL Server. You must use a local server running SQL Server to host the secondary site database, and you can't modify this setting.  
+        - **SQL Server FQDN**: Review the FQDN for the computer running SQL Server. You must use a local server running SQL Server to host the secondary site database, and you can't modify this setting.  
 
-       - **SQL Server instance**: Specify the instance of SQL Server to use as the secondary site database. Leave this option blank to use the default instance.  
+        - **SQL Server instance**: Specify the instance of SQL Server to use as the secondary site database. Leave this option blank to use the default instance.  
 
-       - **ConfigMgr site database name**: Specify the name to use for the secondary site database.  
+        - **ConfigMgr site database name**: Specify the name to use for the secondary site database.  
 
-       - **SQL Server Broker port**: Specify the SQL Server Service Broker (SSB) port for SQL Server to use. Specify a valid port that no other site or service is using, and that no firewall restrictions block.  
+        - **SQL Server Broker port**: Specify the SQL Server Service Broker (SSB) port for SQL Server to use. Specify a valid port that no other site or service is using, and that no firewall restrictions block.  
 
     > [!TIP]  
     > For a list of the SQL Server versions that System Center Configuration Manager supports, see [Supported SQL Server versions](/sccm/core/plan-design/configs/support-for-sql-server-versions).  
 
 7. On the **Distribution Point** page, configure settings for the distribution point that will be installed on the secondary site server.  
 
-    **Required settings:**  
+    - **Required settings:**  
 
-       - **Specify how client devices communicate with the distribution point**: Choose between HTTP and HTTPS.  
+        - **Specify how client devices communicate with the distribution point**: Choose between HTTP and HTTPS.  
 
-       - **Create a self-signed certificate or import a PKI client certificate**: Choose between using a self-signed certificate or importing a certificate from your PKI. A self-signed certificate lets you also allow anonymous connections from Configuration Manager clients to the content library. The certificate is used to authenticate the distribution point to a management point before the distribution point sends status messages. For more information, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements).  
+        - **Create a self-signed certificate or import a PKI client certificate**: Choose between using a self-signed certificate or importing a certificate from your PKI. A self-signed certificate lets you also allow anonymous connections from Configuration Manager clients to the content library. The certificate is used to authenticate the distribution point to a management point before the distribution point sends status messages. For more information, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements).  
 
-    **Optional settings:**  
+    - **Optional settings:**  
 
-       - **Install and configure IIS if required by Configuration Manager**: Select this setting to let Configuration Manager install and configure Internet Information Services (IIS) on the server, if it's not already installed. IIS is required on all distribution points.  
+        - **Install and configure IIS if required by Configuration Manager**: Select this setting to let Configuration Manager install and configure Internet Information Services (IIS) on the server, if it's not already installed. IIS is required on all distribution points.  
 
-           > [!NOTE]  
-           > Although this setting is optional, IIS must be installed on the server before a distribution point can be installed successfully.  
+            > [!NOTE]  
+            > Although this setting is optional, IIS must be installed on the server before a distribution point can be installed successfully.  
 
-       - **Enable and configure BranchCache for this distribution point**  
+        - **Enable and configure BranchCache for this distribution point**  
 
-       - **Description**: This value is a friendly description for the distribution point to help you recognize it.  
+        - **Description**: This value is a friendly description for the distribution point to help you recognize it.  
 
-       - **Enable this distribution point for prestaged content**  
+        - **Enable this distribution point for prestaged content**  
 
 8. On the **Drive Settings** page, specify the drive settings for the secondary site distribution point.  
 
