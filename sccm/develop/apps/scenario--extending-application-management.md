@@ -9,6 +9,7 @@ ms.assetid: 825373a9-1cf2-46a6-a6dc-6eb620dd75c7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Scenario: Extending Application Management
 This section provides task-based topics that show you how to extend application management in Configuration Manager.  

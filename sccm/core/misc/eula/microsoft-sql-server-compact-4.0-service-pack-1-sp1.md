@@ -9,7 +9,8 @@ ms.assetid: 980133ce-cf9d-46e8-a119-b8b960b2e25e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
+ms.collection: M365-identity-device-management
 ---
 # MICROSOFT SQL SERVER COMPACT 4.0 SERVICE PACK 1 (SP1)
 
@@ -37,7 +38,7 @@ robots: noindex,nofollow
 
    1.  **Installation and Use.** You may install and use any number of copies of the software on your devices to design, develop and test your programs for use with the software.  
 
-   2.  **Included Microsoft Programs.** The software contains the Microsoft Visual C++ 2008 Express Edition components listed below. You may only use these components with the software. The Microsoft Visual C++ 2008 Express license terms located at **%Program Files%\Microsoft SQL Server Compact Edition\v4.0** apply to your use of them, except that the components listed below may be used for commercial hosting services when used in conjunction with the software.  
+   2.  **Included Microsoft Programs.** The software contains the Microsoft Visual C++ 2008 Express Edition components listed below. You may only use these components with the software. The Microsoft Visual C++ 2008 Express license terms located at `%Program Files%\Microsoft SQL Server Compact Edition\v4.0` apply to your use of them, except that the components listed below may be used for commercial hosting services when used in conjunction with the software.  
 
        -   Microsoft_VC90_CRT_x86.msm  
 
@@ -127,14 +128,9 @@ robots: noindex,nofollow
 
 10. **LEGAL EFFECT.** This agreement describes certain legal rights. You may have other rights under the laws of your country. You may also have rights with respect to the party from whom you acquired the software. This agreement does not change your rights under the laws of your country if the laws of your country do not permit it to do so.  
 
-11. **DISCLAIMER OF WARRANTY. THE SOFTWARE IS LICENSED "AS-IS." YOU BEAR THE RISK OF USING IT.**   
-    **MICROSOFT GIVES NO EXPRESS WARRANTIES, GUARANTEES OR CONDITIONS. YOU MAY HAVE**   
-    **ADDITIONAL CONSUMER RIGHTS UNDER YOUR LOCAL LAWS WHICH THIS AGREEMENT CANNOT**   
-    **CHANGE. TO THE EXTENT PERMITTED UNDER YOUR LOCAL LAWS, MICROSOFT EXCLUDES THE**   
-    **IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.**  
+11. **DISCLAIMER OF WARRANTY. THE SOFTWARE IS LICENSED "AS-IS." YOU BEAR THE RISK OF USING IT. MICROSOFT GIVES NO EXPRESS WARRANTIES, GUARANTEES OR CONDITIONS. YOU MAY HAVE ADDITIONAL CONSUMER RIGHTS UNDER YOUR LOCAL LAWS WHICH THIS AGREEMENT CANNOT CHANGE. TO THE EXTENT PERMITTED UNDER YOUR LOCAL LAWS, MICROSOFT EXCLUDES THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.**  
 
-12. **LIMITATION ON AND EXCLUSION OF REMEDIES AND DAMAGES. YOU CAN RECOVER FROM MICROSOFT**   
-    **AND ITS SUPPLIERS ONLY DIRECT DAMAGES UP TO U.S. $5.00. YOU CANNOT RECOVER ANY OTHER DAMAGES, INCLUDING CONSEQUENTIAL, LOST PROFITS, SPECIAL, INDIRECT OR INCIDENTAL DAMAGES.**  
+12. **LIMITATION ON AND EXCLUSION OF REMEDIES AND DAMAGES. YOU CAN RECOVER FROM MICROSOFT AND ITS SUPPLIERS ONLY DIRECT DAMAGES UP TO U.S. $5.00. YOU CANNOT RECOVER ANY OTHER DAMAGES, INCLUDING CONSEQUENTIAL, LOST PROFITS, SPECIAL, INDIRECT OR INCIDENTAL DAMAGES.**  
 
      This limitation applies to  
 

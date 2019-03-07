@@ -10,6 +10,7 @@ ms.assetid: 4bb6afeb-d267-4f9b-ade2-26e5400c223b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Common tasks for creating and deploying configuration baselines with System Center Configuration Manager
 

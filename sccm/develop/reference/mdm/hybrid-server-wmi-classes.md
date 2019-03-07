@@ -9,6 +9,7 @@ ms.assetid: 1b361109-3486-4a75-b2cc-92ab4927e5d1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Hybrid Server WMI Classes
 Hybrid classes, in System Center Configuration Manager, allow you to manage hybrid features.  

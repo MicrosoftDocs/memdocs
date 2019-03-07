@@ -9,6 +9,7 @@ ms.assetid: 1e9fe422-4ef6-4c7a-9f17-df26fb4bf5e2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # CCM_ApplicationActions Client WMI Class
 The `CCM_ApplicationActions` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents application actions.   

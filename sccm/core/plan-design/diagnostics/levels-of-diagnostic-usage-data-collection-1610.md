@@ -10,6 +10,8 @@ ms.assetid: eb20eb90-bcc0-41de-bfea-638ea470c0dd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ROBOTS: NOINDEX
+ms.collection: M365-identity-device-management
 ---
 # Levels of diagnostic usage data collection for version 1610 of System Center Configuration Manager
 

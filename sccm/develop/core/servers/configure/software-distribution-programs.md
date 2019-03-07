@@ -9,6 +9,7 @@ ms.assetid: 9136e096-22a2-4a72-810f-3723259a1091
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Software Distribution Programs
 This section provides topics that show you how to programmatically manage programs in System Center Configuration Manager.  

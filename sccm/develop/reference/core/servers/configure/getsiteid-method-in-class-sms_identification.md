@@ -9,6 +9,7 @@ ms.assetid: 9e36aa9b-b824-4ea1-9d70-db562f46d212
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # GetSiteID Method in Class SMS_Identification
 The `GetSiteID` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the unique ID of the installed Configuration Manager site.  

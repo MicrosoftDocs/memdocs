@@ -9,6 +9,7 @@ ms.assetid: 157c52c0-4c83-415a-9f21-91807b5fd0cc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # GetPackageDefaultHash Method in Class SMS_TaskSequencePackage
 The `GetPackageDefaultHash` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the hash of a System Center Configuration Manager package.  

@@ -9,6 +9,7 @@ ms.assetid: fffd97ed-bbd8-482c-9d3e-0a566bfed8a6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Securing Configuration Manager Applications
 The security model for System Center Configuration Manager has changed significantly from previous versions of Configuration Manager. The previous security model has been replaced by Role-Based Administration.  

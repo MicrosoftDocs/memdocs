@@ -9,6 +9,7 @@ ms.assetid: 738f9197-2c70-450c-a4c3-a67fa6251122
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Synchronizing the Software Update Point
 This section provides information about synchronizing the software update point in System Center Configuration Manager.  

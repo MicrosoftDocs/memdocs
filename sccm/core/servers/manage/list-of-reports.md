@@ -10,6 +10,7 @@ ms.assetid: b7332ed3-8003-454b-bb12-1fdf8721425c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # List of reports in Configuration Manager
@@ -408,7 +409,7 @@ The following one report is listed under the **Hardware - Security** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
-|**Details of firmware states on devices**|Displays the details of the states of UEFI, SecureBoot, and TPM|  
+|**Details of firmware states on devices**|Displays the details of the states of UEFI, SecureBoot, and TPM. **Note**: This report isn't in version 1810.<!--SCCMDocs issue #1189-->|  
 
 
 

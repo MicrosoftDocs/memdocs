@@ -9,6 +9,7 @@ ms.assetid: b53d2386-3890-4646-a917-4c07ec709c24
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Console Folder Server WMI Classes
 This section provides reference content for Microsoft System Center Configuration Manager console folders.  

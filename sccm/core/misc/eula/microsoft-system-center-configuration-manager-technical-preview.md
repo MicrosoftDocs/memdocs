@@ -8,7 +8,8 @@ ms.assetid: e3e1167f-a3b2-4319-a042-9805a1d01250
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
+ms.collection: M365-identity-device-management
 ---
 # MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER TECHNICAL PREVIEW
 *Applies to: System Center Configuration Manager (Technical Preview)*

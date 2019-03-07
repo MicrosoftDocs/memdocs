@@ -10,6 +10,7 @@ ms.assetid: eab0e09d-b09e-4c14-ab14-c5f87472522e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Planning for certificate template permissions for certificate profiles in System Center Configuration Manager
 

@@ -10,6 +10,7 @@ ms.assetid: f1137ef8-5cf9-4c66-a635-4ac26380414c
 author: aczechowski
 ms.author: aaroncz
 manager: aaroncz
+ms.collection: M365-identity-device-management
 ---
 
 # Flowchart - Manage content library

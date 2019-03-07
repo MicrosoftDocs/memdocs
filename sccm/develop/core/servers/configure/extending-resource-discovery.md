@@ -9,6 +9,7 @@ ms.assetid: 074843c7-f275-44ca-a4e4-76b0b96b4fa9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Extending Resource Discovery
 The System Center Configuration Manager discovery feature provides a set of tools and resources that can help manage the complex task of discovering systems in the enterprise.  

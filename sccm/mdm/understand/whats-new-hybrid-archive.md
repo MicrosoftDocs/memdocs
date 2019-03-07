@@ -10,7 +10,8 @@ ms.assetid: 4c27b161-9eb7-4cdd-b469-d8eb27e71aea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: "NOINDEX, NOFOLLOW"
+ROBOTS: NOINDEX
+ms.collection: M365-identity-device-management
 ---
 # Past hybrid features with System Center Configuration Manager and Microsoft Intune
 

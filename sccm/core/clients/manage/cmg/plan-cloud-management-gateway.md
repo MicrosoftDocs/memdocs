@@ -10,6 +10,7 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Plan for the cloud management gateway in Configuration Manager
@@ -205,7 +206,8 @@ The following table lists CMG support for Configuration Manager features:
 | Software distribution (device-targeted)     | ![Supported](media/green_check.png) |
 | Software distribution (user-targeted, required)<br>(with Azure AD integration)     | ![Supported](media/green_check.png)  (1710) |
 | Software distribution (user-targeted, available)<br>([all requirements](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![Supported](media/green_check.png)  (1802) |
-| Windows 10 in-place upgrade task sequence     | ![Supported](media/green_check.png)  (1802) |
+| Windows 10 in-place upgrade task sequence      | ![Supported](media/green_check.png)  (1802) |
+| Task sequences which are not using boot images and are deployed with an option: **Download all content locally before starting task sequence**      | ![Supported](media/green_check.png)  (1802) |
 | CMPivot     | ![Supported](media/green_check.png)  (1806) |
 | Any other task sequence scenario     | ![Not supported](media/Red_X.png) |
 | Client push     | ![Not supported](media/Red_X.png) |

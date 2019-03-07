@@ -9,6 +9,7 @@ ms.assetid: 58be5b96-6237-4fe5-aca9-3b665aff201e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_G_System_LastSoftwareScan Server WMI Class
 The `SMS_G_System_LastSoftwareScan` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents information about the most recent software inventory scan on the client computer.  

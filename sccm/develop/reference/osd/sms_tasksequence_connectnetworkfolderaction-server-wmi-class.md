@@ -9,6 +9,7 @@ ms.assetid: 3d4a32d4-7a09-41dc-8e94-0d087ade9f94
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_TaskSequence_ConnectNetworkFolderAction Server WMI Class
 The `SMS_TaskSequence_ConnectNetworkFolderAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that makes a connection to a network share.  

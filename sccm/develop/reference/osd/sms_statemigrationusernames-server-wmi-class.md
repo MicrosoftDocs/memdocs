@@ -9,6 +9,7 @@ ms.assetid: 26d7ad7d-e8e6-41f4-9300-a4a4359dba31
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_StateMigrationUserNames Server WMI Class
 The `SMS_StateMigrationUserNames` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a localized user name during state migration.  

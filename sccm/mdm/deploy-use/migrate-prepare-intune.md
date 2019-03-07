@@ -10,6 +10,7 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: db97ae9e-34f4-4e10-a282-cd211f612bb4
+ms.collection: M365-identity-device-management
 ---
 
 # Prepare Intune for user migration 
@@ -46,7 +47,7 @@ If you [imported Configuration Manager data to Microsoft Intune](migrate-import-
 - [Assign policies](https://docs.microsoft.com/intune/get-started-policies)  
 - [Assign profiles](https://docs.microsoft.com/intune/device-profile-assign)  
     > [!NOTE]  
-    > When Intune deploys the new email profile, users receive a prompt to reenter their password.  
+    > When Intune deploys the new email profile, users receive a prompt to reenter their password. This behavior results in emails being redownloaded on users' devices. Any custom modifications done by the user will need to be done again. 
 - [Assign apps](https://docs.microsoft.com/intune/get-started-apps) 
 
 ## Terms and conditions policy

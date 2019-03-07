@@ -8,6 +8,7 @@ ms.assetid: f5951015-0172-4c37-a96d-aa7c131d7672
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Discovery
 This section provides topics about programmatically managing discovery in System Center Configuration Manager.  

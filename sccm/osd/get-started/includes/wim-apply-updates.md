@@ -78,3 +78,4 @@ If you select a drive that doesn't exist on the site server, Configuration Manag
 
 During offline servicing, Configuration Manager stores temporary files in the folder, `<drive>:\ConfigMgr_OfflineImageServicing`. It also mounts the OS image in this folder. 
 
+

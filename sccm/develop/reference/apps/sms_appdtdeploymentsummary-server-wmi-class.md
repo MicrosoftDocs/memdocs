@@ -9,6 +9,7 @@ ms.assetid: e577ce4f-2653-41a3-b405-606d059c00f1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_AppDTDeploymentSummary Server WMI Class
 The `SMS_AppDTDeploymentSummary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the deployment type-level summary of application deployment.  

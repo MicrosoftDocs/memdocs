@@ -10,8 +10,12 @@ ms.assetid: 2d5f871a-19dc-4bd3-a3ad-4230c7a69f1b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# How to create global conditions in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# How to create global conditions in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 In System Center Configuration Manager, global conditions are rules that represent business or technical conditions that you can use to specify how an application is provided and deployed to client devices. Global conditions are accessed from the **Requirements** page of the Create Deployment Type Wizard.  
 
 > [!NOTE]  

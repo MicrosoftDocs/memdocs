@@ -10,6 +10,8 @@ ms.assetid: b587779e-1bd3-4ee3-8146-8e31f53499bd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ROBOTS: NOINDEX
+ms.collection: M365-identity-device-management
 ---
 # Checklist for installing update 1702 for System Center Configuration Manager
 

@@ -9,6 +9,7 @@ ms.assetid: 59a554c2-ba92-447f-ad32-c21b68ce1e48
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Operating System Deployment Site Role Configuration
 This section provides information about using the System Center Configuration Manager state migration point and PXE service point roles that are used by operating system deployment.  

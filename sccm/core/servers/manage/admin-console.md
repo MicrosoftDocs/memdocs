@@ -2,7 +2,7 @@
 title: Configuration Manager Console
 titleSuffix: Configuration Manager
 description: Learn about navigating through the Configuration Manager console.
-ms.date: 11/27/2018
+ms.date: 03/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,6 +10,7 @@ ms.assetid: 463ce307-59dd-4abd-87b8-42ca9db178d7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Using the Configuration Manager console
@@ -150,8 +151,20 @@ Starting in version 1806, the following columns are available in the **Devices**
 - **Primary user(s)** <!--1357280-->  
 
 - **Currently logged on user** <!--1358202-->  
+    > [!NOTE]  
+    > Viewing the currently logged on user requires [user discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_config-adud) and [user device affinity](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).  
 
 For more information on how to show a non-default column, see [Columns](#columns).
+
+#### Improvement to device search performance
+<!-- 3614690 -->
+Starting in version 1806, when searching in a device collection, it doesn't search the keyword against all object properties. When you're not specific about what to search, it searches across the following four properties:
+- Name
+- Primary user(s)
+- Currently logged on user
+- Last logon user name
+
+This behavior significantly improves the time it takes to search by name, especially in a large environment. Custom searches by specific criteria are unaffected by this change. 
 
 
 ### Monitoring workspace

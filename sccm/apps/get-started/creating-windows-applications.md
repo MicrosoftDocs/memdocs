@@ -2,7 +2,7 @@
 title: Create Windows applications
 titleSuffix: Configuration Manager
 description: Learn more information about creating and deploying Windows applications in Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 02/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,6 +10,7 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
 
 # Create Windows applications in Configuration Manager
@@ -24,13 +25,7 @@ In addition to the other Configuration Manager requirements and procedures for [
 
 Configuration Manager supports the deployment of Windows app package (.appx) and app bundle (.appxbundle) formats for Windows 8.1 and Windows 10 devices.
 
-Starting in version 1806, Configuration Manager also supports the new Windows 10 app package (.msix) and app bundle (.msixbundle) formats. The latest [Windows Insider Preview](https://insider.windows.com/) builds currently support these new formats.<!--1357427-->  
-
-- For an overview of MSIX, see [A closer look at MSIX](https://blogs.msdn.microsoft.com/sgern/2018/06/18/a-closer-look-at-msix/).  
-
-- For how to create a new MSIX app, see [MSIX support introduced in Insider Build 17682](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376).  
-
-When you create an application in the Configuration Manager console, select the application installation file **Type** as **Windows app package (\*.appx, \*.appxbundle, \*.msix, \*.msixbundle)**. For more information, see [Create applications](/sccm/apps/deploy-use/create-applications). 
+When you create an application in the Configuration Manager console, select the application installation file **Type** as **Windows app package (\*.appx, \*.appxbundle, \*.msix, \*.msixbundle)**. For more information on creating apps in general, see [Create applications](/sccm/apps/deploy-use/create-applications). For more information on the MSIX format, see [Support for MSIX format](#bkmk_msix). 
 
 > [!Note]  
 > To take advantage of new Configuration Manager features, first update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.<!--SCCMDocs issue 646-->  
@@ -55,6 +50,63 @@ To configure a Windows app deployment type for this feature, enable the option t
 
 > [!Note]  
 > If you need to uninstall a provisioned application from devices to which users have already signed on, you need to create two uninstall deployments. Target the first uninstall deployment to a device collection that contains the devices. Target the second uninstall deployment to a user collection that contains the users who have already signed on to devices with the provisioned application. When uninstalling a provisioned app on a device, Windows currently doesn't uninstall that app for users as well. 
+
+
+
+## <a name="bkmk_msix"></a> Support for MSIX format
+<!--1357427-->
+
+Starting in version 1806, Configuration Manager supports the new Windows 10 app package (.msix) and app bundle (.msixbundle) formats. Windows 10 version 1809 or later support these new formats.  
+
+- For an overview of MSIX, see [A closer look at MSIX](https://blogs.msdn.microsoft.com/sgern/2018/06/18/a-closer-look-at-msix/).  
+
+- For how to create a new MSIX app, see [MSIX support introduced in Insider Build 17682](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376).  
+
+
+### Convert applications to MSIX
+<!--3607729, fka 1359029-->
+
+Starting in version 1810, convert your existing Windows Installer (.msi) applications to the MSIX format. 
+
+#### Prerequisites
+- A reference device running Windows 10 version 1809 or later  
+
+- Sign in to Windows on this device as a user with local administrative rights  
+
+- Install the following apps on this device:  
+
+    - Configuration Manager console  
+
+    - Install the [MSIX Packaging Tool](https://www.microsoft.com/store/productId/9N5LW3JBCXKF) from the Microsoft Store  
+
+    - Install the [MSIX packaging tool driver](https://docs.microsoft.com/windows/msix/packaging-tool/mpt-known-issues#msix-packaging-tool-driver-considerations)<!--SCCMDocs-pr issue #3091-->  
+
+Don't install any other apps or services on this device. It's your reference system. 
+
+#### Process to convert applications to MSIX format
+1. Elevate the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select the **Applications** node.  
+
+2. Select an application that has a Windows Installer (.msi) deployment type.  
+
+    > [!Note]  
+    > You need to be able to access the application's source content from the reference device.  
+    > 
+    > The application's name can't have any special characters. Configuration Manager uses the app name as the name of the output file.  
+    > 
+    > Don't install this application on the reference device in advance.  
+
+3. Select **Convert to .MSIX** in the ribbon.
+
+When the wizard completes, the MSIX Packaging Tool creates an MSIX file in the location you specified in the wizard. During this process, Configuration Manager silently installs the application on the reference device.
+
+If the process fails, the summary page points to the log file with more information. If there's an error about capturing user state, sign out of Windows. Signing in again may resolve this issue.
+
+To use this MSIX app, you first need to digitally sign it so that clients trust it. For more information on this process, see the following articles: 
+- [MSIX – The MSIX Packaging Tool – signing the MSIX package](https://blogs.msdn.microsoft.com/sgern/2018/09/06/msix-the-msix-packaging-tool-signing-the-msix-package/)
+- [How to sign an app package using SignTool](https://docs.microsoft.com/windows/desktop/appxpkg/how-to-sign-a-package-using-signtool)
+
+After signing the app, create a new deployment type on the application in Configuration Manager. For more information, see [Create deployment types for the application](/sccm/apps/deploy-use/create-applications#bkmk_create-dt).
+
 
 
 

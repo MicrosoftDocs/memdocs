@@ -9,6 +9,7 @@ ms.assetid: 9c2b8373-39ed-4296-863d-70ddb4cbb3b0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SetCategorizationRequest Method in Class SMS_AISoftwareList
 The `SetCategorizationRequest` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, initiates a System Center Online software categorization request.  

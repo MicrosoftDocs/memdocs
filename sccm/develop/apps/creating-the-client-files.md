@@ -9,6 +9,7 @@ ms.assetid: 0e547bd4-777f-48bb-9329-81f0bba8f2f3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Creating the Client Files
 This section provides task-based topics that show you how to create custom client-side files for application management in Configuration Manager.  

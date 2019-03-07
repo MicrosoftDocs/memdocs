@@ -10,6 +10,7 @@ ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Endpoint Protection client frequently asked questions
 
@@ -44,16 +45,7 @@ This FAQ is for computer users whose IT administrator has deployed Windows Defen
 
  Windows Defender or Endpoint Protection offers three ways to help keep malicious software from infecting your computer:  
 
--   **Using real-time protection** - Real-time protection enables Windows Defender to monitor your computer all the time and alert you when malicious software, including viruses, spyware, or other potentially unwanted software attempts to install itself or run on your computer. Windows Defender then suspends the software and enables you to you to follow its recommendation on the software or take an alternative action.  
-
-    |**Real-time protection option** |**Purpose** |
-
-    |-|-|  
-    |Scan all downloads|This option monitors files and programs that are downloaded, including files that are automatically downloaded via Windows Internet Explorer and Microsoft Outlook® Express, such as ActiveX® controls and software installation programs. These files can be downloaded, installed, or run by the browser itself. Malicious software, including viruses, spyware, and other potentially unwanted software, can be included with these files and installed without your knowledge.<br /><br /> Using the real-time protection option, Windows Defender monitors your computer all the time and checks for any malicious files or programs that you may have downloaded. This monitoring feature means that Windows Defender doesn't need to slow down your browsing or e-mail experience by requiring a check of any files or programs you may want to download.|  
-    |Monitor file and program activity on your computer|This option monitors when files and programs start running on your computer, and then it alerts you about any actions they perform and actions taken on them. This is important, because malicious software can use vulnerabilities in programs that you have installed to run malicious or unwanted software without your knowledge. For example, spyware can run itself in the background when you start a program that you frequently use. Windows Defender monitors your programs and alerts you if it detects suspicious activity.|  
-    |Enable behavior monitoring|This option monitors collections of behavior for suspicious patterns that might not be detected by traditional antivirus detection methods.|  
-
-    |Enable Network Inspection System|This option helps protect your computer against "zero day" exploits of known vulnerabilities, decreasing the window of time between the moment a vulnerability is discovered and an update is applied.|  
+-   **Using real-time protection** - Real-time protection enables Windows Defender to monitor your computer all the time and alert you when malicious software, including viruses, spyware, or other potentially unwanted software attempts to install itself or run on your computer. Windows Defender then suspends the software and enables you to you to follow its recommendation on the software or take an alternative action.
 
 -   **Scanning options** - You can use Windows Defender to scan for potential threats, such as viruses, spyware, and other malicious software that might put your computer at risk. You can also use it to schedule scans on a regular basis and to remove malicious software that is detected during a scan.  
 
@@ -209,7 +201,7 @@ To remove all unwanted or potentially harmful items that Windows Defender detect
 |Scan all downloads|This option monitors files and programs that are downloaded, including files that are automatically downloaded via Windows Internet Explorer and Microsoft Outlook® Express, such as ActiveX® controls and software installation programs. These files can be downloaded, installed, or run by the browser itself. Malicious software, including viruses, spyware, and other potentially unwanted software, can be included with these files and installed without your knowledge.<br /><br /> Using the real-time protection option, Windows Defender monitors your computer all the time and checks for any malicious files or programs that you may have downloaded. This monitoring feature means that Windows Defender doesn't need to slow down your browsing or e-mail experience by requiring a check of any files or programs you may want to download.|  
 |Monitor file and program activity on your computer|This option monitors when files and programs start running on your computer, and then it alerts you about any actions they perform and actions taken on them. This is important, because malicious software can use vulnerabilities in programs that you have installed to run malicious or unwanted software without your knowledge. For example, spyware can run itself in the background when you start a program that you frequently use. Windows Defender monitors your programs and alerts you if it detects suspicious activity.|  
 |Enable behavior monitoring|This option monitors collections of behavior for suspicious patterns that might not be detected by traditional antivirus detection methods.|  
-|Enable Network Inspection System|This option helps protect your computer against â€œzero dayâ€ exploits of known vulnerabilities, decreasing the window of time between the moment a vulnerability is discovered and an update is applied.|  
+|Enable Network Inspection System|This option helps protect your computer against zero day exploits of known vulnerabilities, decreasing the window of time between the moment a vulnerability is discovered and an update is applied.|  
 
 ### To turn off real-time protection  
 

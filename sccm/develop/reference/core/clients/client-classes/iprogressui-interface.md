@@ -9,6 +9,7 @@ ms.assetid: 2c84a3bd-f8d8-46a4-9591-07186ca5fe65
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # IProgressUI Interface
 The `IProgressUI` automation interface, in System Center Configuration Manager, represents the user interface that allows custom actions to report progress to the operating system deployment task sequencing environment.  

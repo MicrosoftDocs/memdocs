@@ -10,6 +10,8 @@ ms.assetid: 3687ac39-0fc4-4ea8-a4d2-cacc43acc655
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ROBOTS: NOINDEX
+ms.collection: M365-identity-device-management
 ---
 
 # Capabilities in Configuration Manager technical preview version 1808 

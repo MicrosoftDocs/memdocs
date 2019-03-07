@@ -10,6 +10,7 @@ ms.assetid: b58472e3-31a5-4305-8eb6-2522befebe02
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Enroll devices for On-premises Mobile Device Management in System Center Configuration Manager
 

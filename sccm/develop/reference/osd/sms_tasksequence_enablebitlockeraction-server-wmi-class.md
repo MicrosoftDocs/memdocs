@@ -9,6 +9,7 @@ ms.assetid: 5093946d-e8a5-458f-9af7-6618cf202385
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_TaskSequence_EnableBitLockerAction Server WMI Class
 The `SMS_TaskSequence_EnableBitLockerAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that enables the low-level BitLocker encryption on the specified drive.  

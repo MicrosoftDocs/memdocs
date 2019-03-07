@@ -9,6 +9,7 @@ ms.assetid: 620de3b8-3755-41f2-92e2-7327eb144104
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # CancelClientOperation Method in Class SMS_ClientOperation
 The `CancelClientOperation` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that cancels a client operation.   

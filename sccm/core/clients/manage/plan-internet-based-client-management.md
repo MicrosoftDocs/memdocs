@@ -10,6 +10,7 @@ ms.assetid: 83a7c934-3b11-435d-ba22-cbc274951e83
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Plan for Internet-based client management in System Center Configuration Manager
 
@@ -42,8 +43,8 @@ Internet-based client management (sometimes referred to as IBCM) lets you manage
 
   When you have a software update point that is configured to accept connections from the Internet, Configuration Manager Internet-based clients on the Internet always scan against this software update point, to determine which software updates are required. However, when these clients are on the Internet, they first try to download the software updates from Microsoft Update, rather than from an Internet-based distribution point. Only if this fails, will they then try to download the required software updates from an Internet-based distribution point. Clients that are not configured for Internet-based client management never try to download the software updates from Microsoft Update, but always use Configuration Manager distribution points.  
  
-[!Tip]  
-The Configuration Manager client automatically determines whether it’s on the intranet or the internet. If the client can contact a domain controller or an on-premises management point, it sets its connection type to Currently intranet. Otherwise, it switches to Currently Internet, and the client uses the management points, software update points, and distribution points assigned to its site for communication.
+> [!Tip]  
+> The Configuration Manager client automatically determines whether it’s on the intranet or the internet. If the client can contact a domain controller or an on-premises management point, it sets its connection type to Currently intranet. Otherwise, it switches to Currently Internet, and the client uses the management points, software update points, and distribution points assigned to its site for  communication.
 
 ##  Considerations for client communications from the Internet or untrusted forest  
  The following site system roles installed at primary sites support connections from clients that are in untrusted locations, like the Internet or an untrusted forest (secondary sites do not support client connections from untrusted locations):  

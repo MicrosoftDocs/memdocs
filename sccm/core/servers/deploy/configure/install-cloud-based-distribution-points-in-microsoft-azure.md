@@ -2,7 +2,7 @@
 title: Install cloud distribution points
 titleSuffix: Configuration Manager
 description: Use these steps to set up a cloud distribution point in Configuration Manager.
-ms.date: 11/27/2018
+ms.date: 02/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,11 +10,18 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Install a cloud distribution point for Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
+
+> [!Important]  
+> The implementation for sharing content from Azure has changed. Use a content-enabled cloud management gateway by enabling the option to **Allow CMG to function as a cloud distribution point and serve content from Azure storage**. For more information, see [Modify a CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg).
+> 
+> You won't be able to create a traditional cloud distribution point in the future. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). 
+
 
 This article details the steps to install a Configuration Manager cloud distribution point in Microsoft Azure. It includes the following sections:
 - [Before you begin](#bkmk_before) 

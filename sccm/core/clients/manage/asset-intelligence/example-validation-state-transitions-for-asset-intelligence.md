@@ -10,6 +10,7 @@ ms.assetid: 6230a6e5-a1f6-459b-84f1-07fbde0e70f0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Example validation state transitions for Asset Intelligence in System Center Configuration Manager
 

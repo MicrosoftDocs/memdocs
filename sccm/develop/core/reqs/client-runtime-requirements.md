@@ -9,6 +9,7 @@ ms.assetid: 6edd0792-9e2e-4ed0-9936-0eb9c815726d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Client Runtime Requirements
 Applications that run on Microsoft System Center Configuration Manager clients have the following runtime requirements.  

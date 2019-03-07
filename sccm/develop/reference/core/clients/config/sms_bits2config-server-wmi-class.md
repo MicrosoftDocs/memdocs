@@ -9,6 +9,7 @@ ms.assetid: 0369ae43-38f0-4dc2-b65f-34fe0f5b93c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_BITS2Config Server WMI Class
 The `SMS_BITS2Config` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that specifies Background Intelligent Transfer settings for client computers.  

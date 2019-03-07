@@ -2,7 +2,7 @@
 title: Create applications
 titleSuffix: Configuration Manager
 description: Create applications with deployment types, detection methods and requirements to install software.
-ms.date: 11/27/2018
+ms.date: 03/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,13 +10,14 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Create applications in Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-A Configuration Manager application defines the metadata about app. An application has one or more deployment types. These deployment types include the installation files and information that are required to install software on devices. A deployment type also has rules, such as detection methods and requirements. These rules specify when and how the client installs the software.  
+A Configuration Manager application defines the metadata about app. An application has one or more deployment types. These deployment types include the installation files and information that are required to install software on devices. A deployment type also has rules, such as detection methods, and requirements. These rules specify when and how the client installs the software.  
 
 Create applications by using the following methods:  
 
@@ -313,6 +314,9 @@ Continue to the next section on using a custom script as a detection method. Or 
 1.  On the **Detection Method** page, select the **Use a custom script to detect the presence of this deployment type** box. Then click **Edit**.  
 
 2.  In the **Script Editor** dialog box, click the **Script type** drop-down list. Select one of the following script languages to detect the deployment type: PowerShell, VBScript, or JScript.  
+
+    > [!Note]  
+    > Starting in version 1810, when a Windows PowerShell script runs as a app detection method, the Configuration Manager client calls PowerShell with the `-NoProfile` parameter. This option starts PowerShell without profiles. A PowerShell profile is a script that runs when PowerShell starts. <!--3607762-->  
 
 3.  In the **Script contents** box, enter the script that you want to use, or paste in the contents of an existing script. Choose **Open** to browse to an existing saved script. Click **Clear** to remove the text in the Script contents field. If necessary, enable the option to **Run script as 32-bit process on 64-bit clients**.  
 

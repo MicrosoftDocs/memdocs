@@ -4,6 +4,7 @@ hide_bc: true
 title: System Center Configuration Manager Documentation
 description: Learn how to use System Center Configuration Manager.
 ms.topic: hub-page
+ms.collection: M365-identity-device-management
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -790,7 +791,7 @@ ms.topic: hub-page
                                 </a>
                             </li>
                             <li>
-                                <a href="https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/dn688621(v=technet.10)" data-linktype="absolute-path">
+                                <a href="https://docs.microsoft.com/sccm/core/support/support-center" data-linktype="absolute-path">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -962,7 +963,7 @@ ms.topic: hub-page
                         <a href="#community-all">All</a>
                         <ul id="community-all" class="cardsF">
                             <li>
-                                <a href="https://cloudblogs.microsoft.com/enterprisemobility/?product=system-center-configuration-manager">
+                                <a href="https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/bg-p/ConfigurationManagerBlog">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -972,8 +973,8 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Enterprise Mobility + Security Blog</h3>
-                                                <p>The latest news about Configuration Manager.</p>
+                                                <h3>Configuration Manager blog</h3>
+                                                <p>Information from the Configuration Manager product team.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -1057,7 +1058,7 @@ ms.topic: hub-page
                                 </a>
                             </li>
                             <li>
-                                <a href="https://blogs.technet.microsoft.com/configurationmgr/">
+                                <a href="https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -1067,14 +1068,14 @@ ms.topic: hub-page
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Configuration Manager Support Blog</h3>
-                                                <p>Support and servicing information from the Configuration Manager team.</p>
+                                                <h3>Enterprise Mobility + Security blog</h3>
+                                                <p>The latest news about unified endpoint management.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 </a>
-                            </li>
+                            </li>                            
                         </ul>
                     </li>
                 </ul>

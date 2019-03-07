@@ -9,6 +9,7 @@ ms.assetid: 36745a1f-7b0a-4b29-b36c-5a6d48442ef7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # DDRNew
 The `DDRNew` function, in Configuration Manager, begins a new data discovery record (DDR).  

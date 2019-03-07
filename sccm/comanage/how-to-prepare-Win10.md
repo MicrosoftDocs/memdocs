@@ -5,11 +5,12 @@ description: Learn how to prepare your Windows 10 internet-based devices for co-
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 01/14/2019
+ms.date: 03/05/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
+ms.collection: M365-identity-device-management
 ---
 
 # How to prepare internet-based devices for co-management
@@ -45,7 +46,9 @@ For more information, see [Add devices in Microsoft Store for Business and Educa
 ### Autopilot for existing devices
 <!--1358333-->
 
-[Windows Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) is available Windows 10, version 1809 or later. This feature allows you to reimage and provision a Windows 7 device for [Windows Autopilot user-driven mode](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) using a single, native Configuration Manager task sequence. 
+[Windows Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) is available in Windows 10, version 1809 or later. This feature allows you to reimage and provision a Windows 7 device for [Windows Autopilot user-driven mode](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) using a single, native Configuration Manager task sequence. 
+
+For more information, see [Windows Autopilot for existing devices task sequence](/sccm/osd/deploy-use/windows-autopilot-for-existing-devices).
 
 
 
@@ -78,6 +81,16 @@ Starting in version 1806, fewer command-line properties are now required.
 - If the client roams back to the intranet, the following property is required:  
     - SMSMP  
 
+- If using your own PKI SSL certificate and your CRL isn't published to the internet, the following parameter is required:  
+    - /noCRLCheck  
+    
+     For more information, see [Planning for CRLs](/sccm/core/plan-design/security/plan-for-security#-plan-for-the-site-server-signing-certificate-self-signed)  
+
+Starting in version 1810, the site publishes additional Azure AD information to the cloud management gateway (CMG). An Azure AD-joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies enrolling devices to co-management in an environment with more than one Azure AD tenant. Now the only two required ccmsetup properties are **CCMHOSTNAME** and **SMSSiteCode**.<!--3607731-->
+
+> [!Note]
+> If you're already deploying the Configuration Manager client from Intune, update the Intune app with a new command line and new MSI. <!-- SCCMDocs-pr issue 3084 -->
+
 The following example includes all of these properties:   
 `ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com`
 
@@ -93,6 +106,9 @@ For more information, see [Client installation properties](/sccm/core/clients/de
 3. Under **Other**, select **Line-of-business app**.  
 
 4. Upload the **ccmsetup.msi** app package file. Find this file in the following folder on the Configuration Manager site server: `<ConfigMgr installation directory>\bin\i386`.  
+
+    > [!Tip]  
+    > When you update the site, make sure you also update this app in Intune.  
 
 5. After the app is updated, configure the app information with the command line that you copied from Configuration Manager.  
 

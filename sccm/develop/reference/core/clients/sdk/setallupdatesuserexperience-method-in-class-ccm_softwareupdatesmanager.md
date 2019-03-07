@@ -9,6 +9,7 @@ ms.assetid: f9bddc84-7410-4c26-8448-e019ad5d4d5b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SetAllUpdatesUserExperience Method in Class CCM_SoftwareUpdatesManager
 The `SetAllUpdatesUserExperience` WMI class method, in Configuration Manager, sets the user experience mode that determines how software updates are displayed on a target computer.  

@@ -10,8 +10,12 @@ ms.assetid: 79cd131a-1a24-4751-87c8-7f275e45d847
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# Create Linux and UNIX server applications with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Create Linux and UNIX server applications with System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Take the following considerations into account when you create and deploy applications for computers that run Linux and UNIX.  
 
 ## General considerations  

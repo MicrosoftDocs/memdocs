@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 12/14/2018
+ms.date: 02/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,6 +10,7 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Technical preview for Configuration Manager
@@ -20,10 +21,13 @@ This article provides details about the monthly technical preview branch of Conf
 
 Because this release is a technical preview, details and functionality are subject to change.  
 
-This information applies to all versions of the Configuration Manager technical preview branch. This article lists each new feature along with the technical preview version in which it first appears. For example, version **1809** for September (09) of 2018 (18). Separate articles dedicated to each preview version detail the individual features.  
+This information applies to all versions of the Configuration Manager technical preview branch. This article lists each new feature along with the technical preview version in which it first appears. For example, version **1901** for January (01) of 2019 (19). Separate articles dedicated to each preview version detail the individual features.  
 
 For information about what's new in the *current branch* of Configuration Manager, see [What's new in Configuration Manager incremental versions](/sccm/core/plan-design/changes/whats-new-incremental-versions).
 
+> [!Tip]  
+> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader: 
+> `https://docs.microsoft.com/api/search/rss?search=%22technical+preview+releases+-+Configuration+Manager%22&locale=en-us`
 
 
 ##  <a name="bkmk_reqs"></a> Requirements and limitations  
@@ -64,10 +68,10 @@ The technical preview branch of Configuration Manager supports the following pro
 
 -   It only supports the following versions of **SQL Server**:  
 
-    -   SQL Server 2017 (with cumulative update 2, and later) beginning in Configuration Manager version 1710
-    -   SQL Server 2016 (with no Service Pack, and later)
-    -   SQL Server 2014 (with Service Pack 1, and later)
-    -   SQL Server 2012 (with Service Pack 3, or later)  
+    -   SQL Server 2017 (with cumulative update 2 or later) 
+    -   SQL Server 2016 (with no service pack or later)
+    -   SQL Server 2014 (with service pack 1 or later)
+    -   SQL Server 2012 (with service pack 3 or later)  
 
 
 -   The site supports up to 10 clients, which must run one of the following versions of Windows:  
@@ -99,7 +103,7 @@ Microsoft supports each technical preview version up until three successive vers
    
 Install a baseline version for up to one year after its release. When you install a new technical preview site, if more than one baseline version is currently available, use the latest baseline version.
 
--  **Technical preview version 1810.2**: The Configuration Manager technical preview version 1810.2 is available as both an in-console update and as a new baseline version. Download baseline versions from the [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
+-  **Technical preview version 1902.2**: The Configuration Manager technical preview version 1902.2 is available as both an in-console update and as a new baseline version. Download baseline versions from the [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
 
 
@@ -119,15 +123,14 @@ The following features are available with the most recent Configuration Manager 
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### Technical Preview version 1812
+### Technical Preview version 1902.2
 
-<!--capabilities-in-technical-preview-1812.md#bkmk_anchor-->
+<!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID--> 
 
-- [Improvements to Run PowerShell Script task sequence step](capabilities-in-technical-preview-1812.md#bkmk_posh) <!--3556028 fka 1359389-->  
-- [Improvements to application approvals via email](capabilities-in-technical-preview-1812.md#bkmk_email) <!--3594063-->  
-- [Configure user device affinity in Software Center](capabilities-in-technical-preview-1812.md#bkmk_uda) <!--3485366-->  
-- [Improvements to Configuration Manager console](capabilities-in-technical-preview-1812.md#bkmk_console) <!--3594151-->  
-- [Download reports from the Community Hub](capabilities-in-technical-preview-1812.md#bkmk_hub)<!--3555936-->  
+- [Additional languages for Office 365 updates](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_o365lang) <!--3555955--> 
+- [Integration with analytics for Office 365 ProPlus readiness](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_o365) <!--3735402--> 
+- [Improvement to phased deployment success criteria](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_pod) <!--3555946--> 
+- [Improvement to enhanced HTTP](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_ehttp) <!--3798957--> 
 
 
 > [!Note]  
@@ -146,29 +149,43 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  | Feature | Technical preview version | Current branch version |  
  |---------|---------------------------|------------------------|
+ | Replace toast notifications with dialog window <!--3555947--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_impact) | ![Not added](media/Red_X.gif) | 
+ | Progress status during in-place upgrade task sequence <!--3747129--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_ipu) | ![Not added](media/Red_X.gif) | 
+ | Redirect Windows known folders to OneDrive <!--3556021--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_odfb) | ![Not added](media/Red_X.gif) | 
+ | View first screen only during remote control <!--3231732--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_rcmulti) | ![Not added](media/Red_X.gif) | 
+ | Edit or copy PowerShell scripts <!--3705507--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_psedit) | ![Not added](media/Red_X.gif) | 
+ | Add cloud management gateway to boundary groups <!--3640932--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_cmgbg) | ![Not added](media/Red_X.gif) | 
+ | Configure default views in Software Center <!--3612112--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_swctr) | ![Not added](media/Red_X.gif) | 
+ | Improvements to client health dashboard <!--3599209--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_health) | ![Not added](media/Red_X.gif) | 
+ | Client health dashboard <!--3599209--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_health) | ![Not added](media/Red_X.gif) | 
+ | Specify priority for feature updates in Windows 10 servicing <!--3734525--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_neo) | ![Not added](media/Red_X.gif) | 
+ | Dedicated monitoring for phased deployments <!--3555949--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_pod) | ![Not added](media/Red_X.gif) | 
+ | Run CMPivot from the central administration site <!--3610960--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmpivot) | ![Not added](media/Red_X.gif) | 
+ | Improvements to Run PowerShell Script task sequence step <!--3556028--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_posh) | ![Not added](media/Red_X.gif) | 
+ | Office products on lifecycle dashboard <!--3556026--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_lifecycle) | ![Not added](media/Red_X.gif) | 
+ | Management insight rules for collections <!--3555752--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_micoll) | ![Not added](media/Red_X.gif) | 
+ | Search device views using MAC address <!--3600878--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_mac) | ![Not added](media/Red_X.gif) | 
+ | Distribution point maintenance mode <!--3555754--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_dpmaint) | ![Not added](media/Red_X.gif) | 
+ | Optimized image servicing <!--3555951--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_resetbase) | ![Not added](media/Red_X.gif) | 
+ | Import a single index of an OS image <!--3719699--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_index) | ![Not added](media/Red_X.gif) | 
+ | Use Azure Resource Manager for cloud services <!--3605704--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_arm) | ![Not added](media/Red_X.gif) | 
+ | Confirmation of console feedback <!--3556010--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_feedback) | ![Not added](media/Red_X.gif) | 
+ | Create a Configuration Manager technical preview lab in Azure <!--3556017--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_azurevm) | ![Not added](media/Red_X.gif) | 
+ | Specify a custom port for peer wakeup <!--3605925--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_sleep) | ![Not added](media/Red_X.gif) | 
+ | View recently connected consoles <!--3699367--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_console) | ![Not added](media/Red_X.gif) | 
+ | Stop cloud service when it exceeds threshold <!--3735092--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmg) | ![Not added](media/Red_X.gif) | 
+ | Client provisioning mode timeout <!--3197824--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osdprov) | ![Not added](media/Red_X.gif) | 
+ | Improvements to OS deployment <!--3633146,3641475,3654172,3734270--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osd) | ![Not added](media/Red_X.gif) | 
+ | Improvements to Run PowerShell Script task sequence step <!--3556028 fka 1359389--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_posh) | ![Not added](media/Red_X.gif) | 
+ | Improvements to application approvals via email <!--3594063--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_email) | ![Not added](media/Red_X.gif) | 
+ | Configure user device affinity in Software Center <!--3485366--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_uda) | ![Not added](media/Red_X.gif) | 
+ | Improvements to Configuration Manager console <!--3594151--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_console) | ![Not added](media/Red_X.gif) | 
+ | Download reports from the Community Hub<!--3555936--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_hub) | ![Not added](media/Red_X.gif) | 
  | Don't load Windows PowerShell profiles <!--1359239--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_noprofile) | ![Not added](media/Red_X.gif) | 
  | An Intune connection is no longer required for on-premises MDM <!--1359124--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_opmdm) | ![Not added](media/Red_X.gif) | 
  | Configuration Manager console notifications <!--1318035--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_notify) | ![Not added](media/Red_X.gif) | 
  | Improvements to task sequence media creation <!--1359388--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_tsmedia) | ![Not added](media/Red_X.gif) | 
  | Improvement to Run PowerShell Script task sequence step <!--1359389--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_posh) | ![Not added](media/Red_X.gif) | 
- | Improvements to collection evaluation <!--1358981--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_colleval) | Version 1810 | 
- | Configuration Manager administrator authentication <!--1357013--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_auth) | Version 1810 | 
- | Management insights rule for peer cache source client version <!--1358008--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_insights) | Version 1810 | 
- | Improvements to internet-based client setup <!--1359181--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_cmg) | Version 1810 | 
- | Convert applications to MSIX <!--1359029--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_msix) | Version 1810 | 
- | Improvement to client installation <!--1358840--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_ccmsetup) | Version 1810 | 
- | Required app compliance policy for co-managed devices <!--1358196--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_app-compliance) | Version 1810 | 
- | Improvement to co-management dashboard <!--1358980--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_comgmt-report) | Version 1810 | 
- | New boundary group options <!--1358749--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_bgoptions) | Version 1810 | 
- | Site system on Windows cluster node <!--1359132--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_cluster) | Version 1810 | 
- | Improvements to CMPivot <!--1359068--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_cmpivot) | Version 1810 | 
- | Improvements to scripts <!--1358239--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_scripts) | Version 1810 | 
- | New client notification action to wake up device <!--1317364--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_wakeup) | Version 1810 | 
- | Task sequence support for boundary groups <!--1359025--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_bgr-osd) | Version 1810 | 
- | Management insights dashboard <!--1357979--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_insights) | Version 1810 | 
- | In-console documentation dashboard <!--1357546--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_doc-dashboard) | ![Not added](media/Red_X.gif) | 
- | Improvements to driver maintenance <!--1358270--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_drivers) | Version 1810 | 
- | Task sequence support of Windows Autopilot for existing devices <!--1358333--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_autopilot) | Version 1810 | 
 
 
 
@@ -184,6 +201,7 @@ With each CB release, review and remove from this list for anything that's now a
 
 | Feature        | Technical preview version |  
 |----------------|---------------------------|
+| In-console documentation dashboard <!--1357546--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_doc-dashboard) | 
 | Community Hub <!--1357766--> | [Tech Preview 1807](capabilities-in-technical-preview-1807.md#bkmk_hub) | 
 | Co-managed device sync activity with Intune <!--1358565--> | [Tech Preview 1807](capabilities-in-technical-preview-1807.md#bkmk_comgmt) | 
 | Client-based PXE responder service <!--1357148--> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |

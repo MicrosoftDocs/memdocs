@@ -10,8 +10,12 @@ ms.assetid: 1026d616-2a20-4fb2-8604-d331763937f8
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# Hardware inventory for Linux and UNIX in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Hardware inventory for Linux and UNIX in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 The System Center Configuration Manager client for Linux and UNIX supports hardware inventory. After you collect hardware inventory you can run view inventory in the resource explorer or Configuration Manager reports, and use this information to create queries and collections that enable the following operations:  
 
 - Software deployment  

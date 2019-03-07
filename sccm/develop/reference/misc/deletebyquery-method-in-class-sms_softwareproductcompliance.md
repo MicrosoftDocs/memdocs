@@ -9,6 +9,7 @@ ms.assetid: d4417ea5-ce21-4659-a450-10a3e54efe9e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # DeleteByQuery Method in Class SMS_SoftwareProductCompliance
 The `DeleteByQuery` Windows Management Instrumentation (WMI) class method, in Configuration Manager, deletes records specified by a WQL SELECT statement that references the `SMS_SoftwareProductCompliance` class.  

@@ -9,6 +9,7 @@ ms.assetid: 7efdeb19-a509-454a-af9b-dec12ea9a155
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # DeleteMembershipRule Method in Class SMS_Collection
 The `DeleteMembershipRule` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, deletes a membership rule from the collection.  

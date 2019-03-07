@@ -9,6 +9,7 @@ ms.assetid: 7e8236eb-6c8c-4147-a960-c3b4c6e55455
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Status Message Types
 In System Center Configuration Manager, each status message has a type with a unique set of properties. This section describes these types and their associated properties.  

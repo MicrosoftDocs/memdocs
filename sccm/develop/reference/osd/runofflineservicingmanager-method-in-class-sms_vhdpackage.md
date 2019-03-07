@@ -9,6 +9,7 @@ ms.assetid: e660da6d-b07b-4084-99aa-ef6b7d9fe1f4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # RunOfflineServicingManager Method in Class SMS_VhdPackage
 The `RunOfflineServicingManager` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that updates the site control file of the offline servicing manager to run the offline image servicing component as soon as possible on the specified operating system image at the specified site server.  

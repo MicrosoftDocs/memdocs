@@ -9,6 +9,7 @@ ms.assetid: 2a8d8c98-abd9-435b-917e-d62d998eb9f0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Endpoint Protection Server WMI Classes
 Endpoint Protection server Windows Management Instrumentation (WMI) classes in System Center Configuration Manager.  

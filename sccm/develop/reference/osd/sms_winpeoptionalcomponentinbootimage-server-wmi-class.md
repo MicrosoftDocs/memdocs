@@ -9,6 +9,7 @@ ms.assetid: d05848fb-79ea-463d-a7d7-d9d531b0d7a2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_WinPEOptionalComponentInBootImage Server WMI Class
 The `SMS_WinPEOptionalComponentInBootImage` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the association between a boot image package and a WinPE optional component.  

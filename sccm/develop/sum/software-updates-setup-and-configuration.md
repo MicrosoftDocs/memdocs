@@ -9,6 +9,7 @@ ms.assetid: ddf3eeff-349e-4122-a0ce-fe735fe2c1aa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Software Updates Setup and Configuration
 This section provides information about software updates setup and configuration in System Center Configuration Manager.  

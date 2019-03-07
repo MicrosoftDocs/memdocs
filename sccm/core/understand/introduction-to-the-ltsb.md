@@ -10,6 +10,7 @@ ms.assetid: 694bc29f-a7fd-4e06-815a-1a9c5e9ac563
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Introduction to the Long-Term Servicing Branch of System Center Configuration Manager
 

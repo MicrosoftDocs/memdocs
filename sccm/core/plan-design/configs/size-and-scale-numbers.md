@@ -10,6 +10,7 @@ ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Size and scale numbers for System Center Configuration Manager
 
@@ -201,7 +202,7 @@ For example, a stand-alone primary site that supports 150,000 desktops and 10,00
 
 
 ### <a name="embedded"></a> Primary sites and Windows Embedded devices
-Primary sites support Windows Embedded devices that have File-Based Write Filters (FBWF) enabled. When embedded devices don't have write filters enabled, a primary site can support a number of embedded devices up to the allowed number of devices for that site. Of the total number of devices that a primary site supports, a maximum of 10,000 of these devices can be Windows Embedded. These devices must be configured for the exceptions listed in the important note found in the [Planning for client deployment to Windows Embedded devices](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices). A primary site supports only 3,000 Windows Embedded devices that have EWF enabled and that are not configured for the exceptions.
+Primary sites support Windows Embedded devices that have File-Based Write Filters (FBWF) enabled. When embedded devices don't have write filters enabled, a primary site can support a number of embedded devices up to the allowed number of devices for that site. When embedded devices have FBWF or Unified Write Filters (UWF) enabled, a primary site can support a maximum of 10,000 Windows embedded devices. These devices must be configured with the exceptions listed in the important note found in the [Planning for client deployment to Windows Embedded devices](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices). A primary site supports only 3,000 Windows Embedded devices that have EWF enabled and that are not configured for the exceptions.
 
 
 ###  <a name="bkmk_sec"></a> Secondary sites  

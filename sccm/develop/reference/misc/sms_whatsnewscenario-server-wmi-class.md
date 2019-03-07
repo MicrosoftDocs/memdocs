@@ -9,6 +9,7 @@ ms.assetid: 9dca5dc2-06e5-4714-8eed-8e3b4a0d7eab
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_WhatsNewScenario Server WMI Class
 For internal use only.  

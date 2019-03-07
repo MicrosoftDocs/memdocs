@@ -9,6 +9,7 @@ ms.assetid: 005b6456-fbfd-49b3-b701-bf549ff611ce
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Determine Package Status
 In System Center Configuration Manager, the software distribution process can take from several minutes to several hours, depending on the site settings, network topography, whether the package includes source files, and the number of distribution points that have been specified for the package. Creating the package, distribution points, programs, and advertisement instances initiates the software distribution process that is managed by the System Center Configuration Manager Distribution Manager.  

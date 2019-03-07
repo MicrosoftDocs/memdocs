@@ -10,6 +10,7 @@ ms.assetid: f0a78038-ea22-4826-9c07-1771b7dd2e8d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Apply settings to iOS apps with app configuration policies in System Center Configuration Manager
 
@@ -28,7 +29,7 @@ To use an app configuration policy in Configuration Manager, instead of deployin
 
 Currently, app configuration policies are available only on devices running iOS 8 and later, and for these application types:
 
-- **app package for iOS (*.ipa file)**
+- **app package for iOS (\*.ipa file)**
 - **app package for iOS from App Store**
 
 For more information about app installation types, see the [introduction to application management](/sccm/apps/understand/introduction-to-application-management).

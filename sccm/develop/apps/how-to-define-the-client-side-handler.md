@@ -9,6 +9,7 @@ ms.assetid: 259af33a-af65-4f80-b458-0414bba6f164
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Define the Client-side Handler
 The custom client-side handler needs to implement a public COM interface and methods. The below methods will be called by the Configuration Manager client framework.  

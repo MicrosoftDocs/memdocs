@@ -10,6 +10,7 @@ ms.assetid: b1fdaee2-2816-4447-94cd-609f6948f215
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Software metering in System Center Configuration Manager

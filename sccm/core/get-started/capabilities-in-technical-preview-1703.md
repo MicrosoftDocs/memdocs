@@ -10,6 +10,8 @@ ms.assetid: 2e801f8c-d331-41ee-8f27-908448fc0951
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ROBOTS: NOINDEX
+ms.collection: M365-identity-device-management
 ---
 # Capabilities in Technical Preview 1703 for System Center Configuration Manager
 
@@ -47,7 +49,7 @@ This is available only for Configuration Manager applications, not packages and 
 
 Use the following URL format to open Software Center to a particular application:
 
-**Softwarecenter:SoftwareId=*Application Identifier***
+**Softwarecenter:SoftwareId=_Application Identifier_**
 
 ### How to get the application identifier of an application.
 

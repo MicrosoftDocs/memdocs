@@ -10,6 +10,7 @@ author: aczechowski
 description: Learn how to configure Windows Server Updates Services to auto-approve definition updates.
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
 
 # Enable Endpoint Protection malware definitions to download from Windows Server Update Services (WSUS) for Configuration Manager

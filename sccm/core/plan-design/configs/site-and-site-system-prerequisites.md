@@ -2,7 +2,7 @@
 title: Site prerequisites
 titleSuffix: Configuration Manager
 description: Learn how to configure a Windows computer as a Configuration Manager site system server.
-ms.date: 07/30/2018
+ms.date: 03/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,6 +10,7 @@ ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Site and site system prerequisites for Configuration Manager
@@ -46,6 +47,8 @@ The following requirements apply to all site system servers:
   If you must change any of these items, first remove the site system role from the computer. Then reinstall the role after the change is complete. For changes affecting the site server, first uninstall the site. Then reinstall the site after the change is complete.  
 
 - Site system roles aren't supported on an instance of a Windows Server cluster. The only exception is the site database server. For more information, see [Use a SQL Server cluster for the Configuration Manager site database](/sccm/core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database).  
+
+    Starting in version 1810, the Configuration Manager setup process no longer blocks installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Always On requires this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using SQL Always On and a site server in passive mode. For more information, see [High availability options](/sccm/core/servers/deploy/configure/high-availability-options). <!--3607761, fka 1359132-->  
 
 - It's not supported to change the startup type or "Log on as" settings for any Configuration Manager service. If you do, you might prevent key services from running correctly.  
 
@@ -323,21 +326,25 @@ For more information, see [Install and configure distribution points](/sccm/core
 
 -   .NET Framework 3.5 SP1 (or later)  
 
+-   Windows Defender features (Windows Server 2016 or later)  
+
 
 
 ##  <a name="bkmk_2012Enrollpreq"></a> Enrollment point  
 
 #### Windows Server roles and features  
 
--   .NET Framework 3.5 (or later)  
+- .NET Framework 3.5 (or later)  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2:  
+- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2:  
 
      When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
 
-    -   HTTP Activation (and automatically selected options)  
+    - HTTP Activation (and automatically selected options)  
 
-    -   ASP.NET 4.5  
+    - ASP.NET 4.5  
+
+    - Windows Communication Foundation (WCF) Services<!-- SCCMDocs issue #1168 -->  
 
 #### IIS configuration  
 

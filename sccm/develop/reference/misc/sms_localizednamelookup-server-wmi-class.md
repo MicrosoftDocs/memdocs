@@ -9,6 +9,7 @@ ms.assetid: 550b49ed-d2f8-4bdf-bac6-26b1c6de9ffd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_LocalizedNameLookup Server WMI Class
 The `SMS_LocalizedNameLookup` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents a localized name lookup.  

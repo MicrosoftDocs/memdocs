@@ -9,6 +9,7 @@ ms.assetid: f7d004d7-34b5-49bd-8aee-cf4c7a5b2c71
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS Provider in Configuration Manager
 This section provides essential information about the SMS Provider in System Center Configuration Manager, samples for connecting to the SMS Provider, and the usage of context qualifiers. The samples are in C# for using the managed SMS Provider library and in VBScript for using Windows Management Instrumentation (WMI).  

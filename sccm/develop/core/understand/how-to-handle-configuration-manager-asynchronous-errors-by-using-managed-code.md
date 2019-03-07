@@ -9,6 +9,7 @@ ms.assetid: 1a37a005-07cd-476e-a744-fa345f3232c7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Handle Configuration Manager Asynchronous Errors by Using Managed Code
 To handle a System Center Configuration Manager error that is raised during an asynchronous query, you test the `RunWorkerCompletedEventArgs` parameter [Error](https://msdn.microsoft.com/library/t1yswz5k.aspx) Exception property that is passed to the [SmsBackgroundWorker.QueryProcessorCompleted](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsbackgroundworker.queryprocessorcompleted.aspx) event handler. If [Error](https://msdn.microsoft.com/library/t1yswz5k.aspx) is not `null`, an exception has occurred and you use [Error](https://msdn.microsoft.com/library/t1yswz5k.aspx) to discover the cause.  

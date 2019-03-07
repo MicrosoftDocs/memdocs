@@ -9,6 +9,7 @@ ms.assetid: af3dd230-5c84-485b-8335-9417ba863215
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ITSEnvClass::Value Property
 In Configuration Manager, the `Value` property contains the value of an operating system deployment task sequence environment variable.  

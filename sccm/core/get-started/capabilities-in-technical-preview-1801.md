@@ -10,6 +10,8 @@ ms.assetid: 5a352ae0-355f-4fcf-b863-fb0654f51c52
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ROBOTS: NOINDEX
+ms.collection: M365-identity-device-management
 ---
 # Capabilities in Technical Preview 1801 for System Center Configuration Manager
 

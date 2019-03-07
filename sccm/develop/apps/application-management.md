@@ -9,6 +9,7 @@ ms.assetid: a4e19e4d-f940-4873-ad06-96753d71dd12
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Application Management
 This section provides topics that show you how to manage Application Management in System Center Configuration Manager.  

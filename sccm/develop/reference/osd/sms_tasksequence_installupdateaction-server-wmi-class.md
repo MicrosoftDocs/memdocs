@@ -9,6 +9,7 @@ ms.assetid: eff7df77-4356-4357-8a69-149a6d7a55a7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_TaskSequence_InstallUpdateAction Server WMI Class
 The `SMS_TaskSequence_InstallUpdateAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that installs software updates on a target computer.  

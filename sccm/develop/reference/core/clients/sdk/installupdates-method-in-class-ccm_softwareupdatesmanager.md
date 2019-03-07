@@ -9,6 +9,7 @@ ms.assetid: 32d00893-e70c-4dbf-b864-ed828b7d9487
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # InstallUpdates Method in Class CCM_SoftwareUpdatesManager
 The `InstallUpdates` WMI class method, in Configuration Manager, installs software updates that have been deployed to the client computer.  

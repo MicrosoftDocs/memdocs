@@ -10,8 +10,12 @@ ms.assetid: 784c295c-b8b8-4202-ab9f-665908d49d6d
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# Monitor applications from the System Center Configuration Manager console*Applies to: System Center Configuration Manager (Current Branch)*
+# Monitor applications from the System Center Configuration Manager console
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 In System Center Configuration Manager, you can monitor the deployment of all software, including software updates, compliance settings, applications, task sequences, and packages and programs. You can monitor deployments by using the **Monitoring** workspace in the Configuration Manager console or by using reports.  
 

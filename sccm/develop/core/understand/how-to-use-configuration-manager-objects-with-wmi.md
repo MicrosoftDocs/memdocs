@@ -9,6 +9,7 @@ ms.assetid: 83ea82dc-6bcf-4462-a98e-57399babd7be
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Use Configuration Manager Objects with WMI
 This section provides information about using Windows Management Instrumentation (WMI) to manage System Center Configuration Manager objects. For example, you will find information about creating and updating objects. You will also find information on performing asynchronous and synchronous queries. All samples provided in VBScript.  

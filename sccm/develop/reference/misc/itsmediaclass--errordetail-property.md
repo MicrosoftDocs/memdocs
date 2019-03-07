@@ -9,6 +9,7 @@ ms.assetid: 2d4d616c-d210-48be-a486-6bb7d7fd88f1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ITsMediaClass::ErrorDetail Property
 In Configuration Manager, the `ErrorDetail` property contains a buffer in which additional error information can be retrieved from task sequence media creation.  

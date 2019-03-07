@@ -9,6 +9,7 @@ ms.assetid: 8ba0735a-95ed-4ee6-9dea-b7d680f41c6a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ImportRole Method in Class SMS_Role
 The `ImportRole` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, imports a role defined by an XML string to the database.  

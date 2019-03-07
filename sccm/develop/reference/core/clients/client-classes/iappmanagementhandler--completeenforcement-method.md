@@ -9,6 +9,7 @@ ms.assetid: bb69ca26-68de-4261-9ec8-42a732788d63
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # IAppManagementHandler::CompleteEnforcement Method
 The `IAppManagementHandler::CompleteEnforcement` method, in Configuration Manager, completes the installation of a specific application. This method will be called only when the handler returned valid reconnection data in the EnforceApp call.  

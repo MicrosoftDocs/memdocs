@@ -9,6 +9,7 @@ ms.assetid: 8f8b7106-2694-4a58-8931-6b18a9a2892b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # EvaluateMachinePolicy Method in Class SMS_Client
 In Configuration Manager, the `EvaluateMachinePolicy` method initiates the evaluation of the policy assigned to a specified computer or device.  

@@ -9,6 +9,7 @@ ms.assetid: f9ac0702-cab7-48bc-b9dd-cc8ce246e6bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Enable Hardware Inventory
 You enable or disable the Hardware Inventory Client Agent, in System Center Configuration Manager, by modifying the site control file settings.  

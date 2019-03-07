@@ -10,8 +10,12 @@ ms.assetid: 601e3a8d-e9e7-456f-a844-f19c3dae12a9
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# Security and privacy for email profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Security and privacy for email profiles in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 ## Security Best Practices for Email Profiles  
  Use the following security best practices when you manage email profiles for devices.  
 

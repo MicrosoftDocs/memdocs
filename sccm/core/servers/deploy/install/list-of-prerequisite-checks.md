@@ -10,6 +10,7 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # List of prerequisite checks for Configuration Manager
@@ -522,7 +523,7 @@ Configuration Manager doesn't require Active Directory schema extensions for sit
 
 Starting in version 1810, check if the site database has a backlog of SQL change tracking data.<!--SCCMDocs-pr issue 3023-->  
 
-Manually verify this check by running a diagnostic stored procedure in the site database. First, create a [diagnostic connection](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) to your site database. The easiest method is to use SQL Server Management Studio Query Editor, and connect to `admin:<instance name>`. 
+Manually verify this check by running a diagnostic stored procedure in the site database. First, create a [diagnostic connection](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) to your site database. The easiest method is to use SQL Server Management Studio's Database Engine Query Editor, and connect to `admin:<instance name>`. 
 
 In a dedicated administrator connection query window, run the following commands:
 
@@ -550,7 +551,7 @@ SELECT * FROM vLogs WHERE ProcedureName = 'spDiagChangeTracking'
 <!--SCCMDocs-pr issue 3094-->
 *Applies to: Central administration site, primary site, secondary site*
 
-When you install a new site, Configuration Manager automatically installs SQL Native Client as a redistributable component. Configuration Manager doesn't support upgrading SQL Native Client. This check makes sure the site has a supported version of the SQL Native Client. Starting in version 1810, the minimum version is SQL 2012 SP4 (`11.*.7001.0`). 
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager does not upgrade SQL Server Native Client. This check makes sure the site has a supported version of the SQL Native Client. Starting in version 1810, the minimum version is SQL 2012 SP4 (`11.*.7001.0`). 
 
 This SQL Native Client version supports TLS 1.2. For more information, see the following articles:
 - [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)  

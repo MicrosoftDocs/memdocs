@@ -9,6 +9,7 @@ ms.assetid: faf9793b-abb7-4a69-8277-5b7190dc435e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_AdminCategory Server WMI Class
 The `SMS_AdminCategory` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an association between the admin account and an RBA secured category.  

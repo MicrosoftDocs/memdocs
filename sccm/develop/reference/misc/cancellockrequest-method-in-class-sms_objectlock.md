@@ -9,6 +9,7 @@ ms.assetid: c64dc0cb-82a6-40e2-8a27-ae1490105b94
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # CancelLockRequest Method in Class SMS_ObjectLock
 The `CancelLockRequest` Windows Management Instrumentation (WMI) class method, in Configuration Manager, cancels a lock request.  

@@ -9,6 +9,7 @@ ms.assetid: 102d4617-6b87-4bbb-8e93-195d1bb845c0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_ClientPfxCertificate Server WMI Class
 The `SMS_ClientPfxCertificate` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains an imported  Pfx certificate.  

@@ -2,7 +2,7 @@
 title: What's new in version 1810
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1810 of Configuration Manager current branch.
-ms.date: 12/20/2018
+ms.date: 03/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,32 +10,25 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # What's new in version 1810 of Configuration Manager current branch
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Update 1810 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1710, 1802, or 1806. <!-- baseline only statement: When installing a new site, it's also available as a baseline version.-->
+Update 1810 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1710, 1802, or 1806. <!-- baseline only statement: When installing a new site, it's also available as a baseline version.--> This article summarizes the changes and new features in Configuration Manager, version 1810.  
 
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 1810](/sccm/core/servers/manage/checklist-for-installing-update-1810). After you update a site, also review the [Post-update checklist](/sccm/core/servers/manage/checklist-for-installing-update-1810#post-update-checklist).
+
+To take advantage of new Configuration Manager features, first update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
 > [!Note]  
 > This article currently lists all significant features in this version. However, not all sections yet link to updated content with further information on the new features. Keep checking this page regularly for updates. Changes are noted with the ***[Updated]*** tag. This note will be removed when the content is finalized.  
 
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4482169).
-
-<!--
-For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell 1810 Release Notes](https://docs.microsoft.com/powershell/sccm/1810_release_notes?view=sccm-ps).
-
-The following additional updates to this release are also now available:
-- [Update rollup for Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4462978)
--->
-
-> [!Important]  
-> To take advantage of new Configuration Manager features, first update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
-
-This article summarizes the changes and new features in Configuration Manager, version 1810.  
+> [!Tip]  
+> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader: 
+> `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1810+-+Configuration+Manager%22&locale=en-us`
 
 
 
@@ -132,14 +125,14 @@ For more information, see [Client notifications](/sccm/core/clients/manage/clien
 
 
 ### Improvements to collection evaluation
-<!--1358981-->
-The following changes in collection evaluation behavior can improve site performance:  
- 
+<!--3607726, fka 1358981-->
+***[UPDATED]*** The following changes in collection evaluation behavior can improve site performance:  
+
 - Previously, when you configured a schedule on a query-based collection, the site would continue to evaluate the query whether or not you enabled the collection setting to **Schedule a full update on this collection**. To fully disable the schedule, you had to change the schedule to **None**. Now the site clears the schedule when you disable this setting. To specify a schedule for collection evaluation, enable the option to **Schedule a full update on this collection**.  
 
 - You can't disable the evaluation of built-in collections like **All Systems**, but now you can configure the schedule. This behavior allows you to customize this action at a time that meets your business requirements. 
 
-<!--For more information, see [How to create collections](/sccm/core/clients/manage/collections/create-collections).-->
+For more information, see [How to create collections](/sccm/core/clients/manage/collections/create-collections#bkmk_create).
 
 
 ### Improvement to client installation
@@ -147,14 +140,6 @@ The following changes in collection evaluation behavior can improve site perform
 When installing the Configuration Manager client, the ccmsetup process contacts the management point to locate the necessary content. Previously in this process the management point only returns distribution points in the client's current boundary group. If no content is available, the setup process falls back to download content from the management point. There's no option to fall back to distribution points in other boundary groups that might have the necessary content. Now the management point returns distribution points based on boundary group configuration. 
 
 For more information, see [Configure boundary groups](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_ccmsetup).
-
-
-### Improvements to internet-based client setup
-<!--1359181-->
-<!--move this under co-management?-->
-This release further simplifies the Configuration Manager client setup process for clients on the internet. The site publishes additional Azure Active Directory (Azure AD) information to the cloud management gateway (CMG). An Azure AD-joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies enrolling devices to co-management in an environment with more than one Azure AD tenant. Now the only two required ccmsetup properties are **CCMHOSTNAME** and **SMSSiteCode**.
-
-<!--For more information, see [Prepare Windows 10 devices for co-management](https://docs.microsoft.com/en-us/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client).-->
 
 
 
@@ -182,6 +167,13 @@ The co-management dashboard is enhanced with the following more detailed informa
 For more information, see [Co-management dashboard](/sccm/comanage/how-to-monitor#co-management-dashboard).
 
 
+### Improvements to internet-based client setup
+<!--3607731, fka 1359181-->
+***[UPDATED]*** This release further simplifies the Configuration Manager client setup process for clients on the internet. The site publishes additional Azure Active Directory (Azure AD) information to the cloud management gateway (CMG). An Azure AD-joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies enrolling devices to co-management in an environment with more than one Azure AD tenant. Now the only two required ccmsetup properties are **CCMHOSTNAME** and **SMSSiteCode**.
+
+For more information, see [How to prepare internet-based devices for co-management](/sccm/comanage/how-to-prepare-Win10#install-the-configuration-manager-client).
+
+
 
 <!-- ## <a name="bkmk_compliance"></a> Compliance settings -->
 
@@ -190,10 +182,10 @@ For more information, see [Co-management dashboard](/sccm/comanage/how-to-monito
 ## <a name="bkmk_app"></a> Application management
 
 ### Convert applications to MSIX
-<!--1359029-->
-Starting in version 1806, Configuration Manager supports deployment of the new Windows 10 app package (.msix) format. Now you can convert your existing Windows Installer (.msi) applications to the MSIX format.
+<!--3607729, fka 1359029-->
+***[Updated]*** Starting in version 1806, Configuration Manager supports deployment of the new Windows 10 app package (.msix) format. Now you can convert your existing Windows Installer (.msi) applications to the MSIX format.
 
-<!--For more information, see [Create Windows applications](/sccm/apps/get-started/creating-windows-applications#bkmk_general).  this might move to a new section for msix-->
+For more information, see [Create Windows applications](/sccm/apps/get-started/creating-windows-applications#bkmk_msix).  
 
 
 ### Repair applications
@@ -211,25 +203,26 @@ For more information, see [Approve applications](/sccm/apps/deploy-use/app-appro
 
 
 ### Detection methods don't load Windows PowerShell profiles
-<!--1359239-->
-You can use Windows PowerShell scripts for detection methods on applications and settings in configuration items. When these scripts run on clients, the Configuration Manager client now calls PowerShell with the `-NoProfile` parameter. This option starts PowerShell without profiles. 
+<!--3607762, fka 1359239-->
+***[UPDATED]*** You can use Windows PowerShell scripts for detection methods on applications and settings in configuration items. When these scripts run on clients, the Configuration Manager client now calls PowerShell with the `-NoProfile` parameter. This option starts PowerShell without profiles. 
 
 A PowerShell profile is a script that runs when PowerShell starts. You can create a PowerShell profile to customize your environment and to add session-specific elements to every PowerShell session that you start. 
 
 > [!Note]  
 > This change in behavior doesn't apply to [Scripts](/sccm/apps/deploy-use/create-deploy-scripts) or [CMPivot](/sccm/core/servers/manage/cmpivot). Both of these features already use this PowerShell parameter.    
 
-<!--For more information, see []().-->
+For more information, see [Create applications](/sccm/apps/deploy-use/create-applications) and [Create custom configuration items](/sccm/compliance/deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client).
+
 
 
 ## <a name="bkmk_osd"></a> OS deployment
 
 ### Task sequence support of Windows Autopilot for existing devices
-<!--1358333-->
+<!--3607717, fka 1358333-->
 
-[Windows Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430), is now available with Windows 10, version 1809 or later. This new feature allows you to reimage and provision a Windows 7 device for [Windows Autopilot user-driven mode](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) using a single, native Configuration Manager task sequence. 
+***[Updated]*** [Windows Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) is now available with Windows 10, version 1809 or later. This new feature allows you to reimage and provision a Windows 7 device for [Windows Autopilot user-driven mode](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) using a single, native Configuration Manager task sequence. 
 
-<!--For more information, see []().--> 
+For more information, see [Windows Autopilot for existing devices](/sccm/osd/deploy-use/windows-autopilot-for-existing-devices).
 
 
 ### Specify the drive for offline OS image servicing  
@@ -247,8 +240,10 @@ For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/
 
 
 ### Improvements to driver maintenance
-<!--1358270-->
-Driver packages now have additional metadata fields for **Manufacturer** and **Model**. Use these fields to tag driver packages with information to assist in general housekeeping, or to identify old and duplicate drivers that you can delete.
+<!--3607716, fka 1358270-->
+***[UPDATED]*** Driver packages now have additional metadata fields for **Manufacturer** and **Model**. Use these fields to tag driver packages with information to assist in general housekeeping, or to identify old and duplicate drivers that you can delete.
+
+For more information, see [Manage drivers](/sccm/osd/get-started/manage-drivers).
 
 
 ### New task sequence variable for last action name
@@ -282,7 +277,11 @@ By default, this option is **No** to keep consistent with the existing behavior.
 
 <!--For more information, see []().-->
 
+### Improvement to software updates maintenance
+<!--2839349-->
+WSUS cleanup tasks now run on secondary sites. WSUS cleanup for expired updates is run and superceded updates are declined in WSUS for secondary sites.
 
+For more information, see [WSUS cleanup behavior starting in version 1810](/sccm/sum/deploy-use/software-updates-maintenance#wsus-cleanup-behavior-starting-in-version-1810)
 
 ## <a name="bkmk_report"></a> Reporting
 
@@ -385,10 +384,30 @@ The SMS Provider now provides read-only API interoperability access to WMI over 
 
 ## <a name="bkmk_opmdm"></a> On-premises MDM
 
-### An Intune connection is no longer required for on-premises MDM
+### An Intune connection is no longer required for new on-premises MDM deployments
 <!--1359124-->
-The on-premises MDM prerequisite to configure a Microsoft Intune subscription is no longer required. Your organization still requires Intune licenses to use this feature. 
+The on-premises MDM prerequisite to configure a Microsoft Intune subscription is no longer required for new deployments. Your organization still requires Intune licenses to use this feature. You can’t currently remove the Intune connection from existing on-premises MDM deployments. For more information, see the [Intune support blog post](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).
 
+
+
+## Other updates
+
+Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4482169).
+
+For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1810 release notes](https://docs.microsoft.com/powershell/sccm/1810-release-notes?view=sccm-ps).
+
+The following update rollup (4486457) is available in the console starting on 25 January 2019: [Update rollup for Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4486457).
+
+
+### Hotfixes
+
+The following additional hotfixes are available to address specific issues:
+
+| ID | Title | Date | In-console |
+|---------|---------|---------|---------|
+| [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune connector certificate does not renew in Configuration Manager | 18 January 2019 | Yes |
+| [4490434](https://support.microsoft.com/help/4490434) | Duplicate user discovery columns are created in Configuration Manager | 22 February 2019 | Yes |
+| [4490575](https://support.microsoft.com/help/4490575) | Update installations stop responding or never show completion in Configuration Manager, version 1810 | 22 February 2019 | Yes |
 
 
 ## Next steps

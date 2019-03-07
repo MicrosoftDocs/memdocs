@@ -2,7 +2,7 @@
 title: Checklist for 1810
 titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 1810.
-ms.date: 11/27/2018
+ms.date: 02/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,6 +10,7 @@ ms.assetid: b87ac054-9b37-4725-a3f3-2340cfb10bff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Checklist for installing update 1810 for Configuration Manager
@@ -26,7 +27,7 @@ To get the update for version 1810, you must use a service connection point at t
 
     -   The dmpdownloader.log may indicate that the dmpdownloader process is waiting for an interval before checking for updates. To restart the download of the update's redistribution files, restart the **SMS_Executive** service on the site server.
 
-    -   Another common download issue occurs when proxy server settings prevent downloads from http://silverlight.dlservice.microsoft.com and http://download.microsoft.com.
+    -   Another common download issue occurs when proxy server settings prevent downloads from http://silverlight.dlservice.microsoft.com, http://download.microsoft.com, and/or http://go.microsoft.com.
 
 For more information about installing updates, see [In-console updates and servicing](/sccm/core/servers/manage/updates#a-namebkmkinconsolea-in-console-updates-and-servicing).
 
@@ -69,7 +70,7 @@ This value is optional. You can specify as a convenient reminder of your license
 For more information, see [Licensing and branches](/sccm/core/understand/learn-more-editions).
 
 #### Review Microsoft .NET versions 
-When a site installs this update, Configuration Manager automatically installs .NET Framework 4.5.2. When this prerequisite isn't already installed, the site installs it on each server that hosts one of the following site system roles:
+When a site installs this update, if the minimum requirement of .NET Framework 4.5 is not installed, Configuration Manager automatically installs .NET Framework 4.5.2. When this prerequisite isn't already installed, the site installs it on each server that hosts one of the following site system roles:
 
 -   Management point
 -   Service connection point

@@ -9,6 +9,7 @@ ms.assetid: 186f25e9-70b7-4ea3-a08a-c14f6047f379
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # IsClientOperationUpdateAllowed Method in Class SMS_ClientOperation
 The `IsClientOperationUpdateAllowed` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that checks whether a user has permission to update an operation.   

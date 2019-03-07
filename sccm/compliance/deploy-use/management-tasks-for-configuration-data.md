@@ -10,8 +10,12 @@ ms.assetid: b48c693c-d2b0-4707-a5dd-fe92172c49fe
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# Manage configuration data in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Manage configuration data in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 After you have created configuration items and configuration baselines in System Center Configuration Manager, further commands are available to help you perform various actions.  
 
 ## Manage configuration items  

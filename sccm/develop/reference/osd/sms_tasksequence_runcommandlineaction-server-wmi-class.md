@@ -9,6 +9,7 @@ ms.assetid: b0f7d2c6-ca63-4f73-82d9-1f7f3efbca25
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_TaskSequence_RunCommandLineAction Server WMI Class
 The `SMS_TaskSequence_RunCommandLineAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that runs a user-specified command line.  

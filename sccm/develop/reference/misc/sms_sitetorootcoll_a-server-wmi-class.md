@@ -9,6 +9,7 @@ ms.assetid: 31aa4a8c-0422-4d65-bd9c-c5006c2bc215
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_SiteToROOTColl_a Server WMI Class
 The `SMS_SiteToROOTColl_a` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that relates an [SMS_Site Server WMI Class](../../../develop/reference/core/servers/configure/sms_site-server-wmi-class.md) object with an [SMS_Collection Server WMI Class](../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) object representing the root of the collections to which the site belongs.  

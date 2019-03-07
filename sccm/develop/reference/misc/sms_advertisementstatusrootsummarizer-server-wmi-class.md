@@ -9,6 +9,7 @@ ms.assetid: c82c9dd3-2d0a-4f9a-a7ee-b99de69963df
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_AdvertisementStatusRootSummarizer Server WMI Class
 The `SMS_AdvertisementStatusRootSummarizer` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that list the progress of each advertisement and program as it is advertised and run on the client computers. The reported advertisement status is for all sites in the SMS hierarchy.  

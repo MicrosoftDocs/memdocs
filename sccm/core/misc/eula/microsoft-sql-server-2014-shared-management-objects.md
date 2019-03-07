@@ -1,6 +1,6 @@
 ---
-title: "MICROSOFT SQL SERVER 2014 SHARED MANAGEMENT OBJECTS"
-titleSuffix: "Configuration Manager"
+title: MICROSOFT SQL SERVER 2014 SHARED MANAGEMENT OBJECTS
+titleSuffix: Configuration Manager
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -9,7 +9,8 @@ ms.assetid: 77580c83-3fc5-479e-9f94-6bc59ac0fa69
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
+ms.collection: M365-identity-device-management
 ---
 # MICROSOFT SQL SERVER 2014 SHARED MANAGEMENT OBJECTS
 
@@ -17,9 +18,9 @@ robots: noindex,nofollow
 
 **MICROSOFT SOFTWARE LICENSE TERMS**  
 
- **MICROSOFT SQL SERVER 2014 SHARED MANAGEMENT OBJECTS**  
+**MICROSOFT SQL SERVER 2014 SHARED MANAGEMENT OBJECTS**  
 
- These license terms are an agreement between Microsoft Corporation (or based on where you live, one of its affiliates) and you. Please read them. They apply to the software named above, which includes the media on which you received it, if any. The terms also apply to any Microsoft  
+These license terms are an agreement between Microsoft Corporation (or based on where you live, one of its affiliates) and you. Please read them. They apply to the software named above, which includes the media on which you received it, if any. The terms also apply to any Microsoft  
 
 -   updates,  
 
@@ -91,7 +92,7 @@ robots: noindex,nofollow
 
     -   use the software for commercial software hosting services.  
 
-4.  **THIRD PARTY NOTICES.** The software may include third party code, that Microsoft, not the third party, licenses to you under the terms set forth in this agreement. Notices, if any, for any third party code are included for your information only. Additionally, any third party scripts, linked to, called or referenced from this software, are licensed to you by the third parties that own such code, not by Microsoft, see ASP.NET Ajax CDN Terms of Use: [http://www.asp.net/ajaxlibrary/CDN.ashx](http://www.asp.net/ajaxlibrary/CDN.ashx).  
+4.  **THIRD PARTY NOTICES.** The software may include third party code, that Microsoft, not the third party, licenses to you under the terms set forth in this agreement. Notices, if any, for any third party code are included for your information only. Additionally, any third party scripts, linked to, called or referenced from this software, are licensed to you by the third parties that own such code, not by Microsoft, see [ASP.NET Ajax CDN Terms of Use](https://docs.microsoft.com/aspnet/ajax/cdn/overview).  
 
 5.  **BACKUP COPY.** You may make one backup copy of the software. You may use it only to reinstall the software.  
 
@@ -103,7 +104,7 @@ robots: noindex,nofollow
 
 9. **ENTIRE AGREEMENT.** This agreement, and the terms for supplements, updates, Internet-based services and support services that you use, are the entire agreement for the software and support services.  
 
-10. **10.   APPLICABLE LAW.**  
+10. **APPLICABLE LAW.**  
 
     1.  **United States.** If you acquired the software in the United States, Washington state law governs the interpretation of this agreement and applies to claims for breach of it, regardless of conflict of laws principles. The laws of the state where you live govern all other claims, including claims under state consumer protection laws, unfair competition laws, and in tort.  
 
@@ -111,14 +112,11 @@ robots: noindex,nofollow
 
 11. **LEGAL EFFECT.** This agreement describes certain legal rights. You may have other rights under the laws of your country. You may also have rights with respect to the party from whom you acquired the software. This agreement does not change your rights under the laws of your country if the laws of your country do not permit it to do so.  
 
-12. **DISCLAIMER OF WARRANTY. THE SOFTWARE IS LICENSED "AS-IS." YOU BEAR THE RISK OF USING IT. MICROSOFT GIVES NO EXPRESS WARRANTIES, GUARANTEES OR CONDITIONS. YOU MAY HAVE**   
-    **ADDITIONAL CONSUMER RIGHTS OR STATUTORY GUARANTEES UNDER YOUR LOCAL LAWS WHICH**   
-    **THIS AGREEMENT CANNOT CHANGE. TO THE EXTENT PERMITTED UNDER YOUR LOCAL LAWS, MICROSOFT EXCLUDES THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.**  
+12. **DISCLAIMER OF WARRANTY. THE SOFTWARE IS LICENSED "AS-IS." YOU BEAR THE RISK OF USING IT. MICROSOFT GIVES NO EXPRESS WARRANTIES, GUARANTEES OR CONDITIONS. YOU MAY HAVE ADDITIONAL CONSUMER RIGHTS OR STATUTORY GUARANTEES UNDER YOUR LOCAL LAWS WHICH THIS AGREEMENT CANNOT CHANGE. TO THE EXTENT PERMITTED UNDER YOUR LOCAL LAWS, MICROSOFT EXCLUDES THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.**  
 
      **FOR AUSTRALIA - YOU HAVE STATUTORY GUARANTEES UNDER THE AUSTRALIAN CONSUMER LAW AND NOTHING IN THESE TERMS IS INTENDED TO AFFECT THOSE RIGHTS.**  
 
-13. **LIMITATION ON AND EXCLUSION OF REMEDIES AND DAMAGES. YOU CAN RECOVER FROM MICROSOFT**   
-    **AND ITS SUPPLIERS ONLY DIRECT DAMAGES UP TO U.S. $5.00. YOU CANNOT RECOVER ANY OTHER DAMAGES, INCLUDING CONSEQUENTIAL, LOST PROFITS, SPECIAL, INDIRECT OR INCIDENTAL DAMAGES.**  
+13. **LIMITATION ON AND EXCLUSION OF REMEDIES AND DAMAGES. YOU CAN RECOVER FROM MICROSOFT AND ITS SUPPLIERS ONLY DIRECT DAMAGES UP TO U.S. $5.00. YOU CANNOT RECOVER ANY OTHER DAMAGES, INCLUDING CONSEQUENTIAL, LOST PROFITS, SPECIAL, INDIRECT OR INCIDENTAL DAMAGES.**  
 
      This limitation applies to  
 

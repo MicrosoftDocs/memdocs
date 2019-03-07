@@ -9,6 +9,7 @@ ms.assetid: 0a491cf8-31f4-4e87-8726-96683e8165dd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Creating the Registration XML Files
 This section provides task-based topics that show you how to create registration files for a custom application management deployment technology in Configuration Manager.  

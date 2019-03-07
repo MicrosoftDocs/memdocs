@@ -9,6 +9,7 @@ ms.assetid: f83950cd-16a3-445e-98aa-0f5a0bc3f20b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Administrative User Management
 The following section describes managing administrators and security groups with the System Center Configuration Manager Software Development Kit (SDK).  

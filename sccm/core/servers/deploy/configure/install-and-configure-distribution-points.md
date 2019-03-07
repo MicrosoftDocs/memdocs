@@ -10,6 +10,7 @@ ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Install and configure distribution points in Configuration Manager
@@ -405,8 +406,7 @@ Manage the distribution point groups in which this distribution point is a membe
 
 To add this distribution point as a member to an existing a distribution point group, click **Add**. In the Add to Distribution Point Groups window, select an existing group, and then click **OK**.  
 
-To remove this distribution point from a distribution point group, select the group in the list, and then click **Remove**.  
-
+To remove this distribution point from a distribution point group, select the group in the list, and then click **Remove**. Removing the distribution point from a distribution point group does not remove any content from the distribution point.
 
 ### <a name="bkmk_config-content"></a> Content  
 

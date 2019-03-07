@@ -9,6 +9,7 @@ ms.assetid: a0d97ac9-83c1-42cd-a385-903efab4c0e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_SiteAndSubsites Server WMI Class
 The `SMS_SiteAndSubsites` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that reads the current site and child site information.  

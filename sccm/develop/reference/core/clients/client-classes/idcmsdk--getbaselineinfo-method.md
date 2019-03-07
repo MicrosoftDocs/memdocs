@@ -9,6 +9,7 @@ ms.assetid: cfb7ce37-44b3-4cd1-b0f7-16b7c2823c09
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # IDCMSDK::GetBaselineInfo Method
 The `IDCMSDK::GetBaselineInfo` method, in Configuration Manager, retrieves information for the specified configuration item baseline.  

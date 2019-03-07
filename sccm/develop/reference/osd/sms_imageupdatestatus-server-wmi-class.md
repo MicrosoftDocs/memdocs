@@ -9,6 +9,7 @@ ms.assetid: 1d6955c4-1a76-4d90-b6d3-5b9a8f25eb84
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_ImageUpdateStatus Server WMI Class
 The `SMS_ImageUpdateStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents software update installation status of offline servicing image.  

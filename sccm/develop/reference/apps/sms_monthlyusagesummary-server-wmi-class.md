@@ -9,6 +9,7 @@ ms.assetid: 8e439e9d-7a96-4cb0-b0ff-18efd7a1f43f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_MonthlyUsageSummary Server WMI Class
 The `SMS_MonthlyUsageSummary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents a monthly usage summary for a particular file.  

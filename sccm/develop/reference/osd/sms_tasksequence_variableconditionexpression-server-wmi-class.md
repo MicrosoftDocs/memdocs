@@ -9,6 +9,7 @@ ms.assetid: 996dbc32-7d34-49f0-8a96-ccaf6585279d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_TaskSequence_VariableConditionExpression Server WMI Class
 The `SMS_TaskSequence_VariableConditionExpression` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a condition expression to check for the existence of a variable and, optionally, compare the variable to a specific value.  

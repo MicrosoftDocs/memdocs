@@ -10,6 +10,7 @@ ms.assetid: 45388103-2410-4c7e-b4cf-73a1bda485fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # VPN Profiles on mobile devices in System Center Configuration Manager
 

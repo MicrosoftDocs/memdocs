@@ -9,6 +9,7 @@ ms.assetid: 0f4e9ed1-7fd9-4f7e-8a04-4da374ef7f48
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Acquire a Lock on a SEDO-Enabled Object
 ### To Acquire an Explicit Lock on a SEDO-enabled Object  

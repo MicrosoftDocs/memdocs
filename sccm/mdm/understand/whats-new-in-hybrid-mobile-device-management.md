@@ -2,7 +2,7 @@
 title: What's new in hybrid MDM
 titleSuffix: Configuration Manager
 description: Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune.
-ms.date: 01/10/2019
+ms.date: 02/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,6 +10,7 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # What's new in hybrid mobile device management with Configuration Manager and Microsoft Intune
@@ -42,9 +43,53 @@ Each section of this article lists hybrid features under three different categor
 
 
 
+## February 2019
+
+### New in Microsoft Intune
+
+#### Create new Intune tenants in Azure portal
+<!--3754067-->
+The ability to create a new hybrid MDM tenant has been removed as of the 1902 Intune update. Create all new Intune tenants in the Azure portal. As a reminder, [hybrid MDM is deprecated](/sccm/mdm/understand/hybrid-mobile-device-management). Current hybrid MDM customers should migrate to Intune standalone as soon as possible.
+
+For more information, see [the Intune support blog post](https://aka.ms/hybrid_notification).
+
+
+#### Intune uses Google Play Protect APIs on Android devices 
+<!--2577355-->
+Some admins are faced with a BYOD landscape where users may root or jailbreak their mobile phone. This behavior, while sometimes not ill-intentioned, results in a bypass of many Intune policies that are set in order to protect the organization's data on end user devices. Thus, Intune provides root and jailbreak detection for both enrolled and unenrolled devices. 
+
+With this release, Intune now leverages Google Play Protect APIs to add to our existing root detection checks for unenrolled devices. While Google doesn't share the entirety of the root detection checks that occur, we expect these APIs to detect users who have rooted their devices for any reason from device customization to being able to get newer OS updates on older devices. These users can then be blocked from accessing corporate data, or their corporate accounts can be wiped from their policy enabled apps. 
+
+
+#### New **App categories** screen in the Company Portal app for Windows 10
+<!--3834780-->
+To improve the app browsing and selection experience in Company Portal for Windows 10, it now includes a new screen called **App categories**. Users now see their apps sorted under categories such as **Featured**, **Education**, and **Productivity**. This change appears in Company Portal versions 10.3.3451.0 and later. To view the new screen, see [What's new in the app UI](https://docs.microsoft.com/intune/whats-new). For more information about apps in the Company Portal, see [Install and share apps on your device](https://docs.microsoft.com/intune-user-help/install-apps-cpapp-windows).  
+
+
+#### macOS users are prompted to update their password 
+<!--1873216-->
+On macOS devices, end users are prompted to update their password. This prompt happens whenever a user runs a task that requires authentication, such as signing in to the device. Users also prompted to update their password when doing anything that requires administrative privileges, such as requesting keychain access.  
+
+
+#### Intune macOS Company Portal Dark Mode
+<!--3300524-->
+The Intune macOS Company Portal now supports Dark Mode for macOS. When you enable Dark Mode on a macOS 10.14+ device, the Company Portal adjusts its appearance to colors that reflect that mode.
+
+
+
 ## January 2019
 
 ### New in Microsoft Intune
+
+#### Intune app protection policies UI update 
+<!--3251427-->
+We've changed the labels for settings and buttons for Intune app protection to make each easier to understand. Some of the changes include:  
+
+- Controls are changed from **yes** / **no** controls to primarily **block** / **allow** and **disable** / **enable** controls. The labels are also updated.  
+
+- Settings are reformatted, so the setting and its label are side-by-side in the control, to provide better navigation.   
+
+The default settings and number of settings remain the same, but this change allows the user to understand, navigate, and utilize the settings more easily to apply selected app protection policies. For more information, see [iOS settings](https://docs.microsoft.com/intune/app-protection-policy-settings-ios#access-requirements) and [Android settings](https://docs.microsoft.com/intune/app-protection-policy-settings-android#access-requirements).
 
 #### Tenant Status dashboard
 <!--1124854-->
@@ -617,29 +662,6 @@ After December, end users who have devices other than the ones listed above can'
  
 #### Additional Information
 For more information, see [Enroll your macOS device in Intune with the Company Portal app](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos-cp).
-
-
-### Plan for Change: New Intune support experience for Premier customers 
-<!--2828727-->
-
-12/4/2018 update: We're trying to make this process better for you. Support request creation in MPO won't be disabled on December 3. We'll let you know through the Message Center and update this post soon to share timelines for this change.
-
-As a Microsoft Premier customer, you can currently use the [Microsoft Premier Online (MPO) portal](https://premier.microsoft.com) and [Intune on Azure](https://portal.azure.com) to create support requests for Intune. Starting on December 3, 2018, to continue enhancing the Premier support experience, you will be able to create support requests only in Intune on Azure.
-
-#### How does this affect me?
-After December 3, you can't create support requests in MPO. If you try, you’ll see a prompt that you can't dismiss redirecting you to Intune on Azure. When you create a support request in the Azure portal, it's routed to Intune-dedicated Microsoft Support. They'll diagnose and resolve your issue in a timely manner. If you create a support request in the MPO portal, you can't view it in the Azure portal. Start only creating support requests in Intune on Azure.  
-
-If you use hybrid mobile device management (hybrid MDM) or use co-management, continue to use MPO to create support requests for Configuration Manager, but use the Azure portal to create support requests for Intune. As a reminder, hybrid MDM is deprecated, and you should plan to move to Intune on Azure as soon as possible. For more information, see [Move from Hybrid Mobile Device Management to Intune on Azure](https://aka.ms/hybrid_notification).
-
-Note that only users with Global Administrator, Intune Service Administrator, and Service Support Administrator roles can create support tickets in the Azure portal.
-
-#### What can I do to prepare for this change?
-- Stop using MPO for Intune-related support requests. Use Intune on Azure to create and manage all your Intune support requests.  
-- Notify your helpdesk and update documentation, if necessary.  
-- If you have users without Global administrator or Intune Service Administrator roles currently creating support requests in MPO, assign them the Service Support Administrator role in Azure Active Directory. Users require one of these roles to create support tickets in the Azure portal.  
-
-#### Additional Information
-For more information, see the [Microsoft Intune support team blog post](https://aka.ms/IntuneSupport_MPO_to_Azure).
 
 
 ### Plan for change: Use Intune on Azure now for your MDM management 

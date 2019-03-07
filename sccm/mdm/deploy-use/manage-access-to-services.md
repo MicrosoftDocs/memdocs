@@ -10,15 +10,20 @@ ms.assetid: 7b04727b-d563-422f-8d59-4dd66215d0b3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Manage access to services in System Center Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-
-## Conditional access in System Center Configuration Manager
 Use conditional access to specify conditions to help secure email and other services on devices enrolled with Microsoft Intune.  
+
+> [!Important]  
+> Hybrid MDM including on-premises conditional access are [deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). For more information, see [What is hybrid MDM](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
+> 
+> If you use conditional access on devices managed with the Configuration Manager client, to make sure they are still protected, first enable conditional access in Intune for those devices before you migrate. Enable co-management in Configuration Manager, move the compliance policy workload to Intune, and then complete your migration from Intune hybrid to Intune standalone. For more information, see [Conditional access with co-management](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access). 
+
 
  For information about conditional access on devices that are managed with the Configuration Manager client, see [Manage access to O365 services for PCs managed by System Center Configuration Manager](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).  
 

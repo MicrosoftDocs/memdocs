@@ -10,6 +10,7 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # About client settings in Configuration Manager
@@ -620,7 +621,7 @@ For example, if your organization doesn't use compliance policies, and you want 
 Configure a schedule for when Configuration Manager reevaluates the requirement rules for all deployments. The default value is every seven days.  
 
 > [!IMPORTANT]  
->  Don't change this value to a lower value than the default. A more aggressive reevaluation schedule negatively affects the performance of your network and client computers.  
+> This setting is more invasive to the local client than it is to the network or site server. A more aggressive reevaluation schedule negatively affects the performance of your network and client computers. Microsoft doesn't recommend setting a lower value than the default. If you change this value, closely monitor performance.  
 
 Initiate this action from a client as follows: in the **Configuration Manager** control panel, from the **Actions** tab, select **Application Deployment Evaluation Cycle**.  
 

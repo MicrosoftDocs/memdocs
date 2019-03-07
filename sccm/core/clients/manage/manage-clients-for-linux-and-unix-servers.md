@@ -10,6 +10,7 @@ ms.assetid: 948664f2-239d-47a8-92fc-f8efeebd5796
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to manage clients for Linux and UNIX servers in System Center Configuration Manager
 

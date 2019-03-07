@@ -9,6 +9,7 @@ ms.assetid: 955b71e0-6890-4cae-8ce1-9d3e3b5d78fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # InitiateUserInstall Method in Class SMS_Application
 > [!WARNING]

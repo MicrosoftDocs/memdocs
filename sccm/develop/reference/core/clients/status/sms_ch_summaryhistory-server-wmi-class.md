@@ -9,6 +9,7 @@ ms.assetid: 91fa4d66-d2cb-4fac-abeb-2b95508bbc2a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_CH_SummaryHistory Server WMI Class
 The `SMS_CH_SummaryHistory` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the client summary history.  

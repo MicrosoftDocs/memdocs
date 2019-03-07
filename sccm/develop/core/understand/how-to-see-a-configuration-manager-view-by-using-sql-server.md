@@ -9,6 +9,7 @@ ms.assetid: 8a8df275-7e63-4159-9f9a-5f21621be0f1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to See a Configuration Manager View by Using SQL Server
 The following examples demonstrate various Microsoft System Center Configuration Manager SQL view queries.  

@@ -9,6 +9,7 @@ ms.assetid: 89d8d59f-79b1-4be7-85a8-43e741528a8e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ImportMachineEntry Method in Class SMS_Site
 The `ImportMachineEntry` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that imports computer information.  

@@ -10,6 +10,7 @@ ms.assetid: 5d5d6273-0d8a-43c7-865a-cdb1736dcae3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Plan for the SMS Provider 
@@ -45,7 +46,7 @@ The SMS Provider helps enforce Configuration Manager security. It returns only t
 
  To support the SMS Provider, the target server must meet the following prerequisites:  
 
--   In a domain that has a two-way trust relationship with the site server and the site database site systems  
+-   In the same domain as the site server and the site database site systems  
 
 -   Can't have a site system role from a different site  
 

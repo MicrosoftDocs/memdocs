@@ -10,6 +10,7 @@ ms.assetid: 613a48ac-c55d-4c4a-94ea-d3747a1b10cb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to create configuration items for iOS and Mac OS X devices managed with Intune
 Use the System Center Configuration Manager **iOS and Mac OS X** configuration item to manage settings  for iOS and Mac OS X devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
@@ -269,7 +270,7 @@ Use the System Center Configuration Manager **iOS and Mac OS X** configuration i
      >  To find the bundle ID of an app, use the following steps on a Mac computer that has the app installed:  
      > 
      > 1. Open the folder in which the app is installed (for example, **/Applications**)  
-     >    2.  Select the *<App Name\>***.app** bundle, and choose **Show Package Contents**  
+     >    2.  Select the _<App Name\>_**.app** bundle, and choose **Show Package Contents**  
      >    3.  Open the **Info.plist** file  
      >    4.  Check the value associated with the key **CFBundleIdentifier**  
      > 

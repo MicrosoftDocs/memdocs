@@ -9,6 +9,7 @@ ms.assetid: 1500ceed-5edb-46fd-9722-ded6d9d38685
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_ClientResourcesConfig Server WMI Class
 The `SMS_ClientResourcesConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the settings and properties used by the client agent.  

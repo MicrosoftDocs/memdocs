@@ -9,6 +9,7 @@ ms.assetid: 0ea07b95-7474-4294-8c17-37e7a9e6957a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Enumerate the Available Operating System Deployment Task Sequences
 You enumerate the available operating system deployment task sequences, in System Center Configuration Manager, by querying the available task sequence packages. System Center Configuration Manager does not maintain instances of the [SMS_TaskSequence](../../develop/reference/osd/sms_tasksequence-server-wmi-class.md) class for task sequences, but there is one instance of the [SMS_TaskSequencePackage](../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md) class for each task sequence.  

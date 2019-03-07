@@ -9,6 +9,7 @@ ms.assetid: d24257d8-8136-47f4-8e0d-34021356dc37
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager on Azure - Frequently Asked Questions
 *Applies to: System Center Configuration Manager (Current Branch)*

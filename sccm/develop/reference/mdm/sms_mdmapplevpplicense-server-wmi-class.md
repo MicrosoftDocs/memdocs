@@ -9,6 +9,7 @@ ms.assetid: 4a368d69-28a1-49bc-9a50-fa184f2b07cc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_MDMAppleVppLicense Server WMI Class
 The `SMS_MDMAppleVppLicense` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an Apple Volume Purchase Program (VPP) licensed application.  

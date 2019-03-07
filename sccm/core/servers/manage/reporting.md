@@ -9,8 +9,12 @@ ms.assetid: 78c1f344-4d72-4718-aad9-3a3834b64dbd
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# Reporting in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Reporting in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Reporting in System Center Configuration Manager provides a set of tools and resources that help you use the advanced reporting capabilities of Microsoft SQL Server Reporting Services in the Configuration Manager console.  
 
 ## Reporting topics  

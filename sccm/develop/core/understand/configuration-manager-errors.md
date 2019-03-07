@@ -8,6 +8,7 @@ ms.assetid: 1163d0fc-8c26-42e8-b3f1-9a4455f31d6f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Errors
 This section explains how to handle errors in synchronous and asynchronous operations in System Center Configuration Manager.  

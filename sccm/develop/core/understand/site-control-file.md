@@ -9,6 +9,7 @@ ms.assetid: 850699d9-71ad-49ba-96c9-8597cd1d391e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Site Control File
 Site control in System Center Configuration Manager defines the settings for a specific site. The settings for each site are contained in the database and are accessed through Windows Management Instrumentation (WMI) when working with scripting languages, and through the managed SMS Provider library when working with a managed language.  

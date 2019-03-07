@@ -10,6 +10,7 @@ ms.assetid: 8cc13635-85d6-4b07-a3ec-c42188bc5c74
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Use the Update Registration Tool to import hotfixes to System Center Configuration Manager
 

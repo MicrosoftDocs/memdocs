@@ -9,6 +9,7 @@ ms.assetid: 00d2b5d3-1b24-4d22-91ce-a5238931f95f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_DPStatusPerDP Server WMI Class
 > [!WARNING]

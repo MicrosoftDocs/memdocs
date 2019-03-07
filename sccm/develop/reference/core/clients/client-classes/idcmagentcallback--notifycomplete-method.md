@@ -9,6 +9,7 @@ ms.assetid: 58e63e77-47ba-4d62-a032-9b77023e281d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # IDCMAgentCallback::NotifyComplete Method
 The `IDCMAgentCallback::NotifyComplete` method, in Configuration Manager, notifies the caller that a Desired Configuration Management Agent job has completed.  

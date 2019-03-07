@@ -9,6 +9,7 @@ ms.assetid: 01e0699f-7031-47a7-a3c2-5e98aeebe5f6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_G_System_Current Server WMI Class
 The `SMS_G_System_Current` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that serves as an abstract base class and represents the current client state at the time of the last hardware inventory.  

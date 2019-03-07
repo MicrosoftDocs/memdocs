@@ -9,6 +9,7 @@ ms.assetid: 4f0075f9-d759-4edb-b0cd-65cb64827aee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_TaskSequence_ConditionOperand Server WMI Class
 The `SMS_TaskSequence_ConditionOperand` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager. This class is the abstract base class for operators and expressions that are used by task sequence steps.  

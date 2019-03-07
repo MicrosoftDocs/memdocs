@@ -9,9 +9,13 @@ ms.assetid: eb4ab74b-b605-41dd-930c-ac18d2f40319
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
 
-# Using the Microsoft Malware Protection Center to Download Definitions*Applies to: System Center Configuration Manager (Current Branch)*
+# Using the Microsoft Malware Protection Center to Download Definitions
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
  You can configure clients to download definition updates from the Microsoft Malware Protection Center. This option is used by Endpoint Protection clients to download definition updates if they have not been able to download updates from another source. This update method can be useful if there is a problem with your Configuration Manager infrastructure that prevents the delivery of updates.
 
 > [!IMPORTANT]

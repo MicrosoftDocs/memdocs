@@ -10,6 +10,7 @@ ms.assetid: 0249dbd3-1e85-4d05-a9e5-420fbe44d850
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # What's new in version 1806 of Configuration Manager current branch
@@ -24,14 +25,6 @@ Always review the latest checklist for installing this update. For more informat
 > [!Important]  
 > This article currently lists all significant features in this version. However, not all sections yet link to updated content with further information on the new features. Keep checking this page regularly for updates. Changes are noted with the ***[Updated]*** tag. This note will be removed when the content is finalized.  
 -->
-
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4459701).
-
-For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell 1806 Release Notes](https://docs.microsoft.com/powershell/sccm/1806_release_notes?view=sccm-ps).
-
-The following additional updates to this release are also now available:
-- [Update rollup for Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4462978)
-
 
 The following sections provide details about the changes and new features in version 1806 of Configuration Manager current branch.  
 
@@ -305,7 +298,7 @@ For more information, see [Deploy Office 365 apps](/sccm/sum/deploy-use/manage-o
 <!--1357427-->
 Configuration Manager now supports the deployment of new Windows 10 app package (.msix) and app bundle (.msixbundle) formats. 
 
-For more information, see [Create Windows applications](/sccm/apps/get-started/creating-windows-applications#bkmk_general).
+For more information, see [Create Windows applications](/sccm/apps/get-started/creating-windows-applications#bkmk_msix).
 
 
 ### Uninstall application on approval revocation
@@ -580,6 +573,27 @@ Send a smile! You can now directly tell the Configuration Manager team about you
 
 For more information, see [Console improvements in version 1806](/sccm/core/servers/manage/admin-console#console-improvements-in-version-1806) and [Product feedback](/sccm/core/understand/find-help#BKMK_1806Feedback).
 
+
+
+## Other updates
+
+Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4459701).
+
+For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell 1806 Release Notes](https://docs.microsoft.com/powershell/sccm/1806_release_notes?view=sccm-ps).
+
+The following update rollup (4462978) is available in the console starting on 24 October 2018: [Update rollup for Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4462978).
+
+
+### Hotfixes
+
+The following additional hotfixes are available to address specific issues:
+
+| ID | Title | Date | In-console |
+|---------|---------|---------|---------|
+| [4346645](https://support.microsoft.com/help/4346645) | Update for System Center Configuration Manager version 1806, first wave | 31 August 2018 | Yes |
+| [4465865](https://support.microsoft.com/help/4465865) | Software updates do not download in Configuration Manager environment if WSUS is disconnected<br><br>This update is also in the update rollup (4462978) | 01 October 2018 | Yes |
+| [4471892](https://support.microsoft.com/help/4471892) | PXE Responder doesn't work across subnets in Configuration Manager 1806 | 23 November 2018 | No |
+| [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune connector certificate does not renew in Configuration Manager | 18 January 2019 | Yes |
 
 
 ## Next steps

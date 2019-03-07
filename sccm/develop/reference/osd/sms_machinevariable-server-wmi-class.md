@@ -9,6 +9,7 @@ ms.assetid: 5a0951f6-f184-4c00-a7d3-94cd3f466de9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_MachineVariable Server WMI Class
 The `SMS_MachineVariable` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that defines the settings of a task sequence variable that is unique to a specific computer.  

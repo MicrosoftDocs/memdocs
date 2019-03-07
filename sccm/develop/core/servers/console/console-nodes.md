@@ -8,6 +8,7 @@ ms.assetid: eef55df7-3e00-4ffe-860b-439a76e836fb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Console Nodes
 This section provides information about System Center Configuration Manager console nodes. It gives you an overview of a node and what you must consider when writing an extension node. It also shows you how to install a Configuration Manager console extension node.  
