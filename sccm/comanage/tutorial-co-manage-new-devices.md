@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Tutorial - Enable co-management for new internet-based Windows 10 devices
+title: Tutorial&#58; Enable co-management for new internet-based Windows 10 devices
 titleSuffix: Configuration Manager 
 description: Configure co-management for Windows 10 devices for Configuration Manager and Intune. 
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/15/2019
+ms.date: 01/31/2019
 ms.topic: tutorial
 ms.prod:
 ms.service:  
@@ -23,7 +23,7 @@ With co-management, you can retain your well-established processes for using Con
 
   
 
-In this tutorial, you set up co-management of new Windows 10 devices in an environment where you use both Azure AD and an on-premises AD but don't have a [hybrid Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/overview#hybrid-azure-ad-joined-devices) (AD).
+In this tutorial, you set up co-management of new Windows 10 devices in an environment where you use both Azure AD and an on-premises AD but don't have a [hybrid Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/overview#hybrid-azure-ad-joined-devices) (AD). The Configuration Manager environment includes a single primary site with all site system roles located on the same server, the site server. 
 
 If you have a hybrid Azure Active Directory (AD) that joins your on-premises AD with Azure AD, we recommend following our companion tutorial, [Enable co-management for Configuration Manager clients](/sccm/comanage/tutorial-co-manage-clients). 
  
@@ -41,7 +41,6 @@ Use this tutorial when:
 > * Deploy and configure a cloud management gateway  
 > * Configure the management point and clients to use the CMG
 > * Enable co-management in Configuration Manager
-> * Configure Intune to auto-enroll devices
 > * Configure Intune to install the Configuration Manager client
 > * Assign license for cloud services
 
@@ -56,16 +55,14 @@ Use this tutorial when:
   > [!TIP]  
   > An Enterprise Mobility + Security (EMS) Subscription includes both Azure Active Directory Premium and Microsoft Intune. EMS Subscription ([free trial](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-trial)).  
 
-If not already present in your environment, during this tutorial you'll:
-
-- Assign users a license for *Intune* and for *Azure Active Directory Premium*
-- Configure [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-select-installation) between your on-premises Active Directory and your Azure Active Directory (AD) tenant
+- Users must be [assigned licenses](tutorial-co-manage-clients.md#assign-intune-licenses-to-users) for *Intune* and *Azure Active Directory Premium*
+- Intune is configured to [auto-enroll devices](tutorial-co-manage-clients.md#configure-auto-enrollment-of-devices-to-intune)  
 
 
 ### On-premises infrastructure
 - System Center Configuration Manager current branch, version 1810 or later.  
   
-  Version 1810 introduces [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http), which is used in this tutorial to avoid more complex PKI requirements. Through use of Enhanced HTTP, the primary site that you use to manage clients must be configured to use Configuration Manager-generated certificates for HTTP site systems.
+  Version 1810 introduces [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http), which is used in this tutorial to avoid more complex PKI requirements. Through use of Enhanced HTTP, the primary site that you use to manage clients must be configured to use Configuration Manager-generated certificates for HTTP site systems.  
    
   Version 1810 also introduces a simpler command line for internet-based installation of the Configuration Manager client.
 
@@ -84,7 +81,7 @@ Throughout this tutorial, use the following permissions to complete tasks:
 
 
 ## Request a public certificate for the cloud management gateway
-When a hybrid Azure Active Directory (Azure AD) is not available, co-management requires the Configuration Manager cloud management gateway (CMG). The CMG enables your internet-based Windows 10 devices to communicate with your on-premises Configuration Manager deployment. To establish a trust between devices and your Configuration Manager environment, the CMG requires an SSL certificate.
+When your devices are on the intenret, co-management requires the Configuration Manager cloud management gateway (CMG). The CMG enables your internet-based Windows 10 devices to communicate with your on-premises Configuration Manager deployment. To establish a trust between devices and your Configuration Manager environment, the CMG requires an SSL certificate.
 
 In this tutorial, we use a public certificate called **CMG server authentication certificate** that derives authority from a globally trusted certificate provider. Although it's possible to configure co-management using certificates that derive authority from your on-premises Microsoft certificate authority, use of self-signed certificates is beyond the scope of this tutorial.
 
@@ -189,11 +186,11 @@ To configure Azure services from within the Configuration Manager console, you u
 - **Server app** –  a *Web app* in Azure AD  
 - **Client app** – a *Native Client* app in Azure AD  
 
-Run the following procedure from the primary site server that has access to your exported certificate.  
+Run the following procedure from the primary site server.  
 
 1. From the primary site server, open the Configuration Manager console and go to **Administration > Cloud Services > Azure Services**, and select **Configure Azure Services**.  
 
-   On the Configure Azure Service page, specify a friendly Name for the cloud management service you’re configuring. For example: *My cloud management gateway*   
+   On the Configure Azure Service page, specify a friendly Name for the cloud management service you’re configuring. For example: *My cloud management service*   
 
    Then select **Cloud Management**, and then select **Next**.  
    
@@ -317,28 +314,34 @@ Configure the site to support Enhanced HTTP.
 
 4. Select **Add Site System Roles**, and then **Next**> **Next**.  
 
-5.  Select the **Cloud management gateway connection point** and then select **Next** to continue.  
+5. Select the **Cloud management gateway connection point** and then select **Next** to continue.  
 
-7. Review the default selections on the **Cloud management gateway connection point** page and make sure the correct CMG is selected. If you have multiple cloud management gateways, you can use the dropdown list to specify a different CMG. You can also change the CMG in use, after installation. Select **Next** to continue.
+6. Review the default selections on the **Cloud management gateway connection point** page and make sure the correct CMG is selected. If you have multiple cloud management gateways, you can use the dropdown list to specify a different CMG. You can also change the CMG in use, after installation. Select **Next** to continue.
 
-8. Select **Next** to start installation and then view the results on the Completion page.  Select **Close** to complete the installation.
+7. Select **Next** to start installation and then view the results on the Completion page.  Select **Close** to complete the installation of the connection point. 
+
+8. Now go to **Administration > Overview > Site Configuration > Servers and Site System Roles** and open the **Properties** for the management point where you installed the connection point. On the **General** tab, check the box for **Allow Configuration Manager cloud management gateway traffic**, and then select **OK** to save the configuration. 
+   > [!TIP]  
+   > While not required to enable co-management, we recommend that you make this same edit for any software update points. 
 
 ### Configure Client Settings to direct clients to use the CMG
 Use Client Settings to configure Configuration Manager clients to communicate with the CMG.  
 
-1.	Open the **Configuration Manager console > Administration > Overview > Client Settings**, and then edit the **Default Client Settings**.  
+1. Open the **Configuration Manager console > Administration > Overview > Client Settings**, and then edit the **Default Client Settings**.  
 
-2.	Select **Cloud Services**.
+2. Select **Cloud Services**.
 
-3.	On the **Default Settings** page, set the following settings to = **Yes**  
+3. On the **Default Settings** page, set the following settings to = **Yes**  
 
-    - **Automatically register new Windows 10 domain joined devices with Azure Active Directory**  
+   - **Automatically register new Windows 10 domain joined devices with Azure Active Directory**  
 
-    - **Enable clients to use a cloud management gateway** 
+   - **Enable clients to use a cloud management gateway** 
 
-    - **Allow access to cloud distribution point** 
+   - **Allow access to cloud distribution point** 
 
-4.	Select **OK** to save this configuration.  
+4. On the **Client Policy** page, set **Enable user policy requests from internet clients** = **Yes** 
+
+1. Select **OK** to save this configuration. 
 
 
 
@@ -376,32 +379,8 @@ With the Azure configurations, site system roles, and client settings in place, 
 
 7. On the *Summary* page, select **Next**, and then **Close** to complete the Wizard.  
 
-
-## Configure auto-enrollment of devices to Intune   
-Next, we’ll set up auto-enrollment of devices with Intune. With automatic enrollment, devices you manage with Configuration Manager automatically enroll with Intune. 
-
-Automatic enrollment also lets users enroll their Windows 10 devices to Intune. Devices enroll when a user adds their work account to their personally owned device, or when a corporate-owned device is joined to Azure Active Directory. 
-
-1. Sign in to the [Azure portal](https://portal.azure.com/) and select **Azure Active Directory** > **Mobility (MDM and MAM)** > **Microsoft Intune**.  
-
-2. Configure **MDM user scope**. Specify one of the following to configure which users’ devices are managed by Microsoft Intune and accept the defaults for the URL values.  
-
-   - **Some** - Select the **Groups** that can automatically enroll their Windows 10 devices  
-
-   - **All** - All users can automatically enroll their Windows 10 devices
-when set to **None**, Mobile Device Management (MDM) automatic enrollment is disabled 
-
-   > [!IMPORTANT]  
-   > If both **MAM user scope** and automatic MDM enrollment (**MDM user scope**) are enabled for a group, only Mobile Application Management (MAM) is enabled. Only MAM is added for users in that group when they workplace join personal device. Devices are not automatically MDM enrolled.  
-
-3. Select **Save** to complete configuration of automatic enrollment.  
-
-4. Return to **Mobility (MDM and MAM)** and then select **Microsoft Intune Enrollment**.  
-
-5. For MDM user scope, select **All**, and then **Save**.  
-
 ## Use Intune to deploy the Configuration Manager client
-You can use Intune to install the Configuration Manager client on Windows 10 devices that are only managed with Intune.  
+You can use Intune to install the Configuration Manager client on Windows 10 devices that are currently only managed with Intune.  
 
 Then, when a previously unmanaged Windows 10 device enrolls with Intune, it automatically installs the Configuration Manager client.
 
@@ -467,7 +446,6 @@ To assign licenses to groups of users, use Azure Active Directory.
 
 8. A notification is displayed in the upper-right corner that shows the status and outcome of the process. If the assignment to the group couldn't be completed (for example, because of pre-existing licenses in the group), click the notification to view details of the failure. 
 
-For more information about assigning licenses for Intune to users, see [Assign licenses](https://docs.microsoft.com/intune/licenses-assign). 
 
 ## Summary 
 After completing the configuration steps of this tutorial, including the last action to ensure licenses are assigned, your devices can successfully be co-managed. 

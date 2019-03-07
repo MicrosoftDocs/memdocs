@@ -1,5 +1,5 @@
 ---
-title: Tutorial&#58; Co-management path 1
+title: Tutorial&#58; Enable co-management of existing Configuration Manager clients
 titleSuffix: Configuration Manager
 description: Configure co-management with Microsoft Intune when you already manage Windows 10 devices with Configuration Manager.
 ms.date: 01/14/2019
@@ -19,8 +19,10 @@ In this tutorial, you set up co-management of your Windows 10 devices that are a
 
 Use this tutorial when:  
 
-- You have an on-premises Active Directory that you can connect to Azure Active Directory (Azure AD) in a hybrid Azure AD configuration
-- You have existing Configuration Manager clients that you want to cloud-attach
+- You have an on-premises Active Directory that you can connect to Azure Active Directory (Azure AD) in a hybrid Azure AD configuration. 
+
+  If you cannot deploy a hybrid Azure Active Directory (AD) that joins your on-premises AD with Azure AD, we recommend following our companion tutorial, [Enable co-management for new internet-based Windows 10 devices](/sccm/comanage/tutorial-co-manage-new-devices). 
+- You have existing Configuration Manager clients that you want to cloud-attach.
 
 
 **In this tutorial you will:**  
