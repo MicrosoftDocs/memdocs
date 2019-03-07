@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/31/2019
+ms.date: 03/08/2019
 ms.topic: tutorial
 ms.prod:
 ms.service:  
@@ -19,17 +19,15 @@ ms.assetid:
 ---
 
 # Tutorial: Enable co-management for new internet-based devices
-With co-management, you can retain your well-established processes for using Configuration Manager to manage PCs in your organization. At the same time, you're investing in the cloud through use of Intune for security and modern provisioning.
+With co-management, you can keep your well-established processes for using Configuration Manager to manage PCs in your organization. At the same time, you're investing in the cloud through use of Intune for security and modern provisioning. 
 
-  
+In this tutorial, you set up co-management of Windows 10 devices in an environment where you use both Active Directory (AD) and an on-premises AD. This tutorial doesn't use a [hybrid Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/overview#hybrid-azure-ad-joined-devices). The Configuration Manager environment includes a single primary site with all site system roles located on the same server, the site server. This tutorial begins with the premise that your Windows 10 devices are already enrolled with Intune. 
 
-In this tutorial, you set up co-management of new Windows 10 devices in an environment where you use both Azure AD and an on-premises AD but don't have a [hybrid Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/overview#hybrid-azure-ad-joined-devices) (AD). The Configuration Manager environment includes a single primary site with all site system roles located on the same server, the site server. 
-
-If you have a hybrid Azure Active Directory (AD) that joins your on-premises AD with Azure AD, we recommend following our companion tutorial, [Enable co-management for Configuration Manager clients](/sccm/comanage/tutorial-co-manage-clients). 
+If you have a hybrid Azure AD that joins your on-premises AD with Azure AD, we recommend following our companion tutorial, [Enable co-management for Configuration Manager clients](/sccm/comanage/tutorial-co-manage-clients). 
  
 Use this tutorial when:  
 - You can't deploy a hybrid Azure AD.
-- You have new Windows 10 devices to bring into modern management. These devices might have been provisioned through Windows Autopilot or are direct from your hardware OEM. 
+- You have Windows 10 devices to bring into modern management. These devices might have been provisioned through Windows Autopilot or are direct from your hardware OEM. 
 - You have Windows 10 devices on the internet that you currently manage with Intune to which you want to add the Configuration Manager client.
 
 
@@ -53,7 +51,7 @@ Use this tutorial when:
 - Azure Active Directory Premium 
 - Microsoft Intune subscription 
   > [!TIP]  
-  > An Enterprise Mobility + Security (EMS) Subscription includes both Azure Active Directory Premium and Microsoft Intune. EMS Subscription ([free trial](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-trial)).  
+  > An Enterprise Mobility and Security (EMS) Subscription includes both Azure Active Directory Premium and Microsoft Intune. EMS Subscription ([free trial](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-trial)).  
 
 - Users must be [assigned licenses](tutorial-co-manage-clients.md#assign-intune-licenses-to-users) for *Intune* and *Azure Active Directory Premium*
 - Intune is configured to [auto-enroll devices](tutorial-co-manage-clients.md#configure-auto-enrollment-of-devices-to-intune)  
@@ -81,9 +79,9 @@ Throughout this tutorial, use the following permissions to complete tasks:
 
 
 ## Request a public certificate for the cloud management gateway
-When your devices are on the intenret, co-management requires the Configuration Manager cloud management gateway (CMG). The CMG enables your internet-based Windows 10 devices to communicate with your on-premises Configuration Manager deployment. To establish a trust between devices and your Configuration Manager environment, the CMG requires an SSL certificate.
+When your devices are on the internet, co-management requires the Configuration Manager cloud management gateway (CMG). The CMG enables your internet-based Windows 10 devices to communicate with your on-premises Configuration Manager deployment. To establish a trust between devices and your Configuration Manager environment, the CMG requires an SSL certificate.
 
-In this tutorial, we use a public certificate called **CMG server authentication certificate** that derives authority from a globally trusted certificate provider. Although it's possible to configure co-management using certificates that derive authority from your on-premises Microsoft certificate authority, use of self-signed certificates is beyond the scope of this tutorial.
+This tutorial uses a public certificate called **CMG server authentication certificate** that derives authority from a globally trusted certificate provider. Although it's possible to configure co-management using certificates that derive authority from your on-premises Microsoft certificate authority, use of self-signed certificates is beyond the scope of this tutorial.
 
 The **CMG server authentication certificate** is used to encrypt the communications traffic between the Configuration Manager client and the CMG. The certificate traces back to a Trusted Root to verify the server's identity to the client. The public certificate includes a Trusted Root that Windows clients already trust.
 
@@ -106,7 +104,7 @@ Before you request your public certificate, confirm the name you want to use is 
 
 2. Select **Create a resource**, choose the **Compute** category, then select **Cloud Service**. The Cloud service (classic) blade opens.
 
-3. For **DNS name**, specify the prefix name for the cloud service you will use. This prefix must be the same as what you use later when you request a publish certificate for the CMG server authentication certificate. We use MyCSG, which creates the namespace of *MyCSG.cloudapp.net*. The interface confirms whether the name is available or already in use by another service.  
+3. For **DNS name**, specify the prefix name for the cloud service you'll use. This prefix must be the same as what you use later when you request a publish certificate for the CMG server authentication certificate. We use *MyCSG*, which creates the namespace of *MyCSG.cloudapp.net*. The interface confirms whether the name is available or already in use by another service.  
  After you confirm the name you want to use is available, you're ready to submit the Certificate Signing Request (CSR).
 
 ### Request the certificate
@@ -121,7 +119,7 @@ We recommend you use your primary site server to generate the certificate signin
 Request a version 2 key provider type when you generate a CSR. Only version 2 certificates are supported.  
 
 > [!TIP]  
-> When we deploy the CMG, we will also install a cloud distribution point (CDP) at the same time. By default, when you deploy a CMG, the option **Allow CMG to function as a cloud distribution point and serve content from Azure storage** is selected. Co-locating the CDP removes the need for separate certificates and configurations to support the CDP. Even though the CDP isn’t required to use co-management, it is useful in most environments.  
+> When we deploy the CMG, we will also install a cloud distribution point (CDP) at the same time. By default, when you deploy a CMG, the option **Allow CMG to function as a cloud distribution point and serve content from Azure storage** is selected. Co-locating the CDP on the server with the CMG removes the need for separate certificates and configurations to support the CDP. Even though the CDP isn’t required to use co-management, it is useful in most environments.  
 >
 > If you will use additional cloud distribution points for co-management, you’ll need to request separate certificates for each additional server. To request a pubic certificate for the CDP, use the same details as for the cloud management gateway CSR. You need only change the common name so that it is unique for each CDP.  
 
@@ -363,7 +361,7 @@ With the Azure configurations, site system roles, and client settings in place, 
 
    - **All** - Co-management is enabled for all clients.  
 
-   Before proceeding to the next page of the wizard, select **Copy** and save the CCMSetup command line that is provided. You will use this later when you configure Intune to deploy the Configuration Manager client. If you don't save this command line now, you can review the co-management configuration at any time to get this command line. 
+   Before you proceed to the next page of the wizard, select **Copy** and save the CCMSetup command line that is provided. You will use  command line later when you configure Intune to deploy the Configuration Manager client. If you don't save this command line now, you can review the co-management configuration at any time to get this command line. 
 
 5. On the *Workloads* page you can switch workloads from **Configuration Manager** to one of the following, and then when ready to continue, select **Next**.  
    
@@ -448,7 +446,7 @@ To assign licenses to groups of users, use Azure Active Directory.
 
 
 ## Summary 
-After completing the configuration steps of this tutorial, including the last action to ensure licenses are assigned, your devices can successfully be co-managed. 
+After you complete the configuration steps of this tutorial, including the last action to ensure licenses are assigned, your devices can successfully be co-managed. 
 
 ## Next Steps
 - Review the status of co-managed devices with the [Co-management dashboard](https://docs.microsoft.com/sccm/core/clients/manage/co-management-dashboard)
