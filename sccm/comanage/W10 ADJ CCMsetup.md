@@ -8,7 +8,7 @@
 
 Installing the Configuration Manager client on Windows 10 devices using Azure AD authentcation workflow details: 
  
- ![AAD CCMSetup Workflow](../media/AADInstallWF.png)  
+ ![AAD CCMSetup Workflow](../comanage/media/AADInstallWF.png)  
 
 
 ###1.  AAD Token Request
