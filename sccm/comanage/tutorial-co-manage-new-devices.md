@@ -21,13 +21,12 @@ ms.assetid:
 # Tutorial: Enable co-management for new internet-based devices
 With co-management, you can keep your well-established processes for using Configuration Manager to manage PCs in your organization. At the same time, you're investing in the cloud through use of Intune for security and modern provisioning. 
 
-In this tutorial, you set up co-management of Windows 10 devices in an environment where you use both Active Directory (AD) and an on-premises AD. This tutorial doesn't use a [hybrid Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/overview#hybrid-azure-ad-joined-devices). The Configuration Manager environment includes a single primary site with all site system roles located on the same server, the site server. This tutorial begins with the premise that your Windows 10 devices are already enrolled with Intune. 
+In this tutorial, you set up co-management of Windows 10 devices in an environment where you use both Azure Active Directory (AD) and an on-premises AD but don't have a [hybrid Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/overview#hybrid-azure-ad-joined-devices) (AD). The Configuration Manager environment includes a single primary site with all site system roles located on the same server, the site server. This tutorial begins with the premise that your Windows 10 devices are already enrolled with Intune. 
 
 If you have a hybrid Azure AD that joins your on-premises AD with Azure AD, we recommend following our companion tutorial, [Enable co-management for Configuration Manager clients](/sccm/comanage/tutorial-co-manage-clients). 
  
 Use this tutorial when:  
-- You can't deploy a hybrid Azure AD.
-- You have Windows 10 devices to bring into modern management. These devices might have been provisioned through Windows Autopilot or are direct from your hardware OEM. 
+- You have Windows 10 devices to bring into co-management. These devices might have been provisioned through Windows Autopilot or are direct from your hardware OEM. 
 - You have Windows 10 devices on the internet that you currently manage with Intune to which you want to add the Configuration Manager client.
 
 
