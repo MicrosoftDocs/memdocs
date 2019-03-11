@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 03/05/2019
+ms.date: 03/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -24,6 +24,7 @@ Feature-specific documentation includes information about known issues that affe
 This topic contains release notes for the current branch of Configuration Manager. For information on the technical preview branch, see [Technical Preview](/sccm/core/get-started/technical-preview)  
 
 For information about the new features introduced with different versions, see the following articles:
+- [What's new in version 1902](/sccm/core/plan-design/changes/whats-new-in-version-1902)
 - [What's new in version 1810](/sccm/core/plan-design/changes/whats-new-in-version-1810)
 - [What's new in version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806)  
 - [What's new in version 1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)
@@ -99,7 +100,7 @@ None
 
 ### Security roles are missing for phased deployments
 <!--3479337, SCCMDocs-pr issue 3095-->
-*Applies to: Configuration Manager version 1810*
+*Applies to: Configuration Manager versions 1810, 1902*
 
 The **OS Deployment Manager** built-in security role has permissions to [phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence). The following roles are missing these permissions:  
 
