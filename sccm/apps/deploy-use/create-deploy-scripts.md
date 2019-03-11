@@ -152,7 +152,6 @@ The three security roles used for running scripts are not created by default in 
 
  ![Example of SMS Scripts permissions for the script authors role](./media/run-scripts/script_authors_permissions.png)
 
-   
 
 ## Create a script
 
@@ -267,7 +266,8 @@ After you have initiated running a script on a collection of devices, use the fo
 2. In the **Monitoring** workspace, click **Script Status**.
 3. In the **Script Status** list, you view the results for each script you ran on client devices. A script exit code of **0** generally indicates that the script ran successfully.
     - Beginning in Configuration Manager 1802, script output is truncated to 4 KB to allow for better display experience.  <!--510013-->
-      ![Script monitor - Truncated Script](./media/run-scripts/Script-monitoring-truncated.png) 
+   
+   ![Script monitor - Truncated Script](./media/run-scripts/Script-monitoring-truncated.png)
 
 ## Script Output
 
@@ -280,9 +280,22 @@ After you have initiated running a script on a collection of devices, use the fo
         - For example, you might get results that say TEXT on one client version and "TEXT" (the output is surrounded in double quotes) on other version, which will be put in chart as two different categories.
         - If you need to work around this behavior, consider running script against two different collections. One with  pre-1802 clients and another with 1802 and higher clients. Or, you can convert an enum object to a string value in scripts so they are properly displayed in JSON formatting. 
 - Convert an enum object to a string value in scripts so they are properly displayed in JSON formatting. <!--508377-->
+
    ![Convert enum object to a sting value](./media/run-scripts/enum-tostring-JSON.png)
 
+## Log files
 
+Starting in version 1810, additional logging was added for troubleshooting.
+
+- On the client, by default in C:\Windows\CCM\logs:  
+  - **Scripts.log**  
+  - **CcmMessaging.log**  
+
+- On the MP, by default in C:\SMS_CCM\Logs:
+  - **MP_RelayMsgMgr.log**  
+
+- On the site server, by default in C:\Program Files\Configuration Manager\Logs:
+  - **SMS_Message_Processing_Engine.log**
 
 ## See Also
 
