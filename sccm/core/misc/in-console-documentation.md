@@ -96,13 +96,15 @@ Guided walkthroughs to assist with troubleshooting Configuration Manager compone
 
 
 ## New and updated support articles
-Support articles that are new or updated in January 2019.
+Support articles that are new or updated in February 2019.
 
-- [KB 4490065: A task sequence is slow if the client in the media, or in the boot image, is earlier than the site version](https://support.microsoft.com/help/4490065)
-- [KB 4490414: Windows Server Update Services Best Practices](https://support.microsoft.com/help/4490414)
-- [KB 4489045: How to troubleshoot high CPU usage on a WSUS server](https://support.microsoft.com/help/4489045)
-- [KB 4486457: Update rollup for System Center Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4486457)
-- [KB 4487768: Error "Conversion failed" when you update to Configuration Manager version 1810](https://support.microsoft.com/help/4487768)
-- [KB 4487960: Microsoft Intune connector certificate does not renew in Configuration Manager](https://support.microsoft.com/help/4487960)
+- [KB 4490644: The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://support.microsoft.com/help/4490644)
+- [KB 4491117: Update installations to clients stop responding in Configuration Manager, version 1810 or 1806](https://support.microsoft.com/help/4491117)
+- [KB 4346901: Software updates installation on Configuration Manager clients](https://support.microsoft.com/help/4346901)
+- [KB 4468612: Troubleshooting PXE boot issues in Configuration Manager](https://support.microsoft.com/help/4468612)
+- [KB 4491871: Advanced troubleshooting for PXE boot issues in Configuration Manager](https://support.microsoft.com/help/4491871)
+- [KB 4490575: Update installations stop responding or never show completion in Configuration Manager, version 1810](https://support.microsoft.com/help/4490575)
+- [KB 4459394: Description of state messaging in System Center Configuration Manager](https://support.microsoft.com/help/4459394)
+- [KB 4490434: Duplicate user discovery columns are created in Configuration Manager](https://support.microsoft.com/help/4490434)
 
 To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **System Center Configuration Manager**.  
