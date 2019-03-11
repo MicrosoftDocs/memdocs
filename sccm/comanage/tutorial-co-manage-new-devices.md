@@ -10,7 +10,7 @@ ms.author: brenduns
 manager: dougeby
 ms.date: 03/08/2019
 ms.topic: tutorial
-ms.prod:
+ms.prod: configuration-manager
 ms.service:  
 ms.technology:
 ms.assetid: 
@@ -265,7 +265,7 @@ Use this procedure to install a cloud management gateway as a service in Azure. 
 
 3. On the **Settings** page, browse to and select the file named **ConfigMgrCloudMGServer.pfx**, which is the file you exported after importing the CMG server authentication certificate. After you specify the password, the **Service name** and **Deployment name** automatically fill in, based on the details in the .pfx certificate file. 
 
-4. set your **Region**.
+4. Set your **Region**.
 
 5. For **Resource Group**, use an existing resource group or create a group with a friendly name that uses no spaces, like **CofigMgrCloudServices**. If you choose to create a group, the group is added as a resource group in Azure.  
 
@@ -447,7 +447,7 @@ To assign licenses to groups of users, use Azure Active Directory.
 ## Summary 
 After you complete the configuration steps of this tutorial, including the last action to ensure licenses are assigned, your devices can successfully be co-managed. 
 
-## Next Steps
+## Next steps
 - Review the status of co-managed devices with the [Co-management dashboard](https://docs.microsoft.com/sccm/core/clients/manage/co-management-dashboard)
 - Use [Windows Autopilot]() to provision new devices
 - Use [conditional access](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access) and Intune compliance rules to manage user access to corporate resources
