@@ -360,8 +360,9 @@ For more information on additional performance and troubleshooting improvements 
 
 
 ### <a name="bkmk_scripts"></a> Improvements to scripts
-<!--1358239-->
-You can now view detailed script output in raw or structured JSON format. This formatting makes the output easier to read and analyze. 
+
+<!--3607711, fka 1358239-->
+***[Updated]*** You can now view detailed script output in raw or structured JSON format. This formatting makes the output easier to read and analyze.
 
 The following performance and troubleshooting improvements apply to both CMPivot and scripts:
 
@@ -369,11 +370,11 @@ The following performance and troubleshooting improvements apply to both CMPivot
 
 - Additional logs for troubleshooting  
 
-<!--For more information, see the following articles:  
+For more information, see the following articles:  
 
 - [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts)  
 
-- [CMPivot](/sccm/core/servers/manage/cmpivot)  -->
+- [CMPivot](/sccm/core/servers/manage/cmpivot)
 
 
 ### SMS Provider API
