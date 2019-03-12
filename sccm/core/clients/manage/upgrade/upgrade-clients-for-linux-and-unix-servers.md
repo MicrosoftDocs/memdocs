@@ -1,8 +1,8 @@
 ---
 title: Upgrade Linux and UNIX clients
 titleSuffix: Configuration Manager
-description: Upgrade a client on a Linux or UNIX server in System Center Configuration Manager.
-ms.date: 04/23/2017
+description: Upgrade a client on a Linux or UNIX server in Configuration Manager.
+ms.date: 03/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -12,9 +12,15 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# How to upgrade clients for Linux and UNIX servers in System Center Configuration Manager
+
+# How to upgrade clients for Linux and UNIX servers in Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
+
+> [!Important]  
+> Starting in version 1902, Configuration Manager doesn't support Linux or UNIX clients. 
+> 
+> Consider Microsoft Azure Management for managing Linux servers. Azure solutions have extensive Linux support that in most cases exceed Configuration Manager functionality, including end-to-end patch management for Linux.
 
 You can upgrade the version of the client for Linux and UNIX on a computer to a newer client version without first uninstalling the current client. To do so, install the new client installation package on the computer while using the **-keepdb** command-line property. When the client for Linux and UNIX installs, it overwrites existing client data with the new client files. However, the **-keepdb** command-line property directs the install process to retain the clients unique identifier (GUID), local database of information, and certificate store. This information is then used by the new client installation.  
 
