@@ -49,8 +49,8 @@ With this integration in System Center Configuration Manager, you can use the *R
 - To run scripts - Your account must have **Run Script** permissions for **Collections**.
 
 For more information about Configuration Manager security roles:</br>
-[Security scopes for run scripts](#BKMK_Scopes)</br>
-[Security roles for run scripts](#BKMK_ScriptRoles)</br>
+[Security scopes for run scripts](#security-scopes)</br>
+[Security roles for run scripts](#bkmk_ScriptRoles)</br>
 [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).
 
 ## Limitations
@@ -67,7 +67,7 @@ Run Scripts currently supports:
 
 ## Run Script authors and approvers
 
-Run Scripts uses the concept of *script authors* and *script approvers* as separate roles for implementation and execution of a script. Having the author and approver roles separated allows for an important process check for the powerful tool that Run Scripts is. There is an additional *script runners* role that allows execution of scripts, but not creation or approval of scripts. See [Create security roles for scripts](#BKMK_ScriptRoles).
+Run Scripts uses the concept of *script authors* and *script approvers* as separate roles for implementation and execution of a script. Having the author and approver roles separated allows for an important process check for the powerful tool that Run Scripts is. There is an additional *script runners* role that allows execution of scripts, but not creation or approval of scripts. See [Create security roles for scripts](#bkmk_ScriptRoles).
 
 ### Scripts roles control
 
