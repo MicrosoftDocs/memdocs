@@ -10256,7 +10256,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 |HostName|-||  
 
 ###  <a name="ZTILangPacksOnline.wsf"></a> ZTILangPacksOnline.wsf  
- This script installs language packs for Windows operating systems.  
+ This script installs language packs for Windows operating systems. The script is expecting the language pack CAB files in a folder structure containing at least one folder.
 
 |**Value**|**Description**|  
 |-|-|
