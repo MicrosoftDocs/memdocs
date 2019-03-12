@@ -37,6 +37,10 @@ If your organization uses ExpressRoute, a security best practice is to isolate t
 
 No maintenance is required. The design of the cloud management gateway uses Azure platform as a service (PaaS). Using the subscription you provide, Configuration Manager creates the necessary virtual machines (VMs), storage, and networking. Azure secures and updates the virtual machine. These VMs aren't a part of your on-premises environment, as is the case with infrastructure as a service (IaaS). The cloud management gateway is a PaaS that extends your Configuration Manager environment into the cloud. 
 
+### How can I ensure service continuity during service updates?
+
+By scaling CMG to include two or more instances, you automatically benefit from Update Domains in Azure. See [How to update a cloud service](/azure/cloud-services/cloud-services-update-azure-service).
+
 
 ### I'm already using IBCM. If I add CMG, how do clients behave?
 

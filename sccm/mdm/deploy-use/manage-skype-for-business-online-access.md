@@ -2,7 +2,7 @@
 title: "Manage Skype for Business Online access"
 titleSuffix: "Configuration Manager"
 description: "Learn how to use conditional access policy to manage access to Skype for Business Online."
-ms.date: 12/22/2017
+ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -46,7 +46,7 @@ Use conditional access policy for Skype for Business Online to manage access to 
 ## Configure conditional access for Skype for Business Online  
 
 ### Step 1: Configure Active Directory security groups  
- Before you start, configure Azure Active Directory security groups for the conditional access policy. Configure these groups in the Office 365 admin center. These groups contain the users to target with or exclude from the policy. When a user is targeted by a policy, each device they use must be compliant in order to access resources.  
+ Before you start, configure Azure Active Directory security groups for the conditional access policy. Configure these groups in the Microsoft 365 admin center. These groups contain the users to target with or exclude from the policy. When a user is targeted by a policy, each device they use must be compliant in order to access resources.  
 
  You can specify two group types to use for the Skype for Business policy:  
 

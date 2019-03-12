@@ -2,7 +2,7 @@
 title: High availability
 titleSuffix: Configuration Manager
 description: Learn how to deploy Configuration Manager by using options that maintain a high level of available service.
-ms.date: 07/30/2018
+ms.date: 03/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,6 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
+
 # High availability options for Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
@@ -208,6 +209,8 @@ Several site systems don't support multiple instances at a site or in the hierar
 > This section only applies to Configuration Manager versions 1802 and earlier. Starting with version 1806, Configuration Manager provides a high availability option for the site server. For more information, see [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability).  
 
 Configuration Manager doesn't support the installation of the site server for each site on a Windows Server cluster or NLB cluster.  
+
+Starting in version 1810, the Configuration Manager setup process no longer blocks installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Always On requires this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using SQL Always On and a site server in passive mode. <!--3607761, fka 1359132-->  
 
 The following information can help you prepare for when a site server fails or isn't operational:  
 

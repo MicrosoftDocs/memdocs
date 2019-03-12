@@ -80,11 +80,11 @@ class CCM_ServiceWindow
 
 |Value|Service Window Type|Description|  
 |-----------|-------------------------|-----------------|  
-|1|ALLPROGRAM_SERVICEWINDOW|All Programs Service Window|  
+|1|ALLPROGRAM_SERVICEWINDOW|All Deployment Service Window|  
 |2|PROGRAM_SERVICEWINDOW|Program Service Window|  
 |3|REBOOTREQUIRED_SERVICEWINDOW|Reboot Required Service Window|  
 |4|SOFTWAREUPDATE_SERVICEWINDOW|Software Update Service Window|  
-|5|OSD_SERVICEWINDOW|OSD Service Window|  
+|5|OSD_SERVICEWINDOW|Task Sequences Service Window|  
 |6|USER_DEFINED_SERVICE_WINDOW|Corresponds to non-working hours|  
 
 ## Remarks  

@@ -2,7 +2,7 @@
 title: Install the client with Azure AD
 titleSuffix: Configuration Manager
 description: Install and assign the Configuration Manager client on Windows 10 devices using Azure Active Directory for authentication
-ms.date: 03/28/2018
+ms.date: 03/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -16,6 +16,10 @@ ms.collection: M365-identity-device-management
 # Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication
 
 To install the Configuration Manager client on Windows 10 devices using Azure AD authentication, integrate Configuration Manager with Azure Active Directory (Azure AD). Clients can be on the intranet communicating directly with an HTTPS-enabled management point or any management point in a site enabled for Enhanced HTTP. They can also be internet-based communicating through the CMG or with an Internet-based management point. This process uses Azure AD to authenticate clients to the Configuration Manager site. Azure AD replaces the need to configure and use client authentication certificates.
+
+Setting up Azure AD may be easier for some customers than setting up a public key infrastructure for certificate-based authentication. There are features that require you onboard the site to Azure AD, but don't necessarily require the clients to be Azure AD-joined.<!-- SCCMDocs issue 1259 --> For more information, see the following articles:
+- [Plan for Azure Active Directory](/sccm/core/plan-design/security/plan-for-security#bkmk_planazuread)
+- [Use Azure AD for co-management](/sccm/comanage/quickstart-hybrid-aad)
 
 
 
@@ -90,6 +94,8 @@ The SMSMP property specifies either the on-premises or internet-based management
 
 This example uses a cloud management gateway. It substitutes sample values for each property:
 `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver`
+
+Starting in version 1810, the site publishes additional Azure AD information to the cloud management gateway (CMG). An Azure AD-joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies installing the client in an environment with more than one Azure AD tenant. Now the only two required ccmsetup properties are **CCMHOSTNAME** and **SMSSiteCode**.<!--3607731-->
 
 To automate the client install using Azure AD identity via Microsoft Intune, see [How to prepare internet-based devices for co-management](/sccm/comanage/how-to-prepare-win10#install-the-configuration-manager-client).
 

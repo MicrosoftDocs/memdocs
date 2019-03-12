@@ -2,7 +2,7 @@
 title: Manage access to O365 services
 titleSuffix: Configuration Manager
 description: Learn how to configure conditional access to Office 365 services for PCs that are managed by System Center Configuration Manager.
-ms.date: 04/10/2018
+ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -107,7 +107,7 @@ For information on configuring conditional access for devices enrolled and manag
 ### Configure Active Directory Security Groups  
  You target conditional access policies to groups of users depending on the policy types. These groups contain the users that the policy targets, or exempt from the policy. When a policy targets a user, each device they use must be compliant in order to access the service.  
 
- Active Directory security user groups. These user groups should be synchronized to Azure Active Directory. You can also configure these groups in the Office 365 admin center, or the Intune account portal.  
+ Active Directory security user groups. These user groups should be synchronized to Azure Active Directory. You can also configure these groups in the Microsoft 365 admin center, or the Intune account portal.  
 
  You can specify two group types in each policy. :  
 
