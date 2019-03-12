@@ -107,7 +107,7 @@ You can now associate a cloud management gateway (CMG) with a boundary group. Th
 
 ### Run CMPivot from the central administration site
 <!--3610960-->
-Configuration Manager now supports running CMPivot from the central administration site in a hierarchy. 
+Configuration Manager now supports running CMPivot from the central administration site in a hierarchy. The primary site still handles the communication to the client. When running CMPivot from the central administration site, it communicates with the primary site over the high-speed message subscription channel. This communication doesn't rely upon standard SQL replication between sites.
 
 <!-- For more information, see [CMPivot for real-time data](/sccm/core/servers/manage/cmpivot). -->
 
@@ -159,7 +159,7 @@ When connecting to a client with two or more monitors, it can be difficult to vi
 
 ### Specify a custom port for peer wakeup
 <!--3605925-->
-You can now specify a custom port number for wake-up proxy. 
+You can now specify a custom port number for wake-up proxy. In client settings, in the **Power Management** group, configure the setting for **Wake On LAN port number (UDP)**.  
 
 <!-- For more information, see [How to configure Wake on LAN](/sccm/core/clients/deploy/configure-wake-on-lan). -->
 
@@ -192,6 +192,8 @@ This version has improvements to the feature to receive email notifications for 
 You now see a more detailed progress bar during a Windows 10 in-place upgrade task sequence. This bar shows the progress of Windows setup, which is otherwise silent during the task sequence. Users now have some visibility into the underlying progress. It helps with concerns that the upgrade process is suspended because of a lack of progress indication.  
 
 ![Example task sequence progress with Windows upgrade progress](media/3747129-installation-progress.png)
+
+This feature works with any supported version of Windows 10, and only with the in-place upgrade task sequence. 
 
 
 ### Improvements to task sequence media creation 
@@ -247,18 +249,12 @@ The **Run PowerShell Script** task sequence step now includes the following impr
 
 - To include the script parameters in the task sequence log, set the task sequence variable **OSDLogPowerShellParameters** to **TRUE**. By default, the parameters aren't in the log.  
 
-- Specify alternate user credentials with the option to **Run this step as the following account**.  
-
-- Specify a **Time-out (minutes)**. This option ends the step if the script runs past the timeout value.  
-
-- Specify a working directory with the **Start in** field.  
-
-- On the **Options** tab, specify **Success codes**. Include other exit codes from the script that the step should evaluate as success.  
+- Other improvements that provide similar functionality as the [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step. For example, specify alternate user credentials or specify a time-out. 
 
 <!-- For more information, see [Run PowerShell Script](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript). -->
 
 
-### Improvements to OS deployment
+### Other improvements to OS deployment
 <!--3633146,3641475,3654172,3734270-->
 This version includes the following improvements to OS deployment:
 
