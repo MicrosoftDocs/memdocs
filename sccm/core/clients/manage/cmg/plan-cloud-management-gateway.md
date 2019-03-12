@@ -295,9 +295,9 @@ The following recommendations can help you improve CMG performance:
 
 - If possible, configure the CMG, CMG connection point, and the Configuration Manager site server in same network region to reduce latency.  
 
-- Currently, the connection between the Configuration Manager client and the CMG isn't region-aware.  
+- The connection between the Configuration Manager client and the CMG isn't region-aware. Client communication is largely unaffected by latency / geographic separation. It is not necessary to deploy multiple CMG for the purposes of geo-proximity. Deploy the CMG at the top level site in your hierarchy and add instances to increase scale.
 
-- For high availability of the service, create at least two CMG services and two CMG connection points per site.  
+- For high availability of the service, create a CMG with at least two CMG instances and two CMG connection points per site.  
 
 - Scale the CMG to support more clients by adding more VM instances. The Azure load balancer controls client connections to the service.  
 
