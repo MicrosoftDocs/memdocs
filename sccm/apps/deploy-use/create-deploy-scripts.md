@@ -176,7 +176,7 @@ Adding parameters to a script provides increased flexibility for your work. The 
 
 In the **Create Script** dialog, click **Script Parameters** under **Script**.
 
-Each of your script's parameters has its own dialog for adding further details and validation.
+Each of your script's parameters has its own dialog for adding further details and validation. If there is a default parameter in the script, it'll be enumerated in the parameter UI and users can set it. Configuration Manager won't overwrite the default value since it'll never modify the script directly. You can think of this as “pre-populated suggested values” are provided in the UI, but Configuration Manager doesn't provide access to “default” values at run-time. This can be worked around by editing the script to have the correct defaults. <!--17694323-->
 
 >[!IMPORTANT]
 > Parameter values can't contain an apostrophe. </br></br>
