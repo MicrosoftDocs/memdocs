@@ -184,6 +184,14 @@ This version has improvements to the feature to receive email notifications for 
 <!-- For more information, see [Email notifications](/sccm/apps/deploy-use/app-approval#bkmk_email-approve). -->
 
 
+### Improvements to Package Conversion Manager
+<!-- SCCMDocs-pr issue #3357 -->
+This version includes the following improvements to [Package Conversion Manager](/sccm/apps/pcm/package-conversion-manager):
+- Scheduled package analysis runs every 7 days by default
+- PowerShell cmdlets for analyzing and converting packages
+- General bug fixes and improvements
+
+
 
 ## <a name="bkmk_osd"></a> OS deployment
 
