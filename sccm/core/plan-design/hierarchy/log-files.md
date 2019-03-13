@@ -2,7 +2,7 @@
 title: Log files for troubleshooting
 titleSuffix: Configuration Manager
 description: Use log files to troubleshoot issues with Configuration Manager clients and site systems.
-ms.date: 02/12/2019
+ms.date: 03/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -159,6 +159,7 @@ The following table lists the log files located on the Configuration Manager cli
 |ClientLocation.log|Records tasks that are related to client site assignment.|  
 |CMHttpsReadiness.log|Records the results of running the Configuration Manager HTTPS Readiness Assessment Tool. This tool checks whether computers have a public key infrastructure (PKI) client authentication certificate that can be used with Configuration Manager.|  
 |CmRcService.log|Records information for the remote control service.|  
+|CoManagementHandler.log|Use to troubleshoot co-management on the client.|
 |ContentTransferManager.log|Schedules the Background Intelligent Transfer Service (BITS) or Server Message Block (SMB) to download or access packages.|  
 |DataTransferService.log|Records all BITS communication for policy or package access.|  
 |EndpointProtectionAgent|Records information about the installation of the System Center Endpoint Protection client and the application of antimalware policy to that client.|  
@@ -277,6 +278,7 @@ The log file SMS_DM.log on the site system server also records communication bet
 |--------------|-----------------|----------------------------|  
 |adctrl.log|Records enrollment processing activity.|Site server|  
 |ADForestDisc.log|Records Active Directory Forest Discovery actions.|Site server|  
+|adminservice.log|Records actions for the SMS Provider administration service REST API|Computer with the SMS Provider|
 |ADService.log|Records account creation and security group details in Active Directory.|Site server|  
 |adsgdis.log|Records Active Directory Group Discovery actions.|Site server|  
 |adsysdis.log|Records Active Directory System Discovery actions.|Site server|  
@@ -401,6 +403,7 @@ The log file SMS_DM.log on the site system server also records communication bet
 |mpfdm.log|Records the actions of the management point component that moves client files to the corresponding INBOXES folder on the site server.|Site system server|  
 |mpMSI.log|Records details about the management point installation.|Site server|  
 |MPSetup.log|Records the management point installation wrapper process.|Site server|  
+|UserService.log|Records user requests from Software Center, retrieving/installing user-available applications from the server.|Site system server|
 
 ###  <a name="BKMK_SUPLog"></a> Software update point log files  
  The following table lists the log files that contain information related to the software update point.  
