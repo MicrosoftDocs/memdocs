@@ -38,8 +38,9 @@ Learn about support changes before they're implemented in [removed and deprecate
 
 - The implementation for sharing content from Azure has changed. Use a content-enabled cloud management gateway by enabling the option to **Allow CMG to function as a cloud distribution point and serve content from Azure storage**. You won't be able to create a traditional cloud distribution point in the future.
 
-<!-- Version 1902 drops support for the following products:
--->
+Version 1902 drops support for the following products:  
+
+- Linux and UNIX as a client. Deprecation was announced with [version 1802](/sccm/core/plan-design/changes/whats-new-in-version-1802#deprecation-announcement-for-linux-and-unix-client-support). Consider Microsoft Azure Management for managing Linux servers. Azure solutions have extensive Linux support that in most cases exceed Configuration Manager functionality, including end-to-end patch management for Linux.
 
 
 

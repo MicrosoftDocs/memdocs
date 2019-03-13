@@ -1,8 +1,8 @@
 ---
-title: "Monitor Linux/UNIX clients "
-titleSuffix: "Configuration Manager"
-description: "Monitor clients on Linux and UNIX servers in System Center Configuration Manager."
-ms.date: 08/04/2017
+title: Monitor Linux/UNIX clients
+titleSuffix: Configuration Manager
+description: Monitor clients on Linux and UNIX servers in Configuration Manager.
+ms.date: 03/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -12,11 +12,17 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# How to monitor clients for Linux and UNIX servers in System Center Configuration Manager
+
+# How to monitor clients for Linux and UNIX servers in Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-You can view information from Linux and UNIX servers in the System Center Configuration Manager console using the same methods you use to view information from Windows-based clients.  
+> [!Important]  
+> Starting in version 1902, Configuration Manager doesn't support Linux or UNIX clients. 
+> 
+> Consider Microsoft Azure Management for managing Linux servers. Azure solutions have extensive Linux support that in most cases exceed Configuration Manager functionality, including end-to-end patch management for Linux.
+
+You can view information from Linux and UNIX servers in the Configuration Manager console using the same methods you use to view information from Windows-based clients.  
 
  The information you can view includes:  
 
@@ -30,7 +36,7 @@ You can view information from Linux and UNIX servers in the System Center Config
 
 ##  <a name="BKMK_UseResourceExpforLnU"></a> Use resource explorer to view inventory for Linux and UNIX servers  
 
- After a Configuration Manager client submits hardware inventory to the Configuration Manager site, you can use Resource Explorer to view this information. The Configuration Manager client for Linux and UNIX does not add new classes or views for inventory to the Resource Explorer. The Linux and UNIX inventory data maps to existing WMI classes. You can view the inventory details for your Linux and UNIX servers in the Windows-based classifications using Resource Explorer.  
+ After a Configuration Manager client submits hardware inventory to the Configuration Manager site, you can use Resource Explorer to view this information. The Configuration Manager client for Linux and UNIX doesn't add new classes or views for inventory to the Resource Explorer. The Linux and UNIX inventory data maps to existing WMI classes. You can view the inventory details for your Linux and UNIX servers in the Windows-based classifications using Resource Explorer.  
 
  For example, you can collect the list of all natively installed programs found on your Linux and UNIX servers. Examples of natively installed programs include **.rpms** in Linux or **.pkgs** in Solaris. After inventory has been submitted by a Linux or UNIX client, you can view the list of all the natively installed Linux or UNIX programs in Resource Explorer in the Configuration Manager console.  
 
@@ -41,6 +47,6 @@ You can view information from Linux and UNIX servers in the System Center Config
 
  For example, if you run the report named Count of Operating System Versions, it displays the list of the different operating systems and the number of clients that are running each operating system. The report is based on the hardware inventory information that was sent by the different Configuration Manager clients that run on the different operating systems.  
 
- It is also possible to create custom reports that are specific to Linux and UNIX server data. The **Caption** property of the hardware inventory class **Operating System** is a useful attribute that you can use to identify specific Operating Systems in the report query.  
+ It's also possible to create custom reports that are specific to Linux and UNIX server data. The **Caption** property of the hardware inventory class **Operating System** is a useful attribute that you can use to identify specific Operating Systems in the report query.  
 
  For information about reports in Configuration Manager, see [Reporting in System Center Configuration Manager](../../../core/servers/manage/reporting.md).  
