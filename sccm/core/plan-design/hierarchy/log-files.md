@@ -159,6 +159,7 @@ The following table lists the log files located on the Configuration Manager cli
 |ClientLocation.log|Records tasks that are related to client site assignment.|  
 |CMHttpsReadiness.log|Records the results of running the Configuration Manager HTTPS Readiness Assessment Tool. This tool checks whether computers have a public key infrastructure (PKI) client authentication certificate that can be used with Configuration Manager.|  
 |CmRcService.log|Records information for the remote control service.|  
+|CoManagementHandler.log|Use to troubleshoot co-management on the client.|
 |ContentTransferManager.log|Schedules the Background Intelligent Transfer Service (BITS) or Server Message Block (SMB) to download or access packages.|  
 |DataTransferService.log|Records all BITS communication for policy or package access.|  
 |EndpointProtectionAgent|Records information about the installation of the System Center Endpoint Protection client and the application of antimalware policy to that client.|  
