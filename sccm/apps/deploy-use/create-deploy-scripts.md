@@ -2,7 +2,7 @@
 title: Create and run scripts
 titleSuffix: Configuration Manager
 description: Create and run Powershell scripts on client devices.
-ms.date: 03/12/2019
+ms.date: 03/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -49,8 +49,8 @@ With this integration in System Center Configuration Manager, you can use the *R
 - To run scripts - Your account must have **Run Script** permissions for **Collections**.
 
 For more information about Configuration Manager security roles:</br>
-[Security scopes for run scripts](#security-scopes)</br>
-[Security roles for run scripts](#bkmk_ScriptRoles)</br>
+[Security scopes for run scripts](#BKMK_Scopes)</br>
+[Security roles for run scripts](#BKMK_ScriptRoles)</br>
 [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).
 
 ## Limitations
@@ -67,7 +67,7 @@ Run Scripts currently supports:
 
 ## Run Script authors and approvers
 
-Run Scripts uses the concept of *script authors* and *script approvers* as separate roles for implementation and execution of a script. Having the author and approver roles separated allows for an important process check for the powerful tool that Run Scripts is. There is an additional *script runners* role that allows execution of scripts, but not creation or approval of scripts. See [Create security roles for scripts](#bkmk_ScriptRoles).
+Run Scripts uses the concept of *script authors* and *script approvers* as separate roles for implementation and execution of a script. Having the author and approver roles separated allows for an important process check for the powerful tool that Run Scripts is. There is an additional *script runners* role that allows execution of scripts, but not creation or approval of scripts. See [Create security roles for scripts](#BKMK_ScriptRoles).
 
 ### Scripts roles control
 
@@ -172,11 +172,11 @@ The three security roles used for running scripts are not created by default in 
 
 ## Script parameters
 *(Introduced with version 1710)*  
-Adding parameters to a script provides increased flexibility for your work. The following outlines the Run Scripts feature's current capability with script parameters for; *String*, *Integer* data types. Lists of preset values are also available. If your script has unsupported data types, you get a warning.
+Adding parameters to a script provides increased flexibility for your work. You can include up to 10 parameters. The following outlines the Run Scripts feature's current capability with script parameters for; *String*, *Integer* data types. Lists of preset values are also available. If your script has unsupported data types, you get a warning.
 
 In the **Create Script** dialog, click **Script Parameters** under **Script**.
 
-Each of your script's parameters has its own dialog for adding further details and validation. If there is a default parameter in the script, it'll be enumerated in the parameter UI and users can set it. Configuration Manager won't overwrite the default value since it'll never modify the script directly. You can think of this as “pre-populated suggested values” are provided in the UI, but Configuration Manager doesn't provide access to “default” values at run-time. This can be worked around by editing the script to have the correct defaults. <!--17694323-->
+Each of your script's parameters has its own dialog for adding further details and validation. If there is a default parameter in the script, it will be enumerated in the parameter UI and you can set it. Configuration Manager won't overwrite the default value since it will never modify the script directly. You can think of this as “pre-populated suggested values” are provided in the UI, but Configuration Manager doesn't provide access to “default” values at run-time. This can be worked around by editing the script to have the correct defaults. <!--17694323-->
 
 >[!IMPORTANT]
 > Parameter values can't contain an apostrophe. </br></br>
@@ -258,7 +258,7 @@ The script is executed as the *system* or *computer* account on the targeted cli
 
 ## Script monitoring
 
-After you have initiated running a script on a collection of devices, use the following procedure to monitor the operation. Beginning with version 1710, you are both able to monitor a script in real time as it executes, and you can also return to a report for a given Run Script execution. <br>
+After you have initiated running a script on a collection of devices, use the following procedure to monitor the operation. Beginning with version 1710, you are both able to monitor a script in real time as it executes, and you can also return to a report for a given Run Script execution. Script status data is cleaned up as part of the [Delete Aged Client Operations maintenance task](../../core/servers/manage/reference-for-maintenance-tasks.md) or deletion of the script.<br>
 
 ![Script monitor - Script Run Status](./media/run-scripts/RS-monitoring-three-bar.png)
 
