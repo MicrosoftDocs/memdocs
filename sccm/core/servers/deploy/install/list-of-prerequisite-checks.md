@@ -512,7 +512,7 @@ The Configuration Manager computer is a member of a Windows domain.
 The disk drive is formatted with the NTFS file system. For better security, install site server components on disk drives formatted with the NTFS file system.
 
 #### Pending system restart on the remote SQL Server
-*Applies to: Version 1902 and later, SQL Server*
+*Applies to: Version 1902 and later, remote SQL Server*
 
 Before you run setup, another program requires the server to be restarted.
 
