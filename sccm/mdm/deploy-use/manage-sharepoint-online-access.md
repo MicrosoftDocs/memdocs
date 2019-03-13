@@ -2,7 +2,7 @@
 title: "Manage SharePoint Online access"
 titleSuffix: "Configuration Manager"
 description: "Learn how to use the System Center Configuration Manager SharePoint Online conditional access policy to manage access to OneDrive."
-ms.date: 12/09/2017
+ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -100,7 +100,7 @@ You can block access to SharePoint Online from the following apps:
 ## Configure conditional access for SharePoint Online  
 
 ### Step 1: Configure Active Directory security groups  
- Before you start, configure Azure AD security groups for the conditional access policy. You can configure these groups in the **Office 365 admin center**, or the **Intune account portal**. These groups include the users that are targeted, or exempt from the policy. When a user is targeted by a policy, each device they use must be compliant to access resources.  
+ Before you start, configure Azure AD security groups for the conditional access policy. You can configure these groups in the **Microsoft 365 admin center**, or the **Intune account portal**. These groups include the users that are targeted, or exempt from the policy. When a user is targeted by a policy, each device they use must be compliant to access resources.  
 
  You can specify two group types in a SharePoint Online policy:  
 
