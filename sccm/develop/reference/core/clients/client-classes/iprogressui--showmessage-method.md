@@ -10,7 +10,7 @@ author: adamgrosstx
 ms.author: 
 manager: 
 ---
-# IProgressUI::ShowErrorDialog Method
+# IProgressUI::ShowMessage Method
 In Configuration Manager, the `ShowMessage` method displays customizable dialog box.
 
 ## Syntax  

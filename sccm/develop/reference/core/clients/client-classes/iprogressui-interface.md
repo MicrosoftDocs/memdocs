@@ -18,7 +18,20 @@ The `IProgressUI` automation interface, in System Center Configuration Manager, 
 
 |Term|Definition|  
 |----------|----------------|  
-|[IProgressUI::ShowActionProgress](../../../../../develop/reference/core/clients/client-classes/iprogressui--showactionprogress-method.md)|Displays custom action progress information in a dialog box while the custom action is running.|  
+|[IProgressUI::ShowActionProgress](../../../../../develop/reference/core/clients/client-classes/iprogressui--showactionprogress-method.md)|Displays custom action progress information in a dialog box while the custom action is running.|
+|[IProgressUI::ShowErrorDialog](../../../../../develop/reference/core/clients/client-classes/iprogressui--showerrordialog-method.md)|Displays customizable error information in a dialog box.|
+|[IProgressUI::ShowMessage](../../../../../develop/reference/core/clients/client-classes/iprogressui--showmessage-method.md)|Displays customizable dialog box.|
+|[IProgressUI::ShowRebootDialog](../../../../../develop/reference/core/clients/client-classes/iprogressui--showrebootdialog-method.md)|Displays customizable reboot warning dialog box.|
+|[IProgressUI::ShowSwapMediaDialog](../../../../../develop/reference/core/clients/client-classes/iprogressui--showswapmediadialog-method.md)|Displays message box to prompt a user to swap media.|
+|[IProgressUI::ShowTSProgress](../../../../../develop/reference/core/clients/client-classes/iprogressui--showtsprogress-method.md)|Displays custom task sequence progress information in a dialog box.|
+  
+
+
+
+
+
+
+
 
 ## Remarks  
  The GUID for `IProgressUI` is B64D758A-01C2-4bf0-9F17-621EFB9CF697.  
