@@ -2,7 +2,7 @@
 title: Log files for troubleshooting
 titleSuffix: Configuration Manager
 description: Use log files to troubleshoot issues with Configuration Manager clients and site systems.
-ms.date: 02/12/2019
+ms.date: 03/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -277,6 +277,7 @@ The log file SMS_DM.log on the site system server also records communication bet
 |--------------|-----------------|----------------------------|  
 |adctrl.log|Records enrollment processing activity.|Site server|  
 |ADForestDisc.log|Records Active Directory Forest Discovery actions.|Site server|  
+|adminservice.log|Records actions for the SMS Provider administration service REST API|Computer with the SMS Provider|
 |ADService.log|Records account creation and security group details in Active Directory.|Site server|  
 |adsgdis.log|Records Active Directory Group Discovery actions.|Site server|  
 |adsysdis.log|Records Active Directory System Discovery actions.|Site server|  

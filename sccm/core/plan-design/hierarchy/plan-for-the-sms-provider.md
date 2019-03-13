@@ -2,7 +2,7 @@
 title: Plan for the SMS Provider
 titleSuffix: Configuration Manager
 description: Learn about the SMS Provider site system role in Configuration Manager.
-ms.date: 03/06/2019
+ms.date: 03/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -256,12 +256,16 @@ Starting in version 1810, the SMS Provider provides read-only API interoperabili
 
 `https://servername/AdminService/wmi/<ClassName>` 
 
+For example, `https://servername/AdminService/wmi/SMS_Site`
+
 Make direct calls to this service with the Windows PowerShell cmdlet [Invoke-RestMethod](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-restmethod).
 
 You can also use it to access site data from PowerBI using the OData connector option. 
 
 > [!Tip]  
 > You can use this cmdlet in a task sequence. This action lets you access information from the site without requiring a custom web service to interface with the WMI provider. 
+
+The administration service logs its activity to the **adminservice.log** file.
 
 
 ### Enable the administration service through the CMG
