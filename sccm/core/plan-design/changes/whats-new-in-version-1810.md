@@ -2,7 +2,7 @@
 title: What's new in version 1810
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1810 of Configuration Manager current branch.
-ms.date: 03/05/2019
+ms.date: 03/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -378,8 +378,12 @@ For more information, see the following articles:
 
 
 ### SMS Provider API
-<!--1321523-->
-The SMS Provider now provides read-only API interoperability access to WMI over HTTPS. The **SMS Provider** appears as a role with an option to allow communication over the cloud management gateway. The current use for this setting is to enable application approvals via email from a remote device. For more information, see [Approve application requests via email](#approve-application-requests-via-email).
+<!--3607711, fka 1321523-->
+***[UPDATED]*** The SMS Provider now provides read-only API interoperability access to WMI over HTTPS, called the **administration service**. This REST API can be used in place of a custom web service to access information from the site.
+
+The **SMS Provider** appears as a role with an option to allow communication over the cloud management gateway. The current use for this setting is to enable application approvals via email from a remote device. 
+
+For more information, see [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service).
 
 
 
