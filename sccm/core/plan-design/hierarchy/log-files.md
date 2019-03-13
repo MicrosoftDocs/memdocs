@@ -403,6 +403,7 @@ The log file SMS_DM.log on the site system server also records communication bet
 |mpfdm.log|Records the actions of the management point component that moves client files to the corresponding INBOXES folder on the site server.|Site system server|  
 |mpMSI.log|Records details about the management point installation.|Site server|  
 |MPSetup.log|Records the management point installation wrapper process.|Site server|  
+|UserService.log|Records user requests from Software Center, retrieving/installing user-available applications from the server.|Site system server|
 
 ###  <a name="BKMK_SUPLog"></a> Software update point log files  
  The following table lists the log files that contain information related to the software update point.  
