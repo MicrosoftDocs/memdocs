@@ -2,7 +2,7 @@
 title: Package Conversion Manager
 titleSuffix: Configuration Manager
 description: Learn about Package Conversion Manager to convert packages to applications in Configuration Manager. 
-ms.date: 08/24/2018
+ms.date: 03/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -35,6 +35,12 @@ For more information, see the following articles:
 > If you previously installed an older version of Package Conversion Manager, first uninstall it before upgrading your site. This integrated version doesn't require installation, but may conflict with existing versions.  
 
 This integrated version of Package Conversion Manager works on packages in the Configuration Manager current branch site. It's not a standalone tool. If you have packages and programs in an older version of Configuration Manager, first migrate the packages into your current branch site. For more information, see [Migrate data between hierarchies](/sccm/core/migration/migrate-data-between-hierarchies).
+
+<!-- SCCMDocs-pr issue #3357 -->
+Configuration Manager version 1902 includes the following improvements:
+- Scheduled package analysis runs every 7 days by default
+- PowerShell cmdlets for analyzing and converting packages
+- General bug fixes and improvements
 
 
 
