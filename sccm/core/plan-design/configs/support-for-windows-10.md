@@ -86,10 +86,10 @@ The following table lists the versions of the Windows 10 ADK that you can use wi
 
 | Windows 10 ADK version  | Configuration Manager 1710 | Configuration Manager 1802 | Configuration Manager 1806 | Configuration Manager 1810 | Configuration Manager 1902 |
 |--------------------|-----|-----|-----|-----|-----|
-| 1703  | ![Backwards compatible](media/blue_compat.png) | ![Backwards compatible](media/blue_compat.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) |
-| 1709  | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Backwards compatible](media/blue_compat.png) | ![Not supported](media/Red_X.png)   | ![Not supported](media/Red_X.png) |
-| 1803  | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Backwards compatible](media/blue_compat.png) | ![Backwards compatible](media/blue_compat.png) |
-| 1809  | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
+| **1703**<br>(10.1.15063) | ![Backwards compatible](media/blue_compat.png) | ![Backwards compatible](media/blue_compat.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) |
+| **1709**<br>(10.1.16299) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Backwards compatible](media/blue_compat.png) | ![Not supported](media/Red_X.png)   | ![Not supported](media/Red_X.png) |
+| **1803**<br>(10.1.17134) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Backwards compatible](media/blue_compat.png) | ![Backwards compatible](media/blue_compat.png) |
+| **1809**<br>(10.1.17763) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
 
 |Key|
 |--|
