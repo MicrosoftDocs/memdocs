@@ -8,11 +8,15 @@ ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: aae1cf2f-2c04-4f68-a03a-f4a925433c09
 author: aczechowski
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# Capabilities in Technical Preview 1601 for System Center Configuration Manager*Applies to: System Center Configuration Manager (Technical Preview)*
+# Capabilities in Technical Preview 1601 for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Technical Preview)*
+
 This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1601. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.  
 
  **Known Issues for this Technical Preview:**  
@@ -135,17 +139,17 @@ A client is online if it is currently connected to a Configuration Manager manag
 
 ### To view client online status  
 
-1.  In the Configuration Manager console, go to **Assets and Compliance > Overview > Devices**.  
+1. In the Configuration Manager console, go to **Assets and Compliance > Overview > Devices**.  
 
-2.  Right-click in the column header, and then click one of the client online status fields to add it to the device view. The fields are  
+2. Right-click in the column header, and then click one of the client online status fields to add it to the device view. The fields are  
 
-    -   **Device Online Status** indicates whether the client is currently online or offline.  
+   -   **Device Online Status** indicates whether the client is currently online or offline.  
 
-    -   **Last Online Time** indicates when the client online status changed from offline to online.  
+   -   **Last Online Time** indicates when the client online status changed from offline to online.  
 
-    -   **Last Offline Time** indicates when the status changed from online to offline.  
+   -   **Last Offline Time** indicates when the status changed from online to offline.  
 
- To show recent changes to client status, refresh the console.  
+   To show recent changes to client status, refresh the console.  
 
 ##  <a name="bkmk_appmgmt1601"></a> Improvements to application management  
  In the 1601 Technical Preview we have added support for the following features:  

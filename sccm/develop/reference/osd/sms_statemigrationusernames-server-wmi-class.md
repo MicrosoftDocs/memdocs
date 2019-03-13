@@ -9,6 +9,7 @@ ms.assetid: 26d7ad7d-e8e6-41f4-9300-a4a4359dba31
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_StateMigrationUserNames Server WMI Class
 The `SMS_StateMigrationUserNames` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a localized user name during state migration.  
@@ -50,11 +51,11 @@ Class SMS_StateMigrationUserNames
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Embedded  
+- Embedded  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- Your application uses this class to create objects that are embedded by the [SMS_StateMigration Server WMI Class](../../../develop/reference/osd/sms_statemigration-server-wmi-class.md) and accessed using the `UserNames` property. For an example of the use of this class, see How to Create an Association Between Two Computers in Configuration Manager.  
+  Your application uses this class to create objects that are embedded by the [SMS_StateMigration Server WMI Class](../../../develop/reference/osd/sms_statemigration-server-wmi-class.md) and accessed using the `UserNames` property. For an example of the use of this class, see How to Create an Association Between Two Computers in Configuration Manager.  
 
 ## Requirements  
 

@@ -1,6 +1,6 @@
 ---
 title: "New in version 1606"
-titleSuffix: "Configuraton Manager"
+titleSuffix: "Configuration Manager"
 description: "Get details about changes and new capabilities introduced in version 1606 of System Center Configuration Manager."
 ms.date: 12/30/2016
 ms.prod: configuration-manager
@@ -10,6 +10,8 @@ ms.assetid: df2e57b9-6445-4067-98e7-ace85d4e6aa6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ROBOTS: NOINDEX
+ms.collection: M365-identity-device-management
 ---
 # What&#39;s new in version 1606 of System Center Configuration Manager
 

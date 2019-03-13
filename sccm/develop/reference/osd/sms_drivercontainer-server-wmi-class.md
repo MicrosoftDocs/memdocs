@@ -9,6 +9,7 @@ ms.assetid: 21cf7cfa-d55c-46a0-a8a5-9f7687d4d2ec
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_DriverContainer Server WMI Class
 The `SMS_DriverContainer` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents boot image or driver package information that refers to the specified driver.  

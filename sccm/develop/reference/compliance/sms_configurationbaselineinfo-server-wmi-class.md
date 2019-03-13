@@ -9,6 +9,7 @@ ms.assetid: e9332972-2d65-4d11-8ad0-b4456d7f33f4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_ConfigurationBaselineInfo Server WMI Class
 The `SMS_ConfigurationBaselineInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a baseline configuration item. For more information about this type of configuration item, see [SMS_BaselineAssignment Server WMI Class](../../../develop/reference/compliance/sms_baselineassignment-server-wmi-class.md).  
@@ -564,15 +565,15 @@ Class SMS_ConfigurationBaselineInfo : SMS_ConfigurationItemBaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Secured  
+- Secured  
 
--   Read (read-only)  
+- Read (read-only)  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- Your application can use this class to create a baseline. After creating the object, the application should set the `CIType_ID` property to Baseline (2). When the object is properly configured, the application can use the [SMS_BaselineAssignment Server WMI Class](../../../develop/reference/compliance/sms_baselineassignment-server-wmi-class.md) class to populate it with other configuration items and corresponding rules.  
+  Your application can use this class to create a baseline. After creating the object, the application should set the `CIType_ID` property to Baseline (2). When the object is properly configured, the application can use the [SMS_BaselineAssignment Server WMI Class](../../../develop/reference/compliance/sms_baselineassignment-server-wmi-class.md) class to populate it with other configuration items and corresponding rules.  
 
- For information on the use of this class, see How to List Configuration Assignments and How to Assign Configuration Baselines. An example for baseline configuration is provided in Configuration Baseline Example 1.  
+  For information on the use of this class, see How to List Configuration Assignments and How to Assign Configuration Baselines. An example for baseline configuration is provided in Configuration Baseline Example 1.  
 
 ## Requirements  
 

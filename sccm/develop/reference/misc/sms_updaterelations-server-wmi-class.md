@@ -9,6 +9,7 @@ ms.assetid: 206ef5cb-9bad-45c9-bda5-91499383a66a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_UpdateRelations Server WMI Class
 The `SMS_UpdateRelations` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that defines the relationship between two software updates.  
@@ -60,9 +61,9 @@ Class SMS_UpdateRelations : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Read (read-only)  
+- Read (read-only)  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
 ## Requirements  
 

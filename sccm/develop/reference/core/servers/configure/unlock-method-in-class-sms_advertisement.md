@@ -9,6 +9,7 @@ ms.assetid: efec7fc8-6680-47f6-b442-4efd5a9645f2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Unlock Method in Class SMS_Advertisement
 The `Unlock` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the source site to the current site, unlocking the advertisement.  

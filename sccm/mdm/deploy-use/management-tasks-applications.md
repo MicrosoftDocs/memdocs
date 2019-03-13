@@ -10,6 +10,7 @@ ms.assetid: 8adbe2e2-de26-4a80-8bbd-a5f34b8bac79
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Manage Applications in System Center Configuration Manager
 
@@ -38,6 +39,8 @@ Deploying and monitoring applications in System Center Configuration Manager are
 Here are some considerations to keep in mind when deploying and monitoring applications, specific to mobile device management.
 
 - MDM-enrolled devices do not support simulated deployments, user experience, or scheduling settings.
+
+- Don't add more than 100 locales to a single app. Adding more than 100 locales prevents the app from syncing with Intune. This action also prevents the app from being installed or being available to install on the device.
 
 - You can associate the deployment with an iOS app configuration policy if you have already congured one. See [Configure iOS apps with app configuration policies](configure-ios-apps-with-app-configuration-policies.md).
 

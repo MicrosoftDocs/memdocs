@@ -9,6 +9,7 @@ ms.assetid: 134d40db-3d25-4ff4-904f-3282c301d9c8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_CI_ComplianceSummary Server WMI Class
 The `SMS_CI_ComplianceSummary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a compliance summary for a baseline configuration item.  
@@ -128,13 +129,13 @@ Class SMS_CI_ComplianceSummary : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Read (read-only)  
+- Read (read-only)  
 
--   Secured  
+- Secured  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- Your application uses this class for compliance monitoring for a configuration item.  
+  Your application uses this class for compliance monitoring for a configuration item.  
 
 ## Requirements  
 

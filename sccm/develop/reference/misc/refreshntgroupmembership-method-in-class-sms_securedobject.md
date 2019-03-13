@@ -9,6 +9,7 @@ ms.assetid: b3971d0d-0cf8-4778-a564-812d767eb3b1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # RefreshNTGroupMembership Method in Class SMS_SecuredObject
 The `RefreshNTGroupMembership` Windows Management Instrumentation (WMI) class method, in Configuration Manager, refreshes the information that is stored about the user's Windows NT group membership.  

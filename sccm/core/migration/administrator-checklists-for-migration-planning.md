@@ -10,6 +10,7 @@ ms.assetid: 295fdf07-93cc-490c-acdd-ce3ee88cb36f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Administrator checklists for migration planning in System Center Configuration Manager
 

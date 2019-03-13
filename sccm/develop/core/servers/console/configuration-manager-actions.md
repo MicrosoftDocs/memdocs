@@ -8,6 +8,7 @@ ms.assetid: e17c2d91-aecc-4697-8084-64a56cda49d9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Actions
 System Center Configuration Manager console actions are tasks or commands that are performed by making context menu or action panel selections. There are a number of standard action types such as cut, paste, and properties. You can also add your own custom actions to perform tasks such as running programs and displaying dialog boxes. You can restrict the availability of actions to such criteria as regular expressions, security permissions, and method call results.  
@@ -40,17 +41,17 @@ System Center Configuration Manager console actions are tasks or commands that a
 ### Adding Custom Actions  
  The steps for adding a new custom action to the Configuration Manager console are:  
 
-1.  **Create the action XML file.** The name you choose for the file should have the .xml extension. The arrangement of the actions in the context menu and actions pane is based on the alphabetical ordering of the file names in the actions folder.  
+1. **Create the action XML file.** The name you choose for the file should have the .xml extension. The arrangement of the actions in the context menu and actions pane is based on the alphabetical ordering of the file names in the actions folder.  
 
-2.  **Deploy the action XML.** The custom action XML file is placed in the *%ProgramFiles%*\Microsoft Configuration Manager\AdminConsole\XmlStorage\Extensions\Actions folder under the GUID named folder of the Configuration Manager console node.  
+2. **Deploy the action XML.** The custom action XML file is placed in the *%ProgramFiles%*\Microsoft Configuration Manager\AdminConsole\XmlStorage\Extensions\Actions folder under the GUID named folder of the Configuration Manager console node.  
 
- For example, to create an action that is displayed on the software updates node you would have following folder structure:  
+   For example, to create an action that is displayed on the software updates node you would have following folder structure:  
 
- AdminConsole\XmlStorage\Extensions\Actions\f5445252-da1d-450f-a772-7c3d3cb929fb\myfilename.xml  
+   AdminConsole\XmlStorage\Extensions\Actions\f5445252-da1d-450f-a772-7c3d3cb929fb\myfilename.xml  
 
- For more information, see [How to Create a Configuration Manager Action](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-action.md).  
+   For more information, see [How to Create a Configuration Manager Action](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-action.md).  
 
- For more information about the Configuration Manager console nodes, see [Configuration Manager Administrator Console Nodes](../../../../develop/core/servers/console/console-nodes.md).  
+   For more information about the Configuration Manager console nodes, see [Configuration Manager Administrator Console Nodes](../../../../develop/core/servers/console/console-nodes.md).  
 
 ## Conditional Actions  
  Actions can be made available (displayed) according to specified conditions. The conditions are defined by the following:  

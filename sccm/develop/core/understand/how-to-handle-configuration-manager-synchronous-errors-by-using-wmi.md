@@ -9,6 +9,7 @@ ms.assetid: d11bbdc3-f47e-4088-bed8-7e38d119e278
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Handle Configuration Manager Synchronous Errors by Using WMI
 You handle synchronous errors, in System Center Configuration Manager, by inspecting the `SWbemLastError` object when an error occurs. An error has occurred when the error object `Number` property is non-zero.  

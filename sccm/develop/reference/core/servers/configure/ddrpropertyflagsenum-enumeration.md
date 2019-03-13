@@ -9,6 +9,7 @@ ms.assetid: ab94d236-9868-4feb-a75d-5be49758b394
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # DDRPropertyFlagsEnum Enumeration
 The `DDRPropertyFlagsEnum` enumeration, in Configuration Manager, specifies flags that are used by `ISMSResGen`.  

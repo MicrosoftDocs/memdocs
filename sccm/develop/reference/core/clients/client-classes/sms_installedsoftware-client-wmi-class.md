@@ -9,6 +9,7 @@ ms.assetid: f9dd9d35-1162-46c2-b198-5278e706012f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_InstalledSoftware Client WMI Class
 The `SMS_InstalledSoftware` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that merges installed software information from multiple sources to provide categorization and Microsoft Licensing information.  
@@ -313,15 +314,15 @@ Class SMS_InstalledSoftware
 ## Remarks  
  This class merges information from as many as five sources. The first source is the Windows `MsiEnumProducts` function. This function enumerates through all the products that are currently advertised or installed. Other sources of information for all installed software are the following registry keys:  
 
--   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\\[User SID]\Products  
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\\[User SID]\Products  
 
--   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall  
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall  
 
- The class also gathers information for operating system software from the following sources:  
+  The class also gathers information for operating system software from the following sources:  
 
--   WMI class root\CIMV2:Win32_OperatingSystem  
+- WMI class root\CIMV2:Win32_OperatingSystem  
 
--   Registry key HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion  
+- Registry key HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion  
 
 ## Requirements  
 

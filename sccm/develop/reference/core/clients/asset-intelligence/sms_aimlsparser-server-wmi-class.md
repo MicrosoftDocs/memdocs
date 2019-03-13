@@ -9,6 +9,7 @@ ms.assetid: e16df2cd-86c2-450c-998f-a2eaa7325ffb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_AIMLSParser Server WMI Class
 The `SMS_AIMLSParser` Windows Management Instrumentation (WMI) class in System Center Configuration Manager imports license data.  
@@ -36,15 +37,15 @@ Class SMS_AIMLSParser : SMS_BaseClass ();
 ## Remarks  
  Class qualifiers for this class include:  
 
--   DisplayName("AI Hinv Classes List")  
+- DisplayName("AI Hinv Classes List")  
 
--   Dynamic  
+- Dynamic  
 
--   Provider("ExtnProv")  
+- Provider("ExtnProv")  
 
--   Secured  
+- Secured  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
 ## Requirements  
 

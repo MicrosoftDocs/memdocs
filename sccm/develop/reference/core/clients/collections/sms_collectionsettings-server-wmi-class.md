@@ -9,6 +9,7 @@ ms.assetid: 332629f9-bbd6-4bb1-860b-baa11bce8744
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_CollectionSettings Server WMI Class
 The `SMS_CollectionSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents settings for an [SMS_Collection Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) object.  
@@ -240,9 +241,9 @@ Class SMS_CollectionSettings : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Secured  
+- Secured  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
 ## Requirements  
 

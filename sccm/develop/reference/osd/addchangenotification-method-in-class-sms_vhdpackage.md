@@ -9,6 +9,7 @@ ms.assetid: 509183c5-c80f-4d51-a964-1f7b296ffd13
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # AddChangeNotification Method in Class SMS_VhdPackage
 The `AddChangeNotification` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds an VHD package change notification.  

@@ -9,6 +9,7 @@ ms.assetid: 718afd29-a3cc-436a-9cb7-7e35e0e77f59
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_TaskSequence_RebootAction Server WMI Class
 The `SMS_TaskSequence_RebootAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that specifies restart options for the target computer.  
@@ -120,18 +121,18 @@ Class SMS_TaskSequence_RebootAction : SMS_TaskSequence_Action
 
  The operating system to use for reboot. Possible values are:  
 
--   HD  
+- HD  
 
--   WinPE  
+- WinPE  
 
- `Timeout`  
- Data type: `UInt32`  
+  `Timeout`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
 ## Remarks  
  Class qualifiers for this class include:  

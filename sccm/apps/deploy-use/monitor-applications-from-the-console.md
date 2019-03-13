@@ -10,8 +10,12 @@ ms.assetid: 784c295c-b8b8-4202-ab9f-665908d49d6d
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# Monitor applications from the System Center Configuration Manager console*Applies to: System Center Configuration Manager (Current Branch)*
+# Monitor applications from the System Center Configuration Manager console
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 In System Center Configuration Manager, you can monitor the deployment of all software, including software updates, compliance settings, applications, task sequences, and packages and programs. You can monitor deployments by using the **Monitoring** workspace in the Configuration Manager console or by using reports.  
 
@@ -32,17 +36,17 @@ In System Center Configuration Manager, you can monitor the deployment of all so
 
 You can view additional information for each compliance state, including subcategories within the compliance state and the number of users and devices in this category. For example, the **Error** compliance state includes the following subcategories:  
 
--   Error evaluating requirements  
+- Error evaluating requirements  
 
--   Content related errors  
+- Content related errors  
 
--   Installation errors  
+- Installation errors  
 
- When more than one compliance state applies for an application deployment, you can see the aggregate state that represents the lowest compliance. For example:  
+  When more than one compliance state applies for an application deployment, you can see the aggregate state that represents the lowest compliance. For example:  
 
-    -   If a user signs in to two devices and the application is successfully installed on one device but fails to install on the second device, the aggregate deployment state of the application for that user displays as **Error**.  
+  -   If a user signs in to two devices and the application is successfully installed on one device but fails to install on the second device, the aggregate deployment state of the application for that user displays as **Error**.  
 
-    -   If an application is deployed to all users that sign in to a computer, you receive multiple deployment results for that computer. If one of the deployments fails, the aggregate deployment state for the computer displays as **Error**.  
+  -   If an application is deployed to all users that sign in to a computer, you receive multiple deployment results for that computer. If one of the deployments fails, the aggregate deployment state for the computer displays as **Error**.  
 
 The deployment state for package and program deployments is not aggregated.  
 

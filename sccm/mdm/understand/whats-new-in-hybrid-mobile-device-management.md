@@ -2,7 +2,7 @@
 title: What's new in hybrid MDM
 titleSuffix: Configuration Manager
 description: Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune.
-ms.date: 10/18/2018
+ms.date: 02/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,6 +10,7 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # What's new in hybrid mobile device management with Configuration Manager and Microsoft Intune
@@ -42,18 +43,148 @@ Each section of this article lists hybrid features under three different categor
 
 
 
+## February 2019
+
+### New in Microsoft Intune
+
+#### Create new Intune tenants in Azure portal
+<!--3754067-->
+The ability to create a new hybrid MDM tenant has been removed as of the 1902 Intune update. Create all new Intune tenants in the Azure portal. As a reminder, [hybrid MDM is deprecated](/sccm/mdm/understand/hybrid-mobile-device-management). Current hybrid MDM customers should migrate to Intune standalone as soon as possible.
+
+For more information, see [the Intune support blog post](https://aka.ms/hybrid_notification).
+
+
+#### Intune uses Google Play Protect APIs on Android devices 
+<!--2577355-->
+Some admins are faced with a BYOD landscape where users may root or jailbreak their mobile phone. This behavior, while sometimes not ill-intentioned, results in a bypass of many Intune policies that are set in order to protect the organization's data on end user devices. Thus, Intune provides root and jailbreak detection for both enrolled and unenrolled devices. 
+
+With this release, Intune now leverages Google Play Protect APIs to add to our existing root detection checks for unenrolled devices. While Google doesn't share the entirety of the root detection checks that occur, we expect these APIs to detect users who have rooted their devices for any reason from device customization to being able to get newer OS updates on older devices. These users can then be blocked from accessing corporate data, or their corporate accounts can be wiped from their policy enabled apps. 
+
+
+#### New **App categories** screen in the Company Portal app for Windows 10
+<!--3834780-->
+To improve the app browsing and selection experience in Company Portal for Windows 10, it now includes a new screen called **App categories**. Users now see their apps sorted under categories such as **Featured**, **Education**, and **Productivity**. This change appears in Company Portal versions 10.3.3451.0 and later. To view the new screen, see [What's new in the app UI](https://docs.microsoft.com/intune/whats-new). For more information about apps in the Company Portal, see [Install and share apps on your device](https://docs.microsoft.com/intune-user-help/install-apps-cpapp-windows).  
+
+
+#### macOS users are prompted to update their password 
+<!--1873216-->
+On macOS devices, end users are prompted to update their password. This prompt happens whenever a user runs a task that requires authentication, such as signing in to the device. Users also prompted to update their password when doing anything that requires administrative privileges, such as requesting keychain access.  
+
+
+#### Intune macOS Company Portal Dark Mode
+<!--3300524-->
+The Intune macOS Company Portal now supports Dark Mode for macOS. When you enable Dark Mode on a macOS 10.14+ device, the Company Portal adjusts its appearance to colors that reflect that mode.
+
+
+
+## January 2019
+
+### New in Microsoft Intune
+
+#### Intune app protection policies UI update 
+<!--3251427-->
+We've changed the labels for settings and buttons for Intune app protection to make each easier to understand. Some of the changes include:  
+
+- Controls are changed from **yes** / **no** controls to primarily **block** / **allow** and **disable** / **enable** controls. The labels are also updated.  
+
+- Settings are reformatted, so the setting and its label are side-by-side in the control, to provide better navigation.   
+
+The default settings and number of settings remain the same, but this change allows the user to understand, navigate, and utilize the settings more easily to apply selected app protection policies. For more information, see [iOS settings](https://docs.microsoft.com/intune/app-protection-policy-settings-ios#access-requirements) and [Android settings](https://docs.microsoft.com/intune/app-protection-policy-settings-android#access-requirements).
+
+#### Tenant Status dashboard
+<!--1124854-->
+The new [Tenant Status page](https://docs.microsoft.com/intune/tenant-status) provides a single location where you can view status and related details for your tenant. The dashboard is divided into four areas:
+
+- **Tenant Details**: Displays information that includes your Tenant name and location, your MDM Authority, the total enrolled devices in your tenant, and your license counts. This section also lists the current service release for your tenant.  
+
+- **Connector Status**: Displays information about available connectors you have configured and can also list those which you have not yet enabled.  
+
+    Based on the current state of each connector, they are flagged as Healthy, Warning, or Unhealthy. Select a connector to drill through and view details or configure additional information for it.  
+
+- **Intune Service Health**: Displays details about active incidents or outages for your tenant. The information in this section is retrieved directly from the Office Message Center.  
+
+- **Intune News**: Displays active messages for your tenant. Messages include things like notifications when your tenant receives the latest Intune features.  The information in this section is retrieved directly from the Office Message Center.  
+
+#### New help and support experience in Company Portal for Windows 10 
+<!--1488939-->
+The new Company Portal Help & Support page helps users troubleshoot and request help for app and access problems. From the new page, they can email error and diagnostic log details and find their organization's helpdesk details. They'll also find a FAQ section with links to the relevant Intune documentation. For more information and screenshots, see [Get help and support in Company Portal for Windows 10](https://docs.microsoft.com/intune-user-help/help-and-support-windows-cpapp).
+
+#### Some BitLocker settings support Windows 10 Pro edition
+<!--2727036-->
+You can create a configuration item that sets endpoint protection settings on Windows 10 devices, including BitLocker. This update adds support for Windows 10 Professional edition for some BitLocker settings.
+
+For more information, see [Encryption settings for Windows 10](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client#encryption).
+
+
+
+## December 2018
+
+### New in Microsoft Intune
+
+#### Microsoft Auto Update version 4.5.0 required for macOS devices
+<!--3503442-->
+To continue receiving updates for the Company Portal and other Office applications, macOS devices managed by Intune must upgrade to Microsoft Auto Update 4.5.0. Users might already have this version for their Office apps.
+
+#### The Intune App SDK will support 256-bit encryption keys 
+<!--1832174-->
+The Intune App SDK for Android now uses 256-bit encryption keys when encryption is enabled by App Protection Policies. The SDK will continue to provide support of 128-bit keys for compatibility with content and apps that use older SDK versions.
+
+#### Intune requires macOS 10.12 or later 
+<!--2827778-->
+Intune now requires macOS version 10.12 or later. Devices using prior macOS versions can't use the Company Portal to enroll into Intune. To receive support and new features, users must upgrade their device to macOS 10.12 or later and upgrade the Company Portal to the latest version.
+
+For more information, see [Plan for Change: Intune supports macOS 10.12 and higher in December](#plan-for-change-intune-supports-macos-1012-and-higher-in-december).
+
+
+
+## November 2018
+
+### New in Microsoft Intune
+
+#### New Intune device subscription SKU
+<!--3312071-->
+To help lower the cost of managing devices in enterprises, a new device-based subscription SKU is now available. This Intune device SKU is licensed per device on a monthly basis. Price varies by the licensing program. It's available in Direct Channel, Enterprise Agreement (EA), Microsoft Products and Services Program (MPSA), and Open and Cloud Solution Provider (CSP).
+
+#### New apps support with app protection policies 
+<!--3330037-->
+You can now manage the following apps with [Intune app protection policies](https://docs.microsoft.com/intune/app-protection-policies):
+
+- Stream (iOS)  
+- To DO (Android, iOS)  
+- PowerApps (Android, iOS)  
+- Flow (Android, iOS)  
+
+Use app protection policies to protect corporate data and control data transfer for these apps, like other Intune policy managed apps. 
+
+> [!Note]  
+> If Flow isn't yet visible in the console, add Flow when you create or edit any app protection policies. Select **More apps**, and then specify the *App ID* for Flow in the input field. For Android use `com.microsoft.flow`, and for iOS use `com.microsoft.procsimo`.  
+
+
+
 ## October 2018
 
 ### New in Microsoft Intune
 
+#### Updates for Application Transport Security 
+<!--748318-->
+Microsoft Intune supports Transport Layer Security (TLS) 1.2+ to provide best-in-class encryption, to ensure Intune is more secure by default, and to align with other Microsoft services such as Microsoft Office 365. In order to meet this requirement, the iOS and macOS company portals will enforce Apple's updated Application Transport Security (ATS) requirements which also require TLS 1.2+. ATS is used to enforce stricter security on all app communications over HTTPS. This change impacts Intune customers using the iOS and macOS Company Portal apps. For more information, see [Intune moving to TLS 1.2 for encryption](https://blogs.technet.microsoft.com/intunesupport/2018/06/05/intune-moving-to-tls-1-2-for-encryption/).
+
+#### Remove an email profile from a device, even when there's only one email profile 
+<!--1818139-->
+Previously, you couldn't remove an email profile from a device if it's the only email profile. With this update, this behavior changes. Now, you can remove an email profile, even if it's the only email profile on the device. 
+
+#### Remove PKCS and SCEP certificates from your devices 
+<!--3218390-->
+In some scenarios, PKCS and SCEP certificates remained on devices, even when removing a policy from a group, deleting a configuration or compliance deployment, or an admin updating an existing SCEP or PKCS profile. 
+
+This update changes the behavior. There are some scenarios where PKCS and SCEP certificates are removed from devices, and some scenarios where these certificates remain on the device. 
+
 #### Access to key profile properties using the company portal app
 <!--772203-->  
-
 End users can now access key account properties and actions, such as password reset, from the Company Portal app. 
 
 #### PIN prompt when you change fingerprints or face ID on an iOS device  
 <!--2637704-->  
-
 Users are now prompted for a PIN after making biometric changes on their iOS device. This includes changes to registered fingerprints or face ID. The timing of the prompt depends on how the configuration of the *Recheck access requirements after (minutes)* timeout.  When no PIN is set, the user is prompted to set one.  
 
 This feature is only available for iOS, and requires the participation of applications that integrate the Intune APP SDK for iOS, version 8.1.1 or later. Integration of the SDK is necessary so that the behavior can be enforced on the targeted applications. This integration happens on a rolling basis and is dependent on the specific application teams. Some apps that participate include WXP, Outlook, Managed Browser, and Yammer.
@@ -474,7 +605,7 @@ Using Azure Active Directory (Azure AD), you can now restrict access to web site
     <!-- 1132468 -->     
 
 - **Inform end users what device information can be seen for iOS**   
-    We added  **Ownership Type** to the Device Details screen on the Company Portal app for iOS. This information allows users to find out more about privacy directly from the Intune end-user docs. They can also locate this information on the About screen. 
+    We added **Ownership Type** to the Device Details screen on the Company Portal app for iOS. This information allows users to find out more about privacy directly from the Intune end-user docs. They can also locate this information on the About screen. 
     <!--739894-->    
 
 - **Easier-to-understand phrasing for the Company Portal app for Android**   
@@ -533,26 +664,6 @@ After December, end users who have devices other than the ones listed above can'
 For more information, see [Enroll your macOS device in Intune with the Company Portal app](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos-cp).
 
 
-### Plan for Change: New Intune support experience for Premier customers 
-<!--2828727-->
-As a Microsoft Premier customer, you can currently use the [Microsoft Premier Online (MPO) portal](https://premier.microsoft.com) and [Intune on Azure](https://portal.azure.com) to create support requests for Intune. Starting on December 3, 2018, to continue enhancing the Premier support experience, you will be able to create support requests only in Intune on Azure.
-
-#### How does this affect me?
-After December 3, you can't create support requests in MPO. If you try, you’ll see a prompt that you can't dismiss redirecting you to Intune on Azure. When you create a support request in the Azure portal, it's routed to Intune-dedicated Microsoft Support. They'll diagnose and resolve your issue in a timely manner. If you create a support request in the MPO portal, you can't view it in the Azure portal. Start only creating support requests in Intune on Azure.  
-
-If you use hybrid mobile device management (hybrid MDM) or use co-management, continue to use MPO to create support requests for Configuration Manager, but use the Azure portal to create support requests for Intune. As a reminder, hybrid MDM is deprecated, and you should plan to move to Intune on Azure as soon as possible. For more information, see [Move from Hybrid Mobile Device Management to Intune on Azure](https://aka.ms/hybrid_notification).
-
-Note that only users with Global Administrator, Intune Service Administrator, and Service Support Administrator roles can create support tickets in the Azure portal.
-
-#### What can I do to prepare for this change?
-- Stop using MPO for Intune-related support requests. Use Intune on Azure to create and manage all your Intune support requests.  
-- Notify your helpdesk and update documentation, if necessary.  
-- If you have users without Global administrator or Intune Service Administrator roles currently creating support requests in MPO, assign them the Service Support Administrator role in Azure Active Directory. Users require one of these roles to create support tickets in the Azure portal.  
-
-#### Additional Information
-For more information, see the [Microsoft Intune support team blog post](https://aka.ms/IntuneSupport_MPO_to_Azure).
-
-
 ### Plan for change: Use Intune on Azure now for your MDM management 
 <!--1227338-->
 Over a year ago, we announced [public preview of Intune on Azure](https://cloudblogs.microsoft.com/enterprisemobility/2016/12/07/public-preview-of-intune-on-azure/) and followed up six months ago with [general availability of the new admin experience](https://cloudblogs.microsoft.com/enterprisemobility/2017/06/08/the-new-intune-and-conditional-access-admin-consoles-are-ga/) for Intune. Starting on August 31, 2018, we will turn off mobile device management (MDM) in the classic Silverlight console for those customers using Intune standalone. Instead, use [Intune on Azure](https://aka.ms/Intune_on_Azure) for your MDM needs. If you're still using the classic console for MDM, please stop and familiarize yourself with Intune on Azure. We don't expect any end user impact with this change. Classic PC management with Intune remains in Silverlight. For more information, see the [Intune support team blog post](https://aka.ms/Intune_on_Azure_mdm).
@@ -591,23 +702,6 @@ Starting in July, MDM-enrolled devices with both iOS 9 and the Company Portal wi
 #### What do I need to do to prepare for this change?
 
 Check for devices or users that are affected in your organization. In Intune in the Azure portal, go to **Devices** > **All devices**, and filter by **OS**.  Click **Columns** to surface details such as OS version. Request that your users upgrade their devices to a supported OS version before September.
-
-
-### Plan for change: Intune moving to TLS 1.2
-
-Starting on October 31, 2018, Intune will support Transport Layer Security (TLS) protocol version 1.2 to provide best-in-class encryption, to ensure our service is more secure by default, and to align with other Microsoft services such as Microsoft Office 365. Office communicated this change in MC128929.
-
-#### How does this change affect me?
-
-As of October 31, 2018, Intune will no longer support TLS protocol versions 1.0 or 1.1. All client-server and browser-server combinations should use TLS version 1.2 to ensure connection without issues to Intune. This change impacts end-user devices that aren't supported by Intune but are still receiving policy through Intune, and that can't use TLS version 1.2. These devices include those running Android 4.3 and earlier. For a list of affected devices and browsers, see the link below.
-
-After October 31, 2018, if you experience an issue related to the use of an old TLS version, update to TLS 1.2 or to a device that supports TLS 1.2 as part of the resolution.
-
-#### What do I need to do to prepare for this change?
-
-We recommend that you proactively remove TLS 1.0 and 1.1 dependencies in your environments and disable TLS 1.0 and 1.1 at the operating system level where possible. Begin planning your migration to TLS 1.2 today. Check the support blog post below for the list of devices that are not supported by Intune today but might still be receiving policy, and that won't be able to communicate using TLS version 1.2. You might need to notify those end users that they'll lose access to corporate resources.
-
-For more information, see [Intune moving to TLS 1.2 for encryption](https://blogs.technet.microsoft.com/intunesupport/2018/06/05/intune-moving-to-tls-1-2-for-encryption/).
 
 
 ### Company Portal for Windows 8.1 and Windows Phone 8.1 moving to sustaining mode 

@@ -9,6 +9,7 @@ ms.assetid: 463bed7d-80e4-4fd9-a7d7-dfb10b538a43
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_Advertisement server WMI class
 The `SMS_Advertisement` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents an advertisement used to announce software package programs that are available for running on clients.  
@@ -423,11 +424,11 @@ x00000400 (10)|BALLOON_REMINDERS_REQUIRED. Balloon reminders are required.|
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Secured  
+- Secured  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- Although there are no other key properties, the properties `AdvertisementName`, `CollectionID`, `PackageID`, and `ProgramName` are qualified as NOT_NULL, and values must be supplied. Your application cannot update these properties after a class instance is created. To change these values, the application must delete the instance and create a new instance with the correct values.  
+  Although there are no other key properties, the properties `AdvertisementName`, `CollectionID`, `PackageID`, and `ProgramName` are qualified as NOT_NULL, and values must be supplied. Your application cannot update these properties after a class instance is created. To change these values, the application must delete the instance and create a new instance with the correct values.  
 
 ## Requirements  
 

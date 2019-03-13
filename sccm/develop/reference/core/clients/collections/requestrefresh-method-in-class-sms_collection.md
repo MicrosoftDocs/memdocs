@@ -9,6 +9,7 @@ ms.assetid: fd7b5351-a3ed-40c2-a629-156f22507f88
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # RequestRefresh Method in Class SMS_Collection
 The `RequestRefresh` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, triggers a re-evaluation of collection membership by the System Center Configuration Manager collection evaluator component.  

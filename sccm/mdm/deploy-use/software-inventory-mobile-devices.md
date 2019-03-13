@@ -10,6 +10,7 @@ ms.assetid: a0eae17a-60a8-4132-91af-0b10ad338c92
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Software inventory for mobile devices enrolled with Microsoft Intune
 

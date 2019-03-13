@@ -10,6 +10,7 @@ ms.assetid: b3731ad0-2a24-4042-994e-5e4c1230e3fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Remotely synchronize policy on Intune-enrolled devices from the Configuration Manager console
 

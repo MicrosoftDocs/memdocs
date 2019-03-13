@@ -9,6 +9,7 @@ ms.assetid: 29b71ea3-7470-4f58-a3fb-89dbbe98b386
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_Template Server WMI Class
 The `SMS_Template` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents a deployment template available on the site that you can use instead of the System Center Configuration Manager console deployment wizard to deploy a software update.  
@@ -104,11 +105,11 @@ Class SMS_Template : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Secured  
+- Secured  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- Use of this class is optional. You can use an `SMS_Template` object instead of the console if required. In this case, the properties are populated for you, and you need to change only the ones that reflect information that has changed since the last software update deployment.  
+  Use of this class is optional. You can use an `SMS_Template` object instead of the console if required. In this case, the properties are populated for you, and you need to change only the ones that reflect information that has changed since the last software update deployment.  
 
 > [!NOTE]
 >  `SMS_Template` objects are not replicated to child sites.  

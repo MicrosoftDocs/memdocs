@@ -9,6 +9,7 @@ ms.assetid: ad263099-312a-47bf-aaab-3debd3949c2f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # RestoreQuarantinedItem Method in Class SMS_ClientOperation
 The `RestoreQuarantinedItem` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that restores quarantined items to all members in a collection infected by specified threat.   

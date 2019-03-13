@@ -10,6 +10,8 @@ ms.assetid: 4884a2d3-13ce-44e5-88c4-a66dc7ec6014
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ROBOTS: NOINDEX
+ms.collection: M365-identity-device-management
 ---
 # Capabilities in Technical Preview 1802 for System Center Configuration Manager
 
@@ -26,14 +28,14 @@ Review [Technical Preview for System Center Configuration Manager](/sccm/core/ge
     Workaround details.
 -->
 ## Known Issues in this Technical Preview
--   **Update to a new preview version fails when you have a site server in passive mode**. If you have a [primary site server in passive mode](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), then you must uninstall the passive mode site server before updating to this new preview version. You can reinstall the passive mode site server after your site completes the update.
+- **Update to a new preview version fails when you have a site server in passive mode**. If you have a [primary site server in passive mode](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), then you must uninstall the passive mode site server before updating to this new preview version. You can reinstall the passive mode site server after your site completes the update.
 
   To uninstall the passive mode site server:
   1. In the Configuration Manager console, go to **Administration** > **Overview** > **Site Configuration** > **Servers and Site System Roles**, and then select the passive mode site server.
   2. In the **Site System Roles** pane, right-click on the **Site server** role, and then choose **Remove Role**.
   3. Right-click on the passive mode site server, and then choose **Delete**.
   4. After the site server uninstalls, on the active primary site server restart the service **CONFIGURATION_MANAGER_UPDATE**.
-<!--sms 489412-->
+  <!--sms 489412-->
 
 
 </br>

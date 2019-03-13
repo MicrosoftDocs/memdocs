@@ -9,6 +9,7 @@ ms.assetid: 24fbc8c9-34ed-47c1-8f25-45e9e96b2958
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_UserInstancePermissions Server WMI Class
 The `SMS_UserClassPermissions` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a user's class-level permissions for a secured class.  

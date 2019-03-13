@@ -9,6 +9,7 @@ ms.assetid: 679e8772-2c66-46cf-88cf-cdae35b631c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ITsMediaClass::StepInfo Property
 In Configuration Manager, the `StepInfo` property contains a description of the current media creation step.  

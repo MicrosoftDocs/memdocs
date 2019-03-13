@@ -10,6 +10,7 @@ ms.assetid: 395403dc-6997-4415-93fd-6b1eeb6ba31a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Configuration Manager Tools

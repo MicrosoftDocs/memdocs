@@ -9,6 +9,7 @@ ms.assetid: 542246a2-55b9-464a-8d52-eff405127c14
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_EULAContent Server WMI Class
 The `SMS_EULAContent` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that provides information about optional configuration item content associated with Microsoft Software License Terms.  
@@ -70,15 +71,15 @@ Class SMS_EULAContent : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Secured  
+- Secured  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- This class is applicable to all types of configuration items, not just software updates. For a discussion of configuration item types, see the `CIType_ID` property of [SMS_ConfigurationItemBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitembaseclass-server-wmi-class.md).  
+  This class is applicable to all types of configuration items, not just software updates. For a discussion of configuration item types, see the `CIType_ID` property of [SMS_ConfigurationItemBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitembaseclass-server-wmi-class.md).  
 
- Your application should use this class only if the `EulaExists` property is set to `true` in the specified configuration item. This property is defined in the [SMS_ConfigurationItemBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitembaseclass-server-wmi-class.md).  
+  Your application should use this class only if the `EulaExists` property is set to `true` in the specified configuration item. This property is defined in the [SMS_ConfigurationItemBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitembaseclass-server-wmi-class.md).  
 
- To use this class, the application creates an `SMS_EULAContent` object and sets the properties as required for the software update.  
+  To use this class, the application creates an `SMS_EULAContent` object and sets the properties as required for the software update.  
 
 ## Requirements  
 

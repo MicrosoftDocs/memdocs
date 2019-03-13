@@ -9,6 +9,7 @@ ms.assetid: 2bf0896e-a1b2-4bb0-bc3f-ec9aee4141fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Distribution Points
 This section provides topics that show you how to programmatically manage Distribution Points in System Center Configuration Manager.  

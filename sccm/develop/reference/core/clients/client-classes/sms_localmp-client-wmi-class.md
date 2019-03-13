@@ -9,6 +9,7 @@ ms.assetid: 88444515-6694-45a4-b5af-87dfaad22b80
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_LocalMP Client WMI Class
 The `SMS_LocalMP` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that represents the local management point.  

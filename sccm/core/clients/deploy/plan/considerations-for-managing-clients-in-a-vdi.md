@@ -10,6 +10,7 @@ ms.assetid: abd45393-d84e-4583-bc80-74bbb3709577
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Considerations for managing System Center Configuration Manager clients  in a Virtual Desktop Infrastructure (VDI)
 
@@ -17,13 +18,13 @@ manager: dougeby
 
 System Center Configuration Manager supports installing the Configuration Manager client on the following virtual desktop infrastructure (VDI) scenarios:  
 
--   **Personal virtual machines** - Personal virtual machines are generally used when you want to make sure that user data and settings are maintained on the virtual machine between sessions.  
+- **Personal virtual machines** - Personal virtual machines are generally used when you want to make sure that user data and settings are maintained on the virtual machine between sessions.  
 
--   **Remote Desktop Services sessions** - Remote Desktop Services enables a server to host multiple, concurrent client sessions. Users can connect to a session and then run applications on that server.  
+- **Remote Desktop Services sessions** - Remote Desktop Services enables a server to host multiple, concurrent client sessions. Users can connect to a session and then run applications on that server.  
 
--   **Pooled virtual machines** - Pooled virtual machines are not persisted between sessions. When a session is closed, all data and settings are discarded. Pooled virtual machines are useful when Remote Desktop Services cannot be used because a required business application cannot run on the Windows Server that hosts the client sessions.  
+- **Pooled virtual machines** - Pooled virtual machines are not persisted between sessions. When a session is closed, all data and settings are discarded. Pooled virtual machines are useful when Remote Desktop Services cannot be used because a required business application cannot run on the Windows Server that hosts the client sessions.  
 
- The following table lists considerations for managing the Configuration Manager client in a virtual desktop infrastructure.  
+  The following table lists considerations for managing the Configuration Manager client in a virtual desktop infrastructure.  
 
 |Virtual machine type|Considerations|  
 |--------------------------|--------------------|  

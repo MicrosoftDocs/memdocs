@@ -10,8 +10,12 @@ ms.assetid: c4041e21-21ff-4d95-ab05-14007e0047cf
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# Management tasks for System Center Configuration Manager applications*Applies to: System Center Configuration Manager (Current Branch)*
+# Management tasks for System Center Configuration Manager applications
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Use the information in this article to help you manage System Center Configuration Manager applications and deployment types.  
 
 For help creating applications and deployment types, see [Create applications](../../apps/deploy-use/create-applications.md).  

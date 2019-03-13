@@ -9,6 +9,7 @@ ms.assetid: 018581ca-0204-4e10-ba90-eee650573c7f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Alternate Content Provider Classes
 System Center Configuration Manager Alternate Content Provider exposes a set of API calls and modifies the function of Data Transfer Services, such that an additional provider other than BITS can be used to retrieve the packages.  

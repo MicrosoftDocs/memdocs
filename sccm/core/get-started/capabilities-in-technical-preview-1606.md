@@ -10,8 +10,13 @@ ms.assetid: 134a2f60-811e-4dc9-a8f5-1ce0018c5c12
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ROBOTS: NOINDEX
+ms.collection: M365-identity-device-management
 ---
-# Capabilities in Technical Preview 1606 for System Center Configuration Manager*Applies to: System Center Configuration Manager (Technical Preview)*
+# Capabilities in Technical Preview 1606 for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Technical Preview)*
+
 This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1606. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
 
 **Known Issues in this Technical Preview:**  
@@ -89,8 +94,8 @@ Further reading:
 - [Device Guard certification and compliance](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-certification-and-compliance)
 - [Device Guard deployment guide](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide)
 
- ##  <a name="dmp_onprem"></a> Multiple device management points for On-premises Mobile Device Management  
- With Technical Preview 1606, On\-premises Mobile Device Management (MDM) supports a new capability in Windows 10 Anniversary Update that automatically configures an enrolled device to have more than one device management point available for use. This capability allows the device to fallback to another device management point when the one it normal uses is not available. This capability only works for PCs with Windows 10 Anniversary Update installed.  
+  ##  <a name="dmp_onprem"></a> Multiple device management points for On-premises Mobile Device Management  
+  With Technical Preview 1606, On\-premises Mobile Device Management (MDM) supports a new capability in Windows 10 Anniversary Update that automatically configures an enrolled device to have more than one device management point available for use. This capability allows the device to fallback to another device management point when the one it normal uses is not available. This capability only works for PCs with Windows 10 Anniversary Update installed.  
 
 ### Try it out!  
 

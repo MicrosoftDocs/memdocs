@@ -4,6 +4,7 @@ hide_bc: true
 title: System Center Configuration Manager Documentation
 description: Learn how to use System Center Configuration Manager.
 ms.topic: hub-page
+ms.collection: M365-identity-device-management
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -21,7 +22,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardText">
                                                 <h3>Core infrastructure</h3>
-                                                <p><a href="/sccm/core/plan-design/changes/whats-new-incremental-versions">What's new in Configuration Manager incremental versions</a></p>
+                                                <p><a href="/sccm/core/plan-design/changes/whats-new-incremental-versions">What&#39;s new in Configuration Manager incremental versions</a></p>
                                                 <p><a href="/sccm/core/servers/manage/updates">Updates for Configuration Manager</a></p>
                                                 <p><a href="/sccm/core/plan-design/configs/supported-configurations">Supported configurations for Configuration Manager</a></p>
                                             </div>
@@ -35,7 +36,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardText">
                                                 <h3>Cloud-attached management</h3>
-                                                <p><a href="/sccm/core/clients/manage/co-management-overview">Co-management for Windows 10</a></p>
+                                                <p><a href="/sccm/comanage/overview">Co-management for Windows 10</a></p>
                                                 <p><a href="/sccm/core/clients/manage/manage-clients-internet">Manage clients on the internet</a></p>
                                                 <p><a href="/sccm/osd/deploy-use/manage-windows-as-a-service">Windows as a service</a></p>
                                             </div>
@@ -106,7 +107,7 @@ ms.topic: hub-page
                                                 <h3>Protect data and infrastructure</h3>
                                                 <p><a href="/sccm/protect/deploy-use/manage-access-to-services">Conditional access</a></p>
                                                 <p><a href="/sccm/protect/deploy-use/endpoint-protection">Endpoint protection for Windows Defender</a></p>
-                                                <p><a href="/sccm/protect/deploy-use/windows-hello-for-business-settings">Windows Hello for Business</a></p>
+                                                <p><a href="/sccm/protect/deploy-use/windows-defender-advanced-threat-protection">Windows Defender Advanced Threat Protection</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -152,12 +153,12 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/ms365enterprise-partner-news-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/illustrations/ms365enterprise-partner-news-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>What's new in Configuration Manager incremental versions</h3>
-                                                <p>Learn about what's new in the latest update for Configuration Manager.</p>
+                                                <h3>What&#39;s new in Configuration Manager incremental versions</h3>
+                                                <p>Learn about what&#39;s new in the latest update for Configuration Manager.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -171,7 +172,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-core-infrastructure-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-core-infrastructure-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -190,7 +191,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/nuget-tools-reference_2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/illustrations/nuget-tools-reference_2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -208,13 +209,13 @@ ms.topic: hub-page
                         <a href="#tasksPanel2">Cloud-attached management</a>
                         <ul id="tasksPanel2" class="cardsC">
                             <li>
-                                <a href="/sccm/core/clients/manage/co-management-overview">
+                                <a href="/sccm/comanage/overview">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/virtualization-hperv-server-management-tools.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/illustrations/virtualization-hperv-server-management-tools.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -233,7 +234,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/biztalk-get-started-get-started.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/illustrations/biztalk-get-started-get-started.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -252,7 +253,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/biztalk-host-integration-update-center.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/illustrations/biztalk-host-integration-update-center.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -276,7 +277,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/bcs-partner-advanced-management-settings-8.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/illustrations/bcs-partner-advanced-management-settings-8.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -295,7 +296,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/teams-fast-track.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/illustrations/teams-fast-track.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -319,7 +320,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-app-mgmt-1.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-app-mgmt-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -338,7 +339,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-app-mgmt-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-app-mgmt-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -357,7 +358,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-core-infrastructure-1.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-core-infrastructure-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -381,7 +382,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-operating-sys-deploy-1.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-operating-sys-deploy-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -400,7 +401,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-operating-sys-deploy-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-operating-sys-deploy-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -419,7 +420,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-operating-sys-deploy-3.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-operating-sys-deploy-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -443,7 +444,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-software-update-mgmt-1.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-software-update-mgmt-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -462,7 +463,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-software-update-mgmt-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-software-update-mgmt-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -481,7 +482,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-software-update-mgmt-3.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-software-update-mgmt-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -505,7 +506,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-protect-data-infrastruct-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-protect-data-infrastruct-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -524,7 +525,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-protect-data-infrastruct-3.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-protect-data-infrastruct-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -537,18 +538,18 @@ ms.topic: hub-page
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/protect/deploy-use/windows-hello-for-business-settings">
+                                <a href="/sccm/protect/deploy-use/windows-defender-advanced-threat-protection">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/bcs-partner-advanced-management-password-3.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/illustrations/bcs-partner-policies-view-policies-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Windows Hello for Business</h3>
-                                                <p>Create policies to manage alternative sign-in methods for Windows 10 devices.</p>
+                                                <h3>Windows Defender Advanced Threat Protection</h3>
+                                                <p>Integrate with the Windows Defender ATP cloud service to protect against advanced attacks.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -567,12 +568,12 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-device-compliance-1.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-device-compliance-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
                                                 <h3>Ensure device compliance</h3>
-                                                <p>Configure settings and evaluate compliance on devices that you're managing.</p>
+                                                <p>Configure settings and evaluate compliance on devices that you&#39;re managing.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -586,7 +587,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-device-compliance-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-device-compliance-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -605,7 +606,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-device-compliance-3.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-device-compliance-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -634,7 +635,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_progressive.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/common/i_progressive.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -653,7 +654,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_upgrade.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/common/i_upgrade.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -672,7 +673,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/logos/logo_Windows.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/logos/logo_Windows.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -691,7 +692,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/logos/logo_office.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/logos/logo_office.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -710,7 +711,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_get-started.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/common/i_get-started.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -729,7 +730,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_guidelines.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/common/i_guidelines.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -748,7 +749,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_deploy.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/common/i_deploy.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -777,7 +778,7 @@ ms.topic: hub-page
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_tools.svg"  alt="" />
+                                                        <img src="https://docs.microsoft.com/media/common/i_tools.svg"  alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -790,13 +791,13 @@ ms.topic: hub-page
                                 </a>
                             </li>
                             <li>
-                                <a href="https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/dn688621(v=technet.10)" data-linktype="absolute-path">
+                                <a href="https://docs.microsoft.com/sccm/core/support/support-center" data-linktype="absolute-path">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_support.svg"  alt="" />
+                                                        <img src="https://docs.microsoft.com/media/common/i_support.svg"  alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -815,7 +816,7 @@ ms.topic: hub-page
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_deploy.svg"  alt="" />
+                                                        <img src="https://docs.microsoft.com/media/common/i_deploy.svg"  alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -834,7 +835,7 @@ ms.topic: hub-page
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_upgrade.svg"  alt="" />
+                                                        <img src="https://docs.microsoft.com/media/common/i_upgrade.svg"  alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -853,7 +854,7 @@ ms.topic: hub-page
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_security-management.svg" alt="" />
+                                                        <img src="https://docs.microsoft.com/media/common/i_security-management.svg" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -872,7 +873,7 @@ ms.topic: hub-page
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_package.svg"  alt="" />
+                                                        <img src="https://docs.microsoft.com/media/common/i_package.svg"  alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -901,7 +902,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-tools-1.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-tools-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -920,7 +921,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-tools-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-tools-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -939,7 +940,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-tools-4.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-tools-4.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -962,18 +963,18 @@ ms.topic: hub-page
                         <a href="#community-all">All</a>
                         <ul id="community-all" class="cardsF">
                             <li>
-                                <a href="https://cloudblogs.microsoft.com/enterprisemobility/?product=system-center-configuration-manager">
+                                <a href="https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/bg-p/ConfigurationManagerBlog">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_blog.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/common/i_blog.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Enterprise Mobility + Security Blog</h3>
-                                                <p>The latest news about Configuration Manager.</p>
+                                                <h3>Configuration Manager blog</h3>
+                                                <p>Information from the Configuration Manager product team.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -987,7 +988,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-social-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-social-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -1000,13 +1001,13 @@ ms.topic: hub-page
                                 </a>
                             </li>
                             <li>
-                                <a href="https://social.technet.microsoft.com/Forums/en-US/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc">
+                                <a href="https://social.technet.microsoft.com/Forums/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_support.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/common/i_support.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -1025,7 +1026,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/logos/logo-uservoice.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/logos/logo-uservoice.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -1044,7 +1045,7 @@ ms.topic: hub-page
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/logos/logo-uservoice.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/logos/logo-uservoice.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -1057,24 +1058,24 @@ ms.topic: hub-page
                                 </a>
                             </li>
                             <li>
-                                <a href="https://blogs.technet.microsoft.com/configurationmgr/">
+                                <a href="https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_blog.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/common/i_blog.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Configuration Manager Support Blog</h3>
-                                                <p>Support and servicing information from the Configuration Manager team.</p>
+                                                <h3>Enterprise Mobility + Security blog</h3>
+                                                <p>The latest news about unified endpoint management.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 </a>
-                            </li>
+                            </li>                            
                         </ul>
                     </li>
                 </ul>

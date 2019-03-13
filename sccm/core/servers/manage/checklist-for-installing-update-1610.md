@@ -10,6 +10,8 @@ ms.assetid: 7b411cb0-4fd1-41f2-a2f6-33738a5bde96
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ROBOTS: NOINDEX
+ms.collection: M365-identity-device-management
 ---
 # Checklist for installing update 1610 for System Center Configuration Manager
 

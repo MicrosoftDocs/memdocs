@@ -9,6 +9,7 @@ ms.assetid: 826de7bf-3990-49a4-924f-8dc6aa08324e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # GetPendingComponentList Method in Class CCM_Application
 The `GetPendingComponentList` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that gets the pending component list for an application.   

@@ -9,6 +9,7 @@ ms.assetid: 2ad890c4-6c22-4c65-a0fc-b4906a4e92d0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_CompliancePolicySettings Server WMI Class
 The `SMS_CompliancePolicySettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents compliance policy settings.  
@@ -471,11 +472,11 @@ Class SMS_CompliancePolicySettings : SMS_SettingsDefinitionBase
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Dynamic  
+- Dynamic  
 
--   Secured  
+- Secured  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
 ## Requirements  
 

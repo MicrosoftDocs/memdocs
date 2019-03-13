@@ -9,6 +9,7 @@ ms.assetid: 36538342-6f0d-4e64-84b8-aa56282c11c7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # CancelDownload Method in Class CCM_ProgramsManager
 The `CancelDownload` WMI class method, in Configuration Manager, cancels jobs that are downloading content that is required for legacy software distribution programs.  
@@ -19,8 +20,8 @@ The `CancelDownload` WMI class method, in Configuration Manager, cancels jobs th
 
 ```  
 uint32 CancelDownload(  
-     [IN]  String ProgramID,  
-     [IN]  String PackageID  
+     [IN]  String ProgramID,  
+     [IN]  String PackageID  
 );  
 ```  
 

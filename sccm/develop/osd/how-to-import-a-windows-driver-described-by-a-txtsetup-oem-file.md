@@ -9,6 +9,7 @@ ms.assetid: 1b6e61bc-ac48-4229-8c13-d470e4e8caf0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Import a Windows Driver Described by a Txtsetup.oem File into Configuration Manager
 You can import a Windows driver that is described by a Txtsetup.oem file, in System Center Configuration Manager, by using the [CreateFromOEM Method in Class SMS_Driver](../../develop/reference/osd/createfromoem-method-in-class-sms_driver.md). System Center Configuration Manager can automatically create definitions for most drivers from just an .inf file. However, when installing mass-storage drivers on pre-Windows Vista operating systems, Configuration Manager also must have some information that is contained in the Txtsetup.oem file. To facilitate this, `CreateFromOEM` creates [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md) objects for each .inf file that is referenced in the Txtsetup.oem file. You then have the opportunity to customize the driver properties before saving them.  

@@ -9,6 +9,7 @@ ms.assetid: e8f74f9a-352c-419d-82b7-3f78070bebe4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_ObjectToInstancePermissions_a Server WMI Class
 The `SMS_ObjectToInstancePermissions_a` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that relates a secured object with users that have permissions for an instance of the secured object.  
@@ -47,13 +48,13 @@ Class SMS_ObjectToInstancePermissions_a : SMS_BaseAssociation
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Read (read-only)  
+- Read (read-only)  
 
--   Association: ToInstance  
+- Association: ToInstance  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- This class relates an instance of [SMS_SecuredObject Server WMI Class](../../../develop/reference/misc/sms_securedobject-server-wmi-class.md) with an instance of [SMS_UserInstancePermissions Server WMI Class](../../../develop/reference/misc/sms_userinstancepermissions-server-wmi-class.md).  
+  This class relates an instance of [SMS_SecuredObject Server WMI Class](../../../develop/reference/misc/sms_securedobject-server-wmi-class.md) with an instance of [SMS_UserInstancePermissions Server WMI Class](../../../develop/reference/misc/sms_userinstancepermissions-server-wmi-class.md).  
 
 ## Requirements  
 

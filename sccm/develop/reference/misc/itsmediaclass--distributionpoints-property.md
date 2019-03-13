@@ -9,6 +9,7 @@ ms.assetid: 49fd39de-09bb-480c-ac7a-87fc8638220a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ITsMediaClass::DistributionPoints Property
 In Configuration Manager, the `DistributionPoints` property contains a comma-delimited list of distribution points, most preferable first.  

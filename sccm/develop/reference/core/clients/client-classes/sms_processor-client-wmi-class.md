@@ -9,6 +9,7 @@ ms.assetid: 7f338a23-33c5-44c0-adc2-a8d44ceaa179
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_Processor Client WMI Class
 The `SMS_Processor` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that represents a device that can interpret a sequence of instructions on a computer that is running a Windows operating system. On a multiprocessor computer, one `SMS_Processor` object exists for each processor.  
@@ -702,38 +703,38 @@ Class SMS_Processor
 
  Current status of the processor. Possible values are:  
 
--   OK  
+- OK  
 
--   Error  
+- Error  
 
--   Degraded  
+- Degraded  
 
--   Unknown  
+- Unknown  
 
--   Pred Fail  
+- Pred Fail  
 
--   Starting  
+- Starting  
 
--   Stopping  
+- Stopping  
 
--   Service  
+- Service  
 
--   Stressed  
+- Stressed  
 
--   NonRecover  
+- NonRecover  
 
--   NoContact  
+- NoContact  
 
--   LostComm  
+- LostComm  
 
- `StatusInfo`  
- Data type: `UInt16`  
+  `StatusInfo`  
+  Data type: `UInt16`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- State of the logical device. Possible values are listed below. If this property does not apply to the logical device, the property is set to "Not Applicable".  
+  State of the logical device. Possible values are listed below. If this property does not apply to the logical device, the property is set to "Not Applicable".  
 
 |||  
 |-|-|  

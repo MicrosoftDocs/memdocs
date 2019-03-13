@@ -10,6 +10,7 @@ ms.assetid: cc4cdb35-f0b4-42b5-9cec-6431a8c30793
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Fundamentals of System Center Configuration Manager
 
@@ -21,11 +22,11 @@ If you are new to System Center Configuration Manager, read the fundamental topi
 
  When you deploy Configuration Manager, you deploy one or more sites:  
 
--   **When you deploy multiple sites**, the sites form child to parent relationships that are collectively referred to as a hierarchy. Use a hierarchy to centrally manage a larger number of sites and devices.  Data and information flows down the hierarchy to reach devices that you manage. Information about devices, and results of configuration tasks and requests flow up the hierarchy.  
+- **When you deploy multiple sites**, the sites form child to parent relationships that are collectively referred to as a hierarchy. Use a hierarchy to centrally manage a larger number of sites and devices.  Data and information flows down the hierarchy to reach devices that you manage. Information about devices, and results of configuration tasks and requests flow up the hierarchy.  
 
--   **When you deploy a single site**, it is also referred to as a hierarchy.  
+- **When you deploy a single site**, it is also referred to as a hierarchy.  
 
- Some configuration tasks and settings will apply to all sites in a hierarchy, while others apply to individual sites.  
+  Some configuration tasks and settings will apply to all sites in a hierarchy, while others apply to individual sites.  
 
 ## Fundamental concepts for System Center Configuration Manager
 View the following topics to learn about fundamental concepts for System Center Configuration Manager:  

@@ -9,6 +9,7 @@ ms.assetid: 6827bb41-2697-432a-bf41-0d5fd61f8565
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # CCM_ServiceWindow Client WMI Class
 The `CCM_ServiceWindow` Client WMI class is a client class, in Configuration Manager, that lists instances of service windows.  
@@ -20,11 +21,11 @@ The `CCM_ServiceWindow` Client WMI class is a client class, in Configuration Man
 ```  
 class CCM_ServiceWindow  
 {  
-    UInt32 Duration;  
-    Datetime EndTime;  
-    String ID;   
-    Datetime StartTime;  
-    UInt32 Type;   
+    UInt32 Duration;  
+    Datetime EndTime;  
+    String ID;   
+    Datetime StartTime;  
+    UInt32 Type;   
 };  
 ```  
 
@@ -79,11 +80,11 @@ class CCM_ServiceWindow
 
 |Value|Service Window Type|Description|  
 |-----------|-------------------------|-----------------|  
-|1|ALLPROGRAM_SERVICEWINDOW|All Programs Service Window|  
+|1|ALLPROGRAM_SERVICEWINDOW|All Deployment Service Window|  
 |2|PROGRAM_SERVICEWINDOW|Program Service Window|  
 |3|REBOOTREQUIRED_SERVICEWINDOW|Reboot Required Service Window|  
 |4|SOFTWAREUPDATE_SERVICEWINDOW|Software Update Service Window|  
-|5|OSD_SERVICEWINDOW|OSD Service Window|  
+|5|OSD_SERVICEWINDOW|Task Sequences Service Window|  
 |6|USER_DEFINED_SERVICE_WINDOW|Corresponds to non-working hours|  
 
 ## Remarks  

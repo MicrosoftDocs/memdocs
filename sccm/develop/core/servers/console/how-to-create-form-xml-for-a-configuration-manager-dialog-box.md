@@ -9,15 +9,16 @@ ms.assetid: 811546e7-ae62-4b2a-af78-29293d81f182
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Create Form XML for a Configuration Manager Dialog Box
 In System Center Configuration Manager, to create the form XML for a Configuration Manager dialog box, you create an XML file that describes a [SmsFormData](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.smsformdata.aspx).  
 
  The form XML is similar to the property sheet form XML with the following exceptions:  
 
--   `FormType` must be set to `Dialog`.  
+- `FormType` must be set to `Dialog`.  
 
- The following procedure demonstrates how to create the form XML file for the dialog box you created in [How to Create a Configuration Manager Dialog Box](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-dialog-box.md).  
+  The following procedure demonstrates how to create the form XML file for the dialog box you created in [How to Create a Configuration Manager Dialog Box](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-dialog-box.md).  
 
 ### To create the form XML for a dialog box  
 

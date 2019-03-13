@@ -9,6 +9,7 @@ ms.assetid: e962a42b-2100-4140-a53e-e290a92117a1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_ConfigurationPolicy Server WMI Class
 The `SMS_ConfigurationPolicy` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the desired values of settings declared in a subclass of `SMS_SettingsDefinitionBase`. For instance, `SMS_FirewallSettings` is a subclass of `SMS_SettingsDefinitionBase` which declares possible settings for Windows Firewall. One such setting is "Block incoming connections on public networks." `SMS_ConfigurationPolicy` could be used to set a policy on that setting, such as "The setting 'Block incoming connections on public networks' should be enabled."  

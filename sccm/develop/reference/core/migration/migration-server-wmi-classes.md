@@ -9,6 +9,7 @@ ms.assetid: 94193217-e9a1-4859-b3f1-05ad806d64ce
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Migration Server WMI Classes
 Migration, in System Center Configuration Manager, is a feature that enables the IT Administrator to migrate the objects and contents from Configuration Manager 2007 to System Center 2012 Configuration Manager and to monitor the status of the clients’ migration. This section explains how to manage migration using the WMI interface.  

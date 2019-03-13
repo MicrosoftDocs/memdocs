@@ -10,9 +10,13 @@ ms.technology: configmgr-sum
 ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
 
-# Synchronize software updates from a disconnected software update point  *Applies to: System Center Configuration Manager (Current Branch)*
+# Synchronize software updates from a disconnected software update point  
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
  When the software update point at the top-level site is disconnected from the Internet, you must use the export and import functions of the WSUSUtil tool to synchronize software updates metadata. You can choose an existing WSUS server not in your Configuration Manager hierarchy as the synchronization source. This topic provides information about how to use the export and import functions of the WSUSUtil tool.  
 
  To export and import software updates metadata, you must export software updates metadata from the WSUS database on a specified export server, then copy the locally stored license terms files to the disconnected software update point, and then import the software updates metadata to the WSUS database on the disconnected software update point.  
@@ -44,11 +48,11 @@ ms.author: aaroncz
 
 #### To copy local files from the export server to the disconnected software update point server  
 
-1.  On the export server, navigate to the folder where software updates and the license terms for software updates are stored. By default, the WSUS server stores the files at <*WSUSInstallationDrive*>\WSUS\WSUSContent\\, where *WSUSInstallationDrive* is the drive on which WSUS is installed.  
+1. On the export server, navigate to the folder where software updates and the license terms for software updates are stored. By default, the WSUS server stores the files at <*WSUSInstallationDrive*>\WSUS\WSUSContent\\, where *WSUSInstallationDrive* is the drive on which WSUS is installed.  
 
-2.  Copy all files and folders from this location to the WSUSContent folder on the disconnected software update point server.  
+2. Copy all files and folders from this location to the WSUSContent folder on the disconnected software update point server.  
 
- Use the following procedure to export the software updates metadata from the WSUS database on the export server.  
+   Use the following procedure to export the software updates metadata from the WSUS database on the export server.  
 
 #### To export software updates metadata from the WSUS database on the export server  
 

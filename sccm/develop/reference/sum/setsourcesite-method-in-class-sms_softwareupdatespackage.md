@@ -9,6 +9,7 @@ ms.assetid: 9eb8190b-8999-4dce-a337-4ea9dc5d6310
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SetSourceSite Method in Class SMS_SoftwareUpdatesPackage
 The `SetSourceSite` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the source site for the software updates package.  

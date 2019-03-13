@@ -9,6 +9,7 @@ ms.assetid: 36745a1f-7b0a-4b29-b36c-5a6d48442ef7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # DDRNew
 The `DDRNew` function, in Configuration Manager, begins a new data discovery record (DDR).  
@@ -38,15 +39,15 @@ HRESULT DDRNew();
 
  The `sArchitecture` string is used to identify your resource class name and can take one of the following forms:  
 
--   A single word such as Car, which you can use to identify the `SMS_R_Car`resource class.  
+- A single word such as Car, which you can use to identify the `SMS_R_Car`resource class.  
 
--   A multiword string such as Carpool Inventory, which you can use to identify the `SMS_R_CarpoolInventory` resource class.  
+- A multiword string such as Carpool Inventory, which you can use to identify the `SMS_R_CarpoolInventory` resource class.  
 
--   A DMTF-formatted string such as ACME&#124;Car&#124;1.0, which you can use to identify the `SMS_R_ACME_Car_1_0` resource class.  
+- A DMTF-formatted string such as ACME&#124;Car&#124;1.0, which you can use to identify the `SMS_R_ACME_Car_1_0` resource class.  
 
--   The string "System" identifies a computer system.  
+- The string "System" identifies a computer system.  
 
- The agent name, `sAgentName`*,* should always be filled in and should identify the program used to generate the DDR.  
+  The agent name, `sAgentName`*,* should always be filled in and should identify the program used to generate the DDR.  
 
 ## Requirements  
 

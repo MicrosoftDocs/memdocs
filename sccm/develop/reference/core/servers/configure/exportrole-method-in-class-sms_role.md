@@ -9,6 +9,7 @@ ms.assetid: 75620ffa-b4ad-45b7-a738-7e2c52ef0f62
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ExportRole Method in Class SMS_Role
 The `ExportRole` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, exports roles to an XML string.  

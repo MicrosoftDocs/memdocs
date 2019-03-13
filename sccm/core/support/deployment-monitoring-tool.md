@@ -10,6 +10,7 @@ ms.assetid: 9edc214f-f405-456d-80df-8adcc2a5428d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Deployment Monitoring Tool

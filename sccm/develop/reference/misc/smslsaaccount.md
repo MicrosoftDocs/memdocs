@@ -9,6 +9,7 @@ ms.assetid: 29ee2324-72c8-48a1-bf37-15c4e03d742e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SmsLsaAccount
 In System Center Configuration Manager, the `SmsLsaAccount` function determines whether a particular account has administrator credentials, as required by Configuration Manager services. The function also checks the password.  

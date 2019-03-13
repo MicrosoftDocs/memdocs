@@ -10,6 +10,8 @@ ms.assetid: d2ad00e8-9f10-41b6-816a-d8542c23a22e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ROBOTS: NOINDEX
+ms.collection: M365-identity-device-management
 ---
 # Capabilities in Technical Preview 1611 for System Center Configuration Manager
 
@@ -24,11 +26,11 @@ This article introduces the features that are available in the Technical Preview
   - SQL Index Create Memory options
   - Checks for supported SQL Server version  
 
- Because these are only warnings, they can be ignored.
+  Because these are only warnings, they can be ignored.
 
 - ***PowerShell***: When you connect to Windows PowerShell from the Configuration Manager console, you might receive the following error: **Microsoft.ConfigurationManagement.PowerShell.Types.ps1xml is not digitally signed**.  
 
-   You can resolve this issue by replacing certain files with signed versions from version 1610. Copy all files with the following extensions from the **&lt;install directory>\AdminConsole\bin\** folder in your version 1610 installation: **.psd1**, **.ps1xml**, and **.psm1**. Paste these files into the **&lt;install directory>\AdminConsole\bin\** folder in your Technical Preview 1611 installation, overwriting the 1611 version of the files.
+   You can resolve this issue by replacing certain files with signed versions from version 1610. Copy all files with the following extensions from the **&lt;install directory>\AdminConsole\bin\\** folder in your version 1610 installation: **.psd1**, **.ps1xml**, and **.psm1**. Paste these files into the **&lt;install directory>\AdminConsole\bin\\** folder in your Technical Preview 1611 installation, overwriting the 1611 version of the files.
 
 
 **The following are new features you can try out with this version.**  

@@ -9,7 +9,8 @@ ms.assetid: 72c505eb-f0bf-4f4d-97fd-327df76f17fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
+ms.collection: M365-identity-device-management
 ---
 # MICROSOFT SQL SERVER 2012 NATIVE CLIENT
 

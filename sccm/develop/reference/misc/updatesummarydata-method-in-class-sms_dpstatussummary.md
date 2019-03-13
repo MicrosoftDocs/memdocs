@@ -9,6 +9,7 @@ ms.assetid: 84d84868-96d2-4176-8e5a-b97966ce7a8d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # UpdateSummaryData Method in Class SMS_DPStatusSummary
 The `UpdateSummaryData` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates the summary data.  

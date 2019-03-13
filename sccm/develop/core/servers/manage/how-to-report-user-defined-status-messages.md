@@ -9,6 +9,7 @@ ms.assetid: c32d4de0-4d09-4c2e-ad83-d3f690a3be63
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Report User-Defined Status Messages
 In System Center Configuration Manager, you can report user-defined informational, warning, and error status messages, on the site server, by using the following methods that are defined in the `SMS_StatusMessage` class:  

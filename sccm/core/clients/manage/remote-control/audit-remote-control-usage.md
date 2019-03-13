@@ -10,6 +10,7 @@ ms.assetid: 5c975e69-0cc0-4afd-b7fb-b7182162a933
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to audit remote control usage in System Center Configuration Manager
 

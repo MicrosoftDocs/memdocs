@@ -2,7 +2,7 @@
 title: Task sequence variable reference
 titleSuffix: Configuration Manager
 description: Learn about the variables to control and customize a Configuration Manager task sequence.
-ms.date: 08/17/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,6 +10,7 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Task sequence variables in Configuration Manager
@@ -119,6 +120,12 @@ For more information, see [Using task sequence variables](/sccm/osd/understand/u
  *Applies to the [Set Dynamic Variables](task-sequence-steps.md#BKMK_SetDynamicVariables) step.*
 
  Specifies the IP addresses used by the computer.
+
+
+### <a name="SMSTSLastActionName"></a> _SMSTSLastActionName
+ *Starting in version 1810*  
+
+ Stores the name of the last action that was run. This variable relates to **_SMSTSLastActionRetCode**. The task sequence logs these values to the smsts.log file. This variable is beneficial when troubleshooting a task sequence. When a step fails, a custom script can include the step name along with the return code.
 
 
 ### <a name="SMSTSLastActionRetCode"></a> _SMSTSLastActionRetCode
@@ -1572,6 +1579,8 @@ Use the following variable names to define the properties for the *first* partit
 
  Control the timeout for the software updates scan during this step. For example, if you expect numerous updates during the scan, increase the value. The default value is `1800` seconds (30 minutes). The variable value is set in seconds.
 
+> [!NOTE] 
+> Starting in version 1802, the default value is `3600` seconds (60 minutes).
 
 ### <a name="SMSTSUDAUsers"></a> SMSTSUDAUsers
 

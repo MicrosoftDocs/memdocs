@@ -9,6 +9,7 @@ ms.assetid: 9ed95bb1-02b9-4e49-953a-af312f64cce9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_DPStatus Server WMI Class
 > [!WARNING]

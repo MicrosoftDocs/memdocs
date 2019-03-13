@@ -9,6 +9,7 @@ ms.assetid: 23847c17-73c3-44b8-a163-e1f62576d4bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # About Configuration Baselines
 In System Center Configuration Manager, baselines are used to define the configuration of a product or a system that is established at a specific point in time, capturing both structure and details. Configuration baselines in System Center Configuration Manager contain a defined set of desired configurations that are evaluated for compliance as a group.  
@@ -20,13 +21,13 @@ In System Center Configuration Manager, baselines are used to define the configu
 
  You can create your own configuration baselines with the Configuration Manager console, and you can import configuration baselines from the following sources:  
 
--   A Best Practices configuration baseline from Microsoft or other vendors  
+- A Best Practices configuration baseline from Microsoft or other vendors  
 
--   Custom authored configuration baselines from within your own organization, but external to Configuration Manager  
+- Custom authored configuration baselines from within your own organization, but external to Configuration Manager  
 
--   Another Configuration Manager site  
+- Another Configuration Manager site  
 
- When configuration baselines are imported, unless they were originally created in the same Configuration Manager site, you will not be able to directly modify them in the Configuration Manager console. If you need to refine the configuration items to meet your business requirements, the recommended path is:  
+  When configuration baselines are imported, unless they were originally created in the same Configuration Manager site, you will not be able to directly modify them in the Configuration Manager console. If you need to refine the configuration items to meet your business requirements, the recommended path is:  
 
 1.  Create child configuration items with your custom values.  
 

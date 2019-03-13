@@ -9,6 +9,7 @@ ms.assetid: 74116a65-1ac4-48d2-bbeb-47e80a98ffdd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_OperatingSystemInstallPackage Server WMI Class
 The `SMS_OperatingSystemInstallPackage` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that serves as the unit of distribution for source files that are used in a scripted installation of a valid operating system, for example, Windows Vista, on a client computer.  
@@ -478,13 +479,13 @@ Class SMS_OperatingSystemInstallPackage : SMS_PackageBaseclass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Secured  
+- Secured  
 
--   Icon("Package.ico")  
+- Icon("Package.ico")  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- To get started using this class, see How to Add an Operating System Install Package in Configuration Manager.  
+  To get started using this class, see How to Add an Operating System Install Package in Configuration Manager.  
 
 ## Requirements  
 

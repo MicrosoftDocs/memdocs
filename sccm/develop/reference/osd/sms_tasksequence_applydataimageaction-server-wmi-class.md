@@ -9,6 +9,7 @@ ms.assetid: e790f092-2a4d-44ab-89a2-3ffb9102f7fb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_TaskSequence_ApplyDataImageAction Server WMI Class
 The `SMS_TaskSequence_ApplyDataImageAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that applies an existing data image to a target computer.  
@@ -182,21 +183,21 @@ Class SMS_TaskSequence_ApplyDataImageAction : SMS_TaskSequence_Action
 
  The following properties can be set for the target of this task sequence action:  
 
--   `DestinationDisk`  
+- `DestinationDisk`  
 
--   `DestinationPartition`  
+- `DestinationPartition`  
 
--   `DestinationLogicalDrive`  
+- `DestinationLogicalDrive`  
 
--   `DestinationVariable`  
+- `DestinationVariable`  
 
- To install to a specific disk or partition, set `DestinationDisk` and `DestinationPartition` and set the other destination properties to `null`.  
+  To install to a specific disk or partition, set `DestinationDisk` and `DestinationPartition` and set the other destination properties to `null`.  
 
- To install to a logical volume, such as c:\\, set `DestinationLogicalDrive` and set the other properties to `null`.  
+  To install to a logical volume, such as c:\\, set `DestinationLogicalDrive` and set the other properties to `null`.  
 
- `DestinationVariable` can be set to a task sequence variable that contains the destination in the form of "1,1" to target disk 1, partition 1, or contains "c:" to target a logical volume.  
+  `DestinationVariable` can be set to a task sequence variable that contains the destination in the form of "1,1" to target disk 1, partition 1, or contains "c:" to target a logical volume.  
 
- Set all the destination properties to `null` to use the "next available" formatted volume as the target.  
+  Set all the destination properties to `null` to use the "next available" formatted volume as the target.  
 
 > [!NOTE]
 >  The value supplied for the `ImageIndex` property can be problematic if your application must range-check the property against a maximum value that is greater than 0x7fffffff (2147483647). In this case, your application cannot use the range qualifier on the property.  

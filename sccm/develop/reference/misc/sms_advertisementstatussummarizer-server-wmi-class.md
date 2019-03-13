@@ -9,6 +9,7 @@ ms.assetid: bcb41ff8-561e-4f11-a1dc-e150d6b90855
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_AdvertisementStatusSummarizer Server WMI Class
 The `SMS_AdvertisementStatusSummarizer` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that summarizes the progress of each advertisement as it is advertised and run on the client computers for an individual site.  
@@ -92,56 +93,56 @@ Class SMS_AdvertisementStatusSummarizer : SMS_BaseClass
 
  Total number of users, user groups, or client computers that reported errors while running the advertised program. A program is considered in error when it produces either:  
 
--   A nonzero exit code.  
+- A nonzero exit code.  
 
--   An install status Management Information Format (MIF) file with a failure-status attribute. This file, if present, overrides an exit code.  
+- An install status Management Information Format (MIF) file with a failure-status attribute. This file, if present, overrides an exit code.  
 
- `ProgramsFailedMIF`  
- Data type: `UInt32`  
+  `ProgramsFailedMIF`  
+  Data type: `UInt32`  
 
- Access type: Read Only  
+  Access type: Read Only  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Programs failing relative to the install status MIF file.  
+  Programs failing relative to the install status MIF file.  
 
- `ProgramsStarted`  
- Data type: `UInt32`  
+  `ProgramsStarted`  
+  Data type: `UInt32`  
 
- Access type: Read Only  
+  Access type: Read Only  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Total number of users, user groups, or client computers in the site that were able to successfully start running the advertised program.  
+  Total number of users, user groups, or client computers in the site that were able to successfully start running the advertised program.  
 
- `ProgramsSucceeded`  
- Data type: `UInt32`  
+  `ProgramsSucceeded`  
+  Data type: `UInt32`  
 
- Access type: Read Only  
+  Access type: Read Only  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Total number of users (user groups) or client computers, or both, that are reporting that the advertisement ran successfully. A program is considered successful when it produces either:  
+  Total number of users (user groups) or client computers, or both, that are reporting that the advertisement ran successfully. A program is considered successful when it produces either:  
 
--   An exit code of zero.  
+- An exit code of zero.  
 
--   An install status MIF file with a success-status attribute. This file, if present, overrides an exit code.  
+- An install status MIF file with a success-status attribute. This file, if present, overrides an exit code.  
 
- `SiteCode`  
- Data type: `String`  
+  `SiteCode`  
+  Data type: `String`  
 
- Access type: Read Only  
+  Access type: Read Only  
 
- Qualifiers: [key, SizeLimit("3")]  
+  Qualifiers: [key, SizeLimit("3")]  
 
- Site code of the site that is offering the advertisement.  
+  Site code of the site that is offering the advertisement.  
 
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Read (read-only)  
+- Read (read-only)  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
 ## Requirements  
 

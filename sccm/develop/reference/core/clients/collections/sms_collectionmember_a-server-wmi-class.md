@@ -9,6 +9,7 @@ ms.assetid: a443f6b9-5dcf-4eb5-9083-4d78799ebc7b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_CollectionMember_a Server WMI Class
 The `SMS_CollectionMember_a` association Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that relates an [SMS_Collection Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) object with [SMS_Resource Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_resource-server-wmi-class.md) objects that represent the member resources of the collection.  
@@ -281,13 +282,13 @@ Class SMS_CollectionMember_a : SMS_BaseAssociation
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Association: ToInstance  
+- Association: ToInstance  
 
--   Read (read-only)  
+- Read (read-only)  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- The `CollectionID` and `ResourceID` properties can be used in a WMI Query Language (WQL) WHERE clause. However, you are limited to using an OR condition. Your query might not use the other properties in the relationship.  
+  The `CollectionID` and `ResourceID` properties can be used in a WMI Query Language (WQL) WHERE clause. However, you are limited to using an OR condition. Your query might not use the other properties in the relationship.  
 
 ## Requirements  
 

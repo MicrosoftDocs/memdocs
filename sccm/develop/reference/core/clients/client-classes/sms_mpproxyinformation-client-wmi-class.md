@@ -9,6 +9,7 @@ ms.assetid: e327907b-13c8-4025-b066-e10dbf299f78
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_MPProxyInformation Client WMI Class
 The `SMS_MPProxyInformation` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that represents information about a proxy management point.  

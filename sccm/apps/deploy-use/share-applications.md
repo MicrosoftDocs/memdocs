@@ -10,6 +10,7 @@ ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Share an application from Software Center
@@ -21,4 +22,9 @@ You can copy a hyperlink to an application in Software Center using the  ![Share
 1. Choose **Applications**, and then choose the application.
 2. Click the ![Share](media/share15.png) **Share** button.
 3. Click **Copy** in the window.
-4. Paste the URL into an email to share the application.
+4. Paste the URL into an email to share the application.  
+
+> [!TIP]  
+>  To create a link in an Outlook email, press **CTRL** + **K** and then paste the URL.  
+>  
+> By default, Outlook shows a security alert for the Software Center protocol when the recipient clicks the link. Prevent this in your environment by adding a trusted protocol key to the registry. For example, `HKCU\Software\Policies\Microsoft\Office\16.0\Common\Security\Trusted Protocols\All Applications\softwarecenter:`  

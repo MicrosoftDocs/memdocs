@@ -9,6 +9,7 @@ ms.assetid: 4c27ec03-c358-4244-a5c5-d0784e5b4713
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # General Configuration Item Example 1
 The following example is a general configuration item schema example that checks the registry to see whether, in this case, remote control is enabled in System Center Configuration Manager.  

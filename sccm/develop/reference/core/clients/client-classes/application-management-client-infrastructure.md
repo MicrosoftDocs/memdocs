@@ -9,6 +9,7 @@ ms.assetid: 0d22ecc3-d5f9-4833-a711-044c10d5e93a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Application Management Client Infrastructure
 This section provides reference information for the Configuration Manager application management client infrastructure.  

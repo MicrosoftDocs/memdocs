@@ -9,6 +9,7 @@ ms.assetid: 307cb85f-2449-458d-87db-95bf2c5196db
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Compliance Settings Setup and Configuration
 This section contains topics about desired configuration management setup and configuration in System Center Configuration Manager.  

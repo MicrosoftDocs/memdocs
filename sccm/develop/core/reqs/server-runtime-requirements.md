@@ -9,6 +9,7 @@ ms.assetid: 567e9945-ad60-4d10-8f67-edc4b31ee914
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Server Runtime Requirements
 Microsoft System Center Configuration Manager server applications that are developed by using the Configuration Manager SDK, have the following runtime requirements.  
@@ -26,13 +27,13 @@ Microsoft System Center Configuration Manager server applications that are devel
 ## Configuration Manager Console User Interface Extension  
  Programming System Center Configuration Manager console extensions has the following requirements:  
 
--   Installed Configuration Manager site server  
+- Installed Configuration Manager site server  
 
--   Installed Configuration Manager console  
+- Installed Configuration Manager console  
 
--   .NET Framework 4.0  
+- .NET Framework 4.0  
 
- For more information, see [Configuration Manager Console Extension](../../../develop/core/servers/console/console-extension.md)  
+  For more information, see [Configuration Manager Console Extension](../../../develop/core/servers/console/console-extension.md)  
 
 ## VBScript  
 

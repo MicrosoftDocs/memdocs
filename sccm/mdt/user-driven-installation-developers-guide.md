@@ -55,19 +55,19 @@ Figure 1. Relationship between the UDI Wizard and UDI Wizard Designer
 
  At a conceptual level, UDI development includes the creation of:  
 
--   **Custom wizard pages**. Wizard pages are displayed in the UDI Wizard and collect the information required to complete the deployment process. You create wizard pages using C++ in Microsoft Visual Studio®. The custom wizard pages are implemented as DLLs that the UDI Wizard reads. The UDI software development kit (SDK) includes an example of how to create custom wizard pages.  
+- **Custom wizard pages**. Wizard pages are displayed in the UDI Wizard and collect the information required to complete the deployment process. You create wizard pages using C++ in Microsoft Visual Studio®. The custom wizard pages are implemented as DLLs that the UDI Wizard reads. The UDI software development kit (SDK) includes an example of how to create custom wizard pages.  
 
--   **Custom wizard page editors**. You use wizard page editors to configure the behavior of your custom wizard page. The custom wizard page editors are implemented as DLLs that the UDI Wizard Designer reads. You create wizard page editors using:  
+- **Custom wizard page editors**. You use wizard page editors to configure the behavior of your custom wizard page. The custom wizard page editors are implemented as DLLs that the UDI Wizard Designer reads. You create wizard page editors using:  
 
-    -   [WPF](http://msdn.microsoft.com/library/ms754130.aspx) version 4.0  
+  - [WPF](http://msdn.microsoft.com/library/ms754130.aspx) version 4.0  
 
-    -   [Microsoft Prism](http://compositewpf.codeplex.com/) version 4.0  
+  - [Microsoft Prism](http://compositewpf.codeplex.com/) version 4.0  
 
-    -   [Microsoft Unity Application Block](http://unity.codeplex.com/) (Unity) version 2.1  
+  - [Microsoft Unity Application Block](http://unity.codeplex.com/) (Unity) version 2.1  
 
-     MDT includes all the assemblies necessary to create a custom wizard page editor for use in the UDI Wizard Designer. The UDI SDK includes an example of how to create custom wizard page editors.  
+    MDT includes all the assemblies necessary to create a custom wizard page editor for use in the UDI Wizard Designer. The UDI SDK includes an example of how to create custom wizard page editors.  
 
- In addition, the UDI Wizard Designer consumes supporting wizard page editor configuration files. You create the wizard page editor configuration files as a part of the process for creating your custom wizard pages and custom wizard page editors. The UDI Wizard Designer creates the necessary XML information in the UDI Wizard configuration file and corresponding .app file.  
+  In addition, the UDI Wizard Designer consumes supporting wizard page editor configuration files. You create the wizard page editor configuration files as a part of the process for creating your custom wizard pages and custom wizard page editors. The UDI Wizard Designer creates the necessary XML information in the UDI Wizard configuration file and corresponding .app file.  
 
 ### Preparing the UDI Development Environment  
  Before you begin creating your own custom wizard pages and wizard page editors, perform the following steps to prepare the UDI development environment:  
@@ -364,27 +364,27 @@ Figure 2. Folder structure for UDI development
 
  The top-level elements in the Config.xml file are the  
 
--   [DLLs](#DLLs) element  
+- [DLLs](#DLLs) element  
 
--   [Style](#Style) element  
+- [Style](#Style) element  
 
--   [Pages](#Pages) element  
+- [Pages](#Pages) element  
 
--   [StageGroups](#StageGroups) element  
+- [StageGroups](#StageGroups) element  
 
- For more information about the schema of the UDI Wizard configuration file and each of these elements, see [UDI Wizard Configuration File Schema Reference](#UDIWizardConfigurationFileSchemaReference).  
+  For more information about the schema of the UDI Wizard configuration file and each of these elements, see [UDI Wizard Configuration File Schema Reference](#UDIWizardConfigurationFileSchemaReference).  
 
- The UDI Wizard scans the **DLLs** element looking for the .dll files to load. In the example, two .dll files are listed: SamplePage.dll and SharedPages.dll. These .dll files must reside in the same folder as OSDSetupWizard.exe—the Tools\\*platform* folder (where *platform* is x86 for the 32-bit version or x64 for the 64-bit version).  
+  The UDI Wizard scans the **DLLs** element looking for the .dll files to load. In the example, two .dll files are listed: SamplePage.dll and SharedPages.dll. These .dll files must reside in the same folder as OSDSetupWizard.exe—the Tools\\*platform* folder (where *platform* is x86 for the 32-bit version or x64 for the 64-bit version).  
 
- The UDI Wizard scans the **Pages** element looking for the pages that are defined. In the example, two pages are defined: **Custom** and **SummaryPage**. The **Type** attribute of the **Page** element is defined in the PageClassIDs.h file and uniquely defines the type of your custom page.  
+  The UDI Wizard scans the **Pages** element looking for the pages that are defined. In the example, two pages are defined: **Custom** and **SummaryPage**. The **Type** attribute of the **Page** element is defined in the PageClassIDs.h file and uniquely defines the type of your custom page.  
 
- In the example, the defined type is **Microsoft.SamplePage.LocationPage**. For your custom page, substitute the following to avoid any potential conflicts with other pages you may create in the future:  
+  In the example, the defined type is **Microsoft.SamplePage.LocationPage**. For your custom page, substitute the following to avoid any potential conflicts with other pages you may create in the future:  
 
--   Your organization name in the place of **Microsoft**.  
+- Your organization name in the place of **Microsoft**.  
 
--   Your project name in the place of **SamplePage**.  
+- Your project name in the place of **SamplePage**.  
 
--   Your custom wizard page name in the place of **LocationPage**.  
+- Your custom wizard page name in the place of **LocationPage**.  
 
 #####  <a name="UDIWizardLoadstheDLLforCustomWizardPage"></a> Step 2: The UDI Wizard Loads the DLL for the Custom Wizard Page  
  When the UDI Wizard loads your DLL, it calls the **RegisterFactories** function, which must be implemented in your .dll file. In the example, this function is implemented in the dllmain.ccp file. Each wizard page you create must implement the **RegisterFactories** function.  
@@ -411,39 +411,39 @@ Figure 2. Folder structure for UDI development
 
  For a list of the available:  
 
--   Template classes for wizard pages, see [Wizard Page Helper Classes](#WizardPageHelperClasses)  
+- Template classes for wizard pages, see [Wizard Page Helper Classes](#WizardPageHelperClasses)  
 
--   Interfaces for the wizard page template classes, see [Wizard Page Interfaces](#WizardPageInterfaces)  
+- Interfaces for the wizard page template classes, see [Wizard Page Interfaces](#WizardPageInterfaces)  
 
- The custom wizard page in the example is derived from the [WizardPageImpl Template Class](#WizardPageImplTemplateClass) and implements the [IWizardPage Interface](#IWizardPageInterface). In addition, the custom wizard page implements the **IFieldCallback** interface. Both of these are implemented in the LocationPage.cpp file.  
+  The custom wizard page in the example is derived from the [WizardPageImpl Template Class](#WizardPageImplTemplateClass) and implements the [IWizardPage Interface](#IWizardPageInterface). In addition, the custom wizard page implements the **IFieldCallback** interface. Both of these are implemented in the LocationPage.cpp file.  
 
- The example custom wizard page overrides the following methods:  
+  The example custom wizard page overrides the following methods:  
 
--   **OnWindowCreated**. The **OnWindowCreated** method in the example wizard page calls the following methods:  
+- **OnWindowCreated**. The **OnWindowCreated** method in the example wizard page calls the following methods:  
 
-    -   [AddField](#AddField). This method relates the **IDC_COMBO_LOCATION** box control in the **IDD_LOCATION_PAGE** resource with the [Data](#Data) element named **Location** in the Config.xml file.  
+  - [AddField](#AddField). This method relates the **IDC_COMBO_LOCATION** box control in the **IDD_LOCATION_PAGE** resource with the [Data](#Data) element named **Location** in the Config.xml file.  
 
-         In addition to the **AddField** method, you could use the [AddRadioGroup](#AddRadioGroup) and [AddToGroup](#AddToGroup) methods to support other controls and behaviors.  
+     In addition to the **AddField** method, you could use the [AddRadioGroup](#AddRadioGroup) and [AddToGroup](#AddToGroup) methods to support other controls and behaviors.  
 
-        > [!NOTE]
-        >  Ensure that you call the [AddField](#AddField), [AddRadioGroup](#AddRadioGroup), or [AddToGroup](#AddToGroup) method prior to calling the [InitFields](#InitFields) method.  
+    > [!NOTE]
+    >  Ensure that you call the [AddField](#AddField), [AddRadioGroup](#AddRadioGroup), or [AddToGroup](#AddToGroup) method prior to calling the [InitFields](#InitFields) method.  
 
-    -   [InitFields](#InitFields). Use this method to initialize the fields (controls) that you have added to the form. The pointer of the page is a parameter. In the example, the **this** pointer is passed, which refers to the current page.  
+  - [InitFields](#InitFields). Use this method to initialize the fields (controls) that you have added to the form. The pointer of the page is a parameter. In the example, the **this** pointer is passed, which refers to the current page.  
 
-        > [!NOTE]
-        >  To support the use of the **this** pointer, you must implement the **IFieldCallback** interface in addition to the interfaces that the [WizardPageImpl Template Class](#WizardPageImplTemplateClass) supports.  
+    > [!NOTE]
+    >  To support the use of the **this** pointer, you must implement the **IFieldCallback** interface in addition to the interfaces that the [WizardPageImpl Template Class](#WizardPageImplTemplateClass) supports.  
 
-         The **IFieldCallback** interface calls the **SetFieldDefault** method, which is used to set the default values for controls other than text box and check box controls. In the example, the **SetFieldDefault** method sets the initial index of the combo box control based on the default value specified in the **Default** element for the [Field](#Field) element in the Config.xml file.  
+     The **IFieldCallback** interface calls the **SetFieldDefault** method, which is used to set the default values for controls other than text box and check box controls. In the example, the **SetFieldDefault** method sets the initial index of the combo box control based on the default value specified in the **Default** element for the [Field](#Field) element in the Config.xml file.  
 
-     The **OnWindowCreated** method sets up the form controller using the [IFormController interface](#IFormController-Interface). For more information about setting up the form controller, see [Setting up the Form](#SettingUptheForm).  
+    The **OnWindowCreated** method sets up the form controller using the [IFormController interface](#IFormController-Interface). For more information about setting up the form controller, see [Setting up the Form](#SettingUptheForm).  
 
--   **InitLocations**. This method populates the combo box from the list of locations in the Config.xml file. The [Data](#Data) element and child [DataItem](#DataItem) elements the Confg.xml file provide the list of possible values.  
+- **InitLocations**. This method populates the combo box from the list of locations in the Config.xml file. The [Data](#Data) element and child [DataItem](#DataItem) elements the Confg.xml file provide the list of possible values.  
 
--   **OnNextClicked**. This method performs the following tasks:  
+- **OnNextClicked**. This method performs the following tasks:  
 
-    -   Updates the **TSLocation** task sequence variable with the value selected in the combo box using the **SaveFields** method  
+  -   Updates the **TSLocation** task sequence variable with the value selected in the combo box using the **SaveFields** method  
 
-    -   Adds information that will be shown on the **Summary** page using the **SaveFields** method  
+  -   Adds information that will be shown on the **Summary** page using the **SaveFields** method  
 
 #####  <a name="TheNextButtonisClickedinCustomWizardPage"></a> Step 4: The Next Button Is Clicked in the Custom Wizard Page  
  When the user completes the fields on the custom wizard page, he or she clicks **Next**, which calls the **OnNextClicked** method. The **OnNextClicked** method performs any necessary tasks before proceeding to the next wizard page, such as recording any configuration changes made on the custom wizard page.  
@@ -479,26 +479,26 @@ Figure 2. Folder structure for UDI development
 
  The following is a list of the typical configuration settings that you can manage using the UDI Wizard Designer:  
 
--   **Field**. Use fields allow users to provide input. Fields appear as [Field](#Field) elements in the UDI Wizard configuration file (UDIWizard_Config.xml), which contains the configuration settings for each field. The corresponding wizard page editor needs to provide a method for editing the field configuration settings for the field using the [FieldElementControl](#FieldElementControl).  
+- **Field**. Use fields allow users to provide input. Fields appear as [Field](#Field) elements in the UDI Wizard configuration file (UDIWizard_Config.xml), which contains the configuration settings for each field. The corresponding wizard page editor needs to provide a method for editing the field configuration settings for the field using the [FieldElementControl](#FieldElementControl).  
 
--   **Properties**. Setters help create properties for entities on the page, such as pages in the [Page](#Page) element, fields in the [Field](#Field) element, or data in the [Data](#Data) or [DataItem](#DataItem) elements. You configure properties in the [Setter]() elements. Add a separate [Setter]() element for each property you want to define. You edit the properties using the [SetterControl](#SetterControl) and configure other [Setter]() elements using other controls.  
+- **Properties**. Setters help create properties for entities on the page, such as pages in the [Page](#Page) element, fields in the [Field](#Field) element, or data in the [Data](#Data) or [DataItem](#DataItem) elements. You configure properties in the [Setter]() elements. Add a separate [Setter]() element for each property you want to define. You edit the properties using the [SetterControl](#SetterControl) and configure other [Setter]() elements using other controls.  
 
--   **Data**. Data is used to store information for use by the wizard page and other components. You can define data for pages or fields using the [Data](#Data) or [DataItem](#DataItem) elements. The data can be defined in a flat or hierarchical structure through the proper use of the [Data](#Data) or [DataItem](#DataItem) elements. The Config.xml in the example in the SDK shows how to build flat data structures.  
+- **Data**. Data is used to store information for use by the wizard page and other components. You can define data for pages or fields using the [Data](#Data) or [DataItem](#DataItem) elements. The data can be defined in a flat or hierarchical structure through the proper use of the [Data](#Data) or [DataItem](#DataItem) elements. The Config.xml in the example in the SDK shows how to build flat data structures.  
 
- The custom wizard page editor that you create must be able to manage these configuration settings.  
+  The custom wizard page editor that you create must be able to manage these configuration settings.  
 
 ####  <a name="ReviewEditorPageExample"></a> Review the EditorPage Example  
  The EditorPage example is used to configure the configuration settings for the **SamplePage** wizard page in the UDI Wizard configuration file. The EditorPage example has the following primary components:  
 
--   UI to configure the **Location** combo box settings  
+- UI to configure the **Location** combo box settings  
 
--   UI to add or edit a location in the list of possible locations, which are shown in the **Location** combo box  
+- UI to add or edit a location in the list of possible locations, which are shown in the **Location** combo box  
 
--   Configuration settings read from and saved to the UDI Wizard configuration file  
+- Configuration settings read from and saved to the UDI Wizard configuration file  
 
--   Supporting code for the other components  
+- Supporting code for the other components  
 
- Review the EditorPage example in Visual Studio by performing the following steps:  
+  Review the EditorPage example in Visual Studio by performing the following steps:  
 
 1.  Review how the **SampleEditor** wizard page editor is loaded and initialized in the UDI Wizard Designer as described in [Review Wizard Page Editor Loading and Initialization](#ReviewWizardPageEditorLoadingInitialization).  
 
@@ -538,7 +538,7 @@ Figure 2. Folder structure for UDI development
 
  The **Binding** parameters in the XAML file bind the fields on the sample page editor with the information in the UDI wizard configuration file. For example, the following code ties the **Default value** text box with the [Default](#Default) element in the UDI wizard configuration file (Config.xml in the example):  
 
-```  
+```xml
 <TextBox Text="{Binding FieldData.DefaultValue,  
  UpdateSourceTrigger=PropertyChanged,  
  Mode=TwoWay}"/>  
@@ -588,11 +588,11 @@ Figure 2. Folder structure for UDI development
 ######  <a name="ReviewCodeUsedtoManageConfigurationInformation"></a> Review the Code Used to Manage Configuration Information  
  The configuration information for your custom wizard page is stored in the UDI Wizard configuration file, which is the:  
 
--   Config.xml file in the example provided with the UDI SDK (This file contains only the configuration settings for the example.)  
+- Config.xml file in the example provided with the UDI SDK (This file contains only the configuration settings for the example.)  
 
--   UDIWizard_Config.xml file provided with MDT, stored in the *installation_folder*\Templates\Distribution\Scripts folder (where *installation_folder* is the folder in which you installed MDT); this file contains the configuration settings for all the built-in wizard pages and stages  
+- UDIWizard_Config.xml file provided with MDT, stored in the *installation_folder*\Templates\Distribution\Scripts folder (where *installation_folder* is the folder in which you installed MDT); this file contains the configuration settings for all the built-in wizard pages and stages  
 
- In the SampleEditor example, the **Locations** routine helps manage the configuration information and is located in the LocationPageEditorViewModel.cs file. The **Locations** routine returns a list of the locations from the UDI Wizard configuration file. Specifically, the list returned contains an item for each [DataItem](#DataItem) element in the UDI Wizard configuration file.  
+  In the SampleEditor example, the **Locations** routine helps manage the configuration information and is located in the LocationPageEditorViewModel.cs file. The **Locations** routine returns a list of the locations from the UDI Wizard configuration file. Specifically, the list returned contains an item for each [DataItem](#DataItem) element in the UDI Wizard configuration file.  
 
 ## Creating Custom UDI Wizard Pages  
  The high-level process for creating custom UDI wizard pages is as follows:  
@@ -690,7 +690,7 @@ Figure 2. Folder structure for UDI development
 
 4.  Create a [Task](#Task) element under the [TaskLibrary](#TaskLibrary) element in the UDI Wizard Designer configuration file similar to the following excerpt:  
 
-    ```  
+    ```xml
     <Task DLL="OSDRefreshWizard.dll" Description="Discovers supported applications for install." Type="Microsoft.OSDRefresh.AppDiscoveryTask" Name="Application Discovery">  
        <TaskItem Type="Setter" Name="Status Bitmap">  
           <Param Name="BitmapFilename"/>  
@@ -719,50 +719,50 @@ Figure 2. Folder structure for UDI development
 
  **To create custom UDI validators**  
 
-1.  Write code that creates a subclass of the **BaseValidator** class and implements the following methods:  
+1. Write code that creates a subclass of the **BaseValidator** class and implements the following methods:  
 
-    -   **Init(IControl \*pControl, IWizardPageContainer \*pContainer, IStringProperties \*pProperties)**. The form controller calls the **Init** member to initialize the validator. This method must call the **Init** method for the **BaseValidator** class. It typically reads any properties set for the validator from the UDI Wizard configuration file. For example, the **InvalidCharactersValidator** validator retrieves the value of the **InvalidChars** property using this method.  
+   - **Init(IControl \*pControl, IWizardPageContainer \*pContainer, IStringProperties \*pProperties)**. The form controller calls the **Init** member to initialize the validator. This method must call the **Init** method for the **BaseValidator** class. It typically reads any properties set for the validator from the UDI Wizard configuration file. For example, the **InvalidCharactersValidator** validator retrieves the value of the **InvalidChars** property using this method.  
 
-    -   **IsValid**. The form controller calls this method to see whether the control contains valid text. The following is an example of the **IsValid** method for a validator that validates that the field is not empty:  
+   - **IsValid**. The form controller calls this method to see whether the control contains valid text. The following is an example of the **IsValid** method for a validator that validates that the field is not empty:  
 
-        ```  
-        BOOL IsValid(LPBSTR pMessage)  
-        {  
-            __super::IsValid(pMessage);  
+     ```cpp
+     BOOL IsValid(LPBSTR pMessage)  
+     {  
+         __super::IsValid(pMessage);  
 
-            _bstr_t text;  
-            m_pText->GetText(text.GetAddress());  
-            return (text.length() > 0);  
-        }  
-        ```  
+         _bstr_t text;  
+         m_pText->GetText(text.GetAddress());  
+         return (text.length() > 0);  
+     }  
+     ```  
 
-    -   **Init(IControl \*pControl, LPCTSTR message)**. The form controller calls this member for each keystroke and other events so that the validator can validate the contents of the control and updated messages at the bottom of the wizard page (or clear them).  
+   - **Init(IControl \*pControl, LPCTSTR message)**. The form controller calls this member for each keystroke and other events so that the validator can validate the contents of the control and updated messages at the bottom of the wizard page (or clear them).  
 
      Typically, these are the only methods that you need to override. However, depending on the validator, you may need to override other methods in the subclass of the **BaseValidator** class you create. For more information about these other methods, see the **BaseValidator** class.  
 
-2.  Write code that registers the custom task class with the registry factory.  
+2. Write code that registers the custom task class with the registry factory.  
 
-3.  Build the solution for your custom task.  
+3. Build the solution for your custom task.  
 
-    > [!NOTE]
-    >  Ensure that the version of the DLL you create is the same processor platform as the installation of MDT. For example, if you install the 64-bit version of MDT, then build a 64-bit version of your custom UDI task.  
+   > [!NOTE]
+   >  Ensure that the version of the DLL you create is the same processor platform as the installation of MDT. For example, if you install the 64-bit version of MDT, then build a 64-bit version of your custom UDI task.  
 
-4.  Create a [Validator](#Validator) element under the **ValidatorLibrary** element in the UDI Wizard Designer configuration file similar to the following excerpt:  
+4. Create a [Validator](#Validator) element under the **ValidatorLibrary** element in the UDI Wizard Designer configuration file similar to the following excerpt:  
 
-    ```  
-    <Validator   
-    <Validator DLL="" Description="Must follow a pre-defined pattern" Type="Microsoft.Wizard.Validation.RegEx" Name="NamedPattern">  
-       <Param Description="Enter the message you want displayed when the text in this field doesn't match the pattern:" Name="Message" DisplayName="Message"/>  
-       <Param Description="The name of a pre-defined regular expression pattern. Must be Username, ComputerName, or Workgroup" Name="NamedPattern" DisplayName="Named Pattern"/>  
-    </Validator>  
-    ```  
+   ```xml
+   <Validator   
+   <Validator DLL="" Description="Must follow a pre-defined pattern" Type="Microsoft.Wizard.Validation.RegEx" Name="NamedPattern">  
+      <Param Description="Enter the message you want displayed when the text in this field doesn't match the pattern:" Name="Message" DisplayName="Message"/>  
+      <Param Description="The name of a pre-defined regular expression pattern. Must be Username, ComputerName, or Workgroup" Name="NamedPattern" DisplayName="Named Pattern"/>  
+   </Validator>  
+   ```  
 
-    > [!WARNING]
-    >  All [Validator](#Validator) elements should include the **Message** parameter. Specify all other parameters as required by the validator. For example, in the previous excerpt, the **NamedPattern** parameter is used to specify a parameter for the name of a predefined regular expression pattern.  
+   > [!WARNING]
+   >  All [Validator](#Validator) elements should include the **Message** parameter. Specify all other parameters as required by the validator. For example, in the previous excerpt, the **NamedPattern** parameter is used to specify a parameter for the name of a predefined regular expression pattern.  
 
-5.  Copy the UDI Wizard Designer configuration file created in the previous step to the *installation_folder*\Bin\Config folder (where *installation_folder* is the folder in which you installed MDT).  
+5. Copy the UDI Wizard Designer configuration file created in the previous step to the *installation_folder*\Bin\Config folder (where *installation_folder* is the folder in which you installed MDT).  
 
-6.  Copy the DLL for your custom task to the *installation_folder*\Templates\Distribution\Tools\ platform folder (where *installation_folder* is the folder in which you installed MDT and *platform* is **x86** for the 32-bit version or **x64** is for the 64-bit version).  
+6. Copy the DLL for your custom task to the *installation_folder*\Templates\Distribution\Tools\ platform folder (where *installation_folder* is the folder in which you installed MDT and *platform* is **x86** for the 32-bit version or **x64** is for the 64-bit version).  
 
 ## UDI Wizard Reference  
 
@@ -774,7 +774,7 @@ Figure 2. Folder structure for UDI development
 
  Assuming that you have written your page as a subclass of **WizardPageImpl**, you can create a new instance of a **WmiRepoistory** like this:  
 
-```  
+```cpp
 PWmiRepository pWmi;  
 CreateInstance(Container(), ID_WmiRepository, &pWmi);  
 ```  
@@ -865,7 +865,7 @@ CreateInstance(Container(), ID_WmiRepository, &pWmi);
 
  Because this validator requires two controls, it needs more setup than other validators. The setup might look something like this:  
 
-```  
+```cpp
 Form()->AddToGroup(IDC_EDIT_PASSWORD, IDC_EDIT_PASSWORD2);  
 PValidator pValidator;  
 Form()->AddValidator(IDC_EDIT_PASSWORD, ID_PasswordValidator, pMessage, &pValidator);  
@@ -896,7 +896,7 @@ pValidator->SetProperty(0, pPassword2);
 #### FactoryRegistry Component  
  This component keeps track of all class factories and services. It implements the **IFactoryRegistry** interface and is available indirectly through your page’s **Container** method. In addition, the registry loads extension DLLs. After it loads a DLL, the registry looks for an exported function called **RegisterFactories**. You must implement this function and in it register the class factories for your pages, tasks, and validators (and any other class factories you want to register). Here is an example from the sample project:  
 
-```  
+```cpp
 extern "C" __declspec(dllexport) void RegisterFactories(IFactoryRegistry *factories)  
 {  
 Register<LocationPageFactory>(ID_LocationPage, factories);  
@@ -938,7 +938,7 @@ Register<LocationPageFactory>(ID_LocationPage, factories);
 
  The following is an excerpt from the LocationPage.h file in the sample project to define the **ClassFactoryImpl** class.  
 
-```  
+```cpp
 #pragma once  
 
 #include "ClassFactoryImpl.h"  
@@ -952,7 +952,7 @@ protected:
 
  The following is an excerpt from the LocationPage.cpp file in the sample wizard page used to define the class factory for the page.  
 
-```  
+```cpp
 IUnknown *LocationPageFactory::CreateNewInstance()  
 {  
     return static_cast<IWizardPage *>(new LocationPage);  
@@ -962,7 +962,7 @@ IUnknown *LocationPageFactory::CreateNewInstance()
 ####  <a name="InterfaceTemplateClass"></a> Interface Template Class  
  Use this template class when you want to build a component that implements more than one interface—for example:  
 
-```  
+```cpp
 classLocationPage :public Interface<IFieldCallback, WizardPageImpl<IDD_LOCATION_PAGE>>  
 ```  
 
@@ -971,31 +971,31 @@ classLocationPage :public Interface<IFieldCallback, WizardPageImpl<IDD_LOCATION_
 ####  <a name="PathHelperClass"></a> Path Helper Class  
  This class provides common file/directory operations:  
 
-```  
+```cpp
 static inline std::wstring GetModulePath(HINSTANCE hModule)  
 ```  
 
  It also returns the full path to the .exe or .dll file with the instance handle that you provide to this method:  
 
-```  
+```cpp
 static inline std::wstring GetModuleFilename(HINSTANCE hModule)  
 ```  
 
  The class returns the full path and file name of the .exe and .dll file with the instance handle that you provide to this method:  
 
-```  
-static inline std::wstring GetDirecotryName(LPCWSTR fullName)  
+```cpp
+static inline std::wstring GetDirectoryName(LPCWSTR fullName)  
 ```  
 
  . . . or just the path while stripping the file name:  
 
-```  
+```cpp
 static inline std::wstring GetFileName(LPCWSTR fullName)  
 ```  
 
  Given a path with a file name, the path helper class returns the file name only:  
 
-```  
+```cpp
 static inline std::wstring Combine(LPCWSTR path, LPCWSTR name)  
 ```  
 
@@ -1004,7 +1004,7 @@ static inline std::wstring Combine(LPCWSTR path, LPCWSTR name)
 ####  <a name="PointerTemplateClass"></a> Pointer Template Class  
  This class is defined in Pointer.h. Because COM components use reference counting for lifetime management, it is important that you always release interfaces when you are done with them. Microsoft provides a template class that handles the lifetime automatically. For example, if you want a smart pointer for an XML interface, you could write something like this:  
 
-```  
+```cpp
 Pointer<IXMLDOMNode> pNewChild  
 pXmlDom->CreateNode(NODE_ELEMENT, L"MyElement", L"", &pNewChild);  
 ```  
@@ -1013,7 +1013,7 @@ pXmlDom->CreateNode(NODE_ELEMENT, L"MyElement", L"", &pNewChild);
 
  In addition, the **Pointer** smart pointer class calls **QueryInterface** to retrieve other interfaces for you. For example, when the factory registry creates a new instance of a component, it has code like this:  
 
-```  
+```cpp
 PWizardComponent pComp = pUnknown;  
 if (pComp != nullptr)  
     pComp->SetContainer(m_pContainer);  
@@ -1027,7 +1027,7 @@ if (pComp != nullptr)
 ####  <a name="StringUtilHelperClass"></a> StringUtil Helper Class  
  This class is defined in Utilities.h and provides helper methods that make it easier to work with strings:  
 
-```  
+```cpp
 static inline int CompareIgnore(LPCWSTR first, LPCWSTR second)  
 ```  
 
@@ -1043,14 +1043,14 @@ static inline int CompareIgnore(LPCWSTR first, LPCWSTR second)
 
  Here is an example:  
 
-```  
+```cpp
 static inline std::wstring Format(LPCWSTR input, int index, LPCWSTR value)  
 static inline std::wstring Format(LPCWSTR input, int index, DWORD value)  
 ```  
 
  These methods are a bit like the Microsoft .NET **Format** methods in the sense that parameters are in the form of **{0}**. However, they do not perform any formatting of the input—just substitution:  
 
-```  
+```cpp
 static inline std::wstring Printf(std::wstring format, I val)  
 static inline std::wstring Printf(std::wstring format, I val1, J val2)  
 static inline std::wstring Printf(std::wstring format, I val1, J val2, K val3)  
@@ -1062,7 +1062,7 @@ static inline std::wstring Printf(std::wstring format, I val1, J val2, K val3, L
 ####  <a name="SubInterfaceTemplateClass"></a> SubInterface Template Class  
  This base class makes it easier to implement a component that supports an interface that itself inherits from another interface. For example, the **ICheckBox** interface inherits from **IControl**. Here is how this class is used to define the **CheckBoxWrapper**:  
 
-```  
+```cpp
 classCheckBoxWrapper :public SubInterface<IControl, UnknownImpl<ICheckBox> >  
 ```  
 
@@ -1071,7 +1071,7 @@ classCheckBoxWrapper :public SubInterface<IControl, UnknownImpl<ICheckBox> >
 ####  <a name="UnknownImplTemplateClass"></a> UnknownImpl Template Class  
  This class is defined in UnknownImpl.h and handles most of the details of creating a COM component. Here is an example of how you would use this base class:  
 
-```  
+```cpp
 classDirectory :public UnknownImpl<IDirectory>  
 ```  
 
@@ -1082,7 +1082,7 @@ classDirectory :public UnknownImpl<IDirectory>
 
  As an example, here is how the **CopyFilesTask** component is defined:  
 
-```  
+```cpp
 classCopyFilesTask :public WizardComponent<ITask>  
 {  
     ...  
@@ -1095,7 +1095,7 @@ classCopyFilesTask :public WizardComponent<ITask>
 ####  <a name="WizardPageImplTemplateClass"></a> WizardPageImpl Template Class  
  Use this class as the base class for your custom pages—for example:  
 
-```  
+```cpp
 class LocationPage :public WizardPageImpl<IDD_LOCATION_PAGE>  
 ```  
 
@@ -1104,7 +1104,7 @@ class LocationPage :public WizardPageImpl<IDD_LOCATION_PAGE>
 ###  <a name="WizardPageInterfaces"></a> Wizard Page Interfaces  
  The UDI Wizard uses interfaces to access the different controls on your page. Within you page, you use the **GetControlWrapper** function to retrieve a control wrapper. Here is an example:  
 
-```  
+```cpp
 PStaticText pFormat;  
 GetControlWrapper(View(), IDC_CHECK_PARTITION, CONTROL_STATIC_TEXT, &pFormat);  
 ```  
@@ -1113,7 +1113,7 @@ GetControlWrapper(View(), IDC_CHECK_PARTITION, CONTROL_STATIC_TEXT, &pFormat);
 
 #### IADHelper Interface  
 
-```  
+```cpp
 __interfaceIADHelper : IUnknown  
 {  
     HRESULT Init(ILogger *pLogger);  
@@ -1149,7 +1149,7 @@ __interfaceIADHelper : IUnknown
 
 #### IBackgroundTask Interface  
 
-```  
+```cpp
 __interface IBackgroundTask : IUnknown  
 {  
     HRESULT Init(ITask *pTask, int id, IBackgroundCallback *pCallback);  
@@ -1226,7 +1226,7 @@ __interface IBackgroundTask : IUnknown
 
 #### ICheckBox Interface  
 
-```  
+```cpp
 __interface ICheckBox : IControl  
 {  
     void Check(BOOL check);  
@@ -1242,7 +1242,7 @@ __interface ICheckBox : IControl
 
 #### IComboBox Interface  
 
-```  
+```cpp
 __interface IComboBox : IControl  
 {  
     HRESULT Bind([in] IBindableList *pList);  
@@ -1277,7 +1277,7 @@ __interface IComboBox : IControl
 
 #### IControl Interface  
 
-```  
+```cpp
 __interface IControl : IUnknown  
 {  
     HRESULT SetEnable(BOOL enable);  
@@ -1300,7 +1300,7 @@ __interface IControl : IUnknown
 
 #### ICpuInfo Interface  
 
-```  
+```cpp
 __interface ICpuInfo : IUnknown  
 {  
     BOOL Is64Bit(void);  
@@ -1312,7 +1312,7 @@ __interface ICpuInfo : IUnknown
 
 ##### IDirectory Interface  
 
-```  
+```cpp
 __interface IDirectory : IUnknown  
 {  
     BOOL FileExists(LPCWSTR name);  
@@ -1339,7 +1339,7 @@ __interface IDirectory : IUnknown
 ###### DWORD FoundAttributes(void)  
  This method returns the attribute for the most recent found file or directory. You can use code as follows to test whether it is a directory:  
 
-```  
+```cpp
 pDirectory->FoundAttributes() & FILE_ATTRIBUTE_DIRECTORY  
 ```  
 
@@ -1351,7 +1351,7 @@ pDirectory->FoundAttributes() & FILE_ATTRIBUTE_DIRECTORY
 
 #### IDomainJoinValidator Interface  
 
-```  
+```cpp
 __interface IDomainJoinValidator : IUnknown  
 {  
     HRESULT Init(ILogger *pLogger, IWizardPageContainer *pContainer, IStaticText *pUsername, IStaticText *pPassword, IStaticText *pComputerName);  
@@ -1384,7 +1384,7 @@ __interface IDomainJoinValidator : IUnknown
 
 #### IDriveList Interface  
 
-```  
+```cpp
 __interface IDriveList : IUnknown  
 {  
     HRESULT Init(IWmiRepository *pWmi);  
@@ -1405,7 +1405,7 @@ __interface IDriveList : IUnknown
 ##### HRESULT SetWhereClause(LPCTSTR whereClause)  
  This method allows you to add text that will appear as a “where” clause in the query. For example, the following line returns only USB drives:  
 
-```  
+```cpp
 pDrives->SetWhereClause(L"WHERE InterfaceType='USB'");  
 ```  
 
@@ -1445,7 +1445,7 @@ pDrives->SetWhereClause(L"WHERE InterfaceType='USB'");
 
 #### IImageList Interface  
 
-```  
+```cpp
 __interface IImageList  
 {  
     HRESULT CreateImageList(int width, int height, UINT flags);  
@@ -1475,7 +1475,7 @@ __interface IImageList
 
 #### IListView Interface  
 
-```  
+```cpp
 __interface IListView : IControl  
 {  
     int AddItem([in] LPCTSTR text);  
@@ -1520,7 +1520,7 @@ __interface IListView : IControl
 ##### void SetExtendedStyle(DWORD style)  
  This method allows you to set extended styles on the list box—for example:  
 
-```  
+```cpp
 m_pList->SetExtendedStyle(LVS_EX_FULLROWSELECT);  
 ```  
 
@@ -1550,7 +1550,7 @@ m_pList->SetExtendedStyle(LVS_EX_FULLROWSELECT);
 
 #### IProgressBar Interface  
 
-```  
+```cpp
 __interface IProgressBar : IControl  
 {  
     HRESULT SetPercentage(int position);  
@@ -1569,7 +1569,7 @@ __interface IProgressBar : IControl
 
 #### IRadioButton Interface  
 
-```  
+```cpp
 __interface IRadioButton : IControl  
 {  
 public:  
@@ -1597,7 +1597,7 @@ public:
 
 #### IStaticText Interface  
 
-```  
+```cpp
 __interface IStaticText : IControl  
 {  
     HRESULT SetText([in] LPCTSTR pText);  
@@ -1616,7 +1616,7 @@ __interface IStaticText : IControl
 
 ####  <a name="ITaskinterface"></a> ITask Interface  
 
-```  
+```cpp
 __interface IControl : IUnknown  
 {  
     HRESULT Init(IStringProperties *pProperties, ISettingsProperties *pTaskSettings);  
@@ -1638,21 +1638,21 @@ __interface IControl : IUnknown
 
 ##### Init  
 
-```  
+```cpp
 HRESULT Init(IStringProperties *pProperties, ISettingsProperties *pTaskSettings)  
 ```  
 
  If you are writing a task for the preflight page, call this method to initialize your task. The .config file contain XML that might look something like this:  
 
-```  
+```xml
 <Task DisplayName="Check Windows Scripting Host" Type="Microsoft.Wizard.ShellExecuteTask">  
-  <Setter Property="filename">%windir%\system32\cscript.exe</Setter>  
-  <Setter Property="parameters">Preflight\OSDCheckWSH.vbs</Setter>  
-  <Setter Property="BitmapFilename">images\WinScriptHost.bmp</Setter>  
-  <ExitCodes>  
-    <ExitCode State="Success" Type="0" Value="0" Text="" />  
-    <ExitCode State="Error" Type="-1" Value="*" Text="Windows Scripting Host not installed." />  
-  </ExitCodes>  
+  <Setter Property="filename">%windir%\system32\cscript.exe</Setter>  
+  <Setter Property="parameters">Preflight\OSDCheckWSH.vbs</Setter>  
+  <Setter Property="BitmapFilename">images\WinScriptHost.bmp</Setter>  
+  <ExitCodes>  
+    <ExitCode State="Success" Type="0" Value="0" Text="" />  
+    <ExitCode State="Error" Type="-1" Value="*" Text="Windows Scripting Host not installed." />  
+  </ExitCodes>  
 </Task>  
 ```  
 
@@ -1660,7 +1660,7 @@ HRESULT Init(IStringProperties *pProperties, ISettingsProperties *pTaskSetti
 
 #####  <a name="Execute"></a> Execute  
 
-```  
+```cpp
 HRESULT Execute(LPDWORD pReturnCode)  
 ```  
 
@@ -1670,14 +1670,14 @@ HRESULT Execute(LPDWORD pReturnCode)
 
 #### ITreeView Interface  
 
-```  
+```cpp
 __interface ITreeView : IControl  
 {  
     void EnableCheckboxes(void);  
     HRESULT CreateImageList(int width, int height, UINT flags);  
     int AddImage(HINSTANCE hInstance, int resourceId);  
 
-    HTREEITEM AddItem(LPCTSTR text, HTREEITEM hParent = NULL);  
+    HTREEITEM AddItem(LPCTSTR text, HTREEITEM hParent = NULL);  
     void SetImage(HTREEITEM item, int image, int expandImage);  
 
     void Clear(void);  
@@ -1779,7 +1779,7 @@ __interface ITreeView : IControl
 
 #### IWmiIteration Interface  
 
-```  
+```cpp
 __interface IWmiIterator : IUnknown  
 {  
     HRESULT Next(void);  
@@ -1824,7 +1824,7 @@ __interface IWmiIterator : IUnknown
 
 #### IWmiRepository Interface  
 
-```  
+```cpp
 __interface IWmiRepository : IUnknown  
 {  
     HRESULT SetNamespace(LPCWSTR namespaceName);  
@@ -1857,7 +1857,7 @@ __interface IWmiRepository : IUnknown
 
 #### IFormController Interface  
 
-```  
+```cpp
 __interface IFormController : IUnknown  
 {  
     Init(IWizardPageView *pView, IWizardPageContainer *pContainer);  
@@ -1910,7 +1910,7 @@ __interface IFormController : IUnknown
 ##### Processing Form Events  
  Add the following call to your **OnControlEvent** method:  
 
-```  
+```cpp
 Form()->ControlEvent(eventId, controlId);  
 ```  
 
@@ -1928,19 +1928,19 @@ Form()->ControlEvent(eventId, controlId);
 
 #####  <a name="Init"></a> Init  
 
-```  
+```cpp
 HRESULT Init(IWizardPageView *pView, IWizardPageContainer *pContainer)  
 ```  
 
  You usually call this method near the start of your page’s **OnWindowCreated** method. The command should look something like this:  
 
-```  
+```cpp
 Form()->Init(View(), Container());  
 ```  
 
 ##### SetPageInfo  
 
-```  
+```cpp
 HRESULT SetPageInfo(ISettingsProperties *pPageInfo)  
 ```  
 
@@ -1948,7 +1948,7 @@ HRESULT SetPageInfo(ISettingsProperties *pPageInfo)
 
 ##### Validate  
 
-```  
+```cpp
 HRESULT Validate(void)  
 ```  
 
@@ -1956,7 +1956,7 @@ HRESULT Validate(void)
 
 ##### AddToGroup  
 
-```  
+```cpp
 AddToGroup(int groupControlId, int controlId)  
 ```  
 
@@ -1979,7 +1979,7 @@ HRESULT UpdateCheckGroup(int groupControlId)
 
 ##### AddValidator  
 
-```  
+```cpp
 HRESULT AddValidator(int controlId, IValidator *pValidator, IControl *pControl = 0)  
 ```  
 
@@ -1987,7 +1987,7 @@ HRESULT AddValidator(int controlId, IValidator *pValidator, IControl *pCont
 
 ##### AddValidator  
 
-```  
+```cpp
 HRESULT AddValidator(int controlId, LPCWSTR validatorId, LPCWSTR message, IValidator **ppValidator = nullptr)  
 ```  
 
@@ -1995,7 +1995,7 @@ HRESULT AddValidator(int controlId, LPCWSTR validatorId, LPCWSTR message, IVa
 
 ##### DisableValidation  
 
-```  
+```cpp
 HRESULT DisableValidation(int controlId, BOOL disable)  
 ```  
 
@@ -2010,7 +2010,7 @@ HRESULT DisableValidation(int controlId, BOOL disable)
 
 #####  <a name="AddField"></a> AddField  
 
-```  
+```cpp
 HRESULT AddField(LPCWSTR fieldName, int controlId, BOOL suppressLog, DialogControlTypes type)  
 ```  
 
@@ -2027,7 +2027,7 @@ HRESULT AddField(LPCWSTR fieldName, int controlId, BOOL suppressLog, DialogCo
 
 #####  <a name="AddRadioGroup"></a> AddRadioGroup  
 
-```  
+```cpp
 HRESULT AddRadioGroup(LPCWSTR groupName, int radioControlId)  
 ```  
 
@@ -2042,7 +2042,7 @@ HRESULT AddRadioGroup(LPCWSTR groupName, int radioControlId)
 
 ##### EnableRadioGroup  
 
-```  
+```cpp
 HRESULT EnableRadioGroup(LPCWSTR groupName, BOOL enable)  
 ```  
 
@@ -2064,7 +2064,7 @@ HRESULT EnableRadioGroup(LPCWSTR groupName, BOOL enable)
 
 #####  <a name="InitFields"></a> InitFields  
 
-```  
+```cpp
 HRESULT InitFields(IFieldCallback *pFieldCallback = nullptr)  
 ```  
 
@@ -2074,7 +2074,7 @@ HRESULT InitFields(IFieldCallback *pFieldCallback = nullptr)
 
 #####  <a name="SaveFields"></a> SaveFields  
 
-```  
+```cpp
 HRESULT SaveFields(IFieldCallback *pFieldCallback = nullptr)  
 ```  
 
@@ -2082,7 +2082,7 @@ HRESULT SaveFields(IFieldCallback *pFieldCallback = nullptr)
 
 ##### IsFieldDisabled  
 
-```  
+```cpp
 BOOL IsFieldDisabled(int controlId)  
 ```  
 
@@ -2090,7 +2090,7 @@ BOOL IsFieldDisabled(int controlId)
 
 #####  <a name="InitSection"></a> InitSection  
 
-```  
+```cpp
 HRESULT InitSection(LPCWSTR key, LPCWSTR sectionCaption)  
 ```  
 
@@ -2105,7 +2105,7 @@ HRESULT InitSection(LPCWSTR key, LPCWSTR sectionCaption)
 
 ##### AddSummaryItem  
 
-```  
+```cpp
 HRESULT AddSummaryItem(LPCWSTR first, LPCWSTR second)  
 ```  
 
@@ -2120,7 +2120,7 @@ HRESULT AddSummaryItem(LPCWSTR first, LPCWSTR second)
 
 ##### SuppressLogValue  
 
-```  
+```cpp
 HRESULT SuppressLogValue(LPCWSTR tsVariableName)  
 ```  
 
@@ -2128,7 +2128,7 @@ HRESULT SuppressLogValue(LPCWSTR tsVariableName)
 
 ##### SaveText  
 
-```  
+```cpp
 HRESULT SaveText(int controlId, LPCWSTR tsVariableName, LPCWSTR summaryCaption)  
 ```  
 
@@ -2144,7 +2144,7 @@ HRESULT SaveText(int controlId, LPCWSTR tsVariableName, LPCWSTR summaryCapt
 
 ##### LoadText  
 
-```  
+```cpp
 HRESULT LoadText(int controlId, LPCWSTR tsVariableName)  
 ```  
 
@@ -2152,7 +2152,7 @@ HRESULT LoadText(int controlId, LPCWSTR tsVariableName)
 
 ##### ControlEvent  
 
-```  
+```cpp
 void ControlEvent(WORD eventId, WORD controlId)  
 ```  
 
@@ -2160,7 +2160,7 @@ void ControlEvent(WORD eventId, WORD controlId)
 
 ##### IsValid  
 
-```  
+```cpp
 BOOL IsValid(void)  
 ```  
 
@@ -2168,7 +2168,7 @@ BOOL IsValid(void)
 
 #### IValidator Interface  
 
-```  
+```cpp
 __interface IValidator : IUnknown  
 {  
     HRESULT Init(IControl *pControl, LPCTSTR message);  
@@ -2218,7 +2218,7 @@ __interface IValidator : IUnknown
 
 #### IRegEx Interface  
 
-```  
+```cpp
 __interface IRegEx : IUnknown  
 {  
     BOOL MatchesRegex(LPCTSTR input, LPCTSTR regex);  
@@ -2236,7 +2236,7 @@ __interface IRegEx : IUnknown
 
 #### ISummaryInfo Interface  
 
-```  
+```cpp
 __interface ISummaryInfo : IUnknown  
 {  
     size_t Count(void);  
@@ -2252,7 +2252,7 @@ __interface ISummaryInfo : IUnknown
 
 #### ISummaryBag  
 
-```  
+```cpp
 __interface ISummaryBag : IUnknown  
 {  
     size_t Count(void);  
@@ -2265,7 +2265,7 @@ __interface ISummaryBag : IUnknown
 
 #### ITSVariableBag Interface  
 
-```  
+```cpp
 __interface ITSVariableBag : IUnknown  
 {  
     void GetValue([in] LPCTSTR variableName, [out] LPBSTR pValue);  
@@ -2302,7 +2302,7 @@ __interface ITSVariableBag : IUnknown
 
 #### ITSVariableRepository Interface  
 
-```  
+```cpp
 __interface ITSVariableRepository : IUnknown  
 {  
     void GetValue([in] LPCTSTR variableName, BOOL logValue, [out] LPBSTR pValue);  
@@ -2314,7 +2314,7 @@ __interface ITSVariableRepository : IUnknown
 
 #### IWizardFinish Interface  
 
-```  
+```cpp
 __interface IWizardFinish : IUnknown  
 {  
     HRESULT Canceled(void);  
@@ -2326,7 +2326,7 @@ __interface IWizardFinish : IUnknown
 
  If you create your own finish component, you need to register it with code like this:  
 
-```  
+```cpp
 Register<MyFinishTaskFactory>(ID_MyFinishTask, pRegistry);  
 
 PWizardFinish pFinish;  
@@ -2340,7 +2340,7 @@ pService->Register(pFinish);
 
 #### IBindableList Interface  
 
-```  
+```cpp
 __interface IBindableList : IUnknown  
 {  
     size_t Count(void);  
@@ -2358,7 +2358,7 @@ __interface IBindableList : IUnknown
 
 #### IDataNodes Interface  
 
-```  
+```cpp
 __interface IDataNodes : IUnknown  
 {  
     size_t Count();  
@@ -2372,17 +2372,17 @@ __interface IDataNodes : IUnknown
 
  Data in a page’s XML can look something like this  
 
-```  
-      <Data Name="Network">  
-        <DataItem>  
-          <Setter Property="DisplayName">Public</Setter>  
-          <Setter Property="Share">\\servername\Share</Setter>  
-        </DataItem>  
-        <DataItem>  
-          <Setter Property="DisplayName">Dev Team</Setter>  
-          <Setter Property="Share">\\servername\DevShare</Setter>  
-        </DataItem>  
-      </Data>  
+```xml
+      <Data Name="Network">  
+        <DataItem>  
+          <Setter Property="DisplayName">Public</Setter>  
+          <Setter Property="Share">\\servername\Share</Setter>  
+        </DataItem>  
+        <DataItem>  
+          <Setter Property="DisplayName">Dev Team</Setter>  
+          <Setter Property="Share">\\servername\DevShare</Setter>  
+        </DataItem>  
+      </Data>  
 ```  
 
  Calling **Settings()->GetDataNode(L"Network", &pData)** gives you an **IDataNodes** instance with two data items (each of which in turn has two properties).  
@@ -2431,7 +2431,7 @@ __interface IDataNodes : IUnknown
 
 #### IFactoryRegistry Interface  
 
-```  
+```cpp
 __interface IFactoryRegistry : IUnknown  
 {  
     void Register(LPCTSTR type,  IClassFactory *pFactory);  
@@ -2491,7 +2491,7 @@ __interface IFactoryRegistry : IUnknown
 
 #### ILogger Interface  
 
-```  
+```cpp
 __interface ILogger : IUnknown  
 {  
     HRESULT Init(LPCWSTR logFilename);  
@@ -2517,13 +2517,13 @@ __interface ILogger : IUnknown
 > [!NOTE]
 >  Debug messages are not saved to the log file unless debug support is turned on. You can turn on debug support by adding the following line to the **Style** element in the .config file:  
 
-```  
+```xml
 <Setter Property="debug">true</Setter>  
 ```  
 
 ##### Init  
 
-```  
+```cpp
 HRESULT Init(LPCWSTR logFilename)  
 ```  
 
@@ -2531,7 +2531,7 @@ HRESULT Init(LPCWSTR logFilename)
 
 ##### MoveLog  
 
-```  
+```cpp
 HRESULT MoveLog(LPCWSTR logFilename)  
 ```  
 
@@ -2539,7 +2539,7 @@ HRESULT MoveLog(LPCWSTR logFilename)
 
 ##### LogBase  
 
-```  
+```cpp
 HRESULT LogBase(EMessageType messageType, LPCTSTR component, SYSTEMTIME eventTime, LPCTSTR message)  
 ```  
 
@@ -2547,7 +2547,7 @@ HRESULT LogBase(EMessageType messageType, LPCTSTR component, SYSTEMTIME even
 
 ##### Log  
 
-```  
+```cpp
 HRESULT Log(EMessageType messageType, LPCTSTR component, LPCTSTR message)  
 ```  
 
@@ -2555,7 +2555,7 @@ HRESULT Log(EMessageType messageType, LPCTSTR component, LPCTSTR message)
 
 ##### Error  
 
-```  
+```cpp
 HRESULT Error(HRESULT error, LPCTSTR component, LPCTSTR message)  
 ```  
 
@@ -2571,7 +2571,7 @@ HRESULT Error(HRESULT error, LPCTSTR component, LPCTSTR message)
 
 #####  <a name="Error2"></a> Error2  
 
-```  
+```cpp
 HRESULT Error2(HRESULT error, LPCTSTR component, LPCTSTR message, LPCTSTR message2)  
 ```  
 
@@ -2579,7 +2579,7 @@ HRESULT Error2(HRESULT error, LPCTSTR component, LPCTSTR message, LPCTSTR m
 
 ##### Normal  
 
-```  
+```cpp
 HRESULT Normal(LPCTSTR component, LPCTSTR message)  
 ```  
 
@@ -2587,7 +2587,7 @@ HRESULT Normal(LPCTSTR component, LPCTSTR message)
 
 ##### Normal2  
 
-```  
+```cpp
 HRESULT Normal2(LPCTSTR component, LPCTSTR message, LPCTSTR message2)  
 ```  
 
@@ -2595,7 +2595,7 @@ HRESULT Normal2(LPCTSTR component, LPCTSTR message, LPCTSTR message2)
 
 ##### Verbose  
 
-```  
+```cpp
 HRESULT Verbose(LPCTSTR component, LPCTSTR message)  
 ```  
 
@@ -2603,7 +2603,7 @@ HRESULT Verbose(LPCTSTR component, LPCTSTR message)
 
 ##### Verbose2  
 
-```  
+```cpp
 HRESULT Verbose2(LPCTSTR component, LPCTSTR message, LPCTSTR message2)  
 ```  
 
@@ -2611,7 +2611,7 @@ HRESULT Verbose2(LPCTSTR component, LPCTSTR message, LPCTSTR message2)
 
 ##### Debug  
 
-```  
+```cpp
 HRESULT Debug(LPCWSTR component, LPCWSTR message)  
 ```  
 
@@ -2619,7 +2619,7 @@ HRESULT Debug(LPCWSTR component, LPCWSTR message)
 
 ##### EnableDebug  
 
-```  
+```cpp
 HRESULT EnableDebug(BOOL debug)  
 ```  
 
@@ -2627,7 +2627,7 @@ HRESULT EnableDebug(BOOL debug)
 
 ##### Close  
 
-```  
+```cpp
 HRESULT Close(void)  
 ```  
 
@@ -2635,7 +2635,7 @@ HRESULT Close(void)
 
 ##### GetLogFilename  
 
-```  
+```cpp
 HRESULT GetLogFilename(LPBSTR pFilename)  
 ```  
 
@@ -2643,7 +2643,7 @@ HRESULT GetLogFilename(LPBSTR pFilename)
 
 #### IOrientation Interface  
 
-```  
+```cpp
 __interface IOrientation : IUnknown  
 {  
     void SetController(IWizardDialogController *pController);  
@@ -2656,7 +2656,7 @@ __interface IOrientation : IUnknown
 
 #### ISettings Interface  
 
-```  
+```cpp
 __interface ISettings : IUnknown  
 {  
     int NumDlls();  
@@ -2673,12 +2673,12 @@ __interface ISettings : IUnknown
 
 #### ISettingsProperties Interface  
 
-```  
+```cpp
 __interface ISettingsProperties : IUnknown  
 {  
     HRESULT GetAttribute(LPCTSTR attributeName, __out LPBSTR attributeValue);  
     IStringProperties * Properties();  
-   RESULT SelectNodes(LPCTSTR xPath, __out IXMLDOMNodeList **ppList);  
+    HRESULT SelectNodes(LPCTSTR xPath, __out IXMLDOMNodeList **ppList);  
     HRESULT SelectSingleNode(LPCTSTR xPath, __out IXMLDOMNode **ppNode);  
     HRESULT GetDataNode(LPCTSTR name, __out ISettingsProperties **ppNode);  
     HRESULT GetDataNodes(__out IDataNodes **ppNodes);  
@@ -2707,19 +2707,21 @@ __interface ISettingsProperties : IUnknown
 ##### HRESULT GetDataNodes(IDataNodes **ppNodes)  
  This method retrieves a list of **DataItem** elements under the current node. From the page level, call **GetDataNode** to retrieve an **ISettingsProperty** interface for the data. Then, on that instance, call **GetDataNodes** to retrieve the list of records. For example, given this XML:  
 
-```  
+```xml
     <Page …>  
-      <Data Name="Network">  
-        <DataItem>  
-          <Setter Property="DisplayName">Public</Setter>  
-          <Setter Property="Share">\\servername\Share</Setter>  
-        </DataItem>  
-        <DataItem>  
-          <Setter Property="DisplayName">Dev Team</Setter>  
-          <Setter Property="Share">\\servername\DevShare</Setter>  
-        </DataItem>  
-      </Data>  
+      <Data Name="Network">  
+        <DataItem>  
+          <Setter Property="DisplayName">Public</Setter>  
+          <Setter Property="Share">\\servername\Share</Setter>  
+        </DataItem>  
+        <DataItem>  
+          <Setter Property="DisplayName">Dev Team</Setter>  
+          <Setter Property="Share">\\servername\DevShare</Setter>  
+        </DataItem>  
+      </Data>  
+```
 
+```cpp
 PSettingsProperties pData;  
 Settings()->GetDataNode(L"Network", &pData);  
 PDataNodes pNodes;  
@@ -2729,13 +2731,13 @@ pData->GetDataNodes(&pNodes);
 ##### HRESULT GetChildDataNodes(LPCTSTR childeName,  IDataNodes **ppNodes)  
  This method provides a quick way to get to the set of **DataItem** nodes under a specific **Data** node. Using the XML from the **GetDataNodes** example, the following code does exactly the same thing as the four lines of code in the example under **GetDataNodes** but with error checking:  
 
-```  
+```cpp
 ISimpleStringProperties Interface  
 ```  
 
 #### ISimpleStringProperties Interface  
 
-```  
+```cpp
 __interface ISimpleStringProperties : IStringProperties  
 {  
 void Add(LPCTSTR propertyName, LPCTSTR value);  
@@ -2744,7 +2746,7 @@ void Add(LPCTSTR propertyName, LPCTSTR value);
 
  By itself, this interface may not be useful. However, it is implemented by the **ID_SimpleStringProperties** component, which also implements the **IStringProperties** interface. You can use this component in cases where you need to pass a set of properties to another component, such as a task, but you want to add values programmatically instead of using values from XML. Here is an example of how you would use this interface:  
 
-```  
+```cpp
 PSimpleStringProperties *pProperties;  
 CreateInstance(Container(), ID_SimpleStringProperties, &pProperties);  
 pProperties->Add(L"filename", L"%windir%\\system32\\cscript.exe");  
@@ -2778,7 +2780,7 @@ __interface IStringProperties : IUnknown
 
 #### ITaskManager Interface  
 
-```  
+```cpp
 __interface ITaskManager : IUnknown  
 {  
     HRESULT Init(IWizardPageView *pPageView, int idListView, int idMessage, int idRetryButton, ISettingsProperties *pPageInfo, ITaskManagerCallback *pCallback);  
@@ -2872,7 +2874,7 @@ __interface ITaskManager : IUnknown
 
 #### IWizardComponent Interface  
 
-```  
+```cpp
 __interface IWizardComponent : IUnknown  
 {  
     HRESULT SetContainer(IWizardPageContainer *pContainer);  
@@ -2884,7 +2886,7 @@ __interface IWizardComponent : IUnknown
 
 #### IWizardDialogController Interface  
 
-```  
+```cpp
 __interface IWizardDialogController : IUnknown  
 {  
     void Initialize(ISettings *pSettings);  
@@ -2911,7 +2913,7 @@ __interface IWizardDialogController : IUnknown
 
 #### IWizardDialogView Interface  
 
-```  
+```cpp
 __interface IWizardDialogView : IUnknown  
 {  
     HRESULT LoadBannerImage(LPCTSTR bannerFilename);  
@@ -2934,7 +2936,7 @@ __interface IWizardDialogView : IUnknown
 
 ####  <a name="IWizardPageInterface"></a> IWizardPage Interface  
 
-```  
+```cpp
 __interface IWizardPage : IUnknown  
 {  
     HRESULT SetPageSettings(ISettingsProperties *pPageSettings);  
@@ -2956,7 +2958,7 @@ __interface IWizardPage : IUnknown
 
 #### IWizardPageContainer Interface  
 
-```  
+```cpp
 __interface IWizardPageContainer : IUnknown  
 {  
     ILogger * Logger(void);  
@@ -2977,7 +2979,7 @@ __interface IWizardPageContainer : IUnknown
 ##### ILogger * Logger(void)  
  Use this method to write messages to the log file—for example:  
 
-```  
+```cpp
 Logger()->Verbose(s_component, L"Message for log file");  
 ```  
 
@@ -3021,7 +3023,7 @@ Logger()->Verbose(s_component, L"Message for log file");
 
 #### IWizardPageView Interface  
 
-```  
+```cpp
 __interface IWizardPageView : IUnknown  
 {  
     HRESULT GetControlWrapper(int itemId, DialogControlTypes controlType, IUnknown **ppControl);  
@@ -3047,7 +3049,7 @@ __interface IWizardPageView : IUnknown
 
  Instead of using this method directly, it is better to use the **GetControlWrapper** template method, which is strongly typed—for example:  
 
-```  
+```cpp
 PComboBox m_pLanguagePackCombo;  
 GetControlWrapper(View(), IDC_MY_COMBO, CONTROL_COMBO_BOX, &m_pCombo);  
 ```  
@@ -3087,7 +3089,7 @@ GetControlWrapper(View(), IDC_MY_COMBO, CONTROL_COMBO_BOX, &m_pCombo);
 
 #### IXmlDocument Interface  
 
-```  
+```cpp
 __interface IXmlDocument : IUnknown  
     HRESULT Load(LPCTSTR filename);  
     HRESULT LoadXml(LPCTSTR xml);  
@@ -3150,13 +3152,13 @@ pXmlDom->CreateNode(NODE_ELEMENT, L"MyElement", L"", &pNewChild);
 
 #### CreateInstance Template Function  
 
-```  
+```cpp
 HRESULT CreateInstance(IWizardPageContainer *pContainer, LPCTSTR type, I **ppObject)  
 ```  
 
  This function is defined in IWizardPageContainer.h and provides a type-safe wrapper over the **IWizardPageContainer->CreateInstance** method—for example:  
 
-```  
+```cpp
 CreateInstance<IDirectory>(Container(), ID_Directory, &pDirectory);  
 ```  
 
@@ -3164,13 +3166,13 @@ CreateInstance<IDirectory>(Container(), ID_Directory, &pDirectory);
 
 #### GetService Template Function  
 
-```  
+```cpp
 void GetService(IWizardPageContainer *pContainer, I **ppService)  
 ```  
 
  This function is defined in IWizardPageContainer.h and provides a type-safe wrapper over the **IWizardPageContainer->GetService** method—for example:  
 
-```  
+```cpp
 GetService<ITSVariableBag>(Container(), &pTsBag);  
 ```  
 
@@ -3217,7 +3219,7 @@ GetService<ITSVariableBag>(Container(), &pTsBag);
 
 ##### Example  
 
-```  
+```   
 <DesignerConfig>  
    + <TaskLibrary>  
    + <ValidatorLibrary>  
@@ -3247,7 +3249,7 @@ GetService<ITSVariableBag>(Container(), &pTsBag);
 
 ##### Example  
 
-```  
+```   
 <DesignerConfig>  
    + <TaskLibrary>  
    + <ValidatorLibrary>  
@@ -3429,7 +3431,7 @@ Table 58 lists the attributes of the [Page](#Page) element and a description for
 
 ##### Example  
 
-```  
+```   
 <DesignerConfig>  
    - <TaskLibrary>  
         +<Task DLL="" Description="Executes a process with the given command line." Type="Microsoft.Wizard.ShellExecuteTask" Name="Shell Execute Task">  
@@ -3521,7 +3523,7 @@ Table 67 lists the attributes of the [Validator](#Validator) element and provide
 ##### Example  
  The following excerpt from an .xaml file illustrates the use of the **FieldElementControl** to configure the default value for a field on a wizard page using a child **TextBox** control:  
 
-```  
+```xaml
 <Controls:FieldElementControl  
 Width="450"  
 Margin="0,5"  
@@ -3531,8 +3533,8 @@ InstructionText="Here you can configure the behavior of the location co
 HideValidationTab="True">  
 
 <TextBox Text="{Binding FieldData.DefaultValue,  
- UpdateSourceTrigger=PropertyChanged,  
- Mode=TwoWay}"/>  
+ UpdateSourceTrigger=PropertyChanged,  
+ Mode=TwoWay}"/>  
 </Controls:FieldElementControl>  
 ```  
 
@@ -3609,18 +3611,18 @@ FieldData="{Binding DataContext.Location, ElementName=ControlRoot}"
 ##### Example  
  The following excerpt from an .xaml file illustrates the use of the **SetterControl** to modify a [Setter]() element named **KeyLocationSetter** using a child **TextBox** control.  
 
-```  
+```xaml
 <Controls:SetterControl Margin="5"  
-        Width="450"  
-        HeaderText="Title text"  
-        SetterData="{Binding KeyLocationSetter}"   
+        Width="450"  
+        HeaderText="Title text"  
+        SetterData="{Binding KeyLocationSetter}"   
         InstructionText="What this means…"  
         HorizontalAlignment="Left">  
 
-    <TextBox  
-                   Margin="0,3"  
-                   Text="{Binding SetterData.SetterValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  
-    />  
+    <TextBox  
+                   Margin="0,3"  
+                   Text="{Binding SetterData.SetterValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  
+    />  
 
 </Controls:SetterControl>  
 ```  
@@ -3651,7 +3653,7 @@ Table 70 lists the interfaces that you can use to create custom wizard page edit
 
  You can use dependency injection to obtain a pointer to this interface using code like this in your class:  
 
-```  
+```csharp
 [Dependency]  
 public IDataService DataService { get; set; }  
 ```  
@@ -3667,7 +3669,7 @@ public IDataService DataService { get; set; }
 
 ######  <a name="CurrentPage"></a> CurrentPage  
 
-```  
+```csharp
 XElement CurrentPage { get; set; }  
 ```  
 
@@ -3680,7 +3682,7 @@ XElement CurrentPage { get; set; }
 
  You can use dependency injection to obtain a pointer to this interface using code like this in your class:  
 
-```  
+```csharp
 [Dependency]  
 public IMessageBoxService MessageBoxes { get; set; }  
 ```  
@@ -3709,7 +3711,7 @@ public IMessageBoxService MessageBoxes { get; set; }
 
 ######  <a name="ShowMessageBox_Stringmessage_Stringcaption_MessageBoxImage_icon"></a> ShowMessageBox(String message, String caption, MessageBoxImage icon)  
 
-```  
+```csharp
 void ShowMessageBox(String message, String caption, MessageBoxImage icon);  
 ```  
 
@@ -3725,7 +3727,7 @@ void ShowMessageBox(String message, String caption, MessageBoxImage icon);
 
 ######  <a name="ShowMessageBox_stringmessage_stringcaption_MessageBoxButtonbutton_MessageBoxImage_icon"></a> ShowMessageBox(string message, string caption, MessageBoxButton button, MessageBoxImage icon)  
 
-```  
+```csharp
 MessageBoxResult ShowMessageBox(string message, string caption, MessageBoxButton button, MessageBoxImage icon);  
 ```  
 
@@ -3742,7 +3744,7 @@ MessageBoxResult ShowMessageBox(string message, string caption, MessageBoxB
 
 ######  <a name="ShowMessageBox_Exception_exception"></a> ShowMessageBox(Exception exception)  
 
-```  
+```csharp
 void ShowMessageBox(Exception exception);  
 ```  
 
@@ -3756,7 +3758,7 @@ void ShowMessageBox(Exception exception);
 
 ######  <a name="ShowDialogWindow"></a> ShowDialogWindow  
 
-```  
+```csharp
 void ShowDialogWindow(Type viewType, DialogInteraction dialogPayload);  
 ```  
 
@@ -3766,7 +3768,7 @@ void ShowDialogWindow(Type viewType, DialogInteraction dialogPayload);
 
 ######  <a name="ShowWizardWindow"></a> ShowWizardWindow  
 
-```  
+```csharp
 void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);  
 ```  
 
@@ -3775,15 +3777,15 @@ void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);
 ###  <a name="UDIWizardConfigurationFileSchemaReference"></a> UDI Wizard Configuration File Schema Reference  
  This file is consumed by the UDI Wizard and configured by the UDI Wizard Designer. This file is used to configure the:  
 
--   Wizard pages displayed in the UDI Wizard  
+- Wizard pages displayed in the UDI Wizard  
 
--   The sequence of the wizard pages in the UDI Wizard  
+- The sequence of the wizard pages in the UDI Wizard  
 
--   Settings for the fields on each wizard page  
+- Settings for the fields on each wizard page  
 
--   Available StageGroups in the UDI Wizard Designer  
+- Available StageGroups in the UDI Wizard Designer  
 
--   Available Stages within each deployment wizard in the UDI Wizard Designer  
+- Available Stages within each deployment wizard in the UDI Wizard Designer  
 
   77 lists the elements in the UDI Wizard Configuration File and their descriptions. The **Wizard** element is the root node for this reference.  
 
@@ -3891,7 +3893,7 @@ Table 81 provides information about the [Default](#Default) element.
 ##### Example  
  In the following example, the default for the **TimeZone** field is set to "Pacific Standard Time":  
 
-```  
+```xml
 <Field Name="TimeZone" Enabled="true" VarName="OSDTimeZone" Summary="Time Zone:">  
   <Default>Pacific Standard Time</Default>  
 ```  
@@ -3924,7 +3926,7 @@ Table 82 provides information about the [DLL](#DLL) element.
 
 ##### Example  
 
-```  
+```xml
 <DLLs>  
   <DLL Name="OSDRefreshWizard.dll" />   
   <DLL Name="SharedPages.dll" />  
@@ -3953,7 +3955,7 @@ Table 84 provides information about the [DLLs](#DLLs) element.
 
 ##### Example  
 
-```  
+```xml
 <DLLs>  
    <DLL Name="OSDRefreshWizard.dll" />  
    <DLL Name="SharedPages.dll" />   
@@ -3979,12 +3981,12 @@ Table 84 provides information about the [DLLs](#DLLs) element.
 
 ###  
 
-|**Attribute**|**Description**|  
-|-|-|  
-|**State**|Specifies the return state of a task that encountered an error. Typically, the value for this attribute is set to Error. This value is displayed in the **State** column on the wizard page in the UDI Wizard.|  
-|**Text**|Specifies the descriptive text about the error condition that the task encountered.|  
-|**Type**|Specifies whether this element represents an error, warning, or success. The value specified in**Type** must be unique within an [ExitCodes](#ExitCodes) element. The following are valid values for this element:<br /><br /> -   **0.**The element represent a success.<br />-   **1.** The element represents a warning.<br />-   **-1.** The element represents an error.|  
-|**Value**|Specifies the value of the code that the task returned as a numeric value. Specifying the value of an asterisk (*) indicates the default element for return codes that are not listed in other [Error](#Error) elements.|  
+| **Attribute** |                                                                                                                                                                                      **Description**                                                                                                                                                                                       |
+|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|   **State**   |                                                                                       Specifies the return state of a task that encountered an error. Typically, the value for this attribute is set to Error. This value is displayed in the **State** column on the wizard page in the UDI Wizard.                                                                                       |
+|   **Text**    |                                                                                                                                                    Specifies the descriptive text about the error condition that the task encountered.                                                                                                                                                     |
+|   **Type**    | Specifies whether this element represents an error, warning, or success. The value specified in**Type** must be unique within an [ExitCodes](#ExitCodes) element. The following are valid values for this element:<br /><br /> -   <strong>0.</strong>The element represent a success.<br />-   **1.** The element represents a warning.<br />-   **-1.** The element represents an error. |
+|   **Value**   |                                                                                  Specifies the value of the code that the task returned as a numeric value. Specifying the value of an asterisk (*) indicates the default element for return codes that are not listed in other [Error](#Error) elements.                                                                                  |
 
 ##### Remarks  
  None.  
@@ -4214,7 +4216,7 @@ Table 99 provides information about the [Pages](#Pages) element.
 
 ##### Example  
 
-```  
+```   
 <Pages>  
    + <Page Name="WelcomePage" DisplayName="Welcome" Type="Microsoft.SharedPages.WelcomePage">  
    + <Page Name="ConfigScanPage" DisplayName="Deployment Readiness" Type="Microsoft.OSDRefresh.ConfigScanPage">  
@@ -4398,7 +4400,7 @@ Table 109 provides information about the Style element.
 
 ##### Example  
 
-```  
+```xml
 <Style>  
   <Setter Property="bannerFilename">UDI_Wizard_Banner.bmp</Setter>   
   <Setter Property="title">Operating System Deployment (OSD) Refresh Wizard</Setter>   
@@ -4518,7 +4520,7 @@ Table 116 provides information about the [Wizard](#Wizard) element.
 
 ##### Example  
 
-```  
+```   
 <Wizard>  
    + <DLLs>  
    + <Style>  

@@ -9,6 +9,7 @@ ms.assetid: 0fd7952e-eeed-4dc0-a66b-af6442156523
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # QueueRequestedAppPolicy Method in Class CCM_RequestedAppPolicy
 The `QueueRequestedAppPolicy` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that queues and application policy request.   

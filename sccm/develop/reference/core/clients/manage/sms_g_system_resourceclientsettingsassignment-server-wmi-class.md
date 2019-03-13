@@ -9,6 +9,7 @@ ms.assetid: 6561a03d-01a3-4fe2-b6cf-220dd743421e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_G_SYSTEM_ResourceClientSettingsAssignment Server WMI Class
 The `SMS_G_System_ResourceClientSettingsAssignment` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents resource-specific (device or user) client agent settings assignments.  

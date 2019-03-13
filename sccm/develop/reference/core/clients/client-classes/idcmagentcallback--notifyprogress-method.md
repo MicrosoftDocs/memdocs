@@ -9,6 +9,7 @@ ms.assetid: 99e6837e-49af-4b57-8b79-be8e2c18cbac
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # IDCMAgentCallback::NotifyProgress Method
 The `IDCMAgentCallback::NotifyProgress` method, in Configuration Manager, notifies the caller of progress made on a Desired Configuration Management Agent job.  

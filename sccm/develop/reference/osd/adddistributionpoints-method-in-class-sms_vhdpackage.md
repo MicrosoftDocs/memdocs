@@ -9,6 +9,7 @@ ms.assetid: 3bece895-678d-4a4b-a6f4-44eb0ded7b07
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # AddDistributionPoints Method in Class SMS_VhdPackage
 The `AddDistributionPoints` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds the list of distribution points for the VHD package.  

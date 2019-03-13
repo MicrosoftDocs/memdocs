@@ -5,11 +5,12 @@ description: Learn about the features and functionality of Software Center
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 02/20/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.assetid: 9e68de6e-2b33-442b-b674-a382728d9529
+ms.collection: M365-identity-device-management
 ---
 
 # Software Center user guide
@@ -39,7 +40,7 @@ Click the **Applications** tab to find and install applications that your IT adm
 - **All**: Shows all applications that you can install
 - **Required**: Your IT admin enforces these applications. If you uninstall one of these applications, Software Center reinstalls it.
 - **Filters**: Your IT admin may create categories of applications. If available, click the drop-down list to filter the view to only those applications in a specific category. Select **All** to show all applications.
-- **Sort by**: Rearrange the list of applications. By default this list sorts by **Most recent**.
+- **Sort by**: Rearrange the list of applications. By default this list sorts by **Most recent**. Recently available applications are listed with a **New** tag that is visible for 7 days.
 - **Search**: Still can't find what you're looking for? Enter keywords in the Search box to find it!
 -  **Switch the view**: Click the icons to switch the view between list view and tile view. By default the applications list shows as graphic tiles. 
     - Tile view: Your IT admin can customize the icons. Below each tile displays the application name, publisher, and version. 

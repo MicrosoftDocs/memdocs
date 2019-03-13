@@ -9,6 +9,7 @@ ms.assetid: 27bcd3aa-3ee3-4cea-ac07-9fc8edba56fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Supporting Server WMI Classes
 This section contains detailed information about certain unrelated classes in System Center Configuration Manager. These classes either support more than one category of classes, or they are used to share additional information with the SMS Provider.  

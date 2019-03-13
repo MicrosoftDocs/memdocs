@@ -8,6 +8,7 @@ ms.assetid: 4f47f721-f87e-4b53-9528-4c33b809f691
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Remote Tools
 This section provides topics that show you how to programmatically manage Remote Tools in System Center Configuration Manager.  

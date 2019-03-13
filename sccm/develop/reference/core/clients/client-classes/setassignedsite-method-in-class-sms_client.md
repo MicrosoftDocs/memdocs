@@ -9,6 +9,7 @@ ms.assetid: 2a8b79cd-9aaa-4aff-a8cb-74d8b8102dfd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SetAssignedSite Method in Class SMS_Client
 The `SetAssignedSite` method, in Configuration Manager, sets the client's assigned site.  

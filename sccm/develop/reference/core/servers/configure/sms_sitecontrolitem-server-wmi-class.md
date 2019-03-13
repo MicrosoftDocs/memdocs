@@ -9,6 +9,7 @@ ms.assetid: a0d437e7-2534-431c-943c-9cec4e70cf49
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_SiteControlItem Server WMI Class
 The `SMS_SiteControlItem` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the abstract base class for all site control item classes.  
@@ -70,11 +71,11 @@ Class SMS_SiteControlItem : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Abstract  
+- Abstract  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- Your application uses classes derived from this class to read and update items in the site control file. These classes are named with the prefix "SMS_SCI_". An example of a derived class is [SMS_SCI_Address Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sci_address-server-wmi-class.md).  
+  Your application uses classes derived from this class to read and update items in the site control file. These classes are named with the prefix "SMS_SCI_". An example of a derived class is [SMS_SCI_Address Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sci_address-server-wmi-class.md).  
 
 ## Requirements  
 

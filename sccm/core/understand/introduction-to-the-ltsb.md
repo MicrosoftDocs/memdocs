@@ -10,6 +10,7 @@ ms.assetid: 694bc29f-a7fd-4e06-815a-1a9c5e9ac563
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Introduction to the Long-Term Servicing Branch of System Center Configuration Manager
 
@@ -43,11 +44,11 @@ Although support for these features is not available with the LTSB, some feature
 ## Find documentation for the LTSB
 The LTSB is based on Current Branch version 1606. For product documentation use the [Current Branch documentation](https://docs.microsoft.com/sccm/), with caveats and limitations that are specific to the LTSB. Those caveats and limitations are identified in the following on-line topics:
 
--	  [Introduction to the  Long-Term Servicing Branch](introduction-to-the-ltsb.md): (This topic)
--	  [Install the  Long-Term Servicing Branch](install-the-ltsb.md)
--	  [Upgrade the  Long-Term Servicing Branch to the Current Branch](convert-to-current-branch.md)
--	  [Supported Configurations for the Long-Term Servicing Branch](supported-configurations-for-ltsb.md)
--   [Manage the Long-Term Servicing Branch of Configuration Manager](manage-the-ltsb.md)
+- [Introduction to the  Long-Term Servicing Branch](introduction-to-the-ltsb.md): (This topic)
+- [Install the  Long-Term Servicing Branch](install-the-ltsb.md)
+- [Upgrade the  Long-Term Servicing Branch to the Current Branch](convert-to-current-branch.md)
+- [Supported Configurations for the Long-Term Servicing Branch](supported-configurations-for-ltsb.md)
+- [Manage the Long-Term Servicing Branch of Configuration Manager](manage-the-ltsb.md)
 
 When you reference Current Branch documentation for the LTSB, details that apply to version 1606 also apply to the LTSB. Features or details that are introduced with version 1610 or later are not supported by the LTSB.
 

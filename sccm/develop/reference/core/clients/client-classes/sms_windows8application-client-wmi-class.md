@@ -9,6 +9,7 @@ ms.assetid: a8d947db-3396-42df-a01a-cfb9665ebf81
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_Windows8Application Client WMI Class
 In Configuration Manager, the `SMS_Windows8Application` class is a client Windows Management Instrumentation (WMI) class that defines a Windows 8 style application or a Windows Store application.  

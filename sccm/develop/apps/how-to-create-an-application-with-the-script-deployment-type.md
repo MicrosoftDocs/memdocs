@@ -9,6 +9,7 @@ ms.assetid: 11ec1d68-c5ee-4822-a519-b92011909d1d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Create an Application with the Script Deployment Type
 Applications are new to System Center Configuration Manager.  Prior to System Center Configuration Manager, a package was the basic object that was used to install software.  Now, a more flexible and complete model exists for applications in Configuration Manager.  Software based on this new model are referred to as Applications.  Packages still exist in System Center Configuration Manager, but they are defined and behave in much the same manner as packages did in Configuration Manager.  
@@ -45,35 +46,35 @@ Applications are new to System Center Configuration Manager.  Prior to System Ce
 
 ##### To Create an Application with the Script Deployment Type  
 
-1.  Initialize the provider connection and ApplicationFactory. (The application factory is a wrapper that makes creating the provider classes a little easier.)  
+1. Initialize the provider connection and ApplicationFactory. (The application factory is a wrapper that makes creating the provider classes a little easier.)  
 
-2.  Create the application and the deployment type.  
+2. Create the application and the deployment type.  
 
-3.  Persist the application to the provider.  
+3. Persist the application to the provider.  
 
- To use this sample, create a new command line C# application and copy and replace the code shown. You’ll need to add references to the 5 assemblies below are all found in the adminconsole\bin directory:  
+   To use this sample, create a new command line C# application and copy and replace the code shown. You’ll need to add references to the 5 assemblies below are all found in the adminconsole\bin directory:  
 
--   AdminUI.AppManFoundation.dll  
+- AdminUI.AppManFoundation.dll  
 
-     A wrapper encapsulating Configuration Manager provider functionality for creating applications.  
+   A wrapper encapsulating Configuration Manager provider functionality for creating applications.  
 
--   AdminUI.WqlQueryEngine.dll  
+- AdminUI.WqlQueryEngine.dll  
 
-     The WqlConnectionManager.  
+   The WqlConnectionManager.  
 
--   Microsoft.ConfigurationManagement.ApplicationManagement.dll  
+- Microsoft.ConfigurationManagement.ApplicationManagement.dll  
 
-     The core application model, used to serialize/deserialize applications.  
+   The core application model, used to serialize/deserialize applications.  
 
--   Microsoft.ConfigurationManagement.ApplicationManagement.MsiInstaller.dll  
+- Microsoft.ConfigurationManagement.ApplicationManagement.MsiInstaller.dll  
 
-     An implementation of the Windows Installer and Script Deployment Types.  
+   An implementation of the Windows Installer and Script Deployment Types.  
 
--   Microsoft.ConfigurationManagement.ManagementProvider.dll  
+- Microsoft.ConfigurationManagement.ManagementProvider.dll  
 
-     The Configuration Manager managed WMI interface.  
+   The Configuration Manager managed WMI interface.  
 
- After compiling and running the application, the output for the application will show this when it is successful.  
+  After compiling and running the application, the output for the application will show this when it is successful.  
 
 ```  
 C:\sms\AdminConsole\bin>ApplicationCreator.exe  

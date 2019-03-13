@@ -9,6 +9,7 @@ ms.assetid: 98243b65-78f1-434c-a4c1-bf1a791a30db
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Creating the UI Extension
 This section provides task-based topics that show you how to create the UI extension for application management in Configuration Manager.  

@@ -9,6 +9,7 @@ ms.assetid: 7bc41725-e274-4ce8-986f-1f55376a38c3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_AdvertisementStatusInformation Server WMI Class
 The `SMS_AdvertisementStatusInformation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the state and description for a software distribution or software update status message.  
@@ -70,11 +71,11 @@ Class SMS_AdvertisementStatusInformation : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Read (read-only)  
+- Read (read-only)  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- The `MessageState` property can have one of the following values:  
+  The `MessageState` property can have one of the following values:  
 
 |MessageState|Type|MessageStateName|  
 |------------------|----------|----------------------|  

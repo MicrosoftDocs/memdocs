@@ -9,6 +9,7 @@ ms.assetid: a1006a04-8bc9-4e2d-b6e6-7b968208140b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_BootImagePackage_DriverRef Server WMI Class
 The `SMS_BootImagePackage_DriverRef` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the association between a boot image package and a referenced driver.  
@@ -62,13 +63,13 @@ Class SMS_BootImagePackage_DriverRef : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Read (read-only)  
+- Read (read-only)  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- The boot image package is represented by an [SMS_BootImagePackage Server WMI Class](../../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md) object. The drivers contained in the package are indicated in the `ReferencedDrivers` property of this object.  
+  The boot image package is represented by an [SMS_BootImagePackage Server WMI Class](../../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md) object. The drivers contained in the package are indicated in the `ReferencedDrivers` property of this object.  
 
- Your application uses this class to determine what drivers are maintained with the boot image.  
+  Your application uses this class to determine what drivers are maintained with the boot image.  
 
 ## Requirements  
 

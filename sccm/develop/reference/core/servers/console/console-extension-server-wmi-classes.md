@@ -9,6 +9,7 @@ ms.assetid: de299771-5295-451e-87cd-f54f44f8ca9b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Console Extension Server WMI Classes
 This section provides reference information for Microsoft System Center Configuration Manager console extensions.  

@@ -9,6 +9,7 @@ ms.assetid: 536e192b-2a77-4542-950f-e05b04074e41
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Customize Advertisement Branding Information in Configuration Manager
 You set the software distribution branding information for the System Center Configuration Manager client by changing the `SWDBrandingSubTitle` property of the client agent component section in the site control file.  

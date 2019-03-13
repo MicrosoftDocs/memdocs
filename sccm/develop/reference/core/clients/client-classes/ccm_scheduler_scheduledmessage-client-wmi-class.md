@@ -9,6 +9,7 @@ ms.assetid: bb58b677-85f9-4888-8d6d-5e5e8379b05e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # CCM_Scheduler_ScheduledMessage Client WMI Class
 In System Center Configuration Manager, the `CCM_Scheduler_ScheduledMessage` class is a client Windows Management Instrumentation (WMI) class that represents the configuration for a scheduled message. There is an instance of this class for each scheduled message.  
@@ -95,45 +96,45 @@ Class CCM_Scheduler_ScheduledMessage : CCM_Policy
 
  Mode set for every message delivered under the schedule. Possible values are:  
 
--   Express  
+- Express  
 
--   Recoverable  
+- Recoverable  
 
- `ExpireMessage`  
- Data type: `String`  
+  `ExpireMessage`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Message to send when the schedule expires. If the value is omitted, no message is sent to the target endpoint.  
+  Message to send when the schedule expires. If the value is omitted, no message is sent to the target endpoint.  
 
- `ExpireTime`  
- Data type: `DateTime`  
+  `ExpireTime`  
+  Data type: `DateTime`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Date and time when the schedule expires.  
+  Date and time when the schedule expires.  
 
- `ExpireTimeIsGMT`  
- Data type: `Boolean`  
+  `ExpireTimeIsGMT`  
+  Data type: `Boolean`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- `true` if `ExpireTime` is in Universal Coordinated Time (UTC). If the value is omitted or set to `false`, the time specifies the client computer's local time.  
+  `true` if `ExpireTime` is in Universal Coordinated Time (UTC). If the value is omitted or set to `false`, the time specifies the client computer's local time.  
 
- `LaunchConditions`  
- Data type: `UInt32`  
+  `LaunchConditions`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Defines the system resource conditions to fire this schedule. The default value is 1. Possible values are a combination of the following:  
+  Defines the system resource conditions to fire this schedule. The default value is 1. Possible values are a combination of the following:  
 
 |||  
 |-|-|  

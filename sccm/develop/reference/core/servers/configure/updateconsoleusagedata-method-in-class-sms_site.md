@@ -9,6 +9,7 @@ ms.assetid: 189235fc-738b-4b3f-b81a-7d53dfb6c220
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # UpdateConsoleUsageData Method in Class SMS_Site
 The `UpdateConsoleUsageData` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates console usage data received from console connections.  

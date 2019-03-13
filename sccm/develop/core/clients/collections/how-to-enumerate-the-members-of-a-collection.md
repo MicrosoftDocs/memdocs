@@ -9,6 +9,7 @@ ms.assetid: b6405754-0475-4a07-a6ff-1adc76de3815
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Enumerate the Members of a Collection
 In System Center Configuration Manager, the preferred method to enumerate through a collection is to use `SMS_FullCollectionMembership Server WMI Class`.  
@@ -26,9 +27,9 @@ In System Center Configuration Manager, the preferred method to enumerate throug
 
  These examples require the following values:  
 
--   A Windows Management Instrumentation (WMI) connection object.  
+- A Windows Management Instrumentation (WMI) connection object.  
 
- Example of the subroutine call in Visual Basic:  
+  Example of the subroutine call in Visual Basic:  
 
 ```  
 Call EnumerateCollectionMembers(swbemServices)  

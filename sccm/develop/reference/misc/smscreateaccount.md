@@ -9,6 +9,7 @@ ms.assetid: cbc5c37b-856b-4ca9-957f-1b126e7295c7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SmsCreateAccount
 In System Center Configuration Manager, the `SmsCreateAccount` function creates an account in the specified domain and with the specified account name and password.  

@@ -9,6 +9,7 @@ ms.assetid: 5b566a81-4d1b-4d19-94cb-0fb6589cf76c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Compliance Settings (DCM) Client Interfaces
 In System Center Configuration Manager, the desired configuration management COM automation classes and related types are used by client applications to manage configuration items on the client computer. They concern client-side behavior only and are called externally by the Desired Configuration Management Agent, which is enabled by default on the client computer. For more information about the agent, see [Configuration Manager Compliance Settings (DCM)](../../../../../develop/compliance/compliance-settings-dcm.md).  

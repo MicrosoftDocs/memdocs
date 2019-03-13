@@ -9,6 +9,7 @@ ms.assetid: 5acde161-499a-43f3-9470-a83cebb7a3cd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_PDF_Program Server WMI Class
 The `SMS_PDF_Program` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a package definition file (PDF) template from which to create an initialized program.  
@@ -180,11 +181,11 @@ Class SMS_PDF_Program : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Read (read-only)  
+- Read (read-only)  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- Your application cannot delete individual programs from the package definition file store. To delete a program, the application must delete the package template and then reload the package template without the program.  
+  Your application cannot delete individual programs from the package definition file store. To delete a program, the application must delete the package template and then reload the package template without the program.  
 
 ## Requirements  
 

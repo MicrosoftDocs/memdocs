@@ -9,6 +9,7 @@ ms.assetid: ff1c49fa-dede-4a22-b0e8-38460c4aa057
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Perform an Asynchronous Configuration Manager Query by Using WMI
 In System Center Configuration Manager, you perform an synchronous query for Configuration Manager objects by calling the [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx) object [ExecQueryAsync](https://msdn.microsoft.com/library/aa392108.aspx) method and by implementing a sink method to handle query results.  

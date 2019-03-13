@@ -10,6 +10,7 @@ ms.assetid: 104fb4cc-6e83-40a3-8e6b-ac909fb9ec7d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Plan for the site database for System Center Configuration Manager
 
@@ -25,7 +26,7 @@ The site database server is a computer that runs a supported version of Microsof
 
 -  For non-SQL Availability Group usage the Database Recovery Model must be set to SIMPLE  
 
-Further information on SQL Recovery Modes can be found in [Recovery Models (SQL Server)] (https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server).
+Further information on SQL Recovery Modes can be found in [Recovery Models (SQL Server)](https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server).
 
 The following SQL Server configurations can be used to host the site database:  
 

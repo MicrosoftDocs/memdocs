@@ -9,6 +9,7 @@ ms.assetid: e8c328eb-87c7-4ee0-96a5-6bd02b49f776
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # GetReportPointInfo Method in Class SMS_Report
 The `GetReportPointInfo` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets report point information.  

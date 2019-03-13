@@ -9,6 +9,7 @@ ms.assetid: 8803e2a7-f4f2-4748-acc2-bcaeb777be7d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_TopThreatSummary Server WMI Class
 The `SMS_TopThreatSummary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that summarizes the top threats per collection.  

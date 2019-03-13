@@ -9,6 +9,7 @@ ms.assetid: 305f9dc9-acb0-415d-bc10-369a7f1c8e63
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # CheckDuplicateShareName Method in Class SMS_Package
 The `CheckDuplicateShareName` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, determines if the specified share name has been used by another package.  

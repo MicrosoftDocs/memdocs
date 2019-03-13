@@ -10,6 +10,7 @@ ms.assetid: 33bcf8b3-a6b6-4fc9-bb59-70a9621b2b0d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 #  Sync data from Configuration Manager to Azure Log Analytics

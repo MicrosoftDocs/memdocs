@@ -10,6 +10,7 @@ ms.assetid: dc526e8d-fac3-4bb5-b206-03ad29b0ae11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Data transfers between sites in System Center Configuration Manager
 

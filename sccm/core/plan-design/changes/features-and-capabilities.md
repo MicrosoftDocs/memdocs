@@ -10,6 +10,7 @@ ms.assetid: 5d388399-07ca-431c-a9b2-56c69771aa87
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Features and capabilities of System Center Configuration Manager
 

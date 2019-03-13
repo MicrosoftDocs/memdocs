@@ -9,6 +9,7 @@ ms.assetid: 77b6c163-3cdb-4188-9dd4-e744ad5370c4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # UpdateDefaultImage Method in Class SMS_BootImagePackage
 The `UpdateDefaultImage` Windows Management Instrumentation (WMI) class method, in Configuration Manager, creates a copy of the .wim image pointed to by the `ImagePath` property and injects it with operating system deployment files for boot image deployment.  

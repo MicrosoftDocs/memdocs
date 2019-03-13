@@ -9,6 +9,7 @@ ms.assetid: faa33a29-a719-4288-ac1f-5fb35f2b5f1b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_UserSettings Server WMI Class
 The `SMS_UserSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that describes attributes that are specific to a single user that is managed by Configuration Manager.  
@@ -70,11 +71,11 @@ Class SMS_UserSettings
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Secured  
+- Secured  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- Your application can use this class as described in How to Create a Computer Variable in Configuration Manager.  
+  Your application can use this class as described in How to Create a Computer Variable in Configuration Manager.  
 
 ## Requirements  
 

@@ -9,6 +9,7 @@ ms.assetid: a8824024-5e6c-49f9-a54e-9b5ec597b86d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_Site Server WMI Class
 The `SMS_Site` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents identification and status data for a Configuration Manager site installation.  
@@ -238,11 +239,11 @@ Class SMS_Site : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Secured  
+- Secured  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- `SMS_Site` can be used to get the site server name from a known site code. For an example, see [How to Create a PXE Service Point Role](../../../../../develop/osd/how-to-enable-a-pxe-service-point-role.md).  
+  `SMS_Site` can be used to get the site server name from a known site code. For an example, see [How to Create a PXE Service Point Role](../../../../../develop/osd/how-to-enable-a-pxe-service-point-role.md).  
 
 ## Requirements  
 

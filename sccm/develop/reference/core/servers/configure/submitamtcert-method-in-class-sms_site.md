@@ -9,6 +9,7 @@ ms.assetid: f7aa0ba7-ba01-4c7d-81e1-fa2dfca93f8b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SubmitAMTCert Method in Class SMS_Site
 The `SubmitAMTCert` Windows Management Instrumentation (WMI) class method, in Configuration Manager, submits a certificate for a computer that implements Intel Active Management Technology (Intel AMT).  

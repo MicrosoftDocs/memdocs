@@ -9,6 +9,7 @@ ms.assetid: 01eb8a22-12dc-47ae-b6b4-2acde24e6e6a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_ActiveSyncConnectedDevice Client WMI Class
 The `SMS_ActiveSyncConnectedDevice` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that represents a device connected to the ActiveSync service.  

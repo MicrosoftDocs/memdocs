@@ -9,6 +9,7 @@ ms.assetid: aa2b3692-f373-4c66-b22b-d14bfa0c58dd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # About Configuration Manager Custom Action MOF Files
 In System Center Configuration Manager, operating system deployment actions are defined in the Managed Object Format (MOF) file, %*ProgramFiles*%\Microsoft Configuration Manager\bin\i386\\_tasksequenceprovider.mof.  
@@ -104,21 +105,21 @@ string          PackageIDForApplicationExe;
 
  The default Configuration Manager categories that you can add an action to are:  
 
--   General  
+- General  
 
--   Disks  
+- Disks  
 
--   User State  
+- User State  
 
--   Images  
+- Images  
 
--   Drivers  
+- Drivers  
 
--   Settings  
+- Settings  
 
- You can also create a new category by specifying a new category in the `ActionCategory` class qualifier. For example, the following MOF file creates a new category called My Custom Category. The action is placed second within the category and the category is placed fifth overall.  
+  You can also create a new category by specifying a new category in the `ActionCategory` class qualifier. For example, the following MOF file creates a new category called My Custom Category. The action is placed second within the category and the category is placed fifth overall.  
 
- `ActionCategory{"My Custom Category",2,5"},`  
+  `ActionCategory{"My Custom Category",2,5"},`  
 
 ### ActionName  
  The `ActionName` class qualifier defines the custom action control name. The qualifier has the following syntax:  

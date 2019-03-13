@@ -10,6 +10,7 @@ ms.assetid: cead6825-6113-4ba5-a381-ac3598dfee86
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Hierarchy Maintenance Tool (Preinst.exe) for System Center Configuration Manager
 

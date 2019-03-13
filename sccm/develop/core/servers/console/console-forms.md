@@ -9,6 +9,7 @@ ms.assetid: 20ff7226-bb84-4f98-b3f3-272c90eb4b01
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Console Forms
 This section describes the property sheet and dialog box form types that you can use to extend the System Center Configuration Manager console.  

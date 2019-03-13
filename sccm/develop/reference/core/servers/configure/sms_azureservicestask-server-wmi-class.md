@@ -9,6 +9,7 @@ ms.assetid: d9f0070c-a6ff-45d7-b5e7-62deafabb297
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_AzureServicesTask Server WMI Class
 The `SMS_AzureServicesTask` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an Windows Azure specific operation which can be performed on the specified Windows Azure Service. This can be used to initiate an operation as well as monitor the results of the operation.  

@@ -9,6 +9,7 @@ ms.assetid: ecd42432-ceb8-4d0d-9445-3fc6752eedef
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_ClientActionStatus Server WMI Class
 The `SMS_ClientActionStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that summarize the status of a client action.  

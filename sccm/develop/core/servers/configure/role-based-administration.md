@@ -9,6 +9,7 @@ ms.assetid: 20486f6b-b4f2-4e4a-9dbb-72fb90067ec0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Role-Based Administration
 This section provides topics about programmatically managing role-based administration in System Center Configuration Manager.  

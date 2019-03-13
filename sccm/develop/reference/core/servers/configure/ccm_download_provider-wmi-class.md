@@ -9,6 +9,7 @@ ms.assetid: 888329e2-1af1-4233-8ea2-90a841356c38
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # CCM_Download_Provider WMI Class
 The **CCM_Download_Provider** class, in Configuration Manager, defines and registers a non-Microsoft download plug-in provider.  

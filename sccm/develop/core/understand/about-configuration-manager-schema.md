@@ -8,6 +8,7 @@ ms.assetid: 7387182a-902d-4a9b-9233-ec025816e8e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # About Configuration Manager Schema
 This section provides information about the schema used by Configuration Manager.  

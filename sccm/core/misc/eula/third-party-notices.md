@@ -1,7 +1,7 @@
 ---
 title: Third-party notices
 titleSuffix: Configuration Manager
-ms.date: 06/01/2018
+ms.date: 01/25/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -9,9 +9,11 @@ ms.assetid: a784d39d-ab55-439e-a147-e764bd17fa61
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
+ms.collection: M365-identity-device-management
 ---
-# Third-party Notices
+
+# Third-party notices
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
@@ -38,11 +40,13 @@ THIRD-PARTY SOFTWARE NOTICES AND INFORMATION
 - [WINDOWSAZURE.CONFIGURATIONMANAGER v. 2.0.3](#windowsazureconfigurationmanager-v-203)
 - [Microsoft Azure Monitoring Services 4.1.0](#microsoft-azure-monitoring-services-410)
 - [Microsoft Azure Common Library 2.1.0](#microsoft-azure-common-library-210)
-- [Common Library for Hyak Code Generator 1.0.1](#common-library-for-hyak-code-generator-101)
+- [Common Library for Hyak Code Generator 1.0.1 and 1.1.3](#common-library-for-hyak-code-generator-101-and-113)
 - [Microsoft Azure Resource Manager Library 2.18.0.0](#microsoft-azure-resource-manager-library-21800)
 - [Microsoft Azure Management Authorization Library 2.0.0](#microsoft-azure-management-authorization-library-200)
 - [OPG-AvalonEdit v5.0.4](#opg-avalonedit-v504)
 - [Command Line Parser Library 1.9.71](#command-line-parser-library-1971)
+- [ShowdownJS v1.8.6](#showdownjs-v186)
+
 
 As the recipient of the above third-party software, Microsoft sets forth a copy of the notices and other information below.  
 
@@ -77,18 +81,18 @@ This product includes software developed by the OpenSSL Project for use in the O
 
  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:  
 
-1.  Redistributions of source code must retain the above copyright notice, this list of conditions, and the following disclaimer.  
+1. Redistributions of source code must retain the above copyright notice, this list of conditions, and the following disclaimer.  
 
-2.  Redistributions in binary form must reproduce the above copyright notice, this list of conditions, and the following disclaimer in the documentation and/or other materials provided with the distribution.  
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions, and the following disclaimer in the documentation and/or other materials provided with the distribution.  
 
-3.  All advertising materials mentioning features or use of this software must display the following acknowledgment:  
-      "This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit. (http://www.openssl.org/)"  
+3. All advertising materials mentioning features or use of this software must display the following acknowledgment:  
+     "This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit. (http://www.openssl.org/)"  
 
-4.  The names "OpenSSL Toolkit" and "OpenSSL Project" must not be used to endorse or promote products derived from this software without prior written permission. For written permission, please contact openssl-core@openssl.org.  
+4. The names "OpenSSL Toolkit" and "OpenSSL Project" must not be used to endorse or promote products derived from this software without prior written permission. For written permission, please contact openssl-core@openssl.org.  
 
-5.  Products derived from this software may not be called "OpenSSL" nor may "OpenSSL" appear in their names without prior written permission of the OpenSSL Project.  
+5. Products derived from this software may not be called "OpenSSL" nor may "OpenSSL" appear in their names without prior written permission of the OpenSSL Project.  
 
-6.  Redistributions of any form whatsoever must retain the following acknowledgment: "This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (http://www.openssl.org/)"  
+6. Redistributions of any form whatsoever must retain the following acknowledgment: "This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (http://www.openssl.org/)"  
 
 THIS SOFTWARE IS PROVIDED BY THE OpenSSL PROJECT "AS IS" AND ANY EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE OpenSSL PROJECT OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.  
 
@@ -116,16 +120,16 @@ The implementation was written so as to conform with Netscape's SSL.
 
  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:  
 
-1.  Redistributions of source code must retain the copyright notice, this list of conditions, and the following disclaimer.  
+1. Redistributions of source code must retain the copyright notice, this list of conditions, and the following disclaimer.  
 
-2.  Redistributions in binary form must reproduce the above copyright notice, this list of conditions, and the following disclaimer in the documentation and/or other materials provided with the distribution.  
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions, and the following disclaimer in the documentation and/or other materials provided with the distribution.  
 
-3.  All advertising materials mentioning features or use of this software must display the following acknowledgement:  
-    "This product includes cryptographic software written by Eric Young (eay@cryptsoft.com)"       
-    The word 'cryptographic' can be left out if the routines from the library being used are not cryptographic related :-).  
+3. All advertising materials mentioning features or use of this software must display the following acknowledgement:  
+   "This product includes cryptographic software written by Eric Young (eay@cryptsoft.com)"       
+   The word 'cryptographic' can be left out if the routines from the library being used are not cryptographic related :-).  
 
-4.  If you include any Windows-specific code (or a derivative thereof) from the apps directory (application code), you must include an acknowledgement:  
-    "This product includes software written by Tim Hudson (tjh@cryptsoft.com)"  
+4. If you include any Windows-specific code (or a derivative thereof) from the apps directory (application code), you must include an acknowledgement:  
+   "This product includes software written by Tim Hudson (tjh@cryptsoft.com)"  
 
 THIS SOFTWARE IS PROVIDED BY ERIC YOUNG "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.  
 
@@ -355,7 +359,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 
 
-## Common Library for Hyak Code Generator 1.0.1
+## Common Library for Hyak Code Generator 1.0.1 and 1.1.3
 **NOTICES AND INFORMATION BEGIN HERE**  
 
 Copyright 2016 Microsoft. All rights reserved.  
@@ -364,7 +368,7 @@ Licensed under the Apache License, Version 2.0 (the "License"); you may not use 
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS-IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.  
 
-**END OF Common Library for Hyak Code Generator 1.0.1 NOTICES AND INFORMATION**
+**END OF Common Library for Hyak Code Generator 1.0.1 and 1.1.3 NOTICES AND INFORMATION**
 
 
 
@@ -432,6 +436,26 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED *AS IS*, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 **END OF Command Line Parser Library 1.9.71 NOTICES AND INFORMATION**
+
+
+
+## ShowdownJS v1.8.6 
+**NOTICES AND INFORMATION BEGIN HERE**  
+
+Showdown Copyright (c) 2007, John Fraser
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.  
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.  
+
+3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.  
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+**END OF ShowdownJS v1.8.6 NOTICES AND INFORMATION**
+
 
 
 <!-- template

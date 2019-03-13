@@ -8,6 +8,7 @@ ms.assetid: 47806f0a-362a-4255-bbd5-af38146a8880
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Report Action
 The report action displays a System Center Configuration Manager report in the Configuration Manager console.  

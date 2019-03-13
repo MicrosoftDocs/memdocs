@@ -9,6 +9,7 @@ ms.assetid: dd1a5ba5-b611-4b28-888f-7918fcd1d869
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # CCM_SoftwareUpdate Client WMI Class
 The `CCM_SoftwareUpdate` WMI class is a client class, in Configuration Manager, that represents a software update.  
@@ -28,21 +29,21 @@ class CCM_SoftwareUpdate : CCM_SoftwareBase
      String ArticleID;  
      String BulletinID;  
      UInt32 ComplianceState;  
-     UInt32 ContentSize;  
+     UInt32 ContentSize;  
      Datetime Deadline  
-     String Description;  
-     UInt32 ErrorCode;  
-     UInt32 EvaluationState;  
+     String Description;  
+     UInt32 ErrorCode;  
+     UInt32 EvaluationState;  
      Boolean ExclusiveUpdate;  
      String FullName;  
      Boolean IsUpgrade;  
      UInt32 MaxExecutionTime;  
-     String Name;  
-     Datetime NextUserScheduledTime;  
+     String Name;  
+     Datetime NextUserScheduledTime;  
      Boolean NotifyUser;  
      Boolean OverrideServiceWindows;  
-     UInt32 PercentComplete;  
-     String Publisher;  
+     UInt32 PercentComplete;  
+     String Publisher;  
      Boolean RebootOutsideServiceWindows;  
      Datetime RestartDeadline;  
      Datetime StartTime;  

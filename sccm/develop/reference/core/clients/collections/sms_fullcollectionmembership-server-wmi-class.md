@@ -9,6 +9,7 @@ ms.assetid: c8c0f370-89b4-4fcf-9057-0867d1f6dc3d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_FullCollectionMembership Server WMI Class
 The `SMS_FullCollectionMembership` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that lists all member resources of a specific collection.  
@@ -287,45 +288,45 @@ Class SMS_FullCollectionMembership : SMS_BaseClass
 
  Type of resource. Possible values are:  
 
--   System  
+- System  
 
--   User groups  
+- User groups  
 
--   User  
+- User  
 
- `SiteCode`  
- Data type: `String`  
+  `SiteCode`  
+  Data type: `String`  
 
- Access type: Read Only  
+  Access type: Read Only  
 
- Qualifiers: [SizeLimit("3")]  
+  Qualifiers: [SizeLimit("3")]  
 
- Site code of the site that created the collection.  
+  Site code of the site that created the collection.  
 
- `SMSID`  
- Data type: `String`  
+  `SMSID`  
+  Data type: `String`  
 
- Access type: Read Only  
+  Access type: Read Only  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- Configuration Manager unique ID.  
+  Configuration Manager unique ID.  
 
- `SuppressAutoProvision`  
- Data type: `Boolean`  
+  `SuppressAutoProvision`  
+  Data type: `Boolean`  
 
- Access type: Read Only  
+  Access type: Read Only  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- When set to `true` and when this resource belongs to a collection configured for automatic provisioning, prevents the resource from being automatically provisioned by an Out of Band service point.  
+  When set to `true` and when this resource belongs to a collection configured for automatic provisioning, prevents the resource from being automatically provisioned by an Out of Band service point.  
 
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Read (read-only)  
+- Read (read-only)  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
 ## Requirements  
 

@@ -9,6 +9,7 @@ ms.assetid: 6d61846f-b293-42b8-ad65-88852c6f45c2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Windows Azure Server WMI Classes
 This section provides information about Windows Azure related classes used by System Center Configuration Manager.  

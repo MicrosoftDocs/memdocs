@@ -10,6 +10,7 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: 1dd696ce-3e46-4dfa-a76d-592fe0f0320e
+ms.collection: M365-identity-device-management
 ---
 
 # Migrate hybrid MDM users and devices to Intune standalone
@@ -50,7 +51,7 @@ For more information, see the following articles:
 
     - Install NDES and Exchange connectors  
 
-    When you complete the steps and start the migration to Intune standalone, it should be transparent to your users.   
+    When you complete the steps and start the migration to Intune standalone, there is no significant impact to your users.   
 
 3.	[Change the MDM authority for specific users (mixed MDM authority)](migrate-mixed-authority.md)    
 

@@ -9,6 +9,7 @@ ms.assetid: d36889ae-8c02-441e-996d-64f98c970eae
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_CI_CurrentComplianceStatus Server WMI Class
 The `SMS_CI_CurrentComplianceStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the compliance status for a baseline configuration item.  
@@ -243,13 +244,13 @@ Class SMS_CI_CurrentComplianceStatus : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Read (read-only)  
+- Read (read-only)  
 
--   Secured  
+- Secured  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- Your application uses this class for compliance monitoring for a baseline configuration item.  
+  Your application uses this class for compliance monitoring for a baseline configuration item.  
 
 ## Requirements  
 

@@ -9,19 +9,20 @@ ms.assetid: 4dbfce7f-1b58-4998-9b38-f5f3c3ba77c6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Compliance Settings (DCM) Server WMI Classes
 In System Center Configuration Manager, compliance settings (DCM) server Windows Management Instrumentation (WMI) classes, assist you in assessing computer compliance by considering a number of configurations, for example, installation and configuration of the correct versions of Microsoft Windows operating systems. You can also use these classes to check for compliance with software updates and security settings.  
 
  The main classes supporting the compliance settings feature are:  
 
--   [SMS_ConfigurationItem Server WMI Class](../../../develop/reference/compliance/sms_configurationitem-server-wmi-class.md), representing a generic configuration item.  
+- [SMS_ConfigurationItem Server WMI Class](../../../develop/reference/compliance/sms_configurationitem-server-wmi-class.md), representing a generic configuration item.  
 
--   [SMS_ConfigurationBaselineInfo Server WMI Class](../../../develop/reference/compliance/sms_configurationbaselineinfo-server-wmi-class.md), representing information for a baseline configuration item.  
+- [SMS_ConfigurationBaselineInfo Server WMI Class](../../../develop/reference/compliance/sms_configurationbaselineinfo-server-wmi-class.md), representing information for a baseline configuration item.  
 
--   [SMS_BaselineAssignment Server WMI Class](../../../develop/reference/compliance/sms_baselineassignment-server-wmi-class.md), representing an assignment of a baseline configuration item.  
+- [SMS_BaselineAssignment Server WMI Class](../../../develop/reference/compliance/sms_baselineassignment-server-wmi-class.md), representing an assignment of a baseline configuration item.  
 
- For more information, see Desired Configuration Management Configuration Baselines and Configuration Items.  
+  For more information, see Desired Configuration Management Configuration Baselines and Configuration Items.  
 
 > [!NOTE]
 >  Some of the classes that are defined for desired configuration management, for example, [SMS_ConfigurationBaselineInfo Server WMI Class](../../../develop/reference/compliance/sms_configurationbaselineinfo-server-wmi-class.md), are specific to baseline configuration items. Some of the classes can also be used to reference software update configuration items, although applications use the software updates feature to manipulate these items. For more information, see [Configuration Manager Software Updates](../../../develop/sum/software-updates.md).  

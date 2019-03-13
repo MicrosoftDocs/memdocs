@@ -9,6 +9,7 @@ ms.assetid: 00fc69cf-c419-4b68-bfe3-737fd5c957f6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_EPAlert Server WMI Class
 The `SMS_EPAlert` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents System Center Endpoint Protection alerts.  

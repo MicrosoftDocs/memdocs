@@ -9,6 +9,7 @@ ms.assetid: 5a387a79-8915-4f09-a354-96da17798a89
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_ServicePlan Server WMI Class
 The `SMS_ServicePlan` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a service plan.  
@@ -721,11 +722,11 @@ Class SMS_ServicePlan : SMS_SoftwareUpdateBase
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Dynamic  
+- Dynamic  
 
--   Secured  
+- Secured  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
 ## Requirements  
 

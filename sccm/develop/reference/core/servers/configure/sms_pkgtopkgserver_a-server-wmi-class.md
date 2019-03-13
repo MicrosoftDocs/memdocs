@@ -9,6 +9,7 @@ ms.assetid: 104a2dd5-bdd5-4ba9-bdfc-61dc38f58258
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_PkgToPkgServer_a Server WMI Class
 The `SMS_PkgToPkgServer_a` association Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that uses the `PackageID` property to relate an [SMS_Package Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) object with its [SMS_DistributionPoint Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_distributionpoint-server-wmi-class.md) objects.  
@@ -50,11 +51,11 @@ Class SMS_PkgToPkgServer_a : SMS_BaseAssociation
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Association: ToInstance  
+- Association: ToInstance  
 
--   Read (read-only)  
+- Read (read-only)  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
 ## Requirements  
 

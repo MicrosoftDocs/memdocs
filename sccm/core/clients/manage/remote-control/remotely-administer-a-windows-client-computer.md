@@ -10,6 +10,7 @@ ms.assetid: 3c9648c4-645e-4e47-ae10-2da817b8c83b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to remotely administer a Windows client computer by using System Center Configuration Manager
 
@@ -76,7 +77,7 @@ Here are three ways to start the remote control viewer:
 
 ### To start the remote control viewer from the Windows command line  
 
--   At the Windows command prompt, type *<Configuration Manager Installation Folder\>***\AdminConsole\Bin\x64\CmRcViewer.exe**  
+-   At the Windows command prompt, type _<Configuration Manager Installation Folder\>_**\AdminConsole\Bin\x64\CmRcViewer.exe**  
 
 CmRcViewer.exe supports the following command-line options:  
 

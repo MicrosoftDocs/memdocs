@@ -8,6 +8,7 @@ ms.assetid: f5912944-21ac-40d2-a026-f9b2ea69d9c7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager ShowDialog Action
 The `ShowDialog` action, in System Center Configuration Manager, opens a property sheet or regular dialog box in the Configuration Manager console. With the `ShowDialog` action, you can display existing dialog boxes or extension dialog boxes that you create.  
@@ -30,11 +31,11 @@ The `ShowDialog` action, in System Center Configuration Manager, opens a propert
 ## Sample Properties ShowDialog Action XML  
  The following attributes and elements are specific to an action that adds a property page to a properties property sheet:  
 
--   The `ActionDescription` element `ActionVerb` attribute is set to `Properties`.  
+- The `ActionDescription` element `ActionVerb` attribute is set to `Properties`.  
 
--   The `DialogID` element identifies a property sheet containing the property page to be displayed in the `Properties` dialog.  
+- The `DialogID` element identifies a property sheet containing the property page to be displayed in the `Properties` dialog.  
 
- The following XML shows how to integrate a property page (`PrototypeForm`) into a properties context menu option:  
+  The following XML shows how to integrate a property page (`PrototypeForm`) into a properties context menu option:  
 
 ```  
 <ActionDescription ActionVerb="Properties" Class="ShowDialog">  <ShowOn>    <string>DefaultHomeTab</string>    <string>ContextMenu</string>  </ShowOn>  <DialogId>PrototypeForm</DialogId>  

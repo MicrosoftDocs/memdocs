@@ -9,6 +9,7 @@ ms.assetid: ef754afa-1157-4213-8db5-b855c0bde8a5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_ProductFileInfo Server WMI Class
 The `SMS_ProductFileInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents a combination of file and product information for inventory and metering.  

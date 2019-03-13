@@ -10,6 +10,7 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # About client settings in Configuration Manager
@@ -95,13 +96,13 @@ This setting applies to users when their computer is on either the intranet or t
 
 Set this option to **Yes** for users to receive the user policy on internet-based computers. The following requirements also apply:  
 
--   The client and site are configured for [internet-based client management](/sccm/core/clients/manage/plan-internet-based-client-management) or a [cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).  
+- The client and site are configured for [internet-based client management](/sccm/core/clients/manage/plan-internet-based-client-management) or a [cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).  
 
--   The **Enable user policy on clients** setting is **Yes**.  
+- The **Enable user policy on clients** setting is **Yes**.  
 
--   The internet-based management point successfully authenticates the user by using Windows authentication (Kerberos or NTLM). For more information, see [Considerations for client communications from the internet](/sccm/core/plan-design/hierarchy/communications-between-endpoints#BKMK_clientspan).  
+- The internet-based management point successfully authenticates the user by using Windows authentication (Kerberos or NTLM). For more information, see [Considerations for client communications from the internet](/sccm/core/plan-design/hierarchy/communications-between-endpoints#BKMK_clientspan).  
 
--   Starting in version 1710, the cloud management gateway successfully authenticates the user by using Azure Active Directory. For more information, see [Deploy user-available applications on Azure AD-joined devices](\sccm\apps\deploy-use\deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices).  
+- Starting in version 1710, the cloud management gateway successfully authenticates the user by using Azure Active Directory. For more information, see [Deploy user-available applications on Azure AD-joined devices](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices).  
 
 If you set this option to **No**, or any of the previous requirements aren't met, then a computer on the internet only receives computer policies. In this scenario, users can still see, request, and install applications from an internet-based Application Catalog. If this setting is **No**, but **Enable user policy on clients** is **Yes**, users don't receive user policies until the computer is connected to the intranet.  
 
@@ -300,7 +301,7 @@ You use Configuration Manager boundary groups to define and regulate content dis
 
 
 ##  Endpoint Protection  
->  [!Tip]   
+> [!Tip]
 > In addition to the following information, you can find details about using Endpoint Protection client settings in [Example scenario: Using Endpoint Protection to protect computers from malware](/sccm/protect/deploy-use/scenarios-endpoint-protection).
 
 ### Manage Endpoint Protection client on client computers
@@ -620,7 +621,7 @@ For example, if your organization doesn't use compliance policies, and you want 
 Configure a schedule for when Configuration Manager reevaluates the requirement rules for all deployments. The default value is every seven days.  
 
 > [!IMPORTANT]  
->  Don't change this value to a lower value than the default. A more aggressive reevaluation schedule negatively affects the performance of your network and client computers.  
+> This setting is more invasive to the local client than it is to the network or site server. A more aggressive reevaluation schedule negatively affects the performance of your network and client computers. Microsoft doesn't recommend setting a lower value than the default. If you change this value, closely monitor performance.  
 
 Initiate this action from a client as follows: in the **Configuration Manager** control panel, from the **Actions** tab, select **Application Deployment Evaluation Cycle**.  
 

@@ -9,6 +9,7 @@ ms.assetid: 85557c6d-9b3a-4c1c-aff7-b45dee1edec9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_DeviceSettingPackage Server WMI Class
 The `SMS_DeviceSettingPackage` Windows Management Instrumentation (WMI) class is an SMS Provider server class that represents a device setting package in the database.  
@@ -494,11 +495,11 @@ Class SMS_DeviceSettingPackage : SMS_PackageBaseclass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Secured  
+- Secured  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- Mobile device setting packages use programs, distribution points, and advertisements to collections to distribute their content.  
+  Mobile device setting packages use programs, distribution points, and advertisements to collections to distribute their content.  
 
 ## Requirements  
 

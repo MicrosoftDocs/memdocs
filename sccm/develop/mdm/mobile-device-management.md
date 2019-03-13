@@ -9,6 +9,7 @@ ms.assetid: 59e4b320-704a-4bcc-bfcb-3572455d1f36
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Mobile Device Management
 This section provides topics that show you how to programmatically manage mobile devices in System Center Configuration Manager.  

@@ -10,6 +10,7 @@ ms.assetid: 495b87ae-41a4-49ba-abe2-d4f7d22ac0d4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Licensing and branches for System Center Configuration Manager
@@ -75,7 +76,7 @@ LTSB is based on Current Branch version 1606, and has the following limitations:
 ### Software Assurance expiration date
 Beginning with the October 2016 release of the version 1606 baseline media for System Center Configuration Manager, you can specify the expiration date of your Software Assurance agreement. The **Software Assurance expiration date** is an optional value you can specify as a convenient reminder when you run Configuration Manager Setup or later from within the Configuration Manager console.
 
->  [!NOTE]   
+> [!NOTE]
 >  Microsoft does not validate the expiration date you specify, and does not use this date for license validation.  Instead, you can use it as a reminder of your expiration date. This is useful because Configuration Manager periodically checks for new software updates offered  online, and your Software Assurance license status should be current to be eligible to use these additional updates.    
 
 **To specify the date:**

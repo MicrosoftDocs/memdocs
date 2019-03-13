@@ -9,6 +9,7 @@ ms.assetid: 775da6e9-420e-44d7-abdf-2dfe2ab705f9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # PostponeProgramsToNonBusinessHours Method in Class CCM_ProgramsManager
 The `PostponeProgramsToNonBusinessHours` WMI class method, in Configuration Manager, schedules legacy software distribution programs to run in the next available user defined service window.  
@@ -19,8 +20,8 @@ The `PostponeProgramsToNonBusinessHours` WMI class method, in Configuration Mana
 
 ```  
 uint32 PostponeProgramsToNonBusinessHours(  
-     [IN]  CCM_Program CCMPrograms[],  
-     [IN]  Boolean RebootImmediatelyAfterInstall  
+     [IN]  CCM_Program CCMPrograms[],  
+     [IN]  Boolean RebootImmediatelyAfterInstall  
 );  
 ```  
 

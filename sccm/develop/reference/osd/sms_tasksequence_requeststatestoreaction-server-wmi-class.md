@@ -9,6 +9,7 @@ ms.assetid: ba604e66-6252-4856-8f2f-6b4e105fbe00
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_TaskSequence_RequestStateStoreAction Server WMI Class
 The `SMS_TaskSequence_RequestStateStoreAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that requests access to a state migration point when capturing a state from a computer or restoring a state to a computer.  
@@ -101,47 +102,47 @@ Class SMS_TaskSequence_RequestStateStoreAction : SMS_TaskSequence_Action
 
  Type of state migration point (SMP) request. Possible values are:  
 
--   capture  
+- capture  
 
--   restore  
+- restore  
 
- `SMPRetryCount`  
- Data type: `UInt32`  
+  `SMPRetryCount`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [Global, ValueRange("0-30")]  
+  Qualifiers: [Global, ValueRange("0-30")]  
 
- The number of times that the action should try to find a state migration point before failing (global setting). The value must be between 0 and 30.  
+  The number of times that the action should try to find a state migration point before failing (global setting). The value must be between 0 and 30.  
 
- `SMPRetryTime`  
- Data type: `UInt32`  
+  `SMPRetryTime`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [Global, ValueRange("0-600")]  
+  Qualifiers: [Global, ValueRange("0-600")]  
 
- The time, in seconds, that the action should wait between retry attempts (global setting).The value must be between 0 and 600.  
+  The time, in seconds, that the action should wait between retry attempts (global setting).The value must be between 0 and 600.  
 
- `SupportedEnvironment`  
- Data type: `String`  
+  `SupportedEnvironment`  
+  Data type: `String`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [Not_Null:ToInstance]  
+  Qualifiers: [Not_Null:ToInstance]  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- The default value of this property for this task sequence action is FullOS.  
+  The default value of this property for this task sequence action is FullOS.  
 
- `Timeout`  
- Data type: `UInt32`  
+  `Timeout`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
 ## Remarks  
  Class qualifiers for this class include:  

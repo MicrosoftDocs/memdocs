@@ -10,6 +10,7 @@ ms.assetid: e36b98c7-d0f4-4dd6-bac3-6a6c4b4bf841
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Troubleshoot Lookout Integration with Intune
 

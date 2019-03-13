@@ -9,6 +9,7 @@ ms.assetid: 95a1f0b7-2568-403f-bd24-43abc859eaf0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Set Operating System Deployment Branding Information in Configuration Manager
 You set the operating system deployment branding information for the System Center Configuration Manager client by changing the `OSDBrandingSubtitle` property of the client agent component section in the site control file.  
