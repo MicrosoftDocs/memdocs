@@ -2,7 +2,7 @@
 title: Prerequisite checks
 titleSuffix: Configuration Manager
 description: Reference of the specific prerequisite checks for Configuration Manager updates.
-ms.date: 12/14/2018
+ms.date: 03/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -451,7 +451,7 @@ The Configuration Manager computer is a member of a Windows domain.
 To install the site server, it must have at least 15 GB of free disk space. If you install the SMS Provider on the same server, it needs an additional 1 GB of free space.
 
 #### Pending system restart 
-*Applies to: Central administration site, primary site, secondary site, Configuration Manager console, SMS Provider, SQL Server, management point, distribution point*
+*Applies to: Central administration site, primary site, secondary site*
 
 Before you run setup, another program requires the server to be restarted.
 
@@ -510,6 +510,18 @@ The Configuration Manager computer is a member of a Windows domain.
 *Applies to: Primary site*
 
 The disk drive is formatted with the NTFS file system. For better security, install site server components on disk drives formatted with the NTFS file system.
+
+#### Pending system restart on the remote SQL Server
+*Applies to: Version 1902 and later, SQL Server*
+
+Before you run setup, another program requires the server to be restarted.
+
+To see if the computer is in a pending restart state, it checks the following registry locations:<!--SCCMDocs-pr issue 3377-->  
+
+- `HKLM:Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\RebootPending`  
+- `HKLM:SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired`  
+- `HKLM:SYSTEM\CurrentControlSet\Control\Session Manager, PendingFileRenameOperations`  
+- `HKLM:Software\Microsoft\ServerManager, CurrentRebootAttempts`  
 
 #### Schema extensions 
 *Applies to: Central administration site, primary site*

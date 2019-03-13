@@ -78,6 +78,12 @@ On the properties of the central administration site, select the option to **Use
 <!-- For more information, see [enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http). -->
 
 
+### Improvement to setup prerequisites
+When you install or update to version 1902, Configuration Manager setup now includes the following prerequisite check:
+
+- **Pending system restart on the remote SQL Server**: This prerequisite check is similar to the **Pending system restart** rule, but it checks a remote SQL Server. For more information, see [List of prerequisite checks](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#pending-system-restart-on-the-remote-sql-server). <!--SCCMDocs-pr issue 3377-->  
+
+
 
 ## <a name="bkmk_cloud"></a> Cloud-attached management
 
