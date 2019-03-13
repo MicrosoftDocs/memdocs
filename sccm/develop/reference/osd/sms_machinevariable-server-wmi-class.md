@@ -9,6 +9,7 @@ ms.assetid: 5a0951f6-f184-4c00-a7d3-94cd3f466de9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_MachineVariable Server WMI Class
 The `SMS_MachineVariable` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that defines the settings of a task sequence variable that is unique to a specific computer.  
@@ -62,11 +63,11 @@ Class SMS_MachineVariable
 
  Class qualifiers for this class include:  
 
--   Embedded  
+- Embedded  
 
- For more information about both the class qualifiers and the property qualifiers that are included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers that are included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- Your application uses this class to create objects that are embedded by the [SMS_MachineSettings Server WMI Class](../../../develop/reference/osd/sms_machinesettings-server-wmi-class.md) and accessed by using the `MachineVariables` property. For an example of the use of this class, see How to Create a Computer Variable in Configuration Manager.  
+  Your application uses this class to create objects that are embedded by the [SMS_MachineSettings Server WMI Class](../../../develop/reference/osd/sms_machinesettings-server-wmi-class.md) and accessed by using the `MachineVariables` property. For an example of the use of this class, see How to Create a Computer Variable in Configuration Manager.  
 
 ## Requirements  
 

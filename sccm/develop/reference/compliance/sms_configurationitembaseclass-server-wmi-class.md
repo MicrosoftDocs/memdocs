@@ -9,6 +9,7 @@ ms.assetid: bebad297-09a3-41a5-812f-fdca4b986f8e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_ConfigurationItemBaseClass Server WMI Class
 The `SMS_ConfigurationItemBaseClass` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that serves as an abstract base class for several Configuration Manager classes, for example, [SMS_ConfigurationItem Server WMI Class](../../../develop/reference/compliance/sms_configurationitem-server-wmi-class.md).  
@@ -450,9 +451,9 @@ Class SMS_ConfigurationItemBaseClass : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Abstract  
+- Abstract  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
 ## Requirements  
 

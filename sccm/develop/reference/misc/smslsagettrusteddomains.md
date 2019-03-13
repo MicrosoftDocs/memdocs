@@ -9,6 +9,7 @@ ms.assetid: f84d52db-7fb3-4e71-892e-f16f6fc2228b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SmsLsaGetTrustedDomains
 In System Center Configuration Manager, the `SmsLsaGetTrustedDomains` function gets a list of trusted domain names.  

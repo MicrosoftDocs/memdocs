@@ -9,6 +9,7 @@ ms.assetid: ff294184-6e2f-4be1-b1db-44ccd82d18db
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # CreateFromOEM Method in Class SMS_Driver
 The `CreateFromOEM` Windows Management Instrumentation (WMI) class method, in Configuration Manager, creates a set of mass-storage [SMS_Driver Server WMI Class](../../../develop/reference/osd/sms_driver-server-wmi-class.md) objects referenced by the specified Txtsetup.oem file.  
@@ -76,13 +77,13 @@ SInt32 CreateFromOEM(
 ## Remarks  
  To support pre-Windows Vista operating system deployments, Configuration Manager uses boot-critical mass storage device drivers. This type of driver is furnished in the form of a Txtsetup.oem file supplied on a disk. The file contains the following information:  
 
--   Hardware components supported by the file  
+- Hardware components supported by the file  
 
--   Files to copy from the distribution disk for each component  
+- Files to copy from the distribution disk for each component  
 
--   Registry keys and values to create for each component  
+- Registry keys and values to create for each component  
 
- A mass storage device driver file must be installed before setup on a pre-Windows Vista operating system deployment.  
+  A mass storage device driver file must be installed before setup on a pre-Windows Vista operating system deployment.  
 
 > [!NOTE]
 >  Your application should create a driver only by calling this method or the [CreateFromINF Method in Class SMS_Driver](../../../develop/reference/osd/createfrominf-method-in-class-sms_driver.md). It should never create a driver directly.  

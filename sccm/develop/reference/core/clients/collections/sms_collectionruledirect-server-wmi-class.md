@@ -9,6 +9,7 @@ ms.assetid: b564eab3-baf1-4c32-8d0a-598774bb93c3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_CollectionRuleDirect Server WMI Class
 The `SMS_CollectionRuleDirect` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents a resource that is to be made an unconditional member of the collection.  
@@ -60,9 +61,9 @@ Class SMS_CollectionRuleDirect : SMS_CollectionRule
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Embedded  
+- Embedded  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
 ## Requirements  
 

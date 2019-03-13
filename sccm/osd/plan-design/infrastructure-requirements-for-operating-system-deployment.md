@@ -10,6 +10,7 @@ ms.assetid: 1dc74219-7ff5-4e3b-b4f6-5aad663bb75b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Infrastructure requirements for OS deployment in Configuration Manager
@@ -255,6 +256,8 @@ If you plan to co-host the distribution point on a server running DHCP, consider
 
      `WDSUTIL /Set-Server /UseDHCPPorts:No /DHCPOption60:Yes`  
 
+> [!NOTE]
+> When using the PXE responder without WDS instead of WDS, it is not supported to also run DHCP on the same server.
 
 
 ##  <a name="BKMK_SupportedOS"></a> Supported operating systems  

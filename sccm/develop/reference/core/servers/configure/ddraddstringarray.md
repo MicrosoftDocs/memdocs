@@ -9,6 +9,7 @@ ms.assetid: 2763cae0-56ae-4ea0-8654-fcc95613831b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # DDRAddStringArray
 The `DDRAddStringArray` function, in Configuration Manager, adds a string array property to the data discovery record (DDR).  

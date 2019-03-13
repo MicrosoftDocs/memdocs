@@ -9,6 +9,7 @@ ms.assetid: bd5be2ec-0db9-4bdb-adc6-452c2103b5b4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Configure and Deploy Updates
 You create a software updates deployment, in System Center Configuration Manager, by creating an instance of the [SMS_UpdatesAssignment Server WMI Class](../../develop/reference/sum/sms_updatesassignment-server-wmi-class.md) and populating the properties.  

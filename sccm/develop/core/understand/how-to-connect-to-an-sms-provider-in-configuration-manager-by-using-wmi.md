@@ -9,17 +9,18 @@ ms.assetid: 8f5ee4ee-11bf-4ff3-95c9-4ec046308902
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Connect to an SMS Provider in Configuration Manager by Using WMI
 Before connecting to the SMS Provider for a local or remote System Center Configuration Manager site server, you first need to locate the SMS Provider for the site server. The SMS Provider can be either local or remote to the Configuration Manager site server you are using. The Windows Management Instrumentation (WMI) class `SMS_ProviderLocation` is present on all Configuration Manager site servers, and one instance will contain the location for the Configuration Manager site server you are using.  
 
  You can connect to the SMS Provider on a Configuration Manager site server by using the WMI [SWbemLocator](http://go.microsoft.com/fwlink/?LinkId=44022) object or by using the Windows Script Host `GetObject` method. Both approaches work equally well on local or remote connections, with the following limitations:  
 
--   You must use `SWbemLocator` if you need to pass user credentials to a remote computer.  
+- You must use `SWbemLocator` if you need to pass user credentials to a remote computer.  
 
--   You cannot use `SWbemLocator` to explicitly pass user credentials to a local computer.  
+- You cannot use `SWbemLocator` to explicitly pass user credentials to a local computer.  
 
- There are several different syntaxes that you can use to make the connection, depending on whether the connection is local or remote. After you are connected to the SMS Provider, you will have an [SWbemServices](http://go.microsoft.com/fwlink/?LinkId=44023) object that you use to access System Center Configuration Manager objects.  
+  There are several different syntaxes that you can use to make the connection, depending on whether the connection is local or remote. After you are connected to the SMS Provider, you will have an [SWbemServices](http://go.microsoft.com/fwlink/?LinkId=44023) object that you use to access System Center Configuration Manager objects.  
 
 > [!NOTE]
 >  If you need to add context qualifiers for the connection, see [How to Add a Configuration Manager Context Qualifier by Using WMI](../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md).  

@@ -9,6 +9,7 @@ ms.assetid: 4149481d-d78d-422a-b342-cf7ddcf2962c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # About Using SMSCSTAT.DLL to Create Status Messages
 Smscstat.dll is a library of 32-bit C APIs for reporting System Center Configuration Manager status messages from an application that is running on either client computer. Smscstat.dll is only present and only functions properly on Windows 95, Windows 98, Windows NT, Windows 2000, Windows Server 2003, Windows XP, and Windows Vista computers that have the client software installed on them.  
@@ -30,17 +31,17 @@ Smscstat.dll is a library of 32-bit C APIs for reporting System Center Configura
 ## Accessing the Functions in Smscstat.dll  
  When Smscstat.dll has been loaded, call the Win32 API `GetProcAddress()` to retrieve function pointers to the status message functions. The three status message functions are:  
 
--   `CreateSMSStatusMessage()`  
+- `CreateSMSStatusMessage()`  
 
--   `AddAttributeToSMSStatusMessage()`  
+- `AddAttributeToSMSStatusMessage()`  
 
--   `ReportSMSStatusMessage`  
+- `ReportSMSStatusMessage`  
 
- `GetProcAddress()` returns a pointer of type `FARPROC`. For convenience, `Smscstat.h` (provided with the SMS 2003 SDK) defines C function prototypes for the status message APIs. The application should cast the pointer returned by`GetProcAddress()` to the appropriate prototype and then call the function through the pointer.  
+  `GetProcAddress()` returns a pointer of type `FARPROC`. For convenience, `Smscstat.h` (provided with the SMS 2003 SDK) defines C function prototypes for the status message APIs. The application should cast the pointer returned by`GetProcAddress()` to the appropriate prototype and then call the function through the pointer.  
 
- If Smscstat.dll does not exist, as in the case of SMS 2.0 Legacy Clients that do not have Service Pack 1 or a later service pack installed, `LoadLibrary()` fails. A subsequent call to the Win32 API `GetLastError()` returns an error code indicating that the file does not exist. Most likely this will be error 126: "The specified module could not be found."  
+  If Smscstat.dll does not exist, as in the case of SMS 2.0 Legacy Clients that do not have Service Pack 1 or a later service pack installed, `LoadLibrary()` fails. A subsequent call to the Win32 API `GetLastError()` returns an error code indicating that the file does not exist. Most likely this will be error 126: "The specified module could not be found."  
 
- The Win32 API `FreeLibrary` should be called when access to the functions is no longer need.  
+  The Win32 API `FreeLibrary` should be called when access to the functions is no longer need.  
 
 ## Using the Status Message Functions in Smscstat.dll  
  There are three steps to using the status message functions.  

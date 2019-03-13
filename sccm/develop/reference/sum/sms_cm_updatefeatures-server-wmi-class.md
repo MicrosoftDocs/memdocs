@@ -9,6 +9,7 @@ ms.assetid: 9de78bee-635b-470e-a090-37c097fbad7d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_CM_UpdateFeatures Server WMI Class
 The  `SMS_CM_UpdateFeatures` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents update feature extensions.  
@@ -135,11 +136,11 @@ Class SMS_CM_UpdateFeatures : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Dynamic  
+- Dynamic  
 
--   Secured  
+- Secured  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
 ## Requirements  
 

@@ -2,7 +2,7 @@
 title: Ports used for connections
 titleSuffix: Configuration Manager
 description: Learn about the required and customizable network ports that Configuration Manager uses for connections.
-ms.date: 09/10/2018
+ms.date: 01/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,6 +10,7 @@ ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Ports used in Configuration Manager
@@ -121,6 +122,10 @@ In addition to the ports that are listed in this table, wake-up proxy also uses 
 |-----------------|---------|---------|  
 |Wake On LAN|9 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|--|  
 |Wake-up proxy|25536 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|--|  
+|Windows PE Peer cache broadcast|8004|--|  
+|Windows PE Peer cache download|--|8003|  
+
+For more information, see [Windows PE Peer Cache](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md#-requirements-for-a-client-to-use-a--windows-pe-peer-cache-source).
 
 
 ###  <a name="BKMK_PortsClient-PolicyModule"></a> Client -- > Configuration Manager Network Device Enrollment Service (NDES) policy module   
@@ -174,7 +179,7 @@ For more information, see [CMG Ports and data flow](/sccm/core/clients/manage/cm
 
 > [!Important]  
 > If you enable a host-based firewall, make sure that the rules allow the server to send and receive on these ports. When you enable a distribution point for PXE, Configuration Manager can enable the inbound (receive) rules on the Windows Firewall. It doesn't configure the outbound (send) rules.<!--SCCMDocs issue #744-->  
-  
+
 
 ###  <a name="BKMK_PortsClient-FSP"></a> Client -- > Fallback status point  
 
@@ -232,12 +237,14 @@ Configuration Manager uses these connections to build the CMG channel. For more 
 
 #### Version 1706 or 1710
 The specific port depends upon the management point configuration. 
+
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
 |HTTPS|--|443|
 |HTTP|--|80|  
 
 #### Version 1802
+
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
 |HTTPS|--|443|
@@ -248,6 +255,7 @@ For more information, see [CMG Ports and data flow](/sccm/core/clients/manage/cm
 ###  <a name="bkmk_cmgcp-sup"></a> CMG connection point -- > Software update point  
 
 The specific port depends upon the software update point configuration. 
+
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
 |HTTPS|--|443|
@@ -706,6 +714,11 @@ The Trivial FTP (TFTP) Daemon system service doesn't require a user name or pass
 - RFC 2349: Time-out interval and transfer size options  
 
 TFTP is designed to support diskless boot environments. TFTP Daemons listen on UDP port 69 but respond from a dynamically allocated high port. Therefore, enabling this port allows the TFTP service to receive incoming TFTP requests but doesn't allow the selected server to respond to those requests. You can't enable the selected server to respond to inbound TFTP requests unless the TFTP server is configured to respond from port 69.  
+
+The PXE-enabled distribution point and the client in Windows PE select dynamically allocated high ports for TFTP transfers. These ports are defined by Microsoft between 49152 and 65535. For more information, see [Service overview and network port requirements for Windows](https://support.microsoft.com/help/832017/service-overview-and-network-port-requirements-for-windows)
+
+However, during the actual PXE boot, the network card on the device selects the dynamically allocated high port it uses during the TFTP transfer. The network card on the device isn't bound to the dynamically allocated high ports defined by Microsoft. It's only bound to the ports defined in RFC 350. This port can be any from 0 to 65535. For information regarding what dynamically allocated high ports the network card uses, contact the device hardware manufacturer.
+
 
 #### <a name="bkmk_note5"></a> Note 5: Communication between the site server and site systems
 By default, communication between the site server and site systems is bi-directional. The site server initiates communication to configure the site system, and then most site systems connect back to the site server to send status information. Reporting service points and distribution points don't send status information. If you select **Require the site server to initiate connections to this site system** on the site system properties after the site system has been installed, the site system won't initiate communication with the site server. Instead, the site server initiates the communication and uses the site system installation account for authentication to the site system server.  

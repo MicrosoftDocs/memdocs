@@ -9,6 +9,7 @@ ms.assetid: 32df68b1-836a-4e85-a52c-c2a7574113c0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_TaskSequence_PackageInfo Server WMI Class
 The `SMS_TaskSequence_PackageInfo` Windows Management Instrumentation (WMI) class is an SMS provider server class, in Configuration Manager, that represents information about an operating system deployment task sequence.  

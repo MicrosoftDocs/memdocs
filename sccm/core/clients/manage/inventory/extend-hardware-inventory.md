@@ -10,6 +10,7 @@ ms.assetid: d5bfab4f-c55e-4545-877c-5c8db8bc1891
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to extend hardware inventory in System Center Configuration Manager
 
@@ -61,33 +62,33 @@ These procedures help you to configure the default client settings for hardware 
 
 You can only add inventory classes from the hierarchy's top level server by modifying the default client settings. This option is not available when you create custom device settings.
 
-1.  In the Configuration Manager console, choose **Administration** > **Client Settings** > **Default Client Settings**.  
+1. In the Configuration Manager console, choose **Administration** > **Client Settings** > **Default Client Settings**.  
 
-4.  On the **Home** tab, in the **Properties** group, choose **Properties**.  
+2. On the **Home** tab, in the **Properties** group, choose **Properties**.  
 
-5.  In the **Default Client Settings** dialog box, choose **Hardware Inventory**.  
+3. In the **Default Client Settings** dialog box, choose **Hardware Inventory**.  
 
-6.  In the **Device Settings** list, choose **Set Classes**.  
+4. In the **Device Settings** list, choose **Set Classes**.  
 
-7.  In the **Hardware Inventory Classes** dialog box, choose **Add**.  
+5. In the **Hardware Inventory Classes** dialog box, choose **Add**.  
 
-8.  In the **Add Hardware Inventory Class** dialog box, click **Connect**.  
+6. In the **Add Hardware Inventory Class** dialog box, click **Connect**.  
 
-9. In the **Connect to Windows Management Instrumentation (WMI)** dialog box, specify the name of the computer from which you will retrieve the WMI classes and the WMI namespace to use for retrieving the classes. If you want to retrieve all classes below the WMI namespace that you specified, click **Recursive**. If the computer you are connecting to is not the local computer, supply login credentials for an account that has permission to access WMI on the remote computer.  
+7. In the **Connect to Windows Management Instrumentation (WMI)** dialog box, specify the name of the computer from which you will retrieve the WMI classes and the WMI namespace to use for retrieving the classes. If you want to retrieve all classes below the WMI namespace that you specified, click **Recursive**. If the computer you are connecting to is not the local computer, supply login credentials for an account that has permission to access WMI on the remote computer.  
 
-10. Choose **Connect**.  
+8. Choose **Connect**.  
 
-11. In the **Add Hardware Inventory Class** dialog box, in the **Inventory classes** list, select the WMI classes that you want to add to Configuration Manager hardware inventory.  
+9. In the **Add Hardware Inventory Class** dialog box, in the **Inventory classes** list, select the WMI classes that you want to add to Configuration Manager hardware inventory.  
 
-12. If you want to edit information about the selected WMI class, choose **Edit**, and in the **Class qualifiers** dialog box, provide the following information:  
+10. If you want to edit information about the selected WMI class, choose **Edit**, and in the **Class qualifiers** dialog box, provide the following information:  
 
-    -   **Display name** - This name will be displayed in Resource Explorer.  
+    - **Display name** - This name will be displayed in Resource Explorer.  
 
-    -   **Properties** - Specify the units in which each property of the WMI class will be displayed.  
+    - **Properties** - Specify the units in which each property of the WMI class will be displayed.  
 
-     You can also designate properties as a key property to help uniquely identify each instance of the class. If no key is defined for the class and multiple instances of the class are reported from the client, only the latest instance that is found is stored in the database.  
+      You can also designate properties as a key property to help uniquely identify each instance of the class. If no key is defined for the class and multiple instances of the class are reported from the client, only the latest instance that is found is stored in the database.  
 
-     When you've finished configuring the properties, click **OK** to close the **Class qualifiers** dialog box and the other open dialogs. 
+      When you've finished configuring the properties, click **OK** to close the **Class qualifiers** dialog box and the other open dialogs. 
 
 ###  <a name="BKMK_Import"></a> To import hardware inventory classes  
 
@@ -152,12 +153,12 @@ Beginning in Configuration Manager 1802, you can specify the length of strings t
 > [!IMPORTANT]  
 >  When you create a NOIDMIF file, it must be saved in an ANSI encoded format. NOIDMIF files saved in UTF-8 encoded format cannot be read by Configuration Manager.  
 
- After you create a NOIDMIF file, store it in the *%Windir%***\CCM\Inventory\Noidmifs** folder on each client. Configuration Manager will collect information from NODMIF files in this folder during the next scheduled hardware inventory cycle.  
+ After you create a NOIDMIF file, store it in the _%Windir%_**\CCM\Inventory\Noidmifs** folder on each client. Configuration Manager will collect information from NODMIF files in this folder during the next scheduled hardware inventory cycle.  
 
 ###  <a name="BKMK_IDMIF"></a> To create IDMIF files  
  IDMIF files can be used to add information about assets that couldn't normally be inventoried by Configuration Manager and isn't associated with a particular client device, to the Configuration Manager database. For example, you could use IDMIFS to collect information about projectors, DVD players, photocopiers, or other equipment that doesn't have a Configuration Manager client. For information about creating IDMIF files, see the Configuration Manager SDK documentation.  
 
- After you create an IDMIF file, store it in the *%Windir%***\CCM\Inventory\Idmifs** folder on client computers. Configuration Manager will collect information from this file during the next scheduled hardware inventory cycle. You must declare new classes for information contained in the file by adding or importing them.  
+ After you create an IDMIF file, store it in the _%Windir%_**\CCM\Inventory\Idmifs** folder on client computers. Configuration Manager will collect information from this file during the next scheduled hardware inventory cycle. You must declare new classes for information contained in the file by adding or importing them.  
 
 > [!NOTE]
 > MIF files could contain large amounts of data and collecting this data could negatively affect the performance of your site. Enable MIF collection only when required and configure the option **Maximum custom MIF file size (KB)** in the hardware inventory settings. For more information, see [Introduction to hardware inventory in System Center Configuration Manager](introduction-to-hardware-inventory.md).

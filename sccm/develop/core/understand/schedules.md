@@ -8,6 +8,7 @@ ms.assetid: 4f0dc033-7006-4b78-811e-b7813cfd296e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Schedules
 This section provides task-based topics that show you how to create schedule tokens in System Center Configuration Manager.  

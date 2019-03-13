@@ -9,6 +9,7 @@ ms.assetid: 3350172b-3c4e-4cc5-af3e-cb94296ba052
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # GetFeatureState Method in Class SMS_Site
 The `GetFeatureState` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the enabled/disabled state of a feature.  

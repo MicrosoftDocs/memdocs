@@ -9,6 +9,7 @@ ms.assetid: 5daed3e1-5ba4-4be3-97ff-cefe069b61ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Software Updates Deployments
 The System Center Configuration Manager software updates feature provides a set of tools and resources that can help manage the complex task of tracking and applying software updates to client computers in the enterprise.  

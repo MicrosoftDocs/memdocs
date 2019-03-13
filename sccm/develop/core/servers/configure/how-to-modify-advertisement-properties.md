@@ -9,6 +9,7 @@ ms.assetid: 343783ae-0951-47cc-896e-bf74420fcb22
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Modify Advertisement Properties
 The following example shows how to modify an existing advertisement, in System Center Configuration Manager, by using the `SMS_Advertisement` class and class properties.  

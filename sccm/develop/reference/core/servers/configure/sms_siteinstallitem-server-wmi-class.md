@@ -9,6 +9,7 @@ ms.assetid: 54aeb316-ce9e-4e81-b06f-fb556d00b7cd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_SiteInstallItem Server WMI Class
 The `SMS_SiteInstallItem` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the abstract base class of all site install item classes.  
@@ -50,11 +51,11 @@ Class SMS_SiteInstallItem : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Abstract  
+- Abstract  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- Your application uses classes derived from this class to manipulate site install items. These classes are named with the prefix "SMS_SII_". An example of a derived class is [SMS_SII_Property Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sii_property-server-wmi-class.md).  
+  Your application uses classes derived from this class to manipulate site install items. These classes are named with the prefix "SMS_SII_". An example of a derived class is [SMS_SII_Property Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sii_property-server-wmi-class.md).  
 
 ## Requirements  
 

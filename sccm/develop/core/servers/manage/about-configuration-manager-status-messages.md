@@ -8,6 +8,7 @@ ms.assetid: f3011860-6a66-407d-b3fc-93e4f6f892e1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # About Configuration Manager Status Messages
 In System Center Configuration Manager, status messages are the universal means for components to communicate information about their health to the System Center Configuration Manager administrator. Status messages are similar to Windows NT Events; they have a severity, ID, description, and so on.  
@@ -28,13 +29,13 @@ In System Center Configuration Manager, status messages are the universal means 
 ### User-defined Generic Status Messages  
  Configuration Manager provides three types of user-defined generic status messages.  
 
--   Information  
+- Information  
 
--   Warning  
+- Warning  
 
--   Error  
+- Error  
 
- Along with the message type, insertion strings and attributes can be supplied. The text that is provided as the insertion string, when creating the status message, is the text seen in the user interface. This makes using generic messages simple, but it does not allow for localization. For more information, see [How to Read User-Defined Status Messages](../../../../develop/core/servers/manage/how-to-read-user-defined-status-messages.md).  
+  Along with the message type, insertion strings and attributes can be supplied. The text that is provided as the insertion string, when creating the status message, is the text seen in the user interface. This makes using generic messages simple, but it does not allow for localization. For more information, see [How to Read User-Defined Status Messages](../../../../develop/core/servers/manage/how-to-read-user-defined-status-messages.md).  
 
 ## Creating Status Messages on the Client  
  You can create events on client computers in the following ways:  

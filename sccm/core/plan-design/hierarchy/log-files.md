@@ -2,7 +2,7 @@
 title: Log files for troubleshooting
 titleSuffix: Configuration Manager
 description: Use log files to troubleshoot issues with Configuration Manager clients and site systems.
-ms.date: 09/10/2018
+ms.date: 02/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,6 +10,7 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Log files in Configuration Manager
@@ -211,19 +212,19 @@ The following table lists the log files located on the Configuration Manager cli
 ###  <a name="BKMK_LogFilesforLnU"></a> Client for Linux and UNIX  
  The Configuration Manager client for Linux and UNIX records information in the following log files:  
 
-> [!TIP]  
+> [!TIP]
 >  Use CMTrace to view the log files for the client for Linux and UNIX.  
-
-> [!NOTE]  
+> 
+> [!NOTE]
 >  When you use the initial release of the client for Linux and UNIX and reference the documentation in this section, replace the following references for each file or process:  
->   
->  -   Replace **omiserver.bin** with **nwserver.bin**  
-> -   Replace **omi** with **nanowbem**  
+> 
+> - Replace **omiserver.bin** with **nwserver.bin**  
+>   -   Replace **omi** with **nanowbem**  
 
-|Log name|Details|  
-|--------------|-------------|  
-|Scxcm.log|The log file for the core service of the Configuration Manager client for Linux and UNIX (ccmexec.bin). This log file contains information about the installation and ongoing operations of ccmexec.bin.<br /><br /> By default, this log file is located at **/var/opt/microsoft/scxcm.log**<br /><br /> To change the location of the log file, edit **/opt/microsoft/configmgr/etc/scxcm.conf** and change the **PATH** field. You do not need to restart the client computer or service for the change to take effect.<br /><br /> You can set the log level to one of four different settings.|  
-|Scxcmprovider.log|The log file for the CIM service of the Configuration Manager client for Linux and UNIX (omiserver.bin). This log file contains information about the ongoing operations of nwserver.bin.<br /><br /> This log is located at**/var/opt/microsoft/configmgr/scxcmprovider.log**<br /><br /> To change the location of the log file, edit **/opt/microsoft/omi/etc/scxcmprovider.conf** and change the **PATH** field. You do not need to restart the client computer or service for the change to take effect.<br /><br /> You can set the log level to one of three settings.|  
+|     Log name      |                                                                                                                                                                                                                                                                                               Details                                                                                                                                                                                                                                                                                               |
+|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     Scxcm.log     | The log file for the core service of the Configuration Manager client for Linux and UNIX (ccmexec.bin). This log file contains information about the installation and ongoing operations of ccmexec.bin.<br /><br /> By default, this log file is located at **/var/opt/microsoft/scxcm.log**<br /><br /> To change the location of the log file, edit **/opt/microsoft/configmgr/etc/scxcm.conf** and change the **PATH** field. You do not need to restart the client computer or service for the change to take effect.<br /><br /> You can set the log level to one of four different settings. |
+| Scxcmprovider.log |     The log file for the CIM service of the Configuration Manager client for Linux and UNIX (omiserver.bin). This log file contains information about the ongoing operations of nwserver.bin.<br /><br /> This log is located at<strong>/var/opt/microsoft/configmgr/scxcmprovider.log</strong><br /><br /> To change the location of the log file, edit **/opt/microsoft/omi/etc/scxcmprovider.conf** and change the **PATH** field. You do not need to restart the client computer or service for the change to take effect.<br /><br /> You can set the log level to one of three settings.      |
 
  Both log files support several levels of logging:  
 
@@ -309,6 +310,7 @@ The log file SMS_DM.log on the site system server also records communication bet
 |mpMSI.log|Records details about the management point installation.|Site server|  
 |MPSetup.log|Records the management point installation wrapper process.|Site server|  
 |netdisc.log|Records Network Discovery actions.|Site server|  
+|NotiCtrl.log|Application request notifications.|Site server|  
 |ntsvrdis.log|Records the discovery activity of site system servers.|Site server|  
 |Objreplmgr|Records the processing of object change notifications for replication.|Site server|  
 |offermgr.log|Records advertisement updates.|Site server|  
@@ -329,7 +331,7 @@ The log file SMS_DM.log on the site system server also records communication bet
 |sitectrl.log|Records site setting changes made to site control objects in the database.|Site server|  
 |sitestat.log|Records the availability and disk space monitoring process of all site systems.|Site server|
 |SMS_ISVUPDATES_SYNCAGENT.log| Log file for synchronization of third-party software updates starting in Configuration Manager version 1806.| Top-level software update point in the Configuration Manager hierarchy.|
-|SMS_PhasedDeployment.log| Log file for phased deployments, a pre-release feature starting in Configuration Manager version 1802.|Top-level site in the Configuration Manager hierarchy|   
+|SMS_PhasedDeployment.log| Log file for phased deployments|Top-level site in the Configuration Manager hierarchy|   
 |SmsAdminUI.log|Records Configuration Manager console activity.|Computer that runs the Configuration Manager console|  
 |SMSAWEBSVCSetup.log|Records the installation activities of the Application Catalog web service.|Site system server|  
 |smsbkup.log|Records output from the site backup process.|Site server|  
@@ -431,6 +433,7 @@ The log file SMS_DM.log on the site system server also records communication bet
 |Ccmsdkprovider.log|Records the activities of the application management SDK.|Client|  
 |colleval.log|Records details about when collections are created, changed, and deleted by the Collection Evaluator.|Site system server|  
 |ConfigMgrSoftwareCatalog.log|Records the activity of the Application Catalog, which includes its use of Silverlight.|Client|  
+|NotiCtrl.log|Application request notifications.|Site server|  
 |portlctl.log|Records the monitoring activities for the Application Catalog website point site system role.|Site system server|  
 |portlwebMSI.log|Records the MSI installation activity for the Application Catalog website role.|Site system server|  
 |PrestageContent.log|Records details about the use of the ExtractContent.exe tool on a remote, prestaged distribution point. This tool extracts content that has been exported to a file.|Site system server|  
@@ -517,7 +520,7 @@ The following table lists the log files that contain information related to the 
 |SMS_Cloud_<br>ProxyConnector.log|Records details about setting up connections between the cloud management gateway service and the cloud management gateway connection point.|Site system server|
 |CMGContentService.log<sup>1</sup>|<!--SCCMDocs-pr issue #2822-->Starting in version 1806, when you enable a CMG to also serve content from Azure storage, this log records the details of that service.|The **%approot%\logs** on your Azure server, or the SMS/Logs folder on the site system server|
 
-<sup>1</sup> These are local Configuration Manager log files that cloud service manager sync from Azure storage every five minutes. The cloud management gateway pushes logs to Azure storage every five minutes. So the maximum delay is 10 minutes. Verbose switches affect both local and remote logs. The actual file names include the service name and role instance identifier. For example, CMG-*ServiceName*-*RoleInstanceID*-CMGSetup.log
+<sup>1</sup> These are local Configuration Manager log files that cloud service manager syncs from Azure storage every five minutes. The cloud management gateway pushes logs to Azure storage every five minutes. So the maximum delay is 10 minutes. Verbose switches affect both local and remote logs. The actual file names include the service name and role instance identifier. For example, CMG-*ServiceName*-*RoleInstanceID*-CMGSetup.log
 
 - For troubleshooting deployments, use **CloudMgr.log** and **CMGSetup.log**
 - For troubleshooting service health, use **CMGService.log** and **SMS_Cloud_ProxyConnector.log**.
@@ -568,6 +571,7 @@ The following table lists the log files that contain information related to the 
 |PrestageContent.log|Records the details about the use of the ExtractContent.exe tool on a remote, prestaged distribution point. This tool extracts content that has been exported to a file.|Site system role|  
 |SMSdpmon.log|Records details about distribution point health monitoring scheduled tasks that are configured on a distribution point.|Site system role|  
 |smsdpprov.log|Records details about the extraction of compressed files received from a primary site. This log is generated by the WMI provider of the remote distribution point.|Distribution point computer that is not colocated with the site server|  
+|smsdpusage.log|Records details about the smsdpusage.exe that runs and gathers data for the distribution point usage summary report.|Site system role|  
 
 ###  <a name="BKMK_DiscoveryLog"></a> Discovery  
 The following table lists the log files that contain information related to Discovery.  
@@ -694,7 +698,7 @@ The following table lists the log files that contain information related to Disc
 |MP_ClientIDManager.log|Records management point responses to the client ID requests that task sequences initiate from PXE or boot media.|Site system server|  
 |MP_DriverManager.log|Records management point responses to Auto Apply Driver task sequence action requests.|Site system server|  
 |OfflineServicingMgr.log|Records details of offline servicing schedules and update apply actions on operating system Windows Imaging Format (WIM) files.|Site system server|  
-|Setupact.log|Records details about Windows Sysprep and setup logs.|Client|  
+|Setupact.log|Records details about Windows Sysprep and setup logs. For more information, see [Log Files](https://docs.microsoft.com/windows/deployment/upgrade/log-files).|Client|  
 |Setupapi.log|Records details about Windows Sysprep and setup logs.|Client|  
 |Setuperr.log|Records details about Windows Sysprep and setup logs.|Client|  
 |smpisapi.log|Records details about the client state capture and restore actions, and threshold information.|Client|  
@@ -703,7 +707,7 @@ The following table lists the log files that contain information related to Disc
 |smpperf.log|Records the state migration point performance counter updates.|Site system server|  
 |smspxe.log|Records details about the responses to clients that use PXE boot, and details about the expansion of boot images and boot files.|Site system server|  
 |smssmpsetup.log|Records installation and configuration details about the state migration point.|Site system server|
-| SMS_PhasedDeployment.log| Log file for phased deployments, a pre-release feature starting in Configuration Manager version 1802.|Top-level site in the Configuration Manager hierarchy| 
+| SMS_PhasedDeployment.log| Log file for phased deployments|Top-level site in the Configuration Manager hierarchy| 
 |Smsts.log|Records task sequence activities.|Client|  
 |TSAgent.log|Records the outcome of task sequence dependencies before starting a task sequence.|Client|  
 |TaskSequenceProvider.log|Records details about task sequences when they are imported, exported, or edited.|Site system server|  
@@ -801,28 +805,15 @@ The following table lists the log files that contain information related to Disc
 
 ###  <a name="BKMK_WindowsServicingLog"></a>Windows 10 servicing  
  The following table lists the log files that contain information related to Windows 10 servicing.  
+Servicing uses the same infrastructure and process as software updates. For other logs applicable to the servicing scenario, see [Software updates](#BKMK_SU_NAPLog).
 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
-|ccmperf.log|Records activities related to the maintenance and capture of data related to client performance counters.|Client|  
-|CcmRepair.log|Records the repair activities of the client agent.|Client|
-|PatchDownloader.log|Records details about the process of downloading software updates from the update source to the download destination on the site server.|Computer that hosts the Configuration Manager console from which downloads are initiated|  
-|PolicyEvaluator.log|Records details about the evaluation of policies on client computers, including policies from software updates.|Client|  
-|RebootCoordinator.log|Records details about the coordination of system restarts on client computers after software update installations.|Client|  
-|ScanAgent.log|Records details about scan requests for software updates, the WSUS location, and related actions.|Client|  
-|SdmAgent.log|Records details about the tracking of remediation and compliance. However, the software updates log file, UpdatesHandler.log, provides more informative details about installing the software updates that are required for compliance.<br /><br /> This log file is shared with compliance settings.|Client|  
-|ServiceWindowManager.log|Records details about the evaluation of maintenance windows.|Client|  
+|CBS.log|Records servicing failures related to changes for Windows Updates or roles and features.|Client|
+|DISM.log|Records all actions using DISM. If necessary, DISM.log will point to CBS.log for more details.|Client|
 |setupact.log|Primary log file for most errors that occur during the Windows installation process. The log file is located in the %windir%\$Windows.~BT\sources\panther folder.|Client|
-|SmsWusHandler.log|Records details about the scan process for the Inventory Tool for Microsoft Updates.|Client|  
-|StateMessage.log|Records details about software updates state messages that are created and sent to the management point.|Client|  
-|SUPSetup.log|Records details about the software update point installation. When the software update point installation completes, **Installation was successful** is written to this log file.|Site system server|  
-|UpdatesDeployment.log|Records details about deployments on the client, including software update activation, evaluation, and enforcement. Verbose logging shows additional information about the interaction with the client user interface.|Client|  
-|Updateshandler.log|Records details about software update compliance scanning and about the download and installation of software updates on the client.|Client|  
-|UpdatesStore.log|Records details about compliance status for the software updates that were assessed during the compliance scan cycle.|Client|  
-|WCM.log|Records details about software update point configurations and connections to the WSUS server for subscribed update categories, classifications, and languages.|Site server|  
-|WSUSCtrl.log|Records details about the configuration, database connectivity, and health of the WSUS server for the site.|Site system server|  
-|wsyncmgr.log|Records details about the software update sync process.|Site server|  
-|WUAHandler.log|Records details about the Windows Update Agent on the client when it searches for software updates.|Client|  
+
+For more information, see [Online Servicing-Related Log Files](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files).
 
 ###  <a name="BKMK_WULog"></a> Windows Update Agent  
  The following table lists the log files that contain information related to the Windows Update Agent.  
@@ -831,6 +822,8 @@ The following table lists the log files that contain information related to Disc
 |--------------|-----------------|----------------------------|  
 |WindowsUpdate.log|Records details about when the Windows Update Agent connects to the WSUS server and retrieves the software updates for compliance assessment, and whether there are updates to the agent components.|Client|  
 
+For more information, see [Windows Update log files](https://docs.microsoft.com/windows/deployment/update/windows-update-logs).
+
 ###  <a name="BKMK_WSUSLog"></a> WSUS server  
  The following table lists the log files that contain information related to the WSUS server.  
 
@@ -838,3 +831,5 @@ The following table lists the log files that contain information related to Disc
 |--------------|-----------------|----------------------------|  
 |Change.log|Records details about WSUS server database information that has changed.|WSUS server|  
 |SoftwareDistribution.log|Records details about the software updates that are synced from the configured update source to the WSUS server database.|WSUS server|  
+
+These log files are located in the %ProgramFiles%\Update Services\LogFiles folder.

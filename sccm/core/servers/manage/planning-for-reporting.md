@@ -10,8 +10,12 @@ ms.assetid: ff920c84-d5c8-458c-b67f-bc7219b05690
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# Planning for reporting in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Planning for reporting in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Reporting in System Center Configuration Manager provides a set of tools and resources that help you use the advanced reporting capabilities of SQL Server Reporting Services. Use the following sections to help you plan for reporting in Configuration Manager.  
 
 ##  <a name="BKMK_InstallReportingServicesPoint"></a> Determine where to install the Reporting Services Point  

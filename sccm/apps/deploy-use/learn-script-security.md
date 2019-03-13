@@ -1,6 +1,6 @@
 ---
 title: "Learn more about PowerShell script security"
-titleSuffix: Configuraton Manager
+titleSuffix: Configuration Manager
 description: "Resources to help learn about PowerShell script security."
 ms.date: 03/22/2018
 ms.prod: configuration-manager
@@ -10,6 +10,7 @@ ms.assetid: a0bd093d-67a5-4f74-bf79-dd604889f5ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Learn more about PowerShell script security

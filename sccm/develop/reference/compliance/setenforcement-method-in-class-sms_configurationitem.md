@@ -9,6 +9,7 @@ ms.assetid: 56815dfb-89f5-4e32-bbb7-d654daa044df
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SetEnforcement Method in Class SMS_ConfigurationItem
 The `SetEnforcement` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the enforcement and the enforcement date for a configuration item.  

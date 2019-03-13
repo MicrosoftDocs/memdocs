@@ -9,6 +9,7 @@ ms.assetid: b402a603-f1cf-417a-a9f4-2f6bb79fd042
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_HealthAttestationDetails Server WMI Class
 The `SMS_HealthAttestationDetails` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents Health Attestation details.  
@@ -187,11 +188,11 @@ Class SMS_HealthAttestationDetails : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Dynamic  
+- Dynamic  
 
--   Secured  
+- Secured  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
 ## Requirements  
 

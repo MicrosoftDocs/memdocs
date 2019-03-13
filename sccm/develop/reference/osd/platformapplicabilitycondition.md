@@ -9,6 +9,7 @@ ms.assetid: c264dab1-07c2-4cc6-95e2-6283b850fb54
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # PlatformApplicabilityCondition
 `PlatformApplicabilityCondition` specifies one supported platform for an operating system deployment driver in System Center Configuration Manager.  

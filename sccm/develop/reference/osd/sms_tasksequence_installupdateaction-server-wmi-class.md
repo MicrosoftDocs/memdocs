@@ -9,6 +9,7 @@ ms.assetid: eff7df77-4356-4357-8a69-149a6d7a55a7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_TaskSequence_InstallUpdateAction Server WMI Class
 The `SMS_TaskSequence_InstallUpdateAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that installs software updates on a target computer.  
@@ -111,29 +112,29 @@ Class SMS_TaskSequence_InstallUpdateAction : SMS_TaskSequence_Action
 
  Designator for installing assigned software updates on the target computer. Possible values are:  
 
--   Mandatory. Install all software updates flagged in Configuration Manager as mandatory for the computers targeted by this task sequence action.  
+- Mandatory. Install all software updates flagged in Configuration Manager as mandatory for the computers targeted by this task sequence action.  
 
--   All. Install all software updates for the computers targeted by this task sequence action.  
+- All. Install all software updates for the computers targeted by this task sequence action.  
 
- The task sequence variable associated with this property is SMSInstallUpdateTarget. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+  The task sequence variable associated with this property is SMSInstallUpdateTarget. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
 
- `Timeout`  
- Data type: `UInt32`  
+  `Timeout`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: None  
+  Qualifiers: None  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- `UseCache`  
- Data type: `Boolean`  
+  `UseCache`  
+  Data type: `Boolean`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [not_null, variablename("SMSTSSoftwareUpdateScanUseCache")]  
+  Qualifiers: [not_null, variablename("SMSTSSoftwareUpdateScanUseCache")]  
 
- Indicates whether the cache is used. The default value is `true`.  
+  Indicates whether the cache is used. The default value is `true`.  
 
 ## Remarks  
  Class qualifiers for this class include:  

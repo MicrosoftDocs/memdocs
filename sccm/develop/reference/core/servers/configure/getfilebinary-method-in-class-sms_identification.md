@@ -9,6 +9,7 @@ ms.assetid: 0d7b1097-d386-48aa-8fc4-ff0e4c5d7dc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # GetFileBinary Method in Class SMS_Identification
 The `GetFileBinary` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the binary user interface for a feature. The binary can be separated into multiple blocks starting with number 1. If `isTheLastBlock` equals `False`, then you need call the method again with blockNumber+1 to get the next block.  

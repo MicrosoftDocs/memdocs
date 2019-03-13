@@ -9,6 +9,7 @@ ms.assetid: 3a2d4d06-074f-4174-9398-e3df3d230414
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # RequestMachinePolicy Method in Class SMS_Client
 The `RequestMachinePolicy` method, in Configuration Manager, initiates a request for machine policy.  

@@ -10,6 +10,7 @@ ms.assetid: 49ef2ed2-2e15-4637-8b63-1d5b7f9c17e1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to test client upgrades in a pre-production collection in System Center Configuration Manager
 
@@ -32,15 +33,15 @@ You can test a new Configuration Manager client version in a pre-production coll
 > [!IMPORTANT]
 > Pre-production client deployment is not supported for workgroup computers. They can't use the authentication required for the distribution point to access the pre-production client package.  They will receive the latest client when it is promoted to be the production client.
 
-1. [Set up a collection](..\collections\create-collections.md) that contains the computers you want to deploy the pre-production client to.   
+1. [Set up a collection](../collections/create-collections.md) that contains the computers you want to deploy the pre-production client to.   
 
-1.  In the Configuration Manager console open **Administration** > **Site Configuration** > **Sites**, and choose **Hierarchy Settings**.  
+2. In the Configuration Manager console open **Administration** > **Site Configuration** > **Sites**, and choose **Hierarchy Settings**.  
 
-     On the **Client Upgrade** tab of the **Hierarchy Settings Properties**:  
+    On the **Client Upgrade** tab of the **Hierarchy Settings Properties**:  
 
-    -   Select **Upgrade all clients in the pre-production collection automatically using pre-production client**  
+   -   Select **Upgrade all clients in the pre-production collection automatically using pre-production client**  
 
-    -   Enter the name of a collection to use as a pre-production collection  
+   -   Enter the name of a collection to use as a pre-production collection  
 
 ![Test client upgrades](media/test-client-upgrades.png)
 

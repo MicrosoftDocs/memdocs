@@ -10,6 +10,7 @@ ms.assetid: f504de3e-4caf-455c-80d7-a63f13f4c5d9
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
 
 #  Configure Alerts for Endpoint Protection in Configuration Manager
@@ -87,7 +88,7 @@ Beginning with Configuration Manager version 1702, you can configure an alert to
 To configure the percentage at which the alert is generated, expand **Monitoring** > **Alerts** > **All Alerts**, double-click **Antimalware clients out of date** and modify the **Raise alert if percentage of managed clients with an outdated version of the antimalware client is more than** option.
 
 > [!div class="button"]
-[Next step >](endpoint-definition-updates.md)
-
+> [Next step >](endpoint-definition-updates.md)
+> 
 > [!div class="button"]
-[Back >](endpoint-protection-site-role.md)
+> [Back >](endpoint-protection-site-role.md)

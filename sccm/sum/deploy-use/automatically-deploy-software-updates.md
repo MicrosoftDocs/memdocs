@@ -10,6 +10,7 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
+ms.collection: M365-identity-device-management
 ---
 
 #  Automatically deploy software updates  
@@ -133,6 +134,9 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
     -   **User notifications**: Specify whether to display notification in Software Center at the configured **Software available time**. This setting also controls whether to notify users on the clients.  
 
     -   **Deadline behavior**: Specify the behaviors when the software update deployment reaches the deadline outside of any defined maintenance windows. The options include whether to install the software updates, and whether to perform a system restart after installation. For more information about maintenance windows, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows).  
+        
+        > [!Note]
+        > This applies only when the maintenance window is configured for the client device. If no maintenance window is defined on the device, the update of the installation and restart will always happen after the deadline.
 
     -   **Device restart behavior**: Specify whether to suppress a system restart on servers and workstations if a restart is required to complete update installation.  
 
@@ -187,7 +191,7 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
     - **No deployment package**: Starting in version 1806, deploy software updates to devices without first downloading and distributing content to distribution points. This setting is beneficial when dealing with extremely large update content. Also use it when you always want clients to get content from the Microsoft Update cloud service. Clients in this scenario can also download content from peers that already have the necessary content. The Configuration Manager client continues to manage the content download, thus can utilize the Configuration Manager peer cache feature, or other technologies such as Delivery Optimization. This feature supports any update type supported by Configuration Manager software updates management, including Windows and Office updates.<!--1357933-->  
 
         > [!Note]  
-        > This option is only for new automatic deployment rules. You can’t modify existing rules with this setting.<!--SCCMDocs issue 741-->  
+        > Once you select this option and apply the settings, it can no longer be changed. The other options are greyed out.<!--SCCMDocs-pr issue 3003-->  
 
 12. On the **Distribution Points** page, specify the distribution points or distribution point groups to host the software update files. For more information about distribution points, see [Distribution point configurations](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_configs). This page is available only when you create a new software update deployment package.  
   

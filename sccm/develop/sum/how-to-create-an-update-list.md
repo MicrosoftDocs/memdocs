@@ -9,6 +9,7 @@ ms.assetid: 21702068-b002-4f19-b84a-6e63fb032678
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Create an Update List
 You create an update list that contains a set of software updates, in System Center Configuration Manager, by creating an instance of the [SMS_AuthorizationList](../../develop/reference/sum/sms_authorizationlist-server-wmi-class.md) class and populating the properties.  

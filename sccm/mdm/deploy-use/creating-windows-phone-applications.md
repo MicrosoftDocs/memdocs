@@ -10,6 +10,7 @@ ms.assetid: 68fe11fa-5fb2-4b81-b0f5-b6f2392fb4ad
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Create Windows Phone applications in Configuration Manager

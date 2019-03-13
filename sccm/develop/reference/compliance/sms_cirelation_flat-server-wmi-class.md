@@ -9,6 +9,7 @@ ms.assetid: b6cde26a-9d69-4b24-bb21-dfd209fe1aca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_CIRelation_Flat Server WMI Class
 The `SMS_CIRelation_Flat` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that provides a flat list of relationship information for directly or indirectly related configuration items.  

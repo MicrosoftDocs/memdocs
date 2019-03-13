@@ -2,7 +2,7 @@
 title: Create applications
 titleSuffix: Configuration Manager
 description: Create applications with deployment types, detection methods and requirements to install software.
-ms.date: 07/30/2018
+ms.date: 03/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,13 +10,14 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Create applications in Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-A Configuration Manager application defines the metadata about app. An application has one or more deployment types. These deployment types include the installation files and information that are required to install software on devices. A deployment type also has rules, such as detection methods and requirements. These rules specify when and how the client installs the software.  
+A Configuration Manager application defines the metadata about app. An application has one or more deployment types. These deployment types include the installation files and information that are required to install software on devices. A deployment type also has rules, such as detection methods, and requirements. These rules specify when and how the client installs the software.  
 
 Create applications by using the following methods:  
 
@@ -231,11 +232,15 @@ On the **Content** page, specify the following information:
 
 - **Installation program**: Specify the name of the installation program and any required installation parameters.  
 
-    - **Installation start in**: Optionally, specify the folder that has the installation program for the deployment type. This folder can be an absolute path on the client, or a path to the distribution point folder that has the installation files.  
+    - **Installation start in**: Optionally specify the folder that has the installation program for the deployment type. This folder can be an absolute path on the client, or a path to the distribution point folder that has the installation files.  
 
-- **Uninstall program**: Optionally, specify the name of the uninstall program and any required parameters.  
+- **Uninstall program**: Optionally specify the name of the uninstall program and any required parameters.  
 
-    - **Uninstall start in**: Optionally, specify the folder that has the uninstall program for the deployment type. This folder can be an absolute path on the client. It can also be a relative path on a distribution point of the folder with the package.  
+    - **Uninstall start in**: Optionally specify the folder that has the uninstall program for the deployment type. This folder can be an absolute path on the client. It can also be a relative path on a distribution point of the folder with the package.  
+
+- **Repair program**: Starting in version 1810, for Windows Installer and Script Installer deployment types, optionally specify the name of the repair program and any required parameters.<!--1357866-->  
+
+    - **Repair start in**: Optionally specify the folder that has the repair program for the deployment type. This folder can be an absolute path on the client. It can also be a relative path on a distribution point of the folder with the package.  
 
 - **Run installation and uninstall program as 32-bit process on 64-bit clients**: Use the 32-bit file and registry locations on Windows-based computers to run the installation program for the deployment type.  
 
@@ -310,6 +315,9 @@ Continue to the next section on using a custom script as a detection method. Or 
 
 2.  In the **Script Editor** dialog box, click the **Script type** drop-down list. Select one of the following script languages to detect the deployment type: PowerShell, VBScript, or JScript.  
 
+    > [!Note]  
+    > Starting in version 1810, when a Windows PowerShell script runs as a app detection method, the Configuration Manager client calls PowerShell with the `-NoProfile` parameter. This option starts PowerShell without profiles. A PowerShell profile is a script that runs when PowerShell starts. <!--3607762-->  
+
 3.  In the **Script contents** box, enter the script that you want to use, or paste in the contents of an existing script. Choose **Open** to browse to an existing saved script. Click **Clear** to remove the text in the Script contents field. If necessary, enable the option to **Run script as 32-bit process on 64-bit clients**.  
 
     > [!NOTE]  
@@ -325,6 +333,7 @@ Configuration Manager checks the results from the script. It reads the values wr
 Use the following tables to check whether an application is installed from the output from a script:  
 
 **Zero exit code:**  
+
 |STDOUT|STDERR|Script result|Application detection state|
 |---------|---------|---------|---------|
 |Empty|Empty|Success|Not installed|
@@ -334,6 +343,7 @@ Use the following tables to check whether an application is installed from the o
 
 
 **Non-zero exit code:**  
+
 |STDOUT|STDERR|Script result|Application detection state|
 |---------|---------|---------|---------|
 |Empty|Empty|Failure|Unknown|
@@ -392,11 +402,11 @@ On the **User Experience** page, specify the following information:
 
 - **Logon requirement**: Select one of the following options:  
 
-    - **Only when a user is logged on**  
+  - **Only when a user is logged on**  
 
-    - **Whether or not a user is logged on**  
+  - **Whether or not a user is logged on**  
 
-    - **Only when no user is logged on**  
+  - **Only when no user is logged on**  
 
     > [!NOTE]  
     >  This option defaults to **Only when a user is logged on**. If you select **Install for user** in the **Installation behavior** drop-down list, you can't change this option.  
@@ -425,9 +435,9 @@ On the **User Experience** page, specify the following information:
 
     Use this value for the following actions:  
 
-    - To monitor the results from the deployment type.  
+  - To monitor the results from the deployment type.  
 
-    - To check whether a deployment type is installed when you define maintenance windows on client devices. When a maintenance window is in place, a deployment type only starts if enough time is available in the maintenance window to accommodate the **Maximum Allowed Run Time** setting.  
+  - To check whether a deployment type is installed when you define maintenance windows on client devices. When a maintenance window is in place, a deployment type only starts if enough time is available in the maintenance window to accommodate the **Maximum Allowed Run Time** setting.  
 
     > [!IMPORTANT]  
     >  A conflict might occur if the **Maximum allowed run time** is longer than the scheduled maintenance window. If the user sets the maximum run time to a period greater than the length of any available maintenance window, that deployment type doesn't run.  
@@ -509,7 +519,7 @@ Dependencies define one or more deployment types from another application that t
 > [!Note]  
 > This page isn't in the Create Deployment Type wizard. It's only a tab on the properties of an existing deployment type.  
 
-Specify return codes to control behaviors after the deployment type completes. For example, signal that a restart is required, the installation is complete, or customize the text shown to users. 
+Specify return codes to control behaviors after the deployment type completes. For example, signal that a restart is required, the installation is complete. 
 
 1. On the **Return Codes** tab of the deployment type properties window, click **Add**.  
 
@@ -527,7 +537,7 @@ Specify return codes to control behaviors after the deployment type completes. F
 
     - **Fast Retry**: Another installation is already in progress on the device. The client retries every two hours, for a total of 10 times.  
 
-4. Optionally, enter a **Name** and **Description** for this return code. This text is shown to the user.  
+4. Optionally, enter a **Name** and **Description** for this return code.
 
 5. Click **OK** to close the Add Return Code window.  
 
@@ -540,6 +550,7 @@ You're deploying an application that returns an exit code of `1` when it success
 When you create some deployment types, Configuration Manager automatically adds the following return codes that are common to that technology:  
 
 **Windows Installer (\*.msi file)**  
+
 |Value    |Code Type|
 |---------|---------|
 |0        |Success (no reboot)|
@@ -549,6 +560,7 @@ When you create some deployment types, Configuration Manager automatically adds 
 |1618     |Fast Retry|
 
 **Script Installer**  
+
 |Value    |Code Type|
 |---------|---------|
 |0        |Success (no reboot)|
@@ -557,6 +569,7 @@ When you create some deployment types, Configuration Manager automatically adds 
 |1618     |Fast Retry|
 
 **Windows app package (\*.appx, \*.appxbundle, \*.msix, \*.msixbundle)**  
+
 |Value    |Code Type|
 |---------|---------|
 |15605    |Fast Retry|

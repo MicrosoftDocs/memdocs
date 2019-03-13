@@ -10,6 +10,7 @@ ms.assetid: da5f8b61-2386-4530-ad54-1a5c51911f07
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Use PXE to deploy Windows over the network with Configuration Manager
@@ -38,13 +39,16 @@ To deploy operating systems to Configuration Manager clients that make PXE boot 
 > [!NOTE]  
 >  When configuring a single PXE enabled distribution point to support multiple subnets it is not supported to use DHCP options. Configure IP helpers on the routers to allow PXE requests to be forwarded to your PXE enabled distribution points.
 
+> [!NOTE]  
+>  It is not supported to use the PXE responder without WDS on servers that are also running a DHCP server.
+
 ## Prepare a PXE-enabled boot image
 
 To use PXE to deploy an OS, you must have both x86 and x64 PXE-enabled boot images distributed to one or more PXE-enabled distribution points. Use the information to enable PXE on a boot image and distribute the boot image to distribution points:
 
 -   To enable PXE on a boot image, select **Deploy this boot image from the PXE-enabled distribution point** from the **Data Source** tab in the boot image properties.
 
--   If you change the properties for the boot image, redistribute the boot image to distribution points. For more information, see [Distribute content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).
+-   If you change the properties for the boot image, update and redistribute the boot image to distribution points. For more information, see [Distribute content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).
 
 
 
@@ -125,4 +129,4 @@ The following list provides details about how a boot image is selected for clien
 
 3. In the list of task sequences found in step 2, Configuration Manager looks for a boot image that matches the architecture of the client that's trying to boot. If a boot image is found with the same architecture, that boot image is used.  
 
-4. If a boot image isn't found with the same architecture, Configuration Manager looks for a boot image that's compatible with the architecture of the client. It looks in the list of task sequences found in step 2. For example, a 64-bit client is compatible with 32-bit and 64-bit boot images. A 32-bit client is compatible with only 32-bit boot images. An UEFI client is compatible with only 64-bit boot images.  
+4. If a boot image isn't found with the same architecture, Configuration Manager looks for a boot image that's compatible with the architecture of the client. It looks in the list of task sequences found in step 2. For example, a 64-bit BIOS/MBR client is compatible with 32-bit and 64-bit boot images. A 32-bit BIOS/MBR client is compatible with only 32-bit boot images. UEFI clients are only compatible with matching architecture. A 64-bit UEFI client is compatible with only 64-bit boot images and a 32-bit UEFI client is compatible with only 32-bit boot images.

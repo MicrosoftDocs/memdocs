@@ -8,6 +8,7 @@ ms.assetid: 7fa4f2f4-6816-43e9-976b-d3a48abebdbc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # System Center Configuration Manager SDK
 Welcome to the System Center Configuration Manager Software Development Kit (SDK).  

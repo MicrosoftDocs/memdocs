@@ -9,6 +9,7 @@ ms.assetid: b6be1a0c-58ba-4949-a78a-d09ab322293c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Remove an Object Association with a Security Scope
 Removing a security scope from an object instance is as simple as deleting the Windows Management Instrumentation (WMI)`SMS_SecuredCategoryMembership` class instance. However, object instances must have at least one security scope associated with them. The last object instance can never be removed. Every object is created with the `Default` security scope, and if all other security scopes are to be removed from an object instance, the `Default` should be added to it before removal.  

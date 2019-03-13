@@ -10,6 +10,7 @@ ms.assetid: b7bff8a0-fe76-4d3b-aac6-065290888bea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Security best practices and privacy information for System Center Configuration Manager
 

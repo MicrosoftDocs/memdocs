@@ -9,6 +9,7 @@ ms.assetid: ff5fa70d-5bea-469d-bc84-a940d6558733
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_Client_Reg_MultiString_List Server WMI Class
 The `SMS_Client_Reg_MultiString_List` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a list of client registry multi-string items from the site control file.  
@@ -73,11 +74,11 @@ Class SMS_Client_Reg_MultiString_List
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Embedded  
+- Embedded  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- This class behaves the same as [SMS_EmbeddedPropertyList Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_embeddedpropertylist-server-wmi-class.md). It is used to represent data that is stored in the system registry with the `REG_MULTI_SZ` data type.  
+  This class behaves the same as [SMS_EmbeddedPropertyList Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_embeddedpropertylist-server-wmi-class.md). It is used to represent data that is stored in the system registry with the `REG_MULTI_SZ` data type.  
 
 ## Requirements  
 

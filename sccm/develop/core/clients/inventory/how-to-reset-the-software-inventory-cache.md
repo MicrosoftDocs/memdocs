@@ -9,6 +9,7 @@ ms.assetid: fbb32170-234c-44f2-80b8-51285790e8a4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Reset the Software Inventory Cache
 In System Center Configuration Manager, you reset the software inventory cache by connecting to the inventory agent namespace and deleting the inventory action status instance for software inventory.  

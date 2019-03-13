@@ -9,6 +9,7 @@ ms.assetid: 0765d2ae-4d37-4caf-9393-f66ceb5e50d2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Commit Method in Class SMS_ContentPackage
 The `Commit` Windows Management Instrumentation (WMI) class method, in Configuration Manager, indicates that the content package is ready for processing.  

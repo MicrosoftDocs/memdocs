@@ -9,6 +9,7 @@ ms.assetid: f18ca88b-a1e2-46d0-8740-00d36dc09e0e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Define the Installer
 To define the application management deployment technology installer, use an instance of the `Microsoft.ConfigurationManagement.ApplicationManagement.Installer` class. The new class instance will define the properties and methods used on the client to actually install the application.  
@@ -111,14 +112,14 @@ To define the application management deployment technology installer, use an ins
         installationAction.Arguments.Add(new Argument("RedirectPrinters", typeof(int), (true == this.RedirectPrinters) ? 1 : 0));   
         installationAction.Arguments.Add(new Argument("RedirectSmartCards", typeof(int), (true == this.RedirectSmartCards) ? 1 : 0));   
         installationAction.Arguments.Add(new Argument("Username", typeof(string), this.Username));   
-        //  Adds any references to content to the action.   
-        if (this.ConstructRdpOnClient == false && this.Contents.Count > 0)   
-        {  
-            foreach (Content content in this.Contents)   
-            {  
-                 installationAction.Contents.Add(new ContentRef(content));   
-            }  
-        }  
+        //  Adds any references to content to the action.   
+        if (this.ConstructRdpOnClient == false && this.Contents.Count > 0)   
+        {  
+            foreach (Content content in this.Contents)   
+            {  
+                 installationAction.Contents.Add(new ContentRef(content));   
+            }  
+        }  
         return installationAction;   
     }  
     ```  

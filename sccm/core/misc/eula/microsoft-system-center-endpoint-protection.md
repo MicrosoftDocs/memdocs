@@ -9,7 +9,8 @@ ms.assetid: e9704758-9572-49b6-a66f-fd480b9e3e20
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
+ms.collection: M365-identity-device-management
 ---
 # MICROSOFT SYSTEM CENTER ENDPOINT PROTECTION
 

@@ -9,6 +9,7 @@ ms.assetid: eae81dae-8af9-4e82-8b1f-9b13d01581b7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_SystemConsoleUsage Client WMI Class
 The `SMS_SystemConsoleUsage` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that defines usage data about devices, based on the Windows security event log.  

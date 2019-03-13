@@ -9,6 +9,7 @@ ms.assetid: fee7a3d5-59c1-4134-a2da-08957cd01625
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ExecuteProgram Method in Class CCM_ProgramsManager
 The `ExecuteProgram` WMI class method, in Configuration Manager, manages the download of a legacy software distribution program.  
@@ -19,8 +20,8 @@ The `ExecuteProgram` WMI class method, in Configuration Manager, manages the dow
 
 ```  
 uint32 ExecuteProgram(  
-     [IN]  String ProgramID,  
-     [IN]  String PackageID  
+     [IN]  String ProgramID,  
+     [IN]  String PackageID  
 );  
 ```  
 

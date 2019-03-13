@@ -9,6 +9,7 @@ ms.assetid: c0fedd8b-0f37-4230-8654-1270b8bd9ed9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Collections Server WMI Classes
 In System Center Configuration Manager, collections classes offer a way to manage collections and collection hierarchy. This section describes the collection classes.  

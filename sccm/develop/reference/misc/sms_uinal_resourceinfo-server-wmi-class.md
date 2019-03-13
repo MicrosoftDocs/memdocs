@@ -9,6 +9,7 @@ ms.assetid: 01f37e13-395e-4648-af97-525d95bfe7ab
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_UINAL_ResourceInfo Server WMI Class
 The `SMS_UINAL_ResourceInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents network abstraction layer (NAL) data specific to the Configuration Manager console.  
@@ -110,13 +111,13 @@ Class SMS_UINAL_ResourceInfo
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Embedded  
+- Embedded  
 
--   Read (read-only)  
+- Read (read-only)  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- This class is used in the `ResourceInfo` parameter of [SMS_SIIB_UINALProvider Server WMI Class](../../../develop/reference/misc/sms_siib_uinalprovider-server-wmi-class.md).  
+  This class is used in the `ResourceInfo` parameter of [SMS_SIIB_UINALProvider Server WMI Class](../../../develop/reference/misc/sms_siib_uinalprovider-server-wmi-class.md).  
 
 ## Requirements  
 

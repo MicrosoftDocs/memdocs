@@ -10,6 +10,7 @@ ms.assetid: c517fe34-0130-465b-a020-bdb555878778
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Set up Android hybrid device management with System Center Configuration Manager and Microsoft Intune
 
@@ -29,7 +30,7 @@ The following steps let Configuration Manager manage Android devices without a w
 3. On the **Home** tab in the **Subscription** group, choose **Configure Platforms** > **Android**.  
 4. In the **Microsoft Intune Subscription Properties** dialog box, choose the **Android** tab and check the **Enable Android enrollment** box. You can choose to **Block personally owned devices** to limit enrollment to [predeclared devices](predeclare-devices-with-hardware-id.md).
 
- After you're set up, you need to let your users know how to enroll their devices. See [What to tell users about enrolling their devices](/intune/end-user-educate). This information applies to both Microsoft Intune and Configuration Manager-managed mobile devices.
+   After you're set up, you need to let your users know how to enroll their devices. See [What to tell users about enrolling their devices](/intune/end-user-educate). This information applies to both Microsoft Intune and Configuration Manager-managed mobile devices.
 
 
 
@@ -74,4 +75,4 @@ After you enable Android for Work enrollment, you can perform the following mana
 - [Selectively wipe the work profile](/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe)
 
 > [!div class="button"]
-[< Previous step](create-service-connection-point.md)  [Next step >](set-up-additional-management.md)
+> [< Previous step](create-service-connection-point.md)  [Next step >](set-up-additional-management.md)

@@ -9,6 +9,7 @@ ms.assetid: 28c99fd5-9d17-4887-be4d-e9ab230d2728
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_SIIB_AddressType Server WMI Class
 The `SMS_SIIB_AddressType` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the Configuration Manager sender address type used by the Configuration Manager console.  
@@ -175,9 +176,9 @@ Class SMS_SIIB_AddressType : SMS_SiteInstallItemBase
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Read (read-only)  
+- Read (read-only)  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
 ## Requirements  
 

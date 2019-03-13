@@ -9,6 +9,7 @@ ms.assetid: a3f9f0ae-4225-47b1-8153-8a47eb53d75d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # DDRAddIntegerArray
 The `DDRAddIntegerArray` function, in Configuration Manager, adds an integer array property to the data discovery record (DDR).  

@@ -10,6 +10,7 @@ ms.assetid: 7d07bd0a-7012-47f7-8bc5-509a402915b7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Content Library Transfer tool

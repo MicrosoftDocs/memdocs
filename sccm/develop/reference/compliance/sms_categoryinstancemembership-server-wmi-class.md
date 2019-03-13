@@ -9,6 +9,7 @@ ms.assetid: 5df040f8-ff76-440e-95c4-663be1869b9c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_CategoryInstanceMembership Server WMI Class
 The `SMS_CategoryInstanceMembership` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, which represents the relationship between categories and configuration item objects.  

@@ -1,6 +1,6 @@
 ---
 title: "Create and deploy a Windows Defender Application Guard policy"
-titleSuffix: Configuraton Manager
+titleSuffix: Configuration Manager
 description: "Create and deploy Windows Defender Application Guard policy."
 ms.date: 03/22/2018
 ms.prod: configuration-manager
@@ -10,6 +10,7 @@ ms.assetid: 33a6c1d9-4dd8-411c-a748-693a5bd2ea5a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 

@@ -10,6 +10,7 @@ ms.assetid: 34024741-edfa-4088-8599-d6bafc331e62
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Manage access to O365 services for PCs managed by System Center Configuration Manager
 
@@ -18,11 +19,17 @@ manager: dougeby
 <!--1191496-->
 Configure conditional access to Office 365 services for PCs managed by Configuration Manager.  
 
-> [!Note]  
-> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+> [!Important]  
+> Hybrid MDM including on-premises conditional access are [deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). For more information, see [What is hybrid MDM](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
+> 
+> If you use conditional access on devices managed with the Configuration Manager client, to make sure they are still protected, first enable conditional access in Intune for those devices before you migrate. Enable co-management in Configuration Manager, move the compliance policy workload to Intune, and then complete your migration from Intune hybrid to Intune standalone. For more information, see [Conditional access with co-management](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access). 
 
 
 For information on configuring conditional access for devices enrolled and managed by Microsoft Intune, see [Manage access to services in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md). That article also covers devices that are domain joined and not evaluated for compliance.
+
+> [!Note]  
+> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+
 
 ## Supported Services  
 
@@ -50,23 +57,23 @@ For information on configuring conditional access for devices enrolled and manag
 
 ### Prerequisites  
 
--   ADFS Sync, and an O365 subscription. The O365 subscription is for setting up Exchange Online and SharePoint Online.  
+- ADFS Sync, and an O365 subscription. The O365 subscription is for setting up Exchange Online and SharePoint Online.  
 
--   A Microsoft Intune Subscription. The Microsoft Intune Subscription should be configured in Configuration Manager Console. The Intune subscription is used to relay device compliance state to Azure Active Directory and for user licensing.  
+- A Microsoft Intune Subscription. The Microsoft Intune Subscription should be configured in Configuration Manager Console. The Intune subscription is used to relay device compliance state to Azure Active Directory and for user licensing.  
 
- The PCs must meet the following requirements:  
+  The PCs must meet the following requirements:  
 
--   [Prerequisites](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) for automatic device registration with Azure Active Directory  
+- [Prerequisites](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) for automatic device registration with Azure Active Directory  
 
-     You can register PCs with Azure AD through the compliance policy.  
+   You can register PCs with Azure AD through the compliance policy.  
 
-    -   For Windows 8.1 and Windows 10 PCs, you can use an Active Directory Group Policy to configure your devices to register automatically with Azure AD.  
+  -   For Windows 8.1 and Windows 10 PCs, you can use an Active Directory Group Policy to configure your devices to register automatically with Azure AD.  
 
-    -   o   For Windows 7 PCs, you must deploy the device registration software package to your Windows 7 PC through System Center Configuration Manager. The [Automatic device registration with Azure Active Directory for Windows Domain-Joined Devices](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) article has more details.  
+  -   o   For Windows 7 PCs, you must deploy the device registration software package to your Windows 7 PC through System Center Configuration Manager. The [Automatic device registration with Azure Active Directory for Windows Domain-Joined Devices](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) article has more details.  
 
--   Must use Office 2013 or Office 2016 with modern authentication [enabled](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a).  
+- Must use Office 2013 or Office 2016 with modern authentication [enabled](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a).  
 
- The following steps apply to both Exchange Online and SharePoint Online  
+  The following steps apply to both Exchange Online and SharePoint Online  
 
 ### Step 1. Configure compliance policy  
  In the Configuration Manager Console, create a compliance policy with the following rules:  
@@ -75,7 +82,7 @@ For information on configuring conditional access for devices enrolled and manag
 
 -   **All required updates installed with a deadline older than a certain number of days:** Specify the value for the grace period from the deployment deadline for required updates on the user's device. Adding this rule also automatically installs any pending required updates. Specify the required updates in the **Required automatic updates** rule.   
 
--   **Require BitLocker drive encryption:** This rule checks if the primary drive (for example, C:\\) on the device is BitLocker encrypted. If Bitlocker encryption is not enabled on the primary device, access to email and SharePoint services is blocked.  
+-   **Require BitLocker drive encryption:** This rule checks if the primary drive (for example, C:\\) on the device is BitLocker encrypted. If BitLocker encryption is not enabled on the primary device, access to email and SharePoint services is blocked.  
 
 -   **Require Antimalware:** This rule checks if System Center Endpoint Protection or Windows Defender is enabled and running. If it is not enabled, access to email and SharePoint services is blocked.  
 

@@ -9,6 +9,7 @@ ms.assetid: 269d8be5-2786-43e2-9313-555dadcab576
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_Driver_Details Server WMI Class
 The `SMS_Driver_Details` Windows Management Instrumentation (WMI) class is an embedded class, in Configuration Manager, used by the [SMS_BootImagePackage Server WMI Class](../../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md) class to describe the list of drivers that have been added to the boot image.  
@@ -50,11 +51,11 @@ Class SMS_Driver_Details
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Embedded  
+- Embedded  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- Your application uses this class to create objects that are embedded by [SMS_BootImagePackage Server WMI Class](../../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md). For example, the application can add a driver to a boot image package by adding a reference to the required driver in the `ReferencedDrivers` property of an `SMS_BootImagePackage` object. For more information, see How to add a Windows Driver to a Configuration Manager Boot Image Package.  
+  Your application uses this class to create objects that are embedded by [SMS_BootImagePackage Server WMI Class](../../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md). For example, the application can add a driver to a boot image package by adding a reference to the required driver in the `ReferencedDrivers` property of an `SMS_BootImagePackage` object. For more information, see How to add a Windows Driver to a Configuration Manager Boot Image Package.  
 
 ## Requirements  
 

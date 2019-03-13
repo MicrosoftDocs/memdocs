@@ -10,6 +10,7 @@ ms.assetid: d1b4337f-85e8-45e6-8bbe-9f18b49041c7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Create an MDM collection with System Center Configuration Manager and Microsoft Intune
 
@@ -25,4 +26,4 @@ For testing purposes you can set up a **Direct rule** and add specific users who
 ![Create a user collection for MDM](../media/mdm-create-user-collection.png)
 
 > [!div class="button"]
-[Next step >](confirm-dns.md)
+> [Next step >](confirm-dns.md)

@@ -9,6 +9,7 @@ ms.assetid: b952d77a-c8ef-4b98-955d-b90535a24d19
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # General Configuration Item Examples
 This section provides information about authoring general configuration items in System Center Configuration Manager.  

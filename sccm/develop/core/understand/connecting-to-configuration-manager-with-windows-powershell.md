@@ -9,6 +9,7 @@ ms.assetid: 1d466a0b-bb4a-4648-8f16-9b6c897934f5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Connecting to Configuration Manager with Windows PowerShell
 In the [Configuration Manager Windows PowerShell Basics](../../../develop/core/understand/windows-powershell-basics.md) topic, you tried a few basic Windows PowerShell cmdlets. This topic helps you connect to Configuration Manager from your Windows PowerShell environment.  

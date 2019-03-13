@@ -9,6 +9,7 @@ ms.assetid: 2ad7dbc5-ee6f-40e2-a03f-413a8236153e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # CCM_Policy_Expression Client WMI Class
 In System Center Configuration Manager, the `CCM_Policy_Expression` class is a client Windows Management Instruementation (WMI) class that represents a policy expression that evaluates to either `true` or `false`.  

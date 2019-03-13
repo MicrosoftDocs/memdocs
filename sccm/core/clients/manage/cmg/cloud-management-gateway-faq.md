@@ -9,6 +9,7 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 4c1a128d-22fb-49f1-8e0b-36513a8dc117
+ms.collection: M365-identity-device-management
 ---
 
 # Frequently asked questions about the cloud management gateway
@@ -35,6 +36,10 @@ If your organization uses ExpressRoute, a security best practice is to isolate t
 ### Do I need to maintain the Azure virtual machines?
 
 No maintenance is required. The design of the cloud management gateway uses Azure platform as a service (PaaS). Using the subscription you provide, Configuration Manager creates the necessary virtual machines (VMs), storage, and networking. Azure secures and updates the virtual machine. These VMs aren't a part of your on-premises environment, as is the case with infrastructure as a service (IaaS). The cloud management gateway is a PaaS that extends your Configuration Manager environment into the cloud. 
+
+### How can I ensure service continuity during service updates?
+
+By scaling CMG to include two or more instances, you automatically benefit from Update Domains in Azure. See [How to update a cloud service](/azure/cloud-services/cloud-services-update-azure-service).
 
 
 ### I'm already using IBCM. If I add CMG, how do clients behave?

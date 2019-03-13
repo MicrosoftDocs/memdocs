@@ -9,6 +9,7 @@ ms.assetid: 716bd493-c968-4770-b9a5-deac80ca7517
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Operating System Deployment Task Sequencing
 This section provides information about using operating system deployment task sequences in System Center Configuration Manager.  

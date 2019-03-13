@@ -9,6 +9,7 @@ ms.assetid: 276d3f64-bd9b-4112-b869-bdad7d8b6931
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_AdvancedThreatProtectionSettings Server WMI Class
 The  `SMS_AdvancedThreatProtectionSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents policy settings for Windows Defender Advanced Threat Protection.  
@@ -490,11 +491,11 @@ Class SMS_AdvancedThreatProtectionSettings : SMS_SettingsDefinitionBase
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Dynamic  
+- Dynamic  
 
--   Secured  
+- Secured  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
 ## Requirements  
 

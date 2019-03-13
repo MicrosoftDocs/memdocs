@@ -9,6 +9,7 @@ ms.assetid: 41eb032c-be38-42b2-b7b6-485619e0681f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Resource Management Server WMI Classes
 Resource management server WMI classes in Microsoft System Center Configuration Manager support resource management on the server.The System Center Configuration Manager server class schema is a set of Windows Management Instrumentation (WMI) classes that represent the objects on a server that is running System Center Configuration Manager. Each System Center Configuration Manager class is a template for a managed object and all instances of the object use the template. Classes can contain properties and methods. The properties describe the class data and the methods typically perform data management. For more information about developing applications using these classes, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  

@@ -9,17 +9,18 @@ ms.assetid: cfbb34e8-9b47-48db-a8ef-408a0a89ad17
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Perform an Asynchronous Configuration Manager Query by Using Managed Code
 In System Center Configuration Manager, to perform an asynchronous query by using the managed SMS Provider, you use the [ProcessQuery](https://msdn.microsoft.com/library/cc146295.aspx) method.  
 
  The first parameter of the [ProcessQuery](https://msdn.microsoft.com/library/cc146295.aspx) method is an instance of the [SmsBackgroundWorker](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsbackgroundworker.aspx) class that provides two event handlers:  
 
--   [QueryProcessObjectReady](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsbackgroundworker.queryprocessorobjectready.aspx). This event handler is called for each object returned by the query. The event handler provides an IResultObject object that represents the object.  
+- [QueryProcessObjectReady](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsbackgroundworker.queryprocessorobjectready.aspx). This event handler is called for each object returned by the query. The event handler provides an IResultObject object that represents the object.  
 
--   [QueryProcessCompleted](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsbackgroundworker.queryprocessorcompleted.aspx). This event handler is called when the query is completed. It also provides information about any errors that occur. For more information, see For information about error handling, see [How to Handle Configuration Manager Asynchronous Errors by Using Managed Code](../../../develop/core/understand/how-to-handle-configuration-manager-asynchronous-errors-by-using-managed-code.md).  
+- [QueryProcessCompleted](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsbackgroundworker.queryprocessorcompleted.aspx). This event handler is called when the query is completed. It also provides information about any errors that occur. For more information, see For information about error handling, see [How to Handle Configuration Manager Asynchronous Errors by Using Managed Code](../../../develop/core/understand/how-to-handle-configuration-manager-asynchronous-errors-by-using-managed-code.md).  
 
- The second parameter to of the [ProcessQuery](https://msdn.microsoft.com/library/cc146295.aspx) method is the WQL statement for the query.  
+  The second parameter to of the [ProcessQuery](https://msdn.microsoft.com/library/cc146295.aspx) method is the WQL statement for the query.  
 
 ### To perform an asynchronous query  
 

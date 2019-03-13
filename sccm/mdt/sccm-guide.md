@@ -31,29 +31,29 @@ manager: angrobe
 ### Required Software  
  To complete this guide, the following software is required:  
 
--   Windows Server 2008 R2  
+- Windows Server 2008 R2  
 
--   Microsoft SQL Server 2008 R2  
+- Microsoft SQL Server 2008 R2  
 
--   SQL Server 2008 R2 Service Pack 1 (SP1)  
+- SQL Server 2008 R2 Service Pack 1 (SP1)  
 
--   SQL Server 2008 R2 SP1 Cumulative Update 6 (CU6)  
+- SQL Server 2008 R2 SP1 Cumulative Update 6 (CU6)  
 
--   Windows 8.1  
+- Windows 8.1  
 
--   System Center 2012 R2 Configuration Manager  
+- System Center 2012 R2 Configuration Manager  
 
--   Microsoft .NET Framework version 3.5 with SP1  
+- Microsoft .NET Framework version 3.5 with SP1  
 
--   Windows PowerShell version 2.0  
+- Windows PowerShell version 2.0  
 
--   Windows Preinstallation Environment (Windows PE), which is included in Configuration Manager  
+- Windows Preinstallation Environment (Windows PE), which is included in Configuration Manager  
 
--   Networking services, including Domain Name System (DNS) and Dynamic Host Configuration Protocol (DHCP)  
+- Networking services, including Domain Name System (DNS) and Dynamic Host Configuration Protocol (DHCP)  
 
--   Active Directory Domain Services (AD DS)  
+- Active Directory Domain Services (AD DS)  
 
- See the [Supported Configurations for Configuration Manager](http://technet.microsoft.com/library/gg682077.aspx) for additional software combinations that can be used for installing Configuration Manager.  
+  See the [Supported Configurations for Configuration Manager](http://technet.microsoft.com/library/gg682077.aspx) for additional software combinations that can be used for installing Configuration Manager.  
 
 > [!NOTE]   
 >  The Task Sequencer used in MDT deployments requires that the Create Global Object right be assigned to credentials used to access and run the Deployment Workbench and the deployment process. This right is normally available to accounts with Administrator-level permissions (unless explicitly removed). Also, the Specialized Security – Limited Functionality (SSLF) security profile removes the Create Global Object right and should not be applied to computers deployed using MDT.  
@@ -130,12 +130,14 @@ manager: angrobe
 #### To create the required folders and share  
 1. The MDT Deployment Process Requires several folders. Create the following folders and shares with the specified permissions for each share.    
 
-  |Create this folder  |With this share name  |With these share permissions  |  
-  |----|----|----|  
-  |E:\Source$|Source$|**Administrators:** Co-owner<br /><br /> **Everyone:** Read|  
-  |E:\Images$|Images$|**Administrators:** Co-owner<br /><br /> **Everyone:** Read|  
-  |E:\Capture$|Capture$|**Administrators:** Co-owner<br /><br /> **Everyone:** Read|  
-  |E:\Packages$|Packages$|**Administrators:** Co-owner<br /><br /> **Everyone:** Read|  
+
+   | Create this folder | With this share name |                With these share permissions                 |
+   |--------------------|----------------------|-------------------------------------------------------------|
+   |     E:\Source$     |       Source$        | **Administrators:** Co-owner<br /><br /> **Everyone:** Read |
+   |     E:\Images$     |       Images$        | **Administrators:** Co-owner<br /><br /> **Everyone:** Read |
+   |    E:\Capture$     |       Capture$       | **Administrators:** Co-owner<br /><br /> **Everyone:** Read |
+   |    E:\Packages$    |      Packages$       | **Administrators:** Co-owner<br /><br /> **Everyone:** Read |
+
 
 2. Create the following folders:  
 
@@ -266,12 +268,12 @@ manager: angrobe
  Configuration Manager and SQL Server 2008 R2 require user accounts during the installation process.  Use the following information for creating these accounts.  
 
 
-|**Create this account**|**With these settings**|  
-|-|-|  
-|SQL Server Agent service account|1.  In **First name**, type **SQL Agent**.<br />2.  In **Last name**, type **Service Account**.<br />3.  In **User logon name**, type **SQLAgent**.<br />4.  In **Password** and **Confirm password**, type **P@ssw0rd**.<br />5.  Clear the **User must change password at next logon** check box.<br />6.  Select the **Password never expires** check box.<br />7.  Make the account a member of the Domain Admins security group.<br />8.  In **Description**, type **Service account used to run SQL Server 2008 R2 Agent service**.|  
-|SQL Server Database Engine service account|1.  In **First name**, type **SQL DB Engine**.<br />2.  In **Last name**, type **Service Account**.<br />3.  In **User logon name**, type **SQLDBEngine**.<br />4.  In **Password** and **Confirm password**, type **P@ssw0rd**.<br />5.  Clear the **User must change password at next logon** check box.<br />6.  Select the **Password never expires** check box.<br />7.  Make the account a member of the Domain Admins security group.<br />8.  In **Description**, type **Service account used to run SQL Server 2008 R2 database engine**.|  
-|SQL Server Reporting Services service account|1.  In **First name**, type **SQL Reporting**.<br />2.  In **Last name**, type **Service Account**.<br />3.  In **User logon name**, type **SQLReport**.<br />4.  In **Password** and **Confirm password**, type **P@ssw0rd**.<br />5.  Clear the **User must change password at next logon** check box.<br />6.  Select the **Password never expires** check box.<br />7.  Make the account a member of the Domain Admins security group.<br />8.  In **Description**, type **Service account used to run SQL Server 2008 R2 reporting services**.|  
-|System Center Configuration Manager Client Network Access account|1.  In **First name**, type **CM 2012**.<br />2.  In **Last name**, type **Client Network Access**.<br />3.  In **User logon name**, type **CMNetAccess**.<br />4.  In **Password** and **Confirm password**, type **P@ssw0rd**.<br />5.  Clear the **User must change password at next logon** check box.<br />6.  Select the **Password never expires** check box.<br />7.  In **Description**, type **Service account used as the network access account for Configuration Manager Client**.|  
+|                      **Create this account**                      |                                                                                                                                                                                                                                                                     **With these settings**                                                                                                                                                                                                                                                                      |
+|-------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|                 SQL Server Agent service account                  |      1.  In **First name**, type **SQL Agent**.<br />2.  In **Last name**, type **Service Account**.<br />3.  In **User logon name**, type **SQLAgent**.<br />4.  In **Password** and **Confirm password**, type <strong>P@ssw0rd</strong>.<br />5.  Clear the **User must change password at next logon** check box.<br />6.  Select the **Password never expires** check box.<br />7.  Make the account a member of the Domain Admins security group.<br />8.  In **Description**, type **Service account used to run SQL Server 2008 R2 Agent service**.      |
+|            SQL Server Database Engine service account             | 1.  In **First name**, type **SQL DB Engine**.<br />2.  In **Last name**, type **Service Account**.<br />3.  In **User logon name**, type **SQLDBEngine**.<br />4.  In **Password** and **Confirm password**, type <strong>P@ssw0rd</strong>.<br />5.  Clear the **User must change password at next logon** check box.<br />6.  Select the **Password never expires** check box.<br />7.  Make the account a member of the Domain Admins security group.<br />8.  In **Description**, type **Service account used to run SQL Server 2008 R2 database engine**.  |
+|           SQL Server Reporting Services service account           | 1.  In **First name**, type **SQL Reporting**.<br />2.  In **Last name**, type **Service Account**.<br />3.  In **User logon name**, type **SQLReport**.<br />4.  In **Password** and **Confirm password**, type <strong>P@ssw0rd</strong>.<br />5.  Clear the **User must change password at next logon** check box.<br />6.  Select the **Password never expires** check box.<br />7.  Make the account a member of the Domain Admins security group.<br />8.  In **Description**, type **Service account used to run SQL Server 2008 R2 reporting services**. |
+| System Center Configuration Manager Client Network Access account |                           1.  In **First name**, type **CM 2012**.<br />2.  In **Last name**, type **Client Network Access**.<br />3.  In **User logon name**, type **CMNetAccess**.<br />4.  In **Password** and **Confirm password**, type <strong>P@ssw0rd</strong>.<br />5.  Clear the **User must change password at next logon** check box.<br />6.  Select the **Password never expires** check box.<br />7.  In **Description**, type **Service account used as the network access account for Configuration Manager Client**.                           |
 
 ###  <a name="InstallSQLServer"></a> Step 1-9: Install SQL Server 2008 R2  
  Before installing Configuration Manager, install SQL Server 2008 R2 with SP1 and CU6 for SP1.  
@@ -280,92 +282,94 @@ manager: angrobe
 >  To enable all SQL Server 2008 R2 features, install the Web Services (IIS) server role before installing SQL Server 2008 R2.  
 
 #### To install SQL Server 2008 R2
-1.  Start the SQL Server Installation Center.  
+1. Start the SQL Server Installation Center.  
 
-2.  In the SQL Server Installation Center, in the navigation pane, click **Installation**.  
+2. In the SQL Server Installation Center, in the navigation pane, click **Installation**.  
 
-3.  In the details pane, click **New installation or add features to an existing installation**.  
+3. In the details pane, click **New installation or add features to an existing installation**.  
 
-     SQL Server 2008 R2 Setup Wizard starts.  
+    SQL Server 2008 R2 Setup Wizard starts.  
 
-4.  Install SQL Server 2008 R2 using the following information, accepting the defaults unless otherwise specified.  
+4. Install SQL Server 2008 R2 using the following information, accepting the defaults unless otherwise specified.  
 
-  |**On this wizard page**|**Do this**|  
-  |-|-|  
-  |**Setup Support Rules**|Click **OK**.|  
-  |**Product Key**|Click **Next**.|  
-  |**License Terms**|Select the **I accept the license terms** check box, and then click **Next**.|  
-  |**Setup Support Files**|Click **Install**.|  
-  |**Setup Support Rules**|Ensure that no critical results exist for the rules, and then click **Next**.|  
-  |**Setup Role**|Click **SQL Server Feature Installation**, and click **Next**.|  
-  |**Feature Selection**|1.  Select **Database Engine Services** check box.<br />2.  Select **Reporting Services** check box.<br />3.  Select **Full-Text Search** check box.<br />4.  Select **Management Tools - Complete** check box.<br />5.  Click **Next**.|  
-  |**Installation Rules**|Click **Next**.|  
-  |**Instance Configuration**|Click **Next**.|  
-  |**Disk Space Requirements**|Click **Next**.|  
-  |**Server Configuration**|1.  For **SQL Server Agent**, in **Account Name**, type **MDT2013\SQLAgent**, and in **Password**, type **P@ssw0rd**.<br />2.  For **SQL Server Database Engine**, in **Account Name**, type **MDT2013\SQLDBEngine**, in **Password**, type **P@ssw0rd**.<br />3.  For **SQL Server Reporting Services**, in **Account Name**, type **MDT2013\SQLReport**, in **Password**, type **P@ssw0rd**.<br />4.  Click **Next**.|  
-  |**Database Engine Configuration**|Click **Add Current User**, and click **Next**.|  
-  |**Reporting Services Configuration**|Click **Next**.|  
-  |**Error Reporting**|Click **Next**.|  
-  |**Installation Configuration Rules**|Click **Next**.|  
-  |**Ready to Install**|Click **Install**.|  
-  |**Complete**|Click **Close**.|  
 
-5.  Close the SQL Server Installation Center.  
+   |       **On this wizard page**        |                                                                                                                                                                                                                          **Do this**                                                                                                                                                                                                                           |
+   |--------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+   |       **Setup Support Rules**        |                                                                                                                                                                                                                         Click **OK**.                                                                                                                                                                                                                          |
+   |           **Product Key**            |                                                                                                                                                                                                                        Click **Next**.                                                                                                                                                                                                                         |
+   |          **License Terms**           |                                                                                                                                                                                         Select the **I accept the license terms** check box, and then click **Next**.                                                                                                                                                                                          |
+   |       **Setup Support Files**        |                                                                                                                                                                                                                       Click **Install**.                                                                                                                                                                                                                       |
+   |       **Setup Support Rules**        |                                                                                                                                                                                         Ensure that no critical results exist for the rules, and then click **Next**.                                                                                                                                                                                          |
+   |            **Setup Role**            |                                                                                                                                                                                                 Click **SQL Server Feature Installation**, and click **Next**.                                                                                                                                                                                                 |
+   |        **Feature Selection**         |                                                                                                            1.  Select **Database Engine Services** check box.<br />2.  Select **Reporting Services** check box.<br />3.  Select **Full-Text Search** check box.<br />4.  Select **Management Tools - Complete** check box.<br />5.  Click **Next**.                                                                                                            |
+   |        **Installation Rules**        |                                                                                                                                                                                                                        Click **Next**.                                                                                                                                                                                                                         |
+   |      **Instance Configuration**      |                                                                                                                                                                                                                        Click **Next**.                                                                                                                                                                                                                         |
+   |     **Disk Space Requirements**      |                                                                                                                                                                                                                        Click **Next**.                                                                                                                                                                                                                         |
+   |       **Server Configuration**       | 1.  For **SQL Server Agent**, in **Account Name**, type **MDT2013\SQLAgent**, and in **Password**, type <strong>P@ssw0rd</strong>.<br />2.  For **SQL Server Database Engine**, in **Account Name**, type **MDT2013\SQLDBEngine**, in **Password**, type <strong>P@ssw0rd</strong>.<br />3.  For **SQL Server Reporting Services**, in **Account Name**, type **MDT2013\SQLReport**, in **Password**, type <strong>P@ssw0rd</strong>.<br />4.  Click **Next**. |
+   |  **Database Engine Configuration**   |                                                                                                                                                                                                        Click **Add Current User**, and click **Next**.                                                                                                                                                                                                         |
+   | **Reporting Services Configuration** |                                                                                                                                                                                                                        Click **Next**.                                                                                                                                                                                                                         |
+   |         **Error Reporting**          |                                                                                                                                                                                                                        Click **Next**.                                                                                                                                                                                                                         |
+   | **Installation Configuration Rules** |                                                                                                                                                                                                                        Click **Next**.                                                                                                                                                                                                                         |
+   |         **Ready to Install**         |                                                                                                                                                                                                                       Click **Install**.                                                                                                                                                                                                                       |
+   |             **Complete**             |                                                                                                                                                                                                                        Click **Close**.                                                                                                                                                                                                                        |
+
+
+5. Close the SQL Server Installation Center.  
 
 #### To install SQL Server 2008 R2 SP1
-1.  In Windows Explorer, go to E:\Source$\SQL2008R2SP1, and double-click **SQLServer2008R2SP1-KB2528583-x64-ENU.exe**.  
+1. In Windows Explorer, go to E:\Source$\SQL2008R2SP1, and double-click **SQLServer2008R2SP1-KB2528583-x64-ENU.exe**.  
 
-     The **Extracting Files** dialog box displays the file-extraction process. When the process is complete, the SQL Server 2008 R2 Service Pack 1 Update Setup Wizard starts.  
+    The **Extracting Files** dialog box displays the file-extraction process. When the process is complete, the SQL Server 2008 R2 Service Pack 1 Update Setup Wizard starts.  
 
-2.  Install SQL Server 2008 R2 SP1 using the following information, accepting the defaults unless otherwise specified.        
+2. Install SQL Server 2008 R2 SP1 using the following information, accepting the defaults unless otherwise specified.        
 
-  |**On this wizard page**|**Do this**|  
-  |-|-|  
-  |**SQL Server 2008 R2 update**|Click **Next**.|  
-  |**License Terms**|Select the **I accept the license terms** check box, and then click **Next**.|  
-  |**Select Features**|Click **Next**.|  
-  |**Check Files In Use**|Click **Next**.|  
-  |**Ready to update**|Click **Update**.|  
-  |**Update Progress**|The progress is displayed on the wizard page as the update is performed and completes.|  
-  |**Complete**|Click **Close**.|  
+   |**On this wizard page**|**Do this**|  
+   |-|-|  
+   |**SQL Server 2008 R2 update**|Click **Next**.|  
+   |**License Terms**|Select the **I accept the license terms** check box, and then click **Next**.|  
+   |**Select Features**|Click **Next**.|  
+   |**Check Files In Use**|Click **Next**.|  
+   |**Ready to update**|Click **Update**.|  
+   |**Update Progress**|The progress is displayed on the wizard page as the update is performed and completes.|  
+   |**Complete**|Click **Close**.|  
 
 #### To install SQL Server 2008 R2 SP1 CU6
-1.  In Windows Explorer, go to E:\Source$\SQL2008R2SP1CU6, and double-click **446622_intl_x64_zip.exe**.  
+1. In Windows Explorer, go to E:\Source$\SQL2008R2SP1CU6, and double-click **446622_intl_x64_zip.exe**.  
 
-     The **Microsoft Self-Extractor** dialog box appears.  
+    The **Microsoft Self-Extractor** dialog box appears.  
 
-2.  In the **Microsoft Self-Extractor** dialog box, click **Continue**.  
+2. In the **Microsoft Self-Extractor** dialog box, click **Continue**.  
 
-3.  In the **Microsoft Self-Extractor** dialog box, in **Select the folder where you want to unzip the files to**, type **E:\Source$\SQL2008R2SP1CU6**, and then click **OK**.  
+3. In the **Microsoft Self-Extractor** dialog box, in **Select the folder where you want to unzip the files to**, type **E:\Source$\SQL2008R2SP1CU6**, and then click **OK**.  
 
-    > [!NOTE]   
-    >  You can click the ellipse (…) to browse for the E:\Source$\SQL2008R2SP1CU6 folder.  
+   > [!NOTE]   
+   >  You can click the ellipse (…) to browse for the E:\Source$\SQL2008R2SP1CU6 folder.  
 
-     The extraction process is displayed. When the process is complete, the completion status is displayed.  
+    The extraction process is displayed. When the process is complete, the completion status is displayed.  
 
-4.  In the **Microsoft Self-Extractor** dialog box, click **OK**.  
+4. In the **Microsoft Self-Extractor** dialog box, click **OK**.  
 
-5.  In Windows Explorer, go to E:\Source$\SQL2008R2SP1CU6, and double-click **SQLServer2008R2-KB2679367-x64.exe**.  
+5. In Windows Explorer, go to E:\Source$\SQL2008R2SP1CU6, and double-click **SQLServer2008R2-KB2679367-x64.exe**.  
 
-     The **Extracting Files** dialog box displays the file-extraction process. When the process is complete, the SQL Server 2008 R2 Service Pack 1 CU6 Update Setup Wizard starts.  
+    The **Extracting Files** dialog box displays the file-extraction process. When the process is complete, the SQL Server 2008 R2 Service Pack 1 CU6 Update Setup Wizard starts.  
 
-6.  Install SQL Server 2008 R2 SP1 CU6 using the following information, accepting the defaults unless otherwise specified.  
+6. Install SQL Server 2008 R2 SP1 CU6 using the following information, accepting the defaults unless otherwise specified.  
 
-  |**On this wizard page**|**Do this**|  
-  |-|-|  
-  |**SQL Server 2008 R2 update**|Click **Next**.|  
-  |**License Terms**|Select the **I accept the license terms** check box, and then click **Next**.|  
-  |**Select Features**|Click **Next**.|  
-  |**Check Files In Use**|Click **Next**.|  
-  |**Ready to update**|Click **Update**.|  
-  |**Update Progress**|The progress is displayed on the wizard page as the update is performed.|  
-  |**Complete**|Click **Close**.|  
+   |**On this wizard page**|**Do this**|  
+   |-|-|  
+   |**SQL Server 2008 R2 update**|Click **Next**.|  
+   |**License Terms**|Select the **I accept the license terms** check box, and then click **Next**.|  
+   |**Select Features**|Click **Next**.|  
+   |**Check Files In Use**|Click **Next**.|  
+   |**Ready to update**|Click **Update**.|  
+   |**Update Progress**|The progress is displayed on the wizard page as the update is performed.|  
+   |**Complete**|Click **Close**.|  
 
-  The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to restart the computer to complete the setup.  
+   The **Install a SQL Server 2008 R2 Update** dialog box appears prompting you to restart the computer to complete the setup.  
 
-7.  In the **Install a SQL Server 2008 R2 update** dialog box, click **OK**.  
+7. In the **Install a SQL Server 2008 R2 update** dialog box, click **OK**.  
 
-8.  Restart the computer.  
+8. Restart the computer.  
 
 9. After installing SQL Server 2008 R2 SP1 CU6, the SQL Server build number should be 10.51.2811.0.  
 
@@ -399,66 +403,70 @@ manager: angrobe
  After extending the Active Directory schema, install Configuration Manager. The configuration of WDG-MDT-01 supports Configuration Manager for this sample. The configuration of computers in the production network may vary. To find out more about the prerequisites for installing Configuration Manager, see [Supported Configurations for Configuration Manager](http://technet.microsoft.com/library/gg682077.aspx).  
 
 #### To install Configuration Manager
-1.  Start the System Center 2012 R2 Configuration Manager Setup splash screen.  
+1. Start the System Center 2012 R2 Configuration Manager Setup splash screen.  
 
-2.  On the System Center 2012 R2 Configuration Manager Setup splash screen, click the **Install** link.  
+2. On the System Center 2012 R2 Configuration Manager Setup splash screen, click the **Install** link.  
 
-     The Microsoft System Center 2012 R2 Configuration Manager Setup Wizard starts.  
+    The Microsoft System Center 2012 R2 Configuration Manager Setup Wizard starts.  
 
-3.  Complete the Microsoft System Center 2012 R2 Configuration Manager Setup Wizard using the following information, accepting the defaults unless otherwise specified.  
+3. Complete the Microsoft System Center 2012 R2 Configuration Manager Setup Wizard using the following information, accepting the defaults unless otherwise specified.  
 
-  |**On this wizard page**|**Do this**|  
-  |-|-|  
-  |**Before You Begin**|Click **Next**.|  
-  |**Getting Started**|Click **Next**.|  
-  |**Product Key**|In **Enter your 25-character product key**, type ***product_key*** (where *product_key* is your product key for Configuration Manager).|  
-  |**Microsoft Software License Terms**|Select the **I accept these license terms** check box, and then click **Next**.|  
-  |**Prerequisite Licenses**|1.  In the **Microsoft SQL Server 2008 R2 Express** section, select the **I accept these License Terms** check box.<br />2.  In the **Microsoft SQL Server 2008 Native Client** section, select the **I accept these License Terms** check box.<br />3.  In the **Microsoft Silverlight 4** section, select the **I accept these License Terms and automatic updates of Silverlight** check box.<br />4.  Click **Next**.|  
-  |**Update Prerequisite Components**|In **Download and use the latest updates. Updates will be saved to the following location**, type **E:\CMDownloads**, and then click **Next**.|  
-  |**Server Language Selection**|Click **Next**.|  
-  |**Client Language Selection**|Click **Next**.|  
-  |**Site and Installation Settings**|1.  In **Site code**, type **NYC**.<br />2.  In **Site name**, type **New York City Site**.<br />3.  Click **Next**.|  
-  |**Primary Site Installation**|1.  Click **Install the primary site as a stand-alone site**.<br />2.  Click **Next**.<br />     The **Configuration Manager** dialog box appears, confirming that you want to install this site as a stand-alone site.<br />3.  In the **Configuration Manager** dialog box, click **Yes**.|  
-  |**Database Information**|Click **Next**.|  
-  |**SMS Provider Settings**|Click **Next**.|  
-  |**Client Computer Communication Settings**|Click **Configure the communication method on each site system role**, and then click **Next**.|  
-  |**Site System Roles**|Click **Next**.|  
-  |**Customer Experience Improvement Program Configuration**|1.  Select the appropriate participation in the Customer Experience Improvement program for your organization.<br />2.  Click **Next**.|  
-  |**Settings Summary**|Click **Next**.|  
-  |**Prerequisite Check**|Click **Begin Install**.|  
-  |**Install**|1.  Monitor the installation process until it is complete.<br />2.  Click **Close**.|  
 
-4.  Close all open windows and dialog boxes.  
+   |                  **On this wizard page**                  |                                                                                                                                                                                                        **Do this**                                                                                                                                                                                                        |
+   |-----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+   |                   **Before You Begin**                    |                                                                                                                                                                                                      Click **Next**.                                                                                                                                                                                                      |
+   |                    **Getting Started**                    |                                                                                                                                                                                                      Click **Next**.                                                                                                                                                                                                      |
+   |                      **Product Key**                      |                                                                                                                                          In **Enter your 25-character product key**, type ***product_key*** (where *product_key* is your product key for Configuration Manager).                                                                                                                                          |
+   |           **Microsoft Software License Terms**            |                                                                                                                                                                      Select the **I accept these license terms** check box, and then click **Next**.                                                                                                                                                                      |
+   |                 **Prerequisite Licenses**                 | 1.  In the **Microsoft SQL Server 2008 R2 Express** section, select the **I accept these License Terms** check box.<br />2.  In the **Microsoft SQL Server 2008 Native Client** section, select the **I accept these License Terms** check box.<br />3.  In the **Microsoft Silverlight 4** section, select the **I accept these License Terms and automatic updates of Silverlight** check box.<br />4.  Click **Next**. |
+   |            **Update Prerequisite Components**             |                                                                                                                                      In **Download and use the latest updates. Updates will be saved to the following location**, type **E:\CMDownloads**, and then click **Next**.                                                                                                                                       |
+   |               **Server Language Selection**               |                                                                                                                                                                                                      Click **Next**.                                                                                                                                                                                                      |
+   |               **Client Language Selection**               |                                                                                                                                                                                                      Click **Next**.                                                                                                                                                                                                      |
+   |            **Site and Installation Settings**             |                                                                                                                                                   1.  In **Site code**, type **NYC**.<br />2.  In **Site name**, type **New York City Site**.<br />3.  Click **Next**.                                                                                                                                                    |
+   |               **Primary Site Installation**               |                                                               1.  Click **Install the primary site as a stand-alone site**.<br />2.  Click **Next**.<br />     The **Configuration Manager** dialog box appears, confirming that you want to install this site as a stand-alone site.<br />3.  In the **Configuration Manager** dialog box, click **Yes**.                                                                |
+   |                 **Database Information**                  |                                                                                                                                                                                                      Click **Next**.                                                                                                                                                                                                      |
+   |                 **SMS Provider Settings**                 |                                                                                                                                                                                                      Click **Next**.                                                                                                                                                                                                      |
+   |        **Client Computer Communication Settings**         |                                                                                                                                                              Click **Configure the communication method on each site system role**, and then click **Next**.                                                                                                                                                              |
+   |                   **Site System Roles**                   |                                                                                                                                                                                                      Click **Next**.                                                                                                                                                                                                      |
+   | **Customer Experience Improvement Program Configuration** |                                                                                                                                          1.  Select the appropriate participation in the Customer Experience Improvement program for your organization.<br />2.  Click **Next**.                                                                                                                                          |
+   |                   **Settings Summary**                    |                                                                                                                                                                                                      Click **Next**.                                                                                                                                                                                                      |
+   |                  **Prerequisite Check**                   |                                                                                                                                                                                                 Click **Begin Install**.                                                                                                                                                                                                  |
+   |                        **Install**                        |                                                                                                                                                                   1.  Monitor the installation process until it is complete.<br />2.  Click **Close**.                                                                                                                                                                    |
 
- When the wizard is complete, Configuration Manager is installed.  
+
+4. Close all open windows and dialog boxes.  
+
+   When the wizard is complete, Configuration Manager is installed.  
 
 ###  <a name="ConfigureNetworkAccessAccount"></a> Step 1-12: Configure the Network Access Account  
  The Configuration Manager client needs an account to provide credentials when accessing the Configuration Manager distribution points, MDT deployment shares, and shared folders. This account is called the *Network Access account*. The CMNetAccess account was created earlier in the process to use as the Network Access account.  
 
 #### To configure the Network Access account  
-1.  Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
+1. Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
-2.  In the Configuration Manager console, in the navigation pane, click **Administration**.  
+2. In the Configuration Manager console, in the navigation pane, click **Administration**.  
 
-3.  In the Administration workspace, go to Overview/Site Configuration/Sites.  
+3. In the Administration workspace, go to Overview/Site Configuration/Sites.  
 
-4.  In the preview pane, click **NYC - New York City Site**.  
+4. In the preview pane, click **NYC - New York City Site**.  
 
-5.  On the Ribbon, click **Settings**, click **Configure Site Components**, and then click **Software Distribution**.  
+5. On the Ribbon, click **Settings**, click **Configure Site Components**, and then click **Software Distribution**.  
 
-6.  In the **Software Distribution Component Properties** dialog box, click the **Network Access Account** tab.  
+6. In the **Software Distribution Component Properties** dialog box, click the **Network Access Account** tab.  
 
-7.  In **Network Access Account**, click **Specify the account that accessed network locations**, click **Set**, and then click **New Account**.  
+7. In **Network Access Account**, click **Specify the account that accessed network locations**, click **Set**, and then click **New Account**.  
 
-     The **Windows User Account** dialog box appears.  
+    The **Windows User Account** dialog box appears.  
 
-8.  Complete the **Windows User Account** dialog box using the following information, and then click **OK**.    
+8. Complete the **Windows User Account** dialog box using the following information, and then click **OK**.    
 
- |**For this**|**Do this**|  
- |-|-|  
- |**User name**|Type **MDT2013\CMNetAccess**.|  
- |**Password**|Type **P@ssw0rd**.|  
- |**Confirm password**|Type **P@ssw0rd**.|  
+
+   |     **For this**     |           **Do this**           |
+   |----------------------|---------------------------------|
+   |    **User name**     |  Type **MDT2013\CMNetAccess**.  |
+   |     **Password**     | Type <strong>P@ssw0rd</strong>. |
+   | **Confirm password** | Type <strong>P@ssw0rd</strong>. |
+
 
 9. In the **Software Distribution Component Properties** dialog box, click **OK**.  
 
@@ -468,20 +476,20 @@ manager: angrobe
  The Configuration Manager client needs to know the boundaries for the site. Unless the site boundaries are specified, the client assumes that the computer running Configuration Manager is in a remote site. Add a site boundary based on the IP subnet that WDG-MDT-01, WDG-REF-01, and WDG-CLI-01 use. Then add the site boundary to a site boundary group.  
 
 #### To create a Configuration Manager site boundary
-1.  Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
+1. Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
-2.  In the Configuration Manager console, in the navigation pane, click **Administration**.  
+2. In the Configuration Manager console, in the navigation pane, click **Administration**.  
 
-3.  In the Administration workspace, go to Overview/Hierarchy Configuration/Boundaries.  
+3. In the Administration workspace, go to Overview/Hierarchy Configuration/Boundaries.  
 
-4.  On the Ribbon, click **Create Boundary**.  
+4. On the Ribbon, click **Create Boundary**.  
 
-     The **Create Boundary** dialog box opens.  
+    The **Create Boundary** dialog box opens.  
 
-5.  Complete the **Create Boundary** dialog box using the following information, and then click **OK**.  
+5. Complete the **Create Boundary** dialog box using the following information, and then click **OK**.  
 
-    > [!NOTE]   
-    >  For this sample, the site boundary is specified by network address. However, you can also specify site boundaries using an AD DS site name or an IP address range.  
+   > [!NOTE]   
+   >  For this sample, the site boundary is specified by network address. However, you can also specify site boundaries using an AD DS site name or an IP address range.  
 
    |**For this**|**Do this**|  
    |-|-|  
@@ -491,30 +499,34 @@ manager: angrobe
    |**Subnet mask**|Type ***subnet_mask*** (where *subnet_mask* is the subnet mask of the subnet where the computers are installed).|  
 
 #### To add the Configuration Manager site boundary to a site boundary group  
-1.  In the Configuration Manager console, in the navigation pane, click **Administration**.  
+1. In the Configuration Manager console, in the navigation pane, click **Administration**.  
 
-2.  In the Administration workspace, go to Overview/Hierarchy Configuration/Boundary Groups.  
+2. In the Administration workspace, go to Overview/Hierarchy Configuration/Boundary Groups.  
 
-3.  On the Ribbon, click **Create Boundary Group**.  
+3. On the Ribbon, click **Create Boundary Group**.  
 
-     The **Create Boundary Group** dialog box opens.  
+    The **Create Boundary Group** dialog box opens.  
 
-4.  Complete the **General** tab of the **Create Boundary Group** dialog box using the following information.
+4. Complete the **General** tab of the **Create Boundary Group** dialog box using the following information.
 
-  |**For this**|**Do this**|  
-  |-|-|  
-  |**Name**|Type **New York City Boundary Group**.|  
-  |**Description**|Type **This is the boundary group for the site boundaries at the New York City site**.|  
-  |Boundaries|1.  Click **Add**.<br />     The **Add Boundaries** dialog box appears.<br />2.  In the **Add Boundaries** dialog box, select ***site_boundary*** (where *site_boundary* is the site boundary you created earlier in the process), and then click **OK**.<br />     The site boundary appears in the list of boundaries.|  
 
-5.  Complete the **References** tab of the **Create Boundary Group** dialog box using the following information, and then click **OK**.  
+   |  **For this**   |                                                                                                                                                       **Do this**                                                                                                                                                        |
+   |-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+   |    **Name**     |                                                                                                                                          Type **New York City Boundary Group**.                                                                                                                                          |
+   | **Description** |                                                                                                                  Type **This is the boundary group for the site boundaries at the New York City site**.                                                                                                                  |
+   |   Boundaries    | 1.  Click **Add**.<br />     The **Add Boundaries** dialog box appears.<br />2.  In the **Add Boundaries** dialog box, select ***site_boundary*** (where *site_boundary* is the site boundary you created earlier in the process), and then click **OK**.<br />     The site boundary appears in the list of boundaries. |
 
-  |**For this**|**Do this**|  
-  |-|-|  
-  |**Site assignment**|Select the **Use this boundary group for site assignment** check box.|  
-  |**Content location**|1.  Click **Add**.<br />     The **Add Site Systems** dialog box appears.<br />2.  In the **Add Site Systems** dialog box, select **\\\WDG-MDT-01.mdt2013.corp.woodgrovebank.com**, and then click **OK**.<br />     The site system server appears in the list of site system servers.|  
 
-6.  Close any open windows.  
+5. Complete the **References** tab of the **Create Boundary Group** dialog box using the following information, and then click **OK**.  
+
+
+   |     **For this**     |                                                                                                                                       **Do this**                                                                                                                                       |
+   |----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+   | **Site assignment**  |                                                                                                          Select the **Use this boundary group for site assignment** check box.                                                                                                          |
+   | **Content location** | 1.  Click **Add**.<br />     The **Add Site Systems** dialog box appears.<br />2.  In the **Add Site Systems** dialog box, select **\\\WDG-MDT-01.mdt2013.corp.woodgrovebank.com**, and then click **OK**.<br />     The site system server appears in the list of site system servers. |
+
+
+6. Close any open windows.  
 
 ###  <a name="ConfigurePublishingSiteInfo"></a> Step 1-14: Configure the Publishing of Site Information in AD DS and DNS  
  The Configuration Manager client needs to locate the various Configuration Manager server roles. Modify the site properties to publish the site information in AD DS and in DNS.  
@@ -547,24 +559,24 @@ manager: angrobe
 ###  <a name="InstallMDT"></a> Step 2-1: Install MDT  
  To install MDT, complete the following steps:  
 
-1.  In Windows Explorer, go to E:\Source$\MDT_2013.  
+1. In Windows Explorer, go to E:\Source$\MDT_2013.  
 
-2.  Double-click **MicrosoftDeploymentToolkit2013_x64.msi** (for 64-bit operating systems) or **MicrosoftDeploymentToolkit2013_x86.msi** (for 32-bit operating systems), and then click **Install**.  
+2. Double-click **MicrosoftDeploymentToolkit2013_x64.msi** (for 64-bit operating systems) or **MicrosoftDeploymentToolkit2013_x86.msi** (for 32-bit operating systems), and then click **Install**.  
 
-     The Microsoft Deployment Toolkit 2013 Setup Wizard starts.  
+    The Microsoft Deployment Toolkit 2013 Setup Wizard starts.  
 
-3.  Complete the Microsoft Deployment Toolkit 2013 Setup Wizard using the information in  the following table.  Accept the default values unless otherwise specified.  
+3. Complete the Microsoft Deployment Toolkit 2013 Setup Wizard using the information in  the following table.  Accept the default values unless otherwise specified.  
 
-  |**On this wizard page**|**Do this**|  
-  |-|-|  
-  |**Welcome to the Microsoft Deployment Toolkit 2013 Setup Wizard**|Click **Next**.|  
-  |**End-User License Agreement**|Click **I accept the terms in the License Agreement**, and then click **Next**.|  
-  |**Custom Setup**|Click **Next**.|  
-  |**Ready to install Microsoft Deployment Toolkit 2013**|Click **Install**.|  
-  |**Installing Microsoft Deployment Toolkit 2013**|The progress for installing MDT is displayed.|  
-  |**Completing the Microsoft Deployment Toolkit 2013 Setup Wizard**|Click **Finish**.|  
+   |**On this wizard page**|**Do this**|  
+   |-|-|  
+   |**Welcome to the Microsoft Deployment Toolkit 2013 Setup Wizard**|Click **Next**.|  
+   |**End-User License Agreement**|Click **I accept the terms in the License Agreement**, and then click **Next**.|  
+   |**Custom Setup**|Click **Next**.|  
+   |**Ready to install Microsoft Deployment Toolkit 2013**|Click **Install**.|  
+   |**Installing Microsoft Deployment Toolkit 2013**|The progress for installing MDT is displayed.|  
+   |**Completing the Microsoft Deployment Toolkit 2013 Setup Wizard**|Click **Finish**.|  
 
- The Microsoft Deployment Toolkit 2013 Setup Wizard finishes, and MDT is installed on WDG-MDT-01.  
+   The Microsoft Deployment Toolkit 2013 Setup Wizard finishes, and MDT is installed on WDG-MDT-01.  
 
 ###  <a name="EnableConfigManagerConsole"></a> Step 2-2: Enable Configuration Manager Console Integration  
  Before you can use the Configuration Manager integration features of MDT, run the Configure ConfigMgr Integration script. This script copies the appropriate integration files to the folder in which Configuration Manager is installed. The script also adds Windows Management Instrumentation (WMI) classes for the new MDT custom actions. The classes are added by compiling a new Managed Object Format (.mof) file that contains the new class definitions.  
@@ -574,18 +586,18 @@ manager: angrobe
 > [!NOTE]   
 >  Ensure that the Configuration Manager console is closed while performing these steps.  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Configure ConfigMgr Integration**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Configure ConfigMgr Integration**.  
 
-     The Configure ConfigMgr Integration Wizard starts.  
+    The Configure ConfigMgr Integration Wizard starts.  
 
-2.  Complete the Configure ConfigMgr Integration Wizard using the information in the following table. Accept the default values unless otherwise specified.  
+2. Complete the Configure ConfigMgr Integration Wizard using the information in the following table. Accept the default values unless otherwise specified.  
 
-  |**On this wizard page**|**Do this**|  
-  |-|-|  
-  |**Options**|1.  Verify that the **Install the MDT console extensions for System Center 2012 R2 Configuration Manager** check box is selected.<br />2.  Verify that the **Add the MDT task sequence actions to a System Center 2012 R2 Configuration Manager server** check box is selected.<br />3.  In **Site server name**, verify that the value is **WDG-MDT-01.mdt2013.corp.woodgrovebank.com**.<br />4.  In **Site code**, verify that the value is **NYC**.<br />5.  Click **Next**.|  
-  |**Confirmation**|Click **Finish**.|  
+   |**On this wizard page**|**Do this**|  
+   |-|-|  
+   |**Options**|1.  Verify that the **Install the MDT console extensions for System Center 2012 R2 Configuration Manager** check box is selected.<br />2.  Verify that the **Add the MDT task sequence actions to a System Center 2012 R2 Configuration Manager server** check box is selected.<br />3.  In **Site server name**, verify that the value is **WDG-MDT-01.mdt2013.corp.woodgrovebank.com**.<br />4.  In **Site code**, verify that the value is **NYC**.<br />5.  Click **Next**.|  
+   |**Confirmation**|Click **Finish**.|  
 
- The Configure ConfigMgr Integration Wizard finishes, and MDT is integrated with Configuration Manager.  
+   The Configure ConfigMgr Integration Wizard finishes, and MDT is integrated with Configuration Manager.  
 
 ## Step 3: Create and Configure a Task Sequence to Create a Reference Computer  
  When you have prepared the MDT environment, create the reference computer. The reference computer is the template for deploying new images to the target computers. Configure this computer (WDG-REF-01) exactly as you will configure the target computers. You will then capture an image of the reference computer and deploy the image to the target computers.  
@@ -616,43 +628,44 @@ manager: angrobe
 
 #### To create a task sequence for deploying the reference computer  
 
-1.  Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
+1. Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
-2.  In the Configuration Manager console, in the navigation pane, click **Software Library**.  
+2. In the Configuration Manager console, in the navigation pane, click **Software Library**.  
 
-3.  In the Software Library workspace, go to Overview/Operating Systems/Task Sequences.  
+3. In the Software Library workspace, go to Overview/Operating Systems/Task Sequences.  
 
-4.  On the Ribbon, on the **Home** tab, in the **Task Sequences** group, click **Create MDT Task Sequence**.  
+4. On the Ribbon, on the **Home** tab, in the **Task Sequences** group, click **Create MDT Task Sequence**.  
 
-     The Create MDT Task Sequence Wizard starts.  
+    The Create MDT Task Sequence Wizard starts.  
 
-5.  Complete the Create MDT Task Sequence Wizard using the information in the following table. Accept the default values unless otherwise specified.  
+5. Complete the Create MDT Task Sequence Wizard using the information in the following table. Accept the default values unless otherwise specified.  
 
-  |**On this wizard page**|**Do this**|  
-  |-|-|  
-  |**Choose Template**|Select **Client Task Sequence**, and then click **Next**.|  
-  |**Choose Template: General**|1.  In **Task sequence name**, type **Windows 8.1 Reference Deployment**.<br />2.  In **Task sequence comments**, type **Task sequence for deploying Windows 8.1 to the reference computer (WDG-REF-01)**, and then click **Next**.|  
-  |**Choose Template: Details**|1.  Click **Join a workgroup**.<br />2.  In **Workgroup**, type **WORKGROUP**.<br />3.  In **User name**, type **Woodgrove Bank Employee**.<br />4.  In **Organization name**, type **Woodgrove Bank**.<br />5.  In **Product key**, type ***product_key*** (where *product_key* is the product key for Windows 8.1).<br />6.  Click **Next**.|  
-  |**Choose Template: Capture Settings**|<ol><li>Click **This task sequence may be used to capture and image**.</li><li>In **Capture destination**, type **\\\WDG-MDT-01\Capture$\WDG-REF-01.wim**.</li><li>In **Capture account**, click **Set**.</li><li>Complete the **Windows User Account** dialog box by performing the following steps:<br /><br /> <ol><li>In **User name**, type **MDT2013\Administrator**.</li><li>In **Password** and **Confirm password**, type **P@ssw0rd**.</li></ol></li><li>Click **OK**.</li><li>Click **Next**.</li></ol>|  
-  |**Boot Image**|1.  Click **Create a new boot image package**.<br />2.  In **Package source folder to be created**, type **\\\WDG-MDT-01\Packages$\WINPE_Custom**, and then click **Next**.|  
-  |**Boot Image: General Settings**|1.  In **Name**, type **Windows PE Custom**.<br />2.  In **Version**, type **1.00**.<br />3.  In **Comments**, type **Customized version of Windows PE to be used in deployment of reference and target computers**, and then click **Next**.|  
-  |**Boot Image: Options**|Under **Platform**, click **x64**, and then click **Next**.|  
-  |**Boot Image: Components**|Click **Next**.|  
-  |**Boot Image: Customization**|Click **Next**.|  
-  |**MDT Package**|1.  Click **Create a new Microsoft Deployment Toolkit Files package**.<br />2.  In **Package source folder to be created**, type **\\\WDG-MDT-01\Packages$\MDT_Files**, and then click **Next**.|  
-  |**MDT Package: MDT Details**|1.  In **Name**, type **MDT Files**.<br />2.  In **Version**, type **1.00**.<br />3.  In **Comments**, type **Provides access to MDT files during Configuration Manager deployment process**, and then click **Next**.|  
-  |**OS Image**|1.  Click **Create a new OS install package**.<br />2.  In **OS installation folder location**, type **\\\WDG-MDT-01\Source$\Windows_7**.<br />3.  In **Package source folder to be created**, type **\\\WDG-MDT-01\Packages$\Windows_7**, and then click **Next**.|  
-  |**OS Image: Image Details**|1.  In **Name**, type **Windows 8.1**.<br />2.  In **Version**, type **1.00**.<br />3.  In **Comments**, type **Windows 8.1 package used to deploy to reference computers**, and then click **Next**.|  
-  |**Deployment Method**|Click **Next**.|  
-  |**Client Package**|Click **Create a new ConfigMgr client package**, and then click **Next**.|  
-  |**USMT Package**|1.  Click **Create a new USMT package**.<br />2.  In **Package source folder to be created**, type **\\\WDG-MDT-01\Packages$\USMT**, and then click **Next**.|  
-  |**USMT Package: USMT Details**|1.  In **Name**, type **USMT**.<br />2.  In **Version**, type **1.00**.<br />3.  In **Comments**, type **USMT files used to capture and restore user state migration information**, and then click **Next**.|  
-  |**Settings Package**|1.  Click **Create a new settings package**.<br />2.  In **Package source folder to be created**, type **\\\WDG-MDT-01\Packages$\CustomSettings_Reference**, and then click **Next**.|  
-  |**Settings Package: Settings Details**|1.  In **Name**, type **MDT Reference Computer Custom Settings**.<br />2.  In **Version**, type **1.00**.<br />3.  In **Comments**, type **Configuration settings for MDT deployment process (such as CustomSettings.ini) for the reference computer**, and then click **Next**.|  
-  |**Sysprep Package**|Click **Next**.|  
-  |**Summary**|1.  Review the information in the **Details** box that you provided while completing the previous wizard pages.<br />2.  Click **Next**.|  
-  |**Progress**|The progress for creating the task sequence is displayed.|  
-  |**Confirmation**|Click **Finish**.|  
+
+   |        **On this wizard page**         |                                                                                                                                                                                                                                                                                                                                         **Do this**                                                                                                                                                                                                                                                                                                                                         |
+   |----------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+   |          **Choose Template**           |                                                                                                                                                                                                                                                                                                                  Select **Client Task Sequence**, and then click **Next**.                                                                                                                                                                                                                                                                                                                  |
+   |      **Choose Template: General**      |                                                                                                                                                                                                                             1.  In **Task sequence name**, type **Windows 8.1 Reference Deployment**.<br />2.  In **Task sequence comments**, type **Task sequence for deploying Windows 8.1 to the reference computer (WDG-REF-01)**, and then click **Next**.                                                                                                                                                                                                                             |
+   |      **Choose Template: Details**      |                                                                                                                                                                       1.  Click **Join a workgroup**.<br />2.  In **Workgroup**, type **WORKGROUP**.<br />3.  In **User name**, type **Woodgrove Bank Employee**.<br />4.  In **Organization name**, type **Woodgrove Bank**.<br />5.  In **Product key**, type ***product_key*** (where *product_key* is the product key for Windows 8.1).<br />6.  Click **Next**.                                                                                                                                                                        |
+   | **Choose Template: Capture Settings**  | <ol><li>Click <strong>This task sequence may be used to capture and image</strong>.</li><li>In <strong>Capture destination</strong>, type <strong>\\\WDG-MDT-01\Capture$\WDG-REF-01.wim</strong>.</li><li>In <strong>Capture account</strong>, click <strong>Set</strong>.</li><li>Complete the <strong>Windows User Account</strong> dialog box by performing the following steps:<br /><br /> <ol><li>In <strong>User name</strong>, type <strong>MDT2013\Administrator</strong>.</li><li>In <strong>Password</strong> and <strong>Confirm password</strong>, type <strong>P@ssw0rd</strong>.</li></ol></li><li>Click <strong>OK</strong>.</li><li>Click <strong>Next</strong>.</li></ol> |
+   |             **Boot Image**             |                                                                                                                                                                                                                                                         1.  Click **Create a new boot image package**.<br />2.  In **Package source folder to be created**, type **\\\WDG-MDT-01\Packages$\WINPE_Custom**, and then click **Next**.                                                                                                                                                                                                                                                         |
+   |    **Boot Image: General Settings**    |                                                                                                                                                                                                                        1.  In **Name**, type **Windows PE Custom**.<br />2.  In **Version**, type **1.00**.<br />3.  In **Comments**, type **Customized version of Windows PE to be used in deployment of reference and target computers**, and then click **Next**.                                                                                                                                                                                                                        |
+   |        **Boot Image: Options**         |                                                                                                                                                                                                                                                                                                                 Under **Platform**, click **x64**, and then click **Next**.                                                                                                                                                                                                                                                                                                                 |
+   |       **Boot Image: Components**       |                                                                                                                                                                                                                                                                                                                                       Click **Next**.                                                                                                                                                                                                                                                                                                                                       |
+   |     **Boot Image: Customization**      |                                                                                                                                                                                                                                                                                                                                       Click **Next**.                                                                                                                                                                                                                                                                                                                                       |
+   |            **MDT Package**             |                                                                                                                                                                                                                                              1.  Click **Create a new Microsoft Deployment Toolkit Files package**.<br />2.  In **Package source folder to be created**, type **\\\WDG-MDT-01\Packages$\MDT_Files**, and then click **Next**.                                                                                                                                                                                                                                               |
+   |      **MDT Package: MDT Details**      |                                                                                                                                                                                                                                   1.  In **Name**, type **MDT Files**.<br />2.  In **Version**, type **1.00**.<br />3.  In **Comments**, type **Provides access to MDT files during Configuration Manager deployment process**, and then click **Next**.                                                                                                                                                                                                                                    |
+   |              **OS Image**              |                                                                                                                                                                                                             1.  Click **Create a new OS install package**.<br />2.  In **OS installation folder location**, type **\\\WDG-MDT-01\Source$\Windows_7**.<br />3.  In **Package source folder to be created**, type **\\\WDG-MDT-01\Packages$\Windows_7**, and then click **Next**.                                                                                                                                                                                                             |
+   |      **OS Image: Image Details**       |                                                                                                                                                                                                                                            1.  In **Name**, type **Windows 8.1**.<br />2.  In **Version**, type **1.00**.<br />3.  In **Comments**, type **Windows 8.1 package used to deploy to reference computers**, and then click **Next**.                                                                                                                                                                                                                                            |
+   |         **Deployment Method**          |                                                                                                                                                                                                                                                                                                                                       Click **Next**.                                                                                                                                                                                                                                                                                                                                       |
+   |           **Client Package**           |                                                                                                                                                                                                                                                                                                          Click **Create a new ConfigMgr client package**, and then click **Next**.                                                                                                                                                                                                                                                                                                          |
+   |            **USMT Package**            |                                                                                                                                                                                                                                                                1.  Click **Create a new USMT package**.<br />2.  In **Package source folder to be created**, type **\\\WDG-MDT-01\Packages$\USMT**, and then click **Next**.                                                                                                                                                                                                                                                                |
+   |     **USMT Package: USMT Details**     |                                                                                                                                                                                                                                        1.  In **Name**, type **USMT**.<br />2.  In **Version**, type **1.00**.<br />3.  In **Comments**, type **USMT files used to capture and restore user state migration information**, and then click **Next**.                                                                                                                                                                                                                                         |
+   |          **Settings Package**          |                                                                                                                                                                                                                                                    1.  Click **Create a new settings package**.<br />2.  In **Package source folder to be created**, type **\\\WDG-MDT-01\Packages$\CustomSettings_Reference**, and then click **Next**.                                                                                                                                                                                                                                                    |
+   | **Settings Package: Settings Details** |                                                                                                                                                                                                      1.  In **Name**, type **MDT Reference Computer Custom Settings**.<br />2.  In **Version**, type **1.00**.<br />3.  In **Comments**, type **Configuration settings for MDT deployment process (such as CustomSettings.ini) for the reference computer**, and then click **Next**.                                                                                                                                                                                                       |
+   |          **Sysprep Package**           |                                                                                                                                                                                                                                                                                                                                       Click **Next**.                                                                                                                                                                                                                                                                                                                                       |
+   |              **Summary**               |                                                                                                                                                                                                                                                                          1.  Review the information in the **Details** box that you provided while completing the previous wizard pages.<br />2.  Click **Next**.                                                                                                                                                                                                                                                                           |
+   |              **Progress**              |                                                                                                                                                                                                                                                                                                                  The progress for creating the task sequence is displayed.                                                                                                                                                                                                                                                                                                                  |
+   |            **Confirmation**            |                                                                                                                                                                                                                                                                                                                                      Click **Finish**.                                                                                                                                                                                                                                                                                                                                      |
 
    The new task sequence appears in the preview pane.  
 
@@ -663,30 +676,32 @@ manager: angrobe
 >  In this sample, there is only one distribution point (WDG-MDT-01). However, most production networks have multiple distribution points. When performing this step in a production environment, select the appropriate distribution points for the network.  
 
 #### To select the distribution points for software distribution packages  
-1.  Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
+1. Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
-2.  In the Configuration Manager console, in the navigation pane, click **Software Library**.  
+2. In the Configuration Manager console, in the navigation pane, click **Software Library**.  
 
-3.  In the Software Library workspace, go to Overview/Operating Systems/Task Sequences.  
+3. In the Software Library workspace, go to Overview/Operating Systems/Task Sequences.  
 
-4.  In the preview pane, select **Windows 8.1 Reference Deployment**.  
+4. In the preview pane, select **Windows 8.1 Reference Deployment**.  
 
-5.  On the Ribbon, on the **Home** tab, in the **Deployment** group, click **Distribute Content**.  
+5. On the Ribbon, on the **Home** tab, in the **Deployment** group, click **Distribute Content**.  
 
-     The Distribute Content Wizard starts.  
+    The Distribute Content Wizard starts.  
 
-6.  Complete the Distribute Content Wizard using the information in the following table. Accept default values unless otherwise specified.  
+6. Complete the Distribute Content Wizard using the information in the following table. Accept default values unless otherwise specified.  
 
-  |**On this wizard page**|**Do this**|  
-  |-|-|  
-  |**General**|Click **Next**.|  
-  |**General: Content**|Click **Next**.|  
-  |**General: Content Destination**|1.  Click **Add**, and then click **Distribution Point**.<br />     The **Add Distribution Points** dialog box appears.<br />2.  In the **Add Distribution Points** dialog box, select **WDG-MDT-01.mdt2013.corp.woodgrovebank.com**, and then click **OK**.<br />     WDG-MDT-01.corp.woodgrovebank.com appears in the **Content destination** list.<br />3.  Click **Next**.|  
-  |**Summary**|1.  Review the information in the **Details** box that you provided while completing the previous wizard pages.<br />2.  Click **Next**.|  
-  |**Progress**|The progress for distributing the software is displayed.|  
-  |**Completion**|Click **Close**.|  
 
-7.  Close all open windows and dialog boxes.  
+   |     **On this wizard page**      |                                                                                                                                                                                  **Do this**                                                                                                                                                                                   |
+   |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+   |           **General**            |                                                                                                                                                                                Click **Next**.                                                                                                                                                                                 |
+   |       **General: Content**       |                                                                                                                                                                                Click **Next**.                                                                                                                                                                                 |
+   | **General: Content Destination** | 1.  Click **Add**, and then click **Distribution Point**.<br />     The **Add Distribution Points** dialog box appears.<br />2.  In the **Add Distribution Points** dialog box, select **WDG-MDT-01.mdt2013.corp.woodgrovebank.com**, and then click **OK**.<br />     WDG-MDT-01.corp.woodgrovebank.com appears in the **Content destination** list.<br />3.  Click **Next**. |
+   |           **Summary**            |                                                                                                                    1.  Review the information in the **Details** box that you provided while completing the previous wizard pages.<br />2.  Click **Next**.                                                                                                                    |
+   |           **Progress**           |                                                                                                                                                            The progress for distributing the software is displayed.                                                                                                                                                            |
+   |          **Completion**          |                                                                                                                                                                                Click **Close**.                                                                                                                                                                                |
+
+
+7. Close all open windows and dialog boxes.  
 
 ###  <a name="AddDeviceDrivers"></a> Step 3-3: Add the Necessary Device Drivers  
  When the MDT task sequence has been created, add any device drivers required for the reference computer (WDG-REF-01) to the Windows PE boot image and to the Windows 8.1 image. Add the device drivers in the Drivers node in the Configuration Manager console. Create a package that contains the device drivers, and inject the drivers into the custom Windows PE image created earlier in the process.  
@@ -694,68 +709,70 @@ manager: angrobe
  After creating the package that contains the device drivers, select the distribution point to which the package will be deployed.  
 
 #### To add the necessary device drivers
-1.  Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
+1. Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
-2.  In the Configuration Manager console, in the navigation pane, click **Software Library**.  
+2. In the Configuration Manager console, in the navigation pane, click **Software Library**.  
 
-3.  In the Software Library workspace, go to Overview/Operating Systems/Drivers.  
+3. In the Software Library workspace, go to Overview/Operating Systems/Drivers.  
 
-4.  On the Ribbon, on the **Home** tab, in the **Create** group, click **Import Driver**.  
+4. On the Ribbon, on the **Home** tab, in the **Create** group, click **Import Driver**.  
 
-     The Import New Driver Wizard starts.  
+    The Import New Driver Wizard starts.  
 
-5.  Complete the Import New Driver Wizard using the information in the following table.  Accept the default values unless otherwise specified.  
+5. Complete the Import New Driver Wizard using the information in the following table.  Accept the default values unless otherwise specified.  
 
-  |**On this wizard page**|**Do this**|  
-  |-|-|  
-  |**Locate Driver**|In **Source folder**, type **\\\WDG-MDT-01\Source$\Drivers**, and then click **Next**.|  
-  |**Locate Driver: Driver Details**|Click **Next**.|  
-  |**Locate Driver: Add Driver to Package**|<ol><li>Click **New Package**.</li><li>Complete the **New Driver Package** dialog box by performing the following steps:<br /><br /> <ol><li>In **Name**, type ***device_driver_name*** Package (where *device_driver_name* is a descriptive name for the device drivers).</li><li>In **Comment**, type **Device drivers that are necessary for the reference and target computers**.</li></ol></li><li>In **Driver package source**, type **\\\WDG-MDT-01\Packages$\Drivers**, and then click **OK**.</li><li>Click **Next**.</li></ol>|  
-  |**Locate Driver: Add Driver to Boot Images**|1.  In the list of images, select the **Windows PE Custom** check box.<br />2.  Select the **Update distribution points when finished** check box, and then click **Next**.|  
-  |**Summary**|1.  Review the information in the **Details** box that you provided while completing the previous wizard pages.<br />2.  Click **Next**.|  
-  |**Progress**|The progress for importing the device drivers is displayed.|  
-  |**Confirmation**|Click **Close**.|  
+   |**On this wizard page**|**Do this**|  
+   |-|-|  
+   |**Locate Driver**|In **Source folder**, type **\\\WDG-MDT-01\Source$\Drivers**, and then click **Next**.|  
+   |**Locate Driver: Driver Details**|Click **Next**.|  
+   |**Locate Driver: Add Driver to Package**|<ol><li>Click **New Package**.</li><li>Complete the **New Driver Package** dialog box by performing the following steps:<br /><br /> <ol><li>In **Name**, type ***device_driver_name*** Package (where *device_driver_name* is a descriptive name for the device drivers).</li><li>In **Comment**, type **Device drivers that are necessary for the reference and target computers**.</li></ol></li><li>In **Driver package source**, type **\\\WDG-MDT-01\Packages$\Drivers**, and then click **OK**.</li><li>Click **Next**.</li></ol>|  
+   |**Locate Driver: Add Driver to Boot Images**|1.  In the list of images, select the **Windows PE Custom** check box.<br />2.  Select the **Update distribution points when finished** check box, and then click **Next**.|  
+   |**Summary**|1.  Review the information in the **Details** box that you provided while completing the previous wizard pages.<br />2.  Click **Next**.|  
+   |**Progress**|The progress for importing the device drivers is displayed.|  
+   |**Confirmation**|Click **Close**.|  
 
 #### To select the distribution points for the driver package
-1.  Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
+1. Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
-2.  In the Configuration Manager console, in the navigation pane, click **Software Library**.  
+2. In the Configuration Manager console, in the navigation pane, click **Software Library**.  
 
-3.  In the Software Library workspace, go to Overview/Operating Systems/Driver Packages.  
+3. In the Software Library workspace, go to Overview/Operating Systems/Driver Packages.  
 
-4.  In the preview pane, click ***device_driver_name*** **Package** (where *device_driver_name* is a descriptive name for the device drivers).  
+4. In the preview pane, click ***device_driver_name*** **Package** (where *device_driver_name* is a descriptive name for the device drivers).  
 
-5.  On the Ribbon, on the **Home** tab, in the **Deployment** group, click **Distribute Content**.  
+5. On the Ribbon, on the **Home** tab, in the **Deployment** group, click **Distribute Content**.  
 
-     The Distribute Content Wizard starts.  
+    The Distribute Content Wizard starts.  
 
-6.  Complete the Distribute Content Wizard using the following information. Accept the default values unless otherwise specified.  
+6. Complete the Distribute Content Wizard using the following information. Accept the default values unless otherwise specified.  
 
-  |**On this wizard page**|**Do this**|  
-  |-|-|  
-  |**General**|Click **Next**.|  
-  |**General: Content**|Click **Next**.|  
-  |**General: Content Destination**|1.  Click **Add**, and then click **Distribution Point**.<br />     The **Add Distribution Points** dialog box appears.<br />2.  In the **Add Distribution Points** dialog box, select **\\\WDG-MDT-01.mdt2013.corp.woodgrovebank.com**, and then click **OK**.<br />     \\\WDGMDT01.mdt2013.corp.woodgrovebank.com appears in the **Content destination** list.<br />3.  Click **Next**.|  
-  |**Summary**|1.  Review the information in the **Details** box  that you provided while completing the previous wizard pages.<br />2.  Click **Next**.|  
-  |**Progress**|The progress for distributing the software is displayed.|  
-  |**Completion**|Click **Close**.|  
 
-7.  Close all open windows and dialog boxes.  
+   |     **On this wizard page**      |                                                                                                                                                                                        **Do this**                                                                                                                                                                                         |
+   |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+   |           **General**            |                                                                                                                                                                                      Click **Next**.                                                                                                                                                                                       |
+   |       **General: Content**       |                                                                                                                                                                                      Click **Next**.                                                                                                                                                                                       |
+   | **General: Content Destination** | 1.  Click **Add**, and then click **Distribution Point**.<br />     The **Add Distribution Points** dialog box appears.<br />2.  In the **Add Distribution Points** dialog box, select **\\\WDG-MDT-01.mdt2013.corp.woodgrovebank.com**, and then click **OK**.<br />     \\\WDGMDT01.mdt2013.corp.woodgrovebank.com appears in the **Content destination** list.<br />3.  Click **Next**. |
+   |           **Summary**            |                                                                                                                         1.  Review the information in the **Details** box  that you provided while completing the previous wizard pages.<br />2.  Click **Next**.                                                                                                                          |
+   |           **Progress**           |                                                                                                                                                                  The progress for distributing the software is displayed.                                                                                                                                                                  |
+   |          **Completion**          |                                                                                                                                                                                      Click **Close**.                                                                                                                                                                                      |
+
+
+7. Close all open windows and dialog boxes.  
 
 ###  <a name="EnableMDTDeployProcess"></a> Step 3-4: Enable MDT Deployment Process Monitoring  
  Prior to deploying the reference computer (WDG-REF-01) with the task sequence bootable media, enable MDT monitoring of the ZTI deployment process. You enable monitoring on the **Monitoring** tab on the deployment share **Properties** dialog box. Later in the process, you will monitor the ZTI deployment process using the Deployment Workbench or the **Get-MDTMonitorData** cmdlet.  
 
  **To enable MDT monitoring of the ZTI deployment process**  
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.  
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares.  
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares.  
 
-3.  In the Actions pane, click **New Deployment Shares**.  
+3. In the Actions pane, click **New Deployment Shares**.  
 
-     The New Deployment Share Wizard starts.  
+    The New Deployment Share Wizard starts.  
 
-4.  Complete the New Deployment Share Wizard using the following information
+4. Complete the New Deployment Share Wizard using the following information
 
    |**On this wizard page**|**Do this**|  
    |-|-|  
@@ -768,24 +785,24 @@ manager: angrobe
    |**Progress**|The progress for creating the deployment share is displayed.|  
    |**Confirmation**|Click **Finish**.|  
 
-  The New Deployment Share Wizard finishes, and the new deployment share—MDT Deployment Share (C:\DeploymentShare$)—appears in the details pane.  
+   The New Deployment Share Wizard finishes, and the new deployment share—MDT Deployment Share (C:\DeploymentShare$)—appears in the details pane.  
 
 
-5.  In the details pane, click **MDT Deployment Share (C:\DeploymentShare$)**.  
+5. In the details pane, click **MDT Deployment Share (C:\DeploymentShare$)**.  
 
-6.  In the Actions pane, click **Properties**.  
+6. In the Actions pane, click **Properties**.  
 
-     The **MDT Deployment Share (C:\DeploymentShare$) Properties** dialog box opens.  
+    The **MDT Deployment Share (C:\DeploymentShare$) Properties** dialog box opens.  
 
-7.  In the **MDT Deployment Share (C:\DeploymentShare$) Properties** dialog box, on the **Monitoring** tab, select the **Enable monitoring for this deployment share** check box, and then click **Apply**.  
+7. In the **MDT Deployment Share (C:\DeploymentShare$) Properties** dialog box, on the **Monitoring** tab, select the **Enable monitoring for this deployment share** check box, and then click **Apply**.  
 
-8.  In the **MDT Deployment Share (C:\DeploymentShare$) Properties** dialog box, on the **Rules** tab, notice that the **EventService** property has been added to the CustomSettings.ini file, and then click **OK**.  
+8. In the **MDT Deployment Share (C:\DeploymentShare$) Properties** dialog box, on the **Rules** tab, notice that the **EventService** property has been added to the CustomSettings.ini file, and then click **OK**.  
 
-  The **EventService** property is as follows:  
+   The **EventService** property is as follows:  
 
-    ```  
-    EventService=http://WDG-MDT-01:9800  
-    ```  
+   ```  
+   EventService=http://WDG-MDT-01:9800  
+   ```  
 
 9. Close all open windows and dialog boxes.  
 
@@ -828,46 +845,46 @@ manager: angrobe
 
  **To update the distribution points for the Custom Settings package**  
 
-1.  Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
+1. Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
-2.  In the Configuration Manager console, in the navigation pane, click **Software Library**.  
+2. In the Configuration Manager console, in the navigation pane, click **Software Library**.  
 
-3.  In the Software Library workspace, go to Overview/Application Management/Packages.  
+3. In the Software Library workspace, go to Overview/Application Management/Packages.  
 
-4.  In the preview pane, click **MDT Reference Computer Custom Settings**.  
+4. In the preview pane, click **MDT Reference Computer Custom Settings**.  
 
-5.  On the Ribbon, on the **Home** tab, in the **Deployment** group, click **Update Distribution Points**.  
+5. On the Ribbon, on the **Home** tab, in the **Deployment** group, click **Update Distribution Points**.  
 
-     The **Configuration Manager** dialog box opens, notifying you that you are going to update the package on all distribution points.  
+    The **Configuration Manager** dialog box opens, notifying you that you are going to update the package on all distribution points.  
 
-6.  In the **Configuration Manager** dialog box, click **OK**.  
+6. In the **Configuration Manager** dialog box, click **OK**.  
 
-7.  Close all open windows and dialog boxes.  
+7. Close all open windows and dialog boxes.  
 
- Configuration Manager starts updating the distribution points with the latest versions of the CustomSettings.ini file. This process could take several minutes. Check the status of the package until the **Last Update** value of the package status has been updated to a recent date and time.  
+   Configuration Manager starts updating the distribution points with the latest versions of the CustomSettings.ini file. This process could take several minutes. Check the status of the package until the **Last Update** value of the package status has been updated to a recent date and time.  
 
 ###  <a name="CustomizeTaskSequence"></a> Step 3-7: Customize the Task Sequence for the Reference Computer  
  For most deployments, the **Windows 8.1 Reference Deployment** task sequence created earlier in the process performs all the necessary steps without modification. In this sample, modify the task sequence to set the password for the local Administrator account to a known value. By default, the task sequence sets the password for the local Administrator account to a random value. Further customization of the task sequence may be required depending on the environment.  
 
  **To customize the Windows 8.1 Reference Deployment task sequence**  
 
-1.  Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
+1. Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
-2.  In the Configuration Manager console, in the navigation pane, click **Software Library**.  
+2. In the Configuration Manager console, in the navigation pane, click **Software Library**.  
 
-3.  In the Software Library workspace, go to Overview/Operating Systems/Task Sequences.  
+3. In the Software Library workspace, go to Overview/Operating Systems/Task Sequences.  
 
-4.  In the preview pane, click **Windows 8.1 Reference Deployment**.  
+4. In the preview pane, click **Windows 8.1 Reference Deployment**.  
 
-5.  On the Ribbon, on the **Home** tab, in the **Task Sequence** group, click **Edit**.  
+5. On the Ribbon, on the **Home** tab, in the **Task Sequence** group, click **Edit**.  
 
-     The **Windows 8.1 Reference Deployment Task Sequence Editor** dialog box opens.  
+    The **Windows 8.1 Reference Deployment Task Sequence Editor** dialog box opens.  
 
-6.  In the **Windows 8.1 Reference Deployment Task Sequence Editor** dialog box, go to PostInstall/Apply Windows Settings.  
+6. In the **Windows 8.1 Reference Deployment Task Sequence Editor** dialog box, go to PostInstall/Apply Windows Settings.  
 
-7.  On the **Properties** tab, click **Enable the account and specify the local administrator password**.  
+7. On the **Properties** tab, click **Enable the account and specify the local administrator password**.  
 
-8.  On the **Properties** tab, in **Password** and **Confirm Password**, type **P@ssw0rd**, and then click **Apply**.  
+8. On the **Properties** tab, in **Password** and **Confirm Password**, type <strong>P@ssw0rd</strong>, and then click **Apply**.  
 
 9. Make any additional modifications to the task sequence that the environment requires, and then click **OK**.  
 
@@ -893,123 +910,124 @@ manager: angrobe
 
 #### To add the reference computer to the Configuration Manager site database  
 
-1.  Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
+1. Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
-2.  In the Configuration Manager console, in the navigation pane, click **Assets and Compliance**.  
+2. In the Configuration Manager console, in the navigation pane, click **Assets and Compliance**.  
 
-3.  In the Assets and Compliance workspace, go to Overview/Devices.  
+3. In the Assets and Compliance workspace, go to Overview/Devices.  
 
-4.  On the Ribbon, on the **Home** tab, in the **Create** group, click **Import Computer Information**.  
+4. On the Ribbon, on the **Home** tab, in the **Create** group, click **Import Computer Information**.  
 
-     The Import Computer Information Wizard starts.  
+    The Import Computer Information Wizard starts.  
 
-5.  Complete the Import Computer Information Wizard using the following information. Accept the default values unless otherwise specified.  
+5. Complete the Import Computer Information Wizard using the following information. Accept the default values unless otherwise specified.  
 
-  |**On this wizard page**|**Do this**|  
-  |-|-|  
-  |**Select Source**|Click **Import single computer**, and then click **Next**.|  
-  |**Select Source: Single Computer**|1.  In **Computer Name**, type **WDG-REF-01**.<br />2.  In **MAC address**, type ***mac_address*** (where *mac_address* is the media access control [MAC] address of the primary network adapter for the reference computer, WDG-REF-01).<br />3.  Click **Next**.|  
-  |**Select Source: Data Preview**|Click **Next**.|  
-  |**Select Source: Choose Target Collection**|Click **Next**.|  
-  |**Summary**|1.  Review the information in the **Details** box  that you provided while completing the previous wizard pages.<br />2.  Click **Next**.|  
-  |**Progress**|The progress for importing the computer is displayed.|  
-  |**Confirmation**|Click **Close**.|  
+   |**On this wizard page**|**Do this**|  
+   |-|-|  
+   |**Select Source**|Click **Import single computer**, and then click **Next**.|  
+   |**Select Source: Single Computer**|1.  In **Computer Name**, type **WDG-REF-01**.<br />2.  In **MAC address**, type ***mac_address*** (where *mac_address* is the media access control [MAC] address of the primary network adapter for the reference computer, WDG-REF-01).<br />3.  Click **Next**.|  
+   |**Select Source: Data Preview**|Click **Next**.|  
+   |**Select Source: Choose Target Collection**|Click **Next**.|  
+   |**Summary**|1.  Review the information in the **Details** box  that you provided while completing the previous wizard pages.<br />2.  Click **Next**.|  
+   |**Progress**|The progress for importing the computer is displayed.|  
+   |**Confirmation**|Click **Close**.|  
 
- For more information on adding a new computer to the Configuration Manager site database, see the section, “To import computer information for a single computer,” in the section “How to Deploy Operating Systems in Configuration Manager,” in the Configuration Manager Documentation Library, which is installed with Configuration Manager.  
+   For more information on adding a new computer to the Configuration Manager site database, see the section, “To import computer information for a single computer,” in the section “How to Deploy Operating Systems in Configuration Manager,” in the Configuration Manager Documentation Library, which is installed with Configuration Manager.  
 
 ###  <a name="CreateCollectionContainRefComp"></a> Step 4-2: Create a Collection That Contains the Reference Computer  
  In the Configuration Manager console, create a collection that includes the reference computer (WDG-REF-01). This computer collection is used later when advertising the task sequence created earlier in the process.  
 
  **To create a collection that includes the reference computer**  
 
-1.  Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
+1. Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
-2.  In the Configuration Manager console, in the navigation pane, click **Assets and Compliance**.  
+2. In the Configuration Manager console, in the navigation pane, click **Assets and Compliance**.  
 
-3.  In the Assets and Compliance workspace, go to Overview/Device Collections.  
+3. In the Assets and Compliance workspace, go to Overview/Device Collections.  
 
-4.  On the Ribbon, on the **Home** tab, in the **Create** group, click **Create**, and then click Create Device **Collection**.  
+4. On the Ribbon, on the **Home** tab, in the **Create** group, click **Create**, and then click Create Device **Collection**.  
 
-     The Create Device Collection Wizard starts.  
+    The Create Device Collection Wizard starts.  
 
-5.  Complete the Create Device Collection Wizard using the following information. Accept the default values unless otherwise specified.  
+5. Complete the Create Device Collection Wizard using the following information. Accept the default values unless otherwise specified.  
 
-    |**On this wizard page**|**Do this**|  
-    |-|-|  
-    |**General**|<ol><li>In **Name**, type **Microsoft Deployment – Reference Computer**.</li><li>In **Comment**, type **Computer that is to be the reference computer for the target computers to be deployed**.</li><li>In **Limited Collection**, click **Browse**.<br /><br />     The **Select Collection** dialog box appears. Complete the dialog box by performing the following steps:<br /><br /> <ol><li>In **Name**, click **All Systems**.</li><li>Click **OK**.</li></ol></li><li>Click **Next**.</li></ol>|  
-    |**Membership Rules**|<ol><li>Click **Add Rule**, and then click **Direct Rule**.<br /><br />     The Create Direct Membership Rule Wizard starts.</li><li>Complete the Create Direct Membership Rule Wizard by performing the following steps:<br /><br /> <ol><li>On the **Welcome** page, click **Next**.</li><li>On the **Search for Resources** page, in **Resource class**, select **System Resource**; in **Attribute name**, select **Name**; in **Value**, type **WDG-REF-01**; and then click **Next**.</li><li>On the **Select Resources** page, select **WDG-REF-01**, and then click **Next**.</li><li>On the **Summary** page, click **Next**.</li><li>On the **Progress** page, view the progress for creating the new membership rule.</li><li>On the **Completion** page, click **Close**.</li></ol></li><li>Click **Next**.</li></ol>|  
-    |**Summary**|1.  Review the information in the **Details** box  that you provided while completing the previous wizard pages.<br />2.  Click **Next**.|  
-    |**Progress**|The progress for creating the device collection is displayed.|  
-    |**Completion**|Click **Close**.|  
+   |**On this wizard page**|**Do this**|  
+   |-|-|  
+   |**General**|<ol><li>In **Name**, type **Microsoft Deployment – Reference Computer**.</li><li>In **Comment**, type **Computer that is to be the reference computer for the target computers to be deployed**.</li><li>In **Limited Collection**, click **Browse**.<br /><br />     The **Select Collection** dialog box appears. Complete the dialog box by performing the following steps:<br /><br /> <ol><li>In **Name**, click **All Systems**.</li><li>Click **OK**.</li></ol></li><li>Click **Next**.</li></ol>|  
+   |**Membership Rules**|<ol><li>Click **Add Rule**, and then click **Direct Rule**.<br /><br />     The Create Direct Membership Rule Wizard starts.</li><li>Complete the Create Direct Membership Rule Wizard by performing the following steps:<br /><br /> <ol><li>On the **Welcome** page, click **Next**.</li><li>On the **Search for Resources** page, in **Resource class**, select **System Resource**; in **Attribute name**, select **Name**; in **Value**, type **WDG-REF-01**; and then click **Next**.</li><li>On the **Select Resources** page, select **WDG-REF-01**, and then click **Next**.</li><li>On the **Summary** page, click **Next**.</li><li>On the **Progress** page, view the progress for creating the new membership rule.</li><li>On the **Completion** page, click **Close**.</li></ol></li><li>Click **Next**.</li></ol>|  
+   |**Summary**|1.  Review the information in the **Details** box  that you provided while completing the previous wizard pages.<br />2.  Click **Next**.|  
+   |**Progress**|The progress for creating the device collection is displayed.|  
+   |**Completion**|Click **Close**.|  
 
- For more information, see the section, “How to Create Collections in Configuration Manager,” in the Configuration manager Documentation Library, which is installed with Configuration Manager.  
+   For more information, see the section, “How to Create Collections in Configuration Manager,” in the Configuration manager Documentation Library, which is installed with Configuration Manager.  
 
 ###  <a name="DeployRefCompTaskSeq"></a> Step 4-3: Deploy the Reference Computer Task Sequence  
  In the Configuration Manager console, deploy the task sequence created earlier in the process to the device collection that includes the reference computer created earlier in the process.  
 
 #### To deploy the task sequence
-1.  Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
+1. Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
-2.  In the Configuration Manager console, in the navigation pane, click **Software Library**.  
+2. In the Configuration Manager console, in the navigation pane, click **Software Library**.  
 
-3.  In the Software Library workspace, go to Overview/Operating Systems/Task Sequences.  
+3. In the Software Library workspace, go to Overview/Operating Systems/Task Sequences.  
 
-4.  In the preview pane, click **Windows 8.1 Reference Deployment**.  
+4. In the preview pane, click **Windows 8.1 Reference Deployment**.  
 
-5.  On the Ribbon, on the **Home** tab, in the **Deployment** group, click **Deploy**.  
+5. On the Ribbon, on the **Home** tab, in the **Deployment** group, click **Deploy**.  
 
-     The Deploy Software Wizard starts.  
+    The Deploy Software Wizard starts.  
 
-6.  Complete the Deploy Software Wizard using the following information. Accept the default values unless otherwise specified.
+6. Complete the Deploy Software Wizard using the following information. Accept the default values unless otherwise specified.
 
-    |**On this wizard page**|**Do this**|  
-    |-|-|  
-    |**General**|1.  In **Collection**, click **Browse**.<br />2.  In the **Browse Collection** dialog box, click **Microsoft Deployment – Reference Computer**, and then click **OK**.<br />3.  In **Comment**, type **Deploy Windows 8.1 to the reference computer and then capture an image of the reference computer**.<br />4.  Click **Next**.|  
-    |**Deployment Settings**|1.  In **Purpose**, select **Available**.<br />2.  Select the **Make available to boot media and PXE** check box.<br />3.  Click **Next**.|  
-    |**Deployment Settings: Schedule**|Click **Next**.|  
-    |**Deployment Settings: User Experience**|Click **Next**.|  
-    |**Deployment Settings: Alerts**|Click **Next**.|  
-    |**Deployment Settings: Distribution Points**|Click **Next**.|  
-    |**Summary**|1.  Review the information in the **Details** box  that you provided while completing the previous wizard pages.<br />2.  Click **Next**.|  
-    |**Progress**|The progress for deploying the task sequence is displayed.|  
-    |**Completion**|Click **Close**.|  
+   |**On this wizard page**|**Do this**|  
+   |-|-|  
+   |**General**|1.  In **Collection**, click **Browse**.<br />2.  In the **Browse Collection** dialog box, click **Microsoft Deployment – Reference Computer**, and then click **OK**.<br />3.  In **Comment**, type **Deploy Windows 8.1 to the reference computer and then capture an image of the reference computer**.<br />4.  Click **Next**.|  
+   |**Deployment Settings**|1.  In **Purpose**, select **Available**.<br />2.  Select the **Make available to boot media and PXE** check box.<br />3.  Click **Next**.|  
+   |**Deployment Settings: Schedule**|Click **Next**.|  
+   |**Deployment Settings: User Experience**|Click **Next**.|  
+   |**Deployment Settings: Alerts**|Click **Next**.|  
+   |**Deployment Settings: Distribution Points**|Click **Next**.|  
+   |**Summary**|1.  Review the information in the **Details** box  that you provided while completing the previous wizard pages.<br />2.  Click **Next**.|  
+   |**Progress**|The progress for deploying the task sequence is displayed.|  
+   |**Completion**|Click **Close**.|  
 
- For more information, see the section, “How to Deploy a Task Sequence,” in the Configuration manager Documentation Library, which is installed with Configuration Manager.  
+   For more information, see the section, “How to Deploy a Task Sequence,” in the Configuration manager Documentation Library, which is installed with Configuration Manager.  
 
 ###  <a name="CreateTaskSeqBootMedia"></a> Step 4-4: Create the Task Sequence Bootable Media  
  To initiate the MDT process, provide a method for starting the computer with Windows PE and the necessary software by creating the task sequence bootable media disk. Use the Task Sequence Media Wizard in the Configuration Manager console to create bootable media for storage on a USB flash drive, CD, or DVD.  
 
 #### To create a task sequence bootable media disk  
 
-1.  Click **Start**, point to **All Programs**, and then point to Microsoft System Center 2012. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
+1. Click **Start**, point to **All Programs**, and then point to Microsoft System Center 2012. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
-2.  In the Configuration Manager console, in the navigation pane, click **Software Library**.  
+2. In the Configuration Manager console, in the navigation pane, click **Software Library**.  
 
-3.  In the Software Library workspace, go to Overview/Operating Systems/Task Sequences.  
+3. In the Software Library workspace, go to Overview/Operating Systems/Task Sequences.  
 
-4.  On the Ribbon, on the **Home** tab, in the **Create** group, click **Create Task Sequence Media**.  
+4. On the Ribbon, on the **Home** tab, in the **Create** group, click **Create Task Sequence Media**.  
 
-     The Create Task Sequence Media Wizard starts.  
+    The Create Task Sequence Media Wizard starts.  
 
-5.  Complete the Create Task Sequence Media Wizard using the following information. Accept the default values unless otherwise specified.
+5. Complete the Create Task Sequence Media Wizard using the following information. Accept the default values unless otherwise specified.
 
-    |**On this wizard page**|**Do this**|  
-    |-|-|  
-    |**Select Media Type**|1.  Click **Bootable media**.<br />2.  Clear the **Allow unattended operating system deployment** check box.<br />3.  Click **Next**.|  
-    |**Select Media Type: Media Management**|Click **Site-based media**, and then click **Next**.|  
-    |**Select Media Type: Media Type**|In **Media file**, type **\\\WDG-MDT-01\Capture$\CM2012_TS_Boot_Media.iso**, and then click **Next**.|  
-    |**Select Media Type: Security**|In **Password** and **Confirm password**, type **P@ssw0rd**, and then click **Next**.|  
-    |**Select Media Type: Boot Image**|1.  In **Boot image**, click **Browse**.<br />2.  In the **Select a Boot Image** dialog box, click **Windows PE Custom**, and then click **OK**.<br />3.  In **Distribution point**, click **\\\WDG-MDT-01.mdt2013.corp.woodgrovebank.com**, and then click **OK**.<br />4.  In **Management point**, click **\\\WDG-MDT-01.mdt2013.corp.woodgrovebank.com**, and then click **OK**.<br />5.  Click **Next**.|  
-    |**Select Media Type: Customization**|Click **Next**.|  
-    |**Summary**|1.  Review the information in the **Details** box  that you provided while completing the previous wizard pages.<br />2.  Click **Next**.|  
-    |**Progress**|The progress for creating the task sequence media is displayed.|  
-    |**Completion**|Click **Close**.|  
 
-    The wizard creates the CM2012_TS_Boot_Media.iso file in the WDG-MDT-01Capture$ shared folder.  
+   |         **On this wizard page**         |                                                                                                                                                                                                  **Do this**                                                                                                                                                                                                  |
+   |-----------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+   |          **Select Media Type**          |                                                                                                                                     1.  Click **Bootable media**.<br />2.  Clear the **Allow unattended operating system deployment** check box.<br />3.  Click **Next**.                                                                                                                                     |
+   | **Select Media Type: Media Management** |                                                                                                                                                                             Click **Site-based media**, and then click **Next**.                                                                                                                                                                              |
+   |    **Select Media Type: Media Type**    |                                                                                                                                                     In **Media file**, type **\\\WDG-MDT-01\Capture$\CM2012_TS_Boot_Media.iso**, and then click **Next**.                                                                                                                                                     |
+   |     **Select Media Type: Security**     |                                                                                                                                                      In **Password** and **Confirm password**, type <strong>P@ssw0rd</strong>, and then click **Next**.                                                                                                                                                       |
+   |    **Select Media Type: Boot Image**    | 1.  In **Boot image**, click **Browse**.<br />2.  In the **Select a Boot Image** dialog box, click **Windows PE Custom**, and then click **OK**.<br />3.  In **Distribution point**, click **\\\WDG-MDT-01.mdt2013.corp.woodgrovebank.com**, and then click **OK**.<br />4.  In **Management point**, click **\\\WDG-MDT-01.mdt2013.corp.woodgrovebank.com**, and then click **OK**.<br />5.  Click **Next**. |
+   |  **Select Media Type: Customization**   |                                                                                                                                                                                                Click **Next**.                                                                                                                                                                                                |
+   |               **Summary**               |                                                                                                                                   1.  Review the information in the **Details** box  that you provided while completing the previous wizard pages.<br />2.  Click **Next**.                                                                                                                                   |
+   |              **Progress**               |                                                                                                                                                                        The progress for creating the task sequence media is displayed.                                                                                                                                                                        |
+   |             **Completion**              |                                                                                                                                                                                               Click **Close**.                                                                                                                                                                                                |
 
-6.  If WDG-REF-01 is a physical computer, create a CD or DVD of the International Organization for Standardization (ISO) file. If WDG-REF-01 is a VM, start the VM directly from the ISO file.  
+   The wizard creates the CM2012_TS_Boot_Media.iso file in the WDG-MDT-01Capture$ shared folder.  
 
- For more information on creating the task sequence bootable media disk, see the section, “How to Create Bootable Media,” in the Configuration manager Documentation Library, which is installed with Configuration Manager.  
+6. If WDG-REF-01 is a physical computer, create a CD or DVD of the International Organization for Standardization (ISO) file. If WDG-REF-01 is a VM, start the VM directly from the ISO file.  
+
+   For more information on creating the task sequence bootable media disk, see the section, “How to Create Bootable Media,” in the Configuration manager Documentation Library, which is installed with Configuration Manager.  
 
 ###  <a name="StartRefCompwithTaskSeqBootMedia"></a> Step 4-5: Start the Reference Computer with the Task Sequence Bootable Media  
  Start the reference computer (WDG-REF-01) with the task sequence bootable media disk created earlier in the process. This medium starts Windows PE on the reference computer and initiates the MDT process. At the end of the MDT process, Windows 8.1 is deployed on the reference computer and an image of the reference computer is saved to \WDG-MDT-01\Capture$\WDG-REF-01.wim.  
@@ -1019,16 +1037,17 @@ manager: angrobe
 
 #### To start the reference computer with the task sequence bootable media
 
-1.  Start WDG-REF-01 with the task sequence bootable media created earlier in the process.  
+1. Start WDG-REF-01 with the task sequence bootable media created earlier in the process.  
 
-     Windows PE starts, and then the Task Sequence Wizard starts.  
+    Windows PE starts, and then the Task Sequence Wizard starts.  
 
-2.  Complete the Task Sequence Wizard using the following information. Accept the default values unless otherwise specified.  
+2. Complete the Task Sequence Wizard using the following information. Accept the default values unless otherwise specified.  
 
-    |**On this wizard page**|**Do this**|  
-    |-|-|  
-    |**Welcome to the Task Sequence Wizard**|In **Password**, type **P@ssw0rd**, and then click **Next**.|  
-    |**Select a Task Sequence**|In the list box, select **Windows 8.1 Reference Deployment**, and then click **Next**.|  
+
+   |         **On this wizard page**         |                                      **Do this**                                       |
+   |-----------------------------------------|----------------------------------------------------------------------------------------|
+   | **Welcome to the Task Sequence Wizard** |       In **Password**, type <strong>P@ssw0rd</strong>, and then click **Next**.        |
+   |       **Select a Task Sequence**        | In the list box, select **Windows 8.1 Reference Deployment**, and then click **Next**. |
 
 #### To monitor the reference computer deployment process using the Deployment Workbench, complete the following steps on WDG-MDT-01
 
@@ -1074,50 +1093,50 @@ manager: angrobe
 
 #### To monitor the reference computer deployment process using the Get-MDTMonitorData cmdlet, complete the following steps on WDG-MDT-01
 
-1.  On WDG-MDT-01, click **Start**, the click **Administrative Tools**, and then click **Windows PowerShell Modules**.  
+1. On WDG-MDT-01, click **Start**, the click **Administrative Tools**, and then click **Windows PowerShell Modules**.  
 
-     The Windows PowerShell Modules command prompt opens.  
+    The Windows PowerShell Modules command prompt opens.  
 
-2.  Create a PowerShell drive that uses the MDT PowerShell provider by running the [New-PSDrive](http://technet.microsoft.com/library/hh849829.aspx) cmdlet as shown in the following example:  
+2. Create a PowerShell drive that uses the MDT PowerShell provider by running the [New-PSDrive](http://technet.microsoft.com/library/hh849829.aspx) cmdlet as shown in the following example:  
 
-    ```  
-    New-PSDrive -Name DS001 -PSProvider mdtprovider -Root d:\DeploymentShare$  
-    ```  
+   ```  
+   New-PSDrive -Name DS001 -PSProvider mdtprovider -Root d:\DeploymentShare$  
+   ```  
 
-3.  View the MDT monitoring process by running the **Get-MDTMonitorData** cmdlet as shown in the following example:  
+3. View the MDT monitoring process by running the **Get-MDTMonitorData** cmdlet as shown in the following example:  
 
-    ```  
-    Get-MDTMonitorData -Path DS001:  
-    ```  
+   ```  
+   Get-MDTMonitorData -Path DS001:  
+   ```  
 
-     This command returns the monitoring data collected by the MDT monitoring service running on the same computer that hosts the deployment share, as shown in the following example output:  
+    This command returns the monitoring data collected by the MDT monitoring service running on the same computer that hosts the deployment share, as shown in the following example output:  
 
-    ```  
-    Name               : WDG-REF-01  
-    PercentComplete    : 96  
-    Settings           :  
-    Warnings           : 0  
-    Errors             : 0  
-    DeploymentStatus   : 1  
-    StartTime          : 6/7/2012 6:45:39 PM  
-    EndTime            :   
-    ID                 : 1  
-    UniqueID           : 94a0830e-f2bb-421c-b1e0-6f86f9eb9fa1  
-    CurrentStep        : 130  
-    TotalSteps         : 134  
-    StepName           : Gather  
-    LastTime           : 6/7/2012 8:46:32 PM  
-    DartIP             :  
-    DartPort           :  
-    DartTicket         :  
-    VMHost             : XYL-DC-02  
-    VMName             : WDG-REF-01  
-    ComputerIdentities : {}  
-    ```  
+   ```  
+   Name               : WDG-REF-01  
+   PercentComplete    : 96  
+   Settings           :  
+   Warnings           : 0  
+   Errors             : 0  
+   DeploymentStatus   : 1  
+   StartTime          : 6/7/2012 6:45:39 PM  
+   EndTime            :   
+   ID                 : 1  
+   UniqueID           : 94a0830e-f2bb-421c-b1e0-6f86f9eb9fa1  
+   CurrentStep        : 130  
+   TotalSteps         : 134  
+   StepName           : Gather  
+   LastTime           : 6/7/2012 8:46:32 PM  
+   DartIP             :  
+   DartPort           :  
+   DartTicket         :  
+   VMHost             : XYL-DC-02  
+   VMName             : WDG-REF-01  
+   ComputerIdentities : {}  
+   ```  
 
-4.  Close the Windows PowerShell console.  
+4. Close the Windows PowerShell console.  
 
- If any problems occur during the deployment, consult the MDT document *Troubleshooting Reference*. When completed, a captured image of the reference computer should exist in \\\WDG-MDT-01\Capture$\WDG-REF-01.wim.  
+   If any problems occur during the deployment, consult the MDT document *Troubleshooting Reference*. When completed, a captured image of the reference computer should exist in \\\WDG-MDT-01\Capture$\WDG-REF-01.wim.  
 
 ## Step 5: Create and Configure a Task Sequence to Deploy the Target Computer  
  After the task sequence to deploy the reference computer (WDG-REF-01) finishes, a captured image of the reference computer is stored in \\\WDG-MDT-01\Capture$\WDG-REF-01.wim. Now, create a task sequence that will deploy the captured image of the reference computer to the target computer (WDG-CLI-01). When this step is complete, you can deploy the captured image of the reference computer to the target computer.  
@@ -1180,39 +1199,40 @@ manager: angrobe
 
 #### To create a task sequence template to deploy the captured image to the target computer  
 
-1.  Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
+1. Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
-2.  In the Configuration Manager console, in the navigation pane, click **Software Library**.  
+2. In the Configuration Manager console, in the navigation pane, click **Software Library**.  
 
-3.  In the Software Library workspace, go to Overview/Operating Systems/Task Sequences.  
+3. In the Software Library workspace, go to Overview/Operating Systems/Task Sequences.  
 
-4.  On the Ribbon, on the **Home** tab, in the **Task Sequences** group, click **Create MDT Task Sequence**.  
+4. On the Ribbon, on the **Home** tab, in the **Task Sequences** group, click **Create MDT Task Sequence**.  
 
-     The Create MDT Task Sequence Wizard starts.  
+    The Create MDT Task Sequence Wizard starts.  
 
-5.  Complete the Create MDT Task Sequence Wizard using the following information. Accept the default values unless otherwise specified.  
+5. Complete the Create MDT Task Sequence Wizard using the following information. Accept the default values unless otherwise specified.  
 
-    |**On this wizard page**|**Do this**|  
-    |-|-|  
-    |**Choose Template**|Select **Client Task Sequence**, and then click **Next**.|  
-    |**Choose Template: General**|1.  In **Task sequence name**, type **Windows 8.1 Target Deployment**.<br />2.  In **Task sequence comments**, type **Task sequence for deploying captured reference computer image to the target computer (WDG-CLI-01)**, and then click **Next**.|  
-    |**Choose Template: Details**|<ol><li>Click **Join a domain**.</li><li>In **Domain**, type **mdt2013.corp.woodgrovebank.com**.</li><li>In **Account**, click **Set**, and then complete the **Windows User Account** dialog box by performing the following steps:<br /><br /> <ol><li>In **User name**, type **MDT2013\Administrator**.</li><li>In **Password** and **Confirm password**, type **P@ssw0rd**.</li><li>Click **OK**.</li></ol></li><li>In **User name**, type **Woodgrove Bank Employee**.</li><li>In **Organization name**, type **Woodgrove Bank**.</li><li>In **Product key**, type ***product_key*** (where *product_key* is the product key for Windows 8.1).</li><li>Click **Next**.</li></ol>|  
-    |**Choose Template: Capture Settings**|Click **Next**.|  
-    |**Boot Image**|1.  In **Specify an existing boot image package**, click **Browse**.<br />2.  In **Select a Package** dialog box, click **Windows PE Custom**, and then click **OK**.<br />3.  Click **Next**.|  
-    |**MDT Package**|1.  In **Specify an existing Microsoft Deployment Toolkit Files package**, click **Browse**.<br />2.  In the **Select a Package** dialog box, click **MDT Files**, and then click **OK**.<br />3.  Click **Next**.|  
-    |**OS Image**|1.  Click **Specify an existing OS image**.<br />2.  In **Specify an existing OS image**, click **Browse**.<br />3.  In the **Select a Package** dialog box, click **Windows 8.1 Reference Image**, and then click **OK**.<br />4.  Click **Next**.|  
-    |**OS Image: OS Image Index**|1.  In **The selected operating system image (WIM) file contains multiple images**. **Specify which image you would like to deploy**, select ***image_index*** (where *image_index* is the image index of the image that contains Windows 8.1, which was identified in the section [Step 5-1: Import the Captured .wim File into Configuration Manager](#ImportCapturedwimFile); for the purposes of this guide, select **2**).<br />2.  Click **Next**.|  
-    |**Deployment Method**|Click **Next**.|  
-    |**Client Package**|1.  In **Specify an existing ConfigMgr client package**, click **Browse**.<br />2.  In the **Select a Package** dialog box, click **Microsoft Configuration Manager Client Upgrade**, and then click **OK**.<br />3.  Click **Next**.|  
-    |**USMT Package**|1.  In **Specify an existing USMT package**, click **Browse**.<br />2.  In the **Select a Package** dialog box, click **USMT**, and then click **OK**.<br />3.  Click **Next**.|  
-    |**Settings Package**|1.  Click **Create a new settings package**.<br />2.  In **Package source folder to be created**, type **\\\WDG-MDT-01\Packages$\CustomSettings_Target**, and then click **Next**.|  
-    |**Settings Package: Settings Details**|1.  In **Name**, type **MDT Target Computer Custom Settings**.<br />2.  In **Version**, type **1.00**.<br />3.  In **Comments**, type **Configuration settings for MDT deployment process (such as CustomSettings.ini) for the target computer**, and then click **Next**.|  
-    |**Sysprep Package**|Click **Next**.|  
-    |**Summary**|1.  Review the information in the **Details** box  that you provided while completing the previous wizard pages.<br />2.  Click **Next**.|  
-    |**Progress**|The progress for creating the task sequence is displayed.|  
-    |**Confirmation**|Click **Finish**.|  
 
- The list of task sequences is displayed. The task sequence that you just created (Windows 8.1 Target Deployment) is listed in the list of task sequences.  
+   |        **On this wizard page**         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                        **Do this**                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+   |----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+   |          **Choose Template**           |                                                                                                                                                                                                                                                                                                                                                                                                                                                 Select **Client Task Sequence**, and then click **Next**.                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+   |      **Choose Template: General**      |                                                                                                                                                                                                                                                                                                                                                    1.  In **Task sequence name**, type **Windows 8.1 Target Deployment**.<br />2.  In **Task sequence comments**, type **Task sequence for deploying captured reference computer image to the target computer (WDG-CLI-01)**, and then click **Next**.                                                                                                                                                                                                                                                                                                                                                     |
+   |      **Choose Template: Details**      | <ol><li>Click <strong>Join a domain</strong>.</li><li>In <strong>Domain</strong>, type <strong>mdt2013.corp.woodgrovebank.com</strong>.</li><li>In <strong>Account</strong>, click <strong>Set</strong>, and then complete the <strong>Windows User Account</strong> dialog box by performing the following steps:<br /><br /> <ol><li>In <strong>User name</strong>, type <strong>MDT2013\Administrator</strong>.</li><li>In <strong>Password</strong> and <strong>Confirm password</strong>, type <strong>P@ssw0rd</strong>.</li><li>Click <strong>OK</strong>.</li></ol></li><li>In <strong>User name</strong>, type <strong>Woodgrove Bank Employee</strong>.</li><li>In <strong>Organization name</strong>, type <strong>Woodgrove Bank</strong>.</li><li>In <strong>Product key</strong>, type <strong><em>product_key</em></strong> (where <em>product_key</em> is the product key for Windows 8.1).</li><li>Click <strong>Next</strong>.</li></ol> |
+   | **Choose Template: Capture Settings**  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Click **Next**.                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+   |             **Boot Image**             |                                                                                                                                                                                                                                                                                                                                                                               1.  In **Specify an existing boot image package**, click **Browse**.<br />2.  In **Select a Package** dialog box, click **Windows PE Custom**, and then click **OK**.<br />3.  Click **Next**.                                                                                                                                                                                                                                                                                                                                                                               |
+   |            **MDT Package**             |                                                                                                                                                                                                                                                                                                                                                                     1.  In **Specify an existing Microsoft Deployment Toolkit Files package**, click **Browse**.<br />2.  In the **Select a Package** dialog box, click **MDT Files**, and then click **OK**.<br />3.  Click **Next**.                                                                                                                                                                                                                                                                                                                                                                     |
+   |              **OS Image**              |                                                                                                                                                                                                                                                                                                                                                    1.  Click **Specify an existing OS image**.<br />2.  In **Specify an existing OS image**, click **Browse**.<br />3.  In the **Select a Package** dialog box, click **Windows 8.1 Reference Image**, and then click **OK**.<br />4.  Click **Next**.                                                                                                                                                                                                                                                                                                                                                     |
+   |      **OS Image: OS Image Index**      |                                                                                                                                                                                                                                                  1.  In **The selected operating system image (WIM) file contains multiple images**. **Specify which image you would like to deploy**, select ***image_index*** (where *image_index* is the image index of the image that contains Windows 8.1, which was identified in the section [Step 5-1: Import the Captured .wim File into Configuration Manager](#ImportCapturedwimFile); for the purposes of this guide, select **2**).<br />2.  Click **Next**.                                                                                                                                                                                                                                                  |
+   |         **Deployment Method**          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Click **Next**.                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+   |           **Client Package**           |                                                                                                                                                                                                                                                                                                                                                           1.  In **Specify an existing ConfigMgr client package**, click **Browse**.<br />2.  In the **Select a Package** dialog box, click **Microsoft Configuration Manager Client Upgrade**, and then click **OK**.<br />3.  Click **Next**.                                                                                                                                                                                                                                                                                                                                                            |
+   |            **USMT Package**            |                                                                                                                                                                                                                                                                                                                                                                                      1.  In **Specify an existing USMT package**, click **Browse**.<br />2.  In the **Select a Package** dialog box, click **USMT**, and then click **OK**.<br />3.  Click **Next**.                                                                                                                                                                                                                                                                                                                                                                                       |
+   |          **Settings Package**          |                                                                                                                                                                                                                                                                                                                                                                                     1.  Click **Create a new settings package**.<br />2.  In **Package source folder to be created**, type **\\\WDG-MDT-01\Packages$\CustomSettings_Target**, and then click **Next**.                                                                                                                                                                                                                                                                                                                                                                                     |
+   | **Settings Package: Settings Details** |                                                                                                                                                                                                                                                                                                                                         1.  In **Name**, type **MDT Target Computer Custom Settings**.<br />2.  In **Version**, type **1.00**.<br />3.  In **Comments**, type **Configuration settings for MDT deployment process (such as CustomSettings.ini) for the target computer**, and then click **Next**.                                                                                                                                                                                                                                                                                                                                         |
+   |          **Sysprep Package**           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Click **Next**.                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+   |              **Summary**               |                                                                                                                                                                                                                                                                                                                                                                                                         1.  Review the information in the **Details** box  that you provided while completing the previous wizard pages.<br />2.  Click **Next**.                                                                                                                                                                                                                                                                                                                                                                                                          |
+   |              **Progress**              |                                                                                                                                                                                                                                                                                                                                                                                                                                                 The progress for creating the task sequence is displayed.                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+   |            **Confirmation**            |                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Click **Finish**.                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+
+   The list of task sequences is displayed. The task sequence that you just created (Windows 8.1 Target Deployment) is listed in the list of task sequences.  
 
 ###  <a name="SelectDistroPointsNewPackagesImages"></a> Step 5-3: Select the Distribution Points for the New Packages and Images  
  The Create MDT Task Sequence Wizard creates a number of packages and images. After these packages and images are created, select the distribution points from which the packages and images will be copied and available to target computers.  
@@ -1312,23 +1332,23 @@ manager: angrobe
 
 #### To customize the Windows 8.1 Target Deployment task sequence
 
-1.  Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
+1. Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
-2.  In the Configuration Manager console, in the navigation pane, click **Software Library**.  
+2. In the Configuration Manager console, in the navigation pane, click **Software Library**.  
 
-3.  In the Software Library workspace, go to Overview/Operating Systems/Task Sequences.  
+3. In the Software Library workspace, go to Overview/Operating Systems/Task Sequences.  
 
-4.  In the preview pane, click **Windows 8.1 Reference Deployment**.  
+4. In the preview pane, click **Windows 8.1 Reference Deployment**.  
 
-5.  On the Ribbon, on the **Home** tab, in the **Task Sequence** group, click **Edit**.  
+5. On the Ribbon, on the **Home** tab, in the **Task Sequence** group, click **Edit**.  
 
-     The **Windows 8.1 Reference Deployment Task Sequence Editor** dialog box opens.  
+    The **Windows 8.1 Reference Deployment Task Sequence Editor** dialog box opens.  
 
-6.  In the **Windows 8.1 Reference Deployment Task Sequence Editor** dialog box, go to PostInstall/Apply Windows Settings.  
+6. In the **Windows 8.1 Reference Deployment Task Sequence Editor** dialog box, go to PostInstall/Apply Windows Settings.  
 
-7.  On the **Properties** tab, click **Enable the account and specify the local administrator password**.  
+7. On the **Properties** tab, click **Enable the account and specify the local administrator password**.  
 
-8.  On the **Properties** tab, in **Password** and **Confirm Password**, type **P@ssw0rd**, and then click **Apply**.  
+8. On the **Properties** tab, in **Password** and **Confirm Password**, type <strong>P@ssw0rd</strong>, and then click **Apply**.  
 
 9. Make any additional modifications to the task sequence that the environment requires, and then click **OK**.  
 
@@ -1354,90 +1374,90 @@ manager: angrobe
 
 #### To add the target computer to the Configuration Manager site database  
 
-1.  Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
+1. Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
-2.  In the Configuration Manager console, in the navigation pane, click **Assets and Compliance**.  
+2. In the Configuration Manager console, in the navigation pane, click **Assets and Compliance**.  
 
-3.  In the Assets and Compliance workspace, go to Overview/Devices.  
+3. In the Assets and Compliance workspace, go to Overview/Devices.  
 
-4.  On the Ribbon, on the **Home** tab, in the **Create** group, click **Import Computer Information**.  
+4. On the Ribbon, on the **Home** tab, in the **Create** group, click **Import Computer Information**.  
 
-     The Import Computer Information Wizard starts.  
+    The Import Computer Information Wizard starts.  
 
-5.  Complete the Import Computer Information Wizard using the following information. Accept the default values unless otherwise specified.  
+5. Complete the Import Computer Information Wizard using the following information. Accept the default values unless otherwise specified.  
 
-    |**On this wizard page**|**Do this**|  
-    |-|-|  
-    |**Select Source**|Click **Import single computer**, and then click **Next**.|  
-    |**Select Source: Single Computer**|1.  In **Computer Name**, type **WDG-CLI-01**.<br />2.  In **MAC address**, type ***mac_address*** (where *mac_address* is the MAC address of the primary network adapter for the target computer, WDG-CLI-01).<br />3.  Click **Next**.|  
-    |**Select Source: Data Preview**|Click **Next**.|  
-    |**Select Source: Choose Target Collection**|Click **Next**.|  
-    |**Summary**|1.  Review the information in the **Details** box  that you provided while completing the previous wizard pages.<br />2.  Click **Next**.|  
-    |**Progress**|The progress for importing the computer is displayed.|  
-    |**Confirmation**|Click **Close**.|  
+   |**On this wizard page**|**Do this**|  
+   |-|-|  
+   |**Select Source**|Click **Import single computer**, and then click **Next**.|  
+   |**Select Source: Single Computer**|1.  In **Computer Name**, type **WDG-CLI-01**.<br />2.  In **MAC address**, type ***mac_address*** (where *mac_address* is the MAC address of the primary network adapter for the target computer, WDG-CLI-01).<br />3.  Click **Next**.|  
+   |**Select Source: Data Preview**|Click **Next**.|  
+   |**Select Source: Choose Target Collection**|Click **Next**.|  
+   |**Summary**|1.  Review the information in the **Details** box  that you provided while completing the previous wizard pages.<br />2.  Click **Next**.|  
+   |**Progress**|The progress for importing the computer is displayed.|  
+   |**Confirmation**|Click **Close**.|  
 
- For more information on adding a new computer to the Configuration Manager site database, see the section, “To import computer information for a single computer,” in the section, “How to Deploy Operating Systems in Configuration Manager,” in the Configuration manager Documentation Library, which is installed with Configuration Manager.  
+   For more information on adding a new computer to the Configuration Manager site database, see the section, “To import computer information for a single computer,” in the section, “How to Deploy Operating Systems in Configuration Manager,” in the Configuration manager Documentation Library, which is installed with Configuration Manager.  
 
 ###  <a name="CreateComputerCollectionIncludesTarget"></a> Step 6-2: Create a Computer Collection That Includes the Target Computer  
  In the Configuration Manager console, create a collection that includes the target computer (WDG-CLI-01). You use this computer collection later when advertising the task sequence created earlier in the process.  
 
 #### To create a computer collection that includes the target computer
 
-1.  Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
+1. Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
-2.  In the Configuration Manager console, in the navigation pane, click **Assets and Compliance**.  
+2. In the Configuration Manager console, in the navigation pane, click **Assets and Compliance**.  
 
-3.  In the Assets and Compliance workspace, go to Overview/Device Collections.  
+3. In the Assets and Compliance workspace, go to Overview/Device Collections.  
 
-4.  On the Ribbon, on the **Home** tab, in the **Create** group, click **Create Device Collection**.  
+4. On the Ribbon, on the **Home** tab, in the **Create** group, click **Create Device Collection**.  
 
-     The Create Device Collection Wizard starts.  
+    The Create Device Collection Wizard starts.  
 
-5.  Complete the Create Device Collection Wizard using the following information. Accept the default values unless otherwise specified.  
+5. Complete the Create Device Collection Wizard using the following information. Accept the default values unless otherwise specified.  
 
-    |**On this wizard page**|**Do this**|  
-    |-|-|  
-    |**On this wizard page**|**Do this**|  
-    |**General**|<ol><li>In **Name**, type **Microsoft Deployment – Batch 01**.</li><li>In **Comment**, type **Computers that are to be included in the first batch of computers deployed**.</li><li>In **Limited Collection**, click **Browse**.<br /><br />     The **Select Collection** dialog box appears. Complete the dialog box by performing the following steps:<br /><br /> <ol><li>In the **Select Collection** dialog box, in **Name**, click **All Systems**.</li><li>Click **OK**.</li></ol></li><li>Click **Next**.</li></ol>|  
-    |**Membership Rules**|<ol><li>Click **Add Rule**, and then click **Direct Rule**.<br /><br />     The Create Direct Membership Rule Wizard starts.</li><li>Complete the Create Direct Membership Rule Wizard by performing the following steps:<br /><br /> <ol><li>On the **Welcome** page, click **Next**.</li><li>On the **Search for Resources** page, in **Resource class**, select **System Resource**; in **Attribute name**, select **Name**; in **Value**, type **WDG-CLI-01**; and then click **Next**.</li><li>On the **Select Resources** page, select **WDG-CLI-01**, and then click **Next**. **Note:**          The process for adding the target computer (WDG-CLI-01) to All Systems can take a few minutes to complete. If WDG-CLI-01 does not appear in the list, repeat steps b and c until WDGCLI01 appears.</li><li>On the **Summary** page, click **Next**.</li><li>On the **Completion** page, click **Close**.</li></ol></li><li>Click **Next**.</li></ol>|  
-    |**Summary**|1.  Review the information in the **Details** box  that you provided while completing the previous wizard pages.<br />2.  Click **Next**.|  
-    |**Progress**|The progress for creating the device collection is displayed.|  
-    |**Completion**|Click **Close**.|  
+   |**On this wizard page**|**Do this**|  
+   |-|-|  
+   |**On this wizard page**|**Do this**|  
+   |**General**|<ol><li>In **Name**, type **Microsoft Deployment – Batch 01**.</li><li>In **Comment**, type **Computers that are to be included in the first batch of computers deployed**.</li><li>In **Limited Collection**, click **Browse**.<br /><br />     The **Select Collection** dialog box appears. Complete the dialog box by performing the following steps:<br /><br /> <ol><li>In the **Select Collection** dialog box, in **Name**, click **All Systems**.</li><li>Click **OK**.</li></ol></li><li>Click **Next**.</li></ol>|  
+   |**Membership Rules**|<ol><li>Click **Add Rule**, and then click **Direct Rule**.<br /><br />     The Create Direct Membership Rule Wizard starts.</li><li>Complete the Create Direct Membership Rule Wizard by performing the following steps:<br /><br /> <ol><li>On the **Welcome** page, click **Next**.</li><li>On the **Search for Resources** page, in **Resource class**, select **System Resource**; in **Attribute name**, select **Name**; in **Value**, type **WDG-CLI-01**; and then click **Next**.</li><li>On the **Select Resources** page, select **WDG-CLI-01**, and then click **Next**. **Note:**          The process for adding the target computer (WDG-CLI-01) to All Systems can take a few minutes to complete. If WDG-CLI-01 does not appear in the list, repeat steps b and c until WDGCLI01 appears.</li><li>On the **Summary** page, click **Next**.</li><li>On the **Completion** page, click **Close**.</li></ol></li><li>Click **Next**.</li></ol>|  
+   |**Summary**|1.  Review the information in the **Details** box  that you provided while completing the previous wizard pages.<br />2.  Click **Next**.|  
+   |**Progress**|The progress for creating the device collection is displayed.|  
+   |**Completion**|Click **Close**.|  
 
- For more information, see the section, “How to Create Collections in Configuration Manager,” in the Configuration manager Documentation Library, which is installed with Configuration Manager.  
+   For more information, see the section, “How to Create Collections in Configuration Manager,” in the Configuration manager Documentation Library, which is installed with Configuration Manager.  
 
 ###  <a name="DeployTargetComputerTaskSequence"></a> Step 6-3: Deploy the Target Computer Task Sequence  
  In the Configuration Manager console, deploy the task sequence created earlier in the process for the target computers. Deploy the task sequence to the collection of target computers created earlier in the process.  
 
 #### To deploy the task sequence  
 
-1.  Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
+1. Click **Start**, point to **All Programs**, and then point to **Microsoft System Center 2012**. Point to **Configuration Manager**, and then click **Configuration Manager Console**.  
 
-2.  In the Configuration Manager console, in the navigation pane, click **Software Library**.  
+2. In the Configuration Manager console, in the navigation pane, click **Software Library**.  
 
-3.  In the Software Library workspace, go to Overview/Operating Systems/Task Sequences.  
+3. In the Software Library workspace, go to Overview/Operating Systems/Task Sequences.  
 
-4.  In the preview pane, click **Windows 8.1 Target Deployment**.  
+4. In the preview pane, click **Windows 8.1 Target Deployment**.  
 
-5.  On the Ribbon, on the **Home** tab, in the **Deployment** group, click **Deploy**.  
+5. On the Ribbon, on the **Home** tab, in the **Deployment** group, click **Deploy**.  
 
-     The Deploy Software Wizard starts.  
+    The Deploy Software Wizard starts.  
 
-6.  Complete the Deploy Software Wizard using the following information.  Accept the default values unless otherwise specified.  
+6. Complete the Deploy Software Wizard using the following information.  Accept the default values unless otherwise specified.  
 
-    |**On this wizard page**|**Do this**|  
-    |-|-|  
-    |**General**|1.  In **Collection**, click **Browse**.<br />2.  In the **Browse Collection** dialog box, click **Microsoft Deployment – Batch 01**, and then click **OK**.<br />3.  In **Comment**, type **Deploy Windows 8.1 to the first batch of target computers**.<br />4.  Click **Next**.|  
-    |**Deployment Settings**|1.  In **Purpose**, select **Available**.<br />2.  Select the **Make available to boot media and PXE** check box.<br />3.  Click **Next**.|  
-    |**Deployment Settings: Schedule**|Click **Next**.|  
-    |**Deployment Settings: User Experience**|Click **Next**.|  
-    |**Deployment Settings: Alerts**|Click **Next**.|  
-    |**Deployment Settings: Distribution Points**|Click **Next**.|  
-    |**Summary**|1.  Review the information in the **Details** box  that you provided while completing the previous wizard pages.<br />2.  Click **Next**.|  
-    |**Progress**|The progress for deploying the task sequence is displayed.|  
-    |**Completion**|Click **Close**.|  
+   |**On this wizard page**|**Do this**|  
+   |-|-|  
+   |**General**|1.  In **Collection**, click **Browse**.<br />2.  In the **Browse Collection** dialog box, click **Microsoft Deployment – Batch 01**, and then click **OK**.<br />3.  In **Comment**, type **Deploy Windows 8.1 to the first batch of target computers**.<br />4.  Click **Next**.|  
+   |**Deployment Settings**|1.  In **Purpose**, select **Available**.<br />2.  Select the **Make available to boot media and PXE** check box.<br />3.  Click **Next**.|  
+   |**Deployment Settings: Schedule**|Click **Next**.|  
+   |**Deployment Settings: User Experience**|Click **Next**.|  
+   |**Deployment Settings: Alerts**|Click **Next**.|  
+   |**Deployment Settings: Distribution Points**|Click **Next**.|  
+   |**Summary**|1.  Review the information in the **Details** box  that you provided while completing the previous wizard pages.<br />2.  Click **Next**.|  
+   |**Progress**|The progress for deploying the task sequence is displayed.|  
+   |**Completion**|Click **Close**.|  
 
- For more information, see the section, “How to Deploy a Task Sequence,” in the Configuration manager Documentation Library, which is installed with Configuration Manager.  
+   For more information, see the section, “How to Deploy a Task Sequence,” in the Configuration manager Documentation Library, which is installed with Configuration Manager.  
 
 ###  <a name="StartTargetComputerTaskSequenceMedia"></a> Step 6-4: Start the Target Computer with the Task Sequence Bootable Media  
  Start the target computer (WDG-CLI-01) with the task sequence bootable media created earlier in the process. This medium starts Windows PE on the reference computer and initiates the MDT process. At the end of the MDT process, Windows 8.1 is deployed on the target computer.  
@@ -1447,16 +1467,17 @@ manager: angrobe
 
 #### To start the target computer with the task sequence bootable media
 
-1.  Start WDG-CLI-01 with the task sequence bootable media created earlier in the process.  
+1. Start WDG-CLI-01 with the task sequence bootable media created earlier in the process.  
 
-     Windows PE starts, and then the Task Sequence Wizard starts.  
+    Windows PE starts, and then the Task Sequence Wizard starts.  
 
-2.  Complete the Task Sequence Wizard using the following information. Accept the default values unless otherwise specified.  
+2. Complete the Task Sequence Wizard using the following information. Accept the default values unless otherwise specified.  
 
-    |**On this wizard page**|**Do this**|  
-    |-|-|      
-    |**Welcome to the Task Sequence Wizard**|In **Password**, type **P@ssw0rd**, and then click **Next**.|  
-    |**Select a Task Sequence**|In the list box, select **Windows 8.1 Target Deployment**, and then click **Next**.|  
+
+   |         **On this wizard page**         |                                     **Do this**                                     |
+   |-----------------------------------------|-------------------------------------------------------------------------------------|
+   | **Welcome to the Task Sequence Wizard** |      In **Password**, type <strong>P@ssw0rd</strong>, and then click **Next**.      |
+   |       **Select a Task Sequence**        | In the list box, select **Windows 8.1 Target Deployment**, and then click **Next**. |
 
 #### To monitor the reference computer deployment process using the Deployment Workbench
 
@@ -1502,66 +1523,66 @@ manager: angrobe
 
 #### To monitor the reference computer deployment process using the Get-MDTMonitorData cmdlet
 
-1.  On WDG-MDT-01, click **Start**, point to **Administrative Tools**, and then click **Windows PowerShell Modules**.The Windows PowerShell Modules command prompt opens.  
+1. On WDG-MDT-01, click **Start**, point to **Administrative Tools**, and then click **Windows PowerShell Modules**.The Windows PowerShell Modules command prompt opens.  
 
-2.  Create a PowerShell drive that uses the MDT PowerShell provider by running the [New-PSDrive](http://technet.microsoft.com/library/hh849829.aspx) cmdlet as shown in the following example:  
+2. Create a PowerShell drive that uses the MDT PowerShell provider by running the [New-PSDrive](http://technet.microsoft.com/library/hh849829.aspx) cmdlet as shown in the following example:  
 
-    ```  
-    New-PSDrive -Name DS001 -PSProvider mdtprovider -Root d:\DeploymentShare$  
-    ```  
+   ```  
+   New-PSDrive -Name DS001 -PSProvider mdtprovider -Root d:\DeploymentShare$  
+   ```  
 
-3.  View the MDT monitoring process by running the **Get-MDTMonitorData** cmdlet as shown in the following example:  
+3. View the MDT monitoring process by running the **Get-MDTMonitorData** cmdlet as shown in the following example:  
 
-    ```  
-    Get-MDTMonitorData -Path DS001:  
-    ```  
+   ```  
+   Get-MDTMonitorData -Path DS001:  
+   ```  
 
-     This command returns the monitoring data collected by the MDT monitoring service running on the same computer that hosts the deployment share as shown in the following example output:  
+    This command returns the monitoring data collected by the MDT monitoring service running on the same computer that hosts the deployment share as shown in the following example output:  
 
-    ```  
-    Name               : WDG-REF-01  
-    PercentComplete    : 96  
-    Settings           :  
-    Warnings           : 0  
-    Errors             : 0  
-    DeploymentStatus   : 1  
-    StartTime          : 6/7/2012 6:45:39 PM  
-    EndTime            :   
-    ID                 : 1  
-    UniqueID           : 94a0830e-f2bb-421c-b1e0-6f86f9eb9fa1  
-    CurrentStep        : 130  
-    TotalSteps         : 134  
-    StepName           : Gather  
-    LastTime           : 6/7/2012 8:46:32 PM  
-    DartIP             :  
-    DartPort           :  
-    DartTicket         :  
-    VMHost             : XYL-DC-02  
-    VMName             : WDG-REF-01  
-    ComputerIdentities : {}  
+   ```  
+   Name               : WDG-REF-01  
+   PercentComplete    : 96  
+   Settings           :  
+   Warnings           : 0  
+   Errors             : 0  
+   DeploymentStatus   : 1  
+   StartTime          : 6/7/2012 6:45:39 PM  
+   EndTime            :   
+   ID                 : 1  
+   UniqueID           : 94a0830e-f2bb-421c-b1e0-6f86f9eb9fa1  
+   CurrentStep        : 130  
+   TotalSteps         : 134  
+   StepName           : Gather  
+   LastTime           : 6/7/2012 8:46:32 PM  
+   DartIP             :  
+   DartPort           :  
+   DartTicket         :  
+   VMHost             : XYL-DC-02  
+   VMName             : WDG-REF-01  
+   ComputerIdentities : {}  
 
-    Name               : WDG-CLI-01  
-    PercentComplete    : 26  
-    Settings           :  
-    Warnings           : 0  
-    Errors             : 0  
-    DeploymentStatus   : 1  
-    StartTime          : 6/7/2012 3:07:13 AM  
-    EndTime            :   
-    ID                 : 2  
-    UniqueID           : 94a0830e-f2bb-421c-b1e0-6f86f9eb9fa1  
-    CurrentStep        : 49  
-    TotalSteps         : 134  
-    StepName           : Capture Network Settings using MDT  
-    LastTime           : 6/7/2012 3:08:32 AM  
-    DartIP             :  
-    DartPort           :  
-    DartTicket         :  
-    VMHost             :   
-    VMName             :   
-    ComputerIdentities : {}  
-    ```  
+   Name               : WDG-CLI-01  
+   PercentComplete    : 26  
+   Settings           :  
+   Warnings           : 0  
+   Errors             : 0  
+   DeploymentStatus   : 1  
+   StartTime          : 6/7/2012 3:07:13 AM  
+   EndTime            :   
+   ID                 : 2  
+   UniqueID           : 94a0830e-f2bb-421c-b1e0-6f86f9eb9fa1  
+   CurrentStep        : 49  
+   TotalSteps         : 134  
+   StepName           : Capture Network Settings using MDT  
+   LastTime           : 6/7/2012 3:08:32 AM  
+   DartIP             :  
+   DartPort           :  
+   DartTicket         :  
+   VMHost             :   
+   VMName             :   
+   ComputerIdentities : {}  
+   ```  
 
-4.  Close the Windows PowerShell console.  
+4. Close the Windows PowerShell console.  
 
- If any problems occur during the deployment, consult the MDT document *Troubleshooting Reference*. When successfully completed, the target computer is running a Windows 8.1 operating system configured like the reference computer.
+   If any problems occur during the deployment, consult the MDT document *Troubleshooting Reference*. When successfully completed, the target computer is running a Windows 8.1 operating system configured like the reference computer.

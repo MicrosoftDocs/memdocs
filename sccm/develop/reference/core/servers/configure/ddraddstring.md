@@ -9,6 +9,7 @@ ms.assetid: a1ea1be3-ec2e-459e-b4de-934d4631ce59
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # DDRAddString
 The `DDRAddString` function, in Configuration Manager, adds a string property to the data discovery record (DDR).  

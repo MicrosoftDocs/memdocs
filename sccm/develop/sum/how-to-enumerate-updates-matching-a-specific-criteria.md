@@ -9,6 +9,7 @@ ms.assetid: 5a37eb14-bc75-4ecd-a48f-9dde3b901a02
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Enumerate Updates Matching a Specific Criteria
 This topic explains how to enumerate software updates that match specific criteria in System Center Configuration Manager by building a query and then using the `ExecuteQuery` method of the `QueryProcessor` class to run the query.  
@@ -26,17 +27,17 @@ This topic explains how to enumerate software updates that match specific criter
 
  Four example queries are demonstrated below:  
 
-1.  A query that displays the software updates that have already been downloaded.  
+1. A query that displays the software updates that have already been downloaded.  
 
-2.  A query that displays the software updates that have already been deployed.  
+2. A query that displays the software updates that have already been deployed.  
 
-3.  A query that displays the software updates that have a particular severity value.  
+3. A query that displays the software updates that have a particular severity value.  
 
-4.  A query that displays the software update CI_IDs that are associated with a specific knowledge base article.  
+4. A query that displays the software update CI_IDs that are associated with a specific knowledge base article.  
 
- Detailed information about the properties that are associated with a software update is in the [SMS_SoftwareUpdate](../../develop/reference/sum/sms_softwareupdate-server-wmi-class.md) class reference material.  
+   Detailed information about the properties that are associated with a software update is in the [SMS_SoftwareUpdate](../../develop/reference/sum/sms_softwareupdate-server-wmi-class.md) class reference material.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
+   For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 

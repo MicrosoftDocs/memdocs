@@ -9,6 +9,7 @@ ms.assetid: 3becb7a9-cf6b-432b-85e7-a0087df0dbb6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Create Software Distribution Packages, Programs, and Advertisements for Mobile Devices
 System Center Configuration Manager device management enables mobile device software distribution to mobile devices. Packages, programs, and advertisements for mobile devices are much the same as those for computer clients. For detailed information about creating packages, programs and advertisements, see the following topics:  

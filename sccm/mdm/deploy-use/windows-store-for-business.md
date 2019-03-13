@@ -10,6 +10,7 @@ ms.assetid: 8c13d593-3120-47a8-8fae-eff497afcd73
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Microsoft Store for Business in System Center Configuration Manager
 

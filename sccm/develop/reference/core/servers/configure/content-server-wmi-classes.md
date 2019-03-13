@@ -9,6 +9,7 @@ ms.assetid: 93abd3be-110a-4932-9e3c-9ddc7441d05f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Content Server WMI Classes
 Content classes, in System Center Configuration Manager, allow you to manage content files for applications, packages, software updates, and operating system deployment.  

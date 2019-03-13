@@ -9,6 +9,7 @@ ms.assetid: 79363139-dce4-47c0-9c16-8a3979d2e4df
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_ComponentSummarizer Server WMI Class
 The `SMS_ComponentSummarizer` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a component summarizer that reports on the health of individual Configuration Manager components.  
@@ -225,13 +226,13 @@ Class SMS_ComponentSummarizer : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Read (read-only)  
+- Read (read-only)  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- This class reports on component health by counting the error, warning, and informational status messages that are produced by each component. It provides a high-level view of the health of server components at a given site. An instance of this class is created for each server component running in the site.  
+  This class reports on component health by counting the error, warning, and informational status messages that are produced by each component. It provides a high-level view of the health of server components at a given site. An instance of this class is created for each server component running in the site.  
 
- Queries must include a `TallyInterval` value.  
+  Queries must include a `TallyInterval` value.  
 
 ## Requirements  
 

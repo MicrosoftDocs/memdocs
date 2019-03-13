@@ -9,6 +9,7 @@ ms.assetid: daf3bd12-cb05-46a8-83c7-485b4460bb85
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_TermsAndConditionsSettings Server WMI Class
 The  `SMS_TermsAndConditionsSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents Terms and Conditions settings.  
@@ -490,11 +491,11 @@ Class SMS_TermsAndConditionsSettings : SMS_SettingsDefinitionBase
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Dynamic  
+- Dynamic  
 
--   Secured  
+- Secured  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
 ## Requirements  
 

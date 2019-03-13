@@ -9,6 +9,7 @@ ms.assetid: 757473b7-b517-4a03-b812-1dce4834cf5d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_SCI_Address Server WMI Class
 The `SMS_SCI_Address` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a sender address, which is a link between the site for which the site control file exists and another site.  
@@ -69,27 +70,27 @@ Class SMS_SCI_Address : SMS_SiteControlItem
 
  Destination site code with which the sender communicates. The default value is "".  
 
--   If `DestinationType` is 0, this value is the destination site code.  
+- If `DestinationType` is 0, this value is the destination site code.  
 
--   If `DestinationType` is 1, this value is the FQDN of the destination distribution point.  
+- If `DestinationType` is 1, this value is the FQDN of the destination distribution point.  
 
- `DesSiteName`  
- Data type: `String`  
+  `DesSiteName`  
+  Data type: `String`  
 
- Access type: Read-only  
+  Access type: Read-only  
 
- Qualifiers: [read]  
+  Qualifiers: [read]  
 
- Destination site name with which the sender communicates.  
+  Destination site name with which the sender communicates.  
 
- `DestinationType`  
- Data type: `UInt32`  
+  `DestinationType`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [none]  
+  Qualifiers: [none]  
 
- Destination site type. Possible values are:  
+  Destination site type. Possible values are:  
 
 |||  
 |-|-|  

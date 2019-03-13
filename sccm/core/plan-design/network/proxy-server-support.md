@@ -10,6 +10,7 @@ ms.assetid: 9123a87a-0b6f-43c7-b5c2-fac5d09686b1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Proxy server support in Configuration Manager
@@ -70,7 +71,7 @@ This site system role uses the proxy when it connects to Microsoft Update to dow
 These settings are on the **Proxy and Account Settings** tab of the software update point properties.  
 
 > [!NOTE]  
->  By default, the **System** account for the server on which an automatic deployment rule was created is used to connect to the internet and download software updates when the automatic deployment rules run. Alternatively, configure and use the site system proxy server account. 
+>  By default, when the automatic deployment rules run, the **System** account on the site server of the site on which an automatic deployment rule was created is used to connect to the internet and download software updates. Alternatively, configure and use the site system proxy server account. 
 >   
 >  When this account cannot access the internet, software updates fail to download. The following entry is logged to **ruleengine.log**:  
 > `Failed to download the update from internet. Error = 12007.`  

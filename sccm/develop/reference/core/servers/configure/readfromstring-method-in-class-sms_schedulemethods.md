@@ -9,6 +9,7 @@ ms.assetid: b33c6ead-e705-4fe7-9f83-1b66d905f881
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ReadFromString Method in Class SMS_ScheduleMethods
 The `ReadFromString` Windows Management Instrumentation (WMI) class method, in System Center Configuration Manager, reads [SMS_ScheduleToken Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_scheduletoken-server-wmi-class.md) objects from an interval string.  

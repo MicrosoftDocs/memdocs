@@ -9,6 +9,7 @@ ms.assetid: 9d48ae1d-dce8-483f-bcd0-f4154a3ecbef
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_BoundaryGroupSiteSystems Server WMI Class
 The `SMS_BoundaryGroupSiteSystems` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents site systems that serve computers within the boundary group.  

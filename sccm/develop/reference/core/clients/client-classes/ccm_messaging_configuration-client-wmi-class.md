@@ -9,6 +9,7 @@ ms.assetid: cc2afe45-3c53-4f4e-a353-c75552a3410c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # CCM_Messaging_Configuration Client WMI Class
 In System Center Configuration Manager, the `CCM_Messaging_Configuration` class is a client Windows Management Instrumentation (WMI) class that supports messaging-related settings that are exposed to administrators.  

@@ -9,6 +9,7 @@ ms.assetid: df307c37-020a-4972-8d7a-df0a57377ead
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SetRemCtrlSettings Method in Class CCM_RemoteControlManager
 The `SetRemCtrlSettings` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that specifies the remote control settings on a client computer.   

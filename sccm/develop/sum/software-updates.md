@@ -9,6 +9,7 @@ ms.assetid: 5085e08a-8075-416d-bb22-efd5dd07f7bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Software Updates
 This section provides topics that show you how to programmatically manage software updates in System Center Configuration Manager.  

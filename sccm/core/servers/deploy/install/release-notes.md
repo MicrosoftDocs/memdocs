@@ -1,8 +1,8 @@
 ---
 title: Release notes
 titleSuffix: Configuration Manager
-description: Learn about urgent issues that are not yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 08/21/2018
+description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
+ms.date: 03/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,6 +10,7 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Release notes for Configuration Manager
@@ -20,17 +21,20 @@ With Configuration Manager, product release notes are limited to urgent issues. 
 
 Feature-specific documentation includes information about known issues that affect core scenarios.  
 
-> [!TIP]  
->  This topic contains release notes for the current branch of Configuration Manager. For information on the technical preview branch, see [Technical Preview](/sccm/core/get-started/technical-preview)  
+This topic contains release notes for the current branch of Configuration Manager. For information on the technical preview branch, see [Technical Preview](/sccm/core/get-started/technical-preview)  
 
 For information about the new features introduced with different versions, see the following articles:
+- [What's new in version 1810](/sccm/core/plan-design/changes/whats-new-in-version-1810)
 - [What's new in version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806)  
 - [What's new in version 1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)
-- [What's new in version 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)
+
+> [!Tip]  
+> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader: 
+> `https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
 
 
 
-## Setup and upgrade  
+## Set up and upgrade  
 
 
 ### When using redistributable files from the CD.Latest folder, setup fails with a manifest verification error
@@ -54,7 +58,7 @@ Use one of the following options:
 Starting in Configuration Manager version 1802, the Customer Experience Improvement Program (CEIP) feature is removed from the product. When [automating installation](/sccm/core/servers/deploy/install/command-line-options-for-setup) of a new site from a command-line or unattended script, setup returns an error that a required parameter is missing. 
 
 #### Workaround
-While it has no affect on the outcome of the setup process, include the **JoinCEIP** parameter in your setup command line.
+While it has no effect on the outcome of the setup process, include the **JoinCEIP** parameter in your setup command line.
 
  > [!Note]  
  > The EnableSQM parameter for [console setup](/sccm/core/servers/deploy/install/install-consoles) is not required.
@@ -64,7 +68,7 @@ While it has no affect on the outcome of the setup process, include the **JoinCE
 <!--VSO 2858826, SCCMDocs issue 772-->
 *Applies to: Configuration Manager version 1806*
 
-If the [service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point) is co-located with a [site server in passive mode](/sccm/core/servers/deploy/configure/site-server-high-availability), then deployment and monitoring of a [cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) doesn't start. The cloud service manager component (SMS_CLOUD_SERVICES_MANAGER) is in a stopped state.
+If the [service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point) is colocated with a [site server in passive mode](/sccm/core/servers/deploy/configure/site-server-high-availability), then deployment and monitoring of a [cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) doesn't start. The cloud service manager component (SMS_CLOUD_SERVICES_MANAGER) is in a stopped state.
 
 #### Workaround
 Move the service connection point role to another server.
@@ -74,27 +78,50 @@ Move the service connection point role to another server.
 <!-- ## Backup and recovery  -->
 
 
-## Client deployment and upgrade
+<!--## Client deployment and upgrade-->
 
-### Azure AD-enabled clients can't communicate with management point
-<!--501089-->  
-*Applies to: Configuration Manager version 1706*
-<!--also fixed in 1710 HFRU-->  
-In the scenario to [install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](/sccm/core/clients/deploy/deploy-clients-cmg-azure), client communication fails when the HTTPS-enabled management point uses alternate database credentials. 
+
+
+## OS deployment
+
+### After passive site server is promoted, the default boot image packages still have package source on the previous active server
+<!--3453224, SCCMDocs-pr issue 3097-->
+*Applies to: Configuration Manager version 1810*
+
+If you have a site server in passive mode (server B), when you promote it to active, the content location for the default boot images continues to reference the previously active server (server A). If server A has a hardware failure, you can't update or change the default boot images.
 
 #### Workaround
-Mitigate this issue with one of the following actions:
-- Update the site to the latest version, and apply the latest hotfix
-- Change the credentials that the management point uses.
-
-
-<!-- ## Operating system deployment  -->
+None
 
 
 
 ## Software updates
 
-### Changing Office 365 client setting doesn’t apply 
+### Security roles are missing for phased deployments
+<!--3479337, SCCMDocs-pr issue 3095-->
+*Applies to: Configuration Manager version 1810*
+
+The **OS Deployment Manager** built-in security role has permissions to [phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence). The following roles are missing these permissions:  
+
+- **Application Administrator**  
+- **Application Deployment Manager**  
+- **Software Update Manager**  
+
+The **App Author** role may appear to have some permissions to phased deployments, but shouldn't be able to create deployments. 
+
+A user with one these roles can start the Create Phased Deployment wizard, and can see phased deployments for an application or software update. They can't complete the wizard, or make any changes to an existing deployment.
+
+#### Workaround
+Create a custom security role. Copy an existing security role, and add the following permissions on the **Phased Deployment** object class:
+- Create  
+- Delete  
+- Modify  
+- Read  
+
+For more information, see [Create custom security roles](/sccm/core/servers/deploy/configure/configure-role-based-administration#BKMK_CreateSecRole)
+
+
+### Changing Office 365 client setting doesn't apply 
 <!--511551-->
 *Applies to: Configuration Manager version 1802*  
 
@@ -111,6 +138,19 @@ Change the following registry value to `0` and restart the **Microsoft Office Cl
 
 
 ## Mobile device management  
+
+### Validation for iOS app link sometimes fails on valid link
+<!-- LSI 106004348 -->
+When you create a new application of type **App Package for iOS from App Store**, the validator doesn't accept some valid URLs for the **Location**. Specifically, the iOS App Store doesn't require a value for the app name section of the URL. For example, both of the following links are valid and point to the same app, but the **Create Application Wizard** only accepts the first:
+- `https://itunes.apple.com/us/app/app-name/id123456789?mt=8`
+- `https://itunes.apple.com/us/app//id123456789?mt=8`
+
+#### Workaround
+When you create an iOS app that's missing the app name from the URL, add any value as if it were the app name to the URL. For example:
+- `https://itunes.apple.com/us/app/any-string/id123456789?mt=8`
+
+This action allows you to complete the wizard. The app is still successfully deployed to iOS devices. The string you add to the URL appears as the **Name** on the **General Information** tab in the wizard. It's also the app's label in the Company Portal.
+
 
 ### You can no longer deploy Windows Phone 8.1 VPN profiles to Windows 10
 <!-- 503274  -->

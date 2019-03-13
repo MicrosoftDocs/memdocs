@@ -9,6 +9,7 @@ ms.assetid: ab1305fd-d845-4b00-9c96-21cd8d513690
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Asset Intelligence Server WMI Classes
 In System Center Configuration Manager, the Asset Intelligence server Windows Management Instrumentation (WMI) classes query client computers for usage, software, and licensing data. These classes provide data to the Configuration Manager console about collected data.  

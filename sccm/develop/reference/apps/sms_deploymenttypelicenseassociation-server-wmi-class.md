@@ -9,6 +9,7 @@ ms.assetid: f401795b-30b7-43f9-be66-0d3658c2e316
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_DeploymentTypeLicenseAssociation Server WMI Class
 The `SMS_DeploymentTypeLicenseAssociation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a license association for a deployment type.  
@@ -75,11 +76,11 @@ Class SMS_DeploymentTypeLicenseAssociation : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Dynamic  
+- Dynamic  
 
--   Read (read-only)  
+- Read (read-only)  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
 ## Requirements  
 

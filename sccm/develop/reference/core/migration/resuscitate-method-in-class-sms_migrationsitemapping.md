@@ -9,6 +9,7 @@ ms.assetid: 0a498907-c508-48e3-80af-53441619dbed
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Resuscitate Method in Class SMS_MigrationSiteMapping
 The `Resuscitate` Windows Management Instrumentation (WMI) class method, in Configuration Manager, resuscitates site mapping.  

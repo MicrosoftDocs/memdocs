@@ -9,6 +9,7 @@ ms.assetid: a775bb4c-6f9f-4918-bd96-892ca9e05467
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_DeviceMethods Server WMI Class
 The `SMS_DeviceMethods` Windows Management Instrumentation (WMI) class is an SMS Provider server class that  provides access to actions that you can take on mobile devices and Microsoft Exchange ActiveSync devices.  
@@ -39,11 +40,11 @@ Class SMS_DeviceMethods : SMS_Baseclass ();
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Secured  
+- Secured  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- Mobile device setting packages use programs, distribution points, and advertisements to collections to distribute their content.  
+  Mobile device setting packages use programs, distribution points, and advertisements to collections to distribute their content.  
 
 ## Requirements  
 

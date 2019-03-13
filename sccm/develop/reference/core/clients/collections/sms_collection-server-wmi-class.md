@@ -9,6 +9,7 @@ ms.assetid: 7b900446-4a60-4343-9f8b-2d6ecc7ac951
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_Collection Server WMI Class
 The `SMS_Collection` Windows Management Instrumentation (WMI) class is an SMS Provider server class in System Center Configuration Manager. It represents a collection of resources related logically by rules along with collection information.  
@@ -385,15 +386,15 @@ Class SMS_Collection : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Secured  
+- Secured  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- Collection information represented by this class includes the refresh schedule and the members, represented by [SMS_CM_RES_COLL_CollectionID Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_cm_res_coll_collectionid-server-wmi-class.md) objects. Your application can use a collection to target resources for software distribution.  
+  Collection information represented by this class includes the refresh schedule and the members, represented by [SMS_CM_RES_COLL_CollectionID Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_cm_res_coll_collectionid-server-wmi-class.md) objects. Your application can use a collection to target resources for software distribution.  
 
- When you run a query against a dynamic collection represented by `SMS_Collection`, ensure that the SMS Provider is loaded or that another method or query has already run.  
+  When you run a query against a dynamic collection represented by `SMS_Collection`, ensure that the SMS Provider is loaded or that another method or query has already run.  
 
- The application should use the `SMS_Collection` methods to add, update, or delete membership rules defined by the `CollectionRules` property. This property is not retrieved when your application enumerates `SMS_Collection`. To obtain the collection rules for a collection, your application must use `IWbemServices::GetObject` or `SWbemServices::Get`. For more information, see Configuration Manager Context Qualifiers.  
+  The application should use the `SMS_Collection` methods to add, update, or delete membership rules defined by the `CollectionRules` property. This property is not retrieved when your application enumerates `SMS_Collection`. To obtain the collection rules for a collection, your application must use `IWbemServices::GetObject` or `SWbemServices::Get`. For more information, see Configuration Manager Context Qualifiers.  
 
 ## Requirements  
 

@@ -10,7 +10,8 @@ ms.assetid: 83cf156c-36de-483f-a9e6-2e06158f3b20
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
+ms.collection: M365-identity-device-management
 ---
 
 # How to use the Package Conversion Manager plug-in

@@ -9,6 +9,7 @@ ms.assetid: eee21135-4800-4002-90ed-f125270369e6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_SCI_SiteDefinition Server WMI Class
 The `SMS_SCI_SiteDefinition` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains general definitions for the site (for example, name) and for accounts (for example, SQL) used by Configuration Manager server components.  
@@ -226,18 +227,18 @@ Class SMS_SCI_SiteDefinition : SMS_SiteControlItem
 
  Processor platform of the site server. Possible values are:  
 
--   AMD64  
+- AMD64  
 
- `SiteType`  
- Data type: `UInt32`  
+  `SiteType`  
+  Data type: `UInt32`  
 
- Access type: Read/Write  
+  Access type: Read/Write  
 
- Qualifiers: [ResIDValueLookup("SiteType")]  
+  Qualifiers: [ResIDValueLookup("SiteType")]  
 
- Type of site. Possible values are listed for the `Type` property of [SMS_Site Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_site-server-wmi-class.md).  
+  Type of site. Possible values are listed for the `Type` property of [SMS_Site Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_site-server-wmi-class.md).  
 
- For this class, the default value is PRIMARY (2).  
+  For this class, the default value is PRIMARY (2).  
 
 |||  
 |-|-|  

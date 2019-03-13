@@ -8,7 +8,8 @@ ms.assetid: 37075869-ebe8-4a25-a2d1-dfdf8cc029e6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
+ms.collection: M365-identity-device-management
 ---
 # System Center Configuration Manager SDK Redistributables
 

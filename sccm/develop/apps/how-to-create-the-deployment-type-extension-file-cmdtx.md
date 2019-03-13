@@ -9,6 +9,7 @@ ms.assetid: c576b3fd-5eb3-4e57-9c20-3158f8d0b7cb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Create the Deployment Type Extension File (*.cmdtx)
 The application management extension must be installed on each Configuration Manager administrator console computer that will create a custom deployment technology. The first step in installing the application management extension files is to create a deployment type extension file (*.cmdtx).  
@@ -50,16 +51,16 @@ The application management extension must be installed on each Configuration Man
     // <param name="summaryText">Summary text to be presented</param>  
     public void Summarize(string summaryText)   
     {  
-          System.Console.WriteLine(summaryText);   
-          return;   
+          System.Console.WriteLine(summaryText);   
+          return;   
     }  
     // Creates a new Deployment Type Extension using the specified source path  
     // <param name="sourcePath">Source path used to create the Deployment Type Extension</param>  
     // <param name="deploymentTypeExtensionFilePath">Resulting Deployment Type Extension file</param>  
     private void CreateDeploymentTypeExtensionFile(string sourcePath, string deploymentTypeExtensionFilePath)   
     {  
-          DeploymentTypeExtender.CreateExtension(sourcePath, deploymentTypeExtensionFilePath, this.Summarize);   
-          return;   
+          DeploymentTypeExtender.CreateExtension(sourcePath, deploymentTypeExtensionFilePath, this.Summarize);   
+          return;   
     }  
     ```  
 

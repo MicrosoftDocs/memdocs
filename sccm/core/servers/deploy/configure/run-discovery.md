@@ -10,6 +10,7 @@ ms.assetid: 30844519-ce14-456f-bfb8-4318b578e9f6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Run discovery for System Center Configuration Manager
 

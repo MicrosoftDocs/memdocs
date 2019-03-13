@@ -8,6 +8,7 @@ ms.assetid: 7e1a9f96-6e2d-4656-9bb1-a5b8d40b3416
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager SDK Requirements
 This section provides information about System Center Configuration Manager SDK requirements.  

@@ -10,9 +10,13 @@ ms.assetid: ab7626ae-d4bf-4ca6-ab25-c61f96800a02
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
 
-# Enable Endpoint Protection malware definitions to download from Microsoft Updates for Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Enable Endpoint Protection malware definitions to download from Microsoft Updates for Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
  When you select to download definition updates from Microsoft Update, clients will check the Microsoft Update site at the interval defined in the **Definition updates** section of the antimalware policy dialog box.
 
@@ -26,10 +30,10 @@ ms.author: aaroncz
 
 > [!IMPORTANT]
 >  Clients must have access to Microsoft Update on the Internet to be able use this method to download definition updates.
-
-
+> 
+> 
 > [!div class="button"]
-[Next step >](endpoint-antimalware-policies.md)
-
+> [Next step >](endpoint-antimalware-policies.md)
+> 
 > [!div class="button"]
-[Back >](endpoint-configure-alerts.md)
+> [Back >](endpoint-configure-alerts.md)

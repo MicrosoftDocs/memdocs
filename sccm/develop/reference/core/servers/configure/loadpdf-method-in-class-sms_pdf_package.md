@@ -9,6 +9,7 @@ ms.assetid: 37670a60-5ee3-4fc4-b9b3-6c44e6858201
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # LoadPDF Method in Class SMS_PDF_Package
 The `LoadPDF` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports a specified package definition file into the package definition file store.  

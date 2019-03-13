@@ -9,6 +9,7 @@ ms.assetid: 906337e8-d42b-4110-86e7-c04bf9fd347a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Software Distribution Maintenance Windows
 This section provides information about software distribution maintenance windows in System Center Configuration Manager.  

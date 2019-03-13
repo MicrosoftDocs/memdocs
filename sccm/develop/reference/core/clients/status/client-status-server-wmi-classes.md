@@ -9,6 +9,7 @@ ms.assetid: f84d6ea4-0f49-45c1-870d-2cdccc191c79
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Client Status Server WMI Classes
 In System Center Configuration Manager, Client Status classes help administrator evaluate the status of client computers that they are managing. This section describes the Client Status classes.  

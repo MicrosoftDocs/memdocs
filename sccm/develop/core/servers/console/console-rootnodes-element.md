@@ -9,6 +9,7 @@ ms.assetid: 28814bf8-e339-4b32-85bc-0676d530dcff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Console RootNodes Element
 `RootNodes` elements are the topmost nodes for a feature. For example, software distribution.  

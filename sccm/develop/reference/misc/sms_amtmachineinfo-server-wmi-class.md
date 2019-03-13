@@ -9,6 +9,7 @@ ms.assetid: ca6b551f-e376-4c75-a1c6-1139e86794a8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_AMTMachineInfo Server WMI Class
 The `SMS_AMTMachineInfo` Windows Management Instrumentation (WMI) class, in System Center Configuration Manager, represents known information about a computer that supports Intel Active Management Technology (Intel AMT).  
@@ -157,17 +158,17 @@ Class SMS_AMTMachineInfo : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Description("The class contains the AMT computer related properties.")  
+- Description("The class contains the AMT computer related properties.")  
 
--   DisplayName("AMT Machine Properties")  
+- DisplayName("AMT Machine Properties")  
 
--   Dynamic  
+- Dynamic  
 
--   Provider("ExtnProv")  
+- Provider("ExtnProv")  
 
--   Read  
+- Read  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
 ## Requirements  
 

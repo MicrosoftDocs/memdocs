@@ -9,24 +9,25 @@ ms.assetid: 29a19b45-0413-4cb1-a74a-4c38cdc84118
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Define the Resources
 To support the Installer, a custom XML schema should be included as part of the assembly. The schema file (XSD) file must be included as a resource in the assembly.  
 
 > [!IMPORTANT]
 >  The custom XML schema name must use the following naming convention:  
->   
->  1.  \<*InstallerClassName*>_XmlSchema.xsd  
->   
->  In the case of the RDP sample, the Installer implementation is called RdpInstaller, therefore the XML schema file for that technology is called RdpInstaller_XmlSchema.xsd.  
+> 
+> 1. \<*InstallerClassName*>_XmlSchema.xsd  
+> 
+>    In the case of the RDP sample, the Installer implementation is called RdpInstaller, therefore the XML schema file for that technology is called RdpInstaller_XmlSchema.xsd.  
 
  As part of the resource documentation, a localizable title and description the technology should be created.  
 
 > [!IMPORTANT]
 >  The Title and Desciption should use the following naming conventions:  
->   
->  1.  \<*DeploymentTechnologyClassName*>_Title  
-> 2.  \<*DeploymentTechnologyClassName*>_Description  
+> 
+> 1. \<*DeploymentTechnologyClassName*>_Title  
+>    2.  \<*DeploymentTechnologyClassName*>_Description  
 
 ### To define a custom schema file  
 

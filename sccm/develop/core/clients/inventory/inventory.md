@@ -8,6 +8,7 @@ ms.assetid: 421e07ab-4f34-41fa-9c1c-e4685c22f511
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Inventory
 This section provides task-based topics that show you how to programmatically manage inventory in System Center Configuration Manager.  

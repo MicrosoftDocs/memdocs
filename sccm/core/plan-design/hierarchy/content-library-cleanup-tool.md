@@ -10,6 +10,7 @@ ms.assetid: 226cbbb2-9afa-4e2e-a472-be989c0f0e11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Content library cleanup tool
@@ -88,6 +89,7 @@ To run the tool:
 Use these command-line parameters in any order.   
 
 ### Required parameters
+
 |Parameter|Details|
 |---------|-------|
 | `/dp <distribution point FQDN>`  | Specify the fully qualified domain name (FQDN) of the distribution point to clean. |

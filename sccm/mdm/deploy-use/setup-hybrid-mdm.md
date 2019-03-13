@@ -10,6 +10,7 @@ ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Set up hybrid MDM with Configuration Manager and Microsoft Intune
@@ -53,6 +54,6 @@ After hybrid setup is complete, devices can be enrolled in Configuration Manager
 
 Looking for Intune without Configuration Manager?
 > [!div class="button"]
-[View Intune docs >](https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune)
+> [View Intune docs >](https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune)
 
 

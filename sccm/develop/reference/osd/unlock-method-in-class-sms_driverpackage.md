@@ -9,6 +9,7 @@ ms.assetid: 082d6a5f-f16f-47e7-b314-d65962d13250
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Unlock Method in Class SMS_DriverPackage
 The `Unlock` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the source site to the current site, unlocking the driver package.  

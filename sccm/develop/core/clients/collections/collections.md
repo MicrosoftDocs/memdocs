@@ -8,6 +8,7 @@ ms.assetid: f4d35324-80f2-4d4b-b6a9-9619caeba46c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Collections
 This section provides topics that show you how to programmatically manage Collections in System Center Configuration Manager.  

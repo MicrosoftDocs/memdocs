@@ -9,6 +9,7 @@ ms.assetid: edd1fa6e-d756-4805-94c0-8a3a5d428836
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_CIAssignmentToCI Server WMI Class
 The `SMS_CIAssignmentToCI` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a relationship between a configuration baseline and its assignments.  
@@ -48,11 +49,11 @@ Class SMS_CIAssignmentToCI : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Association: ToInstance  
+- Association: ToInstance  
 
--   Read (read-only)  
+- Read (read-only)  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
 ## Requirements  
 

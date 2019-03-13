@@ -9,6 +9,7 @@ ms.assetid: 34d8df5f-88d1-425a-bbe7-40b145154961
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager NAP Server WMI Classes
 Network Access Protection (NAP) server WMI classes in System Center Configuration Manager assist in assessment of NAP compliance.  

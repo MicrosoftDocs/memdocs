@@ -10,8 +10,12 @@ ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# Set up your System Center Configuration Manager lab*Applies to: System Center Configuration Manager (Current Branch)*
+# Set up your System Center Configuration Manager lab
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Following the guidance in this topic will enable you to set up a lab for evaluating Configuration Manager with simulated real-life activities.  
 
 ##  <a name="BKMK_LabCore"></a> Core components  

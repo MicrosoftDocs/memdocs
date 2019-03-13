@@ -1,0 +1,44 @@
+- name: Desktop Analytics
+  items:
+  - name: Overview
+    href: overview.md
+  - name: Tutorials
+    items:
+    - name: Pilot Office 365
+      href: tutorial-office-365.md
+  - name: Concepts
+    items:
+    - name: Deployment plans
+      href: about-deployment-plans.md
+    - name: Assets
+      href: about-assets.md
+    - name: Quality and feature updates
+      href: about-updates.md
+    - name: Compatibility risk for Windows apps
+      href: compat-risk.md
+    - name: Health status monitoring
+      href: health-status-monitoring.md
+  - name: How-to guides
+    items:
+    - name: Set up Desktop Analytics
+      href: set-up.md
+    - name: Connect Configuration Manager
+      href: connect-configmgr.md
+    - name: Enroll devices
+      href: enroll-devices.md
+    - name: Create deployment plans
+      href: create-deployment-plans.md
+    - name: Deploy to pilot
+      href: deploy-pilot.md
+    - name: Deploy to production
+      href: deploy-prod.md
+    - name: Compatibility assessment with App Health Analyzer
+      href: app-health-analyzer.md
+  - name: Reference
+    items:
+    - name: Enable data sharing
+      href: enable-data-sharing.md
+    - name: Troubleshooting
+      href: troubleshooting.md
+    - name: Privacy
+      href: privacy.md

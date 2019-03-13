@@ -9,6 +9,7 @@ ms.assetid: e5ffb7f3-970d-4a04-94e4-cc749f028c3d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_AMTObject Client WMI Class
 The `SMS_AMTObject` Windows Management Instrumentation (WMI) class in Configuration Manager contains Intel Active Management technology (Intel AMT) information, which is utilized by the Configuration Manager Hardware Inventory client component for reporting purposes. The information is supplied by the Intel HECI driver component, which is owned by Intel. Most properties in this class are AMT hardware-specific.  
@@ -236,19 +237,19 @@ Class class SMS_AMTObject
 ## Remarks  
  Class qualifiers for this class include:  
 
--   dynamic  
+- dynamic  
 
--   provider("AMTInvProvider")  
+- provider("AMTInvProvider")  
 
--   SMS_Class_ID ("MICROSOFT&#124;AMT_AGENT&#124;1.0")  
+- SMS_Class_ID ("MICROSOFT&#124;AMT_AGENT&#124;1.0")  
 
--   SMS_Group_Name ("AMT Agent")  
+- SMS_Group_Name ("AMT Agent")  
 
--   SMS_Namespace (TRUE)  
+- SMS_Namespace (TRUE)  
 
--   SMS_Report (TRUE)  
+- SMS_Report (TRUE)  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
 ## Requirements  
 

@@ -9,6 +9,7 @@ ms.assetid: 634cb192-7fcd-4e8d-8730-3c1ed832bb61
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_OSDeploymentKitInstalledVersion Server WMI Class
 The `SMS_OSDeploymentKitInstalledVersion` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a mapping of server names to an  installed Assessment and Deployment Kit (ADK) version.  
@@ -71,9 +72,9 @@ Class SMS_OSDeploymentKitInstalledVersion : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Dynamic  
+- Dynamic  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
 ## Requirements  
 

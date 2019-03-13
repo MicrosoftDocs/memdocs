@@ -9,6 +9,7 @@ ms.assetid: f17ba143-0736-4836-a145-b6b10f60df6a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # About Using DDRs in Resource Discovery
 This section provides information about using Data Discovery Records (DDRs) in resource discovery in System Center Configuration Manager.  

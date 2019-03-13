@@ -9,6 +9,7 @@ ms.assetid: fc88625c-f02c-4711-a9de-4a5d76fc9371
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_AMTCertificate Server WMI Class
 The `SMS_AMTCertificate` Windows Management Instrumentation (WMI) class, in System Center Configuration Manager, contains the Intel Active Management technology (Intel AMT) certificates, which are registered to the server. This is a read-only class.  
@@ -94,7 +95,7 @@ Class SMS_AMTCertificate : SMS_BaseClass
 
  Access type: Read-only  
 
- Qualifiers: enumeration("RequestPending(1), ReqestSuccess(2),IssuedToAMT(3),Revoked(4),Active(5)")  
+ Qualifiers: enumeration("RequestPending(1), RequestSuccess(2),IssuedToAMT(3),Revoked(4),Active(5)")  
 
  Certificate status. Possible values are:  
 
@@ -190,15 +191,15 @@ Class SMS_AMTCertificate : SMS_BaseClass
 
  Class qualifiers for this class include:  
 
--   DisplayName("AMT Certificates")  
+- DisplayName("AMT Certificates")  
 
--   Dynamic  
+- Dynamic  
 
--   Provider("ExtnProv")  
+- Provider("ExtnProv")  
 
--   Read  
+- Read  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
 ## Requirements  
 

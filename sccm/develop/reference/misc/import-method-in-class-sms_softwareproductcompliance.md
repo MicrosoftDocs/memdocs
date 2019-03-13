@@ -9,6 +9,7 @@ ms.assetid: 7fe387a8-9ab5-43aa-b50e-d8ca5fb5825c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Import Method in Class SMS_SoftwareProductCompliance
 The `Import` Windows Management Instrumentation (WMI) class method, in Configuration Manager, overwrites any matching records of program-compliance data in the database. It also returns the number of records that were imported.  

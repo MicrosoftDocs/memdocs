@@ -10,6 +10,7 @@ ms.assetid: b0c9db74-841e-46eb-8924-957cde968bf7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # Upgrade Windows devices with the edition upgrade policy in System Center Configuration Manager

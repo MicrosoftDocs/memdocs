@@ -5,11 +5,12 @@ description: Follow these steps to configure software update classifications and
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/10/2018
+ms.date: 02/15/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
+ms.collection: M365-identity-device-management
 ---
 #  Configure classifications and products to synchronize  
 
@@ -34,14 +35,14 @@ ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
     > [!NOTE]  
     >  Every software update is defined with an update classification that helps to organize the different types of updates. During the synchronization process, the software updates metadata for the specified classifications are synchronized. Configuration Manager provides the ability to synchronize software updates with the following update classifications:  
     >   
-    > - **Critical Updates**: Specifies a broadly released update for a specific problem that addresses a critical, non-security-related bug.  
-    > - **Definition Updates**: Specifies an update to virus or other definition files.  
-    > - **Feature Packs**: Specifies new product features that are distributed outside of a product release and that are typically included in the next full product release.  
-    > - **Security Updates**: Specifies a broadly released update for a product-specific, security-related issue.  
-    > - **Service Packs**: Specifies a cumulative set of hotfixes that are applied to an application. These hotfixes can include: security updates, critical updates, software updates, and so on.  
+    > - **Critical Updates**: Specifies a widely released fix for a specific problem that addresses a critical, non-security-related bug.  
+    > - **Definition Updates**: Specifies a widely released and frequent software update that contains additions to a product's definition database.  
+    > - **Feature Packs**: Specifies new product functionality that are first distributed outside of a product release and that are typically included in the next full product release.  
+    > - **Security Updates**: Specifies a widely released fix for a product-specific, security-related vulnerability.  
+    > - **Service Packs**: Specifies a tested, cumulative set of all hotfixes, security updates, critical updates, and updates that are applied to a product. Additionally, service packs may contain additional fixes for problems that are found internally since the release of the product.  
     > - **Tools**: Specifies a utility or feature that helps to complete one or more tasks.  
-    > - **Update Rollups**: Specifies a cumulative set of hotfixes that are packaged together for easy deployment. These hotfixes can include security updates, critical updates, updates, and so on. An update rollup generally addresses a specific area, such as security or a product component.  
-    > - **Updates**: Specifies an update to an application or file that is currently installed.  
+    > - **Update Rollups**: Specifies a tested, cumulative set of hotfixes, security updates, critical updates, and updates that are packaged together for easy deployment. An update rollup generally addresses a specific area, such as a security or product component.  
+    > - **Updates**: Specifies a widely released fix for a specific problem. An update addresses a non-critical, non-security-related bug.  
     > - **Upgrade**: Specifies an  upgrade for Windows 10 features and functionality. Your software update points and sites must run a minimum of WSUS 4.0 with the [hotfix 3095113](https://support.microsoft.com/kb/3095113) to get the **Upgrade** classification.    
     >       
 

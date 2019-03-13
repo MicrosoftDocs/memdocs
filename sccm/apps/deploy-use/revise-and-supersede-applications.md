@@ -10,8 +10,12 @@ ms.assetid: 30170d70-489f-47f7-bebf-9ed0115db26b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# Revise and supersede applications in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Revise and supersede applications in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 In this topic, you'll learn how to work with System Center Configuration Manager application versions and how to supersede applications with a new version.  
 
 ##  Application revisions  
@@ -67,13 +71,13 @@ In this topic, you'll learn how to work with System Center Configuration Manager
 
  You can create a supersedence relationship that updates the dependent application to a new version.  
 
-1.  Ensure that the new dependent application and the original dependent application are in the same dependency group of the master application.  
+1. Ensure that the new dependent application and the original dependent application are in the same dependency group of the master application.  
 
-2.  Create a supersedence relationship that supersedes the original dependent application with the new dependent application.  
+2. Create a supersedence relationship that supersedes the original dependent application with the new dependent application.  
 
- During new installations of the master application, the new dependent application is installed. Existing installations of the master application are updated with the new dependent application.  
+   During new installations of the master application, the new dependent application is installed. Existing installations of the master application are updated with the new dependent application.  
 
- The end result is that all deployments of the master application use the new dependent application.  
+   The end result is that all deployments of the master application use the new dependent application.  
 
 ### Further considerations  
 

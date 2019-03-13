@@ -9,6 +9,7 @@ ms.assetid: e90daafd-62cd-4939-ad9b-ec65f92eb692
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # RemoveMultipleResourceIds Method in Class SMS_MDMDeviceEnrollmentManagers
 The `RemoveMultipleResourceIds` Windows Management Instrumentation (WMI) class method, in Configuration Manager, deletes multiple resource IDs.  

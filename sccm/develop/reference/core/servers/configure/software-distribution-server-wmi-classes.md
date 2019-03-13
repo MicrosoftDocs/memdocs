@@ -9,17 +9,18 @@ ms.assetid: de2f9b43-9d3a-4d81-9db9-537a55817ca4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Software Distribution Server WMI Classes
 Microsoft System Center Configuration Manager allows you to distribute software across one or more sites in your Configuration Manager hierarchy. The following list shows some of the items you can distribute:  
 
--   A single command to be run on workstations  
+- A single command to be run on workstations  
 
--   A complete software application to be installed on individual workstations  
+- A complete software application to be installed on individual workstations  
 
--   A shortcut to a software package installed on and run from a network share  
+- A shortcut to a software package installed on and run from a network share  
 
- Configuration Manager uses packages, programs, and advertisements to denote certain relationships in the distribution of software. These terms correspond directly with the classes `SMS_Package`, `SMS_Program`, and `SMS_Advertisement`.  
+  Configuration Manager uses packages, programs, and advertisements to denote certain relationships in the distribution of software. These terms correspond directly with the classes `SMS_Package`, `SMS_Program`, and `SMS_Advertisement`.  
 
 ## Software Distribution Server WMI Classes  
 

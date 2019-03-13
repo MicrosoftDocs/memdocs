@@ -9,6 +9,7 @@ ms.assetid: e4f5186a-6b63-4a06-80c9-45664b383edd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_Program Server WMI Class
 The `SMS_Program` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a program or command to run when software is distributed to a client computer.  
@@ -446,21 +447,21 @@ x01000000 (24)|HIDEWINDOW. Hide the program window.|
 
  It is recommended that you not set the `Duration` property to Unknown because this property is used for the following two important purposes:  
 
--   To monitor the results of the program.  
+- To monitor the results of the program.  
 
--   To determine if the program will be launched when maintenance windows have been defined on the client computers.  
+- To determine if the program will be launched when maintenance windows have been defined on the client computers.  
 
- If your application sets the `Duration` property but program run time exceeds this duration, then Configuration Manager stops monitoring the program but does not terminate the program. This allows Configuration Manager to continue with other software distribution functions, such as running other advertised programs. The manager does not:  
+  If your application sets the `Duration` property but program run time exceeds this duration, then Configuration Manager stops monitoring the program but does not terminate the program. This allows Configuration Manager to continue with other software distribution functions, such as running other advertised programs. The manager does not:  
 
--   Stop the program.  
+- Stop the program.  
 
--   Free any drives that have been mapped for the advertised program.  
+- Free any drives that have been mapped for the advertised program.  
 
--   Free any network connections made for the advertised program.  
+- Free any network connections made for the advertised program.  
 
--   Free operating system resources used by Configuration Manager when advertised programs are running.  
+- Free operating system resources used by Configuration Manager when advertised programs are running.  
 
- For additional information, see [About Maintenance Windows](../../../../../develop/core/servers/configure/about-maintenance-windows.md).  
+  For additional information, see [About Maintenance Windows](../../../../../develop/core/servers/configure/about-maintenance-windows.md).  
 
 ## Requirements  
 

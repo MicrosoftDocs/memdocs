@@ -9,6 +9,7 @@ ms.assetid: b639050e-d04e-4650-8fe1-a1d39e5b759f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Query1
 **Query1** specifies a query, in Configuration Manager, that is used to identify the platform that a client computer is running.  

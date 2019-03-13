@@ -9,6 +9,7 @@ ms.assetid: 155ed51e-a6a9-4ed6-bddb-5eabbb77ec4c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_BoundaryGroupRelationships Server WMI Class
 
@@ -79,9 +80,9 @@ Class SMS_BoundaryGroupRelationships : SMS_BaseClass
 
  Class qualifiers for this class include:
 
- -   Secured
+- Secured
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).
 
 ## Requirements  
 

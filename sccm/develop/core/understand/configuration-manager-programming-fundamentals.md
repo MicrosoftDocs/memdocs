@@ -9,6 +9,7 @@ ms.assetid: bf540f34-c8f6-48ff-8f54-27a8b5524826
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Programming Fundamentals
 This section provides information and tasks for the fundamental programming techniques you need to successfully program System Center Configuration Manager.  

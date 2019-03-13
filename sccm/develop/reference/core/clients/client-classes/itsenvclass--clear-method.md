@@ -9,6 +9,7 @@ ms.assetid: d33d36ff-c75f-4d79-9c08-223959cc7524
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ITSEnvClass::Clear Method
 In Configuration Manager, the `Clear` method clears an operating system deployment task sequence environment.  

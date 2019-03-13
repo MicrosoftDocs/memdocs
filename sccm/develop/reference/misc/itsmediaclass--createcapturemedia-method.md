@@ -9,6 +9,7 @@ ms.assetid: b1ff00e3-d093-45ca-b624-8d0b3498975f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ITsMediaClass::CreateCaptureMedia Method
 In Configuration Manager, the `CreateCaptureMedia` method creates media that can be used to capture an operating system image from a reference computer.  

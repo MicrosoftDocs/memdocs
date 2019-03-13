@@ -10,6 +10,8 @@ ms.assetid: a3ef6bdc-a204-4c4c-a02f-2bd03f35183e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ROBOTS: NOINDEX
+ms.collection: M365-identity-device-management
 ---
 # Capabilities in Technical Preview 1709 for System Center Configuration Manager
 
@@ -24,7 +26,7 @@ This article introduces the features that are available in the Technical Preview
     Workaround details.
 -->
 **Known Issues in this Technical Preview:**
--   **Update to preview version 1709 fails when you have a site server in passive mode**. When you run the preview version 1706, 1707, or 1708 and have a [primary site server in passive mode](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), you must uninstall the passive mode site server before you can successfully update your preview site to version 1709. You can reinstall the passive mode site server after your site runs version 1709.
+- **Update to preview version 1709 fails when you have a site server in passive mode**. When you run the preview version 1706, 1707, or 1708 and have a [primary site server in passive mode](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), you must uninstall the passive mode site server before you can successfully update your preview site to version 1709. You can reinstall the passive mode site server after your site runs version 1709.
 
   To uninstall the passive mode site server:
   1. In the console go to **Administration** > **Overview** > **Site Configuration** > **Servers and Site System Roles**, and then select the passive mode site server.

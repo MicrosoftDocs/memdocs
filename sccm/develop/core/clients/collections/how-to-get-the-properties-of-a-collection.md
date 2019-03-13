@@ -9,6 +9,7 @@ ms.assetid: 35580da2-c86f-43ad-933d-aa5d70ebb9c9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Get the Properties of a Collection
 ### To get the properties of a collection  

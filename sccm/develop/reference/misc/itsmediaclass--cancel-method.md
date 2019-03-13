@@ -9,6 +9,7 @@ ms.assetid: b8152a53-aca0-4486-b2ad-e9c146aa1d4a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ITsMediaClass::Cancel Method
 In Configuration Manager, the `Cancel` method cancels asynchronous task sequence media creation.  

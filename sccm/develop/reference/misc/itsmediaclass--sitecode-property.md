@@ -9,6 +9,7 @@ ms.assetid: bf39ba0f-1c28-4fe3-a757-1d342b1415cb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ITsMediaClass::SiteCode Property
 In Configuration Manager, the `SiteCode` property contains the site code for the site server.  

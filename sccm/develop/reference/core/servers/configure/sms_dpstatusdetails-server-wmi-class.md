@@ -9,6 +9,7 @@ ms.assetid: a40a11e4-80b8-40d3-b64b-576b4c6ff6e5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_DPStatusDetails Server WMI Class
 The `SMS_DPStatusDetails` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents distribution point status details.  

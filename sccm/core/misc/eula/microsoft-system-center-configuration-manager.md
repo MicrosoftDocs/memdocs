@@ -8,7 +8,8 @@ ms.assetid: ab0c8731-2dac-483c-bdb6-32f172f60a92
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
+ROBOTS: NOINDEX
+ms.collection: M365-identity-device-management
 ---
 # MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER
 

@@ -9,6 +9,7 @@ ms.assetid: 93fe5065-2e1a-44be-8890-73cf8f0b769f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_G_System_WORKSTATION_STATUS Server WMI Class
 The `SMS_G_System_WORKSTATION_STATUS` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that contains information about the last time inventory was collected on a client computer.  

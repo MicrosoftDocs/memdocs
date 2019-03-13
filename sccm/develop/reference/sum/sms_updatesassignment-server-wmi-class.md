@@ -9,6 +9,7 @@ ms.assetid: e470bca9-d185-4d49-80c7-47802c515cf7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_UpdatesAssignment Server WMI Class
 The `SMS_UpdatesAssignment` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that represents a deployment.  
@@ -442,11 +443,11 @@ Class SMS_UpdatesAssignment : SMS_CIAssignmentBaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Secured  
+- Secured  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- After preparing the software updates to deploy, your application can use this class as described in How to Configure and Deploy Updates. After the application creates the deployment, System Center Configuration Manager creates the corresponding policy in the database. The client polls the management point for new and changed properties and the download occurs when a request is detected.  
+  After preparing the software updates to deploy, your application can use this class as described in How to Configure and Deploy Updates. After the application creates the deployment, System Center Configuration Manager creates the corresponding policy in the database. The client polls the management point for new and changed properties and the download occurs when a request is detected.  
 
 ## Requirements  
 

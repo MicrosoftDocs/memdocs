@@ -9,6 +9,7 @@ ms.assetid: 25d82de0-4a57-44bc-95f1-999dbaf5d60e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # ITsMediaClass::MediaLabel Property
 In Configuration Manager, the `MediaLabel` property contains a label to identify the task sequence media.  

@@ -8,20 +8,24 @@ ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 5f861b72-9f14-4d17-a512-4a79b660abe6
 author: aczechowski
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# Capabilities in Technical Preview 1603 for System Center Configuration Manager*Applies to: System Center Configuration Manager (Technical Preview)*
+# Capabilities in Technical Preview 1603 for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Technical Preview)*
+
 This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1603. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Alternately, when you use System Center Technical Preview 5, this version installs as a baseline version of the System Center Configuration Manager Technical Preview. Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.  
 
  **Known Issues for this Technical Preview:**  
 
--   This release includes updates for previously released features but does not introduce new features. Therefore, the Features page of the Update Wizard will be empty if you have previously upgraded to 1602 and enabled all of the features included in 1602.  
+- This release includes updates for previously released features but does not introduce new features. Therefore, the Features page of the Update Wizard will be empty if you have previously upgraded to 1602 and enabled all of the features included in 1602.  
 
--   After your site server updates to the Technical Preview 1603, clients are unable to use any remote control features until they also update to version 1603.  
+- After your site server updates to the Technical Preview 1603, clients are unable to use any remote control features until they also update to version 1603.  
 
- **The following are new features you can try out with this version.**  
+  **The following are new features you can try out with this version.**  
 
 ##  <a name="BKMK_SC1603"></a> Improvements to Software Center  
 
@@ -57,26 +61,26 @@ You will need to test the customized settings in your environment to determine w
 
 ### To modify the RamDisk TFTP window size  
 
--   Add the following registry key on PXE-enabled distribution points to customize the RamDisk TFTP window size:  
+- Add the following registry key on PXE-enabled distribution points to customize the RamDisk TFTP window size:  
 
-     **Location**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP  
-    Name: RamDiskTFTPWindowSize  
+   **Location**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP  
+  Name: RamDiskTFTPWindowSize  
 
-     **Type**: REG_DWORD  
+   **Type**: REG_DWORD  
 
-     **Value**: &lt;customized window size\>  
+   **Value**: &lt;customized window size\>  
 
- The default value is 1 (1 data block fills the window)  
+  The default value is 1 (1 data block fills the window)  
 
 ### To modify the RamDisk TFTP block size  
 
--   Add the following registry key on PXE-enabled distribution points to customize the RamDisk TFTP window size:  
+- Add the following registry key on PXE-enabled distribution points to customize the RamDisk TFTP window size:  
 
-     **Location**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP  
-    Name: RamDiskTFTPBlockSize  
+   **Location**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP  
+  Name: RamDiskTFTPBlockSize  
 
-     **Type**: REG_DWORD  
+   **Type**: REG_DWORD  
 
-     **Value**: &lt;customized block size\>  
+   **Value**: &lt;customized block size\>  
 
- The default value is 4096 (4k).  
+  The default value is 4096 (4k).  

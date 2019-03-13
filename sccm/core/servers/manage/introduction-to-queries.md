@@ -10,8 +10,12 @@ ms.assetid: 03d1b3a9-41db-4d3a-a70e-e05ab5dc8141
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
-# Introduction to queries in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Introduction to queries in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 You can create and run queries to locate objects in a System Center Configuration Manager hierarchy that match your query criteria. These objects include items such as specific types of computers or user groups. Queries can return most types of Configuration Manager objects, which include sites, collections, applications, and inventory data.  
 
  When you create a query, you must specify a minimum of two parameters: where you want to search and what you want to search for. For example, to find the amount of hard disk space that is available on all computers in a Configuration Manager site, you can create a query to search the **Logical Disk** attribute class and the **Free Space (MB)** attribute for available hard disk space.  

@@ -9,6 +9,7 @@ ms.assetid: fbeffc66-0ae1-4bb8-bc44-5209d5e9287a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_SCI_MaintenanceTask Server WMI Class
 The `SMS_SCI_MaintenanceTask` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a site control item maintenance task.  

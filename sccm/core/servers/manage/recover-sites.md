@@ -10,6 +10,7 @@ ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 #  Recover a Configuration Manager site
@@ -97,9 +98,9 @@ Use this option when you've already recovered the Configuration Manager site dat
 
 - Configuration Manager can recover the site database from any of the following processes:  
 
-    - The Configuration Manager backup maintenance task  
-    - A site database backup using Data Protection Manager (DPM)  
-    - Another backup process   
+  - The Configuration Manager backup maintenance task  
+  - A site database backup using Data Protection Manager (DPM)  
+  - Another backup process   
 
     After you restore the site database by using a method outside Configuration Manager, run Setup, and select this option to complete the site database recovery.  
 

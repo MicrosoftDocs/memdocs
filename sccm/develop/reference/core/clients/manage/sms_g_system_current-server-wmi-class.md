@@ -9,6 +9,7 @@ ms.assetid: 01e0699f-7031-47a7-a3c2-5e98aeebe5f6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_G_System_Current Server WMI Class
 The `SMS_G_System_Current` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in System Center Configuration Manager, that serves as an abstract base class and represents the current client state at the time of the last hardware inventory.  
@@ -72,11 +73,11 @@ Class SMS_G_System_Current : SMS_G_System
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Abstract  
+- Abstract  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- Your application can query classes derived from `SMS_G_System_Current` to get the current state of individual client hardware components. Alternatively the application can query `SMS_G_System_Current` itself to get the current state of all client hardware components. For example, the following query retrieves all hardware components for the given client.  
+  Your application can query classes derived from `SMS_G_System_Current` to get the current state of individual client hardware components. Alternatively the application can query `SMS_G_System_Current` itself to get the current state of all client hardware components. For example, the following query retrieves all hardware components for the given client.  
 
 ```  
 SELECT * FROM SMS_G_System_Current  

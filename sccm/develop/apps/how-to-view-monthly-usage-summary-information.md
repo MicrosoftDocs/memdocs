@@ -9,6 +9,7 @@ ms.assetid: 6c9c4ddf-0c0a-48ca-b9ef-099d2043fe27
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to View Monthly Usage Summary Information
 You view monthly usage summary information, in System Center Configuration Manager, by using the [SMS_MeteredFiles](../../develop/reference/apps/sms_meteredfiles-server-wmi-class.md), [SMS_MonthlyUsageSummary](../../develop/reference/apps/sms_monthlyusagesummary-server-wmi-class.md), [SMS_MeteredUser](../../develop/reference/apps/sms_metereduser-server-wmi-class.md) and [SMS_R_System](../../develop/reference/core/clients/manage/sms_r_system-server-wmi-class.md) classes.  

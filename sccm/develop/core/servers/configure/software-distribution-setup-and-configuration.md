@@ -9,6 +9,7 @@ ms.assetid: 6e3ab81a-0b54-4dfb-85f8-97588914779d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Software Distribution Setup and Configuration
 This section provides information about software distribution setup and configuration in System Center Configuration Manager.  

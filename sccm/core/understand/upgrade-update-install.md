@@ -10,6 +10,7 @@ ms.assetid: 17fab17f-304d-4f6a-87c7-30ab4f5521ed
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 
 # About upgrade, update, and install for site and hierarchy infrastructure

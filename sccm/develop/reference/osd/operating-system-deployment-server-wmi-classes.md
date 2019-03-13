@@ -9,6 +9,7 @@ ms.assetid: 36750852-7fe3-4e4e-a204-afaacd6ff9a7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # Operating System Deployment Server WMI Classes
 The Operating System Deployment server Windows Management Instrumentation (WMI) classes are used to deploy operating systems in Microsoft System Center Configuration Manager. They represent a number of packages that are used for deployment operations, in addition to task sequences and their various actions.The System Center Configuration Manager server class schema is a set of WMI classes that represent the objects on a server that is running System Center Configuration Manager. Each System Center Configuration Manager class is a template for a managed object, and all instances of the object use the template. Classes can contain properties and methods. The properties describe the class data and the methods typically perform data management.  

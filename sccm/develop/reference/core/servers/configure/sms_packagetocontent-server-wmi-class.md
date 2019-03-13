@@ -9,6 +9,7 @@ ms.assetid: a0fb2d57-6ce0-4185-b384-b406ef58cdd8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_PackageToContent Server WMI Class
 The `SMS_PackageToContent` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that relates a Configuration Manager package to its content.  
@@ -132,13 +133,13 @@ Class SMS_PackageToContent : SMS_BaseClass
 ## Remarks  
  Class qualifiers for this class include:  
 
--   Secured  
+- Secured  
 
--   Read (read-only)  
+- Read (read-only)  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- Your application can query this class to get the list of contents contained by a package or the list of packages that contain specified content.  
+  Your application can query this class to get the list of contents contained by a package or the list of packages that contain specified content.  
 
 ## Requirements  
 

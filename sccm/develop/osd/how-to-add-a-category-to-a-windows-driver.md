@@ -9,6 +9,7 @@ ms.assetid: ed70a6c3-137b-41f9-b428-675737fb6a86
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Add a Category to a Windows Driver
 In System Center Configuration Manager, you add a category to a Windows driver by adding the unique identifier for the category to the [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md)`CategoryInstance_UniqueIDs` array property. The array contains one or more string identifiers that match the [SMS_CategoryInstance Server WMI Class](../../develop/reference/compliance/sms_categoryinstance-server-wmi-class.md)`CategoryInstance_UniqueID` property value. There is an instance of [SMS_CategoryInstance Server WMI Class](../../develop/reference/compliance/sms_categoryinstance-server-wmi-class.md) object for each category in the system.  
@@ -123,11 +124,12 @@ public void AddDriverCategory(
 
  The example method has the following parameters:  
 
-|Parameter|Type|Description|  
-|---------------|----------|-----------------|  
-|`Connection`|-   Managed: `WqlConnectionManager]<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393868.aspx)|A valid connection to the SMS Provider.|  
-|`driver`|-   Managed: `IResultObject`<br />-   VBScript:  `SWbemObject`|The Windows driver. It is an instance of [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md).|  
-|`categoryName`|-   Managed: `String`<br />-   VBScript:  `String`|The name of an existing category. This matches the [SMS_CategoryInstance Server WMI Class](../../develop/reference/compliance/sms_categoryinstance-server-wmi-class.md)e `LocalizedCategoryInstanceName` property.|  
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `Connection` | - Managed: `WqlConnectionManager`<br /> - VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393868.aspx) | A valid connection to the SMS Provider. |
+| `driver` | - Managed: `IResultObject`<br /> - VBScript: `SWbemObject` | The Windows driver. It is an instance of [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md). |
+| `categoryName` | - Managed: `String`<br /> - VBScript: `String` | The name of an existing category. This matches the [SMS_CategoryInstance Server WMI Class](../../develop/reference/compliance/sms_categoryinstance-server-wmi-class.md) `LocalizedCategoryInstanceName` property. |
 
 ## Compiling the Code  
  This C# example requires:  

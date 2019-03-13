@@ -10,6 +10,7 @@ ms.assetid: ddef4d2a-f481-4020-9ddd-9cca5f9795cb
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.collection: M365-identity-device-management
 ---
 
 # Enable Endpoint Protection malware definitions to download from a network share for Configuration Manager
@@ -43,7 +44,7 @@ ms.author: aaroncz
 
 
 > [!div class="button"]
-[Next step >](endpoint-antimalware-policies.md)
-
+> [Next step >](endpoint-antimalware-policies.md)
+> 
 > [!div class="button"]
-[Back >](endpoint-configure-alerts.md)
+> [Back >](endpoint-configure-alerts.md)

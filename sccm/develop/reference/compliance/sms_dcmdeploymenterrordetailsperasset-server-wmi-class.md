@@ -9,6 +9,7 @@ ms.assetid: dd567a31-8780-48e0-8566-61f744d52e8f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # SMS_DCMDeploymentErrorDetailsPerAsset Server WMI Class
 The `SMS_DCMDeploymentErrorDetailsPerAsset` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents asset details per asset for a deployment error.  

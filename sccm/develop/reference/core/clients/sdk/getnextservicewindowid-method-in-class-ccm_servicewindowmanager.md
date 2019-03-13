@@ -9,6 +9,7 @@ ms.assetid: 0d183452-3798-4ac8-a210-25368c575ddf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # GetNextServiceWindowID Method in Class CCM_ServiceWindowManager
 The `GetNextServiceWindowID` WMI class method, in Configuration Manager, gets the identifier of the next service window instance closest to the current time.  
@@ -19,7 +20,7 @@ The `GetNextServiceWindowID` WMI class method, in Configuration Manager, gets th
 
 ```  
 uint32 GetNextServiceWindowID(  
-     [OUT] String NextServiceWindowID  
+     [OUT] String NextServiceWindowID  
 );  
 ```  
 

@@ -9,6 +9,7 @@ ms.assetid: 2ed7e134-02da-4492-bb81-ce4a1f484955
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.collection: M365-identity-device-management
 ---
 # How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence
 In System Center Configuration Manager, you can create, get, and set task sequence variables in a running task sequence by using the task sequence environment COM automation object (`Microsoft.SMS.TSEnvironment`).  
@@ -41,15 +42,15 @@ OSDPartitions0Type="Primary"
 
  It is not recommended that you use managed code with the task sequencing environment because you cannot use it in the following environments:  
 
--   Windows PE  
+- Windows PE  
 
--   Windows Server 2008  
+- Windows Server 2008  
 
--   Windows 2000  
+- Windows 2000  
 
- Managed code does work when the full operating system is running with the correct version of .NET Framework installed.  
+  Managed code does work when the full operating system is running with the correct version of .NET Framework installed.  
 
- The version of .NET Framework that is required depends on the version of Visual Studio that you use.  
+  The version of .NET Framework that is required depends on the version of Visual Studio that you use.  
 
 |Visual Studio|.NET Framework Version|  
 |-------------------|----------------------------|  
