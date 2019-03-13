@@ -2,7 +2,7 @@
 title: "Manage Dynamics CRM Online access"
 titleSuffix: "Configuration Manager"
 description: "Learn how to control access to Microsoft Dynamics CRM Online from iOS and Android devices with Microsoft Intune conditional access."
-ms.date: 03/05/2017
+ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -41,7 +41,7 @@ If a condition is not met, the user is presented with one of the following messa
 ## Configure conditional access for Dynamics CRM Online  
 ### Step 1: Configure Active Directory security groups
 
-Before you start, configure Azure Active Directory security groups for the conditional access policy. You can configure these groups in the **Office 365 admin center**. These groups will be used to target, or exempt users from the policy. When a user is targeted by a policy, each device they use must be compliant in order to access resources.
+Before you start, configure Azure Active Directory security groups for the conditional access policy. You can configure these groups in the **Microsoft 365 admin center**. These groups will be used to target, or exempt users from the policy. When a user is targeted by a policy, each device they use must be compliant in order to access resources.
 
 You can specify two group types to use for the Dynamics CRM policy:
 * **Targeted groups** – Contains groups of users to which the policy will apply.

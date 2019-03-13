@@ -2,7 +2,7 @@
 title: Archive of  What's new hybrid MDM
 titleSuffix: Configuration Manager
 description: Archive of past mobile device management features available for hybrid deployments with System Center Configuration Manager and Intune.
-ms.date: 05/31/2018
+ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -471,7 +471,7 @@ For information on the new functionality, see the documentation for the specifie
 The following Intune features introduced in June 2016 work in hybrid deployments.
 
 - **Intune service health**
-  Service health information for Intune has been moved to a central location with other Microsoft services. You'll now find this information in the Office 365 management portal under Service Health. For more information, see this [blog post](https://blogs.technet.microsoft.com/enterprisemobility/2016/04/28/intune-service-health-is-now-available-in-the-office-365-portal/).
+  Service health information for Intune has been moved to a central location with other Microsoft services. You'll now find this information in the Microsoft 365 admin center under Service Health. For more information, see this [blog post](https://blogs.technet.microsoft.com/enterprisemobility/2016/04/28/intune-service-health-is-now-available-in-the-office-365-portal/).
 
 - **Enhanced Windows 10 enterprise data policy configuration experience**
 
