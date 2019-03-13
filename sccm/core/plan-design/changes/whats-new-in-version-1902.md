@@ -440,6 +440,13 @@ There's a new **Documentation** node in the new **Community** workspace. This no
 You can now search for a MAC address in a device view of the Configuration Manager console. This property is useful for OS deployment administrators while troubleshooting PXE-based deployments. When you view a list of devices, add the **MAC Address** column to the view. Use the search field to add the **MAC Address** search criteria. 
 
 
+### Use .NET 4.7 for improved console accessibility
+<!-- SCCMDocs-pr issue #3228 -->
+To improve the accessibility features of the Configuration Manager console, update .NET to version 4.7 or later on the computer running the console. 
+
+For more information, see [Accessibility features in Configuration Manager](/sccm/core/understand/accessibility-features).
+
+
 
 <!-- ## <a name="bkmk_opmdm"></a> On-premises MDM -->
 
