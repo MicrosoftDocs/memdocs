@@ -21,7 +21,7 @@ Update 1902 for Configuration Manager current branch is available as an in-conso
 
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 1902](/sccm/core/servers/manage/checklist-for-installing-update-1902). After you update a site, also review the [Post-update checklist](/sccm/core/servers/manage/checklist-for-installing-update-1902#post-update-checklist).
 
-To take advantage of new Configuration Manager features, first update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
+To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
 > [!Note]  
 > This article currently lists all significant features in this version. However, not all sections yet link to updated content with further information on the new features. Keep checking this page regularly for updates. Changes are noted with the ***[Updated]*** tag. This note will be removed when the content is finalized.  
@@ -59,9 +59,12 @@ In the Configuration Manager console, go to the **Monitoring** workspace. Expand
 <!-- For more information, see [How to monitor clients](/sccm/core/clients/manage/monitor-clients). -->
 
 
-### Management insight rules for collections
-<!--3555752-->
-The management insights feature has new rules with recommendations on managing collections. Use these insights to simplify management and improve performance. Review the new rules in the **Collections** group.
+### New management insight rules
+The management insights feature has the following new rules:
+
+- Multiple rules with recommendations on managing collections. Use these insights to simplify management and improve performance. Review these new rules in the **Collections** group.<!--3555752-->  
+
+- **Update clients to a supported Windows 10 version** rule in the **Simplified Management** group. This rule reports on clients that are running a version of Windows 10 that's no longer supported. It also includes clients with a Windows 10 version that's near end of service (three months).<!--3897268-->  
 
 <!-- For more information, see [Management insights](/sccm/core/servers/manage/management-insights). -->
 
@@ -73,6 +76,12 @@ You can now enable enhanced HTTP per primary site or for the central administrat
 On the properties of the central administration site, select the option to **Use Configuration Manager-generated certificates for HTTP site systems**.
 
 <!-- For more information, see [enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http). -->
+
+
+### Improvement to setup prerequisites
+When you install or update to version 1902, Configuration Manager setup now includes the following prerequisite check:
+
+- **Pending system restart on the remote SQL Server**: This prerequisite check is similar to the **Pending system restart** rule, but it checks a remote SQL Server. For more information, see [List of prerequisite checks](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#pending-system-restart-on-the-remote-sql-server). <!--SCCMDocs-pr issue 3377-->  
 
 
 
