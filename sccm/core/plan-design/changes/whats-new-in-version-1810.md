@@ -289,7 +289,12 @@ WSUS cleanup tasks now run on secondary sites. WSUS cleanup for expired updates 
 
 For more information, see [WSUS cleanup behavior starting in version 1810](/sccm/sum/deploy-use/software-updates-maintenance#wsus-cleanup-behavior-starting-in-version-1810)
 
+### Improvement to software update supersedence rules
+<!--3098809, 2977644-->
 
+***[Updated]***  You can now specify supersedence rules for feature updates separately from non-feature updates. This means your upgrades won't be removed from Configuration Manager before you have completed servicing your Windows 10 clients.
+
+For more information, see [Supersedence rules](/sccm/sum/get-started/install-a-software-update-point#supersedence-rules).
 
 ## <a name="bkmk_report"></a> Reporting
 

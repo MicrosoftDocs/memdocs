@@ -139,7 +139,7 @@ ms.collection: M365-identity-device-management
    -   **How many days after Microsoft has published a new upgrade would you like to wait before deploying in your environment**: If the current date is after the release date plus the number of days that you configure for this setting, Configuration Manager evaluates whether to include an upgrade in the deployment.
 
 
-7. On the Upgrades page, configure the search criteria to filter the upgrades that are added to the service plan. Only upgrades that meet the specified criteria are added to the associated deployment. The following property filters are available:
+7. On the Upgrades page, configure the search criteria to filter the upgrades that are added to the service plan. Only upgrades that meet the specified criteria are added to the associated deployment. The following property filters are available: <!--3098809, 3113836, 3204570 -->
 
    - **Architecture** (starting in version 1810)
    - **Language**
