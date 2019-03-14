@@ -2,7 +2,7 @@
 title: Manage Windows as a Service
 titleSuffix: Configuration Manager
 description: View the state of Windows as a Service (WaaS) using Configuration Manager, create servicing plans to form deployment rings, and view alerts when Windows 10 clients are near end of support.
-ms.date: 10/02/2017
+ms.date: 03/15/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -139,10 +139,16 @@ ms.collection: M365-identity-device-management
    -   **How many days after Microsoft has published a new upgrade would you like to wait before deploying in your environment**: If the current date is after the release date plus the number of days that you configure for this setting, Configuration Manager evaluates whether to include an upgrade in the deployment.
 
 
-7. On the Upgrades page, configure the search criteria to filter the upgrades that are added to the service plan. Only upgrades that meet the specified criteria are added to the associated deployment.   
+7. On the Upgrades page, configure the search criteria to filter the upgrades that are added to the service plan. Only upgrades that meet the specified criteria are added to the associated deployment. The following property filters are available:
 
-    > [!Important]    
-    > We recommend that as part of your search criteria, that you set the **Required** field with a value of **>=1**. Using this criteria ensures that only applicable updates added to the service plan.
+   - **Architecture** (starting in version 1810)
+   - **Language**
+   - **Product Category** (starting in version 1810)
+   - **Required**
+      > [!Important]    
+      > We recommend that as part of your search criteria, that you set the **Required** field with a value of **>=1**. Using this criteria ensures that only applicable updates added to the service plan.
+   - **Superseded** (starting in version 1810)
+   - **Title**
 
     Click **Preview** to view the upgrades that meet the specified criteria.  
 
