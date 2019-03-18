@@ -2,7 +2,7 @@
 title: Client notification
 titleSuffix: Configuration Manager
 description: Manage clients by taking immediate action from the central Configuration Manager console.
-ms.date: 03/06/2019
+ms.date: 03/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -131,7 +131,7 @@ Trigger Windows 10 clients to check and send their latest device health state. F
 
 ### Check conditional access compliance
 
-Trigger clients to check their compliance with conditional access. For more information, see [Manage access to O365 services for PCs](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm).  
+Trigger clients to check their compliance with conditional access. For more information, see [Manage access to Office 365 services for PCs](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm).  
 
 
 ### Wake Up
