@@ -72,7 +72,7 @@ To enable data sharing, configure your proxy server to whitelist the following e
 | `https://nexus.officeapps.live.com` | Used by Office clients to send diagnostic data events from Office 14, Office 15, and versions of Office 16 earlier than 16.0.8702. It's used to collect usage and reliability signals events for Desktop Analytics. |
 | `https://office.pipe.aria.microsoft.com` | Used by Office clients to send diagnostic data events from universal/modern Office apps, and Win32 Office 16 versions later than 16.0.8702. It's used to collect usage and reliability signals events for Desktop Analytics. |
 | `https://graph.windows.net` | Used to automatically retrieve settings like CommercialId when attaching your hierarchy to Desktop Analytics (on Configuration Manager Server role only). |
-| `https://fef.bmsub01.manage-beta.microsoft.com` | Used to synch device collection memberships, deployment plans and device readiness status with Desktop Analytics (on Configuration Manager Server role only). |
+| `https://fef.msua06.manage.microsoft.com` | Used to synch device collection memberships, deployment plans and device readiness status with Desktop Analytics (on Configuration Manager Server role only). |
 
 
 ### SSL inspection
