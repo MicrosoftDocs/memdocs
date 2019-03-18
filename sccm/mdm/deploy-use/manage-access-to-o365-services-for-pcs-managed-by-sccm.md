@@ -1,5 +1,5 @@
 ---
-title: Manage access to O365 services
+title: Manage access to Office 365 services
 titleSuffix: Configuration Manager
 description: Learn how to configure conditional access to Office 365 services for PCs that are managed by System Center Configuration Manager.
 ms.date: 03/21/2019
@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Manage access to O365 services for PCs managed by System Center Configuration Manager
+# Manage access to Office 365 services for PCs managed by System Center Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
@@ -57,7 +57,7 @@ For information on configuring conditional access for devices enrolled and manag
 
 ### Prerequisites  
 
-- ADFS Sync, and an O365 subscription. The O365 subscription is for setting up Exchange Online and SharePoint Online.  
+- ADFS Sync, and an Office 365 subscription. The Office 365 subscription is for setting up Exchange Online and SharePoint Online.  
 
 - A Microsoft Intune Subscription. The Microsoft Intune Subscription should be configured in Configuration Manager Console. The Intune subscription is used to relay device compliance state to Azure Active Directory and for user licensing.  
 

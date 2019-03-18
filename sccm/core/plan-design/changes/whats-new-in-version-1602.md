@@ -114,7 +114,7 @@ You will find these apps in the **Applications** node of the Configuration Manag
 ### Conditional access for PCs managed by System Center Configuration Manager  
  Previous to this release, to set up conditional access for a PC, the PC either had to be enrolled in Intune or had to be a domain-joined PC. Beginning with the 1602 update, conditional access for PCs managed by System Center Configuration manager is supported. For your PCs that are managed by System Center Configuration Manager, you can restrict access to Exchange Online and SharePoint Online only to devices that are compliant with the compliance policies you set.  
 
- For details, see [Manage access to O365 services for PCs managed by System Center Configuration Manager](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).  
+ For details, see [Manage access to Office 365 services for PCs managed by System Center Configuration Manager](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).  
 
 ### Restricting access based on the health of devices  
  You can now restrict access to email and Office 365 services based on the health of the devices, as reported by the Health Attestation Service. Additionally, devices managed by Intune are included in the device health reports.  

@@ -145,7 +145,7 @@
       href: deploy-use/manage-skype-for-business-online-access.md
     - name: Manage Dynamics CRM Online access
       href: deploy-use/manage-dynamics-crm-online-access.md
-    - name: Manage PC access to O365 services
+    - name: Manage PC access to Office 365 services
       href: deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md
   - name: Manage access based on device risk
     href: deploy-use/mobile-threat-defense.md
