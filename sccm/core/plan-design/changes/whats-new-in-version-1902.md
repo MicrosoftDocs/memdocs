@@ -71,9 +71,9 @@ The management insights feature has the following new rules:
 
 ### Improvement to enhanced HTTP
 <!--3798957-->
-You can now enable enhanced HTTP per primary site or for the central administration site. This change provides better support for features that require it. For example, [app approvals via email](/sccm/apps/deploy-use/app-approval#bkmk_email-approve) or viewing recently connected consoles.
+You can now enable enhanced HTTP per primary site or for the central administration site. 
 
-On the properties of the central administration site, select the option to **Use Configuration Manager-generated certificates for HTTP site systems**.
+On the properties of the central administration site, select the option to **Use Configuration Manager-generated certificates for HTTP site systems**. This setting only applies to site system roles in the central administration site. It isn't a global setting for the hierarchy. 
 
 <!-- For more information, see [enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http). -->
 
