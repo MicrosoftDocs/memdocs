@@ -122,6 +122,10 @@ For Configuration Manager version 1902, this level includes the following data:
 
 - Aggregated usage statistics of co-management: number of clients ever enrolled, number of enrolled clients, number of clients pending enrollment, clients receiving policy, workload states, pilot/exclusion collection sizes, and enrollment errors  
 
+- ***[New]*** Existence of Microsoft BitLocker Administration and Monitoring (MBAM) server-side extensions  
+
+- ***[New]*** Count of categorized and uncategorized applications for asset intelligence
+
 
 
 ##  <a name="bkmk_level2"></a> Level 2 - Enhanced
@@ -206,6 +210,8 @@ For Configuration Manager version 1902, this level includes the following data:
 
 - File count, content size, services count, and custom action count of MSIs in application catalog  
 
+- ***[New]*** Count of devices by Office ProPlus readiness state
+
 
 ### Client  
 
@@ -223,7 +229,7 @@ For Configuration Manager version 1902, this level includes the following data:
 
 - Client deployment download errors  
 
-- Client health statistics and top issue summary by client version  
+- ***[Updated]*** Client health statistics and top issue summary by client version, component, OS, and workload  
 
 - Client notification operation action status: how many times each is run, max number of targeted clients, and average success rate  
 
@@ -252,6 +258,8 @@ For Configuration Manager version 1902, this level includes the following data:
 - Count of Configuration Manager-generated server authentication certificates  
 
 - Count of Microsoft Surface devices by model  
+
+- ***[New]*** Count of client health check failures by issue type
 
 
 ### Cloud Services  
@@ -317,6 +325,8 @@ For Configuration Manager version 1902, this level includes the following data:
 - Windows Hello for Business policy (created, deployed)  
 
 - Count of deployed Microsoft Edge browser policies  
+
+- ***[New]*** Count of OneDrive policies (created, deployed)
 
 
 ### Content  
@@ -513,9 +523,9 @@ For Configuration Manager version 1902, this level includes the following data:
 
 ### Miscellaneous  
 
-- Configuration of data warehouse service point including synchronization schedule and average time  
+- ***[Updated]*** Configuration of data warehouse service point including synchronization schedule, average time, and use of customized tables feature  
 
-- Count of scripts and run statistics  
+- ***[Updated]*** Count of scripts and run/edit statistics  
 
 - Count of sites with Wake On LAN (WOL)  
 
@@ -526,6 +536,12 @@ For Configuration Manager version 1902, this level includes the following data:
 - Management insights item counts and progress  
 
 - Count of crashes for unique non-Configuration Manager processes on the site server, and Watson signature ID, if available  
+
+- ***[New]*** Aggregated statistics on Desktop Analytics enrollment errors and usage
+
+- ***[New]*** Count of non-critical console notifications
+
+- ***[New]*** Aggregated system boot time statistics by OS, form-factor, and drive type
 
 
 
