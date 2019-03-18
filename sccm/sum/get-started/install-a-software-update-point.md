@@ -5,7 +5,7 @@ description: "Primary sites require a software update point on the central admin
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 05/30/2017
+ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -97,7 +97,7 @@ ms.collection: M365-identity-device-management
 > [!NOTE]  
 >  When there is a firewall between the software update point and the Internet, the firewall might need to be configured to accept the HTTP and HTTPS ports that are used for the WSUS Web site. You can also choose to restrict access on the firewall to limited domains. For more information about how to plan for a firewall that supports software updates, see [Configure firewalls](../plan-design/plan-for-software-updates.md#BKMK_ConfigureFirewalls).  
 
- You can also configure whether to create WSUS reporting events on the **Synchronization Source** page of the wizard or on the **Sync Settings** tab in Software Update Point Component Properties. Configuration Manager does not use these events; therefore, you will normally choose the default setting **Do not create WSUS reporting events**.  
+ You can also configure whether to create WSUS reporting events on the **Synchronization Source** page of the wizard or on the **Sync Settings** tab in Software Update Point Component Properties. Configuration Manager doesn't use these events; therefore, you will normally choose the default setting **Do not create WSUS reporting events**.  
 
 ## Synchronization schedule  
  Configure the synchronization schedule on the **Synchronization Schedule** page of the wizard or in the Software Update Point Component Properties. This setting is configured only on the software update point at the top-level site.  
