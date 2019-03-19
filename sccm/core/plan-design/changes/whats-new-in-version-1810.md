@@ -2,7 +2,7 @@
 title: What's new in version 1810
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1810 of Configuration Manager current branch.
-ms.date: 03/13/2019
+ms.date: 03/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -245,6 +245,12 @@ For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/
 
 For more information, see [Manage drivers](/sccm/osd/get-started/manage-drivers).
 
+### Improvements to Windows 10 servicing plan filters
+
+<!--3098809, 3113836, 3204570 -->
+***[Updated]*** Additional filters have been added to Windows 10 servicing plans. You can now filter by **Architecture**, **Product Category**, and if the upgrade is **Superseded**.
+
+For more information, see [Windows 10 servicing plan](/sccm/osd/deploy-use/manage-windows-as-a-service#BKMK_ServicingPlan).
 
 ### New task sequence variable for last action name
 <!--SCCMDocs-pr issue #2964-->
@@ -282,6 +288,13 @@ By default, this option is **No** to keep consistent with the existing behavior.
 WSUS cleanup tasks now run on secondary sites. WSUS cleanup for expired updates is run and superceded updates are declined in WSUS for secondary sites.
 
 For more information, see [WSUS cleanup behavior starting in version 1810](/sccm/sum/deploy-use/software-updates-maintenance#wsus-cleanup-behavior-starting-in-version-1810)
+
+### Improvement to software update supersedence rules
+<!--3098809, 2977644-->
+
+***[Updated]***  You can now specify supersedence rules for feature updates separately from non-feature updates. This means your upgrades won't be removed from Configuration Manager before you have completed servicing your Windows 10 clients.
+
+For more information, see [Supersedence rules](/sccm/sum/get-started/install-a-software-update-point#supersedence-rules).
 
 ## <a name="bkmk_report"></a> Reporting
 
@@ -360,9 +373,8 @@ For more information on additional performance and troubleshooting improvements 
 
 
 ### <a name="bkmk_scripts"></a> Improvements to scripts
-
-<!--3607711, fka 1358239-->
-***[Updated]*** You can now view detailed script output in raw or structured JSON format. This formatting makes the output easier to read and analyze.
+<!--1358239-->
+You can now view detailed script output in raw or structured JSON format. This formatting makes the output easier to read and analyze. 
 
 The following performance and troubleshooting improvements apply to both CMPivot and scripts:
 
@@ -370,11 +382,11 @@ The following performance and troubleshooting improvements apply to both CMPivot
 
 - Additional logs for troubleshooting  
 
-For more information, see the following articles:  
+<!--For more information, see the following articles:  
 
 - [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts)  
 
-- [CMPivot](/sccm/core/servers/manage/cmpivot)
+- [CMPivot](/sccm/core/servers/manage/cmpivot)  -->
 
 
 ### SMS Provider API
