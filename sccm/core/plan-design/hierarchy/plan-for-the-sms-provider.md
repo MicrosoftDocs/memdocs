@@ -254,19 +254,18 @@ The Windows ADK installation can require up to 650 MB of free disk space on each
 
 Starting in version 1810, the SMS Provider provides read-only API interoperability access to WMI over HTTPS, called the **administration service**. This REST API can be used in place of a custom web service to access information from the site.
 
-`https://servername/AdminService/wmi/<ClassName>` 
+The **administration service** URL format is `https://<servername>/AdminService/wmi/<ClassName>` where `<servername>` is the the server where the SMS Provider is installed and `<ClassName>` is a valid Configuration Manager WMI class name.
 
 For example, `https://servername/AdminService/wmi/SMS_Site`
 
 Make direct calls to this service with the Windows PowerShell cmdlet [Invoke-RestMethod](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-restmethod).
 
-You can also use it to access site data from PowerBI using the OData connector option. 
-
 > [!Tip]  
 > You can use this cmdlet in a task sequence. This action lets you access information from the site without requiring a custom web service to interface with the WMI provider. 
 
-The administration service logs its activity to the **adminservice.log** file.
+You can also use it to access site data from PowerBI using the OData connector option. 
 
+The administration service logs its activity to the **adminservice.log** file.
 
 ### Enable the administration service through the CMG
 
