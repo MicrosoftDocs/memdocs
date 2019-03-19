@@ -2,7 +2,7 @@
 title: Create a lab in Azure
 titleSuffix: Configuration Manager
 description: Automate the creation of a Configuration Manager technical preview lab using Azure templates
-ms.date: 01/22/2019
+ms.date: 03/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -28,7 +28,7 @@ For more information on Configuration Manager current branch, see [Configuration
 ## Prerequisites
 
 This process requires an Azure subscription in which you can create the following objects: 
-- Four Standard_D2s_v3 virtual machines
+- Three Standard_D2s_v3 virtual machines
 - Standard_LRS storage account
 
 > [!Tip]  
@@ -81,7 +81,7 @@ To connect to the VMs, first get from the Azure portal the public IP addresses f
 
 ## Azure VM info
 
-All four VMs have the following specifications:
+All Three VMs have the following specifications:
 - Standard_D2s_v3, which has two CPU cores and 8 GB of memory  
 - Windows Server 2016 Datacenter edition
 - 150 GB of disk space
@@ -122,14 +122,4 @@ Active Directory domain controller
 - Remote Differential Compression (RDC) 
 - Internet Information Service (IIS)
 - Background intelligent transfer service (BITS)
-
-
-### `<prefix>Other`
-
-This VM can be used as a client, or to host other site roles.
-
-#### Windows features and roles
-- .NET
-- Remote Differential Compression (RDC) 
-
 

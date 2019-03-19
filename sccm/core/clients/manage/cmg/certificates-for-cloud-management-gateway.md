@@ -38,7 +38,7 @@ For more information about the different scenarios, see [plan for cloud manageme
 <!--SCCMDocs issue #779-->
 Certificates for the cloud management gateway support the following configurations:  
 
-- 2048- or 4096-bit key length
+- 2048 or 4096-bit key length
 
 - Starting in version 1710, support for key storage providers for certificate private keys. For more information, see [CNG certificates overview](/sccm/core/plan-design/network/cng-certificates-overview).  
 
@@ -201,11 +201,9 @@ After issuing a client authentication certificate to a computer, use this proces
 Provision this certificate outside of the context of Configuration Manager. For example, use Active Directory Certificate Services and group policy to issue a web server certificate. For more information, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements) and [Deploy the web server certificate for site systems that run IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).
 
 
-- In versions 1706 or 1710, when managing traditional clients with on-premises identity using a client authentication certificate, this certificate is recommended but not required.  
+- In version 1710, when managing traditional clients with on-premises identity using a client authentication certificate, this certificate is recommended but not required. When managing Windows 10 clients joined to Azure AD, this certificate is required for management points.
 
-- In version 1710, when managing Windows 10 clients joined to Azure AD, this certificate is required for management points.  
-
-- Starting in version 1802, this certificate is required in all scenarios. Only management points that you enable for CMG must be HTTPS. This change in behavior provides better support for Azure AD token-based authentication.  
+- In version 1802, this certificate is required in all scenarios. Only management points that you enable for CMG must be HTTPS. This change in behavior provides better support for Azure AD token-based authentication.  
 
 - Starting in version 1806, when using the site option to **Use Configuration Manager-generated certificates for HTTP site systems**, the management point can be HTTP. For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).
 
@@ -215,12 +213,12 @@ These tables summarize whether the management point requires HTTP or HTTPS, depe
 #### For internet-based clients communicating with the cloud management gateway
 Configure an on-premises management point to allow connections from the CMG with the following client connection mode:
 
-| Type of client   | 1706        | 1710        | 1802        | 1806        |
+| Type of client   | 1710        | 1802        | 1806        | 1810        |
 |------------------|-------------|-------------|-------------|-------------|
-| Workgroup        | HTTP, HTTPS | HTTP, HTTPS | HTTPS       | E-HTTP<sup>[Note 1](#bkmk_note1)</sup>, HTTPS |
-| AD domain-joined | HTTP, HTTPS | HTTP, HTTPS | HTTPS       | E-HTTP<sup>[Note 1](#bkmk_note1)</sup>, HTTPS |
-| Azure AD-joined  | HTTPS       | HTTPS       | HTTPS       | E-HTTP, HTTPS |
-| Hybrid-joined    | HTTP, HTTPS | HTTP, HTTPS | HTTPS       | E-HTTP, HTTPS |
+| Workgroup        | HTTP, HTTPS | HTTPS       | E-HTTP<sup>[Note 1](#bkmk_note1)</sup>, HTTPS | E-HTTP<sup>[Note 1](#bkmk_note1)</sup>, HTTPS |
+| AD domain-joined | HTTP, HTTPS | HTTPS       | E-HTTP<sup>[Note 1](#bkmk_note1)</sup>, HTTPS | E-HTTP<sup>[Note 1](#bkmk_note1)</sup>, HTTPS |
+| Azure AD-joined  | HTTPS       | HTTPS       | E-HTTP, HTTPS | E-HTTP, HTTPS |
+| Hybrid-joined    | HTTP, HTTPS | HTTPS       | E-HTTP, HTTPS | E-HTTP, HTTPS |
 
 <a name="bkmk_note1"></a> 
 
@@ -230,7 +228,7 @@ Configure an on-premises management point to allow connections from the CMG with
 #### For on-premises clients communicating with the on-premises management point
 Configure an on-premises management point with the following client connection mode:
 
-| Type of client   | 1706        | 1710        | 1802        | 1806        |
+| Type of client   | 1710        | 1802        | 1806        | 1810        |
 |------------------|-------------|-------------|-------------|-------------|
 | Workgroup        | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS |
 | AD domain-joined | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS |

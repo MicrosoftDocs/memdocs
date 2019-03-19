@@ -2,7 +2,7 @@
 title: Device compliance policies
 titleSuffix: Configuration Manager
 description: Learn how to manage compliance policies in Configuration Manager to make devices compliant with conditional access polices.
-ms.date: 07/12/2018
+ms.date: 03/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -20,7 +20,7 @@ Compliance policies in Configuration Manager define the rules and settings that 
 
 
 > [!IMPORTANT]  
->  This article describes the compliance policies for devices managed by Microsoft Intune. The compliance policies for devices managed by the Configuration Manager client is described in [Manage access to O365 services for devices managed by Configuration Manager](/sccm/protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm).  
+>  This article describes the compliance policies for devices managed by Microsoft Intune. The compliance policies for devices managed by the Configuration Manager client is described in [Manage access to Office 365 services for devices managed by Configuration Manager](/sccm/protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm).  
 
  These rules include requirements like:  
 
