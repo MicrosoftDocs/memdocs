@@ -2,7 +2,7 @@
 title: "Conditional access"
 titleSuffix: "Configuration Manager"
 description: "Learn how to use conditional access in System Center Configuration Manager to help secure email and other services."
-ms.date: 12/22/2017
+ms.date: 03/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -25,7 +25,7 @@ Use conditional access to specify conditions to help secure email and other serv
 > If you use conditional access on devices managed with the Configuration Manager client, to make sure they are still protected, first enable conditional access in Intune for those devices before you migrate. Enable co-management in Configuration Manager, move the compliance policy workload to Intune, and then complete your migration from Intune hybrid to Intune standalone. For more information, see [Conditional access with co-management](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access). 
 
 
- For information about conditional access on devices that are managed with the Configuration Manager client, see [Manage access to O365 services for PCs managed by System Center Configuration Manager](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).  
+ For information about conditional access on devices that are managed with the Configuration Manager client, see [Manage access to Office 365 services for PCs managed by System Center Configuration Manager](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).  
 
 
  A typical flow for conditional access might look as follows:  
