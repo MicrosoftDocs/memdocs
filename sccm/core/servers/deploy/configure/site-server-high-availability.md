@@ -57,7 +57,10 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
 
 - The site is a standalone primary site. 
 
-- Both site servers must use the same site database, which must be remote each site server.  
+- Both site servers must use the same site database, which must be remote from each site server.  
+
+    > [!Note]  
+    > Starting in version 1810, the Configuration Manager setup process no longer blocks installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Always On requires this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using SQL Always On and a site server in passive mode.<!-- SCCMDocs issue 1074 -->
 
     - The SQL Server that hosts the site database can use a default instance, named instance, [SQL Server cluster](/sccm/core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database), or a [SQL Server Always On availability group](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).  
 
