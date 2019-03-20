@@ -34,7 +34,7 @@ The following table lists the versions of the Configuration Manager client that 
 
 | Version  | Availability date  | Support end date  |
 |---------|---------|---------|
-|1902<br/>5.00.8790     | March 15, 2019        | No earlier than March 15, 2021        |
+|1902<br/>5.00.8790     | March 20, 2019        | No earlier than March 20, 2021        |
 |1802<br/>5.00.8634     | May 1, 2018        | No earlier than May 1, 2020        |
 |1606<br/>5.00.8412     | November 18, 2016        | May 1, 2019        |
 
