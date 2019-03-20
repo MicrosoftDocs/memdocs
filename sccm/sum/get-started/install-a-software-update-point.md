@@ -2,10 +2,10 @@
 title: Install and configure a software update point
 titleSuffix: "Configuration Manager"
 description: "Primary sites require a software update point on the central administration site for software updates compliance assessment and to deploy software updates to clients."
-author: aczechowski
-ms.author: aaroncz
+author: mestew 
+ms.author: mstewart
 manager: dougeby
-ms.date: 03/18/2019
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -111,7 +111,7 @@ ms.collection: M365-identity-device-management
 >  When you choose not to enable software updates synchronization on a schedule, you can manually synchronize software updates from the **All Software Updates** or **Software Update Groups** node in the Software Library workspace. For more information, see [synchronize software updates](synchronize-software-updates.md).  
 
 ## Supersedence rules  
- Configure the supersedence settings on the **Supersedence Rules** page of the wizard or on the **Supersedence Rules** tab in Software Update Point Component Properties. You can configure the supersedence rules only on the top-level site.  
+ Configure the supersedence settings on the **Supersedence Rules** page of the wizard or on the **Supersedence Rules** tab in Software Update Point Component Properties. You can configure the supersedence rules only on the top-level site. Starting in Configuration Manager version 1810, you can specify the supersedence rules behavior for **feature updates** separately from **non-feature updates**. <!--3098809, 2977644-->
 
  On this page, you can specify that the superseded software updates are immediately expired, which prevents them from being included in new deployments and flags the existing deployments to indicate that the superseded software updates contain one or more expired software updates. Or, you can specify a period of time before the superseded software updates are expired, which allows you to continue to deploy them. For more information, see [Supersedence rules](../plan-design/plan-for-software-updates.md#BKMK_SupersedenceRules).  
 
