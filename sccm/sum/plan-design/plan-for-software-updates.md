@@ -483,7 +483,9 @@ Configure the summary details settings only on the top-level site. The summary d
 
 ##  <a name="BKMK_MaintenanceWindow"></a> Plan for a software updates maintenance window  
 
-Add a maintenance window dedicated for software updates installation. This action lets you configure a general maintenance window and a different maintenance window for software updates. When you configure both a general maintenance window and software updates maintenance window, clients install software updates only during the software updates maintenance window. Beginning with Configuration Manager version 1810, you can change this behavior and allow software updates to install during a general maintenance window. For more information about this client setting, see [Software updates client settings](/sccm/core/clients/deploy/about-client-settings#bkmk_SUMMaint).
+Add a maintenance window dedicated for software updates installation. This action lets you configure a general maintenance window and a different maintenance window for software updates. When you configure both a general maintenance window and software updates maintenance window, clients install software updates only during the software updates maintenance window. 
+
+Starting with Configuration Manager version 1810, you can change this behavior and allow software updates to install during a general maintenance window. For more information about this client setting, see [Software updates client settings](/sccm/core/clients/deploy/about-client-settings#bkmk_SUMMaint).
 
 For more information about maintenance windows, see [How to use maintenance windows](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
