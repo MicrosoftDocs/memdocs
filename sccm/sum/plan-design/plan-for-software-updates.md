@@ -5,7 +5,7 @@ description: A plan for the software update point infrastructure is essential be
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 03/15/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -450,8 +450,8 @@ Consider the following scenarios in which you might need to deploy a superseded 
 -   If a superseding software update wasn't approved for deployment in your production environment.  
 
     > [!NOTE]  
-    > Before Configuration Manager version 1806, when Configuration Manager sets a superseded software update to **Expired**, it doesn't set the update to **Declined** in WSUS. Clients continue to scan for an expired update until the update is declined manually or via a custom script.  After Configuration Manager version 1806, Configuration Manager will also decline the superseded updates in WSUS. For more information about the WSUS cleanup task, see [Software updates maintenance](/sccm/sum/deploy-use/software-updates-maintenance).
-
+    > - Before Configuration Manager version 1806, when Configuration Manager sets a superseded software update to **Expired**, it doesn't set the update to **Declined** in WSUS. Clients continue to scan for an expired update until the update is declined manually or via a custom script.  After Configuration Manager version 1806, Configuration Manager will also decline the superseded updates in WSUS. For more information about the WSUS cleanup task, see [Software updates maintenance](/sccm/sum/deploy-use/software-updates-maintenance).
+    > - Starting in Configuration Manager version 1810, you can specify the supersedence rules behavior for **feature updates** separately from **non-feature updates**.
 
 ###  <a name="BKMK_UpdateLanguages"></a> Languages  
 

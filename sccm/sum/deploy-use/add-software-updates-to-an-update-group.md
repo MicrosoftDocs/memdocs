@@ -3,7 +3,7 @@ title: "Add updates to an update group "
 titleSuffix: "Configuration Manager"
 description: "Manually or automatically add software updates to a software update group in your environment."
 author: aczechowski
-ms.date: 01/23/2017
+ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -44,7 +44,7 @@ ms.collection: M365-identity-device-management
 3.  Select the software updates that you want to add to the new software update group.  
 
     > [!NOTE]  
-    >  On the **All Software Updates** node, by default, Configuration Manager displays only software updates with a **Critical** and **Security** classification and that were released in the last 30 days.  
+    >  On the **All Software Updates** node, Configuration Manager displays all updates except those in the **Upgrades** classification and **Office 365 Client** product classification.  
 
 4.  On the **Home** tab, in the **Update** group, click **Edit Membership**.  
 
