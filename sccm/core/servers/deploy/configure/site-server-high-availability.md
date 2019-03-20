@@ -93,9 +93,9 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
 
     - Must have its computer account in the local Administrators group on the site server in active mode.<!--516036-->
 
-    - Installs using source files that match the version of the site server in active mode.  
+    - Must install using source files that match the version of the site server in active mode.  
 
-    - Can't have a site system role from any site prior to installing the site server in passive mode role.  
+    - Can't have a site system role from any site installed on it before you install the site server in passive mode role.  
 
 - Both site servers can run different OS or service pack versions, as long as both are [supported by Configuration Manager](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers).  
 
@@ -227,7 +227,7 @@ For more information on the *planned* promotion process, see [Flowchart - Promot
 
 If the current site server in active mode is offline, the site server for promotion tries to contact the current site server in active mode for 30 minutes. If the offline server comes back before this time, it's successfully notified, and the change proceeds gracefully. Otherwise the site server for promotion forcibly updates the site configuration for it to be active. If the offline server comes back after this time, it first checks the current state in the site database. It then proceeds with demoting itself to the site server in passive mode.
 
-During this 30 minute waiting period, the site has no site server in active mode. Clients still communicate with client-facing roles such as management points, software update points, and distribution points. Users can install software that's already deployed. No site administration is possible in this time period. For more information, see [Site failure impacts](/sccm/core/servers/manage/site-failure-impacts).  
+During this 30-minute waiting period, the site has no site server in active mode. Clients still communicate with client-facing roles such as management points, software update points, and distribution points. Users can install software that's already deployed. No site administration is possible in this time period. For more information, see [Site failure impacts](/sccm/core/servers/manage/site-failure-impacts).  
 
 If the offline server is damaged such that it can't return, delete this site server from the console. Then create a new site server in passive mode to restore a highly available service. 
 
@@ -236,13 +236,13 @@ For more information on the *unplanned* failover process, see [Flowchart - Promo
 
 ### Additional tasks after site server promotion  
 
-After switching site servers, you don't have to perform most of the other tasks as are necessary when [recovering a site](/sccm/core/servers/manage/recover-sites#post-recovery-tasks). For example, you don't need to reset passwords or reconnect your Microsoft Intune subscription.
+After switching site servers, you don't have to do most of the other tasks as are necessary when [recovering a site](/sccm/core/servers/manage/recover-sites#post-recovery-tasks). For example, you don't need to reset passwords or reconnect your Microsoft Intune subscription.
 
 The following steps may be required if necessary in your environment:  
 
 - If you import PKI certificates for distribution points, reimport the certificate for affected servers. For more information, see [Regenerate the certificates for distribution points](/sccm/core/servers/manage/recover-sites#regenerate-the-certificates-for-distribution-points).  
 
-- If you integrate Confguration Manager with the Microsoft Store for Business, reconfigure that connection. For more information, see [Manage apps from the Microsoft Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).  
+- If you integrate Configuration Manager with the Microsoft Store for Business, reconfigure that connection. For more information, see [Manage apps from the Microsoft Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).  
 
 
 
