@@ -55,12 +55,13 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
 
 - Both site servers must be joined to the same Active Directory domain.  
 
-- The site is a standalone primary site. 
+- In version 1806, the site must be a standalone primary site.  
 
-- Both site servers must use the same site database, which must be remote from each site server.  
+    - Starting in version 1810, Configuration Manager supports site servers in passive mode in a hierarchy. The central administration site and child primary sites can have an additional site server in passive mode.<!-- 3607755 -->  
 
-    > [!Note]  
-    > Starting in version 1810, the Configuration Manager setup process no longer blocks installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Always On requires this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using SQL Always On and a site server in passive mode.<!-- SCCMDocs issue 1074 -->
+- Both site servers must use the same site database.  
+
+    - In version 1806, the database must be remote from each site server. Starting in version 1810, the Configuration Manager setup process no longer blocks installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Always On requires this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using SQL Always On and a site server in passive mode.<!-- SCCMDocs issue 1074 -->  
 
     - The SQL Server that hosts the site database can use a default instance, named instance, [SQL Server cluster](/sccm/core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database), or a [SQL Server Always On availability group](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).  
 
@@ -76,7 +77,7 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
         ALTER SERVER ROLE [securityadmin] ADD MEMBER [contoso\vm2$]
         GO        
         ```
-    - Both site servers need access to the site database on the instance of SQL Server. The original site server should already have this access, so add it for the new site server. For example, the following SQL script adds this login for the new site server **VM2** in the Contoso domain to the **CM_ABC** database:  
+    - Both site servers need access to the site database on the instance of SQL Server. The original site server should already have this access, so add it for the new site server. For example, the following SQL script adds a login to the **CM_ABC** database for the new site server **VM2** in the Contoso domain:  
 
         ```SQL
         USE [CM_ABC]
@@ -110,11 +111,12 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
 
 
 ## Limitations
-- A single site server in passive mode is supported at each primary site.  
 
-- A site server in passive mode isn't supported in a hierarchy. A hierarchy includes a central administration site and a child primary site. Only create a site server in passive mode at a standalone primary site.<!--1358224-->  
+- Only a single site server in passive mode is supported at each site.  
 
-    - Starting in version 1810, Configuration Manager supports site servers in passive mode in a hierarchy. The central administration site and child primary sites can have an additional site server in passive mode.<!-- 3607755 -->
+- In version 1806, a site server in passive mode isn't supported in a hierarchy. A hierarchy includes a central administration site and a child primary site. Only create a site server in passive mode at a standalone primary site.<!--1358224-->  
+
+    - Starting in version 1810, Configuration Manager supports site servers in passive mode in a hierarchy. The central administration site and child primary sites can have an additional site server in passive mode.<!-- 3607755 -->  
 
 - A site server in passive mode isn't supported at a secondary site.<!--SCCMDocs issue 680-->  
 
