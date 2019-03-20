@@ -2,7 +2,7 @@
 title: Deploy UNIX/Linux clients
 titleSuffix: Configuration Manager
 description: Learn how to deploy a client to a UNIX or Linux server in Configuration Manager.
-ms.date: 03/15/2019
+ms.date: 03/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
