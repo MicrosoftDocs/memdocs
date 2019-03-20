@@ -57,10 +57,10 @@ For more information, see [Supported operating systems for site system servers](
 
 
 ### Hierarchy support for site server high availability
-<!--1358224-->
-Central administration sites and child primary sites can now have an additional site server in passive mode. 
+<!--3607755, fka 1358224-->
+***[Updated]*** Central administration sites and child primary sites can now have an additional site server in passive mode. 
 
-<!--For more information, see [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability).-->
+For more information, see [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability).
 
 
 ### Improvements to setup prerequisites
