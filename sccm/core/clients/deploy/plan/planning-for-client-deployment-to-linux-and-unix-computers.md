@@ -2,7 +2,7 @@
 title: Planning client deployment to Linux and UNIX computers
 titleSuffix: Configuration Manager
 description: Plan for client deployment to Linux and UNIX computers in Configuration Manager.
-ms.date: 03/15/2019
+ms.date: 03/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual

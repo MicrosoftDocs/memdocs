@@ -2,7 +2,7 @@
 title: Diagnostic and usage data for 1902
 titleSuffix: Configuration Manager
 description: Learn about the levels of diagnostics and usage data collected in version 1902.
-ms.date: 03/15/2019
+ms.date: 03/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

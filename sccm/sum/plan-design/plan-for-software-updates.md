@@ -5,7 +5,7 @@ description: A plan for the software update point infrastructure is essential be
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 03/15/2019
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
