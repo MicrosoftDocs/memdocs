@@ -2,7 +2,7 @@
 title: What's new in version 1810
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1810 of Configuration Manager current branch.
-ms.date: 03/15/2019
+ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -57,10 +57,10 @@ For more information, see [Supported operating systems for site system servers](
 
 
 ### Hierarchy support for site server high availability
-<!--1358224-->
-Central administration sites and child primary sites can now have an additional site server in passive mode. 
+<!--3607755, fka 1358224-->
+***[Updated]*** Central administration sites and child primary sites can now have an additional site server in passive mode. 
 
-<!--For more information, see [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability).-->
+For more information, see [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability).
 
 
 ### Improvements to setup prerequisites
@@ -275,13 +275,14 @@ For more information, see [Create phased deployments](/sccm/osd/deploy-use/creat
 
 ### Improvement to maintenance windows for software updates
 <!--vso2839307-->
-The following client setting is in the **Software Updates** group to control the installation behavior of software updates in maintenance windows: 
+***[Updated]*** The following client setting is in the **Software Updates** group to control the installation behavior of software updates in maintenance windows: 
 
 **Enable installation of updates in "All deployments" maintenance window when "Software update" maintenance window is available**
 
 By default, this option is **No** to keep consistent with the existing behavior. Change it to **Yes** to allow clients to use other available maintenance windows to install software updates.
 
-<!--For more information, see []().-->
+For more information, see [Software updates client settings](/sccm/core/clients/deploy/about-client-settings#bkmk_SUMMaint).
+
 
 ### Improvement to software updates maintenance
 <!--2839349-->
