@@ -2,7 +2,7 @@
 title: CMPivot for real-time data
 titleSuffix: Configuration Manager
 description: Learn how to use CMPivot in Configuration Manager to query clients in real-time.
-ms.date: 03/21/2019
+ms.date: 03/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -253,7 +253,7 @@ A query times out after one hour. For example, a collection has 500 devices, and
 
 
 ## <a name="bkmk_cmpivot"></a> Additions to CMPivot starting in version 1810
-<!--1359068-->
+<!--1359068, 3607759-->
 
 CMPivot includes the following improvements starting in Configuration Manager version 1810:  
 - [Scalar functions](#bkmk_cmpivot-functions)  
