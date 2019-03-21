@@ -23,6 +23,8 @@ Configuration Manager has always provided a large centralized store of device da
 
 For example, in [mitigating speculative execution side channel vulnerabilities](https://blogs.technet.microsoft.com/configurationmgr/2018/01/08/additional-guidance-to-mitigate-speculative-execution-side-channel-vulnerabilities/), one of the requirements is to update the system BIOS. You can use CMPivot to quickly query on system BIOS information, and find clients that aren't in compliance.
 
+ > [!Tip]  
+ > Some security software may block scripts running from c:\windows\ccm\scriptstore. This can prevent successful execution of CMPivot queries.
 
 
 ## Prerequisites
@@ -41,7 +43,7 @@ The following components are required to use CMPivot:
   - Administrators
   - Connection
   - IPConfig
-  - SMBConfig 
+  - SMBConfig
 
 
 ## Limitations
