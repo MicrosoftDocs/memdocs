@@ -2,10 +2,10 @@
 title: Plan for software updates
 titleSuffix: Configuration Manager
 description: A plan for the software update point infrastructure is essential before you use software updates in a Configuration Manager production environment.
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 03/21/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -483,8 +483,11 @@ Configure the summary details settings only on the top-level site. The summary d
 
 ##  <a name="BKMK_MaintenanceWindow"></a> Plan for a software updates maintenance window  
 
-Add a maintenance window dedicated for software updates installation. This action lets you configure a general maintenance window and a different maintenance window for software updates. When you configure both a general maintenance window and software updates maintenance window, clients install software updates only during the software updates maintenance window. For more information about maintenance windows, see [How to use maintenance windows](../../core/clients/manage/collections/use-maintenance-windows.md).  
+Add a maintenance window dedicated for software updates installation. This action lets you configure a general maintenance window and a different maintenance window for software updates. When you configure both a general maintenance window and software updates maintenance window, clients install software updates only during the software updates maintenance window. 
 
+Starting with Configuration Manager version 1810, you can change this behavior and allow software updates to install during a general maintenance window. For more information about this client setting, see [Software updates client settings](/sccm/core/clients/deploy/about-client-settings#bkmk_SUMMaint).
+
+For more information about maintenance windows, see [How to use maintenance windows](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
 
 ##  <a name="BKMK_RestartOptions"></a> Restart options for Windows 10 clients after software update installation
