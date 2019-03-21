@@ -298,7 +298,7 @@ CCMRecentlyUsedApplications
 | top 10 by dcount_
 | render barchart
 ```
-![Example of CMPivot bar chart visualization](../media/1359068-cmpivot-barchart.png)
+![Example of CMPivot bar chart visualization](media/1359068-cmpivot-barchart.png)
 
 #### Example: time chart
 To render time charts, use the new **bin()** operator to group events in time. The following query shows when devices have started in the last seven days:
@@ -309,7 +309,7 @@ OperatingSystem
 | summarize count() by bin(LastBootUpTime,1d)
 | render timechart
 ```
-![Example of CMPivot time chart visualization](../media/1359068-cmpivot-timechart.png)
+![Example of CMPivot time chart visualization](media/1359068-cmpivot-timechart.png)
 
 #### Example: pie chart
 The following query displays all OS versions in a pie chart:
@@ -319,7 +319,7 @@ OperatingSystem
 | summarize count() by Caption
 | render piechart
 ```
-![Example of CMPivot pie chart visualization](../media/1359068-cmpivot-piechart.png)
+![Example of CMPivot pie chart visualization](media/1359068-cmpivot-piechart.png)
 
 
 ### <a name="bkmk_cmpivot-hinv"></a> Hardware inventory
@@ -334,7 +334,7 @@ LogicalDisk
 | order by sum_ desc
 | render columnchart
 ```
-![Example of CMPivot inventory query with column chart visualization](../media/1359068-cmpivot-inventory.png)
+![Example of CMPivot inventory query with column chart visualization](media/1359068-cmpivot-inventory.png)
 
 #### Limitations
 - The following hardware inventory entities aren't supported:  
