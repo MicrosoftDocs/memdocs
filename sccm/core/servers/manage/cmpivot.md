@@ -39,6 +39,8 @@ The following components are required to use CMPivot:
   - **Read** permission on **Inventory Reports**
   - The default scope. <!--The **Scripts Runner** role has these permissions, which isn't created by default. For more information on creating this custom security role, please see [Security roles for scripts](/sccm/apps/deploy-use/create-deploy-scripts#bkmk_ScriptRoles).  -->
 
+- Clients running a minimum of PowerShell version 4.
+
 - To gather data for the following entities, target clients require PowerShell version 5.0:  
   - Administrators
   - Connection
@@ -48,7 +50,7 @@ The following components are required to use CMPivot:
 
 ## Limitations
 
-- In a hierarchy, connect the Configuration Manager console to a *primary site* to run CMPivot. The **Start CMPivot** action doesn't appear in the console when it's connected to a central administration site.  
+- In a hierarchy, connect the Configuration Manager console to a *primary site* to run CMPivot. The **Start CMPivot** action doesn't appear in the console when it's connected to a central administration site.
 
 - CMPivot only returns data for clients connected to the current site.  
 
