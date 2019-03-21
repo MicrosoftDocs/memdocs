@@ -25,7 +25,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
 ## Initial onboarding
 
-1. Open the [Desktop Analytics portal](https://aka.ms/m365aprod) in Microsoft 365 Device Management as a user with **Company Admin** permissions. Select **Start**.  
+1. Open the Desktop Analytics portal in Microsoft 365 Device Management as a user with **Company Admin** permissions. Select **Start**.  
 
 2. On the **Accept service agreement** page, review the service agreement, and select **Accept**.  
 
