@@ -65,7 +65,7 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
 
     - The SQL Server that hosts the site database can use a default instance, named instance, [SQL Server cluster](/sccm/core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database), or a [SQL Server Always On availability group](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).  
 
-    - Both site servers need **sysadmin** and **securityadmin** security roles on the instance of SQL Server that hosts the site database. The original site server should already have these roles, so add them for the new site server. For example, the following SQL script adds these roles for the new site server **VM2** in the Contoso domain:  
+    - Both site servers need the **sysadmin** security role on the instance of SQL Server that hosts the site database. The original site server should already have these roles, so add them for the new site server. For example, the following SQL script adds these roles for the new site server **VM2** in the Contoso domain:  
 
         ```SQL
         USE [master]
@@ -73,9 +73,7 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
         CREATE LOGIN [contoso\vm2$] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
         GO
         ALTER SERVER ROLE [sysadmin] ADD MEMBER [contoso\vm2$]
-        GO
-        ALTER SERVER ROLE [securityadmin] ADD MEMBER [contoso\vm2$]
-        GO        
+        GO       
         ```
     - Both site servers need access to the site database on the instance of SQL Server. The original site server should already have this access, so add it for the new site server. For example, the following SQL script adds a login to the **CM_ABC** database for the new site server **VM2** in the Contoso domain:  
 
