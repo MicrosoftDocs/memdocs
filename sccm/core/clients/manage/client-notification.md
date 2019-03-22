@@ -2,7 +2,7 @@
 title: Client notification
 titleSuffix: Configuration Manager
 description: Manage clients by taking immediate action from the central Configuration Manager console.
-ms.date: 03/19/2019
+ms.date: 03/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -136,7 +136,7 @@ Trigger clients to check their compliance with conditional access. For more info
 
 ### Wake Up
 
-Starting in version 1810, trigger sleeping devices to return to full power state.
+Starting in version 1810, trigger devices configured to support Wake-on Lan to wake up using other devices on the same Subnet to send the wake on lan package.
 
 
 ### Restart
