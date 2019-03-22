@@ -377,5 +377,5 @@ Use this procedure to deploy Office 365 ProPlus in Configuration Manager to the 
 
 Advance to the next article to learn more about Desktop Analytics deployment plans.
 > [!div class="nextstepaction"]  
-> [Deployment plans](/sccm/desktop-analytics/deployment-plans)  
+> [Deployment plans](/sccm/desktop-analytics/about-deployment-plans)
 
