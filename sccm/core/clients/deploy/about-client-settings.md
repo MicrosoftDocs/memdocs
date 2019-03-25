@@ -458,7 +458,7 @@ Choose **Yes** to let users of Software Center exclude their computer from any c
 
 ### Allow network wake-up
 
-Added in 1810 when set to **Enable** configures the power settings on the network adapter to allow the network adapter to wake-up the device. When set to **Disable** the power settings on the network adapter is configured not to allow the network adapter to wake-up the device.
+Added in 1810. When set to **Enable**, configures the power settings on the network adapter to allow the network adapter to wake up the device. When set to **Disable**, the power settings on the network adapter are configured not to allow the network adapter to wake up the device.
 
 ### Enable wake-up proxy
 
