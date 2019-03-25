@@ -414,7 +414,7 @@ Aside from new features, this release also includes additional changes such as b
 
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1810 release notes](https://docs.microsoft.com/powershell/sccm/1810-release-notes?view=sccm-ps).
 
-The following update rollup (4486457) is available in the console starting on 25 January 2019: [Update rollup for Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4486457).
+The following update rollup (4488598) is available in the console starting on 25 March 2019: [Update rollup 2 for Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4488598). This replaces the prior update rollup, KB 4486457.
 
 
 ### Hotfixes
