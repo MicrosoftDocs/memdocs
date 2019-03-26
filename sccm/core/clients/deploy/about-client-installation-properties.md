@@ -2,7 +2,7 @@
 title: Client installation parameters and properties
 titleSuffix: Configuration Manager
 description: Learn about the ccmsetup command-line parameters and properties for installing the Configuration Manager client.
-ms.date: 03/28/2018
+ms.date: 03/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -330,7 +330,7 @@ Example: **CCMSetup.exe  CCMALLOWSILENTREBOOT**
 
  This value is a case-sensitive match for subject attributes that are in the root CA certificate. Attributes can be separated by a comma (,) or semi-colon (;). Specify more than one root CA certificates by using a separator bar. Example:  
 
- `CCMCERTISSUERS=”CN=Contoso Root CA; OU=Servers; O=Contoso, Ltd; C=US &#124; CN=Litware Corporate Root CA; O=Litware, Inc.”`  
+ `CCMCERTISSUERS="CN=Contoso Root CA; OU=Servers; O=Contoso, Ltd; C=US | CN=Litware Corporate Root CA; O=Litware, Inc."`  
 
 > [!TIP]  
 >  To copy the **CertificateIssuers=&lt;string\>** for the site, reference the mobileclient.tcf file in the &lt;Configuration Manager directory\>\bin\\&lt;platform\> folder on the site server.  
