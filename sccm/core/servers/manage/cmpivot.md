@@ -2,7 +2,7 @@
 title: CMPivot for real-time data
 titleSuffix: Configuration Manager
 description: Learn how to use CMPivot in Configuration Manager to query clients in real-time.
-ms.date: 03/26/2019
+ms.date: 03/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -229,14 +229,23 @@ You need to temporarily store a large file on a network file server, but aren't 
 <!--1359068, 3607759-->
 
 CMPivot includes the following improvements starting in Configuration Manager version 1810:  
+- [CMPivot window](#bkmk_cmpivot-window)
 - [Scalar functions](#bkmk_cmpivot-functions)  
 - [Rendering visualizations](#bkmk_cmpivot-charts)  
 - [Hardware inventory](#bkmk_cmpivot-hinv)  
 - [Scalar operators](#bkmk_cmpivot-operators)  
 - [Query summary](#bkmk_cmpivot-summary)  
+- [Audit status messages](#bkmk_cmpivot-status-message)
 
-For more general information, see [CMPivot](/sccm/core/servers/manage/cmpivot).
+### CMPivot window changes
 
+- CMPivot will return up to 100,000 cells rather than 20,000 rows.
+  - If the entity has 5 properties, meaning 5 columns, up to 20,000 rows will be shown.
+  - For an entity with 10 properties, up to 10,000 rows will be shown.
+  - The total data shown will be less than or equal to 100,000 cells.
+- On the Query Summary tab, select the count of Failed or Offline devices, and then select the option to **Create Collection**. This option makes it easy to target those devices with a remediation deployment.
+- Save **Favorite** queries by clicking the folder icon.
+   ![Example of saving a favorite query in CMPivot](media/cmpivot-favorite.png)
 
 ### <a name="bkmk_cmpivot-functions"></a> Scalar functions
 CMPivot supports the following scalar functions:
@@ -341,9 +350,26 @@ Based on your feedback, CMPivot includes the following scalar operators:
 
 
 ### <a name="bkmk_cmpivot-summary"></a> Query summary
+
 Select the **Query Summary** tab at the bottom of the CMPivot window. This status helps you identify clients that are offline, or troubleshoot errors that may occur. Select a value in the Count column to open a list of specific devices with that status. 
 
 For example, select the count of devices with a Failure status. See the specific error message, and export a list of these devices. If the error is that a specific cmdlet isn't recognized, create a collection from the exported device list to deploy a Windows PowerShell update.  
+
+### <a name="#bkmk_cmpivot-status-messages"></a> CMPivot audit status messages
+
+Starting in version 1810, when you run CMPivot, an audit status message is created with **MessageID 40805**. You can view the status messages by going to **Monitoring** < **System Status** < **Status Message Queries**. You can run **All Audit status Messages for a Specific User**, **All Audit status Messages for a Specific Site**, or create your own status message query.
+
+The following is the message format:
+
+MessageId 40805: User &lt;UserName> ran script &lt;Script-Guid> with hash &lt;Script-Hash> on collection &lt;Collection-ID>.
+
+- 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 is the Script-Guid for CMPivot.
+- The Script-Hash can be seen in the client's scripts.log file.
+- You can also see the hash stored in the client's script score. The filename on the client is &lt;Script-Guid>_&lt;Script-Hash>.
+    - Example file name: C:\Windows\CCM\ScriptStore\7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14_abc1d23e45678901fabc123d456ce789fa1b2cd3e456789123fab4c56789d0123.ps
+   
+
+![CMPivot audit status message sample](media/cmpivot-audit-status-message.png)
 
 ## Inside CMPivot
 
