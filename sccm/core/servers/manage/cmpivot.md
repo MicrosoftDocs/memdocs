@@ -225,34 +225,7 @@ You need to temporarily store a large file on a network file server, but aren't 
 `Disk | where (Description == 'Local Fixed Disk') | where isnotnull( FreeSpace ) | order by FreeSpace asc`
 
 
-
-## Inside CMPivot
-
-CMPivot sends queries to clients using the Configuration Manager "fast channel". This communication channel from server to client is also used by other features such as client notification actions, client status, and Endpoint Protection. Clients return results via the similarly quick state message system. State messages are temporarily stored in the database. 
-
-The queries and the results are all just text. The entities **InstallSoftware** and **Process** return some of the largest result sets. During performance testing, the largest state message file size from one client for these queries was less than **1 KB**. Scaled to a large environment with 50,000 active clients, this one-time query would generate less than 50 MB of data across the network.
-
-Starting in Configuration Manager 1810, CMPivot is able to query hardware inventory data, including extended hardware inventory classes. These new entities may return much larger data sets, depending on how much data is defined for a given hardware inventory property. For example, the “InstalledExecutable” entity might return multiple MB of data per client, depending on the specific data you query on. Be mindful of the performance and scalability on your systems when returning larger hardware inventory data sets from larger collections using CMPivot.
-
-A query times out after one hour. For example, a collection has 500 devices, and 450 of the clients are currently online. Those active devices receive the query and return the results almost immediately. If you leave the CMPivot window open, as the other 50 clients come online, they also receive the query, and return results. 
-
->[!TIP]
-> CMPivot interations are logged to the following log files:
->
-> **Server-side:**
-> - SmsProv.log
-> - bgbServer.log
-> - StateSys.log
->
-> **Client-side:**
-> - CcmNotificationAgent.log
-> - Scripts.log
-> - StateMessage.log
->
-> For more information, see [Log files](/sccm/core/plan-design/hierarchy/log-files).
-
-
-## <a name="bkmk_cmpivot"></a> Additions to CMPivot starting in version 1810
+## <a name="bkmk_cmpivot"></a> CMPivot starting in version 1810
 <!--1359068, 3607759-->
 
 CMPivot includes the following improvements starting in Configuration Manager version 1810:  
@@ -371,6 +344,32 @@ Based on your feedback, CMPivot includes the following scalar operators:
 Select the **Query Summary** tab at the bottom of the CMPivot window. This status helps you identify clients that are offline, or troubleshoot errors that may occur. Select a value in the Count column to open a list of specific devices with that status. 
 
 For example, select the count of devices with a Failure status. See the specific error message, and export a list of these devices. If the error is that a specific cmdlet isn't recognized, create a collection from the exported device list to deploy a Windows PowerShell update.  
+
+## Inside CMPivot
+
+CMPivot sends queries to clients using the Configuration Manager "fast channel". This communication channel from server to client is also used by other features such as client notification actions, client status, and Endpoint Protection. Clients return results via the similarly quick state message system. State messages are temporarily stored in the database. 
+
+The queries and the results are all just text. The entities **InstallSoftware** and **Process** return some of the largest result sets. During performance testing, the largest state message file size from one client for these queries was less than **1 KB**. Scaled to a large environment with 50,000 active clients, this one-time query would generate less than 50 MB of data across the network.
+
+Starting in Configuration Manager 1810, CMPivot is able to query hardware inventory data, including extended hardware inventory classes. These new entities may return much larger data sets, depending on how much data is defined for a given hardware inventory property. For example, the “InstalledExecutable” entity might return multiple MB of data per client, depending on the specific data you query on. Be mindful of the performance and scalability on your systems when returning larger hardware inventory data sets from larger collections using CMPivot.
+
+A query times out after one hour. For example, a collection has 500 devices, and 450 of the clients are currently online. Those active devices receive the query and return the results almost immediately. If you leave the CMPivot window open, as the other 50 clients come online, they also receive the query, and return results. 
+
+>[!TIP]
+> CMPivot interations are logged to the following log files:
+>
+> **Server-side:**
+> - SmsProv.log
+> - bgbServer.log
+> - StateSys.log
+>
+> **Client-side:**
+> - CcmNotificationAgent.log
+> - Scripts.log
+> - StateMessage.log
+>
+> For more information, see [Log files](/sccm/core/plan-design/hierarchy/log-files).
+
 
 ## See also
 [Create and run PowerShell scripts](/sccm/apps/deploy-use/create-deploy-scripts)
