@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 02/19/2019
+ms.date: 03/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -123,14 +123,14 @@ The following features are available with the most recent Configuration Manager 
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### Technical Preview version 1902.2
+### Technical Preview version 1903
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID--> 
 
-- [Additional languages for Office 365 updates](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_o365lang) <!--3555955--> 
-- [Integration with analytics for Office 365 ProPlus readiness](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_o365) <!--3735402--> 
-- [Improvement to phased deployment success criteria](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_pod) <!--3555946--> 
-- [Improvement to enhanced HTTP](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_ehttp) <!--3798957--> 
+- [Cloud services cost estimator](/sccm/core/get-started/2019/technical-preview-1903#bkmk_anchor) <!--3555774-->
+- [Use your distribution point as an in-network cache server for Delivery Optimization](/sccm/core/get-started/2019/technical-preview-1903#bkmk_anchor) <!--3555764-->
+- [Reclaim SEDO lock for task sequences](/sccm/core/get-started/2019/technical-preview-1903#bkmk_anchor) <!--3699337-->
+- [Drill-through required updates](/sccm/core/get-started/2019/technical-preview-1903#bkmk_anchor) <!--4224414-->
 
 
 > [!Note]  
@@ -149,6 +149,10 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  | Feature | Technical preview version | Current branch version |  
  |---------|---------------------------|------------------------|
+ | Additional languages for Office 365 updates <!--3555955--> | [Tech Preview 1902.2](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_o365lang) | ![Not added](media/Red_X.gif) | 
+ | Integration with analytics for Office 365 ProPlus readiness <!--3735402--> | [Tech Preview 1902.2](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_o365) | ![Not added](media/Red_X.gif) | 
+ | Improvement to phased deployment success criteria <!--3555946--> | [Tech Preview 1902.2](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_pod) | ![Not added](media/Red_X.gif) | 
+ | Improvement to enhanced HTTP <!--3798957--> | [Tech Preview 1902.2](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_ehttp) | ![Not added](media/Red_X.gif) | 
  | Replace toast notifications with dialog window <!--3555947--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_impact) | ![Not added](media/Red_X.gif) | 
  | Progress status during in-place upgrade task sequence <!--3747129--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_ipu) | ![Not added](media/Red_X.gif) | 
  | Redirect Windows known folders to OneDrive <!--3556021--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_odfb) | ![Not added](media/Red_X.gif) | 
