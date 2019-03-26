@@ -2,7 +2,7 @@
 title: Client installation parameters and properties
 titleSuffix: Configuration Manager
 description: Learn about the ccmsetup command-line parameters and properties for installing the Configuration Manager client.
-ms.date: 03/28/2018
+ms.date: 03/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -34,7 +34,7 @@ Use the CCMSetup.exe command to install the Configuration Manager client. If you
 > [!NOTE]  
 >  In Configuration Manager, you can't run the Client.msi file directly.  
 
- CCMSetup.exe provides [command-line parameters](#ccmsetup-exe-command-line-parameters) to customize the installation -- parameters are prefixed with a backslash and by convention are lower case. You specify the value of a parameter when necessary using a colon immediately followed by the desired value. You can also supply properties to modify the behavior of client.msi at the CCMSetup.exe command line -- properties by convention are in all upper case. You specify a value for a property using an equal sign immediately followed by the desired value.  
+ CCMSetup.exe provides [command-line parameters](#ccmsetupexe-command-line-parameters) to customize the installation -- parameters are prefixed with a backslash and by convention are lower case. You specify the value of a parameter when necessary using a colon immediately followed by the desired value. You can also supply properties to modify the behavior of client.msi at the CCMSetup.exe command line -- properties by convention are in all upper case. You specify a value for a property using an equal sign immediately followed by the desired value.  
 
 > [!IMPORTANT]  
 >  Specify CCMSetup parameters before you specify properties for client.msi.  
@@ -330,7 +330,7 @@ Example: **CCMSetup.exe  CCMALLOWSILENTREBOOT**
 
  This value is a case-sensitive match for subject attributes that are in the root CA certificate. Attributes can be separated by a comma (,) or semi-colon (;). Specify more than one root CA certificates by using a separator bar. Example:  
 
- `CCMCERTISSUERS=”CN=Contoso Root CA; OU=Servers; O=Contoso, Ltd; C=US &#124; CN=Litware Corporate Root CA; O=Litware, Inc.”`  
+ `CCMCERTISSUERS="CN=Contoso Root CA; OU=Servers; O=Contoso, Ltd; C=US | CN=Litware Corporate Root CA; O=Litware, Inc."`  
 
 > [!TIP]  
 >  To copy the **CertificateIssuers=&lt;string\>** for the site, reference the mobileclient.tcf file in the &lt;Configuration Manager directory\>\bin\\&lt;platform\> folder on the site server.  
