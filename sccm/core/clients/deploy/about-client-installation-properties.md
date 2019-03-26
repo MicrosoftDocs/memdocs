@@ -34,7 +34,7 @@ Use the CCMSetup.exe command to install the Configuration Manager client. If you
 > [!NOTE]  
 >  In Configuration Manager, you can't run the Client.msi file directly.  
 
- CCMSetup.exe provides [command-line parameters](#ccmsetup-exe-command-line-parameters) to customize the installation -- parameters are prefixed with a backslash and by convention are lower case. You specify the value of a parameter when necessary using a colon immediately followed by the desired value. You can also supply properties to modify the behavior of client.msi at the CCMSetup.exe command line -- properties by convention are in all upper case. You specify a value for a property using an equal sign immediately followed by the desired value.  
+ CCMSetup.exe provides [command-line parameters](#ccmsetupexe-command-line-parameters) to customize the installation -- parameters are prefixed with a backslash and by convention are lower case. You specify the value of a parameter when necessary using a colon immediately followed by the desired value. You can also supply properties to modify the behavior of client.msi at the CCMSetup.exe command line -- properties by convention are in all upper case. You specify a value for a property using an equal sign immediately followed by the desired value.  
 
 > [!IMPORTANT]  
 >  Specify CCMSetup parameters before you specify properties for client.msi.  
