@@ -57,10 +57,10 @@ For more information, see [Supported operating systems for site system servers](
 
 
 ### Hierarchy support for site server high availability
-<!--1358224-->
-Central administration sites and child primary sites can now have an additional site server in passive mode. 
+<!--3607755, fka 1358224-->
+***[Updated]*** Central administration sites and child primary sites can now have an additional site server in passive mode. 
 
-<!--For more information, see [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability).-->
+For more information, see [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability).
 
 
 ### Improvements to setup prerequisites
@@ -414,7 +414,7 @@ Aside from new features, this release also includes additional changes such as b
 
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1810 release notes](https://docs.microsoft.com/powershell/sccm/1810-release-notes?view=sccm-ps).
 
-The following update rollup (4486457) is available in the console starting on 25 January 2019: [Update rollup for Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4486457).
+The following update rollup (4488598) is available in the console starting on 25 March 2019: [Update rollup 2 for Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4488598). This replaces the prior update rollup, KB 4486457.
 
 
 ### Hotfixes
