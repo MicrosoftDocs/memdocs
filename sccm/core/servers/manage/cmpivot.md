@@ -8,7 +8,7 @@ ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: mestew
-ms.author: mstewart
+ms.author: mstewart 
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -328,7 +328,7 @@ LogicalDisk
 
 
 ### <a name="bkmk_cmpivot-operators"></a> Scalar operators
-Based on your feedback, CMPivot includes the following scalar operators:  
+CMPivot includes the following scalar operators:  
 
 > [!Note]  
 > - LHS: string to the left of the operator  
