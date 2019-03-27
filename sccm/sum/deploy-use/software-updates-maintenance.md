@@ -3,7 +3,7 @@ title: Software updates maintenance
 titleSuffix: "Configuration Manager"
 description: "To maintain updates in Configuration Manager, you can schedule the WSUS cleanup task, or you can run it manually."
 author: mestew
-ms.date: 03/05/2019
+ms.date: 03/15/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -74,8 +74,8 @@ All WSUS Maintenance needs to be run manually on secondary site WSUS databases. 
 
 ## WSUS cleanup behavior starting in version 1810
 
-Starting version 1810, the WSUS cleanup option occurs after every sync and does the following cleanup items:
-<!--2839349-->
+Starting version 1810, you can specify supersedence rules for feature updates separately from non-feature updates in the Software Update Point component properties. The WSUS cleanup option occurs after every sync and does the following cleanup items:
+<!--2839349,3098809, 2977644-->
 
 - The **Expired updates** option for WSUS servers on CAS, primary, and secondary sites.
 - Configuration Manager builds a list of superseded updates from its database. The list is based on the supersedence behavior in the Software Update Point component properties.

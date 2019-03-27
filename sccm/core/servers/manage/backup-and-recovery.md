@@ -62,6 +62,8 @@ To simplify the backup process, you can create an **AfterBackup.bat** file. This
 You can back up a central administration site and primary site. Secondary sites or site system servers don't have backup tasks.
 
 When the Configuration Manager backup service runs, it follows the instructions defined in the backup control file: `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box\Smsbkup.ctl`. You can modify the backup control file to change the behavior of the backup service.  
+> [!NOTE]
+> Modifications of **Smsbkup.ctl** will apply after a restart of the service SMS_SITE_VSS_WRITER on the Site Server.
 
 Site backup status information is written to the **Smsbkup.log** file. This file is created in the destination folder that you specify in the properties of the Backup Site Server maintenance task.  
 

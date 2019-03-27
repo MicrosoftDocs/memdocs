@@ -2,10 +2,10 @@
 title: Install and configure a software update point
 titleSuffix: "Configuration Manager"
 description: "Primary sites require a software update point on the central administration site for software updates compliance assessment and to deploy software updates to clients."
-author: aczechowski
-ms.author: aaroncz
+author: mestew 
+ms.author: mstewart
 manager: dougeby
-ms.date: 05/30/2017
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 > [!IMPORTANT]  
 >  It is not supported to install the software update point site system role on a server that has been configured and used as a standalone WSUS server or using a software update point to directly manage WSUS clients. Existing WSUS servers are only supported as upstream synchronization sources for the active software update point. See [Synchronize from an upstream data source location](#BKMK_wsussync)
 
- You can add the software update point site system role to an existing site system server or you can create a new one. On the **System Role Selection** page of the **Create Site System Server Wizard** or <strong>Add Site System Roles Wizard, depending on whether you add the site system role to a new or existing site server, select **Software update point</strong>, and then configure the software update point settings in the wizard. The settings are different depending on the version of Configuration Manager that you use. For more information about how to install site system roles, see [Install site system roles](../../core/servers/deploy/configure/install-site-system-roles.md).  
+ You can add the software update point site system role to an existing site system server or you can create a new one. On the **System Role Selection** page of the **Create Site System Server Wizard** or **Add Site System Roles Wizard**, depending on whether you add the site system role to a new or existing site server, select **Software update point**, and then configure the software update point settings in the wizard. The settings are different depending on the version of Configuration Manager that you use. For more information about how to install site system roles, see [Install site system roles](../../core/servers/deploy/configure/install-site-system-roles.md).  
 
  Use the following sections for information about the software update point settings on a site.  
 
@@ -97,7 +97,7 @@ ms.collection: M365-identity-device-management
 > [!NOTE]  
 >  When there is a firewall between the software update point and the Internet, the firewall might need to be configured to accept the HTTP and HTTPS ports that are used for the WSUS Web site. You can also choose to restrict access on the firewall to limited domains. For more information about how to plan for a firewall that supports software updates, see [Configure firewalls](../plan-design/plan-for-software-updates.md#BKMK_ConfigureFirewalls).  
 
- You can also configure whether to create WSUS reporting events on the **Synchronization Source** page of the wizard or on the **Sync Settings** tab in Software Update Point Component Properties. Configuration Manager does not use these events; therefore, you will normally choose the default setting **Do not create WSUS reporting events**.  
+ You can also configure whether to create WSUS reporting events on the **Synchronization Source** page of the wizard or on the **Sync Settings** tab in Software Update Point Component Properties. Configuration Manager doesn't use these events; therefore, you will normally choose the default setting **Do not create WSUS reporting events**.  
 
 ## Synchronization schedule  
  Configure the synchronization schedule on the **Synchronization Schedule** page of the wizard or in the Software Update Point Component Properties. This setting is configured only on the software update point at the top-level site.  
@@ -111,7 +111,7 @@ ms.collection: M365-identity-device-management
 >  When you choose not to enable software updates synchronization on a schedule, you can manually synchronize software updates from the **All Software Updates** or **Software Update Groups** node in the Software Library workspace. For more information, see [synchronize software updates](synchronize-software-updates.md).  
 
 ## Supersedence rules  
- Configure the supersedence settings on the **Supersedence Rules** page of the wizard or on the **Supersedence Rules** tab in Software Update Point Component Properties. You can configure the supersedence rules only on the top-level site.  
+ Configure the supersedence settings on the **Supersedence Rules** page of the wizard or on the **Supersedence Rules** tab in Software Update Point Component Properties. You can configure the supersedence rules only on the top-level site. Starting in Configuration Manager version 1810, you can specify the supersedence rules behavior for **feature updates** separately from **non-feature updates**. <!--3098809, 2977644-->
 
  On this page, you can specify that the superseded software updates are immediately expired, which prevents them from being included in new deployments and flags the existing deployments to indicate that the superseded software updates contain one or more expired software updates. Or, you can specify a period of time before the superseded software updates are expired, which allows you to continue to deploy them. For more information, see [Supersedence rules](../plan-design/plan-for-software-updates.md#BKMK_SupersedenceRules).  
 
