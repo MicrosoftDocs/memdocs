@@ -229,15 +229,15 @@ You need to temporarily store a large file on a network file server, but aren't 
 <!--1359068, 3607759-->
 
 CMPivot includes the following improvements starting in Configuration Manager version 1810:  
-- [CMPivot window](#bkmk_cmpivot-window)
+- [CMPivot window](#cmpivot-window)
 - [Scalar functions](#bkmk_cmpivot-functions)  
 - [Rendering visualizations](#bkmk_cmpivot-charts)  
 - [Hardware inventory](#bkmk_cmpivot-hinv)  
 - [Scalar operators](#bkmk_cmpivot-operators)  
 - [Query summary](#bkmk_cmpivot-summary)  
-- [Audit status messages](#bkmk_cmpivot-status-message)
+- [Audit status messages](#bkmk_cmpivot-status-messages)
 
-### CMPivot window changes
+### CMPivot window
 
 - CMPivot will return up to 100,000 cells rather than 20,000 rows.
   - If the entity has 5 properties, meaning 5 columns, up to 20,000 rows will be shown.
@@ -398,7 +398,7 @@ A query times out after one hour. For example, a collection has 500 devices, and
 
 ## Next steps
  
-[Troubleshooting CMPivot](./cmpivot-tsg)
+[Troubleshooting CMPivot](/sccm/core/servers/manage/cmpivot-tsg.md)
 
 [Create and run PowerShell scripts](/sccm/apps/deploy-use/create-deploy-scripts)
 
