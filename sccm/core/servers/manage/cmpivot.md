@@ -387,8 +387,8 @@ Starting in Configuration Manager 1810, CMPivot can query hardware inventory dat
 
 A query times out after one hour. For example, a collection has 500 devices, and 450 of the clients are currently online. Those active devices receive the query and return the results almost immediately. If you leave the CMPivot window open, as the other 50 clients come online, they also receive the query, and return results. 
 
->[!TIP]
-> CMPivot interations are logged to the following log files:
+## Log files
+> CMPivot interactions are logged to the following log files:
 >
 > **Server-side:**
 > - SmsProv.log
@@ -400,7 +400,7 @@ A query times out after one hour. For example, a collection has 500 devices, and
 > - Scripts.log
 > - StateMessage.log
 >
-> For more information, see [Log files](/sccm/core/plan-design/hierarchy/log-files).
+> For more information, see [Log files](/sccm/core/plan-design/hierarchy/log-files) and [Troubleshooting CMPivot](/sccm/core/servers/manage/cmpivot-tsg.md).
 
 ## Next steps
  
