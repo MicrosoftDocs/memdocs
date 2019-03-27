@@ -29,35 +29,40 @@ A Windows 10 Azure AD domain-joined client uses Azure AD parameters to request a
 - Request Azure AD device token:
 
     ```
-    Getting AAD (device) token with: ClientId = 22ed38d9-ba21-4036-be67-a98452fda4fc, ResourceUrl = https://ConfigMgrService, AccountId = https://login.microsoftonline.com/common/oauth2/token
+    Getting AAD (device) token with: ClientId = 22ed38d9-XXXX-4036-XXXX-a98452fda4fc, ResourceUrl = https://ConfigMgrService, AccountId = https://login.microsoftonline.com/common/oauth2/token
     ```
 
 - If it can't get a device token, it requests an Azure AD user token:
 
     ```
-    Getting AAD (user) token with: ClientId = f1f9b14e-55b8-4f17-8c54-2593f6eee91e, ResourceUrl = https://ConfigMgrService, AccountId = 649FC29A-ECE3-4A3B-A3C1-680A2F035A6E
+    Getting AAD (user) token with: ClientId = f1f9b14e-XXXX-4f17-XXXX-2593f6eee91e, ResourceUrl = https://ConfigMgrService, AccountId = X49FC29A-ECE3-XXX-A3C1-XXXXXXF035A6E
     ```
 
 > [!NOTE] 
-> If a WPJ certificate isn't found, it doesn't try to request an Azure AD token. This behavior is because the client isn't properly joined to Azure AD.
-> 
-> The cloud management gateway (CMG) doesn't forward requests from clients with an invalid token.
+> If a WPJ certificate (Work Place Join certificate, refering to client being AAD joined) is not found, Client will not try create request using the Securty Token Service comminucation channel (CCM_STS) as no Azure AD token can be added to the request. 
+This behavior occurs when the client is not properly joined to Azure AD.
+> If token is not valid, the cloud management gateway (CMG) will not forward the request to internal roles. For example the tenant is > > not found under cloud management service on Configuration Mananger.
 
 
 ## 2. Configuration Manager client token request
 
 Once the client has an Azure AD token, it requests a Configuration Manager client (CCM) token. 
 
-The following entries are logged in **ccmsetup.log**:
+The following entries are logged in **ccmsetup.log** of the Cloud proxy service Virtual Machine:
 
     ```
     Getting CCM Token from STS server 'CloudManagementGateway.cloudapp.net/CCM_PROXY_MUTUALAUTH/XXXXXX037938216'
     Getting CCM Token from https://CloudManagementGateway.cloudapp.net/CCM_PROXY_MUTUALAUTH/XXXXXX037938216/CCM_STS
     ```
 
-### 2.1 CMG gets request
 
-<!--what should be here?--> 
+
+### 2.1 CMG gets request
+The following entries are logged in **IIS.log **:
+
+    ```
+    RD0003FF74XX2 10.0.0.4 GET /CCM_STS - 443 - HTTP/1.1 python-requests/2.20.0 - - 13.95.234.44 404 0 2 1477 154 15
+    ```
 
 ### 2.2 CMG forwards request to CMG connection point
 
