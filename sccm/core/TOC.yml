@@ -395,6 +395,9 @@
     href: servers/manage/management-insights.md
   - name: CMPivot
     href: servers/manage/cmpivot.md
+    items:
+    - name: Troubleshooting CMPivot
+      href: servers/manage/cmpivot-tsg.md
   - name: Maintenance tasks
     href: servers/manage/maintenance-tasks.md
     items:

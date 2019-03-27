@@ -1,7 +1,7 @@
 ---
 title: CMPivot for real-time data
 titleSuffix: Configuration Manager
-description: Learn how to use CMPivot in Configuration Manager to query clients in real-time.
+description: Learn how to use CMPivot in Configuration Manager to query clients in real time.
 ms.date: 03/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -24,7 +24,7 @@ Configuration Manager has always provided a large centralized store of device da
 For example, in [mitigating speculative execution side channel vulnerabilities](https://blogs.technet.microsoft.com/configurationmgr/2018/01/08/additional-guidance-to-mitigate-speculative-execution-side-channel-vulnerabilities/), one of the requirements is to update the system BIOS. You can use CMPivot to quickly query on system BIOS information, and find clients that aren't in compliance.
 
  > [!Tip]  
- > Some security software may block scripts running from c:\windows\ccm\scriptstore. This can prevent successful execution of CMPivot queries.
+ > Some security software may block scripts running from c:\windows\ccm\scriptstore. This can prevent successful execution of CMPivot queries. Some security software may also generate audit events or alerts when running CMPivot PowerShell.
 
 
 ## Prerequisites
@@ -37,7 +37,7 @@ The following components are required to use CMPivot:
   - **Read** permission on the **SMS Scripts** object
   - **Run Scripts** permission on the **Collection**
   - **Read** permission on **Inventory Reports**
-  - The default scope. <!--The **Scripts Runner** role has these permissions, which isn't created by default. For more information on creating this custom security role, please see [Security roles for scripts](/sccm/apps/deploy-use/create-deploy-scripts#bkmk_ScriptRoles).  -->
+  - The default scope. 
 
 - Target clients require a minimum of PowerShell version 4.
 
@@ -220,7 +220,7 @@ To [mitigate speculative execution side channel vulnerabilities](https://blogs.t
 
 ### Example 4: Free disk space
 
-You need to temporarily store a large file on a network file server, but aren't sure which one has enough capacity. You start CMPivot against a collection of file servers, and query the **Disk** entity. You modify the query for CMPivot to quickly return a list of active servers with real-time storage data:  
+You need to temporarily store a large file on a network file server, but aren't sure which one has enough capacity. Start CMPivot against a collection of file servers, and query the **Disk** entity. Modify the query for CMPivot to quickly return a list of active servers with real-time storage data:  
 
 `Disk | where (Description == 'Local Fixed Disk') | where isnotnull( FreeSpace ) | order by FreeSpace asc`
 
@@ -377,7 +377,7 @@ CMPivot sends queries to clients using the Configuration Manager "fast channel".
 
 The queries and the results are all just text. The entities **InstallSoftware** and **Process** return some of the largest result sets. During performance testing, the largest state message file size from one client for these queries was less than **1 KB**. Scaled to a large environment with 50,000 active clients, this one-time query would generate less than 50 MB of data across the network.
 
-Starting in Configuration Manager 1810, CMPivot is able to query hardware inventory data, including extended hardware inventory classes. These new entities may return much larger data sets, depending on how much data is defined for a given hardware inventory property. For example, the “InstalledExecutable” entity might return multiple MB of data per client, depending on the specific data you query on. Be mindful of the performance and scalability on your systems when returning larger hardware inventory data sets from larger collections using CMPivot.
+Starting in Configuration Manager 1810, CMPivot can query hardware inventory data, including extended hardware inventory classes. These new entities may return much larger data sets, depending on how much data is defined for a given hardware inventory property. For example, the “InstalledExecutable” entity might return multiple MB of data per client, depending on the specific data you query on. Be mindful of the performance and scalability on your systems when returning larger hardware inventory data sets from larger collections using CMPivot.
 
 A query times out after one hour. For example, a collection has 500 devices, and 450 of the clients are currently online. Those active devices receive the query and return the results almost immediately. If you leave the CMPivot window open, as the other 50 clients come online, they also receive the query, and return results. 
 
@@ -396,6 +396,10 @@ A query times out after one hour. For example, a collection has 500 devices, and
 >
 > For more information, see [Log files](/sccm/core/plan-design/hierarchy/log-files).
 
+## Next steps
+ 
+[Troubleshooting CMPivot](./cmpivot-tsg)
 
-## See also
 [Create and run PowerShell scripts](/sccm/apps/deploy-use/create-deploy-scripts)
+
+
