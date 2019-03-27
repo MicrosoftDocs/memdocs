@@ -229,15 +229,15 @@ You need to temporarily store a large file on a network file server, but aren't 
 <!--1359068, 3607759-->
 
 CMPivot includes the following improvements starting in Configuration Manager version 1810:  
-- [CMPivot window](#cmpivot-window)
+- [CMPivot window and performance](#cmpivot-window-and-performace)
 - [Scalar functions](#bkmk_cmpivot-functions)  
 - [Rendering visualizations](#bkmk_cmpivot-charts)  
 - [Hardware inventory](#bkmk_cmpivot-hinv)  
 - [Scalar operators](#bkmk_cmpivot-operators)  
 - [Query summary](#bkmk_cmpivot-summary)  
-- [Audit status messages](#bkmk_cmpivot-status-messages)
+- [Audit status messages](#cmpivot-audit-status-messages)
 
-### CMPivot window
+### CMPivot window and performance
 
 - CMPivot will return up to 100,000 cells rather than 20,000 rows.
   - If the entity has 5 properties, meaning 5 columns, up to 20,000 rows will be shown.
@@ -246,6 +246,11 @@ CMPivot includes the following improvements starting in Configuration Manager ve
 - On the Query Summary tab, select the count of Failed or Offline devices, and then select the option to **Create Collection**. This option makes it easy to target those devices with a remediation deployment.
 - Save **Favorite** queries by clicking the folder icon.
    ![Example of saving a favorite query in CMPivot](media/cmpivot-favorite.png)
+
+- Clients updated to the 1810 version return output less than 80 KB to the site over a fast communication channel.
+  - This change increases the performance of viewing script or query output.
+  - If the script or query output is greater than 80 KB, the client sends the data via a state message.
+  - If the client isn't updated to the 1810 client version, it continues to use state messages.
 
 ### <a name="bkmk_cmpivot-functions"></a> Scalar functions
 CMPivot supports the following scalar functions:
@@ -355,7 +360,7 @@ Select the **Query Summary** tab at the bottom of the CMPivot window. This statu
 
 For example, select the count of devices with a Failure status. See the specific error message, and export a list of these devices. If the error is that a specific cmdlet isn't recognized, create a collection from the exported device list to deploy a Windows PowerShell update.  
 
-### <a name="#bkmk_cmpivot-status-messages"></a> CMPivot audit status messages
+### CMPivot audit status messages
 
 Starting in version 1810, when you run CMPivot, an audit status message is created with **MessageID 40805**. You can view the status messages by going to **Monitoring** < **System Status** < **Status Message Queries**. You can run **All Audit status Messages for a Specific User**, **All Audit status Messages for a Specific Site**, or create your own status message query.
 
