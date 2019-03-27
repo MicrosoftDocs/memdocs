@@ -39,9 +39,10 @@ A Windows 10 Azure AD domain-joined client uses Azure AD parameters to request a
     ```
 
 > [!NOTE] 
-> If a WPJ certificate (Work Place Join certificate, refering to client being AAD joined) is not found, Client will not try create request using the Securty Token Service comminucation channel (CCM_STS) as no Azure AD token can be added to the request. 
+> If a WPJ certificate (Work Place Join certificate, refering to client being AAD joined) is not found, Client will not try create request using the Securty Token Service comminucation channel (CCM_STS), as no Azure AD token can be added to the request. 
 This behavior occurs when the client is not properly joined to Azure AD.
-> If token is not valid, the cloud management gateway (CMG) will not forward the request to internal roles. For example the tenant is > > not found under cloud management service on Configuration Mananger.
+>
+> Additionally, if token is not valid, the cloud management gateway (CMG) will not forward the request to internal roles. For example the tenant is > > not found under cloud management service on Configuration Mananger.
 
 
 ## 2. Configuration Manager client token request
