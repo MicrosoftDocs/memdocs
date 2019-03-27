@@ -230,7 +230,7 @@ You need to temporarily store a large file on a network file server, but aren't 
 
 CMPivot includes the following improvements starting in Configuration Manager version 1810:
 
-- [CMPivot utility and performance](#bkmk_cmpivot-utility)
+- [CMPivot utility and performance](#bkmk_cmpivotutil)
 - [Scalar functions](#bkmk_cmpivot-functions)  
 - [Rendering visualizations](#bkmk_cmpivot-charts)  
 - [Hardware inventory](#bkmk_cmpivot-hinv)  
@@ -238,7 +238,7 @@ CMPivot includes the following improvements starting in Configuration Manager ve
 - [Query summary](#bkmk_cmpivot-summary)  
 - [Audit status messages](#cmpivot-audit-status-messages)
 
-### <a name="#bkmk_cmpivot-utility"> CMPivot utility and performance
+### <a name="#bkmk_cmpivotutil"> </a> CMPivot utility and performance
 
 - CMPivot will return up to 100,000 cells rather than 20,000 rows.
   - If the entity has 5 properties, meaning 5 columns, up to 20,000 rows will be shown.
