@@ -228,8 +228,9 @@ You need to temporarily store a large file on a network file server, but aren't 
 ## <a name="bkmk_cmpivot"></a> CMPivot starting in version 1810
 <!--1359068, 3607759-->
 
-CMPivot includes the following improvements starting in Configuration Manager version 1810:  
-- [CMPivot window and performance](#bkmk_cmpivot-utility)
+CMPivot includes the following improvements starting in Configuration Manager version 1810:
+
+- [CMPivot utility and performance](#bkmk_cmpivot-utility)
 - [Scalar functions](#bkmk_cmpivot-functions)  
 - [Rendering visualizations](#bkmk_cmpivot-charts)  
 - [Hardware inventory](#bkmk_cmpivot-hinv)  
