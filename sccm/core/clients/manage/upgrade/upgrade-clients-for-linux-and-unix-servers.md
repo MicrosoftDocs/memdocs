@@ -2,7 +2,7 @@
 title: Upgrade Linux and UNIX clients
 titleSuffix: Configuration Manager
 description: Upgrade a client on a Linux or UNIX server in Configuration Manager.
-ms.date: 03/20/2019
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual

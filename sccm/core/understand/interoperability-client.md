@@ -2,7 +2,7 @@
 title: Extended interoperability client
 titleSuffix: Configuration Manager
 description: Learn about using the extended interoperability client for long-term support of a static Configuration Manager client with a current branch site.
-ms.date: 03/20/2019
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -34,7 +34,7 @@ The following table lists the versions of the Configuration Manager client that 
 
 | Version  | Availability date  | Support end date  |
 |---------|---------|---------|
-|1902<br/>5.00.8790     | March 20, 2019        | No earlier than March 20, 2021        |
+|1902<br/>5.00.8790     | March 27, 2019        | No earlier than March 27, 2021        |
 |1802<br/>5.00.8634     | May 1, 2018        | No earlier than May 1, 2020        |
 |1606<br/>5.00.8412     | November 18, 2016        | May 1, 2019        |
 

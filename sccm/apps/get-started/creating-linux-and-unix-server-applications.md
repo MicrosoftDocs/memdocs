@@ -2,7 +2,7 @@
 title: Create Linux and UNIX server applications
 titleSuffix: Configuration Manager
 description: See which considerations you must take into account when you create and deploy applications for Linux and Unix devices.
-ms.date: 03/20/2019
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual

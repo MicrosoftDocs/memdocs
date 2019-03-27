@@ -2,7 +2,7 @@
 title: What's new in version 1902
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1902 of Configuration Manager current branch.
-ms.date: 03/20/2019
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -269,6 +269,9 @@ The **Run PowerShell Script** task sequence step now includes the following impr
 
 - Other improvements that provide similar functionality as the [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step. For example, specify alternate user credentials or specify a time-out. 
 
+> [!Important]  
+> To take advantage of this new Configuration Manager feature, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
+
 <!-- For more information, see [Run PowerShell Script](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript). -->
 
 
@@ -470,13 +473,13 @@ For more information, see [Accessibility features in Configuration Manager](/scc
 
 
 
-<!-- 
 ## Other updates
 
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1902](https://support.microsoft.com/help/4482169).
+<!-- Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1902](https://support.microsoft.com/help/4482169). -->
 
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1902 release notes](https://docs.microsoft.com/powershell/sccm/1902-release-notes?view=sccm-ps).
 
+<!-- 
 The following update rollup (4486457) is available in the console starting on 25 January 2019: [Update rollup for Configuration Manager current branch, version 1902](https://support.microsoft.com/help/4486457).
 
 
