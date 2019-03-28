@@ -2,7 +2,7 @@
 title: Deprecated for clients
 titleSuffix: Configuration Manager
 description: Learn about the client operating systems that Configuration Manager no longer supports.
-ms.date: 01/15/2019
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -28,7 +28,7 @@ Unless noted otherwise, each supported OS is supported as a Configuration Manage
 
 |**Operating systems**|**Deprecation first announced**|**Support removed**|  
 |-|-|-|
-|Linux and UNIX|March 22, 2018||
+|Linux and UNIX|March 22, 2018|Version 1902|
 |Windows 8: Professional, Enterprise|January 12, 2016|Version 1802|
 |Windows Embedded 8 Pro|January 12, 2016|Version 1802|
 |Windows Embedded 8 Industry|January 12, 2016|Version 1802|

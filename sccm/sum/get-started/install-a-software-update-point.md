@@ -5,7 +5,7 @@ description: "Primary sites require a software update point on the central admin
 author: mestew 
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
