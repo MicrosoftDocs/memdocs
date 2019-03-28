@@ -2,7 +2,7 @@
 title: What's new in hybrid MDM
 titleSuffix: Configuration Manager
 description: Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune.
-ms.date: 02/26/2019
+ms.date: 03/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -40,6 +40,19 @@ Each section of this article lists hybrid features under three different categor
 |**New in Microsoft Intune** | In general, all the features listed under this category should work with all Configuration Manager releases. This including System Center 2012 R2 Configuration Manager releases, since these features only require the Intune service and don't require additional functionality in Configuration Manager.|
 |**New in Configuration Manager Technical Preview**| All the features listed under this category only work with the specified technical preview branch. To try out these features, you must install the technical preview version specified in the feature description. For more information, see [Technical preview for Configuration Manager](/sccm/core/get-started/technical-preview).|
 |**New in Configuration Manager (current branch)**| All the features listed under this category only work with the specified version of Configuration Manager (current branch). If you're using an older version of Configuration Manager for your hybrid deployment, upgrade to the Configuration Manager (current branch)  version specified in the feature description. For more information, see [Upgrade to Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager).|
+
+
+
+## March 2019
+
+### New in Microsoft Intune
+
+#### Install available apps using the Company Portal app after Windows bulk enrollment 
+<!-- 2751523 -->
+Windows devices that enrolled into Intune using [Windows bulk enrollment](https://docs.microsoft.com/intune/windows-bulk-enroll) (provisioning packages) will be able to use the Company Portal app to install available apps. For more information about the Company Portal app, see [Manually add the Windows 10 Company Portal](https://docs.microsoft.com/intune/store-apps-company-portal-app) and [How to configure the Microsoft Intune Company Portal app](https://docs.microsoft.com/intune/company-portal-app).
+
+> [!Note]  
+> This feature isn't yet fully deployed to all customers. If you can't use the Company Portal on bulk enrolled devices, you may have to wait until this change rolls out to your account.
 
 
 
