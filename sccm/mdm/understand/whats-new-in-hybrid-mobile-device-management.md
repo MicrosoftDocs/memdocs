@@ -58,6 +58,15 @@ Windows devices that enrolled into Intune using [Windows bulk enrollment](https:
 <!-- 1429026 -->
 The Windows Company Portal app now displays app icons with an automatically generated background. This background is based on the dominant color of the icon, if it can be detected. When applicable, the background replaces the gray border that was previously visible on app tiles. You'll see this change in versions of Company Portal later than 10.3.3451.0.
 
+#### Changes to Company Portal enrollment for iOS 12 devices
+<!-- 3448635 -->  
+Company Portal for iOS updates the app's enrollment screens and steps to align with the MDM enrollment changes released in Apple iOS 12.2. The updated workflow now prompts you to:
+- Allow Safari to open the Company Portal website (via Safari) and download the management profile before returning to the Company Portal app. ​
+- Open the Settings app to install the management profile on their device.​
+- Return to the Company Portal app to complete enrollment.  ​
+
+For more information about how you can prepare for these changes, see the [Microsoft Tech Community post](https://aka.ms/CP_changes_iOS12). To support new iOS enrollments in Company Portal, see [Enroll iOS device in Intune](https://docs.microsoft.com/intune/ios-enroll).
+
 
 
 ## February 2019
