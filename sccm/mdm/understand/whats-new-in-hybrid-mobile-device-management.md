@@ -54,6 +54,10 @@ Windows devices that enrolled into Intune using [Windows bulk enrollment](https:
 > [!Note]  
 > This feature isn't yet fully deployed to all customers. If you can't use the Company Portal on bulk enrolled devices, you may have to wait until this change rolls out to your account.
 
+#### App icons are displayed with an automatically generated background 
+<!-- 1429026 -->
+The Windows Company Portal app now displays app icons with an automatically generated background. This background is based on the dominant color of the icon, if it can be detected. When applicable, the background replaces the gray border that was previously visible on app tiles. You'll see this change in versions of Company Portal later than 10.3.3451.0.
+
 
 
 ## February 2019
