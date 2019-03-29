@@ -409,7 +409,6 @@ To get CMPivot to work on the CAS in such a “double hop scenario”, you can d
 
 1. Go to each primary site's SQL server.
    1. Add the CAS provider machine account and the CAS site server to the [Configmgr_DviewAccess](/sccm/core/plan-design/hierarchy/accounts#configmgrdviewaccess) group.
-      ![Configmgr_DviewAccess group on a primary site's SQL server](media/cmpivot-dviewaccess-group.png)
 1. Go to Active Directory Users and Computers.
    1. Select the CAS provider machine, right click and select **Properties**.
       1. In the delegation tab, choose the third option, **Trust this computer for delegation to specified services only**. 
