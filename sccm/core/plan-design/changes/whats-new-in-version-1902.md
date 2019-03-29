@@ -349,9 +349,9 @@ Use client settings to configure this option. In the **Software Updates** group,
 
 ## <a name="bkmk_o365"></a> Office management
 
-### Redirect Windows known folders to OneDrive
+### Move Windows known folders to OneDrive
 <!--3556021-->
-Use Configuration Manager to move Windows known folders to OneDrive for Business. These folders include Desktop, Documents, and Pictures. To simplify your Windows 10 upgrades, deploy these settings to Windows 7 clients before deploying a task sequence. 
+Use Configuration Manager to move Windows known folders to OneDrive for Business. These folders include Desktop, Documents, and Pictures. To simplify your Windows 10 upgrades from Windows 7, deploy these settings to your Windows 7 clients before deploying a task sequence. 
 
 For more information on this feature of OneDrive for Business, see [Redirect and move Windows known folders to OneDrive](https://docs.microsoft.com/onedrive/redirect-known-folders).
 
