@@ -20,7 +20,7 @@ ms.collection: M365-identity-device-management
 Use the following information to identify the Windows groups and the accounts that are used in Configuration Manager, how they're used, and any requirements.  
 
 - [Windows groups that Configuration Manager creates and uses](#bkmk_groups)  
-    - [ConfigMgr_CollectedFilesAccess](#configmgrcollectedfilesaccess)  
+    - [ConfigMgr_CollectedFilesAccess](#configmgr_collectedfilesaccess)  
     - [ConfigMgr_DViewAccess](#configmgr_dviewaccess)  
     - [ConfigMgr Remote Control Users](#configmgr-remote-control-users)  
     - [SMS Admins](#sms-admins)  
@@ -66,7 +66,7 @@ Use the following information to identify the Windows groups and the accounts th
 >  When Configuration Manager creates a group on a computer that's a domain member, the group is a local security group. If the computer is a domain controller, the group is a domain local group. This type of group is shared among all domain controllers in the domain.  
 
 
-### ConfigMgr_CollectedFilesAccess  
+### ConfigMgr_CollectedFilesAccess
 
 Configuration Manager uses this group to grant access to view files collected by software inventory.  
 
