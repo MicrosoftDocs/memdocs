@@ -2,7 +2,7 @@
 title: Accounts used
 titleSuffix: Configuration Manager
 description: Identify and manage the Windows groups and the accounts used in Configuration Manager.
-ms.date: 10/26/2018
+ms.date: 03/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -21,7 +21,7 @@ Use the following information to identify the Windows groups and the accounts th
 
 - [Windows groups that Configuration Manager creates and uses](#bkmk_groups)  
     - [ConfigMgr_CollectedFilesAccess](#configmgrcollectedfilesaccess)  
-    - [ConfigMgr_DViewAccess](#configmgrdviewaccess)  
+    - [ConfigMgr_DViewAccess](#configmgr_dviewaccess)  
     - [ConfigMgr Remote Control Users](#configmgr-remote-control-users)  
     - [SMS Admins](#sms-admins)  
     - [SMS_SiteSystemToSiteServerConnection_MP_&lt;sitecode\>](#bkmk_remotemp)  
