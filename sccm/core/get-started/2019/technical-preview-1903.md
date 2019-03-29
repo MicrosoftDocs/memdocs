@@ -45,6 +45,8 @@ Review the [technical preview](/sccm/core/get-started/technical-preview) article
 
 [!INCLUDE [Drill-through required updates](includes/1903/4224414.md)]
 
+[!INCLUDE [Improvement to task sequence media creation](includes/1903/4090666.md)]
+
 
 
 ## Next steps
