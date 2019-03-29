@@ -355,6 +355,8 @@ Go to the **Monitoring** workspace, and select the **Site Servicing Status** nod
 
 After the site updates, review the post-update checklist for the applicable version:  
 
+- [Post-update checklist for version 1902](/sccm/core/servers/manage/checklist-for-installing-update-1902#post-update-checklist)  
+
 - [Post-update checklist for version 1810](/sccm/core/servers/manage/checklist-for-installing-update-1810#post-update-checklist)  
 
 - [Post-update checklist for version 1806](/sccm/core/servers/manage/checklist-for-installing-update-1806#post-update-checklist)  
