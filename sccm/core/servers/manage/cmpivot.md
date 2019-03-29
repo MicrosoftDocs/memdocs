@@ -50,7 +50,8 @@ The following components are required to use CMPivot:
  
 ## Limitations
 
-- In a hierarchy, connect the Configuration Manager console to a *primary site* to run CMPivot. The **Start CMPivot** action doesn't appear in the console when it's connected to a central administration site.
+- In a hierarchy, connect the Configuration Manager console to a *primary site* to run CMPivot. The **Start CMPivot** action doesn't appear in the console when it's connected to a central administration site (CAS).
+  - Starting in Configuration Manager version 1902, you can run CMPivot from a CAS. In some environments, additional permissions are needed. For more information, see [CMPivot starting in version 1902](#bkmk_cmpivot1902).
 
 - CMPivot only returns data for clients connected to the current site.  
 
@@ -365,7 +366,7 @@ For example, select the count of devices with a Failure status. See the specific
 
 Starting in version 1810, when you run CMPivot, an audit status message is created with **MessageID 40805**. You can view the status messages by going to **Monitoring** < **System Status** < **Status Message Queries**. You can run **All Audit status Messages for a Specific User**, **All Audit status Messages for a Specific Site**, or create your own status message query.
 
-The following is the message format:
+The following format is used for the message:
 
 MessageId 40805: User &lt;UserName> ran script &lt;Script-Guid> with hash &lt;Script-Hash> on collection &lt;Collection-ID>.
 
@@ -376,6 +377,54 @@ MessageId 40805: User &lt;UserName> ran script &lt;Script-Guid> with hash &lt;Sc
    
 
 ![CMPivot audit status message sample](media/cmpivot-audit-status-message.png)
+
+## <a name="bkmk_cmpivot1902"></a> CMPivot starting in version 1902
+
+Starting in Configuration Manager version 1902, you can run CMPivot from the central administration site in a hierarchy. The primary site still handles the communication to the client. When running CMPivot from the central administration site, it communicates with the primary site over the high-speed message subscription channel. This communication doesn't rely upon standard SQL replication between sites.
+
+Running CMPivot on the CAS will require additional permissions if you have remote configurations relative to the CAS such as remote SQL, remote SCCM provider, or SQL Always On configuration. With these remote configurations, you have a “double hop scenario” for CMPivot.
+
+To get CMPivot to work on the CAS in such a “double hop scenario”, you can define constrained delegation. To understand the security implications of this configuration, please read the [Kerberos constrained delegation](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) article. If you have more than one remote configuration such as SQL or SCCM Provider being co-located with the CAS or not, you may require a combination of permission settings.
+
+Below are the steps that you need to take:
+
+### CAS has a remote SQL server
+
+1. Go to each primary site's SQL server.
+   1. Add the CAS remote SQL server and the CAS site server to the [Configmgr_DviewAccess](/sccm/core/plan-design/hierarchy/accounts#configmgrdviewaccess) group.
+   ![Configmgr_DviewAccess group on a primary site's SQL server](media/cmpivot-dviewaccess-group.png)
+1. Go to Active Directory (AD).
+   1. For each primary site server, right click and select **Properties**.
+      1. In the delegation tab, choose the third option, **Trust this computer for delegation to specified services only**. 
+      1. Choose **Use Kerberos only**.
+      1. Add the CAS's SQL server service with port and instance.
+      1. Make sure these changes align with your company security policy!
+   1. For the CAS site, right click and select **Properties**.
+      1. In the delegation tab, choose the third option, **Trust this computer for delegation to specified services only**. 
+      1. Choose **Use Kerberos only**.
+      1. Add each primary site's SQL server service with port and instance.
+      1. Make sure these changes align with your company security policy!
+
+   ![CMPivot AD delegation example for double hops](media/cmpivot-ad-delegation.png)
+
+### CAS has a remote provider
+
+1. Go to each primary site's SQL server.
+   1. Add the CAS provider machine account and the CAS site server to the [Configmgr_DviewAccess](/sccm/core/plan-design/hierarchy/accounts#configmgrdviewaccess) group.
+      ![Configmgr_DviewAccess group on a primary site's SQL server](media/cmpivot-dviewaccess-group.png)
+1. Go to Active Directory (AD).
+   1. Select the CAS provider machine, right click and select **Properties**.
+      1. In the delegation tab, choose the third option, **Trust this computer for delegation to specified services only**. 
+      1. Choose **Use Kerberos only**.
+      1. Add each primary site's SQL server service with port and instance.
+      1. Make sure these changes align with your company security policy!
+   1. Select the CAS site server, right click and select **Properties**.
+      1. In the delegation tab, choose the third option, **Trust this computer for delegation to specified services only**. 
+      1. Choose **Use Kerberos only**.
+      1. Add each primary site's SQL server service with port and instance.
+      1. Make sure these changes align with your company security policy!
+1. Restart the CAS remote provider machine.
+
 
 ## Inside CMPivot
 

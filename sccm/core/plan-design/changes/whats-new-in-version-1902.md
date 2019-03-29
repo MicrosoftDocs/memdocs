@@ -2,7 +2,7 @@
 title: What's new in version 1902
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1902 of Configuration Manager current branch.
-ms.date: 03/27/2019
+ms.date: 03/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -117,9 +117,9 @@ You can now associate a cloud management gateway (CMG) with a boundary group. Th
 
 ### Run CMPivot from the central administration site
 <!--3610960-->
-Configuration Manager now supports running CMPivot from the central administration site in a hierarchy. The primary site still handles the communication to the client. When running CMPivot from the central administration site, it communicates with the primary site over the high-speed message subscription channel. This communication doesn't rely upon standard SQL replication between sites.
+***[Updated]*** Configuration Manager now supports running CMPivot from the central administration site in a hierarchy. The primary site still handles the communication to the client. When running CMPivot from the central administration site, it communicates with the primary site over the high-speed message subscription channel. This communication doesn't rely upon standard SQL replication between sites.
 
-<!-- For more information, see [CMPivot for real-time data](/sccm/core/servers/manage/cmpivot). -->
+For more information, see [CMPivot for real-time data](/sccm/core/servers/manage/cmpivot#bkmk_cmpivot1902). -->
 
 
 ### Edit or copy PowerShell scripts
