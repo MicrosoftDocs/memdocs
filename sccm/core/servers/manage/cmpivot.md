@@ -380,18 +380,18 @@ MessageId 40805: User &lt;UserName> ran script &lt;Script-Guid> with hash &lt;Sc
 
 ## <a name="bkmk_cmpivot1902"></a> CMPivot starting in version 1902
 <!--3610960-->
-Starting in Configuration Manager version 1902, you can run CMPivot from the central administration site in a hierarchy. The primary site still handles the communication to the client. When running CMPivot from the central administration site, it communicates with the primary site over the high-speed message subscription channel. This communication doesn't rely upon standard SQL replication between sites.
+Starting in Configuration Manager version 1902, you can run CMPivot from the central administration site (CAS) in a hierarchy. The primary site still handles the communication to the client. When running CMPivot from the central administration site, it communicates with the primary site over the high-speed message subscription channel. This communication doesn't rely upon standard SQL replication between sites.
 
 Running CMPivot on the CAS will require additional permissions if you have remote configurations relative to the CAS such as remote SQL, remote SCCM provider, or SQL Always On configuration. With these remote configurations, you have a “double hop scenario” for CMPivot.
 
-To get CMPivot to work on the CAS in such a “double hop scenario”, you can define constrained delegation. To understand the security implications of this configuration, please read the [Kerberos constrained delegation](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) article. If you have more than one remote configuration such as SQL or SCCM Provider being co-located with the CAS or not, you may require a combination of permission settings. Below are the steps that you need to take:
+To get CMPivot to work on the CAS in such a “double hop scenario”, you can define constrained delegation. To understand the security implications of this configuration, read the [Kerberos constrained delegation](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) article. If you have more than one remote configuration such as SQL or SCCM Provider being colocated with the CAS or not, you may require a combination of permission settings. Below are the steps that you need to take:
 
 ### CAS has a remote SQL server
 
 1. Go to each primary site's SQL server.
    1. Add the CAS remote SQL server and the CAS site server to the [Configmgr_DviewAccess](/sccm/core/plan-design/hierarchy/accounts#configmgrdviewaccess) group.
    ![Configmgr_DviewAccess group on a primary site's SQL server](media/cmpivot-dviewaccess-group.png)
-1. Go to Active Directory (AD).
+1. Go to Active Directory Users and Computers.
    1. For each primary site server, right click and select **Properties**.
       1. In the delegation tab, choose the third option, **Trust this computer for delegation to specified services only**. 
       1. Choose **Use Kerberos only**.
@@ -410,7 +410,7 @@ To get CMPivot to work on the CAS in such a “double hop scenario”, you can d
 1. Go to each primary site's SQL server.
    1. Add the CAS provider machine account and the CAS site server to the [Configmgr_DviewAccess](/sccm/core/plan-design/hierarchy/accounts#configmgrdviewaccess) group.
       ![Configmgr_DviewAccess group on a primary site's SQL server](media/cmpivot-dviewaccess-group.png)
-1. Go to Active Directory (AD).
+1. Go to Active Directory Users and Computers.
    1. Select the CAS provider machine, right click and select **Properties**.
       1. In the delegation tab, choose the third option, **Trust this computer for delegation to specified services only**. 
       1. Choose **Use Kerberos only**.
@@ -427,7 +427,7 @@ To get CMPivot to work on the CAS in such a “double hop scenario”, you can d
 
 1. Go to each primary site's SQL server.
    1. Add the CAS site server to the [Configmgr_DviewAccess](/sccm/core/plan-design/hierarchy/accounts#configmgrdviewaccess) group.
-1. Go to Active Directory (AD).
+1. Go to Active Directory Users and Computers.
    1. For each primary site server, right click and select **Properties**.
       1. In the delegation tab, choose the third option, **Trust this computer for delegation to specified services only**. 
       1. Choose **Use Kerberos only**.
@@ -438,7 +438,7 @@ To get CMPivot to work on the CAS in such a “double hop scenario”, you can d
       1. Choose **Use Kerberos only**.
       1. Add each primary site's SQL server service with port and instance.
       1. Make sure these changes align with your company security policy!
-1. Make sure the [SPN is published](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover?view=sql-server-2017#SPNs) for the CAS SQL listener name and the primary SQL listener names.
+1. Make sure the [SPN is published](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover?view=sql-server-2017#SPNs) for the CAS SQL listener name and each primary SQL listener name.
 1. Restart the primary SQL servers.
 1. Restart the CAS site server and the CAS SQL servers.
 
@@ -451,7 +451,7 @@ The queries and the results are all just text. The entities **InstallSoftware** 
 
 ![CMPivot underlined entities example](media/cmpivot-underlined-entities.png)
 
-Starting in Configuration Manager 1810, CMPivot can query hardware inventory data, including extended hardware inventory classes. These new entities (those not underlined on the welcome page) may return much larger data sets, depending on how much data is defined for a given hardware inventory property. For example, the “InstalledExecutable” entity might return multiple MB of data per client, depending on the specific data you query on. Be mindful of the performance and scalability on your systems when returning larger hardware inventory data sets from larger collections using CMPivot.
+Starting in Configuration Manager 1810, CMPivot can query hardware inventory data, including extended hardware inventory classes. These new entities (entities not underlined on the welcome page) may return much larger data sets, depending on how much data is defined for a given hardware inventory property. For example, the “InstalledExecutable” entity might return multiple MB of data per client, depending on the specific data you query on. Be mindful of the performance and scalability on your systems when returning larger hardware inventory data sets from larger collections using CMPivot.
 
 A query times out after one hour. For example, a collection has 500 devices, and 450 of the clients are currently online. Those active devices receive the query and return the results almost immediately. If you leave the CMPivot window open, as the other 50 clients come online, they also receive the query, and return results. 
 
