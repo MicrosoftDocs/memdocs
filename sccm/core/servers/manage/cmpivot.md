@@ -379,14 +379,12 @@ MessageId 40805: User &lt;UserName> ran script &lt;Script-Guid> with hash &lt;Sc
 ![CMPivot audit status message sample](media/cmpivot-audit-status-message.png)
 
 ## <a name="bkmk_cmpivot1902"></a> CMPivot starting in version 1902
-
+<!--3610960-->
 Starting in Configuration Manager version 1902, you can run CMPivot from the central administration site in a hierarchy. The primary site still handles the communication to the client. When running CMPivot from the central administration site, it communicates with the primary site over the high-speed message subscription channel. This communication doesn't rely upon standard SQL replication between sites.
 
 Running CMPivot on the CAS will require additional permissions if you have remote configurations relative to the CAS such as remote SQL, remote SCCM provider, or SQL Always On configuration. With these remote configurations, you have a “double hop scenario” for CMPivot.
 
-To get CMPivot to work on the CAS in such a “double hop scenario”, you can define constrained delegation. To understand the security implications of this configuration, please read the [Kerberos constrained delegation](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) article. If you have more than one remote configuration such as SQL or SCCM Provider being co-located with the CAS or not, you may require a combination of permission settings.
-
-Below are the steps that you need to take:
+To get CMPivot to work on the CAS in such a “double hop scenario”, you can define constrained delegation. To understand the security implications of this configuration, please read the [Kerberos constrained delegation](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) article. If you have more than one remote configuration such as SQL or SCCM Provider being co-located with the CAS or not, you may require a combination of permission settings. Below are the steps that you need to take:
 
 ### CAS has a remote SQL server
 
@@ -424,6 +422,25 @@ Below are the steps that you need to take:
       1. Add each primary site's SQL server service with port and instance.
       1. Make sure these changes align with your company security policy!
 1. Restart the CAS remote provider machine.
+
+### SQL Always On
+
+1. Go to each primary site's SQL server.
+   1. Add the CAS site server to the [Configmgr_DviewAccess](/sccm/core/plan-design/hierarchy/accounts#configmgrdviewaccess) group.
+1. Go to Active Directory (AD).
+   1. For each primary site server, right click and select **Properties**.
+      1. In the delegation tab, choose the third option, **Trust this computer for delegation to specified services only**. 
+      1. Choose **Use Kerberos only**.
+      1. Add the CAS's SQL server service accounts for the SQL nodes with port and instance.
+      1. Make sure these changes align with your company security policy!
+   1. Select the CAS site server, right click and select **Properties**.
+      1. In the delegation tab, choose the third option, **Trust this computer for delegation to specified services only**. 
+      1. Choose **Use Kerberos only**.
+      1. Add each primary site's SQL server service with port and instance.
+      1. Make sure these changes align with your company security policy!
+1. Make sure the [SPN is published](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover?view=sql-server-2017#SPNs) for the CAS SQL listener name and the primary SQL listener names.
+1. Restart the primary SQL servers.
+1. Restart the CAS site server and the CAS SQL servers.
 
 
 ## Inside CMPivot
