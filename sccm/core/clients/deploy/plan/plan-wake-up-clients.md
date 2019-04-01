@@ -2,13 +2,13 @@
 title: Waking up clients
 titleSuffix: Configuration Manager
 description: Plan how to wake up clients in System Center Configuration Manager using Wake On LAN (WOL).
-ms.date: 05/23/2018
+ms.date: 04/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
 ms.assetid: 52ee82b2-0b91-4829-89df-80a6abc0e63a
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -17,6 +17,29 @@ ms.collection: M365-identity-device-management
 *Applies to: System Center Configuration Manager (Current Branch)*
 
  Configuration Manager supports traditional wake-up packets to wake up computers in sleep mode when you want to install required software, such as software updates and applications.  
+
+## Waking up clients starting in version 1810
+<!--1317364-->
+You can wake up clients from the Configuration Manager console, even if the client isn't on the same subnet as the site server. If you need to do maintenance or query devices, you're not limited by remote clients that are asleep. The site server uses the client notification channel to identify another client that's awake on the same remote subnet. The awake client then sends a wake on LAN request (magic packet). You can select a single device to wake up, or select a collection to wake up any sleeping machines within the collection.
+
+For each device that is asleep, two online clients in the same subnet are selected as wakers. If you are waking up more than one device, the wakers chosen for the second device might be  different from the wakers chosen for the first device.  
+
+### Security role permissions
+
+- **Notify resource** under the Collection category
+
+### Limitations
+
+- Manually enable the client for wake on LAN. This setting is typically on the properties of the network adapter. Check with the vendor of your network adapter for more specific information.
+- At least one client in the target subnet must be awake.
+- This feature doesn't support the following network technologies:
+  - IPv6
+  - 802.1x network authentication
+
+
+
+
+## Waking up clients for version 1802 and prior
 
 You can supplement the traditional wake-up packet method by using the wake-up proxy client settings. Wake-up proxy uses a peer-to-peer protocol and elected computers to check whether other computers on the subnet are awake, and to wake them if necessary. When the site is configured for Wake On LAN and clients are configured for wake-up proxy, the process works as follows:  
 

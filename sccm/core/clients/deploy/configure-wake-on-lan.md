@@ -2,13 +2,13 @@
 title: "Configure Wake on LAN"
 titleSuffix: "Configuration Manager"
 description: "Select Wake On LAN settings in System Center Configuration Manager."
-ms.date: 04/23/2017
+ms.date: 04/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
 ms.assetid: b475a0c8-85d6-4cc4-b11f-32c0cc98239e
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -27,12 +27,20 @@ A computer that receives the wake-up proxy client settings will likely pause its
 > [!WARNING]
 > To avoid unexpected disruption to your network services, first evaluate wake-up proxy on an isolated and representative network infrastructure. Then use custom client settings to expand your test to a selected group of computers on several subnets. For more information about how wake-up proxy works, see [Plan how to wake up clients in System Center Configuration Manager](../../../core/clients/deploy/plan/plan-wake-up-clients.md).
 
-## To configure Wake on LAN for a site
+## To configure Wake on LAN starting in version 1810
+
+
+
+## To configure Wake on LAN for a site for version 1802 and prior
+
+Prior to Configuration manager version 1810, you need to enable Wake on LAN for each site in a hierarchy.
 
 1. In the Configuration Manager console, go to **Administration > Site Configuration > Sites**.
 2. Click the primary site to configure, and then click **Properties**.
 3. Click the **Wake on LAN** tab, and configure the options that you require for this site. To support wake-up proxy, make sure you select **Use wake-up packets only** and **Unicast**. For more information, see [Plan how to wake up clients in System Center Configuration Manager](../../../core/clients/deploy/plan/plan-wake-up-clients.md).
 4. Click **OK** and repeat the procedure for all primary sites in the hierarchy.
+
+
 
 ## To configure wake-up proxy client settings
 
