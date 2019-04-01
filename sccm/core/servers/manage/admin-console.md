@@ -120,7 +120,7 @@ Starting in version 1902, you can view the most recent connections for the Confi
 ### Prerequisites to view connected consoles
 
 - Your account needs the **Read** permission on the **SMS_Site** object 
-- IIS needs to be installed on the SMS Provider server <!--SCCMDocs-pr issue 1326--> 
+- IIS needs to be installed on the SMS Provider server <!---SCCMDocs-pr issue 1326--> 
 - Enable the SMS Provider to use a certificate.<!--SCCMDocs-pr issue 3135--> Use one of the following options:  
 
   - Enable [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http) (recommended)
