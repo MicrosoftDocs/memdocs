@@ -2,7 +2,7 @@
 title: What's new in version 1902
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1902 of Configuration Manager current branch.
-ms.date: 03/27/2019
+ms.date: 04/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -443,9 +443,9 @@ When you send [feedback](/sccm/core/understand/find-help#product-feedback) in th
 
 ### View recently connected consoles 
 <!--3699367-->
-You can now view the most recent connections for the Configuration Manager console. The view includes active connections and those consoles that recently connected. In the Configuration Manager console, go to the **Administration** workspace, expand **Security**, and select the **Console Connections** node.
+***[Updated]*** You can now view the most recent connections for the Configuration Manager console. The view includes active connections and those consoles that recently connected. In the Configuration Manager console, go to the **Administration** workspace, expand **Security**, and select the **Console Connections** node.
 
-<!-- For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console). -->
+For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#bkmk_viewconnected).
 
 
 ### In-console documentation dashboard
