@@ -114,7 +114,7 @@ At the bottom of the column context menu, you can sort or group by a column. Add
 ## <a name="bkmk_viewconnected"></a> View recently connected consoles
 <!--3699367-->
 
-Starting in version 1902, you can view the most recent connections for the Configuration Manager console. The view includes active connections and those that recently connected. You'll always see your current console connection in the list. You only see connections from the Configuration Manager console, not PowerShell or other SDK-based connections to the SMS Provider. The site removes instances from the list that are older than 30 days.
+Starting in version 1902, you can view the most recent connections for the Configuration Manager console. The view includes active connections and those that recently connected. You'll always see your current console connection in the list and you only see connections from the Configuration Manager console. You won't see PowerShell or other SDK-based connections to the SMS Provider. The site removes instances from the list that are older than 30 days.
 
 
 ### Prerequisites to view connected consoles
