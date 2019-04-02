@@ -17,7 +17,7 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-When you use the current branch of Configuration Manager, you can install the in-console update for version 1902 to update your hierarchy from a previous version. <!-- baseline only statement:-->(Because version 1802 is also available as [baseline media](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions), you can use the installation media to install the first site of a new hierarchy.)
+When you use the current branch of Configuration Manager, you can install the in-console update for version 1902 to update your hierarchy from a previous version. <!-- baseline only statement:-->(Because version 1902 is also available as [baseline media](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions), you can use the installation media to install the first site of a new hierarchy.)
 
 To get the update for version 1902, you must use a service connection point at the top-level site of your hierarchy. This site system role can be in online or offline mode. After your hierarchy downloads the update package from Microsoft, find it in the console. In the **Administration** workspace, select the **Updates and Servicing** node.
 
