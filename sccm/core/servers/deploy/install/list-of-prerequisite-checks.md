@@ -733,15 +733,34 @@ SELECT * FROM vLogs WHERE ProcedureName = 'spDiagChangeTracking'
 
 <!--SCCMDocs-pr issue 3094-->
 
-*Applies to: Central administration site, primary site, secondary site*
+When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Updating the SQL Server Native Client may require a restart, which can impact the site install process.
 
-When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager does not upgrade SQL Server Native Client. This check makes sure the site has a supported version of the SQL Native Client. Starting in version 1810, the minimum version is SQL 2012 SP4 (`11.*.7001.0`).
+This check makes sure the site has a supported version of the SQL Native Client. Starting in version 1810, the minimum version is SQL 2012 SP4 (`11.*.7001.0`).
 
 This SQL Native Client version supports TLS 1.2. For more information, see the following articles:
 
 - [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)  
 
 - [How to enable TLS 1.2 for Configuration Manager](https://support.microsoft.com/help/4040243/how-to-enable-tls-1-2-for-configuration-manager)  
+
+Configuration Manager uses SQL Server Native Client on the following site system roles:<!-- SCCMDocs issue 1150 -->
+
+- Site database server
+- Site server: central administration site, primary site, or secondary site
+- Management point
+- Device management point
+- State migration point
+- SMS Provider
+- Software update point
+- Multicast-enabled distribution point
+- Asset Intelligence update service point
+- Reporting services point
+- Application catalog web service
+- Enrollment point
+- Endpoint Protection point
+- Service connection point
+- Certificate registration point
+- Data warehouse service point
 
 ### SQL Server process memory allocation
 
