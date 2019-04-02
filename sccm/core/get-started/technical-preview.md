@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 03/27/2019
+ms.date: 03/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -123,14 +123,14 @@ The following features are available with the most recent Configuration Manager 
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### Technical Preview version 1902.2
+### Technical Preview version 1903
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID--> 
 
-- [Additional languages for Office 365 updates](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_o365lang) <!--3555955--> <!-- Version 1902 --> 
-- [Integration with analytics for Office 365 ProPlus readiness](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_o365) <!--3735402--> <!-- Version 1902 --> 
-- [Improvement to phased deployment success criteria](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_pod) <!--3555946--> <!-- Version 1902 -->
-- [Improvement to enhanced HTTP](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_ehttp) <!--3798957--> <!-- Version 1902 -->
+- [Cloud services cost estimator](/sccm/core/get-started/2019/technical-preview-1903#bkmk_anchor) <!--3555774-->
+- [Use your distribution point as an in-network cache server for Delivery Optimization](/sccm/core/get-started/2019/technical-preview-1903#bkmk_anchor) <!--3555764-->
+- [Reclaim SEDO lock for task sequences](/sccm/core/get-started/2019/technical-preview-1903#bkmk_anchor) <!--3699337-->
+- [Drill-through required updates](/sccm/core/get-started/2019/technical-preview-1903#bkmk_anchor) <!--4224414-->
 
 
 > [!Note]  
@@ -149,6 +149,10 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  | Feature | Technical preview version | Current branch version |  
  |---------|---------------------------|------------------------|
+ | Additional languages for Office 365 updates <!--3555955--> | [Tech Preview 1902.2](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_o365lang) | Version 1902 | 
+ | Integration with analytics for Office 365 ProPlus readiness <!--3735402--> | [Tech Preview 1902.2](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_o365) | Version 1902 | 
+ | Improvement to phased deployment success criteria <!--3555946--> | [Tech Preview 1902.2](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_pod) | Version 1902 | 
+ | Improvement to enhanced HTTP <!--3798957--> | [Tech Preview 1902.2](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_ehttp) | Version 1902 | 
  | Replace toast notifications with dialog window <!--3555947--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_impact) | Version 1902 | 
  | Progress status during in-place upgrade task sequence <!--3747129--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_ipu) | Version 1902 | 
  | Redirect Windows known folders to OneDrive <!--3556021--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_odfb) | Version 1902 | 
@@ -181,11 +185,6 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  | Configure user device affinity in Software Center <!--3485366--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_uda) | Version 1902 | 
  | Improvements to Configuration Manager console <!--3594151--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_console) | Version 1902 | 
  | Download reports from the Community Hub<!--3555936--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_hub) | ![Not added](media/Red_X.gif) | 
- | Don't load Windows PowerShell profiles <!--3607762, fka 1359239--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_noprofile) | Version 1810 | 
- | An Intune connection is no longer required for on-premises MDM <!--3607730, fka 1359124--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_opmdm) | Version 1810 | 
- | Configuration Manager console notifications <!--3556016, fka 1318035--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_notify) | Version 1902 | 
- | Improvements to task sequence media creation <!--3556027, fka 1359388--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_tsmedia) | Version 1902 | 
- | Improvement to Run PowerShell Script task sequence step <!--3556028, fka 1359389--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_posh) | Version 1902 | 
 
 
 

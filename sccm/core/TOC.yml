@@ -212,6 +212,8 @@
   - name: Technical Preview
     href: get-started/technical-preview.md
     items:
+    - name: 1903 features
+      href: get-started/2019/technical-preview-1903.md
     - name: 1902.2 features
       href: get-started/2019/technical-preview-1902-2.md
     - name: 1902 features
@@ -220,8 +222,6 @@
       href: get-started/2019/technical-preview-1901.md
     - name: Capabilities in 1812
       href: get-started/capabilities-in-technical-preview-1812.md
-    - name: Capabilities in 1811
-      href: get-started/capabilities-in-technical-preview-1811.md
   - name: Migrate data between hierarchies
     href: migration/migrate-data-between-hierarchies.md
     items:
