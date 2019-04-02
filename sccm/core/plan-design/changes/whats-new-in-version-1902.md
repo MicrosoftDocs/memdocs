@@ -2,7 +2,7 @@
 title: What's new in version 1902
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1902 of Configuration Manager current branch.
-ms.date: 03/27/2019
+ms.date: 04/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -465,6 +465,19 @@ You can now search for a MAC address in a device view of the Configuration Manag
 To improve the accessibility features of the Configuration Manager console, update .NET to version 4.7 or later on the computer running the console. 
 
 For more information, see [Accessibility features in Configuration Manager](/sccm/core/understand/accessibility-features).
+
+
+### Changes to console setup process
+
+<!-- 3612513 -->
+***[Updated]*** There are new components required when installing the Configuration Manager console. If you create a package for installing the console on other computers, make sure the package includes the following files:
+
+- ConsoleSetup.exe
+- AdminConsole.msi
+- ConfigMgr.AC_Extension.i386.cab
+- ConfigMgr.AC_Extension.amd64.cab
+
+When you install or update a site server, it copies these installation files and supported language packs for the site to the **Tools\ConsoleSetup** subfolder. For more information, see [Install the Configuration Manager console](/sccm/core/servers/deploy/install/install-consoles).
 
 
 
