@@ -84,8 +84,8 @@ When you **Send a suggestion**, you're directed to [UserVoice](https://configura
 
 - **Noted** - We understand the request and it makes sense. We've added it to our backlog.
 - **Planned** - We've started coding for this feature and expect it to show up in a tech preview build within the next few months.
-- **Started** - The feature is now in a tech preview. Go check it out, and give us feedback. Let us know if the feature is on the right track or not. You can even put the feedback in the comment section of the UserVoice request, for others to see and comment on. We’ll read that and use the feedback to try to improve the feature.
-- **Completed** - The first version of the feature is in a production build. This status doesn’t mean we're 100% done with the feature, and will no longer improve it. But it does mean that v1 of the features is in a production build, and you can start using it for real. We're making it completed because:
+- **Started** - The feature is now in a tech preview. Go check it out, and give us feedback. Let us know if the feature is on the right track or not. Put additional feedback in the comments section of the original request for others to see and comment on. We’ll read that and use the feedback to try to improve the feature.
+- **Completed** - The first version of the feature is in a production build. This status doesn’t mean we're 100% done with the feature, and will no longer improve it. But it does mean that v1 of the features is in a production build, and you can start using it for real. We're marking it completed because:
   - We want you to know the feature is production ready.
   - We want to give back your UserVoice votes so you can use them on other items.
   - You can file new Design Change Requests to this feature to help us know the next most important improvement for this feature.
@@ -145,8 +145,8 @@ Continue to use the [UserVoice page](https://configurationmanager.uservoice.com/
 
 - **Noted** - We understand the request and it makes sense. We've added it to our backlog.
 - **Planned** - We've started coding for this feature and expect it to show up in a tech preview build within the next few months.
-- **Started** - The feature is now in a tech preview. Go check it out, and give us feedback. Let us know if the feature is on the right track or not. You can even put the feedback in the comment section of the UserVoice request, for others to see and comment on. We’ll read that and use the feedback to try to improve the feature.
-- **Completed** - The first version of the feature is in a production build. This status doesn’t mean we're 100% done with the feature, and will no longer improve it. But it does mean that v1 of the features is in a production build, and you can start using it for real. We're making it completed because:
+- **Started** - The feature is now in a tech preview. Go check it out, and give us feedback. Let us know if the feature is on the right track or not. Put additional feedback in the comments section of the original request for others to see and comment on. We’ll read that and use the feedback to try to improve the feature.
+- **Completed** - The first version of the feature is in a production build. This status doesn’t mean we're 100% done with the feature, and will no longer improve it. But it does mean that v1 of the features is in a production build, and you can start using it for real. We're marking it completed because:
   - We want you to know the feature is production ready.
   - We want to give back your UserVoice votes so you can use them on other items.
   - You can file new Design Change Requests to this feature to help us know the next most important improvement for this feature.
