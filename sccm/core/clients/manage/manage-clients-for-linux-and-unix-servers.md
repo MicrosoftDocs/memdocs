@@ -1,8 +1,8 @@
 ---
-title: "Manage Linux and UNIX clients"
-titleSuffix: "Configuration Manager"
-description: "Manage clients on Linux and UNIX servers in System Center Configuration Manager."
-ms.date: 04/23/2017
+title: Manage Linux and UNIX clients
+titleSuffix: Configuration Manager
+description: Manage clients on Linux and UNIX servers in Configuration Manager.
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -12,11 +12,17 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# How to manage clients for Linux and UNIX servers in System Center Configuration Manager
+
+# How to manage clients for Linux and UNIX servers in Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-When you manage Linux and UNIX servers with System Center Configuration Manager, you can configure collections, maintenance windows, and client settings to help manage the servers. Also, though the Configuration Manager client for Linux and UNIX does not have a user interface, you can force the client to manually poll for client policy.
+> [!Important]  
+> Starting in version 1902, Configuration Manager doesn't support Linux or UNIX clients. 
+> 
+> Consider Microsoft Azure Management for managing Linux servers. Azure solutions have extensive Linux support that in most cases exceed Configuration Manager functionality, including end-to-end patch management for Linux.
+
+When you manage Linux and UNIX servers with Configuration Manager, you can configure collections, maintenance windows, and client settings to help manage the servers. Also, though the Configuration Manager client for Linux and UNIX doesn't have a user interface, you can force the client to manually poll for client policy.
 
 ##  <a name="BKMK_CollectionsforLnU"></a> Collections of Linux and UNIX servers  
  Use collections to manage groups of Linux and UNIX servers in the same way you use collections to manage other client types. Collections can be direct membership collections or query-based collections. Query-based collections identify client operating systems, hardware configurations, or other details about the client that are stored in the site database. For example, you can use collections that include Linux and UNIX servers to manage the following settings:  
@@ -45,9 +51,9 @@ When you manage Linux and UNIX servers with System Center Configuration Manager,
 
  By default, the **Default Client Agent Settings** apply to Linux and UNIX servers. You can also create custom client settings and deploy them to collections of specific clients.  
 
- There are no additional client settings that apply only to Linux and UNIX clients. However, there are default client settings that do not apply to Linux and UNIX clients. The client for Linux and UNIX only applies settings for functionality that it supports.  
+ There are no additional client settings that apply only to Linux and UNIX clients. However, there are default client settings that don't apply to Linux and UNIX clients. The client for Linux and UNIX only applies settings for functionality that it supports.  
 
- For example, a custom client device setting that enables and configures remote control settings would be ignored by the Linux and UNIX servers, because the client for Linux and UNIX does not support remote control.  
+ For example, a custom client device setting that enables and configures remote control settings would be ignored by the Linux and UNIX servers, because the client for Linux and UNIX doesn't support remote control.  
 
 ##  <a name="BKMK_PolicyforLnU"></a> Computer policy for Linux and UNIX servers  
  The client for Linux and UNIX servers periodically polls its site for computer policy to learn about requested configurations and to check for deployments.  
@@ -60,12 +66,12 @@ When you manage Linux and UNIX servers with System Center Configuration Manager,
 >  The Configuration Manager client for Linux and UNIX never requests nor processes user policy.  
 
 ##  <a name="BKMK_ManageLinuxCerts"></a> How to manage certificates on the client for Linux and UNIX  
- After you install the client for Linux and UNIX, you can use the **certutil** tool to update the client with a new PKI certificate, and to import a new Certificate Revocation list (CRL). When you install the client for Linux and UNIX, this tool is placed in **/opt/microsoft/configmgr/bin/certutil**. 
+ After you install the client for Linux and UNIX, you can use the **certutil** tool to update the client with a new PKI certificate, and to import a new Certificate Revocation list (CRL). When you install the client for Linux and UNIX, this tool is placed in `/opt/microsoft/configmgr/bin/certutil`. 
 
  To manage certificates, on each client run certutil with one of the following options:  
 
 |Option|More information|  
 |------------|----------------------|  
-|importPFX|Use this option to specify a certificate to replace the certificate that is currently used by a client.<br /><br /> When you use **-importPFX**, you must also use the **-password** command line parameter to  supply the password associated with the PKCS#12 file.<br /><br /> Use **-rootcerts** to specify any additional root certificate requirements.<br /><br /> Example:  **certutil -importPFX &lt;Path to the PKCS#12 certificate> -password &lt;Certificate password\> [-rootcerts &lt;comma-separated list of certificates>]**|  
-|-importsitecert|Use this option to update the site server signing certificate that is on the management server.<br /><br /> Example: **certutil -importsitecert &lt;Path to the DER certificate\>**|  
-|-importcrl|Use this option to update the CRL on the client with one or more CRL file paths.<br /><br /> Example: **certutil -importcrl &lt;comma separated CRL file paths\>**|  
+|`importPFX`|Use this option to specify a certificate to replace the certificate that is currently used by a client.<br /><br /> When you use `-importPFX`, you must also use the `-password` command-line parameter to  supply the password associated with the PKCS#12 file.<br /><br /> Use `-rootcerts` to specify any additional root certificate requirements.<br /><br /> Example: `certutil -importPFX <path to the PKCS#12 certificate> -password <certificate password> [-rootcerts <comma-separated list of certificates>]`|  
+|`importsitecert`|Use this option to update the site server signing certificate that is on the management server.<br /><br /> Example: `certutil -importsitecert <path to the DER certificate>`|  
+|`importcrl`|Use this option to update the CRL on the client with one or more CRL file paths.<br /><br /> Example: `certutil -importcrl <comma separated CRL file paths>`|  
