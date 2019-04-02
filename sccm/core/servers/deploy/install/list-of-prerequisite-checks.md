@@ -26,12 +26,6 @@ This article details the prerequisite checks that run when you install or update
 
 ### Security rights: Errors
 
-#### Administrator rights on central administration site
-
-*Applies to: Primary site*
-
-The user account that runs Configuration Manager setup has **Administrator** rights on the central administration site server.
-
 #### Administrative rights on expand primary site
 
 *Applies to: Central administration site*
@@ -43,6 +37,12 @@ When you expand a primary site to a hierarchy, the user account that runs setup 
 *Applies to: Central administration site, primary site, secondary site*
 
 The user account that runs Configuration Manager setup has **Administrator** rights on the site server.
+
+#### Administrator rights on central administration site
+
+*Applies to: Primary site*
+
+The user account that runs Configuration Manager setup has **Administrator** rights on the central administration site server.
 
 #### Central administration site server administrative rights on expand primary site
 
@@ -101,11 +101,17 @@ SQL Server is configured for Windows authentication security.
 
 There are no active migration mappings to primary sites.
 
-#### Active Replica MP
+#### Active replica MP
 
 *Applies to: Primary site*
 
 There's an active management point replica.
+
+#### Asset Intelligence synchronization point on the expanded primary site
+
+*Applies to: Central administration site*
+
+When you expand a primary site to a hierarchy, the Asset Intelligence synchronization point role isn't installed on the standalone primary site.
 
 #### BITS enabled
 
@@ -151,6 +157,12 @@ You configured a dedicated instance of SQL Server to host the Configuration Mana
 
 If another site uses the instance, you must select a different instance for the new site. You can also uninstall the other site, or move its database to a different instance for the SQL server.
 
+#### Endpoint Protection point on the expanded primary site
+
+*Applies to: Central administration site*
+
+When you expand a primary site to a hierarchy, the Endpoint Protection point role isn't installed on the standalone primary site.
+
 #### Existing Configuration Manager server components on server
 
 *Applies to: Central administration site, primary site, secondary site*
@@ -176,6 +188,12 @@ IIS is installed and running on the server for the management point or distribut
 *Applies to: Central administration site*
 
 When you expand a primary site to a hierarchy, the site database for the standalone primary site has the same collation as the site database at the central administration site.
+
+#### Microsoft Intune Connector on the expanded primary site
+
+*Applies to: Central administration site*
+
+When you expand a primary site to a hierarchy, the Microsoft Intune Connector role isn't installed on the standalone primary site.
 
 #### Microsoft Remote Differential Compression (RDC) library registered
 
@@ -305,24 +323,6 @@ A supported version of SQL Server is installed on the specified site database se
 
 For more information, see [Support for SQL Server versions](/sccm/core/plan-design/configs/support-for-sql-server-versions).
 
-#### Asset Intelligence synchronization point on the expanded primary site
-
-*Applies to: Central administration site*
-
-When you expand a primary site to a hierarchy, the Asset Intelligence synchronization point role isn't installed on the standalone primary site.
-
-#### Endpoint Protection point on the expanded primary site
-
-*Applies to: Central administration site*
-
-When you expand a primary site to a hierarchy, the Endpoint Protection point role isn't installed on the standalone primary site.
-
-#### Microsoft Intune Connector on the expanded primary site
-
-*Applies to: Central administration site*
-
-When you expand a primary site to a hierarchy, the Microsoft Intune Connector role isn't installed on the standalone primary site.
-
 #### USMT installed
 
 *Applies to: Central administration site, primary site (standalone only)*
@@ -428,6 +428,20 @@ When you install site roles that require HTTPS, configure IIS site bindings on t
 
 Verifies that MSXML 6.0 or a later version is installed.
 
+#### Pending configuration item policy updates
+
+<!--SCCMDocs-pr issue 2814-->
+
+*Applies to: Primary site*
+
+Starting in version 1806, if you're updating from version 1706 or later, you may see this warning if you have many application deployments and at least one of them requires approval.
+
+You have two options:  
+
+- Ignore the warning and continue with the update. This action causes higher processing on the site server during the update as it processes the policies. You may also see more processor load on the management point after the update.  
+
+- Revise one of the applications that has no requirements or a specific OS requirement. Pre-process some of the load on the site server at that time. Review **objreplmgr.log**, and then monitor the processor on the management point. After the processing is complete, update the site. There will still be some additional processing after the update, but less than if you ignore the warning with the first option.  
+
 #### PowerShell 2.0 on site server
 
 *Applies to: Primary site with Exchange connector*
@@ -489,30 +503,11 @@ A supported version of Windows Server Update Services (WSUS) is installed on the
 
 When you use a software update point on a server other than the site server, you must install the WSUS Administration Console on the site server. For more information about WSUS, see [Windows Server Update Services](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).
 
-#### Pending configuration item policy updates
-
-<!--SCCMDocs-pr issue 2814-->
-*Applies to: Primary site*
-
-Starting in version 1806, if you're updating from version 1706 or later, you may see this warning if you have many application deployments and at least one of them requires approval.
-
-You have two options:  
-
-- Ignore the warning and continue with the update. This action causes higher processing on the site server during the update as it processes the policies. You may also see more processor load on the management point after the update.  
-
-- Revise one of the applications that has no requirements or a specific OS requirement. Pre-process some of the load on the site server at that time. Review **objreplmgr.log**, and then monitor the processor on the management point. After the processing is complete, update the site. There will still be some additional processing after the update, but less than if you ignore the warning with the first option.  
-
 
 
 ## <a name="BKMK_Requirements"></a> System requirements  
 
 ### System requirements: Errors
-
-#### Server service is running
-
-*Applies to: Central administration site, primary site, secondary site*
-
-The Server service is started and running.
 
 #### Domain membership (error)
 
@@ -550,7 +545,13 @@ Site database servers and secondary site servers aren't supported on a read-only
 
 For more information, see the Microsoft Support article on [Problems when installing SQL Server on a domain controller](https://support.microsoft.com/help/2032911).
 
-#### Site Server FQDN length
+#### Server service is running
+
+*Applies to: Central administration site, primary site, secondary site*
+
+The Server service is started and running.
+
+#### Site server FQDN length
 
 *Applies to: Central administration site, primary site, secondary site*
 
