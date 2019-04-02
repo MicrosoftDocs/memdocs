@@ -21,9 +21,32 @@ Administrators use the Configuration Manager console to manage the Configuration
 
 The Configuration Manager console is always installed on the site server for the CAS or a primary site. To install the console separate from site server installation, run the standalone installer.  
 
-When you install a site server, it copies the console installation files and supported language packs for the site to the **Tools\ConsoleSetup** subfolder.
 
-Installing the Configuration Manager console from the installation media always installs the English version. This behavior happens even if the site server supports different languages, or the target computer's OS is set to a different language. Optionally, you can copy the **ConsoleSetup** folder to an alternate location to start the installation.
+
+## Prerequisites
+
+- You have local **Administrator** rights on the target computer for the console.  
+
+- You have **Read** permissions to the location of the Configuration Manager console installation files.  
+
+
+
+## Source paths
+
+Decide which source path to use:  
+
+- ConsoleSetup folder on the site server: `<Configuration Manager site server installation path>\Tools\ConsoleSetup`  
+
+    When you install a site server, it copies the console installation files and supported language packs for the site to the **Tools\ConsoleSetup** subfolder. Optionally, you can copy the **ConsoleSetup** folder to an alternate location to start the installation. When you update the site, it always keeps its local version up to date.  
+
+- Configuration Manager installation media: `<Configuration Manager installation media>\SMSSETUP\BIN\I386`  
+
+    Installing the Configuration Manager console from the installation media always installs the English version. This behavior happens even if the site server supports different languages, or the target computer's OS is set to a different language.  
+
+When possible, start the console installer from the **ConsoleSetup** folder rather than from the source media.
+
+> [!Important]  
+> Don't install the console using the **CD.Latest** source files. It's an unsupported scenario, and may cause problems with the console installation. For more information, see [The CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder#unsupported-scenarios).<!-- SCCMDocs issue 1359 -->  
 
 If you create a package for installing the console on other computers, make sure the package includes the following files:<!--3612513-->
 
@@ -34,51 +57,29 @@ If you create a package for installing the console on other computers, make sure
 
 
 
-## Prerequisites
-
-- You have local **Administrator** rights on the target computer for the console.  
-
-- You have **Read** permissions to the location of the Configuration Manager console installation files.  
-
-
 ## Use the Setup Wizard  
 
-1. Browse to one of these locations:  
-
-    - On the site server, go to: `<Configuration Manager site server installation path>\Tools\ConsoleSetup`  
-
-    - From the Configuration Manager source media, go to: `<Configuration Manager source files>\Smssetup\Bin\I386`  
-
-    > [!TIP]  
-    > When possible, start the console installer from the **ConsoleSetup** folder rather than from the source media.
-
-2. To start the Configuration Manager Console Setup Wizard, open **ConsoleSetup.exe**.  
+1. Browse to the source path, and open **ConsoleSetup.exe**.  
 
     > [!IMPORTANT]  
     > Always install the console by using **ConsoleSetup.exe**. Although you can install the Configuration Manager console by running AdminConsole.msi, this method doesn't run prerequisites or dependency checks. The installation might not install correctly.  
 
-3. In the wizard, select **Next**.  
+2. In the wizard, select **Next**.  
 
-4. On the **Site Server** page, enter the fully qualified domain name (FQDN) of the site server to which the Configuration Manager console connects.  
+3. On the **Site Server** page, enter the fully qualified domain name (FQDN) of the site server to which the Configuration Manager console connects.  
 
-5. On the **Installation Folder** page, enter the installation folder for the Configuration Manager console. The folder path can't include trailing spaces or Unicode characters.  
+4. On the **Installation Folder** page, enter the installation folder for the Configuration Manager console. The folder path can't include trailing spaces or Unicode characters.  
 
-6. On the **Customer Experience Improvement Program** page, select whether to join the Customer Experience Improvement Program (CEIP).  
+5. On the **Customer Experience Improvement Program** page, select whether to join the Customer Experience Improvement Program (CEIP).  
 
     > [!Note]  
     > Starting in Configuration Manager version 1802, the CEIP feature is removed from the product.
 
-7. On the **Ready to Install** page, select **Install**.  
+6. On the **Ready to Install** page, select **Install**.  
 
 
 
 ## Install from a command prompt  
-
-First, decide which source path to use:  
-
-- `<Configuration Manager site server installation path>\Tools\ConsoleSetup`  
-
-- `<Configuration Manager installation media>\SMSSETUP\BIN\I386`  
 
 > [!TIP]  
 > Installing the Configuration Manager console from a command prompt always installs the English version. This behavior happens even if the target computer's OS is set to a different language. To install the Configuration Manager console in a language other than English, [use the Setup Wizard](#use-the-setup-wizard).  
