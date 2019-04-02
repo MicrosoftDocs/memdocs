@@ -69,7 +69,7 @@ To send feedback on something that you liked follow the instructions below:
 
 ### Send a frown
 
-To send feedback on something that you didn't like follow the instructions below:
+To send feedback on something that you didn't like, follow the instructions below:
 
 1. In the upper right corner of the console, click on the smiley face. 
 2. In the drop-down menu, select **Send a frown**.
@@ -100,7 +100,7 @@ To send feedback on something that you didn't like follow the instructions below
 4. On an internet connected machine, open a command prompt. 
 5. Run the following command: `UploadOfflineFeedback.exe -f c:\folder\location_of.zip`
     
-    - Optionally, you can specify the following:
+    - Optionally, you can specify the following parameters:
         -  `-t, --timeout` Timeout in seconds for sending the data. 0 is unlimited. Default is 30.
         - `-s --silent`  No logging to console (Cannot combine with --verbose)
         - `-v, --verbose` Output verbose logging to console (Cannot combine with --silent)
@@ -109,7 +109,7 @@ To send feedback on something that you didn't like follow the instructions below
 ## <a name="bkmk_feedbackid"></a> Confirmation of console feedback
 
 <!--3556010-->
-Starting in version 1902, when you send feedback through the Configuration Manager console it shows a confirmation message. This message includes a **Feedback ID**, which you can give to Microsoft as a tracking identifier.
+Starting in version 1902, when you send feedback through the Configuration Manager console or UploadOfflineFeedback.exe,  it shows a confirmation message. This message includes a **Feedback ID**, which you can give to Microsoft as a tracking identifier.
 
 - To copy the **Feedback ID**, select the copy icon next to the ID, or use the **CTRL** + **C** key shortcut.
   - This ID isn't stored on your computer, so make sure to copy it before closing the window.
@@ -118,7 +118,7 @@ Starting in version 1902, when you send feedback through the Configuration Manag
    ![Feedback confirmation from the console in Configuration Manager 1902](media/1902-feedback-id-example.png)
 - The **UploadOfflineFeedback** command tool writes the **FeedbackID** to the console unless -s or --silent is used.
 
-  ![Feedback confirmation from *UploadOfflineFeedback.exe in Configuration Manager 1902](media/1902-offline-feedback-id-example.png)
+  ![Feedback confirmation from UploadOfflineFeedback.exe in Configuration Manager 1902](media/1902-offline-feedback-id-example.png)
 
 ##  <a name="BKMK_FeedbackHub"></a> Product feedback for versions 1802 and earlier
 
