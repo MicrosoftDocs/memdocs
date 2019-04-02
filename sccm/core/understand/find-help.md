@@ -41,7 +41,7 @@ For tips on searching, providing feedback, and more information about using the 
 
 
 
-<a name="product-feedback"></a>  
+<a name="product-feedback"></a>
 
 ## <a name="BKMK_1806Feedback"></a> Product feedback starting with version 1806
 
@@ -89,6 +89,7 @@ To send feedback on something that you didn't like follow the instructions below
        - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQMClient:MachineId
 
 
+
 ### <a name="BKMK_NoInternet"></a> Send feedback that you saved for later submission
 
 1. Click on **Save** at the bottom of the **Provide feedback** window. 
@@ -105,7 +106,19 @@ To send feedback on something that you didn't like follow the instructions below
         - `-v, --verbose` Output verbose logging to console (Cannot combine with --silent)
         - `--help` Displays the help screen
 
+## <a name="bkmk_feedbackid"></a> Confirmation of console feedback
 
+<!--3556010-->
+Starting in version 1902, when you send feedback through the Configuration Manager console it shows a confirmation message. This message includes a **Feedback ID**, which you can give to Microsoft as a tracking identifier.
+
+- To copy the **Feedback ID**, select the copy icon next to the ID, or use the **CTRL** + **C** key shortcut.
+  - This ID isn't stored on your computer, so make sure to copy it before closing the window.
+- Clicking on **Do not show this message again** will suppress the dialog box and prevent it from appearing in the future.
+
+   ![Feedback confirmation from the console in Configuration Manager 1902](media/1902-feedback-id-example.png)
+- The **UploadOfflineFeedback** command tool writes the **FeedbackID** to the console unless -s or --silent is used.
+
+  ![Feedback confirmation from *UploadOfflineFeedback.exe in Configuration Manager 1902](media/1902-offline-feedback-id-example.png)
 
 ##  <a name="BKMK_FeedbackHub"></a> Product feedback for versions 1802 and earlier
 
