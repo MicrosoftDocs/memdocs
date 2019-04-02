@@ -51,7 +51,7 @@ Starting in Configuration Manager version 1806, you can send product feedback di
   - **Send a frown**: Send feedback on what you didn't like.
   - **Send a suggestion**: Takes you to the [UserVoice website](https://configurationmanager.uservoice.com/) to share your idea.
 
-![Submit feedback in Configuration Manager 1806](media/1806-send-a-smile.png)
+    ![Submit feedback in Configuration Manager 1806](media/1806-send-a-smile.png)
 
 
 ### Send a smile
@@ -78,8 +78,21 @@ To send feedback on something that you didn't like, follow the instructions belo
 5. Click **Submit Feedback**
      - If you don't have internet connectivity, click on **Save** at the bottom. Follow the instructions in the [Send feedback that you saved for later submission](#BKMK_NoInternet) section to send it to Microsoft.  
 
+### Send a suggestion
+
+When you **Send a suggestion**, you're directed to [UserVoice](https://configurationmanager.uservoice.com/), a third-party website, to share your idea. The Configuration Manager product team uses the following UserVoice status values:
+
+- **Noted** - We understand the request and it makes sense. We've added it to our backlog.
+- **Planned** - We've started coding for this feature and expect it to show up in a tech preview build within the next few months.
+- **Started** - The feature is now in a tech preview. Go check it out, and give us feedback. Let us know if the feature is on the right track or not. You can even put the feedback in the comment section of the UserVoice request, for others to see and comment on. We’ll read that and use the feedback to try to improve the feature.
+- **Completed** - The first version of the feature is in a production build. This status doesn’t mean we're 100% done with the feature, and will no longer improve it. But it does mean that v1 of the features is in a production build, and you can start using it for real. We're making it completed because:
+  - We want you to know the feature is production ready.
+  - We want to give back your UserVoice votes so you can use them on other items.
+  - You can file new Design Change Requests to this feature to help us know the next most important improvement for this feature.
 
 ### Information sent with feedback
+
+When you **Send a smile** or **Send a frown**, the following information is sent with the feedback:
  
    - OS build information
    - Configuration Manager hierarchy ID
@@ -128,8 +141,15 @@ Report potential product defects through the [Feedback Hub app](https://support.
  - Configuration Manager OS Deployment
  - Configuration Manager Server
 
-Continue to use the [UserVoice page](https://configurationmanager.uservoice.com/) to vote on new feature ideas in Configuration Manager.
+Continue to use the [UserVoice page](https://configurationmanager.uservoice.com/) to vote on new feature ideas in Configuration Manager. The Configuration Manager product team uses the following UserVoice status values:
 
+- **Noted** - We understand the request and it makes sense. We've added it to our backlog.
+- **Planned** - We've started coding for this feature and expect it to show up in a tech preview build within the next few months.
+- **Started** - The feature is now in a tech preview. Go check it out, and give us feedback. Let us know if the feature is on the right track or not. You can even put the feedback in the comment section of the UserVoice request, for others to see and comment on. We’ll read that and use the feedback to try to improve the feature.
+- **Completed** - The first version of the feature is in a production build. This status doesn’t mean we're 100% done with the feature, and will no longer improve it. But it does mean that v1 of the features is in a production build, and you can start using it for real. We're making it completed because:
+  - We want you to know the feature is production ready.
+  - We want to give back your UserVoice votes so you can use them on other items.
+  - You can file new Design Change Requests to this feature to help us know the next most important improvement for this feature.
 
 ##  <a name="BKMK_ProductGroupBlog"></a> Configuration Manager team blog  
 
