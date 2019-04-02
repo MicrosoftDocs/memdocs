@@ -381,7 +381,7 @@ MessageId 40805: User &lt;UserName> ran script &lt;Script-Guid> with hash &lt;Sc
 <!--3610960-->
 Starting in Configuration Manager version 1902, you can run CMPivot from the central administration site (CAS) in a hierarchy. The primary site still handles the communication to the client. When running CMPivot from the central administration site, it communicates with the primary site over the high-speed message subscription channel. This communication doesn't rely upon standard SQL replication between sites.
 
-Running CMPivot on the CAS will require additional permissions if you have remote configurations relative to the CAS such as remote SQL, remote SCCM provider, or SQL Always On configuration. With these remote configurations, you have a “double hop scenario” for CMPivot.
+Running CMPivot on the CAS will require additional permissions when SQL or the provider are not on the same machine or in the case of SQL Always On configuration. With these remote configurations, you have a “double hop scenario” for CMPivot.
 
 To get CMPivot to work on the CAS in such a “double hop scenario”, you can define constrained delegation. To understand the security implications of this configuration, read the [Kerberos constrained delegation](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) article. If you have more than one remote configuration such as SQL or SCCM Provider being colocated with the CAS or not, you may require a combination of permission settings. Below are the steps that you need to take:
 
