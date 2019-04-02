@@ -237,7 +237,7 @@ The collation of the site database matches the collation of the parent site's da
 
 *Applies to: Central administration site, primary site*
 
-The replication status of the parent site is **Replication active** (state **125**). 
+The replication status of the parent site is **Replication active** (state **125**).
 
 ### Pending system restart
 
@@ -519,8 +519,6 @@ The Windows Preinstallation Environment (PE) component of the Windows ADK is ins
 
 ## Warnings
 
-You should resolve any of these checks before installing, but they don't block the update.
-
 ### Active Directory domain functional level
 
 *Applies to: Central administration site, primary site*
@@ -575,11 +573,11 @@ To resolve this warning, check whether the despooler and scheduler site system c
 
 The Background Intelligent Transfer Service (BITS) is installed and enabled in IIS.
 
-### Cloud management gateway requires either token-based authentication or a HTTPS management point
+### Cloud management gateway requires either token-based authentication or an HTTPS management point
 
 *Applies to: Cloud management gateway*
 
-With some versions of Configuration Manager, you can't use a HTTP management point with the cloud management gateway. It either needs to be configured for HTTPS, or the site needs to be configured for enhanced HTTP. For more information, see [Plan for cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).
+With some versions of Configuration Manager, you can't use an HTTP management point with the cloud management gateway (CMG). Either configure the CMG for HTTPS, or configure the site for enhanced HTTP. For more information, see [Plan for cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).
 
 ### Configuration for SQL Server memory usage
 
