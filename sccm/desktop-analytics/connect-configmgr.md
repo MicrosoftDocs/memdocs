@@ -26,7 +26,7 @@ Desktop Analytics is tightly integrated with Configuration Manager. First, make 
 
 First, make sure that your Configuration Manager site is running at least version 1810. For more information, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates).
 
-You also need to install the version 1810 update rollup (4486457) to support integration with Desktop Analytics. For more information on this update, see [Update rollup for Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4486457).
+You also need to install the version 1810 Update Rollup 2 (4488598) to support integration with Desktop Analytics. For more information on this update, see [Update Rollup 2 for Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4488598).
 
 1. Update the site with the update rollup for version 1810. For more information, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates).  
 
