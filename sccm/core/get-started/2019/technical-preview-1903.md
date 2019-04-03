@@ -39,7 +39,7 @@ Review the [technical preview](/sccm/core/get-started/technical-preview) article
 
 ## Known issues
 
-[!INCLUDE [Client health dashboard](includes/known-issue-health.md)]
+[!INCLUDE [Client health dashboard](includes/1903/known-issue-health.md)]
 
 ## Next steps
 
