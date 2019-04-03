@@ -1,8 +1,8 @@
 ---
-title: "IProgressUI Interface"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: IProgressUI interface
+titleSuffix: Configuration Manager
+ms.date: 04/01/2019
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: 2c84a3bd-f8d8-46a4-9591-07186ca5fe65
@@ -11,20 +11,33 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# IProgressUI Interface
-The `IProgressUI` automation interface, in System Center Configuration Manager, represents the user interface that allows custom actions to report progress to the operating system deployment task sequencing environment.  
 
-## In This Section  
+# IProgressUI interface
+
+The `IProgressUI` automation interface in Configuration Manager represents the user interface that allows custom actions to report progress to the OS deployment task sequencing environment.  
+
+## Methods for this interface
 
 |Term|Definition|  
 |----------|----------------|  
-|[IProgressUI::ShowActionProgress](../../../../../develop/reference/core/clients/client-classes/iprogressui--showactionprogress-method.md)|Displays custom action progress information in a dialog box while the custom action is running.|  
+|[IProgressUI::CloseProgressDialog](/sccm/develop/reference/core/clients/client-classes/iprogressui--closeprogressdialog-method)|Closes open instances of `IProgressUI`|  
+|[IProgressUI::ShowActionProgress](/sccm/develop/reference/core/clients/client-classes/iprogressui--showactionprogress-method)|Displays custom action progress information in a dialog box while the custom action is running.|  
+|[IProgressUI::ShowErrorDialog](/sccm/develop/reference/core/clients/client-classes/iprogressui--showerrordialog-method)|Displays customizable error information in a dialog box.|
+|[IProgressUI::ShowMessage](/sccm/develop/reference/core/clients/client-classes/iprogressui--showmessage-method)|Displays customizable dialog box.|
+|[IProgressUI::ShowRebootDialog](/sccm/develop/reference/core/clients/client-classes/iprogressui--showrebootdialog-method)|Displays customizable reboot warning dialog box.|
+|[IProgressUI::ShowSwapMediaDialog](/sccm/develop/reference/core/clients/client-classes/iprogressui--showswapmediadialog-method)|Displays message box to prompt a user to swap media.|
+|[IProgressUI::ShowTSProgress](/sccm/develop/reference/core/clients/client-classes/iprogressui--showtsprogress-method)|Displays custom task sequence progress information in a dialog box.|
 
-## Remarks  
- The GUID for `IProgressUI` is B64D758A-01C2-4bf0-9F17-621EFB9CF697.  
+## Remarks
 
-## See Also  
- [Operating System Deployment Client COM Automation Classes](../../../../../develop/reference/core/clients/client-classes/operating-system-deployment-client-com-automation-classes.md)   
- [ProgressUI Class](../../../../../develop/reference/core/clients/client-classes/progressui-client-com-automation-class.md)   
- [About Reporting Configuration Manager Custom Action Progress](../../../../../develop/osd/about-reporting-configuration-manager-custom-action-progress.md)   
- [Extending Operating System Deployment](../../../../../develop/osd/extending-operating-system-deployment.md)
+The GUID for `IProgressUI` is B64D758A-01C2-4bf0-9F17-621EFB9CF697.  
+
+## See also
+
+- [OS deployment client COM automation classes](/sccm/develop/reference/core/clients/client-classes/operating-system-deployment-client-com-automation-classes)  
+
+- [ProgressUI Class](/sccm/develop/reference/core/clients/client-classes/progressui-client-com-automation-class)  
+
+- [About reporting Configuration Manager custom action progress](/sccm/develop/osd/about-reporting-configuration-manager-custom-action-progress)  
+
+- [Extending OS deployment](/sccm/develop/osd/extending-operating-system-deployment)  
