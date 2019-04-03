@@ -42,7 +42,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
 - An active Azure subscription, with **Company Admin** permissions  
 
-- Configuration Manager, version 1810 with update rollup 4486457 or later, with **Full administrator** role  
+- Configuration Manager, version 1810 with Update Rollup 4488598 or later, with **Full administrator** role  
 
 - At least one Windows 10 device with the following configurations:  
 
