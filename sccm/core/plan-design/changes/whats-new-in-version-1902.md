@@ -443,9 +443,9 @@ For more information, see [Product feedback](/sccm/core/understand/find-help#bkm
 
 ### View recently connected consoles 
 <!--3699367-->
-You can now view the most recent connections for the Configuration Manager console. The view includes active connections and those consoles that recently connected. In the Configuration Manager console, go to the **Administration** workspace, expand **Security**, and select the **Console Connections** node.
+***[Updated]*** You can now view the most recent connections for the Configuration Manager console. The view includes active connections and those consoles that recently connected. In the Configuration Manager console, go to the **Administration** workspace, expand **Security**, and select the **Console Connections** node.
 
-<!-- For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console). -->
+For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#bkmk_viewconnected).
 
 
 ### In-console documentation dashboard
