@@ -2,7 +2,7 @@
 title: The content library
 titleSuffix: Configuration Manager
 description: Learn about the content library that Configuration Manager uses to reduce the overall size of distributed content.
-ms.date: 09/19/2018
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -86,7 +86,7 @@ A remote content library is a prerequisite for [site server high availability](/
 
 ### Prerequisites  
 
-- The site server computer account needs **read** and **write** permissions to the network path to which you're moving the content library. No components are installed on the remote system.  
+- The site server computer account needs **Full control** permissions to the network path to which you're moving the content library. This permission applies to both the share and the file system. No components are installed on the remote system.
 
 - The site server can't have the distribution point role. The distribution point also uses the content library, and this role doesn't support a remote content library. After moving the content library, you can't add the distribution point role to the site server.  
 
@@ -111,6 +111,9 @@ A remote content library is a prerequisite for [site server high availability](/
 
    - While **In progress**, the **Move Progress (%)** value displays the percentage complete.  
 
+        > [!Note]  
+        > If you have a large content library, you may see `0%` progress in the console for a while. For example, with a 1 TB library, it has to copy 10 GB before it shows `1%`. Review **distmgr.log**, which shows the number of files and bytes copied. Starting in version 1810, the log file also shows an estimated time remaining.
+
    - If there's an error state, the status displays the error. Common errors include **access denied** or **disk full**.  
 
    - When complete it displays **Complete**.  
@@ -120,6 +123,10 @@ A remote content library is a prerequisite for [site server high availability](/
 For more information on this process, see [Flowchart - Manage content library](/sccm/core/plan-design/hierarchy/manage-content-library-flowchart).
 
 The site actually *copies* the content library files to the remote location. This process doesn't delete the content library files at the original location on the site server. To free up space, an administrator must manually delete these original files.
+
+If the original content library spans two drives, it's merged into a single folder at the new destination. 
+
+Starting in version 1810, during the copy process, the site stops the **Despooler** and **Distribution manager** components. This action makes sure that content isn't added to the library while it's moving. Regardless, schedule this change during a system maintenance.
 
 If you need to move the content library back to the site server, repeat this process, but enter a local drive and path for the **New Location**. It must include a folder name that already exists on the drive, for example, `D:\SCCMContentLib`. When the original content still exists, the process quickly moves the configuration to the location local to the site server. 
 

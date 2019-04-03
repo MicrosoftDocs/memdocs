@@ -80,7 +80,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
     - `https://nexus.officeapps.live.com`  
     - `https://office.pipe.aria.microsoft.com`  
     - `https://graph.windows.net` (on Configuration Manager Server role only)
-    - `https://fef.bmsub01.manage-beta.microsoft.com` (on Configuration Manager Server role only)
+    - `https://fef.msua06.manage.microsoft.com` (on Configuration Manager Server role only)
 
     For more information, see [How to enable data sharing for Desktop Analytics](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
 
@@ -93,7 +93,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
 Use this procedure to sign in to Desktop Analytics and configure it in your subscription. This procedure is a one-time process to set up Desktop Analytics for your organization.  
 
-1. Open the [Desktop Analytics portal](https://aka.ms/m365aprod) in Microsoft 365 Device Management as a user with **Company Admin** permissions. Select **Start**.  
+1. Open the Desktop Analytics portal in Microsoft 365 Device Management as a user with **Company Admin** permissions. Select **Start**.  
 
 2. On the **Accept service agreement** page, review the service agreement, and select **Accept**.  
 
@@ -130,7 +130,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
 ### Create an app in Azure AD for Configuration Manager  
 
-1. In the [Azure portal](http://portal.azure.com), go to **Azure Active Directory**, and select **App registrations**. Then select **New application registration**.  
+1. In the [Azure portal](https://portal.azure.com), go to **Azure Active Directory**, and select **App registrations**. Then select **New application registration**.  
 
 2. In the **Create** panel, configure the following settings:  
 
@@ -377,5 +377,5 @@ Use this procedure to deploy Office 365 ProPlus in Configuration Manager to the 
 
 Advance to the next article to learn more about Desktop Analytics deployment plans.
 > [!div class="nextstepaction"]  
-> [Deployment plans](/sccm/desktop-analytics/deployment-plans)  
+> [Deployment plans](/sccm/desktop-analytics/about-deployment-plans)
 

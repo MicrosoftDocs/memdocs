@@ -83,7 +83,7 @@ Specifies that the task sequence deletes all files on the target partition befor
 
 Use this step to download all of the drivers in the driver package and install them on the Windows OS.
 
-The **Apply Driver Package** task sequence step makes all device drivers in a driver package available for use by Windows. Add this step between the **Apply Operating System** and **Setup Windows and ConfigMgr** steps to make the drivers in the package available to Windows. Typically, the **Apply Driver Package** step is placed after the **Auto Apply Drivers** task sequence step. The **Apply Driver Package** task sequence step is also useful with stand-alone media deployment scenarios.  
+The **Apply Driver Package** task sequence step makes all device drivers in a driver package available for use by Windows. Add this step between the **Apply Operating System** and **Setup Windows and ConfigMgr** steps to make the drivers in the package available to Windows. The **Apply Driver Package** task sequence step is also useful with stand-alone media deployment scenarios.  
 
 Put similar device drivers into a driver package, and distribute them to the appropriate distribution points. For example, put all drivers from one manufacturer into a driver package. Then distribute the package to distribution points where the associated computers can access them.
 

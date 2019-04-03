@@ -2,7 +2,7 @@
 title: Manage email access
 titleSuffix: Configuration Manager
 description: Learn how to use Configuration Manager conditional access to manage access to Exchange email.
-ms.date: 03/05/2017
+ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -74,7 +74,7 @@ You can restrict access to **Outlook Web Access (OWA)** on Exchange Online when 
 
 Unsupported browsers will be blocked. The OWA apps for iOS and Android aren't supported. They should be blocked through ADFS claims rules:  
 
-- Setup ADFS claims rules to block non-modern authentication protocols. Detailed instructions are provided in scenario 3 to [block all access to O365 except browser based applications](https://technet.microsoft.com/library/dn592182.aspx).  
+- Setup ADFS claims rules to block non-modern authentication protocols. Detailed instructions are provided in scenario 3 to [block all access to Office 365 except browser based applications](https://technet.microsoft.com/library/dn592182.aspx).  
 
 #### For PCs
 
@@ -141,7 +141,7 @@ You can export the contents of the report and use the **Email Address** column t
 
 You target conditional access policies to different groups or collections of users depending on the policy types. These groups contain the users that will be targeted, or exempt from the policy. When a user is targeted by a policy, each device they use must be compliant in order to access email.  
 
-- **For the Exchange Online policy**: to Azure Active Directory security user groups. You can configure these groups in the **Office 365 admin center**, or the **Intune account portal**.  
+- **For the Exchange Online policy**: to Azure Active Directory security user groups. You can configure these groups in the **Microsoft 365 admin center**, or the **Intune account portal**.  
 
 - **For the Exchange On-premises policy**: to Configuration Manager user collections. You can configure these in the **Assets and Compliance** workspace.  
 

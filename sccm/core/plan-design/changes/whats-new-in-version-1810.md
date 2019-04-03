@@ -2,7 +2,7 @@
 title: What's new in version 1810
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1810 of Configuration Manager current branch.
-ms.date: 03/05/2019
+ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -57,10 +57,10 @@ For more information, see [Supported operating systems for site system servers](
 
 
 ### Hierarchy support for site server high availability
-<!--1358224-->
-Central administration sites and child primary sites can now have an additional site server in passive mode. 
+<!--3607755, fka 1358224-->
+***[Updated]*** Central administration sites and child primary sites can now have an additional site server in passive mode. 
 
-<!--For more information, see [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability).-->
+For more information, see [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability).
 
 
 ### Improvements to setup prerequisites
@@ -245,6 +245,12 @@ For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/
 
 For more information, see [Manage drivers](/sccm/osd/get-started/manage-drivers).
 
+### Improvements to Windows 10 servicing plan filters
+
+<!--3098809, 3113836, 3204570 -->
+***[Updated]*** Additional filters have been added to Windows 10 servicing plans. You can now filter by **Architecture**, **Product Category**, and if the upgrade is **Superseded**.
+
+For more information, see [Windows 10 servicing plan](/sccm/osd/deploy-use/manage-windows-as-a-service#BKMK_ServicingPlan).
 
 ### New task sequence variable for last action name
 <!--SCCMDocs-pr issue #2964-->
@@ -269,19 +275,27 @@ For more information, see [Create phased deployments](/sccm/osd/deploy-use/creat
 
 ### Improvement to maintenance windows for software updates
 <!--vso2839307-->
-The following client setting is in the **Software Updates** group to control the installation behavior of software updates in maintenance windows: 
+***[Updated]*** The following client setting is in the **Software Updates** group to control the installation behavior of software updates in maintenance windows: 
 
 **Enable installation of updates in "All deployments" maintenance window when "Software update" maintenance window is available**
 
 By default, this option is **No** to keep consistent with the existing behavior. Change it to **Yes** to allow clients to use other available maintenance windows to install software updates.
 
-<!--For more information, see []().-->
+For more information, see [Software updates client settings](/sccm/core/clients/deploy/about-client-settings#bkmk_SUMMaint).
+
 
 ### Improvement to software updates maintenance
 <!--2839349-->
 WSUS cleanup tasks now run on secondary sites. WSUS cleanup for expired updates is run and superceded updates are declined in WSUS for secondary sites.
 
 For more information, see [WSUS cleanup behavior starting in version 1810](/sccm/sum/deploy-use/software-updates-maintenance#wsus-cleanup-behavior-starting-in-version-1810)
+
+### Improvement to software update supersedence rules
+<!--3098809, 2977644-->
+
+***[Updated]***  You can now specify supersedence rules for feature updates separately from non-feature updates. This means your upgrades won't be removed from Configuration Manager before you have completed servicing your Windows 10 clients.
+
+For more information, see [Supersedence rules](/sccm/sum/get-started/install-a-software-update-point#supersedence-rules).
 
 ## <a name="bkmk_report"></a> Reporting
 
@@ -377,8 +391,12 @@ The following performance and troubleshooting improvements apply to both CMPivot
 
 
 ### SMS Provider API
-<!--1321523-->
-The SMS Provider now provides read-only API interoperability access to WMI over HTTPS. The **SMS Provider** appears as a role with an option to allow communication over the cloud management gateway. The current use for this setting is to enable application approvals via email from a remote device. For more information, see [Approve application requests via email](#approve-application-requests-via-email).
+<!--3607711, fka 1321523-->
+***[UPDATED]*** The SMS Provider now provides read-only API interoperability access to WMI over HTTPS, called the **administration service**. This REST API can be used in place of a custom web service to access information from the site.
+
+The **SMS Provider** appears as a role with an option to allow communication over the cloud management gateway. The current use for this setting is to enable application approvals via email from a remote device. 
+
+For more information, see [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service).
 
 
 
@@ -396,7 +414,7 @@ Aside from new features, this release also includes additional changes such as b
 
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1810 release notes](https://docs.microsoft.com/powershell/sccm/1810-release-notes?view=sccm-ps).
 
-The following update rollup (4486457) is available in the console starting on 25 January 2019: [Update rollup for Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4486457).
+The following update rollup (4488598) is available in the console starting on 25 March 2019: [Update rollup 2 for Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4488598). This replaces the prior update rollup, KB 4486457.
 
 
 ### Hotfixes

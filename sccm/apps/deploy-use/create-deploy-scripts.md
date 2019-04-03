@@ -2,13 +2,13 @@
 title: Create and run scripts
 titleSuffix: Configuration Manager
 description: Create and run Powershell scripts on client devices.
-ms.date: 04/10/2018
+ms.date: 03/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
 ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -152,7 +152,6 @@ The three security roles used for running scripts are not created by default in 
 
  ![Example of SMS Scripts permissions for the script authors role](./media/run-scripts/script_authors_permissions.png)
 
-   
 
 ## Create a script
 
@@ -173,11 +172,11 @@ The three security roles used for running scripts are not created by default in 
 
 ## Script parameters
 *(Introduced with version 1710)*  
-Adding parameters to a script provides increased flexibility for your work. The following outlines the Run Scripts feature's current capability with script parameters for; *String*, *Integer* data types. Lists of preset values are also available. If your script has unsupported data types, you get a warning.
+Adding parameters to a script provides increased flexibility for your work. You can include up to 10 parameters. The following outlines the Run Scripts feature's current capability with script parameters for; *String*, *Integer* data types. Lists of preset values are also available. If your script has unsupported data types, you get a warning.
 
 In the **Create Script** dialog, click **Script Parameters** under **Script**.
 
-Each of your script's parameters has its own dialog for adding further details and validation.
+Each of your script's parameters has its own dialog for adding further details and validation. If there is a default parameter in the script, it will be enumerated in the parameter UI and you can set it. Configuration Manager won't overwrite the default value since it will never modify the script directly. You can think of this as “pre-populated suggested values” are provided in the UI, but Configuration Manager doesn't provide access to “default” values at run-time. This can be worked around by editing the script to have the correct defaults. <!--17694323-->
 
 >[!IMPORTANT]
 > Parameter values can't contain an apostrophe. </br></br>
@@ -250,8 +249,8 @@ To select a collection of targets for your script:
 5. On the **Script** page of the **Run Script** wizard, choose a script from the list. Only approved scripts are shown.
 6. Click **Next**, and then complete the wizard.
 
->[!IMPORTANT]
->If a script does not run, for example because a target device is turned off during the one hour time period, you must run it again.
+> [!IMPORTANT]
+> If a script does not run, for example because a target device is turned off during the one hour time period, you must run it again.
 
 ### Target machine execution
 
@@ -259,7 +258,7 @@ The script is executed as the *system* or *computer* account on the targeted cli
 
 ## Script monitoring
 
-After you have initiated running a script on a collection of devices, use the following procedure to monitor the operation. Beginning with version 1710, you are both able to monitor a script in real time as it executes, and you can also return to a report for a given Run Script execution. <br>
+After you have initiated running a script on a collection of devices, use the following procedure to monitor the operation. Beginning with version 1710, you are both able to monitor a script in real time as it executes, and you can also return to a report for a given Run Script execution. Script status data is cleaned up as part of the [Delete Aged Client Operations maintenance task](../../core/servers/manage/reference-for-maintenance-tasks.md) or deletion of the script.<br>
 
 ![Script monitor - Script Run Status](./media/run-scripts/RS-monitoring-three-bar.png)
 
@@ -267,9 +266,37 @@ After you have initiated running a script on a collection of devices, use the fo
 2. In the **Monitoring** workspace, click **Script Status**.
 3. In the **Script Status** list, you view the results for each script you ran on client devices. A script exit code of **0** generally indicates that the script ran successfully.
     - Beginning in Configuration Manager 1802, script output is truncated to 4 KB to allow for better display experience.  <!--510013-->
-      ![Script monitor - Truncated Script](./media/run-scripts/Script-monitoring-truncated.png) 
+   
+   ![Script monitor - Truncated Script](./media/run-scripts/Script-monitoring-truncated.png)
 
-## Script Output
+## Script output in 1810
+
+You can view detailed script output in raw or structured JSON format. This formatting makes the output easier to read and analyze. If the script returns valid JSON-formatted text, then view the detailed output as either **JSON Output** or **Raw Output**. Otherwise the only option is **Script Output**.
+
+### Example: Script output is valid JSON
+Command: `$PSVersionTable.PSVersion`  
+
+Output:  
+```
+Major  Minor  Build  Revision
+-----  -----  -----  --------
+5      1      16299  551
+```
+
+### Example: Script output isn't valid JSON
+Command: `Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
+
+Output:  
+```
+Microsoft Windows 10 Enterprise
+```
+
+- 1810 clients return output less than 80 KB to the site over a fast communication channel. This change increases the performance of viewing script or query output.  
+
+  - If the script or query output is greater than 80 KB, the client sends the data via a state message.  
+  - Pre-1802 clients continue to use state messages.
+
+## Script output pre-1810
 
 - Starting in Configuration Manager version 1802, script output returns using JSON formatting. This format consistently returns a readable script output. 
 - Scripts that get an unknown result, or where the client was offline, won't show in the charts or data set. <!--507179-->
@@ -278,11 +305,24 @@ After you have initiated running a script on a collection of devices, use the fo
     - When you have a pre-1802 Configuration Manager client, you get a string output.
     -  For Configuration Manager client version 1802 and above, you get JSON formatting.
         - For example, you might get results that say TEXT on one client version and "TEXT" (the output is surrounded in double quotes) on other version, which will be put in chart as two different categories.
-        - If you need to work around this behavior, consider running script against two different collections. One with  pre-1802 clients and another with 1802 and higher clients. Or, you can convert an enum object to a string value in scripts so they are properly displayed in JSON formatting. 
+        - If you need to work around this behavior, consider running script against two different collections. One with pre-1802 clients and another with 1802 and higher clients. Or, you can convert an enum object to a string value in scripts so they are properly displayed in JSON formatting. 
 - Convert an enum object to a string value in scripts so they are properly displayed in JSON formatting. <!--508377-->
+
    ![Convert enum object to a sting value](./media/run-scripts/enum-tostring-JSON.png)
 
+## Log files
 
+Starting in version 1810, additional logging was added for troubleshooting.
+
+- On the client, by default in C:\Windows\CCM\logs:  
+  - **Scripts.log**  
+  - **CcmMessaging.log**  
+
+- On the MP, by default in C:\SMS_CCM\Logs:
+  - **MP_RelayMsgMgr.log**  
+
+- On the site server, by default in C:\Program Files\Configuration Manager\Logs:
+  - **SMS_Message_Processing_Engine.log**
 
 ## See Also
 

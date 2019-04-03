@@ -1,16 +1,20 @@
 ---
-title: "IProgressUI::ShowErrorDialog"
-titleSuffix: "Configuration Manager"
-ms.date: "03/12/2019"
-ms.prod: "configuration-manager"
+title: IProgressUI::ShowErrorDialog
+titleSuffix: Configuration Manager
+description: IProgressUI::ShowErrorDialog method
+ms.date: 04/01/2019
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
-ms.assetid: 
-author: adamgrosstx
-ms.author: 
-manager: 
+ms.collection: M365-identity-device-management
+ms.assetid: 13e3b9a0-96ea-4b63-be49-5a5d4e61228f
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
-# IProgressUI::ShowErrorDialog Method
+
+# IProgressUI::ShowErrorDialog method
+
 In Configuration Manager, the `ShowErrorDialog` method displays customizable error information in a dialog box.  
 
 ## Syntax  
@@ -29,72 +33,87 @@ HRESULT ShowErrorDialog(
 );  
 ```  
 
-#### Parameters  
- `pszOrgName`  
- Data type: `BSTR`  
+### Parameters
 
- Qualifiers: [in]  
+#### `pszOrgName`
 
- Pointer to the organization name that is shown in the progress dialog box. The value can be retrieved from the `_SMSTSOrgName` environment variable.  
+Data type: `BSTR`  
 
- `pszTaskSequenceName`  
- Data type: `BSTR`  
+Qualifiers: [in]  
 
- Qualifiers: [in]  
+Pointer to the organization name that is shown in the progress dialog box. The value can be retrieved from the `_SMSTSOrgName` environment variable.  
 
- Pointer to the name of the task sequence that is currently running. The value can be retrieved from the `_SMSTSPackageName` environment variable.  
+#### `pszTaskSequenceName`
 
- `pszCustomTitle`  
- Data type: `BSTR`  
+Data type: `BSTR`  
 
- Qualifiers: [in]  
+Qualifiers: [in]  
 
- Pointer to the text for a custom message that replaces the default title text displayed in the error dialog box. Pass an empty string if there is no custom message to show. The value can be obtained from the `_SMSTSCustomProgressDialogMessage` environment variable.  
+Pointer to the name of the task sequence that is currently running. The value can be retrieved from the `_SMSTSPackageName` environment variable.  
 
- `pszErrorMessage`  
- Data type: `BSTR`  
+#### `pszCustomTitle`
 
- Qualifiers: [in]  
+Data type: `BSTR`  
 
- Pointer to the text for the custom message that will be displayed in the error dialog box. Pass an empty string if there is no custom message to show. The default text will include the text from `pszTaskSequenceName`, `pszTaskSequenceStepName` and `uErrorCode` and will change depending on which values are specified.
+Qualifiers: [in]  
 
- `uErrorCode`  
- Data type: `ULONG`  
+Pointer to the text for a custom message that replaces the default title text displayed in the error dialog box. Pass an empty string if there's no custom message to show. The value can be obtained from the `_SMSTSCustomProgressDialogMessage` environment variable.  
 
- Qualifiers: [in]
+#### `pszErrorMessage`
 
- Pointer to the return code of the last step that failed. The value can be obtained from the `_SMSTSLastActionRetCode` environment variable. If no custom text for `pszErrorMessage` is specified, `uErrorCode` will be displayed in [Microsoft System Error Code](https://docs.microsoft.com/en-us/windows/desktop/debug/system-error-codes) format.
+Data type: `BSTR`  
 
- `uTimeoutInSeconds`  
- Data type: `ULONG`  
+Qualifiers: [in]  
 
- Qualifiers: [in]  
+Pointer to the text for the custom message that's displayed in the error dialog box. Pass an empty string if there's no custom message to show. The default text includes the text from `pszTaskSequenceName`, `pszTaskSequenceStepName`, and `uErrorCode`. It changes depending on which values are specified.
 
- Pointer to the value for the number of seconds the dialog box is displayed before closing. The value can be obtained from the `SMSTSErrorDialogTimeout` environment variable which is not configured in the task sequence by default. If an empty string is specified for `uTimeoutInSeconds` and `SMSTSErrorDialogTimeout` is not specified, a default of 900 seconds will be used.
+#### `uErrorCode`
 
- `bWillReboot`  
- Data type: `ULONG`  
+Data type: `ULONG`  
 
- Qualifiers: [in]  
+Qualifiers: [in]
 
- Boolean value to indicate whether a reboot will be initiated by the task sequence when the dialog is closed or the timeout expires.
+Pointer to the return code of the last step that failed. The value can be obtained from the `_SMSTSLastActionRetCode` environment variable. If no custom text for `pszErrorMessage` is specified, `uErrorCode` will be displayed in [Microsoft system error code](https://docs.microsoft.com/windows/desktop/debug/system-error-codes) format.
 
-`pszTaskSequenceStepName`  
- Data type: `BSTR`  
+#### `uTimeoutInSeconds`
 
- Qualifiers: [in]  
+Data type: `ULONG`  
 
- Pointer to the text for name of the step name that will be displayed in the default `pszErrorMessage` text. The value can be retrieved from the `_SMSTSLastActionName` environment variable.
+Qualifiers: [in]  
 
-## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following value. There are no `HRESULT` values returned that are specific to this method.
+Pointer to the value for the number of seconds the dialog box is displayed before closing. The value can be obtained from the `SMSTSErrorDialogTimeout` environment variable, which isn't configured in the task sequence by default. If an empty string is specified for `uTimeoutInSeconds` and `SMSTSErrorDialogTimeout` isn't specified, a default of 900 seconds will be used.
 
- S_OK  
- The method succeeded.  
+#### `bWillReboot`
 
-## See Also  
- [Operating System Deployment Client COM Automation Classes](../../../../../develop/reference/core/clients/client-classes/operating-system-deployment-client-com-automation-classes.md)   
- [IProgressUI Interface](../../../../../develop/reference/core/clients/client-classes/iprogressui-interface.md)   
- [About Reporting Configuration Manager Custom Action Progress](../../../../../develop/osd/about-reporting-configuration-manager-custom-action-progress.md)   
- [Extending Operating System Deployment](../../../../../develop/osd/extending-operating-system-deployment.md)   
- [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../../../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md)
+Data type: `ULONG`  
+
+Qualifiers: [in]  
+
+Boolean value. It indicates whether the task sequence will restart the computer when the dialog is closed or the timeout expires.
+
+#### `pszTaskSequenceStepName`
+
+Data type: `BSTR`  
+
+Qualifiers: [in]  
+
+Pointer to the text for name of the step name that will be displayed in the default `pszErrorMessage` text. The value can be retrieved from the `_SMSTSLastActionName` environment variable.
+
+## Return values  
+
+An `HRESULT` code. Possible values include, but aren't limited to, the following value. There are no `HRESULT` values returned that are specific to this method.
+
+S_OK  
+The method succeeded.  
+
+## See also
+
+- [OS deployment client COM automation classes](/sccm/develop/reference/core/clients/client-classes/operating-system-deployment-client-com-automation-classes)  
+
+- [IProgressUI interface](/sccm/develop/reference/core/clients/client-classes/iprogressui-interface)  
+
+- [About reporting Configuration Manager custom action progress](/sccm/develop/osd/about-reporting-configuration-manager-custom-action-progress)  
+
+- [Extending OS deployment](/sccm/develop/osd/extending-operating-system-deployment)  
+
+- [How to use task sequence variables in a running Configuration Manager task sequence](/sccm/develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence)  

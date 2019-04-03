@@ -1,8 +1,8 @@
 ---
-title: Manage access to O365 services
+title: Manage access to Office 365 services
 titleSuffix: Configuration Manager
 description: Learn how to configure conditional access to Office 365 services for PCs that are managed by System Center Configuration Manager.
-ms.date: 04/10/2018
+ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Manage access to O365 services for PCs managed by System Center Configuration Manager
+# Manage access to Office 365 services for PCs managed by System Center Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
@@ -57,7 +57,7 @@ For information on configuring conditional access for devices enrolled and manag
 
 ### Prerequisites  
 
-- ADFS Sync, and an O365 subscription. The O365 subscription is for setting up Exchange Online and SharePoint Online.  
+- ADFS Sync, and an Office 365 subscription. The Office 365 subscription is for setting up Exchange Online and SharePoint Online.  
 
 - A Microsoft Intune Subscription. The Microsoft Intune Subscription should be configured in Configuration Manager Console. The Intune subscription is used to relay device compliance state to Azure Active Directory and for user licensing.  
 
@@ -107,7 +107,7 @@ For information on configuring conditional access for devices enrolled and manag
 ### Configure Active Directory Security Groups  
  You target conditional access policies to groups of users depending on the policy types. These groups contain the users that the policy targets, or exempt from the policy. When a policy targets a user, each device they use must be compliant in order to access the service.  
 
- Active Directory security user groups. These user groups should be synchronized to Azure Active Directory. You can also configure these groups in the Office 365 admin center, or the Intune account portal.  
+ Active Directory security user groups. These user groups should be synchronized to Azure Active Directory. You can also configure these groups in the Microsoft 365 admin center, or the Intune account portal.  
 
  You can specify two group types in each policy. :  
 

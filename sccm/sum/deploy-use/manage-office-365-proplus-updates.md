@@ -98,7 +98,7 @@ Starting in Configuration Manager 1806, the Office Customization Tool is integra
 9. Complete the wizard.
 10. You can deploy or edit the application from **Software Library** > **Overview** > **Application Management** > **Applications**.    
 
-After you create and deploy Office 365 applications using the Office 365 Installer, Configuration Manager won't manage the Office updates by default. To enable Office 365 clients to receive updates from Configuration Manager, see [Deploy Office 365 updates with Configuration Manager](#deploy-office-365-updates-with-configuration-manager).
+After you create and deploy Office 365 applications using the Office 365 Installer, Configuration Manager won't manage the Office updates by default. To enable Office 365 clients to receive updates from Configuration Manager, see [Deploy Office 365 updates with Configuration Manager](#deploy-office-365-updates).
 
 After you deploy Office 365 apps, you can create automatic deployment rules to maintain the apps. To create an automatic deployment rule for Office 365 apps, click **Create an ADR** from the Office 365 Client Management dashboard. Select **Office 365 Client** when you choose the product. For more information, see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates).
 

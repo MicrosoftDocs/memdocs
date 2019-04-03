@@ -1,16 +1,20 @@
 ---
-title: "IProgressUI::ShowTSProgress"
-titleSuffix: "Configuration Manager"
-ms.date: "03/12/2019"
-ms.prod: "configuration-manager"
+title: IProgressUI::ShowTSProgress
+titleSuffix: Configuration Manager
+description: IProgressUI::ShowTSProgress method
+ms.date: 04/01/2019
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
-ms.assetid: 
-author: adamgrosstx
-ms.author: 
-manager: 
+ms.collection: M365-identity-device-management
+ms.assetid: 3e8e24ba-615d-4e97-9411-a2bab792a264
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ---
-# IProgressUI::ShowTSProgress Method
+
+# IProgressUI::ShowTSProgress method
+
 In Configuration Manager, the `ShowTSProgress` method displays custom task sequence progress information in a dialog box.
 
 ## Syntax  
@@ -27,59 +31,71 @@ HRESULT ShowActionProgress(
 );  
 ```  
 
-#### Parameters  
- `pszOrgName`  
- Data type: `BSTR`  
+### Parameters
 
- Qualifiers: [in]  
+#### `pszOrgName`
 
- Pointer to the organization name that is shown in the progress dialog box. The value can be retrieved from the `_SMSTSOrgName` environment variable.  
+Data type: `BSTR`  
 
- `pszTaskSequenceName`  
- Data type: `BSTR`  
+Qualifiers: [in]  
 
- Qualifiers: [in]  
+Pointer to the organization name that is shown in the progress dialog box. The value can be retrieved from the `_SMSTSOrgName` environment variable.  
 
- Pointer to the name of the task sequence that is currently running. The value can be retrieved from the `_SMSTSPackageName` environment variable.  
+#### `pszTaskSequenceName`
 
- `pszCustomTitle`  
- Data type: `BSTR`  
+Data type: `BSTR`  
 
- Qualifiers: [in]  
+Qualifiers: [in]  
 
- Pointer to the text for a custom message that replaces the default title text displayed in the progress dialog box. Pass an empty string if there is no custom message to show. The value can be obtained from the `_SMSTSCustomProgressDialogMessage` environment variable.  
+Pointer to the name of the task sequence that is currently running. The value can be retrieved from the `_SMSTSPackageName` environment variable.  
 
- `pszCurrentAction`  
- Data type: `BSTR`  
+#### `pszCustomTitle`
 
- Qualifiers: [in]  
+Data type: `BSTR`  
 
- Pointer to the name of the current task sequence step. The value can be obtained from the `_SMSTSCurrentActionName` environment variable.  
+Qualifiers: [in]  
 
- `uStep`  
- Data type: `ULONG`  
+Pointer to the text for a custom message that replaces the default title text displayed in the progress dialog box. Pass an empty string if there's no custom message to show. The value can be obtained from the `_SMSTSCustomProgressDialogMessage` environment variable.  
 
- Qualifiers: [in]  
+#### `pszCurrentAction`
 
- The current task sequence step number. The value can be obtained from the `SMSTSNextInstructionPointer` environment variable.  
+Data type: `BSTR`  
 
- `uMaxStep`  
- Data type: `ULONG`  
+Qualifiers: [in]  
 
- Qualifiers: [in]  
+Pointer to the name of the current task sequence step. The value can be obtained from the `_SMSTSCurrentActionName` environment variable.  
 
- The total number of steps in the task sequence. The value can be obtained from the `_SMSTSInstructionTableSize` environment variable.  
+#### `uStep`
 
+Data type: `ULONG`  
 
-## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following value. There are no `HRESULT` values returned that are specific to this method.  
+Qualifiers: [in]  
 
- S_OK  
- The method succeeded.  
+The current task sequence step number. The value can be obtained from the `SMSTSNextInstructionPointer` environment variable.  
 
-## See Also  
- [Operating System Deployment Client COM Automation Classes](../../../../../develop/reference/core/clients/client-classes/operating-system-deployment-client-com-automation-classes.md)   
- [IProgressUI Interface](../../../../../develop/reference/core/clients/client-classes/iprogressui-interface.md)   
- [About Reporting Configuration Manager Custom Action Progress](../../../../../develop/osd/about-reporting-configuration-manager-custom-action-progress.md)   
- [Extending Operating System Deployment](../../../../../develop/osd/extending-operating-system-deployment.md)   
- [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../../../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md)
+#### `uMaxStep`
+
+Data type: `ULONG`  
+
+Qualifiers: [in]  
+
+The total number of steps in the task sequence. The value can be obtained from the `_SMSTSInstructionTableSize` environment variable.  
+
+## Return values
+
+An `HRESULT` code. Possible values include, but aren't limited to, the following value. There are no `HRESULT` values returned that are specific to this method.  
+
+S_OK  
+The method succeeded.  
+
+## See also
+
+- [OS deployment client COM automation classes](/sccm/develop/reference/core/clients/client-classes/operating-system-deployment-client-com-automation-classes)  
+
+- [IProgressUI interface](/sccm/develop/reference/core/clients/client-classes/iprogressui-interface)  
+
+- [About reporting Configuration Manager custom action progress](/sccm/develop/osd/about-reporting-configuration-manager-custom-action-progress)  
+
+- [Extending OS deployment](/sccm/develop/osd/extending-operating-system-deployment)  
+
+- [How to use task sequence variables in a running Configuration Manager task sequence](/sccm/develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence)  
