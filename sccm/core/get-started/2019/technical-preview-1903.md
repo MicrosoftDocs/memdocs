@@ -21,13 +21,6 @@ This article introduces the features that are available in the technical preview
 
 Review the [technical preview](/sccm/core/get-started/technical-preview) article before installing this update. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.
 
-<!--  Known Issues Template
-## Known issues 
-
-[!INCLUDE [known issue title](includes/known-issue-bugid.md)]
-
--->
-
 <br>
 
 **The following sections describe the new features to try out in this version:**  
@@ -43,6 +36,10 @@ Review the [technical preview](/sccm/core/get-started/technical-preview) article
 [!INCLUDE [Drill through required updates](includes/1903/4224414.md)]
 
 [!INCLUDE [Improvement to task sequence media creation](includes/1903/4090666.md)]
+
+## Known issues
+
+[!INCLUDE [Client health dashboard](includes/known-issue-health.md)]
 
 ## Next steps
 
