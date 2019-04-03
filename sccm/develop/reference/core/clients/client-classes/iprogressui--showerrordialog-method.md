@@ -33,58 +33,66 @@ HRESULT ShowErrorDialog(
 );  
 ```  
 
-#### Parameters
+### Parameters
 
-`pszOrgName`  
+#### `pszOrgName`
+
 Data type: `BSTR`  
 
 Qualifiers: [in]  
 
 Pointer to the organization name that is shown in the progress dialog box. The value can be retrieved from the `_SMSTSOrgName` environment variable.  
 
-`pszTaskSequenceName`  
+#### `pszTaskSequenceName`
+
 Data type: `BSTR`  
 
 Qualifiers: [in]  
 
 Pointer to the name of the task sequence that is currently running. The value can be retrieved from the `_SMSTSPackageName` environment variable.  
 
-`pszCustomTitle`  
+#### `pszCustomTitle`
+
 Data type: `BSTR`  
 
 Qualifiers: [in]  
 
-Pointer to the text for a custom message that replaces the default title text displayed in the error dialog box. Pass an empty string if there is no custom message to show. The value can be obtained from the `_SMSTSCustomProgressDialogMessage` environment variable.  
+Pointer to the text for a custom message that replaces the default title text displayed in the error dialog box. Pass an empty string if there's no custom message to show. The value can be obtained from the `_SMSTSCustomProgressDialogMessage` environment variable.  
 
-`pszErrorMessage`  
+#### `pszErrorMessage`
+
 Data type: `BSTR`  
 
 Qualifiers: [in]  
 
-Pointer to the text for the custom message that will be displayed in the error dialog box. Pass an empty string if there is no custom message to show. The default text will include the text from `pszTaskSequenceName`, `pszTaskSequenceStepName` and `uErrorCode` and will change depending on which values are specified.
+Pointer to the text for the custom message that's displayed in the error dialog box. Pass an empty string if there's no custom message to show. The default text includes the text from `pszTaskSequenceName`, `pszTaskSequenceStepName`, and `uErrorCode`. It changes depending on which values are specified.
 
-`uErrorCode`  
+#### `uErrorCode`
+
 Data type: `ULONG`  
 
 Qualifiers: [in]
 
 Pointer to the return code of the last step that failed. The value can be obtained from the `_SMSTSLastActionRetCode` environment variable. If no custom text for `pszErrorMessage` is specified, `uErrorCode` will be displayed in [Microsoft system error code](https://docs.microsoft.com/windows/desktop/debug/system-error-codes) format.
 
-`uTimeoutInSeconds`  
+#### `uTimeoutInSeconds`
+
 Data type: `ULONG`  
 
 Qualifiers: [in]  
 
-Pointer to the value for the number of seconds the dialog box is displayed before closing. The value can be obtained from the `SMSTSErrorDialogTimeout` environment variable which is not configured in the task sequence by default. If an empty string is specified for `uTimeoutInSeconds` and `SMSTSErrorDialogTimeout` isn't specified, a default of 900 seconds will be used.
+Pointer to the value for the number of seconds the dialog box is displayed before closing. The value can be obtained from the `SMSTSErrorDialogTimeout` environment variable, which isn't configured in the task sequence by default. If an empty string is specified for `uTimeoutInSeconds` and `SMSTSErrorDialogTimeout` isn't specified, a default of 900 seconds will be used.
 
-`bWillReboot`  
+#### `bWillReboot`
+
 Data type: `ULONG`  
 
 Qualifiers: [in]  
 
-Boolean value to indicate whether a reboot will be initiated by the task sequence when the dialog is closed or the timeout expires.
+Boolean value. It indicates whether the task sequence will restart the computer when the dialog is closed or the timeout expires.
 
-`pszTaskSequenceStepName`  
+#### `pszTaskSequenceStepName`
+
 Data type: `BSTR`  
 
 Qualifiers: [in]  

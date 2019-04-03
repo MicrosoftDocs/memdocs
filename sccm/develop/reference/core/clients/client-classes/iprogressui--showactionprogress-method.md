@@ -1,8 +1,8 @@
 ---
-title: "IProgressUI::ShowActionProgress"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: IProgressUI::ShowActionProgress
+titleSuffix: Configuration Manager
+ms.date: 04/01/2019
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: 4f08f27a-bb32-4a86-b7ca-ef745c311323
@@ -11,7 +11,9 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# IProgressUI::ShowActionProgress Method
+
+# IProgressUI::ShowActionProgress method
+
 In Configuration Manager, the `ShowActionProgress` method displays custom action progress information in a dialog box while the custom action is running.  
 
 ## Syntax  
@@ -31,88 +33,105 @@ HRESULT ShowActionProgress(
 );  
 ```  
 
-#### Parameters  
- `pszOrgName`  
- Data type: `BSTR`  
+### Parameters  
 
- Qualifiers: [in]  
+#### `pszOrgName`
 
- Pointer to the organization name that is shown in the progress dialog box. The value can be retrieved from the `_SMSTSOrgName` environment variable.  
+Data type: `BSTR`  
 
- `pszTaskSequenceName`  
- Data type: `BSTR`  
+Qualifiers: [in]  
 
- Qualifiers: [in]  
+Pointer to the organization name that is shown in the progress dialog box. The value can be retrieved from the `_SMSTSOrgName` environment variable.  
 
- Pointer to the name of the task sequence that is currently running. The value can be retrieved from the `_SMSTSPackageName` environment variable.  
+#### `pszTaskSequenceName`
 
- `pszCustomTitle`  
- Data type: `BSTR`  
+Data type: `BSTR`  
 
- Qualifiers: [in]  
+Qualifiers: [in]  
 
- Pointer to the text for a custom message that replaces the default title text displayed in the progress dialog box. Pass an empty string if there is no custom message to show. The value can be obtained from the `_SMSTSCustomProgressDialogMessage` environment variable.  
+Pointer to the name of the task sequence that is currently running. The value can be retrieved from the `_SMSTSPackageName` environment variable.  
 
- `pszCurrentAction`  
- Data type: `BSTR`  
+#### `pszCustomTitle`
 
- Qualifiers: [in]  
+Data type: `BSTR`  
 
- Pointer to the name of the current task sequence step. The value can be obtained from the `_SMSTSCurrentActionName` environment variable.  
+Qualifiers: [in]  
 
- `uStep`  
- Data type: `ULONG`  
+Pointer to the text for a custom message that replaces the default title text displayed in the progress dialog box. Pass an empty string if there's no custom message to show. The value can be obtained from the `_SMSTSCustomProgressDialogMessage` environment variable.  
 
- Qualifiers: [in]  
+#### `pszCurrentAction`
 
- The current task sequence step number. The value can be obtained from the `SMSTSNextInstructionPointer` environment variable.  
+Data type: `BSTR`  
 
- `uMaxStep`  
- Data type: `ULONG`  
+Qualifiers: [in]  
 
- Qualifiers: [in]  
+Pointer to the name of the current task sequence step. The value can be obtained from the `_SMSTSCurrentActionName` environment variable.  
 
- The total number of steps in the task sequence. The value can be obtained from the `_SMSTSInstructionTableSize` environment variable.  
+#### `uStep`
 
- `pszActionExecInfo`  
- Data type: `BSTR`  
+Data type: `ULONG`  
 
- Qualifiers: [in]  
+Qualifiers: [in]  
 
- Pointer to user-defined, action-specific progress information to be shown in the progress dialog box.  
+The current task sequence step number. The value can be obtained from the `SMSTSNextInstructionPointer` environment variable.  
 
- `uActionExecStep`  
- Data type: `ULONG`  
+#### `uMaxStep`
 
- Qualifiers: [in]  
+Data type: `ULONG`  
 
- The numerical step, within the total number of numerical steps, on which the action is currently working.  
+Qualifiers: [in]  
 
- Use this parameter to determine the percentage of the action that has been completed so far. For more information, see Remarks.  
+The total number of steps in the task sequence. The value can be obtained from the `_SMSTSInstructionTableSize` environment variable.  
 
- `uActionExecMaxStep`  
- Data type: `ULONG`  
+#### `pszActionExecInfo`
 
- Qualifiers: [in]  
+Data type: `BSTR`  
 
- The total number of numerical steps that the action performs.  
+Qualifiers: [in]  
 
- Use this parameter to determine the percentage of the action that has been completed so far. For more information, see Remarks.  
+Pointer to user-defined, action-specific progress information to be shown in the progress dialog box.  
 
-## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following value. There are no `HRESULT` values returned that are specific to this method.  
+#### `uActionExecStep`
 
- S_OK  
- The method succeeded.  
+Data type: `ULONG`  
 
-## Remarks  
- The only required information for this method is for the `pszActionExecInfo`, `uActionExecStep`, and `uActionExecMaxStep` parameters. The other parameters can be obtained from the referenced environment variables.  
+Qualifiers: [in]  
 
- A call to `ShowActionProgress` should specify the percentage completion of the action using the `uActionExecStep` and `uActionExecMaxStep` parameters. For example, if `uActionExecStep` specifies the value 2 and `uActionExecMaxStep` specifies the value 10, the percentage completion of the action is 20 percent.  
+The numerical step, within the total number of numerical steps, on which the action is currently working.  
 
-## See Also  
- [Operating System Deployment Client COM Automation Classes](../../../../../develop/reference/core/clients/client-classes/operating-system-deployment-client-com-automation-classes.md)   
- [IProgressUI Interface](../../../../../develop/reference/core/clients/client-classes/iprogressui-interface.md)   
- [About Reporting Configuration Manager Custom Action Progress](../../../../../develop/osd/about-reporting-configuration-manager-custom-action-progress.md)   
- [Extending Operating System Deployment](../../../../../develop/osd/extending-operating-system-deployment.md)   
- [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../../../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md)
+Use this parameter to determine the percentage of the action that has been completed so far. For more information, see [Remarks](#remarks).
+
+#### `uActionExecMaxStep`
+
+Data type: `ULONG`  
+
+Qualifiers: [in]  
+
+The total number of numerical steps that the action does.  
+
+Use this parameter to determine the percentage of the action that has been completed so far. For more information, see [Remarks](#remarks).
+
+## Return values
+
+An `HRESULT` code. Possible values include, but aren't limited to, the following value. There are no `HRESULT` values returned that are specific to this method.  
+
+S_OK  
+The method succeeded.  
+
+## Remarks
+
+The only required information for this method is for the `pszActionExecInfo`, `uActionExecStep`, and `uActionExecMaxStep` parameters. The other parameters can be obtained from the referenced environment variables.  
+
+A call to `ShowActionProgress` should specify the percentage completion of the action using the `uActionExecStep` and `uActionExecMaxStep` parameters. For example, if `uActionExecStep` specifies the value 2 and `uActionExecMaxStep` specifies the value 10, the percentage completion of the action is 20 percent.  
+
+## See also
+
+- [OS deployment client COM automation classes](/sccm/develop/reference/core/clients/client-classes/operating-system-deployment-client-com-automation-classes)  
+
+- [IProgressUI interface](/sccm/develop/reference/core/clients/client-classes/iprogressui-interface)  
+
+- [About reporting Configuration Manager custom action progress](/sccm/develop/osd/about-reporting-configuration-manager-custom-action-progress)  
+
+- [Extending OS deployment](/sccm/develop/osd/extending-operating-system-deployment)  
+
+- [How to use task sequence variables in a running Configuration Manager task sequence](/sccm/develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence)  

@@ -31,42 +31,44 @@ HRESULT ShowRebootDialog(
 );  
 ```  
 
-#### Parameters
+### Parameters
 
-`pszOrgName`  
+#### `pszOrgName`
+
 Data type: `BSTR`  
 
 Qualifiers: [in]  
 
 Pointer to the organization name that's shown in the progress dialog box. The value can be retrieved from the `_SMSTSOrgName` environment variable.  
 
-`pszTaskSequenceName`  
+#### `pszTaskSequenceName`
 Data type: `BSTR`  
 
 Qualifiers: [in]  
 
 Pointer to the name of the task sequence that's currently running. The value can be retrieved from the `_SMSTSPackageName` environment variable.  
 
-`pszCustomTitle`  
+#### `pszCustomTitle`
 Data type: `BSTR`  
 
 Qualifiers: [in]  
 
-Pointer to the text for a custom message that replaces the default title text displayed in the reboot dialog box. Pass an empty string if there is no custom message to show. The value can be obtained from the `_SMSTSCustomProgressDialogMessage` environment variable.  
+Pointer to the text for a custom message that replaces the default title text displayed in the reboot dialog box. Pass an empty string if there's no custom message to show. The value can be obtained from the `_SMSTSCustomProgressDialogMessage` environment variable.  
 
-`pszRebootMessage`  
+#### `pszRebootMessage`
+
 Data type: `BSTR`  
 
 Qualifiers: [in]  
 
-Pointer to the text for the custom message that will be displayed in the reboot dialog box. Pass an empty string if there is no custom message to show.
+Pointer to the text for the custom message that will be displayed in the reboot dialog box. Pass an empty string if there's no custom message to show.
 
-`uTimeoutInSeconds`  
+#### `uTimeoutInSeconds`
 Data type: `ULONG`  
 
 Qualifiers: [in]  
 
-Pointer to the value for the number of seconds the dialog box is displayed before closing. The value can be obtained from the `SMSTSErrorDialogTimeout` environment variable which is not configured in the task sequence by default. If an empty string is specified for `uTimeoutInSeconds` and `SMSTSErrorDialogTimeout` isn't specified, a default of 900 seconds will be used.
+Pointer to the value for the number of seconds the dialog box is displayed before closing. The value can be obtained from the `SMSTSErrorDialogTimeout` environment variable, which isn't configured in the task sequence by default. If an empty string is specified for `uTimeoutInSeconds` and `SMSTSErrorDialogTimeout` isn't specified, a default of 900 seconds will be used.
 
 ## Return values
 

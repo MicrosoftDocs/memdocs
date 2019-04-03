@@ -28,28 +28,31 @@ HRESULT ShowMessage(
 );  
 ```  
 
-## Parameters  
+### Parameters  
 
-`pszText`  
+#### `pszText`
+
 Data type: `BSTR`  
 
 Qualifiers: [in]
 
 The text displayed in the message box body.
   
-`pszCaption`  
+#### `pszCaption`
+
 Data type: `BSTR`  
 
 Qualifiers: [in]  
 
 The text displayed in the message box windows header.
 
-`uType`  
+#### `uType`
+
 Data type: `ULONG`  
 
 Qualifiers: [in]
 
-The value corresponding to one of 7 sets of buttons. Possible values include:
+The value corresponding to one of the following possible values for the buttons:
 
 - 0 - Ok
 - 1 - Ok/Cancel

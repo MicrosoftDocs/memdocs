@@ -31,44 +31,50 @@ HRESULT ShowActionProgress(
 );  
 ```  
 
-## Parameters
+### Parameters
 
-`pszOrgName`  
+#### `pszOrgName`
+
 Data type: `BSTR`  
 
 Qualifiers: [in]  
 
 Pointer to the organization name that is shown in the progress dialog box. The value can be retrieved from the `_SMSTSOrgName` environment variable.  
 
-`pszTaskSequenceName`  
+#### `pszTaskSequenceName`
+
 Data type: `BSTR`  
 
 Qualifiers: [in]  
 
 Pointer to the name of the task sequence that is currently running. The value can be retrieved from the `_SMSTSPackageName` environment variable.  
 
-`pszCustomTitle`  
+#### `pszCustomTitle`
+
 Data type: `BSTR`  
 
 Qualifiers: [in]  
 
-Pointer to the text for a custom message that replaces the default title text displayed in the progress dialog box. Pass an empty string if there is no custom message to show. The value can be obtained from the `_SMSTSCustomProgressDialogMessage` environment variable.  
+Pointer to the text for a custom message that replaces the default title text displayed in the progress dialog box. Pass an empty string if there's no custom message to show. The value can be obtained from the `_SMSTSCustomProgressDialogMessage` environment variable.  
 
-`pszCurrentAction`  
+#### `pszCurrentAction`
+
 Data type: `BSTR`  
 
 Qualifiers: [in]  
 
 Pointer to the name of the current task sequence step. The value can be obtained from the `_SMSTSCurrentActionName` environment variable.  
 
-`uStep`  
+#### `uStep`
+
 Data type: `ULONG`  
 
 Qualifiers: [in]  
 
 The current task sequence step number. The value can be obtained from the `SMSTSNextInstructionPointer` environment variable.  
 
-`uMaxStep`  
+#### `uMaxStep`
+
 Data type: `ULONG`  
 
 Qualifiers: [in]  
@@ -77,7 +83,7 @@ The total number of steps in the task sequence. The value can be obtained from t
 
 ## Return values
 
-An `HRESULT` code. Possible values include, but are not limited to, the following value. There are no `HRESULT` values returned that are specific to this method.  
+An `HRESULT` code. Possible values include, but aren't limited to, the following value. There are no `HRESULT` values returned that are specific to this method.  
 
 S_OK  
 The method succeeded.  

@@ -27,16 +27,18 @@ HRESULT ShowSwapMediaDialog(
 );  
 ```  
 
-## Parameters
+### Parameters
 
-`pszTaskSequenceName`  
+#### `pszTaskSequenceName`
+
 Data type: `BSTR`  
 
 Qualifiers: [in]  
 
 Pointer to the name of the task sequence that is currently running. The value can be retrieved from the `_SMSTSPackageName` environment variable.  
 
-`uMediaNumber`  
+#### `uMediaNumber`
+
 Data type: `ULONG`  
 
 Qualifiers: [in]
