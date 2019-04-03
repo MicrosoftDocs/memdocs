@@ -2,7 +2,7 @@
 title: Troubleshooting CMPivot
 titleSuffix: Configuration Manager
 description: Learn how to troubleshoot CMPivot in Configuration Manager.
-ms.date: 03/29/2019
+ms.date: 04/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
