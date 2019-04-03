@@ -2,7 +2,7 @@
 title: What's new in version 1902
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1902 of Configuration Manager current branch.
-ms.date: 03/27/2019
+ms.date: 03/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -117,9 +117,9 @@ You can now associate a cloud management gateway (CMG) with a boundary group. Th
 
 ### Run CMPivot from the central administration site
 <!--3610960-->
-Configuration Manager now supports running CMPivot from the central administration site in a hierarchy. The primary site still handles the communication to the client. When running CMPivot from the central administration site, it communicates with the primary site over the high-speed message subscription channel. This communication doesn't rely upon standard SQL replication between sites.
+***[Updated]*** Configuration Manager now supports running CMPivot from the central administration site in a hierarchy. The primary site still handles the communication to the client. When running CMPivot from the central administration site, it communicates with the primary site over the high-speed message subscription channel. This communication doesn't rely upon standard SQL replication between sites.
 
-<!-- For more information, see [CMPivot for real-time data](/sccm/core/servers/manage/cmpivot). -->
+For more information, see [CMPivot for real-time data](/sccm/core/servers/manage/cmpivot#bkmk_cmpivot1902).
 
 
 ### Edit or copy PowerShell scripts
@@ -349,9 +349,9 @@ Use client settings to configure this option. In the **Software Updates** group,
 
 ## <a name="bkmk_o365"></a> Office management
 
-### Move Windows known folders to OneDrive
+### Redirect Windows known folders to OneDrive
 <!--3556021-->
-Use Configuration Manager to move Windows known folders to OneDrive for Business. These folders include Desktop, Documents, and Pictures. To simplify your Windows 10 upgrades from Windows 7, deploy these settings to your Windows 7 clients before deploying a task sequence. 
+Use Configuration Manager to move Windows known folders to OneDrive for Business. These folders include Desktop, Documents, and Pictures. To simplify your Windows 10 upgrades, deploy these settings to Windows 7 clients before deploying a task sequence. 
 
 For more information on this feature of OneDrive for Business, see [Redirect and move Windows known folders to OneDrive](https://docs.microsoft.com/onedrive/redirect-known-folders).
 
