@@ -2,7 +2,7 @@
 title: What's new in version 1902
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1902 of Configuration Manager current branch.
-ms.date: 03/29/2019
+ms.date: 04/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -436,9 +436,9 @@ This notification is a bar at the top of the console window below the ribbon. It
 
 ### Confirmation of console feedback
 <!--3556010-->
-When you send [feedback](/sccm/core/understand/find-help#product-feedback) in the Configuration Manager console, it now shows a confirmation message. This message includes a **Feedback ID**, which you can give to Microsoft as a tracking identifier. 
+***[Updated]*** When you send [feedback](/sccm/core/understand/find-help#product-feedback) in the Configuration Manager console, it now shows a confirmation message. This message includes a **Feedback ID**, which you can give to Microsoft as a tracking identifier.
 
-<!-- For more information, see [Product feedback](/sccm/core/understand/find-help#product-feedback). -->
+For more information, see [Product feedback](/sccm/core/understand/find-help#bkmk_feedbackid).
 
 
 ### View recently connected consoles 
