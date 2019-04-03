@@ -329,4 +329,18 @@ Use the appropriate address for the application catalog from the following list,
 
 <!-- SCCMDocs-pr issue 3051 -->
 
-{steps from Anton}
+Starting in version 1806, you can simplify your infrastructure and remove the application catalog. Software Center can deliver all app deployments without the application catalog. Also, if you enable TLS 1.2 and use HTTP with the application catalog, users can't see user-targeted, available deployments.
+
+1. Update all clients to version 1806 or later.  
+
+1. Set branding for Software Center, instead of in the properties of the application catalog web site role.  
+
+1. Review the default and any custom client settings. In the **Computer Agent** group, make sure the **Default Application Catalog website point** is `(none)`.  
+
+    The client only switches to using the management point when there are no application catalog roles in the hierarchy. Otherwise, clients continue to use one of the application catalog instances in the hierarchy. This behavior applies across separate primary sites.  
+
+1. Remove the **application catalog website** and **application catalog web service** site system roles from all primary sites.
+
+After you remove the application catalog roles, Software Center starts using the management point for user-targeted, available deployments. It can take up to 65 minutes for this change to happen. To verify this behavior on a specific client, review the `SCClient_<username>.log`, and look for an entry similar to the following line:
+
+`Using endpoint Url: https://mp.contoso.com/CMUserService_WindowsAuth, Windows authentication`
