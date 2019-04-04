@@ -423,6 +423,7 @@ The following log files are on the service connection point in the following dir
 | **M365ADeploymentPlanWorker.log** | Information about deployment plan sync from Desktop Analytics cloud service to on-premises Configuration Manager |
 | **M365ADeviceHealthWorker.log** | Information about device health upload from Configuration Manager to Microsoft cloud |
 | **M365AUploadWorker.log** | Information about collection and device upload from Configuration Manager to Microsoft cloud |
+| **SmsAdminUI.log** | Information about Configuration Manager console activity, like configuring the Azure cloud services  |
 
 
 ### Configuration Manager client
@@ -431,14 +432,14 @@ The following log files are on the Configuration Manager client in the following
 
 | Log | Description |
 |---------|---------|
-| **M365Handler.log** | Information about the Desktop Analytics settings policy |
+| **M365AHandler.log** | Information about the Desktop Analytics settings policy |
 
 
 ### Enable verbose logging 
 
 1. On the service connection point, go to the following registry key: `HKLM\Software\Microsoft\SMS\Tracing\SMS_SERVICE_CONNECTOR`  
 2. Set the **LogLevel** value to `0`  
-3. Run the following SQL command on the site database:  
+3. (Optional) Run the following SQL command on the site database:  
 
     ```SQL
     DELETE FROM M365AProperties WHERE Name = 'M365ATenantUpdateInfo_LastUpdateTime'
