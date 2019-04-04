@@ -2,13 +2,13 @@
 title: Configuration Manager Console
 titleSuffix: Configuration Manager
 description: Learn about navigating through the Configuration Manager console.
-ms.date: 03/06/2019
+ms.date: 04/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 463ce307-59dd-4abd-87b8-42ca9db178d7
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -111,7 +111,36 @@ At the bottom of the column context menu, you can sort or group by a column. Add
 
 ![Configuration Manager group by column](media/column-group-by.png)  
 
+## <a name="bkmk_viewconnected"></a> View recently connected consoles
+<!--3699367-->
 
+Starting in version 1902, you can view the most recent connections for the Configuration Manager console. The view includes active connections and those that recently connected. You'll always see your current console connection in the list and you only see connections from the Configuration Manager console. You won't see PowerShell or other SDK-based connections to the SMS Provider. The site removes instances from the list that are older than 30 days.
+
+
+### Prerequisites to view connected consoles
+
+- Your account needs the **Read** permission on the **SMS_Site** object 
+- IIS needs to be installed on the SMS Provider server <!---SCCMDocs-pr issue 1326--> 
+- Enable the SMS Provider to use a certificate.<!--SCCMDocs-pr issue 3135--> Use one of the following options:  
+
+  - Enable [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http) (recommended)
+  - Manually bind a PKI-based certificate to port 443 in IIS on the server that hosts the SMS Provider role  
+
+### View connected consoles
+
+1. In the Configuration Manager console, go to the **Administration** workspace.  
+
+2. Expand **Security** and select the **Console Connections** node.  
+
+3. View the recent connections, with the following properties:  
+
+    - User name
+    - Machine name
+    - Connected site code
+    - Console version
+    - Last connected time: When the user last *opened* the console
+
+![View Configuration Manager console connections](media/console-connections.png) 
 
 ## Command-line options
 

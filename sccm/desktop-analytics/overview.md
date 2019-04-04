@@ -69,7 +69,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
     - **Company Admin** permissions in Azure  
 
-- Configuration Manager, version 1810 with update rollup 4486457 or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
+- Configuration Manager, version 1810 with Update Rollup 4488598 or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
 
     - **Full Administrator** role in Configuration Manager  
 
