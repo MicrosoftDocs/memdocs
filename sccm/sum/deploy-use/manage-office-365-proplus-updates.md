@@ -27,7 +27,7 @@ Configuration Manager lets you manage Office 365 ProPlus apps in the following w
 
 - [Change the update channel](#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager): You can use group policy to distribute a registry key value change to Office 365 clients to change the update channel.
 
-To review Office 365 client information and start some of these Office 365 management actions, use the [Office 365 Client Management dashboard](#office-365-client-management-dashboard).
+To review Office 365 client information and start some of these Office 365 management actions, use the [Office 365 Client Management dashboard](/sccm/sum/deploy-use/office-365-dashboard).
 
 ## Deploy Office 365 apps  
 Start the Office 365 Installer from the Office 365 Client Management dashboard for the initial Office 365 App installation. The wizard lets you configure Office 365 installation settings, download files from Office Content Delivery Networks (CDNs), and create and deploy a script application for the files. Until Office 365 is installed on clients and the [Office automatic updates task](https://docs.microsoft.com/deployoffice/overview-of-the-update-process-for-office-365-proplus) runs, Office 365 updates aren't applicable. For testing purposes, you can run the update task manually.
