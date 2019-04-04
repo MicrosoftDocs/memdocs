@@ -2,8 +2,8 @@
 title: Manage Office 365 ProPlus updates
 titleSuffix: "Configuration Manager"
 description: "Configuration Manager synchronizes Office 365 client updates from the WSUS catalog to the site server to make updates available to deploy to clients."
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.date: 04/05/2019
 ms.topic: conceptual
