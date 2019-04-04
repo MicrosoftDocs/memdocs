@@ -2,7 +2,7 @@
 title: ImportMachineEntryToMultipleCollections method
 titleSuffix: Configuration Manager
 description: ImportMachineEntryToMultipleCollections method
-ms.date: 04/01/2019
+ms.date: 04/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
