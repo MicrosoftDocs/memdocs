@@ -187,6 +187,18 @@
         href: core/understand/sql-view-security.md
     - name: How to See a Configuration Manager View by Using SQL Server
       href: core/understand/how-to-see-a-configuration-manager-view-by-using-sql-server.md
+    - name: Creating Custom Reports by Using SQL Server Views
+      href: core/understand/creating-custom-reports-using-sql-server-views.md
+      items:
+      - name: SQL Server Views in Configuration Manager
+        href: core/understand/sql-server-views-configuration-manager.md
+        items:
+        - name: Application Management Views in Configuration Manager
+          href: core/understand/application-management-views-configuration-manager.md
+      - name: Working with Reports in Configuration Manager
+        href: core/understand/working-with-reports-configuration-manager.md
+      - name: Technical Reference for SQL Server Views in Configuration Manager
+        href: core/understand/technical-reference-sql-server-views-configuration-manager.md
   - name: SMS Provider in Configuration Manager
     href: core/understand/sms-provider-in-configuration-manager.md
     items:
