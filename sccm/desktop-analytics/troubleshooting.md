@@ -141,6 +141,7 @@ The following columns are available in the device list:
 - [Unique device identifier retrieval](#unique-device-identifier-retrieval)  
 - [Windows diagnostic data opt-in](#windows-diagnostic-data-opt-in)  
 - [Office diagnostic endpoint connectivity](#office-diagnostic-endpoint-connectivity)  
+- [Office diagnostic data opt-in](#office-diagnostic-data-opt-in)
 
 #### Appraiser configuration
 
@@ -416,6 +417,15 @@ Otherwise, it may show one of the following errors:
 - Can't connect to the Office diagnostic endpoint (Nexus). Check your network/proxy settings  
 
 Make sure the device is able to communicate with the service. For more information, see [Endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
+
+#### Office diagnostic data opt-in
+
+<!-- SCCMDocs-pr 3570 -->
+Starting in Configuration Manager version 1902, the behavior changed for sending Office service and diagnostic data to Microsoft. This property checks that Office policy settings are properly configured. These settings control the minimum required data to help keep Office secure, up-to-date, and performing as expected on the device it's installed.
+
+For more information, see [Overview of privacy controls for Office 365 ProPlus](https://docs.microsoft.com/DeployOffice/privacy/overview-privacy-controls). This article details the privacy controls for diagnostic data that's collected and sent to Microsoft about Office client software used on Windows computers in your organization.
+
+This check won't succeed for Configuration Manager version 1810 clients. Update the client to the latest version. Consider enabling automatic client upgrade for the Configuration Manager site. For more information, see [Upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).
 
 
 
