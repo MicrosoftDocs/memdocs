@@ -152,9 +152,9 @@ If this check is successful, then the appraiser component is properly configured
 
 Otherwise, it might display one of the following errors:
 
-- Can't configure device app compatiblity data collection (SetRequestAllAppraiserVersions). Check the logs for the exception details  
+- Can't configure device app compatibility data collection (SetRequestAllAppraiserVersions). Check the logs for the exception details  
 
-- Can't configure device app compatiblity data collection (SetRequestAllAppraiserVersions). Check the logs for the exception details  
+- Can't configure device app compatibility data collection (SetRequestAllAppraiserVersions). Check the logs for the exception details  
 
 - Can't write the RequestAllAppraiserVersions to registry key `HKLM:\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\AppCompatFlags\Appraiser`. Check permissions  
 
@@ -471,38 +471,4 @@ The following log files are on the Configuration Manager client in the following
 
 ## <a name="bkmk_MALogAnalyticsReader"></a> MALogAnalyticsReader application role
 
-When you set up Desktop Analytics, you accept a consent on behalf of your organization. This consent is to assign the MALogAnalyticsReader application the Log Analytics Reader role for the workspace. This application role is required by Desktop Analytics.
-
-If there is a problem with this process during set up, use the following process to manually add this permission:
-
-1. Go to the [Azure portal](http://portal.azure.com), and select **All resources**. Select the workspace of type **Log Analytics**.  
-
-2. In the workspace menu, select **Access control (IAM)**, then select **Add**.  
-
-3. In the **Add permissions** panel, configure the following settings:  
-
-    - **Role**: **Log Analytics Reader**  
-
-    - **Assign access to**: **Azure AD user, group, or application**  
-
-    - **Select**: **MALogAnalyticsReader**  
-  
-4. Select **Save**.
-
-The portal shows a notification that it added the role assignment.
-
-
-## Data latency
-
-<!-- 3846531 -->
-Data in the Desktop Analytics portal is refreshed daily. This refresh includes device changes collected from diagnostics data, and any changes that you make to the configuration. For example, when you change an asset's **Upgrade Decision**, it can result in changes to the readiness state of devices with that asset installed.
-
-- **Administrator changes** are generally processed by the Desktop Analytics service within nine hours. For example, if you make changes at 11:00 PM UTC, the portal should reflect those changes before 08:00 AM UTC the next day.
-
-- **Device changes** detected by UTC midnight in local time are generally included in the daily refresh. There's typically an additional 23 hours of latency associated with the processing of device changes compared to admin changes.
-
-If you aren't seeing changes updated within these time frames, wait another 24 hours for the next daily refresh. If you see longer delays, check the service health dashboard. If the service reports as healthy, contact Microsoft support.
-
-When you first set up Desktop Analytics, the charts in Configuration Manager and the Desktop Analytics portal may not show complete data. It can take 2-3 days for active devices to send diagnostic data to the Desktop Analytics service, the service to process the data, and then synchronize with your Configuration Manager site.
-
-In a Configuration Manager hierarchy, it can take 10 minutes for new collections to appear for deployment plans. The primary sites create the collections, and the central administration site synchronizes with Desktop Analytics.<!-- 3896921 -->
+When you set up Desktop Analytics, you accept a consent on behalf of your organization. This consent is to assign the 
