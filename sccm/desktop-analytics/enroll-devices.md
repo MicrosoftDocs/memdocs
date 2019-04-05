@@ -2,7 +2,7 @@
 title: Enroll devices in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn how to enroll devices in Desktop Analytics.
-ms.date: 01/25/2019
+ms.date: 04/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -14,18 +14,19 @@ ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
 ---
 
-# How to enroll devices in Desktop Analytics 
+# How to enroll devices in Desktop Analytics
 
 > [!Note]  
 > This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
 
-When you [connect Configuration Manager](/sccm/desktop-analytics/connect-configmgr) to Desktop Analytics, you configure settings to enroll devices to Desktop Analytics. You can change these settings at any time. Also make sure the devices are up to date. 
+When you [connect Configuration Manager](/sccm/desktop-analytics/connect-configmgr) to Desktop Analytics, you configure settings to enroll devices to Desktop Analytics. You can change these settings at any time. Also make sure the devices are up to date.
 
 
 
 ## Update devices
 
-There are two types of updates that you need to apply for the best experience with Desktop Analytics: 
+There are two types of updates that you need to apply for the best experience with Desktop Analytics:
+
 - [Compatibility updates](#bkmk_appraiser)  
 - [Connected User Experiences and Telemetry service](#bkmk_diagtrack)
 
@@ -45,9 +46,11 @@ Restart devices after you install the compatibility updates for the first time.
 > There's a related optional update, [KB 3150513](https://catalog.update.microsoft.com/v7/site/Search.aspx?q=3150513). This update provides updated configuration and definitions for older compatibility updates. For more information, see [Latest compatibility definition update for Windows](https://support.microsoft.com/help/3150513).  
 
 #### Windows 10
+
 Windows 10 includes the compatibility component. To get the latest compatibility update, install the latest Windows 10 cumulative update.
 
 #### Windows 8.1
+
 Download the update: [KB 2976978](http://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB2976978) 
 
 Runs diagnostics on the Windows 8.1 systems that participate in the Windows Customer Experience Improvement Program. These diagnostics help determine whether you might have compatibility issues when upgrading to Windows 10.
@@ -55,6 +58,7 @@ Runs diagnostics on the Windows 8.1 systems that participate in the Windows Cust
 For more information, see [Compatibility update for keeping Windows up-to-date in Windows 8.1](https://support.microsoft.com/help/2976978).
 
 #### Windows 7 with Service Pack 1
+
 Download the update: [KB 2952664](http://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB2952664) 
 
 Runs diagnostics on the Windows 7 with Service Pack 1 (SP1) systems that participate in the Windows Customer Experience Improvement Program. These diagnostics help determine whether you might have compatibility issues when upgrading to Windows 10.
@@ -69,14 +73,16 @@ With Windows diagnostic data enabled, the Connected User Experience and Telemetr
 For the best experience, install the following updates depending upon the OS version.
 
 > [!Note]  
-> When you install these updates, expect the following behaviors: 
+> When you install these updates, expect the following behaviors:
+> 
 > - Devices that you enroll to Desktop Analytics show up in the service in less than an hour  
 > - Devices quickly report the status on feature and quality updates for Windows and Office  
-> 
+>
 > Without these updates, these processes can take over 48 hours for a device to report to Desktop Analytics.  
 
 
 #### Windows 10
+
 Install the latest Windows 10 cumulative update.
 
 <!-- 
@@ -88,9 +94,11 @@ Install the latest Windows 10 cumulative update.
  -->
 
 #### Windows 8.1
+
 Install the October 2018 monthly rollup, [KB4462926](https://support.microsoft.com/help/4462926)
 
 #### Windows 7
+
 Install the October 2018 monthly rollup, [KB4462923](https://support.microsoft.com/help/4462923)
 
 
@@ -100,17 +108,17 @@ Install the October 2018 monthly rollup, [KB4462923](https://support.microsoft.c
 The Desktop Analytics service has no agents to install. Device enrollment requires configuring settings on the devices you want it to monitor. These settings control to which Desktop Analytics instance the device should send its data, and other configuration options.
 
 > [!Note]  
-> If you're already using Windows Analytics, use that same workspace for Desktop Analytics. You need to reenroll devices to Desktop Analytics that you previously enrolled in Windows Analytics. 
-> 
-> You can only have one Desktop Analytics workspace per Azure AD tenant. Devices can only send diagnostic data to one workspace.   
+> If you're already using Windows Analytics, use that same workspace for Desktop Analytics. You need to reenroll devices to Desktop Analytics that you previously enrolled in Windows Analytics.
+>
+> You can only have one Desktop Analytics workspace per Azure AD tenant. Devices can only send diagnostic data to one workspace.  
 
-Configuration Manager provides an integrated experience for managing and deploying these settings to clients. For the best experience, use Configuration Manager. 
+Configuration Manager provides an integrated experience for managing and deploying these settings to clients. For the best experience, use Configuration Manager.
 
 When you connect Configuration Manager to Desktop Analytics, you configure the settings to enroll devices. For more information, see [How to connect Configuration Manager with Desktop Analytics](/sccm/desktop-analytics/connect-configmgr#bkmk_connect).
 
 To change these settings, use the following procedure:
 
-1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Services** node. Select the connection to Desktop Analytics, and choose **Properties** in the ribbon. 
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Services** node. Select the connection to Desktop Analytics, and choose **Properties** in the ribbon.
 
 2. On the **Diagnostic Data** page, make changes as needed to the following settings:  
 
@@ -142,17 +150,19 @@ Configuration Manager sets the following Windows settings under `Microsoft\Windo
 | Policy   | Value  |
 |----------|--------|
 | **CommercialId** | In order for a device to show up in Desktop Analytics, configure it with your organization’s Commercial ID. |
-| **AllowTelemetry**  |	Set `1` for **Basic**, `2` for **Enhanced**, or `3` for **Full** diagnostic data. Desktop Analytics requires at least basic diagnostic data. Microsoft recommends that you use the Enhanced (Limited) level with Desktop Analytics. For more information, see [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization). |
-| **LimitEnhancedDiagnosticDataWindowsAnalytics** |	*Applies to Windows 10, version 1709 and later*: This setting only applies when the AllowTelemetry setting is `2`. It limits the Enhanced diagnostic data events sent to Microsoft to just those events needed by Desktop Analytics. For more information, see [Windows 10, version 1709 enhanced diagnostic data events and fields used by Windows Analytics](https://docs.microsoft.com/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields).|
+| **AllowTelemetry**  | Set `1` for **Basic**, `2` for **Enhanced**, or `3` for **Full** diagnostic data. Desktop Analytics requires at least basic diagnostic data. Microsoft recommends that you use the Enhanced (Limited) level with Desktop Analytics. For more information, see [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization). |
+| **LimitEnhancedDiagnosticDataWindowsAnalytics** | *Applies to Windows 10, version 1709 and later*: This setting only applies when the AllowTelemetry setting is `2`. It limits the Enhanced diagnostic data events sent to Microsoft to just those events needed by Desktop Analytics. For more information, see [Windows 10, version 1709 enhanced diagnostic data events and fields used by Windows Analytics](https://docs.microsoft.com/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields).|
 | **AllowDeviceNameInTelemetry** | *Applies to Windows 10, version 1803 and later*: A separate opt-in is required to enable devices to continue to send the device name.<br> <br>Note: The device name isn't sent to Microsoft by default. If you don't send the device name, it appears in Desktop Analytics as "Unknown". This behavior can make it difficult to identify and assess devices. For more information, see [Device name](#device-name). |
 | **CommercialDataOptIn** | *Applies to Windows 7 and Windows 8.1*: A value of `1` is required for Desktop Analytics. For more information, see [Commercial Data Opt-in in Windows 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\)). |
 
-View these settings in the group policy editor at the following path: **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Data Collection and Preview Builds**. 
+View these settings in the group policy editor at the following path: **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Data Collection and Preview Builds**.
 
+> [!Important]  
+> In most circumstances, only use Configuration Manager to configure these settings. Don't also apply these settings in domain group policy objects. If a device receives conflicting policies from both management systems, its behavior will fluctuate over time.<!-- SCCMDocs-pr 3120 -->
 
 ### Device name
 
-Starting in Windows 10, version 1803, the device name is no longer collected by default. Collecting the device name with the diagnostic data requires a separate opt-in. Without the device name, it's more difficult for you to identify what devices require attention while evaluating an upgrade to a new version of Windows or Office. 
+Starting in Windows 10, version 1803, the device name is no longer collected by default. Collecting the device name with the diagnostic data requires a separate opt-in. Without the device name, it's more difficult for you to identify what devices require attention while evaluating an upgrade to a new version of Windows or Office.
 
 If you don't send the device name, it appears in Desktop Analytics as "Unknown".
 
@@ -167,7 +177,7 @@ In general, use Configuration Manager collections to target Desktop Analytics se
 
 Configuration Manager only configures the Windows settings if a value doesn't already exist. If you need to configure different settings for a unique group of devices, you can use [group policy](#group-policy). Settings targeted by group policy take precedence over Configuration Manager settings.
 
-If you target Configuration Manager clients with both Windows Analytics and Desktop Analytics settings, the settings for Desktop Analytics take precedence. 
+If you target Configuration Manager clients with both Windows Analytics and Desktop Analytics settings, the settings for Desktop Analytics take precedence.
 
 When you configure the diagnostic data level, you set the upper boundary for the device. By default in Windows 10, version 1803 and later, users can choose to set a lower level. You can control this behavior using the group policy setting, **Configure telemetry opt-in setting user interface**. For more information, see [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management).
 
