@@ -158,7 +158,7 @@ Configuration Manager sets the following Windows settings under `Microsoft\Windo
 View these settings in the group policy editor at the following path: **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Data Collection and Preview Builds**.
 
 > [!Important]  
-> In most circumstances, only use Configuration Manager to configure these settings. Don't also apply these settings in domain group policy objects. If a device receives conflicting policies from both management systems, its behavior will fluctuate over time.<!-- SCCMDocs-pr 3120 -->
+> In most circumstances, only use Configuration Manager to configure these settings. Don't also apply these settings in domain group policy objects. For more information, see [Conflict resolution](#conflict-resolution).<!-- SCCMDocs-pr 3120 -->
 
 ### Device name
 
@@ -175,7 +175,7 @@ There's an option in the Configuration Manager settings for Desktop Analytics to
 
 In general, use Configuration Manager collections to target Desktop Analytics settings and enrollment. Use direct membership or queries to include or exclude devices from the collection. For more information, see [How to create collections](/sccm/core/clients/manage/collections/create-collections).
 
-Configuration Manager only configures the Windows settings if a value doesn't already exist. If you need to configure different settings for a unique group of devices, you can use [group policy](#group-policy). Settings targeted by group policy take precedence over Configuration Manager settings.
+Configuration Manager only configures the Windows settings if a value doesn't already exist. If you need to configure different settings for a unique group of devices, you can use [group policy](#windows-settings). Settings targeted by group policy take precedence over Configuration Manager settings.
 
 If you target Configuration Manager clients with both Windows Analytics and Desktop Analytics settings, the settings for Desktop Analytics take precedence.
 
