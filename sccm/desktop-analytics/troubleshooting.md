@@ -40,7 +40,7 @@ Many common issues are caused by missing prerequisites. First confirm the follow
 
 ## Monitor connection health
 
-Use the **Connection Health** dashboard in Configuration Manager to drill down into categories by device health. In the Configuration Manager console, go to the **Software Library** workspace, expand the **Microsoft 365 Servicing** node, and select the **Connection Health** dashboard.  
+Use the **Connection Health** dashboard in Configuration Manager to drill down into categories by device health. In the Configuration Manager console, go to the **Software Library** workspace, expand the **Desktop Analytics Servicing** node, and select the **Connection Health** dashboard.  
 
 ![Screenshot of the Configuration Manager Connection Health dashboard](media/connection-health-dashboard.png)
 
