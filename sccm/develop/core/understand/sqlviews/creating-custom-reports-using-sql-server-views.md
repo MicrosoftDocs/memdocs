@@ -4,7 +4,7 @@ TOCTitle: Creating Custom Reports by Using SQL Server Views
 ms:assetid: 4624ff23-d11a-4dbe-acc1-d577d13d39c7
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dn581954(v=TechNet.10)
 ms:contentKeyID: 60772029
-ms.date: 07/27/2015
+ms.date: 04/15/2019
 mtps_version: v=TechNet.10
 ---
 
@@ -26,7 +26,7 @@ mtps_version: v=TechNet.10
 
 Configuration Manager queries SQL Server views in the Configuration Manager site database to retrieve the information that is displayed in reports. The Configuration Manager site database contains a large collection of information about the network, computers, users, user groups, and many other components of the computing environment. The database also contains objects that represent Configuration Manager operations, such as deployments, software updates, configuration baselines, reports, and status messages. Configuration Manager administrators need to understand the different categories of the SQL views, what information is stored in each view, and how the SQL views can be joined to one another to create reports that return the required information. Because Configuration Manager queries and collections retrieve information from Windows Management Instrumentation (WMI) instead of Configuration Manager SQL views, it is also helpful to know how the SQL view schema is related to the WMI schema.
 
-This documentation assumes that you have a basic understanding of Configuration Manager and SQL statements, that you have a working Configuration Manager infrastructure in place, and that you have a basic understanding of Configuration Manager reports. For more information about creating reports in Configuration Manager, see [Reporting in Configuration Manager](gg699377\(v=technet.10\).md). For more information about how to write basic SQL statements, see your SQL Server documentation.
+This documentation assumes that you have a basic understanding of Configuration Manager and SQL statements, that you have a working Configuration Manager infrastructure in place, and that you have a basic understanding of Configuration Manager reports. For more information about creating reports in Configuration Manager, see  Reporting in Configuration Manager (gg699377\(v=technet.10\).md). For more information about how to write basic SQL statements, see your SQL Server documentation.
 
 This documentation includes an overview of the Configuration Manager SQL view schema and SQL views, an overview of the existing reports and associated reporting procedures, sample SQL statements for each Configuration Manager SQL view category, exercises for creating custom reports, an overview for writing report SQL statements, and an overview of the Configuration Manager Provider WMI schema.
 
@@ -110,7 +110,7 @@ This section lists the changes that have been made since Configuration Manager 2
 
 <div class="section">
 
-  - Configuration Manager reports are now fully enabled for role-based administration. The data for all reports included with Configuration Manager is filtered based on the permissions of the administrative user who runs the report. Administrative users with specific roles can only view information defined for their roles. For more information, see the [Planning for Role-Based Administration](http://technet.microsoft.com/library/gg712693.aspx#bkmk_rolebaseadministration) for Reports section in the [Planning for Reporting in Configuration Manager](gg712693\(v=technet.10\).md) topic in the Configuration Manager Documentation Library.
+  - Configuration Manager reports are now fully enabled for role-based administration. The data for all reports included with Configuration Manager is filtered based on the permissions of the administrative user who runs the report. Administrative users with specific roles can only view information defined for their roles. For more information, see the [Planning for Role-Based Administration](http://technet.microsoft.com/library/gg712693.aspx#bkmk_rolebaseadministration) for Reports section in the  Planning for Reporting in Configuration Manager (gg712693\(v=technet.10\).md) topic in the Configuration Manager Documentation Library.
 
 </div>
 
@@ -141,7 +141,7 @@ This section lists the changes that have been made since Configuration Manager 2
 
 ## See Also
 
-[Technical Publications for Configuration Manager](hh531521\(v=technet.10\).md)  
+Technical Publications for Configuration Manager (hh531521\(v=technet.10\).md)  
 
 </div>
 

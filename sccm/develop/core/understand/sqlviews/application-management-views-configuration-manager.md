@@ -4,7 +4,7 @@ TOCTitle: Application Management Views in Configuration Manager
 ms:assetid: 567c2de3-44c1-4754-b5a3-09ba6b3fd831
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dn581963(v=TechNet.10)
 ms:contentKeyID: 60772027
-ms.date: 07/27/2015
+ms.date: 04/15/2019
 mtps_version: v=TechNet.10
 ---
 
@@ -24,7 +24,7 @@ mtps_version: v=TechNet.10
 
 <div class="introduction">
 
-The Configuration Manager application management views can be used to query for information about applications, packages and programs, deployments, distribution points, and more. These views will most often be joined to other views by using the **AdvertisementID**, **PackageID**, or **CollectionID** columns. Many of the status views also provide information about the status for applications and deployments. For more information about Configuration Manager applications, see [Application Management in Configuration Manager](gg699373\(v=technet.10\).md).
+The Configuration Manager application management views can be used to query for information about applications, packages and programs, deployments, distribution points, and more. These views will most often be joined to other views by using the **AdvertisementID**, **PackageID**, or **CollectionID** columns. Many of the status views also provide information about the status for applications and deployments. For more information about Configuration Manager applications, see Application Management in Configuration Manager (gg699373\(v=technet.10\).md).
 
 The following sections provide detailed information about application management views and application management status views.
 
@@ -212,7 +212,7 @@ The application management views are described in the following table.
 
 <div class="section">
 
-The application management status views contain status and status summary information about application deployments, applications and packages and programs. For more information about status views, see [Status and Alert Views in Configuration Manager](dn581980\(v=technet.10\).md). The status views that contain application management information are described in the following table.
+The application management status views contain status and status summary information about application deployments, applications and packages and programs. For more information about status views, see Status and Alert Views in Configuration Manager (dn581980\(v=technet.10\).md). The status views that contain application management information are described in the following table.
 
 <table>
 <colgroup>
