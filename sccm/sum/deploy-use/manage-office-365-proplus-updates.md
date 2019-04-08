@@ -160,7 +160,7 @@ When you deploy an update to an Office 365 client, the restart behavior and clie
 
 
 ## <a name="bkmk_o365_lang"></a> Add languages for Office 365 update downloads
-You can add support for Configuration Manager to download updates for any languages that are supported by Office 365, regardless of whether they're supported in Configuration Manager.
+You can add support for Configuration Manager to download updates for any languages that are supported by Office 365.
 
 ### Download updates for additional languages in version 1902
 <!--3555955-->
