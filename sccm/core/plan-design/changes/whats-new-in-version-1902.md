@@ -2,7 +2,7 @@
 title: What's new in version 1902
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1902 of Configuration Manager current branch.
-ms.date: 04/05/2019
+ms.date: 04/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

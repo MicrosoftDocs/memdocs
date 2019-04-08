@@ -5,7 +5,7 @@ description: "Review Office 365 client information from the Office 365 Client Ma
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/05/2019
+ms.date: 04/09/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -44,9 +44,9 @@ The Office 365 Client Management dashboard provides charts for the following inf
   For more information, see [Overview of update channels for Office 365 ProPlus](/DeployOffice/overview-of-update-channels-for-office-365-proplus).
 
 
-## <a name="bkmk_o365_readiness"></a> Integration with analytics for Office 365 ProPlus readiness
+## <a name="bkmk_o365_readiness"></a> Integration for Office 365 ProPlus readiness
 <!--3735402-->
-Starting in Configuration Manager version 1902, you can use the dashboard to identify devices with high confidence that are ready to upgrade to Office 365 ProPlus. By integrating with Office analytics, it provides insights into any potential compatibility issues with Office add-ins and macros used in your environment. Then use Configuration Manager to deploy Office to ready devices. 
+Starting in Configuration Manager version 1902, you can use the dashboard to identify devices with high confidence that are ready to upgrade to Office 365 ProPlus. This integration, provides insights into any potential compatibility issues with Office add-ins and macros used in your environment. Then use Configuration Manager to deploy Office to ready devices.
 
 The Office 365 client management dashboard includes a new tile, **Office 365 ProPlus Upgrade Readiness**. This tile is a bar chart of devices in the following states:
 - Not assessed
