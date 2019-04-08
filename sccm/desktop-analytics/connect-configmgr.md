@@ -2,7 +2,7 @@
 title: Connect Configuration Manager
 titleSuffix: Configuration Manager
 description: A how-to guide for connecting Configuration Manager with Desktop Analytics.
-ms.date: 01/25/2019
+ms.date: 04/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -14,12 +14,12 @@ ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
 ---
 
-# How to connect Configuration Manager with Desktop Analytics 
+# How to connect Configuration Manager with Desktop Analytics
 
 > [!Note]  
 > This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
 
-Desktop Analytics is tightly integrated with Configuration Manager. First, make sure the site is up to date to support the latest features. Then create the Desktop Analytics connection in Configuration Manager. Finally, monitor the health of the connection. 
+Desktop Analytics is tightly integrated with Configuration Manager. First, make sure the site is up to date to support the latest features. Then create the Desktop Analytics connection in Configuration Manager. Finally, monitor the health of the connection.
 
 
 ## <a name="bkmk_hotfix"></a> Update the site
@@ -54,13 +54,13 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
 
     - **Azure AD Tenant Name**: This name is how it's named in Configuration Manager  
 
-    - **Azure AD Tenant ID**: The **Directory ID** you copied from Azure AD   
+    - **Azure AD Tenant ID**: The **Directory ID** you copied from Azure AD  
 
-    - **Client ID**: The **Application ID** you copied from the Azure AD app   
+    - **Client ID**: The **Application ID** you copied from the Azure AD app  
 
-    - **Secret Key**: The key **Value** you copied from the Azure AD app   
+    - **Secret Key**: The key **Value** you copied from the Azure AD app  
 
-    - **Secret Key Expiry**: The same expiration date of the key   
+    - **Secret Key Expiry**: The same expiration date of the key  
 
     - **App ID URI**: This setting should automatically populate with the following value: `https://cmmicrosvc.manage.microsoft.com/`  
   
@@ -77,7 +77,7 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
         > [!Note]  
         > Starting with Windows 10 version 1803, the device name isn't sent to Microsoft by default. If you don't send the device name, it appears in Desktop Analytics as "Unknown". This behavior can make it difficult to identify and assess devices.  
 
-   Select **Next**. The **Available functionality** page shows the Desktop Analytics functionality that's available with the diagnostic data settings from the previous page. Select **Next** to continue or **Previous** to make changes.   
+   Select **Next**. The **Available functionality** page shows the Desktop Analytics functionality that's available with the diagnostic data settings from the previous page. Select **Next** to continue or **Previous** to make changes.  
 
     ![Example Available Functionality page in the Azure Services Wizard](media/available-functionality.png)
 
@@ -87,11 +87,14 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
 
     - **Target collection**: This collection includes all devices that Configuration Manager configures with your commercial ID and diagnostic data settings. It's the full set of devices that Configuration Manager connects to the Desktop Analytics service.  
 
-    - **Devices in the target collection use a user-authenticated proxy for outbound communication**: By default, this value is **No**. If needed in your environment, set to **Yes**.   
+    - **Devices in the target collection use a user-authenticated proxy for outbound communication**: By default, this value is **No**. If needed in your environment, set to **Yes**.  
 
     - **Select specific collections to synchronize with Desktop Analytics**: Select **Add** to include additional collections. These collections are available in the Desktop Analytics portal for grouping with deployment plans. Make sure to include pilot and pilot exclusion collections.  
 
         These collections continue to sync as their membership changes. For example, your deployment plan uses a collection with a Windows 7 membership rule. As those devices upgrade to Windows 10, and Configuration Manager evaluates the collection membership, those devices drop out of the collection and deployment plan.  
+
+        > [!Important]  
+        > Make sure to limit these additional collections on the target collection. On the properties of these additional collections, the **Limiting collection** should be the same collection as the Desktop Analytics **Target collection**.<!-- 4097528 -->  
 
 6. Complete the wizard.  
 
@@ -105,7 +108,7 @@ Monitor the configuration of your devices for Desktop Analytics. In the Configur
 
 For more information, see [Monitor connection health](/sccm/desktop-analytics/troubleshooting#monitor-connection-health).
 
-Configuration Manager synchronizes any Desktop Analytics deployment plans within 15 minutes of creating the connection. In the Configuration Manager console, go to the **Software Library** workspace, expand the **Microsoft 365 Servicing** node, and select the **Deployment Plans** node. 
+Configuration Manager synchronizes any Desktop Analytics deployment plans within 15 minutes of creating the connection. In the Configuration Manager console, go to the **Software Library** workspace, expand the **Microsoft 365 Servicing** node, and select the **Deployment Plans** node.
 
 
 
@@ -114,4 +117,3 @@ Configuration Manager synchronizes any Desktop Analytics deployment plans within
 Advance to the next article to enroll devices to Desktop Analytics.
 > [!div class="nextstepaction"]  
 > [Enroll devices](/sccm/desktop-analytics/enroll-devices)  
-

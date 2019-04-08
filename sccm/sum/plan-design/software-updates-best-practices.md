@@ -34,7 +34,7 @@ When you install more than one software update point at a primary site, use the 
 
 For more information on sharing the WSUS database, see the following blog posts:  
 
-- [How to implement a shared SUSDB for Configuration Manager software update points](https://blogs.technet.microsoft.com/configurationmgr/2016/10/12/how-to-implement-a-shared-susdb-for-configuration-manager-software-update-points/)  
+- [How to implement a shared SUSDB for Configuration Manager software update points](https://techcommunity.microsoft.com/t5/Configuration-Manager-Archive/How-to-implement-a-shared-SUSDB-for-Configuration-Manager/ba-p/274103)  
 
 - [Considerations for multiple WSUS instances sharing a content database when using System Center Configuration Manager](https://blogs.technet.microsoft.com/wsus/2014/03/22/considerations-for-multiple-wsus-instances-sharing-a-content-database-when-using-system-center-configuration-manager-but-without-network-load-balancing-nlb/)  
 
