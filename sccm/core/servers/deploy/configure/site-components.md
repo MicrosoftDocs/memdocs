@@ -56,7 +56,7 @@ For more information, see [Network access account](/sccm/core/plan-design/hierar
 For more information, see [Install a software update point](/sccm/sum/get-started/install-a-software-update-point).  
 
 
-### Operating System Deployment
+### Operating system deployment
 
 For more information, see [Specify the drive for offline OS image servicing](/sccm/osd/get-started/manage-operating-system-images#bkmk_servicing-drive).
 
