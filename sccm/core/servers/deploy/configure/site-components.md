@@ -22,7 +22,8 @@ For each Configuration Manager site, you can configure site components to modify
 In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node. Select a site. In the **Settings** group of the ribbon, choose **Configure Site Components**. Select one of the following options:
 
 - [Software distribution](#software-distribution)  
-- [Software update point](#software-update-point)  
+- [Software update point](#software-update-point) 
+- [Operating system deployment](#operating-system-deployment)
 - [Management point](#management-point)  
 - [Status reporting](#status-reporting)  
 - [Email notification](#email-notification)
@@ -53,6 +54,11 @@ For more information, see [Network access account](/sccm/core/plan-design/hierar
 ### Software update point  
 
 For more information, see [Install a software update point](/sccm/sum/get-started/install-a-software-update-point).  
+
+
+### Operating System Deployment
+
+For more information, see [Specify the drive for offline OS image servicing](/sccm/osd/get-started/manage-operating-system-images#bkmk_servicing-drive).
 
 
 ### Management point  
