@@ -2,7 +2,7 @@
 title: What's new in version 1902
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1902 of Configuration Manager current branch.
-ms.date: 04/03/2019
+ms.date: 04/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -362,20 +362,20 @@ To create and deploy a OneDrive for Business profile, in the Configuration Manag
 <!-- For more information, see [Redirect Windows known folders to OneDrive](/sccm/compliance/deploy-use/onedrive-profile). -->
 
 
-### Integration with analytics for Office 365 ProPlus readiness
+### Integration for Office 365 ProPlus readiness
 <!--3735402-->
-Use Configuration Manager to identify devices with high confidence that are ready to upgrade to Office 365 ProPlus. By integrating with Office analytics, it provides insights into any potential compatibility issues with Office add-ins and macros used in your environment. Then use Configuration Manager to deploy Office to ready devices. 
+***[Updated]*** Use Configuration Manager to identify devices with high confidence that are ready to upgrade to Office 365 ProPlus. The integration provides insights into any potential compatibility issues with Office add-ins and macros used in your environment. Then use Configuration Manager to deploy Office to ready devices. 
 
 The existing Office 365 client management dashboard now includes a new tile, **Office 365 ProPlus Upgrade Readiness**.
 
-<!-- For more information, see [Office 365 client management dashboard](/sccm/sum/deploy-use/manage-office-365-proplus-updates#office-365-client-management-dashboard) -->
+For more information, see [Office 365 client management dashboard](/sccm/sum/deploy-use/office-365-dashboard#bkmk_o365_readiness)
 
 
 ### Additional languages for Office 365 updates
 <!--3555955-->
-Configuration Manager now supports all supported languages for Office 365 client updates. The update workflow now separates the 38 languages for **Windows Update** from the 103 languages for **Office 365 Client Update**. 
+Configuration Manager now supports all supported languages for Office 365 client updates. The update workflow now separates the 38 languages for **Windows Update** from the numerous languages for **Office 365 Client Update**. 
 
-<!-- For more information, see [Office 365 client management dashboard](/sccm/sum/deploy-use/manage-office-365-proplus-updates#office-365-client-management-dashboard) -->
+For more information, see [Manage Office 365 updates](/sccm/sum/deploy-use/manage-office-365-proplus-updates#bkmk_o365_lang)
 
 
 ### Office products on lifecycle dashboard

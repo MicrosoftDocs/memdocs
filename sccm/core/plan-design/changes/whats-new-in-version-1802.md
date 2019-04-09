@@ -2,7 +2,7 @@
 title: New version 1802
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1802 of Configuration Manager.
-ms.date: 06/12/2018
+ms.date: 04/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -299,7 +299,7 @@ This release includes the following improvements to the Configuration Manager co
 - Device lists under Assets and Compliance, Devices, now display the primary user by default. This column only displays in the Devices node. The last logged on user can also be added as an optional column.<!-- 1357280 --> Enable [user and device affinity](/sccm/core/clients/deploy/about-client-settings#user-and-device-affinity) client settings for the site to associate a primary user with a device.
 - If a collection is a member of another collection and it is renamed, then the new name is updated under membership rules.<!--1357282--> 
 - When using remote control on a client with multiple monitors at different DPI scaling, the mouse cursor now correctly maps between them. <!--433170-->
-- The [Office 365 Client Management dashboard](/sccm/sum/deploy-use/manage-office-365-proplus-updates#office-365-client-management-dashboard) displays a list of relevant devices when graph sections are selected. <!--1357281 --> 
+- The [Office 365 Client Management dashboard](/sccm/sum/deploy-use/office-365-dashboard) displays a list of relevant devices when graph sections are selected. <!--1357281 --> 
 
 
 
