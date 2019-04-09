@@ -359,7 +359,7 @@ First, [find your Office 365 tenant ID](https://docs.microsoft.com/onedrive/find
 
 To create and deploy a OneDrive for Business profile, in the Configuration Manager console, go to the **Assets and Compliance** workspace. Expand **Compliance Settings**, and select the **OneDrive for Business Profiles** node.  
 
-<!-- For more information, see [Redirect Windows known folders to OneDrive](/sccm/compliance/deploy-use/onedrive-profile). -->
+For more information, see [Redirect Windows known folders to OneDrive](/sccm/compliance/deploy-use/onedrive-profile).
 
 
 ### Integration for Office 365 ProPlus readiness
