@@ -373,9 +373,9 @@ For more information, see [Office 365 client management dashboard](/sccm/sum/dep
 
 ### Additional languages for Office 365 updates
 <!--3555955-->
-Configuration Manager now supports all supported languages for Office 365 client updates. The update workflow now separates the 38 languages for **Windows Update** from the 103 languages for **Office 365 Client Update**. 
+Configuration Manager now supports all supported languages for Office 365 client updates. The update workflow now separates the 38 languages for **Windows Update** from the numerous languages for **Office 365 Client Update**. 
 
-<!-- For more information, see [Office 365 client management dashboard](/sccm/sum/deploy-use/office-365-dashboard) *-->
+For more information, see [Manage Office 365 updates](/sccm/sum/deploy-use/manage-office-365-proplus-updates#bkmk_o365_lang)
 
 
 ### Office products on lifecycle dashboard
@@ -465,6 +465,19 @@ You can now search for a MAC address in a device view of the Configuration Manag
 To improve the accessibility features of the Configuration Manager console, update .NET to version 4.7 or later on the computer running the console. 
 
 For more information, see [Accessibility features in Configuration Manager](/sccm/core/understand/accessibility-features).
+
+
+### Changes to console setup process
+
+<!-- 3612513 -->
+***[Updated]*** There are new components required when installing the Configuration Manager console. If you create a package for installing the console on other computers, make sure the package includes the following files:
+
+- ConsoleSetup.exe
+- AdminConsole.msi
+- ConfigMgr.AC_Extension.i386.cab
+- ConfigMgr.AC_Extension.amd64.cab
+
+When you install or update a site server, it copies these installation files and supported language packs for the site to the **Tools\ConsoleSetup** subfolder. For more information, see [Install the Configuration Manager console](/sccm/core/servers/deploy/install/install-consoles).
 
 
 

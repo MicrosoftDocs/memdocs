@@ -5,7 +5,7 @@ description: "Configuration Manager synchronizes Office 365 client updates from 
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/05/2019
+ms.date: 04/09/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -23,7 +23,7 @@ Configuration Manager lets you manage Office 365 ProPlus apps in the following w
 
 - [Deploy Office 365 updates](#deploy-office-365-updates): You can manage Office 365 client updates by using the software update management workflow. When Microsoft publishes a new Office 365 client update to the Office Content Delivery Network (CDN), Microsoft also publishes an update package to Windows Server Update Services (WSUS). After Configuration Manager synchronizes the Office 365 client update from the WSUS catalog to the site server, the update is available to deploy to clients.    
 
-- [Add languages for Office 365 update downloads](#add-languages-for-office-365-update-downloads): You can add support for Configuration Manager to download updates for any languages supported by Office 365. Meaning Configuration Manager doesn't have to support the language as long as Office 365 does. Prior to Configuration Manager version 1610 you must download and deploy updates in the same languages configured on Office 365 clients.
+- [Add languages for Office 365 update downloads](#bkmk_o365_lang): You can add support for Configuration Manager to download updates for any languages supported by Office 365. Meaning Configuration Manager doesn't have to support the language as long as Office 365 does. Prior to Configuration Manager version 1610 you must download and deploy updates in the same languages configured on Office 365 clients.
 
 - [Change the update channel](#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager): You can use group policy to distribute a registry key value change to Office 365 clients to change the update channel.
 
@@ -136,15 +136,31 @@ When you deploy an update to an Office 365 client, the restart behavior and clie
 >- For more information, see [End-user update notifications for Office 365](https://docs.microsoft.com/deployoffice/end-user-update-notifications-for-office-365-proplus)
 
 
+## <a name="bkmk_o365_lang"></a> Add languages for Office 365 update downloads
+You can add support for Configuration Manager to download updates for any languages that are supported by Office 365.
 
-## Add languages for Office 365 update downloads
-You can add support for Configuration Manager to download updates for any languages that are supported by Office 365, regardless of whether they're supported in Configuration Manager.    
+### Download updates for additional languages in version 1902
+<!--3555955-->
+
+Starting in Configuration Manager version 1902, the update workflow separates the 38 languages for **Windows Update** from the numerous languages for **Office 365 Client Update**.
+
+To select the necessary languages, use the **Language Selection** page in the following locations:
+- Create Automatic Deployment Rule Wizard
+- Deploy Software Updates Wizard
+- Download Software Updates Wizard
+- Automatic Deployment Rule Properties
+
+In the **Language Selection** page, select **Office 365 Client Update**, then click **Edit**. Add the needed languages for Office 365, then click **OK**.
+
+![Screenshot of adding additional languages for Office 365](media/office-update-languages-selection.png)
+
+### To add support to download updates for additional languages in version 1810 and earlier
+
+Use the following procedure on the software update point at the central administration site or stand-alone primary site.
 
 > [!IMPORTANT]  
 > Configuring additional Office 365 update languages is a site-wide setting. After you add the languages using the following procedure, all Office 365 updates are downloaded in those languages, as well as the languages that you select on the **Language Selection** page in the Download Software Updates or Deploy Software Updates wizards.
 
-### To add support to download updates for additional languages
-Use the following procedure on the software update point at the central administration site or stand-alone primary site.
 1. From a command prompt, type *wbemtest* as an administrative user to open the Windows Management Instrumentation Tester.
 2. Click **Connect**, and then type *root\sms\site_&lt;siteCode&gt;*.
 3. Click **Query**, and then run the following query:
