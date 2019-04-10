@@ -54,6 +54,8 @@
     href: deploy-use/software-updates-maintenance.md
   - name: Service a server group
     href: deploy-use/service-a-server-group.md
+  - name: Office 365 client management dashboard
+    href: deploy-use/office-365-dashboard.md    
   - name: Manage Office 365 ProPlus updates
     href: deploy-use/manage-office-365-proplus-updates.md
   - name: Optimize Windows 10 update delivery
