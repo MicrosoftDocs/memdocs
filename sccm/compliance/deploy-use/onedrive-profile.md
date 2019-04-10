@@ -82,31 +82,6 @@ Use Configuration Manager to move Windows known folders to OneDrive for Business
 4. Click **OK** to deploy the OneDrive for Business profile.
 
 
-## Known issues
-
-After you create a OneDrive for Business profile, the Configuration Manager console unexpectedly closes. The wizard successfully created the profile. The same behavior occurs when viewing a policy in the OneDrive for Business Profiles node. 
-
-### Workaround
-To manage these profiles, use the following PowerShell cmdlets:
-
-
-```PowerShell
-# View all OneDrive for Business profiles
-Get-CMConfigurationPolicy -Fast | Where-Object { $_.CategoryInstance_UniqueIDs -eq "SettingsAndPolicy:SMS_OneDriveKnownFolderMigrationSettings" }
-
-# Deploy a profile
-# Use the LocalizedDisplayName property value of the policy as the CommonProfileName parameter.
-New-CMConfigurationPolicyDeployment -CommonProfileName "my ODfB profile" -CollectionName "my collection"
-
-# Delete a profile
-Remove-CMConfigurationPolicy -Name "my ODfB profile"
-```
-
-For more information on the PowerShell cmdlets, see the following articles:
-- [Get-CMConfigurationPolicy](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmconfigurationpolicy?view=sccm-ps)
-- [New-CMConfigurationPolicyDeployment](https://docs.microsoft.com/powershell/module/ConfigurationManager/New-CMConfigurationPolicyDeployment?view=sccm-ps)
-- [Remove-CMConfigurationPolicy](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmconfigurationpolicy?view=sccm-ps)
-
 ## Next steps
 
 [Create remote connection profiles](/sccm/compliance/deploy-use/create-remote-connection-profiles)
