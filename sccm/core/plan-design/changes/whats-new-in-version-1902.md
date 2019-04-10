@@ -2,7 +2,7 @@
 title: What's new in version 1902
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1902 of Configuration Manager current branch.
-ms.date: 04/10/2019
+ms.date: 04/11/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -351,7 +351,7 @@ Use client settings to configure this option. In the **Software Updates** group,
 
 ### Redirect Windows known folders to OneDrive
 <!--3556021-->
-Use Configuration Manager to move Windows known folders to OneDrive for Business. These folders include Desktop, Documents, and Pictures. To simplify your Windows 10 upgrades, deploy these settings to Windows 7 clients before deploying a task sequence. 
+***[Updated]*** Use Configuration Manager to move Windows known folders to OneDrive for Business. These folders include Desktop, Documents, and Pictures. To simplify your Windows 10 upgrades, deploy these settings to Windows 7 clients before deploying a task sequence. 
 
 For more information on this feature of OneDrive for Business, see [Redirect and move Windows known folders to OneDrive](https://docs.microsoft.com/onedrive/redirect-known-folders).
 
@@ -359,7 +359,7 @@ First, [find your Office 365 tenant ID](https://docs.microsoft.com/onedrive/find
 
 To create and deploy a OneDrive for Business profile, in the Configuration Manager console, go to the **Assets and Compliance** workspace. Expand **Compliance Settings**, and select the **OneDrive for Business Profiles** node.  
 
-For more information, see [Redirect Windows known folders to OneDrive](/sccm/compliance/deploy-use/onedrive-profile).
+For more information, see the Redirect Windows known folders to OneDrive section in the [OneDrive for Business Profiles](/sccm/compliance/deploy-use/onedrive-profile) article.
 
 
 ### Integration for Office 365 ProPlus readiness

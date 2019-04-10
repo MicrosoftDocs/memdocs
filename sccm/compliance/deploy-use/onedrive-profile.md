@@ -1,8 +1,8 @@
 ---
 title: OneDrive for Business Profiles
 titleSuffix: Configuration Manager
-description: Redirect Windows known folders to OneDrive for Business
-ms.date: 04/10/2019
+description: Redirect Windows known folders to OneDrive for Business using a OneDrive for Business profile in Configuration Manager.
+ms.date: 04/11/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # OneDrive for Business Profiles
 
-Starting in Configuration Manager version 1902, you can create OneDrive for Business Profiles for moving Windows known folders to OneDrive for Business. These folders include Desktop, Documents, and Pictures. In each profile you can specify settings for moving the Windows known folders. For more information on OneDrive for Business, see [Redirect and move Windows known folders to OneDrive](https://docs.microsoft.com/onedrive/redirect-known-folders). <!--3556021-->
+Starting in Configuration Manager version 1902, you can create OneDrive for Business Profiles for moving Windows known folders to OneDrive for Business. These folders include Desktop, Documents, and Pictures. In each profile, you can specify settings for moving the Windows known folders. For more information on OneDrive for Business, see [Redirect and move Windows known folders to OneDrive](https://docs.microsoft.com/onedrive/redirect-known-folders). <!--3556021-->
 
 ## Prerequisites
 
@@ -66,18 +66,27 @@ Use Configuration Manager to move Windows known folders to OneDrive for Business
 
 3. Specify the following settings for your deployment:
 
-   1. **Collection** - Click **Browse...** then select the collection for which you want to deploy the profile.  
-   1. --placeholder--
-   1. ---placeholder--
+   1. **Collection**: Click **Browse...**, then select the collection for which you want to deploy the profile.  
+   1. **Generate an alert**:
+
+      - **When compliance is below**: Minimum percentage of client compliance to maintain otherwise an alert is generated.
+      -  **Date and time**: The date alerts first start being generated based on profile compliance.
+      - **Generate System Center Operations Manager alert**: Send a compliance alert to System Center Operations Manager.
+   1. **Schedule**:
+
+      - **Simple schedule**: By default, this setting uses a simple schedule to start the compliance evaluation every seven days.
+      - **Custom schedule**: Define when to run the compliance evaluation. The start time is based on the local time for the computer that runs the Configuration Manager console at the time you create the schedule or you can use UTC.
  
-    ![Deploy OneDrive for Business profile](media/onedrive-for-business-deploy-profile.png)
+      ![Deploy OneDrive for Business profile](media/onedrive-for-business-deploy-profile.png)
+
+4. Click **OK** to deploy the OneDrive for Business profile.
 
 
 ## Known issues
 
 After you create a OneDrive for Business profile, the Configuration Manager console unexpectedly closes. The wizard successfully created the profile. The same behavior occurs when viewing a policy in the OneDrive for Business Profiles node. 
 
-## Workaround
+### Workaround
 To manage these profiles, use the following PowerShell cmdlets:
 
 
@@ -93,9 +102,11 @@ New-CMConfigurationPolicyDeployment -CommonProfileName "my ODfB profile" -Collec
 Remove-CMConfigurationPolicy -Name "my ODfB profile"
 ```
 
-For more information, see the following articles:
+For more information on the PowerShell cmdlets, see the following articles:
 - [Get-CMConfigurationPolicy](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmconfigurationpolicy?view=sccm-ps)
 - [New-CMConfigurationPolicyDeployment](https://docs.microsoft.com/powershell/module/ConfigurationManager/New-CMConfigurationPolicyDeployment?view=sccm-ps)
 - [Remove-CMConfigurationPolicy](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmconfigurationpolicy?view=sccm-ps)
 
 ## Next steps
+
+[Create remote connection profiles](/sccm/compliance/deploy-use/create-remote-connection-profiles)
