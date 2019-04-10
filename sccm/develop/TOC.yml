@@ -195,6 +195,29 @@
         items:
         - name: Application Management Views in Configuration Manager
           href: core/understand/sqlviews/application-management-views-configuration-manager.md
+        - name: Client Deployment Views in Configuration Manager
+          href: core/understand/sqlviews/client-deployment-views-configuration-manager.md
+        - name: Client Status Views in Configuration Manager
+          href: core/understand/sqlviews/client-status-views-configuration-manager.md
+        - name: Collection Views in Configuration Manager
+          href: core/understand/sqlviews/collection-views-configuration-manager.md
+        - name: Compliance Settings Views in Configuration Manager
+          href: core/understand/sqlviews/compliance-settings-views-configuration-manager.md
+        - name: Content Management Views in Configuration Manager
+          href: core/understand/sqlviews/content-management-views-configuration-manager.md
+        - name: Discovery Views in Configuration Manager
+          href: core/understand/sqlviews/discovery-views-configuration-manager.md
+        - name: Endpoint Protection Views in Configuration Manager
+          href: core/understand/sqlviews/endpoint-protection-views-configuration-manager.md
+        - name: Inventory Views in Configuration Manager
+          href: core/understand/sqlviews/inventory-views-configuration-manager.md
+          items:
+          - name: Hardware Inventory Views in Configuration Manager
+            href: core/understand/sqlviews/hardware-inventory-views-configuration-manager.md
+          - name: Software Inventory Views in Configuration Manager
+            href: core/understand/sqlviews/software-inventory-views-configuration-manager.md
+          - name: Asset Intelligence Views in Configuration Manager
+            href: core/understand/sqlviews/asset-intelligence-views-configuration-manager.md
       - name: Working with Reports in Configuration Manager
         href: core/understand/sqlviews/working-with-reports-configuration-manager.md
       - name: Technical Reference for SQL Server Views in Configuration Manager
