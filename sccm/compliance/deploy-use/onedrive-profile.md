@@ -23,7 +23,7 @@ Starting in Configuration Manager version 1902, you can create OneDrive for Busi
 
 - Deploy the OneDrive sync client version 18.111.0603.0004 or later. For more information, see [Deploy OneDrive apps by using System Center Configuration Manager](https://docs.microsoft.com/onedrive/deploy-on-windows).  
 
-## <a name="bkmk_odfb"></a> Redirect Windows known folders to OneDrive
+## <a name="bkmk_odfb"></a> Move Windows known folders to OneDrive
 <!--3556021-->
 Use Configuration Manager to move Windows known folders to OneDrive for Business. These folders include Desktop, Documents, and Pictures. To simplify your Windows 10 upgrades, deploy these settings to Windows 7 clients before deploying a task sequence. 
 
