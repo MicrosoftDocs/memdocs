@@ -2,7 +2,7 @@
 title: What's new in version 1902
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1902 of Configuration Manager current branch.
-ms.date: 04/11/2019
+ms.date: 04/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -339,11 +339,11 @@ Specify these settings in the **Software Center** group of client settings.
 
 ### Specify priority for feature updates in Windows 10 servicing
 <!--3734525-->
-Adjust the priority with which clients install a feature update through [Windows 10 servicing](/sccm/osd/deploy-use/manage-windows-as-a-service). By default, clients now install feature updates with higher processing priority. 
+***[Updated]*** Adjust the priority with which clients install a feature update through [Windows 10 servicing](/sccm/osd/deploy-use/manage-windows-as-a-service). By default, clients now install feature updates with higher processing priority. 
 
 Use client settings to configure this option. In the **Software Updates** group, configure the following setting: **Specify thread priority for feature updates**. 
 
-<!-- For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-updates). -->
+For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-updates). 
 
 
 
