@@ -56,6 +56,8 @@
       href: deploy-use/import-configuration-data.md
   - name: Create user data and profiles configuration items
     href: deploy-use/create-user-data-and-profiles-configuration-items.md
+  - name: OneDrive for Business Profiles
+    href: deploy-use/onedrive-profile.md    
   - name: Create remote connection profiles
     href: deploy-use/create-remote-connection-profiles.md
   - name: Upgrade Windows devices to a new edition
