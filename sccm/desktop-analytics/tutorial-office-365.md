@@ -2,7 +2,7 @@
 title: Tutorial - Deploy Office 365
 titleSuffix: Configuration Manager
 description: A tutorial on using Desktop Analytics and Configuration Manager to deploy Office 365 to a pilot group.
-ms.date: 01/25/2019
+ms.date: 04/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: tutorial
@@ -15,7 +15,7 @@ ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
 ---
 
-# Tutorial: Deploy Office 365 to pilot 
+# Tutorial: Deploy Office 365 to pilot
 
 > [!Note]  
 > This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
@@ -30,7 +30,7 @@ In this tutorial, you learn how to:
 > * Create a Desktop Analytics deployment plan for Office 365 ProPlus  
 > * Deploy Office 365 ProPlus in Configuration Manager to the pilot group  
 
-If you don’t have an Azure subscription, create a [free account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) before you begin. When configured properly, use of Desktop Analytics doesn't incur any Azure cost. 
+If you don’t have an Azure subscription, create a [free account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) before you begin. When configured properly, use of Desktop Analytics doesn't incur any Azure cost.
 
 Desktop Analytics uses a *Log Analytics workspace* in your Azure subscription. A workspace is essentially a container that includes account information and simple configuration information for the account. For more information, see [Manage workspaces](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor/toc.json).
 
@@ -42,7 +42,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
 - An active Azure subscription, with **Company Admin** permissions  
 
-- Configuration Manager, version 1810 with update rollup 4486457 or later, with **Full administrator** role  
+- Configuration Manager, version 1810 with Update Rollup 4488598 or later, with **Full administrator** role  
 
 - At least one Windows 10 device with the following configurations:  
 
@@ -105,7 +105,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
     - **Workspace Contributors**: Create and manage deployment plans in this workspace. They don't need any additional Azure access.  
   
-   To add a user to either group, type their name or e-mail address in the **Enter name or email address** section of the appropriate group. When finished, select **Next**. 
+   To add a user to either group, type their name or e-mail address in the **Enter name or email address** section of the appropriate group. When finished, select **Next**.
 
 5. On the page to **Set up your workspace**:  
 
@@ -144,11 +144,11 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
 3. Select the app, and note the **Application ID**. This value is a GUID that's used to configure the Configuration Manager connection.  
 
-4. Select **Settings** on the app, and then select **Keys**. In the **Passwords** section, enter a **Key description**, specify an expiration **Duration**, and then select **Save**. Copy the **Value** of the key, which is used to configure the Configuration Manager connection. 
+4. Select **Settings** on the app, and then select **Keys**. In the **Passwords** section, enter a **Key description**, specify an expiration **Duration**, and then select **Save**. Copy the **Value** of the key, which is used to configure the Configuration Manager connection.
 
     > [!Important]  
     > This is the only opportunity to copy the key value. If you don't copy it now, you need to create another key.  
-    > 
+    >
     > Save the key value in a secure location.  
 
 5. On the app **Settings** panel, select **Required permissions**.  
@@ -201,11 +201,11 @@ Install the Configuration Manager version 1810 update rollup (4486457) to suppor
 
     - **Azure AD Tenant Name**: This name is how it's named in Configuration Manager  
 
-    - **Azure AD Tenant ID**: The **Directory ID** you copied from Azure AD   
+    - **Azure AD Tenant ID**: The **Directory ID** you copied from Azure AD  
 
-    - **Client ID**: The **Application ID** you copied from the Azure AD app   
+    - **Client ID**: The **Application ID** you copied from the Azure AD app  
 
-    - **Secret Key**: The key **Value** you copied from the Azure AD app   
+    - **Secret Key**: The key **Value** you copied from the Azure AD app  
 
     - **Secret Key Expiry**: The same expiration date of the key   
 
@@ -229,7 +229,7 @@ Install the Configuration Manager version 1810 update rollup (4486457) to suppor
 
     - **Target collection**: This collection includes all devices that Configuration Manager configures with your commercial ID and diagnostic data settings. It's the full set of devices that Configuration Manager connects to the Desktop Analytics service.  
 
-    - **Devices in the target collection use a user-authenticated proxy for outbound communication**: By default, this value is **No**. If needed in your environment, set to **Yes**.   
+    - **Devices in the target collection use a user-authenticated proxy for outbound communication**: By default, this value is **No**. If needed in your environment, set to **Yes**.  
 
     - **Select specific collections to synchronize with Desktop Analytics**: Select **Add** to include additional collections. These collections are available in the Desktop Analytics portal for grouping with deployment plans. Make sure to include pilot and pilot exclusion collections.  
 
@@ -241,7 +241,7 @@ Configuration Manager creates a settings policy to configure devices in the Targ
 
 Monitor the configuration of your devices for Desktop Analytics. In the Configuration Manager console, go to the **Software Library** workspace, expand the **Microsoft 365 Servicing** node, and select the **Connection Health** dashboard.  
 
-Configuration Manager synchronizes any Desktop Analytics deployment plans within 15 minutes of creating the connection. In the Configuration Manager console, go to the **Software Library** workspace, expand the **Microsoft 365 Servicing** node, and select the **Deployment Plans** node. 
+Configuration Manager synchronizes any Desktop Analytics deployment plans within 15 minutes of creating the connection. In the Configuration Manager console, go to the **Software Library** workspace, expand the **Microsoft 365 Servicing** node, and select the **Deployment Plans** node.
 
 
 
@@ -271,7 +271,7 @@ Use this procedure to create a deployment plan in Desktop Analytics.
 
         - Low install count threshold for your Office add-ins. The default threshold is `2%`. Add-ins below this threshold are automatically set to *Low install count*. Desktop Analytics doesn't validate these add-ins during the pilot. 
 
-            If an add-in is installed on a higher percentage of computers than this threshold, the deployment plan marks the add-in as *Noteworthy*. Then you can decide its importance to test during the pilot phase.   
+            If an add-in is installed on a higher percentage of computers than this threshold, the deployment plan marks the add-in as *Noteworthy*. Then you can decide its importance to test during the pilot phase.  
 
     - **Completion date**: Choose the date by which Office should be fully deployed to all the targeted devices.  
 
@@ -283,7 +283,7 @@ Use this procedure to create a deployment plan in Desktop Analytics.
 
     1. On the **Office Add-ins** tab, select to show only **Not Reviewed** assets.  
 
-    2. Select each add-in, and then select **Edit**. You can select more than one app to edit at the same time.   
+    2. Select each add-in, and then select **Edit**. You can select more than one app to edit at the same time.  
 
     3. Choose an importance level from the **Importance** list. If you want Desktop Analytics to validate the add-in during the pilot, select **Critical** or **Important**. It doesn't validate add-ins marked as **Not Important**. Consider the compatibility risk and other plan insights when assigning importance levels.  
 
@@ -333,7 +333,7 @@ Use this procedure to deploy Office 365 ProPlus in Configuration Manager to the 
 
     5. When complete, select **Review** in the upper right corner. Review the configured settings, and then select **Submit**.  
 
-5. Select **Next**. On the **Deployment** page, select **No** to deploy it now. (The next procedure uses the Desktop Analytics deployment plan for the deployment.) Select **Next** and complete the wizard.  
+4. Select **Next**. On the **Deployment** page, select **No** to deploy it now. (The next procedure uses the Desktop Analytics deployment plan for the deployment.) Select **Next** and complete the wizard.  
 
 
 ### <a name="bkmk_deploy-app"></a> Deploy Office 365 using the Desktop Analytics deployment plan
@@ -344,7 +344,12 @@ Use this procedure to deploy Office 365 ProPlus in Configuration Manager to the 
 
 3. In the **Pilot status** tile, choose **Application** from the drop-down list, and then select **Deploy**.  
 
-4. On the **General** page of the Deploy Software Wizard, select **Browse** next to the **Software** field. Select your Office 365 application, for example, **Office 365 ProPlus**. With the Desktop Analytics integration, Configuration Manager automatically creates a collection for the pilot deployment plan. Select **Next**.  
+4. On the **General** page of the Deploy Software Wizard, select **Browse** next to the **Software** field. Select your Office 365 application, for example, **Office 365 ProPlus**. Select **Next**.  
+
+    > [!Note]  
+    > With the Desktop Analytics integration, Configuration Manager automatically creates a collection for the pilot deployment plan. It can take up to 10 minutes for this collection to synchronize before you can use it.<!-- 3887891 -->
+    >
+    > This collection is reserved for Desktop Analytics deployment plan devices. Manual changes to this collection aren't supported.<!-- 3866460, SCCMDocs-pr 3544 -->  
 
 5. On the **Content** page, select **Add**, and then select **Distribution point**. Select an available distribution point to host the installation content, and select **OK**. Then select **Next**.  
 
@@ -371,11 +376,8 @@ Use this procedure to deploy Office 365 ProPlus in Configuration Manager to the 
 -->
 
 
-
-
 ## Next steps
 
 Advance to the next article to learn more about Desktop Analytics deployment plans.
 > [!div class="nextstepaction"]  
 > [Deployment plans](/sccm/desktop-analytics/about-deployment-plans)
-

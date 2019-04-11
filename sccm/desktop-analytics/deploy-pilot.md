@@ -2,7 +2,7 @@
 title: How to deploy to pilot
 titleSuffix: Configuration Manager
 description: A how-to guide for deploying to a Desktop Analytics pilot group.
-ms.date: 01/25/2019
+ms.date: 04/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -27,7 +27,7 @@ One of the benefits of Desktop Analytics is to help identify the smallest set of
 
 ## Address issues
 
-Use the Desktop Analytics portal to review any reported issues with assets that might block your deployment. Then approve, reject, or modify the suggested fix. All items must be marked **Ready** or **Ready (with remediation)** before the pilot deployment starts. 
+Use the Desktop Analytics portal to review any reported issues with assets that might block your deployment. Then approve, reject, or modify the suggested fix. All items must be marked **Ready** or **Ready (with remediation)** before the pilot deployment starts.
 
 1. Go to the Desktop Analytics portal, and select **Deployment plans** in the Manage group.  
 
@@ -37,10 +37,9 @@ Use the Desktop Analytics portal to review any reported issues with assets that 
 
 4. On the **Apps** tab, review the apps that need your input.  
 
-5. For each app, select the app name. In the information pane, review the recommendation, and select the upgrade decision. If you choose **Not reviewed** or **Unable**, then Desktop Analytics doesn't include devices with this app in the pilot deployment.  
+5. For each app, select the app name. In the information pane, review the recommendation, and select the upgrade decision. If you choose **Not reviewed** or **Unable**, then Desktop Analytics doesn't include devices with this app in the pilot deployment. If you choose **Ready (with remediation)**, use the   **Remediation notes** to capture the actions to take to address an issue, like *reinstall* or *find the manufacturer’s recommended version*.
 
 6. Repeat this review for other assets.  
-
 
 
 
@@ -68,15 +67,18 @@ Configuration Manager uses the data from Desktop Analytics to create a collectio
 
     - **Task sequence** for Windows 10  
   
-   Select **Deploy**. This action launches the Deploy Software Wizard for the selected object type. 
+   Select **Deploy**. This action launches the Deploy Software Wizard for the selected object type.
 
+    > [!Note]  
+    > With the Desktop Analytics integration, Configuration Manager automatically creates a collection for the pilot deployment plan. It can take up to 10 minutes for this collection to synchronize before you can use it.<!-- 3887891 -->
+    >
+    > This collection is reserved for Desktop Analytics deployment plan devices. Manual changes to this collection aren't supported.<!-- 3866460, SCCMDocs-pr 3544 -->  
 
 For more information, see the following articles:  
 
 - [Deploy an application](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy)  
 
 - [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS)  
-
 
 If your deployment plan is for both Windows 10 and Office 365, repeat this process to create a second deployment. For example, if the first deployment is for the task sequence, create a second deployment for the application.
 
@@ -95,7 +97,7 @@ Use Configuration Manager deployment monitoring the same as any other applicatio
 
 ### Desktop Analytics portal
 
-Use the Desktop Analytics portal to view the status of any deployment plan. Select the deployment plan, and then select **Plan overview**. 
+Use the Desktop Analytics portal to view the status of any deployment plan. Select the deployment plan, and then select **Plan overview**.
 
 ![Screenshot of deployment plan overview in Desktop Analytics](media/deployment-plan-overview.png)
 
@@ -121,7 +123,7 @@ As you address these deployment issues, the dashboard continues to show the prog
 
 ## Next steps
 
-Let the pilot run for a period of time to collect operational data. Encourage users of pilot devices to test apps, add-ins, and macros. 
+Let the pilot run for a period of time to collect operational data. Encourage users of pilot devices to test apps, add-ins, and macros.
 
 When your pilot deployment meets your success criteria, go to the next article to deploy to production.
 > [!div class="nextstepaction"]  

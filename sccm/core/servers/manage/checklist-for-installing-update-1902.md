@@ -2,7 +2,7 @@
 title: Checklist for 1902
 titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 1902.
-ms.date: 03/27/2019
+ms.date: 04/11/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -17,7 +17,7 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-When you use the current branch of Configuration Manager, you can install the in-console update for version 1902 to update your hierarchy from a previous version. <!-- baseline only statement:-->(Because version 1802 is also available as [baseline media](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions), you can use the installation media to install the first site of a new hierarchy.)
+When you use the current branch of Configuration Manager, you can install the in-console update for version 1902 to update your hierarchy from a previous version. <!-- baseline only statement:-->(Because version 1902 is also available as [baseline media](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions), you can use the installation media to install the first site of a new hierarchy.)
 
 To get the update for version 1902, you must use a service connection point at the top-level site of your hierarchy. This site system role can be in online or offline mode. After your hierarchy downloads the update package from Microsoft, find it in the console. In the **Administration** workspace, select the **Updates and Servicing** node.
 
@@ -60,7 +60,7 @@ The first time you use a Configuration Manager console after the update has fini
 ## Checklist
 
 #### All sites run a supported version of Configuration Manager  
-Each site server in the hierarchy must run the same version of Configuration Manager before you can start the installation of update 1902. To update to 1902, you must use version 1710, 1802, 1806, or 1810.
+Each site server in the hierarchy must run the same version of Configuration Manager before you can start the installation of update 1902. To update to 1902, you must use version 1802, 1806, or 1810.
 
 #### Review the status of your product licensing 
 You must have an active Software Assurance (SA) agreement or equivalent subscription rights to install this update. When you update the site, the **Licensing** page presents the option to confirm your **Software Assurance expiration date**.

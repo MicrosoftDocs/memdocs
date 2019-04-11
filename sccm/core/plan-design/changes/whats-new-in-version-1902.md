@@ -2,7 +2,7 @@
 title: What's new in version 1902
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1902 of Configuration Manager current branch.
-ms.date: 03/27/2019
+ms.date: 04/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -17,7 +17,7 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Update 1902 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1710, 1802, 1806, or 1810. <!-- baseline only statement:-->When installing a new site, it's also available as a baseline version. This article summarizes the changes and new features in Configuration Manager, version 1902.  
+Update 1902 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1802, 1806, or 1810. <!-- baseline only statement:-->When installing a new site, it's also available as a baseline version. This article summarizes the changes and new features in Configuration Manager, version 1902.  
 
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 1902](/sccm/core/servers/manage/checklist-for-installing-update-1902). After you update a site, also review the [Post-update checklist](/sccm/core/servers/manage/checklist-for-installing-update-1902#post-update-checklist).
 
@@ -117,9 +117,9 @@ You can now associate a cloud management gateway (CMG) with a boundary group. Th
 
 ### Run CMPivot from the central administration site
 <!--3610960-->
-Configuration Manager now supports running CMPivot from the central administration site in a hierarchy. The primary site still handles the communication to the client. When running CMPivot from the central administration site, it communicates with the primary site over the high-speed message subscription channel. This communication doesn't rely upon standard SQL replication between sites.
+***[Updated]*** Configuration Manager now supports running CMPivot from the central administration site in a hierarchy. The primary site still handles the communication to the client. When running CMPivot from the central administration site, it communicates with the primary site over the high-speed message subscription channel. This communication doesn't rely upon standard SQL replication between sites.
 
-<!-- For more information, see [CMPivot for real-time data](/sccm/core/servers/manage/cmpivot). -->
+For more information, see [CMPivot for real-time data](/sccm/core/servers/manage/cmpivot#bkmk_cmpivot1902).
 
 
 ### Edit or copy PowerShell scripts
@@ -339,19 +339,19 @@ Specify these settings in the **Software Center** group of client settings.
 
 ### Specify priority for feature updates in Windows 10 servicing
 <!--3734525-->
-Adjust the priority with which clients install a feature update through [Windows 10 servicing](/sccm/osd/deploy-use/manage-windows-as-a-service). By default, clients now install feature updates with higher processing priority. 
+***[Updated]*** Adjust the priority with which clients install a feature update through [Windows 10 servicing](/sccm/osd/deploy-use/manage-windows-as-a-service). By default, clients now install feature updates with higher processing priority. 
 
 Use client settings to configure this option. In the **Software Updates** group, configure the following setting: **Specify thread priority for feature updates**. 
 
-<!-- For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-updates). -->
+For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-updates). 
 
 
 
 ## <a name="bkmk_o365"></a> Office management
 
-### Move Windows known folders to OneDrive
+### Redirect Windows known folders to OneDrive
 <!--3556021-->
-Use Configuration Manager to move Windows known folders to OneDrive for Business. These folders include Desktop, Documents, and Pictures. To simplify your Windows 10 upgrades from Windows 7, deploy these settings to your Windows 7 clients before deploying a task sequence. 
+***[Updated]*** Use Configuration Manager to move Windows known folders to OneDrive for Business. These folders include Desktop, Documents, and Pictures. To simplify your Windows 10 upgrades, deploy these settings to Windows 7 clients before deploying a task sequence. 
 
 For more information on this feature of OneDrive for Business, see [Redirect and move Windows known folders to OneDrive](https://docs.microsoft.com/onedrive/redirect-known-folders).
 
@@ -359,23 +359,23 @@ First, [find your Office 365 tenant ID](https://docs.microsoft.com/onedrive/find
 
 To create and deploy a OneDrive for Business profile, in the Configuration Manager console, go to the **Assets and Compliance** workspace. Expand **Compliance Settings**, and select the **OneDrive for Business Profiles** node.  
 
-<!-- For more information, see [Redirect Windows known folders to OneDrive](/sccm/compliance/deploy-use/onedrive-profile). -->
+For more information, see the Redirect Windows known folders to OneDrive section in the [OneDrive for Business Profiles](/sccm/compliance/deploy-use/onedrive-profile) article.
 
 
-### Integration with analytics for Office 365 ProPlus readiness
+### Integration for Office 365 ProPlus readiness
 <!--3735402-->
-Use Configuration Manager to identify devices with high confidence that are ready to upgrade to Office 365 ProPlus. By integrating with Office analytics, it provides insights into any potential compatibility issues with Office add-ins and macros used in your environment. Then use Configuration Manager to deploy Office to ready devices. 
+***[Updated]*** Use Configuration Manager to identify devices with high confidence that are ready to upgrade to Office 365 ProPlus. The integration provides insights into any potential compatibility issues with Office add-ins and macros used in your environment. Then use Configuration Manager to deploy Office to ready devices. 
 
 The existing Office 365 client management dashboard now includes a new tile, **Office 365 ProPlus Upgrade Readiness**.
 
-<!-- For more information, see [Office 365 client management dashboard](/sccm/sum/deploy-use/manage-office-365-proplus-updates#office-365-client-management-dashboard) -->
+For more information, see [Office 365 client management dashboard](/sccm/sum/deploy-use/office-365-dashboard#bkmk_o365_readiness)
 
 
 ### Additional languages for Office 365 updates
 <!--3555955-->
-Configuration Manager now supports all supported languages for Office 365 client updates. The update workflow now separates the 38 languages for **Windows Update** from the 103 languages for **Office 365 Client Update**. 
+Configuration Manager now supports all supported languages for Office 365 client updates. The update workflow now separates the 38 languages for **Windows Update** from the numerous languages for **Office 365 Client Update**. 
 
-<!-- For more information, see [Office 365 client management dashboard](/sccm/sum/deploy-use/manage-office-365-proplus-updates#office-365-client-management-dashboard) -->
+For more information, see [Manage Office 365 updates](/sccm/sum/deploy-use/manage-office-365-proplus-updates#bkmk_o365_lang)
 
 
 ### Office products on lifecycle dashboard
@@ -436,16 +436,16 @@ This notification is a bar at the top of the console window below the ribbon. It
 
 ### Confirmation of console feedback
 <!--3556010-->
-When you send [feedback](/sccm/core/understand/find-help#product-feedback) in the Configuration Manager console, it now shows a confirmation message. This message includes a **Feedback ID**, which you can give to Microsoft as a tracking identifier. 
+***[Updated]*** When you send [feedback](/sccm/core/understand/find-help#product-feedback) in the Configuration Manager console, it now shows a confirmation message. This message includes a **Feedback ID**, which you can give to Microsoft as a tracking identifier.
 
-<!-- For more information, see [Product feedback](/sccm/core/understand/find-help#product-feedback). -->
+For more information, see [Product feedback](/sccm/core/understand/find-help#bkmk_feedbackid).
 
 
 ### View recently connected consoles 
 <!--3699367-->
-You can now view the most recent connections for the Configuration Manager console. The view includes active connections and those consoles that recently connected. In the Configuration Manager console, go to the **Administration** workspace, expand **Security**, and select the **Console Connections** node.
+***[Updated]*** You can now view the most recent connections for the Configuration Manager console. The view includes active connections and those consoles that recently connected. In the Configuration Manager console, go to the **Administration** workspace, expand **Security**, and select the **Console Connections** node.
 
-<!-- For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console). -->
+For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#bkmk_viewconnected).
 
 
 ### In-console documentation dashboard
@@ -465,6 +465,19 @@ You can now search for a MAC address in a device view of the Configuration Manag
 To improve the accessibility features of the Configuration Manager console, update .NET to version 4.7 or later on the computer running the console. 
 
 For more information, see [Accessibility features in Configuration Manager](/sccm/core/understand/accessibility-features).
+
+
+### Changes to console setup process
+
+<!-- 3612513 -->
+***[Updated]*** There are new components required when installing the Configuration Manager console. If you create a package for installing the console on other computers, make sure the package includes the following files:
+
+- ConsoleSetup.exe
+- AdminConsole.msi
+- ConfigMgr.AC_Extension.i386.cab
+- ConfigMgr.AC_Extension.amd64.cab
+
+When you install or update a site server, it copies these installation files and supported language packs for the site to the **Tools\ConsoleSetup** subfolder. For more information, see [Install the Configuration Manager console](/sccm/core/servers/deploy/install/install-consoles).
 
 
 
