@@ -54,7 +54,7 @@ Previously you had to manually enable the client for wake on LAN in the properti
 1. Select the client settings you want to edit, or create new custom client settings to deploy. For more information, see [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings).
 1. Under the **Power Management** client settings, select **Enable** for the **Allow network wake-up** setting. For more information about this setting, see [About client settings](/sccm/core/clients/deploy/about-client-settings#power-management).
 
->![NOTE]
+>[!NOTE]
 > Starting in Configuration Manager 1902, you can also specify the UDP port for the the **Allow network wake-up** client setting. Change the **Wake On LAN port number (UDP)** [client setting](/sccm/core/clients/deploy/about-client-settings#power-management).
 <!--3605925-->
 
