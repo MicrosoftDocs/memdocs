@@ -43,7 +43,7 @@ Devices are running a security update older than Latest-1.
 #### Not measured
 Desktop Analytics hasn't assessed the device. 
 
-- For Windows, this includes devices running Windows 7 or Windows 8.1  
+- For Windows, this includes devices running Windows 7, Windows 8.1, or Windows 10 devices registered for the Windows Insider Program  
 
 - For Office, this includes devices with one of the following versions:  
 
@@ -76,12 +76,12 @@ Devices are running the latest feature update for that version and channel.
 Devices are running a feature update that's within 90 days of reaching end of service.
 
 #### End of service
-Devices are running a feature update that's past the end of service date. For details about end of service dates, see {xlink into relevant section of UDR_monitoring}|
+Devices are running a feature update that's past the end of service date. For details about end of service dates, see [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)  <!-- {xlink into relevant section of UDR_monitoring}|-->
 
 #### Not measured
 Desktop Analytics hasn't assessed the device. 
 
-- For Windows, this includes devices running Windows 7 or Windows 8.1  
+- For Windows, this includes devices running Windows 7, Windows 8.1, or Windows 10 devices registered for the Windows Insider Program
 
 - For Office, this includes devices with one of the following versions:  
 
