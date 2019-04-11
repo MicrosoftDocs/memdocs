@@ -469,6 +469,19 @@ The following log files are on the Configuration Manager client in the following
 
 
 
-## <a name="bkmk_MALogAnalyticsReader"></a> MALogAnalyticsReader application role
+## <a name="bkmk_AzureADApps"></a> Azure AD applications 
 
-When you set up Desktop Analytics, you accept a consent on behalf of your organization. This consent is to assign the 
+Desktop Analytics adds the following Enterprise applications to your Azure AD: 
+
+- **Configuration Manager Microservice** connects Configuration Manager with Desktop Analytics. This app has no access requirements
+
+- **Office 365 Client Admin** retrieves data from your Log Analytics workspace. This app requires write access to Log Analytics
+
+- **MALogAnalyticsReader** retrieves details OMS groups and devices attached created in Log Analytics
+
+If you need to provision these apps after completing set up, in the **Connected services** pane, select  **Configure users and apps access** and provision the apps.  
+
+- **Azure AAD app for Configuration Manager**. See [Create app for Configuration Manager](/sccm/desktop-analytics/set-up#create-app-for-configuration-manager) if you need to provision or troubleshoot connection issues after completing set up. This app requires  **Write CM Collection Data** and **Read CM Collection Data** on the **Configuration Manager Service** API.
+
+
+
