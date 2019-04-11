@@ -2,7 +2,7 @@
 title: What's new in version 1902
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1902 of Configuration Manager current branch.
-ms.date: 04/12/2019
+ms.date: 04/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -169,9 +169,9 @@ When connecting to a client with two or more monitors, it can be difficult to vi
 
 ### Specify a custom port for peer wakeup
 <!--3605925-->
-You can now specify a custom port number for wake-up proxy. In client settings, in the **Power Management** group, configure the setting for **Wake On LAN port number (UDP)**.  
+***[Updated]***  You can now specify a custom port number for wake-up proxy. In client settings, in the **Power Management** group, configure the setting for **Wake On LAN port number (UDP)**.  
 
-<!-- For more information, see [How to configure Wake on LAN](/sccm/core/clients/deploy/configure-wake-on-lan). -->
+For more information, see [How to configure Wake on LAN](/sccm/core/clients/deploy/configure-wake-on-lan).
 
 
 
@@ -341,7 +341,7 @@ Specify these settings in the **Software Center** group of client settings.
 <!--3734525-->
 ***[Updated]*** Adjust the priority with which clients install a feature update through [Windows 10 servicing](/sccm/osd/deploy-use/manage-windows-as-a-service). By default, clients now install feature updates with higher processing priority. 
 
-Use client settings to configure this option. In the **Software Updates** group, configure the following setting: **Specify thread priority for feature updates**. 
+Use client settings to configure this option. In the **Software Updates** group, configure the following setting: **Specify thread priority for feature updates**.
 
 For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-updates). 
 

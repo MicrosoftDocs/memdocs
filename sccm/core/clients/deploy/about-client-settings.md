@@ -446,7 +446,7 @@ Choose one of the following options for this setting:
 
 
 
-##  Power management  
+## Power management  
 
 ### Allow power management of devices
 
