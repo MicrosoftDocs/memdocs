@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 03/21/2019
+ms.date: 04/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -785,7 +785,8 @@ Starting in Configuration Manager version 1902, you can adjust the priority with
 
 This client setting provides the following options:
 
-- **Normal**: Windows Setup uses more system resources and updates faster. It uses more processor time, so the total installation time is shorter, but the user's outage is longer. This value is the default.  
+- **Not Configured**: Configuration Manager doesn't change the setting. Admins can pre-stage their own setupconfig.ini file. This value is the default. 
+- **Normal**: Windows Setup uses more system resources and updates faster. It uses more processor time, so the total installation time is shorter, but the user's outage is longer.  
    - Configures the setupconfig.ini file on the device with the `/Priority Normal` [Windows setup command-line option](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
 
 - **Low**: You can continue to work on the device while it downloads and updates in the background. The total installation time is longer, but the user's outage is shorter. You may need to increase the update max run time to avoid a time out when using this option.
