@@ -30,6 +30,10 @@ You can wake up a single client or any sleeping clients in a collection. For dev
    - IPv6
    - 802.1x network authentication
 
+### Security role permissions
+
+- **Notify resource** under the Collection category
+
 ### To configure Wake on LAN for the site starting in version 1810
 
 Each Configuration Manager site where you want to use Wake on LAN should have the setting enabled. To enable Wake on LAN for a site, use the below instructions:
@@ -47,11 +51,11 @@ Each Configuration Manager site where you want to use Wake on LAN should have th
 Previously you had to manually enable the client for wake on LAN in the properties of the network adapter. Configuration Manager 1810 includes a new client setting called **Allow network wake-up**. Configure and deploy this setting instead of modifying the properties of the network adapter.
 
 1. Under **Administration**, go to **Client Settings**.
-1. Select the client settings you want to edit, or create new custom client settings to deploy. For more information, see [How to configure client settings](sccm/core/clients/deploy/configure-client-settings).
+1. Select the client settings you want to edit, or create new custom client settings to deploy. For more information, see [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings).
 1. Under the **Power Management** client settings, select **Enable** for the **Allow network wake-up** setting. For more information about this setting, see [About client settings](/sccm/core/clients/deploy/about-client-settings#power-management).
 
 >![NOTE]
-> Starting in Configuration Manager 1902, you can also specify the UDP port for the the **Allow network wake-up** client setting. Change the **Wake On LAN port number (UDP)** [client setting]/sccm/core/clients/deploy/about-client-settings#power-management).
+> Starting in Configuration Manager 1902, you can also specify the UDP port for the the **Allow network wake-up** client setting. Change the **Wake On LAN port number (UDP)** [client setting](/sccm/core/clients/deploy/about-client-settings#power-management).
 <!--3605925-->
 
 ## <a name="bkmk_wol-previous"></a>  Wake on LAN for version 1802 and earlier

@@ -16,30 +16,14 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
+ Configuration Manager supports traditional wake-up packets to wake up computers in sleep mode when you want to install required software, such as software updates and applications. 
+
+> ![WARNING]
+> This article describes Wake on LAN functionality prior to Configuration Manager version 1810. While both versions of Wake on LAN can exist simultaneously, it's recommended you use the newer version. For more information about how to enable Wake on LAN and how it functions in 1810, see [How to configure Wake on LAN](/sccm/core/clients/deploy/configure-wake-on-lan)  
+
+## How to wake up clients in System Center Configuration Manager 
+
  Configuration Manager supports traditional wake-up packets to wake up computers in sleep mode when you want to install required software, such as software updates and applications.  
-
-## Waking up clients starting in version 1810
-<!--1317364-->
-You can wake up clients from the Configuration Manager console, even if the client isn't on the same subnet as the site server. If you need to do maintenance or query devices, you're not limited by remote clients that are asleep. The site server uses the client notification channel to identify another client that's awake on the same remote subnet. The awake client then sends a wake on LAN request (magic packet). You can select a single device to wake up, or select a collection to wake up any sleeping machines within the collection.
-
-For each device that is asleep, two online clients in the same subnet are selected as wakers. If you are waking up more than one device, the wakers chosen for the second device might be  different from the wakers chosen for the first device.  
-
-### Security role permissions
-
-- **Notify resource** under the Collection category
-
-### Limitations
-
-- Manually enable the client for wake on LAN. This setting is typically on the properties of the network adapter. Check with the vendor of your network adapter for more specific information.
-- At least one client in the target subnet must be awake.
-- This feature doesn't support the following network technologies:
-  - IPv6
-  - 802.1x network authentication
-
-
-
-
-## Waking up clients for version 1802 and prior
 
 You can supplement the traditional wake-up packet method by using the wake-up proxy client settings. Wake-up proxy uses a peer-to-peer protocol and elected computers to check whether other computers on the subnet are awake, and to wake them if necessary. When the site is configured for Wake On LAN and clients are configured for wake-up proxy, the process works as follows:  
 
@@ -101,7 +85,7 @@ If you want to wake up computers for scheduled software installation, you must c
 
 Decide whether to use subnet-directed broadcast packets, or unicast packets, and what UDP port number to use. By default, traditional wake-up packets are transmitted by using UDP port 9, but to help increase security, you can select an alternative port for the site if this alternative port is supported by intervening routers and firewalls.  
 
-### Choose Between Unicast and Subnet-Directed Broadcast for Wake-on-LAN  
+## Choose Between Unicast and Subnet-Directed Broadcast for Wake-on-LAN  
  If you chose to wake up computers by sending traditional wake-up packets, you must decide whether to transmit unicast packets or subnet-direct broadcast packets. If you use wake-up proxy, you must use unicast packets. Otherwise, use the following table to help you determine which transmission method to choose.  
 
 |Transmission method|Advantage|Disadvantage|  
