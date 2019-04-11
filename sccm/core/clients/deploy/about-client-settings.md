@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 03/21/2019
+ms.date: 04/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -779,11 +779,23 @@ When you set this option to **Yes**, it enables the configuration of Office 365 
 
 When you set this option to **Yes** and the client has at least one "Software Update" maintenance window defined, software updates will install during an "All deployments" maintenance window. By default, this setting is set to **No**. This client setting was added in Configuration Manager version 1810. <!--2839307-->
 
+### <a name="bkmk_thread-priority"></a> Specify thread priority for feature updates
+<!--3734525-->
+Starting in Configuration Manager version 1902, you can adjust the priority with which Windows 10 version 1709 or later clients install a feature update through [Windows 10 servicing](/sccm/osd/deploy-use/manage-windows-as-a-service). This setting has no impact on Windows 10 in-place upgrade task sequences.
+
+This client setting provides the following options:
+
+- **Not Configured**: Configuration Manager doesn't change the setting. Admins can pre-stage their own setupconfig.ini file. This value is the default. 
+- **Normal**: Windows Setup uses more system resources and updates faster. It uses more processor time, so the total installation time is shorter, but the user's outage is longer.  
+   - Configures the setupconfig.ini file on the device with the `/Priority Normal` [Windows setup command-line option](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
+
+- **Low**: You can continue to work on the device while it downloads and updates in the background. The total installation time is longer, but the user's outage is shorter. You may need to increase the update max run time to avoid a time out when using this option.
+  - Removes the `/Priority` [Windows setup command-line option](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) from the setupconfig.ini file.
+
+
 ### Enable third party software updates 
 
 When you set this option to **Yes**, it sets the policy for 'Allow signed updates for an intranet Microsoft update service location' and installs the signing certificate to the Trusted Publisher store on the client. This client setting was added in Configuration Manager version 1802.
-
-
 
 ## State Messaging
 

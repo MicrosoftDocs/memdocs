@@ -2,7 +2,7 @@
 title: What's new in version 1902
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1902 of Configuration Manager current branch.
-ms.date: 04/10/2019
+ms.date: 04/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -17,7 +17,7 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Update 1902 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1710, 1802, 1806, or 1810. <!-- baseline only statement:-->When installing a new site, it's also available as a baseline version. This article summarizes the changes and new features in Configuration Manager, version 1902.  
+Update 1902 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1802, 1806, or 1810. <!-- baseline only statement:-->When installing a new site, it's also available as a baseline version. This article summarizes the changes and new features in Configuration Manager, version 1902.  
 
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 1902](/sccm/core/servers/manage/checklist-for-installing-update-1902). After you update a site, also review the [Post-update checklist](/sccm/core/servers/manage/checklist-for-installing-update-1902#post-update-checklist).
 
@@ -339,11 +339,11 @@ Specify these settings in the **Software Center** group of client settings.
 
 ### Specify priority for feature updates in Windows 10 servicing
 <!--3734525-->
-Adjust the priority with which clients install a feature update through [Windows 10 servicing](/sccm/osd/deploy-use/manage-windows-as-a-service). By default, clients now install feature updates with higher processing priority. 
+***[Updated]*** Adjust the priority with which clients install a feature update through [Windows 10 servicing](/sccm/osd/deploy-use/manage-windows-as-a-service). By default, clients now install feature updates with higher processing priority. 
 
 Use client settings to configure this option. In the **Software Updates** group, configure the following setting: **Specify thread priority for feature updates**. 
 
-<!-- For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-updates). -->
+For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-updates). 
 
 
 
@@ -351,7 +351,7 @@ Use client settings to configure this option. In the **Software Updates** group,
 
 ### Redirect Windows known folders to OneDrive
 <!--3556021-->
-Use Configuration Manager to move Windows known folders to OneDrive for Business. These folders include Desktop, Documents, and Pictures. To simplify your Windows 10 upgrades, deploy these settings to Windows 7 clients before deploying a task sequence. 
+***[Updated]*** Use Configuration Manager to move Windows known folders to OneDrive for Business. These folders include Desktop, Documents, and Pictures. To simplify your Windows 10 upgrades, deploy these settings to Windows 7 clients before deploying a task sequence. 
 
 For more information on this feature of OneDrive for Business, see [Redirect and move Windows known folders to OneDrive](https://docs.microsoft.com/onedrive/redirect-known-folders).
 
@@ -359,7 +359,7 @@ First, [find your Office 365 tenant ID](https://docs.microsoft.com/onedrive/find
 
 To create and deploy a OneDrive for Business profile, in the Configuration Manager console, go to the **Assets and Compliance** workspace. Expand **Compliance Settings**, and select the **OneDrive for Business Profiles** node.  
 
-<!-- For more information, see [Redirect Windows known folders to OneDrive](/sccm/compliance/deploy-use/onedrive-profile). -->
+For more information, see the Redirect Windows known folders to OneDrive section in the [OneDrive for Business Profiles](/sccm/compliance/deploy-use/onedrive-profile) article.
 
 
 ### Integration for Office 365 ProPlus readiness

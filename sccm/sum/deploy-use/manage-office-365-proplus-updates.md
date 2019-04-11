@@ -5,7 +5,7 @@ description: "Configuration Manager synchronizes Office 365 client updates from 
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/10/2019
+ms.date: 04/11/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -142,7 +142,7 @@ You can add support for Configuration Manager to download updates for any langua
 ### Download updates for additional languages in version 1902
 <!--3555955-->
 
-Starting in Configuration Manager version 1902, the update workflow separates the 38 languages for **Windows Update** from the numerous languages for **Office 365 Client Update**.
+Starting in Configuration Manager version 1902, the update workflow separates the 38 languages for **Windows Update** from the numerous additional languages for **Office 365 Client Update**.
 
 To select the necessary languages, use the **Language Selection** page in the following locations:
 - Create Automatic Deployment Rule Wizard
