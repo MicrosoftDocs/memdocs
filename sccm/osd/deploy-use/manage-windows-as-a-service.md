@@ -2,7 +2,7 @@
 title: Manage Windows as a Service
 titleSuffix: Configuration Manager
 description: View the state of Windows as a Service (WaaS) using Configuration Manager, create servicing plans to form deployment rings, and view alerts when Windows 10 clients are near end of support.
-ms.date: 03/15/2017
+ms.date: 04/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -49,6 +49,7 @@ ms.collection: M365-identity-device-management
 -   Internet Explorer 9 or later must be installed on the computer that runs the Configuration Manager console.  
 
 -   Software updates must be configured and synchronized. Select the **Upgrades** classification and synchronize software updates before any Windows 10 feature upgrades are available in the Configuration Manager console. For more information, see [Prepare for software updates management](../../sum/get-started/prepare-for-software-updates-management.md).  
+- Starting in Configuration Manager version 1902, verify the **Specify thread priority for feature updates** [client setting](/sccm/core/clients/deploy/about-client-settings#bkmk_thread-priority) to ensure it's appropriate for your environment.
 
 ##  <a name="BKMK_ServicingDashboard"></a> Windows 10 servicing dashboard  
  The Windows 10 servicing dashboard provides you with information about Windows 10 computers in your environment, active servicing plans, compliance information, and so on. The data in the Windows 10 servicing dashboard is dependent on having the Service Connection Point installed. The dashboard has the following tiles:  
@@ -67,7 +68,7 @@ ms.collection: M365-identity-device-management
 
 -   **Service Plan Monitoring tile**: Display servicing plans that you have created and a chart of the compliance for each. This tile gives you a quick overview of the current state of the servicing plan deployments. If an earlier deployment ring meets your expectations for compliance, then you can select a later servicing plan (deploying ring) and click **Deploy Now** instead of waiting for the servicing plan rules to be triggered automatically.  
 
--   The **Windows 10 Builds tile**: Display is a fixed image time line that provides you an overview of the Windows 10 builds that are currently released and gives you a general idea of when builds transition into different states.  
+-   The **Windows 10 Builds tile**: Display is a fixed image time line that provides you an overview of the Windows 10 builds that are currently released and gives you a general idea of when builds transition into different states. This tile was removed starting in Configuration Manager version 1902 since more detailed information is offered in the [Product Lifecycle dashboard](/sccm/core/clients/manage/asset-intelligence/product-lifecycle-dashboard). <!--3446861-->
 
 > [!IMPORTANT]  
 >  The information shown in the Windows 10 servicing dashboard (such as the support lifecycle for Windows 10  versions) is provided for your convenience and only for use internally within your company. You should not solely rely on this information to confirm update compliance. Be sure to verify the accuracy of the information provided to you.  
