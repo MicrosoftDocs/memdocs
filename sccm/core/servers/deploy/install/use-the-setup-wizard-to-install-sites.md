@@ -113,6 +113,10 @@ If you're installing a central administration site as part of a site expansion s
 
     - **Installation folder**: This folder is the path to the Configuration Manager installation. You can't change the location after the site installs. The path can't contain Unicode characters or trailing spaces.  
 
+        > [!NOTE]  
+        > Install Configuration Manager to a separate partition. Do not use the default operating system partition, when installing Configuration Manager in a production environment.   
+
+
 11. On the **Site Installation** page, use the following option that matches your scenario:  
 
     - **I'm installing a central administration site:**  
