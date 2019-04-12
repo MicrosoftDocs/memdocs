@@ -16,35 +16,26 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Specify Wake on LAN settings for System Center Configuration Manager when you want to bring computers out of a sleep state to install required software, such as software updates, applications, task sequences, and programs.
+Specify Wake on LAN settings for System Center Configuration Manager when you want to bring computers out of a sleep state.
 
 ## Wake on LAN starting in version 1810
 <!--3607710-->
-Starting in Configuration Manager 1810, there is a new way to wake up machines when they're asleep. You can wake up clients from the Configuration Manager console, even if the client isn't on the same subnet as the site server. If you need to perform maintenance or query devices, you're not limited by remote clients that are asleep. The site server uses the client notification channel to identify two other clients that are awake on the same remote subnet, then uses those clients to send a wake on LAN request (magic packet). Using the client notification channel helps avoid MAC flaps, which could cause the port to be shut down by the router. The new version of Wake on LAN can be enabled at the same time as the [previous version](#bkmk_wol-previous) for Configuration manager version 1802 and prior.
-
-You can wake up a single client or any sleeping clients in a collection. For devices that are already awake in the collection, no action is taken for them. Only clients that are asleep will be sent a Wake on LAN request. For more information on how to notify a client to wake, see [Client notification](/sccm/core/clients/manage/client-notification).
+Starting in Configuration Manager 1810, there is a new way to wake up machines when they're asleep. You can wake up clients from the Configuration Manager console, even if the client isn't on the same subnet as the site server. If you need to perform maintenance or query devices, you're not limited by remote clients that are asleep. The site server uses the client notification channel to identify two other clients that are awake on the same remote subnet, then uses those clients to send a wake on LAN request (magic packet). Using the client notification channel helps avoid MAC flaps, which could cause the port to be shut down by the router. The new version of Wake on LAN can be enabled at the same time as the [previous version](#bkmk_wol-previous). 
 
 ### Limitations
-- At least one client in the target subnet must be awake. 
+
+- At least one client in the target subnet must be awake.
 - This feature doesn't support the following network technologies:
    - IPv6
    - 802.1x network authentication
+- Machines only wake up when you notify them through the **Wake Up** client notification.
+    - For wake up when a deadline occurs, the older version of Wake on LAN is used.
+    -  If the older version is not enabled, client wake up won't occur for deployments created with the settings **Use Wake-on-LAN to wake up clients for required deployments** or **Send wake-up packets**.  
+
 
 ### Security role permissions
 
 - **Notify resource** under the Collection category
-
-### To configure Wake on LAN for the site starting in version 1810
-
-Each Configuration Manager site where you want to use Wake on LAN should have the setting enabled. To enable Wake on LAN for a site, use the below instructions:
-
-1. Under **Administration**, expand **Site Configuration** then click on **Sites**.
-1. Select the site, then click **Properties** in the ribbon.
-1. Click on the **Wake On LAN** tab. 
-1. Check the box next to **Enable Wake On LAN for this site** and select **Unicast**. 
-1. Click **OK** to save the site property.
-
-![Enable Wake On LAN in the site properties](media/wol-site-properties.png)
 
 ### Configure the clients to use Wake on LAN starting in version 1810
 
@@ -54,11 +45,31 @@ Previously you had to manually enable the client for wake on LAN in the properti
 1. Select the client settings you want to edit, or create new custom client settings to deploy. For more information, see [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings).
 1. Under the **Power Management** client settings, select **Enable** for the **Allow network wake-up** setting. For more information about this setting, see [About client settings](/sccm/core/clients/deploy/about-client-settings#power-management).
 
->[!NOTE]
-> Starting in Configuration Manager 1902, you can also specify the UDP port for the the **Allow network wake-up** client setting. Change the **Wake On LAN port number (UDP)** [client setting](/sccm/core/clients/deploy/about-client-settings#power-management).
+4. Starting in Configuration Manager 1902, the new version of Wake on LAN honors the custom UDP port you specify for the **Wake On LAN port number (UDP)** [client setting](/sccm/core/clients/deploy/about-client-settings#power-management). This setting is shared by both the new and older version of Wake on LAN.
+ 
 <!--3605925-->
 
+### Wake up a client using client notification starting in 1810
+ 
+You can wake up a single client or any sleeping clients in a collection. For devices that are already awake in the collection, no action is taken for them. Only clients that are asleep will be sent a Wake on LAN request. For more information on how to notify a client to wake, see [Client notification](/sccm/core/clients/manage/client-notification).
+
+- **To wake up a single client:**
+Right-click on the client, go to **Client Notification**, then select **Wake up**.
+
+   ![Wake Up client notification in the console](media/wol-wake-up-client-notification.png)
+
+- **To wake up all sleeping clients in a collection:** Right-click on the device collection, go to **Client Notification**, then select **Wake up**.
+   - This action can't be run on built-in collections.
+   - When you have a mix of asleep and awake clients in a collection, only the clients that are asleep are sent a Wake on LAN request.  
+
+### What to expect when only the new version of Wake on LAN is enabled
+
+### What to expect when both versions of Wake on LAN are enabled
+
+
 ## <a name="bkmk_wol-previous"></a>  Wake on LAN for version 1802 and earlier
+
+Specify Wake on LAN settings for System Center Configuration Manager when you want to bring computers out of a sleep state to install required software, such as software updates, applications, task sequences, and programs.
 
 You can supplement Wake on LAN by using the wake-up proxy client settings. However, to use wake-up proxy, you must first enable Wake on LAN for the site and specify **Use wake-up packets only** and the **Unicast** option for the Wake on LAN transmission method. This wake-up solution also supports ad-hoc connections, such as a remote desktop connection.
 
@@ -79,7 +90,7 @@ Prior to Configuration manager version 1810, you need to enable Wake on LAN for 
 3. Click the **Wake on LAN** tab, and configure the options that you require for this site. To support wake-up proxy, make sure you select **Use wake-up packets only** and **Unicast**. For more information, see [Plan how to wake up clients in System Center Configuration Manager](../../../core/clients/deploy/plan/plan-wake-up-clients.md).
 4. Click **OK** and repeat the procedure for all primary sites in the hierarchy.
 
-
+![Enable Wake On LAN in the site properties](media/wol-site-properties.png)
 
 ### To configure wake-up proxy client settings
 

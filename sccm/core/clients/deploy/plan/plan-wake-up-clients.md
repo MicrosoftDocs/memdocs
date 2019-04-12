@@ -16,10 +16,10 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
- Configuration Manager supports traditional wake-up packets to wake up computers in sleep mode when you want to install required software, such as software updates and applications. 
+ Configuration Manager supports traditional wake-up packets to wake up computers in sleep mode when you want to install required software, such as software updates and applications.
 
-> [!WARNING]
-> This article describes Wake on LAN functionality prior to Configuration Manager version 1810. While both versions of Wake on LAN can exist simultaneously, it's recommended you use the newer version. For more information about how to enable Wake on LAN and how it functions in 1810, see [How to configure Wake on LAN](/sccm/core/clients/deploy/configure-wake-on-lan)  
+> [!NOTE]
+> This article describes an older version of Wake on LAN functionality. This functionality still exists in Configuration Manager version 1810, which also includes a newer version of Wake on LAN too. Both versions of Wake on LAN can be enabled simultaneously. For more information about how the new version of Wake on LAN functions starting in 1810 and enabling either or both versions, see [How to configure Wake on LAN](/sccm/core/clients/deploy/configure-wake-on-lan).  
 
 ## How to wake up clients in System Center Configuration Manager 
 
