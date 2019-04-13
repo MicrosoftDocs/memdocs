@@ -31,13 +31,20 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
 3. On the **Confirm your subscription** page, review the list of required qualifying licenses. Switch the setting to **Yes** next to **Do you have one of the supported or higher subscriptions**, and then select **Next**.  
 
-4. On the **Give users and apps access** page, Desktop Analytics pre-configures two security groups in Azure Active Directory:  
+4. On the **Give users access** page:
 
-    - **Workspace Owners**: Create and manage workspaces. These accounts need owner access to the Azure subscription.  
+    -  Select **Do you want Desktop Analytics to manage Directory roles for your users** if you want **Workspace Owners** and **Worskpace Contributors** to be automatically assigned the **Desktop Analytics Administrator** directory role (unless they are already a **Global Admin**). If you don't select this option, we'll still add users as members on the two security groups, and a **Global Admin** will need to assign the the **Desktop Analytics Administrator** role manually for every user. 
 
-    - **Workspace Contributors**: Create and manage deployment plans in this workspace. They don't need any additional Azure access.  
-  
-   To add a user to either group, type their name or e-mail address in the **Enter name or email address** section of the appropriate group. When finished, select **Next**. 
+   [Read more](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) about assigning Administrator role permissions in Azure Active Directory and the permissions assigned to **Desktop Analytics Administrators**
+
+    -  Desktop Analytics pre-configures two security groups in Azure Active Directory:
+
+       - **Workspace Owners**. Security group: M365 Analytics Client admins (Log Analytics Owners): Create and manage workspaces. These accounts need owner access to the Azure subscription.
+
+       - **Workspace Contributors**. Security group: M365 Analytics Client Admins (Log Analytics Contributors): Create and manage deployment plans in this workspace. They don't need any 
+additional Azure access.
+
+   To add a user to either group, type their name or e-mail address in the **Enter name or email address** section of the appropriate group. When finished, select **Next**.
 
 5. On the page to **Set up your workspace**:  
 
