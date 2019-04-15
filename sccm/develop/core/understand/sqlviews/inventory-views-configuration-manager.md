@@ -1,16 +1,16 @@
 ﻿---
-title: Inventory Views in Configuration Manager
-TOCTitle: Inventory Views in Configuration Manager
-ms:assetid: 0d9dae0c-b6f8-4c97-bc91-ad61862a932b
-ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dn581933(v=TechNet.10)
-ms:contentKeyID: 60772001
-ms.prod: "configuration-manager"
+title: Inventory Views
+titleSuffix: Configuration Manager
+description: Hardware and software inventory information about the clients, files, and products, in the Configuration Manager hierarchy.
+ms.date: 04/30/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other #app client compliance hybrid osd protect sum
 ms.topic: conceptual
+ms.collection: M365-identity-device-management
+ms.assetid: 4487dbcb-1652-454f-8c45-3f543db1ad50
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/30/2019
-mtps_version: v=TechNet.10
 ---
 
 # Inventory Views in Configuration Manager

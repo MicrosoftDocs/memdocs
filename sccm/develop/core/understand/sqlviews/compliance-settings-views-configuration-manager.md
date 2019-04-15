@@ -1,16 +1,16 @@
 ﻿---
-title: Compliance Settings Views in Configuration Manager
-TOCTitle: Compliance Settings Views in Configuration Manager
-ms:assetid: 0c8e4899-38fc-4674-b08e-9ea932d66cf9
-ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dn581939(v=TechNet.10)
-ms:contentKeyID: 60772008
-ms.prod: "configuration-manager"
+title: Compliance Settings Views
+titleSuffix: Configuration Manager
+description: Information about the compliance of devices with regard to a number of configurations.
+ms.date: 04/30/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other #app client compliance hybrid osd protect sum
 ms.topic: conceptual
+ms.collection: M365-identity-device-management
+ms.assetid: cf84f727-0993-455b-9184-313bc10a3ce2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/30/2019
-mtps_version: v=TechNet.10
 ---
 
 # Compliance Settings Views in Configuration Manager

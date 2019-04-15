@@ -1,16 +1,16 @@
 ﻿---
-title: Endpoint Protection Views in Configuration Manager
-TOCTitle: Endpoint Protection Views in Configuration Manager
-ms:assetid: 90ed5fb6-f8f9-466a-9e6a-6cd57a9c022e
-ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dn581986(v=TechNet.10)
-ms:contentKeyID: 60772049
-ms.prod: "configuration-manager"
+title: Endpoint Protection Views
+titleSuffix: Configuration Manager
+description: Information about the status of Endpoint Protection clients and malware activity in your Configuration Manager site.
+ms.date: 04/30/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other #app client compliance hybrid osd protect sum
 ms.topic: conceptual
+ms.collection: M365-identity-device-management
+ms.assetid: 5f6b3676-b5d8-48f7-92c7-35366169a855
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/30/2019
-mtps_version: v=TechNet.10
 ---
 
 # Endpoint Protection Views in Configuration Manager

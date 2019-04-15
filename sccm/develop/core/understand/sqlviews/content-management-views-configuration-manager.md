@@ -1,16 +1,16 @@
 ﻿---
-title: Content Management Views in Configuration Manager
-TOCTitle: Content Management Views in Configuration Manager
-ms:assetid: 0a3b2c22-fdc4-40aa-b624-00ba84fa7cf3
-ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dn581930(v=TechNet.10)
-ms:contentKeyID: 60771999
-ms.prod: "configuration-manager"
+title: Content Management Views
+titleSuffix: Configuration Manager
+description: Provides the tools for you to manage content files for applications, packages, software updates, and operating system deployment.
+ms.date: 04/30/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other #app client compliance hybrid osd protect sum
 ms.topic: conceptual
+ms.collection: M365-identity-device-management
+ms.assetid: 80e86983-2e3b-4a10-9755-5f0d98688462
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/30/2019
-mtps_version: v=TechNet.10
 ---
 
 # Content Management Views in Configuration Manager

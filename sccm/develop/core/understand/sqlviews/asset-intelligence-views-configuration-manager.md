@@ -1,16 +1,16 @@
 ﻿---
-title: Asset Intelligence Views in Configuration Manager
-TOCTitle: Asset Intelligence Views in Configuration Manager
-ms:assetid: ee32267f-84c5-4989-b013-ecb3ad0acb3f
-ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dn582014(v=TechNet.10)
-ms:contentKeyID: 60772079
-ms.prod: "configuration-manager"
+title: Asset Intelligence Views
+titleSuffix: Configuration Manager
+description: Information about software applications that are in use throughout the Configuration Manager hierarchy.
+ms.date: 04/30/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other #app client compliance hybrid osd protect sum
 ms.topic: conceptual
+ms.collection: M365-identity-device-management
+ms.assetid: a2ab0d62-4053-4a59-8c5c-613604275909
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/30/2019
-mtps_version: v=TechNet.10
 ---
 
 # Asset Intelligence Views in Configuration Manager

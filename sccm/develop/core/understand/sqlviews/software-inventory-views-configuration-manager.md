@@ -1,16 +1,16 @@
 ﻿---
-title: Software Inventory Views in Configuration Manager
-TOCTitle: Software Inventory Views in Configuration Manager
-ms:assetid: b3f0c153-cd0c-4dab-9494-2b1d565ccc11
-ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dn581987(v=TechNet.10)
-ms:contentKeyID: 60772052
-ms.prod: "configuration-manager"
+title: Software Inventory Views
+titleSuffix: Configuration Manager
+description: Information about the files and their associated products that are found on Configuration Manager clients during software inventory scanning.
+ms.date: 04/30/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other #app client compliance hybrid osd protect sum
 ms.topic: conceptual
+ms.collection: M365-identity-device-management
+ms.assetid: 65066949-cce6-4202-b8e7-f4e1014ee470
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/30/2019
-mtps_version: v=TechNet.10
 ---
 
 # Software Inventory Views in Configuration Manager

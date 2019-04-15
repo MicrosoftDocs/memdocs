@@ -1,16 +1,16 @@
 ﻿---
-title: Client Status Views in Configuration Manager
-TOCTitle: Client Status Views in Configuration Manager
-ms:assetid: eaf5943c-1c0b-4a16-be8a-1960062a8ad0
-ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dn582002(v=TechNet.10)
-ms:contentKeyID: 60800490
-ms.prod: "configuration-manager"
+title: Client Status Views
+titleSuffix: Configuration Manager
+description: Information about the client status components on Configuration Manager client computers.
+ms.date: 04/30/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other #app client compliance hybrid osd protect sum
 ms.topic: conceptual
+ms.collection: M365-identity-device-management
+ms.assetid: 9f7f8cc5-8173-4a3d-be97-02c1686a3751
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/30/2019
-mtps_version: v=TechNet.10
 ---
 
 # Client Status Views in Configuration Manager

@@ -1,16 +1,16 @@
 ﻿---
-title: Collection Views in Configuration Manager
-TOCTitle: Collection Views in Configuration Manager
-ms:assetid: b3dbb4d3-9cb6-46a2-8e85-e88e1c208366
-ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dn581985(v=TechNet.10)
-ms:contentKeyID: 60772048
-ms.prod: "configuration-manager"
+title: Collection Views
+titleSuffix: Configuration Manager
+description: Information about the collections, collection rules, and collection members.
+ms.date: 04/30/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other #app client compliance hybrid osd protect sum
 ms.topic: conceptual
+ms.collection: M365-identity-device-management
+ms.assetid: fbccfda5-8577-41ba-9e89-ce027e1917e2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/30/2019
-mtps_version: v=TechNet.10
 ---
 
 # Collection Views in Configuration Manager

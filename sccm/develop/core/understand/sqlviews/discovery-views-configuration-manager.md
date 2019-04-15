@@ -1,16 +1,16 @@
 ﻿---
-title: Discovery Views in Configuration Manager
-TOCTitle: Discovery Views in Configuration Manager
-ms:assetid: 06c46d1e-02f3-4cef-9346-02764a27daea
-ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dn581928(v=TechNet.10)
-ms:contentKeyID: 60771996
-ms.prod: "configuration-manager"
+title: Discovery Views
+titleSuffix: Configuration Manager
+description: System resource objects, which include any resources that were discovered on the network.
+ms.date: 04/30/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other #app client compliance hybrid osd protect sum
 ms.topic: conceptual
+ms.collection: M365-identity-device-management
+ms.assetid: 3692e025-4c24-4b5e-a4b0-a55039c92b21
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/30/2019
-mtps_version: v=TechNet.10
 ---
 
 # Discovery Views in Configuration Manager

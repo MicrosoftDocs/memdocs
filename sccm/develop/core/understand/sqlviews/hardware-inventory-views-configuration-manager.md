@@ -1,16 +1,16 @@
 ﻿---
-title: Hardware Inventory Views in Configuration Manager
-TOCTitle: Hardware Inventory Views in Configuration Manager
-ms:assetid: 00dd05ed-da54-4575-9657-9a2c18fd460e
-ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dn581927(v=TechNet.10)
-ms:contentKeyID: 60771998
-ms.prod: "configuration-manager"
+title: Hardware Inventory Views
+titleSuffix: Configuration Manager
+description: Information about the computer hardware scanned on Configuration Manager client computers.
+ms.date: 04/30/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other #app client compliance hybrid osd protect sum
 ms.topic: conceptual
+ms.collection: M365-identity-device-management
+ms.assetid: 8726c91b-de9d-4df0-9eb8-f9f62e109152
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/30/2019
-mtps_version: v=TechNet.10
 ---
 
 # Hardware Inventory Views in Configuration Manager

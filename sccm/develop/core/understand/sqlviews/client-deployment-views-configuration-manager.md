@@ -1,16 +1,16 @@
 ﻿---
-title: Client Deployment Views in Configuration Manager
-TOCTitle: Client Deployment Views in Configuration Manager
-ms:assetid: 46d2dfae-ab9c-4217-95f3-c140d616cc09
-ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dn581957(v=TechNet.10)
-ms:contentKeyID: 60772050
-ms.prod: "configuration-manager"
+title: Client Deployment Views
+titleSuffix: Configuration Manager
+description: Views that contain information about the deployment state of Configuration Manager client computers and devices.
+ms.date: 04/30/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other #app client compliance hybrid osd protect sum
 ms.topic: conceptual
+ms.collection: M365-identity-device-management
+ms.assetid: 35e57dfe-b6b5-483d-8c6f-00363b5417f5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/30/2019
-mtps_version: v=TechNet.10
 ---
 
 # Client Deployment Views in Configuration Manager
