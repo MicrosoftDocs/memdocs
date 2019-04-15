@@ -81,14 +81,15 @@ When you suspend a phased deployment, it sets the available and deadline times o
 
 ## <a name="bkmk_monitor"></a> Monitor
 <!--1358577-->
+Starting in version 1902, phased deployments have their own dedicated monitoring node, making it easier to identify phased deployments you have created and navigate to the phased deployment monitoring view. From the **Monitoring** workspace, select **Phased Deployments**, then double click one of the phased deployments to see the status.
 
-Starting in version 1806, phased deployments have a native monitoring experience. From the **Deployments** node in the **Monitoring** workspace, select a phased deployment, and then click **Phased Deployment Status** in the ribbon.
+In Configuration Manager 1806 and 1810, you can see the native monitoring experience for phased deployments. From the **Deployments** node in the **Monitoring** workspace, select a phased deployment, and then click **Phased Deployment Status** in the ribbon.
 
 ![Phased deployment status dashboard showing status of two phases](media/1358577-phased-deployment-status.png)
 
 This dashboard shows the following information for each phase in the deployment:  
 
-- **Total devices**: How many devices are targeted by this phase.  
+- **Total devices** or **Total resources**: How many devices are targeted by this phase.  
 
 - **Status**: The current status of this phase. Each phase can be in one of the following states:  
 
@@ -102,11 +103,11 @@ This dashboard shows the following information for each phase in the deployment:
 
 #### Success criteria tile
 
-Use the **Select Phase** drop-down list to change the display of the **Success Criteria** tile. This tile compares the **Phase Goal** against the current compliance of the deployment. With the default settings, the phase goal is 95%. This value means that the deployment needs a 95% compliance to move to the next phase. 
+Use the **Select Phase** drop-down list to change the display of the **Success Criteria** tile. This tile compares the **Phase Goal** against the current compliance of the deployment. With the default settings, the phase goal is 95%. This value means that the deployment needs a 95% compliance to move to the next phase.
 
-In this example, the phase goal is 65%, and the current compliance is 66.7%. The phased deployment automatically moved to the second phase, because the first phase met the success criteria.  
+In the example, the phase goal is 65%, and the current compliance is 66.7%. The phased deployment automatically moved to the second phase, because the first phase met the success criteria.  
 
-![Example Success Criteria tile from Phased Deployment Status](media/pod-status-success-criteria-tile.png)
+   ![Example Success Criteria tile from Phased Deployment Status where goal is 65%](media/pod-status-success-criteria-tile.png)
 
 The phase goal is the same as the **Deployment success percentage** on the Phase Settings for the *next* phase. For the phased deployment to start the next phase, that second phase defines the criteria for success of the first phase. To view this setting: 
 
