@@ -268,7 +268,7 @@ For more information, review M365AHandler.log on the client.
 #### Check end-user diagnostic data
 
 <!--1004-->
-If this check isn't successful, a user selected a lower Windows diagnostic data on the device.
+If this check isn't successful, a user selected a lower Windows diagnostic data on the device. It can also be caused by a conflicting group policy object. For more information, see [Windows settings](/sccm/desktop-analytics/enroll-devices#windows-settings).
 
 Depending upon your business requirements, you can disable user choice via group policy. Use the setting to **Configure telemetry opt-in setting user interface**. For more information, see [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management).
 
@@ -285,7 +285,7 @@ This property may display the following errors:
 
 For more information, review M365AHandler.log on the client.  
 
-Check the permissions on this registry key. Make sure that the local System account can access this key for the Configuration Manager client to set.  
+Check the permissions on this registry key. Make sure that the local System account can access this key for the Configuration Manager client to set. It can also be caused by a conflicting group policy object. For more information, see [Windows settings](/sccm/desktop-analytics/enroll-devices#windows-settings).  
 
 #### Commercial ID configuration
 
@@ -304,7 +304,7 @@ Otherwise, it may show one of the following errors:
 
 For more information, review M365AHandler.log on the client.  
 
-Check the permissions on this registry key. Make sure that the local System account can access this key for the Configuration Manager client to set.  
+Check the permissions on this registry key. Make sure that the local System account can access this key for the Configuration Manager client to set. It can also be caused by a conflicting group policy object. For more information, see [Windows settings](/sccm/desktop-analytics/enroll-devices#windows-settings).  
 
 There's a different ID for the device. This registry key is used by group policy. It takes precedence over the ID provided by Configuration Manager.  
 
@@ -337,7 +337,7 @@ Otherwise, it may show one of the following errors:
 
 For more information, review M365AHandler.log on the client.  
 
-Check the permissions on this registry key. Make sure that the local System account can access this key for the Configuration Manager client to set.  
+Check the permissions on this registry key. Make sure that the local System account can access this key for the Configuration Manager client to set. It can also be caused by a conflicting group policy object. For more information, see [Windows settings](/sccm/desktop-analytics/enroll-devices#windows-settings).  
 
 Make sure that another policy mechanism, such as group policy, isn't disabling this setting.
 
@@ -398,7 +398,7 @@ This property checks that Windows is properly configured to allow diagnostic dat
 - `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`
 - `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
 
-Check the permissions on these registry keys. Make sure that the local System account can access these keys for the Configuration Manager client to set.  
+Check the permissions on these registry keys. Make sure that the local System account can access these keys for the Configuration Manager client to set. It can also be caused by a conflicting group policy object. For more information, see [Windows settings](/sccm/desktop-analytics/enroll-devices#windows-settings).  
 
 For more information, review M365AHandler.log on the client.  
 
