@@ -81,7 +81,7 @@ When you suspend a phased deployment, it sets the available and deadline times o
 
 ## <a name="bkmk_monitor"></a> Monitor
 <!--1358577-->
-Starting in version 1902, phased deployments have their own dedicated monitoring node, making it easier to identify phased deployments you have created and navigate to the phased deployment monitoring view. From the **Monitoring** workspace, select **Phased Deployments**, then double click one of the phased deployments to see the status.
+Starting in version 1902, phased deployments have their own dedicated monitoring node, making it easier to identify phased deployments you have created and navigate to the phased deployment monitoring view. From the **Monitoring** workspace, select **Phased Deployments**, then double click one of the phased deployments to see the status. <!--3555949-->
 
 In Configuration Manager 1806 and 1810, you can see the native monitoring experience for phased deployments. From the **Deployments** node in the **Monitoring** workspace, select a phased deployment, and then click **Phased Deployment Status** in the ribbon.
 
