@@ -190,38 +190,43 @@
     - name: Creating Custom Reports by Using SQL Server Views
       href: core/understand/sqlviews/creating-custom-reports-using-sql-server-views.md
       items:
-      - name: SQL Server Views in Configuration Manager
-        href: core/understand/sqlviews/sql-server-views-configuration-manager.md
+      - name: SQL Server Views
         items:
-        - name: Application Management Views in Configuration Manager
+        - name: Overview
+          href: core/understand/sqlviews/sql-server-views-configuration-manager.md
+        - name: Application Management Views
           href: core/understand/sqlviews/application-management-views-configuration-manager.md
-        - name: Client Deployment Views in Configuration Manager
+        - name: Client Deployment Views
           href: core/understand/sqlviews/client-deployment-views-configuration-manager.md
-        - name: Client Status Views in Configuration Manager
+        - name: Client Status Views
           href: core/understand/sqlviews/client-status-views-configuration-manager.md
-        - name: Collection Views in Configuration Manager
+        - name: Collection Views
           href: core/understand/sqlviews/collection-views-configuration-manager.md
-        - name: Compliance Settings Views in Configuration Manager
+        - name: Compliance Settings Views
           href: core/understand/sqlviews/compliance-settings-views-configuration-manager.md
-        - name: Content Management Views in Configuration Manager
+        - name: Content Management Views
           href: core/understand/sqlviews/content-management-views-configuration-manager.md
-        - name: Discovery Views in Configuration Manager
+        - name: Discovery Views
           href: core/understand/sqlviews/discovery-views-configuration-manager.md
-        - name: Endpoint Protection Views in Configuration Manager
+        - name: Endpoint Protection Views
           href: core/understand/sqlviews/endpoint-protection-views-configuration-manager.md
-        - name: Inventory Views in Configuration Manager
-          href: core/understand/sqlviews/inventory-views-configuration-manager.md
+        - name: Inventory Views
           items:
-          - name: Hardware Inventory Views in Configuration Manager
+          - name: Overview of Inventory Views
+            href: core/understand/sqlviews/inventory-views-configuration-manager.md
+          - name: Hardware Inventory Views
             href: core/understand/sqlviews/hardware-inventory-views-configuration-manager.md
-          - name: Software Inventory Views in Configuration Manager
+          - name: Software Inventory Views
             href: core/understand/sqlviews/software-inventory-views-configuration-manager.md
-          - name: Asset Intelligence Views in Configuration Manager
+          - name: Asset Intelligence Views
             href: core/understand/sqlviews/asset-intelligence-views-configuration-manager.md
-      - name: Working with Reports in Configuration Manager
-        href: core/understand/sqlviews/working-with-reports-configuration-manager.md
-      - name: Technical Reference for SQL Server Views in Configuration Manager
+      - name: Working with Reports
+        - name: Overview
+          href: core/understand/sqlviews/working-with-reports-configuration-manager.md
+      - name: Technical Reference for SQL Server Views
         href: core/understand/sqlviews/technical-reference-sql-server-views-configuration-manager.md
+        - name: Overview
+          href: core/understand/sqlviews/technical-reference-sql-server-views-configuration-manager.md
   - name: SMS Provider in Configuration Manager
     href: core/understand/sms-provider-in-configuration-manager.md
     items:
