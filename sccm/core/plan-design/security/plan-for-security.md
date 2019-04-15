@@ -116,7 +116,7 @@ Consult your PKI administrators before you decide whether Configuration Manager 
 -   The requirement to check the CRL for each connection to a site system that's configured to use a PKI certificate is greater than the following requirements:  
     - Faster connections  
     - Efficient processing on the client  
-    - The risk of clients failing to connect to servers if they can't locate the CRL  
+    - The risk of clients failing to connect to servers if the CRL cannot be located  
 
 
 ###  <a name="BKMK_PlanningForRootCAs"></a> Plan for the PKI trusted root certificates and the certificate issuers list  
