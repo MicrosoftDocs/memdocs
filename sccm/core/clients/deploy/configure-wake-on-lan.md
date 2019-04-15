@@ -18,9 +18,9 @@ ms.collection: M365-identity-device-management
 
 Specify Wake on LAN settings for System Center Configuration Manager when you want to bring computers out of a sleep state.
 
-## Wake on LAN starting in version 1810
+## <a name="bkmk_wol-1810"></a> Wake on LAN starting in version 1810
 <!--3607710-->
-Starting in Configuration Manager 1810, there is a new way to wake up machines when they're asleep. You can wake up clients from the Configuration Manager console, even if the client isn't on the same subnet as the site server. If you need to perform maintenance or query devices, you're not limited by remote clients that are asleep. The site server uses the client notification channel to identify two other clients that are awake on the same remote subnet, then uses those clients to send a wake on LAN request (magic packet). Using the client notification channel helps avoid MAC flaps, which could cause the port to be shut down by the router. The new version of Wake on LAN can be enabled at the same time as the [previous version](#bkmk_wol-previous). 
+Starting in Configuration Manager 1810, there's a new way to wake up sleeping machines. You can wake up clients from the Configuration Manager console, even if the client isn't on the same subnet as the site server. If you need to do maintenance or query devices, you're not limited by remote clients that are asleep. The site server uses the client notification channel to identify two other clients that are awake on the same remote subnet, then uses those clients to send a wake on LAN request (magic packet). Using the client notification channel helps avoid MAC flaps, which could cause the port to be shut down by the router. The new version of Wake on LAN can be enabled at the same time as the [older version](#bkmk_wol-previous).
 
 ### Limitations
 
@@ -28,9 +28,9 @@ Starting in Configuration Manager 1810, there is a new way to wake up machines w
 - This feature doesn't support the following network technologies:
    - IPv6
    - 802.1x network authentication
-- Machines only wake up when you notify them through the **Wake Up** client notification.
-    - For wake up when a deadline occurs, the older version of Wake on LAN is used.
-    -  If the older version is not enabled, client wake up won't occur for deployments created with the settings **Use Wake-on-LAN to wake up clients for required deployments** or **Send wake-up packets**.  
+- Machines only wake when you notify them through the **Wake Up** client notification.
+    - For wake-up when a deadline occurs, the older version of Wake on LAN is used.
+    -  If the older version isn't enabled, client wake up won't occur for deployments created with the settings **Use Wake-on-LAN to wake up clients for required deployments** or **Send wake-up packets**.  
 
 
 ### Security role permissions
@@ -64,7 +64,15 @@ Right-click on the client, go to **Client Notification**, then select **Wake up*
 
 ### What to expect when only the new version of Wake on LAN is enabled
 
+When you have only the new version of Wake on LAN enabled, only the **Wake Up** client notification is enabled. Clients aren't sent a notification when a deadline is received on deployments such as task sequences, software distribution, or software updates installation. Once a sleeping machine is back online, it will be reflected in the console when it checks in with the Management Point.
+
+Starting in Configuration Manager version 1902, you can specify the Wake on LAN port. This setting is shared by both the new and older version of Wake on LAN.
+
 ### What to expect when both versions of Wake on LAN are enabled
+
+When you have both versions of Wake on LAN enabled, you can use the **Wake Up** client notification and wake up on deadline. The client notification functions a little differently than traditional Wake on LAN. For a brief explanation of how the client notification works, see the [Wake on LAN starting in version 1810](#bkmk_wol-1810) section. The new client setting **Allow network wake-up** will change the NIC properties to allow Wake on LAN. You no longer need to manually change it for new machines that are added to your environment. All other functionality of Wake on LAN hasn't been changed.
+
+Starting in version 1902, the **Wake Up** client notification honors your existing **Wake On LAN port number (UDP)** setting.
 
 
 ## <a name="bkmk_wol-previous"></a>  Wake on LAN for version 1802 and earlier
@@ -83,7 +91,7 @@ A computer that receives the wake-up proxy client settings will likely pause its
 
 ### To configure Wake on LAN for a site for version 1802 and earlier
 
-Prior to Configuration manager version 1810, you need to enable Wake on LAN for each site in a hierarchy.
+ To use Wake on LAN, you need to enable it for each site in a hierarchy.
 
 1. In the Configuration Manager console, go to **Administration > Site Configuration > Sites**.
 2. Click the primary site to configure, and then click **Properties**.
@@ -97,7 +105,7 @@ Prior to Configuration manager version 1810, you need to enable Wake on LAN for 
 1. In the Configuration Manager console, go to **Administration > Client Settings**.
 2. Click **Default Client Settings**, and then click **Properties**.
 3. Select **Power Management** and then choose **Yes** for **Enable wake-up proxy**.
-4. Review and if necessary, configure the other wake-up proxy settings. For more information on these settings see [Power management settings](../../../core/clients/deploy/about-client-settings.md#power-management).
+4. Review and if necessary, configure the other wake-up proxy settings. For more information on these settings, see [Power management settings](../../../core/clients/deploy/about-client-settings.md#power-management).
 5. Click **OK** to close the dialog box, and then click **OK** to close the Default Client Settings dialog box.
 
 You can use the following Wake On LAN reports to monitor the installation and configuration of wake-up proxy:
