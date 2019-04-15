@@ -188,8 +188,9 @@
     - name: How to See a Configuration Manager View by Using SQL Server
       href: core/understand/how-to-see-a-configuration-manager-view-by-using-sql-server.md
     - name: Creating Custom Reports by Using SQL Server Views
-      href: core/understand/sqlviews/creating-custom-reports-using-sql-server-views.md
       items:
+      - name: Overview
+        href: core/understand/sqlviews/creating-custom-reports-using-sql-server-views.md
       - name: SQL Server Views
         items:
         - name: Overview
