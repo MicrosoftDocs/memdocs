@@ -2,7 +2,7 @@
 title: Create phased deployments
 titleSuffix: Configuration Manager
 description: Use phased deployments to automate the rollout of software to several collections.
-ms.date: 11/27/2018
+ms.date: 04/16/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -55,6 +55,7 @@ These settings are unique to phased deployments. Configure these settings when c
 #### Criteria for success of the first phase  
 
 - **Deployment success percentage**: Specify the percent of devices that need to successfully complete the deployment for the first phase to succeed. By default, this value is 95%. In other words, the site considers the first phase successful when the compliance state for 95% of the devices is **Success** for this deployment. The site then continues to the second phase, and creates a deployment of the software to the next collection.  
+- **Number of devices successfully deployed**: Added in Configuration Manager version 1902. Specify the number of devices that need to successfully complete the deployment for the first phase to succeed. This option is useful when the size of the collection is variable, and you have a specific number of devices to show success before moving to the next phase. <!--3555946-->
 
 
 #### Conditions for beginning second phase of deployment after success of the first phase  
@@ -71,6 +72,7 @@ These settings are unique to phased deployments. Configure these settings when c
 <!--1358578-->
 Starting in version 1806, configure this setting for the rollout in each phase to happen gradually. This behavior helps mitigate the risk of deployment issues, and decreases the load on the network that is caused by the distribution of content to clients. The site gradually makes the software available depending on the configuration for each phase. Every client in a phase has a deadline relative to the time the software is made available. The time window between the available time and deadline is the same for all clients in a phase. The default value of this setting is zero, so by default the deployment isn't throttled. Don't set the value higher than 30.<!--SCCMDocs-pr issue 2767--> 
 
+![Phased deployment critera for success settings](media/phased-deployment-critera-for-success.png)
 
 #### Configure the deadline behavior relative to when the software is made available  
 
@@ -144,7 +146,7 @@ Starting in version 1806, create a phased deployment with manually configured ph
         2. On the **Phase Settings** page of the Add Phase Wizard, configure the scheduling settings, and select **Next** when complete. For more information, see [Settings](#bkmk_settings).   
 
             > [!Note]  
-            > You can't edit the phase setting, **Deployment success percentage**, on the first phase. This setting only applies to phases that have a previous phase.  
+            > You can't edit the phase settings, **Deployment success percentage** or **Number of devices successfully deployed** (version 1902 or later), on the first phase. This setting only applies to phases that have a previous phase.  
 
         3. The settings on the **User Experience** and **Distribution Points** pages of the Add Phase Wizard are the same as when normally deploying a task sequence or software updates.  
 
