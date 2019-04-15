@@ -221,10 +221,11 @@
           - name: Asset Intelligence Views
             href: core/understand/sqlviews/asset-intelligence-views-configuration-manager.md
       - name: Working with Reports
+        items:
         - name: Overview
           href: core/understand/sqlviews/working-with-reports-configuration-manager.md
       - name: Technical Reference for SQL Server Views
-        href: core/understand/sqlviews/technical-reference-sql-server-views-configuration-manager.md
+        items:
         - name: Overview
           href: core/understand/sqlviews/technical-reference-sql-server-views-configuration-manager.md
   - name: SMS Provider in Configuration Manager
