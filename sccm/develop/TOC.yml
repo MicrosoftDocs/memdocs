@@ -221,6 +221,32 @@
             href: core/understand/sqlviews/software-inventory-views-configuration-manager.md
           - name: Asset Intelligence Views
             href: core/understand/sqlviews/asset-intelligence-views-configuration-manager.md
+        - name: Migration Views
+          href: core/understand/sqlviews/migration-views-configuration-manager.md
+        - name: Mobile Device Management Views
+          href: core/understand/sqlviews/mobile-device-management-views-configuration-manager.md
+        - name: Operating System Deployment Views
+          href: core/understand/sqlviews/operating-system-deployment-views-configuration-manager.md
+        - name: Power Management Views
+          href: core/understand/sqlviews/power-management-views-configuration-manager.md
+        - name: Query Views
+          href: core/understand/sqlviews/query-views-configuration-manager.md
+        - name: Reporting Views
+          href: core/understand/sqlviews/reporting-views-configuration-manager.md
+        - name: Schema Views
+          href: core/understand/sqlviews/schema-views-configuration-manager.md
+        - name: Security Views
+          href: core/understand/sqlviews/security-views-configuration-manager.md
+        - name: Site Administration Views
+          href: core/understand/sqlviews/site-admin-views-configuration-manager.md
+        - name: Software Metering Views
+          href: core/understand/sqlviews/software-metering-views-configuration-manager.md
+        - name: Software Updates Views
+          href: core/understand/sqlviews/software-updates-views-configuration-manager.md
+        - name: Status and Alert Views
+          href: core/understand/sqlviews/status-alert-views-configuration-manager.md
+        - name: Wake On LAN Views
+          href: core/understand/sqlviews/wake-lan-views-configuration-manager.md
       - name: Working with Reports
         items:
         - name: Overview
