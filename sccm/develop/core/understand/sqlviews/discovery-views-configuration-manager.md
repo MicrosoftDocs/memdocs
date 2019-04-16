@@ -84,7 +84,7 @@ The view can be joined to other views by using the **ResourceID**, **ResourceTyp
 
 ### v_R_UserGroup
 
-Lists all disovered user group resources by ID, type, user group name, domain, and more.
+Lists all discovered user group resources by ID, type, user group name, domain, and more.
 The view can be joined to other views by using the **ResourceID** and **ResourceType** columns.
 
 ### v_RA_System_IPAddresses
