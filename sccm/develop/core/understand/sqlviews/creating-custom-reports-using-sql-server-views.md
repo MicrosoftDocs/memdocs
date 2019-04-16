@@ -25,10 +25,6 @@ This documentation includes an overview of the Configuration Manager SQL view sc
 
 This document was created using Microsoft SQL Server 2012, Report Builder 3.0 and Configuration Manager. The available SQL views, options, and commands might vary depending on the version of each product you are using. For more information, see the documentation for the products you are using.
 
-## How to Provide Feedback about this Documentation
-
-If you have any questions or feedback about this documentation, email the [Configuration Manager Documentation Feedback Alias](mailto:smsdocs@microsoft.com).
-
 ## What’s New for Reporting in Configuration Manager
 
 This section lists the changes that have been made since Configuration Manager 2007 for Configuration Manager reporting.
