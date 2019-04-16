@@ -67,7 +67,7 @@ The discovery schema views provide information about all resources in a Configur
 |5|System|**v_R_System**|
 |6|IP Network|**V_R_IPNetwork**|
 
-The **v\_ResourceAttributeMap** view contains all of the attributes that will be discovered for each of the resource types, such as NetBIOS name, operating system, user name, user group name, domain name, and so forth. The **v\_ResourceAttributeMap** view can be joined to other views by using the **ResourceType** column. For more information about the discovery views, see [Discovery Views in Configuration Manager](discovery-views-configuration-manager).
+The **v\_ResourceAttributeMap** view contains all of the attributes that will be discovered for each of the resource types, such as NetBIOS name, operating system, user name, user group name, domain name, and so forth. The **v\_ResourceAttributeMap** view can be joined to other views by using the **ResourceType** column. For more information about the discovery views, see [Discovery Views in Configuration Manager](discovery-views-configuration-manager.md).
 
 ## Hardware Inventory Schema Views
 

@@ -270,21 +270,6 @@ It is unlikely that this view will be joined to other views.
 Lists the Configuration Manager client computers, by **ResourceID**, and the usage summary for metered files, as well as the logged-on user name, usage time, and time of last usage. The view is also listed and described in the [Software Metering Views in Configuration Manager](software-metering-views-configuration-manager.md) topic.
 The view can be joined to other views by using the **ResourceID**, **FileID**, and **MeteredUserID** columns.
 
-### v_NAPRestrictionErrorSummary
-
-Lists Network Access Protection (NAP) error messages that have been reported and the count of errors over the last day, last 7 days, and last 30 days. The view is also listed and described in the [Network Access Protection Views in Configuration Manager](network-access-protection-views-configuration-manager.md) topic.
-It is unlikely that this view will be joined to other views.
-
-### v_NAPRestrictionSummary
-
-Lists the software updates, by **CI_ID** and **CI_UniqueID**, bulletin ID, article ID, and the count of NAP restrictions over the last day, last 7 days, and last 30 days for the update. The view is also listed and described in the [Network Access Protection Views in Configuration Manager](network-access-protection-views-configuration-manager.md) topic.
-The view can be joined to other views by using the **CI_ID** and **CI_UniqueID** columns.
-
-### v_NAPSystemInfo
-
-Lists the total count of Configuration Manager clients, how many clients can have the NAP client installed on them, how many clients are not capable of having the NAP client installed on them, how many clients already have the NAP client installed on them, and how many clients are in a restricted state. The view is also listed and described in the [Network Access Protection Views in Configuration Manager](network-access-protection-views-configuration-manager.md) topic.
-It is unlikely that this view will be joined to other views.
-
 ### v_PackageStatusDetailSumm
 
 Lists all applications, task sequences, and packages and programs, by **PackageID**, the originating site code, package name, site name, source version, the date for the summary information, the targeted count for each package, and the count for installed, retrying, and failed status. The view is also listed and described in the [Application Management Views in Configuration Manager](application-management-views-configuration-manager.md) topic.
