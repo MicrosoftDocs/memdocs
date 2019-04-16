@@ -33,17 +33,17 @@ This view can be joined to other views by using the **PkgID** column.
 
 ### v_DistributionPointInfoBase
 
-Lists detailed information about each distribution point in the site, including the server name, the NAL path, any configured share name, whether it is Internet-facing and more.
+Lists detailed information about each distribution point in the site, including the server name, the NAL path, any configured share name, whether it's Internet-facing and more.
 This view can be joined to other views by using the **ServerName** column.
 
 ### v_DistributionPointMessages
 
-List information about status messages sent by packages on each distribution point in the site. This includes the last time that status was sent and the ID of the status message that was sent.
+List information about status messages sent by packages on each distribution point in the site. This info includes the last time that status was sent and the ID of the status message that was sent.
 This view can be joined to other views by using the **ID**, **DPID**, or **PkgID** columns.
 
 ### v_DistributionPoints
 
-Lists information about each distribution point in the Configuration Manager hierarchy, including the ID, the server name that hosts the distribution point, the site code, whether it is a pull distribution point, and more.
+Lists information about each distribution point in the Configuration Manager hierarchy, including the ID, the server name that hosts the distribution point, the site code, whether it's a pull distribution point, and more.
 This view can be joined to other views by using the **DPID** column.
 
 ### v_DistributionStatus
@@ -53,8 +53,8 @@ This view can be joined to other views by using the **PkgID** column.
 
 ### v_DistributionPointDriveInfo
 
-Lists information about the location and the status of content on distribution points. This includes the site code, NAL path, drive where the content is stored, total and free space on the drive, and more.
-It is unlikely that this view will be joined to other views.
+Lists information about the location and the status of content on distribution points. This info includes the site code, NAL path, drive where the content is stored, total and free space on the drive, and more.
+It's unlikely that this view will be joined to other views.
 
 ### v_DPGroupContentDetails
 
@@ -69,12 +69,12 @@ This view can be joined to other views by using the **GroupID** column.
 ### v_DPGroupMembers
 
 Lists, by group ID, the path to each distribution point in the group.
-It is unlikely that this view will be joined to other views.
+It's unlikely that this view will be joined to other views.
 
 ### v_DPGroupPackages
 
 Lists, by group ID, the content packages that have been deployed to each distribution point group.
-It is unlikely that this view will be joined to other views.
+It's unlikely that this view will be joined to other views.
 
 ### v_DPStatusSummary
 
@@ -118,7 +118,7 @@ This view can be joined to other views by using the **Content_ID** column.
 ### v_SMS_DistributionPointGroup
 
 Lists all distribution point groups in the site hierarchy by **GroupID**. Contains the name of the distribution point group, who created it and when, the number of distribution points in the group and more.
-It is unlikely that this view will be joined to other views.
+It's unlikely that this view will be joined to other views.
 
 ## See Also
 
