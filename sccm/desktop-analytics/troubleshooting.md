@@ -2,7 +2,7 @@
 title: Troubleshooting Desktop Analytics
 titleSuffix: Configuration Manager
 description: Technical details to help you troubleshoot issues with Desktop Analytics.
-ms.date: 04/05/2019
+ms.date: 04/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -268,7 +268,7 @@ For more information, review M365AHandler.log on the client.
 #### Check end-user diagnostic data
 
 <!--1004-->
-If this check isn't successful, a user selected a lower Windows diagnostic data on the device.
+If this check isn't successful, a user selected a lower Windows diagnostic data on the device. It can also be caused by a conflicting group policy object. For more information, see [Windows settings](/sccm/desktop-analytics/enroll-devices#windows-settings).
 
 Depending upon your business requirements, you can disable user choice via group policy. Use the setting to **Configure telemetry opt-in setting user interface**. For more information, see [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management).
 
@@ -285,7 +285,7 @@ This property may display the following errors:
 
 For more information, review M365AHandler.log on the client.  
 
-Check the permissions on this registry key. Make sure that the local System account can access this key for the Configuration Manager client to set.  
+Check the permissions on this registry key. Make sure that the local System account can access this key for the Configuration Manager client to set. It can also be caused by a conflicting group policy object. For more information, see [Windows settings](/sccm/desktop-analytics/enroll-devices#windows-settings).  
 
 #### Commercial ID configuration
 
@@ -304,7 +304,7 @@ Otherwise, it may show one of the following errors:
 
 For more information, review M365AHandler.log on the client.  
 
-Check the permissions on this registry key. Make sure that the local System account can access this key for the Configuration Manager client to set.  
+Check the permissions on this registry key. Make sure that the local System account can access this key for the Configuration Manager client to set. It can also be caused by a conflicting group policy object. For more information, see [Windows settings](/sccm/desktop-analytics/enroll-devices#windows-settings).  
 
 There's a different ID for the device. This registry key is used by group policy. It takes precedence over the ID provided by Configuration Manager.  
 
@@ -337,7 +337,7 @@ Otherwise, it may show one of the following errors:
 
 For more information, review M365AHandler.log on the client.  
 
-Check the permissions on this registry key. Make sure that the local System account can access this key for the Configuration Manager client to set.  
+Check the permissions on this registry key. Make sure that the local System account can access this key for the Configuration Manager client to set. It can also be caused by a conflicting group policy object. For more information, see [Windows settings](/sccm/desktop-analytics/enroll-devices#windows-settings).  
 
 Make sure that another policy mechanism, such as group policy, isn't disabling this setting.
 
@@ -398,7 +398,7 @@ This property checks that Windows is properly configured to allow diagnostic dat
 - `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`
 - `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
 
-Check the permissions on these registry keys. Make sure that the local System account can access these keys for the Configuration Manager client to set.  
+Check the permissions on these registry keys. Make sure that the local System account can access these keys for the Configuration Manager client to set. It can also be caused by a conflicting group policy object. For more information, see [Windows settings](/sccm/desktop-analytics/enroll-devices#windows-settings).  
 
 For more information, review M365AHandler.log on the client.  
 
@@ -469,19 +469,54 @@ The following log files are on the Configuration Manager client in the following
 
 
 
-## <a name="bkmk_AzureADApps"></a> Azure AD applications 
+## <a name="bkmk_AzureADApps"></a> Azure AD applications
 
-Desktop Analytics adds the following Enterprise applications to your Azure AD: 
+Desktop Analytics adds the following applications to your Azure AD:
 
-- **Configuration Manager Microservice** connects Configuration Manager with Desktop Analytics. This app has no access requirements
+- **Configuration Manager Microservice**: Connects Configuration Manager with Desktop Analytics. This app has no access requirements.  
 
-- **Office 365 Client Admin** retrieves data from your Log Analytics workspace. This app requires write access to Log Analytics
+- **Office 365 Client Admin**: Retrieves data from your Log Analytics workspace. This app requires write access to Log Analytics.  
 
-- **MALogAnalyticsReader** retrieves details OMS groups and devices attached created in Log Analytics
+- **MALogAnalyticsReader**: Retrieves OMS groups and devices created in Log Analytics. For more information, see [MALogAnalyticsReader application role](#bkmk_MALogAnalyticsReader).  
 
-If you need to provision these apps after completing set up, in the **Connected services** pane, select  **Configure users and apps access** and provision the apps.  
+If you need to provision these apps after completing set up, go to the **Connected services** pane. Select  **Configure users and apps access**, and provision the apps.  
 
-- **Azure AAD app for Configuration Manager**. See [Create app for Configuration Manager](/sccm/desktop-analytics/set-up#create-app-for-configuration-manager) if you need to provision or troubleshoot connection issues after completing set up. This app requires  **Write CM Collection Data** and **Read CM Collection Data** on the **Configuration Manager Service** API.
+- **Azure AD app for Configuration Manager**. If you need to provision or troubleshoot connection issues after completing set up, see [Create app for Configuration Manager](/sccm/desktop-analytics/set-up#create-app-for-configuration-manager). This app requires  **Write CM Collection Data** and **Read CM Collection Data** on the **Configuration Manager Service** API.  
+
+### <a name="bkmk_MALogAnalyticsReader"></a> MALogAnalyticsReader application role
+
+When you set up Desktop Analytics, you accept a consent on behalf of your organization. This consent is to assign the MALogAnalyticsReader application the Log Analytics Reader role for the workspace. This application role is required by Desktop Analytics.
+
+If there is a problem with this process during set up, use the following process to manually add this permission:
+
+1. Go to the [Azure portal](http://portal.azure.com), and select **All resources**. Select the workspace of type **Log Analytics**.  
+
+2. In the workspace menu, select **Access control (IAM)**, then select **Add**.  
+
+3. In the **Add permissions** panel, configure the following settings:  
+
+    - **Role**: **Log Analytics Reader**  
+
+    - **Assign access to**: **Azure AD user, group, or application**  
+
+    - **Select**: **MALogAnalyticsReader**  
+
+4. Select **Save**.
+
+The portal shows a notification that it added the role assignment.
 
 
+## Data latency
 
+<!-- 3846531 -->
+Data in the Desktop Analytics portal is refreshed daily. This refresh includes device changes collected from diagnostics data, and any changes that you make to the configuration. For example, when you change an asset's **Upgrade Decision**, it can result in changes to the readiness state of devices with that asset installed.
+
+- **Administrator changes** are generally processed by the Desktop Analytics service within nine hours. For example, if you make changes at 11:00 PM UTC, the portal should reflect those changes before 08:00 AM UTC the next day.
+
+- **Device changes** detected by UTC midnight in local time are generally included in the daily refresh. There's typically an additional 23 hours of latency associated with the processing of device changes compared to admin changes.
+
+If you aren't seeing changes updated within these time frames, wait another 24 hours for the next daily refresh. If you see longer delays, check the service health dashboard. If the service reports as healthy, contact Microsoft support.
+
+When you first set up Desktop Analytics, the charts in Configuration Manager and the Desktop Analytics portal may not show complete data. It can take 2-3 days for active devices to send diagnostic data to the Desktop Analytics service, the service to process the data, and then synchronize with your Configuration Manager site.
+
+In a Configuration Manager hierarchy, it can take 10 minutes for new collections to appear for deployment plans. The primary sites create the collections, and the central administration site synchronizes with Desktop Analytics.<!-- 3896921 -->
