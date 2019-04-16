@@ -3,8 +3,9 @@
   - name: What is co-management?
     href: overview.md
   - name: Quickstarts
-    href: quickstarts.md
     items:
+    - name: Quickstarts
+      href: quickstarts.md
     - name: Immediate value
       items:
       - name: Conditional access
