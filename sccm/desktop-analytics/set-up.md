@@ -2,7 +2,7 @@
 title: Set up Desktop Analytics
 titleSuffix: Configuration Manager
 description: A how-to guide for setting up and onboarding to Desktop Analytics.
-ms.date: 01/25/2019
+ms.date: 04/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -14,7 +14,7 @@ ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
 ---
 
-# How to set up Desktop Analytics 
+# How to set up Desktop Analytics
 
 > [!Note]  
 > This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
@@ -33,27 +33,28 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
 4. On the **Give users access** page:
 
-    -  Select **Do you want Desktop Analytics to manage Directory roles for your users** if you want **Workspace Owners** and **Worskpace Contributors** to be automatically assigned the **Desktop Analytics Administrator** directory role (unless they are already a **Global Admin**). If you don't select this option, we'll still add users as members on the two security groups, and a **Global Admin** will need to assign the the **Desktop Analytics Administrator** role manually for every user. 
+    - **Do you want Desktop Analytics to manage Directory roles for your users**: Desktop Analytics automatically assigns the **Workspace Owners** and **Workspace Contributors** groups to the **Desktop Analytics Administrator** role. If those groups are already a **Global Admin**, there's no change.  
 
-   [Read more](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) about assigning Administrator role permissions in Azure Active Directory and the permissions assigned to **Desktop Analytics Administrators**
+    If you don't select this option, Desktop Analytics still adds the users as members of the two security groups. A **Global Admin** needs to manually assign the **Desktop Analytics Administrator** role for the users.  
 
-    -  Desktop Analytics pre-configures two security groups in Azure Active Directory:
+    For more information about assigning administrator role permissions in Azure Active Directory and the permissions assigned to **Desktop Analytics Administrators**, see [Administrator role permissions in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
 
-       - **Workspace Owners**. Security group: M365 Analytics Client admins (Log Analytics Owners): Create and manage workspaces. These accounts need owner access to the Azure subscription.
+    - Desktop Analytics preconfigures two security groups in Azure Active Directory:  
 
-       - **Workspace Contributors**. Security group: M365 Analytics Client Admins (Log Analytics Contributors): Create and manage deployment plans in this workspace. They don't need any 
-additional Azure access.
+        - **Workspace Owners**: A security group to create and manage workspaces. These accounts need owner access to the Azure subscription.  
 
-   To add a user to either group, type their name or e-mail address in the **Enter name or email address** section of the appropriate group. When finished, select **Next**.
+        - **Workspace Contributors**: A security group to create and manage deployment plans in this workspace. They don't need any additional Azure access.  
+
+    To add a user to either group, type their name or e-mail address in the **Enter name or email address** section of the appropriate group. When finished, select **Next**.
 
 5. On the page to **Set up your workspace**:  
 
     - To use an existing workspace for Desktop Analytics, select it, and continue with the next step.  
 
         > [!Note]  
-        > If you're already using Windows Analytics, select that same workspace. You need to reenroll devices to Desktop Analytics that you previously enrolled in Windows Analytics. 
-        > 
-        > You can only have one Desktop Analytics workspace per Azure AD tenant. Devices can only send diagnostic data to one workspace.   
+        > If you're already using Windows Analytics, select that same workspace. You need to reenroll devices to Desktop Analytics that you previously enrolled in Windows Analytics.
+        >
+        > You can only have one Desktop Analytics workspace per Azure AD tenant. Devices can only send diagnostic data to one workspace.  
 
     - To create a workspace for Desktop Analytics, select **Add workspace**.  
 
@@ -72,7 +73,7 @@ additional Azure access.
 
 8. Back on the page to **Set up your workspace**, select **Next**.  
 
-9. On the **Last steps** page, select **Go to Desktop Analytics**. 
+9. On the **Last steps** page, select **Go to Desktop Analytics**.
 
 The Azure portal shows the Desktop Analytics **Home** page.
 
@@ -96,11 +97,11 @@ Create an app in Azure AD for Configuration Manager.
 
 3. Select the app, and note the **Application ID**. This value is a GUID that's used to configure the Configuration Manager connection.  
 
-4. Select **Settings** on the app, and then select **Keys**. In the **Passwords** section, enter a **Key description**, specify an expiration **Duration**, and then select **Save**. Copy the **Value** of the key, which is used to configure the Configuration Manager connection. 
+4. Select **Settings** on the app, and then select **Keys**. In the **Passwords** section, enter a **Key description**, specify an expiration **Duration**, and then select **Save**. Copy the **Value** of the key, which is used to configure the Configuration Manager connection.
 
     > [!Important]  
     > This is the only opportunity to copy the key value. If you don't copy it now, you need to create another key.  
-    > 
+    >
     > Save the key value in a secure location.  
 
 5. On the app **Settings** panel, select **Required permissions**.  
