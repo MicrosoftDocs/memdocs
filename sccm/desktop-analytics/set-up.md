@@ -35,9 +35,9 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
     - **Do you want Desktop Analytics to manage Directory roles for your users**: Desktop Analytics automatically assigns the **Workspace Owners** and **Workspace Contributors** groups to the **Desktop Analytics Administrator** role. If those groups are already a **Global Admin**, there's no change.  
 
-    If you don't select this option, Desktop Analytics still adds the users as members of the two security groups. A **Global Admin** needs to manually assign the **Desktop Analytics Administrator** role for the users.  
+        If you don't select this option, Desktop Analytics still adds the users as members of the two security groups. A **Global Admin** needs to manually assign the **Desktop Analytics Administrator** role for the users.  
 
-    For more information about assigning administrator role permissions in Azure Active Directory and the permissions assigned to **Desktop Analytics Administrators**, see [Administrator role permissions in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
+        For more information about assigning administrator role permissions in Azure Active Directory and the permissions assigned to **Desktop Analytics Administrators**, see [Administrator role permissions in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
 
     - Desktop Analytics preconfigures two security groups in Azure Active Directory:  
 
@@ -45,7 +45,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
         - **Workspace Contributors**: A security group to create and manage deployment plans in this workspace. They don't need any additional Azure access.  
 
-    To add a user to either group, type their name or e-mail address in the **Enter name or email address** section of the appropriate group. When finished, select **Next**.
+        To add a user to either group, type their name or e-mail address in the **Enter name or email address** section of the appropriate group. When finished, select **Next**.
 
 5. On the page to **Set up your workspace**:  
 
