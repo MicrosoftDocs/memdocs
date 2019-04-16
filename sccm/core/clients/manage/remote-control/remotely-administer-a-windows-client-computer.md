@@ -55,8 +55,7 @@ Here are three ways to start the remote control viewer:
     - **View**
       - **Color depth**  - Choose either 16 bits or 32 bits per pixel.
       -  **Full Screen** - Maximizes the **Configuration Manager Remote Control** window. To exit full screen mode, press Ctrl+Alt+Break.  
- 
-      - **Optimize for low bandwidth connection** - Choose this option if the connection is low bandwidth
+      - **Optimize for low bandwidth connection** - Choose this option if the connection is low bandwidth.
       - **Display:**
         - **All Screens** - Added in Configuration Manager 1902. If the computer that you connect to has multiple monitors, the display from all the monitors is shown in the remote control window. **All Screens** is the only view for computers with multiple monitors before 1902.
         -  **First Screen** - Added in Configuration Manager 1902. The *first screen* is at the top and far left as shown in Windows display settings. You can't select a specific screen. When you switch the configuration of the viewer, reconnect the remote session. The viewer saves your preference for future connections.
