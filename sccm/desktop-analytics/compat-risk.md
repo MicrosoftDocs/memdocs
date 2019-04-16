@@ -47,8 +47,17 @@ The App Health Analyzer looks at the Microsoft app compatibility database for an
 
 ### Ready for Windows
 
-The Ready for Windows datastore checks for compatibility blocks on a device. It also correlates data from other customers reporting similar apps. Microsoft uses data from other similar devices where this app reported no issues.
+The [Ready for Windows](https://www.readyforwindows.com) app catalog correlates diagnostic data from other customers reporting the same apps with additional checks from Microsoft like compatibility blocks on a device. 
 
+The possible categories are:
+
+- **Insufficient Data** means too few commercial Windows 10 devices are sharing information for this app for Microsoft to categorize its adoption.
+
+- **Adopted** means the app has been installed on at least 10,000 commercial Windows 10 device.  
+
+- **Highly Adopted** means the app has been installed on at least 100,000 commercial Windows 10 devices.  
+
+- **Contact Developer** means there may be compatibility issues with this solution, and thus Microsoft recommends contacting the software provider to learn more.  
 
 ### App Health Analyzer signals for compatibility assessment
 
