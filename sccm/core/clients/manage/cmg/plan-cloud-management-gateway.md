@@ -171,7 +171,7 @@ Similarly, as Paris-based clients roam onto the internet, they communicate with 
     - Starting in version 1806, when using the site option to **Use Configuration Manager-generated certificates for HTTP site systems**, the management point can be HTTP. For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).  
 
 
-- Integration with **Azure AD** may be required for Windows 10 clients. For more information, see [Configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard).  
+- Integration with **Azure AD** is needed for Azure Resource Manager deployments. It may also be required for Windows 10 clients. For more information, see [Configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard).  
 
 - Clients must use **IPv4**.  
 

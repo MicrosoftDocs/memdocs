@@ -2,7 +2,7 @@
 title: Ports used for connections
 titleSuffix: Configuration Manager
 description: Learn about the required and customizable network ports that Configuration Manager uses for connections.
-ms.date: 01/29/2019
+ms.date: 04/11/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -579,6 +579,14 @@ For more information, see [Ports and data flow](/sccm/core/plan-design/hierarchy
 |-----------------|---------|---------|  
 |RPC Endpoint Mapper|135|135|  
 |RPC (DCOM)|--|DYNAMIC <sup>[Note 6](#bkmk_note6)</sup>|  
+
+
+###  <a name="BKMK_PortsSite-RCL"></a> Site server -- > Server hosting Remote Content Library Share  
+ Starting in version 1806 you can relocate the Content Library to another storage location to free up hard drive space on your central administration or primary site servers. For more information, see [Configure a remote content library for the site server](/sccm/core/plan-design/hierarchy/the-content-library#bkmk_remote).  
+
+|Description|UDP|TCP|  
+|-----------------|---------|---------|  
+|Server Message Block (SMB)|--|445|  
 
 
 ###  <a name="BKMK_PortsSite-RSP"></a> Site server &lt; -- > Reporting services point  
