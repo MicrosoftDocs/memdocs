@@ -2,21 +2,20 @@
 title: "Remotely administer Windows computer"
 titleSuffix: "Configuration Manager"
 description: "Administer a remote Windows client computer by using System Center Configuration Manager."
-ms.date: 07/27/2017
+ms.date: 04/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
 ms.assetid: 3c9648c4-645e-4e47-ae10-2da817b8c83b
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to remotely administer a Windows client computer by using System Center Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
-
-Before you begin to use remote control, ensure that you have reviewed the information in the following topics:  
+Configuration Manager allows you to connect to client computers using **Configuration Manager Remote Control**. Before you begin to use remote control, ensure that you review the information in the following articles:  
 
 -   [Prerequisites for remote control in System Center Configuration Manager](../../../../core/clients/manage/remote-control/prerequisites-for-remote-control.md)  
 
@@ -28,9 +27,9 @@ Here are three ways to start the remote control viewer:
 
 -   In a Windows command prompt.  
 
--   On the Windows **Start** menu on a computer that runs the Configuration Manager console from the **Microsoft System Center** program group.  
+-   From the Windows **Start** menu, on a computer that runs the Configuration Manager console, in the **Microsoft System Center** program group.  
 
-### To remotely administer a client computer from the Configuration Manager console  
+## To remotely administer a client computer from the Configuration Manager console  
 
 1.  In the Configuration Manager console, choose **Assets and Compliance** > **Devices** or **Device Collections**.  
 
@@ -44,38 +43,42 @@ Here are three ways to start the remote control viewer:
     > [!NOTE]  
     >  If the computer that you connect to has multiple monitors, the display from all the monitors is shown in the remote control window.  
 
-    -   **File - Connect** - Connect to another computer. This option is unavailable when a remote control session is active.  
-
-    -   **File - Disconnect** - Disconnects the active remote control session but does not close the **Configuration Manager Remote Control** window.  
-
-    -   **File - Exit** - Disconnects the active remote control session and closes the **Configuration Manager Remote Control** window.  
-
-        > [!NOTE]  
-        >  When you disconnect a remote control session, the contents of the Windows Clipboard on the computer that you are viewing is deleted.  
-
-    -   **View - Full Screen** - Maximizes the **Configuration Manager Remote Control** window.  
+    -   **File**
+        - **Connect** - Connect to another computer. This option is unavailable when a remote control session is active.  
+        -   **Disconnect** - Disconnects the active remote control session but doesn't close the **Configuration Manager Remote Control** window.  
+        - **Exit** - Disconnects the active remote control session and closes the **Configuration Manager Remote Control** window.  
 
         > [!NOTE]  
-        >  To exit full screen mode, press Ctrl+Alt+Break.  
+        >  When you disconnect a remote control session, the contents of the Windows Clipboard on the computer that you are viewing is deleted.
 
-    -   **View - Scale to Fit** - Scales the display of the remote computer to fit the size of the **Configuration Manager Remote Control** window.  
 
-    -   **View - Status Bar** - Toggles the display of the **Configuration Manager Remote Control** window status bar.  
+    - **View**
+      - **Color depth**  - Choose either 16 bits or 32 bits per pixel.
+      -  **Full Screen** - Maximizes the **Configuration Manager Remote Control** window. To exit full screen mode, press Ctrl+Alt+Break.  
+ 
+      - **Optimize for low bandwidth connection** - Choose this option if the connection is low bandwidth
+      - **Display:**
+        - **All Screens** - Added in Configuration Manager 1902. If the computer that you connect to has multiple monitors, the display from all the monitors is shown in the remote control window. **All Screens** is the only view for computers with multiple monitors before 1902.
+        -  **First Screen** - Added in Configuration Manager 1902. The *first screen* is at the top and far left as shown in Windows display settings. You can't select a specific screen. When you switch the configuration of the viewer, reconnect the remote session. The viewer saves your preference for future connections.
+        -  **Scale to Fit** - Scales the display of the remote computer to fit the size of the **Configuration Manager Remote Control** window.
+       - **Status Bar** - Toggles the display of the **Configuration Manager Remote Control** window status bar.  
 
-    -   **Action - Send Ctrl+Alt+Del Key** - Sends a Ctrl+Alt+Del key combination to the remote computer.  
+       > [!NOTE]  
+       >  The viewer saves your preference for future connections.
 
-    -   **Action - Enable Clipboard Sharing** - Lets you copy and paste items to and from the remote computer. If you change this value, you must restart the remote control session for the change to take effect.  
+    -   **Action**
+        - **Send Ctrl+Alt+Del Key** - Sends a Ctrl+Alt+Del key combination to the remote computer. 
+        - **Enable Clipboard Sharing** - Lets you copy and paste items to and from the remote computer. If you change this value, you must restart the remote control session for the change to take effect.   
+          - If you don't want clipboard sharing to be enabled in the Configuration Manager console, on the computer running the console, set the value of the registry key **HKEY_CURRENT_USER\Software\Microsoft\ConfigMgr10\Remote Control\Clipboard Sharing** to **0**.
+        - **Enable Keyboard Translation** - Translates the keyboard layout of the computer running the console to the connected device's layout.
+        - **Lock Remote Keyboard and Mouse** - Locks the remote keyboard and mouse to prevent the user from operating the remote computer.  
 
-        > [!NOTE]  
-        >  If you do not want clipboard sharing to be enabled in the Configuration Manager console, on the computer running the console, set the value of the registry key, **HKEY_CURRENT_USER\Software\Microsoft\ConfigMgr10\Remote Control\Clipboard Sharing** to **0**.  
+    -   **Help**
+        - **About Remote Control** - Displays the current version of the viewer.  
 
-    -   **Action - Lock Remote Keyboard and Mouse** - Locks the remote keyboard and mouse to prevent the user from operating the remote computer.  
+5.  Users at the remote computer can view more information about the remote control session when they click the Configuration Manager**Remote Control** icon. The icon is in the Windows notification area or the icon on the remote control session bar.  
 
-    -   **Help - About Remote Control** - Displays ithe current version of the viewer.  
-
-5.  Users at the remote computer can view more information about the remote control session when they click the Configuration Manager**Remote Control** icon in the Windows notification area or the icon on the remote control session bar.  
-
-### To start the remote control viewer from the Windows command line  
+## To start the remote control viewer from the Windows command line  
 
 -   At the Windows command prompt, type _<Configuration Manager Installation Folder\>_**\AdminConsole\Bin\x64\CmRcViewer.exe**  
 

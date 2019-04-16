@@ -2,7 +2,7 @@
 title: What's new in version 1902
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1902 of Configuration Manager current branch.
-ms.date: 04/12/2019
+ms.date: 04/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -162,9 +162,9 @@ The task sequence sets a timestamp when it puts the client in provisioning mode.
 
 ### View first screen only during remote control
 <!--3231732-->
-When connecting to a client with two or more monitors, it can be difficult to view them all in the Configuration Manager remote control viewer. A remote tools operator can now choose between seeing **All screens** or the **First screen** only. 
+***[Updated]***  When connecting to a client with two or more monitors, it can be difficult to view them all in the Configuration Manager remote control viewer. A remote tools operator can now choose between seeing **All screens** or the **First screen** only.
 
-<!-- For more information, see [How to remotely administer a Windows client computer](/sccm/core/clients/manage/remote-control/remotely-administer-a-windows-client-computer). -->
+For more information, see [How to remotely administer a Windows client computer](/sccm/core/clients/manage/remote-control/remotely-administer-a-windows-client-computer). 
 
 
 ### Specify a custom port for peer wakeup
