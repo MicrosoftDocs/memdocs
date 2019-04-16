@@ -10,9 +10,10 @@
   items:
   - name: Plan for, and configure compliance settings
     href: plan-design/plan-for-and-configure-compliance-settings.md
-  - name: Common tasks for managing compliance
-    href: plan-design/common-tasks-for-managing-compliance.md
+  - name: Tasks for managing compliance
     items:
+    - name: Common tasks for managing compliance
+      href: plan-design/common-tasks-for-managing-compliance.md
     - name: Devices with the Configuration Manager client
       href: plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md
     - name: Create and deploy configuration baselines
@@ -20,8 +21,9 @@
   - name: Security and privacy
     href: plan-design/security-and-privacy-for-compliance-settings.md
   - name: Security Content Automation Protocol (SCAP) extensions
-    href: plan-design/scap/about-scap.md
     items:
+    - name: About SCAP extensions
+      href: plan-design/scap/about-scap.md
     - name: Install and configure SCAP extensions
       href: plan-design/scap/install-configure-scap.md
     - name: Deploy and monitor SCAP compliance
@@ -31,8 +33,9 @@
 - name: Deploy and use
   items:
   - name: Create configuration items
-    href: deploy-use/create-configuration-items.md
     items:
+    - name: Create configuration items overview
+      href: deploy-use/create-configuration-items.md
     - name: Devices managed with the Configuration Manager client
       href: deploy-use/configuration-items-for-devices-managed-with-the-client.md
       items:
