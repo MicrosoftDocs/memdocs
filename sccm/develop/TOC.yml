@@ -269,19 +269,19 @@
           items:
           - name: Overview
             href: core/understand/sqlviews/exercises-creating-custom-reports-configuration-manager.md
-          - name: Exercise 1: Run an Existing Report
+          - name: Exercise 1 - Run an Existing Report
             href: core/understand/sqlviews/exercise-1-run-existing-configuration-manager-report.md
-          - name: Exercise 2: Modify an Existing Report
+          - name: Exercise 2 - Modify an Existing Report
             href: core/understand/sqlviews/exercise-2-modify-existing-configuration-manager-report.md
-          - name: Exercise 3: Create a New Report
+          - name: Exercise 3 - Create a New Report
             href: core/understand/sqlviews/exercise-3-create-new-configuration-manager-report.md
-          - name: Advanced Exercise 1: Create a New Report for Compliance Settings
+          - name: Advanced Exercise 1 - Create a New Report for Compliance Settings
             href: core/understand/sqlviews/advanced-exercise-1-create-new-report-compliance-settings-configuration-manager.md
-          - name: Advanced Exercise 1 Solution: Create a New Report for Compliance Settings
+          - name: Advanced Exercise 1 Solution - Create a New Report for Compliance Settings
             href: core/understand/sqlviews/advanced-exercise-1-solution-create-new-report-compliance-settings-configuration-manager.md
-          - name: Advanced Exercise 2: Create a New Report for Hardware Inventory
+          - name: Advanced Exercise 2 - Create a New Report for Hardware Inventory
             href: core/understand/sqlviews/advanced-exercise-2-create-new-report-hardware-inventory-configuration-manager.md
-          - name: Advanced Exercise 2 Solution: Create a New Report for Hardware Inventory
+          - name: Advanced Exercise 2 Solution - Create a New Report for Hardware Inventory
             href: core/understand/sqlviews/advanced-exercise-2-solution-create-new-report-hardware-inventory-configuration-manager.md
       - name: Technical Reference for SQL Server Views
         items:
