@@ -42,12 +42,12 @@ Tests also run on greater than standard *average day* loads, by performing simul
 ### Configurations
 Tests run on a wide range of physical, Hyper-V, and Azure hardware, and across a wide mixture of supported operating systems and SQL Server versions. In general, Hyper-V and Azure return comparable performance results to equivalent physical hardware when configured similarly. Newer server operating systems tend to perform equal or better than older supported server operating systems. The largest variation comes from the SQL Server versions in use. For more information about SQL Server versions, see (More information is in the frequently asked questions section below). When qualifying the product's scalability maximums, the product team always validates the worst cases for the supported configurations. While all supported platforms meet the minimum requirements, usually the latest versions of supporting products like Windows and SQL produce even better performance.
 
-## Key items that affect performance 
+## Key performance considerations
 
 The product team tests Configuration Manager with a wide variety of settings, to exercise the product in many different ways and at many different site sizes. The following settings and objects can dramatically affect performance. Be sure to consider them when testing in your environment.
 
 > [!CAUTION]
-> While many aspects of Configuration Manager don't have official maximums or user interface limits to prevent excessive usage, going beyond the guidelines can have significant adverse effects on a site's performance. Exceeding these levels or ignoring this guidance typically requires larger hardware, and may render your environment unmaintainable until you reduce the frequency or count of various objects to lower levels.
+> While few aspects of Configuration Manager have official maximums or user interface limits that prevent excessive usage, going beyond the guidelines can have significant adverse effects on a site's performance. Exceeding these levels or ignoring this guidance typically requires larger hardware, and may render your environment unmaintainable until you reduce the frequency or count of various objects to lower levels.
 
 ### Hardware inventory
 Baseline performance testing sets hardware inventory collection to once per week, with the default *.mof* file size plus approximately 20% additional properties. Don't enable all properties, and collect only properties you actually need. Pay special attention when collecting properties that will *always* change with *every* inventory cycle, such as available virtual memory, which can cause excessive churn on every inventory cycle from every client.
@@ -60,18 +60,20 @@ Configuration Manager baseline performance can include several thousand collecti
 
 Where possible, minimize collections that have expensive or complicated dynamic rule queries. For collections that require these types of rules, set appropriate update intervals and update times to minimize the impact of collection re-evaluation on the system. For example, update at midnight instead of 8:00 AM.
 
-Enabling incremental updates on collections ensures quick and timely updates to collection membership, but even though incremental updates are efficient, they still put load on the system. Balance the change frequency you anticipate with the need for near real-time updates on membership. For example, if you expect heavy churn in collection members, and you don't require near real-time membership updates, updating the collection with a scheduled full update on some interval is more efficient and produces less load on the overall system than enabling incremental updates. When enabling incremental updates, decrease any scheduled full updates on the same collections. They are only a backup method of evaluation, since incremental updates should keep your collection membership updated in near real time. [Best practices for collections](/sccm/core/clients/manage/collections/best-practices-for-collections#do-not-use-incremental-updates-for-a-large-number-of-collections) recommends a maximum number of total collections for incremental updates, but as the article points out, your experience can vary based on many factors.
+Enabling incremental updates on collections ensures quick and timely updates to collection membership, but even though incremental updates are efficient, they still put load on the system. Balance the change frequency you anticipate with the need for near real-time updates on membership. For example, if you expect heavy churn in collection members, and you don't require near real-time membership updates, updating the collection with a scheduled full update on some interval is more efficient and produces less load on the overall system than enabling incremental updates. 
 
-Collections with only direct membership rules and with a limiting collection that isn't performing incremental updates don't need any scheduled full updates. Disable update schedules for these types of collections to prevent unnecessary load on the system. If the limiting collection is set to incremental updates, collections with only direct membership rules may not reflect membership updates for up to 24 hours, or until a scheduled refresh takes place.
+When enabling incremental updates, decrease any scheduled full updates on the same collections. They are only a backup method of evaluation, since incremental updates should keep your collection membership updated in near real time. [Best practices for collections](/sccm/core/clients/manage/collections/best-practices-for-collections#do-not-use-incremental-updates-for-a-large-number-of-collections) recommends a maximum number of total collections for incremental updates, but as the article points out, your experience can vary based on many factors.
+
+Collections with only direct membership rules and with a limiting collection that isn't performing incremental updates don't need scheduled full updates. Disable update schedules for these types of collections to prevent unnecessary load on the system. If the limiting collection is set to incremental updates, collections with only direct membership rules may not reflect membership updates for up to 24 hours, or until a scheduled refresh takes place.
 
 While not a best practice, some organizations create hundreds or even thousands of collections as part of various business processes. When using automation to create collections, it's important to correctly enable incremental updates if needed, and to minimize and spread out any full update schedules to avoid hot spots of collection evaluation during a particular time period. Establish a regular collection grooming process to delete unused collections, especially when you automatically create collections that you no longer need after some period of time.
 
-Remember that Configuration Manager creates policies for all objects in your collections when you target tasks like deployments to them. Membership changes, either through scheduled refresh or incremental updates, can create a lot of other work for the system as a whole. The latest current branch builds have special policy optimizations for the All Systems and All Users collections. When targeting your entire enterprise, use the built-in collections instead of using a clone of these built-in collections.
+Remember that Configuration Manager creates policies for all objects in your collections when you target tasks like deployments to them. Membership changes, either through scheduled refresh or incremental updates, can create a lot of other work for the whole system. The latest current branch builds have special policy optimizations for the All Systems and All Users collections. When targeting your entire enterprise, use the built-in collections instead of a clone of these built-in collections.
 
 To investigate collection performance even deeper, you can use the Collection Evaluation Viewer (CEViewer) in the [Configuration Manager Toolkit](https://www.microsoft.com/download/details.aspx?id=50012).
 
 ### Discovery methods
-Baseline performance testing runs server-based discovery methods once a week, enabling delta discovery as appropriate to keep the data fresh during the week. The tests discover a number of objects that is proportional to the simulated enterprise size. The performance baseline test for heartbeat discovery also runs once a week.
+Baseline performance testing runs server-based discovery methods once a week, enabling delta discovery as appropriate to keep the data fresh during the week. The tests discover an object quantity proportional to the simulated enterprise size. The performance baseline test for heartbeat discovery also runs once a week.
 
 Discovery data is global data. A common performance-related problem is to misconfigure server-based discovery methods in a hierarchy, causing duplicate discovery of the same resources from multiple primary sites. Carefully configure server discovery methods to optimize communication with the target service, such as Active Directory domain controllers, while avoiding duplication of the same discovery scope at multiple primary sites.
 
@@ -79,7 +81,7 @@ Discovery data is global data. A common performance-related problem is to miscon
 
 The following table gives general *minimum* hardware requirement guidelines for specific numbers of managed clients, based on Configuration Manager product team testing with the preceding methodology and considerations. The values in this table should allow most customers with that number of clients to process objects fast enough to administer a site of that size. Computing power continues to decrease in price every year, and some of the requirements below could almost be considered "small," in terms of modern available server hardware configurations. Hardware that exceeds the following guidelines will proportionally increase performance for sites that require additional processing power or have special product usage patterns. 
 
-| Desktop clients  | Site type/role  | Cores^1^   | Memory (GB)   | SQL memory allocation  | IOPS:  Inboxes^2^  | IOPS: SQL^2^   | Storage space required (GB)^3^   |
+| Desktop clients  | Site type/role  | Cores<sup>1</sup>   | Memory (GB)   | SQL memory allocation  | IOPS:  Inboxes<sup>2</sup>  | IOPS: SQL<sup>2</sup>   | Storage space required (GB)<sup>3</sup>   |
 |------|-------------------------------------------------------------|-----|-----|-----|------|------|------|
 | 25k  | Primary or CAS with database site role on the same server   | 6   | 24  | 65% | 600  | 1700 | 350  |
 | 25k  | Primary or CAS                                              | 4   | 8   |     | 600  |      | 100  |
@@ -115,18 +117,18 @@ The following table gives general *minimum* hardware requirement guidelines for 
    
 2. **IOPS: Inboxes and IOPS: SQL:** refer to the IOPS needs for the Configuration Manager and SQL logical drives. The **IOPS: Inboxes** column shows the IOPS requirements for the logical drive where the Configuration Manager inbox directories reside. The **IOPS: SQL** column shows the total IOPS needs for the logical drive(s) that various SQL files use. These columns are different because the two drives should have different formatting. For more information and examples on suggested SQL disk configurations and file best practices, including details on splitting them across multiple volumes, see [article].
    
-   Both of these IOPS columns use data generated with the industry-standard tool, *Diskspd*. See [Measure IOPS disk writes](#measure-iops-disk-writes] for instructions on duplicating these measurements. In general, once you meet basic CPU and memory requirements, the storage subsystem has the largest impact on site performance, and improvements here will give the most payback on investment.
+   Both of these IOPS columns use data generated with the industry-standard tool, *Diskspd*. See [Measure IOPS disk writes](#measure-iops-disk-writes) for instructions on duplicating these measurements. In general, once you meet basic CPU and memory requirements, the storage subsystem has the largest impact on site performance, and improvements here will give the most payback on investment.
    
 3.  **Storage space required:** These real-world values may differ from other documented recommendations. We provide these numbers only as a general guideline; individual requirements could vary widely. Carefully plan for disk space needs before site installation. Assume that some amount of this storage remains as free disk space most of the time. Use this space as buffer, if needed, in a recovery scenario, and for upgrade scenarios that need free disk space for setup package expansion. Your site may require additional storage for large amounts of data collection, longer periods of data retention, and large amounts of software distribution content, which you can also store on separate, lower-throughput volumes.
 
-## Measure IOPS disk writes 
+## How to measure IOPS disk writes 
 
 You can use the industry-standard tool *Diskspd* to provide standardized suggestions for the IOPS that various-sized Configuration Manager environments require. While not exhaustive, the following test methodology and command lines provide a simple and reproducible way to get an estimate of the throughput of your servers' disk subsystem, compared to the general recommended IOPS in the preceding table. 
 
 See [Example disk configurations](#example-disk-configurations) for test results with a variety of hardware in lab environments. You can use the data for a rough starting point when designing the storage subsystem for a new environment from scratch.
 
 ### To test IOPS  
-1. Download the *Diskspd* utility here: [https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage6cd2f223](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223)
+1. Download the *Diskspd* utility here: [https://gallery.technet.microsoft.com/DiskSpd-A-Robust-Storage-6ef84e62](https://gallery.technet.microsoft.com/DiskSpd-A-Robust-Storage-6ef84e62).
    
 1. Make sure you have at least 100 GB of free disk space, and disable any apps that might interfere or cause extra load on the disk, such as active antivirus scanning of that directory, SQL, or SMSExec.
    
@@ -161,14 +163,14 @@ See [Example disk configurations](#example-disk-configurations) for test results
 
 ## Example disk configurations
 
-Use this data for a *rough* starting point when designing the storage subsystem for a new environment from scratch. The following tables show results from running the test steps in [Measure IOPS disk writes](#measure-iops-disk-writes] in various test lab configurations. 
+Use this data for a *rough* starting point when designing the storage subsystem for a new environment from scratch. The following tables show results from running the test steps in [Measure IOPS disk writes](#measure-iops-disk-writes) with various test lab configurations. 
 
 ### Physical machines and Hyper-V 
 Hardware is always improving. Expect newer generations of hardware and different hardware combinations, like SSDs and SANs, to exceed the performance stated below. These results are a basic starting point to consider when designing a server or discussing with your hardware vendor.
 
 The following table shows the test results across various disk subsystems, including spindle and SSD-based hard drives, in various test lab configurations. All configurations format the disks with 64k clusters and attach them to an enterprise class disk controller. In addition to the RAID array disk count, they each have at least one spare disk.
 
-| **Disk type **   | **Disk count, not including +1 spare disk** | **RAID **     | **IOPS measured**  |
+| Disk type   | Disk count, not including +1 spare disk | RAID     | IOPS measured  |
 |------------------|----------------------------------------------------|---------------|---------------|
 | 15k SAS          | 2                                                  |           1   | 620           |
 | 15k SAS          | 4                                                  |           10  | 1206          |
@@ -189,42 +191,42 @@ The following table shows the test results across various disk subsystems, inclu
 
 These are the devices the example used. This information is not a recommendation of any specific hardware model or manufacturer. 
 
-| **Disk type **    | **Model **      | **RAID controller ** | **Cache memory and configuration ** |
+| Disk type    | Model      | RAID controller | Cache memory and configuration |
 |-------------------|-----------------|----------------------|-------------------------------------|
 | 15k RPM SAS HD    | HP EH0300JDYTH  | Smart Array P822     | 2GB, 20% Read / 80% Write           |
 | SSD SATA          | ATA MK0200GCTYV | Smart Array P420i    | 1GB, 20% Read / 80% Write           |
 | SSD SAS           | HP MO0800 JEFPB | Smart Array P420i    | 1GB, 20% Read / 80% Write           |
 
 ### Azure machine and disk performance 
-Azure disk performance depends on several factors, such as the size of the Azure VM and the number and type of disks it uses. Azure is also constantly adding new machine types and disk speeds that are different offerings from the preceding chart. For more information about Configuration Manager running on Azure, and additional information on understanding disk I/O on Azure, see this FAQ: [https://docs.microsoft.com/en-us/sccm/core/understand/configuration-manager-on-azure](https://docs.microsoft.com/en-us/sccm/core/understand/configuration-manager-on-azure)
+Azure disk performance depends on several factors, such as the size of the Azure VM and the number and type of disks it uses. Azure is also constantly adding new machine types and disk speeds that are different offerings from the following chart. For more information about Configuration Manager running on Azure, and additional information on understanding disk I/O on Azure, see this FAQ: [https://docs.microsoft.com/en-us/sccm/core/understand/configuration-manager-on-azure](https://docs.microsoft.com/en-us/sccm/core/understand/configuration-manager-on-azure)
 
 All disks are formatted NTFS 64k cluster size, and rows with more than one disk are configured as striped volumes via the Windows Disk Management utility.
 
 | **Azure VM**| **Azure disk**| **Disk count** | **Available space** | **IOPS measured**   | **Limiting factor**   |
 |--------------------------------------------|-------------------------|---------------------|---------------------------|-------|-----------------|
-| **DS2/DS11 **                              | P20                     | 1                   | 512 MB                    | 965   | Azure VM size   |
-| **DS2/DS11 **                              | P20                     | 2                   | 1024 MB                   | 996   | Azure VM size   |
-| **DS2/DS11 **                              | P30                     | 1                   | 1024 MB                   | 996   | Azure VM size   |
-| **DS2/DS11 **                              | P30                     | 2                   | 2048 MB                   | 996   | Azure VM size   |
-| **DS3/DS12/F4S **                          | P20                     | 1                   | 512 MB                    | 1994  | Azure VM size   |
-| **DS3/DS12/F4S **                          | P20                     | 2                   | 1024 MB                   | 1992  | Azure VM size   |
-| **DS3/DS12/F4S **                          | P30                     | 1                   | 1024 MB                   | 1993  | Azure VM size   |
-| **DS3/DS12/F4S **                          | P30                     | 2                   | 2048 MB                   | 1992  | Azure VM size   |
-| **DS4/DS13/F8S **                          | P20                     | 1                   | 512 MB                    | 2334  | P20 disk        |
-| **DS4/DS13/F8S **                          | P20                     | 2                   | 1024 MB                   | 3984  | Azure VM size   |
-| **DS4/DS13/F8S **                          | P20                     | 3                   | 1536 MB                   | 3984  | Azure VM size   |
-| **DS4/DS13/F8S **                          | P30                     | 1                   | 1024 MB                   | 3112  | P30 disk        |
-| **DS4/DS13/F8S **                          | P30                     | 2                   | 2048 MB                   | 3984  | Azure VM size   |
-| **DS4/DS13/F8S **                          | P30                     | 3                   | 3072 MB                   | 3996  | Azure VM size   |
-| **DS5/DS14/F16S **                         | P20                     | 1                   | 512 MB                    | 2335  | P20 disk        |
-| **DS5/DS14/F16S **                         | P20                     | 2                   | 1024 MB                   | 4639  | P20 disk        |
-| **DS5/DS14/F16S **                         | P20                     | 3                   | 1536 MB                   | 6913  | P20 disk        |
-| **DS5/DS14/F16S **                         | P20                     | 4                   | 2048 MB                   | 7966  | Azure VM size   |
-| **DS5/DS14/F16S **                         | P30                     | 1                   | 1024 MB                   | 3112  | P30 disk        |
-| **DS5/DS14/F16S **                         | P30                     | 2                   | 2048 MB                   | 6182  | P30 disk        |
-| **DS5/DS14/F16S **                         | P30                     | 3                   | 3072 MB                   | 7963  | Azure VM size   |
-| **DS5/DS14/F16S **                         | P30                     | 4                   | 4096 MB                   | 7968  | Azure VM size   |
-| **DS15 **                                  | P30                     | 1                   | 1024 MB                   | 3113  | P30 disk        |
-| **DS15 **                                  | P30                     | 2                   | 2048 MB                   | 6184  | P30 disk        |
-| **DS15 **                                  | P30                     | 3                   | 3072 MB                   | 9225  | P30 disk        |
-| **DS15 **                                  | P30                     | 4                   | 4096 MB                   | 10200 | Azure VM size   |
+| **DS2/DS11**                              | P20                     | 1                   | 512 MB                    | 965   | Azure VM size   |
+| **DS2/DS11**                              | P20                     | 2                   | 1024 MB                   | 996   | Azure VM size   |
+| **DS2/DS11**                              | P30                     | 1                   | 1024 MB                   | 996   | Azure VM size   |
+| **DS2/DS11**                              | P30                     | 2                   | 2048 MB                   | 996   | Azure VM size   |
+| **DS3/DS12/F4S**                          | P20                     | 1                   | 512 MB                    | 1994  | Azure VM size   |
+| **DS3/DS12/F4S**                          | P20                     | 2                   | 1024 MB                   | 1992  | Azure VM size   |
+| **DS3/DS12/F4S**                          | P30                     | 1                   | 1024 MB                   | 1993  | Azure VM size   |
+| **DS3/DS12/F4S**                          | P30                     | 2                   | 2048 MB                   | 1992  | Azure VM size   |
+| **DS4/DS13/F8S**                          | P20                     | 1                   | 512 MB                    | 2334  | P20 disk        |
+| **DS4/DS13/F8S**                          | P20                     | 2                   | 1024 MB                   | 3984  | Azure VM size   |
+| **DS4/DS13/F8S**                          | P20                     | 3                   | 1536 MB                   | 3984  | Azure VM size   |
+| **DS4/DS13/F8S**                          | P30                     | 1                   | 1024 MB                   | 3112  | P30 disk        |
+| **DS4/DS13/F8S**                          | P30                     | 2                   | 2048 MB                   | 3984  | Azure VM size   |
+| **DS4/DS13/F8S**                          | P30                     | 3                   | 3072 MB                   | 3996  | Azure VM size   |
+| **DS5/DS14/F16S**                         | P20                     | 1                   | 512 MB                    | 2335  | P20 disk        |
+| **DS5/DS14/F16S**                         | P20                     | 2                   | 1024 MB                   | 4639  | P20 disk        |
+| **DS5/DS14/F16S**                         | P20                     | 3                   | 1536 MB                   | 6913  | P20 disk        |
+| **DS5/DS14/F16S**                         | P20                     | 4                   | 2048 MB                   | 7966  | Azure VM size   |
+| **DS5/DS14/F16S**                         | P30                     | 1                   | 1024 MB                   | 3112  | P30 disk        |
+| **DS5/DS14/F16S**                         | P30                     | 2                   | 2048 MB                   | 6182  | P30 disk        |
+| **DS5/DS14/F16S**                         | P30                     | 3                   | 3072 MB                   | 7963  | Azure VM size   |
+| **DS5/DS14/F16S**                         | P30                     | 4                   | 4096 MB                   | 7968  | Azure VM size   |
+| **DS15**                                  | P30                     | 1                   | 1024 MB                   | 3113  | P30 disk        |
+| **DS15**                                  | P30                     | 2                   | 2048 MB                   | 6184  | P30 disk        |
+| **DS15**                                  | P30                     | 3                   | 3072 MB                   | 9225  | P30 disk        |
+| **DS15**                                  | P30                     | 4                   | 4096 MB                   | 10200 | Azure VM size   |
