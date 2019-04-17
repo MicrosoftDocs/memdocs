@@ -180,7 +180,7 @@ It is unlikely that this view will be joined to other views.
 
 ### v_Admins
 
-Returns all administrative users (ie. those who appear in the **Administrative Users** node under **Security** in the **Administration** workspace)
+Returns all administrative users (that is, those who appear in the **Administrative Users** node under **Security** in the **Administration** workspace)
 This view can be joined to other views by using the **AdminID** column.
 
 ### v_SecuredObjectTypes
