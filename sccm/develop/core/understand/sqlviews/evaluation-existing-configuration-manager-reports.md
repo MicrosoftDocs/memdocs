@@ -17,7 +17,7 @@ manager: dougeby
 
 This section evaluates a simple and a more complex existing Configuration Manager report to provide a better understanding about how Configuration Manager reports are constructed.
 
-For information about all of the built-in reports in Configuration Manager, see [List of Reports Supplied with Configuration Manager](https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/dn581998(v=technet.10)).
+For information about all of the built-in reports in Configuration Manager, see [List of Reports Supplied with Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/dn581998(v=technet.10)).
 
 ## In This Section
 

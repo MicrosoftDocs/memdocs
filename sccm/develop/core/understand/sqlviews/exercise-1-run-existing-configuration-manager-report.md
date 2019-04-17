@@ -17,7 +17,7 @@ manager: dougeby
 
 In this exercise, you will run an existing Configuration Manager report and review specific report elements.
 
-For more detailed information about how to work with reports in Configuration Manager, see [Reporting in Configuration Manager](https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/gg699377(v%3dtechnet.10)) in the Configuration Manager Documentation Library.
+For more detailed information about how to work with reports in Configuration Manager, see [Reporting in Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699377(v%3dtechnet.10)) in the Configuration Manager Documentation Library.
 
 ## To run an existing Configuration Manager report
 
