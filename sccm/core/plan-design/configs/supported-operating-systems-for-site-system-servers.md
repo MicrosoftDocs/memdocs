@@ -2,7 +2,7 @@
 title: Supported site system servers
 titleSuffix: Configuration Manager
 description: Learn which Windows versions you can use to host a Configuration Manager site or site system role.
-ms.date: 01/15/2019
+ms.date: 04/16/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -228,6 +228,7 @@ This support has the following limitation:
 
 The server core installation of the following server OS versions are supported for use as a **distribution point**: 
 
+- Windows Server 2019 (starting in Configuration Manager, version 1810)  
 - Windows Server, version 1809 (starting in Configuration Manager, version 1810)  
 - Windows Server, version 1803 (starting in Configuration Manager, version 1802)  
 - Windows Server, version 1709 (starting in Configuration Manager, version 1710)  
