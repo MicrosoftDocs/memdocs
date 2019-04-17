@@ -13,7 +13,7 @@ ms.date: 04/12/2019
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager leads the industry in scalability and performance. Other documentation covers [maximum supported scalability limits](size-and-scale-numbers.md) and [hardware guidelines](recommended-hardware.md) for running sites at the largest environment sizes. This article gives supplemental performance guidance for Configuration Manager environments at all sizes, and can help you more accurately estimate the hardware you need to deploy Configuration Manager.
+System Center Configuration Manager leads the industry in scalability and performance. Other documentation covers [maximum supported scalability limits](size-and-scale-numbers.md) and [hardware guidelines](recommended-hardware.md) for running sites at the largest environment sizes. This article gives supplemental performance guidance for environments of all sizes, to help you more accurately estimate the hardware you need to deploy Configuration Manager.
 
 This article focuses on the largest contributor to Configuration Manager performance bottlenecks: the disk input/output subsystem or IOPS. The article:
 
@@ -23,50 +23,50 @@ This article focuses on the largest contributor to Configuration Manager perform
 
 ## Performance test methodology
 
-You can deploy Configuration Manager in many unique ways, but it's important to understand a few variables in any sizing discussions. These variables include *feature intervals*, which are like inventory cycles, and the number of various *objects* the system references or deploys, like the number of users or total software deployments. When testing product performance, you apply these variables as part of a *load*, which generates objects at a rate representative of the daily load for enterprise customers during production deployments at the given size environments.
+You can deploy Configuration Manager in many unique ways, but it's important to understand a few variables in any sizing discussions. These variables include *feature intervals*, which are like inventory cycles, and the number of users, software deployments, or other *objects* the system references or deploys. Performance testing applies these variables as part of a *load*, which generates objects at a rate representing the daily load for enterprise customers during production deployments at the given size environments.
 
 > [!NOTE] 
-> Customer telemetry data allows for testing current branch builds with the most common scenarios, configurations, and settings for most customers. All of the recommendations in this document are based on these averages. Your experiences may vary based on the size and configuration of your environment. In general, common sense is required with Configuration Manager when it comes to objects and intervals. Just because you can collect every file on a system, or set the interval for a cycle to one minute, doesn't mean you should.
+> Customer telemetry data allows for testing current branch builds with the most common scenarios, configurations, and settings for most customers. All of the recommendations in this document are based on these averages. Your experiences may vary based on the size and configuration of your environment. In general, Configuration Manager requires common sense when it comes to objects and intervals. Just because you can collect every file on a system, or set the interval for a cycle to one minute, doesn't mean you should.
 
-The following sections highlight some of the key settings and recommendations to use when testing and modeling processing needs for the largest enterprises. These guidelines help set some basic system performance expectations for suggested hardware sizes.
+The following sections highlight some key settings and configurations when testing and modeling processing needs for the largest enterprises. These guidelines help set basic system performance expectations for the suggested hardware sizes.
 
 ### Feature intervals settings 
-Most testing uses default intervals for the key cycles in the system. For example, hardware inventory testing occurs once per week with a larger than default *.mof* file. Some recurring feature intervals, especially hardware and software inventory cycles, can have significant effect on an environment’s performance characteristics. Environments that enable aggressive default intervals or data collection need oversized hardware in direct proportion to the increase in activity. For example, if you have 25,000 desktop clients and want to collect hardware inventory two times faster than the default interval, you should start by sizing your site’s hardware as if you had 50,000 clients.
+Most testing uses default intervals for the key cycles in the system. For example, hardware inventory testing occurs once per week with a larger than default *.mof* file. Some recurring feature intervals, especially hardware and software inventory cycles, can have significant effects on an environment’s performance characteristics. Environments that enable aggressive default intervals or data collection need oversized hardware in direct proportion to the increase in activity. For example, if you have 25,000 desktop clients and want to collect hardware inventory two times faster than the default interval, you should start by sizing your site’s hardware as if you had 50,000 clients.
 
 ### Objects 
-Testing uses the *upper average* of the objects that large enterprises tend to use with the system, such as thousands of collections and thousands of applications deployed to hundreds of thousands of users or systems. Tests run simultaneously on *all* objects in the system at these limits. Many customers leverage several features, but don't generally use *all* features of the product at these upper limits. Testing with *all* features of the product at these limits helps ensure the best possible system-wide performance, while allowing some buffer for when one feature is used above average by a particular customer.
+Testing uses the *upper average* of the objects that large enterprises tend to use with the system. Typical values are thousands of collections and thousands of applications deployed to hundreds of thousands of users or systems. Tests run simultaneously on *all* objects in the system at these limits. Many customers leverage several features, but don't generally use *all* features of the product at these upper limits. Testing with *all* product features helps ensure the best possible system-wide performance, while allowing some buffer for when one feature is used above average by a particular customer.
 
 ### Loads 
-Tests also run on greater than standard *average day* loads, by performing simulations that generate peak usage demands on the system. One example is simulating Patch Tuesday rollouts, to make sure that update compliance data can be returned in a timely manner during these peak activity days. Another example is simulating site activity during a widespread malware outbreak, to ensure timely notification and response would be possible. Although deployed machines of the recommended size may be underutilized on any given day, these more extreme situations require some processing buffer.
+Tests also run on greater than standard *average day* loads, by performing simulations that generate peak usage demands on the system. One example is simulating Patch Tuesday rollouts, to make sure the system can return update compliance data promptly during these days of peak activity. Another example is simulating site activity during a widespread malware outbreak, to ensure timely notification and response would be possible. Although deployed machines of the recommended size may be underutilized on any given day, these more extreme situations require some processing buffer.
 
 ### Configurations
 Tests run on a wide range of physical, Hyper-V, and Azure hardware, and across a wide mixture of supported operating systems and SQL Server versions. In general, Hyper-V and Azure return comparable performance results to equivalent physical hardware when configured similarly. Newer server operating systems tend to perform equal or better than older supported server operating systems. The largest variation comes from the SQL Server versions in use. For more information about SQL Server versions, see (More information is in the frequently asked questions section below). When qualifying the product's scalability maximums, the product team always validates the worst cases for the supported configurations. While all supported platforms meet the minimum requirements, usually the latest versions of supporting products like Windows and SQL produce even better performance.
 
-## Key performance considerations
+## Key performance determinants
 
-The product team tests Configuration Manager with a wide variety of settings, to exercise the product in many different ways and at many different site sizes. The following settings and objects can dramatically affect performance. Be sure to consider them when testing in your environment.
+You can test Configuration Manager with a wide variety of settings, to exercise the product in many different ways and at many different site sizes. The following settings and objects can dramatically affect performance. Be sure to consider them when testing and modeling performance in your environment.
 
 > [!CAUTION]
 > While few aspects of Configuration Manager have official maximums or user interface limits that prevent excessive usage, going beyond the guidelines can have significant adverse effects on a site's performance. Exceeding these levels or ignoring this guidance typically requires larger hardware, and may render your environment unmaintainable until you reduce the frequency or count of various objects to lower levels.
 
 ### Hardware inventory
-Baseline performance testing sets hardware inventory collection to once per week, with the default *.mof* file size plus approximately 20% additional properties. Don't enable all properties, and collect only properties you actually need. Pay special attention when collecting properties that will *always* change with *every* inventory cycle, such as available virtual memory, which can cause excessive churn on every inventory cycle from every client.
+Baseline performance measurement sets hardware inventory collection to once per week, with the default *.mof* file size plus approximately 20% additional properties. Don't enable all properties, and collect only properties you actually need. Pay special attention when collecting properties, such as available virtual memory, that will *always* change with *every* inventory cycle. Collecting these properties can cause excessive churn on every inventory cycle from every client.
 
 ### Software inventory
-Baseline performance testing sets software inventory collection to once per week with *product only* details. Collecting many files can place a significant strain on the inventory subsystem. Avoid specifying filters that could end up collecting thousands of files across many clients, such as *\*.exe* or *\*.dll*.
+Baseline performance measurement sets software inventory collection to once per week, with *product only* details. Collecting many files can place a significant strain on the inventory subsystem. Avoid specifying filters that could end up collecting thousands of files across many clients, such as *\*.exe* or *\*.dll*.
 
 ### Collections
-Configuration Manager baseline performance can include several thousand collections with a variety of scope, size, complexity, and update settings. Configuration Manager site performance is not directly related to the sheer number of collections on a site, but is instead a cross-product of the complexity of collection queries, the full update frequency of collections, incremental updates, frequency of changes, dependencies among collections, and the number of clients in the collections.
+Performance measurements can include several thousand collections with a variety of scope, size, complexity, and update settings. Configuration Manager site performance isn't directly related to the sheer number of collections on a site, but is instead a cross-product of the complexity of collection queries, the full update frequency of collections, incremental updates, frequency of changes, dependencies among collections, and the number of clients in the collections.
 
 Where possible, minimize collections that have expensive or complicated dynamic rule queries. For collections that require these types of rules, set appropriate update intervals and update times to minimize the impact of collection re-evaluation on the system. For example, update at midnight instead of 8:00 AM.
 
 Enabling incremental updates on collections ensures quick and timely updates to collection membership, but even though incremental updates are efficient, they still put load on the system. Balance the change frequency you anticipate with the need for near real-time updates on membership. For example, if you expect heavy churn in collection members, and you don't require near real-time membership updates, updating the collection with a scheduled full update on some interval is more efficient and produces less load on the overall system than enabling incremental updates. 
 
-When enabling incremental updates, decrease any scheduled full updates on the same collections. They are only a backup method of evaluation, since incremental updates should keep your collection membership updated in near real time. [Best practices for collections](/sccm/core/clients/manage/collections/best-practices-for-collections#do-not-use-incremental-updates-for-a-large-number-of-collections) recommends a maximum number of total collections for incremental updates, but as the article points out, your experience can vary based on many factors.
+When enabling incremental updates, reduce any scheduled full updates on the same collections. They're only a backup method of evaluation, since incremental updates should keep your collection membership updated in near real time. [Best practices for collections](../../clients/manage/collections/best-practices-for-collections.md#do-not-use-incremental-updates-for-a-large-number-of-collections) recommends a maximum number of total collections for incremental updates, but as the article points out, your experience can vary based on many factors.
 
-Collections with only direct membership rules and with a limiting collection that isn't performing incremental updates don't need scheduled full updates. Disable update schedules for these types of collections to prevent unnecessary load on the system. If the limiting collection is set to incremental updates, collections with only direct membership rules may not reflect membership updates for up to 24 hours, or until a scheduled refresh takes place.
+Collections with only direct membership rules and with a limiting collection that isn't performing incremental updates don't need scheduled full updates. Disable update schedules for these types of collections to prevent unnecessary load on the system. If the limiting collection uses incremental updates, collections with only direct membership rules may not reflect membership updates for up to 24 hours, or until a scheduled refresh takes place.
 
-While not a best practice, some organizations create hundreds or even thousands of collections as part of various business processes. When using automation to create collections, it's important to correctly enable incremental updates if needed, and to minimize and spread out any full update schedules to avoid hot spots of collection evaluation during a particular time period. Establish a regular collection grooming process to delete unused collections, especially when you automatically create collections that you no longer need after some period of time.
+While not a best practice, some organizations create hundreds or even thousands of collections as part of various business processes. When using automation to create collections, it's important to enable needed incremental updates correctly, and to minimize and spread out any full update schedules to avoid hot spots of collection evaluation during the same time period. Establish a regular grooming process to delete unused collections, especially if you automatically create collections that you no longer need after some time.
 
 Remember that Configuration Manager creates policies for all objects in your collections when you target tasks like deployments to them. Membership changes, either through scheduled refresh or incremental updates, can create a lot of other work for the whole system. The latest current branch builds have special policy optimizations for the All Systems and All Users collections. When targeting your entire enterprise, use the built-in collections instead of a clone of these built-in collections.
 
@@ -75,11 +75,11 @@ To investigate collection performance even deeper, you can use the Collection Ev
 ### Discovery methods
 Baseline performance testing runs server-based discovery methods once a week, enabling delta discovery as appropriate to keep the data fresh during the week. The tests discover an object quantity proportional to the simulated enterprise size. The performance baseline test for heartbeat discovery also runs once a week.
 
-Discovery data is global data. A common performance-related problem is to misconfigure server-based discovery methods in a hierarchy, causing duplicate discovery of the same resources from multiple primary sites. Carefully configure server discovery methods to optimize communication with the target service, such as Active Directory domain controllers, while avoiding duplication of the same discovery scope at multiple primary sites.
+Discovery data is global data. A common performance-related problem is to misconfigure server-based discovery methods in a hierarchy, causing duplicate discovery of the same resources from multiple primary sites. Carefully configure discovery methods to optimize communication with the target service, such as Active Directory domain controllers, while avoiding duplication of the same discovery scope at multiple primary sites.
 
-## Sizing guidance 
+## General sizing guidelines 
 
-The following table gives general *minimum* hardware requirement guidelines for specific numbers of managed clients, based on Configuration Manager product team testing with the preceding methodology and considerations. The values in this table should allow most customers with that number of clients to process objects fast enough to administer a site of that size. Computing power continues to decrease in price every year, and some of the requirements below could almost be considered "small," in terms of modern available server hardware configurations. Hardware that exceeds the following guidelines will proportionally increase performance for sites that require additional processing power or have special product usage patterns. 
+The following table gives general *minimum* hardware requirement guidelines for specific numbers of managed clients, based on testing with the preceding methodology and considerations. The values in this table should allow most customers with the specified number of clients to process objects fast enough to administer a site of the specified size. Computing power continues to decrease in price every year, and some of the requirements below are small in terms of modern server hardware configurations. Hardware that exceeds the following guidelines will proportionally increase performance for sites that require additional processing power or have special product usage patterns. 
 
 | Desktop clients  | Site type/role  | Cores<sup>1</sup>   | Memory (GB)   | SQL memory allocation  | IOPS:  Inboxes<sup>2</sup>  | IOPS: SQL<sup>2</sup>   | Storage space required (GB)<sup>3</sup>   |
 |------|-------------------------------------------------------------|-----|-----|-----|------|------|------|
@@ -108,26 +108,26 @@ The following table gives general *minimum* hardware requirement guidelines for 
 
 **Notes**
 
-1. **Cores**: Configuration Manager performs many simultaneous processes, so needs a certain minimum number of CPU cores for various site sizes. While cores get faster each year, ensuring a certain minimum number of cores working in parallel is important. In general, any server-level CPU produced after 2015 meets the basic performance needs for the cores specified in the table. Configuration Manager takes advantage of additional cores beyond the recommendations, but generally, once the minimum suggested cores are available, prioritize investment in additional CPU resources by increasing the speed of existing cores and not by adding more, slower cores to your servers. For example, given the choice between 16 faster cores or 24 slower cores, Configuration Manager will perform better on key processing tasks with the 16 fast cores, assuming enough other system resources, especially disk IOPS, are available.
+1. **Cores**: Configuration Manager performs many simultaneous processes, so needs a certain minimum number of CPU cores for various site sizes. While cores get faster each year, ensuring a certain minimum number of cores working in parallel is important. In general, any server-level CPU produced after 2015 meets the basic performance needs for the cores specified in the table. Configuration Manager takes advantage of additional cores beyond the recommendations, but generally, once you have the minimum suggested cores, prioritize investment in additional CPU resources by increasing the speed of existing cores and not by adding more, slower cores to your servers. For example, given the choice between 16 faster cores or 24 slower cores, Configuration Manager will perform better on key processing tasks with the 16 fast cores, assuming enough other system resources like disk IOPS are available.
    
    The relationship between cores and memory is also important. In general, having less than 3-4 GB of RAM per core reduces the total processing capability on your SQL servers. You need more RAM per core when SQL is co-located with the site server components.
    
    > [!NOTE]
-   > All testing set machine power plans to allow maximum CPU power consumption and performance.
+   > All testing sets machine power plans to allow maximum CPU power consumption and performance.
    
-2. **IOPS: Inboxes and IOPS: SQL:** refer to the IOPS needs for the Configuration Manager and SQL logical drives. The **IOPS: Inboxes** column shows the IOPS requirements for the logical drive where the Configuration Manager inbox directories reside. The **IOPS: SQL** column shows the total IOPS needs for the logical drive(s) that various SQL files use. These columns are different because the two drives should have different formatting. For more information and examples on suggested SQL disk configurations and file best practices, including details on splitting them across multiple volumes, see [article].
+2. **IOPS: Inboxes and IOPS: SQL** refer to the IOPS needs for the Configuration Manager and SQL logical drives. The **IOPS: Inboxes** column shows the IOPS requirements for the logical drive where the Configuration Manager inbox directories reside. The **IOPS: SQL** column shows the total IOPS needs for the logical drive(s) that various SQL files use. These columns are different because the two drives should have different formatting. For more information and examples on suggested SQL disk configurations and file best practices, including details on splitting them across multiple volumes, see [article].
    
-   Both of these IOPS columns use data generated with the industry-standard tool, *Diskspd*. See [Measure IOPS disk writes](#how-to-measure-iops-disk-writes) for instructions on duplicating these measurements. In general, once you meet basic CPU and memory requirements, the storage subsystem has the largest impact on site performance, and improvements here will give the most payback on investment.
+   Both of these IOPS columns use data from the industry-standard tool, *Diskspd*. See [How to measure disk performance](#how-to-measure-disk-performance) for instructions on duplicating these measurements. In general, once you meet basic CPU and memory requirements, the storage subsystem has the largest impact on site performance, and improvements here will give the most payback on investment.
    
 3.  **Storage space required:** These real-world values may differ from other documented recommendations. We provide these numbers only as a general guideline; individual requirements could vary widely. Carefully plan for disk space needs before site installation. Assume that some amount of this storage remains as free disk space most of the time. Use this space as buffer, if needed, in a recovery scenario, and for upgrade scenarios that need free disk space for setup package expansion. Your site may require additional storage for large amounts of data collection, longer periods of data retention, and large amounts of software distribution content, which you can also store on separate, lower-throughput volumes.
 
-## How to measure IOPS disk writes 
+## How to measure disk performance 
 
 You can use the industry-standard tool *Diskspd* to provide standardized suggestions for the IOPS that various-sized Configuration Manager environments require. While not exhaustive, the following test methodology and command lines provide a simple and reproducible way to get an estimate of the throughput of your servers' disk subsystem, compared to the general recommended IOPS in the preceding table. 
 
-See [Example disk configurations](#example-disk-configurations) for test results with a variety of hardware in lab environments. You can use the data for a rough starting point when designing the storage subsystem for a new environment from scratch.
+See [Example disk configurations](#example-disk-configurations) for test results from a variety of hardware in lab environments. You can use the data for a rough starting point when designing the storage subsystem for a new environment from scratch.
 
-### To test IOPS  
+### To test disk IOPS  
 1. Download the *Diskspd* utility here: [https://gallery.technet.microsoft.com/DiskSpd-A-Robust-Storage-6ef84e62](https://gallery.technet.microsoft.com/DiskSpd-A-Robust-Storage-6ef84e62).
    
 1. Make sure you have at least 100 GB of free disk space, and disable any apps that might interfere or cause extra load on the disk, such as active antivirus scanning of that directory, SQL, or SMSExec.
@@ -147,7 +147,7 @@ See [Example disk configurations](#example-disk-configurations) for test results
 1. Review the output from the second test to find the total IOPS in the **I/O per s** column. In the following example, the total IOPS are **3929.18**.
    
    ```
-   | Total IO
+   Total IO
    | thread |  bytes      |  I/Os   |  MB/s  | I/O per s | AvgLat | LatStdDev |
    |--------|-------------|---------|--------|-----------|--------|-----------| 
    |   1    |  9651814400 |  147275 |  30.68 |    490.92 | 16.294 | 10.210    | 
@@ -163,7 +163,7 @@ See [Example disk configurations](#example-disk-configurations) for test results
 
 ## Example disk configurations
 
-Use this data for a *rough* starting point when designing the storage subsystem for a new environment from scratch. The following tables show results from running the test steps in [Measure IOPS disk writes](#how-to-measure-iops-disk-writes) with various test lab configurations. 
+The following tables show results from running the test steps in [How to measure disk performance](#how-to-measure-disk-performance) with various test lab configurations. Use this data for a *rough* starting point when designing the storage subsystem for a new environment from scratch. 
 
 ### Physical machines and Hyper-V 
 Hardware is always improving. Expect newer generations of hardware and different hardware combinations, like SSDs and SANs, to exceed the performance stated below. These results are a basic starting point to consider when designing a server or discussing with your hardware vendor.
@@ -189,7 +189,7 @@ The following table shows the test results across various disk subsystems, inclu
 | SSD SAS          | 4                                                  |           10  | 14346         |
 | SSD SAS          | 6                                                  |           10  | 15607         |
 
-These are the devices the example used. This information is not a recommendation of any specific hardware model or manufacturer. 
+These are the devices the example used. This information isn't a recommendation for any specific hardware model or manufacturer. 
 
 | Disk type    | Model      | RAID controller | Cache memory and configuration |
 |-------------------|-----------------|----------------------|-------------------------------------|
@@ -202,7 +202,7 @@ Azure disk performance depends on several factors, such as the size of the Azure
 
 All disks are formatted NTFS 64k cluster size, and rows with more than one disk are configured as striped volumes via the Windows Disk Management utility.
 
-| **Azure VM**| **Azure disk**| **Disk count** | **Available space** | **IOPS measured**   | **Limiting factor**   |
+| Azure VM| Azure disk| Disk count | Available space | IOPS measured   | Limiting factor   |
 |--------------------------------------------|-------------------------|---------------------|---------------------------|-------|-----------------|
 | **DS2/DS11**                              | P20                     | 1                   | 512 MB                    | 965   | Azure VM size   |
 | **DS2/DS11**                              | P20                     | 2                   | 1024 MB                   | 996   | Azure VM size   |
