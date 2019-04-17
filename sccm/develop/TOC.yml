@@ -249,8 +249,40 @@
           href: core/understand/sqlviews/wake-lan-views-configuration-manager.md
       - name: Working with Reports
         items:
-        - name: Overview
-          href: core/understand/sqlviews/working-with-reports-configuration-manager.md
+        - name: Evaluation of Existing Reports
+          items:
+          - name: Overview
+            href: core/understand/sqlviews/evaluation-existing-configuration-manager-reports.md
+          - name: Evaluation of the All Collections Report
+            href: core/understand/sqlviews/evaluation-all-collections-report-configuration-manager.md
+          - name: Evaluation of the Computer Information Report
+            href: core/understand/sqlviews/evaluation-computer-information-report-configuration-manager.md
+        - name: How to View the SQL Statement for Reports
+          href: core/understand/sqlviews/how-to-view-sql-statement-configuration-manager-reports.md
+        - name: How to Modify Reports
+          href: core/understand/sqlviews/how-to-modify-configuration-manager-reports.md
+        - name: How to Create Reports
+          href: core/understand/sqlviews/how-to-create-configuration-manager-reports.md
+        - name: How to Run Reports
+          href: core/understand/sqlviews/how-to-run-configuration-manager-reports.md
+        - name: Exercises for Creating Custom Reports
+          items:
+          - name: Overview
+            href: core/understand/sqlviews/exercises-creating-custom-reports-configuration-manager.md
+          - name: Exercise 1 - Run an Existing Report
+            href: core/understand/sqlviews/exercise-1-run-existing-configuration-manager-report.md
+          - name: Exercise 2 - Modify an Existing Report
+            href: core/understand/sqlviews/exercise-2-modify-existing-configuration-manager-report.md
+          - name: Exercise 3 - Create a New Report
+            href: core/understand/sqlviews/exercise-3-create-new-configuration-manager-report.md
+          - name: Advanced Exercise 1 - Create a New Report for Compliance Settings
+            href: core/understand/sqlviews/advanced-exercise-1-create-new-report-compliance-settings-configuration-manager.md
+          - name: Advanced Exercise 1 Solution - Create a New Report for Compliance Settings
+            href: core/understand/sqlviews/advanced-exercise-1-solution-create-new-report-compliance-settings-configuration-manager.md
+          - name: Advanced Exercise 2 - Create a New Report for Hardware Inventory
+            href: core/understand/sqlviews/advanced-exercise-2-create-new-report-hardware-inventory-configuration-manager.md
+          - name: Advanced Exercise 2 Solution - Create a New Report for Hardware Inventory
+            href: core/understand/sqlviews/advanced-exercise-2-solution-create-new-report-hardware-inventory-configuration-manager.md
       - name: Technical Reference for SQL Server Views
         items:
         - name: Overview
