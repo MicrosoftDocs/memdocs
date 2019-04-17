@@ -1,7 +1,7 @@
 ---
-title: Site sizing guidance for performance
+title: Performance-based site sizing guidance
 titleSuffix: Configuration Manager
-description: Performance-related site sizing test results, methodology, and guidance.
+description: Performance-based site sizing test results, methodology, and guidance.
 author: aczechowski
 ms.author: aaroncz
 ms.prod: configuration-manager
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.date: 04/12/2019
 ---
 
-# System Center Configuration Manager site sizing for performance
+# System Center Configuration Manager performance-based site sizing guidelines
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
@@ -117,7 +117,7 @@ The following table gives general *minimum* hardware requirement guidelines for 
    
 2. **IOPS: Inboxes and IOPS: SQL:** refer to the IOPS needs for the Configuration Manager and SQL logical drives. The **IOPS: Inboxes** column shows the IOPS requirements for the logical drive where the Configuration Manager inbox directories reside. The **IOPS: SQL** column shows the total IOPS needs for the logical drive(s) that various SQL files use. These columns are different because the two drives should have different formatting. For more information and examples on suggested SQL disk configurations and file best practices, including details on splitting them across multiple volumes, see [article].
    
-   Both of these IOPS columns use data generated with the industry-standard tool, *Diskspd*. See [Measure IOPS disk writes](#measure-iops-disk-writes) for instructions on duplicating these measurements. In general, once you meet basic CPU and memory requirements, the storage subsystem has the largest impact on site performance, and improvements here will give the most payback on investment.
+   Both of these IOPS columns use data generated with the industry-standard tool, *Diskspd*. See [Measure IOPS disk writes](#how-to-measure-iops-disk-writes) for instructions on duplicating these measurements. In general, once you meet basic CPU and memory requirements, the storage subsystem has the largest impact on site performance, and improvements here will give the most payback on investment.
    
 3.  **Storage space required:** These real-world values may differ from other documented recommendations. We provide these numbers only as a general guideline; individual requirements could vary widely. Carefully plan for disk space needs before site installation. Assume that some amount of this storage remains as free disk space most of the time. Use this space as buffer, if needed, in a recovery scenario, and for upgrade scenarios that need free disk space for setup package expansion. Your site may require additional storage for large amounts of data collection, longer periods of data retention, and large amounts of software distribution content, which you can also store on separate, lower-throughput volumes.
 
@@ -163,7 +163,7 @@ See [Example disk configurations](#example-disk-configurations) for test results
 
 ## Example disk configurations
 
-Use this data for a *rough* starting point when designing the storage subsystem for a new environment from scratch. The following tables show results from running the test steps in [Measure IOPS disk writes](#measure-iops-disk-writes) with various test lab configurations. 
+Use this data for a *rough* starting point when designing the storage subsystem for a new environment from scratch. The following tables show results from running the test steps in [Measure IOPS disk writes](#how-to-measure-iops-disk-writes) with various test lab configurations. 
 
 ### Physical machines and Hyper-V 
 Hardware is always improving. Expect newer generations of hardware and different hardware combinations, like SSDs and SANs, to exceed the performance stated below. These results are a basic starting point to consider when designing a server or discussing with your hardware vendor.
