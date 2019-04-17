@@ -31,6 +31,8 @@ Starting in version 1810, the dashboard includes information for System Center 2
 
 - Internet Explorer 9 or later must be installed on the computer running the Configuration Manager console.  
 
+- A service connection point role must be installed and configured. For more information, see [About the service connection point in Configuration Manager](/sccm/core/servers/deploy/configure/about-the-service-connection-point).
+
 - A reporting services point is required for hyperlink functionality in the dashboard. The dashboard links to SQL Server Reporting Services (SSRS) reports. For more information, see [Reporting in Configuration Manager](/sccm/core/servers/manage/reporting).  
 
 - The asset intelligence synchronization point must be configured and synchronized. The dashboard uses the asset intelligence catalog as metadata for product titles. The metadata is compared against inventory data in your hierarchy. For more information, see [Configure asset intelligence in Configuration Manager](/sccm/core/clients/manage/asset-intelligence/configuring-asset-intelligence).  
