@@ -138,7 +138,7 @@ To interpret a permission value, you can convert the decimal value to binary and
 
 ## Decimal Conversion Example 1
 
-In the **v\_SecuredObject** view, the **SMS\_Site** secured object has a value of 638983 in the **AvailableInstancePermissions** column. To find out what this means, first convert the decimal number to binary. This equates to 10011100000000000111, in which the 1st, 2nd, 3rd, 15th, 16th, 17th, and 20th bits are used. Use the bit values from the preceding table to calculate the values in the following table. When the decimal values are added, they will total the initial 638983 value.
+In the **v_SecuredObject** view, the **SMS_Site** secured object has a value of 638983 in the **AvailableInstancePermissions** column. To find out what this means, first convert the decimal number to binary. This equates to 10011100000000000111, in which the 1st, 2nd, 3rd, 15th, 16th, 17th, and 20th bits are used. Use the bit values from the preceding table to calculate the values in the following table. When the decimal values are added, they will total the initial 638983 value.
 
 |Permission Name|Binary Position|Decimal Value|
 |--- |--- |--- |
@@ -152,7 +152,7 @@ In the **v\_SecuredObject** view, the **SMS\_Site** secured object has a value o
 
 ## Decimal Conversion Example 2
 
-In the **v\_SecuredObject** view, the **SMS\_Collection** secured object has a value of 52435687 in the **AvailableInstancePermissions** column. This decimal number results in 11001000000001101011100111 when converted to binary. This is interpreted as shown in the following table.
+In the **v_SecuredObject** view, the **SMS_Collection** secured object has a value of 52435687 in the **AvailableInstancePermissions** column. This decimal number results in 11001000000001101011100111 when converted to binary. This is interpreted as shown in the following table.
 
 |Permission Name|Binary Position|Decimal value|
 |--- |--- |--- |

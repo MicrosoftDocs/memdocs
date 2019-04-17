@@ -21,7 +21,7 @@ The following sections provide detailed information about software updates views
 
 ## Software Updates Views
 
-The software updates views contain information about software updates. When creating software updates reports for individual software updates or update bundles, the **v\_UpdateCIs** or **v\_UpdateInfo** views will most often be used in combination with other views. The software update views are described in this section.
+The software updates views contain information about software updates. When creating software updates reports for individual software updates or update bundles, the **v_UpdateCIs** or **v_UpdateInfo** views will most often be used in combination with other views. The software update views are described in this section.
 
 ### v_AuthListInfo
 
@@ -60,7 +60,7 @@ The view can be joined to other views by using the **CI_ID**, **CI_UniqueID**, a
 
 ## Software Updates Status Views
 
-The software updates status views provide information about software updates compliance, deployment evaluation, deployment enforcement, scan state, and so on. These views can generally be joined to other software updates and desired configuration management views by using the **CI\_ID** column. For more information about the status views, see [Status and Alert Views in Configuration Manager](status-alert-views-configuration-manager.md). The status views that contain software updates information are described in this section.
+The software updates status views provide information about software updates compliance, deployment evaluation, deployment enforcement, scan state, and so on. These views can generally be joined to other software updates and desired configuration management views by using the **CI_ID** column. For more information about the status views, see [Status and Alert Views in Configuration Manager](status-alert-views-configuration-manager.md). The status views that contain software updates information are described in this section.
 
 ### v_AssignmentState_Combined
 
