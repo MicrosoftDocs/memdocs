@@ -287,6 +287,30 @@
         items:
         - name: Overview
           href: core/understand/sqlviews/technical-reference-sql-server-views-configuration-manager.md
+        - name: Sample Queries for Application Management
+          href: core/understand/sqlviews/sample-queries-application-management-configuration-manager.md
+        - name: Sample Queries for Client Deployment
+          href: core/understand/sqlviews/sample-queries-client-deployment-configuration-manager.md
+        - name: Sample Queries for Client Status
+          href: core/understand/sqlviews/sample-queries-client-status-configuration-manager.md
+        - name: Sample Queries for Collections
+          href: core/understand/sqlviews/sample-queries-collections-configuration-manager.md
+        - name: Sample Queries for Compliance Settings
+          href: core/understand/sqlviews/sample-queries-compliance-settings-configuration-manager.md
+        - name: Sample Queries for Content Management
+          href: core/understand/sqlviews/sample-queries-content-management-configuration-manager.md
+        - name: Sample Queries for Discovery
+          href: core/understand/sqlviews/sample-queries-discovery-configuration-manager.md
+        - name: Sample Queries for Endpoint Protection
+          href: core/understand/sqlviews/sample-queries-endpoint-protection-configuration-manager.md
+        - name: Sample Queries for Inventory
+          items:
+          - name: Sample Queries for Hardware Inventory
+            href: core/understand/sqlviews/sample-queries-hardware-inventory-configuration-manager.md
+          - name: Sample Queries for Software Inventory
+            href: core/understand/sqlviews/sample-queries-software-inventory-configuration-manager.md
+          - name: Sample Queries for Asset Intelligence
+            href: core/understand/sqlviews/sample-queries-asset-intelligence-configuration-manager.md
   - name: SMS Provider in Configuration Manager
     href: core/understand/sms-provider-in-configuration-manager.md
     items:
