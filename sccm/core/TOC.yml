@@ -55,6 +55,8 @@
       href: understand/configuration-manager-on-azure.md
   - name: FAQ for product and licensing
     href: understand/product-and-licensing-faq.md
+  - name: FAQ for site sizing and performance
+    href: understand/site-size-performance-faq.md
   - name: FAQ for diagnostics and usage data
     href: understand/frequently-asked-questions-about-diagnostics-and-usage-data.md
 - name: Plan and design
@@ -92,8 +94,10 @@
     items:
     - name: Size and scale numbers
       href: plan-design/configs/size-and-scale-numbers.md
-    - name: Site and site system prerequisites
-      href: plan-design/configs/site-and-site-system-prerequisites.md
+    - name: Size and scale numbers
+      href: plan-design/configs/size-and-scale-numbers.md
+    - name: Site sizing and performance guidelines
+      href: plan-design/configs/site-size-performance-guidelines.md
     - name: Supported operating systems for site system servers
       href: plan-design/configs/supported-operating-systems-for-site-system-servers.md
     - name: Supported operating systems for clients and devices

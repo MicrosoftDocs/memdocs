@@ -42,7 +42,7 @@ Tests should also run on greater than standard *average day* loads, by performin
 ### Configurations
 Testing should run on a range of physical, Hyper-V, and Azure hardware, with a mixture of supported operating systems and SQL Server versions. Always validate the worst cases for the supported configuration. In general, Hyper-V and Azure return comparable performance results to equivalent physical hardware when configured similarly. Newer server operating systems tend to perform equally or better than older supported server operating systems. While all supported platforms meet the minimum requirements, usually the latest versions of supporting products like Windows and SQL produce even better performance. 
 
-The largest variation comes from the SQL Server versions in use. For more information about SQL Server versions, see (More information is in the frequently asked questions section below). 
+The largest variation comes from the SQL Server versions in use. For more information about SQL Server versions, see [What version of SQL should I run?](../../understand/site-size-performance-faq.md#what-version-of-sql-should-i-run). 
 
 ## Key performance determinants
 
@@ -75,9 +75,9 @@ Remember that Configuration Manager creates policies for all objects in your col
 To investigate collection performance even deeper, you can use the Collection Evaluation Viewer (CEViewer) in the [Configuration Manager Toolkit](https://www.microsoft.com/download/details.aspx?id=50012).
 
 ### Discovery methods
-For baseline performance testing, run server-based discovery methods once a week, enabling delta discovery as appropriate to keep the data fresh during the week. The tests discover an object quantity proportional to the simulated enterprise size. The performance baseline test for heartbeat discovery also runs once a week.
+For baseline performance testing, run server-based discovery methods once a week, enabling delta discovery as appropriate to keep the data fresh during the week. The tests should discover an object quantity proportional to the simulated enterprise size. The performance baseline test for heartbeat discovery should also run once a week.
 
-Discovery data is global data. A common performance-related problem is to misconfigure server-based discovery methods in a hierarchy, causing duplicate discovery of the same resources from multiple primary sites. Carefully configure discovery methods to optimize communication with the target service, such as Active Directory domain controllers, while avoiding duplication of the same discovery scope at multiple primary sites.
+Discovery data is global data. A common performance-related problem is to misconfigure server-based discovery methods in a hierarchy, causing duplicate discovery of the same resources from multiple primary sites. Carefully configure discovery methods to optimize communication with the target service, such as Active Directory domain controllers, while avoiding duplication of the same discovery scope on multiple primary sites.
 
 ## General sizing guidelines 
 
@@ -112,12 +112,12 @@ Based on the preceding [performance test methodology](#performance-test-methodol
 
 1. **Cores**: Configuration Manager performs many simultaneous processes, so needs a certain minimum number of CPU cores for various site sizes. While cores get faster each year, it's important to ensure that a certain minimum number of cores work in parallel. In general, any server-level CPU produced after 2015 meets the basic performance needs for the cores specified in the table. Configuration Manager takes advantage of additional cores beyond the recommendations, but generally, once you have the minimum suggested cores, you should prioritize CPU resource investment to increase the speed of existing cores, not add more, slower cores. For example, Configuration Manager will perform better on key processing tasks with 16 fast cores than with 24 slower cores, assuming enough other system resources like disk IOPS are available.
    
-   The relationship between cores and memory is also important. In general, having less than 3-4 GB of RAM per core reduces the total processing capability on your SQL servers. You need more RAM per core when SQL is co-located with the site server components.
+   The relationship between cores and memory is also important. In general, having less than 3-4 GB of RAM per core reduces the total processing capability on your SQL servers. You need more RAM per core when SQL is colocated with the site server components.
    
    > [!NOTE]
    > All testing sets machine power plans to allow maximum CPU power consumption and performance.
    
-2. **IOPS: Inboxes and IOPS: SQL** refer to the IOPS needs for the Configuration Manager and SQL logical drives. The **IOPS: Inboxes** column shows the IOPS requirements for the logical drive where the Configuration Manager inbox directories reside. The **IOPS: SQL** column shows the total IOPS needs for the logical drive(s) that various SQL files use. These columns are different because the two drives should have different formatting. For more information and examples on suggested SQL disk configurations and file best practices, including details on splitting them across multiple volumes, see [article].
+2. **IOPS: Inboxes and IOPS: SQL** refer to the IOPS needs for the Configuration Manager and SQL logical drives. The **IOPS: Inboxes** column shows the IOPS requirements for the logical drive where the Configuration Manager inbox directories reside. The **IOPS: SQL** column shows the total IOPS needs for the logical drive(s) that various SQL files use. These columns are different because the two drives should have different formatting. For more information and examples on suggested SQL disk configurations and file best practices, including details on splitting files across multiple volumes, see the [Site sizing and performance FAQ](../../understand/site-size-performance-faq.md).
    
    Both of these IOPS columns use data from the industry-standard tool, *Diskspd*. See [How to measure disk performance](#how-to-measure-disk-performance) for instructions on duplicating these measurements. In general, once you meet basic CPU and memory requirements, the storage subsystem has the largest impact on site performance, and improvements here will give the most payback on investment.
    
@@ -232,3 +232,11 @@ All disks are formatted NTFS 64k cluster size, and rows with more than one disk 
 | **DS15**                                  | P30                     | 2                   | 2048 MB                   | 6184  | P30 disk        |
 | **DS15**                                  | P30                     | 3                   | 3072 MB                   | 9225  | P30 disk        |
 | **DS15**                                  | P30                     | 4                   | 4096 MB                   | 10200 | Azure VM size   |
+
+## See also
+
+[Site sizing and performance FAQ](../../understand/site-size-performance-faq.md)
+[Configuration Manager on Azure frequently asked questions](../../understand/configuration-manager-on-azure.md)
+[Size and scale numbers](size-and-scale-numbers.md)
+[Recommended hardware](recommended-hardware.md
+
