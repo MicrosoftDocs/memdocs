@@ -6,7 +6,7 @@ author: aczechowski
 ms.author: aaroncz
 ms.prod: configuration-manager
 ms.topic: conceptual
-ms.date: 04/12/2019
+ms.date: 04/19/2019
 ---
 
 # System Center Configuration Manager site sizing and performance guidelines
