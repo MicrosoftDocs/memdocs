@@ -37,7 +37,7 @@ When configurable, set RAID controller memory to 70% allocation for write operat
 
 **Example: Physical machine with physical disks** 
 
-[Sizing guidelines](../plan-design/config/site-size-performance-guidelines.md#general-sizing-guidelines) for a colocated site server and SQL server with **100,000** clients are 1200 IOPS for site server inboxes and 5000 IOPS for SQL Server files.
+[Sizing guidelines](../plan-design/configs/site-size-performance-guidelines.md#general-sizing-guidelines) for a colocated site server and SQL server with **100,000** clients are 1200 IOPS for site server inboxes and 5000 IOPS for SQL Server files.
 
 Your resulting disk configuration might look like:
 
@@ -49,7 +49,7 @@ Your resulting disk configuration might look like:
 | 8x15k          | 10        | 64k ReFS    | SQL .ldf, temp files | 40%*5000 = 2000     | 2322             |
 
 1. Doesn't include recommended spare disks. 
-2. This value is from [Example disk configurations](../plan-design/config/site-size-performance-guidelines.md#example-disk-configurations). 
+2. This value is from [Example disk configurations](../plan-design/configs/site-size-performance-guidelines.md#example-disk-configurations). 
 
 ### I use Hyper-V on Windows Server. How should I configure the disks for my Configuration Manager VMs for best performance?
 
@@ -61,7 +61,7 @@ For more information about optimizing VMs, see (/windows-server/administration/p
 
 **Example: Hyper-V VM-based site server** 
 
-[Sizing guidelines](../plan-design/config/site-size-performance-guidelines.md#general-sizing-guidelines) for a colocated site server and SQL server with **150,000** clients are 1800 IOPS for site server inboxes and 7400 IOPS for SQL Server files.
+[Sizing guidelines](../plan-design/configs/site-size-performance-guidelines.md#general-sizing-guidelines) for a colocated site server and SQL server with **150,000** clients are 1800 IOPS for site server inboxes and 7400 IOPS for SQL Server files.
 
 Your resulting disk configuration might look like:
 
@@ -74,7 +74,7 @@ Your resulting disk configuration might look like:
 
 1. Doesn't include recommended spare disks. 
 2. Fixed-size, pass-through *.vhdx* for the VM drive dedicated to the underlying volume. 
-3. This value is from [Example disk configurations](../plan-design/config/site-size-performance-guidelines.md#example-disk-configurations). 
+3. This value is from [Example disk configurations](../plan-design/configs/site-size-performance-guidelines.md#example-disk-configurations). 
 
 ### Are there any suggestions for Configuration Manager environments in Microsoft Azure?
 
@@ -92,7 +92,7 @@ For more information and recommendations on how to maximize Premium Storage perf
 
 **Example: Azure-based site server** 
 
-[Sizing guidelines](../plan-design/config/site-size-performance-guidelines.md#general-sizing-guidelines) for a colocated site server and SQL server with **50,000** clients are eight cores, 32 GB, and 1200 IOPS for site server inboxes, and 2800 IOPS for SQL Server files.
+[Sizing guidelines](../plan-design/configs/site-size-performance-guidelines.md#general-sizing-guidelines) for a colocated site server and SQL server with **50,000** clients are eight cores, 32 GB, and 1200 IOPS for site server inboxes, and 2800 IOPS for SQL Server files.
 
 Your resulting Azure machine might be a DS13v2 (eight cores, 56 GB) with the following disk configuration:
 
@@ -102,7 +102,7 @@ Your resulting Azure machine might be a DS13v2 (eight cores, 56 GB) with the fol
 | 1xP20 (512 GB)    | NTFS 8k       | ConfigMgr inboxes  | 1200                 | 2334             |
 | 1xP30 (1024 GB)   | 64k ReFS      | SQL (all files<sup>2</sup>) | 2800                 | 3112             |
 
-1. This value is from [Example disk configurations](../plan-design/config/site-size-performance-guidelines.md#example-disk-configurations).
+1. This value is from [Example disk configurations](../plan-design/configs/site-size-performance-guidelines.md#example-disk-configurations).
 2. [Azure guidance](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance#disks-guidance) allows for placing the TempDB on the local, SSD-based *D:* drive, given it won't exceed available space and will allow for additional disk I/O distribution.
 
 ## Example: Azure-based site server (for instant performance increase) 
@@ -120,7 +120,7 @@ Change the disks in the preceding Azure example to see how the IOPS change.
 | 2xP30 (2048 GB)   | 64k ReFS      | SQL (all files<sup>3</sup>) | 2800                 | 3984             |
 
 1. Disks are striped using Storage Spaces.
-2. This value is from [Example disk configurations](../plan-design/config/site-size-performance-guidelines.md#example-disk-configurations). VM size limits performance.
+2. This value is from [Example disk configurations](../plan-design/configs/site-size-performance-guidelines.md#example-disk-configurations). VM size limits performance.
 3. [Azure guidance](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance#disks-guidance) allows for placing the TempDB on the local, SSD-based *D:* drive, given it won't exceed available space and will allow for additional disk I/O distribution.
 
 If you need more performance in future, you can upsize your VM to a DS14v2, which will double CPU and memory. The additional disk bandwidth allowed by that VM size will also instantly boost the available disk IOPS on your previously configured disks.
@@ -134,7 +134,7 @@ If you need more performance in future, you can upsize your VM to a DS14v2, whic
 | 2xP30 (2048 GB)   | 64k ReFS      | SQL (all files<sup>3</sup>) | 2800                 | 6182             |
 
 1. Disks are striped using Storage Spaces.
-2. This value is from [Example disk configurations](../plan-design/config/site-size-performance-guidelines.md#example-disk-configurations). VM size limits performance.
+2. This value is from [Example disk configurations](../plan-design/configs/site-size-performance-guidelines.md#example-disk-configurations). VM size limits performance.
 3. [Azure guidance](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance#disks-guidance) allows for placing the TempDB on the local, SSD-based *D:* drive, given it won't exceed available space and will allow for additional disk I/O distribution.
 
 ## Other common SQL Server-related performance questions 
@@ -165,7 +165,7 @@ Colocated SQL requires a single server, and is typical for most small-scale cust
   
 ### How much RAM should I allocate for SQL?
 
-By default, SQL will use all available memory on your server, potentially starving the OS and other processes on the machine. To avoid potential performance issues, it's important to allocate memory to SQL explicitly. On site servers colocated with SQL servers, make sure the OS has enough RAM for file caching and other operations. Make sure there's enough RAM remaining for SMSExec and other Configuration Manager processes. When running SQL on a remote server, you can allocate the *majority* of the memory to SQL, but not all. Review the [sizing guidelines](../plan-design/config/site-size-performance-guidelines.md#general-sizing-guidelines) for initial guidance. 
+By default, SQL will use all available memory on your server, potentially starving the OS and other processes on the machine. To avoid potential performance issues, it's important to allocate memory to SQL explicitly. On site servers colocated with SQL servers, make sure the OS has enough RAM for file caching and other operations. Make sure there's enough RAM remaining for SMSExec and other Configuration Manager processes. When running SQL on a remote server, you can allocate the *majority* of the memory to SQL, but not all. Review the [sizing guidelines](../plan-design/configs/site-size-performance-guidelines.md#general-sizing-guidelines) for initial guidance. 
 
 SQL Server memory allocation should be rounded to whole GB. Also, as RAM increases to large amounts, you can let SQL have a higher percentage. For example, when 256 GB or more of RAM is available, you can configure SQL for up to 95%, as that still preserves plenty of memory for the OS. Monitoring the page file is a good way to ensure enough memory has been allocated for the OS and any Configuration Manager processes.
 
@@ -245,5 +245,5 @@ Traditional server performance monitoring works effectively for general Configur
 
 ## See also
 
-[Site sizing and performance guidelines](../plan-design/config/site-size-performance-guidelines.md)
+[Site sizing and performance guidelines](../plan-design/configs/site-size-performance-guidelines.md)
 [Configuration Manager on Azure frequently asked questions](configuration-manager-on-azure.md).
