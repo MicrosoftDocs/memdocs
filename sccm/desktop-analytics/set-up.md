@@ -47,6 +47,8 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
         To add a user to either group, type their name or e-mail address in the **Enter name or email address** section of the appropriate group. When finished, select **Next**.
 
+The following step can be completed by a **Workspace Owner** or **contributor**. See [prerequisites.](/sccm/desktop-analytics/overview#prerequisites) 
+
 5. On the page to **Set up your workspace**:  
 
     - To use an existing workspace for Desktop Analytics, select it, and continue with the next step.  
@@ -83,7 +85,7 @@ The Azure portal shows the Desktop Analytics **Home** page.
 
 Create an app in Azure AD for Configuration Manager.
 
-1. In the [Azure portal](http://portal.azure.com), go to **Azure Active Directory**, and select **App registrations**. Then select **New application registration**.  
+1. Open the [Azure portal](http://portal.azure.com) as a user with Company Admin permissions, go to **Azure Active Directory**, and select **App registrations**. Then select **New application registration**.  
 
 2. In the **Create** panel, configure the following settings:  
 

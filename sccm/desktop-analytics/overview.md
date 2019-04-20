@@ -66,8 +66,14 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 ### Technical
 
 - An active Azure subscription  
+    
+    - [**Company Administrator**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator) permissions in Azure to **Accept service agreement**, **Confirm your subscription** and **Give user access** 
 
-    - **Company Admin** permissions in Azure  
+    - **Workspace owner** or **contributor** permissions  to **Set up your workspace** and  
+
+	    - [**Log Analytics Contributor**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#log-analytics-contributor) and [**User Access Administrator**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) on the resource group to use an existing workspace or create a new workspace in an existing resource group.
+
+	    - [**Owner**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner), or [**Contributor**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) and [**User Access Administrator**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) permissions on the subscription to create a workspace in a new resource group.
 
 - Configuration Manager, version 1810 with Update Rollup 4488598 or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
 
