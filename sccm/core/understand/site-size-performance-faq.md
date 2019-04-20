@@ -1,5 +1,5 @@
 ---
-title: Site sizing and performance FAQ
+title: Site size and performance FAQ
 titleSuffix: Configuration Manager
 description: Answers to common System Center Configuration Manager questions about site sizing and performance.
 author: aczechowski
@@ -19,9 +19,9 @@ This document addresses frequently asked questions about Configuration Manager s
 
 ### How should I format the disks on my site server and SQL Server?
 
-Separate the Configuration Manager inboxes and SQL files on at least two different volumes. This separation allows you to optimize cluster allocation sizes, depending on the different characteristics of the I/O they perform. 
+Separate the Configuration Manager inboxes and SQL files on at least two different volumes. This separation allows you to optimize cluster allocation sizes for the different kinds of I/O they perform. 
 
-For the volume hosting your sites server inboxes, use NTFS, with 4K or 8K allocation units. ReFS writes 64k even for small files. Configuration Manager has many small files, so ReFS can produce unnecessary disk overhead.
+For the volume hosting your sites server inboxes, use NTFS with 4K or 8K allocation units. ReFS writes 64k even for small files. Configuration Manager has many small files, so ReFS can produce unnecessary disk overhead.
 
 For disks containing SQL database files, use either NTFS or ReFS formatting, with 64K allocation units.
 
@@ -57,7 +57,7 @@ Hyper-V delivers similar performance to a physical server, if hardware resources
 
 When running your Configuration Manager site server or SQL inside a VM, isolate the Hyper-V host OS drives from the VM OS and data drives.
 
-For more information about optimizing VMs, see (/windows-server/administration/performancetuning/role/hyper-v-server/).
+For more information about optimizing VMs, see [Performance Tuning Hyper-V Servers](/windows-server/administration/performance-tuning/role/hyper-v-server/).
 
 **Example: Hyper-V VM-based site server** 
 
@@ -86,9 +86,9 @@ Azure storage is inherently redundant and doesn't require multiple disks for ava
 
 For more information and recommendations on how to maximize Premium Storage performance and run SQL servers in Azure IaaS VMs, see:
 
-- [https://docs.microsoft.com/en-us/azure/storage/storage-premium-storageperformance\#optimizing-application-performance](/azure/storage/storage-premium-storage-performance#optimizing-application-performance)
+- [Optimize application performance](/azure/storage/storage-premium-storage-performance#optimize-application-performance)
  
-- [https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machineswindows-sql-performance\#disks-guidance](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance#disks-guidance)
+- [Disks guidance](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance#disks-guidance)
 
 **Example: Azure-based site server** 
 
@@ -96,7 +96,7 @@ For more information and recommendations on how to maximize Premium Storage perf
 
 Your resulting Azure machine might be a DS13v2 (eight cores, 56 GB) with the following disk configuration:
 
-| Drives | RAID | Format | Contains | Minimum IOPS needed| Approx. IOPS supplied<sup>1</sup>  |
+| Drives | Format | Contains | Minimum IOPS needed| Approx. IOPS supplied<sup>1</sup>  |
 |------------------|---------------|--------------------|----------------------|------------------|
 | &lt;standard&gt; | -             | Site server OS     | -                    | -                |
 | 1xP20 (512 GB)    | NTFS 8k       | ConfigMgr inboxes  | 1200                 | 2334             |
@@ -105,15 +105,15 @@ Your resulting Azure machine might be a DS13v2 (eight cores, 56 GB) with the fol
 1. This value is from [Example disk configurations](../plan-design/configs/site-size-performance-guidelines.md#example-disk-configurations).
 2. [Azure guidance](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance#disks-guidance) allows for placing the TempDB on the local, SSD-based *D:* drive, given it won't exceed available space and will allow for additional disk I/O distribution.
 
-## Example: Azure-based site server (for instant performance increase) 
+**Example: Azure-based site server (for instant performance increase)** 
 
-Azure disk throughput is limited by the size of the VM. The configuration in the preceding Azure example may limit future expansion or additional performance. Add additional disks during initial deployment of your Azure VM so you can upsize your Azure VM in the future for increased processing power, with minimal upfront investment. It's much simpler to plan ahead to increase site performance as requirements change, instead of later needing to do a more complicated migration.
+Azure disk throughput is limited by the size of the VM. The configuration in the preceding Azure example may limit future expansion or additional performance. If you add additional disks during initial deployment of your Azure VM, you can upsize your Azure VM for increased processing power in the future, with minimal upfront investment. It's much simpler to plan ahead to increase site performance as requirements change, instead of later needing to do a more complicated migration.
 
 Change the disks in the preceding Azure example to see how the IOPS change.
 
 **DS13v2** 
 
-| Drives<sup>1</sup> | RAID | Format | Contains | Minimum IOPS needed| Approx. IOPS supplied<sup>2</sup>  |
+| Drives<sup>1</sup> | Format | Contains | Minimum IOPS needed| Approx. IOPS supplied<sup>2</sup>  |
 |------------------|---------------|--------------------|----------------------|------------------|
 | &lt;standard&gt; | -             | Site server OS     | -                    | -                |
 | 2xP20 (1024 GB)   | NTFS 8k       | ConfigMgr inboxes  | 1200                 | 3984             |
@@ -146,28 +146,22 @@ Both can perform adequately, assuming the single server is appropriately sized, 
 Remote SQL requires the upfront and operational cost of an additional server, but is typical among the majority of large-scale customers. Benefits of this configuration include:
 
 - Increased site availability options, such as SQL Always On)
-  
 - Ability to run heavy reporting with less overheard to site processing
-  
 - Simpler disaster recovery in some situations
-  
 - Easier security management
-  
 - Role separation for SQL management, such as with a separate DBA team
-  
+
 Colocated SQL requires a single server, and is typical for most small-scale customers. Benefits of this configuration include:
 
 - Lower costs for machines, licenses, and maintenance
-  
 - Fewer points of failure in the site
-  
 - Better control for planning downtime
-  
+
 ### How much RAM should I allocate for SQL?
 
 By default, SQL will use all available memory on your server, potentially starving the OS and other processes on the machine. To avoid potential performance issues, it's important to allocate memory to SQL explicitly. On site servers colocated with SQL servers, make sure the OS has enough RAM for file caching and other operations. Make sure there's enough RAM remaining for SMSExec and other Configuration Manager processes. When running SQL on a remote server, you can allocate the *majority* of the memory to SQL, but not all. Review the [sizing guidelines](../plan-design/configs/site-size-performance-guidelines.md#general-sizing-guidelines) for initial guidance. 
 
-SQL Server memory allocation should be rounded to whole GB. Also, as RAM increases to large amounts, you can let SQL have a higher percentage. For example, when 256 GB or more of RAM is available, you can configure SQL for up to 95%, as that still preserves plenty of memory for the OS. Monitoring the page file is a good way to ensure enough memory has been allocated for the OS and any Configuration Manager processes.
+SQL Server memory allocation should be rounded to whole GB. Also, as RAM increases to large amounts, you can let SQL have a higher percentage. For example, when 256 GB or more of RAM is available, you can configure SQL for up to 95%, as that still preserves plenty of memory for the OS. Monitoring the page file is a good way to ensure there is enough memory for the OS and any Configuration Manager processes.
 
 ### Cores are cheap these days. Should I just add a bunch of them to my SQL server?
 
@@ -187,7 +181,7 @@ Any secrets stored in the Configuration Manager database are already stored in s
 
 ### What version of SQL should I run?
 
-For supported versions of SQL, see [Support for SQL Server versions](../plan-design/configs/support-for-sql-server-versions.md). From a performance standpoint, all supported versions of SQL meet required performance criteria. However, SQL 2012 and SQL 2016 or newer tend to outperform SQL 2014 in some aspects of the Configuration Manager workload. Also, running SQL 2014 at SQL 2012 compatibility level (110) improves performance in general. At installation time, Configuration Manager databases running on SQL 2012 and SQL 2014 are set to compatibility level 110. SQL 2016 or newer is set to that SQL version's default compatibility level, such as 130 for SQL 2016. Upgrade SQL in place doesn't update compatibility levels until you install the next major Configuration Manager current branch version. 
+For supported versions of SQL, see [Support for SQL Server versions](../plan-design/configs/support-for-sql-server-versions.md). From a performance standpoint, all supported versions of SQL meet required performance criteria. However, SQL 2012 and SQL 2016 or newer tend to outperform SQL 2014 in some aspects of the Configuration Manager workload. Also, running SQL 2014 at SQL 2012 compatibility level (110) improves performance in general. At installation time, Configuration Manager databases running on SQL 2012 and SQL 2014 are set to compatibility level 110. SQL 2016 or newer is set to that SQL version's default compatibility level, such as 130 for SQL 2016. Upgrading SQL in place doesn't update compatibility levels until you install the next major Configuration Manager current branch version. 
 
 If you see unusual timeouts or slowness on certain SQL queries on SQL 2016 or later, such as when using RBAC in the Admin Console, try changing the SQL compatibility level on the Configuration Manager database to 110. Running at SQL compatibility level 110 on SQL 2014 and newer versions of SQL is fully supported. For more information, see [SQL query times out or console slow on certain Configuration Manager database queries](https://support.microsoft.com/help/3196320/sql-query-times-out-or-console-slow-on-certain-configuration-manager-d).
 
@@ -201,13 +195,13 @@ As of January 2018, you should *avoid* the following SQL versions, because of va
 
 Yes, update indexes as often as once a week and statistics as often as once a day to improve SQL performance. Third-party scripts and additional information available from the Configuration Manager and SQL communities can help optimize these tasks.
 
-In large sites, some SQL tables, such as CI\_CurrentComplianceStatusDetails, HinvChangeLog, might be big, depending on your usage patterns. You may need to reduce or alter your maintenance approach for them one by one.
+In large sites, some SQL tables, such as CI\_CurrentComplianceStatusDetails, HinvChangeLog, might be large, depending on your usage patterns. You may need to reduce or alter your maintenance approach for them one by one.
 
 ### When should I use full SQL Server instead of SQL Express on my secondary sites?
 
 SQL Express doesn't have any significant performance implications on secondary sites, and it's adequate for most customers. It's also easy to deploy and manage, and is the recommended configuration for nearly all customers at any size.
 
-There's one situation where a full SQL Server installation might be needed. If you have a large number of distribution points and packages or sources in your environment, it's possible to exceed the 10-GB size limit of SQL Express. If the number of packages times the number of distribution points is more than 4,000,000, such as 2,000 DPs with 2,000 pieces of content, consider using full SQL Server at your secondary sites. Using full SQL Server prevents potential database size constraints.
+There's one situation where a full SQL Server installation might be needed. If you have a large number of distribution points and packages or sources in your environment, it's possible to exceed the 10-GB size limit of SQL Express. If the number of packages times the number of distribution points is more than 4,000,000, such as 2,000 DPs with 2,000 pieces of content, consider using full SQL Server at your secondary sites. 
 
 ### Should I change MaxDOP settings on my database?
 
@@ -215,7 +209,7 @@ Leaving your setting at 0 (use all available processors) is optimal for overall 
 
 Many Configuration Manager administrators follow the guidance at [Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server](https://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-confi). On most modern large hardware, this guidance leads to a suggested maximum setting of eight. However, if you run many smaller queries compared to your number of processors, it may help to set it to a higher number. Limiting yourself to eight isn't necessarily the best setting on larger sites when more cores are available. 
 
-On SQL servers with greater than eight cores, start with a setting of 0, and only make changes if you experience performance issues or excessive locking. If you need to change MaxDOP because you are encountering performance issues at 0, start with a new value at least greater than or equal to the minimum recommended number of cores for that site’s SQL server sizing. Going lower than this value nearly always has negative performance implications. For example, a remote SQL server for a 100,000 client site needs at least 12 cores. If your SQL server has 16 cores, start your MaxDOP setting testing with a value of 12.
+On SQL servers with greater than eight cores, start with a setting of 0, and only make changes if you experience performance issues or excessive locking. If you need to change MaxDOP because you are encountering performance issues at 0, start with a new value at least greater than or equal to the minimum recommended number of cores for that site’s SQL server sizing. Going lower than this value nearly always has negative performance implications. For example, a remote SQL server for a 100,000 client site needs at least 12 cores. If your SQL server has 16 cores, start testing your MaxDOP setting with a value of 12.
 
 ## Other common performance-related questions
 
@@ -245,5 +239,5 @@ Traditional server performance monitoring works effectively for general Configur
 
 ## See also
 
-[Site sizing and performance guidelines](../plan-design/configs/site-size-performance-guidelines.md)
-[Configuration Manager on Azure frequently asked questions](configuration-manager-on-azure.md).
+- [Site sizing and performance guidelines](../plan-design/configs/site-size-performance-guidelines.md)
+- [Configuration Manager on Azure frequently asked questions](configuration-manager-on-azure.md).

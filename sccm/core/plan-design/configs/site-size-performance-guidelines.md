@@ -1,5 +1,5 @@
 ---
-title: Site sizing and performance guidelines
+title: Site size and performance guidelines
 titleSuffix: Configuration Manager
 description: Site size-related performance test results, methodology, and guidance.
 author: aczechowski
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.date: 04/19/2019
 ---
 
-# System Center Configuration Manager site sizing and performance guidelines
+# System Center Configuration Manager site size and performance guidelines
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
@@ -235,8 +235,8 @@ All disks are formatted NTFS 64k cluster size, and rows with more than one disk 
 
 ## See also
 
-[Site sizing and performance FAQ](../../understand/site-size-performance-faq.md)
-[Configuration Manager on Azure frequently asked questions](../../understand/configuration-manager-on-azure.md)
-[Size and scale numbers](size-and-scale-numbers.md)
-[Recommended hardware](recommended-hardware.md
+- [Site sizing and performance FAQ](../../understand/site-size-performance-faq.md)
+- [Configuration Manager on Azure frequently asked questions](../../understand/configuration-manager-on-azure.md)
+- [Size and scale numbers](size-and-scale-numbers.md)
+- [Recommended hardware](recommended-hardware.md)
 

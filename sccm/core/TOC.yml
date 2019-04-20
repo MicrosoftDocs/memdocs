@@ -94,9 +94,7 @@
     items:
     - name: Size and scale numbers
       href: plan-design/configs/size-and-scale-numbers.md
-    - name: Size and scale numbers
-      href: plan-design/configs/size-and-scale-numbers.md
-    - name: Site sizing and performance guidelines
+    - name: Site size and performance guidelines
       href: plan-design/configs/site-size-performance-guidelines.md
     - name: Supported operating systems for site system servers
       href: plan-design/configs/supported-operating-systems-for-site-system-servers.md
