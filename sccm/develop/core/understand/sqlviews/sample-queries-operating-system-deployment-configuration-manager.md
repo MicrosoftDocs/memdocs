@@ -1,5 +1,5 @@
 ﻿---
-title: Sample Queries for Operating System Deployment
+title: Sample queries for operating system deployment
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join operating system deployment views to each other and to compliance settings views.
 ms.date: 04/30/2019

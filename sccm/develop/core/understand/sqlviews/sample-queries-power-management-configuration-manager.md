@@ -1,5 +1,5 @@
 ﻿---
-title: Sample Queries for Power Management
+title: Sample queries for power management
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join power management views to other views.
 ms.date: 04/30/2019

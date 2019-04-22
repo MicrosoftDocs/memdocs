@@ -1,5 +1,5 @@
 ﻿---
-title: Sample Queries for the Query view
+title: Sample queries for the query view
 titleSuffix: Configuration Manager
 description: Sample queries that show how the query view can be joined to a security view.
 ms.date: 04/30/2019

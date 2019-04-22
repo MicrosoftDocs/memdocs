@@ -1,5 +1,5 @@
 ﻿---
-title: Sample Queries for Software Updates
+title: Sample queries for software updates
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join software updates views to each other and to views from other view categories.
 ms.date: 04/30/2019

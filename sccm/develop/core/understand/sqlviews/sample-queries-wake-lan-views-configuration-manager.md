@@ -1,5 +1,5 @@
 ﻿---
-title: Sample Queries for Wake On LAN
+title: Sample queries for wake on LAN
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join Wake On LAN views to application management, discovery, and compliance settings views.
 ms.date: 04/30/2019

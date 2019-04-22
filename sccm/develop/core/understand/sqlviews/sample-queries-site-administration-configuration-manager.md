@@ -1,5 +1,5 @@
 ﻿---
-title: Sample Queries for Site Administration
+title: Sample queries for site administration
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join site administration views to other views to retrieve specific data.
 ms.date: 04/30/2019

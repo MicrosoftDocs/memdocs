@@ -1,5 +1,5 @@
 ﻿---
-title: Sample Queries for Status and Alerts
+title: Sample queries for status and alerts
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join some of the most commonly used status message views to other views.
 ms.date: 04/30/2019

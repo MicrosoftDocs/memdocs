@@ -1,5 +1,5 @@
 ﻿---
-title: Sample Queries for Software Metering
+title: Sample queries for software metering
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join the most common software metering views to other views.
 ms.date: 04/30/2019

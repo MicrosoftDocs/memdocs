@@ -1,5 +1,5 @@
 ﻿---
-title: Sample Queries for Security
+title: Sample queries for security
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join security views to other views.
 ms.date: 04/30/2019
