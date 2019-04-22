@@ -49,6 +49,7 @@ If you restore an inactive source hierarchy and have not previously used **Clean
 
 > [!CAUTION]  
 >  If you migrate data from more than a single source hierarchy, each additional source hierarchy must contain a unique set of site codes.  
+> Source and destination hierarchies also requires different set of site codes.
 
 For more about configuring a source hierarchy, see [Configuring source hierarchies and source sites for migration to System Center Configuration Manager](../../core/migration/configuring-source-hierarchies-and-source-sites-for-migration.md)  
 

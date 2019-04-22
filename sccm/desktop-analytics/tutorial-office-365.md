@@ -2,7 +2,7 @@
 title: Tutorial - Deploy Office 365
 titleSuffix: Configuration Manager
 description: A tutorial on using Desktop Analytics and Configuration Manager to deploy Office 365 to a pilot group.
-ms.date: 04/05/2019
+ms.date: 04/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: tutorial
@@ -41,6 +41,8 @@ Desktop Analytics uses a *Log Analytics workspace* in your Azure subscription. A
 Before you start this tutorial, make sure you have the following prerequisites:  
 
 - An active Azure subscription, with **Company Admin** permissions  
+    
+    For more information, see [Desktop Analytics prerequisites](/sccm/desktop-analytics/overview#prerequisites).
 
 - Configuration Manager, version 1810 with Update Rollup 4488598 or later, with **Full administrator** role  
 
@@ -99,15 +101,27 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
 3. On the **Confirm your subscription** page, the list of required qualifying licenses are for Windows device health features of Desktop Analytics. Select **Next** to continue.  
 
-4. On the **Give users access** page, Desktop Analytics pre-configures two security groups in Azure Active Directory:  
+4. On the **Give users access** page:
 
-    - **Workspace Owners**: Create and manage workspaces. These accounts need owner access to the Azure subscription.  
+    - **Do you want Desktop Analytics to manage Directory roles for your users**: Desktop Analytics automatically assigns the **Workspace Owners** and **Workspace Contributors** groups to the **Desktop Analytics Administrator** role. If those groups are already a **Global Admin**, there's no change.  
 
-    - **Workspace Contributors**: Create and manage deployment plans in this workspace. They don't need any additional Azure access.  
-  
-   To add a user to either group, type their name or e-mail address in the **Enter name or email address** section of the appropriate group. When finished, select **Next**.
+        If you don't select this option, Desktop Analytics still adds the users as members of the two security groups. A **Global Admin** needs to manually assign the **Desktop Analytics Administrator** role for the users.  
+
+        For more information about assigning administrator role permissions in Azure Active Directory and the permissions assigned to **Desktop Analytics Administrators**, see [Administrator role permissions in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
+
+    - Desktop Analytics preconfigures two security groups in Azure Active Directory:  
+
+        - **Workspace Owners**: A security group to create and manage workspaces. These accounts need owner access to the Azure subscription.  
+
+        - **Workspace Contributors**: A security group to create and manage deployment plans in this workspace. They don't need any additional Azure access.  
+
+        To add a user to either group, type their name or e-mail address in the **Enter name or email address** section of the appropriate group. When finished, select **Next**.
+
+The following step can be completed by a **Workspace Owner** or **contributor**. 
 
 5. On the page to **Set up your workspace**:  
+
+    - Select your Azure subscription. 
 
     - To use an existing workspace for Desktop Analytics, select it, and continue with the next step.  
 
@@ -117,7 +131,9 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
         2. Select the drop-down list to **Select the Azure subscription name for this workspace**, and choose the Azure subscription for this workspace.  
 
-        3. Select the **Region** from the list, and then select **Add**.  
+        3. **Create new** Resource group or **Use existing**.  
+
+        4. Select the **Region** from the list, and then select **Add**.  
 
 6. Select a new or existing workspace, and then select **Set as Desktop Analytics workspace**.  Then select **Continue** in the **Confirm and grant access** dialog.  
 
@@ -130,7 +146,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
 ### Create an app in Azure AD for Configuration Manager  
 
-1. In the [Azure portal](https://portal.azure.com), go to **Azure Active Directory**, and select **App registrations**. Then select **New application registration**.  
+1. Open the [Azure portal](http://portal.azure.com) as a user with Company Admin permissions, go to **Azure Active Directory**, and select **App registrations**. Then select **New application registration**.  
 
 2. In the **Create** panel, configure the following settings:  
 

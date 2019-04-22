@@ -2,7 +2,7 @@
 title: Prerequisites for sites
 titleSuffix: Configuration Manager
 description: Learn about prerequisites for installing the different types of Configuration Manager sites.
-ms.date: 09/04/2018
+ms.date: 04/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -32,6 +32,15 @@ If you're installing a central administration site as part of a hierarchy expans
 
 
 ###  <a name="bkmk_PrereqPri"></a> Prerequisites for installing a primary site or a central administration site  
+
+- The following Windows Server roles, features and Windows components must be installed:  
+    - .NET Framework 3.5 SP1 (or later)
+    - .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2
+    - Remote Differential Compression
+    - Windows ADK
+    - Visual C++ Redistributable  
+    
+    For more info, see [Site System Prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012sspreq)  
 
 - The user account that installs the site must have the following rights:  
 
@@ -131,7 +140,15 @@ Use the following steps to resolve this issue:
 
 ## <a name="bkmk_secondary"></a> Secondary sites
 
-The following are prerequisites for installing secondary sites:
+The following are prerequisites for installing secondary sites:  
+
+- The following Windows Server roles, features and Windows Components must be installed:  
+    - .NET Framework 3.5 SP1 (or later)
+    - .NET Framework 4.5.2,4.6.1,4.6.2,4.7,4.7.1, or 4.7.2
+    - Remote Differential Compression
+    - Visual C++ Redistributable  
+    
+    For more info, see [Site System Prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012secpreq)  
 
 - The administrator who configures the installation of the secondary site in the Configuration Manager console must have role-based administration rights that are equivalent to the security role of **Infrastructure Administrator** or **Full Administrator**.  
 
