@@ -311,6 +311,26 @@
             href: core/understand/sqlviews/sample-queries-software-inventory-configuration-manager.md
           - name: Sample Queries for Asset Intelligence
             href: core/understand/sqlviews/sample-queries-asset-intelligence-configuration-manager.md
+        - name: Sample Queries for Mobile Device Management
+          href: core/understand/sqlviews/sample-queries-mobile-device-management-configuration-manager.md
+        - name: Sample Queries for Operating System Deployment
+          href: core/understand/sqlviews/sample-queries-operating-system-deployment-configuration-manager.md
+        - name: Sample Queries for Power Management
+          href: core/understand/sqlviews/sample-queries-power-management-configuration-manager.md
+        - name: Sample Queries for Queries
+          href: core/understand/sqlviews/sample-queries-for-queries-configuration-manager.md
+        - name: Sample Queries for Security
+          href: core/understand/sqlviews/sample-queries-security-configuration-manager.md
+        - name: Sample Queries for Site Administration
+          href: core/understand/sqlviews/sample-queries-site-administration-configuration-manager.md
+        - name: Sample Queries for Software Metering
+          href: core/understand/sqlviews/sample-queries-software-metering-configuration-manager.md
+        - name: Sample Queries for Software Updates
+          href: core/understand/sqlviews/sample-queries-software-updates-configuration-manager.md
+        - name: Sample Queries for Status and Alerts
+          href: core/understand/sqlviews/sample-queries-status-alerts-configuration-manager.md
+        - name: Sample Queries for Wake On LAN
+          href: core/understand/sqlviews/sample-queries-wake-lan-views-configuration-manager.md
   - name: SMS Provider in Configuration Manager
     href: core/understand/sms-provider-in-configuration-manager.md
     items:
