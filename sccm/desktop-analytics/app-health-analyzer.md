@@ -25,7 +25,7 @@ Use the App Health Analyzer toolkit for Desktop Analytics to evaluate desktop ap
 
 ## Download
 
-Download the toolkit from the [Microsoft Download Center](http://download.microsoft.com/download/3/7/D/37D7E378-D805-4822-A712-4EADBF50FC08/AppHealthAnalyzer.zip)<!-- (https://www.microsoft.com/download/details.aspx?id=57276) -->. Always use the most current version.
+Contact your Microsoft representative to get a download link. Always use the most current version.
 
 The download is a Windows Installer (MSI) file. Install the App Health Analyzer toolkit on a user's computer. When you run the toolkit, a wizard guides you through the process of creating an app readiness report.
 
