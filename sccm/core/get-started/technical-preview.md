@@ -121,13 +121,9 @@ The following features are available with the most recent Configuration Manager 
 
 - [Configure dynamic update during feature updates](/sccm/core/get-started/2019/technical-preview-1904#bkmk_anchor) <!--4062619-->  
 
-- [Object creation command line in wizards](/sccm/core/get-started/2019/technical-preview-1904#bkmk_anchor) <!--3555916-->  
-
 - [CMPivot standalone](/sccm/core/get-started/2019/technical-preview-1904#bkmk_anchor) <!--3555890-->  
 
 - [Improvements to Office 365 ProPlus readiness](/sccm/core/get-started/2019/technical-preview-1904#bkmk_anchor) <!--4021125-->  
-
-- [Application groups chains](/sccm/core/get-started/2019/technical-preview-1904#bkmk_anchor) <!--3555907-->  
 
 - [Directly link to Configuration Manager console pages](/sccm/core/get-started/2019/technical-preview-1904#bkmk_anchor) <!--4224406-->  
 

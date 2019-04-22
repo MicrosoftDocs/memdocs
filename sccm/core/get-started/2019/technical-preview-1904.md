@@ -27,13 +27,9 @@ The following sections describe the new features to try out in this version:
 
 [!INCLUDE [Configure dynamic update during feature updates](includes/1904/4062619.md)]
 
-[!INCLUDE [Object creation command line in wizards](includes/1904/3555916.md)]
-
 [!INCLUDE [CMPivot standalone](includes/1904/3555890.md)]
 
 [!INCLUDE [Improvements to Office 365 ProPlus readiness](includes/1904/4021125.md)]
-
-[!INCLUDE [Application groups chains](includes/1904/3555907.md)]
 
 [!INCLUDE [Directly link to Configuration Manager console pages](includes/1904/4224406.md)]
 
