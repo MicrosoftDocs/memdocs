@@ -1,7 +1,7 @@
 ﻿---
-title: Sample Queries for Queries
+title: Sample Queries for the Query view
 titleSuffix: Configuration Manager
-description: Sample queries that show how how the query view can be joined to a security view.
+description: Sample queries that show how the query view can be joined to a security view.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other #app client compliance hybrid osd protect sum
@@ -13,9 +13,9 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Sample Queries for Queries in Configuration Manager
+# Sample Queries for the Query view in Configuration Manager
 
-The following sample query demonstrates how the query view can be joined to a security view. In most cases, the **v_Query** view will not be used in reports.
+The following sample query demonstrates how the query view can be joined to a security view. In most cases, the **v_Query** view won't be used in reports.
 
 ## Joining Query and Security Views
 

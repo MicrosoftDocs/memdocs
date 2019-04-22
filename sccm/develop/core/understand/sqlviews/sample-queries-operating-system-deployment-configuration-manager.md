@@ -15,7 +15,7 @@ manager: dougeby
 
 # Sample Queries for Operating System Deployment in Configuration Manager
 
-The following sample queries demonstrate how to join operating system deployment views to each other and to compliance settings views. The operating system deployment views can be joined to other operating system deployment views and application management views by using the view column that contains the package ID, which can have different column names depending on the view. The operating system deployment views can be joined to compliance settings views by using the **CI_ID** column, and they can be joined to discovery views by using the **ResourceID** column.
+The following sample queries demonstrate how to join operating system deployment views to each other and to compliance settings views. You can join the operating system deployment views to other operating system deployment views and application management views by using the view column that contains the package ID, which might have different column names depending on the view. You can join the operating system deployment views to compliance settings views by using the **CI_ID** column, and they can be joined to discovery views by using the **ResourceID** column.
 
 ## Joining Operating System Deployment and Application Management Views
 

@@ -19,9 +19,9 @@ The following sample queries demonstrate how to join power management views to o
 
 ## Joining Power Management Views to Discovery Views
 
-The following query lists all computers, by Netbios name that are excluded from power management because the user selected this.
+The following query lists all computers, by Netbios name, that are excluded from power management because the user chose to exclude them.
 
-The query returns the Netbios name and the domain of the computer and also the client opt out setting where this value is 1 (indicating that the computer has been excluded from power management).
+The query returns the Netbios name and the domain of the computer and also the client opt-out setting where this value is 1 (indicating that the computer has been excluded from power management).
 
 ```sql
     SELECT        v_R_System.Name0, v_R_System.Resource_Domain_OR_Workgr0, 
