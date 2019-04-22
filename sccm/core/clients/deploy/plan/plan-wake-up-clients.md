@@ -2,7 +2,7 @@
 title: Waking up clients
 titleSuffix: Configuration Manager
 description: Plan how to wake up clients in System Center Configuration Manager using Wake On LAN (WOL).
-ms.date: 04/15/2019
+ms.date: 04/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual

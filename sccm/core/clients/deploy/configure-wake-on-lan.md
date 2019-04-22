@@ -2,7 +2,7 @@
 title: "Configure Wake on LAN"
 titleSuffix: "Configuration Manager"
 description: "Select Wake On LAN settings in System Center Configuration Manager."
-ms.date: 04/15/2019
+ms.date: 04/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -20,7 +20,7 @@ Specify Wake on LAN settings for System Center Configuration Manager when you wa
 
 ## <a name="bkmk_wol-1810"></a> Wake on LAN starting in version 1810
 <!--3607710-->
-Starting in Configuration Manager 1810, there's a new way to wake up sleeping machines. You can wake up clients from the Configuration Manager console, even if the client isn't on the same subnet as the site server. If you need to do maintenance or query devices, you're not limited by remote clients that are asleep. The site server uses the client notification channel to identify two other clients that are awake on the same remote subnet, then uses those clients to send a wake on LAN request (magic packet). Using the client notification channel helps avoid MAC flaps, which could cause the port to be shut down by the router. The new version of Wake on LAN can be enabled at the same time as the [older version](#bkmk_wol-previous).
+Starting in Configuration Manager 1810, there's a new way to wake up sleeping machines. You can wake up clients from the Configuration Manager console, even if the client isn't on the same subnet as the site server. If you need to do maintenance or query devices, you're not limited by remote clients that are asleep. The site server uses the client notification channel to identify other clients that are awake on the same remote subnet, then uses those clients to send a wake on LAN request (magic packet). Using the client notification channel helps avoid MAC flaps, which could cause the port to be shut down by the router. The new version of Wake on LAN can be enabled at the same time as the [older version](#bkmk_wol-previous).
 
 ### Limitations
 
@@ -28,6 +28,8 @@ Starting in Configuration Manager 1810, there's a new way to wake up sleeping ma
 - This feature doesn't support the following network technologies:
    - IPv6
    - 802.1x network authentication
+    >[!NOTE]
+    > 802.1x network authentication may work with additional configuration depending on the hardware and its configuration.
 - Machines only wake when you notify them through the **Wake Up** client notification.
     - For wake-up when a deadline occurs, the older version of Wake on LAN is used.
     -  If the older version isn't enabled, client wake up won't occur for deployments created with the settings **Use Wake-on-LAN to wake up clients for required deployments** or **Send wake-up packets**.  
