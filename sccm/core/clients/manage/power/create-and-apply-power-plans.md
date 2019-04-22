@@ -2,7 +2,7 @@
 title: "Create and apply power plans"
 titleSuffix: "Configuration Manager"
 description: "Create and apply power plans in System Center Configuration Manager."
-ms.date: 10/06/2016
+ms.date: 04/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -90,14 +90,14 @@ Power management in System Center Configuration Manager enables you to apply pow
 |**Turn off display after (minutes)**|Specifies the length of time, in minutes, that the computer must be inactive before the display is turned off. Specify a value of **0** if you do not want power management to turn off the display.|  
 |**Sleep after (minutes)**|Specifies the length of time, in minutes, that the computer must be inactive before it enters sleep. Specify a value of **0** if you do not want power management to enter sleep on the computer.|  
 |**Require a password on wakeup**|A **Yes** or **No** value specifies whether a password is required to unlock the computer when it enters wake from sleep.|  
-|**Power button action**|Specifies the action that is taken when the computer’s power button is pressed. Specifies the action that occurs when the user closes the lid of a portable computer. Possible values **Do nothing**, **Sleep**, **Hibernate**, and **Shut down**.|  
-|**Start menu power button**|Specifies the action that occurs when you press the computer’s **Start** menu power button. Specifies the action that occurs when the user closes the lid of a portable computer. Possible values **Sleep**, **Hibernate**, and **Shut down**.|  
-|**Sleep button action**|Specifies the action that occurs when you press the computer’s **Sleep** button. Specifies the action that occurs when the user closes the lid of a portable computer. Possible values **Do nothing**, **Sleep**, **Hibernate**, and **Shut down**.|  
+|**Power button action**|Specifies the action that is taken when the computer’s power button is pressed. Possible values **Do nothing**, **Sleep**, **Hibernate**, and **Shut down**.|  
+|**Start menu power button**|Specifies the action that occurs when you press the computer’s **Start** menu power button. Possible values **Sleep**, **Hibernate**, and **Shut down**.|  
+|**Sleep button action**|Specifies the action that occurs when you press the computer’s **Sleep** button. Possible values **Do nothing**, **Sleep**, **Hibernate**, and **Shut down**.|  
 |**Lid close action**|Specifies the action that occurs when the user closes the lid of a portable computer. Possible values **Do nothing**, **Sleep**, **Hibernate**, and **Shut down**.|  
 |**Turn off hard disk after (minutes)**|Specifies the length of time, in minutes, that the computer’s hard disk must be inactive before it is turned off. Specify a value of **0** if you do not want power management to turn off the computer’s hard disk.|  
 |**Hibernate after (minutes)**|Specifies the length of time, in minutes, that the computer must be inactive before it enters hibernate. Specify a value of **0** if you do not want power management to enter hibernate on the computer.|  
-|**Low battery action**|Specifies the action that occurs when the computer’s battery reaches the specified low battery notification level. Specifies the action that occurs when the user closes the lid of a portable computer. Possible values **Do nothing**, **Sleep**, **Hibernate**, and **Shut down**.|  
-|**Critical battery action**|Specifies the action that is taken when the computer’s battery reaches the specified critical battery notification level. Specifies the action that occurs when the user closes the lid of a portable computer. Possible values include **Sleep**, **Hibernate**, and **Shut down**.|  
+|**Low battery action**|Specifies the action that occurs when the computer’s battery reaches the specified low battery notification level. Possible values **Do nothing**, **Sleep**, **Hibernate**, and **Shut down**.|  
+|**Critical battery action**|Specifies the action that is taken when the computer’s battery reaches the specified critical battery notification level. When **On battery** possible values **Sleep**, **Hibernate**, and **Shut down**. When **Plugged in** possible values  **Do nothing**, **Sleep**, **Hibernate**, and **Shut down**.|  
 |**Allow hybrid sleep**|Selecting the **On** or **Off** value specifies whether Windows saves a hibernation file when entering sleep, which can be used to restore the computer's state in the event of power loss while it has entered sleep.<br /><br /> Hybrid sleep is designed for desktop computers and, by default, is not enabled on portable computers. On computers that are running Windows 7, enabling hybrid sleep disables the hibernate functionality.|  
 |**Allow standby state when sleeping action**|Selecting the **On** or **Off** value enables the computer to be on standby, which still consumes some power, but enables the computer to wake faster. If this setting is set to **Off**, the computer can only hibernate or turn off.|  
 |**Required idleness to sleep (%)**|Specifies the percentage of idle time on the computer processor time required for the computer to enter sleep. For computers running Windows 7, this value is always set to **0**.|  
