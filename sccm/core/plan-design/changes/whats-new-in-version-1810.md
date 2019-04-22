@@ -23,8 +23,10 @@ Always review the latest checklist for installing this update. For more informat
 
 To take advantage of new Configuration Manager features, first update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
-<!-- > [!Note]  
-> This article currently lists all significant features in this version. However, not all sections yet link to updated content with further information on the new features. Keep checking this page regularly for updates. Changes are noted with the ***[Updated]*** tag. This note will be removed when the content is finalized. -->  
+<!--
+> [!Note]  
+> This article currently lists all significant features in this version. However, not all sections yet link to updated content with further information on the new features. Keep checking this page regularly for updates. Changes are noted with the ***[Updated]*** tag. This note will be removed when the content is finalized. 
+-->  
 
 > [!Tip]  
 > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
@@ -41,9 +43,6 @@ Starting on August 14, 2018, the hybrid mobile device management feature is depr
 Support for System Center Endpoint Protection (SCEP) for Mac and Linux (all versions) ends on December 31, 2018. Availability of new virus definitions for SCEP for Mac and SCEP for Linux may be discontinued after the end of support. For more information, see [End of support blog post](https://go.microsoft.com/fwlink/?linkid=870182).
 
 Classic service deployments in Azure are now deprecated in Configuration Manager. Start using Azure Resource Manager deployments for the cloud management gateway and the cloud distribution point. For more information, see [Plan for CMG](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).
-<!--
-Version 1810 drops support for the following products:
--->
 
 
 
@@ -186,10 +185,6 @@ For more information, see [How to prepare internet-based devices for co-manageme
 
 
 
-<!-- ## <a name="bkmk_compliance"></a> Compliance settings -->
-
-
-
 ## <a name="bkmk_app"></a> Application management
 
 ### Convert applications to MSIX
@@ -235,7 +230,6 @@ For more information, see [Create applications](/sccm/apps/deploy-use/create-app
 ### Task sequence support of Windows Autopilot for existing devices
 
 <!--3607717, fka 1358333-->
-
 [Windows Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) is now available with Windows 10, version 1809 or later. This new feature allows you to reimage and provision a Windows 7 device for [Windows Autopilot user-driven mode](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) using a single, native Configuration Manager task sequence.
 
 For more information, see [Windows Autopilot for existing devices](/sccm/osd/deploy-use/windows-autopilot-for-existing-devices).
@@ -277,10 +271,6 @@ For more information, see [Windows 10 servicing plan](/sccm/osd/deploy-use/manag
 Along with the task sequence variable _SMSTSLastActionRetCode, the task sequence also sets a new variable **_SMSTSLastActionName**. It also logs this value to the smsts.log file. This new variable is beneficial when troubleshooting a task sequence. When a step fails, a custom script can include the step name along with the return code.
 
 For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables#SMSTSLastActionName).
-
-
-
-<!-- ## <a name="bkmk_userxp"></a> Software Center -->
 
 
 
@@ -360,7 +350,6 @@ For more information, see [Support Center](/sccm/core/support/support-center).
 ### Management insights dashboard
 
 <!--1357979-->
-
 The **Management Insights** node now includes a graphical dashboard. This dashboard displays an overview of the rule states, which makes it easier for you to show your progress. The dashboard includes the following tiles:
 
 - **Management insights index**: Tracks overall progress on management insights rules. The index is a weighted average. Critical rules are worth the most. This index gives the least weight to optional rules.  
