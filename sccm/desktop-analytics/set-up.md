@@ -63,8 +63,10 @@ The following step can be completed by a **Workspace Owner** or **contributor**.
         1. Enter a **Workspace name**.<!--do we have any guidance for this name?-->  
 
         2. Select the drop-down list to **Select the Azure subscription name for this workspace**, and choose the Azure subscription for this workspace.  
+        
+        3. **Create new** Resource group or **Use existing**. 
 
-        3. Select the **Region** from the list, and then select **Add**.  
+        4. Select the **Region** from the list, and then select **Add**.  
 
 6. Select a new or existing workspace, and then select **Set as Desktop Analytics workspace**.  Then select **Continue** in the **Confirm and grant access** dialog.  
 
