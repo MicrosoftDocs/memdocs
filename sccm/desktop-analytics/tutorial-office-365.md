@@ -117,7 +117,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
         To add a user to either group, type their name or e-mail address in the **Enter name or email address** section of the appropriate group. When finished, select **Next**.
 
-The following step can be completed by a **Workspace Owner** or **contributor**. 
+The following step can be completed by a **Workspace Owner** or **contributor**. For more information, see [prerequisites](/sccm/desktop-analytics/overview#prerequisites).
 
 5. On the page to **Set up your workspace**:  
 
