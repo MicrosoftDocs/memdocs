@@ -2,13 +2,13 @@
 title: Waking up clients
 titleSuffix: Configuration Manager
 description: Plan how to wake up clients in System Center Configuration Manager using Wake On LAN (WOL).
-ms.date: 05/23/2018
+ms.date: 04/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
 ms.assetid: 52ee82b2-0b91-4829-89df-80a6abc0e63a
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -16,21 +16,28 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
+ Configuration Manager supports traditional wake-up packets to wake up computers in sleep mode when you want to install required software, such as software updates and applications.
+
+> [!NOTE]
+> This article describes how an older version of Wake on LAN functions. This functionality still exists in Configuration Manager version 1810, which also includes a newer version of Wake on LAN too. Both versions of Wake on LAN can, and in many cases will, be enabled simultaneously. For more information about how the new version of Wake on LAN functions starting in 1810 and enabling either or both versions, see [How to configure Wake on LAN](/sccm/core/clients/deploy/configure-wake-on-lan).  
+
+## How to wake up clients in System Center Configuration Manager
+
  Configuration Manager supports traditional wake-up packets to wake up computers in sleep mode when you want to install required software, such as software updates and applications.  
 
 You can supplement the traditional wake-up packet method by using the wake-up proxy client settings. Wake-up proxy uses a peer-to-peer protocol and elected computers to check whether other computers on the subnet are awake, and to wake them if necessary. When the site is configured for Wake On LAN and clients are configured for wake-up proxy, the process works as follows:  
 
-1. Computers with the Configuration Manager client installed and that are not asleep on the subnet check whether other computers on the subnet are awake. They do this check by sending each other a TCP/IP ping command every five seconds.  
+1. Computers with the Configuration Manager client installed and that aren't asleep on the subnet check whether other computers on the subnet are awake. They do this check by sending each other a TCP/IP ping command every five seconds.  
 
-2. If there is no response from other computers, they are assumed to be asleep. The computers that are awake become *manager computer* for the subnet.  
+2. If there's no response from other computers, they're assumed to be asleep. The computers that are awake become *manager computer* for the subnet.  
 
-    Because it is possible that a computer might not respond because of a reason other than it is asleep (for example, it is turned off, removed from the network, or the proxy wake-up client setting is no longer applied), the computers are sent a wake-up packet every day at 2 P.M. local time. Computers that do not respond will no longer be assumed to be asleep and will not be woken up by wake-up proxy.  
+    Because it's possible that a computer might not respond because of a reason other than it's asleep (for example, it's turned off, removed from the network, or the proxy wake-up client setting is no longer applied), the computers are sent a wake-up packet every day at 2 P.M. local time. Computers that don't respond will no longer be assumed to be asleep and will not be woken up by wake-up proxy.  
 
     To support wake-up proxy, at least three computers must be awake for each subnet. To achieve this requirement, three computers are non-deterministically chosen to be *guardian computers* for the subnet. This state means that they stay awake, despite any configured power policy to sleep or hibernate after a period of inactivity. Guardian computers honor shutdown or restart commands, for example, as a result of maintenance tasks. If this action happens, the remaining guardian computers wake up another computer on the subnet so that the subnet continues to have three guardian computers.  
 
 3. Manager computers ask the network switch to redirect network traffic for the sleeping computers to themselves.  
 
-    The redirection is achieved by the manager computer broadcasting an Ethernet frame that uses the sleeping computer's MAC address as the source address. This behavior makes the network switch behave as if the sleeping computer has moved to the same port that the manager computer is on. The manager computer also sends ARP packets for the sleeping computers to keep the entry fresh in the ARP cache. The manager computer also responds to ARP requests on behalf of the sleeping computer and replys with the MAC address of the sleeping computer.  
+    The redirection is achieved by the manager computer broadcasting an Ethernet frame that uses the sleeping computer's MAC address as the source address. This behavior makes the network switch behave as if the sleeping computer has moved to the same port that the manager computer is on. The manager computer also sends ARP packets for the sleeping computers to keep the entry fresh in the ARP cache. The manager computer also responds to ARP requests on behalf of the sleeping computer and replies with the MAC address of the sleeping computer.  
 
    > [!WARNING]  
    >  During this process, the IP-to-MAC mapping for the sleeping computer remains the same. Wake-up proxy works by informing the network switch that a different network adapter is using the port that was registered by another network adapter. However, this behavior is known as a MAC flap and is unusual for standard network operation. Some network monitoring tools look for this behavior and can assume that something is wrong. Consequently, these monitoring tools can generate alerts or shut down ports when you use wake-up proxy.  
@@ -78,7 +85,7 @@ If you want to wake up computers for scheduled software installation, you must c
 
 Decide whether to use subnet-directed broadcast packets, or unicast packets, and what UDP port number to use. By default, traditional wake-up packets are transmitted by using UDP port 9, but to help increase security, you can select an alternative port for the site if this alternative port is supported by intervening routers and firewalls.  
 
-### Choose Between Unicast and Subnet-Directed Broadcast for Wake-on-LAN  
+## Choose Between Unicast and Subnet-Directed Broadcast for Wake-on-LAN  
  If you chose to wake up computers by sending traditional wake-up packets, you must decide whether to transmit unicast packets or subnet-direct broadcast packets. If you use wake-up proxy, you must use unicast packets. Otherwise, use the following table to help you determine which transmission method to choose.  
 
 |Transmission method|Advantage|Disadvantage|  
