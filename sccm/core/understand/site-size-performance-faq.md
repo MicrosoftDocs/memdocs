@@ -19,7 +19,7 @@ This document addresses frequently asked questions about Configuration Manager s
 
 ### How should I format the disks on my site server and SQL Server?
 
-Separate the Configuration Manager inboxes and SQL files on at least two different volumes. This separation allows you to optimize cluster allocation sizes for the different kinds of I/O they perform. 
+Separate the Configuration Manager inboxes and SQL files on at least two different volumes. This separation lets you optimize cluster allocation sizes for the different kinds of I/O they perform. 
 
 For the volume hosting your sites server inboxes, use NTFS with 4K or 8K allocation units. ReFS writes 64k even for small files. Configuration Manager has many small files, so ReFS can produce unnecessary disk overhead.
 
@@ -29,7 +29,7 @@ For disks containing SQL database files, use either NTFS or ReFS formatting, wit
 
 Modern arrays of solid-state drives (SSD) and Azure Premium Storage can provide high IOPS on a single volume, with few disks. You typically add more drives to an array for additional storage, not additional throughput. If you're using physical spindle-based disks, you may need more IOPS than you can generate on a single volume. You should allocate 60% of the total recommended IOPS and disk space for the *.mdf* file, 20% for the *.ldf* file, and 20% for the log and data temp files. The *.ldf* and temp files can all reside on a single volume with 40% (20% + 20%) of your allocated IOPS.
 
-By default, SQL will create one temp data file. You should create more, to avoid SQL locks and waiting for access to a single file. Community opinions vary on the best number of temp data files to create, from four to eight. Testing reveals little difference between four to eight, so you can create four *equally sized* temp data files. Your tempdb data files should be up to 20-25% the size of your full database.
+By default, SQL creates one temp data file. You should create more, to avoid SQL locks and waiting for access to a single file. Community opinions vary on the best number of temp data files to create, from four to eight. Testing reveals little difference between four to eight, so you can create four *equally sized* temp data files. Your tempdb data files should be up to 20-25% the size of your full database.
 
 ### Are there any other recommendations for disk setup?
 
@@ -103,7 +103,7 @@ Your resulting Azure machine might be a DS13v2 (eight cores, 56 GB) with the fol
 | 1xP30 (1024 GB)   | 64k ReFS      | SQL (all files<sup>2</sup>) | 2800                 | 3112             |
 
 1. This value is from [Example disk configurations](../plan-design/configs/site-size-performance-guidelines.md#example-disk-configurations).
-2. [Azure guidance](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance#disks-guidance) allows for placing the TempDB on the local, SSD-based *D:* drive, given it won't exceed available space and will allow for additional disk I/O distribution.
+2. [Azure guidance](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance#disks-guidance) allows for placing the TempDB on the local, SSD-based *D:* drive, given it won't exceed available space and allows for additional disk I/O distribution.
 
 **Example: Azure-based site server (for instant performance increase)** 
 
@@ -121,7 +121,7 @@ Change the disks in the preceding Azure example to see how the IOPS change.
 
 1. Disks are striped using Storage Spaces.
 2. This value is from [Example disk configurations](../plan-design/configs/site-size-performance-guidelines.md#example-disk-configurations). VM size limits performance.
-3. [Azure guidance](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance#disks-guidance) allows for placing the TempDB on the local, SSD-based *D:* drive, given it won't exceed available space and will allow for additional disk I/O distribution.
+3. [Azure guidance](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance#disks-guidance) allows for placing the TempDB on the local, SSD-based *D:* drive, given it won't exceed available space and allows for additional disk I/O distribution.
 
 If you need more performance in future, you can upsize your VM to a DS14v2, which will double CPU and memory. The additional disk bandwidth allowed by that VM size will also instantly boost the available disk IOPS on your previously configured disks.
 
@@ -135,7 +135,7 @@ If you need more performance in future, you can upsize your VM to a DS14v2, whic
 
 1. Disks are striped using Storage Spaces.
 2. This value is from [Example disk configurations](../plan-design/configs/site-size-performance-guidelines.md#example-disk-configurations). VM size limits performance.
-3. [Azure guidance](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance#disks-guidance) allows for placing the TempDB on the local, SSD-based *D:* drive, given it won't exceed available space and will allow for additional disk I/O distribution.
+3. [Azure guidance](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance#disks-guidance) allows for placing the TempDB on the local, SSD-based *D:* drive, given it won't exceed available space and allows for additional disk I/O distribution.
 
 ## Other common SQL Server-related performance questions 
 
@@ -159,7 +159,7 @@ Colocated SQL requires a single server, and is typical for most small-scale cust
 
 ### How much RAM should I allocate for SQL?
 
-By default, SQL will use all available memory on your server, potentially starving the OS and other processes on the machine. To avoid potential performance issues, it's important to allocate memory to SQL explicitly. On site servers colocated with SQL servers, make sure the OS has enough RAM for file caching and other operations. Make sure there's enough RAM remaining for SMSExec and other Configuration Manager processes. When running SQL on a remote server, you can allocate the *majority* of the memory to SQL, but not all. Review the [sizing guidelines](../plan-design/configs/site-size-performance-guidelines.md#general-sizing-guidelines) for initial guidance. 
+By default, SQL uses all available memory on your server, potentially starving the OS and other processes on the machine. To avoid potential performance issues, it's important to allocate memory to SQL explicitly. On site servers colocated with SQL servers, make sure the OS has enough RAM for file caching and other operations. Make sure there's enough RAM remaining for SMSExec and other Configuration Manager processes. When running SQL on a remote server, you can allocate the *majority* of the memory to SQL, but not all. Review the [sizing guidelines](../plan-design/configs/site-size-performance-guidelines.md#general-sizing-guidelines) for initial guidance. 
 
 SQL Server memory allocation should be rounded to whole GB. Also, as RAM increases to large amounts, you can let SQL have a higher percentage. For example, when 256 GB or more of RAM is available, you can configure SQL for up to 95%, as that still preserves plenty of memory for the OS. Monitoring the page file is a good way to ensure there is enough memory for the OS and any Configuration Manager processes.
 
@@ -177,7 +177,7 @@ SQL compression isn't recommended for the Configuration Manager database. While 
 
 ### Should I enable SQL encryption on my database?
 
-Any secrets stored in the Configuration Manager database are already stored in securely, but adding SQL encryption can add yet another layer of security. There are no functional issues with enabling encryption on your database, but there can be up to a 25% performance degradation, depending on the tables you choose to encrypt and the version of SQL you're using. Therefore, encrypt with caution, especially in large-scale environments. Also remember to update your backup and recovery plans to ensure you can successfully recover the encrypted data.
+Any secrets in the Configuration Manager database are already stored securely, but adding SQL encryption can add yet another layer of security. There are no functional issues with enabling encryption on your database, but there can be up to a 25% performance degradation, depending on the tables you choose to encrypt and the version of SQL you're using. Therefore, encrypt with caution, especially in large-scale environments. Also remember to update your backup and recovery plans to ensure you can successfully recover the encrypted data.
 
 ### What version of SQL should I run?
 

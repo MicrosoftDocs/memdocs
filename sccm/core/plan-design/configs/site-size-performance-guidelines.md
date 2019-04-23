@@ -6,7 +6,7 @@ author: aczechowski
 ms.author: aaroncz
 ms.prod: configuration-manager
 ms.topic: conceptual
-ms.date: 04/19/2019
+ms.date: 04/23/2019
 ---
 
 # System Center Configuration Manager site size and performance guidelines
@@ -17,9 +17,9 @@ System Center Configuration Manager leads the industry in scalability and perfor
 
 This article focuses on the largest contributor to Configuration Manager performance bottlenecks: the disk input/output subsystem or IOPS. The article:
 
-- Presents details and test results focused on IOPS,
-- Documents how to reproduce the tests with your own environments and hardware, and
-- Suggests disk IOPS requirements for various size environments. 
+- Presents details and test results focused on IOPS
+- Documents how to reproduce the tests with your own environments and hardware
+- Suggests disk IOPS requirements for various size environments 
 
 ## Performance test methodology
 
@@ -37,10 +37,10 @@ Most testing should use default intervals for the key cycles in the system. For 
 Tests should use the *upper average* of the objects that large enterprises tend to use with the system. Typical values are thousands of collections and applications, which are deployed to hundreds of thousands of users or systems. Tests should run simultaneously on *all* objects in the system at these limits. Many customers leverage several features, but don't generally use all features of the product at these upper limits. Testing with all product features helps ensure the best possible system-wide performance, and allows a buffer for features that some customers may use above average. 
 
 ### Loads 
-Tests should also run on greater than standard *average day* loads, by performing simulations that generate peak usage demands on the system. One example is simulating Patch Tuesday rollouts, to make sure the system can return update compliance data promptly during these days of peak activity. Another example is simulating site activity during a widespread malware outbreak, to ensure timely notification and response are possible. Although deployed machines of the recommended size may be underutilized on any given day, these more extreme situations require some processing buffer.
+Tests should also run on greater than standard *average day* loads, by performing simulations that generate peak usage demands on the system. One example is simulating Patch Tuesday rollouts, to make sure the system can return update compliance data promptly during these days of peak activity. Another example is simulating site activity during a widespread malware outbreak, to ensure timely notification and response are possible. Although deployed machines of the recommended size may be underused on any given day, more extreme situations require some processing buffer.
 
 ### Configurations
-Testing should run on a range of physical, Hyper-V, and Azure hardware, with a mixture of supported operating systems and SQL Server versions. Always validate the worst cases for the supported configuration. In general, Hyper-V and Azure return comparable performance results to equivalent physical hardware when configured similarly. Newer server operating systems tend to perform equally or better than older supported server operating systems. While all supported platforms meet the minimum requirements, usually the latest versions of supporting products like Windows and SQL produce even better performance. 
+Run testing on a range of physical, Hyper-V, and Azure hardware, with a mixture of supported operating systems and SQL Server versions. Always validate the worst cases for the supported configuration. In general, Hyper-V and Azure return comparable performance results to equivalent physical hardware when configured similarly. Newer server operating systems tend to perform equally or better than older supported server operating systems. While all supported platforms meet the minimum requirements, usually the latest versions of supporting products like Windows and SQL produce even better performance. 
 
 The largest variation comes from the SQL Server versions in use. For more information about SQL Server versions, see [What version of SQL should I run?](../../understand/site-size-performance-faq.md#what-version-of-sql-should-i-run). 
 
@@ -81,7 +81,7 @@ Discovery data is global data. A common performance-related problem is to miscon
 
 ## General sizing guidelines 
 
-Based on the preceding [performance test methodology](#performance-test-methodology), the following table gives general *minimum* hardware requirement guidelines for specific numbers of managed clients. These values should allow most customers with the specified number of clients to process objects fast enough to administer the specified site. Computing power continues to decrease in price every year, and some of the requirements below are small in terms of modern server hardware configurations. Hardware that exceeds the following guidelines will proportionally increase performance for sites that require additional processing power, or have special product usage patterns. 
+Based on the preceding [performance test methodology](#performance-test-methodology), the following table gives general *minimum* hardware requirement guidelines for specific numbers of managed clients. These values should allow most customers with the specified number of clients to process objects fast enough to administer the specified site. Computing power continues to decrease in price every year, and some of the requirements below are small in terms of modern server hardware configurations. Hardware that exceeds the following guidelines proportionally increases performance for sites that require additional processing power, or have special product usage patterns. 
 
 | Desktop clients  | Site type/role  | Cores<sup>1</sup>   | Memory (GB)   | SQL memory allocation  | IOPS:  Inboxes<sup>2</sup>  | IOPS: SQL<sup>2</sup>   | Storage space required (GB)<sup>3</sup>   |
 |------|-------------------------------------------------------------|-----|-----|-----|------|------|------|
