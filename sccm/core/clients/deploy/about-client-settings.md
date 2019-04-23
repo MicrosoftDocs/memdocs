@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 04/12/2019
+ms.date: 04/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -446,7 +446,7 @@ Choose one of the following options for this setting:
 
 
 
-##  Power management  
+## Power management  
 
 ### Allow power management of devices
 
