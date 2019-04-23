@@ -2,7 +2,7 @@
 title: Troubleshooting Desktop Analytics
 titleSuffix: Configuration Manager
 description: Technical details to help you troubleshoot issues with Desktop Analytics.
-ms.date: 04/15/2019
+ms.date: 04/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -109,7 +109,9 @@ To see a specific list of devices by status, start with the **Connection Health*
 - Windows diagnostic data opt-in
 - Windows commercial data opt-in
 - Windows diagnostic endpoint connectivity
-- Office diagnostic endpoint connectivity
+
+> [!Note]  
+> Ignore the column for **Office diagnostic endpoint connectivity**. It's reserved for future functionality.
 
 These columns correspond to the key [prerequisites](/sccm/desktop-analytics/overview#prerequisites) for devices to communicate with Desktop Analytics.
 
@@ -140,8 +142,9 @@ The following columns are available in the device list:
 - [SQM ID retrieval](#sqm-id-retrieval)  
 - [Unique device identifier retrieval](#unique-device-identifier-retrieval)  
 - [Windows diagnostic data opt-in](#windows-diagnostic-data-opt-in)  
-- [Office diagnostic endpoint connectivity](#office-diagnostic-endpoint-connectivity)  
-- [Office diagnostic data opt-in](#office-diagnostic-data-opt-in)
+
+> [!Note]  
+> Ignore the properties for **Office diagnostic endpoint connectivity** and **Office diagnostic data opt-in**. They're reserved for future functionality.
 
 #### Appraiser configuration
 
@@ -402,31 +405,6 @@ Check the permissions on these registry keys. Make sure that the local System ac
 
 For more information, review M365AHandler.log on the client.  
 
-#### Office diagnostic endpoint connectivity
-
-<!-- 1001,1002,1003 -->
-
-If this check is successful, then the device is able to connect to the Office diagnostic endpoints.
-
-Otherwise, it may show one of the following errors:
-
-- Can't connect to the Office diagnostic endpoint (Aria). Check your network/proxy settings  
-
-- Can't connect to the Office diagnostic endpoint (Nexusrules). Check your network/proxy settings  
-
-- Can't connect to the Office diagnostic endpoint (Nexus). Check your network/proxy settings  
-
-Make sure the device is able to communicate with the service. For more information, see [Endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
-
-#### Office diagnostic data opt-in
-
-<!-- SCCMDocs-pr 3570 -->
-Starting in Configuration Manager version 1902, the behavior changed for sending Office service and diagnostic data to Microsoft. This property checks that Office policy settings are properly configured. These settings control the minimum required data to help keep Office secure, up-to-date, and performing as expected on the device it's installed.
-
-For more information, see [Overview of privacy controls for Office 365 ProPlus](https://docs.microsoft.com/DeployOffice/privacy/overview-privacy-controls). This article details the privacy controls for diagnostic data that's collected and sent to Microsoft about Office client software used on Windows computers in your organization.
-
-This check won't succeed for Configuration Manager version 1810 clients. Update the client to the latest version. Consider enabling automatic client upgrade for the Configuration Manager site. For more information, see [Upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).
-
 
 
 ## Log files
@@ -474,8 +452,6 @@ The following log files are on the Configuration Manager client in the following
 Desktop Analytics adds the following applications to your Azure AD:
 
 - **Configuration Manager Microservice**: Connects Configuration Manager with Desktop Analytics. This app has no access requirements.  
-
-- **Office 365 Client Admin**: Retrieves data from your Log Analytics workspace. This app requires write access to Log Analytics.  
 
 - **MALogAnalyticsReader**: Retrieves OMS groups and devices created in Log Analytics. For more information, see [MALogAnalyticsReader application role](#bkmk_MALogAnalyticsReader).  
 

@@ -2,7 +2,7 @@
 title: How to deploy to production
 titleSuffix: Configuration Manager
 description: A how-to guide for deploying to a Desktop Analytics production group.
-ms.date: 01/25/2019
+ms.date: 04/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -19,14 +19,13 @@ ms.collection: M365-identity-device-management
 > [!Note]  
 > This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
 
-After you've [deployed to pilot](/sccm/desktop-analytics/deploy-pilot) and have reviewed the status of your assets, you're ready to update the rest of your production environment. 
+After you've [deployed to pilot](/sccm/desktop-analytics/deploy-pilot) and have reviewed the status of your assets, you're ready to update the rest of your production environment.
 
 [!INCLUDE [Definition of pilot and production](includes/define-pilot-prod.md)]
 
-
 There are three main parts to accomplishing the deployment of updates to production devices:
 
-1. [Review assets that need an upgrade decision](#bkmk_review): To make devices ready for production deployment, their assets (apps, Office apps, Office add-ins, and Office macros) must have their upgrade decision set to **Ready** or **Ready, remediations required**.  
+1. [Review assets that need an upgrade decision](#bkmk_review): To make devices ready for production deployment, their assets must have their upgrade decision set to **Ready** or **Ready, remediations required**.  
 
 2. [Deploy to devices that are ready](#bkmk_deploy): Use Configuration Manager to update devices that are ready. Desktop Analytics provides the list of devices ready for production deployment, and reports for monitoring the success of the deployment.  
 
@@ -43,11 +42,9 @@ Desktop Analytics guides you through the process of reviewing your assets for pr
 
 ![Screenshot of Prepare Production view in Desktop Analytics](media/prepare-production.png)
 
-Review the state of apps, Office apps, Office add-ins, and Office macros. Use that information to set the upgrade decision for each of those assets.
+Review the state of your apps. Use that information to set the upgrade decision for each of those assets.
 
-Use each of the tabs to review the status of apps, Office apps, Office add-ins, and Office macros. In each tabbed view, you can filter the results to show devices that are on track for upgrade, need your attention, devices with mixed results, and those devices in an undetermined state.
-
-The **Office Macros** view shows advisories related to macro-enabled files. It doesn't show the actual macro-enabled files. Select a specific advisory to see additional details. <!-- You can also export this list for later use, such as to run the Readiness Toolkit on this subgroup for still more detail about reported issues like the names of the files for which the advisories were raised. -->
+Use each of the tabs to review the status of the apps. In each tabbed view, you can filter the results to show devices that are on track for upgrade, need your attention, devices with mixed results, and those devices in an undetermined state.
 
 Select **Meeting Goals** to filter the view to assets that are likely ready for production deployment based on the following criteria:
 
@@ -56,49 +53,41 @@ Select **Meeting Goals** to filter the view to assets that are likely ready for 
 - Health status: a post-upgrade assessment of devices in other deployments and whether they experienced problems after the update was installed. For more information about health, see [Monitor the health of updated devices](#montor-the-health-of-updated-devices).  
 
 To approve an asset for upgrade, select the name in the list, and then select one of the following options from the **Upgrade decision** list:
+
 - Review in progress
 - Ready
 - Ready (with remediation)
 - Unable
 - Not reviewed
 
-To set this value for multiple apps at once, use the first column to **Select this item**, and then choose **Set Upgrade Decision**. 
+To set this value for multiple apps at once, use the first column to **Select this item**, and then choose **Set Upgrade Decision**.
 
 ![Set Upgrade Decision option on multiple apps](media/prep-prod-set-upgrade-decision.png)
 
 Select **No data** to view assets that couldn't be classified. These assets generally are assets that don't have enough coverage for Desktop Analytics to perform an analysis of the risk or health status. To improve the coverage, add additional devices with these assets to the pilot, or ask pilot users to try these assets.
 
-There might also be assets in the **Attention Needed** or **Mixed Results** state. These assets may require additional review before you make an upgrade decision for them. 
+There might also be assets in the **Attention Needed** or **Mixed Results** state. These assets may require additional review before you make an upgrade decision for them.
 
-Review all apps, Office apps, and Office add-ins. Once a given device has a positive upgrade decision for all assets, then its state changes to "ready for production." See the current count on the main page for the deployment plan by selecting the third deployment step, **Deploy**.
+Review all apps. Once a given device has a positive upgrade decision for all assets, then its state changes to "ready for production." See the current count on the main page for the deployment plan by selecting the third deployment step, **Deploy**.
 
 
 
 ## <a name="bkmk_deploy"></a> Deploy to devices that are ready
 
-Configuration Manager uses the data from Desktop Analytics to create a collection for the production deployment. Don't deploy the application or task sequence using a traditional deployment. Use the following procedure to create a Desktop Analytics-integrated deployment:
+Configuration Manager uses the data from Desktop Analytics to create a collection for the production deployment. Don't deploy the task sequence using a traditional deployment. Use the following procedure to create a Desktop Analytics-integrated deployment:
 
 1. In the Configuration Manager console, go to the **Software Library**, expand **Desktop Analytics Servicing**, and select the **Deployment Plans** node.  
 
 2. Select your deployment plan, and then select **Deployment Plan Details** in the ribbon.  
 
-3. In the **Production status** tile, choose one of the following object types from the drop-down list:  
+3. In the **Production status** tile, select **Task sequence** from the drop-down list.  
 
-    - **Application** for Office 365 ProPlus  
+    > [!Note]  
+    > Don't use the **Application** option. It's reserved for future functionality.
 
-    - **Task sequence** for Windows 10  
-  
-   Select **Deploy**. This action launches the Deploy Software Wizard for the selected object type. 
+    Select **Deploy**. This action launches the Deploy Software Wizard for the selected object type.
 
-
-For more information, see the following articles:  
-
-- [Deploy an application](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy)  
-
-- [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS)  
-
-
-If your deployment plan is for both Windows 10 and Office 365, repeat this process to create a second deployment. For example, if the first deployment is for the task sequence, create a second deployment for the application.
+For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS).
 
 
 ### Address deployment alerts
@@ -126,12 +115,12 @@ Filter this page by assets with the following health states:
 | **Attention needed** | (Default filter) Desktop Analytics detects a statistically significant regression to some health metric for that asset
 | **Meeting goals** | Desktop Analytics detects no regression in behavior |
 | **Insufficient data** | Desktop Analytics doesn't have enough data about this asset to make any recommendations |
-| **No data** | No usage data yet available for this asset | 
+| **No data** | No usage data yet available for this asset |
 
 To show an unfiltered view of all assets, select the current filter. This action removes that filter.
 
 > [!NOTE]  
-> To reduce the number of assets with insufficient data, Desktop Analytics monitors the assets on all of your devices that have upgraded to the target Windows or Office version specified in your deployment plan. These devices include those not included in the specific deployment plan.  
+> To reduce the number of assets with insufficient data, Desktop Analytics monitors the assets on all of your devices that have upgraded to the target Windows version specified in your deployment plan. These devices include those not included in the specific deployment plan.  
 
 The default sort order is by the number of devices that have had an incident with that particular asset, so you can quickly see which ones are causing the most problems. For example, when viewing **Apps**, it sorts by **Devices with app crashes last two weeks**.
 
@@ -144,6 +133,5 @@ If you want to look at health for all assets, even those assets with insufficien
     The resulting view shows the assets with the highest rate of incident at a minimum number of incidents.  
 
 3. Select an asset to get more details or change its upgrade decision.  
-
 
 For more information, see [Health status monitoring](/sccm/desktop-analytics/health-status-monitoring).
