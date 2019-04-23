@@ -2,7 +2,7 @@
 title: Manage collections
 titleSuffix: Configuration Manager
 description: Do common collections management tasks in Configuration Manager.
-ms.date: 08/17/2018
+ms.date: 04/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -20,7 +20,7 @@ ms.collection: M365-identity-device-management
 Use the overview information in this article to help you perform management tasks for collections in Configuration Manager.  
 
 > [!NOTE]  
->  For information about how to create Configuration Manager collections, see [How to create collections](/sccm/core/clients/manage/collections/create-collections).  
+>  For information about how to create Configuration Manager collections, see [How to create collections](/sccm/core/clients/manage/collections/create-collections).
 
 
 
@@ -124,7 +124,6 @@ Use the overview information in this article to help you perform management task
  For more information, see [Collection properties](#BKMK_CollProp).  
 
 
-
 ## <a name="bkmk_user"></a> How to manage user collections  
 
  In the **Assets and Compliance** workspace, select **User Collections**, select the collection to manage, and then select a management task.  
@@ -147,10 +146,9 @@ Use the overview information in this article to help you perform management task
  - **Deploy**  
      - **Application**  
      - **Program**  
-     - **Configuration Baseline**   
+     - **Configuration Baseline**
  - **Move**  
  - **Properties**
-
 
 
 ##  <a name="BKMK_CollProp"></a> Collection properties  
