@@ -41,6 +41,8 @@ Desktop Analytics uses a *Log Analytics workspace* in your Azure subscription. A
 Before you start this tutorial, make sure you have the following prerequisites:  
 
 - An active Azure subscription, with **Company Admin** permissions  
+    
+    For more information, see [Desktop Analytics prerequisites](/sccm/desktop-analytics/overview#prerequisites).
 
 - Configuration Manager, version 1810 with Update Rollup 4488598 or later, with **Full administrator** role  
 
@@ -115,7 +117,11 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
         To add a user to either group, type their name or e-mail address in the **Enter name or email address** section of the appropriate group. When finished, select **Next**.
 
+The following step can be completed by a **Workspace Owner** or **contributor**. For more information, see [prerequisites](/sccm/desktop-analytics/overview#prerequisites).
+
 5. On the page to **Set up your workspace**:  
+
+    - Select your Azure subscription. 
 
     - To use an existing workspace for Desktop Analytics, select it, and continue with the next step.  
 
@@ -125,7 +131,9 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
         2. Select the drop-down list to **Select the Azure subscription name for this workspace**, and choose the Azure subscription for this workspace.  
 
-        3. Select the **Region** from the list, and then select **Add**.  
+        3. **Create new** Resource group or **Use existing**.  
+
+        4. Select the **Region** from the list, and then select **Add**.  
 
 6. Select a new or existing workspace, and then select **Set as Desktop Analytics workspace**.  Then select **Continue** in the **Confirm and grant access** dialog.  
 
@@ -138,7 +146,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
 ### Create an app in Azure AD for Configuration Manager  
 
-1. In the [Azure portal](https://portal.azure.com), go to **Azure Active Directory**, and select **App registrations**. Then select **New application registration**.  
+1. Open the [Azure portal](http://portal.azure.com) as a user with Company Admin permissions, go to **Azure Active Directory**, and select **App registrations**. Then select **New application registration**.  
 
 2. In the **Create** panel, configure the following settings:  
 
