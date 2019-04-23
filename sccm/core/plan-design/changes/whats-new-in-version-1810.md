@@ -119,7 +119,7 @@ For more information, see [Management insights](/sccm/core/servers/manage/manage
 ### New client notification action to wake up device
 
 <!--1317364-->
-***[UPDATED]***  You can now wake up clients from the Configuration Manager console, even if the client isn't on the same subnet as the site server. If you need to do maintenance or query devices, you're not limited by remote clients that are asleep. The site server uses the client notification channel to identify another client that's awake on the same remote subnet. The awake client then sends a wake on LAN request (magic packet).
+You can now wake up clients from the Configuration Manager console, even if the client isn't on the same subnet as the site server. If you need to do maintenance or query devices, you're not limited by remote clients that are asleep. The site server uses the client notification channel to identify another client that's awake on the same remote subnet. The awake client then sends a wake on LAN request (magic packet).
 
 For more information, see [Configure Wake on LAN](/sccm/core/clients/deploy/configure-wake-on-lan) and [How to wake up clients](/sccm/core/clients/deploy/plan/plan-wake-up-clients).
 
