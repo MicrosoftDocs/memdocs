@@ -2,17 +2,14 @@
 title: What's new in version 1902
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1902 of Configuration Manager current branch.
-ms.date: 04/23/2019
-=======
-ms.date: 04/22/2019
->>>>>>> c690181b9acd7df7cfccc63cb385d03bd54b7d5c
-ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.date: 04/23/2019
+ms.prod: configuration-manager
 ms.collection: M365-identity-device-management
 ---
 
