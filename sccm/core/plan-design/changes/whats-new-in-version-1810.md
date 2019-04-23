@@ -288,7 +288,7 @@ For more information, see [Software updates client settings](/sccm/core/clients/
 
 ### Improvement to software updates maintenance
 <!--2839349-->
-WSUS cleanup tasks now run on secondary sites. WSUS cleanup for expired updates is run and superceded updates are declined in WSUS for secondary sites.
+WSUS cleanup tasks now run on secondary sites. WSUS cleanup for expired updates is run and superseded updates are declined in WSUS for secondary sites.
 
 For more information, see [WSUS cleanup behavior starting in version 1810](/sccm/sum/deploy-use/software-updates-maintenance#wsus-cleanup-behavior-starting-in-version-1810)
 
