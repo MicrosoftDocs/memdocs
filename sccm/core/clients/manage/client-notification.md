@@ -2,7 +2,7 @@
 title: Client notification
 titleSuffix: Configuration Manager
 description: Manage clients by taking immediate action from the central Configuration Manager console.
-ms.date: 03/22/2019
+ms.date: 04/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -136,8 +136,10 @@ Trigger clients to check their compliance with conditional access. For more info
 
 ### Wake Up
 
-Starting in version 1810, trigger devices configured to support Wake-on-LAN to wake up using other devices on the same subnet to send the Wake-on-LAN package.
+Starting in version 1810, trigger devices configured to support Wake-on-LAN to wake up using other devices on the same subnet to send the Wake-on-LAN package. For more information, see [How to configure Wake on LAN](/sccm/core/clients/deploy/configure-wake-on-lan).
 
+### Permissions
+This action requires the **Notify resource** permission on the **Collection** object.
 
 ### Restart
 
