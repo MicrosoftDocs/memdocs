@@ -58,4 +58,4 @@ If you change the column order by modifying the query in a predefined report and
 
 ## See Also
 
-[SQL Server Reference for Configuration Manager Reports](sql-server-reference-configuration-manager-reports.md)
+[Technical Reference for SQL Server Views in Configuration Manager](technical-reference-sql-server-views-configuration-manager.md)

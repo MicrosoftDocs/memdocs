@@ -32,4 +32,4 @@ Query Designer in SQL Server can help you to more easily write SQL queries that 
 
 ## See Also
 
-[SQL Server Reference for Configuration Manager Reports](sql-server-reference-configuration-manager-reports.md)
+[Technical Reference for SQL Server Views in Configuration Manager](technical-reference-sql-server-views-configuration-manager.md)

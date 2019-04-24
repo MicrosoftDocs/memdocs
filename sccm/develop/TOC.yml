@@ -335,8 +335,6 @@
             href: core/understand/sqlviews/sample-queries-wake-lan-views-configuration-manager.md
         - name: SQL Server Reference for Configuration Manager Reports
           items:
-          - name: Overview
-            href: core/understand/sqlviews/sql-server-reference-configuration-manager-reports.md
           - name: SQL Statement Reference for Reports
             href: core/understand/sqlviews/sql-statement-reference-configuration-manager-reports.md
           - name: Using Query Designer to Write Report SQL Statements
