@@ -287,50 +287,68 @@
         items:
         - name: Overview
           href: core/understand/sqlviews/technical-reference-sql-server-views-configuration-manager.md
-        - name: Sample Queries for Application Management
-          href: core/understand/sqlviews/sample-queries-application-management-configuration-manager.md
-        - name: Sample Queries for Client Deployment
-          href: core/understand/sqlviews/sample-queries-client-deployment-configuration-manager.md
-        - name: Sample Queries for Client Status
-          href: core/understand/sqlviews/sample-queries-client-status-configuration-manager.md
-        - name: Sample Queries for Collections
-          href: core/understand/sqlviews/sample-queries-collections-configuration-manager.md
-        - name: Sample Queries for Compliance Settings
-          href: core/understand/sqlviews/sample-queries-compliance-settings-configuration-manager.md
-        - name: Sample Queries for Content Management
-          href: core/understand/sqlviews/sample-queries-content-management-configuration-manager.md
-        - name: Sample Queries for Discovery
-          href: core/understand/sqlviews/sample-queries-discovery-configuration-manager.md
-        - name: Sample Queries for Endpoint Protection
-          href: core/understand/sqlviews/sample-queries-endpoint-protection-configuration-manager.md
-        - name: Sample Queries for Inventory
+        - name: Sample Queries Using the SQL Views
           items:
-          - name: Sample Queries for Hardware Inventory
-            href: core/understand/sqlviews/sample-queries-hardware-inventory-configuration-manager.md
-          - name: Sample Queries for Software Inventory
-            href: core/understand/sqlviews/sample-queries-software-inventory-configuration-manager.md
-          - name: Sample Queries for Asset Intelligence
-            href: core/understand/sqlviews/sample-queries-asset-intelligence-configuration-manager.md
-        - name: Sample Queries for Mobile Device Management
-          href: core/understand/sqlviews/sample-queries-mobile-device-management-configuration-manager.md
-        - name: Sample Queries for Operating System Deployment
-          href: core/understand/sqlviews/sample-queries-operating-system-deployment-configuration-manager.md
-        - name: Sample Queries for Power Management
-          href: core/understand/sqlviews/sample-queries-power-management-configuration-manager.md
-        - name: Sample Queries for Queries
-          href: core/understand/sqlviews/sample-queries-for-queries-configuration-manager.md
-        - name: Sample Queries for Security
-          href: core/understand/sqlviews/sample-queries-security-configuration-manager.md
-        - name: Sample Queries for Site Administration
-          href: core/understand/sqlviews/sample-queries-site-administration-configuration-manager.md
-        - name: Sample Queries for Software Metering
-          href: core/understand/sqlviews/sample-queries-software-metering-configuration-manager.md
-        - name: Sample Queries for Software Updates
-          href: core/understand/sqlviews/sample-queries-software-updates-configuration-manager.md
-        - name: Sample Queries for Status and Alerts
-          href: core/understand/sqlviews/sample-queries-status-alerts-configuration-manager.md
-        - name: Sample Queries for Wake On LAN
-          href: core/understand/sqlviews/sample-queries-wake-lan-views-configuration-manager.md
+          - name: Sample Queries for Application Management
+            href: core/understand/sqlviews/sample-queries-application-management-configuration-manager.md
+          - name: Sample Queries for Client Deployment
+            href: core/understand/sqlviews/sample-queries-client-deployment-configuration-manager.md
+          - name: Sample Queries for Client Status
+            href: core/understand/sqlviews/sample-queries-client-status-configuration-manager.md
+          - name: Sample Queries for Collections
+            href: core/understand/sqlviews/sample-queries-collections-configuration-manager.md
+          - name: Sample Queries for Compliance Settings
+            href: core/understand/sqlviews/sample-queries-compliance-settings-configuration-manager.md
+          - name: Sample Queries for Content Management
+            href: core/understand/sqlviews/sample-queries-content-management-configuration-manager.md
+          - name: Sample Queries for Discovery
+            href: core/understand/sqlviews/sample-queries-discovery-configuration-manager.md
+          - name: Sample Queries for Endpoint Protection
+            href: core/understand/sqlviews/sample-queries-endpoint-protection-configuration-manager.md
+          - name: Sample Queries for Inventory
+            items:
+            - name: Sample Queries for Hardware Inventory
+              href: core/understand/sqlviews/sample-queries-hardware-inventory-configuration-manager.md
+            - name: Sample Queries for Software Inventory
+              href: core/understand/sqlviews/sample-queries-software-inventory-configuration-manager.md
+            - name: Sample Queries for Asset Intelligence
+              href: core/understand/sqlviews/sample-queries-asset-intelligence-configuration-manager.md
+          - name: Sample Queries for Mobile Device Management
+            href: core/understand/sqlviews/sample-queries-mobile-device-management-configuration-manager.md
+          - name: Sample Queries for Operating System Deployment
+            href: core/understand/sqlviews/sample-queries-operating-system-deployment-configuration-manager.md
+          - name: Sample Queries for Power Management
+            href: core/understand/sqlviews/sample-queries-power-management-configuration-manager.md
+          - name: Sample Queries for Queries
+            href: core/understand/sqlviews/sample-queries-for-queries-configuration-manager.md
+          - name: Sample Queries for Security
+            href: core/understand/sqlviews/sample-queries-security-configuration-manager.md
+          - name: Sample Queries for Site Administration
+            href: core/understand/sqlviews/sample-queries-site-administration-configuration-manager.md
+          - name: Sample Queries for Software Metering
+            href: core/understand/sqlviews/sample-queries-software-metering-configuration-manager.md
+          - name: Sample Queries for Software Updates
+            href: core/understand/sqlviews/sample-queries-software-updates-configuration-manager.md
+          - name: Sample Queries for Status and Alerts
+            href: core/understand/sqlviews/sample-queries-status-alerts-configuration-manager.md
+          - name: Sample Queries for Wake On LAN
+            href: core/understand/sqlviews/sample-queries-wake-lan-views-configuration-manager.md
+        - name: SQL Server Reference for Configuration Manager Reports
+          items:
+          - name: SQL Statement Reference for Reports
+            href: core/understand/sqlviews/sql-statement-reference-configuration-manager-reports.md
+          - name: Using Query Designer to Write Report SQL Statements
+            href: core/understand/sqlviews/using-query-designer-write-configuration-manager-report-sql-statements.md
+          - name: How to Create a SQL Statement by Using Query Designer
+            href: core/understand/sqlviews/how-to-create-sql-statement-using-query-designer.md
+        - name: SMS Provider WMI Schema Reference
+          items:
+          - name: Overview
+            href: core/understand/sqlviews/sms-provider-wmi-schema-reference-configuration-manager.md
+          - name: WMI Namespaces and Classes for Reports
+            href: core/understand/sqlviews/wmi-namespaces-classes-configuration-manager-reports.md
+      - name: List of Reports Supplied with Configuration Manager
+        href: core/understand/sqlviews/reports-supplied-with-configuration-manager.md
   - name: SMS Provider in Configuration Manager
     href: core/understand/sms-provider-in-configuration-manager.md
     items:
