@@ -187,10 +187,10 @@
         href: core/understand/sql-view-security.md
     - name: How to See a Configuration Manager View by Using SQL Server
       href: core/understand/how-to-see-a-configuration-manager-view-by-using-sql-server.md
-    - name: Creating Custom Reports by Using SQL Server Views
+    - name: Create Custom Reports by Using SQL Server Views
       items:
       - name: Overview
-        href: core/understand/sqlviews/creating-custom-reports-using-sql-server-views.md
+        href: core/understand/sqlviews/create-custom-reports-using-sql-server-views.md
       - name: SQL Server Views
         items:
         - name: Overview
@@ -247,12 +247,10 @@
           href: core/understand/sqlviews/status-alert-views-configuration-manager.md
         - name: Wake On LAN Views
           href: core/understand/sqlviews/wake-lan-views-configuration-manager.md
-      - name: Working with Reports
+      - name: Work with Reports
         items:
         - name: Evaluation of Existing Reports
           items:
-          - name: Overview
-            href: core/understand/sqlviews/evaluation-existing-configuration-manager-reports.md
           - name: Evaluation of the All Collections Report
             href: core/understand/sqlviews/evaluation-all-collections-report-configuration-manager.md
           - name: Evaluation of the Computer Information Report
@@ -267,8 +265,6 @@
           href: core/understand/sqlviews/how-to-run-configuration-manager-reports.md
         - name: Exercises for Creating Custom Reports
           items:
-          - name: Overview
-            href: core/understand/sqlviews/exercises-creating-custom-reports-configuration-manager.md
           - name: Exercise 1 - Run an Existing Report
             href: core/understand/sqlviews/exercise-1-run-existing-configuration-manager-report.md
           - name: Exercise 2 - Modify an Existing Report
@@ -285,8 +281,6 @@
             href: core/understand/sqlviews/advanced-exercise-2-solution-create-new-report-hardware-inventory-configuration-manager.md
       - name: Technical Reference for SQL Server Views
         items:
-        - name: Overview
-          href: core/understand/sqlviews/technical-reference-sql-server-views-configuration-manager.md
         - name: Sample Queries Using the SQL Views
           items:
           - name: Sample Queries for Application Management
@@ -337,8 +331,8 @@
           items:
           - name: SQL Statement Reference for Reports
             href: core/understand/sqlviews/sql-statement-reference-configuration-manager-reports.md
-          - name: Using Query Designer to Write Report SQL Statements
-            href: core/understand/sqlviews/using-query-designer-write-configuration-manager-report-sql-statements.md
+          - name: Use Query Designer to Write Report SQL Statements
+            href: core/understand/sqlviews/use-query-designer-write-configuration-manager-report-sql-statements.md
           - name: How to Create a SQL Statement by Using Query Designer
             href: core/understand/sqlviews/how-to-create-sql-statement-using-query-designer.md
         - name: SMS Provider WMI Schema Reference

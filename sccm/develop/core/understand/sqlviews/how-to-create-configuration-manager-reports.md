@@ -1,5 +1,5 @@
 ﻿---
-title: How to Create Configuration Manager Reports
+title: How to create reports
 titleSuffix: Configuration Manager
 description: Information about how to create two types of reports directly from the Configuration Manager console.
 ms.date: 04/30/2019
@@ -13,7 +13,7 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# How to Create Configuration Manager Reports
+# How to create Configuration Manager reports
 
 You can create two types of reports directly from the Configuration Manager console:
 
@@ -60,6 +60,6 @@ You can create two types of reports directly from the Configuration Manager cons
 1. Select **Run** to run your report. Verify that the report provides the information that you expect. Select **Design** to return to the Design view to modify the report, if needed.
 1. Select **Save** to save the report to the report server. You can run and modify the new report in the **Reports** node in the **Monitoring** workspace.
 
-## See Also
+## See also
 
-[Working with Reports in Configuration Manager](working-with-reports-configuration-manager.md)
+[How to run Configuration Manager reports](how-to-run-configuration-manager-reports.md)

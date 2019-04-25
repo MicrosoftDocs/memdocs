@@ -1,31 +1,31 @@
 ﻿---
-title: Creating Custom Reports by Using SQL Server Views in Configuration Manager
-TOCTitle: Creating Custom Reports by Using SQL Server Views
-ms:assetid: 4624ff23-d11a-4dbe-acc1-d577d13d39c7
-ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dn581954(v=TechNet.10)
-ms:contentKeyID: 60772029
-ms.prod: "configuration-manager"
+title: Creating custom reports by using SQL Server views
+titleSuffix: Configuration Manager
+description: Information about how to create reports directly from the Configuration Manager console.
+ms.date: 04/30/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other #app client compliance hybrid osd protect sum
 ms.topic: conceptual
+ms.collection: M365-identity-device-management
+ms:assetid: 5741ada8-449c-45af-85e1-2e68abf96440
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/15/2019
-mtps_version: v=TechNet.10
 ---
 
-# Creating Custom Reports by Using SQL Server Views in Configuration Manager
+# Creating custom reports by using SQL Server views in Configuration Manager
 
 Configuration Manager queries SQL Server views in the Configuration Manager site database to retrieve the information that is displayed in reports. The Configuration Manager site database contains a large collection of information about the network, computers, users, user groups, and many other components of the computing environment. The database also contains objects that represent Configuration Manager operations, such as deployments, software updates, configuration baselines, reports, and status messages. Configuration Manager administrators need to understand the different categories of the SQL views, what information is stored in each view, and how the SQL views can be joined to one another to create reports that return the required information. Because Configuration Manager queries and collections retrieve information from Windows Management Instrumentation (WMI) instead of Configuration Manager SQL views, it is also helpful to know how the SQL view schema is related to the WMI schema.
 
-This documentation assumes that you have a basic understanding of Configuration Manager and SQL statements, that you have a working Configuration Manager infrastructure in place, and that you have a basic understanding of Configuration Manager reports. For more information about creating reports in Configuration Manager, see  Reporting in Configuration Manager (gg699377\(v=technet.10\).md). For more information about how to write basic SQL statements, see your SQL Server documentation.
+This documentation assumes that you have a basic understanding of Configuration Manager and SQL statements, that you have a working Configuration Manager infrastructure in place, and that you have a basic understanding of Configuration Manager reports. For more information about creating reports in Configuration Manager, see  [Reporting in Configuration Manager](/sccm/core/servers/manage/reporting). For more information about how to write basic SQL statements, see your SQL Server documentation.
 
 This documentation includes an overview of the Configuration Manager SQL view schema and SQL views, an overview of the existing reports and associated reporting procedures, sample SQL statements for each Configuration Manager SQL view category, exercises for creating custom reports, an overview for writing report SQL statements, and an overview of the Configuration Manager Provider WMI schema.
 
-## Product Versions Used in This Document
+## Product versions used in this document
 
 This document was created using Microsoft SQL Server 2012, Report Builder 3.0 and Configuration Manager. The available SQL views, options, and commands might vary depending on the version of each product you are using. For more information, see the documentation for the products you are using.
 
-## What’s New for Reporting in Configuration Manager
+## What’s new for reporting in Configuration Manager
 
 This section lists the changes that have been made since Configuration Manager 2007 for Configuration Manager reporting.
 
@@ -53,19 +53,19 @@ This section lists the changes that have been made since Configuration Manager 2
 
 ## Changes made to reporting in Configuration Manager
 
-- Configuration Manager reports are now fully enabled for role-based administration. The data for all reports included with Configuration Manager is filtered based on the permissions of the administrative user who runs the report. Administrative users with specific roles can only view information defined for their roles. For more information, see the [Planning for Role-Based Administration](http://technet.microsoft.com/library/gg712693.aspx#bkmk_rolebaseadministration) for Reports section in the  Planning for Reporting in Configuration Manager (gg712693\(v=technet.10\).md) topic in the Configuration Manager Documentation Library.
+- Configuration Manager reports are now fully enabled for role-based administration. The data for all reports included with Configuration Manager is filtered based on the permissions of the administrative user who runs the report. Administrative users with specific roles can only view information defined for their roles. For more information, see the [Planning for Role-Based Administration](/sccm/core/servers/manage/planning-for-reporting#BKMK_RoleBaseAdministration) for Reports section in the  Planning for Reporting in Configuration Manager article in the Configuration Manager Documentation Library.
 
-## In This Section
+## In this section
 
-- [SQL Server Views in Configuration Manager](sql-server-views-configuration-manager.md)  
+- **SQL Server views in Configuration Manager**  
   Provides an overview of the views you can use to create reports in Configuration Manager.
 
-- [Working with Reports in Configuration Manager](working-with-reports-configuration-manager.md)  
+- **Working with reports in Configuration Manager**  
   Provides an overview of Configuration Manager reports, the elements of a report and procedures that you can use to create and manage reports.
 
-- [Technical Reference for SQL Server Views in Configuration Manager](technical-reference-sql-server-views-configuration-manager.md)  
+- **Technical reference for SQL Server views in Configuration Manager**  
   Provides sample SQL statements for each Configuration Manager SQL view category, exercises for modifying existing Configuration Manager reports and creating new reports, information about writing SQL statements and the query design tools available in SQL Server that can be used when writing report SQL statements, and an overview of the Configuration Manager WMI Provider schema.
 
-## See Also
+## See also
 
-Technical Publications for Configuration Manager (hh531521\(v=technet.10\).md)
+[Technical Publications for Configuration Manager](/sccm/index)

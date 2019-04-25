@@ -1,5 +1,5 @@
 ﻿---
-title: 'Advanced Exercise 2: Create a New Report for Hardware Inventory'
+title: 'Advanced exercise 2: Create a new report for hardware inventory'
 titleSuffix: Configuration Manager
 description: Create a Configuration Manager report that displays hardware inventory information.
 ms.date: 04/30/2019
@@ -13,18 +13,18 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Advanced Exercise 2: Create a New Report for Hardware Inventory in Configuration Manager
+# Advanced exercise 2: Create a new report for hardware inventory in Configuration Manager
 
 In this exercise, you will create a Configuration Manager report that displays the computer name, site code, the date of the last scan for hardware inventory, and the number of days since the last scan for a specified computer.
 
 > [!IMPORTANT]
 > Before you begin this exercise, you should review the basic exercises to learn about the report elements, the properties for a report, and the different ways to create the report SQL statement.
 
-## Report Requirements
+## Report requirements
 
 Use the following report requirements to create the new report.
 
-## SQL Server Views in the SQL Statement
+## SQL Server views in the SQL statement
 
 Use the following Configuration Manager SQL views when creating the report SQL statement:
 
@@ -32,14 +32,14 @@ Use the following Configuration Manager SQL views when creating the report SQL s
 - **v_R_System**: This SQL view contains all of the discovered system resources. For more information about this SQL view, see [Discovery Views in Configuration Manager](discovery-views-configuration-manager.md).
 - **v_RA_System_SMSInstalledSites**: This SQL view contains the installed site for all client computers. For more information about this SQL view, see [Discovery Views in Configuration Manager](discovery-views-configuration-manager.md).
 
-## JOINS in the SQL Statement
+## JOINS in the SQL statement
 
 Create the following JOINS in the SQL statement:
 
 - **v_GS_WORKSTATION_STATUS** is joined to **v_R_System** by using the **ResourceID** columns.
 - **v_RA_System_SMSInstalledSites** is joined to **v_R_System** by using the **ResourceID** columns.
 
-## Columns in the SQL Statement
+## Columns in the SQL statement
 
 Use the following report columns, in the order listed:
 
@@ -53,19 +53,19 @@ Use the following report columns, in the order listed:
 
 Sort the data in descending order, using the **LastHWScan** column.
 
-## Filters in the SQL Statement
+## Filters in the SQL statement
 
 The report SQL statement does not contain any filters.
 
-## Report Prompts
+## Report prompts
 
 The Configuration Manager report should contain a report prompt for the computer name that will be reported on.
 
 ## Solution
 
-See [Advanced Exercise 2 Solution: Create a New Report for Hardware Inventory in Configuration Manager](advanced-exercise-2-solution-create-new-report-hardware-inventory-configuration-manager.md) for detailed information about how to create this report.
+See [Advanced exercise 2 solution: Create a new report for hardware inventory in Configuration Manager](advanced-exercise-2-solution-create-new-report-hardware-inventory-configuration-manager.md) for detailed information about how to create this report.
 
-## See Also
+## See also
 
-[Exercises for Creating Custom Reports in Configuration Manager](exercises-creating-custom-reports-configuration-manager.md)  
-[Advanced Exercise 2 Solution: Create a New Report for Hardware Inventory in Configuration Manager](advanced-exercise-2-solution-create-new-report-hardware-inventory-configuration-manager.md)
+[Exercise 1: run an existing Configuration Manager report](exercise-1-run-existing-configuration-manager-report.md)  
+[Advanced exercise 2 solution: Create a new report for hardware inventory in Configuration Manager](advanced-exercise-2-solution-create-new-report-hardware-inventory-configuration-manager.md)

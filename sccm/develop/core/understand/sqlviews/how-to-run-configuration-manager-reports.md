@@ -1,5 +1,5 @@
 ﻿---
-title: How to Run Reports
+title: How to run reports
 titleSuffix: Configuration Manager
 description: Information about how to access reports in the Configuration Manager console or by using Report Manager.
 ms.date: 04/30/2019
@@ -13,11 +13,11 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# How to Run Configuration Manager Reports
+# How to run Configuration Manager reports
 
 Reports in Configuration Manager are stored in SQL Server Reporting Services, and the data rendered in the report is retrieved from the Configuration Manager site database. You can access reports in the Configuration Manager console or by using Report Manager, which you access in a web browser. You can open reports on any computer that has access to the computer that is running SQL Server Reporting Services, and you must have sufficient rights to view the reports. When you run a report, the report title, description, and category are displayed in the language of the local operating system.
 
-## How to Run a Configuration Manager Report
+## How to run a Configuration Manager report
 
 Use the following procedures to run a Configuration Manager report.
 
@@ -31,22 +31,22 @@ Report Manager is a web-based report access and management tool that you use to 
 1. In the Configuration Manager console, select **Monitoring**.
 1. In the **Monitoring** workspace, expand **Reporting**, and then select **Reports** to list the available reports.
     > [!TIP]
-    > If no reports are listed, verify that the reporting services point is installed and configured. For more information, see the topic [Configuring Reporting in Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg712698(v%3dtechnet.10)).
+    > If no reports are listed, verify that the reporting services point is installed and configured. For more information, see the topic [Configuring Reporting in Configuration Manager](/sccm/core/servers/manage/configuring-reporting).
 
 1. Select the report that you want to run, and then on the **Home** tab, in the **Report Group** section, select **Run** to open the report.
 1. When there are required parameters, specify the parameters, and then select **View Report**.
 
-### To run a report in a Web browser
+### To run a report in a web browser
 
 1. In your web browser, enter the Report Manager URL, for example, `http://Server1/Reports`. You can determine the Report Manager URL on the **Report Manager URL** page in Reporting Services Configuration Manager.
 1. In Report Manager, select the report folder for Configuration Manager, for example, ConfigMgr\_CAS.
 
     > [!TIP]
-    > If no reports are listed, verify that the reporting services point is installed and configured. For more information, see the topic [Configuring Reporting in Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg712698(v%3dtechnet.10)).
+    > If no reports are listed, verify that the reporting services point is installed and configured. For more information, see the topic [Configuring Reporting in Configuration Manager](/sccm/core/servers/manage/configuring-reporting).
 
 1. Select the report category for the report that you want to run, and then select the link for the report. The report opens in Report Manager.
 1. When there are required parameters, specify the parameters, and then select **View Report**.
 
-## See Also
+## See also
 
-[Working with Reports in Configuration Manager](working-with-reports-configuration-manager.md)
+[How to view the SQL Statement for Configuration Manager reports](how-to-view-sql-statement-configuration-manager-reports.md)
