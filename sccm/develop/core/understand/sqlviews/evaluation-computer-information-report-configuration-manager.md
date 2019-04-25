@@ -13,11 +13,11 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Evaluation of the Computer Information for a Specific Computer Report in Configuration Manager
+# Evaluation of the Computer information for a specific computer report in Configuration Manager
 
-The **Computer Information for a specific computer** report is one of the predefined reports in Configuration Manager, and is a good example of a report that combines multiple SQL views to obtain the required data. To open the report properties, use the following procedure:
+The **Computer information for a specific computer** report is one of the predefined reports in Configuration Manager, and is a good example of a report that combines multiple SQL views to obtain the required data. To open the report properties, use the following procedure:
 
-## To examine the Computer Information for a Specific Computer report
+## To examine the Computer information for a specific computer report
 
 1. In the Configuration Manager console, select **Monitoring**.
 1. In the **Monitoring** workspace, select Reporting, and then select **Reports**.
@@ -54,6 +54,6 @@ The **Computer Information for a specific computer** report is one of the predef
    The report prompt will display **Computer Name** as the prompt text and has a variable named **variable** that will be populated by the user. You can examine details about the variables and parameters used by the report in the **Parameters** node of the **Report Data** pane.
 1. Close Report Builder.
 
-## See Also
+## See also
 
-[Evaluation of the all collections report in Configuration Manager](evaluation-all-collections-report-configuration-manager.md)  
+[Evaluation of the All collections report in Configuration Manager](evaluation-all-collections-report-configuration-manager.md)  

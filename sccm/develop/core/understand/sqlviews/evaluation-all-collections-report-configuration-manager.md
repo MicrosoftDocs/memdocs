@@ -1,5 +1,5 @@
 ﻿---
-title: Evaluation of the all collections report
+title: Evaluation of the All collections report
 titleSuffix: Configuration Manager
 description: Information about all of the collections in the Configuration Manager hierarchy.
 ms.date: 04/30/2019
@@ -13,7 +13,7 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Evaluation of the All Collections Report in Configuration Manager
+# Evaluation of the All collections report in Configuration Manager
 
 The **All collections** report is one of the built-in reports in Configuration Manager and is a good example of a basic report. This report lists all of the collections in the Configuration Manager hierarchy.
 
@@ -29,6 +29,6 @@ To open the report, use the following procedure:
 1. Close the **Dataset Properties** dialog box.
 1. Close Report Builder.
 
-## See Also
+## See also
 
 [Evaluation of the computer information for a specific computer report in Configuration Manager](evaluation-computer-information-report-configuration-manager.md)
