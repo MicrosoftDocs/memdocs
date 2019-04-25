@@ -50,7 +50,7 @@ Select **Meeting Goals** to filter the view to assets that are likely ready for 
 
 - Risk: a pre-upgrade assessment of known risks for updating devices that have this asset installed  
 
-- Health status: a post-upgrade assessment of devices in other deployments and whether they experienced problems after the update was installed. For more information about health, see [Monitor the health of updated devices](#montor-the-health-of-updated-devices).  
+- Health status: a post-upgrade assessment of devices in other deployments and whether they experienced problems after the update was installed. For more information about health, see [Monitor the health of updated devices](#bkmk_monitor).  
 
 To approve an asset for upgrade, select the name in the list, and then select one of the following options from the **Upgrade decision** list:
 
