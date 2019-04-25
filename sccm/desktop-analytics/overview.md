@@ -75,7 +75,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
         - [**Owner**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner), or [**Contributor**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) and [**User Access Administrator**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) permissions on the subscription to create a workspace in a new resource group.  
 
-- Configuration Manager, version 1810 with Update Rollup 4488598 or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
+- Configuration Manager, version 1810 with update rollup 2 (4488598) or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
 
     - **Full Administrator** role in Configuration Manager  
 
@@ -83,7 +83,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
     - Install the latest updates. For more information, see [Update devices](/sccm/desktop-analytics/enroll-devices#update-devices).  
 
-    - Devices also need to have the Configuration Manager client, version 1810 with update rollup 4486457 or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
+    - Devices also need to have the Configuration Manager client, version 1810 with update rollup 2 (4488598) or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
 
 - Windows diagnostics data. For more information, see the following articles:  
 

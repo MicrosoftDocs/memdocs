@@ -2,7 +2,7 @@
 title: Tutorial - Deploy Windows 10
 titleSuffix: Configuration Manager
 description: A tutorial on using Desktop Analytics and Configuration Manager to deploy Windows 10 to a pilot group.
-ms.date: 04/22/2019
+ms.date: 04/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: tutorial
@@ -44,7 +44,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
     For more information, see [Desktop Analytics prerequisites](/sccm/desktop-analytics/overview#prerequisites).
 
-- Configuration Manager, version 1810 with Update Rollup 4488598 or later, with **Full administrator** role  
+- Configuration Manager, version 1810 with update rollup 2 (4488598) or later, with **Full administrator** role  
 
 - Installation media for the latest version of Windows 10
 
@@ -54,7 +54,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
     - The latest Windows 10 cumulative quality update  
 
-    - Configuration Manager client version 1810 with update rollup 4486457 or later  
+    - Configuration Manager client version 1810 with update rollup 2 (4488598) or later  
 
 - Business approval to configure Windows diagnostic data level to **Enhanced (Limited)** on the pilot devices  
 
@@ -142,46 +142,6 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 9. On the **Last steps** page, select **Go to Desktop Analytics**. The Azure portal shows the Desktop Analytics **Home** page.  
 
 
-### Create an app in Azure AD for Configuration Manager  
-
-1. Open the [Azure portal](http://portal.azure.com) as a user with Company Admin permissions, go to **Azure Active Directory**, and select **App registrations**. Then select **New application registration**.  
-
-2. In the **Create** panel, configure the following settings:  
-
-    - **Name**: a unique name that identifies the app, for example: `Desktop-Analytics-Connection`  
-
-    - **Application type**: **Web app / API**  
-
-    - **Sign-on URL**: this value isn't used by Configuration Manager, but required by Azure AD. Enter a unique and valid URL, for example: `https://configmgrapp`  
-  
-    Select **Create**.  
-
-3. Select the app, and note the **Application ID**. This value is a GUID that's used to configure the Configuration Manager connection.  
-
-4. Select **Settings** on the app, and then select **Keys**. In the **Passwords** section, enter a **Key description**, specify an expiration **Duration**, and then select **Save**. Copy the **Value** of the key, which is used to configure the Configuration Manager connection.
-
-    > [!Important]  
-    > This is the only opportunity to copy the key value. If you don't copy it now, you need to create another key.  
-    >
-    > Save the key value in a secure location.  
-
-5. On the app **Settings** panel, select **Required permissions**.  
-
-    1. On the **Required permissions** panel, select **Add**.  
-
-    2. In the **Add API access** panel, **Select an API**.  
-
-    3. Search for the **Configuration Manager Microservice** API. Select it, and then choose **Select**.  
-
-    4. On the **Enable Access** panel, select both of the application permissions: **Write CM Collection Data** and **Read CM Collection Data**. Then choose **Select**.  
-
-    5. On the **Add API access** panel, select **Done**.  
-
-6. On the **Required permissions** page, select **Grant permissions**. Select **Yes**.  
-
-7. Copy the Azure AD tenant ID. This value is a GUID that's used to configure the Configuration Manager connection. Select **Azure Active Directory** in the main menu, and then select **Properties**. Copy the **Directory ID** value.  
-
-
 
 ## Connect Configuration Manager
 
@@ -189,7 +149,7 @@ Use this procedure to update Configuration Manager, connect to Desktop Analytics
 
 ### Update Configuration Manager
 
-Install the Configuration Manager version 1810 update rollup (4486457) to support integration with Desktop Analytics. For more information on this update, see [Update rollup for Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4486457).
+Install the Configuration Manager version 1810 update rollup 2 (4488598) to support integration with Desktop Analytics. For more information on this update, see [Update rollup for Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4488598).
 
 1. Update the site with the update rollup for version 1810. For more information, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates).  
 
@@ -210,23 +170,25 @@ Install the Configuration Manager version 1810 update rollup (4486457) to suppor
   
    Select **Next**.  
 
-3. On the **App** page, select the appropriate **Azure environment**. Then select **Import** for the web app. Configure the following settings in the **Import Apps** window:  
+3. On the **App** page, select the appropriate **Azure environment**. Then select **Browse** for the web app.
 
-    - **Azure AD Tenant Name**: This name is how it's named in Configuration Manager  
+4. Select **Create** to easily add an Azure AD app for the Desktop Analytics connection.
 
-    - **Azure AD Tenant ID**: The **Directory ID** you copied from Azure AD  
+5. Configure the following settings in the **Create Server Application** window:  
 
-    - **Client ID**: The **Application ID** you copied from the Azure AD app  
+    - **Application Name**: A friendly name for the app in Azure AD.
 
-    - **Secret Key**: The key **Value** you copied from the Azure AD app  
+    - **HomePage URL**: This value isn't used by Configuration Manager, but required by Azure AD. By default this value is `https://ConfigMgrService`.  
 
-    - **Secret Key Expiry**: The same expiration date of the key  
+    - **App ID URI**: This value needs to be unique in your Azure AD tenant. It's in the access token used by the Configuration Manager client to request access to the service. By default this value is `https://ConfigMgrService`.  
 
-    - **App ID URI**: This setting should automatically populate with the following value: `https://cmmicrosvc.manage.microsoft.com/`  
-  
-   Select **Verify**, and then select **OK** to close the Import Apps window. Select **Next** on the App page of the Azure Services Wizard.  
+    - **Secret Key validity period**: choose either **1 year** or **2 years** from the drop-down list. One year is the default value.  
 
-4. On the **Diagnostic Data** page, configure the following settings:  
+    Select **Sign in** to authenticate to Azure as an administrative user. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager, and doesn't need to be the same account that runs the Azure Services Wizard. After successfully authenticating to Azure, the page shows the **Azure AD Tenant Name** for reference.
+
+    Select **OK** to create the web app in Azure AD and close the Create Server Application dialog. On the Server App dialog, select **OK**. Then select **Next** on the App page of the Azure Services Wizard.  
+
+6. On the **Diagnostic Data** page, configure the following settings:  
 
     - **Commercial ID**: this value should automatically populate with your organization's ID  
 
@@ -236,7 +198,7 @@ Install the Configuration Manager version 1810 update rollup (4486457) to suppor
   
    Select **Next**. The **Available functionality** page shows the Desktop Analytics functionality that's available with the diagnostic data settings from the previous page. Select **Next**.  
 
-5. On the **Collections** page, configure the following settings:  
+7. On the **Collections** page, configure the following settings:  
 
     - **Display name**: The Desktop Analytics portal displays this Configuration Manager connection using this name. Use it to differentiate between different hierarchies. For example, *test lab* or *production*.  
 
@@ -248,7 +210,7 @@ Install the Configuration Manager version 1810 update rollup (4486457) to suppor
 
         These collections continue to sync as their membership changes. For example, your deployment plan uses a collection with a Windows 7 membership rule. As those devices upgrade to Windows 10, and Configuration Manager evaluates the collection membership, those devices drop out of the collection and deployment plan.  
 
-6. Complete the wizard.  
+8. Complete the wizard.  
 
 Configuration Manager creates a settings policy to configure devices in the Target Collection. This policy includes the diagnostic data settings to enable devices to send data to Microsoft. By default, clients update policy every hour. After receiving the new settings, it can be several hours more before the data is available in Desktop Analytics.
 
