@@ -897,4 +897,4 @@ The following reports are listed under the **Wake On LAN** category.
 
 ## See also
 
-[Creating custom reports by using SQL Server views in Configuration Manager](creating-custom-reports-using-sql-server-views.md)
+[Create custom reports by using SQL Server views in Configuration Manager](create-custom-reports-using-sql-server-views.md)

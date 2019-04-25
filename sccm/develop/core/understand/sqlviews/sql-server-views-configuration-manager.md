@@ -55,4 +55,4 @@ To effectively create reports with the required output, it's essential to know w
 
 ## See also
 
-[Creating Custom Reports by Using SQL Server Views in Configuration Manager](creating-custom-reports-using-sql-server-views.md)  
+[Create Custom Reports by Using SQL Server Views in Configuration Manager](create-custom-reports-using-sql-server-views.md)  

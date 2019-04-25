@@ -267,4 +267,4 @@ ORDER by Netbios_Name0
 
 ## See also
 
-[Using query designer to write report SQL statements for Configuration Manager reports](using-query-designer-write-configuration-manager-report-sql-statements.md)
+[Use query designer to write report SQL statements for Configuration Manager reports](use-query-designer-write-configuration-manager-report-sql-statements.md)
