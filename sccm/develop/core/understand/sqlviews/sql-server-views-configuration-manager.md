@@ -1,19 +1,19 @@
 ﻿---
-title: SQL Server Views in Configuration Manager
-TOCTitle: SQL Server Views in Configuration Manager
-ms:assetid: 9e955713-be09-4769-9c61-e741fdbf4d12
-ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dn581978(v=TechNet.10)
-ms:contentKeyID: 60772078
-ms.prod: "configuration-manager"
+title: SQL Server views
+titleSuffix: Configuration Manager
+description: A Microsoft SQL Server view is a virtual table whose contents are based on the result from a SQL query.
+ms.date: 04/30/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other #app client compliance hybrid osd protect sum
 ms.topic: conceptual
+ms.collection: M365-identity-device-management
+ms:assetid: a1924bed-b5fc-49a8-80ee-30b4e96defaa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/15/2019
-mtps_version: v=TechNet.10
 ---
 
-# SQL Server Views in Configuration Manager
+# SQL Server views in Configuration Manager
 
 A Microsoft SQL Server view is a virtual table whose contents are based on the result from a SQL query. A view consists of a set of named columns and rows of data. However, the contents of a view are not stored in the SQL database. The rows and columns of data come from tables or other SQL views referenced in the query that defines the view and are produced dynamically when the query is run. The query that defines the view can be from one or more tables or from other views in one or more databases. Distributed queries (queries that access data from multiple data sources) can also be used to define views that pull data from multiple heterogeneous sources (data stored in multiple formats), such as data stored in a SQL Server database, a text file, or a Microsoft Excel spreadsheet.
 
@@ -43,16 +43,16 @@ Configuration Manager uses Microsoft SQL Server Reporting Services to allow you
 
 For more information about using reports from the Configuration Manager console, see [Reporting in Configuration Manager](/sccm/core/servers/manage/reporting).
 
-## Configuration Manager SQL View Schema
+## Configuration Manager SQL view schema
 
 To create effective reports, accurate SQL statements based on the appropriate Configuration Manager views need to be used to retrieve the required data and to display the expected output. Knowing the Configuration Manager database view schema is an important first step in learning how to create these reports.
 
 Much of the Configuration Manager SQL view schema maps to the SMS Provider WMI schema, which is used when building WQL-based queries and collections in the Configuration Manager console. However, querying the views directly can be much faster than using WMI and WQL, which receive a query request and in turn query the SQL database for the information. By using SQL views directly, you eliminate the intermediate step and gain a faster path to the data. For more information about the SMS Provider WMI schema, see [SMS Provider WMI Schema Reference in Configuration Manager](sms-provider-wmi-schema-reference-configuration-manager.md).
 
-## Configuration Manager SQL View Categories
+## Configuration Manager SQL view categories
 
 To effectively create reports with the required output, it is essential to know what data each of the Configuration Manager SQL Server views contains and how the views are related to each other. The following topics in this section provide detailed information about each of the view categories, what kind of data each of the views contains, and what columns can be used to **JOIN** views in SQL statements.
 
-## See Also
+## See also
 
 [Creating Custom Reports by Using SQL Server Views in Configuration Manager](creating-custom-reports-using-sql-server-views.md)  

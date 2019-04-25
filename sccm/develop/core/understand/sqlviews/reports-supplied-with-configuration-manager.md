@@ -895,6 +895,6 @@ The following reports are listed under the **Wake On LAN** category.
 |**Wake-Up Proxy Deployment State Details**|Displays information about the deployment status of Wake-Up Proxy for each device in a specified collection.|
 |**Wake-Up Proxy Deployment State Summary**|Displays a summary of the deployment status of wake-up proxy for a specified collection.|
 
-## See Also
+## See also
 
-[Technical Reference for SQL Server Views in Configuration Manager](technical-reference-sql-server-views-configuration-manager.md)
+[Creating custom reports by using SQL Server views in Configuration Manager](creating-custom-reports-using-sql-server-views.md)

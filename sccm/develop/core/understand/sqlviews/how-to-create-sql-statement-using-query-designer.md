@@ -13,11 +13,11 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# How to Create a SQL Statement by Using Query Designer
+# How to create a SQL statement by using query designer
 
 Query Designer in SQL Server can help you to more easily write SQL queries that can be used in your Configuration Manager reports. Use the following procedures to create Configuration Manager report queries using Query Designer.
 
-## To create a new SQL query in Query Designer
+## To create a new SQL query in query designer
 
 1. Start Microsoft SQL Server Management Studio.
 1. Navigate to *\<Computer Name\>* **\\ Databases \\** *\<Configuration Manager database name\>* **\\ Views**.
@@ -30,6 +30,6 @@ Query Designer in SQL Server can help you to more easily write SQL queries that 
 1. Select **Execute SQL** to test the query and see the results.
 1. When you are happy with the results returned by the query, copy and paste it from query designer to be used to create your report in Report Builder.
 
-## See Also
+## See also
 
-[Technical Reference for SQL Server Views in Configuration Manager](technical-reference-sql-server-views-configuration-manager.md)
+[SQL statement reference for Configuration Manager reports](sql-statement-reference-configuration-manager-reports.md)

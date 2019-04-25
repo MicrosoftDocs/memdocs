@@ -13,7 +13,7 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# SQL Statement Reference for Configuration Manager Reports
+# SQL statement reference for Configuration Manager reports
 
 Many useful Microsoft SQL Server statements can be used when creating Configuration Manager reports, and they are briefly described in this section. To follow this discussion, you should have a basic level of SQL query statement knowledge and the ability to write queries such as the following:
 
@@ -29,7 +29,7 @@ ORDER BY Name
 
 For information about how to write basic queries, see your SQL Server documentation.
 
-## Aggregate Functions
+## Aggregate functions
 
 Aggregate functions (such as SUM, AVG, COUNT, COUNT(\*), MAX, and MIN) generate summary values in query result sets. An aggregate function (with the exception of COUNT(\*)) processes all the selected values in a single column to produce a single result value. Aggregate functions can be applied to all rows in a view, to a subset of the view specified by a WHERE clause, or to one or more groups of rows in the view. When an aggregate function is applied, a single value is generated from each set of rows.
 
@@ -57,7 +57,7 @@ ORDER BY SiteCode
 |ABC|ABC Site||928|
 |123|123 Site|ABC|1010|
 
-## Date and Time Functions
+## Date and Time functions
 
 Many built-in reports use the Date and Time functions. The most common functions used are the GETDATE, DATEADD, DATEDIFF, and DATEPART.
 
@@ -125,7 +125,7 @@ SELECT DATEPART (month, '2005-05-29 10:10:03.001')
 |--- |
 |5|
 
-## Combining Date and Time Functions
+## Combining Date and Time functions
 
 It is typical to use a combination of the Date and Time functions in Configuration Manager reports.
 
@@ -139,7 +139,7 @@ SELECT DATEADD([day], - 100, GETDATE())
 |--- |
 |2005-02-18 10:10:03.001|
 
-## Example Query Using Date and Time Functions
+## Example query using Date and Time functions
 
 The following query results in the total count of status messages for a one-day period. In this query, the COUNT, GETDATE, and DATEADD functions are used as well as the BETWEEN logical operator and the GROUP BY and ORDER BY clauses.
 
@@ -172,7 +172,7 @@ ORDER BY SiteCode, MessageID
 
 To create effective reports in Configuration Manager, you need to understand how to join different views to get the expected data. There are three types of joins: inner, outer, and cross. In addition, there are three types of outer joins: left, right, and full. The self join utilizes any of the above joins, but joins records from the same view.
 
-## Inner Joins
+## Inner joins
 
 In an inner join, records from two views are combined and added to a query's results only if the values of the joined fields meet certain specified criteria. If you use an inner join by using the *ResourceID* to join the **v_R_System** and **v_GS_WORKSTATION_STATUS** views, the result would be a list of all systems and their last hardware scan date.
 
@@ -191,11 +191,11 @@ ON v_R_System.ResourceID = v_GS_WORKSTATION_STATUS.ResourceID
 |Client1|2005-05-29 10:10:03.001|
 |Client3|2005-06-12 09:28:11.110|
 
-## Outer Joins
+## Outer joins
 
 An outer join returns all rows from the joined views whether or not there's a matching row between them. The ON clause supplements the data rather than filtering it. The three types of outer joins (left, right, and full) indicate the main data's source. Outer joins can be particularly helpful when you have NULL values in a view.
 
-## Left Outer Joins
+## Left outer joins
 
 When you use a left outer join to combine two views, all the rows in the left view are included in the results. In the following query, the **v_R_System** and **v_GS_WORKSTATION_STATUS** views are joined using the left outer join. The **v_R_System** view is the first view listed in the query, making it the left view. The result will include a list of all systems and their last hardware scan date. Unlike the inner join, systems that have not been scanned for hardware will still be listed with a NULL value (as seen in the result set).
 
@@ -215,23 +215,23 @@ ON v_R_System.ResourceID = v_GS_WORKSTATION_STATUS.ResourceID
 |Client2|NULL|
 |Client3|2005-06-12 09:28:11.110|
 
-## Right Outer Joins
+## Right outer joins
 
 A right outer join is conceptually the same as a left outer join except that all the rows from the right view are included in the results.
 
-## Full Outer Join
+## Full outer join
 
 A full outer join retrieves all the rows from both joined views. It returns all the paired rows where the join condition is true, plus the unpaired rows from each view concatenated with NULL rows from the other view. You usually won't want to use this type of outer join.
 
-## Cross Join
+## Cross join
 
 A cross join returns the product of two views, not the sum. Each row in the left view is matched up with each row in the right view. It's the set of all possible row combinations, without any filtering. However, if you add a WHERE clause, a cross join functions as an inner join—it uses the condition to filter all possible row combinations down to the ones you want.
 
-## Self Join
+## Self join
 
 A self join uses any of the above join types, but is a view that is joined to itself. In database diagrams, a self join is called a reflexive relationship.
 
-## NOT IN Keyword Phrase
+## NOT IN keyword phrase
 
 Subqueries with the keyword phrase NOT IN are very useful to find information about a set of data that doesn’t meet certain criteria. In the following example, the query returns the NetBIOS name of all computers that do NOT have Notepad.exe installed. You must first create a query that can detect all computers that have the selected file installed as follows:
 
@@ -265,6 +265,6 @@ WHERE v_GS_SoftwareFile.FileName = 'Notepad.exe')
 ORDER by Netbios_Name0
 ```
 
-## See Also
+## See also
 
-[Technical Reference for SQL Server Views in Configuration Manager](technical-reference-sql-server-views-configuration-manager.md)
+[Using query designer to write report SQL statements for Configuration Manager reports](using-query-designer-write-configuration-manager-report-sql-statements.md)

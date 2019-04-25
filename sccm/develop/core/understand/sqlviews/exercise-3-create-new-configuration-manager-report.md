@@ -1,5 +1,5 @@
 ﻿---
-title: 'Exercise 3: Create a New Report'
+title: 'Exercise 3: Create a new report'
 titleSuffix: Configuration Manager
 description: Create a simple report and configure the report properties.
 ms.date: 04/30/2019
@@ -13,7 +13,7 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Exercise 3: Create a New Configuration Manager Report
+# Exercise 3: Create a new Configuration Manager report
 
 In this exercise, you will create a simple report in Microsoft SQL Server Report Builder, and configure the report properties.
 
@@ -61,10 +61,10 @@ The report displays all collections that administrative users have created and e
 
 The new report is now available in the Configuration Manager console.
     
-## Next Steps
+## Next steps
 
 Report builder includes many options to change elements of reports, including themes, column headings and more. Consult your Report Builder help for more information.
 
-## See Also
+## See also
 
-[Exercises for Creating Custom Reports in Configuration Manager](exercises-creating-custom-reports-configuration-manager.md)
+[Exercise 1: Run an existing Configuration Manager report](exercise-1-run-existing-configuration-manager-report.md)

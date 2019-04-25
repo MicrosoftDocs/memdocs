@@ -1,25 +1,25 @@
 ﻿---
-title: Application Management Views in Configuration Manager
-TOCTitle: Application Management Views in Configuration Manager
-ms:assetid: 567c2de3-44c1-4754-b5a3-09ba6b3fd831
-ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dn581963(v=TechNet.10)
-ms:contentKeyID: 60772027
-ms.prod: "configuration-manager"
+title: Application management views
+titleSuffix: Configuration Manager
+description: Information about application management views and application management status views.
+ms.date: 04/30/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other #app client compliance hybrid osd protect sum
 ms.topic: conceptual
+ms.collection: M365-identity-device-management
+ms:assetid: c424bd2b-f6ea-466c-91ca-c9550d94d9db
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/15/2019
-mtps_version: v=TechNet.10
 ---
 
-# Application Management Views in Configuration Manager
+# Application management views in Configuration Manager
 
-The Configuration Manager application management views can be used to query for information about applications, packages and programs, deployments, distribution points, and more. These views will most often be joined to other views by using the **AdvertisementID**, **PackageID**, or **CollectionID** columns. Many of the status views also provide information about the status for applications and deployments. For more information about Configuration Manager applications, see Application Management in Configuration Manager (gg699373\(v=technet.10\).md).
+The Configuration Manager application management views can be used to query for information about applications, packages and programs, deployments, distribution points, and more. These views will most often be joined to other views by using the **AdvertisementID**, **PackageID**, or **CollectionID** columns. Many of the status views also provide information about the status for applications and deployments. For more information about Configuration Manager applications, see [Application Management in Configuration Manager](/sccm/develop/apps/application-management).
 
 The following sections provide detailed information about application management views and application management status views.
 
-## Application Management Views
+## Application management views
 
 The application management views are described in this section.
 
@@ -165,9 +165,9 @@ This view can be joined to other views by using the **CI_UniqueID**, **Unique_Us
 ### v_UserAppsLocalizedPropsForCatalog
 No description.
 
-## Application Management Status Views
+## Application management status views
 
-The application management status views contain status and status summary information about application deployments, applications and packages and programs. For more information about status views, see Status and Alert Views in Configuration Manager (dn581980\(v=technet.10\).md). The status views that contain application management information are described in this section.
+The application management status views contain status and status summary information about application deployments, applications and packages and programs. For more information about status views, see [Status and Alert Views in Configuration Manager](status-alert-views-configuration-manager.md). The status views that contain application management information are described in this section.
 
 ### v_AdvertisementStatusInformation
 
@@ -214,7 +214,7 @@ It is unlikely that this view will be joined to other views.
 Lists all programs that have been deployed as part of a package and program. This is sorted by package ID and the program name.
 The view can be joined to other views by using the **PkgID** column.
 
-## User Device Affinity Views
+## User device affinity views
 
 The user device affinity views contain information about configured relationships between users and primary devices. The views that contain user device affinity information are described in this section.
 
@@ -248,6 +248,6 @@ This view can be joined to other views by using the **RelationshipResourceID** c
 Lists user and device relationships by relationship resource ID, relationship type, and creation time.
 It is unlikely that this view will be joined to other views.
 
-## See Also
+## See also
 
-[SQL Server Views in Configuration Manager](sql-server-views-configuration-manager.md)  
+[SQL Server views in Configuration Manager](sql-server-views-configuration-manager.md)  

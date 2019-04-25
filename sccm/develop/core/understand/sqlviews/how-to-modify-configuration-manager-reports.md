@@ -1,5 +1,5 @@
 ﻿---
-title: How to Modify Reports
+title: How to modify reports
 titleSuffix: Configuration Manager
 description: Information about viewing the properties of, and modifying Configuration Manager reports.
 ms.date: 04/30/2019
@@ -43,4 +43,4 @@ Use SQL Server Report Builder to modify reports. Report Builder can be opened di
 
 ## See Also
 
-[Working with Reports in Configuration Manager](working-with-reports-configuration-manager.md)
+[How to create Configuration Manager reports](how-to-create-configuration-manager-reports.md)

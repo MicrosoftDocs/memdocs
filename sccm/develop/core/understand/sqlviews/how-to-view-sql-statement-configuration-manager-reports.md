@@ -1,5 +1,5 @@
 ﻿---
-title: How to View the SQL Statement for Reports
+title: How to view the SQL Statement for reports
 titleSuffix: Configuration Manager
 description: Information to find out what SQL statement is used in a Configuration Manager report.
 ms.date: 04/30/2019
@@ -32,4 +32,4 @@ Reports in Configuration Manager can be based on simple SQL statements or very c
 
 ## See Also
 
-[Working with Reports in Configuration Manager](working-with-reports-configuration-manager.md)
+[How to modify Configuration Manager reports](how-to-modify-configuration-manager-reports.md)

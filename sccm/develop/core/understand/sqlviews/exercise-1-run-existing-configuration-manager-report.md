@@ -1,5 +1,5 @@
 ﻿---
-title: 'Exercise 1: Run an Existing Report'
+title: 'Exercise 1: Run an existing report'
 titleSuffix: Configuration Manager
 description: Run an existing Configuration Manager report and review specific report elements.
 ms.date: 04/30/2019
@@ -13,7 +13,7 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Exercise 1: Run an Existing Configuration Manager Report
+# Exercise 1: Run an existing Configuration Manager report
 
 In this exercise, you will run an existing Configuration Manager report and review specific report elements.
 
@@ -33,6 +33,6 @@ For more detailed information about how to work with reports in Configuration Ma
 
 The report is displayed. Review the processor information and then close the report.
 
-## See Also
+## See also
 
-[Exercises for Creating Custom Reports in Configuration Manager](exercises-creating-custom-reports-configuration-manager.md)
+[Exercise 2: Modify an existing report in Configuration Manager](exercise-2-modify-existing-configuration-manager-report.md)

@@ -1,5 +1,5 @@
 ﻿---
-title: Evaluation of the All Collections Report
+title: Evaluation of the all collections report
 titleSuffix: Configuration Manager
 description: Information about all of the collections in the Configuration Manager hierarchy.
 ms.date: 04/30/2019
@@ -31,4 +31,4 @@ To open the report, use the following procedure:
 
 ## See Also
 
-[Evaluation of Existing Configuration Manager Reports](evaluation-existing-configuration-manager-reports.md)
+[Evaluation of the computer information for a specific computer report in Configuration Manager](evaluation-computer-information-report-configuration-manager.md)

@@ -1,5 +1,5 @@
 ﻿---
-title: How to Create Configuration Manager Reports
+title: How to create reports
 titleSuffix: Configuration Manager
 description: Information about how to create two types of reports directly from the Configuration Manager console.
 ms.date: 04/30/2019
@@ -62,4 +62,4 @@ You can create two types of reports directly from the Configuration Manager cons
 
 ## See Also
 
-[Working with Reports in Configuration Manager](working-with-reports-configuration-manager.md)
+[How to run Configuration Manager reports](how-to-run-configuration-manager-reports.md)

@@ -251,8 +251,6 @@
         items:
         - name: Evaluation of Existing Reports
           items:
-          - name: Overview
-            href: core/understand/sqlviews/evaluation-existing-configuration-manager-reports.md
           - name: Evaluation of the All Collections Report
             href: core/understand/sqlviews/evaluation-all-collections-report-configuration-manager.md
           - name: Evaluation of the Computer Information Report
@@ -267,8 +265,6 @@
           href: core/understand/sqlviews/how-to-run-configuration-manager-reports.md
         - name: Exercises for Creating Custom Reports
           items:
-          - name: Overview
-            href: core/understand/sqlviews/exercises-creating-custom-reports-configuration-manager.md
           - name: Exercise 1 - Run an Existing Report
             href: core/understand/sqlviews/exercise-1-run-existing-configuration-manager-report.md
           - name: Exercise 2 - Modify an Existing Report
@@ -285,8 +281,6 @@
             href: core/understand/sqlviews/advanced-exercise-2-solution-create-new-report-hardware-inventory-configuration-manager.md
       - name: Technical Reference for SQL Server Views
         items:
-        - name: Overview
-          href: core/understand/sqlviews/technical-reference-sql-server-views-configuration-manager.md
         - name: Sample Queries Using the SQL Views
           items:
           - name: Sample Queries for Application Management
