@@ -15,7 +15,7 @@ manager: dougeby
 
 # SQL Server views in Configuration Manager
 
-A Microsoft SQL Server view is a virtual table whose contents are based on the result from a SQL query. A view consists of a set of named columns and rows of data. However, the contents of a view are not stored in the SQL database. The rows and columns of data come from tables or other SQL views referenced in the query that defines the view and are produced dynamically when the query is run. The query that defines the view can be from one or more tables or from other views in one or more databases. Distributed queries (queries that access data from multiple data sources) can also be used to define views that pull data from multiple heterogeneous sources (data stored in multiple formats), such as data stored in a SQL Server database, a text file, or a Microsoft Excel spreadsheet.
+A Microsoft SQL Server view is a virtual table whose contents are based on the result from a SQL query. A view consists of a set of named columns and rows of data. However, the contents of a view aren't stored in the SQL database. The rows and columns of data come from tables or other SQL views referenced in the query that defines the view and are produced dynamically when the query is run. The query that defines the view can be from one or more tables or from other views in one or more databases. Distributed queries (queries that access data from multiple data sources) can also be used to define views that pull data from multiple heterogeneous sources (data stored in multiple formats), such as data stored in a SQL Server database, a text file, or a Microsoft Excel spreadsheet.
 
 During setup, Configuration Manager creates the following SQL view types:
 
@@ -27,19 +27,19 @@ For a dynamic schema, setup creates a number of SQL Server stored procedures tha
 
 ## Reporting in Configuration Manager
 
-Configuration Manager uses Microsoft SQL Server Reporting Services to allow you to generate and run reports against the Configuration Manager database, from the Configuration Manager console. This now replaces the method used to create reports in Configuration Manager 2007. This gives the following advantages:
+Configuration Manager uses Microsoft SQL Server Reporting Services to allow you to generate and run reports against the Configuration Manager database, from the Configuration Manager console. This service now replaces the method used to create reports in Configuration Manager 2007, and gives the following advantages:
 
 - Uses an industry standard reporting system to query the Configuration Manager database.
 
-- SQL Reporting Services offers higher performance, availability and scalability over the previous reporting method.
+- SQL Reporting Services offers higher performance, availability, and scalability over the previous reporting method.
 
-- Enables users who are not familiar with Configuration Manager reporting to generate ad hoc reports.
+- Enables users who aren't familiar with Configuration Manager reporting to generate unplanned reports.
 
 - Enables users to subscribe to reports; for example, a manager could automatically be e-mailed a report each day, detailing the status of a software update rollout.
 
 - Simplifies the creation of SQL-based reports in Configuration Manager.
 
-- Enables users to export reports in a variety of popular formats.
+- Enables users to export reports in different kinds of popular formats.
 
 For more information about using reports from the Configuration Manager console, see [Reporting in Configuration Manager](/sccm/core/servers/manage/reporting).
 
@@ -51,7 +51,7 @@ Much of the Configuration Manager SQL view schema maps to the SMS Provider WMI s
 
 ## Configuration Manager SQL view categories
 
-To effectively create reports with the required output, it is essential to know what data each of the Configuration Manager SQL Server views contains and how the views are related to each other. The following topics in this section provide detailed information about each of the view categories, what kind of data each of the views contains, and what columns can be used to **JOIN** views in SQL statements.
+To effectively create reports with the required output, it's essential to know what data each of the Configuration Manager SQL Server views contains and how the views are related to each other. The following topics in this section provide detailed information about each of the view categories, what kind of data each of the views contains, and what columns can be used to **JOIN** views in SQL statements.
 
 ## See also
 
