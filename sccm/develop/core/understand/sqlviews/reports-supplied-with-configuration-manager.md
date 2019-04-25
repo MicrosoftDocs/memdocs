@@ -13,11 +13,11 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# List of Reports Supplied with Configuration Manager
+# List of reports supplied with Configuration Manager
 
 Many built-in reports are supplied with Configuration Manager, covering many of the reporting tasks that you might want to perform. You can also use the SQL statements in these reports to help you to write your own reports. Use the information in this topic to learn about the reports that are supplied with Configuration Manager.
 
-## List of Built-In Configuration Manager Reports
+## List of built-in Configuration Manager reports
 
 The following reports are included with Configuration Manager. The reports appear in various categories.
 

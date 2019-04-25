@@ -24,7 +24,7 @@ In this exercise, you will create a Configuration Manager report that displays t
 
 Use the following report requirements to create the new report.
 
-## SQL Server Views in the SQL statement
+## SQL Server views in the SQL statement
 
 Use the following Configuration Manager SQL views when creating the report SQL statement:
 

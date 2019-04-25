@@ -13,7 +13,7 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# How to View the SQL Statement for Configuration Manager Reports
+# How to view the SQL statement for Configuration Manager reports
 
 Reports in Configuration Manager can be based on simple SQL statements or very complex ones that prompt the user for information, join several Microsoft SQL Server views, and use filters to limit the results. Use the following procedure to find out what SQL statement is used in a Configuration Manager report.
 
@@ -30,6 +30,6 @@ Reports in Configuration Manager can be based on simple SQL statements or very c
 1. Close the **Dataset Properties** dialog box.
 1. Close Report Builder.
 
-## See Also
+## See also
 
 [How to modify Configuration Manager reports](how-to-modify-configuration-manager-reports.md)

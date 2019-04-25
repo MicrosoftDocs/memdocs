@@ -13,11 +13,11 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# How to Modify Configuration Manager Reports
+# How to modify Configuration Manager reports
 
 The procedures in this topic help you to view the properties of, and modify Configuration Manager reports.
 
-## How to View the General Properties of a Report
+## How to view the general properties of a report
 
 You can view general properties for a report in the Configuration Manager console. Use the following procedure to view the properties of a report.
 
@@ -29,7 +29,7 @@ You can view general properties for a report in the Configuration Manager consol
 1. In the *report name* **Properties** dialog box, you can view general information about the report, create and view report subscriptions and view security information about the report.
 1. Close the *report name* **Properties** dialog box.
 
-## How to Modify a Report
+## How to modify a report
 
 Use SQL Server Report Builder to modify reports. Report Builder can be opened directly from the Configuration Manager console. Use the following procedure to modify a Configuration Manager report.
 
@@ -41,6 +41,6 @@ Use SQL Server Report Builder to modify reports. Report Builder can be opened di
 1. In SQL Server Report builder, make the necessary modifications to the report.
 1. Save your report, and then close Report Builder.
 
-## See Also
+## See also
 
 [How to create Configuration Manager reports](how-to-create-configuration-manager-reports.md)
