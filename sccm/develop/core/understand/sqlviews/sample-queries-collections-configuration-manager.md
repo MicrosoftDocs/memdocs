@@ -1,5 +1,5 @@
 ﻿---
-title: Sample Queries for Collections
+title: Sample queries for collections
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join some of the most commonly used collection views to other views.
 ms.date: 04/30/2019
@@ -13,11 +13,11 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Sample Queries for Collections in Configuration Manager
+# Sample queries for collections in Configuration Manager
 
 The following sample queries demonstrate how to join some of the most commonly used collection views to other views.
 
-## Joining Collection Views
+## Joining collection views
 
 The following query lists the resources in the Configuration Manager hierarchy that are in a collection, the assigned site for client computers, the collection ID, collection name, and the last time the collection was refreshed. The **v_FullCollectionMembership** view is joined to the **v_Collection** view by using the **CollectionID** column. The query results are sorted by resource name and then by collection ID.
 
@@ -29,7 +29,7 @@ The following query lists the resources in the Configuration Manager hierarchy t
     ORDER BY FCM.Name, FCM.CollectionID 
 ```
 
-## Joining Collection and Resource Views
+## Joining collection and resource views
 
 The following query lists all of the discovered resources that do not have a Configuration Manager client installed. The query lists the domain, computer name, and all discovered IP addresses using data by joining three views. The **v_CM_RES_COLL_SMS00001** collection view is joined to the **v_R_System** and **v_RA_IPAddresses** discovery views by using the **ResourceID** column.
 
@@ -45,7 +45,7 @@ The following query lists all of the discovered resources that do not have a Con
     ORDER BY SYS.Resource_Domain_OR_Workgr0, COLL1.Name 
 ```
 
-## Joining Collection and Deployment Views
+## Joining collection and deployment views
 
 The following query lists all of the resources in the Configuration Manager hierarchy that have been targeted for an advertisement, as well as the source site code, advertisement ID and advertisement name, program name, and target collection name, and then it sorts the data by the name of the resource. The **v_FullCollectionMembership** collection view is joined to the **v_Advertisement** software distribution view and **v_Collection** collection view by using the **CollectionID** column.
 
@@ -59,6 +59,6 @@ The following query lists all of the resources in the Configuration Manager hier
     ORDER BY FCM.Name 
 ```
 
-## See Also
+## See also
 
-[Collection Views in Configuration Manager](collection-views-configuration-manager.md)
+[Collection views in Configuration Manager](collection-views-configuration-manager.md)

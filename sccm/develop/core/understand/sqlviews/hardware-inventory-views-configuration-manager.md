@@ -1,5 +1,5 @@
 ﻿---
-title: Hardware Inventory Views
+title: Hardware inventory views
 titleSuffix: Configuration Manager
 description: Information about the computer hardware scanned on Configuration Manager client computers.
 ms.date: 04/30/2019
@@ -13,36 +13,36 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Hardware Inventory Views in Configuration Manager
+# Hardware inventory views in Configuration Manager
 
 The hardware inventory views contain information about the computer hardware scanned on Configuration Manager client computers. Many hardware inventory views are created in Configuration Manager by default, and many more can be enabled or creating classes by using the hardware inventory classes dialog box, accessible from client settings. Because of this, it is likely that Configuration Manager sites collect different hardware inventory resulting in different hardware inventory views.
 
-For more information about extending Configuration Manager hardware inventory, see [How to Extend Hardware Inventory in Configuration Manager](https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/gg712290(v=technet.10)).
+For more information about extending Configuration Manager hardware inventory, see [How to extend hardware inventory in Configuration Manager](/sccm/core/clients/manage/inventory/extend-hardware-inventory).
 
-## Hardware Inventory Schema Views
+## Hardware inventory schema views
 
-The hardware inventory schema is important to understand when creating queries for Configuration Manager reports. Most of the client data within Configuration Manager is contained in one of the two hardware inventory schema views: **v\_GroupMap** and **v\_GroupAttributeMap**. The **v\_GroupMap** view contains a list of all the hardware inventory groups and the associated view for each of the groups. The **v\_GroupAttributeMap** view contains all of the attributes that are inventoried for each of the groups. Both views can be joined together by using the **GroupID** column and joined to the **v\_ResourceMap** discovery schema view by using the **ResourceType** column.
+The hardware inventory schema is important to understand when creating queries for Configuration Manager reports. Most of the client data within Configuration Manager is contained in one of the two hardware inventory schema views: **v_GroupMap** and **v_GroupAttributeMap**. The **v_GroupMap** view contains a list of all the hardware inventory groups and the associated view for each of the groups. The **v_GroupAttributeMap** view contains all of the attributes that are inventoried for each of the groups. Both views can be joined together by using the **GroupID** column and joined to the **v_ResourceMap** discovery schema view by using the **ResourceType** column.
 
-Because hardware inventory can be extended, one Configuration Manager site's SQL database might have different hardware inventory views and schema when compared to another site. The following query joins the **v\_GroupMap** and **v\_GroupAttributeMap** to generate the hardware inventory view schema, based on the specific settings for the site:
+Because hardware inventory can be extended, one Configuration Manager site's SQL database might have different hardware inventory views and schema when compared to another site. The following query joins the **v_GroupMap** and **v_GroupAttributeMap** to generate the hardware inventory view schema, based on the specific settings for the site:
 
-```
+```sql
 SELECT DISTINCT GM.DisplayName, GM.InvClassName,
 
   GM.InvHistoryClassName, GAM.AttributeName,
 
   GAM.ColumnName, GM.MIFClass
 
-FROM v\_GroupMap GM INNER JOIN v\_GroupAttributeMap GAM
+FROM v_GroupMap GM INNER JOIN v_GroupAttributeMap GAM
 
   ON GM.GroupID = GAM.GroupID
 ```
 
-## Hardware Inventory Views
+## Hardware inventory views
 
-Most of the hardware inventory views start with the **v\_GS\_** view name followed by the name of the hardware component, such as CDROM (for example, **v\_GS\_CDROM**). As a general rule, each hardware inventory view has an associated inventory history view that starts with the **v\_HS\_** view name. The hardware inventory views can all be joined with other system data views by using the **ResourceID** column, which is demonstrated in Appendix A, in the topic [Sample Queries for Hardware Inventory in Configuration Manager](https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/dn581926(v=technet.10)). The standard hardware inventory views are described in this section.
+Most of the hardware inventory views start with the **v_GS_** view name followed by the name of the hardware component, such as CDROM (for example, **v_GS_CDROM**). As a general rule, each hardware inventory view has an associated inventory history view that starts with the **v_HS_** view name. The hardware inventory views can all be joined with other system data views by using the **ResourceID** column, which is demonstrated in Appendix A, in the topic [Sample queries for hardware inventory in Configuration Manager](sample-queries-hardware-inventory-configuration-manager.md). The standard hardware inventory views are described in this section.
 
 > [!NOTE]
-> Not all of the items listed are collected by default when using Configuration Manager hardware inventory. For information about how to enable or disable hardware inventory classes, see the [How to Extend Hardware Inventory in Configuration Manager](https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/gg712290(v=technet.10)) topic in the Configuration Manager Documentation Library
+> Not all of the items listed are collected by default when using Configuration Manager hardware inventory. For information about how to enable or disable hardware inventory classes, see the [How to extend hardware inventory in Configuration Manager](/sccm/core/clients/manage/inventory/extend-hardware-inventory) topic in the Configuration Manager Documentation Library
 
 ### v_InventoryClass
 
@@ -111,12 +111,12 @@ The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_AUTOSTART_SOFTWARE
 
-Lists information about the applications on Configuration Manager clients that start automatically with the operating system found through Asset Intelligence. The view is also listed and described in the [Asset Intelligence Views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
+Lists information about the applications on Configuration Manager clients that start automatically with the operating system found through Asset Intelligence. The view is also listed and described in the [Asset intelligence views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
 The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_BROWSER_HELPER_OBJECT
 
-Lists information about the browser objects found on Configuration Manager clients through Asset Intelligence. While some browser helper objects are beneficial, malware might be delivered is in the form of browser helper objects. The view is also listed and described in the [Asset Intelligence Views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
+Lists information about the browser objects found on Configuration Manager clients through Asset Intelligence. While some browser helper objects are beneficial, malware might be delivered is in the form of browser helper objects. The view is also listed and described in the [Asset intelligence views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
 The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_CCM_RECENTLY_USED_APPS
@@ -141,32 +141,32 @@ The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_DEVICE_CERTIFICATES
 
-Lists information about the certificates on devices, including the revision ID, issuer, where it is located in the certificate store, the subject, the dates the certificate is valid, and so on. The view is also listed and described in the [Mobile Device Management Views in Configuration Manager](https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/dn581929(v=technet.10)) topic.
+Lists information about the certificates on devices, including the revision ID, issuer, where it is located in the certificate store, the subject, the dates the certificate is valid, and so on. The view is also listed and described in the [Mobile device management views in Configuration Manager](mobile-device-management-views-configuration-manager.md) topic.
 The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_DEVICE_COMPUTERSYSTEM
 
-Lists information about the Configuration Manager devices, including the device ID, number of processors, platform type, processor type, and so on. The view is also listed and described in the [Mobile Device Management Views in Configuration Manager](https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/dn581929(v=technet.10)) topic.
+Lists information about the Configuration Manager devices, including the device ID, number of processors, platform type, processor type, and so on. The view is also listed and described in the [Mobile device management views in Configuration Manager](mobile-device-management-views-configuration-manager.md) topic.
 The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_DEVICE_DISPLAY
 
-Lists information about the displays found on Configuration Manager devices. The view is also listed and described in the [Mobile Device Management Views in Configuration Manager](https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/dn581929(v=technet.10)) topic.
+Lists information about the displays found on Configuration Manager devices. The view is also listed and described in the [Mobile device management views in Configuration Manager](mobile-device-management-views-configuration-manager.md) topic.
 The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_DEVICE_MEMORY
 
-Lists information about the memory found on Configuration Manager devices. The view is also listed and described in the [Mobile Device Management Views in Configuration Manager](https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/dn581929(v=technet.10)) topic.
+Lists information about the memory found on Configuration Manager devices. The view is also listed and described in the [Mobile device management views in Configuration Manager](mobile-device-management-views-configuration-manager.md) topic.
 The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_DEVICE_OSINFORMATION
 
-Lists information about the operating system found on Configuration Manager devices. The view is also listed and described in the [Mobile Device Management Views in Configuration Manager](https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/dn581929(v=technet.10)) topic.
+Lists information about the operating system found on Configuration Manager devices. The view is also listed and described in the [Mobile device management views in Configuration Manager](mobile-device-management-views-configuration-manager.md) topic.
 The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_DEVICE_POWER
 
-Lists information about power settings and the battery on Configuration Manager devices. The view is also listed and described in the [Mobile Device Management Views in Configuration Manager](https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/dn581929(v=technet.10)) topic.
+Lists information about power settings and the battery on Configuration Manager devices. The view is also listed and described in the [Mobile device management views in Configuration Manager](mobile-device-management-views-configuration-manager.md) topic.
 The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_DISK
@@ -201,22 +201,22 @@ The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_INSTALLED_EXECUTABLE
 
-Lists information about the installed executable files (files with the extension .exe) on Configuration Manager clients found through Asset Intelligence. The view is also listed and described in the [Asset Intelligence Views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
+Lists information about the installed executable files (files with the extension .exe) on Configuration Manager clients found through Asset Intelligence. The view is also listed and described in the [Asset intelligence views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
 The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_INSTALLED_SOFTWARE
 
-Lists information about the installed software applications on Configuration Manager clients found through Asset Intelligence. The view is also listed and described in the [Asset Intelligence Views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
+Lists information about the installed software applications on Configuration Manager clients found through Asset Intelligence. The view is also listed and described in the [Asset intelligence views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
 The view can be joined with other views by using the **ResourceID** column and with Asset Intelligence views by using the **SoftwareCode0** and **SoftwarePropertiesHash0** columns.
 
 ### v_GS_INSTALLED_SOFTWARE_CATEGORIZED
 
-Lists information about the installed software applications on Configuration Manager clients found through Asset Intelligence. This view contains the information in the **v_GS_INSTALLED_SOFTWARE** view and joins several other tables to provide additional details about the installed software. The view is also listed and described in the [Asset Intelligence Views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
+Lists information about the installed software applications on Configuration Manager clients found through Asset Intelligence. This view contains the information in the **v_GS_INSTALLED_SOFTWARE** view and joins several other tables to provide additional details about the installed software. The view is also listed and described in the [Asset intelligence views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
 The view can be joined with other views by using the **ResourceID** column and with Asset Intelligence views by using the **SoftwareCode0**, **SoftwarePropertiesHash0**, **FamilyID**, **CategoryID**, and **SoftwareID** columns.
 
 ### v_GS_INSTALLED_SOFTWARE_MS
 
-Lists information about the installed Microsoft software applications on Configuration Manager clients found through Asset Intelligence. The view is also listed and described in the [Asset Intelligence Views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
+Lists information about the installed Microsoft software applications on Configuration Manager clients found through Asset Intelligence. The view is also listed and described in the [Asset intelligence views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
 The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_KEYBOARD_DEVICE
@@ -241,8 +241,7 @@ The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_NAPCLIENT
 
-Lists information about the Configuration Manager clients with the Network Access Protection (NAP) client installed, including whether the client is NAP enabled, the NAP protocol version, system isolation state, and so on. The view is also listed and described in the [Network Access Protection Views in Configuration Manager](https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/dn581959(v=technet.10)) topic.
-The view can be joined with other views by using the **ResourceID** column.
+Lists information about the Configuration Manager clients with the Network Access Protection (NAP) client installed, including whether the client is NAP enabled, the NAP protocol version, system isolation state, and so on. The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_NETWORK_ADAPTER
 
@@ -351,17 +350,17 @@ The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_SOFTWARE_LICENSING_PRODUCT
 
-Lists software licensing product information for Windows Configuration Manager clients found through Asset Intelligence. The view is also listed and described in the [Asset Intelligence Views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
+Lists software licensing product information for Windows Configuration Manager clients found through Asset Intelligence. The view is also listed and described in the [Asset intelligence views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
 The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_SOFTWARE_LICENSING_SERVICE
 
-Lists software licensing service information for Windows Configuration Manager clients found through Asset Intelligence. The view is also listed and described in the [Asset Intelligence Views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
+Lists software licensing service information for Windows Configuration Manager clients found through Asset Intelligence. The view is also listed and described in the [Asset intelligence views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
 The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_SOFTWARE_SHORTCUT
 
-Lists software shortcut information for Configuration Manager clients found through Asset Intelligence. The view is also listed and described in the [Asset Intelligence Views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
+Lists software shortcut information for Configuration Manager clients found through Asset Intelligence. The view is also listed and described in the [Asset intelligence views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
 The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_SOUND_DEVICE
@@ -381,17 +380,17 @@ The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_SYSTEM_CONSOLE_USAGE
 
-Lists all system console usage information for Configuration Manager clients found through Asset Intelligence by polling the Windows System Security Event Log. The view is also listed and described in the [Asset Intelligence Views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
+Lists all system console usage information for Configuration Manager clients found through Asset Intelligence by polling the Windows System Security Event Log. The view is also listed and described in the [Asset intelligence views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
 The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_SYSTEM_CONSOLE_USAGE_MAXGROUP
 
-Lists all system console usage information for Configuration Manager clients found through Asset Intelligence by polling the Windows System Security Event Log. This view contains a subset of information from the **v_GS_SYSTEM_CONSOLE_USAGE** view. The view is also listed and described in the [Asset Intelligence Views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
+Lists all system console usage information for Configuration Manager clients found through Asset Intelligence by polling the Windows System Security Event Log. This view contains a subset of information from the **v_GS_SYSTEM_CONSOLE_USAGE** view. The view is also listed and described in the [Asset intelligence views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
 The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_SYSTEM_CONSOLE_USER
 
-Lists all system console user information for Configuration Manager clients found through Asset Intelligence by polling the Windows System Security Event Log. The view is also listed and described in the [Asset Intelligence Views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
+Lists all system console user information for Configuration Manager clients found through Asset Intelligence by polling the Windows System Security Event Log. The view is also listed and described in the [Asset intelligence views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
 The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_SYSTEM_DEVICES
@@ -441,7 +440,7 @@ The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_USB_DEVICE
 
-Lists information about the USB devices found on Configuration Manager clients through Asset Intelligence. The view is also listed and described in the [Asset Intelligence Views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
+Lists information about the USB devices found on Configuration Manager clients through Asset Intelligence. The view is also listed and described in the [Asset intelligence views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
 The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_VIDEO_CONTROLLER
@@ -629,6 +628,6 @@ This view can be joined to other views by using the **ResourceID** column.
 Lists user account information for the modern Windows applications found on client computers.
 This view can be joined to other views by using the **ResourceID** column.
 
-## See Also
+## See also
 
-[SQL Server Views in Configuration Manager](sql-server-views-configuration-manager.md) 
+[SQL Server views in Configuration Manager](sql-server-views-configuration-manager.md) 

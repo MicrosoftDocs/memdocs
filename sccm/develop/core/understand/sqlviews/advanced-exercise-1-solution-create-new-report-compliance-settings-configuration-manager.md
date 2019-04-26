@@ -1,5 +1,5 @@
 ﻿---
-title: 'Advanced Exercise 1 Solution: Create a New Report for Compliance Settings'
+title: 'Advanced exercise 1 solution: Create a new report for compliance settings'
 titleSuffix: Configuration Manager
 description: Procedure to create the report in Advanced Exercise 1.
 ms.date: 04/30/2019
@@ -13,14 +13,14 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Advanced Exercise 1 Solution: Create a New Report for Compliance Settings in Configuration Manager
+# Advanced exercise 1 solution: Create a new report for compliance settings in Configuration Manager
 
-Use the following procedure to create the report in [Advanced Exercise 1: Create a New Report for Compliance Settings in Configuration Manager](advanced-exercise-1-create-new-report-compliance-settings-configuration-manager.md).
+Use the following procedure to create the report in [Advanced exercise 1: Create a new report for compliance settings in Configuration Manager](advanced-exercise-1-create-new-report-compliance-settings-configuration-manager.md).
 
 > [!NOTE]
 > Depending on your experience at creating SQL reports, there are numerous paths you can use to create a report. You can use your preferred method of creating reports if you prefer.
 
-## To create the Status of configuration baselines deployed to a specified computer report
+## To create the status of configuration baselines deployed to a specified computer report
 
 1. In the Configuration Manager console, select **Monitoring**.
 1. In the **Monitoring** workspace, expand **Reporting**, and then select **Reports**.
@@ -102,10 +102,10 @@ Use the following procedure to create the report in [Advanced Exercise 1: Create
 
 The new report is now available in the Configuration Manager console.
     
-## Next Steps
+## Next steps
 
 Report builder includes many options to change elements of reports, including themes, column headings and more. Consult your Report Builder help for more information.
 
-## See Also
+## See also
 
-[Advanced Exercise 1: Create a New Report for Compliance Settings in Configuration Manager](advanced-exercise-1-create-new-report-compliance-settings-configuration-manager.md)
+[Advanced exercise 1: Create a new report for compliance settings in Configuration Manager](advanced-exercise-1-create-new-report-compliance-settings-configuration-manager.md)

@@ -1,5 +1,5 @@
 ﻿---
-title: Compliance Settings Views
+title: Compliance settings views
 titleSuffix: Configuration Manager
 description: Information about the compliance of devices with regard to a number of configurations.
 ms.date: 04/30/2019
@@ -13,27 +13,27 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Compliance Settings Views in Configuration Manager
+# Compliance settings views in Configuration Manager
 
 The Configuration Manager compliance settings views contain information about the compliance of devices with regard to a number of configurations, such as whether the correct Windows operating system versions are installed and configured appropriately, whether all required applications are installed and configured correctly, whether optional applications are configured appropriately, and whether prohibited applications are installed. The compliance settings views contain information about the configuration baselines in the site, which configuration baselines store information about configuration items, software updates, bundles, drivers, and so on. Several of the status and status summarizer views contain status information for the configuration items and configuration item assignments.
 
 The following sections provide detailed information about compliance settings views, compliance settings status views, and compliance settings status summarizer views.
 
-## Compliance Settings Views
+## Compliance settings views
 
 There are many compliance settings views, and it can sometimes be difficult to find the information that you need for your report SQL statement. The following are some of the key compliance settings views and columns:
 
-- **CI\_ID** column – Commonly used to join compliance settings views
+- **CI_ID** column – Commonly used to join compliance settings views
 
-- **v\_ConfigurationItems** view - Used to retrieve information about the configuration items in the site.
+- **v_ConfigurationItems** view - Used to retrieve information about the configuration items in the site.
 
-- **v\_CategoryInfo** and **v\_LocalizedCIProperties** views - Often be used to retrieve additional information about the configuration items.
+- **v_CategoryInfo** and **v_LocalizedCIProperties** views - Often be used to retrieve additional information about the configuration items.
 
-- **AssignmentID** column and the **v\_CIAssignment** view - Used to retrieve information about the configuration item deployments.
+- **AssignmentID** column and the **v_CIAssignment** view - Used to retrieve information about the configuration item deployments.
 
-- **v\_CIAssignmentToCI** view - Can be used as the link between the **v\_ConfigurationItems** and **v\_CIAssignment** views.
+- **v_CIAssignmentToCI** view - Can be used as the link between the **v_ConfigurationItems** and **v_CIAssignment** views.
 
-- **v\_CIAssignmentTargetedMachines** view - can be used as the link between the **v\_CIAssignment** view and the views that contain resource information, such as the **v\_R\_System** view.
+- **v_CIAssignmentTargetedMachines** view - can be used as the link between the **v_CIAssignment** view and the views that contain resource information, such as the **v_R_System** view.
 
 The compliance settings views are described in this section.
 
@@ -346,9 +346,9 @@ This view can be joined to other views by using the **AssignmentID** column.
 Lists summary information for deployed configuration items, including the summarization time, success and failure statistics, requirements not met, and more.
 This view can be joined to other views by using the **AssignmentID** column.
 
-## Compliance Settings Status Views
+## Compliance settings status views
 
-The compliance settings status views contain information about the compliance, evaluation, and enforcement state of configuration items. For more information about the status views, see [Status and Alert Views in Configuration Manager](https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/dn581980(v=technet.10)). The status views that contain compliance settings information are described in this section.
+The compliance settings status views contain information about the compliance, evaluation, and enforcement state of configuration items. For more information about the status views, see [Status and alert views in Configuration Manager](status-alert-views-configuration-manager.md). The status views that contain compliance settings information are described in this section.
 
 ### v_CIAssignmentStatus
 
@@ -375,9 +375,9 @@ The view can be joined to other views by using the **CI_ID**, **ResourceID**, **
 Lists all possible compliance settings client states.
 It is unlikely that this view will be joined to other views.
 
-## Compliance Settings Status Summarizer Views
+## Compliance settings status summarizer views
 
-The compliance settings status summarizer views provide summary information for configuration item deployments and configuration baselines. For more information about the status summarizer views, see [Status and Alert Views in Configuration Manager](https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/dn581980(v=technet.10)). The status summarizer views that contain compliance settings information are described in this section.
+The compliance settings status summarizer views provide summary information for configuration item deployments and configuration baselines. For more information about the status summarizer views, see [Status and alert views in Configuration Manager](status-alert-views-configuration-manager.md). The status summarizer views that contain compliance settings information are described in this section.
 
 ### v_AssignmentSummaryPerTopic
 
@@ -392,6 +392,6 @@ The view can be joined to other views by using the **AssignmentID** column.
 Lists the compliance settings configuration baselines, by **CI_ID**, and the count of Configuration Manager client devices that have been targeted, how many clients are compliant, how many have failed the compliance evaluation, how many are noncompliant, and more.
 The view can be joined to other views by using the **CI_ID** and **CI_UniqueID** columns.
 
-## See Also
+## See also
 
-[SQL Server Views in Configuration Manager](sql-server-views-configuration-manager.md)  
+[SQL Server views in Configuration Manager](sql-server-views-configuration-manager.md)  

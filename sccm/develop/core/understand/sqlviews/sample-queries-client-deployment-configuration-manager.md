@@ -1,5 +1,5 @@
 ﻿---
-title: Sample Queries for Client Deployment
+title: Sample queries for client deployment
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join the most common client deployment views to other views.
 ms.date: 04/30/2019
@@ -13,13 +13,13 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Sample Queries for Client Deployment in Configuration Manager
+# Sample queries for client deployment in Configuration Manager
 
 The following sample queries demonstrate how to join the most common client deployment views to other views.
 
 The following sample query demonstrates how to join client deployment views with other views. Client deployment views will most often use the **MachineID** column, which is the same as the **ResourceID** column in other views, and **NetBiosName** column when joining to other views.
 
-## Joining Client Deployment and Discovery Views
+## Joining client deployment and discovery views
 
 This query retrieves the NetBIOS name for client computers that have provided client deployment status, the user name, assigned site, time of last state message, and state name. The results are sorted by deployment state and then NetBIOS name. The query joins the **v_ClientDeploymentState** client deployment view with the **v_R_System** discovery view by using the **ResourceID** column, and the **v_ClientDeployment** view with the **v_StateNames** status view by using the **LastMessageStateID** and **StateID** columns, respectively. The retrieved information is filtered by the topic type of **800**, which includes only state messages for client deployment.
 
@@ -36,6 +36,6 @@ This query retrieves the NetBIOS name for client computers that have provided cl
     ORDER BY State, Computer 
 ```
 
-## See Also
+## See also
 
-[Client Deployment Views in Configuration Manager](client-deployment-views-configuration-manager.md)
+[Client deployment views in Configuration Manager](client-deployment-views-configuration-manager.md)

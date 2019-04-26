@@ -1,5 +1,5 @@
 ﻿---
-title: Asset Intelligence Views
+title: Asset intelligence views
 titleSuffix: Configuration Manager
 description: Information about software applications that are in use throughout the Configuration Manager hierarchy.
 ms.date: 04/30/2019
@@ -13,17 +13,17 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Asset Intelligence Views in Configuration Manager
+# Asset intelligence views in Configuration Manager
 
 The Asset Intelligence views in Configuration Manager contain information about software applications that are in use throughout the Configuration Manager hierarchy, software license management in the enterprise, Asset Intelligence configuration settings, and so on. The Asset Intelligence information is retrieved from clients only after the specific reporting classes have been enabled. By default, the Asset Intelligence reporting classes are disabled, and until the classes are enabled and Configuration Manager clients collect hardware inventory, these views will not contain any information. Other Asset Intelligence views contain information from the Asset Intelligence catalog, summary information, and product licensing information. There are external dependencies and dependencies within the product that should be considered before implementing Asset Intelligence or using the SQL views.
 
-For information about the Asset Intelligence prerequisites, see [Prerequisites for Asset Intelligence in Configuration Manager](https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/gg712306(v%3dtechnet.10)) in the Configuration Manager Documentation Library.
+For information about the Asset Intelligence prerequisites, see [Prerequisites for asset intelligence in Configuration Manager](/sccm/core/clients/manage/asset-intelligence/prerequisites-for-asset-intelligence) in the Configuration Manager Documentation Library.
 
-For the step-by-step procedure for enabling Asset Intelligence, see [Configuring Asset Intelligence in Configuration Manager](https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/gg712322(v%3dtechnet.10)) in the Configuration Manager Documentation Library.
+For the step-by-step procedure for enabling Asset Intelligence, see [Configuring asset intelligence in Configuration Manager](/sccm/core/clients/manage/asset-intelligence/configuring-asset-intelligence) in the Configuration Manager Documentation Library.
 
 The following sections provide detailed information about Asset Intelligence views, Asset Intelligence hardware inventory views, and Asset Intelligence status views.
 
-## Asset Intelligence Views
+## Asset intelligence views
 
 The Asset Intelligence views are described in this section.
 
@@ -117,7 +117,7 @@ The view can be joined to other views by using the **TagID** column, which is th
 Lists information about the licensed products contained in the Asset Intelligence catalog, by licensed product ID. This includes the family name, the product name, and the version code.
 It is unlikely that this view will be joined to other views.
 
-## Asset Intelligence Hardware Inventory Views
+## Asset intelligence hardware inventory views
 
 The Asset Intelligence hardware inventory views contain information that is retrieved from Configuration Manager client computers using hardware inventory. For more information about the hardware inventory views, see [Hardware Inventory Views in Configuration Manager](hardware-inventory-views-configuration-manager.md). The hardware inventory views that contain Asset Intelligence information are described in this section.
  
@@ -186,15 +186,15 @@ The view can be joined with other views by using the **ResourceID** column.
 Lists information about the USB devices found on Configuration Manager clients through Asset Intelligence.
 The view can be joined with other views by using the **ResourceID** column.
 
-## Asset Intelligence Status View
+## Asset intelligence status view
 
-The Asset Intelligence status view contains summary information about the software applications on Configuration Manager clients. For more information about status views, see [Status and Alert Views in Configuration Manager](https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/dn581980(v%3dtechnet.10)). The status view that contains Asset Intelligence information is described in this section.
+The Asset Intelligence status view contains summary information about the software applications on Configuration Manager clients. For more information about status views, see [Status and alert views in Configuration Manager](status-alert-views-configuration-manager.md). The status view that contains Asset Intelligence information is described in this section.
  
 ### v_INSTALLED_SOFTWARE_DATA_Summary
 
 Lists the count of the installed software applications on Configuration Manager clients found through Asset Intelligence. This view contains the same source information as the **v_GS_INSTALLED_SOFTWARE** view, but it provides summary information instead of listing the individual system resources.
 It is unlikely that this view will be joined to other views.
 
-## See Also
+## See also
 
-[SQL Server Views in Configuration Manager](sql-server-views-configuration-manager.md)  
+[SQL Server views in Configuration Manager](sql-server-views-configuration-manager.md)  

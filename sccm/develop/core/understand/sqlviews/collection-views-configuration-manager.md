@@ -1,5 +1,5 @@
 ﻿---
-title: Collection Views
+title: Collection views
 titleSuffix: Configuration Manager
 description: Information about the collections, collection rules, and collection members.
 ms.date: 04/30/2019
@@ -13,7 +13,7 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Collection Views in Configuration Manager
+# Collection views in Configuration Manager
 
 Collection views contain information about the collections, collection rules, and collection members. Many of the collection views are useful when creating reports on site data, software update deployments, application deployments, and compliance settings.
 
@@ -23,7 +23,7 @@ The two types of collection views are as follows:
 
 - The second type of collection view has a name that starts with **v\_** and contains general information about the collections but not the member resources within each collection.
 
-## Collection Views
+## Collection views
 
 The collection views are described in this section.
 
@@ -87,6 +87,6 @@ Lists all collections by collection ID and collection name. Also contains furthe
 
 The view can be joined to other views by using the **CollectionID** column.
 
-## See Also
+## See also
 
-[SQL Server Views in Configuration Manager](sql-server-views-configuration-manager.md)  
+[SQL Server views in Configuration Manager](sql-server-views-configuration-manager.md)  

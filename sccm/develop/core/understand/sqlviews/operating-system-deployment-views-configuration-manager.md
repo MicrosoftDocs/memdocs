@@ -1,5 +1,5 @@
 ﻿---
-title: Operating System Deployment Views
+title: Operating system deployment views
 titleSuffix: Configuration Manager
 description: Information about boot image packages, computer association state migrations, and operating system image packages.
 ms.date: 04/30/2019
@@ -13,13 +13,13 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Operating System Deployment Views in Configuration Manager
+# Operating system deployment views in Configuration Manager
 
 The Configuration Manager operating system deployment views contain information about boot image packages, computer association state migrations, operating system image packages, task sequences, driver packages, and so on. There is also a status view that contains information about the status of task sequence steps.
 
 The following sections provide detailed information about operating system deployment views and operating system deployment status views.
 
-## Operating System Deployment Views
+## Operating system deployment views
 
 The operating system deployment views are described in this section.
 
@@ -100,13 +100,13 @@ This view can be joined to other views by using the **PackageID** column.
 
 ## Operating System Deployment Status View
 
-The operating system deployment status view contains status information for operating system deployment task sequence steps. For more information about the status views, see [Status and Alert Views in Configuration Manager](status-alert-views-configuration-manager.md). The status view that contains operating system deployment information is described in this section.
+The operating system deployment status view contains status information for operating system deployment task sequence steps. For more information about the status views, see [Status and alert views in Configuration Manager](status-alert-views-configuration-manager.md). The status view that contains operating system deployment information is described in this section.
 
 ### v_TaskExecutionStatus
 
 Lists the status for operating system deployment task sequence steps, as well as the advertisement ID, resource ID, action name, and so on.
 The view can be joined to other views by using the **AdvertisementID** or **ResourceID** columns.
 
-## See Also
+## See also
 
-[SQL Server Views in Configuration Manager](sql-server-views-configuration-manager.md)  
+[SQL Server views in Configuration Manager](sql-server-views-configuration-manager.md)  

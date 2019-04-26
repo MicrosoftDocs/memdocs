@@ -1,5 +1,5 @@
 ﻿---
-title: Content Management Views
+title: Content management views
 titleSuffix: Configuration Manager
 description: Provides the tools for you to manage content files for applications, packages, software updates, and operating system deployment.
 ms.date: 04/30/2019
@@ -13,11 +13,11 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Content Management Views in Configuration Manager
+# Content management views in Configuration Manager
 
 Content management in Configuration Manager provides the tools for you to manage content files for applications, packages, software updates, and operating system deployment.
 
-## Content Management Views
+## Content management views
 
 The content management views are described in the following table.
 
@@ -120,6 +120,6 @@ This view can be joined to other views by using the **Content_ID** column.
 Lists all distribution point groups in the site hierarchy by **GroupID**. Contains the name of the distribution point group, who created it and when, the number of distribution points in the group and more.
 It's unlikely that this view will be joined to other views.
 
-## See Also
+## See also
 
-[SQL Server Views in Configuration Manager](sql-server-views-configuration-manager.md)  
+[SQL Server views in Configuration Manager](sql-server-views-configuration-manager.md)  

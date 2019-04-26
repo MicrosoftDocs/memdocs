@@ -1,5 +1,5 @@
 ﻿---
-title: Client Deployment Views
+title: Client deployment views
 titleSuffix: Configuration Manager
 description: Views that contain information about the deployment state of Configuration Manager client computers and devices.
 ms.date: 04/30/2019
@@ -13,11 +13,11 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Client Deployment Views in Configuration Manager
+# Client deployment views in Configuration Manager
 
-There are no primary client deployment views, but there are status views that contain information about the deployment state of Configuration Manager client computers and devices. For more information about the status views, see [Status and Alert Views in Configuration Manager](https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/dn581980(v%3dtechnet.10)). The status views that contain client deployment information are described in this section.
+There are no primary client deployment views, but there are status views that contain information about the deployment state of Configuration Manager client computers and devices. For more information about the status views, see [Status and alert views in Configuration Manager](status-alert-views-configuration-manager.md). The status views that contain client deployment information are described in this section.
 
-## Client Deployment Views
+## Client deployment views
 
 ### v_ClientDeploymentState
 
@@ -26,7 +26,7 @@ The view can be joined to other views by using the **SMSID**, **FQDN**, **NetBio
  
 ### v_DeviceClientDeploymentState
 
-Lists all Configuration Manager mobile device clients that are enrolled by Configuration Manager, by device client ID, NetBIOS name, and device ID, and the last device deployment state reported, as well as the assigned site code, device client version, and so on. This status view is also listed and described in the [Mobile Device Management Views in Configuration Manager](https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/dn581929(v%3dtechnet.10))
+Lists all Configuration Manager mobile device clients that are enrolled by Configuration Manager, by device client ID, NetBIOS name, and device ID, and the last device deployment state reported, as well as the assigned site code, device client version, and so on. This status view is also listed and described in the [Mobile device management views in Configuration Manager](mobile-device-management-views-configuration-manager.md)
  topic.
 The view can be joined to other views by using the **DeviceClientID**, **DeviceNetBiosName**, and **DeviceDeploymentState** columns. The **DeviceDeploymentState** column contains the state ID for topic type 800. The **DeviceClientID** column contains the same information as the **SMS_Unique_Identifier0** column in the **v_R_System** view. The Configuration Manager states are listed in the **v_StateNames** view.
  
@@ -40,7 +40,7 @@ This view can be joined to other views by using the **MachineID** column.
 Lists information about client push attempts to install the client on computers. Includes the computer name, when the last attempt to install the client occurred, the assigned site code, the number of attempts made, and the current status.
 This view can be joined to other views by using the **MachineID** column.
 
-## Client Notification Views
+## Client notification views
 
 Client notification in Configuration Manager lets some client operations be performed as soon as possible, instead of during the usual client policy polling interval. For example, you can use the client management task **Download Computer Policy** to instruct computers to download policy as soon as possible. Additionally, you can start some actions for Endpoint Protection, such as a malware scan of a client.
 
@@ -101,6 +101,6 @@ It is unlikely that this view will be joined to other views.
 Lists information about the computers on which client notification actions took place.
 This view can be joined to other views by using the **MachineID** column.
 
-## See Also
+## See also
 
-[SQL Server Views in Configuration Manager](sql-server-views-configuration-manager.md)  
+[SQL Server views in Configuration Manager](sql-server-views-configuration-manager.md)  
