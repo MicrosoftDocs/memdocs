@@ -2,7 +2,7 @@
 title: Connect Configuration Manager
 titleSuffix: Configuration Manager
 description: A how-to guide for connecting Configuration Manager with Desktop Analytics.
-ms.date: 04/05/2019
+ms.date: 04/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -50,23 +50,30 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
   
    Select **Next**.  
 
-3. On the **App** page, select the appropriate **Azure environment**. Then select **Import** for the web app. Configure the following settings in the **Import Apps** window:  
+3. On the **App** page, select the appropriate **Azure environment**. Then select **Browse** for the web app.  
 
-    - **Azure AD Tenant Name**: This name is how it's named in Configuration Manager  
+4. If you have an existing app that you want to reuse for this service, choose it from the list, and select **OK**.  
 
-    - **Azure AD Tenant ID**: The **Directory ID** you copied from Azure AD  
+5. In most cases, you can create an app for the Desktop Analytics connection with this wizard. Select **Create**.<!-- 3572123 -->  
 
-    - **Client ID**: The **Application ID** you copied from the Azure AD app  
+    > [!Tip]  
+    > If you can't create the app from this wizard, you can manually create the app in Azure AD, and then import into Configuration Manager. For more information, see [Create and import app for Configuration Manager](/sccm/desktop-analytics/troubleshooting#create-and-import-app-for-configuration-manager).  
 
-    - **Secret Key**: The key **Value** you copied from the Azure AD app  
+6. Configure the following settings in the **Create Server Application** window:  
 
-    - **Secret Key Expiry**: The same expiration date of the key  
+    - **Application Name**: A friendly name for the app in Azure AD.
 
-    - **App ID URI**: This setting should automatically populate with the following value: `https://cmmicrosvc.manage.microsoft.com/`  
-  
-   Select **Verify**, and then select **OK** to close the Import Apps window. Select **Next** on the App page of the Azure Services Wizard.  
+    - **HomePage URL**: This value isn't used by Configuration Manager, but required by Azure AD. By default this value is `https://ConfigMgrService`.  
 
-4. On the **Diagnostic Data** page, configure the following settings:  
+    - **App ID URI**: This value needs to be unique in your Azure AD tenant. It's in the access token used by the Configuration Manager client to request access to the service. By default this value is `https://ConfigMgrService`.  
+
+    - **Secret Key validity period**: choose either **1 year** or **2 years** from the drop-down list. One year is the default value.  
+
+    Select **Sign in** to authenticate to Azure as an administrative user. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager, and doesn't need to be the same account that runs the Azure Services Wizard. After successfully authenticating to Azure, the page shows the **Azure AD Tenant Name** for reference.
+
+    Select **OK** to create the web app in Azure AD and close the Create Server Application dialog. On the Server App dialog, select **OK**. Then select **Next** on the App page of the Azure Services Wizard.  
+
+7. On the **Diagnostic Data** page, configure the following settings:  
 
     - **Commercial ID**: this value should automatically populate with your organization's ID. If it doesn't, make sure your proxy server is configured to whitelist all required [endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints) before continuing. Alternatively, retrieve your Commercial ID from the **Connected Services** pane in the [Desktop Analytics portal](https://aka.ms/m365aprod).  
 
@@ -81,7 +88,7 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
 
     ![Example Available Functionality page in the Azure Services Wizard](media/available-functionality.png)
 
-5. On the **Collections** page, configure the following settings:  
+8. On the **Collections** page, configure the following settings:  
 
     - **Display name**: The Desktop Analytics portal displays this Configuration Manager connection using this name. Use it to differentiate between different hierarchies. For example, *test lab* or *production*.  
 
@@ -96,7 +103,7 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
         > [!Important]  
         > Make sure to limit these additional collections on the target collection. On the properties of these additional collections, the **Limiting collection** should be the same collection as the Desktop Analytics **Target collection**.<!-- 4097528 -->  
 
-6. Complete the wizard.  
+9. Complete the wizard.  
 
 Configuration Manager creates a settings policy to configure devices in the Target Collection. This policy includes the diagnostic data settings to enable devices to send data to Microsoft. By default, clients update policy every hour. After receiving the new settings, it can be several hours more before the data is available in Desktop Analytics.
 

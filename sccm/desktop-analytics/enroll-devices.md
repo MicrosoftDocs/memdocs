@@ -2,7 +2,7 @@
 title: Enroll devices in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn how to enroll devices in Desktop Analytics.
-ms.date: 04/05/2019
+ms.date: 04/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -76,7 +76,7 @@ For the best experience, install the following updates depending upon the OS ver
 > When you install these updates, expect the following behaviors:
 > 
 > - Devices that you enroll to Desktop Analytics show up in the service in less than an hour  
-> - Devices quickly report the status on feature and quality updates for Windows and Office  
+> - Devices quickly report the status on Windows feature and quality updates  
 >
 > Without these updates, these processes can take over 48 hours for a device to report to Desktop Analytics.  
 
@@ -162,7 +162,7 @@ View these settings in the group policy editor at the following path: **Computer
 
 ### Device name
 
-Starting in Windows 10, version 1803, the device name is no longer collected by default. Collecting the device name with the diagnostic data requires a separate opt-in. Without the device name, it's more difficult for you to identify what devices require attention while evaluating an upgrade to a new version of Windows or Office.
+Starting in Windows 10, version 1803, the device name is no longer collected by default. Collecting the device name with the diagnostic data requires a separate opt-in. Without the device name, it's more difficult for you to identify what devices require attention while evaluating an upgrade to a new version of Windows.
 
 If you don't send the device name, it appears in Desktop Analytics as "Unknown".
 
