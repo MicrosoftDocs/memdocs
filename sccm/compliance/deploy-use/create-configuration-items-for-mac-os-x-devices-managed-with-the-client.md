@@ -163,4 +163,4 @@ Use the System Center Configuration Manager**Mac OS X (custom)** configuration i
     If you now want to add this configuration item to a configuration baseline, see [How to create configuration baselines in System Center Configuration Manager](../../compliance/deploy-use/create-configuration-baselines.md).  
   
 ## See Also  
- [Configuration items for devices managed with the System Center Configuration Manager client](../../compliance/deploy-use/configuration-items-for-devices-managed-with-the-client.md)
+ [Configuration items for devices managed with the System Center Configuration Manager client](../../compliance/deploy-use/create-configuration-items.md)

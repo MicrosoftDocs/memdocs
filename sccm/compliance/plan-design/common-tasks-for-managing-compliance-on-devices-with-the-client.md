@@ -2,7 +2,7 @@
 title: "Common compliance management tasks for client-managed devices "
 titleSuffix: "Configuration Manager"
 description: "Learn about System Center Configuration Manager compliance settings by working through some common scenarios."
-ms.date: 10/06/2016
+ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -18,7 +18,7 @@ ms.collection: M365-identity-device-management
 
 The scenarios in this topic give you an introduction to using System Center Configuration Manager compliance settings by working through some common scenarios you might encounter.  
 
- If you are already familiar with compliance settings, detailed documentation about all the features you use can be found in the [Configuration items for devices managed with the System Center Configuration Manager client](../../compliance/deploy-use/configuration-items-for-devices-managed-with-the-client.md) section.  
+ If you are already familiar with compliance settings, detailed documentation about all the features you use can be found in the [Configuration items for devices managed with the System Center Configuration Manager client](../../compliance/deploy-use/create-configuration-items.md) section.  
 
  Before you start, read [Get started with compliance settings](../../compliance/get-started/get-started-with-compliance-settings.md) to learn some basics about compliance settings, and also read [Plan for and configure compliance settings](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md) to implement any necessary prerequisites.  
 

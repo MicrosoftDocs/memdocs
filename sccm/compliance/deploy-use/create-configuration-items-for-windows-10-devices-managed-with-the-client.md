@@ -2,7 +2,7 @@
 title: "Create configuration items for client-managed Windows 10 "
 titleSuffix: "Configuration Manager"
 description: "Use the System Center Configuration Manager Windows 10 configuration item to manage settings for Windows 10 computers that are managed by the Configuration Manager client."
-ms.date: 03/28/2017
+ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -127,4 +127,4 @@ Windows Information Protection (formerly Enterprise data protection) helps to pr
 For information about how to configure Windows Information protection with Configuration Manager, see [Protect your enterprise data using Windows Information Protection (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
   
 ## See Also  
- [Configuration items for devices managed with the System Center Configuration Manager client](../../compliance/deploy-use/configuration-items-for-devices-managed-with-the-client.md)
+ [Configuration items for devices managed with the System Center Configuration Manager client](../../compliance/deploy-use/create-configuration-items.md)

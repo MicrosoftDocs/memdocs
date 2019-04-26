@@ -1,3 +1,4 @@
+- name: Device compliance
 - name: Understand and explore
   items:
   - name: Ensure device compliance
@@ -37,7 +38,6 @@
     - name: Create configuration items overview
       href: deploy-use/create-configuration-items.md
     - name: Devices managed with the Configuration Manager client
-      href: deploy-use/configuration-items-for-devices-managed-with-the-client.md
       items:
       - name: Windows 10
         href: deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md
