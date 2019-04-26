@@ -467,11 +467,11 @@ A query times out after one hour. For example, a collection has 500 devices, and
  - Scripts.log
  - StateMessage.log
 
-For more information, see [Log files](/sccm/core/plan-design/hierarchy/log-files) and [Troubleshooting CMPivot](/sccm/core/servers/manage/cmpivot-tsg.md).
+For more information, see [Log files](/sccm/core/plan-design/hierarchy/log-files) and [Troubleshooting CMPivot](/sccm/core/servers/manage/cmpivot-tsg).
 
 ## Next steps
  
-[Troubleshooting CMPivot](/sccm/core/servers/manage/cmpivot-tsg.md)
+[Troubleshooting CMPivot](/sccm/core/servers/manage/cmpivot-tsg)
 
 [Create and run PowerShell scripts](/sccm/apps/deploy-use/create-deploy-scripts)
 
