@@ -2,7 +2,7 @@
 title: Desktop Analytics data privacy
 titleSuffix: Configuration Manager
 description: Desktop Analytics is committed to customer data privacy
-ms.date: 01/25/2019
+ms.date: 04/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -46,33 +46,14 @@ The following illustration shows how diagnostic data flows from individual devic
 
     4. You deploy compatibility updates to all target devices. Optionally, you deploy the App Health Analyzer and Office Readiness Toolkit to a representative set of devices. These tools provide further insights on custom line of business applications and Office macros.  
 
-3. Devices send diagnostic data to the Microsoft Diagnostic Data Management services for Windows and Office. This service is hosted in the United States.  
+3. Devices send diagnostic data to the Microsoft Diagnostic Data Management service for Windows. This service is hosted in the United States.  
 
-4. Each day, Microsoft produces a snapshot of IT-focused insights. This snapshot combines the diagnostic data from Windows and Office with your input for the enrolled devices. This process happens in transient storage, which is only used by Desktop Analytics. The transient storage is hosted in Microsoft data centers in the United States. The snapshots are segregated by commercial ID.  
+4. Each day, Microsoft produces a snapshot of IT-focused insights. This snapshot combines the diagnostic data from Windows with your input for the enrolled devices. This process happens in transient storage, which is only used by Desktop Analytics. The transient storage is hosted in Microsoft data centers in the United States. The snapshots are segregated by commercial ID.  
 
 5. The snapshots are then copied to the appropriate Azure Log Analytics workspace.  
 
 6. Desktop Analytics stores your input in Azure Log Analytics storage. These configurations include deployment plans, and asset decisions for upgrade and importance.  
 
-
-<!-- ![Diagram illustrating flow of diagnostic data from devices](media/wa-data-flow-v1.png)
-
-1. Devices send diagnostic data to the Microsoft Diagnostic Data Management service. This service is hosted in the United States.  
-
-2. Set up and enrollment  
-
-    1. You create an Azure Log Analytics workspace when you set up Desktop Analytics. You choose the location and copy the commercial ID. This ID identifies your workspace.  
-    
-    2. When you connect Configuration Manager to Desktop Analytics, it sets the commercial ID on the devices in your target collection. This configuration specifies the devices to appear in your workspace.  
-
-3. Each day Microsoft produces a "snapshot" of IT-focused insights for each workspace in the Diagnostic Data Management service.  
-
-4. These snapshots are copied to transient storage, which is only used by Desktop Analytics. The transient storage is hosted in Microsoft data centers in the United States. The snapshots are segregated by commercial ID.  
-
-5. The snapshots are then copied to the appropriate Azure Log Analytics workspace.  
-
-6. Desktop Analytics stores your configurations in Analytics Azure storage. These configurations include deployment plans and asset upgrade decisions.  
--->
 
 
 ## Other resources
@@ -104,12 +85,11 @@ For more information about related privacy aspects, see the following articles:
 ## FAQ
 
 ### Can Desktop Analytics be used without a direct client connection to the Microsoft Data Management Service?
-No, the entire service is powered by Windows diagnostic data, which requires that devices have this direct connectivity.
 
+No, the entire service is powered by Windows diagnostic data, which requires that devices have this direct connectivity.
 
 ### Can I choose the data center location?
 
 For Azure Log Analytics: Yes, when you set up Desktop Analytics and create the Log Analytics workspace.
 
 For the Microsoft Data Management Service and Analytics Azure Storage: No, these two services are hosted in the United States.
-

@@ -1,36 +1,36 @@
 ---
-title: Tutorial - Deploy Office 365
+title: Tutorial - Deploy Windows 10
 titleSuffix: Configuration Manager
-description: A tutorial on using Desktop Analytics and Configuration Manager to deploy Office 365 to a pilot group.
-ms.date: 04/15/2019
+description: A tutorial on using Desktop Analytics and Configuration Manager to deploy Windows 10 to a pilot group.
+ms.date: 04/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: tutorial
-ms.assetid: 0b2b633a-91d7-4497-8c2a-1fc7aa310bb1
+ms.assetid: 3e82cd96-0ce0-474a-a597-d65fceadc95a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-#Customer intent: As an IT Pro, I want to use Desktop Analytics to intelligently pilot Office 365 so that I can understand the best devices to start with getting current with Office.
+#Customer intent: As an IT Pro, I want to use Desktop Analytics to intelligently pilot Windows 10 so that I can understand the best devices to start with getting current with Windows.
 ms.collection: M365-identity-device-management
 ---
 
-# Tutorial: Deploy Office 365 to pilot
+# Tutorial: Deploy Windows 10 to pilot
 
 > [!Note]  
 > This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
 
-This tutorial uses Desktop Analytics and Configuration Manager to deploy Office 365 ProPlus to a pilot group. It highlights the integration of the cloud service to deliver insights to deploy the app with the on-premises product. Use Desktop Analytics to determine the best devices to put in a pilot group. Then use Configuration Manager to get current with Office.
+This tutorial uses Desktop Analytics and Configuration Manager to deploy Windows 10 to a pilot group. It highlights the integration of the cloud service to deliver insights to deploy Windows with the on-premises product. Use Desktop Analytics to determine the best devices to put in a pilot group. Then use Configuration Manager to get current with Windows.
 
 In this tutorial, you learn how to:  
 
 > [!div class="checklist"]  
 > * Set up Desktop Analytics in the Azure portal  
 > * Connect Configuration Manager and configure device settings  
-> * Create a Desktop Analytics deployment plan for Office 365 ProPlus  
-> * Deploy Office 365 ProPlus in Configuration Manager to the pilot group  
+> * Create a Desktop Analytics deployment plan for Windows 10  
+> * Use Configuration Manager to deploy Windows 10 to the pilot group  
 
-If you don’t have an Azure subscription, create a [free account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) before you begin. When configured properly, use of Desktop Analytics doesn't incur any Azure cost.
+If you don’t have an Azure subscription, create a [free account](https://azure.microsoft.com/free) before you begin. When configured properly, use of Desktop Analytics doesn't incur any Azure cost.
 
 Desktop Analytics uses a *Log Analytics workspace* in your Azure subscription. A workspace is essentially a container that includes account information and simple configuration information for the account. For more information, see [Manage workspaces](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor/toc.json).
 
@@ -41,20 +41,20 @@ Desktop Analytics uses a *Log Analytics workspace* in your Azure subscription. A
 Before you start this tutorial, make sure you have the following prerequisites:  
 
 - An active Azure subscription, with **Company Admin** permissions  
-    
+
     For more information, see [Desktop Analytics prerequisites](/sccm/desktop-analytics/overview#prerequisites).
 
-- Configuration Manager, version 1810 with Update Rollup 4488598 or later, with **Full administrator** role  
+- Configuration Manager, version 1810 with update rollup 2 (4488598) or later, with **Full administrator** role  
+
+- Installation media for the latest version of Windows 10
 
 - At least one Windows 10 device with the following configurations:  
 
-    - Windows 10, version 1709, or later
+    - Windows 10, version 1709 or later, but less than the version of the installation media you plan to use
 
     - The latest Windows 10 cumulative quality update  
 
-    - Configuration Manager client version 1810 with update rollup 4486457 or later  
-
-    - A Windows installer-based version of Office, such as Office 2013  
+    - Configuration Manager client version 1810 with update rollup 2 (4488598) or later  
 
 - Business approval to configure Windows diagnostic data level to **Enhanced (Limited)** on the pilot devices  
 
@@ -78,11 +78,8 @@ Before you start this tutorial, make sure you have the following prerequisites:
     - `https://kmwatsonc.events.data.microsoft.com`  
     - `https://oca.telemetry.microsoft.com`  
     - `https://login.live.com`  
-    - `https://nexusrules.officeapps.live.com`  
-    - `https://nexus.officeapps.live.com`  
-    - `https://office.pipe.aria.microsoft.com`  
-    - `https://graph.windows.net` (on Configuration Manager Server role only)
-    - `https://fef.msua06.manage.microsoft.com` (on Configuration Manager Server role only)
+    - `https://graph.windows.net` (on Configuration Manager server role only)
+    - `https://fef.msua06.manage.microsoft.com` (on Configuration Manager server role only)
 
     For more information, see [How to enable data sharing for Desktop Analytics](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
 
@@ -117,11 +114,12 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
         To add a user to either group, type their name or e-mail address in the **Enter name or email address** section of the appropriate group. When finished, select **Next**.
 
-The following step can be completed by a **Workspace Owner** or **contributor**. 
-
 5. On the page to **Set up your workspace**:  
 
-    - Select your Azure subscription. 
+    > [!Note]  
+    > Complete this step as a **Workspace Owner** or **contributor**. For more information, see [prerequisites](/sccm/desktop-analytics/overview#prerequisites).  
+
+    - Select your Azure subscription.  
 
     - To use an existing workspace for Desktop Analytics, select it, and continue with the next step.  
 
@@ -144,55 +142,14 @@ The following step can be completed by a **Workspace Owner** or **contributor**.
 9. On the **Last steps** page, select **Go to Desktop Analytics**. The Azure portal shows the Desktop Analytics **Home** page.  
 
 
-### Create an app in Azure AD for Configuration Manager  
-
-1. Open the [Azure portal](http://portal.azure.com) as a user with Company Admin permissions, go to **Azure Active Directory**, and select **App registrations**. Then select **New application registration**.  
-
-2. In the **Create** panel, configure the following settings:  
-
-    - **Name**: a unique name that identifies the app, for example: `Desktop-Analytics-Connection`  
-
-    - **Application type**: **Web app / API**  
-
-    - **Sign-on URL**: this value isn't used by Configuration Manager, but required by Azure AD. Enter a unique and valid URL, for example: `https://configmgrapp`  
-  
-    Select **Create**.  
-
-3. Select the app, and note the **Application ID**. This value is a GUID that's used to configure the Configuration Manager connection.  
-
-4. Select **Settings** on the app, and then select **Keys**. In the **Passwords** section, enter a **Key description**, specify an expiration **Duration**, and then select **Save**. Copy the **Value** of the key, which is used to configure the Configuration Manager connection.
-
-    > [!Important]  
-    > This is the only opportunity to copy the key value. If you don't copy it now, you need to create another key.  
-    >
-    > Save the key value in a secure location.  
-
-5. On the app **Settings** panel, select **Required permissions**.  
-
-    1. On the **Required permissions** panel, select **Add**.  
-
-    2. In the **Add API access** panel, **Select an API**.  
-
-    3. Search for the **Configuration Manager Microservice** API. Select it, and then choose **Select**.  
-
-    4. On the **Enable Access** panel, select both of the application permissions: **Write CM Collection Data** and **Read CM Collection Data**. Then choose **Select**.  
-
-    5. On the **Add API access** panel, select **Done**.  
-
-6. On the **Required permissions** page, select **Grant permissions**. Select **Yes**.  
-
-7. Copy the Azure AD tenant ID. This value is a GUID that's used to configure the Configuration Manager connection. Select **Azure Active Directory** in the main menu, and then select **Properties**. Copy the **Directory ID** value.  
-
-
 
 ## Connect Configuration Manager
 
 Use this procedure to update Configuration Manager, connect to Desktop Analytics, and configure device settings. This procedure is a one-time process to attach your hierarchy to the cloud service.  
 
-
 ### Update Configuration Manager
 
-Install the Configuration Manager version 1810 update rollup (4486457) to support integration with Desktop Analytics. For more information on this update, see [Update rollup for Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4486457).
+Install the Configuration Manager version 1810 update rollup 2 (4488598) to support integration with Desktop Analytics. For more information on this update, see [Update rollup for Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4488598).
 
 1. Update the site with the update rollup for version 1810. For more information, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates).  
 
@@ -213,23 +170,25 @@ Install the Configuration Manager version 1810 update rollup (4486457) to suppor
   
    Select **Next**.  
 
-3. On the **App** page, select the appropriate **Azure environment**. Then select **Import** for the web app. Configure the following settings in the **Import Apps** window:  
+3. On the **App** page, select the appropriate **Azure environment**. Then select **Browse** for the web app.
 
-    - **Azure AD Tenant Name**: This name is how it's named in Configuration Manager  
+4. Select **Create** to easily add an Azure AD app for the Desktop Analytics connection.
 
-    - **Azure AD Tenant ID**: The **Directory ID** you copied from Azure AD  
+5. Configure the following settings in the **Create Server Application** window:  
 
-    - **Client ID**: The **Application ID** you copied from the Azure AD app  
+    - **Application Name**: A friendly name for the app in Azure AD.
 
-    - **Secret Key**: The key **Value** you copied from the Azure AD app  
+    - **HomePage URL**: This value isn't used by Configuration Manager, but required by Azure AD. By default this value is `https://ConfigMgrService`.  
 
-    - **Secret Key Expiry**: The same expiration date of the key   
+    - **App ID URI**: This value needs to be unique in your Azure AD tenant. It's in the access token used by the Configuration Manager client to request access to the service. By default this value is `https://ConfigMgrService`.  
 
-    - **App ID URI**: This setting should automatically populate with the following value: `https://cmmicrosvc.manage.microsoft.com/`  
-  
-   Select **Verify**, and then select **OK** to close the Import Apps window. Select **Next** on the App page of the Azure Services Wizard.  
+    - **Secret Key validity period**: choose either **1 year** or **2 years** from the drop-down list. One year is the default value.  
 
-4. On the **Diagnostic Data** page, configure the following settings:  
+    Select **Sign in** to authenticate to Azure as an administrative user. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager, and doesn't need to be the same account that runs the Azure Services Wizard. After successfully authenticating to Azure, the page shows the **Azure AD Tenant Name** for reference.
+
+    Select **OK** to create the web app in Azure AD and close the Create Server Application dialog. On the Server App dialog, select **OK**. Then select **Next** on the App page of the Azure Services Wizard.  
+
+6. On the **Diagnostic Data** page, configure the following settings:  
 
     - **Commercial ID**: this value should automatically populate with your organization's ID  
 
@@ -239,7 +198,7 @@ Install the Configuration Manager version 1810 update rollup (4486457) to suppor
   
    Select **Next**. The **Available functionality** page shows the Desktop Analytics functionality that's available with the diagnostic data settings from the previous page. Select **Next**.  
 
-5. On the **Collections** page, configure the following settings:  
+7. On the **Collections** page, configure the following settings:  
 
     - **Display name**: The Desktop Analytics portal displays this Configuration Manager connection using this name. Use it to differentiate between different hierarchies. For example, *test lab* or *production*.  
 
@@ -251,7 +210,7 @@ Install the Configuration Manager version 1810 update rollup (4486457) to suppor
 
         These collections continue to sync as their membership changes. For example, your deployment plan uses a collection with a Windows 7 membership rule. As those devices upgrade to Windows 10, and Configuration Manager evaluates the collection membership, those devices drop out of the collection and deployment plan.  
 
-6. Complete the wizard.  
+8. Complete the wizard.  
 
 Configuration Manager creates a settings policy to configure devices in the Target Collection. This policy includes the diagnostic data settings to enable devices to send data to Microsoft. By default, clients update policy every hour. After receiving the new settings, it can be several hours more before the data is available in Desktop Analytics.
 
@@ -273,23 +232,21 @@ Use this procedure to create a deployment plan in Desktop Analytics.
 
 4. In the **Create deployment plan** pane, configure the following settings:  
 
-    - **Name**: A unique name for the deployment plan, for example `Office 365 pilot`  
+    - **Name**: A unique name for the deployment plan, for example `Windows 10 pilot`  
 
-    - **Products and versions**: Select the **Office** product, and the latest available recommended version. For example, **Office 365 clients, version 1808 (recommended)**.  
+    - **Products and versions**: Select the **Windows** product, and the latest available recommended version. For example, **Windows 10, version 1809 (recommended)**.  
 
-    - **Device groups**: Select one or more groups, and then select **Set as Target Groups**. Groups with **sccm** as the source are collections synchronized from Configuration Manager.  
+    - **Device groups**: Select one or more groups from the Configuration Manager tab, and then select **Set as Target Groups**. These groups are collections synchronized from Configuration Manager.  
 
-    - **Readiness rules**: These rules help to determine which devices qualify for upgrade. Select **Office Applications** and configure the following settings:  
+    - **Readiness rules**: These rules help to determine which devices qualify for upgrade. Select **WIndows OS** and configure the following settings:  
 
-        - Update Office 365 ProPlus from 32-bit to 64-bit. This setting only applies to devices running a 64-bit version of Windows. The default setting is **Yes**.  
+        - **My computers automatically get drivers from Windows Update**: The default setting is **Off**, which is recommended when deploying with Configuration Manager.  
 
-        - When updating from an older version of Office, leave older deprecated Office apps. This behavior applies even if those apps don't exist in the newer version of Office. The default setting is **No**.  
+        - **Define a low install count threshold for your apps**: The default setting is `2%`. Apps below this threshold are automatically set to *Low install count*. Desktop Analytics doesn't validate these add-ins during the pilot.  
 
-        - Low install count threshold for your Office add-ins. The default threshold is `2%`. Add-ins below this threshold are automatically set to *Low install count*. Desktop Analytics doesn't validate these add-ins during the pilot. 
+            If an app is installed on a higher percentage of computers than this threshold, the deployment plan marks the app as *Noteworthy*. Then you can decide its importance to test during the pilot phase.  
 
-            If an add-in is installed on a higher percentage of computers than this threshold, the deployment plan marks the add-in as *Noteworthy*. Then you can decide its importance to test during the pilot phase.  
-
-    - **Completion date**: Choose the date by which Office should be fully deployed to all the targeted devices.  
+    - **Completion date**: Choose the date by which Windows should be fully deployed to all the targeted devices.  
 
 5. Select **Create**. The new plan appears in the list of deployment plans while its being processed. Processing can take up to 48 hours before you can proceed to the next step.  
 
@@ -297,11 +254,11 @@ Use this procedure to create a deployment plan in Desktop Analytics.
 
 7. On the deployment plan menu, in the **Prepare** group, select **Identify importance**.  
 
-    1. On the **Office Add-ins** tab, select to show only **Not Reviewed** assets.  
+    1. On the **Apps** tab, select to show only **Not Reviewed** assets.  
 
-    2. Select each add-in, and then select **Edit**. You can select more than one app to edit at the same time.  
+    2. Select each app, and then select **Edit**. You can select more than one app to edit at the same time.  
 
-    3. Choose an importance level from the **Importance** list. If you want Desktop Analytics to validate the add-in during the pilot, select **Critical** or **Important**. It doesn't validate add-ins marked as **Not Important**. Consider the compatibility risk and other plan insights when assigning importance levels.  
+    3. Choose an importance level from the **Importance** list. If you want Desktop Analytics to validate the app during the pilot, select **Critical** or **Important**. It doesn't validate apps marked as **Not Important**. Consider the compatibility risk and other plan insights when assigning importance levels.  
 
         When assigning importance levels, you can also choose the Upgrade decision.  
 
@@ -317,50 +274,87 @@ Use this procedure to create a deployment plan in Desktop Analytics.
 
 
 
-## Deploy Office 365 in Configuration Manager
+## Deploy Windows 10 in Configuration Manager
 
-Use this procedure to deploy Office 365 ProPlus in Configuration Manager to the pilot group.
+Use this procedure to deploy Windows 10 in Configuration Manager to the pilot group.
 
-- If you don't already have one, first [create an app for Office 365 ProPlus](#bkmk_create-app)  
+- If you don't already have one, first [create an OS upgrade package for Windows 10](#bkmk_create-package)  
 
-- [Deploy the app](#bkmk_deploy-app) using the Desktop Analytics deployment plan  
+- If you don't already have one, [create an OS upgrade task sequence for Windows 10](#bkmk_create-ts)  
 
-- [Install the app](#bkmk_install-app) from Software Center on a targeted device  
+- [Deploy the task sequence](#bkmk_deploy-ts) using the Desktop Analytics deployment plan  
+
+- [Install the task sequence](#bkmk_install-ts) from Software Center on a targeted device  
 
 <!-- 
-- [Monitor](#bkmk_monitor-app) status in Configuration Manager  
+- [Monitor](#bkmk_monitor-ts) status in Configuration Manager  
  -->
 
-### <a name="bkmk_create-app"></a> Create an app for Office 365 ProPlus
+### <a name="bkmk_create-package"></a> Create an OS upgrade package for Windows 10
 
-1. In the Configuration Manager console, go to the **Software Library**, and select the **Office 365 Client Management** node. Select the **Office 365 Installer** tile on the dashboard.  
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and then select the **Operating System Upgrade Packages** node.  
 
-2. On the **Application Settings** page, provide a **Name** for this application. For example, `Office 365 ProPlus`. Optionally specify a **Description**. Specify the **Content location** for the installation files, and then select **Next**.  
+2. On the **Home** tab of the ribbon, in the **Create** group, select **Add Operating System Upgrade Package**. This action starts the Add Operating System Upgrade Wizard.  
 
-3. On the **Office Settings** page, select **Go to the Office Customization Tool**. Configure any necessary deployment settings for your Office 365 installation:  
+3. On the **Data Source** page, specify the network **Path** to the installation source files of the OS upgrade package. For example, `\\server\share\path`.  
 
-    1. In the **Products and releases** group, select **Office 365 ProPlus** from the list, and select **Add**.  
+    > [!NOTE]  
+    > The installation source files contain setup.exe and other files and folders to install the OS.  
 
-    2. In the **Language** group, select the primary language.  
+4. On the **General** page, specify a unique **Name** for the OS upgrade package.  
 
-    3. In the **Update and upgrade** group, make sure the setting to **Uninstall any MSI version of Office, including Visio and Project** is **On**.  
+5. Complete the Add Operating System Upgrade Package Wizard.  
 
-    4. Configure any additional settings as needed by your organization.  
+#### Distribute content
 
-    5. When complete, select **Review** in the upper right corner. Review the configured settings, and then select **Submit**.  
+Next, distribute the OS upgrade package to distribution points.  
 
-4. Select **Next**. On the **Deployment** page, select **No** to deploy it now. (The next procedure uses the Desktop Analytics deployment plan for the deployment.) Select **Next** and complete the wizard.  
+1. Select the OS upgrade package in the list. On the **Home** tab of the ribbon, in the **Deployment** group, select **Distribute Content**. The Distribute Content Wizard opens.  
+
+2. On the **General** page, verify that the content listed is the content that you want to distribute, and then select **Next**.  
+
+3. On the **Content Destination** page, select **Add**, and choose **Distribution Point**. Select an existing distribution point, and then select **OK**. When you finish adding content destinations, select **Next**.  
+
+4. Complete the Distribute Content Wizard.  
 
 
-### <a name="bkmk_deploy-app"></a> Deploy Office 365 using the Desktop Analytics deployment plan
+### <a name="bkmk_create-ts"></a> Create an OS upgrade task sequence for Windows 10
+
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and then select **Task Sequences**.  
+
+2. On the **Home** tab of the ribbon, in the **Create** group, select **Create Task Sequence**.  
+
+3. On the **Create a New Task Sequence** page of the Create Task Sequence Wizard, select **Upgrade an operating system from an upgrade package**, and then select **Next**.  
+
+4. On the **Task Sequence Information** page, specify a **Task sequence name** that identifies the task sequence.  
+
+5. On the **Upgrade the Windows Operating System** page, specify the following settings, and then select **Next**:  
+
+    - **Upgrade package**: Specify the upgrade package that contains the OS upgrade source files.  
+
+    - **Edition index**: If there are multiple OS edition indexes available in the package, select the desired edition index. By default, the wizard selects the first index.  
+
+    - **Product key**: Specify the Windows product key for the OS to install. Specify encoded volume license keys or standard product keys. If you use a standard product key, separate each group of five characters by a dash (-). For example: *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*. When the upgrade is for a volume license edition, the product key may not be required.  
+
+        > [!Note]  
+        > This product key can be a multiple activation key (MAK), or a generic volume licensing key (GVLK). A GVLK is also referred to as a key management service (KMS) client setup key. For more information, see [Plan for volume activation](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). For a list of KMS client setup keys, see [Appendix A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) of the Windows Server activation guide.
+
+6. On the **Include Updates** page, select **Next** to not install any software updates.  
+
+7. On the **Install Applications** page, select **Next** to not install any applications.
+
+8. Complete the Create Task Sequence Wizard.  
+
+
+### <a name="bkmk_deploy-ts"></a> Deploy the task sequence using the Desktop Analytics deployment plan
 
 1. In the Configuration Manager console, go to the **Software Library**, expand **Desktop Analytics Servicing**, and select the **Deployment Plans** node.  
 
-2. Select your Office 365 pilot deployment plan, and then select **Deployment Plan Details** in the ribbon.  
+2. Select your Windows 10 pilot deployment plan, and then select **Deployment Plan Details** in the ribbon.  
 
-3. In the **Pilot status** tile, choose **Application** from the drop-down list, and then select **Deploy**.  
+3. In the **Pilot status** tile, choose **Task sequence** from the drop-down list, and then select **Deploy**.  
 
-4. On the **General** page of the Deploy Software Wizard, select **Browse** next to the **Software** field. Select your Office 365 application, for example, **Office 365 ProPlus**. Select **Next**.  
+4. On the **General** page of the Deploy Software Wizard, select **Browse** next to the **Software** field. Select your Windows 10 in-place upgrade task sequence, and select **Next**.  
 
     > [!Note]  
     > With the Desktop Analytics integration, Configuration Manager automatically creates a collection for the pilot deployment plan. It can take up to 10 minutes for this collection to synchronize before you can use it.<!-- 3887891 -->
@@ -380,11 +374,11 @@ Use this procedure to deploy Office 365 ProPlus in Configuration Manager to the 
 10. Complete the wizard.  
 
 
-### <a name="bkmk_install-app"></a> Install Office 365 from Software Center
+### <a name="bkmk_install-ts"></a> Install the task sequence from Software Center
 
 1. Sign in to a device that's a member of the pilot deployment plan.  
 
-2. Open **Software Center** and install the available app for Office 365.  
+2. Open **Software Center** and install the available operating system for Windows 10.  
 
 
 <!--

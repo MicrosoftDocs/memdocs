@@ -2,7 +2,7 @@
 title: What's new in version 1902
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1902 of Configuration Manager current branch.
-ms.date: 04/17/2019
+ms.date: 04/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -169,9 +169,9 @@ For more information, see [How to remotely administer a Windows client computer]
 
 ### Specify a custom port for peer wakeup
 <!--3605925-->
-You can now specify a custom port number for wake-up proxy. In client settings, in the **Power Management** group, configure the setting for **Wake On LAN port number (UDP)**.  
+***[Updated]***  You can now specify a custom port number for wake-up proxy. In client settings, in the **Power Management** group, configure the setting for **Wake On LAN port number (UDP)**.  
 
-<!-- For more information, see [How to configure Wake on LAN](/sccm/core/clients/deploy/configure-wake-on-lan). -->
+For more information, see [How to configure Wake on LAN](/sccm/core/clients/deploy/configure-wake-on-lan).
 
 
 
@@ -341,7 +341,7 @@ Specify these settings in the **Software Center** group of client settings.
 <!--3734525-->
 ***[Updated]*** Adjust the priority with which clients install a feature update through [Windows 10 servicing](/sccm/osd/deploy-use/manage-windows-as-a-service). By default, clients now install feature updates with higher processing priority. 
 
-Use client settings to configure this option. In the **Software Updates** group, configure the following setting: **Specify thread priority for feature updates**. 
+Use client settings to configure this option. In the **Software Updates** group, configure the following setting: **Specify thread priority for feature updates**.
 
 For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-updates). 
 
@@ -394,18 +394,18 @@ The product lifecycle dashboard now includes information for installed versions 
 
 ### Dedicated monitoring for phased deployments
 <!--3555949-->
-Phased deployments now have their own dedicated monitoring node. This node makes it easier to identify phased deployments that you created and then navigate to the phased deployment monitoring view. In the Configuration Manager console, go to the **Monitoring** workspace, and select the **Phased Deployments** node. It shows the list of phased deployments.
+***[Updated]*** Phased deployments now have their own dedicated monitoring node. This node makes it easier to identify phased deployments that you created and then navigate to the phased deployment monitoring view. In the Configuration Manager console, go to the **Monitoring** workspace, and select the **Phased Deployments** node. It shows the list of phased deployments.
 
-<!-- For more information, see [Phased deployment monitoring view](/sccm/osd/deploy-use/manage-monitor-phased-deployments#bkmk_monitor). -->
+For more information, see [Phased deployment monitoring view](/sccm/osd/deploy-use/manage-monitor-phased-deployments#bkmk_monitor). 
 
 
 ### Improvement to phased deployment success criteria
 <!--3555946-->
-Specify additional criteria for the success of a phase in a phased deployment. Instead of only a percentage, this criteria can now also be the number of devices successfully deployed. This option is useful when the size of the collection is variable, and you have a specific number of devices to show success before moving to the next phase. 
+***[Updated]*** Specify additional criteria for the success of a phase in a phased deployment. Instead of only a percentage, this criteria can now also be the number of devices successfully deployed. This option is useful when the size of the collection is variable, and you have a specific number of devices to show success before moving to the next phase. 
 
-Create a phased deployment for a task sequence, software update, or application. Then on the Settings page of the wizard, select the following option as the criteria for success of the first phase: **Number of devices successfully deployed**. 
+Create a phased deployment for a task sequence, software update, or application. Then on the Settings page of the wizard, select the following option as the criteria for success of the first phase: **Number of devices successfully deployed**.
 
-<!-- For more information, see [Create phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence). -->
+For more information, see [Create phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence).
 
 
 

@@ -2,7 +2,7 @@
 title: Set up Desktop Analytics
 titleSuffix: Configuration Manager
 description: A how-to guide for setting up and onboarding to Desktop Analytics.
-ms.date: 04/15/2019
+ms.date: 04/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -47,9 +47,10 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
         To add a user to either group, type their name or e-mail address in the **Enter name or email address** section of the appropriate group. When finished, select **Next**.
 
-The following step can be completed by a **Workspace Owner** or **contributor**. See [prerequisites.](/sccm/desktop-analytics/overview#prerequisites) 
-
 5. On the page to **Set up your workspace**:  
+
+    > [!Note]  
+    > Complete this step as a **Workspace Owner** or **contributor**. For more information, see [prerequisites](/sccm/desktop-analytics/overview#prerequisites).  
 
     - To use an existing workspace for Desktop Analytics, select it, and continue with the next step.  
 
@@ -64,7 +65,9 @@ The following step can be completed by a **Workspace Owner** or **contributor**.
 
         2. Select the drop-down list to **Select the Azure subscription name for this workspace**, and choose the Azure subscription for this workspace.  
 
-        3. Select the **Region** from the list, and then select **Add**.  
+        3. **Create new** Resource group or **Use existing**.
+
+        4. Select the **Region** from the list, and then select **Add**.  
 
 6. Select a new or existing workspace, and then select **Set as Desktop Analytics workspace**.  Then select **Continue** in the **Confirm and grant access** dialog.  
 
@@ -78,50 +81,6 @@ The following step can be completed by a **Workspace Owner** or **contributor**.
 9. On the **Last steps** page, select **Go to Desktop Analytics**.
 
 The Azure portal shows the Desktop Analytics **Home** page.
-
-
-
-## Create app for Configuration Manager
-
-Create an app in Azure AD for Configuration Manager.
-
-1. Open the [Azure portal](http://portal.azure.com) as a user with Company Admin permissions, go to **Azure Active Directory**, and select **App registrations**. Then select **New application registration**.  
-
-2. In the **Create** panel, configure the following settings:  
-
-    - **Name**: a unique name that identifies the app, for example: `Desktop-Analytics-Connection`  
-
-    - **Application type**: **Web app / API**  
-
-    - **Sign-on URL**: this value isn't used by Configuration Manager, but required by Azure AD. Enter a unique and valid URL, for example: `https://configmgrapp`  
-  
-   Select **Create**.  
-
-3. Select the app, and note the **Application ID**. This value is a GUID that's used to configure the Configuration Manager connection.  
-
-4. Select **Settings** on the app, and then select **Keys**. In the **Passwords** section, enter a **Key description**, specify an expiration **Duration**, and then select **Save**. Copy the **Value** of the key, which is used to configure the Configuration Manager connection.
-
-    > [!Important]  
-    > This is the only opportunity to copy the key value. If you don't copy it now, you need to create another key.  
-    >
-    > Save the key value in a secure location.  
-
-5. On the app **Settings** panel, select **Required permissions**.  
-
-    1. On the **Required permissions** panel, select **Add**.  
-
-    2. In the **Add API access** panel, **Select an API**.  
-
-    3. Search for the **Configuration Manager Microservice** API. Select it, and then choose **Select**.  
-
-    4. On the **Enable Access** panel, select both of the application permissions: **Write CM Collection Data** and **Read CM Collection Data**. Then choose **Select**.  
-
-    5. On the **Add API access** panel, select **Done**.  
-
-6. On the **Required permissions** page, select **Grant permissions**. Select **Yes**.  
-
-7. Copy the Azure AD tenant ID. This value is a GUID that's used to configure the Configuration Manager connection. Select **Azure Active Directory** in the main menu, and then select **Properties**. Copy the **Directory ID** value.  
-
 
 
 ## Next steps
