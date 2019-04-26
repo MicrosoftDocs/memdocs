@@ -64,7 +64,7 @@ Use the System Center Configuration Manager **Windows 10** configuration item to
   
     You can view the new configuration item in the **Configuration Items** node of the **Assets and Compliance** workspace.  
   
-##  Windows 10 configuration item settings reference  
+## <a name="BKMK_Ref"></a> Windows 10 configuration item settings reference  
   
 ### Password  
   
