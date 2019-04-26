@@ -2,7 +2,7 @@
 title: Desktop Analytics
 titleSuffix: Configuration Manager
 description: An overview of the Desktop Analytics service integrated with Configuration Manager.
-ms.date: 01/25/2019
+ms.date: 04/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: overview
@@ -19,65 +19,63 @@ ms.collection: M365-identity-device-management
 > [!Note]  
 > This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
 
-Desktop Analytics is a cloud-based service that integrates with Configuration Manager. The service provides insight and intelligence for you to make more informed decisions about the update readiness of your Windows and Office clients. It combines data from your organization with data aggregated from millions of devices connected to Microsoft cloud services. 
+Desktop Analytics is a cloud-based service that integrates with Configuration Manager. The service provides insight and intelligence for you to make more informed decisions about the update readiness of your Windows clients. It combines data from your organization with data aggregated from millions of devices connected to Microsoft cloud services.
 
 Use Desktop Analytics with Configuration Manager to:  
 
 - Create an inventory of apps running in your organization  
 
-- Assess app compatibility with the latest feature updates of Windows 10 and Office 365 ProPlus  
+- Assess app compatibility with the latest Windows 10 feature updates  
 
 - Identify compatibility issues, and receive mitigation suggestions based on cloud-enabled data insights  
 
 - Create pilot groups that represent the entire application and driver estate across a minimal set of devices  
 
-- Deploy Windows 10 and Office 365 ProPlus to pilot and production-managed devices  
+- Deploy Windows 10 to pilot and production-managed devices  
 
 ![Screenshot of the Desktop Analytics home page in the Azure portal](media/portal-home.png)
 
 > [!Note]  
-> Desktop Analytics is a successor of Windows Analytics. The *Windows Analytics* service includes Upgrade Readiness, Update Compliance, and Device Health. 
-> 
-> All of these capabilities are combined in the *Desktop Analytics* service. Desktop Analytics also is more tightly integrated with Configuration Manager, and includes both Windows and Office. 
+> Desktop Analytics is a successor of Windows Analytics. The *Windows Analytics* service includes Upgrade Readiness, Update Compliance, and Device Health.
+>
+> All of these capabilities are combined in the *Desktop Analytics* service. Desktop Analytics also is more tightly integrated with Configuration Manager.
 
 
 
 ## Benefits
 
-Many customers have challenges with getting and staying current with Windows 10 and Office 365 ProPlus. The primary challenge is testing applications. This process is typically manual. It's time-consuming for IT administrators and application owners to continually analyze existing applications. Then remediate any issues that arise. 
+Many customers have challenges with getting and staying current with Windows 10. The primary challenge is testing applications. This process is typically manual. It's time-consuming for IT administrators and application owners to continually analyze existing applications. Then remediate any issues that arise.
 
 Desktop Analytics provides the following benefits:
 
-- **Device and software inventory**: Inventory of key factors such as apps, add-ins, macros, and versions of Office and Windows.  
+- **Device and software inventory**: Inventory of key factors such as apps and versions of Windows.  
 
-- **Pilot identification**: Identification of the smallest set of devices that provide the widest coverage of factors. It focuses on the factors that are most important to a pilot of Windows and Office upgrades and updates. Making sure the pilot is more successful allows you to proceed more quickly and confidently to broad deployments in production.  
+- **Pilot identification**: Identification of the smallest set of devices that provide the widest coverage of factors. It focuses on the factors that are most important to a pilot of Windows upgrades and updates. Making sure the pilot is more successful allows you to proceed more quickly and confidently to broad deployments in production.  
 
-- **Issue identification**: Using aggregated market data along with data from your environment, the service predicts potential issues to getting and staying current with Windows and Office. It then suggests potential mitigations.  
+- **Issue identification**: Using aggregated market data along with data from your environment, the service predicts potential issues to getting and staying current with Windows. It then suggests potential mitigations.  
 
-- **Configuration Manager integration**: The service cloud-enables your existing on-premises infrastructure. Use this data and analysis to deploy and manage Windows and Office on your devices.  
+- **Configuration Manager integration**: The service cloud-enables your existing on-premises infrastructure. Use this data and analysis to deploy and manage Windows on your devices.  
 
 
 
 ## Prerequisites
 
-To use Desktop Analytics, make sure your environment meets the following prerequisites. 
+To use Desktop Analytics, make sure your environment meets the following prerequisites.
 
 
 ### Technical
 
 - An active Azure subscription  
-    
-    - [**Company Administrator**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator) permissions in Azure to **Accept service agreement**, **Confirm your subscription** and **Give user access** 
 
-    - **Workspace owner** or **contributor** permissions to **Set up your workspace** and  
+    - **Workspace owner** or **contributor** permissions to **Set up your workspace**, and the following roles:  
 
-	   - [**Desktop Analytics Administrator**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) role. 
-	    
-	    - [**Log Analytics Contributor**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#log-analytics-contributor) and [**User Access Administrator**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) on the resource group to use an existing workspace or create a new workspace in an existing resource group.
+       - [**Desktop Analytics Administrator**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) role.
 
-	    - [**Owner**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner), or [**Contributor**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) and [**User Access Administrator**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) permissions on the subscription to create a workspace in a new resource group.
+       - [**Log Analytics Contributor**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#log-analytics-contributor) and [**User Access Administrator**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) on the resource group to use an existing workspace or create a new workspace in an existing resource group.
 
-- Configuration Manager, version 1810 with Update Rollup 4488598 or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
+        - [**Owner**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner), or [**Contributor**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) and [**User Access Administrator**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) permissions on the subscription to create a workspace in a new resource group.  
+
+- Configuration Manager, version 1810 with update rollup 2 (4488598) or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
 
     - **Full Administrator** role in Configuration Manager  
 
@@ -85,7 +83,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
     - Install the latest updates. For more information, see [Update devices](/sccm/desktop-analytics/enroll-devices#update-devices).  
 
-    - Devices also need to have the Configuration Manager client, version 1810 with update rollup 4486457 or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
+    - Devices also need to have the Configuration Manager client, version 1810 with update rollup 2 (4488598) or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
 
 - Windows diagnostics data. For more information, see the following articles:  
 
@@ -98,7 +96,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 ### Licensing
 
-Most features in Desktop Analytics don't require any additional licenses or subscriptions. When configured properly, use of Desktop Analytics doesn't incur any Azure cost. 
+Most features in Desktop Analytics don't require any additional licenses or subscriptions. When configured properly, use of Desktop Analytics doesn't incur any Azure cost.
 
 To access Windows health insights or to export data, there are additional license requirements. If you don't have one of the following subscriptions, you can still set up and use Desktop Analytics, but you aren't licensed to use Windows health insights or to export data:
 
@@ -114,21 +112,9 @@ To access Windows health insights or to export data, there are additional licens
 > For per-device licenses, you don't have to activate each device with a license. You just need enough licenses for devices enrolled in Desktop Analytics.  
 
 
-<!-- 
-## Top task
-> *Optional*  
-> *An effective way to structure your overview article is to create an H2 for the top customer tasks and describe how the product/service helps customers with that task.*  
-> *Create a new H2 for each task you list.*  
- -->
-
-
 
 ## Next steps
 
 The following tutorial provides a step-by-step guide to getting started with Desktop Analytics and Configuration Manager:  
 
-- [Deploy Office 365 to a pilot](/sccm/desktop-analytics/tutorial-office-365)  
-
-<!-- for future
-- [Deploy Windows 10 to a pilot](/sccm/desktop-analytics/tutorial-windows)  
--->
+- [Deploy Windows 10 to a pilot](/sccm/desktop-analytics/tutorial-windows10)  
