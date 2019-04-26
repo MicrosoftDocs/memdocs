@@ -19,14 +19,14 @@ When you concurrently manage Windows 10 devices with both Configuration Manager 
 
 The Configuration Manager client can coexist with a third-party MDM service on a device that's joined to Azure Active Directory. The device can be either of the following types:
 
-- [Azure AD-joined](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan) only. (This type is something referred to as "cloud domain-joined")  
+- [Azure AD-joined](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan) only. (This type is sometimes referred to as "cloud domain-joined")  
 
 - [Hybrid domain-joined](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan), where the device is joined to your on-premises Active Directory and registered with your Azure Active Directory.  
 
 > [!Note]  
 > It doesn't support [personally-owned devices](https://docs.microsoft.com/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device).  
 
-When the Configuration Manager client detects that a third-party MDM service is also managing the device, it transitions the following workloads to the coexistence service:
+When the Configuration Manager client detects that a third-party MDM service is also managing the device, it automatically transitions the following workloads to the coexistence service:
 
 - Resource access policies for VPN, Wi-Fi, email, and certificate settings
 - Application management, including legacy packages
@@ -36,7 +36,7 @@ When the Configuration Manager client detects that a third-party MDM service is 
 - Device configuration
 - Office Click-to-Run management
 
-To avoid risk of conflict with the third-party management authority, the Configuration Manager client continues to do the following read-only operations:
+The Configuration Manager client avoids conflict with the third-party management authority by continuing the following read-only operations:
 
 - Hardware and software inventory
 - Asset Intelligence
