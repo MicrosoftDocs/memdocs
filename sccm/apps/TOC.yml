@@ -1,3 +1,4 @@
+- name: Application management
 - name: Understand and explore
   items:
   - name: Introduction
@@ -77,7 +78,6 @@
     - name: Learn about PowerShell script security
       href: deploy-use/learn-script-security.md
   - name: Package Conversion Manager
-    href: pcm/package-conversion-manager.md
     items:
     - name: Package Conversion Manager
       href: pcm/package-conversion-manager.md
