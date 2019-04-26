@@ -2,7 +2,7 @@
 title: Troubleshooting Desktop Analytics
 titleSuffix: Configuration Manager
 description: Technical details to help you troubleshoot issues with Desktop Analytics.
-ms.date: 04/15/2019
+ms.date: 04/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -109,7 +109,9 @@ To see a specific list of devices by status, start with the **Connection Health*
 - Windows diagnostic data opt-in
 - Windows commercial data opt-in
 - Windows diagnostic endpoint connectivity
-- Office diagnostic endpoint connectivity
+
+> [!Note]  
+> Ignore the column for **Office diagnostic endpoint connectivity**. It's reserved for future functionality.
 
 These columns correspond to the key [prerequisites](/sccm/desktop-analytics/overview#prerequisites) for devices to communicate with Desktop Analytics.
 
@@ -140,8 +142,9 @@ The following columns are available in the device list:
 - [SQM ID retrieval](#sqm-id-retrieval)  
 - [Unique device identifier retrieval](#unique-device-identifier-retrieval)  
 - [Windows diagnostic data opt-in](#windows-diagnostic-data-opt-in)  
-- [Office diagnostic endpoint connectivity](#office-diagnostic-endpoint-connectivity)  
-- [Office diagnostic data opt-in](#office-diagnostic-data-opt-in)
+
+> [!Note]  
+> Ignore the properties for **Office diagnostic endpoint connectivity** and **Office diagnostic data opt-in**. They're reserved for future functionality.
 
 #### Appraiser configuration
 
@@ -402,31 +405,6 @@ Check the permissions on these registry keys. Make sure that the local System ac
 
 For more information, review M365AHandler.log on the client.  
 
-#### Office diagnostic endpoint connectivity
-
-<!-- 1001,1002,1003 -->
-
-If this check is successful, then the device is able to connect to the Office diagnostic endpoints.
-
-Otherwise, it may show one of the following errors:
-
-- Can't connect to the Office diagnostic endpoint (Aria). Check your network/proxy settings  
-
-- Can't connect to the Office diagnostic endpoint (Nexusrules). Check your network/proxy settings  
-
-- Can't connect to the Office diagnostic endpoint (Nexus). Check your network/proxy settings  
-
-Make sure the device is able to communicate with the service. For more information, see [Endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
-
-#### Office diagnostic data opt-in
-
-<!-- SCCMDocs-pr 3570 -->
-Starting in Configuration Manager version 1902, the behavior changed for sending Office service and diagnostic data to Microsoft. This property checks that Office policy settings are properly configured. These settings control the minimum required data to help keep Office secure, up-to-date, and performing as expected on the device it's installed.
-
-For more information, see [Overview of privacy controls for Office 365 ProPlus](https://docs.microsoft.com/DeployOffice/privacy/overview-privacy-controls). This article details the privacy controls for diagnostic data that's collected and sent to Microsoft about Office client software used on Windows computers in your organization.
-
-This check won't succeed for Configuration Manager version 1810 clients. Update the client to the latest version. Consider enabling automatic client upgrade for the Configuration Manager site. For more information, see [Upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).
-
 
 
 ## Log files
@@ -475,13 +453,88 @@ Desktop Analytics adds the following applications to your Azure AD:
 
 - **Configuration Manager Microservice**: Connects Configuration Manager with Desktop Analytics. This app has no access requirements.  
 
-- **Office 365 Client Admin**: Retrieves data from your Log Analytics workspace. This app requires write access to Log Analytics.  
-
 - **MALogAnalyticsReader**: Retrieves OMS groups and devices created in Log Analytics. For more information, see [MALogAnalyticsReader application role](#bkmk_MALogAnalyticsReader).  
 
 If you need to provision these apps after completing set up, go to the **Connected services** pane. Select  **Configure users and apps access**, and provision the apps.  
 
-- **Azure AD app for Configuration Manager**. If you need to provision or troubleshoot connection issues after completing set up, see [Create app for Configuration Manager](/sccm/desktop-analytics/set-up#create-app-for-configuration-manager). This app requires  **Write CM Collection Data** and **Read CM Collection Data** on the **Configuration Manager Service** API.  
+- **Azure AD app for Configuration Manager**. If you need to provision or troubleshoot connection issues after completing set up, see [Create and import app for Configuration Manager](#create-and-import-app-for-configuration-manager). This app requires  **Write CM Collection Data** and **Read CM Collection Data** on the **Configuration Manager Service** API.  
+
+
+### Create and import app for Configuration Manager
+
+If you can't create this Azure AD app from the Configure Azure Services wizard in Configuration Manager, use the following steps to manually create and import the app for Configuration Manager.
+
+#### Create app in Azure AD
+
+1. Open the [Azure portal](http://portal.azure.com) as a user with Company Admin permissions, go to **Azure Active Directory**, and select **App registrations**. Then select **New application registration**.  
+
+2. In the **Create** panel, configure the following settings:  
+
+    - **Name**: a unique name that identifies the app, for example: `Desktop-Analytics-Connection`  
+
+    - **Application type**: **Web app / API**  
+
+    - **Sign-on URL**: this value isn't used by Configuration Manager, but required by Azure AD. Enter a unique and valid URL, for example: `https://configmgrapp`  
+  
+   Select **Create**.  
+
+3. Select the app, and note the **Application ID**. This value is a GUID that's used to configure the Configuration Manager connection.  
+
+4. Select **Settings** on the app, and then select **Keys**. In the **Passwords** section, enter a **Key description**, specify an expiration **Duration**, and then select **Save**. Copy the **Value** of the key, which is used to configure the Configuration Manager connection.
+
+    > [!Important]  
+    > This is the only opportunity to copy the key value. If you don't copy it now, you need to create another key.  
+    >
+    > Save the key value in a secure location.  
+
+5. On the app **Settings** panel, select **Required permissions**.  
+
+    1. On the **Required permissions** panel, select **Add**.  
+
+    2. In the **Add API access** panel, **Select an API**.  
+
+    3. Search for the **Configuration Manager Microservice** API. Select it, and then choose **Select**.  
+
+    4. On the **Enable Access** panel, select both of the application permissions: **Write CM Collection Data** and **Read CM Collection Data**. Then choose **Select**.  
+
+    5. On the **Add API access** panel, select **Done**.  
+
+6. On the **Required permissions** page, select **Grant permissions**. Select **Yes**.  
+
+7. Copy the Azure AD tenant ID. This value is a GUID that's used to configure the Configuration Manager connection. Select **Azure Active Directory** in the main menu, and then select **Properties**. Copy the **Directory ID** value.  
+
+#### Import app in Configuration Manager
+
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Services** node. Select **Configure Azure Services** in the ribbon.  
+
+2. On the **Azure Services** page of the Azure Services Wizard, configure the following settings:  
+
+    - Specify a **Name** for the object in Configuration Manager.  
+
+    - Specify an optional **Description** to help you identify the service.  
+
+    - Select **Desktop Analytics** from the list of available services.  
+  
+   Select **Next**.  
+
+3. On the **App** page, select the appropriate **Azure environment**. Then select **Import** for the web app. Configure the following settings in the **Import Apps** window:  
+
+    - **Azure AD Tenant Name**: This name is how it's named in Configuration Manager  
+
+    - **Azure AD Tenant ID**: The **Directory ID** you copied from Azure AD  
+
+    - **Client ID**: The **Application ID** you copied from the Azure AD app  
+
+    - **Secret Key**: The key **Value** you copied from the Azure AD app  
+
+    - **Secret Key Expiry**: The same expiration date of the key  
+
+    - **App ID URI**: This setting should automatically populate with the following value: `https://cmmicrosvc.manage.microsoft.com/`  
+  
+   Select **Verify**, and then select **OK** to close the Import Apps window. Select **Next** on the App page of the Azure Services Wizard.  
+
+To continue the rest of the wizard on the **Diagnostic Data** page, see [Connect to the service](/sccm/desktop-analytics/connect-configmgr#bkmk_connect).
+
 
 ### <a name="bkmk_MALogAnalyticsReader"></a> MALogAnalyticsReader application role
 
