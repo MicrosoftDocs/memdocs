@@ -4,8 +4,8 @@
     href: overview.md
   - name: Tutorials
     items:
-    - name: Pilot Office 365
-      href: tutorial-office-365.md
+    - name: Pilot Windows 10
+      href: tutorial-windows10.md
   - name: Concepts
     items:
     - name: Deployment plans
