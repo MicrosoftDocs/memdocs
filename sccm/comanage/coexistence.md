@@ -26,7 +26,7 @@ The Configuration Manager client can coexist with a third-party MDM service on a
 > [!Note]  
 > It doesn't support [personally-owned devices](https://docs.microsoft.com/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device).  
 
-When the Configuration Manager client detects that a third-party MDM service is also managing the device, it automatically transitions the following workloads to the coexistence service:
+When the Configuration Manager client detects that a third-party MDM service is also managing the device, it automatically transitions certain workloads. This action prevents conflicting settings on the client that could adversely impact the device and user experience. The following workloads are transitioned to the coexistence service:
 
 - Resource access policies for VPN, Wi-Fi, email, and certificate settings
 - Application management, including legacy packages
