@@ -5,7 +5,7 @@ description: Learn how to concurrently manage Windows 10 devices by using both C
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 01/14/2019
+ms.date: 04/26/2019
 ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -17,16 +17,18 @@ ms.collection: M365-identity-device-management
 # What is co-management?
 
 <!-- 1350871 -->
-Co-management is one of the primary ways to attach your existing Configuration Manager deployment to the Microsoft 365 cloud. It helps you unlock additional cloud-powered capabilities like conditional access. 
+Co-management is one of the primary ways to attach your existing Configuration Manager deployment to the Microsoft 365 cloud. It helps you unlock additional cloud-powered capabilities like conditional access.
 
-Co-management enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune. It lets you cloud-attach your existing investment in Configuration Manager by adding new functionality. By using co-management, you have the flexibility to use the technology solution that works best for your organization. 
+Co-management enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune. It lets you cloud-attach your existing investment in Configuration Manager by adding new functionality. By using co-management, you have the flexibility to use the technology solution that works best for your organization.
 
 When a Windows 10 device has the Configuration Manager client and is enrolled to Intune, you get the benefits of both services. You control which workloads, if any, you switch the authority from Configuration Manager to Intune. Configuration Manager continues to manage all other workloads, including those workloads that you don't switch to Intune, and all other features of Configuration Manager that co-management doesn't support.
 
-You're also able to pilot a workload with a separate collection of devices. Piloting allows you to test the Intune functionality with a subset of devices before switching a larger group. 
+You're also able to pilot a workload with a separate collection of devices. Piloting allows you to test the Intune functionality with a subset of devices before switching a larger group.
 
 ![Overview diagram of co-management](media/co-management-overview.png)
 
+> [!Note]  
+> When you concurrently manage Windows 10 devices with both Configuration Manager and Microsoft Intune, this configuration is called *co-management*. When you manage devices with Configuration Manager and enroll to a third-party MDM service, this configuration is called *coexistence*. Having two management authorities for a single device can be challenging if not properly orchestrated between the two. With co-management, Configuration Manager and Intune balance the [workloads](#workloads) to make sure there are no conflicts. This interaction doesn't exist with third-party services, so there are limitations with the management capabilities of coexistence. For more information, see [Third-party MDM coexistence with Configuration Manager](/sccm/comanage/coexistence).
 
 
 ## Paths to co-management
@@ -41,7 +43,7 @@ For more information on the paths, see [Paths to co-management](/sccm/comanage/q
 
 
 
-## Benefits 
+## Benefits
 
 When you enroll existing Configuration Manager clients in co-management, you gain the following immediate value:  
 
@@ -59,7 +61,7 @@ When you enroll existing Configuration Manager clients in co-management, you gai
 
 For more information on this immediate value from co-management, see the quickstarts series to [Cloud connect with co-management](/sccm/comanage/quickstarts).
 
-Co-management also enables you to orchestrate with Intune for several workloads. For more information, see the [Workloads](#workloads)  section. 
+Co-management also enables you to orchestrate with Intune for several workloads. For more information, see the [Workloads](#workloads) section.
 
 
 
@@ -76,7 +78,7 @@ Co-management has these prerequisites in the following areas:
 
 ### Licensing
 
-- Azure AD Premium 
+- Azure AD Premium
 - EMS or Intune license for all users  
 
     > [!Note]  
@@ -112,7 +114,7 @@ Enabling co-management itself doesn't require that you onboard your site with Az
 
 > [!Note]  
 > If you have a hybrid MDM environment (Intune integrated with Configuration Manager), you can't enable co-management. However, you can start migrating users to Intune standalone and then enable their associated Windows 10 devices for co-management. For more information about migrating to Intune standalone, see [Start migrating from hybrid MDM to Intune standalone](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).  
-> 
+>
 > If you're using [mixed authority](/sccm/mdm/deploy-use/migrate-mixed-authority), first complete the migration to Intune standalone. Then, set the MDM authority to Intune before setting up co-management.<!--SCCMDocs issue #797-->
 
 
@@ -125,21 +127,21 @@ Upgrade your devices to Windows 10, version 1709 or later. For more information,
 
 
 ### Permissions and roles
-<!--SCCMDocs issue #667-->
 
+<!--SCCMDocs issue #667-->
 | Action | Role needed |
 |----|----|
 | Set up a cloud management gateway in Configuration Manager | Azure **Subscription Manager** |
 | Create Azure AD apps from Configuration Manager | Azure AD **Global Administrator** |
 | Import Azure apps in Configuration Manager | Configuration Manager **Full Administrator**<br>No additional Azure roles needed |
-| Enable co-management in Configuration Manager | An Azure AD user<br>Configuration Manager **Full Administrator** with **All** scope rights.<!--SCCMDoc issue 626--> | 
+| Enable co-management in Configuration Manager | An Azure AD user<br>Configuration Manager **Full Administrator** with **All** scope rights.<!--SCCMDoc issue 626--> |
 
 For more information about Azure roles, see [Understand the different roles](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles).
 
 For more information about Configuration Manager roles, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).
 
 
-## Workloads 
+## Workloads
 
 You don't have to switch the workloads, or you can do them individually when you're ready. Configuration Manager continues to manage all other workloads, including those workloads that you don't switch to Intune, and all other features of Configuration Manager that co-management doesn't support.
 
@@ -178,4 +180,3 @@ For more information, see [How to monitor co-management](/sccm/comanage/how-to-m
 - [Learn more about immediate value and getting started with co-management](/sccm/comanage/quickstarts)  
 
 - [Tutorial: Enable co-management for existing Configuration Manager clients](/sccm/comanage/tutorial-co-manage-clients)  
-

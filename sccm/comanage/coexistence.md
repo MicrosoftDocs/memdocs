@@ -15,7 +15,7 @@ manager: dougeby
 
 # Third-party MDM coexistence with Configuration Manager
 
-When you concurrently manage Windows 10 devices with both Configuration Manager and Microsoft Intune, this functionality is called [co-management](/sccm/comanage/overview). When you manage devices with Configuration Manager and enroll with a third-party MDM service, this functionality is called *coexistence*. Having two management authorities for a single device can be challenging if not properly orchestrated between the two. With co-management, Configuration Manager and Intune balance the [workloads] to make sure there are no conflicts. This interaction doesn't exist with third-party services, so there are limitations with the management capabilities of coexistence.
+When you concurrently manage Windows 10 devices with both Configuration Manager and Microsoft Intune, this functionality is called [co-management](/sccm/comanage/overview). When you manage devices with Configuration Manager and enroll to a third-party MDM service, this functionality is called *coexistence*. Having two management authorities for a single device can be challenging if not properly orchestrated between the two. With co-management, Configuration Manager and Intune balance the [workloads](/sccm/comanage/workloads) to make sure there are no conflicts. This interaction doesn't exist with third-party services, so there are limitations with the management capabilities of coexistence.
 
 The Configuration Manager client can coexist with a third-party MDM service on a device that's joined to Azure Active Directory. The device can be either of the following types:
 
