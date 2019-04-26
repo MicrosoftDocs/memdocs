@@ -2,7 +2,7 @@
 title: Desktop Analytics data privacy
 titleSuffix: Configuration Manager
 description: Desktop Analytics is committed to customer data privacy
-ms.date: 04/22/2019
+ms.date: 04/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -58,6 +58,8 @@ The following illustration shows how diagnostic data flows from individual devic
 
 ## Other resources
 
+For privacy-related frequently asked questions for Desktop Analytics, see [Privacy FAQ](/sccm/desktop-analytics/faq#privacy).
+
 For more information about related privacy aspects, see the following articles:
 
 - [Windows 10 and the GDPR for IT Decision Makers](https://docs.microsoft.com/windows/privacy/gdpr-it-guidance)  
@@ -79,17 +81,3 @@ For more information about related privacy aspects, see the following articles:
 - [Confidence in the trusted cloud](https://azure.microsoft.com/overview/trusted-cloud/)  
 
 - [Trust Center](https://www.microsoft.com/trustcenter)  
-
-
-
-## FAQ
-
-### Can Desktop Analytics be used without a direct client connection to the Microsoft Data Management Service?
-
-No, the entire service is powered by Windows diagnostic data, which requires that devices have this direct connectivity.
-
-### Can I choose the data center location?
-
-For Azure Log Analytics: Yes, when you set up Desktop Analytics and create the Log Analytics workspace.
-
-For the Microsoft Data Management Service and Analytics Azure Storage: No, these two services are hosted in the United States.

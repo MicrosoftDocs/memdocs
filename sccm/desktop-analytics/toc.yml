@@ -38,7 +38,9 @@
     items:
     - name: Enable data sharing
       href: enable-data-sharing.md
-    - name: Troubleshooting
-      href: troubleshooting.md
     - name: Privacy
       href: privacy.md
+    - name: Troubleshooting
+      href: troubleshooting.md
+    - name: Frequently asked questions
+      href: faq.md
