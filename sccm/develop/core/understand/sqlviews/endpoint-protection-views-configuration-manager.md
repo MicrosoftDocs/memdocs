@@ -1,5 +1,5 @@
 ﻿---
-title: Endpoint Protection Views
+title: Endpoint protection views
 titleSuffix: Configuration Manager
 description: Information about the status of Endpoint Protection clients and malware activity in your Configuration Manager site.
 ms.date: 04/30/2019
@@ -13,13 +13,13 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Endpoint Protection Views in Configuration Manager
+# Endpoint protection views in Configuration Manager
 
 The Configuration Manager Endpoint Protection views provide information about the status of Endpoint Protection clients and malware activity in your Configuration Manager site.
 
 The following sections provide detailed information about the Endpoint Protection views.
 
-## Endpoint Protection Views
+## Endpoint protection views
 
 The Endpoint Protection views are described in this section.
 
@@ -112,6 +112,6 @@ This view can be joined to other views by using the **ResourceID** column.
 Lists, by resource ID, the malware threats that have been detected on client computers. This includes the threat ID, the threat name, when the threat was first detected and when it was last detected.
 This view can be joined to other views by using the **ResourceID** column.
 
-## See Also
+## See also
 
-[SQL Server Views in Configuration Manager](sql-server-views-configuration-manager.md)  
+[SQL Server views in Configuration Manager](sql-server-views-configuration-manager.md)  

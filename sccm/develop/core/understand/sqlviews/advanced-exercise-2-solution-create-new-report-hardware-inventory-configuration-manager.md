@@ -1,5 +1,5 @@
 ﻿---
-title: 'Advanced Exercise 2 Solution: Create a New Report for Hardware Inventory'
+title: 'Advanced exercise 2 solution: Create a new report for hardware inventory'
 titleSuffix: Configuration Manager
 description: Create the report for Advanced Exercise 2
 ms.date: 04/30/2019
@@ -13,14 +13,14 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Advanced Exercise 2 Solution: Create a New Report for Hardware Inventory in Configuration Manager
+# Advanced exercise 2 solution: Create a new report for hardware inventory in Configuration Manager
 
-The following procedure can be used to create the report for [Advanced Exercise 2: Create a New Report for Hardware Inventory in Configuration Manager](advanced-exercise-2-create-new-report-hardware-inventory-configuration-manager.md).
+The following procedure can be used to create the report for [Advanced exercise 2: Create a new report for hardware inventory in Configuration Manager](advanced-exercise-2-create-new-report-hardware-inventory-configuration-manager.md).
 
 > [!NOTE]
 > Depending on your experience at creating SQL reports, there are numerous paths you can use to create a report. You can use your preferred method of creating reports if you prefer.
 
-## To create the Hardware Inventory Information report
+## To create the hardware inventory information report
 
 1. In the Configuration Manager console, select **Monitoring**.
 1. In the **Monitoring** workspace, expand **Reporting**, and then select **Reports**.
@@ -98,10 +98,10 @@ The following procedure can be used to create the report for [Advanced Exercise 
 
 The new report is now available in the Configuration Manager console.
 
-## Next Steps
+## Next steps
 
 Report builder includes many options to change elements of reports, including themes, column headings and more. Consult your Report Builder help for more information.
 
-## See Also
+## See also
 
-[Advanced Exercise 2: Create a New Report for Hardware Inventory in Configuration Manager](advanced-exercise-2-create-new-report-hardware-inventory-configuration-manager.md)
+[Advanced exercise 2: Create a new report for hardware inventory in Configuration Manager](advanced-exercise-2-create-new-report-hardware-inventory-configuration-manager.md)

@@ -1,5 +1,5 @@
 ﻿---
-title: Sample Queries for Client Status
+title: Sample queries for client status
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join common client status views to other views.
 ms.date: 04/30/2019
@@ -13,11 +13,11 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Sample Queries for Client Status in Configuration Manager
+# Sample queries for client status in Configuration Manager
 
 The following sample queries demonstrate how to join common client status views to other views.
 
-## Joining Client Status and Collection Views
+## Joining client status and collection views
 
 This query lists each client computer in the site, the last time it requested policy, and the collections to which the computer belongs. The query uses the **v_CH_PolicyRequestHistory** view to read the last policy request time and joins, using the **ResourceID** column to the **v_ClientCollectionMembers** view.
 
@@ -27,6 +27,6 @@ This query lists each client computer in the site, the last time it requested po
                              dbo.v_ClientCollectionMembers ON dbo.CH_PolicyRequestHistory.MachineID = dbo.v_ClientCollectionMembers.ResourceID
 ```
 
-## See Also
+## See also
 
-[Client Status Views in Configuration Manager](client-status-views-configuration-manager.md)
+[Client status views in Configuration Manager](client-status-views-configuration-manager.md)

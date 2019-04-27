@@ -1,5 +1,5 @@
 ﻿---
-title: Power Management Views
+title: Power management views
 titleSuffix: Configuration Manager
 description: Information about the power plans applied to computers by Configuration Manager.
 ms.date: 04/30/2019
@@ -13,17 +13,17 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Power Management Views in Configuration Manager
+# Power management views in Configuration Manager
 
 Information about the power plans applied to computers by Configuration Manager and the power capabilities of computers is retrieved by Configuration Manager hardware inventory.
 
-For more information about power management, see [Power Management in Configuration Manager](https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/gg682043(v=technet.10)).
+For more information about power management, see [Power management in Configuration Manager](/sccm/core/clients/manage/power/introduction-to-power-management).
 
 Wake up proxy is used to supplement the traditional wake-up packet method by using the wake-up proxy client settings. Wake-up proxy uses a peer-to-peer protocol and elected computers to check whether other computers on the subnet are awake, and to wake them if necessary.
 
-For more information about wake up proxy, see the Power Management section of the [About Client Settings in Configuration Manager](https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/gg682067(v=technet.10)) topic in the Configuration Manager Documentation Library.
+For more information about wake up proxy, see the Power Management section of the [About client settings in Configuration Manager](/sccm/core/clients/deploy/about-client-settings) topic in the Configuration Manager Documentation Library.
 
-## Power Management Views
+## Power management views
 
 The power management views are described in this section.
 
@@ -70,6 +70,6 @@ The wake up proxy views are described in this section.
 Lists information about the computers in each collection and whether that computer is enabled for wake-up proxy. This view is sorted by collection ID.
 This view can be joined to other views by using the **CollectionID** column.
 
-## See Also
+## See also
 
-[SQL Server Views in Configuration Manager](sql-server-views-configuration-manager.md) 
+[SQL Server views in Configuration Manager](sql-server-views-configuration-manager.md) 

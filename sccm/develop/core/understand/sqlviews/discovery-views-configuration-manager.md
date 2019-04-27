@@ -1,5 +1,5 @@
 ﻿---
-title: Discovery Views
+title: Discovery views
 titleSuffix: Configuration Manager
 description: System resource objects, which include any resources that were discovered on the network.
 ms.date: 04/30/2019
@@ -13,15 +13,15 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Discovery Views in Configuration Manager
+# Discovery views in Configuration Manager
 
-The Configuration Manager discovery views consist of system resource objects, which include any resources that were discovered on the network. The four main discovery views are **v\_R\_System** for system resources, **v\_R\_User** for user resources, **v\_R\_UserGroup** for user group resources, and **v\_R\_UnknownSystem** for unknown systems.
+The Configuration Manager discovery views consist of system resource objects, which include any resources that were discovered on the network. The four main discovery views are **v_R_System** for system resources, **v_R_User** for user resources, **v_R_UserGroup** for user group resources, and **v_R_UnknownSystem** for unknown systems.
 
-Each of these discovered resources has a defined resource type, which is stored in the **v\_resourcemap** schema view.
+Each of these discovered resources has a defined resource type, which is stored in the **v_resourcemap** schema view.
 
-## Discovery Schema Views
+## Discovery schema views
 
-The discovery schema views provide information about all resources in a Configuration Manager site. The two discovery schema views are **v\_ResourceMap** and **v\_ResourceAttributeMap**. The **v\_ResourceMap** view contains a list of all the resource types for discovered data. By default, Configuration Manager has the Unknown System, User Group, User, and System Resource types, each of which has its own resource type number and individual view. The view can be joined to other views by using the **ResourceType** column. The following table contains the default data stored in the **v\_ResourceMap** view.
+The discovery schema views provide information about all resources in a Configuration Manager site. The two discovery schema views are **v_ResourceMap** and **v_ResourceAttributeMap**. The **v_ResourceMap** view contains a list of all the resource types for discovered data. By default, Configuration Manager has the Unknown System, User Group, User, and System Resource types, each of which has its own resource type number and individual view. The view can be joined to other views by using the **ResourceType** column. The following table contains the default data stored in the **v_ResourceMap** view.
 
 ### v_R_System_Valid
 Lists information about valid computers. This view is sorted by **ResourceID** and includes the client version, the processor type, the client’s domain, the NetBIOS name, the operating system and more.
@@ -36,11 +36,11 @@ This view can be joined to other views by using the **ResourceID** column.
 |6|IP Network|**V_R_IPNetwork**|
 
 
-The **v\_ResourceAttributeMap** contains all of the attributes that will be discovered for each of the resource types, such as NetBIOS name, operating system, user name, user group name, domain name, and so forth. The **v\_ResourceAttributeMap** view can be joined to other views by using the **ResourceType** column. The discovery schema views are also listed and described in the [Schema Views in Configuration Manager](https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/dn581997(v%3dtechnet.10)) topic.
+The **v_ResourceAttributeMap** contains all of the attributes that will be discovered for each of the resource types, such as NetBIOS name, operating system, user name, user group name, domain name, and so forth. The **v_ResourceAttributeMap** view can be joined to other views by using the **ResourceType** column. The discovery schema views are also listed and described in the [Schema views in Configuration Manager](schema-views-configuration-manager.md) topic.
 
-## Configuration Manager Discovery Views
+## Configuration Manager discovery views
 
-The **v\_R\_System** view can be joined with any other view that contains system data (system discovery array views, inventory views, collection views, status views, and so forth) by using the **ResourceID** column. The **v\_R\_System** view will be one of the most often used when joining views. The **v\_R\_UnknownSystem**, **v\_R\_User**, and **v\_R\_UserGroup** views also use the **ResourceID** column to join with views that contain data for their resource type. Most of the remaining discovery views contain data where there can be more than one value for a resource, such as IP address or user organizational unit (OU) name. The discovery views are described in the following table.
+The **v_R_System** view can be joined with any other view that contains system data (system discovery array views, inventory views, collection views, status views, and so forth) by using the **ResourceID** column. The **v_R_System** view will be one of the most often used when joining views. The **v_R_UnknownSystem**, **v_R_User**, and **v_R_UserGroup** views also use the **ResourceID** column to join with views that contain data for their resource type. Most of the remaining discovery views contain data where there can be more than one value for a resource, such as IP address or user organizational unit (OU) name. The discovery views are described in the following table.
 
 ### v_AgentDiscoveries
 
@@ -172,6 +172,6 @@ The view can be joined to other views by using the **ResourceID** column.
 Lists information about IP subnets discovered by Configuration Manager network discovery, sorted by **ResourceID**. This includes information about subnet addresses, masks, names and topology.
 This view can be joined to other views by using the **ResourceID** column.
 
-## See Also
+## See also
 
-[SQL Server Views in Configuration Manager](sql-server-views-configuration-manager.md)  
+[SQL Server views in Configuration Manager](sql-server-views-configuration-manager.md)  

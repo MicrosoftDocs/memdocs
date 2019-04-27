@@ -1,5 +1,5 @@
 ﻿---
-title: Sample Queries for Content Management
+title: Sample queries for content management
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join the most common content management views to other views.
 ms.date: 04/30/2019
@@ -13,11 +13,11 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Sample Queries for Content Management in Configuration Manager
+# Sample queries for content management in Configuration Manager
 
 The following sample queries demonstrate how to join the most common content management views to other views.
 
-## Joining Software Distribution and Package Status Views
+## Joining software distribution and package status views
 
 The following query lists all packages by package ID and package name, the current status of each package, the Network Abstraction Layer (NAL) path for the distribution point, and the last time the package was refreshed on the distribution point. The **v_Package** view is joined to the **v_PackageStatusDetailSumm** status view and **v_DistributionPoint** software distribution view by using the **PackageID** columns.
 
@@ -31,6 +31,6 @@ The following query lists all packages by package ID and package name, the curre
     ORDER BY PCK.PackageID 
 ```
 
-## See Also
+## See also
 
-[Content Management Views in Configuration Manager](content-management-views-configuration-manager.md)
+[Content management views in Configuration Manager](content-management-views-configuration-manager.md)

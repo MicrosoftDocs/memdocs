@@ -1,5 +1,5 @@
 ﻿---
-title: Sample Queries for Asset Intelligence
+title: Sample queries for asset intelligence
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join the most common Asset Intelligence views to other views.
 ms.date: 04/30/2019
@@ -13,11 +13,11 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Sample Queries for Asset Intelligence in Configuration Manager
+# Sample queries for asset intelligence in Configuration Manager
 
 The following sample queries demonstrate how to join the most common Asset Intelligence views to other views.
 
-## Joining Asset Intelligence Views
+## Joining asset intelligence views
 
 The following sample query demonstrates how to join asset intelligence views to asset intelligence hardware inventory and discovery views. Most often, the asset intelligence hardware inventory views will be used when creating asset intelligence reports for resources and joined to other views by using the **ResourceID** column. The asset intelligence views can be joined to the asset intelligence hardware inventory views to list product information by using the **SoftwareCode** column.
 
@@ -37,6 +37,6 @@ This sample query lists the publisher, product, installation date, and installat
     ORDER BY [Install Date] DESC, [Product Name] 
 ```
 
-## See Also
+## See also
 
-[Asset Intelligence Views in Configuration Manager](asset-intelligence-views-configuration-manager.md)
+[Asset intelligence views in Configuration Manager](asset-intelligence-views-configuration-manager.md)

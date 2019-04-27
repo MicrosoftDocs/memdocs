@@ -1,5 +1,5 @@
 ﻿---
-title: Sample Queries for Compliance Settings
+title: Sample queries for compliance settings
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join compliance settings views to each other and to views from other view categories.
 ms.date: 04/30/2019
@@ -13,11 +13,11 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Sample Queries for Compliance Settings in Configuration Manager
+# Sample queries for compliance settings in Configuration Manager
 
 The following sample queries demonstrate how to join Configuration Manager compliance settings views to each other and to views from other view categories. Compliance settings views will most often use the **CI_ID**, **AssignmentID**, and **ResourceID** columns when joining to other views.
 
-## Joining Compliance Settings and Software Updates Views
+## Joining compliance settings and software updates Views
 
 The following query retrieves all configuration items with the type of Software Updates (**CIType_ID** = 1) or Software Updates Bundle (**CIType_ID** = 8) that have been deployed to clients (**IsDeployed** =1), listing the article ID, software update name, and software update description. The results are sorted in descending order by article ID. The query joins the **v_ConfigurationItems** and **v_CITypes** compliance settings views by using the **CIType_ID** column, joins the **v_ConfigurationItems** and **v_LocalizedCIProperties** compliance settings views by using the **CI_ID** column, and joins the **v_ConfigurationItems** view with the **v_UpdateInfo** software updates view by using the **CI_ID** column.
 
@@ -30,7 +30,7 @@ The following query retrieves all configuration items with the type of Software 
     ORDER BY v_UpdateInfo.ArticleID DESC 
 ```
 
-## Joining Compliance Settings, Status, and Discovery Views
+## Joining compliance settings, status, and discovery views
 
 The following query retrieves the configuration baselines that have been evaluated on clients, the configuration baseline description, a list of the clients that have a non-compliant state for the configuration baseline, the IP address for the client, and the date and time for the last compliance state message. The results are sorted by configuration baseline name and then computer name. The query joins the **v_CIComplianceStatusDetail** status message with the **v_RA_System_IPAddresses** discovery view by using the **ResourceID** column, and it joins the **v_CI_ComplianceStatusDetail** view with the **v_LocalizedCIProperties** compliance settings view by using the **CI_ID** column. A filter could be added to the query to specify the client computer or the configuration baseline to reduce the query results.
 
@@ -46,7 +46,7 @@ The following query retrieves the configuration baselines that have been evaluat
     ORDER BY [Baseline Name], [Computer Name] 
 ```
 
-## Joining Compliance Settings, Status, and Discovery Views
+## Joining compliance settings, status, and discovery views
 
 The following query retrieves the names of computers that have been targeted for an assignment, the configuration item name assigned to the computer, the compliance state for the item, the assignment name that contains the item, and the target collection for the assignment. The results are sorted by the compliance state, assigned configuration item, and then the computer name. The query joins the **v_CICurrentComplianceStatus** status view to the **v_CIAssignmentToCI** compliance settings view by using the **CI_ID** column; joins the **v_CIAssignment** and **v_CIAssignmentToCI** compliance settings views by using the **AssignmentID** column; joins the **v_LocalizedCIProperties** compliance settings view to the **v_CICurrentComplianceStatus** view by using the **CI_ID** column; joins the **v_StateNames** and **v_CICurrentComplianceStatus** status views by using the **StateID** and **ComplianceState** columns, respectively; and joins the **v_R_System** discovery view to the **v_CICurrentComplianceStatus** view by using the **ResourceID** column. The retrieved information is filtered by the topic type of 401, which includes state messages for configuration item compliance.
 
@@ -63,6 +63,6 @@ The following query retrieves the names of computers that have been targeted for
     ORDER BY v_StateNames.StateName, [Assigned Item], [Computer Name] 
 ```
 
-## See Also
+## See also
 
-[Compliance Settings Views in Configuration Manager](compliance-settings-views-configuration-manager.md)
+[Compliance settings views in Configuration Manager](compliance-settings-views-configuration-manager.md)

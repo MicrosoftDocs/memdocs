@@ -1,5 +1,5 @@
 ﻿---
-title: Client Status Views
+title: Client status views
 titleSuffix: Configuration Manager
 description: Information about the client status components on Configuration Manager client computers.
 ms.date: 04/30/2019
@@ -13,13 +13,15 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Client Status Views in Configuration Manager
+# Client status views in Configuration Manager
 
 Client status views contain information about the client status components on Configuration Manager client computers and the results of client checks. There are also status views that contain information about the health of Configuration Manager client computers, such as when the client last scanned for hardware and software inventory, the last policy request, and so on. Client status views will most often be joined to other views by using the **MachineID**, **ResourceID**, **NetbiosName**, **HealthStatus**, and **HealthType** columns.
 
 The following sections provide detailed information about client status views.
 
-## Client Status Views
+## Client status views
+
+The client status views contain status and status summary information about the health of Configuration Manager client computers. For more information about the status views, see [Status and alert views in Configuration Manager](status-alert-views-configuration-manager.md). The status views that contain client status information are described in this section.
 
 ### v_CH_PolicyRequestHistory
 
@@ -30,10 +32,6 @@ The view can be joined to other views by using the **ResourceID** column.
 
 Lists information about the client health components found on Configuration Manager clients.
 The view can be joined with other views by using the **ResourceID** column.
-
-## Client Status Views
-
-The client status views contain status and status summary information about the health of Configuration Manager client computers. For more information about the status views, see [Status and Alert Views in Configuration Manager](https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/dn581980(v%3dtechnet.10)). The status views that contain client status information are described in this section.
 
 ### v_CH_ClientSummary
 
@@ -52,7 +50,7 @@ The view can be joined to other views by using the **SMSID**, **NetBiosName**, *
  
 ### v_DeviceClientHealthState
 
-Lists all Configuration Manager mobile device clients, by device client ID, NetBIOS name, and device ID, and the health state of the device, as well as the assigned site code, owner name, and so on. This status view is also listed and described in the [Mobile Device Management Views in Configuration Manager](https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/dn581929(v%3dtechnet.10)) topic.
+Lists all Configuration Manager mobile device clients, by device client ID, NetBIOS name, and device ID, and the health state of the device, as well as the assigned site code, owner name, and so on. This status view is also listed and described in the [Mobile device management views in Configuration Manager](mobile-device-management-views-configuration-manager.md) topic.
 The view can be joined to other views by using the **DeviceClientID**, **DeviceNetBiosName**, **HealthType**, and **HealthState** columns. The **DeviceClientID** column in this view contains the same information as the **SMS_Unique_Identifier0** column in the **v_R_System** view. The **HealthType** column in this view contains the same information as the **TopicType** column in the **v_StateNames** view and the **HealthState** column in this view contains the same information as the **StateID** column in the **v_StateNames** status view. Client health state messages have a state type from 1000 to 1004. The Configuration Manager states are listed in the **v_StateNames** view.
  
 ### v_CH_ClientSummaryCurrent
@@ -90,6 +88,6 @@ It is unlikely that this view will be joined to other views.
 Lists information, by **MachineResourceID** about all active client computers in the site. This includes whether the client is on the Internet, the client version, information about certificates and more.
 This view can be joined to other views by using the **MachineResourceID** column.
 
-## See Also
+## See also
 
-[SQL Server Views in Configuration Manager](sql-server-views-configuration-manager.md)  
+[SQL Server views in Configuration Manager](sql-server-views-configuration-manager.md)  

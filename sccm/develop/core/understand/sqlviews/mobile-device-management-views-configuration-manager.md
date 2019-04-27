@@ -1,5 +1,5 @@
 ﻿---
-title: Mobile Device Management Views
+title: Mobile device management views
 titleSuffix: Configuration Manager
 description: Information about the mobile device configuration items and configuration packages.
 ms.date: 04/30/2019
@@ -13,24 +13,24 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Mobile Device Management Views in Configuration Manager
+# Mobile device management views in Configuration Manager
 
 Mobile device management views in Configuration Manager contain information about the mobile device configuration items and configuration packages. The mobile device management status views provide client deployment and client health state information, and the mobile device management hardware inventory views contain information about the inventory collected from mobile device.
 
 The following sections provide detailed information about mobile device management views, mobile device management status views, and mobile device management hardware inventory views.
 
-## Mobile Device Management Status Views
+## Mobile device management status views
 
-The mobile device management status views contain information about the mobile device deployment and client health states. For more information about status views, see [Status and Alert Views in Configuration Manager](status-alert-views-configuration-manager.md). The status views that contain mobile devices information are described in this section.
+The mobile device management status views contain information about the mobile device deployment and client health states. For more information about status views, see [Status and alert views in Configuration Manager](status-alert-views-configuration-manager.md). The status views that contain mobile devices information are described in this section.
 
 ### v_DeviceClientDeploymentState
 
-Lists all Configuration Manager mobile device clients, by device client ID, NetBIOS name, and device ID, and the last device deployment state reported, as well as the assigned site code, device client version, and so on. The view is also listed and described in the [Client Deployment Views in Configuration Manager](client-deployment-views-configuration-manager.md) topic.
+Lists all Configuration Manager mobile device clients, by device client ID, NetBIOS name, and device ID, and the last device deployment state reported, as well as the assigned site code, device client version, and so on. The view is also listed and described in the [Client deployment views in Configuration Manager](client-deployment-views-configuration-manager.md) topic.
 The view can be joined to other views by using the **DeviceClientID**, **DeviceNetBiosName**, and **DeviceDeploymentState** columns. The **DeviceDeploymentState** column contains the state ID for topic type 800. The **DeviceClientID** column contains the same information as the **SMS_Unique_Identifier0** column in the **v_R_System** view. The Configuration Manager states are listed in the **v_StateNames** view.
 
 ### v_DeviceClientHealthState
 
-Lists all Configuration Manager mobile device clients, by device client ID, NetBIOS name, and device ID, and the health state of the device, as well as the assigned site code, owner name, and so on. The view is also listed and described in the [Client Status Views in Configuration Manager](client-status-views-configuration-manager.md) topic.
+Lists all Configuration Manager mobile device clients, by device client ID, NetBIOS name, and device ID, and the health state of the device, as well as the assigned site code, owner name, and so on. The view is also listed and described in the [Client status views in Configuration Manager](client-status-views-configuration-manager.md) topic.
 The view can be joined to other views by using the **DeviceClientID**, **DeviceNetBiosName**, **HealthType**, and **HealthState** columns. The **DeviceClientID** column in this view contains the same information as the **SMS_Unique_Identifier0** column in the **v_R_System** view. The **HealthType** column in this view contains the same information as the **TopicType** column in the **v_StateNames** view and the **HealthState** column in this view contains the same information as the **StateID** column in the **v_StateNames** status view. Client health state messages have a state type from 1000 to 1004. The Configuration Manager states are listed in the **v_StateNames** view.
 
 ### v_DeviceClientUpdateState
@@ -43,7 +43,7 @@ The view can be joined to other views by using the **DeviceClientID**, **DeviceN
 Lists information about the configured sideloading keys for Windows RT including a description, the maximum number of activations allowed, the type of key and more.
 It is unlikely that this view will be joined to other views.
 
-## Mobile Device Management Views
+## Mobile device management views
 
 The mobile device management views contain information about the status of mobile devices in your hierarchy and contain the information described in this section.
 
@@ -57,9 +57,9 @@ The view can be joined with other views by using the **DeviceName** column.
 Lists information about devices that have been wiped by Configuration Manager.
 The view can be joined with other views by using the **DeviceName** column.
 
-## Mobile Device Management Hardware Inventory Views
+## Mobile device management hardware inventory views
 
-The mobile device management hardware inventory views contain information about mobile devices that is retrieved as part of hardware inventory. For more information about hardware inventory views, see [Hardware Inventory Views in Configuration Manager](hardware-inventory-views-configuration-manager.md). The hardware inventory views that contain mobile device information are described in this section.
+The mobile device management hardware inventory views contain information about mobile devices that is retrieved as part of hardware inventory. For more information about hardware inventory views, see [Hardware inventory views in Configuration Manager](hardware-inventory-views-configuration-manager.md). The hardware inventory views that contain mobile device information are described in this section.
 
 ### v_GS_DEVICE_CERTIFICATES
 
@@ -166,7 +166,7 @@ This view can be joined with other views by using the **ResourceID** column.
 Lists information about network settings on mobile devices, including whether the network is enabled.
 This view can be joined with other views by using the **ResourceID** column.
 
-## Exchange ActiveSync Views
+## Exchange ActiveSync views
 
 ### v_EAS_Organization
 
@@ -183,6 +183,6 @@ This view can be joined to other views by using the **DeviceID** column.
 Lists, by **ItemKey**, devices and whether they have been jailbroken.
 It is unlikely that this view will be joined to other views.
 
-## See Also
+## See also
 
-[SQL Server Views in Configuration Manager](sql-server-views-configuration-manager.md)  
+[SQL Server views in Configuration Manager](sql-server-views-configuration-manager.md)  

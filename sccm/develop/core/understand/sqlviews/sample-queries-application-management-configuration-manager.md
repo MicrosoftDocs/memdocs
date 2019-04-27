@@ -1,5 +1,5 @@
 ﻿---
-title: Sample Queries for Application Management
+title: Sample queries for application management
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join the most common application management views to other views.
 ms.date: 04/30/2019
@@ -13,11 +13,11 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Sample Queries for Application Management in Configuration Manager
+# Sample queries for application management in Configuration Manager
 
 The following sample queries demonstrate how to join the most common application management views to other views.
 
-## Joining Package and Program Deployment and Collection Views
+## Joining package and program deployment and collection views
 
 The following query lists all package and program deployments by advertisement ID, advertisement name, and the collection that was targeted for the deployment. The **v_Advertisement** view is joined to the **v_Collection** view by using the **AdvertisementID** column.
 
@@ -29,6 +29,6 @@ The following query lists all package and program deployments by advertisement I
     ORDER BY ADV.AdvertisementID 
 ```
 
-## See Also
+## See also
 
-[Application Management Views in Configuration Manager](application-management-views-configuration-manager.md)
+[Application management views in Configuration Manager](application-management-views-configuration-manager.md)

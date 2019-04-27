@@ -1,5 +1,5 @@
 ﻿---
-title: Migration Views
+title: Migration views
 titleSuffix: Configuration Manager
 description: Information about the tasks involved in migrating to a Configuration Manager site.
 ms.date: 04/30/2019
@@ -13,13 +13,13 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Migration Views in Configuration Manager
+# Migration views in Configuration Manager
 
 Migration views contain information about the tasks involved in migrating to a Configuration Manager site.
 
-For more information about migration in Configuration Manager, see [Migrating Hierarchies in Configuration Manager](https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/gg682006(v=technet.10)).
+For more information about migration in Configuration Manager, see [Migrating hierarchies in Configuration Manager](/sccm/core/migration/configuring-source-hierarchies-and-source-sites-for-migration).
 
-## Migration Views
+## Migration views
 
 The views for migration are shown in this section:
 
@@ -94,6 +94,6 @@ Lists the source site information. This view is similar to **v_MIG_SiteMapping**
 
 This view is based on **v_MIG_Collections** and queries the list of collection information in a source site. Use this view to query collection information.
 
-## See Also
+## See also
 
-[SQL Server Views in Configuration Manager](sql-server-views-configuration-manager.md)
+[SQL Server views in Configuration Manager](sql-server-views-configuration-manager.md)
