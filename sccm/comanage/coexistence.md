@@ -26,7 +26,7 @@ The Configuration Manager client can coexist with a third-party MDM service on a
 > [!Note]  
 > It doesn't support [personally-owned devices](https://docs.microsoft.com/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device).  
 
-When the Configuration Manager client detects that a third-party MDM service is also managing the device, it automatically transitions certain workloads. This action prevents conflicting settings on the client that could adversely impact the device and user experience. The following workloads are transitioned to the coexistence service:
+When the Configuration Manager client detects that a third-party MDM service is also managing the device, it automatically deactivates certain workloads in Configuration Manager. This behavior allows the MDM service to take over these functions. It also prevents conflicting settings on the client that could adversely impact the device and user experience. The following workloads in Configuration Manager are deactivated in this case:
 
 - Resource access policies for VPN, Wi-Fi, email, and certificate settings
 - Application management, including legacy packages
@@ -42,3 +42,5 @@ The Configuration Manager client avoids conflict with the third-party management
 - Asset Intelligence
 - Software metering
 - Power management reporting
+
+For more information on the benefits of co-management with Configuration Manager and Intune, see [Co-management benefits](/sccm/comanage/overview#benefits).
