@@ -1,12 +1,14 @@
+- name: Protect data and infrastructure
 - name: Understand and explore
   items:
   - name: Overview
     href: understand\protect-data-and-site-infrastructure.md
 - name: Plan and design
   items:
-  - name: Certificate profile prerequisites
-    href: plan-design/prerequisites-for-certificate-profiles.md
+  - name: Certificate profiles
     items:
+    - name: Certificate profile prerequisites
+      href: plan-design/prerequisites-for-certificate-profiles.md
     - name: Certificate template permissions for certificate profiles
       href: plan-design/planning-for-certificate-template-permissions.md
     - name: Certificate profile security and privacy
@@ -14,7 +16,6 @@
   - name: Plan for Endpoint Protection
     href: plan-design/planning-for-endpoint-protection.md
   - name: Plan for email, Wi-Fi, and VPN profiles
-    href: plan-design/prerequisites-for-email-profiles.md
     items:
     - name: Email profile prerequisites
       href: plan-design/prerequisites-for-email-profiles.md
