@@ -17,7 +17,7 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Technical Preview)*
 
-This article introduces the features that are available in the technical preview for Configuration Manager, version 1903. Install this version to update and add new features to your technical preview site.
+This article introduces the features that are available in the technical preview for Configuration Manager, version 1904. Install this version to update and add new features to your technical preview site.
 
 Review the [technical preview](/sccm/core/get-started/technical-preview) article before installing this update. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.
 
