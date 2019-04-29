@@ -61,7 +61,7 @@ The view can be joined to other views by using the **ResourceID** column.
 Lists information, by Resource ID, about power management suspend operations that did not complete successfully.
 The view can be joined to other views by using the **ResourceID** column.
 
-## Wake Up Proxy Views
+## Wake up proxy views
 
 The wake up proxy views are described in this section.
 

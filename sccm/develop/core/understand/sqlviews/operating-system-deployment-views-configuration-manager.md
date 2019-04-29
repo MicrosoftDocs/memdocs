@@ -98,7 +98,7 @@ This view can be joined to other views by using the **PackageID** and **TaskSequ
 Lists, by package ID, the content packages that are referenced by a task sequence that installs an application.
 This view can be joined to other views by using the **PackageID** column.
 
-## Operating System Deployment Status View
+## Operating system deployment status view
 
 The operating system deployment status view contains status information for operating system deployment task sequence steps. For more information about the status views, see [Status and alert views in Configuration Manager](status-alert-views-configuration-manager.md). The status view that contains operating system deployment information is described in this section.
 
