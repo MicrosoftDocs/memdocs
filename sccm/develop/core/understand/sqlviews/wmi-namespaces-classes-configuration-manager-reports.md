@@ -13,11 +13,11 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Configuration Manager WMI Namespaces and Classes for Configuration Manager Reports
+# Configuration Manager WMI namespaces and classes for Configuration Manager reports
 
 When Configuration Manager is installed, there are several Windows Management Instrumentation (WMI) namespaces created, and depending on the namespace, hundreds of classes can be created under each namespace. Also, each site might have classes that other sites might not have depending on the specific site settings, the inventory that is tracked, and so forth.
 
-## WMI Namespaces Created by Configuration Manager
+## WMI namespaces created by Configuration Manager
 
 The following WMI namespaces are created by Configuration Manager:
 
@@ -56,7 +56,7 @@ The following WMI namespaces are created by Configuration Manager:
   - root\\sms
   - root\\sms\\site\_*\<site code\>*
 
-## How to Retrieve Configuration Manager WMI Namespaces and Classes by using a Visual Basic Script
+## How to retrieve Configuration Manager WMI namespaces and classes by using a Visual Basic script
 
 An easy way to list the Configuration Manager–related classes that have been created on your site is to run a Microsoft Visual Basic script. The following script will scan all of the classes within each of the WMI namespaces listed above and output the results to a text file.
 
@@ -64,7 +64,7 @@ An easy way to list the Configuration Manager–related classes that have been c
 
 1. Copy the following code into Notepad:
 
-    ```txt  
+    ```TEXT 
         '======================================================================================= 
         ' 
         ' NAME: WMIScan.vbs 
@@ -246,6 +246,6 @@ An easy way to list the Configuration Manager–related classes that have been c
 
 The script creates a text file (in C:\\WMIScan) with all of the WMI classes in each of the WMI namespaces for Configuration Manager when run on a Configuration Manager primary site server. A log file is also created listing all of the namespaces scanned and whether the scan was successful. Be aware that some namespaces will not be present on some site servers, depending on which options have been configured.
 
-## See Also
+## See also
 
-[SMS Provider WMI Schema Reference in Configuration Manager](sms-provider-wmi-schema-reference-configuration-manager.md)
+[SMS provider WMI schema reference in Configuration Manager](sms-provider-wmi-schema-reference-configuration-manager.md)

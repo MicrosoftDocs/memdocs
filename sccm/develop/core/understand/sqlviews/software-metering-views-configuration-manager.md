@@ -1,5 +1,5 @@
 ﻿---
-title: Software Metering Views
+title: Software metering views
 titleSuffix: Configuration Manager
 description: Information such as the software metering rules that are created in the Configuration Manager hierarchy.
 ms.date: 04/30/2019
@@ -13,13 +13,13 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Software Metering Views in Configuration Manager
+# Software metering views in Configuration Manager
 
 The software metering views contain information such as the software metering rules that are created in the Configuration Manager hierarchy, which files to meter, the products in which the files belong, the users that have used the metered files, and more. Several of the status and status summarizer views also provide information about file usage. Most often, the software metering views can be joined to other views by using the **FileID** and **ResourceID** columns.
 
 The following sections provide detailed information about software metering views and software metering status views.
 
-## Software Metering Views
+## Software metering views
 
 The software metering views are described in this section.
 
@@ -53,7 +53,7 @@ The view can be joined to other views by using the **MeteredUserID** and **FullN
 Lists all metered files for system resources that match files by FileID that are also in software inventory. The view contains the rule ID, product name, metered file ID, and resource ID.
 The view can be joined to other views by using the **RuleID**, **MeteredFileID**, and **ResourceID** columns.
 
-## Software Metering Status Views
+## Software metering status views
 
 The software metering status views contain status summary information about the file usage for metered files. For more information about the status views, see [Status and Alert Views in Configuration Manager](status-alert-views-configuration-manager.md). The status views that contain software metering information are described in this section.
 
@@ -72,6 +72,6 @@ It is unlikely that this view will be joined to other views.
 Lists the Configuration Manager client computers, by resource ID, and the usage summary for metered files, as well as the logged-on user name, usage time, and time of last usage.
 The view can be joined to other views by using the **ResourceID**, **FileID**, and **MeteredUserID** columns.
 
-## See Also
+## See also
 
-[SQL Server Views in Configuration Manager](sql-server-views-configuration-manager.md)
+[SQL Server views in Configuration Manager](sql-server-views-configuration-manager.md)

@@ -13,11 +13,11 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Sample Queries for Software Updates in Configuration Manager
+# Sample queries for software updates in Configuration Manager
 
 The following sample queries demonstrate how to join software updates views to each other and to views from other view categories. Software updates views will most often use the **CI_ID** column when joining to other views.
 
-## Joining Software Updates, Discovery, and Status Views
+## Joining software updates, discovery, and status views
 
 The following query retrieves the article ID, bulletin ID, software update title, last enforcement state for the update, the time of the last enforcement check, and the time that the last enforcement state message was sent by the Computer1 client. The results are sorted by state name and then by the last modified date for the software update. The query joins the **v_UpdateComplianceStatus** status view with the **v_UpdateInfo** software updates view by using the **CI_ID** column, the **v_UpdateComplianceStatus** status view with the **v_R_System** discovery view by using the **ResourceID** column, and the **v_UpdateComplianceStatus** status view with the **v_StateNames** status view by using the **LastEnforcementStatus** and **StateID** columns, respectively. The retrieved information is filtered by the topic type of 402, which includes state messages for configuration item enforcement, and a computer with the NetBIOS name of Computer1.
 
@@ -33,7 +33,7 @@ The following query retrieves the article ID, bulletin ID, software update title
     ORDER BY v_StateNames.StateName, v_UpdateInfo.DateLastModified 
 ```
 
-## Joining Software Updates and Compliance Settings Views
+## Joining software updates and compliance settings views
 
 The following query retrieves the software update deployments, by assignment ID (software update deployment ID) and assignment name (deployment name); the software updates that are contained in the deployment, by article ID, bulletin ID, and software update title; and the target collection for the deployment. The results are sorted by the assignment ID and then by article ID. The query joins the **v_UpdateInfo** software updates view with the **v_CIAssignmentToCI** compliance settings view by using the **CI_ID** column, and it joins the **v_CIAssignmentToCI** view to the **v_CIAssignment** compliance settings view by using the **AssignmentID** column.
 
@@ -47,7 +47,7 @@ The following query retrieves the software update deployments, by assignment ID 
     ORDER BY v_CIAssignment.AssignmentID, v_UpdateInfo.ArticleID 
 ```
 
-## Joining Software Updates, Compliance Settings, and Application Management Views
+## Joining software updates, compliance settings, and application management views
 
 The following query retrieves the software updates that have been downloaded, by article ID, the software update title, deployment package ID, deployment package name, and the path to the package source files. The results are sorted by software update article ID. The query joins the **v_UpdateInfo** software updates view to the **v_BundledConfigurationItems** view by using the **CI_ID** column. The **v_BundledConfigurationItems** compliance settings view is joined with the **v_UpdatePrograms** software updates view by using the **BundledCI_ID** and **UpdateID** columns, respectively. The **v_UpdatePrograms** view is joined with the **v_Package** software distribution view by using the **PackageID** column. Because the **v_UpdateInfo** view contains the configuration item ID for software updates bundles or stand-alone software updates, but the **v_UpdatePrograms** view contains the configuration item ID for software updates that are part of a bundle or stand-alone software updates that have content associated with them, the **v_UpdateContents** view was needed to link the two. For example, a software update bundle might have a configuration item ID of 100, and the English version of the software update that is downloaded might have a configuration item ID of 99. The **v_UpdateInfo** view would contain configuration item ID 100 for the bundle, the **v_UpdatePrograms** view would contain configuration item ID 99 for the downloaded software update, and the **v_UpdateContents** would contain both configuration item IDs for the bundle and associated software update.
 
@@ -61,6 +61,6 @@ The following query retrieves the software updates that have been downloaded, by
     ORDER BY v_UpdateInfo.ArticleID 
 ```
 
-## See Also
+## See also
 
-[Software Updates Views in Configuration Manager](software-updates-views-configuration-manager.md)
+[Software updates views in Configuration Manager](software-updates-views-configuration-manager.md)

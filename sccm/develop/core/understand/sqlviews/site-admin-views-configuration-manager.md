@@ -1,5 +1,5 @@
 ﻿---
-title: Site Administration Views
+title: Site administration views
 titleSuffix: Configuration Manager
 description: Information such as the site code, Configuration Manager version, and the location of the SMS provider.
 ms.date: 04/30/2019
@@ -13,13 +13,13 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Site Administration Views in Configuration Manager
+# Site administration views in Configuration Manager
 
 The Configuration Manager site views contain information such as the site code, Configuration Manager version, the location of the SMS provider, site server name, site system names, site boundary information, and more. There are also status views that contain information about sites, site systems, and components. The site and site status views will most often be joined to other views by using the **SiteCode** or **ServerName** columns.
 
 The following sections provide detailed information about site views and site status views.
 
-## Site Views
+## Site views
 
 The site views contain information about the Configuration Manager site and are described in this section.
 
@@ -82,7 +82,7 @@ The view can be joined to other views by using the **SiteCode**, **ServerName**,
 List information about each site in the hierarchy, including the site code, site name, site type, build number, site server name and more.
 This view can be joined to other views by using the **SiteCode** and **ServerName** columns.
 
-## Site Status Views
+## Site status views
 
 The site status views contain status and status summary information about Configuration Manager components, site servers, site systems, and so on. For more information about the status views, see [Status and Alert Views in Configuration Manager](status-alert-views-configuration-manager.md). The status views that contain site information are described in this section.
 
@@ -110,6 +110,6 @@ The view can be joined to other views by using the **SiteCode** column.
 Lists the site summary status, which is the same status displayed for the *\<site code>* - *\<site name>* node of the Configuration Manager console.
 The view can be joined to other views by using the **SiteCode** column.
 
-## See Also
+## See also
 
-[SQL Server Views in Configuration Manager](sql-server-views-configuration-manager.md)
+[SQL Server views in Configuration Manager](sql-server-views-configuration-manager.md)

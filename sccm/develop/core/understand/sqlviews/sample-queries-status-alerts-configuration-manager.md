@@ -13,11 +13,11 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Sample Queries for Status and Alerts in Configuration Manager
+# Sample queries for status and alerts in Configuration Manager
 
 The following sample queries demonstrate how to join some of the most commonly used status message views to other views.
 
-## Joining the Status Message and Status Message Attribute Views
+## Joining the status message and status message attribute views
 
 The following query lists status messages, by status message ID, the component that created the status message, the count of the status message reported by the component, the attribute value, and the computer name where the component is installed. The attribute value could be a package ID for a package status message, a collection ID for a collection status message, a user name for a status message concerning a user, and so forth. The **v_StatusMessage** view is joined to the **v_StatMsgAttributes** view by using the **RecordID** column.
 
@@ -30,7 +30,7 @@ The following query lists status messages, by status message ID, the component t
     ORDER BY SM.Component, SM.MessageID 
 ```
 
-## Joining the Distribution Point Status and Package Views
+## Joining the distribution point status and package views
 
 The following query lists the distribution points that have been selected for each package and the installation status for the distribution point. The **v_PackageStatusDistPointSumm** view is joined to the **v_Package** view by using the **PackageID** column.
 
@@ -42,7 +42,7 @@ The following query lists the distribution points that have been selected for ea
     ORDER BY DPS.PackageID 
 ```
 
-## Joining the Deployment Status, Deployment, Collection, and Resource Views
+## Joining the deployment status, deployment, collection, and resource views
 
 The following query lists the clients that have been targeted for a deployment, the deployment ID, the deployment name, the collection that was targeted in which the client is a member, and the last status message received from the client for the deployment. The **v_ClientAdvertisementStatus** view is joined to the **v_R_System** view by using the **ResourceID** column and the **v_Advertisement** view by using the **AdvertisementID** column. The **v_Advertisement** view is joined to the **v_Collection** view by using the **CollectionID** column. The results are sorted by NetBIOS name and then by advertisement ID.
 
@@ -56,7 +56,7 @@ The following query lists the clients that have been targeted for a deployment, 
     ORDER BY SYS.Netbios_Name0, ADV.AdvertisementID
 ```
 
-## Joining the Software Metering Status, Software Inventory, and Resource Views
+## Joining the software metering status, software inventory, and resource views
 
 The following query lists the software metering usage data for files defined in the software metering rules. The NetBIOS name of the client, file name, file path, how many times the file has run on the computer, and last usage date are retrieved. The results are sorted by NetBIOS name, and then file name, and then file path. The **v_MonthlyUsageSummary** view is joined to the **v_R_System** view by using the **ResourceID** column and to the **v_GS_SoftwareFile** view by using the **FileID** column.
 
@@ -69,7 +69,7 @@ The following query lists the software metering usage data for files defined in 
     ORDER BY SYS.Netbios_Name0, SF.FileName, SF.FilePath 
 ```
 
-## Joining the Software Updates Status and Discovery Views
+## Joining the software updates status and discovery views
 
 The following query lists the enforcement state reported by the VISTACLIENT1 client computer for all software updates that have been assigned to the client. The article ID, bulletin ID, and title for the software update are listed, as well as the enforcement state, the date for the last enforcement scan on the client, and the date when the last enforcement state message was sent from the client. The results are filtered by a topic type of 402, which is the topic type for enforcement state messages, and for the VISTACLIENT1 client. The results are also sorted by state name, and then by the date the software update was last modified. The **v_UpdateComplianceStatus** status view is joined to the **v_R_System** discovery view by using the **ResourceID** column. The **v_UpdateComplianceStatus** view is joined to the **v_UpdateInfo** software updates view by using the **CI_ID** column. The **v_UpdateComplianceStatus** view is joined to the **v_StateNames** status view by using the **LastEnforcementMessageID** and **StateID** columns, respectively.
 
@@ -85,6 +85,6 @@ The following query lists the enforcement state reported by the VISTACLIENT1 cli
     ORDER BY v_StateNames.StateName, v_UpdateInfo.DateLastModified 
 ```
 
-## See Also
+## See also
 
-[Status and Alert Views in Configuration Manager](status-alert-views-configuration-manager.md)
+[Status and alert views in Configuration Manager](status-alert-views-configuration-manager.md)

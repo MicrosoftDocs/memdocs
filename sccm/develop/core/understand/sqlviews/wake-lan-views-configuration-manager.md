@@ -1,5 +1,5 @@
 ﻿---
-title: Wake On LAN Views
+title: Wake On LAN views
 titleSuffix: Configuration Manager
 description: Information about the objects that have Wake On LAN enabled.
 ms.date: 04/30/2019
@@ -13,13 +13,13 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Wake On LAN Views in Configuration Manager
+# Wake On LAN views in Configuration Manager
 
 The Configuration Manager Wake On LAN views contain information about the objects, such as application management, software updates, and task sequence deployments, that have Wake On LAN enabled, as well as the clients that are Wake On LAN enabled, and clients that have deployments that are Wake On LAN enabled. There is also a status view that contains information about the Wake On LAN error messages that have been reported. Most often, the Wake On LAN views will be joined to discovery views by using the **ResourceID** column, and to application management and compliance settings views by using the **ObjectID** column.
 
 The following sections provide detailed information about Wake On LAN views and the Wake On LAN status view.
 
-## Wake On LAN Views
+## Wake On LAN views
 
 The Wake On LAN views are described in this section.
 
@@ -93,7 +93,7 @@ The view can be joined to other views by using the **ResourceID** and **ObjectID
 Lists all Wake On LAN–enabled clients, by **ResourceID** and **MachineName**, the assigned site, and the current time zone.
 The view can be joined to other views by using the **ResourceID** column.
 
-## Wake On LAN Status Views
+## Wake On LAN status views
 
 The Wake On LAN status view contains information about the Wake On LAN error messages. For more information about the status views, see [Status and Alert Views in Configuration Manager](status-alert-views-configuration-manager.md). The status view that contains Wake On LAN information is described in this section.
 
@@ -102,6 +102,6 @@ The Wake On LAN status view contains information about the Wake On LAN error mes
 Lists the Wake On LAN error status messages that have been reported, including message description and time of the error. The **BatchID**, **ObjectType**, and **ID** columns contain status message attributes, such as an advertisement ID or unique configuration item ID.
 The view can be joined to other views by using the **BatchID**, **ObjectType**, and **ID** columns.
 
-## See Also
+## See also
 
-[SQL Server Views in Configuration Manager](sql-server-views-configuration-manager.md)
+[SQL Server views in Configuration Manager](sql-server-views-configuration-manager.md)

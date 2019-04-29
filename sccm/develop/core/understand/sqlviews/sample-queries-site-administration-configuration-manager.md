@@ -13,11 +13,11 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Sample Queries for Site Administration in Configuration Manager
+# Sample queries for site administration in Configuration Manager
 
 The following sample queries demonstrate how the Configuration Manager site administration views can be joined to other views to retrieve specific data.
 
-## Joining Site Administration Views
+## Joining site administration views
 
 The following sample query demonstrates how to join a site view to another site view. This query lists the boundaries for each site in the Configuration Manager hierarchy, the type of boundary, the boundary value, whether the connection is fast or slow, and the boundary description. The **v_Site** and **v_BoundaryInfo** site views are joined by using the **SiteCode** column. The query results are sorted by site code, boundary type, and then value. The CASE function is used to take a numeric value for boundary type and connection speed and to provide friendly names based on the value.
 
@@ -37,6 +37,6 @@ The following sample query demonstrates how to join a site view to another site 
     ORDER BY v_Site.SiteCode, [Boundary Type], v_BoundaryInfo.Value
 ```
 
-## See Also
+## See also
 
-[Site Administration Views in Configuration Manager](site-admin-views-configuration-manager.md)
+[Site administration views in Configuration Manager](site-admin-views-configuration-manager.md)
