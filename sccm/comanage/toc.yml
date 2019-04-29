@@ -41,6 +41,8 @@
   items:
   - name: Workloads
     href: workloads.md
+  - name: Third-party MDM coexistence
+    href: coexistence.md
 - name: How-to guides
   items:
   - name: Enable co-management
