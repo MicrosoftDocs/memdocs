@@ -16,23 +16,23 @@
     - name: Software Center user guide
       href: understand/software-center.md
   - name: Fundamentals of Configuration Manager
-    items:
-  - name: Configuration Manager fundamentals
-    href: understand/fundamentals.md
+    items: 
+    - name: Configuration Manager fundamentals
+      href: understand/fundamentals.md
     - name: Fundamentals of sites and hierarchies
       items:
       - name: Sites and hierarchies fundamentals
         href: understand/fundamentals-of-sites-and-hierarchies.md
       - name: About upgrade, update, and install for site and hierarchy infrastructure
         href: understand/upgrade-update-install.md
-    - name: Fundamentals of managing devices
-      href: understand/fundamentals-of-managing-devices.md
-    - name: Fundamentals of client management
-      href: understand/fundamentals-of-client-management-tasks.md
-    - name: Fundamentals of security
-      href: understand/fundamentals-of-security.md
-    - name: Fundamentals of role-based administration
-      href: understand/fundamentals-of-role-based-administration.md
+      - name: Fundamentals of managing devices
+        href: understand/fundamentals-of-managing-devices.md
+      - name: Fundamentals of client management
+        href: understand/fundamentals-of-client-management-tasks.md
+      - name: Fundamentals of security
+        href: understand/fundamentals-of-security.md
+      - name: Fundamentals of role-based administration
+        href: understand/fundamentals-of-role-based-administration.md
   - name: Introduction to the Long-Term Servicing Branch
     items:
     - name: Long-Term Servicing Branch overview
