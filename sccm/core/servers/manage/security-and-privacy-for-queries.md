@@ -2,7 +2,7 @@
 title: "Security and privacy for queries"
 titleSuffix: "Configuration Manager"
 description: "Understand best practices for security and privacy when you query for information from the site database."
-ms.date: 10/06/2016
+ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -27,5 +27,6 @@ Queries in System Center Configuration Manager let you retrieve information from
 |----------------------------|----------------------|  
 |When you export or import a query that is saved to a network location, secure the location and the network channel.|Restrict who can access the network folder.<br /><br /> Use server message block (SMB) signing or Internet Protocol Security (IPsec) between the network location and the site server to prevent an attacker from tampering with the query data before it is imported.|  
 
-## See also  
- [Queries technical reference for System Center Configuration Manager](../../../core/servers/manage/queries-technical-reference.md)
+## Next steps
+  
+[Security and privacy for System Center Configuration Manager](../../../core/plan-design/security/security-and-privacy.md)

@@ -2,7 +2,7 @@
 title: "Hardware inventory "
 titleSuffix: "Configuration Manager"
 description: "Get an introduction to hardware inventory in System Center Configuration Manager."
-ms.date: 02/22/2017
+ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -22,7 +22,7 @@ Use hardware inventory in System Center Configuration Manager to collect informa
 
  You can use several methods to view the hardware inventory data that Configuration Manager collects. These include the following:  
 
-- [Create queries that return devices that are based on a specific hardware configuration](../../../../core/servers/manage/queries-technical-reference.md).  
+- [Create queries that return devices that are based on a specific hardware configuration](../../../../core/servers/manage/introduction-to-queries.md).  
 
 - [Create query-based collections that are based on a specific hardware configuration](../../../../core/clients/manage/collections/introduction-to-collections.md). Query-based collection memberships automatically update on a schedule. You can use collections for several tasks, which include software deployment. .  
 

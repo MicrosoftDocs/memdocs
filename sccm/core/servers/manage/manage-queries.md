@@ -2,7 +2,7 @@
 title: "Manage queries"
 titleSuffix: "Configuration Manager"
 description: "Learn how to manage your queries. Includes a table for detailed reference."
-ms.date: 10/06/2016
+ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -32,5 +32,5 @@ Use the information in this topic to help you manage queries in System Center Co
 |**Export**|Opens the **Export Objects Wizard** that lets you export this query to a Managed Object Format (MOF) file that can then be imported at another site.|No additional information.|  
 |**Move**|Opens the **Move Selected Items** dialog box where you can move the selected query to a folder that you previously created under the **Queries** node.|No additional information.|  
 
-## See Also  
- [Operations and maintenance for queries in System Center Configuration Manager](../../../core/servers/manage/operations-and-maintenance-for-queries.md)
+## Next steps 
+ [Create queries in System Center Configuration Manager](../../../core/servers/manage/create-queries.md)

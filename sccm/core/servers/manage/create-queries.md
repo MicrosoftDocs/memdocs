@@ -2,7 +2,7 @@
 title: "Create queries"
 titleSuffix: "Configuration Manager"
 description: "Discover how to create and import queries in System Center Configuration Manager. Includes example queries and tips."
-ms.date: 12/11/2017
+ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -179,5 +179,4 @@ Use one of the following values for *&lt;Device ID\>*:
 Select SMS_R_System.ClientEdition from SMS_R_System where SMS_R_System.ClientEdition = 5  
 ```  
 
-## See also  
- [Operations and maintenance for queries in System Center Configuration Manager](../../../core/servers/manage/operations-and-maintenance-for-queries.md)
+
