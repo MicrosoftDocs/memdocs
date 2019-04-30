@@ -65,7 +65,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 ### Technical
 
-- An active Azure subscription  
+- An active Azure subscription, with [**Global Admin**](https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator) permissions  
 
     - **Workspace owner** or **contributor** permissions to **Set up your workspace**, and the following roles:  
 
