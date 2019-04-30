@@ -2,7 +2,7 @@
 title: Technical preview 1904
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 1904.
-ms.date: 04/26/2019
+ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -25,23 +25,20 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/1903/1234567.md)] -->
 
+[!INCLUDE [Office 365 ProPlus upgrade readiness dashboard](includes/1904/4021125.md)]
+
 [!INCLUDE [Configure dynamic update during feature updates](includes/1904/4062619.md)]
+
+[!INCLUDE [Community Hub and GitHub](includes/1904/3555935.md)]
+<!-- 3555935,3555936 -->
 
 [!INCLUDE [CMPivot standalone](includes/1904/3555890.md)]
 
-[!INCLUDE [Improvements to Office 365 ProPlus readiness](includes/1904/4021125.md)]
+[!INCLUDE [Software Center infrastructure improvements](includes/1904/3555950.md)]
 
-[!INCLUDE [Directly link to Configuration Manager console pages](includes/1904/4224406.md)]
-
-[!INCLUDE [Improved control over WSUS Maintenance](includes/1904/4110109.md)]
-
-[!INCLUDE [Share reports in Community Hub](includes/1904/3555936.md)]
+[!INCLUDE [Improved control over WSUS maintenance](includes/1904/4110109.md)]
 
 [!INCLUDE [Pre-cache driver packages and OS images](includes/1904/4224642.md)]
-
-[!INCLUDE [Improvements to Software Center](includes/1904/3555950.md)]
-
-[!INCLUDE [Community Hub and GitHub](includes/1904/3555935.md)]
 
 [!INCLUDE [Improvements to OS deployment](includes/1904/2839943.md)]
 <!-- 2839943,4447680 -->
