@@ -1,48 +1,53 @@
 - name: System Center Configuration Manager SDK
+- name: System Center Configuration Manager SDK overview
   href: core/misc/system-center-configuration-manager-sdk.md
-- name: Privacy Information
+- name: Privacy information
   href: core/misc/privacy/privacy-information.md
 - name: What's new in the System Center Configuration Manager SDK
   href: core/changes/what-s-new-in-the-system-center-configuration-manager-sdk.md
-- name: Configuration Manager SDK Requirements
-  href: core/reqs/configuration-manager-sdk-requirements.md
+- name: Configuration Manager SDK requirements
   items:
-  - name: About Configuration Manager SDK Requirements
+  - name: Configuration Manager SDK requirements overview
+    href: core/reqs/configuration-manager-sdk-requirements.md
+  - name: About Configuration Manager SDK requirements
     href: core/reqs/about-configuration-manager-sdk-requirements.md
-  - name: Client Runtime Requirements
+  - name: Client runtime requirements
     href: core/reqs/client-runtime-requirements.md
-  - name: Server Runtime Requirements
+  - name: Server runtime requirements
     href: core/reqs/server-runtime-requirements.md
-  - name: Client Development Requirements
+  - name: Client development requirements
     href: core/reqs/client-development-requirements.md
-  - name: Server Development Requirements
+  - name: Server development requirements
     href: core/reqs/server-development-requirements.md
-  - name: Configuration Manager SDK Libraries and Header Files
+  - name: Configuration Manager SDK libraries and header files
     href: core/reqs/configuration-manager-sdk-libraries-and-header-files.md
-- name: Configuration Manager SDK Samples
+- name: Configuration Manager SDK samples
   href: core/understand/configuration-manager-sdk-samples.md
-- name: Configuration Manager Programming Fundamentals
-  href: core/understand/configuration-manager-programming-fundamentals.md
+- name: Configuration Manager programming fundamentals
   items:
-  - name: Getting Started with Configuration Manager Programming
-    href: core/understand/getting-started-with-configuration-manager-programming.md
+  - name: About Configuration Manager programming fundamentals
+    href: core/understand/configuration-manager-programming-fundamentals.md
+  - name: Getting started with Configuration Manager programming
     items:
-    - name: Architectural Overview
+    - name: Get started with Configuration Manager Programming
+      href: core/understand/getting-started-with-configuration-manager-programming.md
+    - name: Architectural overview
       href: core/understand/architectural-overview.md
     - name: Introduction to WBEMTEST
       href: core/understand/introduction-to-wbemtest.md
-    - name: Simple Example of List, Create, Modify, and Delete
+    - name: Simple example of List, Create, Modify, and Delete
       href: core/understand/simple-example-of-list--create--modify--and-delete.md
-  - name: Getting Started with Configuration Manager and Windows PowerShell
-    href: core/understand/getting-started-with-configuration-manager-and-windows-powershell.md
+  - name: Getting started with Configuration Manager and Windows PowerShell
     items:
-    - name: Windows PowerShell Basics
+    - name: Get started with Configuration Manager and Windows PowerShell
+      href: core/understand/getting-started-with-configuration-manager-and-windows-powershell.md
+    - name: Windows PowerShell basics
       href: core/understand/windows-powershell-basics.md
     - name: Connecting to Configuration Manager with Windows PowerShell
       href: core/understand/connecting-to-configuration-manager-with-windows-powershell.md
-  - name: Calling Configuration Manager Code Snippets
+  - name: Calling Configuration Manager code snippets
     href: core/understand/calling-code-snippets.md
-  - name: Configuration Manager Accounts
+  - name: Configuration Manager accounts
     href: core/understand/configuration-manager-accounts.md
     items:
     - name: How to Encrypt Passwords or Data for a Site
