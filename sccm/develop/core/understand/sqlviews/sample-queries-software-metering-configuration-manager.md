@@ -13,11 +13,11 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Sample Queries for Software Metering in Configuration Manager
+# Sample queries for software metering in Configuration Manager
 
 The following sample queries demonstrate how to join the most common software metering views to other views.
 
-## Joining Software Metering, Software Inventory, and Discovery Views
+## Joining software metering, software inventory, and discovery views
 
 The following query lists all resources that have run metered files, including the resource name, file ID, file name, file version, and start time. The **v_MeterData** software metering view is joined to the **v_ProductFileInfo** software inventory view by using the **FileID** column and to the **v_R_System** discovery view by using the **ResourceID** column.
 
@@ -30,7 +30,7 @@ The following query lists all resources that have run metered files, including t
     ORDER BY SYS.Netbios_Name0, PFI.FileName 
 ```
 
-## Joining Software Metering, Status, and Software Inventory Views
+## Joining software metering, status, and software inventory views
 
 The following query lists all users who have run metered files. The query returns the user domain, user name, file name, file version, usage count, total time of usage, and the last time the file was used. The **v_MeteredUser** software metering view is joined to the **v_MonthlyUsageSummary** status view by using the **MeteredUserID** column. The **v_MonthlyUsageSummary** status view is joined to the **v_GS_SoftwareFile** software inventory view by using the **FileID** column.
 
@@ -43,6 +43,6 @@ The following query lists all users who have run metered files. The query return
     ORDER BY MU.Domain, MU.UserName, SF.FileName 
 ```
 
-## See Also
+## See also
 
-[Software Metering Views in Configuration Manager](software-metering-views-configuration-manager.md)
+[Software metering views in Configuration Manager](software-metering-views-configuration-manager.md)

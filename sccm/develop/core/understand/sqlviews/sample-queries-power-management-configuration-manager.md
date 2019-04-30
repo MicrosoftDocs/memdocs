@@ -13,11 +13,11 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Sample Queries for Power Management in Configuration Manager
+# Sample queries for power management in Configuration Manager
 
 The following sample queries demonstrate how to join power management views to other views.
 
-## Joining Power Management Views to Discovery Views
+## Joining power management views to discovery views
 
 The following query lists all computers, by Netbios name, that are excluded from power management because the user chose to exclude them.
 
@@ -32,6 +32,6 @@ The query returns the Netbios name and the domain of the computer and also the c
     WHERE        (v_GS_POWER_MANAGEMENT_CLIENTOPTOUT_SETTINGS.IsClientOptOut0 = 1)
 ```
 
-## See Also
+## See also
 
-[Power Management Views in Configuration Manager](power-management-views-configuration-manager.md)
+[Power management views in Configuration Manager](power-management-views-configuration-manager.md)

@@ -13,11 +13,11 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Sample Queries for Operating System Deployment in Configuration Manager
+# Sample queries for operating system deployment in Configuration Manager
 
 The following sample queries demonstrate how to join operating system deployment views to each other and to compliance settings views. You can join the operating system deployment views to other operating system deployment views and application management views by using the view column that contains the package ID, which might have different column names depending on the view. You can join the operating system deployment views to compliance settings views by using the **CI_ID** column, and they can be joined to discovery views by using the **ResourceID** column.
 
-## Joining Operating System Deployment and Application Management Views
+## Joining operating system deployment and application management views
 
 The following query lists all task sequence packages, by package ID and package name, the associated boot image package, by package ID and package name, and the source path for the boot image package. The query results are sorted by the task sequence package ID. A LEFT OUTER JOIN is used to join the **v_TaskSequencePackage** and **v_BootImagePackage** operating system deployment views by using the **BootImageID** and **PackageID** columns, respectively.
 
@@ -33,7 +33,7 @@ The following query lists all task sequence packages, by package ID and package 
     ORDER BY [Task Sequence Package ID] 
 ```
 
-## Joining Operating System Deployment and Compliance Settings Views
+## Joining operating system deployment and compliance settings views
 
 The following query lists all operating system deployment boot image packages, by package ID and package name, the drivers that are contained in the boot image package, and the source path for the driver. The query results are sorted by the boot image package ID and then by the driver name. The **v_BootImagePackage** and **v_BootImagePackage_References** operating system deployment views are joined by using the **PackageID** and **PkgID** columns, respectively; the **v_BootImagePackage_References** view is joined to the **v_ConfigurationItems** compliance settings view by using the **CI_ID** column; and the **v_ConfigurationItems** view is joined to the **v_LocalizedCIProperties** compliance settings view by using the **CI_ID** column.
 
@@ -51,6 +51,6 @@ The following query lists all operating system deployment boot image packages, b
     ORDER BY [Boot Image Package ID], [Driver Name] 
 ```
 
-## See Also
+## See also
 
-[Operating System Deployment Views in Configuration Manager](operating-system-deployment-views-configuration-manager.md)
+[Operating system deployment views in Configuration Manager](operating-system-deployment-views-configuration-manager.md)

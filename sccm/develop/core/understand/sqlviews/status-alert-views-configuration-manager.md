@@ -1,5 +1,5 @@
 ﻿---
-title: Status and Alert Views
+title: Status and alert views
 titleSuffix: Configuration Manager
 description: Information about Configuration Manager component behavior and data flow.
 ms.date: 04/30/2019
@@ -13,7 +13,7 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Status and Alert Views in Configuration Manager
+# Status and alert views in Configuration Manager
 
 Configuration Manager status messages report information about Configuration Manager component behavior and data flow and are categorized by severity and type. State messages are sent by Configuration Manager clients to site systems based on important changes of state, providing a snapshot of the state of a process at a specific time. Status summarizers produce summaries of the status and state messages and provide a snapshot of the status and health of site systems, components, software updates compliance, and so on.
 
@@ -21,7 +21,7 @@ Status message instances consist of properties that are stored in the database, 
 
 The following sections provide detailed information about status message views, state message views, and status summarizer views.
 
-## Status Message Views
+## Status message views
 
 The status views are described in this section.
 
@@ -95,7 +95,7 @@ It is unlikely that this view will be joined to other views.
 Lists, by record ID, recently generated alerts. This includes the severity of the alert, the alert text and more.
 This view can be joined to other views by using the **AlertSeverity**, **Name**, **TypeInstanceID** or **MachineName** columns.
 
-## State Views
+## State views
 
 The state views list the state messages sent by Configuration Manager clients to site systems and can generally be joined to system data, other state message views, deployment views, and more. The Configuration Manager states are listed in the **v_StateNames** view. When creating reports by using state views, you will likely want to join the **v_StateNames** view with another state view by using the **StateType** and **StateID** columns to retrieve the friendly names for the state and to use the **v_StateNames** view to determine the criteria to filter the SQL statement. Each state message type has multiple state IDs, which start at 1 for each message type. When joining to a view that contains information for more than one state type, you will need to either join to the other view by using both the **StateType** and **StateID** columns or join to the other view by using the **StateID** column and filter the query with for the specific **StateType**. For example, if you join to another view by using the **StateID** column, you could filter the results by **StateType**=300.
 
@@ -195,7 +195,7 @@ The view can be joined to other views by using the **CI_ID**, **ResourceID**, **
 > [!NOTE]
 > A value of 402 in the **StateType** column is for enforcement state, and a value of 500 is for software update detection state.
 
-## Status Summarizer Views
+## Status summarizer views
 
 Status summarizers produce summaries from status messages, state messages, and other data in the Configuration Manager site database. Status summaries are produced in real time as the summarizers receive status and state messages from Configuration Manager components and clients. You can use status summarizers to view a snapshot of the status and health of the site systems, components, deployments, software updates compliance, client health, and so on.
 
@@ -348,7 +348,7 @@ The view can be joined to other views by using the **CI_ID** column.
 Lists the summary state for all software updates and the compliance state per collection. The view includes the software update, by **CI_ID**; target collection ID and name; the time of the last summarization; the total number of client computers targeted; the count of client computers reporting not applicable, missing (required), present (already installed), and unknown states; and so on. The view is also listed and described in the [Software Updates Views in Configuration Manager](software-updates-views-configuration-manager.md) topic.
 The view can be joined to other views by using the **CI_ID** and **CollectionID** columns.
 
-## Alert Views
+## Alert views
 
 The alerts views are listed in this section.
 
@@ -392,6 +392,6 @@ It is unlikely that this view will be joined to other views.
 Lists detailed information about status messages returned by each Configuration Manager component. This includes the record ID, the time of the status message, the component that generated the message, and more.
 This view can be joined to other views by using the **RecordID** column.
 
-## See Also
+## See also
 
-[SQL Server Views in Configuration Manager](sql-server-views-configuration-manager.md)
+[SQL Server views in Configuration Manager](sql-server-views-configuration-manager.md)

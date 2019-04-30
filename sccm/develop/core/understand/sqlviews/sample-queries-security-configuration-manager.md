@@ -13,11 +13,11 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Sample Queries for Security in Configuration Manager
+# Sample queries for security in Configuration Manager
 
 The following sample queries demonstrate how to join security views to other views.
 
-## Joining Security Views
+## Joining security views
 
 The following query lists the user name, object name, and class permission name that the user has on the secured object. The **v_SecuredObject** view is joined to the **v_UserClassPermNames** view by using the **ObjectKey** column.
 
@@ -28,7 +28,7 @@ The following query lists the user name, object name, and class permission name 
     ORDER BY UCP.UserName, SO.ObjectName, UCP.PermissionName 
 ```
 
-## Joining Security and Collection Views
+## Joining security and collection views
 
 The following query lists all collections, by collection ID and collection name, the user name, and the instance permissions for that collection. The **v_Collection** collection view is joined to the **v_UserInstancePermNames** security view by using the **CollectionID** column and the **InstanceKey** column, respectively.
 
@@ -52,6 +52,6 @@ The following query can be run from the **v_UserClassPermNames** view to list al
 
 When using the two preceding queries together, a list of user permissions for all collection classes and instances can be obtained.
 
-## See Also
+## See also
 
-[Security Views in Configuration Manager](security-views-configuration-manager.md)
+[Security views in Configuration Manager](security-views-configuration-manager.md)

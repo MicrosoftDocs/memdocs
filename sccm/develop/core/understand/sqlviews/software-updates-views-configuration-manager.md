@@ -1,5 +1,5 @@
 ﻿---
-title: Software Updates Views
+title: Software updates views
 titleSuffix: Configuration Manager
 description: Information about the software updates metadata, update lists, and software update bundles.
 ms.date: 04/30/2019
@@ -13,13 +13,13 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Software Updates Views in Configuration Manager
+# Software updates views in Configuration Manager
 
 The Configuration Manager software updates views contain information about the software updates metadata, update lists, software update bundles, and so on. Many of the status and status summarizer views provide information about software updates compliance, software update deployment evaluation and enforcement state, scan states, compliance status summarization, deployment status summarization, and so on. The compliance state for clients using an inventory scan tool, such as the Inventory Tool for Microsoft Updates, are picked up during the hardware inventory cycle and stored in the inventory views.
 
 The following sections provide detailed information about software updates views, software updates status views, software updates status summarizer views, and software updates hardware inventory views.
 
-## Software Updates Views
+## Software updates views
 
 The software updates views contain information about software updates. When creating software updates reports for individual software updates or update bundles, the **v_UpdateCIs** or **v_UpdateInfo** views will most often be used in combination with other views. The software update views are described in this section.
 
@@ -58,7 +58,7 @@ The view can be joined to other views by using the **CI_ID** and **Content_ID** 
 Lists stand-alone software updates or software update bundles, by **CI_ID**, and information about the update or bundle, such as configuration item type, configuration item version, data created, date last modified, whether the update or bundle has been deployed, associated bulletin ID, article ID, severity, and so on. Unlike the Configuration Manager console when it displays software updates, this view does not list the updates that are part of an update bundle.
 The view can be joined to other views by using the **CI_ID**, **CI_UniqueID**, and **SDMPackage_ID** columns.
 
-## Software Updates Status Views
+## Software updates status views
 
 The software updates status views provide information about software updates compliance, deployment evaluation, deployment enforcement, scan state, and so on. These views can generally be joined to other software updates and desired configuration management views by using the **CI_ID** column. For more information about the status views, see [Status and Alert Views in Configuration Manager](status-alert-views-configuration-manager.md). The status views that contain software updates information are described in this section.
 
@@ -103,7 +103,7 @@ The view can be joined to other views by using the **CI_ID** and **ResourceID** 
 > [!NOTE]
 > A value of 402 in the **StateType** column is for enforcement state, and a value of 500 is for compliance state.
 
-## Software Updates Status Summarizer Views
+## Software updates status summarizer views
 
 The software updates status summarizers produce summaries from software updates state messages in the Configuration Manager site database. Status summaries are produced in real time as the summarizers receive state messages from Configuration Manager clients. The software updates status summarizer views provide summary information about software updates compliance, deployment evaluation, deployment enforcement, and scan state. For more information about the status summarizer views, see [Status and Alert Views in Configuration Manager](status-alert-views-configuration-manager.md). The software update status views are described in this section.
 
@@ -145,6 +145,6 @@ The view can be joined to other views by using the **CI_ID** column.
 Lists the summary state for all software updates and the compliance state per collection. The view includes the software update, by **CI_ID**; target collection ID and name; the time of the last summarization; the total number of client computers targeted; the count of client computers reporting not applicable, missing (required), present (already installed), and unknown states; and so on.
 The view can be joined to other views by using the **CI_ID** and **CollectionID** columns.
 
-## See Also
+## See also
 
-[SQL Server Views in Configuration Manager](sql-server-views-configuration-manager.md)
+[SQL Server views in Configuration Manager](sql-server-views-configuration-manager.md)

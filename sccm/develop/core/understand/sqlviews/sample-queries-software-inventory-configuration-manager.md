@@ -1,5 +1,5 @@
 ﻿---
-title: Sample Queries for Software Inventory
+title: Sample queries for software inventory
 titleSuffix: Configuration Manager
 description: Sample queries that show how software inventory views can be joined to other views to retrieve specific data.
 ms.date: 04/30/2019
@@ -13,11 +13,11 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Sample Queries for Software Inventory in Configuration Manager
+# Sample queries for software inventory in Configuration Manager
 
 The following sample queries demonstrate how the Configuration Manager software inventory views can be joined to other views to retrieve specific data. The software inventory views are typically joined to other views by using the **ProductID**, **FileID**, and **ResourceID** columns.
 
-## Joining Software Inventory Views
+## Joining software inventory views
 
 The following query lists all software files for the Configuration Manager product that have been inventoried on Configuration Manager clients. The **v_GS_SoftwareProduct** and **v_GS_SoftwareFile** views are joined by using the **ProductID** columns.
 
@@ -29,7 +29,7 @@ The following query lists all software files for the Configuration Manager produ
     ORDER BY SF.FileName 
 ```
 
-## Joining Software Inventory and Discovery Views
+## Joining software inventory and discovery views
 
 The following query lists all inventoried products and the associated files for a computer with the NetBIOS name of COMPUTER1. The **v_R_System** and **v_GS_SoftwareProduct** views are joined by using the **ResourceID** column, and the **v_GS_SoftwareProduct** and **v_GS_SoftwareFile** views are joined by using the **ProductID** columns.
 
@@ -42,7 +42,7 @@ The following query lists all inventoried products and the associated files for 
     ORDER BY SP.ProductName 
 ```
 
-## Joining Software Inventory, Discovery, and Hardware Inventory Views
+## Joining software inventory, discovery, and hardware inventory views
 
 The following query lists all computers that have Microsoft Office installed and have less than 1 GB of free space on the local C drive. The **v_GS_SoftwareFile** and **v_SoftwareProduct** views are joined by the **ProductID** column, and the **v_GS_LOGICAL_DISK** and **v_R_System** views are joined to **v_GS_SoftwareFile** by using the **ResourceID** columns.
 
@@ -60,7 +60,7 @@ The following query lists all computers that have Microsoft Office installed and
       AND (LD.DeviceID0 = 'C:') 
 ```
 
-## Joining Software Inventory, Discovery, and Software Metering Views
+## Joining software inventory, discovery, and software metering views
 
 The following query lists all files that have been metered through software metering rules and sorted first by NetBIOS name, and then by product name, and then by file name. The **v_GS_SoftwareProduct** and **v_MeteredFiles** views are joined by the **ProductID** column, and the **v_GS_SoftwareProduct** and **v_R_System** views are joined by using the **ResourceID** columns.
 
@@ -73,6 +73,6 @@ The following query lists all files that have been metered through software mete
     ORDER BY SYS.Netbios_Name0, SP.ProductName, MF.FileName 
 ```
 
-## See Also
+## See also
 
-[Software Inventory Views in Configuration Manager](software-inventory-views-configuration-manager.md)
+[Software inventory views in Configuration Manager](software-inventory-views-configuration-manager.md)

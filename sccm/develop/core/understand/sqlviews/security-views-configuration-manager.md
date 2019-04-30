@@ -1,5 +1,5 @@
 ﻿---
-title: Security Views
+title: Security views
 titleSuffix: Configuration Manager
 description: Information about the permissions that are granted to users and user groups.
 ms.date: 04/30/2019
@@ -13,11 +13,11 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Security Views in Configuration Manager
+# Security views in Configuration Manager
 
 The security views in Configuration Manager contain information about the permissions that are granted to users and user groups to perform operations on secured Configuration Manager object classes and instances, such as collections, applications, deployments, and more.
 
-## Security Views
+## Security views
 
 Security views can be used to query for Configuration Manager class or instance permissions for secured objects. In each SQL view, class and instance permission values are listed as a decimal value that is the result of converting bit fields reserved for each security right. More information can be found in the next section. The security views are described in This section.
 
@@ -37,7 +37,7 @@ It is unlikely that this view will be joined to other views.
 Lists, for each object type, the permissions for each Configuration Manager collection.
 The view can be joined to the other security views by using the **AdminID** column.
 
-## Configuration Manager Secured Objects
+## Configuration Manager secured objects
 
 Class and instance permissions can be set on more than 20 secured objects in Configuration Manager. These Configuration Manager secured objects and their associated object keys are listed in the following table.
 
@@ -99,7 +99,7 @@ Class and instance permissions can be set on more than 20 secured objects in Con
 |202|Client settings|
 |203|Virtual environments|
 
-## How to Interpret Decimal Permission Values
+## How to interpret decimal permission values
 
 In the security views, there are decimal values that equate to a specific class or instance permissions. Each individual permission uses one of 28 bits. The following table lists each of these permissions, the bit that is used, and the decimal value of that bit.
 
@@ -136,7 +136,7 @@ In the security views, there are decimal values that equate to a specific class 
 
 To interpret a permission value, you can convert the decimal value to binary and use the preceding table to get the specific permissions. To help understand this process, see the following examples.
 
-## Decimal Conversion Example 1
+## Decimal conversion example 1
 
 In the **v_SecuredObject** view, the **SMS_Site** secured object has a value of 638983 in the **AvailableInstancePermissions** column. To find out what this means, first convert the decimal number to binary. This equates to 10011100000000000111, in which the 1st, 2nd, 3rd, 15th, 16th, 17th, and 20th bits are used. Use the bit values from the preceding table to calculate the values in the following table. When the decimal values are added, they will total the initial 638983 value.
 
@@ -150,7 +150,7 @@ In the **v_SecuredObject** view, the **SMS_Site** secured object has a value of 
 |Manage status filters|17|65536|
 |Import computer entry|20|524288|
 
-## Decimal Conversion Example 2
+## Decimal conversion example 2
 
 In the **v_SecuredObject** view, the **SMS_Collection** secured object has a value of 52435687 in the **AvailableInstancePermissions** column. This decimal number results in 11001000000001101011100111 when converted to binary. This is interpreted as shown in the following table.
 
@@ -169,7 +169,7 @@ In the **v_SecuredObject** view, the **SMS_Collection** secured object has a val
 |Manage management controllers|25|16777216|
 |View management controllers|26|33554432|
 
-## Role Based Administration Views
+## Role based administration views
 
 This section describes the role based administration views in the Configuration Manager database.
 
@@ -193,6 +193,6 @@ It is unlikely that this view will be joined to other views.
 Lists each user of the Configuration Manager site and the security roles they are associated with.
 This view can be joined to other views by using the **AdminID** column.
 
-## See Also
+## See also
 
-[SQL Server Views in Configuration Manager](sql-server-views-configuration-manager.md) 
+[SQL Server views in Configuration Manager](sql-server-views-configuration-manager.md) 

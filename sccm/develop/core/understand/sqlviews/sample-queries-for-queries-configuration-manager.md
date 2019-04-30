@@ -13,11 +13,11 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Sample Queries for the Query view in Configuration Manager
+# Sample queries for the query view in Configuration Manager
 
 The following sample query demonstrates how the query view can be joined to a security view. In most cases, the **v_Query** view won't be used in reports.
 
-## Joining Query and Security Views
+## Joining query and security views
 
 The following query lists the query ID, query name, user name, and instance permissions for the user on the query object. The **v_Query** view is joined to the **v_UserInstancePermNames** security view by using the **QueryID** from **v_Query** and **InstanceKey** from **v_UserInstancePermNames**. Because there might be other secured objects with the same value as the **InstanceKey** (for example, MCM00001 could be a custom query or a package), the query also filters specifically for query objects by using the WHERE clause and an **ObjectKey** value of 7.
 
@@ -29,6 +29,6 @@ The following query lists the query ID, query name, user name, and instance perm
     ORDER BY Q.Name, UIP.UserName 
 ```
 
-## See Also
+## See also
 
-[Query Views in Configuration Manager](query-views-configuration-manager.md)
+[Query views in Configuration Manager](query-views-configuration-manager.md)

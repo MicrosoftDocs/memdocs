@@ -1,5 +1,5 @@
 ﻿---
-title: Sample Queries for Discovery
+title: Sample queries for discovery
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join discovery views to each other and views from other view categories.
 ms.date: 04/30/2019
@@ -13,11 +13,11 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Sample Queries for Discovery in Configuration Manager
+# Sample queries for discovery in Configuration Manager
 
 The following sample queries demonstrate how to join Configuration Manager discovery views to each other and views from other view categories. Discovery views use the **ResourceID** column when joining to other views.
 
-## Joining Discovery Views
+## Joining discovery views
 
 The following query retrieves all resources and their associated IP addresses. The query joins the **v_R_System** and **v_RA_System_IPAddresses** discovery views by using the **ResourceID** column.
 
@@ -28,7 +28,7 @@ The following query retrieves all resources and their associated IP addresses. T
     ORDER BY SYS.Netbios_Name0 
 ```
 
-## Joining Resource and Inventory Views
+## Joining resource and inventory views
 
 The following query retrieves all resources that have a local fixed disk listed in inventory and displays the NetBIOS name, the free disk space, and sorts the data in ascending order by free disk space. The query joins the **v_R_System** discovery view and the **v_GS_LOGICAL_DISK** hardware inventory view by using the **ResourceID** column.
 
@@ -40,7 +40,7 @@ The following query retrieves all resources that have a local fixed disk listed 
     ORDER BY LD.FreeSpace0 
 ```
 
-## Joining Resource and Collection Views
+## Joining resource and collection views
 
 The following query retrieves all resources in the **All Systems** collection and displays the NetBIOS name, domain name, and associated IP addresses. The query results are sorted by NetBIOS name. The query joins the **v_R_System** and **v_RA_System_IPAddresses** discovery views, and joins the **v_FullCollectionMembership** collection view by using the **ResourceID** column.
 
@@ -54,7 +54,7 @@ The following query retrieves all resources in the **All Systems** collection an
     ORDER BY SYS.Netbios_Name0 
 ```
 
-## Joining Resource, Software Updates, and Status Views
+## Joining resource, software updates, and status views
 
 The following query retrieves all resources that have performed a scan for software updates, the last scan time, the last scan state, and the Windows Update Agent version on the client. The query joins the **v_R_System** discovery view and **v_UpdateScanStatus** software updates view by using the **ResourceID** column, and it uses LEFT OUTER JOIN between the **v_UpdateScanStatus** software updates view and **v_StateNames** status view by using the **LastScanState** and **StateID** columns. The state message topic types are filtered by **TopicType = 501**, which indicates scan-state messages.
 
@@ -72,6 +72,6 @@ The following query retrieves all resources that have performed a scan for softw
     WHERE (v_StateNames.TopicType = 501) 
 ```
 
-## See Also
+## See also
 
-[Discovery Views in Configuration Manager](discovery-views-configuration-manager.md)
+[Discovery views in Configuration Manager](discovery-views-configuration-manager.md)
