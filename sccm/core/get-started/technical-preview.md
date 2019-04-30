@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 04/26/2019
+ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -119,25 +119,21 @@ The following features are available with the most recent Configuration Manager 
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID-->
 
-- [Configure dynamic update during feature updates](/sccm/core/get-started/2019/technical-preview-1904#bkmk_anchor) <!--4062619-->  
+- [Office 365 ProPlus upgrade readiness dashboard](/sccm/core/get-started/2019/technical-preview-1904#bkmk_o365) <!--4021125-->  
 
-- [CMPivot standalone](/sccm/core/get-started/2019/technical-preview-1904#bkmk_anchor) <!--3555890-->  
+- [Configure dynamic update during feature updates](/sccm/core/get-started/2019/technical-preview-1904#configure-dynamic-update-during-feature-updates) <!--4062619-->  
 
-- [Improvements to Office 365 ProPlus readiness](/sccm/core/get-started/2019/technical-preview-1904#bkmk_anchor) <!--4021125-->  
+- [Community Hub and GitHub](/sccm/core/get-started/2019/technical-preview-1904#community-hub-and-github) <!--3555935,3555936-->  
 
-- [Directly link to Configuration Manager console pages](/sccm/core/get-started/2019/technical-preview-1904#bkmk_anchor) <!--4224406-->  
+- [CMPivot standalone](/sccm/core/get-started/2019/technical-preview-1904#bkmk_cmpivot) <!--3555890-->  
 
-- [Improved control over WSUS Maintenance](/sccm/core/get-started/2019/technical-preview-1904#bkmk_anchor) <!--4110109-->  
+- [Software Center infrastructure improvements](/sccm/core/get-started/2019/technical-preview-1904#bkmk_swctr) <!--3555950-->  
 
-- [Share reports in Community Hub](/sccm/core/get-started/2019/technical-preview-1904#bkmk_anchor) <!--3555936-->  
+- [Improved control over WSUS maintenance](/sccm/core/get-started/2019/technical-preview-1904#improved-control-over-wsus-maintenance) <!--4110109-->  
 
-- [Pre-cache driver packages and OS images](/sccm/core/get-started/2019/technical-preview-1904#bkmk_anchor) <!--4224642-->  
+- [Pre-cache driver packages and OS images](/sccm/core/get-started/2019/technical-preview-1904#bkmk_precache) <!--4224642-->  
 
-- [Improvements to Software Center](/sccm/core/get-started/2019/technical-preview-1904#bkmk_anchor) <!--3555950-->  
-
-- [Community Hub and GitHub](/sccm/core/get-started/2019/technical-preview-1904#bkmk_anchor) <!--3555935-->  
-
-- [Improvements to OS deployment](/sccm/core/get-started/2019/technical-preview-1904#bkmk_anchor) <!--2839943,4447680-->  
+- [Improvements to OS deployment](/sccm/core/get-started/2019/technical-preview-1904#bkmk_osd) <!--2839943,4447680-->  
 
 > [!Note]  
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.  
