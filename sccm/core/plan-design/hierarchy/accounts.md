@@ -66,7 +66,7 @@ Use the following information to identify the Windows groups and the accounts th
 >  When Configuration Manager creates a group on a computer that's a domain member, the group is a local security group. If the computer is a domain controller, the group is a domain local group. This type of group is shared among all domain controllers in the domain.  
 
 
-### ConfigMgr_CollectedFilesAccess
+## <a name="configmgr_collectedfilesaccess"></a> ConfigMgr_CollectedFilesAccess
 
 Configuration Manager uses this group to grant access to view files collected by software inventory.  
 
@@ -84,7 +84,7 @@ Configuration Manager automatically manages the group membership. Membership inc
 By default, this group has **Read** permission to the following folder on the site server: `C:\Program Files\Microsoft Configuration Manager\sinv.box\FileCol`  
 
 
-### ConfigMgr_DViewAccess  
+## <a name="configmgr_dviewaccess"></a>ConfigMgr_DViewAccess  
 
  This group is a local security group that Configuration Manager creates on the site database server or database replica server for a child primary site. The site creates it when you use distributed views for database replication between sites in a hierarchy. It contains the site server and SQL Server computer accounts of the central administration site.
 
