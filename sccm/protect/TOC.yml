@@ -5,6 +5,8 @@
     href: understand\protect-data-and-site-infrastructure.md
 - name: Plan and design
   items:
+  - name: Plan for Endpoint Protection
+    href: plan-design/planning-for-endpoint-protection.md
   - name: Plan for certificate profiles
     items:
     - name: Certificate profile prerequisites
@@ -17,8 +19,6 @@
       href: plan-design/prerequisites-for-email-profiles.md
     - name: Wi-Fi and VPN profile prerequisites
       href: plan-design/prerequisites-for-wifi-vpn-profiles.md
-  - name: Plan for Endpoint Protection
-    href: plan-design/planning-for-endpoint-protection.md
   - name: Security and privacy
     items:
     - name: Security and privacy for Wi-Fi and VPN profiles
