@@ -90,6 +90,8 @@ Specifies how frequently the following Configuration Manager clients download cl
 - Mac computers  
 - Computers that run Linux or UNIX  
 
+This value is 60 minutes by default. Reducing this value causes clients to poll the site more frequently. With a lot of clients, this behavior can have a negative impact on the site performance. The [size and scale guidance](/sccm/core/plan-design/configs/size-and-scale-numbers) is based on the default value. Increasing this value causes clients to poll the site less often. Any changes to client policies, including new deployments, take longer for clients to download and process.<!-- SCCMDocs issue 823 -->
+
 ### Enable user policy on clients
 
 When you set this option to **Yes**, and use [user discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser), then clients receive applications and programs targeted to the signed-in user.  
