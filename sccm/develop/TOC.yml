@@ -48,216 +48,236 @@
   - name: Calling Configuration Manager code snippets
     href: core/understand/calling-code-snippets.md
   - name: Configuration Manager accounts
-    href: core/understand/configuration-manager-accounts.md
     items:
+    - name: Configuration Manager accounts overview
+      href: core/understand/configuration-manager-accounts.md
     - name: How to Encrypt Passwords or Data for a Site
       href: core/understand/how-to-encrypt-passwords-or-data-for-a-site.md
-  - name: Configuration Manager Errors
-    href: core/understand/configuration-manager-errors.md
+  - name: Configuration Manager errors
     items:
-    - name: About Configuration Manager Errors
+    - name: Configuration Manager errors overview
+      href: core/understand/configuration-manager-errors.md
+    - name: About Configuration Manager errors
       href: core/understand/about-configuration-manager-errors.md
-    - name: How to Handle Configuration Manager Asynchronous Errors by Using Managed Code
+    - name: How to handle Configuration Manager asynchronous errors by using managed code
       href: core/understand/how-to-handle-configuration-manager-asynchronous-errors-by-using-managed-code.md
-    - name: How to Handle Configuration Manager Synchronous Errors by Using Managed Code
+    - name: How to handle Configuration Manager synchronous errors by using managed code
       href: core/understand/how-to-handle-configuration-manager-synchronous-errors-by-using-managed-code.md
-    - name: How to Handle Configuration Manager Asynchronous Errors by Using WMI
+    - name: How to handle Configuration Manager asynchronous errors by using WMI
       href: core/understand/how-to-handle-configuration-manager-asynchronous-errors-by-using-wmi.md
-    - name: How to Handle Configuration Manager Synchronous Errors by Using WMI
+    - name: How to handle Configuration Manager synchronous errors by using WMI
       href: core/understand/how-to-handle-configuration-manager-synchronous-errors-by-using-wmi.md
-  - name: Configuration Manager Objects
-    href: core/understand/configuration-manager-objects.md
+  - name: Configuration Manager objects
     items:
-    - name: About Configuration Manager Objects
-      href: core/understand/about-configuration-manager-objects.md
+    - name: Configuration Manager objects overview
+      href: core/understand/configuration-manager-objects.md
+    - name: About Configuration Manager objects
       items:
-      - name: Objects Overview
+      - name: About Configuration Manager objects
+        href: core/understand/about-configuration-manager-objects.md
+      - name: Objects overview
         href: core/understand/configuration-manager-objects-overview.md
-      - name: Object Security
+      - name: Object security
         href: core/understand/configuration-manager-object-security.md
-      - name: Embedded Objects
+      - name: Embedded objects
         href: core/understand/embedded-objects.md
-      - name: Association Classes
+      - name: Association classes
         href: core/understand/association-classes.md
-      - name: Date and Time Formats
+      - name: Date and time formats
         href: core/understand/date-and-time-formats.md
-      - name: Bit Field Properties
+      - name: Bit field properties
         href: core/understand/configuration-manager-bit-field-properties.md
-      - name: Lazy Properties
+      - name: Lazy properties
         href: core/understand/configuration-manager-lazy-properties.md
-      - name: Extended WMI Query Language
+      - name: Extended WMI query language
         href: core/understand/extended-wmi-query-language.md
-      - name: Result Sets
+      - name: Result sets
         href: core/understand/result-sets.md
-      - name: Special Queries
+      - name: Special queries
         href: core/understand/special-queries.md
-    - name: How to Use Configuration Manager Objects with Managed Code
-      href: core/understand/how-to-use-configuration-manager-objects-with-managed-code.md
+    - name: How to use Configuration Manager objects with managed code
       items:
-      - name: How to Create an Object by Using Managed Code
+      - name: Use Configuration Manager objects with managed code overview
+        href: core/understand/how-to-use-configuration-manager-objects-with-managed-code.md
+      - name: How to create an object by using managed code
         href: core/understand/how-to-create-a-configuration-manager-object-by-using-managed-code.md
-      - name: How to Read an Object by Using Managed Code
+      - name: How to read an object by using managed code
         href: core/understand/how-to-read-a-configuration-manager-object-by-using-managed-code.md
-      - name: How to Modify an Object by Using Managed Code
+      - name: How to modify an object by using managed code
         href: core/understand/how-to-modify-a-configuration-manager-object-by-using-managed-code.md
-      - name: How to Delete an Object by Using Managed Code
+      - name: How to delete an object by using managed code
         href: core/understand/how-to-delete-a-configuration-manager-object-by-using-managed-code.md
-      - name: How to Perform an Asynchronous Query by Using Managed Code
+      - name: How to perform an asynchronous query by using managed code
         href: core/understand/how-to-perform-an-asynchronous-query-by-using-managed-code.md
-      - name: How to Perform a Synchronous Query by Using Managed Code
+      - name: How to perform a synchronous query by using managed code
         href: core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-managed-code.md
-      - name: How to Read Lazy Properties by Using Managed Code
+      - name: How to read lazy properties by using managed code
         href: core/understand/how-to-read-lazy-properties-by-using-managed-code.md
-      - name: How to Call a Configuration Manager Object Class Method by Using Managed Code
+      - name: How to call a Configuration Manager object class method by using managed code
         href: core/understand/how-to-call-a-configuration-manager-object-class-method-by-using-managed-code.md
-    - name: How to Use Configuration Manager Objects with WMI
-      href: core/understand/how-to-use-configuration-manager-objects-with-wmi.md
+    - name: How to use Configuration Manager objects with WMI
       items:
-      - name: How to Create an Object by Using WMI
+      - name: Use Configuration Manager objects with WMI overview
+        href: core/understand/how-to-use-configuration-manager-objects-with-wmi.md
+      - name: How to create an object by using WMI
         href: core/understand/how-to-create-a-configuration-manager-object-by-using-wmi.md
-      - name: How to Read a Configuration Manager Object by Using WMI
+      - name: How to read a Configuration Manager object by using WMI
         href: core/understand/how-to-read-a-configuration-manager-object-by-using-wmi.md
-      - name: How to Modify an Object by Using WMI
+      - name: How to modify an object by using WMI
         href: core/understand/how-to-modify-a-configuration-manager-object-by-using-wmi.md
-      - name: How to Delete a Configuration Manager Object by Using WMI
+      - name: How to delete a Configuration Manager object by using WMI
         href: core/understand/how-to-delete-a-configuration-manager-object-by-using-wmi.md
-      - name: How to Perform a Synchronous Query by Using WMI
+      - name: How to perform a synchronous query by using WMI
         href: core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-wmi.md
-      - name: How to Perform an Asynchronous Query by Using WMI
+      - name: How to perform an asynchronous query by using WMI
         href: core/understand/how-to-perform-an-asynchronous-configuration-manager-query-by-using-wmi.md
-      - name: How to Read Lazy Properties by Using WMI
+      - name: How to read lazy properties by using WMI
         href: core/understand/how-to-read-lazy-properties-by-using-wmi.md
-      - name: How to Call a Configuration Manager Object Class Method by Using WMI
+      - name: How to call a Configuration Manager object class method by using WMI
         href: core/understand/how-to-call-a-configuration-manager-object-class-method-by-using-wmi.md
-  - name: Configuration Manager Queries
-    href: core/understand/queries.md
+  - name: Configuration Manager queries
     items:
-    - name: About Configuration Manager Queries
+    - name: Configuration Manager queries overview
+      href: core/understand/queries.md
+    - name: About Configuration Manager queries
       href: core/understand/about-configuration-manager-queries.md
-    - name: How to Run a Query
+    - name: How to run a query
       href: core/understand/how-to-run-a-query.md
-    - name: How to Create a Query
+    - name: How to create a query
       href: core/understand/how-to-create-a-configuration-manager-query.md
   - name: Configuration Manager SEDO
-    href: core/understand/sedo.md
     items:
-    - name: How to Acquire a Lock on a SEDO-Enabled Object
+    - name: Configuration Manager SEDO overview
+      href: core/understand/sedo.md
+    - name: How to acquire a lock on a SEDO-enabled object
       href: core/understand/how-to-acquire-a-lock-on-a-sedo-enabled-object.md
-    - name: How to Release a Lock on a SEDO-Enabled Object
+    - name: How to release a lock on a SEDO-enabled object
       href: core/understand/how-to-release-a-lock-on-a-sedo-enabled-object.md
-  - name: Configuration Manager Schedules
-    href: core/understand/schedules.md
+  - name: Configuration Manager schedules
     items:
-    - name: About Configuration Manager Schedules
+    - name: Configuration Manager schedules overview
+      href: core/understand/schedules.md
+    - name: About Configuration Manager schedules
       href: core/understand/about-configuration-manager-schedules.md
-    - name: How to Create a Schedule Token
+    - name: How to create a schedule token
       href: core/understand/how-to-create-a-schedule-token.md
-  - name: Configuration Manager Site Control File
-    href: core/understand/site-control-file.md
+  - name: Configuration Manager site control file
     items:
-    - name: About the Configuration Manager Site Control File
+    - name: Configuration Manager site control file overview
+      href: core/understand/site-control-file.md
+    - name: About the Configuration Manager site control file
       href: core/understand/about-the-configuration-manager-site-control-file.md
-    - name: How to Read and Write to the Site Control File by Using Managed Code
+    - name: How to read and write to the site control file by using managed code
       href: core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md
-    - name: How to Read and Write to the Site Control File by Using WMI
+    - name: How to read and write to the site control file by using WMI
       href: core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md
-    - name: How to Read a Site Control File Embedded Property List
+    - name: How to read a site control file embedded property list
       href: core/understand/how-to-read-a-configuration-manager-site-control-file-embedded-property-list.md
-    - name: 'How to Deploy a Site System Role (Example:  Fallback Status Point)'
+    - name: 'How to deploy a site system role (Example: Fallback Status Point)'
       href: core/understand/how-to-deploy-a-site-system-role--example---fallback-status-point-.md
-  - name: Configuration Manager Class Schema
-    href: core/understand/configuration-manager-class-schema.md
+  - name: Configuration Manager class schema
     items:
-    - name: Date and Time Formats
+    - name: Configuration Manager class schema
+      href: core/understand/configuration-manager-class-schema.md
+    - name: Date and time formats
       href: core/understand/date-and-time-formats.md
-    - name: Interpreting Bitfield Properties
+    - name: Interpreting bitfield properties
       href: core/understand/interpreting-bitfield-properties.md
-    - name: Lazy Properties
+    - name: Lazy properties
       href: core/understand/lazy-properties.md
-    - name: SMS Provider Field Length Restrictions
+    - name: SMS Provider field length restrictions
       href: core/understand/sms-provider-field-length-restrictions.md
-  - name: Configuration Manager Schema
-    href: core/understand/configuration-manager-schema.md
+  - name: Configuration Manager schema
     items:
-    - name: About Configuration Manager Schema
-      href: core/understand/about-configuration-manager-schema.md
+    - name: Configuration Manager schema
+      href: core/understand/configuration-manager-schema.md
+    - name: About Configuration Manager schema
       items:
-      - name: Schema Overview
+      - name: About Configuration Manager schema
+        href: core/understand/about-configuration-manager-schema.md
+      - name: Schema overview
         href: core/understand/configuration-manager-schema-overview.md
-      - name: Schema SQL Views
+      - name: Schema SQL views
         href: core/understand/configuration-manager-schema-sql-views.md
-      - name: Schema View Mapping
+      - name: Schema view mapping
         href: core/understand/configuration-manager-schema-view-mapping.md
-      - name: SQL View Security
+      - name: SQL view security
         href: core/understand/sql-view-security.md
-    - name: How to See a Configuration Manager View by Using SQL Server
+    - name: How to see a Configuration Manager view by using SQL Server
       href: core/understand/how-to-see-a-configuration-manager-view-by-using-sql-server.md
   - name: SMS Provider in Configuration Manager
-    href: core/understand/sms-provider-in-configuration-manager.md
     items:
+    - name: SMS Provider in Configuration Manager overview
+      href: core/understand/sms-provider-in-configuration-manager.md
     - name: About the SMS Provider in Configuration Manager
-      href: core/understand/about-the-sms-provider-in-configuration-manager.md
       items:
-      - name: SMS Provider Fundamentals
+      - name: About the SMS Provider
+        href: core/understand/about-the-sms-provider-in-configuration-manager.md
+      - name: SMS Provider fundamentals
         href: core/understand/sms-provider-fundamentals.md
-      - name: WMI Provider Fundamentals
+      - name: WMI Provider fundamentals
         href: core/understand/wmi-configuration-manager-provider-fundamentals.md
-      - name: Managed SMS Provider Fundamentals
+      - name: Managed SMS Provider fundamentals
         href: core/understand/managed-sms-provider-fundamentals-in-configuration-manager.md
-      - name: Configuration Manager Context Qualifiers
+      - name: Configuration Manager context qualifiers
         href: core/understand/context-qualifiers.md
-      - name: SMS Provider Field Length Restrictions
+      - name: SMS Provider field length restrictions
         href: core/understand/sms-provider-field-length-restrictions-in-configuration-manager.md
-    - name: How to Connect to an SMS Provider in Configuration Manager by Using Managed Code
+    - name: How to connect to an SMS Provider in Configuration Manager by using managed code
       href: core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md
-    - name: How to Add a Configuration Manager Context Qualifier by Using Managed Code
+    - name: How to add a Configuration Manager context qualifier by using managed code
       href: core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-managed-code.md
-    - name: How to Connect to an SMS Provider in Configuration Manager by Using WMI
+    - name: How to connect to an SMS Provider in Configuration Manager by using WMI
       href: core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md
-    - name: How to Add a Configuration Manager Context Qualifier by Using WMI
+    - name: How to add a Configuration Manager context qualifier by using WMI
       href: core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md
-  - name: Securing Configuration Manager Applications
+  - name: Securing Configuration Manager applications
     href: core/understand/securing-configuration-manager-applications.md
-- name: Application Management
-  href: apps/application-management.md
+- name: Application management
   items:
-  - name: How to Create an Application with the Script Deployment Type
+  - name: Application management overview
+    href: apps/application-management.md
+  - name: How to create an application with the script deployment type
     href: apps/how-to-create-an-application-with-the-script-deployment-type.md
-- name: Application Management Extension
-  href: apps/application-management-extension.md
+- name: Application management extension
   items:
-  - name: Deployment Type Extension Versioning
+  - name: Application management extension overview
+    href: apps/application-management-extension.md
+  - name: Deployment type extension versioning
     href: apps/deployment-type-extension-versioning.md
-  - name: 'Scenario: Extending Application Management'
-    href: apps/scenario--extending-application-management.md
+  - name: 'Scenario: Extending application management'
     items:
-    - name: Extending Application Management Overview
+    - name: 'Scenario overview: Extending application management'
+      href: apps/scenario--extending-application-management.md
+    - name: Extending application management overview
       href: apps/extending-application-management-overview.md
-    - name: Creating the Custom SDK Assembly
-      href: apps/creating-the-custom-sdk-assembly.md
+    - name: Creating the custom SDK assembly
       items:
-      - name: How to Define the Deployment Technology
+      - name: Creating the custom SDK assembly overview
+        href: apps/creating-the-custom-sdk-assembly.md
+      - name: How to define the deployment technology
         href: apps/how-to-define-the-deployment-technology.md
-      - name: How to Define the Hosting Technology
+      - name: How to define the hosting technology
         href: apps/how-to-define-the-hosting-technology.md
-      - name: How To Define the Installer Technology
+      - name: How to define the installer technology
         href: apps/how-to-define-the-installer-technology.md
-      - name: How to Define the Content Importer
+      - name: How to define the content importer
         href: apps/how-to-define-the-content-importer.md
-      - name: How to Define the Installer
+      - name: How to define the installer
         href: apps/how-to-define-the-installer.md
-      - name: How to Define the Resources
+      - name: How to define the resources
         href: apps/how-to-define-the-resources.md
-    - name: Creating the Registration XML Files
-      href: apps/creating-the-registration-xml-files.md
+    - name: Creating the registration XML files
       items:
-      - name: How to Define the Deployment Technology Registration File
+      - name: Creating the registration XML files overview
+        href: apps/creating-the-registration-xml-files.md
+      - name: How to define the deployment technology registration file
         href: apps/how-to-define-the-deployment-technology-registration-file.md
-      - name: How to Define the Hosting Technology Registration File
+      - name: How to define the hosting technology registration file
         href: apps/how-to-define-the-hosting-technology-registration-file.md
-      - name: How to Define the Installer Technology Registration File
+      - name: How to define the installer technology registration file
         href: apps/how-to-define-the-installer-technology-registration-file.md
-    - name: Creating the UI Extension
+    - name: Creating the UI extension
       href: apps/creating-the-ui-extension.md
       items:
       - name: How to Define the UI Extension Assembly
