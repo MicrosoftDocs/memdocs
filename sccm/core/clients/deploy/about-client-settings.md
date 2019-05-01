@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 04/23/2019
+ms.date: 05/01/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -150,7 +150,7 @@ For more information about the following three settings, see [User notifications
 ### Default Application Catalog website point
 
 > [!Note]  
-> Starting in version 1806, the application catalog website point is no longer *required*, but still *supported*. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex). 
+> Starting in version 1806, the application catalog website point is no longer *required*, but still *supported*. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex). 
 > 
 > The **Silverlight user experience** for the application catalog website point is no longer supported. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
 
@@ -159,7 +159,7 @@ Configuration Manager uses this setting to connect users to the Application Cata
 ### Add default Application Catalog website to Internet Explorer trusted sites zone
 
 > [!Note]  
-> Starting in version 1806, the application catalog website point is no longer *required*, but still *supported*. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex). 
+> Starting in version 1806, the application catalog website point is no longer *required*, but still *supported*. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex). 
 > 
 > The **Silverlight user experience** for the application catalog website point is no longer supported. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
 
@@ -174,7 +174,7 @@ If you leave this option as **No**, Configuration Manager clients might not be a
 > [!Important]  
 > Starting in Configuration Manager version 1802, the client doesn't automatically install Silverlight.
 > 
-> Starting in version 1806, the **Silverlight user experience** for the application catalog website point is no longer supported. Users should use the new Software Center. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex).  
+> Starting in version 1806, the **Silverlight user experience** for the application catalog website point is no longer supported. Users should use the new Software Center. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).  
 
 This setting must be **Yes** for users to use the Application Catalog.  
 
@@ -192,7 +192,7 @@ Starting in Configuration Manager 1802, the default setting is **Yes**.
 
 If you set this option to **Yes**, then all client computers use the Software Center. Software Center shows user-available apps that were previously accessible only in the Application Catalog. The Application Catalog requires Silverlight, which isn't a prerequisite for the Software Center.   
 
-Starting in version 1806, the application catalog website point and web service point roles are no longer *required*, but still *supported*. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex). 
+Starting in version 1806, the application catalog website point and web service point roles are no longer *required*, but still *supported*. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex). 
  
 > [!Note]  
 > The **Silverlight user experience** for the application catalog website point is no longer supported. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
@@ -277,13 +277,16 @@ If you want to give users more time to install required application or software 
 Set a grace period of 1 to 120 hours. Use this setting along with the deployment property **Delay enforcement of this deployment according to user preferences**. For more information, see [Deploy applications](/sccm/apps/deploy-use/deploy-applications).
 
 
-##  Computer restart  
-The following settings must be shorter in duration than the shortest maintenance window applied to the computer.  
+## Computer restart
 
--   **Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes)**
--   **Display a dialog box that the user cannot close, which displays the countdown interval before the user is logged off or the computer restarts (minutes)**
+The following settings must be shorter in duration than the shortest maintenance window applied to the computer:
 
-For more information about maintenance windows, see [How to use maintenance windows in System Center Configuration Manager](/sccm/core/clients/manage/collections/use-maintenance-windows).
+- **Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes)**
+- **Display a dialog box that the user cannot close, which displays the countdown interval before the user is logged off or the computer restarts (minutes)**
+
+For more information about maintenance windows, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows).
+
+**When a deployment requires a restart, show a dialog window to the user instead of a toast notification**<!--3555947-->: Starting in version 1902, configuring this setting to **Yes** changes the user experience to be more intrusive. This setting applies to all deployments of applications, task sequences, and software updates. For more information, see [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_impact).
 
 
 

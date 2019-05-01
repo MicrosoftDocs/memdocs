@@ -2,7 +2,7 @@
 title: What's new in version 1902
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1902 of Configuration Manager current branch.
-ms.date: 04/23/2019
+ms.date: 05/01/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -292,20 +292,13 @@ This version includes the following improvements to OS deployment:
 ## <a name="bkmk_userxp"></a> Software Center
 
 ### Replace toast notifications with dialog window
+
 <!--3555947-->
-Sometimes users don't see the Windows toast notification about a restart or required deployment. Then they don't see the experience to snooze the reminder. This behavior can lead to a poor user experience when the client reaches a deadline.
+***[Updated]*** Sometimes users don't see the Windows toast notification about a restart or required deployment. Then they don't see the experience to snooze the reminder. This behavior can lead to a poor user experience when the client reaches a deadline.
 
-Now when deployments need a restart or software changes are required, you have the option of using a more intrusive dialog window. 
+Now when deployments need a restart or software changes are required, you have the option of using a more intrusive dialog window.
 
-#### Software changes are required
-On the **User Experience** page of the Deploy Software Wizard, select the user notification option to **Display in Software Center and show all notifications**. Then select the following option: **When software changes are required, show a dialog window to the user instead of a toast notification**.  
-
-<!-- For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex) -->
-
-#### Restart required
-In client settings, In the **Computer Restart** group, enable the following option: **When a deployment requires a restart, show a dialog window to the user instead of a toast notification**.  
-
-<!-- For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#computer-restart). -->
+For more information, see [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_impact)
 
 
 ### Configure user device affinity in Software Center
