@@ -278,100 +278,111 @@
       - name: How to define the installer technology registration file
         href: apps/how-to-define-the-installer-technology-registration-file.md
     - name: Creating the UI extension
-      href: apps/creating-the-ui-extension.md
       items:
-      - name: How to Define the UI Extension Assembly
+      - name: Creating the UI extension overview
+        href: apps/creating-the-ui-extension.md
+      - name: How to define the UI extension assembly
         href: apps/how-to-define-the-ui-extension-assembly.md
-      - name: How to Define the Create Application Wizard XML File
+      - name: How to define the create application wizard XML file
         href: apps/how-to-define-the-create-application-wizard-xml-file.md
-      - name: How to Define the Create Deployment Type Wizard XML File
+      - name: How to define the create deployment type wizard XML file
         href: apps/how-to-define-the-create-deployment-type-wizard-xml-file.md
-      - name: How to Define the Deployment Type Property Sheet XML File
+      - name: How to define the deployment type property sheet XML file
         href: apps/how-to-define-the-deployment-type-property-sheet-xml-file.md
-    - name: Creating the Client Files
-      href: apps/creating-the-client-files.md
+    - name: Creating the client files
       items:
+      - name: Creating the client files overview
+        href: apps/creating-the-client-files.md
       - name: How to Define the AppSynclet MOF File
         href: apps/how-to-define-the-appsynclet-mof-file.md
-      - name: How to Define the Client-side Handler
+      - name: How to define the client-side handler
         href: apps/how-to-define-the-client-side-handler.md
-    - name: Installing the Application Management Extension
-      href: apps/installing-the-application-management-extension.md
+    - name: Installing the application management extension
       items:
-      - name: How to Create the Deployment Type Extension File (*.cmdtx)
+      - name: Installing the application management extension overview
+        href: apps/installing-the-application-management-extension.md
+      - name: How to create the deployment type extension file (*.cmdtx)
         href: apps/how-to-create-the-deployment-type-extension-file-cmdtx.md
-      - name: How to Create the Windows Installer File (*.msi)
+      - name: How to create the windows installer file (*.msi)
         href: apps/how-to-create-the-windows-installer-file-msi.md
-    - name: Verifying the Application Management Extension
+    - name: Verifying the application management extension
       href: apps/verifying-the-application-management-extension.md
 - name: Asset Intelligence
-  href: core/clients/asset-intelligence/asset-intelligence.md
   items:
-  - name: How to Initiate a Synchronization
+  - name: Asset Intelligence overview
+    href: core/clients/asset-intelligence/asset-intelligence.md
+  - name: How to initiate a synchronization
     href: core/clients/asset-intelligence/how-to-initiate-a-synchronization.md
-- name: Client Programming
-  href: core/clients/programming/client-programming.md
+- name: Client programming
   items:
-  - name: Configuration Manager Client WMI Programming
-    href: core/clients/programming/client-wmi-programming.md
+  - name: Client programming overview
+    href: core/clients/programming/client-programming.md
+  - name: Configuration Manager client WMI programming
     items:
-    - name: About Configuration Manager WMI Programming
+    - name: Configuration Manager client WMI programming overview
+      href: core/clients/programming/client-wmi-programming.md
+    - name: About Configuration Manager WMI programming
       href: core/clients/programming/about-configuration-manager-wmi-programming.md
-    - name: How to Connect to the Configuration Manager Client WMI Namespace by Using System.Management
+    - name: How to connect to the Configuration Manager client WMI namespace by using System.Management
       href: core/clients/programming/how-to-connect-to-the-client-wmi-namespace.md
-    - name: How to Read a WMI Object by Using System.Management
+    - name: How to read a WMI object by using System.Management
       href: core/clients/programming/how-to-read-a-wmi-object-by-using-system.management.md
-    - name: How to Perform a Synchronous Query by Using System.Management
+    - name: How to perform a synchronous query by using System.Management
       href: core/clients/programming/how-to-perform-a-synchronous-query-by-using-system.management.md
-    - name: How to Perform an Asynchronous Query by Using System.Management
+    - name: How to perform an asynchronous query by using System.Management
       href: core/clients/programming/how-to-perform-an-asynchronous-query-by-using-system.management.md
-    - name: How to Call a WMI Class Method by Using System.Management
+    - name: How to call a WMI class method by using System.Management
       href: core/clients/programming/how-to-call-a-wmi-class-method-by-using-system.management.md
-  - name: Client Resource Conditions
+  - name: Client resource conditions
     href: core/clients/programming/client-resource-conditions.md
-  - name: How to Apply Custom Client Settings
+  - name: How to apply custom client settings
     href: core/clients/programming/how-to-apply-custom-client-settings.md
 - name: Collections
-  href: core/clients/collections/collections.md
   items:
-  - name: How to Create a Dynamic Collection
+  - name: Collections overview
+    href: core/clients/collections/collections.md
+  - name: How to create a dynamic collection
     href: core/clients/collections/how-to-create-a-dynamic-collection.md
-  - name: How to Create a Static Collection
+  - name: How to create a static collection
     href: core/clients/collections/how-to-create-a-static-collection.md
-  - name: How to Enumerate the Members of a Collection
+  - name: How to enumerate the members of a collection
     href: core/clients/collections/how-to-enumerate-the-members-of-a-collection.md
-  - name: How to Modify a Collection
+  - name: How to modify a collection
     href: core/clients/collections/how-to-modify-a-collection.md
-  - name: How to Delete a Collection
+  - name: How to delete a collection
     href: core/clients/collections/how-to-delete-a-collection.md
-  - name: How to Get the Properties of a Collection
+  - name: How to get the properties of a collection
     href: core/clients/collections/how-to-get-the-properties-of-a-collection.md
-  - name: How to Initiate a One-time Membership Evaluation for a Collection
+  - name: How to initiate a one-time membership evaluation for a collection
     href: core/clients/collections/how-to-initiate-a-one-time-membership-evaluation-for-a-collection.md
 - name: Compliance Settings (DCM)
-  href: compliance/compliance-settings-dcm.md
   items:
-  - name: Compliance Settings Setup and Configuration
-    href: compliance/compliance-settings-setup-and-configuration.md
+  - name: Compliance settings (DCM) overview
+    href: compliance/compliance-settings-dcm.md
+  - name: Compliance settings setup and configuration
     items:
-    - name: About Compliance Settings (DCM) Setup and Configuration
+    - name: Compliance settings setup and configuration overview
+      href: compliance/compliance-settings-setup-and-configuration.md
+    - name: About compliance settings (DCM) setup and configuration
       href: compliance/about-compliance-settings--dcm--setup-and-configuration.md
-    - name: How to Enable or Disable the Compliance Settings (DCM) Agent
+    - name: How to enable or disable the compliance settings (DCM) agent
       href: compliance/how-to-enable-or-disable-the-compliance-settings--dcm--agent.md
-    - name: How to Configure the Default Compliance Evaluation Schedule
+    - name: How to configure the default compliance evaluation schedule
       href: compliance/how-to-configure-the-default-compliance-evaluation-schedule.md
-  - name: Compliance Settings Baselines and Configuration Items
+  - name: Compliance settings baselines and configuration items
     href: compliance/compliance-settings-baselines-and-configuration-items.md
     items:
-    - name: About Configuration Baselines and Configuration Items
+    - name: Compliance settings baselines and configuration items overview
+      href: compliance/compliance-settings-baselines-and-configuration-items.md
+    - name: About configuration baselines and configuration items
       href: compliance/about-configuration-baselines-and-configuration-items.md
-    - name: How to Import Configuration Baselines and Configuration Items
+    - name: How to import configuration baselines and configuration items
       href: compliance/how-to-import-configuration-baselines-and-configuration-items.md
-    - name: How to Export Configuration Baselines and Configuration Items
+    - name: How to export configuration baselines and configuration items
       href: compliance/how-to-export-configuration-baselines-and-configuration-items.md
-    - name: How to Assign Configuration Baselines
+    - name: How to assign configuration baselines
       href: compliance/how-to-assign-configuration-baselines.md
-    - name: How to List Configuration Assignments
+    - name: How to list configuration assignments
       href: compliance/how-to-list-configuration-assignments.md
   - name: Compliance Settings Extensibility
     href: compliance/compliance-settings-extensibility.md
