@@ -45,7 +45,7 @@ Before you create bootable media by using the Create Task Sequence Media Wizard,
 
 #### Boot image
 
-Consider the following point about the boot image that you use in the task sequence to deploy the OS:
+Consider the following points about the boot image that you use in the task sequence to deploy the OS:
 
 - The architecture of the boot image must be appropriate for the architecture of the destination computer. For example, an x64 destination computer can boot and run an x86 or x64 boot image. However, an x86 destination computer can boot and run only an x86 boot image.
 - Make sure that the boot image contains the network and storage drivers that are required to provision the destination computer.
@@ -58,11 +58,11 @@ As part of the bootable media, specify the task sequence to deploy the OS. For m
 
 Distribute all content that the task sequence requires to at least one distribution point. This content includes the boot image and other associated prestart files. The wizard gathers the content from the distribution point when it creates the bootable media.
 
-Your account needs at least **Read** access rights to the content library on that distribution point. For more information, see [About the content library](/sccm/core/plan-design/hierarchy/the-content-library).
+Your user account needs at least **Read** access rights to the content library on that distribution point. For more information, see [Distribute content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).
 
 #### Prepare the removable USB drive
 
-If you're using a removable USB drive, connect it to the computer where you run the Create Task Sequence Media wizard. The USB drive must be detectable by Windows as a removal device. The wizard writes directly to the USB drive when it creates the media. Stand-alone media uses a FAT32 file system. You can't create stand-alone media on a USB flash drive whose content contains a file over 4 GB in size.
+If you're using a removable USB drive, connect it to the computer where you run the Create Task Sequence Media wizard. The USB drive must be detectable by Windows as a removal device. The wizard writes directly to the USB drive when it creates the media.
 
 #### Create an output folder
 
