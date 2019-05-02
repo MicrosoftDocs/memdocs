@@ -2,7 +2,7 @@
 title: What's new in version 1902
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1902 of Configuration Manager current branch.
-ms.date: 04/23/2019
+ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -214,17 +214,30 @@ You now see a more detailed progress bar during a Windows 10 in-place upgrade ta
 This feature works with any supported version of Windows 10, and only with the in-place upgrade task sequence. 
 
 
-### Improvements to task sequence media creation 
+### Improvements to task sequence media creation
+
 <!--3556027, fka 1359388-->
-This version includes several improvements to help you better create and manage task sequence media. <!-- For more information, see [Create task sequence media](/sccm/osd/deploy-use/create-task-sequence-media). -->
+***[Updated]*** This version includes several improvements to help you better create and manage task sequence media. For more information, see the following articles for specific media types:
+
+- [Create stand-alone media](/sccm/osd/deploy-use/create-stand-alone-media)
+- [Create prestaged media](/sccm/osd/deploy-use/create-prestaged-media)
+- [Create bootable media](/sccm/osd/deploy-use/create-bootable-media)
+- [Create capture media](/sccm/osd/deploy-use/create-capture-media)
 
 #### Specify temporary storage
-When you create task sequence media, now customize the location that the site uses for temporary storage of data. This process can require much temporary drive space. This change gives you greater flexibility to choose where to store these temporary files. 
+
+When you create task sequence media, now customize the location that the site uses for temporary storage of data. This process can require a lot of temporary drive space. This change gives you greater flexibility to choose where to store these temporary files.
 
 In the **Create Task Sequence Media Wizard**, specify a location for the **Staging folder**. By default this location is similar to the following path: `%UserProfile%\AppData\Local\Temp`.
 
 #### Add a label to the media
+
 You can now add a label to task sequence media. This label helps you better identify the media after you create it. In the **Create Task Sequence Media Wizard**, specify a **Media label**.
+
+#### Include autorun.inf file on media
+
+<!-- 4090666 -->
+when you create task sequence media, Configuration Manager doesn't add an autorun.inf file. This file is commonly blocked by antimalware products. You can still include the file if necessary for your scenario.
 
 
 ### Import a single index of an OS image
