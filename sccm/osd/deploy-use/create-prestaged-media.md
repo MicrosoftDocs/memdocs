@@ -156,6 +156,8 @@ The hard drive of the destination computer must be formatted before the prestage
 
 13. On the **Distribution Points** page, select one or more distribution points from which to get content.  
 
+    Configuration Manager only displays distribution points that have the content. Distribute all of the content associated with the task sequence to at least one distribution point before you continue. After you distribute the content, refresh the distribution point list. Remove any distribution points that you already selected on this page, go to the previous page, and then back to the **Distribution Points** page. Alternatively, restart the wizard. For more information, see [Distribute content referenced by a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DistributeTS) and [Manage content and content infrastructure](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).  
+
 14. On the **Customization** page, specify the following options:  
 
     - Add any variables that the task sequence uses.  
