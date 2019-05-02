@@ -1,10 +1,12 @@
 - name: System Center Configuration Manager SDK
-- name: System Center Configuration Manager SDK overview
-  href: core/misc/system-center-configuration-manager-sdk.md
-- name: Privacy information
-  href: core/misc/privacy/privacy-information.md
-- name: What's new in the System Center Configuration Manager SDK
-  href: core/changes/what-s-new-in-the-system-center-configuration-manager-sdk.md
+- name: About the Configuration Manager SDK 
+  items:
+  - name: Configuration Manager SDK overview
+    href: core/misc/system-center-configuration-manager-sdk.md
+  - name: Privacy information
+    href: core/misc/privacy/privacy-information.md
+  - name: What's new in the Configuration Manager SDK
+    href: core/changes/what-s-new-in-the-system-center-configuration-manager-sdk.md
 - name: Configuration Manager SDK requirements
   items:
   - name: Configuration Manager SDK requirements overview
@@ -384,132 +386,146 @@
       href: compliance/how-to-assign-configuration-baselines.md
     - name: How to list configuration assignments
       href: compliance/how-to-list-configuration-assignments.md
-  - name: Compliance Settings Extensibility
-    href: compliance/compliance-settings-extensibility.md
+  - name: Compliance settings extensibility
     items:
-    - name: About Compliance Settings (DCM) Extensibility
+    - name: Compliance settings extensibility overview
+      href: compliance/compliance-settings-extensibility.md
+    - name: About compliance settings (DCM) extensibility
       href: compliance/about-compliance-settings--dcm--extensibility.md
-  - name: Authoring Compliance Settings Configuration Baselines and Configuration Items
-    href: compliance/authoring-compliance-settings-configuration-baselines-and-configuration-items.md
+  - name: Authoring compliance settings configuration baselines and configuration items
     items:
-    - name: About Authoring Configuration Baselines and Configuration Items
+    - name: Authoring compliance settings configuration baselines and configuration items overview
+      href: compliance/authoring-compliance-settings-configuration-baselines-and-configuration-items.md
+    - name: About authoring configuration baselines and configuration items
       href: compliance/about-authoring-configuration-baselines-and-configuration-items.md
-    - name: Configuration Baseline Examples
-      href: compliance/configuration-baseline-examples.md
+    - name: Configuration baseline examples
       items:
-      - name: About Configuration Baselines
+      - name: Configuration baseline examples overview
+        href: compliance/configuration-baseline-examples.md
+      - name: About configuration baselines
         href: compliance/about-configuration-baselines.md
-      - name: Configuration Baseline Example 1
+      - name: Configuration baseline example 1
         href: compliance/configuration-baseline-example-1.md
-    - name: Application Configuration Item Examples
-      href: compliance/application-configuration-item-examples.md
+    - name: Application configuration item examples
       items:
-      - name: About Application Configuration Items
+      - name: Application configuration item examples overview
+        href: compliance/application-configuration-item-examples.md
+      - name: About application configuration items
         href: compliance/about-application-configuration-items.md
-      - name: Application Configuration Item Example 1
+      - name: Application configuration item example 1
         href: compliance/application-configuration-item-example-1.md
-      - name: Application Configuration Item Example 2
+      - name: Application configuration item example 2
         href: compliance/application-configuration-item-example-2.md
-    - name: Operating System Configuration Item Examples
-      href: compliance/operating-system-configuration-item-examples.md
+    - name: Operating system configuration item examples
       items:
-      - name: About Operating System Configuration Item Examples
+      - name: Operating system configuration item examples overview
+        href: compliance/operating-system-configuration-item-examples.md
+      - name: About operating system configuration item examples
         href: compliance/about-operating-system-configuration-item-examples.md
-      - name: Operating System Configuration Item Example 1
+      - name: Operating system configuration item example 1
         href: compliance/operating-system-configuration-item-example-1.md
-    - name: General Configuration Item Examples
-      href: compliance/general-configuration-item-examples.md
+    - name: General configuration item examples
       items:
-      - name: About General Configuration Items
+      - name: General configuration item examples overview
+        href: compliance/general-configuration-item-examples.md
+      - name: About general configuration items
         href: compliance/about-general-configuration-items.md
-      - name: General Configuration Item Example 1
+      - name: General configuration item example 1
         href: compliance/general-configuration-item-example-1.md
-- name: Console Extension
-  href: core/servers/console/console-extension.md
+- name: Console extension
   items:
-  - name: About Configuration Manager Console Extension
+  - name: Console extension overview
+    href: core/servers/console/console-extension.md
+  - name: About Configuration Manager console extension
     href: core/servers/console/about-configuration-manager-console-extension.md
-  - name: Console Extension Architecture
+  - name: Console extension architecture
     href: core/servers/console/console-extension-architecture.md
-  - name: Console Extension Deployment
+  - name: Console extension deployment
     href: core/servers/console/console-extension-deployment.md
-  - name: Console Actions
-    href: core/servers/console/console-actions.md
+  - name: Console actions
     items:
-    - name: About Configuration Manager Console Actions
-      href: core/servers/console/about-configuration-manager-console-actions.md
+    - name: Console actions overview
+      href: core/servers/console/console-actions.md
+    - name: About Configuration Manager console actions
       items:
+      - name: About Configuration Manager console actions
+        href: core/servers/console/about-configuration-manager-console-actions.md
       - name: Actions
         href: core/servers/console/configuration-manager-actions.md
       - name: Action XML
         href: core/servers/console/configuration-manager-action-xml.md
-      - name: Conditional Actions
+      - name: Conditional actions
         href: core/servers/console/conditional-actions.md
-      - name: Executable Action
+      - name: Executable action
         href: core/servers/console/executable-action.md
-      - name: ShowDialog Action
+      - name: ShowDialog action
         href: core/servers/console/showdialog-action.md
-      - name: Report Action
+      - name: Report action
         href: core/servers/console/report-action.md
-      - name: AssemblyType Action
+      - name: AssemblyType action
         href: core/servers/console/assemblytype-action.md
-      - name: Group Action
+      - name: Group action
         href: core/servers/console/group-action.md
-    - name: How to Create a Configuration Manager Action
+    - name: How to create a Configuration Manager action
       href: core/servers/console/how-to-create-a-configuration-manager-action.md
-  - name: Console Forms
-    href: core/servers/console/console-forms.md
+  - name: Console forms
     items:
-    - name: About Configuration Manager Console Forms
+    - name: Console forms overview
+      href: core/servers/console/console-forms.md
+    - name: About Configuration Manager console forms
       href: core/servers/console/about-configuration-manager-console-forms.md
-    - name: How to Create a Property Sheet
+    - name: How to create a property sheet
       href: core/servers/console/how-to-create-a-configuration-manager-property-sheet.md
-    - name: How to Create Form XML for a Property Sheet
+    - name: How to create form XML for a property sheet
       href: core/servers/console/how-to-create-form-xml-for-a-configuration-manager-property-sheet.md
-    - name: How to Add a Property Page to an Existing Property Sheet
+    - name: How to add a property page to an existing property sheet
       href: core/servers/console/how-to-add-a-property-page-to-an-existing-configuration-manager-property-sheet.md
-    - name: How to Create Action XML for a Property Sheet
+    - name: How to create action XML for a property sheet
       href: core/servers/console/how-to-create-action-xml-for-a-configuration-manager-property-sheet.md
-    - name: How to Create a Configuration Manager Dialog Box
+    - name: How to create a Configuration Manager dialog box
       href: core/servers/console/how-to-create-a-configuration-manager-dialog-box.md
-    - name: How to Create Form XML for a Dialog Box
+    - name: How to create form XML for a dialog box
       href: core/servers/console/how-to-create-form-xml-for-a-configuration-manager-dialog-box.md
-    - name: How to Create Action XML for a Dialog Box
+    - name: How to create action XML for a dialog box
       href: core/servers/console/how-to-create-action-xml-for-a-configuration-manager-dialog-box.md
-    - name: How to Use Objects Passed to a Form
+    - name: How to use objects passed to a form
       href: core/servers/console/how-to-use-objects-passed-to-a-configuration-manager-form.md
-    - name: How to Bind Configuration Manager Data to a Form
+    - name: How to bind Configuration Manager data to a form
       href: core/servers/console/how-to-bind-configuration-manager-data-to-a-form.md
-  - name: Configuration Manager Console Management Classes
-    href: core/servers/console/console-management-classes.md
+  - name: Configuration Manager console management classes
     items:
-    - name: About Configuration Manager Console Management Classes
+    - name: Configuration Manager console Management Classes overview
+      href: core/servers/console/console-management-classes.md
+    - name: About Configuration Manager console management classes
       href: core/servers/console/about-configuration-manager-console-management-classes.md
-    - name: Configuration Manager Console Management Class XML
+    - name: Configuration Manager console management class XML
       href: core/servers/console/console-management-class-xml.md
-  - name: Configuration Manager Console Nodes
+  - name: Configuration Manager console nodes
     href: core/servers/console/console-nodes.md
     items:
-    - name: About Configuration Manager Console Nodes
+    - name: Configuration Manager console nodes overview
+      href: core/servers/console/console-nodes.md
+    - name: About Configuration Manager console nodes
       href: core/servers/console/about-configuration-manager-console-nodes.md
-    - name: Configuration Manager Console Node XML
+    - name: Configuration Manager console node XML
       href: core/servers/console/console-node-xml.md
-    - name: Configuration Manager Console RootNodes Element
+    - name: Configuration Manager console RootNodes element
       href: core/servers/console/console-rootnodes-element.md
-    - name: Configuration Manager Console ResourceAssembly Element
+    - name: Configuration Manager console ResourceAssembly element
       href: core/servers/console/console-resourceassembly-element.md
-    - name: How to Create a Configuration Manager Console Node
+    - name: How to create a Configuration Manager console node
       href: core/servers/console/how-to-create-a-configuration-manager-console-node.md
-    - name: How to Find a Configuration Manager Console Node GUID
+    - name: How to find a Configuration Manager console code GUID
       href: core/servers/console/how-to-find-a-configuration-manager-console-node-guid.md
-  - name: Configuration Manager Console Views
-    href: core/servers/console/console-views.md
+  - name: Configuration Manager console views
     items:
-    - name: About Configuration Manager Console Views
+    - name: Configuration Manager console views overview
+      href: core/servers/console/console-views.md
+    - name: About Configuration Manager console views
       href: core/servers/console/about-configuration-manager-console-views.md
-    - name: How to Create a Custom View
+    - name: How to create a custom view
       href: core/servers/console/how-to-create-a-configuration-manager-console-custom-view.md
-    - name: How to Create Node XML for a Grid View
+    - name: How to create node XML for a grid view
       href: core/servers/console/how-to-create-node-xml-for-a-configuration-manager-console-grid-view.md
 - name: Discovery
   href: core/servers/configure/discovery.md
