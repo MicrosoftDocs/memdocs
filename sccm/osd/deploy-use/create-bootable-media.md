@@ -120,13 +120,7 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
 6. On the **Security** page, specify the following options:  
 
-    - **Enable unknown computer support**: Allow the media to deploy an OS to a computer that's not managed by Configuration Manager. There's no record of these computers in the Configuration Manager database. Unknown computers include the following types:  
-
-        - A computer where the Configuration Manager client isn't installed  
-
-        - A computer that's not imported into Configuration Manager  
-
-        - A computer that's not discovered by Configuration Manager  
+    - **Enable unknown computer support**: Allow the media to deploy an OS to a computer that's not managed by Configuration Manager. There's no record of these computers in the Configuration Manager database. For more information, see [Prepare for unknown computer deployments](/sccm/osd/get-started/prepare-for-unknown-computer-deployments).  
 
     - **Protect media with a password**: Enter a strong password to help protect the media from unauthorized access. When you specify a password, the user must provide that password to use the bootable media.  
 

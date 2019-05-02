@@ -13,13 +13,14 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 
-# Create capture media with System Center Configuration Manager
+# Create capture media
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 Capture media in Configuration Manager allows you to capture an OS image from a reference computer. Use capture media for the scenario to [Create a task sequence to capture an OS](/sccm/osd/deploy-use/create-a-task-sequence-to-capture-an-operating-system).  
 
-## <a name="BKMK_CreateCaptureMedia"></a> How to Create Capture Media
+
+## <a name="BKMK_CreateCaptureMedia"></a> How to create capture media
 
 Use capture media to capture an OS image from a reference computer. Capture media contains the boot image that starts the reference computer and the task sequence that captures the OS image.
 
