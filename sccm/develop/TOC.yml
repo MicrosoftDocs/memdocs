@@ -528,62 +528,66 @@
     - name: How to create node XML for a grid view
       href: core/servers/console/how-to-create-node-xml-for-a-configuration-manager-console-grid-view.md
 - name: Discovery
-  href: core/servers/configure/discovery.md
   items:
-  - name: How to Configure Heartbeat Discovery
+  - name: Discovery overview
+    href: core/servers/configure/discovery.md
+  - name: How to configure Heartbeat Discovery
     href: core/servers/configure/how-to-configure-heartbeat-discovery.md
-  - name: How to Configure Network Discovery
+  - name: How to configure Network Discovery
     href: core/servers/configure/how-to-configure-network-discovery.md
-  - name: How to Configure Active Directory Group Discovery
+  - name: How to configure Active Directory Group Discovery
     href: core/servers/configure/how-to-configure-active-directory-group-discovery.md
-  - name: How to Configure Active Directory System Discovery
+  - name: How to configure Active Directory System Discovery
     href: core/servers/configure/how-to-configure-active-directory-system-discovery.md
-  - name: How to Configure Active Directory User Discovery
+  - name: How to configure Active Directory User Discovery
     href: core/servers/configure/how-to-configure-active-directory-user-discovery.md
-  - name: Extending Resource Discovery
+  - name: Extending resource discovery
     href: core/servers/configure/extending-resource-discovery.md
     items:
-    - name: About Using DDRs in Resource Discovery
-      href: core/servers/configure/about-using-ddrs-in-resource-discovery.md
+    - name: Using DDRs in resource discovery
       items:
-      - name: About DDR Properties
+      - name: About Using DDRs in resource discovery
+        href: core/servers/configure/about-using-ddrs-in-resource-discovery.md
+      - name: About DDR properties
         href: core/servers/configure/about-ddr-properties.md
-      - name: About Updating an Existing Resource Instance
+      - name: About updating an existing resource instance
         href: core/servers/configure/about-updating-an-existing-resource-instance.md
-      - name: About Creating a Data Discovery Record
+      - name: About creating a data discovery record
         href: core/servers/configure/about-creating-a-data-discovery-record.md
-      - name: About the Unique Identifier Value for a Resource
+      - name: About the unique identifier value for a resource
         href: core/servers/configure/about-the-unique-identifier-value-for-a-resource.md
-    - name: How to Get the Unique Identifier Value for a Client
+    - name: How to get the unique identifier value for a client
       href: core/servers/configure/how-to-get-the-unique-identifier-value-for-a-client.md
-    - name: How to Add New Properties to an Existing Resource Type
+    - name: How to add new properties to an existing resource type
       href: core/servers/configure/how-to-add-new-properties-to-an-existing-resource-type.md
-    - name: How to Create a Data Discovery Record
+    - name: How to create a data discovery record
       href: core/servers/configure/how-to-create-a-data-discovery-record.md
 - name: Inventory
-  href: core/clients/inventory/inventory.md
   items:
-  - name: About Configuration Manager Inventory
+  - name: Inventory overview
+    href: core/clients/inventory/inventory.md
+  - name: About Configuration Manager inventory
     href: core/clients/inventory/about-configuration-manager-inventory.md
-  - name: How to Enable Hardware Inventory
+  - name: How to enable hardware inventory
     href: core/clients/inventory/how-to-enable-hardware-inventory.md
-  - name: How to Configure Hardware Inventory Settings
+  - name: How to configure hardware inventory settings
     href: core/clients/inventory/how-to-configure-hardware-inventory-settings.md
   - name: Requirements of IDMIF files
     href: core/clients/inventory/requirements-of-idmif-files.md
-  - name: How to Reset the Hardware Inventory Cache
+  - name: How to reset the hardware inventory cache
     href: core/clients/inventory/how-to-reset-the-hardware-inventory-cache.md
-  - name: How to Enable Software Inventory
+  - name: How to enable software inventory
     href: core/clients/inventory/how-to-enable-software-inventory.md
-  - name: How to Configure Software Inventory Settings
+  - name: How to configure software inventory settings
     href: core/clients/inventory/how-to-configure-software-inventory-settings.md
-  - name: How to Reset the Software Inventory Cache
+  - name: How to reset the software inventory cache
     href: core/clients/inventory/how-to-reset-the-software-inventory-cache.md
-  - name: How to Import a MOF File to Extend Inventory
+  - name: How to import a MOF file to extend inventory
     href: core/clients/inventory/how-to-import-a-mof-file-to-extend-inventory.md
-- name: Mobile Device Management
-  href: mdm/mobile-device-management.md
+- name: Mobile device management
   items:
+  - name: Mobile device management overview
+    href: mdm/mobile-device-management.md
   - name: How to Configure Mobile Device Client Agent Settings
     href: mdm/how-to-configure-mobile-device-client-agent-settings.md
   - name: How to Create Software Distribution Packages, Programs, and Advertisements for Mobile Devices
