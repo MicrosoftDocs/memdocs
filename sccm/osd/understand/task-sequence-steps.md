@@ -1487,6 +1487,14 @@ Specifies the Windows user account this step uses to run the command line. The c
 > [!IMPORTANT]  
 > If this step specifies a user account and runs in Windows PE, the action fails. You can't join Windows PE to a domain. The **smsts.log** file records this failure.  
 
+### Options  
+
+Besides the default options, configure the following additional settings on the **Options** tab of this task sequence step:  
+
+#### Success codes
+
+Include other exit codes from the script that the step should evaluate as success.
+
 
 
 ## <a name="BKMK_RunPowerShellScript"></a> Run PowerShell Script  
@@ -1497,6 +1505,10 @@ This step can be run in the full OS or Windows PE. To run this step in Windows P
 
 > [!NOTE]  
 > PowerShell isn't enabled by default on Windows Embedded operating systems.  
+
+Use the following task sequence variables with this step:  
+
+- [OSDLogPowerShellParameters](/sccm/osd/understand/task-sequence-variables#OSDLogPowerShellParameters) (starting in version 1902)<!--3556028-->  
 
 To add this step in the task sequence editor, select **Add**, select **General**, and select **Run PowerShell Script**.
 
@@ -1511,6 +1523,22 @@ Specify the Configuration Manager package that contains the PowerShell script. O
 #### Script name
 
 Specifies the name of the PowerShell script to run. This field is required.  
+
+#### Enter a PowerShell script
+
+<!-- 3556028 -->
+Starting in version 1902, directly enter Windows PowerShell code in this step. This feature lets you run PowerShell commands during a task sequence without first creating and distributing a package with the script.
+
+When you add or edit a script, the PowerShell script window provides the following actions:  
+
+- Edit the script directly  
+
+- Open an existing script from file  
+
+- Browse to an existing approved [script](/sccm/apps/deploy-use/create-deploy-scripts) in Configuration Manager
+
+> [!Important]  
+> To take advantage of this new Configuration Manager feature, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
 #### Parameters
 
@@ -1539,6 +1567,52 @@ Determine which PowerShell scripts (if any) you allow to run on the computer. Ch
 
 > [!IMPORTANT]  
 > PowerShell 1.0 doesn't support Undefined and Bypass execution policies.  
+
+#### Output to task sequence variable
+
+<!-- 3556028 -->
+Starting in version 1902, save the script output to a custom task sequence variable.
+
+#### Start in
+
+<!-- 3556028 -->
+Starting in version 1902, specify the starting folder for the script, up to 127 characters. This folder can be an absolute path on the destination computer or a path relative to the distribution point folder that contains the package. This field is optional.  
+
+> [!NOTE]  
+> The **Browse** button browses the local computer for files and folders. Anything you select must also exist on the destination computer. It must exist in the same location and with the same file and folder names.  
+
+#### Time-out
+
+<!-- 3556028 -->
+Starting in version 1902, specify a value that represents how long Configuration Manager allows the PowerShell script to run. This value can be from one minute to 999 minutes. The default value is 15 minutes. This option is disabled by default.  
+
+> [!IMPORTANT]  
+> If you enter a value that doesn't allow enough time for the specified script to complete successfully, this step fails. The entire task sequence could fail depending on step or group conditions. If the time-out expires, Configuration Manager terminates the PowerShell process.  
+
+#### Run this step as the following account
+
+<!-- 3556028 -->
+Starting in version 1902, specify that the PowerShell script is run as a Windows user account other than the Local System account.  
+
+> [!NOTE]  
+> To run simple scripts or commands with another account after installing the OS, first add the account to the computer. Additionally, you may need to restore Windows user profiles to run more complex actions.  
+
+#### Account
+
+<!-- 3556028 -->
+Starting in version 1902, specify the Windows user account this step uses to run the PowerShell script. The script runs with the permissions of the specified account. Select **Set** to specify the local user or domain account. For more information on the task sequence run-as account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#task-sequence-run-as-account).
+
+> [!IMPORTANT]  
+> If this step specifies a user account and runs in Windows PE, the action fails. You can't join Windows PE to a domain. The **smsts.log** file records this failure.  
+
+### Options  
+
+Besides the default options, configure the following additional settings on the **Options** tab of this task sequence step:  
+
+#### Success codes
+
+<!-- 3556028 -->
+Starting in version 1902, include other exit codes from the script that the step should evaluate as success.
 
 
 
