@@ -859,84 +859,91 @@
       href: core/servers/configure/how-to-delete-a-maintenance-window-for-a-collection.md
     - name: How to list the maintenance windows and properties for a specific collection
       href: core/servers/configure/how-to-list-the-maintenance-windows-and-properties-for-a-specific-collection.md
-  - name: Software Distribution Setup and Configuration
-    href: core/servers/configure/software-distribution-setup-and-configuration.md
+  - name: Software distribution setup and configuration
     items:
-    - name: About Software Distribution Setup and Configuration
+    - name: Software distribution setup and configuration overview
+      href: core/servers/configure/software-distribution-setup-and-configuration.md
+    - name: About software distribution setup and configuration
       href: core/servers/configure/about-software-distribution-setup-and-configuration.md
-    - name: How to Enable or Disable the Software Distribution Advertised Programs Client Agent
+    - name: How to enable or disable the software distribution advertised programs client agent
       href: core/servers/configure/how-to-enable-or-disable-the-advertised-programs-client-agent.md
-    - name: How to Configure Software Distribution Advertised Programs Client Agent Settings
+    - name: How to configure software distribution advertised programs client agent settings
       href: core/servers/configure/how-to-configure-advertised-programs-client-agent-settings.md
-    - name: How to Customize Advertisement Branding Information in Configuration Manager
+    - name: How to customize advertisement branding information in Configuration Manager
       href: core/servers/configure/how-to-customize-advertisement-branding-information.md
-  - name: Software Distribution Wake On LAN
-    href: core/servers/configure/software-distribution-wake-on-lan.md
+  - name: Software distribution Wake On LAN
     items:
-    - name: How to Configure a Software Distribution Mandatory Advertisement for Wake On LAN
+    - name: Software distribution Wake On LAN overview
+      href: core/servers/configure/software-distribution-wake-on-lan.md
+    - name: How to configure a software distribution mandatory advertisement for Wake On LAN
       href: core/servers/configure/how-to-configure-a-mandatory-advertisement-for-wake-on-lan.md
-    - name: How to Enable the Partner Notification API
+    - name: How to enable the partner notification API
       href: core/servers/configure/how-to-enable-the-partner-notification-api.md
   - name: Distribution Points
-    href: core/servers/configure/distribution-points.md
     items:
-    - name: How to List Distribution Points for a Site
+    - name: Distribution Points overview
+      href: core/servers/configure/distribution-points.md
+    - name: How to list Distribution Points for a site
       href: core/servers/configure/how-to-list-distribution-points-for-a-site.md
-    - name: How to Set the Distribute on Demand Flag
+    - name: How to set the Distribute on demand flag
       href: core/servers/configure/how-to-set-the-distribute-on-demand-flag.md
-- name: Software Metering
-  href: apps/software-metering.md
+- name: Software metering
   items:
-  - name: How to Enable or Disable Software Metering
+  - name: Software metering overview
+    href: apps/software-metering.md
+  - name: How to enable or disable software metering
     href: apps/how-to-enable-or-disable-software-metering.md
-  - name: How to Configure Automatic Software Metering Rule Generation
+  - name: How to configure automatic software metering rule generation
     href: apps/how-to-configure-automatic-software-metering-rule-generation.md
-  - name: How to Create a Software Metering Rule
+  - name: How to create a software metering rule
     href: apps/how-to-create-a-software-metering-rule.md
-  - name: How to Delete a Software Metering Rule
+  - name: How to delete a software metering rule
     href: apps/how-to-delete-a-software-metering-rule.md
-  - name: How to Enable or Disable a Software Metering Rule
+  - name: How to enable or disable a software metering rule
     href: apps/how-to-enable-or-disable-a-software-metering-rule.md
-  - name: How to View File Usage Summary Information
+  - name: How to view file usage summary information
     href: apps/how-to-view-file-usage-summary-information.md
-  - name: How to View Monthly Usage Summary Information
+  - name: How to view monthly usage summary information
     href: apps/how-to-view-monthly-usage-summary-information.md
-- name: Software Updates
-  href: sum/software-updates.md
+- name: Software updates
   items:
-  - name: Software Updates Setup and Configuration
-    href: sum/software-updates-setup-and-configuration.md
+  - name: Software updates overview
+    href: sum/software-updates.md
+  - name: Software updates setup and configuration
     items:
-    - name: About Software Updates Setup and Configuration
+    - name: Software updates setup and configuration overview
+      href: sum/software-updates-setup-and-configuration.md
+    - name: About software updates setup and configuration
       href: sum/about-software-updates-setup-and-configuration.md
-    - name: How to Configure the Software Update Point
+    - name: How to configure the Software Update Point
       href: sum/how-to-configure-the-software-update-point.md
-    - name: How to Configure the WSUS Settings
+    - name: How to configure the WSUS settings
       href: sum/how-to-configure-the-wsus-settings.md
-    - name: How to Enable or Disable the Software Updates Client Agent
+    - name: How to enable or disable the software updates client agent
       href: sum/how-to-enable-or-disable-the-software-updates-client-agent.md
-    - name: How to Set Software Updates Branding Information
+    - name: How to set software updates branding information
       href: sum/how-to-set-software-updates-branding-information.md
-  - name: Software Updates Deployments
-    href: sum/software-updates-deployments.md
+  - name: Software updates deployments
     items:
-    - name: About Software Updates Deployments
+    - name: Software updates deployments overview
+      href: sum/software-updates-deployments.md
+    - name: About software updates deployments
       href: sum/about-software-updates-deployments.md
-    - name: How to Enumerate Updates Matching a Specific Criteria
+    - name: How to enumerate updates matching a specific criteria
       href: sum/how-to-enumerate-updates-matching-a-specific-criteria.md
-    - name: How to Create an Update List
+    - name: How to create an update list
       href: sum/how-to-create-an-update-list.md
-    - name: How to Create a Deployment Template
+    - name: How to create a deployment template
       href: sum/how-to-create-a-deployment-template.md
-    - name: How to Create a Deployment Package
+    - name: How to create a deployment package
       href: sum/how-to-create-a-deployment-package.md
-    - name: How to Add Updates to a Deployment Package
+    - name: How to add updates to a deployment package
       href: sum/how-to-add-updates-to-a-deployment-package.md
-    - name: How to Delete Updates from a Deployment Package
+    - name: How to delete updates from a deployment package
       href: sum/how-to-delete-updates-from-a-deployment-package.md
-    - name: How to Configure and Deploy Updates
+    - name: How to configure and deploy updates
       href: sum/how-to-configure-and-deploy-updates.md
-    - name: How to Change the Deployment Package Source
+    - name: How to change the deployment package source
       href: sum/how-to-change-the-deployment-package-source.md
   - name: Synchronizing the Software Update Point
     href: sum/synchronizing-the-software-update-point.md
