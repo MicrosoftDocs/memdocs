@@ -372,7 +372,6 @@
     - name: How to configure the default compliance evaluation schedule
       href: compliance/how-to-configure-the-default-compliance-evaluation-schedule.md
   - name: Compliance settings baselines and configuration items
-    href: compliance/compliance-settings-baselines-and-configuration-items.md
     items:
     - name: Compliance settings baselines and configuration items overview
       href: compliance/compliance-settings-baselines-and-configuration-items.md
@@ -542,8 +541,9 @@
   - name: How to configure Active Directory User Discovery
     href: core/servers/configure/how-to-configure-active-directory-user-discovery.md
   - name: Extending resource discovery
-    href: core/servers/configure/extending-resource-discovery.md
     items:
+    - name: Extending resource discovery overview
+      href: core/servers/configure/extending-resource-discovery.md
     - name: Using DDRs in resource discovery
       items:
       - name: About Using DDRs in resource discovery
@@ -593,8 +593,9 @@
   - name: How to create software distribution packages, programs, and advertisements for mobile devices
     href: mdm/how-to-create-software-distribution-packages-for-mobile-devices.md
 - name: Operating system deployment
-  href: osd/operating-system-deployment.md
   items:
+  - name: Operating system deployment overview
+    href: osd/operating-system-deployment.md
   - name: Operating system deployment site role configuration
     items:
     - name: Operating system deployment site role configuration overview
