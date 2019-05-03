@@ -175,7 +175,7 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
 You can create bootable media on a removable USB drive when the drive isn't connected to the computer running the Configuration Manager console.
 
-1. [Create the task sequence boot media](#process-to-create-bootable-media). On the **Media type** page, select **CD/DVD set**. The wizard writes the output files to the location that you specify. For example: `\\servername\folder\outputfile.iso`.  
+1. [Create the task sequence boot media](#process). On the **Media type** page, select **CD/DVD set**. The wizard writes the output files to the location that you specify. For example: `\\servername\folder\outputfile.iso`.  
 
 2. Prepare the removable USB drive. The drive must be formatted, empty, and bootable.
 
