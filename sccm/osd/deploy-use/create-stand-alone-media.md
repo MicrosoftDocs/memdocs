@@ -28,15 +28,22 @@ Use stand-alone media with the following OS deployment scenarios:
 - [Upgrade Windows to the latest version](/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version)  
 
 
-## Prerequisites
+## Usage
 
-Stand-alone media includes the task sequence that automates the steps to install the OS, and all other required content. This content includes the boot image, OS image, and device drivers. Because the stand-alone media stores everything to deploy the OS, it requires more disk space than required for other types of media. When you create stand-alone media on a central administration site, the client retrieves its assigned site code from Active Directory. Stand-alone media created at child sites automatically assigns to the client the site code for that site.  
+Stand-alone media includes the task sequence that automates the steps to install the OS, and all other required content. This content includes the boot image, OS image, and device drivers. Because the stand-alone media stores everything to deploy the OS, it requires more disk space than required for other types of media.
+
+When you create stand-alone media on a central administration site, the client retrieves its assigned site code from Active Directory. Stand-alone media created at child sites automatically assigns to the client the site code for that site.  
+
+
+## Prerequisites
 
 Before you create stand-alone media by using the Create Task Sequence Media Wizard, be sure that all of these conditions are met.
 
-#### Create a task sequence to deploy an OS
+### Create a task sequence to deploy an OS
 
 As part of the stand-alone media, specify the task sequence to deploy an OS. For more information, see [Create a task sequence to install an OS](/sccm/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system).
+
+#### Unsupported actions for stand-alone media
 
 The following actions aren't supported for stand-alone media:
 
@@ -69,19 +76,19 @@ The following actions aren't supported for stand-alone media:
 >
 > `WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE`
 
-#### Distribute all content associated with the task sequence
+### Distribute all content associated with the task sequence
 
 Distribute all content that the task sequence requires to at least one distribution point. This content includes the boot image, OS image, and other associated files. The wizard gathers the content from the distribution point when it creates the media.
 
 Your user account needs at least **Read** access rights to the content library on that distribution point. For more information, see [Distribute content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).
 
-#### Prepare the removable USB drive
+### Prepare the removable USB drive
 
 If you're using a removable USB drive, connect it to the computer where you run the Create Task Sequence Media wizard. The USB drive must be detectable by Windows as a removal device. The wizard writes directly to the USB drive when it creates the media.
 
 Stand-alone media uses a FAT32 file system. You can't create stand-alone media on a removable USB drive whose content contains a file over 4 GB in size.
 
-#### Create an output folder
+### Create an output folder
 
 Before you run the Create Task Sequence Media Wizard to create media for a CD or DVD set, create a folder for the output files it creates. Media that it creates for a CD or DVD set is written as an .ISO file directly in the folder.
 

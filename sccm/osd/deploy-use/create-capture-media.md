@@ -17,40 +17,36 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Capture media in Configuration Manager allows you to capture an OS image from a reference computer. Use capture media for the scenario to [Create a task sequence to capture an OS](/sccm/osd/deploy-use/create-a-task-sequence-to-capture-an-operating-system).  
+Capture media in Configuration Manager allows you to capture an OS image from a reference computer. Capture media contains the boot image that starts the reference computer and the task sequence that captures the OS image. Use capture media for the scenario to [Create a task sequence to capture an OS](/sccm/osd/deploy-use/create-a-task-sequence-to-capture-an-operating-system).  
 
 
-## <a name="BKMK_CreateCaptureMedia"></a> How to create capture media
-
-Use capture media to capture an OS image from a reference computer. Capture media contains the boot image that starts the reference computer and the task sequence that captures the OS image.
-
-### Prerequisites
+## Prerequisites
 
 Before you create capture media by using the Create Task Sequence Media Wizard, be sure that all of these conditions are met.
 
-#### Boot image
+### Boot image
 
 Consider the following points about the boot image that you use in the task sequence to deploy the OS:
 
 - The architecture of the boot image must be appropriate for the architecture of the destination computer. For example, an x64 destination computer can boot and run an x86 or x64 boot image. However, an x86 destination computer can boot and run only an x86 boot image.
 - Make sure that the boot image contains the network and storage drivers that are required to provision the destination computer.
 
-#### Distribute all content associated with the task sequence
+### Distribute all content associated with the task sequence
 
 Distribute all content that the task sequence requires to at least one distribution point. This content includes the boot image, OS image, and other associated files. The wizard gathers the content from the distribution point when it creates the capture media.
 
 Your user account needs at least **Read** access rights to the content library on that distribution point. For more information, see [Distribute content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).
 
-#### Prepare the removable USB drive
+### Prepare the removable USB drive
 
 If you're using a removable USB drive, connect it to the computer where you run the Create Task Sequence Media wizard. The USB drive must be detectable by Windows as a removal device. The wizard writes directly to the USB drive when it creates the media.
 
-#### Create an output folder
+### Create an output folder
 
 Before you run the Create Task Sequence Media Wizard to create media for a CD or DVD set, create a folder for the output files it creates. Media that it creates for a CD or DVD set is written as an .ISO file directly in the folder.
 
 
-### Process to create capture media  
+## Process
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node.  
 

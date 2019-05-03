@@ -24,7 +24,7 @@ Bootable media in Configuration Manager contains the boot image, optional presta
 - [Replace an existing computer and transfer settings](/sccm/osd/deploy-use/replace-an-existing-computer-and-transfer-settings)  
 
 
-## <a name="BKMK_CreateBootableMedia"></a> Create bootable media
+## Usage
 
 The following process occurs when you boot to bootable media:
 
@@ -39,37 +39,37 @@ Because the task sequence isn't on the media, you can change the task sequence o
 
 The packages on bootable media aren't encrypted. To make sure that the package contents are secured from unauthorized users, take appropriate security measures. For example, add a password to the media.
 
-### Prerequisites
+## Prerequisites
 
 Before you create bootable media by using the Create Task Sequence Media Wizard, be sure that all of these conditions are met.
 
-#### Boot image
+### Boot image
 
 Consider the following points about the boot image that you use in the task sequence to deploy the OS:
 
 - The architecture of the boot image must be appropriate for the architecture of the destination computer. For example, an x64 destination computer can boot and run an x86 or x64 boot image. However, an x86 destination computer can boot and run only an x86 boot image.
 - Make sure that the boot image contains the network and storage drivers that are required to provision the destination computer.
 
-#### Create a task sequence to deploy an OS
+### Create a task sequence to deploy an OS
 
 As part of the bootable media, specify the task sequence to deploy the OS. For more information, see [Create a task sequence to install an OS](/sccm/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system).
 
-#### Distribute all content associated with the task sequence
+### Distribute all content associated with the task sequence
 
 Distribute all content that the task sequence requires to at least one distribution point. This content includes the boot image and other associated prestart files. The wizard gathers the content from the distribution point when it creates the bootable media.
 
 Your user account needs at least **Read** access rights to the content library on that distribution point. For more information, see [Distribute content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).
 
-#### Prepare the removable USB drive
+### Prepare the removable USB drive
 
 If you're using a removable USB drive, connect it to the computer where you run the Create Task Sequence Media wizard. The USB drive must be detectable by Windows as a removal device. The wizard writes directly to the USB drive when it creates the media.
 
-#### Create an output folder
+### Create an output folder
 
 Before you run the Create Task Sequence Media Wizard to create media for a CD or DVD set, create a folder for the output files it creates. Media that it creates for a CD or DVD set is written as an .ISO file directly in the folder.
 
 
-### Process to create bootable media  
+## Process
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node.  
 
@@ -171,7 +171,7 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 9. Complete the wizard.  
 
 
-## Create bootable media on a USB drive from a network share
+## Alternate method
 
 You can create bootable media on a removable USB drive when the drive isn't connected to the computer running the Configuration Manager console.
 

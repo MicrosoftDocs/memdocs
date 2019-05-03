@@ -28,32 +28,33 @@ Use prestaged media for the following OS deployment scenarios:
 - [Deploy Windows to Go](/sccm/osd/deploy-use/deploy-windows-to-go)  
 
 
-## <a name="BKMK_CreatePrestagedMedia"></a> Create prestaged media
+## Usage
 
 When the computer starts for the first time after you've applied the prestaged media, the computer starts in Windows PE. It connects to a management point to locate the task sequence that completes the OS deployment process. When you deploy a task sequence that uses prestaged media, the client checks the local task sequence cache for valid content first. If the content can't be found or has been revised, the client downloads the content from a distribution point or peer.  
 
-### Prerequisites
+
+## Prerequisites
 
 Before you create prestaged media by using the Create Task Sequence Media Wizard, be sure that all of the conditions are met.
 
-#### Boot image
+### Boot image
 
 Consider the following points about the boot image that you use in the task sequence to deploy the OS:
 
 - The architecture of the boot image must be appropriate for the architecture of the destination computer. For example, an x64 destination computer can boot and run an x86 or x64 boot image. However, an x86 destination computer can boot and run only an x86 boot image.
 - Make sure that the boot image contains the network and storage drivers that are required to provision the destination computer.
 
-#### Create a task sequence to deploy an OS
+### Create a task sequence to deploy an OS
 
 As part of the prestaged media, specify the task sequence to deploy the OS. For more information, see [Create a task sequence to install an OS](/sccm/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system).
 
-#### Distribute all content associated with the task sequence
+### Distribute all content associated with the task sequence
 
 Distribute all content that the task sequence requires to at least one distribution point. This content includes the boot image, OS image, and other associated files. The wizard gathers the content from the distribution point when it creates the prestaged media.
 
 Your user account needs at least **Read** access rights to the content library on that distribution point. For more information, see [Distribute content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).
 
-#### Hard drive on the destination computer
+### Hard drive on the destination computer
 
 The hard drive of the destination computer must be formatted before the prestaged media is applied to it. If the hard drive isn't formatted when the media is applied, the task sequence that deploys the OS fails when it attempts to start the destination computer.
 
@@ -61,7 +62,7 @@ The hard drive of the destination computer must be formatted before the prestage
 > The Create Task Sequence Media Wizard sets the following task sequence variable condition on the media: **_SMSTSMediaType = OEMMedia**. You can use this same condition in your task sequence.  
 
 
-### Process to create prestaged media  
+## Process
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node.  
 
