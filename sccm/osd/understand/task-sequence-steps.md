@@ -1548,16 +1548,19 @@ When you add or edit a script, the PowerShell script window provides the followi
 
 Specifies the parameters passed to the PowerShell script. These parameters are the same as the PowerShell script parameters on the command line.  
 
-> [!IMPORTANT]  
-> Provide parameters consumed by the script, not for the Windows PowerShell command line.  
->
-> The following example contains valid parameters:  
->
-> `-MyParameter1 MyValue1 -MyParameter2 MyValue2`  
->
-> The following example contains invalid parameters. The first two items are Windows PowerShell command-line parameters (**-NoLogo** and **-ExecutionPolicy Unrestricted**). The script doesn't consume these parameters.  
->
-> `-NoLogo -ExecutionPolicy Unrestricted -File MyScript.ps1 -MyParameter1 MyValue1 -MyParameter2 MyValue2`  
+Provide parameters consumed by the script, not for the Windows PowerShell command line.  
+The following example contains valid parameters:  
+
+`-MyParameter1 MyValue1 -MyParameter2 MyValue2`  
+
+The following example contains invalid parameters. The first two items are Windows PowerShell command-line parameters (**-NoLogo** and **-ExecutionPolicy Unrestricted**). The script doesn't consume these parameters.  
+
+`-NoLogo -ExecutionPolicy Unrestricted -File MyScript.ps1 -MyParameter1 MyValue1 -MyParameter2 MyValue2`
+
+<!-- SCCMDocs-pr issue 3561 -->
+If a parameter value includes a special character, use single quotation marks (`'`) around the value. Using double quotation marks (`"`) may cause the task sequence step to incorrectly process the parameter.
+
+For example: `-Arg1 '%TSVar1%' -Arg2 '%TSVar2%'`
 
 #### PowerShell execution policy
 
