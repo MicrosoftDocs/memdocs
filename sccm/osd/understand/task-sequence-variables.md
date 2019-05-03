@@ -770,6 +770,16 @@ Specifies whether sysprep resets the product activation flag.
 
 Specifies the local Administrator account password. If you enable the option to **Randomly generate the local administrator password and disable the account on all supported platforms**, then the step ignores this variable. The specified value must be between 1 and 255 characters.
 
+### <a name="OSDLogPowerShellParameters"></a> OSDLogPowerShellParameters
+
+<!--3556028-->
+*Starting in version 1902*  
+*Applies to the [Run PowerShell Script](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript) step.*
+
+(input)
+
+To prevent potentially sensitive data from being logged, the **Run PowerShell Script** step doesn't log script parameters in the **smsts.log** file. To include the script parameters in the task sequence log, set this variable to **TRUE**.
+
 ### <a name="OSDMigrateAdapterSettings"></a> OSDMigrateAdapterSettings
 
 *Applies to the [Capture Network Settings](task-sequence-steps.md#BKMK_CaptureNetworkSettings) step.*
