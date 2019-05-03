@@ -593,11 +593,16 @@ Specifies the RFC 1779 format name of the organizational unit (OU) that the dest
 
 <!--1358493-->
 *Starting in version 1806*  
+*Applies to the [Install Package](/sccm/osd/understand/task-sequence-steps#BKMK_InstallPackage) step.*
+
+*Starting in version 1902*  
 *Applies to the [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step.*
 
 (input)
 
-To prevent potentially sensitive data from being displayed or logged, set this variable to `TRUE`. This variable masks the program name in the **smsts.log** during a [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) task sequence step.
+To prevent potentially sensitive data from being displayed or logged, set this variable to `TRUE`. This variable masks the program name in the **smsts.log** during an **Install Package** step.
+
+Starting in version 1902, when you set this variable to `TRUE`, it also hides the command line from the **Run Command Line** step in the log file.<!--3654172-->
 
 ### <a name="OSDEnableTCPIPFiltering"></a> OSDEnableTCPIPFiltering
 

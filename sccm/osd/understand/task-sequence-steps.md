@@ -1001,6 +1001,10 @@ Programs that use the **Run another program first** option to install a dependen
 
 This task sequence step runs only in the full OS. It doesn't run in Windows PE.  
 
+Use the following task sequence variables with this step:  
+
+- [OSDDoNotLogCommand](/sccm/osd/understand/task-sequence-variables#OSDDoNotLogCommand) (starting in version 1806)<!--1358493-->  
+
 To add this step in the task sequence editor, select **Add**, select **Software**, and select **Install Package**.
 
 ### Properties  
@@ -1418,7 +1422,7 @@ This step can be run in the full OS or Windows PE.
 
 Use the following task sequence variables with this step:  
 
-- [OSDDoNotLogCommand](/sccm/osd/understand/task-sequence-variables#OSDDoNotLogCommand) (starting in version 1806)<!--1358493-->  
+- [OSDDoNotLogCommand](/sccm/osd/understand/task-sequence-variables#OSDDoNotLogCommand) (starting in version 1902)<!--3654172-->  
 - [SMSTSDisableWow64Redirection](/sccm/osd/understand/task-sequence-variables#SMSTSDisableWow64Redirection)  
 - [SMSTSRunCommandLineUserName](/sccm/osd/understand/task-sequence-variables#SMSTSRunCommandLineUserName)  
 - [SMSTSRunCommandLinePassword](/sccm/osd/understand/task-sequence-variables#SMSTSRunCommandLinePassword)  
