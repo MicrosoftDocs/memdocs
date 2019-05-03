@@ -588,144 +588,150 @@
   items:
   - name: Mobile device management overview
     href: mdm/mobile-device-management.md
-  - name: How to Configure Mobile Device Client Agent Settings
+  - name: How to configure mobile device client agent settings
     href: mdm/how-to-configure-mobile-device-client-agent-settings.md
-  - name: How to Create Software Distribution Packages, Programs, and Advertisements for Mobile Devices
+  - name: How to create software distribution packages, programs, and advertisements for mobile devices
     href: mdm/how-to-create-software-distribution-packages-for-mobile-devices.md
-- name: Operating System Deployment
+- name: Operating system deployment
   href: osd/operating-system-deployment.md
   items:
-  - name: Operating System Deployment Site Role Configuration
-    href: osd/operating-system-deployment-site-role-configuration.md
+  - name: Operating system deployment site role configuration
     items:
-    - name: About Operating System Deployment Site Role Configuration
+    - name: Operating system deployment site role configuration overview
+      href: osd/operating-system-deployment-site-role-configuration.md
+    - name: About operating system deployment site role configuration
       href: osd/about-operating-system-deployment-site-role-configuration.md
-    - name: How to Create a State Migration Point Role
+    - name: How to create a State Migration Point tole
       href: osd/how-to-create-a-state-migration-point-role.md
-    - name: How to Delete a State Migration Point Role
+    - name: How to delete a State Migration Point role
       href: osd/how-to-delete-a-state-migration-point-role.md
-    - name: How to Add a State Migration Point Folder
+    - name: How to add a State Migration Point folder
       href: osd/how-to-add-a-state-migration-point-folder.md
-    - name: How to Set the Restore-Only Mode for a State Migration Point
+    - name: How to set the restore-only mode for a State Migration Point
       href: osd/how-to-set-the-restore-only-mode-for-a-state-migration-point.md
-    - name: How to Set the Deletion Policy for a State Migration Point
+    - name: How to set the deletion policy for a State Migration Point
       href: osd/how-to-set-the-deletion-policy-for-a-state-migration-point.md
-    - name: How to Enable a PXE Service Point Role
+    - name: How to enable a PXE Service Point role
       href: osd/how-to-enable-a-pxe-service-point-role.md
-    - name: How to Disable a PXE Service Point Role
+    - name: How to disable a PXE Service Point role
       href: osd/how-to-disable-a-pxe-service-point-role.md
-    - name: How to Enable Unknown Computer Support for a PXE Service Point
+    - name: How to enable unknown computer support for a PXE Service Point
       href: osd/how-to-enable-unknown-computer-support-for-a-pxe-service-point.md
-    - name: How to Set the PXE Service Point Response to PXE Requests
+    - name: How to set the PXE Service Point response to PXE requests
       href: osd/how-to-set-the-pxe-service-point-response-to-pxe-requests.md
-    - name: How to Set the Response Delay for a PXE Service Point
+    - name: How to set the response delay for a PXE Service Point
       href: osd/how-to-set-the-response-delay-for-a-pxe-service-point.md
-    - name: How to Set the PXE Service Point Response to All Network Interfaces
+    - name: How to set the PXE Service Point response to all network interfaces
       href: osd/how-to-set-the-pxe-service-point-response-to-all-network-interfaces.md
-    - name: How to Set the PXE Service Point Response for a Specific Network Interface
+    - name: How to set the PXE Service Point response for a specific network interface
       href: osd/how-to-set-the-pxe-service-point-response-for-a-specific-network-interface.md
-    - name: How to Set Operating System Deployment Branding Information
+    - name: How to set operating system deployment branding information
       href: osd/how-to-set-operating-system-deployment-branding-information.md
-  - name: Operating System Deployment Task Sequencing
-    href: osd/operating-system-deployment-task-sequencing.md
+  - name: Operating system deployment task sequencing
     items:
+    - name: Operating system deployment task sequencing
+      href: osd/operating-system-deployment-task-sequencing.md
     - name: About Operating System Deployment Task Sequences
-      href: osd/about-operating-system-deployment-task-sequences.md
       items:
-      - name: Operating System Deployment Task Sequences Overview
+      - name: About operating system deployment task sequences
+        href: osd/about-operating-system-deployment-task-sequences.md
+      - name: Operating system deployment task sequences overview
         href: osd/operating-system-deployment-task-sequences-overview.md
-      - name: Operating System Deployment Task Sequence Object Model
+      - name: Operating system deployment task sequence object model
         href: osd/operating-system-deployment-task-sequence-object-model.md
-    - name: How to Create an Operating System Deployment Task Sequence
+    - name: How to create an operating system deployment task sequence
       href: osd/how-to-create-an-operating-system-deployment-task-sequence.md
-    - name: How to Create an Operating System Deployment Task Sequence Package
+    - name: How to create an operating system deployment task sequence package
       href: osd/how-to-create-an-operating-system-deployment-task-sequence-package.md
-    - name: How to Read a Task Sequence from a Task Sequence Package
+    - name: How to read a task sequence from a task sequence package
       href: osd/how-to-read-a-task-sequence-from-a-task-sequence-package.md
-    - name: How to Enumerate the Available Operating System Deployment Task Sequences
+    - name: How to enumerate the available operating system deployment task sequences
       href: osd/how-to-enumerate-the-available-operating-system-deployment-task-sequences.md
-    - name: How to Add an Operating System Deployment Task Sequence Action
+    - name: How to add an operating system deployment task sequence action
       href: osd/how-to-add-an-operating-system-deployment-task-sequence-action.md
-    - name: How to Delete an Operating System Deployment Task Sequence Action
+    - name: How to delete an operating system deployment task sequence action
       href: osd/how-to-delete-an-operating-system-deployment-task-sequence-action.md
-    - name: How to Add a Condition to an Operating System Deployment Task Sequence Step
+    - name: How to add a condition to an operating system deployment task sequence step
       href: osd/how-to-add-a-condition-to-an-operating-system-deployment-task-sequence-step.md
-    - name: How to Enumerate the Steps in an Operating System Deployment Task Sequence
+    - name: How to enumerate the steps in an operating system deployment task sequence
       href: osd/how-to-enumerate-the-steps-in-an-operating-system-deployment-task-sequence.md
-    - name: How to Reorder an Operating System Deployment Task Sequence
+    - name: How to reorder an operating system deployment task sequence
       href: osd/how-to-reorder-an-operating-system-deployment-task-sequence.md
-    - name: How to Create an Operating System Deployment Task Sequence Group
+    - name: How to create an operating system deployment task sequence group
       href: osd/how-to-create-an-operating-system-deployment-task-sequence-group.md
-    - name: How to Add a Step to an Operating System Deployment Group
+    - name: How to add a step to an operating system deployment group
       href: osd/how-to-add-a-step-to-an-operating-system-deployment-group.md
-    - name: How to Remove a Step from an Operating System Deployment Group
+    - name: How to remove a step from an operating system deployment group
       href: osd/how-to-remove-a-step-from-an-operating-system-deployment-group.md
-    - name: How to Move a Step to a Different Operating System Deployment Task Sequence Group
+    - name: How to move a step to a different operating system deployment task sequence group
       href: osd/how-to-move-a-step-to-a-different-task-sequence-group.md
-    - name: How to Use Task Sequence Variables in a Running Task Sequence
+    - name: How to use task sequence variables in a running task sequence
       href: osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md
-    - name: How to Set an Operating System Deployment Task Sequence Variable
+    - name: How to set an operating system deployment task sequence variable
       href: osd/how-to-set-an-operating-system-deployment-task-sequence-variable.md
-  - name: Operating System Deployment Computer Management
-    href: osd/operating-system-deployment-computer-management.md
+  - name: Operating system deployment computer management
     items:
-    - name: About Computer Management
+    - name: Operating system deployment computer management overview
+      href: osd/operating-system-deployment-computer-management.md
+    - name: About computer management
       href: osd/about-computer-management.md
-    - name: How to Import a New Computer into Configuration Manager
+    - name: How to import a new computer into Configuration Manager
       href: osd/how-to-import-a-new-computer-into-configuration-manager.md
-    - name: How to Create an Association Between Two Computers
+    - name: How to create an association between two computers
       href: osd/how-to-create-an-association-between-two-computers-in-configuration-manager.md
-    - name: How to Create a Collection Variable
+    - name: How to create a collection variable
       href: osd/how-to-create-a-collection-variable.md
-    - name: How to Create a Computer Variable
+    - name: How to create a computer variable
       href: osd/how-to-create-a-computer-variable.md
-    - name: How to Track Operating System Deployment Migrations
+    - name: How to track operating system deployment migrations
       href: osd/how-to-track-operating-system-deployment-migrations.md
-  - name: Operating System Deployment Image Management
-    href: osd/operating-system-deployment-image-management.md
+  - name: Operating system deployment image management
     items:
-    - name: About Operating System Deployment Image Management
+    - name: Operating system deployment image management overview
+      href: osd/operating-system-deployment-image-management.md
+    - name: About operating system deployment image management
       href: osd/about-operating-system-deployment-image-management.md
-    - name: How to Add an Operating System Image Package
+    - name: How to add an operating system image package
       href: osd/how-to-add-an-operating-system-image-package-in-configuration-manager.md
-    - name: How to Update an Operating System Image Package
+    - name: How to update an operating system image package
       href: osd/how-to-update-an-operating-system-image-package.md
-    - name: How to View the Properties for an Operating System Image
+    - name: How to view the properties for an operating system image
       href: osd/how-to-view-the-properties-for-an-operating-system-image.md
-    - name: How to Add a Boot Image from a WIM File
+    - name: How to add a boot image from a WIM file
       href: osd/how-to-add-a-boot-image-from-a-wim-file.md
-    - name: How to Add an Operating System Install Package
+    - name: How to add an operating system install package
       href: osd/how-to-add-an-operating-system-install-package.md
-    - name: How to Clear a PXE Advertisement For a Collection
+    - name: How to clear a PXE advertisement For a collection
       href: osd/how-to-clear-a-pxe-advertisement-for-a-configuration-manager-collection.md
-    - name: How to Clear a PXE Advertisement for a Resource
+    - name: How to clear a PXE advertisement for a resource
       href: osd/how-to-clear-a-pxe-advertisement-for-a-configuration-manager-resource.md
-  - name: Operating System Deployment Driver Management
-    href: osd/operating-system-deployment-driver-management.md
+  - name: Operating system deployment driver management
     items:
-    - name: About Operating System Deployment Driver Management
+    - name: Operating system deployment driver management overview
+      href: osd/operating-system-deployment-driver-management.md
+    - name: About operating system deployment driver management
       href: osd/about-operating-system-deployment-driver-management.md
-    - name: How to Import a Windows Driver Described by an INF File into Configuration Manager
+    - name: How to import a Windows driver described by an INF file into Configuration Manager
       href: osd/how-to-import-a-windows-driver-described-by-an-inf-file.md
-    - name: How to Import a Windows Driver Described by a Txtsetup.oem File into Configuration Manager
+    - name: How to import a Windows driver described by a txtsetup.oem file into Configuration Manager
       href: osd/how-to-import-a-windows-driver-described-by-a-txtsetup-oem-file.md
-    - name: How to Create a Driver Package for a Windows Driver in Configuration Manager
+    - name: How to create a driver package for a Windows driver in Configuration Manager
       href: osd/how-to-create-a-driver-package-for-a-windows-driver.md
-    - name: How to Add a Windows Driver to a Configuration Manager Boot Image Package
+    - name: How to add a Windows driver to a Configuration Manager boot image package
       href: osd/how-to-add-a-windows-driver-to-a-configuration-manager-boot-image-package.md
-    - name: How to Remove a Windows Driver from a Boot Image Package
+    - name: How to remove a Windows driver from a boot image package
       href: osd/how-to-remove-a-windows-driver-from-a-boot-image-package.md
-    - name: How to Enable or Disable a Windows Driver in Configuration Manager
+    - name: How to enable or disable a Windows driver in Configuration Manager
       href: osd/how-to-enable-or-disable-a-windows-driver.md
-    - name: How to Delete a Windows Driver from Configuration Manager
+    - name: How to delete a Windows driver from Configuration Manager
       href: osd/how-to-delete-a-windows-driver-from-configuration-manager.md
-    - name: How to Delete a Driver Package in Configuration Manager
+    - name: How to delete a driver package in Configuration Manager
       href: osd/how-to-delete-a-driver-package-in-configuration-manager.md
-    - name: How to Specify the Supported Platforms for a Driver
+    - name: How to specify the supported platforms for a driver
       href: osd/how-to-specify-the-supported-platforms-for-a-driver.md
-    - name: How to Add a Category to a Windows Driver
+    - name: How to add a category to a Windows driver
       href: osd/how-to-add-a-category-to-a-windows-driver.md
-    - name: How to Remove a Category from a Windows Driver
+    - name: How to remove a category from a Windows driver
       href: osd/how-to-remove-a-category-from-a-windows-driver.md
   - name: Extending Operating System Deployment
     href: osd/extending-operating-system-deployment.md
