@@ -73,6 +73,11 @@ If the current running task sequence references a boot image package, this varia
 
 The task sequence sets this variable when it detects a computer that's in UEFI mode.
 
+### <a name="SMSTSClientCache"></a> _SMSTSClientCache
+
+<!-- SCCMDocs issue 1400 -->
+The task sequence sets this variable when it caches content on the local drive. The variable contains the path to the cache. If this variable doesn't exist, then there's no cache.
+
 ### <a name="SMSTSClientGUID"></a> _SMSTSClientGUID
 
 Stores the value of Configuration Manager client GUID. If the task sequence is running from standalone media, this variable isn't set.
