@@ -946,54 +946,60 @@
     - name: How to change the deployment package source
       href: sum/how-to-change-the-deployment-package-source.md
   - name: Synchronizing the Software Update Point
-    href: sum/synchronizing-the-software-update-point.md
     items:
-    - name: About Synchronizing the Software Update Point
+    - name: Synchronizing the Software Update Point overview
+      href: sum/synchronizing-the-software-update-point.md
+    - name: About synchronizing the Software Update Point
       href: sum/about-synchronizing-the-software-update-point.md
-    - name: How to Synchronize with the Software Update Point
+    - name: How to synchronize with the Software Update Point
       href: sum/how-to-synchronize-with-the-software-update-point.md
-  - name: Software Updates and Maintenance Windows
-    href: sum/software-updates-and-maintenance-windows.md
+  - name: Software updates and maintenance windows
     items:
-    - name: How to Configure Software Updates to Override Maintenance Windows
+    - name: Software updates and maintenance windows overview
+      href: sum/software-updates-and-maintenance-windows.md
+    - name: How to configure software updates to override maintenance windows
       href: sum/how-to-configure-software-updates-to-override-maintenance-windows.md
-- name: Status and Summarizers
-  href: core/servers/manage/configuration-manager-status-and-summarizers.md
+- name: Status and summarizers
   items:
-  - name: About Configuration Manager Status and Summarizers
-    href: core/servers/manage/about-configuration-manager-status-and-summarizers.md
+  - name: Status and summarizers overview
+    href: core/servers/manage/configuration-manager-status-and-summarizers.md
+  - name: About Configuration Manager status and summarizers
     items:
-    - name: About Configuration Manager Status
-      href: core/servers/manage/about-configuration-manager-status.md
+    - name: Configuration Manager status
+      href: core/servers/manage/about-configuration-manager-status-and-summarizers.md
+    - name: About Configuration Manager status
       items:
-      - name: About Configuration Manager Status Messages
+      - name: Configuration Manager status overview
+        href: core/servers/manage/about-configuration-manager-status.md     
+      - name: About Configuration Manager status messages
         href: core/servers/manage/about-configuration-manager-status-messages.md
-      - name: About Configuration Manager Component Status Messages
+      - name: About Configuration Manager component status messages
         href: core/servers/manage/about-configuration-manager-component-status-messages.md
-      - name: About Using SMSCSTAT.DLL to Create Status Messages
+      - name: About using SMSCSTAT.DLL to create status messages
         href: core/servers/manage/about-using-smscstat.dll-to-create-status-messages.md
-      - name: About Reporting Status Messages from Configuration Manager Clients
+      - name: About reporting status messages from Configuration Manager clients
         href: core/servers/manage/about-reporting-status-messages-from-configuration-manager-clients.md
-    - name: About Configuration Manager Summarizers
-      href: core/servers/manage/about-configuration-manager-summarizers.md
+    - name: About Configuration Manager summarizers
       items:
-      - name: About Configuration Manager Status Summarizers
+      - name: Configuration Manager summarizers overview
+        href: core/servers/manage/about-configuration-manager-summarizers.md
+      - name: About Configuration Manager status summarizers
         href: core/servers/manage/about-configuration-manager-status-summarizers.md
-      - name: About Configuration Manager Tally Intervals
+      - name: About Configuration Manager tally intervals
         href: core/servers/manage/about-configuration-manager-tally-intervals.md
-    - name: How to Determine the Health of a Configuration Manager Site
+    - name: How to determine the health of a Configuration Manager site
       href: core/servers/manage/how-to-determine-the-health-of-a-configuration-manager-site.md
-    - name: How to Read the Tally Intervals for a Configuration Manager Site
+    - name: How to read the tally intervals for a Configuration Manager site
       href: core/servers/manage/how-to-read-the-tally-intervals-for-a-configuration-manager-site.md
-    - name: How to Read User-Defined Status Messages
+    - name: How to read user-defined status messages
       href: core/servers/manage/how-to-read-user-defined-status-messages.md
-    - name: How to Report User-Defined Status Messages
+    - name: How to report user-defined status messages
       href: core/servers/manage/how-to-report-user-defined-status-messages.md
-    - name: How to Delete Status Messages
+    - name: How to delete status messages
       href: core/servers/manage/how-to-delete-status-messages.md
-    - name: How to Determine Package Status
+    - name: How to determine package status
       href: core/servers/manage/how-to-determine-package-status.md
-    - name: How to Determine Advertisement Status
+    - name: How to determine advertisement status
       href: core/servers/manage/how-to-determine-advertisement-status.md
-- name: Configuration Manager Reference
+- name: Configuration Manager reference
   href: reference/configuration-manager-reference.md
