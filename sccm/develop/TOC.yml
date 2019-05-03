@@ -733,121 +733,131 @@
       href: osd/how-to-add-a-category-to-a-windows-driver.md
     - name: How to remove a category from a Windows driver
       href: osd/how-to-remove-a-category-from-a-windows-driver.md
-  - name: Extending Operating System Deployment
-    href: osd/extending-operating-system-deployment.md
+  - name: Extending operating system deployment
     items:
-    - name: About Configuration Manager Custom Actions
+    - name: Extending operating system deployment overview
+      href: osd/extending-operating-system-deployment.md
+    - name: About Configuration Manager custom actions
       href: osd/about-configuration-manager-custom-actions.md
-    - name: About Custom Action Client Applications
+    - name: About custom action client applications
       href: osd/about-configuration-manager-custom-action-client-applications.md
-    - name: About Custom Action MOF Files
+    - name: About custom action MOF files
       href: osd/about-configuration-manager-custom-action-mof-files.md
-    - name: About Reporting Custom Action Progress
+    - name: About reporting custom action progress
       href: osd/about-reporting-configuration-manager-custom-action-progress.md
-    - name: How to Create a Custom Action Control
+    - name: How to create a custom action control
       href: osd/how-to-create-a-configuration-manager-custom-action-control.md
-    - name: How to Create a MOF File for a Custom Action
+    - name: How to create a MOF file for a custom action
       href: osd/how-to-create-a-mof-file-for-a-configuration-manager-custom-action.md
-    - name: How to Use a Custom Action Control
+    - name: How to use a custom action control
       href: osd/how-to-use-a-configuration-manager-custom-action-control.md
 - name: Role-Based Administration
-  href: core/servers/configure/role-based-administration.md
   items:
-  - name: Administrative User Management
-    href: core/servers/configure/administrative-user-management.md
+  - name: Role-Based Administration overview
+    href: core/servers/configure/role-based-administration.md
+  - name: Administrative user management
     items:
-    - name: How to Check if a User Has Permissions for an Object
+    - name: Administrative user management overview
+      href: core/servers/configure/administrative-user-management.md
+    - name: How to check if a user has permissions for an object
       href: core/servers/configure/how-to-check-if-a-user-has-permissions-for-an-object.md
-    - name: How to Check if a User Has Permissions for a Resource
+    - name: How to check if a user has permissions for a resource
       href: core/servers/configure/how-to-check-if-a-user-has-permissions-for-a-resource.md
-    - name: How to Enumerate the Administrative Assignments for a User or Security Group
+    - name: How to enumerate the administrative assignments for a user or security group
       href: core/servers/configure/how-to-enumerate-the-administrative-assignments-for-a-user-or-security-group.md
-    - name: How to Create a New Administrator
+    - name: How to create a new administrator
       href: core/servers/configure/how-to-create-a-new-administrator.md
-    - name: How to Create a New Security Role
+    - name: How to create a new security role
       href: core/servers/configure/how-to-create-a-new-security-role.md
-  - name: Security Scope Management
-    href: core/servers/configure/security-scope-management.md
+  - name: Security scope management
     items:
-    - name: How to Create a New Security Scope
+    - name: Security scope management overview
+      href: core/servers/configure/security-scope-management.md
+    - name: How to create a new security scope
       href: core/servers/configure/how-to-create-a-new-security-scope.md
-    - name: How to Delete a Security Scope
+    - name: How to delete a security scope
       href: core/servers/configure/how-to-delete-a-security-scope.md
-    - name: How to Associate an Object with a Security Scope
+    - name: How to associate an object with a security scope
       href: core/servers/configure/how-to-associate-an-object-with-a-security-scope.md
-    - name: How to Remove an Object Association with a Security Scope
+    - name: How to remove an object association with a security scope
       href: core/servers/configure/how-to-remove-an-object-association-with-a-security-scope.md
-- name: Remote Tools
-  href: core/clients/remote-control/remote-tools.md
+- name: Remote tools
   items:
-  - name: How to Enable and Disable Remote Tools
+  - name: Remote tools overview
+    href: core/clients/remote-control/remote-tools.md
+  - name: How to enable and disable remote tools
     href: core/clients/remote-control/how-to-enable-and-disable-remote-tools.md
-  - name: How to Configure Remote Tools Settings
+  - name: How to configure remote tools settings
     href: core/clients/remote-control/how-to-configure-remote-tools-settings.md
-- name: Software Distribution
-  href: core/servers/configure/software-distribution.md
+- name: Software distribution
   items:
-  - name: Software Distribution Overview
+  - name: About software distribution
+    href: core/servers/configure/software-distribution.md
+  - name: software distribution overview
     href: core/servers/configure/software-distribution-overview.md
-  - name: Software Distribution Packages
-    href: core/servers/configure/software-distribution-packages.md
+  - name: Software distribution packages
     items:
-    - name: About Package Definition Files
+    - name: Software distribution packages overview
+      href: core/servers/configure/software-distribution-packages.md
+    - name: About package definition files
       href: core/servers/configure/about-package-definition-files.md
-    - name: How to Create a Package
+    - name: How to create a package
       href: core/servers/configure/how-to-create-a-package.md
-    - name: How to Create a Package by Using a Package Definition File Template
+    - name: How to create a package by using a package definition file template
       href: core/servers/configure/how-to-create-a-package-by-using-a-package-definition-file-template.md
-    - name: How to Configure Package Properties
+    - name: How to configure package properties
       href: core/servers/configure/how-to-configure-package-properties.md
-    - name: How to Configure a Package to Use Binary Delta Replication
+    - name: How to configure a package to use binary delta replication
       href: core/servers/configure/how-to-configure-a-package-to-use-binary-delta-replication.md
-    - name: How to Delete a Package
+    - name: How to delete a package
       href: core/servers/configure/how-to-delete-a-package.md
-    - name: How to Assign a Package to a Distribution Point
+    - name: How to assign a package to a Distribution Point
       href: core/servers/configure/how-to-assign-a-package-to-a-distribution-point.md
-  - name: Software Distribution Programs
-    href: core/servers/configure/software-distribution-programs.md
+  - name: Software distribution programs
     items:
-    - name: About Software Distribution Programs
+    - name: Software distribution programs overview
+      href: core/servers/configure/software-distribution-programs.md
+    - name: About software distribution programs
       href: core/servers/configure/about-software-distribution-programs.md
-    - name: How to Create a Program
+    - name: How to create a program
       href: core/servers/configure/how-to-create-a-program.md
-    - name: How to Modify Program Properties
+    - name: How to modify program properties
       href: core/servers/configure/how-to-modify-program-properties.md
-    - name: How to Change the Maximum Run Time for a Program
+    - name: How to change the maximum run time for a program
       href: core/servers/configure/how-to-change-the-maximum-run-time-for-a-program.md
-    - name: How to List All Programs and Their Maximum Run Time Value
+    - name: How to list all programs and their maximum run time value
       href: core/servers/configure/how-to-list-all-programs-and-their-maximum-run-time-value.md
-    - name: How to Modify the Supported Platforms for a Program
+    - name: How to modify the supported platforms for a program
       href: core/servers/configure/how-to-modify-the-supported-platforms-for-a-program.md
-  - name: Software Distribution Advertisements
-    href: core/servers/configure/software-distribution-advertisements.md
+  - name: Software distribution advertisements
     items:
-    - name: About Software Distribution Deployments
+    - name: Software distribution advertisements
+      href: core/servers/configure/software-distribution-advertisements.md
+    - name: About software distribution deployments
       href: core/servers/configure/about-software-distribution-deployments.md
-    - name: How to Create an Advertisement
+    - name: How to create an advertisement
       href: core/servers/configure/how-to-create-an-advertisement.md
-    - name: How to Assign an Advertisement to a Collection of Computers
+    - name: How to assign an advertisement to a collection of computers
       href: core/servers/configure/how-to-assign-an-advertisement-to-a-collection-of-computers.md
-    - name: How to Modify Advertisement Properties
+    - name: How to modify advertisement properties
       href: core/servers/configure/how-to-modify-advertisement-properties.md
-    - name: How to Configure an Advertisement to Allow Reboots Outside of a Maintenance Window
+    - name: How to configure an advertisement to allow reboots outside of a maintenance window
       href: core/servers/configure/how-to-allow-reboots-outside-of-a-maintenance-window.md
-    - name: How to Configure an Advertisement to Override a Maintenance Window
+    - name: How to configure an advertisement to override a maintenance window
       href: core/servers/configure/how-to-configure-an-advertisement-to-override-a-maintenance-window.md
-  - name: Software Distribution Maintenance Windows
-    href: core/servers/configure/software-distribution-maintenance-windows.md
+  - name: Software distribution maintenance windows
     items:
-    - name: About Maintenance Windows
+    - name: Software distribution maintenance windows overview
+      href: core/servers/configure/software-distribution-maintenance-windows.md
+    - name: About maintenance windows
       href: core/servers/configure/about-maintenance-windows.md
-    - name: How to Create a Maintenance Window for a Collection
+    - name: How to create a maintenance window for a collection
       href: core/servers/configure/how-to-create-a-maintenance-window-for-a-collection.md
-    - name: How to Change the Maintenance Window Properties for a Collection
+    - name: How to change the maintenance window properties for a collection
       href: core/servers/configure/how-to-change-the-maintenance-window-properties-for-a-collection.md
-    - name: How to Delete a Maintenance Window for a Collection
+    - name: How to delete a maintenance window for a collection
       href: core/servers/configure/how-to-delete-a-maintenance-window-for-a-collection.md
-    - name: How to List the Maintenance Windows and Properties for a Specific Collection
+    - name: How to list the maintenance windows and properties for a specific collection
       href: core/servers/configure/how-to-list-the-maintenance-windows-and-properties-for-a-specific-collection.md
   - name: Software Distribution Setup and Configuration
     href: core/servers/configure/software-distribution-setup-and-configuration.md
