@@ -1812,10 +1812,9 @@ This step performs the following actions:
 
 The task sequence continues running the next step.  
 
-<!-- Engineering confirmed that the task sequence does nothing with respect to group policy processing.
-> [!NOTE]  
->  The **Setup Windows and ConfigMgr** task sequence action is responsible for running Group Policy on the newly installed computer. The Group Policy is applied after the task sequence is finished.  
--->
+> [!Note]  
+> Windows group policy normally doesn't process until after the task sequence is complete. This behavior is consistent across different versions of Windows. Other custom actions during the task sequence can trigger group policy evaluation. You can explicitly start group policy processing with a **Run Command Line** step that runs the **gpupdate** command line.<!-- 2841304 -->
+
 
 ### Properties  
 
