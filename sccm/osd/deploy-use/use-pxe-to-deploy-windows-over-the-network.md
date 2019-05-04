@@ -54,7 +54,20 @@ To use PXE to deploy an OS, you must have both x86 and x64 PXE-enabled boot imag
 
 
 
+## Manage duplicate hardware identifiers
+
+Configuration Manager may recognize multiple computers as the same device if they have duplicate SMBIOS attributes or you use a shared network adapter. Mitigate these issues by managing duplicate hardware identifiers in hierarchy settings. For more information, see [Manage duplicate hardware identifiers](/sccm/core/clients/manage/manage-clients#manage-duplicate-hardware-identifiers).
+
+
+
 ## <a name="BKMK_PXEExclusionList"></a> Create an exclusion list for PXE deployments
+
+> [!Note]  
+> In some circumstances, the process to [Manage duplicate hardware identifiers](/sccm/core/clients/manage/manage-clients#manage-duplicate-hardware-identifiers) may be easier.<!-- SCCMDocs issue 802 -->
+>
+> The behaviors of each can cause different results in some scenarios. The exclusion list never boots a client with the listed MAC address, no matter what.
+>
+> The duplicate ID list doesn't use the MAC address to find the task sequence policy for a client. If it matches the SMBIOS ID, or if there's a task sequence policy for unknown machines, the client still boots.
 
 When you deploy operating systems with PXE, you can create an exclusion list on each distribution point. Add the MAC addresses to the exclusion list of the computers you want the distribution point to ignore. Listed computers don't receive the deployment task sequences that Configuration Manager uses for PXE deployment.
 
@@ -74,12 +87,6 @@ When you deploy operating systems with PXE, you can create an exclusion list on 
     > If you use the Registry Editor incorrectly, you might cause serious problems that may require you to reinstall Windows. Microsoft can't guarantee that you can solve problems that result from using the Registry Editor incorrectly. Use the Registry Editor at your own risk.  
 
 5. Restart the WDS service or PXE responder service after you make this registry change. You don't need to restart the server.<!--512129-->  
-
-
-
-## Manage duplicate hardware identifiers
-
-Configuration Manager may recognize multiple computers as the same device if they have duplicate SMBIOS attributes or you use a shared network adapter. Mitigate these issues by managing duplicate hardware identifiers in hierarchy settings. For more information, see [Manage duplicate hardware identifiers](/sccm/core/clients/manage/manage-clients#manage-duplicate-hardware-identifiers).
 
 
 
