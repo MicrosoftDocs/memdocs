@@ -1,8 +1,8 @@
 ---
 title: Create a task sequence for non-operating system deployments
 titleSuffix: Configuration Manager
-description: Create task sequences that are not related to deploying operating systems, such as distributing software, updating drivers, editing user states, etc.
-ms.date: 10/06/2016
+description: Create task sequences that aren't for deploying an OS, such as distributing software or automating tasks
+ms.date: 05/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,40 +10,49 @@ ms.assetid: 92aaec8a-8751-442a-b64b-62ab05b5bf50
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
 ms.collection: M365-identity-device-management
 ---
-# Create a task sequence for non-operating system deployments with System Center Configuration Manager
+
+# Create a task sequence for non-OS deployments
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Task sequences in System Center Configuration Manager are used to automate a variety of tasks within your environment. These tasks are primarily designed and tested for deploying operating systems.  Configuration Manager has many other features that should be the primary technology that you use for scenarios such as [application installation](../../apps/understand/introduction-to-application-management.md), [software updates installation](../../sum/understand/software-updates-introduction.md), [setting configuration](../../compliance/understand/ensure-device-compliance.md), or custom automation. There are other Microsoft System Center automation technologies, such as [Orchestrator](https://technet.microsoft.com/library/hh237242.aspx) and [Service Management Automation](https://technet.microsoft.com/library/dn469260.aspx) that you should also consider.  
+Task sequences in Configuration Manager are used to automate different kinds of tasks within your environment. These tasks are primarily designed and tested for deploying operating systems. Configuration Manager has many other features that should be the primary technology that you use for the following scenarios:
 
-The power of task sequences lies in their flexibility and how you can use them to configure client settings, distribute software, update drivers, edit user states, and perform other tasks independent of operating system deployment. You can create a custom task sequence to add any number of tasks. The use of custom task sequences for non-operating system deployment is supported in Configuration Manager. However, if a task sequence results in unwanted or inconsistent results, look at ways to simplify the operation. You can accomplish this by using simpler steps, dividing the actions across multiple task sequences, or by taking a phased approach to creating and testing the task sequence.
+- [Application installation](/sccm/apps/understand/introduction-to-application-management)
+- [Software updates installation](/sccm/sum/understand/software-updates-introduction)
+- [Setting configuration](/sccm/compliance/understand/ensure-device-compliance)
 
- The following steps are supported for use in a non-operating system deployment custom task sequence:  
+Also consider other Microsoft System Center automation technologies, such as [Orchestrator](https://docs.microsoft.com/system-center/orchestrator/) and [Service Management Automation](https://docs.microsoft.com/system-center/sma/).  
 
--   [Check Readiness](../understand/task-sequence-steps.md#BKMK_CheckReadiness)  
+The power of task sequences lies in their flexibility and how you use them. They can configure client settings, distribute software, update drivers, edit user states, and do other tasks independent of OS deployment. You can create a custom task sequence to add any number of tasks. The use of custom task sequences for non-OS deployment is supported in Configuration Manager. However, if a task sequence results in unwanted or inconsistent results, look at ways to simplify the operation:
 
--   [Connect To Network Folder](../understand/task-sequence-steps.md#BKMK_ConnectToNetworkFolder)  
+- Use simpler steps
+- Divide the actions across multiple task sequences
+- Take a phased approach to creating and testing the task sequence
 
--   [Download Package Content](../understand/task-sequence-steps.md#BKMK_DownloadPackageContent)  
+The following steps are supported for use in a non-OS deployment custom task sequence:  
 
--   [Install Application](../understand/task-sequence-steps.md#BKMK_InstallApplication)  
+- [Check Readiness](/sccm/osd/understand/task-sequence-steps#BKMK_CheckReadiness)  
 
--   [Install Package](../understand/task-sequence-steps.md#BKMK_InstallPackage)  
+- [Connect To Network Folder](/sccm/osd/understand/task-sequence-steps#BKMK_ConnectToNetworkFolder)  
 
--   [Install Software Updates](../understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates)  
+- [Download Package Content](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent)  
 
--   [Restart Computer](../understand/task-sequence-steps.md#BKMK_RestartComputer)   
+- [Install Application](/sccm/osd/understand/task-sequence-steps#BKMK_InstallApplication)  
 
--   [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine)  
+- [Install Package](/sccm/osd/understand/task-sequence-steps#BKMK_InstallPackage)  
 
--   [Run PowerShell Script](../understand/task-sequence-steps.md#BKMK_RunPowerShellScript)  
+- [Install Software Updates](/sccm/osd/understand/task-sequence-steps#BKMK_InstallSoftwareUpdates)  
 
--   [Set Dynamic Variables](../understand/task-sequence-steps.md#BKMK_SetDynamicVariables)  
+- [Restart Computer](/sccm/osd/understand/task-sequence-steps#BKMK_RestartComputer)  
 
--   [Set Task Sequence Variable](../understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable)  
+- [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine)  
 
-## Next steps 
-[Deploy the task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence)
+- [Run PowerShell Script](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript)  
+
+- [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence)  
+
+- [Set Dynamic Variables](/sccm/osd/understand/task-sequence-steps#BKMK_SetDynamicVariables)  
+
+- [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable)  
