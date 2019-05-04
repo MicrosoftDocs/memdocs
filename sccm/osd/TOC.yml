@@ -92,6 +92,8 @@
       href: deploy-use/create-a-task-sequence-to-capture-an-operating-system.md
     - name: Create a task sequence to capture and restore user state
       href: deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md
+    - name: Deploy a task sequence
+      href: deploy-use/deploy-a-task-sequence.md  
     - name: Use a task sequence to manage virtual hard disks
       href: deploy-use/use-a-task-sequence-to-manage-virtual-hard-disks.md
   - name: Custom task sequence scenarios

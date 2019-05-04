@@ -46,4 +46,4 @@ The power of task sequences lies in their flexibility and how you can use them t
 -   [Set Task Sequence Variable](../understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable)  
 
 ## Next steps 
-[Deploy the task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)
+[Deploy the task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence)

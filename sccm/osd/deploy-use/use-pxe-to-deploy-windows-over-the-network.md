@@ -101,7 +101,7 @@ To use a PXE-initiated OS deployment, configure the deployment to make the OS av
 
 ##  <a name="BKMK_Deploy"></a> Deploy the task sequence
 
-Deploy the OS to a target collection. For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS). When you deploy operating systems by using PXE, you can configure whether the deployment is required or available.
+Deploy the OS to a target collection. For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence). When you deploy operating systems by using PXE, you can configure whether the deployment is required or available.
 
 -   **Required deployment**: Required deployments use PXE without any user intervention. The user can't bypass the PXE boot. However, if the user cancels the PXE boot before the distribution point responds, the OS isn't deployed.
 
