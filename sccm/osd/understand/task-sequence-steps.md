@@ -404,6 +404,8 @@ The task sequence searches all available driver categories for the appropriate d
 
 The task sequence searches in the specified driver categories for the appropriate device drivers.  
 
+If you select multiple categories, it returns all matching drivers that are present in any of the categories. It's equivalent to an `OR` operation.<!-- SCCMDocs issue 851 -->
+
 #### Do unattended installation of unsigned drivers on versions of Windows where this is allowed
 
 This option allows Windows to install drivers without a digital signature.  
