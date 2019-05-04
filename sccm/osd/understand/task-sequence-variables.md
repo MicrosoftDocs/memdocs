@@ -160,7 +160,7 @@ Specifies the MAC addresses used by the computer.
 
 ### <a name="SMSTSMachineName"></a> _SMSTSMachineName
 
-Stores and specifies the computer name. Stores the name of the computer that the task sequence uses to log all status messages. To change the computer name in the new OS, use the [OSDComputerName](#OSDComputerName) variable.
+Stores and specifies the computer name. Stores the name of the computer that the task sequence uses to log all status messages. To change the computer name in the new OS, use the [OSDComputerName](#OSDComputerName-input) variable.
 
 ### <a name="SMSTSMake"></a> _SMSTSMake
 
@@ -1576,7 +1576,7 @@ The following variables are deprecated:
 - **OSDBuildStorageDriverList**: Only applies to Windows XP and Windows Server 2003
 - **OSDDiskpartBiosCompatibilityMode**: Only needed when deploying Windows XP or Windows Server 2003
 - **OSDInstallEditionIndex**: Not needed post-Windows Vista
-- **OSDPreserveDriveLetter**: For more information, see [OSDPreserveDriveLetter](#OSDPreserveDriveLetter)
+- **OSDPreserveDriveLetter**: For more information, see [OSDPreserveDriveLetter](#osdpreservedriveletter)
 
 ### OSDPreserveDriveLetter
 
