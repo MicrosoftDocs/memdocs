@@ -131,4 +131,6 @@ The following list provides details about how a boot image is selected for clien
 
 3. In the list of task sequences found in step 2, Configuration Manager looks for a boot image that matches the architecture of the client that's trying to boot. If a boot image is found with the same architecture, that boot image is used.  
 
+    If it finds more than one boot image, it uses the *highest* or most recent deployment ID. In the case of a multi-site hierarchy, the *higher* letter site would take precedence in that string comparison. For example, if they're both matched otherwise, a year-old deployment from site ZZZ is selected over yesterday's deployment from site AAA.<!-- SCCMDocs issue 877 -->  
+
 4. If a boot image isn't found with the same architecture, Configuration Manager looks for a boot image that's compatible with the architecture of the client. It looks in the list of task sequences found in step 2. For example, a 64-bit BIOS/MBR client is compatible with 32-bit and 64-bit boot images. A 32-bit BIOS/MBR client is compatible with only 32-bit boot images. UEFI clients are only compatible with matching architecture. A 64-bit UEFI client is compatible with only 64-bit boot images and a 32-bit UEFI client is compatible with only 32-bit boot images.
