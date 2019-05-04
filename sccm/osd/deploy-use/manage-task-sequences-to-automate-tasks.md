@@ -417,6 +417,10 @@ Select the security scopes for the selected task sequence. For more information,
 
 For more information, see [Configure Software Center properties](#bkmk_prop-general) and [Configure advanced task sequence settings](#bkmk_prop-advanced).
 
+#### View
+
+<!--3633146-->
+Starting in version 1902, the **View** action on task sequences is the default. This action lets you see the steps of the task sequence without locking it for editing.  
 
 
 ## See also
