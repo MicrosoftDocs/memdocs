@@ -1813,7 +1813,7 @@ This step performs the following actions:
 The task sequence continues running the next step.  
 
 > [!Note]  
-> Windows group policy normally doesn't process until after the task sequence is complete. This behavior is consistent across different versions of Windows. Other custom actions during the task sequence can trigger group policy evaluation. You can explicitly start group policy processing with a **Run Command Line** step that runs the **gpupdate** command line.<!-- 2841304 -->
+> Windows group policy normally doesn't process until after the task sequence is complete. This behavior is consistent across different versions of Windows. Other custom actions during the task sequence can trigger group policy evaluation.<!-- 2841304 -->
 
 
 ### Properties  
