@@ -251,7 +251,22 @@ The following settings are on the **Distribution point** page of the Create Site
 
 - **Enable and configure BranchCache for this distribution point**: Choose this setting to let Configuration Manager configure Windows BranchCache on the distribution point server. For more information, see [BranchCache](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#branchcache).  
 
-- **Adjust the download speed to use the unused network bandwidth (Windows LEDBAT)**<!--1358112-->: Starting in version 1806, enable distribution points to use network congestion control. For more information, see [Windows LEDBAT](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#windows-ledbat). The distribution point must be running Windows Server, version 1709. There's no client prerequisite.  
+- **Adjust the download speed to use the unused network bandwidth (Windows LEDBAT)**<!--1358112-->: Starting in version 1806, enable distribution points to use network congestion control. For more information, see [Windows LEDBAT](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#windows-ledbat). Minimum requirements for LEDBAT support:<!-- SCCMDocs issue 883 -->  
+
+    - Configuration Manager version 1806 (general release)  
+
+        - Windows Server, version 1709 or later  
+
+    - Configuration Manager version 1806 with update rollup (4462978), or later  
+
+        - Windows Server, version 1709 or later
+        - Windows Server 2016 with updates KB4132216 and KB4284833
+
+    - Configuration Manager version 1810 or later:
+
+        - Windows Server, version 1709 or later
+        - Windows Server 2016 with updates KB4132216 and KB4284833
+        - Windows Server 2019  
 
 - **Description**: An optional description for this distribution point role.  
 
