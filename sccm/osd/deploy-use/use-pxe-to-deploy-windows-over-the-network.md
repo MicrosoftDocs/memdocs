@@ -2,7 +2,7 @@
 title: Use PXE for OSD over the network
 titleSuffix: Configuration Manager
 description: Use PXE-initiated OS deployments to refresh a computer’s operating system or to install a new version of Windows on a new computer.
-ms.date: 07/30/2018
+ms.date: 05/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -39,8 +39,10 @@ To deploy operating systems to Configuration Manager clients that make PXE boot 
 > [!NOTE]  
 >  When configuring a single PXE enabled distribution point to support multiple subnets it is not supported to use DHCP options. Configure IP helpers on the routers to allow PXE requests to be forwarded to your PXE enabled distribution points.
 
-> [!NOTE]  
->  It is not supported to use the PXE responder without WDS on servers that are also running a DHCP server.
+> [!Note]  
+> In version 1810 and earlier, it's not supported to use the PXE responder without WDS on servers that are also running a DHCP server.
+>
+> Starting in version 1902, when you enable a PXE responder on a distribution point without Windows Deployment Service, it can now be on the same server as the DHCP service. <!--3734270-->  
 
 ## Prepare a PXE-enabled boot image
 
