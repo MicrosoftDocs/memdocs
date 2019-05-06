@@ -2,7 +2,7 @@
 title: Manage distribution points
 titleSuffix: Configuration Manager
 description: Use distribution points to host the content that you deploy to devices and users.
-ms.date: 07/30/2018
+ms.date: 05/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -186,7 +186,7 @@ Follow these steps to reassign a distribution point:
 
 Monitor the reassignment similarly as when you add a new role. The simplest method is to refresh the console view after several minutes. Add the site code column to the view. This value changes when Configuration Manager reassigns the server. If you try to perform another action on the target server before you refresh the console view, an "object not found" error occurs. Ensure the process is complete and refresh the console view before starting any other actions on the server.
 
-After reassigning a distribution point, refresh the server's certificate. The new site server needs to re-encrypt this certificate using its public key and store it in the site database. For more information, see the **Create a self-signed certificate or import a public key infrastructure (PKI) client certificate for the distribution point** setting on the [General](#general) tab of the distribution point properties. 
+After reassigning a distribution point, refresh the server's certificate. The new site server needs to re-encrypt this certificate using its public key and store it in the site database. For more information, see the **Create a self-signed certificate or import a public key infrastructure (PKI) client certificate for the distribution point** setting on the [General](#bkmk_config-general) tab of the distribution point properties. 
 
 - For PKI certificates, you don't need to create a new certificate. Import the same .PFX and enter the password.  
 
@@ -251,7 +251,22 @@ The following settings are on the **Distribution point** page of the Create Site
 
 - **Enable and configure BranchCache for this distribution point**: Choose this setting to let Configuration Manager configure Windows BranchCache on the distribution point server. For more information, see [BranchCache](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#branchcache).  
 
-- **Adjust the download speed to use the unused network bandwidth (Windows LEDBAT)**<!--1358112-->: Starting in version 1806, enable distribution points to use network congestion control. For more information, see [Windows LEDBAT](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#windows-ledbat). The distribution point must be running Windows Server, version 1709. There's no client prerequisite.  
+- **Adjust the download speed to use the unused network bandwidth (Windows LEDBAT)**<!--1358112-->: Starting in version 1806, enable distribution points to use network congestion control. For more information, see [Windows LEDBAT](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#windows-ledbat). Minimum requirements for LEDBAT support:<!-- SCCMDocs issue 883 -->  
+
+    - Configuration Manager version 1806 (general release)  
+
+        - Windows Server, version 1709 or later  
+
+    - Configuration Manager version 1806 with update rollup (4462978), or later  
+
+        - Windows Server, version 1709 or later
+        - Windows Server 2016 with updates KB4132216 and KB4284833
+
+    - Configuration Manager version 1810 or later:
+
+        - Windows Server, version 1709 or later
+        - Windows Server 2016 with updates KB4132216 and KB4284833
+        - Windows Server 2019  
 
 - **Description**: An optional description for this distribution point role.  
 
@@ -339,8 +354,10 @@ Select the option to **Enable PXE support for clients**, and then configure the 
 
 - **Enable a PXE responder without Windows Deployment Service**: Starting in version 1806, this option enables a PXE responder on the distribution point, which doesn't require WDS. This PXE responder supports IPv6 networks. If you enable this option on a distribution point that's already PXE-enabled, Configuration Manager suspends the WDS service. If you disable this option, but still **Enable PXE support for clients**, then the distribution point enables WDS again.<!--1357580-->  
 
-    > [!Note]
-    >It is not supported to use the PXE responder without WDS on servers that are also running a DHCP server.
+    > [!Note]  
+    > In version 1810 and earlier, it's not supported to use the PXE responder without WDS on servers that are also running a DHCP server.
+    >
+    > Starting in version 1902, when you enable a PXE responder on a distribution point without Windows Deployment Service, it can now be on the same server as the DHCP service. <!--3734270-->  
 
 - **Require a password when computers use PXE**: To provide additional security for your PXE deployments, specify a strong password.  
 

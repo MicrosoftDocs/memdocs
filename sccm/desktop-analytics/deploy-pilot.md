@@ -69,7 +69,7 @@ Configuration Manager uses the data from Desktop Analytics to create a collectio
     >
     > This collection is reserved for Desktop Analytics deployment plan devices. Manual changes to this collection aren't supported.<!-- 3866460, SCCMDocs-pr 3544 -->  
 
-For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS).
+For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence).
 
 
 
