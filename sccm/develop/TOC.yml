@@ -407,7 +407,7 @@
     items:
     - name: 'Scenario overview: Extending application management'
       href: apps/scenario--extending-application-management.md
-    - name: Extending application management overview
+    - name: Extending application management overview 
       href: apps/extending-application-management-overview.md
     - name: Creating the custom SDK assembly
       items:
