@@ -411,7 +411,7 @@ The log file SMS_DM.log on the site system server also records communication bet
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |objreplmgr.log|Records details about the replication of software updates notification files from a parent site to child sites.|Site server|  
-|PatchDownloader.log|Records details about the process of downloading software updates from the update source to the download destination on the site server.|Computer that hosts the Configuration Manager console from which downloads are initiated|  
+|PatchDownloader.log|Records details about the process of downloading software updates from the update source to the download destination on the site server.|When downloading updates manually, this will be located in the %temp% directory of the user running the console on the machine you're running the console. For Automatic Deployment Rules, this will be located on the site server in %windir%\CCM\Logs if the ConfigMgr client is installed on the site server|  
 |ruleengine.log|Records details about automatic deployment rules for the identification, content download, and software update group and deployment creation.|Site server| 
 |SMS_ISVUPDATES_SYNCAGENT.log| Log file for synchronization of third-party software updates starting in Configuration Manager version 1806.| Top-level software update point in the Configuration Manager hierarchy.| 
 |SUPSetup.log|Records details about the software update point installation. When the software update point installation completes, **Installation was successful** is written to this log file.|Site system server|  
@@ -777,7 +777,7 @@ The following table lists the log files that contain information related to Disc
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |ccmperf.log|Records activities related to the maintenance and capture of data related to client performance counters.|Client|  
-|PatchDownloader.log|Records details about the process of downloading software updates from the update source to the download destination on the site server.|Computer that hosts the Configuration Manager console from which downloads are initiated|  
+|PatchDownloader.log|Records details about the process of downloading software updates from the update source to the download destination on the site server.|When downloading updates manually, this will be located in the %temp% directory of the user running the console on the machine you're running the console. For Automatic Deployment Rules, this will be located on the site server in %windir%\CCM\Logs if the ConfigMgr client is installed on the site server|  
 |PolicyEvaluator.log|Records details about the evaluation of policies on client computers, including policies from software updates.|Client|  
 |RebootCoordinator.log|Records details about the coordination of system restarts on client computers after software update installations.|Client|  
 |ScanAgent.log|Records details about scan requests for software updates, the WSUS location, and related actions.|Client|  
