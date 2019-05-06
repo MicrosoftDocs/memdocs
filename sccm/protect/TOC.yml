@@ -104,7 +104,7 @@
   - name: Windows Hello for Business settings
     href: deploy-use/windows-hello-for-business-settings.md
   - name: Terms and Conditions settings
-    href: ../mdm/deploy-use/terms-and-conditions.md
+    href: ../mdm/deploy-use/terms-and-conditions.md?toc=/sccm/protect/toc.json&bc=/sccm/protect/breadcrumb/toc.json
   - name: Monitor protection
     items:
     - name: Monitor Wi-Fi, email and VPN profiles
