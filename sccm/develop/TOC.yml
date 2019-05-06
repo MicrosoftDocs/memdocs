@@ -758,7 +758,7 @@
       href: osd/operating-system-deployment-site-role-configuration.md
     - name: About operating system deployment site role configuration
       href: osd/about-operating-system-deployment-site-role-configuration.md
-    - name: How to create a State Migration Point tole
+    - name: How to create a State Migration Point role
       href: osd/how-to-create-a-state-migration-point-role.md
     - name: How to delete a State Migration Point role
       href: osd/how-to-delete-a-state-migration-point-role.md
