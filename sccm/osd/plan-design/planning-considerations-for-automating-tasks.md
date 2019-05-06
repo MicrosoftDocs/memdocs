@@ -186,7 +186,7 @@ ms.collection: M365-identity-device-management
  >   
  >  If clients download task sequences outside of a maintenance window, the task sequence is downloaded twice. In this scenario, the client downloads the task sequence, disables the write filter, restarts the computer, and then downloads the task sequence again. This behavior is because the task sequence was originally downloaded to the temporary overlay, which is cleared when the device restarts.  
 
- For more information about how to deploy task sequences, see the [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS).  
+ For more information about how to deploy task sequences, see the [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence).  
 
 
 
@@ -263,7 +263,7 @@ For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhan
 > [!Note]  
 > The following OS deployment scenarios still require the use of a network access account:
 >  
-> - The task sequence [deployment option](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS), **Access content directly from a distribution point when needed by the running task sequence**   
+> - The task sequence [deployment option](/sccm/osd/deploy-use/deploy-a-task-sequence), **Access content directly from a distribution point when needed by the running task sequence**   
 > - The [Request State Store](/sccm/osd/understand/task-sequence-steps#BKMK_RequestStateStore) step option, **If computer account fails to connect to a state store, use the network access account** 
 > - When connecting with an untrusted domain or across Active Directory forests 
 > - The [Apply OS Image](/sccm/osd/understand/task-sequence-steps#BKMK_ApplyOperatingSystemImage) step option, **Access content directly from the distribution point** 

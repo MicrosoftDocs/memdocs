@@ -87,7 +87,7 @@ Configuration Manager uses the data from Desktop Analytics to create a collectio
 
     Select **Deploy**. This action launches the Deploy Software Wizard for the selected object type.
 
-For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS).
+For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence).
 
 
 ### Address deployment alerts

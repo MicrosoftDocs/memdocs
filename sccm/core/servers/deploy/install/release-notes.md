@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 03/27/2019
+ms.date: 04/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -141,6 +141,9 @@ Change the following registry value to `0` and restart the **Microsoft Office Cl
 ## Mobile device management  
 
 ### Validation for iOS app link sometimes fails on valid link
+
+*Applies to: Configuration Manager version 1810 and earlier*
+
 <!-- LSI 106004348 -->
 When you create a new application of type **App Package for iOS from App Store**, the validator doesn't accept some valid URLs for the **Location**. Specifically, the iOS App Store doesn't require a value for the app name section of the URL. For example, both of the following links are valid and point to the same app, but the **Create Application Wizard** only accepts the first:
 - `https://itunes.apple.com/us/app/app-name/id123456789?mt=8`

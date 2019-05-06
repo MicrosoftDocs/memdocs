@@ -383,7 +383,7 @@ The returned string is the trusted root key. Verify that it matches the **SMSPub
 
 - [Microsoft Store for Business online apps](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)  
 
-- Reduce infrastructure requirements. For example, [Software Center using the management point](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex) instead of the application catalog  
+- Reduce infrastructure requirements. For example, [Software Center using the management point](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex) instead of the application catalog  
 
 - [Manage Office 365 apps](/sccm/sum/deploy-use/manage-office-365-proplus-updates)  
 
