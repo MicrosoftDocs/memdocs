@@ -72,6 +72,8 @@ Before you can use an OS image, add it to your Configuration Manager site.
 
 5.  Complete the wizard.  
 
+**Powershell Cmd-let** [New-CMOperatingSystemImage](https://github.com/MicrosoftDocs/sccm-docs-powershell-ref/blob/master/sccm-ps/ConfigurationManager/New-CMOperatingSystemImage.md)
+
 
 Next, distribute the OS image to distribution points.  
 
