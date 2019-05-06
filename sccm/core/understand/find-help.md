@@ -2,7 +2,7 @@
 title: Find help
 titleSuffix: Configuration Manager
 description: Find resources for additional information about Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -107,7 +107,7 @@ When you **Send a smile** or **Send a frown**, the following information is sent
 
 1. Click on **Save** at the bottom of the **Provide feedback** window. 
 2. Save the .zip file. If the local machine doesn't have internet access,  copy the file to an internet connected machine. 
-3. If needed, copy UploadOfflineFeedback.exe located at `cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\UploadOfflineFeedback.exe`
+3. If needed, copy UploadOfflineFeedback folder located at `cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\`
     - For more information about the cd.latest folder, see [The CD.Latest folder](../servers/manage/the-cd.latest-folder.md)
 
 4. On an internet connected machine, open a command prompt. 

@@ -1,8 +1,8 @@
 ---
 title: Accounts used
 titleSuffix: Configuration Manager
-description: Identify and manage the Windows groups and the accounts used in Configuration Manager.
-ms.date: 03/29/2019
+description: Identify and manage the Windows groups, accounts, and SQL objects used in Configuration Manager.
+ms.date: 05/01/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -17,7 +17,7 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Use the following information to identify the Windows groups and the accounts that are used in Configuration Manager, how they're used, and any requirements.  
+Use the following information to identify the Windows groups, accounts, and SQL objects that are used in Configuration Manager, how they are used, and any requirements.  
 
 - [Windows groups that Configuration Manager creates and uses](#bkmk_groups)  
     - [ConfigMgr_CollectedFilesAccess](#configmgr_collectedfilesaccess)  
@@ -56,7 +56,10 @@ Use the following information to identify the Windows groups and the accounts th
     - [Task sequence network folder connection account](#task-sequence-network-folder-connection-account)  
     - [Task sequence run as account](#task-sequence-run-as-account)  
 
-
+- [User Objects that Configuration Manager uses in SQL](#bkmk_sqlobjects)
+    - [smsdbuser_ReadOnly](#smsdbuser_ReadOnly)
+    - [smsdbuser_ReadWrite](#smsdbuser_ReadWrite)
+    - [smsdbuser_ReportSchema](#smsdbuser_ReportSchema)
 
 ## <a name="bkmk_groups"></a> Windows groups that Configuration Manager creates and uses  
 
@@ -66,7 +69,7 @@ Use the following information to identify the Windows groups and the accounts th
 >  When Configuration Manager creates a group on a computer that's a domain member, the group is a local security group. If the computer is a domain controller, the group is a domain local group. This type of group is shared among all domain controllers in the domain.  
 
 
-## <a name="configmgr_collectedfilesaccess"></a> ConfigMgr_CollectedFilesAccess
+### <a name="configmgr_collectedfilesaccess"></a> ConfigMgr_CollectedFilesAccess
 
 Configuration Manager uses this group to grant access to view files collected by software inventory.  
 
@@ -84,7 +87,7 @@ Configuration Manager automatically manages the group membership. Membership inc
 By default, this group has **Read** permission to the following folder on the site server: `C:\Program Files\Microsoft Configuration Manager\sinv.box\FileCol`  
 
 
-## <a name="configmgr_dviewaccess"></a>ConfigMgr_DViewAccess  
+### <a name="configmgr_dviewaccess"></a>ConfigMgr_DViewAccess  
 
  This group is a local security group that Configuration Manager creates on the site database server or database replica server for a child primary site. The site creates it when you use distributed views for database replication between sites in a hierarchy. It contains the site server and SQL Server computer accounts of the central administration site.
 
@@ -584,3 +587,25 @@ For more information, see [Plan for software updates](/sccm/sum/plan-design/plan
 >   
 >  If the command line requires administrative access on the computer, consider creating a local administrator account solely for this account on all computers that run the task sequence. Delete the account once you no longer need it.  
 
+
+## <a name="bkmk_sqlobjects"></a> User Objects that Configuration Manager uses in SQL 
+<!--SCCMDocs issue #1160-->
+Configuration Manager automatically creates and maintains the following user objects in SQL.  These objects are located within the Configuration Manager database under Security/Users.  
+
+> [!IMPORTANT]  
+>  Modifying or removing these objects may cause drastic issues within a Configuration Manager environment.  We recommend you do not make any changes to these objects.
+
+
+### smsdbuser_ReadOnly
+
+This object is used to run queries under the read-only context.  This object is leveraged with several stored procedures.
+
+
+### smsdbuser_ReadWrite
+
+This object is used to provide permissions for dynamic SQL statements.
+
+
+### smsdbuser_ReportSchema
+
+This object is used to run SQL Reporting Executions.  The following stored procedure is used with this function: spSRExecQuery.

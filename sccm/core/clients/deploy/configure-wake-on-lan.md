@@ -2,7 +2,7 @@
 title: "Configure Wake on LAN"
 titleSuffix: "Configuration Manager"
 description: "Select Wake On LAN settings in System Center Configuration Manager."
-ms.date: 04/23/2019
+ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -77,7 +77,7 @@ When you have both versions of Wake on LAN enabled, you can use the **Wake Up** 
 Starting in version 1902, the **Wake Up** client notification honors your existing **Wake On LAN port number (UDP)** setting.
 
 
-## <a name="bkmk_wol-previous"></a>  Wake on LAN for version 1802 and earlier
+## <a name="bkmk_wol-previous"></a>  Wake on LAN for version 1806 and earlier
 
 Specify Wake on LAN settings for System Center Configuration Manager when you want to bring computers out of a sleep state to install required software, such as software updates, applications, task sequences, and programs.
 
@@ -91,7 +91,7 @@ A computer that receives the wake-up proxy client settings will likely pause its
 > To avoid unexpected disruption to your network services, first evaluate wake-up proxy on an isolated and representative network infrastructure. Then use custom client settings to expand your test to a selected group of computers on several subnets. For more information about how wake-up proxy works, see [Plan how to wake up clients in System Center Configuration Manager](../../../core/clients/deploy/plan/plan-wake-up-clients.md).
 
 
-### To configure Wake on LAN for a site for version 1802 and earlier
+### To configure Wake on LAN for a site for version 1806 and earlier
 
  To use Wake on LAN, you need to enable it for each site in a hierarchy.
 
