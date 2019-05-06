@@ -16,7 +16,7 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Updates Publisher*
 
-System Center Updates Publisher (Updates Publisher) is a stand-alone tool that enables independent software vendors or line-of-business application developers to manage custom updates. This includes updates that have dependencies, like drivers and update bundles.
+System Center Updates Publisher (Updates Publisher) is a stand-alone tool that enables independent software vendors or line-of-business application developers to manage custom updates. This custom updates management includes updates that have dependencies, like drivers and update bundles.
 
 Using Updates Publisher, you can:
 
@@ -57,7 +57,7 @@ Managing publications includes publishing updates to a server so your clients ca
 >[!NOTE] 
 >The information in this section applies only to the preview version of System Center Updates publisher.
 
-There is a new authoring mode in the preview for System Center Updates Publisher to help you author your updates. When you enable authoring mode, a **Categories Workspace** is added to the start screen. A new **Detectoid** button is also added to the **Updates Workspace** when authoring mode is enabled. 
+There's a new authoring mode in the preview for System Center Updates Publisher to help you author your updates. When you enable authoring mode, a **Categories Workspace** is added to the start screen. A new **Detectoid** button is also added to the **Updates Workspace** when authoring mode is enabled. 
 
 ### To enable authoring mode in the preview
 
