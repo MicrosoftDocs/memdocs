@@ -57,7 +57,7 @@ ms.collection: M365-identity-device-management
     >  The task sequence action that runs before the **Release State Store** step must be successful before the **Release State Store** step starts.  
 
 
- Deploy this task sequence to capture the user state on a destination computer. For information about how to deploy task sequences, see [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS).  
+ Deploy this task sequence to capture the user state on a destination computer. For information about how to deploy task sequences, see [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence).  
 
 
 
@@ -81,7 +81,7 @@ ms.collection: M365-identity-device-management
    >  The task sequence action that runs before the **Release State Store** step must be successful before the **Release State Store** step starts.  
 
 
- Deploy this task sequence to restore the user state on a destination computer. For information about deploying task sequences, see [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS).  
+ Deploy this task sequence to restore the user state on a destination computer. For information about deploying task sequences, see [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence).  
 
 
 

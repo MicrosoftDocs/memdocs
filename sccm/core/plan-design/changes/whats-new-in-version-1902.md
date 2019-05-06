@@ -250,8 +250,9 @@ When you create a schedule to update an OS image, select the option to **Remove 
 
 
 ### Improvements to Run PowerShell Script task sequence step
+
 <!--3556028, fka 1359389-->
-The **Run PowerShell Script** task sequence step now includes the following improvements:  
+***[Updated]*** The **Run PowerShell Script** task sequence step now includes the following improvements:  
 
 - You can now directly enter Windows PowerShell code in this step. This change lets you run PowerShell commands during a task sequence without first creating and distributing a package with the script.
 
@@ -267,17 +268,18 @@ The **Run PowerShell Script** task sequence step now includes the following impr
 
 - To include the script parameters in the task sequence log, set the task sequence variable **OSDLogPowerShellParameters** to **TRUE**. By default, the parameters aren't in the log.  
 
-- Other improvements that provide similar functionality as the [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step. For example, specify alternate user credentials or specify a time-out. 
+- Other improvements that provide similar functionality as the [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step. For example, specify alternate user credentials or specify a time-out.
 
 > [!Important]  
 > To take advantage of this new Configuration Manager feature, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
-<!-- For more information, see [Run PowerShell Script](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript). -->
+For more information, see [Run PowerShell Script](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript).
 
 
 ### Other improvements to OS deployment
+
 <!--3633146,3641475,3654172,3734270-->
-This version includes the following improvements to OS deployment:
+***[Updated]*** This version includes the following improvements to OS deployment:
 
 - There's a new **View** default action on task sequences. <!--3633146-->  
 
