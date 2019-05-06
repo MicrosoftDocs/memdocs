@@ -1,3 +1,4 @@
+- name: Operating system deployment
 - name: Understand and explore
   items:
   - name: Introduction to OS deployment
@@ -16,17 +17,20 @@
   items:
   - name: Prepare site system roles for OS deployments
     href: get-started/prepare-site-system-roles-for-operating-system-deployments.md
-  - name: Prepare for OS deployment
-    href: get-started/prepare-for-operating-system-deployment.md
+  - name: Preparing for OS deployment
     items:
-    - name: Manage boot images
-      href: get-started/manage-boot-images.md
+    - name: Prepare for OS deployment
+      href: get-started/prepare-for-operating-system-deployment.md
+    - name: Boot images
       items:
+      - name: Manage boot images
+        href: get-started/manage-boot-images.md
       - name: Customize boot images
         href: get-started/customize-boot-images.md
-    - name: Manage OS images
-      href: get-started/manage-operating-system-images.md
+    - name: OS images
       items:
+      - name: Manage OS images
+        href: get-started/manage-operating-system-images.md
       - name: Customize OS images
         href: get-started/customize-operating-system-images.md
     - name: Manage OS upgrade packages
@@ -44,8 +48,9 @@
 - name: Deploy and use
   items:
   - name: Scenarios to deploy enterprise operating systems
-    href: deploy-use/scenarios-to-deploy-enterprise-operating-systems.md
     items:
+    - name: OS deployment scenarios overview
+      href: deploy-use/scenarios-to-deploy-enterprise-operating-systems.md
     - name: Upgrade Windows to the latest version
       href: deploy-use/upgrade-windows-to-the-latest-version.md
     - name: Windows Autopilot for existing devices
@@ -57,8 +62,9 @@
     - name: Replace an existing computer and transfer settings
       href: deploy-use/replace-an-existing-computer-and-transfer-settings.md
   - name: Methods to deploy enterprise operating systems
-    href: deploy-use/methods-to-deploy-enterprise-operating-systems.md
     items:
+    - name: OS deployment methods
+      href: deploy-use/methods-to-deploy-enterprise-operating-systems.md
     - name: Use PXE to deploy Windows over the network
       href: deploy-use/use-pxe-to-deploy-windows-over-the-network.md
     - name: Use Software Center to deploy Windows over the network
@@ -82,8 +88,9 @@
   - name: Monitor OS deployments
     href: deploy-use/monitor-operating-system-deployments.md
   - name: Manage task sequences to automate tasks
-    href: deploy-use/manage-task-sequences-to-automate-tasks.md
     items:
+    - name: Manage and create task sequences
+      href: deploy-use/manage-task-sequences-to-automate-tasks.md
     - name: Create a task sequence to install an OS
       href: deploy-use/create-a-task-sequence-to-install-an-operating-system.md
     - name: Create a task sequence to upgrade an OS
@@ -107,8 +114,9 @@
     - name: Preprovision BitLocker in Windows PE
       href: deploy-use/preprovision-bitlocker-in-windows-pe.md
   - name: Create task sequence media
-    href: deploy-use/create-task-sequence-media.md
     items:
+    - name: Task sequence media overview
+      href: deploy-use/create-task-sequence-media.md
     - name: Create stand-alone media
       href: deploy-use/create-stand-alone-media.md
     - name: Create prestaged media
@@ -120,8 +128,9 @@
 - name: Technical references
   items:
   - name: Task sequence steps
-    href: understand/task-sequence-steps.md
     items:
+    - name: About task sequence steps
+      href: understand/task-sequence-steps.md
     - name: Install Software Updates
       href: understand/install-software-updates.md
   - name: How to use task sequence variables
