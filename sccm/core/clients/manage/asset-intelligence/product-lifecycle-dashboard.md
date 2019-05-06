@@ -2,7 +2,7 @@
 title: Product lifecycle dashboard
 titleSuffix: Configuration Manager
 description: View the Microsoft Lifecycle Policy with the product lifecycle dashboard in Configuration Manager.
-ms.date: 11/27/2018
+ms.date: 04/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -30,6 +30,8 @@ Starting in version 1810, the dashboard includes information for System Center 2
  To see data in the product lifecycle dashboard, the following components are required:  
 
 - Internet Explorer 9 or later must be installed on the computer running the Configuration Manager console.  
+
+- A service connection point role must be installed and configured. To get updates for the data on this dashboard, the service connection point must be online, or synchronized regularly if offline. For more information, see [About the service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point).
 
 - A reporting services point is required for hyperlink functionality in the dashboard. The dashboard links to SQL Server Reporting Services (SSRS) reports. For more information, see [Reporting in Configuration Manager](/sccm/core/servers/manage/reporting).  
 

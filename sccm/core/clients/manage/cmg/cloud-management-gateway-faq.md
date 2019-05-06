@@ -4,7 +4,7 @@ description: Use this article to answer frequently asked questions regarding the
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 09/10/2018
+ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -35,7 +35,8 @@ If your organization uses ExpressRoute, a security best practice is to isolate t
 
 ### Do I need to maintain the Azure virtual machines?
 
-No maintenance is required. The design of the cloud management gateway uses Azure platform as a service (PaaS). Using the subscription you provide, Configuration Manager creates the necessary virtual machines (VMs), storage, and networking. Azure secures and updates the virtual machine. These VMs aren't a part of your on-premises environment, as is the case with infrastructure as a service (IaaS). The cloud management gateway is a PaaS that extends your Configuration Manager environment into the cloud. 
+No maintenance is required. The design of the cloud management gateway uses Azure platform as a service (PaaS). Using the subscription you provide, Configuration Manager creates the necessary virtual machines (VMs), storage, and networking. Azure secures and updates the virtual machine. These VMs aren't a part of your on-premises environment, as is the case with infrastructure as a service (IaaS). The cloud management gateway is a PaaS that extends your Configuration Manager environment into the cloud. For more information, see [Securing PaaS deployments](/azure/security/security-paas-deployments).
+
 
 ### How can I ensure service continuity during service updates?
 

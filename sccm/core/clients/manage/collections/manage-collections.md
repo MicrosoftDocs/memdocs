@@ -107,7 +107,7 @@ Use the overview information in this article to help you perform management task
 
  - **Configuration Baseline**: Opens the **Deploy Configuration Baselines** dialog box. Configure the deployment of one or more configuration baselines to the selected collection. For more information, see [How to deploy configuration baselines](/sccm/compliance/deploy-use/deploy-configuration-baselines).  
 
- - **Task Sequence**: Opens the **Deploy Software Wizard**. Select and configure a task sequence deployment to the selected collection. For more information, see [Manage task sequences to automate tasks](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS).  
+ - **Task Sequence**: Opens the **Deploy Software Wizard**. Select and configure a task sequence deployment to the selected collection. For more information, see [Manage task sequences to automate tasks](/sccm/osd/deploy-use/deploy-a-task-sequence).  
 
  - **Software Updates**: Opens the **Deploy Software Updates Wizard**. Configure the deployment of software updates to resources in the selected collection. For more information, see [Manage software updates](/sccm/sum/understand/software-updates-introduction).  
 

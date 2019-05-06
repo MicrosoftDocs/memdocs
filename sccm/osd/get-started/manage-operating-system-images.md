@@ -105,6 +105,6 @@ Use multicast deployments to allow more than one computer to simultaneously down
 
     -   **Transfer this package only via multicast**: Specify whether you want the distribution point to deploy the image only during a multicast session.  
 
-         If you select **Transfer this package only via multicast**, you must also specify the task sequence deployment option to **Download content locally when needed by the running task sequence**. For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS).   
+         If you select **Transfer this package only via multicast**, you must also specify the task sequence deployment option to **Download content locally when needed by the running task sequence**. For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence).   
 
 5.  Select **OK** to save the settings and close the image properties.  
