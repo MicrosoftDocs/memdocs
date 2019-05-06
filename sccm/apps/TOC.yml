@@ -8,8 +8,10 @@
     href: get-started/create-and-deploy-an-application.md
 - name: Plan and design
   items:
-  - name: Plan for, and configure application management
+  - name: Plan for and configure application management
     href: plan-design/plan-for-and-configure-application-management.md
+  - name: Plan for Software Center
+    href: plan-design/plan-for-software-center.md
   - name: Security and privacy
     href: plan-design/security-and-privacy-for-application-management.md
 - name: Deploy and use

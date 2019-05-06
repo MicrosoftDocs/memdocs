@@ -208,12 +208,12 @@ This release includes the following improvements to operating system deployment:
      - Support for all operating system deployment scenarios from Software Center, PXE, and media.
      - Improvements to console actions such as copy, import, export, and warning during object deletion.
      - Support for the [Create Prestaged Content File](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent) wizard.
-     - Integration with deployment verification. For more information, see [High-risk task sequence deployments](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS). 
+     - Integration with deployment verification. For more information, see [High-risk task sequence deployments](/sccm/osd/deploy-use/deploy-a-task-sequence). 
      - The Run Task Sequence step can now be used across multiple levels of task sequences, not just a single parent-child relationship. Multi-level relationships increase the complexity, so use with caution. These relationships are still checked for circular references.
     
 ### Deployment templates for task sequences
 <!-- 1357391 -->
-The [deployment wizard for task sequences](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS) can now create a deployment template. The deployment template can be saved and applied to an existing or new task sequence to create a deployment. 
+The [deployment wizard for task sequences](/sccm/osd/deploy-use/deploy-a-task-sequence) can now create a deployment template. The deployment template can be saved and applied to an existing or new task sequence to create a deployment. 
 
 ### Phased deployments for task sequences
 <!--1356837-->

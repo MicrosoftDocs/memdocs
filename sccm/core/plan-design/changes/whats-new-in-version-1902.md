@@ -263,8 +263,9 @@ When you create a schedule to update an OS image, select the option to **Remove 
 
 
 ### Improvements to Run PowerShell Script task sequence step
+
 <!--3556028, fka 1359389-->
-The **Run PowerShell Script** task sequence step now includes the following improvements:  
+***[Updated]*** The **Run PowerShell Script** task sequence step now includes the following improvements:  
 
 - You can now directly enter Windows PowerShell code in this step. This change lets you run PowerShell commands during a task sequence without first creating and distributing a package with the script.
 
@@ -280,17 +281,18 @@ The **Run PowerShell Script** task sequence step now includes the following impr
 
 - To include the script parameters in the task sequence log, set the task sequence variable **OSDLogPowerShellParameters** to **TRUE**. By default, the parameters aren't in the log.  
 
-- Other improvements that provide similar functionality as the [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step. For example, specify alternate user credentials or specify a time-out. 
+- Other improvements that provide similar functionality as the [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step. For example, specify alternate user credentials or specify a time-out.
 
 > [!Important]  
 > To take advantage of this new Configuration Manager feature, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
-<!-- For more information, see [Run PowerShell Script](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript). -->
+For more information, see [Run PowerShell Script](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript).
 
 
 ### Other improvements to OS deployment
+
 <!--3633146,3641475,3654172,3734270-->
-This version includes the following improvements to OS deployment:
+***[Updated]*** This version includes the following improvements to OS deployment:
 
 - There's a new **View** default action on task sequences. <!--3633146-->  
 
@@ -305,20 +307,13 @@ This version includes the following improvements to OS deployment:
 ## <a name="bkmk_userxp"></a> Software Center
 
 ### Replace toast notifications with dialog window
+
 <!--3555947-->
-Sometimes users don't see the Windows toast notification about a restart or required deployment. Then they don't see the experience to snooze the reminder. This behavior can lead to a poor user experience when the client reaches a deadline.
+***[Updated]*** Sometimes users don't see the Windows toast notification about a restart or required deployment. Then they don't see the experience to snooze the reminder. This behavior can lead to a poor user experience when the client reaches a deadline.
 
-Now when deployments need a restart or software changes are required, you have the option of using a more intrusive dialog window. 
+Now when deployments need a restart or software changes are required, you have the option of using a more intrusive dialog window.
 
-#### Software changes are required
-On the **User Experience** page of the Deploy Software Wizard, select the user notification option to **Display in Software Center and show all notifications**. Then select the following option: **When software changes are required, show a dialog window to the user instead of a toast notification**.  
-
-<!-- For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex) -->
-
-#### Restart required
-In client settings, In the **Computer Restart** group, enable the following option: **When a deployment requires a restart, show a dialog window to the user instead of a toast notification**.  
-
-<!-- For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#computer-restart). -->
+For more information, see [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_impact)
 
 
 ### Configure user device affinity in Software Center
