@@ -166,7 +166,7 @@ In the **Query Rule Properties** dialog box, specify the following information:
 
 - **Resource class**: Select the type of resource you want to search for and add to the collection. Select a value from **System Resource** values to search for inventory data returned from client computers or **Unknown Computer** to select from values returned by unknown computers.  
 
-- **Edit Query Statement**: Opens the **Query Statement Properties** dialog box where you can author a query to use as the rule for the collection. For more information about queries, see [Queries technical reference](/sccm/core/servers/manage/queries-technical-reference).  
+- **Edit Query Statement**: Opens the **Query Statement Properties** dialog box where you can author a query to use as the rule for the collection. For more information about queries, see [Introduction to queries](/sccm/core/servers/manage/introduction-to-queries).  
 
 
 ### <a name="bkmk-category"></a> Device category rule
