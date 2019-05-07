@@ -1,3 +1,4 @@
+- name: Application management
 - name: Understand and explore
   items:
   - name: Introduction
@@ -17,8 +18,9 @@
 - name: Deploy and use
   items:
   - name: Create applications
-    href: deploy-use/create-applications.md
     items:
+    - name: Create applications
+      href: deploy-use/create-applications.md   
     - name: Create Mac computer applications
       href: get-started/creating-mac-computer-applications.md
     - name: Create Windows applications
@@ -72,13 +74,15 @@
     - name: Uninstall applications
       href: deploy-use/uninstall-applications.md
   - name: Run and manage scripts
-    href: deploy-use/create-deploy-scripts.md
     items:
+    - name: Run and manage scripts
+      href: deploy-use/create-deploy-scripts.md
     - name: Learn about PowerShell script security
       href: deploy-use/learn-script-security.md
-  - name: Package Conversion Manager
-    href: pcm/package-conversion-manager.md
+  - name: Package Conversion Manager 
     items:
+    - name: Package Conversion Manager
+      href: pcm/package-conversion-manager.md
     - name: How to analyze and convert packages
       href: pcm/how-to-analyze-and-convert.md
 #    - name: How to use the plug-in
