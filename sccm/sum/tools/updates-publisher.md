@@ -50,7 +50,7 @@ Managing publications includes publishing updates to a server so your clients ca
 -   Installable rules – These rules help determine if a client should install an update.
 -   Installed rules – These rules verify if an update is already installed.
 
-**Catalogs Workspace:** Use this workspace to add and [manage software update catalogs](/sccm/sum/tools/updates-publisher-catalogs). This worksapce includes the import of software updates from those catalogs to the Updates Publisher repository.
+**Catalogs Workspace:** Use this workspace to add and [manage software update catalogs](/sccm/sum/tools/updates-publisher-catalogs). This workspace includes the import of software updates from those catalogs to the Updates Publisher repository.
 
 ## What's new in the System Center Updates Publisher preview
 
@@ -69,13 +69,13 @@ There's a new authoring mode in the preview for System Center Updates Publisher 
 
 ### About the categories workspace
 
-The categories workspace enables update authors to organize updates which belong together. For instance, if you are an OEM, you might wish to organize your updates based on models or product lines. You can define multiple categories and child categories but not grand child categories as you are limited to two levels.
+The categories workspace enables update authors to organize updates that belong together. For instance, if you're an OEM, you might wish to organize your updates based on models or product lines. You can define multiple categories and child categories but not grand child categories as you're limited to two levels.
 
 ![Screenshot of Categories Workspace](media/scup-categories-workspace.png)
 
 ### Assign an update to a category
 
-Once you have authored your update, you can assign it to a category by selecting the update then clicking the **Categorize** button. You can also right-click the update and select **Categorize**.
+Once you've authored your update, you can assign it to a category by selecting the update then clicking the **Categorize** button. You can also right-click the update and select **Categorize**.
 
 ![Screenshot of categorizing an update](media/scup-categorize-update.png)
 
