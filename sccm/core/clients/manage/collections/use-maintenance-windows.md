@@ -60,3 +60,12 @@ Maintenance windows enable you to define a time when Configuration Manager opera
 7.  Make a selection from the **Apply this schedule to** drop-down list.  
 
 8.  Choose **OK** and then close the **&lt;collection name\> Properties** dialog box.  
+ 
+## <a name="bkmk_powershell"></a> Using PowerShell
+
+PowerShell can be used to configure maintenance.  For more information, see:
+
+* [Set-CMMaintenanceWindow](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/set-cmmaintenancewindow)
+* [Get-CMMaintenanceWindow](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/get-cmmaintenancewindow)
+* [New-CMMaintenanceWindow](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/new-cmmaintenancewindow)
+* [Remove-CMMaintenanceWindow](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/remove-cmmaintenancewindow)
