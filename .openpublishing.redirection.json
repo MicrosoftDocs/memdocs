@@ -299,6 +299,21 @@
             "source_path": "sccm/core/clients/manage/co-management-dashboard.md",
             "redirect_url": "/sccm/comanage/how-to-monitor",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/compliance/deploy-use/configuration-items-for-devices-managed-with-the-client.md",
+            "redirect_url": "/sccm/compliance/deploy-use/create-configuration-items",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/servers/manage/operations-and-maintenance-for-queries.md",
+            "redirect_url": "/sccm/core/servers/manage/introduction-to-queries",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/servers/manage/queries-technical-reference.md",
+            "redirect_url": "/sccm/core/servers/manage/introduction-to-queries",
+            "redirect_document_id": false
         }
     ]
 }
