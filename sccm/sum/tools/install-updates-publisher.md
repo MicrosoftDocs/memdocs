@@ -97,12 +97,10 @@ The following languages are supported for software update titles and description
 -   Russian
 -   Spanish
 
-
-
 ## Install Updates Publisher
 Get the **UpdatesPubliser.msi** for installing System Center Updates Publisher from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=55543).
 
-To install Updates Publisher, run **UpdatesPublisher.msi** on a computer that meets the *prerequisites*. The installer creates the following folder to contain the files necessary to run Updates Publisher: *&lt;path&gt;\Program Files\Microsoft\UpdatesPublisher*.
+To install Updates Publisher, run **UpdatesPublisher.msi** on a computer that meets the *prerequisites*. The installer creates the following folder to contain the files necessary to run Updates Publisher: %PROGRAMFILES%\Microsoft\UpdatesPublisher*.
 
 Because this folder contains all the files necessary to use Updates Publisher, you can copy the folder and its contents to a new location or computer and then use Updates Publisher from that location. However, the new location or computer must meet the prerequisites to run Updates Publisher.
 
@@ -112,4 +110,3 @@ After installation completes, run **UpdatesPublisher.exe** from the *UpdatesPubl
  After you install Updates Publisher, we recommend you [configuring the options](updates-publisher-options.md) for Updates Publisher. You must configure some options before you can use some features of Updates Publisher.
 
  However, if you want to use the defaults and don't plan to deploy updates to an update server or to managed devices, you can jump right to [managing software update catalogs](updates-publisher-catalogs.md), or [create software updates](create-updates-with-updates-publisher.md) and create update catalogs of your own.
-
