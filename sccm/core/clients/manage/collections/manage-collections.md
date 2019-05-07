@@ -181,3 +181,32 @@ Use the overview information in this article to help you perform management task
 
 #### Alerts 
  Configure when alerts are generated for client status and Endpoint Protection. For more information, see [How to configure client status](/sccm/core/clients/deploy/configure-client-status) and [How to monitor Endpoint Protection](/sccm/protect/deploy-use/monitor-endpoint-protection).  
+## <a name="bkmk_powershell"></a> Using PowerShell
+
+PowerShell can be used to manage collections.  For more information, see:
+
+* [Get-CMCollection](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/get-cmcollection)
+* [Set-CMCollection](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/set-cmcollection)
+* [New-CMCollection](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/new-cmcollection)
+* [Copy-CMCollection](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/copy-cmcollection)
+* [Remove-CMCollection](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/remove-cmcollection)
+* [Import-CMCollection](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/import-cmcollection)
+* [Export-CMCollection](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/export-cmcollection)
+* [Get-CMCollectionMember](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/get-cmcollectionmember)
+* [Get-CMCollectionSetting](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/get-cmcollectionsetting)
+* [Invoke-CMCollectionUpdate](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/invoke-cmcollectionupdate)
+* [Add-CMCollectionMembershipRule](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/add-cmcollectionmembershiprule)
+* [Set-CMCollectionPowerManagement](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/set-cmcollectionpowermanagement)
+* [Get-CMCollectionMembershipRule](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/get-cmcollectionmembershiprule)
+* [Remove-CMCollectionMembershipRule](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/remove-cmcollectionmembershiprule)
+* [Get-CMCollectionDirectMembershipRule](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/get-cmcollectiondirectmembershiprule)
+* [Get-CMCollectionQueryMembershipRule](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/get-cmcollectionquerymembershiprule)
+* [Get-CMCollectionIncludeMembershipRule](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/get-cmcollectionincludemembershiprule)
+* [Add-CMCollectionToAdministrativeUser](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/add-cmcollectiontoadministrativeuser)
+* [Remove-CMCollectionQueryMembershipRule](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/remove-cmcollectionquerymembershiprule)
+* [Remove-CMCollectionDirectMembershipRule](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/remove-cmcollectiondirectmembershiprule)
+* [Get-CMCollectionExcludeMembershipRule](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/get-cmcollectionexcludemembershiprule)
+* [Add-CMCollectionToDistributionPointGroup](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/add-cmcollectiontodistributionpointgroup)
+* [Remove-CMCollectionIncludeMembershipRule](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/remove-cmcollectionincludemembershiprule)
+* [Remove-CMCollectionExcludeMembershipRule](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/remove-cmcollectionexcludemembershiprule)
+* [Remove-CMCollectionFromAdministrativeUser](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/remove-cmcollectionfromadministrativeuser)
