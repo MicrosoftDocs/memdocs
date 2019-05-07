@@ -47,9 +47,9 @@ This section provides information and tasks for the fundamental programming tech
 ## Other Resources  
  If you have not previously written any scripting code, see the following chapters of the *Windows 2000 Scripting Guide* to familiarize yourself with the concepts and technologies that are required for scripting Configuration Manager:  
 
--   [Introduction to Windows Script Technologies](http://go.microsoft.com/fwlink/?linkid=43946)  
+-   [Introduction to Windows Script Technologies](https://docs.microsoft.com/en-us/previous-versions/tn-archive/ee176792(v=technet.10))  
 
--   [VBScript Primer](http://go.microsoft.com/fwlink/?linkid=43947)  
+-   [VBScript Primer](https://technet.microsoft.com/en-us/scriptcenter/dd940112.aspx)  
 
 -   [WSH Primer](http://go.microsoft.com/fwlink/?linkid=43948)  
 

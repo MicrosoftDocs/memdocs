@@ -38,8 +38,6 @@ To get started with programming for System Center Configuration Manager, it’s 
 
 - [Channel 9: Microsoft System Center 2012 Configuration Manager Overview](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2012/MGT309)  
 
-- [Vimeo: Configuration Manager 2012 &#124; Windows 8 & SP1 Features – Wally Mead](http://vimeo.com/55952501)  
-
 - [YouTube: Technical Deep Dive: System Center Configuration Manager 2012 Technical Overview](http://www.youtube.com/watch?v=qLACm3910_A)  
 
   **Forums:** There are numerous forums available for Configuration Manager. A few example forums are listed below.  
