@@ -330,6 +330,9 @@ Continue to the next section on using a custom script as a detection method. Or 
 
 Configuration Manager checks the results from the script. It reads the values written by the script to the standard output (STDOUT) stream, the standard error (STDERR) stream, and the exit code. If the script exits with a non-zero value, the script fails, and the application detection status is *Unknown*. If the exit code is zero, and STDOUT has data, the application detection status is *Installed*.
 
+> [!TIP]
+> This may not be intuitive for new Configuration Manager administrators.  When writing your detection script you cannot return any output unless you want to return that the application is installed.  See examples below the tables for help.
+
 Use the following tables to check whether an application is installed from the output from a script:  
 
 **Zero exit code:**  
@@ -341,7 +344,6 @@ Use the following tables to check whether an application is installed from the o
 |Not empty|Empty|Success|Installed|
 |Not empty|Not empty|Success|Installed|
 
-
 **Non-zero exit code:**  
 
 |STDOUT|STDERR|Script result|Application detection state|
@@ -351,34 +353,62 @@ Use the following tables to check whether an application is installed from the o
 |Not empty|Empty|Failure|Unknown|
 |Not empty|Not empty|Failure|Unknown|
 
+**Examples**
 
-**VBScript examples**
-
-Use the following VBScript examples to write your own application detection scripts:  
+Use the following PowerShell/VBScript examples to write your own application detection scripts:  
 
 Example 1: The script returns an exit code that's not zero. This code indicates the script failed to run successfully. In this case, the application detection state is unknown.  
+
+``` PowerShell
+Exit 1
+```
+
 ``` VBScript
 WScript.Quit(1)
 ```
 
 Example 2: The script returns an exit code of zero, but the value of STDERR isn't empty. This result indicates the script failed to run successfully. In this case, the application detection state is unknown.  
+
+``` PowerShell
+Write-Error "Script failed"
+Exit 0
+```
+
 ``` VBScript
 WScript.StdErr.Write "Script failed"
 WScript.Quit(0)
 ```
 
 Example 3: The script returns an exit code of zero, which indicates it ran successfully. However, the value for STDOUT is empty, which indicates the application isn't installed.  
+
+``` PowerShell
+Exit 0
+```
+
 ``` VBScript
 WScript.Quit(0)
 ```
 
 Example 4: The script returns an exit code of zero, which indicates it ran successfully. The value for STDOUT isn't empty, which indicates the application is installed.  
+
+``` PowerShell
+Write-Host "The application is installed"
+Exit 0
+```
+
 ``` VBScript
 WScript.StdOut.Write "The application is installed"
 WScript.Quit(0)
 ```
 
 Example 5: The script returns an exit code of zero, which indicates it ran successfully. The values for STDOUT and STDERR aren't empty, which indicates the application is installed.  
+
+``` PowerShell
+Write-Host "The application is installed"
+Write-Error "Completed"
+Exit 0
+```
+
 ``` VBScript
 WScript.StdOut.Write "The application is installed"
 WScript.StdErr.Write "Completed"
