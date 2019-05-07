@@ -1,8 +1,8 @@
 ---
 title: Create capture media
 titleSuffix: Configuration Manager
-description: Use the Create Task Sequence Media Wizard to create capture media in Configuration Manager to capture an operating system image from a reference computer.
-ms.date: 01/23/2017
+description: Use capture media in Configuration Manager to capture an OS image from a reference computer.
+ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: article
@@ -10,64 +10,93 @@ ms.assetid: 10eb8958-3848-49d7-95c0-16119b624580
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
 ms.collection: M365-identity-device-management
 ---
-# Create capture media with System Center Configuration Manager
+
+# Create capture media
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Capture media in Configuration Manager allows you to capture an operating system image from a reference computer. Use capture media for the following scenario:  
+Capture media in Configuration Manager allows you to capture an OS image from a reference computer. Capture media contains the boot image that starts the reference computer and the task sequence that captures the OS image. Use capture media for the scenario to [Create a task sequence to capture an OS](/sccm/osd/deploy-use/create-a-task-sequence-to-capture-an-operating-system).  
 
--   [Create a task sequence to capture an operating systems](create-a-task-sequence-to-capture-an-operating-system.md)  
 
-##  <a name="BKMK_CreateCaptureMedia"></a> How to Create Capture Media  
- Use capture media to capture an operating system image from a reference computer. Capture media contains the boot image that starts the reference computer and the task sequence that captures the operating system image.
+## Prerequisites
 
-You create capture media by using the Create Task Sequence Media Wizard. Before you run the wizard, be sure that all the following conditions are met:  
+Before you create capture media by using the Create Task Sequence Media Wizard, be sure that all of these conditions are met.
 
-|Task|Description|  
-|----------|-----------------|  
-|Boot image|Consider the following about the boot image that you will use in the task sequence to capture the operating system:<br /><br /> -   The architecture of the boot image must be appropriate for the architecture of the destination computer. For example, an x64 destination computer can boot and run an x86  or x64 boot image. However, an x86 destination computer can boot and run only an x86 boot image.<br />-   Ensure that the boot image contains the network and mass storage drivers that are required to provision the destination computer.|  
-|Distribute all content associated with the task sequence|You must distribute to at least one distribution point all content that is required by the task sequence. This includes the boot image, operating system image, and other associated files. The wizard gathers the information from the distribution point when it creates the stand-alone media. You must have **Read** access rights to the content library on that distribution point.  For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).|  
-|Prepare the removable USB drive|For a removable USB drive:<br /><br /> If you are going to use a removable USB drive, the USB  drive must be connected to the computer where the wizard is run and the USB drive must be detectable by Windows as a removal device. The wizard writes directly to the USB drive when it creates the media.|  
-|Create an output folder|For a CD/DVD set:<br /><br /> Before you run the Create Task Sequence Media Wizard to create media for a CD or DVD set, you must create a folder for the output files created by the wizard. Media that is created for a CD or DVD set is written as .iso files directly to the folder.|  
+### Boot image
 
- Use the following procedure to create capture media.  
+Consider the following points about the boot image that you use in the task sequence to deploy the OS:
 
-#### To create capture media  
+- The architecture of the boot image must be appropriate for the architecture of the destination computer. For example, an x64 destination computer can boot and run an x86 or x64 boot image. However, an x86 destination computer can boot and run only an x86 boot image.
+- Make sure that the boot image contains the network and storage drivers that are required to provision the destination computer.
 
-1. In the Configuration Manager console, click **Software Library**.  
+### Distribute all content associated with the task sequence
 
-2. In the **Software Library** workspace, expand **Operating Systems**, and then click **Task Sequences**.  
+Distribute all content that the task sequence requires to at least one distribution point. This content includes the boot image, OS image, and other associated files. The wizard gathers the content from the distribution point when it creates the capture media.
 
-3. On the **Home** tab, in the **Create** group, click **Create Task Sequence Media** to start the Create Task Sequence Media Wizard.  
+Your user account needs at least **Read** access rights to the content library on that distribution point. For more information, see [Distribute content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).
 
-4. On the **Select Media Type** page, select **Capture media**, and then click **Next**.  
+### Prepare the removable USB drive
 
-5. On the **Media Type** page, specify whether the media is a flash drive or a CD/DVD set, and then click configure the following:  
+If you're using a removable USB drive, connect it to the computer where you run the Create Task Sequence Media wizard. The USB drive must be detectable by Windows as a removal device. The wizard writes directly to the USB drive when it creates the media.
 
-   - If you select **USB flash drive**, specify the drive where you want to store the content.  
+### Create an output folder
 
-   - If you select **CD/DVD set**, specify the capacity of the media and the name and path of the output files. The wizard writes the output files to this location. For example: **\\\servername\folder\outputfile.iso**  
+Before you run the Create Task Sequence Media Wizard to create media for a CD or DVD set, create a folder for the output files it creates. Media that it creates for a CD or DVD set is written as an .ISO file directly in the folder.
 
-      If the capacity of the media is too small to store the entire content, multiple files are created and you must store the content on multiple CDs or DVDs. When multiple media is required, Configuration Manager adds a sequence number to the name of each output file that it creates. In addition, if you deploy an application along with the operating system and the application cannot fit on a single media, Configuration Manager stores the application across multiple media. When the stand-alone media is run, Configuration Manager prompts the user for the next media where the application is stored.  
 
-     > [!IMPORTANT]  
-     >  If you select an existing .iso image, the Task Sequence Media Wizard deletes that image from the drive or share as soon as you proceed to the next page of the wizard. The existing image is deleted, even if you then cancel the wizard.  
+## Process
 
-     Click **Next**.  
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node.  
 
-6. On the **Boot image** page, specify the following information, and then click **Next**.  
+2. On the **Home** tab of the ribbon, in the **Create** group, select **Create Task Sequence Media**. This action starts the Create Task Sequence Media Wizard.  
 
-   > [!IMPORTANT]  
-   >  The architecture of the boot image that you specify must be appropriate for the architecture of the reference computer. For example, an x64 reference computer can boot and run an x86 or x64 boot image. However, an x86 reference computer can boot and run only an x86 boot image.  
+3. On the **Select Media Type** page, select **Capture media**.  
 
-   -   In the **Boot image** box, specify the boot image to start the reference computer.  
+4. On the **Media Type** page, specify whether the media is a **Removable USB drive** or a **CD/DVD set**. Then configure the following options:  
 
-   -   In the **Distribution point** box, specify the distribution point where the boot image resides. The wizard retrieves the boot image from the distribution point and writes it to the media.  
+    > [!IMPORTANT]  
+    > Media uses a FAT32 file system. You can't create media on a USB drive whose content contains a file over 4 GB in size.  
 
-       > [!NOTE]  
-       >  You must have Read access rights to the content library on the distribution point.  
+    - If you select **Removable USB drive**, select the drive where you want to store the content.  
 
-7. Complete the wizard.  
+        - **Format removable USB drive (FAT32) and make bootable**: By default, let Configuration Manager prepare the USB drive. Many newer UEFI devices require a bootable FAT32 partition. However, this format also limits the size of files and overall capacity of the drive. If you've already formatted and configured the removable drive, disable this option.
+
+    - If you select **CD/DVD set**, specify the capacity of the media (**Media size**) and the name and path of the output file (**Media file**). The wizard writes the output files to this location. For example: `\\servername\folder\outputfile.iso`  
+
+        If the capacity of the media is too small to store the entire content, it creates multiple files. Then you need to store the content on multiple CDs or DVDs. When it requires multiple media files, Configuration Manager adds a sequence number to the name of each output file that it creates.  
+
+        > [!IMPORTANT]  
+        > If you select an existing .iso image, the Task Sequence Media Wizard deletes that image from the drive or share as soon as you proceed to the next page of the wizard. The existing image is deleted, even if you then cancel the wizard.  
+
+    - **Staging folder**<!--1359388-->: The media creation process can require a lot of temporary drive space. By default this location is similar to the following path: `%UserProfile%\AppData\Local\Temp`. Starting in version 1902, to give you greater flexibility with where to store these temporary files, change this value to another drive and path.  
+
+    - **Media label**<!--1359388-->: Starting in version 1902, add a label to task sequence media. This label helps you better identify the media after you create it. The default value is `Configuration Manager`. This text field appears in the following locations:  
+
+        - If you mount an ISO file, Windows displays this label as the name of the mounted drive  
+
+        - If you format a USB drive, it uses the first 11 characters of the label as its name  
+
+        - Configuration Manager writes a text file called `MediaLabel.txt` to the root of the media. By default, the file includes a single line of text: `label=Configuration Manager`. If you customize the label for media, this line uses your custom label instead of the default value.  
+
+    - **Include autorun.inf file on media**<!-- 4090666 -->: Starting in version 1902, Configuration Manager doesn't add an autorun.inf file by default. This file is commonly blocked by antimalware products. For more information on the AutoRun feature of Windows, see [Creating an AutoRun-enabled CD-ROM Application](https://docs.microsoft.com/windows/desktop/shell/autoplay). If still necessary for your scenario, select this option to include the file.  
+
+5. On the **Boot image** page, specify the following options:  
+
+    > [!IMPORTANT]  
+    > The architecture of the boot image that you distribute must be appropriate for the architecture of the destination computer. For example, an x64 destination computer can boot and run an x86 or x64 boot image. However, an x86 destination computer can boot and run only an x86 boot image.  
+
+    - **Boot image**: Select the boot image to start the destination computer.  
+
+    - **Distribution point**: Select the distribution point that has the boot image. The wizard retrieves the boot image from the distribution point and writes it to the media.  
+
+        > [!NOTE]  
+        > Your user account needs at least **Read** permissions to the content library on the distribution point.  
+
+6. Complete the wizard.  
+
+
+## Next steps
+
+[Create a task sequence to capture an OS](/sccm/osd/deploy-use/create-a-task-sequence-to-capture-an-operating-system)

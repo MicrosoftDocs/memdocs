@@ -2,7 +2,7 @@
 title: "Data transfers"
 titleSuffix: "Configuration Manager"
 description: "Learn how Configuration Manager moves data between sites, and how you can manage the transfer of the data across your network."
-ms.date: 10/06/2016
+ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

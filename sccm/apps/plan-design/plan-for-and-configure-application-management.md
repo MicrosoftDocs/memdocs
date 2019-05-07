@@ -2,7 +2,7 @@
 title: Plan for application management
 titleSuffix: Configuration Manager
 description: Implement and configure the necessary dependencies for deploying applications in Configuration Manager.
-ms.date: 08/31/2018
+ms.date: 05/01/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -26,7 +26,8 @@ Use the information in this article to help you implement the necessary dependen
 
 ### Internet Information Services (IIS)
 
-IIS is required on the servers that run the following site system roles: 
+IIS is required on the servers that run the following site system roles:
+
 - Application Catalog website point  
 - Application Catalog web service point  
 - Management point  
@@ -47,6 +48,7 @@ If you use Active Directory Certificate Services to code-sign applications for m
 If you want to automatically create user device affinities, configure clients to audit sign-in events.
 
 To determine automatic user device affinities, the Configuration Manager client reads sign-in events of type **Success** from the Windows security event log. Enable these events with the following two audit policies:
+
 - **Audit account logon events**
 - **Audit logon events**
 
@@ -56,7 +58,7 @@ For more information on user device affinity, see [Link users and devices with u
 
 
 
-## Configuration Manager dependencies   
+## Configuration Manager dependencies
 
 
 ### Management point
@@ -64,12 +66,12 @@ For more information on user device affinity, see [Link users and devices with u
 Clients contact a management point to download client policy, to locate content, and to connect to the Application Catalog. If clients can't access a management point, they can't use the Application Catalog.
 
 > [!Note]  
-> Starting in version 1806, application catalog roles are no longer required to display user-available applications in Software Center. For more information, see [Configure Software Center](#bkmk_userex).<!--1358309-->  
+> Starting in version 1806, application catalog roles are no longer required to display user-available applications in Software Center. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).<!--1358309-->  
   
 
 ### Distribution point
 
-Before you can deploy applications to clients, you need at least one distribution point in the hierarchy. By default, the site server has a distribution point site role enabled during a standard installation. The number and location of distribution points vary according to the specific requirements of your environment. 
+Before you can deploy applications to clients, you need at least one distribution point in the hierarchy. By default, the site server has a distribution point site role enabled during a standard installation. The number and location of distribution points vary according to the specific requirements of your environment.
 
 For more information about how to install distribution points and manage content, see [Manage content and content infrastructure](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).  
 
@@ -84,6 +86,7 @@ For more information, see [Reporting in Configuration Manager](/sccm/core/server
 ### Client settings
 
 Many client settings control how the client installs applications and the user experience on the device. These client settings include the following groups:
+
 - Computer agent  
 - Computer restart  
 - Software Center  
@@ -91,6 +94,7 @@ Many client settings control how the client installs applications and the user e
 - User and device affinity  
 
 For more information, see the following articles:
+
 - [About client settings](/sccm/core/clients/deploy/about-client-settings)  
 - [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings)  
 
@@ -122,113 +126,49 @@ Configuration Manager must first discover user accounts before users can view an
 
 The Application Catalog web service point is a site system role that provides information about available software from your software library to the Application Catalog website that users access.
 
-For more information about how to configure this site system role, see [Configure Software Center](#bkmk_userex).  
+For more information about how to configure this site system role, see [Install and configure the Application Catalog](#bkmk_appcat).  
 
 > [!Note]  
 > Starting in version 1806, the application catalog web service point role is no longer *required*, but still *supported*.<!--1358309-->  
-> 
+>
 > The **Silverlight user experience** for the application catalog website point is no longer supported. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
 
 
 ### Application Catalog website point
 
 The Application Catalog website point is a site system role that provides users with a list of available software.
-`
-For more information about how to configure this site system role, see [Configure Software Center](#bkmk_userex).
+
+For more information about how to configure this site system role, see [Install and configure the Application Catalog](#bkmk_appcat).
 
 > [!Note]  
 > Starting in version 1806, the application catalog website point role is no longer *required*, but still *supported*.<!--1358309-->  
-> 
+>
 > The **Silverlight user experience** for the application catalog website point is no longer supported. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
 
 
 
 ## <a name="bkmk_userex"></a> Configure Software Center  
 
-Users change settings, browse for applications, and install applications from Software Center. When you install the Configuration Manager client on a Windows device, it automatically installs Software Center as well. The new Software Center has a modern look. Apps that would have appeared only in the Silverlight-dependent Application Catalog (user-available apps) now appear in Software Center under the **Applications** tab. For more information on the other features of Software Center, see the [Software Center user guide](/sccm/core/understand/software-center).  
-
-Review the following improvements to Software Center: 
-
-#### Starting in version 1802
-
-- The client setting **Use new Software Center** in the **Computer Agent** group is enabled by default. The previous version of Software Center is no longer supported. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
-
-- Users can browse and install user-available applications on Azure Active Directory (Azure AD)-joined devices. For more information, see [Deploy user-available applications on Azure AD-joined devices](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices).  
-
-#### Starting in version 1806
-
-- Specify the visibility of the application catalog website link on the **Installation Status** tab of Software Center. For more information, see [Software Center](/sccm/core/clients/deploy/about-client-settings#software-center) client settings.  
-
-- Application catalog roles are no longer required to display user-available applications in Software Center. This change helps you reduce the server infrastructure required to deliver applications to users. Software Center now relies upon the management point to obtain this information, which helps larger environments scale better by assigning them to [boundary groups](/sccm/core/servers/deploy/configure/boundary-groups#management-points).<!--1358309-->  
-
-    > [!Note]  
-    > If you're currently using the application catalog, and update Configuration Manager to version 1806, it continues to work. The application catalog website point and web service point roles are no longer *required*, but still *supported*. The **Silverlight user experience** for the application catalog *website point* is no longer supported. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). 
-    > 
-    > Start planning to remove the application catalog roles from your infrastructure in the future. Take advantage of the Software Center improvements to use the management point, and simplify your Configuration Manager environment.  
-
-Use the following table to help understand the requirements for Software Center depending upon the specific version of Configuration Manager:
-
-| Device type | Site version | Infrastructure | 
-|-----------------|--------------|----------------|
-| Azure AD-joined device</br>(or "cloud domain-joined") | 1802 or 1806 | Management point for all app deployments | 
-| [Hybrid Azure AD-joined](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) device on the internet | 1802 or 1806 | Cloud management gateway and management point for all app deployments |
-| On-premises Active Directory domain-joined device | 1802 | Application catalog required for user-available apps through Software Center |
-| On-premises Active Directory domain-joined device | 1806 | Management point for all app deployments |
-
-
-> [!Important]  
-> To take advantage of new Configuration Manager features, first update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
-
-
-
-## Branding Software Center
-
-Change the appearance of Software Center to meet your organization's branding requirements. This configuration helps users trust Software Center. 
-
-Configuration Manager applies custom branding for Software Center according to the following priorities:  
-
-- If you haven't installed the application catalog (recommended):  
-
-    1. **Software Center** client settings. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-center).  
-
-    2. **Organization name** client setting in **Computer Agent** group. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#computer-agent).  
-
-- If you've installed the application catalog:  
-
-    1. **Software Center** client settings. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-center).  
-
-    2. If you connect a Microsoft Intune subscription to Configuration Manager, then Software Center displays the *organization name*, *color*, and *company logo* that you specify in the Intune subscription properties. For more information, see [Configuring the Microsoft Intune subscription](/sccm/mdm/deploy-use/configure-intune-subscription).  
-
-    3. The *organization name* and *color* that you specify in the Application Catalog website point properties. For more information, see [Configuration options for Application Catalog website point](/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#BKMK_ApplicationCatalog_Website).  
-
-    4. **Organization name** client setting in **Computer Agent** group. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#computer-agent).  
-
-#### Configure Software Center branding
-<!-- 1351224 -->
-Customize the appearance of Software Center by adding your organization's branding elements and specifying the visibility of tabs. 
-
-For more information, see the following articles:
-- [Software Center](/sccm/core/clients/deploy/about-client-settings#software-center) group of client settings  
-- [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings)  
-
+For more information on configuring and branding Software Center, see [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center).
 
 
 ## <a name="bkmk_appcat"></a> Install and configure the Application Catalog  
 
 > [!Note]  
-> Starting in version 1806, the application catalog website point and web service point roles are no longer *required*, but still *supported*. For more information, see [Configure Software Center](#bkmk_userex).  
-> 
+> Starting in version 1806, the application catalog website point and web service point roles are no longer *required*, but still *supported*. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).  
+>
 > The **Silverlight user experience** for the application catalog *website point* is no longer supported. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
 
 > [!IMPORTANT]  
->  Before you do these steps, make sure that all of the dependencies are in place. For more information, see the following sections in this article:
+> Before you do these steps, make sure that all of the dependencies are in place. For more information, see the following sections in this article:
+>
 > - [Dependencies external to Configuration Manager](#dependencies-external-to-configuration-manager)  
 > - [Configuration Manager dependencies](#configuration-manager-dependencies)
 
 
 ### Step 1: Web server certificate for HTTPS
 
-If you use HTTPS connections, deploy a web server certificate to the site system servers for the Application Catalog website point and the Application Catalog web service point. 
+If you use HTTPS connections, deploy a web server certificate to the site system servers for the Application Catalog website point and the Application Catalog web service point.
 
 If you want clients to use the Application Catalog from the internet, deploy a web server certificate to at least one management point. Configure it for client connections from the internet.
 
@@ -237,9 +177,10 @@ For more information about certificate requirements, see [PKI certificate requir
 
 ### Step 2: Client authentication certificate for HTTPS
 
-If you use a client PKI certificate for connections to management points, deploy a client authentication certificate to client computers. Although clients don't use a client PKI certificate to connect to the Application Catalog, they must connect to a management point before they can use the Application Catalog. 
+If you use a client PKI certificate for connections to management points, deploy a client authentication certificate to client computers. Although clients don't use a client PKI certificate to connect to the Application Catalog, they must connect to a management point before they can use the Application Catalog.
 
 Deploy a client authentication certificate to client computers in the following scenarios:
+
 - All management points on the intranet accept only HTTPS client connections.
 - Clients connect to the Application Catalog from the internet.
 
@@ -255,12 +196,13 @@ For more information about server placement, see [Plan for site system servers a
 > [!NOTE]  
 > Install the Application Catalog at a primary site. You can't install it at a secondary site or the central administration site.  
 
-Install the application catalog on a new site system server or an existing server in the site. For more information on the general procedure, see [Install site system roles](/sccm/core/servers/deploy/configure/install-site-system-roles). In the wizard to add a site system role or create a site system server, select the following roles from the list:  
+Install the application catalog on a new site system server or an existing server in the site. For more information on the general procedure, see [Install site system roles](/sccm/core/servers/deploy/configure/install-site-system-roles). In the wizard to add a site system role or create a site system server, select the following roles from the list:
+
 - **Application Catalog web service point**  
 - **Application Catalog website point**  
 
 > [!TIP]  
->  If you want client computers to use the Application Catalog over the internet, specify the internet fully qualified domain name (FQDN).  
+> If you want client computers to use the Application Catalog over the internet, specify the internet fully qualified domain name (FQDN).  
 
 #### Verify the installation of these site system roles  
 
@@ -278,6 +220,7 @@ Install the application catalog on a new site system server or an existing serve
 If you want all users to have the same settings, configure the default client settings. Otherwise, configure custom client settings for specific collections.
 
 For more information, see the following articles:
+
 - [About client settings](/sccm/core/clients/deploy/about-client-settings)  
     - Computer agent  
     - Computer restart  
@@ -291,13 +234,13 @@ The Configuration Manager client configures devices with these settings when it 
 
 ### Step 5: Verify that the Application Catalog is operational
 
-Use the following procedures to verify that the Application Catalog is operational. 
+Use the following procedures to verify that the Application Catalog is operational.
 
 > [!NOTE]  
->  The Application Catalog user experience requires Microsoft Silverlight. If you use the Application Catalog directly from a browser, first verify that Microsoft Silverlight is installed on the computer.  
+> The Application Catalog user experience requires Microsoft Silverlight. If you use the Application Catalog directly from a browser, first verify that Microsoft Silverlight is installed on the computer.  
 
 > [!TIP]  
->  Missing prerequisites are among the most typical reasons for the Application Catalog to operate incorrectly after installation. Confirm the role prerequisites for the Application Catalog site system roles. For more information, see [Site and site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites).  
+> Missing prerequisites are among the most typical reasons for the Application Catalog to operate incorrectly after installation. Confirm the role prerequisites for the Application Catalog site system roles. For more information, see [Site and site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites).  
 
 In a browser, enter the address of the Application Catalog website. Confirm that the web page shows the three tabs: **Application Catalog**, **My Application Requests**, and **My Devices**.  
 
@@ -312,5 +255,4 @@ Use the appropriate address for the Application Catalog from the following list,
 - HTTP client connections and custom site system role settings: **http://&lt;server&gt;:&lt;port&gt;/&lt;web application name&gt;**  
 
 > [!NOTE]  
->  If you signed in to the device with a Domain Administrator account, the Configuration Manager client doesn't display notification messages. For example, messages indicating that new software is available.  
-
+> If you signed in to the device with a Domain Administrator account, the Configuration Manager client doesn't display notification messages. For example, messages indicating that new software is available.  

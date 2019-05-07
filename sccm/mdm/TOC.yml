@@ -1,3 +1,4 @@
+- name: Mobile device management
 - name: Overview
   items:
   - name: What is hybrid MDM
@@ -5,15 +6,17 @@
   - name: What's new in hybrid MDM
     href: understand/whats-new-in-hybrid-mobile-device-management.md
 - name: Plan and design
-  href: plan-design/plan-hybrid-mobile-device-management.md
   items:
+  - name: Plan and design overview
+    href: plan-design/plan-hybrid-mobile-device-management.md
   - name: Supported device platforms
     href: plan-design/supported-device-platforms-for-hybrid.md
   - name: Device enrollment methods
     href: plan-design/device-enrollment-methods.md
 - name: Get started
-  href: deploy-use/setup-hybrid-mdm.md
   items:
+  - name: Setup steps
+    href: deploy-use/setup-hybrid-mdm.md
   - name: Create an MDM collection
     href: deploy-use/create-mdm-collection.md
   - name: Confirm domain name requirements
@@ -25,8 +28,9 @@
   - name: Create service connection point
     href: deploy-use/create-service-connection-point.md
   - name: Enable platform enrollment
-    href: deploy-use/enable-platform-enrollment.md
     items:
+    - name: Enable platform enrollment overview
+      href: deploy-use/enable-platform-enrollment.md 
     - name: iOS and MAC
       href: deploy-use/enroll-hybrid-ios-mac.md
     - name: Windows
@@ -42,8 +46,9 @@
   - name: Enroll user-owned (BYOD) devices
     href: deploy-use/enroll-user-owned-devices.md
   - name: Enroll corporate-owned devices
-    href: deploy-use/enroll-company-owned-devices.md
     items:
+    - name: Enroll corporate-owned devices overview
+      href: deploy-use/enroll-company-owned-devices.md
     - name: iOS DEP enrollment
       href: deploy-use/ios-device-enrollment-program-for-hybrid.md
     - name: Apple Configurator enrollment
@@ -63,8 +68,9 @@
   - name: Configure software inventory
     href: deploy-use/software-inventory-mobile-devices.md
   - name: Manage compliance settings
-    href: deploy-use/manage-compliance-settings.md
     items:
+    - name: Compliance scenarios
+      href: deploy-use/manage-compliance-settings.md
     - name: Windows 8.1 and Windows 10
       href: deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md
     - name: Windows Phone
@@ -78,8 +84,9 @@
   - name: Sync Intune-enrolled devices
     href: deploy-use/sync-intune-device.md
   - name: Manage applications
-    href: deploy-use/management-tasks-applications.md
     items:
+    - name: Manage applications overview
+      href: deploy-use/management-tasks-applications.md
     - name: Create iOS applications
       href: deploy-use/creating-ios-applications.md
     - name: iOS app configuration policies
@@ -103,8 +110,9 @@
   - name: Change your MDM authority
     href: deploy-use/change-mdm-authority.md
   - name: Start migrating from hybrid MDM to Intune standalone
-    href: deploy-use/migrate-hybridmdm-to-intunesa.md
     items:
+    - name: Migrate from hybrid MDM to Intune standalone overview
+      href: deploy-use/migrate-hybridmdm-to-intunesa.md
     - name: Import Configuration Manager data to Microsoft Intune
       href: deploy-use/migrate-import-data.md
     - name: Prepare Intune for user migration
@@ -128,11 +136,13 @@
     - name: Windows Hello for Business settings 
       href: deploy-use/windows-hello-for-business-settings.md
   - name: Manage conditional access
-    href: deploy-use/manage-access-to-services.md
     items:
+    - name: Conditional access overview and requirements
+      href: deploy-use/manage-access-to-services.md
     - name: Device compliance policies
-      href: deploy-use/device-compliance-policies.md
       items:
+      - name: Device compliance policies overview
+        href: deploy-use/device-compliance-policies.md
       - name: Actions for noncompliance
         href: deploy-use/actions-for-noncompliance.md
     - name: Create a device compliance policy
@@ -148,11 +158,13 @@
     - name: Manage PC access to Office 365 services
       href: deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md
   - name: Manage access based on device risk
-    href: deploy-use/mobile-threat-defense.md
     items:
+    - name: Access based on device risk
+      href: deploy-use/mobile-threat-defense.md
     - name: Lookout in Configuration Manager
-      href: deploy-use/lookout-mobile-threat-defense-in-configuration-manager.md
       items:
+      - name: Lookout overview
+        href: deploy-use/lookout-mobile-threat-defense-in-configuration-manager.md
       - name: Set up Lookout Mobile Threat Defense
         href: deploy-use/set-up-your-subscription-with-lookout.md
       - name: Enable Lookout in Intune
@@ -171,9 +183,10 @@
     href: understand/manage-mobile-devices-with-on-premises-infrastructure.md
   - name: Plan for on-premises MDM
     href: plan-design/plan-on-premises-mdm.md
-  - name: Setup steps
-    href: get-started/preparation-steps-for-on-premises-mdm.md
+  - name: Setup
     items:
+    - name: Setup steps
+      href: get-started/preparation-steps-for-on-premises-mdm.md
     - name: Set up the Intune subscription
       href: get-started/set-up-intune-subscription-on-premises-mdm.md
     - name: Install on-prem roles
@@ -183,8 +196,9 @@
     - name: Set up for enrollment
       href: get-started/set-up-device-enrollment-on-premises-mdm.md
   - name: Enroll devices for on-premises MDM
-    href: deploy-use/enroll-devices-on-premises-mdm.md
     items:
+    - name: Enrollment overview
+      href: deploy-use/enroll-devices-on-premises-mdm.md
     - name: User enrollment
       href: deploy-use/user-enroll-devices-on-premises-mdm.md
     - name: Bulk enrollment
