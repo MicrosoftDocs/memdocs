@@ -2,7 +2,7 @@
 title: "Create configuration items for client-managed Macs "
 titleSuffix: "Configuration Manager"
 description: "Use the System Center Configuration Manager Mac OS X configuration item to manage settings for Mac OS X devices."
-ms.date: 03/28/2017
+ms.date: 05/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -13,11 +13,11 @@ ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
 # How to create configuration items for Mac OS X devices managed with the System Center Configuration Manager client
-Use the System Center Configuration Manager**Mac OS X (custom)** configuration item to manage settings  for Mac OS X devices that are managed by the Configuration Manager client.  
+Use the System Center Configuration Manager **Mac OS X (custom)** configuration item to manage settings  for Mac OS X devices that are managed by the Configuration Manager client.  
   
  The Mac OS X operating system uses property list (or plist) files to store application settings. Use compliance settings to evaluate and remediate settings in a property list file. You can also manage Mac OS X settings by writing a Shell Script that returns a value that you can evaluate and remediate for compliance.  
   
-### To create a custom Mac OS X configuration item  
+## To create a custom Mac OS X configuration item  
   
 1. In the Configuration Manager console, click **Assets and compliance**.  
   
@@ -162,5 +162,6 @@ Use the System Center Configuration Manager**Mac OS X (custom)** configuration i
   
     If you now want to add this configuration item to a configuration baseline, see [How to create configuration baselines in System Center Configuration Manager](../../compliance/deploy-use/create-configuration-baselines.md).  
   
-## See Also  
+## Next steps
+
  [Configuration items for devices managed with the System Center Configuration Manager client](../../compliance/deploy-use/create-configuration-items.md)

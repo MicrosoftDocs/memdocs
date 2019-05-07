@@ -2,7 +2,7 @@
 title: "Hardware inventory "
 titleSuffix: "Configuration Manager"
 description: "Get an introduction to hardware inventory in System Center Configuration Manager."
-ms.date: 04/29/2019
+ms.date: 05/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -19,6 +19,7 @@ ms.collection: M365-identity-device-management
 Use hardware inventory in System Center Configuration Manager to collect information about the hardware configuration of client devices in your organization. To collect hardware inventory, the **Enable hardware inventory on clients** setting must be enabled in client settings.  
 
  After hardware inventory is enabled and a hardware inventory cycle is run by the client, the client sends the information to a management point in the client's site. The management point then forwards the inventory information to the Configuration Manager site server which stores the inventory information in the site database. Hardware inventory runs on clients according to the schedule that you specify in client settings.  
+## View hardware inventory 
 
  You can use several methods to view the hardware inventory data that Configuration Manager collects. These include the following:  
 
@@ -40,8 +41,10 @@ Use hardware inventory in System Center Configuration Manager to collect informa
 ## Extending Configuration Manager hardware inventory  
  In addition to the built-in hardware inventory in Configuration Manager, you can also use one of the following methods to extend hardware inventory to collect additional information:  
 
-- You can enable, disable, add and remove inventory classes for hardware inventory from the Configuration Manager console.|  
+- You can enable, disable, add and remove inventory classes for hardware inventory from the Configuration Manager console.  
 - Use NOIDMIF files to collect information about client devices that cannot be inventoried by Configuration Manager. For example, you might want to collect device asset number information that exists only as a label on the device. NOIDMIF inventory is automatically associated with the client device that it was collected from.  
-- Use IDMIF files to collect information about assets that are not associated with a Configuration Manager client, for example, projectors, photocopiers and network printers.  
+- Use IDMIF files to collect information about assets that are not associated with a Configuration Manager client, for example, projectors, photocopiers and network printers. 
 
-  For more information about using these methods to extend Configuration Manager hardware inventory, see [How to configure hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/configure-hardware-inventory.md).  
+
+## Next steps
+For more information about using these methods to extend Configuration Manager hardware inventory, see [How to configure hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/configure-hardware-inventory.md).  

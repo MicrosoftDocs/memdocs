@@ -2,7 +2,7 @@
 title: "Common compliance management tasks for client-managed devices "
 titleSuffix: "Configuration Manager"
 description: "Learn about System Center Configuration Manager compliance settings by working through some common scenarios."
-ms.date: 04/29/2019
+ms.date: 05/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -31,7 +31,7 @@ The scenarios in this topic give you an introduction to using System Center Conf
 
 4.  On the **General** tab of the Create Configuration Item Wizard as shown below, specify a name and description for the configuration item, then choose the appropriate configuration item type for each scenario in this topic.  
 
-     ![Shows general page of the create configuration item wizard.](/sccm/compliance/plan-design/media/Compliance-Settings-Wizard---1.png)  
+     ![Shows general page of the create configuration item wizard.](/sccm/mdm/deploy-use/media/Compliance-Settings-Wizard---1.png)  
 
 ## Scenarios for Windows 10 devices managed with the Configuration Manager client  
 
@@ -101,3 +101,7 @@ The scenarios in this topic give you an introduction to using System Center Conf
 6. Complete the wizard to create the configuration item.  
 
    You can now use the information in the [Common tasks for creating and deploying configuration baselines](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) topic to help you deploy the configuration you have created to devices.  
+
+## Next steps
+
+[Create and deploy configuration baselines](/sccm/compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines)
