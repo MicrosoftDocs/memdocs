@@ -511,7 +511,8 @@ The default IIS configuration is required.
 
 -   For more information, see [Plan for software updates](/sccm/sum/plan-design/plan-for-software-updates).  
 
-
+> [!NOTE]  
+> When you use a Software Update Point on a server other than the site server, you must install the WSUS Administration Console on the site server.   
 
 ##  <a name="bkmk_2012SMPpreq"></a> State migration point  
 <!--SCCMDocs issue 645-->
