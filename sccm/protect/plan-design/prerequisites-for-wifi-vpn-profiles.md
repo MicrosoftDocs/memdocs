@@ -7,9 +7,9 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: d2dacb2d-ab3b-42a2-8dc8-94da31f993c2
-author: aczechowski
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
 # Prerequisites for Wi-Fi and VPN Profiles in System Center Configuration Manager
