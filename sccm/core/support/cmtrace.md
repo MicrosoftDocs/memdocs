@@ -2,13 +2,13 @@
 title: CMTrace
 titleSuffix: Configuration Manager
 description: Learn about how to use the CMTrace tool to view log files for Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 05/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 6a4a3290-5228-4871-918a-554aa1c20834
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -110,8 +110,8 @@ The following actions are available in the **Tools** menu:
 - [Filter](#filter)
 - [Error Lookup](#error-lookup)
 - [Pause](#pause)
-- [Show/Hide Details](#show-hide-details)
-- [Show/Hide Info Pane](#show-hide-info-pane)
+- [Show/Hide Details](#show/hide-details)
+- [Show/Hide Info Pane](#show/hide-info-pane)
 
 #### Find
 Search the open log file for a specified text string.  
