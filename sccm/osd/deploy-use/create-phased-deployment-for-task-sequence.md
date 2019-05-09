@@ -7,8 +7,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
 ms.assetid: b634ff68-b909-48d2-9e2c-0933486673c5
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---

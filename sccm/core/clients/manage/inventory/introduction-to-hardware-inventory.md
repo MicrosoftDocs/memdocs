@@ -7,9 +7,9 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
 ms.assetid: 3969952e-9d05-49c9-82a2-e7e90ccef511
-author: aczechowski
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
 # Introduction to hardware inventory in System Center Configuration Manager

@@ -7,8 +7,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
 ms.assetid: cd64994c-b426-4465-96cd-54b0edc2778d
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---

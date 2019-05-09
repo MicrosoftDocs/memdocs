@@ -6,10 +6,10 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: a34d9401-83e4-471d-8e23-b8042fc11c90
-author: aczechowski
+author: mestew
+ms.author: mstewart
 description: Learn how to configure Windows Server Updates Services to auto-approve definition updates.
 manager: dougeby
-ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
 

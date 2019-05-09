@@ -441,7 +441,7 @@ Manage the content that you distributed to the distribution point. Select from t
 
 ### <a name="bkmk_config-valid"></a> Content validation  
 
-Set a schedule to validate the integrity of content files on the distribution point. When you enable content validation on a schedule, Configuration Manager starts the process at the scheduled time. It verifies all content on the distribution point. You can also configure the content validation priority. By default, the priority is set to **Lowest**. Increasing the priority might increase the processor and disk utilization on the server during the validation process, but it should complete faster. 
+Set a schedule to validate the integrity of content files on the distribution point. When you enable content validation on a schedule, Configuration Manager starts the process at the scheduled time. It verifies all content on the distribution point based on the local SMS_PackagesInContLib SCCMDP class. You can also configure the content validation priority. By default, the priority is set to **Lowest**. Increasing the priority might increase the processor and disk utilization on the server during the validation process, but it should complete faster. 
 
 To view the results of the content validation process, in the **Monitoring** workspace, expand **Distribution Status**, and then choose the **Content Status** node. It shows the content for each software type, for example, application, software update package, and boot image.  
 

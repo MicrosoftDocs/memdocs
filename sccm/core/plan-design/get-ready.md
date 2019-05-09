@@ -7,7 +7,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 3e839a3e-e476-4ec2-bf29-21e78180441d
-author: aczechowski
+author: mestew
+ms.author: mstewart
 ms.collection: M365-identity-device-management
 ---
 # Get ready for System Center Configuration Manager

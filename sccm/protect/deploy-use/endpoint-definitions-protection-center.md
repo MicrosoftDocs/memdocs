@@ -6,9 +6,9 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: eb4ab74b-b605-41dd-930c-ac18d2f40319
-author: aczechowski
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
 
