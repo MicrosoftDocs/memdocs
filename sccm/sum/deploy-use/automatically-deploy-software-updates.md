@@ -61,10 +61,13 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
     -   **Use Wake on LAN to wake up clients for required deployments**: Specifies whether to enable Wake On LAN at the deadline. Wake On LAN sends wake-up packets to computers that require one or more software updates in the deployment. The site wakes up any computers that are in sleep mode at the installation deadline time so the installation can initiate. Clients that are in sleep mode that don't require any software updates in the deployment aren't started. By default, this setting isn't enabled. Before using this option, configure computers and networks for Wake On LAN. For more information, see [How to configure Wake On LAN](/sccm/core/clients/deploy/configure-wake-on-lan).  
 
-    -   **Detail level**: Specify the level of detail for the state messages that are reported by clients.  
+    -   **Detail level**: Specify the level of detail for the update enforcement state messages that are reported by clients.  
 
         > [!IMPORTANT]  
         >  When you deploy definition updates, set the detail level to **Error only** to have the client report a state message only when a definition update fails. Otherwise, the client reports a large number of state messages that might impact site server performance.  
+        
+> [!NOTE]  
+> The **Error only** detail level does not send the enforcement status messages required for tracking pending reboots.
 
     -   **License terms setting**: Specify whether to automatically deploy software updates with associated license terms. Some software updates include license terms. When you automatically deploy software updates, the license terms aren't displayed, and there isn't an option to accept the license terms. Choose to automatically deploy all software updates regardless of an associated license term, or only deploy updates that don't have associated license terms.  
 
