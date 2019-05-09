@@ -152,7 +152,7 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 
 ### Step 7: Contact Support  
 
--   If the steps did not resolve the issue, contact support. For more information, see [Customer Support](http://go.microsoft.com/fwlink/?LinkID=196174) (http://go.microsoft.com/fwlink/?LinkID=196174).  
+-   If the steps did not resolve the issue, contact support. For more information, see [Customer Support](https://support.microsoft.com/en-us/contactus/).  
 
 ##  Starting Windows Defender or Endpoint Protection service  
  **Symptom**  
