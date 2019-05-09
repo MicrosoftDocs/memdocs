@@ -29,7 +29,7 @@ For more information on Configuration Manager current branch, see [Configuration
 
 This process requires an Azure subscription in which you can create the following objects: 
 - Two Standard_B2s virtual machines for Domain Contoller and MP & DP roles.
-- One Standard_B2ms virtual machines for Primary Site Server and SQL database server.
+- One Standard_B2ms virtual machine for Primary Site Server and SQL database server.
 - Standard_LRS storage account
 
 > [!Tip]  
