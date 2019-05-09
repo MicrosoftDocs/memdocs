@@ -2,13 +2,13 @@
 title: Configure boundary groups
 titleSuffix: Configuration Manager
 description: Help clients find site systems by using boundary groups to logically organize related network locations called boundaries
-ms.date: 11/27/2018
+ms.date: 05/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -36,7 +36,7 @@ Clients use a boundary group for:
     - Preferred management points  
 
         > [!Note]  
-        > If you use preferred management points, enable this option for the hierarchy, not from within the boundary group configuration. For more information, see [Enable use of preferred management points](#to-enable-use-of-preferred-management-points).  
+        > If you use preferred management points, enable this option for the hierarchy, not from within the boundary group configuration. For more information, see [Enable use of preferred management points](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_proc-prefer).  
 
 
 

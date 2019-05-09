@@ -7,9 +7,9 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: 601e3a8d-e9e7-456f-a844-f19c3dae12a9
-author: aczechowski
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
 # Security and privacy for email profiles in System Center Configuration Manager

@@ -2,8 +2,8 @@
 title: Manage Windows 10 express updates
 titleSuffix: Configuration Manager
 description: Configuration Manager supports express installation files for Windows 10, which provide smaller downloads and faster installation times on clients.
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.date: 06/15/2018
 ms.topic: conceptual

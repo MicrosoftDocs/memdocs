@@ -7,9 +7,9 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 03d1b3a9-41db-4d3a-a70e-e05ab5dc8141
-author: aczechowski
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
 # Introduction to queries in System Center Configuration Manager

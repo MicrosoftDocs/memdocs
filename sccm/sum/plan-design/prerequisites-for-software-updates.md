@@ -2,8 +2,8 @@
 title: Prerequisites for software updates
 titleSuffix: "Configuration Manager"
 description: "Learn about prerequisites for software updates in System Center Configuration Manager."
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.date: 02/02/2018
 ms.topic: conceptual
