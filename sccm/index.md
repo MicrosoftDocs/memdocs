@@ -107,7 +107,7 @@ ms.collection: M365-identity-device-management
                                                 <h3>Protect data and infrastructure</h3>
                                                 <p><a href="/sccm/protect/deploy-use/manage-access-to-services">Conditional access</a></p>
                                                 <p><a href="/sccm/protect/deploy-use/endpoint-protection">Endpoint protection for Windows Defender</a></p>
-                                                <p><a href="/sccm/protect/deploy-use/windows-defender-advanced-threat-protection">Windows Defender Advanced Threat Protection</a></p>
+                                                <p><a href="/sccm/protect/deploy-use/windows-defender-advanced-threat-protection">Microsoft Defender Advanced Threat Protection</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -548,8 +548,8 @@ ms.collection: M365-identity-device-management
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Windows Defender Advanced Threat Protection</h3>
-                                                <p>Integrate with the Windows Defender ATP cloud service to protect against advanced attacks.</p>
+                                                <h3>Microsoft Defender Advanced Threat Protection</h3>
+                                                <p>Integrate with the Microsoft Defender ATP cloud service to protect against advanced attacks.</p>
                                             </div>
                                         </div>
                                     </div>
