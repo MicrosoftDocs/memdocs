@@ -2,7 +2,7 @@
 title: Conditional access with co-management
 titleSuffix: Configuration Manager
 description: Control user access to organizational resources based on compliance rules from Intune
-ms.date: 01/14/2019
+ms.date: 05/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -29,7 +29,7 @@ With co-management, Intune evaluates every device in your network to determine h
 
     - For co-managed devices, Configuration Manager also does configuration-based evaluation. For example, required updates or apps compliance. Intune combines this evaluation along with its own assessment.  
 
-2. Intune detects active security incidents on a device. It uses the intelligent security of [Windows Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/get-started) and other [mobile threat defense providers](https://www.lookout.com/about/partners/microsoft). These partners run ongoing behavioral analysis on devices. This analysis detects active incidents, and then passes this information to Intune for real-time compliance evaluation.  
+2. Intune detects active security incidents on a device. It uses the intelligent security of [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/get-started) (formerly Windows Defender ATP) and other [mobile threat defense providers](https://www.lookout.com/about/partners/microsoft). These partners run ongoing behavioral analysis on devices. This analysis detects active incidents, and then passes this information to Intune for real-time compliance evaluation.  
 
     - This evaluation is post-security breach and incident-based  
 
@@ -58,7 +58,7 @@ With co-management, Intune can incorporate Configuration Manager's responsibilit
 
 Conditional access is also a critical part of developing your [Zero Trust Network](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/14/building-zero-trust-networks-with-microsoft-365/) architecture. With conditional access, compliant device access controls cover the foundational layers of Zero Trust Network. This functionality is a large part of how you secure your organization in the future.
 
-For more information, see the blog post on [Enhancing conditional access with machine-risk data from Windows Defender Advanced Threat Protection](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Enhancing-conditional-access-with-machine-risk-data-from-Windows/ba-p/250559).
+For more information, see the blog post on [Enhancing conditional access with machine-risk data from Microsoft Defender Advanced Threat Protection](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Enhancing-conditional-access-with-machine-risk-data-from-Windows/ba-p/250559).
 
 
 
@@ -94,7 +94,7 @@ In more than 63% of all data breaches, the attackers gain access to the organiza
 
 Since conditional access is a core component of Enterprise Mobility + Security (EMS), there's no on-premises setup or architecture required. With Intune and Azure Active Directory (Azure AD), you can quickly configure conditional access in the cloud. If you're currently using Configuration Manager, you can easily extend your environment to the cloud with co-management and begin using it right now.
 
-For more information about the ATP integration, see this blog post [Windows Defender ATP device risk score exposes new cyberattack, drives Conditional access to protect networks](https://cloudblogs.microsoft.com/microsoftsecure/2018/11/28/windows-defender-atp-device-risk-score-exposes-new-cyberattack-drives-conditional-access-to-protect-networks/). It details how an advanced hacker group used never before seen tools. The Microsoft cloud detected and stopped them because the targeted users had conditional access. The intrusion activated the device's risk-based conditional access policy. Although the attacker already established a foothold in the network, the exploited machines were automatically restricted from access to organizational services and data managed by Azure AD.
+For more information about the ATP integration, see this blog post [Microsoft Defender ATP device risk score exposes new cyberattack, drives Conditional access to protect networks](https://cloudblogs.microsoft.com/microsoftsecure/2018/11/28/windows-defender-atp-device-risk-score-exposes-new-cyberattack-drives-conditional-access-to-protect-networks/). It details how an advanced hacker group used never before seen tools. The Microsoft cloud detected and stopped them because the targeted users had conditional access. The intrusion activated the device's risk-based conditional access policy. Although the attacker already established a foothold in the network, the exploited machines were automatically restricted from access to organizational services and data managed by Azure AD.
 
 
 
