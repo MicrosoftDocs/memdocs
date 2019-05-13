@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 04/29/2019
+ms.date: 05/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -115,25 +115,47 @@ The following features are available with the most recent Configuration Manager 
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### Technical Preview version 1904
+### Technical Preview version 1905
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID-->
 
-- [Office 365 ProPlus upgrade readiness dashboard](/sccm/core/get-started/2019/technical-preview-1904#bkmk_o365) <!--4021125-->  
-
-- [Configure dynamic update during feature updates](/sccm/core/get-started/2019/technical-preview-1904#configure-dynamic-update-during-feature-updates) <!--4062619-->  
-
-- [Community Hub and GitHub](/sccm/core/get-started/2019/technical-preview-1904#community-hub-and-github) <!--3555935,3555936-->  
-
-- [CMPivot standalone](/sccm/core/get-started/2019/technical-preview-1904#bkmk_cmpivot) <!--3555890-->  
-
-- [Software Center infrastructure improvements](/sccm/core/get-started/2019/technical-preview-1904#bkmk_swctr) <!--3555950-->  
-
-- [Improved control over WSUS maintenance](/sccm/core/get-started/2019/technical-preview-1904#improved-control-over-wsus-maintenance) <!--4110109-->  
-
-- [Pre-cache driver packages and OS images](/sccm/core/get-started/2019/technical-preview-1904#bkmk_precache) <!--4224642-->  
-
-- [Improvements to OS deployment](/sccm/core/get-started/2019/technical-preview-1904#bkmk_osd) <!--2839943,4447680-->  
+- [Add SMBIOS GUID column to device lists](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4526580-->
+- [Improvements to post-deadline notifications for restarts](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3976435-->
+- [Make Office update deployment more intelligent](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4051607-->
+- [Maintenance tasks improvements](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3555894-->
+- [Site server high availability component load monitoring](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4200651-->
+- [User categories for device-targeted deployments](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4451056-->
+- [MMSMOA 2019 cabin features](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4616810-->
+- [Help customers track data stored in SCCM that is subject to GDPR](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3604099-->
+- [Synchronize collection membership results to Azure Active Directory groups](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3607475-->
+- [Put the SCF setting for cache age out in the UI](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4485509-->
+- [Configuration Manager update database upgrade monitoring](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4200581-->
+- [Configure the default maximum run time for software updates](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3734426-->
+- [WDAG file trust criteria](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3555858-->
+- [Lifecycle dashboard ESU support](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3728571-->
+- [Add an action on a device to install the application](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4402180-->
+- [Need to define chains for app groups](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3555907-->
+- [Native Bitlocker configuration](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3601034-->
+- [OneTrace (preview)](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3555962-->
+- [Improve client information worker experience](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4063773-->
+- [Improvements to application approvals](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4224910-->
+- [Retry installation for approved applications](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4336307-->
+- [Government cloud support for co-management](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4075452-->
+- [AdminService base fundamentals for OData requests from AdminConsole to use WMI route of AdminService](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4223683-->
+- [Improvements to driver management](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3555958-->
+- [Task sequence as an app model deployment type install method](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3555953-->
+- [Task sequence debugger](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3612274-->
+- [Delivery Optimization download data in client data sources dashboard](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3555759-->
+- [Device group orchestration](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3098816-->
+- [Folder permissions](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3600867-->
+- [Azure Active Directory group discovery](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3611956-->
+- [Community Hub](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4224401-->
+- [Remote control anywhere using cloud management gateway](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4575930-->
+- [Improved control over WSUS maintenance](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4110109-->
+- [Office 365 ProPlus upgrade readiness dashboard](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4021125-->
+- [Reschedule auto-enrollment for co-managed devices](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3555961-->
+- [Shift all client traffic away from catalog roles, so can be removed in future release](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3555950-->
+- [Improvements to OS deployment](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!-- 4512937,4574622 -->
 
 > [!Note]  
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.  
@@ -149,6 +171,14 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  | Feature | Technical preview version | Current branch version |  
  |---------|---------------------------|------------------------|
+ | Office 365 ProPlus upgrade readiness dashboard <!--4021125--> | [Tech Preview 1904](/sccm/core/get-started/2019/technical-preview-1904#bkmk_o365) | ![Not added](media/Red_X.gif) |
+ | Configure dynamic update during feature updates <!--4062619--> | [Tech Preview 1904](/sccm/core/get-started/2019/technical-preview-1904#configure-dynamic-update-during-feature-updates) | ![Not added](media/Red_X.gif) |
+ | Community Hub and GitHub <!--3555935,3555936--> | [Tech Preview 1904](/sccm/core/get-started/2019/technical-preview-1904#community-hub-and-github) | ![Not added](media/Red_X.gif) |
+ | CMPivot standalone <!--3555890--> | [Tech Preview 1904](/sccm/core/get-started/2019/technical-preview-1904#bkmk_cmpivot) | ![Not added](media/Red_X.gif) |
+ | Software Center infrastructure improvements <!--3555950--> | [Tech Preview 1904](/sccm/core/get-started/2019/technical-preview-1904#bkmk_swctr) | ![Not added](media/Red_X.gif) |
+ | Improved control over WSUS maintenance <!--4110109--> | [Tech Preview 1904](/sccm/core/get-started/2019/technical-preview-1904#improved-control-over-wsus-maintenance) | ![Not added](media/Red_X.gif) |
+ | Pre-cache driver packages and OS images <!--4224642--> | [Tech Preview 1904](/sccm/core/get-started/2019/technical-preview-1904#bkmk_precache) | ![Not added](media/Red_X.gif) |
+ | Improvements to OS deployment <!--2839943,4447680--> | [Tech Preview 1904](/sccm/core/get-started/2019/technical-preview-1904#bkmk_osd) | ![Not added](media/Red_X.gif) |
  | Cloud services cost estimator <!--3555774--> | [Tech Preview 1903](/sccm/core/get-started/2019/technical-preview-1903#bkmk_cmg) | ![Not added](media/Red_X.gif) |
  | Use your distribution point as a local cache server for Delivery Optimization <!--3555764--> | [Tech Preview 1903](/sccm/core/get-started/2019/technical-preview-1903#bkmk_doinc) | ![Not added](media/Red_X.gif) |
  | Reclaim lock for editing task sequences <!--3699337--> | [Tech Preview 1903](/sccm/core/get-started/2019/technical-preview-1903#bkmk_sedo) | ![Not added](media/Red_X.gif) |
@@ -166,25 +196,6 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  | Add cloud management gateway to boundary groups <!--3640932--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_cmgbg) | Version 1902 |
  | Configure default views in Software Center <!--3612112--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_swctr) | Version 1902 |
  | Improvements to client health dashboard <!--3599209--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_health) | Version 1902 |
- | Client health dashboard <!--3599209--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_health) | Version 1902 |
- | Specify priority for feature updates in Windows 10 servicing <!--3734525--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_neo) | Version 1902 |
- | Dedicated monitoring for phased deployments <!--3555949--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_pod) | Version 1902 |
- | Run CMPivot from the central administration site <!--3610960--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmpivot) | Version 1902 |
- | Improvements to Run PowerShell Script task sequence step <!--3556028--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_posh) | Version 1902 |
- | Office products on lifecycle dashboard <!--3556026--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_lifecycle) | Version 1902 |
- | Management insight rules for collections <!--3555752--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_micoll) | Version 1902 |
- | Search device views using MAC address <!--3600878--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_mac) | Version 1902 |
- | Distribution point maintenance mode <!--3555754--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_dpmaint) | Version 1902 |
- | Optimized image servicing <!--3555951--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_resetbase) | Version 1902 |
- | Import a single index of an OS image <!--3719699--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_index) | Version 1902 |
- | Use Azure Resource Manager for cloud services <!--3605704--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_arm) | Version 1902 |
- | Confirmation of console feedback <!--3556010--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_feedback) | Version 1902 |
- | Create a Configuration Manager technical preview lab in Azure <!--3556017--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_azurevm) | Not applicable |
- | Specify a custom port for peer wakeup <!--3605925--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_sleep) | Version 1902 |
- | View recently connected consoles <!--3699367--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_console) | Version 1902 |
- | Stop cloud service when it exceeds threshold <!--3735092--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmg) | Version 1902 |
- | Client provisioning mode timeout <!--3197824--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osdprov) | Version 1902 |
- | Improvements to OS deployment <!--3633146,3641475,3654172,3734270--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osd) | Version 1902 |
 
 
 ## Features in previous technical previews
