@@ -158,7 +158,10 @@ Use the following procedure to deploy a task sequence to the computers in a coll
 
         - **Download all content locally before starting task sequence**: Specify that clients download all the content from the distribution point before the task sequence runs. If you make the task sequence available to PXE and boot media deployments on the **Deployment Settings** page, this option isn't shown.  
 
-        - **Access content directly from a distribution point when needed by the running task sequence**: Specify that clients run the content from the distribution point. This option is only available when you enable all packages associated with the task sequence to use a package share on the distribution point. To enable content to use a package share, see the **Data Access** tab in the **Properties** for each package.  
+        - **Access content directly from a distribution point when needed by the running task sequence**: Specify that clients run the content from the distribution point. This option is only available when you enable all packages associated with the task sequence to use a package share on the distribution point. To enable content to use a package share, see the **Data Access** tab in the **Properties** for each package. 
+        
+        > [!IMPORTANT]  
+            > Selecting the **Download content locally when needed by the running task sequence** option or the **Download all content locally before starting task sequence** option is strongly recommended for greatest security. When either one of these options is selected, the package is hashed so that Configuration Manager can ensure package integrity. When the **Access content directly from a distribution point when needed by the running task sequence** option is selected, the package hash is not verified prior to running the specified program. Therefore, package integrity cannot be ensured as it is possible for users with administrative rights to alter or tamper with package contents.
 
     - **When no local distribution point is available, use a remote distribution point**: Specify whether clients can use distribution points from a neighbor boundary group to download the content that's required by the task sequence.  
 
