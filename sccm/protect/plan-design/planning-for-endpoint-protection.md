@@ -1,7 +1,7 @@
 ---
 title: Plan for Endpoint Protection
 titleSuffix: "Configuration Manager"
-ms.date: 03/07/2017
+ms.date: 05/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -23,7 +23,7 @@ Endpoint Protection in System Center Configuration Manager lets you to manage an
 
 When you use Endpoint Protection with Configuration Manager, you have the following benefits:  
 
--   Configure antimalware policies, Windows Firewall settings, and manage Windows Defender Advanced Threat Protection to selected groups of computers  
+-   Configure antimalware policies, Windows Firewall settings, and manage Microsoft Defender Advanced Threat Protection to selected groups of computers  
 
 -   Use Configuration Manager software updates to download the latest antimalware definition files to keep client computers up-to-date  
 
@@ -74,9 +74,9 @@ Endpoint Protection in Configuration Manager allows you to create antimalware po
 
   For more information about how to create and deploy Windows Firewall policies for Endpoint Protection, see [How to create and deploy Windows Firewall policies for Endpoint Protection in System Center Configuration Manager](../deploy-use/create-windows-firewall-policies.md).  
 
-## Windows Defender Advanced Threat Protection
+## Microsoft Defender Advanced Threat Protection
 
-Starting with version 1606 of Configuration Manager (current branch), Endpoint Protection can help manage and monitor Windows Defender Advanced Threat Protection (ATP). Windows Defender ATP is a new service that will help enterprises to detect, investigate, and respond to advanced attacks on their networks. See [Windows Defender Advanced Threat Protection](../deploy-use/windows-defender-advanced-threat-protection.md).
+Starting with version 1606 of Configuration Manager (current branch), Endpoint Protection can help manage and monitor Microsoft Defender Advanced Threat Protection (ATP), formerly known as Windows Defender ATP. Microsoft Defender ATP is a service that will help enterprises to detect, investigate, and respond to advanced attacks on their networks. See [Microsoft Defender Advanced Threat Protection](../deploy-use/windows-defender-advanced-threat-protection.md).
 
 ## Endpoint Protection Workflow  
  Use the following diagram to help you understand the workflow to implement Endpoint Protection in your Configuration Manager hierarchy.  
