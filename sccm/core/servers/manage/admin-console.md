@@ -2,7 +2,7 @@
 title: Configuration Manager Console
 titleSuffix: Configuration Manager
 description: Learn about navigating through the Configuration Manager console.
-ms.date: 04/03/2019
+ms.date: 05/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -142,6 +142,8 @@ Starting in version 1902, you can view the most recent connections for the Confi
 
 ![View Configuration Manager console connections](media/console-connections.png) 
 
+
+
 ## Command-line options
 
 The Configuration Manager console has the following command-line options:
@@ -154,6 +156,47 @@ The Configuration Manager console has the following command-line options:
 |`/sms:IgnoreExtensions`|Disables any Configuration Manager extensions.|  
 |`/sms:NoRestore`|The console ignores previous persisted node navigation.|  
 
+## <a name="bkmk_notify"></a> Configuration Manager console notifications
+<!--3556016, fka 1318035-->
+Starting in Configuration Manager version 1902, the console notifies you for the following events:
+
+- When an update is available for Configuration Manager itself
+- When lifecycle and maintenance events occur in the environment
+
+This notification is a bar at the top of the console window below the ribbon. It replaces the previous experience when Configuration Manager updates are available. These in-console notifications still display critical information, but don't interfere with your work in the console. You can't dismiss critical notifications. The console displays all notifications in a new notification area of the title bar.
+
+![Notification bar and flag in console](./media/1318035-notify-eval-version-expired.png)
+
+### Configure a site to show non-critical notifications
+
+You can configure each site to show non-critical notifications in the properties of the site.
+
+1.  In the **Administration** workspace, expand **Site Configuration**, then click on the **Sites** node.
+1. Select the site you want to configure for non-critical notifications.
+1. In the ribbon, click on **Properties**.
+1. On the **Alerts** tab, select the option to **Enable console notifications for non-critical site health changes**.
+   - If you enable this setting, all console users see critical, warning, and information notifications. This setting is enabled by default.  
+   - If you disable this setting, console users only see critical notifications.  
+
+Most console notifications are per session. The console evaluates queries when a user launches it. To see changes in the notifications, restart the console. If a user dismisses a non-critical notification, it notifies again when the console restarts if it's still applicable.
+
+The following notifications reevaluate every five minutes:
+- Site is in maintenance mode  
+- Site is in recovery mode  
+- Site is in upgrade mode  
+
+Notifications follow the permissions of role-based administration. For example, if a user doesn't have permissions to see Configuration Manager updates, they won't see those notifications.
+
+Some notifications have a related action. For example, if the console version doesn't match the site version, select **Install the new console version**. This action launches the console installer. 
+
+The following notifications are most applicable to the technical preview branch:  
+
+- Evaluation version is within 30 days of expiration (Warning): the current date is within 30 days of the expiration date of the evaluation version  
+- Evaluation version is expired (Critical): the current date is past the expiration date of the evaluation version  
+- Console version mismatch (Critical): the console version doesn't match the site version  
+- Site upgrade is available (Warning): there's a new update package available  
+
+For more information and troubleshooting assistance, see the **SmsAdminUI.log** file on the console computer. By default, this log file is at the following path: `C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\AdminUILog\SmsAdminUI.log`.
 
 
 ## Tips
