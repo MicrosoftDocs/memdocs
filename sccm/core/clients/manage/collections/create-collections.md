@@ -217,6 +217,6 @@ For more information about exporting collections, see [How to manage collections
 
 PowerShell can be used to create and import collections.  For more information, see:
 
-* [New-CMCollection](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/new-cmcollection)
-* [Set-CMCollection](https://docs.microsoft.com/en-us/powershell/module/ConfigurationManager/Set-CMCollection)
-* [Import-CMCollection](https://docs.microsoft.com/en-us/powershell/module/ConfigurationManager/Import-CMCollection)
+* [New-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmcollection)
+* [Set-CMCollection](https://docs.microsoft.com/powershell/module/ConfigurationManager/Set-CMCollection)
+* [Import-CMCollection](https://docs.microsoft.com/powershell/module/ConfigurationManager/Import-CMCollection)
