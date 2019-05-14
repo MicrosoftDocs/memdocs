@@ -713,7 +713,7 @@ After installation, you can change the port. You don't have to use the same port
 #### <a name="bkmk_note4"></a> Note 4: Trivial FTP (TFTP) Daemon
 The Trivial FTP (TFTP) Daemon system service doesn't require a user name or password and is an integral part of Windows Deployment Services (WDS). The Trivial FTP Daemon service implements support for the TFTP protocol that's defined by the following RFCs:  
 
-- RFC 350: TFTP  
+- RFC 1350: TFTP  
 
 - RFC 2347: Option extension  
 
@@ -725,7 +725,7 @@ TFTP is designed to support diskless boot environments. TFTP Daemons listen on U
 
 The PXE-enabled distribution point and the client in Windows PE select dynamically allocated high ports for TFTP transfers. These ports are defined by Microsoft between 49152 and 65535. For more information, see [Service overview and network port requirements for Windows](https://support.microsoft.com/help/832017/service-overview-and-network-port-requirements-for-windows)
 
-However, during the actual PXE boot, the network card on the device selects the dynamically allocated high port it uses during the TFTP transfer. The network card on the device isn't bound to the dynamically allocated high ports defined by Microsoft. It's only bound to the ports defined in RFC 350. This port can be any from 0 to 65535. For information regarding what dynamically allocated high ports the network card uses, contact the device hardware manufacturer.
+However, during the actual PXE boot, the network card on the device selects the dynamically allocated high port it uses during the TFTP transfer. The network card on the device isn't bound to the dynamically allocated high ports defined by Microsoft. It's only bound to the ports defined in RFC 1350. This port can be any from 0 to 65535. For information regarding what dynamically allocated high ports the network card uses, contact the device hardware manufacturer.
 
 
 #### <a name="bkmk_note5"></a> Note 5: Communication between the site server and site systems
