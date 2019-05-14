@@ -285,7 +285,7 @@ Configure the task sequence to access the OS image directly from the distributio
 > This setting overrides the deployment option that you configure on the **Distribution Points** page in the **Deploy Software Wizard**. This override is only for the OS image that this step specifies, not for all task sequence content.  
 
 > [!IMPORTANT]  
-> For greatest security it is strongly recommended not to select this option. This option is mainly designed for use on devices with limited storage capacity. This option is not meant to help increase the speed of the Task Sequence. When this option is selected the package hash is not verified for the operating system package. Therefore, package integrity cannot be ensured as it is possible for users with administrative rights to alter or tamper with package contents.
+> For greatest security, it is strongly recommended not to select this option. This option is mainly designed for use on devices with limited storage capacity. This option is not meant to help increase the speed of the task sequence. When this option is selected, the package hash is not verified for the operating system package. Therefore, package integrity cannot be ensured because it is possible for users with administrative rights to alter or tamper with package contents.
 
 
 
