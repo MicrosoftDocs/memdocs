@@ -2,7 +2,7 @@
 title: "Collections introduction"
 titleSuffix: "Configuration Manager"
 description: "Get an introduction to using collections in System Center Configuration Manager."
-ms.date: 01/03/2017
+ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -29,7 +29,7 @@ Here are some examples of collection use:
 |Operation|Example|  
 |---------|-------|  
 |Grouping resources|You can create collections that  group resources based on your organization's hierarchy.<br /><br /> For example, you could create a collection of all computers in the "London Headquarters" Active Directory Organizational Unit (OU). For more information about how to create this type of collection, see [How to create collections in System Center Configuration Manager](../../../../core/clients/manage/collections/create-collections.md).<br /><br /> You could  use this collection for operations such as configuring Endpoint Protection settings, configuring device power management settings, or installing the Configuration Manager client.|  
-|[Application deployment]|You can create a collection of all computers that do not have Microsoft Office 2013 installed and then deploy it to all computers in that collection.<br /><br /> You can also use application requirements to perform this task. For more information, see [How to create applications with System Center Configuration Manager](../../../../apps/deploy-use/create-applications.md).|  
+|Application deployment|You can create a collection of all computers that do not have Microsoft Office 2013 installed and then deploy it to all computers in that collection.<br /><br /> You can also use application requirements to perform this task. For more information, see [How to create applications with System Center Configuration Manager](../../../../apps/deploy-use/create-applications.md).|  
 |[Managing client settings](../../../../core/clients/deploy/about-client-settings.md)|Although the default client settings in Configuration Manager apply to all devices and all users, you can create custom client settings that apply to a collection of devices or a collection of users.<br /><br /> For example, if you want remote control to be available on all but a few devices, configure the default client settings to allow remote control and then configure custom client settings that do not allow remote control, and deploy those to the collection of exceptional clients. |  
 |[Power management](../power/introduction-to-power-management.md)|You can configure specific power settings per collection.|  
 |[Role-based administration](../../../../core/servers/deploy/configure/configure-role-based-administration.md)|Use collections to control which groups of users have access to various functionality in the Configuration Manager console.|  

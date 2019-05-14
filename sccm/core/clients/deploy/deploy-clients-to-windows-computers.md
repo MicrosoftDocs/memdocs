@@ -2,7 +2,7 @@
 title: Deploy clients to Windows
 titleSuffix: Configuration Manager
 description: Learn how to deploy the Configuration Manager client to Windows computers.
-ms.date: 07/30/2018
+ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -33,7 +33,7 @@ There are three main ways to use client push:
 
 - Start client push installation by running the Client Push Installation Wizard for a specific collection or resource within a collection.  
 
-- Use the Client Push Installation Wizard to install the Configuration Manager client to [query](/sccm/core/servers/manage/queries-technical-reference) results. For installation to succeed, one of the items returned by the query must be the **ResourceID** attribute from the **System Resource** class.   
+- Use the Client Push Installation Wizard to install the Configuration Manager client to [query](/sccm/core/servers/manage/introduction-to-queries) results. For installation to succeed, one of the items returned by the query must be the **ResourceID** attribute from the **System Resource** class.   
 
 If the site server can't contact the client computer or start the setup process, it automatically retries the installation every hour. The server continues to retry for up to seven days.  
 

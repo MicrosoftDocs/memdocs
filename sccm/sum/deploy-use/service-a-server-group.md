@@ -2,8 +2,8 @@
 title: Service a server group
 titleSuffix: "Configuration Manager"
 description: "The System Center Configuration Manager console provides alerts and statuses to monitor updates and compliance."
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.date: 12/07/2016
 ms.topic: conceptual

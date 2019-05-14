@@ -2,13 +2,13 @@
 title: "Software inventory"
 titleSuffix: "Configuration Manager"
 description: "Get an introduction to software inventory in System Center Configuration Manager."
-ms.date: 2/22/2017
+ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
 ms.assetid: 79eb49da-cd2b-4ffc-b355-b595aeba3aea
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -22,7 +22,7 @@ After software inventory is enabled and the clients run a software inventory cyc
 
  Here are ways to view the software inventory data:  
 
-- [Create queries](../../../../core/servers/manage/queries-technical-reference.md) that return devices with specified files.   
+- [Create queries](../../../../core/servers/manage/create-queries.md) that return devices with specified files.   
 
 - Create [query-based collections](../../../../core/clients/manage/collections/introduction-to-collections.md) that include devices with specified files.   
 

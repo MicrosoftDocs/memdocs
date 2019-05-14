@@ -83,7 +83,7 @@
         href: deploy-use/endpoint-protection-configure-client.md
     - name: Windows Firewall policies
       href: deploy-use/create-windows-firewall-policies.md
-    - name: Windows Defender Advanced Threat Protection
+    - name: Microsoft Defender Advanced Threat Protection
       href: deploy-use/windows-defender-advanced-threat-protection.md
     - name: Create and deploy Exploit Guard policy
       href: deploy-use/create-deploy-exploit-guard-policy.md
@@ -104,7 +104,7 @@
   - name: Windows Hello for Business settings
     href: deploy-use/windows-hello-for-business-settings.md
   - name: Terms and Conditions settings
-    href: ../mdm/deploy-use/terms-and-conditions.md
+    href: ../mdm/deploy-use/terms-and-conditions.md?toc=/sccm/protect/toc.json&bc=/sccm/protect/breadcrumb/toc.json
   - name: Monitor protection
     items:
     - name: Monitor Wi-Fi, email and VPN profiles

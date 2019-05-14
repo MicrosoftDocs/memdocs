@@ -2,7 +2,7 @@
 title: Diagnostic and usage data for 1810
 titleSuffix: Configuration Manager
 description: Learn about the levels of diagnostics and usage data collected in version 1810.
-ms.date: 11/27/2018
+ms.date: 05/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -346,7 +346,7 @@ For Configuration Manager version 1810, this level includes the following data:
 
 ### Endpoint Protection  
 
-- Windows Defender Advanced Threat Protection (ATP) policies: count of policies, and whether policies are deployed  
+- Microsoft Defender Advanced Threat Protection (ATP) policies (formerly known as Windows Defender ATP): count of policies, and whether policies are deployed. 
 
 - Count of alerts that are configured for Endpoint Protection feature  
 

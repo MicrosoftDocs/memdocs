@@ -65,7 +65,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 ### Technical
 
-- An active Azure subscription  
+- An active Azure subscription, with [Global Admin](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator) permissions  
 
     - **Workspace owner** or **contributor** permissions to **Set up your workspace**, and the following roles:  
 
@@ -96,20 +96,14 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 ### Licensing
 
-Most features in Desktop Analytics don't require any additional licenses or subscriptions. When configured properly, use of Desktop Analytics doesn't incur any Azure cost.
+Desktop Analytics requires one of the following license subscriptions:
 
-To access Windows health insights or to export data, there are additional license requirements. If you don't have one of the following subscriptions, you can still set up and use Desktop Analytics, but you aren't licensed to use Windows health insights or to export data:
+- Windows 10 Enterprise E3 or E5; or Microsoft 365 F1, E3, or E5  
 
-- Windows 10 Enterprise or Windows 10 Education: per-device with active Software Assurance  
+- Windows 10 Education A3 or A5; or Microsoft 365 A3 or A5  
 
-- Windows 10 Enterprise E3 or E5: per-device or per-user subscription (included with Microsoft 365 F1, E3, or E5)  
+- Windows VDA E3 or E5  
 
-- Windows 10 Education A3 or A5 (included with Microsoft 365 Education A3 or A5)  
-
-- Windows Virtual Desktop Access E3 or E5: per-device of per-user subscription  
-
-> [!Note]  
-> For per-device licenses, you don't have to activate each device with a license. You just need enough licenses for devices enrolled in Desktop Analytics.  
 
 
 

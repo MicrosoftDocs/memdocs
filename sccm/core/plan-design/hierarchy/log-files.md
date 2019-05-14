@@ -489,9 +489,9 @@ The log file SMS_DM.log on the site system server also records communication bet
 
  In addition to the Configuration Manager log files, review the Windows Application logs in Event Viewer on the server running the Network Device Enrollment Service and the server hosting the certificate registration point. For example, look for messages from the **NetworkDeviceEnrollmentService** source. You can also use the following log files:  
 
--   IIS log files for Network Device Enrollment Service: **&lt;path\>\inetpub\logs\LogFiles\W3SVC1**  
+-   IIS log files for Network Device Enrollment Service: **%SYSTEMDRIVE%\inetpub\logs\LogFiles\W3SVC1**  
 
--   IIS log files for the certificate registration point: **&lt;path\>\inetpub\logs\LogFiles\W3SVC1**  
+-   IIS log files for the certificate registration point: **%SYSTEMDRIVE%\inetpub\logs\LogFiles\W3SVC1**  
 
 -   Network Device Enrollment Policy log file: **mscep.log**  
 

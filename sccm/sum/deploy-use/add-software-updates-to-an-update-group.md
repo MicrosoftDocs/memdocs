@@ -2,14 +2,14 @@
 title: "Add updates to an update group "
 titleSuffix: "Configuration Manager"
 description: "Manually or automatically add software updates to a software update group in your environment."
-author: aczechowski
 ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: a0767664-fd60-46a8-9da5-86cc431ce53c
 manager: dougeby
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 ms.collection: M365-identity-device-management
 ---
 

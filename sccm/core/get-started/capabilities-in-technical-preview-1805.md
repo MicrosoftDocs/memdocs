@@ -43,7 +43,7 @@ Steps to workaround, if any.
 
 
 ## Create a phased deployment with manually configured phases for a task sequence
-<!--1358148--> 
+<!--1358148-->
 You can now [create a phased deployment](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) with manually configured phases for a task sequence. You can add up to 10 additional phases from the **Phases** tab of the Create Phased Deployment wizard. 
 
 
