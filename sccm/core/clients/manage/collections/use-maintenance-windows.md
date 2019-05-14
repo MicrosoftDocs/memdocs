@@ -63,9 +63,9 @@ Maintenance windows enable you to define a time when Configuration Manager opera
  
 ## <a name="bkmk_powershell"></a> Using PowerShell
 
-PowerShell can be used to configure maintenance.  For more information, see:
+PowerShell can be used to configure maintenance windows.  For more information, see:
 
-* [Set-CMMaintenanceWindow](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/set-cmmaintenancewindow)
-* [Get-CMMaintenanceWindow](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/get-cmmaintenancewindow)
-* [New-CMMaintenanceWindow](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/new-cmmaintenancewindow)
-* [Remove-CMMaintenanceWindow](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/remove-cmmaintenancewindow)
+* [Set-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmmaintenancewindow)
+* [Get-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmmaintenancewindow)
+* [New-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmmaintenancewindow)
+* [Remove-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmmaintenancewindow)
