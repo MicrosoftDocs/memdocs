@@ -83,6 +83,7 @@ Articles with a recent and significant update.
 Guided walkthroughs to assist with troubleshooting Configuration Manager components and features.
 
 - [Troubleshooting PXE boot issues](https://support.microsoft.com/help/4468612)
+- [Understand and troubleshoot Updates and Servicing in Configuration Manager](https://support.microsoft.com/help/4490424)
 - [Troubleshooting software update synchronization issues](https://support.microsoft.com/help/10059)
 - [Understanding and troubleshooting content distribution](https://support.microsoft.com/help/4482728)
 - [Understanding and troubleshooting the Microsoft Store for Business integration](https://support.microsoft.com/help/4010214)
@@ -91,14 +92,13 @@ Guided walkthroughs to assist with troubleshooting Configuration Manager compone
 
 ## New and updated support articles
 
-Support articles that are new or updated in March 2019.
+Support articles that are new or updated between April 7 and May 13, 2019.
 
 - [KB 4488598: Update Rollup 2 for System Center Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4488598)
 - [KB 4494015: An OSD task sequence doesn't continue after Windows Setup or an in-place upgrade finishes](https://support.microsoft.com/help/4494015)
 - [KB 4495265: WINHTTP_CALLBACK_STATUS_FLAG_CERT_CN_INVALID when using a CMG as a cloud DP with third-party certificate](https://support.microsoft.com/help/4495265)
-- [KB 4494799: Earlier Windows versions don't start after "Setup Windows and Configuration Manager" step if Pre-Provision BitLocker is used with Windows 10, version 1511](https://support.microsoft.com/help/4494799)
-- [KB 4494362: "Unable to send update on component PolicyTargetEvalNotify_iud" is repeatedly logged in Smsdbmon.log after you update to Configuration Manager version 1810](https://support.microsoft.com/help/4494362)
-- [KB 4494361: Attaching a central administration site to a stand-alone primary site fails when two-factor authentication is enabled](https://support.microsoft.com/help/4494361)
-- [KB 4493667: OSDResults doesn’t display applications installed by a UDI task sequence in Configuration Manager](https://support.microsoft.com/help/4493667)
+- [KB 4498259: Upgrade Readiness data is downloaded continuously in Configuration Manager](https://support.microsoft.com/help/4498259)
+- [KB 4040243: How to enable TLS 1.2 for Configuration Manager](https://support.microsoft.com/help/4040243)
+- [KB 4490644: The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://support.microsoft.com/help/4490644)
 
 To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **System Center Configuration Manager**.  
