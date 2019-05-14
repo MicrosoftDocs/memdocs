@@ -2,7 +2,7 @@
 title: Product lifecycle dashboard
 titleSuffix: Configuration Manager
 description: View the Microsoft Lifecycle Policy with the product lifecycle dashboard in Configuration Manager.
-ms.date: 04/27/2019
+ms.date: 05/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -64,7 +64,8 @@ Change the view by selecting one of the following options from the **Product cat
 - **Windows Client**: View Windows client OS versions  
 - **Windows Server**: View Windows server OS versions  
 - **Database**: View SQL Server versions  
-- **Configuration Manager**: Starting in version 1810, view Configuration Manager versions  
+- **Configuration Manager**: Starting in version 1810, view Configuration Manager versions 
+- **Microsoft Office**: Starting in version 1902, view information for installed versions of Office 2003 through Office 2016 <!--3556026-->
 
 The dashboard has the following tiles:  
 
