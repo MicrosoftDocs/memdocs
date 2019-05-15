@@ -4,10 +4,7 @@ This repository contains the conceptual technical content for [System Center Con
 
 We welcome and encourage community involvement as feedback (issues) and contributions (pull requests). For more information, see [How to use the Configuration Manager docs](https://docs.microsoft.com/sccm/core/understand/use-docs). 
 
-<!-- 
-(No longer exists - C. Kibble 2019-05-06)
 The Configuration Manager [PowerShell documentation](https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps) lives in the [sccm-docs-powershell](https://github.com/MicrosoftDocs/sccm-docs-powershell) repository.
--->
 
 ## Microsoft Open Source Code of Conduct
 
