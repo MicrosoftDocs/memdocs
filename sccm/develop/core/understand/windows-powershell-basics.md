@@ -101,7 +101,7 @@ Id CommandLine
 ```  
 
 ### For Windows 8 and Windows Server 2012 or Later  
- Another example of retrieving information (`Get`) using a cmdlet, taking action (`Enable/Disable`), and verifying state by retrieving information (`Get`) is listed below. This example uses various Windows Error Reporting cmdlets â€“ notice how the basic noun (WindowsErrorReporting) remains the same, while the verb (Get/Enable/Disable) changes.  
+ Another example of retrieving information (`Get`) using a cmdlet, taking action (`Enable/Disable`), and verifying state by retrieving information (`Get`) is listed below. This example uses various Windows Error Reporting cmdlets. Notice how the basic noun (WindowsErrorReporting) remains the same, while the verb (Get/Enable/Disable) changes.  
 
  Go to your Windows PowerShell window, and type `Get-WindowsErrorReporting`:  
 
