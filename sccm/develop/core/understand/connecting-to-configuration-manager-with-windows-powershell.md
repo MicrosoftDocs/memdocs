@@ -143,7 +143,7 @@ In the [Configuration Manager Windows PowerShell Basics](../../../develop/core/u
 
 1.  You can update Windows PowerShell help (and specifically the help for the Configuration Manager cmdlets) using the `Update-Help` cmdlet.  
 
-     If your computer is connected to the Internet, go to your Windows PowerShell window, and type in `Update-Help â€“Module configurationmanager`.  
+     If your computer is connected to the Internet, go to your Windows PowerShell window, and type in `Update-Help -Module configurationmanager`.  
 
     ```  
     PS XYZ:\> Update-Help -Module configurationmanager  
