@@ -2,7 +2,7 @@
 title: Deployment plans in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn about deployment plans in Desktop Analytics.
-ms.date: 04/22/2019
+ms.date: 05/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -46,8 +46,6 @@ As part of your deployment plan, you do the following actions:
 Desktop Analytics refreshes deployment plan data daily. Any changes you make might not appear for 24 hours. Such changes include assigning importance to an app, or choosing a device to include in a pilot.  
 
 After connecting Desktop Analytics to Configuration Manager, select your collections in the deployment plans. This integration then lets you deploy Windows to a collection based on the Desktop Analytics data.
-
-While Desktop Analytics works best with Configuration Manager collections, you can also create device groups in Log Analytics. For more information, see [Computer groups in Log Analytics log searches](https://docs.microsoft.com/azure/log-analytics/log-analytics-computer-groups).
 
 
 
