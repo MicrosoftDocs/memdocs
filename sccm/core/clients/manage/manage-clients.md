@@ -304,7 +304,7 @@ Adjust the size of the client cache without having to reinstall the client by co
 >  The uninstall process displays no results on the screen. To verify that client uninstallation has succeeded, examine the log file **CCMSetup.log** in the folder *%windir%\ccmsetup\logs* on the client computer.  
 
 > [!TIP]
-> If you need to wait for the uninstall to complete before doing something else, you can execute `Wait-Process CCMSetup` in PowerShell to halt until the process completes.
+> If you need to wait for the uninstall process to complete before doing something else, run `Wait-Process CCMSetup` in PowerShell. This command can pause a script until the CCMSetup process completes.
 
 ##  <a name="BKMK_ConflictingRecords"></a> Manage Conflicting Records for Configuration Manager Clients  
  Configuration Manager uses the hardware identifier to attempt to identify clients that might be duplicates and alert you to the conflicting records. For example, if you reinstall a computer, the hardware identifier would be the same but the GUID used by Configuration Manager might be changed.  
