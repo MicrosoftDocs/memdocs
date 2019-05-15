@@ -17,7 +17,7 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-The software update deployment phase is the process of deploying the software updates. No matter how you deploy software updates, the site:
+The software update deployment phase is the process of deploying software updates. No matter how you deploy software updates, the site:
 - Adds the updates to a software update group
 - Distributes the update content to distribution points
 - Deploys the update group to clients  
