@@ -677,7 +677,7 @@
       href: clients/manage/collections/manage-collections.md
     - name: How to use maintenance windows
       href: clients/manage/collections/use-maintenance-windows.md
-    - name: How to automatically categorize devices into collections with
+    - name: How to automatically categorize devices into collections
       href: clients/manage/collections/automatically-categorize-devices-into-collections.md
     - name: Security and privacy for collections
       href: clients/manage/collections/security-and-privacy-for-collections.md
