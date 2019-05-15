@@ -578,7 +578,7 @@ Figure 2. NTFS data streams
  Configure Unattend.xml to join a workgroup. Then, use the built\-in **Recover from Domain** task sequence step to add a step in the task sequence to join the domain after the static IP has been applied.  
 
 ### Driver Installation  
- To ensure the best possible user experience, installation of hardware devices and software drivers should run as seamlessly as possible, with little or no user intervention. Microsoft provides tools and guidelines to help create installation packages that meet this goal. For general information about driver installation, see [Device and Driver Installation](https://msdn.microsoft.com/en-us/windows/desktop/dn653558).  
+ To ensure the best possible user experience, installation of hardware devices and software drivers should run as seamlessly as possible, with little or no user intervention. Microsoft provides tools and guidelines to help create installation packages that meet this goal. For general information about driver installation, see [Device and Driver Installation](https://docs.microsoft.com/windows-hardware/drivers/install/).  
 
  Review device driver installation–related problems and solutions:  
 
