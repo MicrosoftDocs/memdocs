@@ -49,10 +49,6 @@ This section provides information and tasks for the fundamental programming tech
 
 -   [Introduction to Windows Script Technologies](https://docs.microsoft.com/previous-versions/tn-archive/ee176792\(v=technet.10\))  
 
--   [VBScript Primer](https://technet.microsoft.com/en-us/scriptcenter/dd940112.aspx)  
-
--   [WSH Primer](http://go.microsoft.com/fwlink/?linkid=43948)  
-
 -   [WMI Scripting Primer](http://go.microsoft.com/fwlink/?linkid=43949)  
 
 -   [Windows Management Instrumentation](http://go.microsoft.com/fwlink/?LinkId=43950)  
