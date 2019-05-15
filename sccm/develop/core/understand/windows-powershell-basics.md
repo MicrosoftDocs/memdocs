@@ -193,7 +193,7 @@ PS C:\> $WERState
 Enabled  
 ```  
 
- There are lots more things you can do with variables â€“ but we've covered the most important concepts you'll need in the beginning.  
+ There are lots more things you can do with variables, but we've covered the most important concepts you'll need in the beginning.  
 
 ## The Module  
  The last concept we'll cover here is the Module.  All Windows PowerShell cmdlets are coded and stored in a module.  The modules for Windows are available by default in your Windows PowerShell window. You can add modules to your Windows PowerShell session by importing them using the `Import-Module` cmdlet.  An example of importing a module is contained in the topic [Connecting to Configuration Manager with Windows PowerShell](../../../develop/core/understand/connecting-to-configuration-manager-with-windows-powershell.md).  
