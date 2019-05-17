@@ -145,7 +145,7 @@ Both can perform adequately, assuming the single server is appropriately sized, 
 
 Remote SQL requires the upfront and operational cost of an additional server, but is typical among the majority of large-scale customers. Benefits of this configuration include:
 
-- Increased site availability options, such as SQL Always On)
+- Increased site availability options, such as SQL Always On
 - Ability to run heavy reporting with less overheard to site processing
 - Simpler disaster recovery in some situations
 - Easier security management
@@ -240,4 +240,4 @@ Traditional server performance monitoring works effectively for general Configur
 ## See also
 
 - [Site sizing and performance guidelines](../plan-design/configs/site-size-performance-guidelines.md)
-- [Configuration Manager on Azure frequently asked questions](configuration-manager-on-azure.md).
+- [Configuration Manager on Azure frequently asked questions](configuration-manager-on-azure.md)
