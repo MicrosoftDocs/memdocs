@@ -23,6 +23,8 @@ System Center Configuration Manager continues to support packages and programs t
 - “One-off” scripts that do not need to be continually monitored  
 - Scripts that run on a recurring schedule and cannot use global evaluation
 
+[!TIP] Consider using the [run scripts](/sccm/apps/deploy-use/create-deploy-scripts) feature in the Configuration Manager console. Scripts may be a better solution for some of the preceding scenarios instead of using packages and programs.
+
 When you migrate packages from an earlier version of Configuration Manager, you can deploy them in your Configuration Manager hierarchy. After migration is complete, the packages appear in the **Packages** node in the **Software Library** workspace.
 
 You can modify and deploy these packages in the same way you did by using software distribution. The **Import Package from Definition Wizard** remains in Configuration Manager to import legacy packages. Advertisements are converted to deployments when they are migrated from Configuration Manager 2007 to a Configuration Manager hierarchy.  
