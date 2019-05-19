@@ -15,7 +15,7 @@ manager: dougeby
 
 # Software inventory views in Configuration Manager
 
-The Configuration Manager software inventory views contain information about the files and their associated products that are found on Configuration Manager clients during software inventory scanning. Software inventory, by default, will scan for all executable file types (\*.exe) on clients. The software inventory options are configured for the site and will determine which files are inventoried and how much information is collected about each. For more information about configuring software inventory, see [How to Configure Software Inventory in Configuration Manager](https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/hh509028(v%3dtechnet.10)) in the Configuration Manager Documentation Library.
+The Configuration Manager software inventory views contain information about the files and their associated products that are found on Configuration Manager clients during software inventory scanning. Software inventory, by default, will scan for all executable file types (\*.exe) on clients. The software inventory options are configured for the site and will determine which files are inventoried and how much information is collected about each. For more information about configuring software inventory, see [How to Configure Software Inventory in Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/hh509028(v%3dtechnet.10)) in the Configuration Manager Documentation Library.
 
 ## Software inventory view schema
 
