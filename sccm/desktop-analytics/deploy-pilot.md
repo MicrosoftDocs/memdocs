@@ -2,7 +2,7 @@
 title: How to deploy to pilot
 titleSuffix: Configuration Manager
 description: A how-to guide for deploying to a Desktop Analytics pilot group.
-ms.date: 01/25/2019
+ms.date: 04/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -19,7 +19,7 @@ ms.collection: M365-identity-device-management
 > [!Note]  
 > This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
 
-One of the benefits of Desktop Analytics is to help identify the smallest set of devices that provide the widest coverage of factors. It focuses on the factors that are most important to a pilot of Windows and Office upgrades and updates. Making sure the pilot is more successful allows you to move more quickly and confidently to broad deployments in production.  
+One of the benefits of Desktop Analytics is to help identify the smallest set of devices that provide the widest coverage of factors. It focuses on the factors that are most important to a pilot of Windows upgrades and updates. Making sure the pilot is more successful allows you to move more quickly and confidently to broad deployments in production.  
 
 [!INCLUDE [Definition of pilot and production](includes/define-pilot-prod.md)]
 
@@ -27,7 +27,7 @@ One of the benefits of Desktop Analytics is to help identify the smallest set of
 
 ## Address issues
 
-Use the Desktop Analytics portal to review any reported issues with assets that might block your deployment. Then approve, reject, or modify the suggested fix. All items must be marked **Ready** or **Ready (with remediation)** before the pilot deployment starts. 
+Use the Desktop Analytics portal to review any reported issues with assets that might block your deployment. Then approve, reject, or modify the suggested fix. All items must be marked **Ready** or **Ready (with remediation)** before the pilot deployment starts.
 
 1. Go to the Desktop Analytics portal, and select **Deployment plans** in the Manage group.  
 
@@ -37,48 +37,39 @@ Use the Desktop Analytics portal to review any reported issues with assets that 
 
 4. On the **Apps** tab, review the apps that need your input.  
 
-5. For each app, select the app name. In the information pane, review the recommendation, and select the upgrade decision. If you choose **Not reviewed** or **Unable**, then Desktop Analytics doesn't include devices with this app in the pilot deployment.  
+5. For each app, select the app name. In the information pane, review the recommendation, and select the upgrade decision. If you choose **Not reviewed** or **Unable**, then Desktop Analytics doesn't include devices with this app in the pilot deployment. If you choose **Ready (with remediation)**, use the   **Remediation notes** to capture the actions to take to address an issue, like *reinstall* or *find the manufacturer’s recommended version*.
 
 6. Repeat this review for other assets.  
 
 
 
-
 ## Create software
 
-Before you can deploy Windows or Office, first create the software objects in Configuration Manager.
-
-- [Office 365 ProPlus application](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#deploy-office-365-apps)  
-
-- [Windows 10 in-place upgrade task sequence](https://docs.microsoft.com/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system)
+Before you can deploy Windows, first create the software objects in Configuration Manager. For more information, see [Windows 10 in-place upgrade task sequence](https://docs.microsoft.com/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system).
 
 
 
 ## Deploy to pilot devices
 
-Configuration Manager uses the data from Desktop Analytics to create a collection for the pilot deployment. Don't deploy the application or task sequence using a traditional deployment. Use the following procedure to create a Desktop Analytics-integrated deployment:
+Configuration Manager uses the data from Desktop Analytics to create a collection for the pilot deployment. Don't deploy the task sequence using a traditional deployment. Use the following procedure to create a Desktop Analytics-integrated deployment:
 
 1. In the Configuration Manager console, go to the **Software Library**, expand **Desktop Analytics Servicing**, and select the **Deployment Plans** node.  
 
 2. Select your deployment plan, and then select **Deployment Plan Details** in the ribbon.  
 
-3. In the **Pilot status** tile, choose one of the following object types from the drop-down list:  
+3. In the **Pilot status** tile, select **Task sequence** from the drop-down list.  
 
-    - **Application** for Office 365 ProPlus  
+    > [!Note]  
+    > Don't use the **Application** option. It's reserved for future functionality.
 
-    - **Task sequence** for Windows 10  
-  
-   Select **Deploy**. This action launches the Deploy Software Wizard for the selected object type. 
+    Select **Deploy**. This action launches the Deploy Software Wizard for the selected object type.
 
+    > [!Note]  
+    > With the Desktop Analytics integration, Configuration Manager automatically creates a collection for the pilot deployment plan. It can take up to 10 minutes for this collection to synchronize before you can use it.<!-- 3887891 -->
+    >
+    > This collection is reserved for Desktop Analytics deployment plan devices. Manual changes to this collection aren't supported.<!-- 3866460, SCCMDocs-pr 3544 -->  
 
-For more information, see the following articles:  
-
-- [Deploy an application](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy)  
-
-- [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS)  
-
-
-If your deployment plan is for both Windows 10 and Office 365, repeat this process to create a second deployment. For example, if the first deployment is for the task sequence, create a second deployment for the application.
+For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence).
 
 
 
@@ -86,16 +77,12 @@ If your deployment plan is for both Windows 10 and Office 365, repeat this proce
 
 ### Configuration Manager console
 
-Use Configuration Manager deployment monitoring the same as any other application and task sequence deployment. For more information, see the following articles:  
-
-- [Monitor application from the Configuration Manager console](/sccm/apps/deploy-use/monitor-applications-from-the-console)  
-
-- [Monitor OS deployments](/sccm/osd/deploy-use/monitor-operating-system-deployments)  
+Use Configuration Manager deployment monitoring the same as any other task sequence deployment. For more information, see [Monitor OS deployments](/sccm/osd/deploy-use/monitor-operating-system-deployments).
 
 
 ### Desktop Analytics portal
 
-Use the Desktop Analytics portal to view the status of any deployment plan. Select the deployment plan, and then select **Plan overview**. 
+Use the Desktop Analytics portal to view the status of any deployment plan. Select the deployment plan, and then select **Plan overview**.
 
 ![Screenshot of deployment plan overview in Desktop Analytics](media/deployment-plan-overview.png)
 
@@ -121,7 +108,7 @@ As you address these deployment issues, the dashboard continues to show the prog
 
 ## Next steps
 
-Let the pilot run for a period of time to collect operational data. Encourage users of pilot devices to test apps, add-ins, and macros. 
+Let the pilot run for a period of time to collect operational data. Encourage users of pilot devices to test apps.
 
 When your pilot deployment meets your success criteria, go to the next article to deploy to production.
 > [!div class="nextstepaction"]  

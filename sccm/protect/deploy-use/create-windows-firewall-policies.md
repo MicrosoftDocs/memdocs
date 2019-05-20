@@ -7,9 +7,9 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: 6ecdfad1-6305-45a8-ae75-3f33b967cb8f
-author: aczechowski
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
 # Create and deploy Windows Firewall policies for Endpoint Protection in System Center Configuration Manager

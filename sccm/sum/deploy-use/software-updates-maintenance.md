@@ -54,7 +54,7 @@ Starting version 1806, the WSUS cleanup option occurs after every sync and does 
 <!--1357898 -->
 
 - The **Expired updates** option for WSUS servers on CAS and primary sites.
-  - WSUS servers for secondary sites, don't run WSUS cleanup for expired updates.
+  - WSUS servers for secondary sites don't run the WSUS cleanup for expired updates.
 - Configuration Manager builds a list of superseded updates from its database. The list is based on the supersedence behavior in the Software Update Point component properties.
   - The update configuration items meeting the supersedence behavior criteria are expired in the Configuration Manager console.
   - The updates are declined in WSUS for CAS and primary sites but not for secondary sites.

@@ -7,9 +7,9 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: ef3ab519-9cf7-47fc-8831-d400e0e96df8
-author: aczechowski
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
 # Security and privacy for Wi-Fi and VPN profiles in System Center Configuration Manager

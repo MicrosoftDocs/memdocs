@@ -2,14 +2,14 @@
 title: "Download software updates "
 titleSuffix: "Configuration Manager"
 description: "Use the Download Software Updates Wizard to download software updates and distribute them to distribution points so they are ready to deploy to clients."
-author: aczechowski
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: de78e8d3-043f-4cd3-97e0-4dfb824fd3fb
 manager: dougeby
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 ms.collection: M365-identity-device-management
 ---
 

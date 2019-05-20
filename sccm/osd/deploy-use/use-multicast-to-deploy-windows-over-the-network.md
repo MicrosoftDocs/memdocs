@@ -28,10 +28,10 @@ Multicast is a network optimization method that you can use in your System Cente
   Complete the steps in one of the operating system deployment scenarios and then use the following sections to support multicast.  
 
 ##  <a name="BKMK_Configure"></a> Configure a distribution point to support multicast  
- To use multicast when you   deploy operating systems, you must configure a distribution point to support multicast. For more information, see [Configure distribution points to support multicast](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_DPMulticast).  
+ To use multicast when you   deploy operating systems, you must configure a distribution point to support multicast. For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-multicast). For a list of ports required to support multicast, see [Ports](/sccm/core/plan-design/hierarchy/ports#BKMK_PortsClient-DP2).  
 
 ## Prepare an operating system image for multicast deployments  
  To configure the operating system image package to support multicast, see [Prepare the operating system image for multicast deployments](../get-started/manage-operating-system-images.md#BKMK_OSImageMulticast).  
 
 ##  <a name="BKMK_Deploy"></a> Deploy the task sequence  
- Deploy the operating system to a target collection. For more information, see [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  
+ Deploy the operating system to a target collection. For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence).  

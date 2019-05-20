@@ -2,7 +2,7 @@
 title: Manage collections
 titleSuffix: Configuration Manager
 description: Do common collections management tasks in Configuration Manager.
-ms.date: 08/17/2018
+ms.date: 04/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -20,7 +20,7 @@ ms.collection: M365-identity-device-management
 Use the overview information in this article to help you perform management tasks for collections in Configuration Manager.  
 
 > [!NOTE]  
->  For information about how to create Configuration Manager collections, see [How to create collections](/sccm/core/clients/manage/collections/create-collections).  
+>  For information about how to create Configuration Manager collections, see [How to create collections](/sccm/core/clients/manage/collections/create-collections).
 
 
 
@@ -107,7 +107,7 @@ Use the overview information in this article to help you perform management task
 
  - **Configuration Baseline**: Opens the **Deploy Configuration Baselines** dialog box. Configure the deployment of one or more configuration baselines to the selected collection. For more information, see [How to deploy configuration baselines](/sccm/compliance/deploy-use/deploy-configuration-baselines).  
 
- - **Task Sequence**: Opens the **Deploy Software Wizard**. Select and configure a task sequence deployment to the selected collection. For more information, see [Manage task sequences to automate tasks](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS).  
+ - **Task Sequence**: Opens the **Deploy Software Wizard**. Select and configure a task sequence deployment to the selected collection. For more information, see [Manage task sequences to automate tasks](/sccm/osd/deploy-use/deploy-a-task-sequence).  
 
  - **Software Updates**: Opens the **Deploy Software Updates Wizard**. Configure the deployment of software updates to resources in the selected collection. For more information, see [Manage software updates](/sccm/sum/understand/software-updates-introduction).  
 
@@ -122,7 +122,6 @@ Use the overview information in this article to help you perform management task
 
 #### Properties
  For more information, see [Collection properties](#BKMK_CollProp).  
-
 
 
 ## <a name="bkmk_user"></a> How to manage user collections  
@@ -147,10 +146,9 @@ Use the overview information in this article to help you perform management task
  - **Deploy**  
      - **Application**  
      - **Program**  
-     - **Configuration Baseline**   
+     - **Configuration Baseline**
  - **Move**  
  - **Properties**
-
 
 
 ##  <a name="BKMK_CollProp"></a> Collection properties  
@@ -183,3 +181,32 @@ Use the overview information in this article to help you perform management task
 
 #### Alerts 
  Configure when alerts are generated for client status and Endpoint Protection. For more information, see [How to configure client status](/sccm/core/clients/deploy/configure-client-status) and [How to monitor Endpoint Protection](/sccm/protect/deploy-use/monitor-endpoint-protection).  
+## <a name="bkmk_powershell"></a> Using PowerShell
+
+PowerShell can be used to manage collections.  For more information, see:
+
+* [Get-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollection)
+* [Set-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmcollection)
+* [New-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmcollection)
+* [Copy-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/copy-cmcollection)
+* [Remove-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollection)
+* [Import-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/import-cmcollection)
+* [Export-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/export-cmcollection)
+* [Get-CMCollectionMember](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionmember)
+* [Get-CMCollectionSetting](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionsetting)
+* [Invoke-CMCollectionUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/invoke-cmcollectionupdate)
+* [Add-CMCollectionMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/add-cmcollectionmembershiprule)
+* [Set-CMCollectionPowerManagement](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmcollectionpowermanagement)
+* [Get-CMCollectionMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionmembershiprule)
+* [Remove-CMCollectionMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectionmembershiprule)
+* [Get-CMCollectionDirectMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectiondirectmembershiprule)
+* [Get-CMCollectionQueryMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionquerymembershiprule)
+* [Get-CMCollectionIncludeMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionincludemembershiprule)
+* [Add-CMCollectionToAdministrativeUser](https://docs.microsoft.com/powershell/module/configurationmanager/add-cmcollectiontoadministrativeuser)
+* [Remove-CMCollectionQueryMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectionquerymembershiprule)
+* [Remove-CMCollectionDirectMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectiondirectmembershiprule)
+* [Get-CMCollectionExcludeMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionexcludemembershiprule)
+* [Add-CMCollectionToDistributionPointGroup](https://docs.microsoft.com/powershell/module/configurationmanager/add-cmcollectiontodistributionpointgroup)
+* [Remove-CMCollectionIncludeMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectionincludemembershiprule)
+* [Remove-CMCollectionExcludeMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectionexcludemembershiprule)
+* [Remove-CMCollectionFromAdministrativeUser](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectionfromadministrativeuser)

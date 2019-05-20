@@ -2,13 +2,13 @@
 title: Checklist for 1902
 titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 1902.
-ms.date: 03/27/2019
+ms.date: 04/11/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: b87ac054-9b37-4725-a3f3-2340cfb10bff
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -60,7 +60,7 @@ The first time you use a Configuration Manager console after the update has fini
 ## Checklist
 
 #### All sites run a supported version of Configuration Manager  
-Each site server in the hierarchy must run the same version of Configuration Manager before you can start the installation of update 1902. To update to 1902, you must use version 1710, 1802, 1806, or 1810.
+Each site server in the hierarchy must run the same version of Configuration Manager before you can start the installation of update 1902. To update to 1902, you must use version 1802, 1806, or 1810.
 
 #### Review the status of your product licensing 
 You must have an active Software Assurance (SA) agreement or equivalent subscription rights to install this update. When you update the site, the **Licensing** page presents the option to confirm your **Software Assurance expiration date**.

@@ -2,13 +2,13 @@
 title: New version 1802
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1802 of Configuration Manager.
-ms.date: 06/12/2018
+ms.date: 04/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 5bd637b1-d7a1-411b-877a-c7aae9741173
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -208,12 +208,12 @@ This release includes the following improvements to operating system deployment:
      - Support for all operating system deployment scenarios from Software Center, PXE, and media.
      - Improvements to console actions such as copy, import, export, and warning during object deletion.
      - Support for the [Create Prestaged Content File](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent) wizard.
-     - Integration with deployment verification. For more information, see [High-risk task sequence deployments](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS). 
+     - Integration with deployment verification. For more information, see [High-risk task sequence deployments](/sccm/osd/deploy-use/deploy-a-task-sequence). 
      - The Run Task Sequence step can now be used across multiple levels of task sequences, not just a single parent-child relationship. Multi-level relationships increase the complexity, so use with caution. These relationships are still checked for circular references.
     
 ### Deployment templates for task sequences
 <!-- 1357391 -->
-The [deployment wizard for task sequences](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS) can now create a deployment template. The deployment template can be saved and applied to an existing or new task sequence to create a deployment. 
+The [deployment wizard for task sequences](/sccm/osd/deploy-use/deploy-a-task-sequence) can now create a deployment template. The deployment template can be saved and applied to an existing or new task sequence to create a deployment. 
 
 ### Phased deployments for task sequences
 <!--1356837-->
@@ -281,11 +281,11 @@ The **Windows 10 Servicing details for a specific collection** report displays g
 
 ### Improvements to Configuration Manager Policies for Windows Defender Exploit Guard
 <!-- 1356220 -->
-Additional policy settings for the [Attack Surface Reduction](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#BKMK_ASR) and [Controlled folder access](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#BKMK_CFA) components have been added in Configuration Manager for [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard).
+Additional policy settings for the [Attack Surface Reduction](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#bkmk_ASR) and [Controlled folder access](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#bkmk_CFA) components have been added in Configuration Manager for [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard).
 
 ### New host interaction settings for Windows Defender Application Guard
 <!-- 1356256 -->
-For Windows 10 version 1709 and later devices, there are two new host interaction settings for [Windows Defender Application Guard](/sccm/protect/deploy-use/create-deploy-application-guard-policy#BKMK_HIS): 
+For Windows 10 version 1709 and later devices, there are two new host interaction settings for [Windows Defender Application Guard](/sccm/protect/deploy-use/create-deploy-application-guard-policy#bkmk_HIS): 
 - Websites can be given access to the host’s virtual graphics processor. 
 - Files downloaded inside the container can be persisted on the host. 
 
@@ -299,7 +299,7 @@ This release includes the following improvements to the Configuration Manager co
 - Device lists under Assets and Compliance, Devices, now display the primary user by default. This column only displays in the Devices node. The last logged on user can also be added as an optional column.<!-- 1357280 --> Enable [user and device affinity](/sccm/core/clients/deploy/about-client-settings#user-and-device-affinity) client settings for the site to associate a primary user with a device.
 - If a collection is a member of another collection and it is renamed, then the new name is updated under membership rules.<!--1357282--> 
 - When using remote control on a client with multiple monitors at different DPI scaling, the mouse cursor now correctly maps between them. <!--433170-->
-- The [Office 365 Client Management dashboard](/sccm/sum/deploy-use/manage-office-365-proplus-updates#office-365-client-management-dashboard) displays a list of relevant devices when graph sections are selected. <!--1357281 --> 
+- The [Office 365 Client Management dashboard](/sccm/sum/deploy-use/office-365-dashboard) displays a list of relevant devices when graph sections are selected. <!--1357281 --> 
 
 
 

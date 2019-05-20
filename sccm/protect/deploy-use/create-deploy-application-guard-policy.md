@@ -7,8 +7,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: 33a6c1d9-4dd8-411c-a748-693a5bd2ea5a
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -29,7 +29,7 @@ To create and deploy a Windows Defender Application Guard policy, you must use t
 1. In the Configuration Manager console, choose **Assets and Compliance**.
 2. In the **Assets and Compliance** workspace, choose **Overview** > **Endpoint Protection** > **Windows Defender Application Guard**.
 3. In the **Home** tab, in the **Create** group, click **Create Windows Defender Application Guard Policy**.
-4. Using the [article](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard) as a reference, you can browse and configure the available settings. Configuration Manager allows you to set certain policy settings see [host interaction settings](#BKMK_HIS) and [application behavior](#BKMK_AppB).
+4. Using the [article](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard) as a reference, you can browse and configure the available settings. Configuration Manager allows you to set certain policy settings see [host interaction settings](#bkmk_HIS) and [application behavior](#bkmk_ABS).
 5. On the **Network Definition** page, specify the corporate identity, and define your corporate network boundary.
 
     > [!NOTE]

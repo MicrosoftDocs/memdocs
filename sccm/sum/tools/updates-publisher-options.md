@@ -7,8 +7,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
 ms.assetid: 4e620080-5400-45bb-87c2-fbdbc8aeacac
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -117,7 +117,7 @@ to open the **Updates Publisher Properties**, and then choose **Check for update
 After Updates Publisher finds a new update, it displays the **Update Available** window and you can then choose to install it. If you choose to not install the update, it is offered the next time you open the console.
 
 ## Logging
-Updates Publisher logs basic information about Updates Publisher to **&lt;*path*&gt;\Windows\Temp\UpdatesPublisher.log**.
+Updates Publisher logs basic information about Updates Publisher to **%WINDIR%\Temp\UpdatesPublisher.log**.
 
 Use notepad or **CMTrace** to view the log. CMTrace is the Configuration Manager log file tool and can be found in the **\SMSSetup\Tools** folder of the Configuration Manager source media.
 

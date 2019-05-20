@@ -105,7 +105,7 @@ Use task sequences in System Center Configuration Manager to automatically insta
 
 12. Complete the wizard.  
 
-    You can now deploy the task sequence to a collection of computers.  For more information, see [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  
+    You can now deploy the task sequence to a collection of computers.  For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence).  
 
 ##  <a name="BKMK_InstallExistingOSImageTSExample"></a> Example task sequence to install an existing operating system image  
  Use the following table as a guide as you create a task sequence that deploys an operating system using an existing operating system image. The table will help you decide the general sequence for your task sequence steps and how to organize and structure those task sequence steps into logical groups. The task sequence that you create may vary from this sample and can contain more or less task sequence steps and groups.  

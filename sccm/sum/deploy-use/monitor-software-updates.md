@@ -2,8 +2,8 @@
 title: Monitor software updates
 titleSuffix: "Configuration Manager"
 description: "The System Center Configuration Manager console provides alerts and statuses to monitor updates and compliance."
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.date: 07/30/2018
 ms.topic: conceptual

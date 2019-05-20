@@ -116,7 +116,7 @@ Consult your PKI administrators before you decide whether Configuration Manager 
 -   The requirement to check the CRL for each connection to a site system that's configured to use a PKI certificate is greater than the following requirements:  
     - Faster connections  
     - Efficient processing on the client  
-    - The risk of clients failing to connect to servers if they can't locate the CRL  
+    - The risk of clients failing to connect to servers if the CRL cannot be located  
 
 
 ###  <a name="BKMK_PlanningForRootCAs"></a> Plan for the PKI trusted root certificates and the certificate issuers list  
@@ -383,7 +383,7 @@ The returned string is the trusted root key. Verify that it matches the **SMSPub
 
 - [Microsoft Store for Business online apps](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)  
 
-- Reduce infrastructure requirements. For example, [Software Center using the management point](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex) instead of the application catalog  
+- Reduce infrastructure requirements. For example, [Software Center using the management point](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex) instead of the application catalog  
 
 - [Manage Office 365 apps](/sccm/sum/deploy-use/manage-office-365-proplus-updates)  
 

@@ -2,13 +2,13 @@
 title: Support Center
 titleSuffix: Configuration Manager
 description: Troubleshoot Configuration Manager clients with the Support Center.
-ms.date: 03/06/2019
+ms.date: 05/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: c631197d-7daa-4faa-9e22-980cd6d604c2
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -42,7 +42,7 @@ Support Center includes Support Center Viewer, a tool that support personnel use
 
 ### Support Center log file viewer
 
-Support Center includes a modern log viewer. This tool replaces CMTrace. OneTrace provides a customizable interface with support for tabs and dockable windows. It has a fast presentation layer, and can load large log files in seconds.
+Support Center includes a modern log viewer. This tool replaces CMTrace and provides a customizable interface with support for tabs and dockable windows. It has a fast presentation layer, and can load large log files in seconds.
 
 
 ### PowerShell cmdlets

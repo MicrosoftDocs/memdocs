@@ -135,7 +135,7 @@ The information we collect from you will be used by Microsoft and its controlled
 ### What This Feature Does:  
  Silverlight is a prerequisite for the Configuration Manager client and the Application Catalog. Silverlight updates automatically and has additional data processing and transmitting practices. Configuration Manager does not control this functionality.  
 
- The [Microsoft Silverlight 5.0 Privacy Statement](http://go.microsoft.com/fwlink/?LinkID=251808) should be read in conjunction with this privacy statement.  
+ The [Microsoft Silverlight 5.0 Privacy Statement](https://privacy.microsoft.com/privacystatement) should be read in conjunction with this privacy statement.
 
 ### Information Collected, Processed, or Transmitted:  
  For details about what information is collected and how it is used, see the Silverlight Privacy Statement:  

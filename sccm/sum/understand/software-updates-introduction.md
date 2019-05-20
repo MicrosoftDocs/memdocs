@@ -2,8 +2,8 @@
 title: Introduction to software updates
 titleSuffix: "Configuration Manager"
 description: "Learn the basics of software updates in System Center Configuration Manager."
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.date: 10/30/2017
 ms.topic: conceptual

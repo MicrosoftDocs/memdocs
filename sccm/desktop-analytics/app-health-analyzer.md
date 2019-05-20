@@ -2,7 +2,7 @@
 title: App Health Analyzer
 titleSuffix: Configuration Manager
 description: A how-to guide for assessing compatibility with the App Health Analyzer in Desktop Analytics.
-ms.date: 01/25/2019
+ms.date: 04/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -19,23 +19,23 @@ ms.collection: M365-identity-device-management
 > [!Note]  
 > This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
 
-Use the App Health Analyzer toolkit for Desktop Analytics to evaluate desktop apps for compatibility issues. It helps to focus your validation efforts for desktop apps including line-of-business apps. The tool provides a risk rating along with possible remediation actions. It also includes an app readiness report to help you assess app readiness for your Windows 10 upgrades. 
+Use the App Health Analyzer toolkit for Desktop Analytics to evaluate desktop apps for compatibility issues. It helps to focus your validation efforts for desktop apps including line-of-business apps. The tool provides a risk rating along with possible remediation actions. It also includes an app readiness report to help you assess app readiness for your Windows 10 upgrades.
 
 
 
 ## Download
 
-Download the toolkit from the [Microsoft Download Center](http://download.microsoft.com/download/3/7/D/37D7E378-D805-4822-A712-4EADBF50FC08/AppHealthAnalyzer.zip)<!-- (https://www.microsoft.com/download/details.aspx?id=57276) -->. Always use the most current version.
+Contact your Microsoft representative to get a download link. Always use the most current version.
 
-The download is a Windows Installer (MSI) file. Install the App Health Analyzer toolkit on a user's computer. When you run the toolkit, a wizard guides you through the process of creating an app readiness report. 
+The download is a Windows Installer (MSI) file. Install the App Health Analyzer toolkit on a user's computer. When you run the toolkit, a wizard guides you through the process of creating an app readiness report.
 
-The toolkit includes sample scripts. If you need to automate the collection of readiness information from devices throughout your organization, use Configuration Manager to deploy these scripts. For more information, see [Automation](#automation). 
+The toolkit includes sample scripts. If you need to automate the collection of readiness information from devices throughout your organization, use Configuration Manager to deploy these scripts. For more information, see [Automation](#automation).
 
 
 
 ## How it works
 
-The tool does a static analysis of applications that are already installed on a device. It doesn't do package analysis of an app installer. A user doesn't need to run the app. The tool assesses all installed applications registered with Windows on the device. 
+The tool does a static analysis of applications that are already installed on a device. It doesn't do package analysis of an app installer. A user doesn't need to run the app. The tool assesses all installed applications registered with Windows on the device.
 
 App Health Analyzer doesn't require you to maintain installers for legacy apps that you don't actively manage. It identifies compatibility issues with the app in its installed state. All apps are assessed for predefined compatibility rules. These signals are common prevalent issues reported to Microsoft when customers upgrade to Windows 10. The compatibility insights also include possible remediation actions or fixes. If you have apps with issues, start with the suggested actions.
 
@@ -62,7 +62,7 @@ Before installing and using the toolkit, make sure the device meets the followin
 
 
 
-## Analyze 
+## Analyze
 
 1. Install the App Health Analyzer to the target device. By default, it installs to the following path: `C:\Program Files\Microsoft Corporation\Microsoft App Health Analyzer`  
 
@@ -71,7 +71,7 @@ Before installing and using the toolkit, make sure the device meets the followin
     > [!Note]  
     > If any of the required diagnostic data settings aren't configured, you'll see an error. Make sure you properly configure the prerequisite settings. For more information, see [Diagnostic data levels](/sccm/desktop-analytics/enable-data-sharing#diagnostic-data-levels).  
 
-3. When the app readiness report opens, it starts evaluating applications. Wait for the toolkit to finish, which can take time depending upon the number of applications on the device.   
+3. When the app readiness report opens, it starts evaluating applications. Wait for the toolkit to finish, which can take time depending upon the number of applications on the device.  
 
 ![Screenshot of the app readiness report of the App Health Analyzer](media/app-readiness-report-evaluating.png)
 
@@ -81,20 +81,23 @@ You can minimize the window and continue with other tasks while the toolkit runs
 ### App readiness report features
 
 #### Get started
-This tab gives you an overview of the supported signals in this current version. It also includes possible remediation actions. 
+
+This tab gives you an overview of the supported signals in this current version. It also includes possible remediation actions.
 
 #### Insights
-This tab provides a view of all the apps the tool assessed. It shows the risk assessment and the various signals used for identifying compatibility issues. 
+
+This tab provides a view of all the apps the tool assessed. It shows the risk assessment and the various signals used for identifying compatibility issues.
 
 - **Signals** menu: Filter these apps by signals using the menu on the left  
 
-- **Export CSV**: Export these insights as a comma-separated values (CSV) file   
+- **Export CSV**: Export these insights as a comma-separated values (CSV) file  
 
 - **Rescan applications**: If you install any new applications, use this option to rerun the tool  
 
 - **Troubleshooting ID**: If the device has installed apps but you see no insights in the report, give this ID to support  
 
 #### Desktop Analytics
+
 This tab provides an overview of how you can use App Health Analyzer to provide readiness insights for apps across your organization.
 
 
@@ -103,8 +106,7 @@ This tab provides an overview of how you can use App Health Analyzer to provide 
 
 To get these app insights on many devices, deploy the App Health Analyzer command-line version with Configuration Manager. Deploy it to a small set of representative devices within your organization. For example, use your Desktop Analytics *pilot* collection. The same [prerequisites](#prerequisites) apply for these devices.
 
-
-Before doing a broader deployment, first verify a successful run. Make sure the data is showing up in Desktop Analytics. 
+Before doing a broader deployment, first verify a successful run. Make sure the data is showing up in Desktop Analytics.
 
 The App Health Analyzer toolkit includes a sample script, run_silent.cmd. By default, this script is in the following path: `C:\Program Files\Microsoft Corporation\Microsoft App Health Analyzer`. Use this script to automate the process with Configuration Manager.
 
@@ -123,7 +125,8 @@ The App Health Analyzer toolkit includes a sample script, run_silent.cmd. By def
 
 ## Desktop Analytics integration
 
-The following screenshot from Desktop Analytics shows the details of the ContosoApp version 1.15.25. 
+The following screenshot from Desktop Analytics shows the details of the ContosoApp version 1.15.25.
+
 - It has a **Medium** risk assessment  
 - An adopted version is available  
 - It has a driver dependency  
@@ -142,14 +145,17 @@ This section covers the troubleshooting steps and most common operational issues
 
 - Nothing happens when you run the tool  
 
+### Diagnostic data settings
 
-#### Diagnostic data settings
 Double-check the configurations for Windows diagnostic data settings. Configuration Manager should set these values when the device onboards to Desktop Analytics. You can use other methods such as script or group policy as a workaround. For more information, see [Diagnostic data levels](/sccm/desktop-analytics/enable-data-sharing#diagnostic-data-levels).  
 
-#### Verbose mode
+### Verbose mode
+
 Run the tool in verbose mode with the run_verbose.cmd script. By default, the script is in the following path: `C:\Program Files\Microsoft Corporation\Microsoft App Health Analyzer\run_verbose.cmd`
 
 Verbose mode generates additional logs, which can help you troubleshoot the potential issues. It saves the logs to the `LogCollection` folder in the installed location. For example, the default log collection path is: `C:\Program Files\Microsoft Corporation\Microsoft App Health Analyzer\LogCollection\`
 
-<!--Send the logs to AHASupport, who will follow up for further investigations. --do we really want to include this in public documentation?-->
 
+## See also
+
+The FastTrack Center Benefit for Windows 10 provides access to **Desktop App Assure**. This benefit is a new service designed to address issues with Windows 10 and Office 365 ProPlus app compatibility. For more information, see [Desktop App Assure](https://docs.microsoft.com/fasttrack/win-10-desktop-app-assure).

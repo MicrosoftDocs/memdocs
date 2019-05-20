@@ -5,7 +5,7 @@ description: Learn about the workloads that you can switch from Configuration Ma
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 01/14/2019
+ms.date: 05/13/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -71,7 +71,7 @@ Starting in Configuration Manager 1802, the Endpoint Protection workload include
 - Windows Defender Exploit Guard  
 - Windows Defender Application Control  
 - Windows Defender Security Center  
-- Windows Defender Advanced Threat Protection  
+- Windows Defender Advanced Threat Protection  (now known as Microsoft Defender Threat Protection)
 - Windows Information Protection  
 
 For more information on the Intune feature, see [Endpoint Protection for Microsoft Intune](https://docs.microsoft.com/intune/endpoint-protection-windows-10).

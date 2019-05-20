@@ -2,13 +2,13 @@
 title: What's new in version 1902
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1902 of Configuration Manager current branch.
-ms.date: 03/29/2019
+ms.date: 05/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -17,7 +17,7 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Update 1902 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1710, 1802, 1806, or 1810. <!-- baseline only statement:-->When installing a new site, it's also available as a baseline version. This article summarizes the changes and new features in Configuration Manager, version 1902.  
+Update 1902 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1802, 1806, or 1810. <!-- baseline only statement:-->When installing a new site, it's also available as a baseline version. This article summarizes the changes and new features in Configuration Manager, version 1902.  
 
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 1902](/sccm/core/servers/manage/checklist-for-installing-update-1902). After you update a site, also review the [Post-update checklist](/sccm/core/servers/manage/checklist-for-installing-update-1902#post-update-checklist).
 
@@ -162,16 +162,16 @@ The task sequence sets a timestamp when it puts the client in provisioning mode.
 
 ### View first screen only during remote control
 <!--3231732-->
-When connecting to a client with two or more monitors, it can be difficult to view them all in the Configuration Manager remote control viewer. A remote tools operator can now choose between seeing **All screens** or the **First screen** only. 
+***[Updated]***  When connecting to a client with two or more monitors, it can be difficult to view them all in the Configuration Manager remote control viewer. A remote tools operator can now choose between seeing **All screens** or the **First screen** only.
 
-<!-- For more information, see [How to remotely administer a Windows client computer](/sccm/core/clients/manage/remote-control/remotely-administer-a-windows-client-computer). -->
+For more information, see [How to remotely administer a Windows client computer](/sccm/core/clients/manage/remote-control/remotely-administer-a-windows-client-computer). 
 
 
 ### Specify a custom port for peer wakeup
 <!--3605925-->
-You can now specify a custom port number for wake-up proxy. In client settings, in the **Power Management** group, configure the setting for **Wake On LAN port number (UDP)**.  
+***[Updated]***  You can now specify a custom port number for wake-up proxy. In client settings, in the **Power Management** group, configure the setting for **Wake On LAN port number (UDP)**.  
 
-<!-- For more information, see [How to configure Wake on LAN](/sccm/core/clients/deploy/configure-wake-on-lan). -->
+For more information, see [How to configure Wake on LAN](/sccm/core/clients/deploy/configure-wake-on-lan).
 
 
 
@@ -214,17 +214,30 @@ You now see a more detailed progress bar during a Windows 10 in-place upgrade ta
 This feature works with any supported version of Windows 10, and only with the in-place upgrade task sequence. 
 
 
-### Improvements to task sequence media creation 
+### Improvements to task sequence media creation
+
 <!--3556027, fka 1359388-->
-This version includes several improvements to help you better create and manage task sequence media. <!-- For more information, see [Create task sequence media](/sccm/osd/deploy-use/create-task-sequence-media). -->
+***[Updated]*** This version includes several improvements to help you better create and manage task sequence media. For more information, see the following articles for specific media types:
+
+- [Create stand-alone media](/sccm/osd/deploy-use/create-stand-alone-media)
+- [Create prestaged media](/sccm/osd/deploy-use/create-prestaged-media)
+- [Create bootable media](/sccm/osd/deploy-use/create-bootable-media)
+- [Create capture media](/sccm/osd/deploy-use/create-capture-media)
 
 #### Specify temporary storage
-When you create task sequence media, now customize the location that the site uses for temporary storage of data. This process can require much temporary drive space. This change gives you greater flexibility to choose where to store these temporary files. 
+
+When you create task sequence media, now customize the location that the site uses for temporary storage of data. This process can require a lot of temporary drive space. This change gives you greater flexibility to choose where to store these temporary files.
 
 In the **Create Task Sequence Media Wizard**, specify a location for the **Staging folder**. By default this location is similar to the following path: `%UserProfile%\AppData\Local\Temp`.
 
 #### Add a label to the media
+
 You can now add a label to task sequence media. This label helps you better identify the media after you create it. In the **Create Task Sequence Media Wizard**, specify a **Media label**.
+
+#### Include autorun.inf file on media
+
+<!-- 4090666 -->
+when you create task sequence media, Configuration Manager doesn't add an autorun.inf file. This file is commonly blocked by antimalware products. You can still include the file if necessary for your scenario.
 
 
 ### Import a single index of an OS image
@@ -250,8 +263,9 @@ When you create a schedule to update an OS image, select the option to **Remove 
 
 
 ### Improvements to Run PowerShell Script task sequence step
+
 <!--3556028, fka 1359389-->
-The **Run PowerShell Script** task sequence step now includes the following improvements:  
+***[Updated]*** The **Run PowerShell Script** task sequence step now includes the following improvements:  
 
 - You can now directly enter Windows PowerShell code in this step. This change lets you run PowerShell commands during a task sequence without first creating and distributing a package with the script.
 
@@ -267,17 +281,18 @@ The **Run PowerShell Script** task sequence step now includes the following impr
 
 - To include the script parameters in the task sequence log, set the task sequence variable **OSDLogPowerShellParameters** to **TRUE**. By default, the parameters aren't in the log.  
 
-- Other improvements that provide similar functionality as the [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step. For example, specify alternate user credentials or specify a time-out. 
+- Other improvements that provide similar functionality as the [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step. For example, specify alternate user credentials or specify a time-out.
 
 > [!Important]  
 > To take advantage of this new Configuration Manager feature, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
-<!-- For more information, see [Run PowerShell Script](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript). -->
+For more information, see [Run PowerShell Script](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript).
 
 
 ### Other improvements to OS deployment
+
 <!--3633146,3641475,3654172,3734270-->
-This version includes the following improvements to OS deployment:
+***[Updated]*** This version includes the following improvements to OS deployment:
 
 - There's a new **View** default action on task sequences. <!--3633146-->  
 
@@ -292,20 +307,13 @@ This version includes the following improvements to OS deployment:
 ## <a name="bkmk_userxp"></a> Software Center
 
 ### Replace toast notifications with dialog window
+
 <!--3555947-->
-Sometimes users don't see the Windows toast notification about a restart or required deployment. Then they don't see the experience to snooze the reminder. This behavior can lead to a poor user experience when the client reaches a deadline.
+***[Updated]*** Sometimes users don't see the Windows toast notification about a restart or required deployment. Then they don't see the experience to snooze the reminder. This behavior can lead to a poor user experience when the client reaches a deadline.
 
-Now when deployments need a restart or software changes are required, you have the option of using a more intrusive dialog window. 
+Now when deployments need a restart or software changes are required, you have the option of using a more intrusive dialog window.
 
-#### Software changes are required
-On the **User Experience** page of the Deploy Software Wizard, select the user notification option to **Display in Software Center and show all notifications**. Then select the following option: **When software changes are required, show a dialog window to the user instead of a toast notification**.  
-
-<!-- For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex) -->
-
-#### Restart required
-In client settings, In the **Computer Restart** group, enable the following option: **When a deployment requires a restart, show a dialog window to the user instead of a toast notification**.  
-
-<!-- For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#computer-restart). -->
+For more information, see [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_impact)
 
 
 ### Configure user device affinity in Software Center
@@ -339,11 +347,11 @@ Specify these settings in the **Software Center** group of client settings.
 
 ### Specify priority for feature updates in Windows 10 servicing
 <!--3734525-->
-Adjust the priority with which clients install a feature update through [Windows 10 servicing](/sccm/osd/deploy-use/manage-windows-as-a-service). By default, clients now install feature updates with higher processing priority. 
+***[Updated]*** Adjust the priority with which clients install a feature update through [Windows 10 servicing](/sccm/osd/deploy-use/manage-windows-as-a-service). By default, clients now install feature updates with higher processing priority. 
 
-Use client settings to configure this option. In the **Software Updates** group, configure the following setting: **Specify thread priority for feature updates**. 
+Use client settings to configure this option. In the **Software Updates** group, configure the following setting: **Specify thread priority for feature updates**.
 
-<!-- For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-updates). -->
+For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-updates). 
 
 
 
@@ -351,7 +359,7 @@ Use client settings to configure this option. In the **Software Updates** group,
 
 ### Redirect Windows known folders to OneDrive
 <!--3556021-->
-Use Configuration Manager to move Windows known folders to OneDrive for Business. These folders include Desktop, Documents, and Pictures. To simplify your Windows 10 upgrades, deploy these settings to Windows 7 clients before deploying a task sequence. 
+***[Updated]*** Use Configuration Manager to move Windows known folders to OneDrive for Business. These folders include Desktop, Documents, and Pictures. To simplify your Windows 10 upgrades, deploy these settings to Windows 7 clients before deploying a task sequence. 
 
 For more information on this feature of OneDrive for Business, see [Redirect and move Windows known folders to OneDrive](https://docs.microsoft.com/onedrive/redirect-known-folders).
 
@@ -359,30 +367,30 @@ First, [find your Office 365 tenant ID](https://docs.microsoft.com/onedrive/find
 
 To create and deploy a OneDrive for Business profile, in the Configuration Manager console, go to the **Assets and Compliance** workspace. Expand **Compliance Settings**, and select the **OneDrive for Business Profiles** node.  
 
-<!-- For more information, see [Redirect Windows known folders to OneDrive](/sccm/compliance/deploy-use/onedrive-profile). -->
+For more information, see the Redirect Windows known folders to OneDrive section in the [OneDrive for Business Profiles](/sccm/compliance/deploy-use/onedrive-profile) article.
 
 
-### Integration with analytics for Office 365 ProPlus readiness
+### Integration for Office 365 ProPlus readiness
 <!--3735402-->
-Use Configuration Manager to identify devices with high confidence that are ready to upgrade to Office 365 ProPlus. By integrating with Office analytics, it provides insights into any potential compatibility issues with Office add-ins and macros used in your environment. Then use Configuration Manager to deploy Office to ready devices. 
+***[Updated]*** Use Configuration Manager to identify devices with high confidence that are ready to upgrade to Office 365 ProPlus. The integration provides insights into any potential compatibility issues with Office add-ins and macros used in your environment. Then use Configuration Manager to deploy Office to ready devices. 
 
 The existing Office 365 client management dashboard now includes a new tile, **Office 365 ProPlus Upgrade Readiness**.
 
-<!-- For more information, see [Office 365 client management dashboard](/sccm/sum/deploy-use/manage-office-365-proplus-updates#office-365-client-management-dashboard) -->
+For more information, see [Office 365 client management dashboard](/sccm/sum/deploy-use/office-365-dashboard#bkmk_o365_readiness)
 
 
 ### Additional languages for Office 365 updates
 <!--3555955-->
-Configuration Manager now supports all supported languages for Office 365 client updates. The update workflow now separates the 38 languages for **Windows Update** from the 103 languages for **Office 365 Client Update**. 
+Configuration Manager now supports all supported languages for Office 365 client updates. The update workflow now separates the 38 languages for **Windows Update** from the numerous languages for **Office 365 Client Update**. 
 
-<!-- For more information, see [Office 365 client management dashboard](/sccm/sum/deploy-use/manage-office-365-proplus-updates#office-365-client-management-dashboard) -->
+For more information, see [Manage Office 365 updates](/sccm/sum/deploy-use/manage-office-365-proplus-updates#bkmk_o365_lang)
 
 
 ### Office products on lifecycle dashboard
 <!--3556026-->
-The product lifecycle dashboard now includes information for installed versions of Office 2003 through Office 2016. Data shows up after the site runs the lifecycle summarization task, which is every 24 hours.
+***[Updated]*** The product lifecycle dashboard now includes information for installed versions of Office 2003 through Office 2016. Data shows up after the site runs the lifecycle summarization task, which is every 24 hours.
 
-<!-- For more information, see [Use the Product Lifecycle dashboard](/sccm/core/clients/manage/asset-intelligence/product-lifecycle-dashboard). -->
+For more information, see [Use the Product Lifecycle dashboard](/sccm/core/clients/manage/asset-intelligence/product-lifecycle-dashboard).
 
 
 
@@ -394,18 +402,18 @@ The product lifecycle dashboard now includes information for installed versions 
 
 ### Dedicated monitoring for phased deployments
 <!--3555949-->
-Phased deployments now have their own dedicated monitoring node. This node makes it easier to identify phased deployments that you created and then navigate to the phased deployment monitoring view. In the Configuration Manager console, go to the **Monitoring** workspace, and select the **Phased Deployments** node. It shows the list of phased deployments.
+***[Updated]*** Phased deployments now have their own dedicated monitoring node. This node makes it easier to identify phased deployments that you created and then navigate to the phased deployment monitoring view. In the Configuration Manager console, go to the **Monitoring** workspace, and select the **Phased Deployments** node. It shows the list of phased deployments.
 
-<!-- For more information, see [Phased deployment monitoring view](/sccm/osd/deploy-use/manage-monitor-phased-deployments#bkmk_monitor). -->
+For more information, see [Phased deployment monitoring view](/sccm/osd/deploy-use/manage-monitor-phased-deployments#bkmk_monitor). 
 
 
 ### Improvement to phased deployment success criteria
 <!--3555946-->
-Specify additional criteria for the success of a phase in a phased deployment. Instead of only a percentage, this criteria can now also be the number of devices successfully deployed. This option is useful when the size of the collection is variable, and you have a specific number of devices to show success before moving to the next phase. 
+***[Updated]*** Specify additional criteria for the success of a phase in a phased deployment. Instead of only a percentage, this criteria can now also be the number of devices successfully deployed. This option is useful when the size of the collection is variable, and you have a specific number of devices to show success before moving to the next phase. 
 
-Create a phased deployment for a task sequence, software update, or application. Then on the Settings page of the wizard, select the following option as the criteria for success of the first phase: **Number of devices successfully deployed**. 
+Create a phased deployment for a task sequence, software update, or application. Then on the Settings page of the wizard, select the following option as the criteria for success of the first phase: **Number of devices successfully deployed**.
 
-<!-- For more information, see [Create phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence). -->
+For more information, see [Create phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence).
 
 
 
@@ -436,16 +444,16 @@ This notification is a bar at the top of the console window below the ribbon. It
 
 ### Confirmation of console feedback
 <!--3556010-->
-When you send [feedback](/sccm/core/understand/find-help#product-feedback) in the Configuration Manager console, it now shows a confirmation message. This message includes a **Feedback ID**, which you can give to Microsoft as a tracking identifier. 
+***[Updated]*** When you send [feedback](/sccm/core/understand/find-help#product-feedback) in the Configuration Manager console, it now shows a confirmation message. This message includes a **Feedback ID**, which you can give to Microsoft as a tracking identifier.
 
-<!-- For more information, see [Product feedback](/sccm/core/understand/find-help#product-feedback). -->
+For more information, see [Product feedback](/sccm/core/understand/find-help#bkmk_feedbackid).
 
 
 ### View recently connected consoles 
 <!--3699367-->
-You can now view the most recent connections for the Configuration Manager console. The view includes active connections and those consoles that recently connected. In the Configuration Manager console, go to the **Administration** workspace, expand **Security**, and select the **Console Connections** node.
+***[Updated]*** You can now view the most recent connections for the Configuration Manager console. The view includes active connections and those consoles that recently connected. In the Configuration Manager console, go to the **Administration** workspace, expand **Security**, and select the **Console Connections** node.
 
-<!-- For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console). -->
+For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#bkmk_viewconnected).
 
 
 ### In-console documentation dashboard
@@ -467,6 +475,19 @@ To improve the accessibility features of the Configuration Manager console, upda
 For more information, see [Accessibility features in Configuration Manager](/sccm/core/understand/accessibility-features).
 
 
+### Changes to console setup process
+
+<!-- 3612513 -->
+***[Updated]*** There are new components required when installing the Configuration Manager console. If you create a package for installing the console on other computers, make sure the package includes the following files:
+
+- ConsoleSetup.exe
+- AdminConsole.msi
+- ConfigMgr.AC_Extension.i386.cab
+- ConfigMgr.AC_Extension.amd64.cab
+
+When you install or update a site server, it copies these installation files and supported language packs for the site to the **Tools\ConsoleSetup** subfolder. For more information, see [Install the Configuration Manager console](/sccm/core/servers/deploy/install/install-consoles).
+
+
 
 <!-- ## <a name="bkmk_opmdm"></a> On-premises MDM -->
 
@@ -475,7 +496,7 @@ For more information, see [Accessibility features in Configuration Manager](/scc
 
 ## Other updates
 
-<!-- Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1902](https://support.microsoft.com/help/4482169). -->
+Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1902](https://support.microsoft.com/help/4498910).
 
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1902 release notes](https://docs.microsoft.com/powershell/sccm/1902-release-notes?view=sccm-ps).
 

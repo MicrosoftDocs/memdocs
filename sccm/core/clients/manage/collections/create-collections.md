@@ -166,7 +166,7 @@ In the **Query Rule Properties** dialog box, specify the following information:
 
 - **Resource class**: Select the type of resource you want to search for and add to the collection. Select a value from **System Resource** values to search for inventory data returned from client computers or **Unknown Computer** to select from values returned by unknown computers.  
 
-- **Edit Query Statement**: Opens the **Query Statement Properties** dialog box where you can author a query to use as the rule for the collection. For more information about queries, see [Queries technical reference](/sccm/core/servers/manage/queries-technical-reference).  
+- **Edit Query Statement**: Opens the **Query Statement Properties** dialog box where you can author a query to use as the rule for the collection. For more information about queries, see [Introduction to queries](/sccm/core/servers/manage/introduction-to-queries).  
 
 
 ### <a name="bkmk-category"></a> Device category rule
@@ -213,3 +213,10 @@ For more information about exporting collections, see [How to manage collections
 
 5. Complete the wizard to import the collection. The new collection is displayed in the **User Collections** or **Device Collections** node of the **Assets and Compliance** workspace. Refresh or reload the Configuration Manager console to see the collection members for the newly imported collection.  
 
+## <a name="bkmk_powershell"></a> Using PowerShell
+
+PowerShell can be used to create and import collections.  For more information, see:
+
+* [New-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmcollection)
+* [Set-CMCollection](https://docs.microsoft.com/powershell/module/ConfigurationManager/Set-CMCollection)
+* [Import-CMCollection](https://docs.microsoft.com/powershell/module/ConfigurationManager/Import-CMCollection)

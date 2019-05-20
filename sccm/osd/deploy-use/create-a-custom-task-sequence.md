@@ -43,4 +43,4 @@ When you create a custom task sequence in System Center Configuration Manager, i
    Most often you will use task sequences to automate tasks for operating system deployment, but you can create a custom task sequence to automate a variety of tasks. For more information, see [Create a task sequence for non-operating system deployments](create-a-task-sequence-for-non-operating-system-deployments.md).  
 
    ## Next steps
-   [Deploy the task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)
+   [Deploy the task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence)
