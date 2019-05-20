@@ -19,7 +19,7 @@ ms.collection: M365-identity-device-management
 Organizations can use Intune to manage large numbers of mobile devices with a single user account. The *device enrollment manager* (DEM) account is a special user account used to enroll devices. You add existing users to the DEM account to give them the special DEM capabilities. Each enrolled device uses a single license. We recommend that you use devices enrolled through this account as shared devices with no user affinity, rather than personal, dedicated devices.  
 
 ## Enroll corporate-owned devices with the device enrollment manager  
- You can assign a store manager or supervisor, for example, a device enrollment manager user account to allow her to do the following:  
+ You can assign a store manager or supervisor, for example, a device enrollment manager user account to allow this user to do the following:  
 
 -   Enroll up to 1000 devices for management  
 -   Use the Company Portal app to install company apps  
@@ -35,7 +35,7 @@ The following limitations apply to devices managed using a device enrollment man
 - If you use DEM to enroll iOS devices, you can't use the Apple Configurator or Apple Device Enrollment Program (DEP) to enroll devices. (iOS only) 
 
   **Examples of device enrollment manager scenario:**   
-  A restaurant wants point-of-sale tablets for its wait staff and order-monitors for its kitchen staff. The employees never need access to company data or to log on as a user. The Intune administrator creates a device enrollment manager account and enrolls the company-owned devices using that account. Alternatively, the administrator could give the device enrollment manager credentials to a restaurant manager, allowing him or her to enroll and manage the devices.  
+  A restaurant wants point-of-sale tablets for its wait staff and order-monitors for its kitchen staff. The employees never need access to company data or to log on as a user. The Intune administrator creates a device enrollment manager account and enrolls the company-owned devices using that account. Alternatively, the administrator could give the device enrollment manager credentials to a restaurant manager, allowing them to enroll and manage the devices.  
 
   The administrator or manager can deploy role-specific apps to the restaurant devices. An administrator can also select a device in the console and retire it from mobile device management.  
 
