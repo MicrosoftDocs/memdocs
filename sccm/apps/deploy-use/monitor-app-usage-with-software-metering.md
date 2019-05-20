@@ -158,14 +158,14 @@ Software metering has no external dependencies, only dependencies within the pro
 
   Woodgrove Bank has deployed Microsoft Office 2010 as its standard office productivity suite. However, to support a legacy application, some computers must continue to run Microsoft Office Word 2003. The IT department wants to reduce support and licensing costs by removing these copies of Word 2003 if the legacy application is no longer used. The help desk also wants to identify which users use the legacy application.
 
-  John is Woodgrove Bank's IT Systems Manager who uses software metering in Configuration Manager to achieve these business objectives. He performs the following actions:
+  Woodgrove Bank's IT Systems Manager uses software metering in Configuration Manager to achieve these business objectives. The Admin performs the following actions:
 
-- John checks the prerequisites for software metering and confirms that the reporting services point is installed and operational.
-- John configures the default client settings for software metering:<br>He enables software metering and uses the default data collection schedule of once every seven days.<br>He configures software inventory to inventory files that have the extension .exe by configuring the software inventory client setting **Inventory these file types**.<br>He adds a new software metering rule, named **woodgrove.exe**, to monitor the legacy application.
-- John waits for seven days, after which the client computers begin to report usage data for the **woodgrove.exe** executable.
-- John uses the Configuration Manager report **Install base for all metered software programs** to see which computers have the application **woodgrove.exe** loaded.
-- After six months, John runs the report **Computers that have a metered program installed, but have not run the program since a specified date**, specifying the software metering rule and a date six months in the past. This report identifies 120 computers that have not run the program in the past six months.
-- John makes some further checks to confirm that the legacy application is not required on the identified computers. He then uninstalls the legacy application and the copy of Word 2003 from these computers.<br>John runs the report **Users that have run a specific metered software program** to provide the help desk with a list of users who continue to use the legacy application.
-- John continues to check the software metering reports weekly and takes remedial action if necessary.
+- Checks the prerequisites for software metering and confirms that the reporting services point is installed and operational.
+- Configures the default client settings for software metering:<br>The Admin enables software metering and uses the default data collection schedule of once every seven days.<br>The Admin configures software inventory to inventory files that have the extension .exe by configuring the software inventory client setting **Inventory these file types**.<br>The Admin adds a new software metering rule, named **woodgrove.exe**, to monitor the legacy application.
+- Waits for seven days, after which the client computers begin to report usage data for the **woodgrove.exe** executable.
+- The Admin uses the Configuration Manager report **Install base for all metered software programs** to see which computers have the application **woodgrove.exe** loaded.
+- After six months, the Admin runs the report **Computers that have a metered program installed, but have not run the program since a specified date**, specifying the software metering rule and a date six months in the past. This report identifies 120 computers that have not run the program in the past six months.
+- The Admin makes some further checks to confirm that the legacy application is not required on the identified computers. The Admin then uninstalls the legacy application and the copy of Word 2003 from these computers.<br>The Admin runs the report **Users that have run a specific metered software program** to provide the help desk with a list of users who continue to use the legacy application.
+- The Admin continues to check the software metering reports weekly and takes remedial action if necessary.
 
   As a result of this course of action, IT support and licensing costs are reduced by removing the applications that are no longer required. In addition, the help desk now has the list that it wanted of the users who run the legacy application.
