@@ -50,7 +50,7 @@ Each section of this article lists hybrid features under three different categor
 
 <!-- 1927359 -->
 
-This change applies to devices already enrolled via Setup Assistant through one of Apple's corporate device enrollment methods. Intune doesn't support the Company Portal when it's manually installed by users from the app store. This change is only relevant when you authenticate with Apple Setup Assistant during enrollment. It only affects iOS devices enrolled through the following methods:  
+On devices already enrolled via Setup Assistant through one of Apple's corporate device enrollment methods, Intune doesn't support the Company Portal when it's manually installed by users from the app store. This change is only relevant when you authenticate with Apple Setup Assistant during enrollment. It only affects iOS devices enrolled through the following methods:  
 
 - Apple Configurator
 - Apple Business Manager
