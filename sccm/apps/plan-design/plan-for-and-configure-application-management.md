@@ -2,7 +2,7 @@
 title: Plan for application management
 titleSuffix: Configuration Manager
 description: Implement and configure the necessary dependencies for deploying applications in Configuration Manager.
-ms.date: 05/01/2019
+ms.date: 05/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -117,33 +117,26 @@ To create virtual applications in Configuration Manager, install App-V 4.6 SP1 o
 Before you deploy virtual applications, also update the App-V client with the hotfix described in the [Microsoft Support article 2645225](https://support.microsoft.com/help/2645225).  
 
 
-### Discovered user accounts for application catalog
+### Application catalog
 
-Configuration Manager must first discover user accounts before users can view and request applications from the application catalog. For more information, see [Run discovery](/sccm/core/servers/deploy/configure/run-discovery).  
+> [!Important]  
+> The application catalog is deprecated. For more information, see [Remove the application catalog](#bkmk_remove-appcat).  
 
-
-### Application catalog web service point
+#### Application catalog web service point
 
 The application catalog web service point is a site system role that provides information about available software from your software library to the application catalog website that users access.
 
 For more information about how to configure this site system role, see [Install and configure the Application Catalog](#bkmk_appcat).  
 
-> [!Note]  
-> Starting in version 1806, the application catalog web service point role is no longer *required*, but still *supported*.<!--1358309-->  
->
-> The **Silverlight user experience** for the application catalog website point is no longer supported. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
+#### Application catalog website point
 
-
-### Application catalog website point
-
-The Application Catalog website point is a site system role that provides users with a list of available software.
+The application catalog website point is a site system role that provides users with a list of available software.
 
 For more information about how to configure this site system role, see [Install and configure the Application Catalog](#bkmk_appcat).
 
-> [!Note]  
-> Starting in version 1806, the application catalog website point role is no longer *required*, but still *supported*.<!--1358309-->  
->
-> The **Silverlight user experience** for the application catalog website point is no longer supported. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
+#### Discovered user accounts for application catalog
+
+Configuration Manager must first discover user accounts before users can view and request applications from the application catalog. For more information, see [Run discovery](/sccm/core/servers/deploy/configure/run-discovery).  
 
 
 
@@ -152,19 +145,39 @@ For more information about how to configure this site system role, see [Install 
 For more information on configuring and branding Software Center, see [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center).
 
 
+## <a name="bkmk_remove-appcat"></a> Remove the application catalog
+
+<!-- SCCMDocs-pr issue 3051 -->
+
+The application catalog is deprecated. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). The following list summarizes the changes:
+
+- Starting in version 1806, the **Silverlight user experience** for the application catalog website point is no longer supported.<!--1358309--> The application catalog web service point role is no longer *required*, but still *supported*.
+
+- In the first current branch release after June 30, 2019, updated clients will automatically use the management point for user-available application deployments. You also won't be able to install new application catalog roles.
+
+- In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+
+These iterative improvements to Software Center and the management point are to simplify your infrastructure and remove the application catalog. Software Center can deliver all app deployments without the application catalog. Also, if you enable TLS 1.2 and use HTTP with the application catalog, users can't see user-targeted, available deployments.
+
+1. Update all clients to version 1806 or later.  
+
+1. Set branding for Software Center, instead of in the properties of the application catalog web site role.  
+
+1. Review the default and any custom client settings. In the **Computer Agent** group, make sure the **Default Application Catalog website point** is `(none)`.  
+
+    The client only switches to using the management point when there are no application catalog roles in the hierarchy. Otherwise, clients continue to use one of the application catalog instances in the hierarchy. This behavior applies across separate primary sites.  
+
+1. Remove the **application catalog website** and **application catalog web service** site system roles from all primary sites.
+
+After you remove the application catalog roles, Software Center starts using the management point for user-targeted, available deployments. It can take up to 65 minutes for this change to happen. To verify this behavior on a specific client, review the `SCClient_<username>.log`, and look for an entry similar to the following line:
+
+`Using endpoint Url: https://mp.contoso.com/CMUserService_WindowsAuth, Windows authentication`
+
+
 ## <a name="bkmk_appcat"></a> Install and configure the application catalog  
 
-> [!Note]  
-> Starting in version 1806, the application catalog website point and web service point roles are no longer *required*, but still *supported*. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).  
->
-> The **Silverlight user experience** for the application catalog *website point* is no longer supported. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
-
-> [!IMPORTANT]  
-> Before you do these steps, make sure that all of the dependencies are in place. For more information, see the following sections in this article:
->
-> - [Dependencies external to Configuration Manager](#dependencies-external-to-configuration-manager)  
-> - [Configuration Manager dependencies](#configuration-manager-dependencies)
-
+> [!Important]  
+> The application catalog is deprecated. For more information, see [Remove the application catalog](#bkmk_remove-appcat).  
 
 ### Step 1: Web server certificate for HTTPS
 
@@ -256,25 +269,3 @@ Use the appropriate address for the application catalog from the following list,
 
 > [!NOTE]  
 > If you signed in to the device with a Domain Administrator account, the Configuration Manager client doesn't display notification messages. For example, messages indicating that new software is available.  
-
-
-
-## <a name="bkmk_remove-appcat"></a> Remove the application catalog
-
-<!-- SCCMDocs-pr issue 3051 -->
-
-Starting in version 1806, you can simplify your infrastructure and remove the application catalog. Software Center can deliver all app deployments without the application catalog. Also, if you enable TLS 1.2 and use HTTP with the application catalog, users can't see user-targeted, available deployments.
-
-1. Update all clients to version 1806 or later.  
-
-1. Set branding for Software Center, instead of in the properties of the application catalog web site role.  
-
-1. Review the default and any custom client settings. In the **Computer Agent** group, make sure the **Default Application Catalog website point** is `(none)`.  
-
-    The client only switches to using the management point when there are no application catalog roles in the hierarchy. Otherwise, clients continue to use one of the application catalog instances in the hierarchy. This behavior applies across separate primary sites.  
-
-1. Remove the **application catalog website** and **application catalog web service** site system roles from all primary sites.
-
-After you remove the application catalog roles, Software Center starts using the management point for user-targeted, available deployments. It can take up to 65 minutes for this change to happen. To verify this behavior on a specific client, review the `SCClient_<username>.log`, and look for an entry similar to the following line:
-
-`Using endpoint Url: https://mp.contoso.com/CMUserService_WindowsAuth, Windows authentication`
