@@ -2,7 +2,7 @@
 title: What's new in hybrid MDM
 titleSuffix: Configuration Manager
 description: Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune.
-ms.date: 04/18/2019
+ms.date: 05/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -41,6 +41,25 @@ Each section of this article lists hybrid features under three different categor
 |**New in Configuration Manager Technical Preview**| All the features listed under this category only work with the specified technical preview branch. To try out these features, you must install the technical preview version specified in the feature description. For more information, see [Technical preview for Configuration Manager](/sccm/core/get-started/technical-preview).|
 |**New in Configuration Manager (current branch)**| All the features listed under this category only work with the specified version of Configuration Manager (current branch). If you're using an older version of Configuration Manager for your hybrid deployment, upgrade to the Configuration Manager (current branch)  version specified in the feature description. For more information, see [Upgrade to Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager).|
 
+
+## May 2019
+
+### New in Microsoft Intune
+
+#### Intune policies update authentication method and Company Portal app installation
+
+<!-- 1927359 -->
+
+This change applies to devices already enrolled via Setup Assistant through one of Apple's corporate device enrollment methods. Intune doesn't support the Company Portal when it's manually installed by users from the app store. This change is only relevant when you authenticate with Apple Setup Assistant during enrollment. It only affects iOS devices enrolled through the following methods:  
+
+- Apple Configurator
+- Apple Business Manager
+- Apple School Manager
+- Apple Device Enrollment Program (DEP)
+
+If users install the Company Portal app from the app store, and then try to enroll these devices through it, they receive an error. In addition, the **Identify your device** screen in the Company Portal app will soon become obsolete.
+
+To install the Company Portal on already-enrolled DEP devices, push it as a managed app with app configuration policies. For more information on this process, see [Apply settings to iOS apps with app configuration policies in Configuration Manager](/sccm/mdm/deploy-use/configure-ios-apps-with-app-configuration-policies).
 
 
 ## April 2019
