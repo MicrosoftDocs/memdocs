@@ -59,7 +59,7 @@ Coho Vineyard & Winery is opening a visitor center and needs kiosks that run Win
 
     This command installs the client, assigns the client to the management point that has the intranet FQDN of **mpserver.cohovineyardandwinery.com**, and assigns the client to the primary site named **CO1**.  
 
-    The Admin knows that it always takes a while for clients to install and send back their status to the site. So the Admin waits before they confirms that the clients successfully install, assign to the site, and appear as clients in the collection that they created for Windows Embedded devices.  
+    The Admin knows that it always takes a while for clients to install and send back their status to the site. So the Admin waits before they confirm that the clients successfully install, assign to the site, and appear as clients in the collection that they created for Windows Embedded devices.  
 
     As additional confirmation, the Admin checks the properties of Configuration Manager in Control Panel on the devices and compares them to standard Windows computers that are managed by the site. For example, on the **Components** tab, the **Hardware Inventory Agent** displays **Enabled**, and on the **Actions** tab, there are 11 available actions, which include **Application Deployment Evaluation Cycle** and **Discovery Data Collection Cycle**.  
 
@@ -77,7 +77,7 @@ Coho Vineyard & Winery is opening a visitor center and needs kiosks that run Win
 
     For more information, see [How to manage clients in System Center Configuration Manager](../../../core/clients/manage/manage-clients.md).  
 
-8. To install the interactive presentation software, the Admin runs the **Deploy Software Wizard** and configures a required application. On the **User Experience** page of the wizard, in the **Write filter handling for Windows Embedded devices** section, they accepts the default option that selects **Commit changes at deadline or during a maintenance window (requires restarts)**.  
+8. To install the interactive presentation software, the Admin runs the **Deploy Software Wizard** and configures a required application. On the **User Experience** page of the wizard, in the **Write filter handling for Windows Embedded devices** section, they accept the default option that selects **Commit changes at deadline or during a maintenance window (requires restarts)**.  
 
     The Admin keeps this default option for write filters to ensure that the application persists after a restart, so that it is always available to the visitors using the kiosks. The daily maintenance window provides a safe period during which the restarts for installation and any updates can occur.  
 
@@ -114,9 +114,9 @@ Coho Vineyard & Winery is opening a visitor center and needs kiosks that run Win
 
     2. On the **Task Sequence Information** page, the Admin enters **Maintenance task to commit changes on embedded devices** for the task sequence name, and then clicks **Next**.  
 
-    3. On the **Summary** page, they Admin selects **Next**, and completes the wizard.  
+    3. On the **Summary** page, the Admin selects **Next**, and completes the wizard.  
 
-       The Admin then deploys this custom task sequence to the Windows Embedded devices collection, and configures the schedule to run every month. As part of the deployment settings, they select the **Commit changes at deadline or during a maintenance window (requires restarts)** check box to persist the changes after a restart. To configure this deployment, the Admin selects the custom task sequence that they just created, and then on the **Home** tab, in the **Deployment** group, they clicks **Deploy** to start the Deploy Software Wizard:  
+       The Admin then deploys this custom task sequence to the Windows Embedded devices collection, and configures the schedule to run every month. As part of the deployment settings, they select the **Commit changes at deadline or during a maintenance window (requires restarts)** check box to persist the changes after a restart. To configure this deployment, the Admin selects the custom task sequence that they just created, and then on the **Home** tab, in the **Deployment** group, they click **Deploy** to start the Deploy Software Wizard:  
 
     4. On the **General** page, the Admin selects the Windows Embedded devices collection, and then clicks **Next**.  
 
@@ -135,7 +135,7 @@ Coho Vineyard & Winery is opening a visitor center and needs kiosks that run Win
 
     - Automatically run the interactive presentation software on startup.  
 
-      The Admin uses packages and programs to deploy this script to the Windows Embedded devices collection. When they run the Deploy Software Wizard, they again selects the **Commit changes at deadline or during a maintenance window (requires restarts)** check box to persist the changes after a restart.  
+      The Admin uses packages and programs to deploy this script to the Windows Embedded devices collection. When the Admin runs the Deploy Software Wizard, they again select the **Commit changes at deadline or during a maintenance window (requires restarts)** check box to persist the changes after a restart.  
 
       For more information, see [Packages and programs in System Center Configuration Manager](../../../apps/deploy-use/packages-and-programs.md).  
 
