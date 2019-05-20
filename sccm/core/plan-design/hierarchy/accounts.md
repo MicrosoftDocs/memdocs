@@ -521,7 +521,7 @@ For more information, see [Plan for software updates](/sccm/sum/plan-design/plan
 > [!NOTE]  
 >  Both the source site account and the [source site database account](#source-site-database-account) are identified as **Migration Manager** in the **Accounts** node of the **Administration** workspace in the Configuration Manager console.  
 
- For more information, see [Migrate data between hierarchies](https://docs.microsoft.com/en-us/sccm/core/migration/migrate-data-between-hierarchies).
+ For more information, see [Migrate data between hierarchies](https://docs.microsoft.com/sccm/core/migration/migrate-data-between-hierarchies).
 
 
 ### Source site database account  
@@ -537,7 +537,7 @@ For more information, see [Plan for software updates](/sccm/sum/plan-design/plan
 > [!NOTE]  
 >  Both the source site account and the [source site database account](#source-site-database-account) are identified as **Migration Manager** in the **Accounts** node of the **Administration** workspace in the Configuration Manager console.  
 
- For more information, see [Migrate data between hierarchies](https://docs.microsoft.com/en-us/sccm/core/migration/migrate-data-between-hierarchies).
+ For more information, see [Migrate data between hierarchies](https://docs.microsoft.com/sccm/core/migration/migrate-data-between-hierarchies).
 
 
 ### Task sequence domain join account 
