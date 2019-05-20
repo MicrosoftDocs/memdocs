@@ -3248,7 +3248,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |`[Settings] Priority=Default  [Default] AreaCode=206 CountryCode=001 Dialing=TONE LongDistanceAccess=9`|  
 
 ####  <a name="DisableTaskMgr"></a> DisableTaskMgr  
- This property controls a user’s ability to start Task Manager by pressing CTRL+ALT+DEL. After the user starts Task Manager, he or she could interrupt the LTI task sequence while running in the new operating system on the target computer. This property is used in conjunction with the **HideShell** property and is only valid when the **HideShell** property is set to **YES**.  
+ This property controls a user’s ability to start Task Manager by pressing CTRL+ALT+DEL. After the user starts Task Manager, they could interrupt the LTI task sequence while running in the new operating system on the target computer. This property is used in conjunction with the **HideShell** property and is only valid when the **HideShell** property is set to **YES**.  
 
 > [!NOTE]
 >  This property and the **HideShell** property must both be set to **YES** to prevent the user pressing CTRL+ALT+DEL and interrupting the LTI task sequence.  
