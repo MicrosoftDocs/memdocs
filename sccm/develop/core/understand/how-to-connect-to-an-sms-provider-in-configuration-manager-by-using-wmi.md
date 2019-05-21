@@ -140,4 +140,4 @@ $connection = $SWbemLocator.ConnectServer($siteServer,$Namespace,$username,$pass
 ## See Also  
  [About the SMS Provider in Configuration Manager](../../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md)   
  [How to Add a Configuration Manager Context Qualifier by Using WMI](../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md)   
- [Windows Management Instrumentation](https://docs.microsoft.com/en-us/windows/desktop/WmiSdk/wmi-start-page)
+ [Windows Management Instrumentation](https://docs.microsoft.com/windows/desktop/WmiSdk/wmi-start-page)
