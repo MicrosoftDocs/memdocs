@@ -54,7 +54,7 @@ This step-by-step example deployment, which uses a Windows Server 2008 certifica
 
 -   You have a member server running Windows Server 2008 Enterprise Edition, which has the Active Directory Certificate Services role installed on it, and it is set up as an enterprise root certification authority (CA).  
 
--   You have one computer that has Windows Server 2008 (Standard Edition or Enterprise Edition, R2 or later) installed on it, that computer is designated as a member server, and Internet Information Services (IIS) is installed on it. This computer will be the System Center Configuration Manager site system server that you will configure with an intranet fully qualified domain name (FQDN) to support client connections on the intranet and an Internet FQDN if you must support mobile devices that are enrolled by System Center Configuration Manager and clients on the Internet.  
+-   You have one computer that has Windows Server 2008 (Standard Edition or Enterprise Edition, R2 or later) installed on it, that computer is designated as a member server, and Internet Information Services (IIS) is installed on it. This computer will be the System Center Configuration Manager site system server that you will configure with an intranet fully qualified domain name (FQDN) to support client connections on the intranet and an internet FQDN if you must support mobile devices that are enrolled by System Center Configuration Manager and clients on the internet.  
 
 -   You have one Windows Vista client that has the latest service pack installed, and this computer is set up with a computer name that comprises ASCII characters and is joined to the domain. This computer will be a System Center Configuration Manager client computer.  
 
@@ -117,7 +117,7 @@ This step-by-step example deployment, which uses a Windows Server 2008 certifica
 13. If you do not need to create and issue more certificates, close **Certification Authority**.  
 
 ###  <a name="BKMK_webserver32008"></a> Request the web server certificate  
- This procedure lets you specify the intranet and Internet FQDN values that will be set up in the site system server properties and then installs the web server certificate on to the member server that runs IIS.  
+ This procedure lets you specify the intranet and internet FQDN values that will be set up in the site system server properties and then installs the web server certificate on to the member server that runs IIS.  
 
 ##### To request the web server certificate  
 
@@ -151,7 +151,7 @@ This step-by-step example deployment, which uses a Windows Server 2008 certifica
 
     -   If the site system will only accept client connections from the intranet, and the intranet FQDN of the site system server is **server1.internal.contoso.com**, enter **server1.internal.contoso.com**, and then choose **Add**.  
 
-    -   If the site system will accept client connections from the intranet and the Internet, and the intranet FQDN of the site system server is **server1.internal.contoso.com** and the Internet FQDN of the site system server is **server.contoso.com**:  
+    -   If the site system will accept client connections from the intranet and the internet, and the intranet FQDN of the site system server is **server1.internal.contoso.com** and the internet FQDN of the site system server is **server.contoso.com**:  
 
         1.  Enter **server1.internal.contoso.com**, and then choose **Add**.  
 
