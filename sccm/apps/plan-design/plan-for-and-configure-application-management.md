@@ -157,11 +157,11 @@ The application catalog is deprecated. For more information, see [Removed and de
 
 - In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
 
-These iterative improvements to Software Center and the management point are to simplify your infrastructure and remove the application catalog. Software Center can deliver all app deployments without the application catalog. Also, if you enable TLS 1.2 and use HTTP with the application catalog, users can't see user-targeted, available deployments.
+These iterative improvements to Software Center and the management point are to simplify your infrastructure and remove the need for the application catalog for user-available deployments. Software Center can deliver all app deployments without the application catalog. Also, if you enable TLS 1.2 and use HTTP with the application catalog, users can't see user-targeted, available deployments.
 
 1. Update all clients to version 1806 or later.  
 
-1. Set branding for Software Center, instead of in the properties of the application catalog web site role.  
+1. Set branding for Software Center, instead of in the properties of the application catalog web site role. For more information, see [Software Center client settings](/sccm/core/clients/deploy/about-client-settings#software-center).  
 
 1. Review the default and any custom client settings. In the **Computer Agent** group, make sure the **Default Application Catalog website point** is `(none)`.  
 
