@@ -217,6 +217,8 @@
       href: plan-design/security/configure-security.md
     - name: Cryptographic controls technical reference
       href: plan-design/security/cryptographic-controls-technical-reference.md
+    - name: Enable transport layer security 1.2
+      href: plan-design/security/enable-tls-1-2.md
 - name: Get started
   items:
   - name: Evaluate Configuration Manager in a lab
