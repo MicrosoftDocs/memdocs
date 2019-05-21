@@ -1,4 +1,4 @@
----
+﻿---
 title: "Connecting with Windows PowerShell"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -17,22 +17,22 @@ In the [Configuration Manager Windows PowerShell Basics](../../../develop/core/u
 ## Loading Windows PowerShell from the Configuration Manager Console  
  The easiest method to load Windows PowerShell is directly from the Configuration Manager console.  
 
-1.  Start by launching the Configuration Manager console. In the upper left corner, there’s a blue rectangle. Click the white arrow in the blue rectangle, and choose **Connect via Windows PowerShell**.  
+1.  Start by launching the Configuration Manager console. In the upper left corner, there's a blue rectangle. Click the white arrow in the blue rectangle, and choose **Connect via Windows PowerShell**.  
 
      ![PowerShell Menu](../../../develop/core/understand/media/cmpowershellmenucb.PNG "CMPowerShellMenuCB")  
 
-2.  Once Windows PowerShell loads, you’ll see a prompt that contains your site code. For example, if the site code is “ABC��?, the prompt looks like:  
+2.  Once Windows PowerShell loads, you'll see a prompt that contains your site code. For example, if the site code is XYZ, the prompt looks like:  
 
     ```  
-    PS ABC:\>  
+    PS XYZ:\>  
     ```  
 
-3.  Let’s just verify everything is working fine. The first cmdlet you’ll try is `Get-CMSite`. This cmdlet will return information about the Configuration Manager site we’re currently connected to.  
+3.  Let's just verify everything is working fine. The first cmdlet you'll try is `Get-CMSite`. This cmdlet will return information about the Configuration Manager site we're currently connected to.  
 
      Go to your Windows PowerShell window, and type in `Get-CMSite`:  
 
     ```  
-    PS ABC:\> get-cmsite  
+    PS XYZ:\> get-cmsite  
 
     BuildNumber       : 7958  
     Features          : 0000000000000000000000000000000000000000000000000000000000000000  
@@ -54,7 +54,7 @@ In the [Configuration Manager Windows PowerShell Basics](../../../develop/core/u
 ## Importing the Configuration Manager PowerShell Module  
  Another method of connecting to Configuration Manager from your Windows PowerShell environment is to load the Configuration Manager module manually.  
 
-1.  Hit your Windows Key and type “PowerShell��? – then right-click **Windows PowerShell** and choose “Run as administrator��?.  
+1.  Hit your Windows Key and type **powershell** then right-click **Windows PowerShell** and choose **Run as administrator**.  
 
      You should now see your PowerShell environment.  
 
@@ -65,13 +65,12 @@ In the [Configuration Manager Windows PowerShell Basics](../../../develop/core/u
     PS C:\WINDOWS\system32>  
     ```  
 
-2.  Now, you’ll need to import the Configuration Manager module using the built-in Windows PowerShell cmdlet `Import-Module`. To import the Configuration Manager module, you will have to specify the path to the Configuration Manager module or change to the directory that contains the module.  
+2.  Now, you'll need to import the Configuration Manager module using the built-in Windows PowerShell cmdlet `Import-Module`. To import the Configuration Manager module, you will have to specify the path to the Configuration Manager module or change to the directory that contains the module.  
 
-     Go to your Windows PowerShell window, and type in `CD ‘C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin’`:  
+     Go to your Windows PowerShell window, and type in `cd $env:SMS_ADMIN_UI_PATH\..\`  
 
     ```  
-    PS C:\>  
-    PS C:\> CD ‘C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin’  
+    PS C:\> CD $env:SMS_ADMIN_UI_PATH\..\  
     PS C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin>  
 
     ```  
@@ -79,10 +78,9 @@ In the [Configuration Manager Windows PowerShell Basics](../../../develop/core/u
      Go to your Windows PowerShell window, and type in `import-module .\ConfigurationManager.psd1 -verbose`:  
 
     ```  
-    PS C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin>  
     PS C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin> import-module .\ConfigurationManager.psd1 -verbose  
 
-    Note: The ‘-verbose’ switch displays a list of the cmdlets being imported (quite a long list in the case of Configuration Manager).  
+    Note: The '-verbose' switch displays a list of the cmdlets being imported (quite a long list in the case of Configuration Manager).  
 
     ```  
 
@@ -107,11 +105,11 @@ In the [Configuration Manager Windows PowerShell Basics](../../../develop/core/u
     > [!IMPORTANT]
     >  To run the Configuration Manager cmdlets, you need to switch the path to the Configuration Manager site.  
 
-4.  Go to your Windows PowerShell window, and type in `CD <site code>:`, replacing \<site code> with your site code (the site code “ABC��? is used below):  
+4.  Go to your Windows PowerShell window, and type in `CD <site code>:`, replacing \<site code> with your site code (the site code is used below):  
 
     ```  
-    PS C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin> CD ABC:   
-    PS ABC:\>  
+    PS C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin> CD XYZ:
+    PS XYZ:\>  
     ```  
 
 5.  Now, try to again to confirm that the Configuration Manager module has been loaded using the `Get-CMSite` cmdlet.  
@@ -119,7 +117,7 @@ In the [Configuration Manager Windows PowerShell Basics](../../../develop/core/u
      Go to your Windows PowerShell window, and type in `Get-CMSite`:  
 
     ```  
-    PS ABC:\> Get-CMSite  
+    PS XYZ:\> Get-CMSite  
 
     BuildNumber       : 7958  
     Features          : 0000000000000000000000000000000000000000000000000000000000000000  
@@ -128,8 +126,8 @@ In the [Configuration Manager Windows PowerShell Basics](../../../develop/core/u
     ReportingSiteCode :  
     RequestedStatus   : 110  
     ServerName        : SDKTESTLAB.test.lab  
-    SiteCode          : ABC  
-    SiteName          : ABC Test Site  
+    SiteCode          : XYZ  
+    SiteName          : XYZ Test Site  
     Status            : 1  
     TimeZoneInfo      : 000001E0 0000 000B 0000 0001 0002 0000 0000 0000 00000000 0000 0003 0000 0002 0002 0000 0000 0000  
                         FFFFFFC4  
@@ -145,11 +143,11 @@ In the [Configuration Manager Windows PowerShell Basics](../../../develop/core/u
 
 1.  You can update Windows PowerShell help (and specifically the help for the Configuration Manager cmdlets) using the `Update-Help` cmdlet.  
 
-     If your computer is connected to the Internet, go to your Windows PowerShell window, and type in `Update-Help –Module configurationmanager`.  
+     If your computer is connected to the Internet, go to your Windows PowerShell window, and type in `Update-Help -Module configurationmanager`.  
 
     ```  
-    PS ABC:\> Update-Help –Module configurationmanager  
-    PS ABC:\>  
+    PS XYZ:\> Update-Help -Module configurationmanager  
+    PS XYZ:\>  
     ```  
 
 2.  You can get help about Windows PowerShell cmdlets by using the `Get-Help` cmdlet.  
@@ -157,7 +155,7 @@ In the [Configuration Manager Windows PowerShell Basics](../../../develop/core/u
      Go to your Windows PowerShell window, and type in `Get-Help Get-CMSite`:  
 
     ```  
-    PS ABC:\> Get-Help Get-CMSite  
+    PS XYZ:\> Get-Help Get-CMSite  
 
     NAME  
         Get-CMSite  

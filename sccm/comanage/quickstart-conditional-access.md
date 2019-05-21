@@ -75,7 +75,7 @@ For more information, see [Wipro drives mobile productivity with Microsoft cloud
 
 Other examples include: 
 
-- Nestle, who uses app-based conditional access for over 150,000 employees  
+- Nestlé, who uses app-based conditional access for over 150,000 employees  
 
 - The automation software company, Cadence, who can now make sure that "only managed devices have access to Office 365 apps like Teams and the company's intranet." They can also offer their workforce "safer access to other cloud-based apps, such as Workday and Salesforce." For more information about Cadence's experience with Intune, see [Cadence increases the pace of business with mobile collaboration tools in Microsoft 365](https://customers.microsoft.com/story/cadence-partner-professional-services-microsoft-365).
 

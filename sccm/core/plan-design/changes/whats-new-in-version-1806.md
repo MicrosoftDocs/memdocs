@@ -303,7 +303,7 @@ For more information, see [Create Windows applications](/sccm/apps/get-started/c
 
 ### Uninstall application on approval revocation
 <!--1357891-->
-The behavior has changed when you revoke approval for an application. Now when you deny the request for the application, the client uninstalls the application from the user's device. This behavior requires that you enable the [optional feature](https://docs.microsoft.com/en-us/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Approve application requests for users per device**. 
+The behavior has changed when you revoke approval for an application. Now when you deny the request for the application, the client uninstalls the application from the user's device. This behavior requires that you enable the [optional feature](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Approve application requests for users per device**. 
 
 For more information, see [Deploy applications](/sccm/apps/deploy-use/deploy-applications#bkmk_approval).
 
