@@ -2,7 +2,7 @@
 title: Create an OS upgrade task sequence
 titleSuffix: Configuration Manager
 description: Use a task sequence to automatically upgrade from Windows 7 or later to Windows 10
-ms.date: 07/30/2018
+ms.date: 05/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -164,7 +164,7 @@ Use the [Download Package Content](/sccm/osd/understand/task-sequence-steps#BKMK
 -   To dynamically download an applicable driver package, use two **Download Package Content** steps with conditions to detect the appropriate hardware type for each driver package. Configure each **Download Package Content** step to use the same variable. Then use that variable for the **Staged content** value in the drivers section on the **Upgrade Operating System** step.  
 
     > [!NOTE]  
-    > When there's more than one package, Configuration Manager adds a numerical suffix to the variable name. For example, if you specify `%mycontent%` as a custom variable, the client stores all referenced content in this location. When you refer to the variable in a subsequent step, such as **Upgrade Operating System**, use the variable with a numerical suffix. In this example, `%mycontent01%` or `%mycontent02%`, where the number corresponds to the order in which the **Download Package Content** step lists this specific content.  
+    > Configuration Manager adds a numerical suffix to this variable name. For example, if you specify `%mycontent%` as a custom variable, the client stores all referenced content in this location. When you refer to the variable in a subsequent step, such as **Upgrade Operating System**, use the variable with a numerical suffix. In this example, `%mycontent01%` or `%mycontent02%`, where the number corresponds to the order in which the **Download Package Content** step lists this specific content.  
 
 
 
