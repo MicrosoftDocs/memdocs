@@ -119,43 +119,28 @@ The following features are available with the most recent Configuration Manager 
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID-->
 
-- [Add SMBIOS GUID column to device lists](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4526580-->
-- [Improvements to post-deadline notifications for restarts](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3976435-->
-- [Make Office update deployment more intelligent](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4051607-->
-- [Maintenance tasks improvements](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3555894-->
-- [Site server high availability component load monitoring](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4200651-->
-- [User categories for device-targeted deployments](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4451056-->
-- [MMSMOA 2019 cabin features](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4616810-->
-- [Help customers track data stored in SCCM that is subject to GDPR](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3604099-->
-- [Synchronize collection membership results to Azure Active Directory groups](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3607475-->
-- [Put the SCF setting for cache age out in the UI](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4485509-->
-- [Configuration Manager update database upgrade monitoring](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4200581-->
-- [Configure the default maximum run time for software updates](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3734426-->
-- [WDAG file trust criteria](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3555858-->
-- [Lifecycle dashboard ESU support](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3728571-->
-- [Add an action on a device to install the application](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4402180-->
-- [Need to define chains for app groups](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3555907-->
-- [Native Bitlocker configuration](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3601034-->
-- [OneTrace (preview)](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3555962-->
-- [Improve client information worker experience](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4063773-->
-- [Improvements to application approvals](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4224910-->
-- [Retry installation for approved applications](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4336307-->
-- [Government cloud support for co-management](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4075452-->
-- [AdminService base fundamentals for OData requests from AdminConsole to use WMI route of AdminService](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4223683-->
-- [Improvements to driver management](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3555958-->
-- [Task sequence as an app model deployment type install method](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3555953-->
-- [Task sequence debugger](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3612274-->
-- [Delivery Optimization download data in client data sources dashboard](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3555759-->
-- [Device group orchestration](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3098816-->
-- [Folder permissions](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3600867-->
-- [Azure Active Directory group discovery](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3611956-->
-- [Community Hub](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4224401-->
-- [Remote control anywhere using cloud management gateway](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4575930-->
-- [Improved control over WSUS maintenance](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4110109-->
-- [Office 365 ProPlus upgrade readiness dashboard](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--4021125-->
-- [Reschedule auto-enrollment for co-managed devices](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3555961-->
-- [Shift all client traffic away from catalog roles, so can be removed in future release](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!--3555950-->
-- [Improvements to OS deployment](/sccm/core/get-started/2019/technical-preview-1905#bkmk_anchor) <!-- 4512937,4574622 -->
+- [Improved control over WSUS maintenance](/sccm/core/get-started/2019/technical-preview-1905#improved-control-over-wsus-maintenance) <!--4110109-->
+- [Improvements to Configuration Manager console](/sccm/core/get-started/2019/technical-preview-1905#bkmk_console) <!--4616810-->
+- [Configure the default maximum run time for software updates](/sccm/core/get-started/2019/technical-preview-1905#bkmk_timeout) <!--3734426-->
+- [Windows Defender Application Guard file trust criteria](/sccm/core/get-started/2019/technical-preview-1905#bkmk_wdag) <!--3555858-->
+- [Application groups](/sccm/core/get-started/2019/technical-preview-1905#bkmk_app-group) <!--3555907-->
+- [Task sequence as an app model deployment type](/sccm/core/get-started/2019/technical-preview-1905#bkmk_tsdt) <!--3555953-->
+- [BitLocker management](/sccm/core/get-started/2019/technical-preview-1905#bkmk_bitlocker) <!--3601034-->
+- [Task sequence debugger](/sccm/core/get-started/2019/technical-preview-1905#bkmk_tsdebug) <!--3612274-->
+- [Delivery Optimization in client data sources dashboard](/sccm/core/get-started/2019/technical-preview-1905#bkmk_do) <!--3555759-->
+- [Improvements to Community Hub](/sccm/core/get-started/2019/technical-preview-1905#bkmk_hub) <!--4224401-->
+- [View SMBIOS GUID in device lists](/sccm/core/get-started/2019/technical-preview-1905#bkmk_smbios) <!--4526580-->
+- [OneTrace log viewer](/sccm/core/get-started/2019/technical-preview-1905#bkmk_onetrace) <!--3555962-->
+- [Software Center infrastructure improvements](/sccm/core/get-started/2019/technical-preview-1905#bkmk_swctr) <!--3555950-->
+- [Improvements to Software Center tab customizations](/sccm/core/get-started/2019/technical-preview-1905#improvements-to-software-center-tab-customizations) <!--4063773-->
+- [Improvements to app approvals](/sccm/core/get-started/2019/technical-preview-1905#bkmk_approve) <!--4224910-->
+- [Retry the install of pre-approved applications](/sccm/core/get-started/2019/technical-preview-1905#bkmk_retry) <!--4336307-->
+- [Install applications for a device](/sccm/core/get-started/2019/technical-preview-1905#bkmk_device-app) <!--4402180-->
+- [More frequent countdown notifications for restarts](/sccm/core/get-started/2019/technical-preview-1905#bkmk_restart) <!--3976435-->
+- [Synchronize collection membership results to Azure Active Directory groups](/sccm/core/get-started/2019/technical-preview-1905#bkmk_aadcollsync) <!--3607475-->
+- [Configure client cache minimum retention period](/sccm/core/get-started/2019/technical-preview-1905#bkmk_cache) <!--4485509-->
+- [Improvements to OS deployment](/sccm/core/get-started/2019/technical-preview-1905#bkmk_osd) <!--4512937,4224642-->
+- [Add a SQL AlwaysOn node](/sccm/core/get-started/2019/technical-preview-1905#bkmk_sqlao) <!--3127336-->
 
 > [!Note]  
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.  
