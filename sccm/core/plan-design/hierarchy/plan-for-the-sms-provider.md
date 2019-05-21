@@ -2,7 +2,7 @@
 title: Plan for the SMS Provider
 titleSuffix: Configuration Manager
 description: Learn about the SMS Provider site system role in Configuration Manager.
-ms.date: 03/12/2019
+ms.date: 05/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -254,9 +254,14 @@ The Windows ADK installation can require up to 650 MB of free disk space on each
 
 Starting in version 1810, the SMS Provider provides read-only API interoperability access to WMI over HTTPS, called the **administration service**. This REST API can be used in place of a custom web service to access information from the site.
 
-The **administration service** URL format is `https://<servername>/AdminService/wmi/<ClassName>` where `<servername>` is the the server where the SMS Provider is installed and `<ClassName>` is a valid Configuration Manager WMI class name.
+The **administration service** URL format is `https://<servername>/AdminService/wmi/<ClassName>` where `<servername>` is the the server where the SMS Provider is installed and `<ClassName>` is a valid Configuration Manager WMI class name. In version 1810, this class name doesn't include the `SMS_` prefix. In version 1902 and later, this class name is the same as the WMI class name. 
 
-For example, `https://servername/AdminService/wmi/SMS_Site`
+For example:
+- 1810: `https://servername/AdminService/wmi/Site`
+- 1902 and later: `https://servername/AdminService/wmi/SMS_Site`
+
+> [!Note]  
+> The administration service class names are case-sensitive. Make sure to use the proper capitalization, for example SMS_Site.
 
 Make direct calls to this service with the Windows PowerShell cmdlet [Invoke-RestMethod](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-restmethod).
 
