@@ -116,7 +116,9 @@ The following diagram provides an overview of how user migration works.
 
 4. All other devices continue to be managed from the Configuration Manager console.  
 
-<!-- SCCMDocs issue #1066 -->
+> [!Important]  
+> When you move a user from hybrid to standalone, removal of policy is suspended for seven days.<!-- SCCMDocs issue #1066 -->
+
 
 ## Verify Intune standalone functionality
 
