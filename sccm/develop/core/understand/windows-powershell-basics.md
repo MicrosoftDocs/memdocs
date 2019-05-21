@@ -1,8 +1,8 @@
-﻿---
-title: "Windows PowerShell Basics"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+---
+title: Windows PowerShell Basics
+titleSuffix: Configuration Manager
+ms.date: 05/21/2019
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: 519ea4d0-94ed-4fff-beec-edb99e6089e8
@@ -27,7 +27,7 @@ System Center 2012 Configuration Manager SP1 introduced native PowerShell suppor
      ![Windows PowerShell command prompt](../../../develop/core/understand/media/powershellv5window.png "PowerShellv5Window")  
 
 > [!TIP]
->  The Windows PowerShell command prompt is a fully functional command prompt. As you get started with Windows PowerShell, get used to opening up the Windows PowerShell command prompt even for non-Windows PowerShell specific tasks, such as â€˜ping' or â€˜ipconfig'. You may find that this helps integrate Windows PowerShell into your normal workflow, and that the tips and tricks you pick up along your Windows PowerShell journey will be more readily at hand.  
+>  The Windows PowerShell command prompt is a fully functional command prompt. As you get started with Windows PowerShell, get used to opening up the Windows PowerShell command prompt even for non-Windows PowerShell specific tasks, such as `ping` or `ipconfig`. You may find that this helps integrate Windows PowerShell into your normal workflow, and that the tips and tricks you pick up along your Windows PowerShell journey will be more readily at hand.  
 
 ## Concepts  
  Below are a few basic Windows PowerShell concepts to get you started on your journey:  
