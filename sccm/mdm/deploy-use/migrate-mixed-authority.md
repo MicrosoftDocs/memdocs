@@ -112,7 +112,7 @@ The following diagram provides an overview of how user migration works.
 
 2. Create a collection to exclude from the collection for the Intune subscription. In this example, the **All Hybrid users** collection contains a rule to exclude users in the **Migration pilot** collection. **User1** is a member of the **Migration pilot** collection and is excluded from the **All Hybrid users** collection.  
 
-3. **User1**’s devices are now managed from Intune in the Azure portal.  
+3. **User1**'s devices are now managed from Intune in the Azure portal.  
 
 4. All other devices continue to be managed from the Configuration Manager console.  
 
@@ -130,7 +130,7 @@ Then, verify that your policies, profiles, and apps are working as expected on t
 
 ## Migrate additional users
 
-After you verify that Intune standalone is functioning as you expect, start migrating additional users. Just as you created a collection with a set of test users, create collections that include users to migrate. Exclude those collections from the collection that's associated with the Intune subscription. For details, see [Collection associated with your Intune subscription](#collection-associated-with-your-intune-subscription).
+After you verify that Intune standalone is functioning as you expect, start migrating additional users. Just as you created a collection with a set of test users, create collections that include users to migrate. Exclude those collections from the collection that's associated with the Intune subscription. For details, see [Migrate a test group of users to Intune standalone](#migrate-a-test-group-of-users-to-intune-standalone).
 
 
 
