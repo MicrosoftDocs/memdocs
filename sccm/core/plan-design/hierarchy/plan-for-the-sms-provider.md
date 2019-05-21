@@ -260,6 +260,9 @@ For example:
 - 1810: `https://servername/AdminService/wmi/Site`
 - 1902 and later: `https://servername/AdminService/wmi/SMS_Site`
 
+> [!Note]  
+> The administration service class names are case-sensitive. Make sure to use the proper capitalization, for example SMS_Site.
+
 Make direct calls to this service with the Windows PowerShell cmdlet [Invoke-RestMethod](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-restmethod).
 
 > [!Tip]  
