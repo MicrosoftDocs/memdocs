@@ -90,6 +90,9 @@ Windows 10, Windows 8.1, Windows Server 2016, and Windows Server 2012 R2 support
 
 Windows 8.0, Windows Server 2012, and earlier versions of Windows don't enable TLS 1.1 or 1.2 by default for client-server communications through HTTPS. For these earlier versions of Windows, you should install [Update 3140245](https://support.microsoft.com/help/3140245) to enable TLS 1.1 and TLS 1.2 as the default secure protocols in WinHTTP in Windows, and set the following registry values.
 
+> [!IMPORTANT]
+> This must first be run on all downlevel clients **before** enabling TLS 1.2 or you can inadvertently orphan them.
+
 Verify that the `DefaultSecureProtocols` registry setting is `0xAA0`, as follows:
 
 ```
