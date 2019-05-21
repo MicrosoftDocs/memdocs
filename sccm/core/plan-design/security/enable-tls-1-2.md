@@ -36,10 +36,10 @@ Verify the "\SecurityProviders\SCHANNEL\Protocols" registry subkey setting, as s
 ### Enable TLS 1.2 for dependent components
 To enable TLS 1.2 for dependent components that Configuration Manager depends on for secure communication, you must:
 
-- Update .NET Framework to support TLS 1.2
-- Update SQL Server and client components
-- Update Windows and WinHTTP on Windows 8.0, Windows Server 2012 R2 and earlier
-- Update Windows Server Update Services (WSUS)
+- [Update .NET Framework to support TLS 1.2](#update-net-framework-to-support-tls-12)
+- [Update SQL Server and client components](#update-sql-server-and-client-components)
+- [Update Windows and WinHTTP on Windows 8.0, Windows Server 2012 R2 and earlier](#update-windows-and-winhttp)
+- [Update Windows Server Update Services (WSUS)](#update-windows-server-update-services)
 
 #### Update .NET Framework to support TLS 1.2
 To update .NET Framework to support TLS 1.2, first determine your .NET version number. For help, see [How to determine which versions and service pack levels of the Microsoft .NET Framework are installed](https://support.microsoft.com/help/318785/how-to-determine-which-versions-and-service-pack-levels-of-the-microso).
@@ -105,26 +105,26 @@ HKEY_LOCAL_MACHINE\SOFTWARE\
 > [!NOTE]
 > This change requires a restart.
 
-#### Update Windows Server Update Services (WSUS)
+#### Update Windows Server Update Services
 
 To support TLS 1.2 for client-server communications in WSUS on Windows Server 2012 and Windows Server 2012 R2, you must apply the following update on the WSUS server:
 - For WSUS server that's running Windows Server 2012, apply [update 4022721](https://support.microsoft.com/help/4022721) or a later update.
 - For WSUS server that's running Windows Server 2012 R2, apply [update 4022720](https://support.microsoft.com/help/4022720) or a later update.
 
 ## Tasks required for Configuration Manager features and scenarios
-This section describes the dependencies for specific Configuration Manager features and scenarios. To determine the next steps, locate the items that apply to your environment, and then verify the dependencies by using the steps provided earlier in [Enable TLS 1.2 for dependent components](#enable-tls-1.2-for-dependent-components).
+This section describes the dependencies for specific Configuration Manager features and scenarios. To determine the next steps, locate the items that apply to your environment, and then verify the dependencies by using the steps provided earlier in [Enable TLS 1.2 for dependent components](#enable-tls-12-for-dependent-components).
 
 |Feature or scenario|Update tasks|
 |--- |--- |
-|Site servers (central, primary, or secondary)|[Update .NET Framework](#update-.net-framework-to-support-tls-1.2), and verify strong cryptography settings.|
-|SMS Provider|[Update Microsoft SQL Server and its client components](#update-sql-server-and-client-components) as appropriate for each SMS provider.|
-|Site system roles|Update .NET Framework, and verify strong cryptography settings. Update SQL Server and its client components.|
-|Service connection point application catalog|Update .NET Framework, and verify strong cryptography settings.|
-|SRS reporting point|Update .NET Framework on the site server and the SRS servers. Restart the SMS_Executive service as necessary.|
-|Admin console|Update .NET Framework, and verify strong cryptography settings.|
+|Site servers (central, primary, or secondary)|[Update .NET Framework](#update-net-framework-to-support-tls-12), and verify strong cryptography settings.|
+|SMS Provider|[Update SQL Server and its client components](#update-sql-server-and-client-components) as appropriate for each SMS provider.|
+|Site system roles|[Update .NET Framework](#update-net-framework-to-support-tls-12), and verify strong cryptography settings. [Update SQL Server and its client components](#update-sql-server-and-client-components).|
+|Service connection point application catalog|[Update .NET Framework](#update-net-framework-to-support-tls-12), and verify strong cryptography settings.|
+|SRS reporting point|[Update .NET Framework](#update-net-framework-to-support-tls-12) on the site server and the SRS servers. Restart the SMS_Executive service as necessary.|
+|Admin console|[Update .NET Framework](#update-net-framework-to-support-tls-12), and verify strong cryptography settings.|
 |SCCM client with HTTPS site system roles|[Update Windows to support TLS 1.2 for client-server communications by using WinHTTP](#update-windows-and-winhttp).|
-|Software Center|Update .NET Framework, and verify strong cryptography settings.|
-|Software Update Point|[Update WSUS](#update-windows-server-update-services-(wsus)).|
+|Software Center|[Update .NET Framework](#update-net-framework-to-support-tls-12), and verify strong cryptography settings.|
+|Software Update Point|[Update WSUS](#update-windows-server-update-services).|
 |Management Points|Update to the latest SQL Server native client to enable Configuration Manager to talk to the latest TLS 1.2-enabled SQL Server components. See the "Client component downloads" table in [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244).|
 
 ## Known issues
