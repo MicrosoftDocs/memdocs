@@ -2,7 +2,7 @@
 title: What's new in hybrid MDM
 titleSuffix: Configuration Manager
 description: Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune.
-ms.date: 05/20/2019
+ms.date: 05/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -730,7 +730,23 @@ Using Azure Active Directory (Azure AD), you can now restrict access to web site
 
 ## Notices
 
-### Plan for Change: Intune supports macOS 10.12 and higher in December 
+### Update your Android Company Portal app to the latest version
+
+<!-- 4536963 -->
+
+Intune periodically releases updates to the Android Company Portal app. In November 2018, we released a Company Portal update that includes a back-end switch to prepare for Google's change from their existing notification platform to Google's Firebase Cloud Messaging (FCM). When Google retires their existing notification platform and moves to FCM, users need to update their Company Portal app to at least the November 2018 release to continue communicating with the Google Play Store.
+
+#### How does this change affect me?
+
+Our data indicates there are tenants that have devices with a Company Portal version earlier than 5.0.4269.0. If this version (or later) of the Company Portal app isn't installed, admin-initiated device actions may not work as expected. These actions include wipe, reset password, available and required app installs, and certificate enrollment.
+
+#### What do I need to do to prepare for this change?
+
+Ask users of Android devices that haven't updated the Company Portal version to update it through Google Play. Notify your help desk in case a user hasn't kept auto-updating the Company Portal app. For more information about Google’s FCM platform and change, see [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
+
+
+### Plan for Change: Intune supports macOS 10.12 and higher in December
+
 <!--2970975-->  
 
 Apple released macOS 10.14, so starting in December 2018, Intune will support macOS 10.12 and higher. 
