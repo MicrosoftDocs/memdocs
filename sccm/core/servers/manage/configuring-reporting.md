@@ -46,7 +46,7 @@ Before you can create, modify, and run reports in the System Center Configuratio
 6.  On the **Report Manager URL** page, click the URL in **Report Manager Site Identification** to test the connection to the virtual directory for Report Manager. The **Windows Security** dialog box might open and prompt you for security credentials. By default, your user account is displayed. Enter your password and click **OK**. Verify that the webpage opens successfully. Close the browser window.  
 
     > [!NOTE]  
-    >  Reporting Services Report Manager is not required for Reporting in Configuration Manager, but it is required if you want to run reports on an Internet browser or manage reports by using Report Manager.  
+    >  Reporting Services Report Manager is not required for Reporting in Configuration Manager, but it is required if you want to run reports on an internet browser or manage reports by using Report Manager.  
 
 7.  Click **Exit** to close Reporting Services Configuration Manager.  
 
@@ -272,7 +272,7 @@ Before you can create, modify, and run reports in the System Center Configuratio
 6.  Click **OK** to save the changes and exit the dialog box.  
 
 ## Upgrading SQL Server  
- After you upgrade SQL Server, and SQL Server Reporting Services that is used as the data source for a reporting services point, you might experience errors when you run or edit reports from the Configuration Manager console. For reporting to work properly from the Configuration Manager console, you must remove the reporting services point site system role for the site and reinstall it. However, after the upgrade you can continue to run and edit reports successfully from an Internet browser.  
+ After you upgrade SQL Server, and SQL Server Reporting Services that is used as the data source for a reporting services point, you might experience errors when you run or edit reports from the Configuration Manager console. For reporting to work properly from the Configuration Manager console, you must remove the reporting services point site system role for the site and reinstall it. However, after the upgrade you can continue to run and edit reports successfully from an internet browser.  
 
 ##  <a name="BKMK_ConfigureReportOptions"></a> Configure report options  
  Use the report options for a Configuration Manager site to select the default reporting services point that is used to manage your reports. Although you can have more than one reporting services point at a site, only the default report server selected in report options is used to manage reports. Use the following procedure to configure report options for your site.  

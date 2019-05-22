@@ -162,3 +162,8 @@ After deploying online apps, any updates to that app come directly from the Micr
 When deploying offline apps to Windows 10 devices with the Configuration Manager client, don't allow users to update applications external to Configuration Manager deployments. Control of updates to offline apps is especially important in multi-user environments such as classrooms. One option to disable the Microsoft Store is by using [group policy](https://docs.microsoft.com/windows/configuration/stop-employees-from-using-microsoft-store#a-href-idblock-store-group-policyablock-microsoft-store-using-group-policy). 
 
 After the Microsoft Store for Business administrator acquires an offline app, don't publish the app to users via the store. This configuration ensures that users can't install or update online. Users only receive offline app updates via Configuration Manager. 
+
+## See also
+
+[Understanding and troubleshooting the Microsoft Store for Business integration with ConfigMgr](https://support.microsoft.com/help/4010214)
+

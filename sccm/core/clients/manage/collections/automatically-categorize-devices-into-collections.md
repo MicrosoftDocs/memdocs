@@ -1,7 +1,7 @@
 ---
 title: "Automatically categorize devices into collections"
 titleSuffix: "Configuration Manager"
-description: "Categorize devices into collections automatically with System Center Configuration Manager."
+description: "Categorize devices into collections automatically."
 ms.date: 04/23/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,7 +12,7 @@ manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
-# Automatically categorize devices into collections with System Center Configuration Manager
+# Automatically categorize devices into collections
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 

@@ -41,9 +41,9 @@ Just prior to installing the site system role, Configuration Manager checks the 
 4.  On the **General** page, review the settings, and then click **Next**.  
 
     > [!TIP]  
-    >  To access the site system role from the Internet, ensure that you specify an Internet fully qualified domain name (FQDN).  
+    >  To access the site system role from the internet, ensure that you specify an internet fully qualified domain name (FQDN).  
 
-5.  On the **Proxy** page, specify settings for a proxy server, if site system roles that run on this site system server require a proxy server to connect to locations on the Internet. Then click **Next**.  
+5.  On the **Proxy** page, specify settings for a proxy server, if site system roles that run on this site system server require a proxy server to connect to locations on the internet. Then click **Next**.  
 
 6.  On the **System Role Selection** page, select the site system roles that you want to add, and then click **Next**.  
 
@@ -63,9 +63,9 @@ Just prior to installing the site system role, Configuration Manager checks the 
 4.  On the **General** page, specify the general settings for the site system, and then click **Next**.  
 
     > [!TIP]  
-    >  To access the new site system role from the Internet, ensure that you specify an Internet FQDN.  
+    >  To access the new site system role from the internet, ensure that you specify an internet FQDN.  
 
-5.  On the **Proxy** page, specify settings for a proxy server, if site system roles that run on this site system server require a proxy server to connect to locations on the Internet. Then click **Next**.  
+5.  On the **Proxy** page, specify settings for a proxy server, if site system roles that run on this site system server require a proxy server to connect to locations on the internet. Then click **Next**.  
 
 6.  On the **System Role Selection** page, select the site system roles that you want to add, and then click **Next**.  
 
