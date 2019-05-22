@@ -116,7 +116,7 @@ For more information, see [Get started with application management in System Cen
 |Employees can be productive even if they're not at their desk.|When employees aren't at their desk and don't have portable computers, they can't access their applications by using the kiosk computers that are available throughout the company.|Employees can use kiosk computers to access their applications and data.|  
 |Usually, business continuity takes precedence over installing required applications and software updates.|Applications and software updates that are required install during the day and frequently disrupt users from working because their computers slow down or restart during the installation.|Users can configure their working hours to prevent required software from installing while they're using their computer.|  
 
- To meet the requirements, Admins use these Configuration Manager management capabilities and configuration options:  
+ To meet the requirements, admins use these Configuration Manager management capabilities and configuration options:  
 
 -   Application management  
 -   Mobile device management  
