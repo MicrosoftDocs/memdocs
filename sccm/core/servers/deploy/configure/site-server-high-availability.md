@@ -24,7 +24,7 @@ Historically, you could add redundancy to most of the roles in Configuration Man
 This feature brings the following benefits 
 - Redundancy and high availability to the site server role  
 - More easily change the hardware or OS of the site server  
-- More easily move your site server to Azure IaaS   
+- More easily move your site server to Azure IaaS  
 
 The site server in passive mode is in addition to your existing site server that is in *active* mode. A site server in passive mode is available for immediate use, when needed. Include this additional site server as part of your overall design for making the Configuration Manager service [highly available](/sccm/core/servers/deploy/configure/high-availability-options).  
 
