@@ -777,7 +777,7 @@ The following table lists the log files that contain information related to Disc
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |ccmperf.log|Records activities related to the maintenance and capture of data related to client performance counters.|Client|  
-|PatchDownloader.log|Records details about the process of downloading software updates from the update source to the download destination on the site server.|When downloading updates manually, this will be located in the %temp% directory of the user running the console on the machine you're running the console. For Automatic Deployment Rules, this will be located on the site server in %windir%\CCM\Logs if the ConfigMgr client is installed on the site server|  
+|PatchDownloader.log|Records details about the process of downloading software updates from the update source to the download destination on the site server.|When downloading updates manually, this will be located in the %temp% directory of the user running the console on the machine you're running the console. For Automatic Deployment Rules, this will be located on the site server in %windir%\CCM\Logs if the ConfigMgr client is installed on the site server.|  
 |PolicyEvaluator.log|Records details about the evaluation of policies on client computers, including policies from software updates.|Client|  
 |RebootCoordinator.log|Records details about the coordination of system restarts on client computers after software update installations.|Client|  
 |ScanAgent.log|Records details about scan requests for software updates, the WSUS location, and related actions.|Client|  
