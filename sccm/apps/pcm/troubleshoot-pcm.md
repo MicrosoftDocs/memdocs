@@ -33,7 +33,7 @@ If the SMS Provider isn't working properly, the Configuration Manager console in
 
 ## Package readiness
 
-Before converting a package to an application, analyze the package using the Package Conversion Manager **Analyze** function. After the analysis, add the **Readiness** column in the **Packages** node of the Configuration Manager console. The list of packages displays one of the following readiness states of the analyzed package:
+Before converting a package to an application, analyze the package using the Package Conversion Manager **Analyze** function. After the analysis, add the **Readiness** column in the **Packages** node of the Configuration Manager console. The list of packages displays one of the following readiness states of the analyzed package:
 
  - **Automatic**: The package can be directly converted using the **Convert** function.      
 
