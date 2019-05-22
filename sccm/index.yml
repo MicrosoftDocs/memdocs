@@ -29,10 +29,10 @@ conceptualContent:
       links:
         - text: Manage clients on the internet
           url: https://docs.microsoft.com/sccm/core/clients/manage/manage-clients-internet
-          itemType: concepts
+          itemType: overview
         - text: Plan for Azure AD
           url: https://docs.microsoft.com/sccm/core/plan-design/security/plan-for-security#bkmk_planazuread
-          itemType: design-guide
+          itemType: architecture
         - text: Azure services
           url: https://docs.microsoft.com/sccm/core/servers/deploy/configure/azure-services-wizard
           itemType: how-to-guide
@@ -46,6 +46,7 @@ conceptualContent:
           itemType: tutorial
         - text: Workloads
           url: https://docs.microsoft.com/en-us/sccm/comanage/workloads
+          itemType: overview
       footerLink:
         text: See more
         url: https://docs.microsoft.com/en-us/sccm/comanage/overview
@@ -53,7 +54,7 @@ conceptualContent:
       links:
         - text: CMPivot
           url: https://docs.microsoft.com/en-us/sccm/core/servers/manage/cmpivot
-          itemType: how-to-guide
+          itemType: get-started
         - text: Run PowerShell scripts
           url: https://docs.microsoft.com/en-us/sccm/apps/deploy-use/create-deploy-scripts
           itemType: how-to-guide
@@ -64,10 +65,10 @@ conceptualContent:
           itemType: how-to-guide
         - text: Deploy clients
           url: https://docs.microsoft.com/en-us/sccm/core/clients/deploy/deploy-clients-to-windows-computers
-          itemType: how-to-guide
+          itemType: deploy
         - text: Stay current with ConfigMgr and Windows 10
           url: https://docs.microsoft.com/sccm/core/understand/configuration-manager-and-windows-as-service
-          itemType: design-guide
+          itemType: learn
       footerLink:
         text: See more
         url: https://docs.microsoft.com/en-us/sccm/core/understand/introduction
@@ -78,10 +79,10 @@ conceptualContent:
           itemType: how-to-guide
         - text: Deploy apps
           url: https://docs.microsoft.com/en-us/sccm/apps/deploy-use/deploy-applications
-          itemType: how-to-guide
+          itemType: deploy
         - text: Plan for Software Center
           url: https://docs.microsoft.com/en-us/sccm/apps/plan-design/plan-for-software-center
-          itemType: design-guide
+          itemType: architecture
       footerLink:
         text: See more
         url: https://docs.microsoft.com/en-us/sccm/apps/understand/introduction-to-application-management
@@ -89,13 +90,13 @@ conceptualContent:
       links:
         - text: Upgrade to Windows 10
           url: https://docs.microsoft.com/en-us/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version
-          itemType: concepts
+          itemType: overview
         - text: Phased deployments
           url: https://docs.microsoft.com/en-us/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence
           itemType: how-to-guide
         - text: Task sequence steps
           url: https://docs.microsoft.com/en-us/sccm/osd/understand/task-sequence-steps
-          itemType: reference
+          itemType: learn
       footerLink:
         text: See more
         url: https://docs.microsoft.com/en-us/sccm/osd/understand/introduction-to-operating-system-deployment
@@ -103,13 +104,13 @@ conceptualContent:
       links:
         - text: Plan for software updates
           url: https://docs.microsoft.com/en-us/sccm/sum/plan-design/plan-for-software-updates
-          itemType: design-guide
+          itemType: architecture
         - text: Deploy software updates
           url: https://docs.microsoft.com/en-us/sccm/sum/deploy-use/deploy-software-updates
-          itemType: how-to-guide
+          itemType: deploy
         - text: Optimize Windows 10 updates
           url: https://docs.microsoft.com/sccm/sum/deploy-use/optimize-windows-10-update-delivery
-          itemType: concepts
+          itemType: learn
         - text: Update Office 365
           url: https://docs.microsoft.com/en-us/sccm/sum/deploy-use/manage-office-365-proplus-updates
           itemType: how-to-guide
@@ -120,27 +121,27 @@ conceptualContent:
       links:
         - text: PowerShell
           url: https://docs.microsoft.com/en-us/powershell/sccm/overview?view=sccm-ps
-          itemType: reference
+          itemType: learn
         - text: SDK concepts
           url: https://docs.microsoft.com/en-us/sccm/develop/core/misc/system-center-configuration-manager-sdk
-          itemType: concepts
+          itemType: overview
         - text: SDK reference
           url: https://docs.microsoft.com/en-us/sccm/develop/reference/configuration-manager-reference
-          itemType: reference
+          itemType: learn
         - text: SQL views
           url: https://docs.microsoft.com/en-us/sccm/develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views
-          itemType: reference
+          itemType: learn
     - title: Tools
       links:
         - text: Support Center
           url: https://docs.microsoft.com/sccm/core/support/support-center
-          itemType: troubleshooting
+          itemType: how-to-guide
         - text: MDT
           url: https://docs.microsoft.com/en-us/sccm/mdt/
-          itemType: mini-hub
+          itemType: how-to-guide
         - text: Package Conversion Manager
           url: https://docs.microsoft.com/en-us/sccm/apps/pcm/package-conversion-manager
-          itemType: how-to-guide
+          itemType: learn
       footerLink:
         text: See more
         url: https://docs.microsoft.com/en-us/sccm/core/support/tools
@@ -148,10 +149,10 @@ conceptualContent:
       links:
         - text: Windows Defender
           url: https://docs.microsoft.com/en-us/sccm/protect/deploy-use/endpoint-protection
-          itemType: concepts
+          itemType: overview
         - text: WDATP
           url: https://docs.microsoft.com/en-us/sccm/protect/deploy-use/windows-defender-advanced-threat-protection
-          itemType: concepts
+          itemType: overview
       footerLink:
         text: See more
         url: https://docs.microsoft.com/en-us/sccm/protect/understand/protect-data-and-site-infrastructure
@@ -171,8 +172,8 @@ conceptualContent:
         url: https://docs.microsoft.com/en-us/sccm/compliance/understand/ensure-device-compliance
 
 additionalContent:
-  title: Configuration Manager community & support
   sections:
+    - title: Configuration Manager community & support
     - items: 
       - title: Configuration Manager blog
         summary: News and announcements
