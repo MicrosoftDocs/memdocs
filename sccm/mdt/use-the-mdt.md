@@ -941,7 +941,7 @@ Table 10 lists the top-level nodes in the Deployment Workbench and the types of 
  The Deployment Workbench automates the download and installation of components used in LTI.  
 
 > [!NOTE]
->  If the MDT computer has Internet connectivity, the Deployment Workbench can automatically download the components.  
+>  If the MDT computer has internet connectivity, the Deployment Workbench can automatically download the components.  
 
 ###### To download and install Deployment Workbench components  
 
@@ -953,7 +953,7 @@ Table 10 lists the top-level nodes in the Deployment Workbench and the types of 
 
 4. In the details pane, click **Download**.  
 
-    After downloading the component from the Internet, the component is listed in the **Downloaded** section in the details pane.  
+    After downloading the component from the internet, the component is listed in the **Downloaded** section in the details pane.  
 
 5. In the details pane, in the **Download** section, click the downloaded component, and then click **Install**.  
 
