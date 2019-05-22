@@ -42,94 +42,94 @@ conceptualContent:
           url: https://docs.microsoft.com/sccm/comanage/quickstarts
           itemType: quickstart
         - text: Tutorial
-          url: https://docs.microsoft.com/en-us/sccm/comanage/tutorial-co-manage-clients
+          url: https://docs.microsoft.com/sccm/comanage/tutorial-co-manage-clients
           itemType: tutorial
         - text: Workloads
-          url: https://docs.microsoft.com/en-us/sccm/comanage/workloads
+          url: https://docs.microsoft.com/sccm/comanage/workloads
           itemType: overview
       footerLink:
         text: See more
-        url: https://docs.microsoft.com/en-us/sccm/comanage/overview
+        url: https://docs.microsoft.com/sccm/comanage/overview
     - title: Real-time management
       links:
         - text: CMPivot
-          url: https://docs.microsoft.com/en-us/sccm/core/servers/manage/cmpivot
+          url: https://docs.microsoft.com/sccm/core/servers/manage/cmpivot
           itemType: get-started
         - text: Run PowerShell scripts
-          url: https://docs.microsoft.com/en-us/sccm/apps/deploy-use/create-deploy-scripts
+          url: https://docs.microsoft.com/sccm/apps/deploy-use/create-deploy-scripts
           itemType: how-to-guide
     - title: Core infrastructure
       links:
         - text: Using the console
-          url: https://docs.microsoft.com/en-us/sccm/core/servers/manage/admin-console
+          url: https://docs.microsoft.com/sccm/core/servers/manage/admin-console
           itemType: how-to-guide
         - text: Deploy clients
-          url: https://docs.microsoft.com/en-us/sccm/core/clients/deploy/deploy-clients-to-windows-computers
+          url: https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers
           itemType: deploy
         - text: Stay current with ConfigMgr and Windows 10
           url: https://docs.microsoft.com/sccm/core/understand/configuration-manager-and-windows-as-service
           itemType: learn
       footerLink:
         text: See more
-        url: https://docs.microsoft.com/en-us/sccm/core/understand/introduction
+        url: https://docs.microsoft.com/sccm/core/understand/introduction
     - title: App management
       links:
         - text: Create apps
-          url: https://docs.microsoft.com/en-us/sccm/apps/get-started/create-and-deploy-an-application
+          url: https://docs.microsoft.com/sccm/apps/get-started/create-and-deploy-an-application
           itemType: how-to-guide
         - text: Deploy apps
-          url: https://docs.microsoft.com/en-us/sccm/apps/deploy-use/deploy-applications
+          url: https://docs.microsoft.com/sccm/apps/deploy-use/deploy-applications
           itemType: deploy
         - text: Plan for Software Center
-          url: https://docs.microsoft.com/en-us/sccm/apps/plan-design/plan-for-software-center
+          url: https://docs.microsoft.com/sccm/apps/plan-design/plan-for-software-center
           itemType: architecture
       footerLink:
         text: See more
-        url: https://docs.microsoft.com/en-us/sccm/apps/understand/introduction-to-application-management
+        url: https://docs.microsoft.com/sccm/apps/understand/introduction-to-application-management
     - title: OS deployment
       links:
         - text: Upgrade to Windows 10
-          url: https://docs.microsoft.com/en-us/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version
+          url: https://docs.microsoft.com/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version
           itemType: overview
         - text: Phased deployments
-          url: https://docs.microsoft.com/en-us/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence
+          url: https://docs.microsoft.com/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence
           itemType: how-to-guide
         - text: Task sequence steps
-          url: https://docs.microsoft.com/en-us/sccm/osd/understand/task-sequence-steps
+          url: https://docs.microsoft.com/sccm/osd/understand/task-sequence-steps
           itemType: learn
       footerLink:
         text: See more
-        url: https://docs.microsoft.com/en-us/sccm/osd/understand/introduction-to-operating-system-deployment
+        url: https://docs.microsoft.com/sccm/osd/understand/introduction-to-operating-system-deployment
     - title: Software updates
       links:
         - text: Plan for software updates
-          url: https://docs.microsoft.com/en-us/sccm/sum/plan-design/plan-for-software-updates
+          url: https://docs.microsoft.com/sccm/sum/plan-design/plan-for-software-updates
           itemType: architecture
         - text: Deploy software updates
-          url: https://docs.microsoft.com/en-us/sccm/sum/deploy-use/deploy-software-updates
+          url: https://docs.microsoft.com/sccm/sum/deploy-use/deploy-software-updates
           itemType: deploy
         - text: Optimize Windows 10 updates
           url: https://docs.microsoft.com/sccm/sum/deploy-use/optimize-windows-10-update-delivery
           itemType: learn
         - text: Update Office 365
-          url: https://docs.microsoft.com/en-us/sccm/sum/deploy-use/manage-office-365-proplus-updates
+          url: https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates
           itemType: how-to-guide
       footerLink:
         text: See more
-        url: https://docs.microsoft.com/en-us/sccm/sum/understand/software-updates-introduction
+        url: https://docs.microsoft.com/sccm/sum/understand/software-updates-introduction
     - title: Develop
       links:
         - text: PowerShell
-          url: https://docs.microsoft.com/en-us/powershell/sccm/overview?view=sccm-ps
+          url: https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps
           itemType: learn
         - text: SDK concepts
-          url: https://docs.microsoft.com/en-us/sccm/develop/core/misc/system-center-configuration-manager-sdk
+          url: https://docs.microsoft.com/sccm/develop/core/misc/system-center-configuration-manager-sdk
           itemType: overview
         - text: SDK reference
-          url: https://docs.microsoft.com/en-us/sccm/develop/reference/configuration-manager-reference
+          url: https://docs.microsoft.com/sccm/develop/reference/configuration-manager-reference
           itemType: learn
         - text: SQL views
-          url: https://docs.microsoft.com/en-us/sccm/develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views
+          url: https://docs.microsoft.com/sccm/develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views
           itemType: learn
     - title: Tools
       links:
@@ -137,39 +137,39 @@ conceptualContent:
           url: https://docs.microsoft.com/sccm/core/support/support-center
           itemType: how-to-guide
         - text: MDT
-          url: https://docs.microsoft.com/en-us/sccm/mdt/
+          url: https://docs.microsoft.com/sccm/mdt/
           itemType: how-to-guide
         - text: Package Conversion Manager
-          url: https://docs.microsoft.com/en-us/sccm/apps/pcm/package-conversion-manager
+          url: https://docs.microsoft.com/sccm/apps/pcm/package-conversion-manager
           itemType: learn
       footerLink:
         text: See more
-        url: https://docs.microsoft.com/en-us/sccm/core/support/tools
+        url: https://docs.microsoft.com/sccm/core/support/tools
     - title: Protect
       links:
         - text: Windows Defender
-          url: https://docs.microsoft.com/en-us/sccm/protect/deploy-use/endpoint-protection
+          url: https://docs.microsoft.com/sccm/protect/deploy-use/endpoint-protection
           itemType: overview
         - text: WDATP
-          url: https://docs.microsoft.com/en-us/sccm/protect/deploy-use/windows-defender-advanced-threat-protection
+          url: https://docs.microsoft.com/sccm/protect/deploy-use/windows-defender-advanced-threat-protection
           itemType: overview
       footerLink:
         text: See more
-        url: https://docs.microsoft.com/en-us/sccm/protect/understand/protect-data-and-site-infrastructure
+        url: https://docs.microsoft.com/sccm/protect/understand/protect-data-and-site-infrastructure
     - title: Device compliance
       links:
         - text: Create configuration items
-          url: https://docs.microsoft.com/en-us/sccm/compliance/deploy-use/create-configuration-items
+          url: https://docs.microsoft.com/sccm/compliance/deploy-use/create-configuration-items
           itemType: how-to-guide
         - text: Microsoft Edge settings
-          url: https://docs.microsoft.com/en-us/sccm/compliance/deploy-use/browser-profiles
+          url: https://docs.microsoft.com/sccm/compliance/deploy-use/browser-profiles
           itemType: how-to-guide
         - text: Windows edition upgrade
-          url: https://docs.microsoft.com/en-us/sccm/compliance/deploy-use/upgrade-windows-version
+          url: https://docs.microsoft.com/sccm/compliance/deploy-use/upgrade-windows-version
           itemType: how-to-guide
       footerLink:
         text: See more
-        url: https://docs.microsoft.com/en-us/sccm/compliance/understand/ensure-device-compliance
+        url: https://docs.microsoft.com/sccm/compliance/understand/ensure-device-compliance
 
 additionalContent:
   sections:
@@ -193,5 +193,5 @@ additionalContent:
       - title: ConfigMgr on Reddit
         summary: Learn more from the community
         url: https://www.reddit.com/r/sccm
-  footer: Found a problem on our site? [Let us know](https://docs.microsoft.com/en-us/sccm/core/understand/use-docs#bkmk_docfeedback)!
+  footer: Found a problem on our site? [Let us know](https://docs.microsoft.com/sccm/core/understand/use-docs#bkmk_docfeedback)!
   
