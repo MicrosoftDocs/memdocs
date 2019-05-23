@@ -103,9 +103,9 @@ You can add enterprise branding elements and specify the visibility of tabs on S
 
 To modify Software Center:
 
-1. In the **Configuration Manager** console, choose **Administration** > **Client Settings**. Click on your desired client setting instance.
-2. On the **Home** tab, in the **Properties** group, choose **Properties**.
-3. In the **Default Settings** dialog box, choose **Software Center**.
+1. In the **Configuration Manager** console, choose **Administration** > **Client Settings**. Click on your desired client setting instance.
+2. On the **Home** tab, in the **Properties** group, choose **Properties**.
+3. In the **Default Settings** dialog box, choose **Software Center**.
 4. Select **Yes** to **Select new settings to specify company information** to enable your Software Center customization settings.
 5. Type your **Company name**.
 6. Select your **Color Scheme for Software Center**.
