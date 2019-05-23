@@ -140,7 +140,7 @@ Pre-cache content gives you the option for the client to only download the appli
 
 Starting in version 1802, the default task sequence template for Windows 10 in-place upgrade includes additional groups with recommended actions to add before the upgrade process. These actions in the **Prepare for Upgrade** group are common among many customers who are successfully upgrading devices to Windows 10. For sites on versions prior to 1802, manually add these actions to your task sequence in the **Prepare for Upgrade** group.  
 
-- **Battery checks**: Add steps in this group to check whether the computer is using battery, or wired power. This action requires a custom script or utility to perform this check.  
+- **Battery checks**: Add steps in this group to check whether the computer is using battery, or wired power. This action requires a custom script or utility to perform this check. For example: Using WbemTest, connect to the `root\cimv2` namespace. Then run the following query: `Select Batterystatus From Win32_Battery where batterystatus != 2`. If it returns any results, then the device is running on battery. Otherwise, the device is connected to wired power.  
 
 - **Network/wired connection checks**: Add steps in this group to check whether the computer is connected to a network, and isn't using a wireless connection. This action requires a custom script or utility to perform this check.  
 
