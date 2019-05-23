@@ -2,7 +2,7 @@
 title: What's new in hybrid MDM
 titleSuffix: Configuration Manager
 description: Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune.
-ms.date: 05/22/2019
+ms.date: 05/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -45,6 +45,21 @@ Each section of this article lists hybrid features under three different categor
 ## May 2019
 
 ### New in Microsoft Intune
+
+#### Android Enterprise app management
+
+<!-- 4459905 -->
+
+To make it easier for you to configure and use Android Enterprise management, Intune automatically adds the following four common Android Enterprise related apps to the Intune admin console:
+
+- [Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune): Used for Android Enterprise fully managed scenarios
+- [Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator): If you use two-factor verification, this app helps you sign in to your accounts
+- [Intune Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal): Used for App Protection Policies (APP) and Android Enterprise work profile scenarios
+- [Managed Home Screen](https://play.google.com/store/apps/details?id=com.microsoft.launcher.enterprise): Used for Android Enterprise dedicated/kiosk scenarios
+
+Previously, during setup you needed to manually find and approve these apps in the [Managed Google Play store](https://play.google.com/store/apps). This change removes those previously manual steps to make it easier and faster for you to use Android Enterprise management.
+
+When you first connect their Intune tenant to Managed Google Play, you see these four apps automatically added to you Intune apps list. For more information, see [Enable Android for Work enrollment](/sccm/mdm/deploy-use/enroll-hybrid-android#enable-android-for-work-enrollment). If you've already connected your tenant or already use Android Enterprise, there's nothing you need to do. These four apps automatically show up within seven days after the May 2019 service update.
 
 #### Intune policies update authentication method and Company Portal app installation
 
