@@ -1,7 +1,7 @@
 ---
 title: Setup wizard
 titleSuffix: Configuration Manager
-ms.date: 03/07/2019
+ms.date: 05/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -114,8 +114,11 @@ If you're installing a central administration site as part of a site expansion s
     - **Installation folder**: This folder is the path to the Configuration Manager installation. You can't change the location after the site installs. The path can't contain Unicode characters or trailing spaces.  
 
         > [!NOTE]  
-        > Install Configuration Manager to a separate partition. Do not use the default operating system partition, when installing Configuration Manager in a production environment.   
-
+        > Consider whether you want to use the default installation folder. If you use the default OS partition in a production environment, you may experience the following issues in the future:  
+        >
+        > - If Configuration Manager uses the additional free disk space on the OS partition, neither Windows or Configuration Manager will operate properly. If you install Configuration Manager on a separate partition, its disk consumption won't impact the OS.
+        > - Configuration Manager performance is better with a fast disk. Some server designs don't optimize the OS disk for speed.
+        > - You can service, restore, or reinstall the OS without impacting your Configuration Manager installation.  
 
 11. On the **Site Installation** page, use the following option that matches your scenario:  
 
