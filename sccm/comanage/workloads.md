@@ -54,6 +54,9 @@ Resource access policies configure VPN, Wi-Fi, email, and certificate settings o
 
 For more information on the Intune feature, see [Deploy resource access profiles](https://docs.microsoft.com/intune/device-profiles).
 
+> [!Note]  
+> The resource access workload is also part of device configuration. These policies are managed by Intune when you switch the [Device Configuration](#device-configuration) workload.
+
 
 ## Endpoint Protection
 
@@ -61,6 +64,7 @@ For more information on the Intune feature, see [Deploy resource access profiles
 
 Starting in Configuration Manager 1802, the Endpoint Protection workload includes the Windows Defender suite of antimalware protection features:
 
+- Windows Defender Antimalware
 - Windows Defender Application Guard  
 - Windows Defender Firewall  
 - Windows Defender SmartScreen  
@@ -68,10 +72,15 @@ Starting in Configuration Manager 1802, the Endpoint Protection workload include
 - Windows Defender Exploit Guard  
 - Windows Defender Application Control  
 - Windows Defender Security Center  
-- Windows Defender Advanced Threat Protection  (now known as Microsoft Defender Threat Protection)
+- Windows Defender Advanced Threat Protection (now known as Microsoft Defender Threat Protection)
 - Windows Information Protection  
 
 For more information on the Intune feature, see [Endpoint Protection for Microsoft Intune](https://docs.microsoft.com/intune/endpoint-protection-windows-10).
+
+> [!Note]  
+> When you switch this workload, the Configuration Manager policies stay on the device until the Intune policies overwrite them. This behavior makes sure that the device still has protection policies during the transition.
+>
+> The Endpoint Protection workload is also part of device configuration. The same behavior applies when you switch the [Device Configuration](#device-configuration) workload.<!-- SCCMDocs.nl-nl issue #4 -->
 
 
 ## Device configuration
