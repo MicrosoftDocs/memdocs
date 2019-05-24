@@ -706,6 +706,8 @@
         href: clients/manage/cmg/monitor-clients-cloud-management-gateway.md
     - name: Plan for internet-based Client Management
       href: clients/manage/plan-internet-based-client-management.md
+    - name: Azure AD authentication workflow
+      href: clients/manage/azure-ccmsetup.md
   - name: Collections
     items:
     - name: Introduction to collections
