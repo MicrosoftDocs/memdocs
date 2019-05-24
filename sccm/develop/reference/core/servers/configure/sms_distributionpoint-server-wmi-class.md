@@ -52,7 +52,7 @@ The following table lists the methods in the `SMS_DistributionPoint` class.
 |------------|-----------------|  
 |[VerifyPackage method in class SMS_DistributionPoint](/sccm/develop/reference/core/servers/configure/verifypackage-method-in-class-sms_distributionpoint)|Verifies the integrity of the package.|  
 |[CancelDistribution method in class SMS_DistributionPoint](/sccm/develop/reference/core/servers/configure/canceldistribution-method-in-class-sms_distributionpoint)|Cancels the distribution of a package.|  
-|[SetDPMaintenanceMode method in class SMS_DistributionPoint](/sccm/develop/reference/core/servers/configure/setdpmaintenancemode-method-in-class-sms_distributionpoint)|Starting in version 1902, put a distribution point in maintenance mode.|
+
 
 ## Properties
 
