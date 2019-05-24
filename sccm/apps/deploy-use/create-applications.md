@@ -331,7 +331,7 @@ Continue to the next section on using a custom script as a detection method. Or 
 Configuration Manager checks the results from the script. It reads the values written by the script to the standard output (STDOUT) stream, the standard error (STDERR) stream, and the exit code. If the script exits with a non-zero value, the script fails, and the application detection status is *Unknown*. If the exit code is zero, and STDOUT has data, the application detection status is *Installed*.
 
 > [!TIP]
-> This may not be intuitive for new Configuration Manager administrators.  When writing your detection script you cannot return any output unless you want to return that the application is installed.  See examples below the tables for help.
+> When writing a detection script, if you return a zero exit code but don't return output (data in STDOUT), the application will not be detected as installed. For more information, see the following examples.
 
 Use the following tables to check whether an application is installed from the output from a script:  
 
