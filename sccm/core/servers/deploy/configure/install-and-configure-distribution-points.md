@@ -204,7 +204,7 @@ After reassigning a distribution point, refresh the server's certificate. The ne
 - This process removes the distribution point from the old site's default boundary group. You need to manually add it to the new site's default boundary group, if necessary. All other boundary group assignments remain the same.  
 
 
-## <a name="bkmk_dpmaint"></a> Distribution point maintenance mode
+## <a name="bkmk_maint"></a> Maintenance mode
 
 <!--3555754-->
 
