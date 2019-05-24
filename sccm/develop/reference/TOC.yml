@@ -2368,7 +2368,7 @@
     - name: GetChainedPullDPs method
       href: core/servers/configure/getchainedpulldps-method-in-class-smsdistributionpointinfo.md
     - name: SetDPMaintenanceMode method
-      href: core/servers/configure/setdpmaintenancemode-method-in-class-sms_distributionpointinfo.md
+      href: core/servers/configure/setdpmaintenancemode-method-in-class-sms-distributionpointinfo.md
   - name: SMS_DistributionStatus Server WMI Class
     href: core/servers/configure/sms_distributionstatus-server-wmi-class.md
   - name: SMS_LastPXEAdvertisement Server WMI Class

@@ -72,7 +72,7 @@ The following table lists the methods in the `SMS_DistributionPointInfo` class.
 |||  
 |-|-|  
 |[GetChainedPullDPs Method in Class SMSDistributionPointInfo](/sccm/develop/reference/core/servers/configure/getchainedpulldps-method-in-class-smsdistributionpointinfo)|Ensures that when a source distribution point is assigned, a looping chain is not generated.|  
-|[SetDPMaintenanceMode method in class SMS_DistributionPointInfo](/sccm/develop/reference/core/servers/configure/setdpmaintenancemode-method-in-class-sms_distributionpointinfo)|Starting in version 1902, put a distribution point in maintenance mode.|
+|[SetDPMaintenanceMode method in class SMS_DistributionPointInfo](/sccm/develop/reference/core/servers/configure/setdpmaintenancemode-method-in-class-sms-distributionpointinfo)|Starting in version 1902, put a distribution point in maintenance mode.|
 
 
 ## Properties
