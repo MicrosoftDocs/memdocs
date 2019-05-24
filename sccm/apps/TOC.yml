@@ -47,6 +47,8 @@
       href: deploy-use/simulate-application-deployments.md
     - name: Deploy App-V virtual applications
       href: get-started/deploying-app-v-virtual-applications.md
+    - name: Troubleshoot application deployments
+      href: deploy-use/troubleshooting-application-deployment.md
   - name: Monitor applications
     items:
     - name: Monitor applications from the console
