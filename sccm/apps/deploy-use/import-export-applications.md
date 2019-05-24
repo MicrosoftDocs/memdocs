@@ -17,33 +17,33 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Configuration Manager allows for the import and export of applications within the console.  This allows you to copy applications in to other environments, such as copying from a test environment into a production environment.
+Use Configuration Manager to import and export applications between two hierarchies. For example, copy an application from a test environment to a production environment.
 
-## <a name="bkmk_export"></a> Export an Application
+## <a name="bkmk_export"></a> Export
 
-1. Within the Configuration Manager console, right click on the application to export and select **Export**.
-1. On the **General** screen, enter a path to a new ZIP file to export into.  Optionally define if you'd like to export *dependencies, supersedence relationships, conditions, and virtual environments* and also if you'd like to export *content for the selected applications and dependencies*.  Enter any administrator comments, if desired, and click **Next**.
-1. Verify the application and any dependencies are listed on the **Related Objects** page and click **Next**.
-1. On the Summary page, click **Next**.
-1. Once the process is complete, the ZIP file will be created and you can click the **Close** button.
+1. In the Configuration Manager console, select the **Applications** node. In the Create group of the ribbon, choose **Export Application**.
+1. On the **General** screen, enter a path to a new ZIP file to export into.  Optionally define if you'd like to export *dependencies, supersedence relationships, conditions, and virtual environments* and also if you'd like to export *content for the selected applications and dependencies*.  Enter any administrator comments, if desired, and sele **Next**.
+1. Verify the application and any dependencies are listed on the **Related Objects** page and select **Next**.
+1. On the Summary page, select **Next**.
+1. Once the process completes, it creates the ZIP file, and you can close the wizard.
 
 > [!IMPORTANT]
 > If you're going to copy this to another environment, you'll need to take both the created ZIP file and the folder that accompanies it.  The ZIP file must exist in the same directory as the created folder.
 
-## <a name="bkmk_import"></a> Import Export an Application
+## <a name="bkmk_import"></a> Import
 
 > [!NOTE]
-> Applications can only be imported from UNC paths, you will not be able to import from your local disk directly.
+> You can only import applications from UNC paths, you can't directly import from your local disk.
 
-1. Within the Configuration Manager console, right click on the application node in the left margin  **Import Application**.
-1. Select the ZIP file that you'd like to import and click **Next**.
-1. The File Content window will show what will happen with the application you're importing.  Click **Next**.
-1. Review the summary screen and click **Next**.
-1. On the Completion screen, click the **Close** button.  Your application has now been imported.
+1. In the Configuration Manager console, select the **Applications** node. In the Create group of the ribbon, choose **Import Application**.
+1. Choose the ZIP file that you'd like to import and select **Next**.
+1. The File Content window shows what what will happen when you import the application. Select **Next**.
+1. Review the summary screen and select **Next**.
+1. Close the wizard. The application is now available in the site.
 
-## <a name="bkmk_whatsnext"></a> What's Next
+## <a name="bkmk_whatsnext"></a> See also
  
 Automate the import and export of applications using PowerShell.
 
-* [Import-CMApplication](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/import-cmapplication)
-* [Export-CMApplication](https://docs.microsoft.com/en-us/powershell/module/configurationmanager/export-cmapplication)
+* [Import-CMApplication](https://docs.microsoft.com/powershell/module/configurationmanager/import-cmapplication)
+* [Export-CMApplication](https://docs.microsoft.com/powershell/module/configurationmanager/export-cmapplication)
