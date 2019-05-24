@@ -2,7 +2,7 @@
 title: What's new in version 1902
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1902 of Configuration Manager current branch.
-ms.date: 05/13/2019
+ms.date: 05/24/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -187,10 +187,11 @@ For more information, see [How to configure Wake on LAN](/sccm/core/clients/depl
 ## <a name="bkmk_app"></a> Application management
 
 ### Improvements to application approvals via email
-<!--3594063-->
-This version has improvements to the feature to receive email notifications for application requests. Users could  always add a comment to the request from Software Center. This comment shows on the application request in the Configuration Manager console. Now that comment also shows in the email. Including this comment in the email helps the approvers make a better decision to approve or deny the request.
 
-<!-- For more information, see [Email notifications](/sccm/apps/deploy-use/app-approval#bkmk_email-approve). -->
+<!--3594063-->
+***[Updated]*** This version has improvements to the feature to receive email notifications for application requests. Users could  always add a comment to the request from Software Center. This comment shows on the application request in the Configuration Manager console. Now that comment also shows in the email. Including this comment in the email helps the approvers make a better decision to approve or deny the request.
+
+For more information, see [Email notifications](/sccm/apps/deploy-use/app-approval#bkmk_email-approve).
 
 
 ### Improvements to Package Conversion Manager
