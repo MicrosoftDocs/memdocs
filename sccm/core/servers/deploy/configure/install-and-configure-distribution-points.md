@@ -234,6 +234,8 @@ Be careful about enabling maintenance mode on more than one distribution point. 
 
 To view the current state of the distribution points, add the "Maintenance mode" column to the **Distribution Points** node in the console.
 
+For more information on automating this process with the Configuration Manager SDK, see [SetDPMaintenanceMode method in class SMS_DistributionPointInfo](/sccm/develop/reference/core/servers/configure/setdpmaintenancemode-method-in-class-sms_distributionpointinfo).
+
 
 ## <a name="bkmk_configs"></a> Configure a distribution point  
 
