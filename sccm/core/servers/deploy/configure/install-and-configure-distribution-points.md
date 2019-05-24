@@ -204,6 +204,37 @@ After reassigning a distribution point, refresh the server's certificate. The ne
 - This process removes the distribution point from the old site's default boundary group. You need to manually add it to the new site's default boundary group, if necessary. All other boundary group assignments remain the same.  
 
 
+## <a name="bkmk_dpmaint"></a> Distribution point maintenance mode
+
+<!--3555754-->
+
+Starting in version 1902, you can set a distribution point in maintenance mode. Enable maintenance mode when you're installing software updates, or making hardware changes to the server.
+
+While the distribution point is in maintenance mode, it has the following behaviors:
+
+- The site doesn't distribute any content to it.  
+
+- Management points don't return the location of this distribution point to clients.
+
+- When you update the site, a distribution point in maintenance mode still updates.
+
+- The distribution point properties are read-only. For example, you can't change the certificate or add boundary groups.  
+
+- Any scheduled task, like content validation, still runs on the same schedule.
+
+Be careful about enabling maintenance mode on more than one distribution point. This action may cause a performance impact to your other distribution points. Depending upon your boundary group configurations, clients may have increased download times or be unable to download content.
+
+### Enable maintenance mode
+
+1. In the Configuration Manager console, go to the **Administration** workspace.  
+
+2. Select the **Distribution Points** node.  
+
+3. Select the target distribution point, and choose **Enable maintenance mode** from the ribbon.  
+
+To view the current state of the distribution points, add the "Maintenance mode" column to the **Distribution Points** node in the console.
+
+
 ## <a name="bkmk_configs"></a> Configure a distribution point  
 
 Individual distribution points support a variety of different configurations. However, not all distribution point types support all configurations. For example, cloud distribution points don't support PXE- or multicast-enabled deployments. For more information about specific limitations, see the following articles:  
