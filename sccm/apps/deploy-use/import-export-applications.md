@@ -1,15 +1,18 @@
 ---
-
-# Mandatory fields.
-title: Import/Export Applications
+title: Import and export applications
 titleSuffix: Configuration Manager
-description: Import and export applications.
-author: chriskibble
-ms.author: NO VALUE SET # Microsoft employees only
-ms.date: 5/6/2019
-ms.topic: conceptual
+description: Learn how to import and export applications in Configuration Manager to share between separate hierarchies.
+ms.date: 05/23/2019
+ms.prod: configuration-manager
 ms.technology: configmgr-app
+ms.topic: conceptual
+ms.assetid: dba00e54-9d5b-4f6b-916d-ead48c66e288
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.collection: M365-identity-device-management
 ---
+
 # Create applications in Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
