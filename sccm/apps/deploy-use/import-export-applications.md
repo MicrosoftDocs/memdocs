@@ -13,7 +13,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 
-# Create applications in Configuration Manager
+# Import and export applications
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
