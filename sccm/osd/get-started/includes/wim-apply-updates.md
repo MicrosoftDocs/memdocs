@@ -95,3 +95,13 @@ When you schedule the site to apply software updates to an OS image, it uses the
 Microsoft recommends that you regularly apply updates to your offline images. You don't have to use this option every time you service an image. When you do this process each month, this new option provides you the greatest advantage by using it over time. For more information, see [Recommendations for Install Software Updates step](/sccm/osd/understand/install-software-updates#recommendations).
 
 While this option helps reduce the overall size of the serviced image, it does take longer to complete the process. Use the wizard to schedule servicing during convenient times. It also requires additional storage on the site server. You can customize the site to use an alternate location. For more information, see [Specify the drive for offline OS image servicing](#bkmk_servicing-drive).
+
+#### Process to optimize image servicing
+
+1. Start the [servicing process](#servicing-process).  
+
+2. On the **Set Schedule** page, select the option to **Remove superseded updates after the image is updated**. This option isn't automatically enabled. If the image has more than one index, you can't use this option.  
+
+3. To schedule image servicing, complete the wizard.  
+
+Validate and monitor the process using the **OfflineServicing.log**.
