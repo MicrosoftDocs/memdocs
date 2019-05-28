@@ -132,23 +132,27 @@ You can now **Edit** or **Copy** an existing PowerShell script used with the Run
 
 ## <a name="bkmk_content"></a> Content management
 
-### Distribution point maintenance mode 
-<!--3555754-->
-You can now set a distribution point in maintenance mode. Enable maintenance mode when you're installing software updates, or making hardware changes to the server.
+### Distribution point maintenance mode
 
-While the distribution point is in maintenance mode, it has the following behaviors: 
+<!--3555754-->
+
+***[Updated]*** You can now set a distribution point in maintenance mode. Enable maintenance mode when you're installing software updates, or making hardware changes to the server.
+
+While the distribution point is in maintenance mode, it has the following behaviors:
 
 - The site doesn't distribute any content to it.  
 
-- Management points don't return the location of this distribution point to clients. 
+- Management points don't return the location of this distribution point to clients.
 
-- When you update the site, a distribution point in maintenance mode still updates. 
+- When you update the site, a distribution point in maintenance mode still updates.
 
 - The distribution point properties are read-only. For example, you can't change the certificate or add boundary groups.  
 
-- Any scheduled task, like content validation, still runs on the same schedule. 
+- Any scheduled task, like content validation, still runs on the same schedule.
 
-<!-- For more information, see [Maintenance mode](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_maint) -->
+For more information on this feature, see [Maintenance mode](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_maint).
+
+For more information on automating this process with the Configuration Manager SDK, see [SetDPMaintenanceMode method in class SMS_DistributionPointInfo](/sccm/develop/reference/core/servers/configure/setdpmaintenancemode-method-in-class-sms-distributionpointinfo).
 
 
 
