@@ -21,6 +21,9 @@ For more information, see [Deploy software updates](/sccm/sum/deploy-use/deploy-
 
 Apply applicable software updates to an image on a specified schedule. This process is sometimes called *offline servicing*. On this schedule, Configuration Manager applies the selected software updates to the image. It can then also redistribute the updated image to distribution points.
 
+> [!Important]  
+> While you can select any software update that's applicable to the image based on version, DISM can only apply certain types of updates to the image. The **OfflineServicingMgr.log** file shows the following entry: `Not applying this update binary, it is not supported`.<!-- SCCMDocs issue 1324 -->
+
 The site database stores information about the image, including the software updates that were applied at the time of the import. Software updates that you apply to the image since it was initially added are also stored in the site database. When you start the wizard to apply software updates, it retrieves the list of applicable software updates that the site hasn't yet applied to the image. Configuration Manager copies the software updates that you select from the content library on the site server. It then applies the software updates to the image.  
 
 ### Servicing process
