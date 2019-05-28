@@ -2,7 +2,7 @@
 title: What's new in version 1902
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1902 of Configuration Manager current branch.
-ms.date: 05/24/2019
+ms.date: 05/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -70,12 +70,14 @@ The management insights feature has the following new rules:
 
 
 ### Improvement to enhanced HTTP
+
 <!--3798957-->
-You can now enable enhanced HTTP per primary site or for the central administration site. 
 
-On the properties of the central administration site, select the option to **Use Configuration Manager-generated certificates for HTTP site systems**. This setting only applies to site system roles in the central administration site. It isn't a global setting for the hierarchy. 
+***[Updated]*** You can now enable enhanced HTTP per primary site or for the central administration site.
 
-<!-- For more information, see [enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http). -->
+On the properties of the central administration site, select the option to **Use Configuration Manager-generated certificates for HTTP site systems**. This setting only applies to site system roles in the central administration site. It isn't a global setting for the hierarchy.
+
+For more information, see [enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).
 
 
 ### Improvement to setup prerequisites
