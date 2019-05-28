@@ -84,7 +84,7 @@ The following Configuration Manager features support or require enhanced HTTP:
 
     - If you've already met this prerequisite for your site, you need to update the Azure AD application. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select **Azure Active Directory Tenants**. Select the Azure AD tenant, select the web application in the **Applications** pane, and then select **Update application setting** in the ribbon.  
 
-- *For [Scenario 3](#bkmk_scenario3) only*: A client running Windows 10 version 1803 or later and joined to Azure AD.
+- *For [Scenario 3](#bkmk_scenario3) only*: A client running Windows 10 version 1803 or later, and joined to Azure AD. The client requires this configuration for Azure AD device authentication.<!-- SCCMDocs issue 1126 -->
 
 
 ## Configure the site
