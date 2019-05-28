@@ -62,6 +62,18 @@ This behavior includes OS deployment scenarios with a task sequence running from
 An Azure AD-joined or [hybrid Azure AD device](https://docs.microsoft.com/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices) without an Azure AD user signed in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point for device-centric scenarios. (A user token is still required for user-centric scenarios.)  
 
 
+## Features
+
+The following Configuration Manager features support or require enhanced HTTP:
+
+- [Cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)
+- [OS deployment without a network access account](/sccm/osd/plan-design/planning-considerations-for-automating-tasks#enhanced-http)
+- [Enable co-management for new internet-based Windows 10 devices](/sccm/comanage/tutorial-co-manage-new-devices)
+- [App approvals via email](/sccm/apps/deploy-use/app-approval#bkmk_email-approve)
+- [Administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service)
+- [View recently connected consoles](/sccm/core/servers/manage/admin-console#bkmk_viewconnected)
+
+
 ## Prerequisites  
 
 - A management point configured for HTTP client connections. Set this option on the **General** tab of the site system role properties.  
