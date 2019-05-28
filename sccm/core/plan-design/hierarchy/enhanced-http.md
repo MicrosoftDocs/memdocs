@@ -73,6 +73,9 @@ The following Configuration Manager features support or require enhanced HTTP:
 - [Administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service)
 - [View recently connected consoles](/sccm/core/servers/manage/admin-console#bkmk_viewconnected)
 
+> [!Note]  
+> The software update point and related scenarios have always supported secure HTTP traffic with clients as well as the cloud management gateway. It uses a mechanism with the management point that's different from certificate- or token-based authentication.<!-- SCCMDocs issue #1148 -->
+
 
 ## Prerequisites  
 
