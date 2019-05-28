@@ -215,6 +215,6 @@ If the Intune onboarding dialog box appears when the console tries to connect to
 
 If the Azure Services onboarding dialog box immediately fails after you select **Sign in** when you try to create Azure AD applications, verify that .NET Framework is updated and that strong cryptography is enabled. A restart is required for these changes to take effect.
 
-## See Also
+## See also
 
 [Cryptographic controls technical reference](cryptographic-controls-technical-reference.md)
