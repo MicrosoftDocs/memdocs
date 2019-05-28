@@ -84,6 +84,9 @@ An Azure AD-joined or [hybrid Azure AD device](https://docs.microsoft.com/azure/
 > [!Tip]
 > Wait up to 30 minutes for the management point to receive and configure the new certificate from the site.
 
+<!--3798957-->
+Starting in version 1902, you can also enable enhanced HTTP for the central administration site. Use this same process, and open the properties of the central administration site. This action only enables enhanced HTTP for the SMS Provider roles at the central administration site. It's not a global setting that applies to all sites in the hierarchy.
+
 You can see these certificates in the Configuration Manager console. Go to the **Administration** workspace, expand **Security**, and select the **Certificates** node. Look for the **SMS Issuing** root certificate, as well as the site server role certificates issued by the SMS Issuing root.
 
 For more information on how the client communicates with the management point and distribution point with this configuration, see [Communications from clients to site systems and services](/sccm/core/plan-design/hierarchy/communications-between-endpoints#Planning_Client_to_Site_System).
