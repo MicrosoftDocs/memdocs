@@ -5,7 +5,7 @@ description: Learn about the workloads that you can switch from Configuration Ma
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 05/13/2019
+ms.date: 05/24/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -34,36 +34,37 @@ Co-management supports the following workloads:
 - [Client apps](#client-apps)  
 
 
+## Compliance policies
 
-## Compliance policies 
-
-Compliance policies define the rules and settings that a device must comply with to be considered compliant by conditional access policies. Also use compliance policies to monitor and remediate compliance issues with devices independently of conditional access. 
+Compliance policies define the rules and settings that a device must comply with to be considered compliant by conditional access policies. Also use compliance policies to monitor and remediate compliance issues with devices independently of conditional access.
 
 For more information on the Intune feature, see [Device compliance policies](https://docs.microsoft.com/intune/device-compliance-get-started).  
 
 
-
 ## Windows Update policies
 
-Windows Update for Business policies let you configure deferral policies for Windows 10 feature updates or quality updates for Windows 10 devices managed directly by Windows Update for Business. 
+Windows Update for Business policies let you configure deferral policies for Windows 10 feature updates or quality updates for Windows 10 devices managed directly by Windows Update for Business.
 
 For more information on the Intune feature, see [Configure Windows Update for Business deferral policies](https://docs.microsoft.com/intune/windows-update-for-business-configure).  
 
 
-
 ## Resource access policies
 
-Resource access policies configure VPN, Wi-Fi, email, and certificate settings on devices. 
+Resource access policies configure VPN, Wi-Fi, email, and certificate settings on devices.
 
 For more information on the Intune feature, see [Deploy resource access profiles](https://docs.microsoft.com/intune/device-profiles).
 
+> [!Note]  
+> The resource access workload is also part of device configuration. These policies are managed by Intune when you switch the [Device Configuration](#device-configuration) workload.
 
 
 ## Endpoint Protection
+
 <!--1357365-->
 
-Starting in Configuration Manager 1802, the Endpoint Protection workload includes the Windows Defender suite of antimalware protection features: 
+Starting in Configuration Manager 1802, the Endpoint Protection workload includes the Windows Defender suite of antimalware protection features:
 
+- Windows Defender Antimalware
 - Windows Defender Application Guard  
 - Windows Defender Firewall  
 - Windows Defender SmartScreen  
@@ -71,14 +72,19 @@ Starting in Configuration Manager 1802, the Endpoint Protection workload include
 - Windows Defender Exploit Guard  
 - Windows Defender Application Control  
 - Windows Defender Security Center  
-- Windows Defender Advanced Threat Protection  (now known as Microsoft Defender Threat Protection)
+- Windows Defender Advanced Threat Protection (now known as Microsoft Defender Threat Protection)
 - Windows Information Protection  
 
 For more information on the Intune feature, see [Endpoint Protection for Microsoft Intune](https://docs.microsoft.com/intune/endpoint-protection-windows-10).
 
+> [!Note]  
+> When you switch this workload, the Configuration Manager policies stay on the device until the Intune policies overwrite them. This behavior makes sure that the device still has protection policies during the transition.
+>
+> The Endpoint Protection workload is also part of device configuration. The same behavior applies when you switch the [Device Configuration](#device-configuration) workload.<!-- SCCMDocs.nl-nl issue #4 -->
 
 
 ## Device configuration
+
 <!--1357903-->
 
 Starting in Configuration Manager 1806, the device configuration workload includes settings that you manage for devices in your organization. Switching this workload also moves the **Resource Access** and **Endpoint Protection** workloads.
@@ -88,11 +94,11 @@ You can still deploy settings from Configuration Manager to co-managed devices e
 For more information on the Intune feature, see [Create a device profile in Microsoft Intune](https://docs.microsoft.com/intune/device-profile-create).  
 
 
-
 ## Office Click-to-Run apps
+
 <!--1357841-->
 
-Starting in Configuration Manager 1806, this workload manages Office 365 apps on co-managed devices. 
+Starting in Configuration Manager 1806, this workload manages Office 365 apps on co-managed devices.
 
 - After moving the workload, the app shows up in the **Company Portal** on the device  
 
@@ -100,24 +106,21 @@ Starting in Configuration Manager 1806, this workload manages Office 365 apps on
 
 - There's a new global condition, **Are Office 365 applications managed by Intune on the device**. This condition is added by default as a requirement to new Office 365 applications. When you transition this workload, co-managed clients don't meet the requirement on the application. Then they don't install Office 365 deployed via Configuration Manager.  
 
-For more information on the Intune feature, see [Assign Office 365 apps to Windows 10 devices with Microsoft Intune](https://docs.microsoft.com/intune/apps-add-office365). 
-
+For more information on the Intune feature, see [Assign Office 365 apps to Windows 10 devices with Microsoft Intune](https://docs.microsoft.com/intune/apps-add-office365).
 
 
 ## Client apps
+
 <!--1357892-->
 
 Starting in Configuration Manager version 1806, use Intune to manage client apps on co-managed Windows 10 devices. After you transition this workload, any available apps deployed from Intune are available in the Company Portal. Apps that you deploy from Configuration Manager are available in Software Center.
 
-For more information on the Intune feature, see [What is Microsoft Intune app management?](https://docs.microsoft.com/intune/app-management). 
+For more information on the Intune feature, see [What is Microsoft Intune app management?](https://docs.microsoft.com/intune/app-management).
 
 > [!Note]  
 > The client apps workload is a pre-release feature. To enable it, see [Pre-release features](/sccm/core/servers/manage/pre-release-features).  
 
 
-
 ## Next steps
 
 [How to switch workloads](/sccm/comanage/how-to-switch-workloads)  
-
-

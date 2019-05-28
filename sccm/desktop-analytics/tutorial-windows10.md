@@ -137,6 +137,10 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
 7. In the new browser tab, pick an account to use to sign in. Select the option to **Consent on behalf of your organization** and select **Accept**.  
 
+
+    > [!Note]  
+    > This consent is to assign the MALogAnalyticsReader application the Log Analytics Reader role for the workspace. This application role is required by Desktop Analytics. For more information, see [MALogAnalyticsReader application role](/sccm/desktop-analytics/troubleshooting#bkmk_MALogAnalyticsReader).  
+
 8. Back on the page to **Set up your workspace**, select **Next**.  
 
 9. On the **Last steps** page, select **Go to Desktop Analytics**. The Azure portal shows the Desktop Analytics **Home** page.  
