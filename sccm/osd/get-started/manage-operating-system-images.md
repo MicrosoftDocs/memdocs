@@ -70,6 +70,8 @@ Before you can use an OS image, add it to your Configuration Manager site.
 
         > [!Note]  
         > Configuration Manager doesn't modify the source image file. It creates a new image file in the same source directory.
+        >
+        > This extraction process can fail for extremely large image files, for example over 60 GB. The DISM error is `Not enough storage is available to process this command.` The command line that Configuration Manager uses is in the smsprov.log and dism.log. Manually run the same command and then import the image.<!-- SCCMDocs-pr issue 3502 -->  
 
 4. On the **General** page, specify the following information. This information is useful for identification purposes when you have more than one OS image.  
 
