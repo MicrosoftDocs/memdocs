@@ -246,25 +246,27 @@ when you create task sequence media, Configuration Manager doesn't add an autoru
 
 
 ### Import a single index of an OS image
+
 <!--3719699-->
-When importing a Windows image (WIM) file to Configuration Manager, you can now specify to automatically import a single index rather than all image indexes in the file. This option provides the following benefits:
+***[Updated]*** When importing a Windows image (WIM) file to Configuration Manager, you can now specify to automatically import a single index rather than all image indexes in the file. This option provides the following benefits:
 
 - Smaller image file  
 - Faster offline servicing  
-- Optimize image servicing, for a smaller image file after offline servicing 
+- Optimize image servicing, for a smaller image file after offline servicing
 
 When you import an OS image, select the option to **Extract a specific image index from the specified WIM file**. Then select the image index from the list.  
 
-<!-- For more information, see [Add an OS image](/sccm/osd/get-started/manage-operating-system-images#BKMK_AddOSImages). -->
+For more information, see [Add an OS image](/sccm/osd/get-started/manage-operating-system-images#BKMK_AddOSImages).
 
 
 ### Optimized image servicing
+
 <!--3555951-->
-When you apply software updates to an OS image, there's a new option to optimize the output by removing any superseded updates. The optimization to offline servicing only applies to images with a single index. 
+***[Updated]*** When you apply software updates to an OS image, there's a new option to optimize the output by removing any superseded updates. The optimization to offline servicing only applies to images with a single index.
 
-When you create a schedule to update an OS image, select the option to **Remove superseded updates after the image is updated**. 
+When you create a schedule to update an OS image, select the option to **Remove superseded updates after the image is updated**.
 
-<!-- For more information, see [Apply software updates to an image](/sccm/osd/get-started/manage-operating-system-images#BKMK_OSImagesApplyUpdates).  -->
+For more information, see [Apply software updates to an image](/sccm/osd/get-started/manage-operating-system-images#BKMK_OSImagesApplyUpdates).
 
 
 ### Improvements to Run PowerShell Script task sequence step
