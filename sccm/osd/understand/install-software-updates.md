@@ -41,6 +41,8 @@ For more information, see [Apply software updates to an image](/sccm/osd/get-sta
 
 Many image files include multiple indexes, such as for different editions of Windows. Reduce the image file to a single index that you require. This practice reduces the amount of time to apply software updates to the image. It also enables the next recommendation to reduce the image size.
 
+Starting in version 1902, automate this process when you add an OS image to the site. For more information, see [Add an OS image](/sccm/osd/get-started/manage-operating-system-images#BKMK_AddOSImages).<!--3719699-->
+
 ### <a name="bkmk_resetbase"></a> Reduce image size
 
 When you apply software updates to the image, optimize the output by removing any superseded updates. Use the DISM command-line tool, for example:

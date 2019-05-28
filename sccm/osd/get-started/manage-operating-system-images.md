@@ -62,7 +62,14 @@ Before you can use an OS image, add it to your Configuration Manager site.
 
 2. On the **Home** tab of the ribbon, in the **Create** group, select **Add Operating System Image**. This action starts the Add Operating System Image Wizard.  
 
-3. On the **Data Source** page, specify the network **Path** to the OS image file. For example, `\\server\share\path\image.wim`.  
+3. On the **Data Source** page, specify the following information:
+
+    - Network **Path** to the OS image file. For example, `\\server\share\path\image.wim`.
+
+    - **Extract a specific image index from the specified WIM file** and then select an image index from the list.<!--3719699--> Starting in version 1902, this option automatically imports a single index rather than all image indexes in the file. Using this option results in a smaller image file, and faster offline servicing. It also supports the process to [Optimize image servicing](#bkmk_resetbase), for a smaller image file after applying software updates.  
+
+        > [!Note]  
+        > Configuration Manager doesn't modify the source image file. It creates a new image file in the same source directory.
 
 4. On the **General** page, specify the following information. This information is useful for identification purposes when you have more than one OS image.  
 
