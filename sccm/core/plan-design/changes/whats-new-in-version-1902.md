@@ -2,7 +2,7 @@
 title: What's new in version 1902
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1902 of Configuration Manager current branch.
-ms.date: 05/13/2019
+ms.date: 05/24/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -132,23 +132,27 @@ You can now **Edit** or **Copy** an existing PowerShell script used with the Run
 
 ## <a name="bkmk_content"></a> Content management
 
-### Distribution point maintenance mode 
-<!--3555754-->
-You can now set a distribution point in maintenance mode. Enable maintenance mode when you're installing software updates, or making hardware changes to the server.
+### Distribution point maintenance mode
 
-While the distribution point is in maintenance mode, it has the following behaviors: 
+<!--3555754-->
+
+***[Updated]*** You can now set a distribution point in maintenance mode. Enable maintenance mode when you're installing software updates, or making hardware changes to the server.
+
+While the distribution point is in maintenance mode, it has the following behaviors:
 
 - The site doesn't distribute any content to it.  
 
-- Management points don't return the location of this distribution point to clients. 
+- Management points don't return the location of this distribution point to clients.
 
-- When you update the site, a distribution point in maintenance mode still updates. 
+- When you update the site, a distribution point in maintenance mode still updates.
 
 - The distribution point properties are read-only. For example, you can't change the certificate or add boundary groups.  
 
-- Any scheduled task, like content validation, still runs on the same schedule. 
+- Any scheduled task, like content validation, still runs on the same schedule.
 
-<!-- For more information, see [Maintenance mode](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_maint) -->
+For more information on this feature, see [Maintenance mode](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_maint).
+
+For more information on automating this process with the Configuration Manager SDK, see [SetDPMaintenanceMode method in class SMS_DistributionPointInfo](/sccm/develop/reference/core/servers/configure/setdpmaintenancemode-method-in-class-sms-distributionpointinfo).
 
 
 
@@ -187,10 +191,11 @@ For more information, see [How to configure Wake on LAN](/sccm/core/clients/depl
 ## <a name="bkmk_app"></a> Application management
 
 ### Improvements to application approvals via email
-<!--3594063-->
-This version has improvements to the feature to receive email notifications for application requests. Users could  always add a comment to the request from Software Center. This comment shows on the application request in the Configuration Manager console. Now that comment also shows in the email. Including this comment in the email helps the approvers make a better decision to approve or deny the request.
 
-<!-- For more information, see [Email notifications](/sccm/apps/deploy-use/app-approval#bkmk_email-approve). -->
+<!--3594063-->
+***[Updated]*** This version has improvements to the feature to receive email notifications for application requests. Users could  always add a comment to the request from Software Center. This comment shows on the application request in the Configuration Manager console. Now that comment also shows in the email. Including this comment in the email helps the approvers make a better decision to approve or deny the request.
+
+For more information, see [Email notifications](/sccm/apps/deploy-use/app-approval#bkmk_email-approve).
 
 
 ### Improvements to Package Conversion Manager
