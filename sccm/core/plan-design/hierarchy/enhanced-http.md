@@ -30,6 +30,8 @@ Configuration Manager version 1806 includes improvements to how clients communic
 
 - Clients can securely access content from distribution points without the need for a network access account, client PKI certificate, and Windows authentication.  
 
+All other client communication is over HTTP. Enhanced HTTP isn't the same as enabling HTTPS for client communication or a site system.<!-- SCCMDocs issue #1212 -->
+
 > [!Note]  
 > PKI certificates are still a valid option for customers with the following requirements:  
 >
