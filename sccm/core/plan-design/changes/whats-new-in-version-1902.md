@@ -266,7 +266,7 @@ For more information, see [Add an OS image](/sccm/osd/get-started/manage-operati
 
 When you create a schedule to update an OS image, select the option to **Remove superseded updates after the image is updated**.
 
-For more information, see [Apply software updates to an image](/sccm/osd/get-started/manage-operating-system-images#BKMK_OSImagesApplyUpdates).
+For more information, see [Apply software updates to an image](/sccm/osd/get-started/manage-operating-system-images#bkmk_resetbase).
 
 
 ### Improvements to Run PowerShell Script task sequence step

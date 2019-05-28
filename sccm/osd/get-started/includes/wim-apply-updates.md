@@ -76,3 +76,19 @@ By default, this setting is **Automatic**. With this value, Configuration Manage
 If you select a drive that doesn't exist on the site server, Configuration Manager behaves the same as if you select **Automatic**.
 
 During offline servicing, Configuration Manager stores temporary files in the folder, `<drive>:\ConfigMgr_OfflineImageServicing`. It also mounts the OS image in this folder.
+
+### <a name="bkmk_resetbase"></a> Optimized image servicing
+
+<!--3555951-->
+
+Starting in version 1902, when you apply software updates to an OS image, there's a new option to optimize the output by removing any superseded updates. The optimization to offline servicing only applies to images with a single index.
+
+When you schedule the site to apply software updates to an OS image, it uses the Windows Deployment Image Servicing and Management (DISM) command-line tool. During the servicing process, this change introduces the following two additional steps:  
+
+- It runs DISM against the mounted offline image with the parameters `/Cleanup-Image /StartComponentCleanup /ResetBase`. If this command fails, the current servicing process fails. It doesn't commit any changes to the image.  
+
+- After Configuration Manager commits changes to the image and unmounts it from the file system, it exports the image to another file. This step uses the DISM parameter `/Export-Image`. It removes unneeded files from the image, which reduces the size.  
+
+Microsoft recommends that you regularly apply updates to your offline images. You don't have to use this option every time you service an image. When you do this process each month, this new option provides you the greatest advantage by using it over time. For more information, see [Recommendations for Install Software Updates step](/sccm/osd/understand/install-software-updates#recommendations).
+
+While this option helps reduce the overall size of the serviced image, it does take longer to complete the process. Use the wizard to schedule servicing during convenient times. It also requires additional storage on the site server. You can customize the site to use an alternate location. For more information, see [Specify the drive for offline OS image servicing](#bkmk_servicing-drive).
