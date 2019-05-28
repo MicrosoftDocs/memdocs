@@ -1,5 +1,5 @@
 ﻿---
-title: How to enable transport layer security 1.2
+title: How to enable TLS 1.2
 titleSuffix: Configuration Manager
 description: Information about how to enable TLS 1.2 for Microsoft Configuration Manager.
 ms.date: 05/27/2019
@@ -13,9 +13,11 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# How to enable transport layer security 1.2 for Configuration Manager
+# How to enable TLS 1.2 for Configuration Manager
 
-This article describes how to enable transport layer security (TLS) 1.2 for Configuration Manager, including for individual components. Update requirements for commonly used features, and troubleshooting of some common problems, are also described in this article.
+*Applies to: System Center Configuration Manager (Current Branch)*
+
+This article describes how to enable TLS 1.2 for Configuration Manager, including for individual components. Update requirements for commonly used features, and troubleshooting of some common problems, are also described in this article.
 
 Configuration Manager relies on many different components for secure communication. The protocol that's used for a given connection depends on the capabilities of all the required components. If one component is out-of-date, the communication might use an older, less secure protocol.
 
@@ -124,7 +126,7 @@ This section describes the dependencies for specific Configuration Manager featu
 |Site system roles|[Update .NET Framework](#update-net-framework-to-support-tls-12), and verify strong cryptography settings. [Update SQL Server and its client components](#update-sql-server-and-client-components).|
 |Service connection point application catalog|[Update .NET Framework](#update-net-framework-to-support-tls-12), and verify strong cryptography settings.|
 |SRS reporting point|[Update .NET Framework](#update-net-framework-to-support-tls-12) on the site server and the SRS servers. Restart the SMS_Executive service as necessary.|
-|Admin console|[Update .NET Framework](#update-net-framework-to-support-tls-12), and verify strong cryptography settings.|
+|Configuration Manager console|[Update .NET Framework](#update-net-framework-to-support-tls-12), and verify strong cryptography settings.|
 |SCCM client with HTTPS site system roles|[Update Windows to support TLS 1.2 for client-server communications by using WinHTTP](#update-windows-and-winhttp).|
 |Software Center|[Update .NET Framework](#update-net-framework-to-support-tls-12), and verify strong cryptography settings.|
 |Software Update Point|[Update WSUS](#update-windows-server-update-services).|
@@ -199,25 +201,20 @@ To resolve communication failures between Application Catalog and Software Cente
 - All computers were restarted after the changes were made.
 
    > [!NOTE]
-   > To make Software Center work with TLS 1.2-enforced server for user-available apps, we recommend you remove app catalog roles and let Software Center communicate with management point.
+   > To make Software Center work with TLS 1.2-enforced server for user-available apps, we recommend you remove app catalog roles and let Software Center communicate with management point. For more information, see [Remove the application catalog](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat).
 
 ### Service Connection Point upload failures
 
 If the Service Connection Point doesn't upload data to SCCMConnectedService, verify that .NET Framework is updated and has strong cryptography enabled on each computer. Remember to restart the computers after the changes are made.
 
-### Admin Console displays Intune onboarding dialog box
+### Configuration Manager console displays Intune onboarding dialog box
 
-If the Intune onboarding dialog box appears when the Admin Console tries to connect to the Intune portal, verify that .NET Framework is updated and has strong cryptography enabled on each computer.  Remember to restart the computers after the changes are made.
+If the Intune onboarding dialog box appears when the console tries to connect to the Intune portal, verify that .NET Framework is updated and has strong cryptography enabled on each computer.  Remember to restart the computers after the changes are made.
 
-### Admin Console displays failure to sign in to Azure
+### Configuration Manager console displays failure to sign in to Azure
 
 If the Azure Services onboarding dialog box immediately fails after you select **Sign in** when you try to create Azure AD applications, verify that .NET Framework is updated and that strong cryptography is enabled. A restart is required for these changes to take effect.
 
-### WSUS communication failures
-
-To resolve WSUS communication failures in Windows Server 2012 and Windows Server 2012 R2, apply the following update on the WSUS server:
-- For WSUS server that's running Windows Server 2012, apply [update 4022721](https://support.microsoft.com/help/4022721) or a later update.
-- For WSUS server that's running Windows Server 2012 R2, apply [update 4022720](https://support.microsoft.com/help/4022720) or a later update.
 ## See Also
 
 [Cryptographic controls technical reference](cryptographic-controls-technical-reference.md)
