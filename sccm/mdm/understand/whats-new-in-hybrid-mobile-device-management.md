@@ -2,7 +2,7 @@
 title: What's new in hybrid MDM
 titleSuffix: Configuration Manager
 description: Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune.
-ms.date: 05/23/2019
+ms.date: 05/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -45,6 +45,12 @@ Each section of this article lists hybrid features under three different categor
 ## May 2019
 
 ### New in Microsoft Intune
+
+#### Windows Company Portal app
+
+<!-- 3316993 -->
+
+The Windows Company Portal app now has a new page labeled **Devices**. The **Devices** page shows users all of their enrolled devices. Users will see this change in the Company Portal when they use version 10.3.4291.0 and later. For more information, see [How to configure the Microsoft Intune Company Portal app](https://docs.microsoft.com/intune/company-portal-app).
 
 #### Android Enterprise app management
 
