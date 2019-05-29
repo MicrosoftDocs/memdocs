@@ -46,16 +46,25 @@ To enable TLS 1.2 for dependent components that Configuration Manager depends on
 
 #### Update .NET Framework to support TLS 1.2
 
-To update .NET Framework to support TLS 1.2, first determine your .NET version number. For more information, see [How to determine which versions and service pack levels of the Microsoft .NET Framework are installed](https://support.microsoft.com/help/318785/how-to-determine-which-versions-and-service-pack-levels-of-the-microso).
+##### Determine .NET version
 
-Earlier versions of .NET Framework might require updates or registry changes to enable strong cryptography. Use these guidelines:
+First, determine your .NET version number. For more information, see [How to determine which versions and service pack levels of the Microsoft .NET Framework are installed](https://support.microsoft.com/help/318785/how-to-determine-which-versions-and-service-pack-levels-of-the-microso).
 
-- NET Framework 4.6.2 and later supports TLS 1.1 and TLS 1.2. No additional changes are required.
+##### Install .NET updates
+
+Some versions of .NET Framework might require updates to enable strong cryptography. Use these guidelines:
+
+- NET Framework 4.6.2 and later supports TLS 1.1 and TLS 1.2. Confirm the registry settings, but no additional changes are required.
+
 - Update NET Framework 4.6 and earlier versions to support TLS 1.1 and TLS 1.2. For more information, see [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies).
 
-    If you're using .NET Framework 4.5.1 or 4.5.2 on Windows 8.1 or Windows Server 2012, the relevant updates and details are also available from the [Download Center](https://www.microsoft.com/download/details.aspx?id=42883).
+- If you're using .NET Framework 4.5.1 or 4.5.2 on Windows 8.1 or Windows Server 2012, the relevant updates and details are also available from the [Download Center](https://www.microsoft.com/download/details.aspx?id=42883).
 
-- .NET Framework must be configured to support strong cryptography. Set the `SchUseStrongCrypto` registry setting to `DWORD:00000001`. This value disables the RC4 stream cipher and requires a restart. For more information about this setting, see [Microsoft Security Advisory 296038](https://docs.microsoft.com/security-updates/SecurityAdvisories/2015/2960358).
+##### Configure for strong cryptography
+
+Configure .NET Framework to support strong cryptography. Set the `SchUseStrongCrypto` registry setting to `DWORD:00000001`. This value disables the RC4 stream cipher and requires a restart. For more information about this setting, see [Microsoft Security Advisory 296038](https://docs.microsoft.com/security-updates/SecurityAdvisories/2015/2960358).
+
+Make sure to set the following registry keys on any computer that communicates across the network with a TLS 1.2-enabled system. For example, Configuration Manager clients, or any remote site system role that's not installed on the site server.
 
 For 32-bit applications that are running on 32-bit systems or 64-bit applications that are running on 64-bit systems, update the following subkey value:
 
@@ -79,6 +88,10 @@ For 32-bit applications that are running on 64-bit systems, update the following
       "SchUseStrongCrypto" = dword:00000001
 ```
 
+> [!Note]  
+> The `SchUseStrongCrypto` setting allows .NET to use TLS 1.1 and TLS 1.2. The `SystemDefaultTlsVersions` setting allows .NET to use the OS configuration. For more information, see [TLS best practices with the .NET Framework](https://docs.microsoft.com/dotnet/framework/network-programming/tls).
+
+
 #### Update SQL Server and client components
 
 Microsoft SQL Server 2016 and later support TLS 1.1 and TLS 1.2. Earlier versions and dependent libraries might require updates. For more information, see [KB 3135244: TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server).
@@ -86,11 +99,13 @@ Microsoft SQL Server 2016 and later support TLS 1.1 and TLS 1.2. Earlier version
 > [!NOTE]
 > KB 3135244 also describes requirements for SQL Server client components. Update each component that's used in your environment.
 
+Make sure to also update the SQL Server Native Client. Starting in version 1810, this requirement is a prerequisite check (warning). For more information including the site system roles that use SQL Server Native client, see [List of prerequisite checks](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
+
 #### Update Windows and WinHTTP
 
 Windows 8.1, Windows Server 2012 R2, Windows 10, Windows Server 2016, and later versions of Windows natively support TLS 1.2 for client-server communications over WinHTTP.
 
-Windows 8.0, Windows Server 2012, and earlier versions of Windows don't enable TLS 1.1 or 1.2 by default for client-server communications through HTTPS. For these earlier versions of Windows, install [Update 3140245](https://support.microsoft.com/help/3140245) to enable TLS 1.1 and TLS 1.2 as the default secure protocols for WinHTTP in Windows. Then set the following registry values:
+Earlier versions of Windows, such as Windows 7 or Windows Server 2012, don't enable TLS 1.1 or 1.2 by default for client-server communications through HTTPS. For these earlier versions of Windows, install [Update 3140245](https://support.microsoft.com/help/3140245) to enable TLS 1.1 and TLS 1.2 as the default secure protocols for WinHTTP in Windows. Then set the following registry values:
 
 > [!IMPORTANT]
 > Enable these settings on all clients *before* enabling TLS 1.2 on the Configuration Manager servers. Otherwise, you can inadvertently orphan them.
@@ -122,20 +137,31 @@ This section describes the dependencies for specific Configuration Manager featu
 |Feature or scenario|Update tasks|
 |--- |--- |
 |Site servers (central, primary, or secondary)| - [Update .NET Framework](#update-net-framework-to-support-tls-12)<br/> - Verify strong cryptography settings|
+|Secondary site servers|[Update SQL Server and its client components](#update-sql-server-and-client-components) to a compliant version of SQL Express|
 |SMS Provider|[Update SQL Server and its client components](#update-sql-server-and-client-components) as appropriate for each SMS provider|
 |Site system roles| - [Update .NET Framework](#update-net-framework-to-support-tls-12)<br/> - Verify strong cryptography settings <br/> - [Update SQL Server and its client components](#update-sql-server-and-client-components).|
 |Service connection point| - [Update .NET Framework](#update-net-framework-to-support-tls-12)<br/> - Verify strong cryptography settings|
-|Reporting services point|- [Update .NET Framework](#update-net-framework-to-support-tls-12) on the site server and the SQL Reporting Services servers<br/> - Restart the SMS_Executive service as necessary|
+|Reporting services point|- [Update .NET Framework](#update-net-framework-to-support-tls-12) on the site server, the SQL Reporting Services servers, and any computer with the console<br/> - Restart the SMS_Executive service as necessary|
 |Software update point|[Update WSUS](#update-windows-server-update-services)|
 |Management point|Update to the latest SQL Server native client to enable Configuration Manager to talk to the latest TLS 1.2-enabled SQL Server components. For more information, see the "Client component downloads" table in [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244).|
 |Configuration Manager console| - [Update .NET Framework](#update-net-framework-to-support-tls-12)<br/> - Verify strong cryptography settings|
 |Configuration Manager client with HTTPS site system roles|[Update Windows to support TLS 1.2 for client-server communications by using WinHTTP](#update-windows-and-winhttp)|
 |Software Center| - [Update .NET Framework](#update-net-framework-to-support-tls-12)<br/> - Verify strong cryptography settings|
+|Windows 7 clients| *Before* you enable TLS 1.2 on any server components, [update Windows to support TLS 1.2 for client-server communications by using WinHTTP](#update-windows-and-winhttp). If you enable TLS 1.2 on server components first, you can orphan earlier versions of clients.|
 
 
 ## Known issues
 
 This section provides advice for common issues that occur when you enable TLS 1.2 support.
+
+### Unsupported platforms
+
+The following client platforms are supported by Configuration Manager but aren't supported in a TLS 1.2 environment:
+
+- Windows Server 2008
+- Windows CE
+- Apple OS X
+- Windows 10 devices managed with on-premises MDM
 
 ### FIPS security policy enabled
 
