@@ -117,6 +117,31 @@ conceptualContent:
       footerLink:
         text: See more
         url: https://docs.microsoft.com/sccm/sum/understand/software-updates-introduction
+    - title: Device compliance
+      links:
+        - text: Create configuration items
+          url: https://docs.microsoft.com/sccm/compliance/deploy-use/create-configuration-items
+          itemType: how-to-guide
+        - text: Microsoft Edge settings
+          url: https://docs.microsoft.com/sccm/compliance/deploy-use/browser-profiles
+          itemType: how-to-guide
+        - text: Windows edition upgrade
+          url: https://docs.microsoft.com/sccm/compliance/deploy-use/upgrade-windows-version
+          itemType: how-to-guide
+      footerLink:
+        text: See more
+        url: https://docs.microsoft.com/sccm/compliance/understand/ensure-device-compliance
+    - title: Protect
+      links:
+        - text: Windows Defender
+          url: https://docs.microsoft.com/sccm/protect/deploy-use/endpoint-protection
+          itemType: overview
+        - text: WDATP
+          url: https://docs.microsoft.com/sccm/protect/deploy-use/windows-defender-advanced-threat-protection
+          itemType: overview
+      footerLink:
+        text: See more
+        url: https://docs.microsoft.com/sccm/protect/understand/protect-data-and-site-infrastructure
     - title: Develop
       links:
         - text: PowerShell
@@ -145,31 +170,6 @@ conceptualContent:
       footerLink:
         text: See more
         url: https://docs.microsoft.com/sccm/core/support/tools
-    - title: Protect
-      links:
-        - text: Windows Defender
-          url: https://docs.microsoft.com/sccm/protect/deploy-use/endpoint-protection
-          itemType: overview
-        - text: WDATP
-          url: https://docs.microsoft.com/sccm/protect/deploy-use/windows-defender-advanced-threat-protection
-          itemType: overview
-      footerLink:
-        text: See more
-        url: https://docs.microsoft.com/sccm/protect/understand/protect-data-and-site-infrastructure
-    - title: Device compliance
-      links:
-        - text: Create configuration items
-          url: https://docs.microsoft.com/sccm/compliance/deploy-use/create-configuration-items
-          itemType: how-to-guide
-        - text: Microsoft Edge settings
-          url: https://docs.microsoft.com/sccm/compliance/deploy-use/browser-profiles
-          itemType: how-to-guide
-        - text: Windows edition upgrade
-          url: https://docs.microsoft.com/sccm/compliance/deploy-use/upgrade-windows-version
-          itemType: how-to-guide
-      footerLink:
-        text: See more
-        url: https://docs.microsoft.com/sccm/compliance/understand/ensure-device-compliance
 
 additionalContent:
   sections:
@@ -178,7 +178,7 @@ additionalContent:
       - title: Configuration Manager blog
         summary: News and announcements
         url: https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/bg-p/ConfigurationManagerBlog
-      - title: \#ConfigMgr on Twitter
+      - title: &#35;ConfigMgr on Twitter
         summary: Keep current with the active Twitter community
         url: https://twitter.com/hashtag/configmgr
       - title: Configuration Manager forums
