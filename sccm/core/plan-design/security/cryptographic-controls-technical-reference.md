@@ -261,7 +261,7 @@ To improve the security of your Configuration Manager clients and servers, do th
 
 -	Enable TLS 1.2
 
-    To enable TLS 1.2 for Configuration Manager, see the following KB article: [How to enable TLS 1.2 for Configuration Manager](https://support.microsoft.com/en-us/help/4040243/how-to-enable-tls-1-2-for-configuration-manager).
+    To enable TLS 1.2 for Configuration Manager, see [How to enable TLS 1.2 for Configuration Manager](enable-tls-1-2.md).
 -	Disable SSL 3.0, TLS 1.0, and TLS 1.1 
 -	Reorder the TLS-related cipher suites 
 

@@ -2,7 +2,7 @@
 title: What's new in version 1902
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1902 of Configuration Manager current branch.
-ms.date: 05/24/2019
+ms.date: 05/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -70,12 +70,14 @@ The management insights feature has the following new rules:
 
 
 ### Improvement to enhanced HTTP
+
 <!--3798957-->
-You can now enable enhanced HTTP per primary site or for the central administration site. 
 
-On the properties of the central administration site, select the option to **Use Configuration Manager-generated certificates for HTTP site systems**. This setting only applies to site system roles in the central administration site. It isn't a global setting for the hierarchy. 
+***[Updated]*** You can now enable enhanced HTTP per primary site or for the central administration site.
 
-<!-- For more information, see [enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http). -->
+On the properties of the central administration site, select the option to **Use Configuration Manager-generated certificates for HTTP site systems**. This setting only applies to site system roles in the central administration site. It isn't a global setting for the hierarchy.
+
+For more information, see [enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).
 
 
 ### Improvement to setup prerequisites
@@ -159,10 +161,11 @@ For more information on automating this process with the Configuration Manager S
 ## <a name="bkmk_client"></a> Client management
 
 ### Client provisioning mode timeout
-<!--3197824-->
-The task sequence sets a timestamp when it puts the client in provisioning mode. A client in provisioning mode checks every 60 minutes the duration of time since the timestamp. If it's been in provisioning mode for more than 48 hours, the client automatically exits provisioning mode and restarts its process. 
 
-<!-- For more information, see ... -->
+<!--3197824-->
+***[Updated]*** The task sequence sets a timestamp when it puts the client in provisioning mode. A client in provisioning mode checks every 60 minutes the duration of time since the timestamp. If it's been in provisioning mode for more than 48 hours, the client automatically exits provisioning mode and restarts its process.
+
+For more information, see [Provisioning mode](/sccm/osd/understand/provisioning-mode).
 
 ### View first screen only during remote control
 <!--3231732-->
@@ -246,25 +249,27 @@ when you create task sequence media, Configuration Manager doesn't add an autoru
 
 
 ### Import a single index of an OS image
+
 <!--3719699-->
-When importing a Windows image (WIM) file to Configuration Manager, you can now specify to automatically import a single index rather than all image indexes in the file. This option provides the following benefits:
+***[Updated]*** When importing a Windows image (WIM) file to Configuration Manager, you can now specify to automatically import a single index rather than all image indexes in the file. This option provides the following benefits:
 
 - Smaller image file  
 - Faster offline servicing  
-- Optimize image servicing, for a smaller image file after offline servicing 
+- Optimize image servicing, for a smaller image file after offline servicing
 
 When you import an OS image, select the option to **Extract a specific image index from the specified WIM file**. Then select the image index from the list.  
 
-<!-- For more information, see [Add an OS image](/sccm/osd/get-started/manage-operating-system-images#BKMK_AddOSImages). -->
+For more information, see [Add an OS image](/sccm/osd/get-started/manage-operating-system-images#BKMK_AddOSImages).
 
 
 ### Optimized image servicing
+
 <!--3555951-->
-When you apply software updates to an OS image, there's a new option to optimize the output by removing any superseded updates. The optimization to offline servicing only applies to images with a single index. 
+***[Updated]*** When you apply software updates to an OS image, there's a new option to optimize the output by removing any superseded updates. The optimization to offline servicing only applies to images with a single index.
 
-When you create a schedule to update an OS image, select the option to **Remove superseded updates after the image is updated**. 
+When you create a schedule to update an OS image, select the option to **Remove superseded updates after the image is updated**.
 
-<!-- For more information, see [Apply software updates to an image](/sccm/osd/get-started/manage-operating-system-images#BKMK_OSImagesApplyUpdates).  -->
+For more information, see [Apply software updates to an image](/sccm/osd/get-started/manage-operating-system-images#bkmk_resetbase).
 
 
 ### Improvements to Run PowerShell Script task sequence step
@@ -305,7 +310,7 @@ For more information, see [Run PowerShell Script](/sccm/osd/understand/task-sequ
 
 - When you set the **OSDDoNotLogCommand** task sequence variable to true, now it also hides the command line from the Run Command Line step in the log file. It previously only masked the program name from the Install Package step in smsts.log.<!--3654172-->  
 
-- When you enable a PXE responder on a distribution point without Windows Deployment Service, it can now be on the same server as the DHCP service. <!--3734270-->  <!-- For more information, see ... -->
+- When you enable a PXE responder on a distribution point without Windows Deployment Service, it can now be on the same server as the DHCP service. <!--3734270--> For more information, see [Configure at least one distribution point to accept PXE requests](/sccm/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network#BKMK_Configure).
 
 
 
