@@ -161,10 +161,11 @@ For more information on automating this process with the Configuration Manager S
 ## <a name="bkmk_client"></a> Client management
 
 ### Client provisioning mode timeout
-<!--3197824-->
-The task sequence sets a timestamp when it puts the client in provisioning mode. A client in provisioning mode checks every 60 minutes the duration of time since the timestamp. If it's been in provisioning mode for more than 48 hours, the client automatically exits provisioning mode and restarts its process. 
 
-<!-- For more information, see ... -->
+<!--3197824-->
+***[Updated]*** The task sequence sets a timestamp when it puts the client in provisioning mode. A client in provisioning mode checks every 60 minutes the duration of time since the timestamp. If it's been in provisioning mode for more than 48 hours, the client automatically exits provisioning mode and restarts its process.
+
+For more information, see [Provisioning mode](/sccm/osd/understand/provisioning-mode).
 
 ### View first screen only during remote control
 <!--3231732-->
