@@ -2,7 +2,7 @@
 title: Use PXE for OSD over the network
 titleSuffix: Configuration Manager
 description: Use PXE-initiated OS deployments to refresh a computer’s operating system or to install a new version of Windows on a new computer.
-ms.date: 05/03/2019
+ms.date: 05/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -42,7 +42,12 @@ To deploy operating systems to Configuration Manager clients that make PXE boot 
 > [!Note]  
 > In version 1810 and earlier, it's not supported to use the PXE responder without WDS on servers that are also running a DHCP server.
 >
-> Starting in version 1902, when you enable a PXE responder on a distribution point without Windows Deployment Service, it can now be on the same server as the DHCP service. <!--3734270-->  
+> Starting in version 1902, when you enable a PXE responder on a distribution point without Windows Deployment Service, it can now be on the same server as the DHCP service.<!--3734270, SCCMDocs-pr #3416--> Add the following settings to support this configuration:  
+>
+> - Set the DWord value **DoNotListenOnDhcpPort** to `1` in the following registry key: `HKLM\Software\Microsoft\SMS\DP`.
+> - Set DHCP option 60 to `PXEClient`.  
+> - Restart the SCCMPXE and DHCP services on the server.  
+
 
 ## Prepare a PXE-enabled boot image
 
