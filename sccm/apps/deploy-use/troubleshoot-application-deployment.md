@@ -2,7 +2,7 @@
 title: Troubleshoot app deployments
 titleSuffix: Configuration Manager
 description: Tips for troubleshooting application deployment problems in System Center Configuration Manager
-ms.date: 05/23/2019
+ms.date: 05/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -60,3 +60,10 @@ When the application's deployment compliance is 0%, check the deployment status 
 - **Unknown**: This status usually means that the client hasn't received policy. Manually refresh client policy to see if the client receives it. For more information, see [Initiate policy retrieval for a Configuration Manager client](/sccm/core/clients/manage/manage-clients#BKMK_PolicyRetrieval).
   
 If these actions don't resolve the issue, check the client status. There may be a deeper underlying problem with the client. For more information, see [How to monitor clients](/sccm/core/clients/manage/monitor-clients).
+
+
+## Next steps
+
+- [Monitor applications](/sccm/apps/deploy-use/monitor-applications-from-the-console)
+- [Deploy applications](/sccm/apps/deploy-use/deploy-applications)
+- [Management tasks for applications](/sccm/apps/deploy-use/management-tasks-applications)
