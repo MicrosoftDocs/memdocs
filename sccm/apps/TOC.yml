@@ -63,8 +63,6 @@
       href: deploy-use/manage-apps-from-the-windows-store-for-business.md
     - name: App-V virtual environments
       href: deploy-use/create-app-v-virtual-environments.md
-    - name: Copy applications
-      href: deploy-use/copy-applications.md
     - name: Import and export applications
       href: deploy-use/import-export-applications.md
   - name: Update and retire applications
