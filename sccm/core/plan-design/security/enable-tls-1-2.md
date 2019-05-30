@@ -80,7 +80,7 @@ For 32-bit applications that are running on 32-bit systems or 64-bit application
 For 32-bit applications that are running on 64-bit systems, update the following subkey value:
 
 ```Registry
-[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\\v2.0.50727]
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v2.0.50727]
       "SystemDefaultTlsVersions" = dword:00000001
       "SchUseStrongCrypto" = dword:00000001
 [HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319]
@@ -162,6 +162,10 @@ The following client platforms are supported by Configuration Manager but aren't
 - Windows CE
 - Apple OS X
 - Windows 10 devices managed with on-premises MDM
+
+### Reports don't show in the console
+
+If reports don't show in the Configuration Manager console, make sure to update the computer on which you're running the console. You need to update the .NET Framework, and enable strong cryptography.
 
 ### FIPS security policy enabled
 
