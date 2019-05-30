@@ -142,7 +142,7 @@ Starting in version 1802, the default task sequence template for Windows 10 in-p
 
 - **Battery checks**: Add steps in this group to check whether the computer is using battery, or wired power. This action requires a custom script or utility to perform this check. For example: Using WbemTest, connect to the `root\cimv2` namespace. Then run the following query: `Select Batterystatus From Win32_Battery where batterystatus != 2`. If it returns any results, then the device is running on battery. Otherwise, the device is connected to wired power.  
 
-- **Network/wired connection checks**: Add steps in this group to check whether the computer is connected to a network, and isn't using a wireless connection. This action requires a custom script or utility to perform this check.  
+- **Network/wired connection checks**: Add steps in this group to check whether the computer is connected to a network, and isn't using a wireless connection. This action requires a custom script or utility to perform this check.  For example: Using WbemTest, connect to the `root\cimv2` namespace. Then run the following query: `Select * From Win32_NetworkAdapter Where NetConnectionStatus = 2 and PhysicalAdapter = 'True' and NetConnectionID = 'Wi-Fi'`. If it returns any results, then the device is running on Wi-Fi. Otherwise, the device is connected to wired network connection.
 
 - **Remove incompatible applications**: Add steps in this group to remove any applications that are incompatible with this version of Windows 10. The method to uninstall an application varies.  
 
