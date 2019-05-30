@@ -58,6 +58,17 @@ conceptualContent:
         - text: Run PowerShell scripts
           url: https://docs.microsoft.com/sccm/apps/deploy-use/create-deploy-scripts
           itemType: how-to-guide
+    - title: Infrastructure simplification
+      links:
+        - text: Site server high availability
+          url: https://docs.microsoft.com/sccm/core/servers/deploy/configure/site-server-high-availability
+          itemType: deploy
+        - text: Reassign a distribution point
+          url: https://docs.microsoft.com/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_reassign
+          itemType: how-to-guide
+        - text: Configuration Manager on Azure
+          url: https://docs.microsoft.com/sccm/core/understand/configuration-manager-on-azure
+          itemType: learn
     - title: Core infrastructure
       links:
         - text: Using the console
