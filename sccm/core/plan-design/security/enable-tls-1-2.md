@@ -96,12 +96,14 @@ For 32-bit applications that are running on 64-bit systems, update the following
 
 Microsoft SQL Server 2016 and later support TLS 1.1 and TLS 1.2. Earlier versions and dependent libraries might require updates. For more information, see [KB 3135244: TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server).
 
-> [!NOTE]
-> KB 3135244 also describes requirements for SQL Server client components. Update each component that's used in your environment.
+Secondary site servers need to use at least SQL Server 2016 Express with Service Pack 2 (13.2.50.26) or later.
 
 ##### SQL Server Native Client
 
-Make sure to also update the SQL Server Native Client. Starting in version 1810, this requirement is a [prerequisite check (warning)](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
+> [!NOTE]
+> [KB 3135244](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server) also describes requirements for SQL Server client components.
+
+Make sure to also update the SQL Server Native Client to at least version SQL 2012 SP4 (11.*.7001.0). Starting in version 1810, this requirement is a [prerequisite check (warning)](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
 
 Configuration Manager uses SQL Server Native Client on the following site system roles:
 
