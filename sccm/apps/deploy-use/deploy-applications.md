@@ -304,6 +304,7 @@ If you deploy applications as available to users, starting in version 1802 they 
 
 ## Next steps
 
- - [Monitor applications](/sccm/apps/deploy-use/monitor-applications-from-the-console)
- - [Management tasks for applications](/sccm/apps/deploy-use/management-tasks-applications)
- - [Software Center user guide](/sccm/core/understand/software-center)
+- [Monitor applications](/sccm/apps/deploy-use/monitor-applications-from-the-console)
+- [Troubleshoot application deployments](/sccm/apps/deploy-use/troubleshoot-application-deployment)
+- [Management tasks for applications](/sccm/apps/deploy-use/management-tasks-applications)
+- [Software Center user guide](/sccm/core/understand/software-center)

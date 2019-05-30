@@ -2,7 +2,7 @@
 title: Manage distribution points
 titleSuffix: Configuration Manager
 description: Use distribution points to host the content that you deploy to devices and users.
-ms.date: 05/24/2019
+ms.date: 05/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -225,6 +225,8 @@ While the distribution point is in maintenance mode, it has the following behavi
 Be careful about enabling maintenance mode on more than one distribution point. This action may cause a performance impact to your other distribution points. Depending upon your boundary group configurations, clients may have increased download times or be unable to download content.
 
 ### Enable maintenance mode
+
+To put a distribution point in maintenance mode, your user account requires the **Modify** permission on the **Site** class. For example, the **Infrastructure Administrator** and **Full Administrator** built-in roles have this permission.<!-- SCCMDocs-pr issue #3407 -->
 
 1. In the Configuration Manager console, go to the **Administration** workspace.  
 
