@@ -42,7 +42,7 @@ To enable TLS 1.2 for dependent components that Configuration Manager depends on
 - [Update .NET Framework to support TLS 1.2](#update-net-framework-to-support-tls-12)
 - [Update SQL Server and client components](#update-sql-server-and-client-components)
 - [Update Windows and WinHTTP on Windows 8.0, Windows Server 2012 R2 and earlier](#update-windows-and-winhttp)
-- [Update Windows Server Update Services (WSUS)](#update-windows-server-update-services)
+- [Update Windows Server Update Services (WSUS)](#update-windows-server-update-services-wsus)
 
 #### Update .NET Framework to support TLS 1.2
 
@@ -142,7 +142,7 @@ This section describes the dependencies for specific Configuration Manager featu
 |Site system roles| - [Update .NET Framework](#update-net-framework-to-support-tls-12)<br/> - Verify strong cryptography settings <br/> - [Update SQL Server and its client components](#update-sql-server-and-client-components).|
 |Service connection point| - [Update .NET Framework](#update-net-framework-to-support-tls-12)<br/> - Verify strong cryptography settings|
 |Reporting services point|- [Update .NET Framework](#update-net-framework-to-support-tls-12) on the site server, the SQL Reporting Services servers, and any computer with the console<br/> - Restart the SMS_Executive service as necessary|
-|Software update point|[Update WSUS](#update-windows-server-update-services)|
+|Software update point|[Update WSUS](#update-windows-server-update-services-wsus)|
 |Management point|Update to the latest SQL Server native client to enable Configuration Manager to talk to the latest TLS 1.2-enabled SQL Server components. For more information, see the "Client component downloads" table in [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244).|
 |Configuration Manager console| - [Update .NET Framework](#update-net-framework-to-support-tls-12)<br/> - Verify strong cryptography settings|
 |Configuration Manager client with HTTPS site system roles|[Update Windows to support TLS 1.2 for client-server communications by using WinHTTP](#update-windows-and-winhttp)|
