@@ -2,7 +2,7 @@
 title: How to enable TLS 1.2
 titleSuffix: Configuration Manager
 description: Information about how to enable TLS 1.2 for Configuration Manager.
-ms.date: 05/29/2019
+ms.date: 05/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -99,7 +99,28 @@ Microsoft SQL Server 2016 and later support TLS 1.1 and TLS 1.2. Earlier version
 > [!NOTE]
 > KB 3135244 also describes requirements for SQL Server client components. Update each component that's used in your environment.
 
-Make sure to also update the SQL Server Native Client. Starting in version 1810, this requirement is a prerequisite check (warning). For more information including the site system roles that use SQL Server Native client, see [List of prerequisite checks](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
+##### SQL Server Native Client
+
+Make sure to also update the SQL Server Native Client. Starting in version 1810, this requirement is a [prerequisite check (warning)](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
+
+Configuration Manager uses SQL Server Native Client on the following site system roles:
+
+- Site database server
+- Site server: central administration site, primary site, or secondary site
+- Management point
+- Device management point
+- State migration point
+- SMS Provider
+- Software update point
+- Multicast-enabled distribution point
+- Asset Intelligence update service point
+- Reporting services point
+- Application catalog web service
+- Enrollment point
+- Endpoint Protection point
+- Service connection point
+- Certificate registration point
+- Data warehouse service point
 
 #### Update Windows and WinHTTP
 
@@ -137,13 +158,11 @@ This section describes the dependencies for specific Configuration Manager featu
 |Feature or scenario|Update tasks|
 |--- |--- |
 |Site servers (central, primary, or secondary)| - [Update .NET Framework](#update-net-framework-to-support-tls-12)<br/> - Verify strong cryptography settings|
+|Site database server|[Update SQL Server and its client components](#update-sql-server-and-client-components)|
 |Secondary site servers|[Update SQL Server and its client components](#update-sql-server-and-client-components) to a compliant version of SQL Express|
-|SMS Provider|[Update SQL Server and its client components](#update-sql-server-and-client-components) as appropriate for each SMS provider|
-|Site system roles| - [Update .NET Framework](#update-net-framework-to-support-tls-12)<br/> - Verify strong cryptography settings <br/> - [Update SQL Server and its client components](#update-sql-server-and-client-components).|
-|Service connection point| - [Update .NET Framework](#update-net-framework-to-support-tls-12)<br/> - Verify strong cryptography settings|
+|Site system roles| - [Update .NET Framework](#update-net-framework-to-support-tls-12) and verify strong cryptography settings <br/> - [Update SQL Server and its client components](#update-sql-server-and-client-components) on roles that require it, including the [SQL Server Native Client](#sql-server-native-client)|
 |Reporting services point|- [Update .NET Framework](#update-net-framework-to-support-tls-12) on the site server, the SQL Reporting Services servers, and any computer with the console<br/> - Restart the SMS_Executive service as necessary|
 |Software update point|[Update WSUS](#update-windows-server-update-services-wsus)|
-|Management point|Update to the latest SQL Server native client to enable Configuration Manager to talk to the latest TLS 1.2-enabled SQL Server components. For more information, see the "Client component downloads" table in [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244).|
 |Configuration Manager console| - [Update .NET Framework](#update-net-framework-to-support-tls-12)<br/> - Verify strong cryptography settings|
 |Configuration Manager client with HTTPS site system roles|[Update Windows to support TLS 1.2 for client-server communications by using WinHTTP](#update-windows-and-winhttp)|
 |Software Center| - [Update .NET Framework](#update-net-framework-to-support-tls-12)<br/> - Verify strong cryptography settings|
@@ -165,7 +184,7 @@ The following client platforms are supported by Configuration Manager but aren't
 
 ### Reports don't show in the console
 
-If reports don't show in the Configuration Manager console, make sure to update the computer on which you're running the console. You need to update the .NET Framework, and enable strong cryptography.
+If reports don't show in the Configuration Manager console, make sure to update the computer on which you're running the console. You need to [update the .NET Framework](#update-net-framework-to-support-tls-12), and enable strong cryptography.
 
 ### FIPS security policy enabled
 
@@ -177,13 +196,13 @@ To investigate, enable Secure Channel event logging, and then review Schannel ev
 
 If SQL Server communication fails and returns an **SslSecurityError** error, verify the following settings:
 
-- Update .NET Framework, and enable strong cryptography on each machine
-- Update SQL Server on the host server
-- Update SQL client components on all systems that communicate with SQL. For example, the site servers, SMS provider, and site role servers.
+- [Update .NET Framework](#update-net-framework-to-support-tls-12), and enable strong cryptography on each machine
+- [Update SQL Server](#update-sql-server-and-client-components) on the host server
+- [Update SQL client components](#update-sql-server-and-client-components) on all systems that communicate with SQL. For example, the site servers, SMS provider, and site role servers.
 
 ### Configuration Manager client communication failures
 
-If the Configuration Manager client doesn't communicate with site roles, verify that you updated Windows to support TLS 1.2 for client-server communication by using WinHTTP. Common site roles include distribution points, management points, and state migration points.
+If the Configuration Manager client doesn't communicate with site roles, verify that you [updated Windows](#update-windows-and-winhttp) to support TLS 1.2 for client-server communication by using WinHTTP. Common site roles include distribution points, management points, and state migration points.
 
 ### Reporting services point fails and returns an expected error
 
@@ -194,7 +213,7 @@ If the reporting services point doesn't configure reports, check the **SRSRP.log
 
 To resolve this issue, follow these steps:
 
-1. Update .NET Framework, and enable strong cryptography on all relevant computers.
+1. [Update .NET Framework](#update-net-framework-to-support-tls-12), and enable strong cryptography on all relevant computers.
 
 1. After you install any updates, restart the SMS_Executive service.
 
@@ -209,7 +228,7 @@ If the application catalog doesn't initialize, check the **ServicePortalWebSite.
 
 To resolve this issue, follow these steps:
 
-1. Update .NET Framework, and enable strong cryptography on all relevant computers.
+1. [Update .NET Framework](#update-net-framework-to-support-tls-12), and enable strong cryptography on all relevant computers.
 
 1. In the `%WinDir%\System32\InetSrv` folder of the application catalog server, create a **W2SP.exe.config** file with the following contents:
 
@@ -241,7 +260,7 @@ The best method to make Software Center work with for user-available apps in a T
 
 If you need to resolve communication failures between the application catalog and Software Center, verify the following conditions:
 
-- Update .NET Framework, and enable strong cryptography on each computer.
+- [Update .NET Framework](#update-net-framework-to-support-tls-12), and enable strong cryptography on each computer.
 
 - After you make the changes, restart all affected computers.
 
@@ -249,15 +268,15 @@ If you need to resolve communication failures between the application catalog an
 
 ### Service connection point upload failures
 
-If the service connection point doesn't upload data to SCCMConnectedService, update the .NET Framework, and enable strong cryptography on each computer. After you make the changes, remember to restart the computers.
+If the service connection point doesn't upload data to SCCMConnectedService, [update the .NET Framework](#update-net-framework-to-support-tls-12), and enable strong cryptography on each computer. After you make the changes, remember to restart the computers.
 
 ### Configuration Manager console displays Intune onboarding dialog box
 
-If the Intune onboarding dialog box appears when the console tries to connect to the Intune portal, update the .NET Framework, and enable strong cryptography on each computer. After you make the changes, remember to restart the computers.
+If the Intune onboarding dialog box appears when the console tries to connect to the Intune portal, [update the .NET Framework](#update-net-framework-to-support-tls-12), and enable strong cryptography on each computer. After you make the changes, remember to restart the computers.
 
 ### Configuration Manager console displays failure to sign in to Azure
 
-When you try to create applications in Azure Active Directory (Azure AD), if the Azure Services onboarding dialog box immediately fails after you select **Sign in**, update the .NET Framework, and enable strong cryptography. After you make the changes, remember to restart the computers.
+When you try to create applications in Azure Active Directory (Azure AD), if the Azure Services onboarding dialog box immediately fails after you select **Sign in**, [update the .NET Framework](#update-net-framework-to-support-tls-12), and enable strong cryptography. After you make the changes, remember to restart the computers.
 
 ## See also
 
