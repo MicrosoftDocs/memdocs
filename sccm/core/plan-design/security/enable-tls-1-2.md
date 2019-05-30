@@ -280,6 +280,10 @@ If the Intune onboarding dialog box appears when the console tries to connect to
 
 When you try to create applications in Azure Active Directory (Azure AD), if the Azure Services onboarding dialog box immediately fails after you select **Sign in**, [update the .NET Framework](#update-net-framework-to-support-tls-12), and enable strong cryptography. After you make the changes, remember to restart the computers.
 
+### Configuration Manager cloud services and TLS 1.2
+
+Starting in version 1802, the Azure virtual machines used by the cloud management gateway and cloud distribution points support TLS 1.2. Supported clients on version 1802 or later automatically use TLS 1.2.
+
 
 ## See also
 
