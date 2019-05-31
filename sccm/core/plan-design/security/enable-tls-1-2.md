@@ -1,8 +1,8 @@
-﻿---
+---
 title: How to enable TLS 1.2
 titleSuffix: Configuration Manager
 description: Information about how to enable TLS 1.2 for Configuration Manager.
-ms.date: 05/30/2019
+ms.date: 05/31/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -283,6 +283,25 @@ When you try to create applications in Azure Active Directory (Azure AD), if the
 ### Configuration Manager cloud services and TLS 1.2
 
 Starting in version 1802, the Azure virtual machines used by the cloud management gateway and cloud distribution points support TLS 1.2. Supported clients on version 1802 or later automatically use TLS 1.2.
+
+The **SMSAdminui.log** may contain an error similar to the following example:
+
+```
+Microsoft.ConfigurationManager.CloudBase.AAD.AADAuthenticationException
+Service returned error. Check InnerException for more details
+at Microsoft.ConfigurationManager.CloudBase.AAD.AADAuthenticationContext.GetAADAuthResultObject
+...
+Microsoft.IdentityModel.Clients.ActiveDirectory.AdalServiceException
+Service returned error. Check InnerException for more details
+at Microsoft.IdentityModel.Clients.ActiveDirectory.AuthenticationContext.RunAsyncTask
+...
+System.Net.WebException
+The underlying connection was closed: An unexpected error occurred on a receive.
+at System.Net.HttpWebRequest.GetResponse
+```
+
+In the System EventLog, SChannel EventID 36874 may be logged with the following description: `An TLS 1.2 connection request was received from a remote client application, but none of the cipher suites supported by the client application are supported by the server. The TLS connection request has failed.`
+<!--SCCMDocs issue #1608-->
 
 
 ## See also
