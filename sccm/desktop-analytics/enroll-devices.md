@@ -122,7 +122,7 @@ To change these settings, use the following procedure:
 
 2. On the **Diagnostic Data** page, make changes as needed to the following settings:  
 
-    - **Commercial ID**: this value should automatically populate with your organization's ID. If it doesn't, make sure your proxy server is configured to whitelist all required [endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints) before continuing. Alternatively, retrieve your Commercial ID from the **Connected Services** pane in the [Desktop Analytics portal](https://aka.ms/m365aprod).   
+    - **Commercial ID**: this value should automatically populate with your organization's ID. If it doesn't, make sure your proxy server is configured to allow all required [endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints) before continuing. Alternatively, retrieve your Commercial ID from the **Connected Services** pane in the [Desktop Analytics portal](https://aka.ms/m365aprod).   
 
     - **Windows 10 diagnostic data level**: For more information, see [Diagnostic data levels](/sccm/desktop-analytics/enable-data-sharing#diagnostic-data-levels).  
 
