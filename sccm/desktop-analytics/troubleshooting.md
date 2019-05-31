@@ -2,7 +2,7 @@
 title: Troubleshooting Desktop Analytics
 titleSuffix: Configuration Manager
 description: Technical details to help you troubleshoot issues with Desktop Analytics.
-ms.date: 04/25/2019
+ms.date: 05/31/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -46,7 +46,31 @@ Use the **Connection Health** dashboard in Configuration Manager to drill down i
 
 When you first set up Desktop Analytics, these charts may not show complete data. It can take 2-3 days for active devices to send diagnostic data to the Desktop Analytics service, the service to process the data, and then synchronize with your Configuration Manager site.<!-- 4098037 -->
 
-If you think some devices aren't showing in Desktop Analytics, first check the percentage of **Connected devices**. If it's less than 100%, make sure the devices are supported by Desktop Analytics. For more information, see [Prerequisites](/sccm/desktop-analytics/overview#prerequisites).
+
+### Connection details
+
+<!-- 4412133 -->
+
+This tile shows basic information such as the connected tenant name and times for updates from the service. The **Devices Targeted** value is all of the devices in the target collection, minus the following types of devices:
+
+- Decommissioned
+- Obsolete
+- Inactive
+- Unmanaged
+
+For more information on these device states, see [About client status](/sccm/core/clients/manage/monitor-clients#bkmk_about).
+
+> [!Note]  
+> Configuration Manager uploads to Desktop Analytics all of the devices in the target collection minus decommissioned and obsolete clients.
+
+### Connected devices
+
+If you think some devices aren't showing in Desktop Analytics, first check the percentage of **Connected devices**. This chart represents the percentage of devices using the following formula:
+
+- Numerator: The **Devices Targeted** value in the [Connection details](#connection-details) tile
+- Denominator: All devices in Configuration Manager minus inactive and unmanaged devices
+
+If it's less than 100%, make sure the devices are supported by Desktop Analytics. For more information, see [Prerequisites](/sccm/desktop-analytics/overview#prerequisites).
 
 
 ### Connection health states
