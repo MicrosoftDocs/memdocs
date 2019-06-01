@@ -68,13 +68,16 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
 
     - **Secret Key validity period**: choose either **1 year** or **2 years** from the drop-down list. One year is the default value.  
 
-    Select **Sign in** to authenticate to Azure as an administrative user. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager, and doesn't need to be the same account that runs the Azure Services Wizard. After successfully authenticating to Azure, the page shows the **Azure AD Tenant Name** for reference.
+    Select **Sign in** . After successfully authenticating to Azure, the page shows the **Azure AD Tenant Name** for reference.
+        
+    > [!Note]  
+    > Complete this step as a **Company Admin**. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager, and doesn't need to be the same account that runs the Azure Services Wizard.  
 
     Select **OK** to create the web app in Azure AD and close the Create Server Application dialog. On the Server App dialog, select **OK**. Then select **Next** on the App page of the Azure Services Wizard.  
 
 7. On the **Diagnostic Data** page, configure the following settings:  
 
-    - **Commercial ID**: this value should automatically populate with your organization's ID. If it doesn't, make sure your proxy server is configured to whitelist all required [endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints) before continuing. Alternatively, retrieve your Commercial ID from the **Connected Services** pane in the [Desktop Analytics portal](https://aka.ms/m365aprod).  
+    - **Commercial ID**: this value should automatically populate with your organization's ID. If it doesn't, make sure your proxy server is configured to allow all required [endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints) before continuing. Alternatively, retrieve your Commercial ID from the **Connected Services** pane in the [Desktop Analytics portal](https://aka.ms/m365aprod).  
 
     - **Windows 10 diagnostic data level**: select at least **Enhanced (Limited)**  
 
@@ -95,12 +98,11 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
 
     - **Devices in the target collection use a user-authenticated proxy for outbound communication**: By default, this value is **No**. If needed in your environment, set to **Yes**.  
 
-    - **Select specific collections to synchronize with Desktop Analytics**: Select **Add** to include additional collections. These collections are available in the Desktop Analytics portal for grouping with deployment plans. Make sure to include pilot and pilot exclusion collections.  
-
-        These collections continue to sync as their membership changes. For example, your deployment plan uses a collection with a Windows 7 membership rule. As those devices upgrade to Windows 10, and Configuration Manager evaluates the collection membership, those devices drop out of the collection and deployment plan.  
+    - **Select specific collections to synchronize with Desktop Analytics**: Select **Add** to include additional collections from your **Target collection** hierarchy. These collections are available in the Desktop Analytics portal for grouping with deployment plans. Make sure to include pilot and pilot exclusion collections.  <!-- 4097528 -->  
 
         > [!Important]  
-        > Make sure to limit these additional collections on the target collection. On the properties of these additional collections, the **Limiting collection** should be the same collection as the Desktop Analytics **Target collection**.<!-- 4097528 -->  
+        > These collections continue to sync as their membership changes. For example, your deployment plan uses a collection with a Windows 7 membership rule. As those devices upgrade to Windows 10, and Configuration Manager evaluates the collection membership, those devices drop out of the collection and deployment plan.  
+
 
 9. Complete the wizard.  
 
@@ -110,11 +112,11 @@ Configuration Manager creates a settings policy to configure devices in the Targ
 
 ## <a name="bkmk_monitor"></a> Monitor connection health
 
-Monitor the configuration of your devices for Desktop Analytics. In the Configuration Manager console, go to the **Software Library** workspace, expand the **Microsoft 365 Servicing** node, and select the **Connection Health** dashboard.  
+Monitor the configuration of your devices for Desktop Analytics. In the Configuration Manager console, go to the **Software Library** workspace, expand the **Desktop Analytics Servicing** node, and select the **Connection Health** dashboard.  
 
 For more information, see [Monitor connection health](/sccm/desktop-analytics/troubleshooting#monitor-connection-health).
 
-Configuration Manager synchronizes any Desktop Analytics deployment plans within 15 minutes of creating the connection. In the Configuration Manager console, go to the **Software Library** workspace, expand the **Microsoft 365 Servicing** node, and select the **Deployment Plans** node.
+Configuration Manager synchronizes your collections within 60 minutes of creating the connection. In the Desktop Analytics portal, go to  **Global Pilot**, and see your Configuration Manager device collections.
 
 
 
