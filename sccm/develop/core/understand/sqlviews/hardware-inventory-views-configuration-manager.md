@@ -1,10 +1,10 @@
-﻿---
+---
 title: Hardware inventory views
 titleSuffix: Configuration Manager
 description: Information about the computer hardware scanned on Configuration Manager client computers.
-ms.date: 04/30/2019
+ms.date: 06/03/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other #app client compliance hybrid osd protect sum
+ms.technology: configmgr-other
 ms.topic: conceptual
 ms.collection: M365-identity-device-management
 ms.assetid: 8726c91b-de9d-4df0-9eb8-f9f62e109152
