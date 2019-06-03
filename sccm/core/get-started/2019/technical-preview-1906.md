@@ -25,7 +25,26 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/1903/1234567.md)] -->
 
-
+[!INCLUDE [Add joins, additional operators and aggregators in CMPivot](includes/1906/4054074.md)]
+[!INCLUDE [Auto-enrollment using device token](includes/1906/4454491.md)]
+[!INCLUDE [Azure Active Directory user group discovery](includes/1906/3611956.md)]
+[!INCLUDE [Configuration Manager Update Database Upgrade Monitoring](includes/1906/4200581.md)]
+[!INCLUDE [Extend and Migrate on-premises System Center Configuration Manager environment to Microsoft Azure](includes/1906/3556022.md)]
+[!INCLUDE [Filter applications deployed to devices](includes/1906/4451056.md)]
+[!INCLUDE [Improvements to maintenance tasks](includes/1906/3555894.md)]
+[!INCLUDE [Manage Edge (Chromium) deployment and manage updates](includes/1906/3607398.md)]
+[!INCLUDE [Management insights rule for secure client push](includes/1906/4572953.md)]
+[!INCLUDE [More frequent countdown notifications for restarts](includes/1906/3976435.md)]
+[!INCLUDE [New Windows 10, version 1903 and later product category](includes/1906/4682946.md)]
+[!INCLUDE [Put a checkbox in TS to remove from cache after install](includes/1906/4485675.md)]
+[!INCLUDE [RBAC on Folders](includes/1906/3600867.md)]
+[!INCLUDE [Redesigned notification for available software](includes/1906/3555904.md)]
+[!INCLUDE [Remote control anywhere using Cloud Management Gateway](includes/1906/4575930.md)]
+[!INCLUDE [Several console features use Odata instead of WMI](includes/1906/4223683.md)]
+[!INCLUDE [Support for Windows Virtual Desktop](includes/1906/3556025.md)]
+[!INCLUDE [Support re-evaluate after install in addition to re-evaluate after reboot](includes/1906/4639943.md)]
+[!INCLUDE [Third-party updates support v3 catalogs](includes/1906/4469002.md)]
+[!INCLUDE [WDATP Server 2019 support](includes/1906/4399461.md)]
 
 <!-- ## Known issues -->
 

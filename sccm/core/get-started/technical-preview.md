@@ -119,7 +119,26 @@ The following features are available with the most recent Configuration Manager 
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID-->
 
-
+- [Add joins, additional operators and aggregators in CMPivot](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4054074-->
+- [Auto-enrollment using device token](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4454491-->
+- [Azure Active Directory user group discovery](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--3611956-->
+- [Configuration Manager Update Database Upgrade Monitoring](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4200581-->
+- [Extend and Migrate on-premises System Center Configuration Manager environment to Microsoft Azure](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--3556022-->
+- [Filter applications deployed to devices](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4451056-->
+- [Improvements to maintenance tasks](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--3555894-->
+- [Manage Edge (Chromium) deployment and manage updates](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--3607398-->
+- [Management insights rule for secure client push](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4572953-->
+- [More frequent countdown notifications for restarts](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--3976435-->
+- [New Windows 10, version 1903 and later product category](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4682946-->
+- [Put a checkbox in TS to remove from cache after install](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4485675-->
+- [RBAC on Folders](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--3600867-->
+- [Redesigned notification for available software](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--3555904-->
+- [Remote control anywhere using Cloud Management Gateway](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4575930-->
+- [Several console features use Odata instead of WMI](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4223683-->
+- [Support for Windows Virtual Desktop](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--3556025-->
+- [Support re-evaluate after install in addition to re-evaluate after reboot](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4639943-->
+- [Third-party updates support v3 catalogs](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4469002-->
+- [WDATP Server 2019 support](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4399461-->
 
 > [!Note]  
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.  
