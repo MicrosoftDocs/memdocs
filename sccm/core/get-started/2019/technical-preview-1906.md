@@ -46,6 +46,9 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Third-party updates support v3 catalogs](includes/1906/4469002.md)]
 [!INCLUDE [WDATP Server 2019 support](includes/1906/4399461.md)]
 
+[!INCLUDE [Improvements to CMPivot](includes/1906/4683130.md)]
+[!INCLUDE [Improvements to OS deployment](includes/1906/4668846.md)]
+
 <!-- ## Known issues -->
 
 <!-- [!INCLUDE [Client health dashboard](includes/1903/known-issue-health.md)] -->

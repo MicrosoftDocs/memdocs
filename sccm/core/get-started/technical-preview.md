@@ -139,6 +139,8 @@ The following features are available with the most recent Configuration Manager 
 - [Support re-evaluate after install in addition to re-evaluate after reboot](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4639943-->
 - [Third-party updates support v3 catalogs](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4469002-->
 - [WDATP Server 2019 support](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4399461-->
+- [Improvements to CMPivot](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4683130-->
+- [Improvements to OS deployment](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4668846-->
 
 > [!Note]  
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.  
