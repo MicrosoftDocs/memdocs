@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Sample queries that show how to join common client status views to other views.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other #app client compliance hybrid osd protect sum
+ms.technology: configmgr-other
 ms.topic: conceptual
 ms.collection: M365-identity-device-management
 ms.assetid: fe4dafee-8ea7-4829-884b-960cc09f6444

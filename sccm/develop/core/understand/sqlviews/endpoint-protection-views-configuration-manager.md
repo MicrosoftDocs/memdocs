@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Information about the status of Endpoint Protection clients and malware activity in your Configuration Manager site.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other #app client compliance hybrid osd protect sum
+ms.technology: configmgr-other
 ms.topic: conceptual
 ms.collection: M365-identity-device-management
 ms.assetid: 5f6b3676-b5d8-48f7-92c7-35366169a855
