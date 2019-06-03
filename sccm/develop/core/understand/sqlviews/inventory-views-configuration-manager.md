@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Hardware and software inventory information about the clients, files, and products, in the Configuration Manager hierarchy.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other #app client compliance hybrid osd protect sum
+ms.technology: configmgr-other
 ms.topic: conceptual
 ms.collection: M365-identity-device-management
 ms.assetid: 4487dbcb-1652-454f-8c45-3f543db1ad50
