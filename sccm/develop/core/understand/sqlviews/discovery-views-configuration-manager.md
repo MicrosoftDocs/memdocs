@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: System resource objects, which include any resources that were discovered on the network.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other #app client compliance hybrid osd protect sum
+ms.technology: configmgr-other
 ms.topic: conceptual
 ms.collection: M365-identity-device-management
 ms.assetid: 3692e025-4c24-4b5e-a4b0-a55039c92b21
