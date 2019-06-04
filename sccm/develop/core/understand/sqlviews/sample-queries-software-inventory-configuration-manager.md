@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Sample queries that show how software inventory views can be joined to other views to retrieve specific data.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other #app client compliance hybrid osd protect sum
+ms.technology: configmgr-other
 ms.topic: conceptual
 ms.collection: M365-identity-device-management
 ms.assetid: baffc7d9-86a8-4e36-8230-ea4da8cf1f87

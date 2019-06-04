@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: How to create Configuration Manager report queries using Query Designer.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other #app client compliance hybrid osd protect sum
+ms.technology: configmgr-other
 ms.topic: conceptual
 ms.collection: M365-identity-device-management
 ms.assetid: 2ca0c0b4-2fd1-4373-9f8d-3db7dbc92045

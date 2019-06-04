@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: A Microsoft SQL Server view is a virtual table whose contents are based on the result from a SQL query.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other #app client compliance hybrid osd protect sum
+ms.technology: configmgr-other
 ms.topic: conceptual
 ms.collection: M365-identity-device-management
 ms:assetid: a1924bed-b5fc-49a8-80ee-30b4e96defaa

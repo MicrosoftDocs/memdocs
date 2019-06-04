@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Information about the permissions that are granted to users and user groups.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other #app client compliance hybrid osd protect sum
+ms.technology: configmgr-other
 ms.topic: conceptual
 ms.collection: M365-identity-device-management
 ms.assetid: 29422d6c-2235-4365-a8b5-cde12b48d55b

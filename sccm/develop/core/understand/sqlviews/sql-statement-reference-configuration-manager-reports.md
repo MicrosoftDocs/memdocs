@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Information about SQL Server statements that can be used when creating Configuration Manager reports.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other #app client compliance hybrid osd protect sum
+ms.technology: configmgr-other
 ms.topic: conceptual
 ms.collection: M365-identity-device-management
 ms.assetid: be1ea4b0-b003-488e-bb88-860d37d6b72c

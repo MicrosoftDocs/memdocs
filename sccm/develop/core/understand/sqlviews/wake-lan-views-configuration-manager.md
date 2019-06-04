@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Information about the objects that have Wake On LAN enabled.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other #app client compliance hybrid osd protect sum
+ms.technology: configmgr-other
 ms.topic: conceptual
 ms.collection: M365-identity-device-management
 ms.assetid: c31b2528-de90-4a60-8a99-75990b9ad0ea
