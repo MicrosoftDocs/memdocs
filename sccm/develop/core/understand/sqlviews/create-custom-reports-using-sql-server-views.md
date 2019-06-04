@@ -1,10 +1,10 @@
-﻿---
+---
 title: Creating custom reports by using SQL Server views
 titleSuffix: Configuration Manager
 description: Information about how to create reports directly from the Configuration Manager console.
-ms.date: 04/30/2019
+ms.date: 06/03/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other #app client compliance hybrid osd protect sum
+ms.technology: configmgr-other
 ms.topic: conceptual
 ms.collection: M365-identity-device-management
 ms:assetid: 5741ada8-449c-45af-85e1-2e68abf96440
@@ -68,4 +68,5 @@ This section lists the changes that have been made since Configuration Manager 2
 
 ## See also
 
-[Technical Publications for Configuration Manager](/sccm/index)
+- [Technical Publications for Configuration Manager](/sccm/index)
+- [Exploring your System Center Configuration Manager and Microsoft Intune (Hybrid) data on Power BI Dashboard](https://techcommunity.microsoft.com/t5/Configuration-Manager-Archive/Exploring-your-System-Center-Configuration-Manager-and-Microsoft/ba-p/273970)
