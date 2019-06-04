@@ -2,7 +2,7 @@
 title: Deploy applications
 titleSuffix: Configuration Manager
 description: Create or simulate a deployment of an application to a device or user collection
-ms.date: 05/01/2019
+ms.date: 06/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -156,6 +156,12 @@ You might want to give users more time to install required applications *beyond*
 
 After the deadline, the client installs the application in the first non-business window, which the user configured, up to this grace period. However, the user can still open Software Center and install the application at any time. Once the grace period expires, enforcement reverts to normal behavior for overdue deployments.
 
+![Diagram of grace period timeline](media/grace-period.svg)
+
+<!-- SCCMDocs issue #1599 -->
+
+> [!Note]  
+> Most of the time, this feature addresses the scenario when the device is powered off while the user is out of the office. Technically, the grace period starts when the client gets policy after the deployment deadline. The same behavior happens if you stop the Configuration Manager client service (CcmExec), and then restart it at some time after the deployment deadline.
 
 ### <a name="bkmk_deploy-ux"></a> Deployment **User Experience** settings
 
