@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Sample queries that show how to join discovery views to each other and views from other view categories.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other #app client compliance hybrid osd protect sum
+ms.technology: configmgr-other
 ms.topic: conceptual
 ms.collection: M365-identity-device-management
 ms.assetid: 0a31df14-00b0-4880-b36a-3d60d3108129

@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Information about the power plans applied to computers by Configuration Manager.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other #app client compliance hybrid osd protect sum
+ms.technology: configmgr-other
 ms.topic: conceptual
 ms.collection: M365-identity-device-management
 ms.assetid: bfb0f6a9-09c1-4065-b0e5-be06cdc1800a
