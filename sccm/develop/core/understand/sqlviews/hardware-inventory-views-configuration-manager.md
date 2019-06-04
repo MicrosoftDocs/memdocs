@@ -1,8 +1,8 @@
-﻿---
+---
 title: Hardware inventory views
 titleSuffix: Configuration Manager
 description: Information about the computer hardware scanned on Configuration Manager client computers.
-ms.date: 04/30/2019
+ms.date: 06/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -54,12 +54,12 @@ This view can be joined to other views by using the **ClassID** column.
 Lists the properties collected from each inventory class by Configuration Manager hardware inventory.
 This view is unlikely to be joined to other views.
 
-### V_InventoryReport
+### v_InventoryReport
 
 Lists information about the last inventory taken by Configuration Manager. This can include hardware inventory, software inventory, and discovery.
 This view is unlikely to be joined to other views.
 
-### V_InventoryReportClass
+### v_InventoryReportClass
 
 Lists the inventory classes and properties used by Configuration Manager hardware inventory.
 This view is unlikely to be joined to other views.
@@ -73,6 +73,12 @@ This view can be joined to other views by using the **CollectionID** column.
 
 Lists information about the software installed on Configuration Manager clients that is registered in Add or Remove Programs or Programs and Features list.
 The view can be joined with other views by using the **ResourceID** column.
+
+
+### v_GS_1394_CONTROLLER
+
+Lists details about 1394 controllers on clients. This includes the manufacturer, the install date and more.
+This view can be joined to other views by using the **ResourceID** column.
 
 ### v_GS_ACTIVESYNC_CONNECTED_DEVICE
 
@@ -114,6 +120,21 @@ The view can be joined with other views by using the **ResourceID** column.
 Lists information about the applications on Configuration Manager clients that start automatically with the operating system found through Asset Intelligence. The view is also listed and described in the [Asset intelligence views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
 The view can be joined with other views by using the **ResourceID** column.
 
+### v_GS_BASEBOARD
+
+Lists information about the motherboard on Configuration Manager client computers. This includes the serial number of the motherboard, a description and more.
+This view can be joined to other views by using the **ResourceID** column.
+
+### v_GS_BATTERY
+
+Returns details about any computer that contains a battery, such as a notebook computer. Includes information about the type of battery, any errors it has reported, when it was installed, and more.
+The view can be joined with other views by using the **ResourceID** column.
+
+### v_GS_BOOT_CONFIGURATION
+
+Lists information about the folders and resources Windows uses to start on client computers, such as the startup folder, the location of Windows, the boot partition and more.
+This view can be joined to other views by using the **ResourceID** column.
+
 ### v_GS_BROWSER_HELPER_OBJECT
 
 Lists information about the browser objects found on Configuration Manager clients through Asset Intelligence. While some browser helper objects are beneficial, malware might be delivered is in the form of browser helper objects. The view is also listed and described in the [Asset intelligence views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
@@ -132,6 +153,16 @@ This view can be joined with other views by using the **ResourceID** column.
 ### v_GS_COMPUTER_SYSTEM
 
 Lists information about the Configuration Manager clients, including domain, computer name, Configuration Manager roles, status, system type, and more.
+The view can be joined with other views by using the **ResourceID** column.
+
+### v_GS_COMPUTER_SYSTEM_PRODUCT
+
+Lists general information about inventoried client devices including the manufacturer and model.
+This view can be joined to other views by using the **ResourceID** column.
+
+### v_GS_DESKTOP
+
+Lists information about the desktop settings on client computers including the icon size, wallpaper settings, fonts and more.
 The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_DESKTOP_MONITOR
@@ -174,6 +205,11 @@ The view can be joined with other views by using the **ResourceID** column.
 Lists information about the disk drives found on Configuration Manager clients.
 The view can be joined with other views by using the **ResourceID** column.
 
+### v_GS_DMA_CHANNEL
+
+Lists information about the Direct Memory Access (DMA) channels found on client computers.
+This view can be joined to other views by using the **ResourceID** column.
+
 ### v_GS_EMBEDDED_DEVICE_INFO
 
 Lists information about Windows Embedded devices, including the model name of the device.
@@ -207,17 +243,25 @@ The view can be joined with other views by using the **ResourceID** column.
 ### v_GS_INSTALLED_SOFTWARE
 
 Lists information about the installed software applications on Configuration Manager clients found through Asset Intelligence. The view is also listed and described in the [Asset intelligence views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
+
 The view can be joined with other views by using the **ResourceID** column and with Asset Intelligence views by using the **SoftwareCode0** and **SoftwarePropertiesHash0** columns.
 
 ### v_GS_INSTALLED_SOFTWARE_CATEGORIZED
 
 Lists information about the installed software applications on Configuration Manager clients found through Asset Intelligence. This view contains the information in the **v_GS_INSTALLED_SOFTWARE** view and joins several other tables to provide additional details about the installed software. The view is also listed and described in the [Asset intelligence views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
+
 The view can be joined with other views by using the **ResourceID** column and with Asset Intelligence views by using the **SoftwareCode0**, **SoftwarePropertiesHash0**, **FamilyID**, **CategoryID**, and **SoftwareID** columns.
 
 ### v_GS_INSTALLED_SOFTWARE_MS
 
 Lists information about the installed Microsoft software applications on Configuration Manager clients found through Asset Intelligence. The view is also listed and described in the [Asset intelligence views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
+
 The view can be joined with other views by using the **ResourceID** column.
+
+### v_GS_IRQ
+
+List information about Interrupt Requests (IRQ’s) found on client computers.
+This view can be joined to other views by using the **ResourceID** column.
 
 ### v_GS_KEYBOARD_DEVICE
 
@@ -266,6 +310,7 @@ The view can be joined with other views by using the **ResourceID** column.
 ### v_GS_NT_EVENTLOG_FILE
 
 Lists detailed information about the Windows Event Logs found on client computers. This includes file names, paths, maximum and current sizes, and more.
+
 The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_OPERATING_SYSTEM
@@ -277,6 +322,11 @@ The view can be joined with other views by using the **ResourceID** column.
 
 Lists information about the actions that Windows clients take when they experience an unrecoverable error.
 The view can be joined with other views by using the **ResourceID** column.
+
+### v_GS_PAGE_FILE_SETTING
+
+List information about the paging file on Windows computers. This includes the initial size and the maximum size for the page file.
+This view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_PARALLEL_PORT
 
@@ -293,15 +343,60 @@ The view can be joined with other views by using the **ResourceID** column.
 Lists information about the BIOS found on Configuration Manager clients.
 This view can be joined with other views by using the **ResourceID** column.
 
-### v_GS_PNP_DEVICE_DRIVER
+### v_GS_PCMCIA_CONTROLLER
 
-Lists information about the device drivers found on Configuration Manager clients.
+Lists information about the type, capabilities and status of any PCMCIA controllers inventoried on client computers.
+This view can be joined with other views by using the **ResourceID** column.
+
+### v_GS_PHYSICAL_MEMORY
+
+Lists information about the physical memory installed in devices. Includes the capacity, manufacturer, description and more.
 The view can be joined with other views by using the **ResourceID** column.
+
+### v_GS_PORT
+
+Lists information about the ports on each client computer.
+This view can be joined with other views by using the **ResourceID** column.
+
+### v_GS_PORTABLE_BATTERY
+
+Lists information about the battery on portable computers, including its status, type, voltage and expected life.
+This view can be joined to other views by using the **ResourceID** column.
+
+### v_GS_POWER_SUPPLY
+
+Lists information about the power supply used by the Configuration Manager client device. This includes information about remaining charge, reported errors, power management capabilities and more.
+This view can be joined to other views by using the **ResourceID** column.
 
 ### v_GS_POINTING_DEVICE
 
 Lists information about the pointing devices connected to Configuration Manager clients.
 The view can be joined with other views by using the **ResourceID** column.
+
+### v_GS_PNP_DEVICE_DRIVER
+
+Lists information about the device drivers found on Configuration Manager clients.
+The view can be joined with other views by using the **ResourceID** column.
+
+### v_GS_PRINT_JOB
+
+Lists, by resource ID, information about jobs that are in the printer queue of client computers.
+This view can be joined with other views by using the **ResourceID** column.
+
+### v_GS_PRINTER_CONFIGURATION
+
+Lists information about the configuration of printers attached to a device, including the printer name, whether it has double-sided (duplex) capabilities, its driver version and more.
+This view can be joined with other views by using the **ResourceID** column.
+
+### v_GS_PRINTER_DEVICE
+
+Lists information about the print devices attached to clients, including the model, print capabilities and current status at the time the inventory was ran.
+This view can be joined with other views by using the **ResourceID** column.
+
+### v_GS_PROCESS
+
+Lists information about the Windows processes that were running on client computers at the time they ran hardware inventory.
+This view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_PROCESSOR
 
@@ -313,7 +408,7 @@ The view can be joined with other views by using the **ResourceID** column and t
 Lists information about protected disk volumes found on client computers.
 The view can be joined with other views by using the **ResourceID** column.
 
-### V_GS_PROTOCOL
+### v_GS_PROTOCOL
 
 Lists detailed information about the network protocols used by client computers.
 The view can be joined with other views by using the **ResourceID** column.
@@ -322,6 +417,11 @@ The view can be joined with other views by using the **ResourceID** column.
 
 Lists information about Windows hotfixes installed on client computers. Includes the name of the hotfix, who installed it and when, a description of the hotfix, and more.
 The view can be joined with other views by using the **ResourceID** column.
+
+### v_GS_REGISTRY
+
+Lists information about the registry on client computers such as its current size and its maximum size.
+This view can be joined to other views by using the **ResourceID** column.
 
 ### v_GS_SCSI_CONTROLLER
 
@@ -332,6 +432,16 @@ The view can be joined with other views by using the **ResourceID** column.
 
 Lists the server features that are installed on Windows Server computers.
 The view can be joined with other views by using the **ResourceID** column.
+
+### v_GS_SERIAL_PORT
+
+Lists information about the type, capabilities and status of serial ports inventoried on client computers.
+This view can be joined with other views by using the **ResourceID** column.
+
+### v_GS_SERIAL_PORT_CONFIGURATION
+
+Lists information about the serial ports on clients.
+This view can be joined to other views by using the **ResourceID** column.
 
 ### v_GS_SERVICE
 
@@ -413,6 +523,34 @@ The view can be joined with other views by using the **ResourceID** column.
 Lists information about the unique system enclosures found on Configuration Manager clients, including serial number, SMBIOS asset tag, and so on. This view contains a subset of information from the **v_GS_SYSTEM_ENCLOSURE** view.
 The view can be joined with other views by using the **ResourceID** column.
 
+### v_GS_SYSTEMBOOTDATA
+
+Lists information about the computer boot times. This includes BIOS duration, boot duration, event log start,  group policy duration, system start time and update duration. 
+
+The view can be joined with other views by using the **ResourceID** column.
+
+### v_GS_SYSTEMBOOTSUMMARY
+
+Lists summary information about the computer boot times. This includes Latest, Maximum and median’s for  BIOS duration, Boot duration, core boot duration, event log start,  group policy duration, and update duration.
+
+The view can be joined with other views by using the **ResourceID** column.
+
+#### Sampple Query
+Select 
+	RV.Netbios_Name0 as 'Computer',
+	SBS.LatestBiosDuration0 as 'Latest BIOS Duration',
+	SBS.LatestBootDuration0 as 'Latest Boot Duration',
+	SBS.LatestCoreBootDuration0 as 'Latest Core Boot Duration',
+	SBS.LatestEventLogStart0 as 'Latest Event Log Start',
+	SBS.LatestGPDuration0 as 'Latest Group Ploci Duration',
+	SBS.LatestUpdateDuration0 as 'Latest Update Duration'
+from 
+	dbo.v_R_System_Valid RV
+	inner join dbo.v_GS_SYSTEMBOOTSUMMARY SBS on RV.ResourceID = SBS.ResourceID
+Order by
+	RV.Netbios_Name0
+
+
 ### v_GS_SYSTEMHEALTHAGENT
 
 Lists information about the Configuration Manager System Health Agent.
@@ -422,6 +560,16 @@ The view can be joined with other views by using the **ResourceID** column.
 
 Lists information about the tape drives found on Configuration Manager clients.
 The view can be joined with other views by using the **ResourceID** column.
+
+### v_GS_TIME_ZONE
+
+Lists information about the time zone settings on clients.
+This view can be joined with other views by using the **ResourceID** column.
+
+### v_GS_TPM
+
+Lists information about the Trusted Platform Model (TPM) chip when it is found on client computers.
+This view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_TS_ISSUED_LICENSE
 
@@ -442,6 +590,11 @@ The view can be joined with other views by using the **ResourceID** column.
 
 Lists information about the USB devices found on Configuration Manager clients through Asset Intelligence. The view is also listed and described in the [Asset intelligence views in Configuration Manager](asset-intelligence-views-configuration-manager.md) topic.
 The view can be joined with other views by using the **ResourceID** column.
+
+### v_GS_USER_PROFILE
+
+Lists information about user profiles found on client computers including the path to the profile, roaming preferences and more.
+This view can be joined to other views by using the **ResourceID** column.
 
 ### v_GS_VIDEO_CONTROLLER
 
@@ -468,6 +621,16 @@ The view can be joined with other views by using the **ResourceID** column.
 Lists information about Web applications found on clients. This includes the name and URL to the application.
 The view can be joined with other views by using the **ResourceID** column.
 
+### v_GS_WINDOWS8_APPLICATION
+
+Lists the installed modern Windows applications found on client computers.
+This view can be joined to other views by using the **ResourceID** column.
+
+### v_GS_WINDOWS8_APPLICATION_USER_INFO
+
+Lists user account information for the modern Windows applications found on client computers.
+This view can be joined to other views by using the **ResourceID** column.
+
 ### v_GS_WINDOWSUPDATEAGENTVERSION
 
 Lists information about the Windows Update Agent found on Configuration Manager clients.
@@ -488,6 +651,7 @@ The view can be joined with other views by using the **ResourceID** column.
 Lists information about the memory found on Configuration Manager clients.
 The view can be joined with other views by using the **ResourceID** column.
 
+
 ### v_Network_DATA_Serialized
 
 Lists information about the network item found on Configuration Manager clients, and organized by **ResourceID** and then by **GroupID**. The **GroupID** column starts at 1 for the first network item for a client and increments by 1 for each additional network item. The view lists the IP address for the default gateway, the IP address for the DHCP server, DNS domain, IP address, MAC address, and so on.
@@ -497,136 +661,6 @@ The view can be joined with other views by using the **ResourceID** column.
 
 Lists information about the inventory changes on Configuration Manager clients, including name, MIF class, time stamp, change type, and more.
 The view can be joined with other views by using the **ResourceID** column.
-
-### v_GS_PHYSICAL_MEMORY
-
-Lists information about the physical memory installed in devices. Includes the capacity, manufacturer, description and more.
-The view can be joined with other views by using the **ResourceID** column.
-
-### v_GS_DESKTOP
-
-Lists information about the desktop settings on client computers including the icon size, wallpaper settings, fonts and more.
-The view can be joined with other views by using the **ResourceID** column.
-
-### v_GS_BATTERY
-
-Returns details about any computer that contains a battery, such as a notebook computer. Includes information about the type of battery, any errors it has reported, when it was installed, and more.
-The view can be joined with other views by using the **ResourceID** column.
-
-### v_GS_PCMCIA_CONTROLLER
-
-Lists information about the type, capabilities and status of any PCMCIA controllers inventoried on client computers.
-This view can be joined with other views by using the **ResourceID** column.
-
-### v_GS_PORT
-
-Lists information about the ports on each client computer.
-This view can be joined with other views by using the **ResourceID** column.
-
-### v_GS_SERIAL_PORT
-
-Lists information about the type, capabilities and status of serial ports inventoried on client computers.
-This view can be joined with other views by using the **ResourceID** column.
-
-### v_GS_PROCESS
-
-Lists information about the Windows processes that were running on client computers at the time they ran hardware inventory.
-This view can be joined with other views by using the **ResourceID** column.
-
-### v_GS_PRINT_JOB
-
-Lists, by resource ID, information about jobs that are in the printer queue of client computers.
-This view can be joined with other views by using the **ResourceID** column.
-
-### v_GS_PRINTER_CONFIGURATION
-
-Lists information about the configuration of printers attached to a device, including the printer name, whether it has double-sided (duplex) capabilities, its driver version and more.
-This view can be joined with other views by using the **ResourceID** column.
-
-### v_GS_PRINTER_DEVICE
-
-Lists information about the print devices attached to clients, including the model, print capabilities and current status at the time the inventory was ran.
-This view can be joined with other views by using the **ResourceID** column.
-
-### v_GS_1394_CONTROLLER
-
-Lists details about 1394 controllers on clients. This includes the manufacturer, the install date and more.
-This view can be joined to other views by using the **ResourceID** column.
-
-### v_GS_IRQ
-
-List information about Interrupt Requests (IRQ’s) found on client computers.
-This view can be joined to other views by using the **ResourceID** column.
-
-### v_GS_TPM
-
-Lists information about the Trusted Platform Model (TPM) chip when it is found on client computers.
-This view can be joined with other views by using the **ResourceID** column.
-
-### v_GS_TIME_ZONE
-
-Lists information about the time zone settings on clients.
-This view can be joined with other views by using the **ResourceID** column.
-
-### v_GS_PAGE_FILE_SETTING
-
-List information about the paging file on Windows computers. This includes the initial size and the maximum size for the page file.
-This view can be joined with other views by using the **ResourceID** column.
-
-### v_GS_PORTABLE_BATTERY
-
-Lists information about the battery on portable computers, including its status, type, voltage and expected life.
-This view can be joined to other views by using the **ResourceID** column.
-
-### v_GS_POWER_SUPPLY
-
-Lists information about the power supply used by the Configuration Manager client device. This includes information about remaining charge, reported errors, power management capabilities and more.
-This view can be joined to other views by using the **ResourceID** column.
-
-### v_GS_SERIAL_PORT_CONFIGURATION
-
-Lists information about the serial ports on clients.
-This view can be joined to other views by using the **ResourceID** column.
-
-### v_GS_BASEBOARD
-
-Lists information about the motherboard on Configuration Manager client computers. This includes the serial number of the motherboard, a description and more.
-This view can be joined to other views by using the **ResourceID** column.
-
-### v_GS_BOOT_CONFIGURATION
-
-Lists information about the folders and resources Windows uses to start on client computers, such as the startup folder, the location of Windows, the boot partition and more.
-This view can be joined to other views by using the **ResourceID** column.
-
-### v_GS_COMPUTER_SYSTEM_PRODUCT
-
-Lists general information about inventoried client devices including the manufacturer and model.
-This view can be joined to other views by using the **ResourceID** column.
-
-### v_GS_DMA_CHANNEL
-
-Lists information about the Direct Memory Access (DMA) channels found on client computers.
-This view can be joined to other views by using the **ResourceID** column.
-
-### v_GS_USER_PROFILE
-
-Lists information about user profiles found on client computers including the path to the profile, roaming preferences and more.
-This view can be joined to other views by using the **ResourceID** column.
-
-### v_GS_REGISTRY
-
-Lists information about the registry on client computers such as its current size and its maximum size.
-This view can be joined to other views by using the **ResourceID** column.
-
-### v_GS_WINDOWS8_APPLICATION
-
-Lists the installed modern Windows applications found on client computers.
-This view can be joined to other views by using the **ResourceID** column.
-
-### v_GS_WINDOWS8_APPLICATION_USER_INFO
-
-Lists user account information for the modern Windows applications found on client computers.
-This view can be joined to other views by using the **ResourceID** column.
 
 ## See also
 
