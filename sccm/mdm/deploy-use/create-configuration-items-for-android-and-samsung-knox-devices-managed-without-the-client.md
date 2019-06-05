@@ -16,7 +16,7 @@ ms.collection: M365-identity-device-management
 
 Use the System Center Configuration Manager **Android and Samsung KNOX** configuration item to manage settings for Android and Samsung KNOX devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
 
-#### To create an Android and Samsung KNOX configuration item  
+## Create an Android and Samsung KNOX configuration item  
 
 1. In the Configuration Manager console, choose **Assets and compliance**.  
 
@@ -32,7 +32,7 @@ Use the System Center Configuration Manager **Android and Samsung KNOX** configu
 
 7. On the **Supported Platforms** page of the wizard, choose the specific Android or Samsung KNOX platforms that will evaluate the configuration item.  
 
-8. On the **Device Settings** page of the wizard, choose the setting group that you want to configure. See [Android and Samsung KNOX configuration item settings reference](#BKMK_setref) in this topic for details, and then choose **Next**.  
+8. On the **Device Settings** page of the wizard, choose the setting group that you want to configure. See [Android and Samsung KNOX configuration item settings reference](#android-and-samsung-knox-configuration-item-settings-reference) in this topic for details, and then choose **Next**.  
 
     > [!TIP]  
     >  If the setting that you want is not listed, check the **Configure additional settings that are not in the default setting groups** box.  

@@ -170,7 +170,7 @@ For more information on Windows LEDBAT, see the [New transport advancements](htt
 
 
 ### Try it out!
- Try to complete the tasks. Then send [Feedback](#bkmk_feedback) letting us know how it worked.
+ Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
 
 1. In the Configuration Manager console, go to the **Administration** workspace. Select the **Distribution Points** node. Select the target distribution point, and click **Properties** in the ribbon.  
 

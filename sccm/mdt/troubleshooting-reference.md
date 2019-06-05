@@ -1,19 +1,15 @@
 ---
-
-title: "Troubleshoot MDT"
-titleSuffix: "Microsoft Deployment Toolkit"
-description: "Troubleshooting reference for the Microsoft Deployment Toolkit "
-ms.date:  09/09/2016
+title: Troubleshoot MDT
+titleSuffix: Microsoft Deployment Toolkit
+description: Troubleshooting reference for the Microsoft Deployment Toolkit (MDT)
+ms.date: 09/09/2016
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-osd
+ms.technology: configmgr-osd
 ms.topic: article
-ms.assetid:  91a7a69a-deac-4b0f-aac9-b7bd187c53fb
-
+ms.assetid: 91a7a69a-deac-4b0f-aac9-b7bd187c53fb
 author: aczechowski  
 ms.author: aaroncz 
-manager: angrobe
-
+manager: dougeby
 ---
 
 # Troubleshooting Reference for the Microsoft Deployment Toolkit
