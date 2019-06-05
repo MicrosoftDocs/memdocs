@@ -2,7 +2,7 @@
 title: Troubleshooting Desktop Analytics
 titleSuffix: Configuration Manager
 description: Technical details to help you troubleshoot issues with Desktop Analytics.
-ms.date: 05/31/2019
+ms.date: 06/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -535,6 +535,20 @@ If you can't create this Azure AD app from the Configure Azure Services wizard i
    Select **Verify**, and then select **OK** to close the Import Apps window. Select **Next** on the App page of the Azure Services Wizard.  
 
 To continue the rest of the wizard on the **Diagnostic Data** page, see [Connect to the service](/sccm/desktop-analytics/connect-configmgr#bkmk_connect).
+
+#### Troubleshoot app in Configuration Manager
+
+If you're having problems creating or importing the app, first check **SMSAdminUI.log** for the specific error. Then check the following configurations:
+
+- You've successfully enrolled the tenant to the Desktop Analytics service. For more information, see [How to set up Desktop Analytics](/sccm/desktop-analytics/set-up).
+
+- All required endpoints are accessible. For more information, see [Endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints).
+
+- Make sure the user who signs in has the correct permissions. For more information, see [Prerequisites](/sccm/desktop-analytics/overview#prerequisites).
+
+- Make sure that the user can sign in to Azure in general. This action determines if there are any general Azure AD authentication issues.
+
+- Check status messages for the **SMS_SERVICE_CONNECTOR** component regarding the *Desktop Analytics worker*.
 
 
 ### <a name="bkmk_MALogAnalyticsReader"></a> MALogAnalyticsReader application role
