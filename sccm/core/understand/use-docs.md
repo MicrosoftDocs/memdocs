@@ -4,16 +4,15 @@ titleSuffix: Configuration Manager
 description: Learn tips on using the Configuration Manager technical documentation library.
 ms.date: 09/07/2018
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-other
+ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: b3d755bd-0870-4f1f-a56d-bfd3c7b492b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
 ms.collection: M365-identity-device-management
 ---
+
 # How to use the Configuration Manager docs
 
 *Applies to: System Center Configuration Manager (Current Branch)*

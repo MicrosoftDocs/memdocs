@@ -1,7 +1,7 @@
 ---
-title: "How to create configuration items for Android for Work devices managed with Intune"
-titleSuffix: "Configuration Manager"
-ms.date: 2017-07-31
+title: How to create configuration items for Android for Work devices managed with Intune
+titleSuffix: Configuration Manager
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 
  Use the System Center Configuration Manager **Android for Work** configuration item to manage settings for Android for Work devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
 
-### To create an Android for Work configuration item  
+## Create an Android for Work configuration item  
 
 1. In the Configuration Manager console, click **Assets and compliance**.  
 

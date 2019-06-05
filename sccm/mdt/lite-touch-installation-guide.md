@@ -1,19 +1,15 @@
 ---
-
-title: "Quick Start - Lite Touch Installation"
-titleSuffix: "Microsoft Deployment Toolkit"
-description: "A Quick Start guide for Microsoft Deployment Toolkit lite touch installation. "
-ms.date:  09/09/2016
+title: Quickstart - LTI
+titleSuffix: Microsoft Deployment Toolkit
+description: A quickstart guide for Microsoft Deployment Toolkit (MDT) lite-touch installation (LTI)
+ms.date: 09/09/2016
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-osd
+ms.technology: configmgr-osd
 ms.topic: article
-ms.assetid:  21bedd68-e925-46e0-a540-df8c0aba2d6c
-
+ms.assetid: 21bedd68-e925-46e0-a540-df8c0aba2d6c
 author: aczechowski  
 ms.author: aaroncz 
-manager: angrobe
-
+manager: dougeby
 ---
 
 # Quick Start Guide for Lite Touch Installation  
