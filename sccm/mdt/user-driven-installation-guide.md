@@ -1,20 +1,17 @@
 ---
-
-title: "Quick Start - User-driven installation"
-titleSuffix: "Microsoft Deployment Toolkit"
-description: "A quick start guiide for using Microsoft Deployment Toolkit for user-driven installation. "
-ms.date:  09/09/2016
+title: Quickstart - UDI
+titleSuffix: Microsoft Deployment Toolkit
+description: A quickstart guiide for using Microsoft Deployment Toolkit (MDT) for user-driven installations (UDI)
+ms.date: 09/09/2016
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-osd
+ms.technology: configmgr-osd
 ms.topic: article
-ms.assetid:  dcddc250-9361-4e69-af45-472da4ef5fd5
-
+ms.assetid: dcddc250-9361-4e69-af45-472da4ef5fd5
 author: aczechowski  
 ms.author: aaroncz 
-manager: angrobe
-
+manager: dougeby
 ---
+
 # Quick Start Guide for User-Driven Installation  
  Microsoft Deployment Toolkit (MDT) 2013 provides technology for deploying Windows operating systems, and Microsoft Office. This quick start guide helps you quickly evaluate MDT 2013 by providing condensed, step-by-step instructions for using it to install the Windows 8.1 operating system and Microsoft Office Professional Plus 2010 with User-Driven Installation (UDI) and Microsoft System Center 2012 R2 Configuration Manager. This quick start guide demonstrates how to perform the MDT New Computer deployment scenario, which covers the deployment of Windows 8.1 to a new computer. This scenario assumes that there is no user data or profile to preserve.  
 
