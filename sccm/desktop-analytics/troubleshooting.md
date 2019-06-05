@@ -571,6 +571,8 @@ If you're having problems creating or importing the app, first check **SMSAdminU
 
 - Make sure that the user can sign in to Azure in general. This action determines if there are any general Azure AD authentication issues.
 
+- Check status messages for the **SMS_SERVICE_CONNECTOR** component regarding the *Desktop Analytics worker*.
+
 
 ### <a name="bkmk_MALogAnalyticsReader"></a> MALogAnalyticsReader application role
 
