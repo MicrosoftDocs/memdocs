@@ -57,9 +57,9 @@ Use the following information to identify the Windows groups, accounts, and SQL 
     - [Task sequence run as account](#task-sequence-run-as-account)  
 
 - [User Objects that Configuration Manager uses in SQL](#bkmk_sqlobjects)
-    - [smsdbuser_ReadOnly](#smsdbuser_ReadOnly)
-    - [smsdbuser_ReadWrite](#smsdbuser_ReadWrite)
-    - [smsdbuser_ReportSchema](#smsdbuser_ReportSchema)
+    - [smsdbuser_ReadOnly](#smsdbuser_readonly)
+    - [smsdbuser_ReadWrite](#smsdbuser_readwrite)
+    - [smsdbuser_ReportSchema](#smsdbuser_reportschema)
 
 ## <a name="bkmk_groups"></a> Windows groups that Configuration Manager creates and uses  
 

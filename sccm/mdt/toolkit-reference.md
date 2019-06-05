@@ -1,19 +1,15 @@
 ---
-
-title: "Toolkit reference"
-titleSuffix: "Microsoft Deployment Toolkit"
-description: "Reference details for Microsoft Deployment Toolkit 2013. "
-ms.date:  09/09/2016
+title: Toolkit reference
+titleSuffix: Microsoft Deployment Toolkit
+description: Reference details for Microsoft Deployment Toolkit (MDT)
+ms.date: 09/09/2016
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-osd
+ms.technology: configmgr-osd
 ms.topic: article
-ms.assetid:  ac670143-b7cd-47d0-86ed-14cb2554dfc7
-
+ms.assetid: ac670143-b7cd-47d0-86ed-14cb2554dfc7
 author: aczechowski  
 ms.author: aaroncz 
-manager: angrobe
-
+manager: dougeby
 ---
 
 

@@ -125,7 +125,7 @@ When a site database maintenance task runs during the update installation, the u
 For more information, see [Maintenance tasks](/sccm/core/servers/manage/maintenance-tasks) and [Reference for maintenance tasks](/sccm/core/servers/manage/reference-for-maintenance-tasks).
 
 #### Temporarily stop any antivirus software 
-Before you update a site, stop antivirus software on the Configuration Manager servers. <!--SMS.503481--> 
+Before you update a site, stop antivirus software on the Configuration Manager servers. The antivirus software can lock some files that need to be updated which causes our update to fail. <!--SMS.503481--> 
 
 #### Create a backup of the site database 
 Before you update a site, back up the site database at the central administration site and primary sites. This backup makes sure you have a successful backup to use for disaster recovery.
