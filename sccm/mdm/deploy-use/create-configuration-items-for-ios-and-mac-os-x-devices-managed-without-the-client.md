@@ -13,9 +13,10 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to create configuration items for iOS and Mac OS X devices managed with Intune
+
 Use the System Center Configuration Manager **iOS and Mac OS X** configuration item to manage settings  for iOS and Mac OS X devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
   
-### To create an iOS and Mac OS X configuration item  
+## Create an iOS and Mac OS X configuration item  
   
 1. In the Configuration Manager console, click **Assets and compliance**.  
   
@@ -31,7 +32,7 @@ Use the System Center Configuration Manager **iOS and Mac OS X** configuration i
   
 7. On the **Supported Platforms** page of the wizard, select the specific iOS, or Mac OS X platforms that will evaluate the configuration item.  
   
-8. On the **Device Settings** page of the wizard, select the settings group that you want to configure. See [iOS and Mac OS X configuration item settings reference](#BKMK_Setref) in this topic for details, and then click **Next**.  
+8. On the **Device Settings** page of the wizard, select the settings group that you want to configure. See [iOS and Mac OS X configuration item settings reference](#ios-and-mac-os-x-configuration-item-settings-reference) in this topic for details, and then click **Next**.  
   
    > [!TIP]  
    >  If the setting that you want is not listed, select the **Configure additional settings that are not in the default setting groups check box**.  

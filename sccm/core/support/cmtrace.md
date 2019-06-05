@@ -110,8 +110,8 @@ The following actions are available in the **Tools** menu:
 - [Filter](#filter)
 - [Error Lookup](#error-lookup)
 - [Pause](#pause)
-- [Show/Hide Details](#show/hide-details)
-- [Show/Hide Info Pane](#show/hide-info-pane)
+- [Show/Hide Details](#showhide-details)
+- [Show/Hide Info Pane](#showhide-info-pane)
 
 #### Find
 Search the open log file for a specified text string.  

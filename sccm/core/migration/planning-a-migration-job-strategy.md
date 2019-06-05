@@ -24,18 +24,6 @@ Use migration jobs to configure the specific data that you want to migrate to yo
 
  Some objects require more than the migration of data from the source hierarchy to the destination hierarchy. For example, to successfully migrate software updates for your clients to your destination hierarchy, you must deploy an active software update point, configure the catalog of products, and synchronize the software update point with Windows Server Update Services (WSUS) in the destination hierarchy.  
 
- Use the following sections to help you plan your migration jobs.  
-
--   [Types of migration jobs](#Types_of_Migration)  
-
--   [General planning for all migration jobs](#About_Migration_Jobs)  
-
--   [Planning for collection migration jobs](#About_Collection_Migration)  
-
--   [Planning for object migration jobs](#About_Object_Migration)  
-
--   [Planning for previously migrated object migration jobs](#About_Object_Migrations)  
-
 ##  <a name="Types_of_Migration"></a> Types of migration jobs  
  Configuration Manager supports the following types of migration jobs. Each job type is designed to help define the objects that you can include in that job.  
 
