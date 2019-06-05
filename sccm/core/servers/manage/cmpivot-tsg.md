@@ -105,6 +105,10 @@ StateMessage 7/3/2018 11:44:47 AM 5036 (0x13AC)
 Successfully forwarded State Messages to the MP StateMessage 7/3/2018 11:44:47 AM 5036 (0x13AC)
 ```
 
+> [!NOTE]
+> The above log entry in the StateSys.log is only visible when Verbose Logging is enabled for the SMS_STATE_SYSTEM component, which can be done by modifying this registry key:
+> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_STATE_SYSTEM\Verbose logging = 1 (Default is 0)
+
 ## Review messages on the site server
 
 Open the **statesys.log** to see if the message is received and processed. Our example **TaskID** is near the bottom of the message next to &lt;Param>.
