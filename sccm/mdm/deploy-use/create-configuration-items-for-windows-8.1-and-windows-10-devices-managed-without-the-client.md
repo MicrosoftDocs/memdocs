@@ -17,7 +17,7 @@ ms.collection: M365-identity-device-management
 
  Use the System Center Configuration Manager**Windows 8.1 and Windows 10** configuration item to manage settings  for Windows 8.1, and Windows 10 devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
 
-### To create a Windows 8.1 and Windows 10 configuration item  
+## Create a Windows 8.1 and Windows 10 configuration item  
 
 1. In the Configuration Manager console, click **Assets and compliance**.  
 
@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 7. On the **Supported Platforms** page of the wizard, select the specific Windows platforms that evaluate the configuration item.  
 
-8. On the **Device Settings** page of the wizard, select the settings group that you want to configure. See [Windows 8.1 and Windows 10 configuration item settings reference](#BKMK_Setref) in this topic for details, and then click **Next**.  
+8. On the **Device Settings** page of the wizard, select the settings group that you want to configure. See [Windows 8.1 and Windows 10 configuration item settings reference](#windows-81-and-windows-10-configuration-item-settings-reference) in this topic for details, and then click **Next**.  
 
    > [!TIP]  
    >  If the setting that you want is not listed, select the **Configure additional settings that are not in the default setting groups check box**.  
