@@ -49,7 +49,7 @@ This section provides information and tasks for the fundamental programming tech
 
 -   [Introduction to Windows Script Technologies](https://docs.microsoft.com/previous-versions/tn-archive/ee176792\(v=technet.10\))  
 
--   [Creating a WMI Script](https://docs.microsoft.com/windows/desktop/wmisdk/creating-a-wmi-script)  
+-   [WMI Scripting Primer](http://go.microsoft.com/fwlink/?linkid=43949)  
 
 -   [Windows Management Instrumentation](http://go.microsoft.com/fwlink/?LinkId=43950)  
 
