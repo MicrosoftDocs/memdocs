@@ -108,6 +108,9 @@ These updates include:
 
 - Hotfixes for your version of Configuration Manager and that all customers should install.
 
+    > [!Note]  
+    > Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](#bkmk_supersede).
+
 The in-console updates deliver increased stability and resolve common issues. They replace the update types seen for previous product versions such as service packs, cumulative updates, hotfixes that are applicable to all customers, and the extension for Microsoft Intune.
 
 The in-console updates can apply to one or more of the following systems:  
@@ -146,6 +149,21 @@ When you install an in-console update, the following process occurs:
 
 > [!NOTE]  
 > The Configuration Manager current branch, the long-term servicing branch, and the technical preview branch are different releases. Updates that apply for one branch aren't available as in-console updates for the other branches. For more information about available branches, see [Which branch of Configuration Manager should I use?](/sccm/core/understand/which-branch-should-i-use)
+
+### <a name="bkmk_supersede"></a> Supersedence for in-console hotfixes
+
+<!-- 3229613 -->
+Starting in version 1902, in-console hotfixes now have supersedence relationships. When Microsoft publishes a new Configuration Manager hotfix, the console doesn't display any hotfixes that are superseded by this new hotfix. This new behavior helps you better determine which hotfixes to install.
+
+### Supersedence example
+
+There are three hotfixes available: Hotfix-A, Hotfix-B, and Hotfix-C. Hotfix-A is superseded by Hotfix-B, and Hotfix-B is superseded by Hotfix-C.
+
+|Hotfix-A|Hotfix-B|Hotfix-C|In-console view|
+|--------|--------|--------|---------------|
+|Not installed|Not installed|Not installed|Show all three hotfixes|
+|Installed|Installed|Not installed|Hotfix-B shows as installed<br/>Hotfix-C shows as ready to install|
+|Not installed|Not installed|Installed|Hotfix-C shows as installed|
 
 
 ## <a name="bkmk_outofband"></a> Out-of-band hotfixes  
