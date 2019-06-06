@@ -78,7 +78,7 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
 
 7. On the **Diagnostic Data** page, configure the following settings:  
 
-    - **Commercial ID**: this value should automatically populate with your organization's ID. If it doesn't, make sure your proxy server is configured to allow all required [endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints) before continuing. Alternatively, retrieve your Commercial ID from the **Connected Services** pane in the [Desktop Analytics portal](https://aka.ms/m365aprod).  
+    - **Commercial ID**: this value should automatically populate with your organization's ID. If it doesn't, make sure your proxy server is configured to allow all required [endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints) before continuing. Alternatively, retrieve your Commercial ID manually from the [Desktop Analytics portal](/sccm/desktop-analytics/troubleshooting#bkmk_ViewCommercialID).  
 
     - **Windows 10 diagnostic data level**: select at least **Enhanced (Limited)**  
 
