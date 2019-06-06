@@ -164,20 +164,6 @@ manager: angrobe
 
 -   Load the MDT Windows PowerShell snap-in using the **Add-PSSnapIn** cmdlet as described in [Load the MDT Windows PowerShell Snap-In Using the Add-PSSnapIn Cmdlet](#LoadMDTSnapInCmdlet).  
 
-####  <a name="LoadMDTSnapInImport"></a> Load the MDT Windows PowerShell Snap-In Using the Import System Modules Task  
- The Import System Modules task automatically includes all the Windows PowerShell modules and snap-ins that are in the modules in the %Windir%\System32\WindowsPowerShell\1.0\Modules directory. MDT automatically installs the MDT Windows PowerShell snap-in **Microsoft.BDD.SnapIn** in that folder during the MDT installation process.  
-
-> [!NOTE]
->  The Import System Modules task is available only in Windows 7 and Windows Server 2008 R2 when Windows PowerShell 3.0 is not installed on the computer. Beginning with Windows PowerShell 3.0, modules are imported automatically the first time that you use a cmdlet in the module.  
-
- You can start a Windows PowerShell console with the Import System Modules task by performing one of the following procedures:  
-
-- In the taskbar, right-click the **Windows PowerShell** icon, and then click **Import System Modules**.  
-
-- Click **Start**, point to **Administrative Tools** and then click **Windows PowerShell Modules**.  
-
-  For more information on staring a Windows PowerShell console with Import System Modules, see [Starting Windows PowerShell with Import System Modules](http://msdn.microsoft.com/library/windows/desktop/hh847866.aspx).  
-
 ####  <a name="LoadMDTSnapInCmdlet"></a> Load the MDT Windows PowerShell Snap-In Using the Add-PSSnapIn Cmdlet  
  You can load the MDT Windows PowerShell snap-in **Microsoft.BDD.PSSnapIn** from any Windows PowerShell environment using the [Add-PSSnapIn](http://technet.microsoft.com/library/hh849705.aspx) cmdlet, as show in the following example:  
 
