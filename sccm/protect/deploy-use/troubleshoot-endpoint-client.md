@@ -143,11 +143,7 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 
 ### Step 6: Manually install the virus and spyware definition updates  
 
--   If you are running a 32-bit Windows operating system, download the latest updates manually at [http://go.microsoft.com/fwlink/?LinkID=87342](http://go.microsoft.com/fwlink/?LinkID=87342) (http://go.microsoft.com/fwlink/?LinkID=87342).  
-
--   If you are running a 64-bit Windows operating system, download the latest updates manually at [http://go.microsoft.com/fwlink/?LinkID=87341](http://go.microsoft.com/fwlink/?LinkID=87341) (http://go.microsoft.com/fwlink/?LinkID=87341).  
-
--   Click **Run**. The latest updates are manually installed on your computer.  
+-   [Download the latest updates manually](https://www.microsoft.com/wdsi/definitions/).  
 
 
 ### Step 7: Contact Support  
