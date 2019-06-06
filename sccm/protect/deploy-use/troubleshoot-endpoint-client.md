@@ -190,9 +190,7 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 >  Some internet security applications do not uninstall completely. You may need to download and run a cleanup utility for your previous security application in order for it to be completely removed.  
 
 > [!CAUTION]  
->  When you remove internet security programs, your computer is unprotected. If you have problems installing   
->       Endpoint Protection after you remove existing internet security programs, contact Windows Defender or  
->       Endpoint Protection support by submitting a case online (for more information, see [How to Submit a Case Online](http://www.microsoft.com/en-ph/security_essentials/Support/8c9074b6-1558-4d14-bc39-d294ced11096.aspx)).  
+> When you remove security programs, your computer is unprotected. If you have problems installing Windows Defender after you remove existing security programs, contact [Microsoft Support](https://support.microsoft.com/supportforbusiness/productselection) for **Windows Defender** in the **Security** product family.  
 
 ### Step 4: Uninstall/reinstall Endpoint Protection  
 
