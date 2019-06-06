@@ -86,7 +86,7 @@ Figure 1. Relationship between the UDI Wizard and UDI Wizard Designer
 2.  Prepare the UDI Development environment software perquisites as described in [Prepare the UDI Development Environment Software Prerequisites](#PrepareUDIDevelopmentEnvironmentSoftwarePrerequisites).  
 
 #####  <a name="PrepareUDIDevelopmentEnvironmentHardwarePrerequisites"></a> Prepare the UDI Development Environment Hardware Prerequisites  
- The UDI development environment hardware prerequisites are the same hardware requirements for the edition of Microsoft Visual Studio 2010 you are using. For more information about these requirements, see the system requirements for each edition at [Visual Studio 2010 Products](http://www.microsoft.com/visualstudio/products/2010-editions).  
+ The UDI development environment hardware prerequisites are the same hardware requirements for the edition of Microsoft Visual Studio you are using. For more information about these requirements, see the system requirements for each edition at [Visual Studio Documentation](http://docs.microsoft.com/visualstudio).  
 
 #####  <a name="PrepareUDIDevelopmentEnvironmentSoftwarePrerequisites"></a> Prepare the UDI Development Environment Software Prerequisites  
  The UDI development environment has the following software prerequisites:  
