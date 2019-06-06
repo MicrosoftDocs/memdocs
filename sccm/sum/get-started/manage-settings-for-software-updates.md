@@ -64,7 +64,7 @@ In software update properties, you can review detailed information about a softw
 ####  <a name="BKMK_SoftwareUpdateDetails"></a> Software update details  
 In the **Update Details** tab, you can view the following summary information about the selected software update:  
 
-- **Bulletin ID**: Specifies the bulletin ID that is associated with security software updates. You can find security bulletin details by searching on the bulletin ID at the [Microsoft Security Bulletin Search](http://go.microsoft.com/fwlink/p/?LinkId=58313) Web page.  
+- **Bulletin ID**: Specifies the bulletin ID that is associated with security software updates. You can find security bulletin details by searching on the bulletin ID on the [Microsoft Security Bulletin](https://docs.microsoft.com/security-updates/securitybulletins/securitybulletins) Web page.  
 
 - **Article ID**: Specifies the article ID for the software update. The referenced article provides more detailed information about the software update and the issue that the software update fixes or improves.  
 
