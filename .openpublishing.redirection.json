@@ -314,6 +314,16 @@
             "source_path": "sccm/core/servers/manage/queries-technical-reference.md",
             "redirect_url": "/sccm/core/servers/manage/introduction-to-queries",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md",
+            "redirect_url": "/sccm/core/servers/manage/monitor-hierarchy",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/core/servers/manage/data-transfers-between-sites.md",
+            "redirect_url": "/sccm/core/plan-design/hierarchy/data-transfers-between-sites",
+            "redirect_document_id": false
         }
     ]
 }
