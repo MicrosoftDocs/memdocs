@@ -28,7 +28,7 @@ Database replication between sites involves the replication of several sets of i
 
 When a replication link is active, and its status isn't failed or degraded, all groups replicate quickly. If one or more groups fail to complete replication in the expected period of time, the link displays as *degraded*. Degraded links can still function, but you should monitor them to make sure they return to active status. Investigate them to make sure additional degradation or replication failures don't occur.  
 
-For each replication link, specify the number of times that an unsuccessfully replicated group retries. After this number of retries, the site sets the status of the link to degraded or failed. Even if all but one group replicates successfully, the site sets the status of the link to degraded or failed. It sets this status because the one replication group fails to complete replication in the specified number of attempts. For more information, see the [Database replication thresholds](/sccm/core/servers/manage/data-transfers-between-sites#BKMK_DBRepThresholds).  
+For each replication link, specify the number of times that an unsuccessfully replicated group retries. After this number of retries, the site sets the status of the link to degraded or failed. Even if all but one group replicates successfully, the site sets the status of the link to degraded or failed. It sets this status because the one replication group fails to complete replication in the specified number of attempts. For more information, see the [Database replication thresholds](/sccm/core/plan-design/hierarchy/database-replication#BKMK_DBRepThresholds).  
 
 Use the following information to understand the status of replication links that might require further investigation:  
 
@@ -95,7 +95,7 @@ Use this information to identify when a site might be in *interoperability mode*
 
 ### Replication Detail
 
-View the replication status for each group that replicates across the link. Use this information to help identify problems or delays for the replication of specific data. It can help determine the appropriate database replication thresholds for this link. For more information, see [Database replication thresholds](/sccm/core/servers/manage/data-transfers-between-sites#BKMK_DBRepThresholds).  
+View the replication status for each group that replicates across the link. Use this information to help identify problems or delays for the replication of specific data. It can help determine the appropriate database replication thresholds for this link. For more information, see [Database replication thresholds](/sccm/core/plan-design/hierarchy/database-replication#BKMK_DBRepThresholds).  
 
 > [!TIP]  
 > Replication groups for site data are sent only from the child site to the parent site. Replication groups for global data replicate in both directions.  

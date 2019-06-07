@@ -143,7 +143,7 @@ This task applies to devices that are enrolled by using Microsoft Intune (hybrid
 -   **Primary site**: Enabled    
 -   Secondary site: Not available  
 
-**Delete Aged Replication Summary Data**: Use this task to delete aged replication summary data from the site database when it hasn't been updated for a specified time. For more information, see the [How to monitor database replication links and replication status](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md#BKMK_MonitorRepLinksAndStatuss) section in the [Monitor hierarchy and replication infrastructure in System Center Configuration Manager](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md) topic.  
+**Delete Aged Replication Summary Data**: Use this task to delete aged replication summary data from the site database when it hasn't been updated for a specified time. For more information, see [Monitor database replication](/sccm/core/servers/manage/monitor-replication).  
 
 -   **Central administration site**: Enabled    
 -   **Primary site**: Enabled    
@@ -155,7 +155,7 @@ This task applies to devices that are enrolled by using Microsoft Intune (hybrid
 -   **Primary site**: Enabled    
 -   Secondary site: Not available  
 
-**Delete Aged Replication Tracking Data**: Use this task to delete aged data about database replication between Configuration Manager sites from the database. When you change the configuration of this maintenance task, the configuration applies to each applicable site in the hierarchy. For more information, see the [How to monitor database replication links and replication status](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md#BKMK_MonitorRepLinksAndStatuss) section in the [Monitor hierarchy and replication infrastructure in System Center Configuration Manager](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md) topic.  
+**Delete Aged Replication Tracking Data**: Use this task to delete aged data about database replication between Configuration Manager sites from the database. When you change the configuration of this maintenance task, the configuration applies to each applicable site in the hierarchy. For more information, see [Monitor database replication](/sccm/core/servers/manage/monitor-replication).  
 
 -   **Central administration site**: Enabled    
 -   **Primary site**: Enabled    

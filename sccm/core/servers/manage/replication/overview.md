@@ -15,7 +15,7 @@ manager: dougeby
 
 # Troubleshoot SQL replication
 
-In a multi-site hierarchy, Configuration Manager uses SQL replication to transfer data between sites. For more information, see [Database replication](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_dbrep).
+In a multi-site hierarchy, Configuration Manager uses SQL replication to transfer data between sites. For more information, see [Database replication](/sccm/core/plan-design/hierarchy/database-replication).
 
 To better understand and help troubleshoot issues with SQL replication, use these diagrams.
 

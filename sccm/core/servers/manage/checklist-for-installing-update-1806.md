@@ -94,7 +94,7 @@ For more information, see [Use alerts and the status system](/sccm/core/servers
 #### Review file and data replication between sites   
 Ensure that file and database replication between sites is operational and current. Delays or backlogs in either can prevent a smooth, successful update. For database replication, you can use the Replication Link Analyzer to help resolve issues prior to starting the update.
 
-For more information, see [About the Replication Link Analyzer](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA).
+For more information, see [About the Replication Link Analyzer](/sccm/core/servers/manage/monitor-replication#BKMK_RLA).
 
 #### Install all applicable critical Windows updates
 Before you install an update for Configuration Manager, install any critical OS updates for each applicable site system. These servers include the site server, site database server, and remote site system roles. If an update that you install requires a restart, restart the applicable servers before you start the upgrade.
@@ -176,8 +176,10 @@ In the Configuration Manager console, go to the following locations to view the 
 -   **Monitoring** workspace, **Database Replication** node  
 
 For more information, see the following articles:  
-- [Monitor hierarchy and replication infrastructure](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure)
-- [About the Replication Link Analyzer](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA)  
+
+- [Monitor hierarchy](/sccm/core/servers/manage/monitor-hierarchy)
+- [Monitor replication](/sccm/core/servers/manage/monitor-replication)
+- [About the Replication Link Analyzer](/sccm/core/servers/manage/monitor-replication#BKMK_RLA)  
 
 
 #### Update Configuration Manager consoles

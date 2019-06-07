@@ -66,7 +66,7 @@ Starting in version 1810, you can synchronize more tables from the site database
 
     - SQL Server failover cluster  
 
-- If you use [distributed views](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_distviews), the data warehouse service point must install on the same server that hosts the central administration site's database.  
+- If you use [distributed views](/sccm/core/plan-design/hierarchy/database-replication#bkmk_distviews), the data warehouse service point must install on the same server that hosts the central administration site's database.  
 
 For more information on SQL Server licensing, see the [product and licensing FAQ](/sccm/core/understand/product-and-licensing-faq). <!-- sms500967 -->
 
