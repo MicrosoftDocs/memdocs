@@ -150,4 +150,4 @@ When you specify a location, you can use the **Location** box to search for a sp
 
 ## Next steps
 
-[Monitor database replication](sccm/core/servers/manage/monitor-replication)
+[Monitor database replication](/sccm/core/servers/manage/monitor-replication)
