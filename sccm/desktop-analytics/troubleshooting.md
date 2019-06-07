@@ -2,7 +2,7 @@
 title: Troubleshooting Desktop Analytics
 titleSuffix: Configuration Manager
 description: Technical details to help you troubleshoot issues with Desktop Analytics.
-ms.date: 06/05/2019
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -90,7 +90,7 @@ Select the category name to remove or add it from the chart. This action helps t
 
 The device has the following attributes:
 
-- A Configuration Manager client version 1810 or later  
+- A Configuration Manager client version 1902 or later  
 - There are no configuration errors  
 - Desktop Analytics received complete diagnostic data from this device in the past 28 days  
 - Desktop Analytics has a complete inventory of the device's configuration and installed apps  
@@ -113,7 +113,7 @@ Make sure the device is able to communicate with the service. For more informati
 
 #### Missing prerequisites
 
-The Configuration Manager client isn't at least version 1810 (5.0.8740).
+The Configuration Manager client isn't at least version 1902 (5.0.8790).
 
 Update the client to the latest version. Consider enabling automatic client upgrade for the Configuration Manager site. For more information, see [Upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).  
 
