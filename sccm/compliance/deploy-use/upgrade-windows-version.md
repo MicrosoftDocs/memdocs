@@ -2,7 +2,7 @@
 title: "Upgrade Windows devices to a different version"
 titleSuffix: "Configuration Manager"
 description: "Automatically upgrade devices that run Windows 10 Desktop or Windows 10 Mobile to a different edition with Configuration Manager."
-ms.date: 01/26/2018
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
