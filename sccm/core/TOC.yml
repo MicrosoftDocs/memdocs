@@ -509,6 +509,26 @@
         href: servers/manage/monitor-hierarchy-and-replication-infrastructure.md
       - name: Data transfers between sites
         href: servers/manage/data-transfers-between-sites.md
+      - name: Troubleshoot SQL replication
+        items:
+        - name: Troubleshoot SQL replication
+          href: servers/manage/replication/overview.md
+        - name: SQL replication
+          href: servers/manage/replication/sql-replication.md
+        - name: SQL configuration
+          href: servers/manage/replication/sql-configuration.md
+        - name: SQL performance
+          href: servers/manage/replication/sql-performance.md
+        - name: SQL replication reinitialization (reinit)
+          href: servers/manage/replication/sql-replication-reinit.md
+        - name: Global data reinit
+          href: servers/manage/replication/global-data-reinit.md
+        - name: Site data reinit
+          href: servers/manage/replication/site-data-reinit.md
+        - name: Reinit missing message
+          href: servers/manage/replication/reinit-missing-message.md
+        - name: Reinit failed
+          href: servers/manage/replication/reinit-failed.md
     - name: Queries
       items:
       - name: Introduction to queries
