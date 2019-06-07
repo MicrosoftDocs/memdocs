@@ -2,7 +2,7 @@
 title: Create applications
 titleSuffix: Configuration Manager
 description: Create applications with deployment types, detection methods and requirements to install software.
-ms.date: 05/08/2019
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -307,9 +307,24 @@ This procedure sets up a detection method that indicates the presence of the dep
 
 4.  Click **OK** to close the **Detection Rule** dialog box.  
 
-When you create more than one detection method for a deployment type, create more complex logic by grouping the clauses together. 
+When you create more than one detection method for a deployment type, you can group clauses together to create more complex logic.  
 
-Continue to the next section on using a custom script as a detection method. Or skip to the [User Experience](#bkmk_dt-ux) options for the deployment type.
+#### Group detection clauses *(optional)*
+
+1.  Create three or more detection method clauses on a deployment type.  
+
+2.  Select two or more consecutive clauses, and then select **Group**. You’ll see the parentheses added to the associated columns, which show where the group starts and ends.  
+
+    Example:  
+    | Connector  |  (  |  Clause        |  )  |
+    |------------|----|------------------|-----|
+    |            |    | MSI Product Code |     |
+    | Or         | (  | file1.text exists|     |
+    | And        |    | file2.txt exists | )   |  
+
+3. To remove the group, select the grouped clauses, and then select **Ungroup**.  
+
+*Continue* to the next section on using a custom script as a detection method. Or *skip* to the [User Experience](#bkmk_dt-ux) options for the deployment type.
 
 
 #### <a name="bkmk_detect-script"></a> Use a custom script to check for the presence of a deployment type  
