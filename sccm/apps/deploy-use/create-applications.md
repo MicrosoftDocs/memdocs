@@ -315,14 +315,15 @@ When you create more than one detection method for a deployment type, you can gr
 
 2.  Select two or more consecutive clauses, and then select **Group**. You’ll see the parentheses added to the associated columns, which show where the group starts and ends.  
 
-    Example:  
-    | Connector  |  (  |  Clause        |  )  |
-    |------------|----|------------------|-----|
-    |            |    | MSI Product Code |     |
-    | Or         | (  | file1.text exists|     |
-    | And        |    | file2.txt exists | )   |  
+    Example: 
 
-3. To remove the group, select the grouped clauses, and then select **Ungroup**.  
+    | Connector  |  ( | Clause           |  )  | 
+    |------------|----|------------------|-----| 
+    |            |    | MSI Product Code |     | 
+    | Or         | (  | file1.text exists|     | 
+    | And        |    | file2.txt exists | )   | 
+
+3.  To remove the group, select the grouped clauses, and then select **Ungroup**.  
 
 *Continue* to the next section on using a custom script as a detection method. Or *skip* to the [User Experience](#bkmk_dt-ux) options for the deployment type.
 
