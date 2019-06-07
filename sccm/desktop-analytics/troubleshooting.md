@@ -334,7 +334,7 @@ Check the permissions on this registry key. Make sure that the local System acco
 
 There's a different ID for the device. This registry key is used by group policy. It takes precedence over the ID provided by Configuration Manager.  
 
-To view the commercial ID in the Desktop Analytics portal, use the following procedure:
+<a name="bkmk_ViewCommercialID"></a> To view the commercial ID in the Desktop Analytics portal, use the following procedure:
 
 1. Go to the Desktop Analytics portal, and select **Connected services** in the Global Settings group.  
 
@@ -343,7 +343,7 @@ To view the commercial ID in the Desktop Analytics portal, use the following pro
 ![Screenshot of commercial ID in Desktop Analytics portal](media/commercial-id.png)
 
 > [!Important]  
-> Only **Get new ID key** when you can't use the current one. If you regenerate the commercial ID, deploy the new ID to your devices. This process might result in loss of diagnostic data during the transition.  
+> Only **Get new ID key** when you can't use the current one. If you regenerate the commercial ID, [re-enroll your devices with the new Id](/sccm/desktop-analytics/enroll-devices#device-enrollment). This process might result in loss of diagnostic data during the transition.  
 
 #### Windows commercial data opt-in
 
