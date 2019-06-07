@@ -2,7 +2,7 @@
 title: Tutorial - Deploy Windows 10
 titleSuffix: Configuration Manager
 description: A tutorial on using Desktop Analytics and Configuration Manager to deploy Windows 10 to a pilot group.
-ms.date: 04/25/2019
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: tutorial
@@ -43,7 +43,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
     For more information, see [Desktop Analytics prerequisites](/sccm/desktop-analytics/overview#prerequisites).
 
-- Configuration Manager, version 1810 with update rollup 2 (4488598) or later, with **Full administrator** role  
+- Configuration Manager, version 1902 with update rollup (4500571) or later, with **Full administrator** role  
 
 - Installation media for the latest version of Windows 10
 
@@ -53,7 +53,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
     - The latest Windows 10 cumulative quality update  
 
-    - Configuration Manager client version 1810 with update rollup 2 (4488598) or later  
+    - Configuration Manager client version 1902 with update rollup (4500571) or later  
 
 - Business approval to configure Windows diagnostic data level to **Enhanced (Limited)** on the pilot devices  
 
@@ -152,9 +152,9 @@ Use this procedure to update Configuration Manager, connect to Desktop Analytics
 
 ### Update Configuration Manager
 
-Install the Configuration Manager version 1810 update rollup 2 (4488598) to support integration with Desktop Analytics. For more information on this update, see [Update rollup for Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4488598).
+Install the Configuration Manager version 1902 update rollup (4500571) to support integration with Desktop Analytics. For more information on this update, see [Update rollup for Configuration Manager current branch, version 1902](https://support.microsoft.com/help/4500571).
 
-1. Update the site with the update rollup for version 1810. For more information, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates).  
+1. Update the site with the update rollup for version 1902. For more information, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates).  
 
 2. Update clients. To simplify this process, consider using automatic client upgrade. For more information, see [Upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).  
 
