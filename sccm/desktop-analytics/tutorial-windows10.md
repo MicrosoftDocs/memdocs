@@ -72,8 +72,6 @@ Before you start this tutorial, make sure you have the following prerequisites:
     - `https://eaus2watcab02.blob.core.windows.net`  
     - `https://weus2watcab01.blob.core.windows.net`  
     - `https://weus2watcab02.blob.core.windows.net`  
-    - `https://www.msftncsi.com`  
-    - `https://www.msftconnecttest.com`  
     - `https://kmwatsonc.events.data.microsoft.com`  
     - `https://oca.telemetry.microsoft.com`  
     - `https://login.live.com`  
