@@ -99,7 +99,6 @@ Support articles that are new or updated between May 14 and June 10, 2019.
 
 - [KB 4503442: Error 403 when Configuration Manager clients try to communicate with CMG](https://support.microsoft.com/help/4503442)
 - [KB 4503578: Reporting stops working after you move a reporting services point or enable TLS 1.2 in Configuration Manager](https://support.microsoft.com/help/4503578)
-- [KB 4040243: How to enable TLS 1.2 for Configuration Manager](https://support.microsoft.com/help/4040243)
 - [KB 4505440: Software Update Managemenent Troubleshooting in Configuration Manager](https://support.microsoft.com/help/4505440)
 
 To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **System Center Configuration Manager**.  
