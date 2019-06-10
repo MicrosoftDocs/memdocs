@@ -521,7 +521,9 @@ The following additional hotfixes are available to address specific issues:
 | ID | Title | Date | In-console |
 |---------|---------|---------|---------|
 | [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune connector certificate does not renew in Configuration Manager | 18 January 2019 | Yes |
- 
+
+> [!Note]  
+> Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](/sccm/core/servers/manage/updates#bkmk_supersede).
 -->
 
 

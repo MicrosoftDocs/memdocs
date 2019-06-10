@@ -2,7 +2,7 @@
 title: Connect Configuration Manager
 titleSuffix: Configuration Manager
 description: A how-to guide for connecting Configuration Manager with Desktop Analytics.
-ms.date: 04/25/2019
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -24,11 +24,11 @@ Desktop Analytics is tightly integrated with Configuration Manager. First, make 
 
 ## <a name="bkmk_hotfix"></a> Update the site
 
-First, make sure that your Configuration Manager site is running at least version 1810. For more information, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates).
+First, make sure that your Configuration Manager site is running at least version 1902. For more information, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates).
 
-You also need to install the version 1810 Update Rollup 2 (4488598) to support integration with Desktop Analytics. For more information on this update, see [Update Rollup 2 for Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4488598).
+You also need to install the version 1902 update rollup (4500571) to support integration with Desktop Analytics. For more information on this update, see [Update rollup for Configuration Manager current branch, version 1902](https://support.microsoft.com/help/4500571).
 
-1. Update the site with the update rollup for version 1810. For more information, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates).  
+1. Update the site with the update rollup for version 1902. For more information, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates).  
 
 2. Update clients. To simplify this process, consider using automatic client upgrade. For more information, see [Upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).  
 
@@ -78,7 +78,7 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
 
 7. On the **Diagnostic Data** page, configure the following settings:  
 
-    - **Commercial ID**: this value should automatically populate with your organization's ID. If it doesn't, make sure your proxy server is configured to allow all required [endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints) before continuing. Alternatively, retrieve your Commercial ID from the **Connected Services** pane in the [Desktop Analytics portal](https://aka.ms/m365aprod).  
+    - **Commercial ID**: this value should automatically populate with your organization's ID. If it doesn't, make sure your proxy server is configured to allow all required [endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints) before continuing. Alternatively, retrieve your Commercial ID manually from the [Desktop Analytics portal](/sccm/desktop-analytics/troubleshooting#bkmk_ViewCommercialID).  
 
     - **Windows 10 diagnostic data level**: select at least **Enhanced (Limited)**  
 

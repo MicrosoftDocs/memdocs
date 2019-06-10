@@ -2,7 +2,7 @@
 title: Desktop Analytics
 titleSuffix: Configuration Manager
 description: An overview of the Desktop Analytics service integrated with Configuration Manager.
-ms.date: 06/04/2019
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: overview
@@ -75,7 +75,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
         - [**Owner**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner), or [**Contributor**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) and [**User Access Administrator**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) permissions on the subscription to create a workspace in a new resource group.  
 
-- Configuration Manager, version 1810 with update rollup 2 (4488598) or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
+- Configuration Manager, version 1902 with update rollup (4500571) or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
 
     - **Full Administrator** role in Configuration Manager  
 
@@ -83,7 +83,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
     - Install the latest updates. For more information, see [Update devices](/sccm/desktop-analytics/enroll-devices#update-devices).  
 
-    - Devices also need to have the Configuration Manager client, version 1810 with update rollup 2 (4488598) or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
+    - Devices also need to have the Configuration Manager client, version 1902 with update rollup (4500571) or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
 
     > [!Note]  
     > Desktop Analytics doesn't support upgrades to Windows 10 long-term servicing channel (LTSC). For more information, see [Windows as a service overview](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
