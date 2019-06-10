@@ -49,7 +49,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Improvements to CMPivot](includes/1906/4683130.md)]
 [!INCLUDE [Improvements to OS deployment](includes/1906/4668846.md)]
 [!INCLUDE [Improvements to Community Hub](includes/1906/3555935.md)]
-
+[!INCLUDE [Configure different co-management workloads](includes/1906/3555750.md)]
 
 <!-- ## Known issues -->
 
