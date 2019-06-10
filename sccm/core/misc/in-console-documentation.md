@@ -1,6 +1,6 @@
 ---
 title: In-console documentation
-ms.date: 05/15/2019
+ms.date: 06/10/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -21,7 +21,7 @@ ms.collection: M365-identity-device-management
 
 # Configuration Manager documentation
 
-*Last update: 05/15/2019*
+*Last update: 06/10/2019*
 
 This content can assist you in learning and supporting Configuration Manager.
 
@@ -49,20 +49,20 @@ A curated list of important articles.
 
 ## Trending
 
-The most popular articles between April 1 and April 30, 2019.
+The most popular articles between May 1 and May 31, 2019.
 
 | Page views | Title |
 |------------|-------|
-| 21698 | [Log files for troubleshooting](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
-| 21409 | [What's new in version 1902](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1902) |
-| 11870 | [Ports used for connections](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
-| 10980 | [Deploy clients to Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
-| 9937 | [Support for Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
-| 9101 | [Install console](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) |
-| 9003 | [Updates and servicing](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
-| 8383 | [What's new in version 1810](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1810) |
-| 8237 | [Checklist for 1902](https://docs.microsoft.com/sccm/core/servers/manage/checklist-for-installing-update-1902) |
-| 8140 | [Manage Office 365 ProPlus updates](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates) |
+| 21370 | [Log files for troubleshooting](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
+| 17017 | [What's new in version 1902](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1902) |
+| 12122 | [Ports used for connections](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
+| 11906 | [Manage Office 365 ProPlus updates](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates) |
+| 11463 | [Deploy clients to Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
+| 10421 | [Support for Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
+| 9138 | [Checklist for 1902](https://docs.microsoft.com/sccm/core/servers/manage/checklist-for-installing-update-1902) |
+| 8944 | [Install console](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) |
+| 8508 | [Client installation parameters and properties](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-installation-properties) |
+| 8399 | [Updates and servicing](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
 
 ## Recently updated
 
@@ -70,16 +70,16 @@ Articles with a recent and significant update.
 
 | Last reviewed | Title |
 |---------------|-------|
-| 5/2/2019 | [Configure Wake on LAN](https://docs.microsoft.com/sccm/core/clients/deploy/configure-wake-on-lan) |
-| 4/30/2019 | [Monitor co-management](https://docs.microsoft.com/sccm/comanage/how-to-monitor) |
-| 4/30/2019 | [SQL Server views](https://docs.microsoft.com/sccm/develop/core/understand/sqlviews/sql-server-views-configuration-manager) |
-| 4/29/2019 | [Technical preview 1904](https://docs.microsoft.com/sccm/core/get-started/2019/technical-preview-1904) |
-| 4/26/2019 | [Third-party MDM coexistence](https://docs.microsoft.com/sccm/comanage/coexistence) |
-| 4/23/2019 | [What's new in version 1902](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1902) |
-| 4/20/2019 | [Install console](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) |
-| 4/11/2019 | [OneDrive for Business Profiles](https://docs.microsoft.com/sccm/compliance/deploy-use/onedrive-profile) |
-| 4/4/2019 | [Troubleshooting CMPivot](https://docs.microsoft.com/sccm/core/servers/manage/cmpivot-tsg) |
-| 4/3/2019 | [IProgressUI interface](https://docs.microsoft.com/sccm/develop/reference/core/clients/client-classes/iprogressui-interface) |
+| 5/31/2019 | [How to enable TLS 1.2](https://docs.microsoft.com/sccm/core/plan-design/security/enable-tls-1-2) |
+| 5/29/2019 | [Provisioning mode](https://docs.microsoft.com/sccm/osd/understand/provisioning-mode) |
+| 5/29/2019 | [Troubleshoot app deployments](https://docs.microsoft.com/sccm/apps/deploy-use/troubleshoot-application-deployment) |
+| 5/29/2019 | [Approve-CMApprovalRequest](https://docs.microsoft.com/powershell/module/configurationmanager/approve-cmapprovalrequest) |
+| 5/29/2019 | [Import and export applications](https://docs.microsoft.com/sccm/apps/deploy-use/import-export-applications) |
+| 5/28/2019 | [What's new in version 1902](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1902) |
+| 5/28/2019 | [Enhanced HTTP](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/enhanced-http) |
+| 5/24/2019 | [Azure AD authentication workflow](https://docs.microsoft.com/sccm/core/clients/manage/azure-ccmsetup) |
+| 5/24/2019 | [SetDPMaintenanceMode method](https://docs.microsoft.com/sccm/develop/reference/core/servers/configure/setdpmaintenancemode-method-in-class-sms-distributionpointinfo) |
+| 5/21/2019 | [Deprecated features](https://docs.microsoft.com/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures) |
 
 ## Troubleshooting articles
 
