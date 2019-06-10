@@ -39,9 +39,9 @@ While you can use Desktop Analytics to assist with updating devices from Windows
 
 There are two types of data in the Desktop Analytics portal: Administrator data and diagnostic data.  You can refresh administrator data on-demand by opening the data currency flyout and clicking "Apply changes".  This will immediately trigger a one-time refresh of any 
 pending administrator changes in your workspaces. Changes will propagate and generally be available within 15-60 minutes, depending 
-on the size of your workspace as well as the scope of pending changes.  
+on the size of your workspace as well as the scope of pending changes.  You can request an on-demand data refresh up to 6 times within a 24-hour period. 
 
-Diagnositc data is updated automatically once daily.  There is no way to trigger an on-demand refresh of diagnostic data.  To learn more about the different types of data in Desktop Analytics, see [Data latency](https://docs.microsoft.com/en-us/sccm/desktop-analytics/troubleshooting#data-latency).
+All data is updated automatically once daily, even if you do not request an on-demand data refresh. There is no way to trigger an on-demand refresh of diagnostic data.  To learn more about the different types of data in Desktop Analytics, see [Data latency](https://docs.microsoft.com/en-us/sccm/desktop-analytics/troubleshooting#data-latency).
 
 
 ## Privacy
