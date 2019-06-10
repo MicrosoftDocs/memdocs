@@ -35,6 +35,15 @@ Yes. For more information, see [Convert from BIOS to UEFI during an in-place upg
 
 While you can use Desktop Analytics to assist with updating devices from Windows 10 Long-Term Servicing Channel (LTSC) to Windows 10 Semi-Annual Channel, Desktop Analytics doesn't support updates to Windows 10 LTSC. This channel of Windows 10 isn't intended for broad use, and doesn't receive feature updates, so it's not a supported target with Desktop Analytics. For more information, see [Windows as a service overview](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
 
+### Can I reduce the amount of time it takes for data to refresh in my Desktop Analytics portal?
+
+There are two types of data in the Desktop Analytics portal: Administrator data and diagnostic data.  You can refresh administrator data on-demand by opening the data currency flyout and clicking "Apply changes".  This will immediately trigger a one-time refresh of any 
+pending administrator changes in your workspaces. Changes will propagate and generally be available within 15-60 minutes, depending 
+on the size of your workspace as well as the scope of pending changes.  
+
+Diagnositc data is updated automatically once daily.  There is no way to trigger an on-demand refresh of diagnostic data.  To learn more about the different types of data in Desktop Analytics, see [Data latency](https://docs.microsoft.com/en-us/sccm/desktop-analytics/troubleshooting#data-latency).
+
+
 ## Privacy
 
 ### Can Desktop Analytics be used without a direct client connection to the Microsoft Data Management Service?
