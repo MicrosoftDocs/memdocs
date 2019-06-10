@@ -41,7 +41,7 @@ Follow the steps in this article to use Desktop Analytics to create a plan for d
 
     - **Completion date**: Choose the date by which Windows should be fully deployed to all the targeted devices.  
 
-5. Select **Create**. The new plan appears in the list of deployment plans while its being processed. Processing can take up to 48 hours before you can proceed to the next step.  
+5. Select **Create**. The new plan appears in the list of deployment plans while its being processed. To expedite processing, request an on-demand data refresh. Learn more in our [Desktop Analytics FAQ](https://docs.microsoft.com/en-us/sccm/desktop-analytics/faq).  
 
 6. Open the deployment plan by selecting its name.  
 
