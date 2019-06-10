@@ -2,7 +2,7 @@
 title: Deployment plans in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn about deployment plans in Desktop Analytics.
-ms.date: 05/14/2019
+ms.date: 06/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -43,7 +43,7 @@ As part of your deployment plan, you do the following actions:
 
 - Decide how to fix issues with apps based on recommendations from Desktop Analytics  
 
-By default, Desktop Analytics refreshes deployment plan data daily. Any changes you make within a deployment plan, such as assigning importance to an app, or choosing a device to include in a pilot will can take up to 24 hours to process.  To expedite this process, you have the ability to request an on-demand data refresh.  For more information, see [Desktop Analytics FAQ](https://docs.microsoft.com/en-us/sccm/desktop-analytics/faq).  
+By default, Desktop Analytics refreshes deployment plan data daily. Any changes you make within a deployment plan, such as assigning importance to an app or choosing a device to include in a pilot, takes up to 24 hours to process. To expedite this process, request an on-demand data refresh. For more information, see [Desktop Analytics FAQ](/sccm/desktop-analytics/faq#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).  
 
 After connecting Desktop Analytics to Configuration Manager, select your collections in the deployment plans. This integration then lets you deploy Windows to a collection based on the Desktop Analytics data.
 
