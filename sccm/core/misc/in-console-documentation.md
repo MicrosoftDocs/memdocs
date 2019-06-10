@@ -95,13 +95,11 @@ Guided walkthroughs to assist with troubleshooting Configuration Manager compone
 
 ## New and updated support articles
 
-Support articles that are new or updated between April 7 and May 13, 2019.
+Support articles that are new or updated between May 14 and June 10, 2019.
 
-- [KB 4488598: Update Rollup 2 for System Center Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4488598)
-- [KB 4494015: An OSD task sequence doesn't continue after Windows Setup or an in-place upgrade finishes](https://support.microsoft.com/help/4494015)
-- [KB 4495265: WINHTTP_CALLBACK_STATUS_FLAG_CERT_CN_INVALID when using a CMG as a cloud DP with third-party certificate](https://support.microsoft.com/help/4495265)
-- [KB 4498259: Upgrade Readiness data is downloaded continuously in Configuration Manager](https://support.microsoft.com/help/4498259)
+- [KB 4503442: Error 403 when Configuration Manager clients try to communicate with CMG](https://support.microsoft.com/help/4503442)
+- [KB 4503578: Reporting stops working after you move a reporting services point or enable TLS 1.2 in Configuration Manager](https://support.microsoft.com/help/4503578)
 - [KB 4040243: How to enable TLS 1.2 for Configuration Manager](https://support.microsoft.com/help/4040243)
-- [KB 4490644: The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://support.microsoft.com/help/4490644)
+- [KB 4505440: Software Update Managemenent Troubleshooting in Configuration Manager](https://support.microsoft.com/help/4505440)
 
 To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **System Center Configuration Manager**.  
