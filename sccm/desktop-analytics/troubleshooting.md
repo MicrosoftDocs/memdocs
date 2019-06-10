@@ -2,7 +2,7 @@
 title: Troubleshooting Desktop Analytics
 titleSuffix: Configuration Manager
 description: Technical details to help you troubleshoot issues with Desktop Analytics.
-ms.date: 06/05/2019
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -90,7 +90,7 @@ Select the category name to remove or add it from the chart. This action helps t
 
 The device has the following attributes:
 
-- A Configuration Manager client version 1810 or later  
+- A Configuration Manager client version 1902 or later  
 - There are no configuration errors  
 - Desktop Analytics received complete diagnostic data from this device in the past 28 days  
 - Desktop Analytics has a complete inventory of the device's configuration and installed apps  
@@ -113,7 +113,7 @@ Make sure the device is able to communicate with the service. For more informati
 
 #### Missing prerequisites
 
-The Configuration Manager client isn't at least version 1810 (5.0.8740).
+The Configuration Manager client isn't at least version 1902 (5.0.8790).
 
 Update the client to the latest version. Consider enabling automatic client upgrade for the Configuration Manager site. For more information, see [Upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).  
 
@@ -335,7 +335,7 @@ Check the permissions on this registry key. Make sure that the local System acco
 
 There's a different ID for the device. This registry key is used by group policy. It takes precedence over the ID provided by Configuration Manager.  
 
-To view the commercial ID in the Desktop Analytics portal, use the following procedure:
+<a name="bkmk_ViewCommercialID"></a> To view the commercial ID in the Desktop Analytics portal, use the following procedure:
 
 1. Go to the Desktop Analytics portal, and select **Connected services** in the Global Settings group.  
 
@@ -344,7 +344,7 @@ To view the commercial ID in the Desktop Analytics portal, use the following pro
 ![Screenshot of commercial ID in Desktop Analytics portal](media/commercial-id.png)
 
 > [!Important]  
-> Only **Get new ID key** when you can't use the current one. If you regenerate the commercial ID, deploy the new ID to your devices. This process might result in loss of diagnostic data during the transition.  
+> Only **Get new ID key** when you can't use the current one. If you regenerate the commercial ID, [re-enroll your devices with the new Id](/sccm/desktop-analytics/enroll-devices#device-enrollment). This process might result in loss of diagnostic data during the transition.  
 
 #### Windows commercial data opt-in
 
@@ -600,14 +600,18 @@ The portal shows a notification that it added the role assignment.
 ## Data latency
 
 <!-- 3846531 -->
-Data in the Desktop Analytics portal is refreshed daily. This refresh includes device changes collected from diagnostics data, and any changes that you make to the configuration. For example, when you change an asset's **Upgrade Decision**, it can result in changes to the readiness state of devices with that asset installed.
+When you first set up Desktop Analytics, the reports in Configuration Manager and the Desktop Analytics portal may not show complete data right away. It can take 2-3 days for active devices to send diagnostic data to the Desktop Analytics service, the service to process the data, and then synchronize with your Configuration Manager site.
 
-- **Administrator changes** are generally processed by the Desktop Analytics service within nine hours. For example, if you make changes at 11:00 PM UTC, the portal should reflect those changes before 08:00 AM UTC the next day.
+When syncing device collections from your Configuration Manager hierarchy to Desktop Analytics, it can take up to 10 minutes for those collections to appear in the Desktop Analytics portal.  Similarly, when you create a deployment plan in Desktop Analytics, it can take up to 10 minutes for the new collections associated with the deployment plan to appear in your Configuration Manager hierarchy.  The primary sites create the collections, and the central administration site synchronizes with Desktop Analytics.
 
-- **Device changes** detected by UTC midnight in local time are generally included in the daily refresh. There's typically an additional 23 hours of latency associated with the processing of device changes compared to admin changes.
+Within the Desktop Analytics portal, there are two types of data: **Administrator data** and **diagnostic data**:
 
-If you aren't seeing changes updated within these time frames, wait another 24 hours for the next daily refresh. If you see longer delays, check the service health dashboard. If the service reports as healthy, contact Microsoft support.
+- **Administrator data** refers to any changes you make to your workspace configuration.  For example, when you change an asset's **Upgrade Decision** or **Importance** you are changing Administrator data.  These changes often have a compounding effect, as they can alter the readiness state of a device with the asset in question installed.
 
-When you first set up Desktop Analytics, the charts in Configuration Manager and the Desktop Analytics portal may not show complete data. It can take 2-3 days for active devices to send diagnostic data to the Desktop Analytics service, the service to process the data, and then synchronize with your Configuration Manager site.
+- **Diagnostic data** refers to the system metadata uploaded from client devices to Microsoft.  This is the data that powers Desktop Analytics and includes attributes such as device inventory and security and feature update status.
 
-In a Configuration Manager hierarchy, it can take 10 minutes for new collections to appear for deployment plans. The primary sites create the collections, and the central administration site synchronizes with Desktop Analytics.<!-- 3896921 -->
+By default, all data in the Desktop Analytics portal is automatically refreshed daily. This refresh includes changes in diagnostics data, as well as any changes that you make to the configuration (administrator data) and is generally visible in your Desktop Analytics portal by 08:00 AM UTC each day.
+
+When you make changes to administrator data, you have the ability to trigger an on-demand refresh of the administrator data in your workspace by opening the data currency flyout and clicking "Apply changes".  This process generally takes between 15-60 minutes, depending on the size of your workspace and the scope of the changes that need processes.  Note that requesting an on-demand data refresh will not result in any changes to diagnostic data.  To learn more about requesting an on-demand refresh, see our FAQ page.
+
+If you aren't seeing changes updated within the time frames indicated above, wait another 24 hours for the next daily refresh. If you see longer delays, check the service health dashboard. If the service reports as healthy, contact Microsoft support.<!-- 3896921 -->
