@@ -2,7 +2,7 @@
 title: FAQ for Desktop Analytics
 titleSuffix: Configuration Manager
 description: Frequently asked questions for Desktop Analytics.
-ms.date: 04/26/2019
+ms.date: 06/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -37,11 +37,9 @@ While you can use Desktop Analytics to assist with updating devices from Windows
 
 ### Can I reduce the amount of time it takes for data to refresh in my Desktop Analytics portal?
 
-There are two types of data in the Desktop Analytics portal: Administrator data and diagnostic data.  You can refresh administrator data on-demand by opening the data currency flyout and clicking "Apply changes".  This will immediately trigger a one-time refresh of any 
-pending administrator changes in your workspaces. Changes will propagate and generally be available within 15-60 minutes, depending 
-on the size of your workspace as well as the scope of pending changes.  You can request an on-demand data refresh up to 6 times within a 24-hour period. 
+There are two types of data in the Desktop Analytics portal: Administrator data and diagnostic data. To refresh administrator data on-demand, open the data currency flyout and select **Apply changes**. This action immediately triggers a one-time refresh of any pending administrator changes in your workspaces. The changes propagate and are generally available within 15-60 minutes. The timing depends on the size of your workspace and the scope of pending changes. You can request an on-demand data refresh up to six times within a 24-hour period. 
 
-All data is updated automatically once daily, even if you do not request an on-demand data refresh. There is no way to trigger an on-demand refresh of diagnostic data.  To learn more about the different types of data in Desktop Analytics, see [Data latency](https://docs.microsoft.com/en-us/sccm/desktop-analytics/troubleshooting#data-latency).
+All data is updated automatically once daily, even if you don't request an on-demand data refresh. There's no way to trigger an on-demand refresh of diagnostic data. For more information about the different types of data in Desktop Analytics, see [Data latency](/sccm/desktop-analytics/troubleshooting#data-latency).
 
 
 ## Privacy
