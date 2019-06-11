@@ -1,4 +1,4 @@
----
+﻿---
 title: "SMS_Advertisement Class"
 titleSuffix: "Configuration Manager"
 ms.date: "04/27/2017"
@@ -99,7 +99,7 @@ Class SMS_Advertisement : SMS_BaseClass
 |0x00000400 (10)|ONUSERLOGOFF. Announce the advertisement to the user on logoff.|  
 |0x00001000 (12)|OPTIONALPREDOWNLOAD. If the selected architecture and language matches that of the client, the package content will be downloaded in advance
 |0x00008000 (15)|WINDOWS_CE. The advertisement is for a device client.|  
-|0x00010000 (16)|ENABLE_PEER_CACHING. This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configurcation Manager or later.|  
+|0x00010000 (16)|ENABLE_PEER_CACHING. This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.|  
 |0x00020000 (17)|DONOT_FALLBACK. Do not fall back to unprotected distribution points.|  
 |0x00040000 (18)|ENABLE_TS_FROM_CD_AND_PXE. The task sequence is available to removable media and the pre-boot execution environment (PXE) service point.|  
 |0x00080000 (19)|APTSINTRANETONLY.|
