@@ -2,7 +2,7 @@
 title: How to create deployment plans
 titleSuffix: Configuration Manager
 description: A how-to guide for creating deployment plans in Desktop Analytics.
-ms.date: 04/22/2019
+ms.date: 06/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -41,7 +41,7 @@ Follow the steps in this article to use Desktop Analytics to create a plan for d
 
     - **Completion date**: Choose the date by which Windows should be fully deployed to all the targeted devices.  
 
-5. Select **Create**. The new plan appears in the list of deployment plans while its being processed. Processing can take up to 48 hours before you can proceed to the next step.  
+5. Select **Create**. The new plan appears in the list of deployment plans while its being processed. To expedite processing, request an on-demand data refresh. For more information, see [Desktop Analytics FAQ](/sccm/desktop-analytics/faq##can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).  
 
 6. Open the deployment plan by selecting its name.  
 
