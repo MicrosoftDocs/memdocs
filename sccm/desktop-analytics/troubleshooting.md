@@ -2,7 +2,7 @@
 title: Troubleshoot Desktop Analytics
 titleSuffix: Configuration Manager
 description: Technical details to help you troubleshoot issues with Desktop Analytics.
-ms.date: 06/07/2019
+ms.date: 06/11/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -93,9 +93,9 @@ Desktop Analytics adds the following applications to your Azure AD:
 
 - **MALogAnalyticsReader**: Retrieves OMS groups and devices created in Log Analytics. For more information, see [MALogAnalyticsReader application role](#bkmk_MALogAnalyticsReader).  
 
-If you need to provision these apps after completing set up, go to the **Connected services** pane. Select  **Configure users and apps access**, and provision the apps.  
+If you need to provision these apps after completing setup, go to the **Connected services** pane. Select **Configure users and apps access**, and provision the apps.  
 
-- **Azure AD app for Configuration Manager**. If you need to provision or troubleshoot connection issues after completing set up, see [Create and import app for Configuration Manager](#create-and-import-app-for-configuration-manager). This app requires  **Write CM Collection Data** and **Read CM Collection Data** on the **Configuration Manager Service** API.  
+- **Azure AD app for Configuration Manager**. If you need to provision or troubleshoot connection issues after completing setup, see [Create and import app for Configuration Manager](#create-and-import-app-for-configuration-manager). This app requires  **Write CM Collection Data** and **Read CM Collection Data** on the **Configuration Manager Service** API.  
 
 
 ### Create and import app for Configuration Manager
@@ -190,9 +190,9 @@ If you're having problems creating or importing the app, first check **SMSAdminU
 
 ### <a name="bkmk_MALogAnalyticsReader"></a> MALogAnalyticsReader application role
 
-When you set up Desktop Analytics, you accept a consent on behalf of your organization. This consent is to assign the MALogAnalyticsReader application the Log Analytics Reader role for the workspace. This application role is required by Desktop Analytics.
+When you set up Desktop Analytics, you consent on behalf of your organization. This consent is to assign the MALogAnalyticsReader application the Log Analytics Reader role for the workspace. This application role is required by Desktop Analytics.
 
-If there is a problem with this process during set up, use the following process to manually add this permission:
+If there's a problem with this process during setup, use the following process to manually add this permission:
 
 1. Go to the [Azure portal](http://portal.azure.com), and select **All resources**. Select the workspace of type **Log Analytics**.  
 
@@ -214,18 +214,30 @@ The portal shows a notification that it added the role assignment.
 ## Data latency
 
 <!-- 3846531 -->
-When you first set up Desktop Analytics, the reports in Configuration Manager and the Desktop Analytics portal may not show complete data right away. It can take 2-3 days for active devices to send diagnostic data to the Desktop Analytics service, the service to process the data, and then synchronize with your Configuration Manager site.
+When you first set up Desktop Analytics, the reports in Configuration Manager and the Desktop Analytics portal may not show complete data right away. It can take 2-3 days for the following steps to occur:
 
-When syncing device collections from your Configuration Manager hierarchy to Desktop Analytics, it can take up to 10 minutes for those collections to appear in the Desktop Analytics portal.  Similarly, when you create a deployment plan in Desktop Analytics, it can take up to 10 minutes for the new collections associated with the deployment plan to appear in your Configuration Manager hierarchy.  The primary sites create the collections, and the central administration site synchronizes with Desktop Analytics.
+- Active devices send diagnostic data to the Desktop Analytics service
+- The service processes the data
+- The service synchronizes with your Configuration Manager site
+
+When syncing device collections from your Configuration Manager hierarchy to Desktop Analytics, it can take up to 10 minutes for those collections to appear in the Desktop Analytics portal. Similarly, when you create a deployment plan in Desktop Analytics, it can take up to 10 minutes for the new collections associated with the deployment plan to appear in your Configuration Manager hierarchy. The primary sites create the collections, and the central administration site synchronizes with Desktop Analytics.
 
 Within the Desktop Analytics portal, there are two types of data: **Administrator data** and **diagnostic data**:
 
-- **Administrator data** refers to any changes you make to your workspace configuration.  For example, when you change an asset's **Upgrade Decision** or **Importance** you are changing Administrator data.  These changes often have a compounding effect, as they can alter the readiness state of a device with the asset in question installed.
+- **Administrator data** refers to any changes you make to your workspace configuration. For example, when you change an asset's **Upgrade Decision** or **Importance** you're changing administrator data. These changes often have a compounding effect, as they can alter the readiness state of a device with the asset in question installed.
 
-- **Diagnostic data** refers to the system metadata uploaded from client devices to Microsoft.  This is the data that powers Desktop Analytics and includes attributes such as device inventory and security and feature update status.
+- **Diagnostic data** refers to the system metadata uploaded from client devices to Microsoft. This data powers Desktop Analytics. It includes attributes such as device inventory, and security and feature update status.
 
-By default, all data in the Desktop Analytics portal is automatically refreshed daily. This refresh includes changes in diagnostics data, as well as any changes that you make to the configuration (administrator data) and is generally visible in your Desktop Analytics portal by 08:00 AM UTC each day.
+By default, all data in the Desktop Analytics portal is automatically refreshed daily. This refresh includes changes in diagnostics data and any changes that you make to the configuration (administrator data). It should be visible in your Desktop Analytics portal by 08:00 AM UTC each day.
 
-When you make changes to administrator data, you have the ability to trigger an on-demand refresh of the administrator data in your workspace by opening the data currency flyout and clicking "Apply changes".  This process generally takes between 15-60 minutes, depending on the size of your workspace and the scope of the changes that need processes.  Note that requesting an on-demand data refresh will not result in any changes to diagnostic data.  To learn more about requesting an on-demand refresh, see our FAQ page.
+When you make changes to administrator data, you can trigger an on-demand refresh of the administrator data in your workspace. From any page in the Desktop Analytics portal, open the data currency flyout:
+
+![Screenshot of data currency flyout tab in Desktop Analytics portal](media/data-currency-flyout.png)
+
+Then select **Apply changes**:
+
+![Screenshot of expanded data currency flyout in Desktop Analytics portal](media/data-currency-flyout-expand.png)
+
+This process generally takes between 15-60 minutes. The timing depends on the size of your workspace and the scope of the changes that need processes. When you request an on-demand data refresh, it doesn't result in any changes to diagnostic data.  For more information, see the [Desktop Analytics FAQ](/sccm/desktop-analytics/faq#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).
 
 If you aren't seeing changes updated within the time frames indicated above, wait another 24 hours for the next daily refresh. If you see longer delays, check the service health dashboard. If the service reports as healthy, contact Microsoft support.<!-- 3896921 -->
