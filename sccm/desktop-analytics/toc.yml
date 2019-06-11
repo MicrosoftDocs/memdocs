@@ -40,7 +40,9 @@
       href: enable-data-sharing.md
     - name: Privacy
       href: privacy.md
-    - name: Troubleshooting
+    - name: Troubleshoot
       href: troubleshooting.md
+    - name: Monitor connection health
+      href: monitor-connection-health.md
     - name: Frequently asked questions
       href: faq.md
