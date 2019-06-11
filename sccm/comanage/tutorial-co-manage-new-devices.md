@@ -5,8 +5,8 @@ title: Tutorial&#58; Enable co-management for new internet-based Windows 10 devi
 titleSuffix: Configuration Manager 
 description: Configure co-management for Windows 10 devices for Configuration Manager and Intune. 
 keywords:
-author: brenduns
-ms.author: brenduns
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/08/2019
 ms.topic: tutorial

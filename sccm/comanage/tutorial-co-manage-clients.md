@@ -2,13 +2,13 @@
 title: Tutorial&#58; Enable co-management of existing Configuration Manager clients
 titleSuffix: Configuration Manager
 description: Configure co-management with Microsoft Intune when you already manage Windows 10 devices with Configuration Manager.
-ms.date: 03/08/2019
+ms.date: 06/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: tutorial
 ms.assetid: 140c522f-d09a-40b6-a4b0-e0d14742834a
-author: brenduns
-ms.author: brenduns
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -93,14 +93,13 @@ To configure Azure AD Connect, you need credentials of a global administrator fo
 4. On the **Overview** page, select **Next**.
 5. On the **Connect to Azure AD** page, enter the credentials of a global administrator for your Azure AD tenant.
 6. On the **Device options** page, select **Configure Hybrid Azure AD join**, and then select **Next**.
-7. On the **SCP** page, for each on-premises forest you want Azure AD Connect to configure the service connection point (SCP), do the following steps, and then select **Next**:  
+7. On the **Device operating systems** page, select the operating systems used by devices in your Active Directory environment, and then select **Next**.  
+
+   You can select the option to support Windows downlevel domain-joined devices, but keep in mind that co-management of devices is only supported for Windows 10.
+8. On the **SCP** page, for each on-premises forest you want Azure AD Connect to configure the service connection point (SCP), do the following steps, and then select **Next**:  
    1. Select the forest.  
    2. Select the authentication service.  If you have a federated domain, select AD FS server unless your organization has exclusively Windows 10 clients and you have configured computer/device sync or your organization is using [SeamlessSSO](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso).  
    3. Click **Add** to enter the enterprise administrator credentials.  
-8. On the **Device operating systems** page, select the operating systems used by devices in your Active Directory environment, and then select **Next**.  
-
-   You can select the option to support Windows downlevel domain-joined devices, but keep in mind that co-management of devices is only supported for Windows 10.
-
 9. If you have a managed domain, skip this step.  
 
    On the **Federation configuration** page, enter the credentials of your AD FS administrator, and then select **Next**.
