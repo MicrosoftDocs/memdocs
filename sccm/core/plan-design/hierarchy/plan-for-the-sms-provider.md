@@ -58,6 +58,8 @@ For more information about how to manage the SMS Provider, see [Manage the SMS P
 
 -   At least 650 MB of free disk space to support the Windows ADK components. For more information about Windows ADK and the SMS Provider, see [OS deployment requirements](#BKMK_WAIKforSMSProv).  
 
+-   Enable Windows server role **Web Server (IIS)**  
+
 
 
 ##  <a name="bkmk_location"></a> Locations  
