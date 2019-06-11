@@ -25,47 +25,53 @@ When you first set up Desktop Analytics, these charts may not show complete data
 
 ## Connection details
 
-<!-- 4412133 -->
+This tile displays the following basic information about the connection from Configuration Manager to Desktop Analytics:
 
-This tile shows basic information such as the connected tenant name and your target collection. 
+- **Tenant Name**: The name of the Desktop Analytics connection in the **Azure Services** node
 
-The **Devices Targeted** value is all of the devices in the target collection, minus the following types of devices:
+- **Target Collection**: The same *target collection* you specified when connecting Configuration Manager to Desktop Analytics. This collection includes all devices that Configuration Manager configures with your commercial ID and diagnostic data settings. It's the full set of devices that Configuration Manager connects to the Desktop Analytics service.
 
-- Decommissioned
-- Obsolete
-- Inactive
-- Unmanaged
+- **Devices Targeted**: All of the devices in the target collection, minus the following types of devices:
 
-For more information on these device states, see [About client status](/sccm/core/clients/manage/monitor-clients#bkmk_about).
+    - Decommissioned
+    - Obsolete
+    - Inactive
+    - Unmanaged
 
-> [!Note]  
-> Configuration Manager uploads to Desktop Analytics all of the devices in the target collection minus decommissioned and obsolete clients.
+    For more information on these device states, see [About client status](/sccm/core/clients/manage/monitor-clients#bkmk_about).
 
-The **Devices eligible for DA** value is...
+    > [!Note]  
+    > Configuration Manager uploads to Desktop Analytics all of the devices in the target collection minus decommissioned and obsolete clients.
 
-### Last sync details
+- **Devices eligible for DA**: The number of devices targeted minus devices that are ineligible for Desktop Analytics. For example, devices in the target collection that run Windows Server or Windows 10 long-term servicing channel (LTSC).
+
+
+## Last sync details
 
 This tile shows when Configuration Manager syncs with the Desktop Analytics cloud service, and how many devices it syncs.
 
-<!-- 
-If you think some devices aren't showing in Desktop Analytics, first check the percentage of **Connected devices**. This chart represents the percentage of devices using the following formula:
+- **Devices synced**: The number of unique devices that Configuration Manager sent to Desktop Analytics. The service includes these devices in the currently visible snapshot.
 
-- Numerator: The **Devices Targeted** value in the [Connection details](#connection-details) tile
-- Denominator: All devices in Configuration Manager minus inactive and unmanaged devices
+- **Last service sync**: The same as the **Last updated** time in the Desktop Analytics portal.
 
-If it's less than 100%, make sure the devices are supported by Desktop Analytics. For more information, see [Prerequisites](/sccm/desktop-analytics/overview#prerequisites).
- -->
+- **Next service sync**: When you can expect the next daily snapshot in Desktop Analytics.
+
+> [!Note]  
+> None of these values automatically update when you request an on-demand snapshot. For more information, see [Data latency](/sccm/desktop-analytics/troubleshooting#data-latency).
+
+If you think some devices aren't showing in Desktop Analytics, make sure the devices are supported by Desktop Analytics. For more information, see [Prerequisites](/sccm/desktop-analytics/overview#prerequisites).
+
 
 ## Connection health
 
 The **Connection health** chart displays the number of devices in the following health states:  
 
-- [Properly enrolled](#properly-enrolled)  
-- [Unable to enroll](#unable-to-enroll)
-- [Configuration alert](#configuration-alert)
-- [Awaiting enrollment](#awaiting-enrollment)
-- [Status pending](#status-pending)
-- [Missing data](#missing-data)  
+- [Properly enrolled](#properly-enrolled): The device appears in Desktop Analytics with a complete inventory
+- [Unable to enroll](#unable-to-enroll): There's a blocking issue that prevents device enrollment
+- [Configuration alert](#configuration-alert): The device doesn't appear in Desktop Analytics or appears with an incomplete inventory. Configuration Manager also identified an issue with device enrollment.
+- [Awaiting enrollment](#awaiting-enrollment): Configuration Manager configured the device, but it doesn't yet appear in Desktop Analytics
+- [Status pending](#status-pending): Configuration Manager is still configuring this device, or doesn't have enough data from the device to determine its state
+- [Missing data](#missing-data): Configuration Manager configured the device, but Desktop Analytics only has partial data
 
 <!-- 
 - [Configuration issues](#configuration-issues)  
@@ -73,6 +79,8 @@ The **Connection health** chart displays the number of devices in the following 
 - [Waiting for enrollment](#waiting-for-enrollment)  
 - [Missing prerequisites](#missing-prerequisites)  
  -->
+
+The total number of devices in this chart should be the same as the **Devices eligible for DA** value in the Connection Details tile.
 
 Select the slice in the chart to drill down to a list of devices with that state. For more information, see [Device list](#device-list).
 
@@ -87,33 +95,33 @@ The device has the following attributes:
 - Desktop Analytics received complete diagnostic data from this device in the past 28 days  
 - Desktop Analytics has a complete inventory of the device's configuration and installed apps  
 
-### Configuration issues
+### Unable to enroll
 
-Configuration Manager detects one or more issues with the configuration required for Desktop Analytics. For more information, see the list of [Desktop Analytics device properties in Configuration Manager](#bkmk_config-issues).  
+Configuration Manager detects one or more blocking issues that prevent device enrollment. For more information, see the list of [Desktop Analytics device properties in Configuration Manager](#bkmk_config-issues).  
 
-### Client not installed
+For example, the Configuration Manager client isn't at least version 1902 (5.0.8790). Update the client to the latest version. Consider enabling automatic client upgrade for the Configuration Manager site. For more information, see [Upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).  
 
-The device is targeted for Desktop Analytics, but isn't a Configuration Manager client.
+### Configuration alert
 
-The Configuration Manager client is required to configure and manage the device for Desktop Analytics. For more information, see [Client installation methods](/sccm/core/clients/deploy/plan/client-installation-methods).  
+The device doesn't appear in Desktop Analytics or appears with an incomplete inventory. Configuration Manager also identified an issue with device enrollment. For more information, see the list of [Desktop Analytics device properties in Configuration Manager](#bkmk_config-issues).
 
-### Waiting for enrollment
+For example, the device doesn't have connectivity to the service. For more information, see [Windows diagnostic endpoint connectivity](#windows-diagnostic-endpoint-connectivity).
 
-Desktop Analytics doesn't have diagnostic data for this device. This issue can be because the device was recently added to the target collection and hasn't yet sent data. It can also mean the device isn't properly communicating with the service, and the latest diagnostic data is more than 28 days old.
+### Awaiting enrollment
 
-Make sure the device is able to communicate with the service. For more information, see [Endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
+Desktop Analytics doesn't have diagnostic data for this device. This issue can be because you recently added the device to the target collection and it hasn't yet sent data. It can also mean the device isn't properly communicating with the service, and the latest diagnostic data is more than 28 days old.
 
-### Missing prerequisites
+Make sure the device can communicate with the service. For more information, see [Endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
 
-The Configuration Manager client isn't at least version 1902 (5.0.8790).
+### Status pending
 
-Update the client to the latest version. Consider enabling automatic client upgrade for the Configuration Manager site. For more information, see [Upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).  
+Configuration Manager is still configuring this device, or doesn't have enough data from the device to determine its state.
 
 ### Missing data
 
-Desktop Analytics can't create a compatibility assessment. It doesn't have a complete data set for the device's configuration (census) or installed apps (inventory).
+Configuration Manager successfully configured the device, but Desktop Analytics can't create a compatibility assessment. It doesn't have a complete data set for the device's configuration (census) or installed apps (inventory).
 
-This issue is often fixed automatically when the device retries. If it persists, make sure the device is able to communicate with the service. For more information, see [Endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
+This issue is often fixed automatically when the device retries. If it persists, make sure the device can communicate with the service. For more information, see [Endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
 
 
 ## Device list
@@ -161,6 +169,8 @@ The following Desktop Analytics device properties are available as columns in th
 
 > [!Note]  
 > Ignore the properties for **Office diagnostic endpoint connectivity** and **Office diagnostic data opt-in**. They're reserved for future functionality.
+
+The **Most frequent enrollment blockers and configuration alerts** tile of the Connection Health dashboard displays the properties that devices most often report as an issue.
 
 ### Appraiser configuration
 
@@ -263,7 +273,7 @@ Check for the following file: `%windir%\System32\DeviceCensus.exe`. If it doesn'
 ### Windows diagnostic endpoint connectivity
 
 <!--12,15-->
-If this check is successful, then the device is able to connect to the connected user experience and telemetry endpoint (Vortex).
+If this check is successful, then the device can connect to the Connected User Experience and Telemetry endpoint (Vortex).
 
 Otherwise, it may show one of the following errors:  
 
@@ -280,7 +290,7 @@ Devices verify connectivity with a GET request to the following endpoint based o
 | Windows 10, version 1709 or earlier | `https://v10.vortex-win.data.microsoft.com/health/keepalive` |
 | Windows 7 or Windows 8.1 | `https://vortex-win.data.microsoft.com/health/keepalive` |
 
-Make sure the device is able to communicate with the service. This check validates some but not all of the required endpoints. For more information, see [Endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
+Make sure the device can communicate with the service. This check validates some but not all of the required endpoints. For more information, see [Endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
 
 For more information, review M365AHandler.log on the client.  
 
