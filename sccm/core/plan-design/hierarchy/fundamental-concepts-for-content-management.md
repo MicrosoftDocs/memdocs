@@ -131,13 +131,15 @@ For more information, see [Windows PE peer cache](/sccm/osd/get-started/prepare-
 
     -   Requires internet-facing distribution points to accept HTTPS.  
 
-    -   Can use a cloud distribution point.  
+    -   Can use a cloud distribution point or cloud management gateway (CMG).  
+    
+        *   Starting in version 1806, a CMG can also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs. For more information, see [Modify a CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway).
 
 -   **Workgroup**:  
 
     -   Requires distribution points to accept HTTPS.  
 
-    -   Can use a cloud distribution point.  
+    -   Can use a cloud distribution point or CMG.  
 
 
 
