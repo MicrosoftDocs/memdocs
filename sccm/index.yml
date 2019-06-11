@@ -58,6 +58,20 @@ conceptualContent:
         - text: Run PowerShell scripts
           url: https://docs.microsoft.com/sccm/apps/deploy-use/create-deploy-scripts
           itemType: how-to-guide
+    - title: Desktop Analytics
+      links:
+        - text: Overview
+          url: https://docs.microsoft.com/sccm/desktop-analytics/overview
+          itemType: overview
+        - text: Deploy Windows 10 to pilot
+          url: https://docs.microsoft.com/sccm/desktop-analytics/tutorial-windows10
+          itemType: tutorial
+        - text: Set up Desktop Analytics
+          url: https://docs.microsoft.com/sccm/desktop-analytics/set-up
+          itemType: how-to-guide
+      footerLink:
+        text: See more
+        url: https://docs.microsoft.com/sccm/desktop-analytics/overview
     - title: Infrastructure simplification
       links:
         - text: Site server high availability
@@ -153,39 +167,11 @@ conceptualContent:
       footerLink:
         text: See more
         url: https://docs.microsoft.com/sccm/protect/understand/protect-data-and-site-infrastructure
-    - title: Develop
-      links:
-        - text: PowerShell
-          url: https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps
-          itemType: learn
-        - text: SDK concepts
-          url: https://docs.microsoft.com/sccm/develop/core/misc/system-center-configuration-manager-sdk
-          itemType: overview
-        - text: SDK reference
-          url: https://docs.microsoft.com/sccm/develop/reference/configuration-manager-reference
-          itemType: learn
-        - text: SQL views
-          url: https://docs.microsoft.com/sccm/develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views
-          itemType: learn
-    - title: Tools
-      links:
-        - text: Support Center
-          url: https://docs.microsoft.com/sccm/core/support/support-center
-          itemType: how-to-guide
-        - text: MDT
-          url: https://docs.microsoft.com/sccm/mdt/
-          itemType: how-to-guide
-        - text: Package Conversion Manager
-          url: https://docs.microsoft.com/sccm/apps/pcm/package-conversion-manager
-          itemType: learn
-      footerLink:
-        text: See more
-        url: https://docs.microsoft.com/sccm/core/support/tools
 
 additionalContent:
-  sections:
-    - title: Configuration Manager community & support
-      items: 
+   sections:
+   - title: Configuration Manager community & support
+     items:
       - title: Configuration Manager blog
         summary: News and announcements
         url: https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/bg-p/ConfigurationManagerBlog
@@ -201,8 +187,23 @@ additionalContent:
       - title: Product support
         summary: Get professional help from Microsoft support
         url: https://aka.ms/cmcbsupport
-      - title: ConfigMgr on Reddit
-        summary: Learn more from the community
-        url: https://www.reddit.com/r/sccm
-  footer: Found a problem on our site? [Let us know](https://docs.microsoft.com/sccm/core/understand/use-docs#bkmk_docfeedback)!
-  
+   - title: Other content
+     items:
+        - title: Develop
+          summary: |
+            [PowerShell](https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps) <br/>
+            [SDK concepts](https://docs.microsoft.com/sccm/develop/core/misc/system-center-configuration-manager-sdk) <br/>
+            [SDK reference](https://docs.microsoft.com/sccm/develop/reference/configuration-manager-reference) <br/>
+            [SQL views](https://docs.microsoft.com/sccm/develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views)
+        - title: Tools
+          summary: |
+            [Support Center](https://docs.microsoft.com/sccm/core/support/support-center) <br/>
+            [MDT](https://docs.microsoft.com/sccm/mdt/) <br/>
+            [Package Conversion Manager](https://docs.microsoft.com/sccm/apps/pcm/package-conversion-manager) <br/>
+            [See more >](https://docs.microsoft.com/sccm/core/support/tools)
+        - title: Other community sites
+          summary: |
+            [ConfigMgr on Reddit](https://www.reddit.com/r/sccm) <br/>
+            [ConfigMgr Professionals Group on Facebook](https://www.facebook.com/groups/ConfigMgr2012) <br/>
+   footer: "Found a problem on our site? [Let us know](https://docs.microsoft.com/sccm/core/understand/use-docs#bkmk_docfeedback)!"
+   
