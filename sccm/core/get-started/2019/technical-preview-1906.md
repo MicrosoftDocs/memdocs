@@ -50,6 +50,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Improvements to OS deployment](includes/1906/4668846.md)]
 [!INCLUDE [Improvements to Community Hub](includes/1906/3555935.md)]
 [!INCLUDE [Configure different co-management workloads](includes/1906/3555750.md)]
+[!INCLUDE [Improvements to Software Center](includes/1906/4655176.md)]
 
 <!-- ## Known issues -->
 
