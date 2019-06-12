@@ -30,6 +30,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Configure different co-management workloads](includes/1906/3555750.md)]
 [!INCLUDE [Redesigned notification for newly available software](includes/1906/3555904.md)]
 [!INCLUDE [RBAC on folders](includes/1906/3600867.md)]
+[!INCLUDE [Azure Active Directory user group discovery](includes/1906/3611956.md)]
 [!INCLUDE [Remote control anywhere using cloud management gateway](includes/1906/4575930.md)]
 [!INCLUDE [Improvements to Community Hub](includes/1906/3555935.md)]
 [!INCLUDE [CMPivot](includes/1906/4054074.md)]
