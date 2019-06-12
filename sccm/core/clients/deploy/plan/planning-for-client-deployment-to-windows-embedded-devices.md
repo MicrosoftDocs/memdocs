@@ -79,6 +79,9 @@ ms.collection: M365-identity-device-management
 
  For an example scenario to deploy and manage write-filter-enabled Windows Embedded devices in Configuration Manager see [Example scenario for deploying and managing System Center Configuration Manager clients on Windows Embedded devices](../../../../core/clients/deploy/example-scenario-for-deploying-and-managing-clients-on-windows-embedded-devices.md).  
 
+> [!NOTE]
+> No additional exceptions are needed by the Configuration Manager client other than those documented in the above **Important** box. Adding additional Configuration Manager or WMI (WBEM) related exceptions may lead to failures of the Configuration Manager including devices getting stuck in servicing mode or experiencing reboot loops. Unneeded exceptions include the Configuration Manager client directory, the CCM cache directory, the Task Sequence cache directory, the WBEM directory, and Configuration Manager related registry keys.
+
  For more information about how to build images for Windows Embedded devices and configure write filters, see your Windows Embedded documentation, or contact your OEM.  
 
 > [!NOTE]
