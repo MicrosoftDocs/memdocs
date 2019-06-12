@@ -58,3 +58,5 @@ Select the app from the list, and select **Edit**. This action displays details 
 - [Learn about Desktop Analytics deployment plans](/sccm/desktop-analytics/about-deployment-plans)  
 
 - [Learn about security and feature updates](/sccm/desktop-analytics/about-updates)  
+
+- [Compatibility assessment in Desktop Analytics](/sccm/desktop-analytics/compat-assessment)  

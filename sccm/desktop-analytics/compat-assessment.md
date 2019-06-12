@@ -1,7 +1,7 @@
 ---
-title: Compatibility risk for Windows apps
+title: Compatibility assessment
 titleSuffix: Configuration Manager
-description: Learn about compatibility risk for Windows apps in Desktop Analytics.
+description: Learn about compatibility assessment for Windows apps and drivers in Desktop Analytics.
 ms.date: 06/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -14,14 +14,14 @@ ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
 ---
 
-# Compatibility risk for Windows apps in Desktop Analytics
+# Compatibility assessment in Desktop Analytics
 
 > [!Note]  
 > This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
 
-Upgrade assessments in Windows Analytics were generic, for example: Attention Needed or Fix available. It doesn't provide any visual indicator on how to prioritize apps with issues or upgrade insights. Desktop Analytics replaces this feature with **Compatibility Risk**. Desktop Analytics shows the app risk assessment for apps only in the deployment view for a pre-upgrade scenario. It categorizes the apps based on insights Microsoft gets from the machines included in a current deployment plan.
+Upgrade assessments in Windows Analytics were generic, for example: Attention Needed or Fix available. It doesn't provide any visual indicator on how to prioritize apps or drivers with issues or upgrade insights. Desktop Analytics replaces this feature with **Compatibility Assessment**. Desktop Analytics shows the assessment for apps only in the deployment view for a pre-upgrade scenario. It categorizes the apps based on insights Microsoft gets from the machines included in a current deployment plan.
 
-Desktop Analytics uses the following compatibility risk categories:
+Desktop Analytics uses the following compatibility assessment categories:
 
 - **Low**: The service found no signals to put this app at risk for a Windows upgrade. It's likely to work on the target OS as-is.  
 
@@ -34,7 +34,7 @@ Desktop Analytics uses the following compatibility risk categories:
 
 ## Risk assessment engine
 
-There are several sources that Desktop Analytics uses to generate the risk rating.
+There are several sources that Desktop Analytics uses to generate the assessment rating.
 
 ### MS known issues
 
