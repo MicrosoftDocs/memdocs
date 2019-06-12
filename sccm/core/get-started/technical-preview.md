@@ -119,28 +119,27 @@ The following features are available with the most recent Configuration Manager 
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID-->
 
-- [Add joins, additional operators and aggregators in CMPivot](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4054074-->
-- [Auto-enrollment using device token](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4454491-->
-- [Azure Active Directory user group discovery](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--3611956-->
-- [Configuration Manager Update Database Upgrade Monitoring](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4200581-->
-- [Extend and Migrate on-premises System Center Configuration Manager environment to Microsoft Azure](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--3556022-->
-- [Filter applications deployed to devices](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4451056-->
-- [Improvements to maintenance tasks](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--3555894-->
-- [Manage Edge (Chromium) deployment and manage updates](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--3607398-->
-- [Management insights rule for secure client push](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4572953-->
-- [More frequent countdown notifications for restarts](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--3976435-->
-- [New Windows 10, version 1903 and later product category](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4682946-->
-- [Put a checkbox in TS to remove from cache after install](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4485675-->
-- [RBAC on Folders](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--3600867-->
-- [Redesigned notification for available software](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--3555904-->
-- [Remote control anywhere using Cloud Management Gateway](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4575930-->
-- [Several console features use Odata instead of WMI](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4223683-->
-- [Support for Windows Virtual Desktop](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--3556025-->
-- [Support re-evaluate after install in addition to re-evaluate after reboot](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4639943-->
-- [Third-party updates support v3 catalogs](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4469002-->
-- [WDATP Server 2019 support](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4399461-->
-- [Improvements to CMPivot](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4683130-->
-- [Improvements to OS deployment](/sccm/core/get-started/2019/technical-preview-1906#bkmk_anchor) <!--4668846-->
+- [Improvements to maintenance tasks](/sccm/core/get-started/2019/technical-preview-1906#improvements-to-maintenance-tasks) <!--3555894-->
+- [Configuration Manager update database upgrade monitoring](/sccm/core/get-started/2019/technical-preview-1906#configuration-manager-update-database-upgrade-monitoring) <!--4200581-->
+- [Configure different co-management workloads](/sccm/core/get-started/2019/technical-preview-1906#bkmk_comgmt_pilot) <!--3555750-->
+- [Redesigned notifications for newly available software](/sccm/core/get-started/2019/technical-preview-1906#redesigned-notifications-for-newly-available-software) <!--3555904-->
+- [RBAC on folders](/sccm/core/get-started/2019/technical-preview-1906#rbac-on-folders) <!--3600867-->
+- [Remote control anywhere using cloud management gateway](/sccm/core/get-started/2019/technical-preview-1906#remote-control-anywhere-using-cloud-management-gateway) <!--4575930-->
+- [Improvements to Community Hub](/sccm/core/get-started/2019/technical-preview-1906#bkmk_hub) <!--3555935-->
+- [Add joins, additional operators, and aggregators in CMPivot](/sccm/core/get-started/2019/technical-preview-1906#bkmk_cmpivot) <!--4054074-->
+- [Added CMPivot permissions to the Security Administrator role](/sccm/core/get-started/2019/technical-preview-1906#added-cmpivot-permissions-to-the-security-administrator-role) <!--4683130-->
+- [CMPivot standalone improvements](/sccm/core/get-started/2019/technical-preview-1906#cmpivot-standalone-improvements) <!--4619340-->
+- [Improvements to Configuration Manager console](/sccm/core/get-started/2019/technical-preview-1906#bkmk_console) <!--4223683-->
+- [Support for Windows Virtual Desktop](/sccm/core/get-started/2019/technical-preview-1906#bkmk_winsku) <!--3556025-->
+- [More frequent countdown notifications for restarts](/sccm/core/get-started/2019/technical-preview-1906#more-frequent-countdown-notifications-for-restarts) <!--3976435-->
+- [Co-management auto-enrollment using device token](/sccm/core/get-started/2019/technical-preview-1906#bkmk_comgmt) <!--4454491-->
+- [Additional options for third-party update catalogs](/sccm/core/get-started/2019/technical-preview-1906#additional-options-for-third-party-update-catalogs) <!--4469002-->
+- [Clear app content from client cache during task sequence](/sccm/core/get-started/2019/technical-preview-1906#bkmk_tscache) <!--4485675-->
+- [New Windows 10, version 1903 and later product category](/sccm/core/get-started/2019/technical-preview-1906#new-windows-10-version-1903-and-later-product-category) <!--4682946-->
+- [Management insights rule for NTLM fallback](/sccm/core/get-started/2019/technical-preview-1906#bkmk_ntlm) <!--4572953-->
+- [Filter applications deployed to devices](/sccm/core/get-started/2019/technical-preview-1906#bkmk_appcategory) <!--4451056-->
+- [Improvements to OS deployment](/sccm/core/get-started/2019/technical-preview-1906#bkmk_osd) <!--4668846, 2840337, 4512937-->
+- [Direct link to custom tabs in Software Center](/sccm/core/get-started/2019/technical-preview-1906#bkmk_swctr) <!--4655176-->
 
 > [!Note]  
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.  
