@@ -121,14 +121,13 @@ The following features are available with the most recent Configuration Manager 
 
 - [Improvements to maintenance tasks](/sccm/core/get-started/2019/technical-preview-1906#improvements-to-maintenance-tasks) <!--3555894-->
 - [Configuration Manager update database upgrade monitoring](/sccm/core/get-started/2019/technical-preview-1906#configuration-manager-update-database-upgrade-monitoring) <!--4200581-->
-- [Configure different co-management workloads](/sccm/core/get-started/2019/technical-preview-1906#bkmk_comgmt_pilot) <!--3555750-->
-- [Redesigned notifications for newly available software](/sccm/core/get-started/2019/technical-preview-1906#redesigned-notifications-for-newly-available-software) <!--3555904-->
+- [Multiple pilot groups for co-management workloads](/sccm/core/get-started/2019/technical-preview-1906#bkmk_comgmt_pilot) <!--3555750-->
+- [Redesigned notification logic for newly available software](/sccm/core/get-started/2019/technical-preview-1906#redesigned-notification-logic-for-newly-available-software) <!--3555904-->
 - [RBAC on folders](/sccm/core/get-started/2019/technical-preview-1906#rbac-on-folders) <!--3600867-->
 - [Remote control anywhere using cloud management gateway](/sccm/core/get-started/2019/technical-preview-1906#remote-control-anywhere-using-cloud-management-gateway) <!--4575930-->
 - [Improvements to Community Hub](/sccm/core/get-started/2019/technical-preview-1906#bkmk_hub) <!--3555935-->
 - [Add joins, additional operators, and aggregators in CMPivot](/sccm/core/get-started/2019/technical-preview-1906#bkmk_cmpivot) <!--4054074-->
-- [Added CMPivot permissions to the Security Administrator role](/sccm/core/get-started/2019/technical-preview-1906#added-cmpivot-permissions-to-the-security-administrator-role) <!--4683130-->
-- [CMPivot standalone improvements](/sccm/core/get-started/2019/technical-preview-1906#cmpivot-standalone-improvements) <!--4619340-->
+- [Improvements to CMPivot](/sccm/core/get-started/2019/technical-preview-1906#improvements-to-cmpivot) <!--4619340,4683130-->
 - [Improvements to Configuration Manager console](/sccm/core/get-started/2019/technical-preview-1906#bkmk_console) <!--4223683-->
 - [Support for Windows Virtual Desktop](/sccm/core/get-started/2019/technical-preview-1906#bkmk_winsku) <!--3556025-->
 - [More frequent countdown notifications for restarts](/sccm/core/get-started/2019/technical-preview-1906#more-frequent-countdown-notifications-for-restarts) <!--3976435-->
