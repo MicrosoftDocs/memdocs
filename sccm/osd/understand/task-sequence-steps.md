@@ -1521,6 +1521,7 @@ Use the following task sequence variables with this step:
 
 To add this step in the task sequence editor, select **Add**, select **General**, and select **Run PowerShell Script**.
 
+Note: Signed Powershell script must be saved in Unicode format and not ANSI(default) to work with this step
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
