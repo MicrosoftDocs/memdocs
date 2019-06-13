@@ -2,7 +2,7 @@
 title: How to deploy to pilot
 titleSuffix: Configuration Manager
 description: A how-to guide for deploying to a Desktop Analytics pilot group.
-ms.date: 04/22/2019
+ms.date: 06/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -51,25 +51,29 @@ Before you can deploy Windows, first create the software objects in Configuratio
 
 ## Deploy to pilot devices
 
-Configuration Manager uses the data from Desktop Analytics to create a collection for the pilot deployment. Don't deploy the task sequence using a traditional deployment. Use the following procedure to create a Desktop Analytics-integrated deployment:
+Configuration Manager uses the data from Desktop Analytics to create collections for the pilot and production deployments. Don't deploy the task sequence using a traditional deployment. Use the following procedure to create a Desktop Analytics-integrated phased deployment:
 
 1. In the Configuration Manager console, go to the **Software Library**, expand **Desktop Analytics Servicing**, and select the **Deployment Plans** node.  
 
 2. Select your deployment plan, and then select **Deployment Plan Details** in the ribbon.  
 
-3. In the **Pilot status** tile, select **Task sequence** from the drop-down list.  
+3. Select **Create Phased Deployment** in the ribbon. This action launches the Create Phased Deployment wizard.
+
+    > [!Tip]  
+    > If you want to create a classic task sequence deployment for just the pilot collection, select **Deploy** in the **Pilot status** tile. This action launches the Deploy Software Wizard. For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence).  
+
+4. Enter a name for the deployment, and select the task sequence to use. Then configure the following collections:  
+
+    - **First Collection**: Expand the **Deployment Plans** folder and select the **Pilot** folder. Select the pilot collection for this deployment plan.
+
+    - **Second Collection**: Expand the **Deployment Plans** folder and select the **Production** folder. Select the production collection for this deployment plan.
 
     > [!Note]  
-    > Don't use the **Application** option. It's reserved for future functionality.
-
-    Select **Deploy**. This action launches the Deploy Software Wizard for the selected object type.
-
-    > [!Note]  
-    > With the Desktop Analytics integration, Configuration Manager automatically creates a collection for the pilot deployment plan. It can take up to 10 minutes for this collection to synchronize before you can use it.<!-- 3887891 -->
+    > With the Desktop Analytics integration, Configuration Manager automatically creates pilot and production collections for the deployment plan. It can take up to 10 minutes for these collections to synchronize before you can use them.<!-- 3887891 -->
     >
-    > This collection is reserved for Desktop Analytics deployment plan devices. Manual changes to this collection aren't supported.<!-- 3866460, SCCMDocs-pr 3544 -->  
+    > These collections are reserved for Desktop Analytics deployment plan devices. Manual changes to these collections aren't supported.<!-- 3866460, SCCMDocs-pr 3544 -->  
 
-For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence).
+5. Complete the wizard to configure the phased deployment. For more information, see [Create phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence).
 
 
 
