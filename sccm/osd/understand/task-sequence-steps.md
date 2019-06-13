@@ -2,7 +2,7 @@
 title: Task sequence steps
 titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
-ms.date: 05/28/2019
+ms.date: 06/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -1520,6 +1520,9 @@ Use the following task sequence variables with this step:
 - [OSDLogPowerShellParameters](/sccm/osd/understand/task-sequence-variables#OSDLogPowerShellParameters) (starting in version 1902)<!--3556028-->  
 
 To add this step in the task sequence editor, select **Add**, select **General**, and select **Run PowerShell Script**.
+
+> [!Note]  
+> Use signed PowerShell scripts in Unicode format. ANSI format, which is the default, doesn't work with this step.
 
 ### Properties  
 
