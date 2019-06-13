@@ -156,6 +156,7 @@ See the main sections of this article for the specific prerequisites for site sy
 
 - If you're using the [administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service), the server that hosts the SMS Provider role requires .NET 4.5.2 or later  <!-- SCCMDocs issue #1203 -->
 
+- Web Server (IIS)
 
 ##  <a name="bkmk_2012acwspreq"></a> Application Catalog website point  
 
