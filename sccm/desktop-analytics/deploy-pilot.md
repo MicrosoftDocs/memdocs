@@ -36,6 +36,13 @@ The first step is to identify devices to include in the pilot. Desktop Analytics
 
 You'll see the data from Desktop Analytics that shows the number of devices it recommends including for the best coverage. This algorithm is primarily based on the use of important and critical apps, and the breadth of hardware configurations.
 
+Take the following actions for the additional recommended devices list:
+
+- **Add all to pilot**: Adds all of the recommended devices to the pilot group
+- **Add to pilot**: Only add individual devices
+- **Replace** any specific devices from the pilot
+- **Recalculate** when you're done making changes
+
 You can also make system-wide decisions about which Configuration Manager collections to include or exclude from pilots. In the main Desktop Analytics menu, in the Global Settings group, select **Global pilot**.
 
 ### Example
@@ -45,8 +52,12 @@ You can also make system-wide decisions about which Configuration Manager collec
     - All Windows 10 clients
     - All IT devices
     - CEO office
-- In the **Global pilot** settings, you include the **All Windows 10 clients** and **All IT devices** collections. You exclude the **CEO office** collection.
-- You create a deployment plan, and select all three collections.
+- In the **Global pilot** settings, you include the **All IT devices** collections. You exclude the **CEO office** collection.
+- You create a deployment plan, and select the **All Windows 10 clients** collection.
+- Your **Pilot devices included** list contains the following device sets:
+    - Any devices in your global pilot inclusion list: **All IT devices**
+    - Collections that are also part of the deployment plan target group: **All Windows 10 clients**
+- Desktop Analytics excludes from the **additional recommended devices** list any devices in your global pilot *exclusion* list: **CEO office**
 - Only the first two collections are considered as part of the pilot. After successful upgrades to those groups, and the assets are *ready*, Desktop Analytics synchronizes devices in the **CEO office** collection to the Configuration Manager production collection.
 
 
@@ -74,7 +85,7 @@ Before you can deploy Windows, first create the software objects in Configuratio
 
 ## Deploy to pilot devices
 
-Configuration Manager uses the data from Desktop Analytics to create collections for the pilot and production deployments. Don't deploy the task sequence using a traditional deployment. Use the following procedure to create a Desktop Analytics-integrated phased deployment:
+Configuration Manager uses the data from Desktop Analytics to create collections for the pilot and production deployments. To make sure devices are healthy after each deployment phase, use the following procedure to create a Desktop Analytics-integrated phased deployment:
 
 1. In the Configuration Manager console, go to the **Software Library**, expand **Desktop Analytics Servicing**, and select the **Deployment Plans** node.  
 
@@ -99,20 +110,40 @@ Configuration Manager uses the data from Desktop Analytics to create collections
 5. Complete the wizard to configure the phased deployment. For more information, see [Create phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence).
 
     > [!Note]  
-    > Use the default setting to **Automatically begin this phase after a deferral period (in days)**. Configuration Manager doesn't immediately add devices to the second production collection.
+    > Use the default setting to **Automatically begin this phase after a deferral period (in days)**. The following criteria must be met for the second phase to start:
     >
     > 1. Pilot devices need to upgrade and send back revised diagnostic data.
-    > 2. You need to review and make upgrade decisions in Desktop Analytics to mark important and critical assets as *ready*.
-    > 3. Desktop Analytics syncs to the Configuration Manager collections any production devices that meet the *ready* criteria.
+    > 1. The first phase reaches the **deployment success percentage** criteria for success. You configure this setting on the phased deployment.
+    > 1. You need to review and make upgrade decisions in Desktop Analytics to mark important and critical assets as *ready*. For more information, see [Review assets that need an upgrade decision](/sccm/desktop-analytics/deploy-prod#bkmk_review).
+    > 1. Desktop Analytics syncs to the Configuration Manager collections any production devices that meet the *ready* criteria.
     >
     > When the Configuration Manager phased deployment automatically moves onto the next phase, it only applies to devices that Desktop Analytics synchronizes into the production collection.
+
+> [!Important]  
+> These collections continue to sync as their membership changes. For example, if you identify an issue with an asset and mark it as **Unable**, devices with that asset no longer meet the *ready* criteria. These devices are dropped from the production deployment collection.
 
 
 ## Monitor
 
 ### Configuration Manager console
 
-Use Configuration Manager deployment monitoring the same as any other task sequence deployment. For more information, see [Monitor OS deployments](/sccm/osd/deploy-use/monitor-operating-system-deployments).
+Open the deployment plan. The **Preparing upgrade decisions - overall status** tile provides a summary of the status for the deployment plan. This status is for both your pilot and production collections. Devices can fall in one of the following categories:
+
+- **Up to date**: Devices have upgraded to the target Windows version for this deployment plan
+
+- **Upgrade decision complete**: One of the following states:
+    - Devices with noteworthy assets that are **Ready** or **Ready with remediation**
+    - The device state is **Blocked**, **Replace device** or **Reinstall device**
+
+- **Not reviewed**: Devices with noteworthy assets **Not reviewed** or **Review in progress**
+
+The device status updates in the **Pilot status** and **Production status** tiles with the following actions:
+
+- You make changes on the compatibility assessment
+- Devices get upgraded to the target version of Windows
+- Your deployment progresses
+
+You can also use Configuration Manager deployment monitoring the same as any other task sequence deployment. For more information, see [Monitor OS deployments](/sccm/osd/deploy-use/monitor-operating-system-deployments).
 
 
 ### Desktop Analytics portal
