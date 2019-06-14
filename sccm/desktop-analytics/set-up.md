@@ -2,7 +2,7 @@
 title: Set up Desktop Analytics
 titleSuffix: Configuration Manager
 description: A how-to guide for setting up and onboarding to Desktop Analytics.
-ms.date: 06/13/2019
+ms.date: 06/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -25,10 +25,10 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
 ## Initial onboarding
 
-1. Open the [Desktop Analytics portal](https://aka.ms/m365aprod) in Microsoft 365 Device Management as a user with **Company Admin** permissions. Select **Start**.  
+1. Open the [Desktop Analytics portal](https://aka.ms/m365aprod) in Microsoft 365 Device Management as a user with the **Global Admin** role. Select **Start**.  
 
     > [!Tip]  
-    > In the Configuration Manager console, go to the **Software Library** workspace, and select the **Desktop Analytics Servicing** node. In the *New to Desktop Analytics?* box, select the first link to *Sign in to Desktop Analytics*.  
+    > To access the Desktop Analytics portal from the Configuration Manager console, go to the **Software Library** workspace, select the **Desktop Analytics Servicing** node, and select **Plan deployments**.
 
 2. On the **Accept service agreement** page, review the service agreement, and select **Accept**.  
 
