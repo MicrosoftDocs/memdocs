@@ -31,42 +31,105 @@ To take full advantage of new Configuration Manager features, after you update t
 > `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1906+-+Configuration+Manager%22&locale=en-us`
 
 
-<!-- 
 ## <a name="bkmk_deprecated"></a> Deprecated features and operating systems
 
 Learn about support changes before they're implemented in [removed and deprecated items](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated).
 
-Version 1906 drops support for the following products:  
- -->
+Version 1906 drops support for the following features:  
+
+- Classic service deployment to Azure for cloud management gateway and cloud distribution point. For more information, see [Plan for CMG](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).
+
 
 
 ## <a name="bkmk_infra"></a> Site infrastructure
 
+### Site server maintenance task improvements
+<!--3555894-->
+
+### Configuration Manager update database upgrade monitoring
+<!--4200581-->
+
+### Management insights rule for NTLM fallback
+<!--4572953-->
+
+### Add a SQL AlwaysOn node
+<!--3127336-->
 
 
 
 ## <a name="bkmk_cloud"></a> Cloud-attached management
 
+### Cloud services cost estimator
+<!--3555774-->
+
+### Azure Active Directory user group discovery
+<!--3611956-->
+
+### Synchronize collection membership results to Azure Active Directory groups
+<!--3607475-->
+
+
+
+
+## <a name="bkmk_da"></a> Desktop Analytics
+
+### DALogsCollector tool
+<!--4622989-->
+
+### Changing the Desktop Analytics limiting collection on existing deployments
+<!--3218073-->
 
 
 
 ## <a name="bkmk_real"></a> Real-time management
 
+### CMPivot standalone
+<!--3555890-->
+
+### Add joins, additional operators and aggregators in CMPivot
+<!--4054074-->
+
+### Improvements to CMPivot
+<!--4619340,4683130-->
 
 
 
 ## <a name="bkmk_content"></a> Content management
 
+### Delivery Optimization download data in client data sources dashboard
+<!--3555759-->
+
+### Use your distribution point as an in-network cache server for Delivery Optimization
+<!--3555764-->
 
 
 
 ## <a name="bkmk_client"></a> Client management
 
+### Support for Windows Virtual Desktop
+<!--3556025-->
+
+### OneTrace (Preview)
+<!--3555962-->
+
+### 1906 client won't install on legacy OS (SHA-1)
+<!--4222696-->
+
+### Configure client cache minimum retention period
+<!--4485509-->
 
 
 
-<!-- ## <a name="bkmk_comgmt"></a> Co-management -->
+## <a name="bkmk_comgmt"></a> Co-management
 
+### Improvements to co-management auto-enrollment
+<!--3555961-->
+
+### Multiple pilot groups for co-management workloads
+<!--3555750-->
+
+### Co-management support for government cloud
+<!--4075452-->
 
 
 
@@ -77,40 +140,125 @@ Version 1906 drops support for the following products:
 
 ## <a name="bkmk_app"></a> Application management
 
+### Filter applications deployed to devices
+<!--4451056-->
+
+### Application groups
+<!--3555907-->
+
+### Retry the install of pre-approved applications
+<!--4336307-->
+
+### Install an application for a device
+<!--4402180-->
+
+### Improvements to app approvals
+<!--4224910-->
 
 
 
 ## <a name="bkmk_osd"></a> OS deployment
 
+### Task sequence debugger
+<!--3612274-->
+
+### Improvements to driver management
+<!--3555958-->
+
+### Clear app content from client cache during task sequence
+<!--4485675-->
+
+### Reclaim SEDO lock for task sequences
+<!--3699337-->
+
+### Pre-cache driver packages and OS images
+<!--4224642-->
+
+### Improvement to task sequence media creation
+<!--4090666-->
+
+### Improvements to OS deployment 
+<!--2839943,4447680-->
+<!--4512937,4224642-->
+<!--4668846, 2840337, 4512937-->
 
 
 
 ## <a name="bkmk_userxp"></a> Software Center
 
+### Improvements to Software Center tab customizations
+<!--4063773-->
+
+### Software Center infrastructure improvements
+<!--3555950-->
+
+### Redesigned notification for newly available software
+<!--3555904-->
+
+### More frequent countdown notifications for restarts
+<!--3976435-->
+
+### Direct link to custom tabs in Software Center
+<!--4655176-->
 
 
 
 ## <a name="bkmk_sum"></a> Software updates
 
+### Additional options for WSUS maintenance
+<!--4110109-->
+
+### Configure the default maximum run time for software updates
+<!--3734426-->
+
+### Configure dynamic update during feature updates
+<!--4062619-->
+
+### New Windows 10, version 1903 and later product category
+<!--4682946-->
+
+### Drill through required updates
+<!--4224414-->
 
 
 
 ## <a name="bkmk_o365"></a> Office management
 
+### Office 365 ProPlus upgrade readiness dashboard
+<!--4021125-->
 
 
 
-<!-- ## <a name="bkmk_inv"></a> Inventory -->
+## <a name="bkmk_inv"></a> Inventory
+
+### Improvement to Asset Intelligence
+<!--4586547-->
 
 
 
-## <a name="bkmk_pod"></a> Phased deployments
+<!-- ## <a name="bkmk_pod"></a> Phased deployments -->
+
+
+
+
+## <a name="bkmk_protect"></a> Protection
+
+### Windows Defender Application Guard file trust criteria
+<!--3555858-->
 
 
 
 
 ## <a name="bkmk_admin"></a> Configuration Manager console
 
+### Add SMBIOS GUID column to device and device collection nodes
+<!--4526580-->
+
+### RBAC on folders
+<!--3600867-->
+
+### Administration service support for security nodes
+<!--4223683-->
 
 
 
