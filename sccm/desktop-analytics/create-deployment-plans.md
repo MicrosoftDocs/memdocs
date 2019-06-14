@@ -25,7 +25,7 @@ This article provides the steps for creating a deployment plan in Desktop Analyt
 
 Follow the steps in this section to use Desktop Analytics to create a plan for deploying Windows 10.
 
-1. Open the [Desktop Analytics portal](https://aka.ms/m365aprod). Use credentials that have at least **Workspace Contributors** permissions.  
+1. Open the [Desktop Analytics portal](https://aka.ms/desktopanalytics). Use credentials that have at least **Workspace Contributors** permissions.  
 
 2. Select **Deployment Plans** in the Manage group.  
 
