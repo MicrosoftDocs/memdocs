@@ -2,7 +2,7 @@
 title: Deployment plans in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn about deployment plans in Desktop Analytics.
-ms.date: 06/10/2019
+ms.date: 06/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -57,6 +57,43 @@ The following readiness rules are available in deployment plans:
 
 - Low install count threshold for your Windows apps. If an app is installed on a higher percentage of computers than this threshold, the deployment plan marks the app as **Noteworthy**. This tag means you can decide how important it is to test during the pilot phase.  
 
+
+## Plan assets
+
+<!-- 4670224 -->
+
+While the [Assets](/sccm/desktop-analytics/about-assets) area also shows devices and apps, the **Plan assets** area under a specific deployment plan includes additional information.
+
+### Devices
+
+See the **Windows upgrade decision** for each device in the deployment plan.
+
+The Windows upgrade decision to **Replace device** can be due to one of the following reasons:
+
+- It failed a Windows 10 required processor check. For more information, see [Minimum hardware requirements](https://docs.microsoft.com/windows-hardware/design/minimum/minimum-hardware-requirements-overview#31-processor).
+- It has a BIOS block
+- It doesn't have enough memory
+- A boot critical component on the system has a blocked driver
+- The specific make and model can't upgrade
+- There's a display-class component with a driver block that has all of the following attributes:
+    - You don't override
+    - There's no driver in the new OS version
+    - It's not already on Windows Update
+- There's another plug-and-play component on the system that blocks upgrade
+- There's a wireless component that uses an XP-emulated driver
+- A network component with an active connection will lose its driver. In other words, after upgrade it could lose network connectivity.
+
+### Apps
+
+Set the **Upgrade decision** as well as the **Importance** for this app in this deployment plan. For more information, see [How to create deployment plans](/sccm/desktop-analytics/create-deployment-plans).
+
+In the details of the app, you can also see the following information: Recommendations, Compatibility risk factors, and Microsoft known issues. Use this information to help set the **Upgrade decision**. For more information, see [Compatibility assessment](/sccm/desktop-analytics/compat-assessment).
+
+The apps that Desktop Analytics shows as *noteworthy* are based on the low install count threshold for the readiness rules of the deployment plan. For more information, see [Readiness rules](/sccm/desktop-analytics/create-deployment-plans#readiness-rules).
+
+### Drivers
+
+See the list of drivers included with this deployment plan. Set the **Upgrade decision**, review Microsoft's recommendation, and see compatibility risk factors.
 
 
 ## Importance
