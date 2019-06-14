@@ -109,7 +109,7 @@ Go to **Updates Workspace** > **All Software Updates** and select one or more in
 
 -   If your selection contains only updates or bundles that have not been published or that are expired, you are asked to confirm deletion before they are removed.
 
--   If your selection includes an update or bundle that has been published and is not yet expired, you are given a warning. You should [expire](/sccm/sum/tools/updates-publisher-pubilcations#expire-or-reactivate-updates-and-bundles) those updates and then publish that change before you delete them from the repository.  
+-   If your selection includes an update or bundle that has been published and is not yet expired, you are given a warning. You should [expire](/sccm/sum/tools/updates-publisher-publications#expire-or-reactivate-updates-and-bundles) those updates and then publish that change before you delete them from the repository.  
 
 If you delete an update or bundle from a vendor and then import that catalog again, that update is restored to your repository.
 
