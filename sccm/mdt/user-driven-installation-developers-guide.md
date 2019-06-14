@@ -477,7 +477,7 @@ Figure 2. Folder structure for UDI development
 
 - **Field**. Use fields allow users to provide input. Fields appear as [Field](#Field) elements in the UDI Wizard configuration file (UDIWizard_Config.xml), which contains the configuration settings for each field. The corresponding wizard page editor needs to provide a method for editing the field configuration settings for the field using the [FieldElementControl](#FieldElementControl).  
 
-- **Properties**. Setters help create properties for entities on the page, such as pages in the [Page](#Page) element, fields in the [Field](#Field) element, or data in the [Data](#Data) or [DataItem](#DataItem) elements. You configure properties in the [Setter]() elements. Add a separate [Setter]() element for each property you want to define. You edit the properties using the [SetterControl](#SetterControl) and configure other [Setter]() elements using other controls.  
+- **Properties**. Setters help create properties for entities on the page, such as pages in the [Page](#Page) element, fields in the [Field](#Field) element, or data in the [Data](#Data) or [DataItem](#DataItem) elements. You configure properties in the [Setter](#Setter) elements. Add a separate [Setter](#Setter) element for each property you want to define. You edit the properties using the [SetterControl](#SetterControl) and configure other [Setter](#Setter) elements using other controls.  
 
 - **Data**. Data is used to store information for use by the wizard page and other components. You can define data for pages or fields using the [Data](#Data) or [DataItem](#DataItem) elements. The data can be defined in a flat or hierarchical structure through the proper use of the [Data](#Data) or [DataItem](#DataItem) elements. The Config.xml in the example in the SDK shows how to build flat data structures.  
 
@@ -3186,7 +3186,7 @@ GetService<ITSVariableBag>(Container(), &pTsBag);
 |[DesignerConfig](#DesignerConfig)|Specifies the root for all other elements|  
 |[DesignerMappings](#DesignerMappings)|Groups a set of [Page](#Page)elements|  
 |[Page](#Page)|Specifies a wizard page editor to be loaded in the UDI Wizard Designer, which is used to edit the configuration settings for a wizard page|  
-|[Param](#Param)|Specifies a parameter that is passed to the parent [Task](#Task) or [Validator](#Validator) element and corresponds to a [Setter]() element in the UDI Wizard configuration file **Note:**  The attributes for this element are different if the parent is the [Task](#Task) or [Validator](#Validator) element.|  
+|[Param](#Param)|Specifies a parameter that is passed to the parent [Task](#Task) or [Validator](#Validator) element and corresponds to a [Setter](#Setter) element in the UDI Wizard configuration file **Note:**  The attributes for this element are different if the parent is the [Task](#Task) or [Validator](#Validator) element.|  
 |[Task](#Task)|Specifies a task within the task library|  
 |[TaskItem](#TaskItem)|Specifies a group of parameters that are passed to the task|  
 |[TaskLibrary](#TaskLibrary)|Groups a set of [Task](#Task) elements|  
@@ -3311,7 +3311,7 @@ Table 58 lists the attributes of the [Page](#Page) element and a description for
  None.  
 
 ####  <a name="Param"></a> Param  
- This element specifies a parameter that is passed to the parent [Task](#Task) or [Validator](#Validator) element and corresponds to a [Setter]() element in the UDI Wizard configuration file.  
+ This element specifies a parameter that is passed to the parent [Task](#Task) or [Validator](#Validator) element and corresponds to a [Setter](#Setter) element in the UDI Wizard configuration file.  
 
 > [!NOTE]
 >  The attributes for this element are different if the parent is the [Task](#Task) or [Validator](#Validator) element.  
@@ -3336,7 +3336,7 @@ Table 58 lists the attributes of the [Page](#Page) element and a description for
 |-|-|  
 |**Description**|Specifies text that provides information about the parameter, which is displayed in the UDI Wizard Designer **Note:**  This attribute is valid only for the [Validator](#Validator) element.|  
 |**DisplayName**|Specifies the user-friendly name of the validator parameter, which is displayed for the appropriate UDI Wizard page in the UDI Wizard Designer (This name is usually more descriptive than the **Name** attribute.) **Note:**  This attribute is valid only for the [Validator](#Validator) element.|  
-|**Name**|Specifies the name of the parameter that is passed to the task or validator, depending on the parent element (This attribute will become the **Property** attribute in a [Setter]() element in the UDI Wizard configuration file.) **Note:**  This parameter is used for both [TaskItem](#TaskItem) and [Validator](#Validator) parent elements.|  
+|**Name**|Specifies the name of the parameter that is passed to the task or validator, depending on the parent element (This attribute will become the **Property** attribute in a [Setter](#Setter) element in the UDI Wizard configuration file.) **Note:**  This parameter is used for both [TaskItem](#TaskItem) and [Validator](#Validator) parent elements.|  
 
 ##### Remarks  
  None.  
@@ -3397,7 +3397,7 @@ Table 58 lists the attributes of the [Page](#Page) element and a description for
 
 |**Attribute**|**Description**|  
 |-|-|  
-|**Type**|Specifies the of element type that will be created in the UDI Wizard configuration file. An XML element will be created that corresponds to the value of this attribute. For example, if the value for this attribute is [File](#File), then a **File** element will be created in the UDI Wizard configuration file.<br /><br /> Currently, the only values supported are:<br /><br /> -   **File**, which requires two [Param](#Param) child elements (one **Param** child element with the **Name** attribute set to **Source** and another **Param** child element with the **Name** attribute set to **Dest**)<br />-   [Setter](), which requires one **Param** child element|  
+|**Type**|Specifies the of element type that will be created in the UDI Wizard configuration file. An XML element will be created that corresponds to the value of this attribute. For example, if the value for this attribute is [File](#File), then a **File** element will be created in the UDI Wizard configuration file.<br /><br /> Currently, the only values supported are:<br /><br /> -   **File**, which requires two [Param](#Param) child elements (one **Param** child element with the **Name** attribute set to **Source** and another **Param** child element with the **Name** attribute set to **Dest**)<br />-   [Setter](#Setter), which requires one **Param** child element|  
 
 ##### Remarks  
  None.  
@@ -3508,7 +3508,7 @@ Table 67 lists the attributes of the [Validator](#Validator) element and provide
 |-|-|  
 |[CollectionTControl](#CollectionTControl)|This control is used to edit data stored in the [Data](#Data) element within a [Page](#Page) element.|  
 |[FieldElementControl](#FieldElementControl)|This control is used to edit a field, which is typically linked to a TextBox control on the .xaml page.|  
-|[SetterControl](#SetterControl)|This control is used to modify the value of a [setter]() element in the UDI Wizard configuration file.|  
+|[SetterControl](#SetterControl)|This control is used to modify the value of a [setter](#Setter) element in the UDI Wizard configuration file.|  
 
 ####  <a name="CollectionTControl"></a> CollectionTControl  
  This control provides many capabilities for editing data. The best way to learn how to use this control is to look at the sample, which shows how to edit data under a page’s **Data** element. In particular, the sample shows how to add, remove, and edit items in this control.  
@@ -3602,10 +3602,10 @@ FieldData="{Binding DataContext.Location, ElementName=ControlRoot}"
 
 
 ####  <a name="SetterControl"></a> SetterControl  
- Use this control to modify the value of a [Setter]() element in the UDI Wizard configuration file. This control contains a child control used to modify the value of the **setter** element.  
+ Use this control to modify the value of a [Setter](#Setter) element in the UDI Wizard configuration file. This control contains a child control used to modify the value of the **setter** element.  
 
 ##### Example  
- The following excerpt from an .xaml file illustrates the use of the **SetterControl** to modify a [Setter]() element named **KeyLocationSetter** using a child **TextBox** control.  
+ The following excerpt from an .xaml file illustrates the use of the **SetterControl** to modify a [Setter](#Setter) element named **KeyLocationSetter** using a child **TextBox** control.  
 
 ```xaml
 <Controls:SetterControl Margin="5"  
@@ -3790,7 +3790,7 @@ void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);
 |**Element name**|**Description**|  
 |-|-|  
 |[Data](#Data)|Groups the individual [DataItem](#DataItem) elements within a [Page](#Page) element and is named by the **Name** attribute.|  
-|[DataItem](#DataItem)|Groups the individual [Setter]() elements within a [Page](#Page) element. You can create hierarchical data by including one or more [Data](#Data) elements within a [DataItem](#DataItem) element. Each **DataItem** element represents an individual item. For example, a list of available drives might have a **DataItem** for the display name and another **DataItem** element for the corresponding drive letter.|  
+|[DataItem](#DataItem)|Groups the individual [Setter](#Setter) elements within a [Page](#Page) element. You can create hierarchical data by including one or more [Data](#Data) elements within a [DataItem](#DataItem) element. Each **DataItem** element represents an individual item. For example, a list of available drives might have a **DataItem** for the display name and another **DataItem** element for the corresponding drive letter.|  
 |[Default](#default)|Specifies a default value for the field specified in the parent [Field](#Field) or [RadioGroup](#RadioGroup) element. The default is set to the value bracketed by this element.|  
 |[DLL](#DLL)|Specifies a DLL that is to be loaded and referenced by the UDI Wizard and the UDI Wizard Designer.|  
 |[DLLs](#DLLs)|Groups the individual [DLL](#DLL) elements.|  
@@ -3806,9 +3806,9 @@ void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);
 |[RadioGroup](#RadioGroup)|Specifies a group of radio buttons within a [Field](#Field) element.|  
 |[StageGroup](#StageGroup)|Specifies a group of one or more stages.|  
 |[StageGroups](#StageGroups)|Groups a set of stage groups within a UDI Wizard configuration file.|  
-|[Setter]()|Specifies a property setting of a value for a property that is named in the **Property** property.|  
+|[Setter](#Setter)|Specifies a property setting of a value for a property that is named in the **Property** property.|  
 |[Stage](#stage)|Specifies a stage within a [StageGroup](#StageGroup) and contains one or more [PageRef](#PageRef) elements.|  
-|[Style](#Style)|Groups the individual [setter]() elements that configure the UDI Wizard look and feel, including the title shown at the top of the wizard and the banner image shown on the UDI Wizard.|  
+|[Style](#Style)|Groups the individual [setter](#Setter) elements that configure the UDI Wizard look and feel, including the title shown at the top of the wizard and the banner image shown on the UDI Wizard.|  
 |[Task](#Task)|Specifies a task that is to be run on the page specified in the parent [Page](#Page) element.|  
 |[Tasks](#Tasks)|Groups a set of tasks for a [Page](#Page) element.|  
 |[Validator](#Validator)|Specifies a validator for the field control that is specified in the parent [Field](#Field) element.|  
@@ -3844,7 +3844,7 @@ Table 78 provides information about the [Data](#Data) element.
  None.  
 
 ####  <a name="DataItem"></a> DataItem  
- This element groups the individual [Setter]() elements within a [Page](#Page) element. You can create hierarchical data by including one or more [Data](#Data) elements within a [DataItem](#DataItem) element. Each **DataItem** element represents an individual item. For example, a list of available drives might have a **DataItem** for the display name and another **DataItem** element for the corresponding drive letter.  
+ This element groups the individual [Setter](#Setter) elements within a [Page](#Page) element. You can create hierarchical data by including one or more [Data](#Data) elements within a [DataItem](#DataItem) element. Each **DataItem** element represents an individual item. For example, a list of available drives might have a **DataItem** for the display name and another **DataItem** element for the corresponding drive letter.  
 
 ##### Element Information  
  Table 80 provides information about the [DataItem](#DataItem) element.  
@@ -4319,7 +4319,7 @@ Table 104 provides information about the [StageGroups](#StageGroups) element.
  This element specifies a property setting for the value for a property that is named in the **Property** property.  
 
 ##### Element Information  
- Table 105 provides information about the [Setter]() element.  
+ Table 105 provides information about the [Setter](#Setter) element.  
 
 ### Table 105. Setter Element Information  
 
@@ -4330,7 +4330,7 @@ Table 104 provides information about the [StageGroups](#StageGroups) element.
 |Contents|Contains a string value in the **Property** attribute|  
 
 ##### Element Attributes  
-Table 106 lists the attribute of the [Setter]() element and provides a description of it.  
+Table 106 lists the attribute of the [Setter](#Setter) element and provides a description of it.  
 
 ### Table 106. Attributes and Corresponding Values for the Setter Element  
 
@@ -4375,7 +4375,7 @@ Table 108 lists the attributes of the [Stage](#stage) element and provides a des
  None.  
 
 ####  <a name="Style"></a> Style  
- This element groups the individual [Setter]() elements that configure the UDI Wizard look and feel, including the title shown at the top of the wizard and the banner image shown on the UDI Wizard.  
+ This element groups the individual [Setter](#Setter) elements that configure the UDI Wizard look and feel, including the title shown at the top of the wizard and the banner image shown on the UDI Wizard.  
 
 ##### Element Information  
 Table 109 provides information about the Style element.  
