@@ -2,7 +2,7 @@
 title: Compatibility assessment
 titleSuffix: Configuration Manager
 description: Learn about compatibility assessment for Windows apps and drivers in Desktop Analytics.
-ms.date: 06/13/2019
+ms.date: 06/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -19,7 +19,7 @@ ms.collection: M365-identity-device-management
 > [!Note]  
 > This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
 
-Upgrade assessments in Windows Analytics were generic, for example: Attention Needed or Fix available. It doesn't provide any visual indicator on how to prioritize apps or drivers with issues or upgrade insights. Desktop Analytics replaces this feature with **Compatibility Assessment**. Desktop Analytics shows the assessment for apps only in the deployment view for a pre-upgrade scenario. It categorizes the apps based on insights Microsoft gets from the machines included in a current deployment plan.
+Upgrade assessments in Windows Analytics were generic, for example: Attention Needed or Fix available. It doesn't provide any visual indicator on how to prioritize apps or drivers with issues or upgrade insights. Desktop Analytics replaces this feature with **Compatibility Risk**. Desktop Analytics shows the assessment for apps only in the deployment view for a pre-upgrade scenario. It categorizes the apps based on insights Microsoft gets from the machines included in a current deployment plan.
 
 Desktop Analytics uses the following compatibility assessment categories:
 
@@ -31,25 +31,79 @@ Desktop Analytics uses the following compatibility assessment categories:
 
 - **Unknown**: The app wasn't assessed. There are no other insights such as *MS Known Issues* or *Ready for Windows*.  
 
+In the list of app or driver assets in a deployment plan, you'll see this value for each asset in the **Compatibility Risk** column.
 
-## Risk assessment engine
 
-There are several sources that Desktop Analytics uses to generate the assessment rating.
+## App risk assessment
 
-### MS known issues
+There are several sources that Desktop Analytics uses to generate the assessment rating for applications:
+
+- [Microsoft known issues](#microsoft-known-issues)
+- [Ready for Windows catalog](#ready-for-windows)
+- [Advanced insights](#advanced-insights)
+
+You can find the assessment for each source on the app in Desktop Analytics. In the list of app assets in a deployment plan, select an individual app to open its properties flyout pane. You'll see an overall recommendation and assessment level. The **Compatibility risk factors** section shows the detail for these assessments.
+
+
+## Microsoft known issues
 
 Desktop Analytics looks at the Microsoft app compatibility database for any known issues. It uses this database to determine any existing compatibility blocks for publicly available applications from Microsoft or other publishers. This check only applies to the target OS for the deployment plan you select.
 
-### Ready for Windows
+You'll see the following issues on the app properties pane as **MS known issues**:
 
-The [Ready for Windows](https://www.readyforwindows.com) app licationcatalog correlates the following data sources:
+### Application is removed during upgrade
+
+Windows detected compatibility issues. The application won't migrate to the new OS version. No action is required for the upgrade to continue.
+
+### Blocking upgrade
+
+Windows detected blocking issues, and can't remove the application during upgrade. It may not work on the new OS version. Before upgrading, remove the application. Reinstall and test it on the new OS version.
+
+### Blocking upgrade, but can be reinstalled after upgrading
+
+The application is compatible with the new OS version, but won't migrate. Remove the application before upgrading Windows. Reinstall it on the new OS version.
+
+### Blocking upgrade, update application to newest version
+
+The existing version of the application isn't compatible with the new OS version and won't migrate. A compatible version of the application is available. Update the application before upgrading.
+
+### Disk encryption blocking upgrade
+
+The application's encryption features block the upgrade. Disable the encryption feature before you upgrade Windows and enable it after the upgrade.
+
+### Does not work with new OS, but won't block upgrade
+
+The application isn't compatible with the new OS version, but won't block the upgrade. No action is required for the upgrade to continue. Install a compatible version of the application on the new OS version.
+
+### Does not work with new OS, and will block upgrade
+
+The application isn't compatible with the new OS version and will block the upgrade. Remove the application before upgrading. A compatible version of the application may be available.
+
+### Evaluate application on new OS
+
+Windows will migrate the application, but it detected issues that may impact the app's performance on the new OS version. No action is required for the upgrade to continue. Test the application on the new OS version.
+
+### May block upgrade, test application
+
+Windows detected issues that may interfere with the upgrade, but need further investigation. Test the application's behavior during upgrade. If it blocks the upgrade, remove it before upgrading. Then reinstall it and test on the new OS version.
+
+### Multiple
+
+Multiple issues affect the application. Select **Query** to see details about the issues detected by Windows.
+
+### Reinstall application after upgrading
+
+The application is compatible with the new OS version, but you need to reinstall it after you upgrade Windows. The upgrade process removes the application. No action is required for the upgrade to continue. Reinstall the application on the new OS version.
+
+
+## Ready for Windows
+
+The [Ready for Windows](https://www.readyforwindows.com) application catalog correlates the following data sources:
 
 - Diagnostic data from other customers who report the same apps
 - Additional checks from Microsoft like compatibility blocks on a device
 
 The possible categories are:
-
-- **Supported version available**: The software provider has declared support for one or more versions of this application on Windows 10.
 
 - **Highly adopted**: At least 100,000 commercial Windows 10 devices have installed this app.  
 
@@ -61,6 +115,16 @@ The possible categories are:
 
 - **Unknown**: There's no Ready for Windows information available for this version of this application. Information may be available for other versions of the application at [Ready for Windows](https://www.readyforwindows.com/).  
 
+### Support statement
+
+If the software provider supports one or more versions of this application on Windows 10, you'll see this statement on the app properties pane. In the Compatibility risk factors section, look at the **Support statement**.
+
+
+
+## Advanced insights
+
+Desktop Analytics can also detect issues using the following additional insights:
+
 ### Adopted version available
 
 There's another version of this app that's highly adopted by other customers. This signal uses data from Ready for Windows. If there are any upgrade blockers with your current version, consider deploying the alternative version instead.
@@ -70,40 +134,12 @@ There's another version of this app that's highly adopted by other customers. Th
 The app is dependent on a driver. Desktop Analytics recommends the app for pilot testing. It should work fine for pilot, but you'll find any regressions. If you have any problems, contact the publisher to request a version that's compliant with Windows 10.
 
 
-## Review applications
 
-If Microsoft knows of issues with applications, Desktop Analytics lists and groups them by **Attention needed** or **Fix available**.
+## Driver risk assessment
 
-### Attention needed
+Desktop Analytics also lists and groups by availability any drivers that won't migrate to the OS version.
 
-For applications assessed as **Attention needed**, review the following table for details:
-
-| Risk assessment | Action required? | Issue | What it means | Guidance |
-|-----------------|------------------|-------|---------------|----------|
-| Attention needed | No | Application is removed during upgrade | Windows detected compatibility issues. The application won't migrate to the new OS version. | No action is required for the upgrade to continue. |
-| Attention needed | Yes | Blocking upgrade | Windows detected blocking issues, and can't remove the application during upgrade. It may not work on the new OS version. | Before upgrading, remove the application. Reinstall and test it on the new OS version. |
-| Attention needed | No | Evaluate application on new OS | Windows will migrate the application, but it detected issues that may impact the app's performance on the new OS version. | No action is required for the upgrade to continue. Test the application on the new OS version. |
-| Attention needed | No | Does not work with new OS, but won't block upgrade | The application isn't compatible with the new OS version, but won't block the upgrade. | No action is required for the upgrade to continue. Install a compatible version of the application on the new OS version. |
-| Attention needed | Yes | Does not work with new OS, and will block upgrade | The application isn't compatible with the new OS version and will block the upgrade. | Remove the application before upgrading. A compatible version of the application may be available. |
-| Attention needed | Yes | May block upgrade, test application | Windows detected issues that may interfere with the upgrade, but need further investigation. | Test the application's behavior during upgrade. If it blocks the upgrade, remove it before upgrading. Then reinstall it and test on the new OS version. |
-| Attention needed | Maybe | Multiple | Multiple issues are affecting the application.| Select **Query** to see details about the issues detected by Windows. |
-
-### Fix available
-
-For applications assessed as **Fix available**, review the following table for details:
-
-| Risk assessment | Action required? | Issue | What it means | Guidance |
-|-----------------|------------------|-------|---------------|----------|
-| Fix available | Yes | Blocking upgrade, update application to newest version | The existing version of the application isn't compatible with the new OS version and won't migrate. A compatible version of the application is available. | Update the application before upgrading. |
-| Fix available| No | Reinstall application after upgrading | The application is compatible with the new OS version, but you need to reinstall it after you upgrade Windows. The upgrade process removes the application. | No action is required for the upgrade to continue. Reinstall the application on the new OS version. |
-| Fix available| Yes | Blocking upgrade, but can be reinstalled after upgrading | The application is compatible with the new OS version, but won't migrate. | Remove the application before upgrading Windows. Reinstall it on the new OS version. |
-| Fix available| Yes | Disk encryption blocking upgrade | The application's encryption features block the upgrade. | Disable the encryption feature before you upgrade Windows and enable it after the upgrade. |
-
-## Review drivers
-
-Desktop Analytics lists and groups by availability any drivers that won't migrate to the OS version.
-
-See the following table for details on the availability categories:
+You can find the assessment on the driver in Desktop Analytics. In the list of driver assets in a deployment plan, select an individual driver to open its properties flyout pane. You'll see an overall recommendation and assessment level. The **Compatibility risk factors** section shows the detail for these assessments.
 
 | Driver availability | Action required? | What it means | Guidance |
 |---------------------|------------------|---------------|----------|
