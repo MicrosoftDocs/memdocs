@@ -2,7 +2,7 @@
 title: How to create deployment plans
 titleSuffix: Configuration Manager
 description: A how-to guide for creating deployment plans in Desktop Analytics.
-ms.date: 06/10/2019
+ms.date: 06/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -20,7 +20,9 @@ ms.collection: M365-identity-device-management
 
 This article provides the steps for creating a deployment plan in Desktop Analytics. Before you start, first [learn about deployment plans](/sccm/desktop-analytics/about-deployment-plans).
 
-Follow the steps in this article to use Desktop Analytics to create a plan for deploying Windows 10.
+## Create a plan for Windows 10
+
+Follow the steps in this section to use Desktop Analytics to create a plan for deploying Windows 10.
 
 1. Open the [Desktop Analytics portal](https://aka.ms/m365aprod). Use credentials that have at least **Workspace Contributors** permissions.  
 
@@ -36,7 +38,7 @@ Follow the steps in this article to use Desktop Analytics to create a plan for d
 
     - **Device groups**: Select one or more groups, and then select **Set as Target Groups**. Groups with **SCCM** as the source are collections synchronized from Configuration Manager.  
 
-    - **Readiness rules**: These rules help to determine which devices qualify for upgrade.  
+    - **Readiness rules**: These rules help to determine which devices qualify for upgrade. For more information, see [Readiness rules](#readiness-rules).  
 
     - **Completion date**: Choose the date by which Windows should be fully deployed to all the targeted devices.  
 
@@ -64,9 +66,30 @@ Follow the steps in this article to use Desktop Analytics to create a plan for d
 
         For more information on how Desktop Analytics makes these recommendations, select the information icon in the top right corner of the **Identify pilot** pane.
 
+## Readiness rules
+
+These rules help you determine which devices qualify for in-place upgrade. You can set these rules when you create the deployment plan, or edit them later.
+
+To change the readiness rules:
+
+1. In the Desktop Analytics portal, select the deployment plan.
+1. Next to the name, select **Edit**.
+1. Select **Readiness rules**.
+1. Select **Windows OS**.
+1. Make changes as necessary, and select **Save**.
+
+For **Windows OS** upgrades, there are two rules available: Device drivers and Windows applications.
+
+### Device drivers
+
+Configure whether your devices get drivers from Windows Update. This value is **Off** by default. Enable this rule when you're using Windows Update for Business to manage updates including drivers. If you're using Configuration Manager to manage software updates, set this rule to **Off**.
+
+### Windows applications
+
+The apps that Desktop Analytics show as *noteworthy* are based on the low install count threshold. Set this threshold in the readiness rules for the deployment plan. By default, this threshold is **2.0%**. You can change the value from `0.0` to `10.0`.
 
 
-### Next steps
+## Next steps
 
 Advance to the next article to deploy to pilot devices.
 > [!div class="nextstepaction"]  
