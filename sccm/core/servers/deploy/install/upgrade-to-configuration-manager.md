@@ -127,7 +127,7 @@ Configuration Manager can't upgrade a primary site that has a database replica f
 
 For more information, see the following articles:  
 
-- System Center 2012 Configuration Manager: [Configure database replicas for management points](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/hh846234\(v=technet.10\))  
+- System Center 2012 Configuration Manager: [Configure database replicas for management points](/sccm/core/servers/deploy/configure/database-replicas-for-management-points#BKMK_DBReplica_Config)  
 
 - Configuration Manager, current branch: [Database replicas for management points](/sccm/core/servers/deploy/configure/database-replicas-for-management-points)  
 
@@ -149,7 +149,7 @@ Before you disable a task, record the schedule of the task so you can restore it
 
 For more information about site maintenance tasks, see the following articles:  
 
-- System Center 2012 Configuration Manager: [Planning for site operations](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg712686\(v=technet.10\))  
+- System Center 2012 Configuration Manager: [Planning for site operations](/sccm/core/plan-design/hierarchy/plan-for-the-site-database)  
 
 - Configuration Manager, current branch: [Reference for maintenance tasks](/sccm/core/servers/manage/reference-for-maintenance-tasks)  
 

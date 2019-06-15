@@ -20,7 +20,7 @@ ms.collection: M365-identity-device-management
 
 Use certificate profiles in Configuration Manager (SCCM) to provision managed devices with the certificates they need to access company resources. Before creating certificate profiles, set up the certificate infrastructure as described in [Set up certificate infrastructure for System Center Configuration Manager](certificate-infrastructure.md).  
 
-This topic describes how to create trusted root and SCEP certificate profiles. If you want to create PFX certificate profiles, see [Create PFX certificate profiles](../../protect/deploy-use/create-pfx-certificate-profiles.md).
+This topic describes how to create trusted root and SCEP certificate profiles. If you want to create PFX certificate profiles, see [Create PFX certificate profiles](/sccm/mdm/deploy-use/create-pfx-certificate-profiles).
 
 To create a certificate profile:
 
@@ -53,9 +53,9 @@ On the **General** page of the Create Certificate Profile Wizard, specify the fo
 
 -   **Simple Certificate Enrollment Protocol (SCEP) settings**: Select this certificate profile type if you want to request a certificate for a user or device, by using the Simple Certificate Enrollment Protocol and the Network Device Enrollment Service role service.
 
--   **Personal Information Exchange PKCS #12 (PFX) settings - Import**: Select this to import a PFX certificate. To learn more about PFX certificate creation see [Import PFX certificate profiles](/sccm/mdm/deploy-use/import-pfx-certificate-profiles.md).
+-   **Personal Information Exchange PKCS #12 (PFX) settings - Import**: Select this to import a PFX certificate. To learn more about PFX certificate creation see [Import PFX certificate profiles](/sccm/mdm/deploy-use/import-pfx-certificate-profiles).
 
--   **Personal Information Exchange PKCS #12 (PFX) settings - Create**: Select this to process PFX certificates using a certificate authority. To learn more about PFX certificate creation see [Create PFX certificate profiles](/sccm/mdm/deploy-use/create-pfx-certificate-profiles.md).
+-   **Personal Information Exchange PKCS #12 (PFX) settings - Create**: Select this to process PFX certificates using a certificate authority. To learn more about PFX certificate creation see [Create PFX certificate profiles](/sccm/mdm/deploy-use/create-pfx-certificate-profiles).
 
 
 ## Configure a trusted CA certificate  
