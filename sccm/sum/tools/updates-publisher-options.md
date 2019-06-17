@@ -34,7 +34,7 @@ Options are divided into the following:
 -   Logging
 
 ## Update Server
-You must configure Updates Publisher to work with update server like Windows Server Update Services (WSUS) before you can [publish updates](/sccm/sum/tools/manage-updates-with-updates-publisher#publish-updates-and-bundles). This includes specifying the server, methods to connect to that server when it is remote from the console, and a certificate to use to digitally sign updates you publish.
+You must configure Updates Publisher to work with update server like Windows Server Update Services (WSUS) before you can [publish updates](/sccm/sum/tools/manage-updates-with-updates-publisher#publish-updates-and-bundles-from-the-updates-workspace). This includes specifying the server, methods to connect to that server when it is remote from the console, and a certificate to use to digitally sign updates you publish.
 
 - **Configure an update server**. When you configure an update server, select the top-level WSUS server (update server) in your Configuration Manager hierarchy so that all child sites have access to the updates that you publish.
 
