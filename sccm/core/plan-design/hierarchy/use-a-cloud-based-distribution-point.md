@@ -90,7 +90,9 @@ Starting in version 1806, create a cloud distribution point using an **Azure Res
 > [!Note]  
 > This feature doesn't enable support for Azure Cloud Service Providers (CSP). The cloud distribution point deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
 
-The cloud distribution point wizard still provides the option for a **classic service deployment** using an Azure management certificate. To simplify the deployment and management of resources, Microsoft recommends using the Azure Resource Manager deployment model for all new cloud distribution points. If possible, redeploy existing cloud distribution points through Resource Manager.
+Starting in Configuration Manager version 1902, Azure Resource Manager is the only deployment mechanism for new instances of the cloud distribution point. Existing deployments continue to work.<!-- 3605704 -->
+
+In Configuration Manager version 1810 and earlier, the cloud distribution point wizard still provides the option for a **classic service deployment** using an Azure management certificate. To simplify the deployment and management of resources, use the Azure Resource Manager deployment model for all new cloud distribution points. If possible, redeploy existing cloud distribution points through Resource Manager.
 
 > [!Important]  
 > Starting in version 1810, the classic service deployment in Azure is deprecated for use in Configuration Manager. This version is the last to support creation of these Azure deployments. This functionality will be removed in the first Configuration Manager version released after July 1, 2019. Move your CMG and cloud distribution points to Azure Resource Manager deployments before this time. <!--SCCMDocs-pr issue #2993-->  
@@ -101,9 +103,9 @@ Configuration Manager doesn't migrate existing classic cloud distribution points
 
 Where you create the cloud distribution point depends upon which clients need to access the content. Starting in version 1806, there are three types of cloud distribution points:  
 
-- Classic service deployment: Create this type only at a primary site.  
-
 - Azure Resource Manager deployment: Create this type at a primary site or the central administration site.  
+
+- Classic service deployment: Create this type only at a primary site.  
 
 - The cloud management gateway can also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs. For more information, see [Plan for cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).<!--1358651-->  
 
@@ -134,16 +136,16 @@ When you use a cloud distribution point in your hierarchy, use the following inf
 
 - When using the **Azure Resource Manager** deployment method, integrate Configuration Manager with [Azure AD](/sccm/core/servers/deploy/configure/azure-services-wizard) for **Cloud Management**. Azure AD *user discovery* isn't required.  
 
-- If using the Azure classic deployment method, you need an **Azure management certificate**. For more information, see the [Certificates](#bkmk_certs) section below.  
+- A **server authentication certificate**. For more information, see the [Certificates](#bkmk_certs) section below.  
+
+    - To reduce complexity, use a public certificate provider for the server authentication certificate. When doing so, you also need a **DNS CNAME alias** for clients to resolve the name of the cloud service.  
+
+- In Configuration Manager version 1810 or earlier, if using the Azure classic deployment method, you need an **Azure management certificate**. For more information, see the [Certificates](#bkmk_certs) section below.  
 
     > [!TIP]  
     > Starting with Configuration Manager version 1806, use the **Azure Resource Manager** deployment model. It doesn't require this management certificate.  
     >
     > The classic deployment method is deprecated as of version 1810.  
-
-- A **server authentication certificate**. For more information, see the [Certificates](#bkmk_certs) section below.  
-
-    - To reduce complexity, Microsoft recommends using a public certificate provider for the server authentication certificate. When doing so, you also need a **DNS CNAME alias** for clients to resolve the name of the cloud service.  
 
 - Set the client setting, **Allow access to cloud distribution points**, to **Yes** in the **Cloud Services** group. By default, this value is set to **No**.  
 
@@ -235,9 +237,9 @@ A cloud distribution point uses the following Azure components, which incur char
 
 - Cloud distribution points use the following standard blob storage depending upon the deployment model:  
 
-    - A classic deployment uses Azure geo-redundant storage (GRS). For more information, see [Geo-redundant storage](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs).  
-
     - An Azure Resource Manager deployment use Azure locally redundant storage (LRS). This change reduces the cost of the storage account. The classic deployment wasn't using the additional features of GRS. For more information, see [Locally redundant storage](https://docs.microsoft.com/azure/storage/common/storage-redundancy-lrs).  
+
+    - A classic deployment with Configuration Manager version 1810 or earlier uses Azure geo-redundant storage (GRS). For more information, see [Geo-redundant storage](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs).  
 
 #### Other costs
 
@@ -316,19 +318,6 @@ Certificates for cloud distribution points support the following configurations:
 
 - Starting in version 1802, support for TLS 1.2. For more information, see [Cryptographic controls technical reference](/sccm/core/plan-design/security/cryptographic-controls-technical-reference#about-ssl-vulnerabilities).  
 
-### Azure management certificate
-
-*This certificate is required for classic service deployments. It isn't required for Azure Resource Manager deployments.*
-
-If using the Azure classic deployment method, you need an **Azure management certificate**. For more information, see the [Azure management certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#azure-management-certificate) section of the cloud management gateway certificates article. The Configuration Manager site server uses this certificate to authenticate with Azure to create and manage the classic deployment.  
-
-> [!TIP]  
-> Starting with Configuration Manager version 1806, use the **Azure Resource Manager** deployment model. It doesn't require this management certificate.  
->
-> The classic deployment method is deprecated as of version 1810.  
-
-To reduce complexity, use the same Azure management certificate for all classic deployments of cloud distribution points and cloud management gateways, across all Azure subscriptions and all Configuration Manager sites.
-
 ### Server authentication certificate
 
 *This certificate is required for all cloud distribution point deployments.*
@@ -344,6 +333,21 @@ The cloud distribution point uses this type of certificate in the same way as th
 Unless you use a wildcard certificate, don't reuse the same certificate. Each instance of the cloud distribution point and cloud management gateway requires a unique server authentication certificate.
 
 For more information on creating this certificate from a PKI, see [Deploy the service certificate for cloud distribution points](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clouddp2008_cm2012).  
+
+### Azure management certificate
+
+*This certificate is required for classic service deployments. It isn't required for Azure Resource Manager deployments.*
+
+> [!Important]  
+> Starting with Configuration Manager version 1806, use the **Azure Resource Manager** deployment model. It doesn't require this management certificate.  
+>
+> The classic deployment method is deprecated as of version 1810.  
+>
+> Starting in Configuration Manager version 1902, Azure Resource Manager is the only deployment mechanism for new instances of the cloud distribution point. This certificate isn't required in Configuration Manager version 1902 or later.<!-- 3605704 -->
+
+If using the Azure classic deployment method with Configuration Manager version 1810 or earlier, you need an **Azure management certificate**. For more information, see the [Azure management certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#azure-management-certificate) section of the cloud management gateway certificates article. The Configuration Manager site server uses this certificate to authenticate with Azure to create and manage the classic deployment.  
+
+To reduce complexity, use the same Azure management certificate for all classic deployments of cloud distribution points and cloud management gateways, across all Azure subscriptions and all Configuration Manager sites.
 
 
 ## <a name="bkmk_faq"></a> Frequently asked questions (FAQ)
