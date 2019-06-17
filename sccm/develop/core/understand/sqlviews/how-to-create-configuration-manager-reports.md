@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Information about how to create two types of reports directly from the Configuration Manager console.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other #app client compliance hybrid osd protect sum
+ms.technology: configmgr-other
 ms.topic: conceptual
 ms.collection: M365-identity-device-management
 ms.assetid: 3b07899b-2301-475b-9803-5ec5a82b5aa1

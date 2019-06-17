@@ -39,7 +39,7 @@ A certificate signing request file is required to request an APNs certificate fr
 ## Request an MDM Push certificate from Apple
 The MDM Push certificate is used to establish a trust relationship between the management service, Intune, and enrolled iOS mobile devices.  
 
-1.  In a browser, go to the [Apple Push Certificates Portal](http://go.microsoft.com/fwlink/?LinkId=269844) and sign in with your company Apple ID. This Apple ID must be used in future to renew your APNs certificate.  
+1.  In a browser, go to the [Apple Push Certificates Portal](https://identity.apple.com/pushcert) and sign in with your company Apple ID. This Apple ID must be used in future to renew your APNs certificate.  
 
 2.  Complete the wizard using the certificate signing request (.csr) file. Download the MDM Push certificate and save the pem file locally. This certificate (.pem) file is used to establish a trust relationship between the Apple Push Notification server and Intune's mobile device management authority.  
 

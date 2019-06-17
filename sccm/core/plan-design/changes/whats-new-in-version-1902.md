@@ -2,7 +2,11 @@
 title: What's new in version 1902
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1902 of Configuration Manager current branch.
+<<<<<<< HEAD
 ms.date: 05/15/2019
+=======
+ms.date: 05/28/2019
+>>>>>>> eb45e71f543938b183cd5950785988608612c877
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -70,12 +74,14 @@ The management insights feature has the following new rules:
 
 
 ### Improvement to enhanced HTTP
+
 <!--3798957-->
-You can now enable enhanced HTTP per primary site or for the central administration site. 
 
-On the properties of the central administration site, select the option to **Use Configuration Manager-generated certificates for HTTP site systems**. This setting only applies to site system roles in the central administration site. It isn't a global setting for the hierarchy. 
+***[Updated]*** You can now enable enhanced HTTP per primary site or for the central administration site.
 
-<!-- For more information, see [enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http). -->
+On the properties of the central administration site, select the option to **Use Configuration Manager-generated certificates for HTTP site systems**. This setting only applies to site system roles in the central administration site. It isn't a global setting for the hierarchy.
+
+For more information, see [enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).
 
 
 ### Improvement to setup prerequisites
@@ -132,33 +138,38 @@ You can now **Edit** or **Copy** an existing PowerShell script used with the Run
 
 ## <a name="bkmk_content"></a> Content management
 
-### Distribution point maintenance mode 
-<!--3555754-->
-You can now set a distribution point in maintenance mode. Enable maintenance mode when you're installing software updates, or making hardware changes to the server.
+### Distribution point maintenance mode
 
-While the distribution point is in maintenance mode, it has the following behaviors: 
+<!--3555754-->
+
+***[Updated]*** You can now set a distribution point in maintenance mode. Enable maintenance mode when you're installing software updates, or making hardware changes to the server.
+
+While the distribution point is in maintenance mode, it has the following behaviors:
 
 - The site doesn't distribute any content to it.  
 
-- Management points don't return the location of this distribution point to clients. 
+- Management points don't return the location of this distribution point to clients.
 
-- When you update the site, a distribution point in maintenance mode still updates. 
+- When you update the site, a distribution point in maintenance mode still updates.
 
 - The distribution point properties are read-only. For example, you can't change the certificate or add boundary groups.  
 
-- Any scheduled task, like content validation, still runs on the same schedule. 
+- Any scheduled task, like content validation, still runs on the same schedule.
 
-<!-- For more information, see [Maintenance mode](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_maint) -->
+For more information on this feature, see [Maintenance mode](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_maint).
+
+For more information on automating this process with the Configuration Manager SDK, see [SetDPMaintenanceMode method in class SMS_DistributionPointInfo](/sccm/develop/reference/core/servers/configure/setdpmaintenancemode-method-in-class-sms-distributionpointinfo).
 
 
 
 ## <a name="bkmk_client"></a> Client management
 
 ### Client provisioning mode timeout
-<!--3197824-->
-The task sequence sets a timestamp when it puts the client in provisioning mode. A client in provisioning mode checks every 60 minutes the duration of time since the timestamp. If it's been in provisioning mode for more than 48 hours, the client automatically exits provisioning mode and restarts its process. 
 
-<!-- For more information, see ... -->
+<!--3197824-->
+***[Updated]*** The task sequence sets a timestamp when it puts the client in provisioning mode. A client in provisioning mode checks every 60 minutes the duration of time since the timestamp. If it's been in provisioning mode for more than 48 hours, the client automatically exits provisioning mode and restarts its process.
+
+For more information, see [Provisioning mode](/sccm/osd/understand/provisioning-mode).
 
 ### View first screen only during remote control
 <!--3231732-->
@@ -187,10 +198,11 @@ For more information, see [How to configure Wake on LAN](/sccm/core/clients/depl
 ## <a name="bkmk_app"></a> Application management
 
 ### Improvements to application approvals via email
-<!--3594063-->
-This version has improvements to the feature to receive email notifications for application requests. Users could  always add a comment to the request from Software Center. This comment shows on the application request in the Configuration Manager console. Now that comment also shows in the email. Including this comment in the email helps the approvers make a better decision to approve or deny the request.
 
-<!-- For more information, see [Email notifications](/sccm/apps/deploy-use/app-approval#bkmk_email-approve). -->
+<!--3594063-->
+***[Updated]*** This version has improvements to the feature to receive email notifications for application requests. Users could  always add a comment to the request from Software Center. This comment shows on the application request in the Configuration Manager console. Now that comment also shows in the email. Including this comment in the email helps the approvers make a better decision to approve or deny the request.
+
+For more information, see [Email notifications](/sccm/apps/deploy-use/app-approval#bkmk_email-approve).
 
 
 ### Improvements to Package Conversion Manager
@@ -241,25 +253,27 @@ when you create task sequence media, Configuration Manager doesn't add an autoru
 
 
 ### Import a single index of an OS image
+
 <!--3719699-->
-When importing a Windows image (WIM) file to Configuration Manager, you can now specify to automatically import a single index rather than all image indexes in the file. This option provides the following benefits:
+***[Updated]*** When importing a Windows image (WIM) file to Configuration Manager, you can now specify to automatically import a single index rather than all image indexes in the file. This option provides the following benefits:
 
 - Smaller image file  
 - Faster offline servicing  
-- Optimize image servicing, for a smaller image file after offline servicing 
+- Optimize image servicing, for a smaller image file after offline servicing
 
 When you import an OS image, select the option to **Extract a specific image index from the specified WIM file**. Then select the image index from the list.  
 
-<!-- For more information, see [Add an OS image](/sccm/osd/get-started/manage-operating-system-images#BKMK_AddOSImages). -->
+For more information, see [Add an OS image](/sccm/osd/get-started/manage-operating-system-images#BKMK_AddOSImages).
 
 
 ### Optimized image servicing
+
 <!--3555951-->
-When you apply software updates to an OS image, there's a new option to optimize the output by removing any superseded updates. The optimization to offline servicing only applies to images with a single index. 
+***[Updated]*** When you apply software updates to an OS image, there's a new option to optimize the output by removing any superseded updates. The optimization to offline servicing only applies to images with a single index.
 
-When you create a schedule to update an OS image, select the option to **Remove superseded updates after the image is updated**. 
+When you create a schedule to update an OS image, select the option to **Remove superseded updates after the image is updated**.
 
-<!-- For more information, see [Apply software updates to an image](/sccm/osd/get-started/manage-operating-system-images#BKMK_OSImagesApplyUpdates).  -->
+For more information, see [Apply software updates to an image](/sccm/osd/get-started/manage-operating-system-images#bkmk_resetbase).
 
 
 ### Improvements to Run PowerShell Script task sequence step
@@ -300,7 +314,7 @@ For more information, see [Run PowerShell Script](/sccm/osd/understand/task-sequ
 
 - When you set the **OSDDoNotLogCommand** task sequence variable to true, now it also hides the command line from the Run Command Line step in the log file. It previously only masked the program name from the Install Package step in smsts.log.<!--3654172-->  
 
-- When you enable a PXE responder on a distribution point without Windows Deployment Service, it can now be on the same server as the DHCP service. <!--3734270-->  <!-- For more information, see ... -->
+- When you enable a PXE responder on a distribution point without Windows Deployment Service, it can now be on the same server as the DHCP service. <!--3734270--> For more information, see [Configure at least one distribution point to accept PXE requests](/sccm/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network#BKMK_Configure).
 
 
 
@@ -388,9 +402,9 @@ For more information, see [Manage Office 365 updates](/sccm/sum/deploy-use/manag
 
 ### Office products on lifecycle dashboard
 <!--3556026-->
-The product lifecycle dashboard now includes information for installed versions of Office 2003 through Office 2016. Data shows up after the site runs the lifecycle summarization task, which is every 24 hours.
+***[Updated]*** The product lifecycle dashboard now includes information for installed versions of Office 2003 through Office 2016. Data shows up after the site runs the lifecycle summarization task, which is every 24 hours.
 
-<!-- For more information, see [Use the Product Lifecycle dashboard](/sccm/core/clients/manage/asset-intelligence/product-lifecycle-dashboard). -->
+For more information, see [Use the Product Lifecycle dashboard](/sccm/core/clients/manage/asset-intelligence/product-lifecycle-dashboard).
 
 
 
@@ -511,7 +525,9 @@ The following additional hotfixes are available to address specific issues:
 | ID | Title | Date | In-console |
 |---------|---------|---------|---------|
 | [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune connector certificate does not renew in Configuration Manager | 18 January 2019 | Yes |
- 
+
+> [!Note]  
+> Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](/sccm/core/servers/manage/updates#bkmk_supersede).
 -->
 
 

@@ -130,10 +130,6 @@ To stop the site, you can use the [hierarchy maintenance tool](/sccm/core/server
 
 Stopping the site is equivalent to stopping the Site Component Manager service (sitecomp) followed by the SMS_Executive service, on the site server.
 
-> [!TIP]  
-> If you use a primary passive replica (introduced in this Technical Preview as [Site server role high availability](#site-server-role-high-availability)), you do not need to stop the passive replica. Only the active primary site must be stopped.
-
-
 
 ## Improved user notifications for Office 365 updates
 Improvements have been made to leverage the Office Click-to-Run user experience when a client installs an Office 365 update. This includes pop-up and in-app notifications, and a countdown experience. Prior to this release, when an Office 365 update was sent to a client, Office applications that were open were automatically closed without warning. After this update, Office applications will no longer be closed unexpectedly.

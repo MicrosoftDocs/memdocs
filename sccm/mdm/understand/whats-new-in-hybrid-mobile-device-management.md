@@ -2,7 +2,7 @@
 title: What's new in hybrid MDM
 titleSuffix: Configuration Manager
 description: Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune.
-ms.date: 04/18/2019
+ms.date: 05/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -41,6 +41,46 @@ Each section of this article lists hybrid features under three different categor
 |**New in Configuration Manager Technical Preview**| All the features listed under this category only work with the specified technical preview branch. To try out these features, you must install the technical preview version specified in the feature description. For more information, see [Technical preview for Configuration Manager](/sccm/core/get-started/technical-preview).|
 |**New in Configuration Manager (current branch)**| All the features listed under this category only work with the specified version of Configuration Manager (current branch). If you're using an older version of Configuration Manager for your hybrid deployment, upgrade to the Configuration Manager (current branch)  version specified in the feature description. For more information, see [Upgrade to Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager).|
 
+
+## May 2019
+
+### New in Microsoft Intune
+
+#### Windows Company Portal app
+
+<!-- 3316993 -->
+
+The Windows Company Portal app now has a new page labeled **Devices**. The **Devices** page shows users all of their enrolled devices. Users will see this change in the Company Portal when they use version 10.3.4291.0 and later. For more information, see [How to configure the Microsoft Intune Company Portal app](https://docs.microsoft.com/intune/company-portal-app).
+
+#### Android Enterprise app management
+
+<!-- 4459905 -->
+
+To make it easier for you to configure and use Android Enterprise management, Intune automatically adds the following four common Android Enterprise related apps to the Intune admin console:
+
+- [Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune): Used for Android Enterprise fully managed scenarios
+- [Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator): If you use two-factor verification, this app helps you sign in to your accounts
+- [Intune Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal): Used for App Protection Policies (APP) and Android Enterprise work profile scenarios
+- [Managed Home Screen](https://play.google.com/store/apps/details?id=com.microsoft.launcher.enterprise): Used for Android Enterprise dedicated/kiosk scenarios
+
+Previously, during setup you needed to manually find and approve these apps in the [Managed Google Play store](https://play.google.com/store/apps). This change removes those previously manual steps to make it easier and faster for you to use Android Enterprise management.
+
+When you first connect their Intune tenant to Managed Google Play, you see these four apps automatically added to you Intune apps list. For more information, see [Enable Android for Work enrollment](/sccm/mdm/deploy-use/enroll-hybrid-android#enable-android-for-work-enrollment). If you've already connected your tenant or already use Android Enterprise, there's nothing you need to do. These four apps automatically show up within seven days after the May 2019 service update.
+
+#### Intune policies update authentication method and Company Portal app installation
+
+<!-- 1927359 -->
+
+On devices already enrolled via Setup Assistant through one of Apple's corporate device enrollment methods, Intune doesn't support the Company Portal when it's manually installed by users from the app store. This change is only relevant when you authenticate with Apple Setup Assistant during enrollment. It only affects iOS devices enrolled through the following methods:  
+
+- Apple Configurator
+- Apple Business Manager
+- Apple School Manager
+- Apple Device Enrollment Program (DEP)
+
+If users install the Company Portal app from the app store, and then try to enroll these devices through it, they receive an error. In addition, the **Identify your device** screen in the Company Portal app will soon become obsolete.
+
+To install the Company Portal on already-enrolled DEP devices, push it as a managed app with app configuration policies. For more information on this process, see [Apply settings to iOS apps with app configuration policies in Configuration Manager](/sccm/mdm/deploy-use/configure-ios-apps-with-app-configuration-policies).
 
 
 ## April 2019
@@ -156,7 +196,7 @@ The new [Tenant Status page](https://docs.microsoft.com/intune/tenant-status) pr
 #### New help and support experience in Company Portal for Windows 10
 
 <!--1488939-->  
-The new Company Portal Help & Support page helps users troubleshoot and request help for app and access problems. From the new page, they can email error and diagnostic log details and find their organization's helpdesk details. They'll also find a FAQ section with links to the relevant Intune documentation. For more information and screenshots, see [Get help and support in Company Portal for Windows 10](https://docs.microsoft.com/intune-user-help/help-and-support-windows-cpapp).
+The new Company Portal Help & Support page helps users troubleshoot and request help for app and access problems. From the new page, they can email error and diagnostic log details and find their organization's helpdesk details. They'll also find a FAQ section with links to the relevant Intune documentation. For more information and screenshots, see [Get help and support in Company Portal for Windows 10](https://docs.microsoft.com/intune-user-help/help-support-windows-cpapp).
 
 #### Some BitLocker settings support Windows 10 Pro edition
 
@@ -331,7 +371,7 @@ The **Apps** page's **Installed** view lets you see details about completed and 
 #### More opportunities to sync in the Company portal app for Windows
 
 <!--2683177-->  
-The Company Portal app for Windows now lets you initiate a sync directly from the Windows taskbar and Start menu. This feature is especially useful if your only task is to sync devices and get access to corporate resources. To access the new feature, right-click the Company Portal icon that's pinned to your taskbar or Start menu. In the menu options, select **Sync this device**. (This menu is also referred to as a jump list.) The Company Portal opens to the **Settings** page and initiates your sync. For the updated procedure, see [Sync your Windows device manually](https://docs.microsoft.com/intune/intune-user-help/sync-your-device-manually-windows#sync-from-device-taskbar-or-start-menu).
+The Company Portal app for Windows now lets you initiate a sync directly from the Windows taskbar and Start menu. This feature is especially useful if your only task is to sync devices and get access to corporate resources. To access the new feature, right-click the Company Portal icon that's pinned to your taskbar or Start menu. In the menu options, select **Sync this device**. (This menu is also referred to as a jump list.) The Company Portal opens to the **Settings** page and initiates your sync. For the updated procedure, see [Sync your Windows device manually](https://docs.microsoft.com/intune-user-help/sync-your-device-manually-windows#sync-from-device-taskbar-or-start-menu).
 
 
 
@@ -711,7 +751,23 @@ Using Azure Active Directory (Azure AD), you can now restrict access to web site
 
 ## Notices
 
-### Plan for Change: Intune supports macOS 10.12 and higher in December 
+### Update your Android Company Portal app to the latest version
+
+<!-- 4536963 -->
+
+Intune periodically releases updates to the Android Company Portal app. In November 2018, we released a Company Portal update that includes a back-end switch to prepare for Google's change from their existing notification platform to Google's Firebase Cloud Messaging (FCM). When Google retires their existing notification platform and moves to FCM, users need to update their Company Portal app to at least the November 2018 release to continue communicating with the Google Play Store.
+
+#### How does this change affect me?
+
+Our data indicates there are tenants that have devices with a Company Portal version earlier than 5.0.4269.0. If this version (or later) of the Company Portal app isn't installed, admin-initiated device actions may not work as expected. These actions include wipe, reset password, available and required app installs, and certificate enrollment.
+
+#### What do I need to do to prepare for this change?
+
+Ask users of Android devices that haven't updated the Company Portal version to update it through Google Play. Notify your help desk in case a user hasn't kept auto-updating the Company Portal app. For more information about Google’s FCM platform and change, see [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
+
+
+### Plan for Change: Intune supports macOS 10.12 and higher in December
+
 <!--2970975-->  
 
 Apple released macOS 10.14, so starting in December 2018, Intune will support macOS 10.12 and higher. 

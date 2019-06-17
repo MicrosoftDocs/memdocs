@@ -2,7 +2,7 @@
 title: Approve applications
 titleSuffix: Configuration Manager
 description: Learn about the settings and behaviors for application approval in Configuration Manager.
-ms.date: 12/14/2018
+ms.date: 05/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -17,8 +17,7 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-When [deploying an application](/sccm/apps/deploy-use/deploy-applications) in Configuration Manager, you can require approval before installation. Users request the application in Software Center, and then you review the request in the Configuration Manager console. You can approve or deny the request. 
-
+When [deploying an application](/sccm/apps/deploy-use/deploy-applications) in Configuration Manager, you can require approval before installation. Users request the application in Software Center, and then you review the request in the Configuration Manager console. You can approve or deny the request.
 
 
 ## <a name="bkmk_approval"></a> Approval settings
@@ -26,6 +25,7 @@ When [deploying an application](/sccm/apps/deploy-use/deploy-applications) in Co
 The application approval behavior depends upon your version of Configuration Manager. One of the following approval settings appears on the **Deployment Settings** page of the application deployment:  
 
 #### Require administrator approval if users request this application
+
 *Applies to versions 1710 and earlier*
 
 The administrator approves any user requests for the application before the user can install it. This option is grayed out when the deployment purpose is **Required**, or when you deploy the application to a device collection.  
@@ -34,15 +34,15 @@ Application approval requests are displayed in the **Approval Requests** node, u
 
 After you've approved an application for installation, you can **Deny** the request in the Configuration Manager console. This action doesn't cause the client to uninstall the application from any devices. It stops users from installing new copies of the application from Software Center.  
 
-
 #### An administrator must approve a request for this application on the device
+
 *Applies to versions 1802 and later <sup>[Note 1](#bkmk_note1)</sup>*
 
 <a name="bkmk_note1"></a>
 
 > [!Note]  
-> **Note 1**: Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options). 
-> 
+> **Note 1**: Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).
+>
 > If you don't enable this feature, you see the prior experience.  
 
 The administrator approves any user requests for the application before the user can install it on the requested device. If the administrator approves the request, the user is only able to install the application on that device. The user must submit another request to install the application on another device. This option is grayed out when the deployment purpose is **Required**, or when you deploy the application to a device collection. <!--1357015-->  
@@ -59,21 +59,26 @@ After you've approved an application for installation, you can **Deny** the requ
 > [!Important]  
 > Starting in version 1806, *the behavior has changed* when you revoke approval for an application that was previously approved and installed. Now when you **Deny** the request for the application, the client uninstalls the application from the user's device.<!--1357891-->  
 
+Automate the approval process with the [Approve-CMApprovalRequest](https://docs.microsoft.com/powershell/module/configurationmanager/approve-cmapprovalrequest?view=sccm-ps) PowerShell cmdlet. Starting in version 1902, this cmdlet includes the **InstallActionBehavior** parameter. Use this parameter to specify whether to install the application right away or during non-business hours.<!-- SCCMDocs-pr issue #3418 -->
 
 
 ## <a name="bkmk_email-approve"></a> Email notifications
+
 <!--1321550-->
 
 Starting in version 1810, configure email notifications for application approval requests. When a user requests an application, you receive an email. Click links in the email to approve or deny the request, without requiring the Configuration Manager console.
 
-You can define the email addresses of the users who can approve or deny the request while creating a new deployment for the application. If you need to change the list of email addresses afterwards, go to the **Monitoring** workspace, expand **Alerts**, and select the **Subscriptions** node. Select **Properties** from one of the **Approve application via email** subscriptions that's related to your application deployment. 
+You can define the email addresses of the users who can approve or deny the request while creating a new deployment for the application. If you need to change the list of email addresses afterwards, go to the **Monitoring** workspace, expand **Alerts**, and select the **Subscriptions** node. Select **Properties** from one of the **Approve application via email** subscriptions that's related to your application deployment.
 
-If there is more than one alert, you can determine which alert goes with which deployment. Open the alert properties, and view the list of **Selected alerts** on the General tab. The deployment is enabled as the alert for this subscription. 
+If there is more than one alert, you can determine which alert goes with which deployment. Open the alert properties, and view the list of **Selected alerts** on the General tab. The deployment is enabled as the alert for this subscription.
+
+Users can add a comment to the request from Software Center. This comment shows on the application request in the Configuration Manager console. Starting in version 1902, that comment also shows in the email. Including this comment in the email helps the approvers make a better decision to approve or deny the request.<!--3594063-->
 
 
 ### Prerequisites
 
 #### To send email notifications and take action on internal network
+
 With these prerequisites, recipients receive an email with notification of the request. If they are on the internal network, they can also approve or deny the request from the email.
 
 - Enable the [optional feature](/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Approve application requests for users per device**.  
@@ -89,8 +94,8 @@ With these prerequisites, recipients receive an email with notification of the r
 
     - Manually bind a PKI-based certificate to port 443 in IIS on the server that hosts the SMS Provider role  
 
-
 #### To take action from internet
+
 With these additional optional prerequisites, recipients can approve or deny the request from anywhere they have internet access.
 
 - Enable the SMS Provider administration service through the cloud management gateway. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Servers and Site System Roles** node. Select the server with the SMS Provider role. In the details pane, select the **SMS Provider** role, and select **Properties** in the ribbon on the Site Role tab. Select the option to **Allow Configuration Manager cloud management gateway traffic for administration service**.  
@@ -121,7 +126,7 @@ With these additional optional prerequisites, recipients can approve or deny the
 
             1. In the Edit manifest pane, find the **oauth2AllowImplicitFlow** property.  
 
-            2. Change its value to **true**. For example, the entire line should look like the following line: `"oauth2AllowImplicitFlow": true,`   
+            2. Change its value to **true**. For example, the entire line should look like the following line: `"oauth2AllowImplicitFlow": true,`  
 
             3. Select **Save**.  
 
@@ -145,7 +150,6 @@ With these additional optional prerequisites, recipients can approve or deny the
 Review the **NotiCtrl.log** file on the site server for troubleshooting.
 
 
-## Maintenance 
+## Maintenance
 
 Configuration Manager stores the information about the application approval request in the site database. For requests that are cancelled or denied, the site deletes the request history after 30 days. You can configure this deletion behavior with the **Delete Aged Application Request Data** [site maintenance task](/sccm/core/servers/manage/maintenance-tasks). The site never deletes any approved or pending application requests.
-

@@ -13,9 +13,10 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to create configuration items for iOS and Mac OS X devices managed with Intune
+
 Use the System Center Configuration Manager **iOS and Mac OS X** configuration item to manage settings  for iOS and Mac OS X devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
   
-### To create an iOS and Mac OS X configuration item  
+## Create an iOS and Mac OS X configuration item  
   
 1. In the Configuration Manager console, click **Assets and compliance**.  
   
@@ -31,7 +32,7 @@ Use the System Center Configuration Manager **iOS and Mac OS X** configuration i
   
 7. On the **Supported Platforms** page of the wizard, select the specific iOS, or Mac OS X platforms that will evaluate the configuration item.  
   
-8. On the **Device Settings** page of the wizard, select the settings group that you want to configure. See [iOS and Mac OS X configuration item settings reference](#BKMK_Setref) in this topic for details, and then click **Next**.  
+8. On the **Device Settings** page of the wizard, select the settings group that you want to configure. See [iOS and Mac OS X configuration item settings reference](#ios-and-mac-os-x-configuration-item-settings-reference) in this topic for details, and then click **Next**.  
   
    > [!TIP]  
    >  If the setting that you want is not listed, select the **Configure additional settings that are not in the default setting groups check box**.  
@@ -86,7 +87,7 @@ Use the System Center Configuration Manager **iOS and Mac OS X** configuration i
 |**Voice assistant while locked**|Allows use of a voice assistance app like Siri when the device is locked.|  
 |**Screen capture**|Allows you to take a screenshot of the device display.|  
 |**Video chat client**|Allows use of video chat apps like Facetime.|  
-|**Multiplayer gaming**|Allows you to play games with other players on the Internet.|  
+|**Multiplayer gaming**|Allows you to play games with other players on the internet.|  
 |**Personal wallet software while locked**|Allows use of personal wallet software like Passbook.|  
 |**Diagnostic data submission**|Allow submission of app log files.|  
 |**Action Center Notifications**|Allow the user to access the notifications view without unlocking the device.|
@@ -110,8 +111,8 @@ Use the System Center Configuration Manager **iOS and Mac OS X** configuration i
 |**Predictive keyboards** (supervised only)|Allow the use of predictive keyboards that suggest words the user might want.|
 |**Keyboard spell-check** (supervised only)|Allows the device spell checker.|
 |**Notification settings modification** (supervised only)|Allow the user to change the device notification settings.|
-|**Return results from the Internet in Spotlight search** (supervised only)|Let Spotlight search connect to the Internet to provide further results.|
-|**Use Siri to query user-generated content from the Internet** (supervised only)|Allow Siri to access websites to answer questions.|
+|**Return results from the internet in Spotlight search** (supervised only)|Let Spotlight search connect to the internet to provide further results.|
+|**Use Siri to query user-generated content from the internet** (supervised only)|Allow Siri to access websites to answer questions.|
 
   
 ###  Store  
@@ -132,7 +133,7 @@ Use the System Center Configuration Manager **iOS and Mac OS X** configuration i
   
 |Setting name|Details|  
 |------------------|-------------|  
-|**Default browser**|User can change the default Internet browser.|  
+|**Default browser**|User can change the default internet browser.|  
 |**Autofill**|User can change autocomplete settings in the browser.|  
 |**Active scripting**|Browser can run scripts, such as Active X scripts.|  
 |**Pop-up blocker**|Enables or disables the browser pop-up blocker.|  

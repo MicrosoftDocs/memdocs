@@ -2,7 +2,7 @@
 title: Tutorial - Deploy Windows 10
 titleSuffix: Configuration Manager
 description: A tutorial on using Desktop Analytics and Configuration Manager to deploy Windows 10 to a pilot group.
-ms.date: 04/25/2019
+ms.date: 06/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: tutorial
@@ -44,7 +44,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
     For more information, see [Desktop Analytics prerequisites](/sccm/desktop-analytics/overview#prerequisites).
 
-- Configuration Manager, version 1810 with update rollup 2 (4488598) or later, with **Full administrator** role  
+- Configuration Manager, version 1902 with update rollup (4500571) or later, with **Full administrator** role  
 
 - Installation media for the latest version of Windows 10
 
@@ -54,7 +54,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
     - The latest Windows 10 cumulative quality update  
 
-    - Configuration Manager client version 1810 with update rollup 2 (4488598) or later  
+    - Configuration Manager client version 1902 with update rollup (4500571) or later  
 
 - Business approval to configure Windows diagnostic data level to **Enhanced (Limited)** on the pilot devices  
 
@@ -73,8 +73,6 @@ Before you start this tutorial, make sure you have the following prerequisites:
     - `https://eaus2watcab02.blob.core.windows.net`  
     - `https://weus2watcab01.blob.core.windows.net`  
     - `https://weus2watcab02.blob.core.windows.net`  
-    - `https://www.msftncsi.com`  
-    - `https://www.msftconnecttest.com`  
     - `https://kmwatsonc.events.data.microsoft.com`  
     - `https://oca.telemetry.microsoft.com`  
     - `https://login.live.com`  
@@ -92,7 +90,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
 Use this procedure to sign in to Desktop Analytics and configure it in your subscription. This procedure is a one-time process to set up Desktop Analytics for your organization.  
 
-1. Open the Desktop Analytics portal in Microsoft 365 Device Management as a user with **Global Admin** permissions. Select **Start**.  
+1. Open the [Desktop Analytics portal](https://aka.ms/desktopanalytics) in Microsoft 365 Device Management as a user with **Global Admin** permissions. Select **Start**.  
 
 2. On the **Accept service agreement** page, review the service agreement, and select **Accept**.  
 
@@ -137,6 +135,10 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
 7. In the new browser tab, pick an account to use to sign in. Select the option to **Consent on behalf of your organization** and select **Accept**.  
 
+
+    > [!Note]  
+    > This consent is to assign the MALogAnalyticsReader application the Log Analytics Reader role for the workspace. This application role is required by Desktop Analytics. For more information, see [MALogAnalyticsReader application role](/sccm/desktop-analytics/troubleshooting#bkmk_MALogAnalyticsReader).  
+
 8. Back on the page to **Set up your workspace**, select **Next**.  
 
 9. On the **Last steps** page, select **Go to Desktop Analytics**. The Azure portal shows the Desktop Analytics **Home** page.  
@@ -149,9 +151,9 @@ Use this procedure to update Configuration Manager, connect to Desktop Analytics
 
 ### Update Configuration Manager
 
-Install the Configuration Manager version 1810 update rollup 2 (4488598) to support integration with Desktop Analytics. For more information on this update, see [Update rollup for Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4488598).
+Install the Configuration Manager version 1902 update rollup (4500571) to support integration with Desktop Analytics. For more information on this update, see [Update rollup for Configuration Manager current branch, version 1902](https://support.microsoft.com/help/4500571).
 
-1. Update the site with the update rollup for version 1810. For more information, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates).  
+1. Update the site with the update rollup for version 1902. For more information, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates).  
 
 2. Update clients. To simplify this process, consider using automatic client upgrade. For more information, see [Upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).  
 
@@ -226,7 +228,7 @@ Configuration Manager synchronizes your collections within 60 minutes of creatin
 
 Use this procedure to create a deployment plan in Desktop Analytics.
 
-1. Open the [Desktop Analytics portal](https://aka.ms/m365aprod). Use credentials that have at least **Workspace Contributors** permissions.  
+1. Open the [Desktop Analytics portal](https://aka.ms/desktopanalytics). Use credentials that have at least **Workspace Contributors** permissions.  
 
 2. Select **Deployment Plans** in the Manage group.  
 
@@ -250,7 +252,7 @@ Use this procedure to create a deployment plan in Desktop Analytics.
 
     - **Completion date**: Choose the date by which Windows should be fully deployed to all the targeted devices.  
 
-5. Select **Create**. The new plan appears in the list of deployment plans while its being processed. Processing can take up to 48 hours before you can proceed to the next step.  
+5. Select **Create**. The new plan appears in the list of deployment plans while its being processed. To expedite processing, request an on-demand data refresh. For more information, see [Desktop Analytics FAQ](/sccm/desktop-analytics/faq#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).
 
 6. Open the deployment plan by selecting its name.  
 
@@ -260,7 +262,7 @@ Use this procedure to create a deployment plan in Desktop Analytics.
 
     2. Select each app, and then select **Edit**. You can select more than one app to edit at the same time.  
 
-    3. Choose an importance level from the **Importance** list. If you want Desktop Analytics to validate the app during the pilot, select **Critical** or **Important**. It doesn't validate apps marked as **Not Important**. Consider the [compatibility risk](/sccm/desktop-analytics/compat-risk) and other plan insights when assigning importance levels.  
+    3. Choose an importance level from the **Importance** list. If you want Desktop Analytics to validate the app during the pilot, select **Critical** or **Important**. It doesn't validate apps marked as **Not Important**. Assess its [compatibility](/sccm/desktop-analytics/compat-assessment) and other plan insights when assigning importance levels.  
 
         When assigning importance levels, you can also choose the Upgrade decision.  
 

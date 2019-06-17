@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Information about the collections, collection rules, and collection members.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other #app client compliance hybrid osd protect sum
+ms.technology: configmgr-other
 ms.topic: conceptual
 ms.collection: M365-identity-device-management
 ms.assetid: fbccfda5-8577-41ba-9e89-ce027e1917e2

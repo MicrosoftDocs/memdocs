@@ -2,7 +2,7 @@
 title: Desktop Analytics
 titleSuffix: Configuration Manager
 description: An overview of the Desktop Analytics service integrated with Configuration Manager.
-ms.date: 04/22/2019
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: overview
@@ -65,7 +65,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 ### Technical
 
-- An active Azure subscription  
+- An active Azure subscription, with [Global Admin](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator) permissions  
 
     - **Workspace owner** or **contributor** permissions to **Set up your workspace**, and the following roles:  
 
@@ -75,7 +75,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
         - [**Owner**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner), or [**Contributor**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) and [**User Access Administrator**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) permissions on the subscription to create a workspace in a new resource group.  
 
-- Configuration Manager, version 1810 with update rollup 2 (4488598) or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
+- Configuration Manager, version 1902 with update rollup (4500571) or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
 
     - **Full Administrator** role in Configuration Manager  
 
@@ -83,7 +83,12 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
     - Install the latest updates. For more information, see [Update devices](/sccm/desktop-analytics/enroll-devices#update-devices).  
 
-    - Devices also need to have the Configuration Manager client, version 1810 with update rollup 2 (4488598) or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
+    - Devices also need to have the Configuration Manager client, version 1902 with update rollup (4500571) or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
+
+    > [!Note]  
+    > Desktop Analytics doesn't support upgrades to Windows 10 long-term servicing channel (LTSC). For more information, see [Windows as a service overview](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
+    >
+    > Desktop Analytics is designed to best support the in-place upgrade scenario. If you need to make major changes, such as from 32-bit to 64-bit architecture, use an imaging scenario. Desktop Analytics insights are still valuable in these classic OS deployment scenarios, but you can ignore the in-place upgrade specific guidance. For more information, see [Scenarios to deploy enterprise operating systems with Configuration Manager](/sccm/osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems).
 
 - Windows diagnostics data. For more information, see the following articles:  
 
@@ -96,20 +101,14 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 ### Licensing
 
-Most features in Desktop Analytics don't require any additional licenses or subscriptions. When configured properly, use of Desktop Analytics doesn't incur any Azure cost.
+Desktop Analytics requires one of the following license subscriptions:
 
-To access Windows health insights or to export data, there are additional license requirements. If you don't have one of the following subscriptions, you can still set up and use Desktop Analytics, but you aren't licensed to use Windows health insights or to export data:
+- Windows 10 Enterprise E3 or E5; or Microsoft 365 F1, E3, or E5  
 
-- Windows 10 Enterprise or Windows 10 Education: per-device with active Software Assurance  
+- Windows 10 Education A3 or A5; or Microsoft 365 A3 or A5  
 
-- Windows 10 Enterprise E3 or E5: per-device or per-user subscription (included with Microsoft 365 F1, E3, or E5)  
+- Windows VDA E3 or E5  
 
-- Windows 10 Education A3 or A5 (included with Microsoft 365 Education A3 or A5)  
-
-- Windows Virtual Desktop Access E3 or E5: per-device of per-user subscription  
-
-> [!Note]  
-> For per-device licenses, you don't have to activate each device with a license. You just need enough licenses for devices enrolled in Desktop Analytics.  
 
 
 

@@ -44,9 +44,10 @@ Each boundary is available for use by every site in your hierarchy. After a boun
         >  You can specify the **Network** and **Subnet mask** to have the **Subnet ID** automatically specified. When you save the boundary, only the Subnet ID value is saved.  
 
     -   If you select **Active Directory site**, you must specify or **Browse** to an Active Directory site in the local forest of the site server.  
+        
+        - When you specify an Active Directory site for a boundary, the boundary includes each IP Subnet that is a member of that Active Directory site. If the configuration of the Active Directory site changes in Active Directory, the network locations included in this boundary also change.  
 
-        > [!IMPORTANT]  
-        >  When you specify an Active Directory site for a boundary, the boundary includes each IP Subnet that is a member of that Active Directory site. If the configuration of the Active Directory site changes in Active Directory, the network locations included in this boundary also change.  
+        - Active Directory site boundaries do not work for pure AzureAD clients. If they roam on-premises they will not fall into any boundary if only defined using AD Sites.
 
     -   If you select **IPv6 prefix**, you must specify a **Prefix** in the IPv6 prefix format.  
 

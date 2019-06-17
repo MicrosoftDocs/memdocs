@@ -26,10 +26,10 @@ THIRD-PARTY SOFTWARE NOTICES AND INFORMATION
 
 - [Newtonsoft.Json.DLL](#newtonsoftjsondll-version)
 - [OpenSSL](#openssl)
-- [SSLeay/SSL implementation written by Eric Young](#ssleayssl-implemenentation-written-by-eric-young)
+- [SSLeay/SSL implementation written by Eric Young](#ssleayssl-implementation-written-by-eric-young)
 - [Camellia assembler implementation by Andy Polyakov](#camellia-assembler-implementation)
 - [FreeBSD's cd.c.](#freebsds-cdc)
-- [Julian Elischer for TRW Financial Systems for use under the MACH(2.5) operating system](#julian-elischer-juliantfscom-for-trw-financial-systems-for-use-under-the-mach25-operating-system)
+- [Julian Elischer for TRW Financial Systems for use under the MACH(2.5) operating system](#julian-elischer-julian-for-trw-financial-systems-for-use-under-the-mach25-operating-system)
 - [The Internet Society (1999)](#the-internet-society)
 - [AngularJS v1.4.3](#angularjs-v143)
 - [c3 v0.4.10](#c3-v0410)

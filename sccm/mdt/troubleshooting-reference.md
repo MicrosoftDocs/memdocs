@@ -1,19 +1,15 @@
 ---
-
-title: "Troubleshoot MDT"
-titleSuffix: "Microsoft Deployment Toolkit"
-description: "Troubleshooting reference for the Microsoft Deployment Toolkit "
-ms.date:  09/09/2016
+title: Troubleshoot MDT
+titleSuffix: Microsoft Deployment Toolkit
+description: Troubleshooting reference for the Microsoft Deployment Toolkit (MDT)
+ms.date: 09/09/2016
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-osd
+ms.technology: configmgr-osd
 ms.topic: article
-ms.assetid:  91a7a69a-deac-4b0f-aac9-b7bd187c53fb
-
+ms.assetid: 91a7a69a-deac-4b0f-aac9-b7bd187c53fb
 author: aczechowski  
 ms.author: aaroncz 
-manager: angrobe
-
+manager: dougeby
 ---
 
 # Troubleshooting Reference for the Microsoft Deployment Toolkit
@@ -578,7 +574,7 @@ Figure 2. NTFS data streams
  Configure Unattend.xml to join a workgroup. Then, use the built\-in **Recover from Domain** task sequence step to add a step in the task sequence to join the domain after the static IP has been applied.  
 
 ### Driver Installation  
- To ensure the best possible user experience, installation of hardware devices and software drivers should run as seamlessly as possible, with little or no user intervention. Microsoft provides tools and guidelines to help create installation packages that meet this goal. For general information about driver installation, see [Device and Driver Installation](http://www.microsoft.com/whdc/driver/install/default.mspx).  
+ To ensure the best possible user experience, installation of hardware devices and software drivers should run as seamlessly as possible, with little or no user intervention. Microsoft provides tools and guidelines to help create installation packages that meet this goal. For general information about driver installation, see [Device and Driver Installation](https://docs.microsoft.com/windows-hardware/drivers/install/).  
 
  Review device driver installation–related problems and solutions:  
 

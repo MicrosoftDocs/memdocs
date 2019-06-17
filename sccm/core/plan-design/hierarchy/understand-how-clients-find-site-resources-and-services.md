@@ -70,9 +70,9 @@ When the client cannot find a valid management point in its MP list, it searches
 
 After a client successfully locates and contacts a management point, it downloads the current list of management points that are available in the hierarchy, and it updates the local MP list. This applies equally to clients that are domain joined and those that are not.  
 
-For example, when a Configuration Manager client that is on the Internet connects to an Internet-based management point, the management point sends that client a list of available Internet-based management points in the site. Similarly, clients that are domain joined or in workgroups also receive the list of management points that they might use.  
+For example, when a Configuration Manager client that is on the internet connects to an internet-based management point, the management point sends that client a list of available internet-based management points in the site. Similarly, clients that are domain joined or in workgroups also receive the list of management points that they might use.  
 
-A client that is not configured for the Internet is not provided Internet-facing-only management points. Workgroup clients configured for the Internet communicate only with Internet-facing management points.  
+A client that is not configured for the internet is not provided internet-facing-only management points. Workgroup clients configured for the internet communicate only with internet-facing management points.  
 
 ##  <a name="BKMK_MPList"></a> The MP list  
 The MP list is the preferred service location source for a client, because it is a prioritized list of management points that the client previously identified. This list is sorted by each client based on its network location when the client updates the list, and then stored locally on the client in WMI.  
@@ -142,7 +142,7 @@ Clients on the intranet can use DNS for service location. This requires at least
 Consider using DNS for service location when any of the following conditions are true:
 -   The AD DS schema is not extended to support Configuration Manager.
 -   Clients on the intranet are located in a forest that is not enabled for Configuration Manager publishing.  
--   You have clients on workgroup computers, and those clients are not configured for Internet-only client management. (A workgroup client configured for the Internet will communicate only with Internet-facing management points and will not use DNS for service location.)  
+-   You have clients on workgroup computers, and those clients are not configured for internet-only client management. (A workgroup client configured for the internet will communicate only with internet-facing management points and will not use DNS for service location.)  
 -   You can [configure clients to find management points from DNS](http://technet.microsoft.com/library/gg682055).  
 
 When a site publishes service location records for management points to DNS:  

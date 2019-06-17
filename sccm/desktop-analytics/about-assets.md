@@ -2,7 +2,7 @@
 title: Assets in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn about devices, drivers, and apps in Desktop Analytics.
-ms.date: 04/22/2019
+ms.date: 06/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -35,7 +35,7 @@ The **Devices** tab displays key information about all devices in your organizat
 > [!NOTE]  
 > If the dashboard isn't reporting the number of devices you expect to see for your environment, see [Desktop Analytics troubleshooting](/sccm/desktop-analytics/troubleshooting).  
 
-
+In a deployment plan, there's more detail about devices. For more information, see [Plan assets](/sccm/desktop-analytics/about-deployment-plans#plan-assets)
 
 ## Apps
 
@@ -52,9 +52,13 @@ Configure the **Importance** of apps by setting one of the following categories:
 
 Select the app from the list, and select **Edit**. This action displays details for the app. Select the **Importance** drop-down menu and set a value. You can also assign an **Owner**. If you make any changes, select **Save**.
 
+In a deployment plan, you can also set the **Upgrade decision**. For more information, see [Plan assets](/sccm/desktop-analytics/about-deployment-plans#plan-assets)
+
 
 ## Next steps
 
 - [Learn about Desktop Analytics deployment plans](/sccm/desktop-analytics/about-deployment-plans)  
 
 - [Learn about security and feature updates](/sccm/desktop-analytics/about-updates)  
+
+- [Compatibility assessment in Desktop Analytics](/sccm/desktop-analytics/compat-assessment)  

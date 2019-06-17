@@ -2,7 +2,7 @@
 title: Task sequence steps
 titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
-ms.date: 05/03/2019
+ms.date: 06/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -283,6 +283,9 @@ Configure the task sequence to access the OS image directly from the distributio
 
 > [!NOTE]  
 > This setting overrides the deployment option that you configure on the **Distribution Points** page in the **Deploy Software Wizard**. This override is only for the OS image that this step specifies, not for all task sequence content.  
+
+> [!IMPORTANT]  
+> For greatest security, it is strongly recommended not to select this option. This option is mainly designed for use on devices with limited storage capacity. This option is not meant to help increase the speed of the task sequence. When this option is selected, the package hash is not verified for the operating system package. Therefore, package integrity cannot be ensured because it is possible for users with administrative rights to alter or tamper with package contents.
 
 
 
@@ -1518,6 +1521,9 @@ Use the following task sequence variables with this step:
 
 To add this step in the task sequence editor, select **Add**, select **General**, and select **Run PowerShell Script**.
 
+> [!Note]  
+> Use signed PowerShell scripts in Unicode format. ANSI format, which is the default, doesn't work with this step.
+
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
@@ -1806,7 +1812,7 @@ This step performs the following actions:
 
 2. Enable or disable the local Administrator account, based on the option selected in the **Apply Windows Settings** step.  
 
-3. Install the Configuration Manager client by using the previously downloaded package, and installation properties specified in this step. The client installs in "provisioning mode". This mode prevents the client from processing new policy requests until the task sequence completes.  
+3. Install the Configuration Manager client by using the previously downloaded package, and installation properties specified in this step. The client installs in "provisioning mode". This mode prevents the client from processing new policy requests until the task sequence completes. For more information, see [Provisioning mode](/sccm/osd/understand/provisioning-mode).  
 
 4. Wait for the client to be fully operational.  
 
@@ -1898,7 +1904,7 @@ Specify the number of minutes before Configuration Manager fails this step. This
 Perform the Windows Setup compatibility scan without starting the upgrade process. This setting corresponds to the Windows Setup command-line option `/Compat ScanOnly`. Deploy the entire OS upgrade package with this option.
 
 <!--SCCMDocs-pr issue 2812-->
-Starting in version 1806, when you enable this option, this step doesn't put the Configuration Manager client into provisioning mode. Windows Setup runs silently in the background, and the client continues to function as normal.
+Starting in version 1806, when you enable this option, this step doesn't put the Configuration Manager client into provisioning mode. Windows Setup runs silently in the background, and the client continues to function as normal. For more information, see [Provisioning mode](/sccm/osd/understand/provisioning-mode).
 
 Setup returns an exit code as a result of the scan. The following table provides some of the more common exit codes:  
 

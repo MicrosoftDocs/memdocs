@@ -83,7 +83,7 @@ Each instance of SQL Server can run under a domain user account (**service accou
 - You can use an asynchronous commit replica to recover your synchronous replica. For more information, see [site database recovery options](/sccm/core/servers/manage/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption).  
 
     > [!Warning]  
-    > Configuration Manager doesn't support *failover* to use the asynchronous commit replica as your site database. For more information, see [Failover and failover modes (Always On availability groups)](https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups?view=sql-server-2014).  
+    > Configuration Manager doesn't support *failover* to use the asynchronous commit replica as your site database. For more information, see [Failover and failover modes (Always On availability groups)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups?view=sql-server-2014).  
 
 Configuration Manager doesn't validate the state of the asynchronous commit replica to confirm it's current. Use of an asynchronous commit replica as the site database can put the integrity of your site and data at risk. By design, such a replica can be out of sync. For more information, see [Overview of SQL Server AlwaysOn availability groups](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server).
 

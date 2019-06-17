@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 05/01/2019
+ms.date: 05/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -290,7 +290,7 @@ If clients must install required software updates at the deployment deadline wit
 
 If you want to give users more time to install required application or software update deployments beyond the deadline, set this option to **Yes**. This grace period is for a computer turned off for an extended time, and the user needs to install many application or update deployments. For example, this setting is helpful if a user returns from vacation, and has to wait for a long time while the client installs overdue application deployments.
 
-Set a grace period of 1 to 120 hours. Use this setting along with the deployment property **Delay enforcement of this deployment according to user preferences**. For more information, see [Deploy applications](/sccm/apps/deploy-use/deploy-applications).
+Set a grace period of 1 to 120 hours. Use this setting along with the deployment property **Delay enforcement of this deployment according to user preferences**. For more information, see [Deploy applications](/sccm/apps/deploy-use/deploy-applications#delay-enforcement-with-a-grace-period).
 
 
 ## Computer restart
@@ -639,8 +639,10 @@ Configure the additional settings in this group to **Yes** to make the following
     - **Tab name**
     - **Content URL**
 
->[!NOTE]
-> Some website features may not work when using it as a custom tab in Software Center. Make sure to test the results before deploying this to clients. <!--519659-->
+    >[!Important]  
+    > Some website features may not work when using it as a custom tab in Software Center. Make sure to test the results before deploying this to clients. <!--519659-->
+    >
+    > Specify only trusted or intranet website addresses when you add a custom tab.<!--SCCMDocs issue 1575-->
 
 For example, if your organization doesn't use compliance policies, and you want to hide the Device Compliance tab in Software Center, set **Enable Device Compliance tab** to **No**.
 

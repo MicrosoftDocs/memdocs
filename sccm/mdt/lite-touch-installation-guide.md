@@ -1,19 +1,15 @@
 ---
-
-title: "Quick Start - Lite Touch Installation"
-titleSuffix: "Microsoft Deployment Toolkit"
-description: "A Quick Start guide for Microsoft Deployment Toolkit lite touch installation. "
-ms.date:  09/09/2016
+title: Quickstart - LTI
+titleSuffix: Microsoft Deployment Toolkit
+description: A quickstart guide for Microsoft Deployment Toolkit (MDT) lite-touch installation (LTI)
+ms.date: 09/09/2016
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-osd
+ms.technology: configmgr-osd
 ms.topic: article
-ms.assetid:  21bedd68-e925-46e0-a540-df8c0aba2d6c
-
+ms.assetid: 21bedd68-e925-46e0-a540-df8c0aba2d6c
 author: aczechowski  
 ms.author: aaroncz 
-manager: angrobe
-
+manager: dougeby
 ---
 
 # Quick Start Guide for Lite Touch Installation  
@@ -254,7 +250,7 @@ manager: angrobe
    |   **Select Template**   |                                                        In **The following task sequence templates are available. Select the one you would like to use as a starting point**, select **Standard Client Task Sequence**, and then click **Next**.                                                        |
    |      **Select OS**      |  In **The following operating system images are available to be deployed with this task sequence**. **Select one to use**, select **Windows 8.1 *edition*** (where *edition* is the edition of Windows 8.1 added to the Operating Systems node in the Deployment Workbench), and then click **Next**.  |
    | **Specify Product Key** |                                                                                                             Click **Do not specify a product key at this time**, and then click **Next**.                                                                                                              |
-   |     **OS Settings**     |                           1.  In **Full Name**, type **Woodgrove Bank Employee**.<br /><br /> 2.  In **Organization**, type **Woodgrove Bank**.<br /><br /> 3.  In **Internet Explorer Home Page**, type **<http://www.woodgrovebank.com>**.<br /><br /> 4.  Click **Next**.                           |
+   |     **OS Settings**     |                           1.  In **Full Name**, type **Woodgrove Bank Employee**.<br /><br /> 2.  In **Organization**, type **Woodgrove Bank**.<br /><br /> 3.  In **Internet Explorer Home Page**, type **http:\//www.woodgrovebank.com**.<br /><br /> 4.  Click **Next**.                           |
    |   **Admin Password**    |                                                                                 In **Administrator Password** and **Please confirm Administrator Password**, type <strong>P@ssw0rd</strong>, and then click **Next**.                                                                                  |
    |       **Summary**       |                                                                                                                                            Click **Next**.                                                                                                                                             |
    |      **Progress**       |                                                                                                                       The progress for creating the task sequence is displayed.                                                                                                                        |
@@ -476,7 +472,7 @@ manager: angrobe
    |   **Select Template**   |                                                                        In **The following task sequence templates are available**. **Select the one you would like to use as a starting point**, select Standard **Client Task Sequence**, and then click **Next**.                                                                        |
    |      **Select OS**      |                                                          In **The following operating system images are available to be deployed with this task sequence**. **Select one to use**, select **WIN8_RERENCEDrive in “WIN8_REFERENCE\WIN8_REFERENCE.wim”**, and then click **Next**.                                                           |
    | **Specify Product Key** |                                                                                                                               Click **Do not specify a product key at this time**, and then click **Next**.                                                                                                                                |
-   |     **OS Settings**     |                                                       1.  In **Full Name**, type **Woodgrove Bank Employee**.<br />2.  In **Organization**, type **Woodgrove Bank**.<br />3.  In **Internet Explorer Home Page**, type **<http://www.woodgrovebank.com>**.<br />4.  Click **Next**.                                                        |
+   |     **OS Settings**     |                                                       1.  In **Full Name**, type **Woodgrove Bank Employee**.<br />2.  In **Organization**, type **Woodgrove Bank**.<br />3.  In **Internet Explorer Home Page**, type **http:\//www.woodgrovebank.com**.<br />4.  Click **Next**.                                                        |
    |   **Admin Password**    |                                                                                                   In **Administrator Password** and **Please confirm Administrator Password**, type <strong>P@ssw0rd</strong>, and then click **Next**.                                                                                                    |
    |       **Summary**       |                                                                                                                                                              Click **Next**.                                                                                                                                                               |
    |      **Progress**       |                                                                                                                                         The progress for creating the task sequence is displayed.                                                                                                                                          |
