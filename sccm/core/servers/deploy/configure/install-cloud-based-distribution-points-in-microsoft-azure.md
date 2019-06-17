@@ -73,9 +73,9 @@ Use the following checklist to make sure you have the necessary information and 
 - If you still need to use the Azure **classic service deployment** in Configuration Manager version 1810 or earlier, you need the following requirements:  
 
     > [!Important]  
-    > Starting in version 1810, classic service deployments in Azure are deprecated in Configuration Manager. Start using Azure Resource Manager deployments for the cloud management gateway. For more information, see [Plan for CMG](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).  
+    > Starting in version 1810, classic service deployments in Azure are deprecated in Configuration Manager. Start using Azure Resource Manager deployments for the cloud distribution point. For more information, see [Azure Resource Manager](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#azure-resource-manager).  
     >
-    > Starting in Configuration Manager version 1902, Azure Resource Manager is the only deployment mechanism for new instances of the cloud management gateway.<!-- 3605704 -->
+    > Starting in Configuration Manager version 1902, Azure Resource Manager is the only deployment mechanism for new instances of the cloud distribution point.<!-- 3605704 -->
 
     - The Azure **Subscription ID**.  
 
