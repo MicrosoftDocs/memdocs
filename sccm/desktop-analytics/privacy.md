@@ -2,7 +2,7 @@
 title: Desktop Analytics data privacy
 titleSuffix: Configuration Manager
 description: Desktop Analytics is committed to customer data privacy
-ms.date: 04/26/2019
+ms.date: 06/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -31,7 +31,7 @@ Desktop Analytics is fully committed to customer data privacy, centering on thes
 
 The following illustration shows how diagnostic data flows from individual devices through the Diagnostic Data Service, Azure Log Analytics storage, and to your Log Analytics workspace:
 
-![Diagram illustrating flow of diagnostic data from devices](media/da-data-flow-v1.png)
+![Diagram illustrating flow of diagnostic data from devices](media/da-data-flow.png)
 
 1. You sign in to the Azure portal, and onboard to Desktop Analytics. You create the Azure AD app to connect with Configuration Manager. When you set up Desktop Analytics, you create an Azure Log Analytics workspace in the location of your choice.  
 
@@ -43,7 +43,7 @@ The following illustration shows how diagnostic data flows from individual devic
 
     3. Configuration Manager sets the commercial ID, diagnostic data level, and other settings for the devices in the target collection. This configuration specifies the devices to appear in your Desktop Analytics workspace.  
 
-    4. You deploy compatibility updates to all target devices. Optionally, you deploy the App Health Analyzer and Office Readiness Toolkit to a representative set of devices. These tools provide further insights on custom line of business applications and Office macros.  
+    4. You deploy compatibility updates to all target devices.  
 
 3. Devices send diagnostic data to the Microsoft Diagnostic Data Management service for Windows. This service is hosted in the United States.  
 

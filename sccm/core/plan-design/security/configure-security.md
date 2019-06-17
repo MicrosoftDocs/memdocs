@@ -159,6 +159,6 @@ Starting in version 1810, you can specify the minimum authentication level for a
 
 - [Communication between endpoints](/sccm/core/plan-design/hierarchy/communications-between-endpoints)  
 
-- [Cryptographic controls technical reference](/sccm/core/plan-design/security/cryptographic-controls-tehnical-reference)  
+- [Cryptographic controls technical reference](/sccm/core/plan-design/security/cryptographic-controls-technical-reference)  
 
 - [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements)  

@@ -90,7 +90,7 @@ The improved integration makes the following possible:
         Connect to the on-line store for Windows Store for Business and get apps for your organization that you can deploy with Configuration Manager.
 
 
-  This is done by using an [Azure server web app](/azure/azure/app-service/app-service-authentication-overview#service-to-service-authentication) to provide the subscription and configuration details that you otherwise enter each time you set up a new Configuration Manager component or service with Azure. For more information, see [Azure Services Wizard](/sccm/core/servers/deploy/configure/azure-services-wizard).
+  This is done by using an [Azure server web app](/azure/app-service/app-service-authentication-overview) to provide the subscription and configuration details that you otherwise enter each time you set up a new Configuration Manager component or service with Azure. For more information, see [Azure Services Wizard](/sccm/core/servers/deploy/configure/azure-services-wizard).
 
 -   Use Azure AD to authenticate clients on the internet to access your Configuration Manager sites. Azure AD replaces the need to configure and use client authentication certificates. This requires the cloud management gateway site system role. For more information, see [Install and assign Configuration Manager clients from the internet using Azure AD for authentication](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
 
