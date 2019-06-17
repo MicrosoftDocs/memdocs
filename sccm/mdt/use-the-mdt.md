@@ -615,7 +615,7 @@ Table 4 lists the advantages and disadvantages of the thick, thin, and hybrid im
 
 -   Deployment will fail on computers configured for a language other than English when the Windows Media® Player Network Sharing Service is run. As a workaround, stop the Windows Media Player Network Sharing Service until after deployment is complete.  
 
--   You can use AD DS to back up BitLocker and TPM data. Recovery information includes the recovery password for each encrypted value, the TPM owner password, and the information necessary to associate recovery information with computers and volumes. Another option is to save a package containing the keys used to encrypt data in addition to the recovery password required to access those keys. For more information, see [BitLocker FAQ for AD DS](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-and-adds-faq) in the Microsoft Download Center.  
+-   You can use AD DS to back up BitLocker and TPM data. Recovery information includes the recovery password for each encrypted value, the TPM owner password, and the information necessary to associate recovery information with computers and volumes. Another option is to save a package containing the keys used to encrypt data in addition to the recovery password required to access those keys. For more information, see [BitLocker FAQ for AD DS](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-frequently-asked-questions#bkmk-adds) in the Microsoft Download Center.  
 
 -   When enabling BitLocker, key files are generated as hidden, read-only system files. To see them, set the Windows Explorer option to show hidden and system files.  
 
