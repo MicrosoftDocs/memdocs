@@ -55,7 +55,7 @@ Managing publications includes publishing updates to a server so your clients ca
 ## What's new in the System Center Updates Publisher preview
 
 >[!NOTE] 
->The information in this section applies only to the preview version of System Center Updates publisher. To install the preview, download it from the [Microsoft Download Center](https://www.microsoft.com/downloads/details.aspx?FamilyID=b9de4058-3ebc-4e0e-a8e2-8c96e092df47)
+>The information in this section applies only to the preview version of System Center Updates publisher. To install the preview, download it from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=58390).
 
 There's a new authoring mode in the preview for System Center Updates Publisher to help you author your updates. When you enable authoring mode, a **Categories Workspace** is added to the start screen. A new **Detectoid** button is also added to the **Updates Workspace** when authoring mode is enabled. 
 
