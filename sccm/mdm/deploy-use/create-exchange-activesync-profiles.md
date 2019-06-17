@@ -35,7 +35,7 @@ To deploy email profiles to devices, you must enroll the devices in Intune. For 
 
  In addition to configuring an email account on the device, you can configure synchronization settings for contacts, calendars, and tasks.  
 
- When you create an email profile, you can include a wide range of security settings. These settings include certificates for identity, encryption, and signing that have been set up by using System Center Configuration Manager certificate profiles. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles.md).    
+ When you create an email profile, you can include a wide range of security settings. These settings include certificates for identity, encryption, and signing that have been set up by using System Center Configuration Manager certificate profiles. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles).    
 
 ## Create an Exchange ActiveSync email profile  
 

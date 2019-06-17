@@ -2,7 +2,7 @@
 title: Tutorial - Deploy Windows 10
 titleSuffix: Configuration Manager
 description: A tutorial on using Desktop Analytics and Configuration Manager to deploy Windows 10 to a pilot group.
-ms.date: 06/10/2019
+ms.date: 06/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: tutorial
@@ -89,7 +89,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
 Use this procedure to sign in to Desktop Analytics and configure it in your subscription. This procedure is a one-time process to set up Desktop Analytics for your organization.  
 
-1. Open the Desktop Analytics portal in Microsoft 365 Device Management as a user with **Global Admin** permissions. Select **Start**.  
+1. Open the [Desktop Analytics portal](https://aka.ms/desktopanalytics) in Microsoft 365 Device Management as a user with **Global Admin** permissions. Select **Start**.  
 
 2. On the **Accept service agreement** page, review the service agreement, and select **Accept**.  
 
@@ -227,7 +227,7 @@ Configuration Manager synchronizes your collections within 60 minutes of creatin
 
 Use this procedure to create a deployment plan in Desktop Analytics.
 
-1. Open the [Desktop Analytics portal](https://aka.ms/m365aprod). Use credentials that have at least **Workspace Contributors** permissions.  
+1. Open the [Desktop Analytics portal](https://aka.ms/desktopanalytics). Use credentials that have at least **Workspace Contributors** permissions.  
 
 2. Select **Deployment Plans** in the Manage group.  
 
@@ -261,7 +261,7 @@ Use this procedure to create a deployment plan in Desktop Analytics.
 
     2. Select each app, and then select **Edit**. You can select more than one app to edit at the same time.  
 
-    3. Choose an importance level from the **Importance** list. If you want Desktop Analytics to validate the app during the pilot, select **Critical** or **Important**. It doesn't validate apps marked as **Not Important**. Consider the [compatibility risk](/sccm/desktop-analytics/compat-risk) and other plan insights when assigning importance levels.  
+    3. Choose an importance level from the **Importance** list. If you want Desktop Analytics to validate the app during the pilot, select **Critical** or **Important**. It doesn't validate apps marked as **Not Important**. Assess its [compatibility](/sccm/desktop-analytics/compat-assessment) and other plan insights when assigning importance levels.  
 
         When assigning importance levels, you can also choose the Upgrade decision.  
 

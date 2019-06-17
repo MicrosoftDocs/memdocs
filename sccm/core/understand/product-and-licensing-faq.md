@@ -47,7 +47,7 @@ Both **Software Assurance** (SA) and **License and Software Assurance** (L&SA) a
 
     - If your SA expires, and you still have a license for Configuration Manager, you can no longer use the current branch. For more information, see the FAQ [If my SA expires and I had L&SA, what do I get?](#bkmk_sa-expires)
 
-For more information about license offerings, see [Ways to buy](https://www.microsoft.com/en-us/licensing/licensing-programs)<!--this link doesn't work without some language code--> and [Licensing Product Terms](http://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=64).  
+For more information about license offerings, see [Ways to buy](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs)<!--this link doesn't work without some language code--> and [Licensing Product Terms](http://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=64).  
 
 
 ### <a name="bkmk_equiv-sub"></a> I read the term "equivalent subscription", what programs does that refer to?   
