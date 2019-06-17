@@ -130,6 +130,8 @@ Create a custom SSL certificate for the CMG the same as for a cloud distribution
 
 > [!Important]  
 > Starting in version 1810, classic service deployments in Azure are deprecated in Configuration Manager. Start using Azure Resource Manager deployments for the cloud management gateway. For more information, see [Plan for CMG](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).
+>
+> Starting in Configuration Manager version 1902, Azure Resource Manager is the only deployment mechanism for new instances of the cloud management gateway. This certificate isn't required in Configuration Manager version 1902 or later.<!-- 3605704 -->
 
 You supply this certificate in the Azure portal, and when creating the CMG in the Configuration Manager console.
 
