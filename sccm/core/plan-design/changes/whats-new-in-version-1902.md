@@ -99,12 +99,13 @@ Configuration Manager can now stop a cloud management gateway (CMG) service when
 
 
 ### Use Azure Resource Manager for cloud services
+
 <!--3605704-->
-Starting in version 1810, the classic service deployment in Azure was deprecated for use in Configuration Manager. That version is the last to support creation of these Azure deployments. 
+***[Updated]*** Starting in version 1810, the classic service deployment in Azure was deprecated for use in Configuration Manager. That version is the last to support creation of these Azure deployments.
 
 Existing deployments continue to work. Starting in this current branch version, Azure Resource Manager is the only deployment mechanism for new instances of the cloud management gateway and cloud distribution point.
 
-<!-- For more information, see [Azure Resource Manager for the cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).   -->
+For more information, see [Azure Resource Manager for the cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).
 
 
 ### Add cloud management gateway to boundary groups
