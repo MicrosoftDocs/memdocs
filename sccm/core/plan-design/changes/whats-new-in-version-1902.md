@@ -2,7 +2,7 @@
 title: What's new in version 1902
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1902 of Configuration Manager current branch.
-ms.date: 05/28/2019
+ms.date: 06/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -443,13 +443,13 @@ Based on customer feedback at the Midwest Management Summit (MMS) Desert Edition
 
 ### Configuration Manager console notifications
 <!--3556016, fka 1318035-->
-To keep you better informed so that you can take the appropriate action, the Configuration Manager console now notifies you for the following events:
+***[Updated]*** To keep you better informed so that you can take the appropriate action, the Configuration Manager console now notifies you for the following events:
 - When an update is available for Configuration Manager itself
 - When lifecycle and maintenance events occur in the environment
 
-This notification is a bar at the top of the console window below the ribbon. It replaces the previous experience when Configuration Manager updates are available. These in-console notifications still display critical information, but don't interfere with your work in the console. You can't dismiss critical notifications. The console displays all notifications in a new notification area of the title bar. 
+This notification is a bar at the top of the console window below the ribbon. It replaces the previous experience when Configuration Manager updates are available. These in-console notifications still display critical information, but don't interfere with your work in the console. You can't dismiss critical notifications. The console displays all notifications in a new notification area of the title bar.
 
-<!-- For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console). -->
+For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console).
 
 
 ### Confirmation of console feedback

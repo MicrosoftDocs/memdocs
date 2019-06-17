@@ -125,7 +125,7 @@ In addition to the ports that are listed in this table, wake-up proxy also uses 
 |Windows PE Peer cache broadcast|8004|--|  
 |Windows PE Peer cache download|--|8003|  
 
-For more information, see [Windows PE Peer Cache](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md#-requirements-for-a-client-to-use-a--windows-pe-peer-cache-source).
+For more information, see [Windows PE Peer Cache](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic#BKMK_PeerCacheRequirements).
 
 
 ###  <a name="BKMK_PortsClient-PolicyModule"></a> Client -- > Configuration Manager Network Device Enrollment Service (NDES) policy module   

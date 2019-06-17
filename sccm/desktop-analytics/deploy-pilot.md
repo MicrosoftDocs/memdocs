@@ -53,12 +53,9 @@ You can also make system-wide decisions about which Configuration Manager collec
     - All IT devices
     - CEO office
 - In the **Global pilot** settings, you include the **All IT devices** collections. You exclude the **CEO office** collection.
-- You create a deployment plan, and select the **All Windows 10 clients** collection.
-- Your **Pilot devices included** list contains the following device sets:
-    - Any devices in your global pilot inclusion list: **All IT devices**
-    - Collections that are also part of the deployment plan target group: **All Windows 10 clients**
-- Desktop Analytics excludes from the **additional recommended devices** list any devices in your global pilot *exclusion* list: **CEO office**
-- Only the first two collections are considered as part of the pilot. After successful upgrades to those groups, and the assets are *ready*, Desktop Analytics synchronizes devices in the **CEO office** collection to the Configuration Manager production collection.
+- You create a deployment plan, and select  **All Windows 10 clients** collection as your **Target group**.
+- The **Pilot devices included** list contains the subset of devices on your **Target group**: **All Windows 10 clients** that are also in the Global Pilot *inclusion* list: **All IT devices**  
+- The **Additional Recommended Devices** lists contains a set of devices from your **Target group** that provide maximum coverage and redundancy for your important assets.  Desktop Analytics excludes from this list any devices in your global pilot *exclusion* list: **CEO office**
 
 
 ## Address issues
@@ -112,12 +109,9 @@ Configuration Manager uses the data from Desktop Analytics to create collections
     > [!Note]  
     > Use the default setting to **Automatically begin this phase after a deferral period (in days)**. The following criteria must be met for the second phase to start:
     >
-    > 1. Pilot devices need to upgrade and send back revised diagnostic data.
     > 1. The first phase reaches the **deployment success percentage** criteria for success. You configure this setting on the phased deployment.
     > 1. You need to review and make upgrade decisions in Desktop Analytics to mark important and critical assets as *ready*. For more information, see [Review assets that need an upgrade decision](/sccm/desktop-analytics/deploy-prod#bkmk_review).
     > 1. Desktop Analytics syncs to the Configuration Manager collections any production devices that meet the *ready* criteria.
-    >
-    > When the Configuration Manager phased deployment automatically moves onto the next phase, it only applies to devices that Desktop Analytics synchronizes into the production collection.
 
 > [!Important]  
 > These collections continue to sync as their membership changes. For example, if you identify an issue with an asset and mark it as **Unable**, devices with that asset no longer meet the *ready* criteria. These devices are dropped from the production deployment collection.
@@ -133,7 +127,7 @@ Open the deployment plan. The **Preparing upgrade decisions - overall status** t
 
 - **Upgrade decision complete**: One of the following states:
     - Devices with noteworthy assets that are **Ready** or **Ready with remediation**
-    - The device state is **Blocked**, **Replace device** or **Reinstall device**
+    - The device state is **Blocked**, [**Replace device**](/sccm/desktop-analytics/about-deployment-plans#plan-assets) or **Reinstall device**
 
 - **Not reviewed**: Devices with noteworthy assets **Not reviewed** or **Review in progress**
 
