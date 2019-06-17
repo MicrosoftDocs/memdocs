@@ -174,7 +174,7 @@ You can't create a VPN profile, using the Windows Phone 8.1 workflow, which is a
 
 ### You cannot deploy Windows Defender/SCEP Policies to client devices without domain connectivity
 <!-- 4350561 -->
-*Applies to: Configuration Manager version 1902 and earlier *
+*Applies to: Configuration Manager version 1902 and earlier*
 
 When Windows Defender/SCEP policies are applied by the Configuration Manager client, a group policy update is required which does not work when the domain is inaccessible. This issue impacts devices managed over the Internet by CMG.
 
