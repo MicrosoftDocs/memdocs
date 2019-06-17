@@ -219,6 +219,13 @@ Install the Configuration Manager version 1902 update rollup (4500571) to suppor
 
 Configuration Manager creates a settings policy to configure devices in the Target Collection. This policy includes the diagnostic data settings to enable devices to send data to Microsoft. By default, clients update policy every hour. After receiving the new settings, it can be several hours more before the data is available in Desktop Analytics.
 
+>[!Note]  
+>To confirm machines settings by Desktop Analytics refer to the following policy key: 
+>Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection
+> AllowDeviceNameInTelemetry
+> AllowTelemetry
+> LimitEnhancedDiagnosticDataWindowsAnalytics
+
 Monitor the configuration of your devices for Desktop Analytics. In the Configuration Manager console, go to the **Software Library** workspace, expand the **Desktop Analytics Servicing** node, and select the **Connection Health** dashboard.  
 
 Configuration Manager synchronizes your collections within 60 minutes of creating the connection. In the Desktop Analytics portal, go to  **Global Pilot**, and see your Configuration Manager device collections.
