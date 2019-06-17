@@ -2,7 +2,7 @@
 title: Enable data sharing
 titleSuffix: Configuration Manager
 description: A reference guide for sharing diagnostics data with Desktop Analytics.
-ms.date: 06/05/2019
+ms.date: 06/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,7 +10,6 @@ ms.assetid: be680198-4cea-4378-a686-d52f382ba483
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
 ---
 
@@ -56,6 +55,7 @@ To enable data sharing, configure your proxy server to allow the following endpo
 
 | Endpoint  | Function  |
 |-----------|-----------|
+| `https://aka.ms` | Used to locate the service |
 | `https://v10c.events.data.microsoft.com` | Connected user experience and diagnostic component endpoint. Used by devices running Windows 10, version 1703 or later, with the 2018-09 cumulative update or later installed. |
 | `https://v10.events.data.microsoft.com` | Connected user experience and diagnostic component endpoint. Used by devices running Windows 10, version 1803, or later, _without_ the 2018-09 cumulative update installed. |
 | `https://v10.vortex-win.data.microsoft.com` | Connected user experience and diagnostic component endpoint. Used by devices running Windows 10, version 1709 or earlier. |
