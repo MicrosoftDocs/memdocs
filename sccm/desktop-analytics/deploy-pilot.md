@@ -127,7 +127,7 @@ Open the deployment plan. The **Preparing upgrade decisions - overall status** t
 
 - **Upgrade decision complete**: One of the following states:
     - Devices with noteworthy assets that are **Ready** or **Ready with remediation**
-    - The device state is **Blocked**, **Replace device** or **Reinstall device**
+    - The device state is **Blocked**, [**Replace device**](/sccm/desktop-analytics/about-deployment-plans#plan-assets) or **Reinstall device**
 
 - **Not reviewed**: Devices with noteworthy assets **Not reviewed** or **Review in progress**
 
