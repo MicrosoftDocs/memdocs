@@ -10,7 +10,6 @@ ms.assetid: 3e82cd96-0ce0-474a-a597-d65fceadc95a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX
 #Customer intent: As an IT Pro, I want to use Desktop Analytics to intelligently pilot Windows 10 so that I can understand the best devices to start with getting current with Windows.
 ms.collection: M365-identity-device-management
 ---

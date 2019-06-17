@@ -404,7 +404,7 @@ All software update points must run Windows Server 2016.
 ### Try it out!
 Try to complete the following tasks and then send us **Feedback** from the **Home** tab of the Ribbon to let us know how it worked:
 1. Enable Synchronization for Microsoft Surface drivers. Use the procedure in [Configure classification and products](/sccm/sum/get-started/configure-classifications-and-products) and select **Include Microsoft Surface drivers and firmware updates** on the **Classifications** tab to enable Surface drivers.
-2. [Synchronize the Microsoft Surface drivers](/sccm/sum/get-started/synchronize-software-updates.md).
+2. [Synchronize the Microsoft Surface drivers](/sccm/sum/get-started/synchronize-software-updates).
 3. [Deploy synchronized Microsoft Surface drivers](/sccm/sum/deploy-use/deploy-software-updates)
 
 ## Configure Windows Update for Business deferral policies
