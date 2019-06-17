@@ -500,7 +500,7 @@ Instead of generating a random startup key for the key management option **Start
 
 Specifies a Windows account name that has permissions to store the captured image on a network share ([OSDCaptureDestination](#OSDCaptureDestination)). Also specify the [OSDCaptureAccountPassword](#OSDCaptureAccountPassword).
 
-For more information on the capture OS image account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#capture-operating-system-image-account).
+For more information on the capture OS image account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#capture-os-image-account).
 
 ### <a name="OSDCaptureAccountPassword"></a> OSDCaptureAccountPassword
 
@@ -692,7 +692,7 @@ For more information, see [Windows 10 DISM Command-Line Options](https://docs.mi
 
 Specifies the domain user account that's used to add the destination computer to the domain. This variable is required when joining a domain.
 
-For more information on the task sequence domain joining account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-domain-joining-account).
+For more information on the task sequence domain joining account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#task-sequence-domain-join-account).
 
 ### <a name="OSDJoinDomainName"></a> OSDJoinDomainName
 
@@ -1241,7 +1241,7 @@ For more information, see [About client installation parameters and properties](
 
 Specifies the user account that is used to connect to the network share in [SMSConnectNetworkFolderPath](#SMSConnectNetworkFolderPath). Specify the account password with the [SMSConnectNetworkFolderPassword](#SMSConnectNetworkFolderPassword) value.
 
-For more information on the task sequence network folder connection account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-network-folder-connection-account).
+For more information on the task sequence network folder connection account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#task-sequence-network-folder-connection-account).
 
 ### <a name="SMSConnectNetworkFolderDriveLetter"></a> SMSConnectNetworkFolderDriveLetter
 

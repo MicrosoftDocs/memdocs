@@ -166,7 +166,7 @@ Select this option to have the destination computer join the specified domain. S
 
 #### Account
 
-Select **Set** to specify an account with the necessary permissions to join the computer to the domain. In the **Windows User Account** dialog box, enter the user name in the following format: `Domain\User`. For more information, see [Domain joining account](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-domain-joining-account).
+Select **Set** to specify an account with the necessary permissions to join the computer to the domain. In the **Windows User Account** dialog box, enter the user name in the following format: `Domain\User`. For more information, see [Domain joining account](/sccm/core/plan-design/hierarchy/accounts#task-sequence-domain-join-account).
 
 #### Adapter settings
 
@@ -457,7 +457,7 @@ Configuration Manager captures each volume (drive) from the reference computer t
 
 The installed OS on the reference computer must be a version of Windows that Configuration Manager supports. Use the SysPrep tool to prepare the OS on the reference computer. The installed OS volume and the boot volume must be the same volume.  
 
-Specify an account with write permissions to the selected network share. For more information on the capture OS image account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#capture-operating-system-image-account).
+Specify an account with write permissions to the selected network share. For more information on the capture OS image account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#capture-os-image-account).
 
 This task sequence step runs only in Windows PE. It doesn't run in the full OS.
 
@@ -675,7 +675,7 @@ Select the local drive letter to assign for this connection.
 
 #### Account
 
-Select **Set** to specify the user account with permissions to connect to this network folder. For more information on the task sequence network folder connection account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-network-folder-connection-account).
+Select **Set** to specify the user account with permissions to connect to this network folder. For more information on the task sequence network folder connection account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#task-sequence-network-folder-connection-account).
 
 
 
@@ -1153,7 +1153,7 @@ Optionally, enter or browse for an organizational unit (OU) in the specified dom
 
 #### Enter the account which has permission to join the domain
 
-Select **Set** to enter the username and password for an account with permissions to join the domain. Enter the account in the format:  `Domain\account`. For more information on the task sequence domain joining account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-domain-joining-account).  
+Select **Set** to enter the username and password for an account with permissions to join the domain. Enter the account in the format:  `Domain\account`. For more information on the task sequence domain joining account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#task-sequence-domain-join-account).  
 
 
 
