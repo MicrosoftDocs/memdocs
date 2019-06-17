@@ -7,8 +7,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -156,6 +156,7 @@ See the main sections of this article for the specific prerequisites for site sy
 
 - If you're using the [administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service), the server that hosts the SMS Provider role requires .NET 4.5.2 or later  <!-- SCCMDocs issue #1203 -->
 
+- Web Server (IIS)
 
 ##  <a name="bkmk_2012acwspreq"></a> Application Catalog website point  
 
@@ -511,7 +512,8 @@ The default IIS configuration is required.
 
 -   For more information, see [Plan for software updates](/sccm/sum/plan-design/plan-for-software-updates).  
 
-
+> [!NOTE]  
+> When you use a Software Update Point on a server other than the site server, you must install the WSUS Administration Console on the site server.   
 
 ##  <a name="bkmk_2012SMPpreq"></a> State migration point  
 <!--SCCMDocs issue 645-->

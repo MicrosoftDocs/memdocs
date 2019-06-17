@@ -7,8 +7,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 0e9f0fbd-e442-4509-a021-bfdedf2d04dd
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -24,7 +24,7 @@ Most configuration options for Configuration Manager site system roles are self-
 ##  <a name="BKMK_ApplicationCatalog_Website"></a> Application Catalog website point  
 
 > [!Note]  
-> Starting in version 1806, the application catalog website point is no longer *required*, but still *supported*. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex).  
+> Starting in version 1806, the application catalog website point is no longer *required*, but still *supported*. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).  
 > 
 > The **Silverlight user experience** for the application catalog website point is no longer supported. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
 
@@ -49,7 +49,7 @@ Most configuration options for Configuration Manager site system roles are self-
 ##  <a name="BKMK_ApplicationCatalog_WebService"></a> Application Catalog web service point  
 
 > [!Note]  
-> Starting in version 1806, the application catalog web service point is no longer *required*, but still *supported*. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex).  
+> Starting in version 1806, the application catalog web service point is no longer *required*, but still *supported*. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).  
 
  For more information about how to set up the Application Catalog web service point, see [Plan for and configure application management](/sccm/apps/plan-design/plan-for-and-configure-application-management).  
 

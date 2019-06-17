@@ -2,7 +2,7 @@
 title: Create applications
 titleSuffix: Configuration Manager
 description: Create applications with deployment types, detection methods and requirements to install software.
-ms.date: 03/04/2019
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -17,9 +17,9 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-A Configuration Manager application defines the metadata about app. An application has one or more deployment types. These deployment types include the installation files and information that are required to install software on devices. A deployment type also has rules, such as detection methods, and requirements. These rules specify when and how the client installs the software.  
+A Configuration Manager application defines the metadata about application. An application has one or more deployment types. These deployment types include the installation files and information that are required to install software on devices. A deployment type also has rules, such as detection methods, and requirements. These rules specify when and how the client installs the software.  
 
-Create applications by using the following methods:  
+Create applications using the following methods:  
 
 -   Automatically create an application and deployment types by reading the application installation files:  
     - [Create an application](#bkmk_create) and [automatically detect](#bkmk_auto-app) application information
@@ -101,7 +101,7 @@ To add more deployment types or configure other settings, see [Create deployment
 
 2.  Specify **General Information** about the application:  
 
-    - The application **Name** is required, and must be fewer than 256 characters.  
+    - The application **Name** is required and must be fewer than 256 characters.  
 
     - **Administrator comments**, **Publisher**, and **Software version** are additional metadata to further describe the application.  
 
@@ -121,6 +121,9 @@ To add more deployment types or configure other settings, see [Create deployment
         > A localized application name is required for each language version that you set up.  
 
     -   **User categories**: Choose **Edit** to specify application categories in the selected language. Users of Software Center use these categories to help filter and sort the available applications.  
+
+        > [!IMPORTANT]  
+        > User categories only apply to deployments to user collections.  If an application is deployed to a computer collection, the user categories are ignored.
 
     -   **User documentation**: Specify the location of a file from which Software Center users can get more information about this application. This location is a website address, or a network path and file name. Make sure that users have access to this location.  
 
@@ -232,7 +235,7 @@ On the **Content** page, specify the following information:
 
 - **Installation program**: Specify the name of the installation program and any required installation parameters.  
 
-    - **Installation start in**: Optionally specify the folder that has the installation program for the deployment type. This folder can be an absolute path on the client, or a path to the distribution point folder that has the installation files.  
+    - **Installation start in**: Optionally specify the folder that has the installation program for the deployment type. This folder can be an absolute path on the client or a path to the distribution point folder that has the installation files.  
 
 - **Uninstall program**: Optionally specify the name of the uninstall program and any required parameters.  
 
@@ -258,7 +261,7 @@ When you view the properties of a deployment type, the following options appear 
 
         - **Uninstall content location**: Specify the network path to the content that's used to uninstall the application.  
 
-- **Allow clients to use distribution points from the default site boundary group**: Specify if clients should download and install the software from a distribution point in the site default boundary group, when the content isn't available from a distribution point in the current or neighbor boundary groups.  
+- **Allow clients to use distribution points from the default site boundary group**: Specify if clients should download and install the software from a distribution point in the site default boundary group when the content isn't available from a distribution point in the current or neighbor boundary groups.  
 
 - **Deployment options**: Specify if clients should download the application when they use a distribution point from a neighbor or the default site boundary groups.  
 
@@ -304,9 +307,25 @@ This procedure sets up a detection method that indicates the presence of the dep
 
 4.  Click **OK** to close the **Detection Rule** dialog box.  
 
-When you create more than one detection method for a deployment type, create more complex logic by grouping the clauses together. 
+When you create more than one detection method for a deployment type, you can group clauses together to create more complex logic.  
 
-Continue to the next section on using a custom script as a detection method. Or skip to the [User Experience](#bkmk_dt-ux) options for the deployment type.
+#### Group detection clauses *(optional)*
+
+1.  Create three or more detection method clauses on a deployment type.  
+
+2.  Select two or more consecutive clauses, and then select **Group**. You’ll see the parentheses added to the associated columns, which show where the group starts and ends.  
+
+    Example: 
+
+    | Connector  |  ( | Clause           |  )  | 
+    |------------|----|------------------|-----| 
+    |            |    | MSI Product Code |     | 
+    | Or         | (  | file1.text exists|     | 
+    | And        |    | file2.txt exists | )   | 
+
+3.  To remove the group, select the grouped clauses, and then select **Ungroup**.  
+
+*Continue* to the next section on using a custom script as a detection method. Or *skip* to the [User Experience](#bkmk_dt-ux) options for the deployment type.
 
 
 #### <a name="bkmk_detect-script"></a> Use a custom script to check for the presence of a deployment type  
@@ -330,6 +349,9 @@ Continue to the next section on using a custom script as a detection method. Or 
 
 Configuration Manager checks the results from the script. It reads the values written by the script to the standard output (STDOUT) stream, the standard error (STDERR) stream, and the exit code. If the script exits with a non-zero value, the script fails, and the application detection status is *Unknown*. If the exit code is zero, and STDOUT has data, the application detection status is *Installed*.
 
+> [!TIP]
+> When writing a detection script, if you return a zero exit code but don't return output (data in STDOUT), the application will not be detected as installed. For more information, see the following examples.
+
 Use the following tables to check whether an application is installed from the output from a script:  
 
 **Zero exit code:**  
@@ -341,7 +363,6 @@ Use the following tables to check whether an application is installed from the o
 |Not empty|Empty|Success|Installed|
 |Not empty|Not empty|Success|Installed|
 
-
 **Non-zero exit code:**  
 
 |STDOUT|STDERR|Script result|Application detection state|
@@ -351,34 +372,62 @@ Use the following tables to check whether an application is installed from the o
 |Not empty|Empty|Failure|Unknown|
 |Not empty|Not empty|Failure|Unknown|
 
+**Examples**
 
-**VBScript examples**
-
-Use the following VBScript examples to write your own application detection scripts:  
+Use the following PowerShell/VBScript examples to write your own application detection scripts:  
 
 Example 1: The script returns an exit code that's not zero. This code indicates the script failed to run successfully. In this case, the application detection state is unknown.  
+
+``` PowerShell
+Exit 1
+```
+
 ``` VBScript
 WScript.Quit(1)
 ```
 
 Example 2: The script returns an exit code of zero, but the value of STDERR isn't empty. This result indicates the script failed to run successfully. In this case, the application detection state is unknown.  
+
+``` PowerShell
+Write-Error "Script failed"
+Exit 0
+```
+
 ``` VBScript
 WScript.StdErr.Write "Script failed"
 WScript.Quit(0)
 ```
 
 Example 3: The script returns an exit code of zero, which indicates it ran successfully. However, the value for STDOUT is empty, which indicates the application isn't installed.  
+
+``` PowerShell
+Exit 0
+```
+
 ``` VBScript
 WScript.Quit(0)
 ```
 
 Example 4: The script returns an exit code of zero, which indicates it ran successfully. The value for STDOUT isn't empty, which indicates the application is installed.  
+
+``` PowerShell
+Write-Host "The application is installed"
+Exit 0
+```
+
 ``` VBScript
 WScript.StdOut.Write "The application is installed"
 WScript.Quit(0)
 ```
 
 Example 5: The script returns an exit code of zero, which indicates it ran successfully. The values for STDOUT and STDERR aren't empty, which indicates the application is installed.  
+
+``` PowerShell
+Write-Host "The application is installed"
+Write-Error "Completed"
+Exit 0
+```
+
 ``` VBScript
 WScript.StdOut.Write "The application is installed"
 WScript.StdErr.Write "Completed"
@@ -398,7 +447,7 @@ On the **User Experience** page, specify the following information:
 
     - **Install for system**: The client installs the application only once. It's available to all users.  
 
-    - **Install for system if resource is device; otherwise install for user**: If you deploy the application to a device, the client installs it for all users. If you deploy the application to a user, the client only installs it for that user.  
+    - **Install for system if resource is device; otherwise, install for user**: If you deploy the application to a device, the client installs it for all users. If you deploy the application to a user, the client only installs it for that user.  
 
 - **Logon requirement**: Select one of the following options:  
 
@@ -645,7 +694,7 @@ Configuration Manager supports the following deployment types for applications:
 | **Windows app package (\*.appx, \*.appxbundle)** | For Windows 8 or later. Select a Windows app package file or a Windows app bundle package. |  
 | **Windows app package (\*.appx, \*.appxbundle, \*.msix, \*.msixbundle)** | Starting in version 1806, for new Windows 10 app package (.msix) and app bundle (.msixbundle) formats. Select a Windows app package file or a Windows app bundle package.<!--1357427--> |  
 | **Windows app package (in the Windows Store)** | For Windows 8 or later. Specify a link to the app in the Windows Store, or browse the store to select the app.<sup>[Note 1](#bkmk_note1)</sup> |  
-| **Script Installer** | Specify a script or program that runs on Windows clients to install content or to do an action. Use this deployment type for setup.exe installers, or script wrappers. |  
+| **Script Installer** | Specify a script or program that runs on Windows clients to install content or to do an action. Use this deployment type for setup.exe installers or script wrappers. |  
 | **Microsoft Application Virtualization 4** | A Microsoft App-V v4 manifest. |  
 | **Microsoft Application Virtualization 5** | A Microsoft App-V v5 package file. |  
 | **Windows Phone app package (\*.xap file)** | A Windows Phone app package file. |  

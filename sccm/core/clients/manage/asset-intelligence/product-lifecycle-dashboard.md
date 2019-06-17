@@ -2,13 +2,13 @@
 title: Product lifecycle dashboard
 titleSuffix: Configuration Manager
 description: View the Microsoft Lifecycle Policy with the product lifecycle dashboard in Configuration Manager.
-ms.date: 11/27/2018
+ms.date: 05/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 8b5b144a-0e5f-4fcc-87b2-33b9bcdb5655
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -30,6 +30,8 @@ Starting in version 1810, the dashboard includes information for System Center 2
  To see data in the product lifecycle dashboard, the following components are required:  
 
 - Internet Explorer 9 or later must be installed on the computer running the Configuration Manager console.  
+
+- A service connection point role must be installed and configured. To get updates for the data on this dashboard, the service connection point must be online, or synchronized regularly if offline. For more information, see [About the service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point).
 
 - A reporting services point is required for hyperlink functionality in the dashboard. The dashboard links to SQL Server Reporting Services (SSRS) reports. For more information, see [Reporting in Configuration Manager](/sccm/core/servers/manage/reporting).  
 
@@ -62,7 +64,8 @@ Change the view by selecting one of the following options from the **Product cat
 - **Windows Client**: View Windows client OS versions  
 - **Windows Server**: View Windows server OS versions  
 - **Database**: View SQL Server versions  
-- **Configuration Manager**: Starting in version 1810, view Configuration Manager versions  
+- **Configuration Manager**: Starting in version 1810, view Configuration Manager versions 
+- **Microsoft Office**: Starting in version 1902, view information for installed versions of Office 2003 through Office 2016 <!--3556026-->
 
 The dashboard has the following tiles:  
 

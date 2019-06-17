@@ -7,8 +7,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 92b339ef-2723-4322-bec6-077b3e8846b0
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -126,7 +126,7 @@ To successfully replicate data between a central administration site and a prima
 When you use one of the following Azure services with Configuration Manager, after expanding the site, remove and then recreate the connection to that service.
 
 - [Log Analytics](/sccm/core/clients/manage/sync-data-log-analytics)  
-- [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-readiness)  
+- [Upgrade Readiness](/sccm/core/clients/manage/upgrade-readiness)  
 - [Microsoft Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)  
 
 Use the following steps to resolve this issue:

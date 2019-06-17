@@ -7,8 +7,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: d837253e-fcc2-422a-9e2c-c78b938dfd8c
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -36,13 +36,13 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 
 - When you check for updates, you receive an error message that the virus and spyware definition updates cannot be checked, downloaded, or installed.  
 
-- Even though you are connected to the Internet, the updates fail.  
+- Even though you are connected to the internet, the updates fail.  
 
 - Updates are not automatically installing as scheduled.  
 
   **Cause**  
 
-  The most common causes for update issues are problems with Internet connectivity. However, if you know you are connected to the Internet because you can browse to other Web sites, the issue might be caused by conflicts with your settings in Windows Internet Explorer.  
+  The most common causes for update issues are problems with internet connectivity. However, if you know you are connected to the internet because you can browse to other Web sites, the issue might be caused by conflicts with your settings in Windows Internet Explorer.  
 
 > [!IMPORTANT]  
 >  You have to exit Internet Explorer to complete these steps. Therefore, print them, write them down, or copy them to another file, and then bookmark this topic for future access.  
@@ -143,16 +143,12 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 
 ### Step 6: Manually install the virus and spyware definition updates  
 
--   If you are running a 32-bit Windows operating system, download the latest updates manually at [http://go.microsoft.com/fwlink/?LinkID=87342](http://go.microsoft.com/fwlink/?LinkID=87342) (http://go.microsoft.com/fwlink/?LinkID=87342).  
-
--   If you are running a 64-bit Windows operating system, download the latest updates manually at [http://go.microsoft.com/fwlink/?LinkID=87341](http://go.microsoft.com/fwlink/?LinkID=87341) (http://go.microsoft.com/fwlink/?LinkID=87341).  
-
--   Click **Run**. The latest updates are manually installed on your computer.  
+-   [Download the latest updates manually](https://www.microsoft.com/wdsi/definitions/).  
 
 
 ### Step 7: Contact Support  
 
--   If the steps did not resolve the issue, contact support. For more information, see [Customer Support](http://go.microsoft.com/fwlink/?LinkID=196174) (http://go.microsoft.com/fwlink/?LinkID=196174).  
+-   If the steps did not resolve the issue, contact support. For more information, see [Customer Support](https://support.microsoft.com/contactus/).  
 
 ##  Starting Windows Defender or Endpoint Protection service  
  **Symptom**  
@@ -177,22 +173,20 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 
 5.  Make sure you note any errors that may appear during this process, submit a case online, and include the error information.  
 
-### Step 3: Remove any existing Internet security programs  
+### Step 3: Remove any existing internet security programs  
 
 1.  Click **Start** and search for **appwiz.cpl**, and then press **Enter**.  
 
-2.  In the list of installed programs, uninstall any third-party Internet security programs.*  
+2.  In the list of installed programs, uninstall any third-party internet security programs.*  
 
 3.  Restart your computer, and then try to install Windows Defender or  
           Endpoint Protection again.  
 
 > [!NOTE]  
->  Some Internet security applications do not uninstall completely. You may need to download and run a cleanup utility for your previous security application in order for it to be completely removed.  
+>  Some internet security applications do not uninstall completely. You may need to download and run a cleanup utility for your previous security application in order for it to be completely removed.  
 
 > [!CAUTION]  
->  When you remove Internet security programs, your computer is unprotected. If you have problems installing   
->       Endpoint Protection after you remove existing Internet security programs, contact Windows Defender or  
->       Endpoint Protection support by submitting a case online (for more information, see [How to Submit a Case Online](http://www.microsoft.com/en-ph/security_essentials/Support/8c9074b6-1558-4d14-bc39-d294ced11096.aspx)).  
+> When you remove security programs, your computer is unprotected. If you have problems installing Windows Defender after you remove existing security programs, contact [Microsoft Support](https://support.microsoft.com/supportforbusiness/productselection) for **Windows Defender** in the **Security** product family.  
 
 ### Step 4: Uninstall/reinstall Endpoint Protection  
 
@@ -203,9 +197,9 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 3.  If prompted, restart your computer, and then try to install Endpoint Protection again.  
 
 ##  Internet connection issues  
- In order to make sure that your computer receives the latest updates from Windows Update, you must be connected to the Internet.  
+ In order to make sure that your computer receives the latest updates from Windows Update, you must be connected to the internet.  
 
-### Step 1: Verify that your computer is connected to the Internet  
+### Step 1: Verify that your computer is connected to the internet  
 
 1.  Click **Start**and search for **ncpa.cpl**, and then press **Enter**.  
 
@@ -219,7 +213,7 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 
 -   Close any open programs and restart your computer.  
 
-### Step 4: If you still can't connect to the Internet, check your connections  
+### Step 4: If you still can't connect to the internet, check your connections  
 
 1.  If you use a dial-up connection, make sure the telephone cord connection in the wall jack and in your modem are firmly connected.  
 

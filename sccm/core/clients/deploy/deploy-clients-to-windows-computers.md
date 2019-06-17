@@ -2,7 +2,7 @@
 title: Deploy clients to Windows
 titleSuffix: Configuration Manager
 description: Learn how to deploy the Configuration Manager client to Windows computers.
-ms.date: 07/30/2018
+ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -33,7 +33,7 @@ There are three main ways to use client push:
 
 - Start client push installation by running the Client Push Installation Wizard for a specific collection or resource within a collection.  
 
-- Use the Client Push Installation Wizard to install the Configuration Manager client to [query](/sccm/core/servers/manage/queries-technical-reference) results. For installation to succeed, one of the items returned by the query must be the **ResourceID** attribute from the **System Resource** class.   
+- Use the Client Push Installation Wizard to install the Configuration Manager client to [query](/sccm/core/servers/manage/introduction-to-queries) results. For installation to succeed, one of the items returned by the query must be the **ResourceID** attribute from the **System Resource** class.   
 
 If the site server can't contact the client computer or start the setup process, it automatically retries the installation every hour. The server continues to retry for up to seven days.  
 
@@ -513,6 +513,8 @@ To assign the internet-based management point after you install the client, use 
 
 #### Configure clients for internet-based client management after client installation by using a script  
 
+##### VBScript
+
 1.  Open a text editor, such as Notepad.  
 
 2.  Copy and insert the following VBScript sample into the file. Replace *mp.contoso.com* with the internet FQDN of your internet-based management point.  
@@ -551,6 +553,28 @@ To assign the internet-based management point after you install the client, use 
 
 You might have to restart the client for the changes to take effect.  
 
+##### PowerShell
+
+1. Open a PowerShell in-line editor such as PowerShell ISE or Visual Studio Code, or any text editor, such as Notepad.
+
+2. Copy and insert the following lines of code into the editor. Replace 'mp.contoso.com' with the internet FQDN of your internet-based management point.
+
+    ``` PowerShell
+    
+    $newInternetBasedManagementPointFQDN = 'mp.contoso.com'
+    $client = New-Object -ComObject Microsoft.SMS.Client
+    $client.SetInternetManagementPointFQDN($newInternetBasedManagementPointFQDN)
+    Restart-Service CcmExec
+    $client.GetInternetManagementPointFQDN()
+    
+    ```
+
+    > [!NOTE]  
+    >  The last line is only there to verify the new Internet MP value.
+    >
+    >  To delete a specified internet-based management point, remove the server FQDN value inside the quotation marks. This line becomes: `$newInternetBasedManagementPointFQDN = ''`
+
+3. Run this script with elevated rights.
 
 
 ##  <a name="BKMK_Provision"></a> Provision client installation properties for group policy and software update-based client installations

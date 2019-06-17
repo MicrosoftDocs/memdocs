@@ -47,15 +47,11 @@ This section provides information and tasks for the fundamental programming tech
 ## Other Resources  
  If you have not previously written any scripting code, see the following chapters of the *Windows 2000 Scripting Guide* to familiarize yourself with the concepts and technologies that are required for scripting Configuration Manager:  
 
--   [Introduction to Windows Script Technologies](http://go.microsoft.com/fwlink/?linkid=43946)  
+-   [Introduction to Windows Script Technologies](https://docs.microsoft.com/previous-versions/tn-archive/ee176792\(v=technet.10\))  
 
--   [VBScript Primer](http://go.microsoft.com/fwlink/?linkid=43947)  
+-   [WMI Scripting Reference](https://docs.microsoft.com/windows/desktop/WmiSdk/wmi-reference)  
 
--   [WSH Primer](http://go.microsoft.com/fwlink/?linkid=43948)  
-
--   [WMI Scripting Primer](http://go.microsoft.com/fwlink/?linkid=43949)  
-
--   [Windows Management Instrumentation](http://go.microsoft.com/fwlink/?LinkId=43950)  
+-   [Windows Management Instrumentation](https://docs.microsoft.com/windows/desktop/WmiSdk/wmi-start-page)  
 
 ## See Also  
  [Configuration Manager SDK](../../../develop/core/misc/system-center-configuration-manager-sdk.md)   

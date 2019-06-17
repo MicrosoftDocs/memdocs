@@ -38,7 +38,7 @@ for this software, unless other terms accompany those items. If so, those terms 
 
 1.  **INSTALLATION AND USE RIGHTS.** You may install and use any number of copies of the software on your devices to design, develop and test your programs.  
 
-2.  **INCLUDED MICROSOFT PROGRAMS.** The software includes other Microsoft programs listed at [http://go.microsoft.com/fwlink/?LinkID=231864](http://go.microsoft.com/fwlink/?LinkID=231864), which are licensed under the terms and conditions associated with them.  You may only use these programs in conjunction with the software licensed here.  If you do not accept the license terms associated with a program, you may not use that program  
+2.  **INCLUDED MICROSOFT PROGRAMS.** The software includes other Microsoft programs listed at [SQL Server 2012 End User License Agreements](https://www.microsoft.com/download/details.aspx?id=29067), which are licensed under the terms and conditions associated with them.  You may only use these programs in conjunction with the software licensed here.  If you do not accept the license terms associated with a program, you may not use that program  
 
 3.  **ADDITIONAL LICENSING REQUIREMENTS AND/OR USE RIGHTS.**  
 

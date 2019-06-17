@@ -2,7 +2,7 @@
 title: How to deploy to production
 titleSuffix: Configuration Manager
 description: A how-to guide for deploying to a Desktop Analytics production group.
-ms.date: 04/22/2019
+ms.date: 06/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -71,23 +71,15 @@ There might also be assets in the **Attention Needed** or **Mixed Results** stat
 Review all apps. Once a given device has a positive upgrade decision for all assets, then its state changes to "ready for production." See the current count on the main page for the deployment plan by selecting the third deployment step, **Deploy**.
 
 
-
 ## <a name="bkmk_deploy"></a> Deploy to devices that are ready
 
 Configuration Manager uses the data from Desktop Analytics to create a collection for the production deployment. Don't deploy the task sequence using a traditional deployment. Use the following procedure to create a Desktop Analytics-integrated deployment:
 
-1. In the Configuration Manager console, go to the **Software Library**, expand **Desktop Analytics Servicing**, and select the **Deployment Plans** node.  
+If you followed the recommended process to [Deploy to pilot devices](/sccm/desktop-analytics/deploy-pilot#deploy-to-pilot-devices), the Configuration Manager phased deployment is ready. As you mark assets as *ready*, Desktop Analytics automatically synchronizes those devices to Configuration Manager. These devices are then added to the production collection. When the phased deployment moves to the second phase, these production devices receive the upgrade deployment.
 
-2. Select your deployment plan, and then select **Deployment Plan Details** in the ribbon.  
+If you configured the phased deployment to **Manually begin the second phase deployment**, then you need to manually move it to the next phase. For more information, see [Manage and monitor phased deployments](/sccm/osd/deploy-use/manage-monitor-phased-deployments#bkmk_move).
 
-3. In the **Production status** tile, select **Task sequence** from the drop-down list.  
-
-    > [!Note]  
-    > Don't use the **Application** option. It's reserved for future functionality.
-
-    Select **Deploy**. This action launches the Deploy Software Wizard for the selected object type.
-
-For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS).
+If you created a Desktop Analytics-integrated single deployment to the pilot collection, then you need to repeat that process to deploy to the production collection.
 
 
 ### Address deployment alerts
@@ -101,7 +93,6 @@ As with the pilot deployment, Desktop Analytics advises you of any issues that n
 - Needs attention - Issues (sorted by issue type)
 
 ![Screenshot of Desktop Analytics production Deployment Status](media/prod-deployment-status.png)
-
 
 
 ## <a name="bkmk_monitor"></a> Monitor the health of updated devices

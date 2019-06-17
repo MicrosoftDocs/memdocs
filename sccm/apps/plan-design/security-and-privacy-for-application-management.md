@@ -27,7 +27,7 @@ Starting in version 1806, application catalog roles are no longer required to di
 
 To deliver a consistent and secure application experience for internet-based clients, use Azure Active Directory and the cloud management gateway.
 
-For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex). 
+For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex). 
 
 
 ### Use HTTPS with the Application Catalog
@@ -174,7 +174,7 @@ If you configure a web application deployment type, use HTTPS to secure the conn
 > [!Important]  
 > Starting in Configuration Manager version 1802, the client doesn't automatically install Silverlight.
 > 
-> Starting in version 1806, the **Silverlight user experience** for the application catalog website point is no longer supported. Users should use the new Software Center. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex).  
+> Starting in version 1806, the **Silverlight user experience** for the application catalog website point is no longer supported. Users should use the new Software Center. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).  
 
  Configuration Manager clients version 1710 and earlier require Microsoft Silverlight 5, which must run in elevated trust mode for users to install software from the Application Catalog. By default, Silverlight applications run in partial trust mode to prevent applications from accessing user data. If it isn't already installed, Configuration Manager automatically installs Microsoft Silverlight 5 on clients. By default, Configuration Manager sets the Computer Agent **Allow Silverlight applications to run in elevated trust mode** client setting to **Yes**. This setting lets signed and trusted Silverlight applications request elevated trust mode.  
 
@@ -208,7 +208,7 @@ If you configure a web application deployment type, use HTTPS to secure the conn
 - The **Application Catalog** is a website that lets users request software to install.  
 
     > [!Note]  
-    > Starting in Configuration Manager 1802, the primary functionality of the Application Catalog is now included in Software Center. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex).  
+    > Starting in Configuration Manager 1802, the primary functionality of the Application Catalog is now included in Software Center. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).  
 
 - **Software Center** is installed automatically on a device when you install the Configuration Manager client. Users change settings, browse for applications, and install applications from Software Center.  
 

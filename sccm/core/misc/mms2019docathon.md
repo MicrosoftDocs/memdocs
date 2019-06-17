@@ -1,6 +1,6 @@
 ---
 title: MMS 2019 Docathon
-ms.date: 04/18/2019
+ms.date: 05/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -92,7 +92,7 @@ Start thinking about and planning your goal for this event. What do you want to 
 
 ## Contest summary
 
-The contest runs all week, 6 - 9 May. Any registered MMS 2019 attendee can participate. Prizes will be awarded on Thursday, 9 May, after the [ConfigMgr Product Team Q&A session](https://sched.co/N6ge). You need to be at MMS 2019 to win, but don't need to attend that session. If you're not at the session, to collect a prize, contact Aaron before he leaves Friday morning.
+The contest runs all week, 6 - 9 May. Any registered MMS 2019 attendee can participate. Submit entries by 3:00 PM Central on Thursday, May 9, 2019. Prizes will be awarded on Thursday, 9 May, after the [ConfigMgr Product Team Q&A session](https://sched.co/N6ge). You need to be at MMS 2019 to win, but don't need to attend that session. If you're not at the session, to collect a prize, contact Aaron before he leaves Friday morning.
 
 > [!Important]  
 > You must include the **#MMS2019Docathon** hashtag in all contributions for credit.
@@ -202,7 +202,7 @@ OFFICIAL RULES
         - Most lines changed
         - Most articles touched
 
-    Winners will be selected after 5:00 PM Central Time on Thursday, 9 May 2019.
+    Winners will be selected after 3:00 PM Central Time on Thursday, 9 May 2019.
 
     Winners will be notified at the Event, and must claim the prize before the close of the Event.
 

@@ -2,7 +2,7 @@
 title: How to deploy to pilot
 titleSuffix: Configuration Manager
 description: A how-to guide for deploying to a Desktop Analytics pilot group.
-ms.date: 04/22/2019
+ms.date: 06/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -24,16 +24,49 @@ One of the benefits of Desktop Analytics is to help identify the smallest set of
 [!INCLUDE [Definition of pilot and production](includes/define-pilot-prod.md)]
 
 
+## Identify devices
+
+The first step is to identify devices to include in the pilot. Desktop Analytics recommends devices based on the reported data, and you can include or replace devices in this list.
+
+1. Go to the [Desktop Analytics portal](https://aka.ms/desktopanalytics), and in the Manage group select **Deployment plans**.
+
+1. Select a deployment plan.
+
+1. In the Prepare group of the deployment plan menu, select **Identify pilot**.
+
+You'll see the data from Desktop Analytics that shows the number of devices it recommends including for the best coverage. This algorithm is primarily based on the use of important and critical apps, and the breadth of hardware configurations.
+
+Take the following actions for the additional recommended devices list:
+
+- **Add all to pilot**: Adds all of the recommended devices to the pilot group
+- **Add to pilot**: Only add individual devices
+- **Replace** any specific devices from the pilot
+- **Recalculate** when you're done making changes
+
+You can also make system-wide decisions about which Configuration Manager collections to include or exclude from pilots. In the main Desktop Analytics menu, in the Global Settings group, select **Global pilot**.
+
+### Example
+
+- You configure the Desktop Analytics connection in Configuration Manager to target the **All Systems** collection. This action enrolls all clients to the service.
+- You also configure additional collections to sync with Desktop Analytics:
+    - All Windows 10 clients
+    - All IT devices
+    - CEO office
+- In the **Global pilot** settings, you include the **All IT devices** collections. You exclude the **CEO office** collection.
+- You create a deployment plan, and select  **All Windows 10 clients** collection as your **Target group**.
+- The **Pilot devices included** list contains the subset of devices on your **Target group**: **All Windows 10 clients** that are also in the Global Pilot *inclusion* list: **All IT devices**  
+- The **Additional Recommended Devices** lists contains a set of devices from your **Target group** that provide maximum coverage and redundancy for your important assets.  Desktop Analytics excludes from this list any devices in your global pilot *exclusion* list: **CEO office**
+
 
 ## Address issues
 
 Use the Desktop Analytics portal to review any reported issues with assets that might block your deployment. Then approve, reject, or modify the suggested fix. All items must be marked **Ready** or **Ready (with remediation)** before the pilot deployment starts.
 
-1. Go to the Desktop Analytics portal, and select **Deployment plans** in the Manage group.  
+1. Go to the [Desktop Analytics portal](https://aka.ms/desktopanalytics), and in the Manage group select **Deployment plans**.  
 
-2. Open a deployment plan by selecting its name.  
+2. Select a deployment plan.  
 
-3. Select **Prepare pilot** in the Prepare group of the deployment plan menu.  
+3. In the Prepare group of the deployment plan menu, select **Prepare pilot**.  
 
 4. On the **Apps** tab, review the apps that need your input.  
 
@@ -42,47 +75,74 @@ Use the Desktop Analytics portal to review any reported issues with assets that 
 6. Repeat this review for other assets.  
 
 
-
 ## Create software
 
 Before you can deploy Windows, first create the software objects in Configuration Manager. For more information, see [Windows 10 in-place upgrade task sequence](https://docs.microsoft.com/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system).
 
 
-
 ## Deploy to pilot devices
 
-Configuration Manager uses the data from Desktop Analytics to create a collection for the pilot deployment. Don't deploy the task sequence using a traditional deployment. Use the following procedure to create a Desktop Analytics-integrated deployment:
+Configuration Manager uses the data from Desktop Analytics to create collections for the pilot and production deployments. To make sure devices are healthy after each deployment phase, use the following procedure to create a Desktop Analytics-integrated phased deployment:
 
 1. In the Configuration Manager console, go to the **Software Library**, expand **Desktop Analytics Servicing**, and select the **Deployment Plans** node.  
 
 2. Select your deployment plan, and then select **Deployment Plan Details** in the ribbon.  
 
-3. In the **Pilot status** tile, select **Task sequence** from the drop-down list.  
+3. Select **Create Phased Deployment** in the ribbon. This action launches the Create Phased Deployment wizard.
+
+    > [!Tip]  
+    > If you want to create a classic task sequence deployment for just the pilot collection, select **Deploy** in the **Pilot status** tile. This action launches the Deploy Software Wizard. For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence).  
+
+4. Enter a name for the deployment, and select the task sequence to use. Use the option to **Automatically create a default two phase deployment**, and then configure the following collections:  
+
+    - **First Collection**: Find and select the **Pilot** collection for this deployment plan. The standard naming convention for this collection is `<deployment plan name> (Pilot)`.
+
+    - **Second Collection**: Find and select the **Production** collection for this deployment plan. The standard naming convention for this collection is `<deployment plan name> (Production)`.
 
     > [!Note]  
-    > Don't use the **Application** option. It's reserved for future functionality.
-
-    Select **Deploy**. This action launches the Deploy Software Wizard for the selected object type.
-
-    > [!Note]  
-    > With the Desktop Analytics integration, Configuration Manager automatically creates a collection for the pilot deployment plan. It can take up to 10 minutes for this collection to synchronize before you can use it.<!-- 3887891 -->
+    > With the Desktop Analytics integration, Configuration Manager automatically creates pilot and production collections for the deployment plan. It can take up to 10 minutes for these collections to synchronize before you can use them.<!-- 3887891 -->
     >
-    > This collection is reserved for Desktop Analytics deployment plan devices. Manual changes to this collection aren't supported.<!-- 3866460, SCCMDocs-pr 3544 -->  
+    > These collections are reserved for Desktop Analytics deployment plan devices. Manual changes to these collections aren't supported.<!-- 3866460, SCCMDocs-pr 3544 -->  
 
-For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS).
+5. Complete the wizard to configure the phased deployment. For more information, see [Create phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence).
 
+    > [!Note]  
+    > Use the default setting to **Automatically begin this phase after a deferral period (in days)**. The following criteria must be met for the second phase to start:
+    >
+    > 1. The first phase reaches the **deployment success percentage** criteria for success. You configure this setting on the phased deployment.
+    > 1. You need to review and make upgrade decisions in Desktop Analytics to mark important and critical assets as *ready*. For more information, see [Review assets that need an upgrade decision](/sccm/desktop-analytics/deploy-prod#bkmk_review).
+    > 1. Desktop Analytics syncs to the Configuration Manager collections any production devices that meet the *ready* criteria.
+
+> [!Important]  
+> These collections continue to sync as their membership changes. For example, if you identify an issue with an asset and mark it as **Unable**, devices with that asset no longer meet the *ready* criteria. These devices are dropped from the production deployment collection.
 
 
 ## Monitor
 
 ### Configuration Manager console
 
-Use Configuration Manager deployment monitoring the same as any other task sequence deployment. For more information, see [Monitor OS deployments](/sccm/osd/deploy-use/monitor-operating-system-deployments).
+Open the deployment plan. The **Preparing upgrade decisions - overall status** tile provides a summary of the status for the deployment plan. This status is for both your pilot and production collections. Devices can fall in one of the following categories:
+
+- **Up to date**: Devices have upgraded to the target Windows version for this deployment plan
+
+- **Upgrade decision complete**: One of the following states:
+    - Devices with noteworthy assets that are **Ready** or **Ready with remediation**
+    - The device state is **Blocked**, [**Replace device**](/sccm/desktop-analytics/about-deployment-plans#plan-assets) or **Reinstall device**
+
+- **Not reviewed**: Devices with noteworthy assets **Not reviewed** or **Review in progress**
+
+The device status updates in the **Pilot status** and **Production status** tiles with the following actions:
+
+- You make changes on the compatibility assessment
+- Devices get upgraded to the target version of Windows
+- Your deployment progresses
+
+You can also use Configuration Manager deployment monitoring the same as any other task sequence deployment. For more information, see [Monitor OS deployments](/sccm/osd/deploy-use/monitor-operating-system-deployments).
 
 
 ### Desktop Analytics portal
 
-Use the Desktop Analytics portal to view the status of any deployment plan. Select the deployment plan, and then select **Plan overview**.
+Use the [Desktop Analytics portal](https://aka.ms/desktopanalytics) to view the status of any deployment plan. Select the deployment plan, and then select **Plan overview**.
 
 ![Screenshot of deployment plan overview in Desktop Analytics](media/deployment-plan-overview.png)
 
@@ -105,10 +165,9 @@ Select a specific listing in either view to get more details about the detected 
 As you address these deployment issues, the dashboard continues to show the progress of devices. It updates as devices move from **Needs attention** to **Completed**.
 
 
-
 ## Next steps
 
-Let the pilot run for a period of time to collect operational data. Encourage users of pilot devices to test apps.
+Let the pilot run for a while to collect operational data. Encourage users of pilot devices to test apps.
 
 When your pilot deployment meets your success criteria, go to the next article to deploy to production.
 > [!div class="nextstepaction"]  

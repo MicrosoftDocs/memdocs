@@ -2,7 +2,7 @@
 title: "About upgrade, update, and install"
 titleSuffix: "Configuration Manager"
 description: "Learn the difference between the terms Install, Update, and Upgrade, when managing Configuration Manager infrastructure."
-ms.date: 1/11/2017
+ms.date: 04/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -29,11 +29,11 @@ For more details, see [Upgrade to System Center Configuration Manager](/sccm/cor
 
 
 ## Update
-*Update* is used for installing in-console updates for System Center Configuration Manager, and for out-of-band updates which are updates that cannot be delivered from within the Configuration Manager console. In-console updates can modify the version of your Current Branch site (or Technical Preview site) so that it runs a higher version. For example, you if your site runs version 1606, you can install an update for version 1610. Updates can also install fixes for a known issue, without modifying the sites version.      
+*Update* is used for installing in-console updates for System Center Configuration Manager, and for out-of-band updates which are updates that cannot be delivered from within the Configuration Manager console. In-console updates can modify the version of your Current Branch site (or Technical Preview site) so that it runs a higher version. For example, if your site runs version 1806, you can install an update for version 1810. Updates can also install fixes for a known issue, without modifying the site version.      
 
-Typically, updates add security fixes, quality improvement, and new features to your existing deployment. If you use the Technical Preview branch, an update can install a newer version of the Technical Preview.
+Typically, updates add security fixes, quality improvements, and new features to your existing deployment. If you use the Technical Preview branch, an update can install a newer version of the Technical Preview.
 -	You choose when to install the in-console update, starting at the top-tier site of your hierarchy.
-- You can install any update that is available from within the console. For example, if your site runs version 1602 and both 1606 and 1610 are offered, you should consider installing version 1610 because each version includes the features that were first made available in previously released versions.
+- You can install any update that is available from within the console. For example, if your site runs version 1802 and both 1806 and 1810 are offered, you should consider installing version 1810 because each version includes the features that were first made available in previously released versions.
 - After a new update completes installation at your top-tier site, child primary sites automatically start the process to update. However, you can set [Service Windows](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkservicewindowa-service-windows-for-site-servers) to control the timing of updates.
 - Secondary sites do not automatically install updates. Instead, you manually start the update from within the Configuration Manager console.
 

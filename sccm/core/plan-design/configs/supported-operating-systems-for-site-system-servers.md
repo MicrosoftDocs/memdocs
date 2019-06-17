@@ -2,13 +2,13 @@
 title: Supported site system servers
 titleSuffix: Configuration Manager
 description: Learn which Windows versions you can use to host a Configuration Manager site or site system role.
-ms.date: 04/16/2019
+ms.date: 05/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 17905b4c-3895-4ad4-a69c-5e0d0fc5a8c3
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -208,6 +208,8 @@ This OS isn't supported for site servers or site system roles, except for the di
 
     -   Distribution points on this OS don't support network booting of client computers in EFI mode. Client computers with BIOS or with EFI booting in legacy mode are supported.  
 
+> [!Warning]  
+> Windows Server 2008 doesn't support TLS 1.2. If you enable this protocol in your environment, Windows Server 2008 computers will no longer communicate with the site. For more information, see [How to enable TLS 1.2 for Configuration Manager](/sccm/core/plan-design/security/enable-tls-1-2).  
 
 
 ## <a name="bkmk_client"></a> Client OS versions

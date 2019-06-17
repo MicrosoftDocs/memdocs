@@ -21,10 +21,10 @@ ms.collection: M365-identity-device-management
 
 Historically, you could add redundancy to most of the roles in Configuration Manager by having multiple instances of these roles in your environment. Except for the site server itself. Starting in Configuration Manager version 1806, high availability for the site server role is a Configuration Manager-based solution to install an additional site server in *passive* mode. Version 1810 adds hierarchy support, so central administration sites and child primary sites can also have an additional site server in passive mode. The site server in passive mode can be on-premises or cloud-based in Azure.
 
-This feature brings the following benefits 
-- Redundancy and high availability to the site server role  
+This feature brings the following benefits 
+- Redundancy and high availability to the site server role  
 - More easily change the hardware or OS of the site server  
-- More easily move your site server to Azure IaaS  
+- More easily move your site server to Azure IaaS  
 
 The site server in passive mode is in addition to your existing site server that is in *active* mode. A site server in passive mode is available for immediate use, when needed. Include this additional site server as part of your overall design for making the Configuration Manager service [highly available](/sccm/core/servers/deploy/configure/high-availability-options).  
 
@@ -65,7 +65,7 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
 
     - The SQL Server that hosts the site database can use a default instance, named instance, [SQL Server cluster](/sccm/core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database), or a [SQL Server Always On availability group](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).  
 
-    - Both site servers need **sysadmin** and **securityadmin** security roles on the instance of SQL Server that hosts the site database. The original site server should already have these roles, so add them for the new site server. For example, the following SQL script adds these roles for the new site server **VM2** in the Contoso domain:  
+    - Both site servers need the **sysadmin** security role on the instance of SQL Server that hosts the site database. The original site server should already have these roles, so add them for the new site server. For example, the following SQL script adds these roles for the new site server **VM2** in the Contoso domain:  
 
         ```SQL
         USE [master]
@@ -73,9 +73,7 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
         CREATE LOGIN [contoso\vm2$] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
         GO
         ALTER SERVER ROLE [sysadmin] ADD MEMBER [contoso\vm2$]
-        GO
-        ALTER SERVER ROLE [securityadmin] ADD MEMBER [contoso\vm2$]
-        GO        
+        GO       
         ```
     - Both site servers need access to the site database on the instance of SQL Server. The original site server should already have this access, so add it for the new site server. For example, the following SQL script adds a login to the **CM_ABC** database for the new site server **VM2** in the Contoso domain:  
 

@@ -7,8 +7,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: df2e57b9-6445-4067-98e7-ace85d4e6aa6
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
@@ -21,7 +21,7 @@ Update 1606 for System Center Configuration Manager is available as an in-consol
 > [!TIP]  
 >  Learn more about:  
 >   
->  -   [Installing new sites](/sccm/core/servers/deploy/install) (using a baseline version like 1511)  
+>  -   [Installing new sites](/sccm/core/servers/deploy/install/prepare-to-install-sites) (using a baseline version like 1511)  
 >  -   [Installing updates at sites](/sccm/core/servers/manage/updates) (like update 1602 or 1606)  
 
  The following sections provide details about changes and new capabilities introduced in version 1606 of Configuration Manager.  
@@ -193,11 +193,11 @@ Configuration Manager can help you manage Activation Lock in two ways:
 For details, see [Manage iOS Activation Lock with System Center Configuration Manager](../../../mdm/deploy-use/manage-ios-activation-lock.md).
 
 
-### Windows Defender Advanced Threat Protection
+### Microsoft Defender Advanced Threat Protection
 
-Endpoint Protection can help manage and monitor Windows Defender Advanced Threat Protection (ATP). Windows Defender ATP is a new service that will help enterprises to detect, investigate, and respond to advanced attacks on their networks. Configuration Manager policies can help you onboard and monitor managed computers running Windows 10, version 1607 (build 14328) or later.
+Endpoint Protection can help manage and monitor Microsoft Defender Advanced Threat Protection (ATP). Microsoft Defender ATP is a new service that will help enterprises to detect, investigate, and respond to advanced attacks on their networks. Configuration Manager policies can help you onboard and monitor managed computers running Windows 10, version 1607 (build 14328) or later.
 
-For details, see [Windows Defender Advanced Threat Protection](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md).
+For details, see [Microsoft Defender Advanced Threat Protection](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md).
 
 ### Device categories
 You can create device categories, which can be used to place devices in device collections automatically when you are using Configuration Manager with Microsoft Intune. Users are then required to choose a device category when they enroll a device in Intune. Additionally, you can change the category of a device from the Configuration Manager console.

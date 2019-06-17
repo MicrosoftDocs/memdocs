@@ -7,8 +7,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 0249dbd3-1e85-4d05-a9e5-420fbe44d850
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -303,7 +303,7 @@ For more information, see [Create Windows applications](/sccm/apps/get-started/c
 
 ### Uninstall application on approval revocation
 <!--1357891-->
-The behavior has changed when you revoke approval for an application. Now when you deny the request for the application, the client uninstalls the application from the user's device. This behavior requires that you enable the [optional feature](https://docs.microsoft.com/en-us/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Approve application requests for users per device**. 
+The behavior has changed when you revoke approval for an application. Now when you deny the request for the application, the client uninstalls the application from the user's device. This behavior requires that you enable the [optional feature](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Approve application requests for users per device**. 
 
 For more information, see [Deploy applications](/sccm/apps/deploy-use/deploy-applications#bkmk_approval).
 
@@ -418,7 +418,7 @@ For more information, see [Task sequences and the network access account](/sccm/
 <!--1358309-->
 Application catalog roles are no longer required to display user-available applications in Software Center. This change helps you reduce the server infrastructure required to deliver applications to users. Software Center now relies upon the management point to obtain this information, which helps larger environments scale better by assigning them to [boundary groups](/sccm/core/servers/deploy/configure/boundary-groups#management-points).
 
-For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex)  
+For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)  
 
 > [!Note]  
 > The application catalog website point and web service point roles are no longer *required* in 1806, but still *supported* roles. 

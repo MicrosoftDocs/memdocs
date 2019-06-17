@@ -2,7 +2,7 @@
 title: Task sequence steps
 titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
-ms.date: 02/21/2019
+ms.date: 06/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -13,7 +13,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 
-# Task sequence steps in Configuration Manager
+# Task sequence steps
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
@@ -22,6 +22,7 @@ The following task sequence steps can be added to a Configuration Manager task s
 The following settings are common to all task sequence steps:
 
 #### Properties tab
+
 - **Name**: The task sequence editor requires that you specify a short name to describe this step. When you add a new step, the task sequence editor sets the name to the Type by default. The **Name** length can't exceed 50 characters.  
 
 - **Description**: Optionally, specify more detailed information about this step. The **Description** length can't exceed 256 characters.  
@@ -32,38 +33,40 @@ The rest of this article describes the other settings on the **Properties** tab 
 
 - **Disable this step**: The task sequence skips this step when it runs on a computer. The icon for this step is greyed out in the task sequence editor.  
 
-- **Continue on error**: If an error occurs while running the step, the task sequence continues. For more information, see [Planning considerations for automating tasks](/sccm/osd/plan-design/planning-considerations-for-automating-tasks#BKMK_TSGroups).   
+- **Continue on error**: If an error occurs while running the step, the task sequence continues. For more information, see [Planning considerations for automating tasks](/sccm/osd/plan-design/planning-considerations-for-automating-tasks#BKMK_TSGroups).  
 
-- **Add Condition**: The task sequence evaluates these conditional statements to determine if it runs the step. For an example of using a task sequence variable as a condition, see [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables#bkmk_access-condition).   
+- **Add Condition**: The task sequence evaluates these conditional statements to determine if it runs the step. For an example of using a task sequence variable as a condition, see [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables#bkmk_access-condition).  
 
 The sections below for specific task sequence steps describe other possible settings on the **Options** tab.
 
 
 
-##  <a name="BKMK_ApplyDataImage"></a> Apply Data Image   
+## <a name="BKMK_ApplyDataImage"></a> Apply Data Image
 
 Use this step to copy the data image to the specified destination partition.  
 
-This step runs only in Windows PE. It doesn't run in the full OS. 
+This step runs only in Windows PE. It doesn't run in the full OS.
 
 Use the following task sequence variables with this step:  
+
 - [OSDDataImageIndex](/sccm/osd/understand/task-sequence-variables#OSDDataImageIndex)  
 - [OSDWipeDestinationPartition](/sccm/osd/understand/task-sequence-variables#OSDWipeDestinationPartition)  
 
-To add this step in the task sequence editor, select **Add**, select **Images**, and select **Apply Data Image**. 
-
+To add this step in the task sequence editor, select **Add**, select **Images**, and select **Apply Data Image**.
 
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
-#### Image Package  
+#### Image Package
+
 Select **Browse** to specify the **Image Package** used by this task sequence. Select the package you want to install in the **Select a Package** dialog box. The bottom of the dialog box displays the associated property information for each existing image package. Use the drop-down list to select the **Image** you want to install from the selected **Image Package**.  
 
 > [!NOTE]  
->  This task sequence action treats the image as a data file. This action doesn't do any setup to boot the image as an OS.  
+> This task sequence action treats the image as a data file. This action doesn't do any setup to boot the image as an OS.  
 
-#### Destination  
+#### Destination
+
 Configure one of the following options:
 
 - **Next available partition**: Use the next sequential partition that an **Apply Operating System** or **Apply Data Image** step in this task sequence has not already targeted.  
@@ -75,11 +78,12 @@ Configure one of the following options:
 - **Logical drive letter stored in a variable**: Specify the task sequence variable that contains the drive letter assigned to the partition by Windows PE. This variable is typically set in the Advanced section of the **Partition Properties** dialog box for the **Format and Partition Disk** task sequence step.  
 
 #### Delete all content on the partition before applying the image  
+
 Specifies that the task sequence deletes all files on the target partition before installing the image. By not deleting the content of the partition, this action can be used to apply additional content to a previously targeted partition.  
 
 
 
-##  <a name="BKMK_ApplyDriverPackage"></a> Apply Driver Package  
+## <a name="BKMK_ApplyDriverPackage"></a> Apply Driver Package  
 
 Use this step to download all of the drivers in the driver package and install them on the Windows OS.
 
@@ -89,46 +93,52 @@ Put similar device drivers into a driver package, and distribute them to the app
 
 The **Apply Driver Package** step is useful for stand-alone media. This step is also useful to install a specific set of drivers. These types of drivers include devices that Windows plug-and-play doesn't detect, such as network printers.  
 
-This task sequence step runs only in Windows PE. It doesn't run in the full OS. 
+This task sequence step runs only in Windows PE. It doesn't run in the full OS.
 
 Use the following task sequence variables with this step:  
+
 - [OSDApplyDriverBootCriticalContentUniqueID](/sccm/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalContentUniqueID)  
 - [OSDApplyDriverBootCriticalHardwareComponent](/sccm/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalHardwareComponent)  
 - [OSDApplyDriverBootCriticalID](/sccm/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalID)  
 - [OSDApplyDriverBootCriticalINFFile](/sccm/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalINFFile)  
 - [OSDInstallDriversAdditionalOptions](/sccm/osd/understand/task-sequence-variables#OSDInstallDriversAdditionalOptions)<!--516679/2840016--> (starting in version 1806)  
 
-To add this step in the task sequence editor, select **Add**, select **Drivers**, and select **Apply Driver Package**. 
+To add this step in the task sequence editor, select **Add**, select **Drivers**, and select **Apply Driver Package**.
 
-
-### Properties  
+### Properties
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
 #### Driver package
+
 Specify the driver package that contains the needed device drivers. Select **Browse** to launch the **Select a Package** dialog box. Select an existing driver package to apply. The bottom of the dialog box displays the associated package properties.  
 
 #### Select the mass storage driver within the package that needs to be installed before setup on pre-Windows Vista operating systems
+
 Specify any mass storage drivers needed to install a classic OS.  
 
 #### Driver
+
 Select the mass storage driver file to install before setup of a classic OS. The drop-down list populates from the specified package.  
 
-#### Model  
+#### Model
+
 Specify the boot-critical device that is needed for pre-Windows Vista OS deployments.  
 
 #### Do unattended installation of unsigned drivers on version of Windows where this is allowed
+
 This option allows Windows to install drivers without a digital signature.  
 
 
 
-##  <a name="BKMK_ApplyNetworkSettings"></a> Apply Network Settings   
+## <a name="BKMK_ApplyNetworkSettings"></a> Apply Network Settings  
 
 Use this step to specify the network or workgroup configuration information for the destination computer. The task sequence stores these values in the appropriate answer file. Windows Setup uses this answer file during the **Setup Windows and ConfigMgr** action.  
 
-This task sequence step runs only in Windows PE. It doesn't run in the full OS. 
+This task sequence step runs only in Windows PE. It doesn't run in the full OS.
 
 Use the following task sequence variables with this step:  
+
 - [OSDAdapter](/sccm/osd/understand/task-sequence-variables#OSDAdapter)  
 - [OSDAdapterCount](/sccm/osd/understand/task-sequence-variables#OSDAdapterCount)  
 - [OSDDNSDomain](/sccm/osd/understand/task-sequence-variables#OSDDNSDomain)  
@@ -140,55 +150,61 @@ Use the following task sequence variables with this step:
 - [OSDJoinPassword](/sccm/osd/understand/task-sequence-variables#OSDJoinPassword)  
 - [OSDWorkgroupName](/sccm/osd/understand/task-sequence-variables#OSDWorkgroupName)  
 
-To add this step in the task sequence editor, select **Add**, select **Settings**, and select **Apply Network Settings**. 
+To add this step in the task sequence editor, select **Add**, select **Settings**, and select **Apply Network Settings**.
 
-
-### Properties  
+### Properties
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
 #### Join a workgroup
-Select this option to have the destination computer join the specified workgroup. Enter the name of the workgroup on the **Workgroup** line. The value that the **Capture Network Settings** task sequence step captures can override this value. 
+
+Select this option to have the destination computer join the specified workgroup. Enter the name of the workgroup on the **Workgroup** line. The value that the **Capture Network Settings** task sequence step captures can override this value.
 
 #### Join a domain
+
 Select this option to have the destination computer join the specified domain. Specify or browse to the domain, such as `fabricam.com`. Specify or browse to a Lightweight Directory Access Protocol (LDAP) path for an organizational unit. For example: `LDAP//OU=computers, DC=Fabricam.com, C=com`.  
 
 #### Account
-Select **Set** to specify an account with the necessary permissions to join the computer to the domain. In the **Windows User Account** dialog box, enter the user name in the following format: `Domain\User`. For more information, see [Domain joining account](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-domain-joining-account). 
 
-#### Adapter settings  
-Specify network configurations for each network adapter in the computer. Select **New** to open the **Network Settings** dialog box, and then specify the network settings. 
-- If you also use the **Capture Network Settings** step, the task sequence applies the previously captured settings to the network adapter. 
-- If the task sequence didn't previously capture network settings, it applies the settings you specify in this step. 
+Select **Set** to specify an account with the necessary permissions to join the computer to the domain. In the **Windows User Account** dialog box, enter the user name in the following format: `Domain\User`. For more information, see [Domain joining account](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-domain-joining-account).
+
+#### Adapter settings
+
+Specify network configurations for each network adapter in the computer. Select **New** to open the **Network Settings** dialog box, and then specify the network settings.
+
+- If you also use the **Capture Network Settings** step, the task sequence applies the previously captured settings to the network adapter.
+- If the task sequence didn't previously capture network settings, it applies the settings you specify in this step.
 - The task sequence applies these settings to network adapters in Windows device enumeration order.  
-- The task sequence doesn't immediately apply the settings you specify in this step to the computer. 
+- The task sequence doesn't immediately apply the settings you specify in this step to the computer.
 
 
 
-##  <a name="BKMK_ApplyOperatingSystemImage"></a> Apply Operating System Image  
+## <a name="BKMK_ApplyOperatingSystemImage"></a> Apply Operating System Image  
 
 > [!TIP]  
 > Beginning with Windows 10, version 1709, media includes multiple editions. When you configure a task sequence to use an OS upgrade package or OS image, be sure to select a [supported edition](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).  
 
-Use this step to install an OS on the destination computer. 
+Use this step to install an OS on the destination computer.
 
 > [!NOTE]  
->  The **Setup Windows and ConfigMgr** step starts the installation of Windows. 
+> The **Setup Windows and ConfigMgr** step starts the installation of Windows.
 
 After the **Apply Operating System** action runs, it sets the **OSDTargetSystemDrive** variable to the drive letter of the partition containing the OS files.  
 
-This task sequence step runs only in Windows PE. It doesn't run in the full OS. 
+This task sequence step runs only in Windows PE. It doesn't run in the full OS.
 
 Use the following task sequence variables with this step:  
+
 - [OSDConfigFileName](/sccm/osd/understand/task-sequence-variables#OSDConfigFileName)  
 - [OSDImageIndex](/sccm/osd/understand/task-sequence-variables#OSDImageIndex)  
 - [OSDTargetSystemDrive](/sccm/osd/understand/task-sequence-variables#OSDTargetSystemDrive)  
 
-To add this step in the task sequence editor, select **Add**, select **Images**, and select **Apply Operating System Image**. 
+To add this step in the task sequence editor, select **Add**, select **Images**, and select **Apply Operating System Image**.
 
 This step performs actions depending on whether it uses an OS image or an OS upgrade package.  
 
 #### OS image actions
+
 The **Apply Operating System Image** step performs the following actions when using an OS image:  
 
 1. Delete all content on the targeted volume, except files in the folder specified by the **\_SMSTSUserStatePath** variable.  
@@ -206,6 +222,7 @@ The **Apply Operating System Image** step performs the following actions when us
 5. Set the boot.ini or the Boot Configuration Database (BCD) to reference the newly installed OS.  
 
 #### OS upgrade package actions
+
 The **Apply Operating System Image** step performs the following actions when using an OS upgrade package:  
 
 1. Delete all content on the targeted volume, except files in the folder specified by the **\_SMSTSUserStatePath** variable.  
@@ -216,25 +233,27 @@ The **Apply Operating System Image** step performs the following actions when us
 
     2. Merge any values from the user-supplied answer file.  
 
-
-### Properties  
+### Properties
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
 #### Apply operating system from a captured image
+
 Installs an OS image that you captured. Select **Browse** to open the **Select a package** dialog box. Then select the existing image package you want to install. If multiple images are associated with the specified **Image package**, select from the drop-down list the associated image to use for this deployment. You can view basic information about each existing image by selecting it.  
 
 #### Apply operating system image from an original installation source
+
 Installs an OS using an OS upgrade package, which is also an original installation source. Select **Browse** to open the **Select an Operating System Upgrade Package** dialog box. Then select the existing OS upgrade package you want to use. You can view basic information about each existing image source by selecting it. The results pane at the bottom of the dialog box displays the associated image source properties. If there are multiple editions associated with the specified package, use the drop-down list to select the **Edition** you want to use.  
 
 > [!NOTE]  
 > **Operating System Upgrade Packages** are primarily meant for use with in-place upgrades and not for new installations of Windows. When deploying new installations of Windows, use the **Apply operating system from a captured image** option and **install.wim** from the installation source files.
-> 
+>
 > Deploying new installations of Windows via **Operating System Upgrade Packages** is still supported, but it's dependant on drivers being compatible with this method. When installing Windows from an OS upgrade package, drivers are installed while still in Windows PE versus simply being injected while in Windows PE. Some drivers aren't compatible with being installed while in Windows PE.
-> 
+>
 > If drivers aren't compatible with being installed while in Windows PE, then create an **Operating System Image** with the **install.wim** from the original installation source files. Then deploy via the **Apply operating system from a captured image** option instead.
 
 #### Use an unattended or sysprep answer file for a custom installation
+
 Use this option to provide a Windows setup answer file (**unattend.xml**, **unattend.txt**, or **sysprep.inf**) depending on the OS version and installation method. The file you specify can include any of the standard configuration options supported by Windows answer files. For example, you can use it to specify the default Internet Explorer home page. Specify the package that contains the answer file and the associated path to the file in the package.  
 
 > [!NOTE]  
@@ -242,7 +261,8 @@ Use this option to provide a Windows setup answer file (**unattend.xml**, **unat
 
 If you don't supply a Windows setup answer file, the task sequence automatically generates an answer file.  
 
-#### Destination  
+#### Destination
+
 Configure one of the following options:  
 
 - **Next available partition**: Use the next sequential partition not already targeted by an **Apply Operating System** or **Apply Data Image** step in this task sequence.  
@@ -253,26 +273,30 @@ Configure one of the following options:
 
 - **Logical drive letter stored in a variable**: Specify the task sequence variable containing the drive letter assigned to the partition by Windows PE. This variable is typically set in the Advanced section of the **Partition Properties** dialog box for the **Format and Partition Disk** task sequence step.  
 
-
 ### Options  
 
 Besides the default options, configure the following additional settings on the **Options** tab of this task sequence step:  
 
 #### Access content directly from the distribution point
+
 Configure the task sequence to access the OS image directly from the distribution point. For example, use this option when you deploy operating systems to embedded devices that have limited storage capacity. When selecting this option, also configure the package share settings on the **Data Access** tab of the OS image properties.  
 
 > [!NOTE]  
 > This setting overrides the deployment option that you configure on the **Distribution Points** page in the **Deploy Software Wizard**. This override is only for the OS image that this step specifies, not for all task sequence content.  
 
+> [!IMPORTANT]  
+> For greatest security, it is strongly recommended not to select this option. This option is mainly designed for use on devices with limited storage capacity. This option is not meant to help increase the speed of the task sequence. When this option is selected, the package hash is not verified for the operating system package. Therefore, package integrity cannot be ensured because it is possible for users with administrative rights to alter or tamper with package contents.
 
 
-##  <a name="BKMK_ApplyWindowsSettings"></a> Apply Windows Settings  
+
+## <a name="BKMK_ApplyWindowsSettings"></a> Apply Windows Settings  
 
 Use this step to configure the Windows settings for the destination computer. The task sequence stores these values in the appropriate answer file. Windows Setup uses this answer file during the **Setup Windows and ConfigMgr** step.  
 
 This task sequence step runs only in Windows PE. It doesn't run in the full OS.  
 
 Use the following task sequence variables with this step:  
+
 - [OSDComputerName](/sccm/osd/understand/task-sequence-variables#OSDComputerName-input)  
 - [OSDLocalAdminPassword](/sccm/osd/understand/task-sequence-variables#OSDLocalAdminPassword)  
 - [OSDProductKey](/sccm/osd/understand/task-sequence-variables#OSDProductKey)  
@@ -283,43 +307,51 @@ Use the following task sequence variables with this step:
 - [OSDServerLicenseMode](/sccm/osd/understand/task-sequence-variables#OSDServerLicenseMode)  
 - [OSDTimeZone](/sccm/osd/understand/task-sequence-variables#OSDTimeZone-input)  
 
-To add this step in the task sequence editor, select **Add**, select **Settings**, and select **Apply Windows Settings**. 
+To add this step in the task sequence editor, select **Add**, select **Settings**, and select **Apply Windows Settings**.
 
-
-### Properties  
+### Properties
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
 #### User name
+
 Specify the registered user name to associate with the destination computer. The value that the **Capture Windows Settings** task sequence step captures can override this value.  
 
 #### Organization name
+
 Specify the registered organization name to associate with the destination computer. The value that the **Capture Windows Settings** task sequence step captures can override this value.  
 
 #### Product key  
+
 Specify the product key to use for the Windows installation on the destination computer.  
 
-#### Server licensing  
-Specify the server licensing mode. 
+#### Server licensing
+
+Specify the server licensing mode.
+
 - Select **Per server** or **Per user** as the licensing mode.  
 - If you select **Per server**, also specify the maximum number of connections permitted per your license agreement.  
-- If the destination computer isn't a server, or you don't want to specify the licensing mode, select **Do not specify**.   
+- If the destination computer isn't a server, or you don't want to specify the licensing mode, select **Do not specify**.  
 
 #### Maximum connections
+
 Specify the maximum number of connections that are available for this computer as stated in your license agreement.  
 
 #### Randomly generate the local administrator password and disable the account on all supported platforms (recommended)  
+
 Select this option to set the local administrator password to a randomly generated string. This option also disables the local administrator account on platforms that support this capability.  
 
 #### Enable the account and specify the local administrator password  
+
 Select this option to enable the local administrator account using the specified password. Enter the password on the **Password** line and confirm the password on the **Confirm password** line.  
 
 #### Time Zone
+
 Specify the time zone to configure on the destination computer. The value that the **Capture Windows Settings** task sequence step captures can override this value.  
 
 
 
-##  <a name="BKMK_AutoApplyDrivers"></a> Auto Apply Drivers  
+## <a name="BKMK_AutoApplyDrivers"></a> Auto Apply Drivers  
 
 Use this step to match and install drivers as part of the OS deployment.  
 
@@ -345,6 +377,7 @@ The **Auto Apply Drivers** task sequence step performs the following actions:
 This task sequence step runs only in Windows PE. It doesn't run in the full OS.
 
 Use the following task sequence variables with this step:  
+
 - [OSDAutoApplyDriverBestMatch](/sccm/osd/understand/task-sequence-variables#OSDAutoApplyDriverBestMatch)  
 - [OSDAutoApplyDriverCategoryList](/sccm/osd/understand/task-sequence-variables#OSDAutoApplyDriverCategoryList)  
 - [SMSTSDriverRequestConnectTimeOut](/sccm/osd/understand/task-sequence-variables#SMSTSDriverRequestConnectTimeOut)  
@@ -352,62 +385,71 @@ Use the following task sequence variables with this step:
 - [SMSTSDriverRequestResolveTimeOut](/sccm/osd/understand/task-sequence-variables#SMSTSDriverRequestResolveTimeOut)  
 - [SMSTSDriverRequestSendTimeOut](/sccm/osd/understand/task-sequence-variables#SMSTSDriverRequestSendTimeOut)  
 
-To add this step in the task sequence editor, select **Add**, select **Drivers**, and select **Auto Apply Drivers**. 
-
+To add this step in the task sequence editor, select **Add**, select **Drivers**, and select **Auto Apply Drivers**.
 
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
 #### Install only the best matched compatible drivers
+
 Specifies that the task sequence step installs only the best matched driver for each hardware device detected.  
 
 #### Install all compatible drivers
+
 The task sequence installs all drivers compatible for each detected hardware device. Windows Setup then chooses the best driver. This option takes more network bandwidth and disk space. The task sequence downloads more drivers, but Windows can select a better driver.  
 
 #### Consider drivers from all categories
+
 The task sequence searches all available driver categories for the appropriate device drivers.  
 
 #### Limit driver matching to only consider drivers in selected categories
+
 The task sequence searches in the specified driver categories for the appropriate device drivers.  
 
+If you select multiple categories, it returns all matching drivers that are present in any of the categories. It's equivalent to an `OR` operation.<!-- SCCMDocs issue 851 -->
+
 #### Do unattended installation of unsigned drivers on versions of Windows where this is allowed
-This option allows Windows to install drivers without a digital signature.   
+
+This option allows Windows to install drivers without a digital signature.  
 
 > [!IMPORTANT]  
 > This option doesn't apply to operating systems where you can't configure driver signing policy.  
 
 
 
-##  <a name="BKMK_CaptureNetworkSettings"></a> Capture Network Settings  
+## <a name="BKMK_CaptureNetworkSettings"></a> Capture Network Settings  
 
 Use this step to capture Microsoft network settings from the computer running the task sequence. The task sequence saves these settings in task sequence variables. These settings override the default settings you configure on the **Apply Network Settings** step.  
 
 This task sequence step runs only in the full OS. It doesn't run in Windows PE.  
 
 Use the following task sequence variables with this step:  
+
 - [OSDMigrateAdapterSettings](/sccm/osd/understand/task-sequence-variables#OSDMigrateAdapterSettings)  
 - [OSDMigrateNetworkMembership](/sccm/osd/understand/task-sequence-variables#OSDMigrateNetworkMembership)  
 
-To add this step in the task sequence editor, select **Add**, select **Settings**, and select **Capture Network Settings**. 
-
+To add this step in the task sequence editor, select **Add**, select **Settings**, and select **Capture Network Settings**.
 
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
-#### Migrate domain and workgroup membership 
+#### Migrate domain and workgroup membership
+
 Captures the domain and workgroup membership information of the destination computer.  
 
 #### Migrate network adapter configuration
-Captures the network adapter configuration of the destination computer. It captures the following information: 
+
+Captures the network adapter configuration of the destination computer. It captures the following information:
+
 - Global network settings  
 - Number of adapters  
 - The following network settings associated with each adapter: DNS, WINS, IP, and port filters
 
 
 
-##  <a name="BKMK_CaptureOperatingSystemImage"></a> Capture Operating System Image  
+## <a name="BKMK_CaptureOperatingSystemImage"></a> Capture Operating System Image  
 
 This step captures one or more images from a reference computer. The task sequence creates a Windows image (.wim) file on the specified network share. Then use the **Add Operating System Image Package** wizard to import this image into Configuration Manager for image-based OS deployments.  
 
@@ -417,9 +459,10 @@ The installed OS on the reference computer must be a version of Windows that Con
 
 Specify an account with write permissions to the selected network share. For more information on the capture OS image account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#capture-operating-system-image-account).
 
-This task sequence step runs only in Windows PE. It doesn't run in the full OS. 
+This task sequence step runs only in Windows PE. It doesn't run in the full OS.
 
 Use the following task sequence variables with this step:  
+
 - [OSDCaptureAccount](/sccm/osd/understand/task-sequence-variables#OSDCaptureAccount)  
 - [OSDCaptureAccountPassword](/sccm/osd/understand/task-sequence-variables#OSDCaptureAccountPassword)  
 - [OSDCaptureDestination](/sccm/osd/understand/task-sequence-variables#OSDCaptureDestination)  
@@ -428,31 +471,35 @@ Use the following task sequence variables with this step:
 - [OSDImageVersion](/sccm/osd/understand/task-sequence-variables#OSDImageVersion)  
 - [OSDTargetSystemRoot](/sccm/osd/understand/task-sequence-variables#OSDTargetSystemRoot-input)  
 
-To add this step in the task sequence editor, select **Add**, select **Images**, and select **Capture Operating System Image**. 
-
+To add this step in the task sequence editor, select **Add**, select **Images**, and select **Capture Operating System Image**.
 
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
 #### Target  
+
 File system path to the location that Configuration Manager uses when storing the captured OS image.  
 
 #### Description  
+
 An optional user-defined description of the captured OS image that's stored in the image file.  
 
 #### Version  
+
 An optional user-defined version number to assign to the captured OS image. This value can be any combination of letters and numbers. It's stored in the image file.  
 
 #### Created by  
+
 The optional name of the user that created the OS image. It's stored in the image file.  
 
 #### Capture operating system image account  
+
 Enter the Windows account that has permissions to the specified network share. Select **Set** to specify the name of the Windows account.  
 
 
 
-##  <a name="BKMK_CaptureUserState"></a> Capture User State  
+## <a name="BKMK_CaptureUserState"></a> Capture User State  
 
 This step uses the User State Migration Tool (USMT) to capture user state and settings from the computer running the task sequence. This task sequence step is used in conjunction with the **Restore User State** task sequence step. This step always encrypts the USMT state store by using an encryption key that Configuration Manager generates and manages.  
 
@@ -462,9 +509,10 @@ If you want to save and restore user state settings from a state migration point
 
 This step provides control over a limited subset of the most commonly used USMT options. Specify additional command-line options using the **OSDMigrateAdditionalCaptureOptions** task sequence variable.  
 
-This task sequence step runs only in Windows PE. It doesn't run in the full OS.   
+This task sequence step runs only in Windows PE. It doesn't run in the full OS.  
 
 Use the following task sequence variables with this step:  
+
 - [_OSDMigrateUsmtPackageID](/sccm/osd/understand/task-sequence-variables#OSDMigrateUsmtPackageID)  
 - [OSDMigrateAdditionalCaptureOptions](/sccm/osd/understand/task-sequence-variables#OSDMigrateAdditionalCaptureOptions)  
 - [OSDMigrateConfigFiles](/sccm/osd/understand/task-sequence-variables#OSDMigrateConfigFiles)  
@@ -474,20 +522,21 @@ Use the following task sequence variables with this step:
 - [OSDMigrateSkipEncryptedFiles](/sccm/osd/understand/task-sequence-variables#OSDMigrateSkipEncryptedFiles)  
 - [OSDStateStorePath](/sccm/osd/understand/task-sequence-variables#OSDStateStorePath)  
 
-To add this step in the task sequence editor, select **Add**, select **User State**, and select **Capture User State**. 
-
+To add this step in the task sequence editor, select **Add**, select **User State**, and select **Capture User State**.
 
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
 #### User state migration tool package
+
 Specify the package that contains the User State Migration Tool (USMT). The task sequence uses this version of USMT to capture the user state and settings. This package doesn't require a program. Specify a package containing the 32-bit or 64-bit version of USMT. The architecture of USMT depends upon the architecture of the OS from which the task sequence is capturing state.  
 
 #### Capture all user profiles with standard options
+
 Migrate all user profile information. This option is the default.  
 
-If you select this option, but don't select **Restore local computer user profiles** in the **Restore User State** step, the task sequence fails. Configuration Manager can't migrate the new accounts without assigning them passwords. 
+If you select this option, but don't select **Restore local computer user profiles** in the **Restore User State** step, the task sequence fails. Configuration Manager can't migrate the new accounts without assigning them passwords.
 
 When you use the **Install an existing image package** option of the **New Task Sequence** wizard, the resulting task sequence defaults to **Capture all user profiles with standard options**. This default task sequence doesn't select the option to **Restore local computer user profiles**, or non-domain user accounts.  
 
@@ -496,18 +545,23 @@ Select **Restore local computer user profiles** and provide a password for the a
 If you have no local user accounts, this setting doesn't apply.  
 
 #### Customize how user profiles are captured
+
 Select this option to specify a custom profile file for migration. Select **Files** to select the configuration files for USMT to use with this step. Specify a custom .xml file that contains rules that define the user state files to migrate.  
 
 #### Click here to select configuration files
+
 Select this option to select the configuration files in the USMT package you want to use for capturing user profiles. Select the **Files** button to launch the **Configuration Files** dialog box. To specify a configuration file, enter the name of the file on the **Filename** line and select the **Add** button.  
 
 #### Enable verbose logging
-Enable this option to generate more detailed log file information. When capturing state, the task sequence by default generates **ScanState.log** in the task sequence log folder, `%WinDir%\ccm\logs`.   
+
+Enable this option to generate more detailed log file information. When capturing state, the task sequence by default generates **ScanState.log** in the task sequence log folder, `%WinDir%\ccm\logs`.  
 
 #### Skip files using encrypted file system
+
 Enable this option to skip capturing files encrypted with the Encrypted File System (EFS). These files include user profile files. Depending on the OS and USMT versions, encrypted files might not be readable after you restore. For more information, see the USMT documentation.  
 
 #### Copy by using file system access
+
 Enable this option to specify any of the following settings:  
 
 - **Continue if some files cannot be captured**: Enable this setting to continue the migration process even if it can't capture some files. If you disable this option, and a file can't be captured, then this step fails. This option is enabled by default.  
@@ -519,17 +573,19 @@ Enable this option to specify any of the following settings:
 - **Capture in off-line mode (Windows PE only)**: Enable this setting to capture the user state while in Windows PE instead of the full OS.  
 
 #### Capture by using Volume Copy Shadow Services (VSS)
+
 This option allows you to capture files even if they're locked for editing by another application.  
 
 
 
-##  <a name="BKMK_CaptureWindowsSettings"></a> Capture Windows Settings  
+## <a name="BKMK_CaptureWindowsSettings"></a> Capture Windows Settings  
 
 Use this step to capture the Windows settings from the computer running the task sequence. The task sequence saves these settings in task sequence variables. These captured settings override the default settings that you configure on the **Apply Windows Settings** step.  
 
 This task sequence step runs in either Windows PE or the full OS.  
 
 Use the following task sequence variables with this step:  
+
 - [OSDComputerName](/sccm/osd/understand/task-sequence-variables#OSDComputerName-output)  
 - [OSDMigrateComputerName](/sccm/osd/understand/task-sequence-variables#OSDMigrateComputerName)  
 - [OSDMigrateRegistrationInfo](/sccm/osd/understand/task-sequence-variables#OSDMigrateRegistrationInfo)  
@@ -537,47 +593,51 @@ Use the following task sequence variables with this step:
 - [OSDRegisteredOrgName](/sccm/osd/understand/task-sequence-variables#OSDRegisteredOrgName-output)  
 - [OSDTimeZone](/sccm/osd/understand/task-sequence-variables#OSDTimeZone-output)  
 
-To add this step in the task sequence editor, select **Add**, select **Settings**, and select **Capture Windows Settings**. 
-
+To add this step in the task sequence editor, select **Add**, select **Settings**, and select **Capture Windows Settings**.
 
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
 #### Migrate computer name
+
 Capture the NetBIOS computer name of the computer.  
 
 #### Migrate registered user and organization names
+
 Capture the registered user and organization names from the computer.  
 
 #### Migrate time zone
+
 Capture the time zone setting on the computer.  
 
 
 
-##  <a name="BKMK_CheckReadiness"></a> Check Readiness  
+## <a name="BKMK_CheckReadiness"></a> Check Readiness  
 
 Use this step to verify that the target computer meets the specified deployment prerequisite conditions.  
 
-To add this step in the task sequence editor, select **Add**, select **General**, and select **Check Readiness**. 
-
+To add this step in the task sequence editor, select **Add**, select **General**, and select **Check Readiness**.
 
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
 #### Ensure minimum memory (MB)
+
 Verify that the amount of memory, in megabytes (MB), meets or exceeds the specified amount. The step enables this setting by default.  
 
 #### Ensure minimum processor speed (MHz)  
+
 Verify that the speed of the processor, in megahertz (MHz), meets or exceeds the specified amount. The step enables this setting by default.  
 
 #### Ensure minimum free disk space (MB)
+
 Verify that the amount of free disk space, in megabytes (MB), meets or exceeds the specified amount.  
 
 #### Ensure current OS to be refreshed is
-Verify that the OS installed on the target computer meets the specified requirement. The step sets this setting to **CLIENT** by default.  
 
+Verify that the OS installed on the target computer meets the specified requirement. The step sets this setting to **CLIENT** by default.  
 
 ### Options
 
@@ -586,37 +646,40 @@ Verify that the OS installed on the target computer meets the specified requirem
 
 
 
-##  <a name="BKMK_ConnectToNetworkFolder"></a> Connect To Network Folder  
+## <a name="BKMK_ConnectToNetworkFolder"></a> Connect To Network Folder  
 
 Use this step to create a connection to a shared network folder.  
 
 This task sequence step runs in the full OS or Windows PE.  
 
 Use the following task sequence variables with this step:  
+
 - [SMSConnectNetworkFolderAccount](/sccm/osd/understand/task-sequence-variables#SMSConnectNetworkFolderAccount)  
 - [SMSConnectNetworkFolderDriveLetter](/sccm/osd/understand/task-sequence-variables#SMSConnectNetworkFolderDriveLetter)  
 - [SMSConnectNetworkFolderPassword](/sccm/osd/understand/task-sequence-variables#SMSConnectNetworkFolderPassword)  
 - [SMSConnectNetworkFolderPath](/sccm/osd/understand/task-sequence-variables#SMSConnectNetworkFolderPath)  
 
-To add this step in the task sequence editor, select **Add**, select **General**, and select **Connect To Network Folder**. 
-
+To add this step in the task sequence editor, select **Add**, select **General**, and select **Connect To Network Folder**.
 
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
 #### Path  
+
 Select **Browse** to specify the network folder path. Use the format `\\server\share`.
 
 #### Drive  
-Select the local drive letter to assign for this connection. 
 
-#### Account 
+Select the local drive letter to assign for this connection.
+
+#### Account
+
 Select **Set** to specify the user account with permissions to connect to this network folder. For more information on the task sequence network folder connection account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-network-folder-connection-account).
 
 
 
-##  <a name="BKMK_DisableBitLocker"></a> Disable BitLocker  
+## <a name="BKMK_DisableBitLocker"></a> Disable BitLocker  
 
 Use this step to disable BitLocker encryption on the current OS drive, or on a specific drive. This action leaves the key protectors visible in clear text on the hard drive. It doesn't decrypt the contents of the drive. This action completes almost instantly.  
 
@@ -627,22 +690,23 @@ If you have multiple encrypted drives, disable BitLocker on any data drives befo
 
 This step runs only in the full OS. It doesn't run in Windows PE.  
 
-To add this step in the task sequence editor, select **Add**, select **Disks**, and select **Disable BitLocker**. 
-
+To add this step in the task sequence editor, select **Add**, select **Disks**, and select **Disable BitLocker**.
 
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
 #### Current operating system drive
+
 Disables BitLocker on the current OS drive.  
 
 #### Specific drive  
+
 Disables BitLocker on a specific drive. Use the drop-down list to specify the drive where BitLocker is disabled.  
 
 
 
-##  <a name="BKMK_DownloadPackageContent"></a> Download Package Content  
+## <a name="BKMK_DownloadPackageContent"></a> Download Package Content  
 
 Use this step to download any of the following package types:  
 
@@ -663,17 +727,18 @@ This step works well in a task sequence to upgrade an OS in the following scenar
 
 This step runs in either the full OS or Windows PE. The option to save the package in the Configuration Manager client cache isn't supported in Windows PE.
 
-To add this step in the task sequence editor, select **Add**, select **Software**, and select **Download Package Content**. 
-
+To add this step in the task sequence editor, select **Add**, select **Software**, and select **Download Package Content**.
 
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
 #### Select package  
+
 Select the icon to choose the package to download. After you choose one package, select the icon again to choose another package.  
 
 #### Place into the following location
+
 Choose to save the package in one of the following locations:  
 
 - **Task sequence working directory**: This location is also referred to as the task sequence cache.  
@@ -683,16 +748,18 @@ Choose to save the package in one of the following locations:
 - **Custom path**: The task sequence engine first downloads the package to the task sequence working directory. It then moves the content to this path you specify. The task sequence engine appends the path with the package ID.  
 
 #### Save path as a variable
-Save the package's path into a custom task sequence variable. Then use this variable in another task sequence step. 
+
+Save the package's path into a custom task sequence variable. Then use this variable in another task sequence step.
 
 Configuration Manager adds a numerical suffix to the variable name. For example, you specify a variable of `%MyContent%` as a custom variable. It's the root for where the task sequence stores all referenced content for this step. This content may contain multiple packages. When you refer to the variable, add a numerical suffix. For the first package, refer to `%MyContent01%`. When you refer to the variable in subsequent steps, such as **Upgrade Operating System**, use `%MyContent02%` or `%MyContent03%`, where the number corresponds to the order that the **Download Package Content** step lists the packages.  
 
 #### If a package download fails, continue downloading other packages in the list
+
 If the task sequence fails to download a package, it starts to download the next package in the list.  
 
 
 
-##  <a name="BKMK_EnableBitLocker"></a> Enable BitLocker  
+## <a name="BKMK_EnableBitLocker"></a> Enable BitLocker  
 
 Use this step to enable BitLocker encryption on at least two partitions on the hard drive. The first active partition contains the Windows bootstrap code. Another partition contains the OS. The bootstrap partition must remain unencrypted.  
 
@@ -701,18 +768,21 @@ Use the **Pre-provision BitLocker** step to enable BitLocker on a drive while in
 > [!NOTE]  
 > BitLocker drive encryption provides low-level encryption of the contents of a disk volume.  
 
-This step runs only in the full OS. It doesn't run in Windows PE.   
+This step runs only in the full OS. It doesn't run in Windows PE.
 
 Use the following task sequence variables with this step:  
+
 - [OSDBitLockerRecoveryPassword](/sccm/osd/understand/task-sequence-variables#OSDBitLockerRecoveryPassword)  
 - [OSDBitLockerStartupKey](/sccm/osd/understand/task-sequence-variables#OSDBitLockerStartupKey)  
 
 When you specify **TPM Only**, **TPM and Startup Key on USB**, or **TPM and PIN**, the Trusted Platform Module (TPM) must be in the following state before you can run the **Enable BitLocker** step:  
+
 - Enabled  
 - Activated  
 - Ownership Allowed  
 
 This step completes any remaining TPM initialization. The remaining steps don't require physical presence or reboots. The **Enable BitLocker** step transparently completes the following remaining TPM initialization steps, if necessary:  
+
 - Create endorsement key pair  
 - Create owner authorization value and escrow to Active Directory, which must have been extended to support this value  
 - Take ownership  
@@ -724,14 +794,14 @@ BitLocker can be used to encrypt multiple drives on a computer system, both OS a
 
 If the hard drive is already encrypted, but BitLocker is disabled, then the **Enable BitLocker** step re-enables the key protectors and completes quickly. Re-encryption of the hard drive isn't necessary in this case.  
 
-To add this step in the task sequence editor, select **Add**, select **Disks**, and select **Enable BitLocker**. 
-
+To add this step in the task sequence editor, select **Add**, select **Disks**, and select **Enable BitLocker**.
 
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
 #### Choose the drive to encrypt
+
 Specifies the drive to encrypt. To encrypt the current OS drive, select **Current operating system drive**. Then configure one of the following options for key management:  
 
 - **TPM only**: Select this option to use only Trusted Platform Module (TPM).  
@@ -745,20 +815,23 @@ Specifies the drive to encrypt. To encrypt the current OS drive, select **Curren
 To encrypt a specific, non-OS data drive, select **Specific drive**. Then select the drive from the list.  
 
 #### Use full disk encryption
+
 <!--SCCMDocs-pr issue 2671-->
-By default, this step only encrypts used space on the drive. This default behavior is recommended, as it's faster and more efficient. Starting in version 1806, if your organization requires encrypting the entire drive during setup, then enable this option. Windows Setup waits for the entire drive to encrypt, which takes a long time, especially on large drives. 
+By default, this step only encrypts used space on the drive. This default behavior is recommended, as it's faster and more efficient. Starting in version 1806, if your organization requires encrypting the entire drive during setup, then enable this option. Windows Setup waits for the entire drive to encrypt, which takes a long time, especially on large drives.
 
 #### Choose where to create the recovery key
+
 To specify for BitLocker to create the recovery password and escrow it in Active Directory, select **In Active Directory**. This option requires that you extend Active Directory for BitLocker key escrow. BitLocker can then save the associated recovery information in Active Directory. Select **Do not create recovery key** to not create a password. Creating a password is the recommended option.  
 
 #### Wait for BitLocker to complete the drive encryption process on all drives before continuing task sequence execution
+
 Select this option to allow BitLocker drive encryption to complete prior to running the next step in the task sequence. If you select this option, BitLocker encrypts the entire disk volume before the user is able to sign in to the computer.  
 
 The encryption process can take hours to complete when encrypting a large hard drive. Not selecting this option allows the task sequence to proceed immediately.  
 
 
 
-##  <a name="BKMK_FormatandPartitionDisk"></a> Format and Partition Disk  
+## <a name="BKMK_FormatandPartitionDisk"></a> Format and Partition Disk  
 
 Use this step to format and partition a specified disk on the destination computer.  
 
@@ -768,23 +841,26 @@ Use this step to format and partition a specified disk on the destination comput
 This step runs only in Windows PE. It doesn't run in the full OS.  
 
 Use the following task sequence variables with this step:  
+
 - [OSDDiskIndex](/sccm/osd/understand/task-sequence-variables#OSDDiskIndex)  
 - [OSDGPTBootDisk](/sccm/osd/understand/task-sequence-variables#OSDGPTBootDisk)  
 - [OSDPartitions](/sccm/osd/understand/task-sequence-variables#OSDPartitions)  
 - [OSDPartitionStyle](/sccm/osd/understand/task-sequence-variables#OSDPartitionStyle)  
 
-To add this step in the task sequence editor, select **Add**, select **Disks**, and select **Format and Partition Disk**. 
-
+To add this step in the task sequence editor, select **Add**, select **Disks**, and select **Format and Partition Disk**.
 
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
 #### Disk Number
+
 The physical disk number of the disk to format. The number is based on Windows disk enumeration ordering.  
 
 #### Disk Type
-The type of the disk to format. There are two options to select from the drop-down list: 
+
+The type of the disk to format. There are two options to select from the drop-down list:
+
 - **Standard (MBR)**: Master Boot Record  
 - **GPT**: GUID Partition Table  
 
@@ -792,7 +868,9 @@ The type of the disk to format. There are two options to select from the drop-do
 > If you change the disk type from **Standard (MBR)** to **GPT**, and the partition layout contains an extended partition, the task sequence removes all extended and logical partitions from the layout. The task sequence editor prompts to confirm this action before changing the disk type.  
 
 #### Volume
+
 Specific information about the partition or volume that the task sequence creates, including the following attributes:  
+
 - Name  
 - Remaining disk space  
 
@@ -805,7 +883,7 @@ To delete a partition, choose the partition, and then select **Delete**.
 
 
 
-##  <a name="BKMK_InstallApplication"></a> Install Application  
+## <a name="BKMK_InstallApplication"></a> Install Application  
 
 This step installs the specified applications, or a set of applications defined by a dynamic list of task sequence variables. When the task sequence runs this step, the application installation begins immediately without waiting for a policy polling interval.  
 
@@ -830,19 +908,20 @@ When this step runs, the application checks the applicability of the requirement
 This task sequence step runs only in the full OS. It doesn't run in Windows PE.  
 
 Use the following task sequence variables with this step:  
+
 - [_TSAppInstallStatus](/sccm/osd/understand/task-sequence-variables#TSAppInstallStatus)  
 - [SMSTSMPListRequestTimeoutEnabled](/sccm/osd/understand/task-sequence-variables#SMSTSMPListRequestTimeoutEnabled)  
 - [SMSTSMPListRequestTimeout](/sccm/osd/understand/task-sequence-variables#SMSTSMPListRequestTimeout)  
 - [TSErrorOnWarning](/sccm/osd/understand/task-sequence-variables#TSErrorOnWarning)  
 
-To add this step in the task sequence editor, select **Add**, select **Software**, and select **Install Application**. 
-
+To add this step in the task sequence editor, select **Add**, select **Software**, and select **Install Application**.
 
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings that are described in this section.  
 
 #### Install the following applications
+
 The task sequence installs these applications in the specified order.  
 
 Configuration Manager filters out any disabled applications, or any applications with the following settings:  
@@ -853,6 +932,7 @@ Configuration Manager filters out any disabled applications, or any applications
 These applications don't appear in the **Select the application to install** dialog box.
 
 #### Install applications according to dynamic variable list
+
 The task sequence installs applications using this base variable name. The base variable name is for a set of task sequence variables defined for a collection or computer. These variables specify the applications that the task sequence installs for that collection or computer. Each variable name consists of its common base name plus a numerical suffix starting at 01. The value for each variable must contain the name of the application and nothing else.  
 
 For the task sequence to install applications by using a dynamic variable list, enable the following setting on the **General** tab of the application **Properties**: **Allow this application to be installed from the Install Application task sequence action instead of deploying manually**.  
@@ -880,11 +960,11 @@ The following conditions affect the applications installed by the task sequence:
 - If the task sequence doesn't find a variable with the specified base name and "01" suffix, the task sequence doesn't install any applications.  
 
 > [!Important]  
-> These values are case-sensitive. For example, "install" is different than "Install". If you need to change the value, the task sequence editor doesn't detect a change of case. Make another edit at the same time, for example, modify the step description.<!--509714-->   
+> These values are case-sensitive. For example, "install" is different than "Install". If you need to change the value, the task sequence editor doesn't detect a change of case. Make another edit at the same time, for example, modify the step description.<!--509714-->
 
 #### If an application fails, continue installing other applications in the list
-This setting specifies that the step continues when an individual application installation fails. If you specify this setting, the task sequence continues regardless of any installation errors. If you don't specify this setting, and the installation fails, the step immediately ends.  
 
+This setting specifies that the step continues when an individual application installation fails. If you specify this setting, the task sequence continues regardless of any installation errors. If you don't specify this setting, and the installation fails, the step immediately ends.  
 
 ### Options
 
@@ -894,11 +974,12 @@ This setting specifies that the step continues when an individual application in
 Besides the default options, configure the following additional settings on the **Options** tab of this task sequence step:  
 
 #### Retry this step if computer unexpectedly restarts
+
 If one of the application installations unexpectedly restarts the computer, retry this step. The step enables this setting by default with two retries. You can specify from one to five retries.  
 
 
 
-##  <a name="BKMK_InstallPackage"></a> Install Package
+## <a name="BKMK_InstallPackage"></a> Install Package
 
 Use this step to install a software package as part of the task sequence. When this step runs, the installation begins immediately without waiting for a policy polling interval.  
 
@@ -914,28 +995,33 @@ Programs that use the **Run another program first** option to install a dependen
 
 > [!NOTE]  
 > The central administration site doesn't have the necessary client configuration policies required to enable the software distribution agent during the task sequence. When you create stand-alone media for a task sequence at the central administration site, and the task sequence includes an **Install Package** step, the following error might appear in the CreateTsMedia.log file:  
->   
+>
 > `"WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)"`  
-> 
+>
 > For stand-alone media that includes an **Install Package** step, create the stand-alone media at a primary site that has the software distribution agent enabled. Alternatively, add a **Run Command Line** step after the **Setup Windows and ConfigMgr** step and before the first **Install Package** step. The **Run Command Line** step runs a WMIC command to enable the software distribution agent before the first **Install Package** step. Use the following command in the **Run Command Line** step:  
-> 
+>
 > `WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE`  
-> 
+>
 > For more information about creating stand-alone media, see [Create stand-alone media](/sccm/osd/deploy-use/create-stand-alone-media).  
 
 This task sequence step runs only in the full OS. It doesn't run in Windows PE.  
 
-To add this step in the task sequence editor, select **Add**, select **Software**, and select **Install Package**. 
+Use the following task sequence variables with this step:  
 
+- [OSDDoNotLogCommand](/sccm/osd/understand/task-sequence-variables#OSDDoNotLogCommand) (starting in version 1806)<!--1358493-->  
+
+To add this step in the task sequence editor, select **Add**, select **Software**, and select **Install Package**.
 
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
 #### Install a single software package
+
 This setting specifies a Configuration Manager software package. The step waits until the installation completes.  
 
 #### Install software packages according to dynamic variable list
+
 The task sequence installs packages using this base variable name. The base variable name is for a set of task sequence variables defined for a collection or computer. These variables specify the packages that the task sequence installs for that collection or computer. Each variable name consists of its common base name plus a numerical suffix starting at 001. The value for each variable must contain a package ID and the name of the software separated by a colon.  
 
 For the task sequence to install software by using a dynamic variable list, enable the following setting on the **Advanced** tab of the package **Properties**: **Allow this program to be installed from the Install Package task sequence without being deployed**.  
@@ -966,23 +1052,25 @@ The following conditions affect the packages installed by the task sequence:
 - If the task sequence doesn't find a variable with the specified base name and "001" suffix, the task sequence doesn't install any packages. The task sequence continues.  
 
 > [!Important]  
-> These values are case-sensitive. For example, "install" is different than "Install". If you need to change the value, the task sequence editor doesn't detect a change of case. Make another edit at the same time, for example, modify the step description.<!--509714-->   
+> These values are case-sensitive. For example, "install" is different than "Install". If you need to change the value, the task sequence editor doesn't detect a change of case. Make another edit at the same time, for example, modify the step description.<!--509714-->
 
 #### If installation of a software package fails, continue installing other packages in the list
+
 This setting specifies that the step continues if an individual software package installation fails. If you specify this setting, the task sequence continues regardless of any installation errors. If you don't specify this setting, and the installation fails, the step immediately ends.  
 
 
 
-##  <a name="BKMK_InstallSoftwareUpdates"></a> Install Software Updates  
+## <a name="BKMK_InstallSoftwareUpdates"></a> Install Software Updates  
 
 Use this step to install software updates on the destination computer. The destination computer isn't evaluated for applicable software updates until this task sequence step runs. At that time, the destination computer is evaluated for software updates like any other Configuration Manager client. For this step to install software updates, first deploy the updates to a collection of which the target computer is a member.  
 
 > [!IMPORTANT]  
 > For best performance, install the latest version of the Windows Update Agent.  
 
-This task sequence step runs only in the full OS. It doesn't run in Windows PE. 
+This task sequence step runs only in the full OS. It doesn't run in Windows PE.
 
 Use the following task sequence variables with this step:  
+
 - [SMSInstallUpdateTarget](/sccm/osd/understand/task-sequence-variables#SMSInstallUpdateTarget)  
 - [SMSTSMPListRequestTimeoutEnabled](/sccm/osd/understand/task-sequence-variables#SMSTSMPListRequestTimeoutEnabled)  
 - [SMSTSMPListRequestTimeout](/sccm/osd/understand/task-sequence-variables#SMSTSMPListRequestTimeout)  
@@ -992,36 +1080,38 @@ Use the following task sequence variables with this step:
 > [!NOTE]  
 > If the client fails to retrieve the management point list from location services, use the **SMSTSMPListRequestTimeoutEnabled** and **SMSTSMPListRequestTimeout** variables. These variables specify how many milliseconds a task sequence waits before it retries installing an application or software update. For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables).  
 
-To add this step in the task sequence editor, select **Add**, select **Software**, and select **Install Software Updates**. 
+To add this step in the task sequence editor, select **Add**, select **Software**, and select **Install Software Updates**.
 
 For more recommendations and a technical flow chart diagram for this step, see [Install Software Updates](/sccm/osd/understand/install-software-updates).
-
 
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
 #### Required for installation - Mandatory software updates only
+
 Select this option to install all mandatory software updates with administrator-defined installation deadlines.  
 
 #### Available for installation - All software updates
+
 Select this option to install all available software updates. First deploy these updates to a collection of which the computer is a member. The task sequence installs all available software updates on the destination computers.  
 
 #### Evaluate software updates from cached scan results
-By default, this step uses cached scan results from the Windows Update Agent. Disable this option to instruct the Windows Update Agent to download the latest catalog from the software update point. Enable this option when using a task sequence to [capture and build an OS image](/sccm/osd/deploy-use/create-a-task-sequence-to-capture-an-operating-system). A large number of software updates is likely in this scenario. 
 
-Many of these updates have dependencies. For example, install update ABC before update XYZ appears as applicable. When you disable this setting, and deploy the task sequence to many clients, they all connect to the software update point at the same time. This behavior results in performance issues during the process and download of the update catalog. 
+By default, this step uses cached scan results from the Windows Update Agent. Disable this option to instruct the Windows Update Agent to download the latest catalog from the software update point. Enable this option when using a task sequence to [capture and build an OS image](/sccm/osd/deploy-use/create-a-task-sequence-to-capture-an-operating-system). A large number of software updates is likely in this scenario.
 
-In most circumstances, use the default setting to use cached scan results. 
+Many of these updates have dependencies. For example, install update ABC before update XYZ appears as applicable. When you disable this setting, and deploy the task sequence to many clients, they all connect to the software update point at the same time. This behavior results in performance issues during the process and download of the update catalog.
+
+In most circumstances, use the default setting to use cached scan results.
 
 The **SMSTSSoftwareUpdateScanTimeout** variable controls the software updates scan timeout during this step. The default value is 30 minutes. For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables#SMSTSSoftwareUpdateScanTimeout).
 
-
-### Options   
+### Options  
 
 Besides the default options, configure the following additional settings on the **Options** tab of this task sequence step:  
 
 #### Retry this step if computer unexpectedly restarts
+
 If one of the updates unexpectedly restarts the computer, retry this step. The step enables this setting by default with two retries. You can specify from one to five retries.  
 
 > [!NOTE]  
@@ -1029,13 +1119,14 @@ If one of the updates unexpectedly restarts the computer, retry this step. The s
 
 
 
-##  <a name="BKMK_JoinDomainorWorkgroup"></a> Join Domain or Workgroup  
+## <a name="BKMK_JoinDomainorWorkgroup"></a> Join Domain or Workgroup  
 
 Use this step to add the destination computer to a workgroup or domain.  
 
-This task sequence step runs only in the full OS. It doesn't run in Windows PE.   
+This task sequence step runs only in the full OS. It doesn't run in Windows PE.
 
 Use the following task sequence variables with this step:  
+
 - [OSDJoinAccount](/sccm/osd/understand/task-sequence-variables#OSDJoinAccount)  
 - [OSDJoinDomainName](/sccm/osd/understand/task-sequence-variables#OSDJoinDomainName)  
 - [OSDJoinDomainOUName](/sccm/osd/understand/task-sequence-variables#OSDJoinDomainOUName)  
@@ -1044,22 +1135,24 @@ Use the following task sequence variables with this step:
 - [OSDJoinType](/sccm/osd/understand/task-sequence-variables#OSDJoinType)  
 - [OSDJoinWorkgroupName](/sccm/osd/understand/task-sequence-variables#OSDJoinWorkgroupName)  
 
-To add this step in the task sequence editor, select **Add**, select **General**, and select **Join Domain or Workgroup**. 
-
+To add this step in the task sequence editor, select **Add**, select **General**, and select **Join Domain or Workgroup**.
 
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
 #### Join a workgroup
+
 Select this option to have the destination computer join the specified workgroup. If the computer is currently a member of a domain, selecting this option causes the computer to reboot.  
 
 #### Join a domain
+
 Select this option to have the destination computer join the specified domain.  
 
 Optionally, enter or browse for an organizational unit (OU) in the specified domain for the computer to join. If the computer is currently a member of some other domain or a workgroup, this option causes the computer to reboot. If the computer is already a member of another OU, since Active Directory Domain Services doesn't allow changing the OU via this method, Windows Setup ignores this setting.  
 
 #### Enter the account which has permission to join the domain
+
 Select **Set** to enter the username and password for an account with permissions to join the domain. Enter the account in the format:  `Domain\account`. For more information on the task sequence domain joining account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-domain-joining-account).  
 
 
@@ -1075,8 +1168,7 @@ This step completely removes the Configuration Manager client, instead of only r
 
 This task sequence step runs only in the full OS. It doesn't run in Windows PE.  
 
-To add this step in the task sequence editor, select **Add**, select **Images**, and select **Prepare ConfigMgr Client for Capture**. 
-
+To add this step in the task sequence editor, select **Add**, select **Images**, and select **Prepare ConfigMgr Client for Capture**.
 
 ### Properties  
 
@@ -1088,29 +1180,31 @@ This step doesn't require any settings on the **Properties** tab.
 
 Use this step to specify the Sysprep options when capturing an OS image on the reference computer. This step runs Sysprep, and then reboots the computer into the Windows PE boot image specified for the task sequence. This action fails if the reference computer is joined to a domain.  
 
-This step runs only in the full OS. It doesn't run in Windows PE.   
+This step runs only in the full OS. It doesn't run in Windows PE.
 
 Use the following task sequence variables with this step:  
+
 - [OSDKeepActivation](/sccm/osd/understand/task-sequence-variables#OSDKeepActivation)  
 - [OSDTargetSystemRoot](/sccm/osd/understand/task-sequence-variables#OSDTargetSystemRoot-output)  
 
-
-To add this step in the task sequence editor, select **Add**, select **Images**, and select **Prepare Windows for Capture**. 
-
+To add this step in the task sequence editor, select **Add**, select **Images**, and select **Prepare Windows for Capture**.
 
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
 #### Automatically build mass storage driver list
+
 Select this option to have Sysprep automatically build a list of mass storage drivers from the reference computer. This option enables the Build Mass Storage Drivers option in the sysprep.inf file on the reference computer. For more information about this setting, see the Sysprep documentation.  
 
 #### Do not reset activation flag
+
 Select this option to prevent Sysprep from resetting the product activation flag.  
 
 #### Shutdown the computer after running this action
+
 <!--SCCMDocs-pr issue 2695-->
-Starting in version 1806, this option instructs Sysprep to shutdown the computer instead of its default restart behavior. 
+Starting in version 1806, this option instructs Sysprep to shutdown the computer instead of its default restart behavior.
 
 Starting in version 1810, this step is used in the [Windows Autopilot for existing devices](/sccm/osd/deploy-use/windows-autopilot-for-existing-devices) task sequence.
 
@@ -1122,33 +1216,35 @@ Starting in version 1810, this step is used in the [Windows Autopilot for existi
 
 ## <a name="BKMK_PreProvisionBitLocker"></a> Pre-provision BitLocker  
 
-Use this step to enable BitLocker on a drive while in Windows PE. By default, only the used drive space is encrypted, so encryption times are much faster. You apply the key management options by using the [Enable BitLocker](#BKMK_EnableBitLocker) step after the OS installs. 
+Use this step to enable BitLocker on a drive while in Windows PE. By default, only the used drive space is encrypted, so encryption times are much faster. You apply the key management options by using the [Enable BitLocker](#BKMK_EnableBitLocker) step after the OS installs.
 
 This step runs only in Windows PE. It doesn't run in the full OS.  
 
 > [!IMPORTANT]  
 > Pre-provisioning BitLocker requires at least Windows 7. The computer must also contain a supported and enabled Trusted Platform Module (TPM).  
 
-To add this step in the task sequence editor, select **Add**, select **Disks**, and select **Pre-provision BitLocker**. 
-
+To add this step in the task sequence editor, select **Add**, select **Disks**, and select **Pre-provision BitLocker**.
 
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
 #### Apply BitLocker to the specified drive
+
 Specify the drive for which you want to enable BitLocker. BitLocker only encrypts the used space on the drive.  
 
 #### Use full disk encryption
+
 <!--SCCMDocs-pr issue 2671-->
-By default, this step only encrypts used space on the drive. This default behavior is recommended, as it's faster and more efficient. Starting in version 1806, if your organization requires encrypting the entire drive during setup, then enable this option. Windows Setup waits for the entire drive to encrypt, which takes a long time, especially on large drives. 
+By default, this step only encrypts used space on the drive. This default behavior is recommended, as it's faster and more efficient. Starting in version 1806, if your organization requires encrypting the entire drive during setup, then enable this option. Windows Setup waits for the entire drive to encrypt, which takes a long time, especially on large drives.
 
 #### Skip this step for computers that do not have a TPM or when TPM is not enabled
+
 Select this option to skip drive encryption on a computer that doesn't contain a supported or enabled TPM. For example, use this option when you deploy an OS to a virtual machine.  
 
 
 
-##  <a name="BKMK_ReleaseStateStore"></a> Release State Store  
+## <a name="BKMK_ReleaseStateStore"></a> Release State Store  
 
 Use this step to notify the state migration point that the capture or restore action is complete. Use this step in conjunction with the **Request State Store**, **Capture User State**, and **Restore User State** steps. You use these steps to migrate user state data using a state migration point and the User State Migration Tool (USMT).  
 
@@ -1157,16 +1253,17 @@ For more information about managing the user state when deploying operating syst
 If you use the **Request State Store** step to request access to a state migration point to *capture* user state, this step notifies the state migration point that the capture process is complete. The state migration point then marks the user state data as available for restore. The state migration point sets the access control permissions for the user state data so that only the restoring computer has read-only access.  
 
 If you use the **Request State Store** step to request access to a state migration point to *restore* user state, this step notifies the state migration point that the restore process is complete. The state migration point then activates its configured data retention settings.  
+
 > [!IMPORTANT]  
 > Set the **Continue on Error** option for any steps between the **Request State Store** and **Release State Store** steps. Every **Request State Store** step must have a matching **Release State Store** step.  
 
-This step runs only in the full OS. It doesn't run in Windows PE.   
+This step runs only in the full OS. It doesn't run in Windows PE.
 
 Use the following task sequence variables with this step:  
+
 - [OSDStateStorePath](/sccm/osd/understand/task-sequence-variables#OSDStateStorePath)  
 
-To add this step in the task sequence editor, select **Add**, select **User State**, and select **Release State Store**. 
-
+To add this step in the task sequence editor, select **Add**, select **User State**, and select **Release State Store**.
 
 ### Properties  
 
@@ -1185,77 +1282,87 @@ Use this step in conjunction with the **Release State Store**, **Capture User St
 > [!NOTE]  
 > When creating a new state migration point, user state storage isn't available for up to one hour. To expedite availability, adjust any property settings on the state migration point to trigger a site control file update.  
 
-This step runs in the full OS and in Windows PE for offline USMT.   
+This step runs in the full OS and in Windows PE for offline USMT.
 
 Use the following task sequence variables with this step:  
+
 - [OSDStateFallbackToNAA](/sccm/osd/understand/task-sequence-variables#OSDStateFallbackToNAA)  
 - [OSDStateSMPRetryCount](/sccm/osd/understand/task-sequence-variables#OSDStateSMPRetryCount)  
 - [OSDStateSMPRetryTime](/sccm/osd/understand/task-sequence-variables#OSDStateSMPRetryTime)  
 - [OSDStateStorePath](/sccm/osd/understand/task-sequence-variables#OSDStateStorePath)  
 
-To add this step in the task sequence editor, select **Add**, select **User State**, and select **Request State Store**. 
-
+To add this step in the task sequence editor, select **Add**, select **User State**, and select **Request State Store**.
 
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
 #### Capture state from the computer
+
 Find a state migration point that meets the minimum requirements as configured in the state migration point settings. For example, **Maximum number of clients** and **Minimum amount of free disk space**. This option doesn't guarantee sufficient space is available at the time of state migration. This option requests access to the state migration point for the purpose of capturing the user state and settings from a computer.  
 
 If the Configuration Manager site has multiple active state migration points, this step finds a state migration point with available disk space. The task sequence queries the management point for a list of state migration points, and then evaluates each until it finds one that meets the minimum requirements.  
 
 #### Restore state from another computer
+
 Request access to a state migration point to restore previously captured user state and settings to a destination computer.  
 
 If there are multiple state migration points, this step finds the state migration point that has the state for the destination computer.  
 
 #### Number of retries
+
 The number of times that this step tries to find an appropriate state migration point before failing.  
 
 #### Retry delay (in seconds)
+
 The amount of time in seconds that the task sequence step waits between retry attempts.  
 
 #### If computer account fails to connect to a state store, use the network access account
+
 If the task sequence can't access the state migration point using the computer account, it uses the network access account credentials to connect. This option is less secure because other computers could use the network access account to access the stored state. This option might be necessary if the destination computer isn't domain joined.  
 
 
 
-##  <a name="BKMK_RestartComputer"></a> Restart Computer  
+## <a name="BKMK_RestartComputer"></a> Restart Computer  
 
 Use this step to restart the computer running the task sequence. After the restart, the computer automatically continues with the next step in the task sequence.  
 
-This step can be run in either the full OS or Windows PE.   
+This step can be run in either the full OS or Windows PE.
 
 Use the following task sequence variables with this step:  
+
 - [SMSRebootMessage](/sccm/osd/understand/task-sequence-variables#SMSRebootMessage)  
 - [SMSRebootTimeout](/sccm/osd/understand/task-sequence-variables#SMSRebootTimeout)  
 
-To add this step in the task sequence editor, select **Add**, select **General**, and select **Restart Computer**. 
-
+To add this step in the task sequence editor, select **Add**, select **General**, and select **Restart Computer**.
 
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
 #### The boot image assigned to this task sequence
+
 Select this option for the destination computer to use the boot image assigned to the task sequence. The task sequence uses the boot image to run subsequent steps in Windows PE.  
 
 #### The currently installed default operating system
+
 Select this option for the destination computer to reboot into the installed OS.  
 
 #### Notify the user before restarting
+
 Select this option to display a notification to the user before the destination computer restarts. The step selects this option by default.  
 
 #### Notification message
+
 Enter a notification message to display to the user before the destination computer restarts.  
 
 #### Message display time-out
+
 Specify the amount of time in seconds before the destination computer restarts. The default is 60 seconds.  
 
 
 
-##  <a name="BKMK_RestoreUserState"></a> Restore User State  
+## <a name="BKMK_RestoreUserState"></a> Restore User State  
 
 Use this step to initiate the User State Migration Tool (USMT) to restore user state and settings to the destination computer. You use this step in conjunction with the **Capture User State** step.  
 
@@ -1268,9 +1375,10 @@ The **Restore User State** step provides control over a limited subset of the mo
 > [!IMPORTANT]  
 > If you're using this step for a purpose unrelated to an OS deployment scenario, add the [Restart Computer](#BKMK_RestartComputer) step immediately following the **Restore User State** step.  
 
-This step runs only in the full OS. It doesn't run in Windows PE.   
+This step runs only in the full OS. It doesn't run in Windows PE.
 
 Use the following task sequence variables with this step:  
+
 - [_OSDMigrateUsmtRestorePackageID](/sccm/osd/understand/task-sequence-variables#OSDMigrateUsmtRestorePackageID)  
 - [OSDMigrateAdditionalRestoreOptions](/sccm/osd/understand/task-sequence-variables#OSDMigrateAdditionalRestoreOptions)  
 - [OSDMigrateContinueOnRestore](/sccm/osd/understand/task-sequence-variables#OSDMigrateContinueOnRestore)  
@@ -1279,29 +1387,34 @@ Use the following task sequence variables with this step:
 - [OSDMigrateLocalAccountPassword](/sccm/osd/understand/task-sequence-variables#OSDMigrateLocalAccountPassword)  
 - [OSDStateStorePath](/sccm/osd/understand/task-sequence-variables#OSDStateStorePath)  
 
-To add this step in the task sequence editor, select **Add**, select **User State**, and select **Restore User State**. 
-
+To add this step in the task sequence editor, select **Add**, select **User State**, and select **Restore User State**.
 
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
 #### User state migration tool package
-Specify the package that contains the version of USMT for this step to use. This package doesn't require a program. When the step runs, the task sequence uses the version of USMT in the specified package. Specify a package containing the 32-bit or 64-bit version of USMT. The architecture of USMT depends upon the architecture of the OS to which the task sequence is restoring state. 
+
+Specify the package that contains the version of USMT for this step to use. This package doesn't require a program. When the step runs, the task sequence uses the version of USMT in the specified package. Specify a package containing the 32-bit or 64-bit version of USMT. The architecture of USMT depends upon the architecture of the OS to which the task sequence is restoring state.
 
 #### Restore all captured user profiles with standard options
+
 Restores the captured user profiles with the standard options. To customize the options that USMT restores, select **Customize user profile capture**.  
 
 #### Customize how user profiles are restored
+
 Allows you to customize the files that you want to restore to the destination computer. Select **Files** to specify the configuration files in the USMT package you want to use for restoring the user profiles. To add a configuration file, enter the name of the file in the **Filename** box, and then select **Add**. The Files pane lists the configuration files that USMT uses. The .xml file you specify defines which user file USMT restores.  
 
 #### Restore local computer user profiles
+
 Restores the local computer user profiles. These profiles aren't for domain users. Assign new passwords to the restored local user accounts. USMT can't migrate the original passwords. Enter the new password in the **Password** box, and confirm the password in the **Confirm Password** box.  
 
 #### Continue if some files cannot be restored
-Continues restoring user state and settings even if USMT is unable to restore some files. The step enables this option by default. If you disable this option, and USMT encounters errors while restoring files, this step fails immediately. USMT doesn't restore all files.   
+
+Continues restoring user state and settings even if USMT is unable to restore some files. The step enables this option by default. If you disable this option, and USMT encounters errors while restoring files, this step fails immediately. USMT doesn't restore all files.
 
 #### Enable verbose logging
+
 Enable this option to generate more detailed log file information. When restoring state, the task sequence by default generates **Loadstate.log** in the task sequence log folder, `%WinDir%\ccm\logs`.  
 
 
@@ -1310,23 +1423,24 @@ Enable this option to generate more detailed log file information. When restorin
 
 Use this step to run the specified command line.  
 
-This step can be run in the full OS or Windows PE.   
+This step can be run in the full OS or Windows PE.
 
 Use the following task sequence variables with this step:  
-- [OSDDoNotLogCommand](/sccm/osd/understand/task-sequence-variables#OSDDoNotLogCommand) (starting in version 1806)<!--1358493-->  
+
+- [OSDDoNotLogCommand](/sccm/osd/understand/task-sequence-variables#OSDDoNotLogCommand) (starting in version 1902)<!--3654172-->  
 - [SMSTSDisableWow64Redirection](/sccm/osd/understand/task-sequence-variables#SMSTSDisableWow64Redirection)  
 - [SMSTSRunCommandLineUserName](/sccm/osd/understand/task-sequence-variables#SMSTSRunCommandLineUserName)  
 - [SMSTSRunCommandLinePassword](/sccm/osd/understand/task-sequence-variables#SMSTSRunCommandLinePassword)  
 - [WorkingDirectory](/sccm/osd/understand/task-sequence-variables#WorkingDirectory)  
 
-To add this step in the task sequence editor, select **Add**, select **General**, and select **Run Command Line**. 
-
+To add this step in the task sequence editor, select **Add**, select **General**, and select **Run Command Line**.
 
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
 #### Command line
+
 Specifies the command line that the task sequence runs. This field is required. Include file name extensions, for example, .vbs and .exe. Include all required settings files and command-line options.  
 
 If you don't specify the file name extension, Configuration Manager tries .com, .exe, and .bat. If the file name has an extension that's not an executable type, Configuration Manager tries to apply a local association. For example, if the command line is readme.gif, Configuration Manager starts the application specified on the destination computer for opening .gif files.  
@@ -1341,9 +1455,11 @@ Examples:
 > To run successfully, precede command-line actions with the **cmd.exe /c** command. Example of these actions include output redirection, piping, and copy commands.  
 
 #### Disable 64-bit file system redirection
+
 By default, 64-bit operating systems use the WOW64 file system redirector to run command lines. This behavior is to properly find 32-bit versions of OS executables and libraries. Select this option to disable the use of the WOW64 file system redirector. Windows runs the command using native 64-bit versions of OS executables and libraries. This option has no effect when running on a 32-bit OS.  
 
 #### Start in
+
 Specifies the executable folder for the program, up to 127 characters. This folder can be an absolute path on the destination computer or a path relative to the distribution point folder that contains the package. This field is optional.  
 
 Examples:  
@@ -1356,29 +1472,41 @@ Examples:
 > The **Browse** button browses the local computer for files and folders. Anything you select must also exist on the destination computer. It must exist in the same location and with the same file and folder names.  
 
 #### Package
+
 When you specify files or programs on the command line that aren't already present on the destination computer, select this option to specify the Configuration Manager package that contains the necessary files. The package doesn't require a program. If the specified files exist on the destination computer, this option isn't required.  
 
 #### Time-out
+
 Specifies a value that represents how long Configuration Manager allows the command line to run. This value can be from one minute to 999 minutes. The default value is 15 minutes. This option is disabled by default.  
 
 > [!IMPORTANT]  
 > If you enter a value that doesn't allow enough time for the specified command to complete successfully, this step fails. The entire task sequence could fail depending on step or group conditions. If the time-out expires, Configuration Manager terminates the command-line process.  
 
 #### Run this step as the following account
+
 Specifies that the command line is run as a Windows user account other than the Local System account.  
 
 > [!NOTE]  
 > To run simple scripts or commands with another account after installing the OS, first add the account to the computer. Additionally, you may need to restore Windows user profiles to run more complex programs, such as a Windows Installer.  
 
 #### Account
+
 Specifies the Windows user account this step uses to run the command line. The command line runs with the permissions of the specified account. Select **Set** to specify the local user or domain account. For more information on the task sequence run-as account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#task-sequence-run-as-account).
 
 > [!IMPORTANT]  
 > If this step specifies a user account and runs in Windows PE, the action fails. You can't join Windows PE to a domain. The **smsts.log** file records this failure.  
 
+### Options  
+
+Besides the default options, configure the following additional settings on the **Options** tab of this task sequence step:  
+
+#### Success codes
+
+Include other exit codes from the script that the step should evaluate as success.
 
 
-##  <a name="BKMK_RunPowerShellScript"></a> Run PowerShell Script  
+
+## <a name="BKMK_RunPowerShellScript"></a> Run PowerShell Script  
 
 Use this step to run the specified Windows PowerShell script.  
 
@@ -1387,34 +1515,63 @@ This step can be run in the full OS or Windows PE. To run this step in Windows P
 > [!NOTE]  
 > PowerShell isn't enabled by default on Windows Embedded operating systems.  
 
-To add this step in the task sequence editor, select **Add**, select **General**, and select **Run PowerShell Script**. 
+Use the following task sequence variables with this step:  
 
+- [OSDLogPowerShellParameters](/sccm/osd/understand/task-sequence-variables#OSDLogPowerShellParameters) (starting in version 1902)<!--3556028-->  
+
+To add this step in the task sequence editor, select **Add**, select **General**, and select **Run PowerShell Script**.
+
+> [!Note]  
+> Use signed PowerShell scripts in Unicode format. ANSI format, which is the default, doesn't work with this step.
 
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
 #### Package
+
 Specify the Configuration Manager package that contains the PowerShell script. One package can contain multiple PowerShell scripts.  
 
 #### Script name
+
 Specifies the name of the PowerShell script to run. This field is required.  
 
+#### Enter a PowerShell script
+
+<!-- 3556028 -->
+Starting in version 1902, directly enter Windows PowerShell code in this step. This feature lets you run PowerShell commands during a task sequence without first creating and distributing a package with the script.
+
+When you add or edit a script, the PowerShell script window provides the following actions:  
+
+- Edit the script directly  
+
+- Open an existing script from file  
+
+- Browse to an existing approved [script](/sccm/apps/deploy-use/create-deploy-scripts) in Configuration Manager
+
+> [!Important]  
+> To take advantage of this new Configuration Manager feature, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
+
 #### Parameters
+
 Specifies the parameters passed to the PowerShell script. These parameters are the same as the PowerShell script parameters on the command line.  
 
-> [!IMPORTANT]  
-> Provide parameters consumed by the script, not for the Windows PowerShell command line.  
-> 
-> The following example contains valid parameters:  
-> 
-> `-MyParameter1 MyValue1 -MyParameter2 MyValue2`  
-> 
-> The following example contains invalid parameters. The first two items are Windows PowerShell command-line parameters (**-NoLogo** and **-ExecutionPolicy Unrestricted**). The script doesn't consume these parameters.  
-> 
-> `-NoLogo -ExecutionPolicy Unrestricted -File MyScript.ps1 -MyParameter1 MyValue1 -MyParameter2 MyValue2`  
+Provide parameters consumed by the script, not for the Windows PowerShell command line.  
+The following example contains valid parameters:  
+
+`-MyParameter1 MyValue1 -MyParameter2 MyValue2`  
+
+The following example contains invalid parameters. The first two items are Windows PowerShell command-line parameters (**-NoLogo** and **-ExecutionPolicy Unrestricted**). The script doesn't consume these parameters.  
+
+`-NoLogo -ExecutionPolicy Unrestricted -File MyScript.ps1 -MyParameter1 MyValue1 -MyParameter2 MyValue2`
+
+<!-- SCCMDocs-pr issue 3561 -->
+If a parameter value includes a special character, use single quotation marks (`'`) around the value. Using double quotation marks (`"`) may cause the task sequence step to incorrectly process the parameter.
+
+For example: `-Arg1 '%TSVar1%' -Arg2 '%TSVar2%'`
 
 #### PowerShell execution policy
+
 Determine which PowerShell scripts (if any) you allow to run on the computer. Choose one of the following execution policies:  
 
 - **AllSigned**: Only run scripts signed by a trusted publisher  
@@ -1423,9 +1580,54 @@ Determine which PowerShell scripts (if any) you allow to run on the computer. Ch
 
 - **Bypass**: Load all configuration files and run all scripts. If you download an unsigned script from the internet, Windows PowerShell doesn't prompt for permission before running the script.  
 
-
 > [!IMPORTANT]  
 > PowerShell 1.0 doesn't support Undefined and Bypass execution policies.  
+
+#### Output to task sequence variable
+
+<!-- 3556028 -->
+Starting in version 1902, save the script output to a custom task sequence variable.
+
+#### Start in
+
+<!-- 3556028 -->
+Starting in version 1902, specify the starting folder for the script, up to 127 characters. This folder can be an absolute path on the destination computer or a path relative to the distribution point folder that contains the package. This field is optional.  
+
+> [!NOTE]  
+> The **Browse** button browses the local computer for files and folders. Anything you select must also exist on the destination computer. It must exist in the same location and with the same file and folder names.  
+
+#### Time-out
+
+<!-- 3556028 -->
+Starting in version 1902, specify a value that represents how long Configuration Manager allows the PowerShell script to run. This value can be from one minute to 999 minutes. The default value is 15 minutes. This option is disabled by default.  
+
+> [!IMPORTANT]  
+> If you enter a value that doesn't allow enough time for the specified script to complete successfully, this step fails. The entire task sequence could fail depending on step or group conditions. If the time-out expires, Configuration Manager terminates the PowerShell process.  
+
+#### Run this step as the following account
+
+<!-- 3556028 -->
+Starting in version 1902, specify that the PowerShell script is run as a Windows user account other than the Local System account.  
+
+> [!NOTE]  
+> To run simple scripts or commands with another account after installing the OS, first add the account to the computer. Additionally, you may need to restore Windows user profiles to run more complex actions.  
+
+#### Account
+
+<!-- 3556028 -->
+Starting in version 1902, specify the Windows user account this step uses to run the PowerShell script. The script runs with the permissions of the specified account. Select **Set** to specify the local user or domain account. For more information on the task sequence run-as account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#task-sequence-run-as-account).
+
+> [!IMPORTANT]  
+> If this step specifies a user account and runs in Windows PE, the action fails. You can't join Windows PE to a domain. The **smsts.log** file records this failure.  
+
+### Options  
+
+Besides the default options, configure the following additional settings on the **Options** tab of this task sequence step:  
+
+#### Success codes
+
+<!-- 3556028 -->
+Starting in version 1902, include other exit codes from the script that the step should evaluate as success.
 
 
 
@@ -1434,10 +1636,9 @@ Determine which PowerShell scripts (if any) you allow to run on the computer. Ch
 > [!Note]  
 > Configuration Manager doesn't enable this optional feature by default. Enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).
 
-Beginning with Configuration Manager version 1710, you can add a new step that runs another task sequence. This step creates a parent-child relationship between the task sequences. With child task sequences, you can create more modular, reusable task sequences.
+This step runs another task sequence. It creates a parent-child relationship between the task sequences. With child task sequences, you can create more modular, reusable task sequences.
 
-To add this step in the task sequence editor, select **Add**, select **General**, and select **Run Task Sequence**. 
-
+To add this step in the task sequence editor, select **Add**, select **General**, and select **Run Task Sequence**.
 
 ### Specifications and limitations
 
@@ -1451,7 +1652,8 @@ Consider the following points when you add a child task sequence to a task seque
 
 - The task sequence writes entries to the **smsts.log** file, with new log entries that make it clear when a child task sequence starts.  
 
-<!--the following points are from SCCMdocs issue #1079--> 
+<!--the following points are from SCCMdocs issue #1079-->
+
 - You can't select a task sequence with a boot image reference. For any deployment that requires a boot image, specify it on the parent task sequence.  
 
 - If a child task sequence is disabled, the deployment fails. You can't use the **Continue on error** option to work around this limitation.  
@@ -1460,12 +1662,12 @@ Consider the following points when you add a child task sequence to a task seque
 
 - If a child task sequence has a missing package reference, viewing the parent task sequence doesn't detect this state. If you edit the parent task sequence, it detects any missing references in child task sequences when you make changes to the parent.  
 
-
 ### Properties
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
 #### Select task sequence to run
+
 Select **Browse** to select the child task sequence. The **Select a Task Sequence** dialog box doesn't display the parent task sequence.
 
 
@@ -1478,8 +1680,8 @@ Use this step to perform the following actions:
 
 2. Evaluate defined rules. Set task sequence variables based on the rules that evaluate to true.  
 
-
 The task sequence automatically sets the following read-only task sequence variables:  
+
 - [\_SMSTSMake](/sccm/osd/understand/task-sequence-variables#SMSTSMake)  
 - [\_SMSTSModel](/sccm/osd/understand/task-sequence-variables#SMSTSModel)  
 - [\_SMSTSMacAddresses](/sccm/osd/understand/task-sequence-variables#SMSTSMacAddresses)  
@@ -1490,14 +1692,14 @@ The task sequence automatically sets the following read-only task sequence varia
 
 This step can be run in either the full OS or Windows PE.  
 
-To add this step in the task sequence editor, select **Add**, select **General**, and select **Set Dynamic Variables**. 
-
+To add this step in the task sequence editor, select **Add**, select **General**, and select **Set Dynamic Variables**.
 
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
 #### Dynamic rules and variables
+
 To set a dynamic variable for use in the task sequence, add a rule. Then set a value for each variable specified in the rule. Additionally, add one or more variables without adding a rule. When you add a rule, choose from the following categories:  
 
 - **Computer**: Evaluate values for hardware asset tag, UUID, serial number, or MAC address. Set multiple values as necessary. If any value is true, then the rule evaluates as true. For example, the following rule evaluates as true if the device serial number is 5892087 and the MAC address is 22-A4-5A-13-78-26:  
@@ -1506,7 +1708,7 @@ To set a dynamic variable for use in the task sequence, add a rule. Then set a v
 
 - **Location**: Evaluate values for the default network gateway  
 
-- **Make and Model**: Evaluate values for the make and model of a computer. Both the make and model must evaluate to true for the rule to evaluate to true.   
+- **Make and Model**: Evaluate values for the make and model of a computer. Both the make and model must evaluate to true for the rule to evaluate to true.
 
     Specify an asterisk (`*`) and question mark (`?`) as wild cards characters. The asterisk matches multiple characters and the question mark matches a single character. For example, the string `DELL*900?` matches both `DELL-ABC-9001` and `DELL9009`.  
 
@@ -1517,7 +1719,6 @@ To set a dynamic variable for use in the task sequence, add a rule. Then set a v
     - **Existing task sequence variables**: Select one or more variables from a list of existing task sequence variables. Array variables aren't available to select.  
 
     - **Custom task sequence variables**: Define a custom task sequence variable. You can also specify an existing task sequence variable. This setting is useful to specify an existing variable array, such as **OSDAdapter**, since variable arrays aren't in the list of existing task sequence variables.  
-
 
 After you select the variables for a rule, provide a value for each variable. The variable is set to the specified value when the rule evaluates to true. For each variable, you can select **Secret value** to hide the value of the variable. By default, some existing variables hide values, such as the **OSDCaptureAccountPassword** variable.  
 
@@ -1530,30 +1731,33 @@ After you select the variables for a rule, provide a value for each variable. Th
 
 Use this step to set the value of a variable that's used with the task sequence.  
 
-This step can be run in either the full OS or Windows PE. 
+This step can be run in either the full OS or Windows PE.
 
 Task sequence variables are read by task sequence actions and specify the behavior of those actions. For more information about specific task sequence variables and how to use them, see the following articles:  
+
 - [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables)  
 - [Task sequence variables](/sccm/osd/understand/task-sequence-variables)  
 
-To add this step in the task sequence editor, select **Add**, select **General**, and select **Set Task Sequence Variable**. 
-
+To add this step in the task sequence editor, select **Add**, select **General**, and select **Set Task Sequence Variable**.
 
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
 #### Task sequence variable
+
 Specify the name of a task sequence built-in or action variable, or specify your own user-defined variable name.  
 
 #### Do not display this value
+
 <!--1358330-->
-Starting in version 1806, enable this option to mask sensitive data stored in task sequence variables. For example, when specifying a password. 
+Starting in version 1806, enable this option to mask sensitive data stored in task sequence variables. For example, when specifying a password.
 
 > [!Note]  
-> Enable this option and then set the value of the task sequence variable. Otherwise the variable value isn't set as you intend, which may cause unexpected behaviors when the task sequence runs.<!--SCCMdocs issue #800--> 
+> Enable this option and then set the value of the task sequence variable. Otherwise the variable value isn't set as you intend, which may cause unexpected behaviors when the task sequence runs.<!--SCCMdocs issue #800-->
 
 #### Value  
+
 The task sequence sets the variable to this value. Set this task sequence variable to the value of another task sequence variable with the syntax `%varname%`.  
 
 
@@ -1565,12 +1769,12 @@ Use this step to perform the transition from Windows PE to the new OS. This task
 This step runs only in Windows PE. It doesn't run in the full OS.  
 
 Use the following task sequence variables with this step:  
+
 - [SMSClientInstallProperties](/sccm/osd/understand/task-sequence-variables#SMSClientInstallProperties)  
 
 This step replaces sysprep.inf or unattend.xml directory variables, such as `%WINDIR%` and `%ProgramFiles%`, with the Windows PE installation directory, `X:\Windows`. The task sequence ignores variables specified by using these environment variables.  
 
-To add this step in the task sequence editor, select **Add**, select **Images**, and select **Setup Windows and ConfigMgr**. 
-
+To add this step in the task sequence editor, select **Add**, select **Images**, and select **Setup Windows and ConfigMgr**.
 
 ### Step actions
 
@@ -1608,17 +1812,16 @@ This step performs the following actions:
 
 2. Enable or disable the local Administrator account, based on the option selected in the **Apply Windows Settings** step.  
 
-3. Install the Configuration Manager client by using the previously downloaded package, and installation properties specified in this step. The client installs in "provisioning mode". This mode prevents the client from processing new policy requests until the task sequence completes.  
+3. Install the Configuration Manager client by using the previously downloaded package, and installation properties specified in this step. The client installs in "provisioning mode". This mode prevents the client from processing new policy requests until the task sequence completes. For more information, see [Provisioning mode](/sccm/osd/understand/provisioning-mode).  
 
 4. Wait for the client to be fully operational.  
 
 #### The step completes
+
 The task sequence continues running the next step.  
 
-<!-- Engineering confirmed that the task sequence does nothing with respect to group policy processing.
-> [!NOTE]  
->  The **Setup Windows and ConfigMgr** task sequence action is responsible for running Group Policy on the newly installed computer. The Group Policy is applied after the task sequence is finished.  
--->
+> [!Note]  
+> Windows group policy normally doesn't process until after the task sequence is complete. This behavior is consistent across different versions of Windows. Other custom actions during the task sequence can trigger group policy evaluation.<!-- 2841304 -->
 
 
 ### Properties  
@@ -1626,16 +1829,18 @@ The task sequence continues running the next step.
 On the **Properties** tab for this step, configure the settings described in this section.  
 
 #### Client package
+
 Select **Browse**, then choose the Configuration Manager client installation package to use with this step.  
 
 #### Use pre-production client package when available
+
 If there's a pre-production client package available, and the computer is a member of the piloting collection, the task sequence uses this package instead of the production client package. The pre-production client is a newer version for testing in the production environment. Select **Browse**, then choose the pre-production client installation package to use with this step.  
 
 #### Installation Properties
+
 The task sequence step automatically specifies site assignment and the default configuration. Use this field to specify any additional installation properties to use when you install the client. To enter multiple installation properties, separate them with a space.  
 
 Specify command-line options to use during client installation. For example, enter `/skipprereq: silverlight.exe` to inform CCMSetup.exe to not install the Microsoft Silverlight prerequisite. For more information about available command-line options for CCMSetup.exe, see [About client installation properties](/sccm/core/clients/deploy/about-client-installation-properties).  
-
 
 ### Options
 
@@ -1654,31 +1859,36 @@ Use this step to upgrade an older version of Windows to a newer version of Windo
 This task sequence step runs only in the full OS. It doesn't run in Windows PE.  
 
 Use the following task sequence variables with this step:  
+
 - [_SMSTSOSUpgradeActionReturnCode](/sccm/osd/understand/task-sequence-variables#SMSTSOSUpgradeActionReturnCode)  
 - [OSDSetupAdditionalUpgradeOptions](/sccm/osd/understand/task-sequence-variables#OSDSetupAdditionalUpgradeOptions)  
 
-To add this step in the task sequence editor, select **Add**, select **Images**, and select **Upgrade Operating System**. 
-
+To add this step in the task sequence editor, select **Add**, select **Images**, and select **Upgrade Operating System**.
 
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
 
 #### Upgrade package
+
 Select this option to specify the Windows 10 OS upgrade package to use for the upgrade.  
 
 #### Source path
-Specifies a local or network path to the Windows 10 media that Windows Setup uses. This setting corresponds to the Windows Setup command-line option `/InstallFrom`. 
+
+Specifies a local or network path to the Windows 10 media that Windows Setup uses. This setting corresponds to the Windows Setup command-line option `/InstallFrom`.
 
 You can also specify a variable, such as `%MyContentPath%` or `%DPC01%`. When you use a variable for the source path, set its value earlier in the task sequence. For example, use the [Download Package Content](#BKMK_DownloadPackageContent) step to specify a variable for the location of the OS upgrade package. Then, use that variable for the source path for this step.  
 
 #### Edition
+
 Specify the edition within the OS media to use for the upgrade.  
 
 #### Product key
+
 Specify the product key to apply to the upgrade process.  
 
 #### Provide the following driver content to Windows Setup during upgrade
+
 Add drivers to the destination computer during the upgrade process. This setting corresponds to the Windows Setup command-line option `/InstallDriver`. The drivers must be compatible with Windows 10. Specify one of the following options:  
 
 - **Driver package**: Select **Browse** and choose an existing driver package from the list.  
@@ -1686,13 +1896,15 @@ Add drivers to the destination computer during the upgrade process. This setting
 - **Staged content**:  Select this option to specify the location for the driver package. You can specify a local folder, network path, or a task sequence variable. When you use a variable for the source path, set its value earlier in the task sequence. For example, by using the [Download Package Content](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent) step.  
 
 #### Time-out (minutes)
+
 Specify the number of minutes before Configuration Manager fails this step. This option is useful if Windows Setup stops processing but doesn't terminate.  
 
 #### Perform Windows Setup compatibility scan without starting upgrade
-Perform the Windows Setup compatibility scan without starting the upgrade process. This setting corresponds to the Windows Setup command-line option `/Compat ScanOnly`. Deploy the entire OS upgrade package with this option. 
+
+Perform the Windows Setup compatibility scan without starting the upgrade process. This setting corresponds to the Windows Setup command-line option `/Compat ScanOnly`. Deploy the entire OS upgrade package with this option.
 
 <!--SCCMDocs-pr issue 2812-->
-Starting in version 1806, when you enable this option, this step doesn't put the Configuration Manager client into provisioning mode. Windows Setup runs silently in the background, and the client continues to function as normal. 
+Starting in version 1806, when you enable this option, this step doesn't put the Configuration Manager client into provisioning mode. Windows Setup runs silently in the background, and the client continues to function as normal. For more information, see [Provisioning mode](/sccm/osd/understand/provisioning-mode).
 
 Setup returns an exit code as a result of the scan. The following table provides some of the more common exit codes:  
 
@@ -1707,10 +1919,13 @@ Setup returns an exit code as a result of the scan. The following table provides
 For more information about this parameter, see [Windows Setup Command-Line Options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#6).  
 
 #### Ignore any dismissible compatibility messages
+
 Specifies that Setup completes the installation, ignoring any dismissible compatibility messages. This setting corresponds to the Windows Setup command-line option `/Compat IgnoreWarning`.  
 
 #### Dynamically update Windows Setup with Windows Update
+
 Enable setup to perform Dynamic Update operations, such as search, download, and install updates. This setting corresponds to the Windows Setup command-line option `/DynamicUpdate`. This setting isn't compatible with Configuration Manager software updates. Enable this option when you manage updates with stand-alone Windows Server Update Services (WSUS) or Windows Update for Business.  
 
 #### Override policy and use default Microsoft Update
+
 Temporarily override the local policy in real time to run Dynamic Update operations. The computer gets updates from Windows Update.

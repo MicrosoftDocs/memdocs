@@ -1,19 +1,15 @@
 ---
-
-title: "Toolkit reference"
-titleSuffix: "Microsoft Deployment Toolkit"
-description: "Reference details for Microsoft Deployment Toolkit 2013. "
-ms.date:  09/09/2016
+title: Toolkit reference
+titleSuffix: Microsoft Deployment Toolkit
+description: Reference details for Microsoft Deployment Toolkit (MDT)
+ms.date: 09/09/2016
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-osd
+ms.technology: configmgr-osd
 ms.topic: article
-ms.assetid:  ac670143-b7cd-47d0-86ed-14cb2554dfc7
-
+ms.assetid: ac670143-b7cd-47d0-86ed-14cb2554dfc7
 author: aczechowski  
 ms.author: aaroncz 
-manager: angrobe
-
+manager: dougeby
 ---
 
 
@@ -3248,7 +3244,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |`[Settings] Priority=Default  [Default] AreaCode=206 CountryCode=001 Dialing=TONE LongDistanceAccess=9`|  
 
 ####  <a name="DisableTaskMgr"></a> DisableTaskMgr  
- This property controls a user’s ability to start Task Manager by pressing CTRL+ALT+DEL. After the user starts Task Manager, he or she could interrupt the LTI task sequence while running in the new operating system on the target computer. This property is used in conjunction with the **HideShell** property and is only valid when the **HideShell** property is set to **YES**.  
+ This property controls a user’s ability to start Task Manager by pressing CTRL+ALT+DEL. After the user starts Task Manager, they could interrupt the LTI task sequence while running in the new operating system on the target computer. This property is used in conjunction with the **HideShell** property and is only valid when the **HideShell** property is set to **YES**.  
 
 > [!NOTE]
 >  This property and the **HideShell** property must both be set to **YES** to prevent the user pressing CTRL+ALT+DEL and interrupting the LTI task sequence.  
@@ -12875,7 +12871,7 @@ Import-MDTTaskSequence -Path "DS001:\Control" –Template "Client.xml" –Name "
 ##### Description  
  This example imports a task sequence named *Deploy Windows 8 to Reference Computer* and creates the task sequence in the DS001:\Control\WIN8REFERENCE folder in the deployment share. The comment, “Task sequence for deploying Windows 8 to the reference computer (WDG-REF-01),” is assigned to the task sequence. The version number of the task sequence is set to **1.00**.  
 
- The operating system associated with the task sequence is located at DS001:\Operating Systems\Windows 8_x64 in the deployment share. The registered owner of the operating system will be set to **Woodgrove Bank Employee**. The registered organization of the operating system will be set to **Woodgrove Bank**. The Internet Explorer home page will default to **<http://www.woodgrovebank.com>**. The password for the local, built-in Administrator account will be set to a value of <strong>P@ssw0rd</strong>. The product key for the operating system will be set to **1234512345123451234512345**.  
+ The operating system associated with the task sequence is located at DS001:\Operating Systems\Windows 8_x64 in the deployment share. The registered owner of the operating system will be set to **Woodgrove Bank Employee**. The registered organization of the operating system will be set to **Woodgrove Bank**. The Internet Explorer home page will default to **http:\//www.woodgrovebank.com**. The password for the local, built-in Administrator account will be set to a value of <strong>P@ssw0rd</strong>. The product key for the operating system will be set to **1234512345123451234512345**.  
 
 #### Example 2  
 
@@ -12889,7 +12885,7 @@ Import-MDTTaskSequence -Path "DS001:\Control" –Template "Client.xml" –Name "
 
  The operating system associated with the task sequence is located at DS001:\Operating Systems\Windows 8_x64 in the deployment share, which is passed to the cmdlet using the *$OSObject* variable. The *$OSObject* variable is set to an existing operating system object using the **Get-Item** cmdlet.  
 
- The registered owner of the operating system will be set to **Woodgrove Bank Employee**. The registered organization of the operating system will be set to **Woodgrove Bank**. The Internet Explorer home page will default to **<http://www.woodgrovebank.com>**. The password for the local, built-in Administrator account will be set to a value of <strong>P@ssw0rd</strong>. The product key for the operating system will need to be provided when deploying this task sequence in the Deployment Wizard, in the CustomSettings.ini file, or in the MDT DB.  
+ The registered owner of the operating system will be set to **Woodgrove Bank Employee**. The registered organization of the operating system will be set to **Woodgrove Bank**. The Internet Explorer home page will default to **http:\//www.woodgrovebank.com**. The password for the local, built-in Administrator account will be set to a value of <strong>P@ssw0rd</strong>. The product key for the operating system will need to be provided when deploying this task sequence in the Deployment Wizard, in the CustomSettings.ini file, or in the MDT DB.  
 
 ###  <a name="New-MDTDatabase"></a> New-MDTDatabase  
  This section describes the **New-MDTDatabase** Windows PowerShell cmdlet. Run this cmdlet from a Windows PowerShell console that has the MDT PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".  

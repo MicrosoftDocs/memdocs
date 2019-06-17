@@ -1,21 +1,16 @@
 ---
-
-title: "Quick Start - System Center 2012 R2 Configuration Manager"
-titleSuffix: "Microsoft Deployment Toolkit"
-description: "A Quick Start guide for Microsoft Deployment Toolkit with System Center 2012 R2 Configuration Manager. "
-ms.date:  09/09/2016
+title: Quickstart - ZTI
+titleSuffix: Microsoft Deployment Toolkit
+description: A quickstart guide for Microsoft Deployment Toolkit (MDT) with System Center 2012 R2 Configuration Manager for the zero-touch installation (ZTI)
+ms.date: 09/09/2016
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-osd
+ms.technology: configmgr-osd
 ms.topic: article
-ms.assetid:  b12de852-a799-4c16-b51c-cc3abbd3ca3a
-
+ms.assetid: b12de852-a799-4c16-b51c-cc3abbd3ca3a
 author: aczechowski  
 ms.author: aaroncz 
-manager: angrobe
-
+manager: dougeby
 ---
-
 
 # Quick Start Guide for Microsoft System Center 2012 R2 Configuration Manager  
  Microsoft Deployment Toolkit (MDT) 2013 provides technology for deploying Windows operating systems, and Microsoft Office. This quick start guide helps you quickly evaluate MDT 2013 by providing condensed, step-by-step instructions for using it to install the Windows 8.1 operating system with Microsoft System Center 2012 R2 Configuration Manager. This quick start guide demonstrates how to perform the New Computer deployment scenario, which covers the deployment of Windows 8.1 to a new computer. This scenario assumes that there is no user data or profile to preserve.  

@@ -7,8 +7,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
 ms.assetid: da1e687b-28f6-43c4-b14a-ff2b76e60d24
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 
 ms.collection: M365-identity-device-management
@@ -283,4 +283,4 @@ Use the following procedure to modify the properties of a servicing plan.
     >  You can review recent software updates alerts from the **Software Updates** node in the **Software Library** workspace.  
 
 **For more information:** <br/>
-[Fundamentals of Configuration Manager as a service and Windows as a service](/sccm/core/understand/configuration-manager-and-windows-as-service.md)
+[Fundamentals of Configuration Manager as a service and Windows as a service](/sccm/core/understand/configuration-manager-and-windows-as-service)

@@ -7,8 +7,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -222,7 +222,8 @@ You can use this version of SQL Server with no minimum cumulative update version
 ### SQL Server CLR integration  
   The site database requires SQL Server common language runtime (CLR) to be enabled. This option is enabled automatically when Configuration Manager installs. For more information about CLR, see [Introduction to SQL Server CLR Integration](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).  
 
-
+### SQL Server Service Broker (SSB)
+ The SQL Server Service Broker is required both for intersite replication as well as for a single primary site. 
 
 ##  <a name="bkmk_optional"></a> Optional configurations for SQL Server  
  The following configurations are optional for each database that uses a full SQL Server installation.  

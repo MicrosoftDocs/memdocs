@@ -1,19 +1,15 @@
 ---
-
-title: "MDT Samples"
-titleSuffix: "Microsoft Deployment Toolkit"
-description: "Microsoft Deployment Toolkit samples. "
-ms.date:  09/09/2016
+title: MDT samples
+titleSuffix: Microsoft Deployment Toolkit
+description: Microsoft Deployment Toolkit (MDT) samples
+ms.date: 09/09/2016
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-osd
+ms.technology: configmgr-osd
 ms.topic: article
-ms.assetid:  2ff0100c-b7ef-4e09-8c96-fc1898390b6d
-
+ms.assetid: 2ff0100c-b7ef-4e09-8c96-fc1898390b6d
 author: aczechowski  
 ms.author: aaroncz 
-manager: angrobe
-
+manager: dougeby
 ---
 
 
@@ -163,20 +159,6 @@ manager: angrobe
 -   Load the MDT Windows PowerShell snap-in using the Window PowerShell Modules console as described in [Load the MDT Windows PowerShell Snap-In Using the Import System Modules Task](#LoadMDTSnapInImport).  
 
 -   Load the MDT Windows PowerShell snap-in using the **Add-PSSnapIn** cmdlet as described in [Load the MDT Windows PowerShell Snap-In Using the Add-PSSnapIn Cmdlet](#LoadMDTSnapInCmdlet).  
-
-####  <a name="LoadMDTSnapInImport"></a> Load the MDT Windows PowerShell Snap-In Using the Import System Modules Task  
- The Import System Modules task automatically includes all the Windows PowerShell modules and snap-ins that are in the modules in the %Windir%\System32\WindowsPowerShell\1.0\Modules directory. MDT automatically installs the MDT Windows PowerShell snap-in **Microsoft.BDD.SnapIn** in that folder during the MDT installation process.  
-
-> [!NOTE]
->  The Import System Modules task is available only in Windows 7 and Windows Server 2008 R2 when Windows PowerShell 3.0 is not installed on the computer. Beginning with Windows PowerShell 3.0, modules are imported automatically the first time that you use a cmdlet in the module.  
-
- You can start a Windows PowerShell console with the Import System Modules task by performing one of the following procedures:  
-
-- In the taskbar, right-click the **Windows PowerShell** icon, and then click **Import System Modules**.  
-
-- Click **Start**, point to **Administrative Tools** and then click **Windows PowerShell Modules**.  
-
-  For more information on staring a Windows PowerShell console with Import System Modules, see [Starting Windows PowerShell with Import System Modules](http://msdn.microsoft.com/library/windows/desktop/hh847866.aspx).  
 
 ####  <a name="LoadMDTSnapInCmdlet"></a> Load the MDT Windows PowerShell Snap-In Using the Add-PSSnapIn Cmdlet  
  You can load the MDT Windows PowerShell snap-in **Microsoft.BDD.PSSnapIn** from any Windows PowerShell environment using the [Add-PSSnapIn](http://technet.microsoft.com/library/hh849705.aspx) cmdlet, as show in the following example:  
@@ -2323,7 +2305,7 @@ ParameterCondition=OR
    |   **Select Template**   |                                                                In **The following task sequence templates are available**. **Select the one you would like to use as a starting point**, select **Standard Client Task Sequence**, and then click **Next**.                                                                 |
    |      **Select OS**      | In **The following operating system images are available to be deployed with this task sequence**. Select one to use, select ***captured_vista_image*** (where *captured_vista_image* is the captured image the reference computer added to the Operating Systems node in the Deployment Workbench), and then click *Next*. |
    | **Specify Product Key** |                                                                                                                       Select **Do not specify a product key at this time**, and then click **Next**.                                                                                                                        |
-   |       OS Settings       |                                                  1.  In **Full Name**, type **Woodgrove Employee**.<br />2.  In **Organization**, type **Woodgrove Bank**.<br />3.  In **Internet Explorer Home Page**, type **<http://www.woodgrovebank.com>**.<br />4.  Click **Next**.                                                   |
+   |       OS Settings       |                                                  1.  In **Full Name**, type **Woodgrove Employee**.<br />2.  In **Organization**, type **Woodgrove Bank**.<br />3.  In **Internet Explorer Home Page**, type **http:\//www.woodgrovebank.com**.<br />4.  Click **Next**.                                                   |
    |   **Admin Password**    |                                                                                           In **Administrator Password** and **Please confirm Administrator Password**, type <strong>P@ssw0rd</strong>, and then click **Finish**.                                                                                           |
    |    **Confirmation**     |                                                                                                                                                      Click **Finish**.                                                                                                                                                      |
 

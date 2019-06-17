@@ -2,7 +2,7 @@
 title: Manage OS images
 titleSuffix: Configuration Manager
 description: Learn the methods to manage OS images stored in Windows image (WIM) files.
-ms.date: 11/27/2018
+ms.date: 05/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -17,9 +17,12 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-OS images in Configuration Manager are stored in the Windows image (WIM) file format. These images are a compressed collection of reference files and folders use to install and configure a new OS on a computer. Many OS deployment scenarios require an OS image. 
+OS images in Configuration Manager are stored in the Windows image (WIM) file format. These images are a compressed collection of reference files and folders use to install and configure a new OS on a computer. Many OS deployment scenarios require an OS image.
 
-You can use a [default OS image](#default-image), or build the OS image from a [reference computer](#bkmk_capture) that you configure. When you build the reference computer, you add OS files, drivers, support files, software updates, tools, and applications to the OS. Then you capture it to create the image file. 
+
+## OS image types
+
+You can use a [default OS image](#default-image), or build the OS image from a [reference computer](#bkmk_capture) that you configure. When you build the reference computer, you add OS files, drivers, support files, software updates, tools, and applications to the OS. Then you capture it to create the image file.
 
 ### Default image
 
@@ -51,60 +54,66 @@ To create a customized OS image, build a reference computer with the desired OS.
 - Need to create a new image when you require updates for applications and tools.  
 
 
+## <a name="BKMK_AddOSImages"></a> Add an OS image  
 
-##  <a name="BKMK_AddOSImages"></a> Add an OS image  
+Before you can use an OS image, add it to your Configuration Manager site.
 
-Before you can use an OS image, add it to your Configuration Manager site. 
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and then select the **Operating System Images** node.  
 
-1.  In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and then select the **Operating System Images** node.  
+2. On the **Home** tab of the ribbon, in the **Create** group, select **Add Operating System Image**. This action starts the Add Operating System Image Wizard.  
 
-2.  On the **Home** tab of the ribbon, in the **Create** group, select **Add Operating System Image**. This action starts the Add Operating System Image Wizard.  
+3. On the **Data Source** page, specify the following information:
 
-3.  On the **Data Source** page, specify the network **Path** to the OS image file. For example, `\\server\share\path\image.wim`.  
+    - Network **Path** to the OS image file. For example, `\\server\share\path\image.wim`.
 
-4.  On the **General** page, specify the following information. This information is useful for identification purposes when you have more than one OS image.  
+    - **Extract a specific image index from the specified WIM file** and then select an image index from the list.<!--3719699--> Starting in version 1902, this option automatically imports a single index rather than all image indexes in the file. Using this option results in a smaller image file, and faster offline servicing. It also supports the process to [Optimize image servicing](#bkmk_resetbase), for a smaller image file after applying software updates.  
 
-    -   **Name**: A unique name for the image. By default, the name comes from the WIM file name.  
+        > [!Note]  
+        > Configuration Manager doesn't modify the source image file. It creates a new image file in the same source directory.
+        >
+        > This extraction process can fail for extremely large image files, for example over 60 GB. The DISM error is `Not enough storage is available to process this command.` The command line that Configuration Manager uses is in the smsprov.log and dism.log. Manually run the same command and then import the image.<!-- SCCMDocs-pr issue 3502 -->  
 
-    -   **Version**: An optional version identifier. This property doesn't need to be the OS version of the image. It's often your organization's version for the package.   
+4. On the **General** page, specify the following information. This information is useful for identification purposes when you have more than one OS image.  
 
-    -   **Comment**: An optional brief description.  
+    - **Name**: A unique name for the image. By default, the name comes from the WIM file name.  
 
-5.  Complete the wizard.  
+    - **Version**: An optional version identifier. This property doesn't need to be the OS version of the image. It's often your organization's version for the package.  
 
+    - **Comment**: An optional brief description.  
+
+5. Complete the wizard.  
+
+For the PowerShell cmdlet equivalent of this console wizard, see [New-CMOperatingSystemImage](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmoperatingsystemimage?view=sccm-ps).
 
 Next, distribute the OS image to distribution points.  
 
 
-
-##  <a name="BKMK_DistributeBootImages"></a> Distribute content to distribution points  
+## <a name="BKMK_DistributeBootImages"></a> Distribute content to distribution points  
 
 Distribute OS images to distribution points the same as other content. Before you deploy the task sequence, distribute the OS image to at least one distribution point. For more information, see [Distribute content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).  
-
 
 
 [!INCLUDE [Apply software updates to an image](includes/wim-apply-updates.md)]
 
 
+## <a name="BKMK_OSImageMulticast"></a> Prepare the OS image for multicast deployments  
 
-##  <a name="BKMK_OSImageMulticast"></a> Prepare the OS image for multicast deployments  
+Use multicast deployments to allow more than one computer to simultaneously download an OS image. The image is multicast to clients by the distribution point, rather than each client downloading a copy of the image from the distribution point over a separate connection. When you choose the OS deployment method to [Use multicast to deploy Windows over the network](/sccm/osd/deploy-use/use-multicast-to-deploy-windows-over-the-network), configure the OS image to support multicast. Then distribute the image to a multicast-enabled distribution point.
 
-Use multicast deployments to allow more than one computer to simultaneously download an OS image. The image is multicast to clients by the distribution point, rather than each client downloading a copy of the image from the distribution point over a separate connection. When you choose the OS deployment method to [Use multicast to deploy Windows over the network](/sccm/osd/deploy-use/use-multicast-to-deploy-windows-over-the-network), configure the OS image to support multicast. Then distribute the image to a multicast-enabled distribution point. 
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and then select the **Operating System Images** node.  
 
-1.  In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and then select the **Operating System Images** node.  
+2. Select the OS image that you want to distribute to a multicast-enabled distribution point.  
 
-2.  Select the OS image that you want to distribute to a multicast-enabled distribution point.  
+3. On the **Home** tab of the ribbon, in the **Properties** group, select **Properties**.  
 
-3.  On the **Home** tab of the ribbon, in the **Properties** group, select **Properties**.  
+4. Switch to the **Distribution Settings** tab, and configure the following options:  
 
-4.  Switch to the **Distribution Settings** tab, and configure the following options:  
+    - **Allow this package to be transferred via multicast (WinPE only)**: Select this option for Configuration Manager to simultaneously deploy OS images using multicast.  
 
-    -   **Allow this package to be transferred via multicast (WinPE only)**: Select this option for Configuration Manager to simultaneously deploy OS images using multicast.  
+    - **Encrypt multicast packages**: Specify whether the site encrypts the image before it's sent to the distribution point. If the image contains sensitive information, use this option. If the image isn't encrypted, its contents are visible in clear text on the network. Then an unauthorized user could intercept and view the image contents.  
 
-    -   **Encrypt multicast packages**: Specify whether the site encrypts the image before it's sent to the distribution point. If the image contains sensitive information, use this option. If the image isn't encrypted, its contents are visible in clear text on the network. Then an unauthorized user could intercept and view the image contents.  
+    - **Transfer this package only via multicast**: Specify whether you want the distribution point to deploy the image only during a multicast session.  
 
-    -   **Transfer this package only via multicast**: Specify whether you want the distribution point to deploy the image only during a multicast session.  
+         If you select **Transfer this package only via multicast**, you must also specify the task sequence deployment option to **Download content locally when needed by the running task sequence**. For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence).  
 
-         If you select **Transfer this package only via multicast**, you must also specify the task sequence deployment option to **Download content locally when needed by the running task sequence**. For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS).   
-
-5.  Select **OK** to save the settings and close the image properties.  
+5. Select **OK** to save the settings and close the image properties.  

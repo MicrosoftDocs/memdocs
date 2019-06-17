@@ -2,7 +2,7 @@
 title: Enable data sharing
 titleSuffix: Configuration Manager
 description: A reference guide for sharing diagnostics data with Desktop Analytics.
-ms.date: 04/22/2019
+ms.date: 06/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -49,7 +49,10 @@ The following articles are also good resources for better understanding Windows 
 
 ## Endpoints
 
-To enable data sharing, configure your proxy server to whitelist the following endpoints:
+To enable data sharing, configure your proxy server to allow the following endpoints:
+
+> [!Important]  
+> For privacy and data integrity, Windows checks for a Microsoft SSL certificate when communicating with the diagnostic data endpoints. SSL interception and inspection aren't possible. To use Desktop Analytics, exclude these endpoints from SSL inspection.<!-- BUG 4647542 -->
 
 | Endpoint  | Function  |
 |-----------|-----------|
@@ -62,8 +65,6 @@ To enable data sharing, configure your proxy server to whitelist the following e
 | `https://watson.telemetry.microsoft.com` | Windows Error Reporting (WER). Required to monitor deployment health in Windows 10, version 1803 or earlier. |
 | `https://umwatsonc.events.data.microsoft.com` | Windows Error Reporting (WER). Required for device health reports in Windows 10, version 1809 or later. |
 | `https://ceuswatcab01.blob.core.windows.net`<br> `https://ceuswatcab02.blob.core.windows.net`<br> `https://eaus2watcab01.blob.core.windows.net`<br> `https://eaus2watcab02.blob.core.windows.net`<br> `https://weus2watcab01.blob.core.windows.net`<br> `https://weus2watcab02.blob.core.windows.net` | Windows Error Reporting (WER). Required to monitor deployment health in Windows 10, version 1809 or later. |
-| `https://www.msftncsi.com` | Windows Error Reporting (WER). Required for device health to check connectivity. |
-| `https://www.msftconnecttest.com` | Windows Error Reporting (WER). Required for device health to check connectivity. |
 | `https://kmwatsonc.events.data.microsoft.com` | Online Crash Analysis. Required for device health reports in Windows 10, version 1809 or later. |
 | `https://oca.telemetry.microsoft.com`  | Online Crash Analysis (OCA). Required to monitor deployment health in Windows 10, version 1803 or earlier. |
 | `https://login.live.com` | Required to provide a more reliable device identity for Desktop Analytics. <br> <br>To disable end-user Microsoft account access, use policy settings instead of blocking this endpoint. For more information, see [The Microsoft account in the enterprise](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication). |
@@ -71,13 +72,7 @@ To enable data sharing, configure your proxy server to whitelist the following e
 | `https://nexus.officeapps.live.com` | For future functionality <!-- Used by Office clients to send diagnostic data events from Office 14, Office 15, and versions of Office 16 earlier than 16.0.8702. It's used to collect usage and reliability signals events for Desktop Analytics. --> |
 | `https://office.pipe.aria.microsoft.com` | For future functionality <!-- Used by Office clients to send diagnostic data events from universal/modern Office apps, and Win32 Office 16 versions later than 16.0.8702. It's used to collect usage and reliability signals events for Desktop Analytics. --> |
 | `https://graph.windows.net` | Used to automatically retrieve settings like CommercialId when attaching your hierarchy to Desktop Analytics (on Configuration Manager Server role only). |
-| `https://fef.msua06.manage.microsoft.com` | Used to synch device collection memberships, deployment plans and device readiness status with Desktop Analytics (on Configuration Manager Server role only). |
-
-
-### SSL inspection
-
-For privacy and data integrity, Windows checks for a Microsoft SSL certificate when communicating with the diagnostic data endpoints. SSL interception and inspection aren't possible. To use Desktop Analytics, exclude the above endpoints from SSL inspection.
-
+| `https://fef.msua06.manage.microsoft.com` | Used to synch device collection memberships, deployment plans, and device readiness status with Desktop Analytics (on Configuration Manager Server role only). |
 
 
 ## Proxy server authentication

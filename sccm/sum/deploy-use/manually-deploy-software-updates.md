@@ -2,8 +2,8 @@
 title: Manually deploy software updates
 titleSuffix: Configuration Manager
 description: Manually create software deployments to get your clients up-to-date with required software updates, or to deploy out-of-band updates.
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.date: 07/30/2018
 ms.topic: conceptual
@@ -241,7 +241,7 @@ After you determine the updates you want to deploy, and add them to a software u
 
 14. Click **Next** to deploy the software update.  
 
-    After you complete the wizard, Configuration Manager downloads the software updates to the content library on the site server. It then distributes the content to the configured distribution points, and deploys the software update group to clients in the target collection. For more information about the deployment process, see [Software update deployment process](/sum/understand/software-updates-introduction#BKMK_DeploymentProcess).  
+    After you complete the wizard, Configuration Manager downloads the software updates to the content library on the site server. It then distributes the content to the configured distribution points, and deploys the software update group to clients in the target collection. For more information about the deployment process, see [Software update deployment process](/sccm/sum/understand/software-updates-introduction#BKMK_DeploymentProcess).  
 
 
 

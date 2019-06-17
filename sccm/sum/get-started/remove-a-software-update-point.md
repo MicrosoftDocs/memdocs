@@ -2,14 +2,14 @@
 title: Remove a software update point
 titleSuffix: "Configuration Manager"
 description: "Follow this procedure to remove the software update point site system role at a site from the Configuration Manager console."
-author: aczechowski
 ms.date: 10/06/2016
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 2486375c-d4a2-4cf2-9124-9bee02bbf173
 manager: dougeby
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 ms.collection: M365-identity-device-management
 ---
 #  <a name="BKMK_RemoveSUP"></a> Remove the software update point site system role  

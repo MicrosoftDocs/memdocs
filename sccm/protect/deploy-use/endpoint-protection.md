@@ -2,13 +2,13 @@
 title: Endpoint Protection
 titleSuffix: Configuration Manager
 description: Learn how to manage antimalware policies and Windows Firewall security for clients.
-ms.date: 10/26/2018
+ms.date: 05/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: 76c90f64-d729-456b-8304-01852cd66fb6
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -24,7 +24,7 @@ Endpoint Protection manages antimalware policies and Windows Firewall security f
 
  When you use Endpoint Protection with Configuration Manager, you have the following benefits:  
 
--   Configure antimalware policies, Windows Firewall settings, and manage Windows Defender Advanced Threat Protection to selected groups of computers  
+-   Configure antimalware policies, Windows Firewall settings, and manage Microsoft Defender Advanced Threat Protection to selected groups of computers  
 -   Use Configuration Manager software updates to download the latest antimalware definition files to keep client computers up-to-date  
 -   Send email notifications, use in-console monitoring, and view reports. These actions inform administrative users when malware is detected on client computers.  
 
@@ -72,9 +72,9 @@ Beginning with Windows 10 and Windows Server 2016 computers, Windows Defender is
  For more information, see [How to create and deploy Windows Firewall policies for Endpoint Protection](create-windows-firewall-policies.md).  
 
 
-## Windows Defender Advanced Threat Protection
+## Microsoft Defender Advanced Threat Protection
 
-Endpoint Protection manages and monitors Windows Defender Advanced Threat Protection (ATP). The Windows Defender ATP service helps enterprises detect, investigate, and respond to advanced attacks on the corporate network. For more information, see [Windows Defender Advanced Threat Protection](windows-defender-advanced-threat-protection.md).
+Endpoint Protection manages and monitors Microsoft Defender Advanced Threat Protection (ATP), formerly known as Windows Defender ATP. The Microsoft Defender ATP service helps enterprises detect, investigate, and respond to advanced attacks on the corporate network. For more information, see [Microsoft Defender Advanced Threat Protection](windows-defender-advanced-threat-protection.md).
 
 ## Endpoint Protection Workflow  
  Use the following diagram to help you understand the workflow to implement Endpoint Protection in your Configuration Manager hierarchy.  

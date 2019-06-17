@@ -2,13 +2,13 @@
 title: Features and capabilities
 titleSuffix: Configuration Manager
 description: Learn about the primary management capabilities of Configuration Manager.
-ms.date: 04/29/2019
+ms.date: 05/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 5d388399-07ca-431c-a9b2-56c69771aa87
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -64,7 +64,7 @@ Helps you to assess, track, and remediate the configuration compliance of client
 Provides security, antimalware, and Windows Firewall management for computers in your organization. This area includes management and integration with the following Windows Defender suite features:
 
 - Windows Defender Antivirus
-- Windows Defender Advanced Threat Protection
+- Microsoft Defender Advanced Threat Protection
 - Windows Defender Exploit Guard
 - Windows Defender Application Guard
 - Windows Defender Application Control

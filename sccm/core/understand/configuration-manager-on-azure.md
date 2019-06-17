@@ -43,12 +43,12 @@ Networking is a very important decision. Network speeds and latency can affect f
 - **ExpressRoute** (recommended)
   - Natural extension to your datacenter (can tie together multiple datacenters)
   - Private connections between Azure datacenters and your infrastructure
-  - Doesn’t go over the public Internet
+  - Doesn’t go over the public internet
   - Offers reliability, fast speeds, lower latency, high security
   - Offers up to 10gbps speeds and Unlimited Data plan options
 - **VPN Gateway**
   - Site-to-site/point-to-site VPNs
-  - Traffic goes over the public Internet
+  - Traffic goes over the public internet
   - Uses Internet Protocol Security (IPsec) and Internet Key Exchange (IKE)
 
 ### ExpressRoute has many different options like unlimited vs. metered, different speed options, and premium add-on. Which should I choose?
@@ -130,10 +130,10 @@ The approach for content management is much the same as for site servers and sit
 >  If PXE support is required, you must use on-premises distribution points (standard or pull) to respond to boot requests. [WDS is currently not supported to run on Azure VMs](https://technet.microsoft.com/library/hh831764(v=ws.11).aspx).
 
 
-### While I am OK with the limitations of cloud-based distribution points, I don't want to put my management point into a DMZ even though that is needed to support my Internet-based clients. Do I have any other options?
+### While I am OK with the limitations of cloud-based distribution points, I don't want to put my management point into a DMZ even though that is needed to support my internet-based clients. Do I have any other options?
 Yes! With the Configuration Manager version 1610, we introduced the [Cloud Management Gateway](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway) as a pre-release feature. (This feature first appeared in the Technical Preview version 1606 as the [Cloud Proxy Service](/sccm/core/get-started/capabilities-in-technical-preview-1606#a-namecloudproxyacloud-proxy-service-for-managing-clients-on-the-internet)).
 
-The **Cloud Management Gateway** provides a simple way to manage Configuration Manager clients on the Internet. The service, which is deployed to Microsoft Azure and requires an Azure subscription, connects to your on-premises Configuration Manager infrastructure using a new role called the cloud management gateway connector point. After it's deployed and configured, clients can access on-premises Configuration Manager site system roles regardless of whether they're connected to the internal private network or on the Internet.
+The **Cloud Management Gateway** provides a simple way to manage Configuration Manager clients on the internet. The service, which is deployed to Microsoft Azure and requires an Azure subscription, connects to your on-premises Configuration Manager infrastructure using a new role called the cloud management gateway connector point. After it's deployed and configured, clients can access on-premises Configuration Manager site system roles regardless of whether they're connected to the internal private network or on the internet.
 
 You can start using the cloud management gateway in your environment and give us feedback to make this better. For information about pre-release features, see [Use pre-release features from updates](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkprereleasea-use-pre-release-features-from-updates).
 

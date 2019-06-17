@@ -2,14 +2,14 @@
 title: Manage settings for software updates
 titleSuffix: "Configuration Manager"
 description: "Learn about the client settings that are appropriate for software updates at your site after you install the software update point."
-author: aczechowski
 ms.date: 03/26/2017
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 manager: dougeby
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 ms.collection: M365-identity-device-management
 ---
 
@@ -64,7 +64,11 @@ In software update properties, you can review detailed information about a softw
 ####  <a name="BKMK_SoftwareUpdateDetails"></a> Software update details  
 In the **Update Details** tab, you can view the following summary information about the selected software update:  
 
-- **Bulletin ID**: Specifies the bulletin ID that is associated with security software updates. You can find security bulletin details by searching on the bulletin ID at the [Microsoft Security Bulletin Search](http://go.microsoft.com/fwlink/p/?LinkId=58313) Web page.  
+- **Bulletin ID**: Specifies the bulletin ID that is associated with security software updates. You can find security bulletin details by searching on the bulletin ID on the [Microsoft Security Response Center](https://portal.msrc.microsoft.com/) Web page.  
+
+> [!NOTE]
+> The way Microsoft documents security updates is changing. The previous model used security bulletin webpages and included security bulletin ID numbers (e.g. MS16-XXX) as a pivot point. This form of security update documentation, including bulletin ID numbers, is being retired and replaced with the Security Update Guide. Instead of bulletin IDs, the new guide pivots on vulnerability ID numbers and KB Article ID numbers. For more information, see the [Security Update Guide FAQs](https://www.microsoft.com/msrc/faqs-security-update-guide).
+
 
 - **Article ID**: Specifies the article ID for the software update. The referenced article provides more detailed information about the software update and the issue that the software update fixes or improves.  
 

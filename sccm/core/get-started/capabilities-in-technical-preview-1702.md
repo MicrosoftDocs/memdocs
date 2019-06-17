@@ -71,7 +71,7 @@ To use Azure AD with Configuration Manager, you’ll need the following:
 -	A Configuration Manager site that runs on an Azure VM that is joined to your Azure AD.
 -	Configuration Manager clients that run in the same Azure AD environment.
 
-To configure Azure AD Domain Service, see [Get started with Azure AD Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started).
+To configure Azure AD Domain Service, see [Get started with Azure AD Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance).
 
 ### Discover resources
 After you set up Configuration Manager to run in Azure AD, you can use the following Active Directory discovery methods to search

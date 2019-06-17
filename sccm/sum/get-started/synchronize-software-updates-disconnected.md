@@ -2,14 +2,14 @@
 title: "Synchronize updates with no Internet connection "
 titleSuffix: "Configuration Manager"
 description: "Run software updates synchronization on the top-level software update point that is disconnected from the Internet."
-author: aczechowski
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
 manager: dougeby
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 ms.collection: M365-identity-device-management
 ---
 

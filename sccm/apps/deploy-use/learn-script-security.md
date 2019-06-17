@@ -44,8 +44,6 @@ This collection of links was chosen to give Configuration Manager administrators
 
 [Protecting Against Malicious Code Injection](https://blogs.msdn.microsoft.com/powershell/2006/11/22/protecting-against-malicious-code-injection/)
 
-[Information about security from the PowerShell Gallery](https://blogs.msdn.microsoft.com/powershell/2015/08/06/powershell-gallery-new-security-scan/)
-
 [PowerShell The Blue Team, discusses Deep Script block logging, Protected Event Logging , Antimalware Scan Interface, Secure Code Generation APIs](https://blogs.msdn.microsoft.com/powershell/2015/06/09/powershell-the-blue-team/)
 
 [For Windows 10, there is an API for an anti-malware scan interface](https://cloudblogs.microsoft.com/microsoftsecure/2015/06/09/windows-10-to-offer-application-developers-new-malware-defenses/?source=mmpc)

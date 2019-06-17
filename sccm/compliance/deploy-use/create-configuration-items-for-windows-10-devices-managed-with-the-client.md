@@ -2,7 +2,7 @@
 title: "Create configuration items for client-managed Windows 10 "
 titleSuffix: "Configuration Manager"
 description: "Use the System Center Configuration Manager Windows 10 configuration item to manage settings for Windows 10 computers that are managed by the Configuration Manager client."
-ms.date: 03/28/2017
+ms.date: 05/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -36,16 +36,16 @@ Use the System Center Configuration Manager **Windows 10** configuration item to
   
 7. On the **Supported Platforms** page of the wizard, select the specific Windows 10 platforms that will evaluate the configuration item.  
   
-8. On the **Device Settings** page of the wizard, select the settings group that you want to configure. See [Windows 10 configuration item settings reference](#BKMK_Ref) in this topic for details, and then click **Next**.  
+8. On the **Device Settings** page of the wizard, select the settings group that you want to configure. See [Windows 10 configuration item settings reference](#BKMK_Ref) in this article for details, and then click **Next**.  
   
    > [!TIP]  
    >  If the setting that you want is not listed, select the **Configure additional settings that are not in the default setting groups check box**.  
   
-9. On each settings page, configure the settings you require, and whether you want to remediate them when they are not compliant on devices (when this is supported).  
+9. On each settings page, configure the settings you require, and whether you want to remediate them when they aren't compliant on devices (when this is supported).  
   
 10. For each settings group, you can also configure the severity that will be reported when a configuration item is found to be noncompliant from:  
   
-    -   **None** - Devices that fail this compliance rule do not report a failure severity for Configuration Manager reports.  
+    -   **None** - Devices that fail this compliance rule don't report a failure severity for Configuration Manager reports.  
   
     -   **Information** - Devices that fail this compliance rule report a failure severity of **Information** for Configuration Manager reports.  
   
@@ -55,7 +55,7 @@ Use the System Center Configuration Manager **Windows 10** configuration item to
   
     -   **Critical with event** - Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. This severity level is also be logged as a Windows event in the application event log.  
   
-11. On the **Platform Applicability** page of the wizard, review any settings that are not compatible with the supported platforms you selected earlier. You can go back and remove these settings, or you can continue.  
+11. On the **Platform Applicability** page of the wizard, review any settings that aren't compatible with the supported platforms you selected earlier. You can go back and remove these settings, or you can continue.  
   
     > [!TIP]  
     >  Unsupported settings are not assessed for compliance.  
@@ -64,7 +64,7 @@ Use the System Center Configuration Manager **Windows 10** configuration item to
   
     You can view the new configuration item in the **Configuration Items** node of the **Assets and Compliance** workspace.  
   
-##  Windows 10 configuration item settings reference  
+## <a name="BKMK_Ref"></a> Windows 10 configuration item settings reference  
   
 ### Password  
   
@@ -73,11 +73,11 @@ Use the System Center Configuration Manager **Windows 10** configuration item to
 |**Require password settings on devices**|Require a password on supported devices.|  
 |**Minimum password length (characters)**|The minimum length in characters for the password.|  
 |**Password expiration in days**|The number of days before the password must be changed.|  
-|**Number of passwords remembered**|Prevents re-using previous passwords.|  
-|**Number of failed logon attempts before a device is wiped**|Wipes the device if the login fails this number of times.|  
-|**Idle time before device is locked**|Specifies how many minutes the device must be inactive before it is automatically locked.|  
+|**Number of passwords remembered**|Prevents reusing previous passwords.|  
+|**Number of failed logon attempts before a device is wiped**|Wipes the device if sign in fails this number of times.|  
+|**Idle time before device is locked**|Specifies how many minutes the device must be inactive before it's automatically locked.|  
 |**Password complexity**|Choose whether you can specify a PIN such as ‘1234’, or whether you must supply a strong password.|
-|**Number of complex character sets required in password**|If you selected a **Strong** password, use this setting to configure the number of complex character sets required. For a strong password, this should be set to at least **3** which means both letters and numbers are required. Select **4** if you want to enforce a password that additionally requires special characters such as **(%$**.<br>(Windows 10 only)  |
+|**Number of complex character sets required in password**|If you selected a **Strong** password, use this setting to configure the number of complex character sets required. For a strong password, this setting should be set to at least **3, which means both letters and numbers are required. Select **4** if you want to enforce a password that additionally requires special characters such as **(%$**.<br>(Windows 10 only)  |
   
 ###  Device  
   
@@ -127,4 +127,4 @@ Windows Information Protection (formerly Enterprise data protection) helps to pr
 For information about how to configure Windows Information protection with Configuration Manager, see [Protect your enterprise data using Windows Information Protection (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
   
 ## See Also  
- [Configuration items for devices managed with the System Center Configuration Manager client](../../compliance/deploy-use/configuration-items-for-devices-managed-with-the-client.md)
+ [Configuration items for devices managed with the System Center Configuration Manager client](../../compliance/deploy-use/create-configuration-items.md)

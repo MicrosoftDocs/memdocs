@@ -80,7 +80,7 @@ For more information, see [Predeclare devices with IMEI and iOS serial number](p
 
     ```
 
-5.  Save the edited profile URL. You will use it to add the enrollment profile URL in Apple Configurator in the [next section](#step-4-prepare-the-device-with-apple-configurator).  
+5.  Save the edited profile URL. You will use it to add the enrollment profile URL in Apple Configurator in the [next section](#prepare-the-device-with-apple-configurator).  
 
 > [!NOTE]
 > The enrollment profile URL is valid for two weeks from when it is exported. After two weeks, you must export a new URL to enroll iOS devices.
@@ -98,7 +98,7 @@ To prepare iOS devices for enrollment, you connect each device to a Mac computer
 
 3. In the preferences pane, select **Servers** and click the "+" symbol below the left pane to launch the MDM Server wizard. Click **Next**.  
 
-4. Enter the **Name** and **Enrollment URL** you saved [earlier](#step-3-export-the-profile-to-deploy-to-ios-devices). Click **Next**.  
+4. Enter the **Name** and **Enrollment URL** you saved [earlier](#export-the-profile-to-deploy-to-ios-devices). Click **Next**.  
 
    > [!NOTE]
    > If you receive a warning about trust profile requirements for Apple TV, you can safely cancel the **Trust Profile** option by clicking the grey "X". You can also safely disregard any Anchor certificate warning.

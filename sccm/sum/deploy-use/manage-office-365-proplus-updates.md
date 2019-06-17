@@ -201,7 +201,7 @@ To ensure that the update channel is set so that deployed updates will be proper
 3. Add a new **Run Command Line** step before the **Install Software Updates** step in the task sequence. If Office 365 ProPlus is installed as part of the same task sequence, make sure this step runs after Office is installed.
 4. In the command line field, enter the command line that will run the scheduled task. See example below making sure the string in quotes matches the path and name of the task identified in step 1.  
 
-    Example: `schtasks /run /tn "\Microsoft\Office\Office Automatic Updates"`
+    Example: `schtasks /run /tn "\Microsoft\Office\Office Automatic Updates 2.0"`
 5. Click **OK**. 
 
 ## Change the update channel after you enable Office 365 clients to receive updates from Configuration Manager
@@ -222,7 +222,7 @@ To change the update channel after you enable Office 365 clients to receive upda
 - Semi-Annual Channel (Targeted) <br/>
 <i>(formerly First Release for Deferred Channel)</i>:  
   **CDNBaseUrl** = http&#58;//officecdn.microsoft.com/pr/b8f9b850-328d-4355-9145-c59439a0c4cf
-<!--the channel names changed in Sept 2017- https://docs.microsoft.com/en-us/DeployOffice/overview-of-update-channels-for-office-365-proplus?ui=en-US&rs=en-US&ad=US-->
+<!--the channel names changed in Sept 2017- https://docs.microsoft.com/DeployOffice/overview-of-update-channels-for-office-365-proplus?ui=en-US&rs=en-US&ad=US-->
 
 
 <!--- You can create an Office 365 app without using the Office 365 Installation Wizard. To do this, you use the Office 2016 Deployment Tool (ODT) to download Office installation source files to a network share, generate Configure.xml that specifies the correct Office version and channel, and so on. Then, create an app for the files using the normal app management process.

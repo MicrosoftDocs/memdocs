@@ -43,7 +43,7 @@ Steps to workaround, if any.
 
 
 ## Create a phased deployment with manually configured phases for a task sequence
-<!--1358148--> 
+<!--1358148-->
 You can now [create a phased deployment](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) with manually configured phases for a task sequence. You can add up to 10 additional phases from the **Phases** tab of the Create Phased Deployment wizard. 
 
 
@@ -170,7 +170,7 @@ For more information on Windows LEDBAT, see the [New transport advancements](htt
 
 
 ### Try it out!
- Try to complete the tasks. Then send [Feedback](#bkmk_feedback) letting us know how it worked.
+ Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
 
 1. In the Configuration Manager console, go to the **Administration** workspace. Select the **Distribution Points** node. Select the target distribution point, and click **Properties** in the ribbon.  
 
