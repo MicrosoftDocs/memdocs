@@ -329,11 +329,11 @@ For more information, see [Plan for Software Center](/sccm/apps/plan-design/plan
 
 ### Configure user device affinity in Software Center
 <!--3485366-->
-With [Software Center infrastructure improvements](/sccm/core/plan-design/changes/whats-new-in-version-1806#software-center-infrastructure-improvements) starting in version 1806, the application catalog site server roles are no longer required for most scenarios. Some customers still relied upon the application catalog to allow users to set their primary device for user device affinity. 
+***[Updated 6/18]***  With [Software Center infrastructure improvements](/sccm/core/plan-design/changes/whats-new-in-version-1806#software-center-infrastructure-improvements) starting in version 1806, the application catalog site server roles are no longer required for most scenarios. Some customers still relied upon the application catalog to allow users to set their primary device for user device affinity. 
 
 Now users can set their primary device in Software Center. This action makes them a primary user of the device in Configuration Manager.
 
-<!-- For more information, see [Link users and devices with user device affinity](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity). -->
+For more information, see [Link users and devices with user device affinity](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity). 
 
 
 ### Configure default views in Software Center
