@@ -23,12 +23,12 @@ Depending upon the scenario you use to manage clients on the internet with the c
     - [Server authentication certificate issued by public provider](#bkmk_serverauthpublic)  
     - [Server authentication certificate issued from enterprise PKI](#bkmk_serverauthpki)  
 
-- [Azure management certificate](#bkmk_azuremgmt)  
-
 - [Client authentication certificate](#bkmk_clientauth)  
     - [Client trusted root certificate to CMG](#bkmk_clientroot)  
 
 - [Enable management point for HTTPS](#bkmk_mphttps)  
+
+- [Azure management certificate](#bkmk_azuremgmt)  
 
 For more information about the different scenarios, see [plan for cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).
 
@@ -122,29 +122,6 @@ Create a custom SSL certificate for the CMG the same as for a cloud distribution
     - On the Azure public cloud, use a name that ends in **cloudapp.net**  
 
     - Use a name that ends in **usgovcloudapp.net** for the Azure US Government cloud  
-
-
-## <a name="bkmk_azuremgmt"></a> Azure management certificate
-
-*This certificate is required for classic service deployments. It's not required for Azure Resource Manager deployments.*
-
-> [!Important]  
-> Starting in version 1810, classic service deployments in Azure are deprecated in Configuration Manager. Start using Azure Resource Manager deployments for the cloud management gateway. For more information, see [Plan for CMG](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).
->
-> Starting in Configuration Manager version 1902, Azure Resource Manager is the only deployment mechanism for new instances of the cloud management gateway. This certificate isn't required in Configuration Manager version 1902 or later.<!-- 3605704 -->
-
-You supply this certificate in the Azure portal, and when creating the CMG in the Configuration Manager console.
-
-To create the CMG in Azure, the Configuration Manager service connection point needs to first authenticate to your Azure subscription. When using a classic service deployment, it uses the Azure management certificate for this authentication. An Azure administrator uploads this certificate to your subscription. When you create the CMG in the Configuration Manager console, provide this certificate.
-
-For more information and instructions for how to upload a management certificate, see the following articles in the Azure documentation:
-
-- [Cloud services and management certificates](https://docs.microsoft.com/azure/cloud-services/cloud-services-certs-create#what-are-management-certificates)  
-
-- [Upload an Azure Service Management Certificate](https://docs.microsoft.com/azure/azure-api-management-certs)  
-
-> [!IMPORTANT]
-> Make sure to copy the subscription ID associated with the management certificate. You use it for creating the CMG in the Configuration Manager console.
 
 
 ## <a name="bkmk_clientauth"></a> Client authentication certificate
@@ -253,6 +230,29 @@ Configure an on-premises management point with the following client connection m
 - *HTTP*: On the management point properties, you set the client connections to **HTTP**  
 - *HTTPS*: On the management point properties, you set the client connections to **HTTPS**  
 - *E-HTTP*: On the site properties, Client Computer Communication tab, you set the site system settings to **HTTPS or HTTP**, and you enable the option to **Use Configuration Manager-generated certificates for HTTP site systems**. You configure the management point for HTTP, the HTTP management point is ready for both HTTP and HTTPS communication (token auth scenarios).  
+
+
+## <a name="bkmk_azuremgmt"></a> Azure management certificate
+
+*This certificate is required for classic service deployments. It's not required for Azure Resource Manager deployments.*
+
+> [!Important]  
+> Starting in version 1810, classic service deployments in Azure are deprecated in Configuration Manager. Start using Azure Resource Manager deployments for the cloud management gateway. For more information, see [Plan for CMG](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).
+>
+> Starting in Configuration Manager version 1902, Azure Resource Manager is the only deployment mechanism for new instances of the cloud management gateway. This certificate isn't required in Configuration Manager version 1902 or later.<!-- 3605704 -->
+
+You supply this certificate in the Azure portal, and when creating the CMG in the Configuration Manager console.
+
+To create the CMG in Azure, the Configuration Manager service connection point needs to first authenticate to your Azure subscription. When using a classic service deployment, it uses the Azure management certificate for this authentication. An Azure administrator uploads this certificate to your subscription. When you create the CMG in the Configuration Manager console, provide this certificate.
+
+For more information and instructions for how to upload a management certificate, see the following articles in the Azure documentation:
+
+- [Cloud services and management certificates](https://docs.microsoft.com/azure/cloud-services/cloud-services-certs-create#what-are-management-certificates)  
+
+- [Upload an Azure Service Management Certificate](https://docs.microsoft.com/azure/azure-api-management-certs)  
+
+> [!IMPORTANT]
+> Make sure to copy the subscription ID associated with the management certificate. You use it for creating the CMG in the Configuration Manager console.
 
 
 ## Next steps
