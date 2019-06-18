@@ -112,8 +112,12 @@ Create the CMG at the top-tier site of your hierarchy. If that's a central admin
 
 You can create multiple CMG services in Azure, and you can create multiple CMG connection points. Multiple CMG connection points provide load balancing of client traffic from the CMG to the on-premises roles. To reduce network latency, assign the associated CMG to the same geographical region as the primary site.
 
+Starting in version 1902, you can associate a CMG with a boundary group. This configuration allows clients to default or fallback to the CMG for client communication according to [boundary group relationships](/sccm/core/servers/deploy/configure/boundary-groups). This behavior is especially useful in branch office and VPN scenarios. You can direct client traffic away from expensive and slow WAN links to instead use faster services in Microsoft Azure.<!--3640932-->
+
 > [!Note]  
-> Internet-based clients and the CMG don't fall into any boundary group.
+> Internet-based clients don't fall into any boundary group.
+>
+> In Configuration Manager version 1810 and earlier, the CMG doesn't fall into any boundary group.
 
 Other factors, such as the number of clients to manage, also impact your CMG design. For more information, see [Performance and scale](#performance-and-scale).
 

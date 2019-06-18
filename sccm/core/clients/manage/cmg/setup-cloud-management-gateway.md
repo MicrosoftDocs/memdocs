@@ -154,6 +154,16 @@ Configure the management point and software update point site systems to accept 
 Repeat these steps for additional management points as needed, and for any software update points.
 
 
+## Configure boundary groups
+
+<!--3640932-->
+Starting in version 1902, you can associate a CMG with a boundary group. This configuration allows clients to default or fallback to the CMG for client communication according to boundary group relationships.
+
+For more information on boundary groups, see [Configure boundary groups](/sccm/core/servers/deploy/configure/boundary-groups).
+
+When you [create or configure a boundary group](/sccm/core/servers/deploy/configure/boundary-group-procedures), on the **References** tab, add a cloud management gateway. This action associates the CMG with this boundary group.
+
+
 ## Configure clients for CMG
 
 Once the CMG and site system roles are running, clients get the location of the CMG service automatically on the next location request. Clients must be on the intranet to receive the location of the CMG service, unless you [install and assign Windows 10 clients using Azure AD for authentication](/sccm/core/clients/deploy/deploy-clients-cmg-azure). The polling cycle for location requests is every 24 hours. If you don't want to wait for the normally scheduled location request, you can force the request by restarting the SMS Agent Host service (ccmexec.exe) on the computer.  
