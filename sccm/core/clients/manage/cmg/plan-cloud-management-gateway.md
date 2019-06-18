@@ -340,7 +340,9 @@ This table lists the required network ports and protocols. The *Client* is the d
 
 ### Internet access requirements
 
-The CMG connection point site system supports using a web proxy. For more information on configuring this role for a proxy, see [Proxy server support](/sccm/core/plan-design/network/proxy-server-support#to-set-up-the-proxy-server-for-a-site-system-server). The CMG connection point requires connectivity to the following endpoints:  
+The CMG connection point site system supports using a web proxy. For more information on configuring this role for a proxy, see [Proxy server support](/sccm/core/plan-design/network/proxy-server-support#to-set-up-the-proxy-server-for-a-site-system-server).
+
+The CMG connection point and service connection point require connectivity to the following endpoints:  
 
 - Specific Azure endpoints are different per environment depending upon the configuration. Configuration Manager stores these endpoints in the site database. Query the **AzureEnvironments** table in SQL Server for the list of Azure endpoints.  
 
