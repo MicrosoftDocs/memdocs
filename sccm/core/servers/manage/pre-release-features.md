@@ -78,14 +78,14 @@ When you enable a pre-release feature, the Configuration Manager hierarchy manag
 | [Package conversion manager](/sccm/apps/pcm/package-conversion-manager) <!--1357861--> | Version 1806 | Version 1810 |
 | [Support for Cisco AnyConnect 4.0.07x and later for iOS](/sccm/mdm/deploy-use/create-vpn-profiles) <!--1357393--> | Version 1802 | Version 1802 <br>with update 4163547 |
 | [Phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) <!--1356837--> | Version 1802 | Version 1806 |
-| [Run task sequence step](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence) <!--1261338--> |  Version 1710 | Version 1802 |
+| [Run task sequence step](/sccm/osd/understand/task-sequence-steps#child-task-sequence) <!--1261338--> |  Version 1710 | Version 1802 |
 | [Windows Defender Exploit Guard](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468--> | Version 1710 | Version 1802 |
 | [Device health attestation assessment for conditional access compliance policies](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616--> | Version 1710 | Version 1802 |
 | [Create and run Windows PowerShell scripts](/sccm/apps/deploy-use/create-deploy-scripts) <!--1236459--> | Version 1706 | Version 1802 |
 | [Manage Microsoft Surface driver updates](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490--> | Version 1706 | Version 1710 |
 | [Device Guard management](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager) <!--1355092 (1319346)--> | Version 1702 | ![Not yet](media/red_x.png) |
 | [Task sequence content pre-caching](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) <!--1021244--> | Version 1702 | Version 1710 |
-| [Check for running executable files before installing an application](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application) <!--1284624--> | Version 1702 | Version 1706 |
+| [Check for running executable files before installing an application](/sccm/apps/deploy-use/deploy-applications#bkmk_exe-check) <!--1284624--> | Version 1702 | Version 1706 |
 | [Data warehouse service point](/sccm/core/servers/manage/data-warehouse) <!--1277922--> | Version 1702 | Version 1706 |
 | [Peer cache for content distribution to clients](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436--> | Version 1610 | Version 1710 |
 | [Cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway) <!--1101764--> | Version 1610 | Version 1802 |

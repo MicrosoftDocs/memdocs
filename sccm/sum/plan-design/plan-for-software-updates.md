@@ -146,7 +146,9 @@ To look up the meaning of an error code, convert the decimal error code to hexad
 Switch Configuration Manager clients to a new software update point when there are issues with the active software update point. This change only happens when a client receives multiple software update points from a management point.
 
 > [!IMPORTANT]    
-> When you switch devices to use a new server, the devices use fallback to find that new server. Before you start this change, review your boundary group configurations to make sure that your software update points are in the correct boundary groups. For more information, see [Software update points](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points).  
+> When you switch devices to use a new server, the devices use fallback to find that new server. Clients switch to the new software update point during their next software updates scan cycle.<!-- SCCMDocs#1537 -->
+>
+> Before you start this change, review your boundary group configurations to make sure that your software update points are in the correct boundary groups. For more information, see [Software update points](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points).  
 >
 > Switching to a new software update point generates additional network traffic. The amount of traffic depends on your WSUS configuration settings, for example, the synchronized classifications and products, or use of a shared WSUS database. If you plan to switch multiple devices, consider doing so during maintenance windows. This timing reduces the impact to your network when clients scan with the new software update point.  
 

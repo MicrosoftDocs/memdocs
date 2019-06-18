@@ -34,7 +34,7 @@ For more information about Software Assurance and licensing options, see [Licens
 
 Microsoft plans to release updates for System Center Configuration Manager current branch a few times per year. For versions of Configuration Manager released prior to 1710, support is for 12 months. Beginning with the 1710 release, each update version remains in support for 18 months from its general availability (GA) release date. Technical support is provided for the entire period of support. However, our support structure is dynamic, evolving into two distinct servicing phases that depend on the availability of the latest current branch version. (For more information, review the topic titled [Support for System Center Configuration Manager current branch versions](https://docs.microsoft.com/sccm/core/servers/manage/current-branch-versions-supported). Updates to newer versions are available as in-console updates.
 
-To install the Current Branch as a new site, use [baseline media](/sccm/core/servers/manage/updates#baseline-and-update-versions). Also use baseline media to upgrade from System Center 2012 Configuration Manager with Service Pack 2 or System Center 2012 R2 Configuration Manager with Service Pack 1. Access to this media depends on how your organization licensed System Center Configuration Manager. 
+To install the Current Branch as a new site, use [baseline media](/sccm/core/servers/manage/updates#bkmk_Baselines). Also use baseline media to upgrade from System Center 2012 Configuration Manager with Service Pack 2 or System Center 2012 R2 Configuration Manager with Service Pack 1. Access to this media depends on how your organization licensed System Center Configuration Manager. 
 
 You can also use the baseline media to install a new site that is an evaluation edition of the current branch. The evaluation edition doesn't require a license. You can use the evaluation edition for 180 days. It supports upgrade to a licensed edition of the current branch. To install only an evaluation edition, get it from the [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection).
 
@@ -70,9 +70,9 @@ For more information, see [Support for current branch versions](/sccm/core/serve
 ##  Long-term servicing branch 
 This branch is licensed for use in production for Configuration Manager customers who are using the current branch and have allowed their Configuration Manager Software Assurance (SA) or equivalent subscription rights to expire after October 1, 2016. For more about Software Assurance and licensing options, see [Licensing and branches for System Center Configuration Manager](learn-more-editions.md) and [Frequently asked questions for Configuration Manager branches and licensing](/sccm/core/understand/product-and-licensing-faq).
 
-The LTSB is based on version 1606. This branch doesn't receive in-console updates that deliver new features or update existing capabilities. However, critical security fixes are provided. To install the LTSB, you must use the version 1606 [baseline media](/sccm/core/servers/manage/updates#baseline-and-update-versions) that you get with System Center 2016. Later baseline versions don't support install of the LTSB.
+The LTSB is based on version 1606. This branch doesn't receive in-console updates that deliver new features or update existing capabilities. However, critical security fixes are provided. To install the LTSB, you must use the version 1606 [baseline media](/sccm/core/servers/manage/updates#bkmk_Baselines) that you get with System Center 2016. Later baseline versions don't support install of the LTSB.
 
-To install the LTSB as a new site or as an upgrade from a supported Configuration Manager 2012 site, use the version 1606 [baseline media](/sccm/core/servers/manage/updates#baseline-and-update-versions) that you get with System Center 2016. You can use baseline media to install a new site that runs version 1606 of the current branch, or a new site that runs the long-term servicing branch.
+To install the LTSB as a new site or as an upgrade from a supported Configuration Manager 2012 site, use the version 1606 [baseline media](/sccm/core/servers/manage/updates#bkmk_Baselines) that you get with System Center 2016. You can use baseline media to install a new site that runs version 1606 of the current branch, or a new site that runs the long-term servicing branch.
 
 > [!TIP]  
 > To learn about System Center 2016, see [System Center 2016 documentation](https://docs.microsoft.com/system-center/index). This documentation also identifies how to get System Center 2016, which requires a Microsoft license agreement or similar rights.  
@@ -111,7 +111,7 @@ The LTSB is based on the current branch version 1606 and has the following limit
   To convert, you must have an active Software Assurance agreement with Microsoft. For more information, see the following links:
   - [Upgrade the Long-Term Servicing Branch to the Current Branch](convert-to-current-branch.md)
   - [Licensing and branches for System Center Configuration Manager](learn-more-editions.md)
-  - [Baseline and update versions](/sccm/core/servers/manage/updates#baseline-and-update-versions) 
+  - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines) 
 - There is no option to convert the LTSB to a technical preview branch. Technical preview branches are separate installations that don't require a license.
 -	You can't upgrade an evaluation edition of the current branch to an LTSB installation.
 
@@ -120,7 +120,7 @@ The LTSB is based on the current branch version 1606 and has the following limit
 ## Technical preview branch
 The technical preview branch is for use in a lab environment. Learn about and try out the newest features being developed for Configuration Manager. It isn't supported in a production environment, and doesn't require you to have a Software Assurance license agreement.
 
-To install a new site that runs the technical preview branch, use the latest [baseline media for the technical preview branch](/sccm/core/get-started/technical-preview#install-and-update-the-technical-preview). After you install the technical preview branch, new versions are available as in-console updates each month.
+To install a new site that runs the technical preview branch, use the latest [baseline media for the technical preview branch](/sccm/core/get-started/technical-preview#bkmk_install). After you install the technical preview branch, new versions are available as in-console updates each month.
 
 
 ### Features of the technical preview branch
@@ -131,7 +131,7 @@ To install a new site that runs the technical preview branch, use the latest [ba
 
 
 ### Limitations
--  [Support is limited](/sccm/core/get-started/technical-preview#requirements-and-limitatins-for-the-techincal-preview), including only a single primary site and up to 10 clients.  
+-  [Support is limited](/sccm/core/get-started/technical-preview#bkmk_reqs), including only a single primary site and up to 10 clients.  
 -  Can't be upgraded to a current branch or LTSB.
 -  Doesn't support the following behaviors:
    - Using migration to import or export data to another Configuration Manager installation
