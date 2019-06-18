@@ -140,7 +140,7 @@ The CMG connection point requires this certificate to securely forward client re
 
 You supply this certificate when creating the CMG in the Configuration Manager console.
 
-The CMG must trust the client authentication certificates. To accomplish this trust, provide the trusted root certificate chain. You can specify two trusted root CAs, and four intermediate (subordinate) CAs.
+The CMG must trust the client authentication certificates. To accomplish this trust, provide the trusted root certificate chain. You can specify two trusted root CAs, and four intermediate (subordinate) CAs. Make sure to add all certificates in the trust chain. For example, if the client authentication certificate is issued by an intermediate CA, add both the intermediate and root CA certificates.
 
 #### Export the client certificate's trusted root
 
