@@ -33,8 +33,7 @@ Monitor traffic on the CMG using the Configuration Manager console:
 
 2. Select the CMG in the list pane.  
 
-3. View the traffic information in the details pane for the CMG connection point and the site system roles it connects to.  
-
+3. View the traffic information in the details pane for the CMG connection point and the site system roles it connects to. These statistics show the client requests coming into these roles. The requests include policy, location, registration, content, inventory, and client notifications.<!-- SCCMDocs#1208 -->
 
 ## Set up outbound traffic alerts
 
