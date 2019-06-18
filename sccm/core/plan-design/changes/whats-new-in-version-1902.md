@@ -469,9 +469,9 @@ For more information, see [Using the Configuration Manager console](/sccm/core/s
 
 ### In-console documentation dashboard
 <!--3556019, fka 1357546-->
-There's a new **Documentation** node in the new **Community** workspace. This node includes up-to-date information about Configuration Manager documentation and support articles.
+***[Updated 06/18]*** There's a new **Documentation** node in the new **Community** workspace. This node includes up-to-date information about Configuration Manager documentation and support articles.
 
-<!-- For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console). -->
+For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#bkmk_doc-dashboard).
 
 
 ### Search device views using MAC address
