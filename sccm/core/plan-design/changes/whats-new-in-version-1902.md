@@ -101,7 +101,7 @@ Configuration Manager can now stop a cloud management gateway (CMG) service when
 ### Use Azure Resource Manager for cloud services
 
 <!--3605704-->
-***[Updated]*** Starting in version 1810, the classic service deployment in Azure was deprecated for use in Configuration Manager. That version is the last to support creation of these Azure deployments.
+***[Updated 06/17]*** Starting in version 1810, the classic service deployment in Azure was deprecated for use in Configuration Manager. That version is the last to support creation of these Azure deployments.
 
 Existing deployments continue to work. Starting in this current branch version, Azure Resource Manager is the only deployment mechanism for new instances of the cloud management gateway and cloud distribution point.
 
@@ -109,10 +109,11 @@ For more information, see [Azure Resource Manager for the cloud management gatew
 
 
 ### Add cloud management gateway to boundary groups
-<!--3640932-->
-You can now associate a cloud management gateway (CMG) with a boundary group. This configuration allows clients to default or fallback to the CMG for client communication according to boundary group relationships. This behavior is especially useful in branch office and VPN scenarios. You can direct client traffic away from expensive and slow WAN links to instead use faster internet links to Microsoft Azure.
 
-<!-- For more information, see [Plan for the CMG](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway). -->
+<!--3640932-->
+***[Updated 06/18]*** You can now associate a cloud management gateway (CMG) with a boundary group. This configuration allows clients to default or fallback to the CMG for client communication according to boundary group relationships. This behavior is especially useful in branch office and VPN scenarios. You can direct client traffic away from expensive and slow WAN links to instead use faster internet links to Microsoft Azure.
+
+For more information, see [CMG hierarchy design](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#hierarchy-design) and [Set up CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#configure-boundary-groups).
 
 
 
