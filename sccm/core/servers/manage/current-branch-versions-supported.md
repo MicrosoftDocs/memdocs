@@ -38,4 +38,4 @@ Figure 1. Example of the release cycle overlap for current branch servicing supp
 
 For a list of the current branch versions, see [Version details](/sccm/core/servers/manage/updates#version-details).
 
-For more information about version numbers, and availability as an in-console update or as a baseline, see [Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions).
+For more information about version numbers, and availability as an in-console update or as a baseline, see [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines).
