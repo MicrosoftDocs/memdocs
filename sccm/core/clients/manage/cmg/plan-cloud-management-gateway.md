@@ -148,7 +148,9 @@ Similarly, as Paris-based clients roam onto the internet, they communicate with 
 
 - An **Azure subscription** to host the CMG.  
 
-    - An **Azure administrator** needs to participate in the initial creation of certain components, depending upon your design. This persona doesn't require permissions in Configuration Manager.  
+- An **Azure administrator** needs to participate in the initial creation of certain components, depending upon your design. This persona doesn't require permissions in Configuration Manager.  
+    - To deploy the CMG, you need a **Subscription Admin**
+    - To integrate the site with Azure AD for deploying the CMG using Azure Resource Manager, you need a **Global Admin**
 
 - At least one on-premises Windows server to host the **CMG connection point**. You can colocate this role with other Configuration Manager site system roles.  
 
