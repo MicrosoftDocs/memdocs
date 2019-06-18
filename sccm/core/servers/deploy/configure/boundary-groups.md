@@ -218,6 +218,8 @@ By default, the management point prioritizes peer cache sources at the top of th
 
 If you have a branch office with a faster internet link, you can now prioritize cloud content.  
 
+In version 1902, this setting is now titled **Prefer cloud based sources over on-premise sources**. The behavior remains the same.<!-- SCCMDocs#1529 -->
+
 
 ## Software update points
 
