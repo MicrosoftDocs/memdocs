@@ -10,7 +10,6 @@ ms.assetid: 63e08f3f-9558-4ed7-9bf3-3a185ddaac5c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
 ---
 
@@ -47,29 +46,7 @@ For more information, see [Monitor connection health](/sccm/desktop-analytics/mo
 
 ## Log files
 
-Use the following log files to help troubleshoot issues with Desktop Analytics integrated with Configuration Manager.
-
-
-### Service connection point
-
-The following log files are on the service connection point in the following directory: `C:\Program Files\Configuration Manager\Logs\M365A`:
-
-| Log | Description |
-|---------|---------|
-| **M365ADeploymentPlanWorker.log** | Information about deployment plan sync from Desktop Analytics cloud service to on-premises Configuration Manager |
-| **M365ADeviceHealthWorker.log** | Information about device health upload from Configuration Manager to Microsoft cloud |
-| **M365AUploadWorker.log** | Information about collection and device upload from Configuration Manager to Microsoft cloud |
-| **SmsAdminUI.log** | Information about Configuration Manager console activity, like configuring the Azure cloud services  |
-
-
-### Configuration Manager client
-
-The following log files are on the Configuration Manager client in the following directory: `C:\Windows\CCM\logs`:
-
-| Log | Description |
-|---------|---------|
-| **M365AHandler.log** | Information about the Desktop Analytics settings policy |
-
+For more information, see [Log files for Desktop Analytics](/sccm/core/plan-design/hierarchy/log-files#desktop-analytics)
 
 ### Enable verbose logging
 

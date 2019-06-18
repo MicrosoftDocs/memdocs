@@ -34,7 +34,7 @@ For more details, see [Upgrade to System Center Configuration Manager](/sccm/cor
 Typically, updates add security fixes, quality improvements, and new features to your existing deployment. If you use the Technical Preview branch, an update can install a newer version of the Technical Preview.
 -	You choose when to install the in-console update, starting at the top-tier site of your hierarchy.
 - You can install any update that is available from within the console. For example, if your site runs version 1802 and both 1806 and 1810 are offered, you should consider installing version 1810 because each version includes the features that were first made available in previously released versions.
-- After a new update completes installation at your top-tier site, child primary sites automatically start the process to update. However, you can set [Service Windows](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkservicewindowa-service-windows-for-site-servers) to control the timing of updates.
+- After a new update completes installation at your top-tier site, child primary sites automatically start the process to update. However, you can set [Service Windows](/sccm/core/servers/manage/service-windows) to control the timing of updates.
 - Secondary sites do not automatically install updates. Instead, you manually start the update from within the Configuration Manager console.
 
 For more, see [Updates for System Center Configuration Manager](/sccm/core/servers/manage/updates), and [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).
