@@ -269,9 +269,11 @@ You configure software update points in boundary group *A* to fallback after **1
 
 Along with fallback, use client notification to manually force a device to switch to a new software update point.
 
-When you switch to a new server, the devices use fallback to find that new server. Review your boundary group configurations. Before you start this change, make sure that your software update points are in the correct boundary groups.
+When you switch to a new server, the devices use fallback to find that new server. Clients switch to the new software update point during their next software updates scan cycle.<!-- SCCMDocs#1537 -->
 
-For more information, see [Manually switch clients to a new software update point](/sccm/sum/plan-design/plan-for-software-updates#manually-switch-clients-to-a-new-software-update-point).
+Review your boundary group configurations. Before you start this change, make sure that your software update points are in the correct boundary groups.
+
+For more information, see [Manually switch clients to a new software update point](/sccm/sum/plan-design/plan-for-software-updates#BKMK_ManuallySwitchSUPs).
 
 
 ## Management points
