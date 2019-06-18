@@ -346,7 +346,7 @@ The CMG connection point site system supports using a web proxy. For more inform
 
 - ServiceManagementEndpoint: `https://management.core.windows.net/`  
 
-- StorageEndpoint: `core.windows.net`  
+- StorageEndpoint: `*.core.windows.net`  
 
 - For Azure AD token retrieval by the Configuration Manager console and client: ActiveDirectoryEndpoint `https://login.microsoftonline.com/`  
 
