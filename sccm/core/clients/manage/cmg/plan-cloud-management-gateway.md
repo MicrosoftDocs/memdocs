@@ -317,6 +317,8 @@ The following diagram is a basic, conceptual data flow for the CMG:
 
 5. The CMG connection point forwards the client communication to the on-premises management point and software update point.  
 
+For more information when you host content in Azure, see [Use a cloud-based distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_dataflow).
+
 ### Required ports
 
 This table lists the required network ports and protocols. The *Client* is the device initiating the connection, requiring an outbound port. The *Server* is the device accepting the connection, requiring an inbound port.
