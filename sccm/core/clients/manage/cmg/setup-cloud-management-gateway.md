@@ -243,7 +243,7 @@ Starting in version 1802, if you have an existing CMG on the classic deployment 
 >
 > 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Cloud Management Gateway** node.  
 > 2. Select the CMG instance.  
-> 3. In the Details pane at the bottom of the window, look for the **Deployment Model** attribute. For a Resource Manager deployment, this attribute is **Azure Resource Manager**.
+> 3. In the Details pane at the bottom of the window, look for the **Deployment Model** attribute. For a Resource Manager deployment, this attribute is **Azure Resource Manager**. The legacy deployment model with the Azure management certificate displays as **Azure Service Manager**.
 >
 > You can also add the **Deployment Model** attribute as a column to the list view.  
 
