@@ -641,7 +641,7 @@ Using Azure Active Directory (Azure AD), you can now restrict access to web site
 ### New in Configuration Manger Technical Preview 1711
 
 - **New compliance policy options for Windows 10**   
-  You can now configure new options for compliance policies for Windows 10 devices. The new settings include policies for Firewall, User Account Control, Windows Defender Antivirus, and OS build versioning. For details, see [New compliance policy options for Windows 10](/sccm/core/get-started/capabilities-in-technical-preview-1711#new-compliance-policy-options-for-windows-10).
+  You can now configure new options for compliance policies for Windows 10 devices. The new settings include policies for Firewall, User Account Control, Windows Defender Antivirus, and OS build versioning. For details, see [New compliance policy options for Windows 10](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client).
 
 
 
@@ -699,7 +699,7 @@ Using Azure Active Directory (Azure AD), you can now restrict access to web site
   <!--1428681-->    
 
 - **Block unsupported Samsung Knox device enrollment**   
-  The Company Portal app only attempts to enroll supported Samsung Knox devices. To avoid KNOX activation errors that prevent MDM enrollment, device enrollment is only attempted if the device appears in the [list of devices published by Samsung](https://www.samsungknox.com/knox-supported-devices/knox-workspace). Samsung devices can have model numbers that support KNOX while others that don't. Verify Knox compatibility with your device reseller before purchase and deployment. You can find the full list of verified devices in the [Android and Samsung KNOX Standard policy settings](https://docs.microsoft.com/intune-classic/deploy-use/android-policy-settings-in-microsoft-intune#supported-samsung-knox-standard-devices).
+  The Company Portal app only attempts to enroll supported Samsung Knox devices. To avoid KNOX activation errors that prevent MDM enrollment, device enrollment is only attempted if the device appears in the [list of devices published by Samsung](https://www.samsungknox.com/knox-supported-devices/knox-workspace). Samsung devices can have model numbers that support KNOX while others that don't. Verify Knox compatibility with your device reseller before purchase and deployment. You can find the full list of verified devices in [Automatically enroll Android devices by using Samsung's Knox Mobile Enrollment](https://docs.microsoft.com/intune/android-samsung-knox-mobile-enroll#prerequisites).
   <!-- 1490695 -->     
 
 - **End of support for Android 4.3 and lower**     
@@ -707,7 +707,7 @@ Using Azure Active Directory (Azure AD), you can now restrict access to web site
   <!--1171126, 1326920 -->     
 
 - **Inform end users what device information can be seen on enrolled devices**     
-  We're adding **Ownership Type** to the Device Details screen on all Company Portal apps. This information allows users to find out more about privacy directly from the [What information can your company see?](https://docs.microsoft.com/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) article. This improvement rolls out across all Company Portal apps in the near future. We announced this feature for iOS in [September](https://docs.microsoft.com/intune/whats-new#week-of-september-11-2017). 
+  We're adding **Ownership Type** to the Device Details screen on all Company Portal apps. This information allows users to find out more about privacy directly from the [What information can your company see?](https://docs.microsoft.com/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) article. This improvement rolls out across all Company Portal apps in the near future. We announced this feature for iOS in [September](#september-2017). 
   <!--1165314-->     
 
 
