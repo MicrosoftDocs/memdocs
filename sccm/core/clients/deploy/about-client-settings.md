@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 05/21/2019
+ms.date: 06/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -90,7 +90,7 @@ Specifies how frequently the following Configuration Manager clients download cl
 - Mac computers  
 - Computers that run Linux or UNIX  
 
-This value is 60 minutes by default. Reducing this value causes clients to poll the site more frequently. With a lot of clients, this behavior can have a negative impact on the site performance. The [size and scale guidance](/sccm/core/plan-design/configs/size-and-scale-numbers) is based on the default value. Increasing this value causes clients to poll the site less often. Any changes to client policies, including new deployments, take longer for clients to download and process.<!-- SCCMDocs issue 823 -->
+This value is 60 minutes by default. Reducing this value causes clients to poll the site more frequently. With numerous clients, this behavior can have a negative impact on the site performance. The [size and scale guidance](/sccm/core/plan-design/configs/size-and-scale-numbers) is based on the default value. Increasing this value causes clients to poll the site less often. Any changes to client policies, including new deployments, take longer for clients to download and process.<!-- SCCMDocs issue 823 -->
 
 ### Enable user policy on clients
 
@@ -860,8 +860,8 @@ Specify the number of days over which the client measures the threshold for usag
 Choose **Yes** to create automatic user device affinity based on the usage information that Configuration Manager collects.  
 
 ### Allow user to define their primary devices
-
-When this setting is **Yes**, users can identify their own primary devices in Software Center.
+<!--3485366-->
+When this setting is **Yes**, users can identify their own primary devices in Software Center. For more information, see the [Software Center user guide](/sccm/core/understand/software-center#work-information).
 
 
 
