@@ -33,6 +33,7 @@ Clients use a boundary group for:
     - Software update points  
     - State migration points  
     - Preferred management points  
+    - Cloud management gateway (starting in version 1902)
 
         > [!Note]  
         > If you use preferred management points, enable this option for the hierarchy, not from within the boundary group configuration. For more information, see [Enable use of preferred management points](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_proc-prefer).  
