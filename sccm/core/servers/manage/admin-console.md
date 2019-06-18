@@ -143,23 +143,6 @@ Starting in version 1902, you can view the most recent connections for the Confi
 ![View Configuration Manager console connections](media/console-connections.png) 
 
 
-## <a name="bkmk_doc-dashboard"></a> In-console documentation dashboard
-<!--3556019 FKA 1357546-->
-
-Starting in Configuration Manager version 1902, there's a **Documentation** node in the new **Community** workspace. This node includes up-to-date information about Configuration Manager documentation and support articles. It includes the following sections:  
-
-### Product documentation library
-
-- **Recommended**: a manually curated list of important articles.
-- **Trending**: the most popular articles for the last month.
-- **Recently updated**: articles revised in the last month.
-
-### Support articles
-
-- **Troubleshooting articles**: guided walkthroughs to assist with troubleshooting Configuration Manager components and features.
-- **New and updated support articles**: articles that are new or updated in the last two months.
-
-
 ## <a name="bkmk_notify"></a> Configuration Manager console notifications
 <!--3556016, fka 1318035-->
 Starting in Configuration Manager version 1902, the console notifies you for the following events:
@@ -201,6 +184,23 @@ The following notifications are most applicable to the technical preview branch:
 - Site upgrade is available (Warning): there's a new update package available  
 
 For more information and troubleshooting assistance, see the **SmsAdminUI.log** file on the console computer. By default, this log file is at the following path: `C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\AdminUILog\SmsAdminUI.log`.
+
+## <a name="bkmk_doc-dashboard"></a> In-console documentation dashboard
+<!--3556019 FKA 1357546-->
+
+Starting in Configuration Manager version 1902, there's a **Documentation** node in the new **Community** workspace. This node includes up-to-date information about Configuration Manager documentation and support articles. It includes the following sections:  
+
+### Product documentation library
+
+- **Recommended**: a manually curated list of important articles.
+- **Trending**: the most popular articles for the last month.
+- **Recently updated**: articles revised in the last month.
+
+### Support articles
+
+- **Troubleshooting articles**: guided walkthroughs to assist with troubleshooting Configuration Manager components and features.
+- **New and updated support articles**: articles that are new or updated in the last two months.
+
 
 ## Command-line options
 
