@@ -563,7 +563,7 @@ For more information, see [Surface dashboard](/sccm/core/clients/manage/surface-
 <!--1358202-->
 Now by default the **Devices** node of the **Assets and Compliance** workspace displays a column for the **Currently logged on user**. It also displays for any collection-specific device list. This value is as current as the [client status](/sccm/core/clients/manage/monitor-clients#bkmk_indStatus). When the user signs off, the client clears this value. If no user is signed on, the value is blank. 
 
-For more information, see [Console improvements in version 1806](/sccm/core/servers/manage/admin-console/sccm/core/servers/manage/admin-console#view-users-for-a-device).
+For more information, see [Console improvements in version 1806](/sccm/core/servers/manage/admin-console#view-users-for-a-device).
 
 
 ### Submit feedback from the Configuration Manager console  
