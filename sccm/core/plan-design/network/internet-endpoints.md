@@ -166,6 +166,17 @@ You might need to add endpoints to a firewall that's between two site systems in
 - `https://<FQDN for software update point on parent site>`  
 
 
+## Manage Office 365
+
+If you use Configuration Manager to deploy and update Office 365, allow the following endpoints:
+
+<!-- SCCMDocs#929 -->
+
+- `officecdn.microsoft.com` to synchronize the software update point for Office 365 client updates
+
+- `config.office.com` to create custom configurations for Office 365 deployments
+
+
 ## Configuration Manager console
 
 Computers with the Configuration Manager console require access to the following internet endpoints for specific features:
