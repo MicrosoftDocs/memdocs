@@ -55,7 +55,7 @@ You can automate backup for Configuration Manager sites by scheduling the predef
 -   Backs up specific folders and files
 -   Backs up the [CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder)   
 
-Plan to run the default site backup task at a minimum of every five days. This schedule is because Configuration Manager uses a *SQL Server change tracking retention period* of five days. For more information, see [SQL Server change tracking retention period](/sccm/protect/understand/recover-sites#bkmk_SQLretention).
+Plan to run the default site backup task at a minimum of every five days. This schedule is because Configuration Manager uses a *SQL Server change tracking retention period* of five days. For more information, see [SQL Server change tracking retention period](/sccm/core/servers/manage/recover-sites#sql-server-change-tracking-retention-period).
 
 To simplify the backup process, you can create an **AfterBackup.bat** file. This script automatically runs post-backup actions after the backup task completes successfully. Use the AfterBackup.bat file to archive the backup snapshot to a secure location. You can also use the AfterBackup.bat file to copy files to your backup folder, or to start other backup tasks.  
 
