@@ -5,7 +5,7 @@ description: Learn about the features and functionality of Software Center
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 02/20/2019
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -114,9 +114,13 @@ Click the **Options** tab to view additional settings for this computer.
 
 Indicate the hours that you typically work. Your IT admin may schedule software installations outside your business hours. Allow at least four hours each day for system maintenance tasks. Your IT admin can still install critical applications and software updates during business hours.
 
-- Click the drop-down lists to select the earliest and latest hours that you use this computer. By default these values are from **5 AM** through **10 PM**
+   - Click the drop-down lists to select the earliest and latest hours that you use this computer. By default these values are from **5 AM** through **10 PM**
 
-- Select the checkbox next to the days of the week that you typically use this computer. Software Center only selects the weekdays by default.  
+   - Select the checkbox next to the days of the week that you typically use this computer. Software Center only selects the weekdays by default.  
+
+Specify whether you regularly use this computer to do your work. Your administrator might automatically install applications or make additional applications available to primary computers. <!--3485366-->
+
+   - Select **I regularly use this computer to do my work** if the computer you're using is a primary computer.
 
 
 ### Power management

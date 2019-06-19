@@ -390,11 +390,11 @@ The following features are optional in the latest version of Configuration Manag
 
 - [Package conversion manager](/sccm/apps/pcm/package-conversion-manager) <!--1357861-->
 - [Third-party software updates](/sccm/sum/deploy-use/third-party-software-updates)<!--1357605,1352101,1358714-->
-- [Approve application requests for users per device](/sccm/apps/deploy-use/deploy-applications#specify-deployment-settings) <!--1357015-->  
+- [Approve application requests for users per device](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy-settings) <!--1357015-->  
 - [Support for Cisco AnyConnect 4.0.07x and later for iOS](/sccm/mdm/deploy-use/create-vpn-profiles)<!--1357393-->
 - [Device health attestation assessment for compliance policies for conditional access](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616-->
 - [Create and run scripts](/sccm/apps/deploy-use/create-deploy-scripts) <!--1236459-->
-- [Run task sequence step](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence) <!--1261338-->
+- [Run task sequence step](/sccm/osd/understand/task-sequence-steps#child-task-sequence) <!--1261338-->
 - [Task sequence content pre-caching](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) <!--1021244-->
 - [Surface driver updates](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490-->
 - [Cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) <!--1101764-->
