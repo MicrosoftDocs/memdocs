@@ -2,7 +2,7 @@
 title: Prepare Windows PE peer cache to reduce WAN traffic
 titleSuffix: "Configuration Manager"
 description: "The Windows PE Peer Cache works in the Windows PE to get content from a local peer and minimize WAN traffic when there's no local distribution point."
-ms.date: 10/06/2016
+ms.date: 06/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -58,9 +58,11 @@ Use the following sections to manage Peer Cache.
 
 -   The Configuration Manager client must be able to communicate across the following ports on your network:  
 
-    -   Port for the initial network broadcast to find a peer cache source. By default, this is port 8004.  
+    -   Port for the initial network broadcast to find a peer cache source. By default, this is UDP port 8004.  
 
-    -   Port for content downloading from a peer cache source (HTTP and HTTPS). By default, this port is 8003.  
+    -   Port for content downloading from a peer cache source (HTTP and HTTPS). By default, this is TCP port 8003.  
+    
+        For more information, see [Ports used for connections](core/plan-design/hierarchy/ports#BKMK_PortsClient-ClientWakeUp).  
 
         > [!TIP]  
         >  Clients will use HTTPS to download content when it is available. However, the same port number is used for either HTTP or HTTPS.  
