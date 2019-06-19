@@ -728,7 +728,7 @@ This step works well in a task sequence to upgrade an OS in the following scenar
 This step runs in either the full OS or Windows PE. The option to save the package in the Configuration Manager client cache isn't supported in Windows PE.
 
 > [!NOTE]  
-> The **Download Package Content** task is not currently supported for use with stand-alone media.
+> The **Download Package Content** task is not supported for use with stand-alone media.
 
 To add this step in the task sequence editor, select **Add**, select **Software**, and select **Download Package Content**.
 
