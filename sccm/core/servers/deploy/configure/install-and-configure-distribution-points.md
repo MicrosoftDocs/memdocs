@@ -476,11 +476,11 @@ For more information, see [Validate content](/sccm/core/servers/deploy/configure
 
 Manage the boundary groups to which you assign this distribution point. Add the distribution point to at least one boundary group. During content deployment, clients must be in a boundary group associated with a distribution point to use that distribution point as a source location for content.
 
-Configure boundary group *relationships* that define when and to which boundary groups a client can fall back to find content. For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
+Configure boundary group *relationships* that define when and to which boundary groups a client can fall back to find content. For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/boundary-groups).
 
 Choose **Add** and select an existing boundary group from the list.
 
-To create a new boundary group for this distribution point, choose **Create**. For more information on how to create and configure a boundary group, see [Procedures for boundary groups](/sccm/core/servers/deploy/configure/boundary-groups#procedures-for-boundary-groups).
+To create a new boundary group for this distribution point, choose **Create**. For more information on how to create and configure a boundary group, see [Procedures for boundary groups](/sccm/core/servers/deploy/configure/boundary-group-procedures).
 
 When you're editing the properties of a previously installed distribution point, manage the option to **Enable for on-demand distribution**. This option allows Configuration Manager to automatically distribute content to this server when a client requests it. For more information, see [On-demand content distribution](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#on-demand-content-distribution).
 
