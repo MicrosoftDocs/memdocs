@@ -29,7 +29,7 @@ To get the update for version 1806, you must use a service connection point at t
 
     -   Another common download issue occurs when proxy server settings prevent downloads from http://silverlight.dlservice.microsoft.com and http://download.microsoft.com.
 
-For more information about installing updates, see [In-console updates and servicing](/sccm/core/servers/manage/updates#a-namebkmkinconsolea-in-console-updates-and-servicing).
+For more information about installing updates, see [In-console updates and servicing](/sccm/core/servers/manage/updates#bkmk_inconsole).
 
 For more information about current branch versions, see [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines).
 
@@ -149,7 +149,7 @@ For more information, see the section to **Run the prerequisite checker before i
 > When the prerequisite checker runs, the process updates some product source files that are used for site maintenance tasks. Therefore, after running the prerequisite checker but before installing the update, if you need to perform a site maintenance task, run **Setupwpf.exe** (Configuration Manager Setup) from the CD.Latest folder on the site server.
 
 #### Update sites   
-You're now ready to start the update installation for your hierarchy. For more information about installing the update, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates).
+You're now ready to start the update installation for your hierarchy. For more information about installing the update, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_install).
 
 You may plan to install the update outside of normal business hours. Determine when the process will have the least effect on your business operations. Installing the update and its actions reinstall site components and site system roles.
 

@@ -2,7 +2,7 @@
 title: What's new in version 1902
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1902 of Configuration Manager current branch.
-ms.date: 06/17/2019
+ms.date: 06/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -90,12 +90,11 @@ When you install or update to version 1902, Configuration Manager setup now incl
 ## <a name="bkmk_cloud"></a> Cloud-attached management
 
 ### Stop cloud service when it exceeds threshold
+
 <!--3735092-->
-Configuration Manager can now stop a cloud management gateway (CMG) service when the total data transfer goes over your limit. The CMG has always had alerts to trigger notifications when the usage reached warning or critical levels. To help reduce any unexpected Azure costs because of a spike in usage, this new option turns off the cloud service. 
+***[Updated 06/18]*** Configuration Manager can now stop a cloud management gateway (CMG) service when the total data transfer goes over your limit. The CMG has always had alerts to trigger notifications when the usage reached warning or critical levels. To help reduce any unexpected Azure costs because of a spike in usage, this new option turns off the cloud service.
 
-[Set up outbound traffic alerts](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway#set-up-outbound-traffic-alerts) on the CMG, and then enable the option to **Stop this service when it exceeds the critical threshold**.  
-
-<!-- For more information, see [Set up outbound traffic alerts](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway#set-up-outbound-traffic-alerts). -->
+For more information, see [Stop CMG when it exceeds threshold](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway#bkmk_stop).
 
 
 ### Use Azure Resource Manager for cloud services
@@ -330,11 +329,11 @@ For more information, see [Plan for Software Center](/sccm/apps/plan-design/plan
 
 ### Configure user device affinity in Software Center
 <!--3485366-->
-With [Software Center infrastructure improvements](/sccm/core/plan-design/changes/whats-new-in-version-1806#software-center-infrastructure-improvements) starting in version 1806, the application catalog site server roles are no longer required for most scenarios. Some customers still relied upon the application catalog to allow users to set their primary device for user device affinity. 
+***[Updated 6/18]***  With [Software Center infrastructure improvements](/sccm/core/plan-design/changes/whats-new-in-version-1806#software-center-infrastructure-improvements) starting in version 1806, the application catalog site server roles are no longer required for most scenarios. Some customers still relied upon the application catalog to allow users to set their primary device for user device affinity. 
 
 Now users can set their primary device in Software Center. This action makes them a primary user of the device in Configuration Manager.
 
-<!-- For more information, see [Link users and devices with user device affinity](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity). -->
+For more information, see [Link users and devices with user device affinity](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity). 
 
 
 ### Configure default views in Software Center
@@ -539,7 +538,7 @@ When you're ready to install this version, see [Installing updates for Configura
 >
 >  Learn more about:    
 >   - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites)  
->   - [Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+>   - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)  
 
 For known, significant issues, see the [Release notes](/sccm/core/servers/deploy/install/release-notes).
 

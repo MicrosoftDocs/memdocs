@@ -229,7 +229,7 @@ Clients that can't find content from a distribution point that's associated with
 
 The concepts of preferred distribution points are no longer used, and settings for **Allow fallback source locations for content** are no longer available or enforced.
 
-For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
+For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/boundary-groups).
 
 
 
@@ -249,7 +249,7 @@ For more information, see [Manage network bandwidth](/sccm/core/plan-design/hier
 
 Network connection speeds that define a distribution point as **Fast** or **Slow** are no longer used. Instead, each site system that's associated with a boundary group is treated the same.
 
-For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
+For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/boundary-groups).
 
 
 
@@ -262,7 +262,7 @@ For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/
 
 -   Although this triggers Configuration Manager to automatically distribute the content to that client's preferred distribution points, the client might obtain that content from other distribution points before the preferred distribution points for the client receive the deployment. When this behavior occurs, the content will then be present on that distribution point for use by the next client that seeks that deployment.  
 
-For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
+For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/boundary-groups).
 
 
 
