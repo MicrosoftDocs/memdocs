@@ -62,7 +62,7 @@ Use the following sections to manage Peer Cache.
 
     -   Port for content downloading from a peer cache source (HTTP and HTTPS). By default, this is TCP port 8003.  
     
-        For more information, see [Ports used for connections](core/plan-design/hierarchy/ports#BKMK_PortsClient-ClientWakeUp).  
+        For more information, see [Ports used for connections](/sccm/core/plan-design/hierarchy/ports#BKMK_PortsClient-ClientWakeUp).  
 
         > [!TIP]  
         >  Clients will use HTTPS to download content when it is available. However, the same port number is used for either HTTP or HTTPS.  
