@@ -36,7 +36,7 @@ Configure the following Azure services using this wizard:
 -   **Log Analytics Connector**: [Connect to Azure Log Analytics](/sccm/core/clients/manage/sync-data-log-analytics). Sync collection data to Log Analytics.  
 
     > [!Note]  
-    > This article refers to the *Log Analytics Connector*, which was formerly called the *OMS Connector*. There's no functional difference. For more information, see [Azure Management - Monitoring](https://docs.microsoft.com/azure/monitoring/#operations-management-suite).  
+    > This article refers to the *Log Analytics Connector*, which was formerly called the *OMS Connector*. There's no functional difference. For more information, see [Azure Management - Monitoring](/azure/azure-monitor/terminology#log-analytics).  
 
 -   **Upgrade Readiness Connector**: Connect to Windows Analytics [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics). View client upgrade compatibility data.  
 
@@ -81,7 +81,7 @@ For more information about the required app permissions and configurations for e
 For more information about Azure apps, start with the following articles:
 - [Authentication and authorization in Azure App Service](/azure/app-service/app-service-authentication-overview)
 - [Web Apps overview](/azure/app-service-web/app-service-web-overview)
-- [Basics of Registering an Application in Azure AD](/azure/active-directory/develop/active-directory-authentication-scenarios#basics-of-registering-an-application-in-azure-ad)  
+- [Basics of Registering an Application in Azure AD](/azure/active-directory/develop/authentication-scenarios#authentication-basics-in-microsoft-identity-platform)  
 - [Register your application with your Azure Active Directory tenant](/azure/active-directory/active-directory-app-registration)
 
 
@@ -262,7 +262,7 @@ The following diagram is a conceptual data flow for the interaction between Conf
 
 3.	The site stores data about the user objects. For more information, see [Azure AD User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc).  
 
-4.  The Configuration Manager client requests the Azure AD user token. The client makes the claim using the application ID of the Azure AD client app, and the server app as the audience. For more information, see [Claims in Azure AD Security Tokens](/azure/active-directory/develop/active-directory-authentication-scenarios#claims-in-azure-ad-security-tokens).  
+4.  The Configuration Manager client requests the Azure AD user token. The client makes the claim using the application ID of the Azure AD client app, and the server app as the audience. For more information, see [Claims in Azure AD Security Tokens](/azure/active-directory/develop/authentication-scenarios#claims-in-microsoft-identity-platform-security-tokens).  
 
 5.  The client authenticates with the site by presenting the Azure AD token to the cloud management gateway and/or on-premises HTTPS-enabled management point.  
 

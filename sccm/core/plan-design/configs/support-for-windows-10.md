@@ -25,7 +25,7 @@ Learn about the Windows 10 versions that Configuration Manager supports, includi
 > [!Tip]
 > Windows Server builds as a client are supported the same as the associated Windows 10 version. For example, Windows Server 2016 is the same build version as Windows 10 LTSB 2016, and Windows Server version 1803 is the same build version as Windows 10 version 1803.
 >
-> For more information on Windows Server as a site system, see [Supported operating systems for Configuration Manager site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers#the-server-core-installation-of-windows-server-version-1803).
+> For more information on Windows Server as a site system, see [Supported operating systems for Configuration Manager site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers#bkmk_core).
 
 
 ## Windows 10 as a client

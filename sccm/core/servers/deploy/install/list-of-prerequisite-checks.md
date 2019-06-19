@@ -768,7 +768,7 @@ Configuration Manager uses SQL Server Native Client on the following site system
 
 SQL Server reserves a minimum of 8 GB of memory for the central administration site and primary site, and a minimum of 4 GB of memory for the secondary site.
 
-For more information, see [How to configure memory options using SQL Server Management Studio](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options#how-to-configure-memory-options-using-includessmanstudiofullincludesssmanstudiofull-mdmd).
+For more information, see [How to configure memory options using SQL Server Management Studio](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options#how-to-configure-memory-options-using-).
 
 > [!NOTE]  
 > This check isn't applicable to SQL Server Express on a secondary site. This edition is limited to 1 GB of reserved memory.  
