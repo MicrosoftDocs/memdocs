@@ -250,7 +250,7 @@ This release includes the following improvements to the cloud management gateway
 
 ### Simplified client bootstrap command line
 <!--1358215-->
-When installing the Configuration Manager client on the internet via a CMG, fewer command-line properties are now required. For more information on one example of this scenario, see the [Command line to install Configuration Manager client](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client) when preparing for co-management. 
+When installing the Configuration Manager client on the internet via a CMG, fewer command-line properties are now required. For more information on one example of this scenario, see the [Command line to install Configuration Manager client](/sccm/comanage/how-to-prepare-Win10#install-the-configuration-manager-client) when preparing for co-management. 
 
 The following command-line properties are required in all scenarios:
   - CCMHOSTNAME  
@@ -274,7 +274,7 @@ Previously, you had to deploy a cloud distribution point and CMG as separate rol
 
 ### Trusted root certificate isn't required with Azure AD
 <!--503899-->
-When you create a CMG, you're no longer required to provide a [trusted root certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-trusted-root-certificate-to-clients) on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard.
+When you create a CMG, you're no longer required to provide a [trusted root certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_cmgroot) on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard.
 
 > [!Important]  
 > If you're using PKI client authentication certificates, then you still must add a trusted root certificate to the CMG.

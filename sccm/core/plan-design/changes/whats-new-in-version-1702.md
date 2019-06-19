@@ -24,7 +24,7 @@ Update 1702 for System Center Configuration Manager current branch is available 
 >  Learn more about:    
 >   - [Installing new sites](https://technet.microsoft.com/library/mt590197.aspx)  
 >   - [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx)  
->   - [Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+>   - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 The following sections provide details about changes and new capabilities introduced in version 1702 of Configuration Manager.  
 
@@ -32,9 +32,9 @@ The following sections provide details about changes and new capabilities introd
 Learn about support changes before they are implemented in [removed and deprecated items](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated).
 
 Version 1702 drops support for the following products:
-- **SQL Server 2008 R2**, for site database servers. Deprecation of support was [first announced](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-support-for-sql-server-versions-as-a-site-database) on July 10, 2015. This version of SQL Server remains supported when you use a Configuration Manager version prior to version 1702.
-- **Windows Server 2008 R2**, for site system servers and most site system roles. Deprecation of support was [first announced](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems) on July 10, 2015. This version of Windows remains supported when you use a Configuration Manager version prior to version 1702.  
-- **Windows Server 2008**, for site system servers and most site system roles. Deprecation of support was [first announced](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems) on  July 10, 2015.
+- **SQL Server 2008 R2**, for site database servers. Deprecation of support was [first announced](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#sql-server) on July 10, 2015. This version of SQL Server remains supported when you use a Configuration Manager version prior to version 1702.
+- **Windows Server 2008 R2**, for site system servers and most site system roles. Deprecation of support was [first announced](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#server-os) on July 10, 2015. This version of Windows remains supported when you use a Configuration Manager version prior to version 1702.  
+- **Windows Server 2008**, for site system servers and most site system roles. Deprecation of support was [first announced](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#server-os) on  July 10, 2015.
 - **Windows XP Embedded**, as a client operating system. Deprecation was [first announced](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-client#deprecated-client-operating-systems) on  July 10, 2015. This version of Windows remains supported when you use a Configuration Manager version prior to version 1702.
 
 
@@ -112,7 +112,7 @@ Additionally, three new reports are added to your reporting point. You can use t
 
 
 ### Use the OMS connector with the Azure Government cloud
-You can use the OMS connector to connect to OMS Log Analytics in Microsoft Azure Government cloud. This requires you to modify a configuration file before you install the OMS connector so that the connector can work with the Government cloud. For more information, see [Use the OMS connector with the Azure Government cloud](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite#fairfaxconfig).
+You can use the OMS connector to connect to OMS Log Analytics in Microsoft Azure Government cloud. This requires you to modify a configuration file before you install the OMS connector so that the connector can work with the Government cloud. For more information, see [Use the OMS connector with the Azure Government cloud](/sccm/core/clients/manage/sync-data-log-analytics).
 
 ### Software update points are added to boundary groups
 Beginning with version 1702, clients use boundary groups to find a new software update point, and to fallback and find a new software update point if their current one is no longer accessible. You can add individual software update points to different boundary groups to control which servers a client can find. For more information, see [software update points](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points) in the [configuring boundary groups](/sccm/core/servers/deploy/configure/boundary-groups) topic.
@@ -321,7 +321,7 @@ Beginning in version 1702, you have new ways to monitor the compliance status wi
 ## Protect devices
 
 ### Detect outdated antimalware client versions
-Beginning with version 1702, you can configure an alert to ensure Endpoint Protection clients are not outdated. For more information, see [Alert for outdated malware client](/sccm/protect/deploy-use/endpoint-configure-alerts#detect-outdated-antimalware-client-versions).
+Beginning with version 1702, you can configure an alert to ensure Endpoint Protection clients are not outdated. For more information, see [Alert for outdated malware client](/sccm/protect/deploy-use/endpoint-configure-alerts#alert-for-outdated-malware-client).
 
 ### Device health attestation updates
 Device health attestation service for on-premises clients can now be configured and managed from the management point. For more information, see [Health Attestation](/sccm/core/servers/manage/health-attestation).

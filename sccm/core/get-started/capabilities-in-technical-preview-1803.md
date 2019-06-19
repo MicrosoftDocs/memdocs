@@ -46,7 +46,7 @@ Many customers use [pull-distribution points](/sccm/core/plan-design/hierarchy/u
 - The content must be distributed to the source cloud distribution point.
 
 > [!Note]  
-> This feature does incur charges to your Azure subscription for data storage and network egress. For more information, see the [Cost of using cloud-based distribution](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#BKMK_CloudDPCost).
+> This feature does incur charges to your Azure subscription for data storage and network egress. For more information, see the [Cost of using cloud-based distribution](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_cost).
 
 
 
