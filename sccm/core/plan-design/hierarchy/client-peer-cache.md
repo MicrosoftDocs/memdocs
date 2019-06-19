@@ -35,7 +35,7 @@ Definitions:
 
 Use client settings to enable clients to be peer cache sources. You don't need to enable peer cache clients. When you enable clients to be peer cache sources, the management point includes them in the list of content location sources.<!--510397--> For more information on this process, see [Operations](#operations).  
 
-A peer cache source must be a member of the current boundary group of the peer cache client. The management point doesn't include peer cache sources from a neighbor boundary group in the list of content sources it provides the client. It only includes distribution points from a neighbor boundary group. For more information about current and neighbor boundary groups, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups##a-namebkmkboundarygroupsa-boundary-groups).<!--SCCMDocs issue 685-->  
+A peer cache source must be a member of the current boundary group of the peer cache client. The management point doesn't include peer cache sources from a neighbor boundary group in the list of content sources it provides the client. It only includes distribution points from a neighbor boundary group. For more information about current and neighbor boundary groups, see [Boundary groups](/sccm/core/servers/deploy/configure/boundary-groups).<!--SCCMDocs issue 685-->  
 
 The Configuration Manager client uses peer cache to serve to other clients every type of content in the cache. This content includes Office 365 files and express installation files.<!--SMS.500850-->  
 
