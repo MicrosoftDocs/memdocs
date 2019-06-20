@@ -476,7 +476,9 @@ For more information, see [Using the Configuration Manager console](/sccm/core/s
 
 ### Search device views using MAC address
 <!--3600878-->
-You can now search for a MAC address in a device view of the Configuration Manager console. This property is useful for OS deployment administrators while troubleshooting PXE-based deployments. When you view a list of devices, add the **MAC Address** column to the view. Use the search field to add the **MAC Address** search criteria. 
+***[Updated 06/20]*** You can now search for a MAC address in a device view of the Configuration Manager console. This property is useful for OS deployment administrators while troubleshooting PXE-based deployments. When you view a list of devices, add the **MAC Address** column to the view. Use the search field to add the **MAC Address** search criteria. 
+
+For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#tips).
 
 
 ### Use .NET 4.7 for improved console accessibility
