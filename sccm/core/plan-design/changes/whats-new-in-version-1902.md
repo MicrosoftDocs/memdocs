@@ -2,7 +2,7 @@
 title: What's new in version 1902
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1902 of Configuration Manager current branch.
-ms.date: 06/18/2019
+ms.date: 06/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -469,7 +469,7 @@ For more information, see [Using the Configuration Manager console](/sccm/core/s
 
 ### In-console documentation dashboard
 <!--3556019, fka 1357546-->
-***[Updated 06/18]*** There's a new **Documentation** node in the new **Community** workspace. This node includes up-to-date information about Configuration Manager documentation and support articles.
+***[Updated 06/20]*** There's a new **Documentation** node in the new **Community** workspace. This node includes up-to-date information about Configuration Manager documentation and support articles.
 
 For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#bkmk_doc-dashboard).
 

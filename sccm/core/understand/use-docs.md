@@ -2,7 +2,7 @@
 title: How to use the docs
 titleSuffix: Configuration Manager
 description: Learn tips on using the Configuration Manager technical documentation library.
-ms.date: 06/18/2019
+ms.date: 06/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
