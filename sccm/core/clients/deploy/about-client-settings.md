@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 06/18/2019
+ms.date: 06/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -647,6 +647,17 @@ Configure the additional settings in this group to **Yes** to make the following
 
 For example, if your organization doesn't use compliance policies, and you want to hide the Device Compliance tab in Software Center, set **Enable Device Compliance tab** to **No**.
 
+### <a name="bkmk_swctr_defaults"></a> Configure default views in Software Center
+<!--3612112-->
+*(Introduced in version 1902)*
+
+- Configure the **Default application filter** as either **All** or only **Required** applications.  
+
+    - Software Center always uses your default setting. Users can change this filter, but Software Center doesn't persist their preference.  
+
+ - Set the **Default application view** as either **Tile view** or **List view**. 
+
+    - If a user changes this configuration, Software Center persists the user's preference in the future. 
 
 
 ## Software deployment  
