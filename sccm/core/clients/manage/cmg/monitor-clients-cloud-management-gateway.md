@@ -76,7 +76,7 @@ Starting in version 1806, use the CMG connection analyzer for real-time verifica
 
      1. **Azure AD user**: use this option to simulate communication the same as a cloud-based user identity signed in to an Azure AD-joined Windows 10 device. Click **Sign In** to securely enter the credentials for this Azure AD user account.  
 
-     2. **Client certificate**: use this option to simulate communication the same as a Configuration Manager client with a [client authentication certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#client-authentication-certificate).  
+     2. **Client certificate**: use this option to simulate communication the same as a Configuration Manager client with a [client authentication certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_clientauth).  
 
 4. Select **Start** to start the analysis. The analyzer window displays the results. Select an entry to see more details in the Description field.  
 

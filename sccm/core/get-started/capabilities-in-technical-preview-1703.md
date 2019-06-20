@@ -80,7 +80,7 @@ Technical preview 1703 introduces the **Configure Azure Services** wizard. This 
 
 With technical preview 1703, only Windows Store for Business (WSfB) is configured by using this wizard.  Other cloud services are configured by using their separate workflows.
 
--	Use the information in this preview topic to replace the configuration steps found in the [Set up Windows Store for Business synchronization](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#set-up-windows-store-for-business-synchronization) section of the Current Branch topic [Manage apps from the Windows Store for Business with System Center Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
+-	Use the information in this preview topic to replace the configuration steps found in the [Set up Windows Store for Business synchronization](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#bkmk_setup) section of the Current Branch topic [Manage apps from the Windows Store for Business with System Center Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
 
 -	For more information about web apps, see [Authentication and authorization in Azure App Service](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview), and [Web Apps overview](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview).
 

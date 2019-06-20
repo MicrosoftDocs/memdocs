@@ -39,9 +39,9 @@ If Mac clients can't locate the certificate revocation list (CRL), they can't co
 
 Before you install the Configuration Manager client on a Mac computer, decide how to install the client certificate:  
 
--   Use Configuration Manager enrollment by using the [CMEnroll tool](/sccm/core/clients/deploy/deploy-clients-to-macs#install-the-client-and-then-enroll-the-client-certificate-on-the-mac). The enrollment process doesn't support automatic certificate renewal. Re-enroll Mac computers before the certificate expires.  
+-   Use Configuration Manager enrollment by using the [CMEnroll tool](/sccm/core/clients/deploy/deploy-clients-to-macs#client-and-certificate-automation-with-cmenroll). The enrollment process doesn't support automatic certificate renewal. Re-enroll Mac computers before the certificate expires.  
 
--   [Use a certificate request and installation method that's independent from Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-macs#use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager).  
+-   [Use a certificate request and installation method that's independent from Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-macs#bkmk_external).  
 
 For more information about Mac client certificate requirements, see [PKI certificate requirements for Configuration Manager](/sccm/core/plan-design/network/pki-certificate-requirements).  
 
