@@ -127,9 +127,9 @@ For more information, see [CMPivot for real-time data](/sccm/core/servers/manage
 
 ### Edit or copy PowerShell scripts
 <!--3705507-->
-You can now **Edit** or **Copy** an existing PowerShell script used with the Run Scripts feature. Instead of recreating a script that you need to change, now directly edit it. Both actions use the same wizard experience as when you create a new script. When you edit or copy a script, Configuration Manager doesn't persist the approval state. 
+***[Updated 6/20]*** You can now **Edit** or **Copy** an existing PowerShell script used with the Run Scripts feature. Instead of recreating a script that you need to change, now directly edit it. Both actions use the same wizard experience as when you create a new script. When you edit or copy a script, Configuration Manager doesn't persist the approval state. 
 
-<!-- For more information, see [Run Scripts](/sccm/apps/deploy-use/create-deploy-scripts). -->
+For more information, see [Run Scripts](/sccm/apps/deploy-use/create-deploy-scripts#bkmk_psedit).
 
 
 
