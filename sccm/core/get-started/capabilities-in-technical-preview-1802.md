@@ -63,7 +63,7 @@ You use Configuration Manager boundary groups to define and regulate content dis
 2. Select the new **Delivery Optimization** group.
 3. Enable the setting **Use Configuration Manager Boundary Groups for Delivery Optimization Group ID**.
 
-For more information, see the **Group** delivery mode option in [Delivery Optimization options](/windows/deployment/update/waas-delivery-optimization#group-id).
+For more information, see the **Group** delivery mode option in [Delivery Optimization options](/windows/deployment/update/waas-delivery-optimization#how-microsoft-uses-delivery-optimization).
 
 
 
@@ -91,7 +91,7 @@ The default task sequence template for Windows 10 in-place upgrade now includes 
 - **Remove incompatible applications**: Add steps in this group to remove any applications that are incompatible with this version of Windows 10. The method to uninstall an application varies. If the application uses Windows Installer, copy the **Uninstall program** command line from the **Programs** tab on the Windows Installer deployment type properties of the application. Then add a **Run Command Line** step in this group with the uninstall program command line. For example: </br>`msiexec /x {150031D8-1234-4BA8-9F52-D6E5190D1CBA} /q`</br> 
 - **Remove incompatible drivers**: Add steps in this group to remove any drivers that are incompatible with this version of Windows 10.
 - **Remove/suspend third-party security**: Add steps in this group to remove or suspend third-party security programs, such as antivirus.
-   - If you are using a third-party disk encryption program, provide its encryption driver to Windows Setup with the **/ReflectDrivers** [command-line option](/windows-hardware/manufacture/desktop/windows-setup-command-line-options). Add a [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step to the task sequence in this group. Set the task sequence variable to **OSDSetupAdditionalUpgradeOptions**. Set the value to **/ReflectDriver** with the path to the driver. This [task sequence action variable](/sccm/osd/understand/task-sequence-action-variables#upgrade-operating-system) appends the Windows Setup command-line used by the task sequence. Contact your software vendor for any additional guidance on this process.
+   - If you are using a third-party disk encryption program, provide its encryption driver to Windows Setup with the **/ReflectDrivers** [command-line option](/windows-hardware/manufacture/desktop/windows-setup-command-line-options). Add a [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step to the task sequence in this group. Set the task sequence variable to **OSDSetupAdditionalUpgradeOptions**. Set the value to **/ReflectDriver** with the path to the driver. This [task sequence action variable](/sccm/osd/understand/task-sequence-steps#BKMK_UpgradeOS) appends the Windows Setup command-line used by the task sequence. Contact your software vendor for any additional guidance on this process.
 
 ### New groups under **Post-Processing**
 - **Apply setup-based drivers**: Add steps in this group to install setup-based drivers (.exe) from packages.
@@ -189,7 +189,7 @@ When upgrading the site to this version, Configuration Manager adds all non-inte
 Management point boundary group fallback does not change the behavior during client installation (ccmsetup). If the command line does not specify the initial management point using the /MP parameter, the new client receives the full list of available management points. For its initial bootstrap process, the client uses the first management point it can access. Once the client registers with the site, it receives the management point list properly sorted with this new behavior. 
 
 ### Prerequisites
-- Enable [preferred management points](/sccm/core/servers/deploy/configure/boundary-groups#preferred-management-points). In the Configuration Manager console, go to the **Administration** workspace. Expand **Site Configuration** and select **Sites**. Click **Hierarchy Settings** in the ribbon. On the **General** tab, enable **Clients prefer to use management points specified in boundary groups**. 
+- Enable [preferred management points](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_preferred). In the Configuration Manager console, go to the **Administration** workspace. Expand **Site Configuration** and select **Sites**. Click **Hierarchy Settings** in the ribbon. On the **General** tab, enable **Clients prefer to use management points specified in boundary groups**. 
 
 ### Known issues
 - Operating system deployment processes are not aware of boundary groups.
@@ -233,7 +233,7 @@ Configuration Manager does not migrate existing classic CMG instances to the Azu
 
 ### Prerequisites
 - Integration with [Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure). Azure AD user discovery is not required.
-- The same [requirements for cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway#requirements-for-cloud-management-gateway), except for the Azure management certificate.
+- The same [requirements for cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#requirements), except for the Azure management certificate.
 
 ### Try it out!  
  Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked.

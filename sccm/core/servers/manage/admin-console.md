@@ -2,7 +2,7 @@
 title: Configuration Manager Console
 titleSuffix: Configuration Manager
 description: Learn about navigating through the Configuration Manager console.
-ms.date: 06/17/2019
+ms.date: 06/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -143,19 +143,6 @@ Starting in version 1902, you can view the most recent connections for the Confi
 ![View Configuration Manager console connections](media/console-connections.png) 
 
 
-
-## Command-line options
-
-The Configuration Manager console has the following command-line options:
-
-|Option|Description|  
-|------------|-----------------|  
-|`/sms:debugview=1`|A DebugView is included in all ResultViews that specify a view. DebugView shows raw properties (names and values).|  
-|`/sms:NamespaceView=1`|Shows namespace view in the console.|  
-|`/sms:ResetSettings`|The console ignores user-persisted connection and view states. The window size isn't reset.|  
-|`/sms:IgnoreExtensions`|Disables any Configuration Manager extensions.|  
-|`/sms:NoRestore`|The console ignores previous persisted node navigation.|  
-
 ## <a name="bkmk_notify"></a> Configuration Manager console notifications
 <!--3556016, fka 1318035-->
 Starting in Configuration Manager version 1902, the console notifies you for the following events:
@@ -198,8 +185,95 @@ The following notifications are most applicable to the technical preview branch:
 
 For more information and troubleshooting assistance, see the **SmsAdminUI.log** file on the console computer. By default, this log file is at the following path: `C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\AdminUILog\SmsAdminUI.log`.
 
+## <a name="bkmk_doc-dashboard"></a> In-console documentation dashboard
+<!--3556019 FKA 1357546-->
+
+Starting in Configuration Manager version 1902, there's a **Documentation** node in the new **Community** workspace. This node includes up-to-date information about Configuration Manager documentation and support articles. It includes the following sections:  
+
+### Product documentation library
+
+- **Recommended**: a manually curated list of important articles.
+- **Trending**: the most popular articles for the last month.
+- **Recently updated**: articles revised in the last month.
+
+### Support articles
+
+- **Troubleshooting articles**: guided walkthroughs to assist with troubleshooting Configuration Manager components and features.
+- **New and updated support articles**: articles that are new or updated in the last two months.
+
+
+## Command-line options
+
+The Configuration Manager console has the following command-line options:
+
+|Option|Description|  
+|------------|-----------------|  
+|`/sms:debugview=1`|A DebugView is included in all ResultViews that specify a view. DebugView shows raw properties (names and values).|  
+|`/sms:NamespaceView=1`|Shows namespace view in the console.|  
+|`/sms:ResetSettings`|The console ignores user-persisted connection and view states. The window size isn't reset.|  
+|`/sms:IgnoreExtensions`|Disables any Configuration Manager extensions.|  
+|`/sms:NoRestore`|The console ignores previous persisted node navigation.|  
+
 
 ## Tips
+
+### Search device views using MAC address
+<!--3600878-->
+*(Introduced in version 1902)*
+
+You can search for a MAC address in a device view of the Configuration Manager console. This property is useful for OS deployment administrators while troubleshooting PXE-based deployments. When you view a list of devices, add the **MAC Address** column to the view. Use the search field to add the **MAC Address** search criteria.
+
+### Maximize the browse registry window
+<!--3594151 includes all MMS 1902 console changes-->
+*(Introduced in version 1902)*
+1. In the **Software Library** workspace, expand **Application Management**, and select the **Applications** node. 
+1. Select an application that has a deployment type with a detection method. For example, a Windows Installer detection method. 
+1. In the details pane, switch to the **Deployment Types** tab. 
+1. Open the properties of a deployment type, and switch to the **Detection Method** tab. Select **Add Clause**. 
+1. Change the **Setting Type** to **Registry** and select **Browse** to open the **Browse Registry** window. You can now maximize this window.  
+
+### Go to the collection from an application deployment
+
+*(Introduced in version 1902)*
+1. In the **Software Library** workspace, expand **Application Management**, and select the **Applications** node. 
+1. Select an application. In the details pane, switch to the **Deployments** tab.
+1. Select a deployment, and then choose the new **Collection** option in the ribbon on the Deployment tab. This action switches the view to the collection that's the target of the deployment.
+   - This action is also available from the right-click context menu on the deployment in this view.
+
+### Edit a task sequence by default
+
+*(Introduced in version 1902)*
+
+In the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node. **Edit** is now the default action when opening a task sequence. Previously the default action was **Properties**.  
+
+### Remove content from monitoring status
+*(Introduced in version 1902)*
+
+1. In the **Monitoring** workspace, expand **Distribution Status**, and select **Content Status**.
+1. Select an item in the list, and choose the **View Status** option in the ribbon. 
+1. In the Asset Details pane, right-click a distribution point, and select the new option **Remove**. This action removes this content from the selected distribution point.
+
+### Views sort by integer values
+*(Introduced in version 1902)*
+
+We've made improvements to how various views sort data. For example, in the **Deployments** node of the **Monitoring** workspace, the following columns now sort as numbers instead of string values:  
+
+- Number Errors​
+- Number In Progress​
+- Number Other​
+- Number Success​
+- Number Unknown​  
+
+### Move the warning for a large number of results
+*(Introduced in version 1902)*
+
+When you select a node in the console that returns more than 1,000 results, Configuration Manager displays the following warning:
+
+> Configuration Manager returned a large number of results. You can narrow your results by using search. Or, click here to view a maximum of 100000 results.
+ 
+There's now additional blank space in between this warning and the search field. This move helps to prevent inadvertently selecting the warning to display more results. 
+
+
 
 ### Send feedback
 <!--1357542-->

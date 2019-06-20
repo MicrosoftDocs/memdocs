@@ -41,9 +41,9 @@ Use the following checklist to make sure you have the necessary information and 
 
     - A subscription admin needs to sign in.  
 
-- A globally unique name for the service. This name is from the [CMG server authentication certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-server-authentication-certificate).  
+- A globally unique name for the service. This name is from the [CMG server authentication certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_serverauth).  
 
-- If enabling CMG as a cloud distribution point, the same globally unique CMG service name chosen also needs to be available as a globally unique storage account name. This name is from the [CMG server authentication certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-server-authentication-certificate).
+- If enabling CMG as a cloud distribution point, the same globally unique CMG service name chosen also needs to be available as a globally unique storage account name. This name is from the [CMG server authentication certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_serverauth).
 
 - The Azure region for this CMG deployment.  
 
@@ -116,7 +116,7 @@ Do this procedure on the top-level site. That site is either a standalone primar
 
 ## Configure primary site for client certificate authentication
 
-If you're using [client authentication certificates](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#client-authentication-certificate) for clients to authenticate with the CMG, follow this procedure to configure each primary site.  
+If you're using [client authentication certificates](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_clientauth) for clients to authenticate with the CMG, follow this procedure to configure each primary site.  
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select **Sites**.  
 
@@ -132,7 +132,7 @@ If you're using [client authentication certificates](/sccm/core/clients/manage/c
 The CMG connection point is the site system role for communicating with the CMG. To add the CMG connection point, follow the general instructions to [install site system roles](/sccm/core/servers/deploy/configure/install-site-system-roles). On the System Role Selection page of the Add Site System Role Wizard, select **Cloud management gateway connection point**. Then select the **Cloud management gateway name** to which this server connects. The wizard shows the region for the selected CMG.
 
 > [!Important]
-> The CMG connection point must have a [client authentication certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#client-authentication-certificate) in some scenarios.
+> The CMG connection point must have a [client authentication certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_clientauth) in some scenarios.
 
 To troubleshoot CMG service health, use **CMGService.log** and **SMS_Cloud_ProxyConnector.log**. For more information, see [Log files](/sccm/core/plan-design/hierarchy/log-files#cloud-management-gateway).
 
@@ -147,7 +147,7 @@ Configure the management point and software update point site systems to accept 
 
 3. In the Management point properties sheet under Client Connections, check the box next to **Allow Configuration Manager cloud management gateway traffic**.
 
-    Depending upon your CMG design and Configuration Manager version, you may need to enable the **HTTPS** option. For more information, see [Enable management point for HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#enable-management-point-for-https).  
+    Depending upon your CMG design and Configuration Manager version, you may need to enable the **HTTPS** option. For more information, see [Enable management point for HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps).  
 
 4. Select **OK** to close the management point properties window.  
 
