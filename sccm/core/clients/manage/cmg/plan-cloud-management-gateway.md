@@ -2,7 +2,7 @@
 title: Plan for cloud management gateway
 titleSuffix: Configuration Manager
 description: Plan and design the cloud management gateway (CMG) to simplify management of internet-based clients.
-ms.date: 06/17/2019
+ms.date: 06/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -348,19 +348,9 @@ This table lists the required network ports and protocols. The *Client* is the d
 
 ### Internet access requirements
 
-The CMG connection point site system supports using a web proxy. For more information on configuring this role for a proxy, see [Proxy server support](/sccm/core/plan-design/network/proxy-server-support#to-set-up-the-proxy-server-for-a-site-system-server).
+If your organization restricts network communication with the internet using a firewall or proxy device, you need to allow CMG connection point and service connection point to access internet endpoints.
 
-The CMG connection point and service connection point require connectivity to the following endpoints:  
-
-- Specific Azure endpoints are different per environment depending upon the configuration. Configuration Manager stores these endpoints in the site database. Query the **AzureEnvironments** table in SQL Server for the list of Azure endpoints.  
-
-- ServiceManagementEndpoint: `https://management.core.windows.net/`  
-
-- StorageEndpoint: `*.core.windows.net`  
-
-- For Azure AD token retrieval by the Configuration Manager console and client: ActiveDirectoryEndpoint `https://login.microsoftonline.com/`  
-
-- For Azure AD user discovery: AAD Graph endpoint `https://graph.windows.net/`  
+For more information, see [Internet access requirements](/sccm/core/plan-design/network/internet-endpoints#bkmk_cloud).
 
 
 ## Next steps

@@ -165,6 +165,12 @@
     items:
     - name: Network infrastructure considerations
       href: plan-design/network/configure-firewalls-ports-domains.md
+    - name: Ports
+      href: plan-design/hierarchy/ports.md
+    - name: Proxy server support
+      href: plan-design/network/proxy-server-support.md
+    - name: Internet access requirements
+      href: plan-design/network/internet-endpoints.md
     - name: Active Directory schema
       items:
       - name: Prepare the Active Directory schema
@@ -413,10 +419,6 @@
       href: servers/deploy/install/language-packs.md
     - name: Log files
       href: plan-design/hierarchy/log-files.md
-    - name: Ports
-      href: plan-design/hierarchy/ports.md
-    - name: Proxy server support
-      href: plan-design/network/proxy-server-support.md
     - name: Release notes
       href: servers/deploy/install/release-notes.md
     - name: State Messages in Configuration Manager

@@ -322,7 +322,7 @@ Certificates for cloud distribution points support the following configurations:
 
 *This certificate is required for all cloud distribution point deployments.*
 
-For more information, see [CMG server authentication certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-server-authentication-certificate), and the following subsections, as necessary:  
+For more information, see [CMG server authentication certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_serverauth), and the following subsections, as necessary:  
 
 - CMG trusted root certificate to clients
 - Server authentication certificate issued by public provider
@@ -345,7 +345,7 @@ For more information on creating this certificate from a PKI, see [Deploy the se
 >
 > Starting in Configuration Manager version 1902, Azure Resource Manager is the only deployment mechanism for new instances of the cloud distribution point. This certificate isn't required in Configuration Manager version 1902 or later.<!-- 3605704 -->
 
-If using the Azure classic deployment method with Configuration Manager version 1810 or earlier, you need an **Azure management certificate**. For more information, see the [Azure management certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#azure-management-certificate) section of the cloud management gateway certificates article. The Configuration Manager site server uses this certificate to authenticate with Azure to create and manage the classic deployment.  
+If using the Azure classic deployment method with Configuration Manager version 1810 or earlier, you need an **Azure management certificate**. For more information, see the [Azure management certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_azuremgmt) section of the cloud management gateway certificates article. The Configuration Manager site server uses this certificate to authenticate with Azure to create and manage the classic deployment.  
 
 To reduce complexity, use the same Azure management certificate for all classic deployments of cloud distribution points and cloud management gateways, across all Azure subscriptions and all Configuration Manager sites.
 
