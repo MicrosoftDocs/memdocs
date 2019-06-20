@@ -84,7 +84,7 @@ Starting in version 1806, fewer command-line properties are now required.
 - If using your own PKI SSL certificate and your CRL isn't published to the internet, the following parameter is required:  
     - /noCRLCheck  
     
-     For more information, see [Planning for CRLs](/sccm/core/plan-design/security/plan-for-security#-plan-for-the-site-server-signing-certificate-self-signed)  
+     For more information, see [Planning for CRLs](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForCRLs)  
 
 Starting in version 1810, the site publishes additional Azure AD information to the cloud management gateway (CMG). An Azure AD-joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies enrolling devices to co-management in an environment with more than one Azure AD tenant. Now the only two required ccmsetup properties are **CCMHOSTNAME** and **SMSSiteCode**.<!--3607731-->
 
