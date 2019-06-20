@@ -217,6 +217,12 @@ The Configuration Manager console has the following command-line options:
 
 ## Tips
 
+### Search device views using MAC address
+<!--3600878-->
+*(Introduced in version 1902)*
+
+You can search for a MAC address in a device view of the Configuration Manager console. This property is useful for OS deployment administrators while troubleshooting PXE-based deployments. When you view a list of devices, add the **MAC Address** column to the view. Use the search field to add the **MAC Address** search criteria.
+
 ### Maximize the browse registry window
 <!--3594151 includes all MMS 1902 console changes-->
 *(Introduced in version 1902)*
