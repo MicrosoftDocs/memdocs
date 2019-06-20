@@ -217,6 +217,58 @@ The Configuration Manager console has the following command-line options:
 
 ## Tips
 
+### Maximize the browse registry window
+<!--3594151 includes all MMS 1902 console changes-->
+*(Introduced in version 1902)*
+1. In the **Software Library** workspace, expand **Application Management**, and select the **Applications** node. 
+1. Select an application that has a deployment type with a detection method. For example, a Windows Installer detection method. 
+1. In the details pane, switch to the **Deployment Types** tab. 
+1. Open the properties of a deployment type, and switch to the **Detection Method** tab. Select **Add Clause**. 
+1. Change the **Setting Type** to **Registry** and select **Browse** to open the **Browse Registry** window. You can now maximize this window.  
+
+### Go to the collection from an application deployment
+
+*(Introduced in version 1902)*
+1. In the **Software Library** workspace, expand **Application Management**, and select the **Applications** node. 
+1. Select an application. In the details pane, switch to the **Deployments** tab.
+1. Select a deployment, and then choose the new **Collection** option in the ribbon on the Deployment tab. This action switches the view to the collection that's the target of the deployment.
+   - This action is also available from the right-click context menu on the deployment in this view.
+
+### Edit a task sequence by default
+
+*(Introduced in version 1902)*
+
+In the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node. **Edit** is now the default action when opening a task sequence. Previously the default action was **Properties**.  
+
+### Remove content from monitoring status
+*(Introduced in version 1902)*
+
+1. In the **Monitoring** workspace, expand **Distribution Status**, and select **Content Status**.
+1. Select an item in the list, and choose the **View Status** option in the ribbon. 
+1. In the Asset Details pane, right-click a distribution point, and select the new option **Remove**. This action removes this content from the selected distribution point.
+
+### Views sort by integer values
+*(Introduced in version 1902)*
+
+We've made improvements to how various views sort data. For example, in the **Deployments** node of the **Monitoring** workspace, the following columns now sort as numbers instead of string values:  
+
+- Number Errors​
+- Number In Progress​
+- Number Other​
+- Number Success​
+- Number Unknown​  
+
+### Move the warning for a large number of results
+*(Introduced in version 1902)*
+
+When you select a node in the console that returns more than 1,000 results, Configuration Manager displays the following warning:
+
+> Configuration Manager returned a large number of results. You can narrow your results by using search. Or, click here to view a maximum of 100000 results.
+ 
+There's now additional blank space in between this warning and the search field. This move helps to prevent inadvertently selecting the warning to display more results. 
+
+
+
 ### Send feedback
 <!--1357542-->
 
