@@ -54,7 +54,8 @@ Specify the maximum transfer rate that clients can use outside the BITS throttli
 
 ### Configure BranchCache
 
-Set up the client computer for [Windows BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#branchcache). To allow BranchCache caching on the client, set **Enable BranchCache** to **Yes**.
+Set up the client computer for [Windows BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#bkmk_branchcache
+). To allow BranchCache caching on the client, set **Enable BranchCache** to **Yes**.
 
 - **Enable BranchCache**: Enables BranchCache on client computers.
 
@@ -73,11 +74,11 @@ If you choose **Yes**, then specify:
 
 Enables [peer cache](/sccm/core/plan-design/hierarchy/client-peer-cache) for Configuration Manager clients. Choose **Yes**, and then specify the port through which the client communicates with the peer computer.
 
-- **Port for initial network broadcast** (default 8004): Configuration Manager uses this port in Windows PE or the full Windows OS. The task sequence engine in Windows PE sends the broadcast to get content locations before it starts the task sequence.<!--SCCMDocs issue 910-->
+- **Port for initial network broadcast** (default UDP 8004): Configuration Manager uses this port in Windows PE or the full Windows OS. The task sequence engine in Windows PE sends the broadcast to get content locations before it starts the task sequence.<!--SCCMDocs issue 910-->
 
-- **Port for content download from peer** (default 8003): Configuration Manager automatically configures Windows Firewall rules to allow this traffic. If you use a different firewall, you must manually configure rules to allow this traffic.
+- **Port for content download from peer** (default TCP 8003): Configuration Manager automatically configures Windows Firewall rules to allow this traffic. If you use a different firewall, you must manually configure rules to allow this traffic.  
 
-
+    For more information, see [Ports used for connections](/sccm/core/plan-design/hierarchy/ports#BKMK_PortsClient-ClientWakeUp).  
 
 ## Client policy  
 
@@ -157,7 +158,7 @@ Choose **Yes** if you want to deploy [user data and profiles](/sccm/compliance/d
 
 ### User notifications for required deployments
 
-For more information about the following three settings, see [User notifications for required deployments](/sccm/apps/deploy-use/deploy-applications#user-notifications-for-required-deployments):
+For more information about the following three settings, see [User notifications for required deployments](/sccm/apps/deploy-use/deploy-applications#bkmk_notify):
 
 - **Deployment deadline greater than 24 hours, remind user every (hours)**
 - **Deployment deadline less than 24 hours, remind user every (hours)**
@@ -200,7 +201,7 @@ For more information about this setting, see [Certificates for Microsoft Silverl
 
 ### Organization name displayed in Software Center
 
-Type the name that users see in Software Center. This branding information helps users to identify this application as a trusted source. For more information about the priority of this setting, see [Branding Software Center](/sccm/apps/plan-design/plan-for-and-configure-application-management#branding-software-center).  
+Type the name that users see in Software Center. This branding information helps users to identify this application as a trusted source. For more information about the priority of this setting, see [Branding Software Center](/sccm/apps/plan-design/plan-for-software-center#branding-software-center).  
 
 ### Use new Software Center
 
@@ -379,7 +380,7 @@ Enter the number of minutes that modern devices poll for policy. This setting is
 
 To enable user-based enrollment of legacy devices, set this option to **Yes**, and then configure the following setting:
 
-- **Enrollment profile**: Select **Set Profile** to create or select an enrollment profile. For more information, see [Configure client settings for enrollment](/sccm/core/clients/deploy/deploy-clients-to-macs#configure-client-settings-for-enrollment).
+- **Enrollment profile**: Select **Set Profile** to create or select an enrollment profile. For more information, see [Configure client settings for enrollment](/sccm/core/clients/deploy/deploy-clients-to-macs#configure-client-settings).
 
 ### Allow users to enroll modern devices
 

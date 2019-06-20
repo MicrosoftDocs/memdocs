@@ -47,7 +47,7 @@ Configure this setting to **Yes** to configure Windows diagnostic data settings 
 The commercial ID key maps information from devices you manage to the Log Analytics workspace that hosts your organization's Windows Analytics data. If you've already configured a commercial ID key for use with Upgrade Readiness, use that ID. If you don't yet have a commercial ID key, see [Copy your commercial ID key](https://docs.microsoft.com/windows/deployment/update/windows-analytics-get-started#copy-your-commercial-id-key).
 
 #### Windows 10 telemetry
-For more information, see [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization##diagnostic-data-level).
+For more information, see [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels).
 
 > [!Note]  
 > You can also set the Windows 10 data collection level to **Enhanced (Limited)**. This setting enables you to gain actionable insight about devices in your environment without devices reporting all of the data in the **Enhanced** level with Windows 10 version 1709 or later. The Enhanced (Limited) level includes metrics from the Basic level, as well as a subset of data collected from the Enhanced level relevant to Windows Analytics.

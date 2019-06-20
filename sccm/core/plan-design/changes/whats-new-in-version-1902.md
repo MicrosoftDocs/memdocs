@@ -2,7 +2,7 @@
 title: What's new in version 1902
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1902 of Configuration Manager current branch.
-ms.date: 06/18/2019
+ms.date: 06/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -127,9 +127,9 @@ For more information, see [CMPivot for real-time data](/sccm/core/servers/manage
 
 ### Edit or copy PowerShell scripts
 <!--3705507-->
-You can now **Edit** or **Copy** an existing PowerShell script used with the Run Scripts feature. Instead of recreating a script that you need to change, now directly edit it. Both actions use the same wizard experience as when you create a new script. When you edit or copy a script, Configuration Manager doesn't persist the approval state. 
+***[Updated 6/20]*** You can now **Edit** or **Copy** an existing PowerShell script used with the Run Scripts feature. Instead of recreating a script that you need to change, now directly edit it. Both actions use the same wizard experience as when you create a new script. When you edit or copy a script, Configuration Manager doesn't persist the approval state. 
 
-<!-- For more information, see [Run Scripts](/sccm/apps/deploy-use/create-deploy-scripts). -->
+For more information, see [Run Scripts](/sccm/apps/deploy-use/create-deploy-scripts#bkmk_psedit).
 
 
 
@@ -432,14 +432,14 @@ For more information, see [Create phased deployments](/sccm/osd/deploy-use/creat
 
 ### <a name="bkmk_console"></a> Improvements to Configuration Manager console
 <!--3594151-->
-Based on customer feedback at the Midwest Management Summit (MMS) Desert Edition 2018, this version includes the following improvements to the Configuration Manager console:
+***[Updated 6/20]*** Based on customer feedback at the Midwest Management Summit (MMS) Desert Edition 2018, this version includes the following improvements to the Configuration Manager console:
 - Maximize the browse registry window for application detection methods
 - Go to the collection from an application deployment
 - Remove content from monitoring status
 - Views sort by integer values in the **Deployments** node of the **Monitoring** workspace
 - Move the warning for a large number of results
 
-<!-- For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console). -->
+For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#tips).
 
 
 ### Configuration Manager console notifications
@@ -469,14 +469,16 @@ For more information, see [Using the Configuration Manager console](/sccm/core/s
 
 ### In-console documentation dashboard
 <!--3556019, fka 1357546-->
-There's a new **Documentation** node in the new **Community** workspace. This node includes up-to-date information about Configuration Manager documentation and support articles.
+***[Updated 06/20]*** There's a new **Documentation** node in the new **Community** workspace. This node includes up-to-date information about Configuration Manager documentation and support articles.
 
-<!-- For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console). -->
+For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#bkmk_doc-dashboard).
 
 
 ### Search device views using MAC address
 <!--3600878-->
-You can now search for a MAC address in a device view of the Configuration Manager console. This property is useful for OS deployment administrators while troubleshooting PXE-based deployments. When you view a list of devices, add the **MAC Address** column to the view. Use the search field to add the **MAC Address** search criteria. 
+***[Updated 06/20]*** You can now search for a MAC address in a device view of the Configuration Manager console. This property is useful for OS deployment administrators while troubleshooting PXE-based deployments. When you view a list of devices, add the **MAC Address** column to the view. Use the search field to add the **MAC Address** search criteria. 
+
+For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#tips).
 
 
 ### Use .NET 4.7 for improved console accessibility

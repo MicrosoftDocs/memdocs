@@ -5,7 +5,7 @@ description: A plan for the software update point infrastructure is essential be
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/21/2019
+ms.date: 06/19/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -312,44 +312,10 @@ The connection to Microsoft Update is always configured to use port 80 for HTTP 
 
 
 #### Restrict access to specific domains  
-If your organization doesn't allow the ports and protocols to be open to all addresses on the firewall between the active software update point and the internet, restrict access to the following domains so that WSUS and Automatic Updates can communicate with Microsoft Update:  
 
--   `http://windowsupdate.microsoft.com`  
+If your organization restricts network communication with the internet using a firewall or proxy device, you need to allow the active software update point to access internet endpoints. Then WSUS and Automatic Updates can communicate with the Microsoft Update cloud service.
 
--   `http://*.windowsupdate.microsoft.com`  
-
--   `https://*.windowsupdate.microsoft.com`  
-
--   `http://*.update.microsoft.com`  
-
--   `https://*.update.microsoft.com`  
-
--   `http://*.windowsupdate.com`  
-
--   `http://download.windowsupdate.com`  
-
--   `http://download.microsoft.com`  
-
--   `http://*.download.windowsupdate.com`  
-
--   `http://test.stats.update.microsoft.com`  
-
--   `http://ntservicepack.microsoft.com`  
-
-You might need to add the addresses below to the firewall that's located between the two site systems in the following cases: 
-- If child sites have a software update point 
-- If there is a remote active internet-based software update point at a site
-
-  **Software update point on the child site**  
-
-- `http://<FQDN for software update point on child site>`  
-
-- `https://<FQDN for software update point on child site>`  
-
-- `http://<FQDN for software update point on parent site>`  
-
-- `https://<FQDN for software update point on parent site>`  
-
+For more information, see [Internet access requirements](/sccm/core/plan-design/network/internet-endpoints#bkmk_sum).
 
 
 ##  <a name="BKMK_SyncSettings"></a> Plan for synchronization settings  

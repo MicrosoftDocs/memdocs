@@ -77,7 +77,7 @@ If you need to provision these apps after completing setup, go to the **Connecte
 
 ### Create and import app for Configuration Manager
 
-If you can't create this Azure AD app from the Configure Azure Services wizard in Configuration Manager, use the following steps to manually create and import the app for Configuration Manager.
+After completing the [Initial onboarding](/sccm/desktop-analytics/set-up#initial-onboarding) on the Desktop Analytics portal, use the following steps to manually create and import the app for Configuration Manager if you can't create this Azure AD app from the Configure Azure Services wizard.
 
 #### Create app in Azure AD
 
