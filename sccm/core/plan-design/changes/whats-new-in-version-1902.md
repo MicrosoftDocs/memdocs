@@ -432,14 +432,14 @@ For more information, see [Create phased deployments](/sccm/osd/deploy-use/creat
 
 ### <a name="bkmk_console"></a> Improvements to Configuration Manager console
 <!--3594151-->
-Based on customer feedback at the Midwest Management Summit (MMS) Desert Edition 2018, this version includes the following improvements to the Configuration Manager console:
+***[Updated 6/20]*** Based on customer feedback at the Midwest Management Summit (MMS) Desert Edition 2018, this version includes the following improvements to the Configuration Manager console:
 - Maximize the browse registry window for application detection methods
 - Go to the collection from an application deployment
 - Remove content from monitoring status
 - Views sort by integer values in the **Deployments** node of the **Monitoring** workspace
 - Move the warning for a large number of results
 
-<!-- For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console). -->
+For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#tips).
 
 
 ### Configuration Manager console notifications
