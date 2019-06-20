@@ -2,7 +2,7 @@
 title: Service connection point
 titleSuffix: Configuration Manager
 description: Learn about this Configuration Manager site system role, and understand and plan for its range of uses.
-ms.date: 08/01/2018
+ms.date: 06/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -74,51 +74,13 @@ To use the Configuration Manager Service Manager, in the console go to **Monitor
 
 - The distribution manager on the site server uses the site system installation account to transfer updates from the service connection point.
 
-##  <a name="bkmk_urls"></a> Internet access requirements  
-To enable operation, the computer that hosts the service connection point and any firewalls between that computer and the internet must pass communications through outgoing port **TCP 443** for HTTPS and outgoing port **TCP 80** for HTTP to the below internet locations. The service connection point also supports using a web proxy (with or without authentication) to use these locations. If you need to configure a web proxy account, see [Proxy server support](/sccm/core/plan-design/network/proxy-server-support).
 
-> [!TIP]  
-> The service connection point uses the Microsoft Intune service when it connects to go.microsoft.com or manage.Microsoft.com. There's a known issue in which the Intune connector experiences connectivity issues if the Baltimore CyberTrust Root Certificate isn't installed, is expired, or is corrupted on the service connection point. For more information, see [Service connection point doesn't download updates](https://support.microsoft.com/help/3187516).  
+## <a name="bkmk_urls"></a> Internet access requirements  
 
-#### Updates and servicing
+If your organization restricts network communication with the internet using a firewall or proxy device, you need to allow the service connection point to access internet endpoints.
 
-- `*.akamaiedge.net`  
+For more information, see [Internet access requirements](/sccm/core/plan-design/network/internet-endpoints#bkmk_scp).
 
-- `*.akamaitechnologies.com`  
-
-- `*.manage.microsoft.com`  
-
-- `go.microsoft.com`  
-
-- `blob.core.windows.net`  
-
-- `download.microsoft.com`  
-
-- `download.windowsupdate.com`  
-
-- `sccmconnected-a01.cloudapp.net`  
-
-- `configmgrbits.azureedge.net`  
-
-#### Microsoft Intune
-
-- `*manage.microsoft.com`  
-
-- `https://bspmts.mp.microsoft.com/V`  
-
-- `https://login.microsoftonline.com/{TenantID}`  
-
-#### Windows 10 servicing
-
-- `download.microsoft.com`  
-
-- `https://go.microsoft.com/fwlink/?LinkID=619849`  
-
-- `dl.delivery.mp.microsoft.com`  
-
-#### Azure services
-
-- `management.azure.com`  
 
 ## Install the service connection point
 When you run **Setup** to install the top-tier site of a hierarchy, you have the option to install the service connection point.

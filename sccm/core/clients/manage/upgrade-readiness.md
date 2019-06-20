@@ -31,7 +31,7 @@ Upgrade Readiness relies on Windows Analytics data. In order for Upgrade Readine
 
 - For clients running Windows 7 or 8.1:  
 
-    - Install the updates as described in [Get started with Upgrade Readiness](https://docs.microsoft.com/windows/deployment/upgrade/upgrade-readiness-get-started#deploy-the-compatibility-update-and-related-kbs)  
+    - Install the updates as described in [Get started with Upgrade Readiness](https://docs.microsoft.com/windows/deployment/upgrade/upgrade-readiness-get-started)  
 
     - Enable Windows Analytics client settings  
 
