@@ -270,7 +270,7 @@ Before installing or enrolling the client on Mac computer, Configuration Manager
 
 To ensure business continuity, monitor and track the validity period of the certificates that you use for Mac computers. Configuration Manager doesn't support automatic renewal of this certificate, or warn you that the certificate is about to expire. A typical validity period is one year.  
 
-For more information about how to renew the certificate, see [Renewing the Mac client certificate manually](/sccm/core/clients/deploy/deploy-clients-to-macs#renewing-the-mac-client-certificate).  
+For more information about how to renew the certificate, see [Renewing the Mac client certificate manually](/sccm/core/clients/deploy/deploy-clients-to-macs#renew-the-mac-client-certificate).  
 
 
 #### Configure the trusted root certificate for SSL only  
