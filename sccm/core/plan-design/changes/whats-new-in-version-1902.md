@@ -338,7 +338,7 @@ For more information, see [Link users and devices with user device affinity](/sc
 
 ### Configure default views in Software Center
 <!--3612112-->
-This version of Configuration Manager further iterates on how you can customize Software Center:
+***[Updated 6/20]*** This version of Configuration Manager further iterates on how you can customize Software Center:
  
 - Set the default layout of applications, either as tiles or a list  
 
@@ -350,7 +350,7 @@ This version of Configuration Manager further iterates on how you can customize 
 
 Specify these settings in the **Software Center** group of client settings.
 
-<!-- For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-center). -->
+For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#bkmk_swctr_defaults).
 
 
 
