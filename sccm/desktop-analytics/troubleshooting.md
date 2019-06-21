@@ -51,7 +51,7 @@ For more information, see [Log files for Desktop Analytics](/sccm/core/plan-desi
 ### Enable verbose logging
 
 1. On the service connection point, go to the following registry key: `HKLM\Software\Microsoft\SMS\Tracing\SMS_SERVICE_CONNECTOR`  
-2. Set the **LogLevel** value to `0`  
+2. Set the **LoggingLevel** value to `0`  
 3. (Optional) Run the following SQL command on the site database:  
 
     ```SQL
