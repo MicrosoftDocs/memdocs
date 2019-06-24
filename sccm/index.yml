@@ -1,6 +1,8 @@
 ### YamlMime:Hub 
 title: System Center Configuration Manager
 summary: Official product documentation for Configuration Manager
+metadata:
+   ms.topic: hub-page
 
 highlightedContent: 
   items: 
