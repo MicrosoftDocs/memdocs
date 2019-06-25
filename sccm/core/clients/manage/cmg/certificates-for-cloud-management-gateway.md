@@ -83,10 +83,8 @@ Clients must trust the CMG server authentication certificate. There are two meth
 
 - Use a certificate issued by an enterprise CA from your public key infrastructure (PKI). Most enterprise PKI implementations add the trusted root CAs to Windows clients. For example, using Active Directory Certificate Services with group policy. If you issue the CMG server authentication certificate from a CA that your clients don't automatically trust, add the CA trusted root certificate to internet-based clients.  
 
-    - You can also use Configuration Manager certificate profiles to provision certificates on clients. For more information, see [Introduction to certificate profiles](/sccm/protect/deploy-use/introduction-to-certificate-profiles).  
-
-> [!Note]  
-> Starting in version 1806, when you create a CMG, you're no longer required to provide a trusted root certificate on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard. If you're using PKI client authentication certificates, then you still must add a trusted root certificate to the CMG.<!--SCCMDocs-pr issue #2872-->  
+    - You can also use Configuration Manager certificate profiles to provision certificates on clients. For more information, see [Introduction to certificate profiles](/sccm/protect/deploy-use/introduction-to-certificate-profiles).
+    - If you plan to [install the Configuration Manager client from Intune](/sccm/comanage/how-to-prepare-win10#install-the-configuration-manager-client), you can also use Intune certificate profiles to provision certificates on clients. For more see [Configure a certificate profile](https://docs.microsoft.com/intune/certificates-configure).
 
 ### <a name="bkmk_serverauthpublic"></a> Server authentication certificate issued by public provider
 
@@ -141,6 +139,9 @@ The CMG connection point requires this certificate to securely forward client re
 You supply this certificate when creating the CMG in the Configuration Manager console.
 
 The CMG must trust the client authentication certificates. To accomplish this trust, provide the trusted root certificate chain. You can specify two trusted root CAs, and four intermediate (subordinate) CAs. Make sure to add all certificates in the trust chain. For example, if the client authentication certificate is issued by an intermediate CA, add both the intermediate and root CA certificates.
+
+> [!Note]  
+> Starting in version 1806, when you create a CMG, you're no longer required to provide a trusted root certificate on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard. If you're using PKI client authentication certificates, then you still must add a trusted root certificate to the CMG.<!--SCCMDocs-pr issue #2872 SCCMDocs issue #1319-->
 
 #### Export the client certificate's trusted root
 
