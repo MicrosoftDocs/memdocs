@@ -17,7 +17,7 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-This article provides details on how to deploy the Configuration Manager client to Windows computers. For more information on planning and preparing for client deployment, see the following articles:
+This article provides details on how to deploy the Configuration Manager client to Windows computers. For more information on planning and preparing for client deployment, see these articles:
 - [Client installation methods](/sccm/core/clients/deploy/plan/client-installation-methods)  
 - [Prerequisites for deploying clients to Windows computers](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers)   
 - [Security and privacy for Configuration Manager clients](/sccm/core/clients/deploy/plan/security-and-privacy-for-clients)  
@@ -25,7 +25,7 @@ This article provides details on how to deploy the Configuration Manager client 
 
 
 
-##  <a name="BKMK_ClientPush"></a> Client push installation 
+##  <a name="BKMK_ClientPush"></a> Client push installation
 
 There are three main ways to use client push:  
 
