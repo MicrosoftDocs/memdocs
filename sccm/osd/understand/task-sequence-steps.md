@@ -1769,7 +1769,7 @@ The task sequence sets the variable to this value. Set this task sequence variab
 
 Use this step to perform the transition from Windows PE to the new OS. This task sequence step is a required part of any OS deployment. It installs the Configuration Manager client into the new OS, and prepares for the task sequence to continue execution in the new OS.  
 
-This step is responsible for transitioning the task sequence from Windows PE to the full OS. For this reason it runs both in Windows PE and the full OS. However since the transition starts in Windows PE, it can only be added during the Windows PE portion of the task sequence.  
+This step is responsible for transitioning the task sequence from Windows PE to the full OS. The step runs both in Windows PE and the full OS because of this transition. However, since the transition starts in Windows PE, it can only be added during the Windows PE portion of the task sequence.  
 
 Use the following task sequence variables with this step:  
 
