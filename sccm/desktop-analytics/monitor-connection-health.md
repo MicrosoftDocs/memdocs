@@ -221,10 +221,12 @@ For more information, review M365AHandler.log on the client.
 
 Check for the following file: `%windir%\System32\CompatTelRunner.exe`. If it doesn't exist, reinstall the required [compatibility updates](/sccm/desktop-analytics/enroll-devices#bkmk_appraiser). Make sure no other system component is removing this file, such as group policy or an antimalware service.
 
-If the M365Handler.log file on the client includes one of the following errors:
-`RunAppraiser failed. CompatTelRunner.exe exited with last error code: 0x800703F1`
-`RunAppraiser failed. CompatTelRunner.exe exited with last error code: 0x80070005`
-`RunAppraiser failed. CompatTelRunner.exe exited with last error code: 0x80080005`  
+If the M365AHandler.log file on the client includes one of the following errors:
+```
+RunAppraiser failed. CompatTelRunner.exe exited with last error code: 0x800703F1
+RunAppraiser failed. CompatTelRunner.exe exited with last error code: 0x80070005
+RunAppraiser failed. CompatTelRunner.exe exited with last error code: 0x80080005
+```
 
 To help remediate these errors, run the following commands from an elevated Windows PowerShell console on the affected client:
 
