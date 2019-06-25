@@ -56,6 +56,9 @@ For more information, see [Windows Autopilot for existing devices task sequence]
 
 For internet-based devices in the second path, you need to create an app in Intune. Deploy this app to Windows 10 devices that aren't already Configuration Manager clients. 
 
+> [!Note]  
+> Before deploying this app to devices, you must ensure that the devices trust the CMG server authentication certificate. For more information, see [CMG trusted root certificate to clients](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_cmgroot). If the device does not trust the CMG server authentication certificate, you would see WINHTTP_CALLBACK_STATUS_FLAG_INVALID_CA error in the ccmsetup.log on the client.
+
 ### Get the command line from Configuration Manager
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Co-management** node.  
