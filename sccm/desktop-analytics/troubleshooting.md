@@ -52,15 +52,6 @@ For more information, see [Log files for Desktop Analytics](/sccm/core/plan-desi
 
 1. On the service connection point, go to the following registry key: `HKLM\Software\Microsoft\SMS\Tracing\SMS_SERVICE_CONNECTOR`  
 2. Set the **LogLevel** value to `0`  
-3. (Optional) Run the following SQL command on the site database:  
-
-    ```SQL
-    DELETE FROM M365AProperties WHERE Name = 'M365ATenantUpdateInfo_LastUpdateTime'
-    ```
-
-4. Restart the **SMS_EXECUTIVE** service on the site server
-
-
 
 ## <a name="bkmk_AzureADApps"></a> Azure AD applications
 
