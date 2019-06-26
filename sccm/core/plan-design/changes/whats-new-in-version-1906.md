@@ -238,6 +238,7 @@ OneTrace works with many types of log files, such as:
 
 <!-- For more information, see [Configuration Manager tools](/sccm/core/support/tools). -->
 
+<!-- Commenting out item for now since it isn't in the TAP feature list 
 
 ### 1906 client won't install on legacy OS (SHA-1)
 <!--4222696-->
@@ -245,6 +246,16 @@ OneTrace works with many types of log files, such as:
 ### Configure client cache minimum retention period
 <!--4485509-->
 
+You can now specify the minimum time for the Configuration Manager client to keep cached content. This client setting controls how long the client stores content in the cache before deleting it.
+
+In the **Client Cache settings** group of client settings, configure the following setting: **Minimum duration before cached content can be removed (minutes)**. By default this value is 1,440 minutes (24 hours).
+
+This setting gives you greater control over the client cache on different types of devices. You might reduce the value on clients that have small hard drives and don't need to keep existing content before another deployment runs.
+
+> [!Note]  
+> In the same client setting group, the existing setting to **Enable Configuration Manager client in full OS to share content** is now renamed to **Enable as peer cache source**. The behavior of the setting doesn't change.  
+
+<!-- For more information, see [Client cache settings](/sccm/core/clients/deploy/about-client-settings#client-cache-settings). -->
 
 
 ## <a name="bkmk_comgmt"></a> Co-management
@@ -254,6 +265,24 @@ OneTrace works with many types of log files, such as:
 
 ### Multiple pilot groups for co-management workloads
 <!--3555750-->
+You can now configure different pilot collections for each of the co-management workloads. Being able to use different pilot collections allows you to take a more  granular approach when shifting workloads. 
+
+- In the **Enablement** tab, you can now specify an **Intune Auto Enrollment** collection. 
+    - The **Intune Auto Enrollment** collection should contain all of the clients you want to onboard into co-management. It's essentially a superset of all the other staging collections.
+
+  ![Co-management Enablement tab with Intune Auto Enrollment collection](./media/3555750-co-management-enablement-tab.png)
+
+- The **Workloads** tab hasn't changed and you can still choose which workloads to transition.
+
+  ![Co-management Workloads tab hasn't changed](./media/3555750-co-management-workloads-tab.png)
+
+- In the **Staging** tab, instead of using one pilot collection for all workloads, you can now choose an individual collection for each workload.
+
+    ![Co-management Staging tab allows you to choose a collection for each workload](./media/3555750-co-management-staging-tab.png)
+  
+These options are also available when you first [enable co-management](/sccm/comanage/how-to-enable.md).
+
+<!-- For more information, see [Client cache settings](/sccm/core/clients/deploy/about-client-settings#client-cache-settings). -->
 
 ### Co-management support for government cloud
 <!--4075452-->
