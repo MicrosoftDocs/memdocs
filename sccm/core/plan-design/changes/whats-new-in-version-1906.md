@@ -484,18 +484,70 @@ You can also use this syntax to open default tabs in Software Center:
 
 ### Additional options for WSUS maintenance
 <!--4110109-->
+You now have more granular control over the WSUS maintenance tasks that Configuration Manager runs to maintain healthy software update points. The WSUS maintenance occurs after every synchronization. In addition to declining expired updates in WSUS, Configuration Manager can now:
+
+- Remove obsolete updates from the WSUS database.
+- Add non-clustered indexes to the WSUS database to improve WSUS cleanup performance.
+
+<!--For more information, see [Software updates maintenance](/sccm/sum/deploy-use/software-updates-maintenance).--> 
 
 ### Configure the default maximum run time for software updates
 <!--3734426-->
 
+You can now specify the maximum amount of time a software update installation has to complete. You can specify the following items in the **Maximum Run Time** tab on the Software Update Point:
+
+- **Maximum run time for feature updates (minutes)**
+   - **Feature updates** - An update that is in one of these three classifications:
+      - Upgrades
+      - Update rollups
+      - Service packs
+
+- **Maximum run time for non-feature updates (minutes)**
+   - **Non-feature updates** - An update that isn't a feature upgrade and whose product is listed as one of the following:
+      - Windows 10 (all versions)
+      - Windows Server 2012
+      - Windows Server 2012 R2
+      - Windows Server 2016
+      - Windows Server 2019
+      - Office 365
+- These settings only change the maximum runtime for new updates that are synchronized from Microsoft Update. It doesn't change the run time on existing feature or non-feature updates.
+- All other products and classifications are not configurable with this setting. If you need to change the maximum run time of one of these updates, [configure the software update settings](/sccm/sum/get-started/manage-settings-for-software-updates#BKMK_SoftwareUpdatesSettings)
+
+<!--For more information, see [Plan for software updates](/sccm/sum/plan-design/plan-for-software-updates#BKMK_UpdateLanguages) and [Install and configure a software update point](/sccm/sum/get-started/install-a-software-update-point).--> 
+
 ### Configure dynamic update during feature updates
 <!--4062619-->
+
+Use a new client setting to configure [dynamic updates for Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847) feature updates. Dynamic update can install language packs, features on demand, drivers, and cumulative updates during Windows setup. This setting changes the [setupconfig](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-automation-overview) file used during feature update installation. 
+
+<!--For more information, see [Software update client settings](/sccm/core/clients/deploy/about-client-settings#software-updates) and [Manage Windows as a service](/sccm/osd/deploy-use/manage-windows-as-a-service).--> 
+
 
 ### New Windows 10, version 1903 and later product category
 <!--4682946-->
 
+**Windows 10, version 1903 and later** was added to Microsoft Update as its own product rather than being part of the **Windows 10**  product like earlier versions. This change caused you to do a number of manual steps to ensure that your clients see these updates. We've helped reduce the number of manual steps you have to take for the new product.
+
+When you update to 1906 and have the **Windows 10** product selected for synchronization, the following actions occur automatically:
+
+- The **Windows 10, version 1903 and later** product is added for synchronization.
+- Automatic Deployment Rules containing the **Windows 10** product will be updated to include **Windows 10, version 1903 and later**.
+- [Servicing plans](/sccm/osd/deploy-use/manage-windows-as-a-service) are updated to include the **Windows 10, version 1903 and later** product.
+
+<!--For more information, see [Configure classifications and products to synchronize](/sccm/sum/get-started/configure-classifications-and-products) and [Manage Windows as a service](/sccm/osd/deploy-use/manage-windows-as-a-service).--> 
+
 ### Drill through required updates
 <!--4224414-->
+You can now drill through compliance statistics to see which devices require a specific software update. To view the device list, you need permission to view updates and the collections the devices belong to. To drill down into the device list, select the **View Required** hyperlink next to the pie chart in the **Summary** tab for an update. Clicking the hyperlink takes you to a temporary node under **Devices** where you can see the devices requiring the update.
+
+The **View Required** hyperlink is available in the following locations:
+
+   - **Software Library** > **Software Updates** > **All Software Updates**
+   - **Software Library** > **Windows 10 Servicing** > **All Windows 10 Updates**
+   - **Software Library** > **Office 365 Client Management** > **Office 365 Updates**
+
+<!--For more information, see [Monitor software updates](/sccm/sum/deploy-use/monitor-software-updates),  [Manage Windows as a service](/sccm/osd/deploy-use/manage-windows-as-a-service) and [Using the Configuration Manger console](/sccm/core/servers/manage/admin-console#tips) .--> 
+
 
 
 
