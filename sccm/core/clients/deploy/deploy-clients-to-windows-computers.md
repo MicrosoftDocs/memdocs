@@ -533,7 +533,7 @@ To assign the internet-based management point after you install the client, use 
     ```  
 
     > [!NOTE]  
-    >  To delete a specified internet-based management point, remove the server FQDN value inside the quotation marks. The line becomes: `newInternetBasedManagementPointFQDN = ""`  
+    >  To delete a specified internet-based management point, remove the server FQDN value inside the quotation marks. The line becomes `newInternetBasedManagementPointFQDN = ""`.
 
 4.  Save the file with a .vbs extension.  
 
@@ -562,35 +562,35 @@ You might have to restart the client for the changes to take effect.
     ```
 
     > [!NOTE]  
-    >  The last line is only there to verify the new Internet MP value.
+    >  The last line is there only to verify the new internet management point value.
     >
-    >  To delete a specified internet-based management point, remove the server FQDN value inside the quotation marks. This line becomes: `$newInternetBasedManagementPointFQDN = ''`
+    >  To delete a specified internet-based management point, remove the server FQDN value inside the quotation marks. The line becomes `$newInternetBasedManagementPointFQDN = ''`.
 
 3. Run this script with elevated rights.
 
 
-##  <a name="BKMK_Provision"></a> Provision client installation properties for group policy and software update-based client installations
+##  <a name="BKMK_Provision"></a> Provision client installation properties for Group Policy and software update-based client installations
 
-Use Windows group policy to provision computers with Configuration Manager client installation properties. These properties are stored in the registry of the computer. The client reads them when it installs. This procedure isn't normally required, but might be needed for some client installation scenarios, such as:  
+Use Windows Group Policy to provision computers with Configuration Manager client installation properties. These properties are stored in the registry of the computer. The client reads them when it installs. This procedure isn't normally required, but it might be needed for some client installation scenarios, such as:  
 
--   You're using the group policy settings or software update-based client installation methods. You haven't extended the Active Directory schema for Configuration Manager.  
+-   You're using the Group Policy settings or software update-based client installation methods. You haven't extended the Active Directory schema for Configuration Manager.  
 
 -   You want to override client installation properties on specific computers.  
 
 > [!NOTE]  
->  If any installation properties are supplied on the CCMSetup.exe command line, installation properties provisioned on computers aren't used.  
+>  If any installation properties are supplied on the CCMSetup.exe command line, installation properties provisioned on computers aren't used.
 
-A group policy administrative template named **ConfigMgrInstallation.adm** is supplied on the Configuration Manager installation media. Use this template to provision client computers with installation properties.   
+A Group Policy administrative template named ConfigMgrInstallation.adm is supplied on the Configuration Manager installation media. Use this template to provision client computers with installation properties.
 
 
-### Configure and assign client installation properties by using a group policy object  
+### Configure and assign client installation properties by using a Group Policy Object  
 
-1.  Import the administrative template **ConfigMgrInstallation.adm** into a new or existing group policy object, by using an editor such as Windows Group Policy Object Editor. Find this file in the folder `TOOLS\ConfigMgrADMTemplates` on the Configuration Manager installation media.  
+1.  Import the ConfigMgrInstallation.adm administrative template into a new or existing Group Policy Object by using an editor like Windows Group Policy Object Editor. You can find this file in the `TOOLS\ConfigMgrADMTemplates` folder on the Configuration Manager installation media.  
 
 2.  Open the properties of the imported setting **Configure Client Deployment Settings**.  
 
-3.  Choose **Enabled**.  
+3.  Select **Enabled**.  
 
 4.  In the **CCMSetup** box, enter the required CCMSetup command-line properties. For a list of all CCMSetup command-line properties and examples of their use, see [About client installation parameters and properties](/sccm/core/clients/deploy/about-client-installation-properties).  
 
-5.  Assign the group policy object to the computers that you want to provision with Configuration Manager client installation properties.  
+5.  Assign the Group Policy Object to the computers that you want to provision with Configuration Manager client installation properties.  
