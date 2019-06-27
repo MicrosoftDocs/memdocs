@@ -42,7 +42,7 @@ To help track the client installation process, install a fallback status point b
 Client log files provide more detailed information for troubleshooting. The log files don't require a fallback status point. For example, the CCM.log file on the site server records any problems that occur when the site server connects to the computer. The CCMSetup.log file on the client records the installation process.  
 
 > [!IMPORTANT]  
->  Client push will succeed only if all the prerequisites are met. For more information, see [Installation method dependencies](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers#installation-method-dependencies).
+>  Client push will succeed only if all prerequisites are met. For more information, see [Installation method dependencies](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers#installation-method-dependencies).
 
 
 ### Configure the site to automatically use client push for discovered computers
@@ -62,11 +62,11 @@ Client log files provide more detailed information for troubleshooting. The log 
     > 
     > Depending on your security policies, your environment might already prefer or require Kerberos over the older NTLM authentication. For more information on the security considerations of these authentication protocols, read about the [Windows security policy setting to restrict NTLM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations).  
     > 
-    > To use this feature, clients must be in a trusted Active Directory forest. Kerberos in Windows relies upon Active Directory for mutual authentication.  
+    > To use this feature, clients must be in a trusted Active Directory forest. Kerberos in Windows relies on Active Directory for mutual authentication.  
 
 6.  Select the system types to which Configuration Manager should push the client software. Select whether you want to install the client on domain controllers.  
 
-7.  On the **Accounts** tab, specify one or more accounts for Configuration Manager to use when it connects to the target computer. Select the **Create** icon, enter the **User name** and **Password** (no more than 38 characters), confirm the password, and then select **OK**. Specify at least one client push installation account. This account must have local Administrator rights on the target computer to install the client. If you don't specify a client push installation account, Configuration Manager tries to use the site system computer account. Cross-domain client push fails when using the site system computer account.  
+7.  On the **Accounts** tab, specify one or more accounts for Configuration Manager to use when it connects to the target computer. Select the **Create** icon, enter the **User name** and **Password** (no more than 38 characters), confirm the password, and then select **OK**. Specify at least one client push installation account. This account must have local administrator rights on the target computer to install the client. If you don't specify a client push installation account, Configuration Manager tries to use the site system computer account. Cross-domain client push fails when using the site system computer account.  
 
     > [!NOTE]  
     >  To use client push from a secondary site, specify the account at the secondary site that initiates the client push.  
