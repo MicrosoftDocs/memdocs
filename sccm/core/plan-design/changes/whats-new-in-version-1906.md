@@ -397,48 +397,88 @@ Task sequence pre-cache now includes additional content types. Pre-cache content
 <!--4668846, 2840337, 4512937-->
 This release includes the following improvements to OS deployment:
 
-- The following two PowerShell cmdlets were added to create and edit the [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence) step:  <!--2839943-->
+- The following two PowerShell cmdlets were added to create and edit the [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence) step:  <!--2839943--> <!--For more information, see [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence).-->
 
     - **New-CMTSStepRunTaskSequence**
 
     - **Set-CMTSStepRunTaskSequence**
 
-- A new task sequence variable was added, **SMSTSRebootDelayNext**. Use this new variable with the existing [SMSTSRebootDelay](/sccm/osd/understand/task-sequence-variables#SMSTSRebootDelay) variable. If you want any later reboots to happen with a different timeout than the first, set SMSTSRebootDelayNext to a different value in seconds. <!--4447680-->
+- A new task sequence variable was added, **SMSTSRebootDelayNext**. Use this new variable with the existing [SMSTSRebootDelay](/sccm/osd/understand/task-sequence-variables#SMSTSRebootDelay) variable. If you want any later reboots to happen with a different timeout than the first, set SMSTSRebootDelayNext to a different value in seconds. <!--4447680--> <!--For more information, see [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence).-->
 
     For example, you want to give users a 60-minute reboot notification at the start of a Windows 10 in-place upgrade task sequence. After that first long timeout, you want additional timeouts to only be 60 seconds. Set SMSTSRebootDelay to `3600`, and SMSTSRebootDelayNext to `60`.  
 
-- The [Disable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_DisableBitLocker) task sequence step has a new restart counter. Use this option to specify the number of restarts to keep BitLocker disabled. Instead of adding multiple instances of this step, set a value between 1 (default) and 15. You can also set this behavior with the task sequence variable **OSDBitlockerRebootCount**. <!--4512937-->
+- The [Disable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_DisableBitLocker) task sequence step has a new restart counter. Use this option to specify the number of restarts to keep BitLocker disabled. Instead of adding multiple instances of this step, set a value between 1 (default) and 15. You can also set this behavior with the task sequence variable **OSDBitlockerRebootCount**. <!--4512937--> <!--For more information, see [Disable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_DisableBitLocker).-->
 
-    > [!Note]  
-    > There is a known issue with the client-side functionality, so the task sequence only disables BitLocker for one restart.  
+- This release further iterates on the improvement to the [Disable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_DisableBitLocker) step. This release adds a new variable, **OSDBitLockerRebootCountOverride**. Set this value from 0 to 15, and it overrides the count set by the step or the OSDBitlockerRebootCount variable. While the other methods only accept values 1 to 15, if you set this variable to 0, BitLocker remains disabled indefinitely. This new variable is useful when the task sequence sets one value, but you want to set a separate value on a per-device or per-collection basis. <!-- 4512937 --> <!--For more information, see [Disable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_DisableBitLocker).-->
 
-- This release further iterates on the improvement to the [Disable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_DisableBitLocker) step. This release adds a new variable, **OSDBitLockerRebootCountOverride**. Set this value from 0 to 15, and it overrides the count set by the step or the OSDBitlockerRebootCount variable. While the other methods only accept values 1 to 15, if you set this variable to 0, BitLocker remains disabled indefinitely. This new variable is useful when the task sequence sets one value, but you want to set a separate value on a per-device or per-collection basis. <!-- 4512937 -->
+- It's now easier to edit variables when you run a task sequence. After you select a task sequence in the Task Sequence Wizard window, the page to edit task sequence variables includes an **Edit** button. You can use accessible keyboard shortcuts to edit the variables. This change helps in cases where a mouse isn't available.<!-- 4668846 --><!--For more information, see [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence).-->
 
-- It's now easier to edit variables when you run a task sequence. After you select a task sequence in the Task Sequence Wizard window, the page to edit task sequence variables includes an **Edit** button. You can use accessible keyboard shortcuts to edit the variables. This change helps in cases where a mouse isn't available.<!-- 4668846 -->
-
-- The task sequence sets a new read-only variable **_SMSTSLastContentDownloadLocation**. This variable contains the last location where the task sequence downloaded or attempted to download content. Inspect this variable instead of parsing the client logs.<!-- 2840337 -->
-
-
+- The task sequence sets a new read-only variable **_SMSTSLastContentDownloadLocation**. This variable contains the last location where the task sequence downloaded or attempted to download content. Inspect this variable instead of parsing the client logs.<!-- 2840337 --> <!--For more information, see [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence).-->
 
 
 ## <a name="bkmk_userxp"></a> Software Center
 
 ### Improvements to Software Center tab customizations
 <!--4063773-->
+You can now add up to five custom tabs in Software Center. You can also edit the order in which these tabs appear in Software Center.
+
+<!--For more information, see [Software Center client settings](/sccm/core/clients/deploy/about-client-settings#software-center) and [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center).-->
 
 ### Software Center infrastructure improvements
 <!--3555950-->
 
+This release includes the following infrastructure improvements to Software Center:
+
+- Software Center now communicates with a management point for apps targeted to users as available. It doesn't use the application catalog anymore. This change makes it easier for you to remove the application catalog from the site.
+- Previously, Software Center picked the first management point from the list of available servers. Starting in this release, it uses the same management point that the client uses. This change allows Software Center to use the same management point from the assigned primary site as the client.
+- The management point now checks the health of its user service every five minutes. It reports any issues via status messages for the SMS_MP_CONTROL_MANAGER site component.
+
+> [!Important]  
+> These iterative improvements to Software Center and the management point are to retire the application catalog roles. The Silverlight user experience isn't supported as of current branch version 1806. In the first current branch release after June 30, 2019, updated clients will automatically use the management point for user-available application deployments. You also won't be able to install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+
+<!--For more information, see [Remove the application catalog](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat) and [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center).-->
+
+
 ### Redesigned notification for newly available software
 <!--3555904-->
+The **New Software is Available** notification will only show once for a user for a given application and revision. The user will no longer see the notification each time they log on. They'll only see another notification for an application if it has changed.
+
+<!--For more information, see [Remove the application catalog](/sccm/apps/get-started/create-and-deploy-an-application#end-user-experience). -->
 
 ### More frequent countdown notifications for restarts
 <!--3976435-->
 
+End users will now be reminded more frequently of a pending restart with intermittent countdown notifications. You can define the interval for the intermittent notifications in **Client Settings** on the **Computer Restart** page. Change the value for **Specify the snooze duration for computer restart countdown notifications (hours)** to configure how often a user is reminded about a pending restart until the final countdown notification occurs.
+
+Additionally, the maximum value for **Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes)** increased from 1440 minutes (24 hours) to 20160 minutes (two weeks).
+
+<!--For more information, see [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center#restart-required) and [About client settings](/sccm/core/clients/deploy/about-client-settings#computer-restart). -->
+
 ### Direct link to custom tabs in Software Center
 <!--4655176-->
 
+You can now provide users with a direct link to a [custom tab](/sccm/core/clients/deploy/about-client-settings#software-center-tab-visibility) in Software Center.
 
+Use the following URL format to open Software Center to a particular tab:
+
+`softwarecenter:page=CustomTab1`
+
+The string `CustomTab1` is the first custom tab in order.
+
+For example, type this URL in the Windows **Run** window.
+
+You can also use this syntax to open default tabs in Software Center:
+
+|Command line  |Tab  |
+|---------|---------|
+|`AvailableSoftware`|Applications|
+|`Updates`|Updates|
+|`OSD`|Operating Systems|
+|`InstallationStatus`|Installation status|
+|`Compliance`|Device compliance|
+|`Options`|Options|
+
+<!--For more information, see [custom tab](/sccm/core/clients/deploy/about-client-settings#software-center-tab-visibility).--> 
 
 ## <a name="bkmk_sum"></a> Software updates
 
