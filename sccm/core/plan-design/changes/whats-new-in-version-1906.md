@@ -348,26 +348,76 @@ This release includes the following improvements to app approvals:
 
 ### Task sequence debugger
 <!--3612274-->
+The task sequence debugger is a new troubleshooting tool. You deploy a task sequence in debug mode to a collection of one device. It lets you step through the task sequence in a controlled manner to aid troubleshooting and investigation.
+
+![Screenshot of Task Sequence Debugger](./media/3612274-tsdebug.png)
+
+ <!--(New article) For more information, see [Task sequence debugger](/sccm/osd/deploy-use/debug-task-sequence).-->
 
 ### Improvements to driver management
 <!--3555958-->
+You can now see additional metadata tags during the driver package creation wizard.
+
+ <!--For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content).-->
 
 ### Clear app content from client cache during task sequence
 <!--4485675-->
 
+In the **Install Application** task sequence step, you can now delete the app content from the client cache after the step runs. This behavior is beneficial on devices with small hard drives or when installing lots of large apps in succession.
+
+ <!--For more information, see [About task sequence steps](/sccm/osd/understand/task-sequence-steps#BKMK_InstallApplication).-->
+
 ### Reclaim SEDO lock for task sequences
 <!--3699337-->
+
+If the Configuration Manager console stops responding, you can be locked out of making further changes until the lock expires after 30 minutes. This lock is part of the Configuration Manager SEDO (Serialized Editing of Distributed Objects) system. For more information, see [Configuration Manager SEDO](/sccm/develop/core/understand/sedo).
+
+You can now clear your lock on a task sequence. This action only applies to your user account that has the lock, and on the same device from which the site granted the lock. When you attempt to access a locked task sequence, you can now **Discard Changes**, and continue editing the object. These changes would be lost anyway when the lock expired.
+
+ <!--For more information, see [Manage task sequences](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks).-->
 
 ### Pre-cache driver packages and OS images
 <!--4224642-->
 
+Task sequence pre-cache now includes additional content types. Pre-cache content previously only applied to OS upgrade packages. Now you can use pre-caching to reduce bandwidth consumption of:
+- OS images
+- Driver packages
+- Packages
+
+ <!--For more information, see [Pre-cache content](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content).-->
+
 ### Improvement to task sequence media creation
 <!--4090666-->
 
+ <!--? this is a DCR not on doc list for 1906- Looks like it was added in 1902 on multiple articles including /sccm/osd/deploy-use/create-stand-alone-media#process.-->
+
 ### Improvements to OS deployment 
 <!--2839943,4447680-->
-<!--4512937,4224642-->
+<!--4512937,4224642 (combined with the 422462 above)-->
 <!--4668846, 2840337, 4512937-->
+This release includes the following improvements to OS deployment:
+
+- The following two PowerShell cmdlets were added to create and edit the [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence) step:  <!--2839943-->
+
+    - **New-CMTSStepRunTaskSequence**
+
+    - **Set-CMTSStepRunTaskSequence**
+
+- A new task sequence variable was added, **SMSTSRebootDelayNext**. Use this new variable with the existing [SMSTSRebootDelay](/sccm/osd/understand/task-sequence-variables#SMSTSRebootDelay) variable. If you want any later reboots to happen with a different timeout than the first, set SMSTSRebootDelayNext to a different value in seconds. <!--4447680-->
+
+    For example, you want to give users a 60-minute reboot notification at the start of a Windows 10 in-place upgrade task sequence. After that first long timeout, you want additional timeouts to only be 60 seconds. Set SMSTSRebootDelay to `3600`, and SMSTSRebootDelayNext to `60`.  
+
+- The [Disable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_DisableBitLocker) task sequence step has a new restart counter. Use this option to specify the number of restarts to keep BitLocker disabled. Instead of adding multiple instances of this step, set a value between 1 (default) and 15. You can also set this behavior with the task sequence variable **OSDBitlockerRebootCount**. <!--4512937-->
+
+    > [!Note]  
+    > There is a known issue with the client-side functionality, so the task sequence only disables BitLocker for one restart.  
+
+- This release further iterates on the improvement to the [Disable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_DisableBitLocker) step. This release adds a new variable, **OSDBitLockerRebootCountOverride**. Set this value from 0 to 15, and it overrides the count set by the step or the OSDBitlockerRebootCount variable. While the other methods only accept values 1 to 15, if you set this variable to 0, BitLocker remains disabled indefinitely. This new variable is useful when the task sequence sets one value, but you want to set a separate value on a per-device or per-collection basis. <!-- 4512937 -->
+
+- It's now easier to edit variables when you run a task sequence. After you select a task sequence in the Task Sequence Wizard window, the page to edit task sequence variables includes an **Edit** button. You can use accessible keyboard shortcuts to edit the variables. This change helps in cases where a mouse isn't available.<!-- 4668846 -->
+
+- The task sequence sets a new read-only variable **_SMSTSLastContentDownloadLocation**. This variable contains the last location where the task sequence downloaded or attempted to download content. Inspect this variable instead of parsing the client logs.<!-- 2840337 -->
+
 
 
 
