@@ -193,9 +193,9 @@ For more information, see [How to use Group Policy to remotely install software]
 
 Manually install the client software on computers by using CCMSetup.exe. You can find this program and its supporting files in the Client folder of the Configuration Manager installation folder on the site server. The site shares this folder to the network as:  
 
- `\\<Site Server Name>\SMS_<Site Code>\Client\`  
+ `\\<site server name>\SMS_<site code>\Client\`  
 
- `<Site Server Name>` is the primary site server name. `<Site Code>` is the primary site code to which the client is assigned. To run CCMSetup.exe from the command line on the client, connect to this network location, and then run the command.  
+ `<site server name>` is the primary site server name. `<site code>` is the primary site code to which the client is assigned. To run CCMSetup.exe from the command line on the client, connect to this network location, and then run the command.  
 
 > [!IMPORTANT]  
 >  You must have administrator permissions to access the client installation files.  
@@ -328,7 +328,7 @@ For the procedure to install the Configuration Manager client on a modern Window
 
 2. In the Intune Software Publisher, enter command-line parameters. For example, use this command with a traditional client on an intranet:  
 
-   `CCMSETUPCMD="/MP:<FQDN of management point> SMSMP=<FQDN of management point> SMSSITECODE=<Your site code> DNSSUFFIX=<DNS Suffix of management point>"`  
+   `CCMSETUPCMD="/MP:<FQDN of management point> SMSMP=<FQDN of management point> SMSSITECODE=<your site code> DNSSUFFIX=<DNS suffix of management point>"`  
 
    > [!NOTE]  
    > For an example of a command to use with a modern Windows 10 client using Azure AD authentication, see [How to prepare internet-based devices for co-management](/sccm/comanage/how-to-prepare-win10#install-the-configuration-manager-client).  
@@ -438,30 +438,30 @@ To install clients that are on the internet, choose one of the following support
 
 -   Provide a mechanism for these clients to temporarily connect to the intranet with a VPN. Then install the client by using any appropriate client installation method.  
 
--   Use an installation method that's independent of Configuration Manager. For example, package the client installation source files onto removable media and send the media to users. The client installation source files are located in the `<InstallationPath>\Client` folder on the Configuration Manager site server. Include on the media a script to manually copy over the client folder. From this folder, install the client by using CCMSetup.exe and all the appropriate CCMSetup command-line properties.  
+-   Use an installation method that's independent of Configuration Manager. For example, package the client installation source files onto removable media and send the media to users. The client installation source files are located in the `<installation path>\Client` folder on the Configuration Manager site server. Include on the media a script to manually copy over the client folder. From this folder, install the client by using CCMSetup.exe and all the appropriate CCMSetup command-line properties.  
 
 > [!NOTE]  
 >  Configuration Manager doesn't support installing a client directly from the internet-based management point or from the internet-based software update point.
 
-Clients that are managed over the internet must communicate with internet-based site systems. Ensure that these clients also have public key infrastructure (PKI) certificates before you install the client. Install these certificates independently from Configuration Manager. For more information about the certificate requirements, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements).  
+Clients that are managed over the internet must communicate with internet-based site systems. Ensure that these clients also have public key infrastructure (PKI) certificates before you install the client. Install these certificates independently from Configuration Manager. For more information, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements).  
 
 
 ### Install clients on the internet by specifying CCMSetup command-line properties  
 
 1.  Follow the directions in the section [How to install Configuration Manager clients manually](#BKMK_Manual). Always include the following options:  
 
-    -   CCMSetup command-line parameter `/source:<local path to the copied Client folder>`  
+    -   CCMSetup command-line parameter `/source:<local path of the copied Client folder>`  
 
     -   CCMSetup command-line parameter `/UsePKICert`  
 
     -   Client.msi property `CCMHOSTNAME=<FQDN of internet-based management point>`  
 
-    -   Client.msi property `SMSSIGNCERT=<local path to exported site server signing certificate>`  
+    -   Client.msi property `SMSSIGNCERT=<local path of exported site server signing certificate>`  
 
     -   Client.msi property `SMSSITECODE=<site code of internet-based management point>`  
 
     > [!NOTE]  
-    >  If the site has more than one internet-based management point, it doesn't matter which internet-based management point you specify for the CCMHOSTNAME property. When a Configuration Manager client connects to the specified internet-based management point, it sends the client a list of available internet-based management points in the site. The client randomly selects one from the list.  
+    >  If the site has more than one internet-based management point, it doesn't matter which one you specify for the `CCMHOSTNAME` property. When a Configuration Manager client connects to the specified internet-based management point, it sends the client a list of available internet-based management points in the site. The client randomly selects one from the list.
 
 2.  If you don't want the client to check the certificate revocation list (CRL), specify the CCMSetup command-line parameter `/NoCRLCheck`.  
 
@@ -469,26 +469,26 @@ Clients that are managed over the internet must communicate with internet-based 
 
 4.  If you're installing the client for internet-only client management, specify the Client.msi property `CCMALWAYSINF=1`.  
 
-5.  Verify whether you have to specify additional CCMSetup command-line parameters. For example, if the client has more than one valid PKI certificate, you might have to specify a certificate selection criterion. For a list of available properties, see [About client installation parameters and properties](/sccm/core/clients/deploy/about-client-installation-properties).  
+5.  Determine whether you have to specify additional CCMSetup command-line parameters. For example, if the client has more than one valid PKI certificate, you might have to specify a certificate selection criterion. For a list of available properties, see [About client installation parameters and properties](/sccm/core/clients/deploy/about-client-installation-properties).  
 
 
-#### Internet-based example:  
+#### Internet-based example
 
 `CCMSetup.exe /source: D:\Clients /UsePKICert CCMHOSTNAME=server1.contoso.com SMSSIGNCERT=siteserver.cer SMSSITECODE=ABC FSP=server2.contoso.com CCMALWAYSINF=1 CCMFIRSTCERT=1`    
 
 This example installs the client with the following behaviors:
-  - Use source files from a folder on the D drive
-  - Use a client PKI certificate 
-  - Select the certificate with the longest validity period 
-  - Internet-only client management
-  - Assign the client to use the internet-based management point named SERVER1
-  - Assign the internet-based fallback status point in the contoso.com domain
-  - Assign the client to the ABC site  
+  - Use source files from a folder on drive D.
+  - Use a client PKI certificate.
+  - Select the certificate with the longest validity period.
+  - Internet-only client management.
+  - Assign the client to use the internet-based management point named SERVER1.
+  - Assign the internet-based fallback status point in the contoso.com domain.
+  - Assign the client to the ABC site.  
 
 
 ###  <a name="BKMK_ConfigureIBCM_MP"></a> To configure clients for internet-based client management after client installation  
 
-To assign the internet-based management point after you install the client, use one of these procedures. The first requires manual configuration, and is appropriate for a few clients. The second is more appropriate for configuring many clients.  
+To assign the internet-based management point after you install the client, use one of these procedures. The first requires manual configuration and is appropriate for a few clients. The second is more appropriate for configuring many clients.  
 
 
 #### Configure clients for internet-based client management after client installation from the Configuration Manager control panel  
@@ -498,7 +498,7 @@ To assign the internet-based management point after you install the client, use 
 2.  On the **Internet** tab, enter the fully qualified domain name (FQDN) of the internet-based management point as the **Internet FQDN**.  
 
     > [!NOTE]  
-    >  The **Internet** tab is only available if the client has a client PKI certificate.  
+    >  The **Internet** tab is available only if the client has a client PKI certificate.  
 
 3.  If the client accesses the internet by using a proxy server, enter the proxy server settings.  
 
@@ -507,9 +507,9 @@ To assign the internet-based management point after you install the client, use 
 
 ##### VBScript
 
-1.  Open a text editor, such as Notepad.  
+1.  Open a text editor, like Notepad.  
 
-2.  Copy and insert the following VBScript sample into the file. Replace *mp.contoso.com* with the internet FQDN of your internet-based management point.  
+2.  Copy and insert the following VBScript code into the file. Replace `mp.contoso.com` with the internet FQDN of your internet-based management point.  
 
     ``` VBScript 
     on error resume next  
@@ -533,23 +533,23 @@ To assign the internet-based management point after you install the client, use 
     ```  
 
     > [!NOTE]  
-    >  To delete a specified internet-based management point, remove the server FQDN value inside the quotation marks. This line becomes: `newInternetBasedManagementPointFQDN = ""`  
+    >  To delete a specified internet-based management point, remove the server FQDN value inside the quotation marks. The line becomes: `newInternetBasedManagementPointFQDN = ""`  
 
 4.  Save the file with a .vbs extension.  
 
-5.  Use cscript.exe to run the script on client computers, by using one of the following methods:  
+5.  Use cscript.exe to run the script on client computers. Use one of these methods:  
 
     -   Deploy the file to existing Configuration Manager clients by using a package and a program.  
 
-    -   Run the file locally on existing Configuration Manager clients by double-clicking the script file in Windows Explorer.  
+    -   Run the file locally on existing Configuration Manager clients by double-clicking the script file in File Explorer.  
 
 You might have to restart the client for the changes to take effect.  
 
 ##### PowerShell
 
-1. Open a PowerShell in-line editor such as PowerShell ISE or Visual Studio Code, or any text editor, such as Notepad.
+1. Open a PowerShell in-line editor, like PowerShell ISE or Visual Studio Code, or any text editor, like Notepad.
 
-2. Copy and insert the following lines of code into the editor. Replace 'mp.contoso.com' with the internet FQDN of your internet-based management point.
+2. Copy and insert the following lines of code into the editor. Replace `'mp.contoso.com'` with the internet FQDN of your internet-based management point.
 
     ``` PowerShell
     
