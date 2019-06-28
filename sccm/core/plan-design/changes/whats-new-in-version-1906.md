@@ -92,8 +92,9 @@ You can now add a new secondary replica node to an existing SQL AlwaysOn availab
 
 ## <a name="bkmk_cloud"></a> Cloud-attached management
 
+<!--3555774 - moved as of 6/28
 ### Cloud services cost estimator
-<!--3555774-->
+
 
 Some customers are concerned about the potential cost for attaching cloud services in Configuration Manager. This release introduces a new cost estimator tool in the Configuration Manager console. The tool uses the following data from your site database to estimate the cost of deploying the cloud management gateway:  
 
@@ -105,7 +106,7 @@ In the Configuration Manager console, go to the **Monitoring** workspace, and se
 
 ![Screenshot of cloud services usage estimation tool](./media/3555774-cmg-cost-estimator.png)
 
-<!-- (New article) For more information, see [Planning for cloud usage](/sccm/core/clients/manage/cmg/plan-for-cloud-cost). -->
+(New article) For more information, see [Planning for cloud usage](/sccm/core/clients/manage/cmg/plan-for-cloud-cost). -->
 
 ### Azure Active Directory user group discovery
 <!--3611956-->
