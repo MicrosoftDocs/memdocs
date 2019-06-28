@@ -586,15 +586,14 @@ We've increased the number of uncategorized software titles that can be uploaded
 <!-- ## <a name="bkmk_pod"></a> Phased deployments -->
 
 
-
-
 ## <a name="bkmk_protect"></a> Protection
 
 ### Windows Defender Application Guard file trust criteria
 <!--3555858-->
 
+There's a new policy setting that enables users to trust files that normally open in Windows Defender Application Guard (WDAG). Upon successful completion, the files will open on the host device instead of in WDAG.
 
-
+<!--For more information, see [Create and deploy Windows Defender Application Guard policy](/sccm/protect/deploy-use/create-deploy-application-guard-policy).-->
 
 ## <a name="bkmk_admin"></a> Configuration Manager console
 
