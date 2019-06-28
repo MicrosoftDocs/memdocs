@@ -2,7 +2,7 @@
 title: Paths to co-management
 titleSuffix: Configuration Manager
 description: Understand the prerequisites for the two primary ways for you to setup co-management.
-ms.date: 01/14/2019
+ms.date: 06/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -30,7 +30,10 @@ Taking this path can get your existing Configuration Manager-managed devices qui
 
 Here's what you need to set it up:
 - Hybrid Azure AD
-    - Active Directory Federation Services (ADFS) with pass-through authentication (PTA)
+    - One of the following [Azure AD hybrid identity options](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin):  
+       - [Password hash synchronization](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin#password-hash-synchronization) with [Seamless Single Sign-on (SSO)](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso)
+       - [Pass-through authentication](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-pta) with [Seamless Single Sign-on (SSO)](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso)
+       - [Federated SSO (with Active Directory Federation Services (AD FS)) ](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin#federation-that-uses-a-new-or-existing-farm-with-ad-fs-in-windows-server-2012-r2)
     - Azure AD Connect
     - Azure AD Premium license
     - Configure hybrid Azure AD-join (choose one option):
