@@ -117,12 +117,12 @@ You can now discover user groups and members of those groups from Azure Active d
 
 ### Synchronize collection membership results to Azure Active Directory groups
 <!--3607475-->
-
+ 
 You can now enable the synchronization of collection memberships to an Azure Active Directory (Azure AD) group. This synchronization allows you to use your existing on premises grouping rules in the cloud. You can synchronize device collections. Only Azure AD-joined devices are synchronized to Azure AD.
 
 The Azure AD synchronization is a one-way process, from Configuration Manager to Azure AD. Changes made in Azure AD aren't reflected in Configuration Manager collections, but aren't overwritten by Configuration Manager. For example, if the Configuration Manager collection has two devices, and the Azure AD group has three different devices, after synchronization the Azure AD group has five devices.
 
-<!-- ? For more information, see [About discovery methods](/sccm/core/servers/deploy/configure/about-discovery-methods). -->
+<!-- ? For more information, see [Create collections](/core/clients/manage/collections/create-collections). -->
 
 <!--COMMENTING OUT DA FOR RIGHT NOW SINCE IT IS NOT ON TAP Feature list
 
@@ -556,6 +556,21 @@ The **View Required** hyperlink is available in the following locations:
 ### Office 365 ProPlus upgrade readiness dashboard
 <!--4021125-->
 
+To help you determine which devices are ready to upgrade to Office 365 ProPlus, there's a new readiness dashboard. It includes the **Office 365 ProPlus upgrade readiness** tile that released in Configuration Manager current branch version 1902. In the Configuration Manager console, go to the **Software Library** workspace, expand **Office 365 Client Management**, and select the **Office 365 ProPlus Upgrade Readiness** node. The following new tiles on this dashboard help you evaluate Office add-in and macro readiness:
+
+- Add-in readiness
+- Add-in support statements
+- Top add-ins by count of version
+- Number of devices that have macros
+- Macro readiness
+- Macro advisories
+
+
+
+![Office 365 ProPlus upgrade readiness dashboard](./media/4021125-1906-o365-dashboard.png)
+![Office 365 ProPlus upgrade readiness dashboard, macro advisories](./media/4021125-1906-o365-dashboard-macros.png)
+
+<!--For more information on prerequisites and using this data, see [Integration for Office 365 ProPlus readiness](https://docs.microsoft.com/sccm/sum/deploy-use/office-365-dashboard#bkmk_o365_readiness).-->
 
 
 ## <a name="bkmk_inv"></a> Inventory
@@ -592,7 +607,7 @@ The **View Required** hyperlink is available in the following locations:
 
 
 <!--
-## Other updates
+## Other updatesgit statu
 
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4498910).
 
