@@ -179,7 +179,7 @@ If there's a problem with this process during setup, use the following process t
 
 3. In the **Add permissions** panel, configure the following settings:  
 
-    - **Role**: **Log Analytics Reader**  
+    - **Role**: **Reader**  
 
     - **Assign access to**: **Azure AD user, group, or application**  
 
