@@ -172,7 +172,7 @@ The following permissions have been added to Configuration Manager's built-in **
 
  For CMPivot, you now have additional arithmetic operators, aggregators, and the ability to add query joins such as using Registry and File together. 
 
-<!-- For more information, see [CMPivot](/sccm/core/servers/manage/cmpivot#prerequisites). -->
+<!-- For more information, see [CMPivot](/sccm/core/servers/manage/cmpivot). -->
 
 
 ## <a name="bkmk_content"></a> Content management
@@ -262,7 +262,19 @@ This setting gives you greater control over the client cache on different types 
 ## <a name="bkmk_comgmt"></a> Co-management
 
 ### Improvements to co-management auto-enrollment
-<!--3555961-->
+<!--3555961 -- info still needed-->
+<!--4454491-->
+
+A new co-managed device now automatically enrolls to the Microsoft Intune service based on its Azure Active Directory (Azure AD) device token. It doesn't need to wait for a user to sign in to the device for auto-enrollment to start. This change helps to reduce the number of devices with the [enrollment status](/sccm/comanage/how-to-monitor#co-management-enrollment-status) *Pending user sign in*.
+
+To support this behavior, clients need to be running Windows 10 version 1803 or later.
+
+If the device token fails, it falls back to previous behavior with the user token. Look in the **ComanagementHandler.log** for the following entry:
+`Enrolling device with RegisterDeviceWithManagementUsingAADDeviceCredentials`
+
+
+<!-- For more information, see [Enable co-management](/sccm/comanage/how-to-enable.md). -->
+
 
 ### Multiple pilot groups for co-management workloads
 <!--3555750-->
@@ -285,14 +297,14 @@ These options are also available when you first [enable co-management](/sccm/com
 
 <!-- For more information, see [Enable co-management](/sccm/comanage/how-to-enable.md). -->
 
-### Co-management support for government cloud
-<!--4075452-->
+<!--
+
+### Co-management support for government cloud 
+<!--4075452 - not sure if we need docs for 1906-->
 
 
 
 <!-- ## <a name="bkmk_compliance"></a> Compliance settings -->
-
-
 
 
 ## <a name="bkmk_app"></a> Application management
