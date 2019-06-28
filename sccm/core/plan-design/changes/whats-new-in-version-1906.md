@@ -600,11 +600,33 @@ There's a new policy setting that enables users to trust files that normally ope
 ### Add SMBIOS GUID column to device and device collection nodes
 <!--4526580-->
 
+In both the Devices and Device Collections nodes, you can now add a new column for **SMBIOS GUID**. This value is the same as the **BIOS GUID** property of the System Resource class. It's a unique identifier for the device hardware.
+
+<!--For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#tips).-->
+
 ### RBAC on folders
 <!--3600867-->
 
+You can now set security scopes on folders. If you have access to an object in the folder but don't have access to the folder, you'll be unable to see the object. Similarly, if you have access to a folder but not an object within it, you won't see that object. Right-click a folder, choose **Set Security Scopes**, then chose the security scopes you want to apply. 
+
+<!--For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#tips) and [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).-->
+
+
 ### Administration service support for security nodes
 <!--4223683-->
+
+You can now enable some nodes of the Configuration Manager console to use the administration service. This change allows the console to communicate with the SMS Provider over HTTPS instead of via WMI.
+
+In this version, it only affects the following nodes under the **Security** node in the **Administration** workspace:
+
+- Administrative Users
+- Security Roles
+- Security Scopes
+- Console Connections
+
+<!--For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#tips) and [Administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service).-->
+
+
 
 
 
