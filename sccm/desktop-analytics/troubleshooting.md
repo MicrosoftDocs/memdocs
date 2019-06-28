@@ -81,42 +81,44 @@ After completing the [Initial onboarding](/sccm/desktop-analytics/set-up#initial
 
 #### Create app in Azure AD
 
-1. Open the [Azure portal](http://portal.azure.com) as a user with Company Admin permissions, go to **Azure Active Directory**, and select **App registrations**. Then select **New application registration**.  
+1. Open the [Azure portal](http://portal.azure.com) as a user with *Company Admin* permissions, go to **Azure Active Directory**, and select **App registrations**. Then select **New registration**.  
 
 2. In the **Create** panel, configure the following settings:  
 
     - **Name**: a unique name that identifies the app, for example: `Desktop-Analytics-Connection`  
 
-    - **Application type**: **Web app / API**  
+    - **Supported account types**: **Accounts in this organizational directory only (Microsoft)**
 
-    - **Sign-on URL**: this value isn't used by Configuration Manager, but required by Azure AD. Enter a unique and valid URL, for example: `https://configmgrapp`  
+    - **Redirect URI (optional)**: **Web**  
+
+    <!--     - **Sign-on URL**: this value isn't used by Configuration Manager, but required by Azure AD. Enter a unique and valid URL, for example: `https://configmgrapp`   -->
   
-   Select **Create**.  
+    Select **Register**.  
 
-3. Select the app, and note the **Application ID**. This value is a GUID that's used to configure the Configuration Manager connection.  
+3. Select the app, and note the **Application (client) ID**. This value is a GUID that's used to configure the Configuration Manager connection.  
 
-4. Select **Settings** on the app, and then select **Keys**. In the **Passwords** section, enter a **Key description**, specify an expiration **Duration**, and then select **Save**. Copy the **Value** of the key, which is used to configure the Configuration Manager connection.
+4. In the **Manage** menu, select **Certificates & secrets**. Select **New client secret**. Enter a **Description**, specify an expiration duration, and then select **Add**. Copy the **Value** of the key, which is used to configure the Configuration Manager connection.
 
     > [!Important]  
     > This is the only opportunity to copy the key value. If you don't copy it now, you need to create another key.  
     >
     > Save the key value in a secure location.  
 
-5. On the app **Settings** panel, select **Required permissions**.  
+5. In the **Manage** menu, select **API permissions**.  
 
-    1. On the **Required permissions** panel, select **Add**.  
+    1. On the **API permissions** panel, select **Add a permission**.  
 
-    2. In the **Add API access** panel, **Select an API**.  
+    2. In the **Request API permissions** panel, switch to **APIs my organization uses**.  
 
-    3. Search for the **Configuration Manager Microservice** API. Select it, and then choose **Select**.  
+    3. Search for and select the **Configuration Manager Microservice** API.  
 
-    4. On the **Enable Access** panel, select both of the application permissions: **Write CM Collection Data** and **Read CM Collection Data**. Then choose **Select**.  
+    4. Select the **Application permissions** group. Expand **CmCollectionData**, and select both of the following permissions: **Write CM Collection Data** and **Read CM Collection Data**.  
 
-    5. On the **Add API access** panel, select **Done**.  
+    5. Select **Add permissions**.  
 
-6. On the **Required permissions** page, select **Grant permissions**. Select **Yes**.  
+6. On the **API permissions** panel, select **Grant admin consent...**. Select **Yes**.  
 
-7. Copy the Azure AD tenant ID. This value is a GUID that's used to configure the Configuration Manager connection. Select **Azure Active Directory** in the main menu, and then select **Properties**. Copy the **Directory ID** value.  
+7. Select **Azure Active Directory** in the main menu, and in the **Manage** menu, select **Properties**. Copy the **Directory ID** value. This value is the Azure AD tenant ID. It's a GUID that's used to configure the Configuration Manager connection.
 
 #### Import app in Configuration Manager
 
