@@ -97,24 +97,20 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
 4. On the **Give users access** page:
 
-    - **Do you want Desktop Analytics to manage Directory roles for your users**: Desktop Analytics automatically assigns the **Workspace Owners** and **Workspace Contributors** groups to the **Desktop Analytics Administrator** role. If those groups are already a **Global Admin**, there's no change.  
+    - **Allow Desktop Analytics to manage Directory roles on your behalf**: Desktop Analytics automatically assigns the **Workspace Owners** the **Desktop Analytics Administrator** role. If those groups are already a **Global Admin**, there's no change.  
 
-        If you don't select this option, Desktop Analytics still adds the users as members of the two security groups. A **Global Admin** needs to manually assign the **Desktop Analytics Administrator** role for the users.  
+        If you don't select this option, Desktop Analytics still adds users as members of the security group. A **Global Admin** needs to manually assign the **Desktop Analytics Administrator** role for the users.  
 
         For more information about assigning administrator role permissions in Azure Active Directory and the permissions assigned to **Desktop Analytics Administrators**, see [Administrator role permissions in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
 
-    - Desktop Analytics preconfigures two security groups in Azure Active Directory:  
+    - Desktop Analytics preconfigures the **Workspace Owners** security group in Azure Active Directory to create and manage workspaces and deployment plans. 
 
-        - **Workspace Owners**: A security group to create and manage workspaces. These accounts need owner access to the Azure subscription.  
-
-        - **Workspace Contributors**: A security group to create and manage deployment plans in this workspace. They don't need any additional Azure access.  
-
-        To add a user to either group, type their name or e-mail address in the **Enter name or email address** section of the appropriate group. When finished, select **Next**.
+        To add a user to the group, type their name or e-mail address in the **Enter name or email address** section. When finished, select **Next**.
 
 5. On the page to **Set up your workspace**:  
 
     > [!Note]  
-    > Complete this step as a **Workspace Owner** or **contributor**. For more information, see [prerequisites](/sccm/desktop-analytics/overview#prerequisites).  
+    > To complete this step, the user needs **Workspace Owner** permissions and additional access to the Azure subscription and Resource Group. For more information, see [prerequisites](/sccm/desktop-analytics/overview#prerequisites).  
 
     - Select your Azure subscription.  
 
@@ -188,7 +184,7 @@ Install the Configuration Manager version 1902 update rollup (4500571) to suppor
     Select **Sign in**. After successfully authenticating to Azure, the page shows the **Azure AD Tenant Name** for reference.
 
     > [!Note]  
-    > Complete this step as a **Company Admin**. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager, and doesn't need to be the same account that runs the Azure Services Wizard.  
+    > Complete this step as a **Global Admin**. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager, and doesn't need to be the same account that runs the Azure Services Wizard.  
 
     Select **OK** to create the web app in Azure AD and close the Create Server Application dialog. On the Server App dialog, select **OK**. Then select **Next** on the App page of the Azure Services Wizard.  
 
