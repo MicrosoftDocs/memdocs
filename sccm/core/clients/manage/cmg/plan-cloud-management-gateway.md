@@ -2,7 +2,7 @@
 title: Plan for cloud management gateway
 titleSuffix: Configuration Manager
 description: Plan and design the cloud management gateway (CMG) to simplify management of internet-based clients.
-ms.date: 06/19/2019
+ms.date: 06/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -199,7 +199,7 @@ The following table lists CMG support for Configuration Manager features:
 |Feature  |Support  |
 |---------|---------|
 | Software updates     | ![Supported](media/green_check.png) |
-| Endpoint protection     | ![Supported](media/green_check.png) |
+| Endpoint protection     | [***See Note 1***](#bkmk_note1) |
 | Hardware and software inventory     | ![Supported](media/green_check.png) |
 | Client status and notifications     | ![Supported](media/green_check.png) |
 | Run scripts     | ![Supported](media/green_check.png) |
@@ -230,6 +230,12 @@ The following table lists CMG support for Configuration Manager features:
 |![Supported](media/green_check.png) (*YYMM*) = This feature is supported with CMG starting with version *YYMM* of Configuration Manager  |
 |![Not supported](media/Red_X.png) = This feature isn't supported with CMG |
 
+
+
+> [!IMPORTANT]
+> <a name="bkmk_note1"></a> **Note 1**: Domain access is required for domain joined devices to apply endpoint protection policy. Devices with infrequent access to the corporate network may experience delays in applying endpoint protection policy. If the immediate application of endpoint protection policy once received is a requirement, consider one of these options:
+> - Leverage co-management and switch the [Endpoint Protection workload](/sccm/comanage/workloads#endpoint-protection) to Intune to manage [Windows Defender Antivirus](https://docs.microsoft.com/intune/device-restrictions-windows-10#windows-defender-antivirus) from the cloud. 
+> - Use [configuration items](/sccm/placeholder) instead of the native [Antimalware Polices](/sccm/protect/deploy-use/endpoint-antimalware-policies) feature to apply endpoint protection policy.
 
 ## Cost
 
