@@ -188,7 +188,7 @@ Install the Configuration Manager version 1902 update rollup (4500571) to suppor
     Select **Sign in**. After successfully authenticating to Azure, the page shows the **Azure AD Tenant Name** for reference.
 
     > [!Note]  
-    > Complete this step as a **Company Admin**. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager, and doesn't need to be the same account that runs the Azure Services Wizard.  
+    > Complete this step as a **Global Admin**. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager, and doesn't need to be the same account that runs the Azure Services Wizard.  
 
     Select **OK** to create the web app in Azure AD and close the Create Server Application dialog. On the Server App dialog, select **OK**. Then select **Next** on the App page of the Azure Services Wizard.  
 
