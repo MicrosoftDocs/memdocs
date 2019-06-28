@@ -2,7 +2,7 @@
 title: Troubleshoot Desktop Analytics
 titleSuffix: Configuration Manager
 description: Technical details to help you troubleshoot issues with Desktop Analytics.
-ms.date: 06/11/2019
+ms.date: 06/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -81,13 +81,13 @@ After completing the [Initial onboarding](/sccm/desktop-analytics/set-up#initial
 
 #### Create app in Azure AD
 
-1. Open the [Azure portal](http://portal.azure.com) as a user with *Company Admin* permissions, go to **Azure Active Directory**, and select **App registrations**. Then select **New registration**.  
+1. Open the [Azure portal](http://portal.azure.com) as a user with *Global Admin* permissions, go to **Azure Active Directory**, and select **App registrations**. Then select **New registration**.  
 
 2. In the **Create** panel, configure the following settings:  
 
     - **Name**: a unique name that identifies the app, for example: `Desktop-Analytics-Connection`  
 
-    - **Supported account types**: **Accounts in this organizational directory only (Microsoft)**
+    - **Supported account types**: **Accounts in this organizational directory only (Contoso)**
 
     - **Redirect URI (optional)**: **Web**  
 
@@ -95,7 +95,7 @@ After completing the [Initial onboarding](/sccm/desktop-analytics/set-up#initial
   
     Select **Register**.  
 
-3. Select the app, and note the **Application (client) ID**. This value is a GUID that's used to configure the Configuration Manager connection.  
+3. Select the app, note the **Application (client) ID** and **Directory (tenant) ID**. The values are GUIDs that are used to configure the Configuration Manager connection.  
 
 4. In the **Manage** menu, select **Certificates & secrets**. Select **New client secret**. Enter a **Description**, specify an expiration duration, and then select **Add**. Copy the **Value** of the key, which is used to configure the Configuration Manager connection.
 
@@ -118,7 +118,6 @@ After completing the [Initial onboarding](/sccm/desktop-analytics/set-up#initial
 
 6. On the **API permissions** panel, select **Grant admin consent...**. Select **Yes**.  
 
-7. Select **Azure Active Directory** in the main menu, and in the **Manage** menu, select **Properties**. Copy the **Directory ID** value. This value is the Azure AD tenant ID. It's a GUID that's used to configure the Configuration Manager connection.
 
 #### Import app in Configuration Manager
 
