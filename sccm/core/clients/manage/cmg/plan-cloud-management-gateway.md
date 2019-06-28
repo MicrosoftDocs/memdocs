@@ -230,9 +230,9 @@ The following table lists CMG support for Configuration Manager features:
 |![Supported](media/green_check.png) (*YYMM*) = This feature is supported with CMG starting with version *YYMM* of Configuration Manager  |
 |![Not supported](media/Red_X.png) = This feature isn't supported with CMG |
 
+<a name="bkmk_note1"></a> 
 
-
-> <a name="bkmk_note1"></a> [!IMPORTANT]
+> [!IMPORTANT]
 > **Note 1**: Domain access is required for domain joined devices to apply endpoint protection policy. Devices with infrequent access to the corporate network may experience delays in applying endpoint protection policy. If the immediate application of endpoint protection policy once received is a requirement, consider one of these options:
 > - Leverage co-management and switch the [Endpoint Protection workload](/sccm/comanage/workloads#endpoint-protection) to Intune to manage [Windows Defender Antivirus](https://docs.microsoft.com/intune/device-restrictions-windows-10#windows-defender-antivirus) from the cloud. 
 > - Use [configuration items](/sccm/placeholder) instead of the native [Antimalware Polices](/sccm/protect/deploy-use/endpoint-antimalware-policies) feature to apply endpoint protection policy.
