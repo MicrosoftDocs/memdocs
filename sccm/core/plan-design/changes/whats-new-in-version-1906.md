@@ -570,7 +570,7 @@ To help you determine which devices are ready to upgrade to Office 365 ProPlus, 
 ![Office 365 ProPlus upgrade readiness dashboard](./media/4021125-1906-o365-dashboard.png)
 ![Office 365 ProPlus upgrade readiness dashboard, macro advisories](./media/4021125-1906-o365-dashboard-macros.png)
 
-<!--For more information on prerequisites and using this data, see [Integration for Office 365 ProPlus readiness](https://docs.microsoft.com/sccm/sum/deploy-use/office-365-dashboard#bkmk_o365_readiness).-->
+<!--For more information on prerequisites and using this data, see [Integration for Office 365 ProPlus readiness](/sccm/sum/deploy-use/office-365-dashboard#bkmk_o365_readiness).-->
 
 
 ## <a name="bkmk_inv"></a> Inventory
@@ -578,6 +578,9 @@ To help you determine which devices are ready to upgrade to Office 365 ProPlus, 
 ### Improvement to Asset Intelligence
 <!--4586547-->
 
+We've increased the number of uncategorized software titles that can be uploaded at one time to Microsoft for categorization.
+
+<!--For more information, see [Introduction to asset intelligence](/sccm/core/clients/manage/asset-intelligence/introduction-to-asset-intelligence).-->
 
 
 <!-- ## <a name="bkmk_pod"></a> Phased deployments -->
