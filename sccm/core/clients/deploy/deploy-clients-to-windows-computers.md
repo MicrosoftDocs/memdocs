@@ -116,7 +116,7 @@ Client log files provide more detailed information for troubleshooting. The log 
 
 Software update-based client installation publishes the client to a software update point as a software update. Use this method for a first-time installation or upgrade.  
 
-If the Configuration Manager client is installed on a computer, the computer receives client policy from the site. This policy includes the software-update-point server name and port from which to get software updates.
+If the Configuration Manager client is installed on a computer, the computer receives client policy from the site. This policy includes the software update-point server name and port from which to get software updates.
 
 > [!IMPORTANT]  
 >  For software update-based installation, use the same Windows Server Update Services (WSUS) server for client installation and software updates. This server must be the active software update point in a primary site. For more information, see [Install a software update point](/sccm/sum/get-started/install-a-software-update-point).
@@ -191,7 +191,7 @@ For more information, see [How to use Group Policy to remotely install software]
 
 ##  <a name="BKMK_Manual"></a> Manual installation
 
-Manually install the client software on computers by using CCMSetup.exe. You can find this program and its supporting files in the Client folder of the Configuration Manager installation folder on the site server. The site shares this folder to the network as:  
+Manually install the client software on computers by using CCMSetup.exe. You can find this program and its supporting files in the Client folder in the Configuration Manager installation folder on the site server. The site shares this folder to the network as:  
 
  `\\<site server name>\SMS_<site code>\Client\`  
 
@@ -234,8 +234,8 @@ Assume that you've configured all site system servers with an intranet FQDN and 
 
 Start with the following steps on the client computer:  
 1. Sign in as a local administrator.  
-2. Map drive Z: to `\\MPSERVER\SMS_ABC\Client`.  
-3. Switch the command prompt to the Z: drive.  
+2. Map drive Z to `\\MPSERVER\SMS_ABC\Client`.  
+3. Switch the command prompt to drive Z.  
 
 Then run one of the following commands:  
 
@@ -258,7 +258,7 @@ For more information, see [About client installation properties published to Act
 
 `CCMSetup.exe /MP:mpserver.contoso.com /UsePKICert SMSSITECODE=ABC CCMHOSTNAME=server05.contoso.com CCMFIRSTCERT=1 FSP=server06.constoso.com`
   
-This command overrides the automatic configuration that Active Directory Domain Services provides. It doesn't require that the client's network location is included in a boundary group that's configured for client assignment. Instead, the installation specifies these settings:
+This command overrides the automatic configuration that Active Directory Domain Services provides. It doesn't require that the client's network location be included in a boundary group that's configured for client assignment. Instead, the installation specifies these settings:
 - Site code.
 - Intranet management point.
 - Internet-based management point.
@@ -354,7 +354,7 @@ Preinstall the Configuration Manager client on a reference computer that you use
 
 2.  At a command prompt, type `net stop ccmexec` to stop the SMS Agent Host service (CcmExec.exe) on the reference computer.  
 
-3.  Delete the file SMSCFG.INI from the Windows folder on the reference computer.  
+3.  Delete the SMSCFG.INI file from the Windows folder on the reference computer.  
 
 4.  Remove any certificates that are stored in the local computer store on the reference computer. For example, if you use public key infrastructure (PKI) certificates, before you image the computer, remove the certificates in the **Personal** store for **Computer** and **User**.  
 
@@ -385,7 +385,7 @@ Configuration Manager supports client installation for computers in workgroups. 
 
 ### Limitations  
 
--   Workgroup clients can't locate management points from Active Directory Domain Services. Instead they use DNS, WINS, or another management point.  
+-   Workgroup clients can't locate management points from Active Directory Domain Services. Instead, they use DNS, WINS, or another management point.  
 
 -   Global roaming isn't supported. Workgroup clients can't query Active Directory Domain Services for site information.  
 
@@ -412,7 +412,7 @@ This example performs the following actions:
 - Specifies the site code
 - Specifies the DNS suffix to locate a management point  
 
-   `CCMSetup.exe SMSSITECODE=ABC DNSSUFFIX=constoso.com`  
+ `CCMSetup.exe SMSSITECODE=ABC DNSSUFFIX=constoso.com`  
 
      
 #### Workgroup example 2
@@ -432,13 +432,13 @@ When the Configuration Manager site supports [internet-based client management](
 
 -   Include the Client.msi property `CCMHOSTNAME=<internet FQDN of the internet-based management point>` when you install the client, by using manual installation or client push, for example. When you use this method, directly assign the client to the site. You can't use automatic site assignment. See the [How to install Configuration Manager clients manually](#BKMK_Manual) section, which provides an example of this configuration method.  
 
--   Install the client for intranet client management, and then assign an internet-based client management point to the client. Change the management point by using the client properties in the **Configuration Manager** page in Control Panel, or by using a script. When you use this method, you can use automatic client assignment. For more information, see the [How to configure clients for internet-based client management after client installation](#BKMK_ConfigureIBCM_MP) section.  
+-   Install the client for intranet client management, and then assign an internet-based client management point to the client. Change the management point by using the client properties on the **Configuration Manager** page in Control Panel, or by using a script. When you use this method, you can use automatic client assignment. For more information, see the [How to configure clients for internet-based client management after client installation](#BKMK_ConfigureIBCM_MP) section.  
 
 To install clients that are on the internet, choose one of the following supported methods:  
 
 -   Provide a mechanism for these clients to temporarily connect to the intranet with a VPN. Then install the client by using any appropriate client installation method.  
 
--   Use an installation method that's independent of Configuration Manager. For example, package the client installation source files onto removable media and send the media to users. The client installation source files are located in the `<installation path>\Client` folder on the Configuration Manager site server. Include on the media a script to manually copy over the client folder. From this folder, install the client by using CCMSetup.exe and all the appropriate CCMSetup command-line properties.  
+-   Use an installation method that's independent of Configuration Manager. For example, package the client installation source files onto removable media and send the media to users. The client installation source files are located in the `<installation path>\Client` folder on the Configuration Manager site server. On the media, include  a script to manually copy over the client folder. From this folder, install the client by using CCMSetup.exe and all the appropriate CCMSetup command-line properties.  
 
 > [!NOTE]  
 >  Configuration Manager doesn't support installing a client directly from the internet-based management point or from the internet-based software update point.

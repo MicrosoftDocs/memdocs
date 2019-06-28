@@ -17,13 +17,13 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Collections are groupings of users or devices. Use collections for tasks like application management, deploying compliance settings, or installing software updates. You can also use collections to manage groups of client settings or use them with role-based administration to specify the resources that an administrative user can access. Configuration Manager contains several built-in collections. For more information, see [Introduction to collections](/sccm/core/clients/manage/collections/introduction-to-collections).  
+Collections are groupings of users or devices. Use collections for tasks like managing applications, deploying compliance settings, or installing software updates. You can also use collections to manage groups of client settings or use them with role-based administration to specify the resources that an administrative user can access. Configuration Manager contains several built-in collections. For more information, see [Introduction to collections](/sccm/core/clients/manage/collections/introduction-to-collections).  
 
 > [!NOTE]  
 > A collection can contain users or devices, but not both.  
 
 
-The information in this article can help you create collections in Configuration Manager. You can also import collections that were created at this or another Configuration Manager site. For more information about how to export and import collections, see [How to manage collections](/sccm/core/clients/manage/collections/manage-collections).  
+The information in this article can help you create collections in Configuration Manager. You can also import collections that were created at the current  Configuration Manager site or at another one. For more information about how to export and import collections, see [How to manage collections](/sccm/core/clients/manage/collections/manage-collections).  
 
 
 ## Collection rules
@@ -78,14 +78,14 @@ You create a collection that has one include collection rule and one exclude col
 
 2. On the **General** page of the wizard, provide a **Name** and a **Comment**. In the **Limiting collection** section, select **Browse**, and then select a limiting collection. The collection you're creating will contain only members from the limiting collection.  
 
-4. On the **Membership Rules** page, in the **Add Rule** list, select the type of membership rule that you want to use for this collection. You can configure multiple rules for each collection. The configuration for each rule varies. For more information on configuring each rule, see the following sections of this article:  
+4. On the **Membership Rules** page, in the **Add Rule** list, select the type of membership rule that you want to use for the collection. You can configure multiple rules for each collection. The configuration for each rule varies. For more information on configuring each rule, see the following sections of this article:  
     - [Direct rule](#bkmk-direct)
     - [Query rule](#bkmk-query)
     - [Device category rule](#bkmk-category)
     - [Include collection rule](#bkmk-include)
     - [Exclude collection rule](#bkmk-exclude)
 
-5. Also on the **Membership Rules** page, review these settings:
+5. Also on the **Membership Rules** page, review the following settings.
 
     - **Use incremental updates for this collection**: Select this option to periodically scan for and update only new or changed resources from the previous collection evaluation. This process is independent of a full collection evaluation. By default, incremental updates occur at 5-minute intervals.  
 
