@@ -50,7 +50,7 @@ Each section of this article lists hybrid features under three different categor
 <!-- 2352913 -->
 The Company Portal for Windows now lists all managed apps (both required and available) that are installed on a user's device. Users can also see attempted and pending app installations, and their current statuses. If you haven't made apps required or available to your users, they'll see a message explaining that no company apps have been installed.
 
-To see the new view, go to the Company Portal navigation pane and select **Apps** > **Installed Apps**. Then sort or filter the list by on e of the following attributes:
+To see the new view, go to the Company Portal navigation pane and select **Apps** > **Installed Apps**. Then sort or filter the list by one of the following attributes:
 
 - Name
 - Type
@@ -128,9 +128,6 @@ The home page of the Company Portal app for iOS devices has been redesigned. Wit
 
 <!-- 2751523 -->
 Windows devices that enrolled into Intune using [Windows bulk enrollment](https://docs.microsoft.com/intune/windows-bulk-enroll) (provisioning packages) will be able to use the Company Portal app to install available apps. For more information about the Company Portal app, see [Manually add the Windows 10 Company Portal](https://docs.microsoft.com/intune/store-apps-company-portal-app) and [How to configure the Microsoft Intune Company Portal app](https://docs.microsoft.com/intune/company-portal-app).
-
-> [!Note]  
-> This feature isn't yet fully deployed to all customers. If you can't use the Company Portal on bulk enrolled devices, you may have to wait until this change rolls out to your account.
 
 #### App icons are displayed with an automatically generated background
 
