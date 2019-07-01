@@ -2,7 +2,7 @@
 title: What's new in hybrid MDM
 titleSuffix: Configuration Manager
 description: Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune.
-ms.date: 06/24/2019
+ms.date: 07/01/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -45,9 +45,23 @@ Each section of this article lists hybrid features under three different categor
 
 ### New in Microsoft Intune
 
-### View all installed apps from new Company Portal web page 
+#### New view lets users see all managed apps installed on device
+
+<!-- 2352913 -->
+The Company Portal for Windows now lists all managed apps (both required and available) that are installed on a user's device. Users can also see attempted and pending app installations, and their current statuses. If you haven't made apps required or available to your users, they'll see a message explaining that no company apps have been installed.
+
+To see the new view, go to the Company Portal navigation pane and select **Apps** > **Installed Apps**. Then sort or filter the list by on e of the following attributes:
+
+- Name
+- Type
+- Publisher
+- Last updated
+- Status of installation
+
+#### View all installed apps from new Company Portal web page
+
 <!-- 4224326-->
-The Company Portal website's new **Installed Apps** page lists all managed apps (both required and available) that are installed on a user's device. In addition to assignment type, users can see the app's publisher, date published, and current installation status. If you haven't made any apps required or available to your users, they'll see a message explaining that no company apps have been installed. To see the new view, go to the [Company Portal website](https://portal.manage.microsoft.com) and click **Installed Apps**.  
+The Company Portal website's new **Installed Apps** page lists all managed apps (both required and available) that are installed on a user's device. In addition to assignment type, users can see the app's publisher, date published, and current installation status. If you haven't made any apps required or available to your users, they'll see a message explaining that no company apps have been installed. To see the new view, go to the [Company Portal website](https://portal.manage.microsoft.com) and select **Installed Apps**.  
 
 
 ## May 2019
