@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 This section provides topics that show you how to programmatically manage software updates in System Center Configuration Manager.  
 
 > [!NOTE]
->  General information about Software Updates can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt346023.aspx) under [Deploy and manage software updates in System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt634340.aspx).  
+>  General information about Software Updates can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/library/mt346023.aspx) under [Deploy and manage software updates in System Center Configuration Manager](https://technet.microsoft.com/library/mt634340.aspx).  
 
 ## Software Updates topics  
 
