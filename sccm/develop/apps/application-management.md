@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 This section provides topics that show you how to manage Application Management in System Center Configuration Manager.  
 
 > [!NOTE]
->  General information about Application Management can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt346023.aspx) under [Get started with application management in System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt595709.aspx).  
+>  General information about Application Management can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/library/mt346023.aspx) under [Get started with application management in System Center Configuration Manager](https://technet.microsoft.com/library/mt595709.aspx).  
 
 ## Application Management topics  
 

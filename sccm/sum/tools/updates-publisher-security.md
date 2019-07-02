@@ -71,7 +71,7 @@ The following is provided as one example of how to configure the signing certifi
    -   For certification authority (CA) issued certificates: Add the certificate to the **Trusted Publishers** certificate store.
 
    > [!NOTE]
-   > The WUA also checks whether the **Allow signed content from intranet Microsoft update service location** Group Policy setting is enabled on the local computer. This policy setting must be enabled for WUA to scan for the updates that were created and published with Updates Publisher. For more information about enabling this Group Policy setting, see [How to Configure the Group Policy on Client Computers](https://docs.microsoft.com/en-us/previous-versions/bb530967(v=technet.10)).
+   > The WUA also checks whether the **Allow signed content from intranet Microsoft update service location** Group Policy setting is enabled on the local computer. This policy setting must be enabled for WUA to scan for the updates that were created and published with Updates Publisher. For more information about enabling this Group Policy setting, see [How to Configure the Group Policy on Client Computers](https://docs.microsoft.com/previous-versions/bb530967(v=technet.10)).
 
 
 

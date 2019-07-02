@@ -21,7 +21,7 @@ To connect to a SMS Provider, use **WqlConnectionManager.Connect**. After it is 
 
  If you do not have access privileges on the remote SMS Provider, or if you want to use a different user account, then you must supply user credentials for a user account that has access privileges.  
 
- **WQLConnectionManager.Connection** requires a [SmsNamedValuesDictionary](https://msdn.microsoft.com/en-us/library/microsoft.configurationmanagement.managementprovider.smsnamedvaluesdictionary.aspx) object. This can be used to store cached information such as the computer name.  
+ **WQLConnectionManager.Connection** requires a [SmsNamedValuesDictionary](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsnamedvaluesdictionary.aspx) object. This can be used to store cached information such as the computer name.  
 
  It is pre-populated with a number of values that can be used in your application.  
 

@@ -29,9 +29,9 @@ In System Center Configuration Manager, Windows PowerShell allows you to manage 
 
 - [TechNet: Using Windows PowerShell](https://msdn.microsoft.com/powershell/scripting/getting-started/fundamental/using-windows-powershell)  
 
-- [TechNet: Core Modules in Windows PowerShell](http://technet.microsoft.com/library/hh847741.aspx)  
+- [TechNet: Core Modules in Windows PowerShell](https://technet.microsoft.com/library/hh847741.aspx)  
 
-- [TechNet: Cmdlets in System Center Configuration Manager](http://technet.microsoft.com/library/jj849987.aspx)  
+- [TechNet: Cmdlets in System Center Configuration Manager](https://technet.microsoft.com/library/jj849987.aspx)  
 
   **Books:** There are numerous books available for PowerShell. A few example books are listed below.  
 
@@ -51,7 +51,7 @@ In System Center Configuration Manager, Windows PowerShell allows you to manage 
 
   **Forums/Sites:** There are numerous forums/sites available for PowerShell. A few example forums/sites are listed below.  
 
-- [Microsoft: Scripting](https://technet.microsoft.com/en-us/scriptcenter/default)  
+- [Microsoft: Scripting](https://technet.microsoft.com/scriptcenter/default)  
 
 - [Microsoft: Windows Server\Windows PowerShell](http://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserverpowershell)  
 
