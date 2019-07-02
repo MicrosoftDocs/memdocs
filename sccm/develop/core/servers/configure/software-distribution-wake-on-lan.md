@@ -17,7 +17,7 @@ This section provides information about software distribution Wake On LAN in Sys
  This section provides topics that show you how to programmatically manage Wake On LAN for Software Distribution in System Center Configuration Manager.  
 
 > [!NOTE]
->  General information about Wake On LAN can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt346023.aspx) under [How to configure Wake on LAN in System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt757110.aspx).  
+>  General information about Wake On LAN can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/library/mt346023.aspx) under [How to configure Wake on LAN in System Center Configuration Manager](https://technet.microsoft.com/library/mt757110.aspx).  
 
 ## Software Distribution Wake On LAN topics  
 

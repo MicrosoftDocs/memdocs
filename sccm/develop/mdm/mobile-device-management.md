@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 This section provides topics that show you how to programmatically manage mobile devices in System Center Configuration Manager.  
 
 > [!NOTE]
->  General information about Mobile Device Management can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt346023.aspx) under [Manage computers and devices with System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt627858.aspx).  
+>  General information about Mobile Device Management can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/library/mt346023.aspx) under [Manage computers and devices with System Center Configuration Manager](https://technet.microsoft.com/library/mt627858.aspx).  
 
 > [!IMPORTANT]
 >  This section only applies to the Mobile Device Legacy Client. For addition information on the Mobile Device Legacy Client platforms, see the Mobile Device Legacy Client section of [Supported Configurations for Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=272885).  

@@ -142,7 +142,7 @@ For you to use this feature with Configuration Manager, both packages must be de
 For more information about App-V Dynamic Suite Composition, see your App-V documentation.  
 
 ##  Converting App-V 4.6 applications to App-V 5 applications  
-The application package format has changed between App-V 4.6 and App-V 5. Applications that have been sequenced by using App-V 4.6 are no longer supported. But App-V 5 has a package converter tool that you can use to convert applications. For more information, see your [App-V 5 documentation](http://technet.microsoft.com/library/jj713472.aspx).  
+The application package format has changed between App-V 4.6 and App-V 5. Applications that have been sequenced by using App-V 4.6 are no longer supported. But App-V 5 has a package converter tool that you can use to convert applications. For more information, see your [App-V 5 documentation](https://technet.microsoft.com/library/jj713472.aspx).  
 
 Use the following steps to convert App-V 4.6 applications to App-V 5 applications:  
 
@@ -173,7 +173,7 @@ The deployment configuration file has settings that apply to the computer, like 
 
 If you want to deploy App-V 5 virtual applications with Configuration Manager, all three files must be present in the same folder when you create the App-V 5 deployment type. If there are multiple files in the folder, Configuration Manager will use the most recent.  
 
-For more information, see your [App-V 5 documentation](http://technet.microsoft.com/library/jj713466.aspx).  
+For more information, see your [App-V 5 documentation](https://technet.microsoft.com/library/jj713466.aspx).  
 
 ##  App-V local interaction  
 In some application deployment scenarios, applications are installed locally on client computers, and other applications are deployed as virtual applications to the same client computer. By default, the applications that were locally installed cannot see or communicate directly with virtualized applications. This is the intended behavior of the application isolation that App-V provides. Local interaction is a feature of the App-V Client that you can enable for each application to allow locally installed applications that run on a client computer to see and communicate with virtualized applications. Configuration Manager and App-V fully support local interaction.  
@@ -181,7 +181,7 @@ In some application deployment scenarios, applications are installed locally on 
 For more information about the App-V local interaction feature, see your App-V documentation.  
 
 ##  App-V 5 Shared Content Store  
-Configuration Manager supports the App-V 5 Shared Content Store feature. For more information, see [Planning for the App-V 5.0 Shared Content Store (SCS)](http://technet.microsoft.com/library/jj713431.aspx).  
+Configuration Manager supports the App-V 5 Shared Content Store feature. For more information, see [Planning for the App-V 5.0 Shared Content Store (SCS)](https://technet.microsoft.com/library/jj713431.aspx).  
 
 ##  Monitoring virtual applications  
 
