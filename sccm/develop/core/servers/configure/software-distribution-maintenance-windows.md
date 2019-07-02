@@ -17,7 +17,7 @@ This section provides information about software distribution maintenance window
  This section provides topics about programmatically managing software distribution maintenance windows in System Center Configuration Manager.  
 
 > [!NOTE]
->  General information about Maintenance Windows can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt346023.aspx) under [How to use maintenance windows in System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt629354.aspx).  
+>  General information about Maintenance Windows can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/library/mt346023.aspx) under [How to use maintenance windows in System Center Configuration Manager](https://technet.microsoft.com/library/mt629354.aspx).  
 
 ## Software Distribution Maintenance Windows topics  
 

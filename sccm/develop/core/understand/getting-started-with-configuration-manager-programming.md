@@ -19,9 +19,9 @@ To get started with programming for System Center Configuration Manager, it’s 
 ## Functional Understanding  
  To successfully automate or extend Configuration Manager, it is incredibly important to gain a functional understanding of the product. Configuration Manager is multi-tiered, distributed management system, most often spread over numerous servers and numerous locations. See the below resources, for functional information on Configuration Manager.  
 
--   [Documentation for System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt346023.aspx)  
+-   [Documentation for System Center Configuration Manager](https://technet.microsoft.com/library/mt346023.aspx)  
 
--   [Fundamentals of System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt622643.aspx)  
+-   [Fundamentals of System Center Configuration Manager](https://technet.microsoft.com/library/mt622643.aspx)  
 
 -   [TechNet Virtual Labs](http://go.microsoft.com/fwlink/?LinkId=329809) (See: Virtual Lab: Introduction to Configuration Manager 2012 SP1)  
 
