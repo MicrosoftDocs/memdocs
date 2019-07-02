@@ -16,7 +16,7 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-This article describes how create and import queries in System Center Configuration Manager.  
+This article describes how to create and import queries in System Center Configuration Manager.  
 
 ##  <a name="BKMK_Create"></a> Create a query  
  Use this procedure to create a query in Configuration Manager.  
