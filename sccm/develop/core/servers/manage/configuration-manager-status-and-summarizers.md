@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 This section provides topics that show you how to programmatically manage status in System Center Configuration Manager.  
 
 > [!NOTE]
->  General information about Status can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt346023.aspx) under [Monitor the status system of Configuration Manager](https://technet.microsoft.com/en-us/library/mt605239.aspx#BKMK_MonitorSystemStatus).  
+>  General information about Status can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/library/mt346023.aspx) under [Monitor the status system of Configuration Manager](https://technet.microsoft.com/library/mt605239.aspx#BKMK_MonitorSystemStatus).  
 
 ## Status and Summarizers topics  
 
