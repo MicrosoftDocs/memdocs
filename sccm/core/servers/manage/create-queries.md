@@ -160,16 +160,16 @@ Use one of the following values for &lt;Device ID\>:
 |Windows Embedded|7|  
 |iOS|8|  
 |iPad|9|  
-|iPod Touch|10|  
+|iPod touch|10|  
 |Android|11|  
-|Intel System-on-a-Chip|12|  
+|Intel system on a chip|12|  
 |Unix and Linux servers|13|  
 |Apple macOS (MDM)|14|
 |Microsoft HoloLens (MDM)|15|
 |Microsoft Surface Hub (MDM)|16|
 |Android for Work|17|
 
- For example, if you want the query to return only Mac computers, use the following query:  
+ For example, if you want to return only Mac computers, use the following query:  
 
 ```  
 Select SMS_R_System.ClientEdition from SMS_R_System where SMS_R_System.ClientEdition = 5  
