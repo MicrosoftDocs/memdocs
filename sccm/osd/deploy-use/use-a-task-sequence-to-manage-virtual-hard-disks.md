@@ -40,7 +40,7 @@ In System Center Configuration Manager, you can manage virtual hard disks (VHDs)
 
     -   Windows Server 2012 R2  
 
--   Virtualization must be enabled in the BIOS and Hyper-V must be installed on the computer from which you run the Configuration Manager console to manage VHDs. Also as a best practice, install the Hyper-V management tools to help you test and troubleshoot your virtual hard disks. For example, to monitor the smsts.log file to track the progress of the task sequence in Hyper-V you must have the Hyper-V management tools installed. For more information about Hyper-V requirements, see [Hyper-V Installation Prerequisites](http://technet.microsoft.com/library/cc731898.aspx).  
+-   Virtualization must be enabled in the BIOS and Hyper-V must be installed on the computer from which you run the Configuration Manager console to manage VHDs. Also as a best practice, install the Hyper-V management tools to help you test and troubleshoot your virtual hard disks. For example, to monitor the smsts.log file to track the progress of the task sequence in Hyper-V you must have the Hyper-V management tools installed. For more information about Hyper-V requirements, see [Hyper-V Installation Prerequisites](https://technet.microsoft.com/library/cc731898.aspx).  
 
     > [!IMPORTANT]  
     >  The process to create a VHD consumes processor time and memory. Therefore, it is recommended that you manage VHDs from a Configuration Manager console that is not installed on the site server.  
@@ -137,7 +137,7 @@ In System Center Configuration Manager, you can manage virtual hard disks (VHDs)
 3. On the **Home** tab, in the **Create** group, click **Create Virtual Hard Disk** to start the Create Virtual Hard Disk Wizard.  
 
    > [!NOTE]  
-   >  Hyper-V must be installed on the computer running the Configuration Manager console from which you manage VHDs or the **Create Virtual Hard Disk** option is not enabled. For more information about Hyper-V requirements, see [Hyper-V Installation Prerequisites](http://technet.microsoft.com/library/cc731898.aspx).  
+   >  Hyper-V must be installed on the computer running the Configuration Manager console from which you manage VHDs or the **Create Virtual Hard Disk** option is not enabled. For more information about Hyper-V requirements, see [Hyper-V Installation Prerequisites](https://technet.microsoft.com/library/cc731898.aspx).  
 
    > [!TIP]  
    >  To organize your VHDs, create a new folder or select an existing folder under the **Virtual Hard Disks** node, and then click **Create Virtual Hard Disk** from the folder.  
@@ -234,7 +234,7 @@ In System Center Configuration Manager, you can manage virtual hard disks (VHDs)
 3. On the **Home** tab, in the **Virtual Hard Disk** group, click **Modify Virtual Hard Disk** to start the Modify Virtual Hard Disk Wizard.  
 
    > [!NOTE]  
-   >  Hyper-V must be installed on the computer running the Configuration Manager console from which you manage VHDs or the **Modify Virtual Hard Disk** option is not enabled. For more information about Hyper-V requirements, see [Hyper-V Installation Prerequisites](http://technet.microsoft.com/library/cc731898.aspx).  
+   >  Hyper-V must be installed on the computer running the Configuration Manager console from which you manage VHDs or the **Modify Virtual Hard Disk** option is not enabled. For more information about Hyper-V requirements, see [Hyper-V Installation Prerequisites](https://technet.microsoft.com/library/cc731898.aspx).  
 
 4. On the **General** page, confirm the following settings, and then click **Next**.  
 

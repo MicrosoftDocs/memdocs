@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 System Center Configuration Manager maintenance windows provide administrators with a way to define a period of time that limits when changes can be made on the systems that are members of a collection. Maintenance windows restrict when the software updates in deployments can be installed on client computers, in addition to restricting when operating system advertisements and software distribution advertisements can be installed.  
 
 > [!NOTE]
->  General information about Software Updates can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt346023.aspx) under [Deploy and manage software updates in System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt634340.aspx).  
+>  General information about Software Updates can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/library/mt346023.aspx) under [Deploy and manage software updates in System Center Configuration Manager](https://technet.microsoft.com/library/mt634340.aspx).  
 
 ## Software Updates and Maintenance Windows topics  
 

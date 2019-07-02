@@ -44,7 +44,7 @@ manager: dougeby
 
 
 ## Deploying Windows 8 Applications Using MDT  
- MDT can deploy Windows 8 application packages, which have an .appx file extension. These application packages are new to Windows 8. For more information on these applications, see [Windows Store App development.](http://msdn.microsoft.com/windows/apps)  
+ MDT can deploy Windows 8 application packages, which have an .appx file extension. These application packages are new to Windows 8. For more information on these applications, see [Windows Store App development.](https://msdn.microsoft.com/windows/apps)  
 
  Deploy Windows 8 applications using MDT by performing the following steps:  
 
@@ -99,19 +99,19 @@ manager: dougeby
 
      For more information about how to complete the Create Application Wizard in the Configuration Manager console, see the following sections in the Documentation Library for System Center 2012 Configuration Manager, which is included with Configuration Manager:  
 
-    -   [How to Create Applications in Configuration Manager](http://technet.microsoft.com/library/gg682159.aspx)  
+    -   [How to Create Applications in Configuration Manager](https://technet.microsoft.com/library/gg682159.aspx)  
 
-    -   [How to Create Deployment Types in Configuration Manager](http://technet.microsoft.com/library/gg682174.aspx#BKMK_Step3)  
+    -   [How to Create Deployment Types in Configuration Manager](https://technet.microsoft.com/library/gg682174.aspx#BKMK_Step3)  
 
-    -   [How to Manage Applications and Deployment Types in Configuration Manager](http://technet.microsoft.com/library/gg682031)  
+    -   [How to Manage Applications and Deployment Types in Configuration Manager](https://technet.microsoft.com/library/gg682031)  
 
 5.  Ensure that the user device affinity (UDA) feature in Configuration Manager is configured properly to support affinity between users and devices for Configuration Manager application deployment.  
 
-     For more information about how to configure UDA to support Configuration Manager application deployment, see [How to Manage User Device Affinity in Configuration Manager](http://technet.microsoft.com/library/gg699365).  
+     For more information about how to configure UDA to support Configuration Manager application deployment, see [How to Manage User Device Affinity in Configuration Manager](https://technet.microsoft.com/library/gg699365).  
 
 6.  Deploy the application created in step 4 to the targeted users.  
 
-     For more information about how to deploy an application to user, see [How to Deploy Applications in Configuration Manager](http://technet.microsoft.com/library/gg682082).  
+     For more information about how to deploy an application to user, see [How to Deploy Applications in Configuration Manager](https://technet.microsoft.com/library/gg682082).  
 
 7.  Configure the **ApplicationPage** wizard page to include the Configuration Manager application created in step 4 using the UDI Wizard Designer.  
 
@@ -161,20 +161,20 @@ manager: dougeby
 -   Load the MDT Windows PowerShell snap-in using the **Add-PSSnapIn** cmdlet as described in [Load the MDT Windows PowerShell Snap-In Using the Add-PSSnapIn Cmdlet](#LoadMDTSnapInCmdlet).  
 
 ####  <a name="LoadMDTSnapInCmdlet"></a> Load the MDT Windows PowerShell Snap-In Using the Add-PSSnapIn Cmdlet  
- You can load the MDT Windows PowerShell snap-in **Microsoft.BDD.PSSnapIn** from any Windows PowerShell environment using the [Add-PSSnapIn](http://technet.microsoft.com/library/hh849705.aspx) cmdlet, as show in the following example:  
+ You can load the MDT Windows PowerShell snap-in **Microsoft.BDD.PSSnapIn** from any Windows PowerShell environment using the [Add-PSSnapIn](https://technet.microsoft.com/library/hh849705.aspx) cmdlet, as show in the following example:  
 
 ```  
 Add-PSSnapin -Name Microsoft.BDD.PSSnapIn  
 ```  
 
 ###  <a name="CreateDeployShare"></a> Creating a Deployment Share Using Windows PowerShell  
- You can create deployment shares using the MDT Windows PowerShell cmdlets. The root folder for the deployment share is created and shared using standard Windows PowerShell cmdlets and calls to Windows Management Instrumentation (WMI) class commands. The deployment share is populated using the MDTProvider Windows PowerShell provider and the [NewPSDrive](http://technet.microsoft.com/library/dd315340.aspx) cmdlet. The MDTProvider Windows PowerShell drive is persisted using the **Add-MDTPersistentDrive** cmdlet.  
+ You can create deployment shares using the MDT Windows PowerShell cmdlets. The root folder for the deployment share is created and shared using standard Windows PowerShell cmdlets and calls to Windows Management Instrumentation (WMI) class commands. The deployment share is populated using the MDTProvider Windows PowerShell provider and the [NewPSDrive](https://technet.microsoft.com/library/dd315340.aspx) cmdlet. The MDTProvider Windows PowerShell drive is persisted using the **Add-MDTPersistentDrive** cmdlet.  
 
  **To prepare a deployment share using the MDT Windows PowerShell cmdlets**  
 
 1.  Load the MDT Windows PowerShell snap-in as described in [Loading the MDT Windows PowerShell Snap-In](#LoadMDTSnapIn).  
 
-2.  Create the folder that will be the root of the new deployment share using the **New-Item** cmdlet, as shown in the following example and described in [Using the New-Item Cmdlet](http://technet.microsoft.com/library/ee176914.aspx):  
+2.  Create the folder that will be the root of the new deployment share using the **New-Item** cmdlet, as shown in the following example and described in [Using the New-Item Cmdlet](https://technet.microsoft.com/library/ee176914.aspx):  
 
     ```  
     New-Item "C:\MDTDeploymentShare$" -Type directory  
@@ -190,7 +190,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
      The call to the **win32_share** class returns the results of the call. If the value of **ReturnValue** is zero (0), then the call was successful.  
 
-4.  Specify the new shared folder as a deployment share using the [NewPSDrive](http://technet.microsoft.com/library/dd315340.aspx) cmdlet, as shown in the following example:  
+4.  Specify the new shared folder as a deployment share using the [NewPSDrive](https://technet.microsoft.com/library/dd315340.aspx) cmdlet, as shown in the following example:  
 
     ```  
     New-PSDrive -Name "DS002" -PSProvider "MDTProvider" -Root "C:\MDTDeploymentShare$" -Description "MDT Deployment Share Created with Cmdlets" -NetworkPath "\\WDG-MDT-01\MDTDeploymentShare$" -Verbose  
@@ -218,7 +218,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
      In this example, the *$NewDS* variable is used to pass the Windows PowerShell drive object for the new deployment share to the cmdlet.  
 
-     Alternatively, you could have combined the [NewPSDrive](http://technet.microsoft.com/library/dd315340.aspx) and **Add-MDTPersistentDrive** cmdlets, as shown in the following example:  
+     Alternatively, you could have combined the [NewPSDrive](https://technet.microsoft.com/library/dd315340.aspx) and **Add-MDTPersistentDrive** cmdlets, as shown in the following example:  
 
     ```  
     New-PSDrive -Name "DS002" -PSProvider "MDTProvider" -Root "C:\MDTDeploymentShare$" -Description "MDT Deployment Share Created with Cmdlets" -NetworkPath "\\WDG-MDT-01\MDTDeploymentShare$" -Verbose | Add-MDTPersistentDrive -Verbose  
@@ -227,7 +227,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
      In the previous example, the Windows PowerShell pipeline provides both the *Name* and *InputObject* parameters.  
 
 ###  <a name="ViewDeployShareProp"></a> Viewing Deployment Share Properties Using Windows PowerShell  
- You can view the properties of MDT deployment shares using the [Get-ItemProperty](http://technet.microsoft.com/library/hh849851.aspx) cmdlet and the MDTProvider Windows PowerShell provider. These same properties can also be seen in the Deployment Workbench.  
+ You can view the properties of MDT deployment shares using the [Get-ItemProperty](https://technet.microsoft.com/library/hh849851.aspx) cmdlet and the MDTProvider Windows PowerShell provider. These same properties can also be seen in the Deployment Workbench.  
 
  **To view deployment share properties using the MDT Windows PowerShell cmdlets**  
 
@@ -242,7 +242,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
     > [!NOTE]
     >  If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.  
 
-3.  Verify that the MDT deployments that share Windows PowerShell drives are restored properly using the [Get-PSDrive](http://technet.microsoft.com/library/hh849796) cmdlet, as follows:  
+3.  Verify that the MDT deployments that share Windows PowerShell drives are restored properly using the [Get-PSDrive](https://technet.microsoft.com/library/hh849796) cmdlet, as follows:  
 
     ```  
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider  
@@ -250,7 +250,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
      The list of Windows PowerShell drives that are provided using the MDTProvider are listed.  
 
-4.  View the properties of the deployment share using the [Get-ItemProperty](http://technet.microsoft.com/library/hh849851.aspx) cmdlet, as shown in the following example:  
+4.  View the properties of the deployment share using the [Get-ItemProperty](https://technet.microsoft.com/library/hh849851.aspx) cmdlet, as shown in the following example:  
 
     ```  
     Get-ItemProperty "DS002:"  
@@ -259,7 +259,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
      In this example, *DS002:* is the name of a Windows PowerShell drive returned in step 3. The cmdlet returns the properties for the deployment share.  
 
 ###  <a name="ViewListDeployShare"></a> Viewing the List of Deployment Shares Using Windows PowerShell  
- You can view the list of MDT deployment shares using the [Get-PSDrive](http://technet.microsoft.com/library/hh849796) cmdlet and the MDTProvider Windows PowerShell provider. The same list of deployment shares can also be viewed in the Deployment Workbench.  
+ You can view the list of MDT deployment shares using the [Get-PSDrive](https://technet.microsoft.com/library/hh849796) cmdlet and the MDTProvider Windows PowerShell provider. The same list of deployment shares can also be viewed in the Deployment Workbench.  
 
  **To view a list of deployment shares using the MDT Windows PowerShell cmdlets**  
 
@@ -274,7 +274,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
     > [!NOTE]
     >  If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.  
 
-3.  View the list of MDT deployments that share Windows PowerShell drives, one for each deployment share, using the [Get-PSDrive](http://technet.microsoft.com/library/hh849796) cmdlet, as follows:  
+3.  View the list of MDT deployments that share Windows PowerShell drives, one for each deployment share, using the [Get-PSDrive](https://technet.microsoft.com/library/hh849796) cmdlet, as follows:  
 
     ```  
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider  
@@ -298,7 +298,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
     > [!NOTE]
     >  If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.  
 
-3.  Verify that the MDT deployments that share Windows PowerShell drives are restored properly using the [Get-PSDrive](http://technet.microsoft.com/library/hh849796) cmdlet, as follows:  
+3.  Verify that the MDT deployments that share Windows PowerShell drives are restored properly using the [Get-PSDrive](https://technet.microsoft.com/library/hh849796) cmdlet, as follows:  
 
     ```  
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider  
@@ -335,7 +335,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
     > [!NOTE]
     >  If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.  
 
-3.  Verify that the MDT deployments that share Windows PowerShell drives are restored properly using the [Get-PSDrive](http://technet.microsoft.com/library/hh849796) cmdlet, as follows:  
+3.  Verify that the MDT deployments that share Windows PowerShell drives are restored properly using the [Get-PSDrive](https://technet.microsoft.com/library/hh849796) cmdlet, as follows:  
 
     ```  
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider  
@@ -367,7 +367,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
   -   Selecting the **Generate a Lite Touch bootable ISO image** check box on the **General** tab of the **media Properties** dialog box (Clear this check box to reduce the time needed to generate the media unless you need to create bootable DVDs or start virtual machines [VMs] from the .iso file.)  
 
-  -   Setting the same property using the [Set-ItemProperty](http://technet.microsoft.com/library/hh849844) cmdlet  
+  -   Setting the same property using the [Set-ItemProperty](https://technet.microsoft.com/library/hh849844) cmdlet  
 
 - WIM files in the *media_folder*\Content\Deploy\Boot folder (where *media_folder* is the name of the folder that you specified for the media)  
 
@@ -384,7 +384,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
     > [!NOTE]
     >  If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.  
 
-3.  Verify that the MDT deployments that share Windows PowerShell drives are restored properly using the [Get-PSDrive](http://technet.microsoft.com/library/hh849796) cmdlet, as follows:  
+3.  Verify that the MDT deployments that share Windows PowerShell drives are restored properly using the [Get-PSDrive](https://technet.microsoft.com/library/hh849796) cmdlet, as follows:  
 
     ```  
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider  
@@ -408,7 +408,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 ###  <a name="ManageItemDeployShare"></a> Managing Items in a Deployment Share Using Windows PowerShell  
  A deployment share contains items that are used to perform deployments, such as operating systems, applications, device drivers, operating system packages, and task sequences. These items can managed using cmdlets from Windows PowerShell and those provided with MDT.  
 
- For more information about manipulating items directly using Windows PowerShell cmdlets, see [Manipulating Items Directly](http://technet.microsoft.com/library/dd315266.aspx). The folder structure for a deployment share can also be managed using Windows PowerShell. For more information, see [Managing Deployment Share Folders Using Windows PowerShell](#ManageDeployShareFolder).  
+ For more information about manipulating items directly using Windows PowerShell cmdlets, see [Manipulating Items Directly](https://technet.microsoft.com/library/dd315266.aspx). The folder structure for a deployment share can also be managed using Windows PowerShell. For more information, see [Managing Deployment Share Folders Using Windows PowerShell](#ManageDeployShareFolder).  
 
 ####  <a name="ImportItemDeployShare"></a> Import an Item into a Deployment Share  
  You can import each type of item, such as operating systems, applications, or device drivers, using MDT cmdlets. For each type of item, there is a specific MDT cmdlet. If you want to import multiple item into a deployment share using Windows PowerShell, see [Automating Population of a Deployment Share](#AutomatePopulateDeployShare).  
@@ -424,7 +424,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
  |**Import-MDTTaskSequence** |Imports a task sequence into a deployment share|  
 
 ####  <a name="ViewPropertyDeployShare"></a> View the Properties of an Item in a Deployment Share  
- Each item in a deployment share has different set of properties. You can view the properties of an item in a deployment share using the [Get-ItemProperty](http://technet.microsoft.com/library/hh849851.aspx) cmdlet. The [Get-ItemProperty](http://technet.microsoft.com/library/hh849851.aspx) cmdlet uses the MDTProvider to display the properties for a specific item, just as you can see the properties in the Deployment Workbench.  
+ Each item in a deployment share has different set of properties. You can view the properties of an item in a deployment share using the [Get-ItemProperty](https://technet.microsoft.com/library/hh849851.aspx) cmdlet. The [Get-ItemProperty](https://technet.microsoft.com/library/hh849851.aspx) cmdlet uses the MDTProvider to display the properties for a specific item, just as you can see the properties in the Deployment Workbench.  
 
  If want wish to view the properties of multiple items in a deployment share using Windows PowerShell, see [Automating Population of a Deployment Share](#AutomatePopulateDeployShare).  
 
@@ -441,7 +441,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
     > [!NOTE]
     >  If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.  
 
-3.  Verify that the MDT deployments that share Windows PowerShell drives are restored properly using the [Get-PSDrive](http://technet.microsoft.com/library/hh849796) cmdlet, as shown in the following example:  
+3.  Verify that the MDT deployments that share Windows PowerShell drives are restored properly using the [Get-PSDrive](https://technet.microsoft.com/library/hh849796) cmdlet, as shown in the following example:  
 
     ```  
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider  
@@ -449,18 +449,18 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
      The list of Windows PowerShell drives provided using the MDTProvider are listed.  
 
-4.  Return a list of the items for the type of item for which you are wanting to view the properties using the [Get-Item](http://technet.microsoft.com/library/hh849788) cmdlet, as shown in the following example:  
+4.  Return a list of the items for the type of item for which you are wanting to view the properties using the [Get-Item](https://technet.microsoft.com/library/hh849788) cmdlet, as shown in the following example:  
 
     ```  
     Get-Item "DS001:\Operating Systems\*" | Format-List  
     ```  
 
-     In the previous example, a list of all the operating systems in the deployment share is displayed. The output is piped to the **Format-List** cmdlet so that the long names of the operating systems can be seen. For more information on how to use the **Format-List** cmdlet, see [Using the Format-List Cmdlet](http://technet.microsoft.com/library/ee176830.aspx). The same process could be used to return the list of other types of items, such as device drivers or applications.  
+     In the previous example, a list of all the operating systems in the deployment share is displayed. The output is piped to the **Format-List** cmdlet so that the long names of the operating systems can be seen. For more information on how to use the **Format-List** cmdlet, see [Using the Format-List Cmdlet](https://technet.microsoft.com/library/ee176830.aspx). The same process could be used to return the list of other types of items, such as device drivers or applications.  
 
     > [!TIP]
-    >  You could have also used the **dir** command to view the list of operating systems instead of the [Get-Item](http://technet.microsoft.com/library/hh849788) cmdlet.  
+    >  You could have also used the **dir** command to view the list of operating systems instead of the [Get-Item](https://technet.microsoft.com/library/hh849788) cmdlet.  
 
-5.  View the properties of one of the items listed in the previous step using the [Get-ItemProperty](http://technet.microsoft.com/library/hh849851.aspx) cmdlet, as shown in the following example:  
+5.  View the properties of one of the items listed in the previous step using the [Get-ItemProperty](https://technet.microsoft.com/library/hh849851.aspx) cmdlet, as shown in the following example:  
 
     ```  
     Get-ItemProperty -Path "DS002:\Operating Systems\Windows 8 in Windows 8 x64 install.wim"  
@@ -469,7 +469,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
      In this example, the value of the *Path* parameter is the fully qualified Windows PowerShell path to the item, including the file name that was returned in the previous step. You could use the same process to view the properties of other types of items, such as device drivers or applications.  
 
 ####  <a name="RemoveItemDeployShare"></a> Remove an Item from a Deployment Share  
- You can remove an item from a deployment share using the [Remove-Item](http://technet.microsoft.com/library/hh849765) cmdlet. The [Remove-Item](http://technet.microsoft.com/library/hh849765) cmdlet uses the MDTProvider to remove a specific item, just as you can remove an item in the Deployment Workbench. If you want to remove multiple items in a deployment share using Windows PowerShell, see [Automating Population of a Deployment Share](#AutomatePopulateDeployShare).  
+ You can remove an item from a deployment share using the [Remove-Item](https://technet.microsoft.com/library/hh849765) cmdlet. The [Remove-Item](https://technet.microsoft.com/library/hh849765) cmdlet uses the MDTProvider to remove a specific item, just as you can remove an item in the Deployment Workbench. If you want to remove multiple items in a deployment share using Windows PowerShell, see [Automating Population of a Deployment Share](#AutomatePopulateDeployShare).  
 
 > [!NOTE]
 >  Removing an item that a task sequence uses causes the task sequence to fail. Ensure that an item is not referenced by other items in the deployment share prior to removing the item. Once an item is removed, it cannot be recovered.  
@@ -487,7 +487,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
     > [!NOTE]
     >  If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.  
 
-3.  Verify that the MDT deployments that share Windows PowerShell drives are restored properly using the [Get-PSDrive](http://technet.microsoft.com/library/hh849796) cmdlet, as shown in the following example:  
+3.  Verify that the MDT deployments that share Windows PowerShell drives are restored properly using the [Get-PSDrive](https://technet.microsoft.com/library/hh849796) cmdlet, as shown in the following example:  
 
     ```  
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider  
@@ -495,18 +495,18 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
      The list of Windows PowerShell drives provided using the MDTProvider are listed.  
 
-4.  Return a list of the items for the type of item for which you are wanting to view the properties using the [Get-Item](http://technet.microsoft.com/library/hh849788) cmdlet, as shown in the following example:  
+4.  Return a list of the items for the type of item for which you are wanting to view the properties using the [Get-Item](https://technet.microsoft.com/library/hh849788) cmdlet, as shown in the following example:  
 
     ```  
     Get-Item "DS001:\Operating Systems\*" | Format-List  
     ```  
 
-     In the previous example, a list of all the operating systems in the deployment share is displayed. The output is piped to the **Format-List** cmdlet so that the long names of the operating systems can be seen. For more information on how to use the **Format-List** cmdlet, see [Using the Format-List Cmdlet](http://technet.microsoft.com/library/ee176830.aspx). You could use the same process to return the list of other types of items, such as device drivers or applications.  
+     In the previous example, a list of all the operating systems in the deployment share is displayed. The output is piped to the **Format-List** cmdlet so that the long names of the operating systems can be seen. For more information on how to use the **Format-List** cmdlet, see [Using the Format-List Cmdlet](https://technet.microsoft.com/library/ee176830.aspx). You could use the same process to return the list of other types of items, such as device drivers or applications.  
 
     > [!TIP]
-    >  You could have also used the **dir** command to view the list of operating systems instead of the [Get-Item](http://technet.microsoft.com/library/hh849788) cmdlet.  
+    >  You could have also used the **dir** command to view the list of operating systems instead of the [Get-Item](https://technet.microsoft.com/library/hh849788) cmdlet.  
 
-5.  Remove one of the items listed in the previous step using the [Remove-Item](http://technet.microsoft.com/library/hh849765) cmdlet, as shown in the following example:  
+5.  Remove one of the items listed in the previous step using the [Remove-Item](https://technet.microsoft.com/library/hh849765) cmdlet, as shown in the following example:  
 
     ```  
     Remove-Item -Path "DS002:\Operating Systems\Windows 8 in Windows 8 x64 install.wim"  
@@ -524,9 +524,9 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
  For example, an organization may need to deploy multiple deployment shares for different business units, or an organization may provide operating system deployment services for other organizations. In both of these examples, the organizations need the ability to create and populate deployment shares that are configured consistently.  
 
- One method for managing multiple items would be to use a comma-separated values (CSV) file that contains a list of all the items you want to manage in a deployment share using the [Import-CSV](http://technet.microsoft.com/library/dd347665.aspx) cmdlet.  
+ One method for managing multiple items would be to use a comma-separated values (CSV) file that contains a list of all the items you want to manage in a deployment share using the [Import-CSV](https://technet.microsoft.com/library/dd347665.aspx) cmdlet.  
 
- The following is an excerpt of a Windows PowerShell script to import a list of applications based on information in a .csv file using the [Import-CSV](http://technet.microsoft.com/library/dd347665.aspx), [ForEach-Object](http://technet.microsoft.com/library/hh849731), and **Import-MDTApplication** cmdlets:  
+ The following is an excerpt of a Windows PowerShell script to import a list of applications based on information in a .csv file using the [Import-CSV](https://technet.microsoft.com/library/dd347665.aspx), [ForEach-Object](https://technet.microsoft.com/library/hh849731), and **Import-MDTApplication** cmdlets:  
 
 ```  
 $List=Import-CSV "C:\MDT\Import-MDT-Apps.csv"  
@@ -535,36 +535,36 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
 }  
 ```  
 
- In this example, the C:\MDT\Import-MDT-Apps.csv file contains a field for each variable necessary to import an application. For more information about how to create a .csv file for use with the [Import-CSV](http://technet.microsoft.com/library/dd347665.aspx) cmdlet, see [Using the Import-Csv Cmdlet](http://technet.microsoft.com/library/ee176874.aspx).  
+ In this example, the C:\MDT\Import-MDT-Apps.csv file contains a field for each variable necessary to import an application. For more information about how to create a .csv file for use with the [Import-CSV](https://technet.microsoft.com/library/dd347665.aspx) cmdlet, see [Using the Import-Csv Cmdlet](https://technet.microsoft.com/library/ee176874.aspx).  
 
  You can use this same method to import operating systems, device drivers, and other items in a deployment share by performing the following steps:  
 
 1.  Create a .csv file for each type of deployment share item that you want to populate.  
 
-2.  For more information about how to create a .csv file for use with the [Import-CSV](http://technet.microsoft.com/library/dd347665.aspx) cmdlet, see [Using the Import-Csv Cmdlet](http://technet.microsoft.com/library/ee176874.aspx).  
+2.  For more information about how to create a .csv file for use with the [Import-CSV](https://technet.microsoft.com/library/dd347665.aspx) cmdlet, see [Using the Import-Csv Cmdlet](https://technet.microsoft.com/library/ee176874.aspx).  
 
 3.  Create a Windows PowerShell script file that will be used to automate the population of the deployment share.  
 
-     For more information about how to create a Windows PowerShell script, see [Scripting with Windows PowerShell](http://technet.microsoft.com/scriptcenter/powershell.aspx).  
+     For more information about how to create a Windows PowerShell script, see [Scripting with Windows PowerShell](https://technet.microsoft.com/scriptcenter/powershell.aspx).  
 
 4.  Create any prerequisite folder structure required in the deployment share prior to importing the deployment share items.  
 
      For more information, see [Managing Deployment Share Folders Using Windows PowerShell](#ManageDeployShareFolder).  
 
-5.  Add the [Import-CSV](http://technet.microsoft.com/library/dd347665.aspx) cmdlet line for one of the .csv files created in step 1.  
+5.  Add the [Import-CSV](https://technet.microsoft.com/library/dd347665.aspx) cmdlet line for one of the .csv files created in step 1.  
 
-     For more information on the [Import-CSV](http://technet.microsoft.com/library/dd347665.aspx) cmdlet, see [Using the Import-Csv Cmdlet](http://technet.microsoft.com/library/ee176874.aspx).  
+     For more information on the [Import-CSV](https://technet.microsoft.com/library/dd347665.aspx) cmdlet, see [Using the Import-Csv Cmdlet](https://technet.microsoft.com/library/ee176874.aspx).  
 
-6.  Create a [ForEach-Object](http://technet.microsoft.com/library/hh849731) cmdlet loop that processes each item from the .csv file referenced in the [Import-CSV](http://technet.microsoft.com/library/dd347665.aspx) cmdlet in the previous step.  
+6.  Create a [ForEach-Object](https://technet.microsoft.com/library/hh849731) cmdlet loop that processes each item from the .csv file referenced in the [Import-CSV](https://technet.microsoft.com/library/dd347665.aspx) cmdlet in the previous step.  
 
-     For more information on the [ForEach-Object](http://technet.microsoft.com/library/hh849731) cmdlet, see [Using the ForEach-Object Cmdlet](http://technet.microsoft.com/library/ee176828).  
+     For more information on the [ForEach-Object](https://technet.microsoft.com/library/hh849731) cmdlet, see [Using the ForEach-Object Cmdlet](https://technet.microsoft.com/library/ee176828).  
 
-7.  Add the corresponding MDT cmdlet for importing the deployment share items inside the [ForEach-Object](http://technet.microsoft.com/library/hh849731) cmdlet loop created in the previous step.  
+7.  Add the corresponding MDT cmdlet for importing the deployment share items inside the [ForEach-Object](https://technet.microsoft.com/library/hh849731) cmdlet loop created in the previous step.  
 
      For more information on the MDT cmdlets used for importing items into a deployment share, see [Import an Item into a Deployment Share](#ImportItemDeployShare).  
 
 ###  <a name="ManageDeployShareFolder"></a> Managing Deployment Share Folders Using Windows PowerShell  
- You can manage folders in a deployment share using command-line tools, such as the **mkdir** command, or using Windows PowerShell cmdlets, such as the [New-Item](http://technet.microsoft.com/library/hh849795) cmdlet and the MDTProvider Windows PowerShell provider. The same folder structure of deployment shares can also be seen and managed in the Deployment Workbench. For more information about manipulating items directly using Windows PowerShell cmdlets, see [Manipulating Items Directly](http://technet.microsoft.com/library/dd315266.aspx).  
+ You can manage folders in a deployment share using command-line tools, such as the **mkdir** command, or using Windows PowerShell cmdlets, such as the [New-Item](https://technet.microsoft.com/library/hh849795) cmdlet and the MDTProvider Windows PowerShell provider. The same folder structure of deployment shares can also be seen and managed in the Deployment Workbench. For more information about manipulating items directly using Windows PowerShell cmdlets, see [Manipulating Items Directly](https://technet.microsoft.com/library/dd315266.aspx).  
 
 #### Create a Folder in a Deployment Share Using Windows PowerShell  
  **To create a folder in a deployment share using Windows PowerShell**  
@@ -580,7 +580,7 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
     > [!NOTE]
     >  If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.  
 
-3.  View the list of MDT deployments that share Windows PowerShell drives, one for each deployment share, using the [Get-PSDrive](http://technet.microsoft.com/library/hh849796) cmdlet as follows:  
+3.  View the list of MDT deployments that share Windows PowerShell drives, one for each deployment share, using the [Get-PSDrive](https://technet.microsoft.com/library/hh849796) cmdlet as follows:  
 
     ```  
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider  
@@ -604,7 +604,7 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
 
      The Windows_8 folder and any other existing folders in the Operating Systems folder is displayed.  
 
-6.  Create a folder named *Windows_7* folder in the Operating Systems folder in a deployment share using the [New-Item](http://technet.microsoft.com/library/hh849795) cmdlet, as shown in the following example and described in [Using the New-Item Cmdlet](http://technet.microsoft.com/library/ee176914.aspx):  
+6.  Create a folder named *Windows_7* folder in the Operating Systems folder in a deployment share using the [New-Item](https://technet.microsoft.com/library/hh849795) cmdlet, as shown in the following example and described in [Using the New-Item Cmdlet](https://technet.microsoft.com/library/ee176914.aspx):  
 
     ```  
     New-Item "DS002:\Operating Systems\Windows_7" -Type directory  
@@ -634,7 +634,7 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
     > [!NOTE]
     >  If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.  
 
-3.  View the list of MDT deployments that share Windows PowerShell drives, one for each deployment share, using the [Get-PSDrive](http://technet.microsoft.com/library/hh849796) cmdlet as follows:  
+3.  View the list of MDT deployments that share Windows PowerShell drives, one for each deployment share, using the [Get-PSDrive](https://technet.microsoft.com/library/hh849796) cmdlet as follows:  
 
     ```  
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider  
@@ -658,7 +658,7 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
 
      The Windows_8 folder is no longer displayed in the list of folders in the Operating Systems folder  
 
-6.  Delete (remove) a folder named *Windows_7* folder in the Operating Systems folder in a deployment share using the [Remove-Item](http://technet.microsoft.com/library/hh849765) cmdlet, as shown in the following example:  
+6.  Delete (remove) a folder named *Windows_7* folder in the Operating Systems folder in a deployment share using the [Remove-Item](https://technet.microsoft.com/library/hh849765) cmdlet, as shown in the following example:  
 
     ```  
     Remove-Item "DS002:\Operating Systems\Windows_7"  
@@ -688,7 +688,7 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
     > [!NOTE]
     >  If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.  
 
-3.  View the list of MDT deployments share Windows PowerShell drives, one for each deployment share, using the [Get-PSDrive](http://technet.microsoft.com/library/hh849796) cmdlet as follows:  
+3.  View the list of MDT deployments share Windows PowerShell drives, one for each deployment share, using the [Get-PSDrive](https://technet.microsoft.com/library/hh849796) cmdlet as follows:  
 
     ```  
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider  
@@ -712,7 +712,7 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
 
      The Windows_8 folder is renamed to *Win_8*.  
 
-6.  Rename a folder named *Windows_7* to *Win-7* in the Operating Systems folder in a deployment share using the [Rename-Item](http://technet.microsoft.com/library/hh849763) cmdlet, as shown in the following example:  
+6.  Rename a folder named *Windows_7* to *Win-7* in the Operating Systems folder in a deployment share using the [Rename-Item](https://technet.microsoft.com/library/hh849763) cmdlet, as shown in the following example:  
 
     ```  
     Rename-Item "DS002:\Operating Systems\Windows_7" "Win_7"  
@@ -755,7 +755,7 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
    > [!NOTE]
    >  If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.  
 
-3. View the list of MDT deployments share Windows PowerShell drives, one for each deployment share, using the [Get-PSDrive](http://technet.microsoft.com/library/hh849796) cmdlet, as shown in the following example:  
+3. View the list of MDT deployments share Windows PowerShell drives, one for each deployment share, using the [Get-PSDrive](https://technet.microsoft.com/library/hh849796) cmdlet, as shown in the following example:  
 
    ```  
    Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider  
@@ -763,7 +763,7 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
 
     The list of Windows PowerShell drives provided using the MDTProvider are listed, one for each deployment share.  
 
-4. Remove the folder for the existing operating system from the deployment share using the [Get-ChildItem](http://technet.microsoft.com/library/hh849800) and [Remove-Item](http://technet.microsoft.com/library/hh849765) cmdlets, as shown in the following example:  
+4. Remove the folder for the existing operating system from the deployment share using the [Get-ChildItem](https://technet.microsoft.com/library/hh849800) and [Remove-Item](https://technet.microsoft.com/library/hh849765) cmdlets, as shown in the following example:  
 
    ```  
    Get-ChildItem “DS002:\Operating Systems\Windows 7” –recurse | Remove-Item –recurse –force  
@@ -771,7 +771,7 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
 
     In this example, *DS002:* is the name of a Windows PowerShell drive returned in step 3.  
 
-5. Copy the contents of the operating system source files that have the service pack integrated using the [Copy-Item](http://technet.microsoft.com/library/hh849793) cmdlet, as shown in the following example:  
+5. Copy the contents of the operating system source files that have the service pack integrated using the [Copy-Item](https://technet.microsoft.com/library/hh849793) cmdlet, as shown in the following example:  
 
    ```  
    Copy-Item "E:\*" -Destination "DS002:\Operating Systems\Windows 7"-Recurse -Force  
@@ -817,7 +817,7 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
     > [!NOTE]
     >  If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.  
 
-6.  View the list of MDT deployments share Windows PowerShell drives, one for each deployment share, using the [Get-PSDrive](http://technet.microsoft.com/library/hh849796) cmdlet, as shown in the following example:  
+6.  View the list of MDT deployments share Windows PowerShell drives, one for each deployment share, using the [Get-PSDrive](https://technet.microsoft.com/library/hh849796) cmdlet, as shown in the following example:  
 
     ```  
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider  
@@ -825,7 +825,7 @@ Import-MDTApplication –path $App.ApplicationFolder -enable "True" –Name $App
 
      The list of Windows PowerShell drives provided using the MDTProvider are listed, one for each deployment share.  
 
-7.  Copy the .wim file captured in step 3 over the Install.wim file in the operating system in the deployment share using the [Copy-Item](http://technet.microsoft.com/library/hh849793) cmdlet, as shown in the following example:  
+7.  Copy the .wim file captured in step 3 over the Install.wim file in the operating system in the deployment share using the [Copy-Item](https://technet.microsoft.com/library/hh849793) cmdlet, as shown in the following example:  
 
     ```  
     Copy-Item "DS002:\Captures\Win7SP1.wim" -Destination "DS002:\Operating Systems\Windows 7\sources\Install.wim" Force  
@@ -1449,7 +1449,7 @@ Cscript.exe “%SCRIPTROOT%\ZTIConnect.wsf” /uncpath:unc_path
 
  **To add a File Properties condition to a task sequence step in Configuration Manager 2007 R3**  
 
-1.  In Configuration Manager 2007 R3, create a package to install DAO 3.60.6815. Call this package *DAO*, with a program called *InstallDAO*. To learn more about creating packages, see [How to Create a Package](http://technet.microsoft.com/library/bb693627.aspx).  
+1.  In Configuration Manager 2007 R3, create a package to install DAO 3.60.6815. Call this package *DAO*, with a program called *InstallDAO*. To learn more about creating packages, see [How to Create a Package](https://technet.microsoft.com/library/bb693627.aspx).  
 
 2.  Create an **Install Software** step to deploy the DAO package.  
 
@@ -2893,7 +2893,7 @@ The following table details some useful functions available, and their output. F
 
        The **%** symbol is a wildcard character that is included in the names to allow administrators to return any computer models or manufactures that contains the value specified for ***hardware_model*** or ***hardware_manufacturer***.  
 
-      For more information about WMI and WQL queries, see the section, "Add WMI Queries to Task Sequence Step Conditions", in the MDT document *Using the Microsoft Deployment Toolkit*, and see [Querying with WQL](http://msdn.microsoft.com/library/aa392902.aspx).  
+      For more information about WMI and WQL queries, see the section, "Add WMI Queries to Task Sequence Step Conditions", in the MDT document *Using the Microsoft Deployment Toolkit*, and see [Querying with WQL](https://msdn.microsoft.com/library/aa392902.aspx).  
 
 11. Click **OK** to submit the query, and then click **OK** to submit changes to the task sequence.  
 
@@ -3135,7 +3135,7 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
 
 18. When the boot image has been imported, any computer that boots in PXE and receives a reply from Windows Deployment Services will be able to download the LTI boot image and initiate an LTI installation.  
 
-    Installing and configuring Windows Deployment Services is not covered in this guide. For additional information about Windows Deployment Services, see the [Windows Deployment Services Guide](http://technet.microsoft.com/library/cc265612.aspx).  
+    Installing and configuring Windows Deployment Services is not covered in this guide. For additional information about Windows Deployment Services, see the [Windows Deployment Services Guide](https://technet.microsoft.com/library/cc265612.aspx).  
 
 #### Use Windows Deployment Services to Automatically Detect the Deployment Server  
  An additional option is available when using Windows Deployment Services to host MDT boot images when the MDT deployment share is hosted on the same server as Windows Deployment Services.  

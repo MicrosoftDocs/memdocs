@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 This section provides topics that show you how to extend Application Management in System Center Configuration Manager.  
 
 > [!NOTE]
->  General information about Application Management can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt346023.aspx) under [Deploy and manage applications with System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt627959.aspx).  
+>  General information about Application Management can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/library/mt346023.aspx) under [Deploy and manage applications with System Center Configuration Manager](https://technet.microsoft.com/library/mt627959.aspx).  
 
 ## Application Management Extension topics  
 

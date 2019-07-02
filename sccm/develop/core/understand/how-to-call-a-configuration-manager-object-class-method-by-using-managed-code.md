@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Call a Configuration Manager Object Class Method by Using Managed Code
-To call a SMS Provider class method, in System Center Configuration Manager, you use the [ExecuteMethod](https://msdn.microsoft.com/en-us/library/cc146186.aspx) method. You populate a [Dictionary](https://msdn.microsoft.com/library/aa239680.aspx) object with the method's parameters, and the return value is an [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) object that contains the result of the method call.  
+To call a SMS Provider class method, in System Center Configuration Manager, you use the [ExecuteMethod](https://msdn.microsoft.com/library/cc146186.aspx) method. You populate a [Dictionary](https://msdn.microsoft.com/library/aa239680.aspx) object with the method's parameters, and the return value is an [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) object that contains the result of the method call.  
 
 > [!NOTE]
 >  To call a method on an object instance, use the [ExecuteMethod](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.executemethod.aspx) method on the [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) object instance.  
@@ -23,7 +23,7 @@ To call a SMS Provider class method, in System Center Configuration Manager, you
 
 2.  Create the input parameters as a **Dictionary** object.  
 
-3.  Using the **WqlConnectionManager** object instance, call [ExecuteMethod](https://msdn.microsoft.com/en-us/library/cc146186.aspx) and specify the class name and input parameters.  
+3.  Using the **WqlConnectionManager** object instance, call [ExecuteMethod](https://msdn.microsoft.com/library/cc146186.aspx) and specify the class name and input parameters.  
 
 4.  Retrieve the method return value from the *ReturnValue* property in the returned **IResultObject** object.  
 
