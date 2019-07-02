@@ -115,7 +115,7 @@ You create a collection that has one include collection rule and one exclude col
 
             Now the site clears the schedule when you disable this setting. To specify a schedule for collection evaluation, enable the option to **Schedule a full update on this collection**.  
 
-            When you update your site, for any existing collection on which you specified a schedule, the site enables the option to **Schedule a full update on this collection**. While this configuration might not be your intent, it was the actual behavior. To stop the site evaluating a collection on a schedule, disable this option.  
+            When you update your site, for any existing collection on which you specified a schedule, the site enables the option to **Schedule a full update on this collection**. While this configuration might not be your intent, it was the actual behavior of the schedule before you updated the site. To stop the site evaluating a collection on a schedule, disable this option.  
 
         - You can't disable the evaluation of built-in collections like **All Systems**, but now you can configure the schedule. This behavior allows you to customize this action at a time that meets your requirements. 
 

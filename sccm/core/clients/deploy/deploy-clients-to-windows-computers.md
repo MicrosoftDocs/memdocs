@@ -185,7 +185,7 @@ Use the Windows Installer package CCMSetup.msi for Group Policy-based installati
 
 -   If you've extended the Active Directory schema for Configuration Manager, and you selected **Publish this site in Active Directory Domain Services** on the **Advanced** tab of the **Site Properties** dialog box, client computers automatically search Active Directory Domain Services for installation properties. For more information, see [About client installation properties published to Active Directory Domain Services](/sccm/core/clients/deploy/about-client-installation-properties-published-to-active-directory-domain-services).  
 
--   If you haven't extended the Active Directory schema, for information about storing installation properties in the Windows registry of computers, see the section on [provisioning client installation properties](#BKMK_Provision). The client uses these installation properties when it installs.  
+-   If you haven't extended the Active Directory schema, see the section on [provisioning client installation properties](#BKMK_Provision) for information about storing installation properties in the Windows registry of computers. The client uses these installation properties when it installs.  
 
 For more information, see [How to use Group Policy to remotely install software](https://support.microsoft.com/help/816102/how-to-use-group-policy-to-remotely-install-software-in-windows-server).  
 
@@ -263,7 +263,7 @@ This command overrides the automatic configuration that Active Directory Domain 
 - Intranet management point.
 - Internet-based management point.
 - Fallback status point that accepts connections from the internet.
-- Use a client PKI certificate (if available) that has the longest validity period.  
+- Use a client public key infrastructure (PKI)  certificate (if available) that has the longest validity period.  
 
 ##  <a name="BKMK_ClientLogonScript"></a> Logon script installation
 
@@ -356,7 +356,7 @@ Preinstall the Configuration Manager client on a reference computer that you use
 
 3.  Delete the SMSCFG.INI file from the Windows folder on the reference computer.  
 
-4.  Remove any certificates that are stored in the local computer store on the reference computer. For example, if you use public key infrastructure (PKI) certificates, before you image the computer, remove the certificates in the **Personal** store for **Computer** and **User**.  
+4.  Remove any certificates that are stored in the local computer store on the reference computer. For example, if you use PKI certificates, before you image the computer, remove the certificates in the **Personal** store for **Computer** and **User**.  
 
 5.  If the clients are installed in a different Configuration Manager hierarchy than that of the reference computer, remove the trusted root key from the reference computer.  
 
@@ -547,7 +547,7 @@ You might have to restart the client for the changes to take effect.
 
 ##### PowerShell
 
-1. Open a PowerShell in-line editor, like PowerShell ISE or Visual Studio Code, or any text editor, like Notepad.
+1. Open a PowerShell in-line editor, like PowerShell ISE or Visual Studio Code. You can also use a text editor, like Notepad.
 
 2. Copy and insert the following lines of code into the editor. Replace `'mp.contoso.com'` with the internet FQDN of your internet-based management point.
 
