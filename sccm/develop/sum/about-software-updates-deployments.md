@@ -16,7 +16,7 @@ ms.collection: M365-identity-device-management
 Software updates are delivered to client computers in System Center Configuration Manager by creating software update deployments. It is a multistep process to create software update deployments by using the Configuration Manager SDK interfaces. A basic approach to deploying software updates, by using the Configuration Manager SDK interfaces, is outlined below.  
 
 > [!NOTE]
->  General information about Software Updates can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt346023.aspx) under [Deploy and manage software updates in System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt634340.aspx).  
+>  General information about Software Updates can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/library/mt346023.aspx) under [Deploy and manage software updates in System Center Configuration Manager](https://technet.microsoft.com/library/mt634340.aspx).  
 
  Coding examples (in C# and VBScript) for individual steps of the deployment process are included in the [Software Updates Deployments](../../develop/sum/software-updates-deployments.md) section of the Configuration Manager SDK.  
 

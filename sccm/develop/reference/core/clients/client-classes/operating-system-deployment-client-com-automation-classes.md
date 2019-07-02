@@ -23,5 +23,5 @@ This section provides reference content for the operating system deployment task
 |[ITSEnvClass Interface](../../../../../develop/reference/core/clients/client-classes/itsenvclass-interface.md)|Represents the operating system deployment task sequencing environment in System Center Configuration Manager.|  
 
 ## See Also  
- [Operating System Deployment Client COM Automation Classes](http://msdn.microsoft.com/en-us/76d907fd-bc2a-4a07-8433-028e40f5d0c3)   
+ [Operating System Deployment Client COM Automation Classes](https://msdn.microsoft.com/76d907fd-bc2a-4a07-8433-028e40f5d0c3)   
  [Extending Operating System Deployment](../../../../../develop/osd/extending-operating-system-deployment.md)
