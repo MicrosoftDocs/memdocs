@@ -53,7 +53,7 @@ This article describes how to create and import queries in System Center Configu
     > [!IMPORTANT]  
     > If you create a query that contains no criteria, the query will return all devices in the **All Systems** collection.  
 
-9. On the **Joins** tab of the &lt;Query Name\> **Statement Properties** dialog box, you can combine data from two different attributes into your query results. Although Configuration Manager automatically creates query joins when you choose different attributes for your query result, the **Joins** tab provides more advanced options. System Center 2012 Configuration Manager supports these attribute classes:  
+9. On the **Joins** tab of the &lt;Query Name\> **Statement Properties** dialog box, you can combine data from two different attributes into your query results. Although Configuration Manager automatically creates query joins when you choose different attributes for your query result, the **Joins** tab provides more advanced options. Configuration Manager supports these attribute classes:  
 
     |Join type|Description|  
     |---------------|-----------------|  
