@@ -18,7 +18,7 @@ ms.collection: M365-identity-device-management
 
 This article gives you an introduction to using System Center Configuration Manager compliance settings by guiding you through some common scenarios that you might come across.  
 
- If you're already familiar with compliance settings, you can find detailed informaion about all the features you use in [Configuration items for devices managed with the System Center Configuration Manager client](../../compliance/deploy-use/create-configuration-items.md).  
+ If you're already familiar with compliance settings, you can find detailed information about all the features you use in [Configuration items for devices managed with the System Center Configuration Manager client](../../compliance/deploy-use/create-configuration-items.md).  
 
  Before you start, read [Get started with compliance settings](../../compliance/get-started/get-started-with-compliance-settings.md) to learn some basics about compliance settings. Read [Plan for and configure compliance settings](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md) for information about necessary prerequisites.  
 
