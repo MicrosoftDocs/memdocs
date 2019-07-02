@@ -16,9 +16,9 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Use hardware inventory in System Center Configuration Manager to collect information about the hardware configuration of client devices in your organization. To collect hardware inventory, the **Enable hardware inventory on clients** setting must be enabled in client settings.  
+Use hardware inventory in System Center Configuration Manager to collect information about the hardware configuration of client devices in your organization. To collect hardware inventory, you must select the **Enable hardware inventory on clients** setting in client settings.  
 
- After hardware inventory is enabled and a hardware inventory cycle is run by the client, the client sends the information to a management point in the client's site. The management point then forwards the inventory information to the Configuration Manager site server, which stores the inventory information in the site database. Hardware inventory runs on clients according to the schedule that you specify in client settings.  
+ After hardware inventory is enabled and the client runs a hardware inventory cycle, the client sends the information to a management point in the client's site. The management point then forwards the inventory information to the Configuration Manager site server, which stores the inventory information in the site database. Hardware inventory runs on clients according to the schedule that you specify in client settings.  
 ## View hardware inventory 
 
  You can use several methods to view the hardware inventory data that Configuration Manager collects, including these methods:  
@@ -31,7 +31,7 @@ Use hardware inventory in System Center Configuration Manager to collect informa
 
 - [Use Resource Explorer](../../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md) to view detailed information about the hardware inventory that's collected from client devices.
 
-When hardware inventory runs on a client device, the first inventory data that the client returns is always a full inventory. Subsequent inventory data contains only delta inventory information. The site server processes delta inventory information in the order in which it's received. If delta information for a client is missing, the site server rejects additional delta information and directs the client to run a full inventory cycle.  
+When hardware inventory runs on a client device, the first inventory data that the client returns is always a full inventory. Subsequent inventory data contains only delta inventory information. The site server processes delta inventory information in the order received. If delta information for a client is missing, the site server rejects additional delta information and directs the client to run a full inventory cycle.  
 
  Configuration Manager provides limited support for dual-boot computers. Configuration Manager can discover dual-boot computers but returns inventory information only from the operating system that's active when the inventory cycle runs.  
 

@@ -37,7 +37,7 @@ This article describes how create and import queries in System Center Configurat
     |**User Resource**|Use to search for typical user information, like user names, user group names, and security group names.|  
     |**Deployment**|Use to search for typical attributes of a deployment, like the deployment name, the schedule, and the collection that it was deployed to.|  
 
-6.  Select **Edit Query Statement** to open the *&lt;Query Name\>* **Statement Properties** dialog box.  
+6.  Select **Edit Query Statement** to open the &lt;Query Name\> **Statement Properties** dialog box.  
 
 7.  On the **General** tab of the &lt;Query Name\> **Statement Properties** dialog box, specify the attributes that the query returns and how they should be displayed. Select the **New** icon to add a new attribute. You can also select **Show Query Language** to enter or edit the query directly in WMI Query Language (WQL). For examples of WMI queries, see the [Example WQL queries](#BKMK_Example) section in this article.  
 
@@ -53,7 +53,7 @@ This article describes how create and import queries in System Center Configurat
     > [!IMPORTANT]  
     > If you create a query that contains no criteria, the query will return all devices in the **All Systems** collection.  
 
-9. On the **Joins** tab of the &lt;Query Name\> **Statement Properties** dialog box, you can combine data from two different attributes into your query results. Although Configuration Manager automatically creates query joins when you choose different attributes for your query result, the **Joins** tab provides more advanced options. These are attribute classes that System Center 2012 Configuration Manager supports:  
+9. On the **Joins** tab of the &lt;Query Name\> **Statement Properties** dialog box, you can combine data from two different attributes into your query results. Although Configuration Manager automatically creates query joins when you choose different attributes for your query result, the **Joins** tab provides more advanced options. System Center 2012 Configuration Manager supports these attribute classes:  
 
     |Join type|Description|  
     |---------------|-----------------|  
@@ -79,7 +79,7 @@ This article describes how create and import queries in System Center Configurat
 
 3.  On the **MOF File Name** page of the **Import Objects Wizard**, select **Browse** to select the Managed Object Format (MOF) file that contains the query that you want to import.  
 
-4.  Review information about the query to be imported and then complete the wizard. The new query appears on the **Queries** node in the **Monitoring** workspace.  
+4.  Review the information about the query to be imported and then complete the wizard. The new query appears on the **Queries** node in the **Monitoring** workspace.  
 
 ##  <a name="BKMK_Example"></a> Example WQL queries
 
@@ -146,7 +146,7 @@ Device types are stored in the Configuration Manager database under the resource
 Select SMS_R_System.ClientEdition from SMS_R_System where SMS_R_System.ClientEdition = <Device ID>  
 ```  
 
-Use one of the following values for &lt;Device ID\>:  
+Use one of these values for &lt;Device ID\>:  
 
 |Device type|Value of AgentEdition|  
 |-----------------|---------------------------|  
@@ -169,7 +169,7 @@ Use one of the following values for &lt;Device ID\>:
 |Microsoft Surface Hub (MDM)|16|
 |Android for Work|17|
 
- For example, if you want to return only Mac computers, use the following query:  
+ For example, if you want to return only Mac computers, use this query:  
 
 ```  
 Select SMS_R_System.ClientEdition from SMS_R_System where SMS_R_System.ClientEdition = 5  
