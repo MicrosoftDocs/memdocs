@@ -126,12 +126,12 @@ After a client establishes communication with a management point, it continues t
 The client then randomly selects a new management point to use.  
 
 ##  <a name="bkmk_ad"></a> Active Directory  
-Clients that are domain joined can use AD DS for service location. This requires sites to [publish data to Active Directory](http://technet.microsoft.com/library/hh696543.aspx).  
+Clients that are domain joined can use AD DS for service location. This requires sites to [publish data to Active Directory](https://technet.microsoft.com/library/hh696543.aspx).  
 
 A client can use AD DS for service location when all the following conditions are true:  
 
 -   The Active Directory [schema has been extended](https://technet.microsoft.com/library/mt345589.aspx) or was extended for System Center 2012 Configuration Manager.  
--   The [Active Directory forest is configured for publishing](http://technet.microsoft.com/library/hh696542.aspx), and Configuration Manager sites are configured to publish.  
+-   The [Active Directory forest is configured for publishing](https://technet.microsoft.com/library/hh696542.aspx), and Configuration Manager sites are configured to publish.  
 -   The client computer is a member of an Active Directory domain and can access a global catalog server.  
 
 If a client cannot find a management point to use for service location from AD DS, it attempts to use DNS.  
@@ -143,7 +143,7 @@ Consider using DNS for service location when any of the following conditions are
 -   The AD DS schema is not extended to support Configuration Manager.
 -   Clients on the intranet are located in a forest that is not enabled for Configuration Manager publishing.  
 -   You have clients on workgroup computers, and those clients are not configured for internet-only client management. (A workgroup client configured for the internet will communicate only with internet-facing management points and will not use DNS for service location.)  
--   You can [configure clients to find management points from DNS](http://technet.microsoft.com/library/gg682055).  
+-   You can [configure clients to find management points from DNS](https://technet.microsoft.com/library/gg682055).  
 
 When a site publishes service location records for management points to DNS:  
 

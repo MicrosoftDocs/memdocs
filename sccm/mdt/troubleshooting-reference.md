@@ -48,7 +48,7 @@ manager: dougeby
 - **DeploymentWorkbench_*id*.log**. This log file is created in the %temp% folder when you specify **a /debug** when starting the Deployment Workbench.  
 
 ### Configuration Manager Operating System Deployment Logs  
- For information about which operating system deployment log files created by Microsoft System Center 2012 R2 Configuration Manager, see [Technical Reference for Log Files in Configuration Manager](http://technet.microsoft.com/library/hh427342.aspx).  
+ For information about which operating system deployment log files created by Microsoft System Center 2012 R2 Configuration Manager, see [Technical Reference for Log Files in Configuration Manager](https://technet.microsoft.com/library/hh427342.aspx).  
 
  When running the Windows User State Migration Tool (USMT), MDT automatically adds the logging options to save the USMT log files to the MDT log file locations. The log files and when they are created are as follows:  
 
@@ -315,7 +315,7 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
 ####  <a name="BlockedExecutables"></a> Blocked Executables  
  **Problem:** If installation source files are downloaded from the Internet, it is likely that they will be marked with one or more NTFS file system data streams. For more information about NTFS data streams, see [File Streams](http://msdn2.microsoft.com/library/aa364404\(VS.85\).aspx). The existence of NTFS file system data streams might cause an **Open File – Security Warning** prompt to be displayed. The installation will not proceed until you click **Run** at the prompt.  
 
- Figure 2 shows, you can view NTFS file system data streams using the **More** command and the [Streams utility](http://technet.microsoft.com/sysinternals/bb897440.aspx).  
+ Figure 2 shows, you can view NTFS file system data streams using the **More** command and the [Streams utility](https://technet.microsoft.com/sysinternals/bb897440.aspx).  
 
  ![TroubleshootingReference2](media/TroubleshootingReference2.jpg "TroubleshootingReference2")  
 Figure 2. NTFS data streams  
@@ -348,9 +348,9 @@ Figure 2. NTFS data streams
   Application Microsoft Office 2007 Professional returned an unexpected return code: 30029  
   ```  
 
-  **Possible Solution 1:** Relocate the MSP file to the Updates directory, and then run setup.exe without specifying the **\/adminfile** option. For more information about deploying updates during the installation, see [Deploying the 2007 Office system](http://technet.microsoft.com/library/cc303395\(v=Office.12\).aspx).  
+  **Possible Solution 1:** Relocate the MSP file to the Updates directory, and then run setup.exe without specifying the **\/adminfile** option. For more information about deploying updates during the installation, see [Deploying the 2007 Office system](https://technet.microsoft.com/library/cc303395\(v=Office.12\).aspx).  
 
-  **Possible Solution 2:** Verify that the MSP file does not have the **Suppress modal** check box selected. For more information about configuring this setting, see [Overview of 2007 Office System Deployment](http://technet.microsoft.com/library/bb490141.aspx).  
+  **Possible Solution 2:** Verify that the MSP file does not have the **Suppress modal** check box selected. For more information about configuring this setting, see [Overview of 2007 Office System Deployment](https://technet.microsoft.com/library/bb490141.aspx).  
 
 ### AutoLogon  
  Review the problems and solutions for automatic logon issues:  
@@ -583,7 +583,7 @@ Figure 2. NTFS data streams
 -   Troubleshooting device driver installation issues using the SetupAPI.log as described in [Troubleshoot Device Installation with SetupAPI.log](#TroubleshootDeviceInstallationwithSetupAPI.log)  
 
 ####  <a name="TroubleshootDeviceInstallationwithSetupAPI.log"></a> Troubleshoot Device Installation with SetupAPI.log  
- The white paper [Troubleshooting Device Installation with the SetupAPI Log File](http://msdn.microsoft.com/windows/hardware/gg463393.aspx) provides information about debugging Windows device installation. Specifically, the paper provides guidelines for driver developers and testers to interpret the SetupAPI log file.  
+ The white paper [Troubleshooting Device Installation with the SetupAPI Log File](https://msdn.microsoft.com/windows/hardware/gg463393.aspx) provides information about debugging Windows device installation. Specifically, the paper provides guidelines for driver developers and testers to interpret the SetupAPI log file.  
 
  One of the most useful log files for debugging purposes is the SetupAPI.log file. This plain\-text file maintains the information that SetupAPI records about device installation, service pack installation, and update installation. Specifically, the file maintains a record of device and driver changes as well as major system changes beginning from the most recent Windows installation. This paper focuses on using the SetupAPI log file to troubleshoot device installation; it does not describe the log file sections that are associated with service pack and update installations.  
 

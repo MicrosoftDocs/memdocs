@@ -258,7 +258,7 @@ The Windows ADK installation can require up to 650 MB of free disk space on each
 
 Starting in version 1810, the SMS Provider provides read-only API interoperability access to WMI over HTTPS, called the **administration service**. This REST API can be used in place of a custom web service to access information from the site.
 
-The **administration service** URL format is `https://<servername>/AdminService/wmi/<ClassName>` where `<servername>` is the the server where the SMS Provider is installed and `<ClassName>` is a valid Configuration Manager WMI class name. In version 1810, this class name doesn't include the `SMS_` prefix. In version 1902 and later, this class name is the same as the WMI class name. 
+The **administration service** URL format is `https://<servername>/AdminService/wmi/<ClassName>` where `<servername>` is the server where the SMS Provider is installed and `<ClassName>` is a valid Configuration Manager WMI class name. In version 1810, this class name doesn't include the `SMS_` prefix. In version 1902 and later, this class name is the same as the WMI class name. 
 
 For example:
 - 1810: `https://servername/AdminService/wmi/Site`

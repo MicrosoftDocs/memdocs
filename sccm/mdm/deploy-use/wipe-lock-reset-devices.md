@@ -147,7 +147,7 @@ The following settings are also removed from Windows 10 Mobile and Windows Phone
 
 Windows 8.1 and Windows RT 8.1 support selective wipe of Encrypting File System (EFS)-encrypted content. The following apply to a selective wipe of EFS-enabled content:  
 
-- Only apps and data that are protected by EFS through the same Internet domain as the Intune account are selectively wiped. For more information, see [Windows Selective Wipe for Device Data Management](http://technet.microsoft.com/library/dn486874.aspx).  
+- Only apps and data that are protected by EFS through the same Internet domain as the Intune account are selectively wiped. For more information, see [Windows Selective Wipe for Device Data Management](https://technet.microsoft.com/library/dn486874.aspx).  
 
 - If any changes are made to the domain associated with EFS, the changes can take up to 48 hours before apps and data that use the new domain can be selectively wiped.  
 
@@ -247,4 +247,4 @@ If a user loses their device, you can lock the device remotely. The following ta
 
 ## See also  
 
-[Windows Selective Wipe for Device Data Management](http://technet.microsoft.com/library/dn486874.aspx)   
+[Windows Selective Wipe for Device Data Management](https://technet.microsoft.com/library/dn486874.aspx)   
