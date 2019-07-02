@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 Before software update compliance assessment data is displayed in the System Center Configuration Manager console and before software updates can be deployed to client computers, you must install and configure a software update point. In addition, consider the configuration and settings for other software updates components, such as the Windows Server Update Services (WSUS) server and the software updates client agent. For more information about WSUS, see the MSDN documentation for [Windows Server Update Services](http://go.microsoft.com/fwlink/?LinkId=93575).  
 
 > [!NOTE]
->  General information about Software Updates can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt346023.aspx) under [Deploy and manage software updates in System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt634340.aspx).  
+>  General information about Software Updates can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/library/mt346023.aspx) under [Deploy and manage software updates in System Center Configuration Manager](https://technet.microsoft.com/library/mt634340.aspx).  
 
 ## Software Update Point  
  A software update point in System Center Configuration Manager is a required component of software updates, and after it is installed, the software update point is displayed as a site system role in the Configuration Manager console. The software update point site system role must be created on a site system server that has Windows Server Update Services (WSUS) 3.0 installed.  

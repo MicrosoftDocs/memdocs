@@ -149,26 +149,26 @@ Hard to say since every environment is different. The best thing to do is to cos
 
 ## Additional Resources
 **Fundamentals:**
-http://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/
+https://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/
 
 **Azure VM Machine Types:**
  - Azure Machine sizes: https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs/  
- - VM Pricing: http://azure.microsoft.com/pricing/details/virtual-machines/  
- - Storage Pricing: http://azure.microsoft.com/pricing/details/storage/
+ - VM Pricing: https://azure.microsoft.com/pricing/details/virtual-machines/  
+ - Storage Pricing: https://azure.microsoft.com/pricing/details/storage/
 
 **Disk Performance Considerations:**    
- - Premium Disk intro:  http://azure.microsoft.com/blog/2014/12/11/introducing-premium-storage-high-performance-storage-for-azure-virtual-machine-workloads/  
- - Deeper Premium Disk info: http://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/   
+ - Premium Disk intro:  https://azure.microsoft.com/blog/2014/12/11/introducing-premium-storage-high-performance-storage-for-azure-virtual-machine-workloads/  
+ - Deeper Premium Disk info: https://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/   
  - Handy collection of charts for max Sizes and Perf targets for Storage: https://azure.microsoft.com/documentation/articles/storage-scalability-targets/  
- - Another Intro + some cool uber-geek data on how Premium Storage works behind the covers:  http://azure.microsoft.com/blog/2015/04/16/azure-premium-storage-now-generally-available-2/
+ - Another Intro + some cool uber-geek data on how Premium Storage works behind the covers:  https://azure.microsoft.com/blog/2015/04/16/azure-premium-storage-now-generally-available-2/
 
 **Availability:**
  - Azure IaaS Uptime SLA's: https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/  
  - Availability Sets Explained: https://azure.microsoft.com/documentation/articles/virtual-machines-manage-availability/
 
 **Connectivity:**
- - Express route vs. Azure VPN: http://azure.microsoft.com/blog/2014/06/10/expressroute-or-virtual-network-vpn-whats-right-for-me/
- - Express Route Pricing: http://azure.microsoft.com/pricing/details/expressroute/
- - More about Express Route: http://azure.microsoft.com/documentation/articles/expressroute-introduction/
+ - Express route vs. Azure VPN: https://azure.microsoft.com/blog/2014/06/10/expressroute-or-virtual-network-vpn-whats-right-for-me/
+ - Express Route Pricing: https://azure.microsoft.com/pricing/details/expressroute/
+ - More about Express Route: https://azure.microsoft.com/documentation/articles/expressroute-introduction/
 
  

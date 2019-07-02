@@ -1,4 +1,4 @@
---- 
+---
 author: aczechowski
 ms.author: aaroncz
 ms.prod: configuration-manager
