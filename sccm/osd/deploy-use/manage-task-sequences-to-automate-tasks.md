@@ -2,7 +2,7 @@
 title: Manage task sequences
 titleSuffix: Configuration Manager
 description: Create, edit, deploy, import, and export task sequences to manage them and automate tasks in your environment.
-ms.date: 05/03/2019
+ms.date: 07/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -62,6 +62,12 @@ Modify a task sequence by adding or removing steps, adding or removing groups, o
 
 For a list of the available task sequence steps, see [Task sequence steps](/sccm/osd/understand/task-sequence-steps).  
 
+### <a name="bkmk_sedo"></a> Reclaim lock for editing task sequences
+
+<!--3699337-->
+If the Configuration Manager console stops responding, you can be locked out of making further changes until the lock expires after 30 minutes. This lock is part of the Configuration Manager SEDO (Serialized Editing of Distributed Objects) system. For more information, see [Configuration Manager SEDO](/sccm/develop/core/understand/sedo).
+
+Starting in version 1906, you can clear your lock on a task sequence. This action only applies to your user account that has the lock, and on the same device from which the site granted the lock. When you attempt to access a locked task sequence, you can now **Discard Changes**, and continue editing the object. These changes would be lost anyway when the lock expired.
 
 
 ## <a name="bkmk_prop-general"></a> Configure Software Center properties
