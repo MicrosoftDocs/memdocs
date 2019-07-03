@@ -385,7 +385,7 @@ In the **Install Application** task sequence step, you can now delete the app co
 <!--3699337-->
 If the Configuration Manager console stops responding, you can be locked out of making further changes to a task sequence. Now when you attempt to access a locked task sequence, you can now **Discard Changes**, and continue editing the object.
 
-For more information, see [Manage task sequences](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks).
+For more information, see [Manage task sequences](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#bkmk_sedo).
 
 ### Pre-cache driver packages and OS images
 <!--4224642-->
