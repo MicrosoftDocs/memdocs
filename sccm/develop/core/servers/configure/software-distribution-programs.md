@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 This section provides topics that show you how to programmatically manage programs in System Center Configuration Manager.  
 
 > [!NOTE]
->  General information about Programs can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt346023.aspx) under [Packages and programs in System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt629313.aspx).  
+>  General information about Programs can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/library/mt346023.aspx) under [Packages and programs in System Center Configuration Manager](https://technet.microsoft.com/library/mt629313.aspx).  
 
 ## Software Distribution Programs topics  
 

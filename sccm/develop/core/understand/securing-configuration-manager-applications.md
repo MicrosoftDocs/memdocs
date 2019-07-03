@@ -14,12 +14,12 @@ ms.collection: M365-identity-device-management
 # Securing Configuration Manager Applications
 The security model for System Center Configuration Manager has changed significantly from previous versions of Configuration Manager. The previous security model has been replaced by Role-Based Administration.  
 
- For an extensive discussion of the Configuration Manager security and privacy model, see [Security and privacy for System Center Configuration Manager](https://technet.microsoft.com/en-US/library/mt622694.aspx).  
+ For an extensive discussion of the Configuration Manager security and privacy model, see [Security and privacy for System Center Configuration Manager](https://technet.microsoft.com/library/mt622694.aspx).  
 
  Specific to the System Center Configuration Manager SDK, see [Configuration Manager Role-Based Administration](../../../develop/core/servers/configure/role-based-administration.md).  
 
 ## Related Sections  
- [Security and privacy for System Center Configuration Manager](https://technet.microsoft.com/en-US/library/mt622694.aspx)  
+ [Security and privacy for System Center Configuration Manager](https://technet.microsoft.com/library/mt622694.aspx)  
 
  [Configuration Manager Role-Based Administration](../../../develop/core/servers/configure/role-based-administration.md)  
 

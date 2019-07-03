@@ -32,7 +32,7 @@ You can use System Center Configuration Manager to collect hardware and software
  By default, NOIDMIF and IDMIF file information is not inventoried by Configuration Manager sites. To enable NOIDMIF and IDMIF file information to be inventoried, NOIDMIF and IDMIF collection must be enabled. You can choose to enable one or both types of MIF file collection for Configuration Manager sites on the **MIF Collection** tab of the hardware inventory client agent properties.  
 
 > [!IMPORTANT]
->  Before you can add information from MIF files to the Configuration Manager database, you must create or import class information for them. For more information, see the sections **To add a new inventory class** and **To import hardware inventory classes** in [How to Extend Hardware Inventory in Configuration Manager](http://technet.microsoft.com/library/gg712290.aspx).  
+>  Before you can add information from MIF files to the Configuration Manager database, you must create or import class information for them. For more information, see the sections **To add a new inventory class** and **To import hardware inventory classes** in [How to Extend Hardware Inventory in Configuration Manager](https://technet.microsoft.com/library/gg712290.aspx).  
 
 ### NOIDMIF Files  
  Standard MIF files that are used in System Center Configuration Manager hardware inventory are called NOIDMIF files. NOIDMIF files do not contain a unique identifier for the data. Configuration Manager automatically associates NOIDMIF file data with the client that the NOIDMIF file is collected from when reporting inventory information.  

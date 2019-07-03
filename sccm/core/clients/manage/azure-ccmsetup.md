@@ -2,7 +2,7 @@
 title: Azure AD authentication workflow
 titleSuffix: Configuration Manager
 description: Details of the Configuration Manager client installation process on a Windows 10 device with Azure Active Directory authentication
-ms.date: 05/24/2019
+ms.date: 07/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -86,7 +86,7 @@ MessageID: 3087bd34-b82c-4950-b972-e82bb0fb8385 RequestURI: https://MP.MYCORP.CO
 The following entries are logged in **CCM_STS.log**:
 
 ```
-Validated AAD token. TokenType: Device TenantId: XXXXe388-XXXX-485c-XXXX-e8e4eb41XXXX UserId: 00000000-0000-0000-0000-000000000000 DeviceId: 0aebad80-77d2-4f0a-9639-676ee4764bb7 OnPrem_UserSid:  OnPrem_DeviceSid:
+Validated AAD token. TokenType: Device TenantId: XXXXe388-XXXX-485c-XXXX-e8e4eb41XXXX UserId: 00000000-0000-0000-0000-000000000000 DeviceId: 0XXXXX80-77XX-4XXa-X63X-67XXXXX64bb7 OnPrem_UserSid:  OnPrem_DeviceSid:
 
 Return token to client, token type: UDA, hierarchyId: XXXX4f9c-XXXX-46a5-XXXX-7612c324XXXX, userId: 00000000-0000-0000-0000-000000000000, deviceId: GUID:XXXXaee9-cXXc-4ccd-XXXX-f1417d81XXX
 ```
@@ -122,3 +122,85 @@ The device downloads the client content and starts the installation.
 - WPJ certificate not found: client is registered with Azure AD, but not joined to Azure AD
 
 Using /NoCRLCheck is only good for ccmsetup bootstrap. For the clients to be fully functional, you should publish the CRL on the internet. As a workaround, you can disable the CRL check on the site's client communication configuration. Otherwise, after the security settings are refreshed by location service, the clients stop communicating with the server.
+
+
+## Client registration
+
+![Azure AD registration workflow diagram](media/azure-ad-registration-workflow.png)  
+
+### 1. Configuration Manager client request registration
+
+The following entries are logged in **ClientIDManagerStartup.log**:
+
+```
+[RegTask] - Client is not registered. Sending registration request for GUID:1XXXXXEF-5XX8-4XX3-XEDX-XXXFBFF78XXX ...		
+Registering client using AAD auth.	
+```
+
+### 2. Configuration Manager request Azure AD token to register client
+
+The following entries are logged in **ADALOperationProvider.log**:
+```
+Getting AAD (user) token with: ClientId = f1f9b14e-XXXX-4f17-XXXX-2593f6eee91e, ResourceUrl = https://ConfigMgrService, AccountId = X49FC29A-ECE3-XXX-A3C1-XXXXXXF035A6E
+Retrieved AAD token for AAD user '00000000-0000-0000-0000-000000000000'	
+
+```
+
+#### 2.1 Configuration Manager client is registered  
+
+The following entries are logged in **ClientIDManagerStartup.log**:
+
+```
+[RegTask] - Client is registered. Server assigned ClientID is GUID:1XXXXXEF-5XX8-4XX3-XEDX-XXXFBFF78XXX. Approval status 3	
+```
+
+> [!NOTE]  
+> During client registration, certificate validation always runs. This process happens even if you're using the Azure AD authentication method to register the client.
+
+
+### 3. Configuration Manager client token request
+
+Once the site registers the client, the client requests a CCM token. The CCM token is encrypted for the local System account (S-1-5-18) and cached for eight hours. After eight hours, the token expires, and the client requests token renewal.
+
+The following entries are logged in **ClientIDManagerStartup.log**:
+
+```
+Getting CCM Token from STS server 'MP.MYCORP.COM'	
+Getting CCM Token from https://MP.MYCORP.COM/CCM_STS
+...
+Cached encrypted token for 'S-1-5-18'. Will expire at 'XX/XX/XX XX:XX:XX'	
+```
+
+#### 3.1 CMG gets request
+
+The following entries are logged in **IIS.log**:
+
+```
+RD0003FF74XX2 10.0.0.4 GET /CCM_STS - 443 - HTTP/1.1 python-requests/2.20.0 - - 13.95.234.44 404 0 2 1477 154 15
+```
+
+#### 3.2 CMG forwards request to CMG connection point
+
+The following entries are logged in **CMGService.log**:
+
+```
+RequestUri: /CCM_PROXY_SERVERAUTH/XXXXXX037938216/CCM_STS  RequestCount: 769  RequestSize: 1081595 Bytes  ResponseCount: 769     ResponseSize: 36143 Bytes  AverageElapsedTime: 3945 ms
+```
+
+#### 3.3 CMG connection point transforms CMG client request to management point client request
+
+The following entries are logged in **SMS_CLOUD_PROXYCONNECTOR.log**:
+
+```
+MessageID: 3087bd34-b82c-4950-b972-e82bb0fb8385 RequestURI: https://MP.MYCORP.COM/CCM_STS EndpointName: CCM_STS ResponseHeader: HTTP/1.1 200 OK ~~ ResponseBodySize: 0 ElapsedTime: 2 ms
+```
+
+#### 3.4 Management point verifies user token in site database
+
+The following entries are logged in **CCM_STS.log**:
+
+```
+Validated AAD token. TokenType: Device TenantId: XXXXe388-XXXX-485c-XXXX-e8e4eb41XXXX UserId: 00000000-0000-0000-0000-000000000000 DeviceId: 0XXXXX80-77XX-4XXa-X63X-67XXXXX64bb7 OnPrem_UserSid:  OnPrem_DeviceSid:
+
+Return token to client, token type: UDA, hierarchyId: XXXX4f9c-XXXX-46a5-XXXX-7612c324XXXX, userId: 00000000-0000-0000-0000-000000000000, deviceId: GUID:XXXXaee9-cXXc-4ccd-XXXX-f1417d81XXX
+```

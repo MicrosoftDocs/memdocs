@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 This section provides topics that show you how to programmatically manage Collections in System Center Configuration Manager.  
 
 > [!NOTE]
->  General information about Collections can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt346023.aspx) under [Collections technical reference for System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt629314.aspx).  
+>  General information about Collections can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/library/mt346023.aspx) under [Collections technical reference for System Center Configuration Manager](https://technet.microsoft.com/library/mt629314.aspx).  
 
 ## Collections topics  
 

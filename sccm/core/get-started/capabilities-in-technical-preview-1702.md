@@ -154,7 +154,7 @@ After you create the compliance policy, you can monitor the compliance results i
 ## Improvements to Software Center settings and notification messages for high-impact task sequences
 This release includes the following improvements to Software Center settings and notification messages for high-impact deployment task sequences:
 
-- In the properties for the task sequence, you can now configure any task sequence, including non-operating system task sequences, as a high-risk deployment. Any task sequence that meets certain conditions is automatically defined as high-impact. For details, see [Manage high-risk deployments](http://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments).
+- In the properties for the task sequence, you can now configure any task sequence, including non-operating system task sequences, as a high-risk deployment. Any task sequence that meets certain conditions is automatically defined as high-impact. For details, see [Manage high-risk deployments](https://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments).
 - In the properties for the task sequence, you can choose to use the default notification message or create your own custom notification message for high-impact deployments.
 - In the properties for the task sequence, you can configure Software Center properties, which include make a restart required, the download size of the task sequence, and the estimated run time.
 - The default high-impact deployment message for in-place upgrades now states that
@@ -163,7 +163,7 @@ your apps, data, and settings are automatically migrated. Previously, the defaul
 ### Set a task sequence as a high-impact task sequence
 Use the following procedure to set a task sequence as high-impact.
 > [!NOTE]
-> Any task sequence that meets certain conditions is automatically defined as high-impact. For details, see [Manage high-risk deployments](http://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments).
+> Any task sequence that meets certain conditions is automatically defined as high-impact. For details, see [Manage high-risk deployments](https://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments).
 
 1. In the Configuration Manager console, go to **Software Library** > **Operating Systems** > **Task Sequences**.
 2. Select the task sequence to edit, and click **Properties**.
@@ -205,7 +205,7 @@ Use the following procedure to configure the details for the task sequence displ
 
 ## Check for running executable files before installing an application
 
-In the *<deployment type name>* **Properties** dialog box of a deployment type, on the Install Behavior tab, you can now specify one of more executable files that, if running, will block the installation of the deployment type. The user must close the running executable file (or it can be closed automatically for deployments with a purpose of required) before the deployment type can be installed.
+In the *\<deployment type name>* **Properties** dialog box of a deployment type, on the Install Behavior tab, you can now specify one of more executable files that, if running, will block the installation of the deployment type. The user must close the running executable file (or it can be closed automatically for deployments with a purpose of required) before the deployment type can be installed.
 
 ### Try it out.
 

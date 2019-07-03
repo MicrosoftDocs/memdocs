@@ -103,6 +103,16 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
 
     - **Select specific collections to synchronize with Desktop Analytics**: Select **Add** to include additional collections from your **Target collection** hierarchy. These collections are available in the Desktop Analytics portal for grouping with deployment plans. Make sure to include pilot and pilot exclusion collections.  <!-- 4097528 -->  
 
+        > [!Tip]  
+        > The Select Collections window displays only the collections that are limited by the **Target collection**.
+        >
+        > In the following example, you select CollectionA as your target collection. Then when you add additional collections, you see CollectionA, CollectionB, and CollectionC. You can't add CollectionD.
+        >
+        > - CollectionA: limited by the **All Systems** collection
+        >     - CollectionB: limited by CollectionA
+        >         - CollectionC: limited by CollectionB
+        > - CollectionD: limited by **All Systems** collection
+
         > [!Important]  
         > These collections continue to sync as their membership changes. For example, your deployment plan uses a collection with a Windows 7 membership rule. As those devices upgrade to Windows 10, and Configuration Manager evaluates the collection membership, those devices drop out of the collection and deployment plan.  
 

@@ -30,7 +30,7 @@ You can see a summary of the compliance status with different threat levels, whi
 - The number of devices reporting as non-compliant by platform
 - Any errors related to the device compliance status
 
-![](http://i.imgur.com/bmPsiWk.png)
+![Device Threat Protection Dashboard](device-threat-protection-dashboard.png)
 
 ## To monitor the individual compliance status
 

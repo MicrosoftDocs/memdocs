@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 This section provides topics about programmatically managing compliance settings in System Center Configuration Manager.  
 
 > [!NOTE]
->  General information about Compliance Settings can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt346023.aspx) under [Ensure device compliance with System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt595717.aspx).  
+>  General information about Compliance Settings can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/library/mt346023.aspx) under [Ensure device compliance with System Center Configuration Manager](https://technet.microsoft.com/library/mt595717.aspx).  
 
 ## Compliance Settings topics  
 
