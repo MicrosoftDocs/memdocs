@@ -18,7 +18,7 @@ ms.collection: M365-identity-device-management
 
 Queries in System Center Configuration Manager let you retrieve information from the site database according to criteria that you specify. Configuration Manager collects site database information during standard operation. For example, by using information that's been collected during discovery or inventory, you can configure a query to identify devices that meet specified criteria.  
 
- For more information about queries, see [Introduction to queries in System Center Configuration Manager](../../../core/servers/manage/introduction-to-queries.md). For security best practices and privacy information about Configuration Manager operations that collect the data that you can retrieve by using queries, see [Security and privacy for System Center Configuration Manager](../../../core/plan-design/security/security-and-privacy.md).  
+ For more information about queries, see [Introduction to queries in System Center Configuration Manager](../../../core/servers/manage/introduction-to-queries.md). For security best practices and privacy information about Configuration Manager operations that collect the data you can retrieve by using queries, see [Security and privacy for System Center Configuration Manager](../../../core/plan-design/security/security-and-privacy.md).  
 
 ## Security best practices for queries
 
