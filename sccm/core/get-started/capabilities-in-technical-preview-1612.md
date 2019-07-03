@@ -182,7 +182,7 @@ To run the tool:
 
 **Known issue**
 When the tool is run, an error like the following might be returned when any package or deployment has failed, or is in progress:
--  *System.InvalidOperationException: This content library cannot be cleaned up right now because package <packageID> is not fully installed.*
+-  *System.InvalidOperationException: This content library cannot be cleaned up right now because package \<packageID> is not fully installed.*
 
 **Workaround:** None. The tool cannot reliable identify orphaned files when content is in progress or has failed to deploy. Therefore, the tool will not allow you to clean-up content until that issue is resolved.
 
@@ -198,7 +198,7 @@ The following command line switches can be used in any order.
 | **/dp &lt;distribution point FQDN>**  | **Required** </br> Specify the fully qualified domain name (FQDN) of the distribution point that you want to clean. </br></br> Example:  ***ContentLibraryCleanup.exe /dp server1.contoso.com***|
 | **/ps &lt;primary site FQDN>**       | **Optional** when cleaning content from a distribution point at a primary site.</br>**Required** when cleaning content from a distribution point at a secondary site. </br></br> Specify the FQDN of the primary site the distribution point belongs to, or of the parent primary parent when the distribution point is at a secondary site. </br></br> Example: ***ContentLibraryCleanup.exe /dp server1.contoso.com /ps siteserver1.contoso.com*** |
 | **/sc &lt;primary site code>**  | **Optional** when cleaning content from a distribution point at a primary site.</br>**Required** when cleaning content from a distribution point at a secondary site. </br></br> Specify the site code of the primary site that the distribution point belongs to, or of the parent primary site when the distribution point is at a secondary site.</br></br> Example: ***ContentLibraryCleanup.exe /dp server1.contoso.com /sc ABC*** |
-| **/log <log file directory>**       |**Optional** </br> Specify a directory to place log files in. This can be a local drive, or on a network share.</br></br> When this switch is not used, log files are automatically placed in the users temp folder.</br></br> Example of local drive: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>Example of network share: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;share>\&lt;folder>***|
+| **/log \<log file directory>**       |**Optional** </br> Specify a directory to place log files in. This can be a local drive, or on a network share.</br></br> When this switch is not used, log files are automatically placed in the users temp folder.</br></br> Example of local drive: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>Example of network share: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;share>\&lt;folder>***|
 
 
 ## Improvements for in-console search
