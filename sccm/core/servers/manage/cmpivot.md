@@ -119,7 +119,7 @@ The CMPivot window contains the following elements:
     - CMPivot uses a subset of the [Kusto Query Language (KQL)](https://docs.microsoft.com/azure/kusto/query/).  
 
     - Cut, copy, or paste content in the query pane.  
-
+    <!-- markdownlint-disable MD038 -->
     - By default, this pane uses IntelliSense. For example, if you start typing `D`, IntelliSense suggests all of the entities that start with that letter. Select an option and press Tab to insert it. Type a pipe character and a space `| `, and then IntelliSense suggests all of the table operators. Insert `summarize` and type a space, and IntelliSense suggests all of the aggregation functions. For more information on these operators and functions, click the **Home** tab in CMPivot.  
 
     - The query pane also provides the following options:  
