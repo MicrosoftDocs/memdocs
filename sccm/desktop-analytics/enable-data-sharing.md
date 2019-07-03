@@ -29,6 +29,9 @@ When you integrate Configuration Manager with Desktop Analytics, you also use it
 
 The basic functionality of Desktop Analytics works at the **Basic** diagnostic data level. You won't get usage or health data for your updated devices without enabling the **Enhanced (Limited)** level. Microsoft recommends that you enable the **Enhanced (Limited)** diagnostic data level. For more information, see [Windows 10 enhanced diagnostic data events and fields used by Windows Analytics](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)).
 
+> [!Important]   
+> We have a strong commitment to providing the tools and resources that put our customers in control of their privacy. As a result, will we will not collect Windows diagnostic data from Windows 8.1 devices and App usage data for Windows 7 devices located in European countries (EEA and Switzerland).
+
 For more information, see [Desktop Analytics privacy](/sccm/desktop-analytics/privacy).
 
 The following articles are also good resources for better understanding Windows diagnostic data levels:
