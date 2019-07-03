@@ -212,7 +212,7 @@ additionalContent:
             - url: https://docs.microsoft.com/sccm/core/support/tools
               text: See more >
         - title: Other community sites
-          summary:
+          links:
             - url: https://www.reddit.com/r/sccm
               text: ConfigMgr on Reddit
             - url: https://www.facebook.com/groups/ConfigMgr2012
