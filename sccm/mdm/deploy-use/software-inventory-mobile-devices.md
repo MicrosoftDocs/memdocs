@@ -32,4 +32,4 @@ ms.collection: M365-identity-device-management
 |iOS|Only managed apps|All apps installed on the device|  
 |Android|Only managed apps|All apps installed on the device|  
 
-See [Introduction to software inventory](../../core/clients/manage/inventory/introduction-to-software-inventory.md) and [How to configure software inventory ](../../core/clients/manage/inventory/configure-software-inventory.md) for detailed information about using software inventory to collect file information on client devices.
+See [Introduction to software inventory](../../core/clients/manage/inventory/introduction-to-software-inventory.md) and [How to configure software inventory](../../core/clients/manage/inventory/configure-software-inventory.md) for detailed information about using software inventory to collect file information on client devices.
