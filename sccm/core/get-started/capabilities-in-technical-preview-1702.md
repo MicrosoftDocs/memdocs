@@ -205,7 +205,7 @@ Use the following procedure to configure the details for the task sequence displ
 
 ## Check for running executable files before installing an application
 
-In the *<deployment type name>* **Properties** dialog box of a deployment type, on the Install Behavior tab, you can now specify one of more executable files that, if running, will block the installation of the deployment type. The user must close the running executable file (or it can be closed automatically for deployments with a purpose of required) before the deployment type can be installed.
+In the *\<deployment type name>* **Properties** dialog box of a deployment type, on the Install Behavior tab, you can now specify one of more executable files that, if running, will block the installation of the deployment type. The user must close the running executable file (or it can be closed automatically for deployments with a purpose of required) before the deployment type can be installed.
 
 ### Try it out.
 

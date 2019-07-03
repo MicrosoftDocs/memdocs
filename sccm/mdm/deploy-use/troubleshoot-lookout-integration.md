@@ -49,7 +49,7 @@ This could happen in either of the following scenarios:
 
 A device that is showing  **Pending**  means the end user has not opened the Lookout for work app and tapped the  **Activate** button. For more details on the device activation with Lookout for Work app, read the following topic:
 
-[You are prompted to install Lookout for Work on your Android device ](https://docs.microsoft.com/intune/enduser/you-are-prompted-to-install-lookout-for-work-android)
+[You are prompted to install Lookout for Work on your Android device](https://docs.microsoft.com/intune/enduser/you-are-prompted-to-install-lookout-for-work-android)
 
 ### In the Lookout MTP console, a device is showing as active, but does not have a device ID.
 This means that the user who owns this device is not in the enrollment group, specified in the Lookout MTP Console.   A device can get into this state is if the user who owns the device has been removed from the enrollment group or the enrollment group that the user belongs to has been removed.
@@ -76,4 +76,4 @@ As long as the new user is in one of the  enrollment groups specified in the Loo
 ## Compliance remediation workflows
 [You are prompted to install Lookout for Work on your Android device]( https://docs.microsoft.com/intune/enduser/you-are-prompted-to-install-lookout-for-work-android)
 
-[You need to resolve a threat that Lookout for Work found on your Android device ](https://docs.microsoft.com/intune/enduser/you-need-to-resolve-a-threat-found-by-lookout-for-work-android)
+[You need to resolve a threat that Lookout for Work found on your Android device](https://docs.microsoft.com/intune/enduser/you-need-to-resolve-a-threat-found-by-lookout-for-work-android)
