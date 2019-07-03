@@ -2,7 +2,7 @@
 title: Azure AD authentication workflow
 titleSuffix: Configuration Manager
 description: Details of the Configuration Manager client installation process on a Windows 10 device with Azure Active Directory authentication
-ms.date: 05/24/2019
+ms.date: 07/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -124,11 +124,9 @@ The device downloads the client content and starts the installation.
 Using /NoCRLCheck is only good for ccmsetup bootstrap. For the clients to be fully functional, you should publish the CRL on the internet. As a workaround, you can disable the CRL check on the site's client communication configuration. Otherwise, after the security settings are refreshed by location service, the clients stop communicating with the server.
 
 
+## Client registration
 
-
-## Client Registration
-
-![Azure AD Registration workflow diagram](media/azure-ad-registration-workflow.png)  
+![Azure AD registration workflow diagram](media/azure-ad-registration-workflow.png)  
 
 ### 1. Configuration Manager client request registration
 
@@ -139,7 +137,7 @@ The following entries are logged in **ClientIDManagerStartup.log**:
 Registering client using AAD auth.	
 ```
 
-### 2. Configuration Manager request AAD token to register client
+### 2. Configuration Manager request Azure AD token to register client
 
 The following entries are logged in **ADALOperationProvider.log**:
 ```
@@ -147,7 +145,8 @@ Getting AAD (user) token with: ClientId = f1f9b14e-XXXX-4f17-XXXX-2593f6eee91e, 
 Retrieved AAD token for AAD user '00000000-0000-0000-0000-000000000000'	
 
 ```
-### 2. Configuration Manager Client is registered  
+
+#### 2.1 Configuration Manager client is registered  
 
 The following entries are logged in **ClientIDManagerStartup.log**:
 
@@ -155,14 +154,13 @@ The following entries are logged in **ClientIDManagerStartup.log**:
 [RegTask] - Client is registered. Server assigned ClientID is GUID:1XXXXXEF-5XX8-4XX3-XEDX-XXXFBFF78XXX. Approval status 3	
 ```
 
-<NOTE!>
->During Clientregistration certificate validation always runs, even if we are using AAD auth method to register the client.
+> [!NOTE]  
+> During client registration, certificate validation always runs. This process happens even if you're using the Azure AD authentication method to register the client.
 
 
 ### 3. Configuration Manager client token request
 
-Once client is registered, we request CCM token. CCM tolen is encrypted for System account (S-1-5-18) and cached for 8 hours.
-After 8h, token is expired and client request token renewal.
+Once the site registers the client, the client requests a CCM token. The CCM token is encrypted for the local System account (S-1-5-18) and cached for eight hours. After eight hours, the token expires, and the client requests token renewal.
 
 The following entries are logged in **ClientIDManagerStartup.log**:
 
@@ -172,6 +170,7 @@ Getting CCM Token from https://MP.MYCORP.COM/CCM_STS
 ...
 Cached encrypted token for 'S-1-5-18'. Will expire at 'XX/XX/XX XX:XX:XX'	
 ```
+
 #### 3.1 CMG gets request
 
 The following entries are logged in **IIS.log**:
@@ -196,7 +195,7 @@ The following entries are logged in **SMS_CLOUD_PROXYCONNECTOR.log**:
 MessageID: 3087bd34-b82c-4950-b972-e82bb0fb8385 RequestURI: https://MP.MYCORP.COM/CCM_STS EndpointName: CCM_STS ResponseHeader: HTTP/1.1 200 OK ~~ ResponseBodySize: 0 ElapsedTime: 2 ms
 ```
 
-#### 2.4 Management point verifies user token in site database
+#### 3.4 Management point verifies user token in site database
 
 The following entries are logged in **CCM_STS.log**:
 
@@ -204,7 +203,4 @@ The following entries are logged in **CCM_STS.log**:
 Validated AAD token. TokenType: Device TenantId: XXXXe388-XXXX-485c-XXXX-e8e4eb41XXXX UserId: 00000000-0000-0000-0000-000000000000 DeviceId: 0XXXXX80-77XX-4XXa-X63X-67XXXXX64bb7 OnPrem_UserSid:  OnPrem_DeviceSid:
 
 Return token to client, token type: UDA, hierarchyId: XXXX4f9c-XXXX-46a5-XXXX-7612c324XXXX, userId: 00000000-0000-0000-0000-000000000000, deviceId: GUID:XXXXaee9-cXXc-4ccd-XXXX-f1417d81XXX
-
-
-
-
+```
