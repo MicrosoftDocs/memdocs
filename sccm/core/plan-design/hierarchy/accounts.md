@@ -572,9 +572,9 @@ For more information, see [Plan for software updates](/sccm/sum/plan-design/plan
 
 ### Task sequence run as account  
 
- The task sequence engine uses the **Task sequence run as account** to run command lines with credentials other than the Local System account. This account is required by the [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) task sequence step with the option **Run this step as the following account**.  
+ The task sequence engine uses the **Task sequence run as account** to run command lines or PowerShell Scripts with credentials other than the Local System account. This account is required by the [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) and [Run PowerShell Script](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript) task sequence steps with the option **Run this step as the following account** chosen.  
 
- Set up the account to have the minimum permissions required to run the command line that you specify in the task sequence. The account requires interactive sign-in rights. It usually requires the ability to install software and access network resources.  
+ Set up the account to have the minimum permissions required to run the command line that you specify in the task sequence. The account requires interactive sign-in rights. It usually requires the ability to install software and access network resources. For the Run PowerShell Script task, this account requires local administrator permissions. 
 
 > [!IMPORTANT]  
 >  Don't use the network access account for this account.  
