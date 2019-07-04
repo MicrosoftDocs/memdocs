@@ -74,7 +74,7 @@ Use the System Center Configuration Manager **Windows 10** configuration item to
 |**Minimum password length (characters)**|The minimum length in characters for the password.|  
 |**Password expiration in days**|The number of days before the password must be changed.|  
 |**Number of passwords remembered**|Prevents reusing previous passwords.|  
-|**Number of failed logon attempts before a device is wiped**|Wipes the device if sign in fails this number of times.|  
+|**Number of failed logon attempts before a device is wiped**|Wipes the device if sign-in fails this number of times.|  
 |**Idle time before device is locked**|Specifies how many minutes the device must be inactive before it's automatically locked.|  
 |**Password complexity**|Choose whether you can specify a PIN such as ‘1234’, or whether you must supply a strong password.|
 |**Number of complex character sets required in password**|If you selected a **Strong** password, use this setting to configure the number of complex character sets required. For a strong password, this setting should be set to at least **3, which means both letters and numbers are required. Select **4** if you want to enforce a password that additionally requires special characters, such as **(%$**.<br>(Windows 10 only)  |

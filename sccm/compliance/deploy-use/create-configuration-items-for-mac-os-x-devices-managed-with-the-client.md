@@ -52,7 +52,7 @@ Use the System Center Configuration Manager **Mac OS X (custom)** configuration 
   
     -   **Script** -  
   
-        -   **Discovery Script** – Click **Add Script**, and then enter a shell script to assess settings on the Mac computer for compliance. Use the **echo** command in the shell script to return values to Configuration Manager for compliance. Configuration Manager uses the results returned in **STDOUT** to evaluate compliance.  
+        -   **Discovery Script** – Select **Add Script**, and then enter a shell script to assess settings on the Mac computer for compliance. Use the **echo** command in the shell script to return values to Configuration Manager for compliance. Configuration Manager uses the results returned in **STDOUT** to evaluate compliance.  
   
             > [!IMPORTANT]  
             >  Don't include the **reboot** command in the discovery script. Because the discovery script runs each time the client restarts, this causes the Mac computer to continually restart.  
