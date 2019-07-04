@@ -192,20 +192,29 @@ additionalContent:
    - title: Other content
      items:
         - title: Develop
-          summary: |
-            [PowerShell](https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps) <br/>
-            [SDK concepts](https://docs.microsoft.com/sccm/develop/core/misc/system-center-configuration-manager-sdk) <br/>
-            [SDK reference](https://docs.microsoft.com/sccm/develop/reference/configuration-manager-reference) <br/>
-            [SQL views](https://docs.microsoft.com/sccm/develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views)
+          links:
+            - url: https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps
+              text: PowerShell
+            - url: https://docs.microsoft.com/sccm/develop/core/misc/system-center-configuration-manager-sdk
+              text: SDK concepts
+            - url: https://docs.microsoft.com/sccm/develop/reference/configuration-manager-reference
+              text: SDK reference
+            - url: https://docs.microsoft.com/sccm/develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views
+              text: SQL views
         - title: Tools
-          summary: |
-            [Support Center](https://docs.microsoft.com/sccm/core/support/support-center) <br/>
-            [MDT](https://docs.microsoft.com/sccm/mdt/) <br/>
-            [Package Conversion Manager](https://docs.microsoft.com/sccm/apps/pcm/package-conversion-manager) <br/>
-            [See more >](https://docs.microsoft.com/sccm/core/support/tools)
+          links:
+            - url: https://docs.microsoft.com/sccm/core/support/support-center
+              text: Support Center
+            - url: https://docs.microsoft.com/sccm/mdt/
+              text: MDT
+            - url: https://docs.microsoft.com/sccm/apps/pcm/package-conversion-manager
+              text: Package Conversion Manager
+            - url: https://docs.microsoft.com/sccm/core/support/tools
+              text: See more >
         - title: Other community sites
-          summary: |
-            [ConfigMgr on Reddit](https://www.reddit.com/r/sccm) <br/>
-            [ConfigMgr Professionals Group on Facebook](https://www.facebook.com/groups/ConfigMgr2012) <br/>
+          links:
+            - url: https://www.reddit.com/r/sccm
+              text: ConfigMgr on Reddit
+            - url: https://www.facebook.com/groups/ConfigMgr2012
+              text: ConfigMgr Professionals Group on Facebook
    footer: "Found a problem on our site? [Let us know](https://docs.microsoft.com/sccm/core/understand/use-docs#bkmk_docfeedback)!"
-   
