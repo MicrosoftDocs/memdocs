@@ -61,6 +61,15 @@ When you're using a Resource Manager deployment, onboard the associated Azure AD
 
 If you're using Azure AD authentication for the users and devices managed over the CMG, onboard that Azure AD tenant. For more information on Azure services for cloud management, see [Configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard). When you onboard each Azure AD tenant, a single CMG can provide Azure AD authentication for multiple tenants, regardless of the hosting location.
 
+### How does CMG affect my clients connected via VPN?
+
+Roaming clients that connect to your corporate environment via a VPN are commonly detected as intranet facing and as such will attempt to connect to on premises infrastrcuture such as management points and distribution points. Some customers prefer to have these roaming clients managed by cloud services even when connected via VPN. Starting in 1906 it is possible to associate a CMG with a boundary group to force these clients to not use the on premise site systems
+
+### If I enable CMG, will my clients only connect to the CMG enabled management point when they are connected to the corporate network.
+
+In order to secure sensitive traffic sent over CMG it is required to configure either HTTPS management points or to utilize Enhanced HTTP. 
+
+If you choose to deploy CMG and use PKI certificates for HTTPS communication on the CMG enabled management points you need to select 'Allow Internet-only clients' to ensure that clients continue to use HTTP management points in your environment. 
 
 
 ## Next steps
