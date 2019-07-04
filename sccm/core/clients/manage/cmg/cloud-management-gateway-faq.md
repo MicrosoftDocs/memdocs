@@ -63,7 +63,7 @@ If you're using Azure AD authentication for the users and devices managed over t
 
 ### How does CMG affect my clients connected via VPN?
 
-Roaming clients that connect to your corporate environment via a VPN are commonly detected as intranet facing and as such will attempt to connect to on premises infrastrcuture such as management points and distribution points. Some customers prefer to have these roaming clients managed by cloud services even when connected via VPN. Starting in 1906 it is possible to associate a CMG with a boundary group to force these clients to not use the on premise site systems
+Roaming clients that connect to your corporate environment via a VPN are commonly detected as intranet facing and as such will attempt to connect to on premises infrastructure such as management points and distribution points. Some customers prefer to have these roaming clients managed by cloud services even when connected via VPN. Starting in 1906 it is possible to associate a CMG with a boundary group to force these clients to not use the on premise site systems
 
 ### If I enable CMG, will my clients only connect to the CMG enabled management point when they are connected to the corporate network.
 
