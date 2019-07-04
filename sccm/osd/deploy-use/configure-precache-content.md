@@ -100,7 +100,10 @@ For example, the following **Upgrade OS** step uses the English version:
 - On the **Scheduling** tab, choose the currently selected time for the setting, **Schedule when this deployment will be available**. The client starts pre-caching content at the deployment's available time. When a targeted client receives this policy, the available time is in the past, thus pre-cache download starts right away. If the client receives this policy but the available time is in the future, the client doesn't start pre-caching content until the available time occurs.  
 
 - On the **Distribution Points** tab, configure the **Deployment options** settings. If the content isn't pre-cached before a user starts the installation, the client uses these settings.  
-  
+
+    > [!Important]  
+    > For a task sequence that installs an OS image, don't use the deployment option to **Download content locally when needed by the running task sequence**. When the task sequence wipes the disk before it applies the OS image, it removes the client cache. Since the content is gone, the task sequence fails.<!-- SCCMDocs-PR #1338 -->
+
 
 ## User experience
 
