@@ -41,9 +41,9 @@ Starting in version 1906,<!--4224642--> you can use pre-caching to reduce bandwi
 
 There are three steps to configure the pre-cache feature:
 
-- [1. Create and configure the packages](#bkmk_createpkg)
-- [2. Create a task sequence with conditional steps](#bkmk_createts)
-- [3. Deploy the task sequence and enable pre-caching](#bkmk_deploy)
+1. [Create and configure the packages](#bkmk_createpkg)
+2. [Create a task sequence with conditional steps](#bkmk_createts)
+3. [Deploy the task sequence and enable pre-caching](#bkmk_deploy)
 
 
 ### <a name="bkmk_createpkg"></a> 1. Create and configure the packages
