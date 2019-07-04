@@ -36,7 +36,7 @@ Here are some tips we've learned from helping thousands of customers get current
 
 - Use phased deployments to roll out this upgrade to the right people at the right times. For more information, see [Create phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence).  
 
-- Use pre-caching to reduce user wait times. For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content).  
+- Use pre-caching to reduce user wait times. For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/configure-precache-content).  
 
 - Use the default in-place upgrade task sequence template. Then configure your steps for pre- and post-upgrade, and any failure actions. For more information, see [Recommended task sequence steps for post-processing](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#recommended-task-sequence-steps-for-post-processing).  
 

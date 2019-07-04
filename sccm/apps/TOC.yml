@@ -31,6 +31,8 @@
       href: deploy-use/create-global-conditions.md
     - name: Packages and programs
       href: deploy-use/packages-and-programs.md
+    - name: Package definition files
+      href: deploy-use/package-definition-files.md
   - name: Deploy applications
     items:
     - name: Deploy applications

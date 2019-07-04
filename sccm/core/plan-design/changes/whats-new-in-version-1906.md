@@ -388,14 +388,15 @@ If the Configuration Manager console stops responding, you can be locked out of 
 For more information, see [Manage task sequences](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#bkmk_sedo).
 
 ### Pre-cache driver packages and OS images
-<!--4224642-->
 
+<!--4224642-->
 Task sequence pre-cache now includes additional content types. Pre-cache content previously only applied to OS upgrade packages. Now you can use pre-caching to reduce bandwidth consumption of:
+
 - OS images
 - Driver packages
 - Packages
 
- <!--For more information, see [Pre-cache content](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content).-->
+For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/configure-precache-content).
 
 ### Improvement to task sequence media creation
 <!--4090666-->
