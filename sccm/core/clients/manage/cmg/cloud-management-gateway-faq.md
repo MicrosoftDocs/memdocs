@@ -69,8 +69,9 @@ Roaming clients that connect to your corporate environment via a VPN are commonl
 
 In order to secure sensitive traffic sent over CMG it is required to configure either HTTPS management points or to utilize Enhanced HTTP. 
 
-If you choose to deploy CMG and use PKI certificates for HTTPS communication on the CMG enabled management points you need to select 'Allow Internet-only clients' to ensure that clients continue to use HTTP management points in your environment. 
+If you choose to deploy CMG and use PKI certificates for HTTPS communication on the CMG enabled management points you need to select 'Allow Internet-only clients' to ensure that clients continue to use HTTP management points in your environment.
 
+If you use Enhanced HTTP there is no requirement to configure this setting as clients will continue to use HTTP when communicating directly to the CMG enabled management point.
 
 ## Next steps
 
