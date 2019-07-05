@@ -395,7 +395,7 @@ The following features are optional in the latest version of Configuration Manag
 - [Device health attestation assessment for compliance policies for conditional access](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616-->
 - [Create and run scripts](/sccm/apps/deploy-use/create-deploy-scripts) <!--1236459-->
 - [Run task sequence step](/sccm/osd/understand/task-sequence-steps#child-task-sequence) <!--1261338-->
-- [Task sequence content pre-caching](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) <!--1021244-->
+- [Task sequence content pre-caching](/sccm/osd/deploy-use/configure-precache-content) <!--1021244-->
 - [Surface driver updates](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490-->
 - [Cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) <!--1101764-->
 - [Data warehouse service point](/sccm/core/servers/manage/data-warehouse) <!--1277922-->

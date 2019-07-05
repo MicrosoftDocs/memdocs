@@ -1,8 +1,8 @@
 ---
-title: Create a task sequence to install an operating system
+title: Create a task sequence to install an OS
 titleSuffix: Configuration Manager
-description: Use task sequences in System Center Configuration Manager to automatically install an operating system image and other content on a destination computer.
-ms.date: 10/06/2016
+description: Use task sequences in Configuration Manager to automatically install an OS image and other content on a destination computer.
+ms.date: 07/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,141 +10,145 @@ ms.assetid: 217c8a0e-5112-420e-a325-2a6d75326290
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
 ms.collection: M365-identity-device-management
 ---
-# Create a task sequence to install an operating system in System Center Configuration Manager
+
+# Create a task sequence to install an OS
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Use task sequences in System Center Configuration Manager to automatically install an operating system image on a destination computer. You create a task sequence that references a boot image used to start the destination computer, the operating system image that you want to install on the destination computer, and any other additional content, such as other applications or software updates, that you want to install. Then you deploy the task sequence to a collection that contains the destination computer.  
+Use task sequences in Configuration Manager to automatically install an OS image on a destination computer. You create a task sequence that references a boot image used to start the destination computer, the OS image that you want to install on the destination computer, and any other additional content, such as other applications or software updates, that you want to install. Then you deploy the task sequence to a collection that contains the destination computer.  
 
-##  <a name="BKMK_InstallOS"></a> Create a task sequence to install an operating system  
- There are a lot of scenarios to deploy an operating system to computers in your environment. In most cases, you will create a task sequence  and select **Install an existing image package** in the Create Task Sequence Wizard to install the operating system, migrate user settings, apply software updates, and install applications. Before  you create a task sequence to install an operating system, the following must be in place:   
+## <a name="BKMK_InstallOS"></a> Create a task sequence to install an OS
 
--   **Required**  
+There are multiple scenarios to deploy an OS to computers in your environment. In most cases, create a task sequence and select **Install an existing image package** in the Create Task Sequence Wizard. This option creates a task sequence that installs the OS, migrates user settings, applies software updates, and installs applications.
 
-    -   The [boot image](../get-started/manage-boot-images.md) must be available in the Configuration Manager console.  
+### Prerequisites
 
-    -   An [operating system image](../get-started/manage-operating-system-images.md) must be available in the Configuration Manager console.  
+Before you create a task sequence to install an OS, the following requirements must be in place:
 
--   **Required (if used)**  
+#### Required
 
-    -   [Software updates](../../sum/get-started/synchronize-software-updates.md) must be synchronized in the Configuration Manager console.  
+- A [boot image](/sccm/osd/get-started/manage-boot-images)  
 
-    -   [Applications](../../apps/deploy-use/create-applications.md) must be added to the Configuration Manager console.  
+- An [OS image](/sccm/osd/get-started/manage-operating-system-images)  
 
-#### To create a task sequence that installs an operating system  
+#### Required (if used)
 
-1. In the Configuration Manager console, click **Software Library**.  
+- Synchronize [software updates](/sccm/sum/get-started/synchronize-software-updates)  
 
-2. In the **Software Library** workspace, expand **Operating Systems**, and then click **Task Sequences**.  
+- Add [applications](/sccm/apps/deploy-use/create-applications)  
 
-3. On the **Home** tab, in the **Create** group, click **Create Task Sequence** to start the Create Task Sequence Wizard.  
+### Process to create a task sequence that installs an OS  
 
-4. On the **Create a New Task Sequence** page, click **Install an existing Image package**, and then click **Next**.  
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node.  
 
-5. On the **Task Sequence Information** page, specify the following settings, and then click **Next**.  
+2. On the **Home** tab of the ribbon, in the **Create** group, select **Create Task Sequence**. This action starts the Create Task Sequence Wizard.  
 
-   -   **Task sequence name**: Specify a name that identifies the task sequence.  
+3. On the **Create a New Task Sequence** page, select **Install an existing Image package**, and then select **Next**.  
 
-   -   **Description**: Specify a description of the task that is performed by the task sequence.  
+4. On the **Task Sequence Information** page, specify the following settings:  
 
-   -   **Boot image**: Specify the boot image that installs the operating system on the destination computer. The boot image contains a contain a version of Windows PE that is used to install the operating system, as well as any additional device drivers that are required. For information, see [Manage boot images](../get-started/manage-boot-images.md).  
+    - **Task sequence name**: Specify a name that identifies the task sequence.  
 
-       > [!IMPORTANT]  
-       >  The architecture of the boot image must be compatible with the hardware architecture of the destination computer.  
+    - **Description**: Specify a description of what the task sequence does.  
 
-6. On the **Install Windows** page, specify the following settings, and then click **Next**.  
+    - **Boot image**: Specify the boot image that the task sequence uses to install the OS on the destination computer. The boot image contains a version of Windows PE, plus any additional required device drivers. For more information, see [Manage boot images](/sccm/osd/get-started/manage-boot-images).  
 
-   -   **Image package**: Specify the package that contains the operating system image to install. For more information, see [Manage operating system images](../get-started/manage-operating-system-images.md).  
+        > [!IMPORTANT]  
+        > The architecture of the boot image must be compatible with the hardware architecture of the destination computer.  
 
-   -   **Image**: If the operating system image package has multiple images, specify the index of the operating system image to install.  
+5. On the **Install Windows** page, specify the following settings:  
 
-   -   **Partition and format the target computer installing the operating system**: Specify whether you want the task sequence to partition and format the destination computer before the operating system is installed.  
+    - **Image package**: Specify the package that contains the OS image to install. For more information, see [Manage OS images](/sccm/osd/get-started/manage-operating-system-images).  
 
-   -   **Product key**: Specify the product key for the Windows operating system to install. You can specify encoded volume license keys and standard product keys. If you use a non-encoded product key, each group of 5 characters must be separated by a dash (-). For example: *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
+    - **Image**: If the OS image package has multiple images, specify the index of the OS image to install.  
 
-   -   **Server licensing mode**: Specify that the server license is **Per seat**, **Per server**, or that no license is specified. If the server license is **Per server**, also specify the maximum number of server connections.  
+    - **Partition and format the target computer installing the operating system**: Specify whether you want the task sequence to partition and format the destination computer before it installs the OS.  
 
-   -   Specify how to handle the administrator account that is used when the operating system image is deployed.  
+    - **Product key**: Specify the Windows product key, if necessary. You can specify encoded volume license keys and standard product keys. If you use a non-encoded product key, each group of five characters must be separated by a dash (`-`). For example: *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
 
-       -   **Disable local administrator account**: Specify whether the local administrator account is disabled when the operating system image is deployed.  
+    - **Server licensing mode**: Specify that the server license is **Per seat**, **Per server**, or that no license is specified. If the server license is **Per server**, also specify the maximum number of server connections.  
 
-       -   **Always use the same administrator password**: Specify whether the same password is used for the local administrator account on all computers where the operating system image is deployed.  
+    - Specify how to handle the administrator account for the new OS:  
 
-7. On the **Configure Network** page, specify the following settings, and then click **Next**.  
+        - **Randomly generate the local administrator account password and disable the account on all supported platform (recommended)**: Windows disables the local administrator account after the task sequence deploys the OS image.  
 
-   -   **Join a workgroup**: Specify whether to add the destination computer to a workgroup.  
+        - **Enable the account and specify the local administrator password**: Windows uses the same password for the local administrator account on all computers where the task sequence deploys the OS image.  
 
-   -   **Join a domain**: Specify whether to add the destination computer to a domain. In **Domain**, specify the name of the domain.  
+6. On the **Configure Network** page, specify the following settings:  
 
-       > [!IMPORTANT]  
-       >  You can browse to locate domains in the local forest, but you must specify the domain name for a remote forest.  
+    - **Join a workgroup**: Add the destination computer to a workgroup.  
 
-        You can also specify an organizational unit (OU). This is an optional setting that specifies the LDAP X.500-distinguished name of the OU in which to create the computer account if it does not already exist.  
+    - **Join a domain**: Add the destination computer to a domain. In **Domain**, specify the name of the domain.  
 
-   -   **Account**: Specify the user name and password for the account that has permissions to join the specified domain. For example: *domain\user* or *%variable%*.  
+        > [!IMPORTANT]  
+        > You can browse to locate domains in the local forest, but you must specify the domain name for a remote forest.  
 
-       > [!IMPORTANT]  
-       >  You must enter the appropriate domain credentials if you plan to migrate either the domain settings or the workgroup settings.  
+        You can also specify an organizational unit (OU) in the **Domain OU** field. This setting is optional, and specifies the LDAP X.500-distinguished name of the OU. If it doesn't already exist, Windows creates the computer account in this OU.  
 
-8. On the **Install Configuration Manager** page, specify the Configuration Manager client package to install on the destination computer, and then click **Next**.  
+    - **Account**: The user name and password for the account that has permissions to join the specified domain. For example: *domain\user* or *%variable%*.  
 
-9. On the **State Migration** page, specify the following information, and then click **Next**.  
+        > [!IMPORTANT]  
+        > If you plan to migrate either the domain settings or the workgroup settings, enter the appropriate domain credentials.  
 
-    -   **Capture user settings**: Specify whether the task sequence captures the user state. For more information about how to capture and restore the user state, see [Manage user state](../get-started/manage-user-state.md).  
+7. On the **Install Configuration Manager** page, specify the Configuration Manager client package to install on the destination computer. You can also include any installation properties.  
 
-    -   **Capture network settings**: Specify whether the task sequence captures network settings from the destination computer. You can capture the membership of the domain or workgroup in addition to the network adapter settings.  
+8. On the **State Migration** page, specify the following information:  
 
-    -   **Capture Microsoft Windows settings**:  Specify whether the task sequence captures Windows settings from the destination computer before the operating system image is installed. You can capture the computer name, registered user and organization name, and the time zone settings.  
+    - **Capture user settings**: The task sequence captures the user state. For more information about how to capture and restore the user state, see [Manage user state](/sccm/osd/get-started/manage-user-state).  
 
-10. On the **Include Updates** page, specify whether to install required software updates, all software updates, or no software updates, and then click **Next**. If you specify to install software updates, Configuration Manager installs only those software updates that are targeted to the collections that the destination computer is a member of.  
+    - **Capture network settings**: The task sequence captures network settings from the destination computer. It captures the membership of the domain or workgroup, also the network adapter settings.  
 
-11. On the **Install Applications** page, specify the applications to install on the destination computer, and then click **Next**. If you specify multiple applications, you can also specify that the task sequence continues if the installation of a specific application fails.  
+    - **Capture Microsoft Windows settings**: The task sequence captures Windows settings from the destination computer before it installs the OS image. It captures the computer name, registered user and organization name, and the time zone settings.  
 
-12. Complete the wizard.  
+9. On the **Include Updates** page, specify whether to install required software updates, all software updates, or no software updates. If you specify to install software updates, Configuration Manager installs only those software updates that are targeted to the collections that the destination computer is a member of.  
 
-    You can now deploy the task sequence to a collection of computers.  For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence).  
+10. On the **Install Applications** page, specify the applications to install on the destination computer. If you specify multiple applications, you can also specify that the task sequence continues if the installation of a specific application fails.  
 
-##  <a name="BKMK_InstallExistingOSImageTSExample"></a> Example task sequence to install an existing operating system image  
- Use the following table as a guide as you create a task sequence that deploys an operating system using an existing operating system image. The table will help you decide the general sequence for your task sequence steps and how to organize and structure those task sequence steps into logical groups. The task sequence that you create may vary from this sample and can contain more or less task sequence steps and groups.  
+11. Complete the wizard.  
 
-> [!IMPORTANT]  
->  You must always use the Create Task Sequence Wizard to create this task sequence.  
+You can now deploy the task sequence to a collection of computers. For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence).
 
- When you use the Create Task Sequence Wizard to create this new task sequence some of the task sequence step names are different than what than what they would be if you manually added these task sequence steps to an existing task sequence. The following table displays the naming differences:  
 
-|Create Task Sequence Wizard Task Sequence Step name|Equivalent Task Sequence Editor Step Name|  
-|---------------------------------------------------------|-----------------------------------------------|  
-|Request User State Storage|Request State Store|  
-|Capture User Files and Settings|Capture User State|  
-|Release User State Storage|Release State Store|  
-|Restart in Windows PE|Reboot to Windows PE or hard disk|  
-|Partition Disk 0|Format and Partition Disk|  
-|Restore User Files and Settings|Restore User State|  
+## Pre-cache content
 
-|Task Sequence Group or Step|Description|  
+<!--4224642-->
+Starting in version 1906, you can enable this type of task sequence to pre-cache content. The pre-cache feature for available deployments of task sequences lets clients download relevant content before a user installs the task sequence.  
+
+For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/configure-precache-content).
+
+
+## <a name="BKMK_InstallExistingOSImageTSExample"></a> Example task sequence
+
+Use the following table as a guide as you create a task sequence that deploys an OS using an existing image. The table helps you decide the general sequence for your task sequence steps and how to organize and structure those task sequence steps into logical groups. The task sequence that you create may vary from this sample and can contain more or less task sequence steps and groups.  
+
+> [!NOTE]  
+> Use the Create Task Sequence Wizard to create this task sequence.  
+>
+> When you use the Create Task Sequence Wizard to create this new task sequence, some of the step names are different than what they would be if you manually added these task sequence steps to an existing task sequence.
+
+|Task sequence group or step|Description|  
 |---------------------------------|-----------------|  
-|Capture File and Settings - **(New Task Sequence Group)**|Create a task sequence group. A task sequence group keeps similar task sequence steps together for better organization and error control.<br /><br /> This group contains the steps needed to capture files and settings from the operating system of a reference computer.|  
-|Capture Windows Settings|Use this task sequence step to identify the Microsoft Windows settings to capture from the reference computer. You can capture the computer name, user and organizational information and the time zone settings.|  
+|Capture File and Settings - **(New task sequence group)**|Create a task sequence group. A task sequence group keeps similar task sequence steps together for better organization and error control.<br /><br /> This group contains the steps needed to capture files and settings from the operating system of a reference computer.|  
+|Capture Windows Settings|Use this task sequence step to identify the Microsoft Windows settings to capture from the reference computer. You can capture the computer name, user and organizational information, and the time zone settings.|  
 |Capture Network Settings|Use this task sequence step to capture network settings from the reference computer. You can capture the domain or workgroup membership of the reference computer and the network adapter setting information.|  
-|Capture User Files and Settings - **(New Task Sequence Sub-Group)**|Create a task sequence group within a task sequence group. This sub-group contains the steps needed to capture user state data. Similar to the initial group that you added, this sub-group keeps similar task sequence steps together for better organization and error control.|  
+|Capture User Files and Settings - **(New task sequence subgroup)**|Create a task sequence group within a task sequence group. This subgroup contains the steps needed to capture user state data. Similar to the initial group that you added, this subgroup keeps similar task sequence steps together for better organization and error control.|  
 |Request User State Storage|Use this task sequence step to request access to a state migration point where the user state data is stored. You can configure this task sequence step to capture or restore the user state information.|  
-|Capture User Files and Settings|Use this task sequence step to use the User State Migration Tool (USMT) to capture the user state and settings from the reference computer that will receive the task sequence associated with this task step. You can capture the standard options or configure whish options to capture.|  
+|Capture User Files and Settings|Use this task sequence step to use the User State Migration Tool (USMT) to capture the user state and settings from the reference computer that will receive the task sequence associated with this task step. You can capture the standard options or configure which options to capture.|  
 |Release User State Storage|Use this task sequence step to notify the state migration point that the capture or restore action is complete.|  
-|Install Operating System - **(New Task Sequence Group)**|Create another task sequence sub-group. This sub-group contains the steps needed to install and configure the Windows PE environment.|  
+|Install Operating System - **(New task sequence group)**|Create another task sequence subgroup. This subgroup contains the steps needed to install and configure the Windows PE environment.|  
 |Restart in Windows PE|Use this task sequence step to specify the restart options for the destination computer that receives this task sequence. This step will display a message to the user indicating that the computer will be restarted so that the installation can continue.<br /><br /> This step uses the read-only **_SMSTSInWinPE** task sequence variable. If the associated value equals **false** the task sequence step continues.|  
-|Partition Disk 0|This task sequence step specifies the actions necessary to format the hard drive on the destination computer. The default disk number is **0**.<br /><br /> This step uses the read-only **_SMSTSClientCache** task sequence variable. This step will run if the Configuration Manager client cache does not exist.|  
-|Apply Operating System|Use this task sequence step to install the  operating system image onto the destination computer. This step applies all volume images contained in the WIM file to the corresponding sequential disk volume on the target computer after first deleting all files on that volume (with the exception of Configuration Manager-specific control files). You can specify a **sysprep** answer file and also configure which disk partition is used for the installation.|  
+|Partition Disk 0|This task sequence step specifies the actions necessary to format the hard drive on the destination computer. The default disk number is **0**.<br /><br /> This step uses the read-only **_SMSTSClientCache** task sequence variable. This step runs if the Configuration Manager client cache doesn't exist.|  
+|Apply Operating System|Use this task sequence step to install the  operating system image onto the destination computer. This step first deletes all files on the volume, except for any Configuration Manager-specific control files. It then applies all volume images contained in the WIM file to the corresponding sequential disk volume on the target computer. You can specify a **sysprep** answer file and also configure which disk partition is used for the installation.|  
 |Apply Windows Settings|Use this task sequence step to configure the Windows settings configuration information for the destination computer. The windows settings you can apply are user and organizational information, product or license key information, time zone, and the local administrator password.|  
 |Apply Network Settings|Use this task sequence step to specify the network or workgroup configuration information for the destination computer. You can also specify if the computer uses a DHCP server or you can statically assign the IP address information.|  
-|Apply Device Drivers|Use this task sequence step to  install drivers as part of the operating system deployment. You can allow Windows Setup to search all existing driver categories by selecting **Consider drivers from all categories** or limit which driver categories Windows Setup searches by selecting **Limit driver matching to only consider drivers in selected categories**.<br /><br /> This step uses the read-only **_SMSTSMediaType** task sequence variable. This task sequence step runs only if the value of the variable does not equal **FullMedia**.|  
+|Apply Device Drivers|Use this task sequence step to  install drivers as part of the operating system deployment. You can allow Windows Setup to search all existing driver categories by selecting **Consider drivers from all categories** or limit which driver categories Windows Setup searches by selecting **Limit driver matching to only consider drivers in selected categories**.<br /><br /> This step uses the read-only **_SMSTSMediaType** task sequence variable. This task sequence step runs only if the value of the variable doesn't equal **FullMedia**.|  
 |Apply Driver Package|Use this task sequence step to make all device drivers in a driver package available for use by Windows setup.|  
-|Setup Operating System - **(New Task Sequence Group)**|Create another task sequence sub-group. This sub-group contains the steps needed to set up the installed operating system.|  
+|Setup Operating System - **(New task sequence group)**|Create another task sequence subgroup. This subgroup contains the steps needed to set up the installed operating system.|  
 |Setup Windows and ConfigMgr|Use this task sequence step to install the Configuration Manager client software. Configuration Manager installs and registers the Configuration Manager client GUID. You can assign the necessary installation parameters in the **Installation properties** window.|  
-|Install Updates|Use this task sequence step to specify how software updates are installed on the destination computer. The destination computer is not evaluated for applicable software updates until this task sequence step runs. At that point, the destination computer is evaluated for software updates similar to any other Configuration Manager-managed client.<br /><br /> This step uses the read-only **_SMSTSMediaType** task sequence variable. This task sequence step runs only if the value of the variable does not equal **FullMedia**.|  
-|Restore User Files and Settings - **(New Task Sequence Sub-Group)**|Create another task sequence sub-group. This sub-group contains the steps needed to restore the user files and settings.|  
+|Install Updates|Use this task sequence step to specify how software updates are installed on the destination computer. The destination computer isn't evaluated for applicable software updates until this task sequence step runs. At that point, the destination computer is evaluated for software updates similar to any other Configuration Manager-managed client.<br /><br /> This step uses the read-only **_SMSTSMediaType** task sequence variable. This task sequence step runs only if the value of the variable doesn't equal **FullMedia**.|  
+|Restore User Files and Settings - **(New task sequence subgroup)**|Create another task sequence subgroup. This subgroup contains the steps needed to restore the user files and settings.|  
 |Request User State Storage|Use this task sequence step to request access to a state migration point where the user state data is stored.|  
-|Restore User Files and Settings|Use this task sequence step to initiate the User State Migration Tool (USMT) to restore user state and settings to a destination computer.|  
+|Restore User Files and Settings|Use this task sequence step to run the User State Migration Tool (USMT) to restore user state and settings to a destination computer.|  
 |Release User State Storage|Use this task sequence step to notify the state migration point that the user state data is no longer needed.|  
