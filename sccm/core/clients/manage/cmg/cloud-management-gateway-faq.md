@@ -4,7 +4,7 @@ description: Use this article to answer frequently asked questions regarding the
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 06/19/2019
+ms.date: 07/05/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -61,17 +61,19 @@ When you're using a Resource Manager deployment, onboard the associated Azure AD
 
 If you're using Azure AD authentication for the users and devices managed over the CMG, onboard that Azure AD tenant. For more information on Azure services for cloud management, see [Configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard). When you onboard each Azure AD tenant, a single CMG can provide Azure AD authentication for multiple tenants, regardless of the hosting location.
 
+<!-- save for 1906 release
 ### How does CMG affect my clients connected via VPN?
 
-Roaming clients that connect to your corporate environment via a VPN are commonly detected as intranet facing and as such will attempt to connect to on premises infrastructure such as management points and distribution points. Some customers prefer to have these roaming clients managed by cloud services even when connected via VPN. Starting in 1906 it is possible to associate a CMG with a boundary group to force these clients to not use the on premise site systems
+Roaming clients that connect to your environment via a VPN are commonly detected as intranet-facing. They attempt to connect to your on-premises infrastructure such as management points and distribution points. Some customers prefer to have these roaming clients managed by cloud services even when connected via VPN. Starting in version 1906, associate the CMG with a boundary group. This action forces these clients to not use the on-premises site systems.
+-->
 
-### If I enable CMG, will my clients only connect to the CMG enabled management point when they are connected to the corporate network.
+### If I enable a CMG, will my clients only connect to the CMG-enabled management point when they're connected to the intranet?
 
-In order to secure sensitive traffic sent over CMG it is required to configure either HTTPS management points or to utilize Enhanced HTTP. 
+In order to secure sensitive traffic sent over a CMG, either configure an HTTPS management point or use Enhanced HTTP.
 
-If you choose to deploy CMG and use PKI certificates for HTTPS communication on the CMG enabled management points you need to select 'Allow Internet-only clients' to ensure that clients continue to use HTTP management points in your environment.
+If you choose to deploy a CMG, and use PKI certificates for HTTPS communication on the CMG-enabled management point, select the option to **Allow internet-only clients** on the management point properties. This setting makes sure that internal clients continue to use HTTP management points in your environment.
 
-If you use Enhanced HTTP there is no requirement to configure this setting as clients will continue to use HTTP when communicating directly to the CMG enabled management point.
+If you use Enhanced HTTP, you don't need to configure this setting. Clients continue to use HTTP when communicating directly to the CMG-enabled management point.
 
 ## Next steps
 
