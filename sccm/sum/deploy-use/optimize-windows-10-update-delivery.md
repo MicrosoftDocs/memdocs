@@ -19,7 +19,7 @@ ms.collection: M365-identity-device-management
 
 For many customers, a successful path to getting and staying current with Windows 10 monthly updates starts with a good content distribution strategy using Configuration Manager. The size of the monthly quality updates can be a cause of concern for large organizations. There are a few technologies available that are intended to help reduce bandwidth and network load to optimize update delivery. This article explains these technologies, compares them, and provides recommendations to help you make decisions on which one to use.  
  
-Windows 10 provides several types of updates. For more information, see [Update types in Windows Update for Business](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb#update-types). This article focuses on Windows 10 *quality* updates with Configuration Manager. 
+Windows 10 provides several types of updates. For more information, see [Update types in Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb#types-of-updates-managed-by-windows-update-for-business). This article focuses on Windows 10 *quality* updates with Configuration Manager. 
 
 
 ## Express update delivery

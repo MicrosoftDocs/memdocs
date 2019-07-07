@@ -171,7 +171,7 @@ For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhan
 
 ### Azure AD device identity 
 <!--1358460-->
-An [Azure AD-joined](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices) or [hybrid Azure AD device](https://docs.microsoft.com/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices) without an Azure AD user signed in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point.  
+An [Azure AD-joined](/azure/active-directory/devices/concept-azure-ad-join) or [hybrid Azure AD device](/azure/active-directory/devices/concept-azure-ad-join-hybrid) without an Azure AD user signed in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point.  
 
 For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).
 
