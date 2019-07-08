@@ -201,8 +201,8 @@ Each Configuration Manager feature that uses state messages is identified by the
 |	101	| Enrollment scheduled			|
 |	102	| Enrollment canceled			|
 |	105	| Enrollment started			|
-|	106	| Enrollment succeeded but is not provisioned	
-|	107	| Enrollment succeeded and is provisioned	
+|	106	| Enrollment succeeded but is not provisioned
+|	107	| Enrollment succeeded and is provisioned
 |	108	| Enrollment no active user			|
 |	110	| Enrollment failed			|
 
@@ -313,8 +313,8 @@ Each Configuration Manager feature that uses state messages is identified by the
 
 |     State Message ID     |  State Message Description |
 |:-------------|:------|
-|	1	|	Success|	
-|	2	|	Not successful |	
+|	1	|	Success|
+|	2	|	Not successful |
 
 ## 1401 STATE_TOPICTYPE_STATE_REPORT
 

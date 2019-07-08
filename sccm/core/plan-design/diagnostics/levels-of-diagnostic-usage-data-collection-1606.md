@@ -39,7 +39,7 @@ Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[
  -   Setup Information:
  	  - Build, install type, language packs, features that you enabled  
 
- 	  -   Update pack deployment status and errors, download progress, and prerequisite errors 	
+ 	  -   Update pack deployment status and errors, download progress, and prerequisite errors 
 
  	  -  Version of post-upgrade script
 

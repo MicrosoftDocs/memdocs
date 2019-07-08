@@ -96,7 +96,7 @@ Configuration Manager provides e-mail templates, but you can also create your ow
 	b. **Additional recipients (via e-mail)**  
 
 	c. **Select the message template:** Choose a default e-mail template or custom template that you created.  
-	
+
 	> [!TIP]   
 	> You can also add a new e-mail template when adding the **Send e-mail to end user** action by clicking **New** from the **Add Action** page.  
 

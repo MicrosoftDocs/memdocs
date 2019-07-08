@@ -133,7 +133,7 @@ Using /NoCRLCheck is only good for ccmsetup bootstrap. For the clients to be ful
 The following entries are logged in **ClientIDManagerStartup.log**:
 
 ```
-[RegTask] - Client is not registered. Sending registration request for GUID:1XXXXXEF-5XX8-4XX3-XEDX-XXXFBFF78XXX ... 	
+[RegTask] - Client is not registered. Sending registration request for GUID:1XXXXXEF-5XX8-4XX3-XEDX-XXXFBFF78XXX ... 
 Registering client using AAD auth. 
 ```
 
@@ -142,7 +142,7 @@ Registering client using AAD auth.
 The following entries are logged in **ADALOperationProvider.log**:
 ```
 Getting AAD (user) token with: ClientId = f1f9b14e-XXXX-4f17-XXXX-2593f6eee91e, ResourceUrl = https://ConfigMgrService, AccountId = X49FC29A-ECE3-XXX-A3C1-XXXXXXF035A6E
-Retrieved AAD token for AAD user '00000000-0000-0000-0000-000000000000'	
+Retrieved AAD token for AAD user '00000000-0000-0000-0000-000000000000'
 
 ```
 
@@ -151,7 +151,7 @@ Retrieved AAD token for AAD user '00000000-0000-0000-0000-000000000000'
 The following entries are logged in **ClientIDManagerStartup.log**:
 
 ```
-[RegTask] - Client is registered. Server assigned ClientID is GUID:1XXXXXEF-5XX8-4XX3-XEDX-XXXFBFF78XXX. Approval status 3	
+[RegTask] - Client is registered. Server assigned ClientID is GUID:1XXXXXEF-5XX8-4XX3-XEDX-XXXFBFF78XXX. Approval status 3
 ```
 
 > [!NOTE]  
@@ -165,10 +165,10 @@ Once the site registers the client, the client requests a CCM token. The CCM tok
 The following entries are logged in **ClientIDManagerStartup.log**:
 
 ```
-Getting CCM Token from STS server 'MP.MYCORP.COM'	
+Getting CCM Token from STS server 'MP.MYCORP.COM'
 Getting CCM Token from https://MP.MYCORP.COM/CCM_STS
 ...
-Cached encrypted token for 'S-1-5-18'. Will expire at 'XX/XX/XX XX:XX:XX'	
+Cached encrypted token for 'S-1-5-18'. Will expire at 'XX/XX/XX XX:XX:XX'
 ```
 
 #### 3.1 CMG gets request

@@ -62,7 +62,7 @@ For more information about app installation types, see the [introduction to appl
 
 The format of the XML property list varies depending on the app you are configuring. Contact the app supplier for details about the format to use.
 Intune supports the following data types in a property list:
-			
+		
             ```
 			<integer>
 			<real>
@@ -73,7 +73,7 @@ Intune supports the following data types in a property list:
             ```
 For more information about data types, see [About Property Lists](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PropertyLists/AboutPropertyLists/AboutPropertyLists.html) in the iOS Developer Library.
 Intune also supports the following token types in the property list:
-			
+		
             ```
 			{{userprincipalname}} - (Example: John@contoso.com)
 			{{mail}} - (Example: John@contoso.com)
@@ -87,7 +87,7 @@ Intune also supports the following token types in the property list:
             ```
 
 The {{ and }} characters are used by token types only and must not be used for other purposes.
-			
+		
 5. To import an XML file that you created earlier, choose **Select file**.
 6. Choose **Next**. If there are errors in the XML code, you'll have to correct them before you continue.
 7. Finish the steps shown in the wizard.

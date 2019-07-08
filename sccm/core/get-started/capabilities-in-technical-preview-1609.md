@@ -287,7 +287,7 @@ In addition to the links you define, there is an implied link that is created au
 - Is used by clients that are not on a boundary associated with any boundary group in your hierarchy automatically use the default boundary group from their assigned site to identify valid content source locations.   
 - 	Is a default fallback option from the current boundary group to the sites default boundary group that is used after 120 minutes.
 
-**Example of using the new model:** 	
+**Example of using the new model:** 
 You create three boundary groups that do not share boundaries or site system servers:
 - Group BG_A with distribution points DP_A1 and DP_A2 associated to the group
 - Group BG_B with distribution points DP_B1 and DP_B2 associated to the group

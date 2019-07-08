@@ -175,7 +175,7 @@ Select **OK** to create the web app in Azure AD and close the Create Server Appl
 
 
 ### Native Client app
-	
+
 This app is the Azure AD type *Native*, also referred to as a client app in Configuration Manager.
 
 #### Client App dialog
