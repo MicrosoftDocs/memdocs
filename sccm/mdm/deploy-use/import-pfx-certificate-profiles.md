@@ -64,7 +64,7 @@ To import a PFX certificate, you use the Configuration Manager SDK to deploy a C
 Imported certificates are later deployed to enrolled devices.
 
 1. On the **PFX Certificate** page of the **Create Certificate Profile Wizard**, specify where the device key storage provider:
-	- 	**Install to Trusted Platform Module (TPM) if present**  
+    - 	**Install to Trusted Platform Module (TPM) if present**  
     -   **Install to Trusted Platform Module (TPM), otherwise fail** 
     -   **Install to Windows Hello for Business otherwise fail** 
     -   **Install to Software Key Storage Provider** 

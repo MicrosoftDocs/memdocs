@@ -116,25 +116,25 @@ Peer cache no longer uses the Network Access Account to authenticate download re
 In this release, we've added new configuration item settings for Windows 10 devices that are enrolled with Intune, or managed on premises by Configuration Manager. The settings are:
 
 - **Password**
-	- Device Encryption
+  - Device Encryption
 - **Device**
-	- Region settings modification (desktop only)
-	- Power and sleep settings modification
-	- Language settings modification
-	- System time modification
-	- Device name modification
+  - Region settings modification (desktop only)
+  - Power and sleep settings modification
+  - Language settings modification
+  - System time modification
+  - Device name modification
 - **Store**
-	- Auto-update apps from store
-	- Use private store only
-	- Store originated app launch
+  - Auto-update apps from store
+  - Use private store only
+  - Store originated app launch
 - **Microsoft Edge**
-	- Block access to about:flags
-	- SmartScreen prompt override
-	- SmartScreen prompt override for files
-	- WebRTC localhost IP address
-	- Default search engine
-	- OpenSearch XML URL
-	- Homepages (desktop only)
+  - Block access to about:flags
+  - SmartScreen prompt override
+  - SmartScreen prompt override for files
+  - WebRTC localhost IP address
+  - Default search engine
+  - OpenSearch XML URL
+  - Homepages (desktop only)
 
 For details of all Windows 10 settings, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client).
 

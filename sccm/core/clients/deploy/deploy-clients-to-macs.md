@@ -88,15 +88,15 @@ For more information, see [How to configure client settings](/sccm/core/clients/
 
 5. In the folder, make sure that it contains the following files: 
 
-	- **Ccmsetup**: Installs the Configuration Manager client on your Mac computers using **CMClient.pkg**  
+    - **Ccmsetup**: Installs the Configuration Manager client on your Mac computers using **CMClient.pkg**  
 
-	- **CMDiagnostics**: Collects diagnostic information related to the Configuration Manager client on your Mac computers  
+    - **CMDiagnostics**: Collects diagnostic information related to the Configuration Manager client on your Mac computers  
 
-	- **CMUninstall**: Uninstalls the client from your Mac computers  
+    - **CMUninstall**: Uninstalls the client from your Mac computers  
 
-	- **CMAppUtil**: Converts Apple application packages into a format that you can deploy as a Configuration Manager application  
+    - **CMAppUtil**: Converts Apple application packages into a format that you can deploy as a Configuration Manager application  
 
-	- **CMEnroll**: Requests and installs the client certificate for a Mac computer so that you can then install the Configuration Manager client  
+    - **CMEnroll**: Requests and installs the client certificate for a Mac computer so that you can then install the Configuration Manager client  
 
 
 

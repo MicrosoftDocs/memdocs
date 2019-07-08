@@ -52,11 +52,11 @@ When you deploy a policy, typically, the following executables can run:
 - The Configuration Manager client 
 - All software deployed through Configuration Manager that PCs install after the Windows Defender Application Control policy is processed. 
 - Updates to windows components from:
-	- Windows Update
-	- Windows Update for Business
-	- Windows Server Update Services
-	- Configuration Manager
-	- Optionally, software with a good reputation as determined by the Microsoft Intelligent Security Graph (ISG). The ISG includes Windows Defender SmartScreen and other Microsoft services. The device must be running Windows Defender SmartScreen and Windows 10 version 1709 or later for this software to be trusted.
+    - Windows Update
+    - Windows Update for Business
+    - Windows Server Update Services
+    - Configuration Manager
+    - Optionally, software with a good reputation as determined by the Microsoft Intelligent Security Graph (ISG). The ISG includes Windows Defender SmartScreen and other Microsoft services. The device must be running Windows Defender SmartScreen and Windows 10 version 1709 or later for this software to be trusted.
 
 >[!IMPORTANT]
 >These items do not include any software that is *not* built-into Windows that automatically updates from the internet or third-party software updates whether they are installed via any of the update mechanisms mentioned previously, or from the internet. Only software changes that are deployed though the Configuration Manager client can run.
@@ -77,19 +77,19 @@ Before you configure or deploy Windows Defender Application Control policies, re
 2. In the **Assets and Compliance** workspace, expand **Endpoint Protection**, and then click **Windows Defender Application Control**.
 3. On the **Home** tab, in the **Create** group, click **Create Application Control policy**.
 4. On the **General** page of the **Create Application Control policy Wizard**, specify the following settings:
-	- **Name** - Enter a unique name for this Windows Defender Application Control policy. 
-	- **Description** - Optionally, enter a description for the policy that helps you identify it in the Configuration Manager console.
-	- **Enforce a restart of devices so that this policy can be enforced for all processes** - After the policy is processed on a client PC, a restart is scheduled on the client according to the **Client Settings** for **Computer Restart**.
+    - **Name** - Enter a unique name for this Windows Defender Application Control policy. 
+    - **Description** - Optionally, enter a description for the policy that helps you identify it in the Configuration Manager console.
+    - **Enforce a restart of devices so that this policy can be enforced for all processes** - After the policy is processed on a client PC, a restart is scheduled on the client according to the **Client Settings** for **Computer Restart**.
 	    - Devices running Windows 10 version 1703 or earlier will always be automatically restarted.
 	    - Starting with Windows 10 version 1709, applications currently running on the device will not have the new Application Control policy applied to them until after a restart. However, applications launched after the policy applies will honor the new Application Control policy. 
-	- **Enforcement Mode** - Choose one of the following enforcement methods for Device Guard on the client PC.
-		- **Enforcement Enabled** - Only allow trusted executables are allowed to run.
-		- **Audit Only** - Allow all executables to run, but log untrusted executables that run in the local client event log.
+    - **Enforcement Mode** - Choose one of the following enforcement methods for Device Guard on the client PC.
+	    - **Enforcement Enabled** - Only allow trusted executables are allowed to run.
+	    - **Audit Only** - Allow all executables to run, but log untrusted executables that run in the local client event log.
 5. On the **Inclusions** tab of the **Create Application Control policy Wizard**, chose if you want to **Authorize software that is trusted by the Intelligent Security Graph**.
 6. Click **Add** if you want to add trust for specific files or folders on PCs. In the **Add Trusted File or Folder** dialog box, you can specify a local file or a folder path to trust. You can also specify a file or folder path on a remote device on which you have permission to connect. When you add trust for specific files or folders in a Windows Defender Application Control policy, you can:
-	- Overcome issues with managed installer behaviors
-	- Trust line-of-business apps that cannot be deployed with Configuration Manager
-	- Trust apps that are included in an operating system deployment image. 
+    - Overcome issues with managed installer behaviors
+    - Trust line-of-business apps that cannot be deployed with Configuration Manager
+    - Trust apps that are included in an operating system deployment image. 
 8. Click **Next**, to complete the wizard.
 
 >[!IMPORTANT]
