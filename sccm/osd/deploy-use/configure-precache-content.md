@@ -48,13 +48,11 @@ There are three steps to configure the pre-cache feature:
 
 ### <a name="bkmk_createpkg"></a> 1. Create and configure the packages
 
-For the language, use the decimal conversion. For example, **1033** is the decimal value for English, and **0x0409** is the hexadecimal equivalent.  
-
-The client evaluates the architecture and language values to determine which OS upgrade package it downloads during pre-caching.  
+The client evaluates attributes of the packages to determine which content it downloads during pre-caching.  
 
 #### OS upgrade package
 
-Create [OS upgrade packages](/sccm/osd/get-started/manage-operating-system-upgrade-packages) for specific architectures and languages. Specify the architecture and language on the **Data Source** tab of its properties.
+Create [OS upgrade packages](/sccm/osd/get-started/manage-operating-system-upgrade-packages) for specific architectures and languages. Specify the **Architecture** and **Language** on the **Data Source** tab of its properties.
 
 #### OS image
 
@@ -68,7 +66,7 @@ To determine which driver package it downloads during pre-caching, the client ev
 
 #### Package
 
-Create [packages](/sccm/apps/deploy-use/packages-and-programs) for specific architectures and languages. Specify the architecture and language on the **General** tab of its properties.
+Create [packages](/sccm/apps/deploy-use/packages-and-programs) for specific architectures and languages. Specify the **Architecture** and **Language** on the **General** tab of its properties.
 
 
 ### <a name="bkmk_createts"></a> 2. Create a task sequence
@@ -87,6 +85,15 @@ For example, the following **Upgrade OS** step uses the English version:
 ![Task sequence editor showing multiple Upgrade OS steps for ENU, DEU, and JPN](../media/precacheproperties2.png)
 
 ![Task sequence editor, Options tab, displaying the WMI WQL query for Locale and OSArchitecture](../media/precacheoptions2.png)  
+
+> [!Tip]
+> The following WMI query is recommended for the English (United States) OS and 64-bit architecture:
+>
+> ```WMI
+> SELECT * FROM Win32_OperatingSystem WHERE OSArchitecture LIKE '%64%' AND OSLanguage=1033`
+> ```
+>
+> First add the language by selecting the **Operating System Language** condition. Then edit the WMI query to include the architecture clause.
 
 
 ### <a name="bkmk_deploy"></a> 3. Deploy the task sequence
