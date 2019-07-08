@@ -128,9 +128,9 @@ The following options are available to all connection types on Windows 10:
        >  Devices that run iOS support only RSA SecurID and MSCHAP v2 for the authentication method when the connection type is PPTP. To avoid reporting errors, deploy a separate PPTP VPN profile to devices that run iOS.   
 
      - **Conditional access**  
-         - Choose **Enable conditional access for this VPN connection** to ensure that devices that connect to the VPN are tested for conditional access compliance before connecting. For more information, see [Device compliance policies](/sccm/protect/deploy-use/device-compliance-policies).  
+       - Choose **Enable conditional access for this VPN connection** to ensure that devices that connect to the VPN are tested for conditional access compliance before connecting. For more information, see [Device compliance policies](/sccm/protect/deploy-use/device-compliance-policies).  
 
-         - Choose **Enable single sign-on (SSO) with alternate certificate** to choose a certificate other than the VPN Authentication certificate for device compliance. If you choose this option, provide the **EKU** (comma-separated list) and **Issuer Hash**, for the correct certificate that the VPN client should locate.  
+       - Choose **Enable single sign-on (SSO) with alternate certificate** to choose a certificate other than the VPN Authentication certificate for device compliance. If you choose this option, provide the **EKU** (comma-separated list) and **Issuer Hash**, for the correct certificate that the VPN client should locate.  
 
        - For **Windows Information Protection**, provide the enterprise-managed corporate identity, which is usually your organization's primary domain, for example, *contoso.com*. You can specify multiple domains that your organization owns by separating them with the "|" character. For example, *contoso.com|newcontoso.com*. For more information, see [Create and deploy a Windows Information Protection app protection policy with Intune](/intune/windows-information-protection-policy-create).   
 
