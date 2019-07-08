@@ -22,8 +22,8 @@ This article includes security and privacy information for the Configuration Man
 - The CMG accepts and manages connections from CMG connection points. It uses mutual SSL authentication using certificates and connection IDs.
 - The CMG accepts and forwards client requests using the following methods:
     - Pre-authenticates connections using mutual SSL with the PKI-based client authentication certificate or Azure AD. 
-    - IIS on the CMG VM instances verifies the certificate path based on the trusted root certificate(s) uploaded to the CMG.
-    - IIS on the VM instance also verifies client certificate revocation, if enabled. For more information, see [Publish the certificate revocation list](#bkmk_crl).
+      - IIS on the CMG VM instances verifies the certificate path based on the trusted root certificate(s) uploaded to the CMG.
+      - IIS on the VM instance also verifies client certificate revocation, if enabled. For more information, see [Publish the certificate revocation list](#bkmk_crl).
     - The certificate trust list checks the root of the client authentication certificate. It also performs the same validation as the management point for the client. For more information, see [Review entries in the site's certificate trust list](#bkmk_ctl).
     - Validates and filters client requests (URLs) to check if any CMG connection point can service the request.  
     - Checks content length for each publishing endpoint.
