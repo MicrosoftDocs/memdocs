@@ -14,10 +14,11 @@ manager: dougeby
 
 
 # Microsoft Deployment Toolkit Samples Guide  
- This guide is part of Microsoft® Deployment Toolkit (MDT) 2013 and guides a specialist team through deploying Windows operating systems and Microsoft Office. Specifically, this guide is designed to provide sample configuration settings for specific deployment scenarios.  
+
+This guide is part of Microsoft Deployment Toolkit (MDT) and guides a specialist team through deploying Windows operating systems and Microsoft Office. Specifically, this guide is designed to provide sample configuration settings for specific deployment scenarios.  
 
 > [!NOTE]
->  In this document, *Windows* applies to the Windows 8.1, Windows 8, Windows 7, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2 operating systems unless otherwise noted. MDT does not support ARM processor–based versions of Windows. Similarly, *MDT* refers to MDT 2013 unless otherwise stated.  
+> In this article, *Windows* applies to the Windows 8.1, Windows 8, Windows 7, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2 operating systems unless otherwise noted. MDT does not support ARM processor–based versions of Windows. Similarly, *MDT* refers to the current version of MDT unless otherwise stated.  
 
  **To use this guide**  
 
@@ -154,11 +155,7 @@ manager: dougeby
 - Manage the folders in a deployment share using Windows PowerShell as described in [Managing Deployment Share Folders Using Windows PowerShell](#ManageDeployShareFolder).  
 
 ###  <a name="LoadMDTSnapIn"></a> Loading the MDT Windows PowerShell Snap-In  
- The MDT cmdlets are provided in a Windows PowerShell snap-in **Microsoft.BDD.SnapIn** that must be loaded prior to using the MDT cmdlets. You can load the MDT Windows PowerShell snap-in using any one of the following methods:  
-
--   Load the MDT Windows PowerShell snap-in using the Window PowerShell Modules console as described in [Load the MDT Windows PowerShell Snap-In Using the Import System Modules Task](#LoadMDTSnapInImport).  
-
--   Load the MDT Windows PowerShell snap-in using the **Add-PSSnapIn** cmdlet as described in [Load the MDT Windows PowerShell Snap-In Using the Add-PSSnapIn Cmdlet](#LoadMDTSnapInCmdlet).  
+ The MDT cmdlets are provided in a Windows PowerShell snap-in **Microsoft.BDD.SnapIn** that must be loaded prior to using the MDT cmdlets. Load the MDT Windows PowerShell snap-in using the **Add-PSSnapIn** cmdlet as described in [Load the MDT Windows PowerShell Snap-In Using the Add-PSSnapIn Cmdlet](#LoadMDTSnapInCmdlet).  
 
 ####  <a name="LoadMDTSnapInCmdlet"></a> Load the MDT Windows PowerShell Snap-In Using the Add-PSSnapIn Cmdlet  
  You can load the MDT Windows PowerShell snap-in **Microsoft.BDD.PSSnapIn** from any Windows PowerShell environment using the [Add-PSSnapIn](https://technet.microsoft.com/library/hh849705.aspx) cmdlet, as show in the following example:  
@@ -958,7 +955,7 @@ Subsection=Server-%IsServer%
    go  
    ```  
 
-    The stored procedure in the preceeding example assumes that the Configuration Manager central primary site database resides on the computer on which SQL Server is running as the MDT DB. If the central primary site database resides on a different computer, the appropriate modifications need to be made to the stored procedure. In addition, the name of the database (`CM_DB`) must be updated. Also consider granting additional accounts Read access to the **v_GS_ADD_REMOVE_PROGRAMS** view in the Configuration Manager database.  
+    The stored procedure in the preceding example assumes that the Configuration Manager central primary site database resides on the computer on which SQL Server is running as the MDT DB. If the central primary site database resides on a different computer, the appropriate modifications need to be made to the stored procedure. In addition, the name of the database (`CM_DB`) must be updated. Also consider granting additional accounts Read access to the **v_GS_ADD_REMOVE_PROGRAMS** view in the Configuration Manager database.  
 
 4. Configure the CustomSettings.ini file to query this database table by specifying the name of a section (`[DynamicPackages]` in the **Priority** list) that points to the database information.  
 
@@ -990,7 +987,7 @@ Subsection=Server-%IsServer%
    Netlib=DBNMPNTW  
    ```  
 
-    In the preceeding example, the MDT DB named *MDTDB* on the computer running the SQL Server instanced named *SERVER1* will be queried. The database contains a stored procedure named `RetrievePackages` (created in step 3).  
+    In the preceding example, the MDT DB named *MDTDB* on the computer running the SQL Server instanced named *SERVER1* will be queried. The database contains a stored procedure named `RetrievePackages` (created in step 3).  
 
    When ZTIGather.wsf runs, a Structured Query Language (SQL) `SELECT` statement is automatically generated, and the value of the **MakeModelQuery** custom key is passed as a parameter to the query:  
 
@@ -2063,7 +2060,7 @@ ParameterCondition=OR
  |**%WDSServer%** |This method is used when the MDT server is co-hosted on the Windows Deployment Services server.<br /><br /> When an LTI deployment is initiated from Windows Deployment Services, an environmental variable—%WDSServer%—is created and populated with the name of the Windows Deployment Services server.<br /><br /> The **DeployRoot** variable can use this variable to automatically connect to a deployment share on the Windows Deployment Services server—for example:<br /><br /> **DeployRoot=\\\\%WDSServer%\Deployment$** |  
  |**Location-based automation** |MDT can use location-based automation in the BootStrap.ini file to determine the server to which it should deploy.<br /><br /> Use the **Default Gateway** property to distinguish between different locations; for each **Default Gateway**, a different MDT server is specified.<br /><br /> For more information about using location-based automation, refer to "Selecting the Methods for Applying Configuration Settings".|  
 
- Each approach listed in the preceeding table offers one way to automate the selection of the deployment server at a given location for certain scenarios. These approaches are targeted to specific scenarios—for example, when the MDT server is co-hosted with Windows Deployment Services.  
+ Each approach listed in the preceding table offers one way to automate the selection of the deployment server at a given location for certain scenarios. These approaches are targeted to specific scenarios—for example, when the MDT server is co-hosted with Windows Deployment Services.  
 
  There are other scenarios in which these approaches are not suitable—for example, if there are multiple deployment servers at a given location or automation logic is not possible (for example, the network is not segmented enough to allow location determination or the MDT server is separated from Windows Deployment Services).  
 
@@ -2083,7 +2080,7 @@ ParameterCondition=OR
 
 - A UNC path to the MDT server for that location  
 
-  The folowing illustrates how the LocationServer.xml file is created using each of these properties using a sample LocationServer.xml file configured for multiple locations.  
+  The following illustrates how the LocationServer.xml file is created using each of these properties using a sample LocationServer.xml file configured for multiple locations.  
 
   **Example LocationServer.xml File to Support Multiple Locations**  
 
@@ -2326,7 +2323,7 @@ ParameterCondition=OR
 
 4.  In the **Properties** dialog box, click the **Rules** tab.  
 
-5.  On the **Rules** tab, modify the CustomSettings.ini file to reflect the necessary changes as shown in the following exampple. Make any additional modifications the environment requires.  
+5.  On the **Rules** tab, modify the CustomSettings.ini file to reflect the necessary changes as shown in the following example. Make any additional modifications the environment requires.  
 
      **Customized CustomSettings.ini File**  
 
@@ -2510,7 +2507,7 @@ ParameterCondition=OR
 
 - **clsRegEx**. This class performs regular expression functions.  
 
-  In MDT, a couple of changes have been implemented to the script architecture to make client Microsoft Visual Basic® Scripting Edition (VBScript) more robust and reliable. These changes include:  
+  In MDT, a couple of changes have been implemented to the script architecture to make client Microsoft Visual Basic Scripting Edition (VBScript) more robust and reliable. These changes include:  
 
 - Extensive changes to ZTIUtility.vbs (the main script library), including new APIs and better error handling  
 
@@ -2615,7 +2612,7 @@ End Class
 >  If you want to continue using scripts that call **ZTIProcess()** with **ProcessResults()**, you can continue to do so. However, certain enhanced error-handling features will not be enabled.  
 
 ####  <a name="UseZTIEnvironment"></a> Use the ZTIUtility Environment Class  
- The environment class in ZTIUtiliy.vbs provides access to, and the ability to update, MDT properties. In preceeding example, **oEnvironment.Item("Memory")** is used to retrieve the amount of available RAM; this can also be used to retrieve the value of any of the properties described in the MDT document *Toolkit Reference*.  
+ The environment class in ZTIUtiliy.vbs provides access to, and the ability to update, MDT properties. In preceding example, **oEnvironment.Item("Memory")** is used to retrieve the amount of available RAM; this can also be used to retrieve the value of any of the properties described in the MDT document *Toolkit Reference*.  
 
 ####  <a name="UseZTIUtility"></a> Use the ZTIUtility Utility Class  
  The ZTIUtility.vbs script contains a number of commonly used utilities that any custom deployment script can use. You can add these utilities to any script the same way as the **oLogging** and **oEnvironment** classes.  
@@ -2944,7 +2941,7 @@ The following table details some useful functions available, and their output. F
 
    As part of the initialization process, both the LTI and ZTI process gather information about the computer on which it is running. As part of this process, WMI queries are performed and the values from the **Win32_ComputerSystem** class for make and manufacturer are populated as variables **%Make%** and **%Model%,** respectively.  
 
-   These values can be used during processing the CustomSettings.ini file to dynamically read sections of the file depending on the make and model detected.  The folowing sample shows an example of the CustomSettings.ini file.  
+   These values can be used during processing the CustomSettings.ini file to dynamically read sections of the file depending on the make and model detected.  The following sample shows an example of the CustomSettings.ini file.  
 
    **Sample CustomSettings.ini Configured for a Hardware-Specific Application Installation**  
 
@@ -2974,7 +2971,7 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
 
    If the application wizard is used without the **MandatoryApplications** property (for example, **SkipApplications=NO**), it will overwrite applications specified by the **Applications** property.  
 
-   The previousi sampole shows how to use the **%Make%** and **%Model%** variable values to dynamically manipulate how the applications list is built. The values for the make and model of each type of hardware can be located using one of the following methods:  
+   The previous sample shows how to use the **%Make%** and **%Model%** variable values to dynamically manipulate how the applications list is built. The values for the make and model of each type of hardware can be located using one of the following methods:  
 
 - **The System Information tool**. Use the System Summary node in this tool to identify the **System Manufacturer** (make) and **System Model** (model).  
 
