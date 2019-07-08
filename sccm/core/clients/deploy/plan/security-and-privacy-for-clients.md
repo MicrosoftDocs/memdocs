@@ -95,24 +95,24 @@ For more information, see [Create a task sequence to capture an operating system
 
 ### Ensure that the Configuration Manager computer clients get an authorized copy of these certificates  
 
-- The Configuration Manager trusted root key certificate  
+#### The Configuration Manager trusted root key certificate  
 
-    When both of the following statements are true, clients rely on the Configuration Manager trusted root key to authenticate valid management points:  
+When both of the following statements are true, clients rely on the Configuration Manager trusted root key to authenticate valid management points:  
 
-      - You haven't extended the Active Directory schema for Configuration Manager
-      - Clients don't use PKI certificates when they communicate with management points  
+- You haven't extended the Active Directory schema for Configuration Manager
+- Clients don't use PKI certificates when they communicate with management points  
 
-    In this scenario, clients have no way to verify that the management point is trusted for the hierarchy unless they use the trusted root key. Without the trusted root key, a skilled attacker could direct clients to a rogue management point.  
+In this scenario, clients have no way to verify that the management point is trusted for the hierarchy unless they use the trusted root key. Without the trusted root key, a skilled attacker could direct clients to a rogue management point.  
 
-    When clients can't download the Configuration Manager trusted root key from the Global Catalog or by using PKI certificates, pre-provision the clients with the trusted root key. This action makes sure that they can't be directed to a rogue management point. For more information, see [Planning for the trusted root key](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForRTK).  
+When clients can't download the Configuration Manager trusted root key from the Global Catalog or by using PKI certificates, pre-provision the clients with the trusted root key. This action makes sure that they can't be directed to a rogue management point. For more information, see [Planning for the trusted root key](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForRTK).  
 
-- The site server signing certificate  
+#### The site server signing certificate  
 
-     Clients use this certificate to verify that the site server signed the policy downloaded from a management point. This certificate is self-signed by the site server and published to Active Directory Domain Services.  
+Clients use this certificate to verify that the site server signed the policy downloaded from a management point. This certificate is self-signed by the site server and published to Active Directory Domain Services.  
 
-     When clients can't download the site server signing certificate from the Global Catalog, by default they download it from the management point. If the management point is exposed to an untrusted network like the internet, manually install the site server signing certificate on clients. This action makes sure that they can't download tampered client policies from a compromised management point.  
+When clients can't download the site server signing certificate from the Global Catalog, by default they download it from the management point. If the management point is exposed to an untrusted network like the internet, manually install the site server signing certificate on clients. This action makes sure that they can't download tampered client policies from a compromised management point.  
 
-     To manually install the site server signing certificate, use the CCMSetup client.msi property **SMSSIGNCERT**. For more information, see [About client installation properties](/sccm/core/clients/deploy/about-client-installation-properties).  
+To manually install the site server signing certificate, use the CCMSetup client.msi property **SMSSIGNCERT**. For more information, see [About client installation properties](/sccm/core/clients/deploy/about-client-installation-properties).  
 
 ### Don't use automatic site assignment if the client downloads the trusted root key from the first management point it contacts  
 
