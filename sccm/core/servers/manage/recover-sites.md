@@ -28,7 +28,7 @@ The sections in this article can help you recover a Configuration Manager site. 
 > [!Important]  
 > This information applies only to site recovery scenarios. When you're upgrading your on-premises infrastructure and not actively recovering a failed site, review the information in the following articles:
 > - [Upgrade on-premises infrastructure](/sccm/core/servers/manage/upgrade-on-premises-infrastructure)
-> -	[Modify your infrastructure](/sccm/core/servers/manage/modify-your-infrastructure)
+> - [Modify your infrastructure](/sccm/core/servers/manage/modify-your-infrastructure)
 
 
 #### Use the same version and edition of SQL Server   

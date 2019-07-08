@@ -83,7 +83,7 @@ To install the LTSB as a new site or as an upgrade from a supported Configuratio
 
 
 ### Features of the LTSB
--	Receives in-console updates that deliver critical security fixes.
+- Receives in-console updates that deliver critical security fixes.
 - Provides an installation option when your SA agreement or equivalent rights to Configuration Manager have expired.
 - Supports upgrade (conversion) to the current branch when you have a current SA agreement or equivalent rights to Configuration Manager.
 
@@ -95,14 +95,14 @@ The LTSB is based on the current branch version 1606 and has the following limit
 - Doesn't receive updates for new features
 - Doesn't support the following capabilities: 
    - Adding a Microsoft Intune subscription, which prevents the use of:
-     -	Intune in a hybrid MDM configuration
+     - Intune in a hybrid MDM configuration
      - On-premises MDM
-   -	The Windows 10 servicing dashboard, servicing plans, or Windows 10 semi-annual channel
+   - The Windows 10 servicing dashboard, servicing plans, or Windows 10 semi-annual channel
    - Future releases of Windows 10 LTSB and Windows Server
-   -	Asset intelligence
-   -	Cloud-based distribution points
-   -	Exchange Online as an Exchange Connector
-   -	Any pre-release features
+   - Asset intelligence
+   - Cloud-based distribution points
+   - Exchange Online as an Exchange Connector
+   - Any pre-release features
 
 
 ### Update options
@@ -113,7 +113,7 @@ The LTSB is based on the current branch version 1606 and has the following limit
   - [Licensing and branches for System Center Configuration Manager](learn-more-editions.md)
   - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines) 
 - There is no option to convert the LTSB to a technical preview branch. Technical preview branches are separate installations that don't require a license.
--	You can't upgrade an evaluation edition of the current branch to an LTSB installation.
+- You can't upgrade an evaluation edition of the current branch to an LTSB installation.
 
 
 
@@ -144,8 +144,8 @@ For more information, see the [Technical preview for System Center Configuration
 
 
 ### Update options
--	You can install any in-console update for a new technical preview branch version.
--	There is no option to convert a technical preview branch to the current branch or LTSB.
+- You can install any in-console update for a new technical preview branch version.
+- There is no option to convert a technical preview branch to the current branch or LTSB.
 
 
 

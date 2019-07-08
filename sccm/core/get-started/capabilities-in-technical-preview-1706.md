@@ -255,10 +255,10 @@ Although the method to configure the connection has changed, prerequisites for t
 The prerequisites for a [connection to Upgrade Readiness](/sccm/core/clients/manage/upgrade-readiness#connect-configuration-manager-to-upgrade-readiness) are unchanged from those detailed for the Current Branch of Configuration Manager. They are repeated here for convenience:  
 
 **Prerequisites**
--	In order to add the connection, your Configuration Manager environment must first configure a [service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point) in an [online mode](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_modes). When you add the connection to your environment, it will also install the Microsoft Monitoring Agent on the machine running this site system role.
--	Register Configuration Manager as a “Web Application and/or Web API” management tool, and get the [client ID from this registration](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/).
--	Create a client key for the registered management tool in Azure Active Directory.
--	In the Azure Management Portal, provide the registered web app with permission to access OMS, as described in [Provide Configuration Manager with permissions to OMS](https://azure.microsoft.com/documentation/articles/log-analytics-sccm/#provide-configuration-manager-with-permissions-to-oms).
+- In order to add the connection, your Configuration Manager environment must first configure a [service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point) in an [online mode](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_modes). When you add the connection to your environment, it will also install the Microsoft Monitoring Agent on the machine running this site system role.
+- Register Configuration Manager as a “Web Application and/or Web API” management tool, and get the [client ID from this registration](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/).
+- Create a client key for the registered management tool in Azure Active Directory.
+- In the Azure Management Portal, provide the registered web app with permission to access OMS, as described in [Provide Configuration Manager with permissions to OMS](https://azure.microsoft.com/documentation/articles/log-analytics-sccm/#provide-configuration-manager-with-permissions-to-oms).
 
 > [!IMPORTANT]       
 > When configuring permission to access OMS, be sure to choose the **Contributor** role, and assign it permissions to the resource group of the registered app.
@@ -273,8 +273,8 @@ After the prerequisites are configured, you are ready to use the Wizard to creat
 3. On the **App** page, specify your **Azure environment** (the technical preview supports only the Public Cloud). Then, click **Import** to open the **Import Apps** window.
 
 4. In the **Import Apps** window, specify details for a web app that already exists in your Azure AD.
-    -	Provide a friendly name for the Azure AD Tenant Name. Then, specify the Tenant ID, Application Name, Client ID, secret key for the Azure web app, and the App ID URI.
-    -	Click **Verify**, and if successful, click **OK** to continue.
+    - Provide a friendly name for the Azure AD Tenant Name. Then, specify the Tenant ID, Application Name, Client ID, secret key for the Azure web app, and the App ID URI.
+    - Click **Verify**, and if successful, click **OK** to continue.
 
 5.  On the **Configuration** page, specify the subscription, resource group, and Windows Analytics Workspace you want to use with this connection to Upgrade Readiness.  
 
@@ -300,8 +300,8 @@ If you remove the connection, devices are not un-registered, but no new devices 
 ### Try it out!
 
 1. Configure the following client settings (found in the Cloud Services) section using the information in [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings).
-  -	**Automatically register new Windows 10 domain joined devices with Azure Active Directory** – Set to **Yes** (default), or **No**.
-  -	**Enable clients to use a cloud management gateway** – Set to **Yes** (default), or **No**.
+  - **Automatically register new Windows 10 domain joined devices with Azure Active Directory** – Set to **Yes** (default), or **No**.
+  - **Enable clients to use a cloud management gateway** – Set to **Yes** (default), or **No**.
 2. Deploy the client settings to the required collection of devices.
 
 To confirm that the device is joined to Azure AD, run the command **dsregcmd.exe /status** in a command prompt window. The **AzureAdjoined** field in the results will show **YES** if the device is Azure AD joined.
@@ -557,8 +557,8 @@ We have updated the setting descriptions for Android for Work configuration item
 
 None of these options directly prevent copy-paste behavior. We added a custom setting to the service and Company Portal app in 1704 that can be configured to prevent copy-paste. This can be set through custom URI.
 
--	OMA-URI:  ./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste
--	Value type: Boolean
+- OMA-URI:  ./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste
+- Value type: Boolean
 
 Setting DisallowCrossProfileCopyPaste to true prevents copy-paste behavior between Android for Work personal and work profiles.
 

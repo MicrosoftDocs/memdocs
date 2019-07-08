@@ -67,7 +67,7 @@ If you want to use Windows Hello for Business certificate-based logon, configure
 
 -   In the certificate profile, select a template that uses Smart Card logon EKU.  
 
--	If you intend to store certificate profiles in the Windows Hello for Business key container, and the certificate profile uses the **Smart Card Logon** EKU, you must configure the following permissions for key registration to ensure the certificate is validated correctly.
+- If you intend to store certificate profiles in the Windows Hello for Business key container, and the certificate profile uses the **Smart Card Logon** EKU, you must configure the following permissions for key registration to ensure the certificate is validated correctly.
 You must first have created the **Key Admins** group and added all Configuration Manager management point computers as members to this group.
 
 Some configurations might not need you to configure permissions, or might require further configurations. Refer to the following table for more help:

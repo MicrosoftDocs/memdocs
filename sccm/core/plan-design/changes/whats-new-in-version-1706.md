@@ -53,8 +53,8 @@ We have added additional improvements to accessibility for the Configuration Man
 ### Improvements  for SQL Server Always On Availability Groups
 <!-- 1352094 -->
 With this release, you can now use asynchronous commit replicas in the SQL Server Always On availability groups you use with Configuration Manager. This means you can add additional replicas to your availability groups to use as off-site (remote) backups, and then use them in a disaster recovery scenario.  
-  -	  Configuration Manager supports using the asynchronous commit replica to recover your synchronous replica. See [site database recovery options](/sccm/core/servers/manage/recover-sites#site-database-recovery-options) in the Backup and Recovery topic for information on how to accomplish this.
-  -	  This release does not support failover to use the asynchronous commit replica as your site database.
+  - Configuration Manager supports using the asynchronous commit replica to recover your synchronous replica. See [site database recovery options](/sccm/core/servers/manage/recover-sites#site-database-recovery-options) in the Backup and Recovery topic for information on how to accomplish this.
+  - This release does not support failover to use the asynchronous commit replica as your site database.
 For more information, see [Prepare to use Always On Availability Groups](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).
 
 ### Update reset tool

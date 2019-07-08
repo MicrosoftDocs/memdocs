@@ -78,12 +78,12 @@ Before the Wizard displays an option to select and install the Data Warehouse Se
 - **Configuration Manager database settings:**   
   - **Server Name** - Specify the FQDN of the server that hosts the site database. If you do not use a default instance of SQL Server, you must specify the instance after the FQDN in the following format: ***&lt;Sqlserver_FQDN>\&lt;Instance_name>***
   - **Database name** - Specify the name of the site database.
-  -	**Verify** - Click **Verify** to make sure that the connection to the site database is successful.
+  - **Verify** - Click **Verify** to make sure that the connection to the site database is successful.
 </br></br>
 - **Data Warehouse database settings:**
-  -	**Server name** - Specify the FQDN of the server that hosts the Data Warehouse Service point and database. If you do not use a default instance of SQL Server, you must specify the instance after the FQDN in the following format: ***&lt;Sqlserver_FQDN>\&lt;Instance_name>***
-  -	**Database name** - Specify the FQDN for the data warehouse database.  Configuration Manager will create the database with this name. If you specify a database name that already exists on the instance of SQL server, Configuration Manager will use that database.
-  -	**Verify** - Click **Verify** to make sure that the connection to the site database is successful.
+  - **Server name** - Specify the FQDN of the server that hosts the Data Warehouse Service point and database. If you do not use a default instance of SQL Server, you must specify the instance after the FQDN in the following format: ***&lt;Sqlserver_FQDN>\&lt;Instance_name>***
+  - **Database name** - Specify the FQDN for the data warehouse database.  Configuration Manager will create the database with this name. If you specify a database name that already exists on the instance of SQL server, Configuration Manager will use that database.
+  - **Verify** - Click **Verify** to make sure that the connection to the site database is successful.
 
 **Synchronization settings** page:   
 - **Data settings:**

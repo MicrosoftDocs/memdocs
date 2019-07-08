@@ -208,11 +208,11 @@ The following additional hybrid features are also included in version 1702 of Co
 
   The Company Portal app for Android is now available in China. Due to the absence of Google Play Store in China, Android devices must obtain apps from Chinese app marketplaces. The Company Portal app for Android is available for download on the following stores:
 
-  -	[Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
-  -	[Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
-  -	[Tencent](https://go.microsoft.com/fwlink/?linkid=836949)
-  -	[Wandoujia](https://go.microsoft.com/fwlink/?linkid=836950)
-  -	[Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947)
+  - [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
+  - [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
+  - [Tencent](https://go.microsoft.com/fwlink/?linkid=836949)
+  - [Wandoujia](https://go.microsoft.com/fwlink/?linkid=836950)
+  - [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947)
 
   The Company Portal app for Android uses Google Play Services to communicate with the Microsoft Intune service. Since Google Play Services are not yet available in China, performing any of the following tasks can take up to 8 hours to complete.
 
@@ -297,10 +297,10 @@ The following Intune features introduced in October 2016 work in hybrid deployme
   The model numbers affected are:
 
   - SM-G313HU
-  -	SM-G313HY
-  -	SM-G313M
-  -	SM-G313MY
-  -	SM-G313U
+  - SM-G313HY
+  - SM-G313M
+  - SM-G313MY
+  - SM-G313U
 
   You and your end users need take no further action. For more information, visit the Samsung KNOX website.
 
@@ -735,9 +735,9 @@ Support for System Center 2012 Configuration Manager SP1 and System Center 2012 
 If you're running a hybrid deployment with Configuration Manager 2012 SP1 or R2 RTM, we recommend that before April 10, 2017 you upgrade to Configuration Manager (current branch) or the latest supported service pack for Configuration Manager 2012 (either R2 SP1 or SP2) to avoid disruption of service.
 
 Additional resources:
--	[Upgrade to System Center Configuration Manager (current branch)](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)
--	[Planning to upgrade to System Center 2012 R2 Configuration Manager SP1](https://technet.microsoft.com/library/jj822981.aspx#BKMK_PlanningR2SP1Upgrade)
--	[Planning to upgrade to System Center 2012 Configuration Manager SP2](https://technet.microsoft.com/library/jj822981.aspx#BKMK_PlanningSP2Upgrade)
+- [Upgrade to System Center Configuration Manager (current branch)](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)
+- [Planning to upgrade to System Center 2012 R2 Configuration Manager SP1](https://technet.microsoft.com/library/jj822981.aspx#BKMK_PlanningR2SP1Upgrade)
+- [Planning to upgrade to System Center 2012 Configuration Manager SP2](https://technet.microsoft.com/library/jj822981.aspx#BKMK_PlanningSP2Upgrade)
 
 ### Windows Phone 8 Company Portal upload deprecated
 *October 25, 2016*

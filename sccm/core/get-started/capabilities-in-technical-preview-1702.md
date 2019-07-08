@@ -66,10 +66,10 @@ The technical preview site infrastructure, clients, and the Azure AD Domain Serv
 
 ### Set up Configuration Manager to use Azure AD
 To use Azure AD with Configuration Manager, you’ll need the following:
--	Azure subscription.
--	Azure AD with Domain Services (DS).
--	A Configuration Manager site that runs on an Azure VM that is joined to your Azure AD.
--	Configuration Manager clients that run in the same Azure AD environment.
+- Azure subscription.
+- Azure AD with Domain Services (DS).
+- A Configuration Manager site that runs on an Azure VM that is joined to your Azure AD.
+- Configuration Manager clients that run in the same Azure AD environment.
 
 To configure Azure AD Domain Service, see [Get started with Azure AD Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance).
 
@@ -85,7 +85,7 @@ For each method you use, edit the LDAP query to search the Azure AD OU structure
 The following examples use an Azure AD of *contoso.onmicrosoft.com*:
 - **System Discovery**   
   Azure AD stores devices under the **AADDC Computers** OU.  Configure the following:  
-  -	*LDAP://OU=AADDC Computers,DC=contoso,DC=onmicrosoft,DC=com*  
+  - *LDAP://OU=AADDC Computers,DC=contoso,DC=onmicrosoft,DC=com*  
 
 
 - **User Discovery**
