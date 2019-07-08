@@ -347,7 +347,7 @@ Starts troubleshooting the client
 - **Active Directory**: Queries Active Directory to retrieve published Configuration Manager site information  
 - **MPCERTIFICATE**: Gets management point certificates  
 - **MPLIST**: Gets a list of management points  
-- **MPKEYINFORMATION**: Gets management point cryptographic key information	 
+- **MPKEYINFORMATION**: Gets management point cryptographic key information  
 - **Networking**: Troubleshoots issues with networking  
 - **Policy Assignments**: Retrieves policy assignments  
 - **Registration**: Verifies that the client is registered with the site  

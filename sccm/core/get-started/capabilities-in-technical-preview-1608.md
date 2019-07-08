@@ -42,7 +42,7 @@ We have added a field to the properties for inventoried software that lets you s
 
 ### Filter the software display
 After you have defined parent to child relationships, you can filter your view to only show software that is a parent or that has no defined relationship. This hides all software that is set as a child of another inventoried software. To do so:
-   1.	For the Search bar, choose to **Add Criteria**
+   1. For the Search bar, choose to **Add Criteria**
    2. Select **Parent Software** and then change the criteria value to **is empty**, and then click **Search**.
 
 The display now shows only the parent software items, or software that has no defined relationships. Software that is only a child of another title does not display.

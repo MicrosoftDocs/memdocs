@@ -153,7 +153,7 @@ Public certificate providers typically provide instructions for import of the ce
 
 6. On the **Certificate Store page**, choose **Automatically select the certificate store based on the type of certificate**, and then select **Next**.  
 
-7.	Select **Finish**.
+7. Select **Finish**.
 
 ### Export the certificate
 Export the *CMG server authentication certificate* from your server. Re-exporting the certificate makes it usable for your cloud management gateway in Azure.  

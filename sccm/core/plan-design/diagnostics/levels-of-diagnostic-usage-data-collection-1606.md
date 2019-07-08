@@ -37,13 +37,13 @@ Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[
 
 
  -   Setup Information:
- 	  - Build, install type, language packs, features that you enabled  
+      - Build, install type, language packs, features that you enabled  
 
- 	  -   Update pack deployment status and errors, download progress, and prerequisite errors 	
+      -   Update pack deployment status and errors, download progress, and prerequisite errors 
 
- 	  -  Version of post-upgrade script
+      -  Version of post-upgrade script
 
- 	  -  Use of update fast ring
+      -  Use of update fast ring
 
 -   Database performance metrics (replication processing information, top SQL Server stored procedures by processor, and disk usage)
 
@@ -80,7 +80,7 @@ Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[
 -  Use of Network Discovery (enabled or disabled)
 -  Admin Console:
 
-	 -  Statistics about console connections (operating system version, language, SKU and architecture, system memory, logical processor count, connect site ID, installed .NET versions, and console language packs)    
+    -  Statistics about console connections (operating system version, language, SKU and architecture, system memory, logical processor count, connect site ID, installed .NET versions, and console language packs)    
 
 
 - ***[New]*** SQL version, service pack level, edition, collation ID, and character set
