@@ -280,7 +280,7 @@ The following scenarios benefit from these improvements:
 
 #### <a name="bkmk_token1"></a> Scenario 1: Client to management point
 <!--1356889-->
-[Azure AD joined devices](/azure/active-directory/device-management-introduction#azure-ad-joined-devices) can communicate through a cloud management gateway (CMG) with a management point configured for HTTP. The site server generates a certificate for the management point allowing it to communicate via a secure channel.   
+[Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join) can communicate through a cloud management gateway (CMG) with a management point configured for HTTP. The site server generates a certificate for the management point allowing it to communicate via a secure channel.   
 
 > [!Note]  
 > This behavior is changed from Configuration Manager current branch version 1802, which requires an HTTPS-enabled management point for this scenario. For more information, see [Enable management point for HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps).  
@@ -291,7 +291,7 @@ A workgroup or Azure AD joined client can download content over a secure channel
 
 #### <a name="bkmk_token3"></a> Scenario 3 Azure AD device identity 
 <!--1358460-->
-An Azure AD joined or [hybrid Azure AD device](/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices) without an Azure AD user logged in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point.  
+An Azure AD joined or [hybrid Azure AD device](/azure/active-directory/devices/concept-azure-ad-join-hybrid) without an Azure AD user logged in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point.  
 
 
 ### Prerequisites  
