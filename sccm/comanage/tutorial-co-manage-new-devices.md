@@ -398,8 +398,10 @@ For example, *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetup
    - **Command-line arguments**:  *\<Specify the **CCMSETUPCMD** command line. You can use the command line you saved from the* Enablement *page of the Co-management Configuration Wizard. This command line includes the names of your cloud service and additional values that enable devices to install the Configuration Manager client software.>*  
 
      The command-line structure should resemble this example using only the CCMSETUPCMD and SMSSiteCode parameters:  
- 
-         CCMSETUPCMD="CCMHOSTNAME=<ServiceName.CLOUDAPP.NET/CCM_Proxy_MutualAuth/<GUID>" SMSSiteCode="<YourSiteCode>"  
+
+     ```
+     CCMSETUPCMD="CCMHOSTNAME=<ServiceName.CLOUDAPP.NET/CCM_Proxy_MutualAuth/<GUID>" SMSSiteCode="<YourSiteCode>"  
+     ```
 
      > [!TIP]  
      > If you do not have the command line available, you can view the properties of *CoMgmtSettingsProd* in the Configuration Manager console to get a copy of the command line.    

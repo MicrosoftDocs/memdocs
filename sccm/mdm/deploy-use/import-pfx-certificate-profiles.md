@@ -83,9 +83,9 @@ Use the [Configuration Manager SDK](http://go.microsoft.com/fwlink/?LinkId=61352
 
 The Create PFX Script added in Configuration Manager 2012 SP2 adds an SMS_ClientPfxCertificate class to the SDK. This class includes the following methods:  
 
-    -   `ImportForUser`  
+-   `ImportForUser`  
 
-    -   `DeleteForUser`  
+-   `DeleteForUser`  
 
 The following example imports credentials into a PFX certificate profile.
 
