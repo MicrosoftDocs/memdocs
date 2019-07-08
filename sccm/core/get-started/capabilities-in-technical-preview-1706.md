@@ -124,18 +124,18 @@ With this release, **Status** for the following conditions appear in the console
 -  	851967 – Failover failed
 
 ### Add a site server in passive mode
-1.	In the console go to **Administration** > **Site Configuration** > **Sites** and start the [Add Site System Roles Wizard](/sccm/core/servers/deploy/configure/install-site-system-roles). You can also use the **Create Site System Server Wizard**.
+1. In the console go to **Administration** > **Site Configuration** > **Sites** and start the [Add Site System Roles Wizard](/sccm/core/servers/deploy/configure/install-site-system-roles). You can also use the **Create Site System Server Wizard**.
 
-2.	On the **General** page, specify the server that will host the passive mode site server. The server you specify cannot host any site system roles before installing a site server in passive mode.
+2. On the **General** page, specify the server that will host the passive mode site server. The server you specify cannot host any site system roles before installing a site server in passive mode.
 
-3.	On the **System Role Selection** page, select only **Primary site server in passive mode**.
+3. On the **System Role Selection** page, select only **Primary site server in passive mode**.
 
-4.	To complete the wizard, you must provide the following information that is used to run Setup and install the site server role on the specified server:
+4. To complete the wizard, you must provide the following information that is used to run Setup and install the site server role on the specified server:
     -   Choose to copy installation files from the active site server to the new passive mode site server, or specify a path to a location that contains the contents of the active site server's **CD.Latest** folder.
 
     -   Specify the same site database server and database name as used by the active mode site server.
 
-5.	Configuration Manager then installs the site server in passive mode on the specified server.
+5. Configuration Manager then installs the site server in passive mode on the specified server.
 
 For detailed installation status, go to **Administration** > **Site Configuration** > **Sites**.
 -   The status for the site server in passive mode displays as **Installing**.
@@ -146,13 +146,13 @@ For detailed installation status, go to **Administration** > **Site Configuratio
 
 ### Promote the passive mode site server to active mode
 When you want to change the passive mode site server to active mode, you do so from the **Nodes** pane in **Administration** > **Site Configuration** > **Sites**. So long as you can access an instance of the SMS_Provider, you can access the site to make this change.
-1.	In the **Nodes** pane of the Configuration Manager console, select the site server in passive mode, and then from the Ribbon, choose **Promote to active**.
+1. In the **Nodes** pane of the Configuration Manager console, select the site server in passive mode, and then from the Ribbon, choose **Promote to active**.
 
-2.	The simple **Status** for the server you are promoting displays in the **Nodes** pane as **Promoting**.
+2. The simple **Status** for the server you are promoting displays in the **Nodes** pane as **Promoting**.
 
-3.	After the promotion is complete, the **Status** column shows **OK** for both the new *Active* mode site server, and for the new *Passive* mode site server.
+3. After the promotion is complete, the **Status** column shows **OK** for both the new *Active* mode site server, and for the new *Passive* mode site server.
 
-4.	In **Administration** > **Site Configuration** > **Sites**, the name of the primary site server now displays the name of the new *Active* mode site server.
+4. In **Administration** > **Site Configuration** > **Sites**, the name of the primary site server now displays the name of the new *Active* mode site server.
 For detailed status, go to **Monitoring** > **Site Server Status**.
     -   The **Mode** column identifies which server is *Active* or *Passive*.
 
@@ -185,15 +185,15 @@ In this release, we’ve added further capabilities to [Device Guard](/sccm/prot
 
 You can now optionally add trust for specific files for folders in a Device Guard policy. This lets you:
 
-1.	Overcome issues with managed installer behaviors
-2.	Trust line-of-business apps that cannot be deployed with Configuration Manager
-3.	Trust apps that are included in an operating system deployment image.
+1. Overcome issues with managed installer behaviors
+2. Trust line-of-business apps that cannot be deployed with Configuration Manager
+3. Trust apps that are included in an operating system deployment image.
 
 ### Try it out!
 
-1.	While you are creating a Device Guard policy, on the Inclusions tab of the Create Device Guard policy wizard, click **Add**.
-2.	In the **Add Trusted File or Folder** dialog box, specify information about the file or folder that you want to trust. You can either specify a local file or folder path or connect to a remote device to which you have permission to connect and specify a file or folder path on that device.
-3.	Complete the wizard.
+1. While you are creating a Device Guard policy, on the Inclusions tab of the Create Device Guard policy wizard, click **Add**.
+2. In the **Add Trusted File or Folder** dialog box, specify information about the file or folder that you want to trust. You can either specify a local file or folder path or connect to a remote device to which you have permission to connect and specify a file or folder path on that device.
+3. Complete the wizard.
 
 
 ## Hide task sequence progress
@@ -266,19 +266,19 @@ The prerequisites for a [connection to Upgrade Readiness](/sccm/core/clients/man
 After the prerequisites are configured, you are ready to use the Wizard to create the connection.
 
 ### Use the Azure Services Wizard to configure Upgrade Readiness
-1.	In the console, go to **Administration** > **Overview** > **Cloud Services** > **Azure Services**, and then choose **Configure Azure Services** from the **Home** tab of the ribbon, to start the **Azure Services Wizard**.
+1. In the console, go to **Administration** > **Overview** > **Cloud Services** > **Azure Services**, and then choose **Configure Azure Services** from the **Home** tab of the ribbon, to start the **Azure Services Wizard**.
 
-2.	On the **Azure Services** page, select the **Upgrade Readiness Connector**, and then click **Next**.
+2. On the **Azure Services** page, select the **Upgrade Readiness Connector**, and then click **Next**.
 
-3.	On the **App** page, specify your **Azure environment** (the technical preview supports only the Public Cloud). Then, click **Import** to open the **Import Apps** window.
+3. On the **App** page, specify your **Azure environment** (the technical preview supports only the Public Cloud). Then, click **Import** to open the **Import Apps** window.
 
-4.	In the **Import Apps** window, specify details for a web app that already exists in your Azure AD.
+4. In the **Import Apps** window, specify details for a web app that already exists in your Azure AD.
     -	Provide a friendly name for the Azure AD Tenant Name. Then, specify the Tenant ID, Application Name, Client ID, secret key for the Azure web app, and the App ID URI.
     -	Click **Verify**, and if successful, click **OK** to continue.
 
-5.	 On the **Configuration** page, specify the subscription, resource group, and Windows Analytics Workspace you want to use with this connection to Upgrade Readiness.  
+5.  On the **Configuration** page, specify the subscription, resource group, and Windows Analytics Workspace you want to use with this connection to Upgrade Readiness.  
 
-6.	Click **Next** to go to the **Summary** page, and then complete the wizard to create the connection.
+6. Click **Next** to go to the **Summary** page, and then complete the wizard to create the connection.
 
 
 ## New client settings for cloud services
@@ -302,7 +302,7 @@ If you remove the connection, devices are not un-registered, but no new devices 
 1. Configure the following client settings (found in the Cloud Services) section using the information in [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings).
 	-	**Automatically register new Windows 10 domain joined devices with Azure Active Directory** – Set to **Yes** (default), or **No**.
 	-	**Enable clients to use a cloud management gateway** – Set to **Yes** (default), or **No**.
-2.	Deploy the client settings to the required collection of devices.
+2. Deploy the client settings to the required collection of devices.
 
 To confirm that the device is joined to Azure AD, run the command **dsregcmd.exe /status** in a command prompt window. The **AzureAdjoined** field in the results will show **YES** if the device is Azure AD joined.
 

@@ -330,7 +330,7 @@ Each Configuration Manager feature that uses state messages is identified by the
 
 ## 1503	STATE_TOPICTYPE_CAL_TRACK_ML
 
-	No State IDs.	
+	No State IDs. 
 
 ## 1600 STATE_TOPICTYPE_USER_AFFINITY
 

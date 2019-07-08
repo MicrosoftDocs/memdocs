@@ -60,7 +60,7 @@ After you complete these actions, your Configuration Manager site is connected t
 
 These client settings help join Windows 10 devices with Azure AD. They also enable internet-based clients to use the CMG and cloud distribution point.
 
-1.	Configure the following client settings in the **Cloud Services** section using the information in [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings).  
+1. Configure the following client settings in the **Cloud Services** section using the information in [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings).  
 
 	- **Allow access to cloud distribution point**: Enable this setting to help internet-based devices get the required content to install the Configuration Manager client. If the content isn't available on the cloud distribution point, devices can retrieve the content from the CMG. The client installation bootstrap retries the cloud distribution point for four hours before it falls back to the CMG.<!--495533-->  
 
@@ -68,7 +68,7 @@ These client settings help join Windows 10 devices with Azure AD. They also enab
 
 	- **Enable clients to use a cloud management gateway** – Set to **Yes** (default), or **No**.  
 
-2.	Deploy the client settings to the required collection of devices. Do not deploy these settings to user collections.
+2. Deploy the client settings to the required collection of devices. Do not deploy these settings to user collections.
 
 To confirm the device is joined to Azure AD, run `dsregcmd.exe /status` in a command prompt. The **AzureAdjoined** field in the results shows **YES** if the device is Azure AD-joined.
 

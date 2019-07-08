@@ -172,11 +172,11 @@ Use one of the following procedures to help you recover your site server and sit
 
 ### Start a site recovery in the setup wizard
 
-1.	Copy the [CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder) to a location outside the Configuration Manager installation folder. From the copy of the CD.Latest folder, run the Configuration Manager setup wizard.  
+1. Copy the [CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder) to a location outside the Configuration Manager installation folder. From the copy of the CD.Latest folder, run the Configuration Manager setup wizard.  
 
-2.	On the **Getting Started** page, select **Recover a site**, and then click **Next**.  
+2. On the **Getting Started** page, select **Recover a site**, and then click **Next**.  
 
-3.	Complete the wizard by using the options that are appropriate for your site recovery.  
+3. Complete the wizard by using the options that are appropriate for your site recovery.  
 
      - During the recovery, setup identifies the SQL Server Service Broker (SSB) port used by the SQL Server. Don't change this port setting during recovery or data replication won't work properly after the recovery completes.  
 

@@ -57,8 +57,8 @@ To minimize compatibility risk, existing VPN profiles are unchanged.  When you e
 
 Create a new VPN profile using the usual process. Notice that the first page in the VPN profile wizard’s options have changed.
 
-1.	Go to **Assets and Compliance** > **Overview** > **Compliance Settings** > **Company Resource Access** > **VPN Profiles** and then choose **Create VPN Profile**.
-2.	Enter a name on the **General** page and choose one of the following options under **Specify the type of VPN profile you want to create**:
+1. Go to **Assets and Compliance** > **Overview** > **Compliance Settings** > **Company Resource Access** > **VPN Profiles** and then choose **Create VPN Profile**.
+2. Enter a name on the **General** page and choose one of the following options under **Specify the type of VPN profile you want to create**:
 
     - Windows 10  
     - Windows 8.1  
@@ -67,8 +67,8 @@ Create a new VPN profile using the usual process. Notice that the first page in 
     - Android  
     - Android for Work  
 
-3.	If you choose **Windows 8.1**, you also have the option to **Create new profile** or **Import from file**.
-4.	Complete the wizard to finish creating the profile.
+3. If you choose **Windows 8.1**, you also have the option to **Create new profile** or **Import from file**.
+4. Complete the wizard to finish creating the profile.
 
 As you select different platforms, notice that only the settings relevant to the selected platform display.
 

@@ -133,8 +133,8 @@ Using /NoCRLCheck is only good for ccmsetup bootstrap. For the clients to be ful
 The following entries are logged in **ClientIDManagerStartup.log**:
 
 ```
-[RegTask] - Client is not registered. Sending registration request for GUID:1XXXXXEF-5XX8-4XX3-XEDX-XXXFBFF78XXX ...		
-Registering client using AAD auth.	
+[RegTask] - Client is not registered. Sending registration request for GUID:1XXXXXEF-5XX8-4XX3-XEDX-XXXFBFF78XXX ... 	
+Registering client using AAD auth. 
 ```
 
 ### 2. Configuration Manager request Azure AD token to register client

@@ -217,9 +217,9 @@ You can now configure a list of executable files (with the extension .exe) in de
 
 ### Try it out
 To configure a list of executable files
-1.	On the properties page of any deployment type, choose the **Installer Handling** tab.
-2.	Click **Add**, to add one of more executable files to the list (for example **Edge.exe**)
-3.	Click **OK** to close the deployment type properties dialog box.
+1. On the properties page of any deployment type, choose the **Installer Handling** tab.
+2. Click **Add**, to add one of more executable files to the list (for example **Edge.exe**)
+3. Click **OK** to close the deployment type properties dialog box.
 
 Now, when you deploy this application to a user or a device, and one of executables you added is running, the end user will see a Software Center dialog box telling them that the installation failed because an application is running.
 
@@ -249,16 +249,16 @@ We have added express installation files support in Configuration Manager for Wi
 
 ### To enable the download of express installation files for Windows 10 updates on the server
 To start synchronizing the metadata for Windows 10 express installation files, you must enable it in the Software Update Point Properties.
-1.	In the Configuration Manager console, navigate to **Administration** > **Site Configuration** > **Sites**.
-2.	Select the central administration site or the stand-alone primary site.
-3.	On the **Home** tab, in the **Settings** group, click **Configure Site Components**, and then click **Software Update Point**. On the **Update Files** tab, select **Download full files for all approved updates and express installation files for Windows 10**.
+1. In the Configuration Manager console, navigate to **Administration** > **Site Configuration** > **Sites**.
+2. Select the central administration site or the stand-alone primary site.
+3. On the **Home** tab, in the **Settings** group, click **Configure Site Components**, and then click **Software Update Point**. On the **Update Files** tab, select **Download full files for all approved updates and express installation files for Windows 10**.
 
 ### To enable support for clients to download and install express installation files
 To enable express installation files support on clients, you must enable express installation files on clients in the Software Updates section of client settings. This creates a new HTTP listener that listens for requests to download express installation files on the port that you specify. Once you deploy client settings to enable this functionality on the client, it will attempt to download the delta between the current month's Windows 10 Cumulative Update and the previous month's update (clients must run a version of Windows 10 that supports express installation files).
-1.	Enable support for express installation files in the Software Update Point Component properties (previous procedure).
-2.	In the Configuration Manager console, navigate to **Administration** > **Client Settings**.
-3.	Select the appropriate client settings, then on the **Home** tab, click **Properties**.
-4.	Select the **Software Updates** page, configure **Yes** for the **Enable installation of Express Updates on clients** setting and configure the port used by the HTTP listener on the client for the **Port used to download content for Express Updates** setting.
+1. Enable support for express installation files in the Software Update Point Component properties (previous procedure).
+2. In the Configuration Manager console, navigate to **Administration** > **Client Settings**.
+3. Select the appropriate client settings, then on the **Home** tab, click **Properties**.
+4. Select the **Software Updates** page, configure **Yes** for the **Enable installation of Express Updates on clients** setting and configure the port used by the HTTP listener on the client for the **Port used to download content for Express Updates** setting.
 
 
 ## OData endpoint data access

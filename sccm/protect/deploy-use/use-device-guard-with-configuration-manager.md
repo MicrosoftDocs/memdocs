@@ -34,8 +34,8 @@ You can use Configuration Manager to deploy a Windows Defender Application Contr
 
 You can configure one of the following modes:
 
-1.	**Enforcement enabled** - Only trusted executables are allowed to run.
-2.	**Audit only** - Allow all executables to run, but log untrusted executables that run in the local client event log.
+1. **Enforcement enabled** - Only trusted executables are allowed to run.
+2. **Audit only** - Allow all executables to run, but log untrusted executables that run in the local client event log.
 
 >[!TIP]
 >In this version of Configuration Manager, Device Guard is a pre-release feature. To enable it, see [Pre-release features in System Center Configuration Manager](/sccm/core/servers/manage/pre-release-features).
@@ -73,10 +73,10 @@ Before you configure or deploy Windows Defender Application Control policies, re
 - Regardless of the enforcement mode you select, when you deploy a Windows Defender Application Control policy, client PCs cannot run HTML applications with the extension .hta.
 
 ## How to create a Windows Defender Application Control policy
-1.	In the Configuration Manager console, click **Assets and Compliance**.
-2.	In the **Assets and Compliance** workspace, expand **Endpoint Protection**, and then click **Windows Defender Application Control**.
-3.	On the **Home** tab, in the **Create** group, click **Create Application Control policy**.
-4.	On the **General** page of the **Create Application Control policy Wizard**, specify the following settings:
+1. In the Configuration Manager console, click **Assets and Compliance**.
+2. In the **Assets and Compliance** workspace, expand **Endpoint Protection**, and then click **Windows Defender Application Control**.
+3. On the **Home** tab, in the **Create** group, click **Create Application Control policy**.
+4. On the **General** page of the **Create Application Control policy Wizard**, specify the following settings:
 	- **Name** - Enter a unique name for this Windows Defender Application Control policy. 
 	- **Description** - Optionally, enter a description for the policy that helps you identify it in the Configuration Manager console.
 	- **Enforce a restart of devices so that this policy can be enforced for all processes** - After the policy is processed on a client PC, a restart is scheduled on the client according to the **Client Settings** for **Computer Restart**.
@@ -85,22 +85,22 @@ Before you configure or deploy Windows Defender Application Control policies, re
 	- **Enforcement Mode** - Choose one of the following enforcement methods for Device Guard on the client PC.
 		- **Enforcement Enabled** - Only allow trusted executables are allowed to run.
 		- **Audit Only** - Allow all executables to run, but log untrusted executables that run in the local client event log.
-5.	On the **Inclusions** tab of the **Create Application Control policy Wizard**, chose if you want to **Authorize software that is trusted by the Intelligent Security Graph**.
+5. On the **Inclusions** tab of the **Create Application Control policy Wizard**, chose if you want to **Authorize software that is trusted by the Intelligent Security Graph**.
 6. Click **Add** if you want to add trust for specific files or folders on PCs. In the **Add Trusted File or Folder** dialog box, you can specify a local file or a folder path to trust. You can also specify a file or folder path on a remote device on which you have permission to connect. When you add trust for specific files or folders in a Windows Defender Application Control policy, you can:
 	- Overcome issues with managed installer behaviors
 	- Trust line-of-business apps that cannot be deployed with Configuration Manager
 	- Trust apps that are included in an operating system deployment image. 
-8.	Click **Next**, to complete the wizard.
+8. Click **Next**, to complete the wizard.
 
 >[!IMPORTANT]
 >The inclusion of trusted files or folders is only supported on client PCs running version 1706 or later of the Configuration Manager client. If any inclusion rules are included in a Windows Defender Application Control policy and the policy is then deployed to a client PC running an earlier version on the Configuration Manager client, the policy will fail to be applied. Upgrading these older clients will resolve this issue. Policies that do not include any inclusion rules may still be applied on older versions of the Configuration Manager client.
 
 ## How to deploy a Windows Defender Application Control policy
-1.	In the Configuration Manager console, click **Assets and Compliance**.
-2.	In the **Assets and Compliance** workspace, expand **Endpoint Protection**, and then click **Windows Defender Application Control**.
-3.	From the list of policies, select the one you want to deploy, and then, on the **Home** tab, in the **Deployment** group, click **Deploy Application Control Policy**.
-4.	In the **Deploy Application Control policy** dialog box, select the collection to which you want to deploy the policy. Then, configure a schedule for when clients evaluate the policy. Finally, select whether the client can evaluate the policy outside of any configured maintenance windows.
-5.	When you are finished, click **OK** to deploy the policy. 
+1. In the Configuration Manager console, click **Assets and Compliance**.
+2. In the **Assets and Compliance** workspace, expand **Endpoint Protection**, and then click **Windows Defender Application Control**.
+3. From the list of policies, select the one you want to deploy, and then, on the **Home** tab, in the **Deployment** group, click **Deploy Application Control Policy**.
+4. In the **Deploy Application Control policy** dialog box, select the collection to which you want to deploy the policy. Then, configure a schedule for when clients evaluate the policy. Finally, select whether the client can evaluate the policy outside of any configured maintenance windows.
+5. When you are finished, click **OK** to deploy the policy. 
 
 <!--Reworked article to put this inline while working on VSO 1355092
 ### Restarting the device after deploying the policy
@@ -122,8 +122,8 @@ To monitor the processing of a Windows Defender Application Control policy, use 
 
 To verify the specific software being blocked or audited, see the following local client event logs:
 
-1.	For blocking and auditing of executable files, use **Applications and Services Logs** > **Microsoft** > **Windows** > **Code Integrity** > **Operational**.
-2.	For blocking and auditing of Windows Installer and script files, use **Applications and Services Logs** > **Microsoft** > **Windows** > **AppLocker** > **MSI and Script**.
+1. For blocking and auditing of executable files, use **Applications and Services Logs** > **Microsoft** > **Windows** > **Code Integrity** > **Operational**.
+2. For blocking and auditing of Windows Installer and script files, use **Applications and Services Logs** > **Microsoft** > **Windows** > **AppLocker** > **MSI and Script**.
 
 <!--Reworked article to put this inline while working on VSO 1355092
 ## Automatically let software run if it is trusted by Intelligent Security Graph
