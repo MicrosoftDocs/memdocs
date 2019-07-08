@@ -25,19 +25,19 @@ The following table shows enrollment methods with their supported capabilities. 
 
 **iOS enrollment methods**
 
-| **Method** |	**Wipe** |	**Affinity**	|	**Lock** | **Details** |
+| **Method** | **Wipe** | **Affinity** | **Lock** | **Details** |
 |:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#byod)** | No|	Yes |	No | [more](../deploy-use/enable-platform-enrollment.md)|
-|**[DEM](#dem)**|	No |No |No	| [more](../deploy-use/enroll-devices-with-device-enrollment-manager.md)|
-|**[DEP](#dep)**|	Yes |	Optional |	Optional|[more](../deploy-use/ios-device-enrollment-program-for-hybrid.md)|
-|**[USB-SA](#usb-sa)**|	Yes |	Optional |	No| [more](../deploy-use/ios-hybrid-enrollment-using-apple-configurator.md)|
+|**[BYOD](#byod)** | No| Yes | No | [more](../deploy-use/enable-platform-enrollment.md)|
+|**[DEM](#dem)**| No |No |No | [more](../deploy-use/enroll-devices-with-device-enrollment-manager.md)|
+|**[DEP](#dep)**| Yes | Optional | Optional|[more](../deploy-use/ios-device-enrollment-program-for-hybrid.md)|
+|**[USB-SA](#usb-sa)**| Yes | Optional | No| [more](../deploy-use/ios-hybrid-enrollment-using-apple-configurator.md)|
 
 **Windows and Android enrollment methods**
 
-| **Method** |	**Wipe** |	**Affinity**	|	**Lock** | **Details**|
+| **Method** | **Wipe** | **Affinity** | **Lock** | **Details**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#byod)** | No|	Yes |	No | [more](../deploy-use/enroll-hybrid-windows.md)|
-|**[DEM](#dem)**|	No |No |No	|[more](../deploy-use/enroll-devices-with-device-enrollment-manager.md)|
+|**[BYOD](#byod)** | No| Yes | No | [more](../deploy-use/enroll-hybrid-windows.md)|
+|**[DEM](#dem)**| No |No |No |[more](../deploy-use/enroll-devices-with-device-enrollment-manager.md)|
 
 For a series of question that help you find the right method, see [Choose how to enroll devices](/intune/get-started/choose-how-to-enroll-devices1).
 

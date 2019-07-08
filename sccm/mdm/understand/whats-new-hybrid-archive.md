@@ -454,14 +454,14 @@ No new hybrid features have been introduced in July 2016 for Configuration Manag
 The following features that were previously available in Configuration Manager Technical Preview releases are now available in hybrid deployments with Intune and Configuration Manager (current branch) version 1606.
 
 * Find, manage, and distribute Windows Store for Business apps for Windows 10 devices from the Configuration Manager console ([1604](#new-in-1604-technical-preview))
-* 	SmartLock setting for Android devices ([1604](#new-in-1604-technical-preview))
-*	App-triggered VPN for Windows 10 devices ([1605](#new-in-1605-technical-preview))
-*	New experience for remote device actions ([1605](#new-in-1605-technical-preview))
-*	Windows Store for Business apps ([1605](#new-in-1605-technical-preview))
-*	General improvements for volume-purchased apps ([1605](#new-in-1605-technical-preview))
-*	Windows Information Protection (WIP) ([1605](#new-in-1605-technical-preview))
-*	Pre-declare corporate-owned devices with IMEI or iOS serial number ([1605](#new-in-1605-technical-preview))
-*	Automatically categorize devices into collections ([1606](#new-in-1606-technical-preview))
+* SmartLock setting for Android devices ([1604](#new-in-1604-technical-preview))
+* App-triggered VPN for Windows 10 devices ([1605](#new-in-1605-technical-preview))
+* New experience for remote device actions ([1605](#new-in-1605-technical-preview))
+* Windows Store for Business apps ([1605](#new-in-1605-technical-preview))
+* General improvements for volume-purchased apps ([1605](#new-in-1605-technical-preview))
+* Windows Information Protection (WIP) ([1605](#new-in-1605-technical-preview))
+* Pre-declare corporate-owned devices with IMEI or iOS serial number ([1605](#new-in-1605-technical-preview))
+* Automatically categorize devices into collections ([1606](#new-in-1606-technical-preview))
 
 For information on the new functionality, see the documentation for the specified Technical Preview release.
 
