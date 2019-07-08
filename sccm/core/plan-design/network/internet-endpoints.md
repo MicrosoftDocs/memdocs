@@ -115,7 +115,7 @@ For Azure AD user discovery, the **service connection point** needs access to:
 
 - Version 1902 and later: Microsoft Graph endpoint `https://graph.microsoft.com/`
 
-The cloud management point (CMG) connection point site system supports using a web proxy. For more information on configuring this role for a proxy, see [Proxy server support](/sccm/core/plan-design/network/proxy-server-support#to-set-up-the-proxy-server-for-a-site-system-server). The CMG connection point only needs to connect to the CMG service endpoints. It doesn't need access to other Azure endpoints.
+The cloud management point (CMG) connection point site system supports using a web proxy. For more information on configuring this role for a proxy, see [Proxy server support](proxy-server-support.md#configure-the-proxy-for-a-site-system-server). The CMG connection point only needs to connect to the CMG service endpoints. It doesn't need access to other Azure endpoints.
 
 For more information on the CMG, see [Plan for CMG](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).
 
