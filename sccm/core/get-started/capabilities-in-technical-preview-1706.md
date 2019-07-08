@@ -33,7 +33,7 @@ This article introduces the features that are available in the Technical Preview
   - **Block USB debugging on device**
   - **Block apps from unknown sources**
 
-        For example, if admins set **Block USB debugging on device** to **true**, all devices that don’t have USB debugging enabled are marked as non-compliant.
+    For example, if admins set **Block USB debugging on device** to **true**, all devices that don’t have USB debugging enabled are marked as non-compliant.
 
 **The following are new features you can try out with this version.**  
 
@@ -217,9 +217,9 @@ To solve this problem, you can now specify both an installation content location
 1. In the deployment type properties of an application, click the **Content** tab.
 2. Configure the **Install content location** as normal.
 3. For **Uninstall content settings**, choose one of the following:
-  - **Same as install content** - The same content location will be used regardless of whether you are installing, or uninstalling the application.
-  - **No uninstall content** - Choose this if you don't want to supply an uninstall content location for the application.
-  - **Different from install content** - Choose this if you want to specify an uninstall content location that's different from the install content location.
+   - **Same as install content** - The same content location will be used regardless of whether you are installing, or uninstalling the application.
+   - **No uninstall content** - Choose this if you don't want to supply an uninstall content location for the application.
+   - **Different from install content** - Choose this if you want to specify an uninstall content location that's different from the install content location.
 5. If you selected **Different from install content**, browse to, or enter the location of the application content that will be used to uninstall the application.
 6. Click **OK** to close the deployment type properties dialog box.
 
@@ -300,8 +300,8 @@ If you remove the connection, devices are not un-registered, but no new devices 
 ### Try it out!
 
 1. Configure the following client settings (found in the Cloud Services) section using the information in [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings).
-  - **Automatically register new Windows 10 domain joined devices with Azure Active Directory** – Set to **Yes** (default), or **No**.
-  - **Enable clients to use a cloud management gateway** – Set to **Yes** (default), or **No**.
+   - **Automatically register new Windows 10 domain joined devices with Azure Active Directory** – Set to **Yes** (default), or **No**.
+   - **Enable clients to use a cloud management gateway** – Set to **Yes** (default), or **No**.
 2. Deploy the client settings to the required collection of devices.
 
 To confirm that the device is joined to Azure AD, run the command **dsregcmd.exe /status** in a command prompt window. The **AzureAdjoined** field in the results will show **YES** if the device is Azure AD joined.
@@ -346,11 +346,11 @@ To allow users to approve their own scripts:
 2. In the **Software Library** workspace, click **Scripts**.
 3. On the **Home** tab, in the **Create** group, click **Create Script**.
 4. On the **Script** page of the **Create Script** wizard, configure the following:
-  - **Script Name** - Enter a name for the script. Although you can create multiple scripts with the same name, this will make it harder for you to find the script you need in the Configuration Manager console.
-  - **Script language** - Currently, only **PowerShell** scripts are supported.
-  - **Import** - Import a PowerShell script into the console. The script is displayed in the **Script** field.
-  - **Clear** - Removes the current script from the **Script** field.
-  - **Script** - Displays the currently imported script. You can edit the script in this field as necessary.
+   - **Script Name** - Enter a name for the script. Although you can create multiple scripts with the same name, this will make it harder for you to find the script you need in the Configuration Manager console.
+   - **Script language** - Currently, only **PowerShell** scripts are supported.
+   - **Import** - Import a PowerShell script into the console. The script is displayed in the **Script** field.
+   - **Clear** - Removes the current script from the **Script** field.
+   - **Script** - Displays the currently imported script. You can edit the script in this field as necessary.
 5. Complete the wizard. The new script is displayed in the **Script** list with a status of **Waiting for approval**. Before you can run this script on client devices, you must approve it.
 
 
@@ -508,7 +508,7 @@ For more information about compliance settings, see [Ensure device compliance](/
 <br></br>
 * **Block USB debugging on device**. You do not have to configure this settings as USB debugging is already disabled on Android for Work devices.
 
- **Supported on:**
+  **Supported on:**
   * Android 4.0+
   * Samsung KNOX Standard 4.0+
 <br></br>
