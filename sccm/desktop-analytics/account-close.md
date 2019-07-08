@@ -2,7 +2,7 @@
 title: How to close your account
 titleSuffix: Configuration Manager
 description: How to remove Desktop Analytics from your Azure account
-ms.date: 06/11/2019
+ms.date: 07/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -26,7 +26,7 @@ The first step is to contact Microsoft Support. Open a support case to close you
 
 ## Delete the solution
 
-1. Sign in to the [Azure portal](https://portal.azure.com) as a user with the **Company Admin** role.
+1. Sign in to the [Azure portal](https://portal.azure.com) as a user with the **Global administrator** role.
 
 1. Search in **All resources** for the name of your Desktop Analytics workspace. This name is what you created when signing up for the service.
 
@@ -39,7 +39,7 @@ The Desktop Analytics data ages out based on your data retention policy for the 
 
 ## Remove user and app access
 
-1. Sign in to the [Azure portal](https://portal.azure.com) as a user with the **Company Admin** role. Go to **Azure Active Directory**.
+1. Sign in to the [Azure portal](https://portal.azure.com) as a user with the **Global administrator** role. Go to **Azure Active Directory**.
 
 1. In **Roles and administrators**, search for the **Desktop Analytics administrator** role. Remove its members.
 
