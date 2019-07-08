@@ -139,7 +139,7 @@ Use this procedure for automation of client installation and requesting and enro
 
 4. From the **Tools** folder on the Mac computer, type the following command: `sudo ./CMEnroll -s <enrollment_proxy_server_name> -ignorecertchainvalidation -u '<user_name>'`  
 
-	After the client installs, the Mac Computer Enrollment wizard opens to help you enroll the Mac computer. For more information, see [Enroll the client by using the Mac computer enrollment wizard](#bkmk_enroll).  
+    After the client installs, the Mac Computer Enrollment wizard opens to help you enroll the Mac computer. For more information, see [Enroll the client by using the Mac computer enrollment wizard](#bkmk_enroll).  
 
      Example: If the enrollment proxy point server is named **server02.contoso.com**, and you grant **contoso\mnorth** permissions for the Mac client certificate template, type the following command: `sudo ./CMEnroll -s server02.contoso.com -ignorecertchainvalidation -u 'contoso\mnorth'`  
 

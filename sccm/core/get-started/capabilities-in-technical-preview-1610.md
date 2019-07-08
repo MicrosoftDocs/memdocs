@@ -147,8 +147,8 @@ Sync can take five to ten minutes. Any changes in policy are synced to the devic
 ## Additional security role support
 
 In addition to Full Administrator, the following built-in security roles now have full access to items in the **All Corporate-owned Devices** node, including **Predeclared Devices**, **iOS Enrollment Profiles**, and **Windows Enrollment Profiles**:
-•	**Asset Manager**
-•	**Company Resource Access Manager**
+- **Asset Manager**
+- **Company Resource Access Manager**
 
 Read-only access to these areas of the Configuration Manager console is still granted to the **Read-only Analyst** role.
 

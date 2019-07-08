@@ -285,7 +285,7 @@ When a client can’t find content and begins to search locations from neighbor 
 
 In addition to the links you define, there is an implied link that is created automatically between the boundary groups you create and the default boundary group that is automatically created for each site. This automatic link:
 - Is used by clients that are not on a boundary associated with any boundary group in your hierarchy automatically use the default boundary group from their assigned site to identify valid content source locations.   
-- 	Is a default fallback option from the current boundary group to the sites default boundary group that is used after 120 minutes.
+-  Is a default fallback option from the current boundary group to the sites default boundary group that is used after 120 minutes.
 
 **Example of using the new model:** 
 You create three boundary groups that do not share boundaries or site system servers:
@@ -298,9 +298,9 @@ You add the network locations of your clients as boundaries to only the BG_A bou
 - You configure the second *neighbor* group (BG_C) to be used after 20 minutes. This group contains distribution points DP_C1 and DP_C2. Both are across a WAN from the other two boundary groups.
 - You also add an additional distribution point that is located on the site server to the sites default site boundary group. This is your least preferred content source location, but it is centrally located to all your boundary groups.
 
-	Example of boundary groups and fallback times:
+  Example of boundary groups and fallback times:
 
-	 ![BG_Fallack](media/BG_Fallback.png)
+  ![BG_Fallack](media/BG_Fallback.png)
 
 
 With this configuration:
@@ -327,7 +327,7 @@ Original deployment configuration for “Do not run program” in slow network  
 Selected     |  Selected    |  **No fallback** - Only use the distribution points in current boundary group       
 Selected     |  Not selected|  **No fallback** - Only use the distribution points in current boundary group       
 Not selected |  Not selected|  **Fallback to neighbor** - Use the distribution points in current boundary group, and then add the distribution points from the neighbor boundary group. Unless an explicit link to the default site boundary group is configured, clients will not fallback to that group.    
-Not selected | Selected		|   **Normal fallback** - Use distribution points in current boundary group, then those from the neighbor and site default boundary groups
+Not selected | Selected |   **Normal fallback** - Use distribution points in current boundary group, then those from the neighbor and site default boundary groups
 
  All other deployment configurations result in **Normal fallback**.  
 
@@ -396,14 +396,14 @@ In an existing task sequence to install an operating system, you will add a new 
 3. Under the new group, add the **Restart Computer** task sequence step. In **Specify what to run after restart**, select **The boot image assigned to this task sequence is selected** to start the computer in Windows PE.  
 4. On the **Options** tab, add a task sequence variable as a condition where **_SMSTSInWinPE equals false**. This prevents this step from running if the computer is already in Windows PE.
 
-	![Restart Computer step](media/Restart-in-Windows-PE.png)
+    ![Restart Computer step](media/Restart-in-Windows-PE.png)
 5. Add a step to start the OEM tool that will convert the firmware from BIOS to UEFI. This will typically be a **Run Command Line** task sequence step with a command line to start the OEM tool.
 5. Add the Format and Partition Disk task sequence step that will partition and format the hard drive. In the step, do the following:
-	1. Create the FAT32 partition that will be converted to UEFI before the operating system is installed. Choose **GPT** for **Disk type**.
-	![Format and partition disk step](media/Format-and-partition-disk.png)
-	2. Go to the properties for the FAT32 partition. Enter **TSUEFIDrive** in the **Variable** field. When the task sequence detects this variable, it will prepare for the UEFI transition before restarting the computer.
-	![Partition properties](media/Partition-properties.png)
-	3. Create an NTFS partition that the task sequence engine uses to save its state and to store log files.
+    1. Create the FAT32 partition that will be converted to UEFI before the operating system is installed. Choose **GPT** for **Disk type**.
+    ![Format and partition disk step](media/Format-and-partition-disk.png)
+    2. Go to the properties for the FAT32 partition. Enter **TSUEFIDrive** in the **Variable** field. When the task sequence detects this variable, it will prepare for the UEFI transition before restarting the computer.
+    ![Partition properties](media/Partition-properties.png)
+    3. Create an NTFS partition that the task sequence engine uses to save its state and to store log files.
 6. Add the **Restart Computer** task sequence step. In **Specify what to run after restart**, select **The boot image assigned to this task sequence is selected** to start the computer in Windows PE.  
 
 

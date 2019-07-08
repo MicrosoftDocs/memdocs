@@ -55,7 +55,7 @@ Because these two wizards have a similar workflow, the procedure to create an up
 
    - **Description**: A friendly description of the update. You might include what the update installs, and why or when it should be used.
 
-	 **Classification:** The following are common descriptions for the different classifications.
+   **Classification:** The following are common descriptions for the different classifications.
 
    - **Update**: An update to an application or file that is currently installed.
 
@@ -71,7 +71,7 @@ Because these two wizards have a similar workflow, the procedure to create an up
 
    - **Tool**: Specifies a tool or feature that helps complete one or more tasks.
 
-	 -   **Driver**: An update for driver software.
+   - **Driver**: An update for driver software.
 
    **Vendor:** Specify a vendor for the update. You can use the dropdown list to use values from updates that are in the repository. When you specify a vendor, the wizard creates a folder with that vendor name under **All Software Updates** in the **Updates Workspace** if that folder does not already exist. The following are Windows Server Update Services (WSUS) reserved names that cannot be entered for updates you create:
    >*   Microsoft Corporation

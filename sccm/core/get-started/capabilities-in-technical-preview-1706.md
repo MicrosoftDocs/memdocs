@@ -33,7 +33,7 @@ This article introduces the features that are available in the Technical Preview
   - **Block USB debugging on device**
   - **Block apps from unknown sources**
 
-		For example, if admins set **Block USB debugging on device** to **true**, all devices that don’t have USB debugging enabled are marked as non-compliant.
+        For example, if admins set **Block USB debugging on device** to **true**, all devices that don’t have USB debugging enabled are marked as non-compliant.
 
 **The following are new features you can try out with this version.**  
 
@@ -501,28 +501,28 @@ For more information about compliance settings, see [Ensure device compliance](/
 
 * **Required password type**. Specify whether the user must create an alphanumeric password or a numeric password. For alphanumeric passwords, you also specify the minimum number of character sets that the password must have. The four character sets are: Lowercase, uppercase letters, symbols and numbers.
 
-  	**Supported on:**
-  	* Windows Phone 8+
-  	* Windows 8.1+
-  	* iOS 6+
+  **Supported on:**
+  * Windows Phone 8+
+  * Windows 8.1+
+  * iOS 6+
 <br></br>
 * **Block USB debugging on device**. You do not have to configure this settings as USB debugging is already disabled on Android for Work devices.
 
- 	**Supported on:**
-  	* Android 4.0+
-  	* Samsung KNOX Standard 4.0+
+ **Supported on:**
+  * Android 4.0+
+  * Samsung KNOX Standard 4.0+
 <br></br>
 * **Block apps from unknown sources**. Require that devices prevent installation of apps from unknown sources. You do not have to configure this setting as Android for Work devices always restrict installation from unknown sources.
 
-  	**Supported on:**
-  	* Android 4.0+
-  	* Samsung KNOX Standard 4.0+
+  **Supported on:**
+  * Android 4.0+
+  * Samsung KNOX Standard 4.0+
 <br></br>
 * **Require threat scan on apps**. This setting specifies that the Verify apps feature is enabled on the device.
 
-  	**Supported on:**
-  	* Android 4.2 through 4.4
-  	* Samsung KNOX Standard 4.0+
+  **Supported on:**
+  * Android 4.2 through 4.4
+  * Samsung KNOX Standard 4.0+
 
 See [create and deploy a device compliance policy](https://docs.microsoft.com/sccm/mdm/deploy-use/create-compliance-policy) to try the new device compliance rules.
 
@@ -552,8 +552,8 @@ We have updated the setting descriptions for Android for Work configuration item
 |Before 1706 Technical Preview | New option name | Behavior|
 |-|-|-|
 |Prevent any sharing across boundaries| Default sharing restrictions| Work-to-personal: Default (expected to be blocked on all versions) <br>Personal-to-work: Default (allowed on 6.x+, blocked on 5.x)|
-|No restrictions|	Apps in personal profile can handle sharing requests from work profile|	Work-to-personal: Allowed  <br>Personal-to-work: Allowed|
-|Apps in work profile can handle sharing requests from personal profile	|Apps in work profile can handle sharing requests from personal profile	|Work-to-personal: Default<br>Personal-to-work: Allowed<br>(Only useful on 5.x where personal-to-work is blocked)|
+|No restrictions| Apps in personal profile can handle sharing requests from work profile| Work-to-personal: Allowed  <br>Personal-to-work: Allowed|
+|Apps in work profile can handle sharing requests from personal profile |Apps in work profile can handle sharing requests from personal profile |Work-to-personal: Default<br>Personal-to-work: Allowed<br>(Only useful on 5.x where personal-to-work is blocked)|
 
 None of these options directly prevent copy-paste behavior. We added a custom setting to the service and Company Portal app in 1704 that can be configured to prevent copy-paste. This can be set through custom URI.
 

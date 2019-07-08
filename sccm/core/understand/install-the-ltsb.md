@@ -108,7 +108,7 @@ When you upgrade from System Center 2012 Configuration Manager, use the site pla
 
 **Upgrade to the Current Branch:**
 - During Setup, you must choose the Current Branch, and you can specify details for your Software Assurance agreement.
-- 	New scripted installation. For more information, see "New scripted installation options" earlier in this article.
+- New scripted installation. For more information, see "New scripted installation options" earlier in this article.
 
 **Upgrade to the LTSB:**  
 - Additional steps to following in the pre-upgrade checklist.

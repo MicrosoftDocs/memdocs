@@ -95,7 +95,7 @@ Each replica member must have the following configuration:
 
 - THe **Readable Secondary** setting is **Yes**  
 
-- Enabled for **Manual Failover** 	  
+- Enabled for **Manual Failover**   
 
   > [!TIP]
   >  Configuration Manager supports using the availability group synchronous replicas when set to **Automatic Failover**. Set **Manual Failover** when:

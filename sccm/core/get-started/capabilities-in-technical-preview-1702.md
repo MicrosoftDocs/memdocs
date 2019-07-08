@@ -48,7 +48,7 @@ We added an automatic clean-up function that deletes the unneeded downloads from
 
 ## Peer Cache improvements
 Starting with this release, a peer cache source computer will reject a request for content when the peer cache source computer meets any of the following conditions:  
- - 	Is in low battery mode.
+ -  Is in low battery mode.
  -  CPU load exceeds 80% at the time the content is requested.
  -  Disk I/O has an *AvgDiskQueueLength* that exceeds 10.
  -  There are no more available connections to the computer.   

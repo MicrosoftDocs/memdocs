@@ -43,11 +43,11 @@ In addition to installing and configuring the data warehouse database, several n
 
 | Step         | Details  |
 |:------:|-----------|  
-| **1**  | 	The site server transfers and stores data in the site database.  |  
-| **2** |  	Based on its schedule and configuration, the Data Warehouse Service point gets data from the site database.  |  
-| **3** |  The Data Warehouse Service point transfers and stores a copy of the synchronized data in the Data Warehouse database. |  
-| **A** |  Using built-in reports, a request for data is made which is passed to the Reporting Services point using SQL Server Reporting Services. |  
-| **B** |  	Most reports are for current information, and these requests are run against the site database. |  
+| **1** | The site server transfers and stores data in the site database.  |  
+| **2** | Based on its schedule and configuration, the Data Warehouse Service point gets data from the site database.  |  
+| **3** | The Data Warehouse Service point transfers and stores a copy of the synchronized data in the Data Warehouse database. |  
+| **A** | Using built-in reports, a request for data is made which is passed to the Reporting Services point using SQL Server Reporting Services. |  
+| **B** | Most reports are for current information, and these requests are run against the site database. |  
 | **C** | When a report requests historical data, by using one of the reports with a *Category* of **Data Warehouse**, the request is run against the Data Warehouse database.   |  
 
 ### Prerequisites for the Data Warehouse Service point and database
@@ -100,7 +100,7 @@ After the data warehouse role is installed, ensure the account that is used as t
 #### Troubleshoot installation and data synchronization
 Use the following logs to investigate problems with the installation of the Data Warehouse Service point, or synchronization of data:
 - **DWSSMSI.log** and **DWSSSetup.log**  - Use these logs to investigate errors when installing the Data warehouse service point.
-- 	**Microsoft.ConfigMgrDataWarehouse.log** – Use this log to investigate data synchronization between the site database to the data warehouse database.
+- **Microsoft.ConfigMgrDataWarehouse.log** – Use this log to investigate data synchronization between the site database to the data warehouse database.
 
 ### Reporting
 After you install a Data Warehouse site system role, the following reports are available on your Reporting services point with a *Category* of **Data Warehouse:**
@@ -136,7 +136,7 @@ Use the following steps to move the data warehouse database to a new SQL Server:
 
 You can review the following Configuration Manager logs to confirm the site system role has successfully reinstalled:  
 - **DWSSMSI.log** and **DWSSSetup.log**  - Use these logs to investigate errors when installing the Data warehouse service point.
-- 	**Microsoft.ConfigMgrDataWarehouse.log** – Use this log to investigate data synchronization between the site database to the data warehouse database.
+- **Microsoft.ConfigMgrDataWarehouse.log** – Use this log to investigate data synchronization between the site database to the data warehouse database.
 
 
 ## Content Library Cleanup Tool
