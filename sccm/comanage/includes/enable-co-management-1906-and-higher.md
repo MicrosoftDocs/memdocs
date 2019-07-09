@@ -6,11 +6,7 @@ ms.topic: include
 ms.date: 07/19/2019
 ms.collection: M365-identity-device-management
 ---
-
-## Enable co-management starting in version 1906
-
 <!--3555750 FKA 1357954-->
-
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Co-management** node. Click **Configure co-management** in the ribbon to open the **Co-management Onboarding Wizard**.  
 
 2. On the **Subscription** page of the wizard, select **Sign In**. Sign in to your Intune tenant, and then select **Next**.  

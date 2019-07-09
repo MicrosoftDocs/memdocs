@@ -19,7 +19,15 @@ When you enable co-management, you can gain immediate value. Then once you're re
 
 Make sure the co-management prerequisites are set up before you start this process. For more information, see [Prerequisites](/sccm/comanage/overview#prerequisites).
 
+## Enable co-management starting in version 1906
+
+To enable co-management starting in Configuration Manager version 1906, follow the instructions below:
+
 [!INCLUDE [Enable Co-management in version 1906 and later](includes/enable-co-management-1906-and-later.md)]
+
+## Enable co-management in version 1902 and earlier
+
+To enable co-management for Configuration Manager version 1902 and earlier, follow the instructions below:
 
 [!INCLUDE [Enable Co-management in version 1902 and earlier](includes/enable-co-management-1902-and-earlier.md)]
 
