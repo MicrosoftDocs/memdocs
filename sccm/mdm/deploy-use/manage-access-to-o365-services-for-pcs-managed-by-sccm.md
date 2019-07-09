@@ -49,8 +49,8 @@ For information on configuring conditional access for devices enrolled and manag
 -   Windows Server 2012 R2
 -   Windows Server 2016
 
-	> [!IMPORTANT]
-	> For Windows Servers that may have multiple users signed in simultaneously, deploy the same conditional access policies to all of these users.
+    > [!IMPORTANT]
+    > For Windows Servers that may have multiple users signed in simultaneously, deploy the same conditional access policies to all of these users.
 
 ## Configure conditional access  
  To set up conditional access, you must first create a compliance policy and configure conditional access policy. When you configure conditional access policies for PCs, you can require that the PCs be compliant in order to access Exchange Online and SharePoint Online services.  

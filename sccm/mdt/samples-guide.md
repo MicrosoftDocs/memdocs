@@ -2084,7 +2084,7 @@ ParameterCondition=OR
 
   **Example LocationServer.xml File to Support Multiple Locations**  
 
-```  
+```xml
 <?xml version="1.0" encoding="utf-8" ?>  
 <servers>  
     <QueryDefault></QueryDefault>  
@@ -2109,7 +2109,7 @@ ParameterCondition=OR
 
  **Example LocationServer.xml File to Support Multiple Servers at Multiple Locations**  
 
-```  
+```xml
 <?xml version="1.0" encoding="utf-8" ?>  
 <servers>  
     <QueryDefault></QueryDefault>  
@@ -2137,7 +2137,7 @@ ParameterCondition=OR
 
  **Example LocationServer.xml File for Different Locations**  
 
-```  
+```xml
 <?xml version="1.0" encoding="utf-8" ?>  
 <servers>  
     <QueryDefault></QueryDefault>  

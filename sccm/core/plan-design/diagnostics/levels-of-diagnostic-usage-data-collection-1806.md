@@ -81,7 +81,7 @@ For Configuration Manager version 1806, this level includes the following data:
 
      - Software Assurance expiration date      
 
-     - Update pack deployment status and errors, download progress, and prerequisite errors 	
+     - Update pack deployment status and errors, download progress, and prerequisite errors 
 
      - Use of update fast ring
 

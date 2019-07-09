@@ -21,19 +21,19 @@ This article includes security and privacy information for the Configuration Man
 ## CMG security details
 - The CMG accepts and manages connections from CMG connection points. It uses mutual SSL authentication using certificates and connection IDs.
 - The CMG accepts and forwards client requests using the following methods:
-	- Pre-authenticates connections using mutual SSL with the PKI-based client authentication certificate or Azure AD. 
-	  - IIS on the CMG VM instances verifies the certificate path based on the trusted root certificate(s) uploaded to the CMG.
-	  - IIS on the VM instance also verifies client certificate revocation, if enabled. For more information, see [Publish the certificate revocation list](#bkmk_crl).
-	- The certificate trust list checks the root of the client authentication certificate. It also performs the same validation as the management point for the client. For more information, see [Review entries in the site's certificate trust list](#bkmk_ctl).
-	- Validates and filters client requests (URLs) to check if any CMG connection point can service the request.  
-	- Checks content length for each publishing endpoint.
-	- Uses round-robin behavior to load-balance CMG connection points in the same site.
+    - Pre-authenticates connections using mutual SSL with the PKI-based client authentication certificate or Azure AD. 
+      - IIS on the CMG VM instances verifies the certificate path based on the trusted root certificate(s) uploaded to the CMG.
+      - IIS on the VM instance also verifies client certificate revocation, if enabled. For more information, see [Publish the certificate revocation list](#bkmk_crl).
+    - The certificate trust list checks the root of the client authentication certificate. It also performs the same validation as the management point for the client. For more information, see [Review entries in the site's certificate trust list](#bkmk_ctl).
+    - Validates and filters client requests (URLs) to check if any CMG connection point can service the request.  
+    - Checks content length for each publishing endpoint.
+    - Uses round-robin behavior to load-balance CMG connection points in the same site.
 - The CMG connection point uses the following methods:
-	- Builds consistent HTTPS/TCP connections to all VM instances of the CMG. It checks and maintains these connections every minute.
-	- Uses mutual SSL authentication with the CMG using certificates.
-	- Forwards client requests based on URL mappings.
-	- Reports connection status to show service health status in the console.
-	- Reports traffic per endpoint every five minutes.
+    - Builds consistent HTTPS/TCP connections to all VM instances of the CMG. It checks and maintains these connections every minute.
+    - Uses mutual SSL authentication with the CMG using certificates.
+    - Forwards client requests based on URL mappings.
+    - Reports connection status to show service health status in the console.
+    - Reports traffic per endpoint every five minutes.
 
 ### Configuration Manager client-facing roles
 The management point and software update point host endpoints in IIS to service client requests. The CMG doesn't expose all internal endpoints. Every endpoint published to the CMG has an URL mapping.

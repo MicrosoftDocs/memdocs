@@ -107,7 +107,7 @@ Use the following steps to download the image file containing the Endpoint Prote
 2. Select the **Downloads and Keys** tab at the top of the website.
 3. Filter on product **System Center Endpoint Protection (current branch)**.
 4. Click link to **Download**
-5. Click **Continue**. You should see several files, including one named: **System Center Endpoint Protection (current branch - version 1606) for Linux OS and Macintosh OS Multilanguage	32/64 bit	1878 MB	ISO**.
+5. Click **Continue**. You should see several files, including one named: **System Center Endpoint Protection (current branch - version 1606) for Linux OS and Macintosh OS Multilanguage 32/64 bit 1878 MB ISO**.
 6. To download the file, click the arrow icon. The file name is **SW_DVD5_Sys_Ctr_Endpnt_Prtctn_1606_MultiLang_-3_EptProt_Lin_Mac_MLF_X21-67050.ISO**.
 
 The January 2018 update (X21-67050) includes the following versions:
