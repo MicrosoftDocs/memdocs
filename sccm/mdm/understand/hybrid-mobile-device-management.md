@@ -83,8 +83,6 @@ Hybrid MDM supports the following management capabilities on devices:
 
 -   Collect software inventory by using built-in reports  
 
-To read about what new features are available for hybrid MDM, see [What's new in hybrid mobile device management](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management).
-
 
 
 ## Hybrid MDM enrollment
