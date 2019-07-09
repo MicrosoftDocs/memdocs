@@ -714,7 +714,7 @@ Use this step to download any of the following package types:
 - OS upgrade packages  
 - Driver packages  
 - Packages  
-- Boot images  
+- Boot images (in version 1810 and earlier)  
 
 This step works well in a task sequence to upgrade an OS in the following scenarios:  
 
