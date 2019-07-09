@@ -36,7 +36,7 @@ Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[
  Beginning with System Center Configuration Manager version 1606, this level includes the following:
 
 
- -   Setup Information:
+-   Setup Information:
       - Build, install type, language packs, features that you enabled  
 
       -   Update pack deployment status and errors, download progress, and prerequisite errors 

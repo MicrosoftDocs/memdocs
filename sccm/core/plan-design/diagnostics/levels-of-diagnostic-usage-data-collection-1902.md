@@ -356,7 +356,7 @@ For Configuration Manager version 1902, this level includes the following data:
 
 ### Endpoint Protection  
 
- - Microsoft Defender Advanced Threat Protection (ATP) policies (formerly known as Windows Defender ATP): count of policies, and whether policies are deployed.
+- Microsoft Defender Advanced Threat Protection (ATP) policies (formerly known as Windows Defender ATP): count of policies, and whether policies are deployed.
 
 - Count of alerts that are configured for Endpoint Protection feature  
 

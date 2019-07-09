@@ -37,13 +37,13 @@ Beginning with version 1610, you change the data collection level from within th
 
 
 - Setup Information:
-    - Build, install type, language packs, features that you enabled  
+  - Build, install type, language packs, features that you enabled  
 
-    - Update pack deployment status and errors, download progress, and prerequisite errors    
+  - Update pack deployment status and errors, download progress, and prerequisite errors    
 
-    - Version of post-upgrade script
+  - Version of post-upgrade script
 
-    - Use of update fast ring
+  - Use of update fast ring
 
   - ***[New]*** Pre-release use, setup media type, branch type
 

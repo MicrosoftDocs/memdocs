@@ -44,14 +44,14 @@ Version 1702 drops support for the following products:
 
 ### Improvements for in-console search
 The following are improvements to using search in the Configuration Manager console:
- - **Object Path:**  
+- **Object Path:**  
   Many objects now support a column named **Object Path**.  When you search and include this column in your display results, you can view the path to each object. For example, if you run a search for apps in the Applications node and are also searching sub-nodes, the *Object Path* column in the results pane will show you the path to each object that is returned.   
 
 - **Preservation of search text:**  
   When you enter text into the search text box, and then switch between searching a sub-node and the current node, the text that you typed will now persist and remain available for a new search without having to reenter it.
 
 - **Preservation of your decision to search sub-nodes:**  
- The option that you choose for searching the *current node* or *all sub-nodes* now persists when you change the node you are working in. This new behavior means that you do not need to constantly reset this decision as you move around the console. By default, when you open the console the option is to search only the current node.
+  The option that you choose for searching the *current node* or *all sub-nodes* now persists when you change the node you are working in. This new behavior means that you do not need to constantly reset this decision as you move around the console. By default, when you open the console the option is to search only the current node.
 
 
 ### Send feedback from the Configuration Manager console

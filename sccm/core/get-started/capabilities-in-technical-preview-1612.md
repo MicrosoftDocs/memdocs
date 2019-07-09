@@ -203,14 +203,14 @@ The following command line switches can be used in any order.
 
 ## Improvements for in-console search
 Based on User Voice feedback, we have added the following improvements to in-console search:
- - **Object Path:**  
+- **Object Path:**  
   Many objects now support a new column named **Object Path**.  When you search and include this column in your display results, you can view the path to each object. For example, if you run a search for apps in the Applications node and are also searching sub-nodes, the *Object Path* column in the results pane will show you the path to each object returned.   
 
 - **Preservation of search text:**  
   When you enter text in the search text box, and then switch between searching a sub-node and the current node, the text you typed will now persist and remain available for a new search without having to retype it.
 
 - **Preservation of your decision to search sub-nodes:**  
- The option you select for either searching the *current node* or *all sub-nodes* now persists when you change the node you are working in.   This new behavior means you do not need to constantly reset the decision as you move around the console.  By default, when you open the console the option is to only search the current node.
+  The option you select for either searching the *current node* or *all sub-nodes* now persists when you change the node you are working in.   This new behavior means you do not need to constantly reset the decision as you move around the console.  By default, when you open the console the option is to only search the current node.
 
 ## Prevent installation of an application if a specified program is running.
 You can now configure a list of executable files (with the extension .exe) in deployment type properties which, if running, will block installation of an application. After installation is attempted, users will see a dialog box asking them to close the processes that are blocking installation.
