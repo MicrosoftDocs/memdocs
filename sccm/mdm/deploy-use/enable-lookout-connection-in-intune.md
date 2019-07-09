@@ -42,10 +42,10 @@ This article shows you how to enable the Lookout mobile threat defense (MTD) con
 You can decide which MTD toggle options you need to enable according to your organization's requirements. Here are more details:
 
 - **Connect Android 4.1+ devices to Lookout for Work MTD**: When you enable this option, you can have Android 4.1+ devices reporting security risk back to Intune.  
-	- **Mark as noncompliant if no data is received**: If Intune doesn't receive data about a device on this platform from Lookout, consider the device noncompliant.  
+    - **Mark as noncompliant if no data is received**: If Intune doesn't receive data about a device on this platform from Lookout, consider the device noncompliant.  
 
 - **Connect iOS 8.0+ devices to Lookout for Work MTD**: When you enable this option, you can have iOS 8.0+ devices reporting security risk back to Intune.
-	- **Mark as noncompliant if no data is received**: If Intune doesn't receive data about a device on this platform from Lookout, consider the device noncompliant.  
+    - **Mark as noncompliant if no data is received**: If Intune doesn't receive data about a device on this platform from Lookout, consider the device noncompliant.  
 
 > [!TIP]  
 > You can see the **Connection status** and the **Last synchronized** time between Intune and Lookout from the Mobile Threat Defense pane.

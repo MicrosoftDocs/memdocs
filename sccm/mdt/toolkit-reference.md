@@ -3706,7 +3706,7 @@ cscript.exe LiteTouch.vbs /debug:true
 
  In addition, the same functionality can be provided by configuring the DomainOUList.xml file. The format of the DomainOUList.xml file is as follows:  
 
-```  
+```xml
 <?xml version="1.0" encoding="utf-8"?>  
 <DomainOUs>  
 <DomainOU>  

@@ -90,4 +90,4 @@ Once the client evaluates the targeted policy, it will apply the upgrade within 
 
 If the following error appears in **DcmWmiProvider.log** on the client, check that you're using the proper key for your activation scenario. For more information, see the [Before you start](#before-you-start) section. If you're using a key management service for activation, make sure to use a [KMS client setup key](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys).  <!-- 496871 -->   
 
-`Failed to execute CheckApplicabilityMethod with error = 0x80041001	OsEditionUpgradeProvider`
+`Failed to execute CheckApplicabilityMethod with error = 0x80041001 OsEditionUpgradeProvider`

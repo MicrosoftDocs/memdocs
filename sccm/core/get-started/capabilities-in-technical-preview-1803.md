@@ -112,8 +112,8 @@ You can now create a customized tab to open a webpage in Software Center. This f
 3. For **Software Center settings**, click **Customize**.
 4. Switch to the **Tabs** tab.
 5. Enable the option to **Specify a custom tab for Software Center**.
-	1. Enter a name in the **Tab name** text field. This name is what displays to the user in Software Center.
-	2. Enter a valid URL in the **Content URL** text field. This URL is the content that Software Center displays when users click this tab.
+    1. Enter a name in the **Tab name** text field. This name is what displays to the user in Software Center.
+    2. Enter a valid URL in the **Content URL** text field. This URL is the content that Software Center displays when users click this tab.
 
 > [!Tip]  
 > Software Center uses Internet Explorer components for rendering the web page.
