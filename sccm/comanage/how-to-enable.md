@@ -7,8 +7,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
 ms.assetid: 8fac7ac5-96a3-4ec1-85cb-623b26bf5b1c
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -23,7 +23,7 @@ Make sure the co-management prerequisites are set up before you start this proce
 
 To enable co-management starting in Configuration Manager version 1906, follow the instructions below:
 
-[!INCLUDE [Enable Co-management in version 1906 and later](includes/enable-co-management-1906-and-later.md)]
+[!INCLUDE [Enable Co-management in version 1906 and later](includes/enable-co-management-1906-and-higher.md)]
 
 ## Enable co-management in version 1902 and earlier
 
