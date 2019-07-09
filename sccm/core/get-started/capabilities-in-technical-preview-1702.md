@@ -48,7 +48,7 @@ We added an automatic clean-up function that deletes the unneeded downloads from
 
 ## Peer Cache improvements
 Starting with this release, a peer cache source computer will reject a request for content when the peer cache source computer meets any of the following conditions:  
- - 	Is in low battery mode.
+ -  Is in low battery mode.
  -  CPU load exceeds 80% at the time the content is requested.
  -  Disk I/O has an *AvgDiskQueueLength* that exceeds 10.
  -  There are no more available connections to the computer.   
@@ -66,10 +66,10 @@ The technical preview site infrastructure, clients, and the Azure AD Domain Serv
 
 ### Set up Configuration Manager to use Azure AD
 To use Azure AD with Configuration Manager, you’ll need the following:
--	Azure subscription.
--	Azure AD with Domain Services (DS).
--	A Configuration Manager site that runs on an Azure VM that is joined to your Azure AD.
--	Configuration Manager clients that run in the same Azure AD environment.
+- Azure subscription.
+- Azure AD with Domain Services (DS).
+- A Configuration Manager site that runs on an Azure VM that is joined to your Azure AD.
+- Configuration Manager clients that run in the same Azure AD environment.
 
 To configure Azure AD Domain Service, see [Get started with Azure AD Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance).
 
@@ -85,7 +85,7 @@ For each method you use, edit the LDAP query to search the Azure AD OU structure
 The following examples use an Azure AD of *contoso.onmicrosoft.com*:
 - **System Discovery**   
   Azure AD stores devices under the **AADDC Computers** OU.  Configure the following:  
-  -	*LDAP://OU=AADDC Computers,DC=contoso,DC=onmicrosoft,DC=com*  
+  - *LDAP://OU=AADDC Computers,DC=contoso,DC=onmicrosoft,DC=com*  
 
 
 - **User Discovery**
@@ -209,9 +209,9 @@ In the *\<deployment type name>* **Properties** dialog box of a deployment type,
 
 ### Try it out.
 
-1.	In the properties of a Configuration Manager deployment type, choose the **Install Behavior** tab.
-2.	Choose **Add** to add one or more executable file names you want to check for. You can also add a display name to make it easier for users to identify applications in the list.
-3.	If the deployment will have a purpose of required, in the deploy software wizard, you can optionally choose to **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box**.
+1. In the properties of a Configuration Manager deployment type, choose the **Install Behavior** tab.
+2. Choose **Add** to add one or more executable file names you want to check for. You can also add a display name to make it easier for users to identify applications in the list.
+3. If the deployment will have a purpose of required, in the deploy software wizard, you can optionally choose to **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box**.
 
 If the application was deployed as **Available**, and an end user tries to install an application, they will be prompted to close any running executables you specified before they can proceed with the installation.
 

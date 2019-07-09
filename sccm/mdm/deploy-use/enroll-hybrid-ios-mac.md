@@ -67,9 +67,9 @@ You can limit devices that can enroll by blocking personally owned devices. This
 - Devices enrolled with a [device enrollment manager account](enroll-devices-with-device-enrollment-manager.md)
 
 ### To enable enrollment restrictions
-1.	In the Configuration Manager console in the **Administration** workspace, go to **Cloud Services** > **Microsoft Intune Subscription**.
-2.	On the **Home** tab in the **Subscription** group, click **Configure Platforms** > **iOS**.
-3.	Choose **Block personally owned devices** to limit enrollment to company-owned devices.
+1. In the Configuration Manager console in the **Administration** workspace, go to **Cloud Services** > **Microsoft Intune Subscription**.
+2. On the **Home** tab in the **Subscription** group, click **Configure Platforms** > **iOS**.
+3. Choose **Block personally owned devices** to limit enrollment to company-owned devices.
 
 > [!div class="button"]
 > [< Previous step](create-service-connection-point.md)  [Next step >](set-up-additional-management.md)

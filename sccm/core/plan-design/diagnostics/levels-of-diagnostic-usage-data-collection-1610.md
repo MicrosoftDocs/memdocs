@@ -37,13 +37,13 @@ Beginning with version 1610, you change the data collection level from within th
 
 
 - Setup Information:
-    - Build, install type, language packs, features that you enabled  
+  - Build, install type, language packs, features that you enabled  
 
-    - Update pack deployment status and errors, download progress, and prerequisite errors    
+  - Update pack deployment status and errors, download progress, and prerequisite errors    
 
-    - Version of post-upgrade script
+  - Version of post-upgrade script
 
-    - Use of update fast ring
+  - Use of update fast ring
 
   - ***[New]*** Pre-release use, setup media type, branch type
 
@@ -84,7 +84,7 @@ Beginning with version 1610, you change the data collection level from within th
 - Use of Network Discovery (enabled or disabled)
 - Admin Console:
 
-	 - Statistics about console connections (operating system version, language, SKU and architecture, system memory, logical processor count, connect site ID, installed .NET versions, and console language packs)    
+  - Statistics about console connections (operating system version, language, SKU and architecture, system memory, logical processor count, connect site ID, installed .NET versions, and console language packs)    
 
 - SQL version, service pack level, edition, collation ID, and character set
 
@@ -238,7 +238,7 @@ For System Center Configuration Manager version 1610, this level includes the fo
 
     -   Count of alerts that are configured for Endpoint Protection feature  
 
-    - 	Advanced Threat Protection (ATP) Policies (count of policies and whether policies are deployed)
+    -   Advanced Threat Protection (ATP) Policies (count of policies and whether policies are deployed)
 
 
 - **Migration:**

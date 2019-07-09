@@ -224,13 +224,13 @@ The following items on this menu request a client action related to content:
 
     - **Time out content requests**: If any content location requests have been running for too long, this action stops the request.  
 
-  - **Application deployment evaluation**: Starts a task that evaluates deployed applications.  
+- **Application deployment evaluation**: Starts a task that evaluates deployed applications.  
 
-  - **Software updates deployment evaluation**: Starts a task that evaluates deployed software updates.  
+- **Software updates deployment evaluation**: Starts a task that evaluates deployed software updates.  
 
-  - **Software updates source scan**: Starts a task that scans update source locations.  
+- **Software updates source scan**: Starts a task that scans update source locations.  
 
-  - **Windows Installer source list update**: Starts a task that updates the source location for Windows Installer (MSI) installations.  
+- **Windows Installer source list update**: Starts a task that updates the source location for Windows Installer (MSI) installations.  
 
 #### Content view
 See applications, packages, and updates that are loaded on the client. When you select an application, package or update, you can view details on that content. For some applications, you can also do the following actions:  
@@ -347,7 +347,7 @@ Starts troubleshooting the client
 - **Active Directory**: Queries Active Directory to retrieve published Configuration Manager site information  
 - **MPCERTIFICATE**: Gets management point certificates  
 - **MPLIST**: Gets a list of management points  
-- **MPKEYINFORMATION**: Gets management point cryptographic key information	 
+- **MPKEYINFORMATION**: Gets management point cryptographic key information  
 - **Networking**: Troubleshoots issues with networking  
 - **Policy Assignments**: Retrieves policy assignments  
 - **Registration**: Verifies that the client is registered with the site  

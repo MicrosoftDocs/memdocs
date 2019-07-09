@@ -50,11 +50,11 @@ Peer cache doesn't replace the use of other solutions like Windows BranchCache o
 
 To enable peer cache, deploy the [client settings](#bkmk_settings) to a collection. Then members of that collection act as a peer cache source for other clients in the same boundary group.  
 
- -	A client that operates as a peer content source submits a list of available cached content to its management point.  
+ - A client that operates as a peer content source submits a list of available cached content to its management point.  
 
- -	Another client in the same boundary group makes a content location request to the management point. The server returns the list of potential content sources. This list includes each peer cache source that has the content and is online. It also includes the distribution points and other content source locations in that boundary group. For more information, see [Content source priority](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#content-source-priority).  
+ - Another client in the same boundary group makes a content location request to the management point. The server returns the list of potential content sources. This list includes each peer cache source that has the content and is online. It also includes the distribution points and other content source locations in that boundary group. For more information, see [Content source priority](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#content-source-priority).  
 
- -	As usual, the client that's seeking the content selects one source from the provided list. The client then attempts to get the content.  
+ - As usual, the client that's seeking the content selects one source from the provided list. The client then attempts to get the content.  
 
 Starting in version 1806, boundary groups include additional settings to give you more control over content distribution in your environment. For more information, see [Boundary group options for peer downloads](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).<!--1356193-->
 

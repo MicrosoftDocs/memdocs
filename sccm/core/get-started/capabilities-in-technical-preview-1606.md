@@ -22,7 +22,9 @@ This article introduces the features that are available in the Technical Preview
 **Known Issues in this Technical Preview:**  
 *  When you update from Technical Preview 1604 to 1605, and then to version 1606, the update might fail and an error similar to the following is logged in the **cmupdate.log**:
 
-       ERROR: Failed to execute SQL Server command:  ~ ~-- Create site boundary group ~IF  dbo.fnIsCasOrStandalonePrimary() = 1 ~BEGIN ~   PRINT N'Create site boundary group during upgrade' ~   EXEC dbo.spBuildDefaultBoundaryGroups @UserName = N'SYSTEM' ~END          
+    ```
+    ERROR: Failed to execute SQL Server command:  ~ ~-- Create site boundary group ~IF  dbo.fnIsCasOrStandalonePrimary() = 1 ~BEGIN ~   PRINT N'Create site boundary group during upgrade' ~   EXEC dbo.spBuildDefaultBoundaryGroups @UserName = N'SYSTEM' ~END          
+    ```
 
     If this occurs, in the **Updates and Servicing** node click **Check for updates**, and then **Retry** the update installation.
     ***
