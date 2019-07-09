@@ -88,7 +88,7 @@ Site backup status information is written to the **Smsbkup.log** file. This file
     -   **Local drives on site server and SQL Server**: Specifies that the task stores the backup files for the site in the specified path on the local drive of the site server. The task stores the backup files for the site database in the specified path on the local drive of the site database server. Create the local folders before the backup task runs. The computer account of the site server must have **Write** NTFS permissions to the folder that you create on the site server. The computer account of the SQL Server must have **Write** NTFS permissions to the folder that you create on the site database server. This option is available only when the site database isn't installed on the site server.  
 
     > [!NOTE]  
-    >	The option to browse to the backup destination is only available when you specify the network path of the backup destination.  
+    > The option to browse to the backup destination is only available when you specify the network path of the backup destination.  
     >  
     > The folder name or share name that's used for the backup destination doesn't support the use of Unicode characters.  
 

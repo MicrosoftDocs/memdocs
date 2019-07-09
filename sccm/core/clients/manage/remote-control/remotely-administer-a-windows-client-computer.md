@@ -60,7 +60,7 @@ Here are three ways to start the remote control viewer:
         - **All Screens** - Added in Configuration Manager 1902. If the computer that you connect to has multiple monitors, the display from all the monitors is shown in the remote control window. **All Screens** is the only view for computers with multiple monitors before 1902.
         -  **First Screen** - Added in Configuration Manager 1902. The *first screen* is at the top and far left as shown in Windows display settings. You can't select a specific screen. When you switch the configuration of the viewer, reconnect the remote session. The viewer saves your preference for future connections.
         -  **Scale to Fit** - Scales the display of the remote computer to fit the size of the **Configuration Manager Remote Control** window.
-       - **Status Bar** - Toggles the display of the **Configuration Manager Remote Control** window status bar.  
+        - **Status Bar** - Toggles the display of the **Configuration Manager Remote Control** window status bar.  
 
        > [!NOTE]  
        >  The viewer saves your preference for future connections.

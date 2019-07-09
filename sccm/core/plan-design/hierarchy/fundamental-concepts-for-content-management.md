@@ -147,16 +147,16 @@ For more information, see [Windows PE peer cache](/sccm/osd/get-started/prepare-
 
 When a client needs content, it makes a content location request to the management point. The management point returns a list of source locations that are valid for the requested content. This list varies depending upon the specific scenario, technologies in use, site design, boundary groups, and deployment settings. The following list contains all of the possible content source locations that a client can use, in the order in which it prioritizes them:  
 
-1.	The distribution point on the same computer as the client
-2.	A peer source in the same network subnet
-3.	A distribution point in the same network subnet
-4.	A peer source in the same boundary group
-5.	A distribution point in the current boundary group
-6.	A distribution point in a neighbor boundary group configured for fallback
-9.	A distribution point in the default site boundary group 
-10.	The Windows Update cloud service
-11.	An internet-facing distribution point
-12.	A cloud distribution point in Azure
+1. The distribution point on the same computer as the client
+2. A peer source in the same network subnet
+3. A distribution point in the same network subnet
+4. A peer source in the same boundary group
+5. A distribution point in the current boundary group
+6. A distribution point in a neighbor boundary group configured for fallback
+9. A distribution point in the default site boundary group 
+10. The Windows Update cloud service
+11. An internet-facing distribution point
+12. A cloud distribution point in Azure
 
 
 

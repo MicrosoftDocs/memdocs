@@ -65,11 +65,11 @@ Here is the information retrieved for OneNote:
 
 ## Find a PFN if the app is not installed on a computer
 
-1.	Go to https://www.microsoft.com/en-us/store/apps
-2.	Enter the name of the app in the search bar. In our example, search for OneNote.
-3.	Click the link to the app. Note that the URL that you access has a series of letters at the end. In our example, the URL looks like this:
+1. Go to https://www.microsoft.com/en-us/store/apps
+2. Enter the name of the app in the search bar. In our example, search for OneNote.
+3. Click the link to the app. Note that the URL that you access has a series of letters at the end. In our example, the URL looks like this:
 `https://www.microsoft.com/en-us/store/apps/onenote/9wzdncrfhvjl`
-4.	In a different tab, paste the following URL, `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`,  replacing `<app id>` with the app id you obtained from https://www.microsoft.com/en-us/store/apps - that series of letters at the end of the URL in step 3. In our example, example of OneNote, you'd paste: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
+4. In a different tab, paste the following URL, `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`,  replacing `<app id>` with the app id you obtained from https://www.microsoft.com/en-us/store/apps - that series of letters at the end of the URL in step 3. In our example, example of OneNote, you'd paste: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
 
 In Edge, the information you want is displayed; in Internet Explorer, click **Open** to see the information. The PFN value is given on the first line. Here's how the results look for our example:
 

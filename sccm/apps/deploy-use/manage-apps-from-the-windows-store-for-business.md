@@ -86,9 +86,9 @@ At the next application evaluation cycle:
 
 - If the user didn't try to install the app from the store:  
 
-	- For required deployments, the Configuration Manager client tries to launch the store app again  
+    - For required deployments, the Configuration Manager client tries to launch the store app again  
 
-	- Available deployments aren't re-enforced
+    - Available deployments aren't re-enforced
 
 
 #### Further notes for devices running earlier versions of Windows 10:

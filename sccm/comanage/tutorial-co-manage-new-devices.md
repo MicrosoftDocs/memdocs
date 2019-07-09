@@ -153,7 +153,7 @@ Public certificate providers typically provide instructions for import of the ce
 
 6. On the **Certificate Store page**, choose **Automatically select the certificate store based on the type of certificate**, and then select **Next**.  
 
-7.	Select **Finish**.
+7. Select **Finish**.
 
 ### Export the certificate
 Export the *CMG server authentication certificate* from your server. Re-exporting the certificate makes it usable for your cloud management gateway in Azure.  
@@ -398,8 +398,10 @@ For example, *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetup
    - **Command-line arguments**:  *\<Specify the **CCMSETUPCMD** command line. You can use the command line you saved from the* Enablement *page of the Co-management Configuration Wizard. This command line includes the names of your cloud service and additional values that enable devices to install the Configuration Manager client software.>*  
 
      The command-line structure should resemble this example using only the CCMSETUPCMD and SMSSiteCode parameters:  
- 
-         CCMSETUPCMD="CCMHOSTNAME=<ServiceName.CLOUDAPP.NET/CCM_Proxy_MutualAuth/<GUID>" SMSSiteCode="<YourSiteCode>"  
+
+     ```
+     CCMSETUPCMD="CCMHOSTNAME=<ServiceName.CLOUDAPP.NET/CCM_Proxy_MutualAuth/<GUID>" SMSSiteCode="<YourSiteCode>"  
+     ```
 
      > [!TIP]  
      > If you do not have the command line available, you can view the properties of *CoMgmtSettingsProd* in the Configuration Manager console to get a copy of the command line.    
