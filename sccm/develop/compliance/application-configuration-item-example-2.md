@@ -16,7 +16,7 @@ In System Center Configuration Manager, the following Application Configuration 
 
 ## Application Configuration Item Example  
 
-```  
+```xml
 <?xml version="1.0" encoding="utf-8"?>  
 
 <!--   
