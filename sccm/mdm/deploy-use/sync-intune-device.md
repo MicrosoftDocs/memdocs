@@ -21,8 +21,8 @@ You can request a policy sync for a device that is enrolled with Intune from the
 
 To do this:
 
-1.	Select a device under **Assets and Compliance** > **Overview** > **Devices**.
-2.	Click **Send Sync Request** in the **Remote Device Actions** menu.
+1. Select a device under **Assets and Compliance** > **Overview** > **Devices**.
+2. Click **Send Sync Request** in the **Remote Device Actions** menu.
 
 
 After five to ten minutes, any changes in policy will be synced to the device. You can view sync request state information in a new column in device views, called **Remote Sync State**, as well as in the discovery data section of the **Properties** dialog box for each device.

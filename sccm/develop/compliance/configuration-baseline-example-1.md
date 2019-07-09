@@ -16,7 +16,7 @@ The following Baseline Configuration Item Instance example references an applica
 
 ## Configuration Baseline Example  
 
-```  
+```xml
 <?xml version="1.0" encoding="utf-8"?>  
 
 <!--   

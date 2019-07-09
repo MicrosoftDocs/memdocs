@@ -159,11 +159,11 @@ The three security roles used for running scripts aren't created by default in C
 2. In the **Software Library** workspace, click **Scripts**.
 3. On the **Home** tab, in the **Create** group, click **Create Script**.
 4. On the **Script** page of the Create **Script** wizard, configure the following settings:
-	- **Script Name** - Enter a name for the script. Although you can create multiple scripts with the same name, using duplicate names makes it harder for you to find the script you need in the Configuration Manager console.
-	- **Script language** - Currently, only PowerShell scripts are supported.
-	- **Import** - Import a PowerShell script into the console. The script is displayed in the **Script** field.
-	- **Clear** - Removes the current script from the Script field.
-	- **Script** - Displays the currently imported script. You can edit the script in this field as necessary.
+    - **Script Name** - Enter a name for the script. Although you can create multiple scripts with the same name, using duplicate names makes it harder for you to find the script you need in the Configuration Manager console.
+    - **Script language** - Currently, only PowerShell scripts are supported.
+    - **Import** - Import a PowerShell script into the console. The script is displayed in the **Script** field.
+    - **Clear** - Removes the current script from the Script field.
+    - **Script** - Displays the currently imported script. You can edit the script in this field as necessary.
 5. Complete the wizard. The new script is displayed in the **Script** list with a status of **Waiting for approval**. Before you can run this script on client devices, you must approve it. 
 
 > [!IMPORTANT]

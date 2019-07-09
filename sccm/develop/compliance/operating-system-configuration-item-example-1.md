@@ -16,7 +16,7 @@ In System Center Configuration Manager, the following Operating System Configura
 
 ## Operating System Configuration Item Example  
 
-```  
+```xml
 <?xml version="1.0" encoding="utf-8"?>  
 
 <!--   

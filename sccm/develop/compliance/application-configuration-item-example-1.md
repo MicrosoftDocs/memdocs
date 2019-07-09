@@ -16,7 +16,7 @@ The following Application Configuration Item Instance example determines whether
 
 ## Application Configuration Item Example  
 
-```  
+```xml
 <?xml version="1.0" encoding="utf-8"?>  
 
 <!--   
@@ -39,7 +39,7 @@ Version (string) - This attribute specifies the version of the configuration ite
 
     <Application AuthoringScopeId="ScopeId_F348CC96-19CA-4F5D-9D4F-D1451B5BEB1E" LogicalName="Application_5cb68ff1-a234-41ed-a7d4-14174d8108b7" Version="1" Is64Bit="false">  
         <Annotation>  
-            <DisplayName Text="Configuration Manager Client />  
+            <DisplayName Text="Configuration Manager Client" />  
             <Description Text="Configuration Manager Client (Windows Installer-based detection)" />  
         </Annotation>  
 
