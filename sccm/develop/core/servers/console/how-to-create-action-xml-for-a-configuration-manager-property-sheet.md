@@ -24,7 +24,7 @@ In System Center Configuration Manager, to display a property sheet or dialog bo
 
 2.  In Notepad, create an XML file that contains the following XML:  
 
-    ```  
+    ```xml
     <?xml version="1.0"?>  
     <ActionDescription Description="DisplayDescription" DisplayName="DisplayName" SynchronousAction="true" Class="ShowDialog" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
        <ShowOn>       <string>DefaultHomeTab</string>  

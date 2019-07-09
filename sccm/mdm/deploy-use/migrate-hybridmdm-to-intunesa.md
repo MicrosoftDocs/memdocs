@@ -27,7 +27,7 @@ Start migrating to Intune standalone using a phased approach. With this approach
 
 For more information, see the following articles:    
   
-1.	[Import Configuration Manager data to Microsoft Intune](migrate-import-data.md)   
+1. [Import Configuration Manager data to Microsoft Intune](migrate-import-data.md)   
 
     The Intune Data Importer tool:  
 
@@ -41,7 +41,7 @@ For more information, see the following articles:
 
     This step is optional. It can save you time by automating the process to recreate objects from Configuration Manager to Intune.  
 
-2.	[Prepare Intune for user migration](migrate-prepare-intune.md)    
+2. [Prepare Intune for user migration](migrate-prepare-intune.md)    
 
     - Validate imported objects from Configuration Manager  
 
@@ -53,11 +53,11 @@ For more information, see the following articles:
 
     When you complete the steps and start the migration to Intune standalone, there is no significant impact to your users.   
 
-3.	[Change the MDM authority for specific users (mixed MDM authority)](migrate-mixed-authority.md)    
+3. [Change the MDM authority for specific users (mixed MDM authority)](migrate-mixed-authority.md)    
 
     Configure a mixed MDM authority in the same tenant. Select some users to be managed in Intune, while continuing to manage all other devices with hybrid MDM. Test that Intune functionality is working on the devices for a small subset of users before you start migrating additional users.   
 
-4.	[Change your MDM authority to Intune standalone](change-mdm-authority.md)     
+4. [Change your MDM authority to Intune standalone](change-mdm-authority.md)     
 
     Change your tenant-level MDM authority from Configuration Manager to Intune. All remaining users and devices are migrated to Intune standalone. After you've thoroughly tested Intune functionality in the previous step, and have migrated most or all of your users, then change your tenant-level MDM authority.
 

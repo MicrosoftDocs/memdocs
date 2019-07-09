@@ -53,13 +53,13 @@ Use the following URL format to open Software Center to a particular application
 
 ### How to get the application identifier of an application.
 
-1.	In the Configuration Manager console, click **Software Library**.
-2.	In the Software Library workspace, expand **Application Management**, and then click **Applications**.
-3.	In the **Applications** view, right-click one of the column headers, and then, from the list, select **CI Unique ID**. You’ll see that the unique ID of each application is now shown in the list.
-4.	Note the **CI Unique ID** of the application you want to provide a link to, for example:
+1. In the Configuration Manager console, click **Software Library**.
+2. In the Software Library workspace, expand **Application Management**, and then click **Applications**.
+3. In the **Applications** view, right-click one of the column headers, and then, from the list, select **CI Unique ID**. You’ll see that the unique ID of each application is now shown in the list.
+4. Note the **CI Unique ID** of the application you want to provide a link to, for example:
 **ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f/2**
-5.	Then, remove any text following the application GUID, in this case **/2**. This leaves you with the application identifier.
-6.	Finally, to finish constructing the link, precede it with **Softwarecenter:SoftwareID=**. Using the example above, the final link will read:
+5. Then, remove any text following the application GUID, in this case **/2**. This leaves you with the application identifier.
+6. Finally, to finish constructing the link, precede it with **Softwarecenter:SoftwareID=**. Using the example above, the final link will read:
 **Softwarecenter:SoftwareId= ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f**.
 
 By using this link, end users can open Software Center directly to the application you specified.
@@ -80,17 +80,17 @@ Technical preview 1703 introduces the **Configure Azure Services** wizard. This 
 
 With technical preview 1703, only Windows Store for Business (WSfB) is configured by using this wizard.  Other cloud services are configured by using their separate workflows.
 
--	Use the information in this preview topic to replace the configuration steps found in the [Set up Windows Store for Business synchronization](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#bkmk_setup) section of the Current Branch topic [Manage apps from the Windows Store for Business with System Center Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
+- Use the information in this preview topic to replace the configuration steps found in the [Set up Windows Store for Business synchronization](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#bkmk_setup) section of the Current Branch topic [Manage apps from the Windows Store for Business with System Center Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
 
--	For more information about web apps, see [Authentication and authorization in Azure App Service](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview), and [Web Apps overview](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview).
+- For more information about web apps, see [Authentication and authorization in Azure App Service](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview), and [Web Apps overview](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview).
 
 ### Prerequisites and planning
 When you set up a connection between Configuration Manager and the Windows Store for Business, you must provide a folder where app content synchronized from the store will be kept. To ensure that this folder is secure and that its content can be deployed to devices, make sure the following permissions are in place:
--	The computer on which you install the service connection point site system role (the top-level site in the hierarchy) must have read and write permissions to the folder you specified when using the **Computer$** account.  
+- The computer on which you install the service connection point site system role (the top-level site in the hierarchy) must have read and write permissions to the folder you specified when using the **Computer$** account.  
 
--	The app author must have read permissions to the folder you specified.  
+- The app author must have read permissions to the folder you specified.  
 
--	The **Computer$** account of each computer that hosts an instance of the SMS Provider must be able to use the folder you specified.
+- The **Computer$** account of each computer that hosts an instance of the SMS Provider must be able to use the folder you specified.
 
 In Azure Active Directory, register Configuration Manager as a web application or Web API management tool. This creates the client ID that you will need later.
 

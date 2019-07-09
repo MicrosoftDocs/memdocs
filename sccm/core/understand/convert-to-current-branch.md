@@ -24,7 +24,7 @@ When you have a current Software Assurance agreement (or similar licensing right
 
 If you have multiple sites, you only need to convert the top-tier site of your hierarchy. After the top-tier site is converted:
 - Child primary sites automatically convert.
--	You must manually update secondary sites from within the Configuration Manager console.
+- You must manually update secondary sites from within the Configuration Manager console.
 
 ## Run setup to convert the Long-Term Servicing Branch
 On the top-tier site of your hierarchy, you can run Configuration Manager setup from qualifying baseline media and select **Site maintenance**.  Then, when presented with the licensing page, select the option for the Current Branch and complete the wizard.

@@ -30,11 +30,11 @@ No, it is an IaaS (Infrastructure as a Service) because you host your Configurat
 
 ### What areas should I pay attention to when considering a move of my Configuration Manager infrastructure to Azure?
 Great question, here are the areas that are most important when making this decision, each is explored in a separate section of this topic:
-1.	Networking
-2.	Availability
-3.	Performance
-4.	Cost
-5.	User Experience
+1. Networking
+2. Availability
+3. Performance
+4. Cost
+5. User Experience
 
 ## Networking
 ### What about networking requirements, should I use ExpressRoute or an Azure VPN Gateway?

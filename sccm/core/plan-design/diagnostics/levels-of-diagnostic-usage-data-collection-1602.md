@@ -80,7 +80,7 @@ Changes from previous versions are noted with ***[New]*** or ***[Updated]***.
 - ***[New]*** Use of Network Discovery (enabled or disabled)
 - ***[New]*** Admin Console:
 
-	-  Statistics about console connections (opeating system version, language, SKU and architecture, system memory, logical processor count, connect site ID, installed .NET versions, and console language packs)
+  -  Statistics about console connections (opeating system version, language, SKU and architecture, system memory, logical processor count, connect site ID, installed .NET versions, and console language packs)
 
 ##  <a name="bkmk_level2"></a> Level 2 - Enhanced
 The Enhanced level is the default after setup finishes. This level includes data that's collected in the Basic level, feature-specific data (frequency and duration of use), Configuration Manager client settings (component name, state, and certain settings like polling intervals), and basic information about software updates.

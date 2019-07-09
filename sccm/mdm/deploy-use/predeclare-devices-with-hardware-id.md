@@ -60,10 +60,10 @@ The .csv file you use to identify devices by IMEI or iOS serial number must have
 | IMEI #  | iOS Serial #  | OS | Details |
 |------------ |---------------|-----|-----|
 | 123456789012345    |   | WINDOWS | Company-owned Windows device|
-|   | A1B2C3D4E5C6 | IOS | 	Company-owned iOS device|
-| 223456789012345 | E6D5C4B3A210 |   IOS | 	Another iOS device|
-| 323456789012345 |        |   IOS | 	A third iOS device|
-| 123456789012346 |         |   ANDROID | 	Company-owned Android device|
+|   | A1B2C3D4E5C6 | IOS | Company-owned iOS device|
+| 223456789012345 | E6D5C4B3A210 |   IOS | Another iOS device|
+| 323456789012345 |        |   IOS | A third iOS device|
+| 123456789012346 |         |   ANDROID | Company-owned Android device|
 
 Do not include a header row in your .csv file. The following example shows the same sample data in CSV format:
 

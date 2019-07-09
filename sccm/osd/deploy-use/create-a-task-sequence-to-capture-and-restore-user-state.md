@@ -23,9 +23,9 @@ ms.collection: M365-identity-device-management
 
 ## Task sequence steps  
 
- To capture and restore the user state, add the following steps to the task sequence:  
+To capture and restore the user state, add the following steps to the task sequence:  
 
- - [Request State Store](/sccm/osd/understand/task-sequence-steps#BKMK_RequestStateStore): If you store the user state on the state migration point, you need this step.  
+- [Request State Store](/sccm/osd/understand/task-sequence-steps#BKMK_RequestStateStore): If you store the user state on the state migration point, you need this step.  
 
 - [Capture User State](/sccm/osd/understand/task-sequence-steps#BKMK_CaptureUserState): This step captures the user state data. It then stores the data on either the state migration point or the local disk using hardlinks.  
 
