@@ -82,7 +82,7 @@ For Configuration Manager version 1902, this level includes the following data:
 
     - Software Assurance expiration date  
 
-    - Update pack deployment status and errors, download progress, and prerequisite errors 	
+    - Update pack deployment status and errors, download progress, and prerequisite errors 
 
     - Use of update fast ring  
 
@@ -356,7 +356,7 @@ For Configuration Manager version 1902, this level includes the following data:
 
 ### Endpoint Protection  
 
- - Microsoft Defender Advanced Threat Protection (ATP) policies (formerly known as Windows Defender ATP): count of policies, and whether policies are deployed.
+- Microsoft Defender Advanced Threat Protection (ATP) policies (formerly known as Windows Defender ATP): count of policies, and whether policies are deployed.
 
 - Count of alerts that are configured for Endpoint Protection feature  
 

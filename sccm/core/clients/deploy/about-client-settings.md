@@ -653,11 +653,11 @@ For example, if your organization doesn't use compliance policies, and you want 
 
 - Configure the **Default application filter** as either **All** or only **Required** applications.  
 
-    - Software Center always uses your default setting. Users can change this filter, but Software Center doesn't persist their preference.  
+  - Software Center always uses your default setting. Users can change this filter, but Software Center doesn't persist their preference.  
 
- - Set the **Default application view** as either **Tile view** or **List view**. 
+- Set the **Default application view** as either **Tile view** or **List view**. 
 
-    - If a user changes this configuration, Software Center persists the user's preference in the future. 
+  - If a user changes this configuration, Software Center persists the user's preference in the future. 
 
 
 ## Software deployment  

@@ -102,11 +102,11 @@ When configuring Upgrade Readiness or the Log Analytics Connector, give your new
 
 ## Start the Azure Services wizard
 
-1.	In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Services** node.  
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Services** node.  
 
-2.	On the **Home** tab of the ribbon, in the **Azure Services** group, select **Configure Azure Services**.  
+2. On the **Home** tab of the ribbon, in the **Azure Services** group, select **Configure Azure Services**.  
 
-3.	On the **Azure Services** page of the Azure Services Wizard:  
+3. On the **Azure Services** page of the Azure Services Wizard:  
 
     1. Specify a **Name** for the object in Configuration Manager.  
 
@@ -175,7 +175,7 @@ Select **OK** to create the web app in Azure AD and close the Create Server Appl
 
 
 ### Native Client app
-	
+
 This app is the Azure AD type *Native*, also referred to as a client app in Configuration Manager.
 
 #### Client App dialog
@@ -256,11 +256,11 @@ The following diagram is a conceptual data flow for the interaction between Conf
 
 ![Data flow diagram for Configuration Manager with Azure AD and Cloud Management](media/aad-auth.png)
 
-1.	The Configuration Manager administrator imports or creates the client and server apps in Azure AD.  
+1. The Configuration Manager administrator imports or creates the client and server apps in Azure AD.  
 
-2.	Configuration Manager Azure AD user discovery method runs. The site uses the Azure AD server app token to query Microsoft Graph for user objects.  
+2. Configuration Manager Azure AD user discovery method runs. The site uses the Azure AD server app token to query Microsoft Graph for user objects.  
 
-3.	The site stores data about the user objects. For more information, see [Azure AD User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc).  
+3. The site stores data about the user objects. For more information, see [Azure AD User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc).  
 
 4.  The Configuration Manager client requests the Azure AD user token. The client makes the claim using the application ID of the Azure AD client app, and the server app as the audience. For more information, see [Claims in Azure AD Security Tokens](/azure/active-directory/develop/authentication-scenarios#claims-in-microsoft-identity-platform-security-tokens).  
 

@@ -208,11 +208,11 @@ The following additional hybrid features are also included in version 1702 of Co
 
   The Company Portal app for Android is now available in China. Due to the absence of Google Play Store in China, Android devices must obtain apps from Chinese app marketplaces. The Company Portal app for Android is available for download on the following stores:
 
-  -	[Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
-  -	[Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
-  -	[Tencent](https://go.microsoft.com/fwlink/?linkid=836949)
-  -	[Wandoujia](https://go.microsoft.com/fwlink/?linkid=836950)
-  -	[Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947)
+  - [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
+  - [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
+  - [Tencent](https://go.microsoft.com/fwlink/?linkid=836949)
+  - [Wandoujia](https://go.microsoft.com/fwlink/?linkid=836950)
+  - [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947)
 
   The Company Portal app for Android uses Google Play Services to communicate with the Microsoft Intune service. Since Google Play Services are not yet available in China, performing any of the following tasks can take up to 8 hours to complete.
 
@@ -297,10 +297,10 @@ The following Intune features introduced in October 2016 work in hybrid deployme
   The model numbers affected are:
 
   - SM-G313HU
-  -	SM-G313HY
-  -	SM-G313M
-  -	SM-G313MY
-  -	SM-G313U
+  - SM-G313HY
+  - SM-G313M
+  - SM-G313MY
+  - SM-G313U
 
   You and your end users need take no further action. For more information, visit the Samsung KNOX website.
 
@@ -454,14 +454,14 @@ No new hybrid features have been introduced in July 2016 for Configuration Manag
 The following features that were previously available in Configuration Manager Technical Preview releases are now available in hybrid deployments with Intune and Configuration Manager (current branch) version 1606.
 
 * Find, manage, and distribute Windows Store for Business apps for Windows 10 devices from the Configuration Manager console ([1604](#new-in-1604-technical-preview))
-* 	SmartLock setting for Android devices ([1604](#new-in-1604-technical-preview))
-*	App-triggered VPN for Windows 10 devices ([1605](#new-in-1605-technical-preview))
-*	New experience for remote device actions ([1605](#new-in-1605-technical-preview))
-*	Windows Store for Business apps ([1605](#new-in-1605-technical-preview))
-*	General improvements for volume-purchased apps ([1605](#new-in-1605-technical-preview))
-*	Windows Information Protection (WIP) ([1605](#new-in-1605-technical-preview))
-*	Pre-declare corporate-owned devices with IMEI or iOS serial number ([1605](#new-in-1605-technical-preview))
-*	Automatically categorize devices into collections ([1606](#new-in-1606-technical-preview))
+* SmartLock setting for Android devices ([1604](#new-in-1604-technical-preview))
+* App-triggered VPN for Windows 10 devices ([1605](#new-in-1605-technical-preview))
+* New experience for remote device actions ([1605](#new-in-1605-technical-preview))
+* Windows Store for Business apps ([1605](#new-in-1605-technical-preview))
+* General improvements for volume-purchased apps ([1605](#new-in-1605-technical-preview))
+* Windows Information Protection (WIP) ([1605](#new-in-1605-technical-preview))
+* Pre-declare corporate-owned devices with IMEI or iOS serial number ([1605](#new-in-1605-technical-preview))
+* Automatically categorize devices into collections ([1606](#new-in-1606-technical-preview))
 
 For information on the new functionality, see the documentation for the specified Technical Preview release.
 
@@ -735,9 +735,9 @@ Support for System Center 2012 Configuration Manager SP1 and System Center 2012 
 If you're running a hybrid deployment with Configuration Manager 2012 SP1 or R2 RTM, we recommend that before April 10, 2017 you upgrade to Configuration Manager (current branch) or the latest supported service pack for Configuration Manager 2012 (either R2 SP1 or SP2) to avoid disruption of service.
 
 Additional resources:
--	[Upgrade to System Center Configuration Manager (current branch)](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)
--	[Planning to upgrade to System Center 2012 R2 Configuration Manager SP1](https://technet.microsoft.com/library/jj822981.aspx#BKMK_PlanningR2SP1Upgrade)
--	[Planning to upgrade to System Center 2012 Configuration Manager SP2](https://technet.microsoft.com/library/jj822981.aspx#BKMK_PlanningSP2Upgrade)
+- [Upgrade to System Center Configuration Manager (current branch)](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)
+- [Planning to upgrade to System Center 2012 R2 Configuration Manager SP1](https://technet.microsoft.com/library/jj822981.aspx#BKMK_PlanningR2SP1Upgrade)
+- [Planning to upgrade to System Center 2012 Configuration Manager SP2](https://technet.microsoft.com/library/jj822981.aspx#BKMK_PlanningSP2Upgrade)
 
 ### Windows Phone 8 Company Portal upload deprecated
 *October 25, 2016*
