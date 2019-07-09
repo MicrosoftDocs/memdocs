@@ -11,30 +11,32 @@ ms.collection: M365-identity-device-management
 
 2. On the **Subscription** page of the wizard, select **Sign In**. Sign in to your Intune tenant, and then select **Next**.  
 
-3. On the **Enablement** page, choose your **Automatic enrollment into Intune** setting, either **Pilot** or **All**.
+3. On the **Enablement** page, choose the following settings:
 
-   - This action enables automatic client enrollment in Intune for existing Configuration Manager clients. When you choose **Pilot**, only the Configuration Manager clients that are members of the pilot collection are automatically enrolled to Intune. This option allows you to enable co-management on a subset of clients to initially test co-management, and rollout co-management using a phased approach.  
-   - Starting in version 1806, automatic enrollment isn't immediate for all clients. This behavior helps enrollment scale better for large environments. Configuration Manager randomizes enrollment based on the number of clients. For example, if your environment has 100,000 clients, when you enable this setting, enrollment occurs over several days.<!--1358003-->  
+   - **Automatic enrollment into Intune** - Enables automatic client enrollment in Intune for existing Configuration Manager clients. This option allows you to enable co-management on a subset of clients to initially test co-management, and rollout co-management using a phased approach.
 
-4. On the **Enablement** page,  specify an **Intune Auto Enrollment** collection.
+      - **Pilot** - Only the Configuration Manager clients that are members of the **Intune Auto Enrollment** collection are automatically enrolled to Intune.
+      - **All** - Enable automatic enrollment for all Windows 10, version 1709 or later, clients.
 
-   - The **Intune Auto Enrollment** collection should contain all of the clients you want to onboard into co-management. It's essentially a superset of all the other staging collections.
+   - **Intune Auto Enrollment** - This collection should contain all of the clients you want to onboard into co-management. It's essentially a superset of all the other staging collections.
 
    ![Specify Intune auto enrollment collection ](../media/3555750-co-management-onboarding-enablement.png)
 
-5. For internet-based devices that are already enrolled in Intune, copy and save the command line on the **Enablement** page. You'll use this command line to install the Configuration Manager client as an app in Intune for internet-based devices. If you don't save this command line now, you can review the co-management configuration at any time to get this command line.
+      > [!Note]  
+      > Starting in version 1806, automatic enrollment isn't immediate for all clients. This behavior helps enrollment scale better for large environments. Configuration Manager randomizes enrollment based on the number of clients. For example, if your environment has 100,000 clients, when you enable this setting, enrollment occurs over several days.<!--1358003-->  
 
-6. On the **Workloads** page, for each workload, choose which device group to move over for management with Intune. For more information, see [Workloads](/sccm/comanage/workloads).  
+4. For internet-based devices that are already enrolled in Intune, copy and save the command line on the **Enablement** page. You'll use this command line to install the Configuration Manager client as an app in Intune for internet-based devices. If you don't save this command line now, you can review the co-management configuration at any time to get this command line.
 
-    If you only want to enable co-management, you don't need to switch workloads now. You can switch workloads later. For more information, see [How to switch workloads](/sccm/comanage/how-to-switch-workloads).  
+5. On the **Workloads** page, for each workload, choose which device group to move over for management with Intune. For more information, see [Workloads](/sccm/comanage/workloads). If you only want to enable co-management, you don't need to switch workloads now. You can switch workloads later. For more information, see [How to switch workloads](/sccm/comanage/how-to-switch-workloads).  
 
-    The **Pilot Intune** setting switches the associated workload only for the devices in the pilot collection. The **Intune** setting switches the associated workload for all co-managed Windows 10 devices.  
+    - **Pilot Intune** - Switches the associated workload only for the devices in the pilot collections you'll specify on the **Staging** page. Each workload can have a different pilot collection.
+    - **Intune** - Switches the associated workload for all co-managed Windows 10 devices.  
 
     > [!Important]
     > Before you switch any workloads, make sure you properly configure and deploy the corresponding workload in Intune. Make sure that workloads are always managed by one of the management tools for your devices.  
 
-7. On the **Staging** page, specify the collection for each of the workloads that are set to **Pilot Intune**.
+6. On the **Staging** page, specify the pilot collection for each of the workloads that are set to **Pilot Intune**.
 
    ![Specify Intune auto enrollment collection ](../media/3555750-co-management-onboarding-staging.png)
 
-8. To enable co-management, complete the wizard.
+7. To enable co-management, complete the wizard.
