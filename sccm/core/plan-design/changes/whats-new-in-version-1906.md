@@ -245,18 +245,14 @@ OneTrace works with many types of log files, such as:
 <!--4222696-->
 
 ### Configure client cache minimum retention period
+
 <!--4485509-->
-
-You can now specify the minimum time for the Configuration Manager client to keep cached content. This client setting controls how long the client stores content in the cache before deleting it.
-
-In the **Client Cache settings** group of client settings, configure the following setting: **Minimum duration before cached content can be removed (minutes)**. By default this value is 1,440 minutes (24 hours).
-
-This setting gives you greater control over the client cache on different types of devices. You might reduce the value on clients that have small hard drives and don't need to keep existing content before another deployment runs.
+You can now specify the minimum time for the Configuration Manager client to keep cached content. This client setting controls how long the client stores content in the cache before deleting it. In the **Client cache settings** group of client settings, configure the following setting: **Minimum duration before cached content can be removed (minutes)**.
 
 > [!Note]  
 > In the same client setting group, the existing setting to **Enable Configuration Manager client in full OS to share content** is now renamed to **Enable as peer cache source**. The behavior of the setting doesn't change.  
 
-<!-- For more information, see [Client cache settings](/sccm/core/clients/deploy/about-client-settings#client-cache-settings). -->
+For more information, see [Client cache settings](/sccm/core/clients/deploy/about-client-settings#client-cache-settings).
 
 
 ## <a name="bkmk_comgmt"></a> Co-management

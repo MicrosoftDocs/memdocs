@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 06/20/2019
+ms.date: 07/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -70,7 +70,10 @@ If you choose **Yes**, then specify:
 - **Maximum cache size (MB)**
 - **Maximum cache size (percentage of disk)**: The client cache size expands to the maximum size in megabytes (MB), or the percentage of the disk, whichever is less.
 
-### Enable Configuration Manager client in full OS to share content
+### Enable as peer cache source
+
+> [!Note]  
+> In version 1902 and earlier, this setting was named **Enable Configuration Manager client in full OS to share content**. The behavior of the setting didn't change.
 
 Enables [peer cache](/sccm/core/plan-design/hierarchy/client-peer-cache) for Configuration Manager clients. Choose **Yes**, and then specify the port through which the client communicates with the peer computer.
 
@@ -79,6 +82,16 @@ Enables [peer cache](/sccm/core/plan-design/hierarchy/client-peer-cache) for Con
 - **Port for content download from peer** (default TCP 8003): Configuration Manager automatically configures Windows Firewall rules to allow this traffic. If you use a different firewall, you must manually configure rules to allow this traffic.  
 
     For more information, see [Ports used for connections](/sccm/core/plan-design/hierarchy/ports#BKMK_PortsClient-ClientWakeUp).  
+
+### Minimum duration before cached content can be removed (minutes)
+
+<!--4485509-->
+Starting in version 1906, specify the minimum time for the Configuration Manager client to keep cached content. This client setting controls how long the client stores content in the cache before deleting it.
+
+By default this value is 1,440 minutes (24 hours).
+
+This setting gives you greater control over the client cache on different types of devices. You might reduce the value on clients that have small hard drives and don't need to keep existing content before another deployment runs.
+
 
 ## Client policy  
 
