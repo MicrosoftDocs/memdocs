@@ -75,7 +75,7 @@ When applying a Configuration Manager update, you can now see the state of the *
 <!--4572953-->
 Management insights includes a new rule that detects if you enabled the less secure NTLM authentication fallback method for the site: **NTLM fallback is enabled**.
 
-For more information, see [Management insights](/sccm/core/servers/manage/management-insights).
+For more information, see [Management insights](/sccm/core/servers/manage/management-insights#security).
 
 ### Add a SQL AlwaysOn node
 <!--3127336-->
