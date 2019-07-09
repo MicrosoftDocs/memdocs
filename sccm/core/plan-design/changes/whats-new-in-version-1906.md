@@ -71,13 +71,11 @@ When applying a Configuration Manager update, you can now see the state of the *
 <!-- For more information, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_install). -->
 
 ### Management insights rule for NTLM fallback
+
 <!--4572953-->
+Management insights includes a new rule that detects if you enabled the less secure NTLM authentication fallback method for the site: **NTLM fallback is enabled**.
 
-[Management insights](/sccm/core/servers/manage/management-insights) includes a new rule that detects if you enabled the less secure NTLM authentication fallback method for the site: **NTLM fallback is enabled**.
-
-When using the client push method of installing the Configuration Manager client, the site can require Kerberos mutual authentication. This enhancement helps to secure the communication between the server and the client. 
-
-<!--For more information, see [How to install clients with client push](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).-->
+For more information, see [Management insights](/sccm/core/servers/manage/management-insights).
 
 ### Add a SQL AlwaysOn node
 <!--3127336-->
