@@ -4,10 +4,10 @@ titleSuffix: Configuration Manager
 description: Learn how to switch workloads currently managed by Configuration Manager to Microsoft Intune.
 ms.prod: configuration-manager
 ms.technology: configmgr-client
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.date: 01/14/2019
+ms.date: 07/19/2019
 ms.topic: conceptual
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
 ms.collection: M365-identity-device-management
@@ -19,10 +19,11 @@ One of the benefits of co-management is switching workloads from Configuration M
 
 For more information on the supported workloads, see [Workloads](/sccm/comanage/workloads).
 
+## Switch workloads
+
 You can switch workloads when you enable co-management, or later when you're ready. If you haven't already enabled co-management, do that first. For more information, see [How to enable co-management](/sccm/comanage/how-to-enable).
 
-
-After you enable co-management, modify the settings in the co-management properties. 
+After you enable co-management, modify the settings in the co-management properties.
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Co-management** node.  
 
@@ -38,11 +39,12 @@ After you enable co-management, modify the settings in the co-management propert
 
     - **Intune**: Switch this workload for all Windows 10 devices enrolled in co-management.  
 
-
 > [!Important]  
 > Before you switch any workloads, make sure you properly configure and deploy the corresponding workload in Intune. Make sure that workloads are always managed by one of the management tools for your devices.  
 
 <!--1357377-->
 Starting in Configuration Manager version 1806, when you switch a co-management workload, the co-managed devices automatically synchronize MDM policy from Microsoft Intune. This sync also happens when you initiate the **Download Computer Policy** action from client notifications in the Configuration Manager console. For more information, see [Initiate client policy retrieval using client notification](/sccm/core/clients/manage/manage-clients#initiate-client-policy-retrieval-using-client-notification).
 
+## Next steps
 
+[Monitor co-management](/sccm/comanage/how-to-monitor.md)

@@ -6,8 +6,8 @@ ms.topic: include
 ms.date: 07/19/2019
 ms.collection: M365-identity-device-management
 ---
-<!--3555750 FKA 1357954-->
-1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Co-management** node. Click **Configure co-management** in the ribbon to open the **Co-management Onboarding Wizard**.  
+<!--3555750 FKA 1357954 --Don't apply H2/H3 in this include file since they are context driven by article-->
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Co-management** node. Click **Configure co-management** in the ribbon to open the **Co-management Onboarding Wizard**.
 
 2. On the **Subscription** page of the wizard, select **Sign In**. Sign in to your Intune tenant, and then select **Next**.  
 
@@ -20,9 +20,9 @@ ms.collection: M365-identity-device-management
 
    - The **Intune Auto Enrollment** collection should contain all of the clients you want to onboard into co-management. It's essentially a superset of all the other staging collections.
 
-   ![Specify Intune auto enrollemnt collection ](../media/3555750-co-management-onboarding-enablement.png)
+   ![Specify Intune auto enrollment collection ](../media/3555750-co-management-onboarding-enablement.png)
 
-5. If you have internet-based devices that are already enrolled in Intune, copy the command line on the **Enablement** page. You can use this command line to install the Configuration Manager client as an app in Intune.
+5. For internet-based devices that are already enrolled in Intune, copy and save the command line on the **Enablement** page. You'll use this command line to install the Configuration Manager client as an app in Intune for internet-based devices. If you don't save this command line now, you can review the co-management configuration at any time to get this command line.
 
 6. On the **Workloads** page, for each workload, choose which device group to move over for management with Intune. For more information, see [Workloads](/sccm/comanage/workloads).  
 
@@ -35,6 +35,6 @@ ms.collection: M365-identity-device-management
 
 7. On the **Staging** page, specify the collection for each of the workloads that are set to **Pilot Intune**.
 
-   ![Specify Intune auto enrollemnt collection ](../media/3555750-co-management-onboarding-staging.png)
+   ![Specify Intune auto enrollment collection ](../media/3555750-co-management-onboarding-staging.png)
 
 8. To enable co-management, complete the wizard.
