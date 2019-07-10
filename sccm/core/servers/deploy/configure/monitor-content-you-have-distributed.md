@@ -1,8 +1,8 @@
 ---
-title: "Monitor content"
-titleSuffix: "Configuration Manager"
-description: "Understand how to monitor distributed content by using the Configuration Manager console."
-ms.date: 12/05/2017
+title: Monitor content
+titleSuffix: Configuration Manager
+description: Understand how to monitor distributed content by using the Configuration Manager console.
+ms.date: 07/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,152 +12,178 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Monitor content you have distributed with System Center Configuration Manager
+
+# Monitor content you distribute with Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Use the System Center Configuration Manager console to monitor distributed content, including:  
+Use the Configuration Manager console to monitor distributed content, including:  
 
--   The status for all package types in relation to the associated distribution points.  
--   The content validation status for the content in a package.  
--   The status of content assigned to a specific distribution point group.  
--   The state of content assigned to a distribution point.  
--   The status of optional features for each distribution point (content validation, PXE, and multicast).  
+- The status for all package types for the associated distribution points.  
+- The content validation status for the content in a package.  
+- The status of content assigned to a specific distribution point group.  
+- The state of content assigned to a distribution point.  
+- The status of optional features for each distribution point (content validation, PXE, and multicast).  
 
 > [!NOTE]  
->  Configuration Manager only monitors the content on a distribution point that is in the content library. Content stored on the distribution point in package or custom shares is not monitored.  
+> Configuration Manager only monitors the content on a distribution point that's in the content library. It doesn't monitor content stored on the distribution point in package or custom shares.  
 
-##  <a name="BKMK_ContentStatus"></a> Content status monitoring  
- The **Content Status** node in the **Monitoring** workspace provides information about content packages. In the Configuration Manager console, you can review information like:  
+## <a name="BKMK_ContentStatus"></a> Content status monitoring
 
--   The package name.  
--   The type.  
--   How many distribution points a package has been sent to.  
--   The compliance rate.  
--   When the package was created.  
--   The package ID.  
--   The source version.  
+The **Content Status** node in the **Monitoring** workspace provides information about content packages. In the Configuration Manager console, review information like:  
 
-You also find detailed status information for any package, as well as distribution status for the package, including:  
+- Package name, type, and ID
+- How many distribution points a package has been sent to
+- Compliance rate
+- When the package was created
+- Source version
 
--   The number of failures.  
--   Pending distributions.  
--   The number of installations.
+You also find detailed status information for any package, including:  
+
+- Distribution status
+- The number of failures
+- Pending distributions  
+- The number of installations
 
 You can also manage distributions that remain in progress to a distribution point, or that failed to successfully distribute content to a distribution point:  
 
--   The option to either cancel or redistribute content is available when you view the deployment status message of a distribution job to a distribution point in the **Asset Details** pane. This pane can be found in either the **In Progress** tab or the **Error** tab of the **Content Status** node.  
--   Additionally, the job details display the percentage of the job that has completed when you view the details of a job on the **In Progress** tab. The job details also display the number of retries that remain for a job, as well as how long before the next retry occurs when you view the details of a job that is available from the **Error** tab.  
+- The option to either cancel or redistribute content is available when you view the deployment status message of a distribution job to a distribution point in the **Asset Details** pane. This pane can be found in either the **In Progress** tab or the **Error** tab of the **Content Status** node.  
+- Additionally, the job details display the percentage of the job that has completed when you view the details of a job on the **In Progress** tab. The job details also display the number of retries that remain for a job. When you view the details of a job on the **Error** tab, it shows how long before the next retry occurs.  
 
-When you cancel a deployment that is not yet complete, the distribution job to transfer that content stops:  
+When you cancel a deployment that's not yet complete, the distribution job to transfer that content stops:  
 
--   The status of the deployment then updates to indicate that the distribution failed, and that it was canceled by a user action.  
--   This new status appears in the **Error** tab.  
-
-> [!TIP]  
->  When a deployment is near completion, it is possible the action to cancel that distribution will not process before the distribution to the distribution point completes. When this occurs, the action to cancel the deployment is ignored, and the status for the deployment displays as successful.  
+- The status of the deployment then updates to indicate that the distribution failed, and that it was canceled by a user action.  
+- This new status appears in the **Error** tab.  
 
 > [!NOTE]  
->  Although you can select the option to cancel a distribution to a distribution point that is located on a site server, this has no effect. This is because the site server and the distribution point on a site server share the same single instance content store. There is no actual distribution job to cancel.  
+> When a deployment is near completion, it's possible the action to cancel that distribution won't process before the distribution to the distribution point completes. When this occurs, the action to cancel the deployment is ignored, and the status for the deployment displays as successful.  
+>
+> Although you can select the option to cancel a distribution to a distribution point that is located on a site server, this has no effect. This behavior is because the site server and the distribution point on a site server share the same single instance content store. There's no actual distribution job to cancel.  
 
 When you redistribute content that previously failed to transfer to a distribution point, Configuration Manager immediately begins redeploying that content to the distribution point. Configuration Manager updates the status of the deployment to reflect the ongoing state of that redeployment.  
 
-Use the following procedures to view content status, and manage distributions that remain in progress or that failed.  
+### Tasks to monitor content
 
-### To monitor content status  
+1. In the Configuration Manager console, go to the **Monitoring** workspace, expand **Distribution Status**, and then select the **Content Status** node. This node displays the packages.  
 
-1.  In the Configuration Manager console, click **Monitoring**.  
+2. Select the package you want to manage.  
 
-2.  In the **Monitoring** workspace, expand **Distribution Status**, and then click **Content Status**. The packages are displayed.  
+3. On the **Home** tab of the ribbon, in the **Content** group, select **View Status**. The console displays detailed status information for the package.
 
-3.  Select the package for which you want detailed status information.  
+Continue to one of the following sections for additional actions:
 
-4.  On the **Home** tab, click **View Status**. Detailed status information for the package is displayed.  
+#### Cancel a distribution that remains in progress  
 
-### To cancel a distribution that remains in progress  
+1. Switch to the **In Progress** tab.
 
-1.  In the Configuration Manager console, click **Monitoring**.  
+2. In the **Asset Details** pane, right-click the entry for the distribution that you want to cancel, and select **Cancel**.  
 
-2.  In the **Monitoring** workspace, expand **Distribution Status**, and then click **Content Status**. The packages are displayed.  
+3. Select **Yes** to confirm the action and cancel the distribution job to that distribution point.  
 
-3.  Select the package you want to manage, and then in the details pane, click **View Status**.  
+#### Redistribute content that failed to distribute  
 
-4.  In the **Asset Details** pane of the **In Progress** tab, right-click the entry for the distribution that you want to cancel, and select **Cancel**.  
+1. Switch to the **Error** tab.
 
-5.  Click **Yes** to confirm the action and cancel the distribution job to that distribution point.  
+2. In the **Asset Details** pane, right-click the entry for the distribution that you want to redistribute, and select **Redistribute**.  
 
-### To redistribute content that failed to distribute  
+3. Select **Yes** to confirm the action and start the redistribution process to that distribution point.  
 
-1.  In the Configuration Manager console, click **Monitoring**.  
 
-2.  In the **Monitoring** workspace, expand **Distribution Status**, and then click **Content Status**. The packages are displayed.  
+## Distribution point group status
 
-3.  Select the package you want to manage, and then in the details pane, click **View Status**.  
-
-4.  In the **Asset Details** pane of the **Error** tab, right-click the entry for the distribution that you want to redistribute, and select **Redistribute**.  
-
-5.  Click **Yes** to confirm the action and start the redistribution process to that distribution point.  
-
-## Distribution point group status  
 The **Distribution Point Group Status** node in the **Monitoring** workspace provides information about distribution point groups. You can review information like:  
 
--   The distribution point group name.  
--   The description.  
--   How many distribution points are members of the distribution point group.  
--   How many packages have been assigned to the group.  
--   The distribution point group status.  
--   The compliance rate.  
+- The distribution point group name, description, and status
+- How many distribution points are members of the distribution point group
+- How many packages have been assigned to the group
+- The compliance rate
 
-You also view detailed status information for the following:  
+You also view the following detailed status information:  
 
--   Errors for the distribution point group.  
--   How many distributions are in progress.
--   How many have been successfully distributed.  
+- Errors for the distribution point group  
+- How many distributions are in progress
+- How many have been successfully distributed  
 
-### To monitor distribution point group status  
+### Monitor distribution point group status  
 
-1.  In the Configuration Manager console, click **Monitoring**.  
+1. In the Configuration Manager console, go to the **Monitoring** workspace, expand **Distribution Status**, and then select the **Distribution Point Group Status** node. It displays the distribution point groups.  
 
-2.  In the **Monitoring** workspace, expand **Distribution Status**, and then click **Distribution Point Group Status**. The distribution point groups are displayed.  
+2. Select the distribution point group for which you want detailed status information.  
 
-3.  Select the distribution point group for which you want detailed status information.  
+3. On the **Home** tab of the ribbon, select **View Status**. It displays detailed status information for the distribution point group.  
 
-4.  On the **Home** tab, click **View Status**. Detailed status information for the distribution point group is displayed.  
 
-## Distribution point Configuration Status  
- The **Distribution Point Configuration Status** node in the **Monitoring** workspace provides information about the distribution point. You can review what attributes are enabled for the distribution point, such as the PXE, multicast, content validation, and the distribution status for the distribution point. You can also view detailed status information for the distribution point.  
+## Distribution point configuration status
+
+The **Distribution Point Configuration Status** node in the **Monitoring** workspace provides information about the distribution point. You can review what attributes are enabled for the distribution point, such as the PXE, multicast, content validation. Also review the distribution status for the distribution point.
 
 > [!WARNING]  
->  Distribution point configuration status is relative to the last 24 hours. If the distribution point has an error and recovers, the error status might be displayed for up to 24 hours after the distribution point recovers.  
+> Distribution point configuration status is relative to the last 24 hours. If the distribution point has an error and recovers, the error status might be displayed for up to 24 hours after the distribution point recovers.  
 
-Use the following procedure to view distribution point configuration status.  
+### Monitor distribution point configuration status  
 
-### To monitor distribution point configuration status  
+1. In the Configuration Manager console, go to the **Monitoring** workspace, expand **Distribution Status**, and then select the **Distribution Point Configuration Status** node.  
 
-1.  In the Configuration Manager console, click **Monitoring**.  
+2. Select a distribution point.  
 
-2.  In the **Monitoring** workspace, expand **Distribution Status**, and then click **Distribution Point Configuration Status**. The distribution points are displayed.  
+3. In the results pane, switch to the **Details** tab. It displays status information for the distribution point.  
 
-3.  Select the distribution point for which you want distribution point status information.  
-
-4.  In the results pane, click the **Details** tab. Status information for the distribution point is displayed.  
 
 ## Client Data Sources dashboard
-Beginning with version 1610, you can use the **Client Data Sources** dashboard to help understand the use of [Peer Cache](/sccm/core/plan-design/hierarchy/client-peer-cache) in your environment. The dashboard will start displaying data after clients download content and report that information back to the site. This can take up to 24 hours.
 
-> [!TIP]  
-> **Client Peer Cache** and the **Client Data Sources** dashboard were first introduced in version 1610 as [pre-release features](/sccm/core/servers/manage/pre-release-features). Beginning with version 1710, these features are no longer pre-release features. You must enable Client Peer Cache before the Client Data Sources dashboard becomes visible in the console.
+Use the **Client Data Sources** dashboard to better understand from where clients get content in your environment. The dashboard starts displaying data after clients download content and report that information back to the site. This process can take up to 24 hours.
 
+> [!Note]  
+> Configuration Manager doesn't enable this optional feature by default. You must enable the **Client Peer Cache** feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).  
 
-In the console, go to **Monitoring** > **Distribution Status** > **Client Data Sources**. Here you can select a time period to apply to the dashboard. Then, in the display, you can select the boundary group or package for which you want to view information. When viewing information, you can hover your mouse over the surface to see more details about the different content or policy sources.
+In the Configuration Manager console, go to the **Monitoring** workspace, expand **Distribution Status**, and select the **Client Data Sources** node. Select a time period to apply to the dashboard. Then select the boundary group for which you want to view information. You can hover your mouse over tiles to see more details about the different content or policy sources.
 
-Those details include the following:  
-- **Client Content Sources**: Displays the source from which clients got content.
-- **Distribution points**: Displays the number of distribution points that are part of the selected Boundary Group.
-- **Clients that used a distribution point**: Of the number of clients that are in the selected Boundary Group, this shows how many used a distribution point to get content.
-- **Peer Cache sources**: For the selected Boundary Group, this shows how many peer cache sources have reported download history.
-- **Clients that used a peer**: Of the number of clients that are in the selected Boundary Group, this shows how many used a peer cache source to get content.
+Also use the report, **Client Data Sources - Summarization**, to view a summary of the client data sources for each boundary group.
 
+### Dashboard tiles
 
+The dashboard includes the following tiles:  
 
-You can also use a new report, **Client Data Sources - Summarization**, to view a summary of the client data sources for each boundary group.
+#### Client Content Sources
+
+Displays the sources from which clients got content:
+
+- Distribution point
+- [Cloud distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)
+- [BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#bkmk_branchcache)
+- [Peer Cache](/sccm/core/plan-design/hierarchy/client-peer-cache)
+- [Delivery Optimization](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#delivery-optimization) (starting in version 1906)<sup>[Note 1](#bkmk_note1)</sup>
+- Microsoft Update: Devices report this source when the Configuration Manager client downloads software updates from Microsoft cloud services. These services include Microsoft Update and Office 365.
+
+![Client Content Sources tile on the dashboard](media/3555759-do-source.png)
+
+<a name="bkmk_note1"></a>
+
+> [!Note]  
+> Starting in version 1906<!--3555759-->, to include Delivery Optimization on this dashboard, do the following actions:
+>
+> - Configure the client setting, **Enable installation of Express Updates on clients** in the Software Updates group
+>
+> - Deploy Windows 10 express updates
+>
+> For more information, see [Manage Express installation files for Windows 10 updates](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates).
+
+#### Distribution points
+
+Displays the number of distribution points that are part of the selected boundary group.
+
+#### Clients that used a distribution point
+
+Of the number of clients that are in the selected boundary group, this tile shows how many used a distribution point to get content.
+
+#### Peer Cache sources
+
+For the selected boundary group, this tile shows how many peer cache sources have reported download history.
+
+#### Clients that used a peer
+
+Of the number of clients that are in the selected boundary group, this tile shows how many used a peer cache source to get content.
+
+#### Top Distributed Content
+
+The most distributed packages by source type
