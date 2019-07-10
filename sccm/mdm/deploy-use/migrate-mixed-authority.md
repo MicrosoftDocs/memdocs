@@ -100,7 +100,7 @@ In the following example, the Hybrid users collection contains all members from 
 ![Exclude collections](../media/migrate-excludecollections.png)
 
 > [!Note]  
->   When you have the **All Users** collection selected for the Intune subscription, you are not allowed to add a rule to exclude collections. Instead, create a new collection based on the **All Users** collection, verify that the collection contains the users that you expect, and then edit the Intune subscription to use the new collection. You can exclude user collections from the new collection to migrate users. If you exclude a user from a collection but include a group that the user is a member of, the user will not be excluded from the collection
+>   When you have the **All Users** collection selected for the Intune subscription, you are not allowed to add a rule to exclude collections. Instead, create a new collection based on the **All Users** collection, verify that the collection contains the users that you expect, and then edit the Intune subscription to use the new collection. You can exclude user collections from the new collection to migrate users. If you exclude a user from a collection but include a group that the user is a member of, the user will not be excluded from the collection.
 
 To migrate a test group of users to Intune, create a user collection that contains the users to migrate. Then exclude the user collection from the collection that's used for the Intune subscription.  
 
