@@ -30,11 +30,6 @@ Beginning in version 1610, you can exclude a collection of clients from automati
 
 ![Settings for automatic upgrade exclusion](media/automatic_upgrade_exclusion.png)
 
-
-
->[!NOTE]
->Although the user interface states that clients will not be upgraded via any method, there are two methods you can use to override these settings. Client push installation and a manual client installation can be used to override this configuration. For more details, see the following section.
-
 ## How to upgrade a client that is in an excluded collection
 
 So long as a collection is configured to be excluded, members of that collection can only have their client software upgraded by one of two methods, which override the exclusion:
