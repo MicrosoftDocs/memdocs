@@ -625,6 +625,9 @@ You can now enable some nodes of the Configuration Manager console to use the ad
 
 For more information, see [Administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service).
 
+> [!Note]
+> Starting in version 1906, the **Client Computer Communication** tab on the site properties is now called **Communication Security**.<!-- SCCMDocs#1645 -->  
+
 
 <!--
 ## Other updates
