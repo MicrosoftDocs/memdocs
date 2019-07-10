@@ -1,7 +1,7 @@
 ---
 title: "How to create configuration items"
 titleSuffix: "Configuration Manager"
-description: "Create and deploy configurations to devices that are both managed by System Center Configuration Manager and enrolled with Microsoft Intune."
+description: "Create and deploy configurations to devices that are managed by System Center Configuration Manager and enrolled with Microsoft Intune."
 ms.date: 05/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
@@ -12,7 +12,7 @@ manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
-# How to create configuration items in System Center Configuration Manager
+# Create configuration items in System Center Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
@@ -28,10 +28,8 @@ Before you start, read [Get started with compliance settings](../../compliance/g
 
 ## Configuration items for devices managed with Intune
 
-Before you start, read [Get started with compliance settings](../../compliance/get-started/get-started-with-compliance-settings.md). To learn some basics about compliance settings, read [Plan for and configure compliance settings](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md) to implement any necessary prerequisites. To review information about configuration items for devices managed with Intune,  use the link below:
+Before you start, read [Get started with compliance settings](../../compliance/get-started/get-started-with-compliance-settings.md). To learn some basics about compliance settings, read [Plan for and configure compliance settings](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md) to implement any necessary prerequisites. To review information about configuration items for devices managed with Intune, see [Configuration items for devices managed with Intune](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md).
 
-- [Configuration items for devices managed with Intune](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)
-
-# Next steps
+## Next steps
 
 [Get started with compliance settings](../../compliance/get-started/get-started-with-compliance-settings.md)
