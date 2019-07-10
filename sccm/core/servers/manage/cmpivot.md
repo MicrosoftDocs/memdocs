@@ -475,4 +475,5 @@ For more information, see [Log files](/sccm/core/plan-design/hierarchy/log-files
 
 [Create and run PowerShell scripts](/sccm/apps/deploy-use/create-deploy-scripts)
 
+[CMPivot Keyboard Shortcuts](/sccm/core/understand/accessibility-features#bkmk_cmpshortcuts)
 
