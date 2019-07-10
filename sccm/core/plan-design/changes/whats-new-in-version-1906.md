@@ -361,12 +361,6 @@ The task sequence debugger is a new troubleshooting tool. You deploy a task sequ
 
  <!--(New article) For more information, see [Task sequence debugger](/sccm/osd/deploy-use/debug-task-sequence).-->
 
-### Improvements to driver management
-<!--3555958-->
-You can now see additional metadata tags during the driver package creation wizard.
-
- <!--For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content).-->
-
 ### Clear app content from client cache during task sequence
 
 <!--4485675-->
@@ -374,7 +368,7 @@ In the **Install Application** task sequence step, you can now delete the app co
 
 For more information, see [About task sequence steps](/sccm/osd/understand/task-sequence-steps#BKMK_InstallApplication).
 
-> [Important]  
+> [!Important]  
 > Update the target client to the latest version to support this new feature.
 
 ### Reclaim SEDO lock for task sequences
