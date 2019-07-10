@@ -64,8 +64,11 @@ Publish your PKI's certificate revocation list (CRL) for internet-based clients 
 
 ### Review entries in the site's certificate trust list
 <!--503739-->
-Each Configuration Manager site includes a list of trusted root certification authorities, the certificate trust list (CTL). View and modify the list by going to the Administration workspace, expand Site Configuration, and select Sites. Select a site, and click Properties in the ribbon. Switch to the Client Computer Communication tab, and then click **Set** under Trusted Root Certification Authorities.
- 
+Each Configuration Manager site includes a list of trusted root certification authorities, the certificate trust list (CTL). View and modify the list by going to the Administration workspace, expand Site Configuration, and select Sites. Select a site, and click Properties in the ribbon. Switch to the **Client Computer Communication** tab, and then click **Set** under Trusted Root Certification Authorities.
+
+> [!Note]
+> Starting in version 1906, this tab is called **Communication Security**.<!-- SCCMDocs#1645 -->  
+
 Use a more restrictive CTL for a site with a CMG using PKI client authentication. Otherwise, clients with client authentication certificates issued by any trusted root that already exists on the management point are automatically accepted for client registration.
 
 This subset provides administrators with more control over security. The CTL restricts the server to only accept client certificates that are issued from the certification authorities in the CTL. For example, Windows ships with a number of well-known third-party certification authority (CA) certificates, such as VeriSign and Thawte. By default, the computer running IIS trusts certificates that chain to these well-known CAs. Without configuring IIS with a CTL, any computer that has a client certificate issued from these CAs are accepted as a valid Configuration Manager client. If you configure IIS with a CTL that didn't include these CAs, client connections are refused if the certificate chained to these CAs. 

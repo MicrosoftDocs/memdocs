@@ -122,7 +122,10 @@ If you're using [client authentication certificates](/sccm/core/clients/manage/c
 
 2. Select the primary site to which your internet-based clients are assigned, and choose **Properties**.  
 
-3. Switch to the **Client Computer Communications** tab of the primary site property sheet, check **Use PKI client certificate (client authentication) when available**.  
+3. Switch to the **Client Computer Communication** tab of the primary site property sheet, check **Use PKI client certificate (client authentication) when available**.  
+
+    > [!Note]
+    > Starting in version 1906, this tab is called **Communication Security**.<!-- SCCMDocs#1645 -->  
 
 4. If you don't publish a CRL, deselect the option for **Clients check the certificate revocation list (CRL) for site systems**.  
 
