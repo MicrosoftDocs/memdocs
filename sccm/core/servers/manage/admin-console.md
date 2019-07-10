@@ -2,7 +2,7 @@
 title: Configuration Manager Console
 titleSuffix: Configuration Manager
 description: Learn about navigating through the Configuration Manager console.
-ms.date: 06/20/2019
+ms.date: 07/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -20,12 +20,11 @@ ms.collection: M365-identity-device-management
 Administrators use the Configuration Manager console to manage the Configuration Manager environment. This article covers the fundamentals of navigating the console.  
 
 
-
 ## Connect to a site server
 
-The console connects to your central administration site server or to your primary site servers. You can't connect a Configuration Manager console to a secondary site. You can [install the Configuration Manager console](/sccm/core/servers/deploy/install/install-consoles). During installation, you specified the fully qualified domain name (FQDN) of the site server to which the console connects. 
+The console connects to your central administration site server or to your primary site servers. You can't connect a Configuration Manager console to a secondary site. You can [install the Configuration Manager console](/sccm/core/servers/deploy/install/install-consoles). During installation, you specified the fully qualified domain name (FQDN) of the site server to which the console connects.
 
-To connect to a different site server, use the following steps: 
+To connect to a different site server, use the following steps:
 
 1. Select the arrow at the top of the [ribbon](#ribbon), and choose **Connect to a New Site**.  
 
@@ -37,15 +36,12 @@ To connect to a different site server, use the following steps:
 
 3. Select **Connect**.  
 
-
 Starting in version 1810, you can specify the minimum authentication level for administrators to access Configuration Manager sites. This feature enforces administrators to sign in to Windows with the required level. For more information, see [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_auth). <!--1357013-->  
-
 
 
 ## Navigation
 
-Some areas of the console may not be visible depending on your assigned security role. For more information about roles, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration). 
-
+Some areas of the console may not be visible depending on your assigned security role. For more information about roles, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).
 
 ### Workspaces
 
@@ -63,16 +59,15 @@ The Configuration Manager console has four **workspaces**:
 
 Reorder workspace buttons by selecting the down arrow and choosing **Navigation Pane Options**. Select an item to **Move Up** or **Move Down**. Select **Reset** to restore the default button order.  
 
- ![Navigation Pane Options window to reorder workspaces](media/navigation-pane-options.png)  
+![Navigation Pane Options window to reorder workspaces](media/navigation-pane-options.png)  
 
-Minimize a workspace button by selecting **Show Fewer Buttons**. The last workspace in the list is minimized first. Select a minimized button and choose **Show More Buttons** to restore the button to its original size.   
+Minimize a workspace button by selecting **Show Fewer Buttons**. The last workspace in the list is minimized first. Select a minimized button and choose **Show More Buttons** to restore the button to its original size.
 
 ![Minimized workspaces in the Configuration Manager console](media/workspace-buttons.png)  
 
-
 ### Nodes
 
-Workspaces are a collection of **nodes**. One example of a node is the **Software Update Groups** node in the **Software Library** workspace. 
+Workspaces are a collection of **nodes**. One example of a node is the **Software Update Groups** node in the **Software Library** workspace.
 
 Once you are in the node, you can select the arrow to minimize the navigation pane.  
 
@@ -82,26 +77,23 @@ Use the **navigation bar** to move around the console when you minimize the navi
 
 ![Configuration Manager minimized navigation pane](media/minimized-navigation-pane.png)  
 
-In the console, nodes are sometimes organized into folders. Clicking directly on the folder usually takes you to a **navigation index** or a **dashboard**.  
+In the console, nodes are sometimes organized into folders. When you select the folder, it usually displays a **navigation index** or a **dashboard**.  
 
 ![Configuration Manager software updates navigation index](media/software-updates-navigation-index.png)  
 
-
-### Ribbon 
+### Ribbon
 
 The ribbon is at the top of the Configuration Manager console. The ribbon can have more than one tab and can be minimized using the arrow on the right. The buttons on the ribbon change based on the node. Most of the buttons in the ribbon are also available on context menus.  
 
-![Example ribbon, highlighting multiple tabs and minimize arrow](media/ribbon.png)   
-
+![Example ribbon, highlighting multiple tabs and minimize arrow](media/ribbon.png)
 
 ### Details pane
 
 You can get additional information about items by reviewing the details pane. The details pane can have one or more tabs. The tabs vary depending on the node.  
 
-![Configuration Manager example details pane](media/details-pane.png)   
+![Configuration Manager example details pane](media/details-pane.png)
 
-
-### Columns 
+### Columns
 
 You can add, remove, reorder, and resize columns. These actions allow you to display the data you prefer. Available columns vary depending on the node. To add or remove a column from your view, right-click on an existing column heading and select an item. Reorder columns by dragging the column heading where you would like it to be.  
 
@@ -111,20 +103,20 @@ At the bottom of the column context menu, you can sort or group by a column. Add
 
 ![Configuration Manager group by column](media/column-group-by.png)  
 
+
 ## <a name="bkmk_viewconnected"></a> View recently connected consoles
+
 <!--3699367-->
-
-Starting in version 1902, you can view the most recent connections for the Configuration Manager console. The view includes active connections and those that recently connected. You'll always see your current console connection in the list and you only see connections from the Configuration Manager console. You won't see PowerShell or other SDK-based connections to the SMS Provider. The site removes instances from the list that are older than 30 days.
-
+Starting in version 1902, you can view the most recent connections for the Configuration Manager console. The view includes active connections and those connections that recently connected. You'll always see your current console connection in the list and you only see connections from the Configuration Manager console. You won't see PowerShell or other SDK-based connections to the SMS Provider. The site removes instances from the list that are older than 30 days.
 
 ### Prerequisites to view connected consoles
 
-- Your account needs the **Read** permission on the **SMS_Site** object 
-- IIS needs to be installed on the SMS Provider server <!---SCCMDocs-pr issue 1326--> 
+- Your account needs the **Read** permission on the **SMS_Site** object
+- Install IIS on the SMS Provider server <!---SCCMDocs-pr issue 1326-->
 - Enable the SMS Provider to use a certificate.<!--SCCMDocs-pr issue 3135--> Use one of the following options:  
 
-  - Enable [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http) (recommended)
-  - Manually bind a PKI-based certificate to port 443 in IIS on the server that hosts the SMS Provider role  
+    - Enable [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http) (recommended)
+    - Manually bind a PKI-based certificate to port 443 in IIS on the server that hosts the SMS Provider role  
 
 ### View connected consoles
 
@@ -144,6 +136,7 @@ Starting in version 1902, you can view the most recent connections for the Confi
 
 
 ## <a name="bkmk_notify"></a> Configuration Manager console notifications
+
 <!--3556016, fka 1318035-->
 Starting in Configuration Manager version 1902, the console notifies you for the following events:
 
@@ -158,9 +151,9 @@ This notification is a bar at the top of the console window below the ribbon. It
 
 You can configure each site to show non-critical notifications in the properties of the site.
 
-1.  In the **Administration** workspace, expand **Site Configuration**, then click on the **Sites** node.
+1. In the **Administration** workspace, expand **Site Configuration**, then select the **Sites** node.
 1. Select the site you want to configure for non-critical notifications.
-1. In the ribbon, click on **Properties**.
+1. In the ribbon, select **Properties**.
 1. On the **Alerts** tab, select the option to **Enable console notifications for non-critical site health changes**.
    - If you enable this setting, all console users see critical, warning, and information notifications. This setting is enabled by default.  
    - If you disable this setting, console users only see critical notifications.  
@@ -168,13 +161,14 @@ You can configure each site to show non-critical notifications in the properties
 Most console notifications are per session. The console evaluates queries when a user launches it. To see changes in the notifications, restart the console. If a user dismisses a non-critical notification, it notifies again when the console restarts if it's still applicable.
 
 The following notifications reevaluate every five minutes:
+
 - Site is in maintenance mode  
 - Site is in recovery mode  
 - Site is in upgrade mode  
 
 Notifications follow the permissions of role-based administration. For example, if a user doesn't have permissions to see Configuration Manager updates, they won't see those notifications.
 
-Some notifications have a related action. For example, if the console version doesn't match the site version, select **Install the new console version**. This action launches the console installer. 
+Some notifications have a related action. For example, if the console version doesn't match the site version, select **Install the new console version**. This action launches the console installer.
 
 The following notifications are most applicable to the technical preview branch:  
 
@@ -185,9 +179,10 @@ The following notifications are most applicable to the technical preview branch:
 
 For more information and troubleshooting assistance, see the **SmsAdminUI.log** file on the console computer. By default, this log file is at the following path: `C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\AdminUILog\SmsAdminUI.log`.
 
-## <a name="bkmk_doc-dashboard"></a> In-console documentation dashboard
-<!--3556019 FKA 1357546-->
 
+## <a name="bkmk_doc-dashboard"></a> In-console documentation dashboard
+
+<!--3556019 FKA 1357546-->
 Starting in Configuration Manager version 1902, there's a **Documentation** node in the new **Community** workspace. This node includes up-to-date information about Configuration Manager documentation and support articles. It includes the following sections:  
 
 ### Product documentation library
@@ -218,24 +213,28 @@ The Configuration Manager console has the following command-line options:
 ## Tips
 
 ### Search device views using MAC address
+
 <!--3600878-->
 *(Introduced in version 1902)*
 
 You can search for a MAC address in a device view of the Configuration Manager console. This property is useful for OS deployment administrators while troubleshooting PXE-based deployments. When you view a list of devices, add the **MAC Address** column to the view. Use the search field to add the **MAC Address** search criteria.
 
 ### Maximize the browse registry window
+
 <!--3594151 includes all MMS 1902 console changes-->
 *(Introduced in version 1902)*
-1. In the **Software Library** workspace, expand **Application Management**, and select the **Applications** node. 
-1. Select an application that has a deployment type with a detection method. For example, a Windows Installer detection method. 
-1. In the details pane, switch to the **Deployment Types** tab. 
-1. Open the properties of a deployment type, and switch to the **Detection Method** tab. Select **Add Clause**. 
+
+1. In the **Software Library** workspace, expand **Application Management**, and select the **Applications** node.
+1. Select an application that has a deployment type with a detection method. For example, a Windows Installer detection method.
+1. In the details pane, switch to the **Deployment Types** tab.
+1. Open the properties of a deployment type, and switch to the **Detection Method** tab. Select **Add Clause**.
 1. Change the **Setting Type** to **Registry** and select **Browse** to open the **Browse Registry** window. You can now maximize this window.  
 
 ### Go to the collection from an application deployment
 
 *(Introduced in version 1902)*
-1. In the **Software Library** workspace, expand **Application Management**, and select the **Applications** node. 
+
+1. In the **Software Library** workspace, expand **Application Management**, and select the **Applications** node.
 1. Select an application. In the details pane, switch to the **Deployments** tab.
 1. Select a deployment, and then choose the new **Collection** option in the ribbon on the Deployment tab. This action switches the view to the collection that's the target of the deployment.
    - This action is also available from the right-click context menu on the deployment in this view.
@@ -247,13 +246,15 @@ You can search for a MAC address in a device view of the Configuration Manager c
 In the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node. **Edit** is now the default action when opening a task sequence. Previously the default action was **Properties**.  
 
 ### Remove content from monitoring status
+
 *(Introduced in version 1902)*
 
 1. In the **Monitoring** workspace, expand **Distribution Status**, and select **Content Status**.
-1. Select an item in the list, and choose the **View Status** option in the ribbon. 
+1. Select an item in the list, and choose the **View Status** option in the ribbon.
 1. In the Asset Details pane, right-click a distribution point, and select the new option **Remove**. This action removes this content from the selected distribution point.
 
 ### Views sort by integer values
+
 *(Introduced in version 1902)*
 
 We've made improvements to how various views sort data. For example, in the **Deployments** node of the **Monitoring** workspace, the following columns now sort as numbers instead of string values:  
@@ -265,17 +266,17 @@ We've made improvements to how various views sort data. For example, in the **De
 - Number Unknown​  
 
 ### Move the warning for a large number of results
+
 *(Introduced in version 1902)*
 
 When you select a node in the console that returns more than 1,000 results, Configuration Manager displays the following warning:
 
 > Configuration Manager returned a large number of results. You can narrow your results by using search. Or, click here to view a maximum of 100000 results.
- 
-There's now additional blank space in between this warning and the search field. This move helps to prevent inadvertently selecting the warning to display more results. 
 
-
+There's now additional blank space in between this warning and the search field. This move helps to prevent inadvertently selecting the warning to display more results.
 
 ### Send feedback
+
 <!--1357542-->
 
 Starting in version 1806, submit product feedback from the console.  
@@ -285,37 +286,40 @@ Starting in version 1806, submit product feedback from the console.
 - **Send a frown**: Send feedback on what you didn't like  
 
 - **Send a suggestion**: Takes you to UserVoice to share your idea  
- 
-For more information, see [Product Feedback](/sccm/core/understand/find-help#BKMK_1806Feedback).
 
+For more information, see [Product Feedback](/sccm/core/understand/find-help#BKMK_1806Feedback).
 
 ### Assets and Compliance workspace
 
 #### View users for a device
+
 Starting in version 1806, the following columns are available in the **Devices** node:  
 
 - **Primary user(s)** <!--1357280-->  
 
 - **Currently logged on user** <!--1358202-->  
+
     > [!NOTE]  
     > Viewing the currently logged on user requires [user discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_config-adud) and [user device affinity](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).  
 
 For more information on how to show a non-default column, see [Columns](#columns).
 
 #### Improvement to device search performance
+
 <!-- 3614690 -->
 Starting in version 1806, when searching in a device collection, it doesn't search the keyword against all object properties. When you're not specific about what to search, it searches across the following four properties:
+
 - Name
 - Primary user(s)
 - Currently logged on user
 - Last logon user name
 
-This behavior significantly improves the time it takes to search by name, especially in a large environment. Custom searches by specific criteria are unaffected by this change. 
-
+This behavior significantly improves the time it takes to search by name, especially in a large environment. Custom searches by specific criteria are unaffected by this change.
 
 ### Monitoring workspace
 
 #### Copy details in monitoring views
+
 <!--1357856-->
 Starting in version 1806, copy information from the **Asset Details** pane for the following monitoring nodes:  
 
@@ -326,8 +330,6 @@ Starting in version 1806, copy information from the **Asset Details** pane for t
 ![Deployment Status view, copy asset details](media/1810-deployment-status.PNG)
 
 
-
 ## Next steps
 
 [Accessibility features](/sccm/core/understand/accessibility-features)
-
