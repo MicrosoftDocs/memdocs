@@ -43,7 +43,7 @@ To complete this procedure, the account you use must be:
    - **Will be member of your availability group:**  
      If you use this server as the initial primary replica member of the availability group, you do not need to restore a copy of the site database to this or another server in the group. The database will already be in place on the primary replica, and SQL Server will replicate the database to the secondary replicas during a later step.  
 
-     -    **Will not be a member of the availability group:**   
+   - **Will not be a member of the availability group:**   
      Restore a copy of the site database to the server that will host the primary replica of the group.
 
    For information on how to complete this step, see [Create a Full Database Backup](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server) and [Restore a Database Backup using SSMS](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms) in the SQL Server documentation.
