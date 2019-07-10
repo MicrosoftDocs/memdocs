@@ -329,6 +329,11 @@ Starting in version 1806, copy information from the **Asset Details** pane for t
 
 ![Deployment Status view, copy asset details](media/1810-deployment-status.PNG)
 
+### Administration workspace
+
+<!--4223683-->
+Starting in version 1906, you can enable some nodes under the **Security** node to use the administration service. This change allows the console to communicate with the SMS Provider over HTTPS instead of via WMI. For more information, see [Administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service).
+
 
 ## Next steps
 

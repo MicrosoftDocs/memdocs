@@ -619,25 +619,15 @@ You can now set security scopes on folders. If you have access to an object in t
 
 
 ### Administration service support for security nodes
-<!--4223683-->
 
+<!--4223683-->
 You can now enable some nodes of the Configuration Manager console to use the administration service. This change allows the console to communicate with the SMS Provider over HTTPS instead of via WMI.
 
-In this version, it only affects the following nodes under the **Security** node in the **Administration** workspace:
-
-- Administrative Users
-- Security Roles
-- Security Scopes
-- Console Connections
-
-<!--For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#tips) and [Administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service).-->
-
-
-
+For more information, see [Administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service).
 
 
 <!--
-## Other updatesgit statu
+## Other updates
 
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4498910).
 

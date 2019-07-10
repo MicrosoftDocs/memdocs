@@ -287,3 +287,26 @@ The **SMS Provider** appears as a role with an option to allow communication ove
 3. In the details pane, select the **SMS Provider** role, and select **Properties** in the ribbon on the **Site Role** tab.  
 
 4. Select the option to **Allow Configuration Manager cloud management gateway traffic for administration service**.  
+
+
+### Enable the Configuration Manager console to use the administration service
+
+<!--4223683-->
+Starting in version 1906, enable some nodes of the Configuration Manager console to use the administration service. This change allows the console to communicate with the SMS Provider over HTTPS instead of via WMI.
+
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node. In the ribbon, select **Hierarchy Settings**.
+
+1. On the **General** page, select the option to **Enable the Configuration Manager console to use the administration service**.
+
+In version 1906, it only affects the following nodes under the **Security** node in the **Administration** workspace:
+
+- Administrative Users
+- Security Roles
+- Security Scopes
+- Console Connections
+
+When you select one of these nodes, if the following error message displays:
+
+*Configuration Manager can't connect to the administration service*
+
+Review the information below the error. Then verify that the administration service is enabled, configured, and functional.
