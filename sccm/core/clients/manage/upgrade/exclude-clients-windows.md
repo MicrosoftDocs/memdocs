@@ -16,7 +16,11 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Beginning in version 1610, you can exclude a collection of clients from automatically installing updated client versions. This applies to automatic upgrade as well as other methods such as software update-based upgrade, logon scripts, and group policy. You can use this for a collection of computers that need greater care when upgrading the client. A client that is in an excluded collection ignores requests to install updated client software.
+You can exclude a collection of clients from automatically installing updated client versions. This applies to automatic upgrade as well as other methods such as software update-based upgrade, logon scripts, and group policy. You can use this for a collection of computers that need greater care when upgrading the client. A client that is in an excluded collection ignores requests to install updated client software.
+
+>[!NOTE]
+>Excluded clients still download and run CCMSETUP, but won't upgrade.
+
 
 ## Configure exclusion for automatic upgrades
 
@@ -29,6 +33,9 @@ Beginning in version 1610, you can exclude a collection of clients from automati
 4.  Click **OK** to close and save the configuration. Then, after clients update policy, clients in the excluded collection will no longer automatically install updates to the client software. For more information, see [How to upgrade clients for Windows computers](upgrade-clients-for-windows-computers.md).
 
 ![Settings for automatic upgrade exclusion](media/automatic_upgrade_exclusion.png)
+
+>[!NOTE]
+>Although the user interface states that clients will not be upgraded via any method, there are two methods you can use to override these settings. Client push installation and a manual client installation can be used to override this configuration. For more details, see the following section.
 
 ## How to upgrade a client that is in an excluded collection
 
