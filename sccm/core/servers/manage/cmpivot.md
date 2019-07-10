@@ -381,7 +381,7 @@ MessageId 40805: User &lt;UserName> ran script &lt;Script-Guid> with hash &lt;Sc
 <!--3610960-->
 Starting in Configuration Manager version 1902, you can run CMPivot from the central administration site (CAS) in a hierarchy. The primary site still handles the communication to the client. When running CMPivot from the central administration site, it communicates with the primary site over the high-speed message subscription channel. This communication doesn't rely upon standard SQL replication between sites.
 
-Running CMPivot on the CAS will require additional permissions when SQL or the provider are not on the same machine or in the case of SQL Always On configuration. With these remote configurations, you have a “double hop scenario” for CMPivot.
+Running CMPivot on the CAS will require additional permissions when SQL or the provider aren't on the same machine or in the case of SQL Always On configuration. With these remote configurations, you have a “double hop scenario” for CMPivot.
 
 To get CMPivot to work on the CAS in such a “double hop scenario”, you can define constrained delegation. To understand the security implications of this configuration, read the [Kerberos constrained delegation](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) article. If you have more than one remote configuration such as SQL or SCCM Provider being colocated with the CAS or not, you may require a combination of permission settings. Below are the steps that you need to take:
 
@@ -535,13 +535,13 @@ You can share the power of CMPivot with other personas, such as helpdesk or secu
 
 #### Install CMPivot standalone
 
-1. Set up the permissions needed to run CMPivot. For more information, see [prerequisites](#prerequisites). You can also use the [Security Administrator role](#bkmk_cmpivot_secadmin1906) if the permissions are aproprite for the user.
+1. Set up the permissions needed to run CMPivot. For more information, see [prerequisites](#prerequisites). You can also use the [Security Administrator role](#bkmk_cmpivot_secadmin1906) if the permissions are appropriate for the user.
 2. Find the CMPivot app installer in the following path: `<site install path>\tools\CMPivot\CMPivot.msi`. You can run it from that path, or copy it to another location.
-3. When you run CMPivot, you will be asked to connect to a site. Specify the fully qualified domain name or computer name of either the Central Administration or primary site server.
-   - Each time you open CMPivot standalone you will be prompted to connect to a site server.
+3. When you run the CMPivot standalone app, you'll be asked to connect to a site. Specify the fully qualified domain name or computer name of either the Central Administration or primary site server.
+   - Each time you open CMPivot standalone you'll be prompted to connect to a site server.
 4. Browse to the collection on which you want to run CMPivot, then run your query.
 
-   ![Browse to the the collection you want to run your query against](./media/3555890-cmpivot-standalone-browse-collection.png)
+   ![Browse to the collection you want to run your query against](./media/3555890-cmpivot-standalone-browse-collection.png)
 
 ## Inside CMPivot
 
