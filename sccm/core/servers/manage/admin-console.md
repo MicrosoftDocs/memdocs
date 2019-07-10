@@ -2,7 +2,7 @@
 title: Configuration Manager Console
 titleSuffix: Configuration Manager
 description: Learn about navigating through the Configuration Manager console.
-ms.date: 04/03/2019
+ms.date: 06/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -142,6 +142,66 @@ Starting in version 1902, you can view the most recent connections for the Confi
 
 ![View Configuration Manager console connections](media/console-connections.png) 
 
+
+## <a name="bkmk_notify"></a> Configuration Manager console notifications
+<!--3556016, fka 1318035-->
+Starting in Configuration Manager version 1902, the console notifies you for the following events:
+
+- When an update is available for Configuration Manager itself
+- When lifecycle and maintenance events occur in the environment
+
+This notification is a bar at the top of the console window below the ribbon. It replaces the previous experience when Configuration Manager updates are available. These in-console notifications still display critical information, but don't interfere with your work in the console. You can't dismiss critical notifications. The console displays all notifications in a new notification area of the title bar.
+
+![Notification bar and flag in console](./media/1318035-notify-eval-version-expired.png)
+
+### Configure a site to show non-critical notifications
+
+You can configure each site to show non-critical notifications in the properties of the site.
+
+1.  In the **Administration** workspace, expand **Site Configuration**, then click on the **Sites** node.
+1. Select the site you want to configure for non-critical notifications.
+1. In the ribbon, click on **Properties**.
+1. On the **Alerts** tab, select the option to **Enable console notifications for non-critical site health changes**.
+   - If you enable this setting, all console users see critical, warning, and information notifications. This setting is enabled by default.  
+   - If you disable this setting, console users only see critical notifications.  
+
+Most console notifications are per session. The console evaluates queries when a user launches it. To see changes in the notifications, restart the console. If a user dismisses a non-critical notification, it notifies again when the console restarts if it's still applicable.
+
+The following notifications reevaluate every five minutes:
+- Site is in maintenance mode  
+- Site is in recovery mode  
+- Site is in upgrade mode  
+
+Notifications follow the permissions of role-based administration. For example, if a user doesn't have permissions to see Configuration Manager updates, they won't see those notifications.
+
+Some notifications have a related action. For example, if the console version doesn't match the site version, select **Install the new console version**. This action launches the console installer. 
+
+The following notifications are most applicable to the technical preview branch:  
+
+- Evaluation version is within 30 days of expiration (Warning): the current date is within 30 days of the expiration date of the evaluation version  
+- Evaluation version is expired (Critical): the current date is past the expiration date of the evaluation version  
+- Console version mismatch (Critical): the console version doesn't match the site version  
+- Site upgrade is available (Warning): there's a new update package available  
+
+For more information and troubleshooting assistance, see the **SmsAdminUI.log** file on the console computer. By default, this log file is at the following path: `C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\AdminUILog\SmsAdminUI.log`.
+
+## <a name="bkmk_doc-dashboard"></a> In-console documentation dashboard
+<!--3556019 FKA 1357546-->
+
+Starting in Configuration Manager version 1902, there's a **Documentation** node in the new **Community** workspace. This node includes up-to-date information about Configuration Manager documentation and support articles. It includes the following sections:  
+
+### Product documentation library
+
+- **Recommended**: a manually curated list of important articles.
+- **Trending**: the most popular articles for the last month.
+- **Recently updated**: articles revised in the last month.
+
+### Support articles
+
+- **Troubleshooting articles**: guided walkthroughs to assist with troubleshooting Configuration Manager components and features.
+- **New and updated support articles**: articles that are new or updated in the last two months.
+
+
 ## Command-line options
 
 The Configuration Manager console has the following command-line options:
@@ -155,8 +215,65 @@ The Configuration Manager console has the following command-line options:
 |`/sms:NoRestore`|The console ignores previous persisted node navigation.|  
 
 
-
 ## Tips
+
+### Search device views using MAC address
+<!--3600878-->
+*(Introduced in version 1902)*
+
+You can search for a MAC address in a device view of the Configuration Manager console. This property is useful for OS deployment administrators while troubleshooting PXE-based deployments. When you view a list of devices, add the **MAC Address** column to the view. Use the search field to add the **MAC Address** search criteria.
+
+### Maximize the browse registry window
+<!--3594151 includes all MMS 1902 console changes-->
+*(Introduced in version 1902)*
+1. In the **Software Library** workspace, expand **Application Management**, and select the **Applications** node. 
+1. Select an application that has a deployment type with a detection method. For example, a Windows Installer detection method. 
+1. In the details pane, switch to the **Deployment Types** tab. 
+1. Open the properties of a deployment type, and switch to the **Detection Method** tab. Select **Add Clause**. 
+1. Change the **Setting Type** to **Registry** and select **Browse** to open the **Browse Registry** window. You can now maximize this window.  
+
+### Go to the collection from an application deployment
+
+*(Introduced in version 1902)*
+1. In the **Software Library** workspace, expand **Application Management**, and select the **Applications** node. 
+1. Select an application. In the details pane, switch to the **Deployments** tab.
+1. Select a deployment, and then choose the new **Collection** option in the ribbon on the Deployment tab. This action switches the view to the collection that's the target of the deployment.
+   - This action is also available from the right-click context menu on the deployment in this view.
+
+### Edit a task sequence by default
+
+*(Introduced in version 1902)*
+
+In the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node. **Edit** is now the default action when opening a task sequence. Previously the default action was **Properties**.  
+
+### Remove content from monitoring status
+*(Introduced in version 1902)*
+
+1. In the **Monitoring** workspace, expand **Distribution Status**, and select **Content Status**.
+1. Select an item in the list, and choose the **View Status** option in the ribbon. 
+1. In the Asset Details pane, right-click a distribution point, and select the new option **Remove**. This action removes this content from the selected distribution point.
+
+### Views sort by integer values
+*(Introduced in version 1902)*
+
+We've made improvements to how various views sort data. For example, in the **Deployments** node of the **Monitoring** workspace, the following columns now sort as numbers instead of string values:  
+
+- Number Errors​
+- Number In Progress​
+- Number Other​
+- Number Success​
+- Number Unknown​  
+
+### Move the warning for a large number of results
+*(Introduced in version 1902)*
+
+When you select a node in the console that returns more than 1,000 results, Configuration Manager displays the following warning:
+
+> Configuration Manager returned a large number of results. You can narrow your results by using search. Or, click here to view a maximum of 100000 results.
+ 
+There's now additional blank space in between this warning and the search field. This move helps to prevent inadvertently selecting the warning to display more results. 
+
+
 
 ### Send feedback
 <!--1357542-->

@@ -2,7 +2,7 @@
 title: Tutorial - Deploy Windows 10
 titleSuffix: Configuration Manager
 description: A tutorial on using Desktop Analytics and Configuration Manager to deploy Windows 10 to a pilot group.
-ms.date: 06/07/2019
+ms.date: 06/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: tutorial
@@ -10,7 +10,6 @@ ms.assetid: 3e82cd96-0ce0-474a-a597-d65fceadc95a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX
 #Customer intent: As an IT Pro, I want to use Desktop Analytics to intelligently pilot Windows 10 so that I can understand the best devices to start with getting current with Windows.
 ms.collection: M365-identity-device-management
 ---
@@ -90,7 +89,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
 Use this procedure to sign in to Desktop Analytics and configure it in your subscription. This procedure is a one-time process to set up Desktop Analytics for your organization.  
 
-1. Open the Desktop Analytics portal in Microsoft 365 Device Management as a user with **Global Admin** permissions. Select **Start**.  
+1. Open the [Desktop Analytics portal](https://aka.ms/desktopanalytics) in Microsoft 365 Device Management as a user with **Global Admin** permissions. Select **Start**.  If you are prompted for an invitation code, use: `DesktopAnalyticsRocks!`
 
 2. On the **Accept service agreement** page, review the service agreement, and select **Accept**.  
 
@@ -98,24 +97,20 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
 4. On the **Give users access** page:
 
-    - **Do you want Desktop Analytics to manage Directory roles for your users**: Desktop Analytics automatically assigns the **Workspace Owners** and **Workspace Contributors** groups to the **Desktop Analytics Administrator** role. If those groups are already a **Global Admin**, there's no change.  
+    - **Allow Desktop Analytics to manage Directory roles on your behalf**: Desktop Analytics automatically assigns the **Workspace Owners** the **Desktop Analytics Administrator** role. If those groups are already a **Global Admin**, there's no change.  
 
-        If you don't select this option, Desktop Analytics still adds the users as members of the two security groups. A **Global Admin** needs to manually assign the **Desktop Analytics Administrator** role for the users.  
+        If you don't select this option, Desktop Analytics still adds users as members of the security group. A **Global Admin** needs to manually assign the **Desktop Analytics Administrator** role for the users.  
 
         For more information about assigning administrator role permissions in Azure Active Directory and the permissions assigned to **Desktop Analytics Administrators**, see [Administrator role permissions in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
 
-    - Desktop Analytics preconfigures two security groups in Azure Active Directory:  
+    - Desktop Analytics preconfigures the **Workspace Owners** security group in Azure Active Directory to create and manage workspaces and deployment plans. 
 
-        - **Workspace Owners**: A security group to create and manage workspaces. These accounts need owner access to the Azure subscription.  
-
-        - **Workspace Contributors**: A security group to create and manage deployment plans in this workspace. They don't need any additional Azure access.  
-
-        To add a user to either group, type their name or e-mail address in the **Enter name or email address** section of the appropriate group. When finished, select **Next**.
+        To add a user to the group, type their name or e-mail address in the **Enter name or email address** section. When finished, select **Next**.
 
 5. On the page to **Set up your workspace**:  
 
     > [!Note]  
-    > Complete this step as a **Workspace Owner** or **contributor**. For more information, see [prerequisites](/sccm/desktop-analytics/overview#prerequisites).  
+    > To complete this step, the user needs **Workspace Owner** permissions and additional access to the Azure subscription and Resource Group. For more information, see [prerequisites](/sccm/desktop-analytics/overview#prerequisites).  
 
     - Select your Azure subscription.  
 
@@ -189,7 +184,7 @@ Install the Configuration Manager version 1902 update rollup (4500571) to suppor
     Select **Sign in**. After successfully authenticating to Azure, the page shows the **Azure AD Tenant Name** for reference.
 
     > [!Note]  
-    > Complete this step as a **Company Admin**. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager, and doesn't need to be the same account that runs the Azure Services Wizard.  
+    > Complete this step as a **Global Admin**. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager, and doesn't need to be the same account that runs the Azure Services Wizard.  
 
     Select **OK** to create the web app in Azure AD and close the Create Server Application dialog. On the Server App dialog, select **OK**. Then select **Next** on the App page of the Azure Services Wizard.  
 
@@ -219,6 +214,9 @@ Install the Configuration Manager version 1902 update rollup (4500571) to suppor
 
 Configuration Manager creates a settings policy to configure devices in the Target Collection. This policy includes the diagnostic data settings to enable devices to send data to Microsoft. By default, clients update policy every hour. After receiving the new settings, it can be several hours more before the data is available in Desktop Analytics.
 
+> [!Note]  
+> For more information on these settings, see [Windows settings](/sccm/desktop-analytics/enroll-devices#windows-settings).  
+
 Monitor the configuration of your devices for Desktop Analytics. In the Configuration Manager console, go to the **Software Library** workspace, expand the **Desktop Analytics Servicing** node, and select the **Connection Health** dashboard.  
 
 Configuration Manager synchronizes your collections within 60 minutes of creating the connection. In the Desktop Analytics portal, go to  **Global Pilot**, and see your Configuration Manager device collections.
@@ -228,7 +226,7 @@ Configuration Manager synchronizes your collections within 60 minutes of creatin
 
 Use this procedure to create a deployment plan in Desktop Analytics.
 
-1. Open the [Desktop Analytics portal](https://aka.ms/m365aprod). Use credentials that have at least **Workspace Contributors** permissions.  
+1. Open the [Desktop Analytics portal](https://aka.ms/desktopanalytics). Use credentials that have at least **Workspace Contributors** permissions.  
 
 2. Select **Deployment Plans** in the Manage group.  
 
@@ -252,7 +250,7 @@ Use this procedure to create a deployment plan in Desktop Analytics.
 
     - **Completion date**: Choose the date by which Windows should be fully deployed to all the targeted devices.  
 
-5. Select **Create**. The new plan appears in the list of deployment plans while its being processed. Processing can take up to 48 hours before you can proceed to the next step.  
+5. Select **Create**. The new plan appears in the list of deployment plans while its being processed. To expedite processing, request an on-demand data refresh. For more information, see [Desktop Analytics FAQ](/sccm/desktop-analytics/faq#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).
 
 6. Open the deployment plan by selecting its name.  
 
@@ -262,7 +260,7 @@ Use this procedure to create a deployment plan in Desktop Analytics.
 
     2. Select each app, and then select **Edit**. You can select more than one app to edit at the same time.  
 
-    3. Choose an importance level from the **Importance** list. If you want Desktop Analytics to validate the app during the pilot, select **Critical** or **Important**. It doesn't validate apps marked as **Not Important**. Consider the [compatibility risk](/sccm/desktop-analytics/compat-risk) and other plan insights when assigning importance levels.  
+    3. Choose an importance level from the **Importance** list. If you want Desktop Analytics to validate the app during the pilot, select **Critical** or **Important**. It doesn't validate apps marked as **Not Important**. Assess its [compatibility](/sccm/desktop-analytics/compat-assessment) and other plan insights when assigning importance levels.  
 
         When assigning importance levels, you can also choose the Upgrade decision.  
 

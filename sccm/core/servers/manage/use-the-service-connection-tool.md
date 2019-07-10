@@ -95,7 +95,7 @@ You can use the following optional parameters to specify a proxy server (More in
 
 #### Specify the type of updates to download
 Beginning with version 1706, the tools default download behavior has changed, and the tool supports options to control what files you download.
-- 	By default, the tool downloads only the latest available update that applies to the version of your site. It does not download hotfixes.
+- By default, the tool downloads only the latest available update that applies to the version of your site. It does not download hotfixes.
 
 To modify this behavior, use one of the following parameters to change what files are downloaded. 
 
@@ -104,9 +104,9 @@ To modify this behavior, use one of the following parameters to change what file
 >
 > You can verify the version by looking for the *SiteVersion*.txt file within the .cab file.
 
-- 	**-downloadall**  This option downloads everything, including updates and hotfixes, regardless of the version of your site.
-- 	**-downloadhotfix**  This option downloads all hotfixes regardless of the version of your site.
-- 	**-downloadsiteversion**  This option downloads updates and hotfixes that have a version that is higher than the version of your site.
+- **-downloadall**  This option downloads everything, including updates and hotfixes, regardless of the version of your site.
+- **-downloadhotfix**  This option downloads all hotfixes regardless of the version of your site.
+- **-downloadsiteversion**  This option downloads updates and hotfixes that have a version that is higher than the version of your site.
 
 Example command line that uses *-downloadsiteversion*:
 - **serviceconnectiontool.exe -connect  *-downloadsiteversion* -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks**

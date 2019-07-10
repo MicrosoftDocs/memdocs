@@ -2,7 +2,7 @@
 title: Create and run scripts
 titleSuffix: Configuration Manager
 description: Create and run Powershell scripts on client devices.
-ms.date: 03/13/2019
+ms.date: 06/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -67,11 +67,11 @@ Run Scripts currently supports:
 
 ## Run Script authors and approvers
 
-Run Scripts uses the concept of *script authors* and *script approvers* as separate roles for implementation and execution of a script. Having the author and approver roles separated allows for an important process check for the powerful tool that Run Scripts is. There is an additional *script runners* role that allows execution of scripts, but not creation or approval of scripts. See [Create security roles for scripts](#bkmk_ScriptRoles).
+Run Scripts uses the concept of *script authors* and *script approvers* as separate roles for implementation and execution of a script. Having the author and approver roles separated allows for an important process check for the powerful tool that Run Scripts is. There's an additional *script runners* role that allows execution of scripts, but not creation or approval of scripts. See [Create security roles for scripts](#bkmk_ScriptRoles).
 
 ### Scripts roles control
 
-By default, users cannot approve a script they have authored. Because scripts are powerful, versatile, and potentially deployed to many devices, you can separate the roles between the person that authors the script and the person that approves the script. These roles give an additional level of security against running a script without oversight. You are able to turn off secondary approval, for ease of testing.
+By default, users can't approve a script they've authored. Because scripts are powerful, versatile, and potentially deployed to many devices, you can separate the roles between the person that authors the script and the person that approves the script. These roles give an additional level of security against running a script without oversight. You're able to turn off secondary approval, for ease of testing.
 
 ### Approve or Deny a script
 
@@ -80,7 +80,7 @@ Scripts must be approved, by the *script approver* role, before they can be run.
 1. In the Configuration Manager console, click **Software Library**.
 2. In the **Software Library** workspace, click **Scripts**.
 3. In the **Script** list, choose the script you want to approve or deny and then, on the **Home** tab, in the **Script** group, click **Approve/Deny**.
-4. In the **Approve or deny script** dialog box, select **Approve**, or **Deny** for the script. Optionally, enter a comment about your decision.  If you deny a script, it cannot be run on client devices. <br>
+4. In the **Approve or deny script** dialog box, select **Approve**, or **Deny** for the script. Optionally, enter a comment about your decision.  If you deny a script, it can't be run on client devices. <br>
 ![Script - Approval](./media/run-scripts/RS-approval.png)
 1. Complete the wizard. In the **Script** list, you see the **Approval State** column change depending on the action you took.
 
@@ -101,7 +101,7 @@ This approval is primarily used for the testing phase of script development.
 Run Scripts uses security scopes, an existing feature of Configuration Manager, to control scripts authoring and execution through assigning tags that represent user groups. For more information on using security scopes, see [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).
 
 ## <a name="bkmk_ScriptRoles"></a> Create security roles for scripts
-The three security roles used for running scripts are not created by default in Configuration Manager. To create the script runners, script authors, and script approvers roles, follow the outlined steps.
+The three security roles used for running scripts aren't created by default in Configuration Manager. To create the script runners, script authors, and script approvers roles, follow the outlined steps.
 
 1. In the Configuration Manager console, go to **Administration** >**Security** >**Security Roles**
 2. Right-click on a role and click **Copy**. The role you copy has permissions already assigned. Make sure you take only the permissions that you want. 
@@ -159,15 +159,15 @@ The three security roles used for running scripts are not created by default in 
 2. In the **Software Library** workspace, click **Scripts**.
 3. On the **Home** tab, in the **Create** group, click **Create Script**.
 4. On the **Script** page of the Create **Script** wizard, configure the following settings:
-	- **Script Name** - Enter a name for the script. Although you can create multiple scripts with the same name, using duplicate names makes it harder for you to find the script you need in the Configuration Manager console.
-	- **Script language** - Currently, only PowerShell scripts are supported.
-	- **Import** - Import a PowerShell script into the console. The script is displayed in the **Script** field.
-	- **Clear** - Removes the current script from the Script field.
-	- **Script** - Displays the currently imported script. You can edit the script in this field as necessary.
+    - **Script Name** - Enter a name for the script. Although you can create multiple scripts with the same name, using duplicate names makes it harder for you to find the script you need in the Configuration Manager console.
+    - **Script language** - Currently, only PowerShell scripts are supported.
+    - **Import** - Import a PowerShell script into the console. The script is displayed in the **Script** field.
+    - **Clear** - Removes the current script from the Script field.
+    - **Script** - Displays the currently imported script. You can edit the script in this field as necessary.
 5. Complete the wizard. The new script is displayed in the **Script** list with a status of **Waiting for approval**. Before you can run this script on client devices, you must approve it. 
 
 > [!IMPORTANT]
-> Avoid scripting a device reboot or a restart of the Configuration Manager agent when using the Run Scripts feature. Doing so could lead to a continuous rebooting state. If needed, there are enhancements to the client notification feature that enable restarting devices, starting in Configuration Manager version 1710. The [pending restart column](/sccm/core/clients/manage/manage-clients#Restart-clients) can help identify devices that need a restart. 
+> Avoid scripting a device reboot or a restart of the Configuration Manager agent when using the Run Scripts feature. Doing so could lead to a continuous rebooting state. If needed, there are enhancements to the client notification feature that enable restarting devices, starting in Configuration Manager version 1710. The [pending restart column](/sccm/core/clients/manage/manage-clients#restart-clients) can help identify devices that need a restart. 
 > <!--SMS503978  -->
 
 ## Script parameters
@@ -176,7 +176,7 @@ Adding parameters to a script provides increased flexibility for your work. You 
 
 In the **Create Script** dialog, click **Script Parameters** under **Script**.
 
-Each of your script's parameters has its own dialog for adding further details and validation. If there is a default parameter in the script, it will be enumerated in the parameter UI and you can set it. Configuration Manager won't overwrite the default value since it will never modify the script directly. You can think of this as “pre-populated suggested values” are provided in the UI, but Configuration Manager doesn't provide access to “default” values at run-time. This can be worked around by editing the script to have the correct defaults. <!--17694323-->
+Each of your script's parameters has its own dialog for adding further details and validation. If there's a default parameter in the script, it will be enumerated in the parameter UI and you can set it. Configuration Manager won't overwrite the default value since it will never modify the script directly. You can think of this as “pre-populated suggested values” are provided in the UI, but Configuration Manager doesn't provide access to “default” values at run-time. This can be worked around by editing the script to have the correct defaults. <!--17694323-->
 
 >[!IMPORTANT]
 > Parameter values can't contain an apostrophe. </br></br>
@@ -185,11 +185,11 @@ Each of your script's parameters has its own dialog for adding further details a
 
 ### Parameter validation
 
-Each parameter in your script has a **Script Parameter Properties** dialog for you to add validation for that parameter. After adding validation, you should get errors if you are entering a value for a parameter that does not meet its validation.
+Each parameter in your script has a **Script Parameter Properties** dialog for you to add validation for that parameter. After adding validation, you should get errors if you're entering a value for a parameter that doesn't meet its validation.
 
 #### Example: *FirstName*
 
-In this example, you are able to set the properties of the string parameter, *FirstName*.
+In this example, you're able to set the properties of the string parameter, *FirstName*.
 
 ![Script parameters - string](./media/run-scripts/RS-parameters-string.png)
 
@@ -236,9 +236,32 @@ This script uses WMI to query the machine for its OS version.
 Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 ```
 
+## <a name="bkmk_psedit"></a> Edit or copy PowerShell scripts
+<!--3705507-->
+*(Introduced with version 1902)*  
+You can **Edit** or **Copy** an existing PowerShell script used with the **Run Scripts** feature. Instead of recreating a script that you need to change, now directly edit it. Both actions use the same wizard experience as when you create a new script. When you edit or copy a script, Configuration Manager doesn't persist the approval state.
+
+> [!Tip]  
+> Don't edit a script that's actively running on clients. They won't finish running the original script, and you may not get the intended results from these clients.  
+
+### Edit a script
+
+1. Go to the **Scripts** node under the **Software Library** workspace.
+1. Select the script to edit, then click **Edit** in the ribbon. 
+1. Change or reimport your script in the **Script Details** page.
+1. Click **Next** to view the **Summary** then **Close** when you're finished editing.
+
+### Copy a script
+
+1. Go to the **Scripts** node under the **Software Library** workspace.
+1. Select the script to copy, then click **Copy** in the ribbon.
+1. Rename the script in the **Script name** field and make any additional edits you may need.
+1. Click **Next** to view the **Summary** then **Close** when you're finished editing.
+
+
 ## Run a script
 
-After a script is approved, it can be run against a single device or a collection. Once execution of your script begins, it is launched quickly through a high priority system that times-out in one hour. The results of the script are then returned using a state message system.
+After a script is approved, it can be run against a single device or a collection. Once execution of your script begins, it's launched quickly through a high priority system that times-out in one hour. The results of the script are then returned using a state message system.
 
 To select a collection of targets for your script:
 
@@ -258,7 +281,7 @@ The script is executed as the *system* or *computer* account on the targeted cli
 
 ## Script monitoring
 
-After you have initiated running a script on a collection of devices, use the following procedure to monitor the operation. Beginning with version 1710, you are both able to monitor a script in real time as it executes, and you can also return to a report for a given Run Script execution. Script status data is cleaned up as part of the [Delete Aged Client Operations maintenance task](../../core/servers/manage/reference-for-maintenance-tasks.md) or deletion of the script.<br>
+After you have initiated running a script on a collection of devices, use the following procedure to monitor the operation. Beginning with version 1710, you're both able to monitor a script in real time as it executes, and you can also return to a report for a given Run Script execution. Script status data is cleaned up as part of the [Delete Aged Client Operations maintenance task](../../core/servers/manage/reference-for-maintenance-tasks.md) or deletion of the script.<br>
 
 ![Script monitor - Script Run Status](./media/run-scripts/RS-monitoring-three-bar.png)
 
@@ -300,13 +323,13 @@ Microsoft Windows 10 Enterprise
 
 - Starting in Configuration Manager version 1802, script output returns using JSON formatting. This format consistently returns a readable script output. 
 - Scripts that get an unknown result, or where the client was offline, won't show in the charts or data set. <!--507179-->
-- Avoid returning large script output since it is truncated to 4 KB. <!--508488-->
-- Some functionality with script output formatting is not available when running Configuration Manager version 1802 or later with a down-level version of the client. <!--508487-->
+- Avoid returning large script output since it's truncated to 4 KB. <!--508488-->
+- Some functionality with script output formatting isn't available when running Configuration Manager version 1802 or later with a down-level version of the client. <!--508487-->
     - When you have a pre-1802 Configuration Manager client, you get a string output.
     -  For Configuration Manager client version 1802 and above, you get JSON formatting.
         - For example, you might get results that say TEXT on one client version and "TEXT" (the output is surrounded in double quotes) on other version, which will be put in chart as two different categories.
-        - If you need to work around this behavior, consider running script against two different collections. One with pre-1802 clients and another with 1802 and higher clients. Or, you can convert an enum object to a string value in scripts so they are properly displayed in JSON formatting. 
-- Convert an enum object to a string value in scripts so they are properly displayed in JSON formatting. <!--508377-->
+        - If you need to work around this behavior, consider running script against two different collections. One with pre-1802 clients and another with 1802 and higher clients. Or, you can convert an enum object to a string value in scripts so they're properly displayed in JSON formatting. 
+- Convert an enum object to a string value in scripts so they're properly displayed in JSON formatting. <!--508377-->
 
    ![Convert enum object to a sting value](./media/run-scripts/enum-tostring-JSON.png)
 

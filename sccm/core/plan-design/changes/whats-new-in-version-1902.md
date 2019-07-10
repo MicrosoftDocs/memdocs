@@ -2,7 +2,7 @@
 title: What's new in version 1902
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1902 of Configuration Manager current branch.
-ms.date: 05/28/2019
+ms.date: 06/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -90,28 +90,29 @@ When you install or update to version 1902, Configuration Manager setup now incl
 ## <a name="bkmk_cloud"></a> Cloud-attached management
 
 ### Stop cloud service when it exceeds threshold
+
 <!--3735092-->
-Configuration Manager can now stop a cloud management gateway (CMG) service when the total data transfer goes over your limit. The CMG has always had alerts to trigger notifications when the usage reached warning or critical levels. To help reduce any unexpected Azure costs because of a spike in usage, this new option turns off the cloud service. 
+***[Updated 06/18]*** Configuration Manager can now stop a cloud management gateway (CMG) service when the total data transfer goes over your limit. The CMG has always had alerts to trigger notifications when the usage reached warning or critical levels. To help reduce any unexpected Azure costs because of a spike in usage, this new option turns off the cloud service.
 
-[Set up outbound traffic alerts](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway#set-up-outbound-traffic-alerts) on the CMG, and then enable the option to **Stop this service when it exceeds the critical threshold**.  
-
-<!-- For more information, see [Set up outbound traffic alerts](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway#set-up-outbound-traffic-alerts). -->
+For more information, see [Stop CMG when it exceeds threshold](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway#bkmk_stop).
 
 
 ### Use Azure Resource Manager for cloud services
+
 <!--3605704-->
-Starting in version 1810, the classic service deployment in Azure was deprecated for use in Configuration Manager. That version is the last to support creation of these Azure deployments. 
+***[Updated 06/17]*** Starting in version 1810, the classic service deployment in Azure was deprecated for use in Configuration Manager. That version is the last to support creation of these Azure deployments.
 
 Existing deployments continue to work. Starting in this current branch version, Azure Resource Manager is the only deployment mechanism for new instances of the cloud management gateway and cloud distribution point.
 
-<!-- For more information, see [Azure Resource Manager for the cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).   -->
+For more information, see [Azure Resource Manager for the cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).
 
 
 ### Add cloud management gateway to boundary groups
-<!--3640932-->
-You can now associate a cloud management gateway (CMG) with a boundary group. This configuration allows clients to default or fallback to the CMG for client communication according to boundary group relationships. This behavior is especially useful in branch office and VPN scenarios. You can direct client traffic away from expensive and slow WAN links to instead use faster internet links to Microsoft Azure.
 
-<!-- For more information, see [Plan for the CMG](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway). -->
+<!--3640932-->
+***[Updated 06/18]*** You can now associate a cloud management gateway (CMG) with a boundary group. This configuration allows clients to default or fallback to the CMG for client communication according to boundary group relationships. This behavior is especially useful in branch office and VPN scenarios. You can direct client traffic away from expensive and slow WAN links to instead use faster internet links to Microsoft Azure.
+
+For more information, see [CMG hierarchy design](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#hierarchy-design) and [Set up CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#configure-boundary-groups).
 
 
 
@@ -126,9 +127,9 @@ For more information, see [CMPivot for real-time data](/sccm/core/servers/manage
 
 ### Edit or copy PowerShell scripts
 <!--3705507-->
-You can now **Edit** or **Copy** an existing PowerShell script used with the Run Scripts feature. Instead of recreating a script that you need to change, now directly edit it. Both actions use the same wizard experience as when you create a new script. When you edit or copy a script, Configuration Manager doesn't persist the approval state. 
+***[Updated 6/20]*** You can now **Edit** or **Copy** an existing PowerShell script used with the Run Scripts feature. Instead of recreating a script that you need to change, now directly edit it. Both actions use the same wizard experience as when you create a new script. When you edit or copy a script, Configuration Manager doesn't persist the approval state. 
 
-<!-- For more information, see [Run Scripts](/sccm/apps/deploy-use/create-deploy-scripts). -->
+For more information, see [Run Scripts](/sccm/apps/deploy-use/create-deploy-scripts#bkmk_psedit).
 
 
 
@@ -328,16 +329,16 @@ For more information, see [Plan for Software Center](/sccm/apps/plan-design/plan
 
 ### Configure user device affinity in Software Center
 <!--3485366-->
-With [Software Center infrastructure improvements](/sccm/core/plan-design/changes/whats-new-in-version-1806#software-center-infrastructure-improvements) starting in version 1806, the application catalog site server roles are no longer required for most scenarios. Some customers still relied upon the application catalog to allow users to set their primary device for user device affinity. 
+***[Updated 6/18]***  With [Software Center infrastructure improvements](/sccm/core/plan-design/changes/whats-new-in-version-1806#software-center-infrastructure-improvements) starting in version 1806, the application catalog site server roles are no longer required for most scenarios. Some customers still relied upon the application catalog to allow users to set their primary device for user device affinity. 
 
 Now users can set their primary device in Software Center. This action makes them a primary user of the device in Configuration Manager.
 
-<!-- For more information, see [Link users and devices with user device affinity](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity). -->
+For more information, see [Link users and devices with user device affinity](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity). 
 
 
 ### Configure default views in Software Center
 <!--3612112-->
-This version of Configuration Manager further iterates on how you can customize Software Center:
+***[Updated 6/20]*** This version of Configuration Manager further iterates on how you can customize Software Center:
  
 - Set the default layout of applications, either as tiles or a list  
 
@@ -349,7 +350,7 @@ This version of Configuration Manager further iterates on how you can customize 
 
 Specify these settings in the **Software Center** group of client settings.
 
-<!-- For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-center). -->
+For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#bkmk_swctr_defaults).
 
 
 
@@ -431,25 +432,25 @@ For more information, see [Create phased deployments](/sccm/osd/deploy-use/creat
 
 ### <a name="bkmk_console"></a> Improvements to Configuration Manager console
 <!--3594151-->
-Based on customer feedback at the Midwest Management Summit (MMS) Desert Edition 2018, this version includes the following improvements to the Configuration Manager console:
+***[Updated 6/20]*** Based on customer feedback at the Midwest Management Summit (MMS) Desert Edition 2018, this version includes the following improvements to the Configuration Manager console:
 - Maximize the browse registry window for application detection methods
 - Go to the collection from an application deployment
 - Remove content from monitoring status
 - Views sort by integer values in the **Deployments** node of the **Monitoring** workspace
 - Move the warning for a large number of results
 
-<!-- For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console). -->
+For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#tips).
 
 
 ### Configuration Manager console notifications
 <!--3556016, fka 1318035-->
-To keep you better informed so that you can take the appropriate action, the Configuration Manager console now notifies you for the following events:
+***[Updated]*** To keep you better informed so that you can take the appropriate action, the Configuration Manager console now notifies you for the following events:
 - When an update is available for Configuration Manager itself
 - When lifecycle and maintenance events occur in the environment
 
-This notification is a bar at the top of the console window below the ribbon. It replaces the previous experience when Configuration Manager updates are available. These in-console notifications still display critical information, but don't interfere with your work in the console. You can't dismiss critical notifications. The console displays all notifications in a new notification area of the title bar. 
+This notification is a bar at the top of the console window below the ribbon. It replaces the previous experience when Configuration Manager updates are available. These in-console notifications still display critical information, but don't interfere with your work in the console. You can't dismiss critical notifications. The console displays all notifications in a new notification area of the title bar.
 
-<!-- For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console). -->
+For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console).
 
 
 ### Confirmation of console feedback
@@ -468,14 +469,16 @@ For more information, see [Using the Configuration Manager console](/sccm/core/s
 
 ### In-console documentation dashboard
 <!--3556019, fka 1357546-->
-There's a new **Documentation** node in the new **Community** workspace. This node includes up-to-date information about Configuration Manager documentation and support articles.
+***[Updated 06/20]*** There's a new **Documentation** node in the new **Community** workspace. This node includes up-to-date information about Configuration Manager documentation and support articles.
 
-<!-- For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console). -->
+For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#bkmk_doc-dashboard).
 
 
 ### Search device views using MAC address
 <!--3600878-->
-You can now search for a MAC address in a device view of the Configuration Manager console. This property is useful for OS deployment administrators while troubleshooting PXE-based deployments. When you view a list of devices, add the **MAC Address** column to the view. Use the search field to add the **MAC Address** search criteria. 
+***[Updated 06/20]*** You can now search for a MAC address in a device view of the Configuration Manager console. This property is useful for OS deployment administrators while troubleshooting PXE-based deployments. When you view a list of devices, add the **MAC Address** column to the view. Use the search field to add the **MAC Address** search criteria. 
+
+For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#tips).
 
 
 ### Use .NET 4.7 for improved console accessibility
@@ -510,10 +513,10 @@ Aside from new features, this release also includes additional changes such as b
 
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1902 release notes](https://docs.microsoft.com/powershell/sccm/1902-release-notes?view=sccm-ps).
 
-<!-- 
-The following update rollup (4486457) is available in the console starting on 25 January 2019: [Update rollup for Configuration Manager current branch, version 1902](https://support.microsoft.com/help/4486457).
+The following update rollup (4500571) is available in the console starting on 17 June 2019: [Update rollup for Configuration Manager current branch, version 1902](https://support.microsoft.com/help/4500571).
 
 
+<!--
 ### Hotfixes
 
 The following additional hotfixes are available to address specific issues:
@@ -537,7 +540,7 @@ When you're ready to install this version, see [Installing updates for Configura
 >
 >  Learn more about:    
 >   - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites)  
->   - [Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+>   - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)  
 
 For known, significant issues, see the [Release notes](/sccm/core/servers/deploy/install/release-notes).
 

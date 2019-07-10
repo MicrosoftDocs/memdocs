@@ -22,7 +22,7 @@ Prior to version 1610, System Center Configuration Manager supported several set
 > [!IMPORTANT]  
 > **If your sites run version 1511, 1602, or 1606**, the information in this topic applies to your infrastructure. Also see [Boundary groups for versions 1511,1602, and 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606) for information that's specific to boundary groups with these versions of Configuration Manager.
 >
-> **If your sites run version 1610 or later**, use the information in [Define site boundaries and boundary groups for System Center Configuration Manager](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups) to understand how your clients find distribution points that have available content.
+> **If your sites run version 1610 or later**, use the information in [Define site boundaries and boundary groups for System Center Configuration Manager](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups) to understand how your clients find distribution points that have available content.
 
 
 

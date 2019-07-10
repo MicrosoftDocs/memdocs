@@ -165,6 +165,12 @@
     items:
     - name: Network infrastructure considerations
       href: plan-design/network/configure-firewalls-ports-domains.md
+    - name: Ports
+      href: plan-design/hierarchy/ports.md
+    - name: Proxy server support
+      href: plan-design/network/proxy-server-support.md
+    - name: Internet access requirements
+      href: plan-design/network/internet-endpoints.md
     - name: Active Directory schema
       items:
       - name: Prepare the Active Directory schema
@@ -233,16 +239,14 @@
     items:
     - name: Technical Preview overview
       href: get-started/technical-preview.md
+    - name: 1906 features
+      href: get-started/2019/technical-preview-1906.md
     - name: 1905 features
       href: get-started/2019/technical-preview-1905.md
     - name: 1904 features
       href: get-started/2019/technical-preview-1904.md
     - name: 1903 features
       href: get-started/2019/technical-preview-1903.md
-    - name: 1902.2 features
-      href: get-started/2019/technical-preview-1902-2.md
-    - name: 1902 features
-      href: get-started/2019/technical-preview-1902.md
   - name: Migrate data between hierarchies
     items:
     - name: Migration overview
@@ -415,10 +419,6 @@
       href: servers/deploy/install/language-packs.md
     - name: Log files
       href: plan-design/hierarchy/log-files.md
-    - name: Ports
-      href: plan-design/hierarchy/ports.md
-    - name: Proxy server support
-      href: plan-design/network/proxy-server-support.md
     - name: Release notes
       href: servers/deploy/install/release-notes.md
     - name: State Messages in Configuration Manager

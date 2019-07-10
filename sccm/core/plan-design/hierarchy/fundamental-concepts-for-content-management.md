@@ -131,13 +131,15 @@ For more information, see [Windows PE peer cache](/sccm/osd/get-started/prepare-
 
     -   Requires internet-facing distribution points to accept HTTPS.  
 
-    -   Can use a cloud distribution point.  
+    -   Can use a cloud distribution point or cloud management gateway (CMG).  
+    
+        *   Starting in version 1806, a CMG can also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs. For more information, see [Modify a CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway).
 
 -   **Workgroup**:  
 
     -   Requires distribution points to accept HTTPS.  
 
-    -   Can use a cloud distribution point.  
+    -   Can use a cloud distribution point or CMG.  
 
 
 
@@ -145,16 +147,16 @@ For more information, see [Windows PE peer cache](/sccm/osd/get-started/prepare-
 
 When a client needs content, it makes a content location request to the management point. The management point returns a list of source locations that are valid for the requested content. This list varies depending upon the specific scenario, technologies in use, site design, boundary groups, and deployment settings. The following list contains all of the possible content source locations that a client can use, in the order in which it prioritizes them:  
 
-1.	The distribution point on the same computer as the client
-2.	A peer source in the same network subnet
-3.	A distribution point in the same network subnet
-4.	A peer source in the same boundary group
-5.	A distribution point in the current boundary group
-6.	A distribution point in a neighbor boundary group configured for fallback
-9.	A distribution point in the default site boundary group 
-10.	The Windows Update cloud service
-11.	An internet-facing distribution point
-12.	A cloud distribution point in Azure
+1. The distribution point on the same computer as the client
+2. A peer source in the same network subnet
+3. A distribution point in the same network subnet
+4. A peer source in the same boundary group
+5. A distribution point in the current boundary group
+6. A distribution point in a neighbor boundary group configured for fallback
+9. A distribution point in the default site boundary group 
+10. The Windows Update cloud service
+11. An internet-facing distribution point
+12. A cloud distribution point in Azure
 
 
 
@@ -227,7 +229,7 @@ Clients that can't find content from a distribution point that's associated with
 
 The concepts of preferred distribution points are no longer used, and settings for **Allow fallback source locations for content** are no longer available or enforced.
 
-For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
+For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/boundary-groups).
 
 
 
@@ -247,7 +249,7 @@ For more information, see [Manage network bandwidth](/sccm/core/plan-design/hier
 
 Network connection speeds that define a distribution point as **Fast** or **Slow** are no longer used. Instead, each site system that's associated with a boundary group is treated the same.
 
-For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
+For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/boundary-groups).
 
 
 
@@ -260,7 +262,7 @@ For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/
 
 -   Although this triggers Configuration Manager to automatically distribute the content to that client's preferred distribution points, the client might obtain that content from other distribution points before the preferred distribution points for the client receive the deployment. When this behavior occurs, the content will then be present on that distribution point for use by the next client that seeks that deployment.  
 
-For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
+For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/boundary-groups).
 
 
 

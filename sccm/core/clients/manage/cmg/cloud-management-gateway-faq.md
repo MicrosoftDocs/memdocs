@@ -4,7 +4,7 @@ description: Use this article to answer frequently asked questions regarding the
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 05/02/2019
+ms.date: 07/05/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -28,10 +28,9 @@ For more detailed information, see [certificates for cloud management gateway](/
 
 ### Do I need Azure ExpressRoute?
 
-[Azure ExpressRoute](/azure/expressroute/expressroute-introduction) lets you extend your on-premises network into the Microsoft cloud. ExpressRoute, or other such virtual network connections aren't required for the Configuration Manager cloud management gateway. The design of the cloud management gateway allows internet-based clients to communicate through the Azure service to on-premises site systems with no additional network configuration. For more information, see [Plan for cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)
+No. [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) lets you extend your on-premises network into the Microsoft cloud. ExpressRoute, or other such virtual network connections aren't required for the Configuration Manager cloud management gateway. The design of the cloud management gateway allows internet-based clients to communicate through the Azure service to on-premises site systems with no additional network configuration. For more information, see [Plan for cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)
 
-If your organization uses ExpressRoute, a security best practice is to isolate the Azure subscription for the cloud management gateway. This configuration makes sure that the cloud management gateway service isn't accidentally connected in this manner. For more information, see [Security and privacy for cloud management gateway](/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway).
-
+<!-- SCCMDocs#1659 -->
 
 ### Do I need to maintain the Azure virtual machines?
 
@@ -62,7 +61,17 @@ When you're using a Resource Manager deployment, onboard the associated Azure AD
 
 If you're using Azure AD authentication for the users and devices managed over the CMG, onboard that Azure AD tenant. For more information on Azure services for cloud management, see [Configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard). When you onboard each Azure AD tenant, a single CMG can provide Azure AD authentication for multiple tenants, regardless of the hosting location.
 
+### How does CMG affect my clients connected via VPN?
 
+Roaming clients that connect to your environment via a VPN are commonly detected as intranet-facing. They attempt to connect to your on-premises infrastructure such as management points and distribution points. Some customers prefer to have these roaming clients managed by cloud services even when connected via VPN. Starting in version 1902, associate the CMG with a boundary group. This action forces these clients to not use the on-premises site systems. For more information, see [Configure boundary groups](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#configure-boundary-groups).
+
+### If I enable a CMG, will my clients only connect to the CMG-enabled management point when they're connected to the intranet?
+
+In order to secure sensitive traffic sent over a CMG, either configure an HTTPS management point or use Enhanced HTTP.
+
+If you choose to deploy a CMG, and use PKI certificates for HTTPS communication on the CMG-enabled management point, select the option to **Allow internet-only clients** on the management point properties. This setting makes sure that internal clients continue to use HTTP management points in your environment.
+
+If you use Enhanced HTTP, you don't need to configure this setting. Clients continue to use HTTP when communicating directly to the CMG-enabled management point. For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).
 
 ## Next steps
 

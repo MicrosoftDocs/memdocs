@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 05/21/2019
+ms.date: 06/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -54,7 +54,8 @@ Specify the maximum transfer rate that clients can use outside the BITS throttli
 
 ### Configure BranchCache
 
-Set up the client computer for [Windows BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#branchcache). To allow BranchCache caching on the client, set **Enable BranchCache** to **Yes**.
+Set up the client computer for [Windows BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#bkmk_branchcache
+). To allow BranchCache caching on the client, set **Enable BranchCache** to **Yes**.
 
 - **Enable BranchCache**: Enables BranchCache on client computers.
 
@@ -73,11 +74,11 @@ If you choose **Yes**, then specify:
 
 Enables [peer cache](/sccm/core/plan-design/hierarchy/client-peer-cache) for Configuration Manager clients. Choose **Yes**, and then specify the port through which the client communicates with the peer computer.
 
-- **Port for initial network broadcast** (default 8004): Configuration Manager uses this port in Windows PE or the full Windows OS. The task sequence engine in Windows PE sends the broadcast to get content locations before it starts the task sequence.<!--SCCMDocs issue 910-->
+- **Port for initial network broadcast** (default UDP 8004): Configuration Manager uses this port in Windows PE or the full Windows OS. The task sequence engine in Windows PE sends the broadcast to get content locations before it starts the task sequence.<!--SCCMDocs issue 910-->
 
-- **Port for content download from peer** (default 8003): Configuration Manager automatically configures Windows Firewall rules to allow this traffic. If you use a different firewall, you must manually configure rules to allow this traffic.
+- **Port for content download from peer** (default TCP 8003): Configuration Manager automatically configures Windows Firewall rules to allow this traffic. If you use a different firewall, you must manually configure rules to allow this traffic.  
 
-
+    For more information, see [Ports used for connections](/sccm/core/plan-design/hierarchy/ports#BKMK_PortsClient-ClientWakeUp).  
 
 ## Client policy  
 
@@ -90,7 +91,7 @@ Specifies how frequently the following Configuration Manager clients download cl
 - Mac computers  
 - Computers that run Linux or UNIX  
 
-This value is 60 minutes by default. Reducing this value causes clients to poll the site more frequently. With a lot of clients, this behavior can have a negative impact on the site performance. The [size and scale guidance](/sccm/core/plan-design/configs/size-and-scale-numbers) is based on the default value. Increasing this value causes clients to poll the site less often. Any changes to client policies, including new deployments, take longer for clients to download and process.<!-- SCCMDocs issue 823 -->
+This value is 60 minutes by default. Reducing this value causes clients to poll the site more frequently. With numerous clients, this behavior can have a negative impact on the site performance. The [size and scale guidance](/sccm/core/plan-design/configs/size-and-scale-numbers) is based on the default value. Increasing this value causes clients to poll the site less often. Any changes to client policies, including new deployments, take longer for clients to download and process.<!-- SCCMDocs issue 823 -->
 
 ### Enable user policy on clients
 
@@ -157,7 +158,7 @@ Choose **Yes** if you want to deploy [user data and profiles](/sccm/compliance/d
 
 ### User notifications for required deployments
 
-For more information about the following three settings, see [User notifications for required deployments](/sccm/apps/deploy-use/deploy-applications#user-notifications-for-required-deployments):
+For more information about the following three settings, see [User notifications for required deployments](/sccm/apps/deploy-use/deploy-applications#bkmk_notify):
 
 - **Deployment deadline greater than 24 hours, remind user every (hours)**
 - **Deployment deadline less than 24 hours, remind user every (hours)**
@@ -200,7 +201,7 @@ For more information about this setting, see [Certificates for Microsoft Silverl
 
 ### Organization name displayed in Software Center
 
-Type the name that users see in Software Center. This branding information helps users to identify this application as a trusted source. For more information about the priority of this setting, see [Branding Software Center](/sccm/apps/plan-design/plan-for-and-configure-application-management#branding-software-center).  
+Type the name that users see in Software Center. This branding information helps users to identify this application as a trusted source. For more information about the priority of this setting, see [Branding Software Center](/sccm/apps/plan-design/plan-for-software-center#branding-software-center).  
 
 ### Use new Software Center
 
@@ -379,7 +380,7 @@ Enter the number of minutes that modern devices poll for policy. This setting is
 
 To enable user-based enrollment of legacy devices, set this option to **Yes**, and then configure the following setting:
 
-- **Enrollment profile**: Select **Set Profile** to create or select an enrollment profile. For more information, see [Configure client settings for enrollment](/sccm/core/clients/deploy/deploy-clients-to-macs#configure-client-settings-for-enrollment).
+- **Enrollment profile**: Select **Set Profile** to create or select an enrollment profile. For more information, see [Configure client settings for enrollment](/sccm/core/clients/deploy/deploy-clients-to-macs#configure-client-settings).
 
 ### Allow users to enroll modern devices
 
@@ -646,6 +647,17 @@ Configure the additional settings in this group to **Yes** to make the following
 
 For example, if your organization doesn't use compliance policies, and you want to hide the Device Compliance tab in Software Center, set **Enable Device Compliance tab** to **No**.
 
+### <a name="bkmk_swctr_defaults"></a> Configure default views in Software Center
+<!--3612112-->
+*(Introduced in version 1902)*
+
+- Configure the **Default application filter** as either **All** or only **Required** applications.  
+
+  - Software Center always uses your default setting. Users can change this filter, but Software Center doesn't persist their preference.  
+
+- Set the **Default application view** as either **Tile view** or **List view**. 
+
+  - If a user changes this configuration, Software Center persists the user's preference in the future. 
 
 
 ## Software deployment  
@@ -860,8 +872,8 @@ Specify the number of days over which the client measures the threshold for usag
 Choose **Yes** to create automatic user device affinity based on the usage information that Configuration Manager collects.  
 
 ### Allow user to define their primary devices
-
-When this setting is **Yes**, users can identify their own primary devices in Software Center.
+<!--3485366-->
+When this setting is **Yes**, users can identify their own primary devices in Software Center. For more information, see the [Software Center user guide](/sccm/core/understand/software-center#work-information).
 
 
 

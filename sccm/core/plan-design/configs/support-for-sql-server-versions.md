@@ -137,7 +137,7 @@ You can use this version of SQL Server with no minimum cumulative update version
 -   A secondary site  
 
 ### SQL Server 2008 R2 SP3: Standard, Enterprise, Datacenter     
-  This version of SQL Server isn't supported. For more information, see [Deprecated support for SQL Server versions as a site database](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-support-for-sql-server-versions-as-a-site-database).  
+  This version of SQL Server isn't supported. For more information, see [Deprecated support for SQL Server versions as a site database](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#sql-server).  
 
 ### SQL Server 2017 Express   
 You can use this version of SQL Server, with a minimum of [cumulative update version 2](https://support.microsoft.com/help/4052574), beginning with [Configuration Manager version 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710) for the following sites:
@@ -222,7 +222,8 @@ You can use this version of SQL Server with no minimum cumulative update version
 ### SQL Server CLR integration  
   The site database requires SQL Server common language runtime (CLR) to be enabled. This option is enabled automatically when Configuration Manager installs. For more information about CLR, see [Introduction to SQL Server CLR Integration](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).  
 
-
+### SQL Server Service Broker (SSB)
+ The SQL Server Service Broker is required both for intersite replication as well as for a single primary site. 
 
 ##  <a name="bkmk_optional"></a> Optional configurations for SQL Server  
  The following configurations are optional for each database that uses a full SQL Server installation.  
@@ -279,8 +280,8 @@ For an example of how to configure SQL Server to use a specific port, see [Confi
 
 If you need to upgrade your version of SQL Server, use one of the following methods, from easy to more complex:  
 
-- [Upgrade SQL Server in-place](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server) (recommended)  
+- [Upgrade SQL Server in-place](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#to-upgrade-sql-server-on-the-site-database-server) (recommended)  
 
-- Install a new version of SQL Server on a new computer, and then [use the database move option](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration) of Configuration Manager setup to point your site server to the new SQL Server  
+- Install a new version of SQL Server on a new computer, and then [use the database move option](/sccm/core/servers/manage/modify-your-infrastructure#bkmk_dbconfig) of Configuration Manager setup to point your site server to the new SQL Server  
 
 - Use [backup and recovery](/sccm/protect/understand/backup-and-recovery). Using backup and recovery for a SQL upgrade scenario is supported. You can ignore the SQL versioning requirement when reviewing [Considerations before recovering a site](/sccm/protect/understand/recover-sites#considerations-before-recovering-a-site). 

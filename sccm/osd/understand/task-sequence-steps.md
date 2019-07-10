@@ -2,7 +2,7 @@
 title: Task sequence steps
 titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
-ms.date: 05/28/2019
+ms.date: 06/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -166,7 +166,7 @@ Select this option to have the destination computer join the specified domain. S
 
 #### Account
 
-Select **Set** to specify an account with the necessary permissions to join the computer to the domain. In the **Windows User Account** dialog box, enter the user name in the following format: `Domain\User`. For more information, see [Domain joining account](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-domain-joining-account).
+Select **Set** to specify an account with the necessary permissions to join the computer to the domain. In the **Windows User Account** dialog box, enter the user name in the following format: `Domain\User`. For more information, see [Domain joining account](/sccm/core/plan-design/hierarchy/accounts#task-sequence-domain-join-account).
 
 #### Adapter settings
 
@@ -457,7 +457,7 @@ Configuration Manager captures each volume (drive) from the reference computer t
 
 The installed OS on the reference computer must be a version of Windows that Configuration Manager supports. Use the SysPrep tool to prepare the OS on the reference computer. The installed OS volume and the boot volume must be the same volume.  
 
-Specify an account with write permissions to the selected network share. For more information on the capture OS image account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#capture-operating-system-image-account).
+Specify an account with write permissions to the selected network share. For more information on the capture OS image account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#capture-os-image-account).
 
 This task sequence step runs only in Windows PE. It doesn't run in the full OS.
 
@@ -675,7 +675,7 @@ Select the local drive letter to assign for this connection.
 
 #### Account
 
-Select **Set** to specify the user account with permissions to connect to this network folder. For more information on the task sequence network folder connection account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-network-folder-connection-account).
+Select **Set** to specify the user account with permissions to connect to this network folder. For more information on the task sequence network folder connection account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#task-sequence-network-folder-connection-account).
 
 
 
@@ -714,7 +714,7 @@ Use this step to download any of the following package types:
 - OS upgrade packages  
 - Driver packages  
 - Packages  
-- Boot images  
+- Boot images (in version 1810 and earlier)  
 
 This step works well in a task sequence to upgrade an OS in the following scenarios:  
 
@@ -726,6 +726,9 @@ This step works well in a task sequence to upgrade an OS in the following scenar
 > When you deploy a task sequence that contains this step, don't select **Download all content locally before starting the task sequence** or **Access content directly from a distribution point** for **Deployment options** on the **Distribution Points** page of the Deploy Software Wizard.  
 
 This step runs in either the full OS or Windows PE. The option to save the package in the Configuration Manager client cache isn't supported in Windows PE.
+
+> [!NOTE]  
+> The **Download Package Content** task isn't supported for use with stand-alone media. For more information, see [Unsupported actions for stand-alone media](/sccm/osd/deploy-use/create-stand-alone-media#unsupported-actions-for-stand-alone-media).  
 
 To add this step in the task sequence editor, select **Add**, select **Software**, and select **Download Package Content**.
 
@@ -1153,7 +1156,7 @@ Optionally, enter or browse for an organizational unit (OU) in the specified dom
 
 #### Enter the account which has permission to join the domain
 
-Select **Set** to enter the username and password for an account with permissions to join the domain. Enter the account in the format:  `Domain\account`. For more information on the task sequence domain joining account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-domain-joining-account).  
+Select **Set** to enter the username and password for an account with permissions to join the domain. Enter the account in the format:  `Domain\account`. For more information on the task sequence domain joining account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#task-sequence-domain-join-account).  
 
 
 
@@ -1521,6 +1524,9 @@ Use the following task sequence variables with this step:
 
 To add this step in the task sequence editor, select **Add**, select **General**, and select **Run PowerShell Script**.
 
+> [!Note]  
+> Use signed PowerShell scripts in Unicode format. ANSI format, which is the default, doesn't work with this step.
+
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings described in this section.  
@@ -1612,7 +1618,7 @@ Starting in version 1902, specify that the PowerShell script is run as a Windows
 #### Account
 
 <!-- 3556028 -->
-Starting in version 1902, specify the Windows user account this step uses to run the PowerShell script. The script runs with the permissions of the specified account. Select **Set** to specify the local user or domain account. For more information on the task sequence run-as account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#task-sequence-run-as-account).
+Starting in version 1902, specify the Windows user account this step uses to run the PowerShell script. The specified account must be a local administrator on the system and the script runs with the permissions of this account. Select **Set** to specify the local user or domain account. For more information on the task sequence run-as account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#task-sequence-run-as-account).
 
 > [!IMPORTANT]  
 > If this step specifies a user account and runs in Windows PE, the action fails. You can't join Windows PE to a domain. The **smsts.log** file records this failure.  
@@ -1763,7 +1769,7 @@ The task sequence sets the variable to this value. Set this task sequence variab
 
 Use this step to perform the transition from Windows PE to the new OS. This task sequence step is a required part of any OS deployment. It installs the Configuration Manager client into the new OS, and prepares for the task sequence to continue execution in the new OS.  
 
-This step runs only in Windows PE. It doesn't run in the full OS.  
+This step is responsible for transitioning the task sequence from Windows PE to the full OS. The step runs both in Windows PE and the full OS because of this transition. However, since the transition starts in Windows PE, it can only be added during the Windows PE portion of the task sequence.  
 
 Use the following task sequence variables with this step:  
 

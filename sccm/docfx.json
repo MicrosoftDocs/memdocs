@@ -44,8 +44,7 @@
     },
     "fileMetadata": {
       "feedback_system": {
-        "core/misc/**/*": "None",
-        "desktop-analytics/**/*": "None"
+        "core/misc/**/*": "None"
       }
     },
     "template": [],

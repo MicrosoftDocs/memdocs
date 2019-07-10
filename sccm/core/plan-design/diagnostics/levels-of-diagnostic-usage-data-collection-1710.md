@@ -80,7 +80,7 @@ For System Center Configuration Manager version 1710, this level includes the fo
 
      - Software Assurance expiration date      
 
-     - Update pack deployment status and errors, download progress, and prerequisite errors 	
+     - Update pack deployment status and errors, download progress, and prerequisite errors 
 
      - Use of update fast ring
 

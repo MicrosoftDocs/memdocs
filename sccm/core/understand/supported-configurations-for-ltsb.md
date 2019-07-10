@@ -30,7 +30,7 @@ The LTSB has limited support for future server and client operating systems and 
 **Windows:**
 - Only quality and security updates for Windows are supported.
 - No support is added for current branches (CB), current branches for business (CBB), or LTSB of Windows 10.
--	No support for new major versions of Windows Server.
+- No support for new major versions of Windows Server.
 
 **SQL Server:**
 - Only quality and security updates, or minor upgrades like service packs, is supported for SQL Server.
@@ -158,7 +158,7 @@ Support for Linux and UNIX operating systems is limited to those listed in this 
 
 **Requirements and limitations:**  
 
--   To review operating system file dependencies for the client for Linux and UNIX, see [Prerequisites for Client Deployment to Linux and UNIX Servers](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers#bkmk_clientdeployprereqforlnu).  
+-   To review operating system file dependencies for the client for Linux and UNIX, see [Prerequisites for Client Deployment to Linux and UNIX Servers](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers#BKMK_ClientDeployPrereqforLnU).  
 -   For an overview of the management capabilities supported for computers that run Linux or UNIX, see [How to deploy clients to UNIX and Linux servers in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-unix-and-linux-servers).  
 -   For supported versions of Linux and UNIX, the listed version includes all subsequent minor versions. For example, where support is indicated for CentOS version 6, this also includes any subsequent minor version of CentOS 6, such as CentOS 6.3. Similarly, when support is listed for an operating system that uses service packs, such as SUSE Linux Enterprise Server 11 SP1, support includes subsequent service packs for that operating system version.
 -   For information about client installation packages and the Universal Agent, see [How to deploy clients to UNIX and Linux servers in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-unix-and-linux-servers).

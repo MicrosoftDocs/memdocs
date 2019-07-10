@@ -20,7 +20,7 @@ To define the custom deployment technology XML file, create an XML file based on
 
      The following example from the RDP sample project shows how to define the Create Application Wizard XML file. Note that wizards are not extensible for the UI.  However, by creating this custom deployment technology XML, the contents of the wizard now include the ability to create a RDP deployment type.  
 
-    ```  
+    ```xml
     <?xml version="1.0" encoding="utf-8"?>  
     <SmsFormData xmlns="http://schemas.microsoft.com/SystemsManagementServer/2005/03/ConsoleFramework" FormatVersion="1">  
       <Form Id="{FD19DEC6-81ED-447B-9D88-3AAD7DE499F1}" CustomData="CreateApp" FormType="PropertySheet" ForceRefresh="true">  

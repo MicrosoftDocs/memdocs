@@ -1,7 +1,7 @@
 ---
 title: MDT release notes
 description: Understand supported platforms, prerequisites, and limitations of the Microsoft Deployment Toolkit (MDT).
-ms.date: 01/25/2019
+ms.date: 07/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: article
@@ -69,6 +69,8 @@ The following OS versions are supported for deployment with MDT:
 - Windows Server 2012
 - Windows Server 2008 R2
 
+> [!Note]  
+> MDT doesn't support Windows 10 ARM64 devices.  
 
 
 ## Prerequisites

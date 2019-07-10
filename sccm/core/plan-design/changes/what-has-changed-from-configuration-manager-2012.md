@@ -40,7 +40,7 @@ Periodically, an update version is also released as a new baseline version (like
 
 
 For more information about using updates, see [Updates for Configuration Manager](/sccm/core/servers/manage/updates).  
-For more information about baselines, see [Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions).
+For more information about baselines, see [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines).
 
 
 

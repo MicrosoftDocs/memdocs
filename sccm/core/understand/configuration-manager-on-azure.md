@@ -30,11 +30,11 @@ No, it is an IaaS (Infrastructure as a Service) because you host your Configurat
 
 ### What areas should I pay attention to when considering a move of my Configuration Manager infrastructure to Azure?
 Great question, here are the areas that are most important when making this decision, each is explored in a separate section of this topic:
-1.	Networking
-2.	Availability
-3.	Performance
-4.	Cost
-5.	User Experience
+1. Networking
+2. Availability
+3. Performance
+4. Cost
+5. User Experience
 
 ## Networking
 ### What about networking requirements, should I use ExpressRoute or an Azure VPN Gateway?
@@ -131,11 +131,11 @@ The approach for content management is much the same as for site servers and sit
 
 
 ### While I am OK with the limitations of cloud-based distribution points, I don't want to put my management point into a DMZ even though that is needed to support my internet-based clients. Do I have any other options?
-Yes! With the Configuration Manager version 1610, we introduced the [Cloud Management Gateway](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway) as a pre-release feature. (This feature first appeared in the Technical Preview version 1606 as the [Cloud Proxy Service](/sccm/core/get-started/capabilities-in-technical-preview-1606#a-namecloudproxyacloud-proxy-service-for-managing-clients-on-the-internet)).
+Yes! With the Configuration Manager version 1610, we introduced the [Cloud Management Gateway](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway) as a pre-release feature. (This feature first appeared in the Technical Preview version 1606 as the [Cloud Proxy Service](/sccm/core/get-started/capabilities-in-technical-preview-1606#cloud_proxy)).
 
 The **Cloud Management Gateway** provides a simple way to manage Configuration Manager clients on the internet. The service, which is deployed to Microsoft Azure and requires an Azure subscription, connects to your on-premises Configuration Manager infrastructure using a new role called the cloud management gateway connector point. After it's deployed and configured, clients can access on-premises Configuration Manager site system roles regardless of whether they're connected to the internal private network or on the internet.
 
-You can start using the cloud management gateway in your environment and give us feedback to make this better. For information about pre-release features, see [Use pre-release features from updates](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkprereleasea-use-pre-release-features-from-updates).
+You can start using the cloud management gateway in your environment and give us feedback to make this better. For information about pre-release features, see [Use pre-release features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
 
 ### I also heard that you have another new feature called Peer Cache introduced as a pre-release feature in version 1610. Is that different than BranchCache? Which one should I choose?
 Yes, totally different. [Peer Cache](/sccm/core/plan-design/hierarchy/client-peer-cache) is a 100% native Configuration Manager technology where BranchCache is a feature of Windows. Both can be useful for you; BranchCache uses a broadcast to find the required content whereas Peer Cache uses Configuration Managers regular distribution workflow and boundary group settings.
@@ -149,26 +149,26 @@ Hard to say since every environment is different. The best thing to do is to cos
 
 ## Additional Resources
 **Fundamentals:**
-http://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/
+https://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/
 
 **Azure VM Machine Types:**
  - Azure Machine sizes: https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs/  
- - VM Pricing: http://azure.microsoft.com/pricing/details/virtual-machines/  
- - Storage Pricing: http://azure.microsoft.com/pricing/details/storage/
+ - VM Pricing: https://azure.microsoft.com/pricing/details/virtual-machines/  
+ - Storage Pricing: https://azure.microsoft.com/pricing/details/storage/
 
 **Disk Performance Considerations:**    
- - Premium Disk intro:  http://azure.microsoft.com/blog/2014/12/11/introducing-premium-storage-high-performance-storage-for-azure-virtual-machine-workloads/  
- - Deeper Premium Disk info: http://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/   
+ - Premium Disk intro:  https://azure.microsoft.com/blog/2014/12/11/introducing-premium-storage-high-performance-storage-for-azure-virtual-machine-workloads/  
+ - Deeper Premium Disk info: https://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/   
  - Handy collection of charts for max Sizes and Perf targets for Storage: https://azure.microsoft.com/documentation/articles/storage-scalability-targets/  
- - Another Intro + some cool uber-geek data on how Premium Storage works behind the covers:  http://azure.microsoft.com/blog/2015/04/16/azure-premium-storage-now-generally-available-2/
+ - Another Intro + some cool uber-geek data on how Premium Storage works behind the covers:  https://azure.microsoft.com/blog/2015/04/16/azure-premium-storage-now-generally-available-2/
 
 **Availability:**
  - Azure IaaS Uptime SLA's: https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/  
  - Availability Sets Explained: https://azure.microsoft.com/documentation/articles/virtual-machines-manage-availability/
 
 **Connectivity:**
- - Express route vs. Azure VPN: http://azure.microsoft.com/blog/2014/06/10/expressroute-or-virtual-network-vpn-whats-right-for-me/
- - Express Route Pricing: http://azure.microsoft.com/pricing/details/expressroute/
- - More about Express Route: http://azure.microsoft.com/documentation/articles/expressroute-introduction/
+ - Express route vs. Azure VPN: https://azure.microsoft.com/blog/2014/06/10/expressroute-or-virtual-network-vpn-whats-right-for-me/
+ - Express Route Pricing: https://azure.microsoft.com/pricing/details/expressroute/
+ - More about Express Route: https://azure.microsoft.com/documentation/articles/expressroute-introduction/
 
  

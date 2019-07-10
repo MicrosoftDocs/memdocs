@@ -56,6 +56,9 @@ For more information, see [Windows Autopilot for existing devices task sequence]
 
 For internet-based devices in the second path, you need to create an app in Intune. Deploy this app to Windows 10 devices that aren't already Configuration Manager clients. 
 
+> [!Note]  
+> Before deploying this app to devices, you must ensure that the devices trust the CMG server authentication certificate. For more information, see [CMG trusted root certificate to clients](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_cmgroot). If the device does not trust the CMG server authentication certificate, you would see WINHTTP_CALLBACK_STATUS_FLAG_INVALID_CA error in the ccmsetup.log on the client.
+
 ### Get the command line from Configuration Manager
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Co-management** node.  
@@ -84,7 +87,7 @@ Starting in version 1806, fewer command-line properties are now required.
 - If using your own PKI SSL certificate and your CRL isn't published to the internet, the following parameter is required:  
     - /noCRLCheck  
     
-     For more information, see [Planning for CRLs](/sccm/core/plan-design/security/plan-for-security#-plan-for-the-site-server-signing-certificate-self-signed)  
+     For more information, see [Planning for CRLs](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForCRLs)  
 
 Starting in version 1810, the site publishes additional Azure AD information to the cloud management gateway (CMG). An Azure AD-joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies enrolling devices to co-management in an environment with more than one Azure AD tenant. Now the only two required ccmsetup properties are **CCMHOSTNAME** and **SMSSiteCode**.<!--3607731-->
 

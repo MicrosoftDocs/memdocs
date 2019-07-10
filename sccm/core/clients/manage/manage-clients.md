@@ -196,8 +196,8 @@ To identify devices that are pending a restart, go to the **Assets and Complianc
  - **Add or remove feature**: this value comes from the Windows component-based servicing reporting the addition or removal of a Windows feature requires a restart (HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Reboot Pending)
 
 **To create the client notification to restart a device:**
-1.	Locate the device you want to restart within a collection in the **Device Collections** node of the console.
-2.	Right-click on the device, select **Client Notification**, and then select **Restart**. An information window opens about the restart. Click **OK** to confirm the restart request.
+1. Locate the device you want to restart within a collection in the **Device Collections** node of the console.
+2. Right-click on the device, select **Client Notification**, and then select **Restart**. An information window opens about the restart. Click **OK** to confirm the restart request.
 
 When the notification is received by a client, a **Software Center** notification window opens to inform the user about the restart. By default, the restart occurs after 90 minutes. You can modify the restart time by configuring [client settings](/sccm/core/clients/deploy/configure-client-settings). Settings for the restart behavior are found on the [Computer restart](/sccm/core/clients/deploy/about-client-settings#computer-restart) tab of the default settings.
 

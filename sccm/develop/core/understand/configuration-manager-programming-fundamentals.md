@@ -49,9 +49,9 @@ This section provides information and tasks for the fundamental programming tech
 
 -   [Introduction to Windows Script Technologies](https://docs.microsoft.com/previous-versions/tn-archive/ee176792\(v=technet.10\))  
 
--   [WMI Scripting Primer](http://go.microsoft.com/fwlink/?linkid=43949)  
+-   [WMI Scripting Reference](https://docs.microsoft.com/windows/desktop/WmiSdk/wmi-reference)  
 
--   [Windows Management Instrumentation](http://go.microsoft.com/fwlink/?LinkId=43950)  
+-   [Windows Management Instrumentation](https://docs.microsoft.com/windows/desktop/WmiSdk/wmi-start-page)  
 
 ## See Also  
  [Configuration Manager SDK](../../../develop/core/misc/system-center-configuration-manager-sdk.md)   

@@ -92,6 +92,6 @@ You can only bypass Activation Lock or retrieve the Activation Lock bypass code 
 5. Read the messages in the warning dialog box, and click **Yes** when you are ready to proceed.
 6. You can examine the status of the unlock request from:
 
-	- The discovery data for the device in the device properties dialog box.
-	- The **Activation Lock Bypass State** column in the **Devices** view (this column is hidden by default).
-	- The **Remote Device Actions Information** section in the **Summary** tab of the details pane (when a device is selected).
+    - The discovery data for the device in the device properties dialog box.
+    - The **Activation Lock Bypass State** column in the **Devices** view (this column is hidden by default).
+    - The **Remote Device Actions Information** section in the **Summary** tab of the details pane (when a device is selected).

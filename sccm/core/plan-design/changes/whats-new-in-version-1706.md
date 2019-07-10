@@ -24,7 +24,7 @@ Update 1706 for System Center Configuration Manager current branch is available 
 >  Learn more about:    
 >   - [Installing new sites](https://technet.microsoft.com/library/mt590197.aspx)  
 >   - [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx)  
->   - [Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+>   - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)  
 
 The following sections provide details about changes and new capabilities introduced in version 1706 of Configuration Manager.  
 
@@ -53,8 +53,8 @@ We have added additional improvements to accessibility for the Configuration Man
 ### Improvements  for SQL Server Always On Availability Groups
 <!-- 1352094 -->
 With this release, you can now use asynchronous commit replicas in the SQL Server Always On availability groups you use with Configuration Manager. This means you can add additional replicas to your availability groups to use as off-site (remote) backups, and then use them in a disaster recovery scenario.  
-  -	  Configuration Manager supports using the asynchronous commit replica to recover your synchronous replica. See [site database recovery options](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption) in the Backup and Recovery topic for information on how to accomplish this.
-  -	  This release does not support failover to use the asynchronous commit replica as your site database.
+  - Configuration Manager supports using the asynchronous commit replica to recover your synchronous replica. See [site database recovery options](/sccm/core/servers/manage/recover-sites#site-database-recovery-options) in the Backup and Recovery topic for information on how to accomplish this.
+  - This release does not support failover to use the asynchronous commit replica as your site database.
 For more information, see [Prepare to use Always On Availability Groups](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).
 
 ### Update reset tool
@@ -90,7 +90,7 @@ The improved integration makes the following possible:
         Connect to the on-line store for Windows Store for Business and get apps for your organization that you can deploy with Configuration Manager.
 
 
-  This is done by using an [Azure server web app](/azure/azure/app-service/app-service-authentication-overview#service-to-service-authentication) to provide the subscription and configuration details that you otherwise enter each time you set up a new Configuration Manager component or service with Azure. For more information, see [Azure Services Wizard](/sccm/core/servers/deploy/configure/azure-services-wizard).
+  This is done by using an [Azure server web app](/azure/app-service/app-service-authentication-overview) to provide the subscription and configuration details that you otherwise enter each time you set up a new Configuration Manager component or service with Azure. For more information, see [Azure Services Wizard](/sccm/core/servers/deploy/configure/azure-services-wizard).
 
 -   Use Azure AD to authenticate clients on the internet to access your Configuration Manager sites. Azure AD replaces the need to configure and use client authentication certificates. This requires the cloud management gateway site system role. For more information, see [Install and assign Configuration Manager clients from the internet using Azure AD for authentication](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
 
@@ -100,7 +100,7 @@ The improved integration makes the following possible:
 
 ### Peer cache improvements
 <!-- 1252345 -->
-Peer cache no longer uses the Network Access Account to authenticate download requests from peers. There is one caveat to this when the account remains required by clients. This remains a requirement for clients that boot in to WinPE and then access content from a peer cache source. For more information, see [requirements and considerations for peer cache](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements-and-considerations-for-peer-cache).
+Peer cache no longer uses the Network Access Account to authenticate download requests from peers. There is one caveat to this when the account remains required by clients. This remains a requirement for clients that boot in to WinPE and then access content from a peer cache source. For more information, see [requirements and considerations for peer cache](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements).
 
 
 <!-- ## Migration  -->
@@ -116,25 +116,25 @@ Peer cache no longer uses the Network Access Account to authenticate download re
 In this release, we've added new configuration item settings for Windows 10 devices that are enrolled with Intune, or managed on premises by Configuration Manager. The settings are:
 
 - **Password**
-	- Device Encryption
+  - Device Encryption
 - **Device**
-	- Region settings modification (desktop only)
-	- Power and sleep settings modification
-	- Language settings modification
-	- System time modification
-	- Device name modification
+  - Region settings modification (desktop only)
+  - Power and sleep settings modification
+  - Language settings modification
+  - System time modification
+  - Device name modification
 - **Store**
-	- Auto-update apps from store
-	- Use private store only
-	- Store originated app launch
+  - Auto-update apps from store
+  - Use private store only
+  - Store originated app launch
 - **Microsoft Edge**
-	- Block access to about:flags
-	- SmartScreen prompt override
-	- SmartScreen prompt override for files
-	- WebRTC localhost IP address
-	- Default search engine
-	- OpenSearch XML URL
-	- Homepages (desktop only)
+  - Block access to about:flags
+  - SmartScreen prompt override
+  - SmartScreen prompt override for files
+  - WebRTC localhost IP address
+  - Default search engine
+  - OpenSearch XML URL
+  - Homepages (desktop only)
 
 For details of all Windows 10 settings, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client).
 

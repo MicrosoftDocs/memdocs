@@ -141,7 +141,7 @@ Insights that help simplify management by cleaning up and reconfiguring collecti
 
 ### Proactive maintenance
 <!--1352184-->
-Starting in version 1806, the rules in this group highlight potential configuration issues to avoid through upkeep of Configuration Manager objects.	
+Starting in version 1806, the rules in this group highlight potential configuration issues to avoid through upkeep of Configuration Manager objects. 
 
 - **Boundary groups with no assigned site systems**: Without assigned site systems, boundary groups can only be used for site assignment. For more information, see [Configure boundary groups](/sccm/core/servers/deploy/configure/boundary-groups).  
 
@@ -159,7 +159,7 @@ Starting in version 1806, the rules in this group highlight potential configurat
 
 
 ### Security
-Insights for improving the security of your infrastructure and devices.	
+Insights for improving the security of your infrastructure and devices. 
 
 - **Unsupported antimalware client versions**: More than 10% of clients are running versions of System Center Endpoint Protection that aren't supported. For more information, see [Endpoint Protection](/sccm/protect/deploy-use/endpoint-protection).  
 

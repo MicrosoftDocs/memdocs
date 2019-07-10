@@ -5,8 +5,8 @@ title: Tutorial&#58; Enable co-management for new internet-based Windows 10 devi
 titleSuffix: Configuration Manager 
 description: Configure co-management for Windows 10 devices for Configuration Manager and Intune. 
 keywords:
-author: brenduns
-ms.author: brenduns
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/08/2019
 ms.topic: tutorial
@@ -21,7 +21,7 @@ ms.assetid:
 # Tutorial: Enable co-management for new internet-based devices
 With co-management, you can keep your well-established processes for using Configuration Manager to manage PCs in your organization. At the same time, you're investing in the cloud through use of Intune for security and modern provisioning. 
 
-In this tutorial, you set up co-management of Windows 10 devices in an environment where you use both Azure Active Directory (AD) and an on-premises AD but don't have a [hybrid Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/overview#hybrid-azure-ad-joined-devices) (AD). The Configuration Manager environment includes a single primary site with all site system roles located on the same server, the site server. This tutorial begins with the premise that your Windows 10 devices are already enrolled with Intune. 
+In this tutorial, you set up co-management of Windows 10 devices in an environment where you use both Azure Active Directory (AD) and an on-premises AD but don't have a [hybrid Azure Active Directory](/azure/active-directory/devices/concept-azure-ad-join-hybrid) (AD). The Configuration Manager environment includes a single primary site with all site system roles located on the same server, the site server. This tutorial begins with the premise that your Windows 10 devices are already enrolled with Intune. 
 
 If you have a hybrid Azure AD that joins your on-premises AD with Azure AD, we recommend following our companion tutorial, [Enable co-management for Configuration Manager clients](/sccm/comanage/tutorial-co-manage-clients). 
  
@@ -153,7 +153,7 @@ Public certificate providers typically provide instructions for import of the ce
 
 6. On the **Certificate Store page**, choose **Automatically select the certificate store based on the type of certificate**, and then select **Next**.  
 
-7.	Select **Finish**.
+7. Select **Finish**.
 
 ### Export the certificate
 Export the *CMG server authentication certificate* from your server. Re-exporting the certificate makes it usable for your cloud management gateway in Azure.  
@@ -398,8 +398,10 @@ For example, *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetup
    - **Command-line arguments**:  *\<Specify the **CCMSETUPCMD** command line. You can use the command line you saved from the* Enablement *page of the Co-management Configuration Wizard. This command line includes the names of your cloud service and additional values that enable devices to install the Configuration Manager client software.>*  
 
      The command-line structure should resemble this example using only the CCMSETUPCMD and SMSSiteCode parameters:  
- 
-         CCMSETUPCMD="CCMHOSTNAME=<ServiceName.CLOUDAPP.NET/CCM_Proxy_MutualAuth/<GUID>" SMSSiteCode="<YourSiteCode>"  
+
+     ```
+     CCMSETUPCMD="CCMHOSTNAME=<ServiceName.CLOUDAPP.NET/CCM_Proxy_MutualAuth/<GUID>" SMSSiteCode="<YourSiteCode>"  
+     ```
 
      > [!TIP]  
      > If you do not have the command line available, you can view the properties of *CoMgmtSettingsProd* in the Configuration Manager console to get a copy of the command line.    
@@ -449,5 +451,5 @@ After you complete the configuration steps of this tutorial, including the last 
 
 ## Next steps
 - Review the status of co-managed devices with the [Co-management dashboard](https://docs.microsoft.com/sccm/core/clients/manage/co-management-dashboard)
-- Use [Windows Autopilot]() to provision new devices
+- Use [Windows Autopilot](/sccm/comanage/quickstart-autopilot) to provision new devices
 - Use [conditional access](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access) and Intune compliance rules to manage user access to corporate resources

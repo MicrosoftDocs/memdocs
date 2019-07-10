@@ -48,7 +48,7 @@ We added an automatic clean-up function that deletes the unneeded downloads from
 
 ## Peer Cache improvements
 Starting with this release, a peer cache source computer will reject a request for content when the peer cache source computer meets any of the following conditions:  
- - 	Is in low battery mode.
+ -  Is in low battery mode.
  -  CPU load exceeds 80% at the time the content is requested.
  -  Disk I/O has an *AvgDiskQueueLength* that exceeds 10.
  -  There are no more available connections to the computer.   
@@ -66,12 +66,12 @@ The technical preview site infrastructure, clients, and the Azure AD Domain Serv
 
 ### Set up Configuration Manager to use Azure AD
 To use Azure AD with Configuration Manager, you’ll need the following:
--	Azure subscription.
--	Azure AD with Domain Services (DS).
--	A Configuration Manager site that runs on an Azure VM that is joined to your Azure AD.
--	Configuration Manager clients that run in the same Azure AD environment.
+- Azure subscription.
+- Azure AD with Domain Services (DS).
+- A Configuration Manager site that runs on an Azure VM that is joined to your Azure AD.
+- Configuration Manager clients that run in the same Azure AD environment.
 
-To configure Azure AD Domain Service, see [Get started with Azure AD Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started).
+To configure Azure AD Domain Service, see [Get started with Azure AD Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance).
 
 ### Discover resources
 After you set up Configuration Manager to run in Azure AD, you can use the following Active Directory discovery methods to search
@@ -85,7 +85,7 @@ For each method you use, edit the LDAP query to search the Azure AD OU structure
 The following examples use an Azure AD of *contoso.onmicrosoft.com*:
 - **System Discovery**   
   Azure AD stores devices under the **AADDC Computers** OU.  Configure the following:  
-  -	*LDAP://OU=AADDC Computers,DC=contoso,DC=onmicrosoft,DC=com*  
+  - *LDAP://OU=AADDC Computers,DC=contoso,DC=onmicrosoft,DC=com*  
 
 
 - **User Discovery**
@@ -154,7 +154,7 @@ After you create the compliance policy, you can monitor the compliance results i
 ## Improvements to Software Center settings and notification messages for high-impact task sequences
 This release includes the following improvements to Software Center settings and notification messages for high-impact deployment task sequences:
 
-- In the properties for the task sequence, you can now configure any task sequence, including non-operating system task sequences, as a high-risk deployment. Any task sequence that meets certain conditions is automatically defined as high-impact. For details, see [Manage high-risk deployments](http://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments).
+- In the properties for the task sequence, you can now configure any task sequence, including non-operating system task sequences, as a high-risk deployment. Any task sequence that meets certain conditions is automatically defined as high-impact. For details, see [Manage high-risk deployments](https://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments).
 - In the properties for the task sequence, you can choose to use the default notification message or create your own custom notification message for high-impact deployments.
 - In the properties for the task sequence, you can configure Software Center properties, which include make a restart required, the download size of the task sequence, and the estimated run time.
 - The default high-impact deployment message for in-place upgrades now states that
@@ -163,7 +163,7 @@ your apps, data, and settings are automatically migrated. Previously, the defaul
 ### Set a task sequence as a high-impact task sequence
 Use the following procedure to set a task sequence as high-impact.
 > [!NOTE]
-> Any task sequence that meets certain conditions is automatically defined as high-impact. For details, see [Manage high-risk deployments](http://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments).
+> Any task sequence that meets certain conditions is automatically defined as high-impact. For details, see [Manage high-risk deployments](https://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments).
 
 1. In the Configuration Manager console, go to **Software Library** > **Operating Systems** > **Task Sequences**.
 2. Select the task sequence to edit, and click **Properties**.
@@ -205,13 +205,13 @@ Use the following procedure to configure the details for the task sequence displ
 
 ## Check for running executable files before installing an application
 
-In the *<deployment type name>* **Properties** dialog box of a deployment type, on the Install Behavior tab, you can now specify one of more executable files that, if running, will block the installation of the deployment type. The user must close the running executable file (or it can be closed automatically for deployments with a purpose of required) before the deployment type can be installed.
+In the *\<deployment type name>* **Properties** dialog box of a deployment type, on the Install Behavior tab, you can now specify one of more executable files that, if running, will block the installation of the deployment type. The user must close the running executable file (or it can be closed automatically for deployments with a purpose of required) before the deployment type can be installed.
 
 ### Try it out.
 
-1.	In the properties of a Configuration Manager deployment type, choose the **Install Behavior** tab.
-2.	Choose **Add** to add one or more executable file names you want to check for. You can also add a display name to make it easier for users to identify applications in the list.
-3.	If the deployment will have a purpose of required, in the deploy software wizard, you can optionally choose to **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box**.
+1. In the properties of a Configuration Manager deployment type, choose the **Install Behavior** tab.
+2. Choose **Add** to add one or more executable file names you want to check for. You can also add a display name to make it easier for users to identify applications in the list.
+3. If the deployment will have a purpose of required, in the deploy software wizard, you can optionally choose to **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box**.
 
 If the application was deployed as **Available**, and an end user tries to install an application, they will be prompted to close any running executables you specified before they can proceed with the installation.
 

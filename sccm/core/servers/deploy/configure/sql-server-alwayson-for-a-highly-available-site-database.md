@@ -36,8 +36,8 @@ The following scenarios are supported for using availability groups with Configu
 
 - [Create an availability group for use with Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag#create-and-configure-an-availability-group)  
 - [Configure a site to use an availability group](/sccm/core/servers/deploy/configure/configure-aoag#configure-a-site-to-use-the-database-in-the-availability-group)  
-- [Add or remove synchronous replica members from an availability group that hosts a site database](/sccm/core/servers/deploy/configure/configure-aoag#add-and-remove-synchronous-replica-members)  
-- [Configure asynchronous commit replicas](/sccm/core/servers/deploy/configure/configure-aoag#configure-an-asynchronous-commit-repilca)  
+- [Add or remove synchronous replica members from an availability group that hosts a site database](/sccm/core/servers/deploy/configure/configure-aoag#add-or-remove-synchronous-replica-members)  
+- [Configure asynchronous commit replicas](/sccm/core/servers/deploy/configure/configure-aoag#configure-an-asynchronous-commit-replica)  
 - [Recover a site from an asynchronous commit replica](/sccm/core/servers/deploy/configure/configure-aoag#use-the-asynchronous-replica-to-recover-your-site)  
 - [Move a site database out of an availability group to a default or named instance of a standalone SQL Server](/sccm/core/servers/deploy/configure/configure-aoag#stop-using-an-availability-group)  
 
@@ -80,7 +80,7 @@ Each instance of SQL Server can run under a domain user account (**service accou
 
 - Use the same number and type of replicas in an availability group that your version of SQL Server supports.
 
-- You can use an asynchronous commit replica to recover your synchronous replica. For more information, see [site database recovery options](/sccm/core/servers/manage/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption).  
+- You can use an asynchronous commit replica to recover your synchronous replica. For more information, see [site database recovery options](/sccm/core/servers/manage/recover-sites#site-database-recovery-options).  
 
     > [!Warning]  
     > Configuration Manager doesn't support *failover* to use the asynchronous commit replica as your site database. For more information, see [Failover and failover modes (Always On availability groups)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups?view=sql-server-2014).  
@@ -95,7 +95,7 @@ Each replica member must have the following configuration:
 
 - THe **Readable Secondary** setting is **Yes**  
 
-- Enabled for **Manual Failover** 	  
+- Enabled for **Manual Failover**   
 
   > [!TIP]
   >  Configuration Manager supports using the availability group synchronous replicas when set to **Automatic Failover**. Set **Manual Failover** when:

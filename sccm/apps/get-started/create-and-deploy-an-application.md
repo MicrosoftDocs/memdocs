@@ -82,7 +82,7 @@ Now that you've created an application, you can refine the application settings 
 
  In the **<Contoso\> Application Properties** dialog box, you'll see many items that you can configure to refine the behavior of the application. For details about all the settings you can configure, see [Create applications](../../apps/deploy-use/create-applications.md). For the purposes of this example, you'll just be changing some properties of the application's deployment type.  
 
- Choose the **Deployment Types** tab > **Contoso Application** deployment type > **Edit**. 	
+ Choose the **Deployment Types** tab > **Contoso Application** deployment type > **Edit**. 
 
 You'll see a dialog box like this one:  
 

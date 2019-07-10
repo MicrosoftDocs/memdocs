@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 This section provides topics about programmatically managing discovery in System Center Configuration Manager.  
 
 > [!NOTE]
->  General information about Discovery can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt346023.aspx) under [Configure discovery methods for System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt720648.aspx).  
+>  General information about Discovery can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/library/mt346023.aspx) under [Configure discovery methods for System Center Configuration Manager](https://technet.microsoft.com/library/mt720648.aspx).  
 
 ## Discovery topics  
 

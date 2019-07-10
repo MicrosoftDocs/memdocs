@@ -2,7 +2,7 @@
 title: Connect Configuration Manager
 titleSuffix: Configuration Manager
 description: A how-to guide for connecting Configuration Manager with Desktop Analytics.
-ms.date: 06/07/2019
+ms.date: 07/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,7 +10,6 @@ ms.assetid: 7ed389c3-a9ab-48ce-a5eb-27d52ee4fb94
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
 ---
 
@@ -39,6 +38,9 @@ You also need to install the version 1902 update rollup (4500571) to support int
 Use this procedure to connect Configuration Manager to Desktop Analytics, and configure device settings. This procedure is a one-time process to attach your hierarchy to the cloud service.  
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Services** node. Select **Configure Azure Services** in the ribbon.  
+
+    > [!Tip]  
+    > In the Configuration Manager console, go to the **Software Library** workspace, and select the **Desktop Analytics Servicing** node. In the *New to Desktop Analytics?* box, select the second link to *Connect Configuration Manager to the Desktop Analytics service*.  
 
 2. On the **Azure Services** page of the Azure Services Wizard, configure the following settings:  
 
@@ -72,16 +74,16 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
     Select **Sign in** . After successfully authenticating to Azure, the page shows the **Azure AD Tenant Name** for reference.
         
     > [!Note]  
-    > Complete this step as a **Company Admin**. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager, and doesn't need to be the same account that runs the Azure Services Wizard.  
+    > Complete this step as a **Global administrator**. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager, and doesn't need to be the same account that runs the Azure Services Wizard.  
 
     Select **OK** to create the web app in Azure AD and close the Create Server Application dialog. On the Server App dialog, select **OK**. Then select **Next** on the App page of the Azure Services Wizard.  
 
 7. On the **Diagnostic Data** page, configure the following settings:  
 
-    - **Commercial ID**: this value should automatically populate with your organization's ID. If it doesn't, make sure your proxy server is configured to allow all required [endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints) before continuing. Alternatively, retrieve your Commercial ID manually from the [Desktop Analytics portal](/sccm/desktop-analytics/troubleshooting#bkmk_ViewCommercialID).  
+    - **Commercial ID**: this value should automatically populate with your organization's ID. If it doesn't, make sure your proxy server is configured to allow all required [endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints) before continuing. Alternatively, retrieve your Commercial ID manually from the [Desktop Analytics portal](/sccm/desktop-analytics/monitor-connection-health#bkmk_ViewCommercialID).  
 
-    - **Windows 10 diagnostic data level**: select at least **Enhanced (Limited)**  
-
+    - **Windows 10 diagnostic data level**: select at least **Basic**. See [Diagnostic data levels](/sccm/desktop-analytics/enable-data-sharing#diagnostic-data-levels)
+  
     - **Allow Device Name in diagnostic data**: select **Enable**  
 
         > [!Note]  
@@ -100,6 +102,16 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
     - **Devices in the target collection use a user-authenticated proxy for outbound communication**: By default, this value is **No**. If needed in your environment, set to **Yes**.  
 
     - **Select specific collections to synchronize with Desktop Analytics**: Select **Add** to include additional collections from your **Target collection** hierarchy. These collections are available in the Desktop Analytics portal for grouping with deployment plans. Make sure to include pilot and pilot exclusion collections.  <!-- 4097528 -->  
+
+        > [!Tip]  
+        > The Select Collections window displays only the collections that are limited by the **Target collection**.
+        >
+        > In the following example, you select CollectionA as your target collection. Then when you add additional collections, you see CollectionA, CollectionB, and CollectionC. You can't add CollectionD.
+        >
+        > - CollectionA: limited by the **All Systems** collection
+        >     - CollectionB: limited by CollectionA
+        >         - CollectionC: limited by CollectionB
+        > - CollectionD: limited by **All Systems** collection
 
         > [!Important]  
         > These collections continue to sync as their membership changes. For example, your deployment plan uses a collection with a Windows 7 membership rule. As those devices upgrade to Windows 10, and Configuration Manager evaluates the collection membership, those devices drop out of the collection and deployment plan.  
