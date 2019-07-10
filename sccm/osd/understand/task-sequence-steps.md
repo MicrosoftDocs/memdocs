@@ -2,7 +2,7 @@
 title: Task sequence steps
 titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
-ms.date: 06/12/2019
+ms.date: 07/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -904,9 +904,9 @@ When this step runs, the application checks the applicability of the requirement
 
 > [!NOTE]  
 > To install an application that supersedes another application, the content files for the superseded application must be available. Otherwise this task sequence step fails. For example, Microsoft Visio 2010 is installed on a client or in a captured image. When the **Install Application** step installs Microsoft Visio 2013, the content files for Microsoft Visio 2010 (the superseded application) must be available on a distribution point. If Microsoft Visio isn't installed at all on a client or captured image, the task sequence installs Microsoft Visio 2013 without checking for the Microsoft Visio 2010 content files.  
-
-> [!NOTE]  
-> If the client fails to retrieve the management point list from location services, use the **SMSTSMPListRequestTimeoutEnabled** and **SMSTSMPListRequestTimeout** task sequence variables. These variables specify how many milliseconds a task sequence waits before it retries installing an application. For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables).
+>
+> If you retire a superceded app, and the new app is referenced in a task sequence, the task sequence fails to start.
+This behavior is by design: the task sequence requires all app references.<!-- SCCMDocs 1711 -->  
 
 This task sequence step runs only in the full OS. It doesn't run in Windows PE.  
 
@@ -917,7 +917,17 @@ Use the following task sequence variables with this step:
 - [SMSTSMPListRequestTimeout](/sccm/osd/understand/task-sequence-variables#SMSTSMPListRequestTimeout)  
 - [TSErrorOnWarning](/sccm/osd/understand/task-sequence-variables#TSErrorOnWarning)  
 
+> [!NOTE]  
+> If the client fails to retrieve the management point list from location services, use the **SMSTSMPListRequestTimeoutEnabled** and **SMSTSMPListRequestTimeout** task sequence variables. These variables specify how many milliseconds a task sequence waits before it retries installing an application. For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables).
+
 To add this step in the task sequence editor, select **Add**, select **Software**, and select **Install Application**.
+
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepinstallapplication?view=sccm-ps)
+- [New-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepinstallapplication?view=sccm-ps)
+- [Remove-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepinstallapplication?view=sccm-ps)
+- [Set-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepinstallapplication?view=sccm-ps)
 
 ### Properties  
 
@@ -968,6 +978,12 @@ The following conditions affect the applications installed by the task sequence:
 #### If an application fails, continue installing other applications in the list
 
 This setting specifies that the step continues when an individual application installation fails. If you specify this setting, the task sequence continues regardless of any installation errors. If you don't specify this setting, and the installation fails, the step immediately ends.  
+
+#### Clear application content from cache after installing
+
+<!--4485675-->
+Starting in version 1906, delete the app content from the client cache after the step runs. This behavior is beneficial on devices with small hard drives or when installing lots of large apps in succession.
+
 
 ### Options
 
