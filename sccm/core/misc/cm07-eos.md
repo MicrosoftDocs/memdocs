@@ -2,7 +2,7 @@
 title: End of support
 titleSuffix: Configuration Manager 2007
 description: Support ends for System Center Configuration Manager 2007 and Forefront Endpoint Protection 2010 on July 9, 2019.
-ms.date: 11/05/2018
+ms.date: 07/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -16,13 +16,16 @@ ms.collection: M365-identity-device-management
 
 # Product end of support
 
-*Applies to: System Center Configuration Manager 2007*
+*Applies to: System Center Configuration Manager 2007, Forefront Endpoint Protection 2010*
 
-Support ends for **System Center Configuration Manager 2007** and **Forefront Endpoint Protection 2010** on July 9, 2019. After this date, Microsoft won't provide the following services for these products: 
+## **System Center Configuration Manager 2007** and **Forefront Endpoint Protection 2010** are out of support
+
+Support for **System Center Configuration Manager 2007** and **Forefront Endpoint Protection 2010** ended on July 9, 2019. Microsoft no longer provides the following services for these products:
+
 - Security updates
 - Non-security updates
 - Assisted support options (free or paid)
-- Online technical content updates 
+- Online technical content updates
 
 Microsoft recommends the following migration plan:
 
@@ -32,13 +35,12 @@ Microsoft recommends the following migration plan:
 
 - Migrate Forefront Endpoint Protection 2010 standalone to System Center Endpoint Protection (current branch) standalone.  
 
-
 For more information, see the following articles:
 
 - [Microsoft Support article](https://support.microsoft.com/help/4096323)  
 - [Configuration Manager support blog post](https://blogs.technet.microsoft.com/configurationmgr/2018/03/30/configuration-manager-2007-approaching-end-of-support-what-you-need-to-know/)  
 - [Introduction to Configuration Manager current branch](/sccm/core/understand/introduction)  
 - [Documentation on how to migrate to Configuration Manager current branch](/sccm/core/migration/migrate-data-between-hierarchies)  
-    - This article also includes a video that discusses and demonstrates common migration scenarios.
+    This article also includes a video that discusses and demonstrates common migration scenarios.
 
-The Configuration Manager 2007 documentation library is still available on [Microsoft TechNet](https://technet.microsoft.com/library/bb735860.aspx).
+The [Configuration Manager 2007 documentation library](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb735860\(v=technet.10\)) is still available.
