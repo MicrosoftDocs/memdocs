@@ -45,15 +45,15 @@ Use the System Center Configuration Manager **Windows 10** configuration item to
   
 10. For each settings group, you can also configure the severity reported when a configuration item is found to be noncompliant:  
   
-    -   **None** - Devices that fail this compliance rule don't report a failure severity for Configuration Manager reports.  
+    -   **None**: Devices that fail this compliance rule don't report a failure severity for Configuration Manager reports.  
   
-    -   **Information** - Devices that fail this compliance rule report a failure severity of **Information** for Configuration Manager reports.  
+    -   **Information**: Devices that fail this compliance rule report a failure severity of **Information** for Configuration Manager reports.  
   
-    -   **Warning** - Devices that fail this compliance rule report a failure severity of **Warning** for Configuration Manager reports.  
+    -   **Warning**: Devices that fail this compliance rule report a failure severity of **Warning** for Configuration Manager reports.  
   
-    -   **Critical** - Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports.  
+    -   **Critical**: Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports.  
   
-    -   **Critical with event** - Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. This severity level is also logged as a Windows event in the application event log.  
+    -   **Critical with event**: Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. This severity level is also logged as a Windows event in the application event log.  
   
 11. On the **Platform Applicability** page of the wizard, review any settings that aren't compatible with the supported platforms you selected earlier. You can go back and remove these settings, or you can continue.  
   
@@ -70,14 +70,14 @@ Use the System Center Configuration Manager **Windows 10** configuration item to
   
 |Setting|Details|  
 |-------------|-------------|  
-|**Require password settings on devices**|Require a password on supported devices.|  
+|**Require password settings on devices**|Requires a password on supported devices.|  
 |**Minimum password length (characters)**|The minimum length in characters for the password.|  
 |**Password expiration in days**|The number of days before the password must be changed.|  
 |**Number of passwords remembered**|Prevents reusing previous passwords.|  
 |**Number of failed logon attempts before a device is wiped**|Wipes the device if sign-in fails this number of times.|  
 |**Idle time before device is locked**|Specifies how many minutes the device must be inactive before it's automatically locked.|  
 |**Password complexity**|Choose whether you can specify a PIN such as ‘1234’, or whether you must supply a strong password.|
-|**Number of complex character sets required in password**|If you selected a **Strong** password, use this setting to configure the number of complex character sets required. For a strong password, this setting should be set to at least **3, which means both letters and numbers are required. Select **4** if you want to enforce a password that additionally requires special characters, such as **(%$**.<br>(Windows 10 only)  |
+|**Number of complex character sets required in password**|If you selected a **Strong** password, use this setting to configure the number of complex character sets required. For a strong password, this setting should be set to at least **3**, which means both letters and numbers are required. Select **4** if you want to enforce a password that additionally requires special characters, such as **(%$**.<br>(Windows 10 only)  |
   
 ###  Device  
   
@@ -91,13 +91,13 @@ Use the System Center Configuration Manager **Windows 10** configuration item to
 |------------------|-------------|  
 |**Settings synchronization**|Allows synchronization of settings between devices.|  
 |**Credentials synchronization**|Allows synchronization of credentials between devices.|  
-|**Settings synchronization over metered connections**|Allow settings to be synchronized when the internet connection is metered.|  
+|**Settings synchronization over metered connections**|Allows settings to be synchronized when the internet connection is metered.|  
   
 ### Roaming  
   
 |Setting name|Details|  
 |------------------|-------------|  
-|**Data roaming**|Allow roaming between networks when accessing data.|  
+|**Data roaming**|Allows roaming between networks when accessing data.|  
   
 ### Encryption  
   
@@ -123,7 +123,7 @@ With the increase of employee-owned devices in the enterprise, there’s also an
 - Copies and pastes product info into a tweet.
 - Saves an in-progress sales report to their public cloud storage.
 
-Windows Information Protection (WIP, formerly Enterprise data protection) helps to protect against this potential data leakage, without otherwise interfering with the employee experience. WIP also helps to protect enterprise apps and data against accidental data leaks on enterprise-owned devices and personal devices that employees bring to work. WIP doesn't require changes to your environment or other apps.
+Windows Information Protection (WIP, formerly enterprise data protection) helps to protect against this potential data leakage, without otherwise interfering with the employee experience. WIP also helps to protect enterprise apps and data against accidental data leaks on enterprise-owned devices and personal devices that employees bring to work. WIP doesn't require changes to your environment or other apps.
 
  Configuration Manager Windows Information Protection configuration items manage the following:
  
