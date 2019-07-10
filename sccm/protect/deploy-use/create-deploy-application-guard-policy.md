@@ -87,7 +87,7 @@ When you enable file management, you may see errors logged in the client's DCMRe
   - FileTrustCriteria_condition not found
 - On non-compatible devices:
   - FileTrustCriteria_condition not found
-  - FileTrustCriteria_could not be located in the map
+  - FileTrustCriteria_condition could not be located in the map
   - FileTrustCriteria_condition not found in digest
 
 To edit Application Guard settings, expand **Endpoint Protection** in the **Assets and Compliance** workspace, then click on the **Windows Defender Application Guard** node. Right-click on the policy you want to edit, then select **Properties**.
