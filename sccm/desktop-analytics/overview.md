@@ -115,4 +115,4 @@ Desktop Analytics requires one of the following license subscriptions:
 
 The following tutorial provides a step-by-step guide to getting started with Desktop Analytics and Configuration Manager:  
 
-- [Deploy Windows 10 to a pilot](/sccm/desktop-analytics/tutorial-windows10)  
+- [Deploy Windows 10 to pilot](/sccm/desktop-analytics/tutorial-windows10)  
