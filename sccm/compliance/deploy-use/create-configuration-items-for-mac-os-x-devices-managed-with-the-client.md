@@ -92,7 +92,7 @@ The Mac OS X operating system uses property list (.plist) files to store applica
   
     -   For a rule type of **Value**, specify the following information:  
   
-        -   **The setting must comply with the following rule**. Select an operator and a value that is assessed for compliance with the selected setting. You can use the following operators:  
+        -   **The setting must comply with the following rule**: Select an operator and a value that is assessed for compliance with the selected setting. You can use the following operators:  
   
             -   **Equals**  
   
@@ -139,7 +139,7 @@ The Mac OS X operating system uses property list (.plist) files to store applica
   
             -   **The setting must not exist on client devices**  
   
-        -   **Noncompliance severity for reports:** Specify the severity level that is reported if this compliance rule fails. The available severity levels are:  
+        -   **Noncompliance severity for reports**: Specify the severity level that is reported if this compliance rule fails. The available severity levels are:  
   
             -   **None**: Computers that fail this compliance rule don't report a failure severity for Configuration Manager reports.  
   
