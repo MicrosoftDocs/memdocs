@@ -919,6 +919,13 @@ Use the following task sequence variables with this step:
 
 To add this step in the task sequence editor, select **Add**, select **Software**, and select **Install Application**.
 
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepinstallapplication?view=sccm-ps)
+- [New-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepinstallapplication?view=sccm-ps)
+- [Remove-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepinstallapplication?view=sccm-ps)
+- [Set-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepinstallapplication?view=sccm-ps)
+
 ### Properties  
 
 On the **Properties** tab for this step, configure the settings that are described in this section.  
