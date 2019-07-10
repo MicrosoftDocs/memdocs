@@ -176,15 +176,11 @@ The following permissions have been added to Configuration Manager's built-in **
 ## <a name="bkmk_content"></a> Content management
 
 ### Delivery Optimization download data in client data sources dashboard
+
 <!--3555759-->
+The client data sources dashboard now includes [Delivery Optimization](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#delivery-optimization) data. This dashboard helps you understand from where clients are getting content in your environment.
 
-The [Client data sources](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard) dashboard now includes [Delivery Optimization](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#delivery-optimization) data. This dashboard helps you understand from where clients are getting content in your environment.
-
-For example, the Client Content Sources tile displays the source from which clients got content:
-
-![Client Content Sources tile on the dashboard](./media/3555759-do-source.png)
-
-<!--For more information, see [Manage Express installation files for Windows 10 updates](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates).-->
+For more information, see [Client Data Sources dashboard](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard).
 
 ### Use your distribution point as an in-network cache server for Delivery Optimization
 <!--3555764-->
