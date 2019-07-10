@@ -440,6 +440,108 @@ To get CMPivot to work on the CAS in such a “double hop scenario”, you can d
 1. Restart the primary SQL servers.
 1. Restart the CAS site server and the CAS SQL servers.
 
+## <a name="bkmk_cmpivot1906"></a> CMPivot starting in version 1906
+
+Starting in version 1906, the following items were added to CMPivot:
+
+- [Joins, additional operators, and aggregators](bkmk_cmpivot_joins)
+- [Added CMPivot permissions to the Security Administrator role](bkmk_cmpivot_secadmin1906)
+- [CMPivot standalone](#bkmk_standalone) was added as a **pre-release feature**
+
+### <a name="bkmk_cmpivot_joins"></a> Add joins, additional operators, and aggregators in CMPivot
+<!--4054074-->
+You now have additional arithmetic operators, aggregators, and the ability to add query joins such as using Registry and File together. The following items have been added:
+
+#### Table operators
+
+|Table operators| Description|
+|-----|-----|
+| [join](https://docs.microsoft.com/azure/kusto/query/joinoperator)| Merge the rows of two tables to form a new table by matching row for the same device|
+|render|Renders results as graphical output|
+
+The render operator already exists in CMPivot. Support for multiple series and the **with** statement were added. For more information, see the [examples](#bkmk_cmpivot-examples) section and Kusto's [join operator](https://docs.microsoft.com/azure/kusto/query/joinoperator) article. 
+
+#### Limitations for joins
+
+1. The join column is always implicitly done on the **Device** field.
+1. You can use a maximum of 5 joins per query.
+1. You can use a maximum of 64 combined columns.
+
+#### Scalar operators
+
+|Operator| Description|Example|
+|-----|-----|-----|
+| + | Add| `2 + 1, now() + 1d`|
+| - |  Subtract| `2 - 1, now() - 1d`|
+| * | Multiply| `2 * 2`|
+| / | Divide | `2 / 1`|
+| % | Modulo | `2 % 1`
+
+#### Aggregation functions
+
+|Function| Description|
+|-----|-----|
+| percentile()| Returns an estimate for the specified nearest-rank percentile of the population defined by Expr|
+| sumif() | Returns a sum of Expr for which Predicate evaluates to true|
+
+#### Scalar functions
+
+|Function| Description|
+|-----|-----|
+| case()| Evaluates a list of predicates and returns the first result expression whose predicate is satisfied |
+| iff() | Evaluates the first argument and returns the value of either the second or third arguments depending on whether the predicate evaluated to true (second) or false (third)|
+ | indexof() | Function reports the zero-based index of the first occurrence of a specified string within input string|
+| strcat() | Concatenates between 1 and 64 arguments |
+| strlen()| Returns the length, in characters, of the input string|
+| substring() | Extracts a substring from a source string starting from some index to the end of the string |
+| tostring() | Converts input to a string operation |
+
+#### <a name="bkmk_cmpivot_examples1906"></a> Examples
+
+- Show device, manufacturer, model, and OSVersion:
+
+   ```Kusto
+   ComputerSystem
+   | project Device, Manufacturer, Model
+   | join (OperatingSystem | project Device, OSVersion=Caption)
+   ```
+
+- Show graph of boot times for a device:
+
+   ```Kusto
+   SystemBootData
+   | where Device == 'MyDevice'
+   | project SystemStartTime, BootDuration, OSStart=EventLogStart, GPDuration, UpdateDuration
+   | order by SystemStartTime desc
+   | render barchart with (kind=stacked, title='Boot times for MyDevice' ytitle='Time (ms)')
+   ```
+
+   ![Stacked bar chart showing boot times for a device in ms](./media/4054074-render-using-with-statement.png)
+
+### <a name="bkmk_cmpivot_secadmin1906"></a> Added CMPivot permissions to the Security Administrator role
+<!--4683130-->
+
+Starting in version 1906, the following permissions have been added to Configuration Manager's built-in **Security Administrator** role:
+ - Read on SMS Script
+ - Run CMPivot on Collection
+ - Read on Inventory Report
+
+### <a name="bkmk_standalone"></a> CMPivot standalone
+<!--3555890, 4619340, 4683130 -->
+
+Starting in version 1906, you can use CMPivot as a standalone app. CMPivot standalone is a **pre-release feature**. Run CMPivot outside of the Configuration Manager console to view the real-time state of devices in your environment. This change enables you to use CMPivot on a device without first installing the console.
+
+You can share the power of CMPivot with other personas, such as helpdesk or security admins, who don’t have the console installed on their computer. These other personas can use CMPivot to query Configuration Manager alongside the other tools that they traditionally use. By sharing this rich management data, you can work together to proactively solve business problems that cross roles.
+
+#### Install CMPivot standalone
+
+1. Set up the permissions needed to run CMPivot. For more information, see [prerequisites](#prerequisites). You can also use the [Security Administrator role](#bkmk_cmpivot_secadmin1906) if the permissions are aproprite for the user.
+2. Find the CMPivot app installer in the following path: `<site install path>\tools\CMPivot\CMPivot.msi`. You can run it from that path, or copy it to another location.
+3. When you run CMPivot, you will be asked to connect to a site. Specify the fully qualified domain name or computer name of either the Central Administration or primary site server.
+   - Each time you open CMPivot standalone you will be prompted to connect to a site server.
+4. Browse to the collection on which you want to run CMPivot, then run your query.
+
+   ![Browse to the the collection you want to run your query against](./media/3555890-cmpivot-standalone-browse-collection.png)
 
 ## Inside CMPivot
 
