@@ -34,8 +34,6 @@ You can exclude a collection of clients from automatically installing updated cl
 
 ![Settings for automatic upgrade exclusion](media/automatic_upgrade_exclusion.png)
 
-
-
 >[!NOTE]
 >Although the user interface states that clients will not be upgraded via any method, there are two methods you can use to override these settings. Client push installation and a manual client installation can be used to override this configuration. For more details, see the following section.
 
