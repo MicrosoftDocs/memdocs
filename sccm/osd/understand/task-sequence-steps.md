@@ -2,7 +2,7 @@
 title: Task sequence steps
 titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
-ms.date: 06/12/2019
+ms.date: 07/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -968,6 +968,12 @@ The following conditions affect the applications installed by the task sequence:
 #### If an application fails, continue installing other applications in the list
 
 This setting specifies that the step continues when an individual application installation fails. If you specify this setting, the task sequence continues regardless of any installation errors. If you don't specify this setting, and the installation fails, the step immediately ends.  
+
+#### Clear application content from cache after installing
+
+<!--4485675-->
+Starting in version 1906, delete the app content from the client cache after the step runs. This behavior is beneficial on devices with small hard drives or when installing lots of large apps in succession.
+
 
 ### Options
 

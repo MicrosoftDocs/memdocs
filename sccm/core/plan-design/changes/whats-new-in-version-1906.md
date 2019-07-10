@@ -368,11 +368,14 @@ You can now see additional metadata tags during the driver package creation wiza
  <!--For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content).-->
 
 ### Clear app content from client cache during task sequence
+
 <!--4485675-->
+In the **Install Application** task sequence step, you can now delete the app content from the client cache after the step runs.
 
-In the **Install Application** task sequence step, you can now delete the app content from the client cache after the step runs. This behavior is beneficial on devices with small hard drives or when installing lots of large apps in succession.
+For more information, see [About task sequence steps](/sccm/osd/understand/task-sequence-steps#BKMK_InstallApplication).
 
- <!--For more information, see [About task sequence steps](/sccm/osd/understand/task-sequence-steps#BKMK_InstallApplication).-->
+> [Important]  
+> Update the target client to the latest version to support this new feature.
 
 ### Reclaim SEDO lock for task sequences
 
