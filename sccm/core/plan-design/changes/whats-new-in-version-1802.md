@@ -29,7 +29,7 @@ The following additional updates to this release are also now available:
 >  Learn more about:    
 >   - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites)  
 >   - [Installing updates at sites](/sccm/core/servers/manage/updates)  
->   - [Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+>   - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 The following sections provide details about the changes and new capabilities in version 1802 of Configuration Manager.  
 
@@ -129,7 +129,7 @@ When creating an instance of the [cloud management gateway](/sccm/core/clients/m
 
 ### Configure hardware inventory to collect strings larger than 255 characters
 <!-- 1357389 -->
-You can configure the length of strings to be greater than 255 characters for hardware inventory properties. This change applies only to newly added classes and for hardware inventory properties that aren't keys. For details, see the [Extend hardware inventory](/sccm/core/clients/manage/inventory/extend-hardware-inventory#BKMK_GreaterThan255) article. 
+You can configure the length of strings to be greater than 255 characters for hardware inventory properties. This change applies only to newly added classes and for hardware inventory properties that aren't keys. For details, see the [Extend hardware inventory](/sccm/core/clients/manage/inventory/extend-hardware-inventory#bkmk_GreaterThan255) article. 
 
  ### Deprecation announcement for Linux and Unix client support
  <!--510139-->
@@ -156,7 +156,7 @@ Starting in this release, Silverlight is no longer installed on client devices a
  
 ### Co-management dashboard in System Center Configuration Manager
 <!--1356648-->
-Beginning in this release, you can view a dashboard with information about co-management. The dashboard helps you review machines that are co-managed in your environment. The graphs can help identify devices that might need attention. For details, see the [Co-management dashboard](/sccm/core/clients/manage/client-management-dashboard) article. 
+Beginning in this release, you can view a dashboard with information about co-management. The dashboard helps you review machines that are co-managed in your environment. The graphs can help identify devices that might need attention. For details, see the [Co-management dashboard](/sccm/comanage/how-to-monitor#co-management-dashboard) article. 
 
 
 ## Compliance settings
@@ -171,15 +171,15 @@ For customers who use the [Microsoft Edge](https://technet.microsoft.com/microso
 
 ### Allow user interaction when installing an application
 <!-- 1356976 -->
-Allow an end user to interact with an application installation during the running of the task sequence. For example, run a setup process that prompts the end user for various options. Some application installers can't silence user prompts, or the installation process may require specific configuration values only known to the user. This feature allows you to handle these installation scenarios. For more information, see [Specify user experience options for the deployment type](/sccm/apps/deploy-use/create-applications#specify-user-experience-options-for-the-deployment-type).
+Allow an end user to interact with an application installation during the running of the task sequence. For example, run a setup process that prompts the end user for various options. Some application installers can't silence user prompts, or the installation process may require specific configuration values only known to the user. This feature allows you to handle these installation scenarios. For more information, see [Specify user experience options for the deployment type](/sccm/apps/deploy-use/create-applications#bkmk_dt-ux).
 
 ### Do not automatically upgrade superseded applications
 <!-- 1351266 -->
-Configure an application deployment to not automatically upgrade any superseded version. Now when creating the deployment, on the **Deployment Settings** page of the **Deploy Software Wizard**, for **Available** install purpose, you can enable or disable the option to **Automatically upgrade any superseded versions of this application**. For more information, see [Specify deployment settings](/sccm/apps/deploy-use/deploy-applications#specify-deployment-settings).
+Configure an application deployment to not automatically upgrade any superseded version. Now when creating the deployment, on the **Deployment Settings** page of the **Deploy Software Wizard**, for **Available** install purpose, you can enable or disable the option to **Automatically upgrade any superseded versions of this application**. For more information, see [Specify deployment settings](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy-settings).
 
 ### Approve application requests for users per device
 <!-- 1357015 -->
-Starting in this release, when a user requests an application that requires approval, the specific device name is now a part of the request. If the administrator approves the request, the user is only able to install the application on that device. The user must submit another request to install the application on another device. For more information, see [Specify deployment settings](/sccm/apps/deploy-use/deploy-applications#specify-deployment-settings).
+Starting in this release, when a user requests an application that requires approval, the specific device name is now a part of the request. If the administrator approves the request, the user is only able to install the application on that device. The user must submit another request to install the application on another device. For more information, see [Specify deployment settings](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy-settings).
 
  > [!Note]  
  > This is an optional feature. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).  
@@ -194,7 +194,7 @@ Starting in this release, when a user requests an application that requires appr
 
 ### Windows 10 in-place upgrade task sequence via cloud management gateway
 <!-- 1357149 -->
-The Windows 10 [in-place upgrade task sequence](/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version) now supports deployment to internet-based clients managed through the [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the corporate network. For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#deploy-windows-10-in-place-upgrade-via-cmg).
+The Windows 10 [in-place upgrade task sequence](/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version) now supports deployment to internet-based clients managed through the [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the corporate network. For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence).
 
 ### Improvements to Windows 10 in-place upgrade task sequence
 <!-- 1357425 -->
@@ -234,11 +234,11 @@ If you deploy applications as available to users, they can now browse and instal
 
 ### Hide installed applications in Software Center
 <!--1357592-->
-Installed applications can now be hidden in Software Center. Applications that are already installed will no longer show in the Applications tab when this option is enabled under client settings. This option is set as the default when you install or upgrade to Configuration Manager 1802.  Installed applications are still available for review under the installation status tab. [Hide installed applications in Software Center](/sccm/core/clients/deploy/about-client-settings#BKMK_HideInstalled) has additional details.   
+Installed applications can now be hidden in Software Center. Applications that are already installed will no longer show in the Applications tab when this option is enabled under client settings. This option is set as the default when you install or upgrade to Configuration Manager 1802.  Installed applications are still available for review under the installation status tab. [Hide installed applications in Software Center](/sccm/core/clients/deploy/about-client-settings#bkmk_HideInstalled) has additional details.   
 
 ### Hide unapproved applications in Software Center
  <!--1355146-->
-When this client setting option is enabled, user available applications that require approval are hidden in Software Center.  [Hide unapproved applications in Software Center](/sccm/core/clients/deploy/about-client-settings#BKMK_HideUnapproved) has additional details.  
+When this client setting option is enabled, user available applications that require approval are hidden in Software Center.  [Hide unapproved applications in Software Center](/sccm/core/clients/deploy/about-client-settings#bkmk_HideUnapproved) has additional details.  
 
 ### Software Center shows user additional compliance information
 <!-- 1235616 -->

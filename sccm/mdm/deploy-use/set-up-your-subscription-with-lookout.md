@@ -88,19 +88,19 @@ Use the following steps to gather the information you need to give to the Lookou
 ## Configure enrollment groups
 1. As a best practice, create an Azure AD security group in the [Azure portal](https://portal.azure.com) containing a small number of users to test Lookout integration.
 
-	> [!NOTE]  
-	> All the Lookout-supported, Intune-enrolled devices of users in an enrollment group in Azure AD that are identified and supported are enrolled and eligible for activation in Lookout MTD console.
+    > [!NOTE]  
+    > All the Lookout-supported, Intune-enrolled devices of users in an enrollment group in Azure AD that are identified and supported are enrolled and eligible for activation in Lookout MTD console.
 
 2. In the [Lookout Console](https://aad.lookout.com), from the **System** module, choose the **Connectors** tab, and select **Enrollment Management** to define a set of users whose devices should be enrolled with Lookout. Add the Azure AD security group **Display Name** for enrollment.
 
-	![screenshot of the Intune connector enrollment page](media/lookout-enrollment.png)
+    ![screenshot of the Intune connector enrollment page](media/lookout-enrollment.png)
 
-	>[!IMPORTANT]  
-	> The  **Display Name** is case-sensitive as shown the in the **Properties** of the security group in the Azure portal. As shown in the image below, the **Display Name** of the security group is camel case while the title is all lower case. In the Lookout console match the **Display Name** case for the security group.
-	>![screenshot of the Azure portal, Azure Active Directory service, properties page](media/aad-group-display-name.png)
+    >[!IMPORTANT]  
+    > The  **Display Name** is case-sensitive as shown the in the **Properties** of the security group in the Azure portal. As shown in the image below, the **Display Name** of the security group is camel case while the title is all lower case. In the Lookout console match the **Display Name** case for the security group.
+    >![screenshot of the Azure portal, Azure Active Directory service, properties page](media/aad-group-display-name.png)
 
-	>[!NOTE]  
-	>The best practice is to use the default five minutes for the increment of time to check for new devices. Current limitations, **Lookout cannot validate group display names:** Ensure the **DISPLAY NAME** field in the Azure portal exactly matches the Azure AD security group. **Creating nest groups is not supported:**  Azure AD security groups used in Lookout must contain users only. They cannot contain other groups.
+    >[!NOTE]  
+    >The best practice is to use the default five minutes for the increment of time to check for new devices. Current limitations, **Lookout cannot validate group display names:** Ensure the **DISPLAY NAME** field in the Azure portal exactly matches the Azure AD security group. **Creating nest groups is not supported:**  Azure AD security groups used in Lookout must contain users only. They cannot contain other groups.
 
 3.  Once a group is added, the next time a user opens the Lookout for Work app on their supported device, the device is activated in Lookout.
 

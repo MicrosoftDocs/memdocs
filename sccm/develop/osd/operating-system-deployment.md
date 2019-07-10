@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 This section provides you with information about how to programmatically configure and use operating system deployment in System Center Configuration Manager.  
 
 > [!NOTE]
->  General information about Operating System Deployment can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt346023.aspx) under [Manage enterprise operating systems with System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt627933.aspx).  
+>  General information about Operating System Deployment can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/library/mt346023.aspx) under [Manage enterprise operating systems with System Center Configuration Manager](https://technet.microsoft.com/library/mt627933.aspx).  
 
 ## Operating System Deployment topics  
 

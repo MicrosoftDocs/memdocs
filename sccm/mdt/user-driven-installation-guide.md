@@ -69,9 +69,9 @@ manager: dougeby
 
  The resources listed in Table 1 reflect the system resources recommended to perform the steps in this guide. For information on the minimum system resource requirements for:  
 
--   Windows Server 2008 R2, see [Installing Windows Server 2008 R2](http://technet.microsoft.com/library/dd379511\(WS.10\).aspx)  
+-   Windows Server 2008 R2, see [Installing Windows Server 2008 R2](https://technet.microsoft.com/library/dd379511\(WS.10\).aspx)  
 
--   SQL Server 2008 R2, see [Hardware and Software Requirements for Installing SQL Server 2008 R2](http://technet.microsoft.com/library/ms143506.aspx)  
+-   SQL Server 2008 R2, see [Hardware and Software Requirements for Installing SQL Server 2008 R2](https://technet.microsoft.com/library/ms143506.aspx)  
 
 > [!NOTE]
 >  This guide assumes that MDT is being evaluated on 64-bit (x64) physical or virtual computers. If evaluating MDT on 32-bit (x86) platforms, download and install the x86 editions of MDT and the components that this guide describes.  
@@ -424,7 +424,7 @@ manager: dougeby
 ###  <a name="InstallConfigurationManager"></a> Step 1-11: Install Configuration Manager  
  When the other products and technologies have been installed, install Configuration Manager. Before doing so, however, extend the Active Directory schema so that computers can locate the distribution points, service locator points, and other server roles. Also, you can extend the schema after you have installed Configuration Manager. For more information about how to extend the Active Directory schema for Configuration Manager, see the section, “Extend the Active Directory Schema,” in the Configuration Manager Documentation Library, which is installed with Configuration Manager.  
 
- After extending the Active Directory schema, install Configuration Manager. The configuration of WDG-MDT-01 supports Configuration Manager for this sample. The configuration of computers in the production network may vary. To find out more about the prerequisites for installing Configuration Manager, see [Supported Configurations for Configuration Manager](http://technet.microsoft.com/library/gg682077.aspx).  
+ After extending the Active Directory schema, install Configuration Manager. The configuration of WDG-MDT-01 supports Configuration Manager for this sample. The configuration of computers in the production network may vary. To find out more about the prerequisites for installing Configuration Manager, see [Supported Configurations for Configuration Manager](https://technet.microsoft.com/library/gg682077.aspx).  
 
  **To install Configuration Manager**  
 
@@ -1207,7 +1207,7 @@ manager: dougeby
 
      The Windows PowerShell Modules command prompt opens.  
 
-13. Create a Windows PowerShell drive that uses the MDT PowerShell provider by running the [New-PSDrive](http://technet.microsoft.com/library/hh849829.aspx) cmdlet, as shown in the following example:  
+13. Create a Windows PowerShell drive that uses the MDT PowerShell provider by running the [New-PSDrive](https://technet.microsoft.com/library/hh849829.aspx) cmdlet, as shown in the following example:  
 
     ```  
     New-PSDrive -Name DS001 -PSProvider mdtprovider -Root d:\DeploymentShare$  
@@ -1485,7 +1485,7 @@ manager: dougeby
 
 - Modify the Config.xml file.  
 
-  For more information about each of these methods, see [Customize Setup before installing Office 2010](http://technet.microsoft.com/library/cc179121.aspx).  
+  For more information about each of these methods, see [Customize Setup before installing Office 2010](https://technet.microsoft.com/library/cc179121.aspx).  
 
   For the purposes of this guide, the unattended installation of Office Professional Plus 2010 will be done by creating an OCT Setup customization file (.msp file). You will save the OCT Setup customization file in the Updates folder, which is automatically scanned by the Office Professional Plus 2010 Setup Wizard.  
 
@@ -2151,7 +2151,7 @@ Figure 1. Custom wizard page to be created
 
      The Windows PowerShell Modules command prompt opens.  
 
-14. Create a Windows PowerShell drive that uses the MDT PowerShell provider by running the [New-PSDrive](http://technet.microsoft.com/library/hh849829.aspx) cmdlet as shown in the following example:  
+14. Create a Windows PowerShell drive that uses the MDT PowerShell provider by running the [New-PSDrive](https://technet.microsoft.com/library/hh849829.aspx) cmdlet as shown in the following example:  
 
     ```  
     New-PSDrive -Name DS001 -PSProvider mdtprovider -Root d:\DeploymentShare$  

@@ -64,10 +64,10 @@ To import a PFX certificate, you use the Configuration Manager SDK to deploy a C
 Imported certificates are later deployed to enrolled devices.
 
 1. On the **PFX Certificate** page of the **Create Certificate Profile Wizard**, specify where the device key storage provider:
-	- 	**Install to Trusted Platform Module (TPM) if present**  
-    -   **Install to Trusted Platform Module (TPM), otherwise fail** 
-    -   **Install to Windows Hello for Business otherwise fail** 
-    -   **Install to Software Key Storage Provider** 
+    - **Install to Trusted Platform Module (TPM) if present**  
+    - **Install to Trusted Platform Module (TPM), otherwise fail** 
+    - **Install to Windows Hello for Business otherwise fail** 
+    - **Install to Software Key Storage Provider** 
 2. Click **Next**. 
 3. On the **Supported Platforms** page of the wizard, choose the supported device platforms and then click **Next**.
 
@@ -83,9 +83,9 @@ Use the [Configuration Manager SDK](http://go.microsoft.com/fwlink/?LinkId=61352
 
 The Create PFX Script added in Configuration Manager 2012 SP2 adds an SMS_ClientPfxCertificate class to the SDK. This class includes the following methods:  
 
-    -   `ImportForUser`  
+-   `ImportForUser`  
 
-    -   `DeleteForUser`  
+-   `DeleteForUser`  
 
 The following example imports credentials into a PFX certificate profile.
 

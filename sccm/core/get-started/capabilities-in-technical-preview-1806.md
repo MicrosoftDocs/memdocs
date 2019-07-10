@@ -76,7 +76,7 @@ SCUP continues to support other catalogs and scenarios. The list of catalogs in 
 
     > [!Tip]  
     > The software update point requires HTTPS because it's a requirement for the WSUS APIs used to handle signing certificates. Clients don't need to be HTTPS-enabled as well. For more information on enabling HTTPS on WSUS, see the following articles for assistance:  
-    > - [Secure WSUS with the Secure Sockets Layer Protocol](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#bkmk_2.5.ConfigSSL) 
+    > - [Secure WSUS with the Secure Sockets Layer Protocol](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
     > - [WSUS Support blog post](https://blogs.technet.microsoft.com/sus/2011/05/09/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names/)
 
 - Sufficient disk space on the software update point, WSUSContent folder, to store the source binary content for third-party software updates. The amount of required storage varies based on the vendor, types of updates, and specific updates that you publish for deployment. If you need to move the WSUSContent folder to another drive with more free space, see the WSUS support team blog post [How to change the location where WSUS stores updates locally](https://blogs.technet.microsoft.com/sus/2008/05/19/wsus-how-to-change-the-location-where-wsus-stores-updates-locally/).  
@@ -250,7 +250,7 @@ This release includes the following improvements to the cloud management gateway
 
 ### Simplified client bootstrap command line
 <!--1358215-->
-When installing the Configuration Manager client on the internet via a CMG, fewer command-line properties are now required. For more information on one example of this scenario, see the [Command line to install Configuration Manager client](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client) when preparing for co-management. 
+When installing the Configuration Manager client on the internet via a CMG, fewer command-line properties are now required. For more information on one example of this scenario, see the [Command line to install Configuration Manager client](/sccm/comanage/how-to-prepare-Win10#install-the-configuration-manager-client) when preparing for co-management. 
 
 The following command-line properties are required in all scenarios:
   - CCMHOSTNAME  
@@ -274,7 +274,7 @@ Previously, you had to deploy a cloud distribution point and CMG as separate rol
 
 ### Trusted root certificate isn't required with Azure AD
 <!--503899-->
-When you create a CMG, you're no longer required to provide a [trusted root certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-trusted-root-certificate-to-clients) on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard.
+When you create a CMG, you're no longer required to provide a [trusted root certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_cmgroot) on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard.
 
 > [!Important]  
 > If you're using PKI client authentication certificates, then you still must add a trusted root certificate to the CMG.

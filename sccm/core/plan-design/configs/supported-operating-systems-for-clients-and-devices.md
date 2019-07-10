@@ -89,7 +89,7 @@ Windows Server semi-annual channel versions are Server Core installations, such 
  Configuration Manager tests and supports Windows Server Datacenter editions, but isn't officially certified for Windows Server. Configuration Manager hotfix support isn't offered for issues that are specific to Windows Server Datacenter Edition. For more information on the Windows Server certification program, see [Windows Server Catalog](https://www.windowsservercatalog.com/). 
 
 #### <a name="bkmk_note2"></a> Note 2
- To support [client push installation](/sccm/core/clients/deploy/plan/client-installation-methods#client-push-installation), add the File Server service of the File and Storage Services server role. For more information about installing Windows features on Server Core, see [Install roles, role services, and features by using Windows PowerShell cmdlets](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#BKMK_installwps).  
+ To support [client push installation](/sccm/core/clients/deploy/plan/client-installation-methods#client-push-installation), add the File Server service of the File and Storage Services server role. For more information about installing Windows features on Server Core, see [Install roles, role services, and features by using Windows PowerShell cmdlets](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-windows-powershell-cmdlets).  
 
 #### <a name="bkmk_note3"></a> Note 3
  The new Software Center app isn't supported on any version of Windows Server Core.<!--SCCMDocs issue 683-->

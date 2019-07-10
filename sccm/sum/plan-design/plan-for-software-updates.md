@@ -5,7 +5,7 @@ description: A plan for the software update point infrastructure is essential be
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/21/2019
+ms.date: 06/19/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -47,7 +47,7 @@ The number of supported clients depends on the version of Windows Server Update 
     - Increase the WsusPool Queue Length to 2000
     - Increase the WsusPool Private Memory limit x4 times, or set to 0 (unlimited). For example, if the default limit is 1,843,200 KB, increase it to 7,372,800. For more information, see this [Configuration Manager support team blog post](https://blogs.technet.microsoft.com/configurationmgr/2015/03/23/configmgr-2012-support-tip-wsus-sync-fails-with-http-503-errors/).  
 
-    For more information about hardware requirements for the software update point, see [Recommended hardware for site systems](/sccm/core/plan-design/configs/recommended-hardware#a-namebkmkscalesiesystemsa-site-systems).  
+    For more information about hardware requirements for the software update point, see [Recommended hardware for site systems](/sccm/core/plan-design/configs/recommended-hardware#bkmk_ScaleSieSystems).  
 
 
 ### <a name="bkmk_sum-capacity-obj"></a> Capacity planning for software updates objects  
@@ -146,7 +146,9 @@ To look up the meaning of an error code, convert the decimal error code to hexad
 Switch Configuration Manager clients to a new software update point when there are issues with the active software update point. This change only happens when a client receives multiple software update points from a management point.
 
 > [!IMPORTANT]    
-> When you switch devices to use a new server, the devices use fallback to find that new server. Before you start this change, review your boundary group configurations to make sure that your software update points are in the correct boundary groups. For more information, see [Software update points](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points).  
+> When you switch devices to use a new server, the devices use fallback to find that new server. Clients switch to the new software update point during their next software updates scan cycle.<!-- SCCMDocs#1537 -->
+>
+> Before you start this change, review your boundary group configurations to make sure that your software update points are in the correct boundary groups. For more information, see [Software update points](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points).  
 >
 > Switching to a new software update point generates additional network traffic. The amount of traffic depends on your WSUS configuration settings, for example, the synchronized classifications and products, or use of a shared WSUS database. If you plan to switch multiple devices, consider doing so during maintenance windows. This timing reduces the impact to your network when clients scan with the new software update point.  
 
@@ -255,7 +257,7 @@ This section provides information about the steps to take to successfully plan a
 
 Install the software update point role on a site system that meets the minimum requirements for WSUS and the supported configurations for Configuration Manager site systems.  
 
--   For more information about the minimum requirements for the WSUS server role in Windows Server, see [Review considerations and system requirements](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#BKMK_1.1).  
+-   For more information about the minimum requirements for the WSUS server role in Windows Server, see [Review considerations and system requirements](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#11-review-considerations-and-system-requirements).  
 
 -   For more information about the supported configurations for Configuration Manager site systems, see [Site and site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites).  
 
@@ -292,7 +294,7 @@ When a WSUS server is configured as a software update point, you're no longer ab
 When you add the software update point role on a primary site server, you can't use a WSUS server that's configured as a replica. When the WSUS server is configured as a replica, Configuration Manager fails to configure the WSUS server, and the WSUS synchronization fails. The first software update point that you install at a primary site is the default software update point. Additional software update points at the site are configured as replicas of the default software update point.  
 
 ####  <a name="BKMK_WSUSandSSL"></a> Decide whether to configure WSUS to use SSL  
-Use the SSL protocol to help secure the software update point. WSUS uses SSL to authenticate client computers and downstream WSUS servers to the WSUS server. WSUS also uses SSL to encrypt software update metadata. When you choose to secure WSUS with SSL, prepare the WSUS server before you install the software update point. For more information, see the [Configure SSL on the WSUS server](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#bkmk_2.5.ConfigSSL) article in the documentation for WSUS. 
+Use the SSL protocol to help secure the software update point. WSUS uses SSL to authenticate client computers and downstream WSUS servers to the WSUS server. WSUS also uses SSL to encrypt software update metadata. When you choose to secure WSUS with SSL, prepare the WSUS server before you install the software update point. For more information, see the [Configure SSL on the WSUS server](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) article in the documentation for WSUS. 
 
 When you install and configure the software update point, select the option to **Enable SSL communications for the WSUS Server**. Otherwise, Configuration Manager configures WSUS not to use SSL. When you enable SSL on a software update point, also configure any software update points at child sites to use SSL.  
 
@@ -310,44 +312,10 @@ The connection to Microsoft Update is always configured to use port 80 for HTTP 
 
 
 #### Restrict access to specific domains  
-If your organization doesn't allow the ports and protocols to be open to all addresses on the firewall between the active software update point and the internet, restrict access to the following domains so that WSUS and Automatic Updates can communicate with Microsoft Update:  
 
--   `http://windowsupdate.microsoft.com`  
+If your organization restricts network communication with the internet using a firewall or proxy device, you need to allow the active software update point to access internet endpoints. Then WSUS and Automatic Updates can communicate with the Microsoft Update cloud service.
 
--   `http://*.windowsupdate.microsoft.com`  
-
--   `https://*.windowsupdate.microsoft.com`  
-
--   `http://*.update.microsoft.com`  
-
--   `https://*.update.microsoft.com`  
-
--   `http://*.windowsupdate.com`  
-
--   `http://download.windowsupdate.com`  
-
--   `http://download.microsoft.com`  
-
--   `http://*.download.windowsupdate.com`  
-
--   `http://test.stats.update.microsoft.com`  
-
--   `http://ntservicepack.microsoft.com`  
-
-You might need to add the addresses below to the firewall that's located between the two site systems in the following cases: 
-- If child sites have a software update point 
-- If there is a remote active internet-based software update point at a site
-
-  **Software update point on the child site**  
-
-- `http://<FQDN for software update point on child site>`  
-
-- `https://<FQDN for software update point on child site>`  
-
-- `http://<FQDN for software update point on parent site>`  
-
-- `https://<FQDN for software update point on parent site>`  
-
+For more information, see [Internet access requirements](/sccm/core/plan-design/network/internet-endpoints#bkmk_sum).
 
 
 ##  <a name="BKMK_SyncSettings"></a> Plan for synchronization settings  

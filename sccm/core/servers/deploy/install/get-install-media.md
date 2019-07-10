@@ -18,6 +18,8 @@ ms.collection: M365-identity-device-management
 
 If you have System Center Configuration Manager volume licenses with Software Assurance, or if you have purchased licenses for System Center Configuration Manager volume licenses, you can download baseline source media to install System Center Configuration Manager from the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx).   
 
-If you would like to purchase volume licenses for System Center Configuration Manager, contact your preferred Microsoft Reseller or see [How to purchase through Volume Licensing]( https://www.microsoft.com/Licensing/how-to-buy/how-to-buy.aspx). You can also download media to install an evaluation edition of System Center Configuration Manager from the from the [TechNet Evaluation Center]( https://www.microsoft.com/en-us/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) website.
+If you have a System Center Configuration Manager license from EMS, Microsoft 365, or a Cloud Solution Provider (CSP), please see the [Product and Licensing FAQ](/sccm/core/understand/product-and-licensing-faq#bkmk_csp).
 
-To learn about baseline media for Configuration Manager, see [Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions).
+If you would like to purchase volume licenses for System Center Configuration Manager, contact your preferred Microsoft Reseller or see [How to purchase through Volume Licensing]( https://www.microsoft.com/Licensing/how-to-buy/how-to-buy.aspx). You can also download media to install an evaluation edition of System Center Configuration Manager from the [TechNet Evaluation Center]( https://www.microsoft.com/en-us/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) website.
+
+To learn about baseline media for Configuration Manager, see [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines).

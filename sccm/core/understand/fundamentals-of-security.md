@@ -122,4 +122,4 @@ The final layer of security is based on permissions to objects in the site datab
 
 - [Communication between endpoints](/sccm/core/plan-design/hierarchy/communications-between-endpoints)  
 
-- [Cryptographic controls technical reference](/sccm/core/plan-design/security/cryptographic-controls-tehnical-reference)  
+- [Cryptographic controls technical reference](/sccm/core/plan-design/security/cryptographic-controls-technical-reference)  

@@ -314,6 +314,11 @@
             "source_path": "sccm/core/servers/manage/queries-technical-reference.md",
             "redirect_url": "/sccm/core/servers/manage/introduction-to-queries",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/desktop-analytics/compat-risk.md",
+            "redirect_url": "/sccm/desktop-analytics/compat-assessment",
+            "redirect_document_id": false
         }
     ]
 }
