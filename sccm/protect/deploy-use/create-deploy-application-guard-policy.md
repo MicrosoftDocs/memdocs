@@ -72,7 +72,7 @@ Configures application behavior inside the Application Guard session. Before Con
   - Retain user-generated browser data
   - Audit security events in the isolated application guard session
 
-### <a name="bkmk_FM"></a> Application behavior settings (starting in version 1906)
+### <a name="bkmk_FM"></a> File management
 <!--3555858-->
 Starting in Configuration Manager version 1906, There's a policy setting that enables users to trust files that normally open in Application Guard. Upon successful completion, the files will open on the host device instead of in Application Guard. For more information about the Application Guard policies, see [Configure Windows Defender Application Guard policy settings](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard).
 
@@ -80,6 +80,15 @@ Starting in Configuration Manager version 1906, There's a policy setting that en
   - **Prohibited:** Don't allow users to mark files as trusted (default).
   - **File checked by antivirus:** Allow users to mark files as trusted after an antivirus check.
   - **All files:** Allow users to mark any file as trusted.
+
+When you enable file management, you may see errors logged in the client's DCMReporting.log. The errors below typically don't effect functionality: <!--4619457-->
+
+- On compatible devices:
+  - FileTrustCriteria_condition not found
+- On non-compatible devices:
+  - FileTrustCriteria_condition not found
+  - FileTrustCriteria_could not be located in the map
+  - FileTrustCriteria_condition not found in digest
 
 To edit Application Guard settings, expand **Endpoint Protection** in the **Assets and Compliance** workspace, then click on the **Windows Defender Application Guard** node. Right-click on the policy you want to edit, then select **Properties**.
 
