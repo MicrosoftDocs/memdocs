@@ -126,7 +126,7 @@ Set this option to **Yes** for users to receive the user policy on internet-base
 
 - The internet-based management point successfully authenticates the user by using Windows authentication (Kerberos or NTLM). For more information, see [Considerations for client communications from the internet](/sccm/core/plan-design/hierarchy/communications-between-endpoints#BKMK_clientspan).  
 
-- Starting in version 1710, the cloud management gateway successfully authenticates the user by using Azure Active Directory. For more information, see [Deploy user-available applications on Azure AD-joined devices](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices).  
+- The cloud management gateway successfully authenticates the user by using Azure Active Directory. For more information, see [Deploy user-available applications on Azure AD-joined devices](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices).  
 
 If you set this option to **No**, or any of the previous requirements aren't met, then a computer on the internet only receives computer policies. In this scenario, users can still see, request, and install applications from an internet-based Application Catalog. If this setting is **No**, but **Enable user policy on clients** is **Yes**, users don't receive user policies until the computer is connected to the intranet.  
 
@@ -202,7 +202,7 @@ If you leave this option as **No**, Configuration Manager clients might not be a
 ### Allow Silverlight applications to run in elevated trust mode
 
 > [!Important]  
-> Starting in Configuration Manager version 1802, the client doesn't automatically install Silverlight.
+> The client doesn't automatically install Silverlight.
 >
 > Starting in version 1806, the **Silverlight user experience** for the application catalog website point is no longer supported. Users should use the new Software Center. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).  
 
@@ -218,7 +218,7 @@ Type the name that users see in Software Center. This branding information helps
 
 ### Use new Software Center
 
-Starting in Configuration Manager 1802, the default setting is **Yes**.
+The default setting is **Yes**.
 
 If you set this option to **Yes**, then all client computers use the Software Center. Software Center shows user-available apps that were previously accessible only in the Application Catalog. The Application Catalog requires Silverlight, which isn't a prerequisite for the Software Center.
 
@@ -323,7 +323,7 @@ For more information about maintenance windows, see [How to use maintenance wind
 ## Delivery Optimization
 
 <!-- 1324696 -->
-You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows 10 devices. Starting in version 1802, configure Delivery Optimization to use your boundary groups when sharing content among peers.
+You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows 10 devices. Configure Delivery Optimization to use your boundary groups when sharing content among peers.
 
 > [!Note]
 > Delivery Optimization is only available on Windows 10 clients
@@ -332,6 +332,10 @@ You use Configuration Manager boundary groups to define and regulate content dis
 
 Choose **Yes** to apply the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the desired content.
 
+### Enable devices managed by Configuration Manager to use Delivery Optimization In-Network Cache servers (Beta) for content download
+
+<!--3555764-->
+Choose **Yes** to allow clients to download content from an on-premises distribution point that you enable as a Delivery Optimization In-Network Cache (DOINC) server. For more information, see [Delivery Optimization In-Network Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/doinc).
 
 
 ## Endpoint Protection
@@ -343,11 +347,11 @@ Choose **Yes** to apply the boundary group identifier as the Delivery Optimizati
 
 Choose **Yes** if you want to manage existing Endpoint Protection and Windows Defender clients on computers in your hierarchy.  
 
-Choose this option if you've already installed the Endpoint Protection client, and want to manage it with Configuration Manager. This separate installation includes a scripted process that uses a Configuration Manager application or package and program. Starting in Configuration Manager 1802, Windows 10 devices don't need to have the Endpoint Protection agent installed. However, those devices will still need **Manage Endpoint Protection client on client computers** enabled. <!--503654-->
+Choose this option if you've already installed the Endpoint Protection client, and want to manage it with Configuration Manager. This separate installation includes a scripted process that uses a Configuration Manager application or package and program. Windows 10 devices don't need to have the Endpoint Protection agent installed. However, those devices will still need **Manage Endpoint Protection client on client computers** enabled. <!--503654-->
 
 ### Install Endpoint Protection client on client computers
 
-Choose **Yes** to install and enable the Endpoint Protection client on client computers that aren't already running the client. Starting in Configuration Manager 1802, Windows 10 clients don't need to have the Endpoint Protection agent installed.  
+Choose **Yes** to install and enable the Endpoint Protection client on client computers that aren't already running the client. Windows 10 clients don't need to have the Endpoint Protection agent installed.  
 
 > [!NOTE]  
 > If the Endpoint Protection client is already installed, choosing **No** doesn't uninstall the Endpoint Protection client. To uninstall the Endpoint Protection client, set the **Manage Endpoint Protection client on client computers** client setting to **No**. Then, deploy a package and program to uninstall the Endpoint Protection client.  
@@ -628,11 +632,11 @@ Set this option to **Yes**, and then specify the following settings to brand Sof
 
 ### <a name="bkmk_HideUnapproved"></a> Hide unapproved applications in Software Center
 
-Starting in Configuration Manager version 1802, when you enable this option, user-available applications that require approval are hidden in Software Center.<!--1355146-->
+When you enable this option, user-available applications that require approval are hidden in Software Center.<!--1355146-->
 
 ### <a name="bkmk_HideInstalled"></a> Hide installed applications in Software Center
 
-Starting in Configuration Manager version 1802, when you enable this option, applications that are already installed no longer show in the Applications tab. This option is set as the default when you install or upgrade to Configuration Manager 1802. Installed applications are still available for review under the installation status tab. <!--1357592-->
+When you enable this option, applications that are already installed no longer show in the Applications tab. This option is set as the default when you install or upgrade to Configuration Manager 1802. Installed applications are still available for review under the installation status tab. <!--1357592-->
 
 ### <a name="bkmk_HideAppCat"></a> Hide Application Catalog link in Software Center
 
@@ -857,7 +861,7 @@ This client setting provides the following options:
 
 ### Enable third party software updates
 
-When you set this option to **Yes**, it sets the policy for **Allow signed updates for an intranet Microsoft update service location** and installs the signing certificate to the Trusted Publisher store on the client. This client setting was added in Configuration Manager version 1802.
+When you set this option to **Yes**, it sets the policy for **Allow signed updates for an intranet Microsoft update service location** and installs the signing certificate to the Trusted Publisher store on the client.
 
 ## State Messaging
 

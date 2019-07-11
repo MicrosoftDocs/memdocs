@@ -86,9 +86,21 @@ For more information, see [Support for Windows BranchCache](/sccm/core/plan-desi
 ## Delivery Optimization
 
 <!-- 1324696 -->
-You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows 10 devices. Starting in version 1802, configure Delivery Optimization to use your boundary groups when sharing content among peers. Client settings apply the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the content. For more information, see [delivery optimization](/sccm/core/clients/deploy/about-client-settings#delivery-optimization) client settings.
+You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows 10 devices. Configure Delivery Optimization to use your boundary groups when sharing content among peers. Client settings apply the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the content. For more information, see [delivery optimization](/sccm/core/clients/deploy/about-client-settings#delivery-optimization) client settings.
 
 Delivery Optimization is the recommended technology to [optimize Windows 10 update delivery](/sccm/sum/deploy-use/optimize-windows-10-update-delivery) of express installation files for Windows 10 quality updates.
+
+
+## Delivery Optimization In-Network Cache
+
+<!--3555764-->
+Starting in version 1906, you can install a Delivery Optimization In-Network Cache (DOINC) server on your distribution points. By caching this content on-premises, your clients can benefit from the Delivery Optimization feature, but you can help to protect WAN links.
+
+This cache server acts as an on-demand transparent cache for content downloaded by Delivery Optimization. Use client settings to make sure this server is offered only to the members of the local Configuration Manager boundary group.
+
+This cache is separate from Configuration Manager's distribution point content. If you choose the same drive as the distribution point role, it stores content separately.
+
+For more information, see [Delivery Optimization In-Network Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/doinc).
 
 
 ## Windows LEDBAT
