@@ -173,15 +173,11 @@ For more information, see [CMPivot](/sccm/core/servers/manage/cmpivot#bkmk_cmpiv
 ## <a name="bkmk_content"></a> Content management
 
 ### Delivery Optimization download data in client data sources dashboard
+
 <!--3555759-->
+The client data sources dashboard now includes [Delivery Optimization](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#delivery-optimization) data. This dashboard helps you understand from where clients are getting content in your environment.
 
-The [Client data sources](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard) dashboard now includes [Delivery Optimization](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#delivery-optimization) data. This dashboard helps you understand from where clients are getting content in your environment.
-
-For example, the Client Content Sources tile displays the source from which clients got content:
-
-![Client Content Sources tile on the dashboard](./media/3555759-do-source.png)
-
-<!--For more information, see [Manage Express installation files for Windows 10 updates](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates).-->
+For more information, see [Client Data Sources dashboard](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard).
 
 ### Use your distribution point as an in-network cache server for Delivery Optimization
 <!--3555764-->
@@ -358,18 +354,15 @@ The task sequence debugger is a new troubleshooting tool. You deploy a task sequ
 
  <!--(New article) For more information, see [Task sequence debugger](/sccm/osd/deploy-use/debug-task-sequence).-->
 
-### Improvements to driver management
-<!--3555958-->
-You can now see additional metadata tags during the driver package creation wizard.
-
- <!--For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content).-->
-
 ### Clear app content from client cache during task sequence
+
 <!--4485675-->
+In the **Install Application** task sequence step, you can now delete the app content from the client cache after the step runs.
 
-In the **Install Application** task sequence step, you can now delete the app content from the client cache after the step runs. This behavior is beneficial on devices with small hard drives or when installing lots of large apps in succession.
+For more information, see [About task sequence steps](/sccm/osd/understand/task-sequence-steps#BKMK_InstallApplication).
 
- <!--For more information, see [About task sequence steps](/sccm/osd/understand/task-sequence-steps#BKMK_InstallApplication).-->
+> [!Important]  
+> Update the target client to the latest version to support this new feature.
 
 ### Reclaim SEDO lock for task sequences
 
@@ -616,25 +609,18 @@ You can now set security scopes on folders. If you have access to an object in t
 
 
 ### Administration service support for security nodes
-<!--4223683-->
 
+<!--4223683-->
 You can now enable some nodes of the Configuration Manager console to use the administration service. This change allows the console to communicate with the SMS Provider over HTTPS instead of via WMI.
 
-In this version, it only affects the following nodes under the **Security** node in the **Administration** workspace:
+For more information, see [Administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service).
 
-- Administrative Users
-- Security Roles
-- Security Scopes
-- Console Connections
-
-<!--For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#tips) and [Administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service).-->
-
-
-
+> [!Note]
+> Starting in version 1906, the **Client Computer Communication** tab on the site properties is now called **Communication Security**.<!-- SCCMDocs#1645 -->  
 
 
 <!--
-## Other updatesgit statu
+## Other updates
 
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4498910).
 
