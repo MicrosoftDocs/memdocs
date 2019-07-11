@@ -2,7 +2,7 @@
 title: Technical preview 1907
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 1907.
-ms.date: 07/03/2019
+ms.date: 07/11/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
