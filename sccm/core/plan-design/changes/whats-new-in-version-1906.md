@@ -597,11 +597,10 @@ There's a new policy setting that enables users to trust files that normally ope
 ## <a name="bkmk_admin"></a> Configuration Manager console
 
 ### Add SMBIOS GUID column to device and device collection nodes
+
 <!--4526580-->
+In both the **Devices** and **Device Collections** nodes, you can now add a new column for **SMBIOS GUID**. This value is the same as the **BIOS GUID** property of the System Resource class. It's a unique identifier for the device hardware.
 
-In both the Devices and Device Collections nodes, you can now add a new column for **SMBIOS GUID**. This value is the same as the **BIOS GUID** property of the System Resource class. It's a unique identifier for the device hardware.
-
-<!--For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#tips).-->
 
 ### RBAC on folders
 <!--3600867-->
