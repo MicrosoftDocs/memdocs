@@ -55,7 +55,7 @@ For more information, see [Manage network bandwidth](/sccm/core/plan-design/hier
 
 ## Binary differential replication
 
-Binary differential replication (BDR) is sometimes known as delta replication. It's used to distribute updates to content that you previously deployed to other sites or to remote distribution points. To support BDR's reduction of bandwidth usage, install the **Remote Differential Compression** feature on distribution points. For more information, see [Distribution point prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012dppreq).
+Configuration Manager uses binary differential replication (BDR) to update content that you previously distributed to other sites or to remote distribution points. To support BDR's reduction of bandwidth usage, install the **Remote Differential Compression** feature on distribution points. For more information, see [Distribution point prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012dppreq).
 
 BDR minimizes the network bandwidth used to send updates for distributed content. It resends only the new or changed content instead of sending the entire set of content source files each time you change those files.  
 
@@ -68,6 +68,28 @@ When BDR is used, Configuration Manager identifies the changes that occur to sou
 BDR is supported between each parent and child site in a hierarchy. BDR is supported within a site between the site server and its regular distribution points. However, pull-distribution points and cloud distribution points don't support BDR to transfer content. Pull-distribution points support file-level deltas, transferring new files, but not blocks within a file.
 
 Applications always use binary differential replication. BDR is optional for packages and isn't enabled by default. To use BDR for packages, enable this functionality for each package. Select the option **Enable binary differential replication** when you create or edit a package.
+
+
+### BDR or delta replication
+
+<!-- SCCMDocs#1209 -->
+The following lists summarize the differences between *binary differential replication* (BDR) and *delta replication*.
+
+#### Summary of binary differential replication
+
+- Configuration Manager's term for Windows **Remote Differential Compression**
+- *Block*-level differences
+- Always enabled for apps
+- Optional on legacy packages
+- If a file already exists on the distribution point, and there's a change, the site uses BDR to replicate the block-level change instead of the entire file.
+
+#### Summary of delta replication
+
+- *File*-level differences
+- On by default, not configurable
+- When a package changes, the site checks for changes to the individual files instead of the entire package.
+    - If a file changes, use BDR to do the work
+    - If there's a new file, copy the new file
 
 
 ## Peer caching technologies
