@@ -110,7 +110,7 @@ After you install a Configuration Manager site, review the available maintenance
 
  Use the following procedure to help you set up the common settings of maintenance tasks.  
 
-### To set up maintenance tasks for Configuration Manager version 1906
+### <a name="bkmk_MTs1906"></a>To set up maintenance tasks for Configuration Manager version 1906
 <!--3555894-->
 Starting in version 1906, site server maintenance tasks can now be viewed, edited, and monitored from their own tab on the details view of a site server. You can still edit maintenance tasks by choosing **Site Maintenance** in the **Settings** group like you did in previous Configuration Manager versions.
 
