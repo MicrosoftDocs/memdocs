@@ -322,10 +322,11 @@ This is part of an [optional feature](/sccm/core/servers/manage/install-in-conso
 <!--For more information, see [Approve applications](/sccm/apps/deploy-use/create-app-group).-->
 
 ### Install an application for a device
-<!--4402180-->
-From the Configuration Manager console, you can now install applications to a device in real time. This feature can help reduce the need for separate collections for every application. This is an [optional feature](/sccm/core/servers/manage/install-in-console-updates#bkmk_options) called **Approve application requests for users per device**.  
 
-<!--For more information, see [Install applications for a device](/sccm/apps/deploy-use/install-app-for-device).-->
+<!--4402180-->
+From the Configuration Manager console, you can now install applications to a device in real time. This feature can help reduce the need for separate collections for every application.
+
+For more information, see [Install applications for a device](/sccm/apps/deploy-use/install-app-for-device).
 
 
 ### Improvements to app approvals
