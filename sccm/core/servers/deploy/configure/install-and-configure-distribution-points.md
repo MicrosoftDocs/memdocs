@@ -251,6 +251,7 @@ The following sections describe the distribution point configurations when you'r
 
 - [General settings](#bkmk_config-general)
 - [Drive Settings](#bkmk_config-drive)
+- [Firewall Settings](#bkmk_firewall)
 - [Pull Distribution Point](#bkmk_config-pull)
 - [PXE Settings](#bkmk_config-pxe)
 - [Multicast](#bkmk_config-multicast)
@@ -346,6 +347,15 @@ Specify the drive settings for the distribution point. Configure up to two disk 
 > To prevent Configuration Manager from installing on a specific drive, create an empty file named **no_sms_on_drive.sms** and copy it to the root folder of the drive before you install the distribution point.  
 
 For more information, see [The content library](/sccm/core/plan-design/hierarchy/the-content-library).
+
+### <a name="bkmk_firewall"></a> Firewall Settings
+
+The distribution point must have the following inbound rules configured in the Windows firewall:
+
+- Windows Management Instrumentation (DCOM-In)
+- Windows Management Instrumentation (WMI-In)
+
+Without these rules clients will receive error 0x801901F4 in DataTransferService.log when attempting to download content.
 
 ### <a name="bkmk_config-pull"></a> Pull distribution point  
 

@@ -19,14 +19,14 @@ The Configuration Manager software inventory views contain information about the
 
 ## Software inventory view schema
 
-There is not a specific software inventory schema view, but the following query joins the **v\_GS\_SoftwareProduct** and **v\_FullCollectionMembership** views to generate the software inventory view schema by product name for the All Systems collection:
+There is not a specific software inventory schema view, but the following query joins the **v_GS_SoftwareProduct** and **v_FullCollectionMembership** views to generate the software inventory view schema by product name for the All Systems collection:
 
 ```
 SELECT MIN(PRD.ProductID) AS ProductID, PRD.ProductName,
 
 PRD.ProductVersion, COUNT(DISTINCT PRD.ResourceID) AS 'Count'
 
-FROM v\_GS\_SoftwareProduct PRD INNER JOIN v\_FullCollectionMembership FCM
+FROM v_GS_SoftwareProduct PRD INNER JOIN v_FullCollectionMembership FCM
 
 ON PRD.ResourceID = FCM.ResourceID
 
@@ -39,7 +39,7 @@ ORDER BY PRD.ProductName
 
 ## Software inventory views
 
-Some of the software inventory views created in Configuration Manager store system data, and others contain general product and file data. As a general rule, view names that start with **v\_GS** contain data for Configuration Manager clients and can be joined to other views that contain system data by using the **ResourceID** for that client. Software inventory views that start with **v\_** contain file and product data, but it is not specific to individual computers. The software inventory views are described in this section.
+Some of the software inventory views created in Configuration Manager store system data, and others contain general product and file data. As a general rule, view names that start with **v_GS** contain data for Configuration Manager clients and can be joined to other views that contain system data by using the **ResourceID** for that client. Software inventory views that start with **v_** contain file and product data, but it is not specific to individual computers. The software inventory views are described in this section.
 
 ### v_GS_CollectedFile
 
