@@ -2,7 +2,7 @@
 title: Approve applications
 titleSuffix: Configuration Manager
 description: Learn about the settings and behaviors for application approval in Configuration Manager.
-ms.date: 05/29/2019
+ms.date: 07/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -19,31 +19,16 @@ ms.collection: M365-identity-device-management
 
 When [deploying an application](/sccm/apps/deploy-use/deploy-applications) in Configuration Manager, you can require approval before installation. Users request the application in Software Center, and then you review the request in the Configuration Manager console. You can approve or deny the request.
 
-
 ## <a name="bkmk_approval"></a> Approval settings
 
-The application approval behavior depends upon your version of Configuration Manager. One of the following approval settings appears on the **Deployment Settings** page of the application deployment:  
+The application approval behavior depends upon whether you enable the [new app approval experience](#bkmk_new). One of the following approval settings appears on the **Deployment Settings** page of the application deployment:  
 
-#### Require administrator approval if users request this application
-
-*Applies to versions 1710 and earlier*
-
-The administrator approves any user requests for the application before the user can install it. This option is grayed out when the deployment purpose is **Required**, or when you deploy the application to a device collection.  
-
-Application approval requests are displayed in the **Approval Requests** node, under **Application Management** in the **Software Library** workspace. If a request isn't approved within 30 days, it's removed. Reinstalling the client might cancel any pending approval requests.  
-
-After you've approved an application for installation, you can **Deny** the request in the Configuration Manager console. This action doesn't cause the client to uninstall the application from any devices. It stops users from installing new copies of the application from Software Center.  
-
-#### An administrator must approve a request for this application on the device
-
-*Applies to versions 1802 and later <sup>[Note 1](#bkmk_note1)</sup>*
-
-<a name="bkmk_note1"></a>
+### <a name="bkmk_new"></a> An administrator must approve a request for this application on the device
 
 > [!Note]  
-> **Note 1**: Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).
+> Configuration Manager doesn't enable this feature by default. Before using it, enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).
 >
-> If you don't enable this feature, you see the prior experience.  
+> If you don't enable this feature, you see the [prior experience](#bkmk_prior).  
 
 The administrator approves any user requests for the application before the user can install it on the requested device. If the administrator approves the request, the user is only able to install the application on that device. The user must submit another request to install the application on another device. This option is grayed out when the deployment purpose is **Required**, or when you deploy the application to a device collection. <!--1357015-->  
 
@@ -59,7 +44,25 @@ After you've approved an application for installation, you can **Deny** the requ
 > [!Important]  
 > Starting in version 1806, *the behavior has changed* when you revoke approval for an application that was previously approved and installed. Now when you **Deny** the request for the application, the client uninstalls the application from the user's device.<!--1357891-->  
 
+Starting in version 1906, if you approve an app request in the console, and then deny it, you can now approve it again. The app is reinstalled on the client after you approve it.  <!-- 4224910 -->
+
 Automate the approval process with the [Approve-CMApprovalRequest](https://docs.microsoft.com/powershell/module/configurationmanager/approve-cmapprovalrequest?view=sccm-ps) PowerShell cmdlet. Starting in version 1902, this cmdlet includes the **InstallActionBehavior** parameter. Use this parameter to specify whether to install the application right away or during non-business hours.<!-- SCCMDocs-pr issue #3418 -->
+
+#### Other app approval resources
+
+- [Application approval improvements in ConfigMgr 1810](https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/Application-approval-improvements-in-ConfigMgr-1810/ba-p/303534)
+- [Updates to the application approval process in Configuration Manager](https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/Updates-to-the-application-approval-process-in-Configuration/ba-p/275048)
+
+### <a name="bkmk_prior"></a> Require administrator approval if users request this application
+
+> [!Note]  
+> This experience applies if you don't enable the [new app approval experience](#bkmk_new).
+
+The administrator approves any user requests for the application before the user can install it. This option is grayed out when the deployment purpose is **Required**, or when you deploy the application to a device collection.  
+
+Application approval requests are displayed in the **Approval Requests** node, under **Application Management** in the **Software Library** workspace. If a request isn't approved within 30 days, it's removed. Reinstalling the client might cancel any pending approval requests.  
+
+After you've approved an application for installation, you can **Deny** the request in the Configuration Manager console. This action doesn't cause the client to uninstall the application from any devices. It stops users from installing new copies of the application from Software Center.  
 
 
 ## <a name="bkmk_email-approve"></a> Email notifications

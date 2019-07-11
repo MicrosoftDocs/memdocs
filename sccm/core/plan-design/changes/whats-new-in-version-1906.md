@@ -329,12 +329,9 @@ From the Configuration Manager console, you can now install applications to a de
 
 
 ### Improvements to app approvals
+
 <!--4224910-->
-
 This release includes the following improvements to app approvals:
-
-> [!Note]  
-> These improvements refer to the [optional feature](/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Approve application requests for users per device**.  
 
 - If you approve an app request in the console, and then deny it, you can now approve it again. The app is reinstalled on the client after you approve it.  
 
@@ -342,7 +339,7 @@ This release includes the following improvements to app approvals:
 
 - Call the **CreateApprovedRequest** API to create a pre-approved request for an app on a device. To prevent automatically installing the app on the client, set the **AutoInstall** parameter to `FALSE`. The user sees the app in Software Center, but it's not automatically installed.
 
- <!--For more information, see [Approve applications](/sccm/apps/deploy-use/app-approval).-->
+For more information, see [Approve applications](/sccm/apps/deploy-use/app-approval).
 
 
 
