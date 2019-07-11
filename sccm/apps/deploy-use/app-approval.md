@@ -21,9 +21,9 @@ When [deploying an application](/sccm/apps/deploy-use/deploy-applications) in Co
 
 ## <a name="bkmk_approval"></a> Approval settings
 
-The application approval behavior depends upon whether you enable the [new app approval experience](#bkmk_new). One of the following approval settings appears on the **Deployment Settings** page of the application deployment:  
+The application approval behavior depends upon whether you enable the recommended [optional app approval experience](#bkmk_opt). One of the following approval settings appears on the **Deployment Settings** page of the application deployment:  
 
-### <a name="bkmk_new"></a> An administrator must approve a request for this application on the device
+### <a name="bkmk_opt"></a> An administrator must approve a request for this application on the device
 
 > [!Note]  
 > Configuration Manager doesn't enable this feature by default. Before using it, enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).
@@ -35,7 +35,7 @@ The administrator approves any user requests for the application before the user
 > [!Note]  
 > To take advantage of new Configuration Manager features, first update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.<!--SCCMDocs issue 646-->  
 
-View **Approval Requests** under **Application Management** in the **Software Library** workspace of the Configuration Manager console. There's now a **Device** column in the list for each request. When you take action on the request, the Application Request dialog also includes the device name from which the user submitted the request.  
+View **Application Requests** under **Application Management** in the **Software Library** workspace of the Configuration Manager console. (In version 1902 and earlier, this node is called **Approval Requests**.) There's now a **Device** column in the list for each request. When you take action on the request, the Application Request dialog also includes the device name from which the user submitted the request.
 
 If a request isn't approved within 30 days, it's removed. Reinstalling the client might cancel any pending approval requests.  
 
@@ -62,7 +62,7 @@ Starting in version 1906, you can retry the installation of an app that you prev
 
 1. Uninstall the app on the device.
 
-1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select the **Approval Requests** node.
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select the **Application Requests** node. (In version 1902 and earlier, this node is called **Approval Requests**.)
 
 1. Select the previously approved app. In the Approval Request group of the ribbon, select **Retry install**.
 
@@ -74,11 +74,11 @@ Starting in version 1906, you can retry the installation of an app that you prev
 ### <a name="bkmk_prior"></a> Require administrator approval if users request this application
 
 > [!Note]  
-> This experience applies if you don't enable the [new app approval experience](#bkmk_new).
+> This experience applies if you don't enable the recommended [optional app approval experience](#bkmk_opt).
 
 The administrator approves any user requests for the application before the user can install it. This option is grayed out when the deployment purpose is **Required**, or when you deploy the application to a device collection.  
 
-Application approval requests are displayed in the **Approval Requests** node, under **Application Management** in the **Software Library** workspace. If a request isn't approved within 30 days, it's removed. Reinstalling the client might cancel any pending approval requests.  
+Application approval requests are displayed in the **Application Requests** node, under **Application Management** in the **Software Library** workspace. (In version 1902 and earlier, this node is called **Approval Requests**.) If a request isn't approved within 30 days, it's removed. Reinstalling the client might cancel any pending approval requests.  
 
 After you've approved an application for installation, you can **Deny** the request in the Configuration Manager console. This action doesn't cause the client to uninstall the application from any devices. It stops users from installing new copies of the application from Software Center.  
 
