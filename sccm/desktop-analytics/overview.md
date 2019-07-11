@@ -66,6 +66,11 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 - An active Azure subscription, with [Global Admin](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator) permissions  
 
+> [!Important]  
+> Desktop Analytics is currently offered as an Office 365 service and requires an Office 365 subscription in your AAD tenant. We are working to remove this requirement for General Availability.
+
+These prerequisites are for the purposes of this tutorial. For more information about the general prerequisites for Desktop Analytics with Configuration Manager, see [Prerequisites](/sccm/desktop-analytics/overview#prerequisites).  
+
     - **Workspace owner** or **contributor** permissions to **Set up your workspace**, and the following roles:  
 
       - [**Desktop Analytics Administrator**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) role.
