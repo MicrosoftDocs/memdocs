@@ -227,6 +227,8 @@ When a client needs content, it makes a content location request to the manageme
 9. An internet-facing distribution point
 10. A cloud distribution point in Azure
 
+> [!Note]  
+> <!-- SCCMDocs#1607 -->Delivery Optimization isn't applicable to this source prioritization. This list is how the Configuration Manager client finds content. The Windows Update Agent downloads content for Delivery Optimization. If the Windows Update Agent can't find the content, then the Configuration Manager client uses this list to search for it.
 
 ## Content library
 
