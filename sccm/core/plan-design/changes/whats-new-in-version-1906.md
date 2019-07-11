@@ -434,7 +434,7 @@ This release includes the following infrastructure improvements to Software Cent
 
 ### Redesigned notification for newly available software
 <!--3555904-->
-The **New Software is Available** notification will only show once for a user for a given application and revision. The user will no longer see the notification each time they log on. They'll only see another notification for an application if it has changed.
+The **New Software is Available** notification will only show once for a user for a given application and revision. The user will no longer see the notification each time they sign in. They'll only see another notification for an application if it has changed.
 
 <!--For more information, see [Remove the application catalog](/sccm/apps/get-started/create-and-deploy-an-application#end-user-experience). -->
 
