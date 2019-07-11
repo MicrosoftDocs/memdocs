@@ -160,7 +160,7 @@ You can share the power of CMPivot with other personas, such as helpdesk or secu
 
 For more information, see [CMPivot](/sccm/core/servers/manage/cmpivot#bkmk_standalone).
 
-### Added CMPivot permissions to the Security Administrator role
+### Added permissions to the Security Administrator role
 <!--4683130-->
 
 The following permissions have been added to Configuration Manager's built-in **Security Administrator** role:
