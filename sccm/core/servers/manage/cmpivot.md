@@ -459,7 +459,7 @@ You now have additional arithmetic operators, aggregators, and the ability to ad
 | [join](https://docs.microsoft.com/azure/kusto/query/joinoperator)| Merge the rows of two tables to form a new table by matching row for the same device|
 |render|Renders results as graphical output|
 
-The render operator already exists in CMPivot. Support for multiple series and the **with** statement were added. For more information, see the [examples](bkmk_cmpivot_examples1906) section and Kusto's [join operator](https://docs.microsoft.com/azure/kusto/query/joinoperator) article.
+The render operator already exists in CMPivot. Support for multiple series and the **with** statement were added. For more information, see the [examples](#bkmk_cmpivot_examples1906) section and Kusto's [join operator](https://docs.microsoft.com/azure/kusto/query/joinoperator) article.
 
 #### Limitations for joins
 
