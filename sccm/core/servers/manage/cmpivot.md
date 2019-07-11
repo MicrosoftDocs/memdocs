@@ -444,8 +444,8 @@ To get CMPivot to work on the CAS in such a “double hop scenario”, you can d
 
 Starting in version 1906, the following items were added to CMPivot:
 
-- [Joins, additional operators, and aggregators](bkmk_cmpivot_joins)
-- [Added CMPivot permissions to the Security Administrator role](bkmk_cmpivot_secadmin1906)
+- [Joins, additional operators, and aggregators](#bkmk_cmpivot_joins)
+- [Added CMPivot permissions to the Security Administrator role](#bkmk_cmpivot_secadmin1906)
 - [CMPivot standalone](#bkmk_standalone) was added as a **pre-release feature**
 
 ### <a name="bkmk_cmpivot_joins"></a> Add joins, additional operators, and aggregators in CMPivot
@@ -459,7 +459,7 @@ You now have additional arithmetic operators, aggregators, and the ability to ad
 | [join](https://docs.microsoft.com/azure/kusto/query/joinoperator)| Merge the rows of two tables to form a new table by matching row for the same device|
 |render|Renders results as graphical output|
 
-The render operator already exists in CMPivot. Support for multiple series and the **with** statement were added. For more information, see the [examples](#bkmk_cmpivot-examples) section and Kusto's [join operator](https://docs.microsoft.com/azure/kusto/query/joinoperator) article. 
+The render operator already exists in CMPivot. Support for multiple series and the **with** statement were added. For more information, see the [examples](bkmk_cmpivot_examples1906) section and Kusto's [join operator](https://docs.microsoft.com/azure/kusto/query/joinoperator) article.
 
 #### Limitations for joins
 
