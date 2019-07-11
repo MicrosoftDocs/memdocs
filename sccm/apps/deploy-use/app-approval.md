@@ -48,6 +48,24 @@ Starting in version 1906, if you approve an app request in the console, and then
 
 Automate the approval process with the [Approve-CMApprovalRequest](https://docs.microsoft.com/powershell/module/configurationmanager/approve-cmapprovalrequest?view=sccm-ps) PowerShell cmdlet. Starting in version 1902, this cmdlet includes the **InstallActionBehavior** parameter. Use this parameter to specify whether to install the application right away or during non-business hours.<!-- SCCMDocs-pr issue #3418 -->
 
+#### <a name="bkmk_retry"></a> Retry the install of pre-approved applications
+
+<!--4336307-->
+Starting in version 1906, you can retry the installation of an app that you previously approved for a user or device. The approval option is only for available deployments. If the user uninstalls the app, or if the initial install process fails, Configuration Manager doesn't reevaluate its state and reinstall it. This feature allows a support technician to quickly retry the app install for a user that calls for help.
+
+1. Open the Configuration Manager console user a user that has the **Approve** permission on the Application object. For example, the **Application Administrator** or **Application Author** built-in roles have this permission.
+
+1. Deploy an app that requires approval, and approve it.
+
+    > [!Tip]  
+    > Alternatively, [Install an application for a device](/sccm/apps/deploy-use/install-app-for-device). It creates an approved request for the app on the device.  
+
+1. Uninstall the app on the device.
+
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select the **Approval Requests** node.
+
+1. Select the previously approved app. In the Approval Request group of the ribbon, select **Retry install**.
+
 #### Other app approval resources
 
 - [Application approval improvements in ConfigMgr 1810](https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/Application-approval-improvements-in-ConfigMgr-1810/ba-p/303534)

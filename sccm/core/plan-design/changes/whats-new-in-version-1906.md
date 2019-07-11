@@ -313,20 +313,17 @@ Create a group of applications that you can send to a user or device collection 
 <!--For more information, see [Create application group](/sccm/apps/deploy-use/create-app-group)and [Create application group](/sccm/apps/deploy-use/deploy-applications).-->
 
 ### Retry the install of pre-approved applications
+
 <!--4336307-->
-
 You can now retry the installation of an app that you previously approved for a user or device. The approval option is only for available deployments. If the user uninstalls the app, or if the initial install process fails, Configuration Manager doesn't reevaluate its state and reinstall it. This feature allows a support technician to quickly retry the app install for a user that calls for help.
-This is part of an [optional feature](/sccm/core/servers/manage/install-in-console-updates#bkmk_options) called **Approve application requests for users per device**
 
-
-<!--For more information, see [Approve applications](/sccm/apps/deploy-use/create-app-group).-->
+For more information, see [Approve applications](/sccm/apps/deploy-use/app-approval).
 
 ### Install an application for a device
 <!--4402180-->
 From the Configuration Manager console, you can now install applications to a device in real time. This feature can help reduce the need for separate collections for every application. This is an [optional feature](/sccm/core/servers/manage/install-in-console-updates#bkmk_options) called **Approve application requests for users per device**.  
 
 <!--For more information, see [Install applications for a device](/sccm/apps/deploy-use/install-app-for-device).-->
-
 
 ### Improvements to app approvals
 
@@ -340,8 +337,6 @@ This release includes the following improvements to app approvals:
 - Call the **CreateApprovedRequest** API to create a pre-approved request for an app on a device. To prevent automatically installing the app on the client, set the **AutoInstall** parameter to `FALSE`. The user sees the app in Software Center, but it's not automatically installed.
 
 For more information, see [Approve applications](/sccm/apps/deploy-use/app-approval).
-
-
 
 
 ## <a name="bkmk_osd"></a> OS deployment
