@@ -70,6 +70,40 @@ BDR is supported between each parent and child site in a hierarchy. BDR is suppo
 Applications always use binary differential replication. BDR is optional for packages and isn't enabled by default. To use BDR for packages, enable this functionality for each package. Select the option **Enable binary differential replication** when you create or edit a package.
 
 
+## Peer caching technologies
+
+<!-- SCCMDocs#1044 -->
+
+Configuration Manager supports several options for managing content between peer devices on the same network:
+
+- [BranchCache](#branchcache)
+- [Delivery Optimization](#delivery-optimization)
+- [Configuration Manager peer cache](#peer-cache)
+
+Use the following table to compare major features of these technologies:
+
+| Feature  | Peer&nbsp;cache  | Delivery&nbsp;Optimization  | BranchCache  |
+|---------|---------|---------|---------|
+| Across subnets | Yes | Yes | No |
+| Throttle bandwidth | Yes (BITS) | Yes (native) | Yes (BITS) |
+| Partial content | Yes | Yes | Yes |
+| Control cache size on disk | Yes | Yes | Yes |
+| Peer source discovery | Manual (client setting) | Automatic | Automatic |
+| Peer discovery | Via management point using boundary groups | DO cloud service | Broadcast |
+| Reporting | Client data sources dashboard | Client data sources dashboard | Client data sources dashboard |
+| WAN usage control | Boundary groups | DO GroupID | Subnet only |
+| Supported content | All ConfigMgr content | Windows updates, drivers, store apps | All ConfigMgr content |
+| Policy control | Client agent settings | Client agent settings (partial) | Client agent settings |
+
+### Recommendations
+
+- Modern management: If you're already using modern tools such as Intune, implement Delivery Optimization
+
+- Configuration Manager and co-management: Use a combination of peer cache and Delivery Optimization. Use peer cache with on-premises distribution points, and use Delivery Optimization for cloud scenarios.
+
+- Existing BranchCache implemented: Use all three technologies in parallel. Use peer cache and Delivery Optimization for scenarios that aren't supported by BranchCache.
+
+
 ## BranchCache
 
 [BranchCache](https://docs.microsoft.com/windows-server/networking/branchcache/branchcache) is a Windows technology. Clients that support BranchCache, and have downloaded a deployment that you configure for BranchCache, then serve as a content source to other BranchCache-enabled clients.  
@@ -103,16 +137,6 @@ This cache is separate from Configuration Manager's distribution point content. 
 For more information, see [Delivery Optimization In-Network Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/doinc).
 
 
-## Windows LEDBAT
-
-<!--1358112-->
-Windows Low Extra Delay Background Transport (LEDBAT) is a network congestion control feature of Windows Server to help manage background network transfers. For distribution points running on supported versions of Windows Server, enable an option to help adjust network traffic. Then clients only use network bandwidth when it's available.
-
-For more information on Windows LEDBAT in general, see the [New transport advancements](https://blogs.technet.microsoft.com/networking/2016/07/18/announcing-new-transport-advancements-in-the-anniversary-update-for-windows-10-and-windows-server-2016/) blog post.
-
-For more information on how to use Windows LEDBAT with Configuration Manager distribution points, see the setting to **Adjust the download speed to use the unused network bandwidth (Windows LEDBAT)** when you [Configure the general settings of a distribution point](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-general).
-
-
 ## Peer cache
 
 Client peer cache helps you manage deployment of content to clients in remote locations. Peer cache is a built-in Configuration Manager solution that enables clients to share content with other clients directly from their local cache.
@@ -129,6 +153,16 @@ For more information, see [Peer cache for Configuration Manager clients](/sccm/c
 When you deploy a new OS with Configuration Manager, computers that run the task sequence can use Windows PE peer cache. They download content from a peer cache source instead of from a distribution point. This behavior helps minimize WAN traffic in branch office scenarios where there's no local distribution point.
 
 For more information, see [Windows PE peer cache](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic).
+
+
+## Windows LEDBAT
+
+<!--1358112-->
+Windows Low Extra Delay Background Transport (LEDBAT) is a network congestion control feature of Windows Server to help manage background network transfers. For distribution points running on supported versions of Windows Server, enable an option to help adjust network traffic. Then clients only use network bandwidth when it's available.
+
+For more information on Windows LEDBAT in general, see the [New transport advancements](https://blogs.technet.microsoft.com/networking/2016/07/18/announcing-new-transport-advancements-in-the-anniversary-update-for-windows-10-and-windows-server-2016/) blog post.
+
+For more information on how to use Windows LEDBAT with Configuration Manager distribution points, see the setting to **Adjust the download speed to use the unused network bandwidth (Windows LEDBAT)** when you [Configure the general settings of a distribution point](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-general).
 
 
 ## Client locations
