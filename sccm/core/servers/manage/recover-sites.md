@@ -251,7 +251,7 @@ When you recover site systems that run IIS and you configured for HTTPS, reconfi
 
 ### Reinstall hotfixes 
 
-After a site recovery, you must reinstall any hotfixes that were applied to the site server. After site recovery, view the list of the previously installed hotfixes on the **Finished** page of the setup wizard. This list is also saved to `C:\ConfigMgrPostRecoveryActions.html` on the recovered site server.
+After a site recovery, you must reinstall any [out-of-band hotfixes](/sccm/core/servers/manage/updates#bkmk_outofband) that were applied to the site server. After site recovery, view the list of the previously installed hotfixes on the **Finished** page of the setup wizard. This list is also saved to `C:\ConfigMgrPostRecoveryActions.html` on the recovered site server.
 
 
 ### Recover custom reports 
