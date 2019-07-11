@@ -173,4 +173,4 @@ Review the **NotiCtrl.log** file on the site server for troubleshooting.
 
 ## Maintenance
 
-Configuration Manager stores the information about the application approval request in the site database. For requests that are cancelled or denied, the site deletes the request history after 30 days. You can configure this deletion behavior with the **Delete Aged Application Request Data** [site maintenance task](/sccm/core/servers/manage/maintenance-tasks). The site never deletes any approved or pending application requests.
+Configuration Manager stores the information about the application approval request in the site database. For requests that are canceled or denied, the site deletes the request history after 30 days. You can configure this deletion behavior with the **Delete Aged Application Request Data** [site maintenance task](/sccm/core/servers/manage/maintenance-tasks). The site never deletes any approved or pending application requests.
