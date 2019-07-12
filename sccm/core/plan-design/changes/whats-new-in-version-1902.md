@@ -47,16 +47,17 @@ Version 1902 drops support for the following products:
 ## <a name="bkmk_infra"></a> Site infrastructure
 
 ### Client health dashboard
+
 <!--3599209-->
-You deploy software updates and other apps to help secure your environment, but these deployments only reach healthy clients. Unhealthy Configuration Manager clients adversely effect overall compliance. Determining client health can be challenging depending upon the denominator: how many total devices should be in your scope of management? For example, if you discover all systems from Active Directory, even if some of those records are for retired machines, this process increases your denominator. 
+You deploy software updates and other apps to help secure your environment, but these deployments only reach healthy clients. Unhealthy Configuration Manager clients adversely effect overall compliance. Determining client health can be challenging depending upon the denominator: how many total devices should be in your scope of management? For example, if you discover all systems from Active Directory, even if some of those records are for retired machines, this process increases your denominator.
 
-You can now view a dashboard with information about the health of Configuration Manager clients in your environment. View your client health, scenario health, and common errors. Filter the view by several attributes to see any potential issues by OS and client versions. 
+You can now view a dashboard with information about the health of Configuration Manager clients in your environment. View your client health, scenario health, and common errors. Filter the view by several attributes to see any potential issues by OS and client versions.
 
-In the Configuration Manager console, go to the **Monitoring** workspace. Expand **Client status**, and select the **Client health dashboard** node. 
+In the Configuration Manager console, go to the **Monitoring** workspace. Expand **Client status**, and select the **Client health dashboard** node.
 
 ![Screenshot of client health dashboard](media/3599209-client-health-dashboard.png)
 
-<!-- For more information, see [How to monitor clients](/sccm/core/clients/manage/monitor-clients). -->
+For more information, see [How to monitor clients](/sccm/core/clients/manage/monitor-clients#bkmk_health).
 
 
 ### New management insight rules
