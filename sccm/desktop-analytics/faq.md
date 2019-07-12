@@ -60,5 +60,5 @@ Windows diagnostic data from your computers is encrypted, sent to, and processed
 
 ### Can I use Desktop Analytics for my Office 365 ProPlus upgrades?
 
-No, Desktop Analytics is focused on Windows. Microsoft developed Desktop Analytics in close collaboration with numerous customers. Through the preview program, customer feedback was how Desktop Analytics improved their ability to confidently manage Windows deployments. They also told us they wanted [Office 365 ProPlus readiness
+No, Desktop Analytics is focused on Windows. Microsoft developed Desktop Analytics in close collaboration with numerous customers. Through the preview program, customer feedback was about how Desktop Analytics improved their ability to confidently manage Windows deployments. They also told us they wanted [Office 365 ProPlus readiness
 ](/sccm/sum/deploy-use/office-365-dashboard#bkmk_o365_readiness) more closely integrated with office management tools in Configuration Manager and Intune. Microsoft will continue to make investments in those areas, while focusing on Windows scenarios in Desktop Analytics.
