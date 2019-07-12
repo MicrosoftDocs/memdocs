@@ -98,12 +98,22 @@ In Configuration Manager, role-based administration combines security roles, sec
 
 1. In the Configuration Manager console, select an object that supports being assigned to a security scope.  
 2. On the **Home** tab, in the **Classify** group, choose **Set Security Scopes**.
-   - Starting in version 1906, you can **Set Security Scopes** on a folder from the **Folder** tab. You can also right-click the folder and choose **Folder** < **Set Security Scopes**. <!--3600867-->
 3. In the **Set Security Scopes** dialog box, select or clear the security scopes that this object is associated with. Each object that supports security scopes must be assigned to at least one security scope.  
 4. Choose **OK** to save the assigned security scopes.  
 
     > [!NOTE]  
     > When you create a new object, you can assign the object to multiple security scopes. To modify the number of security scopes that are associated with the object, you must change this assignment after the object is created.
+
+### <a name="bkmk_config-folder"></a> To configure security scopes for a folder starting in version 1906
+<!--3600867-->
+1. In the Configuration Manager console, select a folder.  
+1. On the **Folder** tab in the ribbon, choose **Set Security Scopes**.
+   - You can also right-click the folder and choose **Folder** < **Set Security Scopes**.
+1. In the **Set Security Scopes** dialog box, select or clear the security scopes that the folder is associated with. Each folder must be assigned to at least one security scope. All folders are assigned the **Default** security scope until you change it.
+1. Choose **OK** to save the assigned security scopes.  
+
+    > [!IMPORTANT]  
+    > Existing security roles will automatically get the new **Folder Class** permission added when you install Configuration Manager version 1906. However, new roles will need this permission added.
 
 ## <a name="BKMK_ConfigColl"></a> Configure collections to manage security
 
