@@ -2,7 +2,7 @@
 title: FAQ for Desktop Analytics
 titleSuffix: Configuration Manager
 description: Frequently asked questions for Desktop Analytics.
-ms.date: 06/10/2019
+ms.date: 07/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -40,7 +40,6 @@ There are two types of data in the Desktop Analytics portal: Administrator data 
 
 All data is updated automatically once daily, even if you don't request an on-demand data refresh. There's no way to trigger an on-demand refresh of diagnostic data. For more information about the different types of data in Desktop Analytics, see [Data latency](/sccm/desktop-analytics/troubleshooting#data-latency).
 
-
 ## Privacy
 
 ### Can Desktop Analytics be used without a direct client connection to the Microsoft Data Management Service?
@@ -56,3 +55,10 @@ For the Microsoft Data Management Service and Analytics Azure Storage: No, these
 ### Where is my organization's data stored?
 
 Windows diagnostic data from your computers is encrypted, sent to, and processed at Microsoft-managed secure data centers located in the United States. Our analysis of the Desktop Analytics-related data is then provided to you through the Desktop Analytics solution in the Azure portal. Desktop Analytics is supported in all Azure regions. Selecting an international Azure region doesn't prevent diagnostic data from being sent to and processed in Microsoft's secure data centers in the US.
+
+## Other
+
+### Can I use Desktop Analytics for my Office 365 ProPlus upgrades?
+
+No, Desktop Analytics is focused on Windows. Microsoft developed Desktop Analytics in close collaboration with numerous customers. Through the preview program, customer feedback was about how Desktop Analytics improved their ability to confidently manage Windows deployments. They also told us they wanted [Office 365 ProPlus readiness
+](/sccm/sum/deploy-use/office-365-dashboard#bkmk_o365_readiness) more closely integrated with office management tools in Configuration Manager and Intune. Microsoft will continue to make investments in those areas, while focusing on Windows scenarios in Desktop Analytics.
