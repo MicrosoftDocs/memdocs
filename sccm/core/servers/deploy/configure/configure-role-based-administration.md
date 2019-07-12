@@ -113,7 +113,7 @@ In Configuration Manager, role-based administration combines security roles, sec
 1. Choose **OK** to save the assigned security scopes.  
 
     > [!IMPORTANT]  
-    > Existing security roles will automatically get the new **Folder Class** permission added when you install Configuration Manager version 1906. However, new roles will need this permission added.
+    > Existing security roles will automatically get **Folder Class** permissions added when you install Configuration Manager version 1906. You'll need to add **Folder Class** permissions for any new security roles and verify existing roles have the appropriate permissions for your environment.
 
 ## <a name="BKMK_ConfigColl"></a> Configure collections to manage security
 
