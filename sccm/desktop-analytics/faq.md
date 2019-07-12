@@ -2,7 +2,7 @@
 title: FAQ for Desktop Analytics
 titleSuffix: Configuration Manager
 description: Frequently asked questions for Desktop Analytics.
-ms.date: 06/10/2019
+ms.date: 07/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -60,5 +60,5 @@ Windows diagnostic data from your computers is encrypted, sent to, and processed
 
 ### Can I use Desktop Analytics for my Office 365 ProPlus upgrades?
 
-Desktop Analytics is focused on Windows. We have been developing Desktop Analytics in close collaboration with numerous customers. Throough the Preview program customers gave us great feedback about how Desktop Analytics has improved their ability to confidently manage Windows deployments. Customers also told us they wanted [Office 365 ProPlus readiness
-](/sccm/sum/deploy-use/office-365-dashboard#bkmk_o365_readiness) more close integrated with Office Management tools in Configuration Manager and Intune, like so we'll continue to make our investments there, while focusing on Windows scenarios in Desktop Analytics.
+No, Desktop Analytics is focused on Windows. Microsoft developed Desktop Analytics in close collaboration with numerous customers. Through the preview program, customer feedback was how Desktop Analytics improved their ability to confidently manage Windows deployments. They also told us they wanted [Office 365 ProPlus readiness
+](/sccm/sum/deploy-use/office-365-dashboard#bkmk_o365_readiness) more closely integrated with office management tools in Configuration Manager and Intune. Microsoft will continue to make investments in those areas, while focusing on Windows scenarios in Desktop Analytics.
