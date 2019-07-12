@@ -2,7 +2,7 @@
 title: Desktop Analytics
 titleSuffix: Configuration Manager
 description: An overview of the Desktop Analytics service integrated with Configuration Manager.
-ms.date: 06/07/2019
+ms.date: 07/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: overview
@@ -65,6 +65,9 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 ### Technical
 
 - An active Azure subscription, with [Global Admin](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator) permissions  
+
+    > [!Important]  
+    > Desktop Analytics is currently offered as an Office 365 service and requires an Office 365 subscription in your Azure AD tenant. This may not be a requirement in the future.
 
     - **Workspace owner** or **contributor** permissions to **Set up your workspace**, and the following roles:  
 
