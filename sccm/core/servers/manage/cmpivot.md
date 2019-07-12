@@ -513,7 +513,7 @@ The render operator already exists in CMPivot. Support for multiple series and t
    | where Device == 'MyDevice'
    | project SystemStartTime, BootDuration, OSStart=EventLogStart, GPDuration, UpdateDuration
    | order by SystemStartTime desc
-   | render barchart with (kind=stacked, title='Boot times for MyDevice' ytitle='Time (ms)')
+   | render barchart with (kind=stacked, title='Boot times for MyDevice', ytitle='Time (ms)')
    ```
 
    ![Stacked bar chart showing boot times for a device in ms](./media/4054074-render-using-with-statement.png)
