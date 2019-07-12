@@ -310,38 +310,33 @@ Create a group of applications that you can send to a user or device collection 
 <!--For more information, see [Create application group](/sccm/apps/deploy-use/create-app-group)and [Create application group](/sccm/apps/deploy-use/deploy-applications).-->
 
 ### Retry the install of pre-approved applications
+
 <!--4336307-->
-
 You can now retry the installation of an app that you previously approved for a user or device. The approval option is only for available deployments. If the user uninstalls the app, or if the initial install process fails, Configuration Manager doesn't reevaluate its state and reinstall it. This feature allows a support technician to quickly retry the app install for a user that calls for help.
-This is part of an [optional feature](/sccm/core/servers/manage/install-in-console-updates#bkmk_options) called **Approve application requests for users per device**
 
-
-<!--For more information, see [Approve applications](/sccm/apps/deploy-use/create-app-group).-->
+For more information, see [Approve applications](/sccm/apps/deploy-use/app-approval).
 
 ### Install an application for a device
+
 <!--4402180-->
-From the Configuration Manager console, you can now install applications to a device in real time. This feature can help reduce the need for separate collections for every application. This is an [optional feature](/sccm/core/servers/manage/install-in-console-updates#bkmk_options) called **Approve application requests for users per device**.  
+From the Configuration Manager console, you can now install applications to a device in real time. This feature can help reduce the need for separate collections for every application.
 
-<!--For more information, see [Install applications for a device](/sccm/apps/deploy-use/install-app-for-device).-->
-
+For more information, see [Install applications for a device](/sccm/apps/deploy-use/install-app-for-device).
 
 ### Improvements to app approvals
-<!--4224910-->
 
+<!--4224910-->
 This release includes the following improvements to app approvals:
 
-> [!Note]  
-> These improvements refer to the [optional feature](/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Approve application requests for users per device**.  
-
 - If you approve an app request in the console, and then deny it, you can now approve it again. The app is reinstalled on the client after you approve it.  
+
+- In the Configuration Manager console, **Software Library** workspace, under **Application Management**, the **Approval Requests** node is renamed **Application Requests**.<!-- SCCMDocs-pr#4028 -->
 
 - There's a new WMI method, **DeleteInstance** to remove an app approval request. This action doesn't uninstall the app on the device. If it's not already installed, the user can't install the app from Software Center. The version 1810 blog post below includes a PowerShell script sample that you can adjust for use with this API.  
 
 - Call the **CreateApprovedRequest** API to create a pre-approved request for an app on a device. To prevent automatically installing the app on the client, set the **AutoInstall** parameter to `FALSE`. The user sees the app in Software Center, but it's not automatically installed.
 
- <!--For more information, see [Approve applications](/sccm/apps/deploy-use/app-approval).-->
-
-
+For more information, see [Approve applications](/sccm/apps/deploy-use/app-approval).
 
 
 ## <a name="bkmk_osd"></a> OS deployment
@@ -437,7 +432,7 @@ This release includes the following infrastructure improvements to Software Cent
 
 ### Redesigned notification for newly available software
 <!--3555904-->
-The **New Software is Available** notification will only show once for a user for a given application and revision. The user will no longer see the notification each time they log on. They'll only see another notification for an application if it has changed.
+The **New Software is Available** notification will only show once for a user for a given application and revision. The user will no longer see the notification each time they sign in. They'll only see another notification for an application if it has changed.
 
 <!--For more information, see [Remove the application catalog](/sccm/apps/get-started/create-and-deploy-an-application#end-user-experience). -->
 
@@ -594,11 +589,10 @@ There's a new policy setting that enables users to trust files that normally ope
 ## <a name="bkmk_admin"></a> Configuration Manager console
 
 ### Add SMBIOS GUID column to device and device collection nodes
+
 <!--4526580-->
+In both the **Devices** and **Device Collections** nodes, you can now add a new column for **SMBIOS GUID**. This value is the same as the **BIOS GUID** property of the System Resource class. It's a unique identifier for the device hardware.
 
-In both the Devices and Device Collections nodes, you can now add a new column for **SMBIOS GUID**. This value is the same as the **BIOS GUID** property of the System Resource class. It's a unique identifier for the device hardware.
-
-<!--For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#tips).-->
 
 ### RBAC on folders
 <!--3600867-->
