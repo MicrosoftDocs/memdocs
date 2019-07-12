@@ -2,7 +2,7 @@
 title: Management insights
 titleSuffix: Configuration Manager
 description: Learn about the management insights functionality available in the Configuration Manager console.
-ms.date: 11/27/2018
+ms.date: 07/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -138,6 +138,22 @@ Insights that help simplify management by cleaning up and reconfiguring collecti
 
 - **Empty Collections**: Lists collections in your environment that have no members. For more information, see [How to manage collections](/sccm/core/clients/manage/collections/manage-collections).  
 
+Starting in version 1902, there are new rules with recommendations on managing collections.<!--3555752--> Use these insights to simplify management and improve performance:
+
+- **Collections with no query rules and no direct members**: To simplify the list of collections in your hierarchy, delete these collections.  
+
+- **Collections with the same re-evaluation start time**: These collections have the same re-evaluation time as other collections. Modify the re-evaluation time so they don't conflict.  
+
+- **Collections with query time over two seconds**: Review the query rules for this collection. Consider modifying or deleting the collection.
+
+- The following rules include configurations that potentially cause unnecessary load on the site. Review these collections, then either delete them, or disable rule evaluation:  
+
+    - **Collections with no query rules and incremental updates enabled**  
+
+    - **Collections with no query rules and enabled for scheduled or incremental evaluation**  
+
+    - **Collections with no query rules and schedule full evaluation selected**  
+
 
 ### Proactive maintenance
 <!--1352184-->
@@ -169,6 +185,8 @@ Insights for improving the security of your infrastructure and devices.
 Insights that help you simplify the day-to-day management of your environment. 
 
 - **Non-CB Client Versions**: Lists all clients whose versions aren't a current branch (CB) build. For more information, see [Upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients).  
+
+- **Update clients to a supported Windows 10 version**: Starting in version 1902, this rule reports on clients that are running a version of Windows 10 that's no longer supported. It also includes clients with a Windows 10 version that's near end of service (three months).<!--3897268-->  
 
 
 ### Software Center
