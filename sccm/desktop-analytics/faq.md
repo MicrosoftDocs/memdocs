@@ -40,7 +40,6 @@ There are two types of data in the Desktop Analytics portal: Administrator data 
 
 All data is updated automatically once daily, even if you don't request an on-demand data refresh. There's no way to trigger an on-demand refresh of diagnostic data. For more information about the different types of data in Desktop Analytics, see [Data latency](/sccm/desktop-analytics/troubleshooting#data-latency).
 
-
 ## Privacy
 
 ### Can Desktop Analytics be used without a direct client connection to the Microsoft Data Management Service?
@@ -56,3 +55,10 @@ For the Microsoft Data Management Service and Analytics Azure Storage: No, these
 ### Where is my organization's data stored?
 
 Windows diagnostic data from your computers is encrypted, sent to, and processed at Microsoft-managed secure data centers located in the United States. Our analysis of the Desktop Analytics-related data is then provided to you through the Desktop Analytics solution in the Azure portal. Desktop Analytics is supported in all Azure regions. Selecting an international Azure region doesn't prevent diagnostic data from being sent to and processed in Microsoft's secure data centers in the US.
+
+## Other
+
+### Can I use Desktop Analytics for my Office 365 ProPlus upgrades?
+
+Desktop Analytics is focused on Windows. We have been developing Desktop Analytics in close collaboration with numerous customers. Throough the Preview program customers gave us great feedback about how Desktop Analytics has improved their ability to confidently manage Windows deployments. Customers also told us they wanted [Office 365 ProPlus readiness
+](/sccm/sum/deploy-use/office-365-dashboard#bkmk_o365_readiness) more close integrated with Office Management tools in Configuration Manager and Intune, like so we'll continue to make our investments there, while focusing on Windows scenarios in Desktop Analytics.
