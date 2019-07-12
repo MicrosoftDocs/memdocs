@@ -61,13 +61,14 @@ For more information, see [How to monitor clients](/sccm/core/clients/manage/mon
 
 
 ### New management insight rules
+
 The management insights feature has the following new rules:
 
 - Multiple rules with recommendations on managing collections. Use these insights to simplify management and improve performance. Review these new rules in the **Collections** group.<!--3555752-->  
 
 - **Update clients to a supported Windows 10 version** rule in the **Simplified Management** group. This rule reports on clients that are running a version of Windows 10 that's no longer supported. It also includes clients with a Windows 10 version that's near end of service (three months).<!--3897268-->  
 
-<!-- For more information, see [Management insights](/sccm/core/servers/manage/management-insights). -->
+For more information, see [Management insights](/sccm/core/servers/manage/management-insights).
 
 
 ### Improvement to enhanced HTTP
