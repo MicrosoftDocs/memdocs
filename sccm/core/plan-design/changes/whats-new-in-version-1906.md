@@ -183,18 +183,14 @@ The client data sources dashboard now includes [Delivery Optimization](/sccm/cor
 For more information, see [Client Data Sources dashboard](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard).
 
 ### Use your distribution point as an in-network cache server for Delivery Optimization
+
 <!--3555764-->
+You can now install Delivery Optimization In-Network Cache (DOINC) server on your distribution points. By caching this content on-premises, your clients can benefit from the Delivery Optimization feature, but you can help to protect WAN links.
 
-You can now install Delivery Optimization In-Network Cache server on your distribution points. By caching this content on-premises, your clients can benefit from the Delivery Optimization feature, but you can help to protect WAN links. 
+This cache server acts as an on-demand transparent cache for content downloaded by Delivery Optimization. Use client settings to make sure this server is offered only to the members of the local Configuration Manager boundary group.
 
-This cache server acts as an on-demand transparent cache for content downloaded by Delivery Optimization. Use client settings to make sure this server is offered only to the members of the local Configuration Manager boundary group. 
+For more information, see [Delivery Optimization In-Network Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/delivery-optimization-in-network-cache).
 
-This cache is separate from Configuration Manager's distribution point content. If you choose the same drive as the distribution point role, it stores content separately. 
-
-> [!Note]  
-> Delivery Optimization In-Network Cache server is a Windows Server feature that's still in development. It's tagged with a "beta" label in the Configuration Manager console.  
-
-<!-- (new article and new section) For more information, see [Delivery Optimization In Network Cache (DOINC)](/sccm/core/plan-design/hierarchy/doinc) and [Content management delivery optimization](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#delivery-optimization).-->
 
 ## <a name="bkmk_client"></a> Client management
 
