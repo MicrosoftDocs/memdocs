@@ -214,7 +214,7 @@ The Configuration Manager console has the following command-line options:
 
 ### General
 
-#### Role based administration on folders
+#### Role based administration for folders
 <!--3600867-->
 *(Introduced in version 1906)*
 
