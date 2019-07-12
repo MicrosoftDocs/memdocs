@@ -31,7 +31,7 @@ This cache is separate from Configuration Manager's distribution point content. 
 
 When you configure clients to use the Delivery Optimization In-Network Cache server, they no longer request Microsoft cloud-managed content from the internet. Clients request this content from the DOINC server installed on the distribution point. The DOINC server caches this content using the IIS feature for Application Request Routing (ARR). Then the cache server can quickly respond to any future requests for the same content. If the DOINC server is unavailable, or the content isn't yet cached, clients download the content from the internet. Clients also use Delivery Optimization, so download portions of the content from peers in their network.
 
-![Diagram of how DOINC works](media/3555764-doinc.png)
+![Diagram of how DOINC works](media/3555764-delivery-optimization-in-network-cache.png)
 
 1. Client checks for updates and gets the address for the content delivery network (CDN).
 

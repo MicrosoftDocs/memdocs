@@ -189,7 +189,7 @@ You can now install Delivery Optimization In-Network Cache server on your distri
 
 This cache server acts as an on-demand transparent cache for content downloaded by Delivery Optimization. Use client settings to make sure this server is offered only to the members of the local Configuration Manager boundary group.
 
-For more information, see [Delivery Optimization In-Network Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/doinc).
+For more information, see [Delivery Optimization In-Network Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/delivery-optimization-in-network-cache).
 
 
 ## <a name="bkmk_client"></a> Client management

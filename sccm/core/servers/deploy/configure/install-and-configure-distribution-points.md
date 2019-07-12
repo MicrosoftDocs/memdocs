@@ -304,7 +304,7 @@ The following settings are on the **Distribution point** page of the Create Site
 
 - **Enable this distribution point for prestaged content**: This setting enables you to add content to the server before you distribute software. Because the content files are already in the content library, they don't transfer over the network when you distribute the software. For more information, see [Prestaged content](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent).  
 
-- **Enable this distribution point to be used as Delivery Optimization In-Network Cache server**: Starting in version 1906, you can install a Delivery Optimization In-Network Cache (DOINC) server on your distribution points. By caching this content on-premises, your clients can benefit from the Delivery Optimization feature, but you can help to protect WAN links. For more information, including description of the additional settings, see [Delivery Optimization In-Network Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/doinc).
+- **Enable this distribution point to be used as Delivery Optimization In-Network Cache server**: Starting in version 1906, you can install a Delivery Optimization In-Network Cache (DOINC) server on your distribution points. By caching this content on-premises, your clients can benefit from the Delivery Optimization feature, but you can help to protect WAN links. For more information, including description of the additional settings, see [Delivery Optimization In-Network Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/delivery-optimization-in-network-cache).
 
 
 ### <a name="bkmk_config-comm"></a> Communication

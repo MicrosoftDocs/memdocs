@@ -156,7 +156,7 @@ This cache server acts as an on-demand transparent cache for content downloaded 
 
 This cache is separate from Configuration Manager's distribution point content. If you choose the same drive as the distribution point role, it stores content separately.
 
-For more information, see [Delivery Optimization In-Network Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/doinc).
+For more information, see [Delivery Optimization In-Network Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/delivery-optimization-in-network-cache).
 
 
 ## Peer cache

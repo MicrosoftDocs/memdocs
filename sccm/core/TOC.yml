@@ -150,7 +150,7 @@
       - name: Content library cleanup tool
         href: plan-design/hierarchy/content-library-cleanup-tool.md
       - name: Delivery Optimization In-Network Cache
-        href: plan-design/hierarchy/doinc.md
+        href: plan-design/hierarchy/delivery-optimization-in-network-cache.md
       - name: Peer Cache for Configuration Manager clients
         href: plan-design/hierarchy/client-peer-cache.md
       - name: Package Transfer Manager

@@ -335,7 +335,7 @@ Choose **Yes** to apply the boundary group identifier as the Delivery Optimizati
 ### Enable devices managed by Configuration Manager to use Delivery Optimization In-Network Cache servers (Beta) for content download
 
 <!--3555764-->
-Choose **Yes** to allow clients to download content from an on-premises distribution point that you enable as a Delivery Optimization In-Network Cache (DOINC) server. For more information, see [Delivery Optimization In-Network Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/doinc).
+Choose **Yes** to allow clients to download content from an on-premises distribution point that you enable as a Delivery Optimization In-Network Cache (DOINC) server. For more information, see [Delivery Optimization In-Network Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/delivery-optimization-in-network-cache).
 
 
 ## Endpoint Protection
