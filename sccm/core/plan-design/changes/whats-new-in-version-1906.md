@@ -154,11 +154,11 @@ For more information, see [CMPivot](/sccm/core/servers/manage/cmpivot#bkmk_cmpiv
 ### CMPivot standalone
 <!--3555890, 4619340, 4692885 -->
 
-You can now use CMPivot as a standalone app. CMPivot standalone is a **pre-release feature**. Run CMPivot outside of the Configuration Manager console to view the real-time state of devices in your environment. This change enables you to use CMPivot on a device without first installing the console.
+You can now use CMPivot as a standalone app. CMPivot standalone is a **pre-release feature** and is only available in English. Run CMPivot outside of the Configuration Manager console to view the real-time state of devices in your environment. This change enables you to use CMPivot on a device without first installing the console.
 
 You can share the power of CMPivot with other personas, such as helpdesk or security admins, who don’t have the console installed on their computer. These other personas can use CMPivot to query Configuration Manager alongside the other tools that they traditionally use. By sharing this rich management data, you can work together to proactively solve business problems that cross roles.
 
-For more information, see [CMPivot](/sccm/core/servers/manage/cmpivot#bkmk_standalone).
+For more information, see [CMPivot](/sccm/core/servers/manage/cmpivot#bkmk_standalone) and [Pre-release features](/sccm/core/servers/manage/pre-release-features#bkmk_table).
 
 ### Added permissions to the Security Administrator role
 <!--4683130-->
