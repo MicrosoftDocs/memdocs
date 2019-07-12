@@ -110,7 +110,7 @@ In Configuration Manager, role-based administration combines security roles, sec
 1. In the Configuration Manager console, select a folder.  
 1. On the **Folder** tab in the ribbon, choose **Set Security Scopes**.
    - You can also right-click the folder and choose **Folder** < **Set Security Scopes**.
-1. In the **Set Security Scopes** dialog box, select or clear the security scopes that the folder is associated with. Each folder must be assigned to at least one security scope. All folders are assigned the **Default** security scope until you change it.
+1. In the **Set Security Scopes** dialog box, select or clear security scopes for the folder. Each folder must be assigned to at least one security scope. All folders are assigned the **Default** security scope until you change it.
 1. Choose **OK** to save the assigned security scopes.  
 
     > [!IMPORTANT]  
