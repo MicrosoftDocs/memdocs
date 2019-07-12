@@ -2,7 +2,7 @@
 title: Create collections
 titleSuffix: Configuration Manager
 description: Create collections in Configuration Manager to more easily manage groups of users and devices.
-ms.date: 03/05/2019
+ms.date: 07/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -212,6 +212,52 @@ For more information about exporting collections, see [How to manage collections
 
 5. Complete the wizard to import the collection. The new collection is displayed in the **User Collections** or **Device Collections** node of the **Assets and Compliance** workspace. Refresh or reload the Configuration Manager console to see the collection members for the newly imported collection.  
 
+## <a name="bkmk_aadcollsync"></a> Synchronize collection membership results to Azure Active Directory groups (starting in version 1906)
+
+<!--3607475-->
+> [!NOTE]
+> Synchronization of collection memberships to an Azure Active Directory (Azure AD) group is a pre-release feature that was first introduced in version 1906. To enable it, see the [Pre-release features](/sccm/core/servers/manage/pre-release-features) article.
+
+You can  enable the synchronization of collection memberships to an Azure Active Directory (Azure AD) group. This synchronization allows you to use your existing on premises grouping rules in the cloud. You can synchronize device collections. Only Azure AD-joined devices are synchronized to Azure AD.
+
+The Azure AD synchronization happens every five minutes. It's a one-way process, from Configuration Manager to Azure AD. Changes made in Azure AD aren't reflected in Configuration Manager collections, but aren't overwritten by Configuration Manager. For example, if the Configuration Manager collection has two devices, and the Azure AD group has three different devices, after synchronization the Azure AD group has five devices.
+
+### Limitations
+
+Only one Azure AD tenant is supported. If you have more than one tenant, the results for collection membership synchronization to Azure AD are unpredictable.
+
+### Prerequisites
+
+- [Cloud Management](/sccm/core/servers/deploy/configure/azure-services-wizard)
+- [Azure Active Directory user discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc)
+
+
+### Add group write permission to the app
+
+1. Go to the **Azure Active Directory Tenants** node, select the web app for *Cloud Management*, and then select **Update Application Settings** in the ribbon.
+1. Select **Yes** and you'll be given a sign in prompt for Azure.
+1. Sign in with a user that has group write permission for Azure AD.
+1. Once you successfully sign in, you'll see a dialog box that reads **Application settings successfully updated**.
+
+### Enable collection synchronization for Cloud Management
+
+1. Expand **Cloud Services** under the **Administration** node.
+2. Right-click on the Cloud Management service and select **Properties**.
+3. In the **Collection Synchronization** tab, check the box to **Enable Azure Active Directory Group Sync**.
+
+### Create collection Azure AD group mapping
+
+1. Right-click on a collection, select **Properties**.
+1. In the **AAD Group Sync** tab, select **Add** to select Azure AD objects.
+    - If you need to remove an Azure AD group, select it, then choose **Remove**.
+1. Select your tenant then choose **Search**. You'll be prompted to sign in to Azure.
+    - You can also type in a partial or full group name before clicking **Search**.
+1. Once you sign in, select a group from the populated search list, then select **OK**.
+1. Select **Apply** to save the collection properties.
+1. To initiate a full synchronization, right-click the collection then select **Synchronize Membership**.
+
+![Synchronize collections to Azure AD](media/3607475-sync-collection-to-azuread.png)
+
 ## <a name="bkmk_powershell"></a> Using PowerShell
 
 You can use PowerShell to create and import collections. For more information, see:
@@ -219,3 +265,7 @@ You can use PowerShell to create and import collections. For more information, s
 * [New-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmcollection)
 * [Set-CMCollection](https://docs.microsoft.com/powershell/module/ConfigurationManager/Set-CMCollection)
 * [Import-CMCollection](https://docs.microsoft.com/powershell/module/ConfigurationManager/Import-CMCollection)
+
+## Next steps
+
+[Manage collections](/sccm/core/clients/manage/collections/manage-collections)
