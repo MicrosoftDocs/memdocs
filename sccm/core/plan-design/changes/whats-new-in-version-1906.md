@@ -39,7 +39,7 @@ Version 1906 drops support for the following features:
 
 - Classic service deployment to Azure for cloud management gateway and cloud distribution point. For more information, see [Plan for CMG](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).
 
-- You can't install new application catalog roles. Updated clients automatically use the management point for user-available application deployments.
+- You can't install new application catalog roles. Updated clients automatically use the management point for user-available application deployments. For more information, see [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).
 
 
 ## <a name="bkmk_infra"></a> Site infrastructure
