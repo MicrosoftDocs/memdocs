@@ -2,7 +2,7 @@
 title: Configure discovery
 titleSuffix: Configuration Manager
 description: Configure discovery methods to find resources to manage from your network, Active Directory, and Azure Active Directory.
-ms.date: 08/30/2018
+ms.date: 07/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -244,6 +244,40 @@ For more information, see [Azure AD User Discovery](/sccm/core/servers/deploy/co
  > If the user is a federated or synchronized identity, you must use Configuration Manager [Active Directory user discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser) as well as Azure AD user discovery. For more information about hybrid identities, see [Define a hybrid identity adoption strategy](/azure/active-directory/active-directory-hybrid-identity-design-considerations-identity-adoption-strategy).<!--497750-->
 
 
+## <a name="bkmk_azuregroupdisco"></a> Configure Azure Active Directory user group discovery
+<!--3611956-->
+*(Introduced as a [pre-release feature](/sccm/core/servers/manage/pre-release-features) in version 1906)*
+
+You can  discover user groups and members of those groups from Azure Active directory (Azure AD). Users found in Azure AD groups that haven't been previously discovered will be added as user resources in Configuration Manager. A user group resource record is created when the group is a security group.
+
+### Prerequisites
+
+- Cloud Management [Azure service](/sccm/core/servers/deploy/configure/azure-services-wizard)
+- Permission to read and search Azure AD groups
+
+### Limitations
+
+Delta discovery for Azure Active Directory user group discovery is currently disabled.
+
+### Enable Azure Active Directory user group discovery
+
+To enable discovery on an existing **Cloud Management** Azure service:
+
+1. Go to the **Administration** workspace, expand **Cloud Services**, then click on the **Azure Services** node.
+1. Select one of your Azure services, then click **Properties** in the ribbon.
+1. In the **Discovery** tab, check the box for **Enable Azure Active Directory Group Discovery**, then click **Settings**.
+1. Click **Add** under the **Discovery Scopes** tab.
+    - You can modify the **Polling Schedule** in the other tab.
+1. Select one or more user groups. You can **Search** by name and choose if you want to see **Security groups only**.
+    - You'll be prompted to sign in to Azure when you click **Search** the first time.
+1. Click **OK** when you're finished selecting groups.
+1. Once discovery finishes running, you can browse your Azure AD user groups in the **Users** node.
+
+To enable discovery when configuring a new **Cloud Management** Azure service:
+
+- On the **Discovery** page of the wizard, select the option to **Enable Azure Active Directory Group Discovery**.
+- Select **Settings**. 
+- In the Azure AD Group Discovery Settings dialog box, configure your discovery scope and a schedule for when discovery occurs.
 
 ##  <a name="BKMK_ConfigHBDisc"></a> Configure Heartbeat Discovery  
 

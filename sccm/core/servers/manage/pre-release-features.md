@@ -71,6 +71,7 @@ When you enable a pre-release feature, the Configuration Manager hierarchy manag
 
 | Feature          | Added as pre-release | Added as a full feature |  
 |------------------|----------------------|-------------------------|
+| Azure Active Directory user group discovery <!--3611956-->| Version 1906 | ![Not yet](media/red_x.png) |
 | SMS Provider API <!--1359052--> | Version 1810 | ![Not yet](media/red_x.png) |
 | [Enhanced HTTP site system](/sccm/core/plan-design/hierarchy/enhanced-http) <!--1356889,1358228--> | Version 1806 | Version 1810 |
 | [Client apps for co-managed devices](/sccm/comanage/workloads#client-apps) <!--1357892--> | Version 1806 | ![Not yet](media/red_x.png) |
