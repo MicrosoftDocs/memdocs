@@ -39,6 +39,7 @@ Version 1906 drops support for the following features:
 
 - Classic service deployment to Azure for cloud management gateway and cloud distribution point. For more information, see [Plan for CMG](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).
 
+- You can't install new application catalog roles. Updated clients automatically use the management point for user-available application deployments.
 
 
 ## <a name="bkmk_infra"></a> Site infrastructure
@@ -439,7 +440,7 @@ This release includes the following infrastructure improvements to Software Cent
 > These iterative improvements to Software Center and the management point are to retire the application catalog roles.
 >
 > - The Silverlight user experience isn't supported as of current branch version 1806.
-> - Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also won't be able to install new application catalog roles.
+> - Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles.
 > - In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
 
 For more information, see [Remove the application catalog](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat) and [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center).

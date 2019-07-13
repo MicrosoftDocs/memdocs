@@ -2,7 +2,7 @@
 title: Plan for Software Center
 titleSuffix: Configuration Manager
 description: Decide how you want to configure and brand Software Center for users to interact with Configuration Manager.
-ms.date: 05/01/2019
+ms.date: 07/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -17,14 +17,20 @@ manager: dougeby
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Users change settings, browse for applications, and install applications from Software Center. When you install the Configuration Manager client on a Windows device, it automatically installs Software Center as well. The new Software Center has a modern look. Apps that would have appeared only in the Silverlight-dependent Application Catalog (user-available apps) now appear in Software Center under the **Applications** tab.
+Users change settings, browse for applications, and install applications from Software Center. When you install the Configuration Manager client on a Windows device, it automatically installs Software Center as well.
 
 For more information on the other features of Software Center, see the [Software Center user guide](/sccm/core/understand/software-center).  
-
 
 ## <a name="bkmk_userex"></a> Configure Software Center  
 
 Review the following improvements to Software Center:
+
+> [!Important]  
+> These iterative improvements to Software Center and the management point are to retire the application catalog roles.
+>
+> - The Silverlight user experience isn't supported as of current branch version 1806.
+> - Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles.
+> - In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
 
 ### Starting in version 1802
 
@@ -42,6 +48,22 @@ Review the following improvements to Software Center:
     > If you're currently using the application catalog, and update Configuration Manager to version 1806, it continues to work. The application catalog website point and web service point roles are no longer *required*, but still *supported*. The **Silverlight user experience** for the application catalog *website point* is no longer supported. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).
     >
     > Start planning to remove the application catalog roles from your infrastructure in the future. Take advantage of the Software Center improvements to use the management point, and simplify your Configuration Manager environment.  
+
+### Starting in version 1902
+
+- Configure user device affinity. For more information, see [Link users and devices with user device affinity](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).
+
+### Starting in version 1906
+
+- Software Center now communicates with a management point for apps targeted to users as available. It doesn't use the application catalog anymore. This change makes it easier for you to remove the application catalog from the site.
+
+- Previously, Software Center picked the first management point from the list of available servers. Starting in this release, it uses the same management point that the client uses. This change allows Software Center to use the same management point from the assigned primary site as the client.
+
+- The management point now checks the health of its user service every five minutes. It reports any issues via status messages for the SMS_MP_CONTROL_MANAGER site component.
+
+- You can't add new application catalog roles to the site. Existing roles continue to work. Only existing clients use the application catalog for user-available deployments. Updated clients automatically use the management point for all deployments.
+
+### Summary of infrastructure requirements per version
 
 Use the following table to help understand the requirements for Software Center depending upon the specific version of Configuration Manager:
 
@@ -104,24 +126,6 @@ To the following dialog window:
 
 Change the appearance of Software Center to meet your organization's branding requirements. This configuration helps users trust Software Center.
 
-Configuration Manager applies custom branding for Software Center according to the following priorities:  
-
-- If you haven't installed the application catalog (recommended):  
-
-    1. **Software Center** client settings. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-center).  
-
-    2. **Organization name** client setting in **Computer Agent** group. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#computer-agent).  
-
-- If you've installed the application catalog:  
-
-    1. **Software Center** client settings. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-center).  
-
-    2. If you connect a Microsoft Intune subscription to Configuration Manager, then Software Center displays the *organization name*, *color*, and *company logo* that you specify in the Intune subscription properties. For more information, see [Configuring the Microsoft Intune subscription](/sccm/mdm/deploy-use/configure-intune-subscription).  
-
-    3. The *organization name* and *color* that you specify in the Application Catalog website point properties. For more information, see [Configuration options for Application Catalog website point](/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#BKMK_ApplicationCatalog_Website).  
-
-    4. **Organization name** client setting in **Computer Agent** group. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#computer-agent).  
-
 ### Configure Software Center branding
 
 <!-- 1351224 -->
@@ -131,6 +135,32 @@ For more information, see the following articles:
 
 - [Software Center](/sccm/core/clients/deploy/about-client-settings#software-center) group of client settings  
 - [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings)  
+
+### Branding priorities
+
+Configuration Manager applies custom branding for Software Center according to the following priorities:  
+
+1. **Software Center** client settings. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-center).  
+
+2. **Organization name** client setting in **Computer Agent** group. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#computer-agent).  
+
+#### Application catalog branding priorities
+
+> [!Important]
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+
+If you're using the application catalog, branding follows these priorities:  
+
+1. **Software Center** client settings. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-center).  
+
+2. If you connect a Microsoft Intune subscription to Configuration Manager, then Software Center displays the *organization name*, *color*, and *company logo* that you specify in the Intune subscription properties. For more information, see [Configuring the Microsoft Intune subscription](/sccm/mdm/deploy-use/configure-intune-subscription).  
+
+    > [!Important]
+    > Hybrid mobile device management is a [deprecated feature](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).
+
+3. The *organization name* and *color* that you specify in the application catalog website point properties. For more information, see [Configuration options for application catalog website point](/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#BKMK_ApplicationCatalog_Website).  
+
+4. **Organization name** client setting in **Computer Agent** group. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#computer-agent).  
 
 
 ## See also

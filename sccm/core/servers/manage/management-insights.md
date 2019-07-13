@@ -172,7 +172,7 @@ Insights that help you simplify the day-to-day management of your environment.
 
 Insights for managing Software Center.
 
-- **Direct users to Software Center instead of Application Catalog**: Check if users have installed or requested applications from the Application Catalog in the last 14 days. The primary functionality of Application Catalog is now included in Software Center. Support for the Application Catalog website ended in version 1806. For more information, see [Deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures#deprecated-features).  
+- **Direct users to Software Center instead of Application Catalog**: Check if users have installed or requested applications from the application catalog in the last 14 days. The primary functionality of application catalog is now included in Software Center. The application catalog is deprecated. For more information, see [Deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures#deprecated-features).  
 
 - **Use the new version of Software Center**: The previous version of Software Center is no longer supported. Set up clients to use the new Software Center by enabling the client setting **Use new Software Center** in the **Computer Agent** group. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#use-new-software-center).  
 
