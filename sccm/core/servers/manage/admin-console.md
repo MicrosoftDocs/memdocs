@@ -212,48 +212,9 @@ The Configuration Manager console has the following command-line options:
 
 ## Tips
 
-### Search device views using MAC address
+### General
 
-<!--3600878-->
-*(Introduced in version 1902)*
-
-You can search for a MAC address in a device view of the Configuration Manager console. This property is useful for OS deployment administrators while troubleshooting PXE-based deployments. When you view a list of devices, add the **MAC Address** column to the view. Use the search field to add the **MAC Address** search criteria.
-
-### Maximize the browse registry window
-
-<!--3594151 includes all MMS 1902 console changes-->
-*(Introduced in version 1902)*
-
-1. In the **Software Library** workspace, expand **Application Management**, and select the **Applications** node.
-1. Select an application that has a deployment type with a detection method. For example, a Windows Installer detection method.
-1. In the details pane, switch to the **Deployment Types** tab.
-1. Open the properties of a deployment type, and switch to the **Detection Method** tab. Select **Add Clause**.
-1. Change the **Setting Type** to **Registry** and select **Browse** to open the **Browse Registry** window. You can now maximize this window.  
-
-### Go to the collection from an application deployment
-
-*(Introduced in version 1902)*
-
-1. In the **Software Library** workspace, expand **Application Management**, and select the **Applications** node.
-1. Select an application. In the details pane, switch to the **Deployments** tab.
-1. Select a deployment, and then choose the new **Collection** option in the ribbon on the Deployment tab. This action switches the view to the collection that's the target of the deployment.
-   - This action is also available from the right-click context menu on the deployment in this view.
-
-### Edit a task sequence by default
-
-*(Introduced in version 1902)*
-
-In the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node. **Edit** is now the default action when opening a task sequence. Previously the default action was **Properties**.  
-
-### Remove content from monitoring status
-
-*(Introduced in version 1902)*
-
-1. In the **Monitoring** workspace, expand **Distribution Status**, and select **Content Status**.
-1. Select an item in the list, and choose the **View Status** option in the ribbon.
-1. In the Asset Details pane, right-click a distribution point, and select the new option **Remove**. This action removes this content from the selected distribution point.
-
-### Views sort by integer values
+#### Views sort by integer values
 
 *(Introduced in version 1902)*
 
@@ -265,7 +226,7 @@ We've made improvements to how various views sort data. For example, in the **De
 - Number Success​
 - Number Unknown​  
 
-### Move the warning for a large number of results
+#### Move the warning for a large number of results
 
 *(Introduced in version 1902)*
 
@@ -275,11 +236,12 @@ When you select a node in the console that returns more than 1,000 results, Conf
 
 There's now additional blank space in between this warning and the search field. This move helps to prevent inadvertently selecting the warning to display more results.
 
-### Send feedback
+#### Send feedback
 
+*(Introduced in version 1806)*
 <!--1357542-->
 
-Starting in version 1806, submit product feedback from the console.  
+Submit product feedback from the console.  
 
 - **Send a smile**: Send feedback on what you liked  
 
@@ -289,7 +251,22 @@ Starting in version 1806, submit product feedback from the console.
 
 For more information, see [Product Feedback](/sccm/core/understand/find-help#BKMK_1806Feedback).
 
+
 ### Assets and Compliance workspace
+
+#### Add SMBIOS GUID column to device and device collection nodes
+
+*(Introduced in version 1906)*
+
+<!--4526580-->
+In both the **Devices** and **Device Collections** nodes, you can now add a new column for **SMBIOS GUID**. This value is the same as the **BIOS GUID** property of the System Resource class. It's a unique identifier for the device hardware.
+
+#### Search device views using MAC address
+
+<!--3600878-->
+*(Introduced in version 1902)*
+
+You can search for a MAC address in a device view of the Configuration Manager console. This property is useful for OS deployment administrators while troubleshooting PXE-based deployments. When you view a list of devices, add the **MAC Address** column to the view. Use the search field to add the **MAC Address** search criteria.
 
 #### View users for a device
 
@@ -316,12 +293,51 @@ Starting in version 1806, when searching in a device collection, it doesn't sear
 
 This behavior significantly improves the time it takes to search by name, especially in a large environment. Custom searches by specific criteria are unaffected by this change.
 
+
+### Software Library workspace
+
+#### Maximize the browse registry window
+
+<!--3594151 includes all MMS 1902 console changes-->
+*(Introduced in version 1902)*
+
+1. In the **Software Library** workspace, expand **Application Management**, and select the **Applications** node.
+1. Select an application that has a deployment type with a detection method. For example, a Windows Installer detection method.
+1. In the details pane, switch to the **Deployment Types** tab.
+1. Open the properties of a deployment type, and switch to the **Detection Method** tab. Select **Add Clause**.
+1. Change the **Setting Type** to **Registry** and select **Browse** to open the **Browse Registry** window. You can now maximize this window.  
+
+#### Edit a task sequence by default
+
+*(Introduced in version 1902)*
+
+In the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node. **Edit** is now the default action when opening a task sequence. Previously the default action was **Properties**.  
+
+#### Go to the collection from an application deployment
+
+*(Introduced in version 1902)*
+
+1. In the **Software Library** workspace, expand **Application Management**, and select the **Applications** node.
+1. Select an application. In the details pane, switch to the **Deployments** tab.
+1. Select a deployment, and then choose the new **Collection** option in the ribbon on the Deployment tab. This action switches the view to the collection that's the target of the deployment.
+   - This action is also available from the right-click context menu on the deployment in this view.
+
+
 ### Monitoring workspace
+
+#### Remove content from monitoring status
+
+*(Introduced in version 1902)*
+
+1. In the **Monitoring** workspace, expand **Distribution Status**, and select **Content Status**.
+1. Select an item in the list, and choose the **View Status** option in the ribbon.
+1. In the Asset Details pane, right-click a distribution point, and select the new option **Remove**. This action removes this content from the selected distribution point.
 
 #### Copy details in monitoring views
 
+*(Introduced in version 1806)*
 <!--1357856-->
-Starting in version 1806, copy information from the **Asset Details** pane for the following monitoring nodes:  
+Copy information from the **Asset Details** pane for the following monitoring nodes:  
 
 - **Content Distribution Status**  
 
