@@ -186,6 +186,11 @@ Instead of copying the files over the network, on the secondary site server, cop
 
 For more information, see [Install a secondary site](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#bkmk_secondary).
 
+### Site role installation inherits permissions from drive root
+
+<!-- SCCMDocs#1380 -->
+Make sure to properly configure the system drive permissions before you install the first site system role to any server. For example, `C:\SMS_CCM` inherits permissions from `C:\`. If the root of the drive isn't properly secured, then low rights users may be able to access or modify content in the Configuration Manager folder.
+
 
 ## <a name="BKMK_Security_SQLServer"></a> Security guidance for SQL Server
 
