@@ -55,7 +55,7 @@ If the client requires these dependencies to complete the installation, it autom
 |Microsoft .NET Framework version 4.5.2|Required to support client operations. Automatically installed on the client computer if it doesn't have Microsoft .NET Framework version 4.5 or later installed. For more information, see [Additional details about Microsoft .NET Framework version 4.5.2](#dotNet).|  
 |Microsoft SQL Server Compact 4.0 SP1 components|Required to store information related to client operations.|  
 
-> [!Note]
+> [!Important]
 > The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
 >
 > For more information, see the following articles:

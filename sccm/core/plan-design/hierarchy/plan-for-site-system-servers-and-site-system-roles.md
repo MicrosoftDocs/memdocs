@@ -64,6 +64,7 @@ To install additional providers, run Configuration Manager setup to [Manage the 
 
 ### Application catalog web service point
 
+> [!Important]
 > The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
 >
 > For more information, see the following articles:
@@ -75,6 +76,7 @@ A site system role that provides software information to the application catalog
 
 ### Application catalog website point
 
+> [!Important]
 > The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
 >
 > For more information, see the following articles:
