@@ -117,10 +117,10 @@ These scenarios give you an introduction to using System Center Configuration Ma
 
 The following System Center Configuration Manager configuration item types are available for devices that are not managed by the Configuration Manager client, for example, devices that are enrolled with Microsoft Intune.  
 
- -   [How to create configuration items for Windows 8.1 and Windows 10 devices managed with Intune](create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)  
+-   [How to create configuration items for Windows 8.1 and Windows 10 devices managed with Intune](create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)  
 
- -   [How to create configuration items for Windows Phone devices managed with Intune](create-configuration-items-for-windows-phone-devices-managed-without-the-client.md)  
+-   [How to create configuration items for Windows Phone devices managed with Intune](create-configuration-items-for-windows-phone-devices-managed-without-the-client.md)  
 
- -   [How to create configuration items for iOS and Mac OS X devices managed with Intune](create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md)  
+-   [How to create configuration items for iOS and Mac OS X devices managed with Intune](create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md)  
 
- -   [How to create configuration items for Android and Samsung KNOX Standard devices managed with Intune](create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md)  
+-   [How to create configuration items for Android and Samsung KNOX Standard devices managed with Intune](create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md)  

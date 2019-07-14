@@ -146,12 +146,12 @@ Depending on the device type, some of these options might not be available.
       For more information, see [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/understand/hybrid-mobile-device-management.md).  
 
 ##  <a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> Manage clients from the Device Collections node  
-  Many of the tasks that are available for devices in the **Devices** node are also available on collections. The console automatically applies the operation to all eligible devices in the collection. This action on an entire collection generates additional network packets and increases CPU usage on the site server.  
+Many of the tasks that are available for devices in the **Devices** node are also available on collections. The console automatically applies the operation to all eligible devices in the collection. This action on an entire collection generates additional network packets and increases CPU usage on the site server.  
 
-  Consider the following before you perform collection-level tasks. Once started, you cannot stop the task from the console. 
- - How many devices are in the collection?
- - Are the devices connected by low-bandwidth network connections?
- - How much time does this task need to complete for all the devices?
+Consider the following before you perform collection-level tasks. Once started, you cannot stop the task from the console. 
+- How many devices are in the collection?
+- Are the devices connected by low-bandwidth network connections?
+- How much time does this task need to complete for all the devices?
 
 #### To manage clients from the Device Collections node  
 
@@ -189,11 +189,11 @@ Beginning with version 1710, you can use the Configuration Manager console to id
 > You must also upgrade clients to version 1710 for this capability to function. We recommend that you enable automatic client upgrade to keep your clients up to date with minimal administrative overhead. For more information, see [Use automatic client upgrade](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#use-automatic-client-upgrade).
 
 To identify devices that are pending a restart, go to the **Assets and Compliance** workspace in the Configuration Manager console and select the **Devices** node. Then view the status for each device in the details pane in a new column named **Pending Restart**. Each device has one or more of the following values: 
- - **No**: there is no pending restart
- - **Configuration Manager**: this value comes from the client reboot coordinator component (RebootCoordinator.log)
- - **File rename**: this value comes from Windows reporting a pending file rename operation (HKLM\SYSTEM\CurrentControlSet\Control\Session Manager, PendingFileRenameOperations)
- - **Windows Update**: this value comes from the Windows Update Agent reporting a pending restart is required for one or more updates (HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired)
- - **Add or remove feature**: this value comes from the Windows component-based servicing reporting the addition or removal of a Windows feature requires a restart (HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Reboot Pending)
+- **No**: there is no pending restart
+- **Configuration Manager**: this value comes from the client reboot coordinator component (RebootCoordinator.log)
+- **File rename**: this value comes from Windows reporting a pending file rename operation (HKLM\SYSTEM\CurrentControlSet\Control\Session Manager, PendingFileRenameOperations)
+- **Windows Update**: this value comes from the Windows Update Agent reporting a pending restart is required for one or more updates (HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired)
+- **Add or remove feature**: this value comes from the Windows component-based servicing reporting the addition or removal of a Windows feature requires a restart (HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Reboot Pending)
 
 **To create the client notification to restart a device:**
 1. Locate the device you want to restart within a collection in the **Device Collections** node of the console.

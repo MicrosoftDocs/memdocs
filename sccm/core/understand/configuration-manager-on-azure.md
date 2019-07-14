@@ -124,7 +124,7 @@ In general, you can leverage the normal guidance as it relates to WAN links and 
 ### What about content distribution and content management? Should standard distribution points be in Azure or on-premises, and should I use BranchCache or pull-distribution points on-premises? Or should I make exclusive use of Cloud Distribution Points?
 The approach for content management is much the same as for site servers and site systems.
 - If you use a fast and reliable network connection between Azure and your intranet with an unlimited data plan, hosting standard distribution points in Azure could be an option.
--  If you use a metered data plan and bandwidth cost is a concern or the network connection between Azure and your intranet is not fast or can be unreliable, then you might consider other approaches. These include locating standard or pull distribution points on-premises as well as using BranchCache. The use of cloud-based distribution points is also an option but there are some limits on the content types supported (for example, no support for software updates packages).
+- If you use a metered data plan and bandwidth cost is a concern or the network connection between Azure and your intranet is not fast or can be unreliable, then you might consider other approaches. These include locating standard or pull distribution points on-premises as well as using BranchCache. The use of cloud-based distribution points is also an option but there are some limits on the content types supported (for example, no support for software updates packages).
 
 > [!NOTE]
 >  If PXE support is required, you must use on-premises distribution points (standard or pull) to respond to boot requests. [WDS is currently not supported to run on Azure VMs](https://technet.microsoft.com/library/hh831764(v=ws.11).aspx).
@@ -152,23 +152,21 @@ Hard to say since every environment is different. The best thing to do is to cos
 https://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/
 
 **Azure VM Machine Types:**
- - Azure Machine sizes: https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs/  
- - VM Pricing: https://azure.microsoft.com/pricing/details/virtual-machines/  
- - Storage Pricing: https://azure.microsoft.com/pricing/details/storage/
+- Azure Machine sizes: https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs/  
+- VM Pricing: https://azure.microsoft.com/pricing/details/virtual-machines/  
+- Storage Pricing: https://azure.microsoft.com/pricing/details/storage/
 
 **Disk Performance Considerations:**    
- - Premium Disk intro:  https://azure.microsoft.com/blog/2014/12/11/introducing-premium-storage-high-performance-storage-for-azure-virtual-machine-workloads/  
- - Deeper Premium Disk info: https://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/   
- - Handy collection of charts for max Sizes and Perf targets for Storage: https://azure.microsoft.com/documentation/articles/storage-scalability-targets/  
- - Another Intro + some cool uber-geek data on how Premium Storage works behind the covers:  https://azure.microsoft.com/blog/2015/04/16/azure-premium-storage-now-generally-available-2/
+- Premium Disk intro:  https://azure.microsoft.com/blog/2014/12/11/introducing-premium-storage-high-performance-storage-for-azure-virtual-machine-workloads/  
+- Deeper Premium Disk info: https://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/   
+- Handy collection of charts for max Sizes and Perf targets for Storage: https://azure.microsoft.com/documentation/articles/storage-scalability-targets/  
+- Another Intro + some cool uber-geek data on how Premium Storage works behind the covers:  https://azure.microsoft.com/blog/2015/04/16/azure-premium-storage-now-generally-available-2/
 
 **Availability:**
- - Azure IaaS Uptime SLA's: https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/  
- - Availability Sets Explained: https://azure.microsoft.com/documentation/articles/virtual-machines-manage-availability/
+- Azure IaaS Uptime SLA's: https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/  
+- Availability Sets Explained: https://azure.microsoft.com/documentation/articles/virtual-machines-manage-availability/
 
 **Connectivity:**
- - Express route vs. Azure VPN: https://azure.microsoft.com/blog/2014/06/10/expressroute-or-virtual-network-vpn-whats-right-for-me/
- - Express Route Pricing: https://azure.microsoft.com/pricing/details/expressroute/
- - More about Express Route: https://azure.microsoft.com/documentation/articles/expressroute-introduction/
-
- 
+- Express route vs. Azure VPN: https://azure.microsoft.com/blog/2014/06/10/expressroute-or-virtual-network-vpn-whats-right-for-me/
+- Express Route Pricing: https://azure.microsoft.com/pricing/details/expressroute/
+- More about Express Route: https://azure.microsoft.com/documentation/articles/expressroute-introduction/

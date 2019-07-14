@@ -21,10 +21,11 @@ Update 1706 for System Center Configuration Manager current branch is available 
 
 > [!TIP]  
 > To install a new site, you must use a baseline version of Configuration Manager.  
->  Learn more about:    
->   - [Installing new sites](https://technet.microsoft.com/library/mt590197.aspx)  
->   - [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx)  
->   - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)  
+>
+> Learn more about:    
+> - [Installing new sites](https://technet.microsoft.com/library/mt590197.aspx)  
+> - [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)  
 
 The following sections provide details about changes and new capabilities introduced in version 1706 of Configuration Manager.  
 
@@ -53,8 +54,8 @@ We have added additional improvements to accessibility for the Configuration Man
 ### Improvements  for SQL Server Always On Availability Groups
 <!-- 1352094 -->
 With this release, you can now use asynchronous commit replicas in the SQL Server Always On availability groups you use with Configuration Manager. This means you can add additional replicas to your availability groups to use as off-site (remote) backups, and then use them in a disaster recovery scenario.  
-  - Configuration Manager supports using the asynchronous commit replica to recover your synchronous replica. See [site database recovery options](/sccm/core/servers/manage/recover-sites#site-database-recovery-options) in the Backup and Recovery topic for information on how to accomplish this.
-  - This release does not support failover to use the asynchronous commit replica as your site database.
+- Configuration Manager supports using the asynchronous commit replica to recover your synchronous replica. See [site database recovery options](/sccm/core/servers/manage/recover-sites#site-database-recovery-options) in the Backup and Recovery topic for information on how to accomplish this.
+- This release does not support failover to use the asynchronous commit replica as your site database.
 For more information, see [Prepare to use Always On Availability Groups](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).
 
 ### Update reset tool
@@ -68,9 +69,9 @@ With this release, issues with how the Configuration Manager console scales and 
 ### Improved boundary groups for software update points
 <!-- 1324591 -->
 This release includes improvements for how software update points work with boundary groups. The following summarizes the new fallback behavior:
--   Fallback for software update points now uses a configurable time for fallback to neighbor boundary groups.
--   Independent of the fallback configuration, a client attempts to reach the last software update point it used for 120 minutes. After failing to reach that server for 120 minutes, the client then checks its pool of available software update points, so it can find a new one.
--   After failing to reach its original server for two hours, the client switches to a shorter cycle for contacting a new software update point. This means if a client fails to connect with a new server, it quickly selects the next server from its pool of available servers and attempts to contact that one.
+- Fallback for software update points now uses a configurable time for fallback to neighbor boundary groups.
+- Independent of the fallback configuration, a client attempts to reach the last software update point it used for 120 minutes. After failing to reach that server for 120 minutes, the client then checks its pool of available software update points, so it can find a new one.
+- After failing to reach its original server for two hours, the client switches to a shorter cycle for contacting a new software update point. This means if a client fails to connect with a new server, it quickly selects the next server from its pool of available servers and attempts to contact that one.
 
 For more information, see [software update points](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points) in the Boundary Groups topic for the Current Branch.
 
@@ -79,24 +80,24 @@ For more information, see [software update points](/sccm/core/servers/deploy/con
 With this release, we have improved the integration of Configuration Manager and Azure Active Directory (Azure AD).  These improvements streamline how you configure the Azure services you use with Configuration Manager, and help you to manage clients and users who authenticate though Azure AD.
 
 The improved integration makes the following possible:  
-  -   Azure Services Wizard – This Wizard provides a common configuration experience that replaces the individual workflows to set up the following Azure services you use with Configuration Manager.
-      - **Cloud Management**
-        Enable clients to authenticate by using Azure Active Directory (Azure AD). You can also configure Azure AD User Discovery.
-      - **Log Analytics Connector**
-        Connect to Azure Log Analytics and sync collection data.
-      - **Upgrade Readiness**
-        Connect to Upgrade Readiness and view client upgrade-compatibility data.
-      - **Windows Store for Business**
-        Connect to the on-line store for Windows Store for Business and get apps for your organization that you can deploy with Configuration Manager.
+- Azure Services Wizard – This Wizard provides a common configuration experience that replaces the individual workflows to set up the following Azure services you use with Configuration Manager.
+  - **Cloud Management**
+    Enable clients to authenticate by using Azure Active Directory (Azure AD). You can also configure Azure AD User Discovery.
+  - **Log Analytics Connector**
+    Connect to Azure Log Analytics and sync collection data.
+  - **Upgrade Readiness**
+    Connect to Upgrade Readiness and view client upgrade-compatibility data.
+  - **Windows Store for Business**
+    Connect to the on-line store for Windows Store for Business and get apps for your organization that you can deploy with Configuration Manager.
 
 
   This is done by using an [Azure server web app](/azure/app-service/app-service-authentication-overview) to provide the subscription and configuration details that you otherwise enter each time you set up a new Configuration Manager component or service with Azure. For more information, see [Azure Services Wizard](/sccm/core/servers/deploy/configure/azure-services-wizard).
 
--   Use Azure AD to authenticate clients on the internet to access your Configuration Manager sites. Azure AD replaces the need to configure and use client authentication certificates. This requires the cloud management gateway site system role. For more information, see [Install and assign Configuration Manager clients from the internet using Azure AD for authentication](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
+- Use Azure AD to authenticate clients on the internet to access your Configuration Manager sites. Azure AD replaces the need to configure and use client authentication certificates. This requires the cloud management gateway site system role. For more information, see [Install and assign Configuration Manager clients from the internet using Azure AD for authentication](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
 
--   Install and manage the Configuration Manager client on computers that are located on the internet. This requires the use of the cloud management gateway site system role. For more information, see [Install and assign Configuration Manager clients from the internet using Azure AD for authentication](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
+- Install and manage the Configuration Manager client on computers that are located on the internet. This requires the use of the cloud management gateway site system role. For more information, see [Install and assign Configuration Manager clients from the internet using Azure AD for authentication](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
 
--   Configure Azure AD User Discovery.  Use the Azure Services Wizard to configure this new discovery method. This new method queries your Azure AD for user data you can then use along-side traditional discovery data.  Both full and delta synchronization are supported.  For more information see [Azure AD User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc).
+- Configure Azure AD User Discovery.  Use the Azure Services Wizard to configure this new discovery method. This new method queries your Azure AD for user data you can then use along-side traditional discovery data.  Both full and delta synchronization are supported.  For more information see [Azure AD User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc).
 
 ### Peer cache improvements
 <!-- 1252345 -->

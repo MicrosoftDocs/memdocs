@@ -105,11 +105,11 @@ Conditional access to Exchange Online Dedicated supports devices that run:
 
 ## Requirements for Exchange on-premises
 Conditional access to Exchange on-premises supports:
--   Windows 8 and later (when enrolled with Intune)
--   Windows Phone 8 and later
--   Native email app on iOS
--   Native email app on Android 4 or later
--   Microsoft Outlook app is not supported (Android and iOS)
+- Windows 8 and later (when enrolled with Intune)
+- Windows Phone 8 and later
+- Native email app on iOS
+- Native email app on Android 4 or later
+- Microsoft Outlook app is not supported (Android and iOS)
 
 **Additionally**:
 
@@ -127,9 +127,9 @@ Conditional access to Exchange on-premises supports:
 
 ## Requirements for Skype for Business Online
 Conditional access to Skype Online supports devices that run:
- -   iOS 7.1 and later
- -   Android 4.0 and later
- -   Samsung KNOX Standard 4.0 or later
+- iOS 7.1 and later
+- Android 4.0 and later
+- Samsung KNOX Standard 4.0 or later
 
 Enable [modern authentication](https://aka.ms/SkypeModernAuth) for Skype for Business Online. 
 
@@ -166,13 +166,13 @@ Conditional access to SharePoint Online supports devices that run:
 ## Next Steps  
  Read the following topics to learn how to configure compliance policies and conditional access policies for your required scenario:  
 
--   [Manage device compliance policies in System Center Configuration Manager](../../protect/deploy-use/device-compliance-policies.md)  
+- [Manage device compliance policies in System Center Configuration Manager](../../protect/deploy-use/device-compliance-policies.md)  
 
--   [Manage email access in System Center Configuration Manager](../../protect/deploy-use/manage-email-access.md)  
+- [Manage email access in System Center Configuration Manager](../../protect/deploy-use/manage-email-access.md)  
 
--   [Manage SharePoint Online access in System Center Configuration Manager](../../protect/deploy-use/manage-sharepoint-online-access.md)  
+- [Manage SharePoint Online access in System Center Configuration Manager](../../protect/deploy-use/manage-sharepoint-online-access.md)  
 
--   [Manage Skype for Business Online access](../../protect/deploy-use/manage-skype-for-business-online-access.md)  
+- [Manage Skype for Business Online access](../../protect/deploy-use/manage-skype-for-business-online-access.md)  
 
 ### See also  
 

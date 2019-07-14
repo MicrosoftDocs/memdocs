@@ -26,10 +26,10 @@ The following additional updates to this release are also now available:
 > [!TIP]  
 > To install a new site, you must use a baseline version of Configuration Manager.  
 >
->  Learn more about:    
->   - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites)  
->   - [Installing updates at sites](/sccm/core/servers/manage/updates)  
->   - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)
+> Learn more about:    
+> - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites)  
+> - [Installing updates at sites](/sccm/core/servers/manage/updates)  
+> - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 The following sections provide details about the changes and new capabilities in version 1802 of Configuration Manager.  
 
@@ -202,15 +202,15 @@ The default task sequence template for Windows 10 in-place upgrade now includes 
 
 ### Improvements to operating system deployment
 This release includes the following improvements to operating system deployment:
- - In Windows PE, when launching cmtrace.exe, you are no longer prompted to choose whether to make this program the default viewer for log files. <!-- SMS 500897 -->
- - Add boot images to the [Download Package Content](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent) task sequence step.
- - Improvements to the [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence) step: <!-- 1261338 -->   
-     - Support for all operating system deployment scenarios from Software Center, PXE, and media.
-     - Improvements to console actions such as copy, import, export, and warning during object deletion.
-     - Support for the [Create Prestaged Content File](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent) wizard.
-     - Integration with deployment verification. For more information, see [High-risk task sequence deployments](/sccm/osd/deploy-use/deploy-a-task-sequence). 
-     - The Run Task Sequence step can now be used across multiple levels of task sequences, not just a single parent-child relationship. Multi-level relationships increase the complexity, so use with caution. These relationships are still checked for circular references.
-    
+- In Windows PE, when launching cmtrace.exe, you are no longer prompted to choose whether to make this program the default viewer for log files. <!-- SMS 500897 -->
+- Add boot images to the [Download Package Content](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent) task sequence step.
+- Improvements to the [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence) step: <!-- 1261338 -->   
+  - Support for all operating system deployment scenarios from Software Center, PXE, and media.
+  - Improvements to console actions such as copy, import, export, and warning during object deletion.
+  - Support for the [Create Prestaged Content File](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent) wizard.
+  - Integration with deployment verification. For more information, see [High-risk task sequence deployments](/sccm/osd/deploy-use/deploy-a-task-sequence). 
+  - The Run Task Sequence step can now be used across multiple levels of task sequences, not just a single parent-child relationship. Multi-level relationships increase the complexity, so use with caution. These relationships are still checked for circular references.
+
 ### Deployment templates for task sequences
 <!-- 1357391 -->
 The [deployment wizard for task sequences](/sccm/osd/deploy-use/deploy-a-task-sequence) can now create a deployment template. The deployment template can be saved and applied to an existing or new task sequence to create a deployment. 
