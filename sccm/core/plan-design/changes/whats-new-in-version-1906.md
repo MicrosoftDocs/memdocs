@@ -39,6 +39,7 @@ Version 1906 drops support for the following features:
 
 - Classic service deployment to Azure for cloud management gateway and cloud distribution point. For more information, see [Plan for CMG](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).
 
+- You can't install new application catalog roles. Updated clients automatically use the management point for user-available application deployments. For more information, see [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).
 
 
 ## <a name="bkmk_infra"></a> Site infrastructure
@@ -415,18 +416,25 @@ You can now add up to five custom tabs in Software Center. You can also edit the
 <!--For more information, see [Software Center client settings](/sccm/core/clients/deploy/about-client-settings#software-center) and [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center).-->
 
 ### Software Center infrastructure improvements
+
 <!--3555950-->
 
 This release includes the following infrastructure improvements to Software Center:
 
 - Software Center now communicates with a management point for apps targeted to users as available. It doesn't use the application catalog anymore. This change makes it easier for you to remove the application catalog from the site.
+
 - Previously, Software Center picked the first management point from the list of available servers. Starting in this release, it uses the same management point that the client uses. This change allows Software Center to use the same management point from the assigned primary site as the client.
+
 - The management point now checks the health of its user service every five minutes. It reports any issues via status messages for the SMS_MP_CONTROL_MANAGER site component.
 
 > [!Important]  
-> These iterative improvements to Software Center and the management point are to retire the application catalog roles. The Silverlight user experience isn't supported as of current branch version 1806. In the first current branch release after June 30, 2019, updated clients will automatically use the management point for user-available application deployments. You also won't be able to install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+> These iterative improvements to Software Center and the management point are to retire the application catalog roles.
+>
+> - The Silverlight user experience isn't supported as of current branch version 1806.
+> - Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles.
+> - In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
 
-<!--For more information, see [Remove the application catalog](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat) and [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center).-->
+For more information, see [Remove the application catalog](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat) and [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center).
 
 
 ### Redesigned notification for newly available software

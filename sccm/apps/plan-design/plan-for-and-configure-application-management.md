@@ -2,7 +2,7 @@
 title: Plan for application management
 titleSuffix: Configuration Manager
 description: Implement and configure the necessary dependencies for deploying applications in Configuration Manager.
-ms.date: 05/21/2019
+ms.date: 07/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -28,12 +28,18 @@ Use the information in this article to help you implement the necessary dependen
 
 IIS is required on the servers that run the following site system roles:
 
-- Application catalog website point  
-- Application catalog web service point  
 - Management point  
 - Distribution point  
 
 For more information, see [Site and site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites).  
+
+> [!Note]  
+> The application catalog also requires IIS. However, its Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+>
+> For more information, see the following articles:
+>
+> - [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)
+> - [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)  
 
 
 ### Certificates on code-signed applications for mobile devices
@@ -63,10 +69,16 @@ For more information on user device affinity, see [Link users and devices with u
 
 ### Management point
 
-Clients contact a management point to download client policy, to locate content, and to connect to the application catalog. If clients can't access a management point, they can't use the application catalog.
+Clients contact a management point to download client policy, to locate content.
+
+Starting in version 1906, updated clients automatically use the management point for user-available application deployments.
+
+In version 1902 and earlier, clients use the management point to connect to the application catalog. If clients can't access a management point, they can't use the application catalog.
 
 > [!Note]  
 > Starting in version 1806, application catalog roles are no longer required to display user-available applications in Software Center. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).<!--1358309-->  
+>
+> Starting in version 1906, you can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
   
 
 ### Distribution point
@@ -153,7 +165,7 @@ The application catalog is deprecated. For more information, see [Removed and de
 
 - Starting in version 1806, the **Silverlight user experience** for the application catalog website point is no longer supported.<!--1358309--> The application catalog web service point role is no longer *required*, but still *supported*.
 
-- In the first current branch release after June 30, 2019, updated clients will automatically use the management point for user-available application deployments. You also won't be able to install new application catalog roles.
+- Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles.
 
 - In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
 
