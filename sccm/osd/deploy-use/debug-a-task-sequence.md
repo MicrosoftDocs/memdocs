@@ -17,7 +17,7 @@ manager: dougeby
 
 <!--3612274-->
 
-The task sequence debugger is a new troubleshooting tool. You deploy a task sequence in debug mode to a collection of one device. It lets you step through the task sequence in a controlled manner to aid troubleshooting and investigation.
+Starting in version 1906, the task sequence debugger is a new troubleshooting tool. You deploy a task sequence in debug mode to a collection of one device. It lets you step through the task sequence in a controlled manner to aid troubleshooting and investigation.
 
 ## Prerequisites
 
@@ -40,7 +40,7 @@ The task sequence debugger is a new troubleshooting tool. You deploy a task sequ
 
 When the task sequence runs on the device in Windows PE, the Task Sequence Debugger window opens similar to the following screenshot:
 
-![Screenshot of Task Sequence Debugger](../../media/3612274-tsdebug.png)
+![Screenshot of Task Sequence Debugger](media/3612274-tsdebug.png)
 
 The debugger includes the following controls:
 
