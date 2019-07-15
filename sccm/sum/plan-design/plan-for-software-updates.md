@@ -327,6 +327,7 @@ This section includes the following subtopics:
 - [Products](#BKMK_UpdateProducts)
 - [Supersedence rules](#BKMK_SupersedenceRules)
 - [Languages](#BKMK_UpdateLanguages)  
+- [Maximum run time](#bkmk_maxruntime)
 
 
 Software updates synchronization in Configuration Manager downloads the software updates metadata based on criteria that you configure. The top-level site in your hierarchy synchronizes software updates from Microsoft Update. You have the option to configure the software update point on the top-level site to synchronize with an existing WSUS server, not in the Configuration Manager hierarchy. The child primary sites synchronize software updates metadata from the software update point on the central administration site. Before you install and configure a software update point, use this section to plan for the synchronization settings.  
