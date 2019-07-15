@@ -51,6 +51,9 @@ The client only disables user policy when it detects this type of device during 
 
 If you require user policy in this scenario, and accept any potential performance impact, use the Configuration Manager SDK with the [SMS_PolicyAgentConfig server WMI class](/sccm/develop/reference/core/clients/config/sms_policyagentconfig-server-wmi-class). Set the new `PolicyEnableUserPolicyOnTS` property to `true`.
 
+> [!Note]  
+> You can't use co-management with a Windows Virtual Desktop. Windows 10 Enterprise for Virtual Desktop (EVD) is actually a Windows Server edition, which doesn't have the MDM components.<!-- SCCMDocs-pr#3950 -->
+
 ### Supported server OS versions
 
 - **Windows Server 2019**: Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup>  
