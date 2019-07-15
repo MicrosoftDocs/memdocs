@@ -477,13 +477,13 @@ Clients that are managed over the internet must communicate with internet-based 
 `CCMSetup.exe /source: D:\Clients /UsePKICert CCMHOSTNAME=server1.contoso.com SMSSIGNCERT=siteserver.cer SMSSITECODE=ABC FSP=server2.contoso.com CCMALWAYSINF=1 CCMFIRSTCERT=1`    
 
 This example installs the client with the following behaviors:
-  - Use source files from a folder on drive D.
-  - Use a client PKI certificate.
-  - Select the certificate with the longest validity period.
-  - Internet-only client management.
-  - Assign the client to use the internet-based management point named SERVER1.
-  - Assign the internet-based fallback status point in the contoso.com domain.
-  - Assign the client to the ABC site.  
+- Use source files from a folder on drive D.
+- Use a client PKI certificate.
+- Select the certificate with the longest validity period.
+- Internet-only client management.
+- Assign the client to use the internet-based management point named SERVER1.
+- Assign the internet-based fallback status point in the contoso.com domain.
+- Assign the client to the ABC site.  
 
 
 ###  <a name="BKMK_ConfigureIBCM_MP"></a> To configure clients for internet-based client management after client installation  

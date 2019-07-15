@@ -37,8 +37,8 @@ This article includes security and privacy information for the Configuration Man
 
 ### Configuration Manager client-facing roles
 The management point and software update point host endpoints in IIS to service client requests. The CMG doesn't expose all internal endpoints. Every endpoint published to the CMG has an URL mapping.
-  - The external URL is the one the client uses to communicate with the CMG.
-  - The internal URL is the CMG connection point used to forward requests to the internal server.
+- The external URL is the one the client uses to communicate with the CMG.
+- The internal URL is the CMG connection point used to forward requests to the internal server.
 
 #### URL mapping example
 When you enable CMG traffic on a management point, Configuration Manager creates an internal set of URL mappings for each management point server. For example: ccm_system, ccm_incoming, and sms_mp. The external URL for the management point ccm_system endpoint might look like:  

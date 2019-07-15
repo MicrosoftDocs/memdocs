@@ -76,9 +76,9 @@ When using an unattended script to install a licensed branch, you must add the f
 
 For example, to install a licensed Current Branch edition you would use:
 
-  **Key Name: SABranchOptions**
-   - **SAActive = 1**
-   - **CurrentBranch = 1**
+**Key Name: SABranchOptions**
+- **SAActive = 1**
+- **CurrentBranch = 1**
 
 
 > [!IMPORTANT]  
