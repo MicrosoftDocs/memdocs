@@ -210,7 +210,8 @@ Similar to a terminal server, these virtual devices allow multiple concurrent ac
 
 For more information, see [Supported OS versions for clients and devices](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#windows-computers).
 
-### OneTrace (Preview)
+### Support Center OneTrace (Preview)
+
 <!--3555962-->
 OneTrace is a new log viewer with Support Center. It works similarly to CMTrace, with the following improvements:
 
@@ -223,15 +224,7 @@ OneTrace is a new log viewer with Support Center. It works similarly to CMTrace,
 
 ![Screenshot of OneTrace log viewer](./media/3555962-onetrace.png)
 
-OneTrace works with many types of log files, such as:
-
-- Configuration Manager client logs
-- Configuration Manager server logs
-- Status messages
-- Windows Update ETW log file on Windows 10
-- Windows Update log file on Windows 7 & Windows 8.1
-
-<!-- For more information, see [Configuration Manager tools](/sccm/core/support/tools). -->
+For more information, see [Support Center OneTrace](/sccm/core/support/support-center-onetrace).
 
 <!-- Commenting out item for now since it isn't in the TAP feature list 
 

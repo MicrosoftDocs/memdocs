@@ -562,6 +562,8 @@
       href: support/support-center-ui-reference.md
     - name: Customizations
       href: support/support-center-customize.md
+    - name: Support Center OneTrace (Preview)
+      href: support/support-center-onetrace.md
   - name: Configuration Manager tools
     items:
     - name: Tools overview

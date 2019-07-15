@@ -41,6 +41,11 @@ Support Center includes Support Center Viewer, a tool that support personnel use
 
 Support Center includes a modern log viewer. This tool replaces CMTrace and provides a customizable interface with support for tabs and dockable windows. It has a fast presentation layer, and can load large log files in seconds.
 
+### Support Center OneTrace (Preview)
+
+<!--3555962-->
+Starting in version 1906, **OneTrace** is a new log viewer with Support Center. It works similarly to CMTrace, with improvements. For more information, see [Support Center OneTrace](/sccm/core/support/support-center-onetrace).
+
 ### PowerShell cmdlets
 
 Support Center also includes [Windows PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=397830). Use these cmdlets to create a remote connection to another Configuration Manager client, to configure the data collection options, and to start data collection.
