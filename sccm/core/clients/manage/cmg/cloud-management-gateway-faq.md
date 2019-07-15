@@ -1,5 +1,6 @@
 ---
 title: CMG FAQ
+titleSuffix: Configuration Manager
 description: Use this article to answer frequently asked questions regarding the cloud management gateway
 author: aczechowski
 ms.author: aaroncz
