@@ -41,6 +41,12 @@ Version 1906 drops support for the following features:
 
 - You can't install new application catalog roles. Updated clients automatically use the management point for user-available application deployments. For more information, see [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).
 
+Version 1906 deprecates support for the following products:  
+
+- Windows CE 7.0
+- Windows 10 Mobile
+- Windows 10 Mobile Enterprise
+
 
 ## <a name="bkmk_infra"></a> Site infrastructure
 

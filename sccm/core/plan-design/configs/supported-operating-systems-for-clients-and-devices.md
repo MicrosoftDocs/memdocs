@@ -158,6 +158,9 @@ Manage Windows CE devices with the Configuration Manager mobile device legacy cl
 
 - Windows CE 7.0 (ARM and x86 processors)  
 
+    > [!Note]
+    > Support is deprecated for Windows CE 7.0 in Configuration Manager. For more information, see [Removed and deprecated items for Configuration Manager clients](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-client).
+
 #### Supported languages include
 
 - Chinese (simplified and traditional)
@@ -341,13 +344,16 @@ Configuration Manager has built-in capabilities for managing mobile devices that
 - **Windows 10 IoT Enterprise** (x86, x64)  
     This version includes the long-term servicing channel (LTSC). For more information, see [Overview of Windows 10 IoT Enterprise](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
 
+- **Windows 10 IoT Mobile Enterprise**  
+
+- **Windows 10 Team for Surface Hub**  
+
 - **Windows 10 Mobile**  
 
 - **Windows 10 Mobile Enterprise**  
 
-- **Windows 10 IoT Mobile Enterprise**  
-
-- **Windows 10 Team for Surface Hub**  
+    > [!Note]
+    > Support is deprecated for Windows 10 Mobile and Windows 10 Mobile Enterprise in Configuration Manager. For more information, see [Removed and deprecated items for Configuration Manager clients](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-client).
 
 
 ## <a name="bkmk_ExSrvConOS"></a> Exchange Server connector  
