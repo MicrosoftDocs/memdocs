@@ -516,9 +516,9 @@ You can now specify the maximum amount of time a software update installation ha
 ### Configure dynamic update during feature updates
 <!--4062619-->
 
-Use a new client setting to configure [dynamic updates for Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847) feature updates. Dynamic update can install language packs, features on demand, drivers, and cumulative updates during Windows setup. This setting changes the [setupconfig](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-automation-overview) file used during feature update installation. 
+Use a new client setting to configure [Dynamic Update](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847) during Windows 10 feature update installs. Dynamic Update installs language packs, features on demand, drivers, and cumulative updates during Windows setup by directing the client to download these updates from the internet.
 
-<!--For more information, see [Software update client settings](/sccm/core/clients/deploy/about-client-settings#software-updates) and [Manage Windows as a service](/sccm/osd/deploy-use/manage-windows-as-a-service).--> 
+For more information, see [Software update client settings](/sccm/core/clients/deploy/about-client-settings#software-updates) and [Manage Windows as a service](/sccm/osd/deploy-use/manage-windows-as-a-service).
 
 
 ### New Windows 10, version 1903 and later product category
