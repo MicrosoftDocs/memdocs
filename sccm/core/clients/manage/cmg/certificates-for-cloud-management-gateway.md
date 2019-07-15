@@ -1,5 +1,6 @@
 ---
 title: CMG Certificates
+titleSuffix: Configuration Manager
 description: Learn about the different digital certificates to use with the cloud management gateway.
 author: aczechowski
 ms.author: aaroncz
