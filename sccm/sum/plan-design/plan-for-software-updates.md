@@ -5,9 +5,9 @@ description: A plan for the software update point infrastructure is essential be
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 06/19/2019
+ms.date: 07/19/2019
 ms.topic: conceptual
-ms.prod: configuration-manager
+ms.prod: configuration-manager 
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 ms.collection: M365-identity-device-management
@@ -432,6 +432,8 @@ Configure languages for the **Software update file** setting in the properties f
 
 Configure the software update file language settings with the languages that are most often used in your environment. For example, clients in your site use mostly English and Japanese for Windows or applications. There are few other languages that are used at the site. Select only English and Japanese in the **Software Update File** column when you download or deploy the software update. This action allows you to use the default settings on the **Language Selection** page of the deployment and download wizards. This action also prevents unneeded update files from being downloaded. Configure this setting at each software update point in the Configuration Manager hierarchy.  
 
+
+
 #### Summary details  
 During the synchronization process, the summary details information (software updates metadata) is updated for software updates in the languages that you specify. The metadata provides information about the software update, for example:
 - Name
@@ -445,9 +447,35 @@ During the synchronization process, the summary details information (software up
 Configure the summary details settings only on the top-level site. The summary details aren't configured on the software update point on child sites because the software updates metadata is replicated from the central administration site by using file-based replication. When you select the summary details languages, select only the languages that you need in your environment. The more languages that you select, the longer it takes to synchronize the software updates metadata. Configuration Manager displays the software updates metadata in the locale of the OS in which the Configuration Manager console runs. If the localized properties for the software updates aren't available in the locale of this OS, the software updates information displays in English.  
 
 > [!IMPORTANT]  
->  Select all of the summary details languages that you need. When the software update point at the top-level site synchronizes with the synchronization source, the selected summary details languages determine the software updates metadata that it retrieves. If you modify the summary details languages after synchronization ran at least one time, it retrieves the software updates metadata for the modified summary details languages only for new or updated software updates. The software updates that have already been synchronized aren't updated with new metadata for the modified languages unless there's a change to the software update on the synchronization source.  
+>  Select all of the summary details languages that you need. When the software update point at the top-level site synchronizes with the synchronization source, the selected summary details languages determine the software updates metadata that it retrieves. If you modify the summary details languages after synchronization ran at least one time, it retrieves the software updates metadata for the modified summary details languages only for new or updated software updates. The software updates that have already been synchronized aren't updated with new metadata for the modified languages unless there's a change to the software update on the synchronization source.
 
 
+###  <a name="bkmk_maxruntime"></a> Maximum run time
+<!--3734426-->
+*(Introduced in version 1906)*
+
+Starting in version 1906, you can specify the maximum amount of time a software update installation has to complete. You can specify the maximum run time for the following:
+
+- **Maximum run time for Windows feature updates (minutes)**
+  - **Feature updates** - An update that is in one of these three classifications:
+    - Upgrades
+    - Update rollups
+    - Service packs
+
+- **Maximum run time for Office 365 updates and non-feature updates for Windows (minutes)**
+  - **Non-feature updates** - An update that isn't a feature upgrade and whose product is listed as one of the following:
+    - Windows 10 (all versions)
+    - Windows Server 2012
+    - Windows Server 2012 R2
+    - Windows Server 2016
+    - Windows Server 2019
+    - Office 365
+
+- These settings only change the maximum runtime for new updates that are synchronized from Microsoft Update. It doesn't change the run time on existing feature or non-feature updates.
+- All other products and classifications are not configurable with this setting. If you need to change the maximum run time of one of these updates, [configure the software update settings](/sccm/sum/get-started/manage-settings-for-software-updates#BKMK_SoftwareUpdatesSettings)
+
+> [!NOTE]
+> In version 1906, the maximum runtime isn't available when you install the SUP. After installation, edit the maximum run time on your top-level software update point.
 
 ##  <a name="BKMK_MaintenanceWindow"></a> Plan for a software updates maintenance window  
 

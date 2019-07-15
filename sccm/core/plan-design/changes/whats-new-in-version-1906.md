@@ -494,24 +494,10 @@ You now have more granular control over the WSUS maintenance tasks that Configur
 
 You can now specify the maximum amount of time a software update installation has to complete. You can specify the following items in the **Maximum Run Time** tab on the Software Update Point:
 
-- **Maximum run time for feature updates (minutes)**
-   - **Feature updates** - An update that is in one of these three classifications:
-      - Upgrades
-      - Update rollups
-      - Service packs
+- **Maximum run time for Windows feature updates (minutes)**
+- **Maximum run time for Office 365 updates and non-feature updates for Windows (minutes)**
 
-- **Maximum run time for non-feature updates (minutes)**
-   - **Non-feature updates** - An update that isn't a feature upgrade and whose product is listed as one of the following:
-      - Windows 10 (all versions)
-      - Windows Server 2012
-      - Windows Server 2012 R2
-      - Windows Server 2016
-      - Windows Server 2019
-      - Office 365
-- These settings only change the maximum runtime for new updates that are synchronized from Microsoft Update. It doesn't change the run time on existing feature or non-feature updates.
-- All other products and classifications are not configurable with this setting. If you need to change the maximum run time of one of these updates, [configure the software update settings](/sccm/sum/get-started/manage-settings-for-software-updates#BKMK_SoftwareUpdatesSettings)
-
-<!--For more information, see [Plan for software updates](/sccm/sum/plan-design/plan-for-software-updates#BKMK_UpdateLanguages) and [Install and configure a software update point](/sccm/sum/get-started/install-a-software-update-point).--> 
+For more information, see [Plan for software updates](/sccm/sum/plan-design/plan-for-software-updates#bkmk_maxruntime).
 
 ### Configure dynamic update during feature updates
 <!--4062619-->
