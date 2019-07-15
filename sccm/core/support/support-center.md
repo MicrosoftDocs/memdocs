@@ -28,11 +28,11 @@ Support Center aims to reduce the challenges and frustration when troubleshootin
 
 Use Support Center to streamline the support experience. It lets you:
 
- - Create a troubleshooting bundle (.zip file) that contains the Configuration Manager client log files. You then have a single file to send to support personnel.  
+- Create a troubleshooting bundle (.zip file) that contains the Configuration Manager client log files. You then have a single file to send to support personnel.  
 
- - View Configuration Manager client log files, certificates, registry settings, debug dumps, client policies.  
+- View Configuration Manager client log files, certificates, registry settings, debug dumps, client policies.  
 
- - Real-time diagnostic of inventory (replaces ContentSpy), policy (replaces PolicySpy), and client cache.  
+- Real-time diagnostic of inventory (replaces ContentSpy), policy (replaces PolicySpy), and client cache.  
 
 
 ### Support Center viewer

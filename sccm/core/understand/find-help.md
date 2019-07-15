@@ -47,11 +47,11 @@ For tips on searching, providing feedback, and more information about using the 
 
 Starting in Configuration Manager version 1806, you can send product feedback directly from the console. If you need to attach logs, use [Feedback Hub](#BKMK_FeedbackHub). You can do the following things: <!--1357542-->
 
-  - **Send a smile**: Send feedback on what you liked.
-  - **Send a frown**: Send feedback on what you didn't like.
-  - **Send a suggestion**: Takes you to the [UserVoice website](https://configurationmanager.uservoice.com/) to share your idea.
+- **Send a smile**: Send feedback on what you liked.
+- **Send a frown**: Send feedback on what you didn't like.
+- **Send a suggestion**: Takes you to the [UserVoice website](https://configurationmanager.uservoice.com/) to share your idea.
 
-    ![Submit feedback in Configuration Manager 1806](media/1806-send-a-smile.png)
+  ![Submit feedback in Configuration Manager 1806](media/1806-send-a-smile.png)
 
 
 ### Send a smile
@@ -93,13 +93,13 @@ When you **Send a suggestion**, you're directed to [UserVoice](https://configura
 ### Information sent with feedback
 
 When you **Send a smile** or **Send a frown**, the following information is sent with the feedback:
- 
-   - OS build information
-   - Configuration Manager hierarchy ID
-   - Product build information
-   - Language information
-   - Device identifier 
-       - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQMClient:MachineId
+
+- OS build information
+- Configuration Manager hierarchy ID
+- Product build information
+- Language information
+- Device identifier 
+    - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQMClient:MachineId
 
 
 
@@ -136,10 +136,10 @@ Starting in version 1902, when you send feedback through the Configuration Manag
 ##  <a name="BKMK_FeedbackHub"></a> Product feedback for versions 1802 and earlier
 
 Report potential product defects through the [Feedback Hub app](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app) built-in to Windows 10. When you **Add new feedback**, be sure to select the **Enterprise Management** category, and then choose from one of the following subcategories:
- - Configuration Manager Client
- - Configuration Manager Console
- - Configuration Manager OS Deployment
- - Configuration Manager Server
+- Configuration Manager Client
+- Configuration Manager Console
+- Configuration Manager OS Deployment
+- Configuration Manager Server
 
 Continue to use the [UserVoice page](https://configurationmanager.uservoice.com/) to vote on new feature ideas in Configuration Manager. The Configuration Manager product team uses the following UserVoice status values:
 

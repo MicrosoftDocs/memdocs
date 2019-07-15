@@ -48,10 +48,10 @@ We added an automatic clean-up function that deletes the unneeded downloads from
 
 ## Peer Cache improvements
 Starting with this release, a peer cache source computer will reject a request for content when the peer cache source computer meets any of the following conditions:  
- -  Is in low battery mode.
- -  CPU load exceeds 80% at the time the content is requested.
- -  Disk I/O has an *AvgDiskQueueLength* that exceeds 10.
- -  There are no more available connections to the computer.   
+-  Is in low battery mode.
+-  CPU load exceeds 80% at the time the content is requested.
+-  Disk I/O has an *AvgDiskQueueLength* that exceeds 10.
+-  There are no more available connections to the computer.   
 
 You can configure these settings using the client agent config class for the peer source feature (*SMS_WinPEPeerCacheConfig*) when you use the System Center Configuration Manager SDK.
 
@@ -97,8 +97,8 @@ AAD stores users under the **AADDC Users** OU.  Configure the following:
 Azure AD does not have an OU that stores groups. Instead, use the same general structure as the System or User queries and configure the LDAP query to point to the OU that contains the groups you want to discover.
 
 See the following for more information about Azure AD:  
- - [Azure Active Directory Domain Services](https://azure.microsoft.com/services/active-directory-ds) on azure.microsoft.com.
- - [Active Directory Domain Services Documentation](https://docs.microsoft.com/azure/active-directory-domain-services) on docs.microsoft.com.
+- [Azure Active Directory Domain Services](https://azure.microsoft.com/services/active-directory-ds) on azure.microsoft.com.
+- [Active Directory Domain Services Documentation](https://docs.microsoft.com/azure/active-directory-domain-services) on docs.microsoft.com.
 
 ## Conditional access device compliance policy improvements
 

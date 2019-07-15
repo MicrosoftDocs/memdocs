@@ -27,9 +27,9 @@ When you run the tool, it runs against the update that you specify. By default, 
 
 ### Prerequisites
 The account you use to run the tool requires the following permissions:
--   **Read** and **Write** permissions to the site database of the central administration site and to each primary site in your hierarchy. To set these permissions, you can add the user account as a member of the **db_datawriter** and **db_datareader** [fixed database roles](/sql/relational-databases/security/authentication-access/database-level-roles#fixed-database-roles) on the Configuration Manager database of each site. The tool does not interact with secondary sites.
--   **Local Administrator** on the top-level site of your hierarchy.
--   **Local Administrator** on the computer that hosts the service connection point.
+- **Read** and **Write** permissions to the site database of the central administration site and to each primary site in your hierarchy. To set these permissions, you can add the user account as a member of the **db_datawriter** and **db_datareader** [fixed database roles](/sql/relational-databases/security/authentication-access/database-level-roles#fixed-database-roles) on the Configuration Manager database of each site. The tool does not interact with secondary sites.
+- **Local Administrator** on the top-level site of your hierarchy.
+- **Local Administrator** on the computer that hosts the service connection point.
 
 You need the GUID of the update package that you want to reset. To get the GUID:
   1.   In the console, go to **Administration** > **Updates and Servicing**.
@@ -43,17 +43,17 @@ You need the GUID of the update package that you want to reset. To get the GUID:
 The tool must be run on the top-level site of the hierarchy.
 
 When you run the tool, use command-line parameters to specify:
-  -   The SQL Server at the top-tier site of the hierarchy.
-  -   The site database name at the top-tier site.
-  -   The GUID of the update package you want to reset.
+- The SQL Server at the top-tier site of the hierarchy.
+- The site database name at the top-tier site.
+- The GUID of the update package you want to reset.
 
 Based on the status of the update, the tool identifies the additional servers it needs to access.   
 
 If the update package is in a *post download* state, the tool does not clean up the package. As an option, you can force the removal of a successfully downloaded update by using the force delete parameter (See command-line parameters later in this topic).
 
 After the tool runs:
--   If a package was deleted, restart the SMS_Executive service at the top-tier site. Then, check for updates so you can download the package again.
--   If a package was not deleted, you do not need to take any action. The update reinitializes and then restarts replication or installation.
+- If a package was deleted, restart the SMS_Executive service at the top-tier site. Then, check for updates so you can download the package again.
+- If a package was not deleted, you do not need to take any action. The update reinitializes and then restarts replication or installation.
 
 **Command-line parameters:**  
 
@@ -66,7 +66,7 @@ After the tool runs:
 |           **-I &lt;SQL Server instance name>**           |                    *Optional* <br> Identify the instance of SQL Server that hosts the site database.                     |
 |                       **-FDELETE**                       |                       *Optional* <br> Force deletion of a successfully downloaded update package.                        |
 
- **Examples:**  
- In a typical scenario, you want to reset an update that has download problems. Your SQL Servers FQDN is *server1.fabrikam.com*, the site database is *CM_XYZ*, and the package GUID is *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  You run: ***CMUpdateReset.exe -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
+**Examples:**  
+In a typical scenario, you want to reset an update that has download problems. Your SQL Servers FQDN is *server1.fabrikam.com*, the site database is *CM_XYZ*, and the package GUID is *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  You run: ***CMUpdateReset.exe -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
 
- In a more extreme scenario, you want to force deletion of problematic update package. Your SQL Servers FQDN is *server1.fabrikam.com*, the site database is *CM_XYZ*, and the package GUID is *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  You run: ***CMUpdateReset.exe  -FDELETE -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
+In a more extreme scenario, you want to force deletion of problematic update package. Your SQL Servers FQDN is *server1.fabrikam.com*, the site database is *CM_XYZ*, and the package GUID is *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  You run: ***CMUpdateReset.exe  -FDELETE -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***

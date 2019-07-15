@@ -94,26 +94,26 @@ The following prerequisites are specific to the various methods of client instal
 
 #### Client push installation  
 
-   -   The site uses client push installation accounts to connect to computers to install the client. Specify these accounts on the **Accounts** tab of the Client Push Installation Properties. The account must be a member of the local administrators group on the destination computer.  
+-   The site uses client push installation accounts to connect to computers to install the client. Specify these accounts on the **Accounts** tab of the Client Push Installation Properties. The account must be a member of the local administrators group on the destination computer.  
 
-         If you don't specify a client push installation account, the site server uses its computer account.  
+      If you don't specify a client push installation account, the site server uses its computer account.  
 
-   -   The site needs to discover the computer on which you're installing the client. At least one Configuration Manager discovery method is needed.  
+-   The site needs to discover the computer on which you're installing the client. At least one Configuration Manager discovery method is needed.  
 
-   -   The computer has an ADMIN$ share.  
+-   The computer has an ADMIN$ share.  
 
-   -   To automatically push the Configuration Manager client to discovered resources, select the option to **Enable client push installation to assigned resources** in the Client Push Installation Properties.  
+-   To automatically push the Configuration Manager client to discovered resources, select the option to **Enable client push installation to assigned resources** in the Client Push Installation Properties.  
 
-   -   The client computer needs to communicate with a distribution point or a management point to download the source files.  
+-   The client computer needs to communicate with a distribution point or a management point to download the source files.  
 
-   -   Starting in version 1806, when you require Kerberos mutual authentication, clients must be in a trusted Active Directory forest. Kerberos in Windows relies upon Active Directory for mutual authentication.<!--1358204-->  
+-   Starting in version 1806, when you require Kerberos mutual authentication, clients must be in a trusted Active Directory forest. Kerberos in Windows relies upon Active Directory for mutual authentication.<!--1358204-->  
 
 
 To use client push, you need the following security permissions:  
 
-   -   To configure the client push installation account: **Modify** and **Read** permission for the **Site** object.  
+-   To configure the client push installation account: **Modify** and **Read** permission for the **Site** object.  
 
-   -   To use client push to install the client to collections, devices and queries: **Modify Resource** and **Read** permission for the **Collection** object.  
+-   To use client push to install the client to collections, devices and queries: **Modify Resource** and **Read** permission for the **Collection** object.  
 
 
 The **Infrastructure Administrator** default security role includes the required permissions to manage client push installations.  
@@ -121,11 +121,11 @@ The **Infrastructure Administrator** default security role includes the required
 
 #### Software update point-based installation  
 
-   -   If you haven't extended the Active Directory schema, or you're installing clients from another forest, use group policy to provision installation parameters for CCMSetup.exe. For more information, see [How to provision client installation properties](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision).  
+-   If you haven't extended the Active Directory schema, or you're installing clients from another forest, use group policy to provision installation parameters for CCMSetup.exe. For more information, see [How to provision client installation properties](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision).  
 
-   -   Publish the Configuration Manager client to the software update point.  
+-   Publish the Configuration Manager client to the software update point.  
 
-   -   To download the source files, the client computer needs to communicate with a distribution point or a management point.  
+-   To download the source files, the client computer needs to communicate with a distribution point or a management point.  
 
 
 For the security permissions required to manage Configuration Manager software updates, see [Prerequisites for software updates](/sccm/sum/plan-design/prerequisites-for-software-updates).  
@@ -133,9 +133,9 @@ For the security permissions required to manage Configuration Manager software u
 
 #### Group policy-based installation  
 
-   -   If you haven't extended the Active Directory schema, or you're installing clients from another forest, use group policy to provision installation parameters for CCMSetup.exe. For more information, see [How to provision client installation properties](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision).  
+-   If you haven't extended the Active Directory schema, or you're installing clients from another forest, use group policy to provision installation parameters for CCMSetup.exe. For more information, see [How to provision client installation properties](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision).  
 
-   -   To download the source files, the client computer needs to communicate with a distribution point or a management point.  
+-   To download the source files, the client computer needs to communicate with a distribution point or a management point.  
 
 
 #### Logon script-based installation  
@@ -150,15 +150,15 @@ To download the source files, the client computer needs to communicate with a di
 
 #### Microsoft Intune MDM installation
 
- - Requires a Microsoft Intune subscription and appropriate licenses.  
+- Requires a Microsoft Intune subscription and appropriate licenses.  
 
- - Requires the device has internet access, even if it isn't internet-based.  
+- Requires the device has internet access, even if it isn't internet-based.  
 
- - Depending upon the use case, you may also require one or both of the following technologies:  
+- Depending upon the use case, you may also require one or both of the following technologies:  
 
-     - Azure Active Directory  
+    - Azure Active Directory  
 
-     - Cloud management gateway  
+    - Cloud management gateway  
 
 
 #### Workgroup computer installation  
@@ -170,9 +170,9 @@ For more information about how to configure the network access account, see the 
 
 #### Software distribution-based installation (for upgrades only)  
 
-   -   If you haven't extended the Active Directory schema, or you're installing clients from another forest, use group policy to provision installation parameters for CCMSetup.exe. For more information, see [How to provision client installation properties](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision).   
+-   If you haven't extended the Active Directory schema, or you're installing clients from another forest, use group policy to provision installation parameters for CCMSetup.exe. For more information, see [How to provision client installation properties](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision).   
 
-   -   To download the source files, the client computer needs to communicate with a distribution point or a management point.  
+-   To download the source files, the client computer needs to communicate with a distribution point or a management point.  
 
 
 For the security permissions required to upgrade the Configuration Manager client using application management, see [Security and privacy for application management](/sccm/apps/plan-design/security-and-privacy-for-application-management).  
