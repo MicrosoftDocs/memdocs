@@ -35,9 +35,9 @@ Deploy the app group using the same process as for an application. For more info
 
 To troubleshoot an app group deployment, use the **AppGroupHandler.log** and **AppEnforce.log** files on the client.
 
-### Known issues 
-<!-- checking with feature team if these are still issues -->
+### Known issues
 
-- Deploy the app group as required, without user interaction, and to a device collection.
-- The app group isn't currently shown in Software Center.
-- The deployment of an app group doesn't show in the **Deployments** node of the **Monitoring** workspace.
+- Set the deployment type installation behavior to **Install for system**.
+- You can only deploy the app group to a device collection.
+- Web apps currently don't work in groups.
+- You can't modify apps and dependencies after you deploy the app group.
