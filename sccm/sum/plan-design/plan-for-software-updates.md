@@ -475,7 +475,7 @@ Starting in version 1906, you can specify the maximum amount of time a software 
 - All other products and classifications are not configurable with this setting. If you need to change the maximum run time of one of these updates, [configure the software update settings](/sccm/sum/get-started/manage-settings-for-software-updates#BKMK_SoftwareUpdatesSettings)
 
 > [!NOTE]
-> In version 1906, the maximum runtime isn't available when you install the SUP. After installation, edit the maximum run time on your top-level software update point.
+> In version 1906, the maximum runtime isn't available when you install the top-level software update point. After installation, edit the maximum run time on your top-level software update point.
 
 ##  <a name="BKMK_MaintenanceWindow"></a> Plan for a software updates maintenance window  
 
