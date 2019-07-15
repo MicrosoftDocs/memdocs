@@ -715,6 +715,8 @@ For more information about the Intune managed browser, see [Manage internet acce
 
 After creating an application in Configuration Manager, the next step is to [deploy the application](/sccm/apps/deploy-use/deploy-applications).
 
+Starting in version 1906, create a group of applications that you can send to a user or device collection as a single deployment. For more information, see [Create application groups](/sccm/apps/deploy-use/create-app-groups).
+
 For more information about creating applications on different OS platforms, see the following articles:  
 
 - [Create Windows applications](/sccm/apps/get-started/creating-windows-applications)
