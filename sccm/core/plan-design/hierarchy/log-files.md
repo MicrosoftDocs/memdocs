@@ -1,7 +1,7 @@
 ---
-title: Log files for troubleshooting
+title: Log file reference
 titleSuffix: Configuration Manager
-description: Use log files to troubleshoot issues with Configuration Manager clients and site systems.
+description: A reference of all log files for Configuration Manager client, server, and dependent components.
 ms.date: 07/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -13,25 +13,15 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 
-# Log files in Configuration Manager
+# Log file reference
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 In Configuration Manager, client and site server components record process information in individual log files. You can use the information in these log files to help you troubleshoot issues that might occur. By default, Configuration Manager enables logging for client and server components.
 
+For more general information about log files in Configuration Manager, see [About log files](/sccm/core/plan-design/hierarchy/about-log-files). That article includes information on the tools to use, how to configure the logs, and where to find them.
+
 The following sections provide details about the different log files available to you. Monitor Configuration Manager client and server logs for operation details, and view error information to troubleshoot problems.  
-
-- [About log files](#BKMK_AboutLogs)  
-
-    - [Log viewer tools](#bkmk_tools)
-
-    - [Configure logging options during client installation](#bkmk_logoptions-clientprop)
-
-    - [Configure logging options by using Configuration Manager Service Manager](#BKMK_LogOptions)  
-
-    - [Configure logging options by using the Windows Registry](#bkmk_logoptions-registry)
-
-    - [Locating Configuration Manager logs](#BKMK_LogLocation)  
 
 - [Client log files](#BKMK_ClientLogs)  
 
@@ -116,155 +106,6 @@ The following sections provide details about the different log files available t
     - [Windows Update Agent](#BKMK_WULog)  
 
     - [WSUS server](#BKMK_WSUSLog)  
-
-
-## <a name="BKMK_AboutLogs"></a> About log files  
-
-Most processes in Configuration Manager write operational information to a log file that is dedicated to that process. The log files are identified by **.log** or **.lo_** file extensions. Configuration Manager writes to a .log file until that log reaches its maximum size. When the log is full, the .log file is copied to a file of the same name but with the .lo_ extension, and the process or component continues to write to the .log file. When the .log file again reaches its maximum size, the .lo_ file is overwritten and the process repeats. Some components establish a log file history by appending a date and time stamp to the log file name and by keeping the .log extension. An exception to the maximum size and use of the .lo_ file is the client for Linux and UNIX. For information about how the client for Linux and UNIX uses log files, see [Manage log files in the client for Linux and UNIX](#BKMK_ManageLinuxLogs) in this article.  
-
-### <a name="bkmk_tools"></a> Log viewer tools
-
-To view the logs, use the Configuration Manager log viewer tool **CMTrace**. It's located in the \\SMSSetup\\Tools folder of the Configuration Manager source media. The CMTrace tool is added to all boot images that are added to the Software Library. Starting in version 1806, the CMTrace log viewing tool is automatically installed along with the Configuration Manager client.<!--1357971--> For more information, see [CMTrace](/sccm/core/support/cmtrace).
-
-Starting in version 1906, **OneTrace** is a new log viewer with Support Center. It works similarly to CMTrace, with improvements. For more information, see [Support Center OneTrace](/sccm/core/support/support-center-onetrace).
-
-**Support Center** includes a modern log viewer. This tool replaces CMTrace and provides a customizable interface with support for tabs and dockable windows. It has a fast presentation layer, and can load large log files in seconds. For more information, see [Support Center Log Viewer reference](/sccm/core/support/support-center-ui-reference#bkmk_log-viewer).
-
-> [!Note]  
-> Support Center and OneTrace use Windows Presentation Foundation (WPF). This component isn't available in Windows PE. Continue to use CMTrace in boot images with task sequence deployments.
-
-### <a name="bkmk_logoptions-clientprop"></a> Configure logging options during client installation
-
-You can set the configuration of the client log files during installation. Use the following properties:
-
-- CCMENABLELOGGING
-- CCMDEBUGLOGGING
-- CCMLOGLEVEL
-- CCMLOGMAXHISTORY
-- CCMLOGMAXSIZE
-
-For more information, see [Client installation properties](/sccm/core/clients/deploy/about-client-installation-properties#clientMsiProps).
-
-### <a name="BKMK_LogOptions"></a> Configure logging options by using Configuration Manager Service Manager
-
-You can change where Configuration Manager stores the log files, and their size.  
-
-To modify the size of log files, change the name and location of the log file, or to force multiple components to write to a single log file, do the following steps:  
-
-#### Modify logging for a component  
-
-1. In the Configuration Manager console, go to the **Monitoring** workspace, expand **System Status**, and then select either the **Site Status** or **Component Status** node.  
-
-2. In the ribbon, select **Start**, and then select **Configuration Manager Service Manager**.  
-
-3. When Configuration Manager Service Manager opens, connect to the site that you want to manage. If the site that you want to manage isn't shown, select **Site**, select **Connect**, and then enter the name of the site server for the correct site.  
-
-4. Expand the site and go to **Components** or **Servers**, depending on where the components that you want to manage are located.  
-
-5. In the right pane, select one or more components.  
-
-6. On the **Component** menu, select **Logging**.  
-
-7. In the **Configuration Manager Component Logging** dialog box, complete the available configuration options for your selection.  
-
-8. Select **OK** to save the configuration.  
-
-### <a name="bkmk_logoptions-registry"></a> Configure logging options by using the Windows Registry
-
-<!-- SCCMDocs#992 -->
-Use the Windows Registry on the servers or clients to change the following logging options:
-
-- Verbose level
-- Maximum history
-- Maximum size
-
-When troubleshooting a problem, you can enable verbose logging for Configuration Manager to write additional details in the log files.
-
-> [!Warning]
-> Misconfiguration of these settings can cause Configuration Manager to log large amounts of information, or none at all. While this data can be beneficial for troubleshooting, be cautious when changing these values in production sites. Always test these changes in a lab environment first. Excessive logging can occur, which might make it difficult to find relevant information in the log files.
-
-After you make changes to these registry settings, restart the component:
-
-- If you change the client settings, restart the **SMS Agent Host** service (CcmExec).
-- If you change the server settings, restart the **SMS Executive** service.
-
-#### Client and management point logging options
-
-To configure logging options for all components on a client or management point site system, configure these **REG_DWORD** values under the following Windows Registry key:
-
-`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\Logging\@Global`
-
-|Name  |Values  |Description  |
-|---------|---------|---------|
-|LogLevel|`0`: Verbose<br>`1`: Default<br>`2`: ...<br>`3`: Errors only|The level of detail to write to log files.|
-|LogMaxHistory|Any integer greater than or equal to zero, for example:<br>`0`: No history<br>`1`: Default|When a log file reaches the maximum size, the client renames it as a backup and creates a new log file. Specify how many previous versions to keep.|
-|LogMaxSize|Any integer greater than or equal to 10,000, for example:<br>250000|The maximum log file size in bytes. When a log grows to the specified size, the client renames it as a history file, and creates a new file. The default value is 250,000 bytes.|
-
-> [!Note]  
-> Don't change other values that may exist in this registry key.
-
-For advanced debugging, you can also add this **REG_SZ** value under the following Windows Registry key:
-
-`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\Logging\DebugLogging`
-
-|Name  |Values  |Description  |
-|---------|---------|---------|
-|Enabled | `True`: enable debug logs<br>`False`: disable debug logs |Enables debug logging for troubleshooting purposes.|
-
-This setting causes the client to log low-level information for troubleshooting. Avoid using this setting in production sites. Excessive logging can occur, which might make it difficult to find relevant information in the log files. Make sure to turn off this setting after you resolve the issue.
-
-#### Server logging options
-
-You can configure settings globally or for a specific component on a Configuration Manager server role.
-
-Configure these values under the following Windows Registry key:
-
-`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing`
-
-|Name  |Values  |Type  |Description
-|---------|---------|---------|---------|
-|SqlEnabled| 1 (0) |REG_DWORD|...|
-|ArchivePath| ... | REG_SZ |...|
-|ArchiveEnabled| ... | REG_DWORD | ...|
-
-> [!Note]  
-> Don't change other values that may exist in this registry key.
-
-To configure logging options for a specific server component, configure these **REG_DWORD** values under the following Windows Registry key:
-
-`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing\<ComponentName>`
-
-]\LoggingLevel = 0 (1)
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing[COMPONENT]\DebugLogging = 1 (0)
-
-For example, for the DP role:
-
-HKLM\SOFTWARE\Microsoft\SMS\DP\Logging (create the logging key)
-
-LogEnabled
-LogLevel = 0 (DWORD)
-LogMaxHistory
-LogMaxSize
-
-### <a name="BKMK_LogLocation"></a> Locating Configuration Manager logs
-
-Configuration Manager stores log files in various locations. These locations depend on the process that creates the log file and the configuration of your site systems.
-
-The following locations are the defaults. If you customized the installation directories in your environment, the actual paths may vary.
-
-- Client: `C:\Windows\CCM\logs`
-- Server: `C:\Program Files\Microsoft Configuration Manager\Logs`
-- Management point: `C:\SMS_CCM\Logs`
-- Configuration Manager console: `C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\AdminUILog`
-- IIS: `C:\Windows\System32\logfiles\W3SVC1`
-
-The location of the task sequence log file **smsts.log** varies depending upon the phase of the task sequence:
-
-- In Windows PE before the hard drive is formatted: `X:\Windows\temp\smstslog\smsts.log`
-- In Windows PE after the hard drive is formatted: `X:\smstslog\smsts.log`, then copied to `C:\_SMSTaskSequence\Logs\smstslog\smsts.log`
-- In the new Windows OS before the client is installed: `C:\_SMSTaskSequence\Logs\smstslog\smsts.log`
-- In Windows after the client is installed: `C:\Windows\CCM\Logs\smstslog\smsts.log`
-- In Windows after the task sequence completes: `C:\Windows\CCM\logs\smsts.log`
 
 
 ## <a name="BKMK_ClientLogs"></a> Client log files
@@ -973,6 +814,7 @@ The following table lists the log files that contain information related to soft
 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
+|AlternateHandler.log|Records details when the client calls the Office click-to-run COM interface to download and install Office 365 client updates. It's similar to use of WuaHandler when it calls the Windows Update Agent API to download and install Windows updates.<!-- SCCMDocs#888 -->|Client|
 |ccmperf.log|Records activities related to the maintenance and capture of data related to client performance counters.|Client|  
 |PatchDownloader.log|Records details about the process of downloading software updates from the update source to the download destination on the site server.|When downloading updates manually, this log file is located in the %temp% directory of the user running the console on the machine you're running the console. For Automatic Deployment Rules, this log file is located on the site server in %windir%\CCM\Logs, if the ConfigMgr client is installed on the site server.|  
 |PolicyEvaluator.log|Records details about the evaluation of policies on client computers, including policies from software updates.|Client|  
@@ -1040,6 +882,8 @@ These log files are located in the `%ProgramFiles%\Update Services\LogFiles` fol
 
 
 ## See also
+
+- [About log files](/sccm/core/plan-design/hierarchy/about-log-files)
 
 - [Support Center OneTrace](/sccm/core/support/support-center-onetrace)
 

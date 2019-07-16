@@ -423,7 +423,9 @@
       href: plan-design/hierarchy/interoperability-between-different-versions.md
     - name: Language packs
       href: servers/deploy/install/language-packs.md
-    - name: Log files
+    - name: About log files
+      href: plan-design/hierarchy/about-log-files.md
+    - name: Log file reference
       href: plan-design/hierarchy/log-files.md
     - name: Release notes
       href: servers/deploy/install/release-notes.md
