@@ -57,7 +57,7 @@ The debugger includes the following controls:
     > [!Note]  
     > When the task sequence is in debug mode, if a step returns a fatal error, the task sequence doesn't fail as normal. This behavior gives you the option to retry a step after you make an external change.
 
-- **Run**: From the *current* position, run the task sequence normally to the end, the next *break* point, or if a step fails.
+- **Run**: From the *current* position, run the task sequence normally to the end, the next *break* point, or if a step fails. Before you use this action, make sure to set any break points with the **Set Break** action.
 
 - **Set Current**: Select a step in the debugger and then select **Set Current**. This action moves the *current* pointer to that step. This action allows you to skip steps or move backwards.  
 
@@ -65,6 +65,10 @@ The debugger includes the following controls:
     > The debugger doesn't consider the type of step when you change the current position in the sequence. Some steps may set task sequence variables that are required for condition evaluation by later steps. If run out of order, some steps may fail or cause significant damage to a device. Use this option at your own risk.  
 
 - **Set Break**: Select a step in the debugger and then select **Set Break**. This action adds a *break* point in the debugger. When you **Run** the task sequence, it stops at a *break*.  
+
+    - Before you use the **Run** action, set break points.
+
+    - Break points aren't saved after the computer restarts, like with the [Restart Computer](/sccm/osd/understand/task-sequence-steps#BKMK_RestartComputer) step. For example, if you start the debugger from Software Center for an imaging task sequence, don't set breaks in the Windows PE phase. When the computer restarts into Windows PE, the debugger pauses the task sequence so that you can set breaks.
 
 - **Clear All Breaks**: Remove all break points.
 
@@ -81,7 +85,7 @@ The **Task Sequence Variables** window shows the current values for all variable
 > [!Note]
 > Some task sequence variables are for internal use only, and not listed in the reference documentation.
 
-The task sequence debugger continues to run after a [Restart Computer](/sccm/osd/understand/task-sequence-steps#BKMK_RestartComputer) step. You need to recreate any break points. Even though the task sequence may not require it, since the debugger requires user interaction, you need to sign in to Windows to continue. If you don't sign in after one hour to continue debugging, the task sequence fails.
+The task sequence debugger continues to run after a [Restart Computer](/sccm/osd/understand/task-sequence-steps#BKMK_RestartComputer) step, but you need to recreate any break points. Even though the task sequence may not require it, since the debugger requires user interaction, you need to sign in to Windows to continue. If you don't sign in after one hour to continue debugging, the task sequence fails.
 
 It also steps into a child task sequence with the [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence) step. The debugger window shows the steps of the child task sequence along with the main task sequence.
 
