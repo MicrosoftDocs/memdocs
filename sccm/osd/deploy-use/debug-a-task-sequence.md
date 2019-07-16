@@ -54,7 +54,7 @@ The debugger includes the following controls:
 - **Set Current**: Select a step in the debugger and then select **Set Current**. This action moves the *current* pointer to that step. This action allows you to skip steps or move backwards.  
 
     > [!Warning]  
-    > The debugger doesn't consider the type of step when you change the current position in the sequence. Some steps may fail or cause significant damage to a device if run out of order. Use this option at your own risk.  
+    > The debugger doesn't consider the type of step when you change the current position in the sequence. Some steps may set task sequence variables that are required for condition evaluation by later steps. If run out of order, some steps may fail or cause significant damage to a device. Use this option at your own risk.  
 
 - **Set Break**: Select a step in the debugger and then select **Set Break**. This action adds a *break* point in the debugger. When you **Run** the task sequence, it stops at a *break*.  
 
@@ -64,7 +64,9 @@ The debugger includes the following controls:
 
 - **Cmd Prompt**: In Windows PE, opens a command prompt.
 
-- **Quit**: Quit the debugger and stop the task sequence.  
+- **Cancel**: Close the debugger, but the task sequence continues.
+
+- **Quit**: Quit the debugger, and stop the task sequence.  
 
 The **Task Sequence Variables** pane shows the current values for all variables in the task sequence environment. For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables).
 
