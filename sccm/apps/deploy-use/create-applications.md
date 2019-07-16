@@ -121,14 +121,21 @@ To add more deployment types or configure other settings, see [Create deployment
         > [!IMPORTANT]  
         > A localized application name is required for each language version that you set up.  
 
-    - **User categories**: Choose **Edit** to specify application categories in the selected language. Users of Software Center use these categories to help filter and sort the available applications.  
+    - **User categories**: Choose **Edit** to specify application categories in the selected language. Users of Software Center use these categories to help filter and sort the applications.  
 
         > [!Note]  
-        > In version 1902 and earlier, user categories only apply to deployments to user collections. If an application is deployed to a computer collection, the user categories are ignored.
+        > In version 1902 and earlier, user categories only apply to available deployments to user collections. If an application is deployed to a computer collection, the user categories are ignored.
         >
-        > Starting in version 1906, user categories for device-targeted application deployments show as filters in Software Center.
+        > Starting in version 1906, user categories for device-targeted application deployments show as filters in Software Center. These deployments can be either available or required.
         >
-        > **Known issue**<!-- 4726793 -->: If you *rename* an existing user category, it doesn't update on the client.
+        > <!-- 4726793 -->Renaming or deleting a category doesn't automatically apply to apps with this category. These changes apply on the next revision of the app. To work around this issue for rename or delete:
+        >
+        > - First remove the category from any app that references it. This action revises the apps.
+        >     - Instead of the rename action, next create a new category with the new name, and add the new category to the relevant apps.
+        >     - You can delete the category after you revise the apps.
+
+
+If you *rename* an existing user category, it doesn't update on the client.
         > After adding a category to multiple apps, if you rename the category for one app, the renamed category only applies to that app. This change doesn't apply to other apps that reference the category. In Software Center, the renamed category shows as a new filter. The old category also shows as a filter. To work around this issue, after you rename the category, deselect it on the app. Apply the changes, and then reselect the renamed category. This action revises the app, which applies the change.
 
     - **User documentation**: Specify the location of a file from which Software Center users can get more information about this application. This location is a website address, or a network path and file name. Make sure that users have access to this location.  
