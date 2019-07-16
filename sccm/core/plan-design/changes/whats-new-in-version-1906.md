@@ -300,11 +300,11 @@ These options are also available when you first [enable co-management](/sccm/com
 ## <a name="bkmk_app"></a> Application management
 
 ### Filter applications deployed to devices
+
 <!--4451056-->
- User categories for device-targeted application deployments now show as filters in Software Center. Specify a **user category** for an application on the **Software Center** page of its properties. Then open the app in Software Center and look at the available filters.
+User categories for device-targeted application deployments now show as filters in Software Center. Specify a **user category** for an application on the **Software Center** page of its properties. Then open the app in Software Center and look at the available filters.
 
-<!--For more information, see [Manually specify application information](/sccm/apps/deploy-use/create-applications#bkmk_manual-app) and [Applications in Software Center](/sccm/core/understand/software-center#applications).-->
-
+For more information, see [Manually specify application information](/sccm/apps/deploy-use/create-applications#bkmk_manual-app).
 
 ### Application groups
 <!--3555907-->
