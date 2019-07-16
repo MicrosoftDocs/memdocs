@@ -18,6 +18,12 @@ ms.collection: M365-identity-device-management
 > [!Note]  
 > This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
 
+## Prerequisites 
+
+### Can I use Desktop Analytics with Intune managed devices? 
+
+The vast majority of customers that can benefit from the Desktop Analytics workflow use ConfigMgr to deploy Windows. We know our Intune customers love the additional insights from Analytics data, and we are working on ways to share insights with them as well. Stay tuned for updates.
+
 ## Windows upgrade
 
 ### Can I upgrade Windows and change architecture?
