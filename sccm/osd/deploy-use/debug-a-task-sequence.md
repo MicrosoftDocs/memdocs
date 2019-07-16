@@ -19,13 +19,15 @@ manager: dougeby
 
 Starting in version 1906, the task sequence debugger is a new troubleshooting tool. You deploy a task sequence in debug mode to a collection of one device. It lets you step through the task sequence in a controlled manner to aid troubleshooting and investigation.
 
+This tool is an interpretive style debugger with call-back hooks, not a processor-level break instruction debugger. It currently runs on the same device as the task sequence engine, it's not a remote debugger.
 
 ## Prerequisites
 
 - Update the Configuration Manager client on the target device
 
-- Update the boot image associated with the task sequence to make sure it has the latest client version
+- Sign in to the target device as a user in the local **Administrators** group. The debugger only runs for administrators.
 
+- Update the boot image associated with the task sequence to make sure it has the latest client version
 
 ## Start the tool
 
@@ -38,6 +40,9 @@ Starting in version 1906, the task sequence debugger is a new troubleshooting to
 
 1. Create a debug deployment. The deployment settings are the same as a normal task sequence deployment. For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence#process).
 
+    > [!Note]  
+    > You can only select a small collection for a debug deployment. It only displays device collections with 10 or less members.
+
 
 ## Use the tool
 
@@ -49,7 +54,10 @@ The debugger includes the following controls:
 
 - **Step**: From the *current* position, run only the next step in the task sequence.  
 
-- **Run**: From the *current* position, run the task sequence normally to the end or the next *break* point.  
+    > [!Note]  
+    > When the task sequence is in debug mode, if a step returns a fatal error, the task sequence doesn't fail as normal. This behavior gives you the option to retry a step after you make an external change.
+
+- **Run**: From the *current* position, run the task sequence normally to the end, the next *break* point, or if a step fails.
 
 - **Set Current**: Select a step in the debugger and then select **Set Current**. This action moves the *current* pointer to that step. This action allows you to skip steps or move backwards.  
 
@@ -60,19 +68,20 @@ The debugger includes the following controls:
 
 - **Clear All Breaks**: Remove all break points.
 
-- **Log File**: Opens the current task sequence log file, **smsts.log**.
+- **Log File**: Opens the current task sequence log file, **smsts.log**. You can see log entries when the task sequence engine is "Waiting for the debugger."
 
 - **Cmd Prompt**: In Windows PE, opens a command prompt.
 
-- **Cancel**: Close the debugger, but the task sequence continues.
+- **Cancel**: Close the debugger, and fail the task sequence.
 
-- **Quit**: Quit the debugger, and stop the task sequence.  
+- **Quit**: Detach and close the debugger, but the task sequence engine continues to run.
 
-The **Task Sequence Variables** pane shows the current values for all variables in the task sequence environment. For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables).
+The **Task Sequence Variables** window shows the current values for all variables in the task sequence environment. For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables). If you use the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step with the option to **Do not display this value**, the debugger doesn't display the variable value. You can't edit the variable values in the debugger.
 
 > [!Note]
 > Some task sequence variables are for internal use only, and not listed in the reference documentation.
 
+The task sequence debugger continues to run after a [Restart Computer](/sccm/osd/understand/task-sequence-steps#BKMK_RestartComputer) step. It also steps into a child task sequence with the [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence) step, and shows the steps of that child task sequence.
 
 ## Known issues
 
@@ -81,4 +90,7 @@ If you target both a normal deployment and debug deployment to the same device t
 
 ## See also
 
-[Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence)
+- [About task sequence steps](/sccm/osd/understand/task-sequence-steps)
+- [Task sequence variables](/sccm/osd/understand/task-sequence-variables)
+- [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables)
+- [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence)
