@@ -130,23 +130,15 @@ The Azure AD synchronization is a one-way process, from Configuration Manager to
 
 <!-- ? For more information, see [Create collections](/core/clients/manage/collections/create-collections). -->
 
-<!--COMMENTING OUT DA FOR RIGHT NOW SINCE IT IS NOT ON TAP Feature list
 
 ## <a name="bkmk_da"></a> Desktop Analytics
 
 ### DALogsCollector tool
-<!--4622989--
 
-The DALogsCollector tool is now included in the Configuration Manager media.
+<!--4622989-->
+Use the DesktopAnalyticsLogsCollector.ps1 tool from the Configuration Manager install directory to help troubleshoot Desktop Analytics. It runs some basic troubleshooting steps and collects the relevant logs into a single working directory.
 
-<!-- ? For more information, see [Configuration Manager Tools](/sccm/core/support/tools). 
-
-### Changing the Desktop Analytics limiting collection on existing deployments
-<!--3218073--
-
-TBD
-
--->
+For more information, see [Logs collector](/sccm/desktop-analytics/log-collector).
 
 
 ## <a name="bkmk_real"></a> Real-time management
