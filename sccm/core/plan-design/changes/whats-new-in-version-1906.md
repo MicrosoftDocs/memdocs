@@ -416,7 +416,7 @@ This release includes the following improvements to OS deployment:
 <!--4063773-->
 You can now add up to five custom tabs in Software Center. You can also edit the order in which these tabs appear in Software Center.
 
-<!--For more information, see [Software Center client settings](/sccm/core/clients/deploy/about-client-settings#software-center) and [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center).-->
+For more information, see [Software Center client settings](/sccm/core/clients/deploy/about-client-settings#software-center).
 
 ### Software Center infrastructure improvements
 
