@@ -17,9 +17,8 @@ manager: dougeby
 
 <!--3612274-->
 
-Starting in version 1906, the task sequence debugger is a new troubleshooting tool. You deploy a task sequence in debug mode to a collection of one device. It lets you step through the task sequence in a controlled manner to aid troubleshooting and investigation.
+Starting in version 1906, the task sequence debugger is a new troubleshooting tool. You deploy a task sequence in debug mode to a small collection. It lets you step through the task sequence in a controlled manner to aid troubleshooting and investigation. The debugger currently runs on the same device as the task sequence engine, it's not a remote debugger.
 
-This tool is an interpretive style debugger with call-back hooks, not a processor-level break instruction debugger. It currently runs on the same device as the task sequence engine, it's not a remote debugger.
 
 ## Prerequisites
 
@@ -28,6 +27,7 @@ This tool is an interpretive style debugger with call-back hooks, not a processo
 - Sign in to the target device as a user in the local **Administrators** group. The debugger only runs for administrators.
 
 - Update the boot image associated with the task sequence to make sure it has the latest client version
+
 
 ## Start the tool
 
@@ -68,20 +68,23 @@ The debugger includes the following controls:
 
 - **Clear All Breaks**: Remove all break points.
 
-- **Log File**: Opens the current task sequence log file, **smsts.log**. You can see log entries when the task sequence engine is "Waiting for the debugger."
+- **Log File**: Opens the current task sequence log file, **smsts.log**, with [CMTrace](/sccm/core/support/cmtrace). You can see log entries when the task sequence engine is "Waiting for the debugger."
 
 - **Cmd Prompt**: In Windows PE, opens a command prompt.
 
 - **Cancel**: Close the debugger, and fail the task sequence.
 
-- **Quit**: Detach and close the debugger, but the task sequence engine continues to run.
+- **Quit**: Detach and close the debugger, but the task sequence continues to run normally.
 
 The **Task Sequence Variables** window shows the current values for all variables in the task sequence environment. For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables). If you use the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step with the option to **Do not display this value**, the debugger doesn't display the variable value. You can't edit the variable values in the debugger.
 
 > [!Note]
 > Some task sequence variables are for internal use only, and not listed in the reference documentation.
 
-The task sequence debugger continues to run after a [Restart Computer](/sccm/osd/understand/task-sequence-steps#BKMK_RestartComputer) step. It also steps into a child task sequence with the [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence) step, and shows the steps of that child task sequence.
+The task sequence debugger continues to run after a [Restart Computer](/sccm/osd/understand/task-sequence-steps#BKMK_RestartComputer) step. You need to recreate any break points. Even though the task sequence may not require it, since the debugger requires user interaction, you need to sign in to Windows to continue. If you don't sign in after one hour to continue debugging, the task sequence fails.
+
+It also steps into a child task sequence with the [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence) step. The debugger window shows the steps of the child task sequence along with the main task sequence.
+
 
 ## Known issues
 
