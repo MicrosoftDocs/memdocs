@@ -424,7 +424,7 @@ For more information, see [Remove the application catalog](/sccm/apps/plan-desig
 <!--3555904-->
 The **New Software is Available** notification will only show once for a user for a given application and revision. The user will no longer see the notification each time they sign in. They'll only see another notification for an application if it has changed.
 
-<!--For more information, see [Remove the application catalog](/sccm/apps/get-started/create-and-deploy-an-application#end-user-experience). -->
+For more information, see [Remove the application catalog](/sccm/apps/get-started/create-and-deploy-an-application#end-user-experience).
 
 ### More frequent countdown notifications for restarts
 <!--3976435-->
