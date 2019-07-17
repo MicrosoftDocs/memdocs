@@ -214,7 +214,6 @@ The following table lists CMG support for Configuration Manager features:
 | Any other task sequence scenario     | ![Not supported](media/Red_X.png) |
 | Client push     | ![Not supported](media/Red_X.png) |
 | Automatic site assignment     | ![Not supported](media/Red_X.png) |
-| Application catalog     | ![Not supported](media/Red_X.png) |
 | Software approval requests     | ![Not supported](media/Red_X.png) |
 | Configuration Manager console     | ![Not supported](media/Red_X.png) |
 | Remote tools     | ![Not supported](media/Red_X.png) |

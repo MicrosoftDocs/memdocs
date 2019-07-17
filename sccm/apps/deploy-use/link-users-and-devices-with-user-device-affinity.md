@@ -1,8 +1,8 @@
 ---
-title: "Link users and devices with user device affinity"
-titleSuffix: "Configuration Manager"
-description: "Link users and devices with user device affinity and automatically deploy apps to all devices associated with a user."
-ms.date: 10/06/2016
+title: Link users and devices with user device affinity
+titleSuffix: Configuration Manager
+description: Link users and devices with user device affinity and automatically deploy apps to all devices associated with a user.
+ms.date: 07/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -12,119 +12,145 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Link users and devices with user device affinity in System Center Configuration Manager
+
+# Link users and devices with user device affinity in Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-User device affinity in System Center Configuration Manager (Configuration Manager) associates a user with one or more devices. This can eliminate the need to know the names of a user’s devices to deploy an application to the user. Instead of deploying the application to each of the user’s devices, you deploy the application to the user. Then, user device affinity automatically ensures that the application installs on all devices that are associated with that user.  
+User device affinity in Configuration Manager associates a user with one or more devices. This behavior can eliminate the need to know the names of a user's devices to deploy an application to the user. Instead of deploying the application to each of the user's devices, you deploy the application to the user. Then, user device affinity automatically makes sure that the application installs on all devices that are associated with that user.  
 
- You can define primary devices that typically are the devices that users use on a daily basis to perform their work. When you create an affinity between a user and a device, you gain more app deployment options. For example, if a user requires Microsoft Visio, you can install it on the user’s primary device by using a Windows Installer deployment. However, on a device that's not a primary device, you might deploy Visio as a virtual application. You also can use user device affinity to predeploy software on a user’s device when the user isn't logged on so that, when the user logs on, the app is already installed and ready to run.  
+Define primary devices that users use every day for their work. When you create an affinity between a user and a device, you gain more app deployment options. For example, if a user requires Microsoft Visio, you can install it on the user's primary device by using a Windows Installer deployment. However, on a device that's not a primary device, you might deploy Visio as a virtual application. You also can use user device affinity to predeploy software on a user's device when the user isn't signed in. Then when the user logs on, the app is already installed and ready to run.  
 
- You must manage user device affinity information for computers. Configuration Manager automatically manages user device affinities for the mobile devices that it enrolls.  
+You only manage user device affinity information for computers. Configuration Manager automatically manages user device affinities for the mobile devices that it enrolls.  
 
 ## Manually set up user device affinity  
 
-1.  In the Configuration Manager console, choose **Assets and Compliance** > **Devices**.  
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select the **Devices** node.  
 
-3.  In the list, select a device. Then, on the **Home** tab, in the **Device** group, choose **Edit Primary Users**.  
+1. Select a device. On the **Home** tab in the ribbon, in the **Device** group, choose **Edit Primary Users**.  
 
-4.  In the **Edit Primary Users** dialog box, search for and then select the users to add as primary users for the selected device. Choose **Add**.  
+1. In the **Edit Primary Users** dialog box, search for and then select the users to add as primary users for the selected device. Choose **Add**.  
 
     > [!NOTE]  
     > The **Primary Users** list shows users who are already primary users of this device, and the method by which each user-device relationship was assigned.  
 
 ## Set up primary devices for a user  
 
-1.  In the Configuration Manager console, choose **Assets and Compliance** > **Users**.  
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select the **Users** node.  
 
-3.  In the list, select a user. Then, on the **Device** tab, choose **Edit Primary Devices**.  
+1. Select a user. On the **Device** tab in the ribbon, choose **Edit Primary Devices**.  
 
-4.  In the **Edit Primary Devices** dialog box, search for and then select the devices to add as primary devices for the selected user. Choose **Add**.  
+1. In the **Edit Primary Devices** dialog box, search for and then select the devices to add as primary devices for the selected user. Choose **Add**.  
 
     > [!NOTE]  
     > The **Primary Devices** list shows devices that are already set up as primary devices for this user, and the method by which each user-device relationship was assigned.  
 
-## Automatically create user device affinities (Windows PCs only)  
- Configuration Manager reads data about user logons from the Windows Event log. To automatically create user device affinities, you must turn on these two options in the local security policy on client computers to store logon events in the Windows Event log:  
+## Automatically create user device affinities (Windows PCs only)
+
+Configuration Manager reads data about user logon events from the Windows event log. To automatically create user device affinities, turn on these two options in the local security policy on client computers to store logon events in the Windows event log:  
 
 - **Audit account logon events**  
 - **Audit logon events**  
 
-  To configure these settings, use Windows Group Policy.  
+To configure these settings, use Windows Group Policy.  
 
 > [!IMPORTANT]  
-> If an error causes the Windows event log to generate a high number of entries, a new event log might be created. If this occurs, existing logon events might be no longer be available to Configuration Manager.  
->   
-> Be careful when you turn on the **Audit account logon events** and **Audit logon events** settings in Windows XP. By default, the retention policy is 7 days, and it is very likely that these events will fill up the security event log. Standard users won't be able to log on if the event log is full. To prevent this, for the security event log, set the policy **Retention Method** value to **Overwrite events as needed**. For sufficient data for user device affinity, also set the policy maximum security event log size to a reasonable value, such as 5-20 MB.  
+> If an error causes the Windows event log to generate a high number of entries, it might create a new event log. If this behavior occurs, existing logon events might not be available to Configuration Manager.  
 
 ### Set up the site to automatically create user device affinities  
 
-1.  In the Configuration Manager console, choose **Administration** > **Client Settings**.  
+1. In the Configuration Manager console, go to the **Administration** workspace, and select the **Client Settings** node.  
 
-2.  To modify the default client settings, select **Default Client Settings**, and then, on the **Home** tab, in the **Properties** group, choose **Properties**. To create custom client agent settings, select the **Client Settings** node, and then, on the **Home** tab, in the **Create** group, choose **Create Custom Client Device Settings**.  
+1. To modify the default client settings, select **Default Client Settings**. On the **Home** tab in the ribbon, in the **Properties** group, choose **Properties**.
+
+    To create custom client agent settings, on the **Home** tab in the ribbon, in the **Create** group, choose **Create Custom Client Device Settings**.
 
     > [!NOTE]  
-    > If you modify the default client settings, they will be deployed to all computers in the hierarchy. For more information about configuring client settings, see [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md).  
+    > If you modify the default client settings, the site deploys them to all computers in the hierarchy. For more information, see [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings).  
 
-3.  For **User and Device Affinity**, set the following:  
+1. In the **User and Device Affinity** group, set the following settings:  
 
-    -   **User device affinity threshold (minutes)**. Set the number of minutes of device usage before a user device affinity is created.  
+    - **User device affinity threshold (minutes)**: Set the number of minutes of device usage before the site creates a user device affinity.  
 
-    -   **User device affinity threshold (days)**. Set the number of days over which the usage-based affinity threshold is measured.  
+    - **User device affinity threshold (days)**: Set the number of days over which the site measures the usage-based affinity threshold.  
 
-    -   **Automatically configure user device affinity from usage data**. To let the site automatically create user device affinities, from the drop-down list, select **True**. If you select **False**, you must approve all user device affinity assignments.  
+    - **Automatically configure user device affinity from usage data**: Select **True** to let the site automatically create user device affinities. If you select **False**, you need to manually approve all user device affinity assignments.  
 
     > [!TIP]  
-    > **Example:** If you set **User device affinity threshold (minutes)** to **60** minutes and you set **User device affinity threshold (days)** to**5** days, the user must use the device for at least 60 minutes over a period of 5 days to automatically create a user device affinity.  
+    > For example, if you set **User device affinity threshold (minutes)** to **60** minutes and you set **User device affinity threshold (days)** to **5** days, the user must use the device for at least 60 minutes over a period of 5 days to automatically create a user device affinity.  
 
-After an automatic user device affinity is created, Configuration Manager continues to monitor the user device affinity thresholds. If the user’s activity for the device falls below the thresholds you've set, the user device affinity is removed. Set **User device affinity threshold (days)** to a value of at least **7** days to avoid situations in which an automatically configured user device affinity might be lost while the user is not logged on, for example, during the weekend.  
+After Configuration Manager creates an automatic user device affinity, it continues to monitor the user device affinity thresholds. If the user's activity for the device falls below the thresholds you've set, the site removes the user device affinity. Set **User device affinity threshold (days)** to a value of at least seven days. This configuration avoids situations in which an automatically configured user device affinity might be lost while the user isn't signed in, for example, during the weekend.  
 
-## Import user device affinities from a file  
- To create many relationships at one time, you can import a file that has the details for multiple user device affinities. For this procedure, the subject devices must have been discovered and exist as resources in the Configuration Manager database, or the procedure will fail.  
 
-1.  In the Configuration Manager console, choose **Assets and Compliance** > **Users** or **Devices**.  
+## Import user device affinities from a file
 
-2.  On the **Home** tab, in the **Create** group, choose **Import User Device Affinity**.  
+To create many relationships at one time, import a file that has the details for multiple user device affinities. Make sure the target devices are already discovered by the site and exist as resources in the Configuration Manager database.  
 
-3.  In the Import User Device Affinity Wizard, on the **Choose Mapping** page, set this information:  
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select either the **Users** or **Devices** node.  
 
-    -   **File name**. Specify a comma-separated values (CSV) file that has a list of users and devices between which you want to create an affinity. In this file, each user-and-device pair must be on its own row, with values separated by a comma. Use this format: <*Domain*>&#92;<*user name*>,<*device NetBIOS name*>.  
+1. On the **Home** tab in the ribbon, in the **Create** group, choose **Import User Device Affinity**.  
 
-    -   **This file has column headings for reference purposes**. If the .csv file has a top-row header, select this option and the header row is ignored during the import.  
+1. In the Import User Device Affinity Wizard, on the **Choose Mapping** page, set this information:  
 
-4.  If the file you are importing has more than two items in each row, you can use **Column** and **Assign** to specify which columns represent users and devices, and which columns to ignore during import.  
+    - **File name**. Specify a comma-separated values (CSV) file that has a list of users and devices between which you want to create an affinity. In this file, each user-and-device pair must be on its own row, with values separated by a comma. Use this format: `<domain>\<username>,<device NetBIOS name>`  
 
-5.  Choose **Next**, and then finish the Import User Device Affinity Wizard.  
+    - **This file has column headings for reference purposes**. If the .csv file has a top-row header, select this option. The site ignores the header row during the import.  
 
-## Let users create their own device affinities  
- With the next procedures, you can set up a user to create their own user device affinity in the Software Center app.  
+1. If the file you import has more than two items in each row, use **Column** and **Assign** to specify which columns represent users and devices, and which columns to ignore during import.  
+
+1. Complete the wizard.  
+
+
+## Let users create their own device affinities
+
+Set up a user to create their own user device affinity in Software Center.
 
 ### Set up the site to allow user-created user device affinity requests  
 
-1.  In the Configuration Manager console, choose **Administration** > **Client Settings**.  
+1  In the Configuration Manager console, go to the **Administration** workspace, and select the **Client Settings** node.  
 
-2.  To modify the default client settings, select **Default Client Settings**, and then, on the **Home** tab, in the **Properties** group, choose **Properties**. To create custom client agent settings, select the **Client Settings** node, and then, on the **Home** tab, in the **Create** group, choose **Create Custom Client User Settings**.  
+1. To modify the default client settings, select **Default Client Settings**. On the **Home** tab in the ribbon, in the **Properties** group, choose **Properties**.
+
+    To create custom client agent settings, on the **Home** tab in the ribbon, in the **Create** group, choose **Create Custom Client User Settings**.
 
     > [!NOTE]  
-    > If you modify the default client settings, they will be deployed to all computers in the hierarchy. For more information about configuring client settings, see [Configure client settings](../../core/clients/deploy/configure-client-settings.md).  
+    > If you modify the default client settings, the site deploys them to all computers in the hierarchy. For more information, see [Configure client settings](/sccm/core/clients/deploy/configure-client-settings).  
 
-3.  Select the client setting **User and Device Affinity** and then, in the **Allow user to define their primary devices** drop-down list, select **True**.  
+1. In the **User and Device Affinity** group, enable the setting to **Allow user to define their primary devices**.  
 
-### Set up a user device affinity  
+### Set up a user device affinity in Software Center
 
-1.  In the Application Catalog, choose **My Systems**.  
+Starting in version 1902, use Software Center to set affinity.
 
-2.  Select the option **I regularly use this computer to do my work**.  
+1. In Software Center, go to the **Options** tab.
 
-## Manage user device affinity requests from users  
- When the client setting **Automatically configure user device affinity from usage data** is set to **False**, you must approve all user device affinity assignments.  
+1. In the **Work information** section, select the option **I regularly use this computer to do my work**.
+
+### Set up a user device affinity in the application catalog
+
+> [!Important]
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+>
+> For more information, see the following articles:
+>
+> - [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)
+> - [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)  
+
+1. In the application catalog, choose **My Systems**.  
+
+1. Select the option **I regularly use this computer to do my work**.  
+
+
+## Manage user device affinity requests from users
+
+When you disable the client setting to **Automatically configure user device affinity from usage data**, you need to manually approve all user device affinity assignments.  
 
 ### Approve or reject a user device affinity request  
 
-1.  In the Configuration Manager console, choose **Assets and Compliance**.  
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace.  
 
-2.  In the **Assets and Compliance** workspace, select the user or device collection for which you want to manage affinity requests.  
+1. Select the user or device collection for which you want to manage affinity requests.  
 
-3.  On the **Home** tab, in the **Collection** group, choose **Manage Affinity Requests**.  
+1. On the **Home** tab in the ribbon, in the **Collection** group, choose **Manage Affinity Requests**.  
 
-4.  In the **Manage User Device Affinity Requests** dialog box, select an affinity request, and then choose **Approve** or **Reject**.  
+1. In the **Manage User Device Affinity Requests** dialog box, select an affinity request, and then choose **Approve** or **Reject**.  
