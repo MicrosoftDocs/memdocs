@@ -92,8 +92,6 @@ You can now add a new secondary replica node to an existing SQL AlwaysOn availab
 - [Prepare to use SQL Server Always On availability groups](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)
 - [Configure SQL Server Always On availability groups](/sccm/core/servers/deploy/configure/configure-aoag)-->
 
-
-
 ## <a name="bkmk_cloud"></a> Cloud-attached management
 
 ### Azure Active Directory user group discovery
