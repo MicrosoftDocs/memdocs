@@ -23,6 +23,8 @@ For more information on the other features of Software Center, see the [Software
 
 ## <a name="bkmk_userex"></a> Configure Software Center  
 
+Update your Configuration Manager sites and clients to version 1906 or later to benefit from the latest improvements.
+
 Review the following improvements to Software Center:
 
 > [!Important]  
