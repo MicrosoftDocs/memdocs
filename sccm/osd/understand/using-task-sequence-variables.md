@@ -104,6 +104,7 @@ For custom variables or variables that aren't read-only, there are several metho
 - [Collection and device variables](#bkmk_set-coll-var)  
 - [TSEnvironment COM object](#bkmk_set-com)  
 - [Prestart command](#bkmk_set-prestart)  
+- [Task Sequence Wizard](#bkmk_set-tswiz)
 - [Task Sequence Media Wizard](#bkmk_set-media)  
 
 Delete a variable from the environment by using the same methods as creating a variable. To delete a variable, set the variable value to an empty string.  
@@ -155,6 +156,10 @@ For more information, see [How to use variables in a running task sequence](/scc
 The prestart command is a script or executable that runs in Windows PE before the user selects the task sequence. The prestart command can query a variable or prompt the user for information, and then save it in the environment. Use the [TSEnvironment](#bkmk_set-com) COM object to read and write variables from the prestart command.
 
 For more information, see [Prestart commands for task sequence media](/sccm/osd/understand/prestart-commands-for-task-sequence-media).
+
+### <a name="bkmk_set-tswiz"></a> Task Sequence Wizard
+
+Starting in version 1906, after you select a task sequence in the Task Sequence Wizard window, the page to edit task sequence variables includes an **Edit** button. You can use accessible keyboard shortcuts to edit the variables. This change helps in cases where a mouse isn't available.<!-- 4668846 -->
 
 ### <a name="bkmk_set-media"></a> Task Sequence Media Wizard
 
