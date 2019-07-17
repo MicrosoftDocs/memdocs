@@ -293,12 +293,13 @@ For more information, see [Approve applications](/sccm/apps/deploy-use/app-appro
 ## <a name="bkmk_osd"></a> OS deployment
 
 ### Task sequence debugger
+
 <!--3612274-->
 The task sequence debugger is a new troubleshooting tool. You deploy a task sequence in debug mode to a collection of one device. It lets you step through the task sequence in a controlled manner to aid troubleshooting and investigation.
 
-![Screenshot of Task Sequence Debugger](./media/3612274-tsdebug.png)
+![Screenshot of task sequence debugger](./media/3612274-tsdebug.png)
 
- <!--(New article) For more information, see [Task sequence debugger](/sccm/osd/deploy-use/debug-task-sequence).-->
+For more information, see [Debug a task sequence](/sccm/osd/deploy-use/debug-task-sequence).
 
 ### Clear app content from client cache during task sequence
 

@@ -2,7 +2,7 @@
 title: Task sequence variable reference
 titleSuffix: Configuration Manager
 description: Learn about the variables to control and customize a Configuration Manager task sequence.
-ms.date: 05/06/2019
+ms.date: 07/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -1573,6 +1573,13 @@ This optional task sequence variable controls client behavior when a software up
 Set the SMSTSWaitForSecondReboot value in seconds to specify how long the task sequence pauses on this step while the computer restarts. Allow sufficient time in case there's a second restart.
 
 For example, if you set SMSTSWaitForSecondReboot to `600`, the task sequence pauses for 10 minutes after a restart before additional steps run. This variable is useful when a single Install Software Updates task sequence step installs hundreds of software updates.
+
+### <a name="TSDebugMode"></a> TSDebugMode
+
+<!--3612274-->
+Starting in version 1906, set this variable to `TRUE` on a collection to which a task sequence is deployed. This variable changes the behavior of any task sequence on any device in that collection to use the task sequence debugger.
+
+For more information, see [Debug a task sequence](/sccm/osd/deploy-use/debug-task-sequence).
 
 ### <a name="TSDisableProgressUI"></a> TSDisableProgressUI
 
