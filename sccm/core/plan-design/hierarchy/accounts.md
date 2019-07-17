@@ -596,16 +596,16 @@ Configuration Manager automatically creates and maintains the following user obj
 >  Modifying or removing these objects may cause drastic issues within a Configuration Manager environment.  We recommend you do not make any changes to these objects.
 
 
-### smsdbuser_ReadOnly
+### ### <a name="smsdbuser_readonly"></a>smsdbuser_ReadOnly
 
 This object is used to run queries under the read-only context.  This object is leveraged with several stored procedures.
 
 
-### smsdbuser_ReadWrite
+### <a name="smsdbuser_readwrite"></a>smsdbuser_ReadWrite
 
 This object is used to provide permissions for dynamic SQL statements.
 
 
-### smsdbuser_ReportSchema
+### <a name="smsdbuser_reportschema"></a>smsdbuser_ReportSchema
 
 This object is used to run SQL Reporting Executions.  The following stored procedure is used with this function: spSRExecQuery.
