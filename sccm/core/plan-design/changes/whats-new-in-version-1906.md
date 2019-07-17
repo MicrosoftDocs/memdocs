@@ -232,49 +232,33 @@ For more information, see [Client cache settings](/sccm/core/clients/deploy/abou
 ## <a name="bkmk_comgmt"></a> Co-management
 
 ### Improvements to co-management auto-enrollment
-<!--3555961 -- info still needed-->
-<!--4454491-->
 
-A new co-managed device now automatically enrolls to the Microsoft Intune service based on its Azure Active Directory (Azure AD) device token. It doesn't need to wait for a user to sign in to the device for auto-enrollment to start. This change helps to reduce the number of devices with the [enrollment status](/sccm/comanage/how-to-monitor#co-management-enrollment-status) *Pending user sign in*.
+- A new co-managed device now automatically enrolls to the Microsoft Intune service based on its Azure Active Directory (Azure AD) *device* token. It doesn't need to wait for a user to sign in to the device for auto-enrollment to start. This change helps to reduce the number of devices with the [enrollment status](/sccm/comanage/how-to-monitor#co-management-enrollment-status) *Pending user sign in*.<!-- 4454491 -->
 
-To support this behavior, clients need to be running Windows 10 version 1803 or later.
+- For customers that already have devices enrolled to co-management, new devices now enroll immediately once they meet the prerequisites. For example, once the device is joined to Azure AD and the Configuration Manager client is installed.<!--4321130-->
 
-If the device token fails, it falls back to previous behavior with the user token. Look in the **ComanagementHandler.log** for the following entry:
-`Enrolling device with RegisterDeviceWithManagementUsingAADDeviceCredentials`
-
-
-<!-- For more information, see [Enable co-management](/sccm/comanage/how-to-enable.md). -->
-
+For more information, see [Enable co-management](/sccm/comanage/how-to-enable).
 
 ### Multiple pilot groups for co-management workloads
+
 <!--3555750-->
-You can now configure different pilot collections for each of the co-management workloads. Being able to use different pilot collections allows you to take a more  granular approach when shifting workloads. 
+You can now configure different pilot collections for each of the co-management workloads. Being able to use different pilot collections allows you to take a more  granular approach when shifting workloads.
 
-- In the **Enablement** tab, you can now specify an **Intune Auto Enrollment** collection. 
+- In the **Enablement** tab, you can now specify an **Intune Auto Enrollment** collection.
     - The **Intune Auto Enrollment** collection should contain all of the clients you want to onboard into co-management. It's essentially a superset of all the other staging collections.
-
-  ![Co-management Enablement tab with Intune Auto Enrollment collection](./media/3555750-co-management-enablement-tab.png)
-
-- The **Workloads** tab hasn't changed and you can still choose which workloads to transition.
-
-  ![Co-management Workloads tab hasn't changed](./media/3555750-co-management-workloads-tab.png)
 
 - In the **Staging** tab, instead of using one pilot collection for all workloads, you can now choose an individual collection for each workload.
 
     ![Co-management Staging tab allows you to choose a collection for each workload](./media/3555750-co-management-staging-tab.png)
-  
-These options are also available when you first [enable co-management](/sccm/comanage/how-to-enable.md).
 
-<!-- For more information, see [Enable co-management](/sccm/comanage/how-to-enable.md). -->
+These options are also available when you first enable co-management.
 
-<!--
+For more information, see [Enable co-management](/sccm/comanage/how-to-enable).
 
-### Co-management support for government cloud 
-<!--4075452 - not sure if we need docs for 1906-->
+### Co-management support for government cloud
 
-
-
-<!-- ## <a name="bkmk_compliance"></a> Compliance settings -->
+<!--4075452-->
+U.S. government customers can now use co-management with the Azure U.S. Government Cloud (portal.azure.us).
 
 
 ## <a name="bkmk_app"></a> Application management
