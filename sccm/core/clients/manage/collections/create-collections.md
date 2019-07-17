@@ -240,7 +240,7 @@ The Azure AD synchronization happens every five minutes. It's a one-way process,
 
 1. In the Configuration Manager console, go to **Administration** < **Overview** < **Cloud Services** < **Azure Services**.
 1. Right-click on the Azure AD tenant where you created the group and select **Properties**.
-1. In the **Collection Synchronization** tab, check the box for the **Enable Azure Directory Group Sync**. 
+1. In the **Collection Synchronization** tab, check the box for the **Enable Azure Directory Group Sync**.
 1. Click **OK** to save the setting.
 
 ### Enable the collection to synchronize
@@ -253,6 +253,8 @@ The Azure AD synchronization happens every five minutes. It's a one-way process,
   - If you are prompted to sign in, use the identity you specified as the owner for the Azure AD group.
 1. Select the target group, then click **OK** to add the group and **OK** again to exit the collection's properties.
 1. You'll need to wait about 5 to 7 minutes before you can verify the group memberships in the Azure portal.
+   - To initiate a full synchronization, right-click the collection then select **Synchronize Membership**.
+
 
 ### Verify the Azure AD group membership
 
