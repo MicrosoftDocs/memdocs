@@ -110,11 +110,15 @@ This value is 60 minutes by default. Reducing this value causes clients to poll 
 
 When you set this option to **Yes**, and use [user discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser), then clients receive applications and programs targeted to the signed-in user.  
 
-The Application Catalog receives the list of available software for users from the site server. Thus, this setting doesn't have to be **Yes** for users to see and request applications from the Application Catalog. If this setting is **No**, users can't install the applications that they see in the Application Catalog.  
-
-In addition, if this setting is **No**, users don't receive required applications that you deploy to users. Users also don't receive any other management tasks in user policies.  
+If this setting is **No**, users don't receive required applications that you deploy to users. Users also don't receive any other management tasks in user policies.  
 
 This setting applies to users when their computer is on either the intranet or the internet. It must be **Yes** if you also want to enable user policies on the internet.  
+
+> [!Note]  
+> Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You can't install new application catalog roles.
+>
+> If you're still using the application catalog, it receives the list of available software for users from the site server. Thus, this setting doesn't have to be **Yes** for users to see and request applications from the application catalog. If this setting is **No**, users can't install the applications that they see in the application catalog.  
+
 
 ### Enable user policy requests from internet clients
 
@@ -128,7 +132,7 @@ Set this option to **Yes** for users to receive the user policy on internet-base
 
 - The cloud management gateway successfully authenticates the user by using Azure Active Directory. For more information, see [Deploy user-available applications on Azure AD-joined devices](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices).  
 
-If you set this option to **No**, or any of the previous requirements aren't met, then a computer on the internet only receives computer policies. In this scenario, users can still see, request, and install applications from an internet-based Application Catalog. If this setting is **No**, but **Enable user policy on clients** is **Yes**, users don't receive user policies until the computer is connected to the intranet.  
+If you set this option to **No**, or any of the previous requirements aren't met, then a computer on the internet only receives computer policies. In this scenario, users can still see, request, and install applications from an internet-based application catalog. If this setting is **No**, but **Enable user policy on clients** is **Yes**, users don't receive user policies until the computer is connected to the intranet.  
 
 > [!NOTE]  
 > For internet-based client management, application approval requests from users don't require user policies or user authentication. The cloud management gateway doesn't support application approval requests.  
@@ -179,25 +183,31 @@ For more information about the following three settings, see [User notifications
 
 ### Default Application Catalog website point
 
-> [!Note]  
-> Starting in version 1806, the application catalog website point is no longer *required*, but still *supported*. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).
+> [!Important]  
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
 >
-> The **Silverlight user experience** for the application catalog website point is no longer supported. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
+> For more information, see the following articles:
+>
+> - [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)
+> - [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)  
 
-Configuration Manager uses this setting to connect users to the Application Catalog from Software Center. Select **Set Website** to specify a server that hosts the Application Catalog website point. Enter its NetBIOS name or FQDN, specify automatic detection, or specify a URL for customized deployments. In most cases, automatic detection is the best choice.
+Configuration Manager uses this setting to connect users to the application catalog from Software Center. Select **Set Website** to specify a server that hosts the application catalog website point. Enter its NetBIOS name or FQDN, specify automatic detection, or specify a URL for customized deployments. In most cases, automatic detection is the best choice.
 
 ### Add default Application Catalog website to Internet Explorer trusted sites zone
 
-> [!Note]  
-> Starting in version 1806, the application catalog website point is no longer *required*, but still *supported*. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).
+> [!Important]  
+> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
 >
-> The **Silverlight user experience** for the application catalog website point is no longer supported. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
+> For more information, see the following articles:
+>
+> - [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)
+> - [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)  
 
-If this option is **Yes**, the client automatically adds the current default Application Catalog website URL to the Internet Explorer trusted sites zone.  
+If this option is **Yes**, the client automatically adds the current default application catalog website URL to the Internet Explorer trusted sites zone.  
 
-This setting ensures that the Internet Explorer setting for Protected Mode isn't enabled. If Protected Mode is enabled, the Configuration Manager client might not be able to install applications from the Application Catalog. By default, the trusted sites zone also supports user sign-in for the Application Catalog, which requires Windows authentication.  
+This setting ensures that the Internet Explorer setting for Protected Mode isn't enabled. If Protected Mode is enabled, the Configuration Manager client might not be able to install applications from the application catalog. By default, the trusted sites zone also supports user sign-in for the application catalog, which requires Windows authentication.  
 
-If you leave this option as **No**, Configuration Manager clients might not be able to install applications from the Application Catalog. An alternative method is to configure these Internet Explorer settings in another zone for the Application Catalog URL that clients use.  
+If you leave this option as **No**, Configuration Manager clients might not be able to install applications from the application catalog. An alternative method is to configure these Internet Explorer settings in another zone for the application catalog URL that clients use.  
 
 ### Allow Silverlight applications to run in elevated trust mode
 
@@ -206,7 +216,7 @@ If you leave this option as **No**, Configuration Manager clients might not be a
 >
 > Starting in version 1806, the **Silverlight user experience** for the application catalog website point is no longer supported. Users should use the new Software Center. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).  
 
-This setting must be **Yes** for users to use the Application Catalog.  
+This setting must be **Yes** for users to use the application catalog.  
 
 If you change this setting, it takes effect when users next load their browser, or refresh their currently opened browser window.  
 
@@ -220,12 +230,7 @@ Type the name that users see in Software Center. This branding information helps
 
 The default setting is **Yes**.
 
-If you set this option to **Yes**, then all client computers use the Software Center. Software Center shows user-available apps that were previously accessible only in the Application Catalog. The Application Catalog requires Silverlight, which isn't a prerequisite for the Software Center.
-
-Starting in version 1806, the application catalog website point and web service point roles are no longer *required*, but still *supported*. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).
-
-> [!Note]  
-> The **Silverlight user experience** for the application catalog website point is no longer supported. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
+When you set this option to **Yes**, then all client computers use the Software Center. Software Center shows software, software updates, and task sequences that you deploy to users or devices.
 
 ### Enable communication with Health Attestation Service
 
@@ -237,10 +242,7 @@ Set this option to **Yes** for devices to use an on-premises service. Set to **N
 
 ### Install permissions
 
-> [!IMPORTANT]  
-> This setting applies to the Application Catalog and Software Center. This setting has no effect when users use the Company Portal.  
-
-Configure how users can initiate the installation of software, software updates, and task sequences:  
+Configure how users can install software, software updates, and task sequences:  
 
 - **All Users**: Users with any permission except Guest.  
 
@@ -248,7 +250,7 @@ Configure how users can initiate the installation of software, software updates,
 
 - **Only Administrators and primary users**: Users must be a member of the local Administrators group, or a primary user of the computer.  
 
-- **No Users**: No users signed in to a client computer can initiate the installation of software, software updates, and task sequences. Required deployments for the computer always install at the deadline. Users can't initiate the installation of software from the Application Catalog or Software Center.  
+- **No Users**: No users signed in to a client computer can install software, software updates, and task sequences. Required deployments for the computer always install at the deadline. Users can't install software from Software Center.  
 
 ### Suspend BitLocker PIN entry on restart
 
@@ -267,7 +269,7 @@ Enable this option only if one of the following conditions applies:
 - You use the Configuration Manager software development kit (SDK) to manage client agent notifications, and the installation of applications and software updates.  
 
 > [!WARNING]  
-> If you choose this option when neither of these conditions apply, the client doesn't install software updates and required applications. This setting doesn't prevent users from installing applications from the Application Catalog, or the installation of packages, programs, and task sequences.  
+> If you choose this option when neither of these conditions apply, the client doesn't install software updates and required applications. This setting doesn't prevent users from installing available software from Software Center, including applications, packages, and task sequences.  
 
 ### PowerShell execution policy
 
@@ -469,12 +471,12 @@ Choose one of the following options for this setting:
 
     - Client state messages to send to the site  
 
-    - Software installation requests by using the Application Catalog  
+    - Software installation requests from Software Center  
 
     - Required deployments (when the installation deadline is reached)  
 
     > [!IMPORTANT]  
-    > The client always permits software installations from Software Center or the Application Catalog, regardless of the metered internet connection settings.  
+    > The client always permits software installations from Software Center, regardless of the metered internet connection settings.  
 
     If the client reaches the data transfer limit for the metered internet connection, the client no longer tries to communicate with Configuration Manager sites.  
 
@@ -640,10 +642,32 @@ When you enable this option, applications that are already installed no longer s
 
 ### <a name="bkmk_HideAppCat"></a> Hide Application Catalog link in Software Center
 
-Starting in Configuration Manager version 1806, you can specify the visibility of the Application Catalog web site link in Software Center. When this option is set, users won't see the Application Catalog web site link in the Installation status node of Software Center. <!--1358214-->
+Starting in Configuration Manager version 1806, you can specify the visibility of the application catalog web site link in Software Center. When this option is set, users won't see the application catalog web site link in the Installation status node of Software Center. <!--1358214-->
 
 
 ### Software Center tab visibility
+
+#### Starting in version 1906
+<!--4063773-->
+
+Choose which tabs should be visible in Software Center. Use the **Add** button to move a tab to **Visible tabs**. Use the **Remove**  button to move it to the **Hidden tabs** list. Order the tabs using the **Move Up** or **Move Down** buttons. 
+
+Available tabs:
+- **Applications**
+- **Updates**
+- **Operating Systems**
+- **Installation Status**
+- **Device Compliance**
+- **Options**
+- Add up to 5 custom tabs by clicking the **Add tab** button.
+  - Specify the **Tab name** and **Content URL** for your custom tab.
+  - Click **Delete Tab** to remove a custom tab.  
+
+  >[!Important]  
+  > - Some website features may not work when using it as a custom tab in Software Center. Make sure to test the results before deploying this to clients. <!--519659-->
+  > - Specify only trusted or intranet website addresses when you add a custom tab.<!--SCCMDocs issue 1575-->
+
+#### Version 1902 and earlier
 
 Configure the additional settings in this group to **Yes** to make the following tabs visible in Software Center:
 
@@ -862,6 +886,17 @@ This client setting provides the following options:
 ### Enable third party software updates
 
 When you set this option to **Yes**, it sets the policy for **Allow signed updates for an intranet Microsoft update service location** and installs the signing certificate to the Trusted Publisher store on the client.
+
+### <a name="bkmk_du"></a>Enable Dynamic Update for feature updates
+<!--4062619-->
+Starting in Configuration Manager version 1906, you can configure [Dynamic Update for Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847). Dynamic Update installs language packs, features on demand, drivers, and cumulative updates during Windows setup by directing the client to download these updates from the internet. When this setting is set to either **Yes** or **No**, Configuration Manager modifies the [setupconfig](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) file that is used during feature update installation.
+
+- **Not Configured** - The default value. No changes are made to the setupconfig file.
+  - Dynamic Update will be either enabled or disabled based on the default behavior of the OS.
+  - Starting with Windows 10 version 1809, Dynamic Updates are enabled by default in the OS.
+- **Yes** - Enables Dynamic Update.
+- **No** - Disables Dynamic Update.
+
 
 ## State Messaging
 

@@ -39,7 +39,13 @@ Version 1906 drops support for the following features:
 
 - Classic service deployment to Azure for cloud management gateway and cloud distribution point. For more information, see [Plan for CMG](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).
 
+- You can't install new application catalog roles. Updated clients automatically use the management point for user-available application deployments. For more information, see [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).
 
+Version 1906 deprecates support for the following products:  
+
+- Windows CE 7.0
+- Windows 10 Mobile
+- Windows 10 Mobile Enterprise
 
 ## <a name="bkmk_infra"></a> Site infrastructure
 
@@ -55,7 +61,7 @@ Site server maintenance tasks can now be viewed and edited from their own tab on
 
 ![New tab for maintenance tasks in the detail view of a site server](./media/3555894-maintenance-tasks.png)
 
-<!-- For more information, see [Maintenance tasks](sccm/core/servers/manage/maintenance-tasks). -->
+For more information, see [Maintenance tasks](/sccm/core/servers/manage/maintenance-tasks#bkmk_MTs1906).
 
 ### Configuration Manager update database upgrade monitoring
 <!--4200581-->
@@ -89,22 +95,6 @@ You can now add a new secondary replica node to an existing SQL AlwaysOn availab
 
 
 ## <a name="bkmk_cloud"></a> Cloud-attached management
-
-<!--3555774 - moved as of 6/28
-### Cloud services cost estimator
-
-
-Some customers are concerned about the potential cost for attaching cloud services in Configuration Manager. This release introduces a new cost estimator tool in the Configuration Manager console. The tool uses the following data from your site database to estimate the cost of deploying the cloud management gateway:  
-
-- Aggregate, average client usage of management points and distribution points  
-
-- Azure pricing  
-
-In the Configuration Manager console, go to the **Monitoring** workspace, and select the **Cloud Management** node.  
-
-![Screenshot of cloud services usage estimation tool](./media/3555774-cmg-cost-estimator.png)
-
-(New article) For more information, see [Planning for cloud usage](/sccm/core/clients/manage/cmg/plan-for-cloud-cost). -->
 
 ### Azure Active Directory user group discovery
 <!--3611956-->
@@ -144,15 +134,23 @@ TBD
 
 ## <a name="bkmk_real"></a> Real-time management
 
+### Add joins, additional operators and aggregators in CMPivot
+<!--4054074-->
+
+ For CMPivot, you now have additional arithmetic operators, aggregators, and the ability to add query joins such as using Registry and File together.
+
+For more information, see [CMPivot](/sccm/core/servers/manage/cmpivot#bkmk_cmpivot1906).
+
 ### CMPivot standalone
-<!--3555890, 4619340, 4683130 -->
-You can now use CMPivot as a standalone app. Run it outside of the Configuration Manager console to view the real-time state of devices in your environment. This change enables you to use CMPivot on a device without first installing the console.
+<!--3555890, 4619340, 4692885 -->
 
-You can now share the power of CMPivot with other personas, such as helpdesk or security admins, who don’t have the console installed on their computer. These other personas can use CMPivot to query Configuration Manager alongside the other tools that they traditionally use. By sharing this rich management data, you can work together to proactively solve business problems that cross roles.
+You can now use CMPivot as a standalone app. CMPivot standalone is a **pre-release feature** and is only available in English. Run CMPivot outside of the Configuration Manager console to view the real-time state of devices in your environment. This change enables you to use CMPivot on a device without first installing the console.
 
-<!-- For more information, see [CMPivot](/sccm/core/servers/manage/cmpivot#prerequisites). -->
+You can share the power of CMPivot with other personas, such as helpdesk or security admins, who don’t have the console installed on their computer. These other personas can use CMPivot to query Configuration Manager alongside the other tools that they traditionally use. By sharing this rich management data, you can work together to proactively solve business problems that cross roles.
 
-#### Added CMPivot permissions to the Security Administrator role
+For more information, see [CMPivot](/sccm/core/servers/manage/cmpivot#bkmk_standalone) and [Pre-release features](/sccm/core/servers/manage/pre-release-features#bkmk_table).
+
+### Added permissions to the Security Administrator role
 <!--4683130-->
 
 The following permissions have been added to Configuration Manager's built-in **Security Administrator** role:
@@ -160,18 +158,7 @@ The following permissions have been added to Configuration Manager's built-in **
  - Run CMPivot on Collection
  - Read on Inventory Report
 
-<!-- For more information, see [CMPivot](/sccm/core/servers/manage/cmpivot#prerequisites). -->
-
-### Improvements to CMPivot
-<!--4054074-->
-
-#### Add joins, additional operators and aggregators in CMPivot
-<!--4054074-->
-
- For CMPivot, you now have additional arithmetic operators, aggregators, and the ability to add query joins such as using Registry and File together. 
-
-<!-- For more information, see [CMPivot](/sccm/core/servers/manage/cmpivot). -->
-
+For more information, see [CMPivot](/sccm/core/servers/manage/cmpivot#bkmk_cmpivot_secadmin1906).
 
 ## <a name="bkmk_content"></a> Content management
 
@@ -195,16 +182,13 @@ For more information, see [Delivery Optimization In-Network Cache in Configurati
 ## <a name="bkmk_client"></a> Client management
 
 ### Support for Windows Virtual Desktop
+
 <!--3556025-->
-[Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/) is a preview feature of Microsoft Azure and Microsoft 365. You can now use Configuration Manager technical preview to manage these virtual devices running Windows in Azure.
+[Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/) is a preview feature of Microsoft Azure and Microsoft 365. You can now use Configuration Manager to manage these virtual devices running Windows in Azure.
 
 Similar to a terminal server, these virtual devices allow multiple concurrent active user sessions. To help with client performance, Configuration Manager now disables user policies on any device that allows these multiple user sessions. Even if you enable user policies, the client disables them by default on these devices, which include Windows Virtual Desktop and terminal servers.
 
-The client only disables user policy when it detects this type of device during a new installation. For an existing client of this type that you update to this version, the previous behavior persists. On an existing device, it configures the user policy setting even if it detects that the device allows multiple user sessions.
-
-If you require user policy in this scenario, and accept any potential performance impact, use the Configuration Manager SDK with the [SMS_PolicyAgentConfig server WMI class](/sccm/develop/reference/core/clients/config/sms_policyagentconfig-server-wmi-class). Set the new `PolicyEnableUserPolicyOnTS` property to `true`.
-
-<!-- For more information, see [Supported OS versions for clients and devices](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices). -->
+For more information, see [Supported OS versions for clients and devices](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#windows-computers).
 
 ### OneTrace (Preview)
 <!--3555962-->
@@ -296,11 +280,11 @@ These options are also available when you first [enable co-management](/sccm/com
 ## <a name="bkmk_app"></a> Application management
 
 ### Filter applications deployed to devices
+
 <!--4451056-->
- User categories for device-targeted application deployments now show as filters in Software Center. Specify a **user category** for an application on the **Software Center** page of its properties. Then open the app in Software Center and look at the available filters.
+User categories for device-targeted application deployments now show as filters in Software Center. Specify a **user category** for an application on the **Software Center** page of its properties. Then open the app in Software Center and look at the available filters.
 
-<!--For more information, see [Manually specify application information](/sccm/apps/deploy-use/create-applications#bkmk_manual-app) and [Applications in Software Center](/sccm/core/understand/software-center#applications).-->
-
+For more information, see [Manually specify application information](/sccm/apps/deploy-use/create-applications#bkmk_manual-app).
 
 ### Application groups
 <!--3555907-->
@@ -376,34 +360,23 @@ Task sequence pre-cache now includes additional content types. Pre-cache content
 
 For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/configure-precache-content).
 
-### Improvement to task sequence media creation
-<!--4090666-->
+### Improvements to OS deployment
 
- <!--? this is a DCR not on doc list for 1906- Looks like it was added in 1902 on multiple articles including /sccm/osd/deploy-use/create-stand-alone-media#process.-->
-
-### Improvements to OS deployment 
-<!--2839943,4447680-->
-<!--4512937,4224642 (combined with the 422462 above)-->
-<!--4668846, 2840337, 4512937-->
 This release includes the following improvements to OS deployment:
 
-- The following two PowerShell cmdlets were added to create and edit the [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence) step:  <!--2839943--> <!--For more information, see [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence).-->
+- Use the following two PowerShell cmdlets to create and edit the [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence) step:<!--2839943-->
 
     - **New-CMTSStepRunTaskSequence**
 
     - **Set-CMTSStepRunTaskSequence**
 
-- A new task sequence variable was added, **SMSTSRebootDelayNext**. Use this new variable with the existing [SMSTSRebootDelay](/sccm/osd/understand/task-sequence-variables#SMSTSRebootDelay) variable. If you want any later reboots to happen with a different timeout than the first, set SMSTSRebootDelayNext to a different value in seconds. <!--4447680--> <!--For more information, see [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence).-->
+- It's now easier to edit variables when you run a task sequence. After you select a task sequence in the Task Sequence Wizard window, the page to edit task sequence variables includes an **Edit** button.<!-- 4668846 --> For more information, see [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables#bkmk_set-tswiz).
 
-    For example, you want to give users a 60-minute reboot notification at the start of a Windows 10 in-place upgrade task sequence. After that first long timeout, you want additional timeouts to only be 60 seconds. Set SMSTSRebootDelay to `3600`, and SMSTSRebootDelayNext to `60`.  
+- The **Disable BitLocker** task sequence step has a new restart counter. Use this option to specify the number of restarts to keep BitLocker disabled. This change you simplify your task sequence. You can use a single step, instead of adding multiple instances of this step. <!--4512937--> For more information, see [Disable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_DisableBitLocker).
 
-- The [Disable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_DisableBitLocker) task sequence step has a new restart counter. Use this option to specify the number of restarts to keep BitLocker disabled. Instead of adding multiple instances of this step, set a value between 1 (default) and 15. You can also set this behavior with the task sequence variable **OSDBitlockerRebootCount**. <!--4512937--> <!--For more information, see [Disable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_DisableBitLocker).-->
+- Use the new task sequence variable **SMSTSRebootDelayNext** with the existing [SMSTSRebootDelay](/sccm/osd/understand/task-sequence-variables#SMSTSRebootDelay) variable. If you want any later reboots to happen with a different timeout than the first, set this new variable to a different value in seconds. <!--4447680--> For more information, see [SMSTSRebootDelayNext](/sccm/osd/understand/task-sequence-variables#SMSTSRebootDelayNext).
 
-- This release further iterates on the improvement to the [Disable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_DisableBitLocker) step. This release adds a new variable, **OSDBitLockerRebootCountOverride**. Set this value from 0 to 15, and it overrides the count set by the step or the OSDBitlockerRebootCount variable. While the other methods only accept values 1 to 15, if you set this variable to 0, BitLocker remains disabled indefinitely. This new variable is useful when the task sequence sets one value, but you want to set a separate value on a per-device or per-collection basis. <!-- 4512937 --> <!--For more information, see [Disable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_DisableBitLocker).-->
-
-- It's now easier to edit variables when you run a task sequence. After you select a task sequence in the Task Sequence Wizard window, the page to edit task sequence variables includes an **Edit** button. You can use accessible keyboard shortcuts to edit the variables. This change helps in cases where a mouse isn't available.<!-- 4668846 --><!--For more information, see [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence).-->
-
-- The task sequence sets a new read-only variable **_SMSTSLastContentDownloadLocation**. This variable contains the last location where the task sequence downloaded or attempted to download content. Inspect this variable instead of parsing the client logs.<!-- 2840337 --> <!--For more information, see [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence).-->
+- The task sequence sets a new read-only variable **_SMSTSLastContentDownloadLocation**. This variable contains the last location where the task sequence downloaded or attempted to download content. Inspect this variable instead of parsing the client logs.<!-- 2840337 -->
 
 
 ## <a name="bkmk_userxp"></a> Software Center
@@ -412,28 +385,35 @@ This release includes the following improvements to OS deployment:
 <!--4063773-->
 You can now add up to five custom tabs in Software Center. You can also edit the order in which these tabs appear in Software Center.
 
-<!--For more information, see [Software Center client settings](/sccm/core/clients/deploy/about-client-settings#software-center) and [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center).-->
+For more information, see [Software Center client settings](/sccm/core/clients/deploy/about-client-settings#software-center).
 
 ### Software Center infrastructure improvements
+
 <!--3555950-->
 
 This release includes the following infrastructure improvements to Software Center:
 
 - Software Center now communicates with a management point for apps targeted to users as available. It doesn't use the application catalog anymore. This change makes it easier for you to remove the application catalog from the site.
+
 - Previously, Software Center picked the first management point from the list of available servers. Starting in this release, it uses the same management point that the client uses. This change allows Software Center to use the same management point from the assigned primary site as the client.
+
 - The management point now checks the health of its user service every five minutes. It reports any issues via status messages for the SMS_MP_CONTROL_MANAGER site component.
 
 > [!Important]  
-> These iterative improvements to Software Center and the management point are to retire the application catalog roles. The Silverlight user experience isn't supported as of current branch version 1806. In the first current branch release after June 30, 2019, updated clients will automatically use the management point for user-available application deployments. You also won't be able to install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+> These iterative improvements to Software Center and the management point are to retire the application catalog roles.
+>
+> - The Silverlight user experience isn't supported as of current branch version 1806.
+> - Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles.
+> - In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
 
-<!--For more information, see [Remove the application catalog](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat) and [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center).-->
+For more information, see [Remove the application catalog](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat) and [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center).
 
 
 ### Redesigned notification for newly available software
 <!--3555904-->
-The **New Software is Available** notification will only show once for a user for a given application and revision. The user will no longer see the notification each time they sign in. They'll only see another notification for an application if it has changed.
+The **New Software is Available** notification will only show once for a user for a given application and revision. The user will no longer see the notification each time they sign in. They'll only see another notification for an application if it has changed or was redeployed.
 
-<!--For more information, see [Remove the application catalog](/sccm/apps/get-started/create-and-deploy-an-application#end-user-experience). -->
+For more information, see [Create and deploy an application](/sccm/apps/get-started/create-and-deploy-an-application#end-user-experience).
 
 ### More frequent countdown notifications for restarts
 <!--3976435-->
@@ -486,31 +466,17 @@ You now have more granular control over the WSUS maintenance tasks that Configur
 
 You can now specify the maximum amount of time a software update installation has to complete. You can specify the following items in the **Maximum Run Time** tab on the Software Update Point:
 
-- **Maximum run time for feature updates (minutes)**
-   - **Feature updates** - An update that is in one of these three classifications:
-      - Upgrades
-      - Update rollups
-      - Service packs
+- **Maximum run time for Windows feature updates (minutes)**
+- **Maximum run time for Office 365 updates and non-feature updates for Windows (minutes)**
 
-- **Maximum run time for non-feature updates (minutes)**
-   - **Non-feature updates** - An update that isn't a feature upgrade and whose product is listed as one of the following:
-      - Windows 10 (all versions)
-      - Windows Server 2012
-      - Windows Server 2012 R2
-      - Windows Server 2016
-      - Windows Server 2019
-      - Office 365
-- These settings only change the maximum runtime for new updates that are synchronized from Microsoft Update. It doesn't change the run time on existing feature or non-feature updates.
-- All other products and classifications are not configurable with this setting. If you need to change the maximum run time of one of these updates, [configure the software update settings](/sccm/sum/get-started/manage-settings-for-software-updates#BKMK_SoftwareUpdatesSettings)
-
-<!--For more information, see [Plan for software updates](/sccm/sum/plan-design/plan-for-software-updates#BKMK_UpdateLanguages) and [Install and configure a software update point](/sccm/sum/get-started/install-a-software-update-point).--> 
+For more information, see [Plan for software updates](/sccm/sum/plan-design/plan-for-software-updates#bkmk_maxruntime).
 
 ### Configure dynamic update during feature updates
 <!--4062619-->
 
-Use a new client setting to configure [dynamic updates for Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847) feature updates. Dynamic update can install language packs, features on demand, drivers, and cumulative updates during Windows setup. This setting changes the [setupconfig](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-automation-overview) file used during feature update installation. 
+Use a new client setting to configure [Dynamic Update](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847) during Windows 10 feature update installs. Dynamic Update installs language packs, features on demand, drivers, and cumulative updates during Windows setup by directing the client to download these updates from the internet.
 
-<!--For more information, see [Software update client settings](/sccm/core/clients/deploy/about-client-settings#software-updates) and [Manage Windows as a service](/sccm/osd/deploy-use/manage-windows-as-a-service).--> 
+For more information, see [Software update client settings](/sccm/core/clients/deploy/about-client-settings#software-updates) and [Manage Windows as a service](/sccm/osd/deploy-use/manage-windows-as-a-service).
 
 
 ### New Windows 10, version 1903 and later product category
@@ -593,12 +559,12 @@ There's a new policy setting that enables users to trust files that normally ope
 In both the **Devices** and **Device Collections** nodes, you can now add a new column for **SMBIOS GUID**. This value is the same as the **BIOS GUID** property of the System Resource class. It's a unique identifier for the device hardware.
 
 
-### RBAC on folders
+### Role based access for folders
 <!--3600867-->
 
-You can now set security scopes on folders. If you have access to an object in the folder but don't have access to the folder, you'll be unable to see the object. Similarly, if you have access to a folder but not an object within it, you won't see that object. Right-click a folder, choose **Set Security Scopes**, then chose the security scopes you want to apply. 
+You can now set security scopes on folders. If you have access to an object in the folder but don't have access to the folder, you'll be unable to see the object. Similarly, if you have access to a folder but not an object within it, you won't see that object. Right-click a folder, choose **Set Security Scopes**, then chose the security scopes you want to apply.
 
-<!--For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#tips) and [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).-->
+For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#tips) and [Configure role-based administration](/sccm/core/servers/deploy/configure/configure-role-based-administration#bkmk_config-folder).
 
 
 ### Administration service support for security nodes
