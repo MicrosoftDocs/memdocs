@@ -109,7 +109,7 @@ You can now discover user groups and members of those groups from Azure Active d
  
 You can now enable the synchronization of collection memberships to an Azure Active Directory (Azure AD) group. This synchronization is a pre-release feature. To enable it, see [Pre-release features](/sccm/core/servers/manage/pre-release-features).
 
- The synchronization allows you to use your existing on premises grouping rules in the cloud. You can synchronize device collections. Only Azure AD-joined devices are synchronized to Azure AD.
+ The synchronization allows you to use your existing on premises grouping rules in the cloud by creating Azure AD group memberships based on collection membership results. Only devices with an Azure Active Directory record are reflected in the Azure AD Group. Both Hybrid Azure AD Joined and Azure Active Director joined devices are supported.
 
 For more information, see [Create collections](/sccm/core/clients/manage/collections/create-collections#bkmk_aadcollsync).
 
