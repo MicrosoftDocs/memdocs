@@ -647,6 +647,28 @@ Starting in Configuration Manager version 1806, you can specify the visibility o
 
 ### Software Center tab visibility
 
+#### Starting in version 1906
+<!--4063773-->
+
+Choose which tabs should be visible in Software Center. Use the **Add** button to move a tab to **Visible tabs**. Use the **Remove**  button to move it to the **Hidden tabs** list. Order the tabs using the **Move Up** or **Move Down** buttons. 
+
+Available tabs:
+- **Applications**
+- **Updates**
+- **Operating Systems**
+- **Installation Status**
+- **Device Compliance**
+- **Options**
+- Add up to 5 custom tabs by clicking the **Add tab** button.
+  - Specify the **Tab name** and **Content URL** for your custom tab.
+  - Click **Delete Tab** to remove a custom tab.  
+
+  >[!Important]  
+  > - Some website features may not work when using it as a custom tab in Software Center. Make sure to test the results before deploying this to clients. <!--519659-->
+  > - Specify only trusted or intranet website addresses when you add a custom tab.<!--SCCMDocs issue 1575-->
+
+#### Version 1902 and earlier
+
 Configure the additional settings in this group to **Yes** to make the following tabs visible in Software Center:
 
 - **Applications**

@@ -63,6 +63,8 @@ Review the following improvements to Software Center:
 
 - You can't add new application catalog roles to the site. Existing roles continue to work. Only existing clients use the application catalog for user-available deployments. Updated clients automatically use the management point for all deployments.
 
+- You can  add up to 5 custom tabs to Software Center. For more information, see [Software Center client settings](/sccm/core/clients/deploy/about-client-settings#software-center). <!--4063773-->
+
 ### Summary of infrastructure requirements per version
 
 Use the following table to help understand the requirements for Software Center depending upon the specific version of Configuration Manager:
