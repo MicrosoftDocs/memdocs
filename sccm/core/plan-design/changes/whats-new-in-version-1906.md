@@ -92,16 +92,14 @@ You can now add a new secondary replica node to an existing SQL AlwaysOn availab
 - [Prepare to use SQL Server Always On availability groups](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)
 - [Configure SQL Server Always On availability groups](/sccm/core/servers/deploy/configure/configure-aoag)-->
 
-
-
 ## <a name="bkmk_cloud"></a> Cloud-attached management
 
 ### Azure Active Directory user group discovery
 <!--3611956-->
 
-You can now discover user groups and members of those groups from Azure Active directory (Azure AD). Users found in Azure AD groups that haven't been previously discovered will be added as user resources in Configuration Manager. A user group resource record is created when the group is a security group.
+You can now discover user groups and members of those groups from Azure Active directory (Azure AD). Users found in Azure AD groups that haven't been previously discovered will be added as user resources in Configuration Manager. A user group resource record is created when the group is a security group. This is a [pre-release feature](/sccm/core/servers/manage/pre-release-features) and needs to be enabled.
 
-<!-- For more information, see [Configure discovery methods](/sccm/core/servers/deploy/configure/configure-discovery-methods). -->
+For more information, see [Configure discovery methods](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_azuregroupdisco).
 
 
 ### Synchronize collection membership results to Azure Active Directory groups

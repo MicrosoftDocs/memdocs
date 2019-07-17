@@ -70,6 +70,7 @@ When you enable a pre-release feature, the Configuration Manager hierarchy manag
 
 | Feature          | Added as pre-release | Added as a full feature |  
 |------------------|----------------------|-------------------------|
+| [Azure Active Directory user group discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_azuregroupdisco) <!--3611956-->| Version 1906 | ![Not yet](media/red_x.png) |
 |[Synchronize collection membership results to Azure Active Directory groups](/sccm/core/clients/manage/collections/create-collections#bkmk_aadcollsync) <!--3607475-->| Version 1906| ![Not yet](media/red_x.png)|
 | [CMPivot Standalone](/sccm/core/servers/manage/cmpivot#bkmk_standalone) <!--3555890--> | Version 1906 | ![Not yet](media/red_x.png) |
 | SMS Provider API <!--1359052--> | Version 1810 | ![Not yet](media/red_x.png) |
