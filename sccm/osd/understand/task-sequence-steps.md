@@ -1659,6 +1659,11 @@ This step runs another task sequence. It creates a parent-child relationship bet
 
 To add this step in the task sequence editor, select **Add**, select **General**, and select **Run Task Sequence**.
 
+Starting in version 1906, manage this step with the following PowerShell cmdlets:<!-- 2839943, SCCMDocs #1118 -->
+
+- **New-CMTSStepRunTaskSequence**
+- **Set-CMTSStepRunTaskSequence**
+
 ### Specifications and limitations
 
 Consider the following points when you add a child task sequence to a task sequence:  

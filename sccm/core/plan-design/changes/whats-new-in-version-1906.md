@@ -364,18 +364,11 @@ Task sequence pre-cache now includes additional content types. Pre-cache content
 
 For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/configure-precache-content).
 
-### Improvement to task sequence media creation
-<!--4090666-->
+### Improvements to OS deployment
 
- <!--? this is a DCR not on doc list for 1906- Looks like it was added in 1902 on multiple articles including /sccm/osd/deploy-use/create-stand-alone-media#process.-->
-
-### Improvements to OS deployment 
-<!--2839943,4447680-->
-<!--4512937,4224642 (combined with the 422462 above)-->
-<!--4668846, 2840337, 4512937-->
 This release includes the following improvements to OS deployment:
 
-- The following two PowerShell cmdlets were added to create and edit the [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence) step:  <!--2839943--> <!--For more information, see [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence).-->
+- Use the following two PowerShell cmdlets to create and edit the [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence) step:<!--2839943-->
 
     - **New-CMTSStepRunTaskSequence**
 
