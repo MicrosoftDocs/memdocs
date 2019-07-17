@@ -102,7 +102,7 @@
     - name: Deploy a task sequence
       href: deploy-use/deploy-a-task-sequence.md  
     - name: Debug a task sequence
-      href: deploy-use/debug-a-task-sequence.md
+      href: deploy-use/debug-task-sequence.md
     - name: Configure pre-cache content
       href: deploy-use/configure-precache-content.md
     - name: Use a task sequence to manage virtual hard disks

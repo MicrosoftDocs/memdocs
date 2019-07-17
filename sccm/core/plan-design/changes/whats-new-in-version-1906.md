@@ -348,7 +348,7 @@ The task sequence debugger is a new troubleshooting tool. You deploy a task sequ
 
 ![Screenshot of task sequence debugger](./media/3612274-tsdebug.png)
 
-For more information, see [Debug a task sequence](/sccm/osd/deploy-use/debug-a-task-sequence).
+For more information, see [Debug a task sequence](/sccm/osd/deploy-use/debug-task-sequence).
 
 ### Clear app content from client cache during task sequence
 

@@ -1542,7 +1542,7 @@ For example, if you set SMSTSWaitForSecondReboot to `600`, the task sequence pau
 <!--3612274-->
 Starting in version 1906, set this variable to `TRUE` on a collection to which a task sequence is deployed. This variable changes the behavior of any task sequence on any device in that collection to use the task sequence debugger.
 
-For more information, see [Debug a task sequence](/sccm/osd/deploy-use/debug-a-task-sequence).
+For more information, see [Debug a task sequence](/sccm/osd/deploy-use/debug-task-sequence).
 
 ### <a name="TSDisableProgressUI"></a> TSDisableProgressUI
 
