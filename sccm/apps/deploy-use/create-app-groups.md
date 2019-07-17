@@ -33,11 +33,14 @@ Starting in version 1906, create a group of applications that you can send to a 
 
 Deploy the app group using the same process as for an application. For more information, see [Deploy applications](/sccm/apps/deploy-use/deploy-applications).
 
+If you add a new app to the group after you deploy the group, you have to separately distribute the new app content to distribution points.
+
 To troubleshoot an app group deployment, use the **AppGroupHandler.log** and **AppEnforce.log** files on the client.
+
+> [!Important]  
+> Don't create or deploy an app group until you update the entire hierarchy and targeted clients to at least version 1906.
 
 ### Known issues
 
-- Set the deployment type installation behavior to **Install for system**.
+- Apps in the group need to be **Windows Installer** or **Script** deployment types. Set the deployment type installation behavior to **Install for system**.
 - You can only deploy the app group to a device collection.
-- Web apps currently don't work in groups.
-- You can't modify apps and dependencies after you deploy the app group.
