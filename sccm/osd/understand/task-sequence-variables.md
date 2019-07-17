@@ -1494,6 +1494,16 @@ Specifies how many seconds to wait before the computer restarts. If this variabl
 
 - `60`: display a notification for one minute  
 
+### <a name="SMSTSRebootDelayNext"></a> SMSTSRebootDelayNext
+
+<!--4447680-->
+Starting in version 1906, use this variable with the existing [SMSTSRebootDelay](/sccm/osd/understand/task-sequence-variables#SMSTSRebootDelay) variable. If you want any later reboots to happen with a different timeout than the first, set SMSTSRebootDelayNext to a different value in seconds.
+
+#### Example
+
+You want to give users a 60-minute reboot notification at the start of a Windows 10 in-place upgrade task sequence. After that first long timeout, you want additional timeouts to only be 60 seconds. Set SMSTSRebootDelay to `3600`, and SMSTSRebootDelayNext to `60`.  
+
+
 ### <a name="SMSTSRebootMessage"></a> SMSTSRebootMessage
 
 Specifies the message to display in the restart notification dialog. If this variable isn't set, a default message appears.
