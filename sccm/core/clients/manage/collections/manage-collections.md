@@ -2,7 +2,7 @@
 title: Manage collections
 titleSuffix: Configuration Manager
 description: Do common collections management tasks in Configuration Manager.
-ms.date: 04/23/2019
+ms.date: 07/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -175,6 +175,9 @@ Use the overview information in this article to help you perform management task
 
 #### Distribution Point Groups
  Associate one or more distribution point groups to members of the selected collection. For more information, see [Manage content and content infrastructure](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).
+
+#### AAD Group Sync
+Synchronize collection membership results to Azure Active Directory Groups. This synchronization is a [pre-release feature](/sccm/core/servers/manage/pre-release-features) starting in version 1906. For more information, see [Create collections](/sccm/core/clients/manage/collections/create-collections#bkmk_aadcollsync).
 
 #### Security
  Displays the administrative users who have permissions for the selected collection from associated roles and security scopes. For more information, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).  
