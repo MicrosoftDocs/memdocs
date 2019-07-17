@@ -15,21 +15,17 @@ manager: dougeby
 
 # Desktop Analytics log collector
 
-Starting in Configuration Manager version 1906, use the **DesktopAnalyticsLogsCollector.ps1** tool from the Configuration Manager install directory to help troubleshoot Desktop Analytics. It runs some basic troubleshooting steps and collects the relevant logs into a single working directory:
-
-- Restarts Diagtrack service
-- Runs Census
-- Runs Appraiser in verbose mode
-- Collects M365Handler logs
-- Collects Appraiser logs and associated registry keys
-- It can also collect the Windows UTC trace ETL file and network trace ETL file
+Starting in Configuration Manager version 1906, use the **DesktopAnalyticsLogsCollector.ps1** tool from the Configuration Manager install directory to help troubleshoot Desktop Analytics device enrollment issues. It runs some basic troubleshooting steps and collects the relevant logs into a single working directory. You can share this content with Microsoft support.
 
 
 ## Prerequisites
 
 - A Desktop Analytics client running Windows 10, Windows 8.1, or Windows 7 with Service Pack 1
 
-- Sign in to the device as a user in the local **Administrators** group.
+- Run the script on the device as an administrative user, and **Run as Administrator**.
+
+    > [!Tip]
+    > You can use the Configuration Manager **Scripts** feature with this tool. For more information, see [Example 5: Deploy script via Configuration Manager **Scripts**](#bkmk_ex5).
 
 - PowerShell version 4.0 or later
     - .NET framework version 4.6 or later
@@ -111,7 +107,7 @@ Specifies whether the script collects the Windows UTC trace and run connectivity
 
 **Type**: Int16
 
-**Position**: 3
+**Position**: 4
 
 **Default value**: `0` (Don't enable the UTC trace or run connectivity diagnosis)
 
@@ -131,31 +127,31 @@ The script also generates other *diagnostic files* in the working folder. For ex
 
 ## Examples
 
-### Example 1: Run script via PowerShell command window with default values
+### <a name="bkmk_ex1"></a> Example 1: Run script via PowerShell command window with default values
 
 ```PowerShell
 .\DesktopAnalyticsLogsCollector.ps1
 ```
 
-### Example 2: Run script via PowerShell command window with specified parameters
+### <a name="bkmk_ex2"></a> Example 2: Run script via PowerShell command window with specified parameters
 
 ```PowerShell
 .\DesktopAnalyticsLogsCollector.ps1 -LogPath "c:\testABC" -LogMode 0 -CollectNetTrace 0 -CollectUTCTrace 0
 ```
 
-### Example 3: Run script via PowerShell command window with specified parameters in position
+### <a name="bkmk_ex3"></a> Example 3: Run script via PowerShell command window with specified parameters in position
 
 ```PowerShell
 .\DesktopAnalyticsLogsCollector.ps1 "c:\testABC" 2 0 0
 ```
 
-### Example 4: Run script via PowerShell command window with specified parameter and verbose messages
+### <a name="bkmk_ex4"></a> Example 4: Run script via PowerShell command window with specified parameter and verbose messages
 
 ```PowerShell
 .\DesktopAnalyticsLogsCollector.ps1 -LogMode 1 -Verbose
 ```
 
-### Example 5: Deploy script via Configuration Manager "Run Script"
+### <a name="bkmk_ex5"></a> Example 5: Deploy script via Configuration Manager **Scripts**
 
 For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
 
