@@ -647,6 +647,28 @@ Starting in Configuration Manager version 1806, you can specify the visibility o
 
 ### Software Center tab visibility
 
+#### Starting in version 1906
+<!--4063773-->
+
+Choose which tabs should be visible in Software Center. Use the **Add** button to move a tab to **Visible tabs**. Use the **Remove**  button to move it to the **Hidden tabs** list. Order the tabs using the **Move Up** or **Move Down** buttons. 
+
+Available tabs:
+- **Applications**
+- **Updates**
+- **Operating Systems**
+- **Installation Status**
+- **Device Compliance**
+- **Options**
+- Add up to 5 custom tabs by clicking the **Add tab** button.
+  - Specify the **Tab name** and **Content URL** for your custom tab.
+  - Click **Delete Tab** to remove a custom tab.  
+
+  >[!Important]  
+  > - Some website features may not work when using it as a custom tab in Software Center. Make sure to test the results before deploying this to clients. <!--519659-->
+  > - Specify only trusted or intranet website addresses when you add a custom tab.<!--SCCMDocs issue 1575-->
+
+#### Version 1902 and earlier
+
 Configure the additional settings in this group to **Yes** to make the following tabs visible in Software Center:
 
 - **Applications**
@@ -864,6 +886,16 @@ This client setting provides the following options:
 ### Enable third party software updates
 
 When you set this option to **Yes**, it sets the policy for **Allow signed updates for an intranet Microsoft update service location** and installs the signing certificate to the Trusted Publisher store on the client.
+
+### <a name="bkmk_du"></a>Enable Dynamic Update for feature updates
+<!--4062619-->
+Starting in Configuration Manager version 1906, you can configure [Dynamic Update for Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847). Dynamic Update installs language packs, features on demand, drivers, and cumulative updates during Windows setup by directing the client to download these updates from the internet. When this setting is set to either **Yes** or **No**, Configuration Manager modifies the [setupconfig](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) file that is used during feature update installation.
+
+- **Not Configured** - The default value. No changes are made to the setupconfig file.
+  - Dynamic Update will be either enabled or disabled based on the default behavior of the OS.
+  - Starting with Windows 10 version 1809, Dynamic Updates are enabled by default in the OS.
+- **Yes** - Enables Dynamic Update.
+- **No** - Disables Dynamic Update.
 
 
 ## State Messaging

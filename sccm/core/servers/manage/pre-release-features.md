@@ -2,7 +2,7 @@
 title: Pre-release features
 titleSuffix: Configuration Manager
 description: Pre-release features are features that are in the Current Branch for early testing in a production environment.
-ms.date: 11/27/2018
+ms.date: 07/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -55,7 +55,7 @@ When you enable a pre-release feature, the Configuration Manager hierarchy manag
 
 
 
-## Pre-release features
+## <a name="bkmk_table"></a>Pre-release features
 
 <!--Note/tip for target article
 
@@ -68,9 +68,11 @@ When you enable a pre-release feature, the Configuration Manager hierarchy manag
 
 -->
 
-
 | Feature          | Added as pre-release | Added as a full feature |  
 |------------------|----------------------|-------------------------|
+| [Azure Active Directory user group discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_azuregroupdisco) <!--3611956-->| Version 1906 | ![Not yet](media/red_x.png) |
+|[Synchronize collection membership results to Azure Active Directory groups](/sccm/core/clients/manage/collections/create-collections#bkmk_aadcollsync) <!--3607475-->| Version 1906| ![Not yet](media/red_x.png)|
+| [CMPivot Standalone](/sccm/core/servers/manage/cmpivot#bkmk_standalone) <!--3555890--> | Version 1906 | ![Not yet](media/red_x.png) |
 | SMS Provider API <!--1359052--> | Version 1810 | ![Not yet](media/red_x.png) |
 | [Enhanced HTTP site system](/sccm/core/plan-design/hierarchy/enhanced-http) <!--1356889,1358228--> | Version 1806 | Version 1810 |
 | [Client apps for co-managed devices](/sccm/comanage/workloads#client-apps) <!--1357892--> | Version 1806 | ![Not yet](media/red_x.png) |

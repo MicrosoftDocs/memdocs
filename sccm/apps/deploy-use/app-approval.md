@@ -39,6 +39,8 @@ View **Application Requests** under **Application Management** in the **Software
 
 If a request isn't approved within 30 days, it's removed. Reinstalling the client might cancel any pending approval requests.  
 
+When you require approval on a deployment to a device collection, the app isn't displayed in Software Center. If you require approval on a deployment to a user collection, the app is displayed in Software Center. You can still hide it from users with the client setting, **Hide unapproved applications in Software Center**. For more information, see [Software Center client settings](/sccm/core/clients/deploy/about-client-settings#software-center).
+
 After you've approved an application for installation, you can **Deny** the request in the Configuration Manager console. This action doesn't cause the client to uninstall the application from any devices. It stops users from installing new copies of the application from Software Center.  
 
 > [!Important]  
@@ -47,6 +49,8 @@ After you've approved an application for installation, you can **Deny** the requ
 Starting in version 1906, if you approve an app request in the console, and then deny it, you can now approve it again. The app is reinstalled on the client after you approve it.  <!-- 4224910 -->
 
 Automate the approval process with the [Approve-CMApprovalRequest](https://docs.microsoft.com/powershell/module/configurationmanager/approve-cmapprovalrequest?view=sccm-ps) PowerShell cmdlet. Starting in version 1902, this cmdlet includes the **InstallActionBehavior** parameter. Use this parameter to specify whether to install the application right away or during non-business hours.<!-- SCCMDocs-pr issue #3418 -->
+
+Starting in 1906, you can see which deployments require approval. Select an app in the **Applications** node. In the details pane, switch to the **Deployments** tab. There's a new column displayed by default, **Requires Approval**.
 
 #### <a name="bkmk_retry"></a> Retry the install of pre-approved applications
 
@@ -60,7 +64,7 @@ Starting in version 1906, you can retry the installation of an app that you prev
     > [!Tip]  
     > Alternatively, [Install an application for a device](/sccm/apps/deploy-use/install-app-for-device). It creates an approved request for the app on the device.  
 
-1. Uninstall the app on the device.
+If the application doesn't install successfully, or the user uninstalls the app, use the following process to retry:
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select the **Application Requests** node. (In version 1902 and earlier, this node is called **Approval Requests**.)
 

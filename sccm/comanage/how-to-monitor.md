@@ -2,13 +2,13 @@
 title: Monitor co-management
 titleSuffix: Configuration Manager
 description: Use the co-management dashboard to review information about co-managed devices.
-ms.date: 04/30/2019
+ms.date: 07/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
 ms.assetid: e83a7b0d-b381-4b4a-8eca-850385abbebb
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -17,7 +17,6 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-
 After you enable co-management, monitor co-management devices using the following methods:
 
 - [Co-management dashboard](#co-management-dashboard)  
@@ -25,8 +24,6 @@ After you enable co-management, monitor co-management devices using the followin
 - [Deployment policies](#deployment-policies)
 
 - [WMI device data](#wmi-device-data)
-
-
 
 ## Co-management dashboard
 
@@ -38,7 +35,6 @@ Starting in version 1810, the co-management dashboard is enhanced with more deta
 
 ![Screenshot of the co-management dashboard](media/co-management-dashboard.png)
 
-
 ### Co-managed devices
 
 *Applies to versions 1802 and 1806*
@@ -47,13 +43,13 @@ Shows the percentage of co-managed devices throughout your environment.
 
 ![Co-managed devices tile](media/co-management-dashboard/Percent-Co-managed-graph.PNG)
 
-
 ### Client OS distribution
 
 *Applies to all versions* 
 
 Shows the number of client devices per OS by version. It uses the following groupings:  
-- Windows 7 & 8.x  
+
+- Windows 7 & 8.x
 - Windows 10 lower than 1709  
 - Windows 10 1709 and above  
 
@@ -64,17 +60,17 @@ Hover over a graph section to show the percentage of devices in that OS group.
 
 ![Client OS distribution tile](media/co-management-dashboard/Co-management-OS-distribution-graph.PNG)
 
-
 ### Co-management status (donut)
 
 *Applies to versions 1802 and 1806*
 
 Shows the breakdown of device success or failure in the following categories:
-- Success, hybrid Azure AD Joined  
+
+- Success, hybrid Azure AD Joined
 - Success, Azure AD Joined  
 - Failure: Auto-enrollment failed  
 
-Hover over a graph section to show the percentage of devices in that category. 
+Hover over a graph section to show the percentage of devices in that category.
 
 ![Co-management status (donut) tile](media/co-management-dashboard/Co-management-status-graph.PNG)
 
@@ -82,31 +78,37 @@ Select a graph section to view the device list for that category.
 
 ![Enrollment failure device list](media/co-management-dashboard/Enrollment-Failure_Device-List.PNG)
 
-
 ### Co-management status (funnel)
 
 *Applies to version 1810 and later*
 
-A funnel chart that shows the number of devices with the following states from the enrollment process:  
-- Eligible devices  
+A funnel chart that shows the number of devices with the following states from the enrollment process:
+  
+- Eligible devices
 - Scheduled  
 - Enrollment initiated  
 - Enrolled  
 
 ![Co-management status (funnel) tile](media/co-management-dashboard/1358980-status-funnel.png)
 
-
 ### Co-management enrollment status
 
 *Applies to version 1810 and later*
 
 Shows the breakdown of device status in the following categories:
+
 - Success, hybrid Azure AD-joined  
 - Success, Azure AD-joined  
 - Enrolling, hybrid Azure AD-joined  
 - Failure, hybrid Azure AD-joined  
 - Failure, Azure AD-joined  
 - Pending user sign in  
+
+    > [!Note]  
+    > Starting in version 1906, to reduce the number of devices in this pending state, a new co-managed device now automatically enrolls to the Microsoft Intune service based on its Azure AD *device* token. It doesn't need to wait for a user to sign in to the device for auto-enrollment to start. To support this behavior, the device needs to be running Windows 10, version 1803 or later.
+    >
+    > If the device token fails, it falls back to previous behavior with the user token. Look in the **ComanagementHandler.log** for the following entry:
+    > `Enrolling device with RegisterDeviceWithManagementUsingAADDeviceCredentials`
 
 Select a state in the tile to drill through to a list of devices in that state.  
 
@@ -117,7 +119,7 @@ Select a state in the tile to drill through to a list of devices in that state.
 
 *Applies to all versions*
 
-Displays a bar chart with the number of devices that you've transitioned to Microsoft Intune for the available workloads. 
+Displays a bar chart with the number of devices that you've transitioned to Microsoft Intune for the available workloads.
 
 The list of workloads varies by version of Configuration Manager. For more information, see [Workloads able to be transitioned to Intune](/sccm/comanage/workloads).
 
@@ -130,7 +132,7 @@ Hover over a chart section to show the number of devices transitioned for the wo
 
 *Applies to version 1810 and later*
 
-This table is a list of enrollment errors from devices. These errors can come from the MDM component in Windows, the core Windows OS, or the Configuration Manager client. 
+This table is a list of enrollment errors from devices. These errors can come from the MDM component in Windows, the core Windows OS, or the Configuration Manager client.
 
 There are hundreds of possible errors. The following table lists the most common errors.
 <!-- SCCMDocs issue 1064, BUG 3158555 -->
@@ -156,12 +158,9 @@ There are hundreds of possible errors. The following table lists the most common
 | 3399614467 | ADAL Authorization grant failed for this assertion<br><br>Check your Azure AD configuration, and make sure that users can successfully authenticate. |
 | 2149056517 | Generic Failure from management server, such as DB access error<br><br>This issue should be transient. If it persists, contact Microsoft Support. |
 | 2149134055 | Winhttp name not resolved<br><br>The client can't resolve the name of the service. Check the DNS configuration. | 
-| 2149134050 | internet timeout<br><br>This issue should be transient, when the client can't communicate with cloud. If it persists, make sure the client has consistent connectivity to Azure. | 
-
+| 2149134050 | internet timeout<br><br>This issue should be transient, when the client can't communicate with cloud. If it persists, make sure the client has consistent connectivity to Azure. |
 
 For more information, see [MDM Registration Error Values](https://docs.microsoft.com/windows/desktop/mdmreg/mdm-registration-constants).
-
-
 
 ## Deployment policies
 
@@ -169,10 +168,9 @@ Two policies are created in the **Deployments** node of the **Monitoring** works
 
 The production policy (CoMgmtSettingsProd) is targeted to the **All Systems** collection. It has an applicability condition that checks the OS type and version. If the client is a server OS or not Windows 10, the policy doesn't apply, and no action is taken.
 
-
 ## WMI device data
 
-Query the **SMS_Client_ComanagementState** WMI class. You can create custom collections in Configuration Manager, which help determine the status of your co-management deployment. For more information on creating custom collections, see [How to create collections](/sccm/core/clients/manage/collections/create-collections). 
+Query the **SMS_Client_ComanagementState** WMI class. You can create custom collections in Configuration Manager, which help determine the status of your co-management deployment. For more information on creating custom collections, see [How to create collections](/sccm/core/clients/manage/collections/create-collections).
 
 The following fields are available in the WMI class:  
 

@@ -23,6 +23,8 @@ For more information on the other features of Software Center, see the [Software
 
 ## <a name="bkmk_userex"></a> Configure Software Center  
 
+Update your Configuration Manager sites and clients to version 1906 or later to benefit from the latest improvements.
+
 Review the following improvements to Software Center:
 
 > [!Important]  
@@ -62,6 +64,8 @@ Review the following improvements to Software Center:
 - The management point now checks the health of its user service every five minutes. It reports any issues via status messages for the SMS_MP_CONTROL_MANAGER site component.
 
 - You can't add new application catalog roles to the site. Existing roles continue to work. Only existing clients use the application catalog for user-available deployments. Updated clients automatically use the management point for all deployments.
+
+- You can  add up to 5 custom tabs to Software Center. For more information, see [Software Center client settings](/sccm/core/clients/deploy/about-client-settings#software-center). <!--4063773-->
 
 ### Summary of infrastructure requirements per version
 

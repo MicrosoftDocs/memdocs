@@ -47,7 +47,6 @@ Version 1906 deprecates support for the following products:
 - Windows 10 Mobile
 - Windows 10 Mobile Enterprise
 
-
 ## <a name="bkmk_infra"></a> Site infrastructure
 
 ### Site server maintenance task improvements
@@ -62,7 +61,7 @@ Site server maintenance tasks can now be viewed and edited from their own tab on
 
 ![New tab for maintenance tasks in the detail view of a site server](./media/3555894-maintenance-tasks.png)
 
-<!-- For more information, see [Maintenance tasks](sccm/core/servers/manage/maintenance-tasks). -->
+For more information, see [Maintenance tasks](/sccm/core/servers/manage/maintenance-tasks#bkmk_MTs1906).
 
 ### Configuration Manager update database upgrade monitoring
 <!--4200581-->
@@ -93,73 +92,55 @@ You can now add a new secondary replica node to an existing SQL AlwaysOn availab
 - [Prepare to use SQL Server Always On availability groups](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)
 - [Configure SQL Server Always On availability groups](/sccm/core/servers/deploy/configure/configure-aoag)-->
 
-
-
 ## <a name="bkmk_cloud"></a> Cloud-attached management
-
-<!--3555774 - moved as of 6/28
-### Cloud services cost estimator
-
-
-Some customers are concerned about the potential cost for attaching cloud services in Configuration Manager. This release introduces a new cost estimator tool in the Configuration Manager console. The tool uses the following data from your site database to estimate the cost of deploying the cloud management gateway:  
-
-- Aggregate, average client usage of management points and distribution points  
-
-- Azure pricing  
-
-In the Configuration Manager console, go to the **Monitoring** workspace, and select the **Cloud Management** node.  
-
-![Screenshot of cloud services usage estimation tool](./media/3555774-cmg-cost-estimator.png)
-
-(New article) For more information, see [Planning for cloud usage](/sccm/core/clients/manage/cmg/plan-for-cloud-cost). -->
 
 ### Azure Active Directory user group discovery
 <!--3611956-->
 
-You can now discover user groups and members of those groups from Azure Active directory (Azure AD). Users found in Azure AD groups that haven't been previously discovered will be added as user resources in Configuration Manager. A user group resource record is created when the group is a security group.
+You can now discover user groups and members of those groups from Azure Active directory (Azure AD). Users found in Azure AD groups that haven't been previously discovered will be added as user resources in Configuration Manager. A user group resource record is created when the group is a security group. This is a [pre-release feature](/sccm/core/servers/manage/pre-release-features) and needs to be enabled.
 
-<!-- For more information, see [Configure discovery methods](/sccm/core/servers/deploy/configure/configure-discovery-methods). -->
+For more information, see [Configure discovery methods](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_azuregroupdisco).
 
 
 ### Synchronize collection membership results to Azure Active Directory groups
 <!--3607475-->
  
-You can now enable the synchronization of collection memberships to an Azure Active Directory (Azure AD) group. This synchronization allows you to use your existing on premises grouping rules in the cloud. You can synchronize device collections. Only Azure AD-joined devices are synchronized to Azure AD.
+You can now enable the synchronization of collection memberships to an Azure Active Directory (Azure AD) group. This synchronization is a pre-release feature. To enable it, see [Pre-release features](/sccm/core/servers/manage/pre-release-features).
 
-The Azure AD synchronization is a one-way process, from Configuration Manager to Azure AD. Changes made in Azure AD aren't reflected in Configuration Manager collections, but aren't overwritten by Configuration Manager. For example, if the Configuration Manager collection has two devices, and the Azure AD group has three different devices, after synchronization the Azure AD group has five devices.
+ The synchronization allows you to use your existing on premises grouping rules in the cloud by creating Azure AD group memberships based on collection membership results. Only devices with an Azure Active Directory record are reflected in the Azure AD Group. Both Hybrid Azure AD Joined and Azure Active Director joined devices are supported.
 
-<!-- ? For more information, see [Create collections](/core/clients/manage/collections/create-collections). -->
+For more information, see [Create collections](/sccm/core/clients/manage/collections/create-collections#bkmk_aadcollsync).
 
-<!--COMMENTING OUT DA FOR RIGHT NOW SINCE IT IS NOT ON TAP Feature list
 
 ## <a name="bkmk_da"></a> Desktop Analytics
 
 ### DALogsCollector tool
-<!--4622989--
 
-The DALogsCollector tool is now included in the Configuration Manager media.
+<!--4622989-->
+Use the DesktopAnalyticsLogsCollector.ps1 tool from the Configuration Manager install directory to help troubleshoot Desktop Analytics. It runs some basic troubleshooting steps and collects the relevant logs into a single working directory.
 
-<!-- ? For more information, see [Configuration Manager Tools](/sccm/core/support/tools). 
-
-### Changing the Desktop Analytics limiting collection on existing deployments
-<!--3218073--
-
-TBD
-
--->
+For more information, see [Logs collector](/sccm/desktop-analytics/log-collector).
 
 
 ## <a name="bkmk_real"></a> Real-time management
 
+### Add joins, additional operators and aggregators in CMPivot
+<!--4054074-->
+
+ For CMPivot, you now have additional arithmetic operators, aggregators, and the ability to add query joins such as using Registry and File together.
+
+For more information, see [CMPivot](/sccm/core/servers/manage/cmpivot#bkmk_cmpivot1906).
+
 ### CMPivot standalone
-<!--3555890, 4619340, 4683130 -->
-You can now use CMPivot as a standalone app. Run it outside of the Configuration Manager console to view the real-time state of devices in your environment. This change enables you to use CMPivot on a device without first installing the console.
+<!--3555890, 4619340, 4692885 -->
 
-You can now share the power of CMPivot with other personas, such as helpdesk or security admins, who don’t have the console installed on their computer. These other personas can use CMPivot to query Configuration Manager alongside the other tools that they traditionally use. By sharing this rich management data, you can work together to proactively solve business problems that cross roles.
+You can now use CMPivot as a standalone app. CMPivot standalone is a **pre-release feature** and is only available in English. Run CMPivot outside of the Configuration Manager console to view the real-time state of devices in your environment. This change enables you to use CMPivot on a device without first installing the console.
 
-<!-- For more information, see [CMPivot](/sccm/core/servers/manage/cmpivot#prerequisites). -->
+You can share the power of CMPivot with other personas, such as helpdesk or security admins, who don’t have the console installed on their computer. These other personas can use CMPivot to query Configuration Manager alongside the other tools that they traditionally use. By sharing this rich management data, you can work together to proactively solve business problems that cross roles.
 
-#### Added CMPivot permissions to the Security Administrator role
+For more information, see [CMPivot](/sccm/core/servers/manage/cmpivot#bkmk_standalone) and [Pre-release features](/sccm/core/servers/manage/pre-release-features#bkmk_table).
+
+### Added permissions to the Security Administrator role
 <!--4683130-->
 
 The following permissions have been added to Configuration Manager's built-in **Security Administrator** role:
@@ -167,18 +148,7 @@ The following permissions have been added to Configuration Manager's built-in **
  - Run CMPivot on Collection
  - Read on Inventory Report
 
-<!-- For more information, see [CMPivot](/sccm/core/servers/manage/cmpivot#prerequisites). -->
-
-### Improvements to CMPivot
-<!--4054074-->
-
-#### Add joins, additional operators and aggregators in CMPivot
-<!--4054074-->
-
- For CMPivot, you now have additional arithmetic operators, aggregators, and the ability to add query joins such as using Registry and File together. 
-
-<!-- For more information, see [CMPivot](/sccm/core/servers/manage/cmpivot). -->
-
+For more information, see [CMPivot](/sccm/core/servers/manage/cmpivot#bkmk_cmpivot_secadmin1906).
 
 ## <a name="bkmk_content"></a> Content management
 
@@ -245,59 +215,43 @@ For more information, see [Client cache settings](/sccm/core/clients/deploy/abou
 ## <a name="bkmk_comgmt"></a> Co-management
 
 ### Improvements to co-management auto-enrollment
-<!--3555961 -- info still needed-->
-<!--4454491-->
 
-A new co-managed device now automatically enrolls to the Microsoft Intune service based on its Azure Active Directory (Azure AD) device token. It doesn't need to wait for a user to sign in to the device for auto-enrollment to start. This change helps to reduce the number of devices with the [enrollment status](/sccm/comanage/how-to-monitor#co-management-enrollment-status) *Pending user sign in*.
+- A new co-managed device now automatically enrolls to the Microsoft Intune service based on its Azure Active Directory (Azure AD) *device* token. It doesn't need to wait for a user to sign in to the device for auto-enrollment to start. This change helps to reduce the number of devices with the [enrollment status](/sccm/comanage/how-to-monitor#co-management-enrollment-status) *Pending user sign in*.<!-- 4454491 -->
 
-To support this behavior, clients need to be running Windows 10 version 1803 or later.
+- For customers that already have devices enrolled to co-management, new devices now enroll immediately once they meet the prerequisites. For example, once the device is joined to Azure AD and the Configuration Manager client is installed.<!--4321130-->
 
-If the device token fails, it falls back to previous behavior with the user token. Look in the **ComanagementHandler.log** for the following entry:
-`Enrolling device with RegisterDeviceWithManagementUsingAADDeviceCredentials`
-
-
-<!-- For more information, see [Enable co-management](/sccm/comanage/how-to-enable.md). -->
-
+For more information, see [Enable co-management](/sccm/comanage/how-to-enable).
 
 ### Multiple pilot groups for co-management workloads
+
 <!--3555750-->
-You can now configure different pilot collections for each of the co-management workloads. Being able to use different pilot collections allows you to take a more  granular approach when shifting workloads. 
+You can now configure different pilot collections for each of the co-management workloads. Being able to use different pilot collections allows you to take a more  granular approach when shifting workloads.
 
-- In the **Enablement** tab, you can now specify an **Intune Auto Enrollment** collection. 
+- In the **Enablement** tab, you can now specify an **Intune Auto Enrollment** collection.
     - The **Intune Auto Enrollment** collection should contain all of the clients you want to onboard into co-management. It's essentially a superset of all the other staging collections.
-
-  ![Co-management Enablement tab with Intune Auto Enrollment collection](./media/3555750-co-management-enablement-tab.png)
-
-- The **Workloads** tab hasn't changed and you can still choose which workloads to transition.
-
-  ![Co-management Workloads tab hasn't changed](./media/3555750-co-management-workloads-tab.png)
 
 - In the **Staging** tab, instead of using one pilot collection for all workloads, you can now choose an individual collection for each workload.
 
     ![Co-management Staging tab allows you to choose a collection for each workload](./media/3555750-co-management-staging-tab.png)
-  
-These options are also available when you first [enable co-management](/sccm/comanage/how-to-enable.md).
 
-<!-- For more information, see [Enable co-management](/sccm/comanage/how-to-enable.md). -->
+These options are also available when you first enable co-management.
 
-<!--
+For more information, see [Enable co-management](/sccm/comanage/how-to-enable).
 
-### Co-management support for government cloud 
-<!--4075452 - not sure if we need docs for 1906-->
+### Co-management support for government cloud
 
-
-
-<!-- ## <a name="bkmk_compliance"></a> Compliance settings -->
+<!--4075452-->
+U.S. government customers can now use co-management with the Azure U.S. Government Cloud (portal.azure.us). For more information, see [Enable co-management](/sccm/comanage/how-to-enable).
 
 
 ## <a name="bkmk_app"></a> Application management
 
 ### Filter applications deployed to devices
+
 <!--4451056-->
- User categories for device-targeted application deployments now show as filters in Software Center. Specify a **user category** for an application on the **Software Center** page of its properties. Then open the app in Software Center and look at the available filters.
+User categories for device-targeted application deployments now show as filters in Software Center. Specify a **user category** for an application on the **Software Center** page of its properties. Then open the app in Software Center and look at the available filters.
 
-<!--For more information, see [Manually specify application information](/sccm/apps/deploy-use/create-applications#bkmk_manual-app) and [Applications in Software Center](/sccm/core/understand/software-center#applications).-->
-
+For more information, see [Manually specify application information](/sccm/apps/deploy-use/create-applications#bkmk_manual-app).
 
 ### Application groups
 <!--3555907-->
@@ -373,34 +327,23 @@ Task sequence pre-cache now includes additional content types. Pre-cache content
 
 For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/configure-precache-content).
 
-### Improvement to task sequence media creation
-<!--4090666-->
+### Improvements to OS deployment
 
- <!--? this is a DCR not on doc list for 1906- Looks like it was added in 1902 on multiple articles including /sccm/osd/deploy-use/create-stand-alone-media#process.-->
-
-### Improvements to OS deployment 
-<!--2839943,4447680-->
-<!--4512937,4224642 (combined with the 422462 above)-->
-<!--4668846, 2840337, 4512937-->
 This release includes the following improvements to OS deployment:
 
-- The following two PowerShell cmdlets were added to create and edit the [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence) step:  <!--2839943--> <!--For more information, see [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence).-->
+- Use the following two PowerShell cmdlets to create and edit the [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence) step:<!--2839943-->
 
     - **New-CMTSStepRunTaskSequence**
 
     - **Set-CMTSStepRunTaskSequence**
 
-- A new task sequence variable was added, **SMSTSRebootDelayNext**. Use this new variable with the existing [SMSTSRebootDelay](/sccm/osd/understand/task-sequence-variables#SMSTSRebootDelay) variable. If you want any later reboots to happen with a different timeout than the first, set SMSTSRebootDelayNext to a different value in seconds. <!--4447680--> <!--For more information, see [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence).-->
+- It's now easier to edit variables when you run a task sequence. After you select a task sequence in the Task Sequence Wizard window, the page to edit task sequence variables includes an **Edit** button.<!-- 4668846 --> For more information, see [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables#bkmk_set-tswiz).
 
-    For example, you want to give users a 60-minute reboot notification at the start of a Windows 10 in-place upgrade task sequence. After that first long timeout, you want additional timeouts to only be 60 seconds. Set SMSTSRebootDelay to `3600`, and SMSTSRebootDelayNext to `60`.  
+- The **Disable BitLocker** task sequence step has a new restart counter. Use this option to specify the number of restarts to keep BitLocker disabled. This change you simplify your task sequence. You can use a single step, instead of adding multiple instances of this step. <!--4512937--> For more information, see [Disable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_DisableBitLocker).
 
-- The [Disable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_DisableBitLocker) task sequence step has a new restart counter. Use this option to specify the number of restarts to keep BitLocker disabled. Instead of adding multiple instances of this step, set a value between 1 (default) and 15. You can also set this behavior with the task sequence variable **OSDBitlockerRebootCount**. <!--4512937--> <!--For more information, see [Disable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_DisableBitLocker).-->
+- Use the new task sequence variable **SMSTSRebootDelayNext** with the existing [SMSTSRebootDelay](/sccm/osd/understand/task-sequence-variables#SMSTSRebootDelay) variable. If you want any later reboots to happen with a different timeout than the first, set this new variable to a different value in seconds. <!--4447680--> For more information, see [SMSTSRebootDelayNext](/sccm/osd/understand/task-sequence-variables#SMSTSRebootDelayNext).
 
-- This release further iterates on the improvement to the [Disable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_DisableBitLocker) step. This release adds a new variable, **OSDBitLockerRebootCountOverride**. Set this value from 0 to 15, and it overrides the count set by the step or the OSDBitlockerRebootCount variable. While the other methods only accept values 1 to 15, if you set this variable to 0, BitLocker remains disabled indefinitely. This new variable is useful when the task sequence sets one value, but you want to set a separate value on a per-device or per-collection basis. <!-- 4512937 --> <!--For more information, see [Disable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_DisableBitLocker).-->
-
-- It's now easier to edit variables when you run a task sequence. After you select a task sequence in the Task Sequence Wizard window, the page to edit task sequence variables includes an **Edit** button. You can use accessible keyboard shortcuts to edit the variables. This change helps in cases where a mouse isn't available.<!-- 4668846 --><!--For more information, see [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence).-->
-
-- The task sequence sets a new read-only variable **_SMSTSLastContentDownloadLocation**. This variable contains the last location where the task sequence downloaded or attempted to download content. Inspect this variable instead of parsing the client logs.<!-- 2840337 --> <!--For more information, see [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence).-->
+- The task sequence sets a new read-only variable **_SMSTSLastContentDownloadLocation**. This variable contains the last location where the task sequence downloaded or attempted to download content. Inspect this variable instead of parsing the client logs.<!-- 2840337 -->
 
 
 ## <a name="bkmk_userxp"></a> Software Center
@@ -409,7 +352,7 @@ This release includes the following improvements to OS deployment:
 <!--4063773-->
 You can now add up to five custom tabs in Software Center. You can also edit the order in which these tabs appear in Software Center.
 
-<!--For more information, see [Software Center client settings](/sccm/core/clients/deploy/about-client-settings#software-center) and [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center).-->
+For more information, see [Software Center client settings](/sccm/core/clients/deploy/about-client-settings#software-center).
 
 ### Software Center infrastructure improvements
 
@@ -435,9 +378,9 @@ For more information, see [Remove the application catalog](/sccm/apps/plan-desig
 
 ### Redesigned notification for newly available software
 <!--3555904-->
-The **New Software is Available** notification will only show once for a user for a given application and revision. The user will no longer see the notification each time they sign in. They'll only see another notification for an application if it has changed.
+The **New Software is Available** notification will only show once for a user for a given application and revision. The user will no longer see the notification each time they sign in. They'll only see another notification for an application if it has changed or was redeployed.
 
-<!--For more information, see [Remove the application catalog](/sccm/apps/get-started/create-and-deploy-an-application#end-user-experience). -->
+For more information, see [Create and deploy an application](/sccm/apps/get-started/create-and-deploy-an-application#end-user-experience).
 
 ### More frequent countdown notifications for restarts
 <!--3976435-->
@@ -490,31 +433,17 @@ You now have more granular control over the WSUS maintenance tasks that Configur
 
 You can now specify the maximum amount of time a software update installation has to complete. You can specify the following items in the **Maximum Run Time** tab on the Software Update Point:
 
-- **Maximum run time for feature updates (minutes)**
-   - **Feature updates** - An update that is in one of these three classifications:
-      - Upgrades
-      - Update rollups
-      - Service packs
+- **Maximum run time for Windows feature updates (minutes)**
+- **Maximum run time for Office 365 updates and non-feature updates for Windows (minutes)**
 
-- **Maximum run time for non-feature updates (minutes)**
-   - **Non-feature updates** - An update that isn't a feature upgrade and whose product is listed as one of the following:
-      - Windows 10 (all versions)
-      - Windows Server 2012
-      - Windows Server 2012 R2
-      - Windows Server 2016
-      - Windows Server 2019
-      - Office 365
-- These settings only change the maximum runtime for new updates that are synchronized from Microsoft Update. It doesn't change the run time on existing feature or non-feature updates.
-- All other products and classifications are not configurable with this setting. If you need to change the maximum run time of one of these updates, [configure the software update settings](/sccm/sum/get-started/manage-settings-for-software-updates#BKMK_SoftwareUpdatesSettings)
-
-<!--For more information, see [Plan for software updates](/sccm/sum/plan-design/plan-for-software-updates#BKMK_UpdateLanguages) and [Install and configure a software update point](/sccm/sum/get-started/install-a-software-update-point).--> 
+For more information, see [Plan for software updates](/sccm/sum/plan-design/plan-for-software-updates#bkmk_maxruntime).
 
 ### Configure dynamic update during feature updates
 <!--4062619-->
 
-Use a new client setting to configure [dynamic updates for Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847) feature updates. Dynamic update can install language packs, features on demand, drivers, and cumulative updates during Windows setup. This setting changes the [setupconfig](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-automation-overview) file used during feature update installation. 
+Use a new client setting to configure [Dynamic Update](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847) during Windows 10 feature update installs. Dynamic Update installs language packs, features on demand, drivers, and cumulative updates during Windows setup by directing the client to download these updates from the internet.
 
-<!--For more information, see [Software update client settings](/sccm/core/clients/deploy/about-client-settings#software-updates) and [Manage Windows as a service](/sccm/osd/deploy-use/manage-windows-as-a-service).--> 
+For more information, see [Software update client settings](/sccm/core/clients/deploy/about-client-settings#software-updates) and [Manage Windows as a service](/sccm/osd/deploy-use/manage-windows-as-a-service).
 
 
 ### New Windows 10, version 1903 and later product category
@@ -597,12 +526,12 @@ There's a new policy setting that enables users to trust files that normally ope
 In both the **Devices** and **Device Collections** nodes, you can now add a new column for **SMBIOS GUID**. This value is the same as the **BIOS GUID** property of the System Resource class. It's a unique identifier for the device hardware.
 
 
-### RBAC on folders
+### Role based access for folders
 <!--3600867-->
 
-You can now set security scopes on folders. If you have access to an object in the folder but don't have access to the folder, you'll be unable to see the object. Similarly, if you have access to a folder but not an object within it, you won't see that object. Right-click a folder, choose **Set Security Scopes**, then chose the security scopes you want to apply. 
+You can now set security scopes on folders. If you have access to an object in the folder but don't have access to the folder, you'll be unable to see the object. Similarly, if you have access to a folder but not an object within it, you won't see that object. Right-click a folder, choose **Set Security Scopes**, then choose the security scopes you want to apply.
 
-<!--For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#tips) and [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).-->
+For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#tips) and [Configure role-based administration](/sccm/core/servers/deploy/configure/configure-role-based-administration#bkmk_config-folder).
 
 
 ### Administration service support for security nodes
