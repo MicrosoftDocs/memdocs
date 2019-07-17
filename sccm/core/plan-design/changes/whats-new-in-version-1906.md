@@ -258,7 +258,7 @@ For more information, see [Enable co-management](/sccm/comanage/how-to-enable).
 ### Co-management support for government cloud
 
 <!--4075452-->
-U.S. government customers can now use co-management with the Azure U.S. Government Cloud (portal.azure.us).
+U.S. government customers can now use co-management with the Azure U.S. Government Cloud (portal.azure.us). For more information, see [Enable co-management](/sccm/comanage/how-to-enable).
 
 
 ## <a name="bkmk_app"></a> Application management

@@ -9,7 +9,11 @@ ms.collection: M365-identity-device-management
 <!--3555750 FKA 1357954 --Don't apply H2/H3 in this include file since they are context driven by article-->
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Co-management** node. Click **Configure co-management** in the ribbon to open the **Co-management Configuration Wizard**.
 
-2. On the **Subscription** page of the wizard, select **Sign In**. Sign in to your Intune tenant, and then select **Next**.  
+2. On the **Subscription** page of the wizard, configure the following settings:
+
+    - The **Azure environment** to use. For example, the Azure Public Cloud or the Azure US Government Cloud.<!--4075452-->  
+
+    - Select **Sign In**. Sign in to your Intune tenant, and then select **Next**.  
 
 3. On the **Enablement** page, choose the following settings:
 
