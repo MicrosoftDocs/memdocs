@@ -104,6 +104,12 @@ Shows the breakdown of device status in the following categories:
 - Failure, Azure AD-joined  
 - Pending user sign in  
 
+    > [!Note]  
+    > Starting in version 1906, to reduce the number of devices in this pending state, a new co-managed device now automatically enrolls to the Microsoft Intune service based on its Azure AD *device* token. It doesn't need to wait for a user to sign in to the device for auto-enrollment to start. To support this behavior, the device needs to be running Windows 10, version 1803 or later.
+    >
+    > If the device token fails, it falls back to previous behavior with the user token. Look in the **ComanagementHandler.log** for the following entry:
+    > `Enrolling device with RegisterDeviceWithManagementUsingAADDeviceCredentials`
+
 Select a state in the tile to drill through to a list of devices in that state.  
 
 ![Co-management enrollment status tile](media/co-management-dashboard/1358980-enrollment-status.png)

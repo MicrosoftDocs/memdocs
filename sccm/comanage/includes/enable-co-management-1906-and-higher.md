@@ -9,7 +9,11 @@ ms.collection: M365-identity-device-management
 <!--3555750 FKA 1357954 --Don't apply H2/H3 in this include file since they are context driven by article-->
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Co-management** node. Click **Configure co-management** in the ribbon to open the **Co-management Configuration Wizard**.
 
-2. On the **Subscription** page of the wizard, select **Sign In**. Sign in to your Intune tenant, and then select **Next**.  
+2. On the **Subscription** page of the wizard, configure the following settings:
+
+    - The **Azure environment** to use. For example, the Azure Public Cloud or the Azure US Government Cloud.<!--4075452-->  
+
+    - Select **Sign In**. Sign in to your Intune tenant, and then select **Next**.  
 
 3. On the **Enablement** page, choose the following settings:
 
@@ -24,6 +28,12 @@ ms.collection: M365-identity-device-management
 
       > [!Note]  
       > Starting in version 1806, automatic enrollment isn't immediate for all clients. This behavior helps enrollment scale better for large environments. Configuration Manager randomizes enrollment based on the number of clients. For example, if your environment has 100,000 clients, when you enable this setting, enrollment occurs over several days.<!--1358003-->  
+      >
+      > Starting in version 1906:
+      >
+      > - A new co-managed device now automatically enrolls to the Microsoft Intune service based on its Azure Active Directory (Azure AD) *device* token. It doesn't need to wait for a user to sign in to the device for auto-enrollment to start. This change helps to reduce the number of devices with the enrollment status *Pending user sign in*.<!-- 4454491 --> To support this behavior, the device needs to be running Windows 10, version 1803 or later. For more information, see [Co-management enrollment status](/sccm/comanage/how-to-monitor#co-management-enrollment-status).
+      >
+      > - If you already have devices enrolled to co-management, new devices now enroll immediately once they meet the [prerequisites](/sccm/comanage/overview#prerequisites).<!--4321130-->
 
 4. For internet-based devices that are already enrolled in Intune, copy and save the command line on the **Enablement** page. You'll use this command line to install the Configuration Manager client as an app in Intune for internet-based devices. If you don't save this command line now, you can review the co-management configuration at any time to get this command line.
 
