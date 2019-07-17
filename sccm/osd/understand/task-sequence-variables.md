@@ -476,6 +476,28 @@ If there are multiple device drivers in the driver catalog that are compatible w
 
 A comma-delimited list of the driver catalog category unique IDs. The **Auto Apply Driver** step only considers the drivers in at least one of the specified categories. This value is optional, and it's not set by default. Obtain the available category IDs by enumerating the list of **SMS_CategoryInstance** objects on the site.
 
+### <a name="OSDBitLockerRebootCount"></a> OSDBitLockerRebootCount
+
+*Applies to the [Disable BitLocker](task-sequence-steps.md#BKMK_DisableBitLocker) step.*
+
+<!-- 4512937 -->
+Starting in version 1906, use this variable to set the number of restarts after which to resume protection.
+
+#### Valid values
+
+An integer from `1` to `15`.
+
+### <a name="OSDBitLockerRebootCountOverride"></a> OSDBitLockerRebootCountOverride
+
+*Applies to the [Disable BitLocker](task-sequence-steps.md#BKMK_DisableBitLocker) step.*
+
+<!-- 4512937 -->
+Starting in version 1906, set this value to override the count set by the step or the [OSDBitlockerRebootCount](#OSDBitlockerRebootCount) variable. While the other methods only accept values 1 to 15, if you set this variable to 0, BitLocker remains disabled indefinitely. This variable is useful when the task sequence sets one value, but you want to set a separate value on a per-device or per-collection basis.
+
+#### Valid values
+
+An integer from `0` to `15`.
+
 ### <a name="OSDBitLockerRecoveryPassword"></a> OSDBitLockerRecoveryPassword
 
 *Applies to the [Enable BitLocker](task-sequence-steps.md#BKMK_EnableBitLocker) step.*

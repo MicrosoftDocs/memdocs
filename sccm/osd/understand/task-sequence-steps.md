@@ -690,6 +690,11 @@ If you have multiple encrypted drives, disable BitLocker on any data drives befo
 
 This step runs only in the full OS. It doesn't run in Windows PE.  
 
+Starting in version 1906, use the following task sequence variables with this step:  
+
+- [OSDBitlockerRebootCount](/sccm/osd/understand/task-sequence-variables#OSDBitlockerRebootCount)  
+- [OSDBitLockerRebootCountOverride](/sccm/osd/understand/task-sequence-variables#OSDBitLockerRebootCountOverride)  
+
 To add this step in the task sequence editor, select **Add**, select **Disks**, and select **Disable BitLocker**.
 
 ### Properties  
@@ -704,6 +709,12 @@ Disables BitLocker on the current OS drive.
 
 Disables BitLocker on a specific drive. Use the drop-down list to specify the drive where BitLocker is disabled.  
 
+#### Resume protection after Windows has been restarted the specified number of times
+
+<!-- 4512937 -->
+Starting in version 1906, use this option to specify the number of restarts to keep BitLocker disabled. Instead of adding multiple instances of this step, set a value between 1 (default) and 15.
+
+You can set and modify this behavior with the task sequence variables [OSDBitlockerRebootCount](/sccm/osd/understand/task-sequence-variables#OSDBitlockerRebootCount) and [OSDBitLockerRebootCountOverride](/sccm/osd/understand/task-sequence-variables#OSDBitLockerRebootCountOverride).
 
 
 ## <a name="BKMK_DownloadPackageContent"></a> Download Package Content  
