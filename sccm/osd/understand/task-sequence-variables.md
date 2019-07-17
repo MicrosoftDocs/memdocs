@@ -497,7 +497,7 @@ An integer from `1` to `15`.
 *Applies to the [Disable BitLocker](task-sequence-steps.md#BKMK_DisableBitLocker) step.*
 
 <!-- 4512937 -->
-Starting in version 1906, set this value to override the count set by the step or the [OSDBitlockerRebootCount](#OSDBitlockerRebootCount) variable. While the other methods only accept values 1 to 15, if you set this variable to 0, BitLocker remains disabled indefinitely. This variable is useful when the task sequence sets one value, but you want to set a separate value on a per-device or per-collection basis.
+Starting in version 1906, set this value to override the count set by the step or the [OSDBitLockerRebootCount](#OSDBitLockerRebootCount) variable. While the other methods only accept values 1 to 15, if you set this variable to 0, BitLocker remains disabled indefinitely. This variable is useful when the task sequence sets one value, but you want to set a separate value on a per-device or per-collection basis.
 
 #### Valid values
 
