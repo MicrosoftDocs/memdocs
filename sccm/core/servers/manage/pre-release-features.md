@@ -68,7 +68,6 @@ When you enable a pre-release feature, the Configuration Manager hierarchy manag
 
 -->
 
-
 | Feature          | Added as pre-release | Added as a full feature |  
 |------------------|----------------------|-------------------------|
 |Synchronize collection membership results to Azure Active Directory groups| Version 1906| ![Not yet](media/red_x.png)|
