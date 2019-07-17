@@ -584,12 +584,12 @@ There's a new policy setting that enables users to trust files that normally ope
 In both the **Devices** and **Device Collections** nodes, you can now add a new column for **SMBIOS GUID**. This value is the same as the **BIOS GUID** property of the System Resource class. It's a unique identifier for the device hardware.
 
 
-### RBAC on folders
+### Role based access for folders
 <!--3600867-->
 
-You can now set security scopes on folders. If you have access to an object in the folder but don't have access to the folder, you'll be unable to see the object. Similarly, if you have access to a folder but not an object within it, you won't see that object. Right-click a folder, choose **Set Security Scopes**, then chose the security scopes you want to apply. 
+You can now set security scopes on folders. If you have access to an object in the folder but don't have access to the folder, you'll be unable to see the object. Similarly, if you have access to a folder but not an object within it, you won't see that object. Right-click a folder, choose **Set Security Scopes**, then chose the security scopes you want to apply.
 
-<!--For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#tips) and [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).-->
+For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#tips) and [Configure role-based administration](/sccm/core/servers/deploy/configure/configure-role-based-administration#bkmk_config-folder).
 
 
 ### Administration service support for security nodes
