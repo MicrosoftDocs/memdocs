@@ -107,11 +107,11 @@ You can now discover user groups and members of those groups from Azure Active d
 ### Synchronize collection membership results to Azure Active Directory groups
 <!--3607475-->
  
-You can now enable the synchronization of collection memberships to an Azure Active Directory (Azure AD) group. This synchronization allows you to use your existing on premises grouping rules in the cloud. You can synchronize device collections. Only Azure AD-joined devices are synchronized to Azure AD.
+You can now enable the synchronization of collection memberships to an Azure Active Directory (Azure AD) group. This synchronization is a pre-release feature. To enable it, see [Pre-release features](/sccm/core/servers/manage/pre-release-features).
 
-The Azure AD synchronization is a one-way process, from Configuration Manager to Azure AD. Changes made in Azure AD aren't reflected in Configuration Manager collections, but aren't overwritten by Configuration Manager. For example, if the Configuration Manager collection has two devices, and the Azure AD group has three different devices, after synchronization the Azure AD group has five devices.
+ The synchronization allows you to use your existing on premises grouping rules in the cloud by creating Azure AD group memberships based on collection membership results. Only devices with an Azure Active Directory record are reflected in the Azure AD Group. Both Hybrid Azure AD Joined and Azure Active Director joined devices are supported.
 
-<!-- ? For more information, see [Create collections](/core/clients/manage/collections/create-collections). -->
+For more information, see [Create collections](/sccm/core/clients/manage/collections/create-collections#bkmk_aadcollsync).
 
 <!--COMMENTING OUT DA FOR RIGHT NOW SINCE IT IS NOT ON TAP Feature list
 
@@ -562,7 +562,7 @@ In both the **Devices** and **Device Collections** nodes, you can now add a new 
 ### Role based access for folders
 <!--3600867-->
 
-You can now set security scopes on folders. If you have access to an object in the folder but don't have access to the folder, you'll be unable to see the object. Similarly, if you have access to a folder but not an object within it, you won't see that object. Right-click a folder, choose **Set Security Scopes**, then chose the security scopes you want to apply.
+You can now set security scopes on folders. If you have access to an object in the folder but don't have access to the folder, you'll be unable to see the object. Similarly, if you have access to a folder but not an object within it, you won't see that object. Right-click a folder, choose **Set Security Scopes**, then choose the security scopes you want to apply.
 
 For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#tips) and [Configure role-based administration](/sccm/core/servers/deploy/configure/configure-role-based-administration#bkmk_config-folder).
 
