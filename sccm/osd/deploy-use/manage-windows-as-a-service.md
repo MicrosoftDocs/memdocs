@@ -2,7 +2,7 @@
 title: Manage Windows as a Service
 titleSuffix: Configuration Manager
 description: View the state of Windows as a Service (WaaS) using Configuration Manager, create servicing plans to form deployment rings, and view alerts when Windows 10 clients are near end of support.
-ms.date: 04/12/2019
+ms.date: 07/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -50,6 +50,7 @@ ms.collection: M365-identity-device-management
 
 -   Software updates must be configured and synchronized. Select the **Upgrades** classification and synchronize software updates before any Windows 10 feature upgrades are available in the Configuration Manager console. For more information, see [Prepare for software updates management](../../sum/get-started/prepare-for-software-updates-management.md).  
 - Starting in Configuration Manager version 1902, verify the **Specify thread priority for feature updates** [client setting](/sccm/core/clients/deploy/about-client-settings#bkmk_thread-priority) to ensure it's appropriate for your environment.
+- Starting in Configuration Manager version 1906, verify the **Enable Dynamic Update for feature updates** [client setting](/sccm/core/clients/deploy/about-client-settings#bkmk_du) to ensure it's appropriate for your environment. <!--4062619-->
 
 ##  <a name="BKMK_ServicingDashboard"></a> Windows 10 servicing dashboard  
  The Windows 10 servicing dashboard provides you with information about Windows 10 computers in your environment, active servicing plans, compliance information, and so on. The data in the Windows 10 servicing dashboard is dependent on having the Service Connection Point installed. The dashboard has the following tiles:  

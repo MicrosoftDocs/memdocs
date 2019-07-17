@@ -887,6 +887,16 @@ This client setting provides the following options:
 
 When you set this option to **Yes**, it sets the policy for **Allow signed updates for an intranet Microsoft update service location** and installs the signing certificate to the Trusted Publisher store on the client.
 
+### <a name="bkmk_du"></a>Enable Dynamic Update for feature updates
+<!--4062619-->
+Starting in Configuration Manager version 1906, you can configure [Dynamic Update for Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847). Dynamic Update installs language packs, features on demand, drivers, and cumulative updates during Windows setup by directing the client to download these updates from the internet. When this setting is set to either **Yes** or **No**, Configuration Manager modifies the [setupconfig](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) file that is used during feature update installation.
+
+- **Not Configured** - The default value. No changes are made to the setupconfig file.
+  - Dynamic Update will be either enabled or disabled based on the default behavior of the OS.
+  - Starting with Windows 10 version 1809, Dynamic Updates are enabled by default in the OS.
+- **Yes** - Enables Dynamic Update.
+- **No** - Disables Dynamic Update.
+
 
 ## State Messaging
 
