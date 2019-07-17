@@ -411,7 +411,7 @@ For more information, see [Remove the application catalog](/sccm/apps/plan-desig
 
 ### Redesigned notification for newly available software
 <!--3555904-->
-The **New Software is Available** notification will only show once for a user for a given application and revision. The user will no longer see the notification each time they sign in. They'll only see another notification for an application if it has changed.
+The **New Software is Available** notification will only show once for a user for a given application and revision. The user will no longer see the notification each time they sign in. They'll only see another notification for an application if it has changed or was redeployed.
 
 For more information, see [Create and deploy an application](/sccm/apps/get-started/create-and-deploy-an-application#end-user-experience).
 
