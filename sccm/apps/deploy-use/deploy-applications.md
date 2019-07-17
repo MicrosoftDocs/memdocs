@@ -21,6 +21,8 @@ Create or simulate a deployment of an application to a device or user collection
 
 Before you can deploy an application, create at least one deployment type for the application. For more information, see [Create applications](/sccm/apps/deploy-use/create-applications).
 
+Starting in version 1906, you can create a group of applications that you can send to a user or device collection as a single deployment. For more information, see [Create application groups](/sccm/apps/deploy-use/create-app-groups).
+
 You can also simulate an application deployment. This simulation tests the applicability of a deployment without installing or uninstalling the application. A simulated deployment evaluates the detection method, requirements, and dependencies for a deployment type and reports the results in the **Deployments** node of the **Monitoring** workspace. For more information, see [Simulate application deployments](/sccm/apps/deploy-use/simulate-application-deployments).
 
 > [!Note]
@@ -32,9 +34,9 @@ You can also simulate an application deployment. This simulation tests the appli
 
 ## <a name="bkmk_deploy"></a> Deploy an application
 
-1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select the **Applications** node.  
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select either the **Applications** or **Application Groups** node.
 
-2. In the **Applications** list, select an application to deploy. In the ribbon, click **Deploy**.  
+2. Select an application or application group from the list to deploy. In the ribbon, click **Deploy**.  
 
 > [!Note]  
 > When you view the properties of an existing deployment, the following sections correspond to tabs of the deployment properties window:  
@@ -189,7 +191,7 @@ When deploying an iOS deployment type, you'll also see the **App Configuration P
 ## <a name="bkmk_phased"></a> Create a phased deployment
 
 <!--1358147-->
-Starting in version 1806, create a phased deployment for an application. Phased deployments allow you to orchestrate a coordinated, sequenced rollout of software based on customizable criteria and groups. For example, deploy the application to a pilot collection, and then automatically continue the rollout based on success criteria. 
+Starting in version 1806, create a phased deployment for an application. Phased deployments allow you to orchestrate a coordinated, sequenced rollout of software based on customizable criteria and groups. For example, deploy the application to a pilot collection, and then automatically continue the rollout based on success criteria.
 
 For more information, see the following articles:  
 
@@ -201,11 +203,11 @@ For more information, see the following articles:
 
 ## <a name="bkmk_delete"></a> Delete a deployment
 
-1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select the **Applications** node.  
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select either the **Applications** or **Application Groups** node.  
 
-2. In the **Applications** list, select the application that includes the deployment you want to delete.  
+2. Select the application or application group that includes the deployment you want to delete.  
 
-3. Switch to the **Deployments** tab of the details pane, and select the application deployment.  
+3. Switch to the **Deployments** tab of the details pane, and select the deployment.  
 
 4. In the ribbon, on the **Deployment** tab and the **Deployment** group, click **Delete**.  
 

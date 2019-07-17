@@ -118,6 +118,12 @@ Configuration Manager applications support *user-centric management*, which lets
 
 For more information, see [Link users and devices with user device affinity](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).  
 
+### Application group
+
+Starting in version 1906, create a group of applications that you can send to a user or device collection as a single deployment. The metadata you specify about the app group is seen in Software Center as a single entity. You can order the apps in the group so that the client installs them in a specific order.
+
+For more information, see [Create application groups](/sccm/apps/deploy-use/create-app-groups).
+
 
 ## What application types can you deploy?
 

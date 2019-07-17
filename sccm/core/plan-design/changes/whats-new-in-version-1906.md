@@ -261,10 +261,11 @@ User categories for device-targeted application deployments now show as filters 
 For more information, see [Manually specify application information](/sccm/apps/deploy-use/create-applications#bkmk_manual-app).
 
 ### Application groups
+
 <!--3555907-->
 Create a group of applications that you can send to a user or device collection as a single deployment. The metadata you specify about the app group is seen in Software Center as a single entity. You can order the apps in the group so that the client installs them in a specific order.
 
-<!--For more information, see [Create application group](/sccm/apps/deploy-use/create-app-group)and [Create application group](/sccm/apps/deploy-use/deploy-applications).-->
+For more information, see [Create application groups](/sccm/apps/deploy-use/create-app-groups).
 
 ### Retry the install of pre-approved applications
 
