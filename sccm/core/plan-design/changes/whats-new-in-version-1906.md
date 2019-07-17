@@ -360,34 +360,23 @@ Task sequence pre-cache now includes additional content types. Pre-cache content
 
 For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/configure-precache-content).
 
-### Improvement to task sequence media creation
-<!--4090666-->
+### Improvements to OS deployment
 
- <!--? this is a DCR not on doc list for 1906- Looks like it was added in 1902 on multiple articles including /sccm/osd/deploy-use/create-stand-alone-media#process.-->
-
-### Improvements to OS deployment 
-<!--2839943,4447680-->
-<!--4512937,4224642 (combined with the 422462 above)-->
-<!--4668846, 2840337, 4512937-->
 This release includes the following improvements to OS deployment:
 
-- The following two PowerShell cmdlets were added to create and edit the [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence) step:  <!--2839943--> <!--For more information, see [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence).-->
+- Use the following two PowerShell cmdlets to create and edit the [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence) step:<!--2839943-->
 
     - **New-CMTSStepRunTaskSequence**
 
     - **Set-CMTSStepRunTaskSequence**
 
-- A new task sequence variable was added, **SMSTSRebootDelayNext**. Use this new variable with the existing [SMSTSRebootDelay](/sccm/osd/understand/task-sequence-variables#SMSTSRebootDelay) variable. If you want any later reboots to happen with a different timeout than the first, set SMSTSRebootDelayNext to a different value in seconds. <!--4447680--> <!--For more information, see [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence).-->
+- It's now easier to edit variables when you run a task sequence. After you select a task sequence in the Task Sequence Wizard window, the page to edit task sequence variables includes an **Edit** button.<!-- 4668846 --> For more information, see [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables#bkmk_set-tswiz).
 
-    For example, you want to give users a 60-minute reboot notification at the start of a Windows 10 in-place upgrade task sequence. After that first long timeout, you want additional timeouts to only be 60 seconds. Set SMSTSRebootDelay to `3600`, and SMSTSRebootDelayNext to `60`.  
+- The **Disable BitLocker** task sequence step has a new restart counter. Use this option to specify the number of restarts to keep BitLocker disabled. This change you simplify your task sequence. You can use a single step, instead of adding multiple instances of this step. <!--4512937--> For more information, see [Disable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_DisableBitLocker).
 
-- The [Disable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_DisableBitLocker) task sequence step has a new restart counter. Use this option to specify the number of restarts to keep BitLocker disabled. Instead of adding multiple instances of this step, set a value between 1 (default) and 15. You can also set this behavior with the task sequence variable **OSDBitlockerRebootCount**. <!--4512937--> <!--For more information, see [Disable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_DisableBitLocker).-->
+- Use the new task sequence variable **SMSTSRebootDelayNext** with the existing [SMSTSRebootDelay](/sccm/osd/understand/task-sequence-variables#SMSTSRebootDelay) variable. If you want any later reboots to happen with a different timeout than the first, set this new variable to a different value in seconds. <!--4447680--> For more information, see [SMSTSRebootDelayNext](/sccm/osd/understand/task-sequence-variables#SMSTSRebootDelayNext).
 
-- This release further iterates on the improvement to the [Disable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_DisableBitLocker) step. This release adds a new variable, **OSDBitLockerRebootCountOverride**. Set this value from 0 to 15, and it overrides the count set by the step or the OSDBitlockerRebootCount variable. While the other methods only accept values 1 to 15, if you set this variable to 0, BitLocker remains disabled indefinitely. This new variable is useful when the task sequence sets one value, but you want to set a separate value on a per-device or per-collection basis. <!-- 4512937 --> <!--For more information, see [Disable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_DisableBitLocker).-->
-
-- It's now easier to edit variables when you run a task sequence. After you select a task sequence in the Task Sequence Wizard window, the page to edit task sequence variables includes an **Edit** button. You can use accessible keyboard shortcuts to edit the variables. This change helps in cases where a mouse isn't available.<!-- 4668846 --><!--For more information, see [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence).-->
-
-- The task sequence sets a new read-only variable **_SMSTSLastContentDownloadLocation**. This variable contains the last location where the task sequence downloaded or attempted to download content. Inspect this variable instead of parsing the client logs.<!-- 2840337 --> <!--For more information, see [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence).-->
+- The task sequence sets a new read-only variable **_SMSTSLastContentDownloadLocation**. This variable contains the last location where the task sequence downloaded or attempted to download content. Inspect this variable instead of parsing the client logs.<!-- 2840337 -->
 
 
 ## <a name="bkmk_userxp"></a> Software Center
