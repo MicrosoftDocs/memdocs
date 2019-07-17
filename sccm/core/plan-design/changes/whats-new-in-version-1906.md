@@ -47,7 +47,6 @@ Version 1906 deprecates support for the following products:
 - Windows 10 Mobile
 - Windows 10 Mobile Enterprise
 
-
 ## <a name="bkmk_infra"></a> Site infrastructure
 
 ### Site server maintenance task improvements
@@ -62,7 +61,7 @@ Site server maintenance tasks can now be viewed and edited from their own tab on
 
 ![New tab for maintenance tasks in the detail view of a site server](./media/3555894-maintenance-tasks.png)
 
-<!-- For more information, see [Maintenance tasks](sccm/core/servers/manage/maintenance-tasks). -->
+For more information, see [Maintenance tasks](/sccm/core/servers/manage/maintenance-tasks#bkmk_MTs1906).
 
 ### Configuration Manager update database upgrade monitoring
 <!--4200581-->
