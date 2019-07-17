@@ -199,7 +199,7 @@ Use the information in the following **Monitor the application** section to see 
 
 Users who have PCs that are managed by Configuration Manager and running Windows 10 see a message telling them that they must install the Contoso application. Once they accept the installation, the application gets installed.  
 
-Starting in Configuration Manager version 1906, the **New Software is Available** notification will only show once for a user for a given application and revision. The user will no longer see the notification each time they sign in. They'll only see another notification for an application if it has changed.
+Starting in Configuration Manager version 1906, the **New Software is Available** notification will only show once for a user for a given application and revision. The user will no longer see the notification each time they sign in. They'll only see another notification for an application if the application has changed or was redeployed.
 
 ## Next steps
 
