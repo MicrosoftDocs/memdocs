@@ -494,7 +494,6 @@ The **View Required** hyperlink is available in the following locations:
 
 <!--For more information, see [Monitor software updates](/sccm/sum/deploy-use/monitor-software-updates),  [Manage Windows as a service](/sccm/osd/deploy-use/manage-windows-as-a-service) and [Using the Configuration Manger console](/sccm/core/servers/manage/admin-console#tips) .--> 
 
-
 ## <a name="bkmk_o365"></a> Office management
 
 ### Office 365 ProPlus upgrade readiness dashboard
