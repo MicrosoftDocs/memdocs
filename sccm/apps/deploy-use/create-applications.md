@@ -130,7 +130,7 @@ To add more deployment types or configure other settings, see [Create deployment
         >
         > <!-- 4726793 -->Renaming or deleting a category doesn't automatically apply to apps with this category. These changes apply on the next revision of the app. To work around this issue for rename or delete:
         >
-        > - First remove the category from any app that references it. This action revises the apps.
+        > - First clear the checkbox for the category on any app that references it. Then apply that change, which revises the app.
         >     - Instead of the rename action, next create a new category with the new name, and add the new category to the relevant apps.
         >     - You can delete the category after you revise the apps.
 

@@ -448,6 +448,7 @@ The following table lists the log files that contain information related to appl
 |AppIntentEval.log|Records details about the current and intended state of applications, their applicability, whether requirements were met, deployment types, and dependencies.|Client|  
 |AppDiscovery.log|Records details about the discovery or detection of applications on client computers.|Client|  
 |AppEnforce.log|Records details about enforcement actions (install and uninstall) taken for applications on the client.|Client|  
+|AppGroupHandler.log|Starting in version 1906, detection and enforcement information for application groups|Client|
 |awebsctl.log|Records monitoring activities for the Application Catalog web service point site system role.|Site system server|  
 |awebsvcMSI.log|Records detailed installation information for the Application Catalog web service point site system role.|Site system server|  
 |Ccmsdkprovider.log|Records the activities of the application management SDK.|Client|  
@@ -459,6 +460,7 @@ The following table lists the log files that contain information related to appl
 |PrestageContent.log|Records details about the use of the ExtractContent.exe tool on a remote, prestaged distribution point. This tool extracts content that has been exported to a file.|Site system server|  
 |ServicePortalWebService.log|Records the activity of the Application Catalog web service.|Site system server|  
 |ServicePortalWebSite.log|Records the activity of the Application Catalog website.|Site system server|  
+|SettingsAgent.log|Enforcement of specific applications, records orchestration of application group evaluation, and details of co-management policies.|Client|
 |SMSdpmon.log|Records details about the distribution point health monitoring scheduled task that is configured on a distribution point.|Site server|  
 |SoftwareCatalogUpdateEndpoint.log|Records activities for managing the URL for the Application Catalog shown in Software Center.|Client|  
 |SoftwareCenterSystemTasks.log|Records activities related to Software Center prerequisite component validation.|Client|  
