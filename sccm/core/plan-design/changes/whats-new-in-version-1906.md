@@ -360,7 +360,7 @@ Task sequence pre-cache now includes additional content types. Pre-cache content
 
 For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/configure-precache-content).
 
-### Improvements to OS
+### Improvements to OS deployment
 
 This release includes the following improvements to OS deployment:
 
