@@ -479,29 +479,14 @@ The **View Required** hyperlink is available in the following locations:
 
 <!--For more information, see [Monitor software updates](/sccm/sum/deploy-use/monitor-software-updates),  [Manage Windows as a service](/sccm/osd/deploy-use/manage-windows-as-a-service) and [Using the Configuration Manger console](/sccm/core/servers/manage/admin-console#tips) .--> 
 
-
-
-
 ## <a name="bkmk_o365"></a> Office management
 
 ### Office 365 ProPlus upgrade readiness dashboard
 <!--4021125-->
 
-To help you determine which devices are ready to upgrade to Office 365 ProPlus, there's a new readiness dashboard. It includes the **Office 365 ProPlus upgrade readiness** tile that released in Configuration Manager current branch version 1902. In the Configuration Manager console, go to the **Software Library** workspace, expand **Office 365 Client Management**, and select the **Office 365 ProPlus Upgrade Readiness** node. The following new tiles on this dashboard help you evaluate Office add-in and macro readiness:
+To help you determine which devices are ready to upgrade to Office 365 ProPlus, there's a new readiness dashboard. It includes the **Office 365 ProPlus upgrade readiness** tile that released in Configuration Manager current branch version 1902. In the Configuration Manager console, go to the **Software Library** workspace, expand **Office 365 Client Management**, and select the **Office 365 ProPlus Upgrade Readiness** node.
 
-- Add-in readiness
-- Add-in support statements
-- Top add-ins by count of version
-- Number of devices that have macros
-- Macro readiness
-- Macro advisories
-
-
-
-![Office 365 ProPlus upgrade readiness dashboard](./media/4021125-1906-o365-dashboard.png)
-![Office 365 ProPlus upgrade readiness dashboard, macro advisories](./media/4021125-1906-o365-dashboard-macros.png)
-
-<!--For more information on prerequisites and using this data, see [Integration for Office 365 ProPlus readiness](/sccm/sum/deploy-use/office-365-dashboard#bkmk_o365_readiness).-->
+For more information on the dashboard, prerequisites, and using this data, see [Integration for Office 365 ProPlus readiness](/sccm/sum/deploy-use/office-365-dashboard#office-365-proplus-upgrade-readiness-dashboard).
 
 
 ## <a name="bkmk_inv"></a> Inventory
