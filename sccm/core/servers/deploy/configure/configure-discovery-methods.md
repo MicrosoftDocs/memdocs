@@ -261,7 +261,7 @@ Delta discovery for Azure Active Directory user group discovery is currently dis
 
 ### Log files
 
-Use the SMS_AZUREAD_DISCOVERY_AGENT.log for troubleshooting. This log is also shared with Azure AD user discovery. For more information, [Server logs](/sccm/core/plan-design/hierarchy/log-files#BKMK_ServerLogs)
+Use the SMS_AZUREAD_DISCOVERY_AGENT.log for troubleshooting. This log is also shared with Azure AD user discovery. For more information, see the [Log files](/sccm/core/plan-design/hierarchy/log-files#BKMK_ServerLogs) article.
 
 ### Enable Azure Active Directory user group discovery
 
