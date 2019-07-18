@@ -196,10 +196,16 @@ OneTrace is a new log viewer with Support Center. It works similarly to CMTrace,
 
 For more information, see [Support Center OneTrace](/sccm/core/support/support-center-onetrace).
 
-<!-- Commenting out item for now since it isn't in the TAP feature list 
+### Version 1906 client requires SHA-2 code signing support
 
-### 1906 client won't install on legacy OS (SHA-1)
-<!--4222696-->
+<!--SCCMDocs-pr#3404-->
+Due to weaknesses in the SHA-1 algorithm and to align to industry standards, Microsoft now only signs Configuration Manager binaries using the more secure SHA-2 algorithm. The following Windows OS versions require an update for SHA-2 code signing support:
+
+- Windows 7 SP1
+- Windows Server 2008 R2 SP1
+- Windows Server 2008 SP2
+
+For more information, see [Prerequisites for Windows clients](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers#bkmk_sha2).
 
 ### Configure client cache minimum retention period
 
