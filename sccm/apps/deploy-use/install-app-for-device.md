@@ -32,9 +32,9 @@ Starting in version 1906, from the Configuration Manager console you can install
 
 - Your user account needs the following permissions:
 
-    - Application: **Approve**
+    - **Application**: Read, Approve
 
-    - Collection: **View Collected File**
+    - **Collection**: Read, Read Resource, Modify Resource, View Collected File
 
     For example, the **Application Administrator** built-in role has these permissions.
 
