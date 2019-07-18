@@ -428,7 +428,7 @@ You now have additional WSUS maintenance tasks that Configuration Manager can ru
 - Remove obsolete updates from the WSUS database.
 - Add non-clustered indexes to the WSUS database to improve WSUS cleanup performance.
 
-For more information, see [Software updates maintenance](/sccm/sum/deploy-use/software-updates-maintenance#bkmk_1906cleanup).
+For more information, see [Software updates maintenance](/sccm/sum/deploy-use/software-updates-maintenance#wsus-cleanup-starting-in-version-1906).
 
 ### Configure the default maximum run time for software updates
 <!--3734426-->
