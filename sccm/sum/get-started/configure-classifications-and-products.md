@@ -21,7 +21,7 @@ Software updates metadata is retrieved during the synchronization process in Con
 > [!NOTE]  
 > Use the procedure from this section only on the top-level site.  
 
-## Configure classifications and products to synchronize  
+## To configure classifications and products to synchronize  
 
 1. In the **Configuration Manager** console, navigate to **Administration** > **Site Configuration** > **Sites**.
 
@@ -64,8 +64,8 @@ Software updates metadata is retrieved during the synchronization process in Con
     >
     > When you update to 1906 and have the **Windows 10** product selected for synchronization, the following actions occur automatically:
     > - The **Windows 10, version 1903 and later** product is added for synchronization.
-    > - [Automatic Deployment Rules](/sccm/sum/deploy-use/automatically-deploy-software-updates) containing the **Windows 10** product will be updated to include **Windows 10, version 1903 and later**.
-    > - [Servicing plans](/sccm/osd/deploy-use/manage-windows-as-a-service) are updated to include the **Windows 10, version 1903 and later** product.
+    > - [Automatic Deployment Rules](/sccm/sum/deploy-use/automatically-deploy-software-updates#bkmk_adr-process) containing the **Windows 10** product will be updated to include **Windows 10, version 1903 and later**.
+    > - [Servicing plans](/sccm/osd/deploy-use/manage-windows-as-a-service#servicing-plan-workflow) are updated to include the **Windows 10, version 1903 and later** product.
 
 ## Next steps
 

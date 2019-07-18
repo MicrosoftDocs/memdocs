@@ -104,7 +104,7 @@ You can drill through compliance statistics to see which devices require a speci
 > When you update to 1906 and have the **Windows 10** product selected for synchronization, the following actions occur automatically:
 > - Servicing plans are updated to include the **Windows 10, version 1903 and later** product.
 > - The **Windows 10, version 1903 and later** product is added for synchronization. For more information, see [Configure classifications and products](/sccm/sum/get-started/configure-classifications-and-products)
-> - [Automatic Deployment Rules](/sccm/sum/deploy-use/automatically-deploy-software-updates) containing the **Windows 10** product will be updated to include **Windows 10, version 1903 and later**.
+> - [Automatic Deployment Rules](/sccm/sum/deploy-use/automatically-deploy-software-updates#bkmk_adr-process) containing the **Windows 10** product will be updated to include **Windows 10, version 1903 and later**.
 
 
 ##  <a name="BKMK_ServicingPlan"></a> Windows 10 servicing plan  

@@ -87,9 +87,9 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
     > **Windows 10, version 1903 and later** was added to Microsoft Update as its own product rather than being part of the **Windows 10**  product like earlier versions. This change caused you to do a number of manual steps to ensure that your clients see these updates. We've helped reduce the number of manual steps you have to take for the new product. <!--4682946-->
     >
     > When you update to 1906 and have the **Windows 10** product selected for synchronization, the following actions occur automatically:
-    > - [Automatic Deployment Rules](/sccm/sum/deploy-use/automatically-deploy-software-updates) containing the **Windows 10** product will be updated to include **Windows 10, version 1903 and later**.
+    > - [Automatic Deployment Rules](/sccm/sum/deploy-use/automatically-deploy-software-updates#bkmk_adr-process) containing the **Windows 10** product will be updated to include **Windows 10, version 1903 and later**.
     > - The **Windows 10, version 1903 and later** product is added for synchronization. For more information, see [Configure classifications and products](/sccm/sum/get-started/configure-classifications-and-products
-    > - [Servicing plans](/sccm/osd/deploy-use/manage-windows-as-a-service) are updated to include the **Windows 10, version 1903 and later** product.
+    > - [Servicing plans](/sccm/osd/deploy-use/manage-windows-as-a-service#servicing-plan-workflow) are updated to include the **Windows 10, version 1903 and later** product.
 
 6.  On the **Evaluation Schedule** page, specify whether to enable the ADR to run on a schedule. When enabled, click **Customize** to set the recurring schedule.  
 
