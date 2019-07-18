@@ -98,7 +98,7 @@ The following **WSUS Server Cleanup Wizard** options aren't run on the CAS, prim
 ## <a name="bkmk_1906cleanup"></a>  WSUS cleanup starting in version 1906
 <!--41101009-->
 
- You have additional WSUS maintenance tasks that Configuration Manager version 1906 can run to maintain healthy software update points. In addition to declining expired updates in WSUS, Configuration Manager can add non-clustered indexes to the WSUS databases and remove obsolete updates from the WSUS databases. The WSUS maintenance occurs after every synchronization.
+ You have additional WSUS maintenance tasks that Configuration Manager can run to maintain healthy software update points. In addition to declining expired updates in WSUS, Configuration Manager can add non-clustered indexes to the WSUS databases and remove obsolete updates from the WSUS databases. The WSUS maintenance occurs after every synchronization.
 
 ### Add non-clustered indexes to the WSUS database to improve WSUS cleanup performance
 
