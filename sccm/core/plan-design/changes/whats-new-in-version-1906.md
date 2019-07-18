@@ -74,7 +74,7 @@ When applying a Configuration Manager update, you can now see the state of the *
 
    ![Database upgrade monitoring during installation](./media/4200581-database-upgrade-monitoring.png)
 
-<!-- For more information, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_install). -->
+For more information, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates#3-monitor-the-progress-of-updates-as-they-install).
 
 ### Management insights rule for NTLM fallback
 
