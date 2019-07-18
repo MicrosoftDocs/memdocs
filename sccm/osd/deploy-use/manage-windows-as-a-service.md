@@ -51,6 +51,7 @@ ms.collection: M365-identity-device-management
 -   Software updates must be configured and synchronized. Select the **Upgrades** classification and synchronize software updates before any Windows 10 feature upgrades are available in the Configuration Manager console. For more information, see [Prepare for software updates management](../../sum/get-started/prepare-for-software-updates-management.md).  
 - Starting in Configuration Manager version 1902, verify the **Specify thread priority for feature updates** [client setting](/sccm/core/clients/deploy/about-client-settings#bkmk_thread-priority) to ensure it's appropriate for your environment.
 - Starting in Configuration Manager version 1906, verify the **Enable Dynamic Update for feature updates** [client setting](/sccm/core/clients/deploy/about-client-settings#bkmk_du) to ensure it's appropriate for your environment. <!--4062619-->
+ for your environment. <!--4062619-->
 
 ##  <a name="BKMK_ServicingDashboard"></a> Windows 10 servicing dashboard  
  The Windows 10 servicing dashboard provides you with information about Windows 10 computers in your environment, active servicing plans, compliance information, and so on. The data in the Windows 10 servicing dashboard is dependent on having the Service Connection Point installed. The dashboard has the following tiles:  
@@ -73,6 +74,18 @@ ms.collection: M365-identity-device-management
 
 > [!IMPORTANT]  
 >  The information shown in the Windows 10 servicing dashboard (such as the support lifecycle for Windows 10  versions) is provided for your convenience and only for use internally within your company. You should not solely rely on this information to confirm update compliance. Be sure to verify the accuracy of the information provided to you.  
+
+## Drill through required updates
+<!--4224414-->
+*(Introduced in version 1906)*
+
+You can drill through compliance statistics to see which devices require a specific Office 365 software update. To view the device list, you need permission to view updates and the collections the devices belong to. To drill down into the device list:
+
+1. Go to **Software Library** > **Windows 10 Servicing** > **All Windows 10 Updates**.
+1. Select any update that is required by at least one device.
+1. Look at the **Summary** tab and find the pie chart under  **Statistics**.
+1. Select the **View Required** hyperlink next to the pie chart to drill down into the device list.
+1. This action takes you to a temporary node under **Devices** where you can see the devices requiring the update. You can also take actions for the node such as creating a new collection from the list.
 
 ## Servicing plan workflow  
  Windows 10 servicing plans in Configuration Manager are much like automatic deployment rules for software updates. You create a servicing plan with the following criteria that Configuration Manager evaluates:  
