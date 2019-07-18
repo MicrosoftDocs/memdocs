@@ -28,6 +28,7 @@ This information is subject to change with future releases. It might not include
 |Feature|Deprecation first announced|Support&nbsp;removed|  
 |-----------|---|--------------|  
 | Device health attestation assessment for conditional access compliance policies <!--1235616 aka 3608202--> For more information, see [Manage access to Office 365 services for PCs managed by Configuration Manager](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm#step-1-configure-compliance-policy).| July 3, 2019 | The first version released after November 1, 2019 |
+| The Configuration Manager Company Portal app | May 21, 2019 | The first version released after November 1, 2019|
 | The application catalog, including both site system roles: the application catalog website point and web service point. For more information, see [Remove the application catalog](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat). | May 21, 2019 | The first version released after November 1, 2019|
 |The implementation for sharing content from Azure has changed. Use a content-enabled cloud management gateway. You won't be able to create a traditional cloud distribution point in the future.|February 2019|The first version released after November 1, 2019|
 |Classic service deployment to Azure for cloud management gateway and cloud distribution point. For more information, see [Plan for CMG](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).|November 2018|The first version released after July 1, 2019|
