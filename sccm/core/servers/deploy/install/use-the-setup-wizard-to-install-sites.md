@@ -1,7 +1,7 @@
 ---
 title: Setup wizard
 titleSuffix: Configuration Manager
-ms.date: 05/23/2019
+ms.date: 07/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -21,12 +21,12 @@ To install a new Configuration Manager site by using a guided user interface, us
 Install a secondary site from within the Configuration Manager console. Secondary sites don't support a scripted command-line installation.
 
 
-
 ## <a name="bkmk_primary"></a> Install a central administration or primary site
 
-Use the following procedure to install a central administration site or a primary site. Also use it to upgrade an evaluation site to a fully licensed Configuration Manager site.   
+Use the following procedure to install a central administration site or a primary site. Also use it to upgrade an evaluation site to a fully licensed Configuration Manager site.
 
 Before starting the site installation, be familiar with the details in the following articles:
+
 - [Prepare to install sites](/sccm/core/servers/deploy/install/prepare-to-install-sites)
 - [Prerequisites for installing sites](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites)
 
@@ -55,7 +55,7 @@ If you're installing a central administration site as part of a site expansion s
 
         > [!TIP]  
         > Typically, you only select the option **Use typical installation options for a stand-alone primary site** when you want to install a stand-alone primary site in a test environment. When you select this option, setup does the following actions:  
-        > 
+        >
         > - Automatically configures the site as a stand-alone primary site.  
         > - Uses a default installation path.  
         > - Uses a local installation of the default instance of SQL Server for the site database.  
@@ -72,8 +72,8 @@ If you're installing a central administration site as part of a site expansion s
 
     - You can also specify the **Software Assurance expiration date** of your licensing agreement. It's a convenient reminder of that date. If you don't enter this date during Setup, you can specify it later from within the Configuration Manager console.  
 
-        > [!NOTE]   
-        > Microsoft doesn't validate the expiration date that you entered and doesn't use this date for license validation. You can use it as a reminder of your expiration date. This date is useful because Configuration Manager periodically checks for new software updates offered online. Your software assurance license status should be current so that you're eligible to use these additional updates.    
+        > [!NOTE]  
+        > Microsoft doesn't validate the expiration date that you entered and doesn't use this date for license validation. You can use it as a reminder of your expiration date. This date is useful because Configuration Manager periodically checks for new software updates offered online. Your software assurance license status should be current so that you're eligible to use these additional updates.  
 
     For more information, see [Licensing and branches](/sccm/core/understand/learn-more-editions).  
 
@@ -99,11 +99,11 @@ If you're installing a central administration site as part of a site expansion s
 
 10. On the **Site and Installation Settings** page, specify the following settings for the new site that you're installing:  
 
-    - **Site code**: [Each site code in a hierarchy must be unique](/sccm/core/servers/deploy/install/prepare-to-install-sites#bkmk_sitecodes). Use three alpha-numeric digits: A through Z and 0 through 9. Because the site code is used in folder names, don't use Windows-reserved names, including:    
+    - **Site code**: [Each site code in a hierarchy must be unique](/sccm/core/servers/deploy/install/prepare-to-install-sites#bkmk_sitecodes). Use three alpha-numeric digits: A through Z and 0 through 9. Because the site code is used in folder names, don't use Windows-reserved names, including:  
         - AUX  
-        - CON    
-        - NUL    
-        - PRN    
+        - CON  
+        - NUL  
+        - PRN  
         - SMS  
 
         > [!NOTE]  
@@ -206,7 +206,7 @@ If you're installing a central administration site as part of a site expansion s
 
     - When the Prerequisite Checker finds a problem, choose an item in the list for details about how to resolve the problem.  
 
-    - Before you can continue to install the site, resolve **Failed** items. You should also resolve items with a status of **Warning**, but they don't block the installation of the site.  
+    - Before you can continue to install the site, resolve **Failed** items. Also try to resolve items with a status of **Warning**, but they don't block the installation of the site.  
 
     - After resolving issues, choose **Run Check** to rerun the Prerequisite Checker.  
 
@@ -222,10 +222,9 @@ If you're installing a central administration site as part of a site expansion s
     - After Setup completes, you can connect a console that can edit objects and settings.  
 
 
-
 ## <a name="bkmk_expand"></a> Expand a stand-alone primary site
 
-When you've installed a stand-alone primary site as your first site, you have the option later to expand that site into a larger hierarchy by installing a central administration site.   
+When you've installed a stand-alone primary site as your first site, you have the option later to expand that site into a larger hierarchy by installing a central administration site.
 
 When you expand a stand-alone primary site, you install a new central administration site that uses the existing stand-alone primary site database as a reference. After the new central administration site installs, the stand-alone primary site functions as a child primary site.
 
@@ -237,7 +236,6 @@ When you expand a stand-alone primary site, you install a new central administra
 
 - To remove a primary site from a hierarchy with a central administration site, first uninstall the primary site.  
 
-
 To expand the site, use the Configuration Manager Setup Wizard to install a new central administration site with the following caveats:  
 
 - Install the central administration site by using the same version of Configuration Manager as the stand-alone primary site.  
@@ -248,10 +246,7 @@ To expand the site, use the Configuration Manager Setup Wizard to install a new 
 
 - On the **Site Installation** page, select the option to expand the stand-alone primary site.  
 
-
 To expand a stand-alone primary site, first see the [prerequisites to expand a site](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#bkmk_expand). Then use the procedure [To install a primary or central administration site](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#bkmk_installpri) earlier in this article.
-
-
 
 
 ## <a name="bkmk_secondary"></a> Install a secondary site
@@ -263,7 +258,6 @@ Use the Configuration Manager console to install a secondary site.
 - Before starting the site installation, make sure that your user account has the prerequisite permissions. Also make sure that the server that will host the new secondary site meets all the prerequisites for use as a secondary site server.  
 
 - When you install the secondary site, Configuration Manager configures the new site to use the client communication ports that are configured at the parent primary site.  
-
 
 ### <a name="bkmk_installsecondary"></a> Process to install a secondary site  
 
@@ -277,9 +271,9 @@ Use the Configuration Manager console to install a secondary site.
 
     - **Site code**: Each site code in a hierarchy must be unique. Use three alpha-numeric digits: A through Z and 0 through 9. Because the site code is used in folder names, don't use Windows-reserved names, including:  
 
-        - AUX    
-        - CON    
-        - NUL    
+        - AUX  
+        - CON  
+        - NUL  
         - PRN  
         - SMS  
 
@@ -307,13 +301,13 @@ Use the Configuration Manager console to install a secondary site.
         - The CD.Latest source file location includes a folder named **Redist**. Move this **Redist** folder as a subfolder under the **SMSSETUP** folder.  
 
             > [!Note]  
-            > If hash mismatch errors occur during setup, update the **Redist** folder. Use the [Setup Downloader](/sccm/core/servers/deploy/install/setup-downloader) to get the latest files. For any files that cause a hash mismatch error, also copy them from the updated **Redist** folder to the **SMSSETUP\BIN\X64** folder. 
+            > If hash mismatch errors occur during setup, update the **Redist** folder. Use the [Setup Downloader](/sccm/core/servers/deploy/install/setup-downloader) to get the latest files. For any files that cause a hash mismatch error, also copy them from the updated **Redist** folder to the **SMSSETUP\BIN\X64** folder.
 
     - **Version 1806 and later**<!-- SCCMDocs-pr issue 3164 -->
 
         - The CD.Latest source file location includes a folder named **Redist**. Move this **Redist** folder as a subfolder under the **SMSSETUP** folder.  
 
-        - Copy the following files from the **Redist** folder to the **SMSSETUP\BIN\X64** folder:   
+        - Copy the following files from the **Redist** folder to the **SMSSETUP\BIN\X64** folder:  
             - SharedManagementObjects.msi
             - SQLSysClrTypes.msi
             - sqlncli.msi
@@ -395,7 +389,6 @@ Use the Configuration Manager console to install a secondary site.
 
 11. On the **Summary** page, verify the settings, and then choose **Next** to install the secondary site. When the wizard presents the **Completion** page, you can close the wizard. The secondary site installation continues in the background.  
 
-
 ### <a name="bkmk_verify"></a> How to verify the secondary site installation status  
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node.  
@@ -404,4 +397,3 @@ Use the Configuration Manager console to install a secondary site.
 
     > [!TIP]  
     > When you install more than one secondary site at a time, the Prerequisite Checker runs against a single site at a time. It must finish a site before it starts to check the next site.  
-
