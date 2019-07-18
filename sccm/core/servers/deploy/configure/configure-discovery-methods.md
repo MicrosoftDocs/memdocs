@@ -259,6 +259,10 @@ You can  discover user groups and members of those groups from Azure Active dire
 
 Delta discovery for Azure Active Directory user group discovery is currently disabled.
 
+### Log files
+
+Use the SMS_AZUREAD_DISCOVERY_AGENT.log for troubleshooting. This log is also shared with Azure AD user discovery. For more information, see the [Log files](/sccm/core/plan-design/hierarchy/log-files#BKMK_ServerLogs) article.
+
 ### Enable Azure Active Directory user group discovery
 
 To enable discovery on an existing **Cloud Management** Azure service:
