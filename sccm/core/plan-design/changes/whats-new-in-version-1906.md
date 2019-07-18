@@ -423,12 +423,12 @@ You can also use this syntax to open default tabs in Software Center:
 
 ### Additional options for WSUS maintenance
 <!--4110109-->
-You now have more granular control over the WSUS maintenance tasks that Configuration Manager runs to maintain healthy software update points. The WSUS maintenance occurs after every synchronization. In addition to declining expired updates in WSUS, Configuration Manager can now:
+You now have additional WSUS maintenance tasks that Configuration Manager can run to maintain healthy software update points. The WSUS maintenance occurs after every synchronization. In addition to declining expired updates in WSUS, Configuration Manager can now:
 
 - Remove obsolete updates from the WSUS database.
 - Add non-clustered indexes to the WSUS database to improve WSUS cleanup performance.
 
-<!--For more information, see [Software updates maintenance](/sccm/sum/deploy-use/software-updates-maintenance).--> 
+For more information, see [Software updates maintenance](/sccm/sum/deploy-use/software-updates-maintenance#wsus-cleanup-starting-in-version-1906).
 
 ### Configure the default maximum run time for software updates
 <!--3734426-->

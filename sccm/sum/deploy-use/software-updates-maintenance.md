@@ -3,7 +3,7 @@ title: Software updates maintenance
 titleSuffix: "Configuration Manager"
 description: "To maintain updates in Configuration Manager, you can schedule the WSUS cleanup task, or you can run it manually."
 author: mestew
-ms.date: 03/27/2019
+ms.date: 07/19/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -64,7 +64,7 @@ Starting version 1806, the WSUS cleanup option occurs after every sync and does 
 > [!NOTE]
 > The "Months to wait before a superseded update is expired" is based on the creation date of the superseding update. For example, if you use 2 months for this setting, then updates that have been superseded will be declined in WSUS and expired in Configuration Manager when the superceding update is 2 months old.
 
-All WSUS Maintenance needs to be run manually on secondary site WSUS databases. The following **WSUS Server Cleanup Wizard** options aren't run on the CAS and primary sites:
+All WSUS maintenance needs to be run manually on secondary site WSUS databases. The following **WSUS Server Cleanup Wizard** options aren't run on the CAS and primary sites:
 
 - Unused updates and update revisions
 - Computers not contacting the server
@@ -94,6 +94,36 @@ The following **WSUS Server Cleanup Wizard** options aren't run on the CAS, prim
 - Unneeded update files
 
   For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://support.microsoft.com/help/4490644/complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maint/) blog post.
+
+## WSUS cleanup starting in version 1906
+<!--41101009-->
+
+ You have additional WSUS maintenance tasks that Configuration Manager can run to maintain healthy software update points. In addition to declining expired updates in WSUS, Configuration Manager can add non-clustered indexes to the WSUS databases and remove obsolete updates from the WSUS databases. The WSUS maintenance occurs after every synchronization.
+
+### Add non-clustered indexes to the WSUS database to improve WSUS cleanup performance
+
+The addition of non-clustered indexes improves the WSUS cleanup performance that Configuration Manager does.
+
+1. In the Configuration Manager console, navigate to **Administration** > **Overview** > **Site Configuration** > **Sites**.
+2. Select the site at the top of your Configuration Manager hierarchy.
+3. Click **Configure Site Components** in the Settings group, and then click **Software Update Point** to open Software Update Point Component Properties.
+4. In the **WSUS Maintenance** tab, select **Add non-clustered indexes to the WSUS database**.
+5. On each SUSDB used by Configuration Manager, indexes are added to the following tables:
+   - tbLocalizedPropertyForRevision
+   - tbRevisionSupersedesUpdate
+
+> [!NOTE]  
+>  If the WSUS database is on a remote SQL server using a non-default port, then indexes might not be added. You can create a [server alias using SQL Server Configuration Manager](https://docs.microsoft.com/sql/database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client?view=sql-server-2017) for this scenario. Once the alias is added and Configuration Manager can make a connection to the WSUS database, indexes will be added.
+
+### Remove obsolete updates from the WSUS database
+
+Obsolete updates are unused updates and update revisions in the WSUS database. Generally speaking, an update is considered obsolete once it's no longer in the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/) and it isn't needed by other updates as a prerequisite or dependency.
+
+1. In the Configuration Manager console, navigate to **Administration** > **Overview** > **Site Configuration** > **Sites**.
+2. Select the site at the top of your Configuration Manager hierarchy.
+3. Click **Configure Site Components** in the Settings group, and then click **Software Update Point** to open Software Update Point Component Properties.
+4. In the **WSUS Maintenance** tab, select **Remove obsolete updates from the WSUS database**.
+   - The obsolete update removal will be allowed to run for a maximum of 30 minutes before being stopped. It will start up again after the next synchronization occurs.  
 
 ## Updates cleanup log entries
 
