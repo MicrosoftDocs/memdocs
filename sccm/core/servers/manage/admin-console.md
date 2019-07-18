@@ -218,7 +218,7 @@ The Configuration Manager console has the following command-line options:
 <!--3600867-->
 *(Introduced in version 1906)*
 
-You can set security scopes on folders. If you have access to an object in the folder but don't have access to the folder, you'll be unable to see the object. Similarly, if you have access to a folder but not an object within it, you won't see that object. Right-click a folder, choose **Set Security Scopes**, then chose the security scopes you want to apply.
+You can set security scopes on folders. If you have access to an object in the folder but don't have access to the folder, you'll be unable to see the object. Similarly, if you have access to a folder but not an object within it, you won't see that object. Right-click a folder, choose **Set Security Scopes**, then choose the security scopes you want to apply.
 
 #### Views sort by integer values
 
@@ -301,6 +301,22 @@ This behavior significantly improves the time it takes to search by name, especi
 
 
 ### Software Library workspace
+
+#### Drill through required updates
+<!--4224414-->
+*(Introduced in version 1906)*
+
+1. Go to one of the following places in the Configuration Manager console:
+
+   - **Software Library** > **Software Updates** > **All Software Updates**
+   - **Software Library** > **Windows 10 Servicing** > **All Windows 10 Updates**
+   - **Software Library** > **Office 365 Client Management** > **Office 365 Updates**
+
+1. Select any update that is required by at least one device.
+1. Look at the **Summary** tab and find the pie chart under  **Statistics**.
+1. Select the **View Required** hyperlink next to the pie chart to drill down into the device list.
+1. This action takes you to a temporary node under **Devices** where you can see the devices requiring the update. You can also take actions for the node such as creating a new collection from the list.
+
 
 #### Maximize the browse registry window
 

@@ -471,7 +471,7 @@ The **View Required** hyperlink is available in the following locations:
    - **Software Library** > **Windows 10 Servicing** > **All Windows 10 Updates**
    - **Software Library** > **Office 365 Client Management** > **Office 365 Updates**
 
-<!--For more information, see [Monitor software updates](/sccm/sum/deploy-use/monitor-software-updates),  [Manage Windows as a service](/sccm/osd/deploy-use/manage-windows-as-a-service) and [Using the Configuration Manger console](/sccm/core/servers/manage/admin-console#tips) .--> 
+For more information, see [Monitor software updates](/sccm/sum/deploy-use/monitor-software-updates#drill-through-required-updates), [Manage Windows as a service](/sccm/osd/deploy-use/manage-windows-as-a-service#drill-through-required-updates) and [Manage Office 365 ProPlus Updates](/sccm/sum/deploy-use/manage-office-365-proplus-updates#drill-through-required-office-365-updates).
 
 ## <a name="bkmk_o365"></a> Office management
 
