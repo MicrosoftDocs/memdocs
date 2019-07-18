@@ -20,6 +20,22 @@ To install a new Configuration Manager site by using a guided user interface, us
 
 Install a secondary site from within the Configuration Manager console. Secondary sites don't support a scripted command-line installation.
 
+> [!Note]  
+> Starting in version 1906, the **splash.hta** file no longer exists at the root of the installation media. It provided links to the following information:<!--SCCMDocs-pr#3545-->
+>
+> - **Install site**: `smssetup\bin\x64\setup.exe`. For more information, see [Install a central administration or primary site](#bkmk_primary).
+> - **Before you begin**: [Design a hierarchy of sites](/sccm/core/plan-design/hierarchy/design-a-hierarchy-of-sites) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626543 -->
+> - **Assess server readiness**: [Prerequisite Checker](/sccm/core/servers/deploy/install/prerequisite-checker) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626546 -->
+> - **Download required prerequisite files**: `smssetup\bin\x64\setupdl.exe`. For more information, see [Setup Downloader](/sccm/core/servers/deploy/install/setup-downloader).
+> - **Install Configuration Manager console**: `smssetup\bin\i386\consolesetup.exe`. For more information, see [Install consoles](/sccm/core/servers/deploy/install/install-consoles).
+> - [**Download System Center Updates Publisher**](/sccm/sum/tools/updates-publisher) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626548 -->
+> - [**Download clients for additional operating systems**](https://www.microsoft.com/download/details.aspx?id=47719) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626550 -->
+> - [**Release notes**](/sccm/core/servers/deploy/install/release-notes) <!-- https://go.microsoft.com/fwlink/?LinkID=626571 -->
+> - [**Read documentation**](https://docs.microsoft.com/sccm)<!-- https://go.microsoft.com/fwlink/p/?LinkId=626547 -->
+> - **Obtain installation assistance**: [TechNet Forums: Configuration Manager (Current Branch) – Site and Client Deployment](https://social.technet.microsoft.com/Forums/en-us/home?forum=ConfigMgrDeployment) <!--NOTE: this link requires en-us locale to work-->   <!-- https://go.microsoft.com/fwlink/p/?LinkId=626549 -->
+> - **Configuration Manager community**: [System Center Community: How to Participate](https://social.technet.microsoft.com/wiki/contents/articles/11504.system-center-community-how-to-participate.aspx) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626544 -->
+> - [**Configuration Manager home**](https://www.microsoft.com/en-us/cloud-platform/system-center-configuration-manager) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626545 -->
+
 
 ## <a name="bkmk_primary"></a> Install a central administration or primary site
 
