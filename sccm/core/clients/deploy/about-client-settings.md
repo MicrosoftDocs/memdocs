@@ -894,7 +894,7 @@ Starting in Configuration Manager version 1906, you can configure [Dynamic Updat
 - **Not Configured** - The default value. No changes are made to the setupconfig file.
   - Dynamic Update is enabled by default on all supported versions of Windows 10.
     - For Windows 10 versions 1803 and prior, Dynamic Update checks the device's WSUS server for approved dynamic updates. In Configuration Manager environments, dynamic updates are never directly approved in the WSUS server so these devices don't install them.
-    - Starting with Windows 10 version 1809, Dynamic Update uses the device's internet connection to get dynamic updates from Microsoft Update. Dynamic updates aren't published for WSUS use.
+    - Starting with Windows 10 version 1809, Dynamic Update uses the device's internet connection to get dynamic updates from Microsoft Update. These dynamic updates aren't published for WSUS use.
 - **Yes** - Enables Dynamic Update.
 - **No** - Disables Dynamic Update.
 
