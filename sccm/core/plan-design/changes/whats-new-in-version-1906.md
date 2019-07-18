@@ -459,7 +459,7 @@ When you update to 1906 and have the **Windows 10** product selected for synchro
 - Automatic Deployment Rules containing the **Windows 10** product will be updated to include **Windows 10, version 1903 and later**.
 - [Servicing plans](/sccm/osd/deploy-use/manage-windows-as-a-service) are updated to include the **Windows 10, version 1903 and later** product.
 
-<!--For more information, see [Configure classifications and products to synchronize](/sccm/sum/get-started/configure-classifications-and-products) and [Manage Windows as a service](/sccm/osd/deploy-use/manage-windows-as-a-service).--> 
+For more information, see [Configure classifications and products to synchronize](/sccm/sum/get-started/configure-classifications-and-products), [Manage Windows as a service](/sccm/osd/deploy-use/manage-windows-as-a-service) and [Automatic Deployment Rules](/sccm/sum/deploy-use/automatically-deploy-software-updates).
 
 ### Drill through required updates
 <!--4224414-->
