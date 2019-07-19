@@ -565,9 +565,9 @@ A query times out after one hour. For example, a collection has 500 devices, and
 - StateSys.log
 
 **Client-side:**
- - CcmNotificationAgent.log
- - Scripts.log
- - StateMessage.log
+- CcmNotificationAgent.log
+- Scripts.log
+- StateMessage.log
 
 For more information, see [Log files](/sccm/core/plan-design/hierarchy/log-files) and [Troubleshooting CMPivot](/sccm/core/servers/manage/cmpivot-tsg).
 
