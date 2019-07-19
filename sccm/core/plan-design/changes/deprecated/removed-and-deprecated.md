@@ -41,6 +41,6 @@ Items that are removed or deprecated are split between three categories.
 ## More information
 
 For more information, see:
- - The [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle) website.
- - [Support for current branch versions of Configuration Manager](/sccm/core/servers/manage/current-branch-versions-supported).
+- The [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle) website.
+- [Support for current branch versions of Configuration Manager](/sccm/core/servers/manage/current-branch-versions-supported).
 

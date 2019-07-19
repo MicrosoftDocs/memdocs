@@ -76,9 +76,9 @@ This section includes the following subtopics:
 
 
 The central administration site and all child primary sites must have a software update point. As you plan for the software update point infrastructure, determine the following dependencies:
- - Where to install the software update point for the site  
- - Which sites require a software update point that accepts communication from internet-based clients
- - Whether you need a software update point at secondary sites  
+- Where to install the software update point for the site  
+- Which sites require a software update point that accepts communication from internet-based clients
+- Whether you need a software update point at secondary sites  
 
 > [!IMPORTANT]  
 >  For more information about the internal and external dependencies that are required for software updates, see [Prerequisites for software updates](prerequisites-for-software-updates.md).  

@@ -58,10 +58,10 @@ When you upgrade Configuration Manager 2012 to current branch, the site regenera
 When you use the **Update Distribution Points** action from the **Boot Images** node in the console, the site updates the target boot image with the client components, drivers, and customizations.    
 
 You can reload the boot image with the latest version of WinPE from the Windows ADK installation directory. The **General** page of the Update Distribution Points wizard provides the following information: 
- - The current Windows ADK version installed on the site server
- - The current production client version
- - The Windows ADK version of WinPE in the boot image
- - The version of the Configuration Manager client in the boot image
+- The current Windows ADK version installed on the site server
+- The current production client version
+- The Windows ADK version of WinPE in the boot image
+- The version of the Configuration Manager client in the boot image
 
 If the versions in the boot image are out of date, use the option to **Reload this boot image with the current Windows PE version from the Windows ADK**. 
 

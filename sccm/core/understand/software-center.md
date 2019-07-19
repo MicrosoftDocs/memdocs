@@ -42,9 +42,9 @@ Click the **Applications** tab to find and install applications that your IT adm
 - **Filters**: Your IT admin may create categories of applications. If available, click the drop-down list to filter the view to only those applications in a specific category. Select **All** to show all applications.
 - **Sort by**: Rearrange the list of applications. By default this list sorts by **Most recent**. Recently available applications are listed with a **New** tag that is visible for 7 days.
 - **Search**: Still can't find what you're looking for? Enter keywords in the Search box to find it!
--  **Switch the view**: Click the icons to switch the view between list view and tile view. By default the applications list shows as graphic tiles. 
-    - Tile view: Your IT admin can customize the icons. Below each tile displays the application name, publisher, and version. 
-    - List view: This view displays the application icon, name, publisher, version, and status. 
+- **Switch the view**: Click the icons to switch the view between list view and tile view. By default the applications list shows as graphic tiles. 
+  - Tile view: Your IT admin can customize the icons. Below each tile displays the application name, publisher, and version. 
+  - List view: This view displays the application icon, name, publisher, version, and status. 
 
 
 ### Install multiple applications 
@@ -114,13 +114,13 @@ Click the **Options** tab to view additional settings for this computer.
 
 Indicate the hours that you typically work. Your IT admin may schedule software installations outside your business hours. Allow at least four hours each day for system maintenance tasks. Your IT admin can still install critical applications and software updates during business hours.
 
-   - Click the drop-down lists to select the earliest and latest hours that you use this computer. By default these values are from **5 AM** through **10 PM**
+- Click the drop-down lists to select the earliest and latest hours that you use this computer. By default these values are from **5 AM** through **10 PM**
 
-   - Select the checkbox next to the days of the week that you typically use this computer. Software Center only selects the weekdays by default.  
+- Select the checkbox next to the days of the week that you typically use this computer. Software Center only selects the weekdays by default.  
 
 Specify whether you regularly use this computer to do your work. Your administrator might automatically install applications or make additional applications available to primary computers. <!--3485366-->
 
-   - Select **I regularly use this computer to do my work** if the computer you're using is a primary computer.
+- Select **I regularly use this computer to do my work** if the computer you're using is a primary computer.
 
 
 ### Power management

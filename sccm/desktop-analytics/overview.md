@@ -2,7 +2,7 @@
 title: Desktop Analytics
 titleSuffix: Configuration Manager
 description: An overview of the Desktop Analytics service integrated with Configuration Manager.
-ms.date: 07/12/2019
+ms.date: 07/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: overview
@@ -64,7 +64,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 ### Technical
 
-- An active Azure subscription, with [Global Admin](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator) permissions  
+- An active Azure subscription, with [Global Admin](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator) permissions. [Microsoft Accounts](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts) aren't supported.  
 
     > [!Important]  
     > Desktop Analytics is currently offered as an Office 365 service and requires an Office 365 subscription in your Azure AD tenant. This may not be a requirement in the future.
@@ -80,6 +80,9 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 - Configuration Manager, version 1902 with update rollup (4500571) or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
 
     - **Full Administrator** role in Configuration Manager  
+
+    > [!Note]  
+    > Desktop Analytics supports one Commercial ID per Azure Active Directory (Azure AD) tenant and Configuration Manager hierarchy. If you have multiple hierarchies in your environment, use different Commercial IDs and Azure AD tenants.<!-- 4958160 -->
 
 - Devices running Windows 7, Windows 8.1, or Windows 10  
 
