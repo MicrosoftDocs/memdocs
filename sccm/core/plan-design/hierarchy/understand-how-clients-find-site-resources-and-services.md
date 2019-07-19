@@ -18,42 +18,42 @@ ms.collection: M365-identity-device-management
 
 System Center Configuration Manager clients use a process called *service location* to locate site system servers that they can communicate with, and that  provide  services that clients are directed to use. Understanding how and when clients use service location to find site resources can help you configure your sites to successfully support client tasks. These configurations can require the site to interact with domain and network configurations like Active Directory Domain Services (AD DS) and DNS. Or they can require you to configure more complex alternatives.  
 
- Examples of site system roles that provide services include:
+Examples of site system roles that provide services include:
 
- - The core site system server for clients.
- - The management point.
- - Additional site system servers that the client can communicate with, like distribution points and software update points.  
+- The core site system server for clients.
+- The management point.
+- Additional site system servers that the client can communicate with, like distribution points and software update points.  
 
 
 
 ##  <a name="bkmk_fund"></a> Fundamentals of service location  
  A client evaluates its current network location, communication protocol preference, and assigned site when it is using service location to find a management point that it can communicate with.  
 
- **A client communicates with a management point to:**  
--   Download information about other management points for the site, so it can build a list of known management points (known as the *MP list*) for future service location cycles.  
--   Upload configuration details, like inventory and status.  
--   Download a policy that sets configurations on the client and can inform the client of software that it can or must install, and other related tasks.  
--   Request information about additional site system roles that provide services that the client has been configured to use. Examples include distribution points for software that the client can install, or a software update point from which to get updates.  
+**A client communicates with a management point to:**  
+- Download information about other management points for the site, so it can build a list of known management points (known as the *MP list*) for future service location cycles.  
+- Upload configuration details, like inventory and status.  
+- Download a policy that sets configurations on the client and can inform the client of software that it can or must install, and other related tasks.  
+- Request information about additional site system roles that provide services that the client has been configured to use. Examples include distribution points for software that the client can install, or a software update point from which to get updates.  
 
 **A Configuration Manager client makes a service location request:**  
--   Every 25 hours of continuous operation.  
--   When the client detects a change in its network configuration or location.  
--   When the **ccmexec.exe** service on the computer (the core client service) starts.  
--   When the client must locate a site system role that provides a required service.  
+- Every 25 hours of continuous operation.  
+- When the client detects a change in its network configuration or location.  
+- When the **ccmexec.exe** service on the computer (the core client service) starts.  
+- When the client must locate a site system role that provides a required service.  
 
 **When a client is attempting to find servers that host site system roles**, it uses service location to find a site system role that supports the client's protocol (HTTP or HTTPS). By default, clients use the most secure method available to them. Consider the following:  
 
--   To use HTTPS, you must have a public key infrastructure (PKI) and install PKI certificates on clients and servers. For information about how to use certificates, see [PKI certificate requirements for System Center Configuration Manager](../../../core/plan-design/network/pki-certificate-requirements.md).  
+- To use HTTPS, you must have a public key infrastructure (PKI) and install PKI certificates on clients and servers. For information about how to use certificates, see [PKI certificate requirements for System Center Configuration Manager](../../../core/plan-design/network/pki-certificate-requirements.md).  
 
--   When you deploy a site system role that uses Internet Information Services (IIS) and supports communication from clients, you must specify whether clients connect to the site system by using HTTP or HTTPS. If you use HTTP, you must also consider signing and encryption choices. For more information, see  [Planning for Signing and Encryption](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForSigningEncryption) in the [Plan for security in System Center Configuration Manager](../../../core/plan-design/security/plan-for-security.md).  
+- When you deploy a site system role that uses Internet Information Services (IIS) and supports communication from clients, you must specify whether clients connect to the site system by using HTTP or HTTPS. If you use HTTP, you must also consider signing and encryption choices. For more information, see  [Planning for Signing and Encryption](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForSigningEncryption) in the [Plan for security in System Center Configuration Manager](../../../core/plan-design/security/plan-for-security.md).  
 
 ##  <a name="BKMK_Plan_Service_Location"></a> Service location and how clients determine their assigned management point  
 When a client is first assigned to a primary site, it selects a default management point for that site. Primary sites support multiple management points, and each client independently identifies a management point as its default management point. This default management point then becomes that client's assigned management point. (You can also use client installation commands to set the assigned management point for a client when it's installed.)  
 
 A client selects a management point to communicate with based on the client's  current network location and boundary group configurations. Even though it has an assigned management point, this might not be the management point that the client uses.  
 
-   > [!NOTE]  
-   >  A client always uses the assigned management point for registration messages and certain policy messages, even when other communications are sent to a proxy or local management point.
+> [!NOTE]  
+> A client always uses the assigned management point for registration messages and certain policy messages, even when other communications are sent to a proxy or local management point.
 
 You can use preferred management points. Preferred management points are management points from a client's assigned site that are associated with a boundary group that the client is using to find site system servers. A preferred management point's association with a boundary group as a site system server is similar to how distribution points or state migration points are associated with a boundary group. If you enable preferred management points for the hierarchy, when a client uses a management point from its assigned site, it will try to use a preferred management point before using other management points from its assigned site.  
 
@@ -80,21 +80,21 @@ The MP list is the preferred service location source for a client, because it is
 ### Building the initial MP list  
 During installation of the client, the following rules are used to build the client's initial MP list:  
 
--   The initial list includes management points specified during client installation (when you use the **SMSMP**= or **/MP** option).  
--   The client queries AD DS for published management points. To be identified from AD DS, the management point must be from the client's assigned site, and it must be of the same product version as the client.  
--   If no management point was specified during client installation, and the Active Directory schema is not extended, the client checks DNS and WINS for published management points.  
--   When the client builds the initial list, information about some management points in the hierarchy might not be known.  
+- The initial list includes management points specified during client installation (when you use the **SMSMP**= or **/MP** option).  
+- The client queries AD DS for published management points. To be identified from AD DS, the management point must be from the client's assigned site, and it must be of the same product version as the client.  
+- If no management point was specified during client installation, and the Active Directory schema is not extended, the client checks DNS and WINS for published management points.  
+- When the client builds the initial list, information about some management points in the hierarchy might not be known.  
 
 ### Organizing the MP list  
 Clients organize their list of management points by using the following classifications:  
 
--   **Proxy**: A management point at a secondary site.  
--   **Local**: Any management point that is associated with the client's current network location, as defined by site boundaries. Note the following information about boundaries:
-    -   When a client belongs to more than one boundary group, the list of local management points is determined from the union of all boundaries that include the current network location of the client.  
-    -   Local management points are typically a subset of a client's assigned management points, unless the client is in a network location that is associated with another site with management points servicing its boundary groups.   
+- **Proxy**: A management point at a secondary site.  
+- **Local**: Any management point that is associated with the client's current network location, as defined by site boundaries. Note the following information about boundaries:
+  - When a client belongs to more than one boundary group, the list of local management points is determined from the union of all boundaries that include the current network location of the client.  
+  - Local management points are typically a subset of a client's assigned management points, unless the client is in a network location that is associated with another site with management points servicing its boundary groups.   
 
 
--   **Assigned**: Any management point that is a site system for the client's assigned site.  
+- **Assigned**: Any management point that is a site system for the client's assigned site.  
 
 You can use preferred management points. Management points at a site that are not associated with a boundary group, or that are not in a boundary group associated with a client's current network location, are not considered preferred. They will be used when the client cannot identify an available preferred management point.  
 
@@ -120,8 +120,8 @@ When a client cannot establish contact with the first management point, it tries
 
 After a client establishes communication with a management point, it continues to use that same management point until:  
 
--   25 hours have passed.  
--   The client is unable to communicate with the management point for five attempts over a period of 10 minutes.
+- 25 hours have passed.  
+- The client is unable to communicate with the management point for five attempts over a period of 10 minutes.
 
 The client then randomly selects a new management point to use.  
 
@@ -130,9 +130,9 @@ Clients that are domain joined can use AD DS for service location. This requires
 
 A client can use AD DS for service location when all the following conditions are true:  
 
--   The Active Directory [schema has been extended](https://technet.microsoft.com/library/mt345589.aspx) or was extended for System Center 2012 Configuration Manager.  
--   The [Active Directory forest is configured for publishing](https://technet.microsoft.com/library/hh696542.aspx), and Configuration Manager sites are configured to publish.  
--   The client computer is a member of an Active Directory domain and can access a global catalog server.  
+- The Active Directory [schema has been extended](https://technet.microsoft.com/library/mt345589.aspx) or was extended for System Center 2012 Configuration Manager.  
+- The [Active Directory forest is configured for publishing](https://technet.microsoft.com/library/hh696542.aspx), and Configuration Manager sites are configured to publish.  
+- The client computer is a member of an Active Directory domain and can access a global catalog server.  
 
 If a client cannot find a management point to use for service location from AD DS, it attempts to use DNS.  
 
@@ -140,15 +140,15 @@ If a client cannot find a management point to use for service location from AD D
 Clients on the intranet can use DNS for service location. This requires at least one site in a hierarchy to publish information about management points to DNS.  
 
 Consider using DNS for service location when any of the following conditions are true:
--   The AD DS schema is not extended to support Configuration Manager.
--   Clients on the intranet are located in a forest that is not enabled for Configuration Manager publishing.  
--   You have clients on workgroup computers, and those clients are not configured for internet-only client management. (A workgroup client configured for the internet will communicate only with internet-facing management points and will not use DNS for service location.)  
--   You can [configure clients to find management points from DNS](https://technet.microsoft.com/library/gg682055).  
+- The AD DS schema is not extended to support Configuration Manager.
+- Clients on the intranet are located in a forest that is not enabled for Configuration Manager publishing.  
+- You have clients on workgroup computers, and those clients are not configured for internet-only client management. (A workgroup client configured for the internet will communicate only with internet-facing management points and will not use DNS for service location.)  
+- You can [configure clients to find management points from DNS](https://technet.microsoft.com/library/gg682055).  
 
 When a site publishes service location records for management points to DNS:  
 
--   Publishing is applicable only to management points that accept client connections from the intranet.  
--   Publishing adds a service location resource record (SRV RR) in the DNS zone of the management point computer. There must be a corresponding host entry in DNS for that computer.  
+- Publishing is applicable only to management points that accept client connections from the intranet.  
+- Publishing adds a service location resource record (SRV RR) in the DNS zone of the management point computer. There must be a corresponding host entry in DNS for that computer.  
 
 By default, domain-joined clients search DNS for management point records from the client's local domain. You can configure a client property that specifies a domain suffix for a domain that has management point information published to DNS.  
 
@@ -159,11 +159,11 @@ If a client cannot find a management point to use for service location from DNS,
 ### Publish management points to DNS  
 To publish management points to DNS, the following two conditions must be true:  
 
--   Your DNS servers support service location resource records, by using a version of BIND that is at least 8.1.2.  
--   The specified intranet FQDNs for the management points in Configuration Manager have host entries (for example, A records) in DNS.  
+- Your DNS servers support service location resource records, by using a version of BIND that is at least 8.1.2.  
+- The specified intranet FQDNs for the management points in Configuration Manager have host entries (for example, A records) in DNS.  
 
 > [!IMPORTANT]  
->  Configuration Manager DNS publishing does not support a disjoint namespace. If you have a disjoint namespace, you can manually publish management points to DNS or use one of the other service location methods that are documented in this section.  
+> Configuration Manager DNS publishing does not support a disjoint namespace. If you have a disjoint namespace, you can manually publish management points to DNS or use one of the other service location methods that are documented in this section.  
 
 **When your DNS servers support automatic updates**, you can configure Configuration Manager to automatically publish management points on the intranet to DNS, or you can manually publish these records to DNS. When management points are published to DNS, their intranet FQDN and port number are published in the service location (SRV) record. You configure DNS publishing at a site in the site's Management Point Component Properties. For more information, see  [Site components for System Center Configuration Manager](../../../core/servers/deploy/configure/site-components.md).  
 
@@ -178,19 +178,19 @@ Configuration Manager supports RFC 2782 for service location records. These reco
 
 To publish a management point to Configuration Manager, specify the following values:  
 
--   **_Service**: Enter **_mssms_mp**_&lt;sitecode\>, where &lt;sitecode\> is the management point's site code.  
--   **._Proto**: Specify **._tcp**.  
--   **.Name**: Enter the DNS suffix of the management point, for example **contoso.com**.  
--   **TTL**: Enter **14400**, which is four hours.  
--   **Class**: Specify **IN** (in compliance with RFC 1035).  
--   **Priority**: Configuration Manager does not use this field.
--   **Weight**: Configuration Manager does not use this field.  
--   **Port**: Enter the port number that the management point uses, for example **80** for HTTP and **443** for HTTPS.  
+- **_Service**: Enter **_mssms_mp**_&lt;sitecode\>, where &lt;sitecode\> is the management point's site code.  
+- **._Proto**: Specify **._tcp**.  
+- **.Name**: Enter the DNS suffix of the management point, for example **contoso.com**.  
+- **TTL**: Enter **14400**, which is four hours.  
+- **Class**: Specify **IN** (in compliance with RFC 1035).  
+- **Priority**: Configuration Manager does not use this field.
+- **Weight**: Configuration Manager does not use this field.  
+- **Port**: Enter the port number that the management point uses, for example **80** for HTTP and **443** for HTTPS.  
 
-    > [!NOTE]  
-    >  The SRV record port should match the communication port that the management point uses. By default, this is **80** for HTTP communication and **443** for HTTPS communication.  
+  > [!NOTE]  
+  >  The SRV record port should match the communication port that the management point uses. By default, this is **80** for HTTP communication and **443** for HTTPS communication.  
 
--   **Target**: Enter the intranet FQDN that is specified for the site system that is configured with the management point site role.  
+- **Target**: Enter the intranet FQDN that is specified for the site system that is configured with the management point site role.  
 
 If you use Windows Server DNS, you can use the following procedure to enter this DNS record for intranet management points. If you use a different implementation for DNS, use the information in this section about the field values and consult that DNS documentation to adapt this procedure.  
 
@@ -206,9 +206,9 @@ If you use Windows Server DNS, you can use the following procedure to enter this
 
 5.  Check the box to publish to DNS. This box:  
 
-    -   Lets you select which management points to publish to DNS.  
+    - Lets you select which management points to publish to DNS.  
 
-    -   Does not configure publishing to AD DS.  
+    - Does not configure publishing to AD DS.  
 
 ##### To manually publish management points to DNS on Windows Server  
 
@@ -220,17 +220,17 @@ If you use Windows Server DNS, you can use the following procedure to enter this
 
 4.  By using the **New Other Records** option, choose **Service Location (SRV)** in the **Resource Record Type** dialog box, choose **Create Record**, enter the following information, and then choose **Done**:  
 
-    -   **Domain**: If necessary, enter the DNS suffix of the management point, for example **contoso.com**.  
-    -   **Service**: Type **_mssms_mp**_&lt;sitecode\>, where &lt;sitecode\> is the management point's site code.  
-    -   **Protocol**: Type **_tcp**.  
-    -   **Priority**: Configuration Manager does not use this field.  
-    -   **Weight**: Configuration Manager does not use this field.  
-    -   **Port**: Enter the port number that the management point uses, for example **80** for HTTP and **443** for HTTPS.  
+    - **Domain**: If necessary, enter the DNS suffix of the management point, for example **contoso.com**.  
+    - **Service**: Type **_mssms_mp**_&lt;sitecode\>, where &lt;sitecode\> is the management point's site code.  
+    - **Protocol**: Type **_tcp**.  
+    - **Priority**: Configuration Manager does not use this field.  
+    - **Weight**: Configuration Manager does not use this field.  
+    - **Port**: Enter the port number that the management point uses, for example **80** for HTTP and **443** for HTTPS.  
 
-        > [!NOTE]  
-        >  The SRV record port should match the communication port that the management point uses. By default, this is **80** for HTTP communication and **443** for HTTPS communication.  
+      > [!NOTE]  
+      > The SRV record port should match the communication port that the management point uses. By default, this is **80** for HTTP communication and **443** for HTTPS communication.  
 
-    -   **Host offering this service**: Enter the intranet FQDN that is specified for the site system that is configured with the management point site role.  
+    - **Host offering this service**: Enter the intranet FQDN that is specified for the site system that is configured with the management point site role.  
 
 Repeat these steps for each management point on the intranet that you want to publish to DNS.  
 
