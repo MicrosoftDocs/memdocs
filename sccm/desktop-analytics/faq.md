@@ -2,7 +2,7 @@
 title: FAQ for Desktop Analytics
 titleSuffix: Configuration Manager
 description: Frequently asked questions for Desktop Analytics.
-ms.date: 07/12/2019
+ms.date: 07/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -20,9 +20,9 @@ ms.collection: M365-identity-device-management
 
 ## Prerequisites 
 
-### Can I use Desktop Analytics with Intune managed devices? 
+### Can I use Desktop Analytics with Intune-managed devices? 
 
-The vast majority of customers that can benefit from the Desktop Analytics workflow use ConfigMgr to deploy Windows. We know our Intune customers love the additional insights from Analytics data, and we are working on ways to share insights with them as well. Stay tuned for updates.
+The vast majority of customers that can benefit from the Desktop Analytics workflow use Configuration Manager to deploy Windows. We know Intune customers love the additional insights from Analytics data, and we're working on ways to share insights with them as well.
 
 ## Windows upgrade
 
