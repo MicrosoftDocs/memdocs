@@ -155,7 +155,16 @@ After you connect the site to [Desktop Analytics](/sccm/desktop-analytics/connec
 
 When you remove a collection, select **OK** to close the properties window. Then open the properties again to add a new collection on the **Desktop Analytics Connection** tab.
 
+### Pilot status tile shows some  devices as 'undefined'
 
+<!-- 4547783 -->
+*Applies to: Configuration Manager version 1902 with update rollup*
+
+When you use the Configuration Manager Console to monitor your pilot deployment status, pilot devices that up-to-date on the target version of Windows for that deploymetn plan will show as **undefined** in the Pilot status.  
+
+#### Workaround
+
+**undefined** devices are devices **up-to-date** with the target version of the the OS for that deploymetn plan.
 
 ## Mobile device management  
 
