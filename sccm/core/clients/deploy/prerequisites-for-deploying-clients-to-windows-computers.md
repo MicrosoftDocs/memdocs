@@ -51,7 +51,7 @@ For more information, see [2019 SHA-2 code signing support requirement for Windo
 
 If you don't update these OS versions, you can't install the Configuration Manager client version 1906. This behavior applies to either a new client install or updating it from a previous version.
 
-If you need to manage a client on an older Windows OS version, use the Configuration Manager extended interoperability client (EIC) version 1902. For more information, see [Extended interoperability client](/sccm/core/understand/interoperability-client).
+If you need to manage a client on a version of Windows that's not updated, or older than the versions listed above, use the Configuration Manager extended interoperability client (EIC) version 1902. For more information, see [Extended interoperability client](/sccm/core/understand/interoperability-client).
 
 ### <a name="bkmk_ExternalDependencies"></a> Dependencies external to Configuration Manager and automatically downloaded during installation  
 
