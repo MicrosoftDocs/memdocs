@@ -36,6 +36,22 @@ Use the following information to determine the prerequisites for when you instal
 |Windows Installer version 3.1.4000.2435|Required to support the use of Windows Installer update (.msp) files for packages and software updates.|  
 |Microsoft Background Intelligent Transfer Service (BITS) version 2.5|Required to allow throttled data transfers between the client computer and Configuration Manager site systems. BITS isn't automatically downloaded during client installation. When BITS is installed on computers, it typically requires a restart to complete the installation.<br /><br /> Most operating systems include BITS. If they don't, install BITS before you install the Configuration Manager client.|  
 |Microsoft Task Scheduler|Enable this service on the client for the client installation to complete.|  
+|SHA-2 code signing support|Starting in version 1906, clients require support for the SHA-2 code signing algorithm. For more information, see [SHA-2 code signing support](#bkmk_sha2).|
+
+#### <a name="bkmk_sha2"></a> SHA-2 code signing support
+
+<!--SCCMDocs-pr#3404-->
+Due to weaknesses in the SHA-1 algorithm and to align to industry standards, Microsoft now only signs Configuration Manager binaries using the more secure SHA-2 algorithm. The following Windows OS versions require an update for SHA-2 code signing support:
+
+- Windows 7 SP1
+- Windows Server 2008 R2 SP1
+- Windows Server 2008 SP2
+
+For more information, see [2019 SHA-2 code signing support requirement for Windows and WSUS](https://support.microsoft.com/en-us/help/4472027/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus).
+
+If you don't update these OS versions, you can't install the Configuration Manager client version 1906. This behavior applies to either a new client install or updating it from a previous version.
+
+If you need to manage a client on an older Windows OS version, use the Configuration Manager extended interoperability client (EIC) version 1902. For more information, see [Extended interoperability client](/sccm/core/understand/interoperability-client).
 
 ### <a name="bkmk_ExternalDependencies"></a> Dependencies external to Configuration Manager and automatically downloaded during installation  
 

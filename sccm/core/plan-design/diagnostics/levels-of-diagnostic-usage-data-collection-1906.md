@@ -36,7 +36,7 @@ The Basic level includes data about your hierarchy. It's required to help improv
 
 For Configuration Manager version 1906, this level includes the following data:
 
-- Statistics about Configuration Manager console connections: OS version, language, SKU and architecture, system memory, logical processor count, connect site ID, installed .NET versions, and console language packs
+- ***[Updated]*** Statistics about Configuration Manager console connections: OS version, language, SKU and architecture, system memory, logical processor count, connect site ID, installed .NET versions, console language packs, and capable authentication level
 
 - Basic application and deployment type counts: total apps, total apps with multiple deployment types, total apps with dependencies, total superseded apps, and count of deployment technologies in use
 
@@ -124,6 +124,10 @@ For Configuration Manager version 1906, this level includes the following data:
 
 - Count of categorized and uncategorized applications for asset intelligence
 
+- ***[New]*** Status and health of the administration service
+
+- ***[New]*** Hash of key site attributes (site ID, SQL broker ID, and site exchange key)
+
 
 ## <a name="bkmk_level2"></a> Level 2 - Enhanced
 
@@ -208,6 +212,10 @@ For Configuration Manager version 1906, this level includes the following data:
 - File count, content size, services count, and custom action count of MSIs in application catalog  
 
 - Count of devices by Office ProPlus readiness state
+
+- ***[New]*** Aggregated statistics on the use of application groups
+
+- ***[New]*** Aggregated statistics on Office add-ins, usage of the Office Readiness Toolkit, and counts of clients with Office 365 ProPlus
 
 ### Client  
 
@@ -296,6 +304,8 @@ For Configuration Manager version 1906, this level includes the following data:
 - Collection evaluation statistics: query time, assigned versus unassigned counts, counts by type, ID rollover, and rule usage  
 
 - Collections without a deployment  
+
+- ***[New]*** Count of collections synchronized to Azure Active Directory
 
 ### Compliance settings  
 
@@ -413,6 +423,12 @@ For Configuration Manager version 1906, this level includes the following data:
 
 - Count of imported machines  
 
+- ***[New]*** Count of duplicate hardware identifiers (MAC address and SMBIOS GUID) excluded from PXE and client registration
+
+- ***[New]*** Count of task sequences by type (OS deployment or generic task sequence)
+
+- ***[New]*** Count of packages with pre-cache content settings
+
 ### Site updates  
 
 - Versions of installed Configuration Manager hotfixes  
@@ -479,6 +495,10 @@ For Configuration Manager version 1906, this level includes the following data:
 
 - Top UUP error codes and count of affected devices  
 
+- ***[New]*** List of subscriptions to third-party software update catalogs
+
+- ***[New]*** Use of WSUS maintenance settings
+
 ### SQL/performance data  
 
 - Configuration and duration of site summarization  
@@ -500,6 +520,8 @@ For Configuration Manager version 1906, this level includes the following data:
 - Management point traffic statistics (total bytes sent and received by endpoint)  
 
 - Management point performance counter measurements  
+
+- ***[New]*** Aggregated performance statistics of calls made to user service
 
 ### Miscellaneous  
 
@@ -523,6 +545,9 @@ For Configuration Manager version 1906, this level includes the following data:
 
 - Aggregated system boot time statistics by OS, form-factor, and drive type
 
+- ***[New]*** Aggregated statistics on the use of Desktop Analytics
+
+- ***[New]*** SQL maintenance task configuration and status
 
 ## <a name="bkmk_level3"></a> Level 3 - Full
 
@@ -577,3 +602,5 @@ For Configuration Manager version 1906, this level includes the following data:
 - Microsoft Store for Business application details: non-aggregate list of synced applications including AppID, online state or offline state, and total purchased license counts  
 
 - Count of clients pushed with option to not allow fallback to NTLM  
+
+- ***[New]*** List of Configuration Manager console extensions
