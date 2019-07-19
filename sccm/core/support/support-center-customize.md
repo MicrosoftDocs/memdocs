@@ -19,11 +19,11 @@ ms.collection: M365-identity-device-management
 
 The [Support Center](/sccm/core/support/support-center) tool includes a configuration file that you can customize. By default, when you install Support Center, this file is in the following path: `C:\Program Files (x86)\Configuration Manager Support Center\ConfigMgrSupportCenter.exe.config`. The configuration file changes the behavior of the program:
 
-  - [Customize data collection](#bkmk_datacoll): Edit the sets of registry keys and WMI namespaces that it includes during data collection  
+- [Customize data collection](#bkmk_datacoll): Edit the sets of registry keys and WMI namespaces that it includes during data collection  
 
-  - [Customize log groups](#bkmk_loggroups): Define new groups of log files using regular expressions. Also add other log files to log groups.  
+- [Customize log groups](#bkmk_loggroups): Define new groups of log files using regular expressions. Also add other log files to log groups.  
 
-  - [Collect additional log files using wildcards](#bkmk_wildcards): Use wildcard searches to collect additional log files  
+- [Collect additional log files using wildcards](#bkmk_wildcards): Use wildcard searches to collect additional log files  
 
 To make these changes, you need local administrative permissions on the client where you've installed Support Center. Make these customizations using a text or XML editor, such as Notepad or Visual Studio.
 
@@ -92,9 +92,9 @@ To collect registry keys for the classic programs installed on the device, add t
 
 To customize which log files Support Center collects, and how it presents them in the **Log groups** list, use elements in the `<logGroups>` element. When you start Support Center, it scans this section of the configuration file. It then creates a group on the **Log groups** list for each unique key attribute value found in the `<add/>` elements contained in the `<logGroups>` element.
 
-  - **Component log group**: The `<componentLogGroup>` element uses a key attribute to define the name of the log group that appears in the list. It also uses a value attribute that contains a regular expression (regex). It uses this regex to collect a set of related log files.  
+- **Component log group**: The `<componentLogGroup>` element uses a key attribute to define the name of the log group that appears in the list. It also uses a value attribute that contains a regular expression (regex). It uses this regex to collect a set of related log files.  
 
-  - **Static log group:** The `<staticLogGroup>` element uses a key attribute to define the name of the log group that appears in the list. It also uses a value attribute that defines a log file name.  
+- **Static log group:** The `<staticLogGroup>` element uses a key attribute to define the name of the log group that appears in the list. It also uses a value attribute that defines a log file name.  
 
 If the same key attribute value is used in an `<add/>` element within both the `<componentLogGroup>` element and the `<staticLogGroup>` element, Support Center creates a single group. This group includes the log files defined by both elements that use the same key.
 

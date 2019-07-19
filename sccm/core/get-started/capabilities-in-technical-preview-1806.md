@@ -253,15 +253,15 @@ This release includes the following improvements to the cloud management gateway
 When installing the Configuration Manager client on the internet via a CMG, fewer command-line properties are now required. For more information on one example of this scenario, see the [Command line to install Configuration Manager client](/sccm/comanage/how-to-prepare-Win10#install-the-configuration-manager-client) when preparing for co-management. 
 
 The following command-line properties are required in all scenarios:
-  - CCMHOSTNAME  
-  - SMSSITECODE  
+- CCMHOSTNAME  
+- SMSSITECODE  
 
 The following properties are required when using Azure AD for client authentication instead of PKI-based client authentication certificates:
-  - AADCLIENTAPPID  
-  - AADRESOURCEURI  
+- AADCLIENTAPPID  
+- AADRESOURCEURI  
 
 The following property is required if the client will roam back to the intranet:
-  - SMSMP  
+- SMSMP  
 
 The following example includes all of the above properties:   
 `ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com`

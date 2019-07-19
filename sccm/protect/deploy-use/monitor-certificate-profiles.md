@@ -57,16 +57,16 @@ To monitor SCEP certificate compliance  do not use the console, rather, use [rep
 
 ##  View Compliance Results by Using Reports
 
- Compliance settings in System Center Configuration Manager include built-in reports that you can use to monitor information about certificate profiles. These reports have the report category of **Compliance and Settings Management**.  
+Compliance settings in System Center Configuration Manager include built-in reports that you can use to monitor information about certificate profiles. These reports have the report category of **Compliance and Settings Management**.  
 
 > [!IMPORTANT]  
 >  You must use a wildcard (%) character when you use the parameters **Device filter** and **User filter** in the reports for compliance settings.  
 
 To monitor SCEP certificate compliance  use these  certificate reports under the report node **Company Resource Access**:  
 
- -   Certificate issuance history  
- -   List of assets with certificates nearing expiry  
- -   List of assets by certificate issuance status  
+-   Certificate issuance history  
+-   List of assets with certificates nearing expiry  
+-   List of assets by certificate issuance status  
 
 
 

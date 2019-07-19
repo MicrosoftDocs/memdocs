@@ -293,7 +293,7 @@ The high priority of the package ensures that Configuration Manager distributes 
 
 ## Fallback
 
-Several things have changed with Configuration Manager Current Branch in the way that clients find a distribution point that has content, including fallback.
+Several things have changed with Configuration Manager current branch in the way that clients find a distribution point that has content, including fallback.
 
 Clients that can't find content from a distribution point that's associated with their current boundary group fall back to use content source locations associated with neighbor boundary groups. To be used for fallback, a neighbor boundary group must have a defined relationship with the client’s current boundary group. This relationship includes a configured time that must pass before a client that can't find content locally includes content sources from the neighbor boundary group as part of its search.
 
@@ -315,7 +315,7 @@ For more information, see [Manage network bandwidth](/sccm/core/plan-design/hier
 
 ## Network connection speed to content source
 
-Several things have changed with Configuration Manager Current Branch in the way that clients find a distribution point that has content. These changes include the network speed to a content source.
+Several things have changed with Configuration Manager current branch in the way that clients find a distribution point that has content. These changes include the network speed to a content source.
 
 Network connection speeds that define a distribution point as **Fast** or **Slow** are no longer used. Instead, each site system that's associated with a boundary group is treated the same.
 

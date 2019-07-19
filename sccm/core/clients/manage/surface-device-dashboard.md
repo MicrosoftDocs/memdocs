@@ -53,10 +53,10 @@ The Surface device dashboard shows three graphs for your environment.
 ## More information
 
 For more information about Surface devices, see:
- - The [Surface]( https://go.microsoft.com/fwlink/?linkid=861998) website.
-    
+- The [Surface]( https://go.microsoft.com/fwlink/?linkid=861998) website.
+
 For more information about deploying Surface firmware updates in Configuration Manager, see:
- - [How to manage Surface driver updates in Configuration Manager]( https://support.microsoft.com/help/4098906).
+- [How to manage Surface driver updates in Configuration Manager]( https://support.microsoft.com/help/4098906).
 
 
 
