@@ -87,20 +87,6 @@ You can use this version of SQL Server with no minimum cumulative update version
 - A primary site  
 - A secondary site  
 
-### SQL Server 2016 SP1: Standard, Enterprise  
-You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
-
-- A central administration site  
-- A primary site  
-- A secondary site  
-
-### SQL Server 2016: Standard, Enterprise  
-You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
-
-- A central administration site  
-- A primary site  
-- A secondary site  
-
 ### SQL Server 2014 SP3: Standard, Enterprise  
 You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
 
@@ -115,44 +101,12 @@ You can use this version of SQL Server with no minimum cumulative update version
 - A primary site  
 - A secondary site
 
-### SQL Server 2014 SP1: Standard, Enterprise  
- You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
-
-- A central administration site  
-- A primary site  
-- A secondary site
-
-### SQL Server 2012 SP4: Standard, Enterprise  
- You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
-
-- A central administration site  
-- A primary site  
-- A secondary site  
-
-### SQL Server 2012 SP3: Standard, Enterprise  
- You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
-
-- A central administration site  
-- A primary site  
-- A secondary site  
-
-### SQL Server 2008 R2 SP3: Standard, Enterprise, Datacenter     
-This version of SQL Server isn't supported. For more information, see [Deprecated support for SQL Server versions as a site database](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#sql-server).  
-
 ### SQL Server 2017 Express   
 You can use this version of SQL Server, with a minimum of [cumulative update version 2](https://support.microsoft.com/help/4052574), beginning with [Configuration Manager version 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710) for the following sites:
 - A secondary site
 <!--SMS.498506-->
 
 ### SQL Server 2016 Express SP2  
-You can use this version of SQL Server with no minimum cumulative update version for the following sites:
-- A secondary site
-
-### SQL Server 2016 Express SP1  
-You can use this version of SQL Server with no minimum cumulative update version for the following sites:
-- A secondary site
-
-### SQL Server 2016 Express
 You can use this version of SQL Server with no minimum cumulative update version for the following sites:
 - A secondary site
 
@@ -166,16 +120,10 @@ You can use this version of SQL Server with no minimum cumulative update version
 
 - A secondary site  
 
-### SQL Server 2014 Express SP1   
- You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
-
-- A secondary site  
-
-### SQL Server 2012 Express SP3  
+### SQL Server 2012 Express SP4  
 You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
 
 - A secondary site  
-
 
 
 ##  <a name="bkmk_SQLConfig"></a> Required configurations for SQL Server  
