@@ -125,15 +125,15 @@ With the increase of employee-owned devices in the enterprise, there’s also an
 
 Windows Information Protection (WIP, formerly enterprise data protection) helps to protect against this potential data leakage, without otherwise interfering with the employee experience. WIP also helps to protect enterprise apps and data against accidental data leaks on enterprise-owned devices and personal devices that employees bring to work. WIP doesn't require changes to your environment or other apps.
 
- Configuration Manager Windows Information Protection configuration items manage the following:
- 
- - The list of apps protected by WIP
- - Enterprise network locations
- - Protection level
- - Encryption settings
+Configuration Manager Windows Information Protection configuration items manage the following:
+
+- The list of apps protected by WIP
+- Enterprise network locations
+- Protection level
+- Encryption settings
   
 
 For information about how to configure WIP with Configuration Manager, see [Protect your enterprise data using Windows Information Protection (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
   
 ## See also  
- [Configuration items for devices managed with the System Center Configuration Manager client](../../compliance/deploy-use/create-configuration-items.md)
+[Configuration items for devices managed with the System Center Configuration Manager client](../../compliance/deploy-use/create-configuration-items.md)

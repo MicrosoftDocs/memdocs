@@ -63,17 +63,17 @@ On the **General** page of the Create Certificate Profile Wizard, specify the fo
 > [!IMPORTANT]  
 >  You must configure at least one trusted CA certificate profile before you can create a SCEP certificate profile.    
 >  
->  If you change any of these values after the certificate is deployed a new certificate is requested:
->  -  Key Storage Provide
->  -  Certificate template name
->  -  Certificate type
->  -  Subject name format
->  -  Subject alternative name
->  -  Certificate validity period
->  -  Key usage
->  -  Key size
->  -  Extended key usage
->  -  Root CA certificate
+> If you change any of these values after the certificate is deployed a new certificate is requested:
+> - Key Storage Provide
+> - Certificate template name
+> - Certificate type
+> - Subject name format
+> - Subject alternative name
+> - Certificate validity period
+> - Key usage
+> - Key size
+> - Extended key usage
+> - Root CA certificate
 
 1. On the **Trusted CA Certificate** page of the Create Certificate Profile Wizard, specify the following information:  
 

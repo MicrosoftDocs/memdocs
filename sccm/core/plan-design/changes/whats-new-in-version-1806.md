@@ -400,11 +400,11 @@ For more information, see [Task sequences and the network access account](/sccm/
  For more information, see [Upgrade Operating System](/sccm/osd/understand/task-sequence-steps#BKMK_UpgradeOS).
 
 #### Revised documentation for task sequence variables
- Two new articles are now available for understanding task sequence variables:  
+Two new articles are now available for understanding task sequence variables:  
 
- - [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables) is a new article that describes the different types of variables, methods to set the variables, and how to access them.  
+- [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables) is a new article that describes the different types of variables, methods to set the variables, and how to access them.  
 
- - [Task sequence variables](/sccm/osd/understand/task-sequence-variables) is a reference for all available task sequence variables. This article combines the previous articles, which separated built-in variables from action variables. 
+- [Task sequence variables](/sccm/osd/understand/task-sequence-variables) is a reference for all available task sequence variables. This article combines the previous articles, which separated built-in variables from action variables. 
 
 
 
@@ -603,9 +603,9 @@ When you're ready to install this version, see [Installing updates for Configura
 > [!TIP]  
 > To install a new site, use a baseline version of Configuration Manager.  
 >
->  Learn more about:    
->   - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites)  
->   - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)
+> Learn more about:    
+> - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites)  
+> - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 For known, significant issues, see the [Release notes](/sccm/core/servers/deploy/install/release-notes).
 

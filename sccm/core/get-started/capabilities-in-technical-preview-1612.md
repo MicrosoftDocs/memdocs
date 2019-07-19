@@ -149,8 +149,8 @@ After you install Technical Preview 1612, you can find **ContentLibraryCleanup.e
 The tool released with this Technical Preview is intended to replace older versions of similar tools released for past Configuration Manager products. Although this tool version will cease to function after March 1st, 2017, new versions will release with future Technical Previews until such time as this tool is released as part of the Current Branch, or a production ready out-of-band release.
 
 ### Requirements  
- - The tool can be run directly on the computer that hosts the distribution point, or remotely from another server. The tool can only be run against a single distribution point at a time.
- - The user account that runs the tool must directly have role-based administration permissions that are equal to a Full Administrator on the Configuration Manager hierarchy.  The tool does not function when user account is granted permissions as a member of a Windows security group that has the Full Administrator permissions.
+- The tool can be run directly on the computer that hosts the distribution point, or remotely from another server. The tool can only be run against a single distribution point at a time.
+- The user account that runs the tool must directly have role-based administration permissions that are equal to a Full Administrator on the Configuration Manager hierarchy.  The tool does not function when user account is granted permissions as a member of a Windows security group that has the Full Administrator permissions.
 
 ### Modes of operation
 The tool can be run in two modes:

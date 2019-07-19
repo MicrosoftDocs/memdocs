@@ -41,8 +41,8 @@ The Configuration Manager client uses peer cache to serve to other clients every
 
 Peer cache doesn't replace the use of other solutions like Windows BranchCache or Delivery Optimization. Peer cache works along with other solutions. These technologies give you more options for extending traditional content deployment solutions such as distribution points. Peer cache is a custom solution with no reliance on BranchCache. If you don't enable or use BranchCache, peer cache still works.  
 
-  > [!Note]  
-  > Starting in version 1802, Windows BranchCache is always enabled on deployments. The setting to **Allow clients to share content with other clients on the same subnet** is removed.<!--SCCMDocs issue 539--> If the distribution point supports it, and it's enabled in client settings, clients use BranchCache. For more information, see [Configure BranchCache](/sccm/core/clients/deploy/about-client-settings#configure-branchcache).<!--SCCMDocs issue 735-->   
+> [!Note]  
+> Starting in version 1802, Windows BranchCache is always enabled on deployments. The setting to **Allow clients to share content with other clients on the same subnet** is removed.<!--SCCMDocs issue 539--> If the distribution point supports it, and it's enabled in client settings, clients use BranchCache. For more information, see [Configure BranchCache](/sccm/core/clients/deploy/about-client-settings#configure-branchcache).<!--SCCMDocs issue 735-->   
 
 
 
@@ -50,11 +50,11 @@ Peer cache doesn't replace the use of other solutions like Windows BranchCache o
 
 To enable peer cache, deploy the [client settings](#bkmk_settings) to a collection. Then members of that collection act as a peer cache source for other clients in the same boundary group.  
 
- - A client that operates as a peer content source submits a list of available cached content to its management point.  
+- A client that operates as a peer content source submits a list of available cached content to its management point.  
 
- - Another client in the same boundary group makes a content location request to the management point. The server returns the list of potential content sources. This list includes each peer cache source that has the content and is online. It also includes the distribution points and other content source locations in that boundary group. For more information, see [Content source priority](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#content-source-priority).  
+- Another client in the same boundary group makes a content location request to the management point. The server returns the list of potential content sources. This list includes each peer cache source that has the content and is online. It also includes the distribution points and other content source locations in that boundary group. For more information, see [Content source priority](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#content-source-priority).  
 
- - As usual, the client that's seeking the content selects one source from the provided list. The client then attempts to get the content.  
+- As usual, the client that's seeking the content selects one source from the provided list. The client then attempts to get the content.  
 
 Starting in version 1806, boundary groups include additional settings to give you more control over content distribution in your environment. For more information, see [Boundary group options for peer downloads](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).<!--1356193-->
 
@@ -68,13 +68,13 @@ Choose only clients best suited as peer cache sources. Evaluate client suitabili
 
 A peer cache source rejects requests for content when it meets any of the following conditions at the time a peer requests content:  
 
-  -  Low battery mode  
+- Low battery mode  
 
-  -  Processor load exceeds 80%  
+- Processor load exceeds 80%  
 
-  -  Disk I/O has an *AvgDiskQueueLength* that exceeds 10  
+- Disk I/O has an *AvgDiskQueueLength* that exceeds 10  
 
-  -  There are no more available connections to the computer  
+- There are no more available connections to the computer  
 
 > [!Tip]  
 > Configure these settings using the client configuration server WMI class for the peer source feature (*SMS_WinPEPeerCacheConfig*) in the Configuration Manager SDK.  
@@ -93,14 +93,14 @@ When the peer cache source rejects a request for the content, the peer cache cli
 
 - A [network access account](/sccm/core/plan-design/hierarchy/accounts#network-access-account) isn't required with the following exception:  
 
-    - Configure a network access account in the site when a peer cache-enabled client runs a task sequence from Software Center, and it reboots to a boot image. When the device is in Windows PE, it uses the network access account to get content from the peer cache source.  
+  - Configure a network access account in the site when a peer cache-enabled client runs a task sequence from Software Center, and it reboots to a boot image. When the device is in Windows PE, it uses the network access account to get content from the peer cache source.  
 
-    - When required, the peer cache source uses the network access account to authenticate download requests from peers. This account requires only domain user permissions for this purpose.  
+  - When required, the peer cache source uses the network access account to authenticate download requests from peers. This account requires only domain user permissions for this purpose.  
 
 - With version 1802 and prior, the client's last heartbeat discovery submission determines the current boundary of a peer cache source. A client that roams to a different boundary group might still be a member of its former boundary group for the purposes of peer cache. This behavior results in a client being offered a peer cache source that isn't in its immediate network location. Don't enable roaming clients as a peer cache source.<!--SCCMDocs issue 641-->  
 
-    > [!Important]  
-    > Starting in version 1806, Configuration Manager is more efficient at determining if a peer cache source has roamed to another location. This behavior makes sure the management point offers it as a content source to clients in the new location and not the old location. If you're using the peer cache feature with roaming peer cache sources, after updating the site to version 1806, also update all peer cache sources to the latest client version. The management point doesn't include these peer cache sources in the list of content locations until they are updated to at least version 1806.<!--SCCMDocs issue 850-->  
+  > [!Important]  
+  > Starting in version 1806, Configuration Manager is more efficient at determining if a peer cache source has roamed to another location. This behavior makes sure the management point offers it as a content source to clients in the new location and not the old location. If you're using the peer cache feature with roaming peer cache sources, after updating the site to version 1806, also update all peer cache sources to the latest client version. The management point doesn't include these peer cache sources in the list of content locations until they are updated to at least version 1806.<!--SCCMDocs issue 850-->  
 
 - Before attempting to download content, the management point first validates that the peer cache source is online.<!--sms.498675--> This validation happens via the "fast channel" for client notification, which uses TCP port 10123.<!--511673-->  
 
@@ -182,11 +182,11 @@ Peer cache relies on the Configuration Manager client cache to share content. Co
 - If necessary, during an OS deployment task sequence, use the **SMSTSPreserveContent** variable to keep content in the client cache. For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables#SMSTSPreserveContent).  
 
 - If necessary, when creating the following software, use the option to **Persist content in the client cache**:  
-    - Applications
-    - Packages
-    - OS images
-    - OS upgrade packages
-    - Boot images
+  - Applications
+  - Packages
+  - OS images
+  - OS upgrade packages
+  - Boot images
 
 
 
