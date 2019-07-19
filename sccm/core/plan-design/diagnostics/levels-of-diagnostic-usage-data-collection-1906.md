@@ -126,7 +126,7 @@ For Configuration Manager version 1906, this level includes the following data:
 
 - ***[New]*** Status and health of the administration service
 
-- ***[New]*** Hash of key site attributes (site ID, SQL broker ID, and Exchange key)
+- ***[New]*** Hash of key site attributes (site ID, SQL broker ID, and site exchange key)
 
 
 ## <a name="bkmk_level2"></a> Level 2 - Enhanced
