@@ -459,7 +459,7 @@ For more information, see [Software update client settings](/sccm/core/clients/d
 
 **Windows 10, version 1903 and later** was added to Microsoft Update as its own product rather than being part of the **Windows 10**  product like earlier versions. This change caused you to do a number of manual steps to ensure that your clients see these updates. We've helped reduce the number of manual steps you have to take for the new product.
 
-When you update to 1906 and have the **Windows 10** product selected for synchronization, the following actions occur automatically:
+When you update to Configuration Manager version 1906 and have the **Windows 10** product selected for synchronization, the following actions occur automatically:
 
 - The **Windows 10, version 1903 and later** product is added for synchronization.
 - Automatic Deployment Rules containing the **Windows 10** product will be updated to include **Windows 10, version 1903 and later**.
