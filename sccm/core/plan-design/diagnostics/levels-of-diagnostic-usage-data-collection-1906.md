@@ -521,7 +521,7 @@ For Configuration Manager version 1906, this level includes the following data:
 
 - Management point performance counter measurements  
 
-- ***[New]*** Aggregated performance statistics of calls made to user service
+- ***[New]*** Aggregated performance statistics of calls made to Software Center endpoints on the management point
 
 ### Miscellaneous  
 
