@@ -19,7 +19,7 @@ ms.collection: M365-identity-device-management
 
 <!--3556017-->
 
-This guide describes how to build a Configuration Manager lab environment in Microsoft Azure. It uses Azure templates to simplify and automate the creation of a lab using Azure resources. This process installs the latest version of the Configuration Manager technical preview branch or the Configuration Manager current branch evaulation. 
+This guide describes how to build a Configuration Manager lab environment in Microsoft Azure. It uses Azure templates to simplify and automate the creation of a lab using Azure resources. Two azure templates are provided. Configuration Manager technical preview Azure Template installs the latest version of the Configuration Manager technical preview branch. Configuration Management current branch Azure template installs the evaluation of the latest version of Configuration Manager current branch. 
 
 For more information on Configuration Manager current branch, see [Configuration Manager on Azure](/sccm/core/understand/configuration-manager-on-azure).
 
