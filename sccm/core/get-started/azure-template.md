@@ -39,7 +39,7 @@ This process requires an Azure subscription in which you can create the followin
 
 ## Process
 
-1. Go to the [Configuration Manager Technical Preview template](https://azure.microsoft.com/resources/templates/sccm-technicalpreview/) or [Configuration Manager current branch evaluation](https://azure.microsoft.com/en-us/resources/templates/sccm-currentbranch/).  
+1. Go to the [Configuration Manager Technical Preview template](https://azure.microsoft.com/resources/templates/sccm-technicalpreview/) or [Configuration Manager current branch template](https://azure.microsoft.com/en-us/resources/templates/sccm-currentbranch/).  
 
 2. Select **Deploy to Azure**, which opens the Azure portal.  
 
