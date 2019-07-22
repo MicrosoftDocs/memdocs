@@ -103,7 +103,7 @@ The prefix that you specified in the deployment template is the VM name prefix. 
 
 ### `<prefix>PS1`
 
-- Standard_B2s, which has two CPU and 8 GB of memory
+- Standard_B2ms, which has two CPU and 8 GB of memory
 - Windows Server 2016 Datacenter edition
 - SQL Server
 - Windows 10 ADK with Windows PE 
@@ -117,7 +117,7 @@ The prefix that you specified in the deployment template is the VM name prefix. 
 
 ### `<prefix>DPMP`
 
-- Standard_B2ms, which has two CPU and 4 GB of memory
+- Standard_B2s, which has two CPU and 4 GB of memory
 - Windows Server 2019 Datacenter edition
 - Distribution point
 - Management point
