@@ -2,7 +2,7 @@
 title: Create a lab in Azure
 titleSuffix: Configuration Manager
 description: Automate the creation of a Configuration Manager technical preview lab or current branch evaluation lab using Azure templates
-ms.date: 03/18/2019
+ms.date: 07/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -19,9 +19,12 @@ ms.collection: M365-identity-device-management
 
 <!--3556017-->
 
-This guide describes how to build a Configuration Manager lab environment in Microsoft Azure. It uses Azure templates to simplify and automate the creation of a lab using Azure resources. Two azure templates are provided. Configuration Manager technical preview Azure Template installs the latest version of the Configuration Manager technical preview branch. Configuration Management current branch Azure template installs the evaluation of the latest version of Configuration Manager current branch. 
+This guide describes how to build a Configuration Manager lab environment in Microsoft Azure. It uses Azure templates to simplify and automate the creation of a lab using Azure resources. Two Azure templates are provided: 
 
-For more information on Configuration Manager current branch, see [Configuration Manager on Azure](/sccm/core/understand/configuration-manager-on-azure).
+- Configuration Manager technical preview Azure template installs the latest version of the Configuration Manager technical preview branch.
+- Configuration Manager current branch Azure template installs the evaluation of the latest version of Configuration Manager current branch. 
+
+For more information, see [Configuration Manager on Azure](/sccm/core/understand/configuration-manager-on-azure).
 
 
 
@@ -39,7 +42,7 @@ This process requires an Azure subscription in which you can create the followin
 
 ## Process
 
-1. Go to the [Configuration Manager Technical Preview template](https://azure.microsoft.com/resources/templates/sccm-technicalpreview/) or [Configuration Manager current branch template](https://azure.microsoft.com/en-us/resources/templates/sccm-currentbranch/).  
+1. Go to the [Configuration Manager technical preview template](https://azure.microsoft.com/resources/templates/sccm-technicalpreview/) or [Configuration Manager current branch template](https://azure.microsoft.com/resources/templates/sccm-currentbranch/).  
 
 2. Select **Deploy to Azure**, which opens the Azure portal.  
 
@@ -132,4 +135,4 @@ The prefix that you specified in the deployment template is the VM name prefix. 
 
 - Only for Configuration Manager current branch evaluation template
 - Windows 10
-- Configuration Management client
+- Configuration Manager client
