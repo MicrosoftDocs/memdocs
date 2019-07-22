@@ -32,19 +32,37 @@ The [Computer restart client settings](/sccm/core/clients/deploy/about-client-se
 
 ## Restart notification types
 
-When a restart is required, the end user is is given notification of the upcoming restart. There are three types of notifications users can receive:
+When a restart is required, the end user is is given notification of the upcoming restart. There are three general notifications users can receive:
 
-**Toast notification** showing time remaining before a restart is enforced.
+**Toast notification** informing you a restart is needed. The information in the toast notification can be different depending on which version of Configuration Manager you are running. This type of notification is native to the Windows OS and you may also see third party software using this type of notification.
 
-![Toast notification of pending restart](media/3976435-toast-restart-countown.png)
+![Toast notification of pending restart](media/3976435-toast-restart-countdown.png)
 
-Software Center notification with a snooze button showing time remaining before a restart is enforced.
+Software Center notification with a snooze option showing time remaining before a restart is enforced. Your snooze option may look different depending on your version of Configuration Manager.
 
-![Pending restart Software Center notification with snooze button](media/3976435-snooze-restart-countown.png)
+![Pending restart Software Center notification with snooze button](media/3976435-snooze-restart-countdown.png)
 
 Software Center final countdown notification that can't be closed by the user. The snooze button is grayed out.
 
-![Software Center final countdown notification](media/3976435-final-restart-countown.png)
+![Software Center final countdown notification](media/3976435-final-restart-countdown.png)
+
+## Device restart notifications in version 1902
+
+<!--3555947-->
+Sometimes users don't see the Windows toast notification about a restart or required deployment. Then they don't see the experience to snooze the reminder. This behavior can lead to a poor user experience when the client reaches a deadline.
+
+Starting in version 1902, when software changes are required or deployments need a restart, you have the option of using a more intrusive dialog window.
+
+In the [Computer Restart](/sccm/core/clients/deploy/about-client-settings#computer-restart) group of client settings, enable the following option: **When a deployment requires a restart, show a dialog window to the user instead of a toast notification**.  
+
+Configuring this client setting changes the user experience for all required deployments that require a restart from the following toast notification:
+
+![Toast notification that Restart required](media/3555947-restart-toast.png)  
+
+To the following dialog window:
+
+![Dialog window to Restart your computer](media/3555947-restart-dialog.png)
+
 
 ## Device restart notifications starting in version 1906
 <!--3976435-->
@@ -53,8 +71,10 @@ Some admins prefer frequent restart notifications and a short time frame for all
 
 
 
-## Device restart notifications in version 1902
 
+
+
+## Log files
 
 
 ## Next steps
