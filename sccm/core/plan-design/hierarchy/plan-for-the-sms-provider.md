@@ -269,6 +269,8 @@ The **SMS Provider** appears as a role with an option to allow communication ove
 
 - The server that hosts the SMS Provider requires .NET 4.5.2 or later.  
 
+    - Starting in version 1902, this prerequisite is version .NET 4.5 or later.  
+
 - Enable the SMS Provider to use a certificate. Use one of the following options:  
 
     - Enable [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http) (recommended)  
