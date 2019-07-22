@@ -145,7 +145,7 @@ To change these settings, use the following procedure:
 
 ### Windows settings
 
-Configuration Manager sets the following Windows settings under `Microsoft\Windows\DataCollection`:
+Configuration Manager sets the following Windows settings under `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection`:
 
 | Policy   | Value  |
 |----------|--------|
