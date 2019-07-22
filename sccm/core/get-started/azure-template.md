@@ -83,8 +83,6 @@ To connect to the VMs, first get from the Azure portal the public IP addresses f
 ## Azure VM info
 
 All Three VMs have the following specifications:
-- Standard_D2s_v3, which has two CPU cores and 8 GB of memory  
-- Windows Server 2016 Datacenter edition
 - 150 GB of disk space
 - Both a public and private IP address. The public IPs are in a network security group that only allows remote desktop connections on TCP port 3389. 
 
@@ -93,7 +91,9 @@ The prefix that you specified in the deployment template is the VM name prefix. 
 
 ### `<prefix>DC`
 
-Active Directory domain controller
+- Active Directory domain controller
+- Standard_B2s, which has two CPU and 4 GB of memory
+- Windows Server 2019 Datacenter edition
 
 #### Windows features and roles
 - Active Directory Domain Services (ADDS)
@@ -103,6 +103,8 @@ Active Directory domain controller
 
 ### `<prefix>PS1`
 
+- Standard_B2s, which has two CPU and 8 GB of memory
+- Windows Server 2016 Datacenter edition
 - SQL Server
 - Windows 10 ADK with Windows PE 
 - Configuration Manager primary site
@@ -115,6 +117,8 @@ Active Directory domain controller
 
 ### `<prefix>DPMP`
 
+- Standard_B2ms, which has two CPU and 4 GB of memory
+- Windows Server 2019 Datacenter edition
 - Distribution point
 - Management point
 
