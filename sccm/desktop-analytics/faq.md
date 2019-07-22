@@ -2,7 +2,7 @@
 title: FAQ for Desktop Analytics
 titleSuffix: Configuration Manager
 description: Frequently asked questions for Desktop Analytics.
-ms.date: 07/19/2019
+ms.date: 07/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -26,15 +26,14 @@ The vast majority of customers that can benefit from the Desktop Analytics workf
 
 ### It's been over 72 hours and the portal is still processing data, what next? 
 
-When you first set up Desktop Analytics, the reports in Configuration Manager and the Desktop Analytics portal may not show complete data right away and it can take 2-3 days for the service to process the data. If it's been over 72 hours and the portal is still processing data, here are some steps you can follow:
+When you first set up Desktop Analytics, the reports in Configuration Manager and the Desktop Analytics portal may not show complete data right away. It can take 2-3 days for the service to process the data. If it's been over 72 hours, and the portal is still processing data, follow these steps:
 
-* Use the [**Connection Health** dashboard](/sccm/desktop-analytics/monitor-connection-health) to confirm 
-active devices are properly configured. This dashboard does not update in real time
-* Ensure  devices are sending diagnostic data to the Desktop Analytics service. See [Enable data Sharing](/sccm/desktop-analytics/enable-data-sharing)
-* Provision [Azure AD applications](/sccm/desktop-analytics/troubleshooting#bkmk_AzureADApps) on your Azure AD
-* Check devices that have been associated with your organization in the last 7 days. In the [Desktop Analytics portal](https://aka.ms/desktopanalytics), go to the **Connected servcies** pane. Select **Enroll deviceS**, and **View recent data**
+- To confirm that active devices are properly configured, use the [Connection Health dashboard](/sccm/desktop-analytics/monitor-connection-health). This dashboard doesn't update in real time.
+- Make sure devices are sending diagnostic data to the Desktop Analytics service. For more information, see [Enable data sharing](/sccm/desktop-analytics/enable-data-sharing).
+- Provision [Azure AD applications](/sccm/desktop-analytics/troubleshooting#bkmk_AzureADApps) on your Azure AD.
+- Check devices that you've associated with your organization in the last seven days. In the [Desktop Analytics portal](https://aka.ms/desktopanalytics), go to the **Connected servcies** pane. Select **Enroll deviceS**, and **View recent data**
 
-If devices are properly configured and you are still not seeing data in your workspace, [contact support](https://support.microsoft.com/en-us/hub/4343728/support-for-business) for help
+If devices are properly configured, and you're still not seeing data in your workspace, [contact Microsoft support](https://support.microsoft.com/hub/4343728/support-for-business).
 
 
 ## Windows upgrade
