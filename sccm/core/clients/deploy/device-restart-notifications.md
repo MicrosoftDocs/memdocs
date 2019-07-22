@@ -22,7 +22,7 @@ The notifications a user receives for a pending device restart can vary dependin
 >[!NOTE]
 >This article focuses on client settings found in Configuration Manager version 1902 and version 1906.
 
-## Understanding restart notification types
+## Deployment types for restart notifications
 
 The [Computer restart client settings](/sccm/core/clients/deploy/about-client-settings#computer-restart) change the user experience for all required deployments that require a restart of the following types:
 
@@ -30,13 +30,32 @@ The [Computer restart client settings](/sccm/core/clients/deploy/about-client-se
 - [Task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS)
 - [Software update](/sccm/sum/deploy-use/deploy-software-updates)
 
-There are three types of notifications users can receive.
+## Restart notification types
+
+When a restart is required, the end user is is given notification of the upcoming restart. There are three types of notifications users can receive:
+
+**Toast notification** showing time remaining before a restart is enforced.
+
+![Toast notification of pending restart](media/3976435-toast-restart-countown.png)
+
+Software Center notification with a snooze button showing time remaining before a restart is enforced.
+
+![Pending restart Software Center notification with snooze button](media/3976435-snooze-restart-countown.png)
+
+Software Center final countdown notification that can't be closed by the user. The snooze button is grayed out.
+
+![Software Center final countdown notification](media/3976435-final-restart-countown.png)
+
+## Device restart notifications starting in version 1906
+<!--3976435-->
+Some admins prefer frequent restart notifications and a short time frame for allowing restarts to be postponed. Other admins allow users to postpone a restart for longer periods of time and want users to be notified of the pending restart infrequently. Configuration Manager version 1906 gives an admin additional control over the timing and frequency of restart notifications.
+
+
+
 
 ## Device restart notifications in version 1902
 
-## Device restart notifications starting in version 1906
 
-Some admins prefer frequent restart notifications and a short time frame for allowing restarts to be postponed. Other admins allow users to postpone a restart for longer periods of time and want users to be notified of the pending restart infrequently. Configuration Manager version 1906 gives an admin additional control over the timing and frequency of restart notifications.
 
 ## Next steps
 
