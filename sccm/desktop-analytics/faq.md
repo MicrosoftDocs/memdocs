@@ -24,6 +24,19 @@ ms.collection: M365-identity-device-management
 
 The vast majority of customers that can benefit from the Desktop Analytics workflow use Configuration Manager to deploy Windows. We know Intune customers love the additional insights from Analytics data, and we're working on ways to share insights with them as well.
 
+### It's been over 72 hours and the portal is still processing data, what next? 
+
+When you first set up Desktop Analytics, the reports in Configuration Manager and the Desktop Analytics portal may not show complete data right away and it can take 2-3 days for the service to process the data. If it's been over 72 hours and the portal is still processing data, here are some steps you can follow:
+
+* Use the [**Connection Health** dashboard](/sccm/desktop-analytics/monitor-connection-health) to confirm 
+active devices are properly configured. This dashboard does not update in real time
+* Ensure  devices are sending diagnostic data to the Desktop Analytics service. See [Enable data Sharing](/sccm/desktop-analytics/enable-data-sharing)
+* Provision [Azure AD applications](/sccm/desktop-analytics/troubleshooting#bkmk_AzureADApps) on your Azure AD
+* Check devices that have been associated with your organization in the last 7 days. In the [Desktop Analytics portal](https://aka.ms/desktopanalytics), go to the **Connected servcies** pane. Select **Enroll deviceS**, and **View recent data**
+
+If devices are properly configured and you are still not seeing data in your workspace, [contact support](https://support.microsoft.com/en-us/hub/4343728/support-for-business) for help
+
+
 ## Windows upgrade
 
 ### Can I upgrade Windows and change architecture?
