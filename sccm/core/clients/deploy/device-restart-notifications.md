@@ -20,7 +20,7 @@ ms.collection: M365-identity-device-management
 The notifications a user receives for a pending device restart can vary depending on [Computer restart client settings](/sccm/core/clients/deploy/about-client-settings#computer-restart) and which version of Configuration Manager is being used. This article helps admins determine what the user experience is for pending device restart notifications.
 
 >[!NOTE]
->- This article focuses on client settings found in Configuration Manager version 1902 and version 1906.
+> - This article focuses on client settings found in Configuration Manager version 1902 and version 1906.
 > - These notifications don't apply when a deployment is marked **Available**  and not **Required**. Users see optional reboot notifications for **Available** deployments. For more information, see [Approval settings](/sccm/apps/deploy-use/deploy-applications#bkmk_approval).
 
 ## Deployment types for restart notifications
@@ -37,7 +37,7 @@ When a restart is required, the end user is given notification of the upcoming r
 
 **Toast notification** informing you a restart is needed. The information in the toast notification can be different depending on which version of Configuration Manager you're running. This type of notification is native to the Windows OS and you may also see third-party software using this type of notification.
 
-![Toast notification of pending restart](media/3976435-toast-restart-countdown.png)
+![Toast notification of pending restart](media/3555947-restart-toast.png)
 
 Software Center notification with a snooze option showing time remaining before a restart is enforced. The message may be different depending on your version of Configuration Manager.
 
@@ -62,22 +62,22 @@ In the [Computer Restart](/sccm/core/clients/deploy/about-client-settings#comput
 
 Configuring this client setting changes the user experience for all required deployments that require a restart from toast notifications:
 
-![Toast notification that Restart required](media/3555947-restart-toast.png)  
+![Toast notification that Restart required](media/3555947-restart-toast-initial.png)  
 
 To the more intrusive Software Center dialog window:
 
-![Dialog window to Restart your computer](media/3555947-restart-dialog.png)
+![Dialog window to restart your computer](media/3976435-proactive-user-restart-notification.png)
 
 If the user didn't restart their device after the installation, then they'll get a notification as a reminder. This temporary reminder will appear to the user based on the client setting: **Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes)**. This setting is the overall time the user has to restart the machine before a restart is forced.
 
 - Temporary notification when you use toast notifications:
-![Toast notification of pending restart](media/3976435-toast-restart-countdown.png)
+![Toast notification of pending restart](media/3555947-restart-toast.png)
 - Temporary notification when you use Software Center dialog window, not toast:
-![Pending restart Software Center notification with snooze button](media/3976435-snooze-restart-countdown.png)
+![Pending restart Software Center notification with snooze button](media/3555947-1902-hide-notification.png)
 
 If the user doesn't restart after the temporary notification, they'll be given the final countdown notification that they can't close. The timing of when the final notification appears is based on the client setting: **Display a dialog box that the user cannot close, which displays the countdown interval before the user is logged off or the computer restarts (minutes)**. For instance, if the setting is 60, then an hour before a reboot is forced, the final notification appears to the user:
 
-![Software Center final countdown notification](media/3976435-final-restart-countdown.png)
+![Software Center final countdown notification](media/3555947-1902-final-countdown.png)
 
 The following settings must be shorter in duration than the shortest [maintenance window](/sccm/core/clients/manage/collections/use-maintenance-windows) applied to the computer:
 
@@ -126,7 +126,7 @@ Once the deadline for the software is reached, the [Notifications when required 
 
 ## Log files
 
-Use the **RebootCoordinator.log** for troubleshooting device restarts. You may also have to use additional client [log files](/sccm/core/plan-design/hierarchy/log-files) based on the type of deployment used.
+Use the **RebootCoordinator.log** and **SCNotify.log** for troubleshooting device restarts. You may also have to use additional client [log files](/sccm/core/plan-design/hierarchy/log-files) based on the type of deployment used.
 
 ## Next steps
 
