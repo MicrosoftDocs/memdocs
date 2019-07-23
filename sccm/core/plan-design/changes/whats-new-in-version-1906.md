@@ -114,6 +114,15 @@ For more information, see [Create collections](/sccm/core/clients/manage/collect
 
 ## <a name="bkmk_da"></a> Desktop Analytics
 
+### Readiness insights for desktop apps
+
+<!-- 4021225 -->
+
+You can now get more detailed insights for your desktop applications including line-of-business apps. The former App Health Analyzer toolkit is now integrated with the Configuration Manager client. This integration simplifies deployment and manageability of app readiness insights in the Desktop Analytics portal.
+
+<!-- For more information, see <DAdocs> -->
+
+
 ### DALogsCollector tool
 
 <!--4622989-->
