@@ -2,7 +2,7 @@
 title: Plan for cloud management gateway
 titleSuffix: Configuration Manager
 description: Plan and design the cloud management gateway (CMG) to simplify management of internet-based clients.
-ms.date: 06/19/2019
+ms.date: 07/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -42,7 +42,7 @@ There are several scenarios for which a CMG is beneficial. The following scenari
     - Inventory and client status
     - Compliance settings
     - Software distribution to the device
-    - Windows 10 in-place upgrade task sequence (as of version 1802)
+    - Windows 10 in-place upgrade task sequence
 
 - Manage traditional Windows 10 clients with modern identity, either hybrid or pure cloud domain-joined with Azure Active Directory (Azure AD). Clients use Azure AD to authenticate rather than PKI certificates. Using Azure AD is simpler to set up, configure and maintain than more complex PKI systems. Management activities are the same as the first scenario, as well as:  
     - Software distribution to the user  
@@ -166,14 +166,12 @@ Similarly, as Paris-based clients roam onto the internet, they communicate with 
 
 - **Other certificates** may be required, depending upon your client OS version and authentication model. For more information, see [CMG certificates](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway).  
 
-    - In version 1802, you must configure all CMG-enabled [**management points to use HTTPS**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps).  
-
-    - Starting in version 1806, when using the site option to **Use Configuration Manager-generated certificates for HTTP site systems**, the management point can be HTTP. For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).  
+    Starting in version 1806, when using the site option to **Use Configuration Manager-generated certificates for HTTP site systems**, the management point can be HTTP. For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).
 
 - In Configuration Manager version 1810 or earlier, if using the Azure classic deployment method, you must use an [**Azure management certificate**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_azuremgmt).  
 
     > [!TIP]  
-    > Starting with Configuration Manager version 1802, use the **Azure Resource Manager** deployment model. It doesn't require this management certificate.
+    > Use the **Azure Resource Manager** deployment model. It doesn't require this management certificate.
     >
     > The classic deployment method is deprecated as of version 1810.  
 
@@ -190,7 +188,7 @@ Similarly, as Paris-based clients roam onto the internet, they communicate with 
 
 - Software update points using a network load balancer don't work with CMG. <!--505311-->  
 
-- Starting in version 1802, CMG deployments using the Azure Resource Model don't enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [available Azure services in Azure CSP](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services)  
+- CMG deployments using the Azure Resource Model don't enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [available Azure services in Azure CSP](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services)  
 
 ### Support for Configuration Manager features
 
@@ -207,9 +205,9 @@ The following table lists CMG support for Configuration Manager features:
 | Client install<br>(with Azure AD integration)     | ![Supported](media/green_check.png) |
 | Software distribution (device-targeted)     | ![Supported](media/green_check.png) |
 | Software distribution (user-targeted, required)<br>(with Azure AD integration)     | ![Supported](media/green_check.png) |
-| Software distribution (user-targeted, available)<br>([all requirements](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![Supported](media/green_check.png)  (1802) |
-| Windows 10 in-place upgrade task sequence      | ![Supported](media/green_check.png)  (1802) |
-| Task sequences that aren't using boot images and are deployed with an option: **Download all content locally before starting task sequence**      | ![Supported](media/green_check.png)  (1802) |
+| Software distribution (user-targeted, available)<br>([all requirements](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![Supported](media/green_check.png) |
+| Windows 10 in-place upgrade task sequence      | ![Supported](media/green_check.png) |
+| Task sequences that aren't using boot images and are deployed with an option: **Download all content locally before starting task sequence**      | ![Supported](media/green_check.png) |
 | CMPivot     | ![Supported](media/green_check.png)  (1806) |
 | Any other task sequence scenario     | ![Not supported](media/Red_X.png) |
 | Client push     | ![Not supported](media/Red_X.png) |
@@ -266,6 +264,8 @@ CMG uses the following Azure components, which incur charges to the Azure subscr
 
     > [!NOTE]  
     > Performing other actions, such as deploying software updates or applications, increases the amount of outbound data transfer from Azure.
+
+- Misconfiguration of the CMG option to **Verify client certificate revocation** can cause additional traffic from clients to the CMG. This additional traffic can increase the Azure egress data, which can increase your Azure costs.<!-- SCCMDocs#1434 --> For more information, see [Publish the certificate revocation list](https://docs.microsoft.com/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway#bkmk_crl).  
 
 ### Content storage
 
