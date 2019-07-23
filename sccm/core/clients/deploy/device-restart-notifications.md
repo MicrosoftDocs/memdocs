@@ -64,7 +64,7 @@ Configuring this client setting changes the user experience for all required dep
 
 ![Toast notification that Restart required](media/3555947-restart-toast.png)  
 
-To the the more intrusive Software Center dialog window:
+To the more intrusive Software Center dialog window:
 
 ![Dialog window to Restart your computer](media/3555947-restart-dialog.png)
 
@@ -95,12 +95,12 @@ If the setting **When a deployment requires a restart, show a dialog window to t
 
 - **No** - Toast notifications are used until the final countdown notification is reached.
 - **Yes** - A Software Center notification is seen.
-  - If the restart is greater than 24 hours away, an estimated restart time is seen. The timing of this notification is based on the setting **Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes)**.
+  - If the restart is greater than 24 hours away, an estimated restart time is seen. The timing of this notification is based on the setting: **Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes)**.
      ![Restart time is greater than 24 hours away](media/3976435-notification-greater-than-24-hours.png)
-  - If the restart is less than 24 hours away, a progress bar is seen. The timing of this notification is based on the setting **Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes)**
+  - If the restart is less than 24 hours away, a progress bar is seen. The timing of this notification is based on the setting: **Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes)**
      ![Restart time is less than 24 hours away](media/3976435-notification-less-than-24-hours.png)
 
-If the user selects the **Snooze** button, another temporary notification will occur after the snooze period elapses, assuming they haven't yet reached the final countdown. The timing of the next notification is based on the setting **Specify the snooze duration for computer restart countdown notifications (hours)**. If the user selects **Snooze** and your snooze interval is one hour, then the user will be notified again in 60 minutes assuming they haven't yet reached the final countdown.
+If the user selects the **Snooze** button, another temporary notification will occur after the snooze period elapses, assuming they haven't yet reached the final countdown. The timing of the next notification is based on the setting: **Specify the snooze duration for computer restart countdown notifications (hours)**. If the user selects **Snooze** and your snooze interval is one hour, then the user will be notified again in 60 minutes assuming they haven't yet reached the final countdown.
 
 When the final countdown is reached, the user is given a notification they can't close. The progress bar is in red and the user can't hit **Snooze**.
 
@@ -108,7 +108,7 @@ When the final countdown is reached, the user is given a notification they can't
 
 ### The user proactively installs before the deadline
 
-If the user proactively installs required software that needs restart before the deadline occurs, they will see a different notification. For more information about configuring these settings, see [Deployment **User Experience** settings](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy-ux) and [User notifications for required deployments](/sccm/apps/deploy-use/deploy-applications#bkmk_notify). When toast notifications are used, the 
+If the user proactively installs required software that needs restart before the deadline occurs, they'll see a different notification. For more information about configuring these settings, see [Deployment **User Experience** settings](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy-ux) and [User notifications for required deployments](/sccm/apps/deploy-use/deploy-applications#bkmk_notify). When toast notifications are used, the 
 
 The following notification occurs when both the user experience setting allows notifications and you don't use toast notifications for the deployment:
 
