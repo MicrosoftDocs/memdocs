@@ -187,6 +187,9 @@ Provision this certificate outside of the context of Configuration Manager. For 
 
 - Starting in version 1806, when using the site option to **Use Configuration Manager-generated certificates for HTTP site systems**, the management point can be HTTP. For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).
 
+> [!Tip]  
+> If you aren't using Enhanced HTTP, and your environment has multiple management points, you don't have to HTTPS-enable them all for CMG. Configure the CMG-enabled management points as **Internet only**. Then your on-premises clients don't try to use them.<!-- SCCMDocs#1676 -->
+
 ### Management point client connection mode summary
 
 These tables summarize whether the management point requires HTTP or HTTPS, depending upon the type of client and site version.
