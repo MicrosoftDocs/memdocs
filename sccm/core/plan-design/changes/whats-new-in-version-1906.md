@@ -120,7 +120,7 @@ For more information, see [Create collections](/sccm/core/clients/manage/collect
 
 You can now get more detailed insights for your desktop applications including line-of-business apps. The former App Health Analyzer toolkit is now integrated with the Configuration Manager client. This integration simplifies deployment and manageability of app readiness insights in the Desktop Analytics portal.
 
-<!-- For more information, see <DAdocs> -->
+For more information, see [Compatibility assessment in Desktop Analytics](/sccm/desktop-analytics/compat-assessment#advanced-insights).
 
 
 ### DALogsCollector tool
