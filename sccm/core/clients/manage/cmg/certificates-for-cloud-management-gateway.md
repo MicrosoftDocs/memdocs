@@ -5,7 +5,7 @@ description: Learn about the different digital certificates to use with the clou
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 06/17/2019
+ms.date: 07/19/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -42,9 +42,9 @@ Certificates for the cloud management gateway support the following configuratio
 
 - Key storage providers for certificate private keys. For more information, see [CNG certificates overview](/sccm/core/plan-design/network/cng-certificates-overview).  
 
-- Starting in version 1802, when you configure Windows with the following policy: **System cryptography: Use FIPS-compliant algorithms for encryption, hashing, and signing**  
+- When you configure Windows with the following policy: **System cryptography: Use FIPS-compliant algorithms for encryption, hashing, and signing**  
 
-- Starting in version 1802, support for **TLS 1.2**. For more information, see [Cryptographic controls technical reference](/sccm/core/plan-design/security/cryptographic-controls-technical-reference#about-ssl-vulnerabilities).  
+- **TLS 1.2**. For more information, see [How to enable TLS 1.2](/sccm/core/plan-design/security/enable-tls-1-2).  
 
 
 ## <a name="bkmk_serverauth"></a> CMG server authentication certificate
@@ -56,7 +56,7 @@ You supply this certificate when creating the CMG in the Configuration Manager c
 The CMG creates an HTTPS service to which internet-based clients connect. The server requires a server authentication certificate to build the secure channel. Acquire a certificate for this purpose from a public provider, or issue it from your public key infrastructure (PKI). For more information, see [CMG trusted root certificate to clients](#bkmk_cmgroot).
 
 > [!NOTE]
-> Starting in version 1802, the CMG server authentication certificate supports wildcards. Some certificate authorities issue certificates using a wildcard character for the hostname. For example, `*.contoso.com`. Some organizations use wildcard certificates to simplify their PKI and reduce maintenance costs.<!--491233-->  
+> The CMG server authentication certificate supports wildcards. Some certificate authorities issue certificates using a wildcard character for the hostname. For example, `*.contoso.com`. Some organizations use wildcard certificates to simplify their PKI and reduce maintenance costs.<!--491233-->  
 >
 > For more information on how to use a wildcard certificate with a CMG, see [Set up a CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#set-up-a-cmg).<!--SCCMDocs issue #565-->  
 
@@ -139,10 +139,12 @@ The CMG connection point requires this certificate to securely forward client re
 
 You supply this certificate when creating the CMG in the Configuration Manager console.
 
-The CMG must trust the client authentication certificates. To accomplish this trust, provide the trusted root certificate chain. You can specify two trusted root CAs, and four intermediate (subordinate) CAs. Make sure to add all certificates in the trust chain. For example, if the client authentication certificate is issued by an intermediate CA, add both the intermediate and root CA certificates.
+The CMG must trust the client authentication certificates. To accomplish this trust, provide the trusted root certificate chain. Make sure to add all certificates in the trust chain. For example, if the client authentication certificate is issued by an intermediate CA, add both the intermediate and root CA certificates.
 
 > [!Note]  
 > Starting in version 1806, when you create a CMG, you're no longer required to provide a trusted root certificate on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard. If you're using PKI client authentication certificates, then you still must add a trusted root certificate to the CMG.<!--SCCMDocs-pr issue #2872 SCCMDocs issue #1319-->
+>
+> In version 1902 and earlier, you can only add two trusted root CAs and four intermediate (subordinate) CAs.
 
 #### Export the client certificate's trusted root
 
@@ -181,8 +183,6 @@ After issuing a client authentication certificate to a computer, use this proces
 
 Provision this certificate outside of the context of Configuration Manager. For example, use Active Directory Certificate Services and group policy to issue a web server certificate. For more information, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements) and [Deploy the web server certificate for site systems that run IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).
 
-- In version 1710, when managing traditional clients with on-premises identity using a client authentication certificate, this certificate is recommended but not required. When managing Windows 10 clients joined to Azure AD, this certificate is required for management points.
-
 - In version 1802, this certificate is required in all scenarios. Only management points that you enable for CMG must be HTTPS. This change in behavior provides better support for Azure AD token-based authentication.  
 
 - Starting in version 1806, when using the site option to **Use Configuration Manager-generated certificates for HTTP site systems**, the management point can be HTTP. For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).
@@ -195,12 +195,12 @@ These tables summarize whether the management point requires HTTP or HTTPS, depe
 
 Configure an on-premises management point to allow connections from the CMG with the following client connection mode:
 
-| Type of client   | 1710        | 1802        | 1806        | 1810        |
-|------------------|-------------|-------------|-------------|-------------|
-| Workgroup        | HTTP, HTTPS | HTTPS       | E-HTTP<sup>[Note 1](#bkmk_note1)</sup>, HTTPS | E-HTTP<sup>[Note 1](#bkmk_note1)</sup>, HTTPS |
-| AD domain-joined | HTTP, HTTPS | HTTPS       | E-HTTP<sup>[Note 1](#bkmk_note1)</sup>, HTTPS | E-HTTP<sup>[Note 1](#bkmk_note1)</sup>, HTTPS |
-| Azure AD-joined  | HTTPS       | HTTPS       | E-HTTP, HTTPS | E-HTTP, HTTPS |
-| Hybrid-joined    | HTTP, HTTPS | HTTPS       | E-HTTP, HTTPS | E-HTTP, HTTPS |
+| Type of client   | 1802  | 1806        | 1810        |
+|------------------|-------|-------------|-------------|
+| Workgroup        | HTTPS | E-HTTP<sup>[Note 1](#bkmk_note1)</sup>, HTTPS | E-HTTP<sup>[Note 1](#bkmk_note1)</sup>, HTTPS |
+| AD domain-joined | HTTPS | E-HTTP<sup>[Note 1](#bkmk_note1)</sup>, HTTPS | E-HTTP<sup>[Note 1](#bkmk_note1)</sup>, HTTPS |
+| Azure AD-joined  | HTTPS | E-HTTP, HTTPS | E-HTTP, HTTPS |
+| Hybrid-joined    | HTTPS | E-HTTP, HTTPS | E-HTTP, HTTPS |
 
 <a name="bkmk_note1"></a>
 
@@ -211,12 +211,12 @@ Configure an on-premises management point to allow connections from the CMG with
 
 Configure an on-premises management point with the following client connection mode:
 
-| Type of client   | 1710        | 1802        | 1806        | 1810        |
-|------------------|-------------|-------------|-------------|-------------|
-| Workgroup        | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS |
-| AD domain-joined | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS |
-| Azure AD-joined  | HTTPS       | HTTPS       | HTTPS       | HTTPS       |
-| Hybrid-joined    | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS |
+| Type of client   | 1802        | 1806        | 1810        |
+|------------------|-------------|-------------|-------------|
+| Workgroup        | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS |
+| AD domain-joined | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS |
+| Azure AD-joined  | HTTPS       | HTTPS       | HTTPS       |
+| Hybrid-joined    | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS |
 
 > [!Note]  
 > In version 1806, AD domain-joined clients support both device- and user-centric scenarios communicating with an HTTP or HTTPS management point.  
