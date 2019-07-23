@@ -644,6 +644,8 @@
         href: clients/deploy/configure-client-settings.md
       - name: About client settings
         href: clients/deploy/about-client-settings.md
+    - name: Device restart notifications
+      href: clients/deploy/device-restart-notifications.md        
     - name: How to configure Wake on LAN
       href: clients/deploy/configure-wake-on-lan.md
     - name: Deploy clients to Windows computers
