@@ -397,7 +397,7 @@ End users will now be reminded more frequently of a pending restart with intermi
 
 Additionally, the maximum value for **Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes)** increased from 1440 minutes (24 hours) to 20160 minutes (two weeks).
 
-<!--For more information, see [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center#restart-required) and [About client settings](/sccm/core/clients/deploy/about-client-settings#computer-restart). -->
+For more information, see [Device restart notifications](/sccm/core/clients/deploy/device-restart-notifications) and [About client settings](/sccm/core/clients/deploy/about-client-settings#computer-restart).
 
 ### Direct link to custom tabs in Software Center
 <!--4655176-->
