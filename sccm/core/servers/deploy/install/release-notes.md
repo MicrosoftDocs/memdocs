@@ -37,6 +37,20 @@ For information about the new features introduced with different versions, see t
 
 ## Set up and upgrade  
 
+### Setup prerequisite warning on domain functional level on Server 2019
+
+<!-- 4904376 -->
+
+*Applies to version 1906*
+
+When installing the update for version 1906 in an environment with domain controllers running Windows Server 2019, the prerequisite check for domain functional level returns the following warning:
+
+`[Completed with warning]:Verify that the Active Directory domain functional level is Windows Server 2003 or later`
+
+#### Workaround
+
+Ignore the warning.
+
 ### When using redistributable files from the CD.Latest folder, setup fails with a manifest verification error
 
 <!-- 510080, 490569  -->
