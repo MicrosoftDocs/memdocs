@@ -61,6 +61,12 @@ The site automatically uploads all published external URLs to the CMG. This beha
 
 Publish your PKI's certificate revocation list (CRL) for internet-based clients to access. When deploying a CMG using PKI, configure the service to **verify client certificate revocation** on the Settings tab. This setting configures the service to use a published certificate revocation list (CRL). For more information, see [Plan for PKI certificate revocation](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForCRLs).
 
+This CMG option verifies the client authentication certificate.
+
+- If the client is using Azure AD authentication, the CRL doesn't matter.
+- If you use PKI, and externally publish the CRL, then enable this option (recommended).
+- If you use PKI, don't publish the CRL, then disable this option.
+- If you misconfigure this option, it can cause additional traffic from clients to the CMG. This additional traffic can increase the Azure egress data, which can increase your Azure costs.<!-- SCCMDocs#1434 -->
 
 <a name="bkmk_ctl"></a>
 
