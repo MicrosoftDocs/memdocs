@@ -59,6 +59,37 @@ The first time you use a Configuration Manager console after the update has fini
 > - **New features** you enable with the update aren't available. This behavior is to prevent the CAS replicating data related to that feature to a site that hasn't yet installed support for that feature. After all primary sites install the update, the feature is available for use.
 > - **Replication links** between the CAS and child primary sites display as not upgraded. This state displays in the update installation status as *Completed with warning* for monitoring replication initialization. In the **Monitoring** workspace of the console, this state displays as *Link is being configured*.
 
+### Early update ring
+
+<!-- SCCMDocs#1397 -->
+
+<!-- As of <Date>, version 1906 is available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version. -->
+
+At this time, version 1906 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 1906:
+
+[Version 1906 opt-in script](<!-- tbd -->)
+
+Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
+
+> [!Note]  
+> The version 1906 update is only applicable to sites running version 1806 or later.
+
+To opt-in to the early update ring:
+
+1. Open Windows PowerShell and **Run as administrator**
+1. Run the **EnableFastRing1906.ps1** script, using the following syntax:
+
+    `EnableFastRing1906.ps1 <SiteServer_Name> | SiteServer_IP>`
+
+    Where `SiteServer` refers to the central administration site or standalone primary site server. For example, `EnableFastRing1906.ps1 cmprimary01`
+
+1. Check for updates. For more information, see [Get available updates](/sccm/core/servers/manage/install-in-console-updates#get-available-updates).
+
+The version 1906 update should now be available in the console.
+
+> [!Important]  
+> This script only adds your site to the early update ring for version 1906. It's not a permanent change.
+
 
 ## Checklist
 
