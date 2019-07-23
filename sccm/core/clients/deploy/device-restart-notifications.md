@@ -68,7 +68,12 @@ To the more intrusive Software Center dialog window:
 
 ![Dialog window to Restart your computer](media/3555947-restart-dialog.png)
 
-If the user didn't restart their device after the installation, then one of these notifications will display to the user as a reminder. This temporary reminder will appear to the user based on the client setting: **Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes)**. This setting is the overall time the user has to restart the machine before a restart is forced.
+If the user didn't restart their device after the installation, then they'll get a notification as a reminder. This temporary reminder will appear to the user based on the client setting: **Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes)**. This setting is the overall time the user has to restart the machine before a restart is forced.
+
+- Temporary notification when you use toast notifications:
+![Toast notification of pending restart](media/3976435-toast-restart-countdown.png)
+- Temporary notification when you use Software Center dialog window, not toast:
+![Pending restart Software Center notification with snooze button](media/3976435-snooze-restart-countdown.png)
 
 If the user doesn't restart after the temporary notification, they'll be given the final countdown notification that they can't close. The timing of when the final notification appears is based on the client setting: **Display a dialog box that the user cannot close, which displays the countdown interval before the user is logged off or the computer restarts (minutes)**. For instance, if the setting is 60, then an hour before a reboot is forced, the final notification appears to the user:
 
@@ -96,8 +101,11 @@ If the setting **When a deployment requires a restart, show a dialog window to t
 - **No** - Toast notifications are used until the final countdown notification is reached.
 - **Yes** - A Software Center notification is seen.
   - If the restart is greater than 24 hours away, an estimated restart time is seen. The timing of this notification is based on the setting: **Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes)**.
+
      ![Restart time is greater than 24 hours away](media/3976435-notification-greater-than-24-hours.png)
+
   - If the restart is less than 24 hours away, a progress bar is seen. The timing of this notification is based on the setting: **Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes)**
+
      ![Restart time is less than 24 hours away](media/3976435-notification-less-than-24-hours.png)
 
 If the user selects the **Snooze** button, another temporary notification will occur after the snooze period elapses, assuming they haven't yet reached the final countdown. The timing of the next notification is based on the setting: **Specify the snooze duration for computer restart countdown notifications (hours)**. If the user selects **Snooze** and your snooze interval is one hour, then the user will be notified again in 60 minutes assuming they haven't yet reached the final countdown.
@@ -108,15 +116,14 @@ When the final countdown is reached, the user is given a notification they can't
 
 ### The user proactively installs before the deadline
 
-If the user proactively installs required software that needs restart before the deadline occurs, they'll see a different notification. For more information about configuring these settings, see [Deployment **User Experience** settings](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy-ux) and [User notifications for required deployments](/sccm/apps/deploy-use/deploy-applications#bkmk_notify). When toast notifications are used, the 
+If the user proactively installs required software that needs restart before the deadline occurs, they'll see a different notification. For more information about configuring these settings, see [Deployment **User Experience** settings](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy-ux) and [User notifications for required deployments](/sccm/apps/deploy-use/deploy-applications#bkmk_notify). 
 
 The following notification occurs when both the user experience setting allows notifications and you don't use toast notifications for the deployment:
 
 ![Notification for proactively installed software](media/3976435-proactive-user-restart-notification.png)
 
-Once the deadline for the software is reached, then the notifications follow the behavior for [Notifications when required software is installed at or after the deadline](#notifications-when-required-software-is-installed-at-or-after-the-deadline).
+Once the deadline for the software is reached, the [Notifications when required software is installed at or after the deadline](#notifications-when-required-software-is-installed-at-or-after-the-deadline) behavior is followed.
 
- 
 ## Log files
 
 Use the **RebootCoordinator.log** for troubleshooting device restarts. You may also have to use additional client [log files](/sccm/core/plan-design/hierarchy/log-files) based on the type of deployment used.
