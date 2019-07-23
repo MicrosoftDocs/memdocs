@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 07/18/2019
+ms.date: 07/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -25,10 +25,10 @@ This topic contains release notes for the current branch of Configuration Manage
 
 For information about the new features introduced with different versions, see the following articles:
 
+- [What's new in version 1906](/sccm/core/plan-design/changes/whats-new-in-version-1906)  
 - [What's new in version 1902](/sccm/core/plan-design/changes/whats-new-in-version-1902)
 - [What's new in version 1810](/sccm/core/plan-design/changes/whats-new-in-version-1810)
 - [What's new in version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806)  
-- [What's new in version 1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)
 
 > [!Tip]  
 > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader: 
@@ -185,16 +185,6 @@ When you create an iOS app that's missing the app name from the URL, add any val
 
 This action allows you to complete the wizard. The app is still successfully deployed to iOS devices. The string you add to the URL appears as the **Name** on the **General Information** tab in the wizard. It's also the app's label in the Company Portal.
 
-### You can no longer deploy Windows Phone 8.1 VPN profiles to Windows 10
-
-<!-- 503274  -->
-*Applies to: Configuration Manager version 1710*
-
-You can't create a VPN profile, using the Windows Phone 8.1 workflow, which is also applicable to Windows 10 devices. For these profiles, the creation wizard no longer shows the Supported Platforms page. Windows Phone 8.1 is automatically selected on the back-end. The Supported Platforms page is available in the profile properties, but it doesn't display the Windows 10 options.
-
-#### Workaround
-
-Use the Windows 10 VPN profile workflow for Windows 10 devices. If this option isn't feasible for your environment, contact support. Support can help you add the Windows 10 targeting.
 
 
 
