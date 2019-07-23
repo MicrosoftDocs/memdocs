@@ -75,6 +75,7 @@ If you will also enable the CMG for content, confirm that the CMG service name i
 - Search for **Storage account**
 - Test your name in the **Storage account name** field
 
+The DNS name prefix, for example *GraniteFalls*, should be 3 to 24 characters long, and only use alphanumeric characters. Don't use special characters, like a dash (`-`).<!-- SCCMDocs#1080 -->
 
 ### <a name="bkmk_cmgroot"></a> CMG trusted root certificate to clients
 
