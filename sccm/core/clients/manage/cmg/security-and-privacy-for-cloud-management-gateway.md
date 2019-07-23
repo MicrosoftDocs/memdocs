@@ -5,7 +5,7 @@ description: Learn about guidance and recommendations for security and privacy w
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 03/22/2018
+ms.date: 07/19/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -20,9 +20,10 @@ ms.collection: M365-identity-device-management
 This article includes security and privacy information for the Configuration Manager cloud management gateway (CMG). For more information, see [Plan for cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).
 
 ## CMG security details
+
 - The CMG accepts and manages connections from CMG connection points. It uses mutual SSL authentication using certificates and connection IDs.
 - The CMG accepts and forwards client requests using the following methods:
-    - Pre-authenticates connections using mutual SSL with the PKI-based client authentication certificate or Azure AD. 
+    - Pre-authenticates connections using mutual SSL with the PKI-based client authentication certificate or Azure AD.
       - IIS on the CMG VM instances verifies the certificate path based on the trusted root certificate(s) uploaded to the CMG.
       - IIS on the VM instance also verifies client certificate revocation, if enabled. For more information, see [Publish the certificate revocation list](#bkmk_crl).
     - The certificate trust list checks the root of the client authentication certificate. It also performs the same validation as the management point for the client. For more information, see [Review entries in the site's certificate trust list](#bkmk_ctl).
@@ -37,11 +38,14 @@ This article includes security and privacy information for the Configuration Man
     - Reports traffic per endpoint every five minutes.
 
 ### Configuration Manager client-facing roles
+
 The management point and software update point host endpoints in IIS to service client requests. The CMG doesn't expose all internal endpoints. Every endpoint published to the CMG has an URL mapping.
+
 - The external URL is the one the client uses to communicate with the CMG.
 - The internal URL is the CMG connection point used to forward requests to the internal server.
 
 #### URL mapping example
+
 When you enable CMG traffic on a management point, Configuration Manager creates an internal set of URL mappings for each management point server. For example: ccm_system, ccm_incoming, and sms_mp. The external URL for the management point ccm_system endpoint might look like:  
 `https://<CMG service name>/CCM_Proxy_MutualAuth/<MP Role ID>/CCM_System`  
 The URL is unique for each management point. The Configuration Manager client then puts the CMG-enabled management point name into its internet management point list. This name looks like:  
@@ -49,9 +53,7 @@ The URL is unique for each management point. The Configuration Manager client th
 The site automatically uploads all published external URLs to the CMG. This behavior allows the CMG to do URL filtering. All URL mappings replicate to the CMG connection point. It then forwards the communication to internal servers according to the external URL from the client request.
 
 
-
 ## Security guidance for CMG
-
 
 <a name="bkmk_crl"></a>
 
@@ -60,10 +62,10 @@ The site automatically uploads all published external URLs to the CMG. This beha
 Publish your PKI's certificate revocation list (CRL) for internet-based clients to access. When deploying a CMG using PKI, configure the service to **verify client certificate revocation** on the Settings tab. This setting configures the service to use a published certificate revocation list (CRL). For more information, see [Plan for PKI certificate revocation](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForCRLs).
 
 
-
 <a name="bkmk_ctl"></a>
 
 ### Review entries in the site's certificate trust list
+
 <!--503739-->
 Each Configuration Manager site includes a list of trusted root certification authorities, the certificate trust list (CTL). View and modify the list by going to the Administration workspace, expand Site Configuration, and select Sites. Select a site, and click Properties in the ribbon. Switch to the **Client Computer Communication** tab, and then click **Set** under Trusted Root Certification Authorities.
 
@@ -72,7 +74,13 @@ Each Configuration Manager site includes a list of trusted root certification au
 
 Use a more restrictive CTL for a site with a CMG using PKI client authentication. Otherwise, clients with client authentication certificates issued by any trusted root that already exists on the management point are automatically accepted for client registration.
 
-This subset provides administrators with more control over security. The CTL restricts the server to only accept client certificates that are issued from the certification authorities in the CTL. For example, Windows ships with a number of well-known third-party certification authority (CA) certificates, such as VeriSign and Thawte. By default, the computer running IIS trusts certificates that chain to these well-known CAs. Without configuring IIS with a CTL, any computer that has a client certificate issued from these CAs are accepted as a valid Configuration Manager client. If you configure IIS with a CTL that didn't include these CAs, client connections are refused if the certificate chained to these CAs. 
+This subset provides administrators with more control over security. The CTL restricts the server to only accept client certificates that are issued from the certification authorities in the CTL. For example, Windows ships with a number of well-known third-party certification authority (CA) certificates, such as VeriSign and Thawte. By default, the computer running IIS trusts certificates that chain to these well-known CAs. Without configuring IIS with a CTL, any computer that has a client certificate issued from these CAs are accepted as a valid Configuration Manager client. If you configure IIS with a CTL that didn't include these CAs, client connections are refused if the certificate chained to these CAs.
+
+### <a name="bkmk_tls"></a> Enforce TLS 1.2
+
+<!-- SCCMDocs-pr#4021 -->
+
+Starting in version 1906, use the CMG setting to **Enforce TLS 1.2**. It only applies to the Azure cloud service VM. It doesn't apply to any on-premises Configuration Manager site servers or clients. For more information on TLS 1.2, see [How to enable TLS 1.2](/sccm/core/plan-design/security/enable-tls-1-2).
 
 
 <!--486209-->
