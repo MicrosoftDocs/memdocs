@@ -77,11 +77,11 @@ Microsoft digitally signs the script, and bundles it inside a signed self-extrac
 To opt-in to the early update ring:
 
 1. Open Windows PowerShell and **Run as administrator**
-1. Run the **EnableFastRing1906.ps1** script, using the following syntax:
+1. Run the **EnableEarlyUpdateRing1906.ps1** script, using the following syntax:
 
-    `EnableFastRing1906.ps1 <SiteServer_Name> | SiteServer_IP>`
+    `EnableEarlyUpdateRing1906.ps1 <SiteServer_Name> | SiteServer_IP>`
 
-    Where `SiteServer` refers to the central administration site or standalone primary site server. For example, `EnableFastRing1906.ps1 cmprimary01`
+    Where `SiteServer` refers to the central administration site or standalone primary site server. For example, `EnableEarlyUpdateRing1906.ps1 cmprimary01`
 
 1. Check for updates. For more information, see [Get available updates](/sccm/core/servers/manage/install-in-console-updates#get-available-updates).
 
