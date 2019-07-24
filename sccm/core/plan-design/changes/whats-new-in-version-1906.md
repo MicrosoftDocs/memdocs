@@ -571,6 +571,10 @@ The following additional hotfixes are available to address specific issues:
 
 ## Next steps
 
+At this time, version 1906 is released for the early update ring. To install this update, you need to opt-in. For more information, see [Early update ring](/sccm/core/servers/manage/checklist-for-installing-update-1906#early-update-ring).
+
+<!-- As of <Date>, version 1906 is available for all customers to install. -->
+
 When you're ready to install this version, see [Installing updates for Configuration Manager](/sccm/core/servers/manage/updates) and [Checklist for installing update 1906](/sccm/core/servers/manage/checklist-for-installing-update-1906).
 
 > [!TIP]  
