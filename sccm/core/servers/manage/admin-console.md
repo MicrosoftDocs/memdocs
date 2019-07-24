@@ -278,6 +278,7 @@ There are various ways to display a list of devices under the **Devices** node i
 #### Collections tab in devices node
 <!--4616810-->
 *(Introduced in version 1906)*
+
 In the **Assets and Compliance** workspace, go to the **Devices** node, and select a device. In the details pane, switch to the new **Collections** tab. This tab lists the collections that include this device. 
 
 > [!Note]  
