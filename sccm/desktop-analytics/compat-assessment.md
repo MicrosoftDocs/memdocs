@@ -133,7 +133,7 @@ There's another version of this app that's highly adopted by other customers. Th
 
 ### Driver dependency
 
-The app is dependent on a driver. Desktop Analytics recommends the app for pilot testing. It should work fine for pilot, but you'll find any regressions. If you have any problems, contact the publisher to request a version that's compliant with Windows 10.
+The app is dependent on a driver. Desktop Analytics recommends the app for pilot testing to discover any regressions. If you have any problems, contact the publisher to request a version that's compliant with Windows 10.
 
 ### Additional insights
 
@@ -143,7 +143,7 @@ When you update the Configuration Manager site and clients to version 1906, clie
 > [!Important]  
 > To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. This scenario isn't functional until the client version is also the latest.
 
-#### 16-bit
+#### 16-bit apps
 
 Remove all 16-bit components from applications, and replace with 32-bit or 64-bit equivalents. For more information, see [The Windows Vista and Windows Server 2008 Developer Story: Application Compatibility Cookbook](https://docs.microsoft.com/previous-versions/aa480152\(v=msdn.10\)).
 
@@ -153,7 +153,7 @@ The other option is to enable NT Virtual DOS Machine (NTVDM) for support on Wind
 
 The app requires the user to have administrative access to the device. Use an app manifest for these apps that require administrator permissions. For more information, see [Create and embed an application manifest](https://docs.microsoft.com/previous-versions/bb756929\(v=msdn.10\)).
 
-Desktop Analytics recommends the app for pilot testing. It should work fine for pilot, but you'll find any regressions.
+Desktop Analytics recommends the app for pilot testing to discover any regressions.
 
 #### Java dependency
 
@@ -163,7 +163,7 @@ Many Java applications rely on a separately installed Java Runtime Environment (
 
 The app may have display issues with advanced screen resolutions on Windows 10. Use an app manifest to avoid any issues with high DPI resolutions. For more information, see [Application manifests](https://docs.microsoft.com/windows/desktop/SbsCs/application-manifests).
 
-Desktop Analytics recommends the app for pilot testing. It should work fine for pilot, but you'll find any regressions.
+Desktop Analytics recommends the app for pilot testing to discover any regressions.
 
 #### Silverlight framework
 
@@ -177,7 +177,7 @@ Most current web browsers don't support Silverlight.
 | Firefox | End of support: March 2017 |
 | Microsoft Edge | No plugin available |
 
-Desktop Analytics recommends the app for pilot testing. It should work fine for pilot, but you'll find any regressions.
+Desktop Analytics recommends the app for pilot testing to discover any regressions.
 
 #### .NET Framework 1.0/1.1
 
@@ -192,6 +192,8 @@ The .NET Framework version 1.0 isn't supported on Windows 10. Version 1.1 isn't 
 Applications with UI access can bypass user interface control levels to drive input to higher privilege windows on the desktop. Only use this setting for user interface assistive technology applications.
 
 If you're not using accessibility features in your app, set the UI access flag in the app manifest to false. For more information, see [Create and embed an application manifest](https://docs.microsoft.com/en-us/previous-versions/bb756929\(v=msdn.10\)).
+
+Desktop Analytics recommends the app for pilot testing to discover any regressions.
 
 
 ## Driver risk assessment
