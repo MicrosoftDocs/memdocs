@@ -522,12 +522,6 @@ There's a new policy setting that enables users to trust files that normally ope
 
 ## <a name="bkmk_admin"></a> Configuration Manager console
 
-### Add SMBIOS GUID column to device and device collection nodes
-
-<!--4526580-->
-In both the **Devices** and **Device Collections** nodes, you can now add a new column for **SMBIOS GUID**. This value is the same as the **BIOS GUID** property of the System Resource class. It's a unique identifier for the device hardware.
-
-
 ### Role based access for folders
 <!--3600867-->
 
@@ -535,6 +529,10 @@ You can now set security scopes on folders. If you have access to an object in t
 
 For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#tips) and [Configure role-based administration](/sccm/core/servers/deploy/configure/configure-role-based-administration#bkmk_config-folder).
 
+### Add SMBIOS GUID column to device and device collection nodes
+
+<!--4526580-->
+In both the **Devices** and **Device Collections** nodes, you can now add a new column for **SMBIOS GUID**. This value is the same as the **BIOS GUID** property of the System Resource class. It's a unique identifier for the device hardware.
 
 ### Administration service support for security nodes
 
@@ -546,6 +544,47 @@ For more information, see [Administration service](/sccm/core/plan-design/hierar
 > [!Note]
 > Starting in version 1906, the **Client Computer Communication** tab on the site properties is now called **Communication Security**.<!-- SCCMDocs#1645 -->  
 
+### Collections tab in devices node
+<!--4616810-->
+In the **Assets and Compliance** workspace, go to the **Devices** node, and select a device. In the details pane, switch to the new **Collections** tab. This tab lists the collections that include this device.
+
+> [!Note]  
+> This tab currently isn't available from a devices subnode under the **Device Collections** node. For example, when you select the option to **Show Members** on a collection.
+
+
+### Task sequences tab in applications node
+<!--4616810-->
+In the **Software Library** workspace, expand **Application Management**, go to the **Applications** node, and select an application. In the details pane, switch to the new **Task sequences** tab. This tab lists the task sequences that reference this application.
+
+
+### Show collection name for scripts
+<!--4616810-->
+In the **Monitoring** workspace, select the **Script Status** node. It now lists the **Collection Name** in addition to the ID.
+
+
+### Real-time actions from device lists
+<!--4616810-->
+There are various ways to display a list of devices under the **Devices** node in the **Assets and Compliance** workspace.
+
+- In the **Assets and Compliance** workspace, select the **Device Collections** node. Select a device collection, and choose the action to **Show members**. This action opens a subnode of the **Devices** node with a device list for that collection.  
+
+  - When you select the collection subnode, you can now start **CMPivot** from the Collection group of the ribbon.  
+
+- In the **Monitoring** workspace, select the **Deployments** node. Select a deployment, and choose the **View Status** action in the ribbon. In the deployment status pane, double-click the total assets to drill-through to a device list.  
+
+  - When you select a device in this list, you can now start **CMPivot** and **Run Scripts** from the Device group of the ribbon.  
+
+### Multiselect and delete packages
+<!--4616810-->
+In the **Software Library** workspace, expand **Application Management**, and select the **Packages** node. select more than one package. In the Package group of the ribbon, you can now delete more than one package at a time.
+
+### Order by program name in task sequence
+<!--4616810-->
+In the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node. Edit a task sequence, and select or add the [Install Package](/sccm/osd/understand/task-sequence-steps#BKMK_InstallPackage) step. If a package has more than one program, the drop-down list now sorts the programs alphabetically.
+
+### Correct names for client operations
+<!--4616810-->
+In the **Monitoring** workspace, select **Client Operations**. The operation to **Switch to next Software Update Point** is now properly named.
 
 ## Other updates
 
