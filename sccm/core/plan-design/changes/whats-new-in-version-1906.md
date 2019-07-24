@@ -23,9 +23,6 @@ Always review the latest checklist for installing this update. For more informat
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
-> [!Note]  
-> This article currently lists all significant features in this version. However, not all sections yet link to updated content with further information on the new features. Keep checking this page regularly for updates. Changes are noted with the ***[Updated]*** tag. This note will be removed when the content is finalized.  
-
 > [!Tip]  
 > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
 > `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1906+-+Configuration+Manager%22&locale=en-us`
@@ -50,6 +47,7 @@ Version 1906 deprecates support for the following products:
 ## <a name="bkmk_infra"></a> Site infrastructure
 
 ### Site server maintenance task improvements
+
 <!--3555894-->
 Site server maintenance tasks can now be viewed and edited from their own tab on the details view of a site server. The new **Maintenance Tasks** tab gives you information such as:
 
@@ -64,10 +62,11 @@ Site server maintenance tasks can now be viewed and edited from their own tab on
 For more information, see [Maintenance tasks](/sccm/core/servers/manage/maintenance-tasks#bkmk_MTs1906).
 
 ### Configuration Manager update database upgrade monitoring
+
 <!--4200581-->
 When applying a Configuration Manager update, you can now see the state of the **Upgrade ConfigMgr database** task in the  installation status window.
 
-- If the database upgrade is blocked, then you'll be given the warning **In progress, needs attention**.
+- If the database upgrade is blocked, then you'll be given the warning, **In progress, needs attention**.
    - The cmupdate.log will log the program name and sessionid from SQL that is blocking the database upgrade.
 - When the database upgrade is no longer blocked, the status will be reset to **In progress** or **Complete**.
    - When the database upgrade is blocked, a check is done every 5 minutes to see if it's still blocked.
@@ -84,6 +83,7 @@ Management insights includes a new rule that detects if you enabled the less sec
 For more information, see [Management insights](/sccm/core/servers/manage/management-insights#security).
 
 ### Add a SQL AlwaysOn node
+
 <!--3127336-->
 You can now add a new secondary replica node to an existing SQL AlwaysOn availability group. Instead of a [manual process](/sccm/core/servers/deploy/configure/configure-aoag#add-or-remove-synchronous-replica-members), use Configuration Manager setup to make this change.
 
@@ -95,19 +95,20 @@ You can now add a new secondary replica node to an existing SQL AlwaysOn availab
 ## <a name="bkmk_cloud"></a> Cloud-attached management
 
 ### Azure Active Directory user group discovery
+
 <!--3611956-->
 
-You can now discover user groups and members of those groups from Azure Active directory (Azure AD). Users found in Azure AD groups that haven't been previously discovered will be added as user resources in Configuration Manager. A user group resource record is created when the group is a security group. This is a [pre-release feature](/sccm/core/servers/manage/pre-release-features) and needs to be enabled.
+You can now discover user groups and members of those groups from Azure Active Directory (Azure AD). Users found in Azure AD groups that the site hasn't previously discovered are added as user resources in Configuration Manager. A user group resource record is created when the group is a security group. This feature is a [pre-release feature](/sccm/core/servers/manage/pre-release-features) and needs to be enabled.
 
 For more information, see [Configure discovery methods](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_azuregroupdisco).
 
-
 ### Synchronize collection membership results to Azure Active Directory groups
+
 <!--3607475-->
- 
+
 You can now enable the synchronization of collection memberships to an Azure Active Directory (Azure AD) group. This synchronization is a pre-release feature. To enable it, see [Pre-release features](/sccm/core/servers/manage/pre-release-features).
 
- The synchronization allows you to use your existing on premises grouping rules in the cloud by creating Azure AD group memberships based on collection membership results. Only devices with an Azure Active Directory record are reflected in the Azure AD Group. Both Hybrid Azure AD Joined and Azure Active Director joined devices are supported.
+The synchronization allows you to use your existing on-premises grouping rules in the cloud by creating Azure AD group memberships based on collection membership results. Only devices with an Azure Active Directory record are reflected in the Azure AD Group. Both Hybrid Azure AD Joined and Azure Active Directory joined devices are supported.
 
 For more information, see [Create collections](/sccm/core/clients/manage/collections/create-collections#bkmk_aadcollsync).
 
@@ -133,14 +134,16 @@ For more information, see [Logs collector](/sccm/desktop-analytics/log-collector
 
 ## <a name="bkmk_real"></a> Real-time management
 
-### Add joins, additional operators and aggregators in CMPivot
+### Add joins, additional operators, and aggregators in CMPivot
+
 <!--4054074-->
 
- For CMPivot, you now have additional arithmetic operators, aggregators, and the ability to add query joins such as using Registry and File together.
+For CMPivot, you now have additional arithmetic operators, aggregators, and the ability to add query joins such as using Registry and File together.
 
 For more information, see [CMPivot](/sccm/core/servers/manage/cmpivot#bkmk_cmpivot1906).
 
 ### CMPivot standalone
+
 <!--3555890, 4619340, 4692885 -->
 
 You can now use CMPivot as a standalone app. CMPivot standalone is a **pre-release feature** and is only available in English. Run CMPivot outside of the Configuration Manager console to view the real-time state of devices in your environment. This change enables you to use CMPivot on a device without first installing the console.
@@ -150,14 +153,17 @@ You can share the power of CMPivot with other personas, such as helpdesk or secu
 For more information, see [CMPivot](/sccm/core/servers/manage/cmpivot#bkmk_standalone) and [Pre-release features](/sccm/core/servers/manage/pre-release-features#bkmk_table).
 
 ### Added permissions to the Security Administrator role
+
 <!--4683130-->
 
 The following permissions have been added to Configuration Manager's built-in **Security Administrator** role:
- - Read on SMS Script
- - Run CMPivot on Collection
- - Read on Inventory Report
+
+- Read on SMS Script
+- Run CMPivot on Collection
+- Read on Inventory Report
 
 For more information, see [CMPivot](/sccm/core/servers/manage/cmpivot#bkmk_cmpivot_secadmin1906).
+
 
 ## <a name="bkmk_content"></a> Content management
 
@@ -208,7 +214,7 @@ For more information, see [Support Center OneTrace](/sccm/core/support/support-c
 ### Version 1906 client requires SHA-2 code signing support
 
 <!--SCCMDocs-pr#3404-->
-Due to weaknesses in the SHA-1 algorithm and to align to industry standards, Microsoft now only signs Configuration Manager binaries using the more secure SHA-2 algorithm. The following Windows OS versions require an update for SHA-2 code signing support:
+Because of weaknesses in the SHA-1 algorithm and to align to industry standards, Microsoft now only signs Configuration Manager binaries using the more secure SHA-2 algorithm. The following Windows OS versions require an update for SHA-2 code signing support:
 
 - Windows 7 SP1
 - Windows Server 2008 R2 SP1
@@ -240,7 +246,7 @@ For more information, see [Enable co-management](/sccm/comanage/how-to-enable).
 ### Multiple pilot groups for co-management workloads
 
 <!--3555750-->
-You can now configure different pilot collections for each of the co-management workloads. Being able to use different pilot collections allows you to take a more  granular approach when shifting workloads.
+You can now configure different pilot collections for each of the co-management workloads. Using different pilot collections allows you to take a more granular approach when shifting workloads.
 
 - In the **Enablement** tab, you can now specify an **Intune Auto Enrollment** collection.
     - The **Intune Auto Enrollment** collection should contain all of the clients you want to onboard into co-management. It's essentially a superset of all the other staging collections.
@@ -272,6 +278,8 @@ For more information, see [Manually specify application information](/sccm/apps/
 
 <!--3555907-->
 Create a group of applications that you can send to a user or device collection as a single deployment. The metadata you specify about the app group is seen in Software Center as a single entity. You can order the apps in the group so that the client installs them in a specific order.
+
+This feature is pre-release. To enable it, see [Pre-release features](/sccm/core/servers/manage/pre-release-features).
 
 For more information, see [Create application groups](/sccm/apps/deploy-use/create-app-groups).
 
@@ -313,6 +321,8 @@ For more information, see [Approve applications](/sccm/apps/deploy-use/app-appro
 The task sequence debugger is a new troubleshooting tool. You deploy a task sequence in debug mode to a collection of one device. It lets you step through the task sequence in a controlled manner to aid troubleshooting and investigation.
 
 ![Screenshot of task sequence debugger](./media/3612274-tsdebug.png)
+
+This feature is pre-release. To enable it, see [Pre-release features](/sccm/core/servers/manage/pre-release-features).
 
 For more information, see [Debug a task sequence](/sccm/osd/deploy-use/debug-task-sequence).
 
@@ -356,7 +366,7 @@ This release includes the following improvements to OS deployment:
 
 - It's now easier to edit variables when you run a task sequence. After you select a task sequence in the Task Sequence Wizard window, the page to edit task sequence variables includes an **Edit** button.<!-- 4668846 --> For more information, see [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables#bkmk_set-tswiz).
 
-- The **Disable BitLocker** task sequence step has a new restart counter. Use this option to specify the number of restarts to keep BitLocker disabled. This change you simplify your task sequence. You can use a single step, instead of adding multiple instances of this step. <!--4512937--> For more information, see [Disable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_DisableBitLocker).
+- The **Disable BitLocker** task sequence step has a new restart counter. Use this option to specify the number of restarts to keep BitLocker disabled. This change helps you simplify your task sequence. You can use a single step, instead of adding multiple instances of this step. <!--4512937--> For more information, see [Disable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_DisableBitLocker).
 
 - Use the new task sequence variable **SMSTSRebootDelayNext** with the existing [SMSTSRebootDelay](/sccm/osd/understand/task-sequence-variables#SMSTSRebootDelay) variable. If you want any later reboots to happen with a different timeout than the first, set this new variable to a different value in seconds. <!--4447680--> For more information, see [SMSTSRebootDelayNext](/sccm/osd/understand/task-sequence-variables#SMSTSRebootDelayNext).
 
@@ -366,6 +376,7 @@ This release includes the following improvements to OS deployment:
 ## <a name="bkmk_userxp"></a> Software Center
 
 ### Improvements to Software Center tab customizations
+
 <!--4063773-->
 You can now add up to five custom tabs in Software Center. You can also edit the order in which these tabs appear in Software Center.
 
@@ -381,8 +392,6 @@ This release includes the following infrastructure improvements to Software Cent
 
 - Previously, Software Center picked the first management point from the list of available servers. Starting in this release, it uses the same management point that the client uses. This change allows Software Center to use the same management point from the assigned primary site as the client.
 
-- The management point now checks the health of its user service every five minutes. It reports any issues via status messages for the SMS_MP_CONTROL_MANAGER site component.
-
 > [!Important]  
 > These iterative improvements to Software Center and the management point are to retire the application catalog roles.
 >
@@ -392,14 +401,15 @@ This release includes the following infrastructure improvements to Software Cent
 
 For more information, see [Remove the application catalog](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat) and [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center).
 
-
 ### Redesigned notification for newly available software
+
 <!--3555904-->
 The **New Software is Available** notification will only show once for a user for a given application and revision. The user will no longer see the notification each time they sign in. They'll only see another notification for an application if it has changed or was redeployed.
 
 For more information, see [Create and deploy an application](/sccm/apps/get-started/create-and-deploy-an-application#end-user-experience).
 
 ### More frequent countdown notifications for restarts
+
 <!--3976435-->
 
 End users will now be reminded more frequently of a pending restart with intermittent countdown notifications. You can define the interval for the intermittent notifications in **Client Settings** on the **Computer Restart** page. Change the value for **Specify the snooze duration for computer restart countdown notifications (hours)** to configure how often a user is reminded about a pending restart until the final countdown notification occurs.
@@ -409,6 +419,7 @@ Additionally, the maximum value for **Display a temporary notification to the us
 For more information, see [Device restart notifications](/sccm/core/clients/deploy/device-restart-notifications) and [About client settings](/sccm/core/clients/deploy/about-client-settings#computer-restart).
 
 ### Direct link to custom tabs in Software Center
+
 <!--4655176-->
 
 You can now provide users with a direct link to a [custom tab](/sccm/core/clients/deploy/about-client-settings#software-center-tab-visibility) in Software Center.
@@ -432,11 +443,12 @@ You can also use this syntax to open default tabs in Software Center:
 |`Compliance`|Device compliance|
 |`Options`|Options|
 
-<!--For more information, see [custom tab](/sccm/core/clients/deploy/about-client-settings#software-center-tab-visibility).--> 
+For more information, see [Software Center tab visibility](/sccm/core/clients/deploy/about-client-settings#software-center-tab-visibility).
 
 ## <a name="bkmk_sum"></a> Software updates
 
 ### Additional options for WSUS maintenance
+
 <!--4110109-->
 You now have additional WSUS maintenance tasks that Configuration Manager can run to maintain healthy software update points. The WSUS maintenance occurs after every synchronization. In addition to declining expired updates in WSUS, Configuration Manager can now:
 
@@ -446,6 +458,7 @@ You now have additional WSUS maintenance tasks that Configuration Manager can ru
 For more information, see [Software updates maintenance](/sccm/sum/deploy-use/software-updates-maintenance#wsus-cleanup-starting-in-version-1906).
 
 ### Configure the default maximum run time for software updates
+
 <!--3734426-->
 
 You can now specify the maximum amount of time a software update installation has to complete. You can specify the following items in the **Maximum Run Time** tab on the Software Update Point:
@@ -456,14 +469,15 @@ You can now specify the maximum amount of time a software update installation ha
 For more information, see [Plan for software updates](/sccm/sum/plan-design/plan-for-software-updates#bkmk_maxruntime).
 
 ### Configure dynamic update during feature updates
+
 <!--4062619-->
 
 Use a new client setting to configure [Dynamic Update](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847) during Windows 10 feature update installs. Dynamic Update installs language packs, features on demand, drivers, and cumulative updates during Windows setup by directing the client to download these updates from the internet.
 
 For more information, see [Software update client settings](/sccm/core/clients/deploy/about-client-settings#software-updates) and [Manage Windows as a service](/sccm/osd/deploy-use/manage-windows-as-a-service).
 
-
 ### New Windows 10, version 1903 and later product category
+
 <!--4682946-->
 
 **Windows 10, version 1903 and later** was added to Microsoft Update as its own product rather than being part of the **Windows 10**  product like earlier versions. This change caused you to do a number of manual steps to ensure that your clients see these updates. We've helped reduce the number of manual steps you have to take for the new product.
@@ -474,9 +488,10 @@ When you update to Configuration Manager version 1906 and have the **Windows 10*
 - Automatic Deployment Rules containing the **Windows 10** product will be updated to include **Windows 10, version 1903 and later**.
 - Servicing plans are updated to include the **Windows 10, version 1903 and later** product.
 
-For more information, see [Configure classifications and products to synchronize](/sccm/sum/get-started/configure-classifications-and-products), [Servicing plans](/sccm/osd/deploy-use/manage-windows-as-a-service#servicing-plan-workflow) and [Automatic Deployment Rules](/sccm/sum/deploy-use/automatically-deploy-software-updates#bkmk_adr-process).
+For more information, see [Configure classifications and products to synchronize](/sccm/sum/get-started/configure-classifications-and-products), [Servicing plans](/sccm/osd/deploy-use/manage-windows-as-a-service#servicing-plan-workflow), and [Automatic deployment rules](/sccm/sum/deploy-use/automatically-deploy-software-updates#bkmk_adr-process).
 
 ### Drill through required updates
+
 <!--4224414-->
 You can now drill through compliance statistics to see which devices require a specific software update. To view the device list, you need permission to view updates and the collections the devices belong to. To drill down into the device list, select the **View Required** hyperlink next to the pie chart in the **Summary** tab for an update. Clicking the hyperlink takes you to a temporary node under **Devices** where you can see the devices requiring the update.
 
@@ -486,11 +501,13 @@ The **View Required** hyperlink is available in the following locations:
    - **Software Library** > **Windows 10 Servicing** > **All Windows 10 Updates**
    - **Software Library** > **Office 365 Client Management** > **Office 365 Updates**
 
-For more information, see [Monitor software updates](/sccm/sum/deploy-use/monitor-software-updates#drill-through-required-updates), [Manage Windows as a service](/sccm/osd/deploy-use/manage-windows-as-a-service#drill-through-required-updates) and [Manage Office 365 ProPlus Updates](/sccm/sum/deploy-use/manage-office-365-proplus-updates#drill-through-required-office-365-updates).
+For more information, see [Monitor software updates](/sccm/sum/deploy-use/monitor-software-updates#drill-through-required-updates), [Manage Windows as a service](/sccm/osd/deploy-use/manage-windows-as-a-service#drill-through-required-updates), and [Manage Office 365 ProPlus updates](/sccm/sum/deploy-use/manage-office-365-proplus-updates#drill-through-required-office-365-updates).
+
 
 ## <a name="bkmk_o365"></a> Office management
 
 ### Office 365 ProPlus upgrade readiness dashboard
+
 <!--4021125-->
 
 To help you determine which devices are ready to upgrade to Office 365 ProPlus, there's a new readiness dashboard. It includes the **Office 365 ProPlus upgrade readiness** tile that released in Configuration Manager current branch version 1902. In the Configuration Manager console, go to the **Software Library** workspace, expand **Office 365 Client Management**, and select the **Office 365 ProPlus Upgrade Readiness** node.
@@ -498,31 +515,21 @@ To help you determine which devices are ready to upgrade to Office 365 ProPlus, 
 For more information on the dashboard, prerequisites, and using this data, see [Integration for Office 365 ProPlus readiness](/sccm/sum/deploy-use/office-365-dashboard#office-365-proplus-upgrade-readiness-dashboard).
 
 
-## <a name="bkmk_inv"></a> Inventory
-
-### Improvement to Asset Intelligence
-<!--4586547-->
-
-We've increased the number of uncategorized software titles that can be uploaded at one time to Microsoft for categorization.
-
-<!--For more information, see [Introduction to asset intelligence](/sccm/core/clients/manage/asset-intelligence/introduction-to-asset-intelligence).-->
-
-
-<!-- ## <a name="bkmk_pod"></a> Phased deployments -->
-
-
 ## <a name="bkmk_protect"></a> Protection
 
 ### Windows Defender Application Guard file trust criteria
+
 <!--3555858-->
 
 There's a new policy setting that enables users to trust files that normally open in Windows Defender Application Guard (WDAG). Upon successful completion, the files will open on the host device instead of in WDAG.
 
-<!--For more information, see [Create and deploy Windows Defender Application Guard policy](/sccm/protect/deploy-use/create-deploy-application-guard-policy).-->
+For more information, see [Create and deploy Windows Defender Application Guard policy](/sccm/protect/deploy-use/create-deploy-application-guard-policy#bkmk_FM).
+
 
 ## <a name="bkmk_admin"></a> Configuration Manager console
 
-### Role based access for folders
+### Role-based access for folders
+
 <!--3600867-->
 
 You can now set security scopes on folders. If you have access to an object in the folder but don't have access to the folder, you'll be unable to see the object. Similarly, if you have access to a folder but not an object within it, you won't see that object. Right-click a folder, choose **Set Security Scopes**, then choose the security scopes you want to apply.
@@ -545,24 +552,25 @@ For more information, see [Administration service](/sccm/core/plan-design/hierar
 > Starting in version 1906, the **Client Computer Communication** tab on the site properties is now called **Communication Security**.<!-- SCCMDocs#1645 -->  
 
 ### Collections tab in devices node
+
 <!--4616810-->
 In the **Assets and Compliance** workspace, go to the **Devices** node, and select a device. In the details pane, switch to the new **Collections** tab. This tab lists the collections that include this device.
 
 > [!Note]  
 > This tab currently isn't available from a devices subnode under the **Device Collections** node. For example, when you select the option to **Show Members** on a collection.
 
-
 ### Task sequences tab in applications node
+
 <!--4616810-->
 In the **Software Library** workspace, expand **Application Management**, go to the **Applications** node, and select an application. In the details pane, switch to the new **Task sequences** tab. This tab lists the task sequences that reference this application.
 
-
 ### Show collection name for scripts
+
 <!--4616810-->
 In the **Monitoring** workspace, select the **Script Status** node. It now lists the **Collection Name** in addition to the ID.
 
-
 ### Real-time actions from device lists
+
 <!--4616810-->
 There are various ways to display a list of devices under the **Devices** node in the **Assets and Compliance** workspace.
 
@@ -575,18 +583,27 @@ There are various ways to display a list of devices under the **Devices** node i
   - When you select a device in this list, you can now start **CMPivot** and **Run Scripts** from the Device group of the ribbon.  
 
 ### Multiselect and delete packages
+
 <!--4616810-->
 In the **Software Library** workspace, expand **Application Management**, and select the **Packages** node. select more than one package. In the Package group of the ribbon, you can now delete more than one package at a time.
 
 ### Order by program name in task sequence
+
 <!--4616810-->
 In the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node. Edit a task sequence, and select or add the [Install Package](/sccm/osd/understand/task-sequence-steps#BKMK_InstallPackage) step. If a package has more than one program, the drop-down list now sorts the programs alphabetically.
 
 ### Correct names for client operations
+
 <!--4616810-->
 In the **Monitoring** workspace, select **Client Operations**. The operation to **Switch to next Software Update Point** is now properly named.
 
+
 ## Other updates
+
+As of this version, the following features are no longer pre-release:
+
+- [SMS Provider administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service)
+- [Device Guard management](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)
 
 <!-- Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4498910). -->
 
@@ -610,9 +627,8 @@ The following additional hotfixes are available to address specific issues:
 
 ## Next steps
 
-At this time, version 1906 is released for the early update ring. To install this update, you need to opt-in. For more information, see [Early update ring](/sccm/core/servers/manage/checklist-for-installing-update-1906#early-update-ring).
-
-<!-- As of <Date>, version 1906 is available for all customers to install. -->
+At this time, version 1906 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](/sccm/core/servers/manage/checklist-for-installing-update-1906#early-update-ring).
+<!-- As of <Date>, version 1906 is globally available for all customers to install. -->
 
 When you're ready to install this version, see [Installing updates for Configuration Manager](/sccm/core/servers/manage/updates) and [Checklist for installing update 1906](/sccm/core/servers/manage/checklist-for-installing-update-1906).
 

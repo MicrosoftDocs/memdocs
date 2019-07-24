@@ -61,7 +61,7 @@ Review the following improvements to Software Center:
 
 - Previously, Software Center picked the first management point from the list of available servers. Starting in this release, it uses the same management point that the client uses. This change allows Software Center to use the same management point from the assigned primary site as the client.
 
-- The management point now checks the health of its user service every five minutes. It reports any issues via status messages for the SMS_MP_CONTROL_MANAGER site component.
+- The management point has Software Center endpoints to support these new features. It now checks the health of these endpoints every five minutes. It reports any issues via status messages for the SMS_MP_CONTROL_MANAGER site component.
 
 - You can't add new application catalog roles to the site. Existing roles continue to work. Only existing clients use the application catalog for user-available deployments. Updated clients automatically use the management point for all deployments.
 

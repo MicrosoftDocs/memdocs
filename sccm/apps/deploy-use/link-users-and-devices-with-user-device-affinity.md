@@ -154,3 +154,8 @@ When you disable the client setting to **Automatically configure user device aff
 1. On the **Home** tab in the ribbon, in the **Collection** group, choose **Manage Affinity Requests**.  
 
 1. In the **Manage User Device Affinity Requests** dialog box, select an affinity request, and then choose **Approve** or **Reject**.  
+
+
+## Next steps
+
+You can also use Microsoft Intune to find the primary use of an enrolled device. For more information, see [Find the primary user of an Intune device](https://docs.microsoft.com/intune/find-primary-user) in the Intune documentation.
