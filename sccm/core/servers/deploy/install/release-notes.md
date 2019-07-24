@@ -145,6 +145,7 @@ Change the following registry value to `0` and restart the **Microsoft Office Cl
 ### If you use distributed views, you can't onboard to Desktop Analytics
 
 <!-- 4950335 -->
+*Applies to: Configuration Manager version 1902 with update rollup, and version 1906*
 
 If you have a hierarchy, and enable [distributed views](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_distviews) for replication, after you configure the Desktop Analytics connection in Configuration Manager you'll see the following error in M365UploadWorker.log:
 
