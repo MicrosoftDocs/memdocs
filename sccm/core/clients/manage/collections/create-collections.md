@@ -231,21 +231,21 @@ The Azure AD synchronization happens every five minutes. It's a one-way process,
 ### Create a group and set the owner in Azure AD
 
 1. Go to [https://portal.azure.com](https://portal.azure.com).
-1. Navigate to **Azure Active Directory** < **Groups** < **All groups**.
+1. Navigate to **Azure Active Directory** > **Groups** > **All groups**.
 1. Click **New group** and type in a **Group name** and **Group description**.
 1. Select **Owners**, then add the identity that will create the synchronization relationship in Configuration Manager.
 1. Click **Create** to finish creating the Azure AD group.
 
 ### Enable collection synchronization for the Azure service
 
-1. In the Configuration Manager console, go to **Administration** < **Overview** < **Cloud Services** < **Azure Services**.
+1. In the Configuration Manager console, go to **Administration** > **Overview** > **Cloud Services** > **Azure Services**.
 1. Right-click on the Azure AD tenant where you created the group and select **Properties**.
 1. In the **Collection Synchronization** tab, check the box for the **Enable Azure Directory Group Sync**.
 1. Click **OK** to save the setting.
 
 ### Enable the collection to synchronize
 
-1. In the Configuration Manager console, go to **Assets and Compliance** < **Overview** < **Device Collections**.
+1. In the Configuration Manager console, go to **Assets and Compliance** > **Overview** > **Device Collections**.
 1. Right-click on the collection to sync, then click **Properties**. 
 1. In the **AAD Group Sync** tab, click **Add**.
 1. From the drop-down menu, select the **Tenant** where you created your Azure AD group.
@@ -259,7 +259,7 @@ The Azure AD synchronization happens every five minutes. It's a one-way process,
 ### Verify the Azure AD group membership
 
 1. Go to [https://portal.azure.com](https://portal.azure.com).
-1. Navigate to **Azure Active Directory** < **Groups** < **All groups**.
+1. Navigate to **Azure Active Directory** > **Groups** > **All groups**.
 1. Find the group you created and select **Members**. 
 1. Confirm that the members reflect those in the Configuration Manager collection.
    - Only devices with Azure AD identity will show in the group.

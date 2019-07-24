@@ -53,7 +53,7 @@ Starting in Configuration Manager 1806, the Office Customization Tool is integra
 3. On the **Application Settings** page, provide a name and description for the app, enter the download location for the files, and then click **Next**. The location must be specified as &#92;&#92;*server*&#92;*share*.
 4. On the **Office Settings** page, click on **Go to the Office Customization Tool**. This will open the [Office Customization Tool for Click-to-Run](https://config.office.com).
 5. Configure the desired settings for your Office 365 installation. Click the **Submit** in the upper right of the page when you complete the configuration. 
-6. On the **Deployment** page, determine if you would like to deploy now or at a later time. If you choose to deploy later, you can find the application in **Software Library** < **Application Management** < **Applications**.  
+6. On the **Deployment** page, determine if you would like to deploy now or at a later time. If you choose to deploy later, you can find the application in **Software Library** > **Application Management** > **Applications**.  
 7. Confirm the settings on the **Summary** page. 
 8. Click **Next** then click **Close** once the Office 365 Client Installation Wizard completes. 
 
