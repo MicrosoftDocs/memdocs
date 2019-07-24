@@ -51,22 +51,6 @@ When installing the update for version 1906 in an environment with domain contro
 
 Ignore the warning.
 
-### When using redistributable files from the CD.Latest folder, setup fails with a manifest verification error
-
-<!-- 510080, 490569  -->
-
-When you run setup from the CD.Latest folder created for version 1606, and use the redistributable files included with that CD.Latest folder, setup fails with the following errors in the Configuration Manager Setup log:
-
-`ERROR: File hash check failed for defaultcategories.dll`  
-`ERROR: Manifest verification failed. Wrong version of manifest?`
-
-#### Workaround
-
-Use one of the following options:
-
-- During Setup, choose to download the most current redistributable files from Microsoft. Use the latest redistributable files instead of the files included in the CD.Latest folder.
-- Manually delete the *cd.latest\redist\languagepack\zhh* folder, and then run Setup again.
-
 ### Setup command-line option JoinCEIP must be specified
 
 <!--510806-->
