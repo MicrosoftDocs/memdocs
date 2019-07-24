@@ -142,6 +142,18 @@ Change the following registry value to `0` and restart the **Microsoft Office Cl
 
 ## Desktop Analytics
 
+### If you use distributed views, you can't onboard to Desktop Analytics
+
+<!-- 4950335 -->
+
+If you have a hierarchy, and enable [distributed views](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_distviews) for replication, after configuring the Desktop Analytics connection in Configuration Manager you'll see the following error in M365UploadWorker.log:
+
+`Unexpected exception 'System.Data.SqlClient.SqlException' Remote access is not supported for transaction isolation level "SNAPSHOT".:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action'1 wrapCloseInAction)`
+
+#### Workaround
+
+Disable distributed views
+
 ### Console unexpectedly closes when removing collections
 
 <!-- 4749443 -->
