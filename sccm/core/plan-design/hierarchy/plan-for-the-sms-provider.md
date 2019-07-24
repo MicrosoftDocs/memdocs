@@ -237,8 +237,8 @@ The Windows ADK installation can require up to 650 MB of free disk space on each
 
 <!--3607711, fka 1321523-->
 
-> [!Note]  
-> In this version of Configuration Manager, the SMS Provider API is a pre-release feature. To enable it, see [Pre-release features](/sccm/core/servers/manage/pre-release-features).  
+> [!Tip]  
+> This feature was first introduced in version 1810 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1906, it's no longer a pre-release feature.  
 
 Starting in version 1810, the SMS Provider provides read-only API interoperability access to WMI over HTTPS, called the **administration service**. This REST API can be used in place of a custom web service to access information from the site.
 

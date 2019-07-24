@@ -395,24 +395,30 @@ The following features are optional in the latest version of Configuration Manag
 
 -->
 
-- [Package conversion manager](/sccm/apps/pcm/package-conversion-manager) <!--1357861-->
-- [Third-party software updates](/sccm/sum/deploy-use/third-party-software-updates)<!--1357605,1352101,1358714-->
-- [Approve application requests for users per device](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy-settings) <!--1357015-->  
-- [Support for Cisco AnyConnect 4.0.07x and later for iOS](/sccm/mdm/deploy-use/create-vpn-profiles)<!--1357393-->
-- [Device health attestation assessment for compliance policies for conditional access](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616-->
-- [Create and run scripts](/sccm/apps/deploy-use/create-deploy-scripts) <!--1236459-->
-- [Run task sequence step](/sccm/osd/understand/task-sequence-steps#child-task-sequence) <!--1261338-->
-- [Task sequence content pre-caching](/sccm/osd/deploy-use/configure-precache-content) <!--1021244-->
-- [Surface driver updates](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490-->
-- [Cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) <!--1101764-->
-- [Data warehouse service point](/sccm/core/servers/manage/data-warehouse) <!--1277922-->
-- [Client peer cache](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436-->
-- [PFX create](/sccm/protect/deploy-use/introduction-to-certificate-profiles) <!--1321368-->
-- [Azure Log Analytics connector](/sccm/core/clients/manage/sync-data-log-analytics) <!--1258052-->
-- [Windows Defender Exploit Guard policy](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468-->
-- [VPN for Windows 10](/sccm/protect/deploy-use/vpn-profiles) <!--1283610-->
-- [Windows Hello for Business](/sccm/protect/deploy-use/windows-hello-for-business-settings) (previously known as *Passport for Work*) <!--1245704-->
-- [Conditional access for managed PCs](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)  <!--1191496-->
+- [Synchronize collection membership results to Azure Active Directory](/sccm/core/clients/manage/collections/create-collections#bkmk_aadcollsync) <!--3607475,C2127144-C8DE-49F6-9CB3-D4F5B59F9515-->
+- [Azure Active Directory user group discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_azuregroupdisco) <!--3611956,023715E7-BFBA-4E9E-A80F-B5B626464ADD-->
+- [Application groups](/sccm/apps/deploy-use/create-app-groups) <!--3555907,EE16A1D8-EF1B-4094-845F-AC107E7C621D-->
+- [Task sequence debugger](/sccm/osd/deploy-use/debug-task-sequence) <!--3612274,C3F37661-69E4-4D53-A39C-5D02F97E0E71-->
+- [Package conversion manager](/sccm/apps/pcm/package-conversion-manager) <!--1357861,4E0C09AF-7FC1-4412-A8BB-166D9BCD0093-->
+- [Client apps for co-managed devices](/sccm/comanage/workloads#client-apps) <!--1357892,CC3AE625-BF72-49B1-8AB1-AF0DCF2D6F4C-->
+- [Third-party software updates](/sccm/sum/deploy-use/third-party-software-updates)<!--1357605,1352101,1358714;B5E192AE-C81F-4348-9EF9-07A3C0FBE597-->
+- [Approve application requests for users per device](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy-settings) <!--1357015,4BA987C9-08FC-48E2-BFFE-C9DCF35B496A-->  
+- [Support for Cisco AnyConnect 4.0.07x and later for iOS](/sccm/mdm/deploy-use/create-vpn-profiles)<!--1357393,A421682F-C1A5-4933-A329-3EF35737E52A-->
+- [Device health attestation assessment for compliance policies for conditional access](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616,0E986DC1-D20A-4386-9EB5-108D9D5118EB-->
+- [Create and run scripts](/sccm/apps/deploy-use/create-deploy-scripts) <!--1236459,566F8720-F415-4E10-9A51-CDE682BA2B2E-->
+- [Run task sequence step](/sccm/osd/understand/task-sequence-steps#child-task-sequence) <!--1261338,3CFFE6AC-D46F-47F0-AD25-19F6EEF21F28-->
+- [Task sequence content pre-caching](/sccm/osd/deploy-use/configure-precache-content) <!--1021244,1C6BD2E9-C8DB-4DEE-A937-AA84B38957A7-->
+- [Surface driver updates](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490,82AD973A-7CDF-4B67-A665-72875D6E099A-->
+- [Cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) <!--1101764,DD043119-789C-4158-AC79-725E999F385A-->
+- [Data warehouse service point](/sccm/core/servers/manage/data-warehouse) <!--1277922,0EAC8088-6895-440F-B871-11E3C305CFCD-->
+- [Client peer cache](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436,4C5F2976-7999-4E0C-BAF2-DEB793AD540E-->
+- [PFX create](/sccm/protect/deploy-use/introduction-to-certificate-profiles) <!--1321368,CED76B79-929C-4C45-981F-B9BCA6D38A17-->
+- [Azure Log Analytics connector](/sccm/core/clients/manage/sync-data-log-analytics) <!--1258052,73A7EC4D-EF22-4EA4-82A9-419C2A8CFC4D-->
+- [Windows Defender Exploit Guard policy](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468,8491D4C8-8484-46B8-BCD6-17DC2CADBAEB-->
+- [VPN for Windows 10](/sccm/protect/deploy-use/vpn-profiles) <!--1283610,EDBEBA3D-3A4D-4465-84D9-D71EB811E7F6-->
+- [Servicing a cluster-aware collection (Server groups)](/sccm/sum/deploy-use/service-a-server-group) <!--1081776,290B66D8-C735-4895-B59A-DD732D84A697-->
+- [Windows Hello for Business](/sccm/protect/deploy-use/windows-hello-for-business-settings) (previously known as *Passport for Work*) <!--1245704,8BCA2642-3719-4862-A355-9D39C979E1B4-->
+- [Conditional access for managed PCs](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)  <!--1191496,1CD5B9FC-022E-4A78-89F5-DEA58B6F5050-->
 
 > [!Tip]  
 > For more information on features that require consent to enable, see [pre-release features](/sccm/core/servers/manage/pre-release-features).  
