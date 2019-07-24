@@ -1,8 +1,8 @@
 ---
-title: "How to manage Windows Device Guard"
-titleSuffix: "Configuration Manager"
-description: "Learn how to use System Center Configuration Manager to manage Windows Device Guard."
-ms.date: 12/19/2017
+title: How to manage Windows Device Guard
+titleSuffix: Configuration Manager
+description: Learn how to use Configuration Manager to manage Windows Device Guard.
+ms.date: 07/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -12,7 +12,6 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-
 
 # Device Guard management with Configuration Manager
 
@@ -37,8 +36,8 @@ You can configure one of the following modes:
 1. **Enforcement enabled** - Only trusted executables are allowed to run.
 2. **Audit only** - Allow all executables to run, but log untrusted executables that run in the local client event log.
 
->[!TIP]
->In this version of Configuration Manager, Device Guard is a pre-release feature. To enable it, see [Pre-release features in System Center Configuration Manager](/sccm/core/servers/manage/pre-release-features).
+> [!Tip]  
+> This feature was first introduced in version 1702 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1906, it's no longer a pre-release feature.  
 
 ## What can run when you deploy a Windows Defender Application Control policy?
 
@@ -85,7 +84,7 @@ Before you configure or deploy Windows Defender Application Control policies, re
     - **Enforcement Mode** - Choose one of the following enforcement methods for Device Guard on the client PC.
         - **Enforcement Enabled** - Only allow trusted executables are allowed to run.
         - **Audit Only** - Allow all executables to run, but log untrusted executables that run in the local client event log.
-5. On the **Inclusions** tab of the **Create Application Control policy Wizard**, chose if you want to **Authorize software that is trusted by the Intelligent Security Graph**.
+5. On the **Inclusions** tab of the **Create Application Control policy Wizard**, choose if you want to **Authorize software that is trusted by the Intelligent Security Graph**.
 6. Click **Add** if you want to add trust for specific files or folders on PCs. In the **Add Trusted File or Folder** dialog box, you can specify a local file or a folder path to trust. You can also specify a file or folder path on a remote device on which you have permission to connect. When you add trust for specific files or folders in a Windows Defender Application Control policy, you can:
     - Overcome issues with managed installer behaviors
     - Trust line-of-business apps that cannot be deployed with Configuration Manager
