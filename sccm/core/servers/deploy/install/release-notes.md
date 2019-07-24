@@ -21,7 +21,7 @@ With Configuration Manager, product release notes are limited to urgent issues. 
 
 Feature-specific documentation includes information about known issues that affect core scenarios.  
 
-This topic contains release notes for the current branch of Configuration Manager. For information on the technical preview branch, see [Technical Preview](/sccm/core/get-started/technical-preview)  
+This article contains release notes for the current branch of Configuration Manager. For information on the technical preview branch, see [Technical Preview](/sccm/core/get-started/technical-preview)  
 
 For information about the new features introduced with different versions, see the following articles:
 
@@ -146,7 +146,7 @@ Change the following registry value to `0` and restart the **Microsoft Office Cl
 
 <!-- 4950335 -->
 
-If you have a hierarchy, and enable [distributed views](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_distviews) for replication, after configuring the Desktop Analytics connection in Configuration Manager you'll see the following error in M365UploadWorker.log:
+If you have a hierarchy, and enable [distributed views](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_distviews) for replication, after you configure the Desktop Analytics connection in Configuration Manager you'll see the following error in M365UploadWorker.log:
 
 `Unexpected exception 'System.Data.SqlClient.SqlException' Remote access is not supported for transaction isolation level "SNAPSHOT".:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action'1 wrapCloseInAction)`
 
@@ -172,7 +172,7 @@ When you remove a collection, select **OK** to close the properties window. Then
 
 When you use the Configuration Manager console to monitor your pilot deployment status, pilot devices that are up-to-date on the target version of Windows for that deployment plan show as **undefined** in the Pilot status tile.  
 
-These **undefined** devices are **up-to-date** with the target version of the the OS for that deployment plan. No further action is necessary.
+These **undefined** devices are **up-to-date** with the target version of the OS for that deployment plan. No further action is necessary.
 
 
 ## Mobile device management  
@@ -203,11 +203,13 @@ This action allows you to complete the wizard. The app is still successfully dep
 
 ## Endpoint Protection
 
-### You cannot deploy Windows Defender/SCEP Policies to client devices without domain connectivity
+### You can't deploy Windows Defender or Endpoint Protection policies to client devices without domain connectivity
+
 <!-- 4350561 -->
 *Applies to: Configuration Manager version 1902 and earlier*
 
-When Windows Defender/SCEP policies are applied by the Configuration Manager client, a group policy update is required which does not work when the domain is inaccessible. This issue impacts devices managed over the Internet by CMG.
+When Configuration Manager applies Windows Defender and Endpoint Protection policies to the Configuration Manager client, Windows requires a group policy update. This action doesn't work when the device can't access the domain. This issue impacts devices managed over the internet by a cloud management gateway (CMG).
 
 #### Workaround
+
 None
