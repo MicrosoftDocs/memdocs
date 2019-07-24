@@ -107,7 +107,7 @@ For more information, see [Configure discovery methods](/sccm/core/servers/deplo
  
 You can now enable the synchronization of collection memberships to an Azure Active Directory (Azure AD) group. This synchronization is a pre-release feature. To enable it, see [Pre-release features](/sccm/core/servers/manage/pre-release-features).
 
- The synchronization allows you to use your existing on premises grouping rules in the cloud by creating Azure AD group memberships based on collection membership results. Only devices with an Azure Active Directory record are reflected in the Azure AD Group. Both Hybrid Azure AD Joined and Azure Active Director joined devices are supported.
+ The synchronization allows you to use your existing on premises grouping rules in the cloud by creating Azure AD group memberships based on collection membership results. Only devices with an Azure Active Directory record are reflected in the Azure AD Group. Both Hybrid Azure AD Joined and Azure Active Directory joined devices are supported.
 
 For more information, see [Create collections](/sccm/core/clients/manage/collections/create-collections#bkmk_aadcollsync).
 
@@ -347,7 +347,7 @@ This release includes the following improvements to OS deployment:
 
 - It's now easier to edit variables when you run a task sequence. After you select a task sequence in the Task Sequence Wizard window, the page to edit task sequence variables includes an **Edit** button.<!-- 4668846 --> For more information, see [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables#bkmk_set-tswiz).
 
-- The **Disable BitLocker** task sequence step has a new restart counter. Use this option to specify the number of restarts to keep BitLocker disabled. This change you simplify your task sequence. You can use a single step, instead of adding multiple instances of this step. <!--4512937--> For more information, see [Disable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_DisableBitLocker).
+- The **Disable BitLocker** task sequence step has a new restart counter. Use this option to specify the number of restarts to keep BitLocker disabled. This change helps you simplify your task sequence. You can use a single step, instead of adding multiple instances of this step. <!--4512937--> For more information, see [Disable BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_DisableBitLocker).
 
 - Use the new task sequence variable **SMSTSRebootDelayNext** with the existing [SMSTSRebootDelay](/sccm/osd/understand/task-sequence-variables#SMSTSRebootDelay) variable. If you want any later reboots to happen with a different timeout than the first, set this new variable to a different value in seconds. <!--4447680--> For more information, see [SMSTSRebootDelayNext](/sccm/osd/understand/task-sequence-variables#SMSTSRebootDelayNext).
 
