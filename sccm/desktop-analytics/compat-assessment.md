@@ -36,6 +36,8 @@ In the list of app or driver assets in a deployment plan, you'll see this value 
 
 ## App risk assessment
 
+![Diagram of app risk assessment sources](media/app-risk-assessment-sources.png)
+
 There are several sources that Desktop Analytics uses to generate the assessment rating for applications:
 
 - [Microsoft known issues](#microsoft-known-issues)
