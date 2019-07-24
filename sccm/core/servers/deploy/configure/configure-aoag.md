@@ -152,7 +152,7 @@ To complete this procedure, the account you use must be:
 
 4. On the server that will host the site database (the primary replica, or the server where you restored the site database), change the backup model for the site database from **FULL** to **SIMPLE**. See [View or Change the Recovery Model of a Database](/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server) in the SQL Server documentation.  
 
-5. Run **Configuration Manager Setup** from **&lt;*Configuration Manager site installation folder>*\BIN\X64\setup.exe**.
+5. Run **Configuration Manager Setup** from **\<*Configuration Manager site installation folder>*\BIN\X64\setup.exe**.
 
 6. On the **Getting Started** page, select **Perform site maintenance or reset this site**, and then click **Next**.  
 
