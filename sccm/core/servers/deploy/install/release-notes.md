@@ -51,6 +51,29 @@ When installing the update for version 1906 in an environment with domain contro
 
 Ignore the warning.
 
+### Azure AD user discovery and collection group sync don't work after site expansion
+
+<!-- 4797313 -->
+*Applies to version 1906*
+
+After you configure either of the following features:
+
+- Azure Active Directory user group discovery
+- Synchronize collection membership results to Azure Active Directory groups
+
+If you then expand a standalone primary site to a hierarchy with a central administration site, you'll see the following error in SMS_AZUREAD_DISCOVERY_AGENT.log:
+
+`Could not obtain application secret for tenant xxxxx. If this is after a site expansion, please run "Renew Secret Key" from admin console.`
+
+#### Workaround
+
+Renew the key associated with the app registration in Azure AD.
+
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Active Directory Tenants** node.
+1. Select the Azure AD tenant that you're using with the features listed above.
+1. In the ribbon, select **Renew Secret Key**. Enter the credentials of either the app owner or an Azure AD administrator.
+
+
 ### Setup command-line option JoinCEIP must be specified
 
 <!--510806-->
