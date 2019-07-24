@@ -191,7 +191,7 @@ The .NET Framework version 1.0 isn't supported on Windows 10. Version 1.1 isn't 
 
 Applications with UI access can bypass user interface control levels to drive input to higher privilege windows on the desktop. Only use this setting for user interface assistive technology applications.
 
-If you're not using accessibility features in your app, set the UI access flag in the app manifest to false. For more information, see [Create and embed an application manifest](https://docs.microsoft.com/en-us/previous-versions/bb756929\(v=msdn.10\)).
+If you're not using accessibility features in your app, set the UI access flag in the app manifest to false. For more information, see [Create and embed an application manifest](https://docs.microsoft.com/previous-versions/bb756929\(v=msdn.10\)).
 
 Desktop Analytics recommends the app for pilot testing to discover any regressions.
 
