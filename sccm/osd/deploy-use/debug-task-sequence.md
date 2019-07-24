@@ -19,6 +19,9 @@ manager: dougeby
 
 Starting in version 1906, the task sequence debugger is a new troubleshooting tool. You deploy a task sequence in debug mode to a small collection. It lets you step through the task sequence in a controlled manner to aid troubleshooting and investigation. The debugger currently runs on the same device as the task sequence engine, it's not a remote debugger.
 
+> [!Note]  
+> In this version of Configuration Manager, the task sequence debugger is a pre-release feature. To enable it, see [Pre-release features](/sccm/core/servers/manage/pre-release-features).  
+
 
 ## Prerequisites
 
