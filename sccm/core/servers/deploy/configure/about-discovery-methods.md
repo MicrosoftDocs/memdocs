@@ -212,7 +212,7 @@ Actions for Azure AD user discovery are recorded in the **SMS_AZUREAD_DISCOVERY_
 
 To configure Azure AD user discovery, see [Configure Azure Services](/sccm/core/servers/deploy/configure/Azure-services-wizard) for Cloud Management. For information about how to configure this discovery method, see [Configure Azure AD User Discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc).
 
-## <a name="bkmk_azuregroupdisco"></a> Configure Azure Active Directory user group discovery
+## <a name="bkmk_azuregroupdisco"></a> Azure Active Directory user group discovery
 <!--3611956-->
 *(Introduced as a [pre-release feature](/sccm/core/servers/manage/pre-release-features) in version 1906)*
 
