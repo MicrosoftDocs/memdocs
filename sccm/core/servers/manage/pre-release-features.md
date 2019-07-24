@@ -64,18 +64,21 @@ When you enable a pre-release feature, the Configuration Manager hierarchy manag
 
 
 > [!Tip]  
-> This feature was first introduced in version 1702 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1706, this feature is no longer a pre-release feature.  
+> This feature was first introduced in version 1702 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1906, it's no longer a pre-release feature.  
 
 -->
 
+<!-- With each current branch release, to help purge this list a bit, remove any entries that were added as a full feature in a version that's no longer supported -->
 | Feature          | Added as pre-release | Added as a full feature |  
 |------------------|----------------------|-------------------------|
-| [Azure Active Directory user group discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_azuregroupdisco) <!--3611956-->| Version 1906 | ![Not yet](media/red_x.png) |
-|[Synchronize collection membership results to Azure Active Directory groups](/sccm/core/clients/manage/collections/create-collections#bkmk_aadcollsync) <!--3607475-->| Version 1906| ![Not yet](media/red_x.png)|
-| [CMPivot Standalone](/sccm/core/servers/manage/cmpivot#bkmk_standalone) <!--3555890--> | Version 1906 | ![Not yet](media/red_x.png) |
-| SMS Provider API <!--1359052--> | Version 1810 | ![Not yet](media/red_x.png) |
+| [Task sequence debugger](/sccm/osd/deploy-use/debug-task-sequence) <!--3612274,C3F37661-69E4-4D53-A39C-5D02F97E0E71--> | Version 1906 | ![Not yet](media/red_x.png) |
+| [Application groups](/sccm/apps/deploy-use/create-app-groups) <!--3555907,EE16A1D8-EF1B-4094-845F-AC107E7C621D--> | Version 1906 | ![Not yet](media/red_x.png) |
+| [Azure Active Directory user group discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_azuregroupdisco) <!--3611956,023715E7-BFBA-4E9E-A80F-B5B626464ADD-->| Version 1906 | ![Not yet](media/red_x.png) |
+| [Synchronize collection membership results to Azure Active Directory](/sccm/core/clients/manage/collections/create-collections#bkmk_aadcollsync) <!--3607475,C2127144-C8DE-49F6-9CB3-D4F5B59F9515-->| Version 1906| ![Not yet](media/red_x.png)|
+| [CMPivot standalone](/sccm/core/servers/manage/cmpivot#bkmk_standalone) <!--3555890/4692885,no GUID--> | Version 1906 | ![Not yet](media/red_x.png) |
+| [SMS Provider administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service) <!--1359052--> | Version 1810 | Version 1906 |
 | [Enhanced HTTP site system](/sccm/core/plan-design/hierarchy/enhanced-http) <!--1356889,1358228--> | Version 1806 | Version 1810 |
-| [Client apps for co-managed devices](/sccm/comanage/workloads#client-apps) <!--1357892--> | Version 1806 | ![Not yet](media/red_x.png) |
+| [Client apps for co-managed devices](/sccm/comanage/workloads#client-apps) <!--1357892,CC3AE625-BF72-49B1-8AB1-AF0DCF2D6F4C--> | Version 1806 | ![Not yet](media/red_x.png) |
 | [SCAP extensions](/sccm/compliance/plan-design/scap/about-scap) <!--3607889--> | Version 1806 | ![Not yet](media/red_x.png) |
 | [Package conversion manager](/sccm/apps/pcm/package-conversion-manager) <!--1357861--> | Version 1806 | Version 1810 |
 | [Support for Cisco AnyConnect 4.0.07x and later for iOS](/sccm/mdm/deploy-use/create-vpn-profiles) <!--1357393--> | Version 1802 | Version 1802 <br>with update 4163547 |
@@ -84,16 +87,10 @@ When you enable a pre-release feature, the Configuration Manager hierarchy manag
 | [Windows Defender Exploit Guard](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468--> | Version 1710 | Version 1802 |
 | [Device health attestation assessment for conditional access compliance policies](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616--> | Version 1710 | Version 1802 |
 | [Create and run Windows PowerShell scripts](/sccm/apps/deploy-use/create-deploy-scripts) <!--1236459--> | Version 1706 | Version 1802 |
-| [Manage Microsoft Surface driver updates](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490--> | Version 1706 | Version 1710 |
-| [Device Guard management](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager) <!--1355092 (1319346)--> | Version 1702 | ![Not yet](media/red_x.png) |
-| [Task sequence content pre-caching](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) <!--1021244--> | Version 1702 | Version 1710 |
-| [Check for running executable files before installing an application](/sccm/apps/deploy-use/deploy-applications#bkmk_exe-check) <!--1284624--> | Version 1702 | Version 1706 |
-| [Data warehouse service point](/sccm/core/servers/manage/data-warehouse) <!--1277922--> | Version 1702 | Version 1706 |
-| [Peer cache for content distribution to clients](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436--> | Version 1610 | Version 1710 |
+| [Device Guard management](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager) <!--3600958 (fka 1355092 & 1319346)--> | Version 1702 | Version 1906 |
 | [Cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway) <!--1101764--> | Version 1610 | Version 1802 |
 | [Azure Log Analytics connector](/sccm/core/clients/manage/sync-data-log-analytics) <!--1236739--> | Version 1606 | Version 1802 |
-| [Servicing a cluster-aware collection (service a server group)](/sccm/core/get-started/capabilities-in-technical-preview-1605#BKMK_ServerGroups) <!--1081776--> | Version 1602 | ![Not yet](media/red_x.png) |
-| [Conditional access for PCs managed by Configuration Manager](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--  --> | Version 1602 | Version 1702 |
+| [Servicing a cluster-aware collection (Server groups)](/sccm/sum/deploy-use/service-a-server-group) <!--1081776,290B66D8-C735-4895-B59A-DD732D84A697--> | Version 1602 | ![Not yet](media/red_x.png) |
 
 <!--Image used = ![Not yet](media/red_x.png) -->
 

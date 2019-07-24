@@ -316,7 +316,13 @@ The following settings must be shorter in duration than the shortest maintenance
 - **Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes)**
 - **Display a dialog box that the user cannot close, which displays the countdown interval before the user is logged off or the computer restarts (minutes)**
 
+
 For more information about maintenance windows, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows).
+
+- **Specify the snooze duration for computer restart countdown notifications (hours)** (Starting in version 1906)<!--3976435-->
+  - The default value is 4 hours.
+  - Your snooze duration value should be less than the temporary notification value minus the value for the notification the user cant dismiss.
+  - For more information, see [Device restart notifications](/sccm/core/clients/deploy/device-restart-notifications).
 
 **When a deployment requires a restart, show a dialog window to the user instead of a toast notification**<!--3555947-->: Starting in version 1902, configuring this setting to **Yes** changes the user experience to be more intrusive. This setting applies to all deployments of applications, task sequences, and software updates. For more information, see [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_impact).
 
