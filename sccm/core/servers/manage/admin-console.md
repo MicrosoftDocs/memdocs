@@ -260,6 +260,30 @@ For more information, see [Product Feedback](/sccm/core/understand/find-help#BKM
 
 ### Assets and Compliance workspace
 
+#### Real-time actions from device lists
+<!--4616810-->
+*(Introduced in version 1906)*
+
+There are various ways to display a list of devices under the **Devices** node in the **Assets and Compliance** workspace.
+
+- In the **Assets and Compliance** workspace, select the **Device Collections** node. Select a device collection, and choose the action to **Show members**. This action opens a subnode of the **Devices** node with a device list for that collection.  
+
+  - When you select the collection subnode, you can now start **CMPivot** from the Collection group of the ribbon.  
+
+- In the **Monitoring** workspace, select the **Deployments** node. Select a deployment, and choose the **View Status** action in the ribbon. In the deployment status pane, double-click the total assets to drill-through to a device list.  
+
+  - When you select a device in this list, you can now start **CMPivot** and **Run Scripts** from the Device group of the ribbon.  
+
+
+#### Collections tab in devices node
+<!--4616810-->
+*(Introduced in version 1906)*
+In the **Assets and Compliance** workspace, go to the **Devices** node, and select a device. In the details pane, switch to the new **Collections** tab. This tab lists the collections that include this device. 
+
+> [!Note]  
+> This tab currently isn't available from a devices subnode under the **Device Collections** node. For example, when you select the option to **Show Members** on a collection.
+
+
 #### Add SMBIOS GUID column to device and device collection nodes
 
 *(Introduced in version 1906)*
@@ -301,6 +325,25 @@ This behavior significantly improves the time it takes to search by name, especi
 
 
 ### Software Library workspace
+
+#### Order by program name in task sequence
+<!--4616810-->
+*(Introduced in version 1906)*
+
+In the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node. Edit a task sequence, and select or add the [Install Package](/sccm/osd/understand/task-sequence-steps#BKMK_InstallPackage) step. If a package has more than one program, the drop-down list now sorts the programs alphabetically.
+
+#### Multiselect and delete packages
+<!--4616810-->
+*(Introduced in version 1906)*
+
+In the **Software Library** workspace, expand **Application Management**, and select the **Packages** node. select more than one package. In the Package group of the ribbon, you can now delete more than one package at a time.
+
+
+#### Task sequences tab in applications node
+<!--4616810-->
+*(Introduced in version 1906)*
+
+In the **Software Library** workspace, expand **Application Management**, go to the **Applications** node, and select an application. In the details pane, switch to the new **Task sequences** tab. This tab lists the task sequences that reference this application.
 
 #### Drill through required updates
 <!--4224414-->
@@ -346,6 +389,18 @@ In the **Software Library** workspace, expand **Operating Systems**, and select 
 
 
 ### Monitoring workspace
+
+#### Correct names for client operations
+<!--4616810-->
+*(Introduced in version 1906)*
+
+In the **Monitoring** workspace, select **Client Operations**. The operation to **Switch to next Software Update Point** is now properly named.
+
+#### Show collection name for scripts
+<!--4616810-->
+*(Introduced in version 1906)*
+
+In the **Monitoring** workspace, select the **Script Status** node. It now lists the **Collection Name** in addition to the ID.
 
 #### Remove content from monitoring status
 
