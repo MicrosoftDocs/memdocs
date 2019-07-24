@@ -279,6 +279,8 @@ For more information, see [Manually specify application information](/sccm/apps/
 <!--3555907-->
 Create a group of applications that you can send to a user or device collection as a single deployment. The metadata you specify about the app group is seen in Software Center as a single entity. You can order the apps in the group so that the client installs them in a specific order.
 
+This feature is pre-release. To enable it, see [Pre-release features](/sccm/core/servers/manage/pre-release-features).
+
 For more information, see [Create application groups](/sccm/apps/deploy-use/create-app-groups).
 
 ### Retry the install of pre-approved applications
@@ -319,6 +321,8 @@ For more information, see [Approve applications](/sccm/apps/deploy-use/app-appro
 The task sequence debugger is a new troubleshooting tool. You deploy a task sequence in debug mode to a collection of one device. It lets you step through the task sequence in a controlled manner to aid troubleshooting and investigation.
 
 ![Screenshot of task sequence debugger](./media/3612274-tsdebug.png)
+
+This feature is pre-release. To enable it, see [Pre-release features](/sccm/core/servers/manage/pre-release-features).
 
 For more information, see [Debug a task sequence](/sccm/osd/deploy-use/debug-task-sequence).
 
@@ -387,8 +391,6 @@ This release includes the following infrastructure improvements to Software Cent
 - Software Center now communicates with a management point for apps targeted to users as available. It doesn't use the application catalog anymore. This change makes it easier for you to remove the application catalog from the site.
 
 - Previously, Software Center picked the first management point from the list of available servers. Starting in this release, it uses the same management point that the client uses. This change allows Software Center to use the same management point from the assigned primary site as the client.
-
-- The management point now checks the health of its user service every five minutes. It reports any issues via status messages for the SMS_MP_CONTROL_MANAGER site component.
 
 > [!Important]  
 > These iterative improvements to Software Center and the management point are to retire the application catalog roles.
@@ -597,6 +599,11 @@ In the **Monitoring** workspace, select **Client Operations**. The operation to 
 
 
 ## Other updates
+
+As of this version, the following features are no longer pre-release:
+
+- [SMS Provider administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service)
+- [Device Guard management](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)
 
 <!-- Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4498910). -->
 
