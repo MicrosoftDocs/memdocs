@@ -177,6 +177,9 @@ Configure the database of each replica with the following settings:
 
 - Enable the **Service Broker**  
 
+    > [!Note]  
+    > You can't enable the Service Broker option on a database that's already part of an availability group. You have to enable that option before adding it to the availability group.<!-- SCCMDocs#1432 -->
+
 Only make these configurations on a primary replica. To configure a secondary replica, first fail over the primary to the secondary. This action makes the secondary the new primary replica.
 
 #### Multi-subnet failover
