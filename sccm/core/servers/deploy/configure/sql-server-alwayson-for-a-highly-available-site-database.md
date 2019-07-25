@@ -174,6 +174,21 @@ Configure the database of each replica with the following settings:
 
 Only make these configurations on a primary replica. To configure a secondary replica, first fail over the primary to the secondary. This action makes the secondary the new primary replica.
 
+#### Multi-subnet failover
+
+<!-- SCCMDocs-pr#3734 -->
+Starting in version 1906, you can enable the [MultiSubnetFailover connection string keyword](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) in SQL Server. You also need to manually add the following value to the Windows Registry on the site server:
+
+```
+HKLM:\SOFTWARE\Microsoft\SMS\Identification
+
+MSF Enabled : 1 (DWORD)
+```
+
+> [!Warning]  
+> Use of [site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability) and SQL Server Always On with multi-subnet failover isn't yet tested as a complete disaster recovery solution.
+
+
 ### Verification script
 
 Run the following SQL script to verify database configurations for both primary and secondary replicas. Before you can fix an issue on a secondary replica, change that secondary replica to be the primary replica.
@@ -249,7 +264,7 @@ The following limitations apply to all scenarios.
 
 - **Failover cluster instance**: Failover cluster instances aren't supported for a replica you use with Configuration Manager. For more information, see [SQL Server Always On failover cluster instances](https://docs.microsoft.com/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server).  
 
-- **MultiSubnetFailover**: It's not supported to use an availability group with Configuration Manager in a multi-subnet configuration. You also can't use the [MutliSubnetFailover](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) keyword connection string.  
+- **MultiSubnetFailover**: In version 1902 and earlier, it's not supported to use an availability group with Configuration Manager in a multi-subnet configuration. You also can't use the [MutliSubnetFailover](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) keyword connection string.  
 
 ### SQL Servers that host additional availability groups
 

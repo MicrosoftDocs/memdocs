@@ -106,6 +106,12 @@ You can now add a new secondary replica node to an existing SQL Always On availa
 
 For more information, see [Configure SQL Server Always On availability groups](/sccm/core/servers/deploy/configure/configure-aoag#bkmk_sync).
 
+#### Multi-subnet failover
+
+<!-- SCCMDocs-pr#3734 -->
+You can now enable the [MultiSubnetFailover connection string keyword](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) in SQL Server. You also need to manually configure the site server. For more information, see the [Multi-subnet failover](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#multi-subnet-failover) prerequisite.
+
+
 
 ## <a name="bkmk_cloud"></a> Cloud-attached management
 
