@@ -2,7 +2,7 @@
 title: Supported SQL Server versions
 titleSuffix: Configuration Manager
 description: Get SQL Server version and configuration requirements for hosting a Configuration Manager site database.
-ms.date: 08/14/2018
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -19,11 +19,10 @@ ms.collection: M365-identity-device-management
 
 Each System Center Configuration Manager site requires a supported SQL Server version and configuration to host the site database.  
 
-
-
 ##  <a name="bkmk_Instances"></a> SQL Server instances and locations  
  
-### Central administration site and primary sites  
+### Central administration site and primary sites
+ 
 The site database must use a full installation of SQL Server.  
 
 SQL Server can be located on:  
@@ -45,8 +44,10 @@ The site database can use the default instance of a full installation of SQL Ser
 SQL Server must be located on the site server computer.  
 
 
-### Limitations to support   
+### Limitations to support
+
 The following configurations aren't supported:
+
 - A SQL Server cluster in a Network Load Balancing (NLB) cluster configuration
 - A SQL Server cluster on a Cluster Shared Volume (CSV)
 - SQL Server database mirroring technology, and peer-to-peer replication
@@ -55,31 +56,32 @@ SQL Server transactional replication is supported only for replicating objects t
 
 
 
-##  <a name="bkmk_SQLVersions"></a> Supported versions of SQL Server  
+##  <a name="bkmk_SQLVersions"></a> Supported versions of SQL Server
+
 In a hierarchy with multiple sites, different sites can use different versions of SQL Server to host the site database. So long as the following items are true:
 - Configuration Manager supports the versions of SQL Server that you use.
 - The SQL Server versions you use remain in support by Microsoft.
-- SQL Server supports replication between the two versions of SQL Server. For example, SQL Server doesn't support replication between SQL Server 2008 R2 and SQL Server 2016. For more information, see [Deprecated features in SQL Server replication](https://docs.microsoft.com/sql/relational-databases/replication/deprecated-features-in-sql-server-replication).
+- SQL Server supports replication between the two versions of SQL Server. For more information, see [SQL Server replication backward compatibility](https://docs.microsoft.com/sql/relational-databases/replication/replication-backward-compatibility).
 
 
+For SQL Server 2016 and prior, support for each SQL version and service pack follows the [Microsoft Lifecycle Policy](https://aka.ms/sqllifecycle). Support for a specific SQL Server service pack includes cumulative updates unless they break backward compatibility to the base service pack version. Starting with SQL Server 2017, service packs won't be released since it follows a [modern servicing model](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server/). 
 
-Unless specified otherwise, the following versions of SQL Server are supported with all active versions of Configuration Manager. If support for a new SQL Server version or service pack is added, the Configuration Manager version that adds that support is noted. Similarly, if support is deprecated, look for details about affected versions of Configuration Manager.   
 
-Support for a specific SQL Server service pack includes cumulative updates unless they break backward compatibility to the base service pack version. When no service pack version is noted, support is for the version of SQL Server with no service pack. In the future, if a service pack is released for a SQL Server version, a separate support statement is declared before the new service pack version is supported.
-
+Unless specified otherwise, the following versions of SQL Server are supported with all active versions of Configuration Manager. If support for a new SQL Server version is added, the Configuration Manager version that adds that support is noted. Similarly, if support is deprecated, look for details about affected versions of Configuration Manager.
 
 > [!IMPORTANT]  
 > When you use SQL Server Standard for the database at the central administration site, you limit the total number of clients that a hierarchy can support. See [Size and scale numbers](/sccm/core/plan-design/configs/size-and-scale-numbers).
 
-### SQL Server 2017: Standard, Enterprise  
-You can use this version of SQL Server, with a minimum of [cumulative update version 2](https://support.microsoft.com/help/4052574), beginning with [Configuration Manager version 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710) for the following sites: 
+### SQL Server 2017: Standard, Enterprise
+
+You can use this version of SQL Server, with a minimum of [cumulative update version 2](https://support.microsoft.com/help/4052574), for the following sites:
 
 - A central administration site  
 - A primary site  
 - A secondary site  
   <!--SMS.498506-->
 
-### SQL Server 2016 SP2: Standard, Enterprise  
+### SQL Server 2016: Standard, Enterprise  
 <!--514985-->
 You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
 
@@ -87,91 +89,45 @@ You can use this version of SQL Server with no minimum cumulative update version
 - A primary site  
 - A secondary site  
 
-### SQL Server 2016 SP1: Standard, Enterprise  
-You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
+### SQL Server 2014: Standard, Enterprise
 
-- A central administration site  
-- A primary site  
-- A secondary site  
-
-### SQL Server 2016: Standard, Enterprise  
-You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
-
-- A central administration site  
-- A primary site  
-- A secondary site  
-
-### SQL Server 2014 SP3: Standard, Enterprise  
 You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
 
 - A central administration site  
 - A primary site  
 - A secondary site
 
-### SQL Server 2014 SP2: Standard, Enterprise  
-You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
 
-- A central administration site  
-- A primary site  
-- A secondary site
+### SQL Server 2012: Standard, Enterprise
 
-### SQL Server 2014 SP1: Standard, Enterprise  
- You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
-
-- A central administration site  
-- A primary site  
-- A secondary site
-
-### SQL Server 2012 SP4: Standard, Enterprise  
  You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
 
 - A central administration site  
 - A primary site  
 - A secondary site  
 
-### SQL Server 2012 SP3: Standard, Enterprise  
- You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
 
-- A central administration site  
-- A primary site  
-- A secondary site  
+### SQL Server 2017 Express
 
-### SQL Server 2008 R2 SP3: Standard, Enterprise, Datacenter     
-This version of SQL Server isn't supported. For more information, see [Deprecated support for SQL Server versions as a site database](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#sql-server).  
+You can use this version of SQL Server, with a minimum of [cumulative update version 2](https://support.microsoft.com/help/4052574), for the following sites:
 
-### SQL Server 2017 Express   
-You can use this version of SQL Server, with a minimum of [cumulative update version 2](https://support.microsoft.com/help/4052574), beginning with [Configuration Manager version 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710) for the following sites:
 - A secondary site
 <!--SMS.498506-->
 
-### SQL Server 2016 Express SP2  
-You can use this version of SQL Server with no minimum cumulative update version for the following sites:
-- A secondary site
-
-### SQL Server 2016 Express SP1  
-You can use this version of SQL Server with no minimum cumulative update version for the following sites:
-- A secondary site
-
 ### SQL Server 2016 Express
+
 You can use this version of SQL Server with no minimum cumulative update version for the following sites:
+
 - A secondary site
 
-### SQL Server 2014 Express SP3   
+### SQL Server 2014 Express
+
 You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
 
 - A secondary site  
 
-### SQL Server 2014 Express SP2   
-You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
+### SQL Server 2012 Express
 
-- A secondary site  
-
-### SQL Server 2014 Express SP1   
- You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
-
-- A secondary site  
-
-### SQL Server 2012 Express SP3  
 You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
 
 - A secondary site  
