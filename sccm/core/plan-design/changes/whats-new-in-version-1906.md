@@ -108,6 +108,9 @@ For more information, see [Management insights](/sccm/core/servers/manage/manage
     > [!Note]  
     > This change doesn't apply to SQL Server clusters.
 
+- Site recovery can recreate the database on a SQL Always On group. This process works with both manual and automatic seeding.<!-- SCCMDocs-pr#3846 -->
+
+
 ## <a name="bkmk_cloud"></a> Cloud-attached management
 
 ### Azure Active Directory user group discovery
