@@ -323,7 +323,7 @@ For more information, see [Package Conversion Manager](/sccm/apps/pcm/package-co
 This release includes the following improvements to phased deployments:  
 
 #### Create a phased deployment with manually configured phases
-<!--1358148--> 
+<!--1358148-->
 For a task sequence, now manually configure the phases when you create a phased deployment. Add up to 10 additional phases from the **Phases** tab of the Create Phased Deployment wizard. You can still automatically create a default two-phase deployment. 
 
 For more information, see [Create a phased deployment with manually configured phases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence#bkmk_manual).
