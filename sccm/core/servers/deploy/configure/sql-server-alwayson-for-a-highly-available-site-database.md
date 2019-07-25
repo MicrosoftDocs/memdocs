@@ -316,6 +316,8 @@ These errors are safe to ignore.
 <!--SCCMDocs issue 568-->
 If you configure the site database for a standalone primary site to use SQL Always On, you can't expand the site to include a central administration site. If you try this process, it fails. To expand the site, temporarily remove the primary site database from the availability group.
 
+You don't need to make any changes to the configuration when adding a secondary site.
+
 
 ## Changes for site backup
 
