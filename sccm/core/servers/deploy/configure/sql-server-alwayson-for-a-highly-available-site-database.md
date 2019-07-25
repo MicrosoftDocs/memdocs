@@ -196,6 +196,8 @@ MSF Enabled : 1 (DWORD)
 > [!Warning]  
 > Use of [site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability) and SQL Server Always On with multi-subnet failover doesn't provide the full capabilities of automatic failover for disaster recovery scenarios.
 
+If you need to create an availability group with a member in a remote location, prioritize based on the lowest network latency. High network latency can cause replication failures.<!-- SCCMDocs#1381 -->
+
 
 ### Verification script
 
