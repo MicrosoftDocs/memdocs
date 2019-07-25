@@ -226,15 +226,4 @@ This action allows you to complete the wizard. The app is still successfully dep
 <!-- ## Reports and monitoring    -->
 <!-- ## Conditional access   -->
 
-## Endpoint Protection
-
-### You can't deploy Windows Defender or Endpoint Protection policies to client devices without domain connectivity
-
-<!-- 4350561 -->
-*Applies to: Configuration Manager version 1902 and earlier*
-
-When Configuration Manager applies Windows Defender and Endpoint Protection policies to the Configuration Manager client, Windows requires a group policy update. This action doesn't work when the device can't access the domain. This issue impacts devices managed over the internet by a cloud management gateway (CMG).
-
-#### Workaround
-
-None
+<!-- ## Endpoint Protection -->
