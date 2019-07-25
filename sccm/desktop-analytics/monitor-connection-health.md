@@ -36,6 +36,8 @@ This tile displays the following basic information about the connection from Con
     - Obsolete
     - Inactive
     - Unmanaged
+    - Devices running Long Term Servicing Channel (LTSC) versions of Windows 10
+    - Devices running Windows Server
 
     For more information on these device states, see [About client status](/sccm/core/clients/manage/monitor-clients#bkmk_about).
 
