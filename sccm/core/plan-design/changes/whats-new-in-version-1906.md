@@ -97,15 +97,15 @@ Management insights includes a new rule that detects if you enabled the less sec
 
 For more information, see [Management insights](/sccm/core/servers/manage/management-insights#security).
 
-### Add a SQL AlwaysOn node
+### Improvements to support for SQL Always On
+
+#### Add a new synchronous replica from setup
 
 <!--3127336-->
-You can now add a new secondary replica node to an existing SQL AlwaysOn availability group. Instead of a [manual process](/sccm/core/servers/deploy/configure/configure-aoag#add-or-remove-synchronous-replica-members), use Configuration Manager setup to make this change.
+You can now add a new secondary replica node to an existing SQL Always On availability group. Instead of a manual process, use Configuration Manager setup to make this change.
 
-<!--For more information on Configuration Manager support for SQL AlwaysOn, see the following articles:
+For more information, see [Configure SQL Server Always On availability groups](/sccm/core/servers/deploy/configure/configure-aoag#bkmk_sync).
 
-- [Prepare to use SQL Server Always On availability groups](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)
-- [Configure SQL Server Always On availability groups](/sccm/core/servers/deploy/configure/configure-aoag)-->
 
 ## <a name="bkmk_cloud"></a> Cloud-attached management
 
