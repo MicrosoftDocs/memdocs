@@ -114,6 +114,9 @@ Each replica member must have the following configuration:
 
 - All members need the same [seeding mode](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas).<!-- SCCMDocs-pr#3899 --> Configuration Manager setup includes a prerequisite check to verify this configuration when creating a database through install or recovery.
 
+    > [!Note]  
+    > When setup creates the database, and you configure **automatic** seeding, the availability group must have permissions to create the database. This requirement applies to both a new database or recovery. For more information, see [Automatic seeding for secondary replica](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas#security).<!-- SCCMDocs-pr#3900 -->
+
 #### Replica member location
 
 Either host all replicas in an availability group on-premises, or host them all on Microsoft Azure. A group that includes an on-premises member and a member in Azure isn't supported.
