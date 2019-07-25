@@ -112,6 +112,8 @@ Each replica member must have the following configuration:
     > - You run Configuration Manager setup to specify use of the site database in the availability group.  
     > - You install any update to Configuration Manager. (Not just updates that apply to the site database).  
 
+- All members need the same [seeding mode](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas).<!-- SCCMDocs-pr#3899 --> Configuration Manager setup includes a prerequisite check to verify this configuration when creating a database through install or recovery.
+
 #### Replica member location
 
 Either host all replicas in an availability group on-premises, or host them all on Microsoft Azure. A group that includes an on-premises member and a member in Azure isn't supported.
@@ -186,7 +188,7 @@ MSF Enabled : 1 (DWORD)
 ```
 
 > [!Warning]  
-> Use of [site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability) and SQL Server Always On with multi-subnet failover isn't yet tested as a complete disaster recovery solution.
+> Use of [site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability) and SQL Server Always On with multi-subnet failover doesn't provide the full capabilities of automatic failover for disaster recovery scenarios.
 
 
 ### Verification script
