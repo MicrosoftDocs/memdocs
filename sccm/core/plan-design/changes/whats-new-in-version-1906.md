@@ -44,6 +44,21 @@ Version 1906 deprecates support for the following products:
 - Windows 10 Mobile
 - Windows 10 Mobile Enterprise
 
+
+## Requirement changes
+
+### Version 1906 client requires SHA-2 code signing support
+
+<!--SCCMDocs-pr#3404-->
+Because of weaknesses in the SHA-1 algorithm and to align to industry standards, Microsoft now only signs Configuration Manager binaries using the more secure SHA-2 algorithm. The following Windows OS versions require an update for SHA-2 code signing support:
+
+- Windows 7 SP1
+- Windows Server 2008 R2 SP1
+- Windows Server 2008 SP2
+
+For more information, see [Prerequisites for Windows clients](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers#bkmk_sha2).
+
+
 ## <a name="bkmk_infra"></a> Site infrastructure
 
 ### Site server maintenance task improvements
@@ -210,17 +225,6 @@ OneTrace is a new log viewer with Support Center. It works similarly to CMTrace,
 ![Screenshot of OneTrace log viewer](./media/3555962-onetrace.png)
 
 For more information, see [Support Center OneTrace](/sccm/core/support/support-center-onetrace).
-
-### Version 1906 client requires SHA-2 code signing support
-
-<!--SCCMDocs-pr#3404-->
-Because of weaknesses in the SHA-1 algorithm and to align to industry standards, Microsoft now only signs Configuration Manager binaries using the more secure SHA-2 algorithm. The following Windows OS versions require an update for SHA-2 code signing support:
-
-- Windows 7 SP1
-- Windows Server 2008 R2 SP1
-- Windows Server 2008 SP2
-
-For more information, see [Prerequisites for Windows clients](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers#bkmk_sha2).
 
 ### Configure client cache minimum retention period
 
