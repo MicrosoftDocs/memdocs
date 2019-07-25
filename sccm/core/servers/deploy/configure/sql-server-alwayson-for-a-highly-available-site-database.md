@@ -287,6 +287,12 @@ The following databases aren't supported by Configuration Manager in a SQL Serve
 
 You can't use a new database created on the replica. When you configure an availability group, restore a copy of an existing Configuration Manager database to the primary replica.  
 
+#### Distributed views
+
+<!-- SCCMDocs-pr#3792 -->
+In version 1902 and earlier, if you host the site database on a SQL Server Always On availability group, you can't enable [distributed views](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_dbrep) for database replication. To support this configuration, update to version 1906 or later.
+
+
 ### Setup errors in ConfigMgrSetup.log
 
 When you run Configuration Manager setup to move a site database to an availability group, it tries to process database roles on the secondary replicas of the availability group. The **ConfigMgrSetup.log** file shows the following error:  
