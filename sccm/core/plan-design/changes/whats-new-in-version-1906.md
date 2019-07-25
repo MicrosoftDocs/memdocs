@@ -110,6 +110,10 @@ For more information, see [Management insights](/sccm/core/servers/manage/manage
 
 - Site recovery can recreate the database on a SQL Always On group. This process works with both manual and automatic seeding.<!-- SCCMDocs-pr#3846 -->
 
+- New setup prerequisite checks:<!-- SCCMDocs-pr#3899 -->  
+
+    - SQL availability group replicas must all have the same seeding mode
+    - SQL availability group replicas must be healthy
 
 ## <a name="bkmk_cloud"></a> Cloud-attached management
 
