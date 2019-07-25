@@ -35,7 +35,13 @@ Use the following procedure to create an availability group and then move a copy
 
     For more information, see [Hierarchy maintenance tool](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe).
 
-2. Change the backup model for the site database from **SIMPLE** to **FULL**. For more information, see [View or change the recovery model of a database](https://docs.microsoft.com/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server). Availability groups only support the FULL backup model.
+2. Change the backup model for the site database from **SIMPLE** to **FULL**:
+
+    ```sql
+    ALTER DATABASE [CM_xxx] SET RECOVERY FULL;
+    ```
+
+    Availability groups only support the FULL backup model. For more information, see [View or change the recovery model of a database](https://docs.microsoft.com/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server).
 
 3. Use SQL Server to create a full backup of your site database. Choose one of the following options:
 
@@ -164,7 +170,7 @@ Use the following procedure when you no longer want to host your site database i
     > [!Note]  
     > If the primary replica server for the availability group will host the single instance of the site database, skip this step.
 
-4. On the server that will host the site database, change the backup model for the site database from **FULL** to **SIMPLE**. For more information, see [View or change the recovery model of a database](https://docs.microsoft.com/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server).  
+4. On the server that will host the site database, change the backup model for the site database from **FULL** to **SIMPLE**. For more information, see [View or change the recovery model of a database](https://docs.microsoft.com/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server).
 
 5. Run **Configuration Manager Setup**: `\BIN\X64\setup.exe` from the Configuration Manager site installation folder.
 

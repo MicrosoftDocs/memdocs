@@ -81,6 +81,128 @@ Each instance of SQL Server can run under a domain user account (**service accou
 
 - For more information, see [Create a database mirroring endpoint for Always On availability groups](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell).  
 
+
+### Database
+
+#### Configure the database on a new replica
+
+Configure the database of each replica with the following settings:  
+
+- Enable **CLR Integration**:
+
+    ```sql
+    sp_configure 'show advanced options', 1;  
+    GO  
+    RECONFIGURE;  
+    GO  
+    sp_configure 'clr enabled', 1;  
+    GO  
+    RECONFIGURE;  
+    GO
+    ```
+
+    For more information, see [CLR integration](https://docs.microsoft.com/sql/relational-databases/clr-integration/clr-integration-enabling).  
+
+- Set **Max text repl size** to `2147483647`:  
+
+    ```sql
+    EXECUTE sp_configure 'max text repl size (B)', 2147483647
+    ```
+
+- Set the database owner to the *SA account*. You don't need to enable this account.
+
+- Turn **ON** the **TRUSTWORTHY** setting:
+
+    ```sql
+    ALTER DATABASE [CM_xxx] SET TRUSTWORTHY ON;
+    ```
+
+    For more information, see the [TRUSTWORTHY database property](https://docs.microsoft.com/sql/relational-databases/security/trustworthy-database-property).
+
+- Enable the **Service Broker**:  
+
+    ```sql
+    ALTER DATABASE [CM_xxx] SET ENABLE_BROKER
+    ```
+
+    > [!Note]  
+    > You can't enable the Service Broker option on a database that's already part of an availability group. You have to enable that option before adding it to the availability group.<!-- SCCMDocs#1432 -->
+
+- Configure the Service Broker priority:
+
+    ```sql
+    ALTER DATABASE [CM_xxx] SET HONOR_BROKER_PRIORITY ON;
+    ALTER DATABASE [CM_xxx] SET ENABLE_BROKER WITH ROLLBACK IMMEDIATE
+
+    ```
+
+Only make these configurations on a primary replica. To configure a secondary replica, first fail over the primary to the secondary. This action makes the secondary the new primary replica.
+
+#### Database verification script
+
+Run the following SQL script to verify database configurations for both primary and secondary replicas. Before you can fix an issue on a secondary replica, change that secondary replica to be the primary replica.
+
+```SQL
+    SET NOCOUNT ON
+
+    DECLARE @dbname NVARCHAR(128)
+
+    SELECT @dbname = sd.name FROM sys.sysdatabases sd WHERE sd.dbid = DB_ID()
+
+    IF (@dbname = N'master' OR @dbname = N'model' OR @dbname = N'msdb' OR @dbname = N'tempdb' OR @dbname = N'distribution' ) BEGIN
+    RAISERROR(N'ERROR: Script is targetting a system database.  It should be targeting the DB you created instead.', 0, 1)
+    GOTO Branch_Exit;
+    END ELSE
+    PRINT N'INFO: Targeted database is ' + @dbname + N'.'
+
+    PRINT N'INFO: Running verifications....'
+
+    IF NOT EXISTS (SELECT * FROM sys.configurations c WHERE c.name = 'clr enabled' AND c.value_in_use = 1)
+    PRINT N'ERROR: CLR is not enabled!'
+    ELSE
+    PRINT N'PASS: CLR is enabled.'
+
+    DECLARE @repltable TABLE (
+    name nvarchar(max),
+    minimum int,
+    maximum int,
+    config_value int,
+    run_value int )
+
+    INSERT INTO @repltable
+    EXEC sp_configure 'max text repl size (B)'
+
+    IF NOT EXISTS(SELECT * from @repltable where config_value = 2147483647 and run_value = 2147483647 )
+    PRINT N'ERROR: Max text repl size is not correct!'
+    ELSE
+    PRINT N'PASS: Max text repl size is correct.'
+
+    IF NOT EXISTS (SELECT db.owner_sid FROM sys.databases db WHERE db.database_id = DB_ID() AND db.owner_sid = 0x01)
+    PRINT N'ERROR: Database owner is not sa account!'
+    ELSE
+    PRINT N'PASS: Database owner is sa account.'
+
+    IF NOT EXISTS( SELECT * FROM sys.databases db WHERE db.database_id = DB_ID() AND db.is_trustworthy_on = 1 )
+    PRINT N'ERROR: Trustworthy bit is not on!'
+    ELSE
+    PRINT N'PASS: Trustworthy bit is on.'
+
+    IF NOT EXISTS( SELECT * FROM sys.databases db WHERE db.database_id = DB_ID() AND db.is_broker_enabled = 1 )
+    PRINT N'ERROR: Service broker is not enabled!'
+    ELSE
+    PRINT N'PASS: Service broker is enabled.'
+
+    IF NOT EXISTS( SELECT * FROM sys.databases db WHERE db.database_id = DB_ID() AND db.is_honor_broker_priority_on = 1 )
+    PRINT N'ERROR: Service broker priority is not set!'
+    ELSE
+    PRINT N'PASS: Service broker priority is set.'
+
+    PRINT N'Done!'
+
+    Branch_Exit:
+```
+
+
 ### Availability group configurations
 
 #### Replica members
@@ -163,25 +285,6 @@ For example, consider the following scenario:
 
 - You can now successfully run Configuration Manager setup to configure the site to use the site database in the availability group.  
 
-#### Configure the database on a new replica
-
-Configure the database of each replica with the following settings:  
-
-- Enable **CLR Integration**. For more information, see [CLR integration](https://docs.microsoft.com/sql/relational-databases/clr-integration/clr-integration-enabling).  
-
-- Set **Max text repl size** to `2147483647`  
-
-- Set the database owner to the *SA account*  
-
-- Turn **ON** the **TRUSTWORTY** setting. For more information, see the [TRUSTWORTHY database property](https://docs.microsoft.com/sql/relational-databases/security/trustworthy-database-property).
-
-- Enable the **Service Broker**  
-
-    > [!Note]  
-    > You can't enable the Service Broker option on a database that's already part of an availability group. You have to enable that option before adding it to the availability group.<!-- SCCMDocs#1432 -->
-
-Only make these configurations on a primary replica. To configure a secondary replica, first fail over the primary to the secondary. This action makes the secondary the new primary replica.
-
 #### Multi-subnet failover
 
 <!-- SCCMDocs-pr#3734 -->
@@ -197,71 +300,6 @@ MSF Enabled : 1 (DWORD)
 > Use of [site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability) and SQL Server Always On with multi-subnet failover doesn't provide the full capabilities of automatic failover for disaster recovery scenarios.
 
 If you need to create an availability group with a member in a remote location, prioritize based on the lowest network latency. High network latency can cause replication failures.<!-- SCCMDocs#1381 -->
-
-
-### Verification script
-
-Run the following SQL script to verify database configurations for both primary and secondary replicas. Before you can fix an issue on a secondary replica, change that secondary replica to be the primary replica.
-
-```SQL
-    SET NOCOUNT ON
-
-    DECLARE @dbname NVARCHAR(128)
-
-    SELECT @dbname = sd.name FROM sys.sysdatabases sd WHERE sd.dbid = DB_ID()
-
-    IF (@dbname = N'master' OR @dbname = N'model' OR @dbname = N'msdb' OR @dbname = N'tempdb' OR @dbname = N'distribution' ) BEGIN
-    RAISERROR(N'ERROR: Script is targetting a system database.  It should be targeting the DB you created instead.', 0, 1)
-    GOTO Branch_Exit;
-    END ELSE
-    PRINT N'INFO: Targeted database is ' + @dbname + N'.'
-
-    PRINT N'INFO: Running verifications....'
-
-    IF NOT EXISTS (SELECT * FROM sys.configurations c WHERE c.name = 'clr enabled' AND c.value_in_use = 1)
-    PRINT N'ERROR: CLR is not enabled!'
-    ELSE
-    PRINT N'PASS: CLR is enabled.'
-
-    DECLARE @repltable TABLE (
-    name nvarchar(max),
-    minimum int,
-    maximum int,
-    config_value int,
-    run_value int )
-
-    INSERT INTO @repltable
-    EXEC sp_configure 'max text repl size (B)'
-
-    IF NOT EXISTS(SELECT * from @repltable where config_value = 2147483647 and run_value = 2147483647 )
-    PRINT N'ERROR: Max text repl size is not correct!'
-    ELSE
-    PRINT N'PASS: Max text repl size is correct.'
-
-    IF NOT EXISTS (SELECT db.owner_sid FROM sys.databases db WHERE db.database_id = DB_ID() AND db.owner_sid = 0x01)
-    PRINT N'ERROR: Database owner is not sa account!'
-    ELSE
-    PRINT N'PASS: Database owner is sa account.'
-
-    IF NOT EXISTS( SELECT * FROM sys.databases db WHERE db.database_id = DB_ID() AND db.is_trustworthy_on = 1 )
-    PRINT N'ERROR: Trustworthy bit is not on!'
-    ELSE
-    PRINT N'PASS: Trustworthy bit is on.'
-
-    IF NOT EXISTS( SELECT * FROM sys.databases db WHERE db.database_id = DB_ID() AND db.is_broker_enabled = 1 )
-    PRINT N'ERROR: Service broker is not enabled!'
-    ELSE
-    PRINT N'PASS: Service broker is enabled.'
-
-    IF NOT EXISTS( SELECT * FROM sys.databases db WHERE db.database_id = DB_ID() AND db.is_honor_broker_priority_on = 1 )
-    PRINT N'ERROR: Service broker priority is not set!'
-    ELSE
-    PRINT N'PASS: Service broker priority is set.'
-
-    PRINT N'Done!'
-
-    Branch_Exit:
-```
 
 
 ## Limitations and known issues
