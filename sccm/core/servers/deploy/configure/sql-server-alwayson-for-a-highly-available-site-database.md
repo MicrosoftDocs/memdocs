@@ -228,8 +228,10 @@ Each replica member must have the following configuration:
 
 - Enabled for **Manual Failover**
 
-    > [!TIP]
-    > Configuration Manager supports using the availability group synchronous replicas when set to **Automatic Failover**. Set **Manual Failover** when:
+    > [!Note]
+    > In version 1902 and earlier, you need to configure all availability groups on the SQL Server for manual failover. This configuration is needed even if it doesn't host the site database.
+    >
+    > Starting in version 1906, Configuration Manager supports using the availability group synchronous replicas when set to **Automatic Failover**. Set **Manual Failover** when:
     >
     > - You run Configuration Manager setup to specify use of the site database in the availability group.  
     > - You install any update to Configuration Manager. (Not just updates that apply to the site database).  
