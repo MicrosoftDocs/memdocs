@@ -5,7 +5,7 @@ description: "Review Office 365 client information from the Office 365 Client Ma
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/10/2019
+ms.date: 07/26/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -71,6 +71,34 @@ By default, the scanning agent looks at the most recently used (MRU) files list 
 - Older Office formats that don't indicate whether there's macro content. For example, an Excel 97-2003 workbook (.xls).
 
 If you need a more detailed evaluation, deploy the **Office Readiness Toolkit**. This tool analyzes the code within a macro file. It checks if there are any potential compatibility concerns. For example, the file uses a function that changed in a more recent version of Office. After you run the Office Readiness Toolkit, Configuration Manager can use its results. This additional data enhances the device readiness calculation. For more information, see [Use the Readiness Toolkit to assess application compatibility for Office 365 ProPlus](http://aka.ms/readinesstoolkit).
+
+## Office 365 ProPlus upgrade readiness dashboard
+
+*(Introduced in version 1906)*
+
+<!--4021125-->
+To help you determine which devices are ready to upgrade to Office 365 ProPlus, there's a readiness dashboard starting in version 1906. It includes the **Office 365 ProPlus upgrade readiness** tile that released in Configuration Manager current branch version 1902. The following new tiles on this dashboard help you evaluate Office add-in and macro readiness:
+
+- Deployment
+- Device readiness
+- Add-in readiness
+- Add-in support statements
+- Top add-ins by count of version
+- Number of devices that have macros
+- Macro readiness
+- Macro advisories
+
+### Using the Office 365 ProPlus upgrade readiness dashboard
+ 
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Office 365 Client Management**.
+1. Select the **Office 365 ProPlus Upgrade Readiness** node.
+1. Change the **Collection** and **Target Office Architecture** to change the information relayed in the dashboard.
+
+![Office 365 ProPlus upgrade readiness dashboard](./media/4021125-office-365-upgrade-readiness-dashboard.png)
+
+![Office 365 ProPlus upgrade readiness dashboard](./media/4021125-office-365-to-add-ins.png)
+
+![Office 365 ProPlus upgrade readiness dashboard](./media/4021125-office-365-macro-advisories.png)
 
 ## Next steps
 

@@ -40,6 +40,8 @@
       href: privacy.md
     - name: Troubleshoot
       href: troubleshooting.md
+    - name: Log collector
+      href: log-collector.md
     - name: Monitor connection health
       href: monitor-connection-health.md
     - name: Frequently asked questions

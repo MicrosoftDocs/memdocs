@@ -10,6 +10,7 @@ ms.assetid: bc6c3e5f-b9e2-400e-9d9d-446ff93c520c
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
 ---
 # What&#39;s new in version 1710 of System Center Configuration Manager

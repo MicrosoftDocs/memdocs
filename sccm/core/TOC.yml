@@ -77,6 +77,8 @@
       href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
     - name: What’s new in incremental versions
       href: plan-design/changes/whats-new-incremental-versions.md
+    - name: What's new in version 1906
+      href: plan-design/changes/whats-new-in-version-1906.md
     - name: What's new in version 1902
       href: plan-design/changes/whats-new-in-version-1902.md
     - name: What's new in version 1810
@@ -85,8 +87,6 @@
       href: plan-design/changes/whats-new-in-version-1806.md
     - name: What's new in version 1802
       href: plan-design/changes/whats-new-in-version-1802.md
-    - name: What's new in version 1710
-      href: plan-design/changes/whats-new-in-version-1710.md
     - name: Removed and deprecated
       items:
       - name: Removed and deprecated overview
@@ -151,6 +151,8 @@
         href: plan-design/hierarchy/manage-content-library-flowchart.md
       - name: Content library cleanup tool
         href: plan-design/hierarchy/content-library-cleanup-tool.md
+      - name: Delivery Optimization In-Network Cache
+        href: plan-design/hierarchy/delivery-optimization-in-network-cache.md
       - name: Peer Cache for Configuration Manager clients
         href: plan-design/hierarchy/client-peer-cache.md
       - name: Package Transfer Manager
@@ -193,6 +195,8 @@
       href: plan-design/diagnostics/diagnostics-and-usage-data.md
     - name: How diagnostics and usage data is used
       href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md
+    - name: Diagnostic data for 1906
+      href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1906.md
     - name: Diagnostic data for 1902
       href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1902.md
     - name: Diagnostic data for 1810
@@ -201,8 +205,6 @@
       href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1806.md
     - name: Diagnostic data for 1802
       href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1802.md
-    - name: Diagnostic data for 1710
-      href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1710.md
     - name: How diagnostics and usage data is collected
       href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md
     - name: How to view diagnostics and usage data
@@ -421,7 +423,9 @@
       href: plan-design/hierarchy/interoperability-between-different-versions.md
     - name: Language packs
       href: servers/deploy/install/language-packs.md
-    - name: Log files
+    - name: About log files
+      href: plan-design/hierarchy/about-log-files.md
+    - name: Log file reference
       href: plan-design/hierarchy/log-files.md
     - name: Release notes
       href: servers/deploy/install/release-notes.md
@@ -479,6 +483,8 @@
       href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
     - name: Use the Hotfix Installer
       href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+    - name: Checklist for installing update 1906
+      href: servers/manage/checklist-for-installing-update-1906.md
     - name: Checklist for installing update 1902
       href: servers/manage/checklist-for-installing-update-1902.md
     - name: Checklist for installing update 1810
@@ -487,8 +493,6 @@
       href: servers/manage/checklist-for-installing-update-1806.md
     - name: Checklist for installing update 1802
       href: servers/manage/checklist-for-installing-update-1802.md
-    - name: Checklist for installing update 1710
-      href: servers/manage/checklist-for-installing-update-1710.md
     - name: Support for current branch versions
       href: servers/manage/current-branch-versions-supported.md
   - name: Backup and recovery
@@ -560,6 +564,8 @@
       href: support/support-center-ui-reference.md
     - name: Customizations
       href: support/support-center-customize.md
+    - name: Support Center OneTrace (Preview)
+      href: support/support-center-onetrace.md
   - name: Configuration Manager tools
     items:
     - name: Tools overview
@@ -638,6 +644,8 @@
         href: clients/deploy/configure-client-settings.md
       - name: About client settings
         href: clients/deploy/about-client-settings.md
+    - name: Device restart notifications
+      href: clients/deploy/device-restart-notifications.md        
     - name: How to configure Wake on LAN
       href: clients/deploy/configure-wake-on-lan.md
     - name: Deploy clients to Windows computers

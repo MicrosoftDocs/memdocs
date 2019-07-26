@@ -57,7 +57,6 @@ The following guidance is for computers that hold a single site system role. Pla
 |----------------------|---------------|---------------|--------------------|  
 |Management point|4|8|50|  
 |Distribution point|2|8|As required by the operating system and to store content that you deploy|  
-|Application Catalog, with the web service and website on the site system computer|4|16|50|  
 |Software update point<sup>1</sup>|8|16|As required by the operating system and to store updates that you deploy|  
 |All other site system roles|4|8|50|  
 
@@ -110,18 +109,14 @@ The following are minimum requirements for Windows-based computers that you mana
 
 - **Disk space:** 500 MB available disk space, with 5 GB recommended for the Configuration Manager client cache. Less disk space is required if you use customized settings to install the Configuration Manager client:  
 
-  - Use the CCMSetup command-line property /skipprereq to avoid installing files that the client doesn't require. For example, run `CCMSetup.exe /skipprereq:silverlight.exe` if the client doesn't use the Application Catalog. Starting in Configuration Manager 1802, Silverlight is no longer automatically installed.  
+    - Use the Client.msi property SMSCACHESIZE to set a cache file that is smaller than the default of 5120 MB. The minimum size is 1 MB. For example, `CCMSetup.exe SMSCachesize=2` creates a cache that is 2 MB in size.  
 
-  - Use the Client.msi property SMSCACHESIZE to set a cache file that is smaller than the default of 5120 MB. The minimum size is 1 MB. For example, `CCMSetup.exe SMSCachesize=2` creates a cache that is 2 MB in size.  
+    For more information about these client installation settings, see [About client installation properties](../../../core/clients/deploy/about-client-installation-properties.md).  
 
-  For more information about these client installation settings, see [About client installation properties](../../../core/clients/deploy/about-client-installation-properties.md).  
+    > [!TIP]  
+    > Installing the client with minimal disk space is useful for Windows Embedded devices that typically have smaller disk sizes than standard Windows computers.  
 
-  > [!TIP]  
-  >  Installing the client with minimal disk space is useful for Windows Embedded devices that typically have smaller disk sizes than standard Windows computers.  
-
-
-
- The following are additional minimum hardware requirements for optional functionality in Configuration Manager.  
+The following are additional minimum hardware requirements for optional functionality in Configuration Manager.  
 
 - **Operating system deployment:** 384 MB of RAM  
 

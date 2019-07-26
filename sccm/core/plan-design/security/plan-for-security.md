@@ -227,6 +227,9 @@ Because of the number of configuration options and choices in Configuration Mana
 
 2. Configure the **Client Computer Communication** tab in the site properties so that the **Site System Settings** is **HTTP or HTTPS**, and select **Use PKI client certificate (client authentication capability) when available**.  For more information, see [Configure settings for client PKI certificates](/sccm/core/plan-design/security/configure-security#BKMK_ConfigureClientPKI).  
 
+    > [!Note]
+    > Starting in version 1906, this tab is called **Communication Security**.<!-- SCCMDocs#1645 -->  
+
 3. Pilot a PKI rollout for client certificates. For an example deployment, see [Deploy the client certificate for Windows computers](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012).  
 
 4. Install clients by using the client push installation method. For more information, see the [How to install Configuration Manager clients by using client push](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).  
