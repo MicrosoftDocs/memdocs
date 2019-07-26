@@ -85,7 +85,7 @@ Use the following procedure to create an availability group and then move a copy
 
 ## <a name="bkmk_configure"></a> Configure a site to use the availability group
 
-After you [create and configure the availability group](#create-and-configure-an-availability-group), use Configuration Manager site maintenance to configure the site to use the database that the availability group hosts.
+After you [create and configure the availability group](#bkmk_create), use Configuration Manager site maintenance to configure the site to use the database that the availability group hosts.
 
 It's not supported to install a new site with its database in an availability group. For example, if you use baseline media, install the site using a single instance of SQL Server. After the site installs, then move the site database to the availability group.
 

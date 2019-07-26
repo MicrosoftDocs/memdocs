@@ -34,12 +34,11 @@ When you use availability groups in Microsoft Azure, you can further increase av
 
 The following scenarios are supported for using availability groups with Configuration Manager. For more information and procedures for each scenario, see [Configure availability groups for Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag).
 
-- [Create an availability group for use with Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag#create-and-configure-an-availability-group)  
-- [Configure a site to use an availability group](/sccm/core/servers/deploy/configure/configure-aoag#configure-a-site-to-use-the-database-in-the-availability-group)  
-- [Add or remove synchronous replica members from an availability group that hosts a site database](/sccm/core/servers/deploy/configure/configure-aoag#add-or-remove-synchronous-replica-members)  
-- [Configure asynchronous commit replicas](/sccm/core/servers/deploy/configure/configure-aoag#configure-an-asynchronous-commit-replica)  
-- [Recover a site from an asynchronous commit replica](/sccm/core/servers/deploy/configure/configure-aoag#use-the-asynchronous-replica-to-recover-your-site)  
-- [Move a site database out of an availability group to a default or named instance of a standalone SQL Server](/sccm/core/servers/deploy/configure/configure-aoag#stop-using-an-availability-group)  
+- [Create an availability group for use with Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag#bkmk_create)  
+- [Configure a site to use the availability group](/sccm/core/servers/deploy/configure/configure-aoag#bkmk_configure)  
+- [Add or remove synchronous replica members from an availability group that hosts a site database](/sccm/core/servers/deploy/configure/configure-aoag#bkmk_sync)  
+- [Configure or recover a site from an asynchronous commit replicas](/sccm/core/servers/deploy/configure/configure-aoag#bkmk_async)  
+- [Move a site database out of an availability group to a default or named instance of a standalone SQL Server](/sccm/core/servers/deploy/configure/configure-aoag#bkmk_stop)  
 
 
 ## Prerequisites
