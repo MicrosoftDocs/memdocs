@@ -313,7 +313,9 @@ The following limitations apply to all scenarios.
 
 - **Failover cluster instance**: Failover cluster instances aren't supported for a replica you use with Configuration Manager. For more information, see [SQL Server Always On failover cluster instances](https://docs.microsoft.com/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server).  
 
-- **MultiSubnetFailover**: In version 1902 and earlier, it's not supported to use an availability group with Configuration Manager in a multi-subnet configuration. You also can't use the [MutliSubnetFailover](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) keyword connection string.  
+- **MultiSubnetFailover**: In version 1902 and earlier, it's not supported to use an availability group with Configuration Manager in a multi-subnet configuration. You also can't use the [MutliSubnetFailover](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) keyword connection string.
+
+    To support this configuration, update Configuration Manager to version 1906 or later. For more information, see the [Multi-subnet failover](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#multi-subnet-failover) prerequisite.
 
 ### SQL Servers that host additional availability groups
 
