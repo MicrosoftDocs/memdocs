@@ -224,7 +224,7 @@ Each replica member must have the following configuration:
 
 - The **Connections in Primary Role** setting is **Allow all connections**  
 
-- THe **Readable Secondary** setting is **Yes**  
+- The **Readable Secondary** setting is **Yes**  
 
 - Enabled for **Manual Failover**
 
@@ -323,6 +323,14 @@ When the SQL Server hosts one or more availability groups in addition to the gro
 
 - Manual Failover  
 - Allow any read-only connection  
+
+> [!Note]
+> In version 1902 and earlier, you need to configure all availability groups on the SQL Server for manual failover. This configuration is needed even if it doesn't host the site database.
+>
+> Starting in version 1906, Configuration Manager supports using the availability group synchronous replicas when set to **Automatic Failover**. Set **Manual Failover** when:
+>
+> - You run Configuration Manager setup to specify use of the site database in the availability group.  
+> - You install any update to Configuration Manager. (Not just updates that apply to the site database).  
 
 ### Unsupported database use
 
