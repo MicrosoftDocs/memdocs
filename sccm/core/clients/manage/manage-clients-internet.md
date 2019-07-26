@@ -32,7 +32,7 @@ The cloud management gateway provides management of internet-based clients. It u
 
 #### Advantages  
 
--   No additional infrastructure investment required.  
+-   No additional on-premises infrastructure investment required.  
 
 -   Does not expose on-premises infrastructure to the internet.  
 
