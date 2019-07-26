@@ -97,15 +97,23 @@ Management insights includes a new rule that detects if you enabled the less sec
 
 For more information, see [Management insights](/sccm/core/servers/manage/management-insights#security).
 
-### Add a SQL AlwaysOn node
+### Improvements to support for SQL Always On
 
-<!--3127336-->
-You can now add a new secondary replica node to an existing SQL AlwaysOn availability group. Instead of a [manual process](/sccm/core/servers/deploy/configure/configure-aoag#add-or-remove-synchronous-replica-members), use Configuration Manager setup to make this change.
+- Add a new synchronous replica from setup<!--3127336-->: You can now add a new secondary replica node to an existing SQL Always On availability group. Instead of a manual process, use Configuration Manager setup to make this change. For more information, see [Configure SQL Server Always On availability groups](/sccm/core/servers/deploy/configure/configure-aoag#bkmk_sync).
 
-<!--For more information on Configuration Manager support for SQL AlwaysOn, see the following articles:
+- Multi-subnet failover<!-- SCCMDocs-pr#3734 -->: You can now enable the [MultiSubnetFailover connection string keyword](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) in SQL Server. You also need to manually configure the site server. For more information, see the [Multi-subnet failover](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#multi-subnet-failover) prerequisite.
 
-- [Prepare to use SQL Server Always On availability groups](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)
-- [Configure SQL Server Always On availability groups](/sccm/core/servers/deploy/configure/configure-aoag)-->
+- Support for distributed views<!-- SCCMDocs-pr#3792 -->: The site database can be hosted on a SQL Server Always On availability group, and you can enable database replication links to use [distributed views](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_dbrep).
+
+    > [!Note]  
+    > This change doesn't apply to SQL Server clusters.
+
+- Site recovery can recreate the database on a SQL Always On group. This process works with both manual and automatic seeding.<!-- SCCMDocs-pr#3846 -->
+
+- New setup prerequisite checks:<!-- SCCMDocs-pr#3899 -->  
+
+    - SQL availability group replicas must all have the same seeding mode
+    - SQL availability group replicas must be healthy
 
 ## <a name="bkmk_cloud"></a> Cloud-attached management
 
