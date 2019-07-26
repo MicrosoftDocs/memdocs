@@ -51,7 +51,9 @@ If the user proactively installs required software that needs restart before the
 
 ![Notification for proactively installed software](media/3976435-proactive-user-restart-notification.png)
 
-  - Software marked as **Available** uses a similar dialog when you don't use toast notifications. This notification doesn't have a deadline for the restart. For more information, see [Approval settings](/sccm/apps/deploy-use/deploy-applications#bkmk_approval).
+- When you don't use toast notifications, the dialog for software marked as **Available** is similar to proactively installed software.
+
+  - For **Available** software, the notification doesn't have a deadline for the restart and the user can choose their own snooze interval. For more information, see [Approval settings](/sccm/apps/deploy-use/deploy-applications#bkmk_approval).
 
     ![Software marked as "Available" doesn't have a deadline for restart in the notification.](media/3555947-deployment-marked-available-restart.png)
 
@@ -75,9 +77,12 @@ To the more intrusive Software Center dialog window:
 If the user didn't restart their device after the installation, then they'll get a notification as a reminder. This temporary reminder will appear to the user based on the client setting: **Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes)**. This setting is the overall time the user has to restart the machine before a restart is forced.
 
 - Temporary notification when you use toast notifications:
-![Toast notification of pending restart](media/3555947-restart-toast.png)
+
+  ![Toast notification of pending restart](media/3555947-restart-toast.png)
+
 - Temporary notification when you use Software Center dialog window, not toast:
-![Pending restart Software Center notification with snooze button](media/3555947-1902-hide-notification.png)
+
+  ![Pending restart Software Center notification with snooze button](media/3555947-1902-hide-notification.png)
 
 If the user doesn't restart after the temporary notification, they'll be given the final countdown notification that they can't close. The timing of when the final notification appears is based on the client setting: **Display a dialog box that the user cannot close, which displays the countdown interval before the user is logged off or the computer restarts (minutes)**. For instance, if the setting is 60, then an hour before a reboot is forced, the final notification appears to the user:
 
