@@ -21,7 +21,7 @@ The notifications a user receives for a pending device restart can vary dependin
 
 >[!NOTE]
 > - This article focuses on client settings found in Configuration Manager version 1902 and version 1906.
-> - These notifications don't apply when a deployment is marked **Available**  and not **Required**. Users see optional reboot notifications for **Available** deployments. For more information, see [Approval settings](/sccm/apps/deploy-use/deploy-applications#bkmk_approval).
+
 
 ## Deployment types for restart notifications
 
@@ -47,9 +47,13 @@ Software Center final countdown notification that can't be closed by the user. T
 
 ![Software Center final countdown notification](media/3976435-final-restart-countdown.png)
 
-If the user proactively installs required software that needs restart before the deadline occurs, they might see a different notification. The following notification occurs when both the user experience setting allows notifications  and you don't use toast notifications for the deployment. For more information about configuring these settings, see [Deployment **User Experience** settings](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy-ux) and [User notifications for required deployments](/sccm/apps/deploy-use/deploy-applications#bkmk_notify).
+If the user proactively installs required software that needs restart before the deadline occurs, they'll see a different notification. The following notification occurs when both the user experience setting allows notifications and you don't use toast notifications for the deployment. For more information about configuring these settings, see [Deployment **User Experience** settings](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy-ux) and [User notifications for required deployments](/sccm/apps/deploy-use/deploy-applications#bkmk_notify).
 
 ![Notification for proactively installed software](media/3976435-proactive-user-restart-notification.png)
+
+  - Software marked as **Available** uses a similar dialog when you don't use toast notifications. This notification doesn't have a deadline for the restart. For more information, see [Approval settings](/sccm/apps/deploy-use/deploy-applications#bkmk_approval).
+
+    ![Software marked as "Available" doesn't have a deadline for restart in the notification.](media/3555947-deployment-marked-available-restart.png)
 
 ## Device restart notifications in version 1902
 
