@@ -2,7 +2,7 @@
 title: How to manage Windows Device Guard
 titleSuffix: Configuration Manager
 description: Learn how to use Configuration Manager to manage Windows Device Guard.
-ms.date: 07/19/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
