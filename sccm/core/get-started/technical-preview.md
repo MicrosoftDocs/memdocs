@@ -122,6 +122,14 @@ The following features are available with the most recent Configuration Manager 
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID-->
 
+- [CMPivot standalone local query evaluation for this PC](/sccm/core/get-started/2019/technical-preview-1908#bkmk_anchor) <!--3197353-->
+- [Admins can use console connections to view extension information](/sccm/core/get-started/2019/technical-preview-1908#bkmk_anchor) <!--4834225-->
+- [Add IsDeployed to ADR filters](/sccm/core/get-started/2019/technical-preview-1908#bkmk_anchor) <!--4852033-->
+- [Custom default keyboard layout in boot image properties](/sccm/core/get-started/2019/technical-preview-1908#bkmk_anchor) <!--4910348-->
+- [Import a single index of an OS upgrade package](/sccm/core/get-started/2019/technical-preview-1908#bkmk_anchor) <!--4931110-->
+- [Output the results of a run command line step to a variable during a task sequence](/sccm/core/get-started/2019/technical-preview-1908#bkmk_anchor) <!--4977616-->
+- [Copy task sequence conditions](/sccm/core/get-started/2019/technical-preview-1908#bkmk_anchor) <!--4621098-->
+- [Task sequence performance improvements for power plans](/sccm/core/get-started/2019/technical-preview-1908#bkmk_anchor) <!--3555926-->
 
 > [!Note]  
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.  
