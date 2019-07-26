@@ -28,23 +28,6 @@ To take full advantage of new Configuration Manager features, after you update t
 > `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1906+-+Configuration+Manager%22&locale=en-us`
 
 
-## <a name="bkmk_deprecated"></a> Deprecated features and operating systems
-
-Learn about support changes before they're implemented in [removed and deprecated items](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated).
-
-Version 1906 drops support for the following features:  
-
-- Classic service deployment to Azure for cloud management gateway and cloud distribution point. For more information, see [Plan for CMG](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).
-
-- You can't install new application catalog roles. Updated clients automatically use the management point for user-available application deployments. For more information, see [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).
-
-Version 1906 deprecates support for the following products:  
-
-- Windows CE 7.0
-- Windows 10 Mobile
-- Windows 10 Mobile Enterprise
-
-
 ## Requirement changes
 
 ### Version 1906 client requires SHA-2 code signing support
@@ -608,6 +591,23 @@ In the **Software Library** workspace, expand **Operating Systems**, and select 
 
 <!--4616810-->
 In the **Monitoring** workspace, select **Client Operations**. The operation to **Switch to next Software Update Point** is now properly named.
+
+
+## <a name="bkmk_deprecated"></a> Deprecated features and operating systems
+
+Learn about support changes before they're implemented in [removed and deprecated items](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated).
+
+Version 1906 drops support for the following features:  
+
+- Classic service deployment to Azure for cloud management gateway and cloud distribution point. For more information, see [Plan for CMG](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).
+
+- You can't install new application catalog roles. Updated clients automatically use the management point for user-available application deployments. For more information, see [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).
+
+Version 1906 deprecates support for the following products:  
+
+- Windows CE 7.0
+- Windows 10 Mobile
+- Windows 10 Mobile Enterprise
 
 
 ## Other updates
