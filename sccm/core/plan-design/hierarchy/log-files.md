@@ -669,6 +669,16 @@ The following table lists the log files that contain information related to proc
 |invproc.log|Records the forwarding of MIF files from a secondary site to its parent site.|Secondary site server|  
 |sinvproc.log|Records information about the processing of software inventory data to the site database.|Site server|  
 
+### <a name="BKMK_MeteringLog"></a> Metering
+
+The following table lists the log files that contain information related to metering.  
+
+|Log name|Description|Computer with log file|  
+|--------------|-----------------|----------------------------|  
+|mtrmgr.log|Monitors all software metering processes.|Client|  
+|SWMTRReportGen.log|Generates a use data report that is collected by the metering agent. This data is logged in Mtrmgr.log.|Client|
+|swmproc.log|Records the processing of metering files and settings.|Site server|
+
 ### <a name="BKMK_MigrationLog"></a> Migration
 
 The following table lists the log files that contain information related to migration.  
