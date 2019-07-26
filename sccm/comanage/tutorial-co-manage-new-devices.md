@@ -8,7 +8,7 @@ keywords:
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/19/2019
+ms.date: 07/26/2019
 ms.topic: tutorial
 ms.prod: configuration-manager
 ms.service:  

@@ -3,7 +3,7 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 07/19/2019
+ms.date: 07/26/2019
 ms.collection: M365-identity-device-management
 ---
 <!--Don't apply H2/H3 in this include file since they are context driven by article-->

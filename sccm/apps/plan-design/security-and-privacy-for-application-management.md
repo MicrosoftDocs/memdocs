@@ -2,7 +2,7 @@
 title: Security and privacy for apps
 titleSuffix: Configuration Manager
 description: Guidance and recommendations for security and privacy when managing applications in Configuration Manager.
-ms.date: 07/19/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual

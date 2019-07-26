@@ -2,7 +2,7 @@
 title: Link users and devices with user device affinity
 titleSuffix: Configuration Manager
 description: Link users and devices with user device affinity and automatically deploy apps to all devices associated with a user.
-ms.date: 07/19/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual

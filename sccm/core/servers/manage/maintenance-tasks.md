@@ -2,7 +2,7 @@
 title: "Maintenance tasks"
 titleSuffix: "Configuration Manager"
 description: "Understand what maintenance tasks to perform for Configuration Manager sites and hierarchies and when to perform them."
-ms.date: 07/19/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
