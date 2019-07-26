@@ -62,6 +62,8 @@ When you  design and implement administrative security for Configuration Manager
 
 - *Software Update Manager* grants permissions to define and deploy software updates. Administrative users who are associated with this role can create collections, software update groups, deployments, and templates.  
 
+- *Security Administrator* grants permissions to add and remove administrative users and associate administrative users with security roles, collections, and security scopes. Administrative users who are associated with this role can also create, modify, and delete security roles and their assigned security scopes and collections.
+
 > [!TIP]  
 > You can view the list of built-in security roles and custom security roles you create, including their descriptions, in the Configuration Manager console. To view the roles, in the **Administration** workspace, expand **Security**, and then select **Security Roles**.  
 
@@ -128,7 +130,7 @@ If you want to restrict the objects that administrative users can see and manage
 - Task sequence packages  
 - Windows CE device setting items and packages  
 
-There are also some objects that you can't include in security scopes because they are only secured by security roles. Administrative access to these objects can't be limited to a subset of the available objects. For example, you might have an administrative user who creates boundary groups that are used for a specific site. Because the boundary object doesn't support security scopes, you can't assign this user a security scope that provides access to only the boundaries that might be associated with that site. Because a boundary object can't be associated to a security scope, when you assign a security role that includes access to boundary objects to a user, that user can access every boundary in the hierarchy.  
+There are also some objects that you can't include in security scopes because they're only secured by security roles. Administrative access to these objects can't be limited to a subset of the available objects. For example, you might have an administrative user who creates boundary groups that are used for a specific site. Because the boundary object doesn't support security scopes, you can't assign this user a security scope that provides access to only the boundaries that might be associated with that site. Because a boundary object can't be associated to a security scope, when you assign a security role that includes access to boundary objects to a user, that user can access every boundary in the hierarchy.  
 
 Objects that aren't limited by security scopes include the following items:  
 
