@@ -96,7 +96,12 @@ The following Configuration Manager features support or require enhanced HTTP:
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the  **Sites** node. Select the site and choose **Properties** in the ribbon.  
 
-2. Switch to the **Client Computer Communication** tab. Select the option for **HTTPS or HTTP** and then enable the option to **Use Configuration Manager-generated certificates for HTTP site systems**.  
+2. Switch to the **Client Computer Communication** tab.
+
+    > [!Note]
+    > Starting in version 1906, this tab is called **Communication Security**.<!-- SCCMDocs#1645 -->  
+
+    Select the option for **HTTPS or HTTP**. Then enable the option to **Use Configuration Manager-generated certificates for HTTP site systems**.
 
 > [!Tip]
 > Wait up to 30 minutes for the management point to receive and configure the new certificate from the site.
