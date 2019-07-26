@@ -171,7 +171,7 @@ For more information, see [CMPivot](/sccm/core/servers/manage/cmpivot#bkmk_stand
 
 <!--4683130-->
 
-The following permissions have been added to Configuration Manager's built-in **Security Administrator** role:
+The following permissions have been added to Configuration Manager's built-in [**Security Administrator**](/sccm/core/understand/fundamentals-of-role-based-administration#bkmk_Planroles) role:
 
 - Read on SMS Script
 - Run CMPivot on Collection
