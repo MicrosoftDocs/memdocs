@@ -2,7 +2,7 @@
 title: CMPivot for real-time data
 titleSuffix: Configuration Manager
 description: Learn how to use CMPivot in Configuration Manager to query clients in real time.
-ms.date: 05/24/2019
+ms.date: 07/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -542,6 +542,9 @@ You can share the power of CMPivot with other personas, such as helpdesk or secu
 4. Browse to the collection on which you want to run CMPivot, then run your query.
 
    ![Browse to the collection you want to run your query against](./media/3555890-cmpivot-standalone-browse-collection.png)
+
+> [!NOTE]
+> Right-click actions, such as **Run Scripts** and **Resource Explorer**, aren't avilable in CMPivot standalone.
 
 ## Inside CMPivot
 
