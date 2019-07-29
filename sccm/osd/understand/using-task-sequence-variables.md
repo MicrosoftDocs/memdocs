@@ -2,7 +2,7 @@
 title: How to use task sequence variables
 titleSuffix: Configuration Manager
 description: Learn about how to use the variables in a Configuration Manager task sequence.
-ms.date: 08/17/2018
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -17,33 +17,32 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-The task sequence engine in the OS deployment feature of Configuration Manager uses many variables to control its behaviors. Use these variables to: 
+ The task sequence engine in the OS deployment feature of Configuration Manager uses many variables to control its behaviors. Use these variables to:
+
 - Set conditions on steps  
 - Change behaviors for specific steps  
 - Use in scripts for more complex actions  
 
-
 For a reference of all available task sequence variables, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables).
-
 
 
 ## <a name="bkmk_types"></a> Types of variables
 
 There are several types of variables:  
+
 - [Built-in](#bkmk_built-in)  
 - [Action](#bkmk_action)  
 - [Custom](#bkmk_custom)  
 - [Read-only](#bkmk_read-only)  
 - [Array](#bkmk_array)  
 
-
 ### <a name="bkmk_built-in"></a> Built-in variables
 
-Built-in variables provide information about the environment where the task sequence runs. Their values are available throughout the whole task sequence. Typically, the task sequence engine initializes built-in variables before it runs any steps. 
+Built-in variables provide information about the environment where the task sequence runs. Their values are available throughout the whole task sequence. Typically, the task sequence engine initializes built-in variables before it runs any steps.
 
-For example, **\_SMSTSLogPath** is an environment variable that specifies the path to which Configuration Manager components write log files. Any task sequence step can access this environment variable. 
+For example, **\_SMSTSLogPath** is an environment variable that specifies the path to which Configuration Manager components write log files. Any task sequence step can access this environment variable.
 
-The task sequence evaluates some variables before each step. For example, **\_SMSTSCurrentActionName** lists the name of the current step. 
+The task sequence evaluates some variables before each step. For example, **\_SMSTSCurrentActionName** lists the name of the current step.
 
 ### <a name="bkmk_action"></a> Action variables
 
@@ -58,10 +57,9 @@ Some task sequence steps mark certain action variables as *output*. Steps later 
 > [!Note]  
 > Not all task sequence steps have action variables. For example, although there are variables associated with the **Enable BitLocker** action, there are no variables associated with the **Disable BitLocker** action.  
 
-
 ### <a name="bkmk_custom"></a> Custom variables
 
-These variables are any that Configuration Manager doesn't create. Initialize your own variables to use as conditions, in command lines, or in scripts. 
+These variables are any that Configuration Manager doesn't create. Initialize your own variables to use as conditions, in command lines, or in scripts.
 
 When you specify a name for a new task sequence variable, follow these guidelines:  
 
@@ -77,20 +75,16 @@ When you specify a name for a new task sequence variable, follow these guideline
 
 - Task sequence variable names can't begin or end with a space. They also can't have embedded spaces. The task sequence ignores any spaces at the beginning or the end of a variable name.  
 
-
 There's no set limit to how many task sequence variables you can create. However, the number of variables is limited by the size of the task sequence environment. The total size limit for the task sequence environment is 32 MB.  
-
 
 ### <a name="bkmk_read-only"></a> Read-only variables
 
-You can't change the value of some variables, which are read-only. Usually the name begins with an underscore character (\_). The task sequence uses them for its operations. Read-only variables are visible in the task sequence environment. 
+You can't change the value of some variables, which are read-only. Usually the name begins with an underscore character (`_`). The task sequence uses them for its operations. Read-only variables are visible in the task sequence environment.
 
 These variables are useful in scripts or command-lines. For example, running a command line and piping the output to a log file in **\_SMSTSLogPath** with the other log files.
 
 > [!NOTE]  
->  Read-only task sequence variables can be read by steps in a task sequence but they can't be set. For example, use a read-only variable as part of the command line for a **Run Command Line** step. You can't set a read-only variable by using the **Set Task Sequence Variable** step.  
-
-
+> Read-only task sequence variables can be read by steps in a task sequence but they can't be set. For example, use a read-only variable as part of the command line for a **Run Command Line** step. You can't set a read-only variable by using the **Set Task Sequence Variable** step.  
 
 ### <a name="bkmk_array"></a> Array variables
 
@@ -99,7 +93,6 @@ The task sequence stores some variables as an array. Each element in the array r
 - [Apply Network Settings](task-sequence-steps.md#BKMK_ApplyNetworkSettings)  
 
 - [Format and Partition Disk](task-sequence-steps.md#BKMK_FormatandPartitionDisk)  
-
 
 
 ## <a name="bkmk_set"></a> How to set variables
@@ -111,12 +104,12 @@ For custom variables or variables that aren't read-only, there are several metho
 - [Collection and device variables](#bkmk_set-coll-var)  
 - [TSEnvironment COM object](#bkmk_set-com)  
 - [Prestart command](#bkmk_set-prestart)  
+- [Task Sequence Wizard](#bkmk_set-tswiz)
 - [Task Sequence Media Wizard](#bkmk_set-media)  
-
 
 Delete a variable from the environment by using the same methods as creating a variable. To delete a variable, set the variable value to an empty string.  
 
-You can combine methods to set a task sequence variable to different values for the same sequence. For example, set the default values using the task sequence editor, and then set custom values using a script. 
+You can combine methods to set a task sequence variable to different values for the same sequence. For example, set the default values using the task sequence editor, and then set custom values using a script.
 
 If you set the same variable by different methods, the task sequence engine uses the following order:  
 
@@ -126,8 +119,7 @@ If you set the same variable by different methods, the task sequence engine uses
 
 3. Variables set by any method during the task sequence take precedence over collection or device variables.  
 
-
-#### General limitations for task sequence variable values  
+### General limitations for task sequence variable values
 
 - Task sequence variable values can't be more than 4,000 characters.  
 
@@ -135,58 +127,55 @@ If you set the same variable by different methods, the task sequence engine uses
 
 - Task sequence variable values can be case-sensitive depending on the usage of the value. In most cases, task sequence variable values aren't case-sensitive. A variable that includes a password is case-sensitive.  
 
-
 ### <a name="bkmk_set-ts-step"></a> Set Task Sequence Variable
 
-Use this step in the task sequence to set a single variable to a single value. 
+Use this step in the task sequence to set a single variable to a single value.
 
-For more information, see [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable). 
-
+For more information, see [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable).
 
 ### <a name="bkmk_set-dyn-step"></a> Set Dynamic Variables
 
-Use this step in the task sequence to set one or more task sequence variables. You define rules in this step to determine which variables and values to use. 
+Use this step in the task sequence to set one or more task sequence variables. You define rules in this step to determine which variables and values to use.
 
 For more information, see [Set Dynamic Variables](/sccm/osd/understand/task-sequence-steps#BKMK_SetDynamicVariables).
 
-
 ### <a name="bkmk_set-coll-var"></a> Collection and device variables
 
-Set variables on the properties of a collection or a specific device. 
+Set variables on the properties of a collection or a specific device.
 
 For more information, see [Create task sequence variables for computers and collections](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_CreateTSVariables).
 
-
 ### <a name="bkmk_set-com"></a> TSEnvironment COM object
 
-To work with variables from a script, use the **TSEnvironment** object. 
+To work with variables from a script, use the **TSEnvironment** object.
 
 For more information, see [How to use variables in a running task sequence](/sccm/develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence) in the Configuration Manager SDK.
 
-
 ### <a name="bkmk_set-prestart"></a> Prestart command
 
-The prestart command is a script or executable that runs in Windows PE before the user selects the task sequence. The prestart command can query a variable or prompt the user for information, and then save it in the environment. Use the [TSEnvironment](#bkmk_set-com) COM object to read and write variables from the prestart command. 
+The prestart command is a script or executable that runs in Windows PE before the user selects the task sequence. The prestart command can query a variable or prompt the user for information, and then save it in the environment. Use the [TSEnvironment](#bkmk_set-com) COM object to read and write variables from the prestart command.
 
 For more information, see [Prestart commands for task sequence media](/sccm/osd/understand/prestart-commands-for-task-sequence-media).
 
+### <a name="bkmk_set-tswiz"></a> Task Sequence Wizard
+
+Starting in version 1906, after you select a task sequence in the Task Sequence Wizard window, the page to edit task sequence variables includes an **Edit** button. You can use accessible keyboard shortcuts to edit the variables. This change helps in cases where a mouse isn't available.<!-- 4668846 -->
 
 ### <a name="bkmk_set-media"></a> Task Sequence Media Wizard
 
 Specify variables for task sequences that run from media. When using media to deploy the OS, you add the task sequence variables and specify their values when you create the media. The variables and their values are stored on the media.  
 
 > [!NOTE]  
->  Task sequences are stored on stand-alone media. However, all other types of media, such as prestaged media, retrieve the task sequence from a management point.  
+> Task sequences are stored on stand-alone media. However, all other types of media, such as prestaged media, retrieve the task sequence from a management point.  
 
-When you run a task sequence from media, you can add a variable on the **Customization** page of the wizard. 
+When you run a task sequence from media, you can add a variable on the **Customization** page of the wizard.
 
 Use the media variables in place of per-collection or per-computer variables. If the task sequence is running from media, per-computer and per-collection variables don't apply and aren't used.  
 
 > [!TIP]  
->  The task sequence writes the package ID and prestart command line to the **CreateTSMedia.log** file on the computer that runs the Configuration Manager console. This log file includes the value for any task sequence variables. Review this log file to verify the value for the task sequence variables.  
+> The task sequence writes the package ID and prestart command line to the **CreateTSMedia.log** file on the computer that runs the Configuration Manager console. This log file includes the value for any task sequence variables. Review this log file to verify the value for the task sequence variables.  
 
 For more information, see [Create task sequence media](/sccm/osd/deploy-use/create-task-sequence-media).
-
 
 
 ## <a name="bkmk_access"></a> How to access variables
@@ -194,20 +183,19 @@ For more information, see [Create task sequence media](/sccm/osd/deploy-use/crea
 After you specify the variable and its value by using one of the methods from the previous section, use it in your task sequences. For example, access default values for built-in task sequence variables, or make a step conditional on the value of a variable.  
 
 Use the following methods to access variable values in the task sequence environment:
+
 - [Use in a step](#bkmk_access-step)  
 - [Step condition](#bkmk_access-condition)  
 - [Custom script](#bkmk_access-script)  
 - [Windows setup answer file](#bkmk_access-answer)  
-
-
+  
 ### <a name="bkmk_access-step"></a> Use in a step
 
-Specify a variable value for a setting in a task sequence step. In the task sequence editor, edit the step, and specify the variable name as the field value. Enclose the variable name in percent signs (`%`). 
+Specify a variable value for a setting in a task sequence step. In the task sequence editor, edit the step, and specify the variable name as the field value. Enclose the variable name in percent signs (`%`).
 
-For example, use the variable name as part of the **Command Line** field of the **Run Command Line** step. The following command line writes the computer name to a text file. 
+For example, use the variable name as part of the **Command Line** field of the **Run Command Line** step. The following command line writes the computer name to a text file.
 
 `cmd.exe /c %_SMSTSMachineName% > C:\File.txt`
-
 
 ### <a name="bkmk_access-condition"></a> Step condition
 
@@ -227,13 +215,11 @@ To add a condition that evaluates a variable value, do the following steps:
 
     - **Value**: The value of the variable to check. For example, `false`.  
 
-
-The three examples above form a common condition to test whether the task sequence is running from a boot image in Windows PE: 
+The three examples above form a common condition to test whether the task sequence is running from a boot image in Windows PE:
 
 > **Task Sequence Variable** `_SMSTSInWinPE equals "false"`
 
 See this condition on the **Capture Files and Settings** group of the default task sequence template to install an existing OS image.
-
 
 ### <a name="bkmk_access-script"></a> Custom script
 
@@ -259,13 +245,11 @@ Write-Output "Hello world!" | Out-File -FilePath "$_SMSTSLogPath\mylog.log" -Enc
 $tsenv.Value("startTime") = (Get-Date -Format HH:mm:ss) + ".000+000"
 ```
 
-
-###  <a name="bkmk_access-answer"></a> Windows setup answer file
+### <a name="bkmk_access-answer"></a> Windows setup answer file
 
 The Windows setup answer file that you supply can have embedded task sequence variables. Use the form `%varname%`, where *varname* is the name of the variable. The **Setup Windows and ConfigMgr** step replaces the variable name string for the actual variable value. These embedded task sequence variables can't be used in numeric-only fields in an unattend.xml answer file.
 
 For more information, see [Setup Windows and ConfigMgr](/sccm/osd/understand/task-sequence-steps#BKMK_SetupWindowsandConfigMgr).
-
 
 
 ## See also

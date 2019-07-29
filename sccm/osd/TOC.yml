@@ -101,6 +101,10 @@
       href: deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md
     - name: Deploy a task sequence
       href: deploy-use/deploy-a-task-sequence.md  
+    - name: Debug a task sequence
+      href: deploy-use/debug-task-sequence.md
+    - name: Configure pre-cache content
+      href: deploy-use/configure-precache-content.md
     - name: Use a task sequence to manage virtual hard disks
       href: deploy-use/use-a-task-sequence-to-manage-virtual-hard-disks.md
   - name: Custom task sequence scenarios

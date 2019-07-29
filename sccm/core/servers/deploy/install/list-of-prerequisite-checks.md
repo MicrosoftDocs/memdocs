@@ -2,7 +2,7 @@
 title: Prerequisite checks
 titleSuffix: Configuration Manager
 description: Reference of the specific prerequisite checks for Configuration Manager updates.
-ms.date: 04/02/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -369,6 +369,20 @@ When using SQL Server Always On, availability group replicas are configured for 
 *Applies to: Site database server*
 
 When using SQL Server Always On, availability group replicas are on the default instance.
+
+### SQL availability group replicas must all have the same seeding mode
+
+<!-- SCCMDocs-pr#3899 -->
+*Applies to: Site database server*
+
+Starting in version 1906, when using SQL Server Always On, you need to configure availability group replicas with the same [seeding mode](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas).
+
+### SQL availability group replicas must be healthy
+
+<!-- SCCMDocs-pr#3899 -->
+*Applies to: Site database server*
+
+Starting in version 1906, when using SQL Server Always On, availability group replicas are in a healthy state.
 
 ### SQL Server configuration for site upgrade
 

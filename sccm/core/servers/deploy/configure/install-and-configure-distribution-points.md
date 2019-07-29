@@ -2,7 +2,7 @@
 title: Manage distribution points
 titleSuffix: Configuration Manager
 description: Use distribution points to host the content that you deploy to devices and users.
-ms.date: 05/28/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -67,6 +67,7 @@ Use this procedure to add a new distribution point. To change the configuration 
 Start with the general procedure to [Install site system roles](/sccm/core/servers/deploy/configure/install-site-system-roles). Select the **Distribution point** role on the **System Role Selection** page of the Create Site System Server wizard. This action adds the following pages to the wizard:  
 
 - [Distribution point](#bkmk_config-general)
+- [Communication](#bkmk_config-comm)
 - [Drive Settings](#bkmk_config-drive)
 - [Pull Distribution Point](#bkmk_config-pull)
 - [PXE Settings](#bkmk_config-pxe)
@@ -162,7 +163,7 @@ This process automatically populates the **Members** tab of the Create New Distr
 
 Many customers have large Configuration Manager infrastructures, and are reducing primary or secondary sites to simplify their environment. They still need to retain distribution points at branch office locations to serve content to managed clients. These distribution points often contain multiple terabytes or more of content. This content is costly in terms of time and network bandwidth to distribute to these remote servers.
 
-Starting in version 1802, this feature lets you reassign a distribution point to another primary site without redistributing the content. This action updates the site system assignment while persisting all of the content on the server. If you need to reassign multiple distribution points, first perform this action on a single distribution point. Then proceed with additional servers one at a time.
+This feature lets you reassign a distribution point to another primary site without redistributing the content. This action updates the site system assignment while persisting all of the content on the server. If you need to reassign multiple distribution points, first perform this action on a single distribution point. Then proceed with additional servers one at a time.
 
 > [!IMPORTANT]  
 > The target server can only host the distribution point role. If the site system server hosts another Configuration Manager server role, such as the state migration point, you cannot reassign the distribution point. You cannot reassign a cloud distribution point.
@@ -250,6 +251,7 @@ Individual distribution points support a variety of different configurations. Ho
 The following sections describe the distribution point configurations when you're [installing a new one](#bkmk_install-procedure) or [editing an existing one](#bkmk_change-procedure):  
 
 - [General settings](#bkmk_config-general)
+- [Communication](#bkmk_config-comm)
 - [Drive Settings](#bkmk_config-drive)
 - [Firewall Settings](#bkmk_firewall)
 - [Pull Distribution Point](#bkmk_config-pull)
@@ -270,7 +272,12 @@ The following sections describe the distribution point configurations when you'r
 
 ### <a name="bkmk_config-general"></a> General  
 
+> [!Note]  
+> In version 1902 and earlier, this page has additional settings for HTTP/HTTPS and certificates. Starting in version 1906, these settings are now on the [Communication](#bkmk_config-comm) page.
+
 The following settings are on the **Distribution point** page of the Create Site System Server wizard, and the **General** tab of the distribution point properties window:  
+
+- **Description**: An optional description for this distribution point role.  
 
 - **Install and configure IIS if required by Configuration Manager**: If IIS isn't already installed on the server, Configuration Manager installs and configures it. Configuration Manager requires IIS on all distribution points. If you don't choose this setting, and IIS isn't installed on the server, first install IIS before Configuration Manager can successfully install the distribution point.  
 
@@ -296,7 +303,17 @@ The following settings are on the **Distribution point** page of the Create Site
         - Windows Server 2016 with updates KB4132216 and KB4284833
         - Windows Server 2019  
 
-- **Description**: An optional description for this distribution point role.  
+- **Enable this distribution point for prestaged content**: This setting enables you to add content to the server before you distribute software. Because the content files are already in the content library, they don't transfer over the network when you distribute the software. For more information, see [Prestaged content](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent).  
+
+- **Enable this distribution point to be used as Delivery Optimization In-Network Cache server**: Starting in version 1906, you can install a Delivery Optimization In-Network Cache (DOINC) server on your distribution points. By caching this content on-premises, your clients can benefit from the Delivery Optimization feature, but you can help to protect WAN links. For more information, including description of the additional settings, see [Delivery Optimization In-Network Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/delivery-optimization-in-network-cache).
+
+
+### <a name="bkmk_config-comm"></a> Communication
+
+> [!Note]  
+> Starting in version 1906, the following settings are on the **Communication** tab. In version 1902 and earlier, these settings are on the [General](#bkmk_config-general) tab.
+
+The following settings are on the **Communication** page of the Create Site System Server wizard and the distribution point properties window:  
 
 - **Configure how client devices communicate with the distribution point**: There are advantages and disadvantages to using **HTTP** or **HTTPS**. For more information, see [Security best practices for content management](/sccm/core/plan-design/hierarchy/security-and-privacy-for-content-management#BKMK_Security_ContentManagement).  
 
@@ -329,8 +346,6 @@ The following settings are on the **Distribution point** page of the Create Site
     For more information about the certificate requirements, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements).  
 
     For an example deployment of this certificate, see [Deploying the client certificate for distribution points](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clientdistributionpoint2008_cm2012).  
-
-- **Enable this distribution point for prestaged content**: This setting enables you to add content to the server before you distribute software. Because the content files are already in the content library, they don't transfer over the network when you distribute the software. For more information, see [Prestaged content](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent).  
 
 ### <a name="bkmk_config-drive"></a> Drive settings  
 

@@ -41,7 +41,7 @@ Before you can use an OS upgrade package, first add it to your Configuration Man
         > [!IMPORTANT]  
         >  Limit access to these installation source files to prevent unwanted tampering.  
 
-    - If you want to pre-cache content on a client, specify the **Architecture** and **Language** of the image. For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content).  
+    - If you want to pre-cache content on a client, specify the **Architecture** and **Language** of the image. For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/configure-precache-content).  
 
 4.  On the **General** page, specify the following information. This information is useful for identification purposes when you have more than one OS upgrade package.  
 
