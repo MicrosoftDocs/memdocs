@@ -89,7 +89,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
 Use this procedure to sign in to Desktop Analytics and configure it in your subscription. This procedure is a one-time process to set up Desktop Analytics for your organization.  
 
-1. Open the [Desktop Analytics portal](https://aka.ms/desktopanalytics) in Microsoft 365 Device Management as a user with **Global Admin** permissions. Select **Start**.  If you are prompted for an invitation code, use: `DesktopAnalyticsRocks!`
+1. Open the [Desktop Analytics portal](https://aka.ms/desktopanalytics) in Microsoft 365 Device Management as a user with **Global Admin** permissions. Select **Start**.  
 
 2. On the **Accept service agreement** page, review the service agreement, and select **Accept**.  
 
