@@ -2,7 +2,7 @@
 title: Desktop Analytics
 titleSuffix: Configuration Manager
 description: An overview of the Desktop Analytics service integrated with Configuration Manager.
-ms.date: 07/26/2019
+ms.date: 07/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: overview
@@ -104,7 +104,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 - Network connectivity from devices to the Microsoft public cloud. For more information, see [How to enable data sharing](/sccm/desktop-analytics/enable-data-sharing)  
 
 
-### Licensing
+### Licensing and costs
 
 Desktop Analytics requires one of the following license subscriptions:
 
@@ -114,7 +114,14 @@ Desktop Analytics requires one of the following license subscriptions:
 
 - Windows VDA E3 or E5  
 
+Beyond the cost of license subscriptions, there's no additional cost for using Desktop Analytics. Within Azure Log Analytics, Desktop Analytics is "zero-rated." This rating means it's excluded from data limits and costs, regardless of the Azure Log Analytics pricing tier you chose. For more information on Azure Log Analytics pricing tiers, see [Pricing - Log Analytics](https://azure.microsoft.com/pricing/details/monitor/).
 
+- If you use the free tier, which has a cap on the amount of data collected per day, the Desktop Analytics data doesn't count towards this cap. You can collect all the Desktop Analytics data from your devices and still have the full cap available for collecting additional data from other sources.
+
+- If you use a paid tier that charges per GB of data collected, you're not charged for the Desktop Analytics data. You can collect all the Desktop Analytics data from your devices and not incur any costs.
+
+> [!Note]  
+> Different Azure Log Analytics plans have different data retention periods. Desktop Analytics inherits the workspace's data retention policy. If your workspace is on the free plan, then Desktop Analytics retains the last 30 days of "daily snapshots" that are collected in the workspace.
 
 
 ## Next steps
