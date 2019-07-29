@@ -3,7 +3,7 @@ title: Software updates maintenance
 titleSuffix: "Configuration Manager"
 description: "To maintain updates in Configuration Manager, you can schedule the WSUS cleanup task, or you can run it manually."
 author: mestew
-ms.date: 07/26/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -112,6 +112,13 @@ The addition of non-clustered indexes improves the WSUS cleanup performance that
    - tbLocalizedPropertyForRevision
    - tbRevisionSupersedesUpdate
 
+#### SQL permissions for creating indexes
+
+When the WSUS database is on a remote SQL server, the site server's computer account needs the following SQL permissions:
+
+- Creating an index requires `ALTER` permission on the table or view. The site server's computer account must be a member of the `sysadmin` fixed server role or the `db_ddladmin` and `db_owner` fixed database roles. For more information about creating and index and permissions, see [CREATE INDEX (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/create-index-transact-sql?view=sql-server-2017#permissions).
+- The `CONNECT SQL` server permission must be granted to the site server's computer account. For more information, see [GRANT Server Permissions (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017). 
+
 > [!NOTE]  
 >  If the WSUS database is on a remote SQL server using a non-default port, then indexes might not be added. You can create a [server alias using SQL Server Configuration Manager](https://docs.microsoft.com/sql/database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client?view=sql-server-2017) for this scenario. Once the alias is added and Configuration Manager can make a connection to the WSUS database, indexes will be added.
 
@@ -124,6 +131,13 @@ Obsolete updates are unused updates and update revisions in the WSUS database. G
 3. Click **Configure Site Components** in the Settings group, and then click **Software Update Point** to open Software Update Point Component Properties.
 4. In the **WSUS Maintenance** tab, select **Remove obsolete updates from the WSUS database**.
    - The obsolete update removal will be allowed to run for a maximum of 30 minutes before being stopped. It will start up again after the next synchronization occurs.  
+
+#### SQL permissions for removing obsolete updates
+
+When the WSUS database is on a remote SQL server, the site server's computer account needs the following SQL permissions:
+
+- The `db_datareader` and `db_datawriter` fixed database roles. For more information, see [Database-Level Roles](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-2017#fixed-database-roles).
+- The `CONNECT SQL` server permission must be granted to the site server's computer account. For more information, see [GRANT Server Permissions (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017).
 
 ## Updates cleanup log entries
 
