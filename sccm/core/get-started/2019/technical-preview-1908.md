@@ -28,11 +28,18 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [CMPivot standalone local query evaluation for this PC](includes/1908/3197353.md)]
 [!INCLUDE [Admins can use console connections to view extension information](includes/1908/4834225.md)]
 [!INCLUDE [Add IsDeployed to ADR filters](includes/1908/4852033.md)]
-[!INCLUDE [Custom default keyboard layout in boot image properties](includes/1908/4910348.md)]
-[!INCLUDE [Import a single index of an OS upgrade package](includes/1908/4931110.md)]
-[!INCLUDE [Output the results of a run command line step to a variable during a task sequence](includes/1908/4977616.md)]
+
+[!INCLUDE [Improvements to console connections node](includes/1908/4951240.md)]
+
 [!INCLUDE [Copy task sequence conditions](includes/1908/4621098.md)]
 [!INCLUDE [Task sequence performance improvements for power plans](includes/1908/3555926.md)]
+
+[!INCLUDE [Improvements to task sequence search](includes/1908/4621085.md)]
+
+[!INCLUDE [Improvements to OS deployment](includes/1908/4910348.md)]
+<!-- 4910348, 4931110, 4977616 -->
+
+
 
 <!-- ## Known issues -->
 
