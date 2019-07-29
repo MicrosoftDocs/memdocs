@@ -4167,7 +4167,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |None|  
 
 ####  <a name="IsDesktop"></a> IsDesktop  
- Indicator of whether the computer is a desktop, because the **Win32\_SystemEnclosure ChassisType** property value is **3**, **4**, **5**, **6**, **7**, or **15**.  
+ Indicator of whether the computer is a desktop, because the **Win32\_SystemEnclosure ChassisType** property value is **3**, **4**, **5**, **6**, **7**, **15**, **16**, **35**, or **36**.  
 
 > [!NOTE]
 >  Only one of the following properties will be true at a time: **IsDesktop**, **IsLaptop**, **IsServer**.  
@@ -4229,7 +4229,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |None|  
 
 ####  <a name="IsLaptop"></a> IsLaptop  
- Indicator of whether the computer is a portable computer, because the **Win32\_SystemEnclosure ChassisType** property value is **8**, **10**, **12**, **14**, **18**, or **21**.  
+ Indicator of whether the computer is a portable computer, because the **Win32\_SystemEnclosure ChassisType** property value is **8**, **9**, **10**, **11**, **12**, **14**, **18**, **21**, **30**, **31**, or **32**.  
 
 > [!NOTE]
 >  Only one of the following properties will be true at a time: **IsDesktop**, **IsLaptop**, **IsServer**.  
@@ -4253,7 +4253,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |None|  
 
 ####  <a name="IsServer"></a> IsServer  
- Indicator of whether the computer is a server, because the **Win32\_SystemEnclosure ChassisType** property value is **23**.  
+ Indicator of whether the computer is a server, because the **Win32\_SystemEnclosure ChassisType** property value is **23** or **28**.  
 
 |**Property configured by**|||**Property applies to**||  
 |-|-|-|-|-|  
