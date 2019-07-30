@@ -5,7 +5,7 @@ description: Learn how to prepare your Windows 10 internet-based devices for co-
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 07/31/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -27,7 +27,7 @@ To configure your devices to be automatically enroll into Intune when they join 
 
 ### Gather information from Configuration Manager
 
-Starting in version 1802, use Configuration Manager to collect and report the device information required by the Microsoft Store for Business and Education. This information includes the device serial number, Windows product identifier, and a hardware identifier. It's used to register the device in the Microsoft Store to support Windows Autopilot.
+Starting in version 1802, use Configuration Manager to collect and report the device information required by Intune. This information includes the device serial number, Windows product identifier, and a hardware identifier. It's used to register the device in Intune to support Windows Autopilot.
 
 1. In the Configuration Manager console, go to the **Monitoring** workspace, expand the **Reporting** node, expand **Reports**, and select the **Hardware - General** node.  
 
@@ -35,9 +35,9 @@ Starting in version 1802, use Configuration Manager to collect and report the de
 
 3. In the report viewer, select the **Export** icon, and choose the **CSV (comma-delimited)** option.  
 
-4. After saving the file, upload the data to the Microsoft Store for Business and Education.  
+4. After saving the file, upload the data to Intune.  
 
-For more information, see [Add devices in Microsoft Store for Business and Education](https://docs.microsoft.com/microsoft-store/add-profile-to-devices#add-devices-and-apply-autopilot-deployment-profile).
+For more information, see [Add devices in Intune](https://docs.microsoft.com/intune/enrollment-autopilot#add-devices).
 
 ### Autopilot for existing devices
 <!--1358333-->
