@@ -67,21 +67,21 @@ For more information, see [Manage mobile devices with Configuration Manager and 
 
 ## <a name="bkmk_comp1"></a> Compare solutions by supported platforms  
 
-|Platform|Configuration Manager client|On-premises MDM|Configuration Manager with Exchange|  
-|--------|----------------------------|---------------|-----------------------------------|  
-|Android| | |Yes|  
-|iOS| | |Yes|  
-|Mac OS X|Yes| |Yes|  
-|UNIX/Linux|Yes| |Yes|  
-|Windows 10|Yes|Yes|Yes|  
-|Windows 10 Mobile| |Yes|Yes|  
-|Windows (previous versions)|Yes| |Yes|  
-|Windows Server|Yes| |Yes|  
-|Windows CE|Yes (with mobile device legacy client)| |Yes|  
-|Windows Embedded|Yes| | |  
-|Windows Mobile| | |Yes|  
+|Platform|Configuration Manager client|On-premises MDM|Configuration Manager with Exchange| Intune |
+|--------|----------------------------|---------------|-----------------------------------|--------|
+|Android| | |Yes| Yes |
+|iOS| | |Yes| Yes |
+|Mac OS X|Yes| |Yes| Yes |
+|Windows 10|Yes|Yes|Yes| Yes |
+|Windows 10 Mobile| |Yes|Yes| Yes |
+|Windows (previous versions)|Yes| |Yes|  |
+|Windows Server|Yes| |Yes|  |
+|Windows Embedded|Yes| | |  |
 
-For a complete list of supported platforms, see [Supported operating systems for clients and devices for Configuration Manager](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices).
+For a complete list of supported platforms, see the following articles:
+
+- [Supported operating systems for clients and devices for Configuration Manager](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices)
+- [Intune supported configurations](https://docs.microsoft.com/intune/supported-devices-browsers)
 
 Microsoft recommends using Intune to manage Android, iOS, and Windows 10 mobile devices. For more information, see [What is Microsoft Intune?](https://docs.microsoft.com/intune/what-is-intune).
 
@@ -104,3 +104,26 @@ Microsoft recommends using Intune to manage Android, iOS, and Windows 10 mobile 
 |Block from Configuration Manager|Yes|Yes| |  
 |Quarantine and block from Exchange Server (and Configuration Manager)| | |Yes|  
 |Remote wipe| |Yes|Yes|  
+
+
+## <a name="bkmk_other"></a> Other Microsoft solutions
+
+There are other Microsoft solutions that might work better for you in different scenarios. Use the following table to help compare these additional management technologies:
+
+|  | Cloud-only | Cloud-attached | On-premises | Disconnected |
+|---------|---------|---------|---------|---------|
+| **Hyper-V host** | Not applicable | - Azure Stack<br/> - Windows Admin Center<br/> - Virtual Machine Manager | - Azure Stack<br/> - Windows Admin Center<br/> - Virtual Machine Manager | - Azure Stack<br/> - Windows Admin Center<br/> - Virtual Machine Manager |
+| **Windows Server** | - Azure management<br/> - Configuration Manager | - Azure management<br/> - Configuration Manager | - Azure management<br/> - Configuration Manager | Configuration Manager |
+| **Linux Server** | Azure management | Azure management | Azure management |  |
+| **Windows 10** | - Intune<br/> - Configuration Manager | - Intune<br/> - Configuration Manager | - Intune<br/> - Configuration Manager | Configuration Manager |
+| **Windows 7 or 8.1** | Configuration Manager | Configuration Manager | Configuration Manager | Configuration Manager |
+| **Windows Virtual Desktop** | Configuration Manager | Not applicable | Not applicable | Not applicable |
+
+For more information on these technologies, see the following articles:
+
+- [What is Azure Stack?](https://docs.microsoft.com/azure-stack/operator/azure-stack-overview)
+- [What is Windows Admin Center?](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/what-is)
+- [What is Virtual Machine Manager?](https://docs.microsoft.com/system-center/vmm/overview)
+- [Azure management products](https://docs.microsoft.com/azure/#pivot=products&panel=mgmt)
+- [Configuration Manager on Azure](/sccm/core/understand/configuration-manager-on-azure)
+- [What is Windows Virtual Desktop?](https://docs.microsoft.com/azure/virtual-desktop/overview)
