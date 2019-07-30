@@ -186,7 +186,7 @@ The portal shows a notification that it added the role assignment.
 ## Data latency
 
 <!-- 3846531 -->
-When you first set up Desktop Analytics, the reports in Configuration Manager and the Desktop Analytics portal may not show complete data right away. It can take 2-3 days for the following steps to occur:
+When you first setup Desktop Analytics, enroll new clients, or configure new deployment plans, the reports in Configuration Manager and the Desktop Analytics portal may not show complete data right away. It can take 2-3 days for the following steps to occur:
 
 - Active devices send diagnostic data to the Desktop Analytics service
 - The service processes the data
