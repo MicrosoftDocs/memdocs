@@ -124,13 +124,16 @@ To successfully replicate data between a central administration site and a prima
 
 #### Known issues with Azure services
 
-When you use one of the following Azure services with Configuration Manager, after expanding the site, remove and then recreate the connection to that service.
+After you expand the site, you need to reconfigure the following Azure services with Configuration Manager:
 
 - [Log Analytics](/sccm/core/clients/manage/sync-data-log-analytics)  
 - [Upgrade Readiness](/sccm/core/clients/manage/upgrade-readiness)  
 - [Microsoft Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)  
+- [Cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)
 
-Use the following steps to resolve this issue:
+On version 1806 and later, renew the Azure Active Directory tenant secret key. For more information, see [Renew secret key Azure AD apps](/sccm/core/servers/deploy/configure/azure-services-wizard#renew-secret-key-azure-ad-apps).
+
+Alternatively, remove and then recreate the connection to that service:
 
 1. In the Configuration Manager console, delete the Azure service from the **Azure Services** node.  
 
