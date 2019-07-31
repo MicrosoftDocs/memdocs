@@ -44,7 +44,7 @@ If you're installing a central administration site as part of a hierarchy expans
     - **Sysadmin** on the instance of SQL Server that hosts the site database  
 
         > [!IMPORTANT]  
-        > When Configuration Manager setup finishes, both the user account that runs setup and the site server computer account must retain sysadmin rights to SQL Server. Don't remove the sysadmin rights from these accounts.  
+        > When Configuration Manager setup finishes, the site server computer account must retain sysadmin rights to SQL Server. Don't remove the SQL sysadmin rights from this account.  
 
 - If you're installing a primary site, you need the following additional rights:  
 
