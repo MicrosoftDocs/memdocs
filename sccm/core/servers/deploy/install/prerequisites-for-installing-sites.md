@@ -2,7 +2,7 @@
 title: Prerequisites for sites
 titleSuffix: Configuration Manager
 description: Learn about prerequisites for installing the different types of Configuration Manager sites.
-ms.date: 04/12/2019
+ms.date: 07/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -20,27 +20,19 @@ ms.collection: M365-identity-device-management
 Before you begin a site installation, learn about the prerequisites for installing the different types of Configuration Manager sites.
 
 
-
 ## Primary sites and the central administration site
 
 The following prerequisites apply to installing one of the following types:
+
 - A central administration site as the first site of a hierarchy
 - A stand-alone primary site
 - A child primary site
 
 If you're installing a central administration site as part of a hierarchy expansion, see [Expanding a stand-alone primary site](#bkmk_expand).
 
+### <a name="bkmk_PrereqPri"></a> Prerequisites for installing a primary site or a central administration site  
 
-###  <a name="bkmk_PrereqPri"></a> Prerequisites for installing a primary site or a central administration site  
-
-- The following Windows Server roles, features and Windows components must be installed:  
-    - .NET Framework 3.5 SP1 (or later)
-    - .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2
-    - Remote Differential Compression
-    - Windows ADK
-    - Visual C++ Redistributable  
-    
-    For more info, see [Site System Prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012sspreq)  
+- The necessary Windows Server roles, features, and Windows components must be installed. For more information, see [Site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012sspreq)  
 
 - The user account that installs the site must have the following rights:  
 
@@ -52,7 +44,7 @@ If you're installing a central administration site as part of a hierarchy expans
     - **Sysadmin** on the instance of SQL Server that hosts the site database  
 
         > [!IMPORTANT]  
-        >  When Configuration Manager setup finishes, both the user account that runs setup and the site server computer account must retain sysadmin rights to SQL Server. Don't remove the sysadmin rights from these accounts.  
+        > When Configuration Manager setup finishes, both the user account that runs setup and the site server computer account must retain sysadmin rights to SQL Server. Don't remove the sysadmin rights from these accounts.  
 
 - If you're installing a primary site, you need the following additional rights:  
 
@@ -74,39 +66,44 @@ If you're installing a central administration site as part of a hierarchy expans
 
 - The site server and site database server must meet all prerequisite configurations. Before starting Configuration Manager setup, [manually run Prerequisite Checker](/sccm/core/servers/deploy/install/prerequisite-checker) to identify and fix problems.  
 
-
 ### <a name="bkmk_expand"></a> Prerequisites to expand a stand-alone primary site
 
 A stand-alone primary site must meet the following prerequisites before you can expand it into a hierarchy with a central administration site:
 
 #### Source file version matches site version
-Install the new central administration site using media from a CD.Latest folder that matches the version of the stand-alone primary site. To make sure the versions match, use the source files found in the [CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder) on the stand-alone primary site. 
+
+Install the new central administration site using media from a CD.Latest folder that matches the version of the stand-alone primary site. To make sure the versions match, use the source files found in the [CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder) on the stand-alone primary site.
 
 For more information about the correct source files to use to install different sites, see [Options for installing different types of sites](/sccm/core/servers/deploy/install/prepare-to-install-sites#bkmk_options).  
 
 #### Stop active migration from another hierarchy
-You can't configure the stand-alone primary site to migrate data from another Configuration Manager hierarchy. Stop active migration to the stand-alone primary site from other Configuration Manager hierarchies and remove all configurations for migration. These configurations include: 
+
+You can't configure the stand-alone primary site to migrate data from another Configuration Manager hierarchy. Stop active migration to the stand-alone primary site from other Configuration Manager hierarchies and remove all configurations for migration. These configurations include:
+
 - Migration jobs that haven't completed  
 - Data gathering  
 - The configuration of the active source hierarchy  
 
 This configuration is necessary because Configuration Manager migrates data from the top-level site of the hierarchy. When you expand a stand-alone primary site, the configurations for migration don't transfer to the central administration site.  
 
-After you expand the stand-alone primary site, if you reconfigure migration at the primary site, the central administration site performs the migration operations. 
+After you expand the stand-alone primary site, if you reconfigure migration at the primary site, the central administration site performs the migration operations.
 
 For more information about how to configure migration, see [Configure source hierarchies and source sites for migration](/sccm/core/migration/configuring-source-hierarchies-and-source-sites-for-migration).  
 
 #### Computer account as Administrator
-The computer account of the server that hosts the new central administration site must be a member of the **Administrator** group on the stand-alone primary site server. 
+
+The computer account of the server that hosts the new central administration site must be a member of the **Administrator** group on the stand-alone primary site server.
 
 To successfully expand the stand-alone primary site, the computer account of the new central administration site must have **Administrator** rights on the stand-alone primary site. This is required only during site expansion. When site expansion finishes, you can remove the account from the user group on the primary site.  
 
 #### Installation account permissions
+
 The user account that runs Configuration Manager setup to install the new central administration site must have role-based administration rights at the stand-alone primary site.
 
 To install a central administration site as part of a site expansion, the user account that runs setup to install the central administration site must be defined in role-based administration at the stand-alone primary site as either a **Full Administrator** or an **Infrastructure Administrator**.  
 
 #### Top-level site roles
+
 Before you expand the site, uninstall the following site system roles from the stand-alone primary site:
 
 - Asset Intelligence sync point  
@@ -118,11 +115,13 @@ Configuration Manager only supports these roles at the top-level site of the hie
 All other site system roles can remain installed at the primary site.  
 
 #### Open the SQL Server Service Broker port
+
 The network port must be open for the SQL Server Service Broker (SSB) between the stand-alone primary site and the server for the central administration site.  
 
 To successfully replicate data between a central administration site and a primary site, Configuration Manager requires an open port between the two sites for SSB to use. When you install a central administration site and expand a stand-alone primary site, the prerequisite check doesn't verify that the port you specify for the SSB is open on the primary site.  
 
 #### Known issues with Azure services
+
 When you use one of the following Azure services with Configuration Manager, after expanding the site, remove and then recreate the connection to that service.
 
 - [Log Analytics](/sccm/core/clients/manage/sync-data-log-analytics)  
@@ -130,25 +129,19 @@ When you use one of the following Azure services with Configuration Manager, aft
 - [Microsoft Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)  
 
 Use the following steps to resolve this issue:
- 1. In the Configuration Manager console, delete the Azure service from the **Azure Services** node.  
 
- 2. In the Azure portal, delete the tenant that's associated with the service from the Azure Active Directory tenants node. This action also deletes the Azure AD web app that's associated with the service.  
+1. In the Configuration Manager console, delete the Azure service from the **Azure Services** node.  
 
- 3. Reconfigure the connection to the Azure service for use with Configuration Manager.  
+2. In the Azure portal, delete the tenant that's associated with the service from the Azure Active Directory tenants node. This action also deletes the Azure AD web app that's associated with the service.  
 
+3. Reconfigure the connection to the Azure service for use with Configuration Manager.  
 
 
 ## <a name="bkmk_secondary"></a> Secondary sites
 
 The following are prerequisites for installing secondary sites:  
 
-- The following Windows Server roles, features and Windows Components must be installed:  
-    - .NET Framework 3.5 SP1 (or later)
-    - .NET Framework 4.5.2,4.6.1,4.6.2,4.7,4.7.1, or 4.7.2
-    - Remote Differential Compression
-    - Visual C++ Redistributable  
-    
-    For more info, see [Site System Prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012secpreq)  
+- The necessary Windows Server roles, features, and Windows components must be installed. For more information, see [Site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012secpreq)  
 
 - The administrator who configures the installation of the secondary site in the Configuration Manager console must have role-based administration rights that are equivalent to the security role of **Infrastructure Administrator** or **Full Administrator**.  
 
@@ -161,6 +154,11 @@ The following are prerequisites for installing secondary sites:
     - The **Local System** account of the secondary site server computer must have **sysadmin** rights on the instance of SQL Server on the secondary site server.  
 
         > [!IMPORTANT]  
-        >  When Configuration Manager setup finishes, both accounts must retain sysadmin rights to SQL Server. Don't remove the sysadmin rights from these accounts.  
+        > When Configuration Manager setup finishes, both accounts must retain sysadmin rights to SQL Server. Don't remove the sysadmin rights from these accounts.  
 
 - The secondary site server must meet all prerequisite configurations. These configurations include SQL Server and the default site system roles of the management point and distribution point.  
+
+
+## Next steps
+
+After you've confirmed the prerequisites, you're ready to run setup. For more information, see [Use the Setup Wizard to install Configuration Manager sites](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites).
