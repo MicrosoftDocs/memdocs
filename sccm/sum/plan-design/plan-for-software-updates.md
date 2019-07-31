@@ -5,7 +5,7 @@ description: A plan for the software update point infrastructure is essential be
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 07/31/2019
 ms.topic: conceptual
 ms.prod: configuration-manager 
 ms.technology: configmgr-sum
@@ -37,9 +37,9 @@ Use the following recommendations as a baseline. This baseline helps you determi
 
 ###  <a name="BKMK_SUMCapacity"></a> Capacity planning for the software update point  
 
-The number of supported clients depends on the version of Windows Server Update Services (WSUS) that runs on the software update point. It also depends on whether the software update point site system role co-exists with another site system role:  
+The number of supported clients depends on the version of Windows Server Update Services (WSUS) that runs on the software update point. It also depends on whether the software update point site system role coexists with another site system role:  
 
--   The software update point can support up to 25,000 clients when WSUS runs on the software update point server, and the software update point co-exists with another site system role.  
+-   The software update point can support up to 25,000 clients when WSUS runs on the software update point server, and the software update point coexists with another site system role.  
 
 -   The software update point can support up to 150,000 clients when a remote server meets WSUS requirements, WSUS is used with Configuration Manager, and you configure the following settings:
 
@@ -59,6 +59,9 @@ Limit the number of software updates to 1000 for each software update deployment
 
 Also limit the number of software updates to 1000 in a configuration baseline. For more information, see [Create configuration baselines](/sccm/compliance/deploy-use/create-configuration-baselines).
 
+#### Limit of 580 security scopes for automatic deployment rules
+<!--ado 4962928-->
+Limit the number of security scopes on automatic deployment rules (ADRs) to less than 580. When you create an ADR, the security scopes that have access to it are automatically added. If there are more than 580 security scopes set, the ADR will fail to run and an error is logged in ruleengine.log.
 
 
 ##  <a name="BKMK_SUPInfrastructure"></a> Determine the software update point infrastructure  
@@ -87,7 +90,7 @@ Add multiple software update points at a Configuration Manager primary site to p
 
 The first software update point that you install on a primary site is the synchronization source for all additional software update points that you add at the primary site. After you add software update points and start synchronization, view the status of the software update points and the synchronization source from the **Software Update Point Synchronization Status** node in the **Monitoring** workspace.  
 
-When there is a failure of the software update point configured as the synchronization source for the site, manually remove the failed role. Then select a new software update point to use as the synchronization source. For more information, see [Remove the software update point site system role](../get-started/remove-a-software-update-point.md).  
+When there's a failure of the software update point configured as the synchronization source for the site, manually remove the failed role. Then select a new software update point to use as the synchronization source. For more information, see [Remove the software update point site system role](../get-started/remove-a-software-update-point.md).  
 
 
 ###  <a name="BKMK_SUPList"></a> Software update point list  
