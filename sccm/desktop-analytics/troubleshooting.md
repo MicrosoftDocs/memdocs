@@ -75,7 +75,7 @@ If you can't create the Azure AD app for Configuration Manager from the Configur
 
 #### Create app in Azure AD
 
-1. Open the [Azure portal](http://portal.azure.com) as a user with *Global Admin* permissions, go to **Azure Active Directory**, and select **App registrations**. Then select **New registration**.  
+1. Open the [Azure portal](https://portal.azure.com) as a user with *Global Admin* permissions, go to **Azure Active Directory**, and select **App registrations**. Then select **New registration**.  
 
 2. In the **Create** panel, configure the following settings:  
 
@@ -166,7 +166,7 @@ When you set up Desktop Analytics, you consent on behalf of your organization. T
 
 If there's a problem with this process during setup, use the following process to manually add this permission:
 
-1. Go to the [Azure portal](http://portal.azure.com), and select **All resources**. Select the workspace of type **Log Analytics**.  
+1. Go to the [Azure portal](https://portal.azure.com), and select **All resources**. Select the workspace of type **Log Analytics**.  
 
 2. In the workspace menu, select **Access control (IAM)**, then select **Add**.  
 
