@@ -2,7 +2,7 @@
 title: Prerequisites for sites
 titleSuffix: Configuration Manager
 description: Learn about prerequisites for installing the different types of Configuration Manager sites.
-ms.date: 07/30/2019
+ms.date: 07/31/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -100,7 +100,9 @@ To successfully expand the stand-alone primary site, the computer account of the
 
 The user account that runs Configuration Manager setup to install the new central administration site must have role-based administration rights at the stand-alone primary site.
 
-To install a central administration site as part of a site expansion, the user account that runs setup to install the central administration site must be defined in role-based administration at the stand-alone primary site as either a **Full Administrator** or an **Infrastructure Administrator**.  
+To install a central administration site as part of a site expansion, the user account that runs setup to install the central administration site must be defined in role-based administration at the stand-alone primary site as either a **Full Administrator** or an **Infrastructure Administrator**.
+
+For more information including the complete list of required permissions, see [Site installation account](/sccm/core/plan-design/hierarchy/accounts#site-installation-account).
 
 #### Top-level site roles
 
