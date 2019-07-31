@@ -131,7 +131,7 @@ After you expand the site, you need to reconfigure the following Azure services 
 - [Microsoft Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)  
 - [Cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)
 
-On version 1806 and later, renew the Azure Active Directory tenant secret key. For more information, see [Renew secret key Azure AD apps](/sccm/core/servers/deploy/configure/azure-services-wizard#renew-secret-key-azure-ad-apps).
+On version 1806 and later, renew the Azure Active Directory tenant secret key. For more information, see [Renew secret key](/sccm/core/servers/deploy/configure/azure-services-wizard#bkmk_renew).
 
 Alternatively, remove and then recreate the connection to that service:
 

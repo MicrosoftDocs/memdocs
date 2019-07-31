@@ -67,7 +67,7 @@ If you then expand a standalone primary site to a hierarchy with a central admin
 
 #### Workaround
 
-Renew the key associated with the app registration in Azure AD. For more information, see [Renew secret key Azure AD apps](/sccm/core/servers/deploy/configure/azure-services-wizard#bkmk_renew).
+Renew the key associated with the app registration in Azure AD. For more information, see [Renew secret key](/sccm/core/servers/deploy/configure/azure-services-wizard#bkmk_renew).
 
 
 ### Setup command-line option JoinCEIP must be specified
