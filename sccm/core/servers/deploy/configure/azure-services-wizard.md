@@ -34,6 +34,8 @@ Configure the following Azure services using this wizard:
 
     - Support certain [cloud management gateway scenarios](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#scenarios)  
 
+    - [App approval email notifications](/sccm/apps/deploy-use/app-approval#bkmk_email-approve)
+
 - **Log Analytics Connector**: [Connect to Azure Log Analytics](/sccm/core/clients/manage/sync-data-log-analytics). Sync collection data to Log Analytics.  
 
     > [!Note]  
