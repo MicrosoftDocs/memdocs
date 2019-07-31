@@ -2,7 +2,7 @@
 title: Delivery Optimization In-Network Cache
 titleSuffix: Configuration Manager
 description: Use your Configuration Manager distribution point as a local cache server for Delivery Optimization
-ms.date: 07/26/2019
+ms.date: 07/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -35,15 +35,15 @@ When you configure clients to use the Delivery Optimization In-Network Cache ser
 
 1. Client checks for updates and gets the address for the content delivery network (CDN).
 
-2. Client asks the Delivery Optimization (DO) service for additional download sources. The DO service provides the registered DO cache server that matches the client's public IP address. (Configuration Manager configures this setting using boundaries via client settings.)
+2. Configuration Manager configures Delivery Optimization (DO) settings on the client, including the cache server name.
 
-3. Client requests the content from the DOINC.
+3. Client A requests content from the DO cache server.
 
-4. If the cache doesn't include the content, it gets it from the CDN.
+4. If the cache doesn't include the content, then Client A gets it from the CDN.
 
 5. If the cache server fails to respond, the client downloads the content from the CDN.
 
-    The client also uses DO to get pieces of the content from peers.
+6. Clients use DO to get pieces of the content from peers.
 
 
 ## Prerequisites and limitations
