@@ -201,24 +201,46 @@ Although each of these discovery methods is independent of the others, they shar
 
 ## <a name="azureaadisc"></a> Azure AD User Discovery
 
-Azure AD User Discovery isn't enabled or configured the same as other discovery methods. Configure it when you onboard the Configuration Manager site to Azure AD. When you [Configure Azure Services](/sccm/core/servers/deploy/configure/azure-services-wizard) for **Cloud Management**, you can also enable and configure this discovery method.
+Azure AD User Discovery isn't enabled or configured the same as other discovery methods. Configure it when you onboard the Configuration Manager site to Azure AD.
+
+For more information, see [Azure AD User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc).
+
+### Prerequisites
+
+To enable and configure this discovery method, [Configure Azure Services](/sccm/core/servers/deploy/configure/azure-services-wizard) for **Cloud Management**.
+
+If you use Configuration Manager to *create* the Azure app, it configures the app with the necessary permissions.
+
+If you create the app in Azure first, and then *import* it into Configuration Manager, you need to manually configure the app. This configuration includes granting the server app permission to read directory data.
+
+1. Open the [Azure portal](https://portal.azure.com) as a user with *Global Admin* permissions. Go to **Azure Active Directory**, and select **App registrations**. Switch to **All applications** if necessary.
+
+1. Select the target application.
+
+1. In the **Manage** menu, select **API permissions**.  
+
+    1. On the **API permissions** panel, select **Add a permission**.  
+
+    2. In the **Request API permissions** panel, switch to **APIs my organization uses**.  
+
+    3. Search for and select the **Microsoft Graph** API.  
+
+        > [!Tip]
+        > In version 1810 and earlier, use the **Azure Active Directory Graph** API.
+
+    4. Select the **Application permissions** group. Expand **Directory**, and select **Directory.Read.All**.  
+
+    5. Select **Add permissions**.  
+
+1. On the **API permissions** panel, in the **Grant consent** section, select **Grant admin consent...**. Select **Yes**.  
+
+### Configure Azure AD User Discovery
 
 When configuring the **Cloud Management** Azure service:
 
 - On the **Discovery** page of the wizard, select the option to **Enable Azure Active Directory User Discovery**.
 - Select **Settings**.
 - In the Azure AD User Discovery Settings dialog box, configure a schedule for when discovery occurs. You can also enable delta discovery, which only checks for new or changed accounts in Azure AD.
-
-For more information, see [Azure AD User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc).
-
-> [!Important]  
-> Before you *import* the Azure AD app into Configuration Manager, you need to grant the server application permission to read directory data from Azure AD. 
-> - In the [Azure portal](https://portal.azure.com), go to the **Azure Active Directory** blade. 
-> - Select **App registrations**, and switch to **All apps** if necessary. 
-> - Select the server app of type *Web app / API*, and then select **Settings**. 
-> - Select **Required permissions**, and then select **Grant permissions**.
->  
-> If you *create* the server app from Configuration Manager, Azure AD automatically creates the permissions with the application. You still need to give consent to the application in the Azure portal.
 
 > [!Note]  
 > If the user is a federated or synchronized identity, you must use Configuration Manager [Active Directory user discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser) as well as Azure AD user discovery. For more information about hybrid identities, see [Define a hybrid identity adoption strategy](/azure/active-directory/active-directory-hybrid-identity-design-considerations-identity-adoption-strategy).<!--497750-->
