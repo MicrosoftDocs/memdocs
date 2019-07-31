@@ -2,7 +2,7 @@
 title: Site prerequisites
 titleSuffix: Configuration Manager
 description: Learn how to configure a Windows computer as a Configuration Manager site system server.
-ms.date: 07/26/2019
+ms.date: 07/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -23,8 +23,7 @@ This article primarily focuses on [Windows Server 2012 and later](#bkmk_2012Prer
 
 For some products, like Windows Server Update Services (WSUS) for the software update point, you need to refer to the product documentation to identify additional prerequisites and limitations for use. Only configurations that directly apply for use with Configuration Manager are included here.
 
-> [!NOTE]  
-> In January 2016, support expired for the .NET Framework 4.0, 4.5, and 4.5.1. For more information, see [Microsoft .NET Framework Support Lifecycle Policy FAQ](https://support.microsoft.com/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update).  
+For more information on .NET Framework, see [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework).
 
 
 ## <a name="bkmk_generalprerewq"></a> General requirements and limitations
@@ -78,13 +77,20 @@ See the main sections of this article for the specific prerequisites for site sy
 
 ### Windows Server roles and features
 
-- .NET Framework 3.5 SP1 (or later)  
-
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2  
-
-    - For more information about .NET Framework versions, see [.NET Framework Versions and Dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies).
+- .NET Framework 3.5
 
 - Remote Differential Compression  
+
+### .NET Framework
+
+Enable the Windows feature for .NET Framework 3.5.
+
+Also install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+
+For more information about .NET Framework versions, see the following articles:
+
+- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### Windows ADK  
 
@@ -103,13 +109,20 @@ See the main sections of this article for the specific prerequisites for site sy
 
 ### Windows Server roles and features
 
-- .NET Framework 3.5 SP1 (or later)  
-
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2  
-
-    - For more information about .NET Framework versions, see [.NET Framework Versions and Dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies).  
+- .NET Framework 3.5
 
 - Remote Differential Compression  
+
+### .NET Framework
+
+Enable the Windows feature for .NET Framework 3.5.
+
+Also install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+
+For more information about .NET Framework versions, see the following articles:
+
+- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### Visual C++ Redistributable
 
@@ -150,6 +163,7 @@ See the main sections of this article for the specific prerequisites for site sy
 ### Windows Server roles and features
 
 - If you're using the [administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service), the server that hosts the SMS Provider role requires .NET 4.5.2 or later  <!-- SCCMDocs issue #1203 -->
+    - Starting in version 1902, this prerequisite is version .NET 4.5 or later.
 
 - Web Server (IIS): Every provider attempts to install the [administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service). This service has a dependency on IIS to bind a certificate to HTTPS port 443. Configuration Manager uses IIS APIs to check this certificate configuration. If you configure the site for [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http), Configuration Manager uses IIS APIs to bind the SCCM-generated certificate.
 
@@ -165,15 +179,22 @@ See the main sections of this article for the specific prerequisites for site sy
 
 ### Windows Server roles and features
 
-- .NET Framework 3.5 SP1 (or later)  
+- .NET Framework 3.5
 
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2  
+- ASP.NET 4.5  
 
-    - ASP.NET 4.5  
+### .NET Framework
 
-    - For more information about .NET Framework versions, see [.NET Framework Versions and Dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies).  
+Enable the Windows feature for .NET Framework 3.5.
 
-#### IIS configuration  
+Also install a supported version of the .NET Framework version 4.5 or later.
+
+For more information about .NET Framework versions, see the following articles:
+
+- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
+
+### IIS configuration  
 
 - Common HTTP Features:  
 
@@ -212,15 +233,24 @@ See the main sections of this article for the specific prerequisites for site sy
 
 ### Windows Server roles and features
 
-- .NET Framework 3.5 SP1 (or later)  
+- .NET Framework 3.5
 
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2:  
+- ASP.NET 4.5:  
 
-    - ASP.NET 4.5:  
+    - HTTP Activation (and automatically selected options)  
 
-        - HTTP Activation (and automatically selected options)  
+### .NET Framework
 
-#### IIS configuration
+Enable the Windows feature for .NET Framework 3.5.
+
+Also install a supported version of the .NET Framework version 4.5 or later.
+
+For more information about .NET Framework versions, see the following articles:
+
+- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
+
+### IIS configuration
 
 - Common HTTP Features:  
 
@@ -249,20 +279,34 @@ See the main sections of this article for the specific prerequisites for site sy
 
 ## <a name="bkmk_2012AIpreq"></a> Asset Intelligence synchronization point  
 
-### Windows Server roles and features
+### .NET Framework
 
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2
+Install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+
+For more information about .NET Framework versions, see the following articles:
+
+- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 
 ## <a name="bkmk_2012crppreq"></a> Certificate registration point  
 
 ### Windows Server roles and features
 
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2:  
+- .NET Framework
 
     - HTTP Activation  
 
-#### IIS configuration
+### .NET Framework
+
+Install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+
+For more information about .NET Framework versions, see the following articles:
+
+- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
+
+### IIS configuration
 
 - Application Development:  
 
@@ -333,7 +377,7 @@ For more information, see [Install and configure distribution points](/sccm/core
 
 ### Windows Server roles and features  
 
-- .NET Framework 3.5 SP1 (or later)  
+- .NET Framework 3.5
 
 - Windows Defender features (Windows Server 2016 or later)  
 
@@ -342,11 +386,7 @@ For more information, see [Install and configure distribution points](/sccm/core
 
 ### Windows Server roles and features
 
-- .NET Framework 3.5 (or later)  
-
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2:  
-
-    When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
+- .NET Framework 3.5
 
     - HTTP Activation (and automatically selected options)  
 
@@ -354,7 +394,21 @@ For more information, see [Install and configure distribution points](/sccm/core
 
     - Windows Communication Foundation (WCF) Services<!-- SCCMDocs issue #1168 -->  
 
-#### IIS configuration
+### .NET Framework
+
+Enable the Windows feature for .NET Framework 3.5.
+
+Also install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+
+> [!Note]
+> When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
+
+For more information about .NET Framework versions, see the following articles:
+
+- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
+
+### IIS configuration
 
 - Common HTTP Features:  
 
@@ -385,13 +439,23 @@ For more information, see [Install and configure distribution points](/sccm/core
 
 ### Windows Server roles and features
 
-- .NET Framework 3.5 (or later)  
+- .NET Framework 3.5
 
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2
+### .NET Framework
 
-    When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation completes.  
+Enable the Windows feature for .NET Framework 3.5.
 
-#### IIS configuration
+Also install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+
+> [!Note]
+> When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
+
+For more information about .NET Framework versions, see the following articles:
+
+- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
+
+### IIS configuration
 
 - Common HTTP Features:  
 
@@ -443,11 +507,18 @@ The default IIS configuration is required with the following additions:
 
 ### Windows Server roles and features
 
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2
-
 - BITS Server Extensions (and automatically selected options) or Background Intelligent Transfer Services (BITS) (and automatically selected options)  
 
-#### IIS configuration
+### .NET Framework
+
+Install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+
+For more information about .NET Framework versions, see the following articles:
+
+- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
+
+### IIS configuration
 
 - Application Development:  
 
@@ -466,9 +537,14 @@ The default IIS configuration is required with the following additions:
 
 ## <a name="bkmk_2012RSpoint"></a> Reporting services point  
 
-### Windows Server roles and features
+### .NET Framework
 
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2
+Install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+
+For more information about .NET Framework versions, see the following articles:
+
+- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### SQL Server Reporting Services  
 
@@ -481,11 +557,19 @@ The default IIS configuration is required with the following additions:
 
 ## <a name="bkmk_SCPpreq"></a> Service connection point  
 
-### Windows Server roles and features
+### .NET Framework
 
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2
+Enable the Windows feature for .NET Framework 3.5.
 
-    When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
+Also install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+
+> [!Note]
+> When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
+
+For more information about .NET Framework versions, see the following articles:
+
+- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### Visual C++ Redistributable
 
@@ -498,11 +582,20 @@ The default IIS configuration is required with the following additions:
 
 ### Windows Server roles and features
 
-- .NET Framework 3.5 SP1 (or later)  
-
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2
+- .NET Framework 3.5
 
 The default IIS configuration is required.
+
+### .NET Framework
+
+Enable the Windows feature for .NET Framework 3.5.
+
+Also install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+
+For more information about .NET Framework versions, see the following articles:
+
+- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### Windows Server Update Services  
 
@@ -519,17 +612,27 @@ The default IIS configuration is required.
 <!--SCCMDocs issue 645-->
 ### Windows Server roles and features
 
-- .NET Framework 3.5 (or later)  
-
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2:  
-
-    When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
+- .NET Framework 3.5
 
     - HTTP Activation (and automatically selected options)  
 
     - ASP.NET 4.5  
 
-#### IIS configuration
+### .NET Framework
+
+Enable the Windows feature for .NET Framework 3.5.
+
+Also install a supported version of the .NET Framework version 4.5 or later. Starting in version 1906, Configuration Manager supports .NET Framework 4.8.
+
+> [!Note]
+> When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. If a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
+
+For more information about .NET Framework versions, see the following articles:
+
+- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
+
+### IIS configuration
 
 - Common HTTP Features:  
 
