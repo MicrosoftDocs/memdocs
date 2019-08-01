@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 07/26/2019
+ms.date: 07/31/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -67,11 +67,7 @@ If you then expand a standalone primary site to a hierarchy with a central admin
 
 #### Workaround
 
-Renew the key associated with the app registration in Azure AD.
-
-1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Active Directory Tenants** node.
-1. Select the Azure AD tenant that you're using with the features listed above.
-1. In the ribbon, select **Renew Secret Key**. Enter the credentials of either the app owner or an Azure AD administrator.
+Renew the key associated with the app registration in Azure AD. For more information, see [Renew secret key](/sccm/core/servers/deploy/configure/azure-services-wizard#bkmk_renew).
 
 
 ### Setup command-line option JoinCEIP must be specified
