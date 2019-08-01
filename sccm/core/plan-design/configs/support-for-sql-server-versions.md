@@ -64,7 +64,7 @@ In a hierarchy with multiple sites, different sites can use different versions o
 - SQL Server supports replication between the two versions of SQL Server. For more information, see [SQL Server replication backward compatibility](https://docs.microsoft.com/sql/relational-databases/replication/replication-backward-compatibility).
 
 
-For SQL Server 2016 and prior, support for each SQL version and service pack follows the [Microsoft Lifecycle Policy](https://aka.ms/sqllifecycle). Support for a specific SQL Server service pack includes cumulative updates unless they break backward compatibility to the base service pack version. Starting with SQL Server 2017, service packs won't be released since it follows a [modern servicing model](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server/). 
+For SQL Server 2016 and prior, support for each SQL version and service pack follows the [Microsoft Lifecycle Policy](https://aka.ms/sqllifecycle). Support for a specific SQL Server service pack includes cumulative updates unless they break backward compatibility to the base service pack version. Starting with SQL Server 2017, service packs won't be released since it follows a [modern servicing model](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server/). The SQL Server team recommends ongoing, [proactive installation of cumulative updates](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/) as they become available.
 
 
 Unless specified otherwise, the following versions of SQL Server are supported with all active versions of Configuration Manager. If support for a new SQL Server version is added, the Configuration Manager version that adds that support is noted. Similarly, if support is deprecated, look for details about affected versions of Configuration Manager.
@@ -83,7 +83,7 @@ You can use this version of SQL Server, with a minimum of [cumulative update ver
 
 ### SQL Server 2016: Standard, Enterprise  
 <!--514985-->
-You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
+You can use this version of SQL Server with the minimum service pack and cumulative update versions supported by the SQL lifecycle for the following sites:  
 
 - A central administration site  
 - A primary site  
