@@ -527,9 +527,9 @@ The render operator already exists in CMPivot. Support for multiple series and t
 
 Starting in version 1906, the following permissions have been added to Configuration Manager's built-in **Security Administrator** role:
 
- - Read on SMS Script
- - Run CMPivot on Collection
- - Read on Inventory Report
+ - **Read** on SMS Script
+ - **Run CMPivot** on Collection
+ - **Read** on Inventory Report
 
 >[!NOTE]
 > **Run Scripts** is a super set of the **Run CMPivot** permission.
