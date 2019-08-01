@@ -1,4 +1,4 @@
-    ---
+---
 title: "Checklist for 1702"
 titleSuffix: "Configuration Manager"
 description: "Learn about actions to take before updating to System Center Configuration Manager version 1702."
