@@ -1,8 +1,8 @@
 ---
-title: "About Authoring Configuration Baselines and Items"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Author configuration baselines and items
+titleSuffix: Configuration Manager
+ms.date: 08/01/2019
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: 39e47528-ea59-4d32-8baf-d017d3a44426
@@ -11,38 +11,37 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# About Authoring Configuration Baselines and Configuration Items
-System Center Configuration Manager supports the authoring of configuration data, which consists of configuration baselines and configuration items, in the System Center Configuration Manager console. Configuration Manager is able to present this configuration data in a user-friendly format called DCM Digest, which is a specialized XML document that Configuration Manager uses. You can author configuration data by using the Configuration Manager console, or by directly authoring a DCM Digest XML file.  
 
- Configuration data that is created with the Configuration Manager console can be exported into a .cab (cabinet) file. When configuration data is imported into Configuration Manager, the format can be the following:  
+# About authoring configuration baselines and configuration items
 
--   DCM Digest XML only.  
+Configuration Manager supports the authoring of configuration data, which consists of configuration baselines and configuration items. Configuration Manager presents this configuration data in a user-friendly format called DCM Digest. This format is a specialized XML document that Configuration Manager uses. You can author configuration data by using the Configuration Manager console, or by directly authoring a DCM Digest XML file.  
 
-## Authoring Configuration Data  
- You can create configuration data in the following ways:  
+When you create configuration data with the Configuration Manager console, you can export it into a .cab file. When configuration data is imported into Configuration Manager, the format is DCM Digest XML only.
 
--   You can create configuration data externally with an XML editor and then import it into Configuration Manager if it is first packaged as a .cab file.  
+## Authoring configuration data
 
-> [!NOTE]
->  See a discussion of configuration item authoring in the document provided as part of the System Center Configuration Manager 2007 Software Development Kit (SDK) download (Compliance_Settings_Digest_Authoring.doc).  
+Create configuration data in the following ways:  
 
--   You can create configuration data within Configuration Manager by using the following wizards:  
+- You can create configuration data externally with an XML editor. If it's then packaged as a .cab file, then you can import it into Configuration Manager.  
 
-    -   Create Application Configuration Item Wizard  
+- You can create configuration data within Configuration Manager by using the following wizards:  
 
-    -   Create Operating System Configuration Item Wizard  
+  - Create Application Configuration Item Wizard  
 
-    -   Create Configuration Baseline  
+  - Create Operating System Configuration Item Wizard  
+
+  - Create Configuration Baseline  
 
 > [!IMPORTANT]
->  Software Updates configuration items are created and administered through the Software Updates Management feature in Configuration Manager. The Software Updates configuration items can be referenced by configuration baselines; however, they should not be directly authored by using Desired Configuration Management or the DCM Digest.  
+> You create and manage software update configuration items through the software updates management feature in Configuration Manager. You can reference these configuration items by configuration baselines. However, don't directly author them by using configuration items or the DCM Digest.  
 
- You can also import configuration data that has been published by Microsoft and other software vendors and solution providers as Best Practices configurations. You can download Best Practices configuration data from [http://go.microsoft.com/fwlink/?LinkId=71837](http://go.microsoft.com/fwlink/?LinkId=71837).  
+You can also import configuration data that software vendors and solution providers have published.
 
 > [!NOTE]
->  Published configuration data can be digitally signed so that you can verify the publishing source and be sure that the data has not been tampered with. If the digital signature verification check fails, you will be warned and prompted to continue with the import. It is recommended you import only configuration data from external sources if it has a valid digital signature from a trusted publisher.  
+> You can digitally sign published configuration data. Then you can verify the publishing source and be sure that no one has tampered with the data. If the digital signature verification check fails, Configuration Manager warns you to continue with the import. Only import configuration data from external sources if it has a valid digital signature from a trusted publisher.  
 
- After the configuration data is imported into the Configuration Manager site, it can then be copied and edited in the Configuration Manager console.  
+After the site imports the configuration data, you can then work with it in the Configuration Manager console.  
 
-## See Also  
- [Authoring Compliance Settings Configuration Baselines and Configuration Items](../../develop/compliance/authoring-compliance-settings-configuration-baselines-and-configuration-items.md)
+## Next steps
+
+[Authoring compliance settings configuration baselines and configuration items](/sccm/develop/compliance/authoring-compliance-settings-configuration-baselines-and-configuration-items)
