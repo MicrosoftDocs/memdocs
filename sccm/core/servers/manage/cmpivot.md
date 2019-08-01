@@ -33,12 +33,6 @@ The following components are required to use CMPivot:
 
 - Upgrade the target devices to the latest version of the Configuration Manager client.  
 
-- Permissions for CMPivot:
-  - **Read** permission on the **SMS Scripts** object
-  - **Run Scripts** permission on the **Collection**
-  - **Read** permission on **Inventory Reports**
-  - The default scope. 
-
 - Target clients require a minimum of PowerShell version 4.
 
 - To gather data for the following entities, target clients require PowerShell version 5.0:  
@@ -47,6 +41,16 @@ The following components are required to use CMPivot:
   - IPConfig
   - SMBConfig
 
+
+- Permissions for CMPivot:
+  - **Read** permission on the **SMS Scripts** object
+  - **Run Scripts** permission on the **Collection**
+    - Alternatively, starting in version 1906, you can use **Run CMPivot** on **Collection**.
+  - **Read** permission on **Inventory Reports**
+  - The default scope.
+
+>[!NOTE]
+> **Run Scripts** is a super set of the **Run CMPivot** permission.
  
 ## Limitations
 
@@ -522,9 +526,14 @@ The render operator already exists in CMPivot. Support for multiple series and t
 <!--4683130-->
 
 Starting in version 1906, the following permissions have been added to Configuration Manager's built-in **Security Administrator** role:
+
  - Read on SMS Script
  - Run CMPivot on Collection
  - Read on Inventory Report
+
+>[!NOTE]
+> **Run Scripts** is a super set of the **Run CMPivot** permission.
+ 
 
 ### <a name="bkmk_standalone"></a> CMPivot standalone
 <!--3555890, 4619340, 4683130 -->
