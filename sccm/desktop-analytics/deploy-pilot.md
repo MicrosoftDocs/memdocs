@@ -99,7 +99,7 @@ Configuration Manager uses the data from Desktop Analytics to create collections
     - **Second Collection**: Find and select the **Production** collection for this deployment plan. The standard naming convention for this collection is `<deployment plan name> (Production)`.
 
     > [!Note]  
-    > With the Desktop Analytics integration, Configuration Manager automatically creates pilot and production collections for the deployment plan. It can take up to 10 minutes for these collections to synchronize before you can use them.<!-- 3887891 -->
+    > With the Desktop Analytics integration, Configuration Manager automatically creates pilot and production collections for the deployment plan. Before you can use them, it can take time for these collections to synchronize. For more information, see [Troubleshoot - Data latency](/sccm/desktop-analytics/troubleshooting#data-latency).<!-- 4984639 -->
     >
     > These collections are reserved for Desktop Analytics deployment plan devices. Manual changes to these collections aren't supported.<!-- 3866460, SCCMDocs-pr 3544 -->  
 
