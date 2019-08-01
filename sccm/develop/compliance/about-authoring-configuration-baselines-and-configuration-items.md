@@ -22,7 +22,7 @@ When you create configuration data with the Configuration Manager console, you c
 
 Create configuration data in the following ways:  
 
-- You can create configuration data externally with an XML editor. If it's then packaged as a .cab file, then you can import it into Configuration Manager.  
+- You can create configuration data externally with an XML editor. If you then package it as a .cab file, you can import it into Configuration Manager.  
 
 - You can create configuration data within Configuration Manager by using the following wizards:  
 
