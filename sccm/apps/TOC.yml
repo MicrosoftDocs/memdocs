@@ -1,4 +1,7 @@
+- name: Application management
+  href: understand/introduction-to-application-management.md
 - name: Understand and explore
+  expanded: true
   items:
   - name: Introduction
     href: understand/introduction-to-application-management.md

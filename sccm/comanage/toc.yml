@@ -7,7 +7,7 @@
     href: overview.md
 - name: Quickstarts
   items:
-  - name: Quickstart Overview
+  - name: Quickstart overview
     href: quickstarts.md
   - name: Immediate value
     items:
