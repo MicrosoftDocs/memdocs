@@ -27,7 +27,7 @@ The following sections describe the new features to try out in this version:
 
 [!INCLUDE [CMPivot standalone local query evaluation for this PC](includes/1908/3197353.md)]
 [!INCLUDE [Admins can use console connections to view extension information](includes/1908/4834225.md)]
-[!INCLUDE [Add IsDeployed to ADR filters](includes/1908/4852033.md)]
+[!INCLUDE [Additional software update filter for ADRs](includes/1908/4852033.md)]
 
 [!INCLUDE [Improvements to console connections node](includes/1908/4951240.md)]
 
