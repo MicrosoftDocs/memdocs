@@ -5,7 +5,7 @@ description: Learn about the workloads that you can switch from Configuration Ma
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 05/24/2019
+ms.date: 08/01/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -121,6 +121,11 @@ For more information on the Intune feature, see [What is Microsoft Intune app ma
 
 > [!Note]  
 > The client apps workload is a pre-release feature. To enable it, see [Pre-release features](/sccm/core/servers/manage/pre-release-features).  
+
+
+## Diagram for app workloads
+
+![Diagram of co-management app workloads](media/co-management-apps.svg)
 
 
 ## Next steps
