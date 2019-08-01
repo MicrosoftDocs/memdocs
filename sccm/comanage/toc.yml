@@ -1,6 +1,7 @@
 - name: Co-management
   href: overview.md
 - name: Overview
+  expanded: true
   items:
   - name: What is co-management?
     href: overview.md
