@@ -115,9 +115,7 @@ For more information on the Intune feature, see [Assign Office 365 apps to Windo
 
 Starting in Configuration Manager version 1806, use Intune to manage client apps and PowerShell scripts on co-managed Windows 10 devices. After you transition this workload, any available apps deployed from Intune are available in the Company Portal. Apps that you deploy from Configuration Manager are available in Software Center.
 
-
 For more information on the Intune feature, see [What is Microsoft Intune app management?](https://docs.microsoft.com/intune/app-management).
-
 
 > [!Note]  
 > The client apps workload is a pre-release feature. To enable it, see [Pre-release features](/sccm/core/servers/manage/pre-release-features).  
@@ -126,6 +124,8 @@ For more information on the Intune feature, see [What is Microsoft Intune app ma
 ## Diagram for app workloads
 
 ![Diagram of co-management app workloads](media/co-management-apps.svg)
+
+[View the diagram at full size](media/co-management-apps.svg)
 
 
 ## Next steps

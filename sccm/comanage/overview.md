@@ -27,6 +27,8 @@ You're also able to pilot a workload with a separate collection of devices. Pilo
 
 ![Overview diagram of co-management](media/co-management-overview.svg)
 
+[View the diagram at full size](media/co-management-overview.svg)
+
 > [!Note]  
 > When you concurrently manage Windows 10 devices with both Configuration Manager and Microsoft Intune, this configuration is called *co-management*. When you manage devices with Configuration Manager and enroll to a third-party MDM service, this configuration is called *coexistence*. Having two management authorities for a single device can be challenging if not properly orchestrated between the two. With co-management, Configuration Manager and Intune balance the [workloads](#workloads) to make sure there are no conflicts. This interaction doesn't exist with third-party services, so there are limitations with the management capabilities of coexistence. For more information, see [Third-party MDM coexistence with Configuration Manager](/sccm/comanage/coexistence).
 
