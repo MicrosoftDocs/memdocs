@@ -2,7 +2,7 @@
 title: Supported SQL Server versions
 titleSuffix: Configuration Manager
 description: Get SQL Server version and configuration requirements for hosting a Configuration Manager site database.
-ms.date: 07/26/2019
+ms.date: 08/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -74,7 +74,7 @@ Unless specified otherwise, the following versions of SQL Server are supported w
 
 ### SQL Server 2017: Standard, Enterprise
 
-You can use this version of SQL Server, with a minimum of [cumulative update version 2](https://support.microsoft.com/help/4052574), for the following sites:
+You can use this version with [cumulative update version 2](https://support.microsoft.com/help/4052574) or higher, as long as your cumulative update version is supported by the SQL lifecycle. This version of SQL can be used for the following sites:
 
 - A central administration site  
 - A primary site  
@@ -83,7 +83,7 @@ You can use this version of SQL Server, with a minimum of [cumulative update ver
 
 ### SQL Server 2016: Standard, Enterprise  
 <!--514985-->
-You can use this version of SQL Server with the minimum service pack and cumulative update versions supported by the SQL lifecycle for the following sites:  
+You can use this version with the minimum service pack and cumulative update supported by the SQL lifecycle. This version of SQL can be used for the following sites:
 
 - A central administration site  
 - A primary site  
@@ -91,7 +91,7 @@ You can use this version of SQL Server with the minimum service pack and cumulat
 
 ### SQL Server 2014: Standard, Enterprise
 
-You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
+You can use this version with the minimum service pack and cumulative update supported by the SQL lifecycle. This version of SQL can be used for the following sites:
 
 - A central administration site  
 - A primary site  
@@ -100,7 +100,7 @@ You can use this version of SQL Server with no minimum cumulative update version
 
 ### SQL Server 2012: Standard, Enterprise
 
- You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
+You can use this version with the minimum service pack and cumulative update supported by the SQL lifecycle. This version of SQL can be used for the following sites: 
 
 - A central administration site  
 - A primary site  
@@ -109,26 +109,26 @@ You can use this version of SQL Server with no minimum cumulative update version
 
 ### SQL Server 2017 Express
 
-You can use this version of SQL Server, with a minimum of [cumulative update version 2](https://support.microsoft.com/help/4052574), for the following sites:
+You can use this version with [cumulative update version 2](https://support.microsoft.com/help/4052574) or higher, as long as your cumulative update version is supported by the SQL lifecycle. This version of SQL can be used for the following sites:
 
 - A secondary site
 <!--SMS.498506-->
 
 ### SQL Server 2016 Express
 
-You can use this version of SQL Server with no minimum cumulative update version for the following sites:
+You can use this version with the minimum service pack and cumulative update supported by the SQL lifecycle. This version of SQL can be used for the following sites:
 
 - A secondary site
 
 ### SQL Server 2014 Express
 
-You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
+You can use this version with the minimum service pack and cumulative update supported by the SQL lifecycle. This version of SQL can be used for the following sites:
 
 - A secondary site  
 
 ### SQL Server 2012 Express
 
-You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
+You can use this version with the minimum service pack and cumulative update supported by the SQL lifecycle. This version of SQL can be used for the following sites:
 
 - A secondary site  
 
