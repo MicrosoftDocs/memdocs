@@ -26,8 +26,9 @@ The following sections describe the new features to try out in this version:
 <!-- [!INCLUDE [Example feature name](includes/1903/1234567.md)] -->
 
 [!INCLUDE [CMPivot standalone local query evaluation for this PC](includes/1908/3197353.md)]
-[!INCLUDE [Enabled delta download for all software updates on Windows 10 version 1709 and higher devices](includes/1908/4685210.md)]
+[!INCLUDE [Use delivery optimization for all Windows updates](includes/1908/4685210.md)]
 [!INCLUDE [Additional software update filter for ADRs](includes/1908/4852033.md)]
+[!INCLUDE [Phased deployment templates](includes/1908/4961086.md)]
 
 [!INCLUDE [Improvements to console connections node](includes/1908/4951240.md)]
 
