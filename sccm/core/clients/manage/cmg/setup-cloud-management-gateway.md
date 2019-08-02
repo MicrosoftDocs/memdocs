@@ -5,7 +5,7 @@ description: Use this step-by-step process for setting up a cloud management gat
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 06/17/2019
+ms.date: 07/26/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -33,7 +33,7 @@ Use the following checklist to make sure you have the necessary information and 
 
 - You need one or more certificates for CMG, depending upon your design. For more information, see [Certificates for cloud management gateway](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway).  
 
-- Starting in version 1802 and *recommended*, select the **Azure Resource Manager deployment**. For more information, see [Azure Resource Manager](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager). You need the following requirements for an Azure Resource Manager deployment of CMG:  
+- You need the following requirements for an [Azure Resource Manager](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager) deployment of CMG:  
 
     - Integration with [Azure AD](/sccm/core/servers/deploy/configure/azure-services-wizard) for **Cloud Management**. Azure AD user discovery isn't required.  
 
@@ -69,12 +69,10 @@ Do this procedure on the top-level site. That site is either a standalone primar
 
 2. Select **Create Cloud Management Gateway** in the ribbon.  
 
-3. Starting in version 1802, on the General page of the wizard, select **Azure Resource Manager deployment** as the CMG deployment method.  
-
-    Select **Sign in** to authenticate with an Azure subscription administrator account. The wizard auto-populates the remaining fields from the information stored during the Azure AD integration prerequisite. If you own multiple subscriptions, select the **Subscription ID** of the desired subscription to use.
+3. On the General page of the wizard, select **Sign in**. Authenticate with an Azure subscription administrator account. The wizard auto-populates the remaining fields from the information stored during the Azure AD integration prerequisite. If you own multiple subscriptions, select the **Subscription ID** of the desired subscription to use.
 
     > [!Note]  
-    > Starting in version 1810, classic service deployments in Azure are deprecated in Configuration Manager.
+    > Starting in version 1810, classic service deployments in Azure were deprecated in Configuration Manager. In version 1902 and earlier, select **Azure Resource Manager deployment** as the CMG deployment method.
     >
     > If you need to use a classic service deployment, select that option on this page. First enter your Azure **Subscription ID**. Then select **Browse**, and choose the .PFX file for the Azure management certificate.
 
@@ -85,30 +83,34 @@ Do this procedure on the top-level site. That site is either a standalone primar
 6. On the Settings page of the wizard, first select **Browse** and choose the .PFX file for the CMG server authentication certificate. The name from this certificate populates the required **Service FQDN** and **Service name** fields.  
 
    > [!NOTE]  
-   > Starting in version 1802, the CMG server authentication certificate supports wildcards. If you use a wildcard certificate, replace the asterisk (`*`) in the **Service FQDN** field with the desired hostname for the CMG.<!--491233-->  
+   > The CMG server authentication certificate supports wildcards. If you use a wildcard certificate, replace the asterisk (`*`) in the **Service FQDN** field with the desired hostname for the CMG.<!--491233-->  
 
 7. Select the **Region** drop-down list to choose the Azure region for this CMG.  
 
-8. In version 1802, and are using an Azure Resource Manager deployment, select a **Resource Group** option.
+8. Select a **Resource Group** option.
    1. If you choose **Use existing**, then select an existing resource group from the drop-down list. The selected resource group must already exist in the region you selected in step 7. If you select an existing resource group and it is in a different region than the previously selected region, CMG will fail to provision.
    2. If you choose **Create new**, then enter the new resource group name.
 
 9. In the **VM Instance** field, enter the number of VMs for this service. The default is one, but you can scale up to 16 VMs per CMG.  
 
-10. Select **Certificates** to add client trusted root certificates. Add up to two trusted root CAs, and four intermediate (subordinate) CAs. Make sure to add all certificates in the trust chain.  
+10. Select **Certificates** to add client trusted root certificates. Add all of the certificates in the trust chain.  
 
     > [!Note]  
     > Starting in version 1806, when you create a CMG, you're no longer required to provide a trusted root certificate on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard. If you're using PKI client authentication certificates, then you still must add a trusted root certificate to the CMG.<!--SCCMDocs-pr issue #2872-->  
+    >
+    > In version 1902 and earlier, you can only add two trusted root CAs and four intermediate (subordinate) CAs.<!-- SCCMDocs-pr#4022 -->
 
-11. By default, the wizard enables the option to **Verify Client Certificate Revocation**. A certificate revocation list (CRL) must be publicly published for this verification to work. If you don't publish a CRL, deselect this option.  
+11. By default, the wizard enables the option to **Verify Client Certificate Revocation**. A certificate revocation list (CRL) must be publicly published for this verification to work. For more information, see [Publish the certificate revocation list](https://docs.microsoft.com/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway#bkmk_crl).  
 
-12. Starting in version 1806, by default, the wizard enables the following option: **Allow CMG to function as a cloud distribution point and serve content from Azure storage**. Now a CMG can also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs.  
+12. Starting in version 1906, you can **Enforce TLS 1.2**. This setting only applies to the Azure cloud service VM. It doesn't apply to any on-premises Configuration Manager site servers or clients. For more information on TLS 1.2, see [How to enable TLS 1.2](/sccm/core/plan-design/security/enable-tls-1-2).<!-- SCCMDocs-pr#4021 -->
 
-13. Select **Next**.  
+13. Starting in version 1806, by default, the wizard enables the following option: **Allow CMG to function as a cloud distribution point and serve content from Azure storage**. Now a CMG can also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs.  
 
-14. To monitor CMG traffic with a 14-day threshold, choose the check box to turn on the threshold alert. Then, specify the threshold, and the percentage at which to raise the different alert levels. Choose **Next** when you're done.  
+14. Select **Next**.  
 
-15. Review the settings, and choose **Next**. Configuration Manager starts setting up the service. After you close the wizard, it will take between five to 15 minutes to provision the service completely in Azure. Check the **Status** column for the new CMG to determine when the service is ready.  
+15. To monitor CMG traffic with a 14-day threshold, choose the check box to turn on the threshold alert. Then, specify the threshold, and the percentage at which to raise the different alert levels. Choose **Next** when you're done.  
+
+16. Review the settings, and choose **Next**. Configuration Manager starts setting up the service. After you close the wizard, it will take between five to 15 minutes to provision the service completely in Azure. Check the **Status** column for the new CMG to determine when the service is ready.  
 
     > [!Note]  
     > To troubleshoot CMG deployments, use **CloudMgr.log** and **CMGSetup.log**. For more information, see [Log files](/sccm/core/plan-design/hierarchy/log-files#cloud-management-gateway).
@@ -122,7 +124,10 @@ If you're using [client authentication certificates](/sccm/core/clients/manage/c
 
 2. Select the primary site to which your internet-based clients are assigned, and choose **Properties**.  
 
-3. Switch to the **Client Computer Communications** tab of the primary site property sheet, check **Use PKI client certificate (client authentication) when available**.  
+3. Switch to the **Client Computer Communication** tab of the primary site property sheet, check **Use PKI client certificate (client authentication) when available**.  
+
+    > [!Note]
+    > Starting in version 1906, this tab is called **Communication Security**.<!-- SCCMDocs#1645 -->  
 
 4. If you don't publish a CRL, deselect the option for **Clients check the certificate revocation list (CRL) for site systems**.  
 
@@ -205,7 +210,7 @@ After creating a CMG, you can modify some of its settings. Select the CMG in the
 
 - **Certificates**: add or remove trusted root or intermediate CA certificates. This option is useful when adding new CAs, or retiring expired certificates.  
 
-- **Verify Client Certificate Revocation**: if you didn't originally enable this setting when creating the CMG, you can enable it afterwards once you publish the CRL.  
+- **Verify Client Certificate Revocation**: if you didn't originally enable this setting when creating the CMG, you can enable it afterwards once you publish the CRL. For more information, see [Publish the certificate revocation list](https://docs.microsoft.com/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway#bkmk_crl).  
 
 - **Allow CMG to function as a cloud distribution point and serve content from Azure storage**: Starting in version 1806, this new option is enabled by default. Now a CMG can also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs.<!--1358651-->  
 
@@ -228,7 +233,7 @@ Always keep at least one active CMG for internet-based clients to receive update
 
 Clients refresh policy by default every 24 hours, so wait at least one day after creating a new CMG before you delete the old one. If clients are turned off or without an internet connection, you may need to wait longer.
 
-Starting in version 1802, if you have an existing CMG on the classic deployment method, you must deploy a new CMG to use the Azure Resource Manager deployment method.<!--509753--> There are two options:  
+If you have an existing CMG on the classic deployment method, you must deploy a new CMG to use the Azure Resource Manager deployment method.<!--509753--> There are two options:  
 
 - If you want to reuse the same service name:  
 

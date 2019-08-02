@@ -127,7 +127,7 @@ The approach for content management is much the same as for site servers and sit
 - If you use a metered data plan and bandwidth cost is a concern or the network connection between Azure and your intranet is not fast or can be unreliable, then you might consider other approaches. These include locating standard or pull distribution points on-premises as well as using BranchCache. The use of cloud-based distribution points is also an option but there are some limits on the content types supported (for example, no support for software updates packages).
 
 > [!NOTE]
->  If PXE support is required, you must use on-premises distribution points (standard or pull) to respond to boot requests. [WDS is currently not supported to run on Azure VMs](https://technet.microsoft.com/library/hh831764(v=ws.11).aspx).
+>  If PXE or multicast support is required, you must use on-premises distribution points (standard or pull) to respond to boot requests.
 
 
 ### While I am OK with the limitations of cloud-based distribution points, I don't want to put my management point into a DMZ even though that is needed to support my internet-based clients. Do I have any other options?

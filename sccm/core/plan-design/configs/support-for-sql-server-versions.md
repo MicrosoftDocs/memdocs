@@ -133,53 +133,68 @@ You can use this version of SQL Server with no minimum cumulative update version
 - A secondary site  
 
 
+## <a name="bkmk_SQLConfig"></a> Required configurations for SQL Server
 
-##  <a name="bkmk_SQLConfig"></a> Required configurations for SQL Server  
-The following are required by all installations of SQL Server that you use for a site database (including SQL Server Express). When Configuration Manager installs SQL Server Express as part of a secondary site installation, these configurations are automatically created for you.  
+The following configurations are required by all installations of SQL Server that you use for a site database, including SQL Server Express. When Configuration Manager installs SQL Server Express as part of a secondary site installation, it automatically creates these configurations.  
 
-### SQL Server architecture version  
+### SQL Server architecture version
+
 Configuration Manager requires a 64-bit version of SQL Server to host the site database.  
 
-### Database collation  
-At each site, both the instance of SQL Server that is used for the site and the site database must use the following collation: **SQL_Latin1_General_CP1_CI_AS**.  
+### Database collation
 
-Configuration Manager supports two exceptions to this collation to meet standards that are defined in GB18030 for use in China. For more information, see [International support](/sccm/core/plan-design/hierarchy/international-support).  
+At each site, both the instance of SQL Server that's used for the site and the site database must use the following collation: **SQL_Latin1_General_CP1_CI_AS**.  
 
-### Database compatibility level   
-Configuration Manager requires that the compatibility level for the site database is no less than the lowest supported SQL Server version for your Configuration Manager version. For instance, beginning with version 1702, you need to have a [database compatibility level](https://docs.microsoft.com/sql/relational-databases/databases/view-or-change-the-compatibility-level-of-a-database) greater than or equal to 110. <!-- SMS.506266--> 
+Configuration Manager supports two exceptions to this collation for the China GB18030 standard. For more information, see [International support](/sccm/core/plan-design/hierarchy/international-support).  
 
-### SQL Server features  
+### Database compatibility level
+
+Configuration Manager requires that the compatibility level for the site database is no less than the lowest supported SQL Server version for your Configuration Manager version. For instance, beginning with version 1702, you need to have a [database compatibility level](https://docs.microsoft.com/sql/relational-databases/databases/view-or-change-the-compatibility-level-of-a-database) greater than or equal to 110. <!-- SMS.506266-->
+
+### SQL Server features
+
 Only the **Database Engine Services** feature is required for each site server.  
 
 Configuration Manager database replication doesn't require the **SQL Server replication** feature. However, this SQL Server configuration is required when you use [database replicas for management points](/sccm/core/servers/deploy/configure/database-replicas-for-management-points).  
 
-### Windows authentication  
+### Windows authentication
+
 Configuration Manager requires **Windows authentication** to validate connections to the database.  
 
-### SQL Server instance  
+### SQL Server instance
+
 Use a dedicated instance of SQL Server for each site. The instance can be a **named instance** or the **default instance**.  
 
-### SQL Server memory  
-Reserve memory for SQL Server by using SQL Server Management Studio and setting the **Minimum server memory** setting under **Server Memory Options**. For more information about how to configure this setting, see [SQL Server memory server configuration options](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options).  
+### SQL Server memory
 
-- **For a database server that is installed on the same computer as the site server**: Limit the memory for SQL Server to 50 to 80 percent of the available addressable system memory.  
+Reserve memory for SQL Server by using SQL Server Management Studio. Set the **Minimum server memory** setting under **Server Memory Options**. For more information about how to configure this setting, see [SQL Server memory server configuration options](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options).  
 
-- **For a dedicated database server (remote from the site server)**: Limit the memory for SQL Server to 80 to 90 percent of the available addressable system memory.  
+- **For a database server that you install on the same computer as the site server**: Limit the memory for SQL Server to 50 to 80 percent of the available addressable system memory.  
+
+- **For a dedicated database server that's remote from the site server**: Limit the memory for SQL Server to 80 to 90 percent of the available addressable system memory.  
 
 - **For a memory reserve for the buffer pool of each SQL Server instance in use**:  
 
-  - For a central administration site: Set a minimum of 8 gigabytes (GB).  
-  - For a primary site: Set a minimum of 8 gigabytes (GB).  
-  - For a secondary site: Set a minimum of 4 gigabytes (GB).  
+  - For a central administration site: Set a minimum of 8 GB.  
+  - For a primary site: Set a minimum of 8 GB.  
+  - For a secondary site: Set a minimum of 4 GB.  
 
-### SQL nested triggers  
-SQL nested triggers must be enabled. For more information, see [Configure the nested triggers server configuration option](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option) 
+### SQL nested triggers
 
-### SQL Server CLR integration  
+SQL nested triggers must be enabled. For more information, see [Configure the nested triggers server configuration option](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option)
+
+### SQL Server CLR integration
+
 The site database requires SQL Server common language runtime (CLR) to be enabled. This option is enabled automatically when Configuration Manager installs. For more information about CLR, see [Introduction to SQL Server CLR Integration](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).  
 
 ### SQL Server Service Broker (SSB)
-The SQL Server Service Broker is required both for intersite replication as well as for a single primary site. 
+
+The SQL Server Service Broker is required both for intersite replication as well as for a single primary site.
+
+### TRUSTWORTHY setting
+
+Configuration Manager automatically enables the SQL [TRUSTWORTHY database property](https://docs.microsoft.com/sql/relational-databases/security/trustworthy-database-property). This property is required by Configuration Manager to be **ON**.
+
 
 ##  <a name="bkmk_optional"></a> Optional configurations for SQL Server  
 The following configurations are optional for each database that uses a full SQL Server installation.  

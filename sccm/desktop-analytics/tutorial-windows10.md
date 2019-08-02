@@ -89,7 +89,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
 Use this procedure to sign in to Desktop Analytics and configure it in your subscription. This procedure is a one-time process to set up Desktop Analytics for your organization.  
 
-1. Open the [Desktop Analytics portal](https://aka.ms/desktopanalytics) in Microsoft 365 Device Management as a user with **Global Admin** permissions. Select **Start**.  If you are prompted for an invitation code, use: `DesktopAnalyticsRocks!`
+1. Open the [Desktop Analytics portal](https://aka.ms/desktopanalytics) in Microsoft 365 Device Management as a user with **Global Admin** permissions. Select **Start**.  
 
 2. On the **Accept service agreement** page, review the service agreement, and select **Accept**.  
 
@@ -359,7 +359,7 @@ Next, distribute the OS upgrade package to distribution points.
 4. On the **General** page of the Deploy Software Wizard, select **Browse** next to the **Software** field. Select your Windows 10 in-place upgrade task sequence, and select **Next**.  
 
     > [!Note]  
-    > With the Desktop Analytics integration, Configuration Manager automatically creates a collection for the pilot deployment plan. It can take up to 10 minutes for this collection to synchronize before you can use it.<!-- 3887891 -->
+    > With the Desktop Analytics integration, Configuration Manager automatically creates pilot and production collections for the deployment plan. Before you can use them, it can take time for these collections to synchronize. For more information, see [Troubleshoot - Data latency](/sccm/desktop-analytics/troubleshooting#data-latency).<!-- 4984639 -->
     >
     > This collection is reserved for Desktop Analytics deployment plan devices. Manual changes to this collection aren't supported.<!-- 3866460, SCCMDocs-pr 3544 -->  
 
