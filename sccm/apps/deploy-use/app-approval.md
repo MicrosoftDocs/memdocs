@@ -57,7 +57,7 @@ Starting in 1906, you can see which deployments require approval. Select an app 
 <!--4336307-->
 Starting in version 1906, you can retry the installation of an app that you previously approved for a user or device. The approval option is only for available deployments. If the user uninstalls the app, or if the initial install process fails, Configuration Manager doesn't reevaluate its state and reinstall it. This feature allows a support technician to quickly retry the app install for a user that calls for help.
 
-1. Open the Configuration Manager console user a user that has the **Approve** permission on the Application object. For example, the **Application Administrator** or **Application Author** built-in roles have this permission.
+1. Open the Configuration Manager console as a user that has the **Approve** permission on the Application object. For example, the **Application Administrator** or **Application Author** built-in roles have this permission.
 
 1. Deploy an app that requires approval, and approve it.
 
