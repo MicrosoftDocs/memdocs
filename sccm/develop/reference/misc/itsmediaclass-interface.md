@@ -40,4 +40,4 @@ The `ITsMediaClass` automation interface, in System Center Configuration Manager
 
 ## See Also  
  [TsMediaClass Client COM Automation Class](../../../develop/reference/misc/tsmediaclass-client-com-automation-class.md)   
- [Operating System Deployment Task Sequencing](../../../develop/osd/operating-system-deployment-task-sequencing.md)
+ [Task sequence overview](/sccm/develop/osd/operating-system-deployment-task-sequences-overview)

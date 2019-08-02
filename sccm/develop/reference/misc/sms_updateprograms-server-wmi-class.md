@@ -99,4 +99,4 @@ Class SMS_UpdatePrograms : SMS_BaseClass
 ## See Also  
  [Software Updates Server WMI Classes](../../../develop/reference/sum/software-updates-server-wmi-classes.md)   
  [SMS_PackageBaseclass Server WMI Class](../../../develop/reference/core/servers/configure/sms_packagebaseclass-server-wmi-class.md)   
- [Configuration Manager Software Updates](../../../develop/sum/software-updates.md)
+ [About software update deployments](/sccm/develop/sum/about-software-updates-deployments)

@@ -109,4 +109,4 @@ Class SMS_CIUpdateSources : SMS_BaseClass
  [Software Updates Server WMI Classes](../../../develop/reference/sum/software-updates-server-wmi-classes.md)   
  [SMS_SoftwareUpdate Server WMI Class](../../../develop/reference/sum/sms_softwareupdate-server-wmi-class.md)   
  [SMS_SoftwareUpdateSource Server WMI Class](../../../develop/reference/sum/sms_softwareupdatesource-server-wmi-class.md)   
- [Configuration Manager Software Updates](../../../develop/sum/software-updates.md)
+ [About software update deployments](/sccm/develop/sum/about-software-updates-deployments)

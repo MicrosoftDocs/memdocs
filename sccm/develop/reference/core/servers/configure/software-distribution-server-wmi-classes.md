@@ -102,7 +102,4 @@ Microsoft System Center Configuration Manager allows you to distribute software 
  [Configuration Manager Reference](../../../../../develop/reference/configuration-manager-reference.md)   
  [Configuration Manager Console Extension](../../../../../develop/reference/core/servers/console/console-extension-server-wmi-classes.md)   
  [Configuration Manager Operating System Deployment](../../../../../develop/reference/osd/operating-system-deployment-classes.md)   
- [Configuration Manager Compliance Settings (DCM)](../../../../../develop/compliance/compliance-settings-dcm.md)   
- [Configuration Manager Mobile Device Management](../../../../../develop/mdm/mobile-device-management.md)   
- [Configuration Manager Software Metering](../../../../../develop/apps/software-metering.md)   
- [Configuration Manager Software Updates](../../../../../develop/sum/software-updates.md)
+ [About software update deployments](/sccm/develop/sum/about-software-updates-deployments)

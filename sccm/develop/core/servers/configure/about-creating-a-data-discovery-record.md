@@ -45,5 +45,4 @@ To create data discovery records (DDRs), you must use the SMSRsGenCtl.dll and th
 
 ## See Also  
  [Configuration Manager SDK](../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Discovery](../../../../develop/core/servers/configure/discovery.md)   
  [SMSResGen COM Automation Class](../../../../develop/reference/core/servers/configure/smsresgen-com-automation-class.md)

@@ -210,7 +210,6 @@ Class SMS_AMTCertificate : SMS_BaseClass
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Configuration Manager Collections](../../../develop/core/clients/collections/collections.md)   
  [Configuration Manager Supporting Classes](../../../develop/reference/misc/supporting-server-wmi-classes.md)   
  [AMTOperateForCollection Method in Class SMS_Collection](../../../develop/reference/core/clients/collections/amtoperateforcollection-method-in-class-sms_collection.md)   
  [AMTOperateForMachines Method in Class SMS_Collection](../../../develop/reference/core/clients/collections/amtoperateformachines-method-in-class-sms_collection.md)

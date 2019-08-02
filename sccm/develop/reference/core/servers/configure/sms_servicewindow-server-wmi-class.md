@@ -170,4 +170,4 @@ Class SMS_ServiceWindow
 
 ## See Also  
  [Software Distribution Server WMI Classes](../../../../../develop/reference/core/servers/configure/software-distribution-server-wmi-classes.md)   
- [Software Distribution Maintenance Windows](../../../../../develop/core/servers/configure/software-distribution-maintenance-windows.md)
+ [About maintenance windows](/sccm/develop/core/servers/configure/about-maintenance-windows)

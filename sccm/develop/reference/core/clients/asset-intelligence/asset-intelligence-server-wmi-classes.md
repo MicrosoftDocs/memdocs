@@ -28,4 +28,4 @@ In System Center Configuration Manager, the Asset Intelligence server Windows Ma
 
 ## See Also  
  [Configuration Manager Reference](../../../../../develop/reference/configuration-manager-reference.md)   
- [Configuration Manager Asset Intelligence](../../../../../develop/core/clients/asset-intelligence/asset-intelligence.md)
+[Initiate Asset Intelligence synchronization](/sccm/develop/core/clients/asset-intelligence/how-to-initiate-a-synchronization)

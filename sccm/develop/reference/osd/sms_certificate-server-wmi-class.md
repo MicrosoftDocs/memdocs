@@ -178,5 +178,4 @@ Class SMS_Certificate : SMS_BaseClass
  [Operating System Deployment Server WMI Classes](../../../develop/reference/osd/operating-system-deployment-server-wmi-classes.md)   
  [BlockCertificate Method in Class SMS_CertificateInfo](../../../develop/reference/osd/blockcertificate-method-in-class-sms_certificateinfo.md)   
  [SMS_PXECertificateInfo Server WMI Class](../../../develop/reference/osd/sms_pxecertificateinfo-server-wmi-class.md)   
- [Configuration Manager Operating System Deployment](../../../develop/osd/operating-system-deployment.md)   
- [About Operating System Deployment Task Sequences](../../../develop/osd/about-operating-system-deployment-task-sequences.md)
+ [Task sequence overview](/sccm/develop/osd/operating-system-deployment-task-sequences-overview)

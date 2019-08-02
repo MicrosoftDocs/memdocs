@@ -80,7 +80,3 @@ namespace Encryption
 
 ## Robust Programming  
  For more information about error handling, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).  
-
-## See Also  
- [Configuration Manager Accounts](../../../develop/core/understand/configuration-manager-accounts.md)   
- [Configuration Manager Programming Fundamentals](../../../develop/core/understand/configuration-manager-programming-fundamentals.md)

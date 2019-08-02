@@ -29,4 +29,4 @@ ms.collection: M365-identity-device-management
 
 ## See Also  
  [Operating System Deployment Client COM Automation Classes](../../../develop/reference/core/clients/client-classes/operating-system-deployment-client-com-automation-classes.md)   
- [Operating System Deployment Task Sequencing](../../../develop/osd/operating-system-deployment-task-sequencing.md)
+ [Task sequence overview](/sccm/develop/osd/operating-system-deployment-task-sequences-overview)

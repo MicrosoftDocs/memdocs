@@ -16,7 +16,7 @@ The following example shows how to set the distribute on demand flag property of
 
 ### To set the distribute on demand flag  
 
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Load the existing package object by using [SMS_Package Server WMI Class](../../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) class.  
 
@@ -142,11 +142,8 @@ public void SetDistributeOnDemandFlag(WqlConnectionManager connection,
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
- [Distribution Points](../../../../develop/core/servers/configure/distribution-points.md)   
- [Software Distribution Packages](../../../../develop/core/servers/configure/software-distribution-packages.md)   
- [How to Use Configuration Manager Objects with WMI](../../../../develop/core/understand/how-to-use-configuration-manager-objects-with-wmi.md)   
- [How to Use Configuration Manager Objects with Managed Code](../../../../develop/core/understand/how-to-use-configuration-manager-objects-with-managed-code.md)   
+ [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
+ [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)
  [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)   
  [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)   
  [SMS_Package Server WMI Class](../../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md)

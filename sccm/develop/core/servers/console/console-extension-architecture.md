@@ -39,14 +39,14 @@ The System Center Configuration Manager console architecture is built on the fol
 |Folder|Description|  
 |------------|-----------------|  
 |ConsoleRoot|This folder contains various XML files that define built in user interface elements and classes.<br /><br /> ManagementClassDescriptions.xml: definitions for the SMS Provider classes.<br /><br /> ConnectedConsole.xml: definitions for sticky nodes and go-to navigation.<br /><br /> AssetManagementNode.xml, MonitoringNode.xml, SiteConfigurationNode.xml, SoftwareLibraryNode.xml: definitions for each workspace in the Configuration Manager console.|  
-|Extensions|Location for XML that is related to the SMS Provider. There are four types of extension folders:<br /><br /> -   Actions. XML files for Configuration Manager console actions. For more information, see [Configuration Manager Console Actions](../../../../develop/core/servers/console/console-actions.md).<br />-   Forms. XML files for form extensions to the Configuration Manager console. For more information, see [Configuration Manager Console Forms](../../../../develop/core/servers/console/console-forms.md).<br />-   Nodes. XML files for node extensions to the Configuration Manager console. For more information, see [Configuration Manager Console Nodes](../../../../develop/core/servers/console/console-nodes.md)<br />-   Management Classes. XML files for management class extensions to the Configuration Manager console. For more information, see [Configuration Manager Console Management Classes](../../../../develop/core/servers/console/console-management-classes.md)|  
+|Extensions|Location for XML that is related to the SMS Provider. There are four types of extension folders:<br /><br /> -   Actions. XML files for Configuration Manager console actions. For more information, see [About Configuration Manager console actions](/sccm/develop/core/servers/console/configuration-manager-actions).<br />-   Forms. XML files for form extensions to the Configuration Manager console. For more information, see [About console forms](/sccm/develop/core/servers/console/about-configuration-manager-console-forms).<br />-   Nodes. XML files for node extensions to the Configuration Manager console. For more information, see [About console nodes](/sccm/develop/core/servers/console/about-configuration-manager-console-nodes).<br />-   Management Classes. XML files for management class extensions to the Configuration Manager console. For more information, see [About console management classes](/sccm/develop/core/servers/console/about-configuration-manager-console-management-classes).|  
 |Other|Various helper XML files.|  
 |Validation|Validation rules for the Configuration Manager console forms.|  
 
 ## See Also  
  [About Configuration Manager Console Extension](../../../../develop/core/servers/console/about-configuration-manager-console-extension.md)   
- [Configuration Manager Console Actions](../../../../develop/core/servers/console/console-actions.md)   
- [Configuration Manager Console Forms](../../../../develop/core/servers/console/console-forms.md)   
- [Configuration Manager Console Management Classes](../../../../develop/core/servers/console/console-management-classes.md)   
- [Configuration Manager Console Nodes](../../../../develop/core/servers/console/console-nodes.md)   
- [Configuration Manager Console Views](../../../../develop/core/servers/console/console-views.md)
+ [About Configuration Manager console actions](/sccm/develop/core/servers/console/configuration-manager-actions)
+ [About console forms](/sccm/develop/core/servers/console/about-configuration-manager-console-forms)
+[About console management classes](/sccm/develop/core/servers/console/about-configuration-manager-console-management-classes)
+ [About console nodes](/sccm/develop/core/servers/console/about-configuration-manager-console-nodes)
+ [About console views](/sccm/develop/core/servers/console/about-configuration-manager-console-views)

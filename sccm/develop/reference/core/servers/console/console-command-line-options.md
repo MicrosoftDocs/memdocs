@@ -22,6 +22,6 @@ The Microsoft System Center Configuration Manager console has the following comm
 |**/sms:IgnoreExtensions**|Disables any System Center Configuration Manager extensions.|  
 |**/sms:NoRestore**|The System Center Configuration Manager console ignores previous persisted node navigation.|  
 
-## See Also  
- [Configuration Manager Console Extension](../../../../../develop/core/servers/console/console-extension.md)   
- [Configuration Manager Programming Fundamentals](../../../../../develop/core/understand/configuration-manager-programming-fundamentals.md)
+## See also
+
+[About console extensions](/sccm/develop/core/servers/console/about-configuration-manager-console-extension)

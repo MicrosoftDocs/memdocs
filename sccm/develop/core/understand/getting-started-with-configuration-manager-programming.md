@@ -101,15 +101,13 @@ To get started with programming for System Center Configuration Manager, it’s 
 > [!IMPORTANT]
 >  The SDK most often provides code examples in VBScript and C#. This does not mean that other languages will not work with the SMS Provider. The SMS Provider is language agnostic, as long as the correct objects and constructs can be exchanged. Use the language (tool) that is most appropriate for your environment. C# is used internally as a baseline for testing the SDK code snippets, so examples of object manipulation and code constructs will most often be provided in C#. If you use another language, you should be comfortable translating from C# to your language of choice.  
 
--   [Configuration Manager Programming Fundamentals](../../../develop/core/understand/configuration-manager-programming-fundamentals.md)  
+- [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals)  
 
--   [SMS Provider in Configuration Manager](../../../develop/core/understand/sms-provider-in-configuration-manager.md)  
+- [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)
 
--   [Configuration Manager Objects](../../../develop/core/understand/configuration-manager-objects.md)  
+- [About the site control file](/sccm/develop/core/understand/about-the-configuration-manager-site-control-file)  
 
--   [Configuration Manager Site Control File](../../../develop/core/understand/site-control-file.md)  
-
--   [Configuration Manager Errors](../../../develop/core/understand/configuration-manager-errors.md)  
+- [About errors](/sccm/develop/core/understand/about-configuration-manager-errors)  
 
 ## Basic Tools  
 

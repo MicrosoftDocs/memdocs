@@ -213,5 +213,4 @@ The custom wizard assembly is responsible for collecting any data passed in from
  AdminUI.CreateDT  
 
 ## See Also  
- [Scenario: Extending Application Management](../../develop/apps/scenario--extending-application-management.md)   
  [Configuration Manager Reference](../../develop/reference/configuration-manager-reference.md)

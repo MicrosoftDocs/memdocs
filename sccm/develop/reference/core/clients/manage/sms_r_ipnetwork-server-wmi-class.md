@@ -156,4 +156,4 @@ Class SMS_R_IPNetwork : SMS_Resource
 ## See Also  
  [Configuration Manager Resource Management Server WMI Classes](../../../../../develop/reference/core/clients/manage/configuration-manager-resource-management-server-wmi-classes.md)   
  [SMS_Resource Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_resource-server-wmi-class.md)   
- [Configuration Manager Site Control File](../../../../../develop/core/understand/site-control-file.md)
+ [About the site control file](/sccm/develop/core/understand/about-the-configuration-manager-site-control-file)

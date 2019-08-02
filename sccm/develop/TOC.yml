@@ -941,7 +941,7 @@
       href: sum/how-to-set-software-updates-branding-information.md
   - name: Deployments
     items:
-    - name: About software updates deployments
+    - name: About software update deployments
       href: sum/about-software-updates-deployments.md
     - name: Enumerate updates matching a specific criteria
       href: sum/how-to-enumerate-updates-matching-a-specific-criteria.md

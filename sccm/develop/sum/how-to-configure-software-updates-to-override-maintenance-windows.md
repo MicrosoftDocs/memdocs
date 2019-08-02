@@ -114,8 +114,6 @@ public void ConfigureSoftwareUpdatestoOverrideMaintenanceWindow(WqlConnectionMan
 ## .NET Framework Security  
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
-## See Also  
- [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
- [Software Updates and Maintenance Windows](../../develop/sum/software-updates-and-maintenance-windows.md)   
- [SMS_UpdatesAssignment](../../develop/reference/sum/sms_updatesassignment-server-wmi-class.md)
+## See also
+
+[SMS_UpdatesAssignment](/sccm/develop/reference/sum/sms_updatesassignment-server-wmi-class)

@@ -25,9 +25,9 @@ In System Center Configuration Manager, compliance settings (DCM) server Windows
   For more information, see Desired Configuration Management Configuration Baselines and Configuration Items.  
 
 > [!NOTE]
->  Some of the classes that are defined for desired configuration management, for example, [SMS_ConfigurationBaselineInfo Server WMI Class](../../../develop/reference/compliance/sms_configurationbaselineinfo-server-wmi-class.md), are specific to baseline configuration items. Some of the classes can also be used to reference software update configuration items, although applications use the software updates feature to manipulate these items. For more information, see [Configuration Manager Software Updates](../../../develop/sum/software-updates.md).  
+> Some of the classes that are defined for desired configuration management, for example, [SMS_ConfigurationBaselineInfo Server WMI Class](../../../develop/reference/compliance/sms_configurationbaselineinfo-server-wmi-class.md), are specific to baseline configuration items. Some of the classes can also be used to reference software update configuration items, although applications use the software updates feature to manipulate these items. For more information, see [About software update deployments](/sccm/develop/sum/about-software-updates-deployments).  
 
- The System Center Configuration Manager server class schema is a set of WMI classes that represent the objects on a server running Configuration Manager. Each Configuration Manager class is a template for a managed object and all instances of the object use the template. Classes can contain properties and methods. The properties describe the class data, and the methods typically perform data management. For more information about developing applications using these classes, see [About Configuration Manager SDK Requirements](../../../develop/core/reqs/about-configuration-manager-sdk-requirements.md).  
+The Configuration Manager server class schema is a set of WMI classes that represent the objects on a server running Configuration Manager. Each Configuration Manager class is a template for a managed object and all instances of the object use the template. Classes can contain properties and methods. The properties describe the class data, and the methods typically perform data management. For more information about developing applications using these classes, see [About Configuration Manager SDK Requirements](../../../develop/core/reqs/about-configuration-manager-sdk-requirements.md).  
 
 ## Compliance Settings (DCM) Server WMI Classes  
 
@@ -122,5 +122,4 @@ In System Center Configuration Manager, compliance settings (DCM) server Windows
 -   [SMS_WSfBConfigurationData Server WMI Class](../../../develop/reference/compliance/sms_wsfbconfigurationdata-server-wmi-class.md)  
 
 ## See Also  
- [Configuration Manager Compliance Settings (DCM)](../../../develop/compliance/compliance-settings-dcm.md)   
  [Configuration Manager Reference](../../../develop/reference/configuration-manager-reference.md)

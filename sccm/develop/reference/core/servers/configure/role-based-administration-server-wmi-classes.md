@@ -12,7 +12,8 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Role-Based Administration Server WMI Classes
-Role-Based Administration Windows Management Instrumentation (WMI) classes in Microsoft System Center Configuration Manager support security on the server. The System Center Configuration Manager server class schema is a set of WMI classes that represent the objects on a server that is running System Center Configuration Manager. Each System Center Configuration Manager class is a template for a managed object and all instances of the object use the template. Classes can contain properties and methods. The properties describe the class data and the methods typically perform data management. For more information about developing applications using these classes, see [Configuration Manager SDK Requirements](../../../../../develop/core/reqs/configuration-manager-sdk-requirements.md).  
+Role-Based Administration Windows Management Instrumentation (WMI) classes in Microsoft System Center Configuration Manager support security on the server. The System Center Configuration Manager server class schema is a set of WMI classes that represent the objects on a server that is running System Center Configuration Manager. Each System Center Configuration Manager class is a template for a managed object and all instances of the object use the template. Classes can contain properties and methods. The properties describe the class data and the methods typically perform data management. For more information about developing applications using these classes, see [About SDK requirements](/sccm/develop/core/reqs/about-configuration-manager-sdk-requirements).
+
 
 ## Role-Based Administration Server WMI Classes  
 

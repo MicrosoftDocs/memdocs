@@ -223,4 +223,4 @@ Class SMS_UpdateComplianceStatus : SMS_BaseClass
 
 ## See Also  
  [Software Updates Server WMI Classes](../../../develop/reference/sum/software-updates-server-wmi-classes.md)   
- [Configuration Manager Software Updates](../../../develop/sum/software-updates.md)
+ [About software update deployments](/sccm/develop/sum/about-software-updates-deployments)

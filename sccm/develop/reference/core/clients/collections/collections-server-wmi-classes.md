@@ -55,5 +55,4 @@ In System Center Configuration Manager, collections classes offer a way to manag
 -   [SMS_FullCollectionMembership Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_fullcollectionmembership-server-wmi-class.md)  
 
 ## See Also  
- [Configuration Manager Collections](../../../../../develop/core/clients/collections/collections.md)   
  [Configuration Manager Reference](../../../../../develop/reference/configuration-manager-reference.md)
