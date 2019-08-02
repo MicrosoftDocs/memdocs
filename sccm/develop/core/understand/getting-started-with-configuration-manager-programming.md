@@ -68,12 +68,12 @@ To get started with programming for System Center Configuration Manager, it’s 
 ### Server  
  **Primary WMI Namespace:** ROOT\SMS\SITE_\<site code>  
 
- **Server WMI Classes:** [Configuration Manager Reference](../../../develop/reference/configuration-manager-reference.md)  
+ **Server WMI Classes:** [Configuration Manager API reference](/sccm/develop/reference/configuration-manager-reference)  
 
 ### Client  
  **Primary WMI Namespace:** ROOT\CCM  
 
- **Client WMI Classes:** [Configuration Manager Client SDK WMI Classes](../../../develop/reference/core/clients/sdk/client-sdk-wmi-classes.md)  
+ **Client WMI Classes:** [Configuration Manager API reference](/sccm/develop/reference/configuration-manager-reference)  
 
 > [!IMPORTANT]
 >  The client-side programming story for Configuration Manager is evolving to be primarily WMI-based. In the past, a set of client-side COM classes were the primary method used to access client functionality, although additional client-side WMI classes/methods were also used. With the release of System Center 2012 Configuration Manager, the focus is shifting to a set of WMI classes in the namespace: **root/ccm/ClientSDK**. Understandably, an abstraction, in the form of COM or specific SDK classes, provides a useful abstraction from underlying architectural changes over the course of product updates.  

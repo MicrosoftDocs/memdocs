@@ -406,4 +406,3 @@ Class SMS_Collection : SMS_BaseClass
 
 ## See Also  
  [SMS_CollectionRule Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collectionrule-server-wmi-class.md)   
- [Configuration Manager Collections Server WMI Classes](../../../../../develop/reference/core/clients/collections/collections-server-wmi-classes.md)
