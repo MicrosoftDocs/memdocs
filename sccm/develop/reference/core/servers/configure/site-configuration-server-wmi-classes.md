@@ -28,8 +28,6 @@ When you install Configuration Manager, it creates an install map that describes
 
 - [SMS_SystemResourceList Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_systemresourcelist-server-wmi-class.md)  
 
-- [SMS_UINAL_ResourceInfo Server WMI Class](../../../../../develop/reference/misc/sms_uinal_resourceinfo-server-wmi-class.md)  
-
 Classes that are derived from `SMS_SiteInstallItem` use the naming convention `SMS_SII_*`**.** Classes that are derived from `SMS_SiteInstallItemBase` use the naming convention `SMS_SIIB_*`.  
 
 The site control file describes the current configuration of the site and its components. Use the following classes to manage the site control file and the site configuration data:  

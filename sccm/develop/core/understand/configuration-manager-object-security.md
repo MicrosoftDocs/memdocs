@@ -12,15 +12,6 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Configuration Manager Object Security
-Although only the [SMS_UserInstancePermissions Server WMI Class](../../../develop/reference/misc/sms_userinstancepermissions-server-wmi-class.md) is commonly used in System Center Configuration Manager scripting, you can also use the following Configuration Manager classes for Configuration Manager object security:  
-
--   `SMS_UserInstancePermissions Server WMI Class` Each instance of this class represents all the rights for a particular user or group for that instance.  
-
--   [SMS_UserInstancePermissionNames Server WMI Class](../../../develop/reference/misc/sms_userinstancepermissionnames-server-wmi-class.md) Each instance of this class represents a particular right for a particular user or group on a particular instance. This class is useful for display purposes because the rights are already parsed into a form that you can read, but it takes more scripting to achieve the same results as the `SMS_UserInstancePermissions Server WMI Class`.  
-
--   [SMS_UserClassPermissions Server WMI Class](../../../develop/reference/misc/sms_userclasspermissions-server-wmi-class.md) Each instance of this class represents all the rights for a particular user or group for a particular class.  
-
--   [SMS_UserClassPermissionNames Server WMI Class](../../../develop/reference/misc/sms_userclasspermissionnames-server-wmi-class.md) Each instance of this class represents a particular right for a particular user or group for a particular class. The class is useful for display purposes because the rights are already parsed into a form that you can read, but it takes more scripting to achieve the same results as the `SMS_UserClassPermissions Server WMI Class`.  
 
 ## Delegate Verb  
  The delegate verb in Configuration Manager provides administrators with a way of allowing users to assign to other users the instance permissions to an object in a very limited way. The rights that a user is allowed to assign (or revoke) to other users are limited to the instance rights that have been explicitly granted to that user. When a user creates a secured object, that user is automatically granted explicit instance rights to that object (usually read, modify, and delete).  

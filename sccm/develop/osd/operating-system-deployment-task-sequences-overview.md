@@ -77,9 +77,6 @@ In System Center Configuration Manager, a task sequence is a series of one or mo
 ## Pre-Execution Hooks  
  You can run scripts or executables that can interact with the user in Windows PE before the task sequence is selected. For more information, see Operating System Media Pre-Execution Hook in the Configuration Manager library documentation.  
 
-## Securing Task Sequences  
- A task sequence package ([SMS_TaskSequencePackage Server WMI Class](../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md)) is secured by using the [SMS_UserClassPermissions Server WMI Class](../../develop/reference/misc/sms_userclasspermissions-server-wmi-class.md) and [SMS_UserInstancePermissionInfo Server WMI Class](../../develop/reference/misc/sms_userinstancepermissioninfo-server-wmi-class.md) permissions to set class and instance permissions.  
-
 ## See also
 
 [OS deployment task sequence object model](/sccm/develop/osd/operating-system-deployment-task-sequence-object-model)

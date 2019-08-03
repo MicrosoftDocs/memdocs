@@ -61,7 +61,7 @@ Class SMS_ActiveSyncService : SMS_Class_Template
  The minor version number of the client operating system.  
 
 ## Remarks  
- All properties of this class are marked with qualifiers to indicate that they represent items that are generated dynamically (reported) based on the content of the SMS_def.mof file. For more information, see the `DrillThroughReportPath` property of [SMS_Report Server WMI Class](../../../../../develop/reference/misc/sms_report-server-wmi-class.md).  
+ All properties of this class are marked with qualifiers to indicate that they represent items that are generated dynamically (reported) based on the content of the SMS_def.mof file.
 
 ## See Also  
  [Device Management Client WMI Classes](../../../../../develop/reference/core/clients/client-classes/device-management-client-wmi-classes.md)   
