@@ -20,14 +20,14 @@ In System Center Configuration Manager, you add context qualifiers to a connecti
 
 ### To add a Configuration Manager context qualifier  
 
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Create a [WbemScripting.SWbemNamedValueSet](https://msdn.microsoft.com/library/aa393732.aspx) object and add the desired context qualifiers.  
 
 3.  Use the [SWbemNamedValue](https://msdn.microsoft.com/library/aa393731.aspx) value set you created in step two to pass context qualifiers to connection and object manipulation calls.  
 
 ## Example  
- The following VBScript example creates a [SWbemNamedValueSet](https://msdn.microsoft.com/library/aa393732.aspx) value set and adds the supplied context qualifiers. The following code example demonstrates how to call the method for use in an [SMS_Package](../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) package object **Put** method call. For more information about Configuration Manager objects, see [About Configuration Manager Objects](../../../develop/core/understand/about-configuration-manager-objects.md).  
+ The following VBScript example creates a [SWbemNamedValueSet](https://msdn.microsoft.com/library/aa393732.aspx) value set and adds the supplied context qualifiers. The following code example demonstrates how to call the method for use in an [SMS_Package](../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) package object **Put** method call. For more information about Configuration Manager objects, see [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview).  
 
  `Dim context`  
 
@@ -79,7 +79,7 @@ End Function
 
 ## See Also  
  [About the Configuration Manager Site Control File](../../../develop/core/understand/about-the-configuration-manager-site-control-file.md)   
- [About Configuration Manager Objects](../../../develop/core/understand/about-configuration-manager-objects.md)   
+ [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)
  [Configuration Manager Context Qualifiers](../../../develop/core/understand/context-qualifiers.md)   
  [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)   
  [Windows Management Instrumentation](http://go.microsoft.com/fwlink/?LinkId=43950)

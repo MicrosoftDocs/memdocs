@@ -33,6 +33,3 @@ Computer management in System Center Configuration Manager operating system depl
 |Computer variables|[How to Create a Computer Variable in Configuration Manager](../../develop/osd/how-to-create-a-computer-variable.md)|  
 |Setting task sequence variables|[How to Set an Operating System Deployment Task Sequence Variable](../../develop/osd/how-to-set-an-operating-system-deployment-task-sequence-variable.md)|  
 |Changing variables in a running task sequence|[How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md)|  
-
-## See Also  
- [Configuration Manager Operating System Deployment](../../develop/osd/operating-system-deployment.md)

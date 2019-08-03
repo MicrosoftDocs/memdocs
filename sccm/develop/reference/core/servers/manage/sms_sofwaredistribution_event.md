@@ -37,6 +37,3 @@ The `SMS_SofwareDistribution_Event` class is the base class for all software-dis
  Data type: `String`  
 
  The Program Name that appears in the status message text. It maps to the `PRG_ProgramName` field in the software distribution policy and is the program name that was chosen when the program was created. This is insertion string number 5.  
-
-## See Also  
- [Status Message Types](../../../../../develop/reference/core/servers/manage/status-message-types.md)

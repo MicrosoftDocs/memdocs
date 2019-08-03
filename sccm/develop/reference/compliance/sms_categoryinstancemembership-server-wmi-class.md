@@ -47,8 +47,6 @@ Class SMS_CategoryInstanceMembership
 
  Qualifiers: [key, sizelimit]  
 
- [SMS_SecuredObject Server WMI Class](../../../develop/reference/misc/sms_securedobject-server-wmi-class.md)  
-
  `ObjectTypeID`  
  Data type: `UInt32`  
 

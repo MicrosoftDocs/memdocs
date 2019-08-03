@@ -54,4 +54,3 @@ sint32 UpdateProfileIdForDevices(
 
 ## See Also  
  [SMS_MDMCorpOwnedDevices Server WMI Class](../../../develop/reference/mdm/sms_mdmcorpowneddevices-server-wmi-class.md)   
- [Mobile Device Management Server WMI Classes](../../../develop/reference/mdm/mobile-device-management-server-wmi-classes.md)

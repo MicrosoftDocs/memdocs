@@ -42,17 +42,11 @@ Class CCM_SoftwareCatalogUtilities :
 
 -   [VerifySignature Method in Class CCM_SoftwareCatalogUtilities](../../../../../develop/reference/core/clients/sdk/verifysignature-method-in-class-ccm_softwarecatalogutilities.md)  
 
-## Properties  
-
-## Remarks  
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Configuration Manager Client SDK WMI Classes](../../../../../develop/reference/core/clients/sdk/client-sdk-wmi-classes.md)

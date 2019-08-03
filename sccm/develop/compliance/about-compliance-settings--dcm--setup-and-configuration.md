@@ -34,5 +34,3 @@ To use desired configuration management on your System Center Configuration Mana
 > [!NOTE]
 >  When the desired configuration management client agent is enabled on client computers, the **Systems Management Properties** dialog box displays a **Configurations** tab that lists the downloaded configuration baselines and the results of its compliance evaluation. When the desired configuration management client agent is disabled, the **Configurations** tab is not visible. If the **Configurations** tab is not visible, the client is not running the desired configuration management client agent. This might be because the site is not enabled for desired configuration management, the client computer has not yet downloaded the policy to enable the desired configuration management client agent, a local policy has disabled the desired configuration management client agent, or the client is not a Configuration Manager client.  
 
-## See Also  
- [Configuration Manager Desired Configuration Management &#91;SDK&#93;](../../develop/compliance/compliance-settings-dcm.md)

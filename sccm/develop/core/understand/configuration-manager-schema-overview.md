@@ -19,20 +19,19 @@ Configuration Manager uses Windows Management Instrumentation (WMI) to manage it
 ## Server  
  The Configuration Manager classes that represent the Configuration Manager server schema are generally declared in the SMSProv.mof file. This file contains the base classes, static classes, and methods that the SMS Provider supports. Other class definitions, notably those that support inventory, are determined at run time by the SMS Provider. When requested, these class definitions are supplied to WMI. These are called run-time classes. The SMSProv.mof file is located in the \Bin\\<*Platform*>\ directory under the Configuration Manager install directory.  
 
- For more information about using these Configuration Manager classes by using WMI or managed code, see [Configuration Manager Objects](../../../develop/core/understand/configuration-manager-objects.md)  
+ For more information about using these Configuration Manager classes by using WMI or managed code, see [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview).
 
  You can also use SQL Views for fast, read-only access to the Configuration Manager schema data. For more information, see [Configuration Manager Schema SQL Views](../../../develop/core/understand/configuration-manager-schema-sql-views.md)  
 
 ## Client  
  A number of Managed Object Format (MOF) files represent the client Configuration Manager schema. The client includes schemas that can be used for items such as inventory, policy, and software distribution management.  
 
- For more information about using client objects with WMI or managed code, see [Configuration Manager Client WMI Programming](../../../develop/core/clients/programming/client-wmi-programming.md).  
+ For more information about using client objects with WMI or managed code, see [About client WMI programming](/sccm/develop/core/clients/programming/about-configuration-manager-wmi-programming).  
 
 ## Classes  
  For more information about the classes that Configuration Manager supports, see [Configuration Manager Reference](../../../develop/reference/configuration-manager-reference.md).  
 
 ## See Also  
- [About Configuration Manager Schema](../../../develop/core/understand/about-configuration-manager-schema.md)   
  [Configuration Manager Schema View Mapping](../../../develop/core/understand/configuration-manager-schema-view-mapping.md)   
  [Configuration Manager Schema SQL Views](../../../develop/core/understand/configuration-manager-schema-sql-views.md)   
  [Configuration Manager SQL View Security](../../../develop/core/understand/sql-view-security.md)

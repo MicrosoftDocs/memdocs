@@ -47,4 +47,3 @@ sint32 SetIsExpired (
 
 ## See Also  
  [SMS_ApplicationLatest Server WMI Class](../../../develop/reference/apps/sms_applicationlatest-server-wmi-class.md)   
- [Application Model Server WMI Classes](../../../develop/reference/apps/application-management-server-wmi-classes.md)

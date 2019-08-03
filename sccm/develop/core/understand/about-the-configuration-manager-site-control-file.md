@@ -11,6 +11,11 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # About the Configuration Manager Site Control File
+Site control in System Center Configuration Manager defines the settings for a specific site. The settings for each site are contained in the database and are accessed through Windows Management Instrumentation (WMI) when working with scripting languages, and through the managed SMS Provider library when working with a managed language.  
+
+> [!NOTE]
+>  Previous releases of Configuration Manager had a physical file that was processed for site settings referred to as the site control file. System Center Configuration Manager stores site settings directly in the site database; however, very little has changed when programmatically configuring a site.  
+
 The site control file in System Center Configuration Manager is an ASCII text file (Sitectrl.ct0) that contains the configuration of each site. There are two types of site control files:  
 
 - Actual site control file - A working copy of the site control file that is stored in the System Center Configuration Manager site database and in the inbox in the site control manager.  

@@ -132,6 +132,4 @@ A call to `ShowActionProgress` should specify the percentage completion of the a
 
 - [About reporting Configuration Manager custom action progress](/sccm/develop/osd/about-reporting-configuration-manager-custom-action-progress)  
 
-- [Extending OS deployment](/sccm/develop/osd/extending-operating-system-deployment)  
-
 - [How to use task sequence variables in a running Configuration Manager task sequence](/sccm/develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence)  

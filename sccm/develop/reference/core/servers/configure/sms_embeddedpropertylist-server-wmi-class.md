@@ -79,4 +79,4 @@ Class SMS_EmbeddedPropertyList
  [Configuration Manager Site Configuration Server WMI Classes](../../../../../develop/reference/core/servers/configure/site-configuration-server-wmi-classes.md)   
  [SMS_Client_Reg_MultiString_List Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_client_reg_multistring_list-server-wmi-class.md)   
  [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md)   
- [Configuration Manager Site Control File](../../../../../develop/core/understand/site-control-file.md)
+ [About the site control file](/sccm/develop/core/understand/about-the-configuration-manager-site-control-file)

@@ -1,8 +1,8 @@
 ---
-title: "SMS_AzureServicesTask Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_AzureServicesTask Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: d9f0070c-a6ff-45d7-b5e7-62deafabb297
@@ -11,10 +11,12 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# SMS_AzureServicesTask Server WMI Class
-The `SMS_AzureServicesTask` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an Windows Azure specific operation which can be performed on the specified Windows Azure Service. This can be used to initiate an operation as well as monitor the results of the operation.  
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+# SMS_AzureServicesTask server WMI class
+
+The `SMS_AzureServicesTask` WMI class is an SMS Provider server class in Configuration Manager, that represents a Microsoft Azure specific operation which can be performed on the specified Microsoft Azure service. This can be used to initiate an operation as well as monitor the results of the operation.  
+
+The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
 ## Syntax  
 
@@ -80,7 +82,7 @@ Class SMS_AzureServicesTask : SMS_BaseClass
 
  Qualifiers: [key, not_null]  
 
- Identifier of the Windows Azure Service task.  
+ Identifier of the Microsoft Azure service task.  
 
  `TaskKeyValue`  
  Data type: `String`  

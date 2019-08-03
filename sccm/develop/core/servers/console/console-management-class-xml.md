@@ -27,6 +27,6 @@ The management classes XML for the System Center Configuration Manager console a
 <ManagementClassDescription Name="_SDK">       <Properties>          <ManagementClassPropertyDescription Name="MyProperty1"/>         <ManagementClassPropertyDescription Name="MyProperty2"/>           <ManagementClassPropertyDescription Name="MyProperty3"/>      </Properties>       <ResourceAssembly>         <Assembly>UIExtensionsDemo.dll</Assembly>    <Type>UIExtensionsDemo.ConnectionManager._SDK.resources</Type>       </ResourceAssembly>       <ImagesDescription>          <ResourceAssembly>             <Assembly>UIExtensionsDemo.dll</Assembly>        <Type>UIExtensionsDemo.Resources.resources</Type>   </ResourceAssembly>         <ImageResourceName>ViewIcon</ImageResourceName>      </ImagesDescription></ManagementClassDescription>  
 ```  
 
-## See Also  
- [Configuration Manager Console Management Classes](../../../../develop/core/servers/console/console-management-classes.md)   
- [About Configuration Manager Console Management Classes](../../../../develop/core/servers/console/about-configuration-manager-console-management-classes.md)
+## See also
+
+[About console management classes](/sccm/develop/core/servers/console/about-configuration-manager-console-management-classes)
