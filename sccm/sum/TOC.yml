@@ -1,4 +1,7 @@
+- name: Software update management
+  href: understand/software-updates-introduction.md
 - name: Understand and explore
+  expanded: true
   items:
   - name: Introduction to software updates
     href: understand/software-updates-introduction.md
