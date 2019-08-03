@@ -73,12 +73,12 @@ Class SMS_BootImagePackage_DriverRef : SMS_BaseClass
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
-## See Also  
- [Operating System Deployment Server WMI Classes](../../../develop/reference/osd/operating-system-deployment-server-wmi-classes.md)   
- [SMS_BootImagePackage Server WMI Class](../../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md)
+## See also
+
+[SMS_BootImagePackage server WMI class](/sccm/develop/reference/osd/sms_bootimagepackage-server-wmi-class)

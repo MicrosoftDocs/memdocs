@@ -918,9 +918,10 @@
     href: core/clients/collections/sms_dirfullcollmem-server-wmi-class.md
   - name: SMS_FullCollectionMembership server WMI class
     href: core/clients/collections/sms_fullcollectionmembership-server-wmi-class.md
-- name: Compliance Settings (DCM) server WMI classes
-  href: compliance/compliance-settings-dcm-server-wmi-classes.md
+- name: Compliance settings server WMI classes
   items:
+  - name: About compliance settings server WMI classes
+    href: compliance/compliance-settings-dcm-server-wmi-classes.md
   - name: SMS_AdvancedThreatProtectionSettings server WMI class
     href: compliance/sms_advancedthreatprotectionsettings-server-wmi-class.md
   - name: SMS_BaselineAssignment server WMI class
@@ -1040,13 +1041,9 @@
       href: compliance/geteula-method-in-class-sms_userstatemanagementsettings.md
   - name: SMS_WSfBConfigurationData server WMI class
     href: compliance/sms_wsfbconfigurationdata-server-wmi-class.md
-- name: Console Extension server WMI classes
-  href: core/servers/console/console-extension-server-wmi-classes.md
+- name: Console extension server WMI classes
   items:
-  - name: Configuration Manager Console Command-Line Options
-    href: core/servers/console/console-command-line-options.md
-  - name: Configuration Manager Console Folder server WMI classes
-    href: core/servers/console/console-folder-server-wmi-classes.md
+  - name: Configuration Manager console folder server WMI classes
     items:
     - name: SMS_InstanceChangeNotification server WMI class
       href: core/servers/console/sms_instancechangenotification-server-wmi-class.md
@@ -1071,7 +1068,6 @@
     - name: SMS_SearchFolder server WMI class
       href: core/servers/console/sms_searchfolder-server-wmi-class.md
 - name: Content server WMI classes
-  href: core/servers/configure/content-server-wmi-classes.md
   items:
   - name: SMS_Content server WMI class
     href: core/servers/configure/sms_content-server-wmi-class.md
@@ -1121,24 +1117,9 @@
     href: core/servers/configure/sms_dpstatusinfo-server-wmi-class.md
   - name: SMS_PackageContentServerInfo server WMI class
     href: core/servers/configure/sms_packagecontentserverinfo-server-wmi-class.md
-- name: Deprecated Functions
+- name: Deprecated functions
   href: misc/deprecated-functions.md
-  items:
-  - name: SmsCreateAccount
-    href: misc/smscreateaccount.md
-  - name: SmsGrantActAsOSRight
-    href: misc/smsgrantactasosright.md
-  - name: SmsGrantAdminRight
-    href: misc/smsgrantadminright.md
-  - name: SmsGrantDomainAdminRight
-    href: misc/smsgrantdomainadminright.md
-  - name: SmsGrantServiceLogonRight
-    href: misc/smsgrantservicelogonright.md
-  - name: SmsLsaAccount
-    href: misc/smslsaaccount.md
-  - name: SmsLsaGetTrustedDomains
-    href: misc/smslsagettrusteddomains.md
-- name: Device Management server WMI classes
+- name: Device management server WMI classes
   href: mdm/device-management-server-wmi-classes.md
   items:
   - name: SMS_DeviceEnrollmentProfile server WMI class
@@ -1175,11 +1156,9 @@
       href: mdm/unlock-method-in-class-sms_devicesettingpackage.md
   - name: SMS_DeviceSettingPackageItem server WMI class
     href: mdm/sms_devicesettingpackageitem-server-wmi-class.md
-- name: Discovery Classes
-  href: core/servers/configure/discovery-classes.md
+- name: Discovery classes
   items:
   - name: Discovery server WMI classes
-    href: core/servers/configure/discovery-server-wmi-classes.md
     items:
     - name: SMS_ADDomain server WMI class
       href: core/servers/configure/sms_addomain-server-wmi-class.md
@@ -1194,10 +1173,10 @@
       href: core/servers/configure/sms_adsite-server-wmi-class.md
     - name: SMS_ADSubnet server WMI class
       href: core/servers/configure/sms_adsubnet-server-wmi-class.md
-  - name: SMSResGen COM Automation Class
+  - name: SMSResGen COM automation class
     href: core/servers/configure/smsresgen-com-automation-class.md
     items:
-    - name: ISMSResGen Interface
+    - name: ISMSResGen interface
       href: core/servers/configure/ismsresgen-interface.md
       items:
       - name: DDRAddStringArray
@@ -1212,10 +1191,9 @@
         href: core/servers/configure/ddrwrite.md
       - name: DDRAddString
         href: core/servers/configure/ddraddstring.md
-      - name: DDRPropertyFlagsEnum Enumeration
+      - name: DDRPropertyFlagsEnum enumeration
         href: core/servers/configure/ddrpropertyflagsenum-enumeration.md
 - name: Endpoint Protection server WMI classes
-  href: protect/endpoint-protection-server-wmi-classes.md
   items:
   - name: SMS_AmPolicySummary server WMI class
     href: protect/sms_ampolicysummary-server-wmi-class.md
@@ -1265,10 +1243,8 @@
   - name: SMS_TopThreatSummary server WMI class
     href: protect/sms_topthreatsummary-server-wmi-class.md
 - name: Hybrid server WMI classes
-  href: mdm/hybrid-server-wmi-classes.md
   items:
   - name: Mobile Device Management server WMI classes
-    href: mdm/mobile-device-management-server-wmi-classes.md
     items:
     - name: MDM_GenericAppConfiguration server WMI class
       href: mdm/mdm_genericappconfiguration-server-wmi-class.md
@@ -1314,7 +1290,6 @@
   - name: SMS_WinRTSideLoadingKey server WMI class
     href: mdm/sms_winrtsideloadingkey-server-wmi-class.md
 - name: Migration server WMI classes
-  href: core/migration/migration-server-wmi-classes.md
   items:
   - name: SMS_MigrationCollectionInfo server WMI class
     href: core/migration/sms_migrationcollectioninfo-server-wmi-class.md
@@ -1362,152 +1337,11 @@
       href: core/migration/sync-method-in-class-sms_migrationsitemapping.md
   - name: SMS_MigrationSourceSite server WMI class
     href: core/migration/sms_migrationsourcesite-server-wmi-class.md
-- name: NAP server WMI classes
-  href: misc/nap-server-wmi-classes.md
-  items:
-  - name: SMS_NAPRestrictionErrorSummary server WMI class
-    href: misc/sms_naprestrictionerrorsummary-server-wmi-class.md
-  - name: SMS_NAPRestrictionSummary server WMI class
-    href: misc/sms_naprestrictionsummary-server-wmi-class.md
-  - name: SMS_NAPSystemInfo server WMI class
-    href: misc/sms_napsysteminfo-server-wmi-class.md
 - name: Obsolete Classes
   href: misc/obsolete-classes.md
+- name: OS deployment classes
   items:
-  - name: SMS_AdvertisementStatusRootSummarizer server WMI class
-    href: misc/sms_advertisementstatusrootsummarizer-server-wmi-class.md
-  - name: SMS_AdvertisementStatusSummarizer server WMI class
-    href: misc/sms_advertisementstatussummarizer-server-wmi-class.md
-  - name: SMS_AppStatePerClientDT server WMI class
-    href: misc/sms_appstateperclientdt-server-wmi-class.md
-  - name: SMS_AppStatePerCollectionDT server WMI class
-    href: misc/sms_appstatepercollectiondt-server-wmi-class.md
-  - name: SMS_AppUnknownStatePerClient server WMI class
-    href: misc/sms_appunknownstateperclient-server-wmi-class.md
-  - name: SMS_AppUnknownStatePerCollection server WMI class
-    href: misc/sms_appunknownstatepercollection-server-wmi-class.md
-  - name: SMS_DeviceHinvTranslation server WMI class
-    href: misc/sms_devicehinvtranslation-server-wmi-class.md
-  - name: SMS_DPStatus server WMI class
-    href: misc/sms_dpstatus-server-wmi-class.md
-  - name: SMS_DPStatusPerDP server WMI class
-    href: misc/sms_dpstatusperdp-server-wmi-class.md
-  - name: SMS_DPStatusSummary server WMI class
-    href: misc/sms_dpstatussummary-server-wmi-class.md
-    items:
-    - name: UpdateSummaryData method
-      href: misc/updatesummarydata-method-in-class-sms_dpstatussummary.md
-  - name: SMS_LocalizedNameLookup server WMI class
-    href: misc/sms_localizednamelookup-server-wmi-class.md
-  - name: SMS_ObjectToClassPermissions_a server WMI class
-    href: misc/sms_objecttoclasspermissions_a-server-wmi-class.md
-  - name: SMS_ObjectToInstancePermissions_a server WMI class
-    href: misc/sms_objecttoinstancepermissions_a-server-wmi-class.md
-  - name: SMS_PropertyDisplayNode server WMI class
-    href: misc/sms_propertydisplaynode-server-wmi-class.md
-  - name: SMS_Report server WMI class
-    href: misc/sms_report-server-wmi-class.md
-    items:
-    - name: GetReportPointInfo method
-      href: misc/getreportpointinfo-method-in-class-sms_report.md
-    - name: ValidateQuery method
-      href: misc/validatequery-method-in-class-sms_report.md
-  - name: SMS_ReportDashboard server WMI class
-    href: misc/sms_reportdashboard-server-wmi-class.md
-  - name: SMS_ReportParameter server WMI class
-    href: misc/sms_reportparameter-server-wmi-class.md
-  - name: SMS_SCI_SQLCmd server WMI class
-    href: misc/sms_sci_sqlcmd-server-wmi-class.md
-  - name: SMS_SCI_RoamingBoundary server WMI class
-    href: misc/sms_sci_roamingboundary-server-wmi-class.md
-  - name: SMS_SecuredObject server WMI class
-    href: misc/sms_securedobject-server-wmi-class.md
-    items:
-    - name: GetCollectionsWithResourcePermissions method
-      href: misc/getcollectionswithresourcepermissions-method-in-class-sms_securedobject.md
-    - name: RefreshNTGroupMembership method
-      href: misc/refreshntgroupmembership-method-in-class-sms_securedobject.md
-    - name: UserHasPermissions method
-      href: misc/userhaspermissions-method-in-class-sms_securedobject.md
-  - name: SMS_SIIB_NALProvider server WMI class
-    href: misc/sms_siib_nalprovider-server-wmi-class.md
-  - name: SMS_SIIB_UINALProvider server WMI class
-    href: misc/sms_siib_uinalprovider-server-wmi-class.md
-  - name: SMS_SiteToROOTColl_a server WMI class
-    href: misc/sms_sitetorootcoll_a-server-wmi-class.md
-  - name: SMS_SoftwareProductCompliance server WMI class
-    href: misc/sms_softwareproductcompliance-server-wmi-class.md
-    items:
-    - name: DeleteByQuery method
-      href: misc/deletebyquery-method-in-class-sms_softwareproductcompliance.md
-    - name: Export method
-      href: misc/export-method-in-class-sms_softwareproductcompliance.md
-    - name: Import method
-      href: misc/import-method-in-class-sms_softwareproductcompliance.md
-    - name: ProcessInBox method
-      href: misc/processinbox-method-in-class-sms_softwareproductcompliance.md
-  - name: SMS_UINAL_ResourceInfo server WMI class
-    href: misc/sms_uinal_resourceinfo-server-wmi-class.md
-  - name: SMS_UpdatePrograms server WMI class
-    href: misc/sms_updateprograms-server-wmi-class.md
-  - name: SMS_UpdateRelations server WMI class
-    href: misc/sms_updaterelations-server-wmi-class.md
-  - name: SMS_UserClassPermissionNames server WMI class
-    href: misc/sms_userclasspermissionnames-server-wmi-class.md
-  - name: SMS_UserClassPermissions server WMI class
-    href: misc/sms_userclasspermissions-server-wmi-class.md
-  - name: SMS_UserInstancePermissionInfo server WMI class
-    href: misc/sms_userinstancepermissioninfo-server-wmi-class.md
-  - name: SMS_UserInstancePermissionNames server WMI class
-    href: misc/sms_userinstancepermissionnames-server-wmi-class.md
-  - name: SMS_UserInstancePermissions server WMI class
-    href: misc/sms_userinstancepermissions-server-wmi-class.md
-  - name: SoftDistDownloadCompletedEvent
-    href: misc/softdistdownloadcompletedevent.md
-  - name: SoftDistDownloadStartedEvent
-    href: misc/softdistdownloadstartedevent.md
-  - name: TsMediaClass client COM automation class
-    href: misc/tsmediaclass-client-com-automation-class.md
-    items:
-    - name: ITsMediaClass Interface
-      href: misc/itsmediaclass-interface.md
-      items:
-      - name: ITsMediaClass Cancel method
-        href: misc/itsmediaclass--cancel-method.md
-      - name: ITsMediaClass ConnectionOptions Property
-        href: misc/itsmediaclass--connectionoptions-property.md
-      - name: ITsMediaClass CreateBootMedia method
-        href: misc/itsmediaclass--createbootmedia-method.md
-      - name: ITsMediaClass CreateCaptureMedia method
-        href: misc/itsmediaclass--createcapturemedia-method.md
-      - name: ITsMediaClass CreateStandaloneMedia method
-        href: misc/itsmediaclass--createstandalonemedia-method.md
-      - name: ITsMediaClass CurrentStep Property
-        href: misc/itsmediaclass--currentstep-property.md
-      - name: ITsMediaClass DistributionPoints Property
-        href: misc/itsmediaclass--distributionpoints-property.md
-      - name: ITsMediaClass ErrorDetail Property
-        href: misc/itsmediaclass--errordetail-property.md
-      - name: ITsMediaClass ExitCode Property
-        href: misc/itsmediaclass--exitcode-property.md
-      - name: ITsMediaClass MediaLabel Property
-        href: misc/itsmediaclass--medialabel-property.md
-      - name: ITsMediaClass NumSteps Property
-        href: misc/itsmediaclass--numsteps-property.md
-      - name: ITsMediaClass ProviderName Property
-        href: misc/itsmediaclass--providername-property.md
-      - name: ITsMediaClass SiteCode Property
-        href: misc/itsmediaclass--sitecode-property.md
-      - name: ITsMediaClass Status Property
-        href: misc/itsmediaclass--status-property.md
-      - name: ITsMediaClass StepInfo Property
-        href: misc/itsmediaclass--stepinfo-property.md
-      - name: ITsMediaClass StepProgress Property
-        href: misc/itsmediaclass--stepprogress-property.md
-- name: Operating System Deployment Classes
-  href: osd/operating-system-deployment-classes.md
-  items:
-  - name: Operating System Deployment Driver Supported Platforms Schema
+  - name: OS deployment driver supported platforms schema
     href: osd/operating-system-deployment-driver-supported-platforms-schema.md
     items:
     - name: PlatformApplicabilityCondition
@@ -1518,8 +1352,7 @@
       href: osd/query1.md
     - name: Query2
       href: osd/query2.md
-  - name: Operating System Deployment server WMI classes
-    href: osd/operating-system-deployment-server-wmi-classes.md
+  - name: OS deployment server WMI classes
     items:
     - name: SMS_BootImagePackage server WMI class
       href: osd/sms_bootimagepackage-server-wmi-class.md
@@ -1886,25 +1719,16 @@
       href: osd/sms_winpeoptionalcomponentinbootimage-server-wmi-class.md
     - name: SMS_WinPEOptionalComponentInfo server WMI class
       href: osd/sms_winpeoptionalcomponentinfo-server-wmi-class.md
-    - name: Operating System Deployment CreateMedia.exe
+    - name: OS deployment CreateMedia.exe
       href: osd/operating-system-deployment-createmedia.exe.md
-- name: Out of Band Management server WMI classes
-  href: misc/out-of-band-management-server-wmi-classes.md
-  items:
-  - name: SMS_AMTCertificate server WMI class
-    href: misc/sms_amtcertificate-server-wmi-class.md
-  - name: SMS_AMTMachineInfo server WMI class
-    href: misc/sms_amtmachineinfo-server-wmi-class.md
 - name: Reporting server WMI classes
-  href: core/servers/reporting/configuration-manager-reporting-server-wmi-classes.md
   items:
   - name: SMS_ReportViewSchema server WMI class
     href: core/servers/reporting/sms_reportviewschema-server-wmi-class.md
     items:
     - name: GetSampleValues method
       href: core/servers/reporting/getsamplevalues-method-in-class-sms_reportviewschema.md
-- name: Resource Management server WMI classes
-  href: core/clients/manage/configuration-manager-resource-management-server-wmi-classes.md
+- name: Resource management server WMI classes
   items:
   - name: Hardware Inventory server WMI classes
     href: core/clients/manage/hardware-inventory-server-wmi-classes.md
@@ -1994,8 +1818,7 @@
       href: core/clients/manage/removesource-method-in-class-sms_usermachinerelationship.md
     - name: RemoveType method
       href: core/clients/manage/removetype-method-in-class-sms_usermachinerelationship.md
-- name: Role-Based Administration server WMI classes
-  href: core/servers/configure/role-based-administration-server-wmi-classes.md
+- name: Role-based administration server WMI classes
   items:
   - name: SMS_Admin server WMI class
     href: core/servers/configure/sms_admin-server-wmi-class.md
@@ -2050,7 +1873,6 @@
   - name: SMS_SettableSecuredCategory server WMI class
     href: core/servers/configure/sms_settablesecuredcategory-server-wmi-class.md
 - name: Scheduling server WMI classes
-  href: core/servers/configure/scheduling-server-wmi-classes.md
   items:
   - name: SMS_ScheduleMethods server WMI class
     href: core/servers/configure/sms_schedulemethods-server-wmi-class.md
@@ -2072,7 +1894,6 @@
   - name: SMS_ST_RecurWeekly server WMI class
     href: core/servers/configure/sms_st_recurweekly-server-wmi-class.md
 - name: SEDO server WMI classes
-  href: misc/sedo-server-wmi-classes.md
   items:
   - name: SMS_ObjectLock server WMI class
     href: misc/sms_objectlock-server-wmi-class.md
@@ -2103,7 +1924,7 @@
       href: misc/requestlocksasync-method-in-class-sms_objectlock.md
   - name: SMS_ObjectLockRequest server WMI class
     href: misc/sms_objectlockrequest-server-wmi-class.md
-- name: Site Configuration server WMI classes
+- name: Site configuration server WMI classes
   href: core/servers/configure/site-configuration-server-wmi-classes.md
   items:
   - name: SMS_Boundary server WMI class
@@ -2283,8 +2104,7 @@
     href: core/servers/configure/sms_sitetosubsite_a-server-wmi-class.md
   - name: SMS_SiteToSiteID_a server WMI class
     href: core/servers/configure/sms_sitetositeid_a-server-wmi-class.md
-- name: Software Distribution server WMI classes
-  href: core/servers/configure/software-distribution-server-wmi-classes.md
+- name: Software distribution server WMI classes
   items:
   - name: SMS_Advertisement server WMI class
     href: core/servers/configure/sms_advertisement-server-wmi-class.md
@@ -2432,7 +2252,7 @@
       href: core/servers/configure/enable-method-in-class-sms_supportedplatforms.md
   - name: SMS_SupportedPlatformsOfflineServicing server WMI class
     href: core/servers/configure/sms_supportedplatformsofflineservicing-server-wmi-class.md
-- name: Software Metering server WMI classes
+- name: Software metering server WMI classes
   href: apps/software-metering-server-wmi-classes.md
   items:
   - name: SMS_FileUsageSummary server WMI class

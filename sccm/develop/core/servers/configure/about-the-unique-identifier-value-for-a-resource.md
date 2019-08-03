@@ -30,4 +30,3 @@ GUID:4976DCD4-CAAE-11D2-8E00-00104BCC3648
 
 ## See Also  
  [How to Get the Unique Identifier Value for a Client](../../../../develop/core/servers/configure/how-to-get-the-unique-identifier-value-for-a-client.md)   
- [Configuration Manager Resource Management Server WMI Classes](../../../../develop/reference/core/clients/manage/configuration-manager-resource-management-server-wmi-classes.md)

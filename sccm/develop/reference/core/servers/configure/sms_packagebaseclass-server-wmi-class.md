@@ -542,6 +542,5 @@ For more information, see [Configuration Manager Server Runtime Requirements](..
 For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
-[Software Distribution Server WMI Classes](../../../../../develop/reference/core/servers/configure/software-distribution-server-wmi-classes.md)   
 [How to Create a Package](../../../../../develop/core/servers/configure/how-to-create-a-package.md)   
 [PowerShell Cmdlet: New-CMPackage](http://go.microsoft.com/fwlink/?LinkId=309284)
