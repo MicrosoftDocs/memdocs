@@ -1,7 +1,7 @@
 ---
 title: Obsolete classes
 titleSuffix: Configuration Manager
-ms.date: 09/20/2016
+ms.date: 08/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
@@ -92,5 +92,6 @@ Obsolete WMI classes in Configuration Manager.
 
 - SMS_UserInstancePermissions server WMI class
 
-- TsMediaClass client COM automation class
+- SMS_VhdPackage server WMI class
 
+- TsMediaClass client COM automation class

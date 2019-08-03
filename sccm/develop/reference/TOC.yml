@@ -829,10 +829,6 @@
       href: core/clients/collections/addmembershiprule-method-in-class-sms_collection.md
     - name: AddMembershipRules method
       href: core/clients/collections/addmembershiprules-method-in-class-sms_collection.md
-    - name: AMTOperateForCollection method
-      href: core/clients/collections/amtoperateforcollection-method-in-class-sms_collection.md
-    - name: AMTOperateForMachines method
-      href: core/clients/collections/amtoperateformachines-method-in-class-sms_collection.md
     - name: ApproveClients method
       href: core/clients/collections/approveclients-method-in-class-sms_collection.md
     - name: BlockClients method
@@ -1696,25 +1692,6 @@
       href: osd/sms_usersettings-server-wmi-class.md
     - name: SMS_UserVariable server WMI class
       href: osd/sms_uservariable-server-wmi-class.md
-    - name: SMS_VhdPackage server WMI class
-      href: osd/sms_vhdpackage-server-wmi-class.md
-      items:
-      - name: AddChangeNotification method
-        href: osd/addchangenotification-method-in-class-sms_vhdpackage.md
-      - name: AddDistributionPoints method
-        href: osd/adddistributionpoints-method-in-class-sms_vhdpackage.md
-      - name: GetImageProperties method
-        href: osd/getimageproperties-method-in-class-sms_vhdpackage.md
-      - name: RefreshPkgSource method
-        href: osd/refreshpkgsource-method-in-class-sms_vhdpackage.md
-      - name: ReloadImageProperties method
-        href: osd/reloadimageproperties-method-in-class-sms_vhdpackage.md
-      - name: RunOfflineServicingManager method
-        href: osd/runofflineservicingmanager-method-in-class-sms_vhdpackage.md
-      - name: SetSourceSite method
-        href: osd/setsourcesite-method-in-class-sms_vhdpackage.md
-      - name: Unlock method
-        href: osd/unlock-method-in-class-sms_vhdpackage.md
     - name: SMS_WinPEOptionalComponentInBootImage server WMI class
       href: osd/sms_winpeoptionalcomponentinbootimage-server-wmi-class.md
     - name: SMS_WinPEOptionalComponentInfo server WMI class
@@ -2061,8 +2038,6 @@
       href: core/servers/configure/isusedcert-method-in-class-sms_site.md
     - name: RedistributeAutoUpgradeClientContent method
       href: core/servers/configure/redistributeautoupgradeclientcontent-method-in-class-sms_site.md
-    - name: SubmitAMTCert method
-      href: core/servers/configure/submitamtcert-method-in-class-sms_site.md
     - name: SubmitRegistrationRecord method
       href: core/servers/configure/submitregistrationrecord-method-in-class-sms_site.md
     - name: UpdateAutoUpgradeClientContent method

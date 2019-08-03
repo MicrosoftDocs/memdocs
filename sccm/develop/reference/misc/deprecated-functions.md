@@ -1,7 +1,7 @@
 ---
 title: Deprecated functions
 titleSuffix: Configuration Manager
-ms.date: 09/20/2016
+ms.date: 08/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
@@ -16,6 +16,10 @@ ms.collection: M365-identity-device-management
 
 While these functions worked in previous product version, don't use them. They might not be available in future releases of Configuration Manager.
 
+- AMTOperateForCollection method in class SMS_Collection
+
+- AMTOperateForMachines method in class SMS_Collection
+
 - SmsCreateAccount
 
 - SmsGrantActAsOSRight
@@ -29,3 +33,5 @@ While these functions worked in previous product version, don't use them. They m
 - SmsLsaAccount
 
 - SmsLsaGetTrustedDomains
+
+- SubmitAMTCert method in class SMS_Site
