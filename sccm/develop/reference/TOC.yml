@@ -2253,7 +2253,6 @@
   - name: SMS_SupportedPlatformsOfflineServicing server WMI class
     href: core/servers/configure/sms_supportedplatformsofflineservicing-server-wmi-class.md
 - name: Software metering server WMI classes
-  href: apps/software-metering-server-wmi-classes.md
   items:
   - name: SMS_FileUsageSummary server WMI class
     href: apps/sms_fileusagesummary-server-wmi-class.md
@@ -2273,8 +2272,7 @@
     href: apps/sms_productfileinfo-server-wmi-class.md
   - name: SMS_SummarizationInterval server WMI class
     href: apps/sms_summarizationinterval-server-wmi-class.md
-- name: Software Updates server WMI classes
-  href: sum/software-updates-server-wmi-classes.md
+- name: Software updates server WMI classes
   items:
   - name: SMS_ADRDeploymentSettings server WMI class
     href: sum/sms_adrdeploymentsettings-server-wmi-class.md
@@ -2401,7 +2399,6 @@
   - name: SMS_UpdatesAssignment server WMI class
     href: sum/sms_updatesassignment-server-wmi-class.md
 - name: Supporting server WMI classes
-  href: misc/supporting-server-wmi-classes.md
   items:
   - name: SMS_ContextMethods server WMI class
     href: misc/sms_contextmethods-server-wmi-class.md
@@ -2421,27 +2418,25 @@
       href: misc/unpacknalpath-method-in-class-sms_nal_methods.md
   - name: SMS_ProviderLocation server WMI class
     href: misc/sms_providerlocation-server-wmi-class.md
-- name: Status Classes
-  href: core/servers/manage/status-classes.md
+- name: Status classes
   items:
-  - name: Status Client APIs
-    href: core/servers/manage/status-client-apis.md
+  - name: Status client APIs
     items:
-    - name: Smscstat.dll Status Message Functions
+    - name: Smscstat.dll status message functions
       href: core/servers/manage/smscstat.dll-status-message-functions.md
       items:
-      - name: AddAttributeToSMSStatusMessage Function
+      - name: AddAttributeToSMSStatusMessage function
         href: core/servers/manage/addattributetosmsstatusmessage-function.md
-      - name: CreateSMSStatusMessage Function
+      - name: CreateSMSStatusMessage function
         href: core/servers/manage/createsmsstatusmessage-function.md
-      - name: ReportSMSStatusMessage Function
+      - name: ReportSMSStatusMessage function
         href: core/servers/manage/reportsmsstatusmessage-function.md
-    - name: SMSEvent Class
+    - name: SMSEvent class
       href: core/servers/manage/smsevent-class.md
       items:
-      - name: ICCMEvent EventType Property
+      - name: ICCMEvent EventType property
         href: core/servers/manage/iccmevent--eventtype-property.md
-      - name: ICCMEvent RawEvent Property
+      - name: ICCMEvent RawEvent property
         href: core/servers/manage/iccmevent--rawevent-property.md
       - name: ICCMEvent SetProperty method
         href: core/servers/manage/iccmevent--setproperty-method.md
@@ -2449,8 +2444,7 @@
         href: core/servers/manage/iccmevent--submit-method.md
       - name: ICCMEvent SubmitPending method
         href: core/servers/manage/iccmevent--submitpending-method.md
-  - name: Status Message Types
-    href: core/servers/manage/status-message-types.md
+  - name: Status message types
     items:
     - name: SMS_SofwareDistribution_Event
       href: core/servers/manage/sms_sofwaredistribution_event.md
@@ -2460,29 +2454,27 @@
       href: core/servers/manage/softdistprogramcompletedsuccessfullyevent.md
     - name: SoftwareDistributionPackageEvent
       href: core/servers/manage/softwaredistributionpackageevent.md
-  - name: Status MIF Functions
+  - name: Status MIF functions
     href: core/servers/manage/status-mif-functions.md
     items:
-    - name: Create Function
+    - name: Create function
       href: core/servers/manage/create-function.md
-    - name: InstallStatusMIF Function
+    - name: InstallStatusMIF function
       href: core/servers/manage/installstatusmif-function.md
-    - name: InstallStatusMIFEx Function
+    - name: InstallStatusMIFEx function
       href: core/servers/manage/installstatusmifex-function.md
-  - name: Status Server API
-    href: core/servers/manage/status-server-api.md
+  - name: Status server API
     items:
-    - name: SMSFormatMessageCtl Class
+    - name: SMSFormatMessageCtl class
       href: core/servers/manage/smsformatmessagectl-class.md
       items:
-      - name: FormatModuleMessage Method
+      - name: FormatModuleMessage method
         href: core/servers/manage/formatmodulemessage-method.md
-      - name: FormatModuleString Method
+      - name: FormatModuleString method
         href: core/servers/manage/formatmodulestring-method.md
-      - name: FormatSystemMessage Method
+      - name: FormatSystemMessage method
         href: core/servers/manage/formatsystemmessage-method.md
   - name: Status server WMI classes
-    href: core/servers/manage/status-server-wmi-classes.md
     items:
     - name: SMS_ComponentSummarizer server WMI class
       href: core/servers/manage/sms_componentsummarizer-server-wmi-class.md
@@ -2540,8 +2532,7 @@
       href: core/servers/manage/sms_summarizersitestatus-server-wmi-class.md
     - name: SMS_SummarizerStatus server WMI class
       href: core/servers/manage/sms_summarizerstatus-server-wmi-class.md
-- name: Windows Azure server WMI classes
-  href: core/servers/configure/windows-azure-server-wmi-classes.md
+- name: Microsoft Azure server WMI classes
   items:
   - name: SMS_AzureService server WMI class
     href: core/servers/configure/sms_azureservice-server-wmi-class.md
@@ -2552,8 +2543,7 @@
       href: core/servers/configure/stop-method-in-class-sms_azureservice.md
   - name: SMS_AzureServicesTask server WMI class
     href: core/servers/configure/sms_azureservicestask-server-wmi-class.md
-- name: Windows 10 Servicing server WMI classes
-  href: misc/windows-10-servicing-server-wmi-classes.md
+- name: Windows 10 servicing server WMI classes
   items:
   - name: SMS_AdminUIContent server WMI class
     href: misc/sms-adminuicontent-server-wmi-class.md

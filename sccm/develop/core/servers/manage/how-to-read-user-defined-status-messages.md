@@ -145,6 +145,5 @@ public void ReadErrorStatusMessage(WqlConnectionManager connection)
 ## See Also  
  [About Configuration Manager Status Messages](../../../../develop/core/servers/manage/about-configuration-manager-status-messages.md)   
  [How to Report User-Defined Status Messages](../../../../develop/core/servers/manage/how-to-report-user-defined-status-messages.md)   
- [Status Server WMI Classes](../../../../develop/reference/core/servers/manage/status-server-wmi-classes.md)   
  [SMS_StatusMessage Server WMI Class](../../../../develop/reference/core/servers/manage/sms_statusmessage-server-wmi-class.md)   
  [How To Delete Status Messages](../../../../develop/core/servers/manage/how-to-delete-status-messages.md)

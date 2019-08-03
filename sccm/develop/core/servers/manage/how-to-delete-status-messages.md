@@ -122,5 +122,4 @@ public void DeleteStatusMessage(WqlConnectionManager connection, Int64 recordId)
 
 ## See Also  
  [About status messages](/sccm/develop/core/servers/manage/about-configuration-manager-status-messages)
- [Status Server WMI Classes](../../../../develop/reference/core/servers/manage/status-server-wmi-classes.md)   
  [How to Report User-Defined Status Messages Using WMI](../../../../develop/core/servers/manage/how-to-report-user-defined-status-messages.md)

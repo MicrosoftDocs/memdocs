@@ -31,6 +31,3 @@ The `SMSFormatMessageCtl` class supports message formatting for the System Cente
 
 ### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Status Server API](../../../../../develop/reference/core/servers/manage/status-server-api.md)

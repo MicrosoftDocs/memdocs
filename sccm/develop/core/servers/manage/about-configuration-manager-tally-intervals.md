@@ -43,4 +43,3 @@ System Center Configuration Manager is configured with 16 default tally interval
 
 ## See Also  
  [About Configuration Manager Status Summarizers](../../../../develop/core/servers/manage/about-configuration-manager-status-summarizers.md)   
- [Status Server WMI Classes](../../../../develop/reference/core/servers/manage/status-server-wmi-classes.md)

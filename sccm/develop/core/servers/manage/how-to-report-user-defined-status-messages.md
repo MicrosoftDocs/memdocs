@@ -129,6 +129,5 @@ public void RaiseErrorStatusMessage(WqlConnectionManager connection)
 
 ## See Also  
  [About status messages](/sccm/develop/core/servers/manage/about-configuration-manager-status-messages)
- [Status Server WMI Classes](../../../../develop/reference/core/servers/manage/status-server-wmi-classes.md)   
  [SMS_StatusMessage Server WMI Class](../../../../develop/reference/core/servers/manage/sms_statusmessage-server-wmi-class.md)   
  [How To Delete Status Messages](../../../../develop/core/servers/manage/how-to-delete-status-messages.md)

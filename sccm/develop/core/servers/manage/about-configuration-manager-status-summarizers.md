@@ -70,6 +70,5 @@ WHERE TallyInterval = "00011280001A2000"
 
 ## See Also  
  [About Configuration Manager Tally Intervals](../../../../develop/core/servers/manage/about-configuration-manager-tally-intervals.md)   
- [Status Server WMI Classes](../../../../develop/reference/core/servers/manage/status-server-wmi-classes.md)   
  [How to Determine the Health of a Configuration Manager Site](../../../../develop/core/servers/manage/how-to-determine-the-health-of-a-configuration-manager-site.md)   
  [How to Read The Tally Intervals For a Configuration Manager Site](../../../../develop/core/servers/manage/how-to-read-the-tally-intervals-for-a-configuration-manager-site.md)

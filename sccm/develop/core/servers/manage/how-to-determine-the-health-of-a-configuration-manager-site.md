@@ -20,7 +20,7 @@ You can determine the overall health or status of a site, in System Center Confi
 |1|The site has warning conditions.|  
 |2|The site has error conditions.|  
 
- `SMS_SummarizerSiteStatus` is an example of a System Center Configuration Manager summarizer. For more information about other summarizer classes, see [Status Server WMI Classes](../../../../develop/reference/core/servers/manage/status-server-wmi-classes.md).  
+ `SMS_SummarizerSiteStatus` is an example of a Configuration Manager summarizer. For more information, see [SMS_SummarizerSiteStatus server WMI class](/sccm/develop/reference/core/servers/manage/sms_summarizersitestatus-server-wmi-class).  
 
 ### To determine a site's health  
 
@@ -133,4 +133,3 @@ public void ShowSiteHealth(WqlConnectionManager connection, string siteCode)
 
 ## See Also  
  [About status messages](/sccm/develop/core/servers/manage/about-configuration-manager-status-messages)
- [Status Server WMI Classes](../../../../develop/reference/core/servers/manage/status-server-wmi-classes.md)

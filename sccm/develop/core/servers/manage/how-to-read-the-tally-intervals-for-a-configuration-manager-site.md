@@ -134,4 +134,3 @@ public void ShowSiteTallyIntervals(WqlConnectionManager connection, string siteC
  [About status messages](/sccm/develop/core/servers/manage/about-configuration-manager-status-messages)
  [About Configuration Manager Tally Intervals](../../../../develop/core/servers/manage/about-configuration-manager-tally-intervals.md)   
  [About Configuration Manager Status Summarizers](../../../../develop/core/servers/manage/about-configuration-manager-status-summarizers.md)   
- [Status Server WMI Classes](../../../../develop/reference/core/servers/manage/status-server-wmi-classes.md)
