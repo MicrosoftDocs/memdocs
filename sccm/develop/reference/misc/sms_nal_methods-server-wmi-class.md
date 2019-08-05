@@ -43,14 +43,13 @@ Class SMS_NAL_Methods : SMS_BaseClass ();
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Configuration Manager Supporting Classes](../../../develop/reference/misc/supporting-server-wmi-classes.md)   
  [SMS_DistributionPoint Server WMI Class](../../../develop/reference/core/servers/configure/sms_distributionpoint-server-wmi-class.md)   
  [SMS_SCI_SysResUse Server WMI Class](../../../develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class.md)   
  [SMS_SystemResourceList Server WMI Class](../../../develop/reference/core/servers/configure/sms_systemresourcelist-server-wmi-class.md)

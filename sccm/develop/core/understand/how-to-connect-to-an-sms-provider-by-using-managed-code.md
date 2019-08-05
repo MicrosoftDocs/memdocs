@@ -116,6 +116,6 @@ public WqlConnectionManager Connect(string serverName, string userName, string u
  [UnauthorizedAccessException](https://msdn.microsoft.com/library/system.unauthorizedaccessexception.aspx) is raised when the wrong credentials are passed to **WqlConnectionManager.Connect**.  
 
 ## See Also  
- [About the Configuration Manager Provider](../../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md)   
+ [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals)
  [How to Add a Configuration Manager Context Qualifier Using Managed Code](../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-managed-code.md)   
- [How to Use Configuration Manager Objects With Managed Code](../../../develop/core/understand/how-to-use-configuration-manager-objects-with-managed-code.md)
+ [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)

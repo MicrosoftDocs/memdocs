@@ -211,7 +211,3 @@ Class SMS_MDMBulkEnrollmentProfiles : SMS_BaseClass
 
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Mobile Device Management Server WMI Classes](../../../develop/reference/mdm/mobile-device-management-server-wmi-classes.md)   
- [Configuration Manager Hybrid Server WMI Classes](../../../develop/reference/mdm/hybrid-server-wmi-classes.md)

@@ -87,15 +87,10 @@ class CCM_ServiceWindow
 |5|OSD_SERVICEWINDOW|Task Sequences Service Window|  
 |6|USER_DEFINED_SERVICE_WINDOW|Corresponds to non-working hours|  
 
-## Remarks  
-
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
-
-## See Also  
- [Configuration Manager Client SDK WMI Classes](../../../../../develop/reference/core/clients/sdk/client-sdk-wmi-classes.md)

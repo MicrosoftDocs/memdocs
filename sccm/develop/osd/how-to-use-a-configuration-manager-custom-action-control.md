@@ -60,7 +60,6 @@ In System Center Configuration Manager, you use a custom action control by selec
 ## See Also  
  [About Configuration Manager Custom Actions](../../develop/osd/about-configuration-manager-custom-actions.md)   
  [About Configuration Manager Custom Action Client Applications](../../develop/osd/about-configuration-manager-custom-action-client-applications.md)   
- [Extending Operating System Deployment](../../develop/osd/extending-operating-system-deployment.md)   
  [How to Create a Configuration Manager Custom Action Control](../../develop/osd/how-to-create-a-configuration-manager-custom-action-control.md)   
  [How to Create a MOF File for a Configuration ManagerCustom Action](../../develop/osd/how-to-create-a-mof-file-for-a-configuration-manager-custom-action.md)   
  [How to Delete an Operating System Deployment Task Sequence Action](../../develop/osd/how-to-delete-an-operating-system-deployment-task-sequence-action.md)

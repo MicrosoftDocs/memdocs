@@ -225,7 +225,6 @@ public void ViewMonthlySummaryInfo(WqlConnectionManager connection)
 
 ## See Also  
  [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Metering](../../develop/apps/software-metering.md)   
  [SMS_MeteredFiles Server WMI Class](../../develop/reference/apps/sms_meteredfiles-server-wmi-class.md)   
  [SMS_MeteredUser Server WMI Class](../../develop/reference/apps/sms_metereduser-server-wmi-class.md)   
  [SMS_MonthlyUsageSummary Server WMI Class](../../develop/reference/apps/sms_monthlyusagesummary-server-wmi-class.md)   

@@ -140,5 +140,5 @@ public void ModifySWDAdvertisementToOverrideMaintenanceWindows(WqlConnectionMana
  For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## See Also  
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
- [Software Distribution Advertisements](../../../../develop/core/servers/configure/software-distribution-advertisements.md)
+ [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
+ [About deployments](/sccm/develop/core/servers/configure/about-software-distribution-deployments)

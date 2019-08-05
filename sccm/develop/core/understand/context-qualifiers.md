@@ -87,4 +87,4 @@ The `InstanceCount` context qualifier is an integer value that is used to limit 
 ## See Also  
  [How to Add a Configuration Manager Context Qualifier Using Managed Code](../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-managed-code.md)   
  [How to Add a Configuration Manager Context Qualifier Using WMI](../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md)   
- [Configuration Manager Provider](../../../develop/core/understand/sms-provider-in-configuration-manager.md)
+ [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals)

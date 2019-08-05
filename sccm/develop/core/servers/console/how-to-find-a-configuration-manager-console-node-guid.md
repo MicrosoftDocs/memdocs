@@ -27,5 +27,5 @@ Globally Unique Identifiers (GUIDs) are used, in Adminconsole.xml, to identify p
  Namespace GUIDs can be associated with several types of elements. For more information, see [Configuration Manager Console Node XML](../../../../develop/core/servers/console/console-node-xml.md).  
 
 ## See Also  
- [Configuration Manager Console Nodes](../../../../develop/core/servers/console/console-nodes.md)   
+ [About console nodes](/sccm/develop/core/servers/console/about-configuration-manager-console-nodes)
  [Configuration Manager Console Node XML](../../../../develop/core/servers/console/console-node-xml.md)

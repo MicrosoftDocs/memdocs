@@ -44,12 +44,12 @@ SInt32 DeleteDiscoveryData(
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
-## See Also  
- [SMS_ADForest Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_adforest-server-wmi-class.md)   
- [Discovery Server WMI Classes](../../../../../develop/reference/core/servers/configure/discovery-server-wmi-classes.md)
+## See also
+
+[SMS_ADForest server WMI class](/sccm/develop/reference/core/servers/configure/sms_adforest-server-wmi-class)

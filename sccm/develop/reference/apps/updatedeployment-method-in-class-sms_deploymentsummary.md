@@ -47,4 +47,3 @@ sint32 UpdateDeployment (
 
 ## See Also  
  [SMS_DeploymentSummary Server WMI Class](../../../develop/reference/apps/sms_deploymentsummary-server-wmi-class.md)   
- [Application Model Server WMI Classes](../../../develop/reference/apps/application-management-server-wmi-classes.md)

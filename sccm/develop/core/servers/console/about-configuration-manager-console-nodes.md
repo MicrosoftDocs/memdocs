@@ -27,7 +27,7 @@ System Center Configuration Manager uses XML to define the nodes and their conte
 
 -   **Security.** You can secure a node based on security flags that you specify. For an example that sets security for an action, see [Configuration Manager Conditional Actions](../../../../develop/core/servers/console/conditional-actions.md).  
 
--   **Views.** You can launch views in the Configuration Manager console at desired nodes. For more information about views, see [Configuration Manager Administrator Console Views](../../../../develop/core/servers/console/console-views.md).  
+-   **Views.** You can launch views in the Configuration Manager console at desired nodes. For more information about views, see [About console views](/sccm/develop/core/servers/console/about-configuration-manager-console-views).  
 
 > [!NOTE]
 >  The Configuration Manager SDK includes a sample XML file and GUID folder for a node that displays the available collections. The GUID folder is the namespace identifier for the tools node  
@@ -35,9 +35,9 @@ System Center Configuration Manager uses XML to define the nodes and their conte
  For information about node XML, see [Configuration Manager Console Node XML](../../../../develop/core/servers/console/console-node-xml.md).  
 
 ## See Also  
- [Configuration Manager Administrator Console Actions](../../../../develop/core/servers/console/console-actions.md)   
- [Configuration Manager Administrator Console Forms](../../../../develop/core/servers/console/console-forms.md)   
- [Configuration Manager Administrator Console Views](../../../../develop/core/servers/console/console-views.md)   
+ [About Configuration Manager console actions](/sccm/develop/core/servers/console/configuration-manager-actions)
+ [About console forms](/sccm/develop/core/servers/console/about-configuration-manager-console-forms)
+ [About console views](/sccm/develop/core/servers/console/about-configuration-manager-console-views)
  [How to Create a Configuration Manager Administrator Console Node](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-console-node.md)   
  [How to Find a Configuration Manager Node GUID](../../../../develop/core/servers/console/how-to-find-a-configuration-manager-console-node-guid.md)   
  [Configuration Manager Console Node XML](../../../../develop/core/servers/console/console-node-xml.md)

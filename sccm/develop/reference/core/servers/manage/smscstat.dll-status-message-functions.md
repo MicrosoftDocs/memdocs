@@ -22,6 +22,3 @@ In System Center Configuration Manager, the functions that are defined by the Sm
 |[AddAttributeToSMSStatusMessage Function](../../../../../develop/reference/core/servers/manage/addattributetosmsstatusmessage-function.md)|Adds a single optional status message attribute ID/value pair to a status message object.|  
 |[CreateSMSStatusMessage Function](../../../../../develop/reference/core/servers/manage/createsmsstatusmessage-function.md)|Creates a status message object.|  
 |[ReportSMSStatusMessage Function](../../../../../develop/reference/core/servers/manage/reportsmsstatusmessage-function.md)|Submits a status message object to the Configuration Manager status system.|  
-
-## See Also  
- [Status and State Client APIs](../../../../../develop/reference/core/servers/manage/status-client-apis.md)

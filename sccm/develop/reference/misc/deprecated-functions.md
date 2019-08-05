@@ -1,8 +1,8 @@
 ---
-title: "Deprecated Functions"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Deprecated functions
+titleSuffix: Configuration Manager
+ms.date: 08/02/2019
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: e77a6a9a-c133-4484-901a-222983d39b88
@@ -11,24 +11,27 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Configuration Manager Deprecated Functions
-These functions, although functional in Systems Management Server 2003, Configuration Manager 2007 and System Center Configuration Manager, should not be used because they might not be available in future releases of Configuration Manager. For equivalent supported functions, see MSDN.  
 
-## Deprecated Functions  
+# Configuration Manager deprecated functions
 
--   [SmsCreateAccount](../../../develop/reference/misc/smscreateaccount.md)  
+While these functions worked in previous product version, don't use them. They might not be available in future releases of Configuration Manager.
 
--   [SmsGrantActAsOSRight](../../../develop/reference/misc/smsgrantactasosright.md)  
+- AMTOperateForCollection method in class SMS_Collection
 
--   [SmsGrantAdminRight](../../../develop/reference/misc/smsgrantadminright.md)  
+- AMTOperateForMachines method in class SMS_Collection
 
--   [SmsGrantDomainAdminRight](../../../develop/reference/misc/smsgrantdomainadminright.md)  
+- SmsCreateAccount
 
--   [SmsGrantServiceLogonRight](../../../develop/reference/misc/smsgrantservicelogonright.md)  
+- SmsGrantActAsOSRight
 
--   [SmsLsaAccount](../../../develop/reference/misc/smslsaaccount.md)  
+- SmsGrantAdminRight
 
--   [SmsLsaGetTrustedDomains](../../../develop/reference/misc/smslsagettrusteddomains.md)  
+- SmsGrantDomainAdminRight
 
-## See Also  
- [Configuration Manager Reference](../../../develop/reference/configuration-manager-reference.md)
+- SmsGrantServiceLogonRight
+
+- SmsLsaAccount
+
+- SmsLsaGetTrustedDomains
+
+- SubmitAMTCert method in class SMS_Site

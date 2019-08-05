@@ -72,5 +72,6 @@ Actions, in System Center Configuration Manager, that include date and time valu
 |Second|Ss|0-59|  
 |Millisecond|Ms|0-999|  
 
-## See Also  
- [About Configuration Manager Objects](../../../develop/core/understand/about-configuration-manager-objects.md)
+## See also
+
+[Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)

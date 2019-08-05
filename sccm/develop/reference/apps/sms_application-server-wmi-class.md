@@ -713,6 +713,3 @@ Class SMS_Application : SMS_ConfigurationItemBaseClass
 
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Configuration Manager Application Management Server WMI Classes](../../../develop/reference/apps/application-management-server-wmi-classes.md)

@@ -62,5 +62,4 @@ public const string TechnologyId = "Rdp";
 ## See Also  
  [How to Define the Deployment Technology](../../develop/apps/how-to-define-the-deployment-technology.md)   
  [How To Define the Installer Technology](../../develop/apps/how-to-define-the-installer-technology.md)   
- [Scenario: Extending Application Management](../../develop/apps/scenario--extending-application-management.md)   
  [Configuration Manager Reference](../../develop/reference/configuration-manager-reference.md)

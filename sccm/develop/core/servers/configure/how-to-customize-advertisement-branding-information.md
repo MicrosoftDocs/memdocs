@@ -16,7 +16,7 @@ You set the software distribution branding information for the System Center Con
 
 ### To customize advertisement branding information  
 
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Get the Client Agent site control file `Client Component` object from [SMS_SCI_ClientComp Server WMI Class](../../../../develop/reference/core/servers/configure/sms_sci_clientcomp-server-wmi-class.md).  
 
@@ -138,8 +138,8 @@ public void SetAdvertBranding(WqlConnectionManager connection, string siteCode, 
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
- [Software Distribution Setup and Configuration](../../../../develop/core/servers/configure/software-distribution-setup-and-configuration.md)   
+ [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
+ [About software distribution setup and configuration](/sccm/develop/core/servers/configure/about-software-distribution-setup-and-configuration)
  [About the Configuration Manager Site Control File](../../../../develop/core/understand/about-the-configuration-manager-site-control-file.md)   
  [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md)   
  [How to Read and Write to the Configuration Manager Site Control File by Using WMI](../../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md)   
