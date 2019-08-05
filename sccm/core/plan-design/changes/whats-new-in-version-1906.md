@@ -2,7 +2,7 @@
 title: What's new in version 1906
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1906 of Configuration Manager current branch.
-ms.date: 07/26/2019
+ms.date: 08/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -576,11 +576,6 @@ There are various ways to display a list of devices under the **Devices** node i
 - In the **Monitoring** workspace, select the **Deployments** node. Select a deployment, and choose the **View Status** action in the ribbon. In the deployment status pane, double-click the total assets to drill-through to a device list.  
 
   - When you select a device in this list, you can now start **CMPivot** and **Run Scripts** from the Device group of the ribbon.  
-
-### Multiselect and delete packages
-
-<!--4616810-->
-In the **Software Library** workspace, expand **Application Management**, and select the **Packages** node. select more than one package. In the Package group of the ribbon, you can now delete more than one package at a time.
 
 ### Order by program name in task sequence
 

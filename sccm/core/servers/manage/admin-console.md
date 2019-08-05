@@ -2,7 +2,7 @@
 title: Configuration Manager Console
 titleSuffix: Configuration Manager
 description: Learn about navigating through the Configuration Manager console.
-ms.date: 07/26/2019
+ms.date: 08/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -332,13 +332,6 @@ This behavior significantly improves the time it takes to search by name, especi
 *(Introduced in version 1906)*
 
 In the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node. Edit a task sequence, and select or add the [Install Package](/sccm/osd/understand/task-sequence-steps#BKMK_InstallPackage) step. If a package has more than one program, the drop-down list now sorts the programs alphabetically.
-
-#### Multiselect and delete packages
-<!--4616810-->
-*(Introduced in version 1906)*
-
-In the **Software Library** workspace, expand **Application Management**, and select the **Packages** node. select more than one package. In the Package group of the ribbon, you can now delete more than one package at a time.
-
 
 #### Task sequences tab in applications node
 <!--4616810-->
