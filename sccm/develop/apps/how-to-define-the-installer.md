@@ -370,5 +370,4 @@ To define the application management deployment technology installer, use an ins
  Microsoft.ConfigurationManagement.ApplicationManagement.dll  
 
 ## See Also  
- [Scenario: Extending Application Management](../../develop/apps/scenario--extending-application-management.md)   
  [Configuration Manager Reference](../../develop/reference/configuration-manager-reference.md)

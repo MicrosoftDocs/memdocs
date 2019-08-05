@@ -19,7 +19,7 @@ You can import a Windows driver that is described by a Txtsetup.oem file, in Sys
 
 ### To import a Windows driver  
 
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Call the [SMS_Driver](../../develop/reference/osd/sms_driver-server-wmi-class.md) class [CreateFromOEM](../../develop/reference/osd/createfromoem-method-in-class-sms_driver.md) method to get a collection of management base objects.  
 
@@ -226,6 +226,6 @@ public string GetDriverName(IResultObject driver)
 ## .NET Framework Security  
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
-## See Also  
- [How to Specify The Supported Platforms for a Driver](../../develop/osd/how-to-specify-the-supported-platforms-for-a-driver.md)   
- [Operating System Deployment Driver Management](../../develop/osd/operating-system-deployment-driver-management.md)
+## See also
+
+[How to specify the supported platforms for a driver](/sccm/develop/osd/how-to-specify-the-supported-platforms-for-a-driver)

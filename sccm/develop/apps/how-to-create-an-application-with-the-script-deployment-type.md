@@ -272,5 +272,4 @@ namespace ApplicationCreator
  For more information about error handling, see [About Configuration Manager Errors](../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## See Also  
- [Configuration Manager Application Management](../../develop/apps/application-management.md)   
  [SMS_Collection Server WMI Class](../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md)

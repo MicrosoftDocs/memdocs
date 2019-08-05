@@ -105,7 +105,4 @@ Only references to content defined as System Definition Model language (SDM) can
 ```  
 
 ## See Also  
- [Authoring Compliance Settings Configuration Baselines and Configuration Items](../../develop/compliance/authoring-compliance-settings-configuration-baselines-and-configuration-items.md)   
- [Configuration Baseline Examples](../../develop/compliance/configuration-baseline-examples.md)   
- [Application Configuration Item Examples](../../develop/compliance/application-configuration-item-examples.md)   
- [Operating System Configuration Item Examples](../../develop/compliance/operating-system-configuration-item-examples.md)
+[About authoring configuration baselines and items](/sccm/develop/compliance/about-authoring-configuration-baselines-and-configuration-items)

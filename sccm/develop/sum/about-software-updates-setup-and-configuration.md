@@ -28,8 +28,3 @@ Before software update compliance assessment data is displayed in the System Cen
 
 ## Software Updates Client Agent  
  When the Software Updates Client Agent is enabled in Configuration Manager, it sends a policy to the client computers that are assigned to the site. This policy requests that the software updates components be enabled. The Software Updates Client Agent components work together to perform compliance assessment scans, install software updates at their configured deadline or when they are manually initiated, and reevaluate whether previously installed software updates are still installed, and if not, install them again. The Software Updates Client Agent properties are site-wide client settings.  
-
-## See Also  
- [Configuration Manager SDK](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
- [Software Updates Setup and Configuration](../../develop/sum/software-updates-setup-and-configuration.md)

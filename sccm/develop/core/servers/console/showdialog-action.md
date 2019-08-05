@@ -42,7 +42,7 @@ The `ShowDialog` action, in System Center Configuration Manager, opens a propert
 </ActionDescription>  
 ```  
 
- For more information about creating and showing dialog boxes, see [Configuration Manager Console Dialog Boxes](../../../../develop/core/servers/console/console-forms.md).  
+ For more information about creating and showing dialog boxes, see [About console forms](/sccm/develop/core/servers/console/about-configuration-manager-console-forms).  
 
 ## See Also  
  [About Configuration Manager Dialog Boxes](../../../../develop/core/servers/console/about-configuration-manager-console-forms.md)   

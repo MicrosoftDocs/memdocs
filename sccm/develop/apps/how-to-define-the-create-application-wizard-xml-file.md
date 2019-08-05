@@ -32,5 +32,4 @@ To define the custom deployment technology XML file, create an XML file based on
     ```  
 
 ## See Also  
- [Scenario: Extending Application Management](../../develop/apps/scenario--extending-application-management.md)   
  [Configuration Manager Reference](../../develop/reference/configuration-manager-reference.md)

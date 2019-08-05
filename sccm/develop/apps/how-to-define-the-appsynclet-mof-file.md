@@ -119,5 +119,4 @@ To define a custom synclet MOF file, create an instance of the CCM_AppHandlers c
     ```  
 
 ## See Also  
- [Scenario: Extending Application Management](../../develop/apps/scenario--extending-application-management.md)   
  [Configuration Manager Reference](../../develop/reference/configuration-manager-reference.md)

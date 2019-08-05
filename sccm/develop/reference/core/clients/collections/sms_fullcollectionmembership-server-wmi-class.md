@@ -336,5 +336,6 @@ Class SMS_FullCollectionMembership : SMS_BaseClass
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
-## See Also  
- [Configuration Manager Collections](../../../../../develop/core/clients/collections/collections.md)
+## See Also
+
+[Enumerate the members of a collection](/sccm/develop/core/clients/collections/how-to-enumerate-the-members-of-a-collection)

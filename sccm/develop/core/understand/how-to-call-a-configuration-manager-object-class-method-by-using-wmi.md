@@ -19,7 +19,7 @@ To call a SMS Provider class method, in System Center Configuration Manager, you
 
 ### To call a Configuration Manager object class method  
 
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Using the SWbemServices you obtain in step one, call [Get](https://msdn.microsoft.com/library/aa393868.aspx) to get the class definition.  
 
@@ -87,7 +87,7 @@ Sub ValidateQueryRule(connection, wqlQuery)
 
 ## See Also  
  [Windows Management Instrumentation](http://go.microsoft.com/fwlink/?LinkId=43950)   
- [Configuration Manager Objects](../../../develop/core/understand/configuration-manager-objects-overview.md)   
+ [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)
  [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)   
  [How to Create a Configuration Manager Object by Using WMI](../../../develop/core/understand/how-to-create-a-configuration-manager-object-by-using-wmi.md)   
  [How to Delete a Configuration Manager Object by Using WMI](../../../develop/core/understand/how-to-delete-a-configuration-manager-object-by-using-wmi.md)   
@@ -96,4 +96,3 @@ Sub ValidateQueryRule(connection, wqlQuery)
  [How to Perform a Synchronous Configuration Manager Query by Using WMI](../../../develop/core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-wmi.md)   
  [How to Read a Configuration Manager Object by Using WMI](../../../develop/core/understand/how-to-read-a-configuration-manager-object-by-using-wmi.md)   
  [How to Read Lazy Properties by Using WMI](../../../develop/core/understand/how-to-read-lazy-properties-by-using-wmi.md)   
- [How to Use Configuration Manager Objects With WMI](../../../develop/core/understand/how-to-use-configuration-manager-objects-with-wmi.md)

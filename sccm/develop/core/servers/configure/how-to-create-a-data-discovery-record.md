@@ -133,8 +133,6 @@ public void CreateNewDDR()
 ## .NET Framework Security  
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../../../develop/core/understand/securing-configuration-manager-applications.md).  
 
-## See Also  
- [Configuration Manager SDK](../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Discovery](../../../../develop/core/servers/configure/discovery.md)   
- [Extending Resource Discovery](../../../../develop/core/servers/configure/extending-resource-discovery.md)   
- [SMSResGen COM Automation Class](../../../../develop/reference/core/servers/configure/smsresgen-com-automation-class.md)
+## See also
+
+[SMSResGen COM Automation Class](../../../../develop/reference/core/servers/configure/smsresgen-com-automation-class.md)

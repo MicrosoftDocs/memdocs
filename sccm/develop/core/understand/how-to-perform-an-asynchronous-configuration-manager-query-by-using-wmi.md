@@ -78,7 +78,7 @@ End Sub
 
 ## See Also  
  [Windows Management Instrumentation](http://go.microsoft.com/fwlink/?LinkId=43950)   
- [Configuration Manager Objects](../../../develop/core/understand/configuration-manager-objects-overview.md)   
+ [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)
  [How to Call a Configuration Manager Object Class Method by Using WMI](../../../develop/core/understand/how-to-call-a-configuration-manager-object-class-method-by-using-wmi.md)   
  [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)   
  [How to Create a Configuration Manager Object by Using WMI](../../../develop/core/understand/how-to-create-a-configuration-manager-object-by-using-wmi.md)   
@@ -87,8 +87,7 @@ End Sub
  [How to Perform a Synchronous Configuration Manager Query by Using WMI](../../../develop/core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-wmi.md)   
  [How to Read a Configuration Manager Object by Using WMI](../../../develop/core/understand/how-to-read-a-configuration-manager-object-by-using-wmi.md)   
  [How to Read Lazy Properties by Using WMI](../../../develop/core/understand/how-to-read-lazy-properties-by-using-wmi.md)   
- [How to Use Configuration Manager Objects With WMI](../../../develop/core/understand/how-to-use-configuration-manager-objects-with-wmi.md)   
  [Configuration Manager Extended WMI Query Language](../../../develop/core/understand/extended-wmi-query-language.md)   
  [Configuration Manager Result Sets](../../../develop/core/understand/result-sets.md)   
  [Configuration Manager Special Queries](../../../develop/core/understand/special-queries.md)   
- [Configuration Manager Queries](../../../develop/core/understand/queries.md)
+ [About queries](/sccm/develop/core/understand/about-configuration-manager-queries)

@@ -39,5 +39,3 @@ The GUID for `IProgressUI` is B64D758A-01C2-4bf0-9F17-621EFB9CF697.
 - [ProgressUI Class](/sccm/develop/reference/core/clients/client-classes/progressui-client-com-automation-class)  
 
 - [About reporting Configuration Manager custom action progress](/sccm/develop/osd/about-reporting-configuration-manager-custom-action-progress)  
-
-- [Extending OS deployment](/sccm/develop/osd/extending-operating-system-deployment)  

@@ -78,8 +78,3 @@ In System Center Configuration Manager, the architecture for a resource is defin
 
 #### Client Type  
  Client type 1 is the System Center Configuration Manager client type.  
-
-## See Also  
- [System Center Configuration Manager Software Development Kit](../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Discovery](../../../../develop/core/servers/configure/discovery.md)   
- [Extending Discovery and Inventory](../../../../develop/core/servers/configure/extending-resource-discovery.md)

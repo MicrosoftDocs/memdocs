@@ -106,5 +106,4 @@ After the Deployment Type Extension file (*.cmdtx) is created, you are expected 
  Microsoft.ConfigurationManagement.ManagementProvider.dll  
 
 ## See Also  
- [Scenario: Extending Application Management](../../develop/apps/scenario--extending-application-management.md)   
  [Configuration Manager Reference](../../develop/reference/configuration-manager-reference.md)

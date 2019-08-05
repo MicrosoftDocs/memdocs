@@ -63,6 +63,6 @@ sint32 GetTestSmtpConnectionResult(
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
-## See Also  
- [SMS_Subscription Server WMI Class](../../../../../develop/reference/core/servers/manage/sms_subscription-server-wmi-class.md)   
- [Alert System WMI Server Classes](../../../../../develop/reference/core/servers/manage/alert-system-server-wmi-classes.md)
+## See also
+
+[SMS_Subscription server WMI class](/sccm/develop/reference/core/servers/manage/sms_subscription-server-wmi-class)

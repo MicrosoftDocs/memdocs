@@ -118,6 +118,3 @@ Class SMS_DCMAgentConfig : SMS_ClientAgentConfig_BaseClass
 
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Client Configuration Server WMI Classes](../../../../../develop/reference/core/clients/config/client-configuration-server-wmi-classes.md)

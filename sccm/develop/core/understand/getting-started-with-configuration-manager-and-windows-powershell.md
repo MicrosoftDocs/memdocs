@@ -56,6 +56,3 @@ In System Center Configuration Manager, Windows PowerShell allows you to manage 
 - [Microsoft: Windows Server\Windows PowerShell](http://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserverpowershell)  
 
 - [MVP Kaido Järvemets: Configuration Manager PowerShell SDK](http://cm12sdk.net/)  
-
-## See Also  
- [Configuration Manager Programming Fundamentals](../../../develop/core/understand/configuration-manager-programming-fundamentals.md)

@@ -14,9 +14,6 @@ ms.collection: M365-identity-device-management
 # How to Check if a User Has Permissions for a Resource
 In System Center Configuration Manager, you can check whether a user has permission for a resource using the `GetCollectionsWithResourcePermissions` method in the `SMS_RbacSecuredObject` class.  
 
-> [!IMPORTANT]
->  The [SMS_SecuredObject Server WMI Class](../../../../develop/reference/misc/sms_securedobject-server-wmi-class.md) contains a list of available permissions.  
-
 ### To check if a user has permissions for a resource  
 
 1.  Create a dictionary object to pass object name and permissions to check for to the [GetCollectionsWithResourcePermissions Method in Class SMS_RbacSecuredObject](../../../../develop/reference/core/servers/configure/getcollectionswithresourcepermissions-method-in-class-sms_rbacsecuredobject.md).  

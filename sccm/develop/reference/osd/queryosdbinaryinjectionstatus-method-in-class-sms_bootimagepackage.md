@@ -95,7 +95,7 @@ SInt32 QueryOSDBinaryInjectionStatus(
 ## Remarks  
  To use the `QueryOSDBinaryInjectionStatus` method, your application must:  
 
-1.  Establish a connection to the SMS Provider. For more information see, [About the SMS Provider in Configuration Manager](../../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Establish a connection to the SMS Provider. For more information see, [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Access the [SMS_BootImagePackage Server WMI Class](../../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md) object.  
 

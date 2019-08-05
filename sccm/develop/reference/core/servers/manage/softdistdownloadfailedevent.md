@@ -45,6 +45,3 @@ In Configuration Manager, the `SoftDistDownloadFailedEvent` message is raised wh
  Data type: `Int32`  
 
  The severity of the failed event. The default value is 2.  
-
-## See Also  
- [Status Message Types](../../../../../develop/reference/core/servers/manage/status-message-types.md)

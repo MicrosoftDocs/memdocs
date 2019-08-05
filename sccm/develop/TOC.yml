@@ -1,17 +1,17 @@
-- name: System Center Configuration Manager SDK
-- name: About the Configuration Manager SDK 
+- name: Configuration Manager SDK
+  href: core/misc/system-center-configuration-manager-sdk.md
+- name: Overview
+  expanded: true
   items:
   - name: Configuration Manager SDK overview
     href: core/misc/system-center-configuration-manager-sdk.md
   - name: Privacy information
     href: core/misc/privacy/privacy-information.md
-  - name: What's new in the Configuration Manager SDK
+  - name: What's new in the SDK
     href: core/changes/what-s-new-in-the-system-center-configuration-manager-sdk.md
-- name: Configuration Manager SDK requirements
+- name: Requirements
   items:
-  - name: Configuration Manager SDK requirements overview
-    href: core/reqs/configuration-manager-sdk-requirements.md
-  - name: About Configuration Manager SDK requirements
+  - name: About SDK requirements
     href: core/reqs/about-configuration-manager-sdk-requirements.md
   - name: Client runtime requirements
     href: core/reqs/client-runtime-requirements.md
@@ -21,62 +21,50 @@
     href: core/reqs/client-development-requirements.md
   - name: Server development requirements
     href: core/reqs/server-development-requirements.md
-  - name: Configuration Manager SDK libraries and header files
+  - name: SDK libraries and header files
     href: core/reqs/configuration-manager-sdk-libraries-and-header-files.md
-- name: Configuration Manager SDK samples
+- name: SDK samples
   href: core/understand/configuration-manager-sdk-samples.md
-- name: Configuration Manager programming fundamentals
+- name: Programming fundamentals
   items:
-  - name: About Configuration Manager programming fundamentals
-    href: core/understand/configuration-manager-programming-fundamentals.md
-  - name: Getting started with Configuration Manager programming
+  - name: Get started with Configuration Manager programming
     items:
-    - name: Get started with Configuration Manager Programming
+    - name: Get started with Configuration Manager programming
       href: core/understand/getting-started-with-configuration-manager-programming.md
     - name: Architectural overview
       href: core/understand/architectural-overview.md
     - name: Introduction to WBEMTEST
       href: core/understand/introduction-to-wbemtest.md
-    - name: Simple example of List, Create, Modify, and Delete
+    - name: Simple example of list, create, modify, and delete
       href: core/understand/simple-example-of-list--create--modify--and-delete.md
-  - name: Getting started with Configuration Manager and Windows PowerShell
+  - name: Get started with Configuration Manager and Windows PowerShell
     items:
     - name: Get started with Configuration Manager and Windows PowerShell
       href: core/understand/getting-started-with-configuration-manager-and-windows-powershell.md
     - name: Windows PowerShell basics
       href: core/understand/windows-powershell-basics.md
-    - name: Connecting to Configuration Manager with Windows PowerShell
+    - name: Connect to Configuration Manager with Windows PowerShell
       href: core/understand/connecting-to-configuration-manager-with-windows-powershell.md
-  - name: Calling Configuration Manager code snippets
+  - name: Call Configuration Manager code snippets
     href: core/understand/calling-code-snippets.md
-  - name: Configuration Manager accounts
+  - name: Encrypt passwords or data for a site
+    href: core/understand/how-to-encrypt-passwords-or-data-for-a-site.md
+  - name: Errors
     items:
-    - name: Configuration Manager accounts overview
-      href: core/understand/configuration-manager-accounts.md
-    - name: How to Encrypt Passwords or Data for a Site
-      href: core/understand/how-to-encrypt-passwords-or-data-for-a-site.md
-  - name: Configuration Manager errors
-    items:
-    - name: Configuration Manager errors overview
-      href: core/understand/configuration-manager-errors.md
-    - name: About Configuration Manager errors
+    - name: About errors
       href: core/understand/about-configuration-manager-errors.md
-    - name: How to handle Configuration Manager asynchronous errors by using managed code
+    - name: Handle asynchronous errors by using managed code
       href: core/understand/how-to-handle-configuration-manager-asynchronous-errors-by-using-managed-code.md
-    - name: How to handle Configuration Manager synchronous errors by using managed code
+    - name: Handle synchronous errors by using managed code
       href: core/understand/how-to-handle-configuration-manager-synchronous-errors-by-using-managed-code.md
-    - name: How to handle Configuration Manager asynchronous errors by using WMI
+    - name: Handle asynchronous errors by using WMI
       href: core/understand/how-to-handle-configuration-manager-asynchronous-errors-by-using-wmi.md
-    - name: How to handle Configuration Manager synchronous errors by using WMI
+    - name: Handle synchronous errors by using WMI
       href: core/understand/how-to-handle-configuration-manager-synchronous-errors-by-using-wmi.md
-  - name: Configuration Manager objects
+  - name: Objects
     items:
-    - name: Configuration Manager objects overview
-      href: core/understand/configuration-manager-objects.md
-    - name: About Configuration Manager objects
+    - name: About objects
       items:
-      - name: About Configuration Manager objects
-        href: core/understand/about-configuration-manager-objects.md
       - name: Objects overview
         href: core/understand/configuration-manager-objects-overview.md
       - name: Object security
@@ -97,106 +85,92 @@
         href: core/understand/result-sets.md
       - name: Special queries
         href: core/understand/special-queries.md
-    - name: How to use Configuration Manager objects with managed code
+    - name: Use objects with managed code
       items:
-      - name: Use Configuration Manager objects with managed code overview
-        href: core/understand/how-to-use-configuration-manager-objects-with-managed-code.md
-      - name: How to create an object by using managed code
+      - name: Create an object
         href: core/understand/how-to-create-a-configuration-manager-object-by-using-managed-code.md
-      - name: How to read an object by using managed code
+      - name: Read an object
         href: core/understand/how-to-read-a-configuration-manager-object-by-using-managed-code.md
-      - name: How to modify an object by using managed code
+      - name: Modify an object
         href: core/understand/how-to-modify-a-configuration-manager-object-by-using-managed-code.md
-      - name: How to delete an object by using managed code
+      - name: Delete an object
         href: core/understand/how-to-delete-a-configuration-manager-object-by-using-managed-code.md
-      - name: How to perform an asynchronous query by using managed code
+      - name: Perform an asynchronous query
         href: core/understand/how-to-perform-an-asynchronous-query-by-using-managed-code.md
-      - name: How to perform a synchronous query by using managed code
+      - name: Perform a synchronous query
         href: core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-managed-code.md
-      - name: How to read lazy properties by using managed code
+      - name: Read lazy properties
         href: core/understand/how-to-read-lazy-properties-by-using-managed-code.md
-      - name: How to call a Configuration Manager object class method by using managed code
+      - name: Call an object class method
         href: core/understand/how-to-call-a-configuration-manager-object-class-method-by-using-managed-code.md
-    - name: How to use Configuration Manager objects with WMI
+    - name: Use objects with WMI
       items:
-      - name: Use Configuration Manager objects with WMI overview
-        href: core/understand/how-to-use-configuration-manager-objects-with-wmi.md
-      - name: How to create an object by using WMI
+      - name: Create an object
         href: core/understand/how-to-create-a-configuration-manager-object-by-using-wmi.md
-      - name: How to read a Configuration Manager object by using WMI
+      - name: Read an object
         href: core/understand/how-to-read-a-configuration-manager-object-by-using-wmi.md
-      - name: How to modify an object by using WMI
+      - name: Modify an object
         href: core/understand/how-to-modify-a-configuration-manager-object-by-using-wmi.md
-      - name: How to delete a Configuration Manager object by using WMI
+      - name: Delete an object
         href: core/understand/how-to-delete-a-configuration-manager-object-by-using-wmi.md
-      - name: How to perform a synchronous query by using WMI
+      - name: Perform a synchronous query
         href: core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-wmi.md
-      - name: How to perform an asynchronous query by using WMI
+      - name: Perform an asynchronous query
         href: core/understand/how-to-perform-an-asynchronous-configuration-manager-query-by-using-wmi.md
-      - name: How to read lazy properties by using WMI
+      - name: Read lazy properties
         href: core/understand/how-to-read-lazy-properties-by-using-wmi.md
-      - name: How to call a Configuration Manager object class method by using WMI
+      - name: Call an object class method
         href: core/understand/how-to-call-a-configuration-manager-object-class-method-by-using-wmi.md
-  - name: Configuration Manager queries
+  - name: Queries
     items:
-    - name: Configuration Manager queries overview
-      href: core/understand/queries.md
-    - name: About Configuration Manager queries
+    - name: About queries
       href: core/understand/about-configuration-manager-queries.md
-    - name: How to run a query
+    - name: Run a query
       href: core/understand/how-to-run-a-query.md
-    - name: How to create a query
+    - name: Create a query
       href: core/understand/how-to-create-a-configuration-manager-query.md
-  - name: Configuration Manager SEDO
+  - name: SEDO
     items:
-    - name: Configuration Manager SEDO overview
+    - name: SEDO overview
       href: core/understand/sedo.md
-    - name: How to acquire a lock on a SEDO-enabled object
+    - name: Acquire a lock on a SEDO-enabled object
       href: core/understand/how-to-acquire-a-lock-on-a-sedo-enabled-object.md
-    - name: How to release a lock on a SEDO-enabled object
+    - name: Release a lock on a SEDO-enabled object
       href: core/understand/how-to-release-a-lock-on-a-sedo-enabled-object.md
-  - name: Configuration Manager schedules
+  - name: Schedules
     items:
-    - name: Configuration Manager schedules overview
-      href: core/understand/schedules.md
-    - name: About Configuration Manager schedules
+    - name: About schedules
       href: core/understand/about-configuration-manager-schedules.md
-    - name: How to create a schedule token
+    - name: Create a schedule token
       href: core/understand/how-to-create-a-schedule-token.md
-  - name: Configuration Manager site control file
+  - name: Site control file
     items:
-    - name: Configuration Manager site control file overview
-      href: core/understand/site-control-file.md
-    - name: About the Configuration Manager site control file
+    - name: About the site control file
       href: core/understand/about-the-configuration-manager-site-control-file.md
-    - name: How to read and write to the site control file by using managed code
+    - name: Read and write with managed code
       href: core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md
-    - name: How to read and write to the site control file by using WMI
+    - name: Read and write with WMI
       href: core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md
-    - name: How to read a site control file embedded property list
+    - name: Read a site control file embedded property list
       href: core/understand/how-to-read-a-configuration-manager-site-control-file-embedded-property-list.md
-    - name: 'How to deploy a site system role (Example: Fallback Status Point)'
+    - name: Deploy a site system role
       href: core/understand/how-to-deploy-a-site-system-role--example---fallback-status-point-.md
-  - name: Configuration Manager class schema
+  - name: Class schema
     items:
-    - name: Configuration Manager class schema
+    - name: Class schema overview
       href: core/understand/configuration-manager-class-schema.md
     - name: Date and time formats
       href: core/understand/date-and-time-formats.md
-    - name: Interpreting bitfield properties
+    - name: Interpret bitfield properties
       href: core/understand/interpreting-bitfield-properties.md
     - name: Lazy properties
       href: core/understand/lazy-properties.md
     - name: SMS Provider field length restrictions
       href: core/understand/sms-provider-field-length-restrictions.md
-  - name: Configuration Manager schema
+  - name: Database schema and views
     items:
-    - name: Configuration Manager schema
-      href: core/understand/configuration-manager-schema.md
-    - name: About Configuration Manager schema
+    - name: About the database schema
       items:
-      - name: About Configuration Manager schema
-        href: core/understand/about-configuration-manager-schema.md
       - name: Schema overview
         href: core/understand/configuration-manager-schema-overview.md
       - name: Schema SQL views
@@ -205,175 +179,171 @@
         href: core/understand/configuration-manager-schema-view-mapping.md
       - name: SQL view security
         href: core/understand/sql-view-security.md
-    - name: How to see a Configuration Manager view by using SQL Server
+    - name: See a Configuration Manager view by using SQL Server
       href: core/understand/how-to-see-a-configuration-manager-view-by-using-sql-server.md
-    - name: Create Custom Reports by Using SQL Server Views
+    - name: Create custom reports by using SQL Server views
       items:
       - name: Overview
         href: core/understand/sqlviews/create-custom-reports-using-sql-server-views.md
-      - name: SQL Server Views
+      - name: SQL Server views
         items:
         - name: Overview
           href: core/understand/sqlviews/sql-server-views-configuration-manager.md
-        - name: Application Management Views
+        - name: Application management views
           href: core/understand/sqlviews/application-management-views-configuration-manager.md
-        - name: Client Deployment Views
+        - name: Client deployment views
           href: core/understand/sqlviews/client-deployment-views-configuration-manager.md
-        - name: Client Status Views
+        - name: Client status views
           href: core/understand/sqlviews/client-status-views-configuration-manager.md
-        - name: Collection Views
+        - name: Collection views
           href: core/understand/sqlviews/collection-views-configuration-manager.md
-        - name: Compliance Settings Views
+        - name: Compliance settings views
           href: core/understand/sqlviews/compliance-settings-views-configuration-manager.md
-        - name: Content Management Views
+        - name: Content management views
           href: core/understand/sqlviews/content-management-views-configuration-manager.md
-        - name: Discovery Views
+        - name: Discovery views
           href: core/understand/sqlviews/discovery-views-configuration-manager.md
-        - name: Endpoint Protection Views
+        - name: Endpoint Protection views
           href: core/understand/sqlviews/endpoint-protection-views-configuration-manager.md
-        - name: Inventory Views
+        - name: Inventory views
           items:
-          - name: Overview of Inventory Views
+          - name: Overview of inventory views
             href: core/understand/sqlviews/inventory-views-configuration-manager.md
-          - name: Hardware Inventory Views
+          - name: Hardware inventory views
             href: core/understand/sqlviews/hardware-inventory-views-configuration-manager.md
-          - name: Software Inventory Views
+          - name: Software inventory views
             href: core/understand/sqlviews/software-inventory-views-configuration-manager.md
-          - name: Asset Intelligence Views
+          - name: Asset Intelligence views
             href: core/understand/sqlviews/asset-intelligence-views-configuration-manager.md
-        - name: Migration Views
+        - name: Migration views
           href: core/understand/sqlviews/migration-views-configuration-manager.md
-        - name: Mobile Device Management Views
+        - name: MDM views
           href: core/understand/sqlviews/mobile-device-management-views-configuration-manager.md
-        - name: Operating System Deployment Views
+        - name: OS deployment views
           href: core/understand/sqlviews/operating-system-deployment-views-configuration-manager.md
-        - name: Power Management Views
+        - name: Power management views
           href: core/understand/sqlviews/power-management-views-configuration-manager.md
-        - name: Query Views
+        - name: Query views
           href: core/understand/sqlviews/query-views-configuration-manager.md
-        - name: Reporting Views
+        - name: Reporting views
           href: core/understand/sqlviews/reporting-views-configuration-manager.md
-        - name: Schema Views
+        - name: Schema views
           href: core/understand/sqlviews/schema-views-configuration-manager.md
-        - name: Security Views
+        - name: Security views
           href: core/understand/sqlviews/security-views-configuration-manager.md
-        - name: Site Administration Views
+        - name: Site administration views
           href: core/understand/sqlviews/site-admin-views-configuration-manager.md
-        - name: Software Metering Views
+        - name: Software metering views
           href: core/understand/sqlviews/software-metering-views-configuration-manager.md
-        - name: Software Updates Views
+        - name: Software update views
           href: core/understand/sqlviews/software-updates-views-configuration-manager.md
-        - name: Status and Alert Views
+        - name: Status and alert views
           href: core/understand/sqlviews/status-alert-views-configuration-manager.md
-        - name: Wake On LAN Views
+        - name: Wake On LAN views
           href: core/understand/sqlviews/wake-lan-views-configuration-manager.md
-      - name: Work with Reports
+      - name: Work with reports
         items:
-        - name: Evaluation of Existing Reports
+        - name: Evaluation of existing reports
           items:
-          - name: Evaluation of the All Collections Report
+          - name: Evaluation of the All Collections report
             href: core/understand/sqlviews/evaluation-all-collections-report-configuration-manager.md
-          - name: Evaluation of the Computer Information Report
+          - name: Evaluation of the Computer Information report
             href: core/understand/sqlviews/evaluation-computer-information-report-configuration-manager.md
-        - name: How to View the SQL Statement for Reports
+        - name: View the SQL statement for reports
           href: core/understand/sqlviews/how-to-view-sql-statement-configuration-manager-reports.md
-        - name: How to Modify Reports
+        - name: Modify reports
           href: core/understand/sqlviews/how-to-modify-configuration-manager-reports.md
-        - name: How to Create Reports
+        - name: Create reports
           href: core/understand/sqlviews/how-to-create-configuration-manager-reports.md
-        - name: How to Run Reports
+        - name: Run reports
           href: core/understand/sqlviews/how-to-run-configuration-manager-reports.md
-        - name: Exercises for Creating Custom Reports
+        - name: Exercises for creating custom reports
           items:
-          - name: Exercise 1 - Run an Existing Report
+          - name: Exercise 1 - Run an existing report
             href: core/understand/sqlviews/exercise-1-run-existing-configuration-manager-report.md
-          - name: Exercise 2 - Modify an Existing Report
+          - name: Exercise 2 - Modify an existing report
             href: core/understand/sqlviews/exercise-2-modify-existing-configuration-manager-report.md
-          - name: Exercise 3 - Create a New Report
+          - name: Exercise 3 - Create a new report
             href: core/understand/sqlviews/exercise-3-create-new-configuration-manager-report.md
-          - name: Advanced Exercise 1 - Create a New Report for Compliance Settings
+          - name: Advanced exercise 1 - Create a new report for compliance settings
             href: core/understand/sqlviews/advanced-exercise-1-create-new-report-compliance-settings-configuration-manager.md
-          - name: Advanced Exercise 1 Solution - Create a New Report for Compliance Settings
+          - name: Advanced exercise 1 - Solution
             href: core/understand/sqlviews/advanced-exercise-1-solution-create-new-report-compliance-settings-configuration-manager.md
-          - name: Advanced Exercise 2 - Create a New Report for Hardware Inventory
+          - name: Advanced exercise 2 - Create a new report for hardware inventory
             href: core/understand/sqlviews/advanced-exercise-2-create-new-report-hardware-inventory-configuration-manager.md
-          - name: Advanced Exercise 2 Solution - Create a New Report for Hardware Inventory
+          - name: Advanced exercise 2 - Solution
             href: core/understand/sqlviews/advanced-exercise-2-solution-create-new-report-hardware-inventory-configuration-manager.md
-      - name: Technical Reference for SQL Server Views
+      - name: Technical reference for SQL Server views
         items:
-        - name: Sample Queries Using the SQL Views
+        - name: Sample queries using the SQL views
           items:
-          - name: Sample Queries for Application Management
+          - name: Application management
             href: core/understand/sqlviews/sample-queries-application-management-configuration-manager.md
-          - name: Sample Queries for Client Deployment
+          - name: Client deployment
             href: core/understand/sqlviews/sample-queries-client-deployment-configuration-manager.md
-          - name: Sample Queries for Client Status
+          - name: Client status
             href: core/understand/sqlviews/sample-queries-client-status-configuration-manager.md
-          - name: Sample Queries for Collections
+          - name: Collections
             href: core/understand/sqlviews/sample-queries-collections-configuration-manager.md
-          - name: Sample Queries for Compliance Settings
+          - name: Compliance settings
             href: core/understand/sqlviews/sample-queries-compliance-settings-configuration-manager.md
-          - name: Sample Queries for Content Management
+          - name: Content management
             href: core/understand/sqlviews/sample-queries-content-management-configuration-manager.md
-          - name: Sample Queries for Discovery
+          - name: Discovery
             href: core/understand/sqlviews/sample-queries-discovery-configuration-manager.md
-          - name: Sample Queries for Endpoint Protection
+          - name: Endpoint Protection
             href: core/understand/sqlviews/sample-queries-endpoint-protection-configuration-manager.md
-          - name: Sample Queries for Inventory
+          - name: Inventory
             items:
-            - name: Sample Queries for Hardware Inventory
+            - name: Hardware Inventory
               href: core/understand/sqlviews/sample-queries-hardware-inventory-configuration-manager.md
-            - name: Sample Queries for Software Inventory
+            - name: Software Inventory
               href: core/understand/sqlviews/sample-queries-software-inventory-configuration-manager.md
-            - name: Sample Queries for Asset Intelligence
+            - name: Asset Intelligence
               href: core/understand/sqlviews/sample-queries-asset-intelligence-configuration-manager.md
-          - name: Sample Queries for Mobile Device Management
+          - name: MDM
             href: core/understand/sqlviews/sample-queries-mobile-device-management-configuration-manager.md
-          - name: Sample Queries for Operating System Deployment
+          - name: OS deployment
             href: core/understand/sqlviews/sample-queries-operating-system-deployment-configuration-manager.md
-          - name: Sample Queries for Power Management
+          - name: Power management
             href: core/understand/sqlviews/sample-queries-power-management-configuration-manager.md
-          - name: Sample Queries for Queries
+          - name: Queries
             href: core/understand/sqlviews/sample-queries-for-queries-configuration-manager.md
-          - name: Sample Queries for Security
+          - name: Security
             href: core/understand/sqlviews/sample-queries-security-configuration-manager.md
-          - name: Sample Queries for Site Administration
+          - name: Site administration
             href: core/understand/sqlviews/sample-queries-site-administration-configuration-manager.md
-          - name: Sample Queries for Software Metering
+          - name: Software metering
             href: core/understand/sqlviews/sample-queries-software-metering-configuration-manager.md
-          - name: Sample Queries for Software Updates
+          - name: Software updates
             href: core/understand/sqlviews/sample-queries-software-updates-configuration-manager.md
-          - name: Sample Queries for Status and Alerts
+          - name: Status and alerts
             href: core/understand/sqlviews/sample-queries-status-alerts-configuration-manager.md
-          - name: Sample Queries for Wake On LAN
+          - name: Wake On LAN
             href: core/understand/sqlviews/sample-queries-wake-lan-views-configuration-manager.md
-        - name: SQL Server Reference for Configuration Manager Reports
+        - name: SQL Server reference for Configuration Manager reports
           items:
-          - name: SQL Statement Reference for Reports
+          - name: SQL statement reference for reports
             href: core/understand/sqlviews/sql-statement-reference-configuration-manager-reports.md
-          - name: Use Query Designer to Write Report SQL Statements
+          - name: Use Query Designer to write report SQL statements
             href: core/understand/sqlviews/use-query-designer-write-configuration-manager-report-sql-statements.md
-          - name: How to Create a SQL Statement by Using Query Designer
+          - name: Create a SQL statement by using Query Designer
             href: core/understand/sqlviews/how-to-create-sql-statement-using-query-designer.md
-        - name: SMS Provider WMI Schema Reference
+        - name: SMS Provider WMI schema reference
           items:
           - name: Overview
             href: core/understand/sqlviews/sms-provider-wmi-schema-reference-configuration-manager.md
-          - name: WMI Namespaces and Classes for Reports
+          - name: WMI namespaces and classes for reports
             href: core/understand/sqlviews/wmi-namespaces-classes-configuration-manager-reports.md
-      - name: List of Reports Supplied with Configuration Manager
+      - name: List of reports in Configuration Manager
         href: core/understand/sqlviews/reports-supplied-with-configuration-manager.md
-  - name: SMS Provider in Configuration Manager
+  - name: SMS Provider
     items:
-    - name: SMS Provider in Configuration Manager overview
-      href: core/understand/sms-provider-in-configuration-manager.md
-    - name: About the SMS Provider in Configuration Manager
+    - name: About the SMS Provider
       items:
-      - name: About the SMS Provider
-        href: core/understand/about-the-sms-provider-in-configuration-manager.md
       - name: SMS Provider fundamentals
         href: core/understand/sms-provider-fundamentals.md
-      - name: WMI Provider fundamentals
+      - name: WMI provider fundamentals
         href: core/understand/wmi-configuration-manager-provider-fundamentals.md
       - name: Managed SMS Provider fundamentals
         href: core/understand/managed-sms-provider-fundamentals-in-configuration-manager.md
@@ -381,217 +351,167 @@
         href: core/understand/context-qualifiers.md
       - name: SMS Provider field length restrictions
         href: core/understand/sms-provider-field-length-restrictions-in-configuration-manager.md
-    - name: How to connect to an SMS Provider in Configuration Manager by using managed code
+    - name: Connect to an SMS Provider by using managed code
       href: core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md
-    - name: How to add a Configuration Manager context qualifier by using managed code
+    - name: Add a context qualifier by using managed code
       href: core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-managed-code.md
-    - name: How to connect to an SMS Provider in Configuration Manager by using WMI
+    - name: Connect to an SMS Provider by using WMI
       href: core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md
-    - name: How to add a Configuration Manager context qualifier by using WMI
+    - name: Add a context qualifier by using WMI
       href: core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md
-  - name: Securing Configuration Manager applications
+  - name: Secure Configuration Manager applications
     href: core/understand/securing-configuration-manager-applications.md
 - name: Application management
   items:
-  - name: Application management overview
-    href: apps/application-management.md
-  - name: How to create an application with the script deployment type
+  - name: Create an application with the script deployment type
     href: apps/how-to-create-an-application-with-the-script-deployment-type.md
-- name: Application management extension
-  items:
-  - name: Application management extension overview
-    href: apps/application-management-extension.md
-  - name: Deployment type extension versioning
-    href: apps/deployment-type-extension-versioning.md
-  - name: 'Scenario: Extending application management'
+  - name: Application management extension
     items:
-    - name: 'Scenario overview: Extending application management'
-      href: apps/scenario--extending-application-management.md
-    - name: Extending application management overview 
-      href: apps/extending-application-management-overview.md
-    - name: Creating the custom SDK assembly
+    - name: Deployment type extension versioning
+      href: apps/deployment-type-extension-versioning.md
+    - name: Scenario - Extend application management
       items:
-      - name: Creating the custom SDK assembly overview
-        href: apps/creating-the-custom-sdk-assembly.md
-      - name: How to define the deployment technology
-        href: apps/how-to-define-the-deployment-technology.md
-      - name: How to define the hosting technology
-        href: apps/how-to-define-the-hosting-technology.md
-      - name: How to define the installer technology
-        href: apps/how-to-define-the-installer-technology.md
-      - name: How to define the content importer
-        href: apps/how-to-define-the-content-importer.md
-      - name: How to define the installer
-        href: apps/how-to-define-the-installer.md
-      - name: How to define the resources
-        href: apps/how-to-define-the-resources.md
-    - name: Creating the registration XML files
-      items:
-      - name: Creating the registration XML files overview
-        href: apps/creating-the-registration-xml-files.md
-      - name: How to define the deployment technology registration file
-        href: apps/how-to-define-the-deployment-technology-registration-file.md
-      - name: How to define the hosting technology registration file
-        href: apps/how-to-define-the-hosting-technology-registration-file.md
-      - name: How to define the installer technology registration file
-        href: apps/how-to-define-the-installer-technology-registration-file.md
-    - name: Creating the UI extension
-      items:
-      - name: Creating the UI extension overview
-        href: apps/creating-the-ui-extension.md
-      - name: How to define the UI extension assembly
-        href: apps/how-to-define-the-ui-extension-assembly.md
-      - name: How to define the create application wizard XML file
-        href: apps/how-to-define-the-create-application-wizard-xml-file.md
-      - name: How to define the create deployment type wizard XML file
-        href: apps/how-to-define-the-create-deployment-type-wizard-xml-file.md
-      - name: How to define the deployment type property sheet XML file
-        href: apps/how-to-define-the-deployment-type-property-sheet-xml-file.md
-    - name: Creating the client files
-      items:
-      - name: Creating the client files overview
-        href: apps/creating-the-client-files.md
-      - name: How to Define the AppSynclet MOF File
-        href: apps/how-to-define-the-appsynclet-mof-file.md
-      - name: How to define the client-side handler
-        href: apps/how-to-define-the-client-side-handler.md
-    - name: Installing the application management extension
-      items:
-      - name: Installing the application management extension overview
-        href: apps/installing-the-application-management-extension.md
-      - name: How to create the deployment type extension file (*.cmdtx)
-        href: apps/how-to-create-the-deployment-type-extension-file-cmdtx.md
-      - name: How to create the windows installer file (*.msi)
-        href: apps/how-to-create-the-windows-installer-file-msi.md
-    - name: Verifying the application management extension
-      href: apps/verifying-the-application-management-extension.md
-- name: Asset Intelligence
-  items:
-  - name: Asset Intelligence overview
-    href: core/clients/asset-intelligence/asset-intelligence.md
-  - name: How to initiate a synchronization
-    href: core/clients/asset-intelligence/how-to-initiate-a-synchronization.md
+      - name: Scenario overview 
+        href: apps/extending-application-management-overview.md
+      - name: Create the custom SDK assembly
+        items:
+        - name: Define the deployment technology
+          href: apps/how-to-define-the-deployment-technology.md
+        - name: Define the hosting technology
+          href: apps/how-to-define-the-hosting-technology.md
+        - name: Define the installer technology
+          href: apps/how-to-define-the-installer-technology.md
+        - name: Define the content importer
+          href: apps/how-to-define-the-content-importer.md
+        - name: Define the installer
+          href: apps/how-to-define-the-installer.md
+        - name: Define the resources
+          href: apps/how-to-define-the-resources.md
+      - name: Create the registration XML files
+        items:
+        - name: Define the deployment technology registration file
+          href: apps/how-to-define-the-deployment-technology-registration-file.md
+        - name: Define the hosting technology registration file
+          href: apps/how-to-define-the-hosting-technology-registration-file.md
+        - name: Define the installer technology registration file
+          href: apps/how-to-define-the-installer-technology-registration-file.md
+      - name: Create the UI extension
+        items:
+        - name: Define the UI extension assembly
+          href: apps/how-to-define-the-ui-extension-assembly.md
+        - name: Define the create application wizard XML file
+          href: apps/how-to-define-the-create-application-wizard-xml-file.md
+        - name: Define the create deployment type wizard XML file
+          href: apps/how-to-define-the-create-deployment-type-wizard-xml-file.md
+        - name: Define the deployment type property sheet XML file
+          href: apps/how-to-define-the-deployment-type-property-sheet-xml-file.md
+      - name: Create the client files
+        items:
+        - name: Define the AppSynclet MOF File
+          href: apps/how-to-define-the-appsynclet-mof-file.md
+        - name: Define the client-side handler
+          href: apps/how-to-define-the-client-side-handler.md
+      - name: Install the application management extension
+        items:
+        - name: Create the deployment type extension file (cmdtx)
+          href: apps/how-to-create-the-deployment-type-extension-file-cmdtx.md
+        - name: Create the windows installer file (msi)
+          href: apps/how-to-create-the-windows-installer-file-msi.md
+      - name: Verify the application management extension
+        href: apps/verifying-the-application-management-extension.md
 - name: Client programming
   items:
-  - name: Client programming overview
-    href: core/clients/programming/client-programming.md
   - name: Configuration Manager client WMI programming
     items:
-    - name: Configuration Manager client WMI programming overview
-      href: core/clients/programming/client-wmi-programming.md
-    - name: About Configuration Manager WMI programming
+    - name: About WMI programming
       href: core/clients/programming/about-configuration-manager-wmi-programming.md
-    - name: How to connect to the Configuration Manager client WMI namespace by using System.Management
+    - name: Connect to the client WMI namespace by using System.Management
       href: core/clients/programming/how-to-connect-to-the-client-wmi-namespace.md
-    - name: How to read a WMI object by using System.Management
+    - name: Read a WMI object by using System.Management
       href: core/clients/programming/how-to-read-a-wmi-object-by-using-system.management.md
-    - name: How to perform a synchronous query by using System.Management
+    - name: Perform a synchronous query by using System.Management
       href: core/clients/programming/how-to-perform-a-synchronous-query-by-using-system.management.md
-    - name: How to perform an asynchronous query by using System.Management
+    - name: Perform an asynchronous query by using System.Management
       href: core/clients/programming/how-to-perform-an-asynchronous-query-by-using-system.management.md
-    - name: How to call a WMI class method by using System.Management
+    - name: Call a WMI class method by using System.Management
       href: core/clients/programming/how-to-call-a-wmi-class-method-by-using-system.management.md
   - name: Client resource conditions
     href: core/clients/programming/client-resource-conditions.md
-  - name: How to apply custom client settings
+  - name: Apply custom client settings
     href: core/clients/programming/how-to-apply-custom-client-settings.md
 - name: Collections
   items:
-  - name: Collections overview
-    href: core/clients/collections/collections.md
-  - name: How to create a dynamic collection
+  - name: Create a dynamic collection
     href: core/clients/collections/how-to-create-a-dynamic-collection.md
-  - name: How to create a static collection
+  - name: Create a static collection
     href: core/clients/collections/how-to-create-a-static-collection.md
-  - name: How to enumerate the members of a collection
+  - name: Enumerate the members of a collection
     href: core/clients/collections/how-to-enumerate-the-members-of-a-collection.md
-  - name: How to modify a collection
+  - name: Modify a collection
     href: core/clients/collections/how-to-modify-a-collection.md
-  - name: How to delete a collection
+  - name: Delete a collection
     href: core/clients/collections/how-to-delete-a-collection.md
-  - name: How to get the properties of a collection
+  - name: Get the properties of a collection
     href: core/clients/collections/how-to-get-the-properties-of-a-collection.md
-  - name: How to initiate a one-time membership evaluation for a collection
+  - name: Initiate a one-time membership evaluation
     href: core/clients/collections/how-to-initiate-a-one-time-membership-evaluation-for-a-collection.md
-- name: Compliance Settings (DCM)
+- name: Compliance settings
   items:
-  - name: Compliance settings (DCM) overview
-    href: compliance/compliance-settings-dcm.md
-  - name: Compliance settings setup and configuration
+  - name: Setup and configuration
     items:
-    - name: Compliance settings setup and configuration overview
-      href: compliance/compliance-settings-setup-and-configuration.md
-    - name: About compliance settings (DCM) setup and configuration
+    - name: About setup and configuration
       href: compliance/about-compliance-settings--dcm--setup-and-configuration.md
-    - name: How to enable or disable the compliance settings (DCM) agent
+    - name: Enable or disable the compliance settings agent
       href: compliance/how-to-enable-or-disable-the-compliance-settings--dcm--agent.md
-    - name: How to configure the default compliance evaluation schedule
+    - name: Configure the default compliance evaluation schedule
       href: compliance/how-to-configure-the-default-compliance-evaluation-schedule.md
-  - name: Compliance settings baselines and configuration items
+  - name: Configuration baselines and configuration items
     items:
-    - name: Compliance settings baselines and configuration items overview
-      href: compliance/compliance-settings-baselines-and-configuration-items.md
-    - name: About configuration baselines and configuration items
+    - name: About configuration baselines and items
       href: compliance/about-configuration-baselines-and-configuration-items.md
-    - name: How to import configuration baselines and configuration items
+    - name: Import configuration baselines and items
       href: compliance/how-to-import-configuration-baselines-and-configuration-items.md
-    - name: How to export configuration baselines and configuration items
+    - name: Export configuration baselines and items
       href: compliance/how-to-export-configuration-baselines-and-configuration-items.md
-    - name: How to assign configuration baselines
+    - name: Assign configuration baselines
       href: compliance/how-to-assign-configuration-baselines.md
-    - name: How to list configuration assignments
+    - name: List configuration assignments
       href: compliance/how-to-list-configuration-assignments.md
   - name: Compliance settings extensibility
+    href: compliance/about-compliance-settings--dcm--extensibility.md
+  - name: Author configuration baselines and configuration items
     items:
-    - name: Compliance settings extensibility overview
-      href: compliance/compliance-settings-extensibility.md
-    - name: About compliance settings (DCM) extensibility
-      href: compliance/about-compliance-settings--dcm--extensibility.md
-  - name: Authoring compliance settings configuration baselines and configuration items
-    items:
-    - name: Authoring compliance settings configuration baselines and configuration items overview
-      href: compliance/authoring-compliance-settings-configuration-baselines-and-configuration-items.md
-    - name: About authoring configuration baselines and configuration items
+    - name: About authoring configuration baselines and items
       href: compliance/about-authoring-configuration-baselines-and-configuration-items.md
-    - name: Configuration baseline examples
+    - name: Configuration baseline example
       items:
-      - name: Configuration baseline examples overview
-        href: compliance/configuration-baseline-examples.md
       - name: About configuration baselines
         href: compliance/about-configuration-baselines.md
-      - name: Configuration baseline example 1
+      - name: Configuration baseline example
         href: compliance/configuration-baseline-example-1.md
     - name: Application configuration item examples
       items:
-      - name: Application configuration item examples overview
-        href: compliance/application-configuration-item-examples.md
       - name: About application configuration items
         href: compliance/about-application-configuration-items.md
       - name: Application configuration item example 1
         href: compliance/application-configuration-item-example-1.md
       - name: Application configuration item example 2
         href: compliance/application-configuration-item-example-2.md
-    - name: Operating system configuration item examples
+    - name: OS configuration item example
       items:
-      - name: Operating system configuration item examples overview
-        href: compliance/operating-system-configuration-item-examples.md
-      - name: About operating system configuration item examples
+      - name: About OS configuration items
         href: compliance/about-operating-system-configuration-item-examples.md
-      - name: Operating system configuration item example 1
+      - name: OS configuration item example
         href: compliance/operating-system-configuration-item-example-1.md
-    - name: General configuration item examples
+    - name: General configuration item example
       items:
-      - name: General configuration item examples overview
-        href: compliance/general-configuration-item-examples.md
       - name: About general configuration items
         href: compliance/about-general-configuration-items.md
-      - name: General configuration item example 1
+      - name: General configuration item example
         href: compliance/general-configuration-item-example-1.md
-- name: Console extension
+- name: Console extensions
   items:
-  - name: Console extension overview
-    href: core/servers/console/console-extension.md
-  - name: About Configuration Manager console extension
+  - name: About console extensions
     href: core/servers/console/about-configuration-manager-console-extension.md
   - name: Console extension architecture
     href: core/servers/console/console-extension-architecture.md
@@ -599,12 +519,8 @@
     href: core/servers/console/console-extension-deployment.md
   - name: Console actions
     items:
-    - name: Console actions overview
-      href: core/servers/console/console-actions.md
-    - name: About Configuration Manager console actions
+    - name: About console actions
       items:
-      - name: About Configuration Manager console actions
-        href: core/servers/console/about-configuration-manager-console-actions.md
       - name: Actions
         href: core/servers/console/configuration-manager-actions.md
       - name: Action XML
@@ -621,279 +537,250 @@
         href: core/servers/console/assemblytype-action.md
       - name: Group action
         href: core/servers/console/group-action.md
-    - name: How to create a Configuration Manager action
+    - name: Create an action
       href: core/servers/console/how-to-create-a-configuration-manager-action.md
   - name: Console forms
     items:
-    - name: Console forms overview
-      href: core/servers/console/console-forms.md
-    - name: About Configuration Manager console forms
+    - name: About console forms
       href: core/servers/console/about-configuration-manager-console-forms.md
-    - name: How to create a property sheet
+    - name: Create a property sheet
       href: core/servers/console/how-to-create-a-configuration-manager-property-sheet.md
-    - name: How to create form XML for a property sheet
+    - name: Create form XML for a property sheet
       href: core/servers/console/how-to-create-form-xml-for-a-configuration-manager-property-sheet.md
-    - name: How to add a property page to an existing property sheet
+    - name: Add a property page to an existing property sheet
       href: core/servers/console/how-to-add-a-property-page-to-an-existing-configuration-manager-property-sheet.md
-    - name: How to create action XML for a property sheet
+    - name: Create action XML for a property sheet
       href: core/servers/console/how-to-create-action-xml-for-a-configuration-manager-property-sheet.md
-    - name: How to create a Configuration Manager dialog box
+    - name: Create a dialog box
       href: core/servers/console/how-to-create-a-configuration-manager-dialog-box.md
-    - name: How to create form XML for a dialog box
+    - name: Create form XML for a dialog box
       href: core/servers/console/how-to-create-form-xml-for-a-configuration-manager-dialog-box.md
-    - name: How to create action XML for a dialog box
+    - name: Create action XML for a dialog box
       href: core/servers/console/how-to-create-action-xml-for-a-configuration-manager-dialog-box.md
-    - name: How to use objects passed to a form
+    - name: Use objects passed to a form
       href: core/servers/console/how-to-use-objects-passed-to-a-configuration-manager-form.md
-    - name: How to bind Configuration Manager data to a form
+    - name: Bind data to a form
       href: core/servers/console/how-to-bind-configuration-manager-data-to-a-form.md
-  - name: Configuration Manager console management classes
+  - name: Console management classes
     items:
-    - name: Configuration Manager console Management Classes overview
-      href: core/servers/console/console-management-classes.md
-    - name: About Configuration Manager console management classes
+    - name: About console management classes
       href: core/servers/console/about-configuration-manager-console-management-classes.md
-    - name: Configuration Manager console management class XML
+    - name: Console management class XML
       href: core/servers/console/console-management-class-xml.md
-  - name: Configuration Manager console nodes
-    href: core/servers/console/console-nodes.md
+  - name: Console nodes
     items:
-    - name: Configuration Manager console nodes overview
-      href: core/servers/console/console-nodes.md
-    - name: About Configuration Manager console nodes
+    - name: About console nodes
       href: core/servers/console/about-configuration-manager-console-nodes.md
-    - name: Configuration Manager console node XML
+    - name: Console node XML
       href: core/servers/console/console-node-xml.md
-    - name: Configuration Manager console RootNodes element
+    - name: Console RootNodes element
       href: core/servers/console/console-rootnodes-element.md
-    - name: Configuration Manager console ResourceAssembly element
+    - name: Console ResourceAssembly element
       href: core/servers/console/console-resourceassembly-element.md
-    - name: How to create a Configuration Manager console node
+    - name: Create a console node
       href: core/servers/console/how-to-create-a-configuration-manager-console-node.md
-    - name: How to find a Configuration Manager console code GUID
+    - name: Find a console code GUID
       href: core/servers/console/how-to-find-a-configuration-manager-console-node-guid.md
-  - name: Configuration Manager console views
+  - name: Console views
     items:
-    - name: Configuration Manager console views overview
-      href: core/servers/console/console-views.md
-    - name: About Configuration Manager console views
+    - name: About console views
       href: core/servers/console/about-configuration-manager-console-views.md
-    - name: How to create a custom view
+    - name: Create a custom view
       href: core/servers/console/how-to-create-a-configuration-manager-console-custom-view.md
-    - name: How to create node XML for a grid view
+    - name: Create node XML for a grid view
       href: core/servers/console/how-to-create-node-xml-for-a-configuration-manager-console-grid-view.md
 - name: Discovery
   items:
-  - name: Discovery overview
-    href: core/servers/configure/discovery.md
-  - name: How to configure Heartbeat Discovery
+  - name: Configure Heartbeat Discovery
     href: core/servers/configure/how-to-configure-heartbeat-discovery.md
-  - name: How to configure Network Discovery
+  - name: Configure Network Discovery
     href: core/servers/configure/how-to-configure-network-discovery.md
-  - name: How to configure Active Directory Group Discovery
+  - name: Configure Active Directory Group Discovery
     href: core/servers/configure/how-to-configure-active-directory-group-discovery.md
-  - name: How to configure Active Directory System Discovery
+  - name: Configure Active Directory System Discovery
     href: core/servers/configure/how-to-configure-active-directory-system-discovery.md
-  - name: How to configure Active Directory User Discovery
+  - name: Configure Active Directory User Discovery
     href: core/servers/configure/how-to-configure-active-directory-user-discovery.md
-  - name: Extending resource discovery
+  - name: Extend resource discovery
     items:
-    - name: Extending resource discovery overview
-      href: core/servers/configure/extending-resource-discovery.md
-    - name: Using DDRs in resource discovery
+    - name: Use DDRs in resource discovery
       items:
-      - name: About Using DDRs in resource discovery
-        href: core/servers/configure/about-using-ddrs-in-resource-discovery.md
       - name: About DDR properties
         href: core/servers/configure/about-ddr-properties.md
-      - name: About updating an existing resource instance
+      - name: Update an existing resource instance
         href: core/servers/configure/about-updating-an-existing-resource-instance.md
-      - name: About creating a data discovery record
+      - name: Create a data discovery record (DDR)
         href: core/servers/configure/about-creating-a-data-discovery-record.md
       - name: About the unique identifier value for a resource
         href: core/servers/configure/about-the-unique-identifier-value-for-a-resource.md
-    - name: How to get the unique identifier value for a client
+    - name: Get the unique identifier value for a client
       href: core/servers/configure/how-to-get-the-unique-identifier-value-for-a-client.md
-    - name: How to add new properties to an existing resource type
+    - name: Add new properties to an existing resource type
       href: core/servers/configure/how-to-add-new-properties-to-an-existing-resource-type.md
-    - name: How to create a data discovery record
+    - name: Create a DDR
       href: core/servers/configure/how-to-create-a-data-discovery-record.md
 - name: Inventory
   items:
-  - name: Inventory overview
-    href: core/clients/inventory/inventory.md
-  - name: About Configuration Manager inventory
+  - name: About inventory
     href: core/clients/inventory/about-configuration-manager-inventory.md
-  - name: How to enable hardware inventory
-    href: core/clients/inventory/how-to-enable-hardware-inventory.md
-  - name: How to configure hardware inventory settings
-    href: core/clients/inventory/how-to-configure-hardware-inventory-settings.md
-  - name: Requirements of IDMIF files
-    href: core/clients/inventory/requirements-of-idmif-files.md
-  - name: How to reset the hardware inventory cache
-    href: core/clients/inventory/how-to-reset-the-hardware-inventory-cache.md
-  - name: How to enable software inventory
-    href: core/clients/inventory/how-to-enable-software-inventory.md
-  - name: How to configure software inventory settings
-    href: core/clients/inventory/how-to-configure-software-inventory-settings.md
-  - name: How to reset the software inventory cache
-    href: core/clients/inventory/how-to-reset-the-software-inventory-cache.md
-  - name: How to import a MOF file to extend inventory
+  - name: Hardware inventory
+    items:
+    - name: Enable hardware inventory
+      href: core/clients/inventory/how-to-enable-hardware-inventory.md
+    - name: Configure hardware inventory settings
+      href: core/clients/inventory/how-to-configure-hardware-inventory-settings.md
+    - name: Requirements of IDMIF files
+      href: core/clients/inventory/requirements-of-idmif-files.md
+    - name: Reset the hardware inventory cache
+      href: core/clients/inventory/how-to-reset-the-hardware-inventory-cache.md
+  - name: Software inventory
+    items:
+    - name: Enable software inventory
+      href: core/clients/inventory/how-to-enable-software-inventory.md
+    - name: Configure software inventory settings
+      href: core/clients/inventory/how-to-configure-software-inventory-settings.md
+    - name: Reset the software inventory cache
+      href: core/clients/inventory/how-to-reset-the-software-inventory-cache.md
+  - name: Import a MOF file to extend inventory
     href: core/clients/inventory/how-to-import-a-mof-file-to-extend-inventory.md
-- name: Mobile device management
+  - name: Initiate Asset Intelligence synchronization
+    href: core/clients/asset-intelligence/how-to-initiate-a-synchronization.md
+- name: MDM legacy client
   items:
-  - name: Mobile device management overview
-    href: mdm/mobile-device-management.md
-  - name: How to configure mobile device client agent settings
+  - name: Configure mobile device client agent settings
     href: mdm/how-to-configure-mobile-device-client-agent-settings.md
-  - name: How to create software distribution packages, programs, and advertisements for mobile devices
+  - name: Create software distribution packages, programs, and advertisements for mobile devices
     href: mdm/how-to-create-software-distribution-packages-for-mobile-devices.md
-- name: Operating system deployment
+- name: OS deployment
   items:
-  - name: Operating system deployment overview
-    href: osd/operating-system-deployment.md
-  - name: Operating system deployment site role configuration
+  - name: OS deployment site role configuration
     items:
-    - name: Operating system deployment site role configuration overview
-      href: osd/operating-system-deployment-site-role-configuration.md
-    - name: About operating system deployment site role configuration
+    - name: About OS deployment site role configuration
       href: osd/about-operating-system-deployment-site-role-configuration.md
-    - name: How to create a State Migration Point role
+    - name: Create a state migration point role
       href: osd/how-to-create-a-state-migration-point-role.md
-    - name: How to delete a State Migration Point role
+    - name: Delete a state migration point role
       href: osd/how-to-delete-a-state-migration-point-role.md
-    - name: How to add a State Migration Point folder
+    - name: Add a state migration point folder
       href: osd/how-to-add-a-state-migration-point-folder.md
-    - name: How to set the restore-only mode for a State Migration Point
+    - name: Set the restore-only mode for a state migration point
       href: osd/how-to-set-the-restore-only-mode-for-a-state-migration-point.md
-    - name: How to set the deletion policy for a State Migration Point
+    - name: Set the deletion policy for a state migration point
       href: osd/how-to-set-the-deletion-policy-for-a-state-migration-point.md
-    - name: How to enable a PXE Service Point role
+    - name: Enable a PXE-enabled distribution point role
       href: osd/how-to-enable-a-pxe-service-point-role.md
-    - name: How to disable a PXE Service Point role
+    - name: Disable a PXE-enabled distribution point role
       href: osd/how-to-disable-a-pxe-service-point-role.md
-    - name: How to enable unknown computer support for a PXE Service Point
+    - name: Enable unknown computer support
       href: osd/how-to-enable-unknown-computer-support-for-a-pxe-service-point.md
-    - name: How to set the PXE Service Point response to PXE requests
+    - name: Set the response to PXE requests
       href: osd/how-to-set-the-pxe-service-point-response-to-pxe-requests.md
-    - name: How to set the response delay for a PXE Service Point
+    - name: Set the PXE response delay
       href: osd/how-to-set-the-response-delay-for-a-pxe-service-point.md
-    - name: How to set the PXE Service Point response to all network interfaces
+    - name: Set the PXE response to all network interfaces
       href: osd/how-to-set-the-pxe-service-point-response-to-all-network-interfaces.md
-    - name: How to set the PXE Service Point response for a specific network interface
+    - name: Set the PXE response for a specific network interface
       href: osd/how-to-set-the-pxe-service-point-response-for-a-specific-network-interface.md
-    - name: How to set operating system deployment branding information
+    - name: Set OS deployment branding information
       href: osd/how-to-set-operating-system-deployment-branding-information.md
-  - name: Operating system deployment task sequencing
+  - name: OS deployment task sequence
     items:
-    - name: Operating system deployment task sequencing
-      href: osd/operating-system-deployment-task-sequencing.md
-    - name: About Operating System Deployment Task Sequences
+    - name: About task sequences
       items:
-      - name: About operating system deployment task sequences
-        href: osd/about-operating-system-deployment-task-sequences.md
-      - name: Operating system deployment task sequences overview
+      - name: Task sequence overview
         href: osd/operating-system-deployment-task-sequences-overview.md
-      - name: Operating system deployment task sequence object model
+      - name: Task sequence object model
         href: osd/operating-system-deployment-task-sequence-object-model.md
-    - name: How to create an operating system deployment task sequence
+    - name: Create a task sequence
       href: osd/how-to-create-an-operating-system-deployment-task-sequence.md
-    - name: How to create an operating system deployment task sequence package
+    - name: Create a task sequence package
       href: osd/how-to-create-an-operating-system-deployment-task-sequence-package.md
-    - name: How to read a task sequence from a task sequence package
+    - name: Read a task sequence from a task sequence package
       href: osd/how-to-read-a-task-sequence-from-a-task-sequence-package.md
-    - name: How to enumerate the available operating system deployment task sequences
+    - name: Enumerate the available task sequences
       href: osd/how-to-enumerate-the-available-operating-system-deployment-task-sequences.md
-    - name: How to add an operating system deployment task sequence action
+    - name: Add a task sequence action
       href: osd/how-to-add-an-operating-system-deployment-task-sequence-action.md
-    - name: How to delete an operating system deployment task sequence action
+    - name: Delete a task sequence action
       href: osd/how-to-delete-an-operating-system-deployment-task-sequence-action.md
-    - name: How to add a condition to an operating system deployment task sequence step
+    - name: Add a condition to a task sequence step
       href: osd/how-to-add-a-condition-to-an-operating-system-deployment-task-sequence-step.md
-    - name: How to enumerate the steps in an operating system deployment task sequence
+    - name: Enumerate the steps in a task sequence
       href: osd/how-to-enumerate-the-steps-in-an-operating-system-deployment-task-sequence.md
-    - name: How to reorder an operating system deployment task sequence
+    - name: Reorder a task sequence
       href: osd/how-to-reorder-an-operating-system-deployment-task-sequence.md
-    - name: How to create an operating system deployment task sequence group
+    - name: Create a task sequence group
       href: osd/how-to-create-an-operating-system-deployment-task-sequence-group.md
-    - name: How to add a step to an operating system deployment group
+    - name: Add a step to a task sequence group
       href: osd/how-to-add-a-step-to-an-operating-system-deployment-group.md
-    - name: How to remove a step from an operating system deployment group
+    - name: Remove a step from a task sequence group
       href: osd/how-to-remove-a-step-from-an-operating-system-deployment-group.md
-    - name: How to move a step to a different operating system deployment task sequence group
+    - name: Move a step to a different task sequence group
       href: osd/how-to-move-a-step-to-a-different-task-sequence-group.md
-    - name: How to use task sequence variables in a running task sequence
+    - name: Use task sequence variables
       href: osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md
-    - name: How to set an operating system deployment task sequence variable
+    - name: Set a task sequence variable
       href: osd/how-to-set-an-operating-system-deployment-task-sequence-variable.md
-  - name: Operating system deployment computer management
+  - name: OS deployment computer management
     items:
-    - name: Operating system deployment computer management overview
-      href: osd/operating-system-deployment-computer-management.md
     - name: About computer management
       href: osd/about-computer-management.md
-    - name: How to import a new computer into Configuration Manager
+    - name: Import a new computer
       href: osd/how-to-import-a-new-computer-into-configuration-manager.md
-    - name: How to create an association between two computers
+    - name: Create an association between two computers
       href: osd/how-to-create-an-association-between-two-computers-in-configuration-manager.md
-    - name: How to create a collection variable
+    - name: Create a collection variable
       href: osd/how-to-create-a-collection-variable.md
-    - name: How to create a computer variable
+    - name: Create a computer variable
       href: osd/how-to-create-a-computer-variable.md
-    - name: How to track operating system deployment migrations
+    - name: Track OS deployment migrations
       href: osd/how-to-track-operating-system-deployment-migrations.md
-  - name: Operating system deployment image management
+  - name: OS deployment image management
     items:
-    - name: Operating system deployment image management overview
-      href: osd/operating-system-deployment-image-management.md
-    - name: About operating system deployment image management
+    - name: About image management
       href: osd/about-operating-system-deployment-image-management.md
-    - name: How to add an operating system image package
+    - name: Add an OS image package
       href: osd/how-to-add-an-operating-system-image-package-in-configuration-manager.md
-    - name: How to update an operating system image package
+    - name: Update an OS image package
       href: osd/how-to-update-an-operating-system-image-package.md
-    - name: How to view the properties for an operating system image
+    - name: View the properties for an OS image
       href: osd/how-to-view-the-properties-for-an-operating-system-image.md
-    - name: How to add a boot image from a WIM file
+    - name: Add a boot image from a WIM file
       href: osd/how-to-add-a-boot-image-from-a-wim-file.md
-    - name: How to add an operating system install package
+    - name: Add an OS upgrade package
       href: osd/how-to-add-an-operating-system-install-package.md
-    - name: How to clear a PXE advertisement For a collection
+    - name: Clear a PXE advertisement for a collection
       href: osd/how-to-clear-a-pxe-advertisement-for-a-configuration-manager-collection.md
-    - name: How to clear a PXE advertisement for a resource
+    - name: Clear a PXE advertisement for a resource
       href: osd/how-to-clear-a-pxe-advertisement-for-a-configuration-manager-resource.md
-  - name: Operating system deployment driver management
+  - name: OS deployment driver management
     items:
-    - name: Operating system deployment driver management overview
-      href: osd/operating-system-deployment-driver-management.md
-    - name: About operating system deployment driver management
+    - name: About driver management
       href: osd/about-operating-system-deployment-driver-management.md
-    - name: How to import a Windows driver described by an INF file into Configuration Manager
+    - name: Import a driver described by an INF file
       href: osd/how-to-import-a-windows-driver-described-by-an-inf-file.md
-    - name: How to import a Windows driver described by a txtsetup.oem file into Configuration Manager
+    - name: Import a driver described by a txtsetup.oem file
       href: osd/how-to-import-a-windows-driver-described-by-a-txtsetup-oem-file.md
-    - name: How to create a driver package for a Windows driver in Configuration Manager
+    - name: Create a driver package for a driver
       href: osd/how-to-create-a-driver-package-for-a-windows-driver.md
-    - name: How to add a Windows driver to a Configuration Manager boot image package
+    - name: Add a driver to a boot image
       href: osd/how-to-add-a-windows-driver-to-a-configuration-manager-boot-image-package.md
-    - name: How to remove a Windows driver from a boot image package
+    - name: Remove a driver from a boot image
       href: osd/how-to-remove-a-windows-driver-from-a-boot-image-package.md
-    - name: How to enable or disable a Windows driver in Configuration Manager
+    - name: Enable or disable a driver
       href: osd/how-to-enable-or-disable-a-windows-driver.md
-    - name: How to delete a Windows driver from Configuration Manager
+    - name: Delete a driver
       href: osd/how-to-delete-a-windows-driver-from-configuration-manager.md
-    - name: How to delete a driver package in Configuration Manager
+    - name: Delete a driver package
       href: osd/how-to-delete-a-driver-package-in-configuration-manager.md
-    - name: How to specify the supported platforms for a driver
+    - name: Specify the supported platforms for a driver
       href: osd/how-to-specify-the-supported-platforms-for-a-driver.md
-    - name: How to add a category to a Windows driver
+    - name: Add a category to a driver
       href: osd/how-to-add-a-category-to-a-windows-driver.md
-    - name: How to remove a category from a Windows driver
+    - name: Remove a category from a driver
       href: osd/how-to-remove-a-category-from-a-windows-driver.md
-  - name: Extending operating system deployment
+  - name: Extend OS deployment
     items:
-    - name: Extending operating system deployment overview
-      href: osd/extending-operating-system-deployment.md
     - name: About Configuration Manager custom actions
       href: osd/about-configuration-manager-custom-actions.md
     - name: About custom action client applications
@@ -902,261 +789,215 @@
       href: osd/about-configuration-manager-custom-action-mof-files.md
     - name: About reporting custom action progress
       href: osd/about-reporting-configuration-manager-custom-action-progress.md
-    - name: How to create a custom action control
+    - name: Create a custom action control
       href: osd/how-to-create-a-configuration-manager-custom-action-control.md
-    - name: How to create a MOF file for a custom action
+    - name: Create a MOF file for a custom action
       href: osd/how-to-create-a-mof-file-for-a-configuration-manager-custom-action.md
-    - name: How to use a custom action control
+    - name: Use a custom action control
       href: osd/how-to-use-a-configuration-manager-custom-action-control.md
-- name: Role-Based Administration
+- name: Role-based administration
   items:
-  - name: Role-Based Administration overview
+  - name: Role-based administration overview
     href: core/servers/configure/role-based-administration.md
   - name: Administrative user management
     items:
-    - name: Administrative user management overview
-      href: core/servers/configure/administrative-user-management.md
-    - name: How to check if a user has permissions for an object
+    - name: Check if a user has permissions for an object
       href: core/servers/configure/how-to-check-if-a-user-has-permissions-for-an-object.md
-    - name: How to check if a user has permissions for a resource
+    - name: Check if a user has permissions for a resource
       href: core/servers/configure/how-to-check-if-a-user-has-permissions-for-a-resource.md
-    - name: How to enumerate the administrative assignments for a user or security group
+    - name: Enumerate the administrative assignments for a user or security group
       href: core/servers/configure/how-to-enumerate-the-administrative-assignments-for-a-user-or-security-group.md
-    - name: How to create a new administrator
+    - name: Create a new administrator
       href: core/servers/configure/how-to-create-a-new-administrator.md
-    - name: How to create a new security role
+    - name: Create a new security role
       href: core/servers/configure/how-to-create-a-new-security-role.md
   - name: Security scope management
     items:
-    - name: Security scope management overview
-      href: core/servers/configure/security-scope-management.md
-    - name: How to create a new security scope
+    - name: Create a new security scope
       href: core/servers/configure/how-to-create-a-new-security-scope.md
-    - name: How to delete a security scope
+    - name: Delete a security scope
       href: core/servers/configure/how-to-delete-a-security-scope.md
-    - name: How to associate an object with a security scope
+    - name: Associate an object with a security scope
       href: core/servers/configure/how-to-associate-an-object-with-a-security-scope.md
-    - name: How to remove an object association with a security scope
+    - name: Remove an object association with a security scope
       href: core/servers/configure/how-to-remove-an-object-association-with-a-security-scope.md
 - name: Remote tools
   items:
-  - name: Remote tools overview
-    href: core/clients/remote-control/remote-tools.md
-  - name: How to enable and disable remote tools
+  - name: Enable and disable remote tools
     href: core/clients/remote-control/how-to-enable-and-disable-remote-tools.md
-  - name: How to configure remote tools settings
+  - name: Configure remote tools settings
     href: core/clients/remote-control/how-to-configure-remote-tools-settings.md
 - name: Software distribution
   items:
-  - name: About software distribution
-    href: core/servers/configure/software-distribution.md
-  - name: software distribution overview
+  - name: Software distribution overview
     href: core/servers/configure/software-distribution-overview.md
-  - name: Software distribution packages
+  - name: Packages
     items:
-    - name: Software distribution packages overview
-      href: core/servers/configure/software-distribution-packages.md
     - name: About package definition files
       href: core/servers/configure/about-package-definition-files.md
-    - name: How to create a package
+    - name: Create a package
       href: core/servers/configure/how-to-create-a-package.md
-    - name: How to create a package by using a package definition file template
+    - name: Create a package by using a package definition file template
       href: core/servers/configure/how-to-create-a-package-by-using-a-package-definition-file-template.md
-    - name: How to configure package properties
+    - name: Configure package properties
       href: core/servers/configure/how-to-configure-package-properties.md
-    - name: How to configure a package to use binary delta replication
+    - name: Configure a package to use binary delta replication
       href: core/servers/configure/how-to-configure-a-package-to-use-binary-delta-replication.md
-    - name: How to delete a package
+    - name: Delete a package
       href: core/servers/configure/how-to-delete-a-package.md
-    - name: How to assign a package to a Distribution Point
+    - name: Assign a package to a distribution point
       href: core/servers/configure/how-to-assign-a-package-to-a-distribution-point.md
-  - name: Software distribution programs
+  - name: Programs
     items:
-    - name: Software distribution programs overview
-      href: core/servers/configure/software-distribution-programs.md
-    - name: About software distribution programs
+    - name: About programs
       href: core/servers/configure/about-software-distribution-programs.md
-    - name: How to create a program
+    - name: Create a program
       href: core/servers/configure/how-to-create-a-program.md
-    - name: How to modify program properties
+    - name: Modify program properties
       href: core/servers/configure/how-to-modify-program-properties.md
-    - name: How to change the maximum run time for a program
+    - name: Change the maximum run time for a program
       href: core/servers/configure/how-to-change-the-maximum-run-time-for-a-program.md
-    - name: How to list all programs and their maximum run time value
+    - name: List all programs and their maximum run time value
       href: core/servers/configure/how-to-list-all-programs-and-their-maximum-run-time-value.md
-    - name: How to modify the supported platforms for a program
+    - name: Modify the supported platforms for a program
       href: core/servers/configure/how-to-modify-the-supported-platforms-for-a-program.md
-  - name: Software distribution advertisements
+  - name: Deployments
     items:
-    - name: Software distribution advertisements
-      href: core/servers/configure/software-distribution-advertisements.md
-    - name: About software distribution deployments
+    - name: About deployments
       href: core/servers/configure/about-software-distribution-deployments.md
-    - name: How to create an advertisement
+    - name: Create a deployment
       href: core/servers/configure/how-to-create-an-advertisement.md
-    - name: How to assign an advertisement to a collection of computers
+    - name: Assign a deployment to a collection of computers
       href: core/servers/configure/how-to-assign-an-advertisement-to-a-collection-of-computers.md
-    - name: How to modify advertisement properties
+    - name: Modify deployment properties
       href: core/servers/configure/how-to-modify-advertisement-properties.md
-    - name: How to configure an advertisement to allow reboots outside of a maintenance window
+    - name: Configure a deployment to allow reboots outside of a maintenance window
       href: core/servers/configure/how-to-allow-reboots-outside-of-a-maintenance-window.md
-    - name: How to configure an advertisement to override a maintenance window
+    - name: Configure a deployment to override a maintenance window
       href: core/servers/configure/how-to-configure-an-advertisement-to-override-a-maintenance-window.md
-  - name: Software distribution maintenance windows
+  - name: Maintenance windows
     items:
-    - name: Software distribution maintenance windows overview
-      href: core/servers/configure/software-distribution-maintenance-windows.md
     - name: About maintenance windows
       href: core/servers/configure/about-maintenance-windows.md
-    - name: How to create a maintenance window for a collection
+    - name: Create a maintenance window
       href: core/servers/configure/how-to-create-a-maintenance-window-for-a-collection.md
-    - name: How to change the maintenance window properties for a collection
+    - name: Change the maintenance window properties
       href: core/servers/configure/how-to-change-the-maintenance-window-properties-for-a-collection.md
-    - name: How to delete a maintenance window for a collection
+    - name: Delete a maintenance window
       href: core/servers/configure/how-to-delete-a-maintenance-window-for-a-collection.md
-    - name: How to list the maintenance windows and properties for a specific collection
+    - name: List the maintenance windows and properties for a specific collection
       href: core/servers/configure/how-to-list-the-maintenance-windows-and-properties-for-a-specific-collection.md
-  - name: Software distribution setup and configuration
+  - name: Setup and configuration
     items:
-    - name: Software distribution setup and configuration overview
-      href: core/servers/configure/software-distribution-setup-and-configuration.md
     - name: About software distribution setup and configuration
       href: core/servers/configure/about-software-distribution-setup-and-configuration.md
-    - name: How to enable or disable the software distribution advertised programs client agent
+    - name: Enable or disable the advertised programs client agent
       href: core/servers/configure/how-to-enable-or-disable-the-advertised-programs-client-agent.md
-    - name: How to configure software distribution advertised programs client agent settings
+    - name: Configure advertised programs client agent settings
       href: core/servers/configure/how-to-configure-advertised-programs-client-agent-settings.md
-    - name: How to customize advertisement branding information in Configuration Manager
+    - name: Customize deployment branding information
       href: core/servers/configure/how-to-customize-advertisement-branding-information.md
-  - name: Software distribution Wake On LAN
+  - name: Wake On LAN
     items:
-    - name: Software distribution Wake On LAN overview
-      href: core/servers/configure/software-distribution-wake-on-lan.md
-    - name: How to configure a software distribution mandatory advertisement for Wake On LAN
+    - name: Configure a required deployment for Wake On LAN
       href: core/servers/configure/how-to-configure-a-mandatory-advertisement-for-wake-on-lan.md
-    - name: How to enable the partner notification API
+    - name: Enable the partner notification API
       href: core/servers/configure/how-to-enable-the-partner-notification-api.md
-  - name: Distribution Points
+  - name: Distribution points
     items:
-    - name: Distribution Points overview
-      href: core/servers/configure/distribution-points.md
-    - name: How to list Distribution Points for a site
+    - name: List distribution points for a site
       href: core/servers/configure/how-to-list-distribution-points-for-a-site.md
-    - name: How to set the Distribute on demand flag
+    - name: Set the flag to distribute on demand
       href: core/servers/configure/how-to-set-the-distribute-on-demand-flag.md
 - name: Software metering
   items:
-  - name: Software metering overview
-    href: apps/software-metering.md
-  - name: How to enable or disable software metering
+  - name: Enable or disable software metering
     href: apps/how-to-enable-or-disable-software-metering.md
-  - name: How to configure automatic software metering rule generation
+  - name: Configure automatic software metering rule generation
     href: apps/how-to-configure-automatic-software-metering-rule-generation.md
-  - name: How to create a software metering rule
+  - name: Create a software metering rule
     href: apps/how-to-create-a-software-metering-rule.md
-  - name: How to delete a software metering rule
+  - name: Delete a software metering rule
     href: apps/how-to-delete-a-software-metering-rule.md
-  - name: How to enable or disable a software metering rule
+  - name: Enable or disable a software metering rule
     href: apps/how-to-enable-or-disable-a-software-metering-rule.md
-  - name: How to view file usage summary information
+  - name: View file usage summary information
     href: apps/how-to-view-file-usage-summary-information.md
-  - name: How to view monthly usage summary information
+  - name: View monthly usage summary information
     href: apps/how-to-view-monthly-usage-summary-information.md
 - name: Software updates
   items:
-  - name: Software updates overview
-    href: sum/software-updates.md
-  - name: Software updates setup and configuration
+  - name: Setup and configuration
     items:
-    - name: Software updates setup and configuration overview
-      href: sum/software-updates-setup-and-configuration.md
     - name: About software updates setup and configuration
       href: sum/about-software-updates-setup-and-configuration.md
-    - name: How to configure the Software Update Point
+    - name: Configure the software update point
       href: sum/how-to-configure-the-software-update-point.md
-    - name: How to configure the WSUS settings
+    - name: Configure WSUS settings
       href: sum/how-to-configure-the-wsus-settings.md
-    - name: How to enable or disable the software updates client agent
+    - name: Enable or disable the software updates client agent
       href: sum/how-to-enable-or-disable-the-software-updates-client-agent.md
-    - name: How to set software updates branding information
+    - name: Set software updates branding information
       href: sum/how-to-set-software-updates-branding-information.md
-  - name: Software updates deployments
+  - name: Deployments
     items:
-    - name: Software updates deployments overview
-      href: sum/software-updates-deployments.md
-    - name: About software updates deployments
+    - name: About software update deployments
       href: sum/about-software-updates-deployments.md
-    - name: How to enumerate updates matching a specific criteria
+    - name: Enumerate updates matching a specific criteria
       href: sum/how-to-enumerate-updates-matching-a-specific-criteria.md
-    - name: How to create an update list
+    - name: Create an update list
       href: sum/how-to-create-an-update-list.md
-    - name: How to create a deployment template
+    - name: Create a deployment template
       href: sum/how-to-create-a-deployment-template.md
-    - name: How to create a deployment package
+    - name: Create a deployment package
       href: sum/how-to-create-a-deployment-package.md
-    - name: How to add updates to a deployment package
+    - name: Add updates to a deployment package
       href: sum/how-to-add-updates-to-a-deployment-package.md
-    - name: How to delete updates from a deployment package
+    - name: Delete updates from a deployment package
       href: sum/how-to-delete-updates-from-a-deployment-package.md
-    - name: How to configure and deploy updates
+    - name: Configure and deploy updates
       href: sum/how-to-configure-and-deploy-updates.md
-    - name: How to change the deployment package source
+    - name: Change the deployment package source
       href: sum/how-to-change-the-deployment-package-source.md
-  - name: Synchronizing the Software Update Point
+  - name: Synchronizing the software update point
     items:
-    - name: Synchronizing the Software Update Point overview
-      href: sum/synchronizing-the-software-update-point.md
-    - name: About synchronizing the Software Update Point
+    - name: About synchronizing the software update point
       href: sum/about-synchronizing-the-software-update-point.md
-    - name: How to synchronize with the Software Update Point
+    - name: Synchronize the software update point
       href: sum/how-to-synchronize-with-the-software-update-point.md
-  - name: Software updates and maintenance windows
-    items:
-    - name: Software updates and maintenance windows overview
-      href: sum/software-updates-and-maintenance-windows.md
-    - name: How to configure software updates to override maintenance windows
-      href: sum/how-to-configure-software-updates-to-override-maintenance-windows.md
+  - name: Configure software updates to override maintenance windows
+    href: sum/how-to-configure-software-updates-to-override-maintenance-windows.md
 - name: Status and summarizers
   items:
-  - name: Status and summarizers overview
-    href: core/servers/manage/configuration-manager-status-and-summarizers.md
-  - name: About Configuration Manager status and summarizers
+  - name: About Configuration Manager status
     items:
-    - name: Configuration Manager status
-      href: core/servers/manage/about-configuration-manager-status-and-summarizers.md
-    - name: About Configuration Manager status
-      items:
-      - name: Configuration Manager status overview
-        href: core/servers/manage/about-configuration-manager-status.md     
-      - name: About Configuration Manager status messages
-        href: core/servers/manage/about-configuration-manager-status-messages.md
-      - name: About Configuration Manager component status messages
-        href: core/servers/manage/about-configuration-manager-component-status-messages.md
-      - name: About using SMSCSTAT.DLL to create status messages
-        href: core/servers/manage/about-using-smscstat.dll-to-create-status-messages.md
-      - name: About reporting status messages from Configuration Manager clients
-        href: core/servers/manage/about-reporting-status-messages-from-configuration-manager-clients.md
-    - name: About Configuration Manager summarizers
-      items:
-      - name: Configuration Manager summarizers overview
-        href: core/servers/manage/about-configuration-manager-summarizers.md
-      - name: About Configuration Manager status summarizers
-        href: core/servers/manage/about-configuration-manager-status-summarizers.md
-      - name: About Configuration Manager tally intervals
-        href: core/servers/manage/about-configuration-manager-tally-intervals.md
-    - name: How to determine the health of a Configuration Manager site
-      href: core/servers/manage/how-to-determine-the-health-of-a-configuration-manager-site.md
-    - name: How to read the tally intervals for a Configuration Manager site
-      href: core/servers/manage/how-to-read-the-tally-intervals-for-a-configuration-manager-site.md
-    - name: How to read user-defined status messages
-      href: core/servers/manage/how-to-read-user-defined-status-messages.md
-    - name: How to report user-defined status messages
-      href: core/servers/manage/how-to-report-user-defined-status-messages.md
-    - name: How to delete status messages
-      href: core/servers/manage/how-to-delete-status-messages.md
-    - name: How to determine package status
-      href: core/servers/manage/how-to-determine-package-status.md
-    - name: How to determine advertisement status
-      href: core/servers/manage/how-to-determine-advertisement-status.md
-- name: Configuration Manager reference
+    - name: About status messages
+      href: core/servers/manage/about-configuration-manager-status-messages.md
+    - name: About component status messages
+      href: core/servers/manage/about-configuration-manager-component-status-messages.md
+    - name: About using SMSCSTAT.DLL to create status messages
+      href: core/servers/manage/about-using-smscstat.dll-to-create-status-messages.md
+    - name: About reporting status messages from clients
+      href: core/servers/manage/about-reporting-status-messages-from-configuration-manager-clients.md
+  - name: About summarizers
+    items:
+    - name: About Configuration Manager status summarizers
+      href: core/servers/manage/about-configuration-manager-status-summarizers.md
+    - name: About Configuration Manager tally intervals
+      href: core/servers/manage/about-configuration-manager-tally-intervals.md
+  - name: Determine the health of a site
+    href: core/servers/manage/how-to-determine-the-health-of-a-configuration-manager-site.md
+  - name: Read the tally intervals for a site
+    href: core/servers/manage/how-to-read-the-tally-intervals-for-a-configuration-manager-site.md
+  - name: Read user-defined status messages
+    href: core/servers/manage/how-to-read-user-defined-status-messages.md
+  - name: Report user-defined status messages
+    href: core/servers/manage/how-to-report-user-defined-status-messages.md
+  - name: Delete status messages
+    href: core/servers/manage/how-to-delete-status-messages.md
+  - name: Determine package status
+    href: core/servers/manage/how-to-determine-package-status.md
+  - name: Determine advertisement status
+    href: core/servers/manage/how-to-determine-advertisement-status.md
+- name: Configuration Manager API reference
   href: reference/configuration-manager-reference.md
