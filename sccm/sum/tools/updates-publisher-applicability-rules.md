@@ -7,8 +7,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
 ms.assetid: 3cf0c2cd-397a-4622-b11c-961f334fb7d7
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -26,11 +26,13 @@ You manage applicability rules from the **Rules Workspace**. When you create a r
 
 For example, the following is a rule set that contains three rules. The first rule verifies that the *MyFile* file exists, and the second and third rules verify that the language of the Windows operating system is either English or Japanese.
 
-    And  
-      File ‘\[PROGRAM\_FILES\] \\Microsoft\\MyFile’ exists  
-      Or  
-        Windows Language is English   
-        Windows Language is Japanese
+```
+And  
+  File ‘\[PROGRAM\_FILES\] \\Microsoft\\MyFile’ exists  
+  Or  
+    Windows Language is English   
+    Windows Language is Japanese
+```
 
 All updates require at least one applicability rule. Updates you import already have applicability rules applied, and when you create your own updates, you must add one or more rules to them. You can modify and expand on the rules for any update in Updates Publisher.
 
@@ -43,7 +45,7 @@ You can create rules in two locations in Updates Publisher:
 -   You can also create new rules at the time that you create or edit an update. Rules you create in this way are not saved for future use.
 
 ## Create applicability rule
-The following information is similar to how you create rules from within the [Create Update wizard](/sccm/sum/tools/create-updates-with-updates-publisher#the-create-update-wizard). But unlike the wizard, you have the option to save your rule sets for future use.
+The following information is similar to how you create rules from within the [Create Update wizard](/sccm/sum/tools/create-updates-with-updates-publisher#use-the-create-update-wizard). But unlike the wizard, you have the option to save your rule sets for future use.
 
 1. In the **Rules Workspace**, choose **Create** to open the **Create Rule** wizard.
 
@@ -77,7 +79,7 @@ The **Edit Rule** wizard displays the current rules for the rule set. You edit r
 
 After you make changes, choose **OK** to save the changes and close the wizard.
 
-For more details about using the rule wizard, see **Step 7**, the applicability page, of the [Create Update wizard](/sccm/sum/tools/create-updates-with-updates-publisher#the-create-update-wizard).
+For more details about using the rule wizard, see **Step 7**, the applicability page, of the [Create Update wizard](/sccm/sum/tools/create-updates-with-updates-publisher#use-the-create-update-wizard).
 
 ## Delete applicability rules
 To delete a saved applicability rule, in the **Rules Workspace** select the rule or rule set from the **My saved rules** list, and then choose **Delete** from the ribbon. This removes the saved rule or rule set from Updates Publisher.

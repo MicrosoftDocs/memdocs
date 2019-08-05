@@ -19,11 +19,11 @@ ms.collection: M365-identity-device-management
 
 The recommended first phase in the process to [migrate hybrid MDM users and devices to Intune standalone](migrate-hybridmdm-to-intunesa.md) in the cloud-only configuration is to use the Intune Data Importer tool. If you want, you can skip this phase and move on to the [prepare Intune for user migration](migrate-prepare-intune.md) phase. However, this tool performs the following functions that can save you a lot of time in the next phase:  
 
-1.	Collects data about the objects you select from your Configuration Manager hierarchy.  
+1. Collects data about the objects you select from your Configuration Manager hierarchy.  
 
-2.	Provides details about the objects you can select for import and information about why some objects cannot be imported.  
+2. Provides details about the objects you can select for import and information about why some objects cannot be imported.  
 
-3.	Imports selected objects into your Microsoft Intune tenant.  
+3. Imports selected objects into your Microsoft Intune tenant.  
 
 The Data Importer tool doesn't change your Configuration Manager environment in any way. You can import objects into Intune and validate that everything works as expected without risk of leaving your hybrid MDM devices in an unmanaged state. 
 
@@ -109,7 +109,7 @@ The wizard for the Data Importer tool can be divided in three main steps. This s
 
 Before you can run the Data Importer tool, you must use a Global Administrator account to give the Data Importer tool permission in Azure to access resources. Then you can run the tool by using a Global Administrator or Intune Administrator account.   
 
-1.	A Global Administrator must run the tool the first time using the following parameter: `IntuneDataImporter.exe -GlobalConsent`  
+1. A Global Administrator must run the tool the first time using the following parameter: `IntuneDataImporter.exe -GlobalConsent`  
 
 2. When the tool starts, sign in using an account with the Global Administrator role in Azure.  
 
@@ -140,7 +140,7 @@ You can override the Active Directory group name that the Data Importer finds fo
 #### Find the collections that can't be imported
 You can get a list of all collections that aren’t importable so you can add them to your collection mapping .csv file. 
 
-1. Run the Data Importer tool and select the objects to import. Use the procedures in [Phase 1: Discover Configuration Manager objects and collect data](#phase-1:-discover-configuration-manager-objects-and-collect-data) and [Phase 2: Resolve issues and select the objects to import](#phase-2:-resolve-issues-and-select-the-objects-to-import) to discover and choose the objects. Then, on the **Summary** page, choose **Export Details** to create a .csv file with details of everything selected for import, including the objects that can't be imported and deployments.  
+1. Run the Data Importer tool and select the objects to import. Use the procedures in [Phase 1: Discover Configuration Manager objects and collect data](#phase-1-discover-configuration-manager-objects-and-collect-data) and [Phase 2: Resolve issues and select the objects to import](#phase-2-resolve-issues-and-select-the-objects-to-import) to discover and choose the objects. Then, on the **Summary** page, choose **Export Details** to create a .csv file with details of everything selected for import, including the objects that can't be imported and deployments.  
 
 2. Open the .csv file in Microsoft Excel and filter the data based on the **Deployment** for the **Type** column and **No** for the **Importable** column. The collection name column shows all the collections that need to be added to a collection mapping file in order for those deployments to be importable.  
 
@@ -183,7 +183,7 @@ In phase 1, you select the objects to discover and have the tool collect informa
 
         - **Object types to import**: Choose the objects that you want the tool to collect. You can choose **Select all** to choose all the objects or select individual object types.  
 
-4.	Select **Next** to start discovering the objects at the site. The tool displays progress for each of the object types.  
+4. Select **Next** to start discovering the objects at the site. The tool displays progress for each of the object types.  
 
     - When the tool discovers no data for a selected object type, the progress bar immediately displays completed for that object type.  
 

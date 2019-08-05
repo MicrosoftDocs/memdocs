@@ -1,5 +1,7 @@
 - name: Protect data and infrastructure
+  href: understand\protect-data-and-site-infrastructure.md
 - name: Understand and explore
+  expanded: true
   items:
   - name: Overview
     href: understand\protect-data-and-site-infrastructure.md
@@ -83,7 +85,7 @@
         href: deploy-use/endpoint-protection-configure-client.md
     - name: Windows Firewall policies
       href: deploy-use/create-windows-firewall-policies.md
-    - name: Windows Defender Advanced Threat Protection
+    - name: Microsoft Defender Advanced Threat Protection
       href: deploy-use/windows-defender-advanced-threat-protection.md
     - name: Create and deploy Exploit Guard policy
       href: deploy-use/create-deploy-exploit-guard-policy.md

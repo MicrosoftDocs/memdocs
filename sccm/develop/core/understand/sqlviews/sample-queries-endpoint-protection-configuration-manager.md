@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Sample queries that show how to join the most common Endpoint Protection views to other views.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other #app client compliance hybrid osd protect sum
+ms.technology: configmgr-other
 ms.topic: conceptual
 ms.collection: M365-identity-device-management
 ms.assetid: c639ace8-52dd-4e91-92fa-e11e56878bd7

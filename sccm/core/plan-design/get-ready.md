@@ -7,7 +7,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 3e839a3e-e476-4ec2-bf29-21e78180441d
-author: aczechowski
+author: mestew
+ms.author: mstewart
 ms.collection: M365-identity-device-management
 ---
 # Get ready for System Center Configuration Manager
@@ -17,13 +18,13 @@ ms.collection: M365-identity-device-management
 Use the information in the following topics when you're ready to start planning your System Center Configuration Manager deployment:  
 
 
-  -   [Design a hierarchy of sites for System Center Configuration Manager](../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md)  
+-   [Design a hierarchy of sites for System Center Configuration Manager](../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md)  
 
-  -   [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md)  
+-   [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md)  
 
-  -   [Fundamental concepts for content management in System Center Configuration Manager](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)  
+-   [Fundamental concepts for content management in System Center Configuration Manager](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)  
 
-  -   [Understand how clients find site resources and services for System Center Configuration Manager](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)  
+-   [Understand how clients find site resources and services for System Center Configuration Manager](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)  
 
 -   [Prepare your network environment for System Center Configuration Manager](/sccm/core/plan-design/network/configure-firewalls-ports-domains)  
 

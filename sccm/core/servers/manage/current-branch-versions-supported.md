@@ -2,13 +2,13 @@
 title: Current branch versions
 titleSuffix: Configuration Manager
 description: Review the Configuration Manager version history, and learn about the phases of service offered.
-ms.date: 03/27/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 35b5baec-d313-46aa-9d14-c443aa0d6c09
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -23,19 +23,19 @@ Microsoft plans to release updates for Configuration Manager current branch a fe
 
 - **Security Updates (Only)** servicing phase - After the release of a new current branch version, Microsoft only supports security updates to older versions for the remainder of that version's support lifecycle (shown in Figure 1).  
 
-([View graphic at full size](media/CM_Servicing_support_timeline1.png))
+([View graphic at full size](media/servicing_support_timeline.png))
 
-![Configuration Manager servicing and support timeline graphic](media/CM_Servicing_support_timeline1.png)  
+![Configuration Manager servicing and support timeline graphic](media/servicing_support_timeline.png)  
 
 Figure 1. Example of the release cycle overlap for current branch servicing support. This example is for illustration of the cycle, and doesn't represent actual or expected release dates.
 
 > [!NOTE]  
->  The latest current branch version is always in the **Security and Critical Updates** servicing phase. This support statement means that if you encounter a code defect that warrants a critical update, you must have the latest current branch version installed in order to receive a fix. All other supported current branch versions are eligible to receive only security updates.
-> - For versions 1710 and later, all support ends after the 18-month lifecycle for a current branch version has expired.
-> - For versions 1706 and earlier, support ends after the 12-month lifecycle expires.
-> 
+> The latest current branch version is always in the **Security and Critical Updates** servicing phase. This support statement means that if you encounter a code defect that warrants a critical update, you must have the latest current branch version installed in order to receive a fix. All other supported current branch versions are eligible to receive only security updates.
+>
+> All support ends after the 18-month lifecycle has expired for a current branch version.
+>
 > Update your Configuration Manager environment to the latest version before support for your current version expires.
 
 For a list of the current branch versions, see [Version details](/sccm/core/servers/manage/updates#version-details).
 
-For more information about version numbers, and availability as an in-console update or as a baseline, see [Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions).
+For more information about version numbers, and availability as an in-console update or as a baseline, see [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines).

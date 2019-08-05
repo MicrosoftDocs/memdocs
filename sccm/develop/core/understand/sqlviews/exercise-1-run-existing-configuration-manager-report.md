@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Run an existing Configuration Manager report and review specific report elements.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other #app client compliance hybrid osd protect sum
+ms.technology: configmgr-other
 ms.topic: conceptual
 ms.collection: M365-identity-device-management
 ms.assetid: 1b64ec8e-3635-492d-9309-b49bb54deb8f

@@ -7,8 +7,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
 ms.assetid: e6c1df1d-7728-4980-9199-bc32cde5439e
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -70,7 +70,7 @@ Before you have the option to publish, you must configure the [Update Server](/s
    If publishing fails, you are presented with a link to the UpdatesPublisher.log file that can provide more information.
 
 ## Export a publication
-You can export a publication from your Updates Publisher repository. Doing so exports the updates and bundles that are assigned to that publication and creates an update catalog. You can then [add](/sccm/sum/tools/updates-publisher-catalogs#add-software-update-catalogs) and then [import](/sccm/sum/tools/updates-publisher-catalogs#mport-updates) that catalog to another instance of Updates Publisher. You can also [export updates](/sccm/sum/tools/manage-updates-with-updates-publisher#export-updates) that are not part of a publication.
+You can export a publication from your Updates Publisher repository. Doing so exports the updates and bundles that are assigned to that publication and creates an update catalog. You can then [add](/sccm/sum/tools/updates-publisher-catalogs#add-software-update-catalogs) and then [import](/sccm/sum/tools/updates-publisher-catalogs#import-updates) that catalog to another instance of Updates Publisher. You can also [export updates](/sccm/sum/tools/manage-updates-with-updates-publisher#export-updates) that are not part of a publication.
 
 To export a publication, go to the **Publications Workspace** and select the publication that contains updates that you want to export. You can only select one publication at a time.
 

@@ -24,18 +24,6 @@ Use migration jobs to configure the specific data that you want to migrate to yo
 
  Some objects require more than the migration of data from the source hierarchy to the destination hierarchy. For example, to successfully migrate software updates for your clients to your destination hierarchy, you must deploy an active software update point, configure the catalog of products, and synchronize the software update point with Windows Server Update Services (WSUS) in the destination hierarchy.  
 
- Use the following sections to help you plan your migration jobs.  
-
--   [Types of migration jobs](#Types_of_Migration)  
-
--   [General planning for all migration jobs](#About_Migration_Jobs)  
-
--   [Planning for collection migration jobs](#About_Collection_Migration)  
-
--   [Planning for object migration jobs](#About_Object_Migration)  
-
--   [Planning for previously migrated object migration jobs](#About_Object_Migrations)  
-
 ##  <a name="Types_of_Migration"></a> Types of migration jobs  
  Configuration Manager supports the following types of migration jobs. Each job type is designed to help define the objects that you can include in that job.  
 
@@ -247,7 +235,7 @@ Use migration jobs to configure the specific data that you want to migrate to yo
 ### Specify conflict resolution for migrated data  
  By default, migration jobs do not overwrite data in the destination database unless you configure the migration job to skip or overwrite data that has previously been migrated to the destination database.  
 
-##  <a name="About_Collection_Migration "></a> Plan for collection migration jobs  
+##  <a name="About_Collection_Migration"></a> Plan for collection migration jobs  
  Collection migration jobs are available only when you migrate data from a source hierarchy that runs a supported version of Configuration Manager 2007. You must specify one or more collections to migrate when you migrate by collection. For each collection that you specify, the migration job automatically selects all related objects for migration. For example, if you select a specific collection of users, the collection members are then identified, and you can migrate the deployments associated with that collection. Optionally, you can select other deployment objects to migrate that are associated with those members. All these selected items are added to the list of objects that can be migrated.  
 
  When you migrate a collection, System Center Configuration Manager also migrates collection settings, including maintenance windows and collection variables, but it cannot migrate collection settings for AMT client provisioning.  

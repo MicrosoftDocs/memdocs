@@ -1,20 +1,17 @@
 ---
-
-title: "Quick Start - User-driven installation"
-titleSuffix: "Microsoft Deployment Toolkit"
-description: "A quick start guiide for using Microsoft Deployment Toolkit for user-driven installation. "
-ms.date:  09/09/2016
+title: Quickstart - UDI
+titleSuffix: Microsoft Deployment Toolkit
+description: A quickstart guiide for using Microsoft Deployment Toolkit (MDT) for user-driven installations (UDI)
+ms.date: 09/09/2016
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-osd
+ms.technology: configmgr-osd
 ms.topic: article
-ms.assetid:  dcddc250-9361-4e69-af45-472da4ef5fd5
-
+ms.assetid: dcddc250-9361-4e69-af45-472da4ef5fd5
 author: aczechowski  
 ms.author: aaroncz 
-manager: angrobe
-
+manager: dougeby
 ---
+
 # Quick Start Guide for User-Driven Installation  
  Microsoft Deployment Toolkit (MDT) 2013 provides technology for deploying Windows operating systems, and Microsoft Office. This quick start guide helps you quickly evaluate MDT 2013 by providing condensed, step-by-step instructions for using it to install the Windows 8.1 operating system and Microsoft Office Professional Plus 2010 with User-Driven Installation (UDI) and Microsoft System Center 2012 R2 Configuration Manager. This quick start guide demonstrates how to perform the MDT New Computer deployment scenario, which covers the deployment of Windows 8.1 to a new computer. This scenario assumes that there is no user data or profile to preserve.  
 
@@ -72,9 +69,9 @@ manager: angrobe
 
  The resources listed in Table 1 reflect the system resources recommended to perform the steps in this guide. For information on the minimum system resource requirements for:  
 
--   Windows Server 2008 R2, see [Installing Windows Server 2008 R2](http://technet.microsoft.com/library/dd379511\(WS.10\).aspx)  
+-   Windows Server 2008 R2, see [Installing Windows Server 2008 R2](https://technet.microsoft.com/library/dd379511\(WS.10\).aspx)  
 
--   SQL Server 2008 R2, see [Hardware and Software Requirements for Installing SQL Server 2008 R2](http://technet.microsoft.com/library/ms143506.aspx)  
+-   SQL Server 2008 R2, see [Hardware and Software Requirements for Installing SQL Server 2008 R2](https://technet.microsoft.com/library/ms143506.aspx)  
 
 > [!NOTE]
 >  This guide assumes that MDT is being evaluated on 64-bit (x64) physical or virtual computers. If evaluating MDT on 32-bit (x86) platforms, download and install the x86 editions of MDT and the components that this guide describes.  
@@ -427,7 +424,7 @@ manager: angrobe
 ###  <a name="InstallConfigurationManager"></a> Step 1-11: Install Configuration Manager  
  When the other products and technologies have been installed, install Configuration Manager. Before doing so, however, extend the Active Directory schema so that computers can locate the distribution points, service locator points, and other server roles. Also, you can extend the schema after you have installed Configuration Manager. For more information about how to extend the Active Directory schema for Configuration Manager, see the section, “Extend the Active Directory Schema,” in the Configuration Manager Documentation Library, which is installed with Configuration Manager.  
 
- After extending the Active Directory schema, install Configuration Manager. The configuration of WDG-MDT-01 supports Configuration Manager for this sample. The configuration of computers in the production network may vary. To find out more about the prerequisites for installing Configuration Manager, see [Supported Configurations for Configuration Manager](http://technet.microsoft.com/library/gg682077.aspx).  
+ After extending the Active Directory schema, install Configuration Manager. The configuration of WDG-MDT-01 supports Configuration Manager for this sample. The configuration of computers in the production network may vary. To find out more about the prerequisites for installing Configuration Manager, see [Supported Configurations for Configuration Manager](https://technet.microsoft.com/library/gg682077.aspx).  
 
  **To install Configuration Manager**  
 
@@ -1210,7 +1207,7 @@ manager: angrobe
 
      The Windows PowerShell Modules command prompt opens.  
 
-13. Create a Windows PowerShell drive that uses the MDT PowerShell provider by running the [New-PSDrive](http://technet.microsoft.com/library/hh849829.aspx) cmdlet, as shown in the following example:  
+13. Create a Windows PowerShell drive that uses the MDT PowerShell provider by running the [New-PSDrive](https://technet.microsoft.com/library/hh849829.aspx) cmdlet, as shown in the following example:  
 
     ```  
     New-PSDrive -Name DS001 -PSProvider mdtprovider -Root d:\DeploymentShare$  
@@ -1488,7 +1485,7 @@ manager: angrobe
 
 - Modify the Config.xml file.  
 
-  For more information about each of these methods, see [Customize Setup before installing Office 2010](http://technet.microsoft.com/library/cc179121.aspx).  
+  For more information about each of these methods, see [Customize Setup before installing Office 2010](https://technet.microsoft.com/library/cc179121.aspx).  
 
   For the purposes of this guide, the unattended installation of Office Professional Plus 2010 will be done by creating an OCT Setup customization file (.msp file). You will save the OCT Setup customization file in the Updates folder, which is automatically scanned by the Office Professional Plus 2010 Setup Wizard.  
 
@@ -2154,7 +2151,7 @@ Figure 1. Custom wizard page to be created
 
      The Windows PowerShell Modules command prompt opens.  
 
-14. Create a Windows PowerShell drive that uses the MDT PowerShell provider by running the [New-PSDrive](http://technet.microsoft.com/library/hh849829.aspx) cmdlet as shown in the following example:  
+14. Create a Windows PowerShell drive that uses the MDT PowerShell provider by running the [New-PSDrive](https://technet.microsoft.com/library/hh849829.aspx) cmdlet as shown in the following example:  
 
     ```  
     New-PSDrive -Name DS001 -PSProvider mdtprovider -Root d:\DeploymentShare$  

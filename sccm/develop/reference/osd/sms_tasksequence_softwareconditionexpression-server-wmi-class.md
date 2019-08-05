@@ -101,15 +101,12 @@ Class SMS_TaskSequence_SoftwareConditionExpression : SMS_TaskSequence_ConditionE
 
   Either the product code or upgrade code must be specified, otherwise an error will occur.  
 
-  The software on the destination computer must be installed using a Windows Installer package for this expression to work. In usage, the class properties are obtained from the Windows Installer package of the software that is to be compared against. For more information, see [Windows Installer](http://go.microsoft.com/fwlink/?LinkId=110314).  
+  The software on the destination computer must be installed using a Windows Installer package for this expression to work. In usage, the class properties are obtained from the Windows Installer package of the software that is to be compared against. For more information, see [Windows Installer](https://docs.microsoft.com/windows/desktop/Msi/windows-installer-portal).  
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Operating System Deployment Server WMI Classes](../../../develop/reference/osd/operating-system-deployment-server-wmi-classes.md)

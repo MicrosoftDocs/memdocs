@@ -7,8 +7,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: b0adf873-2ff4-4a7b-b5e7-6047f146511f
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -41,6 +41,6 @@ Items that are removed or deprecated are split between three categories.
 ## More information
 
 For more information, see:
- - The [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle) website.
- - [Support for current branch versions of Configuration Manager](/sccm/core/servers/manage/current-branch-versions-supported).
+- The [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle) website.
+- [Support for current branch versions of Configuration Manager](/sccm/core/servers/manage/current-branch-versions-supported).
 

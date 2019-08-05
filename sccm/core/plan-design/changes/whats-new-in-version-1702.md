@@ -7,8 +7,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 409e26e1-7716-4f1d-a0ee-34feabf20792
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
@@ -21,10 +21,11 @@ Update 1702 for System Center Configuration Manager current branch is available 
 
 > [!TIP]  
 > To install a new site, you must use a baseline version of Configuration Manager.  
->  Learn more about:    
->   - [Installing new sites](https://technet.microsoft.com/library/mt590197.aspx)  
->   - [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx)  
->   - [Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+>
+> Learn more about:    
+> - [Installing new sites](https://technet.microsoft.com/library/mt590197.aspx)  
+> - [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 The following sections provide details about changes and new capabilities introduced in version 1702 of Configuration Manager.  
 
@@ -32,9 +33,9 @@ The following sections provide details about changes and new capabilities introd
 Learn about support changes before they are implemented in [removed and deprecated items](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated).
 
 Version 1702 drops support for the following products:
-- **SQL Server 2008 R2**, for site database servers. Deprecation of support was [first announced](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-support-for-sql-server-versions-as-a-site-database) on July 10, 2015. This version of SQL Server remains supported when you use a Configuration Manager version prior to version 1702.
-- **Windows Server 2008 R2**, for site system servers and most site system roles. Deprecation of support was [first announced](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems) on July 10, 2015. This version of Windows remains supported when you use a Configuration Manager version prior to version 1702.  
-- **Windows Server 2008**, for site system servers and most site system roles. Deprecation of support was [first announced](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems) on  July 10, 2015.
+- **SQL Server 2008 R2**, for site database servers. Deprecation of support was [first announced](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#sql-server) on July 10, 2015. This version of SQL Server remains supported when you use a Configuration Manager version prior to version 1702.
+- **Windows Server 2008 R2**, for site system servers and most site system roles. Deprecation of support was [first announced](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#server-os) on July 10, 2015. This version of Windows remains supported when you use a Configuration Manager version prior to version 1702.  
+- **Windows Server 2008**, for site system servers and most site system roles. Deprecation of support was [first announced](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#server-os) on  July 10, 2015.
 - **Windows XP Embedded**, as a client operating system. Deprecation was [first announced](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-client#deprecated-client-operating-systems) on  July 10, 2015. This version of Windows remains supported when you use a Configuration Manager version prior to version 1702.
 
 
@@ -44,21 +45,21 @@ Version 1702 drops support for the following products:
 
 ### Improvements for in-console search
 The following are improvements to using search in the Configuration Manager console:
- - **Object Path:**  
+- **Object Path:**  
   Many objects now support a column named **Object Path**.  When you search and include this column in your display results, you can view the path to each object. For example, if you run a search for apps in the Applications node and are also searching sub-nodes, the *Object Path* column in the results pane will show you the path to each object that is returned.   
 
 - **Preservation of search text:**  
   When you enter text into the search text box, and then switch between searching a sub-node and the current node, the text that you typed will now persist and remain available for a new search without having to reenter it.
 
 - **Preservation of your decision to search sub-nodes:**  
- The option that you choose for searching the *current node* or *all sub-nodes* now persists when you change the node you are working in. This new behavior means that you do not need to constantly reset this decision as you move around the console. By default, when you open the console the option is to search only the current node.
+  The option that you choose for searching the *current node* or *all sub-nodes* now persists when you change the node you are working in. This new behavior means that you do not need to constantly reset this decision as you move around the console. By default, when you open the console the option is to search only the current node.
 
 
 ### Send feedback from the Configuration Manager console
 
- You can use the in-console feedback options to send feedback directly to the development team.
+You can use the in-console feedback options to send feedback directly to the development team.
 
- You can find the **Feedback** option:
+You can find the **Feedback** option:
 - In the ribbon, at the far left of the Home tab of each node.  
   ![Ribbon](./media/feedback-home.png)
 
@@ -90,29 +91,29 @@ The following are changes for Updates and Servicing:
 
 
 ### Data Warehouse service point
- Use the Data Warehouse service point to store and report on long-term historical data for your Configuration Manager deployment.
+Use the Data Warehouse service point to store and report on long-term historical data for your Configuration Manager deployment.
 
- The data warehouse supports up to 2 TB of data, with timestamps for change tracking. Storage of data is accomplished by automated synchronizations from the Configuration Manager site database to the data warehouse database. This information is then accessible from your Reporting Services point.
+The data warehouse supports up to 2 TB of data, with timestamps for change tracking. Storage of data is accomplished by automated synchronizations from the Configuration Manager site database to the data warehouse database. This information is then accessible from your Reporting Services point.
 
- For more information, see [The Data Warehouse service point](/sccm/core/servers/manage/data-warehouse).
+For more information, see [The Data Warehouse service point](/sccm/core/servers/manage/data-warehouse).
 
 
 ### Peer Cache improvements
- Beginning with version 1702, a peer cache source computer will reject a request for content when the peer cache source computer meets any of the following conditions:  
-  -  Is in low battery mode.
-  -  CPU load exceeds 80% at the time the content is requested.
-  -  Disk I/O has an *AvgDiskQueueLength* that exceeds 10.
-  -  There are no more available connections to the computer.   
+Beginning with version 1702, a peer cache source computer will reject a request for content when the peer cache source computer meets any of the following conditions:  
+-  Is in low battery mode.
+-  CPU load exceeds 80% at the time the content is requested.
+-  Disk I/O has an *AvgDiskQueueLength* that exceeds 10.
+-  There are no more available connections to the computer.   
 For more information, see **Limited access to a peer cache source** in [Peer Cache for Configuration Manager clients](/sccm/core/plan-design/hierarchy/client-peer-cache).   
 
 Additionally, three new reports are added to your reporting point. You can use these reports to understand more details about rejected content requests, including which boundary group, computer, and content was involved. See [Monitoring](/sccm/core/plan-design/hierarchy/client-peer-cache#monitoring) in the peer cache topic.
 
 ### Content library cleanup tool
- Use the [content library cleanup tool](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool) to remove content from distribution points when that content is no longer associated with an application.
+Use the [content library cleanup tool](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool) to remove content from distribution points when that content is no longer associated with an application.
 
 
 ### Use the OMS connector with the Azure Government cloud
-You can use the OMS connector to connect to OMS Log Analytics in Microsoft Azure Government cloud. This requires you to modify a configuration file before you install the OMS connector so that the connector can work with the Government cloud. For more information, see [Use the OMS connector with the Azure Government cloud](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite#fairfaxconfig).
+You can use the OMS connector to connect to OMS Log Analytics in Microsoft Azure Government cloud. This requires you to modify a configuration file before you install the OMS connector so that the connector can work with the Government cloud. For more information, see [Use the OMS connector with the Azure Government cloud](/sccm/core/clients/manage/sync-data-log-analytics).
 
 ### Software update points are added to boundary groups
 Beginning with version 1702, clients use boundary groups to find a new software update point, and to fallback and find a new software update point if their current one is no longer accessible. You can add individual software update points to different boundary groups to control which servers a client can find. For more information, see [software update points](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points) in the [configuring boundary groups](/sccm/core/servers/deploy/configure/boundary-groups) topic.
@@ -196,14 +197,14 @@ This version introduced the following improvements:
 
 ### Improvements to the Auto Apply Driver task sequence
 New task sequence variables are now available to configure the timeout value on the Auto Apply Driver task sequence step when making HTTP catalog requests. The following variables and default values (in seconds) are available:
-   - SMSTSDriverRequestResolveTimeOut  
-     Default: 60
-   - SMSTSDriverRequestConnectTimeOut  
-     Default: 60
-   - SMSTSDriverRequestSendTimeOut  
-     Default: 60
-   - SMSTSDriverRequestReceiveTimeOut  
-     Default: 480
+- SMSTSDriverRequestResolveTimeOut  
+  Default: 60
+- SMSTSDriverRequestConnectTimeOut  
+  Default: 60
+- SMSTSDriverRequestSendTimeOut  
+  Default: 60
+- SMSTSDriverRequestReceiveTimeOut  
+  Default: 480
 
 ### Windows 10 ADK tracked by build version
 The Windows 10 ADK is now tracked by build version to ensure a more supported experience when customizing Windows 10 boot images. For example, if the site uses the Windows ADK for Windows 10, version 1607, only boot images with version 10.0.14393 can be customized in the console. For details about customizing WinPE versions, see [Customize boot images](/sccm/osd/get-started/customize-boot-images).
@@ -321,7 +322,7 @@ Beginning in version 1702, you have new ways to monitor the compliance status wi
 ## Protect devices
 
 ### Detect outdated antimalware client versions
-Beginning with version 1702, you can configure an alert to ensure Endpoint Protection clients are not outdated. For more information, see [Alert for outdated malware client](/sccm/protect/deploy-use/endpoint-configure-alerts#detect-outdated-antimalware-client-versions).
+Beginning with version 1702, you can configure an alert to ensure Endpoint Protection clients are not outdated. For more information, see [Alert for outdated malware client](/sccm/protect/deploy-use/endpoint-configure-alerts#alert-for-outdated-malware-client).
 
 ### Device health attestation updates
 Device health attestation service for on-premises clients can now be configured and managed from the management point. For more information, see [Health Attestation](/sccm/core/servers/manage/health-attestation).

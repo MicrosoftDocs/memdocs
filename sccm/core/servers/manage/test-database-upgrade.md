@@ -7,8 +7,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: abb696f3-a816-4f12-a9f1-0503a81e1976
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -24,9 +24,9 @@ The deprecation of this upgrade test is made possible due to changes that are in
 The changes are to how updates install, including logic that automatically rolls back a failed update without the need to run a site recovery. These changes enable the use of the console to manage update installations, and include an option to [retry installation of a failed update](/sccm/core/servers/manage/install-in-console-updates#bkmk_retry).
 
 > [!TIP]
-> When you upgrade to System Center Configuration Manager from an older product, like System Center 2012 Configuration Manager, [test database upgrades remain a recommended step](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager#a-namebkmktesta-test-the-site-database-upgrade).
+> When you upgrade to System Center Configuration Manager from an older product, like System Center 2012 Configuration Manager, [test database upgrades remain a recommended step](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager#bkmk_test).
 
-If you still plan to test the upgrade of a site database when you install an in-console update, the following information supplements the [guidance on installing an in-console update](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates).
+If you still plan to test the upgrade of a site database when you install an in-console update, the following information supplements the [guidance on installing an in-console update](/sccm/core/servers/manage/install-in-console-updates#bkmk_install).
 
 ## Prepare to run a test database upgrade  
 Before you install a new update in your hierarchy, like update 1702, you can test the upgrade of your site database.

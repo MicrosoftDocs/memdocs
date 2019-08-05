@@ -23,5 +23,4 @@ Configuration Manager supports in-place versioning for minor upgrades and out-of
  Configuration Manager supports out-of-place versioning for major upgrades that are not backwards compatible. For out-of-place versioning, it is necessary to create a new extension and technology id.  
 
 ## See Also  
- [Configuration Manager Application Management Extension](../../develop/apps/application-management-extension.md)   
  [Configuration Manager Reference](../../develop/reference/configuration-manager-reference.md)

@@ -7,8 +7,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 08e0382d-de05-4a76-ba5c-7223173f7066
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -214,7 +214,7 @@ Asset Intelligence matches the products that you specify in the general license 
 
 4.  On the **Home** tab, in the **Settings** group, choose **Site Maintenance**. Select a task, and choose **Edit** to modify the settings. 
 
-  	We recommend that you set the time period to off-peak hours of the site. The time period is the time interval in which the task can run. It is defined by the **Start after** and **Latest start time** specified in the **Task Properties** dialog box.  
+    We recommend that you set the time period to off-peak hours of the site. The time period is the time interval in which the task can run. It is defined by the **Start after** and **Latest start time** specified in the **Task Properties** dialog box.  
 
     You can initiate the task right away by selecting the current day and setting the **Start after** time to a couple minutes after the present time.  
 

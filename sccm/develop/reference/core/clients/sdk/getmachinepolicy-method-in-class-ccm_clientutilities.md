@@ -24,20 +24,17 @@ uint32 GetMachinePolicy();
 
 ```  
 
-## Parameters  
- None.  
-
-## Remarks  
- None.  
 
 ## Requirements  
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime requirements
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## See Also  
+### Development requirements
+
+For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+
+## See also
+
  [CCM_ClientUtilities Client WMI Class](../../../../../develop/reference/core/clients/sdk/ccm_clientutilities-client-wmi-class.md)   
- [Configuration Manager Client SDK WMI Classes](../../../../../develop/reference/core/clients/sdk/client-sdk-wmi-classes.md)

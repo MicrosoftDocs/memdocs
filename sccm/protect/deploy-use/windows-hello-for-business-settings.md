@@ -7,8 +7,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: a95bc292-af10-4beb-ab56-2a815fc69304
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -47,7 +47,7 @@ Configuration Manager integrates with Windows Hello for Business in two ways:
 You can control Windows Hello for Business settings on domain-joined Windows 10 devices by creating and deploying a Windows Hello for Business Profile. This approach is recommended.
 
 
-If you are using certificate-based authentication, you must also deploy a certificate profile, as described in [Configure a certificate profile](#configure-a-certificate-profile). If you are using key-based authentication, you do not need to deploy a certificate profile.
+If you are using certificate-based authentication, you must also deploy a certificate profile, as described in [Configure a certificate profile](#configure-a-certificate-profile-to-enroll-the-windows-hello-for-business-enrollment-certificate-in-configuration-manager). If you are using key-based authentication, you do not need to deploy a certificate profile.
 
 
 
@@ -67,7 +67,7 @@ If you want to use Windows Hello for Business certificate-based logon, configure
 
 -   In the certificate profile, select a template that uses Smart Card logon EKU.  
 
--	If you intend to store certificate profiles in the Windows Hello for Business key container, and the certificate profile uses the **Smart Card Logon** EKU, you must configure the following permissions for key registration to ensure the certificate is validated correctly.
+- If you intend to store certificate profiles in the Windows Hello for Business key container, and the certificate profile uses the **Smart Card Logon** EKU, you must configure the following permissions for key registration to ensure the certificate is validated correctly.
 You must first have created the **Key Admins** group and added all Configuration Manager management point computers as members to this group.
 
 Some configurations might not need you to configure permissions, or might require further configurations. Refer to the following table for more help:
@@ -82,18 +82,18 @@ Some configurations might not need you to configure permissions, or might requir
 
 ## To configure permissions
 
-1.	Sign in to a domain controller or management workstations with Domain Admin, or equivalent credentials.
-2.	Open **Active Directory Users and Computers**.
-3.	From the navigation pane, right-click your domain name, and then click **Properties**.
-4.	On the **Security** tab of the *<domain name>* **Properties** dialog box, click **Advanced**. 
+1. Sign in to a domain controller or management workstations with Domain Admin, or equivalent credentials.
+2. Open **Active Directory Users and Computers**.
+3. From the navigation pane, right-click your domain name, and then click **Properties**.
+4. On the **Security** tab of the *\<domain name>* **Properties** dialog box, click **Advanced**. 
 If the **Security** tab is not displayed, turn on **Advanced Features** from the **View** menu of **Active Directory Users and Computers**.
-5.	Click **Add**.
-6.	In the **Permission Entry for** *<domain name>* dialog box, click **Select a principal**.
-7.	In the **Select User, Computer, Service Account, or Group** dialog box, type **Key Admins** in the **Enter the object name to select** text box. Click **OK**.
-8.	From the **Applies to** list, select **Descendant User objects**.
-9.	Scroll to the bottom of the page and click **Clear all**.
-10.	In the **Properties** section, select **Read msDS-KeyCredentialLink**.
-11.	Click **OK** three times to complete the task.
+5. Click **Add**.
+6. In the **Permission Entry for** *\<domain name>* dialog box, click **Select a principal**.
+7. In the **Select User, Computer, Service Account, or Group** dialog box, type **Key Admins** in the **Enter the object name to select** text box. Click **OK**.
+8. From the **Applies to** list, select **Descendant User objects**.
+9. Scroll to the bottom of the page and click **Clear all**.
+10. In the **Properties** section, select **Read msDS-KeyCredentialLink**.
+11. Click **OK** three times to complete the task.
 
 
 ## Next steps

@@ -1,7 +1,7 @@
 ---
-title: "Create configuration items for iOS and Mac OS X devices managed with Intune"
+title: "Create configuration items for iOS and macOS devices managed with Intune"
 titleSuffix: "Configuration Manager"
-description: "Use the System Center Configuration Manager iOS and Mac OS X configuration item to manage settings for iOS and Mac OS X devices."
+description: "Use the System Center Configuration Manager iOS and macOS configuration item to manage settings for iOS and macOS devices."
 ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -12,10 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# How to create configuration items for iOS and Mac OS X devices managed with Intune
-Use the System Center Configuration Manager **iOS and Mac OS X** configuration item to manage settings  for iOS and Mac OS X devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
+# How to create configuration items for iOS and macOS devices managed with Intune
+
+Use the System Center Configuration Manager **iOS and macOS** configuration item to manage settings  for iOS and macOS devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
   
-### To create an iOS and Mac OS X configuration item  
+## Create an iOS and macOS configuration item  
   
 1. In the Configuration Manager console, click **Assets and compliance**.  
   
@@ -25,13 +26,13 @@ Use the System Center Configuration Manager **iOS and Mac OS X** configuration i
   
 4. On the **General** page of the **Create Configuration Item Wizard**, specify a name, and optional description for the configuration item.  
   
-5. Under **Specify the type of configuration item that you want to create**, select **iOS and Mac OS X**.  
+5. Under **Specify the type of configuration item that you want to create**, select **iOS and macOS**.  
   
 6. Click **Categories** if you create and assign categories to help you search and filter configuration items in the Configuration Manager console.  
   
-7. On the **Supported Platforms** page of the wizard, select the specific iOS, or Mac OS X platforms that will evaluate the configuration item.  
+7. On the **Supported Platforms** page of the wizard, select the specific iOS, or macOS platforms that will evaluate the configuration item.  
   
-8. On the **Device Settings** page of the wizard, select the settings group that you want to configure. See [iOS and Mac OS X configuration item settings reference](#BKMK_Setref) in this topic for details, and then click **Next**.  
+8. On the **Device Settings** page of the wizard, select the settings group that you want to configure. See [iOS and macOS configuration item settings reference](#ios-and-mac-os-x-configuration-item-settings-reference) in this topic for details, and then click **Next**.  
   
    > [!TIP]  
    >  If the setting that you want is not listed, select the **Configure additional settings that are not in the default setting groups check box**.  
@@ -59,7 +60,7 @@ Use the System Center Configuration Manager **iOS and Mac OS X** configuration i
   
     You can view the new configuration item in the **Configuration Items** node of the **Assets and Compliance** workspace.  
   
-##  iOS and Mac OS X configuration item settings reference  
+##  iOS and macOS configuration item settings reference  
   
 ###  Password  
   
@@ -76,7 +77,7 @@ Use the System Center Configuration Manager **iOS and Mac OS X** configuration i
 |**Passcode modification** (supervised only)|Allow the device password to be added, changed, or removed.|
   
 ###  Device  
- These settings apply to both iOS and Mac OS X devices.  
+ These settings apply to both iOS and macOS devices.  
   
 |Setting name|Details|  
 |------------------|-------------|  
@@ -86,7 +87,7 @@ Use the System Center Configuration Manager **iOS and Mac OS X** configuration i
 |**Voice assistant while locked**|Allows use of a voice assistance app like Siri when the device is locked.|  
 |**Screen capture**|Allows you to take a screenshot of the device display.|  
 |**Video chat client**|Allows use of video chat apps like Facetime.|  
-|**Multiplayer gaming**|Allows you to play games with other players on the Internet.|  
+|**Multiplayer gaming**|Allows you to play games with other players on the internet.|  
 |**Personal wallet software while locked**|Allows use of personal wallet software like Passbook.|  
 |**Diagnostic data submission**|Allow submission of app log files.|  
 |**Action Center Notifications**|Allow the user to access the notifications view without unlocking the device.|
@@ -110,8 +111,8 @@ Use the System Center Configuration Manager **iOS and Mac OS X** configuration i
 |**Predictive keyboards** (supervised only)|Allow the use of predictive keyboards that suggest words the user might want.|
 |**Keyboard spell-check** (supervised only)|Allows the device spell checker.|
 |**Notification settings modification** (supervised only)|Allow the user to change the device notification settings.|
-|**Return results from the Internet in Spotlight search** (supervised only)|Let Spotlight search connect to the Internet to provide further results.|
-|**Use Siri to query user-generated content from the Internet** (supervised only)|Allow Siri to access websites to answer questions.|
+|**Return results from the internet in Spotlight search** (supervised only)|Let Spotlight search connect to the internet to provide further results.|
+|**Use Siri to query user-generated content from the internet** (supervised only)|Allow Siri to access websites to answer questions.|
 
   
 ###  Store  
@@ -132,7 +133,7 @@ Use the System Center Configuration Manager **iOS and Mac OS X** configuration i
   
 |Setting name|Details|  
 |------------------|-------------|  
-|**Default browser**|User can change the default Internet browser.|  
+|**Default browser**|User can change the default internet browser.|  
 |**Autofill**|User can change autocomplete settings in the browser.|  
 |**Active scripting**|Browser can run scripts, such as Active X scripts.|  
 |**Pop-up blocker**|Enables or disables the browser pop-up blocker.|  
@@ -165,7 +166,7 @@ Use the System Center Configuration Manager **iOS and Mac OS X** configuration i
 |**Photo synchronization**|Allow photo synchronization to a cloud service.| 
 |**iCloud Photo Library**|If set to **No**, disables the use of iCloud photo library which lets users store photos and videos in the cloud. Any photos not fully downloaded from iCloud Photo Library to the device will be removed from the device if this is set to **No**.|
 |**iCloud Photo Sharing**|Set to **No** to disable iCloud Photo Sharing on the device.|
-|**Handoff to continue activities on other device**|Allow the user to continue work that they started on an iOS device on another iOS or Mac OS X device.|
+|**Handoff to continue activities on other device**|Allow the user to continue work that they started on an iOS device on another iOS or macOS device.|
 |**Sync data from managed apps to iCloud**|Allow apps that you manage with Intune to sync data to the user's iCloud account.|
 
   
@@ -251,14 +252,14 @@ Use the System Center Configuration Manager **iOS and Mac OS X** configuration i
   
   For information about how to use reports, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
   
-###  Compliant and noncompliant apps (Mac OS X)  
- Let’s you specify a list of Mac OS X  apps that are compliant, or not compliant in your company. You can then use reports to display devices that have noncompliant apps installed, and the associated user.  
+###  Compliant and noncompliant apps (macOS)  
+ Let’s you specify a list of macOS apps that are compliant, or not compliant in your company. You can then use reports to display devices that have noncompliant apps installed, and the associated user.  
   
  You cannot specify both compliant and noncompliant apps in the same configuration item.  
   
 #### To specify the compliant or noncompliant apps list  
   
-1. On the **Compliant and Noncompliant Apps (Mac OS X)** page, specify the following information:  
+1. On the **Compliant and Noncompliant Apps (macOS)** page, specify the following information:  
   
    - **Noncompliant apps list** - Select this option if you want to specify a list of apps that will be reported as noncompliant if installed by users.  
   
@@ -292,15 +293,15 @@ Use the System Center Configuration Manager **iOS and Mac OS X** configuration i
   
   For information about how to use reports, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
   
-### iOS and Mac OS X custom profile settings  
- Use **iOS and Mac OS X Custom Profiles** to deploy settings that you created using the [Apple Configurator tool](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) to iOS and Mac OS X devices. This tool lets you create many settings that control the operation of these devices and export them to a configuration profile. You can then import this configuration profile into an iOS and Mac OS X custom profile and deploy the settings to users and devices in your organization.  
+### iOS and macOS custom profile settings  
+ Use **iOS and macOS Custom Profiles** to deploy settings that you created using the [Apple Configurator tool](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) to iOS and macOS devices. This tool lets you create many settings that control the operation of these devices and export them to a configuration profile. You can then import this configuration profile into an iOS and macOS custom profile and deploy the settings to users and devices in your organization.  
   
 > [!NOTE]  
->  Ensure that the settings you export from the Apple Configurator tool are compatible with the version of iOS or Mac OS X on the devices to which you deploy the profile. For information about how incompatible settings are resolved, search for Configuration Profile Reference and Mobile Device Management Protocol Reference on the [Apple Developer](https://developer.apple.com/) web site.  
+>  Ensure that the settings you export from the Apple Configurator tool are compatible with the version of iOS or macOS on the devices to which you deploy the profile. For information about how incompatible settings are resolved, search for Configuration Profile Reference and Mobile Device Management Protocol Reference on the [Apple Developer](https://developer.apple.com/) web site.  
   
-#### To create an iOS and Mac OS X custom profile  
+#### To create an iOS and macOS custom profile  
   
-1.  On the **Configure iOS and Mac OS X custom profile settings** page of the **Create Configuration Item Wizard**, specify the following information:  
+1.  On the **Configure iOS and macOS custom profile settings** page of the **Create Configuration Item Wizard**, specify the following information:  
   
     -   **Custom configuration profile name (displayed to users)** - Provide a name for the policy as it will be displayed on the device, and in Configuration Manager reports.  
   
@@ -315,7 +316,7 @@ Use the System Center Configuration Manager **iOS and Mac OS X** configuration i
     -   **Noncompliance severity for reports** - Specify the severity level that is reported if this compliance policy is evaluated as noncompliant. The available severity levels are the following:  
   
         > [!NOTE]  
-        >  When a Mac OS X device is in Sleep mode, policies and profiles cannot be delivered or inventoried. As a result, the Configuration Manager console might temporarily display the status Policy settings in error until the next time the device wakes from Sleep mode.  
+        >  When a macOS device is in Sleep mode, policies and profiles cannot be delivered or inventoried. As a result, the Configuration Manager console might temporarily display the status Policy settings in error until the next time the device wakes from Sleep mode.  
   
         -   **None** Devices that fail this compliance rule do not report a failure severity for Configuration Manager reports.  
   

@@ -49,8 +49,8 @@ There are several package types that System Center Configuration Manager uses to
 ## Package Distribution  
  You copy the various package types to distribution points by using the same method that you would use for copying `SMS_Package` package object. For more information, see [How to Assign a Package to a Distribution Point](../../develop/core/servers/configure/how-to-assign-a-package-to-a-distribution-point.md).  
 
-## See Also  
- [Configuration Manager Operating System Deployment](../../develop/osd/operating-system-deployment.md)   
- [Operating System Deployment Driver Management](../../develop/osd/operating-system-deployment-driver-management.md)   
- [Operating System Deployment Server WMI Classes](../../develop/reference/osd/operating-system-deployment-server-wmi-classes.md)   
- [Software Distribution Packages](../../develop/core/servers/configure/software-distribution-packages.md)
+## See also
+
+[OS deployment server WMI classes](/sccm/develop/reference/osd/operating-system-deployment-server-wmi-classes)
+
+[Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)

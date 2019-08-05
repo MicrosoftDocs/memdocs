@@ -82,17 +82,17 @@ Beginning with this release, you can use the Configuration Manager console to id
 To identify devices that are pending a restart, go to **Assets and Compliance** > **Devices** and select a collection with devices that might need a restart. After you select a collection you can view the status for each device in the details pane in a new column named **Pending Reboot**. Each device has a value of **Yes**, or **No**.
 
 To create the client notification to restart a device:
-1.	Locate the device you want to restart in the Devices node of the console.
-2.	Right-click on the device, select **Client Notification**, and then select **Reboot**. This opens an information window about the restart. Click **OK** to confirm the restart request.
+1. Locate the device you want to restart in the Devices node of the console.
+2. Right-click on the device, select **Client Notification**, and then select **Reboot**. This opens an information window about the restart. Click **OK** to confirm the restart request.
 
 When the notification is received by a client, a **Software Center** notification window opens to inform the user about the restart. By default, the restart occurs after 90 minutes. You can modify the restart time by configuring  [client settings](/sccm/core/clients/deploy/configure-client-settings). Settings for the restart behavior are found on the [Computer restart](/sccm/core/clients/deploy/about-client-settings#computer-restart) tab of the default settings.
 
 
 ### Try it out!
 Try to complete the following tasks and then send us **Feedback** from the **Home** tab of the Ribbon to let us know how it worked:
-1.	Deploy an app or update to a device that will require that device to restart to complete installation.
-2.	Locate the device in the **Assets and Compliance** > **Devices** node of the console and confirm it displays **Yes** in the **Pending Reboot** column. It can take up to 20 minutes for the Pending Reboot status to be reflected in the console.
-3.	Monitor the device to confirm that the Software Center notification opens, and that the device successfully restarts.
+1. Deploy an app or update to a device that will require that device to restart to complete installation.
+2. Locate the device in the **Assets and Compliance** > **Devices** node of the console and confirm it displays **Yes** in the **Pending Reboot** column. It can take up to 20 minutes for the Pending Reboot status to be reflected in the console.
+3. Monitor the device to confirm that the Software Center notification opens, and that the device successfully restarts.
 
 
 ## Software Center customization
@@ -103,9 +103,9 @@ You can add enterprise branding elements and specify the visibility of tabs on S
 
 To modify Software Center:
 
-1. In the **Configuration Manager** console, choose **Administration** > **Client Settings**. Click on your desired client setting instance.
-2. On the **Home** tab, in the **Properties** group, choose **Properties**.
-3. In the **Default Settings** dialog box, choose **Software Center**.
+1. In the **Configuration Manager** console, choose **Administration** > **Client Settings**. Click on your desired client setting instance.
+2. On the **Home** tab, in the **Properties** group, choose **Properties**.
+3. In the **Default Settings** dialog box, choose **Software Center**.
 4. Select **Yes** to **Select new settings to specify company information** to enable your Software Center customization settings.
 5. Type your **Company name**.
 6. Select your **Color Scheme for Software Center**.

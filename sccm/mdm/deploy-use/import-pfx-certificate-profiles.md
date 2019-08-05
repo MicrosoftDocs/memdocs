@@ -23,9 +23,9 @@ Here, you learn how to create a certificate profile by importing credentials fro
 
 - Configuration Manager a variety of certificate stores appropriate for different devices and operating systems.  These include:
 
-  -   iOS and MacOS/OSX
-  -   Android and Android for Work
-  -   Windows 10, including Windows 10 mobile.
+  - iOS and MacOS/OSX
+  - Android and Android for Work
+  - Windows 10, including Windows 10 mobile.
 
 To learn more, see [Certificate profile prerequisites](../../protect/plan-design/prerequisites-for-certificate-profiles.md).
 
@@ -33,7 +33,7 @@ To learn more, see [Certificate profile prerequisites](../../protect/plan-design
 System Center Configuration Manager allows you to import certificate credentials and then provision personal information exchange (.pfx) files to user devices. PFX files can be used to generate user-specific certificates to support encrypted data exchange.
 
 > [!TIP]  
->  A step-by-step walkthrough describing this process is available in [How to Create and Deploy PFX Certificate Profiles in Configuration Manager](http://blogs.technet.com/b/karanrustagi/archive/2015/09/01/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager.aspx).  
+> A step-by-step walkthrough describing this process is available in [How to Create and Deploy PFX Certificate Profiles in Configuration Manager](http://blogs.technet.com/b/karanrustagi/archive/2015/09/01/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager.aspx).  
 
 ## Create, import, and deploy a Personal Information Exchange (PFX) certificate profile  
 
@@ -46,15 +46,15 @@ System Center Configuration Manager allows you to import certificate credentials
 
 4.  On the **General** page of the **Create Certificate Profile** Wizard, specify the following information:  
 
-    -   **Name**: Enter a unique name for the certificate profile. You can use a maximum of 256 characters.  
+    - **Name**: Enter a unique name for the certificate profile. You can use a maximum of 256 characters.  
 
-    -   **Description**: Provide a description that gives an overview of the certificate profile and other relevant information that helps to identify it in the System Center Configuration Manager console. You can use a maximum of 256 characters.  
+    - **Description**: Provide a description that gives an overview of the certificate profile and other relevant information that helps to identify it in the System Center Configuration Manager console. You can use a maximum of 256 characters.  
 
-    -   **Specify the type of certificate profile that you want to create**: For PFX certificates, choose one of the following options:  
+    - **Specify the type of certificate profile that you want to create**: For PFX certificates, choose one of the following options:  
 
-        -   **Personal Information Exchange PKCS #12 (PFX) settings - Import**: Creates a certificate profile by programmatically importing information from existing certificates.  
+      - **Personal Information Exchange PKCS #12 (PFX) settings - Import**: Creates a certificate profile by programmatically importing information from existing certificates.  
 
-        -   **Personal Information Exchange - PKCS #12 (PFX) settings - Create**: Creates a PFX certificate profile using credentials provided by a certificate authority.  To learn more, see [How to create PFX certificate profiles using a certificate authority](../../mdm/deploy-use/create-pfx-certificate-profiles.md).
+      - **Personal Information Exchange - PKCS #12 (PFX) settings - Create**: Creates a PFX certificate profile using credentials provided by a certificate authority.  To learn more, see [How to create PFX certificate profiles using a certificate authority](../../mdm/deploy-use/create-pfx-certificate-profiles.md).
 
 
 ### Create a PFX certificate profile for the imported credentials
@@ -64,10 +64,10 @@ To import a PFX certificate, you use the Configuration Manager SDK to deploy a C
 Imported certificates are later deployed to enrolled devices.
 
 1. On the **PFX Certificate** page of the **Create Certificate Profile Wizard**, specify where the device key storage provider:
-	- 	**Install to Trusted Platform Module (TPM) if present**  
-    -   **Install to Trusted Platform Module (TPM), otherwise fail** 
-    -   **Install to Windows Hello for Business otherwise fail** 
-    -   **Install to Software Key Storage Provider** 
+    - **Install to Trusted Platform Module (TPM) if present**  
+    - **Install to Trusted Platform Module (TPM), otherwise fail** 
+    - **Install to Windows Hello for Business otherwise fail** 
+    - **Install to Software Key Storage Provider** 
 2. Click **Next**. 
 3. On the **Supported Platforms** page of the wizard, choose the supported device platforms and then click **Next**.
 
@@ -83,9 +83,9 @@ Use the [Configuration Manager SDK](http://go.microsoft.com/fwlink/?LinkId=61352
 
 The Create PFX Script added in Configuration Manager 2012 SP2 adds an SMS_ClientPfxCertificate class to the SDK. This class includes the following methods:  
 
-    -   `ImportForUser`  
+- `ImportForUser`  
 
-    -   `DeleteForUser`  
+- `DeleteForUser`  
 
 The following example imports credentials into a PFX certificate profile.
 
@@ -107,10 +107,10 @@ The following example imports credentials into a PFX certificate profile.
 
 To use this example, update the following script variables:  
 
-   -   **blob**\ - The PFX base64-encrypted blob  
-   -   **$Password** - The password for the PFX file  
-   -   **$ProfileName** - The name of the PFX profile  
-   -   **ComputerName** - Name of host computer   
+- **blob**\ - The PFX base64-encrypted blob  
+- **$Password** - The password for the PFX file  
+- **$ProfileName** - The name of the PFX profile  
+- **ComputerName** - Name of host computer   
 
 ## See also
 [Create a new certificate profile](../../protect/deploy-use/create-certificate-profiles.md) walks you through the Create Certificate Profile Wizard.

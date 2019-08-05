@@ -1,5 +1,7 @@
-- name: Operating system deployment
+- name: OS deployment
+  href: understand/introduction-to-operating-system-deployment.md
 - name: Understand and explore
+  expanded: true
   items:
   - name: Introduction to OS deployment
     href: understand/introduction-to-operating-system-deployment.md
@@ -101,6 +103,10 @@
       href: deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md
     - name: Deploy a task sequence
       href: deploy-use/deploy-a-task-sequence.md  
+    - name: Debug a task sequence
+      href: deploy-use/debug-task-sequence.md
+    - name: Configure pre-cache content
+      href: deploy-use/configure-precache-content.md
     - name: Use a task sequence to manage virtual hard disks
       href: deploy-use/use-a-task-sequence-to-manage-virtual-hard-disks.md
   - name: Custom task sequence scenarios
@@ -139,3 +145,5 @@
     href: understand/task-sequence-variables.md
   - name: Prestart commands for task sequence media
     href: understand/prestart-commands-for-task-sequence-media.md
+  - name: Provisioning mode
+    href: understand/provisioning-mode.md

@@ -7,9 +7,9 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: 3753608d-b539-44dc-8e3f-b631319e7687
-author: aczechowski
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
 # Deploy profiles in System Center Configuration Manager
@@ -51,7 +51,7 @@ Profiles must be deployed to one or more collections before they can be used.
 
     -   -   **Random delay (hours)**: (Only for certificate profiles that contain Simple Certificate Enrollment Protocol settings) Specifies a delay window to avoid excessive processing on the Network Device Enrollment Service. The default value is **64** hours.  
 
-    -   **Specify the compliance evaluation schedule for this <type> profile** - Specify the schedule by which the deployed profile is evaluated on client computers. The schedule can be either a simple or a custom schedule.  
+    -   **Specify the compliance evaluation schedule for this \<type> profile** - Specify the schedule by which the deployed profile is evaluated on client computers. The schedule can be either a simple or a custom schedule.  
 
         > [!NOTE]  
         >  The profile is evaluated by client computers when the user logs on.  

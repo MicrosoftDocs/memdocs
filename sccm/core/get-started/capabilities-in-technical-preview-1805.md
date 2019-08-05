@@ -43,7 +43,7 @@ Steps to workaround, if any.
 
 
 ## Create a phased deployment with manually configured phases for a task sequence
-<!--1358148--> 
+<!--1358148-->
 You can now [create a phased deployment](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) with manually configured phases for a task sequence. You can add up to 10 additional phases from the **Phases** tab of the Create Phased Deployment wizard. 
 
 
@@ -96,7 +96,7 @@ Configuration Manager does not migrate existing classic cloud distribution point
 ### Prerequisites  
 - Integration with [Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure). Azure AD user discovery is not required.  
 
-- The same [requirements for a cloud distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#BKMK_PrereqsCloudDP), except for the Azure management certificate.  
+- The same [requirements for a cloud distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_requirements), except for the Azure management certificate.  
 
 
 ### Try it out!  
@@ -170,7 +170,7 @@ For more information on Windows LEDBAT, see the [New transport advancements](htt
 
 
 ### Try it out!
- Try to complete the tasks. Then send [Feedback](#bkmk_feedback) letting us know how it worked.
+ Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
 
 1. In the Configuration Manager console, go to the **Administration** workspace. Select the **Distribution Points** node. Select the target distribution point, and click **Properties** in the ribbon.  
 
@@ -211,7 +211,7 @@ In the Configuration Manager console, go to the **Monitoring** workspace. Select
 
      1. **Azure AD user**: use this option to simulate communication the same as a cloud-based user identity logged on to an Azure AD-joined Windows 10 device. Click **Sign In** to securely enter the credentials for this Azure AD user account.  
 
-     2. **Client certificate**: use this option to simulate communication the same as a Configuration Manager client with a [client authentication certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#client-authentication-certificate).  
+     2. **Client certificate**: use this option to simulate communication the same as a Configuration Manager client with a [client authentication certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_clientauth).  
 
 4. Click **Start** to start the analysis. The results are displayed in the analyzer window. Select an entry to see more details in the Description field.  
 
@@ -280,10 +280,10 @@ The following scenarios benefit from these improvements:
 
 #### <a name="bkmk_token1"></a> Scenario 1: Client to management point
 <!--1356889-->
-[Azure AD joined devices](/azure/active-directory/device-management-introduction#azure-ad-joined-devices) can communicate through a cloud management gateway (CMG) with a management point configured for HTTP. The site server generates a certificate for the management point allowing it to communicate via a secure channel.   
+[Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join) can communicate through a cloud management gateway (CMG) with a management point configured for HTTP. The site server generates a certificate for the management point allowing it to communicate via a secure channel.   
 
 > [!Note]  
-> This behavior is changed from Configuration Manager current branch version 1802, which requires an HTTPS-enabled management point for this scenario. For more information, see [Enable management point for HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#enable-management-point-for-https).  
+> This behavior is changed from Configuration Manager current branch version 1802, which requires an HTTPS-enabled management point for this scenario. For more information, see [Enable management point for HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps).  
 
 #### <a name="bkmk_token2"></a> Scenario 2: Client to distribution point
 <!--1358228-->
@@ -291,7 +291,7 @@ A workgroup or Azure AD joined client can download content over a secure channel
 
 #### <a name="bkmk_token3"></a> Scenario 3 Azure AD device identity 
 <!--1358460-->
-An Azure AD joined or [hybrid Azure AD device](/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices) without an Azure AD user logged in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point.  
+An Azure AD joined or [hybrid Azure AD device](/azure/active-directory/devices/concept-azure-ad-join-hybrid) without an Azure AD user logged in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point.  
 
 
 ### Prerequisites  

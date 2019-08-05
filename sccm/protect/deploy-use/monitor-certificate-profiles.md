@@ -7,8 +7,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: 98feaa06-64b1-4e86-a122-93017c97cd4f
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -52,21 +52,21 @@ To monitor SCEP certificate compliance  do not use the console, rather, use [rep
    |    0x00000004     |                                                                                                          Enrollment must be deferred.                                                                                                           |
    |    0x00000010     |                                                                                                               An error occurred.                                                                                                                |
    |    0x00000020     |                                                                                                        The enrollment status is unknown.                                                                                                        |
-   |    0x00000040     | The status information has been skipped. This can occur if a  HYPERLINK "<http://msdn.microsoft.com/windows/ms721572>" \l "_security_certification_authority_gly" certification authority is not valid or has not been selected for monitoring. |
+   |    0x00000040     | The status information has been skipped. This can occur if a  HYPERLINK "<https://msdn.microsoft.com/windows/ms721572>" \l "_security_certification_authority_gly" certification authority is not valid or has not been selected for monitoring. |
    |    0x00000100     |                                                                                                           Enrollment has been denied.                                                                                                           |
 
 ##  View Compliance Results by Using Reports
 
- Compliance settings in System Center Configuration Manager include built-in reports that you can use to monitor information about certificate profiles. These reports have the report category of **Compliance and Settings Management**.  
+Compliance settings in System Center Configuration Manager include built-in reports that you can use to monitor information about certificate profiles. These reports have the report category of **Compliance and Settings Management**.  
 
 > [!IMPORTANT]  
 >  You must use a wildcard (%) character when you use the parameters **Device filter** and **User filter** in the reports for compliance settings.  
 
 To monitor SCEP certificate compliance  use these  certificate reports under the report node **Company Resource Access**:  
 
- -   Certificate issuance history  
- -   List of assets with certificates nearing expiry  
- -   List of assets by certificate issuance status  
+-   Certificate issuance history  
+-   List of assets with certificates nearing expiry  
+-   List of assets by certificate issuance status  
 
 
 

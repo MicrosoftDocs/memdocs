@@ -2,13 +2,13 @@
 title: In-console updates
 titleSuffix: Configuration Manager
 description: Install updates to Configuration Manager from the Microsoft cloud
-ms.date: 03/27/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -18,7 +18,6 @@ ms.collection: M365-identity-device-management
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 Configuration Manager synchronizes with the Microsoft cloud service to get updates. Then install these updates from within the Configuration Manager console.
-
 
 
 ## Get available updates
@@ -34,13 +33,11 @@ The site only downloads updates that apply to your infrastructure and version. T
 > [!NOTE]  
 > If necessary, import out-of-band fixes into your console. To do so, use the [update registration tool](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes). These out-of-band fixes supplement the updates you get when you synchronize with the Microsoft cloud service.  
 
-
 After updates synchronize, view them in the Configuration Manager console. Go to the **Administration** workspace and select the **Updates and Servicing** node.  
 
 - Updates you haven't installed display as **Available**.  
 
 - Updates you've installed display as **Installed**. Only the most recently installed update is shown. To view previously installed updates, select **History** in the ribbon.  
-
 
 Before you configure the service connection point, understand and plan for its additional uses. The following uses might affect how you configure this site system role:  
 
@@ -55,13 +52,12 @@ To better understand what happens when updates are downloaded, see the following
 - [Flowchart - Update replication](/sccm/core/servers/manage/update-replication-flowchart)  
 
 
-
 ## Assign permissions to view and manage updates and features
 
-To view updates in the console, a user must have a role-based administration security role that includes the security class **Update packages**. This class grants access to view and manage updates in the Configuration Manager console.    
+To view updates in the console, a user must have a role-based administration security role that includes the security class **Update packages**. This class grants access to view and manage updates in the Configuration Manager console.
 
+### About the Update packages class
 
-#### About the Update packages class   
 By default, the **Update packages** class (SMS_CM_Updatepackages) is part of the following built-in security roles with the listed permissions:  
 
 - **Full Administrator** with **Modify** and **Read** permissions:  
@@ -74,32 +70,34 @@ By default, the **Update packages** class (SMS_CM_Updatepackages) is part of the
 
     - A user with this security role and access to the **Default** scope can view updates but not install them. This user can also view features after the site updates, but can't enable them.  
 
+### Permissions required for updates and servicing
 
-#### Permissions required for updates and servicing   
 - Use an account to which you assign a security role that includes the **Update packages** class with both **Modify** and **Read** permissions.  
 
 - Assign the account to the **Default** scope.  
 
-#### Permissions to only view updates   
+### Permissions to only view updates
+
 - Use an account to which you assign a security role that includes the **Update packages** class with only the **Read** permission.  
 
 - Assign the account to the **Default** scope.  
 
-#### Permissions required to enable features after the site updates   
--  Use an account to which you assign a security role that includes the **Update packages** class with both **Modify** and **Read** permissions.  
+### Permissions required to enable features after the site updates
 
--  Assign the account to the **All** scope.  
+- Use an account to which you assign a security role that includes the **Update packages** class with both **Modify** and **Read** permissions.  
+
+- Assign the account to the **All** scope.  
 
 
-
-##  <a name="bkmk_beforeinstall"></a> Before you install an in-console update  
+## <a name="bkmk_beforeinstall"></a> Before you install an in-console update  
 
 Review the following steps before you install an update from within the Configuration Manager console.  
 
-
-###  <a name="bkmk_step1"></a> Step 1: Review the update checklist  
+### <a name="bkmk_step1"></a> Step 1: Review the update checklist  
 
 Review the applicable update checklist for actions to take before you start the update:
+
+- [Checklist for installing update 1906](/sccm/core/servers/manage/checklist-for-installing-update-1906)  
 
 - [Checklist for installing update 1902](/sccm/core/servers/manage/checklist-for-installing-update-1902)
 
@@ -107,10 +105,7 @@ Review the applicable update checklist for actions to take before you start the 
 
 - [Checklist for installing update 1806](/sccm/core/servers/manage/checklist-for-installing-update-1806)  
 
-- [Checklist for installing update 1802](/sccm/core/servers/manage/checklist-for-installing-update-1802)
-
-
-###  <a name="bkmk_step2"></a> Step 2: Run the prerequisite checker before installing an update  
+### <a name="bkmk_step2"></a> Step 2: Run the prerequisite checker before installing an update  
 
 Before you install an update, consider running the prerequisite check for that update. If you run the prerequisite before installing an update:  
 
@@ -118,14 +113,14 @@ Before you install an update, consider running the prerequisite check for that u
 
 - When you choose to install the update, the prerequisite check automatically runs again.  
 
-> [!NOTE]   
+> [!NOTE]  
 > When you start a prerequisite check and then view the status, the **Installation** phase appears to be active. However, the site isn't actually installing the update. To run the prerequisite check, the update process extracts the package from the content library. It then puts the package into a staging folder where it can access the current prerequisite checks. When you install an update, this same process runs. This behavior is why the Installation phase shows as **In progress**. Only the *Extract Update package* step is shown in the Installation category.  
 
 Later, when you install the update, you can configure the update to ignore prerequisite check warnings.  
 
 #### To run the prerequisite checker before installing an update  
 
-1. In the Configuration Manager console, go to the **Administration** workspace, and select the **Updates and Servicing** node.   
+1. In the Configuration Manager console, go to the **Administration** workspace, and select the **Updates and Servicing** node.  
 
 2. Select the update package for which you want to run the prerequisite check.  
 
@@ -142,8 +137,7 @@ Later, when you install the update, you can configure the update to ignore prere
     3. For more information, see the **ConfigMgrPrereq.log** on the site server.  
 
 
-
-##  <a name="bkmk_install"></a> Install in-console updates  
+## <a name="bkmk_install"></a> Install in-console updates  
 
 When you're ready to install updates from within the Configuration Manager console, begin with the top-level site of your hierarchy. This site is either the central administration site or a standalone primary site.  
 
@@ -157,10 +151,10 @@ Install the update outside of normal business hours for each site to minimize th
 
 - After the site server successfully completes installation of an update, it automatically updates all applicable site system roles. However, all distribution points don't reinstall and go offline to update at the same time. Instead, the site server uses the site's content distribution settings to distribute the update to a subset of distribution points at a time. The result is that only some distribution points go offline to install the update. Distribution points that haven't begun to update or that have completed the update remain online and able to provide content to clients.
 
+### <a name="bkmk_overview"></a> Overview of in-console update installation  
 
-###  <a name="bkmk_overview"></a> Overview of in-console update installation  
+#### 1. When the update installation starts
 
-#### 1. When the update installation starts  
 You're presented with the Updates Wizard that displays a list of the product areas that the update applies to.  
 
 - On the **General** page of the wizard, configure **Prerequisite warnings** as necessary:  
@@ -175,8 +169,8 @@ You're presented with the Updates Wizard that displays a list of the product are
 
 - When an update applies to the Configuration Manager client, choose to test the client update with a limited set of clients. For more information, see [How to test client upgrades in a pre-production collection](/sccm/core/clients/manage/upgrade/test-client-upgrades).  
 
+#### 2. During the update installation
 
-#### 2. During the update installation  
 As part of the update installation, Configuration Manager does the following actions:  
 
 - Reinstalls any affected components, like site system roles or the Configuration Manager console.  
@@ -188,8 +182,8 @@ As part of the update installation, Configuration Manager does the following act
 > [!TIP]  
 > When you install Configuration Manager updates, the site also updates the CD.Latest folder. For more information, see [The CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder).  
 
+#### 3. Monitor the progress of updates as they install
 
-#### 3. Monitor the progress of updates as they install  
 Use the following steps to monitor progress:  
 
 - In the Configuration Manager console, go to the **Administration** workspace, and select the **Updates and Servicing** node. This node shows the installation status for all update packages.  
@@ -198,20 +192,27 @@ Use the following steps to monitor progress:
 
     The update installation is divided into several phases for easier monitoring. For each of the following phases, additional details in the installation status include which log file to view for more information:  
 
-    - **Download**: This phase applies only to the top-level site with the service connection point.   
+    - **Download**: This phase applies only to the top-level site with the service connection point.
 
-    - **Replication**   
+    - **Replication**
 
-    - **Prerequisites Check**   
+    - **Prerequisites Check**
 
-    - **Installation**    
+    - **Installation**
 
     - **Post Installation**: For more information, see [post installation tasks](#post-installation-tasks).  
 
 - View the **CMUpdate.log** file in `<ConfigMgr_Installation_Directory>\Logs` on the site server.  
 
+>[!NOTE]
+> - Starting in version 1906, you can see the state of the **Upgrade ConfigMgr database** task during the **Installation** phase.
+>   - If the database upgrade is blocked, then you'll be given the warning **In progress, needs attention**.
+>     - The cmupdate.log will log the program name and sessionid from SQL that is blocking the database upgrade.
+>   - When the database upgrade is no longer blocked, the status will be reset to **In progress** or **Complete**.
+>     - When the database upgrade is blocked, a check is done every 5 minutes to see if it's still blocked.
 
-#### 4. When the update installation completes  
+#### 4. When the update installation completes
+
 After the first site update completes installation:  
 
 - Child primary sites install the update automatically. No further action is required.  
@@ -220,8 +221,8 @@ After the first site update completes installation:
 
 - Until all sites in your hierarchy update to the new version, your hierarchy operates in a mixed version mode. For more information, see [Interoperability between different versions](/sccm/core/plan-design/hierarchy/interoperability-between-different-versions).  
 
+#### 5. Update Configuration Manager consoles
 
-#### 5. Update Configuration Manager consoles  
 After a central administration site or primary site updates, each Configuration Manager console that connects to the site must also update. You're prompted to update a console:  
 
 - When you open the console  
@@ -233,16 +234,13 @@ Update the console right away after the site updates.
 After the console update completes, verify the console and site versions are correct. Go to **About System Center Configuration Manager** at the top-left corner of the console.  
 
 > [!Note]  
-> Starting in version 1802, the console version is now slightly different from the site version. The minor version of the console now corresponds to the Configuration Manager release version. For example, in Configuration Manager version 1802 the initial site version is 5.0.8634.1000, and the initial console version is 5.**1802**.1082.1700. The build (1082) and revision (1700) numbers may change with future hotfixes to the 1802 release.
+> The console version is slightly different from the site version. The minor version of the console corresponds to the Configuration Manager release version. For example, in Configuration Manager version 1802 the initial site version is 5.0.8634.1000, and the initial console version is 5.**1802**.1082.1700. The build (1082) and revision (1700) numbers may change with future hotfixes.
 
-
-
-###  <a name="bkmk_toptier"></a> To start the update installation at the top-level site  
+### <a name="bkmk_toptier"></a> To start the update installation at the top-level site  
 
 At the top-level site of your hierarchy, in the Configuration Manager console, go to the **Administration** workspace, and select the **Updates and Servicing** node. Select an update with the state of **Available**, and then choose **Install Update Pack** in the ribbon.  
 
-
-###  <a name="bkmk_secondary"></a> To start the update installation at a secondary site  
+### <a name="bkmk_secondary"></a> To start the update installation at a secondary site  
 
 After a secondary site's parent primary site updates, update the secondary site from within the Configuration Manager console. To do so, you use the **Upgrade Secondary Site Wizard**.  
 
@@ -254,7 +252,6 @@ To monitor the update installation on a secondary site, select the secondary sit
 
 In some instances, the status in the console doesn't refresh or suggests the update has failed. After a secondary site successfully updates, use the **Retry installation** option. This option doesn't reinstall the update for a secondary site that successfully installed the update, but forces the console to update the status.
 
-
 ### Post-installation tasks
 
 When a site installs an update, there are several tasks that can't start until after the update completes installation on the site server. This list includes the post-installation tasks that are critical for site and hierarchy operations. Because they're critical, they're actively monitored. Additional tasks that aren't directly monitored include the reinstallation of site system roles. To view the status of the critical post-installation tasks, select the **Post Installation** task while monitoring the update installation for a site.
@@ -264,51 +261,60 @@ Not all tasks complete immediately. Some tasks don't start until each site compl
 The post installation tasks include:
 
 - **Installing SMS_EXECUTIVE service**
+
     - Critical service that runs on the site server.
     - Reinstallation of this service should complete quickly.
 
 - **Installing SMS_DATABASE_NOTIFICATION_MONITOR component**
+
     - Critical site component thread of SMS_EXECUTIVE service.
     - Reinstallation of this service should complete quickly.
 
 - **Installing SMS_HIERARCHY_MANAGER component**
+
     - Critical site component that runs on the site server.
     - Responsible for reinstalling roles on site system servers. Status for individual site system role reinstallation doesn't display.
     - Reinstallation of this service should complete quickly.
 
 - **Installing SMS_REPLICATION_CONFIGURATION_MONITOR component**
+
     - Critical site component that runs on the site server.
     - Reinstallation of this service should complete quickly.
 
 - **Installing SMS_POLICY_PROVIDER component**
+
     - Critical site component that runs only on primary sites.
     - Reinstallation of this service should complete quickly.
 
-- **Monitoring replication initialization**   
+- **Monitoring replication initialization**
+
     - This task only displays at the central administration site and child primary sites.
     - Dependent on the SMS_REPLICATION_CONFIGURATION_MONITOR.
     - Should complete quickly.
 
-- **Updating Configuration Manager Client Preproduction Package**    
+- **Updating Configuration Manager Client Preproduction Package**
+
     - This task displays even when client preproduction (also called client piloting) isn't enabled for use.
     - Doesn't start until all sites in the hierarchy finish installing the update.
 
 - **Updating Client folder on Site Server**
+
     - This task doesn't display if you use the client in preproduction.  
     - Should complete quickly.
 
 - **Updating Configuration Manager Client Package**
+
     - This task doesn't display if you use the client in preproduction.  
     - Finishes only after all sites install the update.  
 
 - **Turning on Features**
+
     - This task displays only at the top-tier site of the hierarchy.
     - Doesn't start until all sites in the hierarchy finish installing the update.
     - Individual features aren't displayed.
 
 
-
-##  <a name="bkmk_retry"></a> Retry installation of a failed update  
+## <a name="bkmk_retry"></a> Retry installation of a failed update  
 
 When an update fails to install, review the in-console feedback to identify resolutions for warnings and errors. For more details, view the **ConfigMgrPrereq.log** on the site server. Before you retry the installation of an update, you must fix errors, and should fix warnings.  
 
@@ -317,31 +323,33 @@ When an update fails to install, review the in-console feedback to identify reso
 
 When you're ready to retry the installation of an update, select the failed update, and then choose an applicable option. The update installation retry behavior depends on the node where you start the retry, and the retry option that you use.  
 
-#### Retry installation for the hierarchy
+### Retry installation for the hierarchy
+
 Retry the installation of an update for the entire hierarchy when that update is in one of the following states:  
 
-- Prerequisite checks passed with one or more warnings, and the option to ignore prerequisite check warnings wasn't set in the Update Wizard. (The update's value for **Ignore Prereq Warning** in the **Updates and Servicing** node is **No**.)   
+- Prerequisite checks passed with one or more warnings, and the option to ignore prerequisite check warnings wasn't set in the Update Wizard. (The update's value for **Ignore Prereq Warning** in the **Updates and Servicing** node is **No**.)
 
-- Prerequisite failed    
+- Prerequisite failed
 
 - Installation failed  
 
-- Replication of the content to the site failed   
+- Replication of the content to the site failed
 
 Go to the **Administration** workspace and select the **Updates and Servicing** node. Select the update, and then choose one of the following options:  
 
 - **Retry**: When you **Retry** from **Updates and Servicing**, the update install starts again and automatically ignores prerequisite warnings. If content replication previously failed, content for the update replicates again.  
 
-- **Ignore prerequisite warnings**: If the update install stops because of a warning, you can then choose **Ignore prerequisite warnings**. This action allows the installation of the update to continue after a few minutes, and uses the option to ignore prerequisite warnings.   
+- **Ignore prerequisite warnings**: If the update install stops because of a warning, you can then choose **Ignore prerequisite warnings**. This action allows the installation of the update to continue after a few minutes, and uses the option to ignore prerequisite warnings.
 
-#### Retry installation for the site  
+### Retry installation for the site
+
 Retry the installation of an update at a specific site when that update is in one of the following states:  
 
 - Prerequisite checks passed with one or more warnings, and the option to ignore prerequisite check warnings wasn't set in the Update Wizard. (The updates value for **Ignore Prereq Warning** in the Updates and Servicing node is **No**.)  
 
-- Prerequisite failed    
+- Prerequisite failed
 
-- Installation failed    
+- Installation failed
 
 Go to the **Monitoring** workspace, and select the **Site Servicing Status** node. Select the update, and then choose one of the following options:  
 
@@ -350,10 +358,11 @@ Go to the **Monitoring** workspace, and select the **Site Servicing Status** nod
 - **Ignore prerequisite warnings**: If the update install stops because of a warning, you can then select **Ignore prerequisite warnings**. This action allows the installation of the update to continue after a few minutes, and uses the option to ignore prerequisite warnings.  
 
 
-
-##  <a name="bkmk_after"></a> After a site installs an update  
+## <a name="bkmk_after"></a> After a site installs an update  
 
 After the site updates, review the post-update checklist for the applicable version:  
+
+- [Post-update checklist for version 1906](/sccm/core/servers/manage/checklist-for-installing-update-1906#post-update-checklist)  
 
 - [Post-update checklist for version 1902](/sccm/core/servers/manage/checklist-for-installing-update-1902#post-update-checklist)  
 
@@ -361,11 +370,8 @@ After the site updates, review the post-update checklist for the applicable vers
 
 - [Post-update checklist for version 1806](/sccm/core/servers/manage/checklist-for-installing-update-1806#post-update-checklist)  
 
-- [Post-update checklist for version 1802](/sccm/core/servers/manage/checklist-for-installing-update-1802#post-update-checklist)  
 
-
-
-##  <a name="bkmk_options"></a> Enable optional features from updates  
+## <a name="bkmk_options"></a> Enable optional features from updates  
 
 When an update includes one or more optional features, you have the opportunity to enable those features in your hierarchy. Enable features when the update installs, or return to the console later to enable the optional features.
 
@@ -378,7 +384,8 @@ When a feature isn't optional, it's installed automatically. It doesn't appear i
 
 When you enable a new feature or pre-release feature, the Configuration Manager hierarchy manager (HMAN) must process the change before that feature becomes available. Processing of the change is often immediate. Depending on the HMAN processing cycle, it can take up to 30 minutes to complete. After the change is processed, restart the console before you can use the feature.
 
-#### List of optional features
+### List of optional features
+
 The following features are optional in the latest version of Configuration Manager:<!--505213-->  
 
 <!--Note to include in target articles
@@ -388,42 +395,45 @@ The following features are optional in the latest version of Configuration Manag
 
 -->
 
-- [Package conversion manager](/sccm/apps/pcm/package-conversion-manager) <!--1357861-->
-- [Third-party software updates](/sccm/sum/deploy-use/third-party-software-updates)<!--1357605,1352101,1358714-->
-- [Approve application requests for users per device](/sccm/apps/deploy-use/deploy-applications#specify-deployment-settings) <!--1357015-->  
-- [Support for Cisco AnyConnect 4.0.07x and later for iOS](/sccm/mdm/deploy-use/create-vpn-profiles)<!--1357393-->
-- [Device health attestation assessment for compliance policies for conditional access](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616-->
-- [Create and run scripts](/sccm/apps/deploy-use/create-deploy-scripts) <!--1236459-->
-- [Run task sequence step](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence) <!--1261338-->
-- [Task sequence content pre-caching](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) <!--1021244-->
-- [Surface driver updates](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490-->
-- [Cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) <!--1101764-->
-- [Data warehouse service point](/sccm/core/servers/manage/data-warehouse) <!--1277922-->
-- [Client peer cache](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436-->
-- [PFX create](/sccm/protect/deploy-use/introduction-to-certificate-profiles) <!--1321368-->
-- [Azure Log Analytics connector](/sccm/core/clients/manage/sync-data-log-analytics) <!--1258052-->
-- [Windows Defender Exploit Guard policy](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468-->
-- [VPN for Windows 10](/sccm/protect/deploy-use/vpn-profiles) <!--1283610-->
-- [Windows Hello for Business](/sccm/protect/deploy-use/windows-hello-for-business-settings) (previously known as *Passport for Work*) <!--1245704-->
-- [Conditional access for managed PCs](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)  <!--1191496-->
-
+- [Synchronize collection membership results to Azure Active Directory](/sccm/core/clients/manage/collections/create-collections#bkmk_aadcollsync) <!--3607475,C2127144-C8DE-49F6-9CB3-D4F5B59F9515-->
+- [Azure Active Directory user group discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_azuregroupdisco) <!--3611956,023715E7-BFBA-4E9E-A80F-B5B626464ADD-->
+- [Application groups](/sccm/apps/deploy-use/create-app-groups) <!--3555907,EE16A1D8-EF1B-4094-845F-AC107E7C621D-->
+- [Task sequence debugger](/sccm/osd/deploy-use/debug-task-sequence) <!--3612274,C3F37661-69E4-4D53-A39C-5D02F97E0E71-->
+- [Package conversion manager](/sccm/apps/pcm/package-conversion-manager) <!--1357861,4E0C09AF-7FC1-4412-A8BB-166D9BCD0093-->
+- [Client apps for co-managed devices](/sccm/comanage/workloads#client-apps) <!--1357892,CC3AE625-BF72-49B1-8AB1-AF0DCF2D6F4C-->
+- [Third-party software updates](/sccm/sum/deploy-use/third-party-software-updates)<!--1357605,1352101,1358714;B5E192AE-C81F-4348-9EF9-07A3C0FBE597-->
+- [Approve application requests for users per device](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy-settings) <!--1357015,4BA987C9-08FC-48E2-BFFE-C9DCF35B496A-->  
+- [Support for Cisco AnyConnect 4.0.07x and later for iOS](/sccm/mdm/deploy-use/create-vpn-profiles)<!--1357393,A421682F-C1A5-4933-A329-3EF35737E52A-->
+- [Device health attestation assessment for compliance policies for conditional access](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616,0E986DC1-D20A-4386-9EB5-108D9D5118EB-->
+- [Create and run scripts](/sccm/apps/deploy-use/create-deploy-scripts) <!--1236459,566F8720-F415-4E10-9A51-CDE682BA2B2E-->
+- [Run task sequence step](/sccm/osd/understand/task-sequence-steps#child-task-sequence) <!--1261338,3CFFE6AC-D46F-47F0-AD25-19F6EEF21F28-->
+- [Task sequence content pre-caching](/sccm/osd/deploy-use/configure-precache-content) <!--1021244,1C6BD2E9-C8DB-4DEE-A937-AA84B38957A7-->
+- [Surface driver updates](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490,82AD973A-7CDF-4B67-A665-72875D6E099A-->
+- [Cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) <!--1101764,DD043119-789C-4158-AC79-725E999F385A-->
+- [Data warehouse service point](/sccm/core/servers/manage/data-warehouse) <!--1277922,0EAC8088-6895-440F-B871-11E3C305CFCD-->
+- [Client peer cache](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436,4C5F2976-7999-4E0C-BAF2-DEB793AD540E-->
+- [PFX create](/sccm/protect/deploy-use/introduction-to-certificate-profiles) <!--1321368,CED76B79-929C-4C45-981F-B9BCA6D38A17-->
+- [Azure Log Analytics connector](/sccm/core/clients/manage/sync-data-log-analytics) <!--1258052,73A7EC4D-EF22-4EA4-82A9-419C2A8CFC4D-->
+- [Windows Defender Exploit Guard policy](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468,8491D4C8-8484-46B8-BCD6-17DC2CADBAEB-->
+- [VPN for Windows 10](/sccm/protect/deploy-use/vpn-profiles) <!--1283610,EDBEBA3D-3A4D-4465-84D9-D71EB811E7F6-->
+- [Servicing a cluster-aware collection (Server groups)](/sccm/sum/deploy-use/service-a-server-group) <!--1081776,290B66D8-C735-4895-B59A-DD732D84A697-->
+- [Windows Hello for Business](/sccm/protect/deploy-use/windows-hello-for-business-settings) (previously known as *Passport for Work*) <!--1245704,8BCA2642-3719-4862-A355-9D39C979E1B4-->
+- [Conditional access for managed PCs](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)  <!--1191496,1CD5B9FC-022E-4A78-89F5-DEA58B6F5050-->
 
 > [!Tip]  
 > For more information on features that require consent to enable, see [pre-release features](/sccm/core/servers/manage/pre-release-features).  
-> 
+>
 > For more information on features that are only available in the technical preview branch, see [Technical Preview](/sccm/core/get-started/technical-preview).
 
 
-
-##  <a name="bkmk_prerelease"></a> Use pre-release features from updates
+## <a name="bkmk_prerelease"></a> Use pre-release features from updates
 
 The current branch includes pre-release features for early testing in a production environment. For more information, see [pre-release features](/sccm/core/servers/manage/pre-release-features).
 
 
-
 ## <a name="bkmk_faq"></a> Frequently asked questions
 
-###  Why don't I see certain updates in my console?  
+### Why don't I see certain updates in my console?
 
 If you can't find a specific update in your console after a successful sync with the Microsoft cloud service, this behavior might be because of one of the following reasons:  
 
@@ -432,4 +442,3 @@ If you can't find a specific update in your console after a successful sync with
     If you think you have the required configurations and prerequisites for a missing update, confirm the service connection point is in online mode. Then, use the **Check for Updates** option in the **Updates and Servicing** node to force a check. If your service connection point is in offline mode, use the service connection tool to manually sync with the cloud service.  
 
 - Your account lacks the correct role-based administration permissions to view updates in the Configuration Manager console. For more information, see [Permissions to manage updates](#assign-permissions-to-view-and-manage-updates-and-features).  
-

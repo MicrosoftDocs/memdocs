@@ -10,7 +10,6 @@ ms.assetid: 2ea18d09-c957-47f7-8e54-c6f2b3c74347
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
 ---
 
@@ -122,7 +121,7 @@ To change these settings, use the following procedure:
 
 2. On the **Diagnostic Data** page, make changes as needed to the following settings:  
 
-    - **Commercial ID**: you shouldn't need to change or edit this value. For more information on troubleshooting issues with the commercial ID, see [Commercial ID configuration](/sccm/desktop-analytics/troubleshooting#commercial-id-configuration).  
+    - **Commercial ID**: this value should automatically populate with your organization's ID. If it doesn't, make sure your proxy server is configured to allow all required [endpoints](/sccm/desktop-analytics/enable-data-sharing#endpoints) before continuing. Alternatively, retrieve your Commercial ID manually from the [Desktop Analytics portal](/sccm/desktop-analytics/monitor-connection-health#bkmk_ViewCommercialID).   
 
     - **Windows 10 diagnostic data level**: For more information, see [Diagnostic data levels](/sccm/desktop-analytics/enable-data-sharing#diagnostic-data-levels).  
 
@@ -130,7 +129,7 @@ To change these settings, use the following procedure:
 
     When you make changes to this page, the **Available functionality** page shows a preview of the Desktop Analytics functionality with the selected diagnostic data settings.  
 
-3. On the **Microsoft 365 Analytics Connection** page, make changes as needed to the following settings:
+3. On the **Desktop Analytics Connection** page, make changes as needed to the following settings:
 
     - **Display name**: The Desktop Analytics portal displays this Configuration Manager connection using this name.  
 
@@ -138,14 +137,15 @@ To change these settings, use the following procedure:
 
     - **Devices in the target collection use a user-authenticated proxy for outbound communication**: By default, this value is **No**. If needed in your environment, set to **Yes**. For more information, see [Proxy server authentication](/sccm/desktop-analytics/enable-data-sharing#proxy-server-authentication).  
 
-    - **Select specific collections to synchronize with Desktop Analytics**: Select **Add** to include additional collections. These collections are available in the Desktop Analytics portal for grouping with deployment plans. Make sure to include pilot and pilot exclusion collections.  
+    - **Select specific collections to synchronize with Desktop Analytics**: Select **Add** to include additional collections from your **Target collection** hierarchy. These collections are available in the Desktop Analytics portal for grouping with deployment plans. Make sure to include pilot and pilot exclusion collections.  <!-- 4097528 -->
 
-        These collections continue to sync as their membership changes. For example, your deployment plan uses a collection with a Windows 7 membership rule. As those devices upgrade to Windows 10, and Configuration Manager evaluates the collection membership, those devices drop out of the collection and deployment plan.  
+        > [!Important] 
+        > These collections continue to sync as their membership changes. For example, your deployment plan uses a collection with a Windows 7 membership rule. As those devices upgrade to Windows 10, and Configuration Manager evaluates the collection membership, those devices drop out of the collection and deployment plan.  
 
 
 ### Windows settings
 
-Configuration Manager sets the following Windows settings under `Microsoft\Windows\DataCollection`:
+Configuration Manager sets the following Windows settings under the local policy path `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`:
 
 | Policy   | Value  |
 |----------|--------|

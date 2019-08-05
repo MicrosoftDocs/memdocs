@@ -20,5 +20,4 @@ This section provides reference information for the Configuration Manager applic
 
 ## See Also  
  [System Center Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Scenario: Extending Application Management](../../../../../develop/apps/scenario--extending-application-management.md)   
  [Configuration Manager Reference](../../../../../develop/reference/configuration-manager-reference.md)

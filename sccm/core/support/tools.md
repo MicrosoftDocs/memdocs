@@ -2,13 +2,13 @@
 title: Configuration Manager Tools
 titleSuffix: Configuration Manager
 description: Learn about the tools to help you manage and troubleshoot your Configuration Manager infrastructure.
-ms.date: 04/17/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 395403dc-6997-4415-93fd-6b1eeb6ba31a
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -71,8 +71,11 @@ All Windows operating systems listed as supported clients in [Supported operatin
 > Several server tools require these libraries. You can't directly use them.  
 
 
-
 ## Other tools and toolkits
+
+- [Support Center](/sccm/core/support/support-center): Gather information from clients for easier analysis when troubleshooting.
+
+    Starting in version 1906, **OneTrace** is a new log viewer with Support Center. It works similarly to CMTrace, with improvements. For more information, see [Support Center OneTrace](/sccm/core/support/support-center-onetrace).
 
 - [Content library cleanup tool](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool): Use **ContentLibraryCleanup.exe** in `CD.Latest\SMSSETUP\TOOLS\ContentLibraryCleanup` to remove orphaned content from a distribution point.  
 
@@ -81,8 +84,6 @@ All Windows operating systems listed as supported clients in [Supported operatin
 - [Update reset tool](/sccm/core/servers/manage/update-reset-tool): Use **CMUpdateReset.exe** in `CD.Latest\SMSSETUP\TOOLS\CMUpdateReset` to fix issues when in-console updates have problems downloading or replicating.  
 
 - [Service Connection Tool](/sccm/core/servers/manage/use-the-service-connection-tool): Use **ServiceConnectionTool.exe** in `CD.Latest\SMSSETUP\TOOLS\ServiceConnectionTool` to keep your site up-to-date when your service connection point is offline.  
-
-- [Support Center](/sccm/core/support/support-center): Gather information from clients for easier analysis when troubleshooting.
 
 - [Microsoft Deployment Toolkit (MDT)](/sccm/mdt/): A collection of tools, processes, and guidance for automating desktop and server OS deployments.
 

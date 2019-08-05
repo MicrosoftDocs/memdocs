@@ -2,7 +2,7 @@
 title: Deploy applications
 titleSuffix: Configuration Manager
 description: Create or simulate a deployment of an application to a device or user collection
-ms.date: 05/01/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -21,6 +21,8 @@ Create or simulate a deployment of an application to a device or user collection
 
 Before you can deploy an application, create at least one deployment type for the application. For more information, see [Create applications](/sccm/apps/deploy-use/create-applications).
 
+Starting in version 1906, you can create a group of applications that you can send to a user or device collection as a single deployment. For more information, see [Create application groups](/sccm/apps/deploy-use/create-app-groups).
+
 You can also simulate an application deployment. This simulation tests the applicability of a deployment without installing or uninstalling the application. A simulated deployment evaluates the detection method, requirements, and dependencies for a deployment type and reports the results in the **Deployments** node of the **Monitoring** workspace. For more information, see [Simulate application deployments](/sccm/apps/deploy-use/simulate-application-deployments).
 
 > [!Note]
@@ -32,9 +34,9 @@ You can also simulate an application deployment. This simulation tests the appli
 
 ## <a name="bkmk_deploy"></a> Deploy an application
 
-1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select the **Applications** node.  
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select either the **Applications** or **Application Groups** node.
 
-2. In the **Applications** list, select an application to deploy. In the ribbon, click **Deploy**.  
+2. Select an application or application group from the list to deploy. In the ribbon, click **Deploy**.  
 
 > [!Note]  
 > When you view the properties of an existing deployment, the following sections correspond to tabs of the deployment properties window:  
@@ -107,20 +109,17 @@ On the **Deployment Settings** page, specify the following information:
 
     > [!Note]  
     > This option works regardless of administrator approval. If an administrator already approved the superseded version, they don't need to also approve the superseding version. Approval is only for new requests, not superseding upgrades.<!--515824-->  
-
-    > [!NOTE]  
-    > Starting in version 1802, for **Available** install purpose, you can enable or disable this option. <!--1351266-->
+    >
+    > For **Available** install purpose, you can enable or disable this option. <!--1351266-->
 
 
 #### <a name="bkmk_approval"></a> Approval settings
 
-One of the following approval settings appears, depending upon your version of Configuration Manager:
+The application approval behavior depends upon whether you enable the recommended optional feature, **Approve application requests for users per device**.
 
-- **Require administrator approval if users request this application**: For versions 1710 and prior, the administrator approves any user requests for the application before the user can install it. This option is grayed out when the deployment purpose is **Required**, or when you deploy the application to a device collection.  
+- **An administrator must approve a request for this application on the device**: If you enable the optional feature, the administrator approves any user requests for the application before the user can install it on the requested device. If the administrator approves the request, the user is only able to install the application on that device. The user must submit another request to install the application on another device. This option is grayed out when the deployment purpose is **Required**, or when you deploy the application to a device collection.
 
-- **An administrator must approve a request for this application on the device**: Starting in version 1802, the administrator approves any user requests for the application before the user can install it on the requested device. If the administrator approves the request, the user is only able to install the application on that device. The user must submit another request to install the application on another device. This option is grayed out when the deployment purpose is **Required**, or when you deploy the application to a device collection.
-
-Starting in version 1810, you can also define a list of email addresses to notify about the approval request.<!--1357015-->  
+- **Require administrator approval if users request this application**: If you don't enable the optional feature, the administrator approves any user requests for the application before the user can install it. This option is grayed out when the deployment purpose is **Required**, or when you deploy the application to a device collection.  
 
 For more information, see [Approve applications](/sccm/apps/deploy-use/app-approval).
 
@@ -156,6 +155,12 @@ You might want to give users more time to install required applications *beyond*
 
 After the deadline, the client installs the application in the first non-business window, which the user configured, up to this grace period. However, the user can still open Software Center and install the application at any time. Once the grace period expires, enforcement reverts to normal behavior for overdue deployments.
 
+![Diagram of grace period timeline](media/grace-period.svg)
+
+<!-- SCCMDocs issue #1599 -->
+
+> [!Note]  
+> Most of the time, this feature addresses the scenario when the device is powered off while the user is out of the office. Technically, the grace period starts when the client gets policy after the deployment deadline. The same behavior happens if you stop the Configuration Manager client service (CcmExec), and then restart it at some time after the deployment deadline.
 
 ### <a name="bkmk_deploy-ux"></a> Deployment **User Experience** settings
 
@@ -186,7 +191,7 @@ When deploying an iOS deployment type, you'll also see the **App Configuration P
 ## <a name="bkmk_phased"></a> Create a phased deployment
 
 <!--1358147-->
-Starting in version 1806, create a phased deployment for an application. Phased deployments allow you to orchestrate a coordinated, sequenced rollout of software based on customizable criteria and groups. For example, deploy the application to a pilot collection, and then automatically continue the rollout based on success criteria. 
+Starting in version 1806, create a phased deployment for an application. Phased deployments allow you to orchestrate a coordinated, sequenced rollout of software based on customizable criteria and groups. For example, deploy the application to a pilot collection, and then automatically continue the rollout based on success criteria.
 
 For more information, see the following articles:  
 
@@ -198,11 +203,11 @@ For more information, see the following articles:
 
 ## <a name="bkmk_delete"></a> Delete a deployment
 
-1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select the **Applications** node.  
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select either the **Applications** or **Application Groups** node.  
 
-2. In the **Applications** list, select the application that includes the deployment you want to delete.  
+2. Select the application or application group that includes the deployment you want to delete.  
 
-3. Switch to the **Deployments** tab of the details pane, and select the application deployment.  
+3. Switch to the **Deployments** tab of the details pane, and select the deployment.  
 
 4. In the ribbon, on the **Deployment** tab and the **Deployment** group, click **Delete**.  
 
@@ -270,7 +275,7 @@ After clients receive the deployment, the following behavior applies:
 ## Deploy user-available applications on Azure AD-joined devices
 
 <!-- 1322613 -->
-If you deploy applications as available to users, starting in version 1802 they can browse and install them through Software Center on Azure Active Directory (Azure AD) devices.  
+If you deploy applications as available to users, they can browse and install them through Software Center on Azure Active Directory (Azure AD) devices.  
 
 ### Prerequisites
 
@@ -304,6 +309,7 @@ If you deploy applications as available to users, starting in version 1802 they 
 
 ## Next steps
 
- - [Monitor applications](/sccm/apps/deploy-use/monitor-applications-from-the-console)
- - [Management tasks for applications](/sccm/apps/deploy-use/management-tasks-applications)
- - [Software Center user guide](/sccm/core/understand/software-center)
+- [Monitor applications](/sccm/apps/deploy-use/monitor-applications-from-the-console)
+- [Troubleshoot application deployments](/sccm/apps/deploy-use/troubleshoot-application-deployment)
+- [Management tasks for applications](/sccm/apps/deploy-use/management-tasks-applications)
+- [Software Center user guide](/sccm/core/understand/software-center)

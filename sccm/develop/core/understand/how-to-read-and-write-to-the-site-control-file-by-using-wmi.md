@@ -32,7 +32,7 @@ In System Center Configuration Manager, you write to the site control file using
 
 ### To write to the site control file  
 
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Create a `SWbemNameValue` value set to hold your context data.  
 

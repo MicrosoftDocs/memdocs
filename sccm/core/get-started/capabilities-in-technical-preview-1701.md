@@ -61,7 +61,7 @@ The following describes the behavior for software update points with this techni
   Consider adding a software update point to the *Default-Site-Boundary-Group&lt;sitecode>*. This ensures that clients that are not members of another boundary group can fallback to find a software update point.
 
 
-To manage software update points for boundary groups, use the [procedures from the Current Branch documentation](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#procedures-for-boundary-groups), but remember that fallback times you might configure are not yet used for software update points.
+To manage software update points for boundary groups, use the [procedures from the Current Branch documentation](/sccm/core/servers/deploy/configure/boundary-group-procedures), but remember that fallback times you might configure are not yet used for software update points.
 
 
 ## Hardware inventory collects UEFI information

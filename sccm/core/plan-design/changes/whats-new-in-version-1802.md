@@ -7,8 +7,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 5bd637b1-d7a1-411b-877a-c7aae9741173
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -26,10 +26,10 @@ The following additional updates to this release are also now available:
 > [!TIP]  
 > To install a new site, you must use a baseline version of Configuration Manager.  
 >
->  Learn more about:    
->   - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites)  
->   - [Installing updates at sites](/sccm/core/servers/manage/updates)  
->   - [Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+> Learn more about:    
+> - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites)  
+> - [Installing updates at sites](/sccm/core/servers/manage/updates)  
+> - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 The following sections provide details about the changes and new capabilities in version 1802 of Configuration Manager.  
 
@@ -129,7 +129,7 @@ When creating an instance of the [cloud management gateway](/sccm/core/clients/m
 
 ### Configure hardware inventory to collect strings larger than 255 characters
 <!-- 1357389 -->
-You can configure the length of strings to be greater than 255 characters for hardware inventory properties. This change applies only to newly added classes and for hardware inventory properties that aren't keys. For details, see the [Extend hardware inventory](/sccm/core/clients/manage/inventory/extend-hardware-inventory#BKMK_GreaterThan255) article. 
+You can configure the length of strings to be greater than 255 characters for hardware inventory properties. This change applies only to newly added classes and for hardware inventory properties that aren't keys. For details, see the [Extend hardware inventory](/sccm/core/clients/manage/inventory/extend-hardware-inventory#bkmk_GreaterThan255) article. 
 
  ### Deprecation announcement for Linux and Unix client support
  <!--510139-->
@@ -156,7 +156,7 @@ Starting in this release, Silverlight is no longer installed on client devices a
  
 ### Co-management dashboard in System Center Configuration Manager
 <!--1356648-->
-Beginning in this release, you can view a dashboard with information about co-management. The dashboard helps you review machines that are co-managed in your environment. The graphs can help identify devices that might need attention. For details, see the [Co-management dashboard](/sccm/core/clients/manage/client-management-dashboard) article. 
+Beginning in this release, you can view a dashboard with information about co-management. The dashboard helps you review machines that are co-managed in your environment. The graphs can help identify devices that might need attention. For details, see the [Co-management dashboard](/sccm/comanage/how-to-monitor#co-management-dashboard) article. 
 
 
 ## Compliance settings
@@ -171,15 +171,15 @@ For customers who use the [Microsoft Edge](https://technet.microsoft.com/microso
 
 ### Allow user interaction when installing an application
 <!-- 1356976 -->
-Allow an end user to interact with an application installation during the running of the task sequence. For example, run a setup process that prompts the end user for various options. Some application installers can't silence user prompts, or the installation process may require specific configuration values only known to the user. This feature allows you to handle these installation scenarios. For more information, see [Specify user experience options for the deployment type](/sccm/apps/deploy-use/create-applications#specify-user-experience-options-for-the-deployment-type).
+Allow an end user to interact with an application installation during the running of the task sequence. For example, run a setup process that prompts the end user for various options. Some application installers can't silence user prompts, or the installation process may require specific configuration values only known to the user. This feature allows you to handle these installation scenarios. For more information, see [Specify user experience options for the deployment type](/sccm/apps/deploy-use/create-applications#bkmk_dt-ux).
 
 ### Do not automatically upgrade superseded applications
 <!-- 1351266 -->
-Configure an application deployment to not automatically upgrade any superseded version. Now when creating the deployment, on the **Deployment Settings** page of the **Deploy Software Wizard**, for **Available** install purpose, you can enable or disable the option to **Automatically upgrade any superseded versions of this application**. For more information, see [Specify deployment settings](/sccm/apps/deploy-use/deploy-applications#specify-deployment-settings).
+Configure an application deployment to not automatically upgrade any superseded version. Now when creating the deployment, on the **Deployment Settings** page of the **Deploy Software Wizard**, for **Available** install purpose, you can enable or disable the option to **Automatically upgrade any superseded versions of this application**. For more information, see [Specify deployment settings](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy-settings).
 
 ### Approve application requests for users per device
 <!-- 1357015 -->
-Starting in this release, when a user requests an application that requires approval, the specific device name is now a part of the request. If the administrator approves the request, the user is only able to install the application on that device. The user must submit another request to install the application on another device. For more information, see [Specify deployment settings](/sccm/apps/deploy-use/deploy-applications#specify-deployment-settings).
+Starting in this release, when a user requests an application that requires approval, the specific device name is now a part of the request. If the administrator approves the request, the user is only able to install the application on that device. The user must submit another request to install the application on another device. For more information, see [Specify deployment settings](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy-settings).
 
  > [!Note]  
  > This is an optional feature. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).  
@@ -194,7 +194,7 @@ Starting in this release, when a user requests an application that requires appr
 
 ### Windows 10 in-place upgrade task sequence via cloud management gateway
 <!-- 1357149 -->
-The Windows 10 [in-place upgrade task sequence](/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version) now supports deployment to internet-based clients managed through the [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the corporate network. For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#deploy-windows-10-in-place-upgrade-via-cmg).
+The Windows 10 [in-place upgrade task sequence](/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version) now supports deployment to internet-based clients managed through the [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the corporate network. For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence).
 
 ### Improvements to Windows 10 in-place upgrade task sequence
 <!-- 1357425 -->
@@ -202,15 +202,15 @@ The default task sequence template for Windows 10 in-place upgrade now includes 
 
 ### Improvements to operating system deployment
 This release includes the following improvements to operating system deployment:
- - In Windows PE, when launching cmtrace.exe, you are no longer prompted to choose whether to make this program the default viewer for log files. <!-- SMS 500897 -->
- - Add boot images to the [Download Package Content](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent) task sequence step.
- - Improvements to the [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence) step: <!-- 1261338 -->   
-     - Support for all operating system deployment scenarios from Software Center, PXE, and media.
-     - Improvements to console actions such as copy, import, export, and warning during object deletion.
-     - Support for the [Create Prestaged Content File](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent) wizard.
-     - Integration with deployment verification. For more information, see [High-risk task sequence deployments](/sccm/osd/deploy-use/deploy-a-task-sequence). 
-     - The Run Task Sequence step can now be used across multiple levels of task sequences, not just a single parent-child relationship. Multi-level relationships increase the complexity, so use with caution. These relationships are still checked for circular references.
-    
+- In Windows PE, when launching cmtrace.exe, you are no longer prompted to choose whether to make this program the default viewer for log files. <!-- SMS 500897 -->
+- Add boot images to the [Download Package Content](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent) task sequence step.
+- Improvements to the [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence) step: <!-- 1261338 -->   
+  - Support for all operating system deployment scenarios from Software Center, PXE, and media.
+  - Improvements to console actions such as copy, import, export, and warning during object deletion.
+  - Support for the [Create Prestaged Content File](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent) wizard.
+  - Integration with deployment verification. For more information, see [High-risk task sequence deployments](/sccm/osd/deploy-use/deploy-a-task-sequence). 
+  - The Run Task Sequence step can now be used across multiple levels of task sequences, not just a single parent-child relationship. Multi-level relationships increase the complexity, so use with caution. These relationships are still checked for circular references.
+
 ### Deployment templates for task sequences
 <!-- 1357391 -->
 The [deployment wizard for task sequences](/sccm/osd/deploy-use/deploy-a-task-sequence) can now create a deployment template. The deployment template can be saved and applied to an existing or new task sequence to create a deployment. 
@@ -234,11 +234,11 @@ If you deploy applications as available to users, they can now browse and instal
 
 ### Hide installed applications in Software Center
 <!--1357592-->
-Installed applications can now be hidden in Software Center. Applications that are already installed will no longer show in the Applications tab when this option is enabled under client settings. This option is set as the default when you install or upgrade to Configuration Manager 1802.  Installed applications are still available for review under the installation status tab. [Hide installed applications in Software Center](/sccm/core/clients/deploy/about-client-settings#BKMK_HideInstalled) has additional details.   
+Installed applications can now be hidden in Software Center. Applications that are already installed will no longer show in the Applications tab when this option is enabled under client settings. This option is set as the default when you install or upgrade to Configuration Manager 1802.  Installed applications are still available for review under the installation status tab. [Hide installed applications in Software Center](/sccm/core/clients/deploy/about-client-settings#bkmk_HideInstalled) has additional details.   
 
 ### Hide unapproved applications in Software Center
  <!--1355146-->
-When this client setting option is enabled, user available applications that require approval are hidden in Software Center.  [Hide unapproved applications in Software Center](/sccm/core/clients/deploy/about-client-settings#BKMK_HideUnapproved) has additional details.  
+When this client setting option is enabled, user available applications that require approval are hidden in Software Center.  [Hide unapproved applications in Software Center](/sccm/core/clients/deploy/about-client-settings#bkmk_HideUnapproved) has additional details.  
 
 ### Software Center shows user additional compliance information
 <!-- 1235616 -->
@@ -281,11 +281,11 @@ The **Windows 10 Servicing details for a specific collection** report displays g
 
 ### Improvements to Configuration Manager Policies for Windows Defender Exploit Guard
 <!-- 1356220 -->
-Additional policy settings for the [Attack Surface Reduction](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#BKMK_ASR) and [Controlled folder access](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#BKMK_CFA) components have been added in Configuration Manager for [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard).
+Additional policy settings for the [Attack Surface Reduction](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#bkmk_ASR) and [Controlled folder access](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#bkmk_CFA) components have been added in Configuration Manager for [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard).
 
 ### New host interaction settings for Windows Defender Application Guard
 <!-- 1356256 -->
-For Windows 10 version 1709 and later devices, there are two new host interaction settings for [Windows Defender Application Guard](/sccm/protect/deploy-use/create-deploy-application-guard-policy#BKMK_HIS): 
+For Windows 10 version 1709 and later devices, there are two new host interaction settings for [Windows Defender Application Guard](/sccm/protect/deploy-use/create-deploy-application-guard-policy#bkmk_HIS): 
 - Websites can be given access to the host’s virtual graphics processor. 
 - Files downloaded inside the container can be persisted on the host. 
 

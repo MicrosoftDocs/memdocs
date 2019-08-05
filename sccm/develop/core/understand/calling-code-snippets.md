@@ -14,10 +14,7 @@ ms.collection: M365-identity-device-management
 # Calling Configuration Manager Code Snippets
 The following code samples show how to set up the calling code for the code examples that are used throughout the System Center Configuration Manager Software Development Kit (SDK).  
 
- Replace the SNIPPETMETHOD snippet with the snippet that you want to run. In most cases you will need to make changes, such as adding parameters, to make the code work.  
-
-> [!NOTE]
->  The ScriptPW COM automation object is not available in Windows Vista. If you do not want to pass your password in clear text, an alternative is to use a HTML application. For more information, see [Creating Your Own HTAs](http://go.microsoft.com/fwlink/?LinkId=110367).  
+ Replace the SNIPPETMETHOD snippet with the snippet that you want to run. In most cases you will need to make changes, such as adding parameters, to make the code work.   
 
  For more information about remote Windows Management Instrumentation (WMI) connections, see [Connecting to WMI on a Remote Computer](http://go.microsoft.com/fwlink/?LinkId=94683).  
 
@@ -247,6 +244,3 @@ namespace ConfigurationManagerSnippets
 
 ## Robust Programming  
  The Configuration Manager exceptions that can be raised are [SmsConnectionException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsconnectionexception.aspx) and [SmsQueryException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsqueryexception.aspx). These can be caught together with [SmsException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsexception.aspx).  
-
-## See Also  
- [Configuration Manager Programming Fundamentals](../../../develop/core/understand/configuration-manager-programming-fundamentals.md)

@@ -60,8 +60,6 @@ End Sub
 
 ```  
 
-## .NET Framework Security  
-
 ## See Also  
- [Configuration Manager Errors](../../../develop/core/understand/configuration-manager-errors.md)   
+ [About errors](/sccm/develop/core/understand/about-configuration-manager-errors)
  [WMI SDK](http://go.microsoft.com/fwlink/?LinkId=43950)

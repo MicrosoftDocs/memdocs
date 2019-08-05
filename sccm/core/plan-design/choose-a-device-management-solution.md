@@ -31,7 +31,7 @@ Configuration Manager offers different solutions for managing PCs, servers, and 
 This article covers the following four device management solutions: 
 - [Configuration Manager client](#bkmk_sccm)
 - [On-premises mobile device management (MDM) with Configuration Manager](#bkmk_opmdm)
-- [Co-management with Microsoft Intune](#bkmk_intune)
+- [Co-management with Microsoft Intune](#bkmk_comanage)
 - [Microsoft Exchange](#bkmk_opmdm)
 
 You can use these device management solutions by themselves or in combination with each other. For example, you can use the client-based management approach to manage the computers and servers in your organization, and also use co-management to manage internet-based laptops. By combining approaches this way, you can cover all of your device management needs.  

@@ -1,19 +1,15 @@
 ---
-
-title: "Use the MDT"
-titleSuffix: "Microsoft Deployment Toolkit"
-description: "Learn how to use the Microsoft Deployment Toolkit 2013. "
-ms.date:  09/09/2016
+title: Use the MDT
+titleSuffix: Microsoft Deployment Toolkit
+description: Learn how to use the Microsoft Deployment Toolkit (MDT)
+ms.date: 09/09/2016
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-osd
+ms.technology: configmgr-osd
 ms.topic: article
-ms.assetid:  10a846c2-e63c-4c2b-8210-7485bfe7e47f
-
+ms.assetid: 10a846c2-e63c-4c2b-8210-7485bfe7e47f
 author: aczechowski  
 ms.author: aaroncz 
 manager: dougeby
-
 ---
 
 # Using the Microsoft Deployment Toolkit  
@@ -619,7 +615,7 @@ Table 4 lists the advantages and disadvantages of the thick, thin, and hybrid im
 
 -   Deployment will fail on computers configured for a language other than English when the Windows Media® Player Network Sharing Service is run. As a workaround, stop the Windows Media Player Network Sharing Service until after deployment is complete.  
 
--   You can use AD DS to back up BitLocker and TPM data. Recovery information includes the recovery password for each encrypted value, the TPM owner password, and the information necessary to associate recovery information with computers and volumes. Another option is to save a package containing the keys used to encrypt data in addition to the recovery password required to access those keys. For more information, see [BitLocker FAQ for AD DS](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-frequently-asked-questions#bkmk-adds) in the Microsoft Download Center.  
+-   You can use AD DS to back up BitLocker and TPM data. Recovery information includes the recovery password for each encrypted value, the TPM owner password, and the information necessary to associate recovery information with computers and volumes. Another option is to save a package containing the keys used to encrypt data in addition to the recovery password required to access those keys. For more information, see [BitLocker FAQ for AD DS](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-and-adds-faq) in the Microsoft Download Center.  
 
 -   When enabling BitLocker, key files are generated as hidden, read-only system files. To see them, set the Windows Explorer option to show hidden and system files.  
 
@@ -941,7 +937,7 @@ Table 10 lists the top-level nodes in the Deployment Workbench and the types of 
  The Deployment Workbench automates the download and installation of components used in LTI.  
 
 > [!NOTE]
->  If the MDT computer has Internet connectivity, the Deployment Workbench can automatically download the components.  
+>  If the MDT computer has internet connectivity, the Deployment Workbench can automatically download the components.  
 
 ###### To download and install Deployment Workbench components  
 
@@ -953,7 +949,7 @@ Table 10 lists the top-level nodes in the Deployment Workbench and the types of 
 
 4. In the details pane, click **Download**.  
 
-    After downloading the component from the Internet, the component is listed in the **Downloaded** section in the details pane.  
+    After downloading the component from the internet, the component is listed in the **Downloaded** section in the details pane.  
 
 5. In the details pane, in the **Download** section, click the downloaded component, and then click **Install**.  
 

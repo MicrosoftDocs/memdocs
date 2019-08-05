@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Deploy a Site System Role (Example:  Fallback Status Point)
-The features and capabilities of a site are determined by the site roles applied to it. A site can contain one or more site roles. Some roles depend on other roles. For more information about specific site roles see [Configure sites and hierarchies for System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt621987.aspx).  
+The features and capabilities of a site are determined by the site roles applied to it. A site can contain one or more site roles. Some roles depend on other roles. For more information about specific site roles see [Configure sites and hierarchies for System Center Configuration Manager](https://technet.microsoft.com/library/mt621987.aspx).  
 
  Configuring a site is performed through Windows Management Instrumentation (WMI) classes. For example, [SMS_SCI_Component Server WMI Class](../../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md) holds information about the server components stored on a Configuration Manager site server. These classes derive from [SMS_SiteControlItem Server WMI Class](../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md). For more information, see [Configuration Manager Site Configuration Server WMI Classes](../../../develop/reference/core/servers/configure/site-configuration-server-wmi-classes.md).  
 
@@ -81,4 +81,4 @@ public void CreateRole(WqlConnectionManager connection, string computerName, str
 ## See Also  
  [SMS_EmbeddedProperty Server WMI Class](../../../develop/reference/core/servers/configure/sms_embeddedproperty-server-wmi-class.md)   
  [SMS_SCI_SysResUse Server WMI Class](../../../develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class.md)   
- [Configuration Manager Site Control File](../../../develop/core/understand/site-control-file.md)
+ [About the site control file](/sccm/develop/core/understand/about-the-configuration-manager-site-control-file)

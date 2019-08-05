@@ -7,8 +7,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 5cb41e2b-4c79-4da9-a432-ff869c0870f8
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -71,15 +71,15 @@ Create a complete *troubleshooting bundle* file (.zip) that captures the client 
 
 Beyond these basic capabilities, Support Center can also collect a wide variety of other client state information. Open **Support Center** and select **Collect All Data**. This process typically lasts several minutes, even on newer computers. Support Center collects the following additional data:
 
-  - **Policy**: Configuration Manager policy settings, including both the requested policy configuration and the actual policy configuration  
+- **Policy**: Configuration Manager policy settings, including both the requested policy configuration and the actual policy configuration  
 
-  - **Certificates**: Public key information for client certificates. Support Center doesn't collect certificate private keys.  
+- **Certificates**: Public key information for client certificates. Support Center doesn't collect certificate private keys.  
 
-  - **Client registry**: Collects client configuration information from the registry. Support Center only collects Configuration Manager registry information.  
+- **Client registry**: Collects client configuration information from the registry. Support Center only collects Configuration Manager registry information.  
 
-  - **Client WMI**: Client configuration information from WMI. Support Center doesn't collect client policy.  
+- **Client WMI**: Client configuration information from WMI. Support Center doesn't collect client policy.  
 
-  - **Troubleshooting**: Real-time troubleshooting data to help diagnose common client problems with Active Directory, management points, networking, policy assignments, and registration.  
+- **Troubleshooting**: Real-time troubleshooting data to help diagnose common client problems with Active Directory, management points, networking, policy assignments, and registration.  
 
-  - **Debug dumps**: Perform debug dump of client and related processes. Debug dumps can be large. Only enable this option when troubleshooting issues with client performance.  
+- **Debug dumps**: Perform debug dump of client and related processes. Debug dumps can be large. Only enable this option when troubleshooting issues with client performance.  
 

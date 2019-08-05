@@ -1,7 +1,7 @@
 ---
 title: "SMS_G_System_AdvancedThreatProtectionHealthStatus Class"
 titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
+ms.date: "05/13/2019"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: conceptual
@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # SMS_G_System_AdvancedThreatProtectionHealthStatus Server WMI Class
-The  `SMS_G_System_AdvancedThreatProtectionHealthStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents Windows Defender Advanced Threat Protection (ATP) client health status.  
+The  `SMS_G_System_AdvancedThreatProtectionHealthStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents Microsoft Defender Advanced Threat Protection (ATP) client health status.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -40,7 +40,7 @@ Class SMS_G_System_AdvancedThreatProtectionHealthStatus : SMS_G_System
 
  Qualifiers: [not_null]  
 
- The time that the Windows Defender ATP agent last connected to the cloud.  
+ The time that the Microsoft Defender ATP agent last connected to the cloud.  
 
  `OnboardingState`  
  Data type: `UInt32`  
@@ -58,7 +58,7 @@ Class SMS_G_System_AdvancedThreatProtectionHealthStatus : SMS_G_System
 
  Qualifiers: [not_null]  
 
- The ID of the organization that the Windows Defender ATP agent reports to.  
+ The ID of the organization that the Microsoft Defender ATP agent reports to.  
 
  `ResourceID`  
  Data type: `UInt32`  
@@ -76,7 +76,7 @@ Class SMS_G_System_AdvancedThreatProtectionHealthStatus : SMS_G_System
 
  Qualifiers: [not_null]  
 
- Indicates whether the Windows Defender ATP agent is running.  
+ Indicates whether the Microsoft Defender ATP agent is running.  
 
 ## Remarks  
  Class qualifiers for this class include:  
@@ -91,11 +91,8 @@ Class SMS_G_System_AdvancedThreatProtectionHealthStatus : SMS_G_System
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Configuration Manager Resource Management Server WMI Classes](../../../../../develop/reference/core/clients/manage/configuration-manager-resource-management-server-wmi-classes.md)

@@ -2,7 +2,7 @@
 title: "Upgrade Windows devices to a different version"
 titleSuffix: "Configuration Manager"
 description: "Automatically upgrade devices that run Windows 10 Desktop or Windows 10 Mobile to a different edition with Configuration Manager."
-ms.date: 01/26/2018
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -84,10 +84,10 @@ Monitor this deployment from the **Deployments** node of the **Monitoring** work
 - **Not applicable for this device**
 - **Data type conversion failed**
 
-These errors do not mean that the deployment failed. Verify at the targeted PC that the upgrade performed successfully.
+These errors don't mean that the deployment failed. Verify at the targeted PC that the upgrade ran successfully.
 
-Once the client evaluates the targeted policy, it will restart within two hours to apply the upgrade. Ensure you inform any users to which you deploy the policy, or schedule the policy to run outside of the users working hours.
+Once the client evaluates the targeted policy, it will apply the upgrade within two hours. [If the upgrade path requires a restart](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-edition-upgrades), it will restart at that time. Ensure you inform any users to which you deploy the policy, or schedule the policy to run outside of the users working hours.
 
-If the following error appears in **DcmWmiProvider.log** on the client, check that you are using the proper key for your activation scenario. For more information, see the [Before you start](#before-you-start) section. If you are using a key management service for activation, make sure to use a [KMS client setup key](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys).  <!-- 496871 -->   
+If the following error appears in **DcmWmiProvider.log** on the client, check that you're using the proper key for your activation scenario. For more information, see the [Before you start](#before-you-start) section. If you're using a key management service for activation, make sure to use a [KMS client setup key](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys).  <!-- 496871 -->   
 
-`Failed to execute CheckApplicabilityMethod with error = 0x80041001	OsEditionUpgradeProvider`
+`Failed to execute CheckApplicabilityMethod with error = 0x80041001 OsEditionUpgradeProvider`

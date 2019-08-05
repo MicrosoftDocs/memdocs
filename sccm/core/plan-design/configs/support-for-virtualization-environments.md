@@ -7,8 +7,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 1098e8c5-9676-4c2b-841b-ec88bd04e495
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -34,7 +34,7 @@ For example, you use Microsoft Hyper-V Server 2012 to host a virtual machine tha
 - Windows Server 2008 R2  
 
 #### <a name="bkmk_note1"></a> Note 1: Nested virtualization
-Configuration Manager doesn't support [nested virtualization](https://docs.microsoft.com/windows-server/virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows#BKMK_nested), which is new with Windows Server 2016.
+Configuration Manager doesn't support [nested virtualization](/windows-server/virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows#nested-virtualization-new), which is new with Windows Server 2016.
 
 
 ### Virtualization environment support

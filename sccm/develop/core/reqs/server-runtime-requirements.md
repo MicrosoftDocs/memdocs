@@ -16,7 +16,7 @@ Microsoft System Center Configuration Manager server applications that are devel
 
 ## Managed Code  
 
--   A supported version of Windows Server as defined in [Supported operating systems for System Center Configuration Manager site system servers](https://docs.microsoft.com/en-us/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers). For more information, see [General Requirements](#general-requirements).
+-   A supported version of Windows Server as defined in [Supported operating systems for System Center Configuration Manager site system servers](https://docs.microsoft.com/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers). For more information, see [General Requirements](#general-requirements).
 
 -   Installed Configuration Manager site server  
 
@@ -33,7 +33,7 @@ Microsoft System Center Configuration Manager server applications that are devel
 
 - .NET Framework 4.0  
 
-  For more information, see [Configuration Manager Console Extension](../../../develop/core/servers/console/console-extension.md)  
+  For more information, see [About console extensions](/sccm/develop/core/servers/console/about-configuration-manager-console-extension).  
 
 ## VBScript  
 
@@ -47,9 +47,9 @@ Microsoft System Center Configuration Manager server applications that are devel
 ## General Requirements  
 
 > [!IMPORTANT]
->  For more information about general System Center Configuration Manager requirements, see [Supported configurations for System Center Configuration Manager](https://docs.microsoft.com/en-us/sccm/core/plan-design/configs/supported-configurations).  
+>  For more information about general System Center Configuration Manager requirements, see [Supported configurations for System Center Configuration Manager](https://docs.microsoft.com/sccm/core/plan-design/configs/supported-configurations).  
 
 ## See Also  
- [Configuration Manager Console Extension](../../../develop/core/servers/console/console-extension.md)   
+[About console extensions](/sccm/develop/core/servers/console/about-configuration-manager-console-extension)
  [Configuration Manager Client Development Requirements](../../../develop/core/reqs/client-development-requirements.md)   
  [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md)

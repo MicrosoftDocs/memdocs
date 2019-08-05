@@ -2,7 +2,7 @@
 title: Manage drivers
 titleSuffix: Configuration Manager
 description: Use the Configuration Manager driver catalog to import device drivers, group drivers in packages, and distribute those packages to distribution points.
-ms.date: 03/02/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -94,9 +94,12 @@ Updates the device driver package on all the distribution points where the packa
 Opens the **Properties** dialog box. Review and change the content and properties of the driver. For example, change the name and description of the driver, enable or disable it, and specify on which platforms it can run. 
 
 <!--3607716, fka 1358270-->
-Starting in version 1810, driver packages have metadata fields for **Manufacturer** and **Model**. Use these fields to tag driver packages with information to assist in general housekeeping, or to identify old and duplicate drivers that you can delete. On the **General** tab, select an existing value from the drop-down lists, or enter a string to create a new entry. 
+Starting in version 1810, driver packages have metadata fields for **Manufacturer** and **Model**. Use these fields to tag driver packages with information to assist in general housekeeping, or to identify old and duplicate drivers that you can delete. On the **General** tab, select an existing value from the drop-down lists, or enter a string to create a new entry.
 
-In the **Driver Packages** node, these fields display in the list as the **Driver Manufacturer** and **Driver Model** columns. They can also be used as search criteria. 
+In the **Driver Packages** node, these fields display in the list as the **Driver Manufacturer** and **Driver Model** columns. They can also be used as search criteria.
+
+Starting in version 1906, use these attributes to pre-cache content on a client. For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/configure-precache-content).<!--4224642-->  
+
 
 
 

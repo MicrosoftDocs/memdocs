@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Information about the files and their associated products that are found on Configuration Manager clients during software inventory scanning.
 ms.date: 04/30/2019
 ms.prod: configuration-manager
-ms.technology: configmgr-other #app client compliance hybrid osd protect sum
+ms.technology: configmgr-other
 ms.topic: conceptual
 ms.collection: M365-identity-device-management
 ms.assetid: 65066949-cce6-4202-b8e7-f4e1014ee470
@@ -15,18 +15,18 @@ manager: dougeby
 
 # Software inventory views in Configuration Manager
 
-The Configuration Manager software inventory views contain information about the files and their associated products that are found on Configuration Manager clients during software inventory scanning. Software inventory, by default, will scan for all executable file types (\*.exe) on clients. The software inventory options are configured for the site and will determine which files are inventoried and how much information is collected about each. For more information about configuring software inventory, see [How to Configure Software Inventory in Configuration Manager](https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/hh509028(v%3dtechnet.10)) in the Configuration Manager Documentation Library.
+The Configuration Manager software inventory views contain information about the files and their associated products that are found on Configuration Manager clients during software inventory scanning. Software inventory, by default, will scan for all executable file types (\*.exe) on clients. The software inventory options are configured for the site and will determine which files are inventoried and how much information is collected about each. For more information about configuring software inventory, see [How to Configure Software Inventory in Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/hh509028(v%3dtechnet.10)) in the Configuration Manager Documentation Library.
 
 ## Software inventory view schema
 
-There is not a specific software inventory schema view, but the following query joins the **v\_GS\_SoftwareProduct** and **v\_FullCollectionMembership** views to generate the software inventory view schema by product name for the All Systems collection:
+There is not a specific software inventory schema view, but the following query joins the **v_GS_SoftwareProduct** and **v_FullCollectionMembership** views to generate the software inventory view schema by product name for the All Systems collection:
 
 ```
 SELECT MIN(PRD.ProductID) AS ProductID, PRD.ProductName,
 
 PRD.ProductVersion, COUNT(DISTINCT PRD.ResourceID) AS 'Count'
 
-FROM v\_GS\_SoftwareProduct PRD INNER JOIN v\_FullCollectionMembership FCM
+FROM v_GS_SoftwareProduct PRD INNER JOIN v_FullCollectionMembership FCM
 
 ON PRD.ResourceID = FCM.ResourceID
 
@@ -39,7 +39,7 @@ ORDER BY PRD.ProductName
 
 ## Software inventory views
 
-Some of the software inventory views created in Configuration Manager store system data, and others contain general product and file data. As a general rule, view names that start with **v\_GS** contain data for Configuration Manager clients and can be joined to other views that contain system data by using the **ResourceID** for that client. Software inventory views that start with **v\_** contain file and product data, but it is not specific to individual computers. The software inventory views are described in this section.
+Some of the software inventory views created in Configuration Manager store system data, and others contain general product and file data. As a general rule, view names that start with **v_GS** contain data for Configuration Manager clients and can be joined to other views that contain system data by using the **ResourceID** for that client. Software inventory views that start with **v_** contain file and product data, but it is not specific to individual computers. The software inventory views are described in this section.
 
 ### v_GS_CollectedFile
 

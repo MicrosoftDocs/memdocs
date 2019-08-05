@@ -40,7 +40,7 @@ You can extend the System Center Configuration Manager console with new Windows 
 ### Create the Form Action XML  
  An action describes the type of extension that is called, and where the action is placed in the Configuration Manager console user interface. For an extension form, you use the `ShowDialog` action type to display the form. For more information, see [How to Create Action XML for a Configuration Manager Property Sheet](../../../../develop/core/servers/console/how-to-create-action-xml-for-a-configuration-manager-property-sheet.md).  
 
- For more information about actions, see [About Configuration Manager Console Actions](../../../../develop/core/servers/console/about-configuration-manager-console-actions.md).  
+ For more information about actions, see [About Configuration Manager console actions](/sccm/develop/core/servers/console/configuration-manager-actions).  
 
 ### Create the Form Property Sheet XML  
  Whether or not the form is a property sheet, the form has a form XML file that defines the assembly, namespace, and type of the form. In property sheets, it defines the order of the property pages on the property sheet. There is a property sheet XML file for every Configuration Manager console form.  

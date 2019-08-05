@@ -2,13 +2,13 @@
 title: Prerequisite checks
 titleSuffix: Configuration Manager
 description: Reference of the specific prerequisite checks for Configuration Manager updates.
-ms.date: 04/02/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -369,6 +369,20 @@ When using SQL Server Always On, availability group replicas are configured for 
 *Applies to: Site database server*
 
 When using SQL Server Always On, availability group replicas are on the default instance.
+
+### SQL availability group replicas must all have the same seeding mode
+
+<!-- SCCMDocs-pr#3899 -->
+*Applies to: Site database server*
+
+Starting in version 1906, when using SQL Server Always On, you need to configure availability group replicas with the same [seeding mode](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas).
+
+### SQL availability group replicas must be healthy
+
+<!-- SCCMDocs-pr#3899 -->
+*Applies to: Site database server*
+
+Starting in version 1906, when using SQL Server Always On, availability group replicas are in a healthy state.
 
 ### SQL Server configuration for site upgrade
 
@@ -741,7 +755,7 @@ This SQL Native Client version supports TLS 1.2. For more information, see the f
 
 - [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)  
 
-- [How to enable TLS 1.2 for Configuration Manager](https://support.microsoft.com/help/4040243/how-to-enable-tls-1-2-for-configuration-manager)  
+- [How to enable TLS 1.2 for Configuration Manager](/sccm/core/plan-design/security/enable-tls-1-2)  
 
 Configuration Manager uses SQL Server Native Client on the following site system roles:<!-- SCCMDocs issue 1150 -->
 
@@ -768,7 +782,7 @@ Configuration Manager uses SQL Server Native Client on the following site system
 
 SQL Server reserves a minimum of 8 GB of memory for the central administration site and primary site, and a minimum of 4 GB of memory for the secondary site.
 
-For more information, see [How to configure memory options using SQL Server Management Studio](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options#how-to-configure-memory-options-using-includessmanstudiofullincludesssmanstudiofull-mdmd).
+For more information, see [How to configure memory options using SQL Server Management Studio](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options#how-to-configure-memory-options-using-).
 
 > [!NOTE]  
 > This check isn't applicable to SQL Server Express on a secondary site. This edition is limited to 1 GB of reserved memory.  

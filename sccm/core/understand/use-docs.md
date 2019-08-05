@@ -2,18 +2,17 @@
 title: How to use the docs
 titleSuffix: Configuration Manager
 description: Learn tips on using the Configuration Manager technical documentation library.
-ms.date: 09/07/2018
+ms.date: 06/20/2019
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-other
+ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: b3d755bd-0870-4f1f-a56d-bfd3c7b492b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
 ms.collection: M365-identity-device-management
 ---
+
 # How to use the Configuration Manager docs
 
 *Applies to: System Center Configuration Manager (Current Branch)*
@@ -53,7 +52,8 @@ For general help with the product, see [Find help](/sccm/core/understand/find-he
 
 - Having problems finding something? [File feedback!](#bkmk_docfeedback) When filing the issue, provide the search engine you're using, the keywords you tried, and the target article. This feedback helps Microsoft optimize the content for better search.  
 
-
+> [!TIP] 
+> Starting in Configuration Manager version 1902, there's a **Documentation** node in the new **Community** workspace. This node includes up-to-date information about Configuration Manager documentation and support articles. For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console#bkmk_doc-dashboard)
 
 ## <a name="bkmk_docfeedback"></a> Feedback
 

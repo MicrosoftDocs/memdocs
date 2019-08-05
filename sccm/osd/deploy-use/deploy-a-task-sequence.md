@@ -51,7 +51,7 @@ Use the following procedure to deploy a task sequence to the computers in a coll
 
     - **Automatically distribute content for dependencies**: If any referenced content has dependencies, then the site also sends dependent content to distribution points.  
 
-    - **Pre-download content for this task sequence**: For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content).  
+    - **Pre-download content for this task sequence**: For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/configure-precache-content).  
 
     - **Select Deployment Template**: Starting in Configuration Manager version 1802,<!--1357391--> you can save and specify a deployment template for a task sequence.  
 
@@ -160,6 +160,9 @@ Use the following procedure to deploy a task sequence to the computers in a coll
 
         - **Access content directly from a distribution point when needed by the running task sequence**: Specify that clients run the content from the distribution point. This option is only available when you enable all packages associated with the task sequence to use a package share on the distribution point. To enable content to use a package share, see the **Data Access** tab in the **Properties** for each package.  
 
+            > [!IMPORTANT]  
+            > For greatest security, select the options to **Download content locally when needed by the running task sequence** or **Download all content locally before starting task sequence**. When you select either of these options, Configuration Manager hashes the package, so that it can ensure package integrity. When you select the option to **Access content directly from a distribution point when needed by the running task sequence**, Configuration Manager doesn't verify the package hash prior to running the specified program. Because the site can't ensure package integrity, it's possible for users with administrative rights to alter or tamper with package contents.  
+
     - **When no local distribution point is available, use a remote distribution point**: Specify whether clients can use distribution points from a neighbor boundary group to download the content that's required by the task sequence.  
 
     - **Allow clients to use distribution points from the default site boundary group**: Specify if clients should download content from a distribution point in the site default boundary group, when it isn't available from a distribution point in the current or neighbor boundary groups.  
@@ -185,7 +188,7 @@ When you deploy an upgrade task sequence, use the following settings:
 
 - **Download all content locally before starting task sequence**, on the Distribution Points tab of the deployment. Other options such as **Download content locally when needed by the running task sequence** don't work in this scenario. The task sequence engine is currently unable to obtain content from a cloud distribution point. The Configuration Manager client must download the content from the cloud distribution point before starting the task sequence.  
 
-- (*Optional*) **Pre-download content for this task sequence**, on the General tab of the deployment. For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content).  
+- (*Optional*) **Pre-download content for this task sequence**, on the General tab of the deployment. For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/configure-precache-content).  
 
 
 ## <a name="bkmk_high-risk"></a> High-risk deployments

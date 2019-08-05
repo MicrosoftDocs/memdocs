@@ -1,5 +1,7 @@
 - name: Core infrastructure
+  href: understand/introduction.md
 - name: Understand and explore
+  expanded: true
   items:
   - name: Introduction to Configuration Manager
     items:
@@ -51,7 +53,7 @@
     href: understand/configuration-manager-and-windows-as-service.md
   - name: Extended interoperability client
     href: understand/interoperability-client.md
-  - name: Licensing for System Center Configuration Manager
+  - name: Licensing and branches
     href: understand/learn-more-editions.md
   - name: Use cloud services
     items:
@@ -61,6 +63,8 @@
       href: understand/configuration-manager-on-azure.md
   - name: FAQ for product and licensing
     href: understand/product-and-licensing-faq.md
+  - name: FAQ for site sizing and performance
+    href: understand/site-size-performance-faq.md
   - name: FAQ for diagnostics and usage data
     href: understand/frequently-asked-questions-about-diagnostics-and-usage-data.md
 - name: Plan and design
@@ -75,6 +79,8 @@
       href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
     - name: What’s new in incremental versions
       href: plan-design/changes/whats-new-incremental-versions.md
+    - name: What's new in version 1906
+      href: plan-design/changes/whats-new-in-version-1906.md
     - name: What's new in version 1902
       href: plan-design/changes/whats-new-in-version-1902.md
     - name: What's new in version 1810
@@ -83,8 +89,6 @@
       href: plan-design/changes/whats-new-in-version-1806.md
     - name: What's new in version 1802
       href: plan-design/changes/whats-new-in-version-1802.md
-    - name: What's new in version 1710
-      href: plan-design/changes/whats-new-in-version-1710.md
     - name: Removed and deprecated
       items:
       - name: Removed and deprecated overview
@@ -103,6 +107,8 @@
       href: plan-design/configs/size-and-scale-numbers.md
     - name: Site and site system prerequisites
       href: plan-design/configs/site-and-site-system-prerequisites.md
+    - name: Site size and performance guidelines
+      href: plan-design/configs/site-size-performance-guidelines.md
     - name: Supported operating systems for site system servers
       href: plan-design/configs/supported-operating-systems-for-site-system-servers.md
     - name: Supported operating systems for clients and devices
@@ -147,6 +153,8 @@
         href: plan-design/hierarchy/manage-content-library-flowchart.md
       - name: Content library cleanup tool
         href: plan-design/hierarchy/content-library-cleanup-tool.md
+      - name: Delivery Optimization In-Network Cache
+        href: plan-design/hierarchy/delivery-optimization-in-network-cache.md
       - name: Peer Cache for Configuration Manager clients
         href: plan-design/hierarchy/client-peer-cache.md
       - name: Package Transfer Manager
@@ -163,6 +171,12 @@
     items:
     - name: Network infrastructure considerations
       href: plan-design/network/configure-firewalls-ports-domains.md
+    - name: Ports
+      href: plan-design/hierarchy/ports.md
+    - name: Proxy server support
+      href: plan-design/network/proxy-server-support.md
+    - name: Internet access requirements
+      href: plan-design/network/internet-endpoints.md
     - name: Active Directory schema
       items:
       - name: Prepare the Active Directory schema
@@ -183,6 +197,8 @@
       href: plan-design/diagnostics/diagnostics-and-usage-data.md
     - name: How diagnostics and usage data is used
       href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md
+    - name: Diagnostic data for 1906
+      href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1906.md
     - name: Diagnostic data for 1902
       href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1902.md
     - name: Diagnostic data for 1810
@@ -191,8 +207,6 @@
       href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1806.md
     - name: Diagnostic data for 1802
       href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1802.md
-    - name: Diagnostic data for 1710
-      href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1710.md
     - name: How diagnostics and usage data is collected
       href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md
     - name: How to view diagnostics and usage data
@@ -215,6 +229,8 @@
       href: plan-design/security/configure-security.md
     - name: Cryptographic controls technical reference
       href: plan-design/security/cryptographic-controls-technical-reference.md
+    - name: Enable TLS 1.2
+      href: plan-design/security/enable-tls-1-2.md
 - name: Get started
   items:
   - name: Evaluate Configuration Manager in a lab
@@ -229,16 +245,16 @@
     items:
     - name: Technical Preview overview
       href: get-started/technical-preview.md
+    - name: 1907 features
+      href: get-started/2019/technical-preview-1907.md
+    - name: 1906 features
+      href: get-started/2019/technical-preview-1906.md
+    - name: 1905 features
+      href: get-started/2019/technical-preview-1905.md
     - name: 1904 features
       href: get-started/2019/technical-preview-1904.md
     - name: 1903 features
       href: get-started/2019/technical-preview-1903.md
-    - name: 1902.2 features
-      href: get-started/2019/technical-preview-1902-2.md
-    - name: 1902 features
-      href: get-started/2019/technical-preview-1902.md
-    - name: 1901 features
-      href: get-started/2019/technical-preview-1901.md
   - name: Migrate data between hierarchies
     items:
     - name: Migration overview
@@ -409,12 +425,10 @@
       href: plan-design/hierarchy/interoperability-between-different-versions.md
     - name: Language packs
       href: servers/deploy/install/language-packs.md
-    - name: Log files
+    - name: About log files
+      href: plan-design/hierarchy/about-log-files.md
+    - name: Log file reference
       href: plan-design/hierarchy/log-files.md
-    - name: Ports
-      href: plan-design/hierarchy/ports.md
-    - name: Proxy server support
-      href: plan-design/network/proxy-server-support.md
     - name: Release notes
       href: servers/deploy/install/release-notes.md
     - name: State Messages in Configuration Manager
@@ -471,6 +485,8 @@
       href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
     - name: Use the Hotfix Installer
       href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+    - name: Checklist for installing update 1906
+      href: servers/manage/checklist-for-installing-update-1906.md
     - name: Checklist for installing update 1902
       href: servers/manage/checklist-for-installing-update-1902.md
     - name: Checklist for installing update 1810
@@ -479,8 +495,6 @@
       href: servers/manage/checklist-for-installing-update-1806.md
     - name: Checklist for installing update 1802
       href: servers/manage/checklist-for-installing-update-1802.md
-    - name: Checklist for installing update 1710
-      href: servers/manage/checklist-for-installing-update-1710.md
     - name: Support for current branch versions
       href: servers/manage/current-branch-versions-supported.md
   - name: Backup and recovery
@@ -552,6 +566,8 @@
       href: support/support-center-ui-reference.md
     - name: Customizations
       href: support/support-center-customize.md
+    - name: Support Center OneTrace (Preview)
+      href: support/support-center-onetrace.md
   - name: Configuration Manager tools
     items:
     - name: Tools overview
@@ -630,6 +646,8 @@
         href: clients/deploy/configure-client-settings.md
       - name: About client settings
         href: clients/deploy/about-client-settings.md
+    - name: Device restart notifications
+      href: clients/deploy/device-restart-notifications.md        
     - name: How to configure Wake on LAN
       href: clients/deploy/configure-wake-on-lan.md
     - name: Deploy clients to Windows computers
@@ -704,6 +722,8 @@
         href: clients/manage/cmg/monitor-clients-cloud-management-gateway.md
     - name: Plan for internet-based Client Management
       href: clients/manage/plan-internet-based-client-management.md
+    - name: Azure AD authentication workflow
+      href: clients/manage/azure-ccmsetup.md
   - name: Collections
     items:
     - name: Introduction to collections
@@ -718,7 +738,7 @@
       href: clients/manage/collections/manage-collections.md
     - name: How to use maintenance windows
       href: clients/manage/collections/use-maintenance-windows.md
-    - name: How to automatically categorize devices into collections with
+    - name: How to automatically categorize devices into collections
       href: clients/manage/collections/automatically-categorize-devices-into-collections.md
     - name: Security and privacy for collections
       href: clients/manage/collections/security-and-privacy-for-collections.md

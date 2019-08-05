@@ -2,8 +2,8 @@
 title: Prerequisites for software updates
 titleSuffix: "Configuration Manager"
 description: "Learn about prerequisites for software updates in System Center Configuration Manager."
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.date: 02/02/2018
 ms.topic: conceptual
@@ -35,7 +35,8 @@ This article lists the prerequisites for software updates in System Center Confi
 >[!NOTE]
 >-   Beginning with version 1702, Windows Server 2008 R2 isn't supported for the software update point role. For more information, see [Supported operating systems for site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers#bkmk_2008r2sp1).  
 
-When you have multiple software update points at a site, ensure that they're all running the same version of WSUS.  
+> [!WARNING]  
+> When you have multiple software update points at a site, ensure that they're all running the same version of WSUS.  
 
 > [!WARNING]  
 >  The **Upgrades** software updates classification is only supported starting with WSUS 4.0. Before you synchronize this new classification and have the ability to evaluate Windows 10 computers in a Windows 10 servicing plan, it is critical that you install [hotfix 3095113](https://support.microsoft.com/kb/3095113) for WSUS on your software update points and site servers. This hotfix enables WSUS on a Windows Server 2012-based server or a Windows Server 2012 R2-based server to sync and distribute feature upgrades for Windows 10. For more information, see [Manage Windows as a service](../../osd/deploy-use/manage-windows-as-a-service.md).  

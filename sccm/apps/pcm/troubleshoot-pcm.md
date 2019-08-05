@@ -33,18 +33,18 @@ If the SMS Provider isn't working properly, the Configuration Manager console in
 
 ## Package readiness
 
-Before converting a package to an application, analyze the package using the Package Conversion Manager **Analyze** function. After the analysis, add the **Readiness** column in the **Packages** node of the Configuration Manager console. The list of packages displays one of the following readiness states of the analyzed package:
+Before converting a package to an application, analyze the package using the Package Conversion Manager **Analyze** function. After the analysis, add the **Readiness** column in the **Packages** node of the Configuration Manager console. The list of packages displays one of the following readiness states of the analyzed package:
 
- - **Automatic**: The package can be directly converted using the **Convert** function.      
+- **Automatic**: The package can be directly converted using the **Convert** function.      
 
-    > [!NOTE]  
-    > An automatic conversion doesn't convert WQL queries into application requirements. Use the **Fix and Convert** process to convert these queries.  
+  > [!NOTE]  
+  > An automatic conversion doesn't convert WQL queries into application requirements. Use the **Fix and Convert** process to convert these queries.  
 
- - **Manual**: The package needs some additions or changes before you can convert it using the **Fix and Convert** function.  
+- **Manual**: The package needs some additions or changes before you can convert it using the **Fix and Convert** function.  
 
- - **Not Applicable**: The package isn't suitable for conversion. Either correct any problems with the package, or continue to deploy it as a package.  
+- **Not Applicable**: The package isn't suitable for conversion. Either correct any problems with the package, or continue to deploy it as a package.  
 
- - **Error**: The package contains errors. Manually correct these errors before you can analyze and convert it.  
+- **Error**: The package contains errors. Manually correct these errors before you can analyze and convert it.  
 
 The details pane of the **Packages** node in the Configuration Manager console shows any readiness issues. Select a package, and then select the **Summary** tab in the details pane.
 

@@ -39,15 +39,15 @@ Both **Software Assurance** (SA) and **License and Software Assurance** (L&SA) a
 
 - **Software Assurance (SA)**: Customers must have active SA on Configuration Manager licenses, or equivalent subscription rights, in order to install and use the current branch option of Configuration Manager.    
 
-    - While SA is optional for some Microsoft products, the only way to get rights to use Configuration Manager current branch is with SA *or equivalent subscription rights*. For more information, see the [Software Assurance FAQ](https://www.microsoft.com/en-us/licensing/licensing-programs/FAQ-Software-Assurance.aspx).<!--this link doesn't work without some language code-->
+  - While SA is optional for some Microsoft products, the only way to get rights to use Configuration Manager current branch is with SA *or equivalent subscription rights*. For more information, see the [Software Assurance FAQ](https://www.microsoft.com/en-us/licensing/licensing-programs/FAQ-Software-Assurance.aspx).<!--this link doesn't work without some language code-->
 
 - **Microsoft License and Software Assurance (L&SA)**: Customers buying new licenses for Configuration Manager must acquire L&SA (the license and SA coverage).   
 
-    - The SA grants rights to use the current branch.
+  - The SA grants rights to use the current branch.
 
-    - If your SA expires, and you still have a license for Configuration Manager, you can no longer use the current branch. For more information, see the FAQ [If my SA expires and I had L&SA, what do I get?](#bkmk_sa-expires)
+  - If your SA expires, and you still have a license for Configuration Manager, you can no longer use the current branch. For more information, see the FAQ [If my SA expires and I had L&SA, what do I get?](#bkmk_sa-expires)
 
-For more information about license offerings, see [Ways to buy](https://www.microsoft.com/en-us/licensing/licensing-programs)<!--this link doesn't work without some language code--> and [Licensing Product Terms](http://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=64).  
+For more information about license offerings, see [Ways to buy](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs)<!--this link doesn't work without some language code--> and [Licensing Product Terms](http://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=64).  
 
 
 ### <a name="bkmk_equiv-sub"></a> I read the term "equivalent subscription", what programs does that refer to?   
@@ -99,12 +99,12 @@ If *SA* or your subscription is active, you have use rights for Configuration Ma
 All of the System Center products include SQL Server technology. Microsoft's licensing terms for these products allow customer use of SQL Server technology only to support System Center components. SQL Server client access licenses are not required for that use. 
  
 Approved use rights for the SQL capabilities with Configuration Manager include:
- - Site database role
- - Windows Server Update Services (WSUS) for software update point role
- - SQL Server Reporting Services (SSRS) for reporting point role
- - Data warehouse service point role
- - Database replicas for management point roles
- - SQL Server Always On 
+- Site database role
+- Windows Server Update Services (WSUS) for software update point role
+- SQL Server Reporting Services (SSRS) for reporting point role
+- Data warehouse service point role
+- Database replicas for management point roles
+- SQL Server Always On 
 
 The SQL Server license that's included with Configuration Manager supports each instance of SQL Server that you install to host a database for Configuration Manager. However, only databases for Configuration Manager in the preceding list can run on that SQL Server when you use this license. If a database for any additional Microsoft or third-party product shares the SQL Server, you must have a separate license for that SQL Server instance. 
  <!-- sms500967 -->

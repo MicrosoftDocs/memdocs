@@ -37,7 +37,8 @@ If you want to use public key infrastructure (PKI) certificates for client conne
 
 2.  In the ribbon, choose **Properties**. Then switch to the **Client Computer Communication** tab.  
 
-    This tab is available on a primary site only. If you don't see the **Client Computer Communication** tab, make sure that you're not connected to a central administration site or a secondary site.  
+    > [!Note]
+    > Starting in version 1906, this tab is called **Communication Security**.<!-- SCCMDocs#1645 -->  
 
 3.  Select the settings for site systems that use IIS.  
 
@@ -159,6 +160,6 @@ Starting in version 1810, you can specify the minimum authentication level for a
 
 - [Communication between endpoints](/sccm/core/plan-design/hierarchy/communications-between-endpoints)  
 
-- [Cryptographic controls technical reference](/sccm/core/plan-design/security/cryptographic-controls-tehnical-reference)  
+- [Cryptographic controls technical reference](/sccm/core/plan-design/security/cryptographic-controls-technical-reference)  
 
 - [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements)  

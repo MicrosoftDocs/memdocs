@@ -1,21 +1,16 @@
 ---
-
-title: "Quick Start - System Center 2012 R2 Configuration Manager"
-titleSuffix: "Microsoft Deployment Toolkit"
-description: "A Quick Start guide for Microsoft Deployment Toolkit with System Center 2012 R2 Configuration Manager. "
-ms.date:  09/09/2016
+title: Quickstart - ZTI
+titleSuffix: Microsoft Deployment Toolkit
+description: A quickstart guide for Microsoft Deployment Toolkit (MDT) with System Center 2012 R2 Configuration Manager for the zero-touch installation (ZTI)
+ms.date: 09/09/2016
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-osd
+ms.technology: configmgr-osd
 ms.topic: article
-ms.assetid:  b12de852-a799-4c16-b51c-cc3abbd3ca3a
-
+ms.assetid: b12de852-a799-4c16-b51c-cc3abbd3ca3a
 author: aczechowski  
 ms.author: aaroncz 
-manager: angrobe
-
+manager: dougeby
 ---
-
 
 # Quick Start Guide for Microsoft System Center 2012 R2 Configuration Manager  
  Microsoft Deployment Toolkit (MDT) 2013 provides technology for deploying Windows operating systems, and Microsoft Office. This quick start guide helps you quickly evaluate MDT 2013 by providing condensed, step-by-step instructions for using it to install the Windows 8.1 operating system with Microsoft System Center 2012 R2 Configuration Manager. This quick start guide demonstrates how to perform the New Computer deployment scenario, which covers the deployment of Windows 8.1 to a new computer. This scenario assumes that there is no user data or profile to preserve.  
@@ -53,7 +48,7 @@ manager: angrobe
 
 - Active Directory Domain Services (AD DS)  
 
-  See the [Supported Configurations for Configuration Manager](http://technet.microsoft.com/library/gg682077.aspx) for additional software combinations that can be used for installing Configuration Manager.  
+  See the [Supported Configurations for Configuration Manager](https://technet.microsoft.com/library/gg682077.aspx) for additional software combinations that can be used for installing Configuration Manager.  
 
 > [!NOTE]   
 >  The Task Sequencer used in MDT deployments requires that the Create Global Object right be assigned to credentials used to access and run the Deployment Workbench and the deployment process. This right is normally available to accounts with Administrator-level permissions (unless explicitly removed). Also, the Specialized Security – Limited Functionality (SSLF) security profile removes the Create Global Object right and should not be applied to computers deployed using MDT.  
@@ -70,9 +65,9 @@ manager: angrobe
 
  The resources listed in the preceding table reflect the system resources recommended to perform the steps in this guide. For information on the minimum system resource requirements for:  
 
--   Windows Server 2008 R2, see [Installing Windows Server 2008 R2](http://technet.microsoft.com/library/dd379511.aspx)  
+-   Windows Server 2008 R2, see [Installing Windows Server 2008 R2](https://technet.microsoft.com/library/dd379511.aspx)  
 
--   SQL Server 2008 R2, see [Hardware and Software Requirements for Installing SQL Server 2008 R2](http://technet.microsoft.com/library/ms143506.aspx)  
+-   SQL Server 2008 R2, see [Hardware and Software Requirements for Installing SQL Server 2008 R2](https://technet.microsoft.com/library/ms143506.aspx)  
 
 > [!NOTE]   
 >  This guide assumes that MDT is being evaluated on 64-bit (x64) physical or virtual computers. If evaluating MDT on 32-bit (x86) platforms, download and install the x86 editions of MDT and the components that this guide describes.  
@@ -400,7 +395,7 @@ manager: angrobe
 ###  <a name="InstallConfigManager"></a> Step 1-11: Install Configuration Manager  
  When the other products and technologies have been installed, install Configuration Manager. Before doing so, however, extend the Active Directory schema so that computers can locate the distribution points, service locator points, and other server roles. Also, you can extend the schema after you have installed Configuration Manager. For more information about how to extend the Active Directory schema for Configuration Manager, see the section, “Extend the Active Directory Schema,” in the Configuration Manager Documentation Library, which is installed with Configuration Manager.  
 
- After extending the Active Directory schema, install Configuration Manager. The configuration of WDG-MDT-01 supports Configuration Manager for this sample. The configuration of computers in the production network may vary. To find out more about the prerequisites for installing Configuration Manager, see [Supported Configurations for Configuration Manager](http://technet.microsoft.com/library/gg682077.aspx).  
+ After extending the Active Directory schema, install Configuration Manager. The configuration of WDG-MDT-01 supports Configuration Manager for this sample. The configuration of computers in the production network may vary. To find out more about the prerequisites for installing Configuration Manager, see [Supported Configurations for Configuration Manager](https://technet.microsoft.com/library/gg682077.aspx).  
 
 #### To install Configuration Manager
 1. Start the System Center 2012 R2 Configuration Manager Setup splash screen.  
@@ -1097,7 +1092,7 @@ manager: angrobe
 
     The Windows PowerShell Modules command prompt opens.  
 
-2. Create a PowerShell drive that uses the MDT PowerShell provider by running the [New-PSDrive](http://technet.microsoft.com/library/hh849829.aspx) cmdlet as shown in the following example:  
+2. Create a PowerShell drive that uses the MDT PowerShell provider by running the [New-PSDrive](https://technet.microsoft.com/library/hh849829.aspx) cmdlet as shown in the following example:  
 
    ```  
    New-PSDrive -Name DS001 -PSProvider mdtprovider -Root d:\DeploymentShare$  
@@ -1525,7 +1520,7 @@ manager: angrobe
 
 1. On WDG-MDT-01, click **Start**, point to **Administrative Tools**, and then click **Windows PowerShell Modules**.The Windows PowerShell Modules command prompt opens.  
 
-2. Create a PowerShell drive that uses the MDT PowerShell provider by running the [New-PSDrive](http://technet.microsoft.com/library/hh849829.aspx) cmdlet as shown in the following example:  
+2. Create a PowerShell drive that uses the MDT PowerShell provider by running the [New-PSDrive](https://technet.microsoft.com/library/hh849829.aspx) cmdlet as shown in the following example:  
 
    ```  
    New-PSDrive -Name DS001 -PSProvider mdtprovider -Root d:\DeploymentShare$  

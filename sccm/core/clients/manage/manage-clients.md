@@ -146,12 +146,12 @@ Depending on the device type, some of these options might not be available.
       For more information, see [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/understand/hybrid-mobile-device-management.md).  
 
 ##  <a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> Manage clients from the Device Collections node  
-  Many of the tasks that are available for devices in the **Devices** node are also available on collections. The console automatically applies the operation to all eligible devices in the collection. This action on an entire collection generates additional network packets and increases CPU usage on the site server.  
+Many of the tasks that are available for devices in the **Devices** node are also available on collections. The console automatically applies the operation to all eligible devices in the collection. This action on an entire collection generates additional network packets and increases CPU usage on the site server.  
 
-  Consider the following before you perform collection-level tasks. Once started, you cannot stop the task from the console. 
- - How many devices are in the collection?
- - Are the devices connected by low-bandwidth network connections?
- - How much time does this task need to complete for all the devices?
+Consider the following before you perform collection-level tasks. Once started, you cannot stop the task from the console. 
+- How many devices are in the collection?
+- Are the devices connected by low-bandwidth network connections?
+- How much time does this task need to complete for all the devices?
 
 #### To manage clients from the Device Collections node  
 
@@ -189,15 +189,15 @@ Beginning with version 1710, you can use the Configuration Manager console to id
 > You must also upgrade clients to version 1710 for this capability to function. We recommend that you enable automatic client upgrade to keep your clients up to date with minimal administrative overhead. For more information, see [Use automatic client upgrade](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#use-automatic-client-upgrade).
 
 To identify devices that are pending a restart, go to the **Assets and Compliance** workspace in the Configuration Manager console and select the **Devices** node. Then view the status for each device in the details pane in a new column named **Pending Restart**. Each device has one or more of the following values: 
- - **No**: there is no pending restart
- - **Configuration Manager**: this value comes from the client reboot coordinator component (RebootCoordinator.log)
- - **File rename**: this value comes from Windows reporting a pending file rename operation (HKLM\SYSTEM\CurrentControlSet\Control\Session Manager, PendingFileRenameOperations)
- - **Windows Update**: this value comes from the Windows Update Agent reporting a pending restart is required for one or more updates (HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired)
- - **Add or remove feature**: this value comes from the Windows component-based servicing reporting the addition or removal of a Windows feature requires a restart (HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Reboot Pending)
+- **No**: there is no pending restart
+- **Configuration Manager**: this value comes from the client reboot coordinator component (RebootCoordinator.log)
+- **File rename**: this value comes from Windows reporting a pending file rename operation (HKLM\SYSTEM\CurrentControlSet\Control\Session Manager, PendingFileRenameOperations)
+- **Windows Update**: this value comes from the Windows Update Agent reporting a pending restart is required for one or more updates (HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired)
+- **Add or remove feature**: this value comes from the Windows component-based servicing reporting the addition or removal of a Windows feature requires a restart (HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Reboot Pending)
 
 **To create the client notification to restart a device:**
-1.	Locate the device you want to restart within a collection in the **Device Collections** node of the console.
-2.	Right-click on the device, select **Client Notification**, and then select **Restart**. An information window opens about the restart. Click **OK** to confirm the restart request.
+1. Locate the device you want to restart within a collection in the **Device Collections** node of the console.
+2. Right-click on the device, select **Client Notification**, and then select **Restart**. An information window opens about the restart. Click **OK** to confirm the restart request.
 
 When the notification is received by a client, a **Software Center** notification window opens to inform the user about the restart. By default, the restart occurs after 90 minutes. You can modify the restart time by configuring [client settings](/sccm/core/clients/deploy/configure-client-settings). Settings for the restart behavior are found on the [Computer restart](/sccm/core/clients/deploy/about-client-settings#computer-restart) tab of the default settings.
 
@@ -298,10 +298,13 @@ Adjust the size of the client cache without having to reinstall the client by co
 
 1.  Open a Windows command prompt and change the folder to the location in which CCMSetup.exe is located.  
 
-2.  Type **Ccmsetup.exe /uninstall**, and then press **Enter.**  
+2.  Type **CCMSetup.exe /uninstall**, and then press **Enter.**  
 
 > [!NOTE]  
->  The uninstall process displays no results on the screen. To verify that client uninstallation has succeeded, examine the log file **CCMSetup.log** in the folder *%windir%\ ccmsetup* on the client computer.  
+>  The uninstall process displays no results on the screen. To verify that client uninstallation has succeeded, examine the log file **CCMSetup.log** in the folder *%windir%\ccmsetup\logs* on the client computer.  
+
+> [!TIP]
+> If you need to wait for the uninstall process to complete before doing something else, run `Wait-Process CCMSetup` in PowerShell. This command can pause a script until the CCMSetup process completes.
 
 ##  <a name="BKMK_ConflictingRecords"></a> Manage Conflicting Records for Configuration Manager Clients  
  Configuration Manager uses the hardware identifier to attempt to identify clients that might be duplicates and alert you to the conflicting records. For example, if you reinstall a computer, the hardware identifier would be the same but the GUID used by Configuration Manager might be changed.  

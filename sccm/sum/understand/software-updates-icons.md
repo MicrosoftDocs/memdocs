@@ -2,14 +2,14 @@
 title: Icons used for software updates
 titleSuffix: "Configuration Manager"
 description: "The Configuration Manager console contains icons that indicate a state for the synchronized update or software update group."
-author: aczechowski
 manager: dougeby
 ms.date: 10/06/2016
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 ms.collection: M365-identity-device-management
 ---
 # Icons used for software updates in System Center Configuration Manager
@@ -48,11 +48,11 @@ Synchronized software updates are displayed in the Configuration Manager console
 
  **Description:**  
 
- Superseded software updates have been replaced with newer versions of the software update. Typically, a software update that supersedes another software update does one or more of the following:  
+ Superseded software updates have been replaced with newer versions of the software update. Typically, a software update that supersedes another software update does one or more of the following things:  
 
 - Enhances, improves, or adds to the fix provided by one or more previously released software updates.  
 
-- Improves the efficiency of its software update file package, which clients install if the software update is approved for installation. For example, the superseded software update might contain files that are no longer relevant to the fix or to the operating systems now supported by the new software update, so those files are not included in the superseding software update's file package.  
+- Improves the efficiency of its software update file package, which clients install if the software update is approved for installation. For example, the superseded software update might contain files that are no longer relevant to the fix or to the operating systems now supported by the new software update, so those files aren't included in the superseding software update's file package.  
 
 - Updates newer versions of a product, or in other words, is no longer applicable to older versions or configurations of a product. Software updates can also supersede other software updates if modifications have been made to expand language support. For example, a later revision of a product update for Microsoft Office might remove support for an older operating system, but add additional support for new languages in the initial software update release.  
 
@@ -67,26 +67,26 @@ Synchronized software updates are displayed in the Configuration Manager console
 
  **Description:**  
 
- Invalid software updates are in an active deployment, but for some reason the content (software update files) is not available. The following are scenarios in which this state can occur:  
+ Invalid software updates are in an active deployment, but for some reason the content (software update files) isn't available. The following are scenarios in which this state can occur:  
 
 - You successfully deploy the software update, but the software update file is removed from the deployment package and is no longer available.  
 
-- You create a software update deployment at a site and the deployment object is successfully replicated to a child site, but the deployment package has not successfully replicated to the child site.  
+- You create a software update deployment at a site and the deployment object is successfully replicated to a child site, but the deployment package hasn't successfully replicated to the child site.  
 
   **Operational Concerns:**  
 
-  When the content is missing for a software update, clients are unable to install the software update until the content becomes available on a distribution point. You can redistribute the content to distribution points by using the **Redistribute** action. When content is missing for a software update in a deployment created at a parent site, the software update must be replicated or redistributed to the child site. For more information about content redistribution, see [Manage the content you have distributed](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage).  
+  When the content is missing for a software update, clients are unable to install the software update until the content becomes available on a distribution point. You can redistribute the content to distribution points by using the **Redistribute** action. When content is missing for a software update in a deployment created at a parent site, the software update must be replicated or redistributed to the child site. For more information about content redistribution, see [Manage the content you've distributed](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage).  
 
 ### Metadata-Only Icon
  ![icon](../media/MetadataOnly.png "Metadata-only icon") The icon with the blue arrow represents a metadata-only software update.
 
  **Description:**  
 
- Metadata-only software updates are available in the Configuration Manager console for reporting. You cannot deploy or download metadata-only software updates because a software update file is not associated with the software updates metadata.  
+ Metadata-only software updates are available in the Configuration Manager console for reporting. You can't deploy or download metadata-only software updates because a software update file isn't associated with the software updates metadata.  
 
  **Operational Concerns:**  
 
- Metadata-only software updates are available for reporting purposes and are not intended for software update deployment.  
+ Metadata-only software updates are available for reporting purposes and aren't intended for software update deployment.  
 
 ## Icons for Software Update Groups  
  Software update groups are represented by one of the following icons.  
@@ -117,4 +117,9 @@ Synchronized software updates are displayed in the Configuration Manager console
 
  **Operational Concerns:**  
 
- When the content is missing for a software update, clients are unable to install the software update until the content becomes available on a distribution point. You can redistribute the content to distribution points by using the **Redistribute** action. When content is missing for a software update in a deployment created at a parent site, the software update needs to replicated or redistributed to the child site. For more information about content redistribution, see [Manage the content you have distributed](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage).  
+ When the content is missing for a software update, clients are unable to install the software update until the content becomes available on a distribution point. You can redistribute the content to distribution points by using the **Redistribute** action. When content is missing for a software update in a deployment created at a parent site, the software update needs to be replicated or redistributed to the child site. For more information about content redistribution, see [Manage the content you've distributed](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage).  
+
+
+## Next steps 
+
+[Plan for software updates](/sccm/sum/plan-design/plan-for-software-updates)

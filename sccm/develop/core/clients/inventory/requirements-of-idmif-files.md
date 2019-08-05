@@ -1,8 +1,8 @@
 ---
-title: "Requirements of IDMIF files"
-titleSuffix: "Configuration Manager"
-ms.date: "2017-1-03"
-ms.prod: "configuration-manager"
+title: Requirements of IDMIF files
+titleSuffix: Configuration Manager
+ms.date: 01/03/2017
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: 089b823d-2532-46da-9d33-1d269a5adf03
@@ -11,6 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
+
 # Requirements of IDMIF files
 Two delta header comments are required for an IDMIF file. Other comments are optional. The comments you must include are:
 
@@ -91,6 +92,5 @@ Start Component
 
 ## See Also  
  [System Center Configuration Manager Software Development Kit](../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Inventory](../../../../develop/core/clients/inventory/inventory.md)   
  [About Configuration Manager Inventory](../../../../develop/core/clients/inventory/about-configuration-manager-inventory.md)   
  [How to Configure Hardware Inventory Settings](../../../../develop/core/clients/inventory/how-to-configure-hardware-inventory-settings.md)

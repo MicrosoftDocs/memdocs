@@ -227,6 +227,3 @@ Class SMS_AppDTDeploymentSummary : SMS_BaseClass
 
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Application Management Server WMI Classes](../../../develop/reference/apps/application-management-server-wmi-classes.md)

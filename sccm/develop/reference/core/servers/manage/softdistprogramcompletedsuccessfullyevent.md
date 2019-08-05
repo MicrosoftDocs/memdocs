@@ -66,6 +66,3 @@ The `SoftDistProgramCompletedSuccessfullyEvent` message, in Configuration Manage
  Data type: `String`  
 
  This property does not have to be set.  
-
-## See Also  
- [Status Message Types](../../../../../develop/reference/core/servers/manage/status-message-types.md)

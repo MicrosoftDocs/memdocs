@@ -12,15 +12,11 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # Device Management Client WMI Classes
-In System Center Configuration Manager, the device management client Windows Management Instrumentation (WMI) classes are used by client applications to manage device setting packages and items on the client computer. They concern client-side behavior only.  
 
-## In This Section  
+In Configuration Manager, the device management client Windows Management Instrumentation (WMI) classes are used by client applications to manage device setting packages and items on the client computer. They concern client-side behavior only.  
 
 |Term|Definition|  
 |----------|----------------|  
 |[SMS_ActiveSyncConnectedDevice Class](../../../../../develop/reference/core/clients/client-classes/sms_activesyncconnecteddevice-client-wmi-class.md)|Represents a device connected to the ActiveSync service.|  
 |[SMS_ActiveSyncService Class](../../../../../develop/reference/core/clients/client-classes/sms_activesyncservice-client-wmi-class.md)|Represents the ActiveSync service on the client.|  
 |[SMS_DmInvVersion Class](../../../../../develop/reference/core/clients/client-classes/sms_dminvversion-client-wmi-class.md)|Represents the device management inventory version.|  
-
-## See Also  
- [Configuration Manager Mobile Device Management](../../../../../develop/mdm/mobile-device-management.md)

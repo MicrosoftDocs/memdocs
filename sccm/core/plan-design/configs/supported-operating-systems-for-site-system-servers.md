@@ -2,13 +2,13 @@
 title: Supported site system servers
 titleSuffix: Configuration Manager
 description: Learn which Windows versions you can use to host a Configuration Manager site or site system role.
-ms.date: 04/16/2019
+ms.date: 05/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 17905b4c-3895-4ad4-a69c-5e0d0fc5a8c3
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -176,7 +176,7 @@ This OS version is supported for the following roles:
 
 *Applies to Windows Server 2008 R2 with Service Pack 1: Standard, Enterprise, and Datacenter*
 
-Windows Server 2008 R2 is now in extended support and no longer in mainstream support, as detailed in [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle). For more information about future support for these operating systems as site system servers with Configuration Manager, see [Deprecated server operating systems](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems).  
+Windows Server 2008 R2 is now in extended support and no longer in mainstream support, as detailed in [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle). For more information about future support for these operating systems as site system servers with Configuration Manager, see [Deprecated server operating systems](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#server-os).  
 
 > [!Important]  
 > The extended support end date for Windows Server 2008 R2 is January 14, 2020. After this date, Configuration Manager won't support this OS as any site system role. 
@@ -194,7 +194,7 @@ This OS isn't supported for site servers or most site system roles. It's still s
 
 *Applies to Windows Server 2008 with Service Pack 2 (x86, x64): Standard, Enterprise, and Datacenter*
 
-Windows Server 2008 with Service Pack 2 (SP2) is now in extended support and no longer in mainstream support, as detailed in [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle). For more information about future support for these operating systems as site system servers with Configuration Manager, see [Deprecated server operating systems](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems).  
+Windows Server 2008 with Service Pack 2 (SP2) is now in extended support and no longer in mainstream support, as detailed in [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle). For more information about future support for these operating systems as site system servers with Configuration Manager, see [Deprecated server operating systems](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#server-os).  
 
 > [!Important]  
 > The extended support end date for Windows Server 2008 R2 is January 14, 2020. After this date, Configuration Manager won't support this OS as any site system role. 
@@ -208,6 +208,8 @@ This OS isn't supported for site servers or site system roles, except for the di
 
     -   Distribution points on this OS don't support network booting of client computers in EFI mode. Client computers with BIOS or with EFI booting in legacy mode are supported.  
 
+> [!Warning]  
+> Windows Server 2008 doesn't support TLS 1.2. If you enable this protocol in your environment, Windows Server 2008 computers will no longer communicate with the site. For more information, see [How to enable TLS 1.2 for Configuration Manager](/sccm/core/plan-design/security/enable-tls-1-2).  
 
 
 ## <a name="bkmk_client"></a> Client OS versions

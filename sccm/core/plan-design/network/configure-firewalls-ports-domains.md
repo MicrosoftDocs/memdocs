@@ -1,26 +1,49 @@
 ---
-title: "Firewalls and domains"
-titleSuffix: "Configuration Manager"
-description: "Set up firewalls, ports, and domains to prepare for System Center Configuration Manager communications."
-ms.date: 2/6/2017
+title: Network infrastructure
+titleSuffix: Configuration Manager
+description: Set up firewalls, ports, and domains to prepare for Configuration Manager communications.
+ms.date: 06/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: d6993bba-f6bd-4639-adbf-efc1c638b2f3
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Set up firewalls, ports, and domains for System Center Configuration Manager
+
+# Network infrastructure considerations for Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-To prepare your network to support System Center Configuration Manager, plan to set up infrastructure like firewalls to pass the communications used by Configuration Manager.  
+To prepare your network to support Configuration Manager, you may need to configure some infrastructure components. For example, open firewall ports to pass the communications used by Configuration Manager.  
 
-|Consideration|Details|  
-|-------------------|-------------|  
-|**Ports and protocols** that different Configuration Manager capabilities use. Some ports are required, and you can customize other **domains and services**.|Most Configuration Manager communications use common ports like port 80 for HTTP or 443 for HTTPS communication. However, [some site system roles support the use of custom websites](/sccm/core/plan-design/network/websites-for-site-system-servers) and custom ports.<br /><br /> **Before you deploy Configuration Manager**, identify the ports that you plan to use and set up firewalls accordingly.<br /><br /> **If you need to change a port** after you install Configuration Manager, don't forget to update firewalls on devices and the network and also change the configuration of the port from within Configuration Manager.<br /><br /> For more information see: </br>- [How to configure client communication ports](../../../core/clients/deploy/configure-client-communication-ports.md) </br>- [Ports used in Configuration Manager](../../../core/plan-design/hierarchy/ports.md) </br>- [Internet access requirements for the service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_urls)|  
-|**Domains and services** that site servers and clients might need to use.|Configuration Manager capabilities can require site servers and clients to have access to specific services and domains on the Internet, like Windowsudpate.microsoft.com or the Microsoft Intune service.<br /><br /> If you will use Microsoft Intune to manage mobile devices, you must also set up access to [ports and domains that Intune requires.](https://docs.microsoft.com/intune/get-started/network-infrastructure-requirements-for-microsoft-intune)|  
-|**Proxy servers** for site system servers and for client communications. You can specify separate proxy servers for different site system servers and clients.|Because these configurations are made at the time you install a site system role or client, you only need to be aware of the proxy server configurations for later reference when you configure site system roles and clients.<br /><br /> If you're not sure your deployment will need to use proxy servers, review [Proxy server support in System Center Configuration Manager](../../../core/plan-design/network/proxy-server-support.md) to learn about  site system roles and client actions that can use a proxy server.|   
-|  
+## Ports and protocols
+
+Different Configuration Manager features use different network ports. Some ports are required, and some you can customize.
+
+Most Configuration Manager communications use common ports like port 80 for HTTP or 443 for HTTPS. Some site system roles support the use of custom websites and custom ports. For more information, see [Websites for site system servers](/sccm/core/plan-design/network/websites-for-site-system-servers).
+
+Before you deploy Configuration Manager, identify the ports that you plan to use, and set up firewalls as needed.
+
+After you install Configuration Manager, if you need to change a port, don't forget to update firewalls on devices and the network. Also change the configuration of the port in Configuration Manager.
+
+For more information, see the following articles:
+
+- [How to configure client communication ports](/sccm/core/clients/deploy/configure-client-communication-ports)
+- [Ports used in Configuration Manager](/sccm/core/plan-design/hierarchy/ports)
+
+
+## Internet access requirements
+
+Some Configuration Manager features rely on internet connectivity for full functionality. If your organization restricts network communication with the internet using a firewall or proxy device, make sure to allow the necessary endpoints.
+
+For more information, see [Internet access requirements](/sccm/core/plan-design/network/internet-endpoints)
+
+
+## Proxy servers
+
+You can specify separate proxy servers for different site system servers and clients. You make these configurations when you install a site system role or client, or change them later as needed.
+
+For more information, see [Proxy server support](/sccm/core/plan-design/network/proxy-server-support).

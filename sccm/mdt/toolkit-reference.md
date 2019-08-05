@@ -1,19 +1,15 @@
 ---
-
-title: "Toolkit reference"
-titleSuffix: "Microsoft Deployment Toolkit"
-description: "Reference details for Microsoft Deployment Toolkit 2013. "
-ms.date:  09/09/2016
+title: Toolkit reference
+titleSuffix: Microsoft Deployment Toolkit
+description: Reference details for Microsoft Deployment Toolkit (MDT)
+ms.date: 09/09/2016
 ms.prod: configuration-manager
-ms.technology:
-  - configmgr-osd
+ms.technology: configmgr-osd
 ms.topic: article
-ms.assetid:  ac670143-b7cd-47d0-86ed-14cb2554dfc7
-
+ms.assetid: ac670143-b7cd-47d0-86ed-14cb2554dfc7
 author: aczechowski  
 ms.author: aaroncz 
-manager: angrobe
-
+manager: dougeby
 ---
 
 
@@ -38,7 +34,7 @@ manager: angrobe
 
 - **Options**. Indicates the valid configuration options that you can specify for the task sequence group or step that define if and when the task is performed and what is considered a successful exit code from the task  
 
-  For more information about the Task Sequence Editor, see [Operating System Deployment: Task Sequence Editor](http://technet.microsoft.com/library/bb680396.aspx).  
+  For more information about the Task Sequence Editor, see [Operating System Deployment: Task Sequence Editor](https://technet.microsoft.com/library/bb680396.aspx).  
 
 ###  <a name="CommonPropertiesandOptionsforTaskSequenceStepTypes"></a> Common Properties and Options for Task Sequence Step Types  
  Each task sequence group and step has configurable settings on the **Properties** and **Options** tabs that are common to all task sequence groups and steps. These common settings are briefly described in the following sections.  
@@ -58,7 +54,7 @@ manager: angrobe
 |**Description**|A user-defined description that should make the task sequence step requirements and tasks easily understandable.|-|-|  
 
 #### Common Options  
- Table 2 shows the settings that are available on the Options tab of a task sequence step. For more information about the Options tab, see [Task Sequence Options Tab](http://technet.microsoft.com/library/bb693661.aspx).  
+ Table 2 shows the settings that are available on the Options tab of a task sequence step. For more information about the Options tab, see [Task Sequence Options Tab](https://technet.microsoft.com/library/bb693661.aspx).  
 
 ##### Table 2. Settings Available on the Options Tab  
 
@@ -214,10 +210,10 @@ manager: angrobe
 >  The **Configure DNS** task sequence step uses the Dnscmd tool, which is included in Windows Support Tools, to configure DNS. Be sure that Windows Support Tools is installed before running the **Configure DNS** task sequence step.  
 
 > [!NOTE]
->  For more information about these server properties, see [Dnscmd](http://technet.microsoft.com/library/cc772069.aspx).  
+>  For more information about these server properties, see [Dnscmd](https://technet.microsoft.com/library/cc772069.aspx).  
 
 #### Enable BitLocker  
- This task sequence step configures BitLocker® Drive Encryption on the target computer. For more information about this step type, see [Enable BitLocker](http://technet.microsoft.com/library/bb632526.aspx).  
+ This task sequence step configures BitLocker® Drive Encryption on the target computer. For more information about this step type, see [Enable BitLocker](https://technet.microsoft.com/library/bb632526.aspx).  
 
  The unique properties and settings for the **Enable BitLocker** task sequence step type are:  
 
@@ -267,7 +263,7 @@ manager: angrobe
 | **Wait for the runbook to finish before continuing** |                                                                                                                                                                                                                                                                                                                                                                                                                                                       This check box controls whether the task sequence step will wait for the runbook to finish before proceeding to the next task sequence step.<br /><br /> If this check box is:<br /><br /> - **Selected**, then the task sequence step will wait for the runbook to finish before proceeding on to the next task sequence step.<br /><br /> When this check box is selected, the task sequence step will poll the Orchestrator web service for the runbook to finish. The amount of time between polls starts at 1 second, then increases to 2, 4, 8, 16, 32, and 64 seconds between each poll. Once the amount of time reaches 64 seconds, the task sequence step continues to poll every 64 seconds.<br /><br /> - **Cleared**, then the task sequence step will not wait for the runbook to finish before proceeding to the next task sequence step.<br /><br /> Note:<br /><br /> This check box must be selected if the runbook returns output parameters.                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 #### Format and Partition Disk  
- This task sequence step partitions and formats disks on the target computer. For more information about this step type, see [Format and Partition Disk](http://technet.microsoft.com/library/bb680345.aspx).  
+ This task sequence step partitions and formats disks on the target computer. For more information about this step type, see [Format and Partition Disk](https://technet.microsoft.com/library/bb680345.aspx).  
 
  The unique properties and settings for the **Format and Partition Disk** task sequence step type are:  
 
@@ -326,7 +322,7 @@ manager: angrobe
 |**Selection profile**|Installs all drivers in the selected profile|  
 
 #### Install Application  
- This task sequence step installs applications on the target computer. For more information about this step type, see [Install Software](http://technet.microsoft.com/library/bb680842.aspx).  
+ This task sequence step installs applications on the target computer. For more information about this step type, see [Install Software](https://technet.microsoft.com/library/bb680842.aspx).  
 
  The unique properties and settings for the **Install Application** task sequence step type are:  
 
@@ -478,7 +474,7 @@ manager: angrobe
 |**None**|None|  
 
 #### Run Command Line  
- This task sequence step runs the specified commands on the target computer. For more information about this step type, see [Run Command Line](http://technet.microsoft.com/library/bb632992.aspx).  
+ This task sequence step runs the specified commands on the target computer. For more information about this step type, see [Run Command Line](https://technet.microsoft.com/library/bb632992.aspx).  
 
  The unique properties and settings for the **Run Command Line** task sequence step type are:  
 
@@ -520,7 +516,7 @@ manager: angrobe
 >  This task sequence step is natively available in System Center 2012 R2 Configuration Manager as **Run PowerShell Script** in the General group.  
 
 #### Set Task Sequence Variable  
- This task sequence step sets the specified task sequence variable to the specified value. For more information about this step type, see [Set Task Sequence Variable](http://technet.microsoft.com/library/bb694306.aspx).  
+ This task sequence step sets the specified task sequence variable to the specified value. For more information about this step type, see [Set Task Sequence Variable](https://technet.microsoft.com/library/bb694306.aspx).  
 
  The unique properties and settings for the **Set Task Sequence Variable** task sequence step type are:  
 
@@ -735,7 +731,7 @@ manager: angrobe
 |**Conditional qualifier**|Not specified|  
 
 #### Capture User State  
- This task sequence step captures the user state for user profiles that exist on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about what script accomplishes this task and what properties are used, see [ZTIUserState.wsf](#ZTIUserState.wsf). For more information about this step type, see [Capture User State](http://technet.microsoft.com/library/bb680924.aspx).  
+ This task sequence step captures the user state for user profiles that exist on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about what script accomplishes this task and what properties are used, see [ZTIUserState.wsf](#ZTIUserState.wsf). For more information about this step type, see [Capture User State](https://technet.microsoft.com/library/bb680924.aspx).  
 
  The default configuration of the **Capture User State** task sequence step is:  
 
@@ -1461,7 +1457,7 @@ manager: angrobe
 
  For more information about what script accomplishes this task and what properties are used, see [ZTIUserState.wsf](#ZTIUserState.wsf).  
 
- For more information about this step type, see [Restore User State](http://technet.microsoft.com/library/bb632881.aspx).  
+ For more information about this step type, see [Restore User State](https://technet.microsoft.com/library/bb632881.aspx).  
 
  The default configuration of the **Restore User State** task sequence step is:  
 
@@ -1702,7 +1698,7 @@ manager: angrobe
 
 - **Example**.Provides an example of a property use as it might appear in the .ini files.  
 
-  For more information about these and other task sequence properties that might be referenced while performing a ZTI deployment, see [Operating System Deployment Task Sequence Variables](http://technet.microsoft.com/library/bb632442.aspx).  
+  For more information about these and other task sequence properties that might be referenced while performing a ZTI deployment, see [Operating System Deployment Task Sequence Variables](https://technet.microsoft.com/library/bb632442.aspx).  
 
   The deployment scripts generally require values to be specified in upper case so that they are properly read. Therefore, when specifying property values, use uppercase letters.  
 
@@ -3248,7 +3244,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |`[Settings] Priority=Default  [Default] AreaCode=206 CountryCode=001 Dialing=TONE LongDistanceAccess=9`|  
 
 ####  <a name="DisableTaskMgr"></a> DisableTaskMgr  
- This property controls a user’s ability to start Task Manager by pressing CTRL+ALT+DEL. After the user starts Task Manager, he or she could interrupt the LTI task sequence while running in the new operating system on the target computer. This property is used in conjunction with the **HideShell** property and is only valid when the **HideShell** property is set to **YES**.  
+ This property controls a user’s ability to start Task Manager by pressing CTRL+ALT+DEL. After the user starts Task Manager, they could interrupt the LTI task sequence while running in the new operating system on the target computer. This property is used in conjunction with the **HideShell** property and is only valid when the **HideShell** property is set to **YES**.  
 
 > [!NOTE]
 >  This property and the **HideShell** property must both be set to **YES** to prevent the user pressing CTRL+ALT+DEL and interrupting the LTI task sequence.  
@@ -3710,7 +3706,7 @@ cscript.exe LiteTouch.vbs /debug:true
 
  In addition, the same functionality can be provided by configuring the DomainOUList.xml file. The format of the DomainOUList.xml file is as follows:  
 
-```  
+```xml
 <?xml version="1.0" encoding="utf-8"?>  
 <DomainOUs>  
 <DomainOU>  
@@ -4171,7 +4167,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |None|  
 
 ####  <a name="IsDesktop"></a> IsDesktop  
- Indicator of whether the computer is a desktop, because the **Win32\_SystemEnclosure ChassisType** property value is **3**, **4**, **5**, **6**, **7**, or **15**.  
+ Indicator of whether the computer is a desktop, because the **Win32\_SystemEnclosure ChassisType** property value is **3**, **4**, **5**, **6**, **7**, **15**, **16**, **35**, or **36**.  
 
 > [!NOTE]
 >  Only one of the following properties will be true at a time: **IsDesktop**, **IsLaptop**, **IsServer**.  
@@ -4233,7 +4229,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |None|  
 
 ####  <a name="IsLaptop"></a> IsLaptop  
- Indicator of whether the computer is a portable computer, because the **Win32\_SystemEnclosure ChassisType** property value is **8**, **10**, **12**, **14**, **18**, or **21**.  
+ Indicator of whether the computer is a portable computer, because the **Win32\_SystemEnclosure ChassisType** property value is **8**, **9**, **10**, **11**, **12**, **14**, **18**, **21**, **30**, **31**, or **32**.  
 
 > [!NOTE]
 >  Only one of the following properties will be true at a time: **IsDesktop**, **IsLaptop**, **IsServer**.  
@@ -4257,7 +4253,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |None|  
 
 ####  <a name="IsServer"></a> IsServer  
- Indicator of whether the computer is a server, because the **Win32\_SystemEnclosure ChassisType** property value is **23**.  
+ Indicator of whether the computer is a server, because the **Win32\_SystemEnclosure ChassisType** property value is **23** or **28**.  
 
 |**Property configured by**|||**Property applies to**||  
 |-|-|-|-|-|  
@@ -5473,7 +5469,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |`[Default] OSDComputerName=%_SMSTSMachineName%`|  
 
 ####  <a name="OSDDiskAlign"></a> OSDDiskAlign  
- This property is used to pass a value to the **align** parameter of the **create partition primary** command in the **DiskPart** command. The **align** parameter is typically used with hardware RAID Logical Unit Number \(LUN\) arrays to improve performance when the logical units \(LUs\) are not cylinder aligned. The **align** parameter aligns a primary partition that is not cylinder aligned at the beginning of a disk and rounds the offset to the closest alignment boundary. For more information on the **align** parameter, see [Create partition primary](http://technet.microsoft.com/library/cc771243\(WS.10\).aspx).  
+ This property is used to pass a value to the **align** parameter of the **create partition primary** command in the **DiskPart** command. The **align** parameter is typically used with hardware RAID Logical Unit Number \(LUN\) arrays to improve performance when the logical units \(LUs\) are not cylinder aligned. The **align** parameter aligns a primary partition that is not cylinder aligned at the beginning of a disk and rounds the offset to the closest alignment boundary. For more information on the **align** parameter, see [Create partition primary](https://technet.microsoft.com/library/cc771243\(WS.10\).aspx).  
 
 > [!NOTE]
 >  This property can be used in conjunction with the **OSDDiskOffset** property to set the **offset** parameter for the **create partition primary** command in the **DiskPart** command. For more information, see the [OSDDiskOffset](#OSDDiskOffset) property.  
@@ -5510,7 +5506,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |`[Settings] Priority=Default  [Default] OSDDiskIndex=0`|  
 
 ####  <a name="OSDDiskOffset"></a> OSDDiskOffset  
- This property is used to pass a value to the **offset** parameter of the **create partition primary** command in the **DiskPart** command. For more information on the **offset** parameter, see [Create partition primary](http://technet.microsoft.com/library/cc771243\(WS.10\).aspx).  
+ This property is used to pass a value to the **offset** parameter of the **create partition primary** command in the **DiskPart** command. For more information on the **offset** parameter, see [Create partition primary](https://technet.microsoft.com/library/cc771243\(WS.10\).aspx).  
 
  This property can be used in conjunction with the **OSDDiskAlign** property to set the **align** parameter for the **create partition primary** command in the **DiskPart** command. For more information, see the [OSDDiskAlign](#OSDDiskAlign) property.  
 
@@ -6039,7 +6035,7 @@ BackupDir=Client01
 |`[Settings] Priority=Default  [Default] OSRoleServices=ADDS-Domain-Controller`|  
 
 ####  <a name="OSSKU"></a> OSSKU  
- The edition of the currently running operating system. The operating system edition is determined by using the **OperatingSystemSKU** property of the **Win32_OperatingSystem WMI** class. For a list of the editions the **OperatingSystemSKU** property returns, see the section, "OperatingSystemSKU," at [Win32_OperatingSystem class](http://msdn.microsoft.com/library/windows/desktop/aa394239\(v=vs.85\).aspx).  
+ The edition of the currently running operating system. The operating system edition is determined by using the **OperatingSystemSKU** property of the **Win32_OperatingSystem WMI** class. For a list of the editions the **OperatingSystemSKU** property returns, see the section, "OperatingSystemSKU," at [Win32_OperatingSystem class](https://msdn.microsoft.com/library/windows/desktop/aa394239\(v=vs.85\).aspx).  
 
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
@@ -8413,7 +8409,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 |`[Settings] Priority=Default  [Default] BitsPerPel=32 VRefresh=60 XResolution=1024 YResolution=768`|  
 
 ####  <a name="VSSMaxSize"></a> VSSMaxSize  
- This property is used to pass a value to the **maxsize** parameter of the **vssadmin resize shadowstorage** command in the **Vssadmin** command. The **maxsize** parameter is used to specify the maximum amount of space on the target volume that can be used for storing shadow copies. For more information on the **maxsize** parameter, see [Vssadmin resize shadowstorage](http://technet.microsoft.com/library/cc788050\(WS.10\).aspx).  
+ This property is used to pass a value to the **maxsize** parameter of the **vssadmin resize shadowstorage** command in the **Vssadmin** command. The **maxsize** parameter is used to specify the maximum amount of space on the target volume that can be used for storing shadow copies. For more information on the **maxsize** parameter, see [Vssadmin resize shadowstorage](https://technet.microsoft.com/library/cc788050\(WS.10\).aspx).  
 
 |**Property configured by**|||**Property applies to**||  
 |-|-|-|-|-|  
@@ -9864,7 +9860,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 ###  <a name="ZTIConfigureDNS.wsf"></a> ZTIConfigureDNS.wsf  
  This script configures DNS on the target computer. To perform the actual configuration tasks, the script uses the Dnscmd utility.  
 
- For more information about Dnscmd.exe, see [Dnscmd Overview](http://technet.microsoft.com/library/cc778513%28WS.10%29.aspx).  
+ For more information about Dnscmd.exe, see [Dnscmd Overview](https://technet.microsoft.com/library/cc778513%28WS.10%29.aspx).  
 
 > [!NOTE]
 >  DNS should already be installed on the target computer before running this script.  
@@ -10994,7 +10990,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
  MDT can also configure WUA to collect updates from computers on the corporate network that are running WSUS instead of connecting to Microsoft Updates over the Internet. MDT can optionally configure WUA to use a specific computer running WSUS using the **WSUSServer** property.  
 
- For additional information and for WUA deployment instructions, see [How to Install the Windows Update Agent on Client Computers](http://technet.microsoft.com/library/bb932139.aspx).  
+ For additional information and for WUA deployment instructions, see [How to Install the Windows Update Agent on Client Computers](https://technet.microsoft.com/library/bb932139.aspx).  
 
  Obtain the latest version of the WUA stand-alone installer for:  
 
@@ -11077,7 +11073,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 >  The default value for **UpdateCommand** is **IsInstalled=0** and **IsHidden=0**.  
 
 > [!NOTE]
->  For more information about **UpdateCommand**, see [IUpdateSearcher::Search Method](http://msdn.microsoft.com/library/aa386526\(VS.85\).aspx).  
+>  For more information about **UpdateCommand**, see [IUpdateSearcher::Search Method](https://msdn.microsoft.com/library/aa386526\(VS.85\).aspx).  
 
 #### Properties  
 
@@ -11370,7 +11366,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 |**Location**|*distribution*\Scripts|  
 
 ###  <a name="ZTIUserState_config.xml"></a> ZTIUserState_config.xml  
- This XML file is used by the [ZTIUserState.wsf](#ZTIUserState.wsf) script as a default USMT configuration file. This file is used by default if no custom configuration file is specified by the [USMTConfigFile](#USMTConfigFile) property. See the [Config.xml File](http://technet.microsoft.com/library/dd560760.aspx) topic in the USMT documentation for more information on syntax and use.  
+ This XML file is used by the [ZTIUserState.wsf](#ZTIUserState.wsf) script as a default USMT configuration file. This file is used by default if no custom configuration file is specified by the [USMTConfigFile](#USMTConfigFile) property. See the [Config.xml File](https://technet.microsoft.com/library/dd560760.aspx) topic in the USMT documentation for more information on syntax and use.  
 
 |**Value**|**Description**|  
 |-|-|
@@ -11580,7 +11576,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 ||See the command-line help that this utility provides.|  
 
 ###  <a name="Netsh.exe"></a> Netsh.exe  
- Netsh.exe is a command-line and scripting utility used to automate the configuration of networking components. For more information about Netsh.exe, see [The Netsh Command-Line Utility](http://technet.microsoft.com/library/cc785383%28WS.10%29.aspx).  
+ Netsh.exe is a command-line and scripting utility used to automate the configuration of networking components. For more information about Netsh.exe, see [The Netsh Command-Line Utility](https://technet.microsoft.com/library/cc785383%28WS.10%29.aspx).  
 
 |**Value**|**Description**|  
 |-|-|
@@ -11691,7 +11687,7 @@ Add-MDTPersistentDrive [-Name] <String> [[-InputObject] <PSObject>] [<CommonPara
  This subsection provides information about the various parameters that can be used with the **Add-MDTPersistentDriveWindows** cmdlet.  
 
 ##### -Name <String\>  
- Specifies the name of a Windows PowerShell drive created using the MDT provider and corresponds to an existing deployment share. The name was created using the [New-PSDrive](http://technet.microsoft.com/library/dd315340.aspx) cmdlet and specifying the **MDTProvider** in the *PSProvider* parameter.  
+ Specifies the name of a Windows PowerShell drive created using the MDT provider and corresponds to an existing deployment share. The name was created using the [New-PSDrive](https://technet.microsoft.com/library/dd315340.aspx) cmdlet and specifying the **MDTProvider** in the *PSProvider* parameter.  
 
  For more information on how to create a new Windows PowerShell drive using the **MDTProvider** and how to create a deployment share using Windows PowerShell, see the section "Creating a Deployment Share Using Windows PowerShell" in the MDT document, *Microsoft Deployment Toolkit Samples Guide*.  
 
@@ -11704,7 +11700,7 @@ Add-MDTPersistentDrive [-Name] <String> [[-InputObject] <PSObject>] [<CommonPara
 |**Accept wildcard characters?**|**False**|  
 
 ##### -InputObject <PSObject\>  
- This parameter specifies a Windows PowerShell drive object that was created earlier in the process. Enter a PSObject object, such as one generated by the [New-PSDrive](http://technet.microsoft.com/library/dd315340.aspx) cmdlet.  
+ This parameter specifies a Windows PowerShell drive object that was created earlier in the process. Enter a PSObject object, such as one generated by the [New-PSDrive](https://technet.microsoft.com/library/dd315340.aspx) cmdlet.  
 
 |**Parameter**|**Value**|  
 |-|-|  
@@ -11743,7 +11739,7 @@ Add-MDTPersistentDrive –InputObject $MDTPSDrive
 ```  
 
 ##### Description  
- This example adds the Windows PowerShell drive name *DS001,* created by the [New-PSDrive](http://technet.microsoft.com/library/dd315340.aspx) cmdlet, to the list of persisted MDT drives using the *$MDTPSDrive* variable.  
+ This example adds the Windows PowerShell drive name *DS001,* created by the [New-PSDrive](https://technet.microsoft.com/library/dd315340.aspx) cmdlet, to the list of persisted MDT drives using the *$MDTPSDrive* variable.  
 
 #### Example 3  
 
@@ -11752,7 +11748,7 @@ New-PSDrive -Name "DS001" -PSProvider "MDTProvider" –Root "C:\DeploymentShare$
 ```  
 
 ##### Description  
- This example adds the Windows PowerShell drive name *DS001,* created by the [New-PSDrive](http://technet.microsoft.com/library/dd315340.aspx) cmdlet, to the list of persisted MDT drives by piping the newly created Windows PowerShell drive object to the **Add-MDTPersistentDrive** cmdlet.  
+ This example adds the Windows PowerShell drive name *DS001,* created by the [New-PSDrive](https://technet.microsoft.com/library/dd315340.aspx) cmdlet, to the list of persisted MDT drives by piping the newly created Windows PowerShell drive object to the **Add-MDTPersistentDrive** cmdlet.  
 
 ###  <a name="Disable-MDTMonitorService"></a> Disable-MDTMonitorService  
  This section describes the **Disable-MDTMonitorService** Windows PowerShell cmdlet. Run this cmdlet from a Windows PowerShell console that has the MDT PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".  
@@ -12152,7 +12148,7 @@ Get-Help about_CommonParameters
 ```  
 
 #### Outputs  
- This cmdlet outputs a **PSObject** type object for each MDT persisted drive that is identical to the **PSObject** type object that the [New-PSDrive](http://technet.microsoft.com/library/dd315340.aspx) cmdlet returns.  
+ This cmdlet outputs a **PSObject** type object for each MDT persisted drive that is identical to the **PSObject** type object that the [New-PSDrive](https://technet.microsoft.com/library/dd315340.aspx) cmdlet returns.  
 
 #### Example 1  
 
@@ -12768,7 +12764,7 @@ Import-MDTTaskSequence [-Path <String>] -Template <String> -Name <String> -ID <S
 $OS=Get-Item "DS001:\Operating Systems\Windows 8"  
 ```  
 
- For more information on the **Get-Item** cmdlet, see [Using the Get-Item Cmdlet](http://technet.microsoft.com/library/ee176851).  
+ For more information on the **Get-Item** cmdlet, see [Using the Get-Item Cmdlet](https://technet.microsoft.com/library/ee176851).  
 
 > [!NOTE]
 >  If you do not provide this parameter and the task sequence needs to reference an operating system, then you must provide the *OperatingSystemPath* parameter.  
@@ -12875,7 +12871,7 @@ Import-MDTTaskSequence -Path "DS001:\Control" –Template "Client.xml" –Name "
 ##### Description  
  This example imports a task sequence named *Deploy Windows 8 to Reference Computer* and creates the task sequence in the DS001:\Control\WIN8REFERENCE folder in the deployment share. The comment, “Task sequence for deploying Windows 8 to the reference computer (WDG-REF-01),” is assigned to the task sequence. The version number of the task sequence is set to **1.00**.  
 
- The operating system associated with the task sequence is located at DS001:\Operating Systems\Windows 8_x64 in the deployment share. The registered owner of the operating system will be set to **Woodgrove Bank Employee**. The registered organization of the operating system will be set to **Woodgrove Bank**. The Internet Explorer home page will default to **<http://www.woodgrovebank.com>**. The password for the local, built-in Administrator account will be set to a value of <strong>P@ssw0rd</strong>. The product key for the operating system will be set to **1234512345123451234512345**.  
+ The operating system associated with the task sequence is located at DS001:\Operating Systems\Windows 8_x64 in the deployment share. The registered owner of the operating system will be set to **Woodgrove Bank Employee**. The registered organization of the operating system will be set to **Woodgrove Bank**. The Internet Explorer home page will default to **http:\//www.woodgrovebank.com**. The password for the local, built-in Administrator account will be set to a value of <strong>P@ssw0rd</strong>. The product key for the operating system will be set to **1234512345123451234512345**.  
 
 #### Example 2  
 
@@ -12889,7 +12885,7 @@ Import-MDTTaskSequence -Path "DS001:\Control" –Template "Client.xml" –Name "
 
  The operating system associated with the task sequence is located at DS001:\Operating Systems\Windows 8_x64 in the deployment share, which is passed to the cmdlet using the *$OSObject* variable. The *$OSObject* variable is set to an existing operating system object using the **Get-Item** cmdlet.  
 
- The registered owner of the operating system will be set to **Woodgrove Bank Employee**. The registered organization of the operating system will be set to **Woodgrove Bank**. The Internet Explorer home page will default to **<http://www.woodgrovebank.com>**. The password for the local, built-in Administrator account will be set to a value of <strong>P@ssw0rd</strong>. The product key for the operating system will need to be provided when deploying this task sequence in the Deployment Wizard, in the CustomSettings.ini file, or in the MDT DB.  
+ The registered owner of the operating system will be set to **Woodgrove Bank Employee**. The registered organization of the operating system will be set to **Woodgrove Bank**. The Internet Explorer home page will default to **http:\//www.woodgrovebank.com**. The password for the local, built-in Administrator account will be set to a value of <strong>P@ssw0rd</strong>. The product key for the operating system will need to be provided when deploying this task sequence in the Deployment Wizard, in the CustomSettings.ini file, or in the MDT DB.  
 
 ###  <a name="New-MDTDatabase"></a> New-MDTDatabase  
  This section describes the **New-MDTDatabase** Windows PowerShell cmdlet. Run this cmdlet from a Windows PowerShell console that has the MDT PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".  
@@ -13143,7 +13139,7 @@ Remove-MDTMonitorData -ComputerObject $MonitorObject
 ```  
 
 ##### Description  
- This example removes any monitoring data item where the name of the computer is WDG-REF-01. The object is found using the **Get-MDTMonitorData** cmdlet and the **Where-Object** cmdlet. For more information on the **Where-Object** cmdlet, see [Using the Where-Object Cmdlet](http://technet.microsoft.com/library/ee177028.aspx).  
+ This example removes any monitoring data item where the name of the computer is WDG-REF-01. The object is found using the **Get-MDTMonitorData** cmdlet and the **Where-Object** cmdlet. For more information on the **Where-Object** cmdlet, see [Using the Where-Object Cmdlet](https://technet.microsoft.com/library/ee177028.aspx).  
 
 ###  <a name="Remove-MDTPersistentDrive"></a> Remove-MDTPersistentDrive  
  This section describes the **Remove-MDTPersistentDriveWindows** Windows PowerShell cmdlet. Run this cmdlet from a Windows PowerShell console that has the MDT PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".  
@@ -13166,7 +13162,7 @@ Remove-MDTPersistentDrive [-Name] <String> [[-InputObject] <PSObject>] [<CommonP
  This subsection provides information about the various parameters that can be used with the **Add-MDTPersistentDriveWindows** cmdlet.  
 
 ##### -Name <String\>  
- Specifies the name of a Windows PowerShell drive created using the MDT provider and corresponds to an existing deployment share. The name was created using the [New-PSDrive](http://technet.microsoft.com/library/dd315340.aspx) cmdlet and specifying the **MDTProvider** in the *PSProvider* parameter.  
+ Specifies the name of a Windows PowerShell drive created using the MDT provider and corresponds to an existing deployment share. The name was created using the [New-PSDrive](https://technet.microsoft.com/library/dd315340.aspx) cmdlet and specifying the **MDTProvider** in the *PSProvider* parameter.  
 
  For more information on how to create a new Windows PowerShell drive using the **MDTProvider** and how to create a deployment share using Windows PowerShell, see the section "Creating a Deployment Share Using Windows PowerShell" in the MDT document, *Microsoft Deployment Toolkit Samples Guide*.  
 
@@ -13179,7 +13175,7 @@ Remove-MDTPersistentDrive [-Name] <String> [[-InputObject] <PSObject>] [<CommonP
 |**Accept wildcard characters?**|**False**|  
 
 ##### -InputObject <PSObject\>  
- This parameter specifies a Windows PowerShell drive object that was created earlier in the process. Enter a **PSObject** object, such as one generated by the [New-PSDrive](http://technet.microsoft.com/library/dd315340.aspx) cmdlet.  
+ This parameter specifies a Windows PowerShell drive object that was created earlier in the process. Enter a **PSObject** object, such as one generated by the [New-PSDrive](https://technet.microsoft.com/library/dd315340.aspx) cmdlet.  
 
 |**Parameter**|**Value**|  
 |-|-|  
@@ -13216,7 +13212,7 @@ Remove-MDTPersistentDrive –InputObject $MDTPSDrive
 ```  
 
 ##### Description  
- This example removes the deployment share at C:\DeploymentShare$ from the list of persisted drives. The **GetPSDrive** and **Where-Object** cmdlets are used to return the MDT persisted Windows PowerShell drive to the **Remove-MDTPersistentDrive** cmdlet using the *$MDTPSDrive* variable. For more information on the **Where-Object** cmdlet, see [Using the Where-Object Cmdlet](http://technet.microsoft.com/library/ee177028.aspx). For more information on the **Get-PSDrive** cmdlet, see [Using the Get-PSDrive Cmdlet](http://technet.microsoft.com/library/ee176856).  
+ This example removes the deployment share at C:\DeploymentShare$ from the list of persisted drives. The **GetPSDrive** and **Where-Object** cmdlets are used to return the MDT persisted Windows PowerShell drive to the **Remove-MDTPersistentDrive** cmdlet using the *$MDTPSDrive* variable. For more information on the **Where-Object** cmdlet, see [Using the Where-Object Cmdlet](https://technet.microsoft.com/library/ee177028.aspx). For more information on the **Get-PSDrive** cmdlet, see [Using the Get-PSDrive Cmdlet](https://technet.microsoft.com/library/ee176856).  
 
 ###  <a name="Restore-MDTPersistentDrive"></a> Restore-MDTPersistentDrive  
  This section describes the **Restore-MDTPersistentDrive** Windows PowerShell cmdlet. Run this cmdlet from a Windows PowerShell console that has the MDT PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".  
@@ -13376,7 +13372,7 @@ Set-MDTMonitorData -ComputerObject $MonitorObject Setting @{"OSDComputerName"="W
 ```  
 
 ##### Description  
- This example removes any monitoring data item where the name of the computer is *WDG-REF-01.* The object is found using the **Get-MDTMonitorData** cmdlet and the **Where-Object** cmdlet. For more information on the **Where-Object** cmdlet, see [Using the Where-Object Cmdlet](http://technet.microsoft.com/library/ee177028.aspx). The [OSDComputerName](#OSDComputerName) property is recorded as having a value of **WDG-MDT-01**, and the [SkipWizard](#SkipWizard) property is recorded as having a value of **YES**.  
+ This example removes any monitoring data item where the name of the computer is *WDG-REF-01.* The object is found using the **Get-MDTMonitorData** cmdlet and the **Where-Object** cmdlet. For more information on the **Where-Object** cmdlet, see [Using the Where-Object Cmdlet](https://technet.microsoft.com/library/ee177028.aspx). The [OSDComputerName](#OSDComputerName) property is recorded as having a value of **WDG-MDT-01**, and the [SkipWizard](#SkipWizard) property is recorded as having a value of **YES**.  
 
 #### Example 2  
 
@@ -13917,9 +13913,9 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
  For more information about prestaged media deployments, see the following resources:  
 
--   [Planning for Media Operating System Deployments in Configuration Manager](http://technet.microsoft.com/library/hh499044.aspx)  
+-   [Planning for Media Operating System Deployments in Configuration Manager](https://technet.microsoft.com/library/hh499044.aspx)  
 
--   [About Prestaged Media for Operating System Deployment](http://technet.microsoft.com/library/gg294171.aspx)  
+-   [About Prestaged Media for Operating System Deployment](https://technet.microsoft.com/library/gg294171.aspx)  
 
 #### Stage Group  
  Use a stage group to group one or more stages in the UDI Wizard Designer. UDI stage groups are loosely related to MDT deployment scenarios, but there is no one-to-one correlation between the two.  
@@ -13960,7 +13956,7 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 |**/preview**|Allows you to preview the current configuration of the wizard by enabling the **Next** button, which allows you to move from page to page without requiring valid input.|  
 |**/xml**|Specifies the name of the UDI Wizard configuration file. The UDIWizard.wsf script automatically sets this parameter to the OSDSetupWizard.xml file, which is stored in the folder in which the task sequence stores log files. This parameter defaults to the config.xml file.<br /><br /> The syntax for this parameter is as follows (where `<full_path>` is the fully qualified path to the .xml file, including the file name and extension):<br /><br /> `/xml:<full_path>`|  
 |**/stage**|Specifies the name of the UDI stage to run. The UDIWizard.wsf script automatically sets this parameter to the appropriate stage, as described in [UDI Stage Reference](#UDIStageReference). This parameter defaults to the first stage in the UDI Wizard configuration file.<br /><br /> The syntax for this parameter is as follows (where `<stage_name>` is the name of the stage to be run):<br /><br /> `/stage:<stage_name>`<br /><br /> Note:<br /><br /> The value for <stage_name> is case sensitive.|  
-|**/locale**|Specifies the language to use in the UDI Wizard in the form of a locale identifier (LCID), which is represented by a numeric value. For a list of the available LCIDs, see [Locale IDs Assigned by Microsoft](http://msdn.microsoft.com/goglobal/bb964664).<br /><br /> You would use this list to identify the language you want to use, and then provide the corresponding LCID.<br /><br /> The syntax for this parameter is as follows (where `<locale_id>` is the numeric value of the LCID to be used):<br /><br /> `/locale:<locale_id>`|  
+|**/locale**|Specifies the language to use in the UDI Wizard in the form of a locale identifier (LCID), which is represented by a numeric value. For a list of the available LCIDs, see [Locale IDs Assigned by Microsoft](https://msdn.microsoft.com/goglobal/bb964664).<br /><br /> You would use this list to identify the language you want to use, and then provide the corresponding LCID.<br /><br /> The syntax for this parameter is as follows (where `<locale_id>` is the numeric value of the LCID to be used):<br /><br /> `/locale:<locale_id>`|  
 
 ####  <a name="UDIWizardApplicationConfigurationFile"></a> UDI Wizard Application Configuration File  
  The **ApplicationPage** wizard page configures the UDI Wizard application configuration file, which maintains the list of software to be installed. This file contains an entry for each Configuration Manager application or program and package that was added using the UDI Wizard Designer.  
@@ -14003,7 +13999,7 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
  If your requirements go beyond the built-in UDI wizard pages and corresponding wizard page editors, you can write custom UDI wizard pages and wizard page editors. UDI wizard page editors are implemented as DLLs that the UDI Wizard Designer reads. Create wizard page editors using:  
 
-- [Windows Presentation Foundation](http://msdn.microsoft.com/library/ms754130.aspx) version 4.0  
+- [Windows Presentation Foundation](https://msdn.microsoft.com/library/ms754130.aspx) version 4.0  
 
 - [Microsoft Prism](http://compositewpf.codeplex.com/) version 4.0  
 
@@ -14066,7 +14062,7 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 ###  <a name="UserCentricAppInstallerReference"></a> User-Centric App Installer Reference  
  The User-Centric App Installer feature in UDI is used to report any applications installed during the UDI deployment process to the Application Catalog feature in Configuration Manager. The User-Centric App Installer feature provides the link between the applications selected on the **ApplicatonPage** wizard page in the UDI Wizard and any optional Configuration Manager applications advertised to the users.  
 
- For more information on the Application Catalog feature in Configuration Manager, see [Application Management in Configuration Manager](http://technet.microsoft.com/library/gg699373.aspx).  
+ For more information on the Application Catalog feature in Configuration Manager, see [Application Management in Configuration Manager](https://technet.microsoft.com/library/gg699373.aspx).  
 
  The following is the high-level process for how the App Install feature works in UDI:  
 
@@ -14074,21 +14070,21 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
     For more information about creating and managing Configuration Manager applications, see the following resources:  
 
-   -   [How to Create Applications in Configuration Manager](http://technet.microsoft.com/library/gg682159.aspx)  
+   -   [How to Create Applications in Configuration Manager](https://technet.microsoft.com/library/gg682159.aspx)  
 
-   -   [Operations and Maintenance for Application Management in Configuration Manager](http://technet.microsoft.com/library/gg681963.aspx)  
+   -   [Operations and Maintenance for Application Management in Configuration Manager](https://technet.microsoft.com/library/gg681963.aspx)  
 
 2. The Configuration Manager user collections are created, and users are added to the collection.  
 
     For more information about creating and managing user collections and adding users to collections, see the following resources:  
 
-   -   [Collections in Configuration Manager](http://technet.microsoft.com/library/gg682169.aspx)  
+   -   [Collections in Configuration Manager](https://technet.microsoft.com/library/gg682169.aspx)  
 
-   -   [How to Create Collections in Configuration Manager](http://technet.microsoft.com/library/gg712295.aspx)  
+   -   [How to Create Collections in Configuration Manager](https://technet.microsoft.com/library/gg712295.aspx)  
 
 3. The Configuration Manager applications are deployed to the user collections.  
 
-    For more information about how to deploy the applications to user collections, see [How to Deploy Applications in Configuration Manager](http://technet.microsoft.com/library/gg682082.aspx).  
+    For more information about how to deploy the applications to user collections, see [How to Deploy Applications in Configuration Manager](https://technet.microsoft.com/library/gg682082.aspx).  
 
 4. The Configuration Manager applications are made available on the **ApplicatonPage** wizard page using the UDI Wizard Designer.  
 
@@ -14096,7 +14092,7 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 5. UDA is configured using one of the following methods:  
 
-   - In the Configuration Manger console (For more information about configuring UDA in the Configuration Manager console, see [How to Manage User Device Affinity in Configuration Manager](http://technet.microsoft.com/library/gg699365.aspx).)  
+   - In the Configuration Manger console (For more information about configuring UDA in the Configuration Manager console, see [How to Manage User Device Affinity in Configuration Manager](https://technet.microsoft.com/library/gg699365.aspx).)  
 
    - On the **UDAPage** wizard page in the UDI Wizard (For more information about the **UDAPage** wizard page, see [UDAPage](#UDAPage).)  
 
@@ -14459,7 +14455,7 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
  Use this validator to require text in a field. The **Message** box allows you to enter a message that is displayed if the text field is empty.  
 
 #####  <a name="RegEx"></a> RegEx  
- This validator allows you ensure that the text matches a regular expression that you specify as a part of the validator. The **Message** box allows you to enter a message that is displayed if the text field does not match the regular expression. The **Regular Expression** box allows you to enter the regular expression used for the validation. For more information about how to build regular expressions for this validator, see [TR1 Regular Expressions](http://msdn.microsoft.com/library/bb982727.aspx).  
+ This validator allows you ensure that the text matches a regular expression that you specify as a part of the validator. The **Message** box allows you to enter a message that is displayed if the text field does not match the regular expression. The **Regular Expression** box allows you to enter the regular expression used for the validation. For more information about how to build regular expressions for this validator, see [TR1 Regular Expressions](https://msdn.microsoft.com/library/bb982727.aspx).  
 
 ###  <a name="UDIWizardPageReference"></a> UDI Wizard Page Reference  
  You add a UDI [wizard page](#WizardPage) to stages from the [Page Library](#PageLibrary) in the [UDI Wizard Designer](#UDIWizardDesigner). UDI wizard pages are displayed in the [UDI Wizard](#UDIWizard).  
@@ -14537,7 +14533,7 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
  Use this wizard page to configure the list of application software that can be installed during the setup process. These applications can include applications or packages and programs from Configuration Manager.  
 
 > [!NOTE]
->  If applications appear to be disabled, the application may require administrator approval but has not yet been approved. If the **Require administrator approval if users request this application** check box is selected for the application, verify that the application has been approved. For more information, see [How to Deploy Applications in Configuration Manager](http://technet.microsoft.com/library/gg682082.aspx).  
+>  If applications appear to be disabled, the application may require administrator approval but has not yet been approved. If the **Require administrator approval if users request this application** check box is selected for the application, verify that the application has been approved. For more information, see [How to Deploy Applications in Configuration Manager](https://technet.microsoft.com/library/gg682082.aspx).  
 
 ###### Task Sequence Variables  
  Table 28 lists the **ApplicationPage** task sequence variables with the description and whether the variable is read by the wizard page, written by the wizard page, or can be configured in the UDI Wizard configuration file.  

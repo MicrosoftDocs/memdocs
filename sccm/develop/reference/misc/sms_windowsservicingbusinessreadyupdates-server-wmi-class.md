@@ -52,11 +52,8 @@ Class SMS_WindowsServicingBusinessReadyUpdates : SMS_BaseClass
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Configuration Manager Windows 10 Servicing Server WMI Classes](../../../develop/reference/misc/windows-10-servicing-server-wmi-classes.md)

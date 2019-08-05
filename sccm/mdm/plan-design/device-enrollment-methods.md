@@ -25,19 +25,19 @@ The following table shows enrollment methods with their supported capabilities. 
 
 **iOS enrollment methods**
 
-| **Method** |	**Wipe** |	**Affinity**	|	**Lock** | **Details** |
+| **Method** | **Wipe** | **Affinity** | **Lock** | **Details** |
 |:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#byod)** | No|	Yes |	No | [more](../deploy-use/enable-platform-enrollment.md)|
-|**[DEM](#dem)**|	No |No |No	| [more](../deploy-use/enroll-devices-with-device-enrollment-manager.md)|
-|**[DEP](#dep)**|	Yes |	Optional |	Optional|[more](../deploy-use/ios-device-enrollment-program-for-hybrid.md)|
-|**[USB-SA](#usb-sa)**|	Yes |	Optional |	No| [more](../deploy-use/ios-hybrid-enrollment-using-apple-configurator.md)|
+|**[BYOD](#byod)** | No| Yes | No | [more](../deploy-use/enable-platform-enrollment.md)|
+|**[DEM](#dem)**| No |No |No | [more](../deploy-use/enroll-devices-with-device-enrollment-manager.md)|
+|**[DEP](#dep)**| Yes | Optional | Optional|[more](../deploy-use/ios-device-enrollment-program-for-hybrid.md)|
+|**[USB-SA](#usb-sa)**| Yes | Optional | No| [more](../deploy-use/ios-hybrid-enrollment-using-apple-configurator.md)|
 
 **Windows and Android enrollment methods**
 
-| **Method** |	**Wipe** |	**Affinity**	|	**Lock** | **Details**|
+| **Method** | **Wipe** | **Affinity** | **Lock** | **Details**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#byod)** | No|	Yes |	No | [more](../deploy-use/enroll-hybrid-windows.md)|
-|**[DEM](#dem)**|	No |No |No	|[more](../deploy-use/enroll-devices-with-device-enrollment-manager.md)|
+|**[BYOD](#byod)** | No| Yes | No | [more](../deploy-use/enroll-hybrid-windows.md)|
+|**[DEM](#dem)**| No |No |No |[more](../deploy-use/enroll-devices-with-device-enrollment-manager.md)|
 
 For a series of question that help you find the right method, see [Choose how to enroll devices](/intune/get-started/choose-how-to-enroll-devices1).
 
@@ -54,18 +54,18 @@ Device enrollment manager is a special user account used to enroll and manage mu
 
 ### DEP
 Apple Device Enrollment Program (DEP) management lets you create and deploy policy “over the air” to iOS devices purchased and managed with DEP. The device is enrolled when the user turns on the device for the first time and runs the iOS Setup Assistant. This method supports **iOS Supervised** mode which in turn enables:
-  -	Locked enrollment
-  -	Conditional access
-  -	Jailbreak detection
-  -	Mobile application management
+- Locked enrollment
+- Conditional access
+- Jailbreak detection
+- Mobile application management
 
 Learn more about [DEP](../deploy-use/ios-device-enrollment-program-for-hybrid.md). ([Back to the table](#overview-of-device-enrollment-methods))
 
 ### USB-SA
 USB-connected, Setup Assistant enrollment. The admin creates a policy and exports it to Apple Configurator. USB-connected, corporate-owned devices are prepared with policy. The admin must enroll each device by hand. Users receive their devices and run Setup Assistant, enrolling their device. This method supports **iOS Supervised** mode which in turn enables:
-  -	Conditional access
-  -	Jailbreak detection
-  -	Mobile application management
+- Conditional access
+- Jailbreak detection
+- Mobile application management
 
 Learn more about [Setup Assistant enrollment with Apple Configurator](../deploy-use/ios-hybrid-enrollment-using-apple-configurator.md). ([Back to the table](#overview-of-device-enrollment-methods))
 

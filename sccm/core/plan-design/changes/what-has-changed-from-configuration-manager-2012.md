@@ -6,8 +6,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 3ae68fa6-8b30-45dd-9d12-50bb67cb4a9d
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -40,7 +40,7 @@ Periodically, an update version is also released as a new baseline version (like
 
 
 For more information about using updates, see [Updates for Configuration Manager](/sccm/core/servers/manage/updates).  
-For more information about baselines, see [Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions).
+For more information about baselines, see [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines).
 
 
 

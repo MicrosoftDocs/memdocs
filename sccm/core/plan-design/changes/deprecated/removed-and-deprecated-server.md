@@ -7,8 +7,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: d53ac075-438b-41da-ab85-42f33982da0c
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
@@ -36,7 +36,7 @@ Windows Server 2008 R2 with Service Pack 1 isn't supported for site servers or m
 > [!Important]  
 > The extended support end date for Windows Server 2008 R2 with SP1 is January 14, 2020. After this date, Configuration Manager won't support this OS as any site system role. 
 
-You can upgrade the site server OS from Windows Server 2008 R2 to Windows Server 2012 R2. For more information, see [In-place upgrade the operating system of site servers that run Windows Server 2008 R2](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#bkmk_from2008r2).  
+You can upgrade the site server OS from Windows Server 2008 R2 to Windows Server 2012 R2. For more information, see [In-place upgrade the operating system of site servers that run Windows Server 2008 R2](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#BKMK_SupConfigUpgradeSiteSrv).  
 
 
 #### <a name="bkmk_note2"></a> Note 2: Windows Server 2008 with SP2
@@ -57,9 +57,9 @@ Windows Server 2008 with Service Pack 2 isn't supported for site servers or most
 
 If you need to upgrade your version of SQL Server, we recommend the following methods, from easy to more complex:
 
-1. [Upgrade SQL Server in-place](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server) (recommended).  
+1. [Upgrade SQL Server in-place](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#BKMK_SupConfigUpgradeDBSrv) (recommended).  
 
-2. Install a new version of SQL Server on a new computer. Then to point your site server at the new SQL Server, [use the database move option](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration) of Configuration Manager setup.  
+2. Install a new version of SQL Server on a new computer. Then to point your site server at the new SQL Server, [use the database move option](/sccm/core/servers/manage/modify-your-infrastructure#bkmk_dbconfig) of Configuration Manager setup.  
 
 3. Use [backup and recovery](/sccm/protect/understand/backup-and-recovery).  
 
