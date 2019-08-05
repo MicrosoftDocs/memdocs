@@ -47,4 +47,3 @@ sint32 DistributeDeploymentTypeExtension (
 
 ## See Also  
  [SMS_DeploymentType Server WMI Class](../../../develop/reference/apps/sms_deploymenttype-server-wmi-class.md)   
- [Application Model Server WMI Classes](../../../develop/reference/apps/application-management-server-wmi-classes.md)

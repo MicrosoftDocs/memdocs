@@ -42,7 +42,7 @@ DeleteCollection(WMIConnection,"ABC00010")
 
 ### To delete a collection  
 
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Get the specific collection instance by using the collection ID provided.  
 
@@ -143,12 +143,9 @@ public void DeleteCollection(WqlConnectionManager connection, string collectionI
 
 ## See Also  
  [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md)   
- [Configuration Manager Collections](../../../../develop/core/clients/collections/collections.md)   
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
- [Software Distribution Packages](../../../../develop/core/servers/configure/software-distribution-packages.md)   
- [Software Distribution Programs](../../../../develop/core/servers/configure/software-distribution-programs.md)   
- [Software Distribution Advertisements](../../../../develop/core/servers/configure/software-distribution-advertisements.md)   
- [How to Use Configuration Manager Objects With WMI](../../../../develop/core/understand/how-to-use-configuration-manager-objects-with-wmi.md)   
- [How to Use Configuration Manager Objects With Managed Code](../../../../develop/core/understand/how-to-use-configuration-manager-objects-with-managed-code.md)   
+ [Delete a collection](/sccm/develop/core/clients/collections/how-to-delete-a-collection)
+ [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
+ [About deployments](/sccm/develop/core/servers/configure/about-software-distribution-deployments)
+ [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)
  [How to Connect to a Configuration Manager Provider using Managed Code](../../../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)   
  [How to Connect to a Configuration Manager Provider Using WMI](../../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)

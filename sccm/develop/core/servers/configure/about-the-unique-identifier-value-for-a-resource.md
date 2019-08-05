@@ -29,8 +29,4 @@ GUID:4976DCD4-CAAE-11D2-8E00-00104BCC3648
  You can use any \<ID Type> and \<ID Value> values to identify a new resource. However, when discovering data for an existing resource type, you should follow the convention that is used by that resource type.  
 
 ## See Also  
- [System Center Configuration Manager Software Development Kit](../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Discovery](../../../../develop/core/servers/configure/discovery.md)   
- [Extending Discovery and Inventory](../../../../develop/core/servers/configure/extending-resource-discovery.md)   
  [How to Get the Unique Identifier Value for a Client](../../../../develop/core/servers/configure/how-to-get-the-unique-identifier-value-for-a-client.md)   
- [Configuration Manager Resource Management Server WMI Classes](../../../../develop/reference/core/clients/manage/configuration-manager-resource-management-server-wmi-classes.md)

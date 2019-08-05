@@ -1,6 +1,6 @@
 - name: Desktop Analytics
   items:
-  - name: Overview
+  - name: What is Desktop Analytics?
     href: overview.md
   - name: Tutorials
     items:

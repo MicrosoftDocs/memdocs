@@ -109,5 +109,4 @@ sint32 TestSmtpConnection(
 
 ## See Also  
  [SMS_Subscription Server WMI Class](../../../../../develop/reference/core/servers/manage/sms_subscription-server-wmi-class.md)   
- [Alert System WMI Server Classes](../../../../../develop/reference/core/servers/manage/alert-system-server-wmi-classes.md)   
  [SMS_Subscription Server WMI Class](../../../../../develop/reference/core/servers/manage/sms_subscription-server-wmi-class.md)

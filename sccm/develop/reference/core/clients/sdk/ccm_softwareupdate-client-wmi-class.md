@@ -322,15 +322,10 @@ class CCM_SoftwareUpdate : CCM_SoftwareBase
 
  `true` if the software update is visible in software center; otherwise, `false`.  
 
-## Remarks  
-
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
-
-## See Also  
- [Configuration Manager Client SDK WMI Classes](../../../../../develop/reference/core/clients/sdk/client-sdk-wmi-classes.md)

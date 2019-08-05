@@ -27,7 +27,7 @@ In System Center Configuration Manager, you add a Windows driver to an operating
 
 ### To add a Windows driver to a boot image package  
 
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Get the [SMS_BootImagePackage](../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md) object for the boot image package that you want to add the driver to.  
 
@@ -150,4 +150,3 @@ public void AddDriverToBootImagePackage(
 ## See Also  
  [About Operating System Deployment Driver Management](../../develop/osd/about-operating-system-deployment-driver-management.md)   
  [How to Remove a Windows Driver from a Boot Image Package](../../develop/osd/how-to-remove-a-windows-driver-from-a-boot-image-package.md)   
- [Operating System Deployment Driver Management](../../develop/osd/operating-system-deployment-driver-management.md)

@@ -85,7 +85,6 @@ public void CreateSecurityScope(WqlConnectionManager connection, string scopeNam
  For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## See Also  
- [Security Scope Management](../../../../develop/core/servers/configure/security-scope-management.md)   
  [How to Delete a Security Scope](../../../../develop/core/servers/configure/how-to-delete-a-security-scope.md)   
  [How to Associate an Object with a Security Scope](../../../../develop/core/servers/configure/how-to-associate-an-object-with-a-security-scope.md)   
  [How to Remove an Object Association with a Security Scope](../../../../develop/core/servers/configure/how-to-remove-an-object-association-with-a-security-scope.md)   

@@ -78,5 +78,6 @@ In System Center Configuration Manager, baselines are used to define the configu
 
 -   References to content defined as raw Service Modeling Language (SML).  
 
-## See Also  
- [Authoring Desired Configuration Management Configuration Baselines and Configuration Items](../../develop/compliance/authoring-compliance-settings-configuration-baselines-and-configuration-items.md)
+## See Also
+
+[About authoring configuration baselines and items](/sccm/develop/compliance/about-authoring-configuration-baselines-and-configuration-items)

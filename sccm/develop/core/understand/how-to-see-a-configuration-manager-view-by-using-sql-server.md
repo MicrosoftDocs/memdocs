@@ -39,7 +39,3 @@ select * from v_ResourceAttributeMap where ResourceType=5
 ```  
 select InvClassName from v_GroupMap where ResourceType = 5  
 ```  
-
-## See Also  
- [Configuration Manager Schema](../../../develop/core/understand/configuration-manager-schema.md)   
- [Configuration Manager Programming Fundamentals](../../../develop/core/understand/configuration-manager-programming-fundamentals.md)

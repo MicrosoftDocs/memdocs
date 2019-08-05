@@ -15,7 +15,7 @@ manager: dougeby
 
 # Application management views in Configuration Manager
 
-The Configuration Manager application management views can be used to query for information about applications, packages and programs, deployments, distribution points, and more. These views will most often be joined to other views by using the **AdvertisementID**, **PackageID**, or **CollectionID** columns. Many of the status views also provide information about the status for applications and deployments. For more information about Configuration Manager applications, see [Application Management in Configuration Manager](/sccm/develop/apps/application-management).
+The Configuration Manager application management views can be used to query for information about applications, packages and programs, deployments, distribution points, and more. These views will most often be joined to other views by using the **AdvertisementID**, **PackageID**, or **CollectionID** columns. Many of the status views also provide information about the status for applications and deployments.
 
 The following sections provide detailed information about application management views and application management status views.
 

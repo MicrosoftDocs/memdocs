@@ -18,4 +18,4 @@ In System Center Configuration Manager, general configuration items are models o
 >  General configuration items are referred to as BusinessPolicy configuration items in the DCMDigest.xsd  
 
 ## See Also  
- [Authoring Desired Configuration Management Configuration Baselines and Configuration Items](../../develop/compliance/authoring-compliance-settings-configuration-baselines-and-configuration-items.md)
+[About authoring configuration baselines and items](/sccm/develop/compliance/about-authoring-configuration-baselines-and-configuration-items)

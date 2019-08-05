@@ -122,4 +122,3 @@ ms.collection: M365-identity-device-management
 
 ## See Also  
  [Configuration Manager SEDO](../../../develop/core/understand/sedo.md)   
- [Configuration Manager Programming Fundamentals](../../../develop/core/understand/configuration-manager-programming-fundamentals.md)

@@ -37,6 +37,5 @@ The Partner Notification API allows third-party partners to use the Wake on LAN 
 5.  Use the list of computers in the partner notification file to wake the computers with your custom code.  
 
 ## See Also  
- [Software Distribution Wake On LAN](../../../../develop/core/servers/configure/software-distribution-wake-on-lan.md)   
  [How to Create an Advertisement](../../../../develop/core/servers/configure/how-to-create-an-advertisement.md)   
  [How to Configure a Software Distribution Mandatory Advertisement for Wake On LAN](../../../../develop/core/servers/configure/how-to-configure-a-mandatory-advertisement-for-wake-on-lan.md)

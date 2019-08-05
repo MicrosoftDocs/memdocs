@@ -1,5 +1,7 @@
 - name: Core infrastructure
+  href: understand/introduction.md
 - name: Understand and explore
+  expanded: true
   items:
   - name: Introduction to Configuration Manager
     items:

@@ -19,7 +19,7 @@ In System Center Configuration Manager, you create an `SMS_Query`-based query by
 
 ### To create a query  
 
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Create an instance of [SMS_Query](../../../develop/reference/core/clients/manage/sms_query-server-wmi-class.md).  
 

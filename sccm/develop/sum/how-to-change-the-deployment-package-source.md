@@ -185,8 +185,6 @@ public void ChangeDeploymentPackageSource(WqlConnectionManager connection,
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
- [Software Updates Scheduled Deployment](../../develop/sum/software-updates-deployments.md)   
+ [About software update deployments](/sccm/develop/sum/about-software-updates-deployments)
  [SMS_SoftwareUpdatesPackage](../../develop/reference/sum/sms_softwareupdatespackage-server-wmi-class.md)   
  [ValidateNewPackageSource Method in Class SMS_SoftwareUpdatesPackage](../../develop/reference/sum/validatenewpackagesource-method-in-class-sms_softwareupdatespackage.md)

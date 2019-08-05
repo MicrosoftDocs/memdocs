@@ -23,7 +23,3 @@ In System Center Configuration Manager, status MIF functions are provided in sep
 -   [InstallStatusMIF Function](../../../../../develop/reference/core/servers/manage/installstatusmif-function.md)  
 
 -   [InstallStatusMIFEx Function](../../../../../develop/reference/core/servers/manage/installstatusmifex-function.md)  
-
-## See Also  
- [Configuration Manager Status](../../../../../develop/reference/core/servers/manage/status-classes.md)   
- [Configuration Manager Reference](../../../../../develop/reference/configuration-manager-reference.md)

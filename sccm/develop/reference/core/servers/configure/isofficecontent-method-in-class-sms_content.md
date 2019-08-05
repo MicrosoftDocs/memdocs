@@ -38,12 +38,12 @@ Boolean IsOfficeContent (
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
-## See Also  
- [SMS_Content Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_content-server-wmi-class.md)   
- [Configuration Manager Content Server WMI Classes](../../../../../develop/reference/core/servers/configure/content-server-wmi-classes.md)
+## See also
+
+[SMS_Content server WMI class](/sccm/develop/reference/core/servers/configure/sms_content-server-wmi-class)

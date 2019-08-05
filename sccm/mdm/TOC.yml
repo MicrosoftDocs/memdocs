@@ -1,5 +1,7 @@
 - name: Mobile device management
+  href: understand/hybrid-mobile-device-management.md
 - name: Overview
+  expanded: true
   items:
   - name: What is hybrid MDM
     href: understand/hybrid-mobile-device-management.md

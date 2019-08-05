@@ -1,5 +1,7 @@
-- name: Operating system deployment
+- name: OS deployment
+  href: understand/introduction-to-operating-system-deployment.md
 - name: Understand and explore
+  expanded: true
   items:
   - name: Introduction to OS deployment
     href: understand/introduction-to-operating-system-deployment.md
