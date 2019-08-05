@@ -68,6 +68,7 @@ The managed SMS Provider library is a .NET Framework library that wraps the Syst
 
  The WMI implementation of the managed Configuration Manager libraries is provided by adminui.wqlqueryengine.  
 
-## See Also  
- [Configuration Manager Provider](../../../develop/core/understand/sms-provider-in-configuration-manager.md)   
- [Configuration Manager Objects](../../../develop/core/understand/configuration-manager-objects-overview.md)
+## See also
+
+ [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals)
+ [Configuration Manager objects](/sccm/develop/core/understand/configuration-manager-objects-overview)

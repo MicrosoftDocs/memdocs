@@ -218,8 +218,8 @@ public void ReadWriteSCF(WqlConnectionManager connection,string siteCode)
  The Configuration Manager exceptions that can be raised are [SmsConnectionException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsconnectionexception.aspx) and [SmsQueryException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsqueryexception.aspx). These can be caught together with [SmsException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsexception.aspx).  
 
 ## See Also  
- [About the Configuration Manager Provider](../../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md)   
+ [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals)
  [About the Configuration Manager Site Control File](../../../develop/core/understand/about-the-configuration-manager-site-control-file.md)   
  [How to Connect to a Configuration Manager Provider using Managed Code](../../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)    
  [How to Read a Configuration Manager Site Control File Embedded Property List](../../../develop/core/understand/how-to-read-a-configuration-manager-site-control-file-embedded-property-list.md)    
- [How to Use Configuration Manager Objects With Managed Code](../../../develop/core/understand/how-to-use-configuration-manager-objects-with-managed-code.md)   
+ [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)

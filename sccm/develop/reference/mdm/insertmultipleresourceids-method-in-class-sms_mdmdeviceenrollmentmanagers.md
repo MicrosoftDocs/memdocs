@@ -46,4 +46,3 @@ The `InsertMultipleResourceIds` Windows Management Instrumentation (WMI) class m
 
 ## See Also  
  [SMS_MDMDeviceEnrollmentManagers Server WMI Class](../../../develop/reference/mdm/sms_mdmdeviceenrollmentmanagers-server-wmi-class.md)   
- [Mobile Device Management Server WMI Classes](../../../develop/reference/mdm/mobile-device-management-server-wmi-classes.md)

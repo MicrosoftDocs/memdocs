@@ -35,6 +35,3 @@ The `SmsEvent` class represents a System Center Configuration Manager event on t
 
 ### Development Requirements  
  For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
-
-## See Also  
- [Status and State Client APIs](../../../../../develop/reference/core/servers/manage/status-client-apis.md)

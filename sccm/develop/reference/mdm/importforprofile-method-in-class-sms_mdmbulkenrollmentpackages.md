@@ -70,4 +70,3 @@ sint32 ImportForProfile(
 
 ## See Also  
  [SMS_MDMBulkEnrollmentPackages Server WMI Class](../../../develop/reference/mdm/sms_mdmbulkenrollmentpackages-server-wmi-class.md)   
- [Mobile Device Management Server WMI Classes](../../../develop/reference/mdm/mobile-device-management-server-wmi-classes.md)

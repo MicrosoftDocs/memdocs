@@ -48,15 +48,10 @@ Class SMS_DPGroupPackages : SMS_BaseClass
 
  Package associated with the distribution point group.  
 
-## Remarks  
-
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Configuration Manager Content Server WMI Classes](../../../../../develop/reference/core/servers/configure/content-server-wmi-classes.md)

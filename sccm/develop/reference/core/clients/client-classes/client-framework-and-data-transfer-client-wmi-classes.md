@@ -52,5 +52,4 @@ This section describes the Client Configuration Manager (CCM) framework and data
  Represents a pending re-registration at the time of site reassignment.  
 
 ## See Also  
- [Configuration Manager Client Programming](../../../../../develop/core/clients/programming/client-programming.md)   
  [Configuration Manager Client Infrastructure](../../../../../develop/reference/core/clients/client-classes/client-infrastructure.md)

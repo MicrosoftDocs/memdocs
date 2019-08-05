@@ -35,7 +35,7 @@ In System Center Configuration Manager, a task sequence is a series of one or mo
 
 #### To run a task sequence  
 
-1.  Ensure that you have the Configuration Manager site server installed and that you have clients to deploy task sequences to. Depending on your environment, you might need to configure the State Migration Point or PXE Service Point. For more information, see [Operating System Deployment Site Role Configuration](../../develop/osd/operating-system-deployment-site-role-configuration.md).  
+1.  Ensure that you have the Configuration Manager site server installed and that you have clients to deploy task sequences to. Depending on your environment, you might need to configure the State Migration Point or PXE Service Point. For more information, see [About OS deployment site role configuration](/sccm/develop/osd/about-operating-system-deployment-site-role-configuration).  
 
 2.  Create a package containing the files you need for deployment. For example, to deploy a boot image you will need to create a boot image package ([SMS_BootImagePackage Server WMI Class](../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md)).  
 
@@ -77,9 +77,6 @@ In System Center Configuration Manager, a task sequence is a series of one or mo
 ## Pre-Execution Hooks  
  You can run scripts or executables that can interact with the user in Windows PE before the task sequence is selected. For more information, see Operating System Media Pre-Execution Hook in the Configuration Manager library documentation.  
 
-## Securing Task Sequences  
- A task sequence package ([SMS_TaskSequencePackage Server WMI Class](../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md)) is secured by using the [SMS_UserClassPermissions Server WMI Class](../../develop/reference/misc/sms_userclasspermissions-server-wmi-class.md) and [SMS_UserInstancePermissionInfo Server WMI Class](../../develop/reference/misc/sms_userinstancepermissioninfo-server-wmi-class.md) permissions to set class and instance permissions.  
+## See also
 
-## See Also  
- [Configuration Manager Operating System Deployment](../../develop/osd/operating-system-deployment.md)   
- [Operating System Deployment Task Sequence Object Model](../../develop/osd/operating-system-deployment-task-sequence-object-model.md)
+[OS deployment task sequence object model](/sccm/develop/osd/operating-system-deployment-task-sequence-object-model)

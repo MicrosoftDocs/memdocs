@@ -14,9 +14,6 @@ ms.collection: M365-identity-device-management
 # How to Check if a User Has Permissions for an Object
 In System Center Configuration Manager, you can check for object permissions using the [UserHasPermissions Method in Class SMS_RbacSecuredObject](../../../../develop/reference/core/servers/configure/userhaspermissions-method-in-class-sms_rbacsecuredobject.md).  
 
-> [!IMPORTANT]
->  The [SMS_SecuredObject Server WMI Class](../../../../develop/reference/misc/sms_securedobject-server-wmi-class.md) contains a list of available permissions.  
-
 ### To check if a user has permissions for an object  
 
 1.  Create a dictionary object to pass object name and permissions to check for to the [UserHasPermissions Method in Class SMS_RbacSecuredObject](../../../../develop/reference/core/servers/configure/userhaspermissions-method-in-class-sms_rbacsecuredobject.md).  

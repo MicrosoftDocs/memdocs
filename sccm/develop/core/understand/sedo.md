@@ -55,11 +55,8 @@ Configuration Manager SEDO (Serialized Editing of Distributed Objects) in the Sy
 
  To learn how to explicitly and implicitly release a lock, see [How to Release a Lock on a SEDO-Enabled Object](../../../develop/core/understand/how-to-release-a-lock-on-a-sedo-enabled-object.md).  
 
-## SEDO topics  
+## See also
 
--   [How to Acquire a Lock on a SEDO-Enabled Object](../../../develop/core/understand/how-to-acquire-a-lock-on-a-sedo-enabled-object.md)  
+- [How to Acquire a Lock on a SEDO-Enabled Object](../../../develop/core/understand/how-to-acquire-a-lock-on-a-sedo-enabled-object.md)  
 
--   [How to Release a Lock on a SEDO-Enabled Object](../../../develop/core/understand/how-to-release-a-lock-on-a-sedo-enabled-object.md)  
-
-## See Also  
- [Configuration Manager Programming Fundamentals](../../../develop/core/understand/configuration-manager-programming-fundamentals.md)
+- [How to Release a Lock on a SEDO-Enabled Object](../../../develop/core/understand/how-to-release-a-lock-on-a-sedo-enabled-object.md)  

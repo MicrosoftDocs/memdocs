@@ -16,7 +16,7 @@ You can import a Windows driver that is described by an information (.inf) file,
 
 ### To import a Windows driver  
 
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Call the [CreateFromINF Method in Class SMS_Driver](../../develop/reference/osd/createfrominf-method-in-class-sms_driver.md) to get the initial [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md) management base object.  
 
@@ -233,4 +233,3 @@ public string GetDriverName(IResultObject driver)
  [CreateFromINF Method in Class SMS_Driver](../../develop/reference/osd/createfrominf-method-in-class-sms_driver.md)   
  [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md)   
  [How to Specify The Supported Platforms for a Driver](../../develop/osd/how-to-specify-the-supported-platforms-for-a-driver.md)   
- [Operating System Deployment Driver Management](../../develop/osd/operating-system-deployment-driver-management.md)

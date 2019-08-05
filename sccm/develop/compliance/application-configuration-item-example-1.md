@@ -88,4 +88,4 @@ This application is discovered via Windows Installer-based discovery. If it does
 ```  
 
 ## See Also  
- [Authoring Compliance Settings Configuration Baselines and Configuration Items](../../develop/compliance/authoring-compliance-settings-configuration-baselines-and-configuration-items.md)
+[About authoring configuration baselines and items](/sccm/develop/compliance/about-authoring-configuration-baselines-and-configuration-items)

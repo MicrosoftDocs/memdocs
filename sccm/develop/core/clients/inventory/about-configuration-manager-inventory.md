@@ -72,5 +72,4 @@ You can use System Center Configuration Manager to collect hardware and software
 
 ## See Also  
  [System Center Configuration Manager Software Development Kit](../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Inventory](../../../../develop/core/clients/inventory/inventory.md)   
- [Configuration Manager Asset Intelligence](../../../../develop/core/clients/asset-intelligence/asset-intelligence.md)
+[Initiate Asset Intelligence synchronization](/sccm/develop/core/clients/asset-intelligence/how-to-initiate-a-synchronization)

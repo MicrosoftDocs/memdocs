@@ -199,5 +199,4 @@ By default, Application Management supports creating numerous deployment types s
  Microsoft.ConfigurationManagement.ManagementProvider.dll  
 
 ## See Also  
- [Scenario: Extending Application Management](../../develop/apps/scenario--extending-application-management.md)   
  [Configuration Manager Reference](../../develop/reference/configuration-manager-reference.md)

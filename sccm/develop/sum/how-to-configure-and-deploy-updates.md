@@ -194,9 +194,8 @@ public void ConfigureAndDeploySUMUpdates(WqlConnectionManager connection,
 ## .NET Framework Security  
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
-## See Also  
- [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
- [Software Updates Deployments](../../develop/sum/software-updates-deployments.md)   
- [About Software Updates Deployments](../../develop/sum/about-software-updates-deployments.md)   
- [SMS_UpdatesAssignment](../../develop/reference/sum/sms_updatesassignment-server-wmi-class.md)
+## See also
+
+[About software update deployments](/sccm/develop/sum/about-software-updates-deployments)
+
+[SMS_UpdatesAssignment](/sccm/develop/reference/sum/sms_updatesassignment-server-wmi-class)

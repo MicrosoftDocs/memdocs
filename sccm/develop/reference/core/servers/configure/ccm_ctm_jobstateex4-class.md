@@ -85,6 +85,3 @@ class CCM_CTM_JobStateEx4
 
 ## Development Requirements  
  For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
-
-## See Also  
- [Configuration Manager Alternate Content Provider](../../../../../develop/reference/core/servers/configure/alternate-content-provider-classes.md)

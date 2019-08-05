@@ -28,5 +28,4 @@ In System Center Configuration Manager, the application management interfaces ar
 
 ## See Also  
  [System Center Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Scenario: Extending Application Management](../../../../../develop/apps/scenario--extending-application-management.md)   
  [Configuration Manager Reference](../../../../../develop/reference/configuration-manager-reference.md)

@@ -162,12 +162,11 @@ Class SMS_ServiceWindow
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Software Distribution Server WMI Classes](../../../../../develop/reference/core/servers/configure/software-distribution-server-wmi-classes.md)   
- [Software Distribution Maintenance Windows](../../../../../develop/core/servers/configure/software-distribution-maintenance-windows.md)
+ [About maintenance windows](/sccm/develop/core/servers/configure/about-maintenance-windows)

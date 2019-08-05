@@ -16,7 +16,7 @@ In System Center Configuration Manager, you remove a category from a Windows dri
 
 ### To remove a category from a Windows driver  
 
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Get the [SMS_Driver](../../develop/reference/osd/sms_driver-server-wmi-class.md) object for the driver that you want remove the category from.  
 
@@ -149,5 +149,4 @@ public void RemoveDriverCategory(WqlConnectionManager connection,
 
 ## See Also  
  [About Operating System Deployment Driver Management](../../develop/osd/about-operating-system-deployment-driver-management.md)   
- [Operating System Deployment Driver Management](../../develop/osd/operating-system-deployment-driver-management.md)   
  [How to Add a Category to a Windows Driver](../../develop/osd/how-to-add-a-category-to-a-windows-driver.md)

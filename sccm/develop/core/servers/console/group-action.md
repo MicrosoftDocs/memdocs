@@ -41,6 +41,6 @@ In System Center Configuration Manager, the Group action creates a menu group, a
 ```  
 
 ## See Also  
- [About Configuration Manager Administrator Console Actions](../../../../develop/core/servers/console/about-configuration-manager-console-actions.md)   
+[About Configuration Manager console actions](/sccm/develop/core/servers/console/configuration-manager-actions)
  [How to Create a Configuration Manager Action](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-action.md)   
  [How to Find a Configuration Manager Node GUID](../../../../develop/core/servers/console/how-to-find-a-configuration-manager-console-node-guid.md)
