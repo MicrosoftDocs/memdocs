@@ -53,6 +53,6 @@ The SMS Provider, in System Center Configuration Manager, places restrictions on
 
 -   `SMS_UserClassPermissionNames`  
 
-## See Also  
- [Configuration Manager Provider](../../../develop/core/understand/sms-provider-in-configuration-manager.md)   
- [Configuration Manager Schema](../../../develop/core/understand/configuration-manager-schema.md)
+## See also
+
+ [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals)

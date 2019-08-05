@@ -30,8 +30,3 @@ In System Center Configuration Manager, software updates must be synchronized be
 >  While they are nearly identical functionally, a full synchronization will potentially repair updates from previous synchronizations that have gotten damaged or deleted. A delta synchronization will not repair any updates from previous synchronizations.  
 
  In System Center Configuration ManagerSP1 most synchronizations, both manual and scheduled, perform a delta synchronization. A synchronization will escalate to a full synchronization if there are configuration changes that require a full synchronization, such as: switching to a different default SUP, changes in the subscription, changes in the supersedence mode or window. A synchronization will also escalate to a full synchronization periodically every 7 days (a period configurable in the site control file under "Full Sync Interval (days)").  
-
-## See Also  
- [Configuration Manager SDK](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
- [Other Deployment Options](../../develop/sum/synchronizing-the-software-update-point.md)

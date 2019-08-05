@@ -21,13 +21,12 @@ ms.collection: M365-identity-device-management
 Use this procedure to sign in to Desktop Analytics and configure it in your subscription. This procedure is a one-time process to set up Desktop Analytics for your organization.  
 
 
+> [!Important]  
+> For information about the general prerequisites for Desktop Analytics with Configuration Manager, see [Prerequisites](/sccm/desktop-analytics/overview#prerequisites).  
 
 ## Initial onboarding
 
-1. Open the [Desktop Analytics portal](https://aka.ms/desktopanalytics) in Microsoft 365 Device Management as a user with the **Global Admin** role. Select **Start**. If you are prompted for an invitation code, use: `DesktopAnalyticsRocks!`
-
-    > [!Tip]  
-    > To access the Desktop Analytics portal from the Configuration Manager console, go to the **Software Library** workspace, select the **Desktop Analytics Servicing** node, and select **Plan deployments**.
+1. Open the [Desktop Analytics portal](https://aka.ms/desktopanalytics) in Microsoft 365 Device Management as a user with the **Global Admin** role. Select **Start**. Alternatively, on the Configuration Manager console, go to the **Software Library** workspace, select the **Desktop Analytics Servicing** node, and select **Plan deployments**.
 
 2. On the **Accept service agreement** page, review the service agreement, and select **Accept**.  
 
@@ -46,9 +45,6 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
         To add a user to the group, type their name or e-mail address in the **Enter name or email address** section. When finished, select **Next**.
 
 5. On the page to **Set up your workspace**:  
-
-    > [!Note]  
-    > To complete this step, the user needs **Workspace Owner** permissions and additional access to the Azure subscription and Resource Group. For more information, see [prerequisites](/sccm/desktop-analytics/overview#prerequisites).  
 
     - To use an existing workspace for Desktop Analytics, select it, and continue with the next step.  
 

@@ -62,4 +62,3 @@ sint32 AddLicense (
 
 ## See Also  
  [SMS_DeploymentTypeLicenseAssociation Server WMI Class](../../../develop/reference/apps/sms_deploymenttypelicenseassociation-server-wmi-class.md)   
- [Configuration Manager Application Management Server WMI Classes](../../../develop/reference/apps/application-management-server-wmi-classes.md)

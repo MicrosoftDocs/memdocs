@@ -31,7 +31,7 @@ You add a new computer directly to the System Center Configuration Manager datab
 
 ### To add a new computer  
 
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Call the [ImportMachineEntry Method in Class SMS_Site](../../develop/reference/core/servers/configure/importmachineentry-method-in-class-sms_site.md).  
 
@@ -181,4 +181,4 @@ public int AddNewComputer(
 
 ## See Also  
  [ImportMachineEntry Method in Class SMS_Site](../../develop/reference/core/servers/configure/importmachineentry-method-in-class-sms_site.md)   
- [Operating System Deployment Computer Management](../../develop/osd/operating-system-deployment-computer-management.md)
+ [About OS deployment computer management](/sccm/develop/osd/about-computer-management)

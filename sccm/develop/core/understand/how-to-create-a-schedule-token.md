@@ -155,7 +155,6 @@ public void CreateDailyRecurringScheduleToken(WqlConnectionManager connection,
 
 ## See Also  
  [System Center Configuration Manager Software Development Kit](../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Scheduling Server WMI Classes](../../../develop/reference/core/servers/configure/scheduling-server-wmi-classes.md)   
  [SMS_ST_NonRecurring Server WMI Class](../../../develop/reference/core/servers/configure/sms_st_nonrecurring-server-wmi-class.md)   
  [SMS_ST_RecurInterval Server WMI Class](../../../develop/reference/core/servers/configure/sms_st_recurinterval-server-wmi-class.md)   
  [SMS_ST_RecurMonthlyByDate Server WMI Class](../../../develop/reference/core/servers/configure/sms_st_recurmonthlybydate-server-wmi-class.md)   

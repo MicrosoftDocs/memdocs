@@ -54,7 +54,6 @@ In System Center Configuration Manager, status messages are the universal means 
 
 ## See Also  
  [About Using SMSCSTAT.DLL to Create Status Messages](../../../../develop/core/servers/manage/about-using-smscstat.dll-to-create-status-messages.md)   
- [Configuration Manager Status and Summarizers](../../../../develop/core/servers/manage/configuration-manager-status-and-summarizers.md)   
  [How to Report User-Defined Status Messages](../../../../develop/core/servers/manage/how-to-report-user-defined-status-messages.md)   
  [How to Read User-Defined Status Messages](../../../../develop/core/servers/manage/how-to-read-user-defined-status-messages.md)   
  [SMSEvent Class](../../../../develop/reference/core/servers/manage/smsevent-class.md)

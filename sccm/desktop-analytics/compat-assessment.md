@@ -2,7 +2,7 @@
 title: Compatibility assessment
 titleSuffix: Configuration Manager
 description: Learn about compatibility assessment for Windows apps and drivers in Desktop Analytics.
-ms.date: 06/14/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -35,6 +35,8 @@ In the list of app or driver assets in a deployment plan, you'll see this value 
 
 
 ## App risk assessment
+
+![Diagram of app risk assessment sources](media/app-risk-assessment-sources.png)
 
 There are several sources that Desktop Analytics uses to generate the assessment rating for applications:
 
@@ -131,8 +133,67 @@ There's another version of this app that's highly adopted by other customers. Th
 
 ### Driver dependency
 
-The app is dependent on a driver. Desktop Analytics recommends the app for pilot testing. It should work fine for pilot, but you'll find any regressions. If you have any problems, contact the publisher to request a version that's compliant with Windows 10.
+The app is dependent on a driver. Desktop Analytics recommends the app for pilot testing to discover any regressions. If you have any problems, contact the publisher to request a version that's compliant with Windows 10.
 
+### Additional insights
+
+<!-- 4021225 -->
+When you update the Configuration Manager site and clients to version 1906, clients also report these additional insights:
+
+> [!Important]  
+> To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. This scenario isn't functional until the client version is also the latest.
+
+#### 16-bit apps
+
+Remove all 16-bit components from applications, and replace with 32-bit or 64-bit equivalents. For more information, see [The Windows Vista and Windows Server 2008 Developer Story: Application Compatibility Cookbook](https://docs.microsoft.com/previous-versions/aa480152\(v=msdn.10\)).
+
+The other option is to enable NT Virtual DOS Machine (NTVDM) for support on Windows 10.
+
+#### Requires admin privileges
+
+The app requires the user to have administrative access to the device. Use an app manifest for these apps that require administrator permissions. For more information, see [Create and embed an application manifest](https://docs.microsoft.com/previous-versions/bb756929\(v=msdn.10\)).
+
+Desktop Analytics recommends the app for pilot testing to discover any regressions.
+
+#### Java dependency
+
+Many Java applications rely on a separately installed Java Runtime Environment (JRE). While older JRE versions may continue to work on Windows 10, Oracle only supports the latest JRE versions. Using an older unsupported JRE may have security vulnerabilities. Check that your application runs on the latest JRE versions.
+
+#### Not-DPI aware
+
+The app may have display issues with advanced screen resolutions on Windows 10. Use an app manifest to avoid any issues with high DPI resolutions. For more information, see [Application manifests](https://docs.microsoft.com/windows/desktop/SbsCs/application-manifests).
+
+Desktop Analytics recommends the app for pilot testing to discover any regressions.
+
+#### Silverlight framework
+
+Microsoft recommends that non-browser-based apps don't use Silverlight. The support end date for Silverlight 5 is October 2021.
+
+Most current web browsers don't support Silverlight.
+
+| Browser | Support |
+|---------|---------|
+| Google Chrome | End of support: September 2015 |
+| Firefox | End of support: March 2017 |
+| Microsoft Edge | No plugin available |
+
+Desktop Analytics recommends the app for pilot testing to discover any regressions.
+
+#### .NET Framework 1.0/1.1
+
+The .NET Framework version 1.0 isn't supported on Windows 10. Version 1.1 isn't compatible on Windows 10. If the app is from a third-party publisher, contact the vendor to request a version that's compliant with Windows 10. Otherwise, redevelop the application to use a supported version of .NET.
+
+#### .NET Framework 2.0/3.0
+
+.NET 2.0 and 3.5 frameworks are supported on Windows 10. You may need to enable the Windows feature. For more information, see [Install the .NET Framework 3.5 on Windows 10](https://docs.microsoft.com/dotnet/framework/install/dotnet-35-windows-10).
+
+#### UI access
+
+Applications with UI access can bypass user interface control levels to drive input to higher privilege windows on the desktop. Only use this setting for user interface assistive technology applications.
+
+If you're not using accessibility features in your app, set the UI access flag in the app manifest to false. For more information, see [Create and embed an application manifest](https://docs.microsoft.com/previous-versions/bb756929\(v=msdn.10\)).
+
+Desktop Analytics recommends the app for pilot testing to discover any regressions.
 
 
 ## Driver risk assessment

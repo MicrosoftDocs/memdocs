@@ -51,6 +51,3 @@ You can create custom actions that can be used with existing System Center Confi
  After you select it, you will see the control that you have created. The action behaves like the default Configuration Manager actions. You can add conditions to the action and you can move the action within the task sequence.  
 
  For more information, see [How to Use a Configuration Manager Custom Action](../../develop/osd/how-to-use-a-configuration-manager-custom-action-control.md).  
-
-## See Also  
- [Extending Operating System Deployment](../../develop/osd/extending-operating-system-deployment.md)

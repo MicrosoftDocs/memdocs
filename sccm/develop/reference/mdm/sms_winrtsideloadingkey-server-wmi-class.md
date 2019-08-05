@@ -97,6 +97,3 @@ Class SMS_WinRTSideLoadingKey : SMS_BaseClass
 
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Configuration Manager Server Hybrid WMI Classes](../../../develop/reference/mdm/hybrid-server-wmi-classes.md)

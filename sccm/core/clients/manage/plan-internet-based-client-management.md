@@ -51,6 +51,9 @@ Internet-based client management (sometimes referred to as IBCM) lets you manage
 
 - Application Catalog website point  
 
+    > [!Important]  
+    > The application catalog is deprecated. For more information, see [Remove the application catalog](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat).  
+
 - Configuration Manager Policy Module  
 
 - Distribution point (HTTPS is required by cloud-based distribution points)  

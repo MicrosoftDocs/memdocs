@@ -37,7 +37,7 @@ You use the SMS Provider to access and modify System Center Configuration Manage
 ## Schema  
  WMI objects are described by classes, providing definitions of their properties, attributes, and other information. These classes are organized into an inheritance hierarchy supporting object associations and grouped by areas of interest, such as networking, applications, and systems. Each area of interest represents a schema, which is a subset of the information that is available about the managed environment.  
 
- For more information about the Configuration Manager schema, see [Configuration Manager Schema](../../../develop/core/understand/configuration-manager-schema.md).  
+ For more information, see the [Schema overview](/sccm/develop/core/understand/configuration-manager-schema-overview).  
 
  For information about accessing the SMS Provider using WMI, see [WMI Configuration Manager Provider Fundamentals](../../../develop/core/understand/wmi-configuration-manager-provider-fundamentals.md)  
 
@@ -46,8 +46,8 @@ You use the SMS Provider to access and modify System Center Configuration Manage
 
  For information about accessing the SMS Provider by using .NET Framework, see [.NET Managed Configuration Manager Provider Fundamentals](../../../develop/core/understand/managed-sms-provider-fundamentals-in-configuration-manager.md)  
 
- You can also use the .NET Framework WMI management namespace System.Management, but this does not provide any Configuration Manager-specific interfaces. It is, however, the recommended way to use managed code on a System Center Configuration Manager client. For more information, see [Configuration Manager Client WMI Programming](../../../develop/core/clients/programming/client-wmi-programming.md).  
+ You can also use the .NET Framework WMI management namespace System.Management, but this does not provide any Configuration Manager-specific interfaces. It is, however, the recommended way to use managed code on a System Center Configuration Manager client.
 
-## See Also  
- [Configuration Manager Provider](../../../develop/core/understand/sms-provider-in-configuration-manager.md)   
- [Configuration Manager Programming Fundamentals](../../../develop/core/understand/configuration-manager-programming-fundamentals.md)
+## See also
+
+[SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals)

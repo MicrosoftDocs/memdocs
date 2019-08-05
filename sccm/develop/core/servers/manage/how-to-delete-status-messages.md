@@ -16,7 +16,7 @@ In System Center Configuration Manager, you delete status messages by calling th
 
 ### To delete a status message  
 
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Call the `SMS_StatusMessage` class `DeleteByID` method with an array of record identifiers for the status messages to be deleted.  
 
@@ -92,7 +92,7 @@ public void DeleteStatusMessage(WqlConnectionManager connection, Int64 recordId)
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`Connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).|  
+|`Connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).|  
 |`recordId`|-   Managed: `Integer`<br />-   VBScript: `Integer`|The status message identifier. This is `SMS_StatusMessage` object `RecordID` property for the status message to be deleted.|  
 
 ## Compiling the Code  
@@ -121,6 +121,5 @@ public void DeleteStatusMessage(WqlConnectionManager connection, Int64 recordId)
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [About Configuration Manager Status and State](../../../../develop/core/servers/manage/about-configuration-manager-status-and-summarizers.md)   
- [Status Server WMI Classes](../../../../develop/reference/core/servers/manage/status-server-wmi-classes.md)   
+ [About status messages](/sccm/develop/core/servers/manage/about-configuration-manager-status-messages)
  [How to Report User-Defined Status Messages Using WMI](../../../../develop/core/servers/manage/how-to-report-user-defined-status-messages.md)

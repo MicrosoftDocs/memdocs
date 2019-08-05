@@ -256,8 +256,8 @@ public void EnumerateUpdatesMatchingCriteria(WqlConnectionManager connection)
 ## .NET Framework Security  
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
-## See Also  
- [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
- [Software Updates Scheduled Deployment](../../develop/sum/software-updates-deployments.md)   
- [SMS_SoftwareUpdate](../../develop/reference/sum/sms_softwareupdate-server-wmi-class.md)
+## See also
+
+[About software update deployments](/sccm/develop/sum/about-software-updates-deployments)
+
+[SMS_SoftwareUpdate](/sccm/develop/reference/sum/sms_softwareupdate-server-wmi-class)

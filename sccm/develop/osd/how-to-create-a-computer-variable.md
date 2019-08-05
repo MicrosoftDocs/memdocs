@@ -16,7 +16,7 @@ You create a computer variable for a computer that is running System Center Conf
 
 ### To create a computer variable  
 
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Get an instance of `SMS_MachineSettings`.  
 
@@ -164,5 +164,6 @@ public void CreateComputerVariable(
 ## .NET Framework Security  
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
-## See Also  
- [Operating System Deployment Computer Management](../../develop/osd/operating-system-deployment-computer-management.md)
+## See also
+
+[About OS deployment computer management](/sccm/develop/osd/about-computer-management)
