@@ -43,7 +43,6 @@ The site database can use the default instance of a full installation of SQL Ser
 
 SQL Server must be located on the site server computer.  
 
-
 ### Limitations to support
 
 The following configurations aren't supported:
@@ -54,15 +53,13 @@ The following configurations aren't supported:
 
 SQL Server transactional replication is supported only for replicating objects to management points that are configured to use [database replicas](/sccm/core/servers/deploy/configure/database-replicas-for-management-points).  
 
-
-
 ##  <a name="bkmk_SQLVersions"></a> Supported versions of SQL Server
 
 In a hierarchy with multiple sites, different sites can use different versions of SQL Server to host the site database. So long as the following items are true:
+
 - Configuration Manager supports the versions of SQL Server that you use.
 - The SQL Server versions you use remain in support by Microsoft.
 - SQL Server supports replication between the two versions of SQL Server. For more information, see [SQL Server replication backward compatibility](https://docs.microsoft.com/sql/relational-databases/replication/replication-backward-compatibility).
-
 
 For SQL Server 2016 and prior, support for each SQL version and service pack follows the [Microsoft Lifecycle Policy](https://aka.ms/sqllifecycle). Support for a specific SQL Server service pack includes cumulative updates unless they break backward compatibility to the base service pack version. Starting with SQL Server 2017, service packs won't be released since it follows a [modern servicing model](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server/). The SQL Server team recommends ongoing, [proactive installation of cumulative updates](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/) as they become available.
 
@@ -97,15 +94,13 @@ You can use this version with the minimum service pack and cumulative update sup
 - A primary site  
 - A secondary site
 
-
 ### SQL Server 2012: Standard, Enterprise
 
-You can use this version with the minimum service pack and cumulative update supported by the SQL lifecycle. This version of SQL can be used for the following sites: 
+You can use this version with the minimum service pack and cumulative update supported by the SQL lifecycle. This version of SQL can be used for the following sites:
 
 - A central administration site  
 - A primary site  
 - A secondary site  
-
 
 ### SQL Server 2017 Express
 
@@ -131,7 +126,6 @@ You can use this version with the minimum service pack and cumulative update sup
 You can use this version with the minimum service pack and cumulative update supported by the SQL lifecycle. This version of SQL can be used for the following sites:
 
 - A secondary site  
-
 
 ## <a name="bkmk_SQLConfig"></a> Required configurations for SQL Server
 
