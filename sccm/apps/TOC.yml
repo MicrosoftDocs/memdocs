@@ -107,4 +107,4 @@
 - name: Technical references
   items:
   - name: Preload app technical reference
-    href: understand/troubleshooting-app-deployment.md
+    href: understand/techref-app-deployment.md
