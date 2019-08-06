@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 08/02/2019
+ms.date: 08/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -122,14 +122,15 @@ The following features are available with the most recent Configuration Manager 
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID-->
 
-- [CMPivot standalone local query evaluation for this PC](/sccm/core/get-started/2019/technical-preview-1908#bkmk_anchor) <!--3197353-->
-- [Admins can use console connections to view extension information](/sccm/core/get-started/2019/technical-preview-1908#bkmk_anchor) <!--4834225-->
-- [Add IsDeployed to ADR filters](/sccm/core/get-started/2019/technical-preview-1908#bkmk_anchor) <!--4852033-->
-- [Custom default keyboard layout in boot image properties](/sccm/core/get-started/2019/technical-preview-1908#bkmk_anchor) <!--4910348-->
-- [Import a single index of an OS upgrade package](/sccm/core/get-started/2019/technical-preview-1908#bkmk_anchor) <!--4931110-->
-- [Output the results of a run command line step to a variable during a task sequence](/sccm/core/get-started/2019/technical-preview-1908#bkmk_anchor) <!--4977616-->
-- [Copy task sequence conditions](/sccm/core/get-started/2019/technical-preview-1908#bkmk_anchor) <!--4621098-->
-- [Task sequence performance improvements for power plans](/sccm/core/get-started/2019/technical-preview-1908#bkmk_anchor) <!--3555926-->
+- [Task sequence performance improvements for power plans](/sccm/core/get-started/2019/technical-preview-1908#bkmk_tsperf) <!--3555926-->
+- [Local device query evaluation using CMPivot standalone](/sccm/core/get-started/2019/technical-preview-1908#local-device-query-evaluation-using-cmpivot-standalone) <!--3197353-->
+- [Additional software update filter for ADRs](/sccm/core/get-started/2019/technical-preview-1908#additional-software-update-filter-for-adrs) <!--4852033-->
+- [Use Delivery Optimization for all Windows updates](/sccm/core/get-started/2019/technical-preview-1908#use-delivery-optimization-for-all-windows-updates) <!--4699118 (4685210)-->
+- [Phased deployment templates](/sccm/core/get-started/2019/technical-preview-1908#phased-deployment-templates) <!--4961086-->
+- [Improvements to console connections node](/sccm/core/get-started/2019/technical-preview-1908#improvements-to-console-connections-node) <!--4923997 (4951240)-->
+- [Copy and paste task sequence conditions](/sccm/core/get-started/2019/technical-preview-1908#bkmk_tscondition) <!--4621098-->
+- [Improvements to task sequence search](/sccm/core/get-started/2019/technical-preview-1908#bkmk_tssearch) <!--4621085-->
+- [Improvements to OS deployment](/sccm/core/get-started/2019/technical-preview-1908#bkmk_osd) <!--4910348, 4931110, 4977616-->
 
 > [!Note]  
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.  
