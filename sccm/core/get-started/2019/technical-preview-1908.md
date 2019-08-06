@@ -2,7 +2,7 @@
 title: Technical preview 1908
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 1908.
-ms.date: 08/02/2019
+ms.date: 08/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -25,21 +25,18 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/1903/1234567.md)] -->
 
-[!INCLUDE [CMPivot standalone local query evaluation for this PC](includes/1908/3197353.md)]
-[!INCLUDE [Use delivery optimization for all Windows updates](includes/1908/4685210.md)]
-[!INCLUDE [Additional software update filter for ADRs](includes/1908/4852033.md)]
-[!INCLUDE [Phased deployment templates](includes/1908/4961086.md)]
-
-[!INCLUDE [Improvements to console connections node](includes/1908/4951240.md)]
-
-[!INCLUDE [Copy task sequence conditions](includes/1908/4621098.md)]
 [!INCLUDE [Task sequence performance improvements for power plans](includes/1908/3555926.md)]
 
+[!INCLUDE [Local device query evaluation using CMPivot standalone](includes/1908/3197353.md)]
+[!INCLUDE [Additional software update filter for ADRs](includes/1908/4852033.md)]
+[!INCLUDE [Use Delivery Optimization for all Windows updates](includes/1908/4685210.md)]
+[!INCLUDE [Phased deployment templates](includes/1908/4961086.md)]
+[!INCLUDE [Improvements to console connections node](includes/1908/4951240.md)]
+[!INCLUDE [Copy and paste task sequence conditions](includes/1908/4621098.md)]
 [!INCLUDE [Improvements to task sequence search](includes/1908/4621085.md)]
 
 [!INCLUDE [Improvements to OS deployment](includes/1908/4910348.md)]
 <!-- 4910348, 4931110, 4977616 -->
-
 
 
 <!-- ## Known issues -->
