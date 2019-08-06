@@ -224,7 +224,7 @@ You can discover user groups and members of those groups from Azure Active direc
 - onPremisesSecurityIdentifier
 - AAD tenantID
 
-Actions for Azure AD user group discovery are recorded in the **SMS_AZUREAD_DISCOVERY_AGENT.log** file on the top-tier site server of the hierarchy. For information about how to configure this discovery method, see [Configure Azure AD user group discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#azuregroupdisco).
+Actions for Azure AD user group discovery are recorded in the **SMS_AZUREAD_DISCOVERY_AGENT.log** file on the top-tier site server of the hierarchy. For information about how to configure this discovery method, see [Configure Azure AD user group discovery](configure-discovery-methods.md#bkmk_azuregroupdisco).
 
 ##  <a name="bkmk_aboutHeartbeat"></a> Heartbeat Discovery  
 **Configurable:** Yes  
