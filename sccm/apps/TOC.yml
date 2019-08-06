@@ -104,3 +104,7 @@
 #        href: pcm/plugin-config-xml.md
       - name: Error messages
         href: pcm/error-messages.md
+- name: Technical references
+  items:
+  - name: Preload app technical reference
+    href: understand/troubleshooting-app-deployment.md
