@@ -14,12 +14,9 @@ ms.collection: M365-identity-device-management
 # How to Add a Condition to an Operating System Deployment Task Sequence Step
 Conditions can be added to an operating system deployment step (action and group), in System Center Configuration Manager, by creating a [SMS_TaskSequence_Condition](../../develop/reference/osd/sms_tasksequence_condition-server-wmi-class.md) class instance and then associating it with the step. If the condition operands are all met, then the step is processed; otherwise it is not. The condition can have one or more operands that are instances of SMS_TaskSequence_Condition derived classes. You specify operators for the operands with instances of [SMS_TaskSequence_ConditionOperator](../../develop/reference/osd/sms_tasksequence_conditionoperator-server-wmi-class.md).  
 
-> [!NOTE]
->  System Center Configuration Manager provides several classes that provide useful expressions such as Windows Management Instrumentation (WMI) queries and file operations. For more information, see [Operating System Deployment Server Classes](../../develop/reference/osd/operating-system-deployment-server-wmi-classes.md).  
-
 ### To add a condition to a step  
 
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Obtain a task sequence step object. This can be an [SMS_TaskSequence_Group](../../develop/reference/osd/sms_tasksequence_group-server-wmi-class.md) object for a group, or a  [SMS_TaskSequenceAction](../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md) derived class object for an action, for more information, see [How to Add an Operating System Deployment Task Sequence Action](../../develop/osd/how-to-add-an-operating-system-deployment-task-sequence-action.md).  
 
@@ -145,10 +142,8 @@ public void AddRegistryCondition(
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [Configuration Manager Operating System Deployment](../../develop/osd/operating-system-deployment.md)   
- [Configuration Manager Objects](../../develop/core/understand/configuration-manager-objects.md)   
- [Configuration Manager Programming Fundamentals](../../develop/core/understand/configuration-manager-programming-fundamentals.md)   
+ [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)
  [How to Add an Operating System Deployment Task Sequence Action](../../develop/osd/how-to-add-an-operating-system-deployment-task-sequence-action.md)   
  [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)   
  [How to Connect to an SMS Provider in Configuration Manager  by Using WMI](../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)   
- [Operating System Deployment Task Sequencing](../../develop/osd/operating-system-deployment-task-sequencing.md)
+ [Task sequence overview](/sccm/develop/osd/operating-system-deployment-task-sequences-overview)

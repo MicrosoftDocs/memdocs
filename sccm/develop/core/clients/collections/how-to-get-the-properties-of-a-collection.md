@@ -61,5 +61,4 @@ public void ReadCollectionProperties(WqlConnectionManager connection, string col
  For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## See Also  
- [Configuration Manager Collections](../../../../develop/core/clients/collections/collections.md)   
  [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md)

@@ -39,4 +39,4 @@ In System Center Configuration Manager, the Asset Intelligence client Windows Ma
 -   `Win32_USBDevice` class. Tracks devices connected to USB ports.  
 
 ## See Also  
- [Configuration Manager Asset Intelligence](../../../../../develop/core/clients/asset-intelligence/asset-intelligence.md)
+[Initiate Asset Intelligence synchronization](/sccm/develop/core/clients/asset-intelligence/how-to-initiate-a-synchronization)

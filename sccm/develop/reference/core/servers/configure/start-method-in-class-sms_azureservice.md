@@ -1,8 +1,8 @@
 ---
-title: "Start Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Start method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: f32f2b00-117d-498d-9d9b-5f3f47b1b865
@@ -11,10 +11,12 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Start Method in Class SMS_AzureService
-The `Start` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that is invoked to start a Windows Azure service which represents a Cloud Distribution Point for Configuration Manager.  
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+# Start method in class SMS_AzureService
+
+The `Start` WMI class method, in Configuration Manager, that's invoked to start a Microsoft Azure service which represents a cloud distribution point for Configuration Manager.  
+
+The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
 ## Syntax  
 

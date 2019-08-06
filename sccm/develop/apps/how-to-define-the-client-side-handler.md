@@ -220,5 +220,4 @@ The custom client-side handler needs to implement a public COM interface and met
     ```  
 
 ## See Also  
- [Scenario: Extending Application Management](../../develop/apps/scenario--extending-application-management.md)   
  [Configuration Manager Reference](../../develop/reference/configuration-manager-reference.md)

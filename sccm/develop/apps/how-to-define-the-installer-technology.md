@@ -62,5 +62,4 @@ To define the application management installer technology, implement the `Micros
 ## See Also  
  [How to Define the Deployment Technology](../../develop/apps/how-to-define-the-deployment-technology.md)   
  [How to Define the Hosting Technology](../../develop/apps/how-to-define-the-hosting-technology.md)   
- [Scenario: Extending Application Management](../../develop/apps/scenario--extending-application-management.md)   
  [Configuration Manager Reference](../../develop/reference/configuration-manager-reference.md)

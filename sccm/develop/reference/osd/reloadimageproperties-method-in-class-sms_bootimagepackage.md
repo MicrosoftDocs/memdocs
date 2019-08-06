@@ -33,7 +33,7 @@ SInt32 ReloadImageProperties();
 ## Remarks  
  The application uses this method if the administrator changes the boot image source .wim file outside of the Configuration Manager console. The application should:  
 
-1.  Establish a connection to the SMS Provider. For more information see, [About the SMS Provider in Configuration Manager](../../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Establish a connection to the SMS Provider. For more information see, [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Obtain the [SMS_BootImagePackage Server WMI Class](../../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md) object to update.  
 

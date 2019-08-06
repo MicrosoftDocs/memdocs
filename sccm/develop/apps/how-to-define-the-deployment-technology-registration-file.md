@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Define the Deployment Technology Registration File
-To define a deployment technology registration file, create an XML file based on the `http://schemas.microsoft.com/SystemCenterConfigurationManager/2009/AppMgmtDigest` schema. Used in the installation process, the registration file registers the custom deployment technology with Configuration Manager.  The deployment technology registration file is required for the installation of the custom deployment technology.  See [Installing the Application Management Extension](../../develop/apps/installing-the-application-management-extension.md) for additional details.  
+To define a deployment technology registration file, create an XML file based on the `http://schemas.microsoft.com/SystemCenterConfigurationManager/2009/AppMgmtDigest` schema. Used in the installation process, the registration file registers the custom deployment technology with Configuration Manager.  The deployment technology registration file is required for the installation of the custom deployment technology.
 
 ### To define the deployment technology registration file  
 
@@ -45,6 +45,4 @@ To define a deployment technology registration file, create an XML file based on
 ## See Also  
  [How to Define the Hosting Technology Registration File](../../develop/apps/how-to-define-the-hosting-technology-registration-file.md)   
  [How to Define the Installer Technology Registration File](../../develop/apps/how-to-define-the-installer-technology-registration-file.md)   
- [Installing the Application Management Extension](../../develop/apps/installing-the-application-management-extension.md)   
- [Scenario: Extending Application Management](../../develop/apps/scenario--extending-application-management.md)   
  [Configuration Manager Reference](../../develop/reference/configuration-manager-reference.md)

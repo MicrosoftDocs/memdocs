@@ -39,7 +39,7 @@ In System Center Configuration Manager, you specify the supported platforms of a
 
 ### To specify the supported platforms for a driver  
 
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Get the [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md) object for the driver. The driver is identified by the key property `CI_ID`. For information about getting objects by using a key property, see [How to Read a Configuration Manager Object by Using Managed Code](../../develop/core/understand/how-to-read-a-configuration-manager-object-by-using-managed-code.md)  
 
@@ -260,13 +260,11 @@ public void AddSupportedPlatform(
 
 ## See Also  
  [SMS_SupportedPlatforms Server WMI Class](../../develop/reference/core/servers/configure/sms_supportedplatforms-server-wmi-class.md)   
- [Configuration Manager Operating System Deployment](../../develop/osd/operating-system-deployment.md)   
- [Configuration Manager Objects](../../develop/core/understand/configuration-manager-objects.md)   
- [Configuration Manager Programming Fundamentals](../../develop/core/understand/configuration-manager-programming-fundamentals.md)   
+ [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)
  [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)   
  [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)   
  [How to Move a Step to a Different Operating System Deployment Task Sequence Group](../../develop/osd/how-to-move-a-step-to-a-different-task-sequence-group.md)   
  [How to Create an Operating System Deployment Task Sequence Group](../../develop/osd/how-to-create-an-operating-system-deployment-task-sequence-group.md)   
  [How to Remove a Step From an Operating System Deployment Group](../../develop/osd/how-to-remove-a-step-from-an-operating-system-deployment-group.md)   
- [Operating System Deployment Task Sequencing](../../develop/osd/operating-system-deployment-task-sequencing.md)   
+ [Task sequence overview](/sccm/develop/osd/operating-system-deployment-task-sequences-overview)
  [SMS_SupportedPlatforms Server WMI Class](../../develop/reference/core/servers/configure/sms_supportedplatforms-server-wmi-class.md)

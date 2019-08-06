@@ -78,5 +78,4 @@ To support the Installer, a custom XML schema should be included as part of the 
 ## See Also  
  [How to Define the Hosting Technology](../../develop/apps/how-to-define-the-hosting-technology.md)   
  [How To Define the Installer Technology](../../develop/apps/how-to-define-the-installer-technology.md)   
- [Scenario: Extending Application Management](../../develop/apps/scenario--extending-application-management.md)   
  [Configuration Manager Reference](../../develop/reference/configuration-manager-reference.md)

@@ -18,8 +18,6 @@ Software updates are delivered to client computers in System Center Configuratio
 > [!NOTE]
 >  General information about Software Updates can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/library/mt346023.aspx) under [Deploy and manage software updates in System Center Configuration Manager](https://technet.microsoft.com/library/mt634340.aspx).  
 
- Coding examples (in C# and VBScript) for individual steps of the deployment process are included in the [Software Updates Deployments](../../develop/sum/software-updates-deployments.md) section of the Configuration Manager SDK.  
-
 > [!NOTE]
 >  Deleting updates or update bundles is not supported by the Configuration Manager SDK.  
 
@@ -48,8 +46,6 @@ Software updates are delivered to client computers in System Center Configuratio
  Distribute software updates by creating a software updates deployment. For information about the process for creating a software updates deployment, see [How to Configure and Deploy Updates](../../develop/sum/how-to-configure-and-deploy-updates.md).  
 
 ## See Also  
- [Configuration Manager SDK](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
  [How to Enumerate Updates Matching a Specific Criteria](../../develop/sum/how-to-enumerate-updates-matching-a-specific-criteria.md)   
  [How to Create an Update List](../../develop/sum/how-to-create-an-update-list.md)   
  [How to Create a Deployment Package](../../develop/sum/how-to-create-a-deployment-package.md)   

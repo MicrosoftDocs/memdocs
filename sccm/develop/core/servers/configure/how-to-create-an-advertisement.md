@@ -125,6 +125,7 @@ public void CreateSWDAdvertisement(WqlConnectionManager connection, string exist
 ## Robust Programming  
  For more information about error handling, see [About Configuration Manager Errors](/sccm/develop/core/understand/about-configuration-manager-errors).  
 
-## See Also  
- [Configuration Manager Software Distribution](/sccm/develop/core/servers/configure/software-distribution)   
- [Software Distribution Advertisements](/sccm/develop/core/servers/configure/software-distribution-advertisements)
+## See also
+
+- [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
+- [About deployments](/sccm/develop/core/servers/configure/about-software-distribution-deployments)

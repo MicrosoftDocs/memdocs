@@ -37,5 +37,4 @@ To define the custom deployment type property page XML file, create an XML file 
     ```  
 
 ## See Also  
- [Scenario: Extending Application Management](../../develop/apps/scenario--extending-application-management.md)   
  [Configuration Manager Reference](../../develop/reference/configuration-manager-reference.md)

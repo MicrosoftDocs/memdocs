@@ -1,8 +1,8 @@
 ---
-title: "Obsolete Classes"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Obsolete classes
+titleSuffix: Configuration Manager
+ms.date: 08/02/2019
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: ff0b9310-3d04-48e9-8118-94c73541b5eb
@@ -11,76 +11,87 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Configuration Manager Obsolete Classes
-Obsolete Windows Management Instrumentation (WMI) classes in System Center Configuration Manager.  
 
-## Obsolete Classes  
+# Obsolete classes
 
--   [SMS_AdvertisementStatusRootSummarizer Server WMI Class](../../../develop/reference/misc/sms_advertisementstatusrootsummarizer-server-wmi-class.md)  
+Obsolete WMI classes in Configuration Manager.  
 
--   [SMS_AdvertisementStatusSummarizer Server WMI Class](../../../develop/reference/misc/sms_advertisementstatussummarizer-server-wmi-class.md)  
+- SMS_AdvertisementStatusRootSummarizer server WMI class
 
--   [SMS_AppStatePerClientDT Server WMI Class](../../../develop/reference/misc/sms_appstateperclientdt-server-wmi-class.md)  
+- SMS_AdvertisementStatusSummarizer server WMI class
 
--   [SMS_AppStatePerCollectionDT Server WMI Class](../../../develop/reference/misc/sms_appstatepercollectiondt-server-wmi-class.md)  
+- SMS_AMTCertificate server WMI class
 
--   [SMS_AppUnknownStatePerClient Server WMI Class](../../../develop/reference/misc/sms_appunknownstateperclient-server-wmi-class.md)  
+- SMS_AMTMachineInfo server WMI class
 
--   [SMS_AppUnknownStatePerCollection Server WMI Class](../../../develop/reference/misc/sms_appunknownstatepercollection-server-wmi-class.md)  
+- SMS_AMTObject Client WMI Class
 
--   [SMS_DeviceHinvTranslation Server WMI Class](../../../develop/reference/misc/sms_devicehinvtranslation-server-wmi-class.md)  
+- SMS_AppStatePerClientDT server WMI class
 
--   [SMS_DPStatus Server WMI Class](../../../develop/reference/misc/sms_dpstatus-server-wmi-class.md)  
+- SMS_AppStatePerCollectionDT server WMI class
 
--   [SMS_DPStatusPerDP Server WMI Class](../../../develop/reference/misc/sms_dpstatusperdp-server-wmi-class.md)  
+- SMS_AppUnknownStatePerClient server WMI class
 
--   [SMS_DPStatusSummary Server WMI Class](../../../develop/reference/misc/sms_dpstatussummary-server-wmi-class.md)  
+- SMS_AppUnknownStatePerCollection server WMI class
 
--   [SMS_LocalizedNameLookup Server WMI Class](../../../develop/reference/misc/sms_localizednamelookup-server-wmi-class.md)  
+- SMS_DeviceHinvTranslation server WMI class
 
--   [SMS_ObjectToClassPermissions_a Server WMI Class](../../../develop/reference/misc/sms_objecttoclasspermissions_a-server-wmi-class.md)  
+- SMS_DPStatus server WMI class
 
--   [SMS_ObjectToInstancePermissions_a Server WMI Class](../../../develop/reference/misc/sms_objecttoinstancepermissions_a-server-wmi-class.md)  
+- SMS_DPStatusPerDP server WMI class
 
--   [SMS_PropertyDisplayNode Server WMI Class](../../../develop/reference/misc/sms_propertydisplaynode-server-wmi-class.md)  
+- SMS_DPStatusSummary server WMI class
 
--   [SMS_Report Server WMI Class](../../../develop/reference/misc/sms_report-server-wmi-class.md)  
+- SMS_LocalizedNameLookup server WMI class
 
--   [SMS_ReportDashboard Server WMI Class](../../../develop/reference/misc/sms_reportdashboard-server-wmi-class.md)  
+- SMS_NAPRestrictionErrorSummary Server WMI Class  
 
--   [SMS_ReportParameter Server WMI Class](../../../develop/reference/misc/sms_reportparameter-server-wmi-class.md)  
+- SMS_NAPRestrictionSummary Server WMI Class  
 
--   [SMS_SCI_SQLCmd Server WMI Class](../../../develop/reference/misc/sms_sci_sqlcmd-server-wmi-class.md)  
+- SMS_NAPSystemInfo Server WMI Class
 
--   [SMS_SCI_RoamingBoundary Server WMI Class](../../../develop/reference/misc/sms_sci_roamingboundary-server-wmi-class.md)  
+- SMS_ObjectToClassPermissions_a server WMI class
 
--   [SMS_SecuredObject Server WMI Class](../../../develop/reference/misc/sms_securedobject-server-wmi-class.md)  
+- SMS_ObjectToInstancePermissions_a server WMI class
 
--   [SMS_SIIB_NALProvider Server WMI Class](../../../develop/reference/misc/sms_siib_nalprovider-server-wmi-class.md)  
+- SMS_PropertyDisplayNode server WMI class
 
--   [SMS_SIIB_UINALProvider Server WMI Class](../../../develop/reference/misc/sms_siib_uinalprovider-server-wmi-class.md)  
+- SMS_Report server WMI class
 
--   [SMS_SiteToROOTColl_a Server WMI Class](../../../develop/reference/misc/sms_sitetorootcoll_a-server-wmi-class.md)  
+- SMS_ReportDashboard server WMI class
 
--   [SMS_SoftwareProductCompliance Server WMI Class](../../../develop/reference/misc/sms_softwareproductcompliance-server-wmi-class.md)  
+- SMS_ReportParameter server WMI class
 
--   [SMS_UINAL_ResourceInfo Server WMI Class](../../../develop/reference/misc/sms_uinal_resourceinfo-server-wmi-class.md)  
+- SMS_SCI_SQLCmd server WMI class
 
--   [SMS_UpdatePrograms Server WMI Class](../../../develop/reference/misc/sms_updateprograms-server-wmi-class.md)  
+- SMS_SCI_RoamingBoundary server WMI class
 
--   [SMS_UpdateRelations Server WMI Class](../../../develop/reference/misc/sms_updaterelations-server-wmi-class.md)  
+- SMS_SecuredObject server WMI class
 
--   [SMS_UserClassPermissionNames Server WMI Class](../../../develop/reference/misc/sms_userclasspermissionnames-server-wmi-class.md)  
+- SMS_SIIB_NALProvider server WMI class
 
--   [SMS_UserClassPermissions Server WMI Class](../../../develop/reference/misc/sms_userclasspermissions-server-wmi-class.md)  
+- SMS_SIIB_UINALProvider server WMI class
 
--   [SMS_UserInstancePermissionInfo Server WMI Class](../../../develop/reference/misc/sms_userinstancepermissioninfo-server-wmi-class.md)  
+- SMS_SiteToROOTColl_a server WMI class
 
--   [SMS_UserInstancePermissionNames Server WMI Class](../../../develop/reference/misc/sms_userinstancepermissionnames-server-wmi-class.md)  
+- SMS_SoftwareProductCompliance server WMI class
 
--   [SMS_UserInstancePermissions Server WMI Class](../../../develop/reference/misc/sms_userinstancepermissions-server-wmi-class.md)  
+- SMS_UINAL_ResourceInfo server WMI class
 
--   [TsMediaClass Client COM Automation Class](../../../develop/reference/misc/tsmediaclass-client-com-automation-class.md)  
+- SMS_UpdatePrograms server WMI class
 
-## See Also  
- [Configuration Manager Reference](../../../develop/reference/configuration-manager-reference.md)
+- SMS_UpdateRelations server WMI class
+
+- SMS_UserClassPermissionNames server WMI class
+
+- SMS_UserClassPermissions server WMI class
+
+- SMS_UserInstancePermissionInfo server WMI class
+
+- SMS_UserInstancePermissionNames server WMI class
+
+- SMS_UserInstancePermissions server WMI class
+
+- SMS_VhdPackage server WMI class
+
+- TsMediaClass client COM automation class

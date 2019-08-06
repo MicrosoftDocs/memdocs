@@ -29,7 +29,7 @@ The System Center Configuration Manager console has an XML-based architecture th
  You can integrate your own custom wizards into the Configuration Manager console by using a wizard framework of your choice.  
 
 ## Management Classes  
- You can define your own custom classes that can be used by your Configuration Manager console extension. For more information, see [Configuration Manager Console Management Classes](../../../../develop/core/servers/console/console-management-classes.md).  
+ You can define your own custom classes that can be used by your Configuration Manager console extension. For more information, see [About console management classes](/sccm/develop/core/servers/console/about-configuration-manager-console-management-classes).  
 
 ## Unsupported Features  
  The Configuration Manager console does not support the following features:  
@@ -49,10 +49,15 @@ The System Center Configuration Manager console has an XML-based architecture th
 ### Microsoft Management Console SDK Extensions  
  Extensions written with the Microsoft Management Console SDK are not supported by the Configuration Manager console.  
 
+## Accessibility
+
+When developing console extensions, they should be based on designs with accessibility considerations.  For example, you can make use of color, layout, intelligent default values, sound, and exposing appropriate keyboard focus.  By using various accessibility techniques, you will make it easier for users with disabilities to use your software.  For additional information about how you can develop applications for accessibility, see [Designing Accessible Applications](http://go.microsoft.com/fwlink/?LinkId=272471).  
+
+
 ## See Also  
  [Configuration Manager Console Extension Architecture](../../../../develop/core/servers/console/console-extension-architecture.md)   
- [Configuration Manager Console Actions](../../../../develop/core/servers/console/console-actions.md)   
- [Configuration Manager Console Forms](../../../../develop/core/servers/console/console-forms.md)   
- [Configuration Manager Console Management Classes](../../../../develop/core/servers/console/console-management-classes.md)   
- [Configuration Manager Console Nodes](../../../../develop/core/servers/console/console-nodes.md)   
- [Configuration Manager Console Views](../../../../develop/core/servers/console/console-views.md)
+ [About Configuration Manager console actions](/sccm/develop/core/servers/console/configuration-manager-actions)
+ [About console forms](/sccm/develop/core/servers/console/about-configuration-manager-console-forms)
+ [About console management classes](/sccm/develop/core/servers/console/about-configuration-manager-console-management-classes)
+ [About console nodes](/sccm/develop/core/servers/console/about-configuration-manager-console-nodes)
+ [About console views](/sccm/develop/core/servers/console/about-configuration-manager-console-views)
