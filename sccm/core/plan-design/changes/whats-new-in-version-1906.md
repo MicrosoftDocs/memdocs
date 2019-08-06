@@ -645,7 +645,7 @@ When you're ready to install this version, see [Installing updates for Configura
 > Learn more about:
 >
 > - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites)  
-> - [Baseline and update versions](/sccm/core/servers/manage/updates.md#bkmk_Baselines)  
+> - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)  
 
 For known, significant issues, see the [Release notes](/sccm/core/servers/deploy/install/release-notes).
 
