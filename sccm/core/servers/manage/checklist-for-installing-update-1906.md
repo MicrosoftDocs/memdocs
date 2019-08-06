@@ -126,7 +126,7 @@ If you update the site before you update the Windows ADK, see [Update distributi
 
 ### Review SQL Server Native Client version
 
-Install a minimum version of SQL Server 2012 Native Client, which includes support for TLS 1.2. For more information, see the [List of prerequisite checks](../deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
+Install a minimum version of SQL Server 2012 Native Client, which includes support for TLS 1.2. For more information, see the [List of prerequisite checks](/sccm/core/servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 ### Review the site and hierarchy status for unresolved issues
 
