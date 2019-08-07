@@ -1373,7 +1373,7 @@ Starting in version 1802, set this variable to `true` and the task sequence engi
 When the task sequence restarts, the value of this variable persists. However, the task sequence tries sending an initial status message. This first attempt includes multiple retries. If successful, the task sequence continues sending status regardless of the value of this variable. If status fails to send, the task sequence uses the value of this variable.
 
 > [!NOTE]  
-> [Task sequence status reporting](/sccm/core/servers/manage/list-of-reports#task-sequence---deployment-status) relies upon these status messages to display the progress, history, and details of each step.
+> [Task sequence status reporting](/sccm/core/servers/manage/list-of-reports#task-sequence---deployment-status) relies upon these status messages to display the progress, history, and details of each step. If status messages fail to be sent, they are dropped. They are not queued up and sent at a later time when connectivity is restored to the MP. This will result in task sequence status reporting to be incomplete and missing items.
 
 ### <a name="SMSTSDisableWow64Redirection"></a> SMSTSDisableWow64Redirection
 
