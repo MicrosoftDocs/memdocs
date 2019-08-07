@@ -104,7 +104,7 @@ Before you can manage a Linux or UNIX server with Configuration Manager, you mus
 
 -   `-fsp <server_FQDN>`  
 
-     Optional. Specifies by FQDN, the fallback status point server that the client uses to submit state messages. For more information, see [Determine whether you require a fallback status point](./plan/determine-the-site-system-roles-for-clients.md#fallback-status-point).  
+     Optional. Specifies by FQDN, the fallback status point server that the client uses to submit state messages. For more information, see [Determine whether you require a fallback status point](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#fallback-status-point).  
 
 -   `-dir <directory>`  
 

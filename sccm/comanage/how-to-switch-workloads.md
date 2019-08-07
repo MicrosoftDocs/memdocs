@@ -71,4 +71,4 @@ You can switch workloads when you enable co-management, or later when you're rea
 
 ## Next steps
 
-[Monitor co-management](how-to-monitor.md)
+[Monitor co-management](/sccm/comanage/how-to-monitor)
