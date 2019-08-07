@@ -1756,7 +1756,7 @@ IF ((Computer Model IS “Contoso 1950”) AND (operating system=2003 OR operati
 1. Create a folder to store the database snapshots, and then configure the folder as a share.  
 
    > [!NOTE]
-   >  For more information about securing the snapshot folder, see [Securing the Snapshot Folder](/sql/relational-databases/replication/security/secure-the-snapshot-folder).  
+   >  For more information about securing the snapshot folder, see [Securie the Snapshot Folder](/sql/relational-databases/replication/security/secure-the-snapshot-folder).  
 
 2. Ensure that the SQL Server Browser service is enabled and set to Automatic.  
 
