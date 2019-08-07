@@ -2,7 +2,7 @@
 title: Device restart notifications
 titleSuffix: Configuration Manager
 description: Restart notification behavior for various client settings in Configuration Manager. 
-ms.date: 07/26/2019
+ms.date: 08/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -92,6 +92,9 @@ The following settings must be shorter in duration than the shortest [maintenanc
 
 - **Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes)**
 - **Display a dialog box that the user cannot close, which displays the countdown interval before the user is logged off or the computer restarts (minutes)**
+
+> [!IMPORTANT]
+> In Configuration Manager 1902, under certain circumstances, the dialog box won't replace toast notifications. To resolve this issue, install the [update rollup for Configuration Manager version 1902](https://support.microsoft.com/help/4500571/update-rollup-for-configuration-manager-current-branch-1902). <!--4404715-->
 
 ## Device restart notifications starting in version 1906
 <!--3976435-->
