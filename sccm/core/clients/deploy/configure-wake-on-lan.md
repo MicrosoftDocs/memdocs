@@ -63,7 +63,7 @@ Right-click on the client, go to **Client Notification**, then select **Wake up*
 - **To wake up all sleeping clients in a collection:** Right-click on the device collection, go to **Client Notification**, then select **Wake up**.
    - This action can't be run on built-in collections.
    - When you have a mix of asleep and awake clients in a collection, only the clients that are asleep are sent a Wake on LAN request.
-   - This action is only active when the Configuration Manager console is connected to a stand-alone or child primary site. When connected to a CAS, the action is not available.
+   - This action is only active when the Configuration Manager console is connected to a stand-alone or child primary site. When connected to a Central Administration Site, the action is not available.
 
 ### What to expect when only the new version of Wake on LAN is enabled
 
