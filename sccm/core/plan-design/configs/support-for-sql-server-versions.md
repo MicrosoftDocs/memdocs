@@ -240,7 +240,6 @@ If you have a firewall enabled on the computer that is running SQL Server, make 
 For an example of how to configure SQL Server to use a specific port, see [Configure a server to listen on a specific TCP port](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port).  
 
 
-
 ## Upgrade options for SQL Server
 
 If you need to upgrade your version of SQL Server, use one of the following methods, from easy to more complex:  
@@ -249,4 +248,4 @@ If you need to upgrade your version of SQL Server, use one of the following meth
 
 - Install a new version of SQL Server on a new computer, and then [use the database move option](/sccm/core/servers/manage/modify-your-infrastructure#bkmk_dbconfig) of Configuration Manager setup to point your site server to the new SQL Server  
 
-- Use [backup and recovery](/sccm/protect/understand/backup-and-recovery). Using backup and recovery for a SQL upgrade scenario is supported. You can ignore the SQL versioning requirement when reviewing [Considerations before recovering a site](/sccm/protect/understand/recover-sites#considerations-before-recovering-a-site). 
+- Use [backup and recovery](/sccm/protect/understand/backup-and-recovery). Using backup and recovery for a SQL upgrade scenario is supported. You can ignore the SQL versioning requirement when reviewing [Considerations before recovering a site](/sccm/protect/understand/recover-sites#considerations-before-recovering-a-site).
