@@ -32,7 +32,6 @@ Programming the System Center Configuration Manager client Windows Management In
  The Configuration Manager client WMI namespace begins at \\\\<client\>\root\ccm. For example, root\ccm contains the [SMS_Client](../../../../develop/reference/core/clients/client-classes/sms_client-client-wmi-class.md) class that can be used to get and set client information.  
 
 ## See Also  
- [Configuration Manager Programming Fundamentals](../../../../develop/core/understand/configuration-manager-programming-fundamentals.md)   
  [How to Call a WMI Class Method by Using System.Management](../../../../develop/core/clients/programming/how-to-call-a-wmi-class-method-by-using-system.management.md)   
  [How to Connect to the Configuration Manager Client WMI Namespace by Using System.Management](../../../../develop/core/clients/programming/how-to-connect-to-the-client-wmi-namespace.md)   
  [How to Perform an Asynchronous Query by Using System.Management](../../../../develop/core/clients/programming/how-to-perform-an-asynchronous-query-by-using-system.management.md)   

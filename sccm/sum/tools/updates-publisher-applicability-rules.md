@@ -26,11 +26,13 @@ You manage applicability rules from the **Rules Workspace**. When you create a r
 
 For example, the following is a rule set that contains three rules. The first rule verifies that the *MyFile* file exists, and the second and third rules verify that the language of the Windows operating system is either English or Japanese.
 
-    And  
-      File ‘\[PROGRAM\_FILES\] \\Microsoft\\MyFile’ exists  
-      Or  
-        Windows Language is English   
-        Windows Language is Japanese
+```
+And  
+  File ‘\[PROGRAM\_FILES\] \\Microsoft\\MyFile’ exists  
+  Or  
+    Windows Language is English   
+    Windows Language is Japanese
+```
 
 All updates require at least one applicability rule. Updates you import already have applicability rules applied, and when you create your own updates, you must add one or more rules to them. You can modify and expand on the rules for any update in Updates Publisher.
 

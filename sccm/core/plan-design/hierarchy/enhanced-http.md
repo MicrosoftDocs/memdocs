@@ -46,7 +46,7 @@ The following scenarios benefit from these improvements:
 ### <a name="bkmk_scenario1"></a> Scenario 1: Client to management point
 
 <!--1356889-->
-[Azure AD-joined devices](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices) can communicate with a management point configured for HTTP. The site server generates a certificate for the management point allowing it to communicate via a secure channel.
+[Azure AD-joined devices](/azure/active-directory/devices/concept-azure-ad-join) can communicate with a management point configured for HTTP. The site server generates a certificate for the management point allowing it to communicate via a secure channel.
 
 > [!Note]  
 > This behavior is changed from Configuration Manager current branch version 1802, which requires an HTTPS-enabled management point for Azure AD-joined clients communicating through a cloud management gateway. For more information, see [Enable management point for HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps).  
@@ -61,7 +61,7 @@ This behavior includes OS deployment scenarios with a task sequence running from
 ### <a name="bkmk_scenario3"></a> Scenario 3: Azure AD device identity
 
 <!--1358460-->
-An Azure AD-joined or [hybrid Azure AD device](https://docs.microsoft.com/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices) without an Azure AD user signed in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point for device-centric scenarios. (A user token is still required for user-centric scenarios.)  
+An Azure AD-joined or [hybrid Azure AD device](/azure/active-directory/devices/concept-azure-ad-join-hybrid) without an Azure AD user signed in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point for device-centric scenarios. (A user token is still required for user-centric scenarios.)  
 
 
 ## Features
@@ -96,7 +96,12 @@ The following Configuration Manager features support or require enhanced HTTP:
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the  **Sites** node. Select the site and choose **Properties** in the ribbon.  
 
-2. Switch to the **Client Computer Communication** tab. Select the option for **HTTPS or HTTP** and then enable the option to **Use Configuration Manager-generated certificates for HTTP site systems**.  
+2. Switch to the **Client Computer Communication** tab.
+
+    > [!Note]
+    > Starting in version 1906, this tab is called **Communication Security**.<!-- SCCMDocs#1645 -->  
+
+    Select the option for **HTTPS or HTTP**. Then enable the option to **Use Configuration Manager-generated certificates for HTTP site systems**.
 
 > [!Tip]
 > Wait up to 30 minutes for the management point to receive and configure the new certificate from the site.

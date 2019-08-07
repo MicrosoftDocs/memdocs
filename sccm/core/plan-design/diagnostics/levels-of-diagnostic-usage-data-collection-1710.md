@@ -10,6 +10,7 @@ ms.assetid: 8fce5391-8e75-4f99-813a-76f8842be5bc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
 ---
 # Levels of diagnostic usage data collection for version 1710 of System Center Configuration Manager
@@ -80,7 +81,7 @@ For System Center Configuration Manager version 1710, this level includes the fo
 
      - Software Assurance expiration date      
 
-     - Update pack deployment status and errors, download progress, and prerequisite errors 	
+     - Update pack deployment status and errors, download progress, and prerequisite errors 
 
      - Use of update fast ring
 

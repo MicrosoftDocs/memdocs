@@ -75,5 +75,4 @@ The application management extension must be installed on each Configuration Man
  Microsoft.ConfigurationManagement.ApplicationManagement.Extender.dll  
 
 ## See Also  
- [Scenario: Extending Application Management](../../develop/apps/scenario--extending-application-management.md)   
  [Configuration Manager Reference](../../develop/reference/configuration-manager-reference.md)

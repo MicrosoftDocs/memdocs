@@ -15,4 +15,4 @@ ms.collection: M365-identity-device-management
 In System Center Configuration Manager, operating system configuration items include all of the functionality of general configuration items, but they are tightly coupled with a specific version of the Windows operating system.  
 
 ## See Also  
- [Authoring Desired Configuration Management Configuration Baselines and Configuration Items](../../develop/compliance/authoring-compliance-settings-configuration-baselines-and-configuration-items.md)
+[About authoring configuration baselines and items](/sccm/develop/compliance/about-authoring-configuration-baselines-and-configuration-items)

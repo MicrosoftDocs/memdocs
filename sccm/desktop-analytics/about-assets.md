@@ -20,8 +20,7 @@ ms.collection: M365-identity-device-management
 
 After devices report data to Desktop Analytics, it provides an inventory of the following assets:
 
-- Devices  
-- Hardware drivers  
+- Devices
 - Installed apps  
 
 In the service portal, select **Assets** in the Desktop Analytics menu.

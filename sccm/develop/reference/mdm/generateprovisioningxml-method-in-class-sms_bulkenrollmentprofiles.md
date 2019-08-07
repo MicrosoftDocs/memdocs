@@ -70,4 +70,3 @@ sint32 GenerateProvisioningXML(
 
 ## See Also  
  [SMS_BulkEnrollmentProfiles Server WMI Class](../../../develop/reference/mdm/sms_bulkenrollmentprofiles-server-wmi-class.md)   
- [Mobile Device Management Server WMI Classes](../../../develop/reference/mdm/mobile-device-management-server-wmi-classes.md)

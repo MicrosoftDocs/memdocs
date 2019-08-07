@@ -2,7 +2,7 @@
 title: Troubleshoot Desktop Analytics
 titleSuffix: Configuration Manager
 description: Technical details to help you troubleshoot issues with Desktop Analytics.
-ms.date: 06/11/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -48,18 +48,12 @@ For more information, see [Monitor connection health](/sccm/desktop-analytics/mo
 
 For more information, see [Log files for Desktop Analytics](/sccm/core/plan-design/hierarchy/log-files#desktop-analytics)
 
+Starting in Configuration Manager version 1906, use the **DesktopAnalyticsLogsCollector.ps1** tool from the Configuration Manager install directory to help troubleshoot Desktop Analytics. It runs some basic troubleshooting steps and collects the relevant logs into a single working directory. For more information, see [Logs collector](/sccm/desktop-analytics/log-collector).
+
 ### Enable verbose logging
 
 1. On the service connection point, go to the following registry key: `HKLM\Software\Microsoft\SMS\Tracing\SMS_SERVICE_CONNECTOR`  
-2. Set the **LogLevel** value to `0`  
-3. (Optional) Run the following SQL command on the site database:  
-
-    ```SQL
-    DELETE FROM M365AProperties WHERE Name = 'M365ATenantUpdateInfo_LastUpdateTime'
-    ```
-
-4. Restart the **SMS_EXECUTIVE** service on the site server
-
+2. Set the **LoggingLevel** value to `0`  
 
 
 ## <a name="bkmk_AzureADApps"></a> Azure AD applications
@@ -77,46 +71,47 @@ If you need to provision these apps after completing setup, go to the **Connecte
 
 ### Create and import app for Configuration Manager
 
-After completing the [Initial onboarding](/sccm/desktop-analytics/set-up#initial-onboarding) on the Desktop Analytics portal, use the following steps to manually create and import the app for Configuration Manager if you can't create this Azure AD app from the Configure Azure Services wizard.
+If you can't create the Azure AD app for Configuration Manager from the Configure Azure Services wizard, or if you want to reuse an existing app, you need to manually create and import it. After completing the [Initial onboarding](/sccm/desktop-analytics/set-up#initial-onboarding) on the Desktop Analytics portal, use the following steps:
 
 #### Create app in Azure AD
 
-1. Open the [Azure portal](http://portal.azure.com) as a user with Company Admin permissions, go to **Azure Active Directory**, and select **App registrations**. Then select **New application registration**.  
+1. Open the [Azure portal](https://portal.azure.com) as a user with *Global Admin* permissions, go to **Azure Active Directory**, and select **App registrations**. Then select **New registration**.  
 
 2. In the **Create** panel, configure the following settings:  
 
     - **Name**: a unique name that identifies the app, for example: `Desktop-Analytics-Connection`  
 
-    - **Application type**: **Web app / API**  
+    - **Supported account types**: **Accounts in this organizational directory only (Contoso)**
 
-    - **Sign-on URL**: this value isn't used by Configuration Manager, but required by Azure AD. Enter a unique and valid URL, for example: `https://configmgrapp`  
+    - **Redirect URI (optional)**: **Web**  
+
+    <!--     - **Sign-on URL**: this value isn't used by Configuration Manager, but required by Azure AD. Enter a unique and valid URL, for example: `https://configmgrapp`   -->
   
-   Select **Create**.  
+    Select **Register**.  
 
-3. Select the app, and note the **Application ID**. This value is a GUID that's used to configure the Configuration Manager connection.  
+3. Select the app, note the **Application (client) ID** and **Directory (tenant) ID**. The values are GUIDs that are used to configure the Configuration Manager connection.  
 
-4. Select **Settings** on the app, and then select **Keys**. In the **Passwords** section, enter a **Key description**, specify an expiration **Duration**, and then select **Save**. Copy the **Value** of the key, which is used to configure the Configuration Manager connection.
+4. In the **Manage** menu, select **Certificates & secrets**. Select **New client secret**. Enter a **Description**, specify an expiration duration, and then select **Add**. Copy the **Value** of the key, which is used to configure the Configuration Manager connection.
 
     > [!Important]  
     > This is the only opportunity to copy the key value. If you don't copy it now, you need to create another key.  
     >
     > Save the key value in a secure location.  
 
-5. On the app **Settings** panel, select **Required permissions**.  
+5. In the **Manage** menu, select **API permissions**.  
 
-    1. On the **Required permissions** panel, select **Add**.  
+    1. On the **API permissions** panel, select **Add a permission**.  
 
-    2. In the **Add API access** panel, **Select an API**.  
+    2. In the **Request API permissions** panel, switch to **APIs my organization uses**.  
 
-    3. Search for the **Configuration Manager Microservice** API. Select it, and then choose **Select**.  
+    3. Search for and select the **Configuration Manager Microservice** API.  
 
-    4. On the **Enable Access** panel, select both of the application permissions: **Write CM Collection Data** and **Read CM Collection Data**. Then choose **Select**.  
+    4. Select the **Application permissions** group. Expand **CmCollectionData**, and select both of the following permissions: **Write CM Collection Data** and **Read CM Collection Data**.  
 
-    5. On the **Add API access** panel, select **Done**.  
+    5. Select **Add permissions**.  
 
-6. On the **Required permissions** page, select **Grant permissions**. Select **Yes**.  
+6. On the **API permissions** panel, select **Grant admin consent...**. Select **Yes**.  
 
-7. Copy the Azure AD tenant ID. This value is a GUID that's used to configure the Configuration Manager connection. Select **Azure Active Directory** in the main menu, and then select **Properties**. Copy the **Directory ID** value.  
 
 #### Import app in Configuration Manager
 
@@ -171,13 +166,13 @@ When you set up Desktop Analytics, you consent on behalf of your organization. T
 
 If there's a problem with this process during setup, use the following process to manually add this permission:
 
-1. Go to the [Azure portal](http://portal.azure.com), and select **All resources**. Select the workspace of type **Log Analytics**.  
+1. Go to the [Azure portal](https://portal.azure.com), and select **All resources**. Select the workspace of type **Log Analytics**.  
 
 2. In the workspace menu, select **Access control (IAM)**, then select **Add**.  
 
 3. In the **Add permissions** panel, configure the following settings:  
 
-    - **Role**: **Log Analytics Reader**  
+    - **Role**: **Reader**  
 
     - **Assign access to**: **Azure AD user, group, or application**  
 
@@ -191,13 +186,16 @@ The portal shows a notification that it added the role assignment.
 ## Data latency
 
 <!-- 3846531 -->
-When you first set up Desktop Analytics, the reports in Configuration Manager and the Desktop Analytics portal may not show complete data right away. It can take 2-3 days for the following steps to occur:
+When you first setup Desktop Analytics, enroll new clients, or configure new deployment plans, the reports in Configuration Manager and the Desktop Analytics portal may not show complete data right away. It can take 2-3 days for the following steps to occur:
 
 - Active devices send diagnostic data to the Desktop Analytics service
 - The service processes the data
 - The service synchronizes with your Configuration Manager site
 
-When syncing device collections from your Configuration Manager hierarchy to Desktop Analytics, it can take up to 10 minutes for those collections to appear in the Desktop Analytics portal. Similarly, when you create a deployment plan in Desktop Analytics, it can take up to 10 minutes for the new collections associated with the deployment plan to appear in your Configuration Manager hierarchy. The primary sites create the collections, and the central administration site synchronizes with Desktop Analytics.
+When syncing device collections from your Configuration Manager hierarchy to Desktop Analytics, it can take up to one hour for those collections to appear in the Desktop Analytics portal. Similarly, when you create a deployment plan in Desktop Analytics, it can take up to one hour for the new collections associated with the deployment plan to appear in your Configuration Manager hierarchy. The primary sites create the collections, and the central administration site synchronizes with Desktop Analytics. Configuration Manager can take up to 24 hours to evaluate and update collection membership. To speed up this process, manually update the collection membership.<!-- 4984639 -->
+
+> [!Note]
+> For manual collection updates to reflect changes, the SMS_SERVICE_CONNECTOR_M365ADeploymentPlanWorker component first needs to synchronize. It can take up to one hour for this process to run. For more information, see the **M365ADeploymentPlanWorker.log**.
 
 Within the Desktop Analytics portal, there are two types of data: **Administrator data** and **diagnostic data**:
 

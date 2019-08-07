@@ -10,6 +10,7 @@ ms.assetid: bc6c3e5f-b9e2-400e-9d9d-446ff93c520c
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
 ---
 # What&#39;s new in version 1710 of System Center Configuration Manager
@@ -26,10 +27,11 @@ The following additional updates to this release are also now available:
 
 > [!TIP]  
 > To install a new site, you must use a baseline version of Configuration Manager.  
->  Learn more about:    
->   - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites)  
->   - [Installing updates at sites](/sccm/core/servers/manage/updates)  
->   - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)
+>
+> Learn more about:    
+> - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites)  
+> - [Installing updates at sites](/sccm/core/servers/manage/updates)  
+> - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 The following sections provide details about changes and new capabilities introduced in version 1710 of Configuration Manager.  
 

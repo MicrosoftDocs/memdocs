@@ -55,17 +55,17 @@ Configuration Manager provides e-mail templates, but you can also create your ow
 
 4. Enter the following information:  
 
-	a. **Name**: E-mail template name  
+    a. **Name**: E-mail template name  
 
     > [!Note]  
     > The **From** field is auto-populated with a no-reply email address from Microsoft.<!--SCCMDocs issue 652-->  
 
-	c. **Subject**: A subject that explains the e-mail notification being sent  
+    c. **Subject**: A subject that explains the e-mail notification being sent  
 
-	d. **Message body**: More details on the e-mail notification  
+    d. **Message body**: More details on the e-mail notification  
 
-	> [!TIP]  
-	> You can also include **E-mail header** with your company logo, and **E-mail footer**, which can include your organization's name and contact information. Also edit this information in the properties of you Intune subscription.  
+    > [!TIP]  
+    > You can also include **E-mail header** with your company logo, and **E-mail footer**, which can include your organization's name and contact information. Also edit this information in the properties of you Intune subscription.  
 
 5. Click **OK** to save the new e-mail template.  
 
@@ -91,18 +91,18 @@ Configuration Manager provides e-mail templates, but you can also create your ow
 
 7. If you select **Send e-mail to end user**, enter the following details:  
 
-	a. **Grace period (in days):** Enter a number of days from 0 to 365  
+    a. **Grace period (in days):** Enter a number of days from 0 to 365  
 
-	b. **Additional recipients (via e-mail)**  
+    b. **Additional recipients (via e-mail)**  
 
-	c. **Select the message template:** Choose a default e-mail template or custom template that you created.  
-	
-	> [!TIP]   
-	> You can also add a new e-mail template when adding the **Send e-mail to end user** action by clicking **New** from the **Add Action** page.  
+    c. **Select the message template:** Choose a default e-mail template or custom template that you created.  
+
+    > [!TIP]   
+    > You can also add a new e-mail template when adding the **Send e-mail to end user** action by clicking **New** from the **Add Action** page.  
 
 8. If you select **Mark device non-compliant**, enter the following details:  
 
-	a. **Grace period (in days):** Enter a number of days from 0 to 365  
+    a. **Grace period (in days):** Enter a number of days from 0 to 365  
 
 9. Complete the wizard.  
 

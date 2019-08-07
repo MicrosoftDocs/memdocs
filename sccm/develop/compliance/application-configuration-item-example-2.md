@@ -16,7 +16,7 @@ In System Center Configuration Manager, the following Application Configuration 
 
 ## Application Configuration Item Example  
 
-```  
+```xml
 <?xml version="1.0" encoding="utf-8"?>  
 
 <!--   
@@ -100,4 +100,4 @@ IMPORTANT:  Insert a script here - not just the name of the script, but the actu
 ```  
 
 ## See Also  
- [Authoring Compliance Settings Configuration Baselines and Configuration Items](../../develop/compliance/authoring-compliance-settings-configuration-baselines-and-configuration-items.md)
+[About authoring configuration baselines and items](/sccm/develop/compliance/about-authoring-configuration-baselines-and-configuration-items)

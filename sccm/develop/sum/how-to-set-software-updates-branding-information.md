@@ -145,9 +145,6 @@ public void SetSUMClientBranding(WqlConnectionManager connection,
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
- [Software Updates Setup and Configuration](../../develop/sum/software-updates-setup-and-configuration.md)   
  [About Software Updates Setup and Configuration](../../develop/sum/about-software-updates-setup-and-configuration.md)   
  [About the Configuration Manager Site Control File](../../develop/core/understand/about-the-configuration-manager-site-control-file.md)   
  [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md)   

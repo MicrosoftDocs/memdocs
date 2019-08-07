@@ -20,31 +20,31 @@ ms.collection: M365-identity-device-management
 This article lists the network ports that Configuration Manager uses. Some connections use ports that aren't configurable, and some support custom ports that you specify. If you use any port filtering technology, verify that the required ports are available. These port filtering technologies include firewalls, routers, proxy servers, or IPsec.   
 
 > [!NOTE]  
->  If you support internet-based clients by using SSL bridging, in addition to port requirements, you might also have to allow some HTTP verbs and headers to traverse your firewall.   
+> If you support internet-based clients by using SSL bridging, in addition to port requirements, you might also have to allow some HTTP verbs and headers to traverse your firewall.   
 
 
 
 ##  <a name="BKMK_ConfigurablePorts"></a> Ports you can configure  
- Configuration Manager enables you to configure the ports for the following types of communication:  
+Configuration Manager enables you to configure the ports for the following types of communication:  
 
--   Application Catalog website point to Application Catalog web service point  
+- Application Catalog website point to Application Catalog web service point  
 
--   Enrollment proxy point to enrollment point  
+- Enrollment proxy point to enrollment point  
 
--   Client-to-site systems that run IIS  
+- Client-to-site systems that run IIS  
 
--   Client to internet (as proxy server settings)  
+- Client to internet (as proxy server settings)  
 
--   Software update point to internet (as proxy server settings)  
+- Software update point to internet (as proxy server settings)  
 
--   Software update point to WSUS server  
+- Software update point to WSUS server  
 
--   Site server to site database server  
+- Site server to site database server  
 
--   Reporting services points  
+- Reporting services points  
 
-    > [!NOTE]  
-    >  The ports that are in use for the reporting services point site system role are configured in SQL Server Reporting Services. These ports are then used by Configuration Manager during communications to the reporting services point. Be sure to review these ports that define the IP filter information for IPsec policies or for configuring firewalls.  
+  > [!NOTE]  
+  > The ports that are in use for the reporting services point site system role are configured in SQL Server Reporting Services. These ports are then used by Configuration Manager during communications to the reporting services point. Be sure to review these ports that define the IP filter information for IPsec policies or for configuring firewalls.  
 
 By default, the HTTP port that's used for client-to-site system communication is port 80, and the default HTTPS port is 443. Ports for client-to-site system communication over HTTP or HTTPS can be changed during setup or in the site properties for your Configuration Manager site.  
 
@@ -56,15 +56,15 @@ The ports that are in use for the reporting services point site system role are 
 
 Configuration Manager doesn't allow you to configure ports for the following types of communication:  
 
--   Site to site  
+- Site to site  
 
--   Site server to site system  
+- Site server to site system  
 
--   Configuration Manager console to SMS Provider  
+- Configuration Manager console to SMS Provider  
 
--   Configuration Manager console to the internet  
+- Configuration Manager console to the internet  
 
--   Connections to cloud services, such as Microsoft Intune and cloud distribution points  
+- Connections to cloud services, such as Microsoft Intune and cloud distribution points  
 
 
 
@@ -72,9 +72,9 @@ Configuration Manager doesn't allow you to configure ports for the following typ
 
 The following sections detail the ports that are used for communication in Configuration Manager. The arrows in the section title show the direction of the communication:  
 
--   -- > Indicates that one computer initiates communication and the other computer always responds  
+- -- > Indicates that one computer initiates communication and the other computer always responds  
 
--   &lt; -- > Indicates that either computer can initiate communication  
+- &lt; -- > Indicates that either computer can initiate communication  
 
 
 ###  <a name="BKMK_PortsAI"></a> Asset Intelligence synchronization point -- > Microsoft  
@@ -189,7 +189,7 @@ For more information, see [CMG Ports and data flow](/sccm/core/clients/manage/cm
 
 
 ###  <a name="BKMK_PortsClient-GCDC"></a> Client -- > Global catalog domain controller  
- A Configuration Manager client doesn't contact a global catalog server when it's a workgroup computer or when it's configured for internet-only communication.  
+A Configuration Manager client doesn't contact a global catalog server when it's a workgroup computer or when it's configured for internet-only communication.  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -325,15 +325,15 @@ The Configuration Manager console uses internet access for the following actions
 
 
 ###  <a name="BKMK_PortsDist_MP"></a> Distribution point -- > Management point  
- A distribution point communicates to the management point in the following scenarios:  
+A distribution point communicates to the management point in the following scenarios:  
 
--   To report the status of prestaged content  
+- To report the status of prestaged content  
 
--   To report usage summary data  
+- To report usage summary data  
 
--   To report content validation  
+- To report content validation  
 
--   To report the status of package downloads (pull-distribution point)
+- To report the status of package downloads (pull-distribution point)
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -401,7 +401,7 @@ The Configuration Manager console uses internet access for the following actions
 
 
 ###  <a name="BKMK_PortsMP-Site"></a> Management point &lt; -- > Site server  
- <sup>[Note 5](#bkmk_note5)</sup>   
+<sup>[Note 5](#bkmk_note5)</sup>   
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -582,7 +582,7 @@ For more information, see [Ports and data flow](/sccm/core/plan-design/hierarchy
 
 
 ###  <a name="BKMK_PortsSite-RCL"></a> Site server -- > Server hosting Remote Content Library Share  
- Starting in version 1806 you can relocate the Content Library to another storage location to free up hard drive space on your central administration or primary site servers. For more information, see [Configure a remote content library for the site server](/sccm/core/plan-design/hierarchy/the-content-library#bkmk_remote).  
+Starting in version 1806 you can relocate the Content Library to another storage location to free up hard drive space on your central administration or primary site servers. For more information, see [Configure a remote content library for the site server](/sccm/core/plan-design/hierarchy/the-content-library#bkmk_remote).  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -744,9 +744,9 @@ Dynamic ports use a range of port numbers that's defined by the OS version. Thes
 
  Clients use Server Message Block (SMB) whenever they connect to UNC shares. For example:  
 
--   Manual client installation that specifies the CCMSetup.exe **/source:** command-line property  
+- Manual client installation that specifies the CCMSetup.exe **/source:** command-line property  
 
--   Endpoint Protection clients that download definition files from a UNC path
+- Endpoint Protection clients that download definition files from a UNC path
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -757,13 +757,13 @@ Dynamic ports use a range of port numbers that's defined by the OS version. Thes
 
  For communication to the SQL Server database engine and for intersite replication, you can use the default SQL Server port or specify custom ports:  
 
--   Intersite communications use:  
+- Intersite communications use:  
 
-    -   SQL Server Service Broker, which defaults to port TCP 4022.  
+  - SQL Server Service Broker, which defaults to port TCP 4022.  
 
-    -   SQL Server service, which defaults to port TCP 1433.  
+  - SQL Server service, which defaults to port TCP 1433.  
 
--   Intrasite communication between the SQL Server database engine and various Configuration Manager site system roles defaults to port TCP 1433.  
+- Intrasite communication between the SQL Server database engine and various Configuration Manager site system roles defaults to port TCP 1433.  
 
 - Configuration Manager uses the same ports and protocols to communicate with each SQL Availability Group replica that hosts the site database as if the replica was a standalone SQL Server instance.
 
@@ -772,31 +772,31 @@ When you use Azure and the site database is behind an internal or external load 
 - Load balancing rules 
 
 Configure the following ports:
- - SQL over TCP: TCP 1433
- - SQL Server Service Broker: TCP 4022
- - Server Message Block (SMB): TCP 445
- - RPC Endpoint Mapper: TCP 135
+- SQL over TCP: TCP 1433
+- SQL Server Service Broker: TCP 4022
+- Server Message Block (SMB): TCP 445
+- RPC Endpoint Mapper: TCP 135
 
 > [!WARNING]  
->  Configuration Manager doesn't support dynamic ports. by default, SQL Server named instances use dynamic ports for connections to the database engine. When you use a named instance, manually configure the static port for intrasite communication.  
+> Configuration Manager doesn't support dynamic ports. by default, SQL Server named instances use dynamic ports for connections to the database engine. When you use a named instance, manually configure the static port for intrasite communication.  
 
- The following site system roles communicate directly with the SQL Server database:  
+The following site system roles communicate directly with the SQL Server database:  
 
--   Application Catalog web service point  
+- Application Catalog web service point  
 
--   Certificate registration point role  
+- Certificate registration point role  
 
--   Enrollment point role  
+- Enrollment point role  
 
--   Management point  
+- Management point  
 
--   Site server  
+- Site server  
 
--   Reporting Services point  
+- Reporting Services point  
 
--   SMS Provider  
+- SMS Provider  
 
--   SQL Server --> SQL Server  
+- SQL Server --> SQL Server  
 
 When a SQL Server hosts a database from more than one site, each database must use a separate instance of SQL Server. Configure each instance with a unique set of ports.  
 
@@ -808,37 +808,37 @@ For an example of how to configure SQL Server to use a specific port, see [Confi
 ### <a name="bkmk_discovery"> </a> Discovery and publishing
 
 Configuration Manager uses the following ports for the discovery and publishing of site information:
- - Lightweight Directory Access Protocol (LDAP): 389
- - Global catalog LDAP: 3268
- - RPC Endpoint Mapper: 135
- - RPC: Dynamically allocated high TCP ports
- - TCP: 1024: 5000
- - TCP:  49152: 65535
+- Lightweight Directory Access Protocol (LDAP): 389
+- Global catalog LDAP: 3268
+- RPC Endpoint Mapper: 135
+- RPC: Dynamically allocated high TCP ports
+- TCP: 1024: 5000
+- TCP:  49152: 65535
 
 
 ###  <a name="BKMK_External"></a> External connections made by Configuration Manager  
 
 On-premises Configuration Manager clients or site systems can make the following external connections:  
 
--   [Asset Intelligence synchronization point -- &gt; Microsoft](#BKMK_PortsAI)  
+- [Asset Intelligence synchronization point -- &gt; Microsoft](#BKMK_PortsAI)  
 
--   [Endpoint Protection point -- &gt; Internet](#BKMK_PortsEndpointProtection_Internet)  
+- [Endpoint Protection point -- &gt; Internet](#BKMK_PortsEndpointProtection_Internet)  
 
--   [Client -- &gt; Global catalog domain controller](#BKMK_PortsClient-GCDC)  
+- [Client -- &gt; Global catalog domain controller](#BKMK_PortsClient-GCDC)  
 
--   [Configuration Manager console -- &gt; Internet](#BKMK_PortsConsole-Internet)  
+- [Configuration Manager console -- &gt; Internet](#BKMK_PortsConsole-Internet)  
 
--   [Management point -- &gt; Domain controller](#BKMK_PortsMP-DC)  
+- [Management point -- &gt; Domain controller](#BKMK_PortsMP-DC)  
 
--   [Site server -- &gt; Domain controller](#BKMK_PortsSite-DC)  
+- [Site server -- &gt; Domain controller](#BKMK_PortsSite-DC)  
 
--   [Site server &lt; -- &gt; Issuing Certification Authority (CA)](#BKMK_PortsIssuingCA_SiteServer)  
+- [Site server &lt; -- &gt; Issuing Certification Authority (CA)](#BKMK_PortsIssuingCA_SiteServer)  
 
--   [Software update point -- &gt; Internet](#BKMK_PortsSUP-Internet)  
+- [Software update point -- &gt; Internet](#BKMK_PortsSUP-Internet)  
 
--   [Software update point -- &gt; Upstream WSUS Server](#BKMK_PortsSUP-WSUS)  
+- [Software update point -- &gt; Upstream WSUS Server](#BKMK_PortsSUP-WSUS)  
 
--   [Service connection point -- &gt; Microsoft Intune](#BKMK_PortsIntuneConnector-WindowsIntune)  
+- [Service connection point -- &gt; Microsoft Intune](#BKMK_PortsIntuneConnector-WindowsIntune)  
 
 - [Service connection point -- > Azure](#bkmk_scp-cmg)  
 
@@ -847,22 +847,22 @@ On-premises Configuration Manager clients or site systems can make the following
 
 ###  <a name="BKMK_IBCMports"></a> Installation requirements for site systems that support internet-based clients  
 
- > [!Note]  
- > This section only applies to internet-based client management (IBCM). It doesn't apply to the cloud management gateway. For more information, see [Manage clients on the internet](/sccm/core/clients/manage/manage-clients-internet).  
+> [!Note]  
+> This section only applies to internet-based client management (IBCM). It doesn't apply to the cloud management gateway. For more information, see [Manage clients on the internet](/sccm/core/clients/manage/manage-clients-internet).  
 
- Internet-based management points and distribution points that support internet-based clients, the software update point, and the fallback status point use the following ports for installation and repair:  
+Internet-based management points and distribution points that support internet-based clients, the software update point, and the fallback status point use the following ports for installation and repair:  
 
--   Site server --> Site system: RPC endpoint mapper using UDP and TCP port 135.  
+- Site server --> Site system: RPC endpoint mapper using UDP and TCP port 135.  
 
--   Site server --> Site system: RPC dynamic TCP ports  
+- Site server --> Site system: RPC dynamic TCP ports  
 
--   Site server &lt; --> Site system: Server message blocks (SMB) using TCP port 445
+- Site server &lt; --> Site system: Server message blocks (SMB) using TCP port 445
 
 Application and package installations on distribution points require the following RPC ports:  
 
--   Site server --> Distribution point: RPC endpoint mapper using UDP and TCP port 135
+- Site server --> Distribution point: RPC endpoint mapper using UDP and TCP port 135
 
--   Site server --> Distribution point: RPC dynamic TCP ports  
+- Site server --> Distribution point: RPC dynamic TCP ports  
 
 Use IPsec to help secure the traffic between the site server and site systems. If you must restrict the dynamic ports that are used with RPC, you can use the Microsoft RPC configuration tool (rpccfg.exe) to configure a limited range of ports for these RPC packets. For more information about the RPC configuration tool, see [How to configure RPC to use certain ports and how to help secure those ports by using IPsec](https://support.microsoft.com/help/908472/how-to-configure-rpc-to-use-certain-ports-and-how-to-help-secure-those).  
 
@@ -886,7 +886,7 @@ The site server that runs migration uses several ports to connect to applicable 
 
 ###  <a name="BKMK_ServerPorts"></a> Ports used by Windows Server  
 
- The following table lists some of the key ports used by Windows Server. 
+The following table lists some of the key ports used by Windows Server. 
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  

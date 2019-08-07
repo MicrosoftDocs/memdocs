@@ -19,7 +19,7 @@ The Asset Intelligence catalog can be refreshed manually, outside the normal syn
 
 ### Refresh the Asset Intelligence catalog  
 
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Query the SMS Provider for the [SMS_AIProxy](../../../../develop/reference/core/clients/asset-intelligence/sms_aiproxy-server-wmi-class.md) instance that you want refresh the catalog on.  
 

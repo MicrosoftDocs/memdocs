@@ -22,18 +22,18 @@ This article introduces the features that are available in the Technical Preview
 
 <!--  Known Issues Template   
 **Known Issues in this Technical Preview:**
--   **Issue Name**. Details
+- **Issue Name**. Details
     Workaround details.
 -->
 **Known Issues in this Technical Preview:**
 
--   **Move distribution point** - The options in the console to move a distribution point between sites cannot be used with this release due to the technical preview limit of a single primary site.
+- **Move distribution point** - The options in the console to move a distribution point between sites cannot be used with this release due to the technical preview limit of a single primary site.
 
--   **Device compliance settings** - You might experience opposite behavior when using the two of the new device compliance settings:
-	- **Block USB debugging on device**
-	- **Block apps from unknown sources**
+- **Device compliance settings** - You might experience opposite behavior when using the two of the new device compliance settings:
+  - **Block USB debugging on device**
+  - **Block apps from unknown sources**
 
-		For example, if admins set **Block USB debugging on device** to **true**, all devices that don’t have USB debugging enabled are marked as non-compliant.
+    For example, if admins set **Block USB debugging on device** to **true**, all devices that don’t have USB debugging enabled are marked as non-compliant.
 
 **The following are new features you can try out with this version.**  
 
@@ -54,18 +54,18 @@ This release includes improvements for how software update points work with boun
 
 - Independent of the fallback configuration, a client attempts to reach the last software update point it used for 120 minutes. After failing to reach that server for 120 minutes, the client then checks its pool of available software update points, so it can find a new one.
 
-  -   All software update points in the client's current boundary group are added to the client's pool immediately.
+  - All software update points in the client's current boundary group are added to the client's pool immediately.
 
-  -   Because a client tries to use its original server for 120 minutes before seeking a new one, no additional servers are contacted until after two hours have elapsed.
+  - Because a client tries to use its original server for 120 minutes before seeking a new one, no additional servers are contacted until after two hours have elapsed.
 
-  -   If fallback to a neighbor group is configured for the minimum of 120 minutes, software update points from that neighbor boundary group will be part of the client's pool of available servers.
+  - If fallback to a neighbor group is configured for the minimum of 120 minutes, software update points from that neighbor boundary group will be part of the client's pool of available servers.
 
 - After failing to reach its original server for two hours, the client switches to a shorter cycle for contacting a new software update point.
 
   This means if a client fails to connect with a new server, it quickly selects the next server from its pool of available servers and attempts to contact that one.
 
-  -   This cycle continues until the client connects to a software update point it can use.
-  -   Until the client finds a software update point, additional servers are added to pool of available servers when the fallback time for each neighbor boundary group is met.
+  - This cycle continues until the client connects to a software update point it can use.
+  - Until the client finds a software update point, additional servers are added to pool of available servers when the fallback time for each neighbor boundary group is met.
 
 For more information, see [software update points](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points) in the Boundary Groups topic for the Current Branch.
 
@@ -75,88 +75,88 @@ For more information, see [software update points](/sccm/core/servers/deploy/con
 High availability for the site server role is a Configuration Manager based solution to install an additional primary site server in *Passive* mode. The passive mode site server is in addition to your existing primary site server that is in *Active* mode. A passive mode site server is available for immediate use, when needed.
 
 A primary site server in passive mode:
--   Uses the same site database as your active site server.
--   Receives a copy of the active site servers content library, which is then kept in synch.
--   Does not write data to the site database so long as it is in passive mode.
--   Does not support installation or removal of optional site system roles so long as it is in passive mode.
+- Uses the same site database as your active site server.
+- Receives a copy of the active site servers content library, which is then kept in synch.
+- Does not write data to the site database so long as it is in passive mode.
+- Does not support installation or removal of optional site system roles so long as it is in passive mode.
 
 To make the passive mode site server your active mode site server, you manually promote it. This switches the active site server to be the passive site server. The site system roles that are available on the original active mode server remain available so long as that computer is accessible. Only the site server role is switched between active and passive mode.
 
 To install a passive mode site server, you use the **Create Site System Server Wizard** to configure a new site server with a Type of **Primary site server** and a Mode of **Passive**. The wizard then runs Configuration Manager Setup on the specified server to install the new site server in passive mode. After installation is complete, the active mode site server keeps the passive mode site server and its content library in sync with changes or configurations that you make to the active site server.
 
 ### Prerequisites and limitations
--   A single site server in passive mode is supported at each primary site.
+- A single site server in passive mode is supported at each primary site.
 
--   The site server in passive mode  can be on-premises or cloud-based in Azure.
+- The site server in passive mode  can be on-premises or cloud-based in Azure.
 
-- 	Both the active mode and passive mode site servers must be in the same domain.
+- Both the active mode and passive mode site servers must be in the same domain.
 
--   Both the active mode and passive mode site servers must use the same site database, which must be remote from the computers of each site server.
+- Both the active mode and passive mode site servers must use the same site database, which must be remote from the computers of each site server.
 
-    -   The SQL Server that hosts the database can use a default instance, named instance, SQL Server cluster, or an Always On Availability Group.
+    - The SQL Server that hosts the database can use a default instance, named instance, SQL Server cluster, or an Always On Availability Group.
 
-    -   The site server in passive mode is configured to use the same site database as the active mode site server. However, the passive mode site server does not use that database until after it is promoted to active mode.
+    - The site server in passive mode is configured to use the same site database as the active mode site server. However, the passive mode site server does not use that database until after it is promoted to active mode.
 
--   The computer that will run the passive mode site server:
+- The computer that will run the passive mode site server:
 
-    -   Must meet the [prerequisites for installing a primary site](https://docs.microsoft.com/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#primary-sites-and-the-central-administration-site).
+    - Must meet the [prerequisites for installing a primary site](https://docs.microsoft.com/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#primary-sites-and-the-central-administration-site).
 
-    -   Installs using source files that match the version of the active mode site server.
+    - Installs using source files that match the version of the active mode site server.
 
-    -   Cannot have a site system role from any site prior to installing the passive mode site.
+    - Cannot have a site system role from any site prior to installing the passive mode site.
 
--   The active and passive mode site server computers can run different operating systems or service pack versions, so long as they both remain supported by your version of Configuration Manager.
+- The active and passive mode site server computers can run different operating systems or service pack versions, so long as they both remain supported by your version of Configuration Manager.
 
--   Promotion of the passive mode site server to active mode server is manual. There is no automatic failover.
+- Promotion of the passive mode site server to active mode server is manual. There is no automatic failover.
 
--   Site system roles can be installed only on the site server that is in active mode.
+- Site system roles can be installed only on the site server that is in active mode.
 
-    -   A site server in active mode supports all site system roles. You cannot install site system roles on server when it is in passive mode.
+    - A site server in active mode supports all site system roles. You cannot install site system roles on server when it is in passive mode.
 
-    -   Site system roles that use a database (like the reporting point) must have that database on a server that is remote from both the active mode and passive mode site servers.
+    - Site system roles that use a database (like the reporting point) must have that database on a server that is remote from both the active mode and passive mode site servers.
 
-    -   The SMS_Provider does not install on the site server in passive mode. Because you must connect to an SMS_Provider for the site to manually promote the passive mode site server to active mode, we recommend [installing at least one additional instance of the provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider) on an additional computer.
+    - The SMS_Provider does not install on the site server in passive mode. Because you must connect to an SMS_Provider for the site to manually promote the passive mode site server to active mode, we recommend [installing at least one additional instance of the provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider) on an additional computer.
 
 **Known Issue**:   
 With this release, **Status** for the following conditions appear in the console as numerical values instead of readable text:
--   131071 – Site server installation failed
--   720895 – Site server role uninstallation failed
--  	851967 – Failover failed
+- 131071 – Site server installation failed
+- 720895 – Site server role uninstallation failed
+- 851967 – Failover failed
 
 ### Add a site server in passive mode
-1.	In the console go to **Administration** > **Site Configuration** > **Sites** and start the [Add Site System Roles Wizard](/sccm/core/servers/deploy/configure/install-site-system-roles). You can also use the **Create Site System Server Wizard**.
+1. In the console go to **Administration** > **Site Configuration** > **Sites** and start the [Add Site System Roles Wizard](/sccm/core/servers/deploy/configure/install-site-system-roles). You can also use the **Create Site System Server Wizard**.
 
-2.	On the **General** page, specify the server that will host the passive mode site server. The server you specify cannot host any site system roles before installing a site server in passive mode.
+2. On the **General** page, specify the server that will host the passive mode site server. The server you specify cannot host any site system roles before installing a site server in passive mode.
 
-3.	On the **System Role Selection** page, select only **Primary site server in passive mode**.
+3. On the **System Role Selection** page, select only **Primary site server in passive mode**.
 
-4.	To complete the wizard, you must provide the following information that is used to run Setup and install the site server role on the specified server:
-    -   Choose to copy installation files from the active site server to the new passive mode site server, or specify a path to a location that contains the contents of the active site server's **CD.Latest** folder.
+4. To complete the wizard, you must provide the following information that is used to run Setup and install the site server role on the specified server:
+    - Choose to copy installation files from the active site server to the new passive mode site server, or specify a path to a location that contains the contents of the active site server's **CD.Latest** folder.
 
-    -   Specify the same site database server and database name as used by the active mode site server.
+    - Specify the same site database server and database name as used by the active mode site server.
 
-5.	Configuration Manager then installs the site server in passive mode on the specified server.
+5. Configuration Manager then installs the site server in passive mode on the specified server.
 
 For detailed installation status, go to **Administration** > **Site Configuration** > **Sites**.
--   The status for the site server in passive mode displays as **Installing**.
+- The status for the site server in passive mode displays as **Installing**.
 
--   Select the server and then click **Show Status** to open **Site Server Installation Status** for more detailed information.
+- Select the server and then click **Show Status** to open **Site Server Installation Status** for more detailed information.
 
 
 
 ### Promote the passive mode site server to active mode
 When you want to change the passive mode site server to active mode, you do so from the **Nodes** pane in **Administration** > **Site Configuration** > **Sites**. So long as you can access an instance of the SMS_Provider, you can access the site to make this change.
-1.	In the **Nodes** pane of the Configuration Manager console, select the site server in passive mode, and then from the Ribbon, choose **Promote to active**.
+1. In the **Nodes** pane of the Configuration Manager console, select the site server in passive mode, and then from the Ribbon, choose **Promote to active**.
 
-2.	The simple **Status** for the server you are promoting displays in the **Nodes** pane as **Promoting**.
+2. The simple **Status** for the server you are promoting displays in the **Nodes** pane as **Promoting**.
 
-3.	After the promotion is complete, the **Status** column shows **OK** for both the new *Active* mode site server, and for the new *Passive* mode site server.
+3. After the promotion is complete, the **Status** column shows **OK** for both the new *Active* mode site server, and for the new *Passive* mode site server.
 
-4.	In **Administration** > **Site Configuration** > **Sites**, the name of the primary site server now displays the name of the new *Active* mode site server.
+4. In **Administration** > **Site Configuration** > **Sites**, the name of the primary site server now displays the name of the new *Active* mode site server.
 For detailed status, go to **Monitoring** > **Site Server Status**.
-    -   The **Mode** column identifies which server is *Active* or *Passive*.
+    - The **Mode** column identifies which server is *Active* or *Passive*.
 
-    -   While promoting a server from passive mode to active mode, select the site server that you are promoting to active, and then choose **Show Status** from the ribbon. This opens the **Site Server Promotion Status** window that displays additional details about the process.
+    - While promoting a server from passive mode to active mode, select the site server that you are promoting to active, and then choose **Show Status** from the ribbon. This opens the **Site Server Promotion Status** window that displays additional details about the process.
 
 When a site server in active mode switches over to passive mode, only the site system role is made passive. All other site system roles that are installed on that computer remain active and accessible to clients.
 
@@ -165,18 +165,18 @@ When a site server in active mode switches over to passive mode, only the site s
 When you have a primary site in passive mode, monitor it daily to ensure it remains in sync with the active mode site server, and ready to use. To do so, go to **Monitoring** > **Site Server Status**. Here you can view both the active mode and passive mode site servers.
 
 The **Summary** tab:
--   The **Mode** column identifies which server is Active or Passive.
--   The **Status** column lists **OK** when the passive mode server is in sync with the active mode server.
--   To view additional details about the state of content synchronization, click **Show status** from the Content Sync State. This opens the Content Library tab where you can try to fix content sync issues.
+- The **Mode** column identifies which server is Active or Passive.
+- The **Status** column lists **OK** when the passive mode server is in sync with the active mode server.
+- To view additional details about the state of content synchronization, click **Show status** from the Content Sync State. This opens the Content Library tab where you can try to fix content sync issues.
 
 The **Content Library** tab:
--   View the **State** for content that synchronizes from the active site server to the passive mode site server.
--   You can select content with a State of **Failed**, and then choose **Sync selected items** from the Ribbon. This action tries to resynchronize that content from the content’s source to the passive mode site server. During recovery, the State displays as **In progress**, and when it is in sync, it displays as **Success**.
+- View the **State** for content that synchronizes from the active site server to the passive mode site server.
+- You can select content with a State of **Failed**, and then choose **Sync selected items** from the Ribbon. This action tries to resynchronize that content from the content’s source to the passive mode site server. During recovery, the State displays as **In progress**, and when it is in sync, it displays as **Success**.
 
 ### Try it out!
 Try to complete the following tasks and then send us **Feedback** from the **Home** tab of the Ribbon to let us know how it worked:
--   I can install a primary site in passive mode.
--   I can use the console to promote the passive mode site server to make it the active mode site server, and confirm the change of status for both site servers.
+- I can install a primary site in passive mode.
+- I can use the console to promote the passive mode site server to make it the active mode site server, and confirm the change of status for both site servers.
 
 
 ## Include trust for specific files and folders in a Device Guard policy
@@ -185,15 +185,15 @@ In this release, we’ve added further capabilities to [Device Guard](/sccm/prot
 
 You can now optionally add trust for specific files for folders in a Device Guard policy. This lets you:
 
-1.	Overcome issues with managed installer behaviors
-2.	Trust line-of-business apps that cannot be deployed with Configuration Manager
-3.	Trust apps that are included in an operating system deployment image.
+1. Overcome issues with managed installer behaviors
+2. Trust line-of-business apps that cannot be deployed with Configuration Manager
+3. Trust apps that are included in an operating system deployment image.
 
 ### Try it out!
 
-1.	While you are creating a Device Guard policy, on the Inclusions tab of the Create Device Guard policy wizard, click **Add**.
-2.	In the **Add Trusted File or Folder** dialog box, specify information about the file or folder that you want to trust. You can either specify a local file or folder path or connect to a remote device to which you have permission to connect and specify a file or folder path on that device.
-3.	Complete the wizard.
+1. While you are creating a Device Guard policy, on the Inclusions tab of the Create Device Guard policy wizard, click **Add**.
+2. In the **Add Trusted File or Folder** dialog box, specify information about the file or folder that you want to trust. You can either specify a local file or folder path or connect to a remote device to which you have permission to connect and specify a file or folder path on that device.
+3. Complete the wizard.
 
 
 ## Hide task sequence progress
@@ -217,9 +217,9 @@ To solve this problem, you can now specify both an installation content location
 1. In the deployment type properties of an application, click the **Content** tab.
 2. Configure the **Install content location** as normal.
 3. For **Uninstall content settings**, choose one of the following:
-	- **Same as install content** - The same content location will be used regardless of whether you are installing, or uninstalling the application.
-	- **No uninstall content** - Choose this if you don't want to supply an uninstall content location for the application.
-	- **Different from install content** - Choose this if you want to specify an uninstall content location that's different from the install content location.
+   - **Same as install content** - The same content location will be used regardless of whether you are installing, or uninstalling the application.
+   - **No uninstall content** - Choose this if you don't want to supply an uninstall content location for the application.
+   - **Different from install content** - Choose this if you want to specify an uninstall content location that's different from the install content location.
 5. If you selected **Different from install content**, browse to, or enter the location of the application content that will be used to uninstall the application.
 6. Click **OK** to close the deployment type properties dialog box.
 
@@ -229,20 +229,20 @@ To solve this problem, you can now specify both an installation content location
 This preview introduces several improvements to the [accessibility features](/sccm/core/understand/accessibility-features) in the Configuration Manager console. These include:     
 
 **New keyboard shortcuts to move around the console:**
--   Ctrl + M - Sets focus on the main (central) pane.
--   Ctrl + T - Sets focus to the top node in the navigation pane. If the focus was already in that pane, the focus is set to the last node you visited.
--   Ctrl + I -  Sets focus to the breadcrumb bar, below the ribbon.
--   Ctrl + L - Sets focus to the **Search** field, when available.
--   Ctrl + D - Sets focus to the details pane, when available.
--   Alt – Changes focus in and out of the ribbon.
+- Ctrl + M - Sets focus on the main (central) pane.
+- Ctrl + T - Sets focus to the top node in the navigation pane. If the focus was already in that pane, the focus is set to the last node you visited.
+- Ctrl + I -  Sets focus to the breadcrumb bar, below the ribbon.
+- Ctrl + L - Sets focus to the **Search** field, when available.
+- Ctrl + D - Sets focus to the details pane, when available.
+- Alt – Changes focus in and out of the ribbon.
 
 **General improvements:**
--   Improved navigation in the navigation pane when you type the letters of a node name.
--   Keyboard navigation through the main view and the ribbon are now circular.
--   Keyboard navigation in the details pane is now circular. To return to the previous object or pane, use Ctrl + D, then Shift + TAB.
--   After refreshing a Workspace view, the focus is set to the main pane of that workspace.
--   Fixed an issue to enable screen readers to announce the names of list items.
--   Added accessible names for multiple controls on the page that enables screen readers to announce important information.
+- Improved navigation in the navigation pane when you type the letters of a node name.
+- Keyboard navigation through the main view and the ribbon are now circular.
+- Keyboard navigation in the details pane is now circular. To return to the previous object or pane, use Ctrl + D, then Shift + TAB.
+- After refreshing a Workspace view, the focus is set to the main pane of that workspace.
+- Fixed an issue to enable screen readers to announce the names of list items.
+- Added accessible names for multiple controls on the page that enables screen readers to announce important information.
 
 
 ## Changes to the Azure Services Wizard to support Upgrade Readiness
@@ -255,10 +255,10 @@ Although the method to configure the connection has changed, prerequisites for t
 The prerequisites for a [connection to Upgrade Readiness](/sccm/core/clients/manage/upgrade-readiness#connect-configuration-manager-to-upgrade-readiness) are unchanged from those detailed for the Current Branch of Configuration Manager. They are repeated here for convenience:  
 
 **Prerequisites**
--	In order to add the connection, your Configuration Manager environment must first configure a [service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point) in an [online mode](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_modes). When you add the connection to your environment, it will also install the Microsoft Monitoring Agent on the machine running this site system role.
--	Register Configuration Manager as a “Web Application and/or Web API” management tool, and get the [client ID from this registration](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/).
--	Create a client key for the registered management tool in Azure Active Directory.
--	In the Azure Management Portal, provide the registered web app with permission to access OMS, as described in [Provide Configuration Manager with permissions to OMS](https://azure.microsoft.com/documentation/articles/log-analytics-sccm/#provide-configuration-manager-with-permissions-to-oms).
+- In order to add the connection, your Configuration Manager environment must first configure a [service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point) in an [online mode](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_modes). When you add the connection to your environment, it will also install the Microsoft Monitoring Agent on the machine running this site system role.
+- Register Configuration Manager as a “Web Application and/or Web API” management tool, and get the [client ID from this registration](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/).
+- Create a client key for the registered management tool in Azure Active Directory.
+- In the Azure Management Portal, provide the registered web app with permission to access OMS, as described in [Provide Configuration Manager with permissions to OMS](https://azure.microsoft.com/documentation/articles/log-analytics-sccm/#provide-configuration-manager-with-permissions-to-oms).
 
 > [!IMPORTANT]       
 > When configuring permission to access OMS, be sure to choose the **Contributor** role, and assign it permissions to the resource group of the registered app.
@@ -266,19 +266,19 @@ The prerequisites for a [connection to Upgrade Readiness](/sccm/core/clients/man
 After the prerequisites are configured, you are ready to use the Wizard to create the connection.
 
 ### Use the Azure Services Wizard to configure Upgrade Readiness
-1.	In the console, go to **Administration** > **Overview** > **Cloud Services** > **Azure Services**, and then choose **Configure Azure Services** from the **Home** tab of the ribbon, to start the **Azure Services Wizard**.
+1. In the console, go to **Administration** > **Overview** > **Cloud Services** > **Azure Services**, and then choose **Configure Azure Services** from the **Home** tab of the ribbon, to start the **Azure Services Wizard**.
 
-2.	On the **Azure Services** page, select the **Upgrade Readiness Connector**, and then click **Next**.
+2. On the **Azure Services** page, select the **Upgrade Readiness Connector**, and then click **Next**.
 
-3.	On the **App** page, specify your **Azure environment** (the technical preview supports only the Public Cloud). Then, click **Import** to open the **Import Apps** window.
+3. On the **App** page, specify your **Azure environment** (the technical preview supports only the Public Cloud). Then, click **Import** to open the **Import Apps** window.
 
-4.	In the **Import Apps** window, specify details for a web app that already exists in your Azure AD.
-    -	Provide a friendly name for the Azure AD Tenant Name. Then, specify the Tenant ID, Application Name, Client ID, secret key for the Azure web app, and the App ID URI.
-    -	Click **Verify**, and if successful, click **OK** to continue.
+4. In the **Import Apps** window, specify details for a web app that already exists in your Azure AD.
+    - Provide a friendly name for the Azure AD Tenant Name. Then, specify the Tenant ID, Application Name, Client ID, secret key for the Azure web app, and the App ID URI.
+    - Click **Verify**, and if successful, click **OK** to continue.
 
-5.	 On the **Configuration** page, specify the subscription, resource group, and Windows Analytics Workspace you want to use with this connection to Upgrade Readiness.  
+5.  On the **Configuration** page, specify the subscription, resource group, and Windows Analytics Workspace you want to use with this connection to Upgrade Readiness.  
 
-6.	Click **Next** to go to the **Summary** page, and then complete the wizard to create the connection.
+6. Click **Next** to go to the **Summary** page, and then complete the wizard to create the connection.
 
 
 ## New client settings for cloud services
@@ -300,9 +300,9 @@ If you remove the connection, devices are not un-registered, but no new devices 
 ### Try it out!
 
 1. Configure the following client settings (found in the Cloud Services) section using the information in [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings).
-	-	**Automatically register new Windows 10 domain joined devices with Azure Active Directory** – Set to **Yes** (default), or **No**.
-	-	**Enable clients to use a cloud management gateway** – Set to **Yes** (default), or **No**.
-2.	Deploy the client settings to the required collection of devices.
+   - **Automatically register new Windows 10 domain joined devices with Azure Active Directory** – Set to **Yes** (default), or **No**.
+   - **Enable clients to use a cloud management gateway** – Set to **Yes** (default), or **No**.
+2. Deploy the client settings to the required collection of devices.
 
 To confirm that the device is joined to Azure AD, run the command **dsregcmd.exe /status** in a command prompt window. The **AzureAdjoined** field in the results will show **YES** if the device is Azure AD joined.
 
@@ -346,11 +346,11 @@ To allow users to approve their own scripts:
 2. In the **Software Library** workspace, click **Scripts**.
 3. On the **Home** tab, in the **Create** group, click **Create Script**.
 4. On the **Script** page of the **Create Script** wizard, configure the following:
-	- **Script Name** - Enter a name for the script. Although you can create multiple scripts with the same name, this will make it harder for you to find the script you need in the Configuration Manager console.
-	- **Script language** - Currently, only **PowerShell** scripts are supported.
-	- **Import** - Import a PowerShell script into the console. The script is displayed in the **Script** field.
-	- **Clear** - Removes the current script from the **Script** field.
-	- **Script** - Displays the currently imported script. You can edit the script in this field as necessary.
+   - **Script Name** - Enter a name for the script. Although you can create multiple scripts with the same name, this will make it harder for you to find the script you need in the Configuration Manager console.
+   - **Script language** - Currently, only **PowerShell** scripts are supported.
+   - **Import** - Import a PowerShell script into the console. The script is displayed in the **Script** field.
+   - **Clear** - Removes the current script from the **Script** field.
+   - **Script** - Displays the currently imported script. You can edit the script in this field as necessary.
 5. Complete the wizard. The new script is displayed in the **Script** list with a status of **Waiting for approval**. Before you can run this script on client devices, you must approve it.
 
 
@@ -501,28 +501,28 @@ For more information about compliance settings, see [Ensure device compliance](/
 
 * **Required password type**. Specify whether the user must create an alphanumeric password or a numeric password. For alphanumeric passwords, you also specify the minimum number of character sets that the password must have. The four character sets are: Lowercase, uppercase letters, symbols and numbers.
 
-  	**Supported on:**
-  	* Windows Phone 8+
-  	* Windows 8.1+
-  	* iOS 6+
+  **Supported on:**
+  * Windows Phone 8+
+  * Windows 8.1+
+  * iOS 6+
 <br></br>
 * **Block USB debugging on device**. You do not have to configure this settings as USB debugging is already disabled on Android for Work devices.
 
- 	**Supported on:**
-  	* Android 4.0+
-  	* Samsung KNOX Standard 4.0+
+  **Supported on:**
+  * Android 4.0+
+  * Samsung KNOX Standard 4.0+
 <br></br>
 * **Block apps from unknown sources**. Require that devices prevent installation of apps from unknown sources. You do not have to configure this setting as Android for Work devices always restrict installation from unknown sources.
 
-  	**Supported on:**
-  	* Android 4.0+
-  	* Samsung KNOX Standard 4.0+
+  **Supported on:**
+  * Android 4.0+
+  * Samsung KNOX Standard 4.0+
 <br></br>
 * **Require threat scan on apps**. This setting specifies that the Verify apps feature is enabled on the device.
 
-  	**Supported on:**
-  	* Android 4.2 through 4.4
-  	* Samsung KNOX Standard 4.0+
+  **Supported on:**
+  * Android 4.2 through 4.4
+  * Samsung KNOX Standard 4.0+
 
 See [create and deploy a device compliance policy](https://docs.microsoft.com/sccm/mdm/deploy-use/create-compliance-policy) to try the new device compliance rules.
 
@@ -552,13 +552,13 @@ We have updated the setting descriptions for Android for Work configuration item
 |Before 1706 Technical Preview | New option name | Behavior|
 |-|-|-|
 |Prevent any sharing across boundaries| Default sharing restrictions| Work-to-personal: Default (expected to be blocked on all versions) <br>Personal-to-work: Default (allowed on 6.x+, blocked on 5.x)|
-|No restrictions|	Apps in personal profile can handle sharing requests from work profile|	Work-to-personal: Allowed  <br>Personal-to-work: Allowed|
-|Apps in work profile can handle sharing requests from personal profile	|Apps in work profile can handle sharing requests from personal profile	|Work-to-personal: Default<br>Personal-to-work: Allowed<br>(Only useful on 5.x where personal-to-work is blocked)|
+|No restrictions| Apps in personal profile can handle sharing requests from work profile| Work-to-personal: Allowed  <br>Personal-to-work: Allowed|
+|Apps in work profile can handle sharing requests from personal profile |Apps in work profile can handle sharing requests from personal profile |Work-to-personal: Default<br>Personal-to-work: Allowed<br>(Only useful on 5.x where personal-to-work is blocked)|
 
 None of these options directly prevent copy-paste behavior. We added a custom setting to the service and Company Portal app in 1704 that can be configured to prevent copy-paste. This can be set through custom URI.
 
--	OMA-URI:  ./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste
--	Value type: Boolean
+- OMA-URI:  ./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste
+- Value type: Boolean
 
 Setting DisallowCrossProfileCopyPaste to true prevents copy-paste behavior between Android for Work personal and work profiles.
 

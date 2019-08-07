@@ -43,7 +43,7 @@ Client machines are installed within Hyper-V. The lab itself can also be run as 
  When you build this lab, you will have a functional environment to work in. But this environment will not be optimized for factors like system performance, hard disk space management, and SQL Server storage.  
 
 ##  <a name="BKMK_EvalRec"></a> Recommended reading before you build the lab  
- There is a wealth of content available in [Documentation for System Center Configuration Manager](http://docs.microsoft.com/sccm/). We recommend that you read the following topics from this library before you start to build the lab:  
+ There is a wealth of content available in [Documentation for System Center Configuration Manager](https://docs.microsoft.com/sccm/). We recommend that you read the following topics from this library before you start to build the lab:  
 
 -   Learn core concepts about the Configuration Manager console, end-user portals, and example scenarios in [Introduction to System Center Configuration Manager](../../core/understand/introduction.md).  
 

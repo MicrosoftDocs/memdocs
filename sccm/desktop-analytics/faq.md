@@ -2,7 +2,7 @@
 title: FAQ for Desktop Analytics
 titleSuffix: Configuration Manager
 description: Frequently asked questions for Desktop Analytics.
-ms.date: 06/10/2019
+ms.date: 07/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -17,6 +17,24 @@ ms.collection: M365-identity-device-management
 
 > [!Note]  
 > This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
+
+## Prerequisites 
+
+### Can I use Desktop Analytics with Intune-managed devices? 
+
+The vast majority of customers that can benefit from the Desktop Analytics workflow use Configuration Manager to deploy Windows. We know Intune customers love the additional insights from Analytics data, and we're working on ways to share insights with them as well.
+
+### It's been over 72 hours and the portal is still processing data, what next? 
+
+When you first set up Desktop Analytics, the reports in Configuration Manager and the Desktop Analytics portal may not show complete data right away. It can take 2-3 days for the service to process the data. If it's been over 72 hours, and the portal is still processing data, follow these steps:
+
+- To confirm that active devices are properly configured, use the [Connection Health dashboard](/sccm/desktop-analytics/monitor-connection-health). This dashboard doesn't update in real time.
+- Make sure devices are sending diagnostic data to the Desktop Analytics service. For more information, see [Enable data sharing](/sccm/desktop-analytics/enable-data-sharing).
+- Provision [Azure AD applications](/sccm/desktop-analytics/troubleshooting#bkmk_AzureADApps) on your Azure AD.
+- Check devices that you've associated with your organization in the last seven days. In the [Desktop Analytics portal](https://aka.ms/desktopanalytics), go to the **Connected services** pane. Select **Enroll devices**, and **View recent data**
+
+If devices are properly configured, and you're still not seeing data in your workspace, [contact Microsoft support](https://support.microsoft.com/hub/4343728/support-for-business).
+
 
 ## Windows upgrade
 
@@ -40,7 +58,6 @@ There are two types of data in the Desktop Analytics portal: Administrator data 
 
 All data is updated automatically once daily, even if you don't request an on-demand data refresh. There's no way to trigger an on-demand refresh of diagnostic data. For more information about the different types of data in Desktop Analytics, see [Data latency](/sccm/desktop-analytics/troubleshooting#data-latency).
 
-
 ## Privacy
 
 ### Can Desktop Analytics be used without a direct client connection to the Microsoft Data Management Service?
@@ -56,3 +73,10 @@ For the Microsoft Data Management Service and Analytics Azure Storage: No, these
 ### Where is my organization's data stored?
 
 Windows diagnostic data from your computers is encrypted, sent to, and processed at Microsoft-managed secure data centers located in the United States. Our analysis of the Desktop Analytics-related data is then provided to you through the Desktop Analytics solution in the Azure portal. Desktop Analytics is supported in all Azure regions. Selecting an international Azure region doesn't prevent diagnostic data from being sent to and processed in Microsoft's secure data centers in the US.
+
+## Other
+
+### Can I use Desktop Analytics for my Office 365 ProPlus upgrades?
+
+No, Desktop Analytics is focused on Windows. Microsoft developed Desktop Analytics in close collaboration with numerous customers. Through the preview program, customer feedback was about how Desktop Analytics improved their ability to confidently manage Windows deployments. They also told us they wanted [Office 365 ProPlus readiness
+](/sccm/sum/deploy-use/office-365-dashboard#bkmk_o365_readiness) more closely integrated with office management tools in Configuration Manager and Intune. Microsoft will continue to make investments in those areas, while focusing on Windows scenarios in Desktop Analytics.

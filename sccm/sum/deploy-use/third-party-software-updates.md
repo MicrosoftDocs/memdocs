@@ -33,7 +33,7 @@ Beginning with version 1806, the **Third-Party Software Update Catalogs** node i
 ## Additional requirements when the SUP is remote from the top-level site server 
 
 1. SSL must be enabled on the SUP when it's remote. This requires a server authentication certificate generated from an internal certificate authority or via a public provider.
-    - [Configure SSL on WSUS](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#bkmk_2.5.ConfigSSL)
+    - [Configure SSL on WSUS](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol)
         - When you configure SSL on WSUS, note some of the web services and the virtual directories are always HTTP and not HTTPS. 
         - Configuration Manager downloads third-party content for software update packages from your WSUS content directory over HTTP.   
     - [Configure SSL on the SUP](../get-started/install-a-software-update-point.md#configure-ssl-communications-to-wsus)

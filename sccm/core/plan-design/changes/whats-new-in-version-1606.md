@@ -19,10 +19,10 @@ ms.collection: M365-identity-device-management
 
 Update 1606 for System Center Configuration Manager is available as an in-console update for previously installed sites that run version 1511 or 1602. Version 1511 is the initial baseline version you use to install new Configuration Manager sites.
 > [!TIP]  
->  Learn more about:  
+> Learn more about:  
 >   
->  -   [Installing new sites](/sccm/core/servers/deploy/install/prepare-to-install-sites) (using a baseline version like 1511)  
->  -   [Installing updates at sites](/sccm/core/servers/manage/updates) (like update 1602 or 1606)  
+> - [Installing new sites](/sccm/core/servers/deploy/install/prepare-to-install-sites) (using a baseline version like 1511)  
+> - [Installing updates at sites](/sccm/core/servers/manage/updates) (like update 1602 or 1606)  
 
  The following sections provide details about changes and new capabilities introduced in version 1606 of Configuration Manager.  
 

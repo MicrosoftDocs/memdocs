@@ -16,7 +16,7 @@ You add an operating system install package to System Center Configuration Manag
 
 ### To add an operating system install package  
 
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Create an instance of [SMS_OperatingSystemInstallPackage](../../develop/reference/osd/sms_operatingsysteminstallpackage-server-wmi-class.md).  
 
@@ -115,4 +115,4 @@ public void AddOSInstallPackage(
 
 ## See Also  
  [How to Assign a Package to a Distribution Point](../../develop/core/servers/configure/how-to-assign-a-package-to-a-distribution-point.md)   
- [Operating System Deployment Image Management](../../develop/osd/operating-system-deployment-image-management.md)
+ [About image management](/sccm/develop/osd/about-operating-system-deployment-image-management)

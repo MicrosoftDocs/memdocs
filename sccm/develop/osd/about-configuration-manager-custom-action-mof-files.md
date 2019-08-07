@@ -190,7 +190,6 @@ string          PackageIDForApplicationExe;
 
 ## See Also  
  [About Configuration Manager Custom Actions](../../develop/osd/about-configuration-manager-custom-actions.md)   
- [Extending Operating System Deployment](../../develop/osd/extending-operating-system-deployment.md)   
  [How to Create a Configuration Manager Custom Action Control](../../develop/osd/how-to-create-a-configuration-manager-custom-action-control.md)   
  [How to Create a MOF File for a Configuration Manager Custom Action](../../develop/osd/how-to-create-a-mof-file-for-a-configuration-manager-custom-action.md)   
  [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md)   

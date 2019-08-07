@@ -537,18 +537,18 @@ The view can be joined with other views by using the **ResourceID** column.
 
 #### Sampple Query
 Select 
-	RV.Netbios_Name0 as 'Computer',
-	SBS.LatestBiosDuration0 as 'Latest BIOS Duration',
-	SBS.LatestBootDuration0 as 'Latest Boot Duration',
-	SBS.LatestCoreBootDuration0 as 'Latest Core Boot Duration',
-	SBS.LatestEventLogStart0 as 'Latest Event Log Start',
-	SBS.LatestGPDuration0 as 'Latest Group Ploci Duration',
-	SBS.LatestUpdateDuration0 as 'Latest Update Duration'
+    RV.Netbios_Name0 as 'Computer',
+    SBS.LatestBiosDuration0 as 'Latest BIOS Duration',
+    SBS.LatestBootDuration0 as 'Latest Boot Duration',
+    SBS.LatestCoreBootDuration0 as 'Latest Core Boot Duration',
+    SBS.LatestEventLogStart0 as 'Latest Event Log Start',
+    SBS.LatestGPDuration0 as 'Latest Group Ploci Duration',
+    SBS.LatestUpdateDuration0 as 'Latest Update Duration'
 from 
-	dbo.v_R_System_Valid RV
-	inner join dbo.v_GS_SYSTEMBOOTSUMMARY SBS on RV.ResourceID = SBS.ResourceID
+    dbo.v_R_System_Valid RV
+    inner join dbo.v_GS_SYSTEMBOOTSUMMARY SBS on RV.ResourceID = SBS.ResourceID
 Order by
-	RV.Netbios_Name0
+    RV.Netbios_Name0
 
 
 ### v_GS_SYSTEMHEALTHAGENT

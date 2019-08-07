@@ -1,6 +1,6 @@
 - name: Desktop Analytics
   items:
-  - name: Overview
+  - name: What is Desktop Analytics?
     href: overview.md
   - name: Tutorials
     items:
@@ -40,6 +40,8 @@
       href: privacy.md
     - name: Troubleshoot
       href: troubleshooting.md
+    - name: Log collector
+      href: log-collector.md
     - name: Monitor connection health
       href: monitor-connection-health.md
     - name: Frequently asked questions

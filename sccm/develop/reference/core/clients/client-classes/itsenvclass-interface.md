@@ -29,4 +29,4 @@ The `ITSEnvClass` automation interface, in System Center Configuration Manager, 
 ## See Also  
  [Operating System Deployment Client COM Automation Classes](../../../../../develop/reference/core/clients/client-classes/operating-system-deployment-client-com-automation-classes.md)   
  [SMS_TaskSequence Server WMI Class](../../../../../develop/reference/osd/sms_tasksequence-server-wmi-class.md)   
- [Operating System Deployment Task Sequencing](../../../../../develop/osd/operating-system-deployment-task-sequencing.md)
+ [Task sequence overview](/sccm/develop/osd/operating-system-deployment-task-sequences-overview)

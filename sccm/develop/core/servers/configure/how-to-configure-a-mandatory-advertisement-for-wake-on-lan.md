@@ -136,8 +136,5 @@ public void SetWOLOnAdvertisment(WqlConnectionManager connection,
  For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## See Also  
- [Software Distribution Wake On LAN](../../../../develop/core/servers/configure/software-distribution-wake-on-lan.md)   
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
- [Software Distribution Advertisements](../../../../develop/core/servers/configure/software-distribution-advertisements.md)   
- [Software Distribution Packages](../../../../develop/core/servers/configure/software-distribution-packages.md)   
- [Software Distribution Programs](../../../../develop/core/servers/configure/software-distribution-programs.md)
+ [About deployments](/sccm/develop/core/servers/configure/about-software-distribution-deployments)
+ [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)

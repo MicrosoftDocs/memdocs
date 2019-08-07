@@ -21,7 +21,7 @@ In System Center Configuration Manager, you add a category to a Windows driver b
 
 ### To add a category to a Windows driver  
 
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Get the [SMS_Driver](../../develop/reference/osd/sms_driver-server-wmi-class.md) object for the driver you want to add a category to.  
 
@@ -158,5 +158,4 @@ public void AddDriverCategory(
 
 ## See Also  
  [About Operating System Deployment Driver Management](../../develop/osd/about-operating-system-deployment-driver-management.md)   
- [Operating System Deployment Driver Management](../../develop/osd/operating-system-deployment-driver-management.md)   
  [How to Remove a Category from a Windows Driver](../../develop/osd/how-to-remove-a-category-from-a-windows-driver.md)

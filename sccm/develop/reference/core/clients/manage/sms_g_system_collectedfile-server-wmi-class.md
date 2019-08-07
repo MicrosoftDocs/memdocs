@@ -139,7 +139,7 @@ Class SMS_G_System_CollectedFile : SMS_G_System
 
 3.  For any new collectable file added, adds an entry to each of the embedded property lists Collectable File Path, Collectable File Subdirectories, Collectable File Exclude, and Collectable File Max Size.  
 
-4.  Updates the site control file. For information about updating the site control file, see [Configuration Manager Site Control File](../../../../../develop/core/understand/site-control-file.md).  
+4.  Updates the site control file. For more information, see [About the site control file](/sccm/develop/core/understand/about-the-configuration-manager-site-control-file).  
 
 > [!NOTE]
 >  Collecting files from clients can generate a large volume of network traffic and require extensive storage space. For this reason, you should test any changes you make in a test environment before implementing them in a production environment.  
@@ -148,13 +148,12 @@ Class SMS_G_System_CollectedFile : SMS_G_System
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Resource Management Server WMI Classes](../../../../../develop/reference/core/clients/manage/configuration-manager-resource-management-server-wmi-classes.md)   
  [SMS_G_System Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_g_system-server-wmi-class.md)   
- [Configuration Manager Site Control File](../../../../../develop/core/understand/site-control-file.md)
+ [About the site control file](/sccm/develop/core/understand/about-the-configuration-manager-site-control-file)

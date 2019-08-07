@@ -2,7 +2,7 @@
 title: Optimize Windows 10 update delivery
 titleSuffix: Configuration Manager
 description: Learn how to use Configuration Manager to manage update content to stay current with Windows 10.  
-ms.date: 06/15/2018
+ms.date: 07/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -19,7 +19,7 @@ ms.collection: M365-identity-device-management
 
 For many customers, a successful path to getting and staying current with Windows 10 monthly updates starts with a good content distribution strategy using Configuration Manager. The size of the monthly quality updates can be a cause of concern for large organizations. There are a few technologies available that are intended to help reduce bandwidth and network load to optimize update delivery. This article explains these technologies, compares them, and provides recommendations to help you make decisions on which one to use.  
  
-Windows 10 provides several types of updates. For more information, see [Update types in Windows Update for Business](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb#update-types). This article focuses on Windows 10 *quality* updates with Configuration Manager. 
+Windows 10 provides several types of updates. For more information, see [Update types in Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb#types-of-updates-managed-by-windows-update-for-business). This article focuses on Windows 10 *quality* updates with Configuration Manager. 
 
 
 ## Express update delivery
@@ -87,7 +87,7 @@ Selecting the right peer caching technology for express installation files depen
 | Peer discovery | Via Delivery Optimization cloud service (requires internet access) | Via management point (based on client boundary groups) | Multicast |
 | Reporting | Yes (using Windows Analytics) | ConfigMgr client data sources dashboard | ConfigMgr client data sources dashboard |
 | WAN usage control | Yes (native, can be controlled via group policy settings) | Boundary groups | Subnet support only |
-| Supported content types | - Express updates (through ConfigMgr)</br> - Windows and security updates</br> - Drivers</br> - Windows Store apps</br> - Windows Store for Business apps | All ConfigMgr content types, including images downloaded in [Windows PE](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic) | All ConfigMgr content types, except images |
+| Supported content types | **Through ConfigMgr:** </br> Express updates </br> </br> **Through Microsoft cloud:**</br> Windows and security updates</br> Drivers</br> Windows Store apps</br> Windows Store for Business apps | All ConfigMgr content types, including images downloaded in [Windows PE](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic) | All ConfigMgr content types, except images |
 | Management through ConfigMgr | Partial (client agent setting) | Yes (client agent setting) | Yes (client agent setting) |
 
 

@@ -61,17 +61,6 @@ Additionally, Configuration Manager sites and clients that run in Azure virtual 
 
 An Azure subscription is required to use Azure to host distribution points. You incur charges based on the amount of data that transfers to and from the service.  
 
-### Microsoft Intune (for mobile device management)  
- You can integrate your Microsoft Intune subscription with Configuration Manager to enable management of devices by using the Intune service. This integration:  
-
--   Is called a hybrid configuration, and it extends Configuration Manager (or Intune, depending on your perspective) to support a wide variety of devices.  
-
--   Requires the Microsoft Intune Connector site system role.  
-
--   Requires you to have a separate Intune subscription with sufficient licenses for the devices you will manage with Intune.  
-
-Although Intune uses Azure, it does not require you to independently configure Azure, nor are you subject to additional costs beyond that of the Intune subscription.  
-
 ### Additional Configuration Manager capabilities  
  Some Configuration Manager capabilities can connect to cloud-based services, like:  
 

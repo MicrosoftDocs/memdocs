@@ -61,8 +61,6 @@ Class SMS_Collection : SMS_BaseClass
 |------------|-----------------|  
 |[AddMembershipRule Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/addmembershiprule-method-in-class-sms_collection.md)|Adds one new rule to the `CollectionRules` property of `SMS_Collection`.|  
 |[AddMembershipRules Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/addmembershiprules-method-in-class-sms_collection.md)|Adds multiple new rules to the `CollectionRules` property of `SMS_Collection`.|  
-|[AMTOperateForCollection Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/amtoperateforcollection-method-in-class-sms_collection.md)|Runs an Active Management Technology (neAMT) operation on this collection.|  
-|[AMTOperateForMachines Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/amtoperateformachines-method-in-class-sms_collection.md)|Runs an AMT operation on a set of computers.|  
 |[ApproveClients Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/approveclients-method-in-class-sms_collection.md)|Approves specified client computers to join the site.|  
 |[BlockClients Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/blockclients-method-in-class-sms_collection.md)|Blocks specified client computers from communicating with the site.|  
 |[ChangeOwnership Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/changeownership-method-in-class-sms_collection.md)|Changes ownership of machines to a device owner.|  
@@ -406,4 +404,3 @@ Class SMS_Collection : SMS_BaseClass
 
 ## See Also  
  [SMS_CollectionRule Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collectionrule-server-wmi-class.md)   
- [Configuration Manager Collections Server WMI Classes](../../../../../develop/reference/core/clients/collections/collections-server-wmi-classes.md)

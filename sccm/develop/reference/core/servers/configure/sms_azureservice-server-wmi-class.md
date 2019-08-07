@@ -1,8 +1,8 @@
 ---
-title: "SMS_AzureService Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_AzureService class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: a7506056-7433-4903-8a9a-b3dcd417bf8c
@@ -11,10 +11,12 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# SMS_AzureService Server WMI Class
-The `SMS_AzureService` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an Windows Azure service which is a Cloud Distribution Point for Configuration Manager.  
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+# SMS_AzureService server WMI class
+
+The `SMS_AzureService` WMI class is an SMS Provider server class in Configuration Manager, that represents a Microsoft Azure service which is a cloud distribution point for Configuration Manager.  
+
+The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
 ## Syntax  
 
@@ -61,8 +63,8 @@ Class SMS_AzureService : SMS_BaseClass
 
 |Method|Description|  
 |------------|-----------------|  
-|[Start Method in Class SMS_AzureService](../../../../../develop/reference/core/servers/configure/start-method-in-class-sms_azureservice.md)|Method used to start a Windows Azure Service (in this case the Cloud Distribution point).|  
-|[Stop Method in Class SMS_AzureService](../../../../../develop/reference/core/servers/configure/stop-method-in-class-sms_azureservice.md)|Method used to stop a Windows Azure Service (in this case the Cloud Distribution point).|  
+|[Start Method in Class SMS_AzureService](../../../../../develop/reference/core/servers/configure/start-method-in-class-sms_azureservice.md)|Method used to start a Microsoft Azure service (in this case the cloud distribution point).|  
+|[Stop Method in Class SMS_AzureService](../../../../../develop/reference/core/servers/configure/stop-method-in-class-sms_azureservice.md)|Method used to stop a Microsoft Azure service (in this case the cloud distribution point).|  
 
 ## Properties  
  `AzureServiceID`  
@@ -72,7 +74,7 @@ Class SMS_AzureService : SMS_BaseClass
 
  Qualifiers: [key, not_null]  
 
- Identifier of the Windows Azure service.  
+ Identifier of the Microsoft Azure service.  
 
  `DeploymentSlot`  
  Data type: `String`  
@@ -95,7 +97,7 @@ Class SMS_AzureService : SMS_BaseClass
 
  Qualifiers: [not_null]  
 
- Description of the Windows Azure service.  
+ Description of the Microsoft Azure service.  
 
  `Flags`  
  Data type: `UInt32`  
@@ -104,7 +106,7 @@ Class SMS_AzureService : SMS_BaseClass
 
  Qualifiers: [bits]  
 
- Flags for configuring the Windows Azure service. Possible values are:  
+ Flags for configuring the Microsoft Azure service. Possible values are:  
 
 |Value|
 |-|  
@@ -167,7 +169,7 @@ Class SMS_AzureService : SMS_BaseClass
 
  Qualifiers: [not_null]  
 
- Name of the Windows Azure service based on restrictions imposed by Windows Azure.  
+ Name of the Microsoft Azure service based on restrictions imposed by Microsoft Azure.  
 
  `NumberOfInstances`  
  Data type: `UInt32`  
@@ -185,7 +187,7 @@ Class SMS_AzureService : SMS_BaseClass
 
  Qualifiers: [not_null]  
 
- This is the value selected from the list of regions eligible for your Windows Azure subscription ID, obtained either by using the Configuration Manager Administrator console or the Windows Azure management console.  
+ This is the value selected from the list of regions eligible for your Microsoft Azure subscription ID, obtained either by using the Configuration Manager Administrator console or the Microsoft Azure management console.  
 
  `ServiceCertificate`  
  Data type: `String`  
@@ -212,7 +214,7 @@ Class SMS_AzureService : SMS_BaseClass
 
  Qualifiers: none  
 
- Service certificate thumbprint algorithm supported by Windows Azure. The only thumbprint algorithm supported is SHA1.  
+ Service certificate thumbprint algorithm supported by Microsoft Azure. The only thumbprint algorithm supported is SHA1.  
 
  `ServiceThumbprintAlgorithm`  
  Data type: `String`  
@@ -221,7 +223,7 @@ Class SMS_AzureService : SMS_BaseClass
 
  Qualifiers: none  
 
- Service certificate thumbprint algorithm supported by Windows Azure. Possible values below:  
+ Service certificate thumbprint algorithm supported by Microsoft Azure. Possible values below:  
 
 |Thumbprint Algorithm|  
 |--------------------------|  
@@ -234,7 +236,7 @@ Class SMS_AzureService : SMS_BaseClass
 
  Qualifiers: [not_null]  
 
- Type of Windows Azure service. Possible values below:  
+ Type of Microsoft Azure service. Possible values below:  
 
 |Windows Asure Service|  
 |---------------------------|  
@@ -303,7 +305,7 @@ Class SMS_AzureService : SMS_BaseClass
 
  Qualifiers: [not_null]  
 
- Name of Windows Azure Storage service, based on restrictions imposed on by Windows Azure.  
+ Name of Microsoft Azure storage service, based on restrictions imposed on by Microsoft Azure.  
 
  `StorageUsage`  
  Data type: `UInt32`  
@@ -312,7 +314,7 @@ Class SMS_AzureService : SMS_BaseClass
 
  Qualifiers: none  
 
- Indicates the storage usage of the Windows Azure Storage service in gigabytes.  
+ Indicates the storage usage of the Microsoft Azure storage service in gigabytes.  
 
  `StorageWarningThreshold`  
  Data type: `UInt32`  
@@ -330,7 +332,7 @@ Class SMS_AzureService : SMS_BaseClass
 
  Qualifiers: [not_null]  
 
- Subscription identifier of the Windows Azure service.  
+ Subscription identifier of the Microsoft Azure service.  
 
  `TrafficCriticalThreshold`  
  Data type: `UInt32`  

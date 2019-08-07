@@ -142,5 +142,3 @@ In System Center Configuration Manager, baselines are used to define the configu
 
  Additionally, if you want to use an imported configuration item but delete from it objects or settings (or their related validation criteria), your only editing choice is to create a duplicate configuration item and edit that duplicate configuration item accordingly.  
 
-## See Also  
- [Configuration Manager Compliance Settings (DCM)](../../develop/compliance/compliance-settings-dcm.md)

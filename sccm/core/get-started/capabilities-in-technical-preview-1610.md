@@ -56,10 +56,10 @@ As an administrator you can now deny a previously approved application request. 
 #### Try it out
 To deny an application approved request:
 
-1.	In the Configuration Manager console, [create and deploy an application](https://docs.microsoft.com/sccm/apps/deploy-use/create-applications) that requires approval.
-2.	On a client computer, open Software Center and submit a request for the application.
-3.	In the Configuration Manager console, approve the application request.
-4.	Deny the approved application request: In the Configuration Manager console, navigate **Software Library** > **Overview** > **Application Management** > **Approval Requests** and select the application request you want to deny.  In the ribbon, click **Deny**.
+1. In the Configuration Manager console, [create and deploy an application](https://docs.microsoft.com/sccm/apps/deploy-use/create-applications) that requires approval.
+2. On a client computer, open Software Center and submit a request for the application.
+3. In the Configuration Manager console, approve the application request.
+4. Deny the approved application request: In the Configuration Manager console, navigate **Software Library** > **Overview** > **Application Management** > **Approval Requests** and select the application request you want to deny.  In the ribbon, click **Deny**.
 
 ## Exclude clients from automatic upgrade
 Technical Preview 1610 introduces a new setting you can use to exclude a collection of clients from automatically installing updated client versions.  This applies to automatic upgrade as well as other methods such as software update-based upgrade, logon scripts, and group policy. This can be used for a collection of computers that need greater care when upgrading the client. A client that is in an excluded collection ignores requests to install updated client software.
@@ -122,13 +122,13 @@ Specifically, you can configure the following Windows Defender settings:
 
 ### Try it out!
 
-1.	In the Configuration Manager console, go **Assets and Compliance** > **Overview** > **Compliance Settings** > **Configuration Items**, and create a new **Configuration Item**.
-2.	Enter a name, then select **Windows 8.1 and Windows 10** under **Settings for devices managed without the Configuration Manager client** and click **Next**.
-3.	Ensure **All Windows 10 (64-bit)** and **All Windows 10 (32-bit)** are selected on the **Supported Platforms** page, then click **Next**.
-4.	Select the **Windows Defender** setting group, then click **Next**.
-5.	Configure the desired settings on this page, then click **Next**.
-6.	Complete the wizard.
-7.	Add this configuration item to a configuration baseline, and deploy this baseline to computers running Windows 10 November Update (1511) or above.
+1. In the Configuration Manager console, go **Assets and Compliance** > **Overview** > **Compliance Settings** > **Configuration Items**, and create a new **Configuration Item**.
+2. Enter a name, then select **Windows 8.1 and Windows 10** under **Settings for devices managed without the Configuration Manager client** and click **Next**.
+3. Ensure **All Windows 10 (64-bit)** and **All Windows 10 (32-bit)** are selected on the **Supported Platforms** page, then click **Next**.
+4. Select the **Windows Defender** setting group, then click **Next**.
+5. Configure the desired settings on this page, then click **Next**.
+6. Complete the wizard.
+7. Add this configuration item to a configuration baseline, and deploy this baseline to computers running Windows 10 November Update (1511) or above.
 
 > [!NOTE]
 > Remember to check the **Remediate noncompliant settings** checkbox when deploying the configuration baseline.
@@ -139,16 +139,16 @@ You can now request a policy sync for a mobile device from the Configuration Man
 
 ### Try it out!
 
-1.	In the Configuration Manager console, go **Assets and Compliance** > **Overview** > Devices.
-2.	In the **Remote Device Actions** menu, select **Send Sync Request**.
+1. In the Configuration Manager console, go **Assets and Compliance** > **Overview** > Devices.
+2. In the **Remote Device Actions** menu, select **Send Sync Request**.
 
 Sync can take five to ten minutes. Any changes in policy are synced to the device. You can track the state of the sync request in the **Remote Sync State** column in the **Devices** view, or in the device's **Properties** dialog.
 
 ## Additional security role support
 
 In addition to Full Administrator, the following built-in security roles now have full access to items in the **All Corporate-owned Devices** node, including **Predeclared Devices**, **iOS Enrollment Profiles**, and **Windows Enrollment Profiles**:
-•	**Asset Manager**
-•	**Company Resource Access Manager**
+- **Asset Manager**
+- **Company Resource Access Manager**
 
 Read-only access to these areas of the Configuration Manager console is still granted to the **Read-only Analyst** role.
 

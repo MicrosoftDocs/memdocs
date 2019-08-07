@@ -38,5 +38,4 @@ With this release, System Center Configuration Manager expands the abilities of 
    [How to Create an Advertisement](../../../../develop/core/servers/configure/how-to-create-an-advertisement.md)  
 
 ## See Also  
- [Configuration Manager SDK](../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)
+ [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)

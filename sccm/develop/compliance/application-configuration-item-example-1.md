@@ -16,7 +16,7 @@ The following Application Configuration Item Instance example determines whether
 
 ## Application Configuration Item Example  
 
-```  
+```xml
 <?xml version="1.0" encoding="utf-8"?>  
 
 <!--   
@@ -39,7 +39,7 @@ Version (string) - This attribute specifies the version of the configuration ite
 
     <Application AuthoringScopeId="ScopeId_F348CC96-19CA-4F5D-9D4F-D1451B5BEB1E" LogicalName="Application_5cb68ff1-a234-41ed-a7d4-14174d8108b7" Version="1" Is64Bit="false">  
         <Annotation>  
-            <DisplayName Text="Configuration Manager Client />  
+            <DisplayName Text="Configuration Manager Client" />  
             <Description Text="Configuration Manager Client (Windows Installer-based detection)" />  
         </Annotation>  
 
@@ -88,4 +88,4 @@ This application is discovered via Windows Installer-based discovery. If it does
 ```  
 
 ## See Also  
- [Authoring Compliance Settings Configuration Baselines and Configuration Items](../../develop/compliance/authoring-compliance-settings-configuration-baselines-and-configuration-items.md)
+[About authoring configuration baselines and items](/sccm/develop/compliance/about-authoring-configuration-baselines-and-configuration-items)

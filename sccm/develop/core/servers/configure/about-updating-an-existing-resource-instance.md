@@ -46,8 +46,6 @@ SELECT * FROM DiscPropertyDefs WHERE (Flags & 0x8) = 0x8
  A Heartbeat DDR is processed if it comes with a time stamp that is earlier than any other DDR (except a Heartbeat DDR). A DDR with a time stamp that is later than the client's current site database time stamp for that discovery method is rejected. The only exception is a Heartbeat DDR, which will be processed.  
 
 ## See Also  
- [Configuration Manager SDK](../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Discovery](../../../../develop/core/servers/configure/discovery.md)   
- [Extending Resource Discovery](../../../../develop/core/servers/configure/extending-resource-discovery.md)   
+
  [How to Get the Unique Identifier Value for a Client](../../../../develop/core/servers/configure/how-to-get-the-unique-identifier-value-for-a-client.md)   
  [How to Add New Properties to an Existing Resource Type](../../../../develop/core/servers/configure/how-to-add-new-properties-to-an-existing-resource-type.md)

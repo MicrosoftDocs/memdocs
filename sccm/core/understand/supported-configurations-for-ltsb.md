@@ -30,7 +30,7 @@ The LTSB has limited support for future server and client operating systems and 
 **Windows:**
 - Only quality and security updates for Windows are supported.
 - No support is added for current branches (CB), current branches for business (CBB), or LTSB of Windows 10.
--	No support for new major versions of Windows Server.
+- No support for new major versions of Windows Server.
 
 **SQL Server:**
 - Only quality and security updates, or minor upgrades like service packs, is supported for SQL Server.

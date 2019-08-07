@@ -43,7 +43,7 @@ The node XML for the System Center Configuration Manager console is in workspace
                …               </ChildNodes>    </RootNodeDescription>  </ChildNodes></RootNodeDescription>  
 ```  
 
-## See Also  
- [About Configuration Manager Console Nodes](../../../../develop/core/servers/console/about-configuration-manager-console-nodes.md)   
- [How to Create a Configuration Manager Console Node](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-console-node.md)   
- [Configuration Manager Console Nodes](../../../../develop/core/servers/console/console-nodes.md)
+## See also
+
+ [How to Create a Configuration Manager Console Node](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-console-node.md)
+ [About console nodes](/sccm/develop/core/servers/console/about-configuration-manager-console-nodes)

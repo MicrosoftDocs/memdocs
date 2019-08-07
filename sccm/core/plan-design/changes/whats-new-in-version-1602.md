@@ -22,10 +22,10 @@ Update 1602 for System Center Configuration Manager is only available as an in-c
 
 
 > [!TIP]  
->  Learn more about:  
+> Learn more about:  
 >   
->   -   [Installing new sites](/sccm/core/servers/deploy/install/prepare-to-install-sites) (using a baseline version like 1511)  
->   -   [Installing updates at sites](/sccm/core/servers/manage/updates) (like update 1602)  
+> - [Installing new sites](/sccm/core/servers/deploy/install/prepare-to-install-sites) (using a baseline version like 1511)  
+> - [Installing updates at sites](/sccm/core/servers/manage/updates) (like update 1602)  
 
  The following sections provide details about changes and new capabilities introduced in version 1602 of Configuration Manager.  
 

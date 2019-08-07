@@ -45,8 +45,4 @@ In System Center Configuration Manager, the driver catalog helps manage the cost
  Windows drivers can be configured to support specific platforms. The supported platforms are stored in the driver package XML. For more information, see [How to Specify The Supported Platforms for a Driver](../../develop/osd/how-to-specify-the-supported-platforms-for-a-driver.md).  
 
 ### Driver Categories  
- You can associate categories with Windows device drivers. For more information, see [How to Add a Category to a Windows Driver](../../develop/osd/how-to-add-a-category-to-a-windows-driver.md)  
-
-## See Also  
- [Operating System Deployment Driver Management](../../develop/osd/operating-system-deployment-driver-management.md)   
- [Configuration Manager Operating System Deployment](../../develop/osd/operating-system-deployment.md)
+ You can associate categories with Windows device drivers. For more information, see [How to Add a Category to a Windows Driver](../../develop/osd/how-to-add-a-category-to-a-windows-driver.md)

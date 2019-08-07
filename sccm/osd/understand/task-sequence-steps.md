@@ -2,7 +2,7 @@
 title: Task sequence steps
 titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
-ms.date: 06/12/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -690,6 +690,11 @@ If you have multiple encrypted drives, disable BitLocker on any data drives befo
 
 This step runs only in the full OS. It doesn't run in Windows PE.  
 
+Starting in version 1906, use the following task sequence variables with this step:  
+
+- [OSDBitLockerRebootCount](/sccm/osd/understand/task-sequence-variables#OSDBitLockerRebootCount)  
+- [OSDBitLockerRebootCountOverride](/sccm/osd/understand/task-sequence-variables#OSDBitLockerRebootCountOverride)  
+
 To add this step in the task sequence editor, select **Add**, select **Disks**, and select **Disable BitLocker**.
 
 ### Properties  
@@ -704,6 +709,12 @@ Disables BitLocker on the current OS drive.
 
 Disables BitLocker on a specific drive. Use the drop-down list to specify the drive where BitLocker is disabled.  
 
+#### Resume protection after Windows has been restarted the specified number of times
+
+<!-- 4512937 -->
+Starting in version 1906, use this option to specify the number of restarts to keep BitLocker disabled. Instead of adding multiple instances of this step, set a value between 1 (default) and 15.
+
+You can set and modify this behavior with the task sequence variables [OSDBitLockerRebootCount](/sccm/osd/understand/task-sequence-variables#OSDBitLockerRebootCount) and [OSDBitLockerRebootCountOverride](/sccm/osd/understand/task-sequence-variables#OSDBitLockerRebootCountOverride).
 
 
 ## <a name="BKMK_DownloadPackageContent"></a> Download Package Content  
@@ -714,7 +725,7 @@ Use this step to download any of the following package types:
 - OS upgrade packages  
 - Driver packages  
 - Packages  
-- Boot images  
+- Boot images (in version 1810 and earlier)  
 
 This step works well in a task sequence to upgrade an OS in the following scenarios:  
 
@@ -904,9 +915,9 @@ When this step runs, the application checks the applicability of the requirement
 
 > [!NOTE]  
 > To install an application that supersedes another application, the content files for the superseded application must be available. Otherwise this task sequence step fails. For example, Microsoft Visio 2010 is installed on a client or in a captured image. When the **Install Application** step installs Microsoft Visio 2013, the content files for Microsoft Visio 2010 (the superseded application) must be available on a distribution point. If Microsoft Visio isn't installed at all on a client or captured image, the task sequence installs Microsoft Visio 2013 without checking for the Microsoft Visio 2010 content files.  
-
-> [!NOTE]  
-> If the client fails to retrieve the management point list from location services, use the **SMSTSMPListRequestTimeoutEnabled** and **SMSTSMPListRequestTimeout** task sequence variables. These variables specify how many milliseconds a task sequence waits before it retries installing an application. For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables).
+>
+> If you retire a superceded app, and the new app is referenced in a task sequence, the task sequence fails to start.
+This behavior is by design: the task sequence requires all app references.<!-- SCCMDocs 1711 -->  
 
 This task sequence step runs only in the full OS. It doesn't run in Windows PE.  
 
@@ -917,7 +928,17 @@ Use the following task sequence variables with this step:
 - [SMSTSMPListRequestTimeout](/sccm/osd/understand/task-sequence-variables#SMSTSMPListRequestTimeout)  
 - [TSErrorOnWarning](/sccm/osd/understand/task-sequence-variables#TSErrorOnWarning)  
 
+> [!NOTE]  
+> If the client fails to retrieve the management point list from location services, use the **SMSTSMPListRequestTimeoutEnabled** and **SMSTSMPListRequestTimeout** task sequence variables. These variables specify how many milliseconds a task sequence waits before it retries installing an application. For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables).
+
 To add this step in the task sequence editor, select **Add**, select **Software**, and select **Install Application**.
+
+Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepinstallapplication?view=sccm-ps)
+- [New-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepinstallapplication?view=sccm-ps)
+- [Remove-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepinstallapplication?view=sccm-ps)
+- [Set-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepinstallapplication?view=sccm-ps)
 
 ### Properties  
 
@@ -968,6 +989,12 @@ The following conditions affect the applications installed by the task sequence:
 #### If an application fails, continue installing other applications in the list
 
 This setting specifies that the step continues when an individual application installation fails. If you specify this setting, the task sequence continues regardless of any installation errors. If you don't specify this setting, and the installation fails, the step immediately ends.  
+
+#### Clear application content from cache after installing
+
+<!--4485675-->
+Starting in version 1906, delete the app content from the client cache after the step runs. This behavior is beneficial on devices with small hard drives or when installing lots of large apps in succession.
+
 
 ### Options
 
@@ -1618,7 +1645,7 @@ Starting in version 1902, specify that the PowerShell script is run as a Windows
 #### Account
 
 <!-- 3556028 -->
-Starting in version 1902, specify the Windows user account this step uses to run the PowerShell script. The script runs with the permissions of the specified account. Select **Set** to specify the local user or domain account. For more information on the task sequence run-as account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#task-sequence-run-as-account).
+Starting in version 1902, specify the Windows user account this step uses to run the PowerShell script. The specified account must be a local administrator on the system and the script runs with the permissions of this account. Select **Set** to specify the local user or domain account. For more information on the task sequence run-as account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#task-sequence-run-as-account).
 
 > [!IMPORTANT]  
 > If this step specifies a user account and runs in Windows PE, the action fails. You can't join Windows PE to a domain. The **smsts.log** file records this failure.  
@@ -1642,6 +1669,11 @@ Starting in version 1902, include other exit codes from the script that the step
 This step runs another task sequence. It creates a parent-child relationship between the task sequences. With child task sequences, you can create more modular, reusable task sequences.
 
 To add this step in the task sequence editor, select **Add**, select **General**, and select **Run Task Sequence**.
+
+Starting in version 1906, manage this step with the following PowerShell cmdlets:<!-- 2839943, SCCMDocs #1118 -->
+
+- **New-CMTSStepRunTaskSequence**
+- **Set-CMTSStepRunTaskSequence**
 
 ### Specifications and limitations
 
@@ -1769,7 +1801,7 @@ The task sequence sets the variable to this value. Set this task sequence variab
 
 Use this step to perform the transition from Windows PE to the new OS. This task sequence step is a required part of any OS deployment. It installs the Configuration Manager client into the new OS, and prepares for the task sequence to continue execution in the new OS.  
 
-This step runs only in Windows PE. It doesn't run in the full OS.  
+This step is responsible for transitioning the task sequence from Windows PE to the full OS. The step runs both in Windows PE and the full OS because of this transition. However, since the transition starts in Windows PE, it can only be added during the Windows PE portion of the task sequence.  
 
 Use the following task sequence variables with this step:  
 

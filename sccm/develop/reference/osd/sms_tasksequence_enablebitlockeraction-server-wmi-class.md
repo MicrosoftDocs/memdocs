@@ -193,12 +193,12 @@ Class SMS_TaskSequence_EnableBitLockerAction : SMS_TaskSequence_Action
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
-## See Also  
- [Operating System Deployment Server WMI Classes](../../../develop/reference/osd/operating-system-deployment-server-wmi-classes.md)   
- [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md)
+## See also
+
+[SMS_TaskSequence_Action server WMI class](/sccm/develop/reference/osd/sms_tasksequence_action-server-wmi-class)

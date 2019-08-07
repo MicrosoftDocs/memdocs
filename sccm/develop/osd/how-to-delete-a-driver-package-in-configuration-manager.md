@@ -19,7 +19,7 @@ You delete an operating system deployment driver package, in System Center Confi
 
 ### To delete a driver package  
 
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
 
 2.  Get the [SMS_DriverPackage](../../develop/reference/osd/sms_driverpackage-server-wmi-class.md) object for the driver that you want to delete.  
 
@@ -94,6 +94,3 @@ public void DeleteDriverPackage(
 
 ## .NET Framework Security  
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
-
-## See Also  
- [Operating System Deployment Driver Management](../../develop/osd/operating-system-deployment-driver-management.md)

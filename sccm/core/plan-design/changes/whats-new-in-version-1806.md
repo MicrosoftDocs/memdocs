@@ -171,7 +171,7 @@ For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhan
 
 ### Azure AD device identity 
 <!--1358460-->
-An [Azure AD-joined](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices) or [hybrid Azure AD device](https://docs.microsoft.com/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices) without an Azure AD user signed in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point.  
+An [Azure AD-joined](/azure/active-directory/devices/concept-azure-ad-join) or [hybrid Azure AD device](/azure/active-directory/devices/concept-azure-ad-join-hybrid) without an Azure AD user signed in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point.  
 
 For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).
 
@@ -323,7 +323,7 @@ For more information, see [Package Conversion Manager](/sccm/apps/pcm/package-co
 This release includes the following improvements to phased deployments:  
 
 #### Create a phased deployment with manually configured phases
-<!--1358148--> 
+<!--1358148-->
 For a task sequence, now manually configure the phases when you create a phased deployment. Add up to 10 additional phases from the **Phases** tab of the Create Phased Deployment wizard. You can still automatically create a default two-phase deployment. 
 
 For more information, see [Create a phased deployment with manually configured phases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence#bkmk_manual).
@@ -400,11 +400,11 @@ For more information, see [Task sequences and the network access account](/sccm/
  For more information, see [Upgrade Operating System](/sccm/osd/understand/task-sequence-steps#BKMK_UpgradeOS).
 
 #### Revised documentation for task sequence variables
- Two new articles are now available for understanding task sequence variables:  
+Two new articles are now available for understanding task sequence variables:  
 
- - [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables) is a new article that describes the different types of variables, methods to set the variables, and how to access them.  
+- [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables) is a new article that describes the different types of variables, methods to set the variables, and how to access them.  
 
- - [Task sequence variables](/sccm/osd/understand/task-sequence-variables) is a reference for all available task sequence variables. This article combines the previous articles, which separated built-in variables from action variables. 
+- [Task sequence variables](/sccm/osd/understand/task-sequence-variables) is a reference for all available task sequence variables. This article combines the previous articles, which separated built-in variables from action variables. 
 
 
 
@@ -603,9 +603,9 @@ When you're ready to install this version, see [Installing updates for Configura
 > [!TIP]  
 > To install a new site, use a baseline version of Configuration Manager.  
 >
->  Learn more about:    
->   - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites)  
->   - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)
+> Learn more about:    
+> - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites)  
+> - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 For known, significant issues, see the [Release notes](/sccm/core/servers/deploy/install/release-notes).
 

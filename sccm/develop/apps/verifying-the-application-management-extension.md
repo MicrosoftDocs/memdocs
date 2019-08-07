@@ -161,5 +161,4 @@ ms.collection: M365-identity-device-management
 >   -   **Required** - The application is deployed automatically, according to the configured schedule. However, a user can track the application deployment status and install the application before the deadline by using the Software Center.  
 
 ## See Also  
- [Scenario: Extending Application Management](../../develop/apps/scenario--extending-application-management.md)   
  [Configuration Manager Reference](../../develop/reference/configuration-manager-reference.md)

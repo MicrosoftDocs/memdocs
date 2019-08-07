@@ -319,6 +319,11 @@
             "source_path": "sccm/desktop-analytics/compat-risk.md",
             "redirect_url": "/sccm/desktop-analytics/compat-assessment",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "sccm/develop/reference/core/servers/console/console-command-line-options.md",
+            "redirect_url": "/sccm/core/servers/manage/admin-console#command-line-options",
+            "redirect_document_id": false
         }
     ]
 }

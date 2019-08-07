@@ -62,12 +62,12 @@ Run Scripts currently supports:
 
 
 >[!WARNING]
->Be aware that when using parameters, it opens a surface area for potential PowerShell injection attack risk. There are various ways to mitigate and work around, such as using regular expressions to validate parameter input or using predefined parameters. Common best practice is not to include to secrets in your PowerShell scripts (no passwords, etc.). [Learn more about PowerShell script security](/sccm/apps/deploy-use/learn-script-security) <!--There are external tools available to validate your PowerShell scripts such as the [PowerShell Injection Hunter](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0) tool. -->
+>Be aware that when using parameters, it opens a surface area for potential PowerShell injection attack risk. There are various ways to mitigate and work around, such as using regular expressions to validate parameter input or using predefined parameters. Common best practice is not to include secrets in your PowerShell scripts (no passwords, etc.). [Learn more about PowerShell script security](/sccm/apps/deploy-use/learn-script-security) <!--There are external tools available to validate your PowerShell scripts such as the [PowerShell Injection Hunter](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0) tool. -->
 
 
 ## Run Script authors and approvers
 
-Run Scripts uses the concept of *script authors* and *script approvers* as separate roles for implementation and execution of a script. Having the author and approver roles separated allows for an important process check for the powerful tool that Run Scripts is. There's an additional *script runners* role that allows execution of scripts, but not creation or approval of scripts. See [Create security roles for scripts](#bkmk_ScriptRoles).
+Run Scripts uses the concept of *script authors* and *script approvers* as separate roles for implementation and execution of a script. Having the author and approver roles separated allows an important process check for the powerful tool that Run Scripts is. There's an additional *script runners* role that allows execution of scripts, but not creation or approval of scripts. See [Create security roles for scripts](#bkmk_ScriptRoles).
 
 ### Scripts roles control
 
@@ -159,11 +159,11 @@ The three security roles used for running scripts aren't created by default in C
 2. In the **Software Library** workspace, click **Scripts**.
 3. On the **Home** tab, in the **Create** group, click **Create Script**.
 4. On the **Script** page of the Create **Script** wizard, configure the following settings:
-	- **Script Name** - Enter a name for the script. Although you can create multiple scripts with the same name, using duplicate names makes it harder for you to find the script you need in the Configuration Manager console.
-	- **Script language** - Currently, only PowerShell scripts are supported.
-	- **Import** - Import a PowerShell script into the console. The script is displayed in the **Script** field.
-	- **Clear** - Removes the current script from the Script field.
-	- **Script** - Displays the currently imported script. You can edit the script in this field as necessary.
+    - **Script Name** - Enter a name for the script. Although you can create multiple scripts with the same name, using duplicate names makes it harder for you to find the script you need in the Configuration Manager console.
+    - **Script language** - Currently, only PowerShell scripts are supported.
+    - **Import** - Import a PowerShell script into the console. The script is displayed in the **Script** field.
+    - **Clear** - Removes the current script from the Script field.
+    - **Script** - Displays the currently imported script. You can edit the script in this field as necessary.
 5. Complete the wizard. The new script is displayed in the **Script** list with a status of **Waiting for approval**. Before you can run this script on client devices, you must approve it. 
 
 > [!IMPORTANT]

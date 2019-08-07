@@ -436,11 +436,8 @@ x00000400 (10)|BALLOON_REMINDERS_REQUIRED. Balloon reminders are required.|
 
 ## Requirements  
 
-## Runtime requirements  
+### Runtime requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development requirements  
+### Development requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
-
-## See also  
- [Software Distribution Server WMI Classes](../../../../../develop/reference/core/servers/configure/software-distribution-server-wmi-classes.md)

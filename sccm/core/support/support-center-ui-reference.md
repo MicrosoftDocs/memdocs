@@ -224,53 +224,53 @@ The following items on this menu request a client action related to content:
 
     - **Time out content requests**: If any content location requests have been running for too long, this action stops the request.  
 
-  - **Application deployment evaluation**: Starts a task that evaluates deployed applications.  
+- **Application deployment evaluation**: Starts a task that evaluates deployed applications.  
 
-  - **Software updates deployment evaluation**: Starts a task that evaluates deployed software updates.  
+- **Software updates deployment evaluation**: Starts a task that evaluates deployed software updates.  
 
-  - **Software updates source scan**: Starts a task that scans update source locations.  
+- **Software updates source scan**: Starts a task that scans update source locations.  
 
-  - **Windows Installer source list update**: Starts a task that updates the source location for Windows Installer (MSI) installations.  
+- **Windows Installer source list update**: Starts a task that updates the source location for Windows Installer (MSI) installations.  
 
 #### Content view
 See applications, packages, and updates that are loaded on the client. When you select an application, package or update, you can view details on that content. For some applications, you can also do the following actions:  
 
- - **Refresh**: Refresh the details view  
+- **Refresh**: Refresh the details view  
 
- - **Verify or Download**: Verify that an application is available for download  
+- **Verify or Download**: Verify that an application is available for download  
 
- - **Install**: Install the application  
+- **Install**: Install the application  
 
- - **Uninstall**: Uninstall the application  
+- **Uninstall**: Uninstall the application  
 
 #### Cache view
 View the client cache configuration and details about the cache contents. When you connect Support Center to a local client, you ca also do the following actions:  
 
- - To change the cache location, select **Change** next to the **Cache location** field.  
+- To change the cache location, select **Change** next to the **Cache location** field.  
 
- - To adjust the size of the cache, select **Change** next to the **Cache size** field.  
+- To adjust the size of the cache, select **Change** next to the **Cache size** field.  
 
- - To clear the client cache, select **Clear** next to the **Cache in use** field.  
+- To clear the client cache, select **Clear** next to the **Cache in use** field.  
 
 This view shows the following properties:  
 
- - **Location**: The location of each cache folder. Select the link to open the folder in Windows Explorer.   
- - **Content ID**  
- - **Cache ID**  
- - **Size**  
- - **Last Referenced**: This property is the date when the client last read from or wrote to this item in the cache.  
+- **Location**: The location of each cache folder. Select the link to open the folder in Windows Explorer.   
+- **Content ID**  
+- **Cache ID**  
+- **Size**  
+- **Last Referenced**: This property is the date when the client last read from or wrote to this item in the cache.  
 
 #### Monitoring view
 Select **Monitor** to view the active progress of software update and application update deployments. This view shows state messages raised from application and software updates event WMI messages.
 
 For each event, the view shows the following properties:  
 
- - **Time**: The time that the client raised the event  
- - **Topic type**: The state message type  
- - **Topic ID**: ID of the state message, used to map to events in log files  
- - **Topic ID type**: The subtype of the state message  
- - **State ID**: The result of the action that you're monitoring  
- - **Details** and **Event data**: More information on the state messages shown in this view. State details may sometimes be blank.  
+- **Time**: The time that the client raised the event  
+- **Topic type**: The state message type  
+- **Topic ID**: ID of the state message, used to map to events in log files  
+- **Topic ID type**: The subtype of the state message  
+- **State ID**: The result of the action that you're monitoring  
+- **Details** and **Event data**: More information on the state messages shown in this view. State details may sometimes be blank.  
 
 
 
@@ -288,23 +288,23 @@ Support Center loads or refreshes the client inventory list for the currently se
 
 The following items on this menu request client action related to inventory:  
 
- - **Discovery data collection cycle (heartbeat)**: Triggers the client task used to collect device discovery information  
+- **Discovery data collection cycle (heartbeat)**: Triggers the client task used to collect device discovery information  
 
- - **File collection cycle**: Triggers the client task used to collect local files  
+- **File collection cycle**: Triggers the client task used to collect local files  
 
- - **Hardware inventory cycle**: Triggers the client task used to collect hardware inventory data  
+- **Hardware inventory cycle**: Triggers the client task used to collect hardware inventory data  
 
- - **IDMIF collection cycle**: Triggers the client task used to collect IDMIF data  
+- **IDMIF collection cycle**: Triggers the client task used to collect IDMIF data  
 
- - **Software inventory cycle**: Triggers the client task used to collect software inventory data  
+- **Software inventory cycle**: Triggers the client task used to collect software inventory data  
 
- - **Software metering report cycle**: Triggers the client task used to build a software metering report and send it to the management point. Track the progress of this task in **SWMTRReportGen.log**.
+- **Software metering report cycle**: Triggers the client task used to build a software metering report and send it to the management point. Track the progress of this task in **SWMTRReportGen.log**.
 
- - **Send unsent state messages in queue**: Triggers the client task to flush the queue of state messages.
+- **Send unsent state messages in queue**: Triggers the client task to flush the queue of state messages.
 
- - **Advanced**  
-     - **Hardware inventory cycle (full resynchronization)**  
-     - **Software inventory cycle (full resynchronization)**  
+- **Advanced**  
+    - **Hardware inventory cycle (full resynchronization)**  
+    - **Software inventory cycle (full resynchronization)**  
 
 
 #### Views
@@ -347,7 +347,7 @@ Starts troubleshooting the client
 - **Active Directory**: Queries Active Directory to retrieve published Configuration Manager site information  
 - **MPCERTIFICATE**: Gets management point certificates  
 - **MPLIST**: Gets a list of management points  
-- **MPKEYINFORMATION**: Gets management point cryptographic key information	 
+- **MPKEYINFORMATION**: Gets management point cryptographic key information  
 - **Networking**: Troubleshoots issues with networking  
 - **Policy Assignments**: Retrieves policy assignments  
 - **Registration**: Verifies that the client is registered with the site  
@@ -464,9 +464,9 @@ After finding two or more matches for the string that you're searching for, this
 
 #### Error lookup
 Enter an error code to search for that error code in currently open log files. Use the following error code formats:
- - **32-bit integer (signed)**: For example, `-2147024891`  
- - **32-bit integer (unsigned)**: For example, `2147942405`  
- - **32-bit hexadecimal**: For example, `0x80070005`  
+- **32-bit integer (signed)**: For example, `-2147024891`  
+- **32-bit integer (unsigned)**: For example, `2147942405`  
+- **32-bit hexadecimal**: For example, `0x80070005`  
 
 #### Decode certificate
 In the **Decode certificate** dialog box, paste the serialized certificate value for any certificate on the client. Find this value in the registry, in log files, or in WMI. Select **Process** to view general information and details on the certificate. This information includes its certification path. Select **Export** to export the certificate as a **.cer** file.
@@ -512,15 +512,15 @@ In the Advanced filters dialog, you can create complex filter sets. These filter
 
 ### Manage filter sets
 
-  - To edit a filter, select the filter, and then select **Edit**.  
+- To edit a filter, select the filter, and then select **Edit**.  
 
-  - To delete a filter, select the filter, and then select **Delete**.  
+- To delete a filter, select the filter, and then select **Delete**.  
 
-  - To clear all filters, select **Clear**.  
+- To clear all filters, select **Clear**.  
 
-  - To save the current filter set, select **Save filters**. Then save your filter set as a **.filterset** file.  
+- To save the current filter set, select **Save filters**. Then save your filter set as a **.filterset** file.  
 
-  - To load a saved filter set, select **Load filters**. Then browse to a previously saved **.filterset** file.  
+- To load a saved filter set, select **Load filters**. Then browse to a previously saved **.filterset** file.  
 
 
 
