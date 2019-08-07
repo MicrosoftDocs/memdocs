@@ -2,7 +2,7 @@
 title: "Configure Wake on LAN"
 titleSuffix: "Configuration Manager"
 description: "Select Wake On LAN settings in System Center Configuration Manager."
-ms.date: 05/02/2019
+ms.date: 08/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
