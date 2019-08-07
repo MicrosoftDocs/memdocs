@@ -82,4 +82,4 @@ End Function
  [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)
  [Configuration Manager Context Qualifiers](../../../develop/core/understand/context-qualifiers.md)   
  [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)   
- [Windows Management Instrumentation](http://go.microsoft.com/fwlink/?LinkId=43950)
+ [Windows Management Instrumentation](/windows/win32/wmisdk/wmi-start-page)
