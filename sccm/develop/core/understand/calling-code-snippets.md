@@ -16,7 +16,7 @@ The following code samples show how to set up the calling code for the code exam
 
  Replace the SNIPPETMETHOD snippet with the snippet that you want to run. In most cases you will need to make changes, such as adding parameters, to make the code work.   
 
- For more information about remote Windows Management Instrumentation (WMI) connections, see [Connecting to WMI on a Remote Computer](http://go.microsoft.com/fwlink/?LinkId=94683).  
+ For more information about remote Windows Management Instrumentation (WMI) connections, see [Connecting to WMI on a Remote Computer](/windows/win32/wmisdk/connecting-to-wmi-on-a-remote-computer).  
 
 ## Example  
 

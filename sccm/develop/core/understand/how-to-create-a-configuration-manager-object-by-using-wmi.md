@@ -72,7 +72,7 @@ End Sub
 ## Compiling the Code  
 
 ## See Also  
- [Windows Management Instrumentation](http://go.microsoft.com/fwlink/?LinkId=43950)   
+ [Windows Management Instrumentation](/windows/win32/wmisdk/wmi-start-page)   
  [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)
  [How to Call a Configuration Manager Object Class Method by Using WMI](../../../develop/core/understand/how-to-call-a-configuration-manager-object-class-method-by-using-wmi.md)   
  [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)   

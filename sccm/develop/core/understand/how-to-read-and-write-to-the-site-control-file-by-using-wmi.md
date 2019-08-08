@@ -286,6 +286,6 @@ End Sub
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [http://go.microsoft.com/fwlink/?LinkId=43950](http://go.microsoft.com/fwlink/?LinkId=43950)   
+ [Windows Management Instrumentation](/windows/win32/wmisdk/wmi-start-page)   
  [About the Configuration Manager Site Control File](../../../develop/core/understand/about-the-configuration-manager-site-control-file.md)   
  [How to Read a Configuration Manager Site Control File Embedded Property List](../../../develop/core/understand/how-to-read-a-configuration-manager-site-control-file-embedded-property-list.md)   

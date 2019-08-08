@@ -46,7 +46,7 @@ System Center Configuration Manager console views are displayed in the results p
  For more information about using the `QueryDescription` element, see [How to Create Node XML for a Configuration Manager Console View](../../../../develop/core/servers/console/how-to-create-node-xml-for-a-configuration-manager-console-grid-view.md).  
 
 ### Custom Help  
- You can also display your own .chm outside of the F1 Help system. For example, you can add a button to your form that opens your Help .chm. For more information about opening Help from Windows forms, see the MSDN documentation about the .NET Framework Class Library [Help Class](http://go.microsoft.com/fwlink/?LinkId=110511).  
+ You can also display your own .chm outside of the F1 Help system. For example, you can add a button to your form that opens your Help .chm. For more information about opening Help from Windows forms, see the [Help class](/dotnet/api/system.windows.forms.help) in the .NET Framework Class Library.  
 
 ## See Also  
 [About console extensions](/sccm/develop/core/servers/console/about-configuration-manager-console-extension)

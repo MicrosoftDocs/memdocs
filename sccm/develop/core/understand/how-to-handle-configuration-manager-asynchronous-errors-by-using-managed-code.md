@@ -77,7 +77,7 @@ void bw1_QueryProcessorCompleted(object sender, RunWorkerCompletedEventArgs e)
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
 |`sender`|-   `Object`|The source of the event.|  
-|`e`|-   `RunWorkerCompletedEventArgs`|The event data.<br /><br /> For more information, see [RunWorkerCompletedEventArgs Class](http://go.microsoft.com/fwlink/?LinkId=111728).|  
+|`e`|-   `RunWorkerCompletedEventArgs`|The event data.<br /><br /> For more information, see [RunWorkerCompletedEventArgs Class](/dotnet/api/system.componentmodel.runworkercompletedeventargs).|  
 
 ## Compiling the Code  
  This C# example requires:  
