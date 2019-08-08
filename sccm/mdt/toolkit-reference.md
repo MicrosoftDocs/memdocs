@@ -4313,7 +4313,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |None|  
 
 ####  <a name="IsUEFI"></a> IsUEFI  
- Specifies whether the target computer is currently running with Unified Extensible Firmware Interface \(UEFI\). The UEFI is a specification that defines a software interface between an operating system and platform firmware. UEFI is a more secure replacement for the older BIOS firmware interface present in some personal computers. For more information on UEFI, go to [http:\/\/www.uefi.org](http://www.uefi.org).  
+ Specifies whether the target computer is currently running with Unified Extensible Firmware Interface \(UEFI\). The UEFI is a specification that defines a software interface between an operating system and platform firmware. UEFI is a more secure replacement for the older BIOS firmware interface present in some personal computers. For more information on UEFI, go to [https:\/\/uefi.org](https://uefi.org).  
 
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
@@ -10963,7 +10963,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 |**VHDOutputVariable**|-||  
 
 ###  <a name="ZTIWindowsUpdate.wsf"></a> ZTIWindowsUpdate.wsf  
- This script downloads and installs updates from computers on a corporate network that are running WSUS, Windows Update, or Microsoft Update using the [Windows Update Agent (WUA)](http://msdn2.microsoft.com/library/Aa387099.aspx) application programming interface (API). By default, this feature is disabled in each task sequence and must be manually activated to run.  
+ This script downloads and installs updates from computers on a corporate network that are running WSUS, Windows Update, or Microsoft Update using the [Windows Update Agent (WUA)](/windows/win32/wua_sdk/portal-client) application programming interface (API). By default, this feature is disabled in each task sequence and must be manually activated to run.  
 
  Most enterprises will already have teams and infrastructures in place to update newly deployed computers over the corporate network. This process involves tracking the latest set of patches, drivers, and updates available for each desktop configuration and determining which updates should be downloaded and installed for each configuration. If the organization already has an established process, this script might not be necessary. This script was designed to fill a need for deployment teams that might not have established processes, yet want to ensure that target computers are updated when deployed.  
 
@@ -11000,7 +11000,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
   Windows 7 and later include the most recent version of WUA, so no upgrade is necessary.  
 
-  For more information, see [Updating Windows Update Agent](http://msdn2.microsoft.com/library/aa387285.aspx).  
+  For more information, see [Updating Windows Update Agent](/windows/win32/wua_sdk/updating-the-windows-update-agent).  
 
   When enabled in the Task Sequencer, this script runs multiple times while in the State Restore Phase of operating system deployment. It is first run after the operating system has started for the first time. Ensure that the latest updates and service packs are installed before the installation of any applications that might depend on specific updates or service packs being installed on the target computer. For example, an application might be dependent on the latest version of the Microsoft .NET Framework being installed.  
 

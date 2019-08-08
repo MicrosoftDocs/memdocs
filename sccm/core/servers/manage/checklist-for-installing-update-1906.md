@@ -29,7 +29,7 @@ To get the update for version 1906, you must use a service connection point at t
 
     - Another common download issue occurs when proxy server settings prevent downloads from `silverlight.dlservice.microsoft.com`, `download.microsoft.com`, and `go.microsoft.com`.
 
-For more information about installing updates, see [In-console updates and servicing](/sccm/core/servers/manage/updates#a-namebkmkinconsolea-in-console-updates-and-servicing).
+For more information about installing updates, see [In-console updates and servicing](/sccm/core/servers/manage/updates#bkmk_inconsole).
 
 For more information about current branch versions, see [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines).
 
@@ -126,7 +126,7 @@ If you update the site before you update the Windows ADK, see [Update distributi
 
 ### Review SQL Server Native Client version
 
-Install a minimum version of SQL Server 2012 Native Client, which includes support for TLS 1.2. For more information, see the [List of prerequisite checks](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client).
+Install a minimum version of SQL Server 2012 Native Client, which includes support for TLS 1.2. For more information, see the [List of prerequisite checks](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
 
 ### Review the site and hierarchy status for unresolved issues
 
@@ -208,7 +208,7 @@ For more information, see the section to **Run the prerequisite checker before i
 
 ### Update sites
 
-You're now ready to start the update installation for your hierarchy. For more information about installing the update, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates).
+You're now ready to start the update installation for your hierarchy. For more information about installing the update, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_install).
 
 You may plan to install the update outside of normal business hours. Determine when the process will have the least effect on your business operations. Installing the update and its actions reinstall site components and site system roles.
 

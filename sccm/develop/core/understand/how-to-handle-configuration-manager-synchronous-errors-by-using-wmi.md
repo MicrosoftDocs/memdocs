@@ -61,5 +61,5 @@ End Sub
 ```  
 
 ## See Also  
- [About errors](/sccm/develop/core/understand/about-configuration-manager-errors)
- [WMI SDK](http://go.microsoft.com/fwlink/?LinkId=43950)
+ [About errors](/sccm/develop/core/understand/about-configuration-manager-errors)\
+ [WMI SDK](/windows/win32/wmisdk/wmi-start-page)

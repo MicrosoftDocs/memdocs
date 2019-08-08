@@ -313,7 +313,7 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
 -   Installation error 30029 while installing the 2007 Microsoft Office system or related files as described in [The 2007 Microsoft Office System](#MicrosoftOfficeSystem)  
 
 ####  <a name="BlockedExecutables"></a> Blocked Executables  
- **Problem:** If installation source files are downloaded from the Internet, it is likely that they will be marked with one or more NTFS file system data streams. For more information about NTFS data streams, see [File Streams](http://msdn2.microsoft.com/library/aa364404\(VS.85\).aspx). The existence of NTFS file system data streams might cause an **Open File – Security Warning** prompt to be displayed. The installation will not proceed until you click **Run** at the prompt.  
+ **Problem:** If installation source files are downloaded from the Internet, it is likely that they will be marked with one or more NTFS file system data streams. For more information about NTFS data streams, see [File Streams](/windows/win32/fileio/file-streams). The existence of NTFS file system data streams might cause an **Open File – Security Warning** prompt to be displayed. The installation will not proceed until you click **Run** at the prompt.  
 
  Figure 2 shows, you can view NTFS file system data streams using the **More** command and the [Streams utility](https://technet.microsoft.com/sysinternals/bb897440.aspx).  
 
