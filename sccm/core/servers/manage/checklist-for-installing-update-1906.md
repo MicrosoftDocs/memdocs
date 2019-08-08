@@ -2,7 +2,7 @@
 title: Checklist for 1906
 titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 1906.
-ms.date: 07/26/2019
+ms.date: 08/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -72,7 +72,7 @@ At this time, version 1906 is released for the early update ring. To install thi
 Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
 
 > [!Note]  
-> The version 1906 update is only applicable to sites running version 1806 or later.
+> The version 1906 update is only applicable to sites running version 1802 or later.
 
 To opt-in to the early update ring:
 
@@ -95,7 +95,7 @@ The version 1906 update should now be available in the console.
 
 ### All sites run a supported version of Configuration Manager
 
-Each site server in the hierarchy must run the same version of Configuration Manager before you can start the installation of update 1906. To update to 1906, you must use version 1806, 1810, or 1902.
+Each site server in the hierarchy must run the same version of Configuration Manager before you can start the installation of update 1906. To update to 1906, you must use version 1802 or later.
 
 ### Review the status of your product licensing
 
