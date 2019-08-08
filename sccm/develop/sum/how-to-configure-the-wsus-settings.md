@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Configure the WSUS Settings
-You configure the Windows Server Update Services (WSUS) component settings, in System Center Configuration Manager, by modifying the site control file. For more information about WSUS, see the MSDN documentation for [Windows Server Update Services](http://go.microsoft.com/fwlink/?LinkId=93575).  
+You configure the Windows Server Update Services (WSUS) component settings, in System Center Configuration Manager, by modifying the site control file. For more information, see [Windows Server Update Services](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).  
 
 ### To configure WSUS settings  
 

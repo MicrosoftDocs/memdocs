@@ -184,7 +184,7 @@ string          PackageIDForApplicationExe;
 
 #### Restrictions  
 
--   Regular qualifier constraints can be applied to class properties. For example, in the example above, the command-line arguments cannot be `null`. For more information, see the [Windows Management Instrumentation (WMI) SDK](http://go.microsoft.com/fwlink/?LinkId=43950).  
+-   Regular qualifier constraints can be applied to class properties. For example, in the example above, the command-line arguments cannot be `null`. For more information, see the [Windows Management Instrumentation (WMI) SDK](/windows/win32/wmisdk/wmi-start-page).  
 
 -   Ensure that property names and qualifiers are synchronized between the MOF file, custom action control and client application. The property names must match as well as any limitations. For example, if an `int` property is required, and it must be in the range 1 - 512, then the MOF file should have a `Not_Null` and `ValueRange` qualifier, the custom control should ensure that the property is set and within range, and the client application should verify the value before using it.  
 
