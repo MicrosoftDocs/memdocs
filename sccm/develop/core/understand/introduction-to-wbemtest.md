@@ -100,4 +100,4 @@ If you spend much time around Configuration Manager you become aware that much o
 - [WMI Scripting Primer: Part 3](https://msdn.microsoft.com/library/ms974547.aspx)  
 
 ## See Also  
- [Getting Started with Configuraiton Manager Programming](../../../develop/core/understand/getting-started-with-configuration-manager-programming.md)
+ [Getting Started with Configuration Manager Programming](../../../develop/core/understand/getting-started-with-configuration-manager-programming.md)
