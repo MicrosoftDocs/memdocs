@@ -2,7 +2,7 @@
 title: Internet access requirements
 titleSuffix: Configuration Manager
 description: Learn about the internet endpoints to allow for full functionality of Configuration Manager features.
-ms.date: 06/19/2019
+ms.date: 08/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -43,6 +43,9 @@ For more information on this function, see [Updates and servicing for Configurat
 - `go.microsoft.com`  
 
 - `*.blob.core.windows.net`  
+
+    > [!Tip]  
+    > The [management insight](/sccm/core/servers/manage/management-insights) rule, **Connect the site to the Microsoft cloud for Configuration Manager updates**, checks for this endpoint.
 
 - `download.microsoft.com`  
 
