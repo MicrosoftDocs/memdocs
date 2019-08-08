@@ -2,7 +2,7 @@
 title: Internet access requirements
 titleSuffix: Configuration Manager
 description: Learn about the internet endpoints to allow for full functionality of Configuration Manager features.
-ms.date: 08/07/2019
+ms.date: 08/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -30,9 +30,12 @@ For more information on the service connection point, see [About the service con
 > [!TIP]  
 > The service connection point uses the Microsoft Intune service when it connects to `go.microsoft.com` or `manage.microsoft.com`. There's a known issue in which the Intune connector experiences connectivity issues if the Baltimore CyberTrust Root Certificate isn't installed, is expired, or is corrupted on the service connection point. For more information, see [KB 3187516: Service connection point doesn't download updates](https://support.microsoft.com/help/3187516).  
 
-### Updates and servicing
+### <a name="bkmk_scp-updates"> Updates and servicing
 
 For more information on this function, see [Updates and servicing for Configuration Manager](/sccm/core/servers/manage/updates).
+
+> [!Tip]  
+> Enable these endpoints for the [management insight](/sccm/core/servers/manage/management-insights) rule, **Connect the site to the Microsoft cloud for Configuration Manager updates**.
 
 - `*.akamaiedge.net`  
 
@@ -43,9 +46,6 @@ For more information on this function, see [Updates and servicing for Configurat
 - `go.microsoft.com`  
 
 - `*.blob.core.windows.net`  
-
-    > [!Tip]  
-    > The [management insight](/sccm/core/servers/manage/management-insights) rule, **Connect the site to the Microsoft cloud for Configuration Manager updates**, checks for this endpoint.
 
 - `download.microsoft.com`  
 
