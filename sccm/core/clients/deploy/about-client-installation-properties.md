@@ -260,7 +260,7 @@ Example: `ccmsetup.msi CCMSETUPCMD="/mp:https://mp.contoso.com CCMHOSTNAME=mp.co
 
 ### AADCLIENTAPPID
 
-Specifies the Azure Active Directory (Azure AD) client app identifier. The client app is created or imported when you [configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard) for Cloud Management. An Azure administrator can get the value for this property from the Azure portal. For more information, see [get application ID](/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-application-id-and-authentication-key). For the **AADCLIENTAPPID** property, this application ID is for the "Native" application type.
+Specifies the Azure Active Directory (Azure AD) client app identifier. The client app is created or imported when you [configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard) for Cloud Management. An Azure administrator can get the value for this property from the Azure portal. For more information, see [get application ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in). For the **AADCLIENTAPPID** property, this application ID is for the "Native" application type.
 
 Example: `ccmsetup.exe AADCLIENTAPPID=aa28e7f1-b88a-43cd-a2e3-f88b257c863b`
 
@@ -282,7 +282,7 @@ Specifies the Azure AD tenant identifier. This tenant is linked to Configuration
 - In the Device State section, find the **TenantId** value. For example, `TenantId : 607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
   > [!Note]
-  > An Azure administrator can also obtain this value in the Azure portal. For more information, see [get tenant ID](/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-tenant-id)
+  > An Azure administrator can also obtain this value in the Azure portal. For more information, see [get tenant ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)
 
 Example: `ccmsetup.exe AADTENANTID=607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
@@ -482,7 +482,7 @@ Example: `CCMSetup.exe DISABLECACHEOPT=TRUE`
 
 Specifies the fallback status point that receives and processes state messages sent by Configuration Manager client computers.  
 
-For more information about the fallback status point, see [Determine if you need a fallback status point](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point).  
+For more information about the fallback status point, see [Determine if you need a fallback status point](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#fallback-status-point).  
 
 Example: `CCMSetup.exe FSP=SMSFP01`  
 

@@ -95,6 +95,4 @@ public void ResetHardwareInventoryCache()
 
 ## See Also  
  [System Center Configuration Manager Software Development Kit](../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Inventory](../../../../develop/core/clients/inventory/inventory.md)   
  [About Configuration Manager Inventory](../../../../develop/core/clients/inventory/about-configuration-manager-inventory.md)   
- [Configuration Manager Client Programming](../../../../develop/core/clients/programming/client-programming.md)

@@ -2,7 +2,7 @@
 title: Upgrade on-premises infrastructure
 titleSuffix: Configuration Manager
 description: Learn how to upgrade infrastructure, such as SQL Server and the OS of site systems.
-ms.date: 11/27/2018
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -206,6 +206,8 @@ Configuration Manager supports the in-place upgrade of SQL Server to the followi
 
 - SQL Server 2014  
 
+This includes the upgrade of SQL Server Express to a newer version of SQL Server Express at secondary sites.
+
 When you upgrade the version of SQL Server that hosts the site database, you must upgrade the SQL Server version that's used at sites in the following order:
 
 1. Upgrade SQL Server at the central administration site first  
@@ -214,7 +216,7 @@ When you upgrade the version of SQL Server that hosts the site database, you mus
 
 3. Upgrade parent primary sites last. These sites include both child primary sites that report to a central administration site, and stand-alone primary sites that are the top-level site of a hierarchy.  
 
-
+ 
 ### SQL Server cardinality estimation level   
 
 When you upgrade a site database from an earlier version of SQL Server, the database keeps its existing SQL cardinality estimation level, if it's at the minimum allowed for that instance of SQL Server. Upgrading SQL Server with a database at a compatibility level lower than the allowed level automatically sets the database to the lowest compatibility level allowed by SQL Server.

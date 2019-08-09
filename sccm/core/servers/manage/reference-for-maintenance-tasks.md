@@ -44,7 +44,7 @@ This topic lists details for each of the System Center Configuration Manager sit
 
 **Delete Aged Client Download History**: Use this task to delete historical data about the download source used by clients. Download source information is used to populate the [Client Data Sources dashboard](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard).  
 -  Central administration site – Not available
--	 **Primary site** - Enabled
+-  **Primary site** - Enabled
 -  Secondary site - Not available
 
 **Delete Aged Client Operations**: Use this task to delete all aged data for client operations from the site database. For example, this includes data for aged or expired client notifications (like download requests for machine or user policy), and for Endpoint Protection (like requests by an administrative user for clients to run a scan or download updated definitions).

@@ -1,8 +1,8 @@
 ---
-title: "Stop Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Stop method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: 6dbd4a5d-a1aa-403e-9431-b97276d2b200
@@ -11,10 +11,12 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Stop Method in Class SMS_AzureService
-The `Stop` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that is invoked to stop a Windows Azure service which represents a Cloud Distribution Point for Configuration Manager.  
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+# Stop method in class SMS_AzureService
+
+The `Stop` WMI class method in Configuration Manager, that's invoked to stop a Microsoft Azure service which represents a cloud distribution point for Configuration Manager.  
+
+The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
 ## Syntax  
 

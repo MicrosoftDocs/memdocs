@@ -62,7 +62,7 @@ This article explains how to configure and deploy the Lookout for Work app for A
        | Lookout MTP     | Access Lookout MTP         |
        | Microsoft Graph     | Sign in and read user profile        |  
 
-   For more information, see [Configure a native client application](/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#optional-configure-a-native-client-application).  
+   For more information, see [Configure a native client application](/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#configure-a-native-client-application).  
 
 
 4. In Configuration Manager, upload the re-signed .ipa file. Set the minimum OS version to iOS 8.0 or later. For more information, see [Create iOS applications](/sccm/apps/get-started/creating-ios-applications).   

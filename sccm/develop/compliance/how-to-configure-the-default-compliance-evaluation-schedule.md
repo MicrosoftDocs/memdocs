@@ -149,7 +149,7 @@ public void ChangeDCMAgentEvaluationSchedule(WqlConnectionManager connection,
 |`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`swbemContext`|-   VBScript: `SWbemContext`|A valid context object. For more information, see [How to Add a Configuration Manager Context Qualifier by Using WMI](../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md).|  
 |`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|The site code.|  
-|`newAgentSchedule`|-   Managed: `String`<br />-   VBScript: `String`|The new schedule in string format. See [Configuration Manager Schedules](../../develop/core/understand/schedules.md) for more information.|  
+|`newAgentSchedule`|-   Managed: `String`<br />-   VBScript: `String`|The new schedule in string format. For more information, see [About schedules](/sccm/develop/core/understand/about-configuration-manager-schedules).|  
 
 ## Compiling the Code  
 
@@ -181,5 +181,5 @@ public void ChangeDCMAgentEvaluationSchedule(WqlConnectionManager connection,
  [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md)   
  [How to Read and Write to the Configuration Manager Site Control File by Using WMI](../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md)   
  [SMS_SCI_ClientComp Server WMI Class](../../develop/reference/core/servers/configure/sms_sci_clientcomp-server-wmi-class.md)   
- [Configuration Manager Schedules](../../develop/core/understand/schedules.md)   
+ [About schedules](/sccm/develop/core/understand/about-configuration-manager-schedules)
  [How to Create a Schedule Token](../../develop/core/understand/how-to-create-a-schedule-token.md)

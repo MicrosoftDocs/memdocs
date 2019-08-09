@@ -115,5 +115,4 @@ HRESULT EnforceApp(
  [IAppManagementHandler Interface](../../../../../develop/reference/core/clients/client-classes/iappmanagementhandler-interface.md)   
  [Application Management Client Interfaces](../../../../../develop/reference/core/clients/client-classes/application-management-client-interfaces.md)   
  [System Center Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Scenario: Extending Application Management](../../../../../develop/apps/scenario--extending-application-management.md)   
  [Configuration Manager Reference](../../../../../develop/reference/configuration-manager-reference.md)

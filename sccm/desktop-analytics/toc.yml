@@ -1,6 +1,6 @@
 - name: Desktop Analytics
   items:
-  - name: Overview
+  - name: What is Desktop Analytics?
     href: overview.md
   - name: Tutorials
     items:
@@ -14,8 +14,8 @@
       href: about-assets.md
     - name: Quality and feature updates
       href: about-updates.md
-    - name: Compatibility risk for Windows apps
-      href: compat-risk.md
+    - name: Compatibility assessment
+      href: compat-assessment.md
     - name: Health status monitoring
       href: health-status-monitoring.md
   - name: How-to guides
@@ -32,15 +32,19 @@
       href: deploy-pilot.md
     - name: Deploy to production
       href: deploy-prod.md
-    - name: Compatibility assessment with App Health Analyzer
-      href: app-health-analyzer.md
   - name: Reference
     items:
     - name: Enable data sharing
       href: enable-data-sharing.md
     - name: Privacy
       href: privacy.md
-    - name: Troubleshooting
+    - name: Troubleshoot
       href: troubleshooting.md
+    - name: Log collector
+      href: log-collector.md
+    - name: Monitor connection health
+      href: monitor-connection-health.md
     - name: Frequently asked questions
       href: faq.md
+    - name: Account close
+      href: account-close.md

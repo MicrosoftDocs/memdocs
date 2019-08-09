@@ -90,6 +90,6 @@ public void SynchronizeSoftwareUpdatePoint(WqlConnectionManager connection)
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
+ [About software update deployments](/sccm/develop/sum/about-software-updates-deployments)
  [SMS_SoftwareUpdate Server WMI Class](../../develop/reference/sum/sms_softwareupdate-server-wmi-class.md)   
  [SyncNow Method in Class SMS_SoftwareUpdate](../../develop/reference/sum/syncnow-method-in-class-sms_softwareupdate.md)

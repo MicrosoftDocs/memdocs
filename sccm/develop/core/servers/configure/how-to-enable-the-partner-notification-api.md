@@ -14,7 +14,7 @@ ms.collection: M365-identity-device-management
 # How to Enable the Partner Notification API
 The Partner Notification API allows third-party partners to use the Wake on LAN feature of System Center Configuration Manager to receive a list of computers that need to be woken up based on advertisements for software distribution.  
 
- Before you can enable the Partner Notification API, you must configure Wake on LAN for each primary site for which you want to enable this feature.  For more information about configuring Wake on LAN, see [How to configure Wake on LAN in System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt757110.aspx).  
+ Before you can enable the Partner Notification API, you must configure Wake on LAN for each primary site for which you want to enable this feature.  For more information about configuring Wake on LAN, see [How to configure Wake on LAN in System Center Configuration Manager](https://technet.microsoft.com/library/mt757110.aspx).  
 
 ### To enable the Partner Notification API  
 
@@ -37,6 +37,5 @@ The Partner Notification API allows third-party partners to use the Wake on LAN 
 5.  Use the list of computers in the partner notification file to wake the computers with your custom code.  
 
 ## See Also  
- [Software Distribution Wake On LAN](../../../../develop/core/servers/configure/software-distribution-wake-on-lan.md)   
  [How to Create an Advertisement](../../../../develop/core/servers/configure/how-to-create-an-advertisement.md)   
  [How to Configure a Software Distribution Mandatory Advertisement for Wake On LAN](../../../../develop/core/servers/configure/how-to-configure-a-mandatory-advertisement-for-wake-on-lan.md)

@@ -149,7 +149,7 @@ The data warehouse site system role includes the following reports, under the **
 
 - **Infrastructure Health Overview - Historical**: Displays an overview of the health of your Configuration Manager infrastructure.  
 
-- **List of Malware Detected - Historical**:	View malware that has been detected in the organization.  
+- **List of Malware Detected - Historical**: View malware that has been detected in the organization.  
 
 - **Software Distribution Summary - Historical**: A summary of software distribution for a specific advertisement and machine.  
 

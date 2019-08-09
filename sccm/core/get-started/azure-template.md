@@ -1,8 +1,8 @@
 ---
 title: Create a lab in Azure
 titleSuffix: Configuration Manager
-description: Automate the creation of a Configuration Manager technical preview lab using Azure templates
-ms.date: 03/18/2019
+description: Automate the creation of a Configuration Manager technical preview lab or current branch evaluation lab using Azure templates
+ms.date: 07/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -13,15 +13,18 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 
-# Create a Configuration Manager technical preview lab in Azure
+# Create a Configuration Manager lab in Azure
 
 *Applies to: System Center Configuration Manager (Technical Preview)*
 
 <!--3556017-->
 
-This guide describes how to build a Configuration Manager lab environment in Microsoft Azure. It uses Azure templates to simplify and automate the creation of a lab using Azure resources. This process installs the latest version of the Configuration Manager technical preview branch. 
+This guide describes how to build a Configuration Manager lab environment in Microsoft Azure. It uses Azure templates to simplify and automate the creation of a lab using Azure resources. Two Azure templates are provided: 
 
-For more information on Configuration Manager current branch, see [Configuration Manager on Azure](/sccm/core/understand/configuration-manager-on-azure).
+- Configuration Manager technical preview Azure template installs the latest version of the Configuration Manager technical preview branch.
+- Configuration Manager current branch Azure template installs the evaluation of the latest version of Configuration Manager current branch. 
+
+For more information, see [Configuration Manager on Azure](/sccm/core/understand/configuration-manager-on-azure).
 
 
 
@@ -39,7 +42,7 @@ This process requires an Azure subscription in which you can create the followin
 
 ## Process
 
-1. Go to the [Configuration Manager template](https://azure.microsoft.com/resources/templates/sccm-technicalpreview/).  
+1. Go to the [Configuration Manager technical preview template](https://azure.microsoft.com/resources/templates/sccm-technicalpreview/) or [Configuration Manager current branch template](https://azure.microsoft.com/resources/templates/sccm-currentbranch/).  
 
 2. Select **Deploy to Azure**, which opens the Azure portal.  
 
@@ -83,17 +86,17 @@ To connect to the VMs, first get from the Azure portal the public IP addresses f
 ## Azure VM info
 
 All Three VMs have the following specifications:
-- Standard_D2s_v3, which has two CPU cores and 8 GB of memory  
-- Windows Server 2016 Datacenter edition
 - 150 GB of disk space
 - Both a public and private IP address. The public IPs are in a network security group that only allows remote desktop connections on TCP port 3389. 
 
 The prefix that you specified in the deployment template is the VM name prefix. For example, if you set "contoso" as the prefix, then the domain controller machine name is `contosoDC`.
 
 
-### `<prefix>DC`
+### `<prefix>DC01`
 
-Active Directory domain controller
+- Active Directory domain controller
+- Standard_B2s, which has two CPU and 4 GB of memory
+- Windows Server 2019 Datacenter edition
 
 #### Windows features and roles
 - Active Directory Domain Services (ADDS)
@@ -101,8 +104,10 @@ Active Directory domain controller
 - Remote Differential Compression (RDC)
 
 
-### `<prefix>PS1`
+### `<prefix>PS01`
 
+- Standard_B2ms, which has two CPU and 8 GB of memory
+- Windows Server 2016 Datacenter edition
 - SQL Server
 - Windows 10 ADK with Windows PE 
 - Configuration Manager primary site
@@ -113,8 +118,10 @@ Active Directory domain controller
 - Internet Information Service (IIS)
 
 
-### `<prefix>DPMP`
+### `<prefix>DPMP01`
 
+- Standard_B2s, which has two CPU and 4 GB of memory
+- Windows Server 2019 Datacenter edition
 - Distribution point
 - Management point
 
@@ -124,3 +131,8 @@ Active Directory domain controller
 - Internet Information Service (IIS)
 - Background intelligent transfer service (BITS)
 
+### `<prefix>CL01`
+
+- Only for Configuration Manager current branch evaluation template
+- Windows 10
+- Configuration Manager client

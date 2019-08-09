@@ -23,7 +23,7 @@ The baseline media is available on DVD as part of Microsoft System Center 2016, 
 
 When you use the version 1606 baseline media, the site you install or upgrade to is:
 - A *Current Branch site* that is equivalent to a site that was first installed using the 1511 baseline media, and then updated to version 1606 plus the 1606 hotfix rollup - KB3186654.
--	An *LTSB site* that is equivalent to the Current Branch site that runs version 1606 plus the 1606 hotfix rollup - KB3186654. The baseline media already includes the hotfix rollup.  But, the LTSB does not support all of the features or capabilities available with the Current Branch, as detailed in [Introduction to the Long-Term Servicing Branch of System Center Configuration Manager](introduction-to-the-ltsb.md).
+- An *LTSB site* that is equivalent to the Current Branch site that runs version 1606 plus the 1606 hotfix rollup - KB3186654. The baseline media already includes the hotfix rollup.  But, the LTSB does not support all of the features or capabilities available with the Current Branch, as detailed in [Introduction to the Long-Term Servicing Branch of System Center Configuration Manager](introduction-to-the-ltsb.md).
 
 If you are not familiar with the different branches of System Center Configuration Manager, see [Which branch of Configuration Manager should I use](which-branch-should-i-use.md).
 
@@ -76,9 +76,9 @@ When using an unattended script to install a licensed branch, you must add the f
 
 For example, to install a licensed Current Branch edition you would use:
 
-  **Key Name: SABranchOptions**
-   -	**SAActive = 1**
-   - **CurrentBranch = 1**
+**Key Name: SABranchOptions**
+- **SAActive = 1**
+- **CurrentBranch = 1**
 
 
 > [!IMPORTANT]  
@@ -94,7 +94,7 @@ When you use the 1606 baseline media to install a new site of either branch, use
 
 - During Setup you must choose the branch of Configuration Manager that you want to install, and you can specify details for your Software Assurance agreement.
 - All sites in the same hierarchy must run the same branch. It is not supported to have a hierarchy with a mix of LTSB and Current Branch at different sites.
--	New scripted installation. For more information, see "New scripted installation options" earlier in this article.
+- New scripted installation. For more information, see "New scripted installation options" earlier in this article.
 
 ## Expand a stand-alone primary site
 You can expand a stand-alone primary site that runs the LTSB.  The process is no different than that used for a Current Branch site with one caveat:
@@ -108,7 +108,7 @@ When you upgrade from System Center 2012 Configuration Manager, use the site pla
 
 **Upgrade to the Current Branch:**
 - During Setup, you must choose the Current Branch, and you can specify details for your Software Assurance agreement.
-- 	New scripted installation. For more information, see "New scripted installation options" earlier in this article.
+- New scripted installation. For more information, see "New scripted installation options" earlier in this article.
 
 **Upgrade to the LTSB:**  
 - Additional steps to following in the pre-upgrade checklist.

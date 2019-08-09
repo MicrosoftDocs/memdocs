@@ -17,10 +17,10 @@ ms.collection: M365-identity-device-management
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 Different device platforms require additional configuration to enable device enrollment.
-  - [iOS and Mac enrollment setup](enroll-hybrid-ios-mac.md): Get an Apple MDM Push certificate
+- [iOS and Mac enrollment setup](enroll-hybrid-ios-mac.md): Get an Apple MDM Push certificate
 
-  - [Windows enrollment setup](enroll-hybrid-windows.md): Configure DNS and enable enrollment for both Windows PCs, Windows 10 Mobile, and Windows Phone devices
+- [Windows enrollment setup](enroll-hybrid-windows.md): Configure DNS and enable enrollment for both Windows PCs, Windows 10 Mobile, and Windows Phone devices
 
-  - [Android](enroll-hybrid-android.md): Android devices require no additional steps to enable enrollment
+- [Android](enroll-hybrid-android.md): Android devices require no additional steps to enable enrollment
 
 Once you enable MDM management, you can specify the number of devices each user can enroll, up to 15 devices per user.

@@ -20,7 +20,7 @@ To define the custom deployment type property page XML file, create an XML file 
 
      The following example from the RPC sample project shows how to define the deployment type property sheet XML file.  
 
-    ```  
+    ```xml
     <?xml version="1.0" encoding="utf-8" ?>   
     <SmsFormData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" FormatVersion="1" xmlns="http://schemas.microsoft.com/SystemsManagementServer/2005/03/ConsoleFramework">  
       <Form Id="f1908d6f-1ef8-4304-a229-c521c8e33713" FormType="PropertySheet">  
@@ -37,5 +37,4 @@ To define the custom deployment type property page XML file, create an XML file 
     ```  
 
 ## See Also  
- [Scenario: Extending Application Management](../../develop/apps/scenario--extending-application-management.md)   
  [Configuration Manager Reference](../../develop/reference/configuration-manager-reference.md)

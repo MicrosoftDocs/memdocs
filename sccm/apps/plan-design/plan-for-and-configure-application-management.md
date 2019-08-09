@@ -2,7 +2,7 @@
 title: Plan for application management
 titleSuffix: Configuration Manager
 description: Implement and configure the necessary dependencies for deploying applications in Configuration Manager.
-ms.date: 05/21/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -28,12 +28,18 @@ Use the information in this article to help you implement the necessary dependen
 
 IIS is required on the servers that run the following site system roles:
 
-- Application catalog website point  
-- Application catalog web service point  
 - Management point  
 - Distribution point  
 
 For more information, see [Site and site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites).  
+
+> [!Note]  
+> The application catalog also requires IIS. However, its Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
+>
+> For more information, see the following articles:
+>
+> - [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)
+> - [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)  
 
 
 ### Certificates on code-signed applications for mobile devices
@@ -63,10 +69,16 @@ For more information on user device affinity, see [Link users and devices with u
 
 ### Management point
 
-Clients contact a management point to download client policy, to locate content, and to connect to the application catalog. If clients can't access a management point, they can't use the application catalog.
+Clients contact a management point to download client policy, to locate content.
+
+Starting in version 1906, updated clients automatically use the management point for user-available application deployments.
+
+In version 1902 and earlier, clients use the management point to connect to the application catalog. If clients can't access a management point, they can't use the application catalog.
 
 > [!Note]  
 > Starting in version 1806, application catalog roles are no longer required to display user-available applications in Software Center. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).<!--1358309-->  
+>
+> Starting in version 1906, you can't install new application catalog roles. In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
   
 
 ### Distribution point
@@ -153,23 +165,23 @@ The application catalog is deprecated. For more information, see [Removed and de
 
 - Starting in version 1806, the **Silverlight user experience** for the application catalog website point is no longer supported.<!--1358309--> The application catalog web service point role is no longer *required*, but still *supported*.
 
-- In the first current branch release after June 30, 2019, updated clients will automatically use the management point for user-available application deployments. You also won't be able to install new application catalog roles.
+- Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles.
 
 - In the first current branch release after October 31, 2019, support will end for the application catalog roles.  
 
-These iterative improvements to Software Center and the management point are to simplify your infrastructure and remove the need for the application catalog for user-available deployments. Software Center can deliver all app deployments without the application catalog. Also, if you enable TLS 1.2 and use HTTP with the application catalog, users can't see user-targeted, available deployments.
+These iterative improvements to Software Center and the management point are to simplify your infrastructure and remove the need for the application catalog for user-available deployments. Software Center can deliver all app deployments without the application catalog. Also, if you enable TLS 1.2 and use HTTP with the application catalog, users can't see user-targeted, available deployments. Update Configuration Manager to version 1906 or later to benefit from these improvements.
 
-1. Update all clients to version 1806 or later.  
+1. Update all clients to version 1806 or later. Version 1906 is recommended.  
 
 1. Set branding for Software Center, instead of in the properties of the application catalog web site role. For more information, see [Software Center client settings](/sccm/core/clients/deploy/about-client-settings#software-center).  
 
 1. Review the default and any custom client settings. In the **Computer Agent** group, make sure the **Default Application Catalog website point** is `(none)`.  
 
-    The client only switches to using the management point when there are no application catalog roles in the hierarchy. Otherwise, clients continue to use one of the application catalog instances in the hierarchy. This behavior applies across separate primary sites.  
+    In version 1902 and earlier, the client only switches to using the management point when there are no application catalog roles in the hierarchy. Otherwise, clients continue to use one of the application catalog instances in the hierarchy. This behavior applies across separate primary sites.  
 
 1. Remove the **application catalog website** and **application catalog web service** site system roles from all primary sites.
 
-After you remove the application catalog roles, Software Center starts using the management point for user-targeted, available deployments. It can take up to 65 minutes for this change to happen. To verify this behavior on a specific client, review the `SCClient_<username>.log`, and look for an entry similar to the following line:
+After you remove the application catalog roles, Software Center starts using the management point for user-targeted, available deployments. In version 1902 and earlier, it can take up to 65 minutes for this change to happen. To verify this behavior on a specific client, review the `SCClient_<username>.log`, and look for an entry similar to the following line:
 
 `Using endpoint Url: https://mp.contoso.com/CMUserService_WindowsAuth, Windows authentication`
 

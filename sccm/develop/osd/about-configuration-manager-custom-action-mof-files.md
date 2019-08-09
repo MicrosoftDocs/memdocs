@@ -184,13 +184,12 @@ string          PackageIDForApplicationExe;
 
 #### Restrictions  
 
--   Regular qualifier constraints can be applied to class properties. For example, in the example above, the command-line arguments cannot be `null`. For more information, see the [Windows Management Instrumentation (WMI) SDK](http://go.microsoft.com/fwlink/?LinkId=43950).  
+-   Regular qualifier constraints can be applied to class properties. For example, in the example above, the command-line arguments cannot be `null`. For more information, see the [Windows Management Instrumentation (WMI) SDK](/windows/win32/wmisdk/wmi-start-page).  
 
 -   Ensure that property names and qualifiers are synchronized between the MOF file, custom action control and client application. The property names must match as well as any limitations. For example, if an `int` property is required, and it must be in the range 1 - 512, then the MOF file should have a `Not_Null` and `ValueRange` qualifier, the custom control should ensure that the property is set and within range, and the client application should verify the value before using it.  
 
 ## See Also  
  [About Configuration Manager Custom Actions](../../develop/osd/about-configuration-manager-custom-actions.md)   
- [Extending Operating System Deployment](../../develop/osd/extending-operating-system-deployment.md)   
  [How to Create a Configuration Manager Custom Action Control](../../develop/osd/how-to-create-a-configuration-manager-custom-action-control.md)   
  [How to Create a MOF File for a Configuration Manager Custom Action](../../develop/osd/how-to-create-a-mof-file-for-a-configuration-manager-custom-action.md)   
  [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md)   

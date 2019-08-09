@@ -57,10 +57,7 @@ END_SYSTEM_RESOURCE_USE
  When you have access to the site control file, the various properties are stored as embedded properties or in embedded property lists. For example `UserName` in the sample above is an embedded property. Other properties are stored as embedded property lists. In the example above, the MAC addresses in `BindExcept` are stored in an embedded property list.  
 
 ## See Also  
- [About the Configuration Manager Site Control File](../../develop/core/understand/about-the-configuration-manager-site-control-file.md)   
+ [About the site control file](/sccm/develop/core/understand/about-the-configuration-manager-site-control-file)
  [How to Set the Restore-Only Mode for a State Migration Point](../../develop/osd/how-to-set-the-restore-only-mode-for-a-state-migration-point.md)   
- [Configuration Manager Operating System Deployment](../../develop/osd/operating-system-deployment.md)   
- [Configuration Manager Programming Fundamentals](../../develop/core/understand/configuration-manager-programming-fundamentals.md)   
- [Configuration Manager Site Control File](../../develop/core/understand/site-control-file.md)   
  [How to Track Operating System Deployment Migrations in Configuration Manager](../../develop/osd/how-to-track-operating-system-deployment-migrations.md)   
- [Operating System Deployment Site Role Configuration](../../develop/osd/operating-system-deployment-site-role-configuration.md)
+ [About OS deployment site role configuration](/sccm/develop/osd/about-operating-system-deployment-site-role-configuration)

@@ -29,7 +29,7 @@ Windows Script Host-based applications and scripts work in Windows Management In
 >   
 >  `SELECT * FROM SMS_FullCollectionMembership WHERE CollectionID='SMS000FS'`  
 
- For more information about using VBScript and WMI, see [How to Use Configuration Manager Objects With WMI](../../../develop/core/understand/how-to-use-configuration-manager-objects-with-wmi.md).  
+ For more information about using VBScript and WMI, see [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview).  
 
 ## SWbemLocator  
  The [SWbemServices](http://go.microsoft.com/fwlink/?LinkId=276771)object is used to create an authenticated connection to the SMS Provider. You use the [ConnectServer](http://go.microsoft.com/fwlink/?LinkId=276772) method to make the connection to the SMS Provider. This method is particularly useful if you need to pass user credentials to a remote Configuration Manager server during connection. You can also use the Windows Script Host [GetObject](http://go.microsoft.com/fwlink/?LinkId=276773) method to create an authenticated connection. The type of object that is returned by `GetObject` depends on the parameters that are passed to it. See [How to Connect to a Configuration Manager Provider Using Managed Code](../../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md) and [How to Connect to a Configuration Manager Provider Using WMI](../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md) for examples that show how to use either `SWbemLocator` or `GetObject` in your connection script.  
@@ -45,7 +45,7 @@ Windows Script Host-based applications and scripts work in Windows Management In
 ## SWbemObject  
  The [SWbemObject](http://go.microsoft.com/fwlink/?LinkId=276778) object allows you to access the properties and other information for a Configuration Manager object.  
 
-## See Also  
- [Configuration Manager Provider](../../../develop/core/understand/sms-provider-in-configuration-manager.md)   
- [Configuration Manager Programming Fundamentals](../../../develop/core/understand/configuration-manager-programming-fundamentals.md)   
- [How to Use Configuration Manager Objects With WMI](../../../develop/core/understand/how-to-use-configuration-manager-objects-with-wmi.md)
+## See also
+
+ [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals)
+ [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)

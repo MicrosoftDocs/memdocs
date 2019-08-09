@@ -38,7 +38,7 @@ Every System Center Configuration Manager action is defined by an `ActionDescrip
  There are a number of child elements for any given action type.  
 
 ## See Also  
- [About Configuration Manager Console Actions](../../../../develop/core/servers/console/about-configuration-manager-console-actions.md)   
+[About Configuration Manager console actions](/sccm/develop/core/servers/console/configuration-manager-actions)
  [Configuration Manager AssemblyType Action](../../../../develop/core/servers/console/assemblytype-action.md)   
  [Configuration Manager Conditional Actions](../../../../develop/core/servers/console/conditional-actions.md)   
  [Configuration Manager Executable Action](../../../../develop/core/servers/console/executable-action.md)   

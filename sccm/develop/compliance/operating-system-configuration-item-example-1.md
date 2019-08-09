@@ -16,7 +16,7 @@ In System Center Configuration Manager, the following Operating System Configura
 
 ## Operating System Configuration Item Example  
 
-```  
+```xml
 <?xml version="1.0" encoding="utf-8"?>  
 
 <!--   
@@ -86,4 +86,4 @@ OperatingSystem identifies how to determine whether or not this operating system
 ```  
 
 ## See Also  
- [Authoring Desired Configuration Management Configuration Baselines and Configuration Items](../../develop/compliance/authoring-compliance-settings-configuration-baselines-and-configuration-items.md)
+[About authoring configuration baselines and items](/sccm/develop/compliance/about-authoring-configuration-baselines-and-configuration-items)

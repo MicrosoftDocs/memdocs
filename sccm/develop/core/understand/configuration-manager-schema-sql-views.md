@@ -26,7 +26,6 @@ In Configuration Manager, a number of schema information views are created to ge
  For more information about how the SQL views map to their WMI class equivalents, see [Configuration Manager Schema View Mapping](../../../develop/core/understand/configuration-manager-schema-view-mapping.md)  
 
 ## See Also  
- [About Configuration Manager Schema](../../../develop/core/understand/about-configuration-manager-schema.md)   
  [Configuration Manager Schema Overview](../../../develop/core/understand/configuration-manager-schema-overview.md)   
  [Configuration Manager Schema View Mapping](../../../develop/core/understand/configuration-manager-schema-view-mapping.md)   
  [Configuration Manager SQL View Security](../../../develop/core/understand/sql-view-security.md)

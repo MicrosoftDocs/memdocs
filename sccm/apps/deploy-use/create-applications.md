@@ -1,8 +1,8 @@
 ---
 title: Create applications
 titleSuffix: Configuration Manager
-description: Create applications with deployment types, detection methods and requirements to install software.
-ms.date: 05/08/2019
+description: Create applications with deployment types, detection methods, and requirements to install software.
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -21,17 +21,18 @@ A Configuration Manager application defines the metadata about application. An a
 
 Create applications using the following methods:  
 
--   Automatically create an application and deployment types by reading the application installation files:  
+- Automatically create an application and deployment types by reading the application installation files:  
     - [Create an application](#bkmk_create) and [automatically detect](#bkmk_auto-app) application information
     - [Create a deployment type](#bkmk_create-dt) and [automatically identify](#bkmk_auto-dt) deployment type information
 
--   Manually create an application and then add deployment types later:  
+- Manually create an application and then add deployment types later:  
     - [Create an application](#bkmk_create) and [manually specify](#bkmk_manual-app) application information
     - [Create a deployment type](#bkmk_create-dt) and [manually specify](#bkmk_manual-dt) deployment type information
 
--   [Import an application](#bkmk_import) from a file  
+- [Import an application](#bkmk_import) from a file  
 
 This article also includes the following information to configure a deployment type:  
+
 - [Content](#bkmk_dt-content)
 - [Detection Method](#bkmk_dt-detect)
 - [User Experience](#bkmk_dt-ux)
@@ -40,66 +41,63 @@ This article also includes the following information to configure a deployment t
 - [Dependencies](#bkmk_dt-depend)
 
 
-
 ## <a name="bkmk_create"></a> Create an application  
 
-1.  In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select the **Applications** node.  
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select the **Applications** node.  
 
-2.  On the **Home** tab of the ribbon, in the **Create** group, click **Create Application**.  
+2. On the **Home** tab of the ribbon, in the **Create** group, select **Create Application**.  
 
 Next, automatically detect or manually specify application information:  
 
--   [Automatically detect](#bkmk_auto-app) application information to create a basic application with a single deployment type. For example, a Windows Installer file that has no dependencies or requirements. After you create an application by using this procedure, edit it as needed. You can add or change deployment types, and add detection methods, dependencies, or requirements.  
+- [Automatically detect](#bkmk_auto-app) application information to create a basic application with a single deployment type. For example, a Windows Installer file that has no dependencies or requirements. After you create an application by using this procedure, edit it as needed. You can add or change deployment types, and add detection methods, dependencies, or requirements.  
 
--   [Manually specify](#bkmk_manual-app) application information to create more complex applications. Define more than one deployment type, dependencies, detection methods, or requirements.  
-
+- [Manually specify](#bkmk_manual-app) application information to create more complex applications. Define more than one deployment type, dependencies, detection methods, or requirements.  
 
 ### <a name="bkmk_auto-app"></a> Automatically detect application information  
 
-1.  On the **General** page of the Create Application wizard, select **Automatically detect information about this application from installation files**.  
+1. On the **General** page of the Create Application wizard, select **Automatically detect information about this application from installation files**.  
 
-2.  In the **Type** drop-down list, select the application installation file type that you want to use to detect application information. For more information about the available installation types, see [Deployment types supported by Configuration Manager](/sccm/apps/deploy-use/create-applications#bkmk_deploy-types).  
+2. In the **Type** drop-down list, select the application installation file type that you want to use to detect application information. For more information about the available installation types, see [Deployment types supported by Configuration Manager](/sccm/apps/deploy-use/create-applications#bkmk_deploy-types).  
 
-3.  In the **Location** box, specify the application installation file that you want to use to detect application information. This location is either a network path (`\\server\share\filename`) or a store link. You must have access to the network path and any subfolders that include application content.  
+3. In the **Location** box, specify the application installation file that you want to use to detect application information. This location is either a network path (`\\server\share\filename`) or a store link. You must have access to the network path and any subfolders that include application content.  
 
     > [!IMPORTANT]  
-    >  When you select **Windows Installer (\*.msi file)** as an application type, the site imports all of the files in the specified folder. It then sends these files to distribution points. Make sure that the specified folder contains only the files that are necessary to install the application. Microsoft tests Configuration Manager to support up to 20,000 files in the application package. If your application has more files, consider creating multiple applications with less files.    
+    > When you select **Windows Installer (\*.msi file)** as an application type, the site imports all of the files in the specified folder. It then sends these files to distribution points. Make sure that the specified folder contains only the files that are necessary to install the application. Microsoft tests Configuration Manager to support up to 20,000 files in the application package. If your application has more files, consider creating multiple applications with less files.  
 
-4.  On the **Import Information** page of the Create Application wizard, review the information, and then click **Next**. If necessary, click **Previous** to go back and fix any errors.  
+4. On the **Import Information** page of the Create Application wizard, review the information, and then select **Next**. If necessary, select **Previous** to go back and fix any errors.  
 
-5.  On the **General Information** page of the Create Application wizard, specify the following information:  
+5. On the **General Information** page of the Create Application wizard, specify the following information:  
 
     > [!NOTE]  
-    >  If Configuration Manager automatically detects this information from the application installation files, it's already populated here. Additionally, the displayed options might be different depending on the application type that you create.  
+    > If Configuration Manager automatically detects this information from the application installation files, it's already populated here. Additionally, the displayed options might be different depending on the application type that you create.  
 
-    -   General information about the application, like the application **Name**, **Administrator comments**, **Publisher**, and **Software version**. To help you find the application in the Configuration Manager console, specify an **Optional reference**, or select **Administrative categories**.  
+    - General information about the application, like the application **Name**, **Administrator comments**, **Publisher**, and **Software version**. To help you find the application in the Configuration Manager console, specify an **Optional reference**, or select **Administrative categories**.  
 
-    -   **Installation program**: Specify the installation program and any required properties that are needed to install the application deployment type.  
+    - **Installation program**: Specify the installation program and any required properties that are needed to install the application deployment type.  
 
         > [!TIP]  
-        >  If the installation program doesn't appear, choose **Browse** and browse to the installation program location.  
+        > If the installation program doesn't appear, choose **Browse** and browse to the installation program location.  
 
-    -   **Install behavior**: Select one of the three options for how Configuration Manager installs this deployment type. For more information on these options, see [User Experience](#bkmk_dt-ux).  
+    - **Install behavior**: Select one of the three options for how Configuration Manager installs this deployment type. For more information on these options, see [User Experience](#bkmk_dt-ux).  
 
-    -   **Use an automatic VPN connection (if configured)**: If you've deployed a VPN profile to the device on which the user launches the app, connect the VPN when the app starts. This option is only for Windows 8.1 and Windows Phone 8.1. On Windows Phone 8.1 devices, if you deploy more than one VPN profile to the device, automatic VPN connections aren't supported. For more information, see [VPN profiles](/sccm/protect/deploy-use/vpn-profiles).  
+    - **Use an automatic VPN connection (if configured)**: If you've deployed a VPN profile to the device on which the user launches the app, connect the VPN when the app starts. This option is only for Windows 8.1 and Windows Phone 8.1. On Windows Phone 8.1 devices, if you deploy more than one VPN profile to the device, automatic VPN connections aren't supported. For more information, see [VPN profiles](/sccm/protect/deploy-use/vpn-profiles).  
 
     - **Provision this application for all users on the device**<!--1358310-->: Starting in version 1806, provision an application with a Windows app package for all users on the device. For more information, see [Create Windows applications](/sccm/apps/get-started/creating-windows-applications#bkmk_provision).  
 
        > [!Tip]  
        > If you're modifying an existing application, this setting is on the **User Experience** tab of the Windows app package deployment type properties.  
 
-6.  Choose **Next**, review the application information on the **Summary** page, and then finish the Create Application wizard.  
+6. Choose **Next**, review the application information on the **Summary** page, and then finish the Create Application wizard.  
 
-The new application now appears in the **Applications** node of the Configuration Manager console. You've finished creating an application. 
+The new application now appears in the **Applications** node of the Configuration Manager console. You've finished creating an application.
 
 To add more deployment types or configure other settings, see [Create deployment types for the application](#bkmk_create-dt).  
 
-
 ### <a name="bkmk_manual-app"></a> Manually specify application information  
 
-1.  On the **General** page of the Create Application wizard, select **Manually specify the application information**, and then choose **Next**.  
+1. On the **General** page of the Create Application wizard, select **Manually specify the application information**, and then choose **Next**.  
 
-2.  Specify **General Information** about the application:  
+2. Specify **General Information** about the application:  
 
     - The application **Name** is required and must be fewer than 256 characters.  
 
@@ -111,40 +109,50 @@ To add more deployment types or configure other settings, see [Create deployment
 
     - Select users or groups who are responsible for this application as **Owners** and **Support contacts**. By default, these values are set to your username.  
 
-3.  On the **Application Catalog** page of the Create Application wizard, specify the following information:  
+3. On the **Software Center** page of the Create Application wizard, specify the following information:  
 
-    -   **Selected language**: In the drop-down list, select the language version of the application that you want to set up. Choose **Add/Remove** to set up more languages for this application.  
+    > [!Note]  
+    > In version 1902 and earlier, this page was named **Application Catalog**.
 
-    -   **Localized application name**: Specify the application name in the selected language.  
+    - **Selected language**: In the drop-down list, select the language version of the application that you want to set up. Choose **Add/Remove** to set up more languages for this application.  
+
+    - **Localized application name**: Specify the application name in the selected language.  
 
         > [!IMPORTANT]  
         > A localized application name is required for each language version that you set up.  
 
-    -   **User categories**: Choose **Edit** to specify application categories in the selected language. Users of Software Center use these categories to help filter and sort the available applications.  
+    - **User categories**: Choose **Edit** to specify application categories in the selected language. Users of Software Center use these categories to help filter and sort the applications.  
 
-        > [!IMPORTANT]  
-        > User categories only apply to deployments to user collections.  If an application is deployed to a computer collection, the user categories are ignored.
+        > [!Note]  
+        > In version 1902 and earlier, user categories only apply to available deployments to user collections. If an application is deployed to a computer collection, the user categories are ignored.
+        >
+        > Starting in version 1906, user categories for device-targeted application deployments show as filters in Software Center. These deployments can be either available or required.
+        >
+        > <!-- 4726793 -->Renaming or deleting a category doesn't automatically apply to apps with this category. These changes apply on the next revision of the app. To work around this issue for rename or delete:
+        >
+        > - First clear the checkbox for the category on any app that references it. Then apply that change, which revises the app.
+        >     - Instead of the rename action, next create a new category with the new name, and add the new category to the relevant apps.
+        >     - You can delete the category after you revise the apps.
 
-    -   **User documentation**: Specify the location of a file from which Software Center users can get more information about this application. This location is a website address, or a network path and file name. Make sure that users have access to this location.  
+    - **User documentation**: Specify the location of a file from which Software Center users can get more information about this application. This location is a website address, or a network path and file name. Make sure that users have access to this location.  
 
-    -   **Link text**: Specify the text that appears in place of the URL to the application.  
+    - **Link text**: Specify the text that appears in place of the URL to the application.  
 
-    -   **Privacy URL**: Specify a website address to the privacy statement for the application.  
+    - **Privacy URL**: Specify a website address to the privacy statement for the application.  
 
-    -   **Localized description**: Enter a description for this application in the selected language.  
+    - **Localized description**: Enter a description for this application in the selected language.  
 
-    -   **Keywords**: Enter a list of keywords in the selected language. These keywords help Software Center users search for the application.  
+    - **Keywords**: Enter a list of keywords in the selected language. These keywords help Software Center users search for the application.  
 
-    -   **Icon**: Click **Browse** to select an icon for this application. If you don't specify an icon, Configuration Manager uses a default icon. Icons can have pixel dimensions of up to 512x512.  
+    - **Icon**: Select **Browse** to select an icon for this application. If you don't specify an icon, Configuration Manager uses a default icon. Icons can have pixel dimensions of up to 512x512.  
 
-    -   **Display this as a featured app and highlight it in the company portal**: This option prominently displays the app in the company portal on mobile devices.  
+    - **Display this as a featured app and highlight it in the company portal**: This option prominently displays the app in the company portal on mobile devices.  
 
-4.  On the **Deployment Types** page of the Create Application wizard, choose **Add** to create a new deployment type. For more information, see [Create deployment types for the application](#bkmk_create-dt).  
+4. On the **Deployment Types** page of the Create Application wizard, choose **Add** to create a new deployment type. For more information, see [Create deployment types for the application](#bkmk_create-dt).  
 
-5.  Choose **Next**, review the application information on the **Summary** page, and then finish the Create Application wizard.  
+5. Choose **Next**, review the application information on the **Summary** page, and then finish the Create Application wizard.  
 
 The new application now appears in the **Applications** node of the Configuration Manager console.  
-
 
 
 ## <a name="bkmk_create-dt"></a> Create deployment types for the application  
@@ -153,6 +161,7 @@ If you [automatically detect application information](#bkmk_auto-app), you may n
 
 > [!Note]  
 > When you view the properties of an existing deployment type, the following sections correspond to tabs of the deployment type properties window:  
+>
 > - [Content](#bkmk_dt-content)
 > - [Detection Method](#bkmk_dt-detect)
 > - [User Experience](#bkmk_dt-ux)
@@ -162,62 +171,59 @@ If you [automatically detect application information](#bkmk_auto-app), you may n
 >  
 > For information on the **Install Behavior** tab on the properties of a deployment type, see [Check for running executable files](/sccm/apps/deploy-use/deploy-applications#bkmk_exe-check).  
 
-
 ### Start the Create Deployment Type wizard  
 
 There are three ways to start the Create Deployment Type wizard:
 
-- **In the Applications node**: In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select the **Applications** node. Select an application, and then click **Create Deployment Type** in the ribbon.  
+- **In the Applications node**: In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select the **Applications** node. Select an application, and then select **Create Deployment Type** in the ribbon.  
 
-- **When creating an application**: When you [Manually specify application information](#bkmk_manual-app) in the Create Application wizard, click **Add** on the Deployment Types page.  
+- **When creating an application**: When you [Manually specify application information](#bkmk_manual-app) in the Create Application wizard, select **Add** on the Deployment Types page.  
 
-- **From application properties**: Select an existing application in the **Applications** node and click **Properties**. Switch to the **Deployment Types** tab, and click **Add**.
+- **From application properties**: Select an existing application in the **Applications** node and select **Properties**. Switch to the **Deployment Types** tab, and select **Add**.
 
 Then use one of the following procedures to [automatically identify](#bkmk_auto-dt) or [manually specify](#bkmk_manual-dt) deployment type information.  
 
-
 ### <a name="bkmk_auto-dt"></a> Automatically identify deployment type information  
 
-1.  On the **General** page of the Create Deployment Type wizard:  
+1. On the **General** page of the Create Deployment Type wizard:  
 
     1. Select the application installation file **Type** to detect the deployment type information.  
 
     2. Select **Automatically identify information about this deployment type from installation files**.  
 
-    3.  In the **Location** box, specify the application installation file that you want to use to detect the deployment type information. This location is either a network path (`\\server\share\filename`) or a store link. You must have access to the network path and any subfolders that include application content.  
+    3. In the **Location** box, specify the application installation file that you want to use to detect the deployment type information. This location is either a network path (`\\server\share\filename`) or a store link. You must have access to the network path and any subfolders that include application content.  
 
-2.  On the **Import Information** page of the Create Deployment Type wizard, review the information, and then click **Next**. If necessary, click **Previous** to go back and fix any errors.  
+2. On the **Import Information** page of the Create Deployment Type wizard, review the information, and then select **Next**. If necessary, select **Previous** to go back and fix any errors.  
 
-3.  On the **General Information** page of the Create Deployment Type wizard, specify the following information:  
+3. On the **General Information** page of the Create Deployment Type wizard, specify the following information:  
 
     > [!NOTE]  
-    >  Some of the deployment type information might already be present if it was read from the application installation files. Additionally, the displayed options might differ, depending on the deployment type that you're creating.  
+    > Some of the deployment type information might already be present if it was read from the application installation files. Additionally, the displayed options might differ, depending on the deployment type that you're creating.  
 
-    -   **General Information** about the deployment type:      
+    - **General Information** about the deployment type:  
         - The **Name** is required  
 
         - **Administrator comments** to further describe it  
 
-        - **Languages** that are available for it   
+        - **Languages** that are available for it  
 
-    -   **Installation program**: Specify the installation program and any properties that you require to install the deployment type.  
+    - **Installation program**: Specify the installation program and any properties that you require to install the deployment type.  
 
-    -   **Install behavior**: Select one of the three options for how Configuration Manager installs this deployment type. For more information on these options, see [User Experience](#bkmk_dt-ux).  
+    - **Install behavior**: Select one of the three options for how Configuration Manager installs this deployment type. For more information on these options, see [User Experience](#bkmk_dt-ux).  
 
-    -   **Use an automatic VPN connection (if configured)**: If you've deployed a VPN profile to the device on which the user launches the app, connect the VPN when the app starts. This option is only for Windows 8.1 and Windows Phone 8.1. On Windows Phone 8.1 devices, if you deploy more than one VPN profile to the device, automatic VPN connections aren't supported. For more information, see [VPN profiles](/sccm/protect/deploy-use/vpn-profiles).  
+    - **Use an automatic VPN connection (if configured)**: If you've deployed a VPN profile to the device on which the user launches the app, connect the VPN when the app starts. This option is only for Windows 8.1 and Windows Phone 8.1. On Windows Phone 8.1 devices, if you deploy more than one VPN profile to the device, automatic VPN connections aren't supported. For more information, see [VPN profiles](/sccm/protect/deploy-use/vpn-profiles).  
 
-4.  Choose **Next**, and then continue to [Deployment type Content options](#bkmk_dt-content).  
-
+4. Choose **Next**, and then continue to [Deployment type Content options](#bkmk_dt-content).  
 
 ### <a name="bkmk_manual-dt"></a> Manually specify the deployment type information  
 
-1.  On the **General** page of the Create Deployment Type wizard, in the **Type** drop-down list, choose the application installation file type for this deployment type. 
+1. On the **General** page of the Create Deployment Type wizard, in the **Type** drop-down list, choose the application installation file type for this deployment type.
 
-2.  Select **Manually specify the deployment type information**, and then click **Next**.
+2. Select **Manually specify the deployment type information**, and then select **Next**.
 
-3.  On the **General Information** page of the Create Deployment Type wizard, specify a **Name** for the deployment type. Optionally specify **Administrator comments**, select the **Languages** for this deployment type, and then click **Next**.  
+3. On the **General Information** page of the Create Deployment Type wizard, specify a **Name** for the deployment type. Optionally specify **Administrator comments**, select the **Languages** for this deployment type, and then select **Next**.  
 
-4.  Continue to [Deployment type Content options](#bkmk_dt-content).  
+4. Continue to [Deployment type Content options](#bkmk_dt-content).  
 
 ### <a name="bkmk_dt-content"></a> Deployment type **Content** options  
 
@@ -229,7 +235,7 @@ On the **Content** page, specify the following information:
 - **Content location**: Specify the location of the content for this deployment type, or select **Browse** to choose the deployment type content folder.  
 
     > [!IMPORTANT]  
-    >  The System account of the site server computer must have permissions to the specified content location.  
+    > The System account of the site server computer must have permissions to the specified content location.  
 
     - **Persist content in the client cache**: The Configuration Manager client indefinitely keeps in its cache the deployment type content. The client persists the content even if the app is already installed. This option is useful with some deployments, like Windows Installer–based software. Windows Installer needs a local copy of the source content for applying updates. This option reduces the available cache space. If you select this option, it might cause a large deployment to fail at a later point if the cache doesn't have sufficient available space.  
 
@@ -247,8 +253,8 @@ On the **Content** page, specify the following information:
 
 - **Run installation and uninstall program as 32-bit process on 64-bit clients**: Use the 32-bit file and registry locations on Windows-based computers to run the installation program for the deployment type.  
 
-
 #### Deployment type properties **Content** options
+
 When you view the properties of a deployment type, the following options appear only on the **Content** tab:
 
 - **Uninstall content settings**:  
@@ -265,27 +271,26 @@ When you view the properties of a deployment type, the following options appear 
 
 - **Deployment options**: Specify if clients should download the application when they use a distribution point from a neighbor or the default site boundary groups.  
 
-- **Allow clients to share content with other clients on the same subnet**: Specify whether to enable the use of BranchCache for content downloads. For more information, see [BranchCache](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#branchcache). Starting in version 1802, BranchCache is always enabled on clients. This setting is removed, as clients use BranchCache if the distribution point supports it.  
+- **Allow clients to share content with other clients on the same subnet**: Specify whether to enable the use of BranchCache for content downloads. For more information, see [BranchCache](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#branchcache). BranchCache is always enabled on clients. This setting was removed in version 1802, as clients use BranchCache if the distribution point supports it.  
 
+### <a name="bkmk_dt-detect"></a> Deployment type **Detection Method** options
 
-### <a name="bkmk_dt-detect"></a> Deployment type **Detection Method** options   
+This procedure sets up a detection method that indicates the presence of the deployment type. In other words, whether the Windows device already has the application installed. Use one of the two following methods to create a detection method:
 
-This procedure sets up a detection method that indicates the presence of the deployment type. In other words, whether the Windows device already has the application installed. Use one of the two following methods to create a detection method:  
 - [Configure rules to detect the presence of this deployment type](#bkmk_detect-rule)
 - [Use a custom script to detect the presence of this deployment type](#bkmk_detect-script)
 
-
 #### <a name="bkmk_detect-rule"></a> Configure rules to detect the presence of this deployment type
 
-1.  On the **Detection Method** page, the option to **Configure rules to detect the presence of this deployment type** is selected by default. Click **Add Clause**.  
+1. On the **Detection Method** page, the option to **Configure rules to detect the presence of this deployment type** is selected by default. Select **Add Clause**.  
 
-2.  In the **Detection Rule** dialog box, click the **Setting type** drop-down list. Select one of the following methods to detect the presence of the deployment type:  
+2. In the **Detection Rule** dialog box, select a **Setting type** to detect the presence of the deployment type:  
 
     - **File System**: Detect whether a specified file or folder exists on a device. This detection indicates that the application is installed. Specify the following additional details:  
 
         - **Type**: Select whether it's a file or folder.  
 
-        - **Path** (Required): Enter or browse to the local path on the device that includes the file or folder. For example, `C:\Program Files`. You can't specify a shared network path. If you click **Browse**, browse the local file system or connect to a representative client to browse.  
+        - **Path** (Required): Enter or browse to the local path on the device that includes the file or folder. For example, `C:\Program Files`. You can't specify a shared network path. If you select **Browse**, browse the local file system or connect to a representative client to browse.  
 
         - **File or folder name** (Required): Specify the specific file or folder name to detect in the above path. If the client detects this file or folder on the device, it considers the application as installed on the device.  
 
@@ -301,33 +306,47 @@ This procedure sets up a detection method that indicates the presence of the dep
 
         - **This registry key is associated with a 32-bit application on 64-bit systems**: Select this option to first check 32-bit registry locations for the specified registry key. If the registry key isn't found, the client searches 64-bit locations.  
 
-    - **Windows Installer**: Detect whether a specified Windows Installer file exists on a client device. This detection indicates that the application is installed. Specify the MSI **Product code** to detect on the client. If you click **Browse**, select the MSI file from which to read the product code. 
+    - **Windows Installer**: Detect whether a specified Windows Installer file exists on a client device. This detection indicates that the application is installed. Specify the MSI **Product code** to detect on the client. If you select **Browse**, choose the MSI file from which to read the product code.
 
-3.  At the bottom of the Detection Rule window, specify whether the item must exist or satisfy a rule. For example, if you detect with a file, the following option is selected by default: **The file system setting must exist on the target system to indicate presence of this application**. Select the other option to create a rule for detection based on file or folder properties. These properties include Date Modified, Date Created, Version, or Size. These rule criteria are different for each setting type.  
+3. At the bottom of the Detection Rule window, specify whether the item must exist or satisfy a rule. For example, if you detect with a file, the following option is selected by default: **The file system setting must exist on the target system to indicate presence of this application**. Select the other option to create a rule for detection based on file or folder properties. These properties include Date Modified, Date Created, Version, or Size. These rule criteria are different for each setting type.  
 
-4.  Click **OK** to close the **Detection Rule** dialog box.  
+4. Select **OK** to close the **Detection Rule** dialog box.  
 
-When you create more than one detection method for a deployment type, create more complex logic by grouping the clauses together. 
+When you create more than one detection method for a deployment type, you can group clauses together to create more complex logic.  
 
-Continue to the next section on using a custom script as a detection method. Or skip to the [User Experience](#bkmk_dt-ux) options for the deployment type.
+#### Group detection clauses *(optional)*
 
+1. Create three or more detection method clauses on a deployment type.  
+
+2. Select two or more consecutive clauses, and then select **Group**. You’ll see the parentheses added to the associated columns, which show where the group starts and ends.  
+
+    Example:
+
+    | Connector  |  ( | Clause           |  )  |
+    |------------|----|------------------|-----|
+    |            |    | MSI Product Code |     |
+    | Or         | (  | file1.text exists|     |
+    | And        |    | file2.txt exists | )   |
+
+3. To remove the group, select the grouped clauses, and then select **Ungroup**.  
+
+*Continue* to the next section on using a custom script as a detection method. Or *skip* to the [User Experience](#bkmk_dt-ux) options for the deployment type.
 
 #### <a name="bkmk_detect-script"></a> Use a custom script to check for the presence of a deployment type  
 
-1.  On the **Detection Method** page, select the **Use a custom script to detect the presence of this deployment type** box. Then click **Edit**.  
+1. On the **Detection Method** page, select the **Use a custom script to detect the presence of this deployment type** box. Then select **Edit**.  
 
-2.  In the **Script Editor** dialog box, click the **Script type** drop-down list. Select one of the following script languages to detect the deployment type: PowerShell, VBScript, or JScript.  
+2. In the **Script Editor** dialog box, select a **Script type** to detect the deployment type: PowerShell, VBScript, or JScript.  
 
     > [!Note]  
     > Starting in version 1810, when a Windows PowerShell script runs as a app detection method, the Configuration Manager client calls PowerShell with the `-NoProfile` parameter. This option starts PowerShell without profiles. A PowerShell profile is a script that runs when PowerShell starts. <!--3607762-->  
 
-3.  In the **Script contents** box, enter the script that you want to use, or paste in the contents of an existing script. Choose **Open** to browse to an existing saved script. Click **Clear** to remove the text in the Script contents field. If necessary, enable the option to **Run script as 32-bit process on 64-bit clients**.  
+3. In the **Script contents** box, enter the script that you want to use, or paste in the contents of an existing script. Choose **Open** to browse to an existing saved script. Select **Clear** to remove the text in the Script contents field. If necessary, enable the option to **Run script as 32-bit process on 64-bit clients**.  
 
     > [!NOTE]  
-    >  The maximum size for a script is 32 KB.  
+    > The maximum size for a script is 32 KB.  
 
-4.  Click **OK** to save the script and close the **Script Editor** dialog box. Back on the Create Deployment Type wizard, the **Script Type** and **Script Length** fields update with details about your script.   
-
+4. Select **OK** to save the script and close the **Script Editor** dialog box. Back on the Create Deployment Type wizard, the **Script Type** and **Script Length** fields update with details about your script.
 
 #### About custom script detection methods  
 
@@ -338,7 +357,7 @@ Configuration Manager checks the results from the script. It reads the values wr
 
 Use the following tables to check whether an application is installed from the output from a script:  
 
-**Zero exit code:**  
+##### Zero exit code
 
 |STDOUT|STDERR|Script result|Application detection state|
 |---------|---------|---------|---------|
@@ -347,7 +366,7 @@ Use the following tables to check whether an application is installed from the o
 |Not empty|Empty|Success|Installed|
 |Not empty|Not empty|Success|Installed|
 
-**Non-zero exit code:**  
+##### Non-zero exit code
 
 |STDOUT|STDERR|Script result|Application detection state|
 |---------|---------|---------|---------|
@@ -356,11 +375,11 @@ Use the following tables to check whether an application is installed from the o
 |Not empty|Empty|Failure|Unknown|
 |Not empty|Not empty|Failure|Unknown|
 
-**Examples**
+##### Examples
 
 Use the following PowerShell/VBScript examples to write your own application detection scripts:  
 
-Example 1: The script returns an exit code that's not zero. This code indicates the script failed to run successfully. In this case, the application detection state is unknown.  
+**Example 1**: The script returns an exit code that's not zero. This code indicates the script failed to run successfully. In this case, the application detection state is unknown.  
 
 ``` PowerShell
 Exit 1
@@ -370,7 +389,7 @@ Exit 1
 WScript.Quit(1)
 ```
 
-Example 2: The script returns an exit code of zero, but the value of STDERR isn't empty. This result indicates the script failed to run successfully. In this case, the application detection state is unknown.  
+**Example 2**: The script returns an exit code of zero, but the value of STDERR isn't empty. This result indicates the script failed to run successfully. In this case, the application detection state is unknown.  
 
 ``` PowerShell
 Write-Error "Script failed"
@@ -382,7 +401,7 @@ WScript.StdErr.Write "Script failed"
 WScript.Quit(0)
 ```
 
-Example 3: The script returns an exit code of zero, which indicates it ran successfully. However, the value for STDOUT is empty, which indicates the application isn't installed.  
+**Example 3**: The script returns an exit code of zero, which indicates it ran successfully. However, the value for STDOUT is empty, which indicates the application isn't installed.  
 
 ``` PowerShell
 Exit 0
@@ -392,7 +411,7 @@ Exit 0
 WScript.Quit(0)
 ```
 
-Example 4: The script returns an exit code of zero, which indicates it ran successfully. The value for STDOUT isn't empty, which indicates the application is installed.  
+**Example 4**: The script returns an exit code of zero, which indicates it ran successfully. The value for STDOUT isn't empty, which indicates the application is installed.  
 
 ``` PowerShell
 Write-Host "The application is installed"
@@ -404,7 +423,7 @@ WScript.StdOut.Write "The application is installed"
 WScript.Quit(0)
 ```
 
-Example 5: The script returns an exit code of zero, which indicates it ran successfully. The values for STDOUT and STDERR aren't empty, which indicates the application is installed.  
+**Example 5**: The script returns an exit code of zero, which indicates it ran successfully. The values for STDOUT and STDERR aren't empty, which indicates the application is installed.  
 
 ``` PowerShell
 Write-Host "The application is installed"
@@ -418,8 +437,7 @@ WScript.StdErr.Write "Completed"
 WScript.Quit(0)
 ```
 
-
-### <a name="bkmk_dt-ux"></a> Deployment type **User Experience** options   
+### <a name="bkmk_dt-ux"></a> Deployment type **User Experience** options
 
 These settings specify how the client installs the application on devices, and what the user sees.  
 
@@ -442,7 +460,7 @@ On the **User Experience** page, specify the following information:
   - **Only when no user is logged on**  
 
     > [!NOTE]  
-    >  This option defaults to **Only when a user is logged on**. If you select **Install for user** in the **Installation behavior** drop-down list, you can't change this option.  
+    > This option defaults to **Only when a user is logged on**. If you select **Install for user** in the **Installation behavior** drop-down list, you can't change this option.  
 
 - **Installation program visibility**: Specify the mode in which the deployment type runs on client devices. Select one of the following options:  
 
@@ -456,11 +474,10 @@ On the **User Experience** page, specify the following information:
 
 - **Allow users to view and interact with the program installation**: Specify whether a user can interact with the deployment type installation to set up the installation options.  
 
-    > [!NOTE]  
-    >  If you select the **Install for user** option in the **Installation behavior** drop-down list, this option is enabled by default.  
+    If you selected the **Install for user** option in the **Installation behavior** drop-down list, this option is enabled by default.  
 
     > [!IMPORTANT]  
-    > Starting in version 1802, when you select the **Install for system** behavior, this setting is optional. This change is primarily to allow an end user to interact with the installation during a task sequence. For example, to run a setup process that prompts the end user for various options. Some application installers can't have user prompts silenced, or the installation process may require specific configuration values only known to the user. <!--1356976-->  
+    > When you select the **Install for system** behavior, this setting is optional. This change is primarily to allow an end user to interact with the installation during a task sequence. For example, to run a setup process that prompts the end user for various options. Some application installers can't have user prompts silenced, or the installation process may require specific configuration values only known to the user. <!--1356976-->  
     >  
     > Installing in system context and allowing users to interact with the installation isn't a secure configuration. For more information, see [security and privacy for application management](/sccm/apps/plan-design/security-and-privacy-for-application-management#bkmk_interact).  
 
@@ -473,12 +490,12 @@ On the **User Experience** page, specify the following information:
   - To check whether a deployment type is installed when you define maintenance windows on client devices. When a maintenance window is in place, a deployment type only starts if enough time is available in the maintenance window to accommodate the **Maximum Allowed Run Time** setting.  
 
     > [!IMPORTANT]  
-    >  A conflict might occur if the **Maximum allowed run time** is longer than the scheduled maintenance window. If the user sets the maximum run time to a period greater than the length of any available maintenance window, that deployment type doesn't run.  
+    > A conflict might occur if the **Maximum allowed run time** is longer than the scheduled maintenance window. If the user sets the maximum run time to a period greater than the length of any available maintenance window, that deployment type doesn't run.  
 
 - **Estimated installation time (minutes)**: Specify the estimated installation time of the deployment type. Users see this time in Software Center.  
 
-
 #### Deployment type properties **User Experience** options
+
 When you view the properties of a deployment type, the following options appear only on the **User Experience** tab:
 
 Enforce specific post-installation behavior. Select one of the following options:  
@@ -491,74 +508,71 @@ Enforce specific post-installation behavior. Select one of the following options
 
 - **Configuration Manager client will force a mandatory device restart**: Configuration Manager forces a device reboot after successful installation. Software Center reports that a reboot is required. If a user is signed in during the install, they're prompted depending on the *deployment's* User Experience configuration.  
 
-
 ### <a name="bkmk_dt-require"></a> Deployment type **Requirements**
 
-Configuration Manager verifies these requirements on devices before installing the deployment type. Use requirements to further refine and control the devices or users that receive this application. For example, if you deploy the application to a user collection, specify the app's hardware requirements here. 
+Configuration Manager verifies these requirements on devices before installing the deployment type. Use requirements to further refine and control the devices or users that receive this application. For example, if you deploy the application to a user collection, specify the app's hardware requirements here.
 
-1.  On the **Requirements** page, click **Add** to open the **Create Requirement** dialog box.  
+1. On the **Requirements** page, select **Add** to open the **Create Requirement** dialog box.  
 
-2.  In the **Category** drop-down list, select whether this requirement is for a **Device** or a **User**.  
+2. In the **Category** drop-down list, select whether this requirement is for a **Device** or a **User**.  
 
     Select **Custom** to use a previously created global condition. When you select **Custom**, you can also choose **Create** to create a new global condition. For more about global conditions, see [How to create global conditions](/sccm/apps/deploy-use/create-global-conditions).  
 
     > [!IMPORTANT]  
-    >  If you deploy the application to a device collection, the client ignores any requirement of the category **User** and the condition **Primary Device**.  
+    > If you deploy the application to a device collection, the client ignores any requirement of the category **User** and the condition **Primary Device**.  
 
-3.  In the **Condition** drop-down list, select the condition to assess whether the user or device meets the installation requirements. The contents of this list vary depending on the selected category.  
+3. In the **Condition** drop-down list, select the condition to assess whether the user or device meets the installation requirements. The contents of this list vary depending on the selected category.  
 
-4.  In the **Operator** drop-down list, select the operator to use. This operator compares the selected condition to the specified value. It assesses whether the user or device meets the installation requirement. The available operators vary depending on the selected condition.  
+4. In the **Operator** drop-down list, select the operator to use. This operator compares the selected condition to the specified value. It assesses whether the user or device meets the installation requirement. The available operators vary depending on the selected condition.  
 
     > [!Note]  
-    >  The available requirements differ depending on the device type that the deployment type uses.  
+    > The available requirements differ depending on the device type that the deployment type uses.  
 
-5.  In the **Value** box, specify the values to use for comparison. These values, along with the selected condition and operator, evaluate whether the user or device meets the installation requirements. The available values vary depending on the selected condition and the selected operator.  
+5. In the **Value** box, specify the values to use for comparison. These values, along with the selected condition and operator, evaluate whether the user or device meets the installation requirements. The available values vary depending on the selected condition and the selected operator.  
 
-6.  Choose **OK** to save the requirement and close the **Create Requirement** dialog box.  
-
+6. Choose **OK** to save the requirement and close the **Create Requirement** dialog box.  
 
 ### <a name="bkmk_dt-depend"></a> Deployment type **Dependencies**  
 
-Dependencies define one or more deployment types from another application that the client must install before it installs this deployment type.   
+Dependencies define one or more deployment types from another application that the client must install before it installs this deployment type.
 
 > [!IMPORTANT]  
->  In some cases, a deployment type is dependent on a deployment type that also has dependencies. The maximum number of supported dependencies in the chain is five.  
+> In some cases, a deployment type is dependent on a deployment type that also has dependencies. The maximum number of supported dependencies in the chain is five.  
 
-1.  On the **Dependencies** page, click **Add**.  
+1. On the **Dependencies** page, select **Add**.  
 
-2.  In the Add Dependency window, enter the **Dependency group name**. This name refers to this group of application dependencies.  
+2. In the Add Dependency window, enter the **Dependency group name**. This name refers to this group of application dependencies.  
 
-3.  In the Add Dependency window, click **Add**.  
+3. In the Add Dependency window, select **Add**.  
 
-4.  In the **Specify Required Application** window, select an available application and at least one of its deployment types to use as a dependency.  
+4. In the **Specify Required Application** window, select an available application and at least one of its deployment types to use as a dependency.  
 
     > [!TIP]  
-    >  Click **View** to display the properties of the selected application or deployment type.  
+    > Select **View** to display the properties of the selected application or deployment type.  
 
-5.  Click **OK** to close the **Specify Required Application** window.  
+5. Select **OK** to close the **Specify Required Application** window.  
 
-6.  If you want the client to automatically install the dependent application, select **Auto Install** next to the dependency.  
+6. If you want the client to automatically install the dependent application, select **Auto Install** next to the dependency.  
 
     > [!NOTE]  
-    >  You don't need to deploy a dependent application for the client to automatically install it.  
+    > You don't need to deploy a dependent application for the client to automatically install it.  
 
-7.  If you add more than one dependency, use the **Increase Priority** and **Decrease Priority** buttons. These actions change the order in which the client evaluates each dependency.  
+7. If you add more than one dependency, use the **Increase Priority** and **Decrease Priority** buttons. These actions change the order in which the client evaluates each dependency.  
 
-8.  Click **OK** to close the **Add Dependency** window.  
-
+8. Select **OK** to close the **Add Dependency** window.  
 
 ### <a name="bkmk_dt-return"></a> Deployment type **Return Codes**
 
 > [!Note]  
 > This page isn't in the Create Deployment Type wizard. It's only a tab on the properties of an existing deployment type.  
 
-Specify return codes to control behaviors after the deployment type completes. For example, signal that a restart is required, the installation is complete. 
+Specify return codes to control behaviors after the deployment type completes. For example, signal that a restart is required, the installation is complete.
 
-1. On the **Return Codes** tab of the deployment type properties window, click **Add**.  
+1. On the **Return Codes** tab of the deployment type properties window, select **Add**.  
 
 2. In the Add Return Code window, specify the **Return Code Value** that you expect from this deployment type. This value is any positive or negative integer between `-2147483648` and `2147483647`.  
 
-3. Select a **Code Type** from the drop-down list. This setting defines how Configuration Manager interprets the specified return code from this deployment type. The available types vary based on the deployment type technology.   
+3. Select a **Code Type** from the drop-down list. This setting defines how Configuration Manager interprets the specified return code from this deployment type. The available types vary based on the deployment type technology.  
 
     - **Success (no reboot)**: The deployment type successfully installed, and no reboot is necessary.  
 
@@ -566,23 +580,23 @@ Specify return codes to control behaviors after the deployment type completes. F
 
     - **Hard Reboot**: The deployment type successfully installed, but requires the device to restart. Nothing else can be installed until the device restarts.  
 
-    - **Soft Reboot**: The deployment type successfully installed, but requests the device to restart. Other installations can occur before the device restarts.    
+    - **Soft Reboot**: The deployment type successfully installed, but requests the device to restart. Other installations can occur before the device restarts.  
 
     - **Fast Retry**: Another installation is already in progress on the device. The client retries every two hours, for a total of 10 times.  
 
 4. Optionally, enter a **Name** and **Description** for this return code.
 
-5. Click **OK** to close the Add Return Code window.  
-
+5. Select **OK** to close the Add Return Code window.  
 
 #### Example: non-zero success
+
 You're deploying an application that returns an exit code of `1` when it successfully installs. By default, Configuration Manager detects this non-zero return code as a failure. Specify the Return Code Value of `1`, and select the Code Type of **Success (no reboot)**. Now Configuration Manager interprets that return code as a success for this deployment type.
 
-
 #### Default return codes
+
 When you create some deployment types, Configuration Manager automatically adds the following return codes that are common to that technology:  
 
-**Windows Installer (\*.msi file)**  
+##### Windows Installer (\*.msi file)
 
 |Value    |Code Type|
 |---------|---------|
@@ -592,7 +606,7 @@ When you create some deployment types, Configuration Manager automatically adds 
 |1641     |Hard Reboot|
 |1618     |Fast Retry|
 
-**Script Installer**  
+##### Script Installer
 
 |Value    |Code Type|
 |---------|---------|
@@ -601,13 +615,12 @@ When you create some deployment types, Configuration Manager automatically adds 
 |3010     |Soft Reboot|
 |1618     |Fast Retry|
 
-**Windows app package (\*.appx, \*.appxbundle, \*.msix, \*.msixbundle)**  
+##### Windows app package (\*.appx, \*.appxbundle, \*.msix, \*.msixbundle)
 
 |Value    |Code Type|
 |---------|---------|
 |15605    |Fast Retry|
 |15618    |Fast Retry|
-
 
 
 ## <a name="bkmk_appv"></a> Additional options for App-V deployment types  
@@ -616,63 +629,60 @@ Configure additional options that are unique to deployment types for virtual app
 
 ### <a name="bkmk_appv-content"></a> App-V deployment type **Content** options  
 
-1.  In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select the **Applications** node.  
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select the **Applications** node.  
 
-2.  Select an application with an App-V deployment type, and click **Properties**.  
+2. Select an application with an App-V deployment type, and select **Properties**.  
 
-3.  In the application properties, switch to the **Deployment Types** tab. Select the App-V deployment type, and click **Edit**.  
+3. In the application properties, switch to the **Deployment Types** tab. Select the App-V deployment type, and select **Edit**.  
 
-4.  In the deployment type properties, switch to the **Content** tab. Configure the following options as necessary:  
+4. In the deployment type properties, switch to the **Content** tab. Configure the following options as necessary:  
 
-    -   **Persist content in the client cache**: The Configuration Manager client won't delete from its cache the content for this deployment type.  
+    - **Persist content in the client cache**: The Configuration Manager client won't delete from its cache the content for this deployment type.  
 
-    -   **Load content into App-V cache before launch**: Before the application starts, the Configuration Manager client loads into the App-V cache all content for this deployment type. The client doesn't pin the content in the cache. It deletes the content as necessary.  
+    - **Load content into App-V cache before launch**: Before the application starts, the Configuration Manager client loads into the App-V cache all content for this deployment type. The client doesn't pin the content in the cache. It deletes the content as necessary.  
 
-5.  Click **OK** to close the deployment type properties. Then click **OK** to close the application properties.  
+5. Select **OK** to close the deployment type properties. Then select **OK** to close the application properties.  
 
+### <a name="bkmk_appv-pub"></a> App-V deployment type **Publishing** options
 
-### <a name="bkmk_appv-pub"></a> App-V deployment type **Publishing** options   
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select the **Applications** node.  
 
-1.  In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select the **Applications** node.  
+2. Select an application with an App-V deployment type, and select **Properties**.  
 
-2.  Select an application with an App-V deployment type, and click **Properties**.  
+3. In the application properties, switch to the **Deployment Types** tab. Select the App-V deployment type, and select **Edit**.  
 
-3.  In the application properties, switch to the **Deployment Types** tab. Select the App-V deployment type, and click **Edit**.  
+4. In the deployment type properties, switch to the **Publishing** tab. Select the items in the virtual application that you want to publish.  
 
-4.  In the deployment type properties, switch to the **Publishing** tab. Select the items in the virtual application that you want to publish.  
-
-5.  Click **OK** to close the deployment type properties. Then click **OK** to close the application properties.  
-
+5. Select **OK** to close the deployment type properties. Then select **OK** to close the application properties.  
 
 
 ## <a name="bkmk_import"></a> Import an application  
 
-Use the following procedure to import an application into Configuration Manager: 
+Use the following procedure to import an application into Configuration Manager:
 
-1.  In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select the **Applications** node.   
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select the **Applications** node.  
 
-2.  In the ribbon, on the **Home** tab and the **Create** group, click **Import Application**.  
+2. In the ribbon, on the **Home** tab and the **Create** group, select **Import Application**.  
 
-3.  On the **General** page of the Import Application Wizard, specify the network path to the **File** to import. For example, `\\server\share\file.zip`. This file is a valid compressed archive (ZIP format) of an exported Configuration Manager application.  
+3. On the **General** page of the Import Application Wizard, specify the network path to the **File** to import. For example, `\\server\share\file.zip`. This file is a valid compressed archive (ZIP format) of an exported Configuration Manager application.  
 
-4.  On the **File Content** page, select the action to take if this application is a duplicate of an existing application. Create a new application, or ignore the duplicate and add a new revision to the existing application.  
+4. On the **File Content** page, select the action to take if this application is a duplicate of an existing application. Create a new application, or ignore the duplicate and add a new revision to the existing application.  
 
-5.  On the **Summary** page, review the actions, and then finish the wizard.  
+5. On the **Summary** page, review the actions, and then finish the wizard.  
 
 The new application appears in the **Applications** node.  
 
 > [!TIP]  
->  The Windows PowerShell cmdlet **Import-CMApplication** has the same function as this procedure. For more information, see [Import-CMApplication](https://docs.microsoft.com/powershell/module/configurationmanager/import-cmapplication?view=sccm-ps).  
+> The Windows PowerShell cmdlet **Import-CMApplication** has the same function as this procedure. For more information, see [Import-CMApplication](https://docs.microsoft.com/powershell/module/configurationmanager/import-cmapplication?view=sccm-ps).  
 
-For more information about how to export an application, see [Management tasks for applications](/sccm/apps/deploy-use/management-tasks-applications). 
-
+For more information about how to export an application, see [Management tasks for applications](/sccm/apps/deploy-use/management-tasks-applications).
 
 
 ## <a name="bkmk_deploy-types"></a> Supported deployment types  
 
 Configuration Manager supports the following deployment types for applications:
 
-| Deployment type name | Description |   
+| Deployment type name | Description |
 |--------------------------|----------------------|  
 | **Windows Installer (\*.msi file)** | A Windows Installer file. |  
 | **Windows app package (\*.appx, \*.appxbundle)** | For Windows 8 or later. Select a Windows app package file or a Windows app bundle package. |  
@@ -691,30 +701,34 @@ Configuration Manager supports the following deployment types for applications:
 | **Web Application** | Specify a link to a web application. This deployment type installs a shortcut to the web application on the user's device.<sup>[Note 2](#bkmk_note2)</sup> |  
 | **Windows Installer through MDM (\*.msi)** | Create and deploy Windows Installer-based apps to Windows 10 devices. For more information, see [Deploy Windows Installer apps to MDM-enrolled Windows 10 devices](/sccm/apps/get-started/creating-windows-applications#bkmk_mdm-msi). |  
 
-#### <a name="bkmk_note1"></a> Note 1: Windows app package (in the Windows Store)
+### <a name="bkmk_note1"></a> Note 1: Windows app package (in the Windows Store)
+
 To deploy the app as a link to the Windows Store, configure the group policy **Turn off the Store application**. Set this policy to **Disabled** or **Not configured**. If you enable this setting, clients can't connect to the Windows Store to download and install applications.
 
-Windows clients always evaluate deployment types that use a link to a store before other deployment types. Then the client evaluates deployment types by priority. 
+Windows clients always evaluate deployment types that use a link to a store before other deployment types. Then the client evaluates deployment types by priority.
 
-#### <a name="bkmk_note2"></a> Note 2: Web Application  
-If you installed the Microsoft Intune managed browser on iOS or Android devices, make sure that users can only use the managed browser to open the app. In the website address, replace **http** with **http-intunemam**, or **https** with **https-intunemam**. For example: 
+### <a name="bkmk_note2"></a> Note 2: Web Application
+
+If you installed the Microsoft Intune managed browser on iOS or Android devices, make sure that users can only use the managed browser to open the app. In the website address, replace **http** with **http-intunemam**, or **https** with **https-intunemam**. For example:
+
 - `http-intunemam://<path to web app>`
 - `https-intunemam://<path to web app>`
 
-Use Configuration Manager [application requirements](#bkmk_dt-require) to make sure that web apps using the managed browser are only installed to iOS and Android devices. 
+Use Configuration Manager [application requirements](#bkmk_dt-require) to make sure that web apps using the managed browser are only installed to iOS and Android devices.
 
 For more information about the Intune managed browser, see [Manage internet access using managed browser policies](/sccm/apps/deploy-use/manage-internet-access-using-managed-browser-policies).
-
 
 
 ## Next steps
 
 After creating an application in Configuration Manager, the next step is to [deploy the application](/sccm/apps/deploy-use/deploy-applications).
 
+Starting in version 1906, create a group of applications that you can send to a user or device collection as a single deployment. For more information, see [Create application groups](/sccm/apps/deploy-use/create-app-groups).
+
 For more information about creating applications on different OS platforms, see the following articles:  
+
 - [Create Windows applications](/sccm/apps/get-started/creating-windows-applications)
 - [Create applications for mobile devices](/sccm/mdm/deploy-use/create-applications) (iOS, Windows Mobile, and Android)  
 - [Create Mac applications](/sccm/apps/get-started/creating-mac-computer-applications)
 - [Create Linux and UNIX server applications](/sccm/apps/get-started/creating-linux-and-unix-server-applications)
 - [Create Windows Embedded applications](/sccm/apps/get-started/creating-windows-embedded-applications)
-

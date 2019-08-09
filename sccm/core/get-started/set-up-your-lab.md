@@ -266,7 +266,7 @@ Internet Information Services (IIS) is a flexible, scalable web server that can 
 
         -   **URL Authorization**  
 
-        -   **Windows Authorization**  
+        -   **Windows Authentication**  
 
     -   **Application Development**  
 

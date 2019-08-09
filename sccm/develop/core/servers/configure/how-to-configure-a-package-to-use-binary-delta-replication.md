@@ -140,6 +140,5 @@ public void ModifyPackageToUseBinaryDeltaReplication(WqlConnectionManager connec
 ## .NET Framework Security  
 
 ## See Also  
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
- [Software Distribution Packages](../../../../develop/core/servers/configure/software-distribution-packages.md)   
+ [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
  [SMS_SCI_Component Server WMI Class](../../../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md)

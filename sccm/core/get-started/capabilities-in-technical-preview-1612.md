@@ -43,11 +43,11 @@ In addition to installing and configuring the data warehouse database, several n
 
 | Step         | Details  |
 |:------:|-----------|  
-| **1**  | 	The site server transfers and stores data in the site database.  |  
-| **2** |  	Based on its schedule and configuration, the Data Warehouse Service point gets data from the site database.  |  
-| **3** |  The Data Warehouse Service point transfers and stores a copy of the synchronized data in the Data Warehouse database. |  
-| **A** |  Using built-in reports, a request for data is made which is passed to the Reporting Services point using SQL Server Reporting Services. |  
-| **B** |  	Most reports are for current information, and these requests are run against the site database. |  
+| **1** | The site server transfers and stores data in the site database.  |  
+| **2** | Based on its schedule and configuration, the Data Warehouse Service point gets data from the site database.  |  
+| **3** | The Data Warehouse Service point transfers and stores a copy of the synchronized data in the Data Warehouse database. |  
+| **A** | Using built-in reports, a request for data is made which is passed to the Reporting Services point using SQL Server Reporting Services. |  
+| **B** | Most reports are for current information, and these requests are run against the site database. |  
 | **C** | When a report requests historical data, by using one of the reports with a *Category* of **Data Warehouse**, the request is run against the Data Warehouse database.   |  
 
 ### Prerequisites for the Data Warehouse Service point and database
@@ -78,16 +78,16 @@ Before the Wizard displays an option to select and install the Data Warehouse Se
 - **Configuration Manager database settings:**   
   - **Server Name** - Specify the FQDN of the server that hosts the site database. If you do not use a default instance of SQL Server, you must specify the instance after the FQDN in the following format: ***&lt;Sqlserver_FQDN>\&lt;Instance_name>***
   - **Database name** - Specify the name of the site database.
-  -	**Verify** - Click **Verify** to make sure that the connection to the site database is successful.
+  - **Verify** - Click **Verify** to make sure that the connection to the site database is successful.
 </br></br>
 - **Data Warehouse database settings:**
-  -	**Server name** - Specify the FQDN of the server that hosts the Data Warehouse Service point and database. If you do not use a default instance of SQL Server, you must specify the instance after the FQDN in the following format: ***&lt;Sqlserver_FQDN>\&lt;Instance_name>***
-  -	**Database name** - Specify the FQDN for the data warehouse database.  Configuration Manager will create the database with this name. If you specify a database name that already exists on the instance of SQL server, Configuration Manager will use that database.
-  -	**Verify** - Click **Verify** to make sure that the connection to the site database is successful.
+  - **Server name** - Specify the FQDN of the server that hosts the Data Warehouse Service point and database. If you do not use a default instance of SQL Server, you must specify the instance after the FQDN in the following format: ***&lt;Sqlserver_FQDN>\&lt;Instance_name>***
+  - **Database name** - Specify the FQDN for the data warehouse database.  Configuration Manager will create the database with this name. If you specify a database name that already exists on the instance of SQL server, Configuration Manager will use that database.
+  - **Verify** - Click **Verify** to make sure that the connection to the site database is successful.
 
 **Synchronization settings** page:   
 - **Data settings:**
-  - **Replication groups to synchronize** – Select the data groups you want to synchronize. For information about the different types of data groups, see [Database replication](/sccm/core/servers/manage/data-transfers-between-sites#a-namebkmkdbrepa-database-replication) and **Distributed views** in [Data transfers between sites](/sccm/core/servers/manage/data-transfers-between-sites).
+  - **Replication groups to synchronize** – Select the data groups you want to synchronize. For information about the different types of data groups, see [Database replication](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_dbrep) and **Distributed views** in [Data transfers between sites](/sccm/core/servers/manage/data-transfers-between-sites).
   - **Tables included to synchronize** – Specify the name of each additional table you want to synchronize. Separate multiple tables by using a comma. These tables will be synchronized from the site database in addition to the replication groups you select.
   - **Tables excluded to synchronize** - Specify the name of individual tables from replication groups you synchronize. Tables you specify will be excluded from. Separate multiple tables by using a comma.
 - **Synchronization settings:**
@@ -100,7 +100,7 @@ After the data warehouse role is installed, ensure the account that is used as t
 #### Troubleshoot installation and data synchronization
 Use the following logs to investigate problems with the installation of the Data Warehouse Service point, or synchronization of data:
 - **DWSSMSI.log** and **DWSSSetup.log**  - Use these logs to investigate errors when installing the Data warehouse service point.
-- 	**Microsoft.ConfigMgrDataWarehouse.log** – Use this log to investigate data synchronization between the site database to the data warehouse database.
+- **Microsoft.ConfigMgrDataWarehouse.log** – Use this log to investigate data synchronization between the site database to the data warehouse database.
 
 ### Reporting
 After you install a Data Warehouse site system role, the following reports are available on your Reporting services point with a *Category* of **Data Warehouse:**
@@ -136,7 +136,7 @@ Use the following steps to move the data warehouse database to a new SQL Server:
 
 You can review the following Configuration Manager logs to confirm the site system role has successfully reinstalled:  
 - **DWSSMSI.log** and **DWSSSetup.log**  - Use these logs to investigate errors when installing the Data warehouse service point.
-- 	**Microsoft.ConfigMgrDataWarehouse.log** – Use this log to investigate data synchronization between the site database to the data warehouse database.
+- **Microsoft.ConfigMgrDataWarehouse.log** – Use this log to investigate data synchronization between the site database to the data warehouse database.
 
 
 ## Content Library Cleanup Tool
@@ -149,8 +149,8 @@ After you install Technical Preview 1612, you can find **ContentLibraryCleanup.e
 The tool released with this Technical Preview is intended to replace older versions of similar tools released for past Configuration Manager products. Although this tool version will cease to function after March 1st, 2017, new versions will release with future Technical Previews until such time as this tool is released as part of the Current Branch, or a production ready out-of-band release.
 
 ### Requirements  
- - The tool can be run directly on the computer that hosts the distribution point, or remotely from another server. The tool can only be run against a single distribution point at a time.
- - The user account that runs the tool must directly have role-based administration permissions that are equal to a Full Administrator on the Configuration Manager hierarchy.  The tool does not function when user account is granted permissions as a member of a Windows security group that has the Full Administrator permissions.
+- The tool can be run directly on the computer that hosts the distribution point, or remotely from another server. The tool can only be run against a single distribution point at a time.
+- The user account that runs the tool must directly have role-based administration permissions that are equal to a Full Administrator on the Configuration Manager hierarchy.  The tool does not function when user account is granted permissions as a member of a Windows security group that has the Full Administrator permissions.
 
 ### Modes of operation
 The tool can be run in two modes:
@@ -182,7 +182,7 @@ To run the tool:
 
 **Known issue**
 When the tool is run, an error like the following might be returned when any package or deployment has failed, or is in progress:
--  *System.InvalidOperationException: This content library cannot be cleaned up right now because package <packageID> is not fully installed.*
+-  *System.InvalidOperationException: This content library cannot be cleaned up right now because package \<packageID> is not fully installed.*
 
 **Workaround:** None. The tool cannot reliable identify orphaned files when content is in progress or has failed to deploy. Therefore, the tool will not allow you to clean-up content until that issue is resolved.
 
@@ -198,28 +198,28 @@ The following command line switches can be used in any order.
 | **/dp &lt;distribution point FQDN>**  | **Required** </br> Specify the fully qualified domain name (FQDN) of the distribution point that you want to clean. </br></br> Example:  ***ContentLibraryCleanup.exe /dp server1.contoso.com***|
 | **/ps &lt;primary site FQDN>**       | **Optional** when cleaning content from a distribution point at a primary site.</br>**Required** when cleaning content from a distribution point at a secondary site. </br></br> Specify the FQDN of the primary site the distribution point belongs to, or of the parent primary parent when the distribution point is at a secondary site. </br></br> Example: ***ContentLibraryCleanup.exe /dp server1.contoso.com /ps siteserver1.contoso.com*** |
 | **/sc &lt;primary site code>**  | **Optional** when cleaning content from a distribution point at a primary site.</br>**Required** when cleaning content from a distribution point at a secondary site. </br></br> Specify the site code of the primary site that the distribution point belongs to, or of the parent primary site when the distribution point is at a secondary site.</br></br> Example: ***ContentLibraryCleanup.exe /dp server1.contoso.com /sc ABC*** |
-| **/log <log file directory>**       |**Optional** </br> Specify a directory to place log files in. This can be a local drive, or on a network share.</br></br> When this switch is not used, log files are automatically placed in the users temp folder.</br></br> Example of local drive: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>Example of network share: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;share>\&lt;folder>***|
+| **/log \<log file directory>**       |**Optional** </br> Specify a directory to place log files in. This can be a local drive, or on a network share.</br></br> When this switch is not used, log files are automatically placed in the users temp folder.</br></br> Example of local drive: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>Example of network share: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;share>\&lt;folder>***|
 
 
 ## Improvements for in-console search
 Based on User Voice feedback, we have added the following improvements to in-console search:
- - **Object Path:**  
+- **Object Path:**  
   Many objects now support a new column named **Object Path**.  When you search and include this column in your display results, you can view the path to each object. For example, if you run a search for apps in the Applications node and are also searching sub-nodes, the *Object Path* column in the results pane will show you the path to each object returned.   
 
 - **Preservation of search text:**  
   When you enter text in the search text box, and then switch between searching a sub-node and the current node, the text you typed will now persist and remain available for a new search without having to retype it.
 
 - **Preservation of your decision to search sub-nodes:**  
- The option you select for either searching the *current node* or *all sub-nodes* now persists when you change the node you are working in.   This new behavior means you do not need to constantly reset the decision as you move around the console.  By default, when you open the console the option is to only search the current node.
+  The option you select for either searching the *current node* or *all sub-nodes* now persists when you change the node you are working in.   This new behavior means you do not need to constantly reset the decision as you move around the console.  By default, when you open the console the option is to only search the current node.
 
 ## Prevent installation of an application if a specified program is running.
 You can now configure a list of executable files (with the extension .exe) in deployment type properties which, if running, will block installation of an application. After installation is attempted, users will see a dialog box asking them to close the processes that are blocking installation.
 
 ### Try it out
 To configure a list of executable files
-1.	On the properties page of any deployment type, choose the **Installer Handling** tab.
-2.	Click **Add**, to add one of more executable files to the list (for example **Edge.exe**)
-3.	Click **OK** to close the deployment type properties dialog box.
+1. On the properties page of any deployment type, choose the **Installer Handling** tab.
+2. Click **Add**, to add one of more executable files to the list (for example **Edge.exe**)
+3. Click **OK** to close the deployment type properties dialog box.
 
 Now, when you deploy this application to a user or a device, and one of executables you added is running, the end user will see a Software Center dialog box telling them that the installation failed because an application is running.
 
@@ -249,16 +249,16 @@ We have added express installation files support in Configuration Manager for Wi
 
 ### To enable the download of express installation files for Windows 10 updates on the server
 To start synchronizing the metadata for Windows 10 express installation files, you must enable it in the Software Update Point Properties.
-1.	In the Configuration Manager console, navigate to **Administration** > **Site Configuration** > **Sites**.
-2.	Select the central administration site or the stand-alone primary site.
-3.	On the **Home** tab, in the **Settings** group, click **Configure Site Components**, and then click **Software Update Point**. On the **Update Files** tab, select **Download full files for all approved updates and express installation files for Windows 10**.
+1. In the Configuration Manager console, navigate to **Administration** > **Site Configuration** > **Sites**.
+2. Select the central administration site or the stand-alone primary site.
+3. On the **Home** tab, in the **Settings** group, click **Configure Site Components**, and then click **Software Update Point**. On the **Update Files** tab, select **Download full files for all approved updates and express installation files for Windows 10**.
 
 ### To enable support for clients to download and install express installation files
 To enable express installation files support on clients, you must enable express installation files on clients in the Software Updates section of client settings. This creates a new HTTP listener that listens for requests to download express installation files on the port that you specify. Once you deploy client settings to enable this functionality on the client, it will attempt to download the delta between the current month's Windows 10 Cumulative Update and the previous month's update (clients must run a version of Windows 10 that supports express installation files).
-1.	Enable support for express installation files in the Software Update Point Component properties (previous procedure).
-2.	In the Configuration Manager console, navigate to **Administration** > **Client Settings**.
-3.	Select the appropriate client settings, then on the **Home** tab, click **Properties**.
-4.	Select the **Software Updates** page, configure **Yes** for the **Enable installation of Express Updates on clients** setting and configure the port used by the HTTP listener on the client for the **Port used to download content for Express Updates** setting.
+1. Enable support for express installation files in the Software Update Point Component properties (previous procedure).
+2. In the Configuration Manager console, navigate to **Administration** > **Client Settings**.
+3. Select the appropriate client settings, then on the **Home** tab, click **Properties**.
+4. Select the **Software Updates** page, configure **Yes** for the **Enable installation of Express Updates on clients** setting and configure the port used by the HTTP listener on the client for the **Port used to download content for Express Updates** setting.
 
 
 ## OData endpoint data access
@@ -306,7 +306,7 @@ There are several requirements for enabling the creation of user policy in the C
 
 - The Azure AD onboarding process must be complete, and the client has to be initially connected to the corporate network to get the connection information.
 - Clients must be both domain-joined (registered in Active Directory) and cloud-domain-joined (registered in Azure AD).
-- You must run [Active Directory User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#active-directory-user-discovery#active-directory-user-discovery).
+- You must run [Active Directory User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser).
 - You must modify the Configuration Manager client to allow user policy requests over the Internet, and deploy the change to the client. Because this change to the client takes place *on the client device*, it can be deployed through the Cloud Management Gateway although you haven't completed the configuration changes needed for user policy.
 - Your management point must be configured to use HTTPS to secure the token on the network, and must have .Net 4.5 installed.
 

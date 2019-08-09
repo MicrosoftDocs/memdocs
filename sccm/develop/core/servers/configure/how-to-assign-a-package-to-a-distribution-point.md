@@ -138,8 +138,7 @@ public void AssignPackageToDistributionPoint(WqlConnectionManager connection, st
  For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## See Also  
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
- [Software Distribution Packages](../../../../develop/core/servers/configure/software-distribution-packages.md)   
- [Configuration Manager Site Control File](../../../../develop/core/understand/site-control-file.md)   
+ [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
+ [About the site control file](/sccm/develop/core/understand/about-the-configuration-manager-site-control-file)
  [SMS_SCI_Component Server WMI Class](../../../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md)   
  [SMS_SystemResourceList Server WMI Class](../../../../develop/reference/core/servers/configure/sms_systemresourcelist-server-wmi-class.md)

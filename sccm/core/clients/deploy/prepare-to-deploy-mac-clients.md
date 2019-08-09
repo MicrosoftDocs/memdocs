@@ -39,9 +39,9 @@ If Mac clients can't locate the certificate revocation list (CRL), they can't co
 
 Before you install the Configuration Manager client on a Mac computer, decide how to install the client certificate:  
 
--   Use Configuration Manager enrollment by using the [CMEnroll tool](/sccm/core/clients/deploy/deploy-clients-to-macs#install-the-client-and-then-enroll-the-client-certificate-on-the-mac). The enrollment process doesn't support automatic certificate renewal. Re-enroll Mac computers before the certificate expires.  
+-   Use Configuration Manager enrollment by using the [CMEnroll tool](/sccm/core/clients/deploy/deploy-clients-to-macs#client-and-certificate-automation-with-cmenroll). The enrollment process doesn't support automatic certificate renewal. Re-enroll Mac computers before the certificate expires.  
 
--   [Use a certificate request and installation method that's independent from Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-macs#use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager).  
+-   [Use a certificate request and installation method that's independent from Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-macs#bkmk_external).  
 
 For more information about Mac client certificate requirements, see [PKI certificate requirements for Configuration Manager](/sccm/core/plan-design/network/pki-certificate-requirements).  
 
@@ -68,7 +68,7 @@ The web server certificate must include the internet FQDN that's specified in th
 
 Specify the site system's internet FQDN value in the web server certificate for the management point, the distribution point, and the enrollment proxy point.
 
-For more information of an example deployment, see [Deploying the web server certificate for site systems that run IIS](/sccm/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).  
+For more information of an example deployment, see [Deploying the web server certificate for site systems that run IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).  
 
 
 
@@ -80,9 +80,9 @@ If these site systems don't have it, deploy a client authentication certificate 
 
 -   Distribution point  
 
-For an example deployment that creates and installs the client certificate for management points, see the [Deploying the client certificate for Windows computers](/sccm/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012).  
+For an example deployment that creates and installs the client certificate for management points, see the [Deploying the client certificate for Windows computers](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012).  
 
-For an example deployment that creates and installs the client certificate for distribution points, see the [Deploying the client certificate for distribution points](/sccm/plan-design/network/example-deployment-of-pki-certificates#BKMK_clientdistributionpoint2008_cm2012).  
+For an example deployment that creates and installs the client certificate for distribution points, see the [Deploying the client certificate for distribution points](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clientdistributionpoint2008_cm2012).  
 
 > [!IMPORTANT]  
 >  To deploy the client to devices running macOS Sierra, the subject name of the management point certificate must be configured correctly. For example, use the FQDN of the management point server.  
@@ -93,7 +93,7 @@ For an example deployment that creates and installs the client certificate for d
 
 The certificate template must have **Read** and **Enroll** permissions for the user account that enrolls the certificate on the Mac computer.  
 
-For more information, see [Deploying the client certificate for Mac computers](/sccm/plan-design/network/example-deployment-of-pki-certificates#BKMK_MacClient_SP1).  
+For more information, see [Deploying the client certificate for Mac computers](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_MacClient_SP1).  
 
 
 

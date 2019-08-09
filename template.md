@@ -148,11 +148,13 @@ If a URL appears in a markdown file, it will be transformed into a clickable lin
 
 ### Codeblock
 
-    function fancyAlert(arg) {
-      if(arg) {
-        $.docs({div:'#foo'})
-      }
-    }
+```
+function fancyAlert(arg) {
+  if(arg) {
+    $.docs({div:'#foo'})
+  }
+}
+```
 
 ### In-line code
 

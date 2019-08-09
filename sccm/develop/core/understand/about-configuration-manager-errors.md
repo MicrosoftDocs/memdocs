@@ -45,7 +45,7 @@ In System Center Configuration Manager, when a Configuration Manager error occur
  For more information about handling asynchronous exceptions, see [How to Handle Configuration Manager Asynchronous Errors by Using Managed Code](../../../develop/core/understand/how-to-handle-configuration-manager-asynchronous-errors-by-using-managed-code.md).  
 
 ## See Also  
- [Configuration Manager Errors](../../../develop/core/understand/configuration-manager-errors.md)   
+ [About errors](/sccm/develop/core/understand/about-configuration-manager-errors)
  [How to Handle Configuration Manager Synchronous Errors by Using WMI](../../../develop/core/understand/how-to-handle-configuration-manager-synchronous-errors-by-using-wmi.md)   
  [How to Handle Configuration Manager Asynchronous Errors by Using WMI](../../../develop/core/understand/how-to-handle-configuration-manager-asynchronous-errors-by-using-wmi.md)   
  [Configuration Manager Asynchronous Errors by Using Managed Code](../../../develop/core/understand/how-to-handle-configuration-manager-asynchronous-errors-by-using-managed-code.md)   

@@ -68,7 +68,7 @@ The `InstanceCount` context qualifier is an integer value that is used to limit 
  You cannot use this qualifier when querying collections.  
 
 ## LocaleID  
- The `LocaleID` context qualifier is a string value that accepts either a hexadecimal value or a decimal value in the form MS\x, where x is the locale ID. For example, you can enter the English `LocaleID` value as ms\0x0409 or ms\1033. The SMS Provider only accepts `LocaleID` values that use the Microsoft format. You can find a list of `locale IDs` at [Locale IDs Assigned by Microsoft](https://go.microsoft.com/fwlink/?LinkId=110805).  
+ The `LocaleID` context qualifier is a string value that accepts either a hexadecimal value or a decimal value in the form MS\x, where x is the locale ID. For example, you can enter the English `LocaleID` value as ms\0x0409 or ms\1033. The SMS Provider only accepts `LocaleID` values that use the Microsoft format. You can find a list of `locale IDs` at [Locale IDs Assigned by Microsoft](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid).  
 
  If you need the locale for non-U.S. installations, you can get it from the [SMS_Identification Server WMI Class](../../../develop/reference/core/servers/configure/sms_identification-server-wmi-class.md) `LocaleID` property.  
 
@@ -87,4 +87,4 @@ The `InstanceCount` context qualifier is an integer value that is used to limit 
 ## See Also  
  [How to Add a Configuration Manager Context Qualifier Using Managed Code](../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-managed-code.md)   
  [How to Add a Configuration Manager Context Qualifier Using WMI](../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md)   
- [Configuration Manager Provider](../../../develop/core/understand/sms-provider-in-configuration-manager.md)
+ [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals)

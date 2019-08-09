@@ -19,20 +19,20 @@ ms.collection: M365-identity-device-management
 
 This article provides the steps in Configuration Manager to upgrade the OS on a computer. You can choose from different deployment methods, such as stand-alone media or Software Center. The in-place upgrade scenario has the following features:  
 
--   Upgrades the OS on computers that currently run:
-    - Windows 7, Windows 8, or Windows 8.1. You can also do build-to-build upgrades of Windows 10. For example, you can upgrade Windows 10 version 1607 to Windows 10, version 1709.  
-    
-    - Windows Server 2012. You can also do build-to-build upgrades of Windows Server 2016. For more information about supported upgrade paths, see [Supported upgrade paths](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016).    
+- Upgrades the OS on computers that currently run:
+  - Windows 7, Windows 8, or Windows 8.1. You can also do build-to-build upgrades of Windows 10. For example, you can upgrade Windows 10 version 1607 to Windows 10, version 1709.  
+  
+  - Windows Server 2012. You can also do build-to-build upgrades of Windows Server 2016. For more information about supported upgrade paths, see [Supported upgrade paths](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016).    
 
--   Retains the applications, settings, and user data on the computer.  
+- Retains the applications, settings, and user data on the computer.  
 
--   Has no external dependencies, such as the Windows ADK.  
+- Has no external dependencies, such as the Windows ADK.  
 
--   Is faster and more resilient than traditional OS deployments.  
+- Is faster and more resilient than traditional OS deployments.  
 
 
 > [!Note]  
-> Starting in version 1802, the Windows 10 in-place upgrade task sequence supports deployment to internet-based clients managed through the [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the intranet. For more information, see [Deploy Windows 10 in-place upgrade via CMG](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#deploy-windows-10-in-place-upgrade-via-cmg). <!-- 1357149 -->
+> Starting in version 1802, the Windows 10 in-place upgrade task sequence supports deployment to internet-based clients managed through the [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the intranet. For more information, see [Deploy Windows 10 in-place upgrade via CMG](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#deploy). <!-- 1357149 -->
 
 
 
@@ -84,12 +84,12 @@ The only prerequisite for the upgrade scenario is to have a distribution point a
 
 To deploy the OS, use one of the following deployment methods:  
 
-  -   [Use Software Center to deploy Windows over the network](use-software-center-to-deploy-windows-over-the-network.md)  
+- [Use Software Center to deploy Windows over the network](use-software-center-to-deploy-windows-over-the-network.md)  
 
-  -   [Use stand-alone media to deploy Windows without using the network](use-stand-alone-media-to-deploy-windows-without-using-the-network.md)  
+- [Use stand-alone media to deploy Windows without using the network](use-stand-alone-media-to-deploy-windows-without-using-the-network.md)  
 
-      > [!IMPORTANT]  
-      > When you use stand-alone media, you must include a boot image in the task sequence for it to be available in the Task Sequence Media Wizard.
+  > [!IMPORTANT]  
+  > When you use stand-alone media, you must include a boot image in the task sequence for it to be available in the Task Sequence Media Wizard.
 
 
 

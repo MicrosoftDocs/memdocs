@@ -29,7 +29,7 @@ To get the update for version 1810, you must use a service connection point at t
 
     -   Another common download issue occurs when proxy server settings prevent downloads from http://silverlight.dlservice.microsoft.com, http://download.microsoft.com, and/or http://go.microsoft.com.
 
-For more information about installing updates, see [In-console updates and servicing](/sccm/core/servers/manage/updates#a-namebkmkinconsolea-in-console-updates-and-servicing).
+For more information about installing updates, see [In-console updates and servicing](/sccm/core/servers/manage/updates#bkmk_inconsole).
 
 For more information about current branch versions, see [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines).
 
@@ -87,7 +87,7 @@ The version of the Windows 10 Assessment and Deployment Kit (ADK) should be supp
 If you update the site before you update the Windows ADK, see [Update distribution points with the boot image](/sccm/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image).
 
 #### Review SQL Server Native Client version
-A minimum version of SQL Server 2012 Native Client which includes support for TLS 1.2 must be installed. For more information, see the [List of prerequisite checks](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client).
+A minimum version of SQL Server 2012 Native Client which includes support for TLS 1.2 must be installed. For more information, see the [List of prerequisite checks](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
 
 #### Review the site and hierarchy status for unresolved issues 
 A site update can fail due to existing operational problems. Before you update a site, resolve all operational issues for the following systems:  
@@ -155,7 +155,7 @@ For more information, see the section to **Run the prerequisite checker before i
 > When the prerequisite checker runs, the process updates some product source files that are used for site maintenance tasks. Therefore, after running the prerequisite checker but before installing the update, if you need to perform a site maintenance task, run **Setupwpf.exe** (Configuration Manager Setup) from the CD.Latest folder on the site server.
 
 #### Update sites   
-You're now ready to start the update installation for your hierarchy. For more information about installing the update, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates).
+You're now ready to start the update installation for your hierarchy. For more information about installing the update, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_install).
 
 You may plan to install the update outside of normal business hours. Determine when the process will have the least effect on your business operations. Installing the update and its actions reinstall site components and site system roles.
 

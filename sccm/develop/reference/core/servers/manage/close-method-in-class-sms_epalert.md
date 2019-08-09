@@ -53,6 +53,6 @@ sint32 Close(
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
-## See Also  
- [SMS_Alert Server WMI Class](../../../../../develop/reference/core/servers/manage/sms_alert-server-wmi-class.md)   
- [Alert System WMI Server Classes](../../../../../develop/reference/core/servers/manage/alert-system-server-wmi-classes.md)
+## See also
+
+[SMS_Alert server WMI class](/sccm/develop/reference/core/servers/manage/sms_alert-server-wmi-class)

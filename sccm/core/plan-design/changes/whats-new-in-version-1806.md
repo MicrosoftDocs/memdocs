@@ -171,7 +171,7 @@ For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhan
 
 ### Azure AD device identity 
 <!--1358460-->
-An [Azure AD-joined](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices) or [hybrid Azure AD device](https://docs.microsoft.com/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices) without an Azure AD user signed in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point.  
+An [Azure AD-joined](/azure/active-directory/devices/concept-azure-ad-join) or [hybrid Azure AD device](/azure/active-directory/devices/concept-azure-ad-join-hybrid) without an Azure AD user signed in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point.  
 
 For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).
 
@@ -212,7 +212,7 @@ For more information, see [Modify a CMG](/sccm/core/clients/manage/cmg/setup-clo
 
 #### Trusted root certificate isn't required with Azure AD
 <!--503899-->
-When you create a CMG, you're no longer required to provide a [trusted root certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-trusted-root-certificate-to-clients) on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard. If you're using PKI client authentication certificates, then you still must add a trusted root certificate to the CMG.
+When you create a CMG, you're no longer required to provide a [trusted root certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_cmgroot) on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard. If you're using PKI client authentication certificates, then you still must add a trusted root certificate to the CMG.
 
 
 
@@ -323,7 +323,7 @@ For more information, see [Package Conversion Manager](/sccm/apps/pcm/package-co
 This release includes the following improvements to phased deployments:  
 
 #### Create a phased deployment with manually configured phases
-<!--1358148--> 
+<!--1358148-->
 For a task sequence, now manually configure the phases when you create a phased deployment. Add up to 10 additional phases from the **Phases** tab of the Create Phased Deployment wizard. You can still automatically create a default two-phase deployment. 
 
 For more information, see [Create a phased deployment with manually configured phases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence#bkmk_manual).
@@ -400,11 +400,11 @@ For more information, see [Task sequences and the network access account](/sccm/
  For more information, see [Upgrade Operating System](/sccm/osd/understand/task-sequence-steps#BKMK_UpgradeOS).
 
 #### Revised documentation for task sequence variables
- Two new articles are now available for understanding task sequence variables:  
+Two new articles are now available for understanding task sequence variables:  
 
- - [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables) is a new article that describes the different types of variables, methods to set the variables, and how to access them.  
+- [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables) is a new article that describes the different types of variables, methods to set the variables, and how to access them.  
 
- - [Task sequence variables](/sccm/osd/understand/task-sequence-variables) is a reference for all available task sequence variables. This article combines the previous articles, which separated built-in variables from action variables. 
+- [Task sequence variables](/sccm/osd/understand/task-sequence-variables) is a reference for all available task sequence variables. This article combines the previous articles, which separated built-in variables from action variables. 
 
 
 
@@ -541,7 +541,7 @@ The following areas of the **Monitoring** workspace now support copying text:
 
 Right-click the asset, and select **Copy**. This action copies the selected assets as a comma-delimited list that includes the full details. The keyboard shortcut **CTRL** + **C** also works in these views. 
 
-For more information, see [Console improvements in version 1806](/sccm/core/servers/manage/admin-console#console-improvements-in-version-1806).
+For more information, see [Console improvements in version 1806](/sccm/core/servers/manage/admin-console#copy-details-in-monitoring-views).
 
 
 ### Improvements to the Surface dashboard
@@ -563,7 +563,7 @@ For more information, see [Surface dashboard](/sccm/core/clients/manage/surface-
 <!--1358202-->
 Now by default the **Devices** node of the **Assets and Compliance** workspace displays a column for the **Currently logged on user**. It also displays for any collection-specific device list. This value is as current as the [client status](/sccm/core/clients/manage/monitor-clients#bkmk_indStatus). When the user signs off, the client clears this value. If no user is signed on, the value is blank. 
 
-For more information, see [Console improvements in version 1806](/sccm/core/servers/manage/admin-console#console-improvements-in-version-1806).
+For more information, see [Console improvements in version 1806](/sccm/core/servers/manage/admin-console#view-users-for-a-device).
 
 
 ### Submit feedback from the Configuration Manager console  
@@ -571,7 +571,7 @@ For more information, see [Console improvements in version 1806](/sccm/core/serv
 
 Send a smile! You can now directly tell the Configuration Manager team about your experiences. Sending feedback is easy from the Configuration Manager console. We want to hear all of your feedback: praise, problems, and suggestions. In the Configuration Manager console, click the smile button in the upper right corner above the ribbon. This feedback goes directly to the Microsoft product team for Configuration Manager. While using the Windows 10 Feedback Hub is still supported, you're encouraged to use the in-console feedback mechanism.  
 
-For more information, see [Console improvements in version 1806](/sccm/core/servers/manage/admin-console#console-improvements-in-version-1806) and [Product feedback](/sccm/core/understand/find-help#BKMK_1806Feedback).
+For more information, see [Console improvements in version 1806](/sccm/core/servers/manage/admin-console#send-feedback) and [Product feedback](/sccm/core/understand/find-help#BKMK_1806Feedback).
 
 
 
@@ -603,9 +603,9 @@ When you're ready to install this version, see [Installing updates for Configura
 > [!TIP]  
 > To install a new site, use a baseline version of Configuration Manager.  
 >
->  Learn more about:    
->   - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites)  
->   - [Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+> Learn more about:    
+> - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites)  
+> - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 For known, significant issues, see the [Release notes](/sccm/core/servers/deploy/install/release-notes).
 

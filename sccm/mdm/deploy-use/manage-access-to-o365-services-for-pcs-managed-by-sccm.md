@@ -2,7 +2,7 @@
 title: Manage access to Office 365 services
 titleSuffix: Configuration Manager
 description: Learn how to configure conditional access to Office 365 services for PCs that are managed by System Center Configuration Manager.
-ms.date: 03/21/2019
+ms.date: 07/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -49,8 +49,8 @@ For information on configuring conditional access for devices enrolled and manag
 -   Windows Server 2012 R2
 -   Windows Server 2016
 
-	> [!IMPORTANT]
-	> For Windows Servers that may have multiple users signed in simultaneously, deploy the same conditional access policies to all of these users.
+    > [!IMPORTANT]
+    > For Windows Servers that may have multiple users signed in simultaneously, deploy the same conditional access policies to all of these users.
 
 ## Configure conditional access  
  To set up conditional access, you must first create a compliance policy and configure conditional access policy. When you configure conditional access policies for PCs, you can require that the PCs be compliant in order to access Exchange Online and SharePoint Online services.  
@@ -93,8 +93,8 @@ For information on configuring conditional access for devices enrolled and manag
     - **Require Code Integrity to be enabled on the device**
     - **Require Early Launch Anti-Malware to be enabled on the device**  
 
-    >[!Tip]  
-    > The conditional access criteria for device health attestation was first introduced in version 1710 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1802, this feature is no longer a pre-release feature.<!--1235616-->  
+    > [!Important]  
+    > The conditional access criteria for device health attestation is deprecated and will be removed in a future release. For more information, see [removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).<!--1235616-->  
 
     > [!Note]  
     > Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
