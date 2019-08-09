@@ -50,7 +50,7 @@ Configure the **Importance** of apps by setting one of the following categories:
 - Not important<!-- 3587232 -->
 
     > [!Tip]
-    > For more information about the "Not important" category, see [Plan assets](/sccm/desktop-analytics/about-deployment-plans#plan-assets).
+    > For more information about the "Not important" category, see [Automatic upgrade decision of system and store apps](/sccm/desktop-analytics/about-deployment-plans#bkmk_plan-autoapp).
 
 Select the app from the list, and select **Edit**. This action displays details for the app. Select the **Importance** drop-down menu and set a value. You can also assign an **Owner**. If you make any changes, select **Save**.
 

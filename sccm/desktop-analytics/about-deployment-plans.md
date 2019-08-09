@@ -90,7 +90,7 @@ In the details of the app, you can also see the following information: Recommend
 
 The apps that Desktop Analytics shows as *noteworthy* are based on the low install count threshold for the readiness rules of the deployment plan. For more information, see [Readiness rules](/sccm/desktop-analytics/create-deployment-plans#readiness-rules).
 
-#### Automatic upgrade decision of system and store apps
+#### <a name"bkmk_plan-autoapp"> Automatic upgrade decision of system and store apps
 
 <!-- 3587232 -->
 Identifying **Importance** and **Upgrade Decision** is critical for all noteworthy apps in the Desktop Analytics workflow. To help reduce your efforts in annotating these apps, certain types of apps are automatically marked as *Not important*. The deployment plan upgrade decision for these apps is also marked as *Ready*. The following apps are compatible and should continue to work after you upgrade Windows:
