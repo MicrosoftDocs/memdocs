@@ -76,6 +76,11 @@ Then use the `InitializeData` method on the `SMS_ReplicationGroup` WMI class wit
 
 For more information, see [InitializeData method in class SMS_ReplicationGroup](/sccm/develop/reference/core/servers/configure/initializedata-method-in-class-sms_replicationgroup).
 
+#### Example
+
+```PowerShell
+Invoke-WmiMethod –Namespace "root\sms\site_CAS" -Class SMS_ReplicationGroup –Name InitializeData -ArgumentList "20", "CAS", "PR1"
+```
 
 ## Next steps
 

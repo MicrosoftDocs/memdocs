@@ -30,3 +30,11 @@ To better understand and help troubleshoot issues with SQL replication, use thes
 These troubleshooting diagrams are interconnected. Use the following diagram to understand their relationships:
 
 ![Overview diagram of process for troubleshooting SQL replication](media/overview.svg)
+
+For more information, see the following series of blogs from Microsoft Support:
+
+- [ConfigMgr DRS Synchronization Internals](https://blogs.technet.microsoft.com/umairkhan/2019/06/01/configmgr-drs-synchronization-internals/)
+- [ConfigMgr 2012 Data Replication Service (DRS) Unleashed](https://blogs.technet.microsoft.com/umairkhan/2014/02/17/configmgr-2012-data-replication-service-drs-unleashed/)
+- [ConfigMgr 2012 DRS – Troubleshooting FAQs](https://blogs.technet.microsoft.com/umairkhan/2014/03/24/configmgr-2012-drs-troubleshooting-faqs/)
+- [ConfigMgr 2012 DRS Initialization Internals](https://blogs.technet.microsoft.com/umairkhan/2015/01/21/configmgr-2012-drs-initialization-internals/)
+- [ConfigMgr 2012: DRS and SQL service broker certificate issues](https://blogs.technet.microsoft.com/umairkhan/2013/12/12/configmgr-2012-drs-and-sql-service-broker-certificate-issues/)
