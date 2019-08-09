@@ -21,15 +21,10 @@ manager: dougeby
 Learn what's new each month in Desktop Analytics.
 
 > [!Tip]
-> Each monthly update may take up to three days to rollout. Microsoft deploys the update in the following order:
->
-> Day 1: Asia Pacific (APAC)
-> Day 2: Europe, Middle East, Africa (EMEA)
-> Day 3: North America
->
-> Some features may roll out over several weeks and might not be available to all customers in the first week.
+> Each monthly update may take up to three days to rollout. Some features may roll out over several weeks and might not be available to all customers in the first week.
 
 To get notified when this page is updated, copy and paste the following URL into your RSS feed reader: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
+<!-- a locale is required for the RSS search string -->
 
 ## August 2019
 
@@ -44,6 +39,18 @@ During onboarding, you can now migrate inputs from an existing Windows Analytics
 <!-- 3733897 -->
 
 If you set up Desktop Analytics in your environment, but want to start over with onboarding and enrollment, you can now reset it. For more information on the process, see [Reset your account](/sccm/desktop-analytics/account-reset).
+
+### Automatic upgrade decision of system and store apps
+
+<!-- 3587232 -->
+
+To help reduce your efforts in annotating noteworthy apps, certain types of apps are automatically marked as *Not important*. The deployment plan upgrade decision for these apps is also marked as *Ready*. The following apps are compatible and should continue to work after you upgrade Windows:
+
+- System apps and components published by Microsoft
+
+- Apps managed and updated from the Microsoft Store
+
+For more information, see [Automatic upgrade decision of system and store apps](/sccm/desktop-analytics/about-deployment-plans#bkmk_plan-autoapp).
 
 
 ## What's new in Configuration Manager
