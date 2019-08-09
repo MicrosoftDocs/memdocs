@@ -154,6 +154,12 @@ Use RLA to answer the following questions:
 
 If there's a backlog, wait until it clears out. If the backlog is large, such as millions of records, then the link is in a bad state. Before updating the site, solve the replication issue. If you need further assistance, contact Microsoft Support.<!-- 2838129 -->
 
+#### File-based replication
+
+For [file-based replication](/sccm/core/plan-design/hierarchy/file-based-replication), check all inboxes for a backlog on both sending and receiving sites. If there are lots of stuck or pending replication jobs, wait until they clear out.<!-- SCCMDocs#1792 -->
+
+- On the sending site, review **sender.log**.
+- On the receiving site, review **despooler log**.
 
 ### Install all applicable critical Windows updates
 
