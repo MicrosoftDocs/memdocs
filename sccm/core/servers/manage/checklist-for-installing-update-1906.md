@@ -253,7 +253,7 @@ In the Configuration Manager console, go to the following locations to view the 
 For more information, see the following articles:  
 
 - [Monitor hierarchy and replication infrastructure](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure)
-- [About the Replication Link Analyzer](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA)  
+- [About the Replication Link Analyzer](/sccm/core/servers/manage/monitor-replication#BKMK_RLA)  
 
 ### Update Configuration Manager consoles
 

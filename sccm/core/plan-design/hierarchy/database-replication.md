@@ -98,7 +98,7 @@ To control the transfer of data across the replication link, change settings for
 To configure a database replication link, in the Configuration Manager console, go to the **Monitoring** workspace. Select the **Database Replication** node, and edit the properties for the link. This node is also in the **Administration** workspace, under the **Hierarchy Configuration** node. Edit a replication link from either the parent site or the child site of the replication link.  
 
 > [!TIP]  
-> You can edit database replication links from the **Database Replication** node in either workspace. However, when you use the **Database Replication** node in the **Monitoring** workspace, you can also view the status of database replication. It also provides access to the [Replication Link Analyzer](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA) tool. Use this tool to help investigate problems with database replication.  
+> You can edit database replication links from the **Database Replication** node in either workspace. However, when you use the **Database Replication** node in the **Monitoring** workspace, you can also view the status of database replication. It also provides access to the [Replication Link Analyzer](/sccm/core/servers/manage/monitor-replication#BKMK_RLA) tool. Use this tool to help investigate problems with database replication.  
 
 For more information about how to configure replication links, see [Site database replication controls](#BKMK_DBRepControls). For more information about how to monitor replication, see [Monitor database replication](/sccm/core/servers/manage/monitor-replication).  
 
