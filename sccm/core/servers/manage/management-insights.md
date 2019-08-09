@@ -125,8 +125,6 @@ Helps you integrate with many cloud services, which enable modern management of 
 
 - **Configure Azure services for use with Configuration Manager**: This rule helps you onboard Configuration Manager to Azure AD, which enables clients to authenticate with the site using Azure AD. For more information, see [Configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard).  
 
-- **Connect the site to the Microsoft cloud for Configuration Manager updates**: This rule makes sure your Configuration Manager service connection point has connected to the Microsoft cloud within the past seven days. This connection is to download content for regular updates. Review DMPDownloader.log and hman.log. For more information, see [Internet access requirements](/sccm/core/plan-design/network/internet-endpoints#bkmk_scp-updates).
-
 - **Enable devices to be hybrid Azure Active Directory joined**: Azure AD-joined devices allow users to sign in with their domain credentials while ensuring devices meet the organization's security and compliance standards. For more information, see [Azure AD hybrid identity design considerations](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview).  
 
 - **Update clients to the latest Windows 10 version**: Windows 10, version 1709 or above improves and modernizes the computing experience of your users. For more information, see [Key articles about adopting Windows as a service](/sccm/core/understand/configuration-manager-and-windows-as-service#key-articles-about-adopting-windows-as-a-service).  
@@ -184,6 +182,8 @@ Insights for improving the security of your infrastructure and devices.
 ### Simplified management
 
 Insights that help you simplify the day-to-day management of your environment.
+
+- **Connect the site to the Microsoft cloud for Configuration Manager updates**: This rule makes sure your Configuration Manager service connection point has connected to the Microsoft cloud within the past seven days. This connection is to download content for regular updates. Review DMPDownloader.log and hman.log. For more information, see [Internet access requirements](/sccm/core/plan-design/network/internet-endpoints#bkmk_scp-updates).
 
 - **Non-CB Client Versions**: Lists all clients whose versions aren't a current branch (CB) build. For more information, see [Upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients).  
 

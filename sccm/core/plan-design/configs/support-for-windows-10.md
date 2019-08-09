@@ -1,8 +1,8 @@
 ---
 title: Support for Windows 10
 titleSuffix: Configuration Manager
-description: Learn about the Windows 10 versions that are supported as clients or for OSD with System Center Configuration Manager
-ms.date: 07/26/2019
+description: Learn about the Windows 10 versions that are supported as clients or for OSD with Configuration Manager
+ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -59,8 +59,12 @@ The following table lists the versions of Windows 10 that you can use as a clien
 
 <!-- lifecycle reference: https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet -->
 
+For more information on Windows lifecycle, see the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)
+
 > [!Note]  
 > Support for Windows 10 semi-annual channel versions includes the following editions: Enterprise, Pro, Education, and Pro Education.  
+>
+> Starting in version 1906, Configuration Manager supports Windows 10 Pro for Workstation.
 
 | Key |
 |--|
@@ -69,8 +73,6 @@ The following table lists the versions of Windows 10 that you can use as a clien
 
 > [!NOTE]  
 > Configuration Manager supports the client on Windows 10 ARM64 devices. Existing client management features should work with these new devices. For example, hardware and software inventory, software updates, and application management. OS deployment is currently not supported. <!-- 1353704 -->
-
-For more information on Windows lifecycle, see the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)
 
 
 ## Windows 10 ADK
@@ -91,14 +93,14 @@ The following table lists the versions of the Windows 10 ADK that you can use wi
 | **1809**<br>(10.1.17763) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Backwards compatible](media/blue_compat.png) |
 | **1903**<br>(10.1.18362) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
 
+> [!Note]  
+> Configuration Manager only supports x86 and amd64 components of the Windows 10 ADK. It doesn't currently support ARM or ARM64 components.
+
 |Key|
 |--|
 | ![Supported](media/green_check.png) = **Supported** <br/> Microsoft recommends using the Windows ADK that matches the version of Windows you're deploying. Use the latest Windows ADK version when deploying the latest Windows 10 version. The latest Windows ADK version may support deployment of older OS versions, such as Windows 7.<!-- SCCMDocs issue 1229 --> For more information on Windows ADK component supportability, see [DISM supported platforms](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms) and [USMT requirements](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1). |
 | ![Backwards compatible](media/blue_compat.png)  = **Backward compatible** <br/> This combination isn't tested but should work. We'll document any known issues or caveats. |
 | ![Not supported](media/Red_X.png) = **Not supported** |
-
-> [!Note]  
-> Configuration Manager only supports x86 and amd64 components of the Windows 10 ADK. It doesn't currently support ARM or ARM64 components.
 
 > [!Tip]
 > Windows Server builds have the same Windows ADK requirement as the associated Windows 10 version. For example, Windows Server 2016 is the same build version as Windows 10 LTSB 2016.
