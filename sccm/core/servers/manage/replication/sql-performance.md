@@ -2,7 +2,7 @@
 title: SQL performance
 titleSuffix: Configuration Manager
 description: Use this diagram to start troubleshooting SQL performance for Configuration Manager
-ms.date: 06/06/2019
+ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -23,11 +23,11 @@ Use the following diagram to start troubleshooting SQL performance that can impa
 
 <!-- PNG used instead of SVG because the SQL statements wrap weird in the SVG. The SVG file exists in the same location. -->
 
-### Queries and actions
+## Queries
 
 This diagram uses the following queries:
 
-#### Make sure SQL change tracking table is cleaned up
+### Make sure SQL change tracking table is cleaned up
 
 ```sql
 DECLARE @RetentionUnit INT = 0;
@@ -54,7 +54,7 @@ IF @CTMinTime < @CTCutOffTime
     PRINT 'there is change tracking backlog, please contact Microsoft support'
 ```
 
-#### Change current sessions that handle SQL service broker messages are blocked
+### Change current sessions that handle SQL service broker messages are blocked
 
 ```sql
 select
@@ -70,14 +70,14 @@ cross apply sys.dm_exec_sql_text(sql_handle) t
 where program_name='SMS_data_replication_service'
 ```
 
-#### Check sessions asking too much memory
+### Check sessions asking too much memory
 
 ```sql
 SELECT * FROM sys.dm_exec_query_memory_grants
 ORDER BY requested_memory_kb DESC
 ```
 
-#### Check sessions taking too many locks
+### Check sessions taking too many locks
 
 ```sql
 SELECT TOP 10 request_session_id,
@@ -87,3 +87,7 @@ FROM sys.dm_tran_locks
 GROUP BY request_session_id
 ORDER BY count (*) DESC
 ```
+
+## See also
+
+[SQL configuration](/sccm/core/servers/manage/replication/sql-configuration)

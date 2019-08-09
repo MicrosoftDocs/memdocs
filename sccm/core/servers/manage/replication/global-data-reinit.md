@@ -2,7 +2,7 @@
 title: Global data reinit
 titleSuffix: Configuration Manager
 description: Use this diagram to start troubleshooting SQL replication reinit for global data in a Configuration Manager hierarchy
-ms.date: 06/06/2019
+ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -21,11 +21,11 @@ Use the following diagram to start troubleshooting SQL replication reinitializat
 
 ![Diagram to troubleshoot global data reinit](media/global-data-reinit.svg)
 
-### Queries
+## Queries
 
 This diagram uses the following queries:
 
-#### Check if site replication hasn't finished reinit
+### Check if site replication hasn't finished reinit
 
 ```sql
 SELECT * FROM RCM_DrsInitializationTracking dt
@@ -35,7 +35,7 @@ WHERE dt.InitializationStatus NOT IN (6,7)
 AND rg.ReplicationPattern=N`Global'
 ```
 
-#### Get the TrackingGuid & Status from the primary site
+### Get the TrackingGuid & Status from the primary site
 
 ```sql
 SELECT RequestTrackingGUID, InitializationStatus
@@ -46,7 +46,7 @@ WHERE dt.InitializationStatus NOT IN (6,7)
 AND rg.ReplicationPattern=N`Global'
 ```
 
-#### Get the TrackingGuid & Status from the CAS
+### Get the TrackingGuid & Status from the CAS
 
 ```sql
 SELECT RequestTrackingGUID, InitializationStatus
@@ -54,14 +54,13 @@ FROM RCM_DrsInitializationTracking dt
 WHERE RequestTrackingGUID=@trackingGuid
 ```
 
-#### Check request status for the tracking ID
+### Check request status for the tracking ID
 
 ```sql
 SELECT Status FROM RCM_InitPackageRequest
 WHERE RequestTrackingGUID=@trackGuid
 ```
 
-### Next steps
+## Next steps
 
 - [Reinit missing message](/sccm/core/servers/manage/replication/reinit-missing-message)
-- [Reinit failed](/sccm/core/servers/manage/replication/reinit-failed)

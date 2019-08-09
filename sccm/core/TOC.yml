@@ -543,8 +543,6 @@
           href: servers/manage/replication/site-data-reinit.md
         - name: Reinit missing message
           href: servers/manage/replication/reinit-missing-message.md
-        - name: Reinit failed
-          href: servers/manage/replication/reinit-failed.md
     - name: Queries
       items:
       - name: Introduction to queries

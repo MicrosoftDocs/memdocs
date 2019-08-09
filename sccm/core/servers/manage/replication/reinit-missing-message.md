@@ -2,7 +2,7 @@
 title: Reinit missing message
 titleSuffix: Configuration Manager
 description: Use this diagram to start troubleshooting a missing message with SQL replication reinit in Configuration Manager
-ms.date: 06/06/2019
+ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -21,11 +21,11 @@ Use the following diagram to start troubleshooting a missing message with SQL re
 
 ![Diagram to troubleshoot reinit missing message](media/reinit-missing-message.svg)
 
-### Queries
+## Queries
 
 This diagram uses the following queries:
 
-#### Check if site replication hasn't finished reinit
+### Check if site replication hasn't finished reinit
 
 ```sql
 SELECT * FROM RCM_DrsInitializationTracking dt
@@ -34,7 +34,7 @@ ON dt.ReplicationGroup = rg.ReplicationGroup
 WHERE dt.InitializationStatus NOT IN (6,7)
 ```
 
-#### Get the TrackingGuid & Status from subscriber site
+### Get the TrackingGuid & Status from subscriber site
 
 ```sql
 SELECT RequestTrackingGUID, InitializationStatus
@@ -44,7 +44,7 @@ ON dt.ReplicationGroup = rg.ReplicationGroup
 WHERE dt.InitializationStatus NOT IN (6,7)
 ```
 
-#### Get the TrackingGuid & Status from the publishing site
+### Get the TrackingGuid & Status from the publishing site
 
 ```sql
 SELECT RequestTrackingGUID, InitializationStatus
@@ -52,13 +52,13 @@ FROM RCM_DrsInitializationTracking dt
 WHERE RequestTrackingGUID=@trackingGuid
 ```
 
-### Remediation actions
+## Remediation actions
 
-#### Version 1902 and later
+### Version 1902 and later
 
-Run the Replication Link Analyzer to detect the issue and reinit.
+To detect the issue and reinit, run the [Replication Link Analyzer](/sccm/core/servers/manage/monitor-replication#BKMK_RLA).
 
-#### Version 1810 and earlier
+### Version 1810 and earlier
 
 Run the following SQL query to get the `ReplicationGroupID`:
 
@@ -77,6 +77,6 @@ Then use the `InitializeData` method on the `SMS_ReplicationGroup` WMI class wit
 For more information, see [InitializeData method in class SMS_ReplicationGroup](/sccm/develop/reference/core/servers/configure/initializedata-method-in-class-sms_replicationgroup).
 
 
-### Next steps
+## Next steps
 
 - [SQL replication reinitialization (reinit)](/sccm/core/servers/manage/replication/sql-replication-reinit)

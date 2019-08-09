@@ -2,7 +2,7 @@
 title: Troubleshoot SQL replication
 titleSuffix: Configuration Manager
 description: Use these diagrams to help understand and troubleshoot SQL replication between Configuration Manager sites
-ms.date: 06/06/2019
+ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -26,7 +26,6 @@ To better understand and help troubleshoot issues with SQL replication, use thes
 - [Global data reinit](/sccm/core/servers/manage/replication/global-data-reinit)
 - [Site data reinit](/sccm/core/servers/manage/replication/site-data-reinit)
 - [Reinit missing message](/sccm/core/servers/manage/replication/reinit-missing-message)
-- [Reinit failed](/sccm/core/servers/manage/replication/reinit-failed)
 
 These troubleshooting diagrams are interconnected. Use the following diagram to understand their relationships:
 

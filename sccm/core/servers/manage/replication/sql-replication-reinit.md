@@ -2,7 +2,7 @@
 title: SQL replication reinit
 titleSuffix: Configuration Manager
 description: Use this diagram to start troubleshooting SQL replication reinitialization between Configuration Manager sites
-ms.date: 06/06/2019
+ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -21,25 +21,25 @@ Use the following diagram to start troubleshooting SQL replication reinitializat
 
 ![Diagram to troubleshoot SQL replication reinit](media/sql-replication-reinit.svg)
 
-### Queries
+## Queries
 
 This diagram uses the following queries:
 
-#### Check if site is in maintenance mode
+### Check if site is in maintenance mode
 
 ```sql
 SELECT * FROM ServerData
 WHERE Status = 120
 ```
 
-#### Check which replication group hasn’t completed reinit
+### Check which replication group hasn’t completed reinit
 
 ```sql
 SELECT * FROM RCM_DrsInitializationTracking
 WHERE InitializationStatus NOT IN (6,7)
 ```
 
-#### Check global data
+### Check global data
 
 ```sql
 SELECT * FROM RCM_DrsInitializationTracking dt
@@ -49,7 +49,7 @@ WHERE dt.InitializationStatus NOT IN (6,7)
 AND rg.ReplicationPattern=N'GLOBAL'
 ```
 
-#### Check site data
+### Check site data
 
 ```sql
 SELECT * FROM RCM_DrsInitializationTracking dt
@@ -59,8 +59,7 @@ WHERE dt.InitializationStatus NOT IN (6,7)
 AND rg.ReplicationPattern=N'Site'
 ```
 
-
-### Next steps
+## Next steps
 
 - [Global data reinit](/sccm/core/servers/manage/replication/global-data-reinit)
 - [Site data reinit](/sccm/core/servers/manage/replication/site-data-reinit)

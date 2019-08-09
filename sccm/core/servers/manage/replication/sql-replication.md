@@ -2,7 +2,7 @@
 title: SQL replication
 titleSuffix: Configuration Manager
 description: Use this diagram to start troubleshooting SQL replication between Configuration Manager sites
-ms.date: 06/06/2019
+ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -21,18 +21,18 @@ Use the following diagram to start troubleshooting SQL replication when a link f
 
 ![Diagram to troubleshoot SQL replication](media/sql-replication.svg)
 
-### Queries
+## Queries
 
 This diagram uses the following queries:
 
-#### Check if the replication group link is in degraded or failed state
+### Check if the replication group link is in degraded or failed state
 
 ```sql
 SELECT * FROM RCM_ReplicationLinkStatus
 WHERE Status IN (8, 9)
 ```
 
-#### Check if replication group link is recently calculated
+### Check if replication group link is recently calculated
 
 ```sql
 DECLARE @cutoffTime DATETIME
@@ -41,14 +41,14 @@ SELECT * FROM RCM_ReplicationLinkStatus
 WHERE UpdateTime >@cutoffTime
 ```
 
-#### Check SQL maintenance mode
+### Check SQL maintenance mode
 
 ```sql
 SELECT * FROM ServerData
 WHERE Status = 120
 ```
 
-### Next steps
+## Next steps
 
 - [SQL replication reinitialization (reinit)](/sccm/core/servers/manage/replication/sql-replication-reinit)
 - [SQL performance](/sccm/core/servers/manage/replication/sql-performance)

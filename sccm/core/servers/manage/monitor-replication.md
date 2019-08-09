@@ -2,7 +2,7 @@
 title: Monitor database replication
 titleSuffix: Configuration Manager
 description: Learn how to monitor SQL Server replication in your Configuration Manager hierarchy.
-ms.date: 06/06/2019
+ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
