@@ -29,7 +29,9 @@ To better understand and help troubleshoot issues with SQL replication, use thes
 
 These troubleshooting diagrams are interconnected. Use the following diagram to understand their relationships:
 
-![Overview diagram of process for troubleshooting SQL replication](media/overview.svg)
+![Overview diagram of process for troubleshooting SQL replication](media/overview.png)
+
+<!-- PNG used instead of SVG because of weird blankspace in the SVG. The SVG file exists in the same location. -->
 
 For more information, see the following series of blogs from Microsoft Support:
 
