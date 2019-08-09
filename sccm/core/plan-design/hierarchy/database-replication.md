@@ -56,11 +56,11 @@ You can modify the following settings for database replication:
 
 ## Types of data
 
-Configuration Manager primaril classifies the data that it replicates as either *global data* or *site data*. When database replication occurs, the site transfers changes to global data and site data across the database replication link. Global data replicates to a parent or child site. Site data replicates only to a parent site. A third data type, *local data*, doesn't replicate to other sites. Local data is information that other sites don't require.  
+Configuration Manager primarily classifies the data that it replicates as either *global data* or *site data*. When database replication occurs, the site transfers changes to global data and site data across the database replication link. Global data replicates to a parent or child site. Site data replicates only to a parent site. A third data type, *local data*, doesn't replicate to other sites. Local data is information that other sites don't require.  
 
 ### Global data
 
-Global data is administrator-created objects that replicate to all sites throughout the hierarchy. Secondary sites onl receive a subset of global data, as global proxy data. You create global data at the CAS and primary sites. This type includes the following data:
+Global data is administrator-created objects that replicate to all sites throughout the hierarchy. Secondary sites only receive a subset of global data, as global proxy data. You create global data at the CAS and primary sites. This type includes the following data:
 
 - Software deployments
 - Software updates
