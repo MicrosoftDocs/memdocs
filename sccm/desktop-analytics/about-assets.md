@@ -2,7 +2,7 @@
 title: Assets in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn about devices, drivers, and apps in Desktop Analytics.
-ms.date: 06/13/2019
+ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -47,6 +47,10 @@ Configure the **Importance** of apps by setting one of the following categories:
 - Important
 - Ignore
 - Not reviewed
+- Not important<!-- 3587232 -->
+
+    > [!Tip]
+    > For more information about the "Not important" category, see [Automatic upgrade decision of system and store apps](/sccm/desktop-analytics/about-deployment-plans#bkmk_plan-autoapp).
 
 Select the app from the list, and select **Edit**. This action displays details for the app. Select the **Importance** drop-down menu and set a value. You can also assign an **Owner**. If you make any changes, select **Save**.
 
