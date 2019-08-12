@@ -2,7 +2,7 @@
 title: Checklist for 1906
 titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 1906.
-ms.date: 08/07/2019
+ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -140,9 +140,26 @@ For more information, see [Use alerts and the status system](/sccm/core/servers
 
 ### Review file and data replication between sites
 
-Make sure that file and database replication between sites is operational and current. Delays or backlogs in either can prevent a successful update. For database replication, use the Replication Link Analyzer to help resolve issues before you start the update.
+Make sure that file and database replication between sites is operational and current. Delays or backlogs in either can prevent a successful update.
 
-For more information, see [About the Replication Link Analyzer](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA).
+#### Database replication
+
+For [database replication](/sccm/core/plan-design/hierarchy/database-replication), to help resolve issues before you start the update, use the **Replication Link Analyzer** (RLA). For more information, see [Monitor database replication](/sccm/core/servers/manage/monitor-replication).
+
+Use RLA to answer the following questions:
+
+- Is replication per group in a good state?
+- Are any links degraded?
+- Are there any errors?
+
+If there's a backlog, wait until it clears out. If the backlog is large, such as millions of records, then the link is in a bad state. Before updating the site, solve the replication issue. If you need further assistance, contact Microsoft Support.<!-- 2838129 -->
+
+#### File-based replication
+
+For [file-based replication](/sccm/core/plan-design/hierarchy/file-based-replication), check all inboxes for a backlog on both sending and receiving sites. If there are lots of stuck or pending replication jobs, wait until they clear out.<!-- SCCMDocs#1792 -->
+
+- On the sending site, review **sender.log**.
+- On the receiving site, review **despooler log**.
 
 ### Install all applicable critical Windows updates
 
@@ -236,7 +253,7 @@ In the Configuration Manager console, go to the following locations to view the 
 For more information, see the following articles:  
 
 - [Monitor hierarchy and replication infrastructure](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure)
-- [About the Replication Link Analyzer](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA)  
+- [About the Replication Link Analyzer](/sccm/core/servers/manage/monitor-replication#BKMK_RLA)  
 
 ### Update Configuration Manager consoles
 

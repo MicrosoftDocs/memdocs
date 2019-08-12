@@ -1,6 +1,6 @@
 ---
 title: In-console documentation
-ms.date: 06/15/2019
+ms.date: 08/09/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -21,7 +21,7 @@ ms.collection: M365-identity-device-management
 
 # Configuration Manager documentation
 
-*Last update: 06/15/2019*
+*Last update: 08/09/2019*
 
 This content can assist you in learning and supporting Configuration Manager.
 
@@ -49,20 +49,22 @@ A curated list of important articles.
 
 ## Trending
 
-The most popular articles between June 1 and June 30, 2019.
+The most popular articles between July 1 and July 31, 2019.
 
 | Page views | Title |
 |------------|-------|
-| 20786 | [Log files for troubleshooting](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
-| 17237 | [How to enable TLS 1.2](https://docs.microsoft.com/sccm/core/plan-design/security/enable-tls-1-2) |
-| 12788 | [What's new in version 1902](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1902) |
-| 12418 | [Ports used for connections](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
-| 11553 | [Deploy clients to Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
-| 9889 | [Manage Office 365 ProPlus updates](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates) |
-| 8781 | [Support for Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
-| 8464 | [Updates and servicing](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
-| 8349 | [Task sequence steps](https://docs.microsoft.com/sccm/osd/understand/task-sequence-steps) |
-| 8021 | [Install console](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) |
+| 19223 | [Log file reference](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
+| 17954 | [How to enable TLS 1.2](https://docs.microsoft.com/sccm/core/plan-design/security/enable-tls-1-2) |
+| 13242 | [Ports used for connections](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
+| 12120 | [Deploy clients to Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
+| 11772 | [What's new in version 1902](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1902) |
+| 10206 | [Desktop Analytics](https://docs.microsoft.com/sccm/desktop-analytics/overview) |
+| 9885 | [Manage Office 365 ProPlus updates](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates) |
+| 8740 | [What's new in version 1906](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1906) |
+| 8464 | [Support for Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
+| 8398 | [Updates and servicing](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
+
+The [Configuration Manager hub page](https://docs.microsoft.com/sccm/) received 24,008 page views in this time period.
 
 ## Recently updated
 
@@ -70,16 +72,16 @@ Articles with a recent and significant update.
 
 | Last reviewed | Title |
 |---------------|-------|
-| 6/28/2019 | [Technical preview releases](https://docs.microsoft.com/sccm/core/get-started/technical-preview) |
-| 6/28/2019 | [Troubleshoot Desktop Analytics](https://docs.microsoft.com/sccm/desktop-analytics/troubleshooting) |
-| 6/27/2019 | [Paths to co-management](https://docs.microsoft.com/sccm/comanage/quickstart-paths) |
-| 6/20/2019 | [What's new in version 1902](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1902) |
-| 6/20/2019 | [Client settings](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-settings) |
-| 6/20/2019 | [Create and run scripts](https://docs.microsoft.com/sccm/apps/deploy-use/create-deploy-scripts) |
-| 6/20/2019 | [Configuration Manager Console](https://docs.microsoft.com/sccm/core/servers/manage/admin-console) |
-| 6/19/2019 | [CMG FAQ](https://docs.microsoft.com/sccm/core/clients/manage/cmg/cloud-management-gateway-faq) |
-| 6/19/2019 | [Internet access requirements](https://docs.microsoft.com/sccm/core/plan-design/network/internet-endpoints) |
-| 6/17/2019 | [Release notes](https://docs.microsoft.com/sccm/core/servers/deploy/install/release-notes) |
+| 2019-07-30 | [Delivery Optimization In-Network Cache](https://docs.microsoft.com/en-us/sccm/core/plan-design/hierarchy/delivery-optimization-in-network-cache) |
+| 2019-07-26 | [Device restart notifications](https://docs.microsoft.com/en-us/sccm/core/clients/deploy/device-restart-notifications) |
+| 2019-07-26 | [Compatibility assessment](https://docs.microsoft.com/en-us/sccm/desktop-analytics/compat-assessment) |
+| 2019-07-26 | [Debug a task sequence](https://docs.microsoft.com/en-us/sccm/osd/deploy-use/debug-task-sequence) |
+| 2019-07-26 | [SQL Server Always On](https://docs.microsoft.com/en-us/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database) |
+| 2019-07-26 | [About log files](https://docs.microsoft.com/en-us/sccm/core/plan-design/hierarchy/about-log-files) |
+| 2019-07-26 | [Configure pre-cache content](https://docs.microsoft.com/en-us/sccm/osd/deploy-use/configure-precache-content) |
+| 2019-07-26 | [Create application groups](https://docs.microsoft.com/en-us/sccm/apps/deploy-use/create-app-groups) |
+| 2019-07-19 | [Version 1906 release notes](https://docs.microsoft.com/en-us/powershell/sccm/1906-release-notes) |
+| 2019-07-11 | [Technical preview 1907](https://docs.microsoft.com/en-us/sccm/core/get-started/2019/technical-preview-1907) |
 
 ## Troubleshooting articles
 
