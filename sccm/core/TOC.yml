@@ -163,6 +163,14 @@
         href: plan-design/hierarchy/manage-network-bandwidth.md
       - name: Security and privacy for content management
         href: plan-design/hierarchy/security-and-privacy-for-content-management.md
+    - name: Data transfers between sites
+      items:
+      - name: Types of data transfer
+        href: plan-design/hierarchy/data-transfers-between-sites.md
+      - name: File-based replication
+        href: plan-design/hierarchy/file-based-replication.md
+      - name: Database replication
+        href: plan-design/hierarchy/database-replication.md
     - name: How clients find resources and services
       href: plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md
     - name: Security and privacy for site administration
@@ -507,16 +515,34 @@
     href: servers/manage/site-failure-impacts.md
   - name: Monitor infrastructure
     items:
+    - name: Monitor hierarchy
+      href: servers/manage/monitor-hierarchy.md
     - name: Use alerts and the status system
       href: servers/manage/use-alerts-and-the-status-system.md
     - name: Health attestation
       href: servers/manage/health-attestation.md
-    - name: Monitor hierarchy and replication infrastructure
+    - name: Replication infrastructure
       items:
-      - name: Monitor hierarchy and replication infrastructure
-        href: servers/manage/monitor-hierarchy-and-replication-infrastructure.md
-      - name: Data transfers between sites
-        href: servers/manage/data-transfers-between-sites.md
+      - name: Monitor replication
+        href: servers/manage/monitor-replication.md
+      - name: Troubleshoot SQL replication
+        items:
+        - name: Troubleshoot SQL replication
+          href: servers/manage/replication/overview.md
+        - name: SQL replication
+          href: servers/manage/replication/sql-replication.md
+        - name: SQL configuration
+          href: servers/manage/replication/sql-configuration.md
+        - name: SQL performance
+          href: servers/manage/replication/sql-performance.md
+        - name: SQL replication reinitialization (reinit)
+          href: servers/manage/replication/sql-replication-reinit.md
+        - name: Global data reinit
+          href: servers/manage/replication/global-data-reinit.md
+        - name: Site data reinit
+          href: servers/manage/replication/site-data-reinit.md
+        - name: Reinit missing message
+          href: servers/manage/replication/reinit-missing-message.md
     - name: Queries
       items:
       - name: Introduction to queries

@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 08/07/2019
+ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -856,14 +856,25 @@ Use this setting to expedite installation for required software updates. This se
 
 Use this setting to specify the period of time for the previous setting. You can enter a value from 1 to 23 hours, and from 1 to 365 days. By default, this setting is configured for seven days.  
 
-### Enable installation of Express installation files on clients
+### Allow clients to download delta content when available
 
-Set this option to **Yes** to allow clients to use express installation files. For more information, see [Manage Express installation files for Windows 10 updates](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates).
+*(Introduced in version 1902)*
+
+Set this option to **Yes** to allow clients to use delta content files. This setting allows the Windows Update Agent on the device to determine what content is needed and selectively download it.
+
+> [!NOTE]
+> This client setting replaces **Enable installation of Express installation files on clients**. Set this option to **Yes** to allow clients to use express installation files. For more information, see [Manage Express installation files for Windows 10 updates](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates).
 
 
-### Port used to download content for Express installation files
+### Port that clients use to receive requests for delta content
 
-This setting configures the local port for the HTTP listener to download express content. It's set to 8005 by default. You don't need to open this port in the client firewall.
+*(Introduced in version 1902)*
+
+This setting configures the local port for the HTTP listener to download delta content. It's set to 8005 by default. You don't need to open this port in the client firewall. 
+
+> [!NOTE]
+>This client setting replaces **Port used to download content for Express installation files**.
+
 
 ### Enable management of the Office 365 Client Agent
 
