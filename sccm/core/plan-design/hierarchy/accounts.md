@@ -56,10 +56,33 @@ Use the following information to identify the Windows groups, accounts, and SQL 
   - [Task sequence network folder connection account](#task-sequence-network-folder-connection-account)  
   - [Task sequence run as account](#task-sequence-run-as-account)  
 
-- [User Objects that Configuration Manager uses in SQL](#bkmk_sqlobjects)
+- [User objects that Configuration Manager uses in SQL](#bkmk_sqlusers)
   - [smsdbuser_ReadOnly](#smsdbuser_readonly)
   - [smsdbuser_ReadWrite](#smsdbuser_readwrite)
   - [smsdbuser_ReportSchema](#smsdbuser_reportschema)
+
+- [Database roles that Configuration Manager uses in SQL](#bkmk_sqlroles)
+  - [smsdbrole_AITool](#smsdbrole_aitool)
+  - [smsdbrole_AIUS](#smsdbrole_aius)
+  - [smsdbrole_AMTSP](#smsdbrole_amtsp)
+  - [smsdbrole_CRP](#smsdbrole_crp)
+  - [smsdbrole_CRPPfx](#smsdbrole_crppfx)
+  - [smsdbrole_DMP](#smsdbrole_dmp)
+  - [smsdbrole_DmpConnector](#smsdbrole_dmpconnector)
+  - [smsdbrole_DViewAccess](#smsdbrole_dviewaccess)
+  - [smsdbrole_DWSS](#smsdbrole_dwss)
+  - [smsdbrole_EnrollSvr](#smsdbrole_enrollsvr)
+  - [smsdbrole_extract](#smsdbrole_extract)
+  - [smsdbrole_HMSUser](#smsdbrole_hmsuser)
+  - [smsdbrole_MCS](#smsdbrole_mcs)
+  - [smsdbrole_MP](#smsdbrole_mp)
+  - [smsdbrole_MPMBAM](#smsdbrole_mpmbam)
+  - [smsdbrole_MPUserSvc](#smsdbrole_mpusersvc)
+  - [smsdbrole_siteprovider](#smsdbrole_siteprovider)
+  - [smsdbrole_siteserver](#smsdbrole_siteserver)
+  - [smsdbrole_SUP](#smsdbrole_sup)
+  - [smsdbrole_WebPortal](#smsdbrole_webportal)
+  - [smsschm_users](#smsschm_users)
 
 ## <a name="bkmk_groups"></a> Windows groups that Configuration Manager creates and uses  
 
@@ -588,7 +611,7 @@ Set up the account to have the minimum permissions required to run the command l
 > If the command line requires administrative access on the computer, consider creating a local administrator account solely for this account on all computers that run the task sequence. Delete the account once you no longer need it.  
 
 
-## <a name="bkmk_sqlobjects"></a> User Objects that Configuration Manager uses in SQL 
+## <a name="bkmk_sqlusers"></a> User objects that Configuration Manager uses in SQL 
 <!--SCCMDocs issue #1160-->
 Configuration Manager automatically creates and maintains the following user objects in SQL.  These objects are located within the Configuration Manager database under Security/Users.  
 
@@ -596,16 +619,114 @@ Configuration Manager automatically creates and maintains the following user obj
 >  Modifying or removing these objects may cause drastic issues within a Configuration Manager environment.  We recommend you do not make any changes to these objects.
 
 
-### ### <a name="smsdbuser_readonly"></a>smsdbuser_ReadOnly
+### smsdbuser_ReadOnly
 
 This object is used to run queries under the read-only context.  This object is leveraged with several stored procedures.
 
 
-### <a name="smsdbuser_readwrite"></a>smsdbuser_ReadWrite
+### smsdbuser_ReadWrite
 
 This object is used to provide permissions for dynamic SQL statements.
 
 
-### <a name="smsdbuser_reportschema"></a>smsdbuser_ReportSchema
+### smsdbuser_ReportSchema
 
 This object is used to run SQL Reporting Executions.  The following stored procedure is used with this function: spSRExecQuery.
+
+
+## <a name="bkmk_sqlroles"></a>Database roles that Configuration Manager uses in SQL
+<!--SCCMDocs issue #1160-->
+Configuration Manager automatically creates and maintains the following role objects in SQL. These roles provide access to specific stored procedures, tables, views and functions to perform the needed actions of each role to either retrieve data or insert data to and from the ConfigMgr database. These objects are located within the Configuration Manager database under Security/Roles/Database Roles.
+
+> [!IMPORTANT]  
+> Modifying or removing these objects may cause drastic issues within a Configuration Manager environment.  We recommend you do not make any changes to these objects.
+
+### smsdbrole_AITool
+
+Asset Intelligence Volume Licenses import. ConfigMgr grants this permission to users accounts based on RBA access to be able to import volume license to be used with Asset Intelligence.  This account could be added by a full administrator role or an Asset Manager role.
+
+### smsdbrole_AIUS
+
+Asset Intelligence Update Synchronization. ConfigMgr grants the computer account that host the Asset Intelligence Synchronization Point account access to get Access Intelligence proxy data and to view pending AI data for upload.
+
+### smsdbrole_AMTSP
+
+Out of Bound Management. This role is used by Configuration Manager AMT role to retrieve data on devices that supported Intel AMT.
+
+> [!NOTE]  
+> This role is deprecated in newer releases of ConfigMgr.
+
+### smsdbrole_CRP
+
+Certificate Registration Point System Center Endpoint Protection (SCEP) support. ConfigMgr grants permission to the computer account of the site system that supports the Certificate Registration Point for SCEP support for certificate signing and renewal.
+
+### smsdbrole_CRPPfx
+
+Certificate Registration Point PFX support. ConfigMgr grants permission to the computer account of the site system that supports the Certificate Registration Point configured for PFX support for signing and renewal.
+
+### smsdbrole_DMP
+
+Device Management Point. ConfigMgr grants this permission to computer account for a Management Point that has the option, “Allow mobile devices and Mac Computer to uses this management point”, the ability to provide support for MDM enrolled devices.
+
+### smsdbrole_DmpConnector
+
+Service Connection Point. ConfigMgr grants this permission to the computer account that host the Service Connection Point to retrieve and provide telemetry data, manage cloud services, and retrieve service updates.
+
+### smsdbrole_DViewAccess
+
+Distributed Views. Configuration Manager grants this permission to the computer account of the Primary Site Servers on the CAS when the SQL Server distributed views option is selected in the replication link properties.
+
+### smsdbrole_DWSS
+
+Data Warehouse. ConfigMgr grants this permission to the computer account that host the Data Warehouse role.
+
+### smsdbrole_EnrollSvr
+
+ Enrollment Point. ConfigMgr grants this permission to the computer account that host the Enrollment Point to allow for device enrollment via MDM.
+
+### smsdbrole_extract
+
+Provides access to all the extended schema views.
+
+### smsdbrole_HMSUser
+
+Hierarchy Manager Service. ConfigMgr grants permissions this account to manage failover state messages and SQL Server Broker transactions between sites within a hierarchy.
+
+> [!NOTE]  
+> The smdbrole_WebPortal role is a member of this role by default.
+
+### smsdbrole_MCS
+
+Multicast Service. ConfigMgr grants this permission to the computer account of the Distribution Point that supports multicast.
+
+### smsdbrole_MP
+
+Management Point. ConfigMgr grants this permission to the computer account that host the Management Point role to provide support for the ConfigMgr clients.
+
+### smsdbrole_MPMBAM
+
+Management Point Microsoft BitLocker Administration and Monitoring. ConfigMgr grants this permission to the computer account that host the Management Point that manages MBAM for an environment.
+
+### smsdbrole_MPUserSvc
+
+Management Point Application Request. ConfigMgr grants this permission to the computer account that host the Management Point to support user-based application requests.
+
+### smsdbrole_siteprovider
+
+SMS Provider. Configuration Manager grants this permission to the computer account that host a SMS Provider role.  
+
+### smsdbrole_siteserver
+
+Site Server. ConfigMgr grants this permission to the computer account that host the Primary or CAS Site.
+
+### smsdbrole_SUP
+
+Software Update Point. ConfigMgr grants this permission to the computer account that host the Software Update Point for working with Third party updates.
+
+### smsdbrole_WebPortal
+
+Application Catalog Web Site Point. ConfigMgr grants permission to the computer account that host the Application Catalog Web Site Point to provide user based application deployment.
+
+### smsschm_users
+
+User Reporting access. ConfigMgr grants access to the account used for the Reporting Services point account to allow access to the SMS reporting views to display the Configuration Manager reporting data.  The data is further restricted with the use of RBA.
