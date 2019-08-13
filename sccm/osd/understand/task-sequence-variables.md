@@ -1577,7 +1577,7 @@ For example, if you set SMSTSWaitForSecondReboot to `600`, the task sequence pau
 ### <a name="TSDebugMode"></a> TSDebugMode
 
 <!--3612274-->
-Starting in version 1906, set this variable to `TRUE` on a collection to which a task sequence is deployed. This variable changes the behavior of any task sequence on any device in that collection to use the task sequence debugger.
+Starting in version 1906, set this variable to `TRUE` on a collection to which a task sequence is deployed. This variable changes the behavior of any task sequence on any device in that collection to use the task sequence debugger. The variable can also be set directly on a computer object. Setting the variable directly on a computer object will also change the behavior of any task sequence deployed to that computer object.
 
 For more information, see [Debug a task sequence](/sccm/osd/deploy-use/debug-task-sequence).
 
