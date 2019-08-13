@@ -97,16 +97,10 @@ Guided walkthroughs to assist with troubleshooting Configuration Manager compone
 
 ## New and updated support articles
 
-Support articles that are new or updated between June 10 and July 10, 2019.
+Support articles that are new or updated between between July 11 and August 12, 2019.
 
-- [KB 4505439: Troubleshooting software update synchronization in Configuration Manager](https://support.microsoft.com/help/4505439)
-- [KB 4508653: Package distribution to a remote distribution point fails because of a logon failure](https://support.microsoft.com/help/4508653)
-- [KB 4508855: Applications aren’t deployed to users who are logged on to domain controllers in Configuration Manager](https://support.microsoft.com/help/4508855)
-- [KB 4500571: Update rollup for System Center Configuration Manager current branch, version 1902](https://support.microsoft.com/help/4500571)
-- [KB 4508760: "Function sequence error" repeatedly logged in Smsdbmon.log in Configuration Manager version 1902](https://support.microsoft.com/help/4508760)
-- [KB 4509131: Configuration Manager OSD task sequence fails with error code 80070005](https://support.microsoft.com/help/4509131)
-- [KB 4509132: "IDispatch error #3603" during content distribution in ConfigMgr](https://support.microsoft.com/help/4509132)
-- [KB 4509681: Configuration Manager upgrade gets stuck at Upgrade ConfigMgr Database](https://support.microsoft.com/help/4509681)
-- [KB 4509484: 80070070 during content distribution to a CMG or cloud DP in ConfigMgr](https://support.microsoft.com/help/4509484)
+- [KB 4511621: "Not enough memory resources" error when you create standalone or prestaged media in Configuration Manager](https://support.microsoft.com/help/4511621)
+- [KB 4511618: Certificate is not updated on a PXE-enabled DP and you see multiple log error entries](https://support.microsoft.com/help/4511618)
+- [KB 4509382: Troubleshooting application deployment in Configuration Manager](https://support.microsoft.com/help/4509382)
 
 To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **System Center Configuration Manager**.  

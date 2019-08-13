@@ -2,7 +2,7 @@
 title: Deployment plans in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn about deployment plans in Desktop Analytics.
-ms.date: 08/09/2019
+ms.date: 08/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -90,24 +90,8 @@ In the details of the app, you can also see the following information: Recommend
 
 The apps that Desktop Analytics shows as *noteworthy* are based on the low install count threshold for the readiness rules of the deployment plan. For more information, see [Readiness rules](/sccm/desktop-analytics/create-deployment-plans#readiness-rules).
 
-#### <a name="bkmk_plan-autoapp" /> Automatic upgrade decision of system and store apps
-
-<!-- 3587232 -->
-Identifying **Importance** and **Upgrade Decision** is critical for all noteworthy apps in the Desktop Analytics workflow. To help reduce your efforts in annotating these apps, certain types of apps are automatically marked as *Not important*. The deployment plan upgrade decision for these apps is also marked as *Ready*. The following apps are compatible and should continue to work after you upgrade Windows:
-
-- System apps and components published by Microsoft
-
-- Apps managed and updated from the Microsoft Store
-
-> [!Tip]
-> Manage inputs for any app at a global level or per deployment plan.
->
-> 1. In the Desktop Analytics portal, in the **Manage** menu, select **Assets**. Then select **Apps**.
->
-> 2. Use the **Type** and **Category** columns to manage these app categories:
->
->    - For store apps, filter **Type** as **Modern**
->    - For system apps, filter **Category** as **Background process** or **Windows component**
+   > [!Tip]
+   > For more information about the "Not important" app category, see [Automatic upgrade decision of system and store apps](/sccm/desktop-analytics/about-assets#bkmk_plan-autoapp). <!-- 3587232 -->
 
 
 ### Drivers
