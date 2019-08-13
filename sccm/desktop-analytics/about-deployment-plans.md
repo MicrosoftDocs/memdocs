@@ -91,7 +91,7 @@ In the details of the app, you can also see the following information: Recommend
 The apps that Desktop Analytics shows as *noteworthy* are based on the low install count threshold for the readiness rules of the deployment plan. For more information, see [Readiness rules](/sccm/desktop-analytics/create-deployment-plans#readiness-rules).
 
    > [!Tip]
-   > For more information about the "Not important" app category, see [Automatic upgrade decision of system and store apps](/sccm/desktop-analytics/about-assets#bkmk_plan-autoapp).
+   > For more information about the "Not important" app category, see [Automatic upgrade decision of system and store apps](/sccm/desktop-analytics/about-assets#bkmk_plan-autoapp). <!-- 3587232 -->
 
 
 ### Drivers
