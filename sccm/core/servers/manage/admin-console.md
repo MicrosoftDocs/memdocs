@@ -196,6 +196,9 @@ Starting in Configuration Manager version 1902, there's a **Documentation** node
 - **Troubleshooting articles**: guided walkthroughs to assist with troubleshooting Configuration Manager components and features.
 - **New and updated support articles**: articles that are new or updated in the last two months.
 
+### Troubleshooting connection errors
+The **Documentation** node has no explicit proxy configuration. It uses any OS-defined proxy in the **Internet Options** control panel applet. To retry after a connection error, refresh the **Documentation** node.
+
 
 ## Command-line options
 
