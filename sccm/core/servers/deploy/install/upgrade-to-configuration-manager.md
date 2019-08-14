@@ -30,7 +30,7 @@ The following options are the currently supported in-place upgrade paths:
 
 ### Upgrade to version 1902
 
-When you have version 1902 baseline media, you can upgrade the following to a fully licensed version of System Center Configuration Manager version 1902:   
+You can upgrade the following to a fully licensed version of System Center Configuration Manager version 1902:   
 - An evaluation install of System Center Configuration Manager version 1902
 - System Center 2012 Configuration Manager with Service Pack 1
 - System Center 2012 Configuration Manager with Service Pack 2
@@ -38,7 +38,7 @@ When you have version 1902 baseline media, you can upgrade the following to a fu
 - System Center 2012 R2 Configuration Manager with Service Pack 1
 
 ### Upgrade to version 1802
-When you have version 1802 baseline media, you can upgrade the following to a fully licensed version of System Center Configuration Manager version 1802:   
+You can upgrade the following to a fully licensed version of System Center Configuration Manager version 1802:   
 - An evaluation install of System Center Configuration Manager version 1802
 - System Center 2012 Configuration Manager with Service Pack 1
 - System Center 2012 Configuration Manager with Service Pack 2
