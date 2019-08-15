@@ -2,7 +2,7 @@
 title: What's new in version 1906
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1906 of Configuration Manager current branch.
-ms.date: 08/07/2019
+ms.date: 08/16/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -552,7 +552,8 @@ For more information, see [Administration service](/sccm/core/plan-design/hierar
 In the **Assets and Compliance** workspace, go to the **Devices** node, and select a device. In the details pane, switch to the new **Collections** tab. This tab lists the collections that include this device.
 
 > [!Note]  
-> This tab currently isn't available from a devices subnode under the **Device Collections** node. For example, when you select the option to **Show Members** on a collection.
+> - This tab currently isn't available from a devices subnode under the **Device Collections** node. For example, when you select the option to **Show Members** on a collection.
+> - To see the complete list of collections a device belongs to, you must be a member of the **Full Administrator** security role. This is a known issue. <!--5107309-->
 
 ### Task sequences tab in applications node
 
