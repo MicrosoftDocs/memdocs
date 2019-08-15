@@ -2,7 +2,7 @@
 title: What's new in Desktop Analytics
 titleSuffix: Configuration Manager
 description: A summary of the new features in the latest monthly release of the Desktop Analytics cloud service.
-ms.date: 08/09/2019
+ms.date: 08/16/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -28,12 +28,6 @@ To get notified when this page is updated, copy and paste the following URL into
 
 ## August 2019
 
-### Migrate inputs from Windows Analytics
-
-<!-- 4252663 -->
-
-During onboarding, you can now migrate inputs from an existing Windows Analytics workspace. For more information, see the FAQ for [Existing Windows Analytics customers](/sccm/desktop-analytics/faq#existing-windows-analytics-customers).
-
 ### Reset your account
 
 <!-- 3733897 -->
@@ -50,7 +44,7 @@ To help reduce your efforts in annotating noteworthy apps, certain types of apps
 
 - Apps managed and updated from the Microsoft Store
 
-For more information, see [Automatic upgrade decision of system and store apps](/sccm/desktop-analytics/about-deployment-plans#bkmk_plan-autoapp).
+For more information, see [Automatic upgrade decision of system and store apps](/sccm/desktop-analytics/about-assets#bkmk_plan-autoapp).
 
 
 ## What's new in Configuration Manager

@@ -2,7 +2,7 @@
 title: How to reset your account
 titleSuffix: Configuration Manager
 description: Learn how to reset your Desktop Analytics account.
-ms.date: 08/09/2019
+ms.date: 08/16/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
