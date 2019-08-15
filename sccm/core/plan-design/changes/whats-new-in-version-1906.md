@@ -553,7 +553,7 @@ In the **Assets and Compliance** workspace, go to the **Devices** node, and sele
 
 > [!Note]  
 > - This tab currently isn't available from a devices subnode under the **Device Collections** node. For example, when you select the option to **Show Members** on a collection.
-> - This tab may not populate as expected for some users. To see the complete list of collections a device belongs to, you must be a member of the **Full Administrator** security role. This is a known issue. <!--5107309-->
+> - This tab may not populate as expected for some users. To see the complete list of collections a device belongs to, you must have the **Full Administrator** security role. This is a known issue. <!--5107309-->
 
 ### Task sequences tab in applications node
 
