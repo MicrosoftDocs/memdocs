@@ -39,7 +39,7 @@ Starting in version 1906, the task sequence debugger is a new troubleshooting to
 1. Select a task sequence. In the Deployment group of the ribbon, select **Debug**.
 
     > [!Tip]  
-    > Alternatively, set the variable **TSDebugMode** to `TRUE` on a collection to which the task sequence is deployed. This variable changes the behavior of any task sequence on any device in that collection. The variable can also be set directly on a computer object. Setting the variable directly on a computer object will also change the behavior of any task sequence deployed to that computer object.
+    > Alternatively, set the variable **TSDebugMode** to `TRUE` on a collection or computer object to which a task sequence is deployed. Any device that has this variable set will put any task sequence deployed to it into debug mode.
 
 1. Create a debug deployment. The deployment settings are the same as a normal task sequence deployment. For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence#process).
 
