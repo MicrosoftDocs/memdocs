@@ -3,8 +3,8 @@
   topichref: /
   items:
     - name: Enterprise Mobility + Security
-      tocref: /azure/
-      topichref: /enterprise-mobility-security/
+      tocref: /
+      topichref: /enterprise-mobility-security
       items:
         - name: Configuration Manager
           tocHref: /azure/azure-monitor/
