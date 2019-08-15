@@ -232,7 +232,8 @@ The Azure AD synchronization happens every five minutes. It's a one-way process,
 
 1. Go to [https://portal.azure.com](https://portal.azure.com).
 1. Navigate to **Azure Active Directory** > **Groups** > **All groups**.
-1. Click **New group** and type in a **Group name** and **Group description**.
+1. Click **New group** and type in a **Group name** and optionally **Group description**.
+1. Make sure that **Membership type** is **Assigned**.
 1. Select **Owners**, then add the identity that will create the synchronization relationship in Configuration Manager.
 1. Click **Create** to finish creating the Azure AD group.
 
