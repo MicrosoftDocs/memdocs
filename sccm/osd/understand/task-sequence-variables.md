@@ -2,7 +2,7 @@
 title: Task sequence variable reference
 titleSuffix: Configuration Manager
 description: Learn about the variables to control and customize a Configuration Manager task sequence.
-ms.date: 07/26/2019
+ms.date: 08/16/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -1577,7 +1577,7 @@ For example, if you set SMSTSWaitForSecondReboot to `600`, the task sequence pau
 ### <a name="TSDebugMode"></a> TSDebugMode
 
 <!--3612274-->
-Starting in version 1906, set this variable to `TRUE` on a collection to which a task sequence is deployed. This variable changes the behavior of any task sequence on any device in that collection to use the task sequence debugger.
+Starting in version 1906, set this variable to `TRUE` on a collection or computer object to which the task sequence is deployed. Any device that has this variable set will put any task sequence deployed to it into debug mode.
 
 For more information, see [Debug a task sequence](/sccm/osd/deploy-use/debug-task-sequence).
 
