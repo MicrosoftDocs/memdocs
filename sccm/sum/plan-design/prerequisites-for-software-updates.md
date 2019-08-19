@@ -5,7 +5,7 @@ description: "Learn about prerequisites for software updates in System Center Co
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 02/02/2018
+ms.date: 08/20/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -32,24 +32,20 @@ This article lists the prerequisites for software updates in System Center Confi
 -   WSUS 10.0.17763 (role in Windows Server 2019) (Requires Configuration Manager 1810 or later)
 -   WSUS 6.2 and 6.3 (role in Windows Server 2012 and Windows Server 2012 R2)
 
->[!NOTE]
+> [!NOTE]
 >-   Beginning with version 1702, Windows Server 2008 R2 isn't supported for the software update point role. For more information, see [Supported operating systems for site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers#bkmk_2008r2sp1).  
 
 > [!WARNING]  
-> When you have multiple software update points at a site, ensure that they're all running the same version of WSUS.  
-
-> [!WARNING]  
->  The **Upgrades** software updates classification is only supported starting with WSUS 4.0. Before you synchronize this new classification and have the ability to evaluate Windows 10 computers in a Windows 10 servicing plan, it is critical that you install [hotfix 3095113](https://support.microsoft.com/kb/3095113) for WSUS on your software update points and site servers. This hotfix enables WSUS on a Windows Server 2012-based server or a Windows Server 2012 R2-based server to sync and distribute feature upgrades for Windows 10. For more information, see [Manage Windows as a service](../../osd/deploy-use/manage-windows-as-a-service.md).  
->   
->  If you synchronize software updates with the **Upgrades** classification before you install [hotfix 3095113](https://support.microsoft.com/kb/3095113), see [Recover from synchronizing the Upgrades category before you install KB 3095113](#BKMK_RecoverUpgrades).  
+> - When you have multiple software update points at a site, ensure that they're all running the same version of WSUS.  
+> - The **Upgrades** software updates classification is only supported starting with WSUS 4.0. Before you synchronize this new classification and have the ability to evaluate Windows 10 computers in a Windows 10 servicing plan, it is critical that you install [hotfix 3095113](https://support.microsoft.com/kb/3095113) for WSUS on your software update points and site servers. This hotfix enables WSUS on a Windows Server 2012-based server or a Windows Server 2012 R2-based server to sync and distribute feature upgrades for Windows 10. For more information, see [Manage Windows as a service](../../osd/deploy-use/manage-windows-as-a-service.md).  
+> - If you synchronize software updates with the **Upgrades** classification before you install [hotfix 3095113](https://support.microsoft.com/kb/3095113), see [Recover from synchronizing the Upgrades category before you install KB 3095113](#BKMK_RecoverUpgrades).  
 
 ### WSUS Administration Console  
  The WSUS Administration Console is required on the Configuration Manager site server when the software update point is on a remote site system server and WSUS isn't already installed on the site server.  
 
 > [!IMPORTANT]  
-> The WSUS version on the site server must be the same as the WSUS version that's running on the software update points.
->
-> Don't use WSUS Administration Console to configure WSUS settings. Configuration Manager connects to the instance of WSUS that is running on the software update point and configures the appropriate settings.  
+> - The WSUS version on the site server must be the same as the WSUS version that's running on the software update points.
+> - Don't use WSUS Administration Console to configure WSUS settings. Configuration Manager connects to the instance of WSUS that is running on the software update point and configures the appropriate settings.  
 
 
 
@@ -62,7 +58,7 @@ This article lists the prerequisites for software updates in System Center Confi
  The following sections list the internal dependencies for software updates in Configuration Manager.  
 
 ### Management points  
- Management points transfer information between client computers and the Configuration Manager site. The managment points are required for software updates.  
+ Management points transfer information between client computers and the Configuration Manager site. The management points are required for software updates.  
 
 ### Software update points  
  You must install a software update point on the WSUS server to be able to deploy software updates in Configuration Manager. For more information, see [Install and configure a software update point](../get-started/install-a-software-update-point.md).
