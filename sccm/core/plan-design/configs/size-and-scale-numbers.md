@@ -2,7 +2,7 @@
 title: Size and scale
 titleSuffix: Configuration Manager
 description: Determine the number of site system roles and sites that you'll need to support the devices in your environment.
-ms.date: 07/26/2019
+ms.date: 08/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -133,10 +133,37 @@ For information about the number of clients and devices that a management point 
 
 ### Software update point  
 
-- A software update point that is installed on the site server can support up to 25,000 clients.
+Use the following recommendations as a baseline. This baseline helps you determine the information for the software updates capacity planning that is appropriate to your organization. The actual capacity requirements might vary from the recommendations listed in this article depending on the following criteria: 
+- Your specific networking environment
+- The hardware that you use to host the software update point site system
+- The number of managed clients
+- The other site system roles installed on the server  
 
-- A software update point that is remote from the site server can support up to 150,000 clients when the remote computer meets the Windows Server Update Services (WSUS) requirements to support this number of clients.  
+#### <a name="BKMK_SUMCapacity"></a> Capacity planning for the software update point  
 
+The number of supported clients depends on the version of Windows Server Update Services (WSUS) that runs on the software update point. It also depends on whether the software update point site system role coexists with another site system role:  
+
+- The software update point can support up to 25,000 clients when WSUS runs on the software update point server, and the software update point coexists with another site system role.  
+
+- The software update point can support up to 150,000 clients when a remote server meets WSUS requirements, WSUS is used with Configuration Manager, and you configure the following settings:
+
+    IIS Application Pools:
+    - Increase the WsusPool Queue Length to 2000
+    - Increase the WsusPool Private Memory limit x4 times, or set to 0 (unlimited). For example, if the default limit is 1,843,200 KB, increase it to 7,372,800. For more information, see this [Configuration Manager support team blog post](https://blogs.technet.microsoft.com/configurationmgr/2015/03/23/configmgr-2012-support-tip-wsus-sync-fails-with-http-503-errors/).  
+
+    For more information about hardware requirements for the software update point, see [Recommended hardware for site systems](/sccm/core/plan-design/configs/recommended-hardware#bkmk_ScaleSieSystems).  
+
+
+#### <a name="bkmk_sum-capacity-obj"></a> Capacity planning for software updates objects  
+
+Use the following capacity information to plan for software updates objects:  
+
+- **Limit of 1000 software updates in a deployment** -Limit the number of software updates to 1000 for each software update deployment. When you create an automatic deployment rule (ADR), specify criteria that limits the number of software updates. The ADR fails when the specified criteria returns more than 1000 software updates. Check the status of the ADR from the **Automatic Deployment Rules** node in the Configuration Manager console. When you manually deploy software updates, don't select more than 1000 updates to deploy.  
+
+  Also limit the number of software updates to 1000 in a configuration baseline. For more information, see [Create configuration baselines](/sccm/compliance/deploy-use/create-configuration-baselines).
+
+- **Limit of 580 security scopes for automatic deployment rules** -<!--ado 4962928-->
+Limit the number of security scopes on automatic deployment rules (ADRs) to less than 580. When you create an ADR, the security scopes that have access to it are automatically added. If there are more than 580 security scopes set, the ADR will fail to run and an error is logged in ruleengine.log.
 
 ## <a name="bkmk_clientnumbers"></a> Client numbers for sites and hierarchies
 
