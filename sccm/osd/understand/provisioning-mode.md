@@ -40,10 +40,11 @@ Starting in version 1902, the task sequence sets a timestamp when it puts the cl
 
 48 hours is the default provisioning mode timeout value. You can adjust this timer on a device by setting the **ProvisioningMaxMinutes** value in the following registry key: `HKLM\Software\Microsoft\CCM\CcmExec`. If this value doesn't exist or is `0`, the client uses the default 48 hours.
 
-The timestamp **ProvisioningEnabledTime** is located in the following registry key: `HKLM\Software\Microsoft\CCM\CcmExec` and has a value of the last time the machine entered provisioning mode. The format is Epoch (Unix timestamp) and is in UTC.
+The timestamp **ProvisioningEnabledTime** is located in the following registry key: `HKLM\Software\Microsoft\CCM\CcmExec`. The timestamp  has a value of the last time the machine entered provisioning mode. The format is epoch (Unix timestamp) and is in UTC.
 
-This timestamp is also reset to the current time when you manually place the machine into provisioning mode using the following command:
-```PowerShell
+This timestamp is also reset to the current time when you manually place the machine in provisioning mode by using the following command:
+
+```powershell
 Invoke-WmiMethod -Namespace root\CCM -Class SMS_Client -Name SetClientProvisioningMode -ArgumentList $true
 ```
 
