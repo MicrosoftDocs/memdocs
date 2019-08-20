@@ -407,7 +407,7 @@ For more information, see [Create and deploy an application](/sccm/apps/get-star
 
 <!--3976435-->
 
-End users will now be reminded more frequently of a pending restart with intermittent countdown notifications. You can define the interval for the intermittent notifications in **Client Settings** on the **Computer Restart** page. Change the value for **Specify the snooze duration for computer restart countdown notifications (hours)** to configure how often a user is reminded about a pending restart until the final countdown notification occurs.
+End users will now be reminded more frequently of a pending restart with intermittent countdown notifications. You can define the interval for the intermittent notifications in **Client Settings** on the **Computer Restart** page. Change the value for **Specify the snooze duration for computer restart countdown notifications (minutes)** to configure how often a user is reminded about a pending restart until the final countdown notification occurs.
 
 Additionally, the maximum value for **Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes)** increased from 1440 minutes (24 hours) to 20160 minutes (two weeks).
 
