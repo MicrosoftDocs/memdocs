@@ -94,7 +94,7 @@ The updates and issue described in this section only apply to WSUS running on Wi
 
  [KB 3095113](https://support.microsoft.com/kb/3095113) was [released as a hotfix](https://blogs.technet.microsoft.com/wsus/2015/12/03/important-update-for-wsus-4-0-kb-3095113/) in October 2015 to add support for Windows 10 upgrades to WSUS. The update enables WSUS to synchronize and distribute updates in the **Upgrades** classification for Windows 10.
 
-If you synchronize any upgrades without having first installed [hotfix 3095113](https://support.microsoft.com/kb/3095113), you populate the WSUS database (SUSDB) with unusable data. That data must be cleared before the upgrades can be properly deployed. Windows 10 upgrades in this state can't be downloaded by using the Download Software Updates Wizard.
+If you synchronize any upgrades without having first installed [KB 3095113](https://support.microsoft.com/kb/3095113), you populate the WSUS database (SUSDB) with unusable data. That data must be cleared before the upgrades can be properly deployed. Windows 10 upgrades in this state can't be downloaded by using the Download Software Updates Wizard.
 
 Errors that resemble the following appear on the Completion page of the Download Software Updates Wizard:
 
@@ -132,7 +132,7 @@ Because the resolution steps are similar to the resolution for synchronizing upg
 
 Follow the steps below to resolve both the 0xc1800118 error and "Error: Invalid certificate signature":
 
-1. Disable the **Upgrades** classification in both WSUS and Configuration Manager. You don't want a synchronization to occur until after 
+1. Disable the **Upgrades** classification in both WSUS and Configuration Manager. You don't want a synchronization to occur until after you've finished these steps.  
    - Uncheck the **Upgrades** classification in the Software Update Point component properties on the top-level site. 
      - For more information, see [Configure classifications and products](../get-started/configure-classifications-and-products.md).
    - Uncheck the **Upgrades** classification from WSUS under **Products and Classifications** on the **Options** page, or use the PowerShell ISE running as administrator.
