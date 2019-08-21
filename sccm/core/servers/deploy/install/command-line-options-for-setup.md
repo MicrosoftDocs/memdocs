@@ -451,6 +451,34 @@ Use the following details to install a CAS by using an unattended setup script f
 
     - **Details:** Specifies the port number to use for the proxy port.  
 
+#### SABranchOptions
+
+<!-- SCCMDocs#390 -->
+
+- **Key name:** SAActive
+
+    - **Required:** No
+
+    - **Values:**
+
+        - `0` = You don't have Software Assurance
+
+        - `1` = Software Assurance is active
+
+    - **Details:** Specify if you have active Software Assurance. For more information, see [Product and licensing FAQ](/sccm/core/understand/product-and-licensing-faq).
+
+- **Key name:** CurrentBranch
+
+    - **Required:** No
+
+    - **Values:**
+
+        - `0` = Install the LTSB
+
+        - `1` = Install current branch
+
+    - **Details:** Specify whether to use Configuration Manager current branch or long-term servicing branch (LTSB). For more information, see [Which branch of Configuration Manager should I use?](/sccm/core/understand/which-branch-should-i-use).
+
 ### Unattended install for a primary site
 
 Use the following details to install a primary site by using an unattended setup script file.  
@@ -786,6 +814,34 @@ Use the following details to install a primary site by using an unattended setup
     - **Values:** <*Port number*>  
 
     - **Details:** Specifies the port number to use for the proxy port.  
+
+#### SABranchOptions
+
+<!-- SCCMDocs#390 -->
+
+- **Key name:** SAActive
+
+    - **Required:** No
+
+    - **Values:**
+
+        - `0` = You don't have Software Assurance
+
+        - `1` = Software Assurance is active
+
+    - **Details:** Specify if you have active Software Assurance. For more information, see [Product and licensing FAQ](/sccm/core/understand/product-and-licensing-faq).
+
+- **Key name:** CurrentBranch
+
+    - **Required:** No
+
+    - **Values:**
+
+        - `0` = Install the LTSB
+
+        - `1` = Install current branch
+
+    - **Details:** Specify whether to use Configuration Manager current branch or long-term servicing branch (LTSB). For more information, see [Which branch of Configuration Manager should I use?](/sccm/core/understand/which-branch-should-i-use).
 
 ### Unattended recovery for a CAS
 
