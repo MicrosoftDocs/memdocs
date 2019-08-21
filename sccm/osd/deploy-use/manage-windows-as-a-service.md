@@ -2,7 +2,7 @@
 title: Manage Windows as a Service
 titleSuffix: Configuration Manager
 description: View the state of Windows as a Service (WaaS) using Configuration Manager, create servicing plans to form deployment rings, and view alerts when Windows 10 clients are near end of support.
-ms.date: 07/26/2019
+ms.date: 08/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -31,15 +31,17 @@ ms.collection: M365-identity-device-management
 
 -   Windows 10 computers must use Configuration Manager software updates with  Windows Server Update Services (WSUS) for software update management. When computers use Windows Update for Business (or Windows Insiders) for software update management, the computer is not evaluated in Windows 10 servicing plans. For more information, see [Integration with Windows Update for Business in Windows 10](../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md).  
 
--   WSUS 4.0 with the [hotfix 3095113](https://support.microsoft.com/kb/3095113) must be installed on your software update points and site servers. This hotfix adds the **Upgrades** software update classification. For more information, see [Prerequisites for software updates](../../sum/plan-design/prerequisites-for-software-updates.md).  
-
--   WSUS 4.0 with the [hotfix 3159706](https://support.microsoft.com/kb/3159706) must be installed on your software update points and site servers to upgrade computers to the Windows 10 Anniversary Update, as well as for subsequence versions. There are manual steps described in the support article that you must take to install this hotfix. For more information, see the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/05/update-your-configmgr-1606-sup-servers-to-deploy-the-windows-10-anniversary-update/).
+One of the following WSUS versions: 
+- WSUS 10.0.14393 (role in Windows Server 2016)
+- WSUS 10.0.17763 (role in Windows Server 2019) (Requires Configuration Manager 1810 or later)
+- WSUS 6.2 and 6.3 (role in Windows Server 2012 and Windows Server 2012 R2)
+  - [KB 3095113 and KB 3159706 (or an equivalent update) must be installed](/sum/plan-design/prerequisites-for-software-updates#BKMK_wsus2012) on WSUS 6.2 and 6.3.
 
 -   Enable Heartbeat Discovery. The data displayed in the Windows 10 servicing dashboard is found by using discovery. For more information, see [Configure Heartbeat Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#BKMK_ConfigHBDisc).  
 
      The following Windows 10 channel and build information is discovered and stored in the following attributes:  
 
-    -   **Operating System Readiness Branch**: Specifies the operating system channel. For example, **0** = Semi-Annual Channel - Targeted (do not defer updates), **1** = Semi-Annual Channel (defer updates), **2** = Long-Term Servicing Channel (LTSC)
+    -   **Operating System Readiness Branch**: Specifies the operating system channel. For example, **0** = Semi-Annual Channel - Targeted (don't defer updates), **1** = Semi-Annual Channel (defer updates), **2** = Long-Term Servicing Channel (LTSC)
 
     -   **Operating System Build**: Specified the operating system build. For example, **10.0.10240** (RTM) or **10.0.10586** (version 1511)  
 
