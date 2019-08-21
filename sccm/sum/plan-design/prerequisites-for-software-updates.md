@@ -31,7 +31,7 @@ This article lists the prerequisites for software updates in System Center Confi
 - WSUS 10.0.14393 (role in Windows Server 2016)
 - WSUS 10.0.17763 (role in Windows Server 2019) (Requires Configuration Manager 1810 or later)
 - WSUS 6.2 and 6.3 (role in Windows Server 2012 and Windows Server 2012 R2)
-  - [KB 3095113 and KB 3159706 (or equivalent update)](#BKMK_wsus2012) are needed for WSUS 6.2 and 6.3 if you deploy Windows 10 upgrades.
+  - [KB 3095113 and KB 3159706 (or an equivalent update)](#BKMK_wsus2012) are needed for WSUS 6.2 and 6.3 if you deploy Windows 10 upgrades.
 
 > [!NOTE]
 > - Beginning with version 1702, Windows Server 2008 R2 isn't supported for the software update point role. For more information, see [Supported operating systems for site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers#bkmk_2008r2sp1).
