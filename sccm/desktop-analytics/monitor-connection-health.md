@@ -58,7 +58,8 @@ This tile shows when Configuration Manager syncs with the Desktop Analytics clou
 - **Next service sync**: When you can expect the next daily snapshot in Desktop Analytics.
 
 > [!Note]  
-> None of these values automatically update when you request an on-demand snapshot. For more information, see [Data latency](/sccm/desktop-analytics/troubleshooting#data-latency).
+> When you first enroll devices into Desktop Analytics, it can take several days for data to upload and process. During this time, the **Last sync details** tile may appear blank. 
+> Additionally, none of the values in this tile automatically update when you request an on-demand snapshot. For more information, see [Data latency](/sccm/desktop-analytics/troubleshooting#data-latency).
 
 If you think some devices aren't showing in Desktop Analytics, make sure the devices are supported by Desktop Analytics. For more information, see [Prerequisites](/sccm/desktop-analytics/overview#prerequisites).
 
