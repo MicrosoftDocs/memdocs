@@ -33,12 +33,8 @@ This article lists the prerequisites for software updates in System Center Confi
 -   WSUS 6.2 and 6.3 (role in Windows Server 2012 and Windows Server 2012 R2)
 
 > [!NOTE]
->-   Beginning with version 1702, Windows Server 2008 R2 isn't supported for the software update point role. For more information, see [Supported operating systems for site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers#bkmk_2008r2sp1).  
-
-> [!WARNING]  
-> - When you have multiple software update points at a site, ensure that they're all running the same version of WSUS.  
-> - The **Upgrades** software updates classification is only supported starting with WSUS 4.0. Before you synchronize this new classification and have the ability to evaluate Windows 10 computers in a Windows 10 servicing plan, it is critical that you install [hotfix 3095113](https://support.microsoft.com/kb/3095113) for WSUS on your software update points and site servers. This hotfix enables WSUS on a Windows Server 2012-based server or a Windows Server 2012 R2-based server to sync and distribute feature upgrades for Windows 10. For more information, see [Manage Windows as a service](../../osd/deploy-use/manage-windows-as-a-service.md).  
-> - If you synchronize software updates with the **Upgrades** classification before you install [hotfix 3095113](https://support.microsoft.com/kb/3095113), see [Recover from synchronizing the Upgrades category before you install KB 3095113](#BKMK_RecoverUpgrades).  
+> - Beginning with version 1702, Windows Server 2008 R2 isn't supported for the software update point role. For more information, see [Supported operating systems for site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers#bkmk_2008r2sp1).
+> - When you have multiple software update points at a site, ensure that they're all running the same version of WSUS.
 
 ### WSUS Administration Console  
  The WSUS Administration Console is required on the Configuration Manager site server when the software update point is on a remote site system server and WSUS isn't already installed on the site server.  
@@ -46,7 +42,6 @@ This article lists the prerequisites for software updates in System Center Confi
 > [!IMPORTANT]  
 > - The WSUS version on the site server must be the same as the WSUS version that's running on the software update points.
 > - Don't use WSUS Administration Console to configure WSUS settings. Configuration Manager connects to the instance of WSUS that is running on the software update point and configures the appropriate settings.  
-
 
 
 ### Windows Update Agent  
@@ -71,14 +66,74 @@ This article lists the prerequisites for software updates in System Center Confi
 
  For more information, see the following articles:  
 
--   [Client settings for software updates](../get-started/manage-settings-for-software-updates.md#BKMK_ClientSettings)   
+- [Client settings for software updates](../get-started/manage-settings-for-software-updates.md#BKMK_ClientSettings)   
 
--   [Software updates client settings](../../core/clients/deploy/about-client-settings.md#software-updates)  
+- [Software updates client settings](../../core/clients/deploy/about-client-settings.md#software-updates)  
 
 ### Reporting services points  
  The reporting services point site system role can display reports for software updates. This role is optional but recommended. For more information about how to create a reporting services point, see [Configuring reporting](../../core/servers/manage/configuring-reporting.md).  
 
-##  <a name="BKMK_RecoverUpgrades"></a> Recover from synchronizing the Upgrades category before you install KB 3095113  
+## <a name="BKMK_RecoverUpgrades"></a> Download of Windows 10 upgrades fails with "Error: Invalid certificate signature" or 0xc1800118
+
+These issues described in this section only apply to WSUS running on Windows Server 2012 or Windows Server 2012 R2 machines (WSUS 6.2 and 6.3). Typically, you'll only see the issues described in this section if you installed WSUS before July 2017 and you recently enabled the **Upgrades** classification. However, it's possible to see these issues in other situations too.
+
+### Which updates are required on WSUS 6.2 and 6.3?
+
+ - You must install [KB 3095113](https://support.microsoft.com/kb/3095113), released in October 2015, on your software update points and site servers before you synchronize the **Upgrades** classification. 
+ - To service Windows 10 version 1607 and later, you must install and configure [KB 3159706](https://support.microsoft.com/en-us/help/3159706), which was released in May 2016.
+
+>[!IMPORTANT]
+> Both KB 3095113 and KB 3159706 are included in the **Security Monthly Quality Rollup** starting in July 2017. However, if you need either of these updates, we recommend installing a **Security Monthly Quality Rollup** released after October 2017 since they contain an additional WSUS update to decrease memory utilization on WSUS's clientwebservice.
+
+### Historical information about KB 3095113
+
+ [KB 3095113](https://support.microsoft.com/kb/3095113) was [released as a hotfix](https://blogs.technet.microsoft.com/wsus/2015/12/03/important-update-for-wsus-4-0-kb-3095113/) in October 2015 to add support for Windows 10 upgrades to WSUS. The update enables WSUS to synchronize and distribute updates in the **Upgrades** classification for Windows 10.
+
+If you synchronize any upgrades without having first installed [hotfix 3095113](https://support.microsoft.com/kb/3095113), you populate the WSUS database (SUSDB) with unusable data. That data must be cleared before the upgrades can be properly deployed. Windows 10 upgrades in this state can't be downloaded by using the Download Software Updates Wizard.
+
+Errors that resemble the following appear on the Completion page of the Download Software Updates Wizard:
+
+```
+Error: Upgrade to Windows 10 Pro, version 1511, 10586
+Failed to download content id {content_id}. Error: Invalid certificate signature
+```
+
+Additionally, errors resembling the following are logged in the PatchDownloader.log file:
+
+```
+Download http://wsus.ds.b1.download.windowsupdate.com/d/upgr/2015/12/10586.0.151029-1700.th2_release_...esd...
+Authentication of file C:\Users\{username}\AppData\Local\Temp\2\{temporary_filename}.tmp failed, error 0x800b0004
+ERROR: DownloadContentFiles() failed with hr=0x80073633
+# This log is truncated for readability.
+```
+
+Historically, when these errors occurred, they would be resolved by performing a modified version of the [resolution used in "WSUS only" environments](https://blogs.technet.microsoft.com/wsus/2016/01/29/how-to-delete-upgrades-in-wsus/). The basic steps are listed below and they are informational only: 
+ 
+1. Disable the **Upgrades** classification from synchronizing in both WSUS and Configuration Manager.
+1. Delete the **Upgrades** from the WSUS databases using a script.
+1. Perform a software update point synchronization from your top-level site in Configuration Manager. This will be a full synchronization because we made a change to the classifications Configuration Manager synchronizes.
+1. Install KB 3095113 if it isn't already installed. 
+   - Remember KB 3095113 and KB 3159706 are included in the **Security Monthly Quality Rollup** starting in July 2017.
+   - In earlier versions of Configuration Manager, you would also have to install [KB 3127032](https://support.microsoft.com/en-us/help/3127032/windows-10-upgrades-are-not-downloaded-in-system-center-configuration)
+1. Select the **Upgrades** classification in the Software Update Point component properties and perform another software update point synchronization from your top-level site.
+
+Because these steps are very similar to the resolution for issues caused by not performing the manual steps required after the installation of KB 3159706, we've combined both sets of steps into a single resolution in the section called [PLACEHOLDER SECTION]().
+
+### Historical information about KB 3159706
+
+KB 3148812 was initially released in April 2016 to enable WSUS to natively decrypt the .esd files used for upgrading Windows 10 packages. [KB 3148812 caused problems for some customers](https://blogs.technet.microsoft.com/wsus/2016/05/05/the-long-term-fix-for-kb3148812-issues/) and was replaced with [KB 3159706](https://support.microsoft.com/en-us/help/3159706). KB 3159706 needs to be installed on all your software update points and site servers before you can service Windows 10 Version 1607 and later devices. However, problems can arise if you don't realize that you need to perform the following manual steps, once per WSUS database, after installing KB3159706:
+
+1. From an elevated command prompt run `C:\Program Files\Update Services\Tools\wsusutil.exe" postinstall /servicing`.
+1. Restart the WSUS service on all of the WSUS servers. 
+
+If you don't realize that KB 3159706 had manual steps after installation, or you synchronized in the upgrade for Windows 10 1607 before installing KB 3159706, you would run into issues connecting to the WSUS console and deploying the upgrade respectively.
+
+
+
+These two WSUS updates are currently included in the **Security Monthly Quality Rollup** for both of these operating systems. Since these updates were included in the **Security Monthly Quality Rollup**, they may look like they aren't installed on the WSUS server. If you try to install the .msu file for the updates, they aren't applicable to the computer because they have already been installed by a rollup. 
+
+ You must install [hotfix 3095113](https://support.microsoft.com/kb/3095113) for WSUS (either with the .msu file or with a rollup) on your software update points and site servers before you synchronize the **Upgrades** classification. We recommend installing a **Security Monthly Quality Rollup** released after October 2017 since they contain an additional WSUS update which decreases memory utilization on WSUS's clientwebservice.
+
  You must install [hotfix 3095113](https://support.microsoft.com/kb/3095113) for WSUS  on your software update points and site servers before you synchronize the **Upgrades** classification. If the hotfix is not installed when the **Upgrades** classification is enabled, WSUS sees the Windows 10 build 1511 feature upgrade even if it can’t properly download and deploy the associated packages. 
  
  If you synchronize any upgrades without having first installed [hotfix 3095113](https://support.microsoft.com/kb/3095113), you populate the WSUS database (SUSDB) with unusable data. That data must be cleared before the upgrades can be properly deployed. Use the following procedure to recover from this issue.  
