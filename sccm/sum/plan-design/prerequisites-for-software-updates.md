@@ -74,7 +74,7 @@ Software updates are enabled for clients by default. There are other available s
 ### Reporting services points  
  The reporting services point site system role can display reports for software updates. This role is optional but recommended. For more information about how to create a reporting services point, see [Configuring reporting](../../core/servers/manage/configuring-reporting.md).  
 
-## <a name="BKMK_wsus2012"></a>Which updates are required on WSUS 6.2 and 6.3?
+## <a name="BKMK_wsus2012"></a> Which updates are required on WSUS 6.2 and 6.3?
 
 Two updates are required for syncing **Upgrades** classification in WSUS 6.2 and 6.3. Occasionally, you might see an error downloading or deploying upgrades if upgrades were synchronized in before installing the WSUS updates. Information about possible issues is in the next section.  
 
@@ -132,15 +132,14 @@ Because the resolution steps are similar to the resolution for synchronizing upg
 
 Follow the steps below to resolve both the 0xc1800118 error and "Error: Invalid certificate signature":
 
-1. Disable the **Upgrades** classification in both WSUS and Configuration Manager. You don't want a synchronization to occur until after you've finished these steps.  
-   - Uncheck the **Upgrades** classification in the Software Update Point component properties on the top-level site. 
+1. Disable the **Upgrades** classification in both WSUS and Configuration Manager. You don't want a synchronization to occur until you're directed to by these instructions.  
+   - Uncheck the **Upgrades** classification in the software update point component properties on the top-level site.
      - For more information, see [Configure classifications and products](../get-started/configure-classifications-and-products.md).
-   - Uncheck the **Upgrades** classification from WSUS under **Products and Classifications** on the **Options** page, or use the PowerShell ISE running as administrator.
+   - Uncheck the **Upgrades** classification from WSUS under **Products and Classifications** on the [**Options** page](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/manage/setting-up-update-synchronizations), or use the PowerShell ISE running as administrator.
       ```PowerShell
       Get-WsusClassification | Where-Object -FilterScript {$_.Classification.Title -Eq “Upgrades”} | Set-WsusClassification -Disable
       ```  
      - If you share the WSUS database between multiple WSUS servers, you only need to uncheck **Upgrades** once for each database.  
-     - For more information, see [Setting up Update Synchronizations](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/manage/setting-up-update-synchronizations).
 1. On each WSUS server, from an elevated command prompt run: `"C:\Program Files\Update Services\Tools\wsusutil.exe" postinstall /servicing`. Then, restart the WSUS service on all of the WSUS servers.
    -  WSUS places the database into [single user mode](https://docs.microsoft.com/sql/relational-databases/databases/set-a-database-to-single-user-mode) before it checks to see if servicing is needed. The servicing either runs or doesn't run based on the results of the check. Then, the database is put back into multi-user mode. 
    - If you share the WSUS database between multiple WSUS servers, you only need to do this servicing once for each database.
@@ -159,7 +158,7 @@ Follow the steps below to resolve both the 0xc1800118 error and "Error: Invalid 
    delete from tbFile where FileDigest in (select FileDigest from @NotNeededFiles)
    ```
 1. Start the software updates synchronization on your top-level site in Configuration Manager and wait for it to complete. A full synchronization occurs because we made a change to the classifications Configuration Manager when we removed **Upgrades**. (For more information, see [Synchronize software updates](../get-started/synchronize-software-updates.md).
-1. Select the **Upgrades** classification in the Software Update Point component properties. Then, start another software updates synchronization to bring the **Upgrades** back into WSUS and Configuration Manager. You don't have to enable the **Upgrades** classification in WSUS since Configuration Manager will do it for you.
+1. Select the **Upgrades** classification in the software update point component properties. Then, start another software updates synchronization to bring the **Upgrades** back into WSUS and Configuration Manager. You don't have to enable the **Upgrades** classification in WSUS since Configuration Manager will do it for you.
 1. If your clients received the **0xC1800118** error code when downloading an upgrade, you'll need to delete the data store used by the Windows Update Agent. You may also have to delete the hidden ~BT folder on the device. The next time the client scans, it will be a full scan against the WSUS server rather than a delta. You can use a PowerShell script that's similar to the following sample script:  
    ```PowerShell
    stop-service wuauserv

@@ -31,11 +31,11 @@ ms.collection: M365-identity-device-management
 
 -   Windows 10 computers must use Configuration Manager software updates with  Windows Server Update Services (WSUS) for software update management. When computers use Windows Update for Business (or Windows Insiders) for software update management, the computer is not evaluated in Windows 10 servicing plans. For more information, see [Integration with Windows Update for Business in Windows 10](../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md).  
 
-One of the following WSUS versions: 
-- WSUS 10.0.14393 (role in Windows Server 2016)
-- WSUS 10.0.17763 (role in Windows Server 2019) (Requires Configuration Manager 1810 or later)
-- WSUS 6.2 and 6.3 (role in Windows Server 2012 and Windows Server 2012 R2)
-  - [KB 3095113 and KB 3159706 (or an equivalent update) must be installed](/sum/plan-design/prerequisites-for-software-updates#BKMK_wsus2012) on WSUS 6.2 and 6.3.
+- Use a supported WSUS version: 
+  - WSUS 10.0.14393 (role in Windows Server 2016)
+  - WSUS 10.0.17763 (role in Windows Server 2019) (Requires Configuration Manager 1810 or later)
+  - WSUS 6.2 and 6.3 (role in Windows Server 2012 and Windows Server 2012 R2)
+    - [KB 3095113 and KB 3159706 (or an equivalent update) must be installed](/sccm/sum/plan-design/prerequisites-for-software-updates#BKMK_wsus2012) on WSUS 6.2 and 6.3.
 
 -   Enable Heartbeat Discovery. The data displayed in the Windows 10 servicing dashboard is found by using discovery. For more information, see [Configure Heartbeat Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#BKMK_ConfigHBDisc).  
 
