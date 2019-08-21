@@ -89,6 +89,7 @@ Enables [peer cache](/sccm/core/plan-design/hierarchy/client-peer-cache) for Con
 Starting in version 1906, specify the minimum time for the Configuration Manager client to keep cached content. This client setting controls how long the client stores content in the cache before deleting it.
 
 By default this value is 1,440 minutes (24 hours).
+The maximum value for this setting is 10,080 minutes (1 week).
 
 This setting gives you greater control over the client cache on different types of devices. You might reduce the value on clients that have small hard drives and don't need to keep existing content before another deployment runs.
 
