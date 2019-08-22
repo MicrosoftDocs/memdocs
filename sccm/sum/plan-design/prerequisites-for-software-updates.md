@@ -76,7 +76,7 @@ Software updates are enabled for clients by default. There are other available s
 
 ## <a name="BKMK_wsus2012"></a> Which updates are required on WSUS 6.2 and 6.3?
 
-Two updates are required for syncing **Upgrades** classification in WSUS 6.2 and 6.3. Occasionally, you might see an error downloading or deploying upgrades if upgrades were synchronized in before installing the WSUS updates. Information about possible issues is in the next section.  
+Two updates are required for syncing **Upgrades** classification in WSUS 6.2 and 6.3. Occasionally, you might see an error downloading or deploying upgrades if they synchronized before KB3095113 and KB3159706 were installed. Information about possible issues is in the next section.  
 
 - You must install [KB 3095113](https://support.microsoft.com/kb/3095113), released in October 2015, on your software update points and site servers before you synchronize the **Upgrades** classification.
   - This update enables the **Upgrades** classification.
