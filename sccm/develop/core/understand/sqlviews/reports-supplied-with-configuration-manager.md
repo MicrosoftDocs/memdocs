@@ -423,16 +423,6 @@ The following reports are listed under the **Operating System** category.
 |**Services - Services information for a specific computer**|Displays summary information about the services on a specified computer.|
 |**Windows Server computers**|Displays a list of computers that run Windows Server operating systems.|
 
-## Out of Band Management
-
-The following reports are listed under the **Out of Band Management** category.
-
-|Report name|Description|
-|--- |--- |
-|**Computers with out of band management controllers**|Displays a list of computers that have out of band management controllers.|
-|**Out of band management console activity**|Displays a list of status messages identifying out of band management console activity.|
-|**Status of client out of band management provisioning**|Displays a list of computers that have been provisioned for out of band management.|
-
 ## Power Management
 
 The following reports are listed under the **Power Management** category.

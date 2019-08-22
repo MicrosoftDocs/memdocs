@@ -43,7 +43,6 @@ Class SMS_FullCollectionMembership : SMS_BaseClass
       UInt32 ResourceType;   
       String SiteCode;   
       String SMSID;  
-      Boolean SuppressAutoProvision;  
 };  
 ```  
 
@@ -291,15 +290,6 @@ Class SMS_FullCollectionMembership : SMS_BaseClass
   Qualifiers: None  
 
   Configuration Manager unique ID.  
-
-  `SuppressAutoProvision`  
-  Data type: `Boolean`  
-
-  Access type: Read Only  
-
-  Qualifiers: None  
-
-  When set to `true` and when this resource belongs to a collection configured for automatic provisioning, prevents the resource from being automatically provisioned by an Out of Band service point.  
 
 ## Remarks  
  Class qualifiers for this class include:  
