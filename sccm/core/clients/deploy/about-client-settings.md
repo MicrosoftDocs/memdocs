@@ -320,8 +320,8 @@ The following settings must be shorter in duration than the shortest maintenance
 
 For more information about maintenance windows, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows).
 
-- **Specify the snooze duration for computer restart countdown notifications (hours)** (Starting in version 1906)<!--3976435-->
-  - The default value is 4 hours.
+- **Specify the snooze duration for computer restart countdown notifications (minutes)** (Starting in version 1906)<!--3976435-->
+  - The default value is 240 minutes.
   - Your snooze duration value should be less than the temporary notification value minus the value for the notification the user cant dismiss.
   - For more information, see [Device restart notifications](/sccm/core/clients/deploy/device-restart-notifications).
 
