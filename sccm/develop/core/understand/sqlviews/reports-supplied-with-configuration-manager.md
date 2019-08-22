@@ -387,26 +387,6 @@ The following reports are listed under the **Network** category.
 |**IP – Information for a specific IP address**|Displays summary information about a specified IP address.|
 |**MAC – Computers for a specific MAC address**|Displays the computer name and IP address of computers that have the specified MAC address.|
 
-## Network Access Protection
-
-The following reports are listed under the **Network Access Protection** category.
-
-|Report name|Description|
-|--- |--- |
-|**Comparison of software updates installed by software update deployments and NAP remediation.**|Displays a comparison summary of software updates installed by software update deployments and NAP remediation.|
-|**Frequency a computer has been in remediation within a specified period**|This report displays how often a computer has been remediated within a specified period.|
-|**List of computers that installed a specific software update through remediation during a specified period**|Displays the computers that installed a specified software update through remediation during a specified time period (days).|
-|**List of computers that would be non-compliant based on selected software updates**|Displays each computer that would be non-compliant based on the selected software updates.|
-|**List of computers where NAP service could not be detected**|Displays a list of computers where NAP service could not be detected.|
-|**List of NAP-eligible computers**|Displays a list of computers where the NAP service is not running or its state is unknown.|
-|**List of Network Access Protection policies**|Displays Network Access Protection policies with their effective dates.|
-|**List of non-compliant computers in remediation from last polling interval**|Displays the list of non-compliant computers in remediation with their last known evaluation times.|
-|**List of non-compliant computers in remediation within a specified period**|Displays the list of non-compliant computers in remediation within a specified time period.|
-|**List of remediation failures for specified time period**|Displays a list of remediation failures for a specified number of days.|
-|**List of software updates installed through remediation**|Displays the software updates installed through remediation for a specified period.|
-|**Summary of non-compliant computers in remediation from last polling interval**|Displays a summary of non-compliant computers in remediation from last polling interval.|
-|**Summary of non-compliant computers in remediation within a specified period**|Displays a summary of noncompliant computers in remediation within a specified time period.|
-
 ## Operating System
 
 The following reports are listed under the **Operating System** category.
