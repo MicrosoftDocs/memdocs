@@ -1,10 +1,10 @@
 - name: Docs
-  tochref: /
-  topichref: /
+  tochref: ''
+  topichref: ''
   items:
     - name: Enterprise Mobility + Security
       tocref: /azure/
-      topichref: /enterprise-mobility-security
+      topichref: ''
       items:
         - name: Configuration Manager
           tocHref: /azure/azure-monitor/
