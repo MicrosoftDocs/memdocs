@@ -198,10 +198,6 @@ State system policy bulk send low
 
 {00000000-0000-0000-0000-000000000116}
 
-AMT Status Check Policy
-
-{00000000-0000-0000-0000-000000000120}
-
 Application manager policy action
 
 {00000000-0000-0000-0000-000000000121}

@@ -19,8 +19,6 @@ The `SMS_FullCollectionMembership` Windows Management Instrumentation (WMI) clas
 ```  
 Class SMS_FullCollectionMembership : SMS_BaseClass   
 {   
-      String AMTFullVersion;  
-      UInt32 AMTStatus;  
       UInt32 ClientCertType;  
       UInt32 ClientType;   
       String ClientVersion;   
@@ -53,24 +51,6 @@ Class SMS_FullCollectionMembership : SMS_BaseClass
  The `SMS_FullCollectionMembership` class does not define any methods.  
 
 ## Properties  
- `AMTFullVersion`  
- Data type: `String`  
-
- Access type: Read Only  
-
- Qualifiers: None  
-
- Starting with Configuration Manager version 1606, this property is no longer used.  
-
- `AMTStatus`  
- Data type: `UInt32`  
-
- Access type: Read Only  
-
- Qualifiers: None  
-
- Starting with Configuration Manager version 1606, this property is no longer used.  
-
  `ClientCertType`  
  Data type: `UInt32`  
 
