@@ -2,7 +2,7 @@
 title: FAQ for Desktop Analytics
 titleSuffix: Configuration Manager
 description: Frequently asked questions for Desktop Analytics.
-ms.date: 07/22/2019
+ms.date: 08/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -83,7 +83,7 @@ No, Desktop Analytics is focused on Windows. Microsoft developed Desktop Analyti
 
 ### How can I provide feedback about Desktop Analytics?
 
-To share your thoughts or feedback about Desktop Analytics, click the Send a Smile icon at the top of the portal and follow the prompts. We encourage you to include a screenshot with your submission. You can also submit product suggestions and upvote others' ideas on [UserVoice](https://configurationmanager.uservoice.com/forums/300492-ideas?category_id=366805).
+To share your feedback about Desktop Analytics, select the **Send a Smile** icon at the top of the portal. Include a screenshot with your submission to help Microsoft better understand your feedback. You can also submit product suggestions and upvote other ideas on [UserVoice](https://configurationmanager.uservoice.com/forums/300492-ideas?category_id=366805).
 
 > [!Note]
-> Never share private information (such as your Tenant Id or Commercial Id) via Send a Smile or UserVoice. Unfortunately, we cannot provide support via the Send a Smile or UserVoice channels. To receive assistance with your Desktop Analytics workspace, click on the "Help and Support" link in the navigation menu and follow the prompts to open a ticket.
+> Never share private information via Send a Smile or UserVoice. Such private information includes your Tenant Id or Commercial Id. Microsoft doesn't provide support via the Send a Smile or UserVoice channels. To get help with your Desktop Analytics workspace, select the **Help and Support** link in the navigation menu to open a support ticket.
