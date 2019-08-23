@@ -172,7 +172,7 @@ Add steps in this group to set Windows default apps and file associations.
     `dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`  
 1. Add the XML file to a package.
 1. Add a [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step in this group. Specify the package that contains the XML file, and then specify the following command line:  
-    `dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`  
+    `dism /online /Import-DefaultAppAssociations:DefaultAppAssociations.xml`  
 
 For more information, see [Export or import default application associations](/windows-hardware/manufacture/desktop/export-or-import-default-application-associations).
 
