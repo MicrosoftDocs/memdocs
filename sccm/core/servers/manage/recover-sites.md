@@ -29,6 +29,68 @@ The sections in this article can help you recover a Configuration Manager site. 
 > - [Upgrade on-premises infrastructure](/sccm/core/servers/manage/upgrade-on-premises-infrastructure)
 > - [Modify your infrastructure](/sccm/core/servers/manage/modify-your-infrastructure)
 
+### Prepare the server hardware
+
+<!-- 2841893 -->
+
+Make sure existing configurations aren't present on the site server. Any previous configurations can cause conflicts during the site recovery process. Use one of the following options for the server hardware:
+
+- Use a new server, that meets the general and recovery requirements.
+
+- Format the disks, and reinstall the OS on the existing server. Make sure it meets the general and recovery requirements.
+
+- Reuse an existing server that you've cleaned
+
+Use one of the following procedures to clean an existing server:
+
+#### Clean an existing server for site server recovery only
+
+1. Delete SMS registry keys: `HKLM\Software\Microsoft\SMS`
+2. Delete any registry entries starting with `SMS` from `HKLM\System\CurrentControlSet\Services`. For example:
+    - SMS_DISCOVERY_DATA_MANAGER
+    - SMS_EXECUTIVE
+    - SMS_INBOX_MONITOR
+    - SMS_INVENTORY_DATA_LOADER
+    - SMS_LAN_SENDER
+    - SMS_MP_FILE_DISPATCH_MANAGER
+    - SMS_SCHEDULER
+    - SMS_SITE_BACKUP
+    - SMS_SITE_COMPONENT_MANAGER
+    - SMS_SITE_SQL_BACKUP
+    - SMS_SITE_VSS_WRITER
+    - SMS_SOFTWARE_METERING_PROCESSOR
+    - SMS_STATE_SYSTEM
+    - SMS_STATUS_MANAGER
+    - SMS_WSUS_SYNC_MANAGER
+    - SMSvcHost 3.0.0.0
+    - SMSvcHost 4.0.0.0
+3. Uninstall the Configuration Manager console
+4. Restart the server
+5. Confirm that all of the above registry keys are deleted.
+
+The server is now ready for the Configuration Manager restore procedure.
+
+#### Clean an existing server for site database recovery only
+
+1. Back up the site database. Also back up any other supporting databases, like WSUS.
+2. Make sure to note the SQL server name and instance name
+3. Manually delete the site database from the SQL Server
+4. Restart the SQL Server
+
+The server is now ready for the Configuration Manager restore procedure.
+
+#### Clean an existing server for full recovery
+
+1. Back up the site database. Also back up any other supporting databases, like WSUS.
+2. Make a copy of the content library
+3. Manually delete the site database from the SQL Server
+4. Uninstall the Configuration Manager site
+5. Manually delete the Configuration Manager installation folder, and any other Configuration Manager folders
+6. Restart the server
+7. Restore the content library and other databases like WSUS
+
+The server is now ready for the Configuration Manager restore procedure.
+
 ### Use a supported version and same edition of SQL Server
 
 <!-- SCCMDocs#751 -->
