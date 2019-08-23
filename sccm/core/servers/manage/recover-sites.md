@@ -286,6 +286,16 @@ For example, before the site failure the **Total activations** count shows as **
 
 If you recover a Configuration Manager site server after the site server is reimaged, the Microsoft Intune subscription isn't restored. Reconnect your subscription after you recover the site. Don't create a new APN request. Instead upload the current valid PEM file. Use the same file that you uploaded the last time you configured or renewed iOS management. For more information, see [Configuring the Microsoft Intune subscription](/sccm/mdm/deploy-use/configure-intune-subscription).
 
+### Recreate Azure services
+
+<!-- SCCMDocs#1022 -->
+
+In Configuration Manager version 1806, after site recovery you'll see the following error in the cloudmgr.log:
+
+`Index (zero-based) must be greater than or equal to zero`
+
+To resolve this, [Renew the secret key](/sccm/core/servers/deploy/configure/azure-services-wizard#bkmk_renew) for each Azure tenant connection.
+
 ### Configure SSL for site system roles that use IIS
 
 When you recover site systems that run IIS and you configured for HTTPS, reconfigure IIS to use the web server certificate.
