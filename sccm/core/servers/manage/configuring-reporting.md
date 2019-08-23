@@ -284,6 +284,8 @@ You can select the default reporting services point that you use to manage repor
 
 If it doesn't show any servers, verify that you installed and configured a reporting services point in the site. For more information, see [Verify installation](#BKMK_VerifyReportingServicesPointInstallation).
 
+Make sure your computer runs a version of SQL Server Report Builder that matches the version of SQL Server that you use for your report server. Otherwise you'll see an error, the default report server won't save, and you can't create or edit reports.<!-- SCCMDocs#791 -->
+
 ## Next steps
 
 [Operations and maintenance for reporting](/sccm/core/servers/manage/operations-and-maintenance-for-reporting)
