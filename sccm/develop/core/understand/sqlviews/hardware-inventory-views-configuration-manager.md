@@ -531,7 +531,7 @@ Lists summary information about the computer boot times. This includes Latest, M
 
 The view can be joined with other views by using the **ResourceID** column.
 
-#### Sampple Query
+#### Sample Query
 Select 
     RV.Netbios_Name0 as 'Computer',
     SBS.LatestBiosDuration0 as 'Latest BIOS Duration',
