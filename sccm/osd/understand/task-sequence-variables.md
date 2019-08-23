@@ -1577,6 +1577,9 @@ Set the SMSTSWaitForSecondReboot value in seconds to specify how long the task s
 
 For example, if you set SMSTSWaitForSecondReboot to `600`, the task sequence pauses for 10 minutes after a restart before additional steps run. This variable is useful when a single Install Software Updates task sequence step installs hundreds of software updates.
 
+> [!Note]
+> This variable only applies to a task sequence that deploys an OS. It doesn't work in a custom task sequence. <!-- 2839998 -->
+
 ### <a name="TSDebugMode"></a> TSDebugMode
 
 <!--3612274-->
