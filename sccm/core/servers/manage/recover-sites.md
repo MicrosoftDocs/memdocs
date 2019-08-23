@@ -29,9 +29,15 @@ The sections in this article can help you recover a Configuration Manager site. 
 > - [Upgrade on-premises infrastructure](/sccm/core/servers/manage/upgrade-on-premises-infrastructure)
 > - [Modify your infrastructure](/sccm/core/servers/manage/modify-your-infrastructure)
 
-### Use the same version and edition of SQL Server
+### Use a supported version and same edition of SQL Server
 
-For example, restoring a database from SQL Server 2014 to SQL Server 2016 isn't supported. Similarly, restoring a SQL Server 2016 site database from Standard edition to Enterprise edition isn't supported.
+<!-- SCCMDocs#751 -->
+
+If possible, use the same version of SQL Server. However, it's supported to restore a database to a newer version.
+
+Don't change the SQL Server edition. Restoring a site database from Standard edition to Enterprise edition isn't supported.
+
+Additional SQL Server configuration requirements:
 
 - SQL Server can't be set to **single-user mode**.
 - Make sure the MDF and LDF files are valid. When you recover a site, there's no check for the state of the files.  
