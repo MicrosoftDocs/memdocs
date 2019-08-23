@@ -2,7 +2,7 @@
 title: Task sequence variable reference
 titleSuffix: Configuration Manager
 description: Learn about the variables to control and customize a Configuration Manager task sequence.
-ms.date: 08/16/2019
+ms.date: 08/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -1519,7 +1519,10 @@ Specifies the message to display in the restart notification dialog. If this var
 
 ### <a name="SMSTSRebootRequested"></a> SMSTSRebootRequested
 
-Indicates that a restart is requested after the current task sequence step is completed. If a restart is required, set this variable to `true`, and the task sequence manager restarts the computer after this task sequence step. If the task sequence step requires a restart to complete the action, set this variable. After the computer restarts, the task sequence continues to run from the next task sequence step.
+Indicates that a restart is requested after the current task sequence step is completed. If the task sequence step requires a restart to complete the action, set this variable. After the computer restarts, the task sequence continues to run from the next task sequence step.
+
+- `HD`: Restart to the installed OS
+- `WinPE`: Restart to the associated boot image
 
 ### <a name="SMSTSRetryRequested"></a> SMSTSRetryRequested
 
@@ -1573,6 +1576,9 @@ This optional task sequence variable controls client behavior when a software up
 Set the SMSTSWaitForSecondReboot value in seconds to specify how long the task sequence pauses on this step while the computer restarts. Allow sufficient time in case there's a second restart.
 
 For example, if you set SMSTSWaitForSecondReboot to `600`, the task sequence pauses for 10 minutes after a restart before additional steps run. This variable is useful when a single Install Software Updates task sequence step installs hundreds of software updates.
+
+> [!Note]
+> This variable only applies to a task sequence that deploys an OS. It doesn't work in a custom task sequence. <!-- 2839998 -->
 
 ### <a name="TSDebugMode"></a> TSDebugMode
 
