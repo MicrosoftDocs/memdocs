@@ -140,7 +140,31 @@ After the wizard completes, Configuration Manager creates the report folders in 
 
 ### <a name="bkmk_languages" /> Languages for reports
 
-When report folders are created and reports are copied to the report server, Configuration Manager determines the appropriate language for the objects. If the associated language pack is installed on the site, Configuration Manager creates the objects in the same language as the operating system running on the report server on the site. If the language isn't available, the reports are created and displayed in English. When you install a reporting services point on a site without language packs, the reports are installed in English. If you install a language pack after you install the reporting services point, you must uninstall and reinstall the reporting services point for the reports to be available in the appropriate language pack language. For more information, see [Language packs](/sccm/core/servers/deploy/install/language-packs).  
+<!-- SCCMDocs#1067 -->
+
+When Configuration Manager creates report folders and copies reports to the report server, it determines the appropriate language for the objects.
+
+- Create report folders, copy reports
+
+  - Create objects using locale of the site server OS
+
+  - If the specific language pack isn't available, default to English (ENU)
+
+- View reports in a web browser
+
+  - Folder and report names: the same locale as the site server
+  
+  - Report contents: dynamic based on the browser locale
+
+- View reports in the Configuration Manager console
+
+  - Folder and report names: dynamic based on the locale of the console
+  
+  - Report contents: dynamic based on the locale of the console
+
+When you install a reporting services point on a site without language packs, the reports are installed in English. If you install a language pack after you install the reporting services point, you must uninstall and reinstall the reporting services point for the reports to be available in the appropriate language pack language.  
+
+For more information, see [Language packs](/sccm/core/servers/deploy/install/language-packs).
 
 ### <a name="BKMK_FileInstallationAndSecurity"></a> File installation and report folder security rights
 
