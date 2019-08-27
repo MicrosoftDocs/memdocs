@@ -1,8 +1,8 @@
 ---
-title: "Exclude client upgrades for Windows"
-titleSuffix: "Configuration Manager"
-description: "Learn how to exclude Windows clients from getting upgraded in System Center Configuration Manager."
-ms.date: 04/23/2017
+title: Exclude client upgrades for Windows
+titleSuffix: Configuration Manager
+description: Learn how to exclude Windows clients from getting upgraded in Configuration Manager.
+ms.date: 08/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -12,38 +12,56 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# How to exclude upgrading clients for Windows computers in System Center Configuration Manager
+
+# How to exclude clients from upgrade in Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-You can exclude a collection of clients from automatically installing updated client versions. This applies to automatic upgrade as well as other methods such as software update-based upgrade, logon scripts, and group policy. You can use this for a collection of computers that need greater care when upgrading the client. A client that is in an excluded collection ignores requests to install updated client software.
+You can exclude a collection of clients from automatically installing updated client versions. Use this exclusion for a collection of computers that need greater care when upgrading the client. A client that's in an excluded collection ignores requests to install updated client software.
 
->[!NOTE]
->Excluded clients still download and run CCMSETUP, but won't upgrade.
+This exclusion applies to the following methods:
 
+- Automatic upgrade
+- Software update-based upgrade
+- Logon scripts
+- Group policy
 
-## Configure exclusion for automatic upgrades
+> [!NOTE]
+> Although the user interface states that clients won't upgrade via any method, there are two methods you can use to override these settings. Use client push or manual client installation to override this configuration. For more information, see [How to upgrade an excluded client](#bkmk_override).
 
-1. In the Configuration Manager console, go to **Administration** > **Site Configuration** > **Sites**, and then click **Hierarchy Settings**.
+## <a name="bkmk_exclude"></a> Configure exclusion
 
-2. Click the **Client Upgrade** tab.
+1. In the Configuration Manager console, go to the **Administration** workspace. Expand **Site Configuration**, select the **Sites** node, and then select **Hierarchy Settings** in the ribbon.
 
-3. Click the checkbox for **Exclude specified clients from upgrade**, and then for Exclusion collection, select the collection you want to exclude. You can only select a single collection for exclusion.
+2. Switch to the **Client Upgrade** tab.
 
-4.  Click **OK** to close and save the configuration. Then, after clients update policy, clients in the excluded collection will no longer automatically install updates to the client software. For more information, see [How to upgrade clients for Windows computers](upgrade-clients-for-windows-computers.md).
+3. Select the option to **Exclude specified clients from upgrade**. Then select the **Exclusion collection** you want to exclude. You can only select a single collection for exclusion.
+
+4. Select **OK** to close and save the configuration.
 
 ![Settings for automatic upgrade exclusion](media/automatic_upgrade_exclusion.png)
 
->[!NOTE]
->Although the user interface states that clients will not be upgraded via any method, there are two methods you can use to override these settings. Client push installation and a manual client installation can be used to override this configuration. For more details, see the following section.
+After clients in the excluded collection update policy, they don't automatically install client updates. For more information, see [How to upgrade clients for Windows computers](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers).
 
-## How to upgrade a client that is in an excluded collection
+> [!NOTE]
+> Excluded clients still download and run Ccmsetup, but don't upgrade.
 
-So long as a collection is configured to be excluded, members of that collection can only have their client software upgraded by one of two methods, which override the exclusion:
-- **Client Push Installation** – You can use client push installation to upgrade a client that is in an excluded collection. This is allowed as it is considered to be the intent of the administrator and enables you to upgrade clients without removing the entire collection from exclusion.       
+When you remove a client from the exclude collection, it doesn't automatically upgrade until the next auto-upgrade cycle.
 
-- **Manual client installation** – You can manually upgrade clients that are in an excluded collection when you use the following command line switch with ccmsetup:  ***/ignoreskipupgrade***
+## <a name="bkmk_override"></a> How to upgrade an excluded client
 
-  If you attempt to manually upgrade a client that is a member of the excluded collection and do not use this switch, the client will not install the new client software. For more information see [How to install Configuration Manager Clients Manually](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual).
+If a device is a member of a collection that you excluded from upgrade, you can still upgrade the client using one of the following methods:
 
-For more information on client installation methods, see [How to deploy clients to Windows computers in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).
+- **Client push installation**: Ccmsetup allows client push installation because it's your direct intent. This method lets you upgrade a client without removing it from the collection, or removing the entire collection from exclusion.
+
+- **Manual client installation**: Manually upgrade an excluded client by using the following Ccmsetup command-line parameter: **/IgnoreSkipUpgrade**
+
+    If you attempt to manually upgrade a client that's a member of the excluded collection, and don't use this parameter, the client doesn't upgrade. For more information, see [How to install Configuration Manager clients manually](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual).
+
+## See also
+
+- [Upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients)
+
+- [How to deploy clients to Windows computers](/sccm/core/clients/deploy/deploy-clients-to-windows-computers)
+
+- [Extended interoperability client](/sccm/core/understand/interoperability-client)
