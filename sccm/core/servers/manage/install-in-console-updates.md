@@ -2,7 +2,7 @@
 title: In-console updates
 titleSuffix: Configuration Manager
 description: Install updates to Configuration Manager from the Microsoft cloud
-ms.date: 07/26/2019
+ms.date: 08/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -175,7 +175,7 @@ As part of the update installation, Configuration Manager does the following act
 
 - Reinstalls any affected components, like site system roles or the Configuration Manager console.  
 
-- Manages updates to clients based on the selections that you made for client piloting, and for [automatic client upgrades](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#use-automatic-client-upgrade).  
+- Manages updates to clients based on the selections that you made for client piloting, and for [automatic client upgrades](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#bkmk_autoupdate).  
 
 - Site system servers generally don't need to restart as part of the update. If a role uses .NET, and the package updates that prerequisite component, then the site system may restart.  
 
@@ -275,6 +275,9 @@ The post installation tasks include:
     - Critical site component that runs on the site server.
     - Responsible for reinstalling roles on site system servers. Status for individual site system role reinstallation doesn't display.
     - Reinstallation of this service should complete quickly.
+
+    > [!Note]
+    > Some Configuration Manager site roles share the client framework. For example, the management point and pull distribution point. When these roles update, the client version on these servers updates at the same time. For more information, see [How to upgrade clients]/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers).
 
 - **Installing SMS_REPLICATION_CONFIGURATION_MONITOR component**
 
