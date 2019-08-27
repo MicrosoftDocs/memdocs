@@ -512,7 +512,7 @@ The render operator already exists in CMPivot. Support for multiple series and t
 
 - Show graph of boot times for a device:
 
-   ``
+   ```
    SystemBootData
    | where Device == 'MyDevice'
    | project SystemStartTime, BootDuration, OSStart=EventLogStart, GPDuration, UpdateDuration
