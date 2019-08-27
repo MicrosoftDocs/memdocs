@@ -277,7 +277,7 @@ The post installation tasks include:
     - Reinstallation of this service should complete quickly.
 
     > [!Note]
-    > Some Configuration Manager site roles share the client framework. For example, the management point and pull distribution point. When these roles update, the client version on these servers updates at the same time. For more information, see [How to upgrade clients]/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers).
+    > Some Configuration Manager site roles share the client framework. For example, the management point and pull distribution point. When these roles update, the client version on these servers updates at the same time. For more information, see [How to upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers).
 
 - **Installing SMS_REPLICATION_CONFIGURATION_MONITOR component**
 
