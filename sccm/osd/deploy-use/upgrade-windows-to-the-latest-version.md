@@ -31,11 +31,9 @@ This article provides the steps in Configuration Manager to upgrade the OS on a 
 > The Windows 10 in-place upgrade task sequence supports deployment to internet-based clients managed through the [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the intranet. For more information, see [Deploy Windows 10 in-place upgrade via CMG](/sccm/osd/deploy-use/deploy-a-task-sequence#deploy-windows-10-in-place-upgrade-via-cmg). <!-- 1357149 -->
 
 
-## <a name="BKMK_Plan"></a> Plan  
+## Supported versions
 
-### Supported OS versions
-
-#### Upgrade version
+### Upgrade version
 
 Only create OS upgrade packages to upgrade to the following OS versions:
 
@@ -43,11 +41,11 @@ Only create OS upgrade packages to upgrade to the following OS versions:
 - Windows Server 2016
 - Windows Server 2019
 
-#### Original version
+### Original version
 
 Devices must run one of the following OS versions to target an OS upgrade task sequence:
 
-##### Windows client
+#### Windows client
 
 - Windows 7
 - Windows 8.1
@@ -55,13 +53,16 @@ Devices must run one of the following OS versions to target an OS upgrade task s
 
 For more information, see [Windows 10 upgrade paths](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-upgrade-paths).
 
-##### Windows Server
+#### Windows Server
 
 - Windows Server 2012
 - An earlier version of Windows Server 2016
 - An earlier version of Windows Server 2019
 
 For more information about Windows Server supported upgrade paths, see [Windows Server 2016 supported upgrade paths](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016) and [Windows Server Upgrade Center](http://aka.ms/upgradecenter).
+
+
+## <a name="BKMK_Plan"></a> Plan  
 
 ### Task sequence requirements and limitations
 
