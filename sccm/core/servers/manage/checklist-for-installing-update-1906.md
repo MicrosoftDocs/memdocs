@@ -2,7 +2,7 @@
 title: Checklist for 1906
 titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 1906.
-ms.date: 08/17/2019
+ms.date: 08/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -196,6 +196,12 @@ Before you update a site, stop antivirus software on the Configuration Manager s
 Before you update a site, back up the site database at the CAS and primary sites. This backup makes sure you have a successful backup to use for disaster recovery.
 
 For more information, see [Backup and recovery](/sccm/protect/understand/backup-and-recovery).
+
+### Back up customized files
+
+If you or a third-party product customizes any Configuration Manager configuration files, save a copy of your customizations.
+
+For example, you add custom entries to the **osdinjection.xml** file in the `bin\X64` folder of your Configuration Manager installation directory. After you update Configuration Manager, these customizations don't persist. You need to reapply your customizations.
 
 ### Plan for client piloting
 
