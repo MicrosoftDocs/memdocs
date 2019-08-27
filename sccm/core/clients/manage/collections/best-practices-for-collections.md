@@ -30,4 +30,11 @@ Use the following best practices for collections in System Center Configuration 
 -   The complexity of collection membership rules in your hierarchy  
 
 ## Make sure that maintenance windows are large enough to deploy critical software updates  
- You can configure maintenance windows for device collections to restrict the times that Configuration Manager can install software on these devices. If you configure the maintenance window to be too small, the client might not be able to install critical software updates, which leaves the client vulnerable to the attack that is mitigated by the software update. As the default maximum run time is at least sixty minutes, maintenance windows must be at an absolute minimum sixty-five minutes long. However, to accomodate for multiple patches and the time involved to install patches a four hour - or 240 minute maintenance window is reccommended.   
+ You can configure maintenance windows for device collections to restrict the times that Configuration Manager can install software on these devices. If you configure the maintenance window to be too small, the client might not be able to install critical software updates, which leaves the client vulnerable to the attack mitigated by the software update. 
+ 
+ > [!Tip] 
+ > Important considerations to keep in mind when planning your maintenance windows
+ > - The default update maximum run time is 60 minutes
+ > - When calculating if a patch may install configuration manager adds five minutes to maximum run time to account for a reboot
+ > - The remaining duration of a maintenance window MUST be longer than the maximum run time of the executing update plus five minutes
+ 
