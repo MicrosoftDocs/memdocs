@@ -2,7 +2,7 @@
 title: CMPivot for real-time data
 titleSuffix: Configuration Manager
 description: Learn how to use CMPivot in Configuration Manager to query clients in real time.
-ms.date: 07/30/2019
+ms.date: 08/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -504,7 +504,7 @@ The render operator already exists in CMPivot. Support for multiple series and t
 
 - Show device, manufacturer, model, and OSVersion:
 
-   ```Kusto
+   ```
    ComputerSystem
    | project Device, Manufacturer, Model
    | join (OperatingSystem | project Device, OSVersion=Caption)
@@ -512,7 +512,7 @@ The render operator already exists in CMPivot. Support for multiple series and t
 
 - Show graph of boot times for a device:
 
-   ```Kusto
+   ```
    SystemBootData
    | where Device == 'MyDevice'
    | project SystemStartTime, BootDuration, OSStart=EventLogStart, GPDuration, UpdateDuration
