@@ -54,7 +54,7 @@ If you don't update these OS versions, you can't install the Configuration Manag
 If you need to manage a client on a version of Windows that's not updated, or older than the versions listed above, use the Configuration Manager extended interoperability client (EIC) version 1902. For more information, see [Extended interoperability client](/sccm/core/understand/interoperability-client).
 
 > [!Tip]  
-> If you don't use [automatic client update](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#use-automatic-client-upgrade), and update clients with another mechanism, make sure to update the version of ccmsetup. An older version of ccmsetup may not properly validate the new SHA-2 code signing certificate on the version 1906 client binaries. For example, if you copy ccmsetup.exe to a file share, or use ccmsetup.msi with group policy.<!-- 4963362 -->
+> If you don't use [automatic client update](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#bkmk_autoupdate), and update clients with another mechanism, make sure to update the version of ccmsetup. An older version of ccmsetup may not properly validate the new SHA-2 code signing certificate on the version 1906 client binaries. For example, if you copy ccmsetup.exe to a file share, or use ccmsetup.msi with group policy.<!-- 4963362 -->
 >
 > The following client update mechanisms shouldn't be affected:
 >
