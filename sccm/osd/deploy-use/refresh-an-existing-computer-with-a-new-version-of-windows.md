@@ -1,8 +1,8 @@
 ---
-title: Refresh an existing computer with a new version of Windows
+title: Refresh an existing computer's OS
 titleSuffix: Configuration Manager
-description: You can use several methods in Configuration Manager to partition and format (wipe) an existing computer and install a new operating system on the computer.
-ms.date: 10/06/2016
+description: You can use several methods in Configuration Manager to partition and format an existing computer and install a new OS on the computer.
+ms.date: 08/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,72 +10,80 @@ ms.assetid: b189a346-8c0d-4870-a876-0719fbb0ab04
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
 ms.collection: M365-identity-device-management
 ---
-# Refresh an existing computer with a new version of Windows using System Center Configuration Manager
+
+# Refresh an existing computer with a new version of Windows
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-This topic provides the general steps in System Center Configuration Manager to partition and format (wipe) an existing computer and install a new operating system on the computer. For this scenario, you can choose from many different deployment methods, such as PXE, bootable media, or Software Center. You can also  choose to install a state migration point to store settings and then restore them to the new operating system after it is installed. If you are unsure that this is the right operating system deployment scenario for you, see [Scenarios to deploy enterprise operating systems](scenarios-to-deploy-enterprise-operating-systems.md).  
+Use Configuration Manager to partition and format an existing computer and then install a new OS. This process is sometimes called *reimaging* or *wipe and load*. For this scenario, choose from many different deployment methods, such as PXE, bootable media, or Software Center. You can also use a state migration point to store settings, and then restore them to the new OS.
 
- Use the following sections to refresh an existing computer with a new version of Windows.  
+To choose the right OS deployment scenario, see [Scenarios to deploy enterprise operating systems](/sccm/osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems).  
 
-##  <a name="BKMK_Plan"></a> Plan  
+## <a name="BKMK_Plan"></a> Plan  
 
--   **Plan for and implement  infrastructure requirements**  
+### Plan for and implement infrastructure requirements
 
-     There are several infrastructure requirements that must be in place before you can deploy operating systems, such as Windows ADK, User State Migration Tool (USMT), Windows Deployment Services (WDS), supported hard disk configurations, etc. For more information, see [Infrastructure requirements for operating system deployment](../plan-design/infrastructure-requirements-for-operating-system-deployment.md).  
+There are several infrastructure requirements that must be in place before you can deploy an OS. Some of these requirements include the Windows ADK, the User State Migration Tool (USMT), and Windows Deployment Services (WDS). For more information, see [Infrastructure requirements for OS deployment](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
 
--   **Install a state migration point (required only if you transfer settings)**  
+### Install a state migration point
 
-     When you are going to capture settings from the existing computer, and then restore the settings to the new operating system, you must install a state migration point. For more information, see [State migration point](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints).  
+If you want to capture settings from an existing computer, and then restore the settings to the new OS, consider using a state migration point. For more information, see [State migration point](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_StateMigrationPoints).  
 
-##  <a name="BKMK_Configure"></a> Configure  
+## <a name="BKMK_Configure"></a> Configure  
 
-1.  **Prepare a boot image**  
+### Prepare a boot image
 
-     Boot images start a computer in a Windows PE environment (a minimal operating system with limited components and services) that can then install a full Windows operating system on the computer.   When you deploy operating systems, you must select a boot image to use and distribute the image to a distribution point. Use the following to prepare the boot image:  
+Boot images start a computer in a Windows PE environment. Windows PE is a minimal OS with limited components and services. From Windows PE, Configuration Manager can then install a full Windows OS on the computer.
 
-    -   To learn more about boot images, see [Manage boot images](../get-started/manage-boot-images.md).  
+For more information, see the following articles:
 
-    -   For more information about how  to customize a boot image, see [Customize boot images](../get-started/customize-boot-images.md).  
+- [Manage boot images](/sccm/osd/get-started/manage-boot-images)
 
-    -   Distribute the boot image to distribution points. For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).  
+- [Customize boot images](/sccm/osd/get-started/customize-boot-images)
 
-2.  **Prepare an operating system image**  
+- [Distribute content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute)
 
-     The operating system image contains the files necessary to install the operating system on the destination computer. Use the following to prepare the operating system image:  
+### Prepare an OS image
 
-    -   To learn more about how to create an operating system image, see  [Manage operating system images](../get-started/manage-operating-system-images.md).  
+The OS image contains the files necessary to install the OS on the destination computer.
 
-    -   Distribute the operating system image to distribution points. For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).  
+For more information, see the following articles:
 
-3.  **Create a task sequence to deploy operating systems over the network**  
+- [Manage OS images](/sccm/osd/get-started/manage-operating-system-images)
 
-     Use a task sequence to automate the installation of the operating system over the network. Use the steps in [Create a task sequence to install an operating system](create-a-task-sequence-to-install-an-operating-system.md) to create the task sequence to deploy the operating system. Depending on the deployment method that you choose, there might be additional considerations for the task sequence.  
+- [Distribute content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute)
 
-    > [!NOTE]  
-    >  In this scenario, the task sequence formats and partitions the hard disks on the computer. To capture user settings, you must use the state migration point, and select **Save user settings and files on a State Migration Point** on the **State Migration** page of the Create Task Sequence wizard. If you save the user settings and files locally, they will be lost when the hard disk is formatted and Configuration Manager will be unable to restore the settings. For more information, see [Manage user state](../get-started/manage-user-state.md).  
+### Create a task sequence to deploy an OS
 
-##  <a name="BKMK_Deploy"></a> Deploy  
+Use a task sequence to automate the installation of the OS. Depending on the deployment method that you choose, there might be additional considerations for the task sequence.
 
--   Use one of the following deployment methods to deploy the operating system:  
+For more information, see the following articles:
 
-    -   [Use PXE to deploy Windows over the network](use-pxe-to-deploy-windows-over-the-network.md)  
+- [Create a task sequence to install an OS](/sccm/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system)
 
-    -   [Use multicast to deploy Windows over the network](use-multicast-to-deploy-windows-over-the-network.md)  
+- [Manage user state](/sccm/osd/get-started/manage-user-state)
 
-    -   [Create an image for an OEM in factory or a local depot](create-an-image-for-an-oem-in-factory-or-a-local-depot.md)  
+## <a name="BKMK_Deploy"></a> Deploy
 
-    -   [Use stand-alone media to deploy Windows without using the network](use-stand-alone-media-to-deploy-windows-without-using-the-network.md)  
+- Use one of the following deployment methods to deploy the OS:  
 
-    -   [Use bootable media to deploy Windows over the network](use-bootable-media-to-deploy-windows-over-the-network.md)  
+  - [Use PXE to deploy Windows over the network](/sccm/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network)  
 
-    -   [Use Software Center to deploy Windows over the network](use-software-center-to-deploy-windows-over-the-network.md)  
+  - [Use multicast to deploy Windows over the network](/sccm/osd/deploy-use/use-multicast-to-deploy-windows-over-the-network)  
+
+  - [Create an image for an OEM in factory or a local depot](/sccm/osd/deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot)  
+
+  - [Use stand-alone media to deploy Windows without using the network](/sccm/osd/deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network)  
+
+  - [Use bootable media to deploy Windows over the network](/sccm/osd/deploy-use/use-bootable-media-to-deploy-windows-over-the-network)  
+
+  - [Use Software Center to deploy Windows over the network](/sccm/osd/deploy-use/use-software-center-to-deploy-windows-over-the-network)  
 
 ## Monitor  
 
--   **Monitor the task sequence deployment**  
+For more information, see [Monitor OS deployments](/sccm/osd/deploy-use/monitor-operating-system-deployments).  
 
-     To monitor the task sequence deployment  to install the operating system, see [Monitor operating system deployments](monitor-operating-system-deployments.md).  
+> [!Note]
+> When you reimage a UEFI device, Windows Boot Manager creates a new entry in the boot loader. This behavior is most noticeable when you repeatedly reimage a device, such as in a test environment or a student lab. It generally doesn't impact the performance or usage of the device. If the list gets too large, some specific hardware devices may encounter functional issues. For example, not booting to an external USB drive, or not able to select the current boot entry from the list. Use the Windows **bcdedit** command to clear unused boot entries. For more information, see [BCDEdit /deletevalue](https://docs.microsoft.com/windows-hardware/drivers/devtest/bcdedit--deletevalue).<!-- 2841926 -->
