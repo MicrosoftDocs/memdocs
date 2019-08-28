@@ -183,10 +183,11 @@ Consider the following before you perform collection-level tasks. Once started, 
 
 
 ## Restart clients
-Beginning with version 1710, you can use the Configuration Manager console to identify clients that require a restart. Then use a client notification action to restart them.
+
+Use the Configuration Manager console to identify clients that require a restart. Then use a client notification action to restart them.
 
 > [!Tip]
-> You must also upgrade clients to version 1710 for this capability to function. We recommend that you enable automatic client upgrade to keep your clients up to date with minimal administrative overhead. For more information, see [Use automatic client upgrade](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#use-automatic-client-upgrade).
+> Enable automatic client upgrade to keep your clients up-to-date with less effort. For more information, see [About automatic client upgrade](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#bkmk_autoupdate).
 
 To identify devices that are pending a restart, go to the **Assets and Compliance** workspace in the Configuration Manager console and select the **Devices** node. Then view the status for each device in the details pane in a new column named **Pending Restart**. Each device has one or more of the following values: 
 - **No**: there is no pending restart
