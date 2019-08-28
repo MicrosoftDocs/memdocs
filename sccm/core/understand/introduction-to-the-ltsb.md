@@ -41,7 +41,7 @@ The current branch of Configuration Manager supports the following functionality
 
 Although support for these features isn't available with the LTSB, some features remain visible in the Configuration Manager console, but can't be selected or used.
 
-Any features included with Configuration Manager current branch version 1610 or later aren't available to the LTSB. These features include, but aren't limited to the following:<!--SCCMDocs#1823-->
+Cloud integrations, as well as any features included with Configuration Manager current branch version 1610 or later, aren't available to the LTSB. These features include, but aren't limited to the following:<!--SCCMDocs#1823-->
 
 - Co-management
 - Desktop Analytics
