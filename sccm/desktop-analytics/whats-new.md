@@ -2,7 +2,7 @@
 title: What's new in Desktop Analytics
 titleSuffix: Configuration Manager
 description: A summary of the new features in the latest monthly release of the Desktop Analytics cloud service.
-ms.date: 08/16/2019
+ms.date: 09/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -25,6 +25,21 @@ Learn what's new each month in Desktop Analytics.
 
 To get notified when this page is updated, copy and paste the following URL into your RSS feed reader: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## September 2019
+
+### Migrate inputs from Windows Analytics
+
+<!-- 4252663 -->
+
+During onboarding, you can now migrate inputs from an existing Windows Analytics workspace. For more information, see the FAQ for [Existing Windows Analytics customers](/sccm/desktop-analytics/faq#existing-windows-analytics-customers).
+
+### Offboard from Desktop Analytics
+
+<!-- 4972396 -->
+
+...
+
 
 ## August 2019
 
