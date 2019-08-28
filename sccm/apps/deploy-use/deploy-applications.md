@@ -255,6 +255,8 @@ Configure a deployment to check if certain executable files are running on the c
 
 5. When you deploy the application, select the option to **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box**. This option is on the **Deployment Settings** tab of the deployment properties.  
 
+> [!Note]
+> If you configure an application to check for running executable files, and include it in the [Install Application](/sccm/osd/understand/task-sequence-steps#BKMK_InstallApplication) task sequence step, the task sequence will fail to install it. If you don't configure this task sequence step to continue on error, then the entire task sequence fails.
 
 ### Client behaviors and user notifications
 
