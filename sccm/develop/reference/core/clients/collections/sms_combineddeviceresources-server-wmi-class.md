@@ -23,8 +23,6 @@ Class SMS_CombinedDeviceResources : SMS_CombinedResources
 {  
     DateTime ADLastLogonTime;  
     String ADSiteName;  
-    String AMTFullVersion;  
-    UInt32 AMTStatus;  
     SInt32 ClientActiveStatus;  
     UInt32 ClientCertType;  
     SInt32 ClientCheckPass;  
@@ -99,7 +97,6 @@ Class SMS_CombinedDeviceResources : SMS_CombinedResources
     String SiteCode;  
     String SMSID;  
     String Status;  
-    Boolean SuppressAutoProvision;  
     Boolean Unknown;  
     String UserDomainName;  
     String UserName;  
@@ -128,33 +125,6 @@ Class SMS_CombinedDeviceResources : SMS_CombinedResources
  Qualifiers: none  
 
  Active Directory site to which the resource belongs.  
-
- `AMTFullVersion`  
- Data type: `String`  
-
- Access type: Read/Write  
-
- Qualifiers: none  
-
- The version number for Active Management Technology.  
-
- `AMTStatus`  
- Data type: `UInt32`  
-
- Access type: Read/Write  
-
- Qualifiers: none  
-
- The status for Active Management Technology.  
-
-|||  
-|-|-|  
-|0|Not AMT capable|  
-|1|AMT capable|  
-|2|Not provisioned|  
-|3|Provisioned|  
-|4|Provisioned by others|  
-|5|Unknown|  
 
  `ClientActiveStatus`  
  Data type: `SInt32`  
@@ -931,15 +901,6 @@ Class SMS_CombinedDeviceResources : SMS_CombinedResources
  Qualifiers: none  
 
  Current status.   
-
- `SuppressAutoProvision`  
- Data type: `Boolean`  
-
- Access type: Read/Write  
-
- Qualifiers: none  
-
- Comes from AMT (Active Management Technology). Indicates whether the client should be blocked from being provisioned automatically.  
 
  `UserDomainName`  
  Data type: `String`  

@@ -90,7 +90,6 @@ List all Message GUID or DCM UID available for sending. Display the meaningful n
 |{00000000-0000-0000-0000-000000000061}|Peer DP Status reporting|
 |{00000000-0000-0000-0000-000000000062}|Peer DP Pending package check schedule|
 |{00000000-0000-0000-0000-000000000063}|SUM Updates install schedule|
-|{00000000-0000-0000-0000-000000000071}|NAP Action|
 |{00000000-0000-0000-0000-000000000101}|Hardware Inventory Collection Cycle|
 |{00000000-0000-0000-0000-000000000102}|Software Inventory Collection Cycle|
 |{00000000-0000-0000-0000-000000000103}|Discovery Data Collection Cycle|
@@ -107,7 +106,6 @@ List all Message GUID or DCM UID available for sending. Display the meaningful n
 |{00000000-0000-0000-0000-000000000114}|Update Store Policy|
 |{00000000-0000-0000-0000-000000000115}|State system policy bulk send high|
 |{00000000-0000-0000-0000-000000000116}|State system policy bulk send low|
-|{00000000-0000-0000-0000-000000000120}|AMT Status Check Policy|
 |{00000000-0000-0000-0000-000000000121}|Application manager policy action|
 |{00000000-0000-0000-0000-000000000122}|Application manager user policy action|
 |{00000000-0000-0000-0000-000000000123}|Application manager global evaluation action|

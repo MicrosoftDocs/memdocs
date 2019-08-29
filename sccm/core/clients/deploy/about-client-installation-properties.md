@@ -388,7 +388,7 @@ Example: **CCMSetup.exe  CCMALLOWSILENTREBOOT**
 
 ### CCMFIRSTCERT
 
- If set to 1, this property specifies that the client should select the PKI certificate with the longest validity period. This setting might be required if you're using Network Access Protection with IPsec enforcement.  
+ If set to 1, this property specifies that the client should select the PKI certificate with the longest validity period.  
 
  Example: `CCMSetup.exe /UsePKICert CCMFIRSTCERT=1`  
 
