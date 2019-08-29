@@ -322,17 +322,16 @@ The type of the package. Possible values are:
 
 |Value|Description|  
 |-----------|-----------------|  
-|0|Regular software distribution package.|  
-|3|Driver package.|  
-|4|Task sequence package.|  
-|5|Software update package.|  
-|6|Device setting package.|  
-|7|Virtual application package.| 
-|8|Application package.| 
-|257|Image package.|  
-|258|Boot image package.|  
-|259|Operating system install package.|
-|260|VHD package.|   
+|0|Regular software distribution package|  
+|3|Driver package|  
+|4|Task sequence package|  
+|5|Software update package|  
+|6|Device setting package|  
+|7|Virtual application package|
+|8|Application package|
+|257|Image package|  
+|258|Boot image package|  
+|259|OS upgrade package|
 
 ### PkgFlags  
 Data type: `UInt32`  
