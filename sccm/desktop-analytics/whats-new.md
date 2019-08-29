@@ -38,7 +38,7 @@ During onboarding, you can now migrate inputs from an existing Windows Analytics
 
 <!-- 4972396 -->
 
-...
+If you set up Desktop Analytics in your environment, but want to stop using the service, you can now close your account. If you change your mind in 90 days, you can reactivate the account. For more information, see [How to close your account](/sccm/desktop-analytics/account-close).
 
 
 ## August 2019
