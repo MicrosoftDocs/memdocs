@@ -283,10 +283,6 @@ The view can be joined with other views by using the **ResourceID** column.
 Lists information about the motherboard found on Configuration Manager clients.
 The view can be joined with other views by using the **ResourceID** column.
 
-### v_GS_NAPCLIENT
-
-Lists information about the Configuration Manager clients with the Network Access Protection (NAP) client installed, including whether the client is NAP enabled, the NAP protocol version, system isolation state, and so on. The view can be joined with other views by using the **ResourceID** column.
-
 ### v_GS_NETWORK_ADAPTER
 
 Lists information about the network adapters found on Configuration Manager clients, including adapter type, description, MAC address, manufacturer, service name, and so on.
@@ -535,7 +531,7 @@ Lists summary information about the computer boot times. This includes Latest, M
 
 The view can be joined with other views by using the **ResourceID** column.
 
-#### Sampple Query
+#### Sample Query
 Select 
     RV.Netbios_Name0 as 'Computer',
     SBS.LatestBiosDuration0 as 'Latest BIOS Duration',

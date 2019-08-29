@@ -78,7 +78,6 @@ Class SMS_StateInformation : SMS_BaseClass
 |300|Software updates or desired configuration management assignment compliance|  
 |301|Software updates assignment enforcement (installation)|  
 |302|Software updates or desired configuration management assignment evaluation|  
-|200|NAP|  
 |100|State migration (server only)|  
 |600|PXE (server only)|  
 |700|State system resync (server only)|  
@@ -103,7 +102,7 @@ Class SMS_StateInformation : SMS_BaseClass
 
   This class allows you to access information about a Configuration Manager state message. These messages are sent by clients to notify of important changes of state. Each message provides a snapshot of the state of a process at a specific time. These messages can be helpful when troubleshooting or verifying that processes are working correctly.  
 
-  State messages are used with software updates, Network Access Protection (NAP), desired configuration management, client deployment, and client communication. Generally you will use state messages only through reports and client logs.  
+  State messages are used with software updates, desired configuration management, client deployment, and client communication. Generally you will use state messages only through reports and client logs.  
 
 ## Requirements  
 
