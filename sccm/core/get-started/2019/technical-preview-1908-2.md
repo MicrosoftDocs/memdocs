@@ -25,14 +25,10 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/1903/1234567.md)] -->
 
-[!INCLUDE [Orchestration groups](includes/1908-2/3098816.md)]
-[!INCLUDE [Improvements to CMPivot](includes/1908-2/3197353.md)]
-[!INCLUDE [Use automatic deployment rules to create phased deployments](includes/1908-2/3601136.md)]
-[!INCLUDE [View active consoles and message other administrators](includes/1908-2/4923997.md)]
-[!INCLUDE [Task sequence download on demand over the internet](includes/1908-2/3601238.md)]
+[!INCLUDE [Improvements to Console Connections](includes/1908-2/4923997.md)]
 [!INCLUDE [Improvements to multicast-enabled distribution points](includes/1908-2/3785535.md)]
-[!INCLUDE [Improvements to the task sequence editor](includes/1908-2/4621089.md)]
-[!INCLUDE [Improvements to OS deployment](includes/1908-2/5138936.md)]
+[!INCLUDE [Optimizations to the CMPivot engine](includes/1908-2/3197353.md)]
+[!INCLUDE [Set keyboard layout during OS deployment](includes/1908-2/5138936.md)]
 
 
 <!-- ## Known issues -->
