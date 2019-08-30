@@ -106,6 +106,8 @@ Synchronizing the list of Microsoft Store for Business apps acquired by your org
 
 Connect your Configuration Manager site to Azure AD and the Microsoft Store for Business. For more information and details of this process, see [Configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard). Create a connection to the **Microsoft Store for Business** service.
 
+Make sure the service connection point and targeted devices can access the cloud service. For more information, see [Microsoft Store for Business proxy configuration](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
+
 ### <a name="bkmk_config"></a> Supplemental information and configuration
 
 On the **App** page of the Azure Services Wizard, first configure the **Azure environment** and **Web app**. Then read the **More Information** section at the bottom of the page. This information includes the following additional actions in the Microsoft Store for Business portal:  
