@@ -749,7 +749,6 @@ The following table lists the log files that contain information related to OS d
 |CAS.log|Records details when distribution points are found for referenced content.|Client|  
 |ccmsetup.log|Records ccmsetup tasks for client setup, client upgrade, and client removal. Can be used to troubleshoot client installation problems.|Client|  
 |CreateTSMedia.log|Records details for task sequence media creation.|Computer that runs the Configuration Manager console|  
-|DeployToVhd.log|Records details about the Virtual Hard Disk (VHD) creation and modification process.|Computer that runs the Configuration Manager console|  
 |Dism.log|Records driver installation actions or update application actions for offline servicing.|Site system server|  
 |Distmgr.log|Records details about the configuration of enabling a distribution point for Preboot Execution Environment (PXE).|Site system server|  
 |DriverCatalog.log|Records details about device drivers that have been imported into the driver catalog.|Site system server|  

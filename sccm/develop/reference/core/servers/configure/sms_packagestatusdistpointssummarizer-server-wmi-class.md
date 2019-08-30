@@ -78,7 +78,6 @@ Class SMS_PackageStatusDistPointsSummarizer : SMS_BaseClass
 |257|PKG_TYPE_IMAGE|  
 |258|PKG_TYPE_BOOTIMAGE|  
 |259|PKG_TYPE_OSINSTALLIMAGE|  
-|260|PKG_TYPE_VHD|  
 
  `SecuredTypeID`  
  Data type: `UInt32`  
