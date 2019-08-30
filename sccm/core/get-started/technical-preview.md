@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 08/06/2019
+ms.date: 08/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -118,9 +118,24 @@ The following features are available with the most recent Configuration Manager 
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### Technical preview version 1908
+### Technical preview version 1908.2
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID-->
+
+- [Improvements to Console Connections](/sccm/core/get-started/2019/technical-preview-1908-2#improvements-to-console-connections) <!--4923997-->
+- [Improvements to multicast-enabled distribution points](/sccm/core/get-started/2019/technical-preview-1908-2#bkmk_multicast) <!--3785535-->
+- [Optimizations to the CMPivot engine](/sccm/core/get-started/2019/technical-preview-1908-2#optimizations-to-the-cmpivot-engine) <!--3197353-->
+- [Set keyboard layout during OS deployment](/sccm/core/get-started/2019/technical-preview-1908-2#bkmk_osd) <!--5138936-->
+
+> [!Note]  
+> Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.  
+
+
+## Features in recent technical previews
+
+The following features were released with previous versions of the Configuration Manager technical preview branch since current branch version 1906:
+
+### Technical preview version 1908
 
 - [Task sequence performance improvements for power plans](/sccm/core/get-started/2019/technical-preview-1908#bkmk_tsperf) <!--3555926-->
 - [Local device query evaluation using CMPivot standalone](/sccm/core/get-started/2019/technical-preview-1908#local-device-query-evaluation-using-cmpivot-standalone) <!--3197353-->
@@ -131,13 +146,6 @@ The following features are available with the most recent Configuration Manager 
 - [Copy and paste task sequence conditions](/sccm/core/get-started/2019/technical-preview-1908#bkmk_tscondition) <!--4621098-->
 - [Improvements to task sequence search](/sccm/core/get-started/2019/technical-preview-1908#bkmk_tssearch) <!--4621085-->
 - [Improvements to OS deployment](/sccm/core/get-started/2019/technical-preview-1908#bkmk_osd) <!--4910348, 4931110, 4977616-->
-
-> [!Note]  
-> Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.  
-
-## Features in recent technical previews
-
-The following features were released with previous versions of the Configuration Manager technical preview branch since current branch version 1906:
 
 ### Technical preview version 1907
 
