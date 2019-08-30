@@ -21,7 +21,7 @@ The [Microsoft Store for Business](https://www.microsoft.com/business-store) is 
 
 The Microsoft Store for Business supports two types of app:
 
-- **Online**: This license type requires users and devices to connect to the store to get an app and its license. Windows 10 devices must be Azure Active Directory (Azure AD) domain-joined.  
+- **Online**: This license type requires users and devices to connect to the store to get an app and its license. Windows 10 devices must be Azure Active Directory (Azure AD)-joined or hybrid Azure AD-joined.  
 
 - **Offline**: This type lets you cache apps and licenses to deploy directly within your on-premises network. Devices don't need to connect to the store or have a connection to the internet.
 
@@ -56,7 +56,7 @@ Before deploying Microsoft Store for Business apps to devices that run the full 
 
 - For full functionality, devices must be running Windows 10, version 1703 or later.  
 
-- Devices must be joined to Azure AD in the same tenant where you registered the Microsoft Store for Business as a management tool.  
+- Register or join devices to the same Azure AD tenant where you registered the Microsoft Store for Business as a management tool.  
 
 - When the local Administrator account signs in on the device, it can't access Microsoft Store for Business apps.  
 
