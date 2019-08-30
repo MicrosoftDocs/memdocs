@@ -78,7 +78,7 @@ Enrollment points are used to install macOS computers and enroll devices that yo
 
 ### Allowed connections
 
-The HTTPS setting is automatically selected and requires a PKI certificate on the server for server authentication to the enrollment proxy point, server authentication to the out-of-band service point, and encryption of data over SSL. For more information, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements).  
+The HTTPS setting is automatically selected and requires a PKI certificate on the server for server authentication to the enrollment proxy point, and encryption of data over SSL. For more information, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements).  
 
 For an example deployment of the server certificate and information about how to configure it in IIS, see [Deploying the web server certificate for site systems that run IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).  
 

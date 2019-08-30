@@ -195,10 +195,12 @@
       href: plan-design/network/prepare-windows-servers.md
     - name: Websites for site system servers
       href: plan-design/network/websites-for-site-system-servers.md
-    - name: PKI certificate requirements
-      href: plan-design/network/pki-certificate-requirements.md
     - name: CNG certificates overview
       href: plan-design/network/cng-certificates-overview.md
+    - name: PKI certificate requirements
+      href: plan-design/network/pki-certificate-requirements.md
+    - name: Example PKI certificate deployment
+      href: plan-design/network/example-deployment-of-pki-certificates.md
   - name: Diagnostics and usage data
     items:
     - name: Diagnostics and usage data overview
