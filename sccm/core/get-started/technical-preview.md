@@ -122,14 +122,10 @@ The following features are available with the most recent Configuration Manager 
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID-->
 
-- [Orchestration groups](/sccm/core/get-started/2019/technical-preview-1908-2#bkmk_anchor) <!--3098816-->
-- [Improvements to CMPivot](/sccm/core/get-started/2019/technical-preview-1908-2#bkmk_anchor) <!--3197353-->
-- [Use automatic deployment rules to create phased deployments](/sccm/core/get-started/2019/technical-preview-1908-2#bkmk_anchor) <!--3601136-->
-- [View active consoles and message other administrators](/sccm/core/get-started/2019/technical-preview-1908-2#bkmk_anchor) <!--4923997-->
-- [Task sequence download on demand over the internet](/sccm/core/get-started/2019/technical-preview-1908-2#bkmk_anchor) <!--3601238-->
-- [Improvements to multicast-enabled distribution points](/sccm/core/get-started/2019/technical-preview-1908-2#bkmk_anchor) <!--3785535-->
-- [Improvements to the task sequence editor](/sccm/core/get-started/2019/technical-preview-1908-2#bkmk_anchor) <!--4621089-->
-- [Improvements to OS deployment](/sccm/core/get-started/2019/technical-preview-1908-2#bkmk_anchor) <!--5138936-->
+- [Improvements to Console Connections](/sccm/core/get-started/2019/technical-preview-1908-2#improvements-to-console-connections) <!--4923997-->
+- [Improvements to multicast-enabled distribution points](/sccm/core/get-started/2019/technical-preview-1908-2#bkmk_multicast) <!--3785535-->
+- [Optimizations to the CMPivot engine](/sccm/core/get-started/2019/technical-preview-1908-2#optimizations-to-the-cmpivot-engine) <!--3197353-->
+- [Set keyboard layout during OS deployment](/sccm/core/get-started/2019/technical-preview-1908-2#bkmk_osd) <!--5138936-->
 
 > [!Note]  
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.  
