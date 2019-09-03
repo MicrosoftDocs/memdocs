@@ -53,7 +53,7 @@ Windows Update for Business (WUfB) allows you to keep Windows 10-based devices i
 
 #### To identify clients that use WUfB  
 
-1.  Ensure the Windows Update Agent isn't scanning against WSUS, if it was previously enabled. The following registry key can be used to indicate whether the computer is scanning against WSUS or Windows Update.  When the value is 0 or doesn't exist, it's not scanning against WSUS.  
+1.  Ensure the Windows Update Agent isn't scanning against WSUS, if it was previously enabled. The following registry key can be used to indicate whether the computer is scanning against WSUS or Windows Update. If the registry key doesn't exist, it's not scanning against WSUS.
     - **HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU\UseWUServer**
 
 2.  There's a new attribute, **UseWUServer**, under the **Windows Update** node in Configuration Manager Resource Explorer.  
