@@ -5,7 +5,7 @@ description: A plan for the software update point infrastructure is essential be
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 08/20/2019
+ms.date: 09/04/2019
 ms.topic: conceptual
 ms.prod: configuration-manager 
 ms.technology: configmgr-sum
@@ -235,6 +235,9 @@ For more information about how to install WSUS on Windows Server, see [Install t
 
 When you install more than one software update point at a primary site, use the same WSUS database for each software update point in the same Active Directory forest. Sharing the same database improves performance when clients switch to a new software update point. For more information, see [Use a shared WSUS database for software update points](/sccm/sum/plan-design/software-updates-best-practices#bkmk_shared-susdb).  
 
+#### Configuring the WSUS content directory path
+
+When you install WSUS, you'll need to provide a content directory path. The WSUS content directory is primarily used for storing the Microsoft Software License Terms files needed by clients during scanning. The Configuration Manager  The WSUS content directory should not overlap with your content source directory for Configuration Manager software deployment packages. Overlapping the WSUS content directory and the Configuration Manager package source will result in incorrect files being removed from the WSUS content directory.
 
 ####  <a name="BKMK_CustomWebSite"></a> Configure WSUS to use a custom website  
 When you install WSUS, you have the option to use the existing IIS Default website, or to create a custom WSUS website. Create a custom website for WSUS so that IIS hosts the WSUS services in a dedicated virtual website. Otherwise it shares the same website that's used by the other Configuration Manager site systems or applications. This configuration is especially necessary when you install the software update point role on the site server. When you run WSUS in Windows Server 2012 or later, WSUS is configured by default to use port 8530 for HTTP and port 8531 for HTTPS. Specify these ports when you create the software update point at a site.  
