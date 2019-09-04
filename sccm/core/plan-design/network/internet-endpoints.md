@@ -148,7 +148,7 @@ Allow the active software update point to access the following endpoints so that
 
 - `http://download.windowsupdate.com`  
 
-- `http://download.microsoft.com`  
+- `https://download.microsoft.com`  
 
 - `http://*.download.windowsupdate.com`  
 

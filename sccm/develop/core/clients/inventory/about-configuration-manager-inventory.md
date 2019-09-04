@@ -16,7 +16,7 @@ You can use System Center Configuration Manager to collect hardware and software
  When the hardware inventory client agent is enabled for Configuration Manager sites, hardware inventory data gives you system information (such as available disk space, processor type, and operating system) about each computer. When the software inventory client agent is enabled, you can inventory information, such as the specific file types and versions that are present on client computers. The software inventory client agent can also collect information about files that are inventoried on client systems. Configuration Manager software inventory can also collect files, not just details about the files, from client computers. With file collection, you specify a set of files to be copied from clients to the Configuration Manager site server that the clients are assigned to.  
 
 > [!NOTE]
->  For information about using Inventory in System Center Configuration Manager, see [Inventory in Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=275839).  
+>  For information about using Inventory in System Center Configuration Manager, see [Inventory in Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=275839).  
 
 ## About Collecting Hardware Inventory  
  When it is enabled, the System Center Configuration Manager hardware inventory client agent automatically collects detailed information about the hardware characteristics of clients in a Configuration Manager site. By using this feature, you can collect a wide variety of information about client computers, such as memory, operating system, and peripherals for client computers.  

@@ -27,7 +27,7 @@ To get the update for version 1610, you must use a service connection point site
 
     -   Usually, you can also restart the **SMS_Executive** service on the site server to restart the download of the update's redistribution files.
 
-    -   Another common download issue occurs when proxy server settings prevent downloads from <http://silverlight.dlservice.microsoft.com> and <http://download.microsoft.com>.
+    -   Another common download issue occurs when proxy server settings prevent downloads from <http://silverlight.dlservice.microsoft.com> and <https://download.microsoft.com>.
 
 For more information about installing updates, see [In-console updates and servicing](/sccm/core/servers/manage/updates#bkmk_inconsole).
 

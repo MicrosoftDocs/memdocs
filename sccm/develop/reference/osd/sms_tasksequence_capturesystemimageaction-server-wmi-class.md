@@ -61,7 +61,7 @@ Class SMS_TaskSequence_CaptureSystemImageAction : SMS_TaskSequence_Action
 
  Password of the account specified by the `CaptureUsername` property.  
 
- The task sequence variable associated with this property is OSDCaptureAccountPassword. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDCaptureAccountPassword. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  `CaptureUsername`  
  Data type: `String`  
@@ -72,7 +72,7 @@ Class SMS_TaskSequence_CaptureSystemImageAction : SMS_TaskSequence_Action
 
  A Windows account name that has permissions to the network share where the captured image will be stored, specified by `CaptureDestination`. This name is specified in "domain\username" format. To set this property, you must have write access to the destination folder.  
 
- The task sequence variable associated with this property is OSDCaptureAccount. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDCaptureAccount. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  `Condition`  
  Data type: `SMS_TaskSequence_Condition`  

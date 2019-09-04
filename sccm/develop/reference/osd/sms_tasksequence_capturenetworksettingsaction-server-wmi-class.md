@@ -82,7 +82,7 @@ Class SMS_TaskSequence_CaptureNetworkSettingsAction : SMS_TaskSequence_Action
 
  `true` (default) to migrate TCP/IP, DNS, and WINS settings for network adapters.  
 
- The task sequence variable associated with this property is OSDMigrateAdapterSettings. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDMigrateAdapterSettings. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  `MigrateNetworkMembership`  
  Data type: `Boolean`  
@@ -93,7 +93,7 @@ Class SMS_TaskSequence_CaptureNetworkSettingsAction : SMS_TaskSequence_Action
 
  `true` to migrate workgroup or domain membership information as part of operating system deployment. The default value is `false`.  
 
- The task sequence variable associated with this property is OSDMigrateNetworkMembership. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDMigrateNetworkMembership. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  `Name`  
  Data type: `String`  

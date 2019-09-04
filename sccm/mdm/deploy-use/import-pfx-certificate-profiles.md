@@ -33,7 +33,7 @@ To learn more, see [Certificate profile prerequisites](../../protect/plan-design
 System Center Configuration Manager allows you to import certificate credentials and then provision personal information exchange (.pfx) files to user devices. PFX files can be used to generate user-specific certificates to support encrypted data exchange.
 
 > [!TIP]  
-> A step-by-step walkthrough describing this process is available in [How to Create and Deploy PFX Certificate Profiles in Configuration Manager](http://blogs.technet.com/b/karanrustagi/archive/2015/09/01/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager.aspx).  
+> A step-by-step walkthrough describing this process is available in [How to Create and Deploy PFX Certificate Profiles in Configuration Manager](https://blogs.technet.com/b/karanrustagi/archive/2015/09/01/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager.aspx).  
 
 ## Create, import, and deploy a Personal Information Exchange (PFX) certificate profile  
 
@@ -79,7 +79,7 @@ Imported certificates are later deployed to enrolled devices.
 
 ### Deploy a Create PFX Script
 
-Use the [Configuration Manager SDK](http://go.microsoft.com/fwlink/?LinkId=613525) to deploy a Create PFX Script. 
+Use the [Configuration Manager SDK](https://go.microsoft.com/fwlink/?LinkId=613525) to deploy a Create PFX Script. 
 
 The Create PFX Script added in Configuration Manager 2012 SP2 adds an SMS_ClientPfxCertificate class to the SDK. This class includes the following methods:  
 

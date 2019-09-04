@@ -23,28 +23,28 @@ To get started with programming for System Center Configuration Manager, it’s 
 
 -   [Fundamentals of System Center Configuration Manager](https://technet.microsoft.com/library/mt622643.aspx)  
 
--   [TechNet Virtual Labs](http://go.microsoft.com/fwlink/?LinkId=329809) (See: Virtual Lab: Introduction to Configuration Manager 2012 SP1)  
+-   [TechNet Virtual Labs](https://go.microsoft.com/fwlink/?LinkId=329809) (See: Virtual Lab: Introduction to Configuration Manager 2012 SP1)  
 
 ### More Resources  
  **Books:** There are numerous books available for Configuration Manager. A few example books are listed below.  
 
-- [System Center 2012 Configuration Manager: Mastering the Fundamentals](http://www.amazon.com/System-Center-2012-Configuration-Manager/dp/9197939048)  
+- [System Center 2012 Configuration Manager: Mastering the Fundamentals](https://www.amazon.com/System-Center-2012-Configuration-Manager/dp/9197939048)  
 
-- [System Center 2012 Configuration Manager (SCCM) Unleashed](http://www.amazon.com/System-Center-Configuration-Manager-Unleashed/dp/0672334372/ref=sr_1_1?s=books&ie=UTF8&qid=1382812114&sr=1-1&keywords=System+Center+2012+Configuration+Manager+%28SCCM%29+Unleashed)  
+- [System Center 2012 Configuration Manager (SCCM) Unleashed](https://www.amazon.com/System-Center-Configuration-Manager-Unleashed/dp/0672334372/ref=sr_1_1?s=books&ie=UTF8&qid=1382812114&sr=1-1&keywords=System+Center+2012+Configuration+Manager+%28SCCM%29+Unleashed)  
 
-- [Microsoft System Center 2012 Configuration Manager: Administration Cookbook](http://www.amazon.com/Microsoft-System-Center-Configuration-Manager/dp/1849684944/ref=sr_1_1?s=books&ie=UTF8&qid=1382812164&sr=1-1&keywords=Microsoft+System+Center+2012+Configuration+Manager%3A+Administration+Cookbook)  
+- [Microsoft System Center 2012 Configuration Manager: Administration Cookbook](https://www.amazon.com/Microsoft-System-Center-Configuration-Manager/dp/1849684944/ref=sr_1_1?s=books&ie=UTF8&qid=1382812164&sr=1-1&keywords=Microsoft+System+Center+2012+Configuration+Manager%3A+Administration+Cookbook)  
 
   **Videos:** There are numerous videos available for Configuration Manager. A few example videos are listed below.  
 
-- [Channel 9: Microsoft System Center 2012 Configuration Manager Overview](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2012/MGT309)  
+- [Channel 9: Microsoft System Center 2012 Configuration Manager Overview](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2012/MGT309)  
 
-- [YouTube: Technical Deep Dive: System Center Configuration Manager 2012 Technical Overview](http://www.youtube.com/watch?v=qLACm3910_A)  
+- [YouTube: Technical Deep Dive: System Center Configuration Manager 2012 Technical Overview](https://www.youtube.com/watch?v=qLACm3910_A)  
 
   **Forums:** There are numerous forums available for Configuration Manager. A few example forums are listed below.  
 
-- [TechNet: Configuration Manager 2012 - General](http://social.technet.microsoft.com/Forums/home?forum=configmanagergeneral)  
+- [TechNet: Configuration Manager 2012 - General](https://social.technet.microsoft.com/Forums/home?forum=configmanagergeneral)  
 
-- [windows-noob.com: Configuration Manager 2012](http://www.windows-noob.com/forums/index.php?/forum/92-setup-sccm-2012/)  
+- [windows-noob.com: Configuration Manager 2012](https://www.windows-noob.com/forums/index.php?/forum/92-setup-sccm-2012/)  
 
 ## Architectural Understanding  
  Configuration Manager is multi-tiered, distributed management system. It’s important to understand the general architecture of Configuration Manager. Below is a link to an overview of the Configuration Manager architecture.  
@@ -131,7 +131,7 @@ To get started with programming for System Center Configuration Manager, it’s 
 
  **Policy Spy:** A policy viewer that helps you review and troubleshoot the policy system on System Center 2012 Configuration Manager clients.  
 
- Client Spy and Policy Spy are both tools contained in the [System Center 2012 Configuration Manager Toolkit](http://www.microsoft.com/download/details.aspx?id=29265)  
+ Client Spy and Policy Spy are both tools contained in the [System Center 2012 Configuration Manager Toolkit](https://www.microsoft.com/download/details.aspx?id=29265)  
 
 ## Basic Configuration Manager Program Example  
  Below is link to a very simple Configuration Manager program showing some basic operations common to many Configuration Manager programs:  

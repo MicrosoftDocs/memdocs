@@ -22,10 +22,10 @@ The information in this and the following topics is essential for helping you id
 
 When a Configuration Manager feature or capability requires more specific configurations, that information is included with the feature-specific documentation, and is supplemental to the more general configuration details.  
 
- The products and technologies that are described in the following topics are supported by Configuration Manager. However, their inclusion in this content does not imply an extension of support for any product beyond that product's individual support lifecycle. Products that are beyond their support lifecycle are not supported for use with Configuration Manager. For more information about Microsoft Support Lifecycles, visit the [Microsoft Support Lifecycle](http://go.microsoft.com/fwlink/p/?LinkId=208270) website.  
+ The products and technologies that are described in the following topics are supported by Configuration Manager. However, their inclusion in this content does not imply an extension of support for any product beyond that product's individual support lifecycle. Products that are beyond their support lifecycle are not supported for use with Configuration Manager. For more information about Microsoft Support Lifecycles, visit the [Microsoft Support Lifecycle](https://go.microsoft.com/fwlink/p/?LinkId=208270) website.  
 
 > [!NOTE]  
->  For information about Microsoft support lifecycle policy, go to the Microsoft Support Lifecycle Support Policy FAQ website at [Microsoft Support Lifecycle Policy FAQ](http://go.microsoft.com/fwlink/p/?LinkId=31976).  
+>  For information about Microsoft support lifecycle policy, go to the Microsoft Support Lifecycle Support Policy FAQ website at [Microsoft Support Lifecycle Policy FAQ](https://go.microsoft.com/fwlink/p/?LinkId=31976).  
 
  Additionally, products and product versions that are not listed in the following topics are not supported with System Center Configuration Manager unless they have been announced on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/).  At times, the content on this blog precedes an update to this body of documentation.
 

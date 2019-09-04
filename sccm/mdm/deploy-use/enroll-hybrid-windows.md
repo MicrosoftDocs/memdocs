@@ -55,7 +55,7 @@ Two factors determine how you can simplify Windows device enrollment:
 Automatic enrollment lets users enroll either company-owned or personal Windows 10 PCs and Windows 10 mobile devices in Intune by adding a work or school account and agreeing to be managed. Simple as that. In the background, the user's device registers and joins Azure Active Directory. Once registered, the device is managed with Intune.
 
 **Prerequisites**
-- Azure Active Directory Premium subscription ([trial subscription](http://go.microsoft.com/fwlink/?LinkID=816845))
+- Azure Active Directory Premium subscription ([trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845))
 - Microsoft Intune subscription
 
 
