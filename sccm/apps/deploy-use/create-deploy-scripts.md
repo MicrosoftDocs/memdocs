@@ -2,7 +2,7 @@
 title: Create and run scripts
 titleSuffix: Configuration Manager
 description: Create and run Powershell scripts on client devices.
-ms.date: 06/20/2019
+ms.date: 09/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -205,7 +205,7 @@ The validation section of the **Script Parameter Properties** dialog contains th
 
 A regular expression is a compact form of programming for checking a string of characters against an encoded validation. For example, you could check for the absence of a capital alphabetic character in the *FirstName* field by placing `[^A-Z]` in the *RegEx* field.
 
-The regular expression processing for this dialog is supported by the .NET Framework. For guidance on using regular expressions, see [.NET Regular Expression](https://docs.microsoft.com/dotnet/standard/base-types/regular-expressions). 
+The regular expression processing for this dialog is supported by the .NET Framework. For guidance on using regular expressions, see [.NET Regular Expression](https://docs.microsoft.com/dotnet/standard/base-types/regular-expressions) and [Regular Expression Language](https://docs.microsoft.com/dotnet/standard/base-types/regular-expression-language-quick-reference).
 
 
 ## Script examples
