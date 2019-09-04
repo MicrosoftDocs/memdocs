@@ -93,7 +93,7 @@ For more information, see [Use alerts and the status system for System Center C
 Ensure that file and database replication between sites is operational and current. Delays or backlogs in either can prevent a smooth, successful update.
 For database replication, you can use the Replication Link Analyzer to help resolve issues prior to starting the update.
 
-For more information, see [About the Replication Link Analyzer](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA) in the [Monitor hierarchy and replication infrastructure in System Center Configuration Manager](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure) topic.
+For more information, see [Replication Link Analyzer](monitor-replication.md#BKMK_RLA) in the [Monitor database replication](monitor-replication.md) topic.
 
 **Install all applicable critical updates for operating systems on computers that host the site, the site database server, and remote site system roles:** 
 Before you install an update for Configuration Manager, install any critical updates for each applicable site system. If an update that you install requires a restart, restart the applicable computers before you start the upgrade.
