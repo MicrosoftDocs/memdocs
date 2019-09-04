@@ -40,10 +40,13 @@ Use this task to maintain consistency of software titles between software invent
 |||
 |---------|---------|
 |**Central administration site**|Enabled|
-|**Primary site**|Enabled|
+|Primary site|Not available|
 |Secondary site|Not available|
 
-### Clear Install Flag
+### Clear Undiscovered Clients
+
+> [!Tip]
+> You may also see this task in the console named **Clear Install Flag**.
 
 Use this task to remove the installed flag for clients that don't submit a Heartbeat Discovery record during the **Client Rediscovery** period. The installed flag prevents automatic client push installation to a computer that might have an active Configuration Manager client.  
 
@@ -60,6 +63,16 @@ Use this task to delete aged application requests from the database. For more in
 |||
 |---------|---------|
 |Central administration site|Not available|
+|**Primary site**|Enabled|
+|Secondary site|Not available|
+
+### Delete Aged Application Revisions
+
+Use this task to delete application revisions that are no longer referenced. For more information, see [How to revise and supersede applications](/sccm/apps/deploy-use/revise-and-supersede-applications).
+
+|||
+|---------|---------|
+|**Central administration site**|Enabled|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
 
@@ -87,7 +100,7 @@ Use this task to delete from the site database all aged data for client operatio
 |Secondary site|Not available|
 
 ### Delete Aged Client Presence History
-
+<!-- not listed in dogfood for either primary or CAS, was it renamed? -->
 Use this task to delete history information about the online status of clients recorded by client notification. It deletes information for clients with status that's older than the specified time. For more information, see [How to monitor clients](/sccm/core/clients/manage/monitor-clients).
 
 |||
@@ -112,6 +125,16 @@ Use this task to delete from the site database all aged data about the traffic t
 |**Primary site**|Enabled|
 |Secondary site|Not available|
 
+### Delete Aged CMPivot Results
+
+Use this task to delete from the site database aged information from clients in CMPivot queries. For more information, see [CMPivot for real-time data](/sccm/core/servers/manage/cmpivot).
+
+|||
+|---------|---------|
+|Central administration site|Not available|
+|**Primary site**|Enabled|
+|Secondary site|Not available|
+
 ### Delete Aged Collected Files
 
 Use this task to delete from the database aged information about collected files. This task also deletes the collected files from the site server folder structure at the selected site. By default, the five most-recent copies of collected files are stored on the site server in the **Inboxes\sinv.box\FileCol** directory. For more information, see [Introduction to software inventory](/sccm/core/clients/manage/inventory/introduction-to-software-inventory).  
@@ -129,6 +152,16 @@ Use this task to delete from the database aged OS deployment computer associatio
 |||
 |---------|---------|
 |Central administration site|Not available|
+|**Primary site**|Enabled|
+|Secondary site|Not available|
+
+### Delete Aged Console Connection Data
+
+This task deletes data from the site database about console connections to the site.<!-- SCCMDocs#528 -->
+
+|||
+|---------|---------|
+|**Central administration site**|Enabled|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
 
@@ -152,16 +185,6 @@ Use this task to delete from the database aged data about mobile device wipe act
 |**Primary site**|Enabled|
 |Secondary site|Not available|
 
-### Delete Aged Devices Managed by the Exchange Server Connector
-
-Use this task to delete aged data about mobile devices managed by the Exchange Server connector. The site deletes this data according to the **Ignore mobile devices that are inactive for more than (days)** setting on the **Discovery** tab of the Exchange Server connector properties. For more information, see [Manage mobile devices with Configuration Manager and Exchange](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).
-
-|||
-|---------|---------|
-|Central administration site|Not available|
-|**Primary site**|Enabled|
-|Secondary site|Not available|
-
 ### Delete Aged Discovery Data
 
 Use this task to delete aged discovery data from the database. This data can include records from:
@@ -178,23 +201,13 @@ This task also removes aged devices marked as decommissioned. When this task run
 |**Primary site**|Enabled|
 |Secondary site|Not available|
 
-### Delete Aged Distribution Point Usage Data
+### Delete Aged Distribution Point Usage Stats
 
 Use this task to delete from the database aged data for distribution points that has been stored longer than a specified time.  
 
 |||
 |---------|---------|
 |**Central administration site**|Enabled|
-|**Primary site**|Enabled|
-|Secondary site|Not available|
-
-### Delete Aged Endpoint Protection Health Status History Data
-
-Use this task to delete from the database aged status information for Endpoint Protection. For more information, see [How to monitor Endpoint Protection](/sccm/protect/deploy-use/monitor-endpoint-protection).
-
-|||
-|---------|---------|
-|Central administration site|Not available|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
 
@@ -208,6 +221,29 @@ This task applies to devices that are enrolled with Configuration Manager [on-pr
 |---------|---------|
 |Central administration site|Not available|
 |**Primary site**|Not enabled|
+|Secondary site|Not available|
+
+### Delete Aged EP Health Status History Data
+
+Use this task to delete from the database aged status information for Endpoint Protection (EP). For more information, see [How to monitor Endpoint Protection](/sccm/protect/deploy-use/monitor-endpoint-protection).
+
+|||
+|---------|---------|
+|Central administration site|Not available|
+|**Primary site**|Enabled|
+|Secondary site|Not available|
+
+### Delete Aged Exchange Partnership
+
+> [!Tip]
+> > You may also see this task in the console named **Delete Aged Devices Managed by the Exchange Server Connector**.
+
+Use this task to delete aged data about mobile devices managed by the Exchange Server connector. The site deletes this data according to the **Ignore mobile devices that are inactive for more than (days)** setting on the **Discovery** tab of the Exchange Server connector properties. For more information, see [Manage mobile devices with Configuration Manager and Exchange](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).
+
+|||
+|---------|---------|
+|Central administration site|Not available|
+|**Primary site**|Enabled|
 |Secondary site|Not available|
 
 ### Delete Aged Inventory History
@@ -233,6 +269,36 @@ Use this task to delete from the database aged log data used for troubleshooting
 |**Primary site**|Enabled|
 |**Secondary site**|Enabled|
 
+### Delete Aged Metering Data
+
+Use this task to delete from the database aged data for software metering that has been stored longer than a specified time. For more information, see [Software metering](/sccm/apps/deploy-use/monitor-app-usage-with-software-metering).
+
+|||
+|---------|---------|
+|Central administration site|Not available|
+|**Primary site**|Enabled|
+|Secondary site|Not available|
+
+### Delete Aged Metering Summary Data
+
+Use this task to delete from the database aged summary data for software metering that's been stored longer than a specified time. For more information, see [Software metering](/sccm/apps/deploy-use/monitor-app-usage-with-software-metering).
+
+|||
+|---------|---------|
+|Central administration site|Not available|
+|**Primary site**|Enabled|
+|Secondary site|Not available|
+
+### Delete Aged Notification Server History
+
+This task deletes aged client presence history.
+
+|||
+|---------|---------|
+|**Central administration site**|Enabled|
+|**Primary site**|Enabled|
+|Secondary site|Not available|
+
 ### Delete Aged Notification Task History
 
 Use this task to delete from the site database information about client notification tasks. This task applies to data that hasn't been updated for a specified time. For more information, see [Client notifications](/sccm/core/clients/manage/client-notification).
@@ -242,16 +308,6 @@ Use this task to delete from the site database information about client notifica
 |Central administration site|Not available|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
-
-### Delete Aged Replication Summary Data
-
-Use this task to delete from the site database aged replication summary data when it hasn't been updated for a specified time. For more information, see [Monitor database replication](/sccm/core/servers/manage/monitor-replication).  
-
-|||
-|---------|---------|
-|**Central administration site**|Enabled|
-|**Primary site**|Enabled|
-|**Secondary site**|Enabled|
 
 ### Delete Aged Passcode Records
 
@@ -263,7 +319,7 @@ Use this task at the top-level site of your hierarchy to delete aged Passcode Re
 |**Primary site**|Enabled|
 |Secondary site|Not available|
 
-### Delete Aged Replication Tracking Data
+### Delete Aged Replication Data
 
 Use this task to delete from the database aged data about database replication between Configuration Manager sites. When you change the configuration of this maintenance task, the configuration applies to each applicable site in the hierarchy. For more information, see [Monitor database replication](/sccm/core/servers/manage/monitor-replication).  
 
@@ -273,25 +329,15 @@ Use this task to delete from the database aged data about database replication b
 |**Primary site**|Enabled|
 |**Secondary site**|Enabled|
 
-### Delete Aged Software Metering Data
+### Delete Aged Replication Summary Data
 
-Use this task to delete from the database aged data for software metering that has been stored longer than a specified time. For more information, see [Software metering](/sccm/apps/deploy-use/monitor-app-usage-with-software-metering).
-
-|||
-|---------|---------|
-|Central administration site|Not available|
-|**Primary site**|Enabled|
-|Secondary site|Not available|
-
-### Delete Aged Software Metering Summary Data
-
-Use this task to delete from the database aged summary data for software metering that's been stored longer than a specified time. For more information, see [Software metering](/sccm/apps/deploy-use/monitor-app-usage-with-software-metering).
+Use this task to delete from the site database aged replication summary data when it hasn't been updated for a specified time. For more information, see [Monitor database replication](/sccm/core/servers/manage/monitor-replication).  
 
 |||
 |---------|---------|
-|Central administration site|Not available|
+|**Central administration site**|Enabled|
 |**Primary site**|Enabled|
-|Secondary site|Not available|
+|**Secondary site**|Enabled|
 
 ### Delete Aged Status Messages
 
@@ -331,6 +377,16 @@ Use this task to delete aged User Device Affinity data from the database. For mo
 |---------|---------|
 |Central administration site|Not available|
 |**Primary site**|Enabled|
+|Secondary site|Not available|
+
+### Delete Duplicate System Discovery Data
+
+Use this task to delete from the site database any duplicate records generated by system discovery.<!-- SCCMDocs#1339 -->
+
+|||
+|---------|---------|
+|**Central administration site**|Enabled|
+|Primary site|Not available|
 |Secondary site|Not available|
 
 ### Delete Expired MDM Bulk Enroll Package Records
@@ -397,16 +453,6 @@ Use this task to periodically purge the table that contains client deployment st
 
 |||
 |---------|---------|
-|**Central administration site**|Enabled|
-|**Primary site**|Enabled|
-|Secondary site|Not available|
-
-### Delete Unused Application Revisions
-
-Use this task to delete application revisions that are no longer referenced. For more information, see [How to revise and supersede applications](/sccm/apps/deploy-use/revise-and-supersede-applications).
-
-|||
-|---------|---------|
 |Central administration site|Not available|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -447,17 +493,7 @@ To improve performance, the Configuration Manager database indexes are frequentl
 |**Primary site**|Not enabled|
 |**Secondary site**|Not enabled|
 
-### Summarize Installed Software Data
-
-Use this task to summarize the data for installed software from multiple records into one general record. Data summarization can compress the amount of data that's stored in the Configuration Manager database. For more information, see [Introduction to software inventory](/sccm/core/clients/manage/inventory/introduction-to-software-inventory).
-
-|||
-|---------|---------|
-|Central administration site|Not available|
-|**Primary site**|Enabled|
-|Secondary site|Not available|
-
-### Summarize Software Metering File Usage Data
+### Summarize File Usage Metering Data
 
 Use this task to summarize the data from multiple records for software metering file usage into one general record. Data summarization can compress the amount of data that's stored in the Configuration Manager database.
 
@@ -469,7 +505,17 @@ To summarize software metering data and to conserve disk space in the database, 
 |**Primary site**|Enabled|
 |Secondary site|Not available|
 
-### Summarize Software Metering Monthly Usage Data
+### Summarize Installed Software Data
+
+Use this task to summarize the data for installed software from multiple records into one general record. Data summarization can compress the amount of data that's stored in the Configuration Manager database. For more information, see [Introduction to software inventory](/sccm/core/clients/manage/inventory/introduction-to-software-inventory).
+
+|||
+|---------|---------|
+|Central administration site|Not available|
+|**Primary site**|Enabled|
+|Secondary site|Not available|
+
+### Summarize Monthly Usage Metering Data
 
 Use this task to summarize the data from multiple records for software metering monthly usage into one general record. Data summarization can compress the amount of data that's stored in the Configuration Manager database.
 
