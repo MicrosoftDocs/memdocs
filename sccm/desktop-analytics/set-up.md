@@ -2,7 +2,7 @@
 title: Set up Desktop Analytics
 titleSuffix: Configuration Manager
 description: A how-to guide for setting up and onboarding to Desktop Analytics.
-ms.date: 06/14/2019
+ms.date: 09/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -49,9 +49,11 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
     - To use an existing workspace for Desktop Analytics, select it, and continue with the next step.  
 
         > [!Note]  
-        > If you're already using Windows Analytics, select that same workspace. You need to reenroll devices to Desktop Analytics that you previously enrolled in Windows Analytics.
-        >
         > You can only have one Desktop Analytics workspace per Azure AD tenant. Devices can only send diagnostic data to one workspace.  
+
+        If you're already using Windows Analytics, select that same workspace. You need to reenroll devices to Desktop Analytics that you previously enrolled in Windows Analytics.
+
+        To migrate inputs from the selected Windows Analytics workspace, set **Do you want to see inputs from Windows Analytics?** to **Yes**. If you don't want to migrate, switch this setting to **No**. For more information, see the FAQ for [Existing Windows Analytics customers](/sccm/desktop-analytics/faq#existing-windows-analytics-customers).
 
     - To create a workspace for Desktop Analytics, select **Add workspace**.  
 
