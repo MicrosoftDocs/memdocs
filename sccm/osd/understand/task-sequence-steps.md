@@ -2,7 +2,7 @@
 title: Task sequence steps
 titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
-ms.date: 07/26/2019
+ms.date: 09/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -1137,7 +1137,7 @@ Many of these updates have dependencies. For example, install update ABC before 
 
 In most circumstances, use the default setting to use cached scan results.
 
-The **SMSTSSoftwareUpdateScanTimeout** variable controls the software updates scan timeout during this step. The default value is 30 minutes. For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables#SMSTSSoftwareUpdateScanTimeout).
+The **SMSTSSoftwareUpdateScanTimeout** variable controls the software updates scan timeout during this step. The default value is 60 minutes. For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables#SMSTSSoftwareUpdateScanTimeout).
 
 ### Options  
 
