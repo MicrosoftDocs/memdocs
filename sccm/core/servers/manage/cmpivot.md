@@ -2,7 +2,7 @@
 title: CMPivot for real-time data
 titleSuffix: Configuration Manager
 description: Learn how to use CMPivot in Configuration Manager to query clients in real time.
-ms.date: 08/28/2019
+ms.date: 09/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -256,6 +256,15 @@ CMPivot includes the following improvements starting in Configuration Manager ve
   - This change increases the performance of viewing script or query output.
   - If the script or query output is greater than 80 KB, the client sends the data via a state message.
   - If the client isn't updated to the 1810 client version, it continues to use state messages.
+
+- You may see the following error when you start CMPivot:
+   **You can't use CMPivot right now due to an incompatible script version. This issue may be because the hierarchy is in the process of upgrading a site. Wait until the upgrade is complete and then try again.**
+
+  - If you see this message, it could mean:
+    - The security scope isn't set up properly.
+    - There are issues with Upgrade in the process.
+    - The underlying CMPivot script is incompatible.
+
 
 ### <a name="bkmk_cmpivot-functions"></a> Scalar functions
 CMPivot supports the following scalar functions:
