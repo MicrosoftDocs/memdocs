@@ -34,12 +34,6 @@ To get notified when this page is updated, copy and paste the following URL into
 
 During onboarding, you can now migrate inputs from an existing Windows Analytics workspace. For more information, see the FAQ for [Existing Windows Analytics customers](/sccm/desktop-analytics/faq#existing-windows-analytics-customers).
 
-### Offboard from Desktop Analytics
-
-<!-- 4972396 -->
-
-...
-
 
 ## August 2019
 
