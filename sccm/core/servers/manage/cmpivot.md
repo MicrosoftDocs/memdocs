@@ -260,7 +260,7 @@ CMPivot includes the following improvements starting in Configuration Manager ve
 - You may see the following error when you start CMPivot:
    **You can't use CMPivot right now due to an incompatible script version. This issue may be because the hierarchy is in the process of upgrading a site. Wait until the upgrade is complete and then try again.**
 
-  - If you see this message, that could mean that:
+  - If you see this message, it could mean:
     - The security scope isn't set up properly.
     - There are issues with Upgrade in the process.
     - The underlying CMPivot script is incompatible.
