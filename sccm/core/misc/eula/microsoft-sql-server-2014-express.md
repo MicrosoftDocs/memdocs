@@ -94,7 +94,7 @@ ms.collection: M365-identity-device-management
 
    -   use the software for commercial software hosting services.  
 
-4. **THIRD PARTY NOTICES.** The software may include third party code, that Microsoft, not the third party, licenses to you under the terms set forth in this agreement. Notices, if any, for any third party code are included for your information only. Additionally, any third party scripts, linked to, called or referenced from this software, are licensed to you by the third parties that own such code, not by Microsoft, see ASP.NET Ajax CDN Terms of Use: [http://www.asp.net/ajaxlibrary/CDN.ashx](http://www.asp.net/ajaxlibrary/CDN.ashx).  
+4. **THIRD PARTY NOTICES.** The software may include third party code, that Microsoft, not the third party, licenses to you under the terms set forth in this agreement. Notices, if any, for any third party code are included for your information only. Additionally, any third party scripts, linked to, called or referenced from this software, are licensed to you by the third parties that own such code, not by Microsoft, see ASP.NET Ajax CDN Terms of Use: [https://www.asp.net/ajaxlibrary/CDN.ashx](https://www.asp.net/ajaxlibrary/CDN.ashx).  
 
 5. **BACKUP COPY.** You may make one backup copy of the software. You may use it only to reinstall the software.  
 
@@ -102,7 +102,7 @@ ms.collection: M365-identity-device-management
 
 7. **TRANSFER TO A THIRD PARTY.** The first user of the software may transfer it and this agreement directly to a third party. Before the transfer, that party must agree that this agreement applies to the transfer and use of the software. The first user must uninstall the software before transferring it separately from the device. The first user may not retain any copies.  
 
-8. **EXPORT RESTRICTIONS.** The software is subject to United States export laws and regulations. You must comply with all domestic and international export laws and regulations that apply to the software. These laws include restrictions on destinations, end users and end use. For additional information, see [www.microsoft.com/exporting](http://www.microsoft.com/exporting).  
+8. **EXPORT RESTRICTIONS.** The software is subject to United States export laws and regulations. You must comply with all domestic and international export laws and regulations that apply to the software. These laws include restrictions on destinations, end users and end use. For additional information, see [www.microsoft.com/exporting](https://www.microsoft.com/exporting).  
 
 9. **SUPPORT SERVICES.** Because this software is "as is," we may not provide support services for it.  
 

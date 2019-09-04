@@ -162,7 +162,7 @@ The CMPivot window contains the following elements:
 
      - **Show devices without**: Query for devices without this value for this property. For example, from the results of the `OS` query, select this option on a cell in the Version row: `OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ == 0) | project Device`  
 
-     - **Bing it**: Launch the default web browser to www.bing.com with this value as the query string.  
+     - **Bing it**: Launch the default web browser to https://www.bing.com with this value as the query string.  
 
    - Click any hyperlinked text to pivot the view on that specific information.  
 

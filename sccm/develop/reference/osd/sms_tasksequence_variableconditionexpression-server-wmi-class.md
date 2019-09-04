@@ -85,7 +85,7 @@ Class SMS_TaskSequence_VariableConditionExpression : SMS_TaskSequence_ConditionE
 
  `Value` - false  
 
- For more information about task sequence variables, see [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ For more information about task sequence variables, see [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
 ## Requirements  
 

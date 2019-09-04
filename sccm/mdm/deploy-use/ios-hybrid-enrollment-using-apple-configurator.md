@@ -26,7 +26,7 @@ The following procedure is recommended for dedicated iOS devices that will have 
 
 -   Device serial numbers - [How to get an iOS serial number](https://support.apple.com/en-us/HT204308)  
 
--   Mac computer with [Apple Configurator 2.0](http://go.microsoft.com/fwlink/?LinkId=518017)  
+-   Mac computer with [Apple Configurator 2.0](https://go.microsoft.com/fwlink/?LinkId=518017)  
 
 -   USB cables for connecting devices to your Mac computer  
 

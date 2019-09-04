@@ -183,8 +183,8 @@ manager: dougeby
 |Windows 8.1 distribution files from the product media|E:\Source$\Windows_8-1|  
 |Device drivers required for the reference and target computers (WDG-REF-01 and WDG-CLI-01)|E:\Source$\Drivers|  
 |SQL Server 2008 R2 from the product media|E:\Source$\SQL2008|  
-|SQL Server 2008 R2 SP1, available at [http://www.microsoft.com/download/en/details.aspx?id=26727](http://www.microsoft.com/download/en/details.aspx?id=26727)|E:\Source$\SQL2008R2SP1|  
-|SQL Server 2008 R2 SP1 CU6, available at [http://support.microsoft.com/kb/2679367](http://support.microsoft.com/kb/2679367)|E:\Source$\SQL2008R2SP1CU6|  
+|SQL Server 2008 R2 SP1, available at [https://www.microsoft.com/download/en/details.aspx?id=26727](https://www.microsoft.com/download/en/details.aspx?id=26727)|E:\Source$\SQL2008R2SP1|  
+|SQL Server 2008 R2 SP1 CU6, available at [https://support.microsoft.com/kb/2679367](https://support.microsoft.com/kb/2679367)|E:\Source$\SQL2008R2SP1CU6|  
 |System Center 2012 R2 Configuration Manager from the product media|E:\Source$\ConfigMgr|  
 |Office Professional Plus 2010 32-bit Volume Licensing version from the product media|E:\ Source$\OfficeProPlus2010|  
 

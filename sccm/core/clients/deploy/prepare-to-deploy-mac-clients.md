@@ -23,7 +23,7 @@ Follow these steps to make sure that you're ready to [deploy the Configuration M
 
 ## Mac prerequisites
 
-The Mac client installation package isn't supplied with the Configuration Manager media. Download the **Clients for additional operating systems** from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184).  
+The Mac client installation package isn't supplied with the Configuration Manager media. Download the **Clients for additional operating systems** from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=525184).  
 
 For the list of supported versions, see [Supported operating systems for clients and devices](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#mac-computers).
 

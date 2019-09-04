@@ -174,7 +174,7 @@ In the [Configuration Manager Windows PowerShell Basics](../../../develop/core/u
         You can get a Configuration Manager site by using either a site name or a site code.  
 
     RELATED LINKS  
-        Online Version: http://go.microsoft.com/fwlink/?LinkID=263855  
+        Online Version: https://go.microsoft.com/fwlink/?LinkID=263855  
         Set-CMSite  
 
     REMARKS  

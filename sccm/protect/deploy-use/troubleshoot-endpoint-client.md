@@ -90,7 +90,7 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 
 2.  If the error message that you received contains the code 0x80072f8f, the problem is most likely caused by an incorrect date or time setting on your computer.  
 
-3.  To reset your computer's date or time setting, follow the steps in [Fix broken desktop shortcuts and common system maintenance tasks](http://go.microsoft.com/fwlink/?LinkId=155579) (http://go.microsoft.com/fwlink/?LinkId=155579).  
+3.  To reset your computer's date or time setting, follow the steps in [Fix broken desktop shortcuts and common system maintenance tasks](https://go.microsoft.com/fwlink/?LinkId=155579) (https://go.microsoft.com/fwlink/?LinkId=155579).  
 
 ### Step 4: Rename the Software Distribution folder on your computer  
 

@@ -555,4 +555,4 @@ Class SMS_Package : SMS_PackageBaseclass
  [SMS_PackageBaseclass Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_packagebaseclass-server-wmi-class.md)   
  [GetPDFData Method in Class SMS_PDF_Package](../../../../../develop/reference/core/servers/configure/getpdfdata-method-in-class-sms_pdf_package.md)   
  [How to Create a Package](../../../../../develop/core/servers/configure/how-to-create-a-package.md)   
- [PowerShell Cmdlet: New-CMPackage](http://go.microsoft.com/fwlink/?LinkId=309284)
+ [PowerShell Cmdlet: New-CMPackage](https://go.microsoft.com/fwlink/?LinkId=309284)

@@ -185,7 +185,7 @@ Class SMS_TaskSequence_ApplyDriverPackageAction : SMS_TaskSequence_Action
 > [!NOTE]
 >  This property is required by the action. However it is not used when deploying the Windows Vista operating system.  
 
- The task sequence variable associated with this property is OSDAllowUnsignedDriver. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDAllowUnsignedDriver. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
 ## Remarks  
  Class qualifiers for this class include:  

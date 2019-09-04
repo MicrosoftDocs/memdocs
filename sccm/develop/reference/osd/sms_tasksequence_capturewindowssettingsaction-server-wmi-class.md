@@ -83,7 +83,7 @@ Class SMS_TaskSequence_CaptureWindowsSettingsAction : SMS_TaskSequence_Action
 
  `true` (default) to migrate the computer name.  
 
- The task sequence variable associated with this property is OSDMigrateComputerName. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDMigrateComputerName. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  `MigrateRegistrationInfo`  
  Data type: `Boolean`  
@@ -94,7 +94,7 @@ Class SMS_TaskSequence_CaptureWindowsSettingsAction : SMS_TaskSequence_Action
 
  `true` (default) to migrate information about the registered owner or organization.  
 
- The task sequence variable associated with this property is OSDMigrateRegistrationInfo. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDMigrateRegistrationInfo. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  `MigrateTimeZone`  
  Data type: `Boolean`  
@@ -105,7 +105,7 @@ Class SMS_TaskSequence_CaptureWindowsSettingsAction : SMS_TaskSequence_Action
 
  `true` (default) to migrate information about the time zone.  
 
- The task sequence variable associated with this property is OSDMigrateTimeZone. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDMigrateTimeZone. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  `Name`  
  Data type: `String`  

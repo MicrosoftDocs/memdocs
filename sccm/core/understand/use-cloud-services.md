@@ -31,7 +31,7 @@ Although provisioning cloud resources is not something you must do before you de
 
 -   For information about cloud-based distribution points, see [Install cloud-based distribution points](/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure).
 
--   For more information about Azure, see [Azure](http://go.microsoft.com/fwlink/p/?LinkId=262965) in the MSDN Library.  
+-   For more information about Azure, see [Azure](https://go.microsoft.com/fwlink/p/?LinkId=262965) in the MSDN Library.  
 
 ### Azure virtual machines (for cloud-based infrastructure)  
  Configuration Manager supports using computers that run in virtual machines in Azure, just as it does when run on-premises within your physical corporate network. You can use Azure virtual machines in the following scenarios:  
@@ -75,10 +75,10 @@ These additional capabilities do not require you to have an Azure subscription. 
 
  For more information, see the details for the different cloud-based resource scenarios. You can also view the following topics for Azure security:  
 
--   [Azure: Understanding Security Account Management in Azure](http://go.microsoft.com/fwlink/p/?LinkId=262968)  
+-   [Azure: Understanding Security Account Management in Azure](https://go.microsoft.com/fwlink/p/?LinkId=262968)  
 
--   [Azure Security Overview](http://go.microsoft.com/fwlink/p/?LinkId=262970)  
+-   [Azure Security Overview](https://go.microsoft.com/fwlink/p/?LinkId=262970)  
 
--   [Get Past the Security Crossroads in Your Cloud Migration](http://go.microsoft.com/fwlink/p/?LinkId=262971)  
+-   [Get Past the Security Crossroads in Your Cloud Migration](https://go.microsoft.com/fwlink/p/?LinkId=262971)  
 
--   [Data Security in Azure Part 1 of 2](http://go.microsoft.com/fwlink/p/?LinkId=262974)  
+-   [Data Security in Azure Part 1 of 2](https://go.microsoft.com/fwlink/p/?LinkId=262974)  

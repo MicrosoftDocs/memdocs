@@ -145,7 +145,7 @@ We love feedback so much that we're now enabling feedback through the [Feedback 
 - Configuration Manager OS Deployment
 - Configuration Manager Server
 
-Continue to use our [user voice page](http://configurationmanager.uservoice.com/) to vote on new feature ideas in Configuration Manager.
+Continue to use our [user voice page](https://configurationmanager.uservoice.com/) to vote on new feature ideas in Configuration Manager.
 
 
 <!-- When we have another H2 in this topic, Add this Next Steps section back in.  -->
