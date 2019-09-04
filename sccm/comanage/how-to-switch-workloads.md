@@ -7,7 +7,7 @@ ms.technology: configmgr-client
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 09/05/2019
 ms.topic: conceptual
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
 ms.collection: M365-identity-device-management
@@ -49,7 +49,8 @@ You can switch workloads when you enable co-management, or later when you're rea
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Co-management** node.  
 
-2. Select the co-management object, and then choose **Properties** in the ribbon.  
+2. Select the co-management object, and then choose **Properties** in the ribbon.
+   - You'll be prompted to sign into Azure AD. The prompt doesn't block you from updating your onboarding. However, you'll be prompted each time you open the **Properties** page until you do sign in.
 
 3. Switch to the **Workloads** tab. By default, all workloads are set to the **Configuration Manager** setting. To switch a workload, move the slider control for that workload to the desired setting.  
 
