@@ -80,7 +80,7 @@ Class SMS_TaskSequence_CaptureUserStateAction : SMS_TaskSequence_Action
 
  `true` (default) to allow the capture user state action to proceed even if some files cannot be captured. This property is required.  
 
- The task sequence variable associated with this property is OSDMigrateContinueOnLockedFiles. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDMigrateContinueOnLockedFiles. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  `Description`  
  Data type: `String`  
@@ -164,7 +164,7 @@ Class SMS_TaskSequence_CaptureUserStateAction : SMS_TaskSequence_Action
 
   `true` to skip encrypted files. The default value is `false`.  
 
-  The task sequence variable associated with this property is OSDMigrateSkipEncryptedFiles. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+  The task sequence variable associated with this property is OSDMigrateSkipEncryptedFiles. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
   `SupportedEnvironment`  
   Data type: `String`  
@@ -204,7 +204,7 @@ Class SMS_TaskSequence_CaptureUserStateAction : SMS_TaskSequence_Action
 
   The ID of the Configuration Manager package that contains USMT binaries. This property is required.  
 
-  The task sequence variable associated with this property is _OSDMigrateUsmtPackageID. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+  The task sequence variable associated with this property is _OSDMigrateUsmtPackageID. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
 ## Remarks  
  Class qualifiers for this class include:  

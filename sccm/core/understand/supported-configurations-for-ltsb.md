@@ -20,7 +20,7 @@ Use the information in this topic to understand what operating systems and produ
 If not stated otherwise in this or the LTSB specific topics, the same configurations and limitations that apply to the Current Branch version 1606 apply to the LTSB.  When conflicts occur, use the information that applies to the edition you are using. Typically, the LTSB is more limited than the Current Branch.
 
 ## General statement of support
-The following products and technologies are supported by this branch of Configuration Manager. However, their inclusion in this content does not express an extension of support for any product or version beyond that product's individual support lifecycle. Products that are beyond their support lifecycle are not supported for use with Configuration Manager. For more information, visit the [Microsoft Support Lifecycle](http://go.microsoft.com/fwlink/p/?LinkId=208270) website and read the [Microsoft Support Lifecycle Policy FAQ](http://go.microsoft.com/fwlink/p/?LinkId=31976).
+The following products and technologies are supported by this branch of Configuration Manager. However, their inclusion in this content does not express an extension of support for any product or version beyond that product's individual support lifecycle. Products that are beyond their support lifecycle are not supported for use with Configuration Manager. For more information, visit the [Microsoft Support Lifecycle](https://go.microsoft.com/fwlink/p/?LinkId=208270) website and read the [Microsoft Support Lifecycle Policy FAQ](https://go.microsoft.com/fwlink/p/?LinkId=31976).
 
 Additionally, products and product versions that are not listed in the following topics are not supported unless they have been announced on the [Enterprise Mobility + Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/).
 
@@ -138,7 +138,7 @@ You can use the LTSB to manage the following Windows Embedded devices by install
 ### Mac computers  
  You can use the LTSB to manage Mac OS X computers with the Configuration Manager client for Mac.
 
-The Mac client installation package is not supplied with the Configuration Manager media. You can download it as part of the "Clients for Additional Operating Systems" download from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184).  
+The Mac client installation package is not supplied with the Configuration Manager media. You can download it as part of the "Clients for Additional Operating Systems" download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=525184).  
 
 Support for Mac operating systems is limited to those listed in this section. Support does not include additional operating systems that might be supported by a future update to Mac client installation packages for Current Branch.
 
@@ -152,7 +152,7 @@ For more information, see [How to deploy clients to Macs in System Center Config
 ## Linux and UNIX servers
 You can use the LTSB to manage Linux and UNIX servers with the Configuration Manager client for Linux and UNIX.
 
-The Linux and UNIX client installation packages are not supplied with the Configuration Manager media. You can download them as part of the "Clients for Additional Operating Systems" download from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184). In addition to client installation packages, the client download includes the install script that manages the installation of the client on each computer.
+The Linux and UNIX client installation packages are not supplied with the Configuration Manager media. You can download them as part of the "Clients for Additional Operating Systems" download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=525184). In addition to client installation packages, the client download includes the install script that manages the installation of the client on each computer.
 
 Support for Linux and UNIX operating systems is limited to those listed in this section. Support does not include additional operating systems that might be supported by a future update to Linux and UNIX client packages for Current Branch.
 

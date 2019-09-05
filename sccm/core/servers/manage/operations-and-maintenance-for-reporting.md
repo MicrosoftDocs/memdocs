@@ -34,7 +34,7 @@ After the infrastructure is in place for reporting in System Center Configuratio
 > There must be a two-way trust established for users from a different domain than that of the Reporting Servicies Point Account to successfully run reports.
 
 > [!NOTE]  
->  Report Manager is a web\-based report access and management tool that you use to administer a single report server instance on a remote location over an HTTP connection. You can use Report Manager for operational tasks, for example, to view reports, modify report properties, and manage associated report subscriptions. This topic provides the steps to view a report and modify report properties in Report Manager, but for more information about the other options that Report Manager provides, see [Report Manager](http://go.microsoft.com/fwlink/p/?LinkId=224916) in SQL Server 2008 Books Online.  
+>  Report Manager is a web\-based report access and management tool that you use to administer a single report server instance on a remote location over an HTTP connection. You can use Report Manager for operational tasks, for example, to view reports, modify report properties, and manage associated report subscriptions. This topic provides the steps to view a report and modify report properties in Report Manager, but for more information about the other options that Report Manager provides, see [Report Manager](https://go.microsoft.com/fwlink/p/?LinkId=224916) in SQL Server 2008 Books Online.  
 
  Use the following procedures to run a Configuration Manager report.  
 
@@ -286,7 +286,7 @@ After the infrastructure is in place for reporting in System Center Configuratio
 -   Send an embedded or attached report. The rendering format and browser determine whether the report is embedded or attached. If your browser supports HTML 4.0 and MHTML, and you select the MHTML \(web archive\) rendering format, the report is embedded as part of the message. All other rendering formats \(CSV, PDF, Word, and so on\) deliver reports as attachments. Reporting Services does not check the size of the attachment or message before sending the report. If the attachment or message exceeds the maximum limit allowed by your mail server, the report is not delivered.  
 
 > [!IMPORTANT]  
->  You must configure the email settings in Reporting Services for the **Email** delivery option to be available. For more information about configuring the email settings in Reporting Services, see [Configuring a Report Server for Email Delivery](http://go.microsoft.com/fwlink/p/?LinkId=226668) in the SQL Server Books Online.  
+>  You must configure the email settings in Reporting Services for the **Email** delivery option to be available. For more information about configuring the email settings in Reporting Services, see [Configuring a Report Server for Email Delivery](https://go.microsoft.com/fwlink/p/?LinkId=226668) in the SQL Server Books Online.  
 
  Use the following procedure to create a report subscription to deliver a report by using email.  
 

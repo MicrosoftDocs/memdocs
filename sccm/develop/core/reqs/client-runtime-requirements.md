@@ -32,7 +32,7 @@ Applications that run on Microsoft System Center Configuration Manager clients h
  The Configuration Manager client has a native 64-bit version that is installed automatically on Windows 64-bit operating systems.  Applications that relied on the 32-bit interfaces to be present may need to be re-compiled in a native 64-bit environment to interact with the Configuration Manager client APIs.  
 
 ## General Requirements  
- For more information about System Center Configuration Manager client requirements, see [Supported Configurations for Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkId=248211).  
+ For more information about System Center Configuration Manager client requirements, see [Supported Configurations for Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=248211).  
 
 ## See Also  
  [Configuration Manager Client Development Requirements](../../../develop/core/reqs/client-development-requirements.md)   

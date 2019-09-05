@@ -83,7 +83,7 @@ When you migrate objects from a System Center 2012 Configuration Manager or Syst
 >  For each package that you migrate, update the package in the destination hierarchy. This action can prevent issues with deploying the package to distribution points in the destination hierarchy. However, when you update a package on the distribution point in the destination hierarchy, clients in that hierarchy will no longer be able to get that package from a shared distribution point. To update a package in the destination hierarchy, in the Configuration Manager console, go to the Software Library, right-click on the package, and then select **Update Distribution Points**. Do this action for each package that you migrate.  
 
 > [!TIP]  
->  You can use Microsoft System Center Configuration Manager Package Conversion Manager to convert packages and programs into System Center Configuration Manager applications. Download Package Conversion Manager from the [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?LinkId=212950) site. For more information, see [Configuration Manager Package Conversion Manager](http://go.microsoft.com/fwlink/p/?LinkId=247245).  
+>  You can use Microsoft System Center Configuration Manager Package Conversion Manager to convert packages and programs into System Center Configuration Manager applications. Download Package Conversion Manager from the [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=212950) site. For more information, see [Configuration Manager Package Conversion Manager](https://go.microsoft.com/fwlink/p/?LinkId=247245).  
 
 ### Virtual applications  
 When you migrate App-V packages from a supported Configuration Manager 2007 site, the migration process converts them to applications in the destination hierarchy. Additionally, based on existing advertisements for the App-V package, the following deployment types are created in the destination hierarchy:  
@@ -138,7 +138,7 @@ You can migrate the following operating system deployment objects from a support
 You can migrate configuration items and configuration baselines.  
 
 > [!NOTE]  
->  Uninterpreted configuration items from Configuration Manager 2007 source hierarchies are not supported for migration. You cannot migrate or import these configuration items to the destination hierarchy. For more about uninterpreted configuration items, see Uninterpreted configuration items in the [About Configuration Items in Desired Configuration Management](http://go.microsoft.com/fwlink/?LinkId=103846) topic in the Configuration Manager 2007 documentation library.  
+>  Uninterpreted configuration items from Configuration Manager 2007 source hierarchies are not supported for migration. You cannot migrate or import these configuration items to the destination hierarchy. For more about uninterpreted configuration items, see Uninterpreted configuration items in the [About Configuration Items in Desired Configuration Management](https://go.microsoft.com/fwlink/?LinkId=103846) topic in the Configuration Manager 2007 documentation library.  
 
 You can import Configuration Manager 2007 Configuration Packs. The import process automatically converts the configuration packs to be compatible with System Center Configuration Manager.  
 

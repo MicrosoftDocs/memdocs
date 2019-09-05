@@ -46,7 +46,7 @@ Class SMS_TaskSequence_PrepareOSAction : SMS_TaskSequence_Action
 
  `true` to build a mass-storage device driver list. The default value is `false`.  
 
- The task sequence variable associated with this property is OSDBuildStorageDriverList. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDBuildStorageDriverList. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  `Condition`  
  Data type: `SMS_TaskSequence_Condition`  
@@ -93,7 +93,7 @@ Class SMS_TaskSequence_PrepareOSAction : SMS_TaskSequence_Action
 
  `true` to keep the current product activation flag or reset it. The default value is `false`.  
 
- The task sequence variable associated with this property is OSDKeepActivation. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDKeepActivation. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  `Name`  
  Data type: `String`  
