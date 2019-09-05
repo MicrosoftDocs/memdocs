@@ -36,27 +36,27 @@ Depending on the device type, some of these options might not be available.
 
 2. Select one or more devices, and then select one of these client management tasks from the ribbon. You can also right-click the device.)  
 
-### Import User Device Affinity
+### Import user device affinity
 
 Configure the associations between users and devices, so you can efficiently deploy software to users.  
 
 For more information, see [Link users and devices with user device affinity](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).
 
-### Import Computer Information
+### Import computer information
 
 Launch the **Import Computer Information Wizard** to import new computer information into the Configuration Manager database. You can import multiple computers using a file, or specify information for a single computer.
 
-### Add Selected Items
+### Add selected items
 
 Provides the following options:
 
-- **Add Selected Items to Existing Device Collection**: Opens the **Select Collection** dialog box. Select the collection to which you want to add this device. The device is included in this collection by using a **Direct** membership rule.  
+- **Add selected items to existing device collection**: Opens the **Select Collection** dialog box. Select the collection to which you want to add this device. The device is included in this collection by using a **Direct** membership rule.  
 
-- **Add Selected Items to New Device Collection**: Opens the **Create Device Collection Wizard** where you can create a new collection. The selected collection is included in this collection by using a **Direct** membership rule.  
+- **Add selected items to new device collection**: Opens the **Create Device Collection Wizard** where you can create a new collection. The selected collection is included in this collection by using a **Direct** membership rule.  
 
 For more information, see [How to create collections](/sccm/core/clients/manage/collections/create-collections).
 
-### Install Client
+### Install client
 
 Opens the **Install Client Wizard**. This wizard uses client push installation to install or reinstall the Configuration Manager client on the selected device.
 
@@ -65,23 +65,23 @@ Opens the **Install Client Wizard**. This wizard uses client push installation t
 
 For more information, see [How to install Configuration Manager clients by using client push](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).
 
-### Run Script
+### Run script
 
 Opens the **Run Script** wizard to run a PowerShell script on the selected device.
 
 For more information, see [Create and run PowerShell scripts](/sccm/apps/deploy-use/create-deploy-scripts).
 
-### Install Application
+### Install application
 
 Install an application to a device in real time. This feature can help reduce the need for separate collections for every application.
 
 For more information, see [Install applications for a device](/sccm/apps/deploy-use/install-app-for-device).
 
-### Reassign Site
+### Reassign site
 
 Reassign one or more clients, including managed mobile devices, to another primary site in the hierarchy. You can individually reassign clients or select more than one to reassign them in bulk.  
 
-### Client Settings - Resultant Client Settings
+### Client settings - Resultant client settings
 
 When you deploy multiple client settings to the same device, the prioritization and combination of settings is complex. Use this option to view the resultant set of client settings deployed to this device.
 
@@ -119,21 +119,21 @@ For more information, ee [Determine whether to block clients](/sccm/core/clients
 
 <!-- Change Category is a hybrid action -->
 
-### Clear Required PXE Deployments
+### Clear required PXE deployments
 
 You can redeploy a required PXE deployment by clearing the status of the last PXE deployment assigned to a Configuration Manager collection or a computer. This action resets the status of that deployment and reinstalls the most recent required deployments.
 
 For more information, see [Use PXE to deploy Windows over the network](/sccm/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network).
 
-### Client Notification
+### Client notification
 
-For more information, see [Client notifications](/sccm/core/clients/manage/client-notification).
+For more information, see [Client notifications](/sccm/core/clients/manage/client-notification#client-notification).
 
 ### Endpoint Protection
 
-For more information, see [Client notifications](/sccm/core/clients/manage/client-notification).
+For more information, see [Client notifications](/sccm/core/clients/manage/client-notification#endpoint-protection).
 
-### Edit Primary Users
+### Edit primary users
 
 View users of this device in the last 90 days, or specify the primary users of this device.
 
@@ -160,7 +160,7 @@ The **Retire** option is supported only by mobile devices enrolled by on-premise
 
 For more information, see [Help protect your data with remote wipe, remote lock, or passcode reset](/sccm/mdm/deploy-use/wipe-lock-reset-devices).
 
-### Change Ownership
+### Change ownership
 
 If a device isn't domain-joined and doesn't have the Configuration Manager client installed, use this option to change the ownership to **Company** or **Personal**.  
 
@@ -170,7 +170,7 @@ You may need to add the **Device Owner** column to the view by right-clicking an
 
 For more information, see [Hybrid MDM with Configuration Manager and Microsoft Intune](/sccm/mdm/understand/hybrid-mobile-device-management).
 
-### Delete the client
+### Delete
 
 > [!WARNING]  
 > Don't delete a client if you want to uninstall the Configuration Manager client or remove it from a collection.  
