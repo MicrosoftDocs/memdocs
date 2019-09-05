@@ -2,7 +2,7 @@
 title: Deploy clients to Windows
 titleSuffix: Configuration Manager
 description: Learn how to deploy the Configuration Manager client to Windows computers.
-ms.date: 08/29/2019
+ms.date: 09/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -520,6 +520,14 @@ Provision client installation properties for group policy and software update-ba
 > If any installation properties are supplied on the CCMSetup.exe command line, installation properties provisioned on computers aren't used.
 
 A group policy administrative template named `ConfigMgrInstallation.adm` is supplied on the Configuration Manager installation media. Use this template to provision client computers with installation properties.
+
+> [!TIP]
+> By default, `ConfigMgrInstallation.adm` doesn't support strings larger than 255 characters. This configuration can impact adding multiple parameters or parameters with long values, such as CCMCERTISSUERS.<!-- SCCMDocs#1648 -->
+>
+> To workaround this issue:
+>
+> 1. Edit `ConfigMgrInstallation.adm` in Notepad.
+> 2. For the property `VALUENAME SetupParameters`, change the `MAXLEN` value to a larger integer. For example, `MAXLEN 511`.
 
 ### Configure and assign client installation properties by using a group policy object  
 

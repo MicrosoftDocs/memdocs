@@ -17,7 +17,7 @@ ms.collection: M365-identity-device-management
 
 *Applies to: System Center Configuration Manager (Current Branch), System Center Configuration Manager (Long-Term Servicing Branch)*
 
-This FAQ addresses common licensing questions about Configuration Manager current branch and the long-term servicing branch (LTSB) versions, available through Microsoft Volume Licensing programs. This article is for informational purposes. It doesn't supersede or replace any documentation covering System Center Configuration Manager licensing. For more information, see the product licensing for [System Center 2016](https://www.microsoft.com/en-us/licensing/product-licensing/system-center-2016.aspx)<!-- this link doesn't work without some language code --> and the [Product Terms](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). The Product Terms describe the use terms for all Microsoft products in Volume Licensing.
+This FAQ addresses common licensing questions about Configuration Manager current branch and the long-term servicing branch (LTSB) versions, available through Microsoft Volume Licensing programs. This article is for informational purposes. It doesn't supersede or replace any documentation covering System Center Configuration Manager licensing. For more information, see the product licensing for [System Center 2016](https://www.microsoft.com/licensing/product-licensing/system-center-2016.aspx)<!-- this link doesn't work without some language code --> and the [Product Terms](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). The Product Terms describe the use terms for all Microsoft products in Volume Licensing.
 
 For more information about Configuration Manager features, see the [product page](https://www.microsoft.com/cloud-platform/system-center-configuration-manager).
 
@@ -39,7 +39,7 @@ Both **Software Assurance** (SA) and **License and Software Assurance** (L&SA) a
 
 - **Software Assurance (SA)**: Customers must have active SA on Configuration Manager licenses, or equivalent subscription rights, in order to install and use the current branch option of Configuration Manager.    
 
-  - While SA is optional for some Microsoft products, the only way to get rights to use Configuration Manager current branch is with SA *or equivalent subscription rights*. For more information, see the [Software Assurance FAQ](https://www.microsoft.com/en-us/licensing/licensing-programs/FAQ-Software-Assurance.aspx).<!--this link doesn't work without some language code-->
+  - While SA is optional for some Microsoft products, the only way to get rights to use Configuration Manager current branch is with SA *or equivalent subscription rights*. For more information, see the [Software Assurance FAQ](https://www.microsoft.com/licensing/licensing-programs/FAQ-Software-Assurance.aspx).<!--this link doesn't work without some language code-->
 
 - **Microsoft License and Software Assurance (L&SA)**: Customers buying new licenses for Configuration Manager must acquire L&SA (the license and SA coverage).   
 
@@ -47,12 +47,12 @@ Both **Software Assurance** (SA) and **License and Software Assurance** (L&SA) a
 
   - If your SA expires, and you still have a license for Configuration Manager, you can no longer use the current branch. For more information, see the FAQ [If my SA expires and I had L&SA, what do I get?](#bkmk_sa-expires)
 
-For more information about license offerings, see [Ways to buy](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs)<!--this link doesn't work without some language code--> and [Licensing Product Terms](http://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=64).  
+For more information about license offerings, see [Ways to buy](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs)<!--this link doesn't work without some language code--> and [Licensing Product Terms](https://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=64).  
 
 
 ### <a name="bkmk_equiv-sub"></a> I read the term "equivalent subscription", what programs does that refer to?   
 
-Equivalent subscriptions refer to programs like [Enterprise Mobility + Security](http://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=51) (EMS) or [Microsoft 365 Enterprise](https://www.microsoft.com/microsoft-365/enterprise). There can be others, but these programs are the most common. The Microsoft Volume Licensing Product Terms refers to these programs as Management License Equivalent Licenses.
+Equivalent subscriptions refer to programs like [Enterprise Mobility + Security](https://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=51) (EMS) or [Microsoft 365 Enterprise](https://www.microsoft.com/microsoft-365/enterprise). There can be others, but these programs are the most common. The Microsoft Volume Licensing Product Terms refers to these programs as Management License Equivalent Licenses.
 
 
 ### <a name="bkmk_ems-expires"></a> I have Enterprise Mobility + Security and it expired, what must I do now?  

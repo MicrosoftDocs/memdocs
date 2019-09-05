@@ -24,7 +24,7 @@ Follow the high-level steps described below  to upgrade the client for Mac compu
 ## Step 1: Download the latest Mac client installation file from the Microsoft Download Center  
  The Mac client for Configuration Manager is not supplied on the Configuration Manager installation media and must be downloaded from the Microsoft Download Center. The Mac client installation files are contained in a Windows Installer file named ConfigmgrMacClient.msi.  
 
- You can download this file from the [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?LinkId=525184).  
+ You can download this file from the [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=525184).  
 
 ## Step 2: Run the downloaded installation file to create the Mac client installation file  
  On a computer that runs Windows, run the **ConfigmgrMacClient.msi** that you downloaded to unpack the Mac client installation file, named **Macclient.dmg**. This file can be found, by default, in the **C:\Program Files (x86)\Microsoft\System Center 2012 Configuration Manager Mac Client** folder on the Windows computer after you have unpacked the files.  

@@ -53,7 +53,7 @@ In addition to the other System Center Configuration Manager requirements and pr
 
 -   **App-V 4.6**: To use virtual applications in Configuration Manager, client computers must have the App-V 4.6 SP1, App-V 4.6 SP2, or App-V 4.6 SP3 client installed.  
 
-     Before you can successfully deploy virtual applications, you must also update the App-V 4.6 SP1 client with the hotfix that is described in the Knowledge Base article [2645225](http://go.microsoft.com/fwlink/p/?LinkId=237322).  
+     Before you can successfully deploy virtual applications, you must also update the App-V 4.6 SP1 client with the hotfix that is described in the Knowledge Base article [2645225](https://go.microsoft.com/fwlink/p/?LinkId=237322).  
 
 -   **App-V 5, App-V 5.0 SP1, App-V 5.0 SP2, App-V 5.0 SP3, and App-V 5.1**: For App-V 5.0 SP2, you must install [Hotfix Package 5](https://support.microsoft.com/en-us/kb/2963211) or use App-V 5.0 SP3.  
 -   **App-V 5.2**: This is built into Windows 10 Education (1607 and later), Windows 10 Enterprise (1607 and later), and Windows Server 2016.

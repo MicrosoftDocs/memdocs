@@ -23,7 +23,7 @@ Desktop Analytics is fully committed to customer data privacy, centering on thes
 
 - **Security:** Microsoft protects your data with strong security and encryption.  
 
-- **Trust:** Desktop Analytics supports the Microsoft [Privacy Statement](https://privacy.microsoft.com/privacystatement) and [Online Service Terms](http://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).  
+- **Trust:** Desktop Analytics supports the Microsoft [Privacy Statement](https://privacy.microsoft.com/privacystatement) and [Online Service Terms](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).  
 
 
 

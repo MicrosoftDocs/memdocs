@@ -33,7 +33,7 @@ The following are prerequisites, and known issues.
 
   - Both the **Visual C++ Redistributable** x86 and x64 files.   By default, Configuration Manager installs the x64 version on the computer that hosts the service connection point.  
 
-    To download a copy of the Visual C++ files, visit [Visual C++ Redistributable Packages for Visual Studio 2013](http://www.microsoft.com/download/details.aspx?id=40784) at the Microsoft Download Center.  
+    To download a copy of the Visual C++ files, visit [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784) at the Microsoft Download Center.  
 
   - .NET Framework 4.5.2 or later.  
 

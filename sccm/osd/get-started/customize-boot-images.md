@@ -32,7 +32,7 @@ Each version of Configuration Manager supports a specific version of the Windows
 
    Windows PE 3.1<sup>1</sup> and Windows PE 5  
 
-   <sup>1</sup> You can only add a boot image to Configuration Manager when it is based on Windows PE 3.1. Install the Windows AIK Supplement for Windows 7 SP1 to upgrade Windows AIK for Windows 7 (based on Windows PE 3) with the Windows AIK Supplement for Windows 7 SP1 (based on Windows PE 3.1). You can download Windows AIK Supplement for Windows 7 SP1 from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=5188).  
+   <sup>1</sup> You can only add a boot image to Configuration Manager when it is based on Windows PE 3.1. Install the Windows AIK Supplement for Windows 7 SP1 to upgrade Windows AIK for Windows 7 (based on Windows PE 3) with the Windows AIK Supplement for Windows 7 SP1 (based on Windows PE 3.1). You can download Windows AIK Supplement for Windows 7 SP1 from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=5188).  
 
    For example, when you have Configuration Manager, you can customize boot images from Windows ADK for Windows 10 (based on Windows PE 10) from the Configuration Manager console. However, while boot images based on Windows PE 5 are supported, you must customize them from a different computer and use the version of DISM that is installed with Windows ADK for Windows 8. Then, you can add the boot image to the Configuration Manager console.  
 
@@ -60,7 +60,7 @@ Each version of Configuration Manager supports a specific version of the Windows
 
 1. Install the Windows ADK on a computer that does not have another version of Windows AIK or Windows ADK, and does not have any Configuration Manager components installed.  
 
-2. Download Windows ADK for Windows 8.1 from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=39982).  
+2. Download Windows ADK for Windows 8.1 from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=39982).  
 
 3. Copy the boot image (wimpe.wim) from the Windows ADK installation folder (for example, <*Installation path*>\Windows Kits\\<*version*>\Assessment and Deployment Kit\Windows Preinstallation Environment\\<*x86 or amd64*>\\<*locale*>) to a destination folder on the computer from which you will customize the boot image. This procedure uses C:\WinPEWAIK as the destination folder name.  
 
@@ -180,9 +180,9 @@ Each version of Configuration Manager supports a specific version of the Windows
 
 #### To customize a boot image that uses Windows PE 3.1  
 
-1. Install the Windows AIK on a computer that does not have another version of Windows AIK or Windows ADK, and does not have any Configuration Manager components installed. Download Windows AIK from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=5753).  
+1. Install the Windows AIK on a computer that does not have another version of Windows AIK or Windows ADK, and does not have any Configuration Manager components installed. Download Windows AIK from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=5753).  
 
-2. Install the Windows AIK Supplement for Windows 7 with SP1 on the computer from step 1. Download Windows AIK Supplement for Windows 7 SP1 from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=5188).  
+2. Install the Windows AIK Supplement for Windows 7 with SP1 on the computer from step 1. Download Windows AIK Supplement for Windows 7 SP1 from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=5188).  
 
 3. Copy the boot image (wimpe.wim) from the Windows AIK installation folder (for example, <*InstallationPath*>\Windows AIK\Tools\PETools\amd64\\) to a folder on the computer from which you will customize the boot image. This procedure uses C:\WinPEWAIK as the folder name.  
 

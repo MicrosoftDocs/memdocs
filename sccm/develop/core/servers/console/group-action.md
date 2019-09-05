@@ -29,7 +29,7 @@ In System Center Configuration Manager, the Group action creates a menu group, a
 ```  
 <ActionDescription Class="Group" GroupAsRegion="true" DisplayName="New Group Name" MnemonicDisplayName="MnemonicNewGroupName" Description="NewGroupNameDescription">  <ShowOn>      <string>DefaultContextualTab</string> <!-- RIBBON -->     <string>ContextMenu</string> <!-- Context Menu -->   </ShowOn>       <ActionGroups>  
     <ActionDescription Class="Executable" DisplayName="Test Action (execute)" MnemonicDisplayName="A test item" Description="A test item Description">          <ShowOn>          <string>DefaultContextualTab</string> <!-- RIBBON -->         <string>ContextMenu</string> <!-- Context Menu -->      </ShowOn>         <Executable>  
-      <FilePath>http://go.microsoft.com/fwlink/?LinkId=67307</FilePath>  
+      <FilePath>https://go.microsoft.com/fwlink/?LinkId=67307</FilePath>  
     </Executable>  
     </ActionDescription>  
     <ActionDescription Class="Report" DisplayName="Test Action (report)" MnemonicDisplayName="Mnemonic" Description="Description">  

@@ -57,7 +57,7 @@ Figure 1. Relationship between the UDI Wizard and UDI Wizard Designer
 
   - [WPF](https://msdn.microsoft.com/library/ms754130.aspx) version 4.0  
 
-  - [Microsoft Prism](http://compositewpf.codeplex.com/) version 4.0  
+  - [Microsoft Prism](https://compositewpf.codeplex.com/) version 4.0  
 
   - [Microsoft Unity Application Block](http://unity.codeplex.com/) (Unity) version 2.1  
 

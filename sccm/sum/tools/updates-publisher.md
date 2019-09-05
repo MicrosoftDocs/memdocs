@@ -28,7 +28,7 @@ Using Updates Publisher, you can:
 After you publish updates to an update server, you can then use System Center Configuration Manager to detect and deploy those updates to your managed devices.
 
 > [!TIP]  
-> The previous version, [System Center Updates Publisher 2011](http://go.microsoft.com/fwlink/?LinkId=848111), remains in support. This updated version retains the same functionality, but supports additional operating systems, new features to simplify some tasks, and has an updated user interface.
+> The previous version, [System Center Updates Publisher 2011](https://go.microsoft.com/fwlink/?LinkId=848111), remains in support. This updated version retains the same functionality, but supports additional operating systems, new features to simplify some tasks, and has an updated user interface.
 
 ## Workspaces
 When you open Updates Publisher, it defaults to the Overview node of the *Updates Workspace.*
