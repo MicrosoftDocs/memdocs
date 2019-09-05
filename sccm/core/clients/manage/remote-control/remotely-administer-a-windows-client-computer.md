@@ -88,3 +88,6 @@ CmRcViewer.exe supports the following command-line options:
 - **/?** - Displays the command-line options for the remote control viewer.  
      
 **Example:CmRcViewer.exe** *<Address\>* *<\\\Site Server Name>*  
+
+       > [!NOTE]  
+       >  CmRcViewer.exe is supported on Windows 7 / Windows Server 2008 R2 and later.
