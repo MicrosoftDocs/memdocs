@@ -93,15 +93,12 @@ The following table lists the versions of the Windows 10 ADK that you can use wi
 | **1809**<br>(10.1.17763) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Backwards compatible](media/blue_compat.png) |
 | **1903**<br>(10.1.18362) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
 
-> [!Note] 
-> The above matrix only shows ADK supportability in relation to the version of Configuration Manager. For Windows client supportability, the ADK should match or be a newer version from the version of Windows that is being deployed.
-
 > [!Note]  
 > Configuration Manager only supports x86 and amd64 components of the Windows 10 ADK. It doesn't currently support ARM or ARM64 components.
 
 |Key|
 |--|
-| ![Supported](media/green_check.png) = **Supported** <br/> Microsoft recommends using the Windows ADK that matches the version of Windows you're deploying. Use the latest Windows ADK version when deploying the latest Windows 10 version. The latest Windows ADK version may support deployment of older OS versions, such as Windows 7.<!-- SCCMDocs issue 1229 --> For more information on Windows ADK component supportability, see [DISM supported platforms](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms) and [USMT requirements](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1). |
+| ![Supported](media/green_check.png) = **Supported** <br/> This table only shows Windows ADK supportability in relation to the version of Configuration Manager. Microsoft recommends using the Windows ADK that matches the version of Windows you're deploying. Use the latest Windows ADK version when deploying the latest Windows 10 version. The latest Windows ADK version may support deployment of older OS versions, such as Windows 7.<!-- SCCMDocs issue 1229 --> For more information on Windows ADK component supportability, see [DISM supported platforms](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms) and [USMT requirements](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1). |
 | ![Backwards compatible](media/blue_compat.png)  = **Backward compatible** <br/> This combination isn't tested but should work. We'll document any known issues or caveats. |
 | ![Not supported](media/Red_X.png) = **Not supported** |
 
