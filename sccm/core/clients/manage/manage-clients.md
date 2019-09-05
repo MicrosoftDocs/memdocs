@@ -417,51 +417,18 @@ Use Support Center to request and view client policy. For more information, see 
 
 ### <a name="bkmk_policy-script"></a> Start client policy retrieval by script  
 
-1. Open a text editor, such as Notepad.  
+1. Open a script editor, such as Notepad or Windows PowerShell ISE.  
 
-2. Copy and insert the following sample Visual Basic Scripting Edition code into the file:  
+2. Copy and insert the following sample PowerShell code<!-- SCCMDocs#1591 --> into the file:  
 
-    ```  
-    on error resume next  
-
-    dim oCPAppletMgr 'Control Applet manager object.  
-    dim oClientAction 'Individual client action.  
-    dim oClientActions 'A collection of client actions.  
-
-    'Get the Control Panel manager object.  
-    set  oCPAppletMgr=CreateObject("CPApplet.CPAppletMgr")  
-    if err.number <> 0 then  
-        Wscript.echo "Couldn't create control panel application manager"  
-        WScript.Quit  
-    end if  
-
-    'Get a collection of actions.  
-    set oClientActions=oCPAppletMgr.GetClientActions  
-    if err.number<>0 then  
-        wscript.echo "Couldn't get the client actions"  
-        set oCPAppletMgr=nothing  
-        WScript.Quit  
-    end if  
-
-    'Display each client action name and perform it.  
-    For Each oClientAction In oClientActions  
-
-        if oClientAction.Name = "Request & Evaluate Machine Policy" then  
-            wscript.echo "Performing action " + oClientAction.Name   
-            oClientAction.PerformAction  
-        end if  
-    next  
-
-    set oClientActions=nothing  
-    set oCPAppletMgr=nothing  
+    ```PowerShell
+    $trigger = "{00000000-0000-0000-0000-000000000021}"
+    Invoke-WmiMethod -Namespace root\ccm -Class sms_client -Name TriggerSchedule $trigger
     ```  
 
-3.  Save the file with a .vbs extension.  
+    > [!TIP]
+    > For more information about the schedule IDs, see [Message IDs](/sccm/core/support/send-schedule-tool#bkmk_sendschedule-guids).
 
-4.  On the client computer, run the file using one of the following methods:  
+3. Save the file with a .ps1 extension.  
 
-    -   Navigate to the file by using Windows Explorer, and double-click the script file.  
-
-    -   Open a command prompt, and type: **cscript &lt;path\filename.vbs>**.  
-
-5.  Choose **OK** in the **Windows Script Host** dialog box.  
+4. Run the script on the client.
