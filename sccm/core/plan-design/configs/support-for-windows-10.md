@@ -93,6 +93,9 @@ The following table lists the versions of the Windows 10 ADK that you can use wi
 | **1809**<br>(10.1.17763) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Backwards compatible](media/blue_compat.png) |
 | **1903**<br>(10.1.18362) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
 
+> [!Note] 
+> The above matrix only shows ADK supportability in relation to the version of Configuration Manager. For Windows client supportability, the ADK should match or be a newer version from the version of Windows that is being deployed.
+
 > [!Note]  
 > Configuration Manager only supports x86 and amd64 components of the Windows 10 ADK. It doesn't currently support ARM or ARM64 components.
 
