@@ -389,8 +389,8 @@ A Configuration Manager client downloads its client policy on a schedule that yo
 
 - [Client notification](#bkmk_policy-notify)
 - [The client control panel](#bkmk_policy-manual)
-- [Support Center](#bkmk_policy_support)
-- [A script](#bkmk_policy_script)
+- [Support Center](#bkmk_policy-support)
+- [A script](#bkmk_policy-script)
 
 ### <a name="bkmk_policy-notify"></a> Start client policy retrieval with client notification  
 
