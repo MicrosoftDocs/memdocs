@@ -143,7 +143,7 @@ This action requires the **Notify resource** permission on the **Collection** ob
 
 ### Restart
 
-Trigger the selected devices to restart. 
+Trigger the selected devices to restart. For more information, see [Restart clients](/sccm/core/clients/manage/manage-clients#restart-clients).
 
 
 
