@@ -30,7 +30,7 @@ The current branch is the production-ready build of Configuration Manager that p
 
 ### <a name="bkmk_ltsb"></a> What's the long-term servicing branch (LTSB)?  
 
-The LTSB is a production-ready build of Configuration Manager. It's intended for customers who allow Software Assurance or equivalent subscription rights to expire. When compared to the current branch, the LTSB has [reduced functionality](introduction-to-the-ltsb.md#features-that-arent-available). Customers who allow Software Assurance or equivalent subscription rights to expire must uninstall the current branch of Configuration Manager. Customers who have perpetual license rights to Configuration Manager may then install and use the LTSB build of the Configuration Manager version that's current at the time of expiration.
+The LTSB is a production-ready build of Configuration Manager. It's intended for customers who allow Software Assurance or equivalent subscription rights to expire. When compared to the current branch, the LTSB has [reduced functionality](/sccm/core/understand/introduction-to-the-ltsb#features-that-arent-available). Customers who allow Software Assurance or equivalent subscription rights to expire must uninstall the current branch of Configuration Manager. Customers who have perpetual license rights to Configuration Manager may then install and use the LTSB build of the Configuration Manager version that's current at the time of expiration.
 
 
 ### <a name="bkmk_licensing-acronyms"></a> I've seen *SA* and *L&SA* used in licensing content. What do these acronyms mean in regard to Configuration Manager?    
