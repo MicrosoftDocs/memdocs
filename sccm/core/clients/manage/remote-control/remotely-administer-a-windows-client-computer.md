@@ -90,4 +90,4 @@ CmRcViewer.exe supports the following command-line options:
 **Example:CmRcViewer.exe** *<Address\>* *<\\\Site Server Name>*  
 
        > [!NOTE]  
-       >  CmRcViewer.exe is supported on Windows 7 / Windows Server 2008 R2 and later.
+       >  CmRcViewer.exe is supported on Windows 7/Windows Server 2008 R2 and later.
