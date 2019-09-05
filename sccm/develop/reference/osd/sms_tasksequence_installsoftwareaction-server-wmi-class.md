@@ -120,7 +120,7 @@ Class SMS_TaskSequence_InstallSoftwareAction : SMS_TaskSequence_Action
 
  The program in the package to install. This property is required if `PackageID` is not set to `null`.  
 
- The task sequence variable associated with this property is _SMSSWDProgramName. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is _SMSSWDProgramName. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  `SupportedEnvironment`  
  Data type: `String`  

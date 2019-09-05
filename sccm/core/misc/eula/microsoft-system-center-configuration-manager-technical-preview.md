@@ -66,13 +66,13 @@ for this software, unless other terms accompany those items. If so, those terms 
 
       -  any Road Traffic Data or Bird’s Eye Imagery (or associated metadata).   
 
-   Your use of the Bing Maps API and associated content is also subject to the additional terms and conditions at http://go.microsoft.com/fwlink/?LinkID=223934.
+   Your use of the Bing Maps API and associated content is also subject to the additional terms and conditions at https://go.microsoft.com/fwlink/?LinkID=223934.
 
    **f.    No Copying or Distributing Data Sets.** You may not copy or distribute any data set (or any portion of a data set) included in the software.
 
 2. **INTERNET-BASED SERVICES.** Microsoft provides Internet-based services with the software. It may change or cancel them at any time.
 
-   **a. Consent for Internet-Based Services.** The software features described below and in the System Center Configuration Manager Privacy Statement connect to Microsoft or service provider computer systems over the Internet. In some cases, you will not receive a separate notice when they connect. In some cases, you may switch off these features or not use them. For more information about these features and how to control settings, see http://go.microsoft.com/fwlink/?LinkID=619434. **By using these features, you consent to the transmission of this information.** Microsoft does not use the information to identify or contact you.   
+   **a. Consent for Internet-Based Services.** The software features described below and in the System Center Configuration Manager Privacy Statement connect to Microsoft or service provider computer systems over the Internet. In some cases, you will not receive a separate notice when they connect. In some cases, you may switch off these features or not use them. For more information about these features and how to control settings, see https://go.microsoft.com/fwlink/?LinkID=619434. **By using these features, you consent to the transmission of this information.** Microsoft does not use the information to identify or contact you.   
 
      - **i. Computer Information.** The following features use Internet protocols, which send to the appropriate systems computer information, such as your Internet protocol address, the type of operating system, browser and name and version of the software you are using, and the language code of the device where you installed the software. Microsoft uses this information to make the Internet-based services available to you.
 
@@ -95,7 +95,7 @@ for this software, unless other terms accompany those items. If so, those terms 
 
          In some cases, you will not receive a separate notice before this feature takes effect. By installing the software, you consent to the transmission of standard computer information and the automatic downloading and installation of Updates.
 
-       - **<u>Customer Experience Improvement Program (CEIP)</u>**. This software uses CEIP. CEIP automatically sends Microsoft information about your hardware and how you use this software. We do not use this information to identify or contact you. To learn more about CEIP, see http://go.microsoft.com/fwlink/?LinkId=52097.
+       - **<u>Customer Experience Improvement Program (CEIP)</u>**. This software uses CEIP. CEIP automatically sends Microsoft information about your hardware and how you use this software. We do not use this information to identify or contact you. To learn more about CEIP, see https://go.microsoft.com/fwlink/?LinkId=52097.
 
        - **<u>Usage Data</u>**. Microsoft automatically collects usage data over the internet. Microsoft uses this data to: a) help improve your installation or upgrade experience, and b) improve the quality and security of Microsoft products and services. There are 3 levels of usage data (Basic, Enhanced and Full). This feature is set on the “Enhanced” level by default.
 
@@ -105,7 +105,7 @@ for this software, unless other terms accompany those items. If so, those terms 
 
          - **“Full”** includes all data collected in “Basic” and “Enhanced” levels as well as data about endpoint protection (number of devices in different EP states), update compliance percentages, and software updates. This level can also include advanced diagnostic information like system files and memory snapshots which may include personal information that existed in memory or log files at the time of capture.  Microsoft will not use this information to identify you, contact you, or for advertising purposes.
 
-         For more information, see the “Learn More” article about Usage Data Levels and Settings at http://go.microsoft.com/fwlink/?LinkId=624310 and the Privacy Statement for System Center Configuration Manager at http://go.microsoft.com/fwlink/?LinkID=619434.
+         For more information, see the “Learn More” article about Usage Data Levels and Settings at https://go.microsoft.com/fwlink/?LinkId=624310 and the Privacy Statement for System Center Configuration Manager at https://go.microsoft.com/fwlink/?LinkID=619434.
 
        - **<u>Microsoft Error Reporting Service</u>**. This feature helps Microsoft and Windows partners diagnose problems in the software and provide solutions. Not all problems will have a solution but when a solution is available, it will be offered as a step to solve a problem you have reported or as an update to install. As part of setup and installation, the Microsoft Error Reporting Service sends to Microsoft information about setup and installation failures in order to attempt to diagnose the problem. To help prevent problems and make the software more reliable, some solutions are also included in service packs and future versions of the software.
 

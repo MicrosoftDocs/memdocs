@@ -28,14 +28,14 @@ If necessary, take the following steps to satisfy any dependencies external to C
     When you set up single sign-on, your users can sign in with their corporate credentials to access the services in Intune.
 
     For more information, see the following topics:
-   -   [Prepare for single sign-on](http://go.microsoft.com/fwlink/?LinkID=271124)
-   -   [Plan for and deploy AD FS 2.0 for use with single sign-on](http://go.microsoft.com/fwlink/?LinkID=271125)
+   -   [Prepare for single sign-on](https://go.microsoft.com/fwlink/?LinkID=271124)
+   -   [Plan for and deploy AD FS 2.0 for use with single sign-on](https://go.microsoft.com/fwlink/?LinkID=271125)
 
 3. Deploy and configure directory synchronization.
 
     Directory synchronization lets you populate Intune with synchronized user accounts. The synchronized user accounts and security groups are added to Intune. Failure to enable Directory Synchronization is a common cause of devices not being able to enroll when setting up Configuration Manager MDM with Microsoft Intune.
 
-    For more information, see [Directory integration](http://go.microsoft.com/fwlink/?LinkID=271120) in the Active Directory documentation library.
+    For more information, see [Directory integration](https://go.microsoft.com/fwlink/?LinkID=271120) in the Active Directory documentation library.
 
 4. Optional, not recommended: If you are not using Active Directory Federation Services, reset users' Microsoft Online passwords.
 

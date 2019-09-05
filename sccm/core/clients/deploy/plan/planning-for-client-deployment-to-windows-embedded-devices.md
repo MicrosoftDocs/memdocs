@@ -41,11 +41,11 @@ ms.collection: M365-identity-device-management
 
  Configuration Manager supports managing the following types of write filters:  
 
-- File-Based Write Filter (FBWF) -  For more information, see [File-Based Write Filter](http://go.microsoft.com/fwlink/?LinkID=204717).  
+- File-Based Write Filter (FBWF) -  For more information, see [File-Based Write Filter](https://go.microsoft.com/fwlink/?LinkID=204717).  
 
-- Enhanced Write Filter (EWF) RAM - For more information, see [Enhanced Write Filter](http://go.microsoft.com/fwlink/?LinkId=204718).  
+- Enhanced Write Filter (EWF) RAM - For more information, see [Enhanced Write Filter](https://go.microsoft.com/fwlink/?LinkId=204718).  
 
-- Unified Write Filter (UWF) - For more information, see [Unified Write Filter](http://go.microsoft.com/fwlink/?LinkId=309236).  
+- Unified Write Filter (UWF) - For more information, see [Unified Write Filter](https://go.microsoft.com/fwlink/?LinkId=309236).  
 
   Configuration Manager does not support write filter operations when the Windows Embedded device is in EWF RAM Reg mode.  
 

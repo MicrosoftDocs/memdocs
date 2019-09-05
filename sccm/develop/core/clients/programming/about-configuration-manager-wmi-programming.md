@@ -23,7 +23,7 @@ Programming the System Center Configuration Manager client Windows Management In
 
  For more information about using Configuration Manager client WMI namespace objects by using the System.Management namespace, see [How to Read a WMI Object by Using System.Management](../../../../develop/core/clients/programming/how-to-read-a-wmi-object-by-using-system.management.md).  
 
- For more information about using the System.Management namespace, see [System.Management Namespace](http://go.microsoft.com/fwlink/?LinkID=84308).  
+ For more information about using the System.Management namespace, see [System.Management Namespace](https://go.microsoft.com/fwlink/?LinkID=84308).  
 
 ## VBScript  
  If you are using VBScript you access and use Configuration Manager client WMI objects by using the same coding techniques that are used for accessing other WMI objects, including the Configuration Manager WMI objects. For more information, see the [Windows Management Instrumentation](/windows/win32/wmisdk/wmi-start-page).  

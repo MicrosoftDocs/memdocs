@@ -159,7 +159,7 @@ The data and apps that EFS selective wipe currently supports are:
 
 - Work folders.
 
-- Files and folders encrypted by EFS. For more information, see [Best practices for the Encrypting File System](http://support.microsoft.com/kb/223316).  
+- Files and folders encrypted by EFS. For more information, see [Best practices for the Encrypting File System](https://support.microsoft.com/kb/223316).  
 
 
 ### Best practices for selective wipe  

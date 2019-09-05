@@ -148,11 +148,11 @@ The SCAP extensions for Configuration Manager include Windows command-line tools
 
 - The command-line parameters `-help` and `-?` for each tool print the usage to the screen. These usage details are then available to screen readers and other assistive technology.  
 
-- For more information, see [Windows Accessibility](http://windows.microsoft.com/windows/help/accessibility).
+- For more information, see [Windows Accessibility](https://windows.microsoft.com/windows/help/accessibility).
 
 The SCAP extensions also make use of accessibility features in Configuration Manager. For more information, see [Accessibility features in Configuration Manager](/sccm/core/understand/accessibility-features).
 
-For more information about Microsoft accessibility products and services, see the [Microsoft Accessibility website](http://go.microsoft.com/fwlink/p/?LinkId=9212).
+For more information about Microsoft accessibility products and services, see the [Microsoft Accessibility website](https://go.microsoft.com/fwlink/p/?LinkId=9212).
 
 
 

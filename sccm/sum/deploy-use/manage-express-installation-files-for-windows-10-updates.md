@@ -21,7 +21,7 @@ To learn how to use Configuration Manager to manage update content to stay curre
 
 
 > [!IMPORTANT]  
-> The OS client support is available in Windows 10, version 1607, with an update to the Windows Update Agent. This update is included with the updates released on April 11, 2017. For more information about these updates, see [support article 4015217](http://support.microsoft.com/kb/4015217). Future updates leverage express for smaller downloads. Prior versions of Windows 10, and Windows 10 version 1607 without this update don't support express installation files.  
+> The OS client support is available in Windows 10, version 1607, with an update to the Windows Update Agent. This update is included with the updates released on April 11, 2017. For more information about these updates, see [support article 4015217](https://support.microsoft.com/kb/4015217). Future updates leverage express for smaller downloads. Prior versions of Windows 10, and Windows 10 version 1607 without this update don't support express installation files.  
 
 
 ### Enable the site to download express installation files for Windows 10 updates

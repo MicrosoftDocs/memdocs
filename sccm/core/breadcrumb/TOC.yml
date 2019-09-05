@@ -1,15 +1,7 @@
-- name: Docs
-  tochref: ''
-  topichref: ''
+- name: Configuration Manager
+  tocHref: /azure/azure-monitor/
+  topicHref: /sccm/index
   items:
-    - name: Enterprise Mobility + Security
-      tocref: /azure/
-      topichref: ''
-      items:
-        - name: Configuration Manager
-          tocHref: /azure/azure-monitor/
-          topicHref: /sccm/index
-          items:
-            - name: Core infrastructure
-              tocHref: /azure/azure-monitor/platform/
-              topicHref: /sccm/core/understand/introduction
+  - name: Core infrastructure
+    tocHref: /azure/azure-monitor/platform/
+    topicHref: /sccm/core/understand/introduction

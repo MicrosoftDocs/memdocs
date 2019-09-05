@@ -42,8 +42,8 @@ For previous Configuration Manager versions, you must take the following steps t
 - The computer that runs the Office 365 Installer must have Internet access.  
 - The user that runs the Office 365 Installer must have **Read** and **Write** access to the content location share provided in the wizard.
 - If you receive a 404 download error, copy the following files to the user %temp% folder:
-  - [releasehistory.xml](http://officecdn.microsoft.com/pr/wsus/releasehistory.cab)
-  - [o365client_32bit.xml](http://officecdn.microsoft.com/pr/wsus/ofl.cab)  
+  - [releasehistory.xml](https://officecdn.microsoft.com/pr/wsus/releasehistory.cab)
+  - [o365client_32bit.xml](https://officecdn.microsoft.com/pr/wsus/ofl.cab)  
 
 ### Deploy Office 365 apps using Configuration Manager version 1806 or higher: 
 Starting in Configuration Manager 1806, the Office Customization Tool is integrated with the Office 365 Installer in the Configuration Manager console. When creating a deployment for Office 365, you can dynamically configure the latest Office manageability settings. <!--1358149-->
@@ -242,7 +242,7 @@ To change the update channel after you enable Office 365 clients to receive upda
 > [!Note]
 > The Office 365 Installation Wizard was introduced in Configuration Manager version 1702 and provides an easy way to create Office 365 apps.
 
-- [Download the Office 2016 Deployment Tool](http://aka.ms/ODT2016) from the Microsoft Download Center.  
+- [Download the Office 2016 Deployment Tool](https://aka.ms/ODT2016) from the Microsoft Download Center.  
 - Review the [configuration options for the Office Deployment Tool](https://technet.microsoft.com/library/jj219426.aspx).
 
 You can create an application just as you would with any other application in Configuration Manager from **Software Library** > **Overview** > **Application Management** > **Applications**. For details, see [Create and deploy an application](/sccm/apps/get-started/create-and-deploy-an-application).

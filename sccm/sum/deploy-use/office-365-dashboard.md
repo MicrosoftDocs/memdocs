@@ -70,7 +70,7 @@ By default, the scanning agent looks at the most recently used (MRU) files list 
 - Macro-enabled Office file formats, such as Excel macro-enabled workbooks (.xlsm) or Word macro-enabled document (.docm)  
 - Older Office formats that don't indicate whether there's macro content. For example, an Excel 97-2003 workbook (.xls).
 
-If you need a more detailed evaluation, deploy the **Office Readiness Toolkit**. This tool analyzes the code within a macro file. It checks if there are any potential compatibility concerns. For example, the file uses a function that changed in a more recent version of Office. After you run the Office Readiness Toolkit, Configuration Manager can use its results. This additional data enhances the device readiness calculation. For more information, see [Use the Readiness Toolkit to assess application compatibility for Office 365 ProPlus](http://aka.ms/readinesstoolkit).
+If you need a more detailed evaluation, deploy the **Office Readiness Toolkit**. This tool analyzes the code within a macro file. It checks if there are any potential compatibility concerns. For example, the file uses a function that changed in a more recent version of Office. After you run the Office Readiness Toolkit, Configuration Manager can use its results. This additional data enhances the device readiness calculation. For more information, see [Use the Readiness Toolkit to assess application compatibility for Office 365 ProPlus](https://aka.ms/readinesstoolkit).
 
 ## Office 365 ProPlus upgrade readiness dashboard
 

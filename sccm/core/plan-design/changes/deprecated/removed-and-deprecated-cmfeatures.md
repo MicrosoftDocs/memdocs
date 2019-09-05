@@ -56,7 +56,7 @@ The following sections include additional details for features removed with vers
 
 With Configuration Manager, native support for AMT-based computers from within the Configuration Manager console has been removed.  
 
-- AMT-based computers remain fully managed when you use the [Intel SCS Add-on for Microsoft System Center Configuration Manager](http://www.intel.com/content/www/us/en/software/setup-configuration-software.html). The add-on provides you access to the latest capabilities to manage AMT, while removing limitations introduced until Configuration Manager could incorporate those changes.  
+- AMT-based computers remain fully managed when you use the [Intel SCS Add-on for Microsoft System Center Configuration Manager](https://www.intel.com/content/www/us/en/software/setup-configuration-software.html). The add-on provides you access to the latest capabilities to manage AMT, while removing limitations introduced until Configuration Manager could incorporate those changes.  
 
 - Out of Band Management in System Center 2012 Configuration Manager is not affected by this change.  
 

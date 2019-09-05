@@ -33,7 +33,7 @@ Reporting in System Center Configuration Manager provides a set of tools and res
 
 - Exports reports that users can select in a variety of popular formats.  
 
-  For more information about Reporting Services, see [SQL Server Reporting Services](http://go.microsoft.com/fwlink/p/?LinkID=212032) in the SQL Server 2008 Books Online.  
+  For more information about Reporting Services, see [SQL Server Reporting Services](https://go.microsoft.com/fwlink/p/?LinkID=212032) in the SQL Server 2008 Books Online.  
 
 ##  <a name="BKMK_ReportingServicesPoint"></a> Reporting Services Point  
  The reporting services point is a site system role that is installed on a server that is running Microsoft SQL Server Reporting Services. The reporting services point copies the Configuration Manager report definitions to Reporting Services, creates report folders based on report categories, and sets security policy on the report folders and reports based on the role-based permissions for Configuration Manager administrative users. In a 10-minute interval, the reporting services point connects to Reporting Services to reapply the security policy if it has been changed, for example, by using Report Manager. For more information about how to plan for and install a reporting services point, see the following documentation:  
