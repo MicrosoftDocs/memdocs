@@ -5,7 +5,7 @@ description: Follow these steps to configure software update classifications and
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 08/22/2019
+ms.date: 09/10/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -66,6 +66,55 @@ Software updates metadata is retrieved during the synchronization process in Con
     > - The **Windows 10, version 1903 and later** product is added for synchronization.
     > - [Automatic Deployment Rules](/sccm/sum/deploy-use/automatically-deploy-software-updates#bkmk_adr-process) containing the **Windows 10** product will be updated to include **Windows 10, version 1903 and later**.
     > - [Servicing plans](/sccm/osd/deploy-use/manage-windows-as-a-service#servicing-plan-workflow) are updated to include the **Windows 10, version 1903 and later** product.
+
+## <a name="bkmk_WIfB"></a> Windows Insider Program 
+<!--3556023-->
+Starting in September 2019, you can service and update devices running Windows Insider Preview builds with Configuration Manager. This change means you can manage these devices without changing your normal processes or enabling Windows Update for Business. You can download Feature Updates and Cumulative Updates for Windows Insider Preview builds into Configuration Manager just like any other Windows 10 update or upgrade. For more information, see the [Publishing pre-release Windows 10 Feature Updates to WSUS](placeholder) blog post.
+
+### Prerequisites
+
+- Configuration Manager version 1906 or higher, configured for [software update management](/sccm/sum/plan-design/plan-for-software-updates).
+- Windows 10 devices running [Windows Insider Preview build](https://insider.windows.com/how-to-pc/).
+- A collection containing the Windows Insider devices.
+
+### Enable Windows Insider upgrades and updates
+
+You need to enable the products and classifications for Windows Insider upgrades and updates. Feature Updates for Windows Insider are under the **Windows Insider Pre-Release** product. However, Cumulative Updates and other updates for Windows Insider will be under the product **Windows 10, version 1903 and later**.
+
+1. In the **Configuration Manager** console, navigate to **Administration** > **Site Configuration** > **Sites**.
+2. Select the central administration site or the stand-alone primary site.  
+3. On the **Home** tab, in the **Settings** group, click **Configure Site Components**, and then click **Software Update Point**.
+4. On the **Products** tab, make sure the following products are selected for synchronization:
+    - Windows Insider Pre-Release
+    - Windows 10, version 1903 and later
+5. On the **Classifications** tab, make sure the following classifications are selected for synchronization:
+    - Upgrades
+    - Security Updates
+    - Updates (optional)
+6. Click **OK** to close the  **Software Update Point Component Properties**.
+
+### Upgrading Windows Insider devices
+
+Once the upgrades for Windows Insiders are synchronized, you can see them from **Software Library** > **Windows 10 Servicing** > **All Windows 10 Updates**.
+
+![Windows Insiders feature updates for Windows 10 servicing](media/3556023-windows-insiders-pre-release-feature-update.png)
+
+Deploy Feature Updates for Windows Insider to your target collection just like any other upgrade. However, you'll want to keep the following items in mind when you're deploying these Feature Updates:
+
+- These upgrades will be applicable to all Windows 10 clients 1903 or earlier, with matching architecture, edition and language.
+- There are license terms, your deployment must accept the terms in order to install.
+- Consider using the [thread priority in client settings](/sccm/core/clients/deploy/about-client-settings#bkmk_thread-priority).
+- Dynamic Update automatically installs critical updates, including the latest Cumulative Update, directly from Microsoft Update. This behavior started with Feature Updates for Windows 10 version 1903. 
+  - You can explicitly [disable Dynamic Update in client settings](/sccm/core/clients/deploy/about-client-settings#bkmk_du) or with a [setupconfig.ini file](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options). 
+  - For more information, see the [Windows 10 Dynamic Update](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847) blog post.
+
+For more information on how to deploy upgrades, see [Manage Windows as a service](/sccm/osd/deploy-use/manage-windows-as-a-service).
+
+
+### Keeping Insider devices up-to date
+
+Cumulative Updates for Windows Insider will be available for WSUS and by extension for Configuration Manager. These Cumulative Updates will be released at a frequency similar to Windows 10 version 1903 Cumulative Updates. The Windows Insider Cumulative updates are in the **Windows 10, version 1903 and later** product category and classified as either **Security Updates** or **Updates**. You can deploy the Cumulative Updates for Windows Insider using your regular software update process like using [automatic deployment rules](/sccm/sum/deploy-use/automatically-deploy-software-updates) or [phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
+
 
 ## Next steps
 
