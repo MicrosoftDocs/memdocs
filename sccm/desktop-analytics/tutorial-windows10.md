@@ -39,7 +39,7 @@ Desktop Analytics uses a *Log Analytics workspace* in your Azure subscription. A
 
 Before you start this tutorial, make sure you have the following prerequisites:  
 
-- An active Azure subscription, with [**Global Admin**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator) permissions  
+- An active Azure subscription, with [**Global Admin**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions) permissions  
 
     For more information, see [Desktop Analytics prerequisites](/sccm/desktop-analytics/overview#prerequisites).
 
