@@ -152,8 +152,6 @@
         href: plan-design/hierarchy/manage-content-library-flowchart.md
       - name: Content library cleanup tool
         href: plan-design/hierarchy/content-library-cleanup-tool.md
-      - name: Delivery Optimization In-Network Cache
-        href: plan-design/hierarchy/delivery-optimization-in-network-cache.md
       - name: Peer Cache for Configuration Manager clients
         href: plan-design/hierarchy/client-peer-cache.md
       - name: Package Transfer Manager
@@ -374,6 +372,10 @@
         href: servers/deploy/configure/deploy-and-manage-content.md
       - name: Monitor content
         href: servers/deploy/configure/monitor-content-you-have-distributed.md
+      - name: Delivery Optimization In-Network Cache
+        href: plan-design/hierarchy/delivery-optimization-in-network-cache.md
+      - name: Troubleshoot Delivery Optimization In-Network Cache
+        href: servers/deploy/configure/troubleshoot-delivery-optimization-in-network-cache.md
     - name: Run discovery
       items:
       - name: Discovery methods overview
