@@ -64,7 +64,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 ### Technical
 
-- An active Azure subscription, with [Global Admin](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator) permissions. [Microsoft Accounts](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts) aren't supported.  
+- An active Azure subscription, with [Global Admin](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions) permissions. [Microsoft Accounts](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts) aren't supported.  
 
     > [!Important]  
     > Desktop Analytics is currently offered as an Office 365 service and requires an Office 365 subscription in your Azure AD tenant. This may not be a requirement in the future.
