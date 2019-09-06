@@ -7,7 +7,7 @@ ms.technology: configmgr-client
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 09/06/2019
 ms.topic: conceptual
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
 ms.collection: M365-identity-device-management
@@ -16,6 +16,8 @@ ms.collection: M365-identity-device-management
 # How to switch Configuration Manager workloads to Intune
 
 One of the benefits of co-management is switching workloads from Configuration Manager to Microsoft Intune. When a Windows 10 device has the Configuration Manager client and is enrolled to Intune, you get the benefits of both services. You control which workloads, if any, you switch the authority from Configuration Manager to Intune. Configuration Manager continues to manage all other workloads, including those workloads that you don't switch to Intune, and all other features of Configuration Manager that co-management doesn't support.
+
+If you switch a workload to Intune, but later change your mind, you can switch it back to Configuration Manager.
 
 For more information on the supported workloads, see [Workloads](/sccm/comanage/workloads).
 
