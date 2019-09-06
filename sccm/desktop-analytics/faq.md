@@ -2,7 +2,7 @@
 title: FAQ for Desktop Analytics
 titleSuffix: Configuration Manager
 description: Frequently asked questions for Desktop Analytics.
-ms.date: 09/03/2019
+ms.date: 09/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -117,6 +117,12 @@ The migration process is transactional. You'll see either all inputs migrated wi
 ### I'm not ready yet, can I migrate after the initial onboarding?
 
 No, at this time you have to decide to migrate during [Initial onboarding](/sccm/desktop-analytics/set-up#initial-onboarding).
+
+### Can I use Update Compliance together with Desktop Analytics?
+
+Yes. If you use [Update Compliance](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started) in the Azure portal today, you can continue to do so now and beyond January 2020.
+
+<!-- For more information, see [blog post]... -->
 
 ## Other
 
