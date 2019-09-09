@@ -35,7 +35,7 @@ Software updates metadata is retrieved during the synchronization process in Con
 
      - **Critical Updates**: Specifies a widely released fix for a specific problem that addresses a critical, non-security-related bug.  
      - **Definition Updates**: Specifies a widely released and frequent software update that contains additions to a product's definition database.  
-     - **Feature Packs**: Specifies new product functionality that are first distributed outside of a product release and that are typically included in the next full product release.  
+     - **Feature Packs**: Specifies new product functionality that is first distributed outside of a product release and that's typically included in the next full product release.  
      - **Security Updates**: Specifies a widely released fix for a product-specific, security-related vulnerability.  
      - **Service Packs**: Specifies a tested, cumulative set of all hotfixes, security updates, critical updates, and updates that are applied to a product. Additionally, service packs may contain additional fixes for problems that are found internally since the release of the product.  
      - **Tools**: Specifies a utility or feature that helps to complete one or more tasks.  
@@ -71,11 +71,13 @@ Software updates metadata is retrieved during the synchronization process in Con
 <!--3556023-->
 Starting in September 2019, you can service and update devices running Windows Insider Preview builds with Configuration Manager. This change means you can manage these devices without changing your normal processes or enabling Windows Update for Business. You can download Feature Updates and Cumulative Updates for Windows Insider Preview builds into Configuration Manager just like any other Windows 10 update or upgrade. For more information, see the [Publishing pre-release Windows 10 Feature Updates to WSUS](placeholder) blog post.
 
+
 ### Prerequisites
 
 - Configuration Manager version 1906 or higher, configured for [software update management](/sccm/sum/plan-design/plan-for-software-updates).
 - Windows 10 devices running [Windows Insider Preview build](https://insider.windows.com/how-to-pc/).
 - A collection containing the Windows Insider devices.
+
 
 ### Enable Windows Insider upgrades and updates
 
@@ -101,7 +103,7 @@ Once the upgrades for Windows Insiders are synchronized, you can see them from *
 
 Deploy Feature Updates for Windows Insider to your target collection just like any other upgrade. However, you'll want to keep the following items in mind when you're deploying these Feature Updates:
 
-- These upgrades will be applicable to all Windows 10 clients 1903 or earlier, with matching architecture, edition and language.
+- These upgrades will be applicable to all Windows 10 clients 1903 or earlier, with matching architecture, edition, and language.
 - There are license terms, your deployment must accept the terms in order to install.
 - Consider using the [thread priority in client settings](/sccm/core/clients/deploy/about-client-settings#bkmk_thread-priority).
 - Dynamic Update automatically installs critical updates, including the latest Cumulative Update, directly from Microsoft Update. This behavior started with Feature Updates for Windows 10 version 1903. 
