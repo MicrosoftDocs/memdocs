@@ -122,7 +122,7 @@ No, at this time you have to decide to migrate during [Initial onboarding](/sccm
 
 Yes. If you use [Update Compliance](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started) in the Azure portal today, you can continue to do so now and beyond January 2020.
 
-<!-- For more information, see [blog post]... -->
+For more information, see the blog post: [Migrate user input data from "Windows Analytics: Upgrade Readiness" to Desktop Analytics](https://techcommunity.microsoft.com/t5/Desktop-Analytics-Blog/Migrate-user-input-data-from-Windows-Analytics-Upgrade-Readiness/ba-p/841744).
 
 ## Other
 
