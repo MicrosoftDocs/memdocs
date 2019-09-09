@@ -69,7 +69,9 @@ If the client isn't configured correctly, or the cache server isn't installed co
 
 ### <a name="bkmk_verify-server"></a> Verify on the server
 
-This method simulates a client download request to the server with the mandatory headers.
+First, verify the registry properties are configured correctly: `HKLM\SOFTWARE\Microsoft\Delivery Optimization In-Network Cache`. For example, the drive cache location is `PrimaryDrivesInput\DOINC-E77D08D0-5FEA-4315-8C95-10D359D59294`, where `PrimaryDrivesInput` can be multiple drives such as `C,D,E`.
+
+Next, use the following method to simulate a client download request to the server with the mandatory headers.
 
 1. Open a 64-bit PowerShell window as an administrator.
 2. Run the following command, and replace the name or IP address of your server for `<DoincServer>`:
@@ -102,6 +104,19 @@ The following attributes indicate success:
 
 - `StatusCode : 200`
 - `StatusDescription : OK`
+
+## Log files
+
+- ARR setup log: `%temp%\arr_setup.log`
+
+- DO cache server setup log: `SMS_DP$\Ms.Dsp.Do.Inc.Setup\DoincSetup.log` on the distribution point, and `DistMgr.log` on the site server
+
+- IIS operational logs: By default, `%SystemDrive%\inetpub\logs\LogFiles`
+
+- DO cache server operational log: `C:\Doinc\Product\Install\Logs`
+
+    > [!TIP]
+    > Among other uses, this log can help you identify connectivity issues with the Microsoft cloud.
 
 ## Setup error codes
 
