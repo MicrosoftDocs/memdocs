@@ -67,10 +67,11 @@ Software updates metadata is retrieved during the synchronization process in Con
     > - [Automatic Deployment Rules](/sccm/sum/deploy-use/automatically-deploy-software-updates#bkmk_adr-process) containing the **Windows 10** product will be updated to include **Windows 10, version 1903 and later**.
     > - [Servicing plans](/sccm/osd/deploy-use/manage-windows-as-a-service#servicing-plan-workflow) are updated to include the **Windows 10, version 1903 and later** product.
 
-## <a name="bkmk_WIfB"></a> Windows Insider Program 
+## <a name="bkmk_WIfB"></a> Windows Insider Program
 <!--3556023-->
 Starting in September 2019, you can service and update devices running Windows Insider Preview builds with Configuration Manager. This change means you can manage these devices without changing your normal processes or enabling Windows Update for Business. You can download Feature Updates and Cumulative Updates for Windows Insider Preview builds into Configuration Manager just like any other Windows 10 update or upgrade. For more information, see the [Publishing pre-release Windows 10 Feature Updates to WSUS](placeholder) blog post.
 
+For more information about support for Windows Insider in Configuration Manager, see [Support for Windows 10](/sccm/core/plan-design/configs/support-for-windows-10bkmk_WIfB-support).
 
 ### Prerequisites
 
