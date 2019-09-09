@@ -1,7 +1,6 @@
 - name: Configuration Manager SDK
   href: core/misc/system-center-configuration-manager-sdk.md
 - name: Overview
-  expanded: true
   items:
   - name: Configuration Manager SDK overview
     href: core/misc/system-center-configuration-manager-sdk.md
