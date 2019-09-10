@@ -38,7 +38,8 @@ Steps to workaround, if any.
 ### <a name="ki_contentlib"></a> Site fails to upgrade with remote content library
 <!--514642-->
 The site fails to upgrade with the following errors in **cmupdate.log**:  
-```  
+
+``` Log
 Failed to find any valid drives  
 GetContentLibraryParameters failed; 0x80070057  
 ERROR: Failed to process configuration manager update.  

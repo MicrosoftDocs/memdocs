@@ -60,7 +60,8 @@ Windows Update for Business (WUfB) allows you to keep Windows 10-based devices i
 2.  There's a new attribute, **UseWUServer**, under the **Windows Update** node in Configuration Manager Resource Explorer.  
 
 3.  Create a collection based on the **UseWUServer** attribute for all the computers that are connected via WUfB for updates and upgrades. You can create a collection based on a query similar to the one below:  
-    ``` 
+
+    ``` WQL
     Select sr.* from SMS_R_System as sr join SMS_G_System_WINDOWSUPDATE as su on sr.ResourceID=su.ResourceID where su.UseWUServer is null
     ```
 

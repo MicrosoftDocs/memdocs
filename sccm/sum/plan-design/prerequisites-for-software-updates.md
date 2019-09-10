@@ -98,14 +98,14 @@ If you synchronize any upgrades without having first installed [KB 3095113](http
 
 Errors that resemble the following appear on the Completion page of the Download Software Updates Wizard:
 
-```
+``` Output
 Error: Upgrade to Windows 10 Pro, version 1511, 10586
 Failed to download content id {content_id}. Error: Invalid certificate signature
 ```
 
 Additionally, errors resembling the following are logged in the PatchDownloader.log file:
 
-```
+``` Log
 Download http://wsus.ds.b1.download.windowsupdate.com/d/upgr/2015/12/10586.0.151029-1700.th2_release_...esd...
 Authentication of file C:\Users\{username}\AppData\Local\Temp\2\{temporary_filename}.tmp failed, error 0x800b0004
 ERROR: DownloadContentFiles() failed with hr=0x80073633

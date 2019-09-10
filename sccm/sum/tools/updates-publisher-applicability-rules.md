@@ -26,11 +26,11 @@ You manage applicability rules from the **Rules Workspace**. When you create a r
 
 For example, the following is a rule set that contains three rules. The first rule verifies that the *MyFile* file exists, and the second and third rules verify that the language of the Windows operating system is either English or Japanese.
 
-```
+``` Example
 And  
   File ‘\[PROGRAM\_FILES\] \\Microsoft\\MyFile’ exists  
   Or  
-    Windows Language is English   
+    Windows Language is English
     Windows Language is Japanese
 ```
 

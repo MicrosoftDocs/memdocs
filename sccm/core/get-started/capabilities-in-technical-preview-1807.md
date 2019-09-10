@@ -220,8 +220,7 @@ You can now view detailed script output in raw or structured JSON format. This f
 #### Example: Script output is valid JSON
 Command: `$PSVersionTable.PSVersion`  
 
-Output:  
-```
+``` Output
 Major  Minor  Build  Revision
 -----  -----  -----  --------
 5      1      16299  551
@@ -230,8 +229,7 @@ Major  Minor  Build  Revision
 #### Example: Script output isn't valid JSON
 Command: `Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
 
-Output:  
-```
+``` Output
 Microsoft Windows 10 Enterprise
 ```
 

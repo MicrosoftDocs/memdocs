@@ -64,7 +64,7 @@ Follow the high-level steps described below  to upgrade the client for Mac compu
 
 - Add the following script to the setting:  
 
-  ```  
+  ``` Shell
   #!/bin/sh  
   echo "Starting script\n"  
   echo "Changing directory to MAC Client\n"  
@@ -87,7 +87,6 @@ Follow the high-level steps described below  to upgrade the client for Mac compu
   sudo open ./CCMClient  
   echo "Ending Script\n"  
   exit  
-
   ```  
 
 - Add the configuration item to a configuration baseline, and then deploy the configuration baseline to all Mac computers that install a certificate independently from Configuration Manager.  
