@@ -1,7 +1,7 @@
 ---
-title: "Use cloud services to supplement on-premises infrastructure"
-titleSuffix: "Configuration Manager"
-description: "Provision cloud resources for System Center Configuration Manager to supplement your on-premises infrastructure."
+title: Use cloud services
+titleSuffix: Configuration Manager
+description: Provision cloud resources for Configuration Manager to supplement your on-premises infrastructure.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -12,11 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Use cloud services with System Center Configuration Manager
+
+# Use cloud services with Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager supports several cloud-based options. These can supplement your on-premises infrastructure, and can help solve business problems like:  
+Configuration Manager supports several cloud-based options. These can supplement your on-premises infrastructure, and can help solve business problems like:  
 
 -   How to manage BYOD (by using Intune for mobile device management).  
 

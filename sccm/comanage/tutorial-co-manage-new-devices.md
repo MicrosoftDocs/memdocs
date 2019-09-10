@@ -1,21 +1,15 @@
 ---
-# required metadata
-
-title: Tutorial&#58; Enable co-management for new internet-based Windows 10 devices
+title: Tutorial&#58; Enable co-management for internet devices
 titleSuffix: Configuration Manager 
-description: Configure co-management for Windows 10 devices for Configuration Manager and Intune. 
-keywords:
+description: Learn how to configure co-management for new internet-based Windows 10 devices with Configuration Manager and Microsoft Intune. 
 author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.date: 07/26/2019
 ms.topic: tutorial
 ms.prod: configuration-manager
-ms.service:  
-ms.technology:
-ms.assetid: 
-
-# optional metadata
+ms.technology: configmgr-client
+ms.assetid: 7fb02a5c-e286-46b1-a972-6335c858429a
 ---
 
 # Tutorial: Enable co-management for new internet-based devices

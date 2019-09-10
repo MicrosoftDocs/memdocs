@@ -1,7 +1,7 @@
 ---
-title: "Troubleshooting Windows Defender or Endpoint Protection client"
-titleSuffix: "Configuration Manager"
-description: "Learn how to troubleshoot problems with Windows Defender and Endpoint Protection."
+title: Troubleshoot Endpoint Protection
+titleSuffix: Configuration Manager
+description: Learn how to troubleshoot problems with Windows Defender and Endpoint Protection.
 ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
@@ -12,7 +12,8 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Troubleshooting Windows Defender or Endpoint Protection client
+
+# Troubleshoot Windows Defender or Endpoint Protection client
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
