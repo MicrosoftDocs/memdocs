@@ -2,7 +2,7 @@
 title: "Checklist for 1610"
 titleSuffix: "Configuration Manager"
 description: "Learn about actions to take before updating to System Center Configuration Manager version 1610."
-ms.date: 6/6/2017
+ms.date: 06/6/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

@@ -2,7 +2,7 @@
 title: "Supported Active Directory domains"
 titleSuffix: "Configuration Manager"
 description: "Get requirements for the membership of a System Center Configuration Manager site system in an Active Directory domain."
-ms.date: 9/18/2017
+ms.date: 09/18/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

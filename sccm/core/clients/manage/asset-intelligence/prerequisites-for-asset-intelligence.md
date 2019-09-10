@@ -2,7 +2,7 @@
 title: "Asset Intelligence Prerequisites"
 titleSuffix: "Configuration Manager"
 description: "Get the prerequisites for Asset Intelligence in System Center Configuration Manager."
-ms.date: 2/22/2017
+ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
