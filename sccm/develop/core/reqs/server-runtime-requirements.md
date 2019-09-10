@@ -1,8 +1,8 @@
 ---
-title: "Server Runtime Requirements"
-titleSuffix: "Configuration Manager"
-ms.date: "3/14/2017"
-ms.prod: "configuration-manager"
+title: Server Runtime Requirements
+titleSuffix: Configuration Manager
+ms.date: 03/14/2017
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: 567e9945-ad60-4d10-8f67-edc4b31ee914
