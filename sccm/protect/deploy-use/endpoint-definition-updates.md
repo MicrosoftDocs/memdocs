@@ -1,7 +1,7 @@
 ---
-title: "Configure Endpoint Protection"
-titleSuffix: "Configuration Manager"
-description: "Learn how to select and configure methods with Endpoint Protection in System Center Configuration Manager to keep antimalware definitions up to date on client computers."
+title: Configure definition updates
+titleSuffix: Configuration Manager
+description: Learn how to select and configure methods with Endpoint Protection in Configuration Manager to keep antimalware definitions up to date on client computers.
 ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
@@ -13,7 +13,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 
-#  Configure Definition Updates for Endpoint Protection  
+# Configure definition updates for Endpoint Protection  
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 

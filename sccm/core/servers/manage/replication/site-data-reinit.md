@@ -1,5 +1,5 @@
 ---
-title: Global data reinit
+title: Site data reinit
 titleSuffix: Configuration Manager
 description: Use this diagram to start troubleshooting SQL replication reinit for site data in a Configuration Manager hierarchy
 ms.date: 08/09/2019
@@ -13,7 +13,7 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# SQL replication
+# Troubleshoot site data reinit
 
 In a multi-site hierarchy, Configuration Manager uses SQL replication to transfer data between sites. For more information, see [Database replication](/sccm/core/plan-design/hierarchy/database-replication).
 

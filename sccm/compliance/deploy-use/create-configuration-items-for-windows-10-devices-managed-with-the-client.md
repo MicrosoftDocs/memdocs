@@ -1,7 +1,7 @@
 ---
-title: "Create configuration items for client-managed Windows 10 "
-titleSuffix: "Configuration Manager"
-description: "Use the System Center Configuration Manager Windows 10 configuration item to manage settings for Windows 10 computers that are managed by the Configuration Manager client."
+title: Create configuration items for Windows 10
+titleSuffix: Configuration Manager
+description: Use the Windows 10 configuration item to manage settings for Windows 10 computers that are managed by the Configuration Manager client.
 ms.date: 05/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
@@ -12,8 +12,10 @@ manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
+
 # Create configuration items for Windows 10 devices
-Use the System Center Configuration Manager **Windows 10** configuration item to manage settings for Windows 10 computers that are managed by the Configuration Manager client.  
+
+Use the Configuration Manager **Windows 10** configuration item to manage settings for Windows 10 computers that are managed by the Configuration Manager client.  
   
 > [!IMPORTANT]  
 >  In this release, if you created a **Password** setting as part of a configuration item of the type **Windows 10** (for a device managed with the Configuration Manager client), be aware of the following problem. If the setting doesn't already exist, or hasn't been configured on the Windows 10 device, it will incorrectly evaluate as compliant.  

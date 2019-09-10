@@ -13,7 +13,7 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# SQL replication
+# Troubleshoot global data reinit
 
 In a multi-site hierarchy, Configuration Manager uses SQL replication to transfer data between sites. For more information, see [Database replication](/sccm/core/plan-design/hierarchy/database-replication).
 

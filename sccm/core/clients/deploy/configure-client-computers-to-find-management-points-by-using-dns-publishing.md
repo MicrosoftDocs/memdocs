@@ -1,7 +1,7 @@
 ---
-title: "Configure clients find management points DNS publishing"
-titleSuffix: "Configuration Manager"
-description: "Set client computers to find management points by using DNS publishing in System Center Configuration Manager."
+title: Configure clients to use DNS publishing
+titleSuffix: Configuration Manager
+description: Configure Configuration Manager client computers to find management points by using DNS publishing.
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,7 +12,8 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# How to configure client computers to find management points by using DNS publishing in System Center Configuration Manager
+
+# Configure client computers to find management points by using DNS publishing
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
