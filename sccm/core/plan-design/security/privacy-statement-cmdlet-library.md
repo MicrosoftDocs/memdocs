@@ -11,7 +11,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
----
+--- 
 
 # Configuration Manager cmdlet library privacy statement
 
@@ -21,7 +21,7 @@ This privacy statement covers the features for the System Center Configuration M
 
 ## Usage data  
 
-#### What this feature does   
+#### What this feature does
 
 The System Center Configuration Manager cmdlet library lets you manage a Configuration Manager hierarchy by using Windows PowerShell cmdlets and scripts. The cmdlet library collects information about how you use the cmdlets in the library to identify trends and usage patterns. The cmdlet library also collects the types and numbers of errors that you receive when you use the cmdlets.  
 
