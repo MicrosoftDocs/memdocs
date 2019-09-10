@@ -1,6 +1,6 @@
 ---
 title: "MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER EVALUATION"
-ms.date: 1/12/2017
+ms.date: 01/12/2017
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other

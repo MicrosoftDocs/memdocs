@@ -2,7 +2,7 @@
 title: "Example validation state transitions for Asset Intelligence"
 titleSuffix: "Configuration Manager"
 description: "See examples of validation state transitions for Asset Intelligence in System Center Configuration Manager."
-ms.date: 2/22/2017
+ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

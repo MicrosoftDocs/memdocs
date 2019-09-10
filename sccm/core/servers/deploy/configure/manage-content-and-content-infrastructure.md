@@ -2,7 +2,7 @@
 title: "Content infrastructure"
 titleSuffix: "Configuration Manager"
 description: "Learn how to deploy and then manage your content management infrastructure for System Center Configuration Manager."
-ms.date: 2/7/2017
+ms.date: 02/7/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
