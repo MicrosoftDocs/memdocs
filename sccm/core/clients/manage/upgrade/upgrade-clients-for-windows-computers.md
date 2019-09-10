@@ -1,5 +1,5 @@
 ---
-title: Upgrade clients
+title: Upgrade clients on Windows
 titleSuffix: Configuration Manager
 description: Upgrade clients on Windows computers in Configuration Manager.
 ms.date: 08/27/2019
