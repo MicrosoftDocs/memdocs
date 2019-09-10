@@ -25,7 +25,7 @@ If the app you are working with is already installed on a Windows 10 computer, y
 
 The syntax for Get-AppxPackage is:
 
-```
+``` Syntax
 Get-AppxPackage [[-Name] <String> ] [[-Publisher] <String> ] [-AllUsers] [-User <String> ] [ <CommonParameters>]
 ```
 
@@ -73,10 +73,11 @@ Here is the information retrieved for OneNote:
 
 In Edge, the information you want is displayed; in Internet Explorer, click **Open** to see the information. The PFN value is given on the first line. Here's how the results look for our example:
 
-```json
+``` JSON
 {
   "packageFamilyName": "Microsoft.Office.OneNote_8wekyb3d8bbwe",
   "packageIdentityName": "Microsoft.Office.OneNote",
   "windowsPhoneLegacyId": "ca05b3ab-f157-450c-8c49-a1f127f5e71d",
   "publisherCertificateName": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
 }
+```

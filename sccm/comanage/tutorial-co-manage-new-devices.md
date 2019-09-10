@@ -393,7 +393,7 @@ For example, *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetup
 
      The command-line structure should resemble this example using only the CCMSETUPCMD and SMSSiteCode parameters:  
 
-     ```
+     ``` Command
      CCMSETUPCMD="CCMHOSTNAME=<ServiceName.CLOUDAPP.NET/CCM_Proxy_MutualAuth/<GUID>" SMSSiteCode="<YourSiteCode>"  
      ```
 
