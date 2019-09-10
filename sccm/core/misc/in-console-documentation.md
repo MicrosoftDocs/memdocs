@@ -1,5 +1,7 @@
 ---
 title: In-console documentation
+titleSuffix: Configuration Manager
+description: This article only displays in the Configuration Manager console.
 ms.date: 09/09/2019
 ms.topic: conceptual
 ms.prod: configuration-manager

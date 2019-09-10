@@ -1,5 +1,6 @@
 ---
-title: "Start using System Center Configuration Manager"
+title: Deploy servers and roles
+titleSuffix: Configuration Manager
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -10,18 +11,19 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Start using System Center Configuration Manager
+
+# Deploy servers and roles
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-After you plan out your System Center Configuration Manager site and hierarchy  topology and are ready to get sites installed or upgraded, use the information in the following topics:  
+After you plan out your Configuration Manager site and hierarchy topology and are ready to get sites installed or upgraded, use the information in the following articles:  
 
--   [Install System Center Configuration Manager sites](/sccm/core/servers/deploy/install/installing-sites)  
+- [Install Configuration Manager sites](/sccm/core/servers/deploy/install/installing-sites)  
 
--   [Upgrade to System Center Configuration Manager](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md)  
+- [Upgrade to Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)  
 
--   [Scenarios to streamline your installation of System Center Configuration Manager](../../../core/servers/deploy/install/scenarios-to-streamline-your-installation.md)  
+- [Scenarios to streamline your installation of Configuration Manager](/sccm/core/servers/deploy/install/scenarios-to-streamline-your-installation)  
 
--   [Configure sites and hierarchies for System Center Configuration Manager](../../../core/servers/deploy/configure/configure-sites-and-hierarchies.md)  
+- [Configure sites and hierarchies](/sccm/core/servers/deploy/configure/configure-sites-and-hierarchies)  
 
--   [Migrate data between hierarchies in System Center Configuration Manager](../../../core/migration/migrate-data-between-hierarchies.md)  
+- [Migrate data between hierarchies](/sccm/core/migration/migrate-data-between-hierarchies)  
