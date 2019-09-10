@@ -1,7 +1,7 @@
 ---
-title: "Upgrade clients"
-titleSuffix: "Configuration Manager"
-description: "Get information about how to upgrade clients in System Center Configuration Manager."
+title: Upgrade clients
+titleSuffix: Configuration Manager
+description: Get information about how to upgrade clients in Configuration Manager.
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,7 +12,8 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Upgrade clients in System Center Configuration Manager
+
+# Upgrade clients in Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
