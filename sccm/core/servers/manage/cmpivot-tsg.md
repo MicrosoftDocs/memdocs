@@ -2,7 +2,7 @@
 title: Troubleshooting CMPivot
 titleSuffix: Configuration Manager
 description: Learn how to troubleshoot CMPivot in Configuration Manager.
-ms.date: 04/04/2019
+ms.date: 09/16/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -17,7 +17,34 @@ ms.collection: M365-identity-device-management
 
 CMPivot is an in-console utility that now provides access to real-time state of devices in your environment. It immediately runs a query on all currently connected devices in the target collection and returns the results. Occasionally, you may find yourself needing to troubleshoot CMPivot. For example, you may see that a client sent a state message for CMPivot. However, the site server didn't process the message because it was corrupted. This article helps you understand the flow of information for CMPivot.
 
-## Get information from the site server
+## Troubleshooting CMPivot in 1906
+
+``` Log
+Auditing: User <username> initiated client operation 145 to collection <CollectionId>.
+```
+
+
+
+
+
+## Troubleshooting CMPivot in 1902
+
+Starting in Configuration Manager version 1902, you can run CMPivot from the central administration site (CAS) in a hierarchy. The primary site still handles the communication to the client. When running CMPivot from the central administration site, it communicates with the primary site over the high-speed message subscription channel. This communication doesn't rely upon standard SQL replication between sites. If your SQL Server or Provider is remote, or you use SQL Always On, you'll have a “double hop scenario” for CMPivot. For information on how define constrained delegation for a "double hop scenario", see [CMPivot starting in version 1902](/sccm/core/servers/manage/cmpivot#bkmk_cmpivot1902).
+
+### Get information from the site server
+
+By default, the site server log files are located in C:\Program Files\Microsoft Configuration Manager\logs. This location may change depending on what was specified for your installation directory or if you offloaded items like the SMS Provider to another server. If you are running, CMPivot from the CAS, the logs will be on the primary site server.
+
+Check the **smsprov.log** for these lines:
+
+``` Log
+Type parameter is 135.
+Auditing: User <username> ran script 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 with hash dc6c2ad05f1bfda88d880c54121c8b5cea6a394282425a88dd4d8714547dc4a2 on collection <CollectionId>.
+```
+
+## Troubleshooting CMPivot in 1810 and earlier
+
+### Get information from the site server
 
 By default, the site server log files are located in C:\Program Files\Microsoft Configuration Manager\logs. This location may change depending on what was specified for your installation directory or if you offloaded items like the SMS Provider to another server.
 
@@ -58,7 +85,7 @@ In the **BgbServer.log**, look for the **TaskID** you gathered from SQL. In the 
     2NyaXB0Q29udGVudD4=-) to 5 clients with throttling (strategy: 1 param: 42)
    Finished sending push task (PushID: 260 TaskID: 258) to 5 clients
 
-## Client logs
+### Client logs
 
 Once you have the information from the site server, check the client logs. By default, the client logs are located in C:\Windows\CCM\Logs.
 
