@@ -2,7 +2,7 @@
 title: "Command-line install"
 titleSuffix: "Configuration Manager"
 description: "Learn how to run System Center Configuration Manager Setup at a command prompt for a variety of site installations."
-ms.date: 3/27/2017
+ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

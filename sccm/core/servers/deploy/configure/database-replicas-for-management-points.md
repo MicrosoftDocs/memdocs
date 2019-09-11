@@ -239,7 +239,7 @@ In addition to configuring the management point to use the database replica serv
     > [!IMPORTANT]  
     >  If you are configuring more than one  database replica on a single SQL Server, for each subsequent replica you configure you must use a modified version of this script for this procedure. See  [Supplemental script for additional database replicas on a single SQL Server](#bkmk_supscript)  
 
-    ```  
+    ``` PowerShell
     # Script for creating a self-signed certificate for the local machine and configuring SQL Server to use it.  
 
     Param($SQLInstance)  

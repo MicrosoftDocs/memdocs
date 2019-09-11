@@ -1,5 +1,5 @@
 ---
-title: Configure Endpoint Protection
+title: Endpoint Protection client settings
 titleSuffix: Configuration Manager
 description: Learn how to configure custom client settings for Endpoint Protection.
 ms.date: 07/30/2018

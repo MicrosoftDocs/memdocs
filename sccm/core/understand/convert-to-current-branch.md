@@ -1,8 +1,8 @@
 ---
-title: "Upgrade the long-term servicing branch to the current branch "
-titleSuffix: "Configuration Manager"
-description: "Learn how to convert a Long-Term Servicing Branch site to a Current Branch site."
-ms.date: 2/8/2017
+title: Upgrade the LTSB to current branch
+titleSuffix: Configuration Manager
+description: Learn how to convert a long-term servicing branch (LTSB) site to a current branch site.
+ms.date: 02/8/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,7 +12,6 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-
 
 # Upgrade the long-term servicing branch to the current branch
 

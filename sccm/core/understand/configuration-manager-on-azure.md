@@ -1,6 +1,7 @@
 ---
-title: "Configuration Manager on Azure"
-description: "Information about using Configuration Manager on an Azure environment."
+title: Configuration Manager on Azure
+titleSuffix: Configuration Manager
+description: Information about using Configuration Manager on an Azure environment.
 ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,7 +12,9 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
+
 # Configuration Manager on Azure - Frequently Asked Questions
+
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 The following questions and answers can help you understand when to use and how to configure Configuration Manager on Microsoft Azure.

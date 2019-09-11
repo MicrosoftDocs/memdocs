@@ -24,7 +24,7 @@ Here are procedures for uninstalling Mac clients and for renewing their certific
 
 2.  Navigate to the Tools folder and enter the following command-line:  
 
-     **./CMUninstall -c**  
+     `./CMUninstall -c`
 
     > [!NOTE]  
     >  The **-c** property instructs the client uninstall to also remove  client crash logs and log files. We recommend this to avoid confusion if you later reinstall the client.  
@@ -96,7 +96,7 @@ Here are procedures for uninstalling Mac clients and for renewing their certific
 
 7.  In the **Edit Discovery Script** dialog box, enter the following Shell Script:  
 
-    ```  
+    ``` Shell
     defaults read com.microsoft.ccmclient SMSID  
     ```  
 
@@ -106,7 +106,7 @@ Here are procedures for uninstalling Mac clients and for renewing their certific
 
 10. In the **Create Remediation Script** dialog box, enter the following Shell Script:  
 
-    ```  
+    ``` Shell
     defaults delete com.microsoft.ccmclient SMSID  
     ```  
 
@@ -130,7 +130,7 @@ Here are procedures for uninstalling Mac clients and for renewing their certific
 
 15. On Mac computers that have the SMSID removed, run the following command to install a new certificate:  
 
-    ```  
+    ``` Shell
     sudo ./CMEnroll -s <enrollment_proxy_server_name> -ignorecertchainvalidation -u <'user name'>  
     ```  
 
@@ -138,7 +138,7 @@ Here are procedures for uninstalling Mac clients and for renewing their certific
 
 16. To limit the enrolled certificate to Configuration Manager, on the Mac computer, open a terminal window and make the following changes:  
 
-    a.  Enter the command **sudo /Applications/Utilities/Keychain\ Access.app/Contents/MacOS/Keychain\ Access**  
+    a.  Enter the command `sudo /Applications/Utilities/Keychain\ Access.app/Contents/MacOS/Keychain\ Access`
 
     b.  In the **Keychain Access** dialog, in the **Keychains** section, choose **System**, and then, in the **Category** section, choose **Keys**.  
 
