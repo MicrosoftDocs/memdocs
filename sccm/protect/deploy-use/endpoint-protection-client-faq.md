@@ -102,7 +102,7 @@ To remove all unwanted or potentially harmful items that Windows Defender detect
 
 3.  To learn more about the detected threats, click the **History** tab, and then select **All detected items**.  
 
-4.  If you don't see all the detected items, click **View details**. If you're prompted for an administrator password or confirmation, type the password or confirm the action. On systems running Windows XP, you may need to log on as an administrator on this computer.  
+4.  If you don't see all the detected items, click **View details**. If you're prompted for an administrator password or confirmation, type the password or confirm the action.
 
 > [!NOTE]  
 >  During computer cleanup, whenever possible, Windows Defender removes only the infected part of a file, not the entire file.  
