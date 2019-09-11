@@ -44,9 +44,9 @@ This article describes how to create and import queries in System Center Configu
     > [!TIP]  
     > You can use the following reference documentation to help you construct your own WQL queries:  
     >   
-    > -   [WQL (SQL for WMI)](http://go.microsoft.com/fwlink/p/?LinkId=256653)  
-    > -   [WHERE Clause](http://go.microsoft.com/fwlink/p/?LinkId=256654)  
-    > -   [WQL Operators](http://go.microsoft.com/fwlink/p/?LinkId=256655)  
+    > -   [WQL (SQL for WMI)](https://go.microsoft.com/fwlink/p/?LinkId=256653)  
+    > -   [WHERE Clause](https://go.microsoft.com/fwlink/p/?LinkId=256654)  
+    > -   [WQL Operators](https://go.microsoft.com/fwlink/p/?LinkId=256655)  
 
 8.  On the **Criteria** tab of the &lt;Query Name\> **Statement Properties** dialog box, specify criteria that are used to refine the results of the query. For example, you could return only resources that have a site code of **XYZ**. You can configure multiple criteria for a query.  
 

@@ -334,6 +334,11 @@
             "source_path": "sccm/develop/reference/core/servers/console/console-command-line-options.md",
             "redirect_url": "/sccm/core/servers/manage/admin-console#command-line-options",
             "redirect_document_id": false
-        }
+        },
+        {
+            "source_path": "sccm/core/clients/manage/sync-data-log-analytics.md",
+            "redirect_url": "https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=sccm/core/context/core-context",
+            "redirect_document_id": false
+        }        
     ]
 }

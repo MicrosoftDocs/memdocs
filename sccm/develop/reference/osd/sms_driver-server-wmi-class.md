@@ -593,7 +593,7 @@ Class SMS_Driver : SMS_ConfigurationItemBaseClass
 
   For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
-  Configuration Manager uses a driver catalog to manage the different computers, devices, and associated Windows device drivers that it supports. For more information, see [About the Driver Catalog](http://go.microsoft.com/fwlink/?LinkID=110504).  
+  Configuration Manager uses a driver catalog to manage the different computers, devices, and associated Windows device drivers that it supports. For more information, see [About the Driver Catalog](https://go.microsoft.com/fwlink/?LinkID=110504).  
 
   You can create an `SMS_Driver` object by using the [CreateFromINF Method in Class SMS_Driver](../../../develop/reference/osd/createfrominf-method-in-class-sms_driver.md) and [CreateFromOEM Method in Class SMS_Driver](../../../develop/reference/osd/createfromoem-method-in-class-sms_driver.md) methods. You use [CreateFromINF Method in Class SMS_Driver](../../../develop/reference/osd/createfrominf-method-in-class-sms_driver.md) to create an `SMS_Driver` Object from a Windows driver INF file. For more information see, How to Import a Windows Driver Described by an INF File into Configuration Manager. You use [CreateFromOEM Method in Class SMS_Driver](../../../develop/reference/osd/createfromoem-method-in-class-sms_driver.md) to create an `SMS_Driver` object from a Txtsetup.oem file.  
 

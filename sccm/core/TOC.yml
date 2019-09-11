@@ -1,7 +1,6 @@
 - name: Core infrastructure
   href: understand/introduction.md
 - name: Understand and explore
-  expanded: true
   items:
   - name: Introduction to Configuration Manager
     items:
@@ -195,10 +194,12 @@
       href: plan-design/network/prepare-windows-servers.md
     - name: Websites for site system servers
       href: plan-design/network/websites-for-site-system-servers.md
-    - name: PKI certificate requirements
-      href: plan-design/network/pki-certificate-requirements.md
     - name: CNG certificates overview
       href: plan-design/network/cng-certificates-overview.md
+    - name: PKI certificate requirements
+      href: plan-design/network/pki-certificate-requirements.md
+    - name: Example PKI certificate deployment
+      href: plan-design/network/example-deployment-of-pki-certificates.md
   - name: Diagnostics and usage data
     items:
     - name: Diagnostics and usage data overview
@@ -253,6 +254,8 @@
     items:
     - name: Technical Preview overview
       href: get-started/technical-preview.md
+    - name: 1908.2 features
+      href: get-started/2019/technical-preview-1908-2.md
     - name: 1908 features
       href: get-started/2019/technical-preview-1908.md
     - name: 1907 features
@@ -720,8 +723,8 @@
       href: clients/manage/client-notification.md
     - name: How to manage Linux and UNIX clients
       href: clients/manage/manage-clients-for-linux-and-unix-servers.md
-    - name: Sync data to Log Analytics
-      href: clients/manage/sync-data-log-analytics.md
+    - name: Sync data to Azure Monitor
+      href: https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=sccm/core/context/core-context
     - name: Maintain Mac clients
       href: clients/manage/maintain-mac-clients.md
     - name: Surface device dashboard

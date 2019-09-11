@@ -1,7 +1,6 @@
 - name: Application management
   href: understand/introduction-to-application-management.md
 - name: Understand and explore
-  expanded: true
   items:
   - name: Introduction
     href: understand/introduction-to-application-management.md
@@ -72,6 +71,8 @@
       href: deploy-use/link-users-and-devices-with-user-device-affinity.md
     - name: Microsoft Store for Business volume-purchased apps
       href: deploy-use/manage-apps-from-the-windows-store-for-business.md
+    - name: Troubleshoot Microsoft Store for Business integration
+      href: deploy-use/troubleshoot-microsoft-store-for-business-integration.md
     - name: App-V virtual environments
       href: deploy-use/create-app-v-virtual-environments.md
     - name: Import and export applications

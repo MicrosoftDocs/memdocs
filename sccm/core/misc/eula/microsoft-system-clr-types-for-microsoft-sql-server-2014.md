@@ -99,7 +99,7 @@ These license terms are an agreement between Microsoft Corporation (or based on 
 
 6.  **DOCUMENTATION.** Any person that has valid access to your computer or internal network may copy and use the documentation for your internal, reference purposes.  
 
-7.  **EXPORT RESTRICTIONS.** The software is subject to United States export laws and regulations. You must comply with all domestic and international export laws and regulations that apply to the software. These laws include restrictions on destinations, end users and end use. For additional information, see [www.microsoft.com/exporting](http://www.microsoft.com/exporting).  
+7.  **EXPORT RESTRICTIONS.** The software is subject to United States export laws and regulations. You must comply with all domestic and international export laws and regulations that apply to the software. These laws include restrictions on destinations, end users and end use. For additional information, see [www.microsoft.com/exporting](https://www.microsoft.com/exporting).  
 
 8.  **SUPPORT SERVICES.** Because this software is "as is," we may not provide support services for it.  
 

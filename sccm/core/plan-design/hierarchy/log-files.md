@@ -2,7 +2,7 @@
 title: Log file reference
 titleSuffix: Configuration Manager
 description: A reference of all log files for Configuration Manager client, server, and dependent components.
-ms.date: 08/08/2019
+ms.date: 08/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -268,6 +268,7 @@ The following table lists the log files that are on the Configuration Manager si
 |adsgdis.log|Records Active Directory Group Discovery actions.|Site server|  
 |adsysdis.log|Records Active Directory System Discovery actions.|Site server|  
 |adusrdis.log|Records Active Directory User Discovery actions.|Site server|  
+|BusinessAppProcessWorker.log|Records processing for Microsoft Store for Business apps.|Site server|
 |ccm.log|Records activities for client push installation.|Site server|  
 |CertMgr.log|Records certificate activities for intrasite communication.|Site system server|  
 |chmgr.log|Records activities of the client health manager.|Site server|  
@@ -318,6 +319,7 @@ The following table lists the log files that are on the Configuration Manager si
 |sitectrl.log|Records site setting changes made to site control objects in the database.|Site server|  
 |sitestat.log|Records the availability and disk space monitoring process of all site systems.|Site server|
 |SMS_AZUREAD_DISCOVERY_AGENT.log| Log file for synchronization of collection membership results to Azure Active directory. This was first introduced as a pre-release feature starting in Configuration Manager version 1906.| Site server|
+|SMS_BUSINESS_APP_PROCESS_MANAGER.log|Log file for component that synchronizes apps from the Microsoft Store for Business.|Site server|
 |SMS_ISVUPDATES_SYNCAGENT.log| Log file for synchronization of third-party software updates starting in Configuration Manager version 1806.| Top-level software update point in the Configuration Manager hierarchy.|
 |SMS_PhasedDeployment.log| Log file for phased deployments|Top-level site in the Configuration Manager hierarchy|   
 |SmsAdminUI.log|Records Configuration Manager console activity.|Computer that runs the Configuration Manager console|  
@@ -410,11 +412,13 @@ The following table lists the log files that contain information related to the 
 |Dmpdownloader.log|Records details about downloads from Microsoft Intune.|Computer with the service connection point|  
 |Dmpuploader.log|Records detail related to uploading database changes to Microsoft Intune.|Computer with the service connection point|  
 |hman.log|Records information about message forwarding.|Site server|  
+|MSfBSyncWorker.log|Records information about the communication with the Microsoft Store for Business.|Computer with the service connection point|
 |objreplmgr.log|Records the processing of policy and assignment.|Primary site server|  
 |PolicyPV.log|Records policy generation of all policies.|Site server|  
 |outgoingcontentmanager.log|Records content uploaded to Microsoft Intune.|Computer with the  service connection point|  
 |Sitecomp.log|Records details of service connection point installation.|Site server|  
 |SmsAdminUI.log|Records Configuration Manager console activity.|Computer that runs the Configuration Manager console|  
+|SMS_CLOUDCONNECTION.log|Records information about cloud services.|Computer with the service connection point|
 |Smsprov.log|Records activities performed by the SMS Provider. Configuration Manager console activities use the SMS Provider.|Computer with the SMS Provider|  
 |SrvBoot.log|Records details about the service connection point installer service.|Computer with the service connection point|  
 |Statesys.log|Records the processing of mobile device management messages.|Primary site and central administration site|  
@@ -452,9 +456,11 @@ The following table lists the log files that contain information related to appl
 |AppGroupHandler.log|Starting in version 1906, detection and enforcement information for application groups|Client|
 |awebsctl.log|Records monitoring activities for the Application Catalog web service point site system role.|Site system server|  
 |awebsvcMSI.log|Records detailed installation information for the Application Catalog web service point site system role.|Site system server|  
+|BusinessAppProcessWorker.log|Records processing for Microsoft Store for Business apps.|Site server|
 |Ccmsdkprovider.log|Records the activities of the application management SDK.|Client|  
 |colleval.log|Records details about when collections are created, changed, and deleted by the Collection Evaluator.|Site system server|  
 |ConfigMgrSoftwareCatalog.log|Records the activity of the Application Catalog, which includes its use of Silverlight.|Client|  
+|MSfBSyncWorker.log|Records information about the communication with the Microsoft Store for Business.|Computer with the service connection point|
 |NotiCtrl.log|Application request notifications.|Site server|  
 |portlctl.log|Records the monitoring activities for the Application Catalog website point site system role.|Site system server|  
 |portlwebMSI.log|Records the MSI installation activity for the Application Catalog website role.|Site system server|  
@@ -462,6 +468,8 @@ The following table lists the log files that contain information related to appl
 |ServicePortalWebService.log|Records the activity of the Application Catalog web service.|Site system server|  
 |ServicePortalWebSite.log|Records the activity of the Application Catalog website.|Site system server|  
 |SettingsAgent.log|Enforcement of specific applications, records orchestration of application group evaluation, and details of co-management policies.|Client|
+|SMS_BUSINESS_APP_PROCESS_MANAGER.log|Log file for component that synchronizes apps from the Microsoft Store for Business.|Site server|
+|SMS_CLOUDCONNECTION.log|Records information about cloud services.|Computer with the service connection point|
 |SMSdpmon.log|Records details about the distribution point health monitoring scheduled task that is configured on a distribution point.|Site server|  
 |SoftwareCatalogUpdateEndpoint.log|Records activities for managing the URL for the Application Catalog shown in Software Center.|Client|  
 |SoftwareCenterSystemTasks.log|Records activities related to Software Center prerequisite component validation.|Client|  
@@ -749,7 +757,6 @@ The following table lists the log files that contain information related to OS d
 |CAS.log|Records details when distribution points are found for referenced content.|Client|  
 |ccmsetup.log|Records ccmsetup tasks for client setup, client upgrade, and client removal. Can be used to troubleshoot client installation problems.|Client|  
 |CreateTSMedia.log|Records details for task sequence media creation.|Computer that runs the Configuration Manager console|  
-|DeployToVhd.log|Records details about the Virtual Hard Disk (VHD) creation and modification process.|Computer that runs the Configuration Manager console|  
 |Dism.log|Records driver installation actions or update application actions for offline servicing.|Site system server|  
 |Distmgr.log|Records details about the configuration of enabling a distribution point for Preboot Execution Environment (PXE).|Site system server|  
 |DriverCatalog.log|Records details about device drivers that have been imported into the driver catalog.|Site system server|  

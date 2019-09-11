@@ -130,10 +130,6 @@ SUM Updates install schedule
 
 {00000000-0000-0000-0000-000000000063}
 
-NAP action
-
-{00000000-0000-0000-0000-000000000071}
-
 Hardware Inventory Collection Cycle
 
 {00000000-0000-0000-0000-000000000101}
@@ -197,10 +193,6 @@ State system policy bulk send high
 State system policy bulk send low
 
 {00000000-0000-0000-0000-000000000116}
-
-AMT Status Check Policy
-
-{00000000-0000-0000-0000-000000000120}
 
 Application manager policy action
 

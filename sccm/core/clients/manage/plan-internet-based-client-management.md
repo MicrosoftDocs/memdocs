@@ -194,4 +194,4 @@ Internet-based client management (sometimes referred to as IBCM) lets you manage
 
     For configuration information to support these requirements, refer to your firewall or proxy server documentation.  
 
-    For similar communication requirements when you use the software update point for client connections from the internet, see the documentation for Windows Server Update Services (WSUS). For example, for WSUS on Windows Server 2003, see [Appendix D: Security Settings](http://go.microsoft.com/fwlink/p/?LinkId=143368), the deployment appendix for security settings.
+    For similar communication requirements when you use the software update point for client connections from the internet, see the documentation for Windows Server Update Services (WSUS). For example, for WSUS on Windows Server 2003, see [Appendix D: Security Settings](https://go.microsoft.com/fwlink/p/?LinkId=143368), the deployment appendix for security settings.

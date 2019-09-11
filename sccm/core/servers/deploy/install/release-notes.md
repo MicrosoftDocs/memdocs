@@ -166,7 +166,7 @@ Change the following registry value to `0` and restart the **Microsoft Office Cl
 <!-- 4950335 -->
 *Applies to: Configuration Manager version 1902 with update rollup, and version 1906*
 
-If you have a hierarchy, and enable **Hardware inventory** site data for [distributed views](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_distviews) on any site replication links, after you configure the Desktop Analytics connection in Configuration Manager you'll see the following error in M365UploadWorker.log:
+If you have a hierarchy, and enable **Hardware inventory** site data for [distributed views](/sccm/core/plan-design/hierarchy/database-replication#bkmk_distviews) on any site replication links, after you configure the Desktop Analytics connection in Configuration Manager you'll see the following error in M365UploadWorker.log:
 
 `Unexpected exception 'System.Data.SqlClient.SqlException' Remote access is not supported for transaction isolation level "SNAPSHOT".:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action'1 wrapCloseInAction)`
 

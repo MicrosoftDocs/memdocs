@@ -56,10 +56,11 @@ For more information, see [Windows 10 upgrade paths](https://docs.microsoft.com/
 #### Windows Server
 
 - Windows Server 2012
+- Windows Server 2012 R2
 - An earlier version of Windows Server 2016
 - An earlier version of Windows Server 2019
 
-For more information about Windows Server supported upgrade paths, see [Windows Server 2016 supported upgrade paths](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016) and [Windows Server Upgrade Center](http://aka.ms/upgradecenter).
+For more information about Windows Server supported upgrade paths, see [Windows Server 2016 supported upgrade paths](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016) and [Windows Server Upgrade Center](https://aka.ms/upgradecenter).
 
 
 ## <a name="BKMK_Plan"></a> Plan  

@@ -35,7 +35,7 @@ Firewall policies for Endpoint Protection in System Center Configuration Manager
 5.  On the **Profile Settings** page of the wizard, configure the following settings for each network profile:  
 
     > [!IMPORTANT]  
-    >  If you want to deploy Windows Firewall policies to computers running Windows Server 2008 and Windows Vista Service Pack 1, you must first install [Hotfix KB971800](http://go.microsoft.com/fwlink/p/?LinkId=231239) on these computers.  
+    >  If you want to deploy Windows Firewall policies to computers running Windows Server 2008 and Windows Vista Service Pack 1, you must first install [Hotfix KB971800](https://go.microsoft.com/fwlink/p/?LinkId=231239) on these computers.  
 
     > [!NOTE]  
     >  For more information about network profiles, see the Windows documentation.  

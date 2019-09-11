@@ -1164,7 +1164,7 @@ SkipSummary=YES
 Powerusers001=WOODGROVEBANK\PilarA  
 CaptureGroups=YES  
 SLShare=\\WDG-MDT-01\UserData$\Logs  
-Home_page=http://www.microsoft.com/NewComputer  
+Home_page=https://www.microsoft.com/NewComputer  
 ```  
 
 ## Calling Web Services in MDT  

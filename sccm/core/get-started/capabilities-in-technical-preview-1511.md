@@ -92,7 +92,7 @@ The high level process to configure and use availability groups includes:
 
 -   You cannot successfully add a new replica member to an Availability Group that is already in use as a site database. Instead, you must reinstall the site after the new replica member is added.  
 
--   For this scenario  you might need to install the **SQL Server 2012 native client** ([from the SQL Server 2012 Feature Pack](http://www.microsoft.com/download/details.aspx?id=29065)) on the management point server. This prevents SQL connection errors (which are logged in the **mp_getauth.log** on the management point server).  
+-   For this scenario  you might need to install the **SQL Server 2012 native client** ([from the SQL Server 2012 Feature Pack](https://www.microsoft.com/download/details.aspx?id=29065)) on the management point server. This prevents SQL connection errors (which are logged in the **mp_getauth.log** on the management point server).  
 
 ### Try it out!  
 Try to complete the following tasks and then use the feedback information near the top of this topic to let us know how they worked:  

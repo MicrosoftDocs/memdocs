@@ -187,7 +187,6 @@ Class SMS_SCI_SQLTask : SMS_SiteControlItem
 |Delete Obsolete Alerts|  
 |Delete Obsolete Client Discovery Data|  
 |Delete Obsolete Forest Discovery Sites And Subnets|  
-|Evaluate Provisioned AMT Computer Certificates|  
 |Monitor Keys|  
 |Rebuild Indexes|  
 |Summarize File Usage Metering Data|  
