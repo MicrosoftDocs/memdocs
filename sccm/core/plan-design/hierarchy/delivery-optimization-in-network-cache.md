@@ -91,9 +91,9 @@ When you configure clients to use the Delivery Optimization In-Network Cache ser
 
 ### <a name="bkmk_note1"></a> Note 1: About drive selection
 
-If you select **Automatic**, when Configuration Manager installs the DOINC component, it honors the **no_sms_on_drive.sms** file. For example, if you block use of the system drive using this file, even if it has the most free space, Configuration Manager configures DOINC to use another drive.
+If you select **Automatic**, when Configuration Manager installs the DOINC component, it honors the **no_sms_on_drive.sms** file. For example, the distribution point has the file `C:\no_sms_on_drive.sms`. Even if the C: drive has the most free space, Configuration Manager configures DOINC to use another drive for its cache.
 
-If you select a specific drive that already has the **no_sms_on_drive.sms** file, Configuration Manager ignores the file. Configuring DOINC to use that drive is an explicit intent.
+If you select a specific drive that already has the **no_sms_on_drive.sms** file, Configuration Manager ignores the file. Configuring DOINC to use that drive is an explicit intent. For example, the distribution point has the file `F:\no_sms_on_drive.sms`. When you explicitly configure the distribution point properties to use the **F:** drive, Configuration Manager configures DOINC to use the F: drive for its cache.
 
 To change the drive after DOINC is installed:
 
