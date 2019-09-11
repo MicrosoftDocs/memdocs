@@ -2,7 +2,7 @@
 title: "Migration prerequisites"
 titleSuffix: "Configuration Manager"
 description: "Understand the supported versions of Configuration Manager, supported source-site languages, and required configurations for migration."
-ms.date: 5/7/2018
+ms.date: 05/7/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

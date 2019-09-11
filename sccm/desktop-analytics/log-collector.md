@@ -35,7 +35,7 @@ Starting in Configuration Manager version 1906, use the **DesktopAnalyticsLogsCo
 
 Get the script from the Configuration Manager installation content: `SMSSETUP\TOOLS\DesktopAnalyticsLogsCollector\DesktopAnalyticsLogsCollector.ps1`
 
-```
+``` Syntax
 DesktopAnalyticsLogsCollector.ps1
     [-LogPath] <String>
     [-LogMode] <Int16>

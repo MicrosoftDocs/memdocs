@@ -2,7 +2,7 @@
 title: "Site installation resources"
 titleSuffix: "Configuration Manager"
 description: "Review a list of topics that help you install System Center Configuration Manager or add sites to your hierarchy."
-ms.date: 1/3/2017
+ms.date: 01/3/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

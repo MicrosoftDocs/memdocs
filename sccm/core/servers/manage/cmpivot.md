@@ -293,33 +293,36 @@ CMPivot now includes basic support for the KQL [render operator](https://docs.mi
 #### Example: bar chart
 The following query renders the most recently used applications as a bar chart:
 
-```
+``` Kusto
 CCMRecentlyUsedApplications
 | summarize dcount( Device ) by ProductName
 | top 10 by dcount_
 | render barchart
 ```
+
 ![Example of CMPivot bar chart visualization](media/1359068-cmpivot-barchart.png)
 
 #### Example: time chart
 To render time charts, use the new **bin()** operator to group events in time. The following query shows when devices have started in the last seven days:
 
-``` 
-OperatingSystem 
+``` Kusto
+OperatingSystem
 | where LastBootUpTime <= ago(7d)
 | summarize count() by bin(LastBootUpTime,1d)
 | render timechart
 ```
+
 ![Example of CMPivot time chart visualization](media/1359068-cmpivot-timechart.png)
 
 #### Example: pie chart
 The following query displays all OS versions in a pie chart:
 
-```
-OperatingSystem 
+``` Kusto
+OperatingSystem
 | summarize count() by Caption
 | render piechart
 ```
+
 ![Example of CMPivot pie chart visualization](media/1359068-cmpivot-piechart.png)
 
 
@@ -329,12 +332,14 @@ Use CMPivot to query any hardware inventory class. These classes include any cus
 The color saturation of the data in the results table or chart indicates if the data is live or cached. For example, dark blue is real-time data from an online client. Light blue is cached data.
 
 #### Example
-```
+
+``` Kusto
 LogicalDisk
 | summarize sum( FreeSpace ) by Device
 | order by sum_ desc
 | render columnchart
 ```
+
 ![Example of CMPivot inventory query with column chart visualization](media/1359068-cmpivot-inventory.png)
 
 #### Limitations
@@ -513,7 +518,7 @@ The render operator already exists in CMPivot. Support for multiple series and t
 
 - Show device, manufacturer, model, and OSVersion:
 
-   ```
+   ``` Kusto
    ComputerSystem
    | project Device, Manufacturer, Model
    | join (OperatingSystem | project Device, OSVersion=Caption)
@@ -521,7 +526,7 @@ The render operator already exists in CMPivot. Support for multiple series and t
 
 - Show graph of boot times for a device:
 
-   ```
+   ``` Kusto
    SystemBootData
    | where Device == 'MyDevice'
    | project SystemStartTime, BootDuration, OSStart=EventLogStart, GPDuration, UpdateDuration

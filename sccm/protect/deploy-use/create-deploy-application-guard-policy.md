@@ -1,7 +1,7 @@
 ---
-title: "Create and deploy a Windows Defender Application Guard policy"
+title: Manage Application Guard policies
 titleSuffix: Configuration Manager
-description: "Create and deploy Windows Defender Application Guard policy."
+description: Learn how to create and deploy Windows Defender Application Guard policies
 ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect

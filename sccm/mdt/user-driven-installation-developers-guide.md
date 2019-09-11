@@ -59,7 +59,7 @@ Figure 1. Relationship between the UDI Wizard and UDI Wizard Designer
 
   - [Microsoft Prism](https://compositewpf.codeplex.com/) version 4.0  
 
-  - [Microsoft Unity Application Block](http://unity.codeplex.com/) (Unity) version 2.1  
+  - [Microsoft Unity Application Block](https://unity.codeplex.com/) (Unity) version 2.1  
 
     MDT includes all the assemblies necessary to create a custom wizard page editor for use in the UDI Wizard Designer. The UDI SDK includes an example of how to create custom wizard page editors.  
 

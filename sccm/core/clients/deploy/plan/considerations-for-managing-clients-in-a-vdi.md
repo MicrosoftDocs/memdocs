@@ -1,7 +1,7 @@
 ---
-title: "Virtual desktop infrastructure (VDI) client management "
-titleSuffix: "Configuration Manager"
-description: "Manage System Center Configuration Manager clients in a virtual desktop infrastructure (VDI)."
+title: Manage VDI clients
+titleSuffix: Configuration Manager
+description: Manage Configuration Manager clients in a virtual desktop infrastructure (VDI).
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,7 +12,8 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# Considerations for managing System Center Configuration Manager clients  in a Virtual Desktop Infrastructure (VDI)
+
+# Manage Configuration Manager clients in a virtual desktop infrastructure (VDI)
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 

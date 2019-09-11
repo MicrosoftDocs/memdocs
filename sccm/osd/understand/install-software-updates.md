@@ -47,7 +47,7 @@ Starting in version 1902, automate this process when you add an OS image to the 
 
 When you apply software updates to the image, optimize the output by removing any superseded updates. Use the DISM command-line tool, for example:
 
-```
+``` Command
 dism /Mount-Image /ImageFile:C:\Data\install.wim /MountDir:C:\Mountdir
 dism /Image:C:\Mountdir /Cleanup-Image /StartComponentCleanup /ResetBase
 dism /Unmount-Image /MountDir:C:\Mountdir /Commit  
