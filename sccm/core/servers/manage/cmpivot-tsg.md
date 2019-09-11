@@ -23,7 +23,7 @@ By default, the site server log files are located in C:\Program Files\Microsoft 
 
 Check the **smsprov.log** for this line:
 
-```
+``` Log
 Auditing: User <username> initiated client operation 135 to collection <CollectionId>.
 ```
 
@@ -33,7 +33,7 @@ Find the ID in the CMPivot window. This ID is the **ClientOperationID**.
 
 Find the **TaskID** from the ClientAction table. The **TaskID** corresponds to the **UniqueID** in the ClientAction table. 
 
-```SQL
+``` SQL
 select * from ClientAction where ClientOperationId=<id>
 ```
 
@@ -83,14 +83,14 @@ Check the **CcmNotificationAgent.log**. You'll find logs like the following entr
 
 Check **Scripts.log** for the **TaskID**. In the following example, we see **Task ID {F8C7C37F-B42B-4C0A-B050-2BB44DF1098A}**:
 
-```
+``` Log
 Sending script state message: 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 Scripts 7/3/2018 11:44:47 AM 5036 (0x13AC)
 State message: Task Id {F8C7C37F-B42B-4C0A-B050-2BB44DF1098A} Scripts 7/3/2018 11:44:47 AM 5036 (0x13AC)
 ```
 
 Check the **StateMessage.log**. Our example **TaskID** is near the bottom of the message next to &lt;Param>. You should see lines similar to the one below:
 
-```xml
+``` XML
 StateMessage body: <?xml version="1.0" encoding="UTF-16"?>
 <Report><ReportHeader><Identification><Machine><ClientInstalled>1</ClientInstalled><ClientType>1
 </ClientType><ClientID>GUID:DBAC52C9-57E6-47D7-A8D6-E0A5A64B57E6</ClientID><ClientVersion>5.00.8670.1000</ClientVersion>
@@ -113,7 +113,7 @@ Successfully forwarded State Messages to the MP StateMessage 7/3/2018 11:44:47 A
 
 Open the **statesys.log** to see if the message is received and processed. Our example **TaskID** is near the bottom of the message next to &lt;Param>.
 
-```xml
+``` XML
 CMessageProcessor - the cmdline to DB exec dbo.spProcessStateReport N'?<?xml version="1.0" encoding="UTF-
 16"?>~~<Report><ReportHeader><Identification><Machine><ClientInstalled>1</ClientInstalled><ClientType>1
 </ClientType><ClientID>GUID:DBAC52C9-57E6-47D7-A8D6-E0A5A64B57E6</ClientID><ClientVersion>5.00.8670.1000</ClientVersion>
@@ -134,7 +134,7 @@ Check the state message inbox if you don't see that the message has been process
 
 Check the monitoring view for CMPivot from SQL using the **TaskID**.
 
-```SQL
+``` SQL
 select * from vSMS_CMPivotStatus where TaskID='{F8C7C37F-B42B-4C0A-B050-2BB44DF1098A}'
 ```
 

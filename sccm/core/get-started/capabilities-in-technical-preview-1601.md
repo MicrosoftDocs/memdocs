@@ -29,7 +29,7 @@ This article introduces the features that are available in the Technical Preview
 
     -   Run the following SQL script on the primary site's database:  
 
-        ```  
+        ``` SQL
         DECLARE @PilotingPkgID NVARCHAR(8)  
 
         SELECT @PilotingPkgID = PilotingPackageID FROM ClientDeploymentSettings  

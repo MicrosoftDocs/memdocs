@@ -38,7 +38,8 @@ Steps to workaround, if any.
 ### <a name="ki_contentlib"></a> Site fails to upgrade with remote content library
 <!--514642-->
 The site fails to upgrade with the following errors in **cmupdate.log**:  
-```  
+
+``` Log
 Failed to find any valid drives  
 GetContentLibraryParameters failed; 0x80070057  
 ERROR: Failed to process configuration manager update.  
@@ -167,7 +168,7 @@ This release adds three settings for [Windows Defender SmartScreen](/windows/sec
 
 ## Sync MDM policy from Microsoft Intune for a co-managed device
 <!--1357377-->
-Starting in this release when you [switch a co-management workload](/sccm/core/clients/manage/co-management-switch-workloads), the co-managed devices automatically synchronize MDM policy from Microsoft Intune. This sync also happens when you initiate the **Download Computer Policy** action from Client Notifications in the Configuration Manager console. For more information, see [Initiate client policy retrieval using client notification](/sccm/core/clients/manage/manage-clients#initiate-client-policy-retrieval-using-client-notification).
+Starting in this release when you [switch a co-management workload](/sccm/core/clients/manage/co-management-switch-workloads), the co-managed devices automatically synchronize MDM policy from Microsoft Intune. This sync also happens when you initiate the **Download Computer Policy** action from Client Notifications in the Configuration Manager console. For more information, see [Initiate client policy retrieval using client notification](/sccm/core/clients/manage/manage-clients##BKMK_PolicyRetrieval).
 
 
 

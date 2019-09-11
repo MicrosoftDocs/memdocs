@@ -14003,7 +14003,7 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 - [Microsoft Prism](https://compositewpf.codeplex.com/) version 4.0  
 
-- [Microsoft Unity Application Block](http://unity.codeplex.com/) (Unity) version 2.1  
+- [Microsoft Unity Application Block](https://unity.codeplex.com/) (Unity) version 2.1  
 
   For more information on developing custom UDI wizard page editors, see the section, "Creating Custom Wizard Page Editors", in the MDT document *User-Driven Installation Developers Guide*.  
 

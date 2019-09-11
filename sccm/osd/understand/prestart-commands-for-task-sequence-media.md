@@ -21,7 +21,7 @@ You can create a prestart command in System Center Configuration Manager to use 
 ## Create a script file to use for the Prestart Command  
  Task sequence variables can be read and written by using the Microsoft.SMS.TSEnvironment COM object while the task sequence is running. The following example illustrates a Visual Basic script file that queries the _SMSTSLogPath task sequence variable to get the current log location. The script also sets a custom variable.  
 
-```  
+``` VBScript
 dim osd: set env = CreateObject("Microsoft.SMS.TSEnvironment")  
 dim logPath  
 ' You can query the environment to get an existing variable.  

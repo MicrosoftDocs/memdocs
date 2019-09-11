@@ -2,7 +2,7 @@
 title: Use bootable media to deploy Windows over the network
 titleSuffix: Configuration Manager
 description: Use bootable media deployments in System Center Configuration Manager to deploy the operating system when the destination computer starts.
-ms.date: 6/16/2017
+ms.date: 06/16/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual

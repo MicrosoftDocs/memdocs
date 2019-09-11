@@ -2,7 +2,7 @@
 title: "Websites for site systems"
 titleSuffix: "Configuration Manager"
 description: "Learn about default and custom websites for site system servers in System Center Configuration Manager."
-ms.date: 2/8/2017
+ms.date: 02/8/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

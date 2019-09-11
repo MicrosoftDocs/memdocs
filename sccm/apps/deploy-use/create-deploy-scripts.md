@@ -216,7 +216,7 @@ Here are a couple examples that illustrate scripts you might want to use with th
 
 This script creates a new folder and a file within the folder, given your naming input.
 
-``` powershell
+``` PowerShell
 Param(
 [Parameter(Mandatory=$True)]
 [string]$FolderName,
@@ -232,7 +232,7 @@ New-Item $FileName -type file
 
 This script uses WMI to query the machine for its OS version.
 
-``` powershell
+``` PowerShell
 Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 ```
 
@@ -299,8 +299,7 @@ You can view detailed script output in raw or structured JSON format. This forma
 ### Example: Script output is valid JSON
 Command: `$PSVersionTable.PSVersion`  
 
-Output:  
-```
+``` Output
 Major  Minor  Build  Revision
 -----  -----  -----  --------
 5      1      16299  551
@@ -309,8 +308,7 @@ Major  Minor  Build  Revision
 ### Example: Script output isn't valid JSON
 Command: `Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
 
-Output:  
-```
+``` Output
 Microsoft Windows 10 Enterprise
 ```
 

@@ -95,10 +95,10 @@ Use the following query to return the NetBIOS name and operating system version 
 > [!TIP]  
 > To return computers that run Windows Server 2008 R2, change `%Workstation 6.1%` to `%Server 6.1%`.  
 
-```  
+``` WQL
 select SMS_R_System.NetbiosName,  
-SMS_R_System.OperatingSystemNameandVersion from    
-SMS_R_System where   
+SMS_R_System.OperatingSystemNameandVersion from
+SMS_R_System where
 SMS_R_System.OperatingSystemNameandVersion like "%Workstation 6.1%"  
 ```  
 
@@ -109,12 +109,12 @@ Use the following query to return the NetBIOS name and software package name of 
 > [!TIP]  
 > This query searches for the software package by using the names that are displayed in the programs list in Windows Control Panel.  
 
-```  
-select SMS_R_System.NetbiosName,   
-SMS_G_System_ADD_REMOVE_PROGRAMS.DisplayName from    
-SMS_R_System inner join SMS_G_System_ADD_REMOVE_PROGRAMS on   
-SMS_G_System_ADD_REMOVE_PROGRAMS.ResourceId =   
-SMS_R_System.ResourceId where   
+``` WQL
+select SMS_R_System.NetbiosName,
+SMS_G_System_ADD_REMOVE_PROGRAMS.DisplayName from
+SMS_R_System inner join SMS_G_System_ADD_REMOVE_PROGRAMS on
+SMS_G_System_ADD_REMOVE_PROGRAMS.ResourceId =
+SMS_R_System.ResourceId where
 SMS_G_System_ADD_REMOVE_PROGRAMS.DisplayName like "Microsoft%Visio%"  
 ```  
 
@@ -122,10 +122,10 @@ SMS_G_System_ADD_REMOVE_PROGRAMS.DisplayName like "Microsoft%Visio%"
 
 Use the following query to return the NetBIOS name and organizational unit (OU) name of all computers in a specified OU. Replace the text `OU Name` with the name of the OU that you want to query for.  
 
-```  
-select SMS_R_System.NetbiosName,   
-SMS_R_System.SystemOUName from    
-SMS_R_System where   
+``` WQL
+select SMS_R_System.NetbiosName,
+SMS_R_System.SystemOUName from
+SMS_R_System where
 SMS_R_System.SystemOUName = "OU Name"  
 ```  
 
@@ -133,8 +133,8 @@ SMS_R_System.SystemOUName = "OU Name"
 
 Use the following query to return the NetBIOS name of all computers that begin with a specific string of characters. In this example, the query returns all computers with a NetBIOS name that begins with `ABC`.  
 
-```  
-select SMS_R_System.NetbiosName from    
+``` WQL
+select SMS_R_System.NetbiosName from
 SMS_R_System where SMS_R_System.NetbiosName like "ABC%"  
 ```  
 
@@ -142,7 +142,7 @@ SMS_R_System where SMS_R_System.NetbiosName like "ABC%"
 
 Device types are stored in the Configuration Manager database under the resource class **sms_r_system** and the attribute name **AgentEdition**. Use this query to retrieve only the devices that match the agent edition of the device type that you specify:  
 
-```  
+``` WQL
 Select SMS_R_System.ClientEdition from SMS_R_System where SMS_R_System.ClientEdition = <Device ID>  
 ```  
 
@@ -171,7 +171,7 @@ Use one of these values for &lt;Device ID\>:
 
  For example, if you want to return only Mac computers, use this query:  
 
-```  
+``` WQL
 Select SMS_R_System.ClientEdition from SMS_R_System where SMS_R_System.ClientEdition = 5  
 ```  
 

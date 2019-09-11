@@ -166,7 +166,7 @@ At the command prompt, go to **AdminConsole\Bin** folder, and run **Microsoft.Sc
 
 #### Sample output from Microsoft.Sces.ScapToDcm.exe
 
-```
+``` Output
   Compliance Settings compliant cab file created:
 
   Validate the schema of SCAP data stream file C:\24SCAP\BVT_Test_Data_Stream.xml

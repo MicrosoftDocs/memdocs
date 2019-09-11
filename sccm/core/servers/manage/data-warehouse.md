@@ -220,7 +220,7 @@ Grant the **Reporting Services Point Account** the **db_datareader** permission 
 
 When you open a data warehouse report, it returns the following error:
 
-```
+``` Output
 An error has occurred during report processing. (rsProcessingAborted)
 Cannot create a connection to data source 'AutoGen__39B693BB_524B_47DF_9FDB_9000C3118E82_'. (rsErrorOpeningConnection)
 A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.)

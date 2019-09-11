@@ -2,7 +2,7 @@
 title: "Discover device and user resources"
 titleSuffix: "Configuration Manager"
 description: "Read an overview of the discovery process and discovery data records."
-ms.date: 2/8/2017
+ms.date: 02/8/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
