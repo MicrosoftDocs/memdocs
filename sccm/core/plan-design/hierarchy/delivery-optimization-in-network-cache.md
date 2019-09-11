@@ -41,7 +41,7 @@ When you configure clients to use the Delivery Optimization In-Network Cache ser
 
 3. Client A requests content from the DO cache server.
 
-4. If the cache doesn't include the content, then Client A gets it from the CDN.
+4. If the cache doesn't include the content, then the DO cache server gets it from the CDN.
 
 5. If the cache server fails to respond, the client downloads the content from the CDN.
 
