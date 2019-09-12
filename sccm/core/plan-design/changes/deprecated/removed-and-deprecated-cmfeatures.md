@@ -2,7 +2,7 @@
 title: Deprecated features
 titleSuffix: Configuration Manager
 description: Learn about the features that Configuration Manager no longer supports.
-ms.date: 08/06/2019
+ms.date: 09/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -21,21 +21,32 @@ This article lists the features that are deprecated or removed from support for 
 
 This information is subject to change with future releases. It might not include each deprecated Configuration Manager feature.
 
+## Deprecated features
 
-
-## Deprecated features  
+The following features are deprecated. You can still use them now, but Microsoft plans to end support in the future.
 
 |Feature|Deprecation first announced|Support&nbsp;removed|  
 |-----------|---|--------------|  
 | Device health attestation assessment for conditional access compliance policies <!--1235616 aka 3608202--> For more information, see [Manage access to Office 365 services for PCs managed by Configuration Manager](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm#step-1-configure-compliance-policy).| July 3, 2019 | The first version released after November 1, 2019 |
 | The Configuration Manager Company Portal app | May 21, 2019 | The first version released after November 1, 2019|
 | The application catalog, including both site system roles: the application catalog website point and web service point. For more information, see [Remove the application catalog](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat). | May 21, 2019 | The first version released after November 1, 2019|
-|The implementation for sharing content from Azure has changed. Use a content-enabled cloud management gateway. You won't be able to create a traditional cloud distribution point in the future.|February 2019|The first version released after November 1, 2019|
-|Classic service deployment to Azure for cloud management gateway and cloud distribution point. For more information, see [Plan for CMG](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).|November 2018|TBD|
+|The implementation for sharing content from Azure has changed. Use a content-enabled cloud management gateway. You won't be able to create a traditional cloud distribution point in the future.|February 2019|TBD<sup>[Note 1](#bkmk_note1)</sup>|
+|Classic service deployment to Azure for cloud management gateway and cloud distribution point. For more information, see [Plan for CMG](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).|November 2018|TBD<sup>[Note 1](#bkmk_note1)</sup>|
+|Windows Hello for Business settings in Configuration Manager<br>For more information, see [Windows Hello for Business settings](/sccm/protect/deploy-use/windows-hello-for-business-settings).|December 2017|The first version released after November 1, 2019|
+
+### <a name="bkmk_note1"></a> Note 1: Support removed TBD
+
+The specific timeframe is to be determined (TBD). Microsoft recommends that you change to the new process or feature, but you can continue to use the deprecated process or feature for the near future.
+
+## Unsupported and removed features
+
+The following features are no longer supported. In some cases, they're no longer in the product.
+
+|Feature|Deprecation first announced|Support&nbsp;removed|  
+|-----------|---|--------------|  
 |System Center Endpoint Protection for Mac and Linux<br>For more information, see [End of support blog post](https://go.microsoft.com/fwlink/?linkid=870182).|October 2018|December 31, 2018|
 |On-premises conditional access<br>For more information, see [What is hybrid MDM](/sccm/mdm/understand/hybrid-mobile-device-management).|January 30, 2019|September 1, 2019|
 |Hybrid mobile device management (MDM)<br>For more information, see [What is hybrid MDM](/sccm/mdm/understand/hybrid-mobile-device-management).<br><br>Starting with the 1902 Intune service release, expected at the end of February 2019, new customers can't create a new hybrid connection.<!--Intune feature 2683117-->|August 14, 2018|September 1, 2019|
-|Windows Hello for Business settings in Configuration Manager<br>For more information, see [Windows Hello for Business settings](/sccm/protect/deploy-use/windows-hello-for-business-settings).|December 2017|The first version released after November 1, 2019|
 |The **Silverlight user experience** for the application catalog website point is no longer supported. Users should use the new Software Center. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).<!--1358309-->|August 11, 2017| Version 1806|
 |The previous version of Software Center.<br><br>For more information about the new Software Center, see [Plan for and configure application management](/sccm/apps/plan-design/plan-for-and-configure-application-management##bkmk_userex).|December 13, 2016|Version 1802|
 |Management of Virtual Hard Disks (VHDs) with Configuration Manager. <br><br>This deprecation includes removal of options to create a new VHD or manage a VHD using a task sequence, and the removal of the Virtual Hard Disks node from the Configuration Manager console. <br><br>Existing VHDs are not deleted, but are no longer accessible from within the Configuration Manager console.  |January 6, 2017 |Version 1710|
@@ -46,13 +57,11 @@ This information is subject to change with future releases. It might not include
 |Network Access Protection (NAP)  - as found in System Center 2012 Configuration Manager|July 10, 2015|Version 1511|  
 |Out of Band Management - as found in System Center 2012 Configuration Manager|October 16, 2015|Version 1511|
 
-
-
-## Features removed in version 1511
+### Features removed in version 1511
 
 The following sections include additional details for features removed with version 1511:
 
-### <a name="bkmk_amt"></a> Out of Band Management  
+#### <a name="bkmk_amt"></a> Out of Band Management  
 
 With Configuration Manager, native support for AMT-based computers from within the Configuration Manager console has been removed.  
 
@@ -60,13 +69,11 @@ With Configuration Manager, native support for AMT-based computers from within t
 
 - Out of Band Management in System Center 2012 Configuration Manager is not affected by this change.  
 
-### <a name="bkmk_nap"></a> Network Access Protection
+#### <a name="bkmk_nap"></a> Network Access Protection
 
 System Center Configuration Manager has removed support for Network Access Protection. The feature has been deprecated in Windows Server 2012 R2, and is removed from Windows 10.  
 
 For network access protection alternatives, see the *Deprecated functionality* section of [Network Policy and Access Services Overview](https://technet.microsoft.com/library/hh831683.aspx).
-
-
 
 ## See also
 
