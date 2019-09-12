@@ -2,7 +2,7 @@
 title: Delivery Optimization In-Network Cache
 titleSuffix: Configuration Manager
 description: Use your Configuration Manager distribution point as a local cache server for Delivery Optimization
-ms.date: 07/30/2019
+ms.date: 09/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -105,7 +105,10 @@ On Windows 10 version 1809 or later, verify this behavior with the **Get-Deliver
 
 If the cache server returns any HTTP failure, the Delivery Optimization client falls back to the original cloud source.
 
+For more detailed information, see [Troubleshoot Delivery Optimization In-Network Cache in Configuration Manager](/sccm/core/servers/deploy/configure/troubleshoot-delivery-optimization-in-network-cache).
 
 ## See also
 
 [Optimize Windows 10 updates with Delivery Optimization](/sccm/sum/deploy-use/optimize-windows-10-update-delivery)
+
+[Troubleshoot Delivery Optimization In-Network Cache in Configuration Manager](/sccm/core/servers/deploy/configure/troubleshoot-delivery-optimization-in-network-cache)
