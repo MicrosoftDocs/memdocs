@@ -117,8 +117,12 @@ Processing 2 messages with type Instant and IDs dff16fd2-c112-4a44-8400-206fbb91
 Processed 2 messages with type Instant. Failed to process 0 messages. All message IDs dff16fd2-c112-4a44-8400-206fbb91da2b[17], 721bc79f-d7a4-434d-9357-15c7a9d0d6b0[18]
 ```
 
-If you get an exception during processing, you can review it by running the following SQL statement and looking at the -----
+- If you get an exception during processing, you can review it by running the following SQL query and looking at the Exception column:
+    ```SQL 
+    select * from MPE_RequestMessages_Instant where MessageID=<ID from log>
+    ```
 
+-------
 In the **BgbServer.log**, look for the **PushID**:
 
 <pre><code lang="Log">
