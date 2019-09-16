@@ -48,7 +48,7 @@ Next, find the ID in the CMPivot window. This ID is the **ClientOperationID**.
 
 ![CMPivot window with ClientOperationID highlighted](media/cmpivot-client-operationid-1902.png)
 
-Find the **TaskID** from the ClientAction table. The **TaskID** corresponds to the **UniqueID** in the ClientAction table. 
+Find the **TaskID** from the ClientAction table. The **TaskID** corresponds to the **UniqueID** in the ClientAction table.
 
 ``` SQL
 select * from ClientAction where ClientOperationId=<id>
@@ -205,7 +205,7 @@ Successfully forwarded State Messages to the MP StateMessage 7/3/2018 11:44:47 A
 
 ## Review messages on the site server
 
-Open the **statesys.log** to see if the message is received and processed. Our example **TaskID** is near the bottom of the message next to &lt;Param>.
+Open the **statesys.log** to see if the message is received and processed. Our example **TaskID** is near the bottom of the message next to &lt;Param>. You need to enable [verbose logging](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_logoptions) on the SMS_STATE_SYSTEM component to see these log entries.  
 
 ``` XML
 CMessageProcessor - the cmdline to DB exec dbo.spProcessStateReport N'?<?xml version="1.0" encoding="UTF-
@@ -219,10 +219,6 @@ CMessageProcessor - the cmdline to DB exec dbo.spProcessStateReport N'?<?xml ver
 <StateDetails Type="1"><![CDATA["PAA/AHgAbQBsACAAdgBlAHIAcwBpAG8AbgA9ACIAMQAuADAAIgAgAGUAbgBjAG8AZABpAG4AZwA9ACIAdQB0AGYALQAxADYAIgA/AD4APAByAGUAcwB1AGwAdAAgAFIAZQBzAHUAbAB0AEMAbwBkAGUAPQAiADAAIgA+ADwAZQAgAE4AYQBtAGUAPQAiAEkAbgB0AGUAbAAoAFIAKQAgAFgAZQBvAG4AKABSACkAIABDAFAAVQAgAEUANQAtADIANgA3ADMAIAB2ADQAIABAACAAMgAuADMAMABHAEgAegAiACAATQBhAG4AdQBmAGEAYwB0AHUAcgBlAHIAPQAiAEEAbQBlAHIAaQBjAGEAbgAgAE0AZQBnAGEAdAByAGUAbgBkAHMAIABJAG4AYwAuACIAIABWAGUAcgBzAGkAbwBuAD0AIgBWAFIAVABVAEEATAAgAC0AIAA2ADAAMAAxADcAMAAyACIAIABSAGUAbABlAGEAcwBlAEQAYQB0AGUAPQAiADIAMAAxADcALQAwADYALQAwADIAIAAwADAAOgAwADAAOgAwADAAIgAgAFMAZQByAGkAYQBsAE4AdQBtAGIAZQByAD0AIgAwADAAMAAwAC0AMAAwADEAOAAtADMANgA4ADIALQA0ADcAMAA4AC0ANwA2ADQAMAAtADcANgAwADAALQAzADMAIgAgAFMATQBCAEkATwBTAEIASQBPAFMAVgBlAHIAcwBpAG8AbgA9ACIAMAA5ADAAMAAwADcAIAAiACAALwA+ADwALwByAGUAcwB1AGwAdAA+AA=="~~]]></StateDetails><UserParameters Flags="0" Count="2">
 <Param>{F8C7C37F-B42B-4C0A-B050-2BB44DF1098A}</Param><Param>0</Param></UserParameters></StateMessage></ReportBody></Report>~~'
 ```
-
-> [!NOTE]
-> The above log entry in the StateSys.log is only visible when Verbose Logging is enabled for the SMS_STATE_SYSTEM component, which can be done by modifying this registry key:
-> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_STATE_SYSTEM\Verbose logging = 1 (Default is 0)
 
 Check the state message inbox if you don't see that the message has been processed. The default location of the inbox is C:\Program Files\Microsoft Configuration Manager\inboxes\auth\statesys.box\. The files will be in either:
   
