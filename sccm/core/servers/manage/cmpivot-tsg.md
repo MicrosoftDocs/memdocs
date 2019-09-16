@@ -2,7 +2,7 @@
 title: Troubleshooting CMPivot
 titleSuffix: Configuration Manager
 description: Learn how to troubleshoot CMPivot in Configuration Manager.
-ms.date: 09/16/2019
+ms.date: 09/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -17,33 +17,31 @@ ms.collection: M365-identity-device-management
 
 CMPivot is an in-console utility that now provides access to real-time state of devices in your environment. It immediately runs a query on all currently connected devices in the target collection and returns the results. Occasionally, you may find yourself needing to troubleshoot CMPivot. For example, you may see that a client sent a state message for CMPivot. However, the site server didn't process the message because it was corrupted. This article helps you understand the flow of information for CMPivot.
 
-## <a name="bkmk_CMPivot-1906"></a> Troubleshooting CMPivot in 1906
+## <a name="bkmk_CMPivot-1906"></a> Troubleshooting CMPivot in version 1906 and later
 
-``` Log
-Auditing: User <username> initiated client operation 145 to collection <CollectionId>.
-```
-
+<pre><code lang="Log">Auditing: User &ltusername> initiated client operation 145 to collection &ltCollectionId>.
+</code></pre>
 
 
 
 
-## <a name="bkmk_CMPivot-1902"></a> Troubleshooting CMPivot in 1902
+
+## <a name="bkmk_CMPivot-1902"></a> Troubleshooting CMPivot in version 1902
 
 Starting in Configuration Manager version 1902, you can run CMPivot from the central administration site (CAS) in a hierarchy. The primary site still handles the communication to the client. When running CMPivot from the central administration site, it communicates with the primary site over the high-speed message subscription channel. This communication doesn't rely upon standard SQL replication between sites. If your SQL Server or Provider is remote, or you use SQL Always On, you'll have a “double hop scenario” for CMPivot. For information on how define constrained delegation for a "double hop scenario", see [CMPivot starting in version 1902](/sccm/core/servers/manage/cmpivot#bkmk_cmpivot1902).
 
 >[!IMPORTANT]
-> When troubleshooting CMPivot, enable verbose logging on your MPs and the site server's SMS_MESSAGE_PROCESSING_ENGINE for more information. If the client's output is larger than 80 Kb, enable verbose logging on the site server's SMS_MESSAGE_PROCESSING_ENGINE. For information on enabling verbose logging, see [Site server logging options](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_reg-site).
+> When troubleshooting CMPivot, enable verbose logging on your MPs and the site server's SMS_MESSAGE_PROCESSING_ENGINE for more information. If the client's output is larger than 80 KB, enable verbose logging on the site server's SMS_MESSAGE_PROCESSING_ENGINE. For information on enabling verbose logging, see [Site server logging options](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_reg-site).
 
-### Get information from the site server (version 1902)
+### Get information from the site server
 
 By default, the site server log files are located in C:\Program Files\Microsoft Configuration Manager\logs. This location may change depending on what was specified for your installation directory or if you offloaded items like the SMS Provider to another server. If you are running, CMPivot from the CAS, the logs will be on the primary site server.
 
 Check the **smsprov.log** for these lines:
 
-``` Log
-Type parameter is 135.
-Auditing: User <username> ran script 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 with hash dc6c2ad05f1bfda88d880c54121c8b5cea6a394282425a88dd4d8714547dc4a2 on collection <CollectionId>.
-```
+<pre><code lang="Log">Type parameter is 135.
+Auditing: User &ltusername> ran script 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 with hash dc6c2ad05f1bfda88d880c54121c8b5cea6a394282425a88dd4d8714547dc4a2 on collection &ltCollectionId>.
+</code></pre>
 
 **7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14** is the Script-Guid for CMPivot. You can also see this in [CMPivot audit status messages](/sccm/core/servers/manage/cmpivot#cmpivot-audit-status-messages).
 
@@ -59,65 +57,57 @@ select * from ClientAction where ClientOperationId=<id>
 
 In the **BgbServer.log**, look for the **TaskID** you gathered from SQL and note the **PushID**. In the Bgbserver.log, the **TaskID** will be labeled **TaskGUID**. For example:
 
+<pre><code lang="Log">Starting to send push task (<b>PushID: 9</b> TaskID: 12 <b>TaskGUID: 9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0</b> TaskType: 15 TaskParam: PFNjcmlwdENvbnRlbnQgU2NyaXB0R3VpZD0nN0RDNkI2RjEtRTdGNi00M0MxL (truncated log entry)
+Finished sending push task (<b>PushID: 9</b> TaskID: 12) to 2 clients
+</code></pre>
 
-- Starting to send push task (**PushID: 9** TaskID: 12 **TaskGUID: 9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0** TaskType: 15 TaskParam: PFNjcmlwdENvbnRlbnQgU2NyaXB0R3VpZD0nN0RDNkI2RjEtRTdGNi00M0MxL (truncated log entry)
-
-- Finished sending push task (**PushID: 9** TaskID: 12) to 2 clients
-
-### Client logs (version 1902)
+### Client logs
 
 Once you have the information from the site server, check the client logs. By default, the client logs are located in C:\Windows\CCM\Logs.
 
-Check the **CcmNotificationAgent.log**. You'll find logs like the following:  
+Check the **CcmNotificationAgent.log**. You'll find log entries like the following:  
 
-- Receive task from server with **pushid=9**, taskid=12, **taskguid=9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0**, tasktype=15 and taskParam=PFNjcmlwdEhhc2ggU2NyaXB0SGF (truncated log entry)
-
-- Send Task response message \<BgbResponseMessage TimeStamp="2019-09-16T14:45:46Z">\<**PushID>9**\</PushID><TaskID>12\</TaskID>\<ReturnCode>1\</ReturnCode>\</BgbResponseMessage> successfuly. 
-
- <pre><code lang="Log"> 
-Receive task from server with <b>pushid=9</b>, taskid=12, <b>taskguid=9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0</b>, tasktype=15 and taskParam=PFNjcmlwdEhhc2ggU2NyaXB0SGF (truncated log entry)
+<pre><code lang="Log">Receive task from server with <b>pushid=9</b>, taskid=12, <b>taskguid=9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0</b>, tasktype=15 and taskParam=PFNjcmlwdEhhc2ggU2NyaXB0SGF (truncated log entry)
 Send Task response message &ltBgbResponseMessage TimeStamp="2019-09-13T17:29:09Z"><b>&ltPushID>5</b>&lt/PushID>&ltTaskID>4&lt/TaskID>&ltReturnCode>1&lt/ReturnCode>&lt/BgbResponseMessage> successfuly.
  </code></pre>
 
 Check **Scripts.log** for the **TaskID**. In the following example, we see **Task ID {9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0}**:
 
-``` Log
-Sending script state message (fast): {9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0}
-Result are sent for ScriptGuid: 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 and TaskID: {9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0}
-```
+<pre><code lang="Log">Sending script state message (fast): <b>{9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0}</b>
+Result are sent for ScriptGuid: 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 and <b>TaskID: {9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0}</b>
+</code></pre>
 
 > [!NOTE]
-> If you don't see **(fast)** in the **Scripts.log**, then the data is likely over 80 Kb. In this case, the information is sent to the site server as a state message. Use client's **StateMessage.log** and the site server's **Statesys.log**.
+> If you don't see "(fast)" in the **Scripts.log**, then the data is likely over 80 KB. In this case, the information is sent to the site server as a state message. Use client's **StateMessage.log** and the site server's **Statesys.log**.
 
-## Review messages on the site server (version 1902)
+### Review messages on the site server (version 1902)
 
 When [verbose logging](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_reg-client) is enabled on the management point, you can see how incoming client messages are handled. In the  **MP_RelayMsgMgr.log**, look for the the **TaskID**.
 
-In the log example, we see the client's ID (GUID:83F67728-2E6D-4E4F-8075-ED035C31B783) and the **Task ID {9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0}**. A message ID gets assigned to the client's response before it's sent to the message processing engine:
+In the **MP_RelayMsgMgr.log** example, we see the client's ID (GUID:83F67728-2E6D-4E4F-8075-ED035C31B783) and the **Task ID {9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0}**. A message ID gets assigned to the client's response before it's sent to the message processing engine:
 
-- MessageKey: GUID:83F67728-2E6D-4E4F-8075-ED035C31B783<b>{9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0}</b>
-- Create message succeeded for message id **22f00adf-181e-4bad-b35e-d18912f39f89**
-- Add message payload succeeded for message id 22f00adf-181e-4bad-b35e-d18912f39f89	
-- Put message succeeded for message id 22f00adf-181e-4bad-b35e-d18912f39f89	
-- CRelayMsgMgrHandler::HandleMessage(): ExecuteTask() succeeded	
-
+<pre><code lang="Log">MessageKey: GUID:83F67728-2E6D-4E4F-8075-ED035C31B783<b>{9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0}</b>
+Create message succeeded for <b>message id 22f00adf-181e-4bad-b35e-d18912f39f89</b>
+Add message payload succeeded for message id 22f00adf-181e-4bad-b35e-d18912f39f89
+Put message succeeded for message id 22f00adf-181e-4bad-b35e-d18912f39f89
+CRelayMsgMgrHandler::HandleMessage(): ExecuteTask() succeeded
+</code></pre>
 
 When [verbose logging](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_logoptions) is enabled on **SMS_MESSAGE_PROCESSING_ENGINE.log**, you'll see the client results getting processed. Use the message ID you found from the **MP_RelayMsgMgr.log**. The processing log entries similar to the following:
 
-- Processing 2 messages with type Instant and IDs **22f00adf-181e-4bad-b35e-d18912f39f89[19]**, 434d80ae-09d4-4d84-aebf-28a4a29a9852[20]...
-- Processed 2 messages with type Instant. Failed to process 0 messages. All message IDs 22f00adf-181e-4bad-b35e-d18912f39f89[19], 434d80ae-09d4-4d84-aebf-28a4a29a9852[20]
-
+<pre><code lang="Log">Processing 2 messages with type Instant and IDs <b>22f00adf-181e-4bad-b35e-d18912f39f89[19]</b>, 434d80ae-09d4-4d84-aebf-28a4a29a9852[20]...
+Processed 2 messages with type Instant. Failed to process 0 messages. All message IDs <b>22f00adf-181e-4bad-b35e-d18912f39f89[19]</b>, 434d80ae-09d4-4d84-aebf-28a4a29a9852[20]
+</code></pre>
 
   - If you get an exception during processing, you can review it by running the following SQL query and looking at the Exception column. Once the message is processed, it will no longer be in the MPE_RequestMessages_Instant table.
 
-    ```SQL 
+    ```SQL
     select * from MPE_RequestMessages_Instant where MessageID=<ID from SMS_MESSAGE_PROCESSING_ENGINE.log>
     ```
 
-
 In the **BgbServer.log**, look for the **PushID** to see the number of clients that reported or failed.
 
-- Generated BGB task status report c:\ConfigMgr\inboxes\bgb.box\Bgb5c1db.BTS at 09/16/2019 16:46:39. (**PushID: 9** ReportedClients: 2 FailedClients: 0)
+<pre><code lang="Log">Generated BGB task status report c:\ConfigMgr\inboxes\bgb.box\Bgb5c1db.BTS at 09/16/2019 16:46:39. (<b>PushID: 9</b> ReportedClients: 2 FailedClients: 0)
 </code></pre>
 
 Check the monitoring view for CMPivot from SQL using the **TaskID**.
@@ -136,9 +126,8 @@ By default, the site server log files are located in C:\Program Files\Microsoft 
 
 Check the **smsprov.log** for this line:
 
-``` Log
-Auditing: User <username> initiated client operation 135 to collection <CollectionId>.
-```
+<pre><code lang="Log">Auditing: User <username> initiated client operation 135 to collection &ltCollectionId>.
+</code></pre>
 
 Find the ID in the CMPivot window. This ID is the **ClientOperationID**.
 
@@ -150,26 +139,12 @@ Find the **TaskID** from the ClientAction table. The **TaskID** corresponds to t
 select * from ClientAction where ClientOperationId=<id>
 ```
 
-In the **BgbServer.log**, look for the **TaskID** you gathered from SQL. In the Bgbserver.log, it will be labeled **TaskGUID**. For example: 
+In the **BgbServer.log**, look for the **TaskID** you gathered from SQL. In the Bgbserver.log, it will be labeled **TaskGUID**. For example:
 
-
-- Starting to send push task (PushID: 260 TaskID: 258 TaskGUID: **F8C7C37F-B42B-4C0A-B050-2BB44DF1098A** TaskType: 15 TaskParam:   PFNjcmlwdEhhc2ggU2NyaXB0SGFzaEFsZz0nU0hBMjU2Jz42YzZmNDY0OGYzZjU3M2MyNTQyNWZiNT
-    g2ZDVjYTIwNzRjNmViZmQ1NTg5MDZlMWI5NDRmYTEzNmFiMDE0ZGNjPC9TY3JpcHRIYXNoPjxTY3Jp
-    cHRQYXJhbWV0ZXJzPjxTY3JpcHRQYXJhbWV0ZXIgUGFyYW1ldGVyR3JvdXBHdWlkPSIiIFBhcmFtZX
-    Rlckdyb3VwTmFtZT0iUEdfIiBQYXJhbWV0ZXJOYW1lPSJzZWxlY3QiIFBhcmFtZXRlckRhdGFUeXBlP
-    SJTeXN0ZW0uU3RyaW5nIiBQYXJhbWV0ZXJWaXNpYmlsaXR5PSIwIiBQYXJhbWV0ZXJUeXBlPSIwIiBQ
-    YXJhbWV0ZXJWYWx1ZT0iRGV2aWNlI2tEZXZpY2UjY05hbWUja1N0cmluZyNjTWFudWZhY3R1cmVyI2tTd
-    HJpbmcjY1ZlcnNpb24ja1N0cmluZyNjUmVsZWFzZURhdGUja1N0cmluZyNjU2VyaWFsTnVtYmVyI2tTdH
-    JpbmcjY0J1aWxkTnVtYmVyI2tTdHJpbmcjY1NNQklPU0JJT1NWZXJzaW9uI2tTdHJpbmciLz48U2NyaXB0
-    UGFyYW1ldGVyIFBhcmFtZXRlckdyb3VwR3VpZD0iIiBQYXJhbWV0ZXJHcm91cE5hbWU9IlBHXyIgUGFyYW
-    1ldGVyTmFtZT0id21pcXVlcnkiIFBhcmFtZXRlckRhdGFUeXBlPSJTeXN0ZW0uU3RyaW5nIiBQYXJhbWV0ZX
-    JWaXNpYmlsaXR5PSIwIiBQYXJhbWV0ZXJUeXBlPSIwIiBQYXJhbWV0ZXJWYWx1ZT0iU0VMRUNUI3NOYW1lI2N
-    NYW51ZmFjdHVyZXIjY1ZlcnNpb24jY1JlbGVhc2VEYXRlI2NTZXJpYWxOdW1iZXIjY0J1aWxkTnVtYmVyI2
-    NTTUJJT1NCSU9TVmVyc2lvbiNzRlJPTSNzV2luMzJfQmlvcyIvPjwvU2NyaXB0UGFyYW1ldGVycz48UGFyYW
-    1ldGVyR3JvdXBIYXNoIFBhcmFtZXRlckhhc2hBbGc9J1NIQTI1NicOTE5NmEwNzNlOTljY2U4MzEyMWE3ZmFi
-    ODE5N2M4M2QxMjhjNDRmNTdlMWI0NGU1NWQwNmU4YTA5NGI5ZGRkNTwvUGFyYW1ldGVyR3JvdXBIYXNoPjwvU
-    2NyaXB0Q29udGVudD4=-) to 5 clients with throttling (strategy: 1 param: 42)
-   Finished sending push task (PushID: 260 TaskID: 258) to 5 clients
+<pre><code lang="Log">Starting to send push task (PushID: 260 TaskID: 258 TaskGUID: <b>F8C7C37F-B42B-4C0A-B050-2BB44DF1098A</b> TaskType: 15
+TaskParam: PFNjcmlwdEhhc2ggU2NyaXB0SGF...truncated...to 5 clients with throttling (strategy: 1 param: 42)
+Finished sending push task (PushID: 260 TaskID: 258) to 5 clients
+</code></pre>
 
 ### Client logs
 
@@ -177,31 +152,17 @@ Once you have the information from the site server, check the client logs. By de
 
 Check the **CcmNotificationAgent.log**. You'll find logs like the following entry:  
 
-- **Error! Bookmark not defined.**+PFNjcmlwdEhhc2ggU2NyaXB0SGFzaEFsZz0nU0hBMjU2Jz42YzZmNDY0OGYzZjU3M2MyNTQyNWZiNT
-    g2ZDVjYTIwNzRjNmViZmQ1NTg5MDZlMWI5NDRmYTEzNmFiMDE0ZGNjPC9TY3JpcHRIYXNoPjxTY3Jp
-    cHRQYXJhbWV0ZXJzPjxTY3JpcHRQYXJhbWV0ZXIgUGFyYW1ldGVyR3JvdXBHdWlkPSIiIFBhcmFtZX
-    Rlckdyb3VwTmFtZT0iUEdfIiBQYXJhbWV0ZXJOYW1lPSJzZWxlY3QiIFBhcmFtZXRlckRhdGFUeXBlP
-    SJTeXN0ZW0uU3RyaW5nIiBQYXJhbWV0ZXJWaXNpYmlsaXR5PSIwIiBQYXJhbWV0ZXJUeXBlPSIwIiBQ
-    YXJhbWV0ZXJWYWx1ZT0iRGV2aWNlI2tEZXZpY2UjY05hbWUja1N0cmluZyNjTWFudWZhY3R1cmVyI2tTd
-    HJpbmcjY1ZlcnNpb24ja1N0cmluZyNjUmVsZWFzZURhdGUja1N0cmluZyNjU2VyaWFsTnVtYmVyI2tTdH
-    JpbmcjY0J1aWxkTnVtYmVyI2tTdHJpbmcjY1NNQklPU0JJT1NWZXJzaW9uI2tTdHJpbmciLz48U2NyaXB0
-    UGFyYW1ldGVyIFBhcmFtZXRlckdyb3VwR3VpZD0iIiBQYXJhbWV0ZXJHcm91cE5hbWU9IlBHXyIgUGFyYW
-    1ldGVyTmFtZT0id21pcXVlcnkiIFBhcmFtZXRlckRhdGFUeXBlPSJTeXN0ZW0uU3RyaW5nIiBQYXJhbWV0ZX
-    JWaXNpYmlsaXR5PSIwIiBQYXJhbWV0ZXJUeXBlPSIwIiBQYXJhbWV0ZXJWYWx1ZT0iU0VMRUNUI3NOYW1lI2N
-    NYW51ZmFjdHVyZXIjY1ZlcnNpb24jY1JlbGVhc2VEYXRlI2NTZXJpYWxOdW1iZXIjY0J1aWxkTnVtYmVyI2
-    NTTUJJT1NCSU9TVmVyc2lvbiNzRlJPTSNzV2luMzJfQmlvcyIvPjwvU2NyaXB0UGFyYW1ldGVycz48UGFyYW
-    1ldGVyR3JvdXBIYXNoIFBhcmFtZXRlckhhc2hBbGc9J1NIQTI1NicOTE5NmEwNzNlOTljY2U4MzEyMWE3ZmFi
-    ODE5N2M4M2QxMjhjNDRmNTdlMWI0NGU1NWQwNmU4YTA5NGI5ZGRkNTwvUGFyYW1ldGVyR3JvdXBIYXNoPjwvU
-    2NyaXB0Q29udGVudD4=-
+<pre><code lang="Log"><b>Error! Bookmark not defined.</b>+PFNjcmlwdEhhc2ggU2NyaXB0SGFzaEFsZz0nU0hBMjU2Jz42YzZmNDY0OGYzZjU3M2MyNTQyNWZiNT
+g2ZDVjYTIwNzRjNmViZmQ1NTg5MDZlMWI5NDRmYTEzNmFiMDE0ZGNjPC9TY3JpcHRIYXNoPjxTY3Jp (truncated log entry)
+</code></pre>
 
 Check **Scripts.log** for the **TaskID**. In the following example, we see **Task ID {F8C7C37F-B42B-4C0A-B050-2BB44DF1098A}**:
 
-``` Log
-Sending script state message: 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 Scripts 7/3/2018 11:44:47 AM 5036 (0x13AC)
-State message: Task Id {F8C7C37F-B42B-4C0A-B050-2BB44DF1098A} Scripts 7/3/2018 11:44:47 AM 5036 (0x13AC)
-```
+<pre><code lang="Log">Sending script state message: 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14
+State message: Task Id <b>{F8C7C37F-B42B-4C0A-B050-2BB44DF1098A}</b>
+</code></pre>
 
-Check the **StateMessage.log**. Our example **TaskID** is near the bottom of the message next to &lt;Param>. You should see lines similar to the one below:
+Check the **StateMessage.log**. Our example **TaskID** is near the bottom of the message next to \<Param>. You should see lines similar to the one below:
 
 ``` XML
 StateMessage body: <?xml version="1.0" encoding="UTF-16"?>
@@ -214,13 +175,13 @@ StateMessage body: <?xml version="1.0" encoding="UTF-16"?>
 </ReportDetails></ReportHeader><ReportBody><StateMessage MessageTime="20180703184447.517000+000"><Topic ID="7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14" Type="9003" IDType="0" User="" UserSID=""/><State ID="1" Criticality="0"/>
 <StateDetails Type="1"><![CDATA["PAA/AHgAbQBsACAAdgBlAHIAcwBpAG8AbgA9ACIAMQAuADAAIgAgAGUAbgBjAG8AZABpAG4AZwA9ACIAdQB0AGYALQAxADYAIgA/AD4APAByAGUAcwB1AGwAdAAgAFIAZQBzAHUAbAB0AEMAbwBkAGUAPQAiADAAIgA+ADwAZQAgAE4AYQBtAGUAPQAiAEkAbgB0AGUAbAAoAFIAKQAgAFgAZQBvAG4AKABSACkAIABDAFAAVQAgAEUANQAtADIANgA3ADMAIAB2ADQAIABAACAAMgAuADMAMABHAEgAegAiACAATQBhAG4AdQBmAGEAYwB0AHUAcgBlAHIAPQAiAEEAbQBlAHIAaQBjAGEAbgAgAE0AZQBnAGEAdAByAGUAbgBkAHMAIABJAG4AYwAuACIAIABWAGUAcgBzAGkAbwBuAD0AIgBWAFIAVABVAEEATAAgAC0AIAA2ADAAMAAxADcAMAAyACIAIABSAGUAbABlAGEAcwBlAEQAYQB0AGUAPQAiADIAMAAxADcALQAwADYALQAwADIAIAAwADAAOgAwADAAOgAwADAAIgAgAFMAZQByAGkAYQBsAE4AdQBtAGIAZQByAD0AIgAwADAAMAAwAC0AMAAwADEAOAAtADMANgA4ADIALQA0ADcAMAA4AC0ANwA2ADQAMAAtADcANgAwADAALQAzADMAIgAgAFMATQBCAEkATwBTAEIASQBPAFMAVgBlAHIAcwBpAG8AbgA9ACIAMAA5ADAAMAAwADcAIAAiACAALwA+ADwALwByAGUAcwB1AGwAdAA+AA=="~~]]></StateDetails><UserParameters Flags="0" Count="2">
 <Param>{F8C7C37F-B42B-4C0A-B050-2BB44DF1098A}</Param><Param>0</Param></UserParameters></StateMessage></ReportBody></Report>
-StateMessage 7/3/2018 11:44:47 AM 5036 (0x13AC)
+
 Successfully forwarded State Messages to the MP StateMessage 7/3/2018 11:44:47 AM 5036 (0x13AC)
 ```
 
-## Review messages on the site server
+### Review messages on the site server
 
-Open the **statesys.log** to see if the message is received and processed. Our example **TaskID** is near the bottom of the message next to &lt;Param>. You need to enable [verbose logging](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_logoptions) on the SMS_STATE_SYSTEM component to see these log entries.  
+Open the **statesys.log** to see if the message is received and processed. Our example **TaskID** is near the bottom of the message next to \<Param>. You need to enable [verbose logging](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_logoptions) on the SMS_STATE_SYSTEM component to see these log entries.  
 
 ``` XML
 CMessageProcessor - the cmdline to DB exec dbo.spProcessStateReport N'?<?xml version="1.0" encoding="UTF-
