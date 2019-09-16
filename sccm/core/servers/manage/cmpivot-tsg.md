@@ -17,7 +17,7 @@ ms.collection: M365-identity-device-management
 
 CMPivot is an in-console utility that now provides access to real-time state of devices in your environment. It immediately runs a query on all currently connected devices in the target collection and returns the results. Occasionally, you may find yourself needing to troubleshoot CMPivot. For example, you may see that a client sent a state message for CMPivot. However, the site server didn't process the message because it was corrupted. This article helps you understand the flow of information for CMPivot.
 
-## Troubleshooting CMPivot in 1906
+## <a name="bkmk_CMPivot-1906"></a> Troubleshooting CMPivot in 1906
 
 ``` Log
 Auditing: User <username> initiated client operation 145 to collection <CollectionId>.
@@ -27,7 +27,7 @@ Auditing: User <username> initiated client operation 145 to collection <Collecti
 
 
 
-## Troubleshooting CMPivot in 1902
+## <a name="bkmk_CMPivot-1902"></a> Troubleshooting CMPivot in 1902
 
 Starting in Configuration Manager version 1902, you can run CMPivot from the central administration site (CAS) in a hierarchy. The primary site still handles the communication to the client. When running CMPivot from the central administration site, it communicates with the primary site over the high-speed message subscription channel. This communication doesn't rely upon standard SQL replication between sites. If your SQL Server or Provider is remote, or you use SQL Always On, you'll have a “double hop scenario” for CMPivot. For information on how define constrained delegation for a "double hop scenario", see [CMPivot starting in version 1902](/sccm/core/servers/manage/cmpivot#bkmk_cmpivot1902).
 
@@ -46,7 +46,7 @@ Auditing: User <username> ran script 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 with h
 
 Next, find the ID in the CMPivot window. This ID is the **ClientOperationID**.
 
-![CMPivot window with ClientOperationID highlighted](media/cmpivot-clientoperationid.png)
+![CMPivot window with ClientOperationID highlighted](media/cmpivot-client-operationid-1902.png)
 
 Find the **TaskID** from the ClientAction table. The **TaskID** corresponds to the **UniqueID** in the ClientAction table. 
 
@@ -54,26 +54,12 @@ Find the **TaskID** from the ClientAction table. The **TaskID** corresponds to t
 select * from ClientAction where ClientOperationId=<id>
 ```
 
-In the **BgbServer.log**, look for the **TaskID** you gathered from SQL and note the **PushID**. In the Bgbserver.log, the **TaskID** will be labeled **TaskGUID**. For example: 
+In the **BgbServer.log**, look for the **TaskID** you gathered from SQL and note the **PushID**. In the Bgbserver.log, the **TaskID** will be labeled **TaskGUID**. For example:
 
 
-- Starting to send push task (**PushID: 5** TaskID: 4 TaskGUID: **779DFCA7-E164-42E3-8FA1-C744FD307FDD** TaskType: 15 TaskParam:    PFNjcmlwdEhhc2ggU2NyaXB0SGFzaEFsZz0nU0hBMjU2Jz42YzZmNDY0OGYzZjU3M2MyNTQyNWZiNT
-    g2ZDVjYTIwNzRjNmViZmQ1NTg5MDZlMWI5NDRmYTEzNmFiMDE0ZGNjPC9TY3JpcHRIYXNoPjxTY3Jp
-    cHRQYXJhbWV0ZXJzPjxTY3JpcHRQYXJhbWV0ZXIgUGFyYW1ldGVyR3JvdXBHdWlkPSIiIFBhcmFtZX
-    Rlckdyb3VwTmFtZT0iUEdfIiBQYXJhbWV0ZXJOYW1lPSJzZWxlY3QiIFBhcmFtZXRlckRhdGFUeXBlP
-    SJTeXN0ZW0uU3RyaW5nIiBQYXJhbWV0ZXJWaXNpYmlsaXR5PSIwIiBQYXJhbWV0ZXJUeXBlPSIwIiBQ
-    YXJhbWV0ZXJWYWx1ZT0iRGV2aWNlI2tEZXZpY2UjY05hbWUja1N0cmluZyNjTWFudWZhY3R1cmVyI2tTd
-    HJpbmcjY1ZlcnNpb24ja1N0cmluZyNjUmVsZWFzZURhdGUja1N0cmluZyNjU2VyaWFsTnVtYmVyI2tTdH
-    JpbmcjY0J1aWxkTnVtYmVyI2tTdHJpbmcjY1NNQklPU0JJT1NWZXJzaW9uI2tTdHJpbmciLz48U2NyaXB0
-    UGFyYW1ldGVyIFBhcmFtZXRlckdyb3VwR3VpZD0iIiBQYXJhbWV0ZXJHcm91cE5hbWU9IlBHXyIgUGFyYW
-    1ldGVyTmFtZT0id21pcXVlcnkiIFBhcmFtZXRlckRhdGFUeXBlPSJTeXN0ZW0uU3RyaW5nIiBQYXJhbWV0ZX
-    JWaXNpYmlsaXR5PSIwIiBQYXJhbWV0ZXJUeXBlPSIwIiBQYXJhbWV0ZXJWYWx1ZT0iU0VMRUNUI3NOYW1lI2N
-    NYW51ZmFjdHVyZXIjY1ZlcnNpb24jY1JlbGVhc2VEYXRlI2NTZXJpYWxOdW1iZXIjY0J1aWxkTnVtYmVyI2
-    NTTUJJT1NCSU9TVmVyc2lvbiNzRlJPTSNzV2luMzJfQmlvcyIvPjwvU2NyaXB0UGFyYW1ldGVycz48UGFyYW
-    1ldGVyR3JvdXBIYXNoIFBhcmFtZXRlckhhc2hBbGc9J1NIQTI1NicOTE5NmEwNzNlOTljY2U4MzEyMWE3ZmFi
-    ODE5N2M4M2QxMjhjNDRmNTdlMWI0NGU1NWQwNmU4YTA5NGI5ZGRkNTwvUGFyYW1ldGVyR3JvdXBIYXNoPjwvU
-    2NyaXB0Q29udGVudD4=-) to 5 clients with throttling (strategy: 1 param: 42)
-   Finished sending push task (PushID: 5 TaskID: 4) to 2 clients
+- Starting to send push task (**PushID: 9** TaskID: 12 **TaskGUID: 9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0** TaskType: 15 TaskParam: PFNjcmlwdENvbnRlbnQgU2NyaXB0R3VpZD0nN0RDNkI2RjEtRTdGNi00M0MxL (truncated log entry)
+
+- Finished sending push task (**PushID: 9** TaskID: 12) to 2 clients
 
 ### Client logs (version 1902)
 
@@ -81,57 +67,53 @@ Once you have the information from the site server, check the client logs. By de
 
 Check the **CcmNotificationAgent.log**. You'll find logs like the following:  
 
-- Receive task from server with **pushid=5**, taskid=4, taskguid=**779DFCA7-E164-42E3-8FA1-C744FD307FDD**, tasktype=15 and taskParam=PFNjcmlwdEhhc2ggU2NyaXB0SGFzaEFsZz0nU0hBMjU2Jz42YzZmNDY0OGYzZjU3M2MyNTQyNWZiNT
-    g2ZDVjYTIwNzRjNmViZmQ1NTg5MDZlMWI5NDRmYTEzNmFiMDE0ZGNjPC9TY3JpcHRIYXNoPjxTY3Jp
-    cHRQYXJhbWV0ZXJzPjxTY3JpcHRQYXJhbWV0ZXIgUGFyYW1ldGVyR3JvdXBHdWlkPSIiIFBhcmFtZX
-    Rlckdyb3VwTmFtZT0iUEdfIiBQYXJhbWV0ZXJOYW1lPSJzZWxlY3QiIFBhcmFtZXRlckRhdGFUeXBlP
-    SJTeXN0ZW0uU3RyaW5nIiBQYXJhbWV0ZXJWaXNpYmlsaXR5PSIwIiBQYXJhbWV0ZXJUeXBlPSIwIiBQ
-    YXJhbWV0ZXJWYWx1ZT0iRGV2aWNlI2tEZXZpY2UjY05hbWUja1N0cmluZyNjTWFudWZhY3R1cmVyI2tTd
-    HJpbmcjY1ZlcnNpb24ja1N0cmluZyNjUmVsZWFzZURhdGUja1N0cmluZyNjU2VyaWFsTnVtYmVyI2tTdH
-    JpbmcjY0J1aWxkTnVtYmVyI2tTdHJpbmcjY1NNQklPU0JJT1NWZXJzaW9uI2tTdHJpbmciLz48U2NyaXB0
-    UGFyYW1ldGVyIFBhcmFtZXRlckdyb3VwR3VpZD0iIiBQYXJhbWV0ZXJHcm91cE5hbWU9IlBHXyIgUGFyYW
-    1ldGVyTmFtZT0id21pcXVlcnkiIFBhcmFtZXRlckRhdGFUeXBlPSJTeXN0ZW0uU3RyaW5nIiBQYXJhbWV0ZX
-    JWaXNpYmlsaXR5PSIwIiBQYXJhbWV0ZXJUeXBlPSIwIiBQYXJhbWV0ZXJWYWx1ZT0iU0VMRUNUI3NOYW1lI2N
-    NYW51ZmFjdHVyZXIjY1ZlcnNpb24jY1JlbGVhc2VEYXRlI2NTZXJpYWxOdW1iZXIjY0J1aWxkTnVtYmVyI2
-    NTTUJJT1NCSU9TVmVyc2lvbiNzRlJPTSNzV2luMzJfQmlvcyIvPjwvU2NyaXB0UGFyYW1ldGVycz48UGFyYW
-    1ldGVyR3JvdXBIYXNoIFBhcmFtZXRlckhhc2hBbGc9J1NIQTI1NicOTE5NmEwNzNlOTljY2U4MzEyMWE3ZmFi
-    ODE5N2M4M2QxMjhjNDRmNTdlMWI0NGU1NWQwNmU4YTA5NGI5ZGRkNTwvUGFyYW1ldGVyR3JvdXBIYXNoPjwvU
-    2NyaXB0Q29udGVudD4=-
+- Receive task from server with **pushid=9**, taskid=12, **taskguid=9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0**, tasktype=15 and taskParam=PFNjcmlwdEhhc2ggU2NyaXB0SGF (truncated log entry)
 
-- <pre><code lang="Log"> Send Task response message &ltBgbResponseMessage TimeStamp="2019-09-13T17:29:09Z"><b>&ltPushID>5</b>&lt/PushID>&ltTaskID>4&lt/TaskID>&ltReturnCode>1&lt/ReturnCode>&lt/BgbResponseMessage> successfuly.
+-Send Task response message \<BgbResponseMessage TimeStamp="2019-09-16T14:45:46Z">\<**PushID>9**\</PushID><TaskID>12\</TaskID>\<ReturnCode>1\</ReturnCode>\</BgbResponseMessage> successfuly. 
+
+- <pre><code lang="Log">  Send Task response message &ltBgbResponseMessage TimeStamp="2019-09-13T17:29:09Z"><b>&ltPushID>5</b>&lt/PushID>&ltTaskID>4&lt/TaskID>&ltReturnCode>1&lt/ReturnCode>&lt/BgbResponseMessage> successfuly.
  </code></pre>
 
-Check **Scripts.log** for the **TaskID**. In the following example, we see **Task ID {779DFCA7-E164-42E3-8FA1-C744FD307FDD}**:
+Check **Scripts.log** for the **TaskID**. In the following example, we see **Task ID {9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0}**:
 
 ``` Log
-Sending script state message (fast): {779DFCA7-E164-42E3-8FA1-C744FD307FDD}
-Result are sent for ScriptGuid: 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 and TaskID: {779DFCA7-E164-42E3-8FA1-C744FD307FDD}
+Sending script state message (fast): {9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0}
+Result are sent for ScriptGuid: 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 and TaskID: {9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0}
 ```
+
+> [!NOTE]
+> If you don't see **(fast)** in the **Scripts.log**, then the data is likely over 80 Kb. In this case, the information is sent to the site server as a state message. Use client's **StateMessage.log** and the site server's **Statesys.log**.
 
 ## Review messages on the site server (version 1902)
 
-When verbose logging is enabled on **SMS_MESSAGE_PROCESSING_ENGINE.log**, you'll see the results processing. The message IDs here are assigned during processing and are only used to troubleshoot an exception in this log. The processing log entries similar to the following:
+When [verbose logging](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_logoptions) is enabled on **SMS_MESSAGE_PROCESSING_ENGINE.log**, you'll see the results processing. The message IDs here are assigned during processing and are only used to troubleshoot an exception in this log. The processing log entries similar to the following:
 
 ```Log
-Processing 2 messages with type Instant and IDs dff16fd2-c112-4a44-8400-206fbb91da2b[17], 721bc79f-d7a4-434d-9357-15c7a9d0d6b0[18]
-Processed 2 messages with type Instant. Failed to process 0 messages. All message IDs dff16fd2-c112-4a44-8400-206fbb91da2b[17], 721bc79f-d7a4-434d-9357-15c7a9d0d6b0[18]
+Processing 2 messages with type Instant and IDs 22f00adf-181e-4bad-b35e-d18912f39f89[19], 434d80ae-09d4-4d84-aebf-28a4a29a9852[20]...
+Processed 2 messages with type Instant. Failed to process 0 messages. All message IDs 22f00adf-181e-4bad-b35e-d18912f39f89[19], 434d80ae-09d4-4d84-aebf-28a4a29a9852[20]
 ```
 
-- If you get an exception during processing, you can review it by running the following SQL query and looking at the Exception column:
+- If you get an exception during processing, you can review it by running the following SQL query and looking at the Exception column. Once the message is processed, it will no longer be in the MPE_RequestMessages_Instant table.
+
     ```SQL 
-    select * from MPE_RequestMessages_Instant where MessageID=<ID from log>
+    select * from MPE_RequestMessages_Instant where MessageID=<ID from SMS_MESSAGE_PROCESSING_ENGINE.log>
     ```
 
--------
-In the **BgbServer.log**, look for the **PushID**:
 
-<pre><code lang="Log">
- Generated BGB task status report c:\configmgr\inboxes\bgb.box\Bgbnu7m2.BTS at 09/13/2019 19:33:08. (<b>PushID: 5</b> ReportedClients: 1 FailedClients: 1) SMS_NOTIFICATION_SERVER 9/13/2019 7:33:08 PM 4572 (0x11DC)
+In the **BgbServer.log**, look for the **PushID** to see the number of clients that reported or failed.
+
+- Generated BGB task status report c:\ConfigMgr\inboxes\bgb.box\Bgb5c1db.BTS at 09/16/2019 16:46:39. (**PushID: 9** ReportedClients: 2 FailedClients: 0)
 </code></pre>
 
-In verbose SMS_
+Check the monitoring view for CMPivot from SQL using the **TaskID**.
 
-## Troubleshooting CMPivot in 1810 and earlier
+``` SQL
+select * from vSMS_CMPivotStatus where TaskID='{9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0}'
+```
+
+![CMPivot SQL queries for troubleshooting in version 1902](media/cmpivot-sql-queries-1902.png)
+
+## <a name="bkmk_CMPivot-1810"></a> Troubleshooting CMPivot in 1810 and earlier
 
 ### Get information from the site server
 
