@@ -2,7 +2,7 @@
 title: Configure boundary groups
 titleSuffix: Configuration Manager
 description: Help clients find site systems by using boundary groups to logically organize related network locations called boundaries
-ms.date: 06/18/2019
+ms.date: 09/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -218,8 +218,10 @@ By default, the management point prioritizes peer cache sources at the top of th
 
 If you have a branch office with a faster internet link, you can now prioritize cloud content.  
 
-In version 1902, this setting is now titled **Prefer cloud based sources over on-premise sources**. The behavior remains the same.<!-- SCCMDocs#1529 -->
+In version 1902, this setting is now titled **Prefer cloud based sources over on-premise sources**. Cloud based sources include the following:<!-- SCCMDocs#1529 -->
 
+- Cloud distribution points
+- Microsoft Update (added in version 1902)
 
 ## Software update points
 
