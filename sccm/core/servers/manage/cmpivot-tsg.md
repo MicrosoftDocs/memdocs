@@ -31,6 +31,9 @@ Auditing: User <username> initiated client operation 145 to collection <Collecti
 
 Starting in Configuration Manager version 1902, you can run CMPivot from the central administration site (CAS) in a hierarchy. The primary site still handles the communication to the client. When running CMPivot from the central administration site, it communicates with the primary site over the high-speed message subscription channel. This communication doesn't rely upon standard SQL replication between sites. If your SQL Server or Provider is remote, or you use SQL Always On, you'll have a “double hop scenario” for CMPivot. For information on how define constrained delegation for a "double hop scenario", see [CMPivot starting in version 1902](/sccm/core/servers/manage/cmpivot#bkmk_cmpivot1902).
 
+>[!IMPORTANT]
+> When troubleshooting CMPivot, enable verbose logging on your MPs and the site server's SMS_MESSAGE_PROCESSING_ENGINE for more information. If the client's output is larger than 80 Kb, enable verbose logging on the site server's SMS_MESSAGE_PROCESSING_ENGINE. For information on enabling verbose logging, see [Site server logging options](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_reg-site).
+
 ### Get information from the site server (version 1902)
 
 By default, the site server log files are located in C:\Program Files\Microsoft Configuration Manager\logs. This location may change depending on what was specified for your installation directory or if you offloaded items like the SMS Provider to another server. If you are running, CMPivot from the CAS, the logs will be on the primary site server.
@@ -69,7 +72,7 @@ Check the **CcmNotificationAgent.log**. You'll find logs like the following:
 
 - Receive task from server with **pushid=9**, taskid=12, **taskguid=9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0**, tasktype=15 and taskParam=PFNjcmlwdEhhc2ggU2NyaXB0SGF (truncated log entry)
 
--Send Task response message \<BgbResponseMessage TimeStamp="2019-09-16T14:45:46Z">\<**PushID>9**\</PushID><TaskID>12\</TaskID>\<ReturnCode>1\</ReturnCode>\</BgbResponseMessage> successfuly. 
+- Send Task response message \<BgbResponseMessage TimeStamp="2019-09-16T14:45:46Z">\<**PushID>9**\</PushID><TaskID>12\</TaskID>\<ReturnCode>1\</ReturnCode>\</BgbResponseMessage> successfuly. 
 
 - <pre><code lang="Log">  Send Task response message &ltBgbResponseMessage TimeStamp="2019-09-13T17:29:09Z"><b>&ltPushID>5</b>&lt/PushID>&ltTaskID>4&lt/TaskID>&ltReturnCode>1&lt/ReturnCode>&lt/BgbResponseMessage> successfuly.
  </code></pre>
@@ -86,14 +89,24 @@ Result are sent for ScriptGuid: 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 and TaskID:
 
 ## Review messages on the site server (version 1902)
 
-When [verbose logging](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_logoptions) is enabled on **SMS_MESSAGE_PROCESSING_ENGINE.log**, you'll see the results processing. The message IDs here are assigned during processing and are only used to troubleshoot an exception in this log. The processing log entries similar to the following:
+When [verbose logging](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_reg-client) is enabled on the management point, you can see how incoming client messages are handled. In the  **MP_RelayMsgMgr.log**, look for the the **TaskID**.
 
-```Log
-Processing 2 messages with type Instant and IDs 22f00adf-181e-4bad-b35e-d18912f39f89[19], 434d80ae-09d4-4d84-aebf-28a4a29a9852[20]...
-Processed 2 messages with type Instant. Failed to process 0 messages. All message IDs 22f00adf-181e-4bad-b35e-d18912f39f89[19], 434d80ae-09d4-4d84-aebf-28a4a29a9852[20]
-```
+In the log example, we see the client's ID (GUID:83F67728-2E6D-4E4F-8075-ED035C31B783) and the **Task ID {9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0}**. A message ID gets assigned to the client's response before it's sent to the message processing engine:
 
-- If you get an exception during processing, you can review it by running the following SQL query and looking at the Exception column. Once the message is processed, it will no longer be in the MPE_RequestMessages_Instant table.
+- MessageKey: GUID:83F67728-2E6D-4E4F-8075-ED035C31B783<b>{9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0}</b>
+- Create message succeeded for message id **22f00adf-181e-4bad-b35e-d18912f39f89**
+- Add message payload succeeded for message id 22f00adf-181e-4bad-b35e-d18912f39f89	
+- Put message succeeded for message id 22f00adf-181e-4bad-b35e-d18912f39f89	
+- CRelayMsgMgrHandler::HandleMessage(): ExecuteTask() succeeded	
+
+
+When [verbose logging](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_logoptions) is enabled on **SMS_MESSAGE_PROCESSING_ENGINE.log**, you'll see the client results getting processed. Use the message ID you found from the **MP_RelayMsgMgr.log**. The processing log entries similar to the following:
+
+- Processing 2 messages with type Instant and IDs **22f00adf-181e-4bad-b35e-d18912f39f89[19]**, 434d80ae-09d4-4d84-aebf-28a4a29a9852[20]...
+- Processed 2 messages with type Instant. Failed to process 0 messages. All message IDs 22f00adf-181e-4bad-b35e-d18912f39f89[19], 434d80ae-09d4-4d84-aebf-28a4a29a9852[20]
+
+
+  - If you get an exception during processing, you can review it by running the following SQL query and looking at the Exception column. Once the message is processed, it will no longer be in the MPE_RequestMessages_Instant table.
 
     ```SQL 
     select * from MPE_RequestMessages_Instant where MessageID=<ID from SMS_MESSAGE_PROCESSING_ENGINE.log>
