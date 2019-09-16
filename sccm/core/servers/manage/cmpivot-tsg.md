@@ -74,7 +74,9 @@ Check the **CcmNotificationAgent.log**. You'll find logs like the following:
 
 - Send Task response message \<BgbResponseMessage TimeStamp="2019-09-16T14:45:46Z">\<**PushID>9**\</PushID><TaskID>12\</TaskID>\<ReturnCode>1\</ReturnCode>\</BgbResponseMessage> successfuly. 
 
-- <pre><code lang="Log">  Send Task response message &ltBgbResponseMessage TimeStamp="2019-09-13T17:29:09Z"><b>&ltPushID>5</b>&lt/PushID>&ltTaskID>4&lt/TaskID>&ltReturnCode>1&lt/ReturnCode>&lt/BgbResponseMessage> successfuly.
+ <pre><code lang="Log"> 
+Receive task from server with <b>pushid=9</b>, taskid=12, <b>taskguid=9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0</b>, tasktype=15 and taskParam=PFNjcmlwdEhhc2ggU2NyaXB0SGF (truncated log entry)
+Send Task response message &ltBgbResponseMessage TimeStamp="2019-09-13T17:29:09Z"><b>&ltPushID>5</b>&lt/PushID>&ltTaskID>4&lt/TaskID>&ltReturnCode>1&lt/ReturnCode>&lt/BgbResponseMessage> successfuly.
  </code></pre>
 
 Check **Scripts.log** for the **TaskID**. In the following example, we see **Task ID {9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0}**:
