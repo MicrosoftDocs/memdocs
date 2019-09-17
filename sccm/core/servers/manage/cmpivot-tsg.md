@@ -17,33 +17,29 @@ ms.collection: M365-identity-device-management
 
 CMPivot is an in-console utility that now provides access to real-time state of devices in your environment. It immediately runs a query on all currently connected devices in the target collection and returns the results. Occasionally, you may find yourself needing to troubleshoot CMPivot. For example, you may see that a client sent a state message for CMPivot. However, the site server didn't process the message because it was corrupted. This article helps you understand the flow of information for CMPivot.
 
-## <a name="bkmk_CMPivot-1906"></a> Troubleshooting CMPivot in version 1906 and later
+## <a name="bkmk_CMPivot-1902"></a> Troubleshooting CMPivot in version 1902 and later
 
-<pre><code lang="Log">Auditing: User &ltusername> initiated client operation 145 to collection &ltCollectionId>.
-</code></pre>
-
-
-
-
-
-## <a name="bkmk_CMPivot-1902"></a> Troubleshooting CMPivot in version 1902
-
-Starting in Configuration Manager version 1902, you can run CMPivot from the central administration site (CAS) in a hierarchy. The primary site still handles the communication to the client. When running CMPivot from the central administration site, it communicates with the primary site over the high-speed message subscription channel. This communication doesn't rely upon standard SQL replication between sites. If your SQL Server or Provider is remote, or you use SQL Always On, you'll have a “double hop scenario” for CMPivot. For information on how define constrained delegation for a "double hop scenario", see [CMPivot starting in version 1902](/sccm/core/servers/manage/cmpivot#bkmk_cmpivot1902).
+Starting in Configuration Manager version 1902, you can run CMPivot from the central administration site (CAS) in a hierarchy. The primary site still handles the communication to the client. When running CMPivot from the central administration site, it communicates with the primary site over the high-speed message subscription channel. This communication doesn't rely upon standard SQL replication between sites. If your SQL Server or Provider is remote, or you use SQL Always On, you'll have a “double hop scenario” for CMPivot. For information on how to define constrained delegation for a "double hop scenario", see [CMPivot starting in version 1902](/sccm/core/servers/manage/cmpivot#bkmk_cmpivot1902).
 
 >[!IMPORTANT]
 > When troubleshooting CMPivot, enable verbose logging on your MPs and the site server's SMS_MESSAGE_PROCESSING_ENGINE for more information. If the client's output is larger than 80 KB, enable verbose logging on the site server's SMS_MESSAGE_PROCESSING_ENGINE. For information on enabling verbose logging, see [Site server logging options](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_reg-site).
 
 ### Get information from the site server
 
-By default, the site server log files are located in C:\Program Files\Microsoft Configuration Manager\logs. This location may change depending on what was specified for your installation directory or if you offloaded items like the SMS Provider to another server. If you are running, CMPivot from the CAS, the logs will be on the primary site server.
+By default, the site server log files are located in C:\Program Files\Microsoft Configuration Manager\logs. This location may change depending on what was specified for your installation directory or if you offloaded items like the SMS Provider to another server. If you're running, CMPivot from the CAS, the logs will be on the primary site server.
 
 Check the **smsprov.log** for these lines:
 
-<pre><code lang="Log">Type parameter is 135.
-Auditing: User &ltusername> ran script 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 with hash dc6c2ad05f1bfda88d880c54121c8b5cea6a394282425a88dd4d8714547dc4a2 on collection &ltCollectionId>.
-</code></pre>
+- Configuration Manager version 1906
+  <pre><code lang="Log">Auditing: User &ltusername> initiated client operation 145 to collection &ltCollectionId>. </code></pre>
 
-**7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14** is the Script-Guid for CMPivot. You can also see this in [CMPivot audit status messages](/sccm/core/servers/manage/cmpivot#cmpivot-audit-status-messages).
+- Configuration Manager version 1902
+  <pre><code lang="Log">Type parameter is 135.
+  Auditing: User &ltusername> ran script 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 with hash dc6c2ad05f1bfda88d880c54121c8b5cea6a394282425a88dd4d8714547dc4a2 on collection &ltCollectionId>. </code></pre>
+
+
+
+**7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14** is the Script-Guid for CMPivot. You can also see this GUID in [CMPivot audit status messages](/sccm/core/servers/manage/cmpivot#cmpivot-audit-status-messages).
 
 Next, find the ID in the CMPivot window. This ID is the **ClientOperationID**.
 
@@ -65,7 +61,7 @@ Finished sending push task (<b>PushID: 9</b> TaskID: 12) to 2 clients
 
 Once you have the information from the site server, check the client logs. By default, the client logs are located in C:\Windows\CCM\Logs.
 
-Check the **CcmNotificationAgent.log**. You'll find log entries like the following:  
+Check the **CcmNotificationAgent.log**. You'll find log entries like the following lines:  
 
 <pre><code lang="Log">Receive task from server with <b>pushid=9</b>, taskid=12, <b>taskguid=9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0</b>, tasktype=15 and taskParam=PFNjcmlwdEhhc2ggU2NyaXB0SGF (truncated log entry)
 Send Task response message &ltBgbResponseMessage TimeStamp="2019-09-13T17:29:09Z"><b>&ltPushID>5</b>&lt/PushID>&ltTaskID>4&lt/TaskID>&ltReturnCode>1&lt/ReturnCode>&lt/BgbResponseMessage> successfuly.
@@ -80,9 +76,9 @@ Result are sent for ScriptGuid: 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 and <b>Task
 > [!NOTE]
 > If you don't see "(fast)" in the **Scripts.log**, then the data is likely over 80 KB. In this case, the information is sent to the site server as a state message. Use client's **StateMessage.log** and the site server's **Statesys.log**.
 
-### Review messages on the site server (version 1902)
+### Review messages on the site server
 
-When [verbose logging](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_reg-client) is enabled on the management point, you can see how incoming client messages are handled. In the  **MP_RelayMsgMgr.log**, look for the the **TaskID**.
+When [verbose logging](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_reg-client) is enabled on the management point, you can see how incoming client messages are handled. In the  **MP_RelayMsgMgr.log**, look for the **TaskID**.
 
 In the **MP_RelayMsgMgr.log** example, we see the client's ID (GUID:83F67728-2E6D-4E4F-8075-ED035C31B783) and the **Task ID {9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0}**. A message ID gets assigned to the client's response before it's sent to the message processing engine:
 
@@ -93,7 +89,7 @@ Put message succeeded for message id 22f00adf-181e-4bad-b35e-d18912f39f89
 CRelayMsgMgrHandler::HandleMessage(): ExecuteTask() succeeded
 </code></pre>
 
-When [verbose logging](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_logoptions) is enabled on **SMS_MESSAGE_PROCESSING_ENGINE.log**, you'll see the client results getting processed. Use the message ID you found from the **MP_RelayMsgMgr.log**. The processing log entries similar to the following:
+When [verbose logging](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_logoptions) is enabled on **SMS_MESSAGE_PROCESSING_ENGINE.log**, you'll see the client results getting processed. Use the message ID you found from the **MP_RelayMsgMgr.log**. The processing log entries similar to the following example entries:
 
 <pre><code lang="Log">Processing 2 messages with type Instant and IDs <b>22f00adf-181e-4bad-b35e-d18912f39f89[19]</b>, 434d80ae-09d4-4d84-aebf-28a4a29a9852[20]...
 Processed 2 messages with type Instant. Failed to process 0 messages. All message IDs <b>22f00adf-181e-4bad-b35e-d18912f39f89[19]</b>, 434d80ae-09d4-4d84-aebf-28a4a29a9852[20]
