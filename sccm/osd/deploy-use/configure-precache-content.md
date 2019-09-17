@@ -2,7 +2,7 @@
 title: Configure pre-cache content
 titleSuffix: Configuration Manager
 description: Learn how clients can download OS deployment content before a user installs the task sequence.
-ms.date: 07/26/2019
+ms.date: 09/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -62,7 +62,7 @@ Create [OS images](/sccm/osd/get-started/manage-operating-system-images) for spe
 
 Create [driver packages](/sccm/osd/get-started/manage-drivers#BKMK_ManagingDriverPackages) for specific hardware models. Specify the **Model** on the **General** tab of its properties.
 
-To determine which driver package it downloads during pre-caching, the client evaluates the model against the **Win32_ComputerSystemProduct** WMI property.  
+To determine which driver package it downloads during pre-caching, the client evaluates the model against the **Name** property of the **Win32_ComputerSystemProduct** WMI class.  
 
 #### Package
 
