@@ -2,7 +2,7 @@
 title: "Prepare to install sites"
 titleSuffix: "Configuration Manager"
 description: "If you're planning to install multiple Configuration Manager sites, read this information to help you save time, and to prevent errors."
-ms.date: 03/1/2017
+ms.date: 09/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -85,6 +85,7 @@ When you run Configuration Manager Setup, you are prompted for a site code and s
 - NUL
 - PRN
 - SMS
+- ENV <!--SCCMDocs-1871 and 5399453-->
 
 > [!NOTE]
 > Configuration Manager Setup does not verify that a site code is not already in use.
