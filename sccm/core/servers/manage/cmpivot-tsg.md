@@ -15,7 +15,7 @@ ms.collection: M365-identity-device-management
 
 # Troubleshooting CMPivot
 
-CMPivot is an in-console utility that now provides access to real-time state of devices in your environment. It immediately runs a query on all currently connected devices in the target collection and returns the results. Occasionally, you may find yourself needing to troubleshoot CMPivot. For example, you may see that a client sent a state message for CMPivot. However, the site server didn't process the message because it was corrupted. This article helps you understand the flow of information for CMPivot.
+CMPivot is a utility that provides access to real-time state of devices in your environment. It immediately runs a query on all currently connected devices in the target collection and returns the results. Occasionally, you may find yourself needing to troubleshoot CMPivot. For example, you may see that a client sent a state message for CMPivot. However, the site server didn't process the message because it was corrupted. This article helps you understand the flow of information for CMPivot.
 
 ## <a name="bkmk_CMPivot-1902"></a> Troubleshooting CMPivot in version 1902 and later
 
