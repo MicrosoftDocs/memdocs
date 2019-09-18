@@ -30,10 +30,10 @@ By default, the site server log files are located in C:\Program Files\Microsoft 
 
 Check the **smsprov.log** for these lines:
 
-- Configuration Manager version 1906
+- Configuration Manager version 1906:
   <pre><code lang="Log">Auditing: User &ltusername> initiated client operation 145 to collection &ltCollectionId>. </code></pre>
 
-- Configuration Manager version 1902
+- Configuration Manager version 1902:
   <pre><code lang="Log">Type parameter is 135.
   Auditing: User &ltusername> ran script 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 with hash dc6c2ad05f1bfda88d880c54121c8b5cea6a394282425a88dd4d8714547dc4a2 on collection &ltCollectionId>. </code></pre>
 
