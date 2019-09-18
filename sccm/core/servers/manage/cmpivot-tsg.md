@@ -22,7 +22,7 @@ CMPivot is an in-console utility that now provides access to real-time state of 
 Starting in Configuration Manager version 1902, you can run CMPivot from the central administration site (CAS) in a hierarchy. The primary site still handles the communication to the client. When running CMPivot from the central administration site, it communicates with the primary site over the high-speed message subscription channel. This communication doesn't rely upon standard SQL replication between sites. If your SQL Server or Provider is remote, or you use SQL Always On, you'll have a “double hop scenario” for CMPivot. For information on how to define constrained delegation for a "double hop scenario", see [CMPivot starting in version 1902](/sccm/core/servers/manage/cmpivot#bkmk_cmpivot1902).
 
 >[!IMPORTANT]
-> When troubleshooting CMPivot, enable verbose logging on your MPs and the site server's SMS_MESSAGE_PROCESSING_ENGINE for more information. If the client's output is larger than 80 KB, enable verbose logging on the MP and site server's SMS_STATE_SYSTEM component. For information on enabling verbose logging, see [Site server logging options](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_reg-site).
+> When troubleshooting CMPivot, enable verbose logging on your MPs and the site server's SMS_MESSAGE_PROCESSING_ENGINE for more information. If the client's output is larger than 80 KB, enable verbose logging on the MP and the site server's SMS_STATE_SYSTEM component. For information on enabling verbose logging, see [Site server logging options](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_reg-site).
 
 ### Get information from the site server
 
