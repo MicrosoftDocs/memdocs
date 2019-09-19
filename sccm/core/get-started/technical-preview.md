@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 08/30/2019
+ms.date: 09/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -118,14 +118,20 @@ The following features are available with the most recent Configuration Manager 
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### Technical preview version 1908.2
+### Technical preview version 1909
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID-->
 
-- [Improvements to Console Connections](/sccm/core/get-started/2019/technical-preview-1908-2#improvements-to-console-connections) <!--4923997-->
-- [Improvements to multicast-enabled distribution points](/sccm/core/get-started/2019/technical-preview-1908-2#bkmk_multicast) <!--3785535-->
-- [Optimizations to the CMPivot engine](/sccm/core/get-started/2019/technical-preview-1908-2#optimizations-to-the-cmpivot-engine) <!--3197353-->
-- [Set keyboard layout during OS deployment](/sccm/core/get-started/2019/technical-preview-1908-2#bkmk_osd) <!--5138936-->
+- [Update to redistributable files for SHA-2 code signing support](/sccm/core/get-started/2019/technical-preview-1909#bkmk_SHA2) <!--5308367-->
+- [Additional CMPivot Entities and Enhancements](/sccm/core/get-started/2019/technical-preview-1909#bkmk_CMPivot) <!--5410930-->
+- [Pilot recommendations for Office Readiness](/sccm/core/get-started/2019/technical-preview-1909#bkmk_Office-Pilot) <!--4488272-->
+- [Track health for add-ins, macros, and the Office ProPlus application](/sccm/core/get-started/2019/technical-preview-1909#bkmk_Office-Health) <!--4488301-->
+- [Orchestration Groups](/sccm/core/get-started/2019/technical-preview-1909#bkmk_OGs) <!--3098816-->
+- [SEDO lock improvements](/sccm/core/get-started/2019/technical-preview-1909#bkmk_SEDO) <!--4786915-->
+- [BitLocker management](/sccm/core/get-started/2019/technical-preview-1909#bkmk_bitlocker) <!--3601034-->
+- [Task sequence download on demand over the internet](/sccm/core/get-started/2019/technical-preview-1909#bkmk_dodcmg) <!--3601238-->
+- [Extend and migrate on-premises Configuration Manager environments to Microsoft Azure](/sccm/core/get-started/2019/technical-preview-1909#bkmk_Azure-migration) <!--3556022-->
+
 
 > [!Note]  
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.  
@@ -134,6 +140,13 @@ The following features are available with the most recent Configuration Manager 
 ## Features in recent technical previews
 
 The following features were released with previous versions of the Configuration Manager technical preview branch since current branch version 1906:
+
+### Technical preview version 1908.2
+
+- [Improvements to Console Connections](/sccm/core/get-started/2019/technical-preview-1908-2#improvements-to-console-connections) <!--4923997-->
+- [Improvements to multicast-enabled distribution points](/sccm/core/get-started/2019/technical-preview-1908-2#bkmk_multicast) <!--3785535-->
+- [Optimizations to the CMPivot engine](/sccm/core/get-started/2019/technical-preview-1908-2#optimizations-to-the-cmpivot-engine) <!--3197353-->
+- [Set keyboard layout during OS deployment](/sccm/core/get-started/2019/technical-preview-1908-2#bkmk_osd) <!--5138936-->
 
 ### Technical preview version 1908
 
