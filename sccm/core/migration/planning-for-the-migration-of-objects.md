@@ -2,7 +2,7 @@
 title: "Migrate objects"
 titleSuffix: "Configuration Manager"
 description: "Learn how to plan for the migration of objects between hierarchies in a System Center Configuration Manager environment."
-ms.date: 1/12/2017
+ms.date: 01/12/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

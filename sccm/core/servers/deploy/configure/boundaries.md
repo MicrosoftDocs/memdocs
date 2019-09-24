@@ -2,7 +2,7 @@
 title: "Define boundaries"
 titleSuffix: "Configuration Manager"
 description: "Understand how to define network locations on your intranet that can contain devices you want to manage."
-ms.date: 3/27/2017
+ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

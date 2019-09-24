@@ -2,7 +2,7 @@
 title: "Manage updates"
 titleSuffix: "Configuration Manager"
 description: "Manage the udpates you deploy and create with System Center Updates Publisher"
-ms.date: 4/29/2017
+ms.date: 04/29/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual

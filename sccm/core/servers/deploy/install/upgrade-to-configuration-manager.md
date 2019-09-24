@@ -1,5 +1,6 @@
 ---
-title: Upgrade to Configuration Manager
+title: Upgrade to current branch
+titleSuffix: Configuration Manager
 description: Learn the steps for running a successful in-place upgrade from a site and hierarchy that runs System Center 2012 Configuration Manager.
 ms.date: 08/16/2019
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 
-# Upgrade to Configuration Manager
+# Upgrade to Configuration Manager current branch
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 

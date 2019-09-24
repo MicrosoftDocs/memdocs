@@ -85,7 +85,7 @@ Make sure to set the following registry keys on any computer that communicates a
 
 For 32-bit applications that are running on 32-bit systems or 64-bit applications that are running on 64-bit systems, update the following subkey value:
 
-```Registry
+``` Registry
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v2.0.50727]
       "SystemDefaultTlsVersions" = dword:00000001
       "SchUseStrongCrypto" = dword:00000001
@@ -96,7 +96,7 @@ For 32-bit applications that are running on 32-bit systems or 64-bit application
 
 For 32-bit applications that are running on 64-bit systems, update the following subkey value:
 
-```Registry
+``` Registry
 [HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v2.0.50727]
       "SystemDefaultTlsVersions" = dword:00000001
       "SchUseStrongCrypto" = dword:00000001
@@ -153,7 +153,7 @@ Earlier versions of Windows, such as Windows 7 or Windows Server 2012, don't ena
 
 Verify the value of the `DefaultSecureProtocols` registry setting, for example:
 
-```Registry
+``` Registry
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp\
       DefaultSecureProtocols = (DWORD): 0xAA0
 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp\
@@ -239,7 +239,7 @@ To resolve this issue, follow these steps:
 
 1. In the `%WinDir%\System32\InetSrv` folder of the application catalog server, create a **W2SP.exe.config** file with the following contents:
 
-    ```xml
+    ``` XML
     <?xml version="1.0" encoding="utf-8" ?>
     <configuration>
       <runtime>
@@ -291,7 +291,7 @@ Starting in version 1802, the Azure virtual machines used by the cloud managemen
 
 The **SMSAdminui.log** may contain an error similar to the following example:
 
-```
+``` Log
 Microsoft.ConfigurationManager.CloudBase.AAD.AADAuthenticationException
 Service returned error. Check InnerException for more details
 at Microsoft.ConfigurationManager.CloudBase.AAD.AADAuthenticationContext.GetAADAuthResultObject

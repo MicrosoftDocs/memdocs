@@ -2,7 +2,7 @@
 title: "Updates Publisher"
 titleSuffix: "Configuration Manager"
 description: "Use System Center Updates Publisher to manage custom updates"
-ms.date: 6/17/2019
+ms.date: 06/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual

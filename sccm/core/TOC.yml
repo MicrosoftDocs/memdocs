@@ -152,8 +152,6 @@
         href: plan-design/hierarchy/manage-content-library-flowchart.md
       - name: Content library cleanup tool
         href: plan-design/hierarchy/content-library-cleanup-tool.md
-      - name: Delivery Optimization In-Network Cache
-        href: plan-design/hierarchy/delivery-optimization-in-network-cache.md
       - name: Peer Cache for Configuration Manager clients
         href: plan-design/hierarchy/client-peer-cache.md
       - name: Package Transfer Manager
@@ -374,6 +372,10 @@
         href: servers/deploy/configure/deploy-and-manage-content.md
       - name: Monitor content
         href: servers/deploy/configure/monitor-content-you-have-distributed.md
+      - name: Delivery Optimization In-Network Cache
+        href: plan-design/hierarchy/delivery-optimization-in-network-cache.md
+      - name: Troubleshoot Delivery Optimization In-Network Cache
+        href: servers/deploy/configure/troubleshoot-delivery-optimization-in-network-cache.md
     - name: Run discovery
       items:
       - name: Discovery methods overview
@@ -659,13 +661,13 @@
         href: clients/deploy/example-scenario-for-deploying-and-managing-clients-on-windows-embedded-devices.md
     - name: Plan how to wake up clients
       href: clients/deploy/plan/plan-wake-up-clients.md
-    - name: Considerations for managing clients  in a Virtual Desktop Infrastructure (VDI)
+    - name: Manage VDI clients
       href: clients/deploy/plan/considerations-for-managing-clients-in-a-vdi.md
   - name: Client deployment tasks
     items:
     - name: How to configure client communication ports
       href: clients/deploy/configure-client-communication-ports.md
-    - name: How to configure client computers to find management points by using DNS publishing
+    - name: Configure clients to use DNS publishing
       href: clients/deploy/configure-client-computers-to-find-management-points-by-using-dns-publishing.md
     - name: Configure client settings
       items:
@@ -723,8 +725,8 @@
       href: clients/manage/client-notification.md
     - name: How to manage Linux and UNIX clients
       href: clients/manage/manage-clients-for-linux-and-unix-servers.md
-    - name: Sync data to Log Analytics
-      href: clients/manage/sync-data-log-analytics.md
+    - name: Sync data to Azure Monitor
+      href: https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=sccm/core/context/core-context
     - name: Maintain Mac clients
       href: clients/manage/maintain-mac-clients.md
     - name: Surface device dashboard
@@ -795,19 +797,19 @@
       href: clients/manage/inventory/security-and-privacy-for-software-inventory.md
   - name: Asset Intelligence
     items:
-    - name: Introduction to Asset Intelligence
+    - name: Introduction
       href: clients/manage/asset-intelligence/introduction-to-asset-intelligence.md
-    - name: Prerequisites for Asset Intelligence
+    - name: Prerequisites
       href: clients/manage/asset-intelligence/prerequisites-for-asset-intelligence.md
     - name: Configure Asset Intelligence
       href: clients/manage/asset-intelligence/configuring-asset-intelligence.md
     - name: Use Asset Intelligence
       href: clients/manage/asset-intelligence/operations-for-asset-intelligence.md
-    - name: Security and privacy for Asset Intelligence
+    - name: Security and privacy
       href: clients/manage/asset-intelligence/security-and-privacy-for-asset-intelligence.md
-    - name: Example validation state transitions for Asset Intelligence
+    - name: Example validation state transitions
       href: clients/manage/asset-intelligence/example-validation-state-transitions-for-asset-intelligence.md
-    - name: Example Asset Intelligence general license import file
+    - name: Example general license import file
       href: clients/manage/asset-intelligence/example-asset-intelligence-general-license-import.md
     - name: Use the Product Lifecycle dashboard
       href: clients/manage/asset-intelligence/product-lifecycle-dashboard.md
