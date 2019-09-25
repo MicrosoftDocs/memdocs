@@ -76,7 +76,7 @@ For more information about support for Windows Insider in Configuration Manager,
 ### Prerequisites
 
 - Configuration Manager version 1906 or higher, configured for [software update management](/sccm/sum/plan-design/plan-for-software-updates).
-- Windows 10 devices running [Windows Insider Preview build](https://insider.windows.com/how-to-pc/).
+- Windows 10 devices running [Windows Insider Preview build](https://insider.windows.com/en-us/how-to-pc/).<!--the direct page link doesn't work without a locale :(-->
 - A collection containing the Windows Insider devices.
 
 
