@@ -18,6 +18,8 @@ ms.collection: M365-identity-device-management
 
 Following the guidance in this topic will enable you to set up a lab for evaluating Configuration Manager with simulated real-life activities.  
 
+Note: Microsoft offers a pre-configured version of this lab using an evaluation version of Configuration Manager. See [Windows and Office Deployment and Management Lab Kit](https://docs.microsoft.com/microsoft-365/enterprise/modern-desktop-deployment-and-management-lab). 
+
 ##  <a name="BKMK_LabCore"></a> Core components  
  Setting up your environment for System Center Configuration Manager requires some core components to support the installation of Configuration Manager.    
 
