@@ -2,7 +2,7 @@
 title: Support for Windows 10
 titleSuffix: Configuration Manager
 description: Learn about the Windows 10 versions that are supported as clients or for OSD with Configuration Manager
-ms.date: 08/09/2019
+ms.date: 09/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -43,6 +43,7 @@ A Configuration Manager version drops from the matrix after [support for that ve
 
 - If you use the long-term servicing branch of Configuration Manager, see [Supported configurations for the long-term servicing branch](/sccm/core/understand/supported-configurations-for-ltsb).  
 
+
 <br/>
 The following table lists the versions of Windows 10 that you can use as a client with different versions of Configuration Manager.
 
@@ -74,6 +75,11 @@ For more information on Windows lifecycle, see the [Windows lifecycle fact sheet
 > [!NOTE]  
 > Configuration Manager supports the client on Windows 10 ARM64 devices. Existing client management features should work with these new devices. For example, hardware and software inventory, software updates, and application management. OS deployment is currently not supported. <!-- 1353704 -->
 
+### <a name="bkmk_WIfB-support"></a> Support for Windows Insider 
+
+Starting in Configuration Manager version 1906, you can [update and service Windows Insider](/sccm/sum/get-started/configure-classifications-and-products#bkmk_WIfB) builds. This ability is provided as a convenience to our customers. While this functionality should work, the support for it is best effort. Configuration Manager might not issue a hotfix for this functionality if it ceases to function.  
+- For more information about support for Windows Insider preview builds, see [How to get support](https://insider.windows.com/en-us/how-to-overview/#how-to-get-support). <!--the direct page/anchor doesn't work without a locale :(-->
+- To provide feedback on Windows Insider, use the [Feedback Hub](https://insider.windows.com/en-us/how-to-feedback/). <!--the direct page link doesn't work without a locale :(-->
 
 ## Windows 10 ADK
 
