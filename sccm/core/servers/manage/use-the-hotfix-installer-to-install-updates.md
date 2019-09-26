@@ -202,7 +202,7 @@ The catalog for Updates Publisher is named **SCUPCatalog.cab** and can be found 
 > [!IMPORTANT]  
 > Because the SCUPCatalog.cab file is created by using paths that are specific to the site server where the update bundle is installed, it cannot be used on other site servers.  
 
-After the wizard is finished, you can import the catalog to Updates Publisher, and then use Configuration Manager software updates to deploy the updates. For information about Updates Publisher, see [Updates Publisher 2011](http://go.microsoft.com/fwlink/p/?LinkID=83449) in the TechNet library for System Center 2012.  
+After the wizard is finished, you can import the catalog to Updates Publisher, and then use Configuration Manager software updates to deploy the updates. For information about Updates Publisher, see [Updates Publisher 2011](https://go.microsoft.com/fwlink/p/?LinkID=83449) in the TechNet library for System Center 2012.  
 
 Use the following procedure to import the SCUPCatalog.cab file to Updates Publisher and publish the updates.  
 

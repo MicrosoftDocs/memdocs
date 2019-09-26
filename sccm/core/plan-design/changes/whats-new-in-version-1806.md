@@ -162,7 +162,7 @@ For more information, see [How to install clients with client push](/sccm/core/c
 
 ### <a name="bkmk_ehttp"></a> Enhanced HTTP site system
 <!--1356889,1358228-->
-Using HTTPS communication is recommended for all Configuration Manager communication paths, but can be challenging for some customers due to the overhead of managing PKI certificates. The introduction of Azure Active Directory (Azure AD) integration reduces some but not all of the certificate requirements. 
+Using HTTPS communication is recommended for all Configuration Manager communication paths, but can be challenging for some customers due to the overhead of managing PKI certificates.
 
 This release includes improvements to how clients communicate with site systems. On the site properties, **Client Computer Communication** tab, select the option for **HTTPS or HTTP**, and then enable the new option to **Use Configuration Manager-generated certificates for HTTP site systems**. This feature is a [pre-release feature](/sccm/core/servers/manage/pre-release-features).
 

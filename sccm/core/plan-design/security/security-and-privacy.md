@@ -2,7 +2,7 @@
 title: "Security and privacy resources"
 titleSuffix: "Configuration Manager"
 description: "Find resources about security and privacy for System Center Configuration Manager."
-ms.date: 1/3/2017
+ms.date: 01/3/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

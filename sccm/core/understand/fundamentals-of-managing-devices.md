@@ -1,5 +1,5 @@
 ---
-title: fFundamentals of managing devices
+title: Fundamentals of managing devices
 titleSuffix: Configuration Manager
 description: Learn how to use System Center Configuration Manager to manage devices.
 ms.date: 07/26/2019

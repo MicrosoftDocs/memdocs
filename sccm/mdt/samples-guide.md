@@ -1164,7 +1164,7 @@ SkipSummary=YES
 Powerusers001=WOODGROVEBANK\PilarA  
 CaptureGroups=YES  
 SLShare=\\WDG-MDT-01\UserData$\Logs  
-Home_page=http://www.microsoft.com/NewComputer  
+Home_page=https://www.microsoft.com/NewComputer  
 ```  
 
 ## Calling Web Services in MDT  
@@ -1756,7 +1756,7 @@ IF ((Computer Model IS “Contoso 1950”) AND (operating system=2003 OR operati
 1. Create a folder to store the database snapshots, and then configure the folder as a share.  
 
    > [!NOTE]
-   >  For more information about securing the snapshot folder, see [Securing the Snapshot Folder](http://msdn2.microsoft.com/library/ms151151.aspx).  
+   >  For more information about securing the snapshot folder, see [Secure the Snapshot Folder](/sql/relational-databases/replication/security/secure-the-snapshot-folder).  
 
 2. Ensure that the SQL Server Browser service is enabled and set to Automatic.  
 

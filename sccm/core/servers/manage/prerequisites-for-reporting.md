@@ -23,7 +23,7 @@ Reporting in System Center Configuration Manager has external dependencies and d
 
 |Prerequisite|More information|  
 |------------------|----------------------|  
-|SQL Server Reporting Services|Before you can use reporting in Configuration Manager, you must install and configure SQL Server Reporting Services.<br /><br /> For information about planning and deploying Reporting Services in your environment, see the [Reporting Services](http://go.microsoft.com/fwlink/p/?LinkId=212032) section in the SQL Server 2008 Books Online.|  
+|SQL Server Reporting Services|Before you can use reporting in Configuration Manager, you must install and configure SQL Server Reporting Services.<br /><br /> For information about planning and deploying Reporting Services in your environment, see the [Reporting Services](https://go.microsoft.com/fwlink/p/?LinkId=212032) section in the SQL Server 2008 Books Online.|  
 |Site system role dependencies for the computers that run the reporting services point.|[Supported configurations for System Center Configuration Manager](../../../core/plan-design/configs/supported-configurations.md)|  
 
 ## Dependencies internal to Configuration Manager  

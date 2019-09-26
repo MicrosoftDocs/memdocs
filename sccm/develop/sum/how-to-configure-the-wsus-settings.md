@@ -12,7 +12,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 # How to Configure the WSUS Settings
-You configure the Windows Server Update Services (WSUS) component settings, in System Center Configuration Manager, by modifying the site control file. For more information about WSUS, see the MSDN documentation for [Windows Server Update Services](http://go.microsoft.com/fwlink/?LinkId=93575).  
+You configure the Windows Server Update Services (WSUS) component settings, in System Center Configuration Manager, by modifying the site control file. For more information, see [Windows Server Update Services](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).  
 
 ### To configure WSUS settings  
 
@@ -28,7 +28,7 @@ You configure the Windows Server Update Services (WSUS) component settings, in S
  The following example method configures various Windows Server Update Services (WSUS) component settings by using the [SMS_SCI_Component](../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md) class to connect to the site control file and change properties.  
 
 > [!NOTE]
->  For configuration related information and values, see the Configuring Software Updates section of the System Center Configuration Manager documentation at [http://go.microsoft.com/fwlink/?LinkId=111682](http://go.microsoft.com/fwlink/?LinkId=111682).  
+>  For configuration related information and values, see the Configuring Software Updates section of the System Center Configuration Manager documentation at [https://go.microsoft.com/fwlink/?LinkId=111682](https://go.microsoft.com/fwlink/?LinkId=111682).  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
@@ -229,9 +229,6 @@ public void ConfigureWSUSSettings(WqlConnectionManager connection,
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
- [Software Updates Setup and Configuration](../../develop/sum/software-updates-setup-and-configuration.md)   
  [About Software Updates Setup and Configuration](../../develop/sum/about-software-updates-setup-and-configuration.md)   
  [About the Configuration Manager Site Control File](../../develop/core/understand/about-the-configuration-manager-site-control-file.md)   
  [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md)   

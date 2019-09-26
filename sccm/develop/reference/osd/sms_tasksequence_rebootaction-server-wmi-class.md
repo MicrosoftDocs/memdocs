@@ -92,7 +92,7 @@ Class SMS_TaskSequence_RebootAction : SMS_TaskSequence_Action
 
  The number of seconds that a user-defined message is displayed to the user before the computer restarts. Specify 0 seconds (default) to indicate that no reboot message should be displayed.  
 
- The task sequence variable that is associated with this property is SMSRebootTimeout. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable that is associated with this property is SMSRebootTimeout. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  `Name`  
  Data type: `String`  
@@ -145,11 +145,8 @@ Class SMS_TaskSequence_RebootAction : SMS_TaskSequence_Action
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Operating System Deployment Server WMI Classes](../../../develop/reference/osd/operating-system-deployment-server-wmi-classes.md)

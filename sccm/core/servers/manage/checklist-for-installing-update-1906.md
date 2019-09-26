@@ -2,7 +2,7 @@
 title: Checklist for 1906
 titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 1906.
-ms.date: 07/26/2019
+ms.date: 08/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -29,7 +29,7 @@ To get the update for version 1906, you must use a service connection point at t
 
     - Another common download issue occurs when proxy server settings prevent downloads from `silverlight.dlservice.microsoft.com`, `download.microsoft.com`, and `go.microsoft.com`.
 
-For more information about installing updates, see [In-console updates and servicing](/sccm/core/servers/manage/updates#a-namebkmkinconsolea-in-console-updates-and-servicing).
+For more information about installing updates, see [In-console updates and servicing](/sccm/core/servers/manage/updates#bkmk_inconsole).
 
 For more information about current branch versions, see [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines).
 
@@ -63,16 +63,16 @@ The first time you use a Configuration Manager console after the update has fini
 
 <!-- SCCMDocs#1397 -->
 
-<!-- As of <Date>, version 1906 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version. -->
+As of August 16, 2019, version 1906 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.
 
-At this time, version 1906 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 1906:
+<!--At this time, version 1906 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 1906: 
 
 [Version 1906 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
 
-Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
+<!--Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
 
 > [!Note]  
-> The version 1906 update is only applicable to sites running version 1806 or later.
+> The version 1906 update is only applicable to sites running version 1802 or later.
 
 To opt-in to the early update ring:
 
@@ -88,14 +88,14 @@ To opt-in to the early update ring:
 The version 1906 update should now be available in the console.
 
 > [!Important]  
-> This script only adds your site to the early update ring for version 1906. It's not a permanent change.
+> This script only adds your site to the early update ring for version 1906. It's not a permanent change. -->
 
 
 ## Checklist
 
 ### All sites run a supported version of Configuration Manager
 
-Each site server in the hierarchy must run the same version of Configuration Manager before you can start the installation of update 1906. To update to 1906, you must use version 1806, 1810, or 1902.
+Each site server in the hierarchy must run the same version of Configuration Manager before you can start the installation of update 1906. To update to 1906, you must use version 1802 or later.
 
 ### Review the status of your product licensing
 
@@ -126,7 +126,7 @@ If you update the site before you update the Windows ADK, see [Update distributi
 
 ### Review SQL Server Native Client version
 
-Install a minimum version of SQL Server 2012 Native Client, which includes support for TLS 1.2. For more information, see the [List of prerequisite checks](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client).
+Install a minimum version of SQL Server 2012 Native Client, which includes support for TLS 1.2. For more information, see the [List of prerequisite checks](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
 
 ### Review the site and hierarchy status for unresolved issues
 
@@ -140,9 +140,26 @@ For more information, see [Use alerts and the status system](/sccm/core/servers
 
 ### Review file and data replication between sites
 
-Make sure that file and database replication between sites is operational and current. Delays or backlogs in either can prevent a successful update. For database replication, use the Replication Link Analyzer to help resolve issues before you start the update.
+Make sure that file and database replication between sites is operational and current. Delays or backlogs in either can prevent a successful update.
 
-For more information, see [About the Replication Link Analyzer](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA).
+#### Database replication
+
+For [database replication](/sccm/core/plan-design/hierarchy/database-replication), to help resolve issues before you start the update, use the **Replication Link Analyzer** (RLA). For more information, see [Monitor database replication](/sccm/core/servers/manage/monitor-replication).
+
+Use RLA to answer the following questions:
+
+- Is replication per group in a good state?
+- Are any links degraded?
+- Are there any errors?
+
+If there's a backlog, wait until it clears out. If the backlog is large, such as millions of records, then the link is in a bad state. Before updating the site, solve the replication issue. If you need further assistance, contact Microsoft Support.<!-- 2838129 -->
+
+#### File-based replication
+
+For [file-based replication](/sccm/core/plan-design/hierarchy/file-based-replication), check all inboxes for a backlog on both sending and receiving sites. If there are lots of stuck or pending replication jobs, wait until they clear out.<!-- SCCMDocs#1792 -->
+
+- On the sending site, review **sender.log**.
+- On the receiving site, review **despooler log**.
 
 ### Install all applicable critical Windows updates
 
@@ -180,6 +197,12 @@ Before you update a site, back up the site database at the CAS and primary sites
 
 For more information, see [Backup and recovery](/sccm/protect/understand/backup-and-recovery).
 
+### Back up customized files
+
+If you or a third-party product customizes any Configuration Manager configuration files, save a copy of your customizations.
+
+For example, you add custom entries to the **osdinjection.xml** file in the `bin\X64` folder of your Configuration Manager installation directory. After you update Configuration Manager, these customizations don't persist. You need to reapply your customizations.
+
 ### Plan for client piloting
 
 When you install a site update that also updates the client, test that new client update in pre-production before you update all production clients. To use this option, configure your site to support automatic upgrades for pre-production before beginning installation of the update.
@@ -208,7 +231,7 @@ For more information, see the section to **Run the prerequisite checker before i
 
 ### Update sites
 
-You're now ready to start the update installation for your hierarchy. For more information about installing the update, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates).
+You're now ready to start the update installation for your hierarchy. For more information about installing the update, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_install).
 
 You may plan to install the update outside of normal business hours. Determine when the process will have the least effect on your business operations. Installing the update and its actions reinstall site components and site system roles.
 
@@ -236,7 +259,7 @@ In the Configuration Manager console, go to the following locations to view the 
 For more information, see the following articles:  
 
 - [Monitor hierarchy and replication infrastructure](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure)
-- [About the Replication Link Analyzer](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA)  
+- [About the Replication Link Analyzer](/sccm/core/servers/manage/monitor-replication#BKMK_RLA)  
 
 ### Update Configuration Manager consoles
 

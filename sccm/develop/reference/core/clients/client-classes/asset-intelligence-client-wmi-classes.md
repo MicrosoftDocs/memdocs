@@ -32,11 +32,11 @@ In System Center Configuration Manager, the Asset Intelligence client Windows Ma
 ## Remarks  
  Classes related to the asset intelligence client WMI classes are:  
 
--   `SoftwareLicensingProduct` class. Specific to Windows Vista. For more information, see the Microsoft TechNet article, [Windows Vista Volume Activation 2.0 Technical Attributes](http://go.microsoft.com/fwlink/?LinkId=99938).  
+-   `SoftwareLicensingProduct` class. Specific to Windows Vista. For more information, see the Microsoft TechNet article, [Windows Vista Volume Activation 2.0 Technical Attributes](https://go.microsoft.com/fwlink/?LinkId=99938).  
 
--   `SoftwareLicensingService` class. Specific to Windows Vista. For more information, see the Microsoft TechNet article, [Windows Vista Volume Activation 2.0 Technical Attributes](http://go.microsoft.com/fwlink/?LinkId=99938).  
+-   `SoftwareLicensingService` class. Specific to Windows Vista. For more information, see the Microsoft TechNet article, [Windows Vista Volume Activation 2.0 Technical Attributes](https://go.microsoft.com/fwlink/?LinkId=99938).  
 
 -   `Win32_USBDevice` class. Tracks devices connected to USB ports.  
 
 ## See Also  
- [Configuration Manager Asset Intelligence](../../../../../develop/core/clients/asset-intelligence/asset-intelligence.md)
+[Initiate Asset Intelligence synchronization](/sccm/develop/core/clients/asset-intelligence/how-to-initiate-a-synchronization)

@@ -1,4 +1,5 @@
 - name: Protect data and infrastructure
+  href: understand\protect-data-and-site-infrastructure.md
 - name: Understand and explore
   items:
   - name: Overview

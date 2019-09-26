@@ -27,8 +27,6 @@ Class SMS_R_System : SMS_Resource
    String AgentSite[];   
    DateTime AgentTime[];   
    UInt32 AlwaysInternet;   
-   String AMTFullVersion;   
-   UInt32 AMTStatus;   
    UInt32 Client;   
    UInt32 ClientType;   
    String ClientVersion;   
@@ -44,7 +42,6 @@ Class SMS_R_System : SMS_Resource
    String IPv6Addresses[];   
    String IPv6Prefixes[];   
    Boolean IsAssignedToUser;   
-   UInt32 IsClientAMT30Compatible;   
    Boolean IsMachineChangesPersisted;   
    Boolean IsVirtualMachine;   
    String LastLogonUserDomain;   
@@ -72,7 +69,6 @@ Class SMS_R_System : SMS_Resource
    String SMSUniqueIdentifier;   
    DateTime SMSUUIDChangeDate;   
    String SNMPCommunityName;   
-   UInt32 SuppressAutoProvision;   
    String SystemContainerName[];   
    String SystemGroupName[];   
    String SystemOUName[];   
@@ -141,32 +137,6 @@ Class SMS_R_System : SMS_Resource
  Qualifiers: None  
 
  ….  
-
- `AMTFullVersion`  
- Data type: `String`  
-
- Access type: Read Only  
-
- Qualifiers: None  
-
- Provides the Intel Active Management Technology (Intel AMT) firmware version of this computer. The format is: MAJOR.MINOR.MICRO.  
-
- `AMTStatus`  
- Data type: `UInt32`  
-
- Access type: Read Only  
-
- Qualifiers: None  
-
- Status of the Intel AMT component of this computer. Possible values are:  
-
-|Value|Description|  
-|-----------|-----------------|  
-|NULL|Unknown.|  
-|0|Computer is not supported.|  
-|1|Computer is detected.|  
-|2|Computer is not provisioned.|  
-|3|Computer is provisioned.|  
 
  `Client`  
  Data type: `UInt32`  
@@ -313,20 +283,6 @@ Class SMS_R_System : SMS_Resource
  Qualifiers: None  
 
  `true` if the resource is assigned to a user.  
-
- `IsClientAMT30Compatible`  
- Data type: `UInt32`  
-
- Access type: Read-only  
-
- Qualifiers: None  
-
- Value that indicates the presence of the AMT firmware on the computer. The Out of Band service point determines this value when it tries to establish a connection to the computer during provisioning and discovery scenarios.  
-
-|Value|Description|  
-|-----------|-----------------|  
-|0|AMT firmware does not exist.|  
-|1|AMT firmware does exist.|  
 
  `IsMachineChangesPersisted`  
  Data type: `Boolean`  
@@ -564,15 +520,6 @@ Class SMS_R_System : SMS_Resource
 
  SNMP community name used in network discovery to discover the resource.  
 
- `SuppressAutoProvision`  
- Data type: `UInt32`  
-
- Access type: Read-only  
-
- Qualifiers: None  
-
- Suppress auto provision on AMT enabled client computer.  
-
  `SystemContainerName`  
  Data type: `String` Array  
 
@@ -656,12 +603,11 @@ Class SMS_R_System : SMS_Resource
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Resource Management Server WMI Classes](../../../../../develop/reference/core/clients/manage/configuration-manager-resource-management-server-wmi-classes.md)   
  [SMS_Resource Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_resource-server-wmi-class.md)

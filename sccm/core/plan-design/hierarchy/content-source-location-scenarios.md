@@ -2,7 +2,7 @@
 title: "Content source location"
 titleSuffix: "Configuration Manager"
 description: "Learn about the System Center Configuration Manager settings that enable clients to find content on a slow network."
-ms.date: 1/3/2017
+ms.date: 01/3/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

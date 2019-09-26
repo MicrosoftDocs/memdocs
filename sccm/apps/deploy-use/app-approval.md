@@ -57,7 +57,7 @@ Starting in 1906, you can see which deployments require approval. Select an app 
 <!--4336307-->
 Starting in version 1906, you can retry the installation of an app that you previously approved for a user or device. The approval option is only for available deployments. If the user uninstalls the app, or if the initial install process fails, Configuration Manager doesn't reevaluate its state and reinstall it. This feature allows a support technician to quickly retry the app install for a user that calls for help.
 
-1. Open the Configuration Manager console user a user that has the **Approve** permission on the Application object. For example, the **Application Administrator** or **Application Author** built-in roles have this permission.
+1. Open the Configuration Manager console as a user that has the **Approve** permission on the Application object. For example, the **Application Administrator** or **Application Author** built-in roles have this permission.
 
 1. Deploy an app that requires approval, and approve it.
 
@@ -135,19 +135,19 @@ With these additional optional prerequisites, recipients can approve or deny the
 
     - Manually configure settings in Azure AD:  
 
-        1. Go to the [Azure portal](https://portal.azure.com), select **Azure Active Directory**, and then select **App registrations**.  
+        1. Go to the [Azure portal](https://portal.azure.com) as a user with *Global Admin* permissions. Go to **Azure Active Directory**, and select **App registrations**.  
 
-        2. Select the application of type **Native** that you created for Configuration Manager **Cloud Management** integration.  
+        2. Select the application that you created for Configuration Manager **Cloud Management** integration.  
 
-        3. In the app properties, select **Settings**, then select **Redirect URIs**.  
+        3. In the **Manage** menu, select **Authentication**.  
 
-            1. In the Redirect URIs pane, paste in the following path: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`  
+            1. In the **Redirect URIs** section, paste in the following path: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`  
 
             2. Replace `<CMG FQDN>` with the fully qualified domain name (FQDN) of your cloud management gateway (CMG) service. For example, GraniteFalls.Contoso.com.  
 
-            3. Then select **Save**. Close the **Settings** pane.  
+            3. Then select **Save**.  
 
-        4. In the app properties, select **Manifest**.  
+        4. In the **Manage** menu, select **Manifest**.  
 
             1. In the Edit manifest pane, find the **oauth2AllowImplicitFlow** property.  
 

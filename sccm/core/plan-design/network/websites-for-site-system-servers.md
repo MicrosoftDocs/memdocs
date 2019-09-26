@@ -2,7 +2,7 @@
 title: "Websites for site systems"
 titleSuffix: "Configuration Manager"
 description: "Learn about default and custom websites for site system servers in System Center Configuration Manager."
-ms.date: 2/8/2017
+ms.date: 02/8/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -42,7 +42,7 @@ Several Configuration Manager site system roles require the use of Microsoft Int
 
 -   Set up the custom website to respond to the same port that you set up for Configuration Manager client communication (client request port).  
 
--   For each custom or default website that uses a custom folder, place a copy of the default document type that you use in the root folder that hosts the website. For example, on a Windows Server 2008 R2 computer that has default configurations, **iisstart.htm** is one of several default document types that are available. You can find this file in the root of the default website and then place a copy of this file (or a copy of the default document type that you use) in the root folder that hosts the SMSWEB custom website. For more about default document types, see [Default Document &lt;defaultDocument\> for IIS](http://www.iis.net/configreference/system.webserver/defaultdocument).  
+-   For each custom or default website that uses a custom folder, place a copy of the default document type that you use in the root folder that hosts the website. For example, on a Windows Server 2008 R2 computer that has default configurations, **iisstart.htm** is one of several default document types that are available. You can find this file in the root of the default website and then place a copy of this file (or a copy of the default document type that you use) in the root folder that hosts the SMSWEB custom website. For more about default document types, see [Default Document &lt;defaultDocument\> for IIS](https://www.iis.net/configreference/system.webserver/defaultdocument).  
 
 **About IIS requirements:**
 **The following site system roles require IIS and a website to host the site system services:**  

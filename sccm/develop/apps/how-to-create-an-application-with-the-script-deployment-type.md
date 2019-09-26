@@ -26,11 +26,11 @@ Applications are new to System Center Configuration Manager.  Prior to System Ce
 
 -   **Saving the World One Line of Code at a Time**  
 
-     [How to Create a Basic App using the Configuration Manager 2012 Beta 2 SDK](http://blogs.msdn.com/b/one_line_of_code_at_a_time/archive/2011/06/14/how-to-create-a-basic-app-using-the-configuration-manager-2012-beta-2-sdk.aspx)  
+     [How to Create a Basic App using the Configuration Manager 2012 Beta 2 SDK](https://blogs.msdn.com/b/one_line_of_code_at_a_time/archive/2011/06/14/how-to-create-a-basic-app-using-the-configuration-manager-2012-beta-2-sdk.aspx)  
 
 -   **Adam Meltzer's Configuration Manager Blog**  
 
-     [SDK: How to create a basic application and add a deployment type](http://blogs.msdn.com/b/ameltzer/archive/2012/04/25/sdk-how-to-create-a-basic-application-and-add-a-deployment-type.aspx)  
+     [SDK: How to create a basic application and add a deployment type](https://blogs.msdn.com/b/ameltzer/archive/2012/04/25/sdk-how-to-create-a-basic-application-and-add-a-deployment-type.aspx)  
 
 -   **SDK Sample: AppSupersedence**  
 
@@ -272,5 +272,4 @@ namespace ApplicationCreator
  For more information about error handling, see [About Configuration Manager Errors](../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## See Also  
- [Configuration Manager Application Management](../../develop/apps/application-management.md)   
  [SMS_Collection Server WMI Class](../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md)

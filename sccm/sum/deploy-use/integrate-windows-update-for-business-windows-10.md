@@ -1,18 +1,19 @@
 ---
-title: Integration with Windows Update for Business in Windows 10
-titleSuffix: "Configuration Manager"
-description: "Use Windows Update for Business to keep Windows 10-based devices in your organization up-to-date for devices connected to the Windows Update service."
+title: Integrate Windows Update for Business
+titleSuffix: Configuration Manager
+description: Use Windows Update for Business (WUfB) to keep Windows 10 up-to-date for devices connected to the Windows Update service.
 author: mestew  
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/25/2019
+ms.date: 09/04/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
 ms.collection: M365-identity-device-management
 ---
-# Integration with Windows Update for Business in Windows 10
+
+# Integrate with Windows Update for Business
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
@@ -43,7 +44,7 @@ Windows Update for Business (WUfB) allows you to keep Windows 10-based devices i
 -   Configuration Manager full client deployment that uses the software updates infrastructure won't work for clients that are connected to WUfB to receive updates.  
 
 ## Identify clients that use WUfB for Windows 10 updates  
- Use the following procedure to identify clients that use WUfB to get Windows 10 updates and upgrades. Then configure these clients to stop using WSUS to get updates, and deploy a client agent setting to disable   the software updates workflow for these clients.  
+ Use the following procedure to identify clients that use WUfB to get Windows 10 updates and upgrades. Then configure these clients to stop using WSUS to get updates, and deploy a client agent setting to disable the software updates workflow for these clients.  
 
  **Prerequisites**  
 
@@ -53,12 +54,16 @@ Windows Update for Business (WUfB) allows you to keep Windows 10-based devices i
 
 #### To identify clients that use WUfB  
 
-1.  Disable the Windows Update Agent so it doesn't scan against WSUS, if it was previously enabled. The following registry key can be set to indicate whether the computer is scanning against WSUS or Windows Update.  When the value is 2, it's not scanning against WSUS.  
+1.  Ensure the Windows Update Agent isn't scanning against WSUS, if it was previously enabled. The following registry key can be used to indicate whether the computer is scanning against WSUS or Windows Update. If the registry key doesn't exist, it's not scanning against WSUS.
     - **HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU\UseWUServer**
 
 2.  There's a new attribute, **UseWUServer**, under the **Windows Update** node in Configuration Manager Resource Explorer.  
 
-3.  Create a collection based on the **UseWUServer** attribute for all the computers that are connected via WUfB for updates and upgrades.  
+3.  Create a collection based on the **UseWUServer** attribute for all the computers that are connected via WUfB for updates and upgrades. You can create a collection based on a query similar to the one below:  
+
+    ``` WQL
+    Select sr.* from SMS_R_System as sr join SMS_G_System_WINDOWSUPDATE as su on sr.ResourceID=su.ResourceID where su.UseWUServer is null
+    ```
 
 4.  Create a client agent setting to disable the software update workflow. Deploy the setting to the collection of computers that are connected directly to WUfB.  
 

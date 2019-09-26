@@ -78,7 +78,6 @@ Class SMS_PackageStatusDistPointsSummarizer : SMS_BaseClass
 |257|PKG_TYPE_IMAGE|  
 |258|PKG_TYPE_BOOTIMAGE|  
 |259|PKG_TYPE_OSINSTALLIMAGE|  
-|260|PKG_TYPE_VHD|  
 
  `SecuredTypeID`  
  Data type: `UInt32`  
@@ -173,11 +172,8 @@ Class SMS_PackageStatusDistPointsSummarizer : SMS_BaseClass
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Software Distribution Server WMI Classes](../../../../../develop/reference/core/servers/configure/software-distribution-server-wmi-classes.md)

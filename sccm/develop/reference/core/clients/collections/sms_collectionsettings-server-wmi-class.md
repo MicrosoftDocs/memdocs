@@ -19,7 +19,6 @@ The `SMS_CollectionSettings` Windows Management Instrumentation (WMI) class is a
 ```  
 Class SMS_CollectionSettings : SMS_BaseClass   
 {   
-      Boolean AMTAutoProvisionEnabled;  
       UInt32 ClusterCount;  
       UInt32 ClusterPercentage;  
       UInt32 ClusterTimeout;  
@@ -47,15 +46,6 @@ Class SMS_CollectionSettings : SMS_BaseClass
  The `SMS_CollectionSettings` class does not define any methods.  
 
 ## Properties  
- `AMTAutoProvisionEnabled`  
- Data type: `String`  
-
- Access type: Read/Write  
-
- Qualifiers: None  
-
- Starting with Configuration Manager version 1606, this property is no longer used.  
-
  `ClusterCount`  
  Data type: `UInt32`  
 
@@ -247,11 +237,8 @@ Class SMS_CollectionSettings : SMS_BaseClass
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Collections Server WMI Classes](../../../../../develop/reference/core/clients/collections/collections-server-wmi-classes.md)

@@ -229,7 +229,7 @@ This procedure removes the SMSID. The Configuration Manager client for Mac requi
 
 7. In the **Edit Discovery Script** window, enter the following shell script:  
 
-    ```  
+    ``` Shell
     defaults read com.microsoft.ccmclient SMSID  
     ```  
 
@@ -239,7 +239,7 @@ This procedure removes the SMSID. The Configuration Manager client for Mac requi
 
 10. In the **Create Remediation Script** window, enter the following shell script:  
 
-    ```  
+    ``` Shell
     defaults delete com.microsoft.ccmclient SMSID  
     ```  
 
@@ -263,7 +263,7 @@ This procedure removes the SMSID. The Configuration Manager client for Mac requi
 
 15. After you install a new certificate on Mac computers that have the SMSID removed, run the following command to configure the client to use the new certificate:  
 
-    ```  
+    ``` Shell
     sudo defaults write com.microsoft.ccmclient SubjectName -string <subject_name_of_new_certificate>  
     ```  
 

@@ -39,7 +39,7 @@ Desktop Analytics uses a *Log Analytics workspace* in your Azure subscription. A
 
 Before you start this tutorial, make sure you have the following prerequisites:  
 
-- An active Azure subscription, with [**Global Admin**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator) permissions  
+- An active Azure subscription, with [**Global Admin**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions) permissions  
 
     For more information, see [Desktop Analytics prerequisites](/sccm/desktop-analytics/overview#prerequisites).
 
@@ -359,7 +359,7 @@ Next, distribute the OS upgrade package to distribution points.
 4. On the **General** page of the Deploy Software Wizard, select **Browse** next to the **Software** field. Select your Windows 10 in-place upgrade task sequence, and select **Next**.  
 
     > [!Note]  
-    > With the Desktop Analytics integration, Configuration Manager automatically creates a collection for the pilot deployment plan. It can take up to 10 minutes for this collection to synchronize before you can use it.<!-- 3887891 -->
+    > With the Desktop Analytics integration, Configuration Manager automatically creates pilot and production collections for the deployment plan. Before you can use them, it can take time for these collections to synchronize. For more information, see [Troubleshoot - Data latency](/sccm/desktop-analytics/troubleshooting#data-latency).<!-- 4984639 -->
     >
     > This collection is reserved for Desktop Analytics deployment plan devices. Manual changes to this collection aren't supported.<!-- 3866460, SCCMDocs-pr 3544 -->  
 

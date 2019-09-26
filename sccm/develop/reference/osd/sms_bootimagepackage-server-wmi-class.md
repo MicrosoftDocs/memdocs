@@ -575,7 +575,7 @@ Class SMS_BootImagePackage : SMS_PackageBaseclass
 |256|  
 |512|  
 
- For additional information see [Windows PE Servicing Command-Line Options](http://go.microsoft.com/fwlink/?LinkId=272891).  
+ For additional information see [Windows PE Servicing Command-Line Options](https://go.microsoft.com/fwlink/?LinkId=272891).  
 
  This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
 
@@ -680,11 +680,8 @@ Class SMS_BootImagePackage : SMS_PackageBaseclass
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Operating System Deployment Server WMI Classes](../../../develop/reference/osd/operating-system-deployment-server-wmi-classes.md)

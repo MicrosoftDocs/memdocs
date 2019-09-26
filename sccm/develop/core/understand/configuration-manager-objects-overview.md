@@ -32,17 +32,17 @@ The System Center Configuration Manager objects are instances of Configuration M
 
  \<InstallationDirectory>\Microsoft.ConfigurationManagement.exe /SMS:DebugView=1  
 
- For more information about command-line options, see [Configuration Manager Console Command-Line Options](../../../develop/reference/core/servers/console/console-command-line-options.md)  
+ For more information, see [Configuration Manager console command-line options](/sccm/core/servers/manage/admin-console#command-line-options).  
 
 ## See Also  
  [Configuration Manager Association Classes](../../../develop/core/understand/association-classes.md)   
  [Configuration Manager Bit Field Properties](../../../develop/core/understand/configuration-manager-bit-field-properties.md)   
- [Configuration Manager Console Command-Line Options](../../../develop/reference/core/servers/console/console-command-line-options.md)   
+ [Configuration Manager console command-line options](/sccm/core/servers/manage/admin-console#command-line-options)
  [Configuration Manager Date and Time Formats](../../../develop/core/understand/date-and-time-formats.md)   
  [Configuration Manager Embedded Objects](../../../develop/core/understand/embedded-objects.md)   
  [Configuration Manager Extended WMI Query Language](../../../develop/core/understand/extended-wmi-query-language.md)   
- [How to Use Configuration Manager Objects With Managed Code](../../../develop/core/understand/how-to-use-configuration-manager-objects-with-managed-code.md)   
+ [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)
  [Configuration Manager Lazy Properties](../../../develop/core/understand/configuration-manager-lazy-properties.md)   
- [Configuration Manager Errors](../../../develop/core/understand/configuration-manager-errors.md)   
+ [About errors](/sccm/develop/core/understand/about-configuration-manager-errors)
  [Configuration Manager Object Security](../../../develop/core/understand/configuration-manager-object-security.md)   
  [Configuration Manager Special Queries](../../../develop/core/understand/special-queries.md)

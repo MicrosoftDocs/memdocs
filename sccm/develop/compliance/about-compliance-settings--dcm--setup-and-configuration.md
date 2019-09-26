@@ -23,7 +23,7 @@ To use desired configuration management on your System Center Configuration Mana
 -   Client computers must have installed the .NET Framework 2.0 or a later version.  
 
 > [!NOTE]
->  The .NET Framework 2.0 is supplied with the latest operating systems, such as Windows Vista, and is also available to download through Windows Update. You can also download it from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=276779) and install it through software distribution or other deployment methods.  
+>  The .NET Framework 2.0 is supplied with the latest operating systems, such as Windows Vista, and is also available to download through Windows Update. You can also download it from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=276779) and install it through software distribution or other deployment methods.  
 
  Enabling the desired configuration management client agent makes it possible for Configuration Manager clients that are assigned to this site to evaluate compliance with assigned configuration baselines. This client agent is enabled by default, but it will not evaluate its compliance until it downloads one or more configuration baselines and evaluates them at the configured schedule.  
 
@@ -34,5 +34,3 @@ To use desired configuration management on your System Center Configuration Mana
 > [!NOTE]
 >  When the desired configuration management client agent is enabled on client computers, the **Systems Management Properties** dialog box displays a **Configurations** tab that lists the downloaded configuration baselines and the results of its compliance evaluation. When the desired configuration management client agent is disabled, the **Configurations** tab is not visible. If the **Configurations** tab is not visible, the client is not running the desired configuration management client agent. This might be because the site is not enabled for desired configuration management, the client computer has not yet downloaded the policy to enable the desired configuration management client agent, a local policy has disabled the desired configuration management client agent, or the client is not a Configuration Manager client.  
 
-## See Also  
- [Configuration Manager Desired Configuration Management &#91;SDK&#93;](../../develop/compliance/compliance-settings-dcm.md)

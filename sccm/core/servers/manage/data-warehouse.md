@@ -66,7 +66,7 @@ Starting in version 1810, you can synchronize more tables from the site database
 
     - SQL Server failover cluster  
 
-- If you use [distributed views](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_distviews), the data warehouse service point must install on the same server that hosts the central administration site's database.  
+- If you use [distributed views](/sccm/core/plan-design/hierarchy/database-replication#bkmk_distviews), the data warehouse service point must install on the same server that hosts the central administration site's database.  
 
 For more information on SQL Server licensing, see the [product and licensing FAQ](/sccm/core/understand/product-and-licensing-faq). <!-- sms500967 -->
 
@@ -220,7 +220,7 @@ Grant the **Reporting Services Point Account** the **db_datareader** permission 
 
 When you open a data warehouse report, it returns the following error:
 
-```
+``` Output
 An error has occurred during report processing. (rsProcessingAborted)
 Cannot create a connection to data source 'AutoGen__39B693BB_524B_47DF_9FDB_9000C3118E82_'. (rsErrorOpeningConnection)
 A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.)

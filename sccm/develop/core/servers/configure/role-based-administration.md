@@ -31,12 +31,6 @@ This section provides topics about programmatically managing role-based administ
 ### Administrative Users and Security Groups  
  Domain users and security groups can be granted access to Configuration Manager. The permissions set on an administrator consist of a combination of a security role and scope. A scope is applied to a role that the administrator has. It can never be applied independently of the role.  
 
-## Role-based administration topics  
+## See also
 
--   [Administrative User Management](../../../../develop/core/servers/configure/administrative-user-management.md)  
-
--   [Security Scope Management](../../../../develop/core/servers/configure/security-scope-management.md)  
-
-## Other resources for this component  
-
--   [Configuration Manager SDK](../../../../develop/core/misc/system-center-configuration-manager-sdk.md)
+[Configuration Manager SDK](/sccm/develop/core/misc/system-center-configuration-manager-sdk)

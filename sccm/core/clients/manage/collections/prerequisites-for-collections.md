@@ -2,7 +2,7 @@
 title: "Collections prerequisites"
 titleSuffix: "Configuration Manager"
 description: "Get prerequisites for using collections in System Center Configuration Manager."
-ms.date: 2/22/2017
+ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual

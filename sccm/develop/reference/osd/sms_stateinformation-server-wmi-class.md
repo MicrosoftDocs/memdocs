@@ -78,7 +78,6 @@ Class SMS_StateInformation : SMS_BaseClass
 |300|Software updates or desired configuration management assignment compliance|  
 |301|Software updates assignment enforcement (installation)|  
 |302|Software updates or desired configuration management assignment evaluation|  
-|200|NAP|  
 |100|State migration (server only)|  
 |600|PXE (server only)|  
 |700|State system resync (server only)|  
@@ -103,16 +102,16 @@ Class SMS_StateInformation : SMS_BaseClass
 
   This class allows you to access information about a Configuration Manager state message. These messages are sent by clients to notify of important changes of state. Each message provides a snapshot of the state of a process at a specific time. These messages can be helpful when troubleshooting or verifying that processes are working correctly.  
 
-  State messages are used with software updates, Network Access Protection (NAP), desired configuration management, client deployment, and client communication. Generally you will use state messages only through reports and client logs.  
+  State messages are used with software updates, desired configuration management, client deployment, and client communication. Generally you will use state messages only through reports and client logs.  
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
-## See Also  
- [Operating System Deployment Server WMI Classes](../../../develop/reference/osd/operating-system-deployment-server-wmi-classes.md)   
- [SMS_StateMigration Server WMI Class](../../../develop/reference/osd/sms_statemigration-server-wmi-class.md)
+## See also
+
+[SMS_StateMigration server WMI class](/sccm/develop/reference/osd/sms_statemigration-server-wmi-class)

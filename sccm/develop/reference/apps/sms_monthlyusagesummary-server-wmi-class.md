@@ -115,14 +115,13 @@ Class SMS_MonthlyUsageSummary : SMS_BaseClass
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Software Metering Server WMI Classes](../../../develop/reference/apps/software-metering-server-wmi-classes.md)   
  [SMS_MeteredUser Server WMI Class](../../../develop/reference/apps/sms_metereduser-server-wmi-class.md)   
  [SMS_R_System Server WMI Class](../../../develop/reference/core/clients/manage/sms_r_system-server-wmi-class.md)   
  [SMS_SummarizationInterval Server WMI Class](../../../develop/reference/apps/sms_summarizationinterval-server-wmi-class.md)

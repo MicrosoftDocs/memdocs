@@ -1,6 +1,7 @@
 ---
-title: "Configuration Manager on Azure"
-description: "Information about using Configuration Manager on an Azure environment."
+title: Configuration Manager on Azure
+titleSuffix: Configuration Manager
+description: Information about using Configuration Manager on an Azure environment.
 ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,7 +12,9 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
+
 # Configuration Manager on Azure - Frequently Asked Questions
+
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 The following questions and answers can help you understand when to use and how to configure Configuration Manager on Microsoft Azure.
@@ -127,7 +130,7 @@ The approach for content management is much the same as for site servers and sit
 - If you use a metered data plan and bandwidth cost is a concern or the network connection between Azure and your intranet is not fast or can be unreliable, then you might consider other approaches. These include locating standard or pull distribution points on-premises as well as using BranchCache. The use of cloud-based distribution points is also an option but there are some limits on the content types supported (for example, no support for software updates packages).
 
 > [!NOTE]
->  If PXE support is required, you must use on-premises distribution points (standard or pull) to respond to boot requests. [WDS is currently not supported to run on Azure VMs](https://technet.microsoft.com/library/hh831764(v=ws.11).aspx).
+>  If PXE or multicast support is required, you must use on-premises distribution points (standard or pull) to respond to boot requests.
 
 
 ### While I am OK with the limitations of cloud-based distribution points, I don't want to put my management point into a DMZ even though that is needed to support my internet-based clients. Do I have any other options?

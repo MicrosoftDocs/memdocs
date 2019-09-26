@@ -106,7 +106,7 @@ Use the Exchange Server connector in System Center Configuration Manager when yo
     -   **Set-ActiveSyncOrganizationSettings**  
 
     > [!NOTE]  
-    >  The following Exchange Server management roles include these cmdlets: Recipient Management, View-Only Organization Management, and Server Management. For more information about management role groups in Microsoft Exchange Server 2010, see [Understanding Management Role Groups](http://go.microsoft.com/fwlink/p/?LinkId=212914).  
+    >  The following Exchange Server management roles include these cmdlets: Recipient Management, View-Only Organization Management, and Server Management. For more information about management role groups in Microsoft Exchange Server 2010, see [Understanding Management Role Groups](https://go.microsoft.com/fwlink/p/?LinkId=212914).  
 
     > [!TIP]  
     >  If you try to install or use the Exchange Server connector without the required cmdlets, you will see an error logged with the message `Invoking cmdlet <cmdlet> failed` in the EasDisc.log file on the site server computer.  

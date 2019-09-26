@@ -270,7 +270,7 @@ For an example scenario that shows how you might deploy software updates in your
  For more information about how Configuration Manager manages embedded devices that use write filters, see  [Planning for client deployment to Windows Embedded devices](../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).  
 
 ##  <a name="BKMK_ExtendSoftwareUpdates"></a> Extend software updates in Configuration Manager  
- Use System Center Updates Publisher to manage software updates that are not available from Microsoft Update. After you publish the software updates to the update server and synchronize the software updates in Configuration Manager, you can deploy the software updates to Configuration Manager clients. For more information about Updates Publisher, see [Updates Publisher 2011](http://go.microsoft.com/fwlink/p/?LinkId=252947).  
+ Use System Center Updates Publisher to manage software updates that are not available from Microsoft Update. After you publish the software updates to the update server and synchronize the software updates in Configuration Manager, you can deploy the software updates to Configuration Manager clients. For more information about Updates Publisher, see [Updates Publisher 2011](https://go.microsoft.com/fwlink/p/?LinkId=252947).  
 
 ## Next steps
 [Plan for software updates](../plan-design/plan-for-software-updates.md)

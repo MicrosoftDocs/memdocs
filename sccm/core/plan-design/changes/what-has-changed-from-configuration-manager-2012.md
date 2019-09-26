@@ -1,5 +1,6 @@
 ---
-title: Changes from Configuration Manager 2012 
+title: Changes from version 2012 
+titleSuffix: Configuration Manager
 description: Identify the changes and new capabilities in System Center Configuration Manger versus System Center 2012 Configuration Manager.
 ms.date: 03/27/2019
 ms.prod: configuration-manager
@@ -70,7 +71,7 @@ For more information, see [Diagnostics and usage data](/sccm/core/plan-design/di
 
 ##  <a name="bkmk_AMT"></a> Support for Intel Active Management Technology (AMT)  
 
-Configuration Manager current branch removes native support for AMT-based computers from within the Configuration Manager console. AMT-based computers remain fully managed when you use the [Intel SCS Add-on for Microsoft System Center Configuration Manager](http://www.intel.com/content/www/us/en/software/setup-configuration-software.html). The add-on provides you access to the latest capabilities to manage AMT, while removing limitations introduced until Configuration Manager could incorporate those changes.  
+Configuration Manager current branch removes native support for AMT-based computers from within the Configuration Manager console. AMT-based computers remain fully managed when you use the [Intel SCS Add-on for Microsoft System Center Configuration Manager](https://www.intel.com/content/www/us/en/software/setup-configuration-software.html). The add-on provides you access to the latest capabilities to manage AMT, while removing limitations introduced until Configuration Manager could incorporate those changes.  
 
 The removal of integrated AMT for Configuration Manager includes out-of-band management. The out-of-band management point site system role is no longer available.  
 

@@ -29,7 +29,7 @@ This article introduces the features that are available in the Technical Preview
 
     -   Run the following SQL script on the primary site's database:  
 
-        ```  
+        ``` SQL
         DECLARE @PilotingPkgID NVARCHAR(8)  
 
         SELECT @PilotingPkgID = PilotingPackageID FROM ClientDeploymentSettings  
@@ -83,7 +83,7 @@ In the 1601 Technical Preview, we have added support for the following features:
     -   **Require Antimalware:** This is a check to see if the antimalware software (System Center Endpoint Protection or Windows Defender only) is enabled and running.  
          If it is not enabled, access to email and SharePoint services is blocked.  
 
-    End-users who are blocked due to non compliance will view compliance information in the SCCM Software Center and will initiate a new policy evaluation when compliance issues are remediated.  
+    End-users who are blocked due to non compliance will view compliance information in the Software Center and will initiate a new policy evaluation when compliance issues are remediated.  
 
 -   **Conditional access with Health Attestation Service** You can now restrict access to email and 0365 services based on the health of the devices as reported by the Health Attestation Service.  Additionally, devices that are managed by Intune are included in the device health reports.  
 

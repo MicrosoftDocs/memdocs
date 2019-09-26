@@ -46,7 +46,7 @@ Class SMS_TaskSequence_PrepareOSAction : SMS_TaskSequence_Action
 
  `true` to build a mass-storage device driver list. The default value is `false`.  
 
- The task sequence variable associated with this property is OSDBuildStorageDriverList. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDBuildStorageDriverList. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  `Condition`  
  Data type: `SMS_TaskSequence_Condition`  
@@ -93,7 +93,7 @@ Class SMS_TaskSequence_PrepareOSAction : SMS_TaskSequence_Action
 
  `true` to keep the current product activation flag or reset it. The default value is `false`.  
 
- The task sequence variable associated with this property is OSDKeepActivation. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDKeepActivation. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  `Name`  
  Data type: `String`  
@@ -135,11 +135,8 @@ Class SMS_TaskSequence_PrepareOSAction : SMS_TaskSequence_Action
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Operating System Deployment Server WMI Classes](../../../develop/reference/osd/operating-system-deployment-server-wmi-classes.md)

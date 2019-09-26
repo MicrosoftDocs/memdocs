@@ -123,7 +123,7 @@ Class SMS_TaskSequence_ApplyDataImageAction : SMS_TaskSequence_Action
 
  Index of the image in the WIM file applied to the target computer. Possible index values are 1 through 2147483647. For more information, see the note in Remarks.  
 
- The task sequence variable associated with this property is OSDDataImageIndex. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDDataImageIndex. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  `ImagePackageID`  
  Data type: `String`  
@@ -172,7 +172,7 @@ Class SMS_TaskSequence_ApplyDataImageAction : SMS_TaskSequence_Action
 
  `true` (default) to wipe the contents of the destination partition before the image is applied.  
 
- The task sequence variable associated with this property is OSDWipeDestinationPartition. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDWipeDestinationPartition. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
 ## Remarks  
  Class qualifiers for this class include:  
@@ -204,11 +204,8 @@ Class SMS_TaskSequence_ApplyDataImageAction : SMS_TaskSequence_Action
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Operating System Deployment Server WMI Classes](../../../develop/reference/osd/operating-system-deployment-server-wmi-classes.md)

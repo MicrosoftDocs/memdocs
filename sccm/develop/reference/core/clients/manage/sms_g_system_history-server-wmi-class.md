@@ -73,16 +73,15 @@ Class SMS_G_System_History : SMS_G_System
 
  Your application uses this class to determine the state of client hardware at any given time. Names of derived history classes are prefixed with "SMS_GEH_System_" followed by the inventoried object name. An example class name is `SMS_GEH_System_ACCOUNT`. Your application can use the derived classes to determine the state of a hardware component on a client at a given point in time.  
 
- Hardware history is deleted on a schedule if the Delete Aged Inventory History database maintenance task is set to `true` in the System Center Configuration Manager console. You can also enable this task and set the schedule by updating the site control file. The site control item [SMS_SCI_SQLTask Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sci_sqltask-server-wmi-class.md) object, and the `TaskName` value is "Delete Aged Inventory History". For an example that updates the site control file, see [Configuration Manager Site Control File](../../../../../develop/core/understand/site-control-file.md).  
+ Hardware history is deleted on a schedule if the Delete Aged Inventory History database maintenance task is set to `true` in the System Center Configuration Manager console. You can also enable this task and set the schedule by updating the site control file. The site control item [SMS_SCI_SQLTask Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sci_sqltask-server-wmi-class.md) object, and the `TaskName` value is "Delete Aged Inventory History". For an example that updates the site control file, see [About the site control file](/sccm/develop/core/understand/about-the-configuration-manager-site-control-file).  
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Resource Management Server WMI Classes](../../../../../develop/reference/core/clients/manage/configuration-manager-resource-management-server-wmi-classes.md)   
  [SMS_G_System Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_g_system-server-wmi-class.md)

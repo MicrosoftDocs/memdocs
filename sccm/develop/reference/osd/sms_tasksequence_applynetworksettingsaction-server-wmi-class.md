@@ -55,7 +55,7 @@ Class SMS_TaskSequence_ApplyNetworkSettingsAction : SMS_TaskSequence_Action
 
  [SMS_TaskSequence_NetworkAdapterSettings Server WMI Class](../../../develop/reference/osd/sms_tasksequence_networkadaptersettings-server-wmi-class.md) objects representing settings for the adapters installed on the target computer. This property must be global so that it is visible in finalize mode.  
 
- The task sequence variable associated with this property is OSDAdapter. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDAdapter. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  `Condition`  
  Data type: `SMS_TaskSequence_Condition`  
@@ -129,7 +129,7 @@ Class SMS_TaskSequence_ApplyNetworkSettingsAction : SMS_TaskSequence_Action
 
  Password of the account used when the user joins a Windows domain. Set this property if `NetworkJoinType` is set to 0.  
 
- The task sequence variable associated with this property is OSDJoinPassword. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDJoinPassword. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  `DomainUsername`  
  Data type: `String`  
@@ -140,7 +140,7 @@ Class SMS_TaskSequence_ApplyNetworkSettingsAction : SMS_TaskSequence_Action
 
  Account used when the user joins a Windows domain. Set this property if `NetworkJoinType` is set to 0.  
 
- The task sequence variable associated with this property is OSDJoinAccount, which specifies the network account that should be used to add the target computer to a Windows domain. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDJoinAccount, which specifies the network account that should be used to add the target computer to a Windows domain. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  `Enabled`  
  Data type: `Boolean`  
@@ -192,7 +192,7 @@ Class SMS_TaskSequence_ApplyNetworkSettingsAction : SMS_TaskSequence_Action
 
  Size of the array indicated by the `Adapters` property. This property must be global so that it is visible in finalize mode.  
 
- The task sequence variable associated with this property is OSDAdapterCount. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDAdapterCount. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  OSDAdapterCount  
 
@@ -232,11 +232,8 @@ Class SMS_TaskSequence_ApplyNetworkSettingsAction : SMS_TaskSequence_Action
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
-
-## See Also  
- [Operating System Deployment Server WMI Classes](../../../develop/reference/osd/operating-system-deployment-server-wmi-classes.md)

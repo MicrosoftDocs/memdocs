@@ -5,7 +5,7 @@ description: Learn about the workloads that you can switch from Configuration Ma
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 05/24/2019
+ms.date: 09/06/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -16,6 +16,8 @@ ms.collection: M365-identity-device-management
 # Co-management workloads
 
 You don't have to switch the workloads, or you can do them individually when you're ready. Configuration Manager continues to manage all other workloads, including those workloads that you don't switch to Intune, and all other features of Configuration Manager that co-management doesn't support.
+
+If you switch a workload to Intune, but later change your mind, you can switch it back to Configuration Manager.
 
 Co-management supports the following workloads:
 
@@ -115,12 +117,17 @@ For more information on the Intune feature, see [Assign Office 365 apps to Windo
 
 Starting in Configuration Manager version 1806, use Intune to manage client apps and PowerShell scripts on co-managed Windows 10 devices. After you transition this workload, any available apps deployed from Intune are available in the Company Portal. Apps that you deploy from Configuration Manager are available in Software Center.
 
-
 For more information on the Intune feature, see [What is Microsoft Intune app management?](https://docs.microsoft.com/intune/app-management).
-
 
 > [!Note]  
 > The client apps workload is a pre-release feature. To enable it, see [Pre-release features](/sccm/core/servers/manage/pre-release-features).  
+
+
+## Diagram for app workloads
+
+![Diagram of co-management app workloads](media/co-management-apps.svg)
+
+[View the diagram at full size](media/co-management-apps.svg)
 
 
 ## Next steps

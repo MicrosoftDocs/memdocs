@@ -64,7 +64,7 @@ Class SMS_TaskSequence_ApplyOperatingSystemAction : SMS_TaskSequence_Action
 
  The name of the answer file specified in the `ConfigFilePackage` property. For more information, see the Remarks section later in this topic.  
 
- The task sequence variable associated with this property is OSDConfigFileName. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDConfigFileName. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  `ConfigFilePackage`  
  Data type: `String`  
@@ -147,7 +147,7 @@ Class SMS_TaskSequence_ApplyOperatingSystemAction : SMS_TaskSequence_Action
 
  Index of the image in the WIM file applied to the target computer. The value of this property can be between 1 and 2147483647. This property is required if `ImagePackageID` is set. For more information, see the Remarks section later in this topic.  
 
- The task sequence variable associated with this property is OSDImageIndex. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDImageIndex. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  `ImagePackageID`  
  Data type: `String`  
@@ -258,12 +258,12 @@ Class SMS_TaskSequence_ApplyOperatingSystemAction : SMS_TaskSequence_Action
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
-## See Also  
- [Operating System Deployment Server WMI Classes](../../../develop/reference/osd/operating-system-deployment-server-wmi-classes.md)   
- [SMS_TaskSequence_SetupWindowsAndSMSAction Server WMI Class](../../../develop/reference/osd/sms_tasksequence_setupwindowsandsmsaction-server-wmi-class.md)
+## See also
+
+[SMS_TaskSequence_SetupWindowsAndSMSAction server WMI class](/sccm/develop/reference/osd/sms_tasksequence_setupwindowsandsmsaction-server-wmi-class)

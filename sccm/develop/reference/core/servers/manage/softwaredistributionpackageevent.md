@@ -34,6 +34,3 @@ In System Center Configuration Manager, the `SoftwareDistributionPackageEvent` c
  Data type: `String`  
 
  The package version. It is the value that appears in the status message text. It is not the value that is specified in the Configuration Manager console. It maps to `PKG_SourceVersion` field in the software distribution policy. This is insertion string number 2.  
-
-## See Also  
- [Status Message Types](../../../../../develop/reference/core/servers/manage/status-message-types.md)

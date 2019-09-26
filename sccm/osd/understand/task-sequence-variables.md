@@ -2,7 +2,7 @@
 title: Task sequence variable reference
 titleSuffix: Configuration Manager
 description: Learn about the variables to control and customize a Configuration Manager task sequence.
-ms.date: 07/26/2019
+ms.date: 08/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -251,17 +251,13 @@ Stores the site code of the Configuration Manager site.
 
 This variable stores the time zone information in the following format:
 
-```
-Bias,StandardBias,DaylightBias,StandardDate.wYear,wMonth,wDayOfWeek,wDay,wHour,wMinute,wSecond,wMilliseconds,DaylightDate.wYear,wMonth,wDayOfWeek,wDay,wHour,wMinute,wSecond,wMilliseconds,StandardName,DaylightName
-```
+`Bias,StandardBias,DaylightBias,StandardDate.wYear,wMonth,wDayOfWeek,wDay,wHour,wMinute,wSecond,wMilliseconds,DaylightDate.wYear,wMonth,wDayOfWeek,wDay,wHour,wMinute,wSecond,wMilliseconds,StandardName,DaylightName`
 
 #### Example
 
 For the time zone **Eastern Time (US and Canada)**:
 
-```
-300,0,-60,0,11,0,1,2,0,0,0,0,3,0,2,2,0,0,0,Eastern Standard Time,Eastern Daylight Time
-```
+`300,0,-60,0,11,0,1,2,0,0,0,0,3,0,2,2,0,0,0,Eastern Standard Time,Eastern Daylight Time`
 
 ### <a name="SMSTSType"></a> _SMSTSType
 
@@ -1373,7 +1369,7 @@ Starting in version 1802, set this variable to `true` and the task sequence engi
 When the task sequence restarts, the value of this variable persists. However, the task sequence tries sending an initial status message. This first attempt includes multiple retries. If successful, the task sequence continues sending status regardless of the value of this variable. If status fails to send, the task sequence uses the value of this variable.
 
 > [!NOTE]  
-> [Task sequence status reporting](/sccm/core/servers/manage/list-of-reports#task-sequence---deployment-status) relies upon these status messages to display the progress, history, and details of each step.
+> [Task sequence status reporting](/sccm/core/servers/manage/list-of-reports#task-sequence---deployment-status) relies upon these status messages to display the progress, history, and details of each step. If status messages fail to send, they're not queued. When connectivity is restored to the management point, they're not sent at a later time. This behavior results in task sequence status reporting to be incomplete and missing items.
 
 ### <a name="SMSTSDisableWow64Redirection"></a> SMSTSDisableWow64Redirection
 
@@ -1519,7 +1515,10 @@ Specifies the message to display in the restart notification dialog. If this var
 
 ### <a name="SMSTSRebootRequested"></a> SMSTSRebootRequested
 
-Indicates that a restart is requested after the current task sequence step is completed. If a restart is required, set this variable to `true`, and the task sequence manager restarts the computer after this task sequence step. If the task sequence step requires a restart to complete the action, set this variable. After the computer restarts, the task sequence continues to run from the next task sequence step.
+Indicates that a restart is requested after the current task sequence step is completed. If the task sequence step requires a restart to complete the action, set this variable. After the computer restarts, the task sequence continues to run from the next task sequence step.
+
+- `HD`: Restart to the installed OS
+- `WinPE`: Restart to the associated boot image
 
 ### <a name="SMSTSRetryRequested"></a> SMSTSRetryRequested
 
@@ -1574,10 +1573,13 @@ Set the SMSTSWaitForSecondReboot value in seconds to specify how long the task s
 
 For example, if you set SMSTSWaitForSecondReboot to `600`, the task sequence pauses for 10 minutes after a restart before additional steps run. This variable is useful when a single Install Software Updates task sequence step installs hundreds of software updates.
 
+> [!Note]
+> This variable only applies to a task sequence that deploys an OS. It doesn't work in a custom task sequence. <!-- 2839998 -->
+
 ### <a name="TSDebugMode"></a> TSDebugMode
 
 <!--3612274-->
-Starting in version 1906, set this variable to `TRUE` on a collection to which a task sequence is deployed. This variable changes the behavior of any task sequence on any device in that collection to use the task sequence debugger.
+Starting in version 1906, set this variable to `TRUE` on a collection or computer object to which the task sequence is deployed. Any device that has this variable set will put any task sequence deployed to it into debug mode.
 
 For more information, see [Debug a task sequence](/sccm/osd/deploy-use/debug-task-sequence).
 

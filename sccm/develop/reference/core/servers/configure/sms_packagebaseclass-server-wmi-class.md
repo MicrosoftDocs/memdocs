@@ -322,17 +322,16 @@ The type of the package. Possible values are:
 
 |Value|Description|  
 |-----------|-----------------|  
-|0|Regular software distribution package.|  
-|3|Driver package.|  
-|4|Task sequence package.|  
-|5|Software update package.|  
-|6|Device setting package.|  
-|7|Virtual application package.| 
-|8|Application package.| 
-|257|Image package.|  
-|258|Boot image package.|  
-|259|Operating system install package.|
-|260|VHD package.|   
+|0|Regular software distribution package|  
+|3|Driver package|  
+|4|Task sequence package|  
+|5|Software update package|  
+|6|Device setting package|  
+|7|Virtual application package|
+|8|Application package|
+|257|Image package|  
+|258|Boot image package|  
+|259|OS upgrade package|
 
 ### PkgFlags  
 Data type: `UInt32`  
@@ -542,6 +541,5 @@ For more information, see [Configuration Manager Server Runtime Requirements](..
 For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
-[Software Distribution Server WMI Classes](../../../../../develop/reference/core/servers/configure/software-distribution-server-wmi-classes.md)   
 [How to Create a Package](../../../../../develop/core/servers/configure/how-to-create-a-package.md)   
-[PowerShell Cmdlet: New-CMPackage](http://go.microsoft.com/fwlink/?LinkId=309284)
+[PowerShell Cmdlet: New-CMPackage](https://go.microsoft.com/fwlink/?LinkId=309284)

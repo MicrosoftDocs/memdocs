@@ -114,5 +114,5 @@ public void ExerciseException(WqlConnectionManager connection)
  For more information about error handling, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## See Also  
- [Configuration Manager Errors](../../../develop/core/understand/configuration-manager-errors.md)   
+ [About errors](/sccm/develop/core/understand/about-configuration-manager-errors)
  [How to Handle Configuration Manager Asynchronous Errors by Using Managed Code](../../../develop/core/understand/how-to-handle-configuration-manager-asynchronous-errors-by-using-managed-code.md)

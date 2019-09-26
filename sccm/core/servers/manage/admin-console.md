@@ -2,7 +2,7 @@
 title: Configuration Manager Console
 titleSuffix: Configuration Manager
 description: Learn about navigating through the Configuration Manager console.
-ms.date: 07/26/2019
+ms.date: 08/16/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -196,6 +196,9 @@ Starting in Configuration Manager version 1902, there's a **Documentation** node
 - **Troubleshooting articles**: guided walkthroughs to assist with troubleshooting Configuration Manager components and features.
 - **New and updated support articles**: articles that are new or updated in the last two months.
 
+### Troubleshooting connection errors
+The **Documentation** node has no explicit proxy configuration. It uses any OS-defined proxy in the **Internet Options** control panel applet. To retry after a connection error, refresh the **Documentation** node.
+
 
 ## Command-line options
 
@@ -282,7 +285,8 @@ There are various ways to display a list of devices under the **Devices** node i
 In the **Assets and Compliance** workspace, go to the **Devices** node, and select a device. In the details pane, switch to the new **Collections** tab. This tab lists the collections that include this device. 
 
 > [!Note]  
-> This tab currently isn't available from a devices subnode under the **Device Collections** node. For example, when you select the option to **Show Members** on a collection.
+> - This tab currently isn't available from a devices subnode under the **Device Collections** node. For example, when you select the option to **Show Members** on a collection.
+> - This tab may not populate as expected for some users. To see the complete list of collections a device belongs to, you must have the **Full Administrator** security role. This is a known issue. <!--5107309--> <!--5107309-->
 
 
 #### Add SMBIOS GUID column to device and device collection nodes
@@ -332,13 +336,6 @@ This behavior significantly improves the time it takes to search by name, especi
 *(Introduced in version 1906)*
 
 In the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node. Edit a task sequence, and select or add the [Install Package](/sccm/osd/understand/task-sequence-steps#BKMK_InstallPackage) step. If a package has more than one program, the drop-down list now sorts the programs alphabetically.
-
-#### Multiselect and delete packages
-<!--4616810-->
-*(Introduced in version 1906)*
-
-In the **Software Library** workspace, expand **Application Management**, and select the **Packages** node. select more than one package. In the Package group of the ribbon, you can now delete more than one package at a time.
-
 
 #### Task sequences tab in applications node
 <!--4616810-->

@@ -2,7 +2,7 @@
 title: "Certificates and security"
 titleSuffix: "Configuration Manager"
 description: "Manage certificates and security for System Center Updates Publisher"
-ms.date: 4/29/2017
+ms.date: 04/29/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual

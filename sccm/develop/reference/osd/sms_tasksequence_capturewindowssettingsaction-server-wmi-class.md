@@ -83,7 +83,7 @@ Class SMS_TaskSequence_CaptureWindowsSettingsAction : SMS_TaskSequence_Action
 
  `true` (default) to migrate the computer name.  
 
- The task sequence variable associated with this property is OSDMigrateComputerName. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDMigrateComputerName. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  `MigrateRegistrationInfo`  
  Data type: `Boolean`  
@@ -94,7 +94,7 @@ Class SMS_TaskSequence_CaptureWindowsSettingsAction : SMS_TaskSequence_Action
 
  `true` (default) to migrate information about the registered owner or organization.  
 
- The task sequence variable associated with this property is OSDMigrateRegistrationInfo. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDMigrateRegistrationInfo. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  `MigrateTimeZone`  
  Data type: `Boolean`  
@@ -105,7 +105,7 @@ Class SMS_TaskSequence_CaptureWindowsSettingsAction : SMS_TaskSequence_Action
 
  `true` (default) to migrate information about the time zone.  
 
- The task sequence variable associated with this property is OSDMigrateTimeZone. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](http://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDMigrateTimeZone. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
 
  `Name`  
  Data type: `String`  
@@ -145,12 +145,12 @@ Class SMS_TaskSequence_CaptureWindowsSettingsAction : SMS_TaskSequence_Action
 
 ## Requirements  
 
-## Runtime Requirements  
+### Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## Development Requirements  
+### Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
-## See Also  
- [Operating System Deployment Server WMI Classes](../../../develop/reference/osd/operating-system-deployment-server-wmi-classes.md)   
- [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md)
+## See also
+
+[SMS_TaskSequence_Action server WMI class](/sccm/develop/reference/osd/sms_tasksequence_action-server-wmi-class)

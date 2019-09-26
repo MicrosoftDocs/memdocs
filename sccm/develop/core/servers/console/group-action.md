@@ -29,7 +29,7 @@ In System Center Configuration Manager, the Group action creates a menu group, a
 ```  
 <ActionDescription Class="Group" GroupAsRegion="true" DisplayName="New Group Name" MnemonicDisplayName="MnemonicNewGroupName" Description="NewGroupNameDescription">  <ShowOn>      <string>DefaultContextualTab</string> <!-- RIBBON -->     <string>ContextMenu</string> <!-- Context Menu -->   </ShowOn>       <ActionGroups>  
     <ActionDescription Class="Executable" DisplayName="Test Action (execute)" MnemonicDisplayName="A test item" Description="A test item Description">          <ShowOn>          <string>DefaultContextualTab</string> <!-- RIBBON -->         <string>ContextMenu</string> <!-- Context Menu -->      </ShowOn>         <Executable>  
-      <FilePath>http://go.microsoft.com/fwlink/?LinkId=67307</FilePath>  
+      <FilePath>https://go.microsoft.com/fwlink/?LinkId=67307</FilePath>  
     </Executable>  
     </ActionDescription>  
     <ActionDescription Class="Report" DisplayName="Test Action (report)" MnemonicDisplayName="Mnemonic" Description="Description">  
@@ -41,6 +41,6 @@ In System Center Configuration Manager, the Group action creates a menu group, a
 ```  
 
 ## See Also  
- [About Configuration Manager Administrator Console Actions](../../../../develop/core/servers/console/about-configuration-manager-console-actions.md)   
+[About Configuration Manager console actions](/sccm/develop/core/servers/console/configuration-manager-actions)
  [How to Create a Configuration Manager Action](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-action.md)   
  [How to Find a Configuration Manager Node GUID](../../../../develop/core/servers/console/how-to-find-a-configuration-manager-console-node-guid.md)

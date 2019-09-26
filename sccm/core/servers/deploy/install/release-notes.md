@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 07/26/2019
+ms.date: 07/31/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -67,11 +67,7 @@ If you then expand a standalone primary site to a hierarchy with a central admin
 
 #### Workaround
 
-Renew the key associated with the app registration in Azure AD.
-
-1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Active Directory Tenants** node.
-1. Select the Azure AD tenant that you're using with the features listed above.
-1. In the ribbon, select **Renew Secret Key**. Enter the credentials of either the app owner or an Azure AD administrator.
+Renew the key associated with the app registration in Azure AD. For more information, see [Renew secret key](/sccm/core/servers/deploy/configure/azure-services-wizard#bkmk_renew).
 
 
 ### Setup command-line option JoinCEIP must be specified
@@ -170,7 +166,7 @@ Change the following registry value to `0` and restart the **Microsoft Office Cl
 <!-- 4950335 -->
 *Applies to: Configuration Manager version 1902 with update rollup, and version 1906*
 
-If you have a hierarchy, and enable **Hardware inventory** site data for [distributed views](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_distviews) on any site replication links, after you configure the Desktop Analytics connection in Configuration Manager you'll see the following error in M365UploadWorker.log:
+If you have a hierarchy, and enable **Hardware inventory** site data for [distributed views](/sccm/core/plan-design/hierarchy/database-replication#bkmk_distviews) on any site replication links, after you configure the Desktop Analytics connection in Configuration Manager you'll see the following error in M365UploadWorker.log:
 
 `Unexpected exception 'System.Data.SqlClient.SqlException' Remote access is not supported for transaction isolation level "SNAPSHOT".:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action'1 wrapCloseInAction)`
 

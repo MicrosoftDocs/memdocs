@@ -2,7 +2,7 @@
 title: Upgrade on-premises infrastructure
 titleSuffix: Configuration Manager
 description: Learn how to upgrade infrastructure, such as SQL Server and the OS of site systems.
-ms.date: 06/07/2019
+ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -24,7 +24,6 @@ Use the information in this article to help you upgrade the server infrastructur
 - If you want to *update* your Configuration Manager, current branch, infrastructure to a new version, see [Updates for Configuration Manager](/sccm/core/servers/manage/updates).  
 
 
-
 ## <a name="BKMK_SupConfigUpgradeSiteSrv"></a> Upgrade the OS of site systems  
 
 Configuration Manager supports the in-place upgrade of the server OS that hosts a site server and any site system role, in the following situations:  
@@ -33,26 +32,25 @@ Configuration Manager supports the in-place upgrade of the server OS that hosts 
 
 - In-place upgrade from:  
 
-    - Windows Server 2016 to Windows Server 2019   
+    - Windows Server 2016 to Windows Server 2019  
 
-    - Windows Server 2012 R2 to Windows Server 2019   
+    - Windows Server 2012 R2 to Windows Server 2019  
 
-    - Windows Server 2012 R2 to Windows Server 2016   
+    - Windows Server 2012 R2 to Windows Server 2016  
 
-    - Windows Server 2012 to Windows Server 2016   
+    - Windows Server 2012 to Windows Server 2016  
 
-    - Windows Server 2012 to Windows Server 2012 R2   
+    - Windows Server 2012 to Windows Server 2012 R2  
 
-    - Windows Server 2008 R2 to Windows Server 2012 R2   
+    - Windows Server 2008 R2 to Windows Server 2012 R2  
 
 To upgrade a server, use the upgrade procedures provided by the OS you're upgrading to. See the following articles:  
 
-- [Windows Server Upgrade Center](http://aka.ms/upgradecenter)  
+- [Windows Server Upgrade Center](https://aka.ms/upgradecenter)  
 
 - [Upgrade and conversion options for Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths)  
 
-- [Upgrade Options for Windows Server 2012 R2](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11))   
-
+- [Upgrade Options for Windows Server 2012 R2](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11))  
 
 ### <a name="bkmk_2016-2019"></a> Upgrade to Windows Server 2016 or 2019
 
@@ -62,13 +60,18 @@ Use the steps in this section for any of the following upgrade scenarios:
 
 - Upgrade either Windows Server 2012 or Windows Server 2012 R2 to Windows Server 2016  
 
+#### Before upgrade
 
-#### Before upgrade  
 - (Windows Server 2012 or Windows Server 2012 R2): Remove the System Center Endpoint Protection (SCEP) client. Windows Server now has Windows Defender built in, which replaces the SCEP client. The presence of the SCEP client can prevent an upgrade to Windows Server.  
 
 - Remove the WSUS role from the server if it's installed. You may keep the SUSDB and reattach it once WSUS is reinstalled.  
 
-#### After upgrade   
+- If you're upgrading the OS of the site server, make sure [file-based replication](/sccm/core/plan-design/hierarchy/file-based-replication) is healthy for the site. Check all inboxes for a backlog on both sending and receiving sites. If there are lots of stuck or pending replication jobs, wait until they clear out.<!-- SCCMDocs#1792 -->
+    - On the sending site, review **sender.log**.
+    - On the receiving site, review **despooler log**.
+
+#### After upgrade
+
 - Make sure Windows Defender is enabled, set for automatic start, and running.  
 
 - Make sure the following Configuration Manager services are running:  
@@ -93,7 +96,8 @@ Use the steps in this section for any of the following upgrade scenarios:
 
 - If you're upgrading the primary site server, then [run a site reset](/sccm/core/servers/manage/modify-your-infrastructure#bkmk_reset).  
 
-#### Known issue for remote Configuration Manager consoles   
+#### Known issue for remote Configuration Manager consoles
+
 After you upgrade the site server, or an instance of the SMS Provider, you can't connect with the Configuration Manager console. To work around this problem, manually restore permissions for the **SMS Admins** group in WMI. Permissions must be set on the site server, and on each remote server that hosts an instance of the SMS Provider:
 
 1. On the applicable servers, open the Microsoft Management Console (MMC) and add the snap-in for  **WMI Control**, and then select **Local computer**.  
@@ -118,23 +122,28 @@ After you upgrade the site server, or an instance of the SMS Provider, you can't
 
 5. Save the permissions to restore access for the Configuration Manager console.  
 
-
 #### Known issue for remote site systems
-After you upgrade a server that hosts a site system role, the value `Software\Microsoft\SMS` may be missing from the following registry key: `HKLM\SYSTEM\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths` 
+
+After you upgrade a server that hosts a site system role, the value `Software\Microsoft\SMS` may be missing from the following registry key: `HKLM\SYSTEM\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths`
 
 If this value is missing after you upgrade Windows on the server, manually add it. Otherwise site system roles can have issues uploading files to the site server inboxes.
-
 
 ### <a name="bkmk_2012r2"></a> Upgrade to Windows Server 2012 R2
 
 When you upgrade from either Windows Server 2008 R2 or Windows Server 2012 to Windows Server 2012 R2, the following conditions apply:
 
-#### Before upgrade  
+#### Before upgrade
+
 - On Windows Server 2012: Remove the WSUS role from the server if it's installed. You may keep the SUSDB and reattach it once WSUS is reinstalled.  
 
 - On Windows Server 2008 R2: Before you upgrade to Windows Server 2012 R2, you must uninstall WSUS 3.2 from the server. You may keep the SUSDB and reattach it once WSUS is reinstalled. For more information, see [Windows Server Update Services Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality).  
 
-#### After upgrade  
+- If you're upgrading the OS of the site server, make sure [file-based replication](/sccm/core/plan-design/hierarchy/file-based-replication) is healthy for the site. Check all inboxes for a backlog on both sending and receiving sites. If there are lots of stuck or pending replication jobs, wait until they clear out.<!-- SCCMDocs#1792 -->
+    - On the sending site, review **sender.log**.
+    - On the receiving site, review **despooler log**.
+
+#### After upgrade
+
 - The upgrade process disables the Windows Deployment Services. Make sure this service is started and running for the following site system roles:  
 
     - Site server  
@@ -159,7 +168,6 @@ When you upgrade from either Windows Server 2008 R2 or Windows Server 2012 to Wi
 
     After restoring any missing prerequisites, restart the server one more time to make sure services are started and operational.  
 
-
 ### Unsupported upgrade scenarios
 
 The following Windows Server upgrade scenarios are commonly asked about, but not supported by Configuration Manager:  
@@ -169,8 +177,7 @@ The following Windows Server upgrade scenarios are commonly asked about, but not
 - Windows Server 2008 R2 to Windows Server 2012  
 
 
-
-##  <a name="BKMK_SupConfigUpgradeClient"></a> Upgrade the OS of clients  
+## <a name="BKMK_SupConfigUpgradeClient"></a> Upgrade the OS of clients  
 
 Configuration Manager supports an in-place upgrade of the OS for Configuration Manager clients in the following situations:  
 
@@ -181,22 +188,19 @@ Configuration Manager supports an in-place upgrade of the OS for Configuration M
 - Build-to-build servicing upgrades of Windows 10. For more information, see [Manage Windows as a service](/sccm/osd/deploy-use/manage-windows-as-a-service).  
 
 
+## <a name="BKMK_SupConfigUpgradeDBSrv"></a> Upgrade SQL Server  
 
-##  <a name="BKMK_SupConfigUpgradeDBSrv"></a> Upgrade SQL Server  
-
-Configuration Manager supports an in-place upgrade of SQL Server on the site database server. 
+Configuration Manager supports an in-place upgrade of SQL Server on the site database server.
 
 For information about the versions of SQL Server that Configuration Manager supports, see [Support for SQL Server versions](/sccm/core/plan-design/configs/support-for-sql-server-versions).  
 
-
-### Upgrade the service pack version of SQL Server    
+### Upgrade the service pack version of SQL Server
 
 If Configuration Manager still supports the resulting SQL Server service pack level, it supports the in-place upgrade of SQL Server to a later service pack.
 
 When you have more than one Configuration Manager site in a hierarchy, each site can run a different service pack version of SQL Server. There's no limitation to the order in which sites upgrade the service pack version of SQL Server.
 
-
-### Upgrade to a new version of SQL Server   
+### Upgrade to a new version of SQL Server
 
 Configuration Manager supports the in-place upgrade of SQL Server to the following versions:
 
@@ -216,8 +220,7 @@ When you upgrade the version of SQL Server that hosts the site database, you mus
 
 3. Upgrade parent primary sites last. These sites include both child primary sites that report to a central administration site, and stand-alone primary sites that are the top-level site of a hierarchy.  
 
- 
-### SQL Server cardinality estimation level   
+### SQL Server cardinality estimation level
 
 When you upgrade a site database from an earlier version of SQL Server, the database keeps its existing SQL cardinality estimation level, if it's at the minimum allowed for that instance of SQL Server. Upgrading SQL Server with a database at a compatibility level lower than the allowed level automatically sets the database to the lowest compatibility level allowed by SQL Server.
 
@@ -230,12 +233,12 @@ The following table identifies the recommended compatibility levels for Configur
 | SQL Server 2014 | 120, 110      | 110 |
 
 To identify the SQL Server cardinality estimation compatibility level in use for your site database, run the following SQL query on the site database server:  
+
 ```SQL
 SELECT name, compatibility_level FROM sys.databases
 ```
 
 For more information on SQL CE compatibility levels and how to set them, see [ALTER DATABASE Compatibility Level (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017).
-
 
 For more information about upgrading SQL Server, see the following SQL Server articles:  
 
@@ -244,8 +247,6 @@ For more information about upgrading SQL Server, see the following SQL Server ar
 - [Upgrade to SQL Server 2016](https://docs.microsoft.com/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2016)  
 
 - [Upgrade to SQL Server 2014](https://docs.microsoft.com/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2014)  
-
-
 
 ### To upgrade SQL Server on the site database server  
 

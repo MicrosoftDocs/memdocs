@@ -21,7 +21,7 @@ System Center Configuration Manager device management enables mobile device soft
 -   [How to Create an Advertisement](../../develop/core/servers/configure/how-to-create-an-advertisement.md)  
 
 > [!IMPORTANT]
->  This topic only applies to the Mobile Device Legacy Client. For addition information on the Mobile Device Legacy Client platforms, see the Mobile Device Legacy Client section of the [Supported Configurations for Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=272885).  
+>  This topic only applies to the Mobile Device Legacy Client. For addition information on the Mobile Device Legacy Client platforms, see the Mobile Device Legacy Client section of the [Supported Configurations for Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=272885).  
 
 ## Packages  
  Packages for mobile devices in System Center Configuration Manager generally represent a software application to be installed on a mobile device, but they might also contain individual files, updates, or even an individual command.  
@@ -45,10 +45,7 @@ System Center Configuration Manager device management enables mobile device soft
 ### Advertisements for Software Distribution Packages  
  Advertisements for mobile devices are identical to software distribution packages for computer clients except that they target mobile devices and contain content that is appropriate for mobile devices.  
 
-## See Also  
- [Configuration Manager SDK](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Mobile Device Management](../../develop/mdm/mobile-device-management.md)   
- [Configuration Manager Software Distribution](../../develop/core/servers/configure/software-distribution.md)   
- [Software Distribution Packages](../../develop/core/servers/configure/software-distribution-packages.md)   
- [Software Distribution Programs](../../develop/core/servers/configure/software-distribution-programs.md)   
- [Software Distribution Advertisements](../../develop/core/servers/configure/software-distribution-advertisements.md)
+## See also
+
+- [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
+- [About deployments](/sccm/develop/core/servers/configure/about-software-distribution-deployments)

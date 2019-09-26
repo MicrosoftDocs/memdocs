@@ -43,7 +43,7 @@ When you migrate data from a source site to a destination site, you lose any aud
 
  For more information about security and privacy information, see one of the following topics:  
 
--   For more information about the privacy information for Configuration Manager 2007, see [Security and Privacy for Configuration Manager 2007](http://go.microsoft.com/fwlink/p/?LinkId=216450) in the Configuration Manager 2007 documentation library.  
+-   For more information about the privacy information for Configuration Manager 2007, see [Security and Privacy for Configuration Manager 2007](https://go.microsoft.com/fwlink/p/?LinkId=216450) in the Configuration Manager 2007 documentation library.  
 
 -   For more information about the privacy information for System Center 2012 Configuration Manager, see  [Security and Privacy for System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg682033.aspx) in the System Center 2012 Configuration Manager documentation library.  
 

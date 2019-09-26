@@ -1,8 +1,8 @@
 ---
-title: "Server Runtime Requirements"
-titleSuffix: "Configuration Manager"
-ms.date: "3/14/2017"
-ms.prod: "configuration-manager"
+title: Server Runtime Requirements
+titleSuffix: Configuration Manager
+ms.date: 03/14/2017
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: 567e9945-ad60-4d10-8f67-edc4b31ee914
@@ -33,7 +33,7 @@ Microsoft System Center Configuration Manager server applications that are devel
 
 - .NET Framework 4.0  
 
-  For more information, see [Configuration Manager Console Extension](../../../develop/core/servers/console/console-extension.md)  
+  For more information, see [About console extensions](/sccm/develop/core/servers/console/about-configuration-manager-console-extension).  
 
 ## VBScript  
 
@@ -50,6 +50,6 @@ Microsoft System Center Configuration Manager server applications that are devel
 >  For more information about general System Center Configuration Manager requirements, see [Supported configurations for System Center Configuration Manager](https://docs.microsoft.com/sccm/core/plan-design/configs/supported-configurations).  
 
 ## See Also  
- [Configuration Manager Console Extension](../../../develop/core/servers/console/console-extension.md)   
+[About console extensions](/sccm/develop/core/servers/console/about-configuration-manager-console-extension)
  [Configuration Manager Client Development Requirements](../../../develop/core/reqs/client-development-requirements.md)   
  [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md)

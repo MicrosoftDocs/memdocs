@@ -43,7 +43,6 @@ Class SMS_ConfigurationItemLatestBaseClass : SMS_BaseClass
     Boolean IsExpired;  
     Boolean IsHidden;  
     Boolean IsLatest;  
-    Boolean IsQuarantined;  
     Boolean IsSuperseded;  
     Boolean IsUserDefined;  
     String LastModifiedBy;  
@@ -188,7 +187,7 @@ Class SMS_ConfigurationItemLatestBaseClass : SMS_BaseClass
 
  Qualifiers: [read]  
 
- Date and time when the Network Access Protection (NAP) compliance policy for the configuration item becomes effective.  
+ Date and time when the <!-- Network Access Protection (NAP)  -->compliance policy for the configuration item becomes effective.  
 
  `EULAAccepted`  
  Data type: `UInt32`  
@@ -301,15 +300,6 @@ Class SMS_ConfigurationItemLatestBaseClass : SMS_BaseClass
  Qualifiers: [read]  
 
  `true` if the configuration item is the latest.  
-
- `IsQuarantined`  
- Data type: `Boolean`  
-
- Access type: Read-only  
-
- Qualifiers: [read]  
-
- `true` if the configuration item is used in NAP policy. The default value is `false`. This property only applies to software update configuration items. See [SMS_SoftwareUpdate Server WMI Class](../../../develop/reference/sum/sms_softwareupdate-server-wmi-class.md).  
 
  `IsSuperseded`  
  Data type: `Boolean`  

@@ -388,7 +388,7 @@ Example: **CCMSetup.exe  CCMALLOWSILENTREBOOT**
 
 ### CCMFIRSTCERT
 
- If set to 1, this property specifies that the client should select the PKI certificate with the longest validity period. This setting might be required if you're using Network Access Protection with IPsec enforcement.  
+ If set to 1, this property specifies that the client should select the PKI certificate with the longest validity period.  
 
  Example: `CCMSetup.exe /UsePKICert CCMFIRSTCERT=1`  
 
@@ -482,7 +482,7 @@ Example: `CCMSetup.exe DISABLECACHEOPT=TRUE`
 
 Specifies the fallback status point that receives and processes state messages sent by Configuration Manager client computers.  
 
-For more information about the fallback status point, see [Determine if you need a fallback status point](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point).  
+For more information about the fallback status point, see [Determine if you need a fallback status point](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#fallback-status-point).  
 
 Example: `CCMSetup.exe FSP=SMSFP01`  
 

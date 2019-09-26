@@ -1,8 +1,8 @@
 ---
-title: "Manage clients"
-titleSuffix: "Configuration Manager"
-description: "Learn how to manage clients in System Center Configuration Manager."
-ms.date: 12/21/2017
+title: Manage clients
+titleSuffix: Configuration Manager
+description: Learn how to manage clients in Configuration Manager.
+ms.date: 09/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -12,222 +12,261 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ---
-# How to manage clients in System Center Configuration Manager
+
+# How to manage clients in Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-When the Configuration Manager client installs on a device and successfully assigns to a site, you see the device in the **Assets and Compliance** workspace in the **Devices** node, and in one or more collections in the **Device Collections** node. When you select the device or a collection, you can perform management operations. However, there are other ways to manage the client, which might involve other workspaces in the console, or tasks outside of the console.  
+When the Configuration Manager client installs on a device and successfully assigns to a site, you see the device in the **Assets and Compliance** workspace in the **Devices** node, and in one or more collections in the **Device Collections** node. Select the device or a collection, and then run management operations. However, there are other ways to manage the client, which might involve other workspaces in the console, or tasks outside of the console.  
 
 > [!NOTE]  
->  If the Configuration Manager client is installed but hasn't yet successfully assigned to a site, it might not display in the console. After the client assigns to a site, update collection membership and refresh the console view.  
->   
->  Additionally, a device can also display in the console when the Configuration Manager client is not installed. This behavior happens if the device is discovered but the client is not installed and assigned. 
+> If you install the Configuration Manager client, but it hasn't yet successfully assigned to a site, it might not display in the console. After the client assigns to a site, update collection membership, and then refresh the console view.  
 >
-> Mobile devices managed by using the Exchange Server connector and devices enrolled to Microsoft Intune do not install the Configuration Manager client.  
->   
->  Use the **Client** column in the Configuration Manager console to determine whether the client is installed so that you can manage it from the console.  
+> A device can also display in the console when the Configuration Manager client isn't installed. This behavior happens if the site discovers a device but the client isn't installed and assigned.
+>
+> Mobile devices managed with the [Exchange Server connector](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync) or [on-premises MDM](/sccm/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure) don't install the Configuration Manager client.  
+>
+> To manage a device from the console, use the **Client** column in the **Devices** node to determine whether the client is installed.  
 
-##  <a name="BKMK_ManagingClients_DevicesNode"></a> Manage Clients from the Devices Node  
+## <a name="BKMK_ManagingClients_DevicesNode"></a> Manage clients from the **Devices** node  
 
 Depending on the device type, some of these options might not be available.  
 
-1. In the Configuration Manager console, choose **Assets and Compliance** >  **Devices**.  
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select the  **Devices** node.  
 
-2. Select one or more devices, and then select one of these client management tasks from the ribbon, or by right-clicking the device:  
+2. Select one or more devices, and then select one of these client management tasks from the ribbon. You can also right-click the device.)  
 
-   - **Manage user device affinity information**  
+### Import user device affinity
 
-      Configure the associations between users and devices, so you can efficiently deploy software to users.  
+Configure the associations between users and devices, so you can efficiently deploy software to users.  
 
-      See [Link users and devices with user device affinity in System Center Configuration Manager](../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)  
+For more information, see [Link users and devices with user device affinity](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).
 
-   - **Add the device to a new or existing collection**  
+### Import computer information
 
-      Add the device to a collection with a direct rule.  
+Launch the **Import Computer Information Wizard** to import new computer information into the Configuration Manager database. You can import multiple computers using a file, or specify information for a single computer.
 
-   - **Install and reinstall the client by using the Client Push wizard**  
+### Add selected items
 
-      Install and reinstall the Configuration Manager client to repair or reconfigure it. This option includes site configuration settings and client.msi properties that you set for client push installation.  
+Provides the following options:
 
-     > [!TIP]  
-     >  There are many different ways to install (and reinstall) the Configuration Manager client. Although the Client Push wizard offers a convenient client installation method because you can run it from the console, this method has many dependencies and is not suitable for all environments. For more information about the dependencies, see [Prerequisites for deploying clients to Windows computers in System Center Configuration Manager](../../../core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md). For more information about the other client installation methods, see [Client installation methods in System Center Configuration Manager](../../../core/clients/deploy/plan/client-installation-methods.md).  
+- **Add selected items to existing device collection**: Opens the **Select Collection** dialog box. Select the collection to which you want to add this device. The device is included in this collection by using a **Direct** membership rule.  
 
-      See [How to Install Configuration Manager Clients by Using Client Push](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientPush).  
+- **Add selected items to new device collection**: Opens the **Create Device Collection Wizard** where you can create a new collection. The selected collection is included in this collection by using a **Direct** membership rule.  
 
-   - **Reassign Site**  
+For more information, see [How to create collections](/sccm/core/clients/manage/collections/create-collections).
 
-      Reassign one or more clients, including managed mobile devices, to another primary site in the hierarchy. Clients can be reassigned individually or can be multi-selected and reassigned in bulk to a new site.  
+### Install client
 
-   - **Remotely administer the client**  
+Opens the **Install Client Wizard**. This wizard uses client push installation to install or reinstall the Configuration Manager client on the selected device.
 
-      Run Resource Explorer to see the hardware and software inventory information from a Windows client. Remotely administer the device by using Remote Control, Remote Assistance, or Remote Desktop.  
+> [!TIP]  
+> There are many different ways to install the Configuration Manager client. Although the Client Push wizard offers a convenient client installation method from the console, this method has many dependencies and isn't suitable for all environments. For more information about the dependencies, see [Prerequisites for deploying clients to Windows computers](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers#client-push-installation). For more information about the other client installation methods, see [Client installation methods](/sccm/core/clients/deploy/plan/client-installation-methods).
 
-      See [How to use Resource Explorer to view hardware inventory](../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md) and [How to use Resource Explorer to view software inventory](../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md).  
+For more information, see [How to install Configuration Manager clients by using client push](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).
 
-      See [How to remotely administer a Windows client computer](../../../core/clients/manage/remote-control/remotely-administer-a-windows-client-computer.md).  
+### Run script
 
-   - **Approve a client**  
+Opens the **Run Script** wizard to run a PowerShell script on the selected device.
 
-      When the client communicates with site systems using HTTP and a self-signed certificate, you must approve these clients to identify them as trusted computers. By default, the site configuration automatically approves clients from the same Active Directory forest and trusted forests so you do not have to manually approve each client. However, you must manually approve workgroup computers that you trust, and any other unapproved computers that you trust.  
+For more information, see [Create and run PowerShell scripts](/sccm/apps/deploy-use/create-deploy-scripts).
 
-     > [!WARNING]  
-     >  Although some management functions might work for unapproved clients, this is an unsupported scenario for Configuration Manager.  
+### Install application
 
-      You do not have to approve clients that always communicate to site systems using HTTPS, or clients that use a PKI certificate when they communicate to site systems using HTTP. These clients establish trust by using the PKI certificates.  
+Install an application to a device in real time. This feature can help reduce the need for separate collections for every application.
 
-   - **Block or unblock a client**  
+For more information, see [Install applications for a device](/sccm/apps/deploy-use/install-app-for-device).
 
-      Block a client that you no longer trust. Blocking prevents the client from receiving policy, and prevents site systems from communicating with the client.  
+### Reassign site
 
-     > [!WARNING]  
-     >  Blocking a client only prevents communication from the client to Configuration Manager site systems and does not prevent communication to other devices. In addition, when the client communicates to site systems by using HTTP instead of HTTPS, there are some security limitations.  
+Reassign one or more clients, including managed mobile devices, to another primary site in the hierarchy. You can individually reassign clients or select more than one to reassign them in bulk.  
 
-      You can also unblock a client that is blocked. 
+### Client settings - Resultant client settings
 
-      See [Determine whether to block clients in System Center Configuration Manager](../../../core/clients/deploy/plan/determine-whether-to-block-clients.md).  
+When you deploy multiple client settings to the same device, the prioritization and combination of settings is complex. Use this option to view the resultant set of client settings deployed to this device.
 
-   - **Clear a required PXE deployment**  
+For more information, see [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings).
 
-      Redeploy required PXE deployments for the computer.  
+### Start
 
-      See [Use PXE to deploy Windows over the network with System Center Configuration Manager](../../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
+- Run **Resource Explorer** to see the hardware and software inventory information from a Windows client. For more information, see the following articles:
 
-   - **Manage the client properties**  
+  - [How to use Resource Explorer to view hardware inventory](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory)
 
-      View the discovery data and deployments targeted for the client. You can also configure variables that task sequences use to deploy an operating system to the device.  
+  - [How to use Resource Explorer to view software inventory](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory)
 
-   - **Delete the client**  
+- Remotely administer the device by using **Remote Control**, **Remote Assistance**, or **Remote Desktop Client**. For more information, see [How to remotely administer a Windows client computer](/sccm/core/clients/manage/remote-control/remotely-administer-a-windows-client-computer).
 
-     > [!WARNING]  
-     >  Do not delete a client if you want to uninstall the Configuration Manager client or remove it from a collection.  
+### Approve
 
-      The **Delete** action manually deletes the client record from the Configuration Manager database and typically, you should not use this action except in troubleshooting scenarios. If you delete the client record but the client is still installed and communicating with the site, Heartbeat Discovery recreates the client record. The client record reappears in the Configuration Manager console, although the client history and any previous associations are lost.  
+When the client communicates with site systems using HTTP and a self-signed certificate, you must approve these clients to identify them as trusted computers. By default, the site configuration automatically approves clients from the same Active Directory forest and trusted forests. This default behavior means that you don't have to manually approve each client. Manually approve workgroup computers that you trust, and any other unapproved computers that you trust.
 
-     > [!NOTE]  
-     >  When you delete a mobile device client that was enrolled by Configuration Manager, this action also revokes the PKI certificate that was issued to the mobile device and this certificate is then rejected by the management point, even if IIS does not check the CRL. Certificates on mobile device legacy clients are not revoked when you delete these clients.  
+> [!IMPORTANT]  
+> Although some management functions might work for unapproved clients, this is an unsupported scenario for Configuration Manager.  
 
-      To uninstall the client, see [Uninstall the Configuration Manager Client](#BKMK_UninstalClient).  
+You don't have to approve clients that always communicate to site systems using HTTPS, or clients that use a PKI certificate when they communicate to site systems using HTTP. These clients establish trust by using the PKI certificates.
 
-      To assign the client to a new primary site, see [How to assign clients to a site in System Center Configuration Manager](../../../core/clients/deploy/assign-clients-to-a-site.md).  
+### Block or unblock
 
-      To remove the client from a collection, reconfigure the collection properties. See [How to manage collections in System Center Configuration Manager](../../../core/clients/manage/collections/manage-collections.md).  
+Block a client that you no longer trust. Blocking prevents the client from receiving policy, and prevents site systems from communicating with the client.  
 
-   - **Wipe a mobile device**  
+> [!IMPORTANT]  
+> Blocking a client only prevents communication from the client to Configuration Manager site systems. It doesn't prevent communication to other devices. When the client communicates to site systems by using HTTP instead of HTTPS, there are some security limitations.  
 
-      You can wipe mobile devices that support the wipe command.  
+You can also unblock a client that is blocked.
 
-      This action permanently removes all data on the mobile device, including personal settings and personal data. Typically, this action resets the mobile device back to factory defaults. Wipe a mobile device when the mobile device is no longer trusted. For example, if the device is lost or stolen.  
+For more information, ee [Determine whether to block clients](/sccm/core/clients/deploy/plan/determine-whether-to-block-clients).
 
-     > [!TIP]  
-     >  Check the manufacturer's documentation for more information about how the mobile device processes a remote wipe command.  
+<!-- Change Category is a hybrid action -->
 
-      There is often a delay until the mobile device receives the wipe command:  
+### Clear required PXE deployments
 
-     - If the mobile device is enrolled by Configuration Manager or by Microsoft Intune, the client receives the command when it  downloads its client policy.  
+You can redeploy a required PXE deployment by clearing the status of the last PXE deployment assigned to a Configuration Manager collection or a computer. This action resets the status of that deployment and reinstalls the most recent required deployments.
 
-     - If the mobile device is managed by the Exchange Server connector, it receives the command when it synchronizes with Exchange.  
+For more information, see [Use PXE to deploy Windows over the network](/sccm/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network).
 
-       You can use the **Wipe Status** column to monitor when the device receives the wipe command. Until the device sends a wipe acknowledgment to Configuration Manager, you can cancel the wipe command.  
+### Client notification
 
-   - **Retire a mobile device**  
+For more information, see [Client notifications](/sccm/core/clients/manage/client-notification#client-notification).
 
-      The **Retire** option is supported only by mobile devices enrolled by Microsoft Intune or on\-premises mobile device management.  
+### Endpoint Protection
 
-      For more information, see [Help protect your data with remote wipe, remote lock, or passcode reset using System Center Configuration Manager](../../../mdm/deploy-use/wipe-lock-reset-devices.md).  
+For more information, see [Client notifications](/sccm/core/clients/manage/client-notification#endpoint-protection).
 
-   - **Change the ownership of a device**  
+### Edit primary users
 
-      If a device is not domain-joined and does not have the Configuration Manager client installed, use this option to change the ownership to **Company** or **Personal**.  
+View users of this device in the last 90 days, or specify the primary users of this device.
 
-      You can use this value in application requirements to control deployments, and to control how much inventory is collected from users' devices.  
+For more information, see [Link users and devices with user device affinity](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).
 
-     You may need to add the **Device Owner** column to the view by right-clicking any column heading and choosing it.
+### Wipe a mobile device
 
-      For more information, see [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/understand/hybrid-mobile-device-management.md).  
+You can wipe mobile devices that support the wipe command. This action permanently removes all data on the mobile device, including personal settings and personal data. Typically, this action resets the mobile device back to factory defaults. Wipe a mobile device when it's no longer trusted. For example, if the device is lost or stolen.  
 
-##  <a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> Manage clients from the Device Collections node  
+> [!TIP]  
+> Check the manufacturer's documentation for more information about how the mobile device processes a remote wipe command.  
+
+There's often a delay until the mobile device receives the wipe command:  
+
+- If the mobile device is enrolled by Configuration Manager, the client receives the command when it  downloads its client policy.
+
+- If the mobile device is managed by the Exchange Server connector, it receives the command when it synchronizes with Exchange.  
+
+To monitor when the device receives the wipe command, use the **Wipe Status** column. Until the device sends a wipe acknowledgment to Configuration Manager, you can cancel the wipe command.  
+
+### Retire a mobile device
+
+The **Retire** option is supported only by mobile devices enrolled by on-premises MDM.  
+
+For more information, see [Help protect your data with remote wipe, remote lock, or passcode reset](/sccm/mdm/deploy-use/wipe-lock-reset-devices).
+
+### Change ownership
+
+If a device isn't domain-joined and doesn't have the Configuration Manager client installed, use this option to change the ownership to **Company** or **Personal**.  
+
+You can use this value in application requirements to control deployments, and to control how much inventory is collected from users' devices.  
+
+You may need to add the **Device Owner** column to the view by right-clicking any column heading and choosing it.
+
+For more information, see [Hybrid MDM with Configuration Manager and Microsoft Intune](/sccm/mdm/understand/hybrid-mobile-device-management).
+
+### Delete
+
+> [!WARNING]  
+> Don't delete a client if you want to uninstall the Configuration Manager client or remove it from a collection.  
+
+The **Delete** action manually removes the client record from the Configuration Manager database. Only use this action to troubleshoot a problem. If you delete the object, but the client is still installed and communicating with the site, Heartbeat Discovery recreates the client record. It reappears in the Configuration Manager console, although the client history and any previous associations are lost.  
+> [!NOTE]  
+> When you delete a mobile device client that was enrolled by Configuration Manager, this action also revokes the issued PKI certificate. This certificate is then rejected by the management point, even if IIS doesn't check the certificate revocation list (CRL).
+>
+> Certificates on mobile device legacy clients are not revoked when you delete these clients.
+
+To uninstall the client, see [Uninstall the Configuration Manager client](#BKMK_UninstalClient).  
+
+To assign the client to a new primary site, see [How to assign clients to a site](/sccm/core/clients/deploy/assign-clients-to-a-site).
+
+To remove the client from a collection, reconfigure the collection properties. For more information, see [How to manage collections](/sccm/core/clients/manage/collections/manage-collections).
+
+### Refresh
+
+Refresh the console view with the latest data in the database. For example, if a device appears in the list from discovery, but doesn't show as installed. After you install the client and make sure it's assigned to the site, select **Refresh**.
+
+### Properties
+
+View the discovery data and deployments targeted for the client.
+
+You can also configure variables that task sequences use to deploy an OS to the device. For more information, se [Create task sequence variables for computers and collections](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_CreateTSVariables).
+
+
+## <a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> Manage clients from the **Device Collections** node
+
 Many of the tasks that are available for devices in the **Devices** node are also available on collections. The console automatically applies the operation to all eligible devices in the collection. This action on an entire collection generates additional network packets and increases CPU usage on the site server.  
 
-Consider the following before you perform collection-level tasks. Once started, you cannot stop the task from the console. 
+Consider the following questions before you run collection-level tasks. Once started, you can't stop the task from the console.
+
 - How many devices are in the collection?
 - Are the devices connected by low-bandwidth network connections?
 - How much time does this task need to complete for all the devices?
 
-#### To manage clients from the Device Collections node  
-
-1.  In the Configuration Manager console, choose **Assets and Compliance** > **Device Collections**.  
-
-3.  Select a collection, and then select one of the following client management tasks from the ribbon, or by right-clicking the collection. These client management tasks can *only* be performed at the collection level.  
-
-    -   **Scan computers for malware and download antimalware definition files.**  
-
-         See [Endpoint Protection in System Center Configuration Manager](../../../protect/deploy-use/endpoint-protection.md).  
-
-    -   **Deploy software, configuration baselines, and task sequences.**  
-
-         See:  
-
-        -   [Deploy software updates in System Center Configuration Manager](../../../sum/deploy-use/deploy-software-updates.md)  
-
-        -   [Plan for and configure compliance settings in System Center Configuration Manager](../../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)  
-
-    -   **Configure power management settings.**  
-
-         See [How to create and apply power plans in System Center Configuration Manager](../../../core/clients/manage/power/create-and-apply-power-plans.md). Power plans can only be used with computers that run Windows.  
-
-    -   **Notify computers to download policy as soon as possible.**  
-
-         Use client notification to notify the selected Windows clients to download computer policy as soon as possible outside the client policy polling interval.  
-
-         Client notification tasks are displayed in the **Client Operations** node in the **Monitoring** workspace.  
+For more information, see [How to manage collections](/sccm/core/clients/manage/collections/manage-collections).
 
 
 ## Restart clients
-Beginning with version 1710, you can use the Configuration Manager console to identify clients that require a restart. Then use a client notification action to restart them.
+
+Use the Configuration Manager console to identify clients that require a restart. Then use a client notification action to restart them.
 
 > [!Tip]
-> You must also upgrade clients to version 1710 for this capability to function. We recommend that you enable automatic client upgrade to keep your clients up to date with minimal administrative overhead. For more information, see [Use automatic client upgrade](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#use-automatic-client-upgrade).
+> Enable automatic client upgrade to keep your clients up-to-date with less effort. For more information, see [About automatic client upgrade](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#bkmk_autoupdate).
 
-To identify devices that are pending a restart, go to the **Assets and Compliance** workspace in the Configuration Manager console and select the **Devices** node. Then view the status for each device in the details pane in a new column named **Pending Restart**. Each device has one or more of the following values: 
-- **No**: there is no pending restart
+To identify devices that are pending a restart, go to the **Assets and Compliance** workspace in the Configuration Manager console and select the **Devices** node. Then view the status for each device in the details pane in a new column named **Pending Restart**. Each device has one or more of the following values:
+
+- **No**: there's no pending restart
 - **Configuration Manager**: this value comes from the client reboot coordinator component (RebootCoordinator.log)
 - **File rename**: this value comes from Windows reporting a pending file rename operation (HKLM\SYSTEM\CurrentControlSet\Control\Session Manager, PendingFileRenameOperations)
 - **Windows Update**: this value comes from the Windows Update Agent reporting a pending restart is required for one or more updates (HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired)
 - **Add or remove feature**: this value comes from the Windows component-based servicing reporting the addition or removal of a Windows feature requires a restart (HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Reboot Pending)
 
-**To create the client notification to restart a device:**
-1. Locate the device you want to restart within a collection in the **Device Collections** node of the console.
-2. Right-click on the device, select **Client Notification**, and then select **Restart**. An information window opens about the restart. Click **OK** to confirm the restart request.
+### Create the client notification to restart a device
+
+1. Select the device you want to restart within a collection in the **Device Collections** node of the console.
+2. In the ribbon, select **Client Notification**, and then select **Restart**. An information window opens about the restart. Select **OK** to confirm the restart request.
 
 When the notification is received by a client, a **Software Center** notification window opens to inform the user about the restart. By default, the restart occurs after 90 minutes. You can modify the restart time by configuring [client settings](/sccm/core/clients/deploy/configure-client-settings). Settings for the restart behavior are found on the [Computer restart](/sccm/core/clients/deploy/about-client-settings#computer-restart) tab of the default settings.
 
 
-##  <a name="BKMK_ClientCache"></a> Configure the Client Cache for Configuration Manager Clients  
+## <a name="BKMK_ClientCache"></a> Configure the client cache
+
 The client cache stores temporary files for when clients install applications and programs. Software updates also use the client cache, but always attempt to download to the cache regardless of the size setting. Configure the cache settings, such as size and location, when you manually install the client, when you use client push installation, or after installation.
 
-Beginning with Configuration Manager version 1606, you can specify the cache folder size using client settings in the Configuration Manager console.   
+You can specify the cache folder size using client settings in the Configuration Manager console. For more information, see [Client cache settings](/sccm/core/clients/deploy/about-client-settings#client-cache-settings).
 
- The default location for the Configuration Manager client cache is %*windir*%\ccmcache and the default disk space is 5120 MB.  
+The default location for the Configuration Manager client cache is `%windir%\ccmcache` and the default disk space is 5120 MB.  
 
 > [!IMPORTANT]  
->  Do not encrypt the folder used for the client cache. Configuration Manager cannot download content to an encrypted folder.  
+> Don't encrypt the folder used for the client cache. Configuration Manager can't download content to an encrypted folder.  
 
-### About client cache  
+### About the client cache  
 
-The Configuration Manager client downloads the content for required software soon after it receives the deployment but waits to run it until the deployment scheduled time. At the scheduled time, the Configuration Manager client checks to see whether the content is available in the cache. If content is in the cache and it is the correct version, the client uses the cached content. When the required version of the content changes, or if the client deletes the content to make room for another package, the client downloads the content to the cache again.  
+The Configuration Manager client downloads the content for required software soon after it receives the deployment but waits to run it until the deployment scheduled time. At the scheduled time, the Configuration Manager client checks to see whether the content is available in the cache. If content is in the cache and it's the correct version, the client uses the cached content. When the required version of the content changes, or if the client deletes the content to make room for another package, the client downloads the content to the cache again.  
 
 If the client attempts to download content for a program or application that is greater than the size of the cache, the deployment fails because of insufficient cache size. The client generates status message 10050 for insufficient cache size. If you increase the cache size later, the result is:  
 
--   For a required program: The client does not automatically retry to download the content. Redeploy the package and program to the client.  
--   For a required application: The client automatically retries to download the content when it downloads its client policy.  
+- For a required program: The client doesn't automatically retry to download the content. Redeploy the package and program to the client.  
+- For a required application: The client automatically retries to download the content when it downloads its client policy.  
 
-If the client attempts to download a package that is less than the size of the cache but the cache is full, all required deployments keep retrying until the cache space is available, the download times out, or the retry count reaches its limit. If the cache size is increased later, the Configuration Manager client attempts to download the package again during the next retry interval. The client tries to download the content every four hours until it has tried 18 times.  
+If the client attempts to download a package that's less than the size of the cache, but the cache is full, all *required* deployments keep retrying until:
 
-Cached content is not automatically deleted but remains in the cache for at least one day after the client used that content. If you configure the package properties with the option to persist content in the client cache, the client does not automatically delete the package content from the cache. If the cache space is used by packages downloaded within the last 24 hours and the client must download new packages, you can either increase the cache size or choose the option to delete persisted cache content.  
+- The cache space is available
+- The download times out
+- The retry count reaches its limit
 
- Use the following procedures to configure the client cache during manual client installation, or after the client is installed.  
+If you later increase the cache size, the client attempts to download the package again during the next retry interval. The client tries to download the content every four hours until it tries 18 times.  
 
-### To configure the client cache when you install clients by using manual client installation  
+Cached content isn't automatically deleted. It remains in the cache for at least one day after the client uses that content. If you configure the package properties with the option to persist content in the client cache, the client doesn't automatically delete it. If the cache space is used by packages that were downloaded within the last 24 hours, and the client must download new packages, either increase the cache size or choose the option to delete persisted cache content.  
+
+Use the following procedures to configure the client cache during manual client installation, or after the client is installed.  
+
+### Configure the cache during manual client installation  
 
 Run the CCMSetup.exe command from the install source location and specify the following properties that you require, and separated by spaces:  
 
@@ -240,15 +279,15 @@ Run the CCMSetup.exe command from the install source location and specify the fo
   - SMSCACHESIZE  
 
     > [!NOTE]
-    > For version 1606, use the cache size settings available in **Client Settings** in the Configuration Manager console instead of SMSCACHESIZE. For more information, see [Client cache settings](../../../core/clients/deploy/about-client-settings.md#client-cache-settings).
+    > Use the cache size settings available in **Client Settings** in the Configuration Manager console instead of SMSCACHESIZE. For more information, see [Client cache settings](/sccm/core/clients/deploy/about-client-settings#client-cache-settings).
 
-For more information about how to use these command-line properties for CCMSetup.exe, see [About client installation properties](../../../core/clients/deploy/about-client-installation-properties.md).  
+For more information about how to use these command-line properties for CCMSetup.exe, see [About client installation properties](/sccm/core/clients/deploy/about-client-installation-properties).
 
-### To configure the client cache folder when you install clients by using client push installation  
+### Configure the cache during client push installation  
 
-1. In the Configuration Manager console, choose **Administration** > **Site Configuration** > **Sites**.  
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node.  
 
-2. Select the appropriate site, and on the **Home** tab, in the **Settings** group, choose **Client Installation Settings** > **Installation Properties tab**.  
+2. Select the appropriate site. On the **Home** tab of the ribbon, in the **Settings** group, select **Client Installation Settings**, and choose **Client Push Installation**. Switch to the **Installation Properties** tab.  
 
 3. Specify the following properties, separated by spaces:  
 
@@ -261,167 +300,135 @@ For more information about how to use these command-line properties for CCMSetup
    - SMSCACHESIZE  
 
      > [!NOTE]
-     > For version 1606, use the cache size settings available in **Client Settings** in the Configuration Manager console instead of SMSCACHESIZE. For more information, see [Client cache settings](../../../core/clients/deploy/about-client-settings.md#client-cache-settings).
+     > Use the cache size settings available in **Client Settings** in the Configuration Manager console instead of SMSCACHESIZE. For more information, see [Client cache settings](/sccm/core/clients/deploy/about-client-settings#client-cache-settings).
 
-     For more information about how to use these command-line properties for CCMSetup.exe, see [About client installation properties](../../../core/clients/deploy/about-client-installation-properties.md).  
+     For more information about how to use these command-line properties for CCMSetup.exe, see [About client installation properties](/sccm/core/clients/deploy/about-client-installation-properties).  
 
-### To configure the client cache folder on the client computer  
+### Configure the cache on the client computer  
 
-1.  On the client computer, navigate to **Configuration Manager** in Control Panel, and double-click to open the properties.  
+1. On the client computer, open the **Configuration Manager** control panel.  
 
-2.  On the **Cache** tab set the space and location properties. The default location is *%windir%*\ccmcache.  
+2. Switch to the **Cache** tab. Set the space and location properties. The default location is `%windir%\ccmcache`.  
 
-3.  To delete the files in the cache folder, choose **Delete Files**.  
+3. To delete the files in the cache folder, choose **Delete Files**.  
 
-### To configure client cache size in Client Settings
+### Configure client cache size in Client Settings
 
-Adjust the size of the client cache without having to reinstall the client by configuring the cache size in the Configuration Manager console using Client Settings.  
-
-1. In the Configuration Manager console, go to **Administration** > **Client Settings**.
-
-2. Double-click **Default Client Settings**.
-   You can also create custom client settings to apply the cache size more selectively. For more information on default and customer client settings, see [How to configure client settings in System Center Configuration Manager](../../../core/clients/deploy/configure-client-settings.md).
-
-   3. Choose **Client Cache Settings** and choose **Yes** for **Configure client cache size**, then use either the **MB** or **percentage of disk settings**. Cache is adjusted to whichever size is less.
-
-      The Configuration Manager client will configure the cache size with these settings when the next client policy is downloaded.
+Adjust the size of the client cache without having to reinstall the client. Use the cache size settings available in **Client Settings** in the Configuration Manager console. For more information, see [Client cache settings](/sccm/core/clients/deploy/about-client-settings#client-cache-settings).
 
 
+## <a name="BKMK_UninstalClient"></a> Uninstall the client
 
-##  <a name="BKMK_UninstalClient"></a> Uninstall the Configuration Manager Client  
- You can uninstall the Windows Configuration Manager client software from a computer by using **CCMSetup.exe** with the **/Uninstall** property. Run CCMSetup.exe on an individual computer from the command prompt or deploy a package and program to uninstall the client for a collection of computers.  
-
-> [!WARNING]  
->  You cannot uninstall the Configuration Manager client from a mobile device. If you must remove the Configuration Manager client from a mobile device, you must wipe the device, which deletes all data on the mobile device.  
-
-#### To uninstall the Configuration Manager client from the command prompt  
-
-1.  Open a Windows command prompt and change the folder to the location in which CCMSetup.exe is located.  
-
-2.  Type **CCMSetup.exe /uninstall**, and then press **Enter.**  
+You can uninstall the Configuration Manager client software from a computer by using **CCMSetup.exe** with the **/Uninstall** property. Run CCMSetup.exe on an individual computer from the command prompt, or deploy a package to uninstall the client for a collection of computers.  
 
 > [!NOTE]  
->  The uninstall process displays no results on the screen. To verify that client uninstallation has succeeded, examine the log file **CCMSetup.log** in the folder *%windir%\ccmsetup\logs* on the client computer.  
+> You can't uninstall the Configuration Manager client from a mobile device. If you must remove the Configuration Manager client from a mobile device, you must wipe the device, which deletes all data on the mobile device.  
 
-> [!TIP]
+1. Open a Windows command prompt as an administrator. Change the folder to the location in which CCMSetup.exe is located, for example: `cd %windir%\ccmsetup`
+
+2. Run the following command: `CCMSetup.exe /uninstall`
+
+> [!TIP]  
+> The uninstall process displays no results on the screen. To verify that the client successfully uninstalls, see the following log file: `%windir%\ccmsetup\logs\CCMSetup.log`  
+>
 > If you need to wait for the uninstall process to complete before doing something else, run `Wait-Process CCMSetup` in PowerShell. This command can pause a script until the CCMSetup process completes.
 
-##  <a name="BKMK_ConflictingRecords"></a> Manage Conflicting Records for Configuration Manager Clients  
- Configuration Manager uses the hardware identifier to attempt to identify clients that might be duplicates and alert you to the conflicting records. For example, if you reinstall a computer, the hardware identifier would be the same but the GUID used by Configuration Manager might be changed.  
 
- Configuration Manager automatically resolves conflicts by using Windows authentication of the computer account or a PKI certificate from a trusted source. However, when Configuration Manager cannot resolve the conflict of duplicate hardware identifiers, a hierarchy setting determines whether to merge the records automatically, or allows you to determine the behavior. If you decide to manually manage duplicate records, you must manually resolve the conflicting records in the Configuration Manager console.  
+## <a name="BKMK_ConflictingRecords"></a> Manage conflicting records
 
+Configuration Manager uses the hardware identifier to attempt to identify clients that might be duplicates and alert you to the conflicting records. For example, if you reinstall a computer, the hardware identifier would be the same but the GUID used by Configuration Manager might be changed.  
 
-#### To change the hierarchy setting for managing conflicting records  
+Configuration Manager automatically resolves conflicts by using Windows authentication of the computer account or a PKI certificate from a trusted source. When Configuration Manager can't resolve the conflict of duplicate hardware identifiers, a hierarchy setting determines the behavior.
 
-1.  In the Configuration Manager console, choose **Administration** > **Site Configuration** > **Sites** > **Hierarchy Settings**
-2.  On the **Client Approval and Conflicting Records** tab, choose either **Automatically resolve conflicting records**, or  **Manually resolve conflicting records**.  
+### Change the hierarchy setting for managing conflicting records  
 
-#### To manually resolve conflicting records  
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node.
 
-1.  In the Configuration Manager console, choose **Monitoring** > **System Status** > **Conflicting Records**.  
+1. In the ribbon, select **Hierarchy Settings**.
 
-3.  Select one or more conflicting records, and then choose **Conflicting Record**.  
+1. Switch to the **Client Approval and Conflicting Records** tab, and select one of the following options:
 
-4.  Select one of the following options:  
+    - **Automatically resolve conflicting records**
+    - **Manually resolve conflicting records**
 
-    -   **Merge** to combine the newly detected record with the existing client record.  
+### Manually resolve conflicting records  
 
-    -   **New** to create a new record for the conflicting client record.  
+1. In the Configuration Manager console, go to the **Monitoring** workspace, expand **System Status**, and select the **Conflicting Records** node.  
 
-    -   **Block** to create a new record for the conflicting client record, but mark it as blocked.  
+1. Select one or more conflicting records, and then choose **Conflicting Record**.  
+
+1. Select one of the following options:  
+
+    - **Merge**: Combine the newly detected record with the existing client record.  
+
+    - **New**: Create a new record for the conflicting client record.  
+
+    - **Block**: Create a new record for the conflicting client record, but mark it as blocked.  
+
 
 ## Manage duplicate hardware identifiers
-Providing a list of hardware identifiers that Configuration Manager ignores for the purpose of PXE boot and client registration, helps to address two common issues.
 
-1. Many new devices, like the Surface Pro 3, do not include an onboard Ethernet port. Technicians use a USB-to-Ethernet adapter to establish a wired connection for purposes of operating system deployment. However, these adapters are often shared due to cost and general usability. Because the MAC address of this adapter is used to identify the device, reusing the adapter becomes problematic without additional administrator actions between each deployment. To reuse the adapter in this scenario, exclude its MAC address.
+You can provide a list of hardware identifiers that Configuration Manager ignores for PXE boot and client registration. This list helps to address two common issues:
+
+1. Many new devices don't include an onboard Ethernet port. Technicians use a USB-to-Ethernet adapter to establish a wired connection for purposes of OS deployment. These adapters are often shared because of cost and general usability. The site uses the MAC address of this adapter to identify the device. So reusing the adapter becomes problematic without additional administrator actions between each deployment. To reuse the adapter in this scenario, exclude its MAC address.
+
 2. While the SMBIOS attribute should be unique, some specialty hardware devices have duplicate identifiers. Exclude this duplicate identifier and rely on the unique MAC address of each device.
 
-#### To add hardware identifiers for Configuration Manager to ignore  
-1. In the Configuration Manager console, go to **Administration** > **Overview** > **Site Configuration** > **Sites**.
-2. On the **Home** tab, in the **Sites** group, choose **Hierarchy Settings**.
-3. On the **Client Approval and Conflicting Records** tab, choose **Add** in the **Duplicate hardware identifiers** section to add new hardware identifiers.
+Use the following process to add hardware identifiers for Configuration Manager to ignore:
 
-##  <a name="BKMK_PolicyRetrieval"></a> Initiate Policy Retrieval for a Configuration Manager Client  
- A Windows Configuration Manager client downloads its client policy on a schedule that you configure as a client setting. However, there might be occasions when you want to initiate on-demand policy retrieval from the client, for example, for troubleshooting or testing.  
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node.
 
-You can initiate policy retrieval using:
+2. On the **Home** tab of the ribbon, in the **Sites** group, choose **Hierarchy Settings**.
+
+3. Switch to the **Client Approval and Conflicting Records** tab. To add new hardware identifiers, choose **Add** in the **Duplicate hardware identifiers** section.
 
 
-- [Client notification](#initiate-client-policy-retrieval-using-client-notification)
-- [The **Actions** tab on the client](#manually-initiate-client-policy-retrieval-on-the-actions-tab-of-the-configuration-manager-client)
-- [A script](#manually-initiate-client-policy-retrieval-by-script)
+## <a name="BKMK_PolicyRetrieval"></a> Start policy retrieval
 
-> [!NOTE]  
->   
->  For information about policy retrieval for clients that run Linux and UNIX, see [Computer policy for Linux and UNIX servers](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_PolicyforLnU).  
+A Configuration Manager client downloads its client policy on a schedule that you configure as a client setting. You can also start on-demand policy retrieval from the client. For example, for troubleshooting or testing situations.  
 
-#### Initiate client policy retrieval using client notification  
+- [Client notification](#bkmk_policy-notify)
+- [The client control panel](#bkmk_policy-manual)
+- [Support Center](#bkmk_policy-support)
+- [A script](#bkmk_policy-script)
 
-1.  In the Configuration Manager console, choose **Assets and Compliance** > **Device Collections**.  
+### <a name="bkmk_policy-notify"></a> Start client policy retrieval with client notification  
 
-3.  Select the device collection containing the computers that you want to download policy. On the **Home** tab, in the **Collections** group, choose **Client Notification** > **Download Computer Policy**.  
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select **Devices**.  
+
+1. Select the device that you want to download policy. On the **Home** tab of the ribbon, in the **Device** group, select **Client Notification**, and then choose **Download Computer Policy**.  
 
     > [!NOTE]  
-    >  You can also use client notification to initiate policy retrieval for one of more selected devices that are displayed in a temporary collection node under the **Devices** node.  
+    > You can also use client notification to start policy retrieval for all devices in a collection.  
 
-#### Manually initiate client policy retrieval on the Actions tab of the Configuration Manager client  
+### <a name="bkmk_policy-manual"></a> Start client policy retrieval from the Configuration Manager client control panel
 
-1.  Select **Configuration Manager** in the Control Panel of the computer.  
+1. Open the **Configuration Manager** control panel on the computer.  
 
-2.  On the **Actions** tab, choose **Machine Policy Retrieval & Evaluation Cycle** to initiate the computer policy, and then choose **Run Now**.  
+2. Switch to the **Actions** tab. Select **Machine Policy Retrieval & Evaluation Cycle** to start the computer policy, and then select **Run Now**.  
 
-4.  Choose **OK** to confirm the prompt.  
+3. Select **OK** to confirm the prompt.  
 
-5.  Repeat steps 3 and 4 for any other actions that you require, such as **User Policy Retrieval & Evaluation Cycle** for user client settings.  
+4. Repeat the previous steps for any other actions. For example, **User Policy Retrieval & Evaluation Cycle** for user client settings.  
 
-#### Manually initiate client policy retrieval by script  
+### <a name="bkmk_policy-support"></a> Start client policy retrieval with Support Center
 
-1.  Open a text editor, such as Notepad.  
+Use Support Center to request and view client policy. For more information, see [Support Center reference](/sccm/core/support/support-center-ui-reference#bkmk_support-policy).
 
-2.  Copy and insert the following sample Visual Basic Scripting Edition code into the file:  
+### <a name="bkmk_policy-script"></a> Start client policy retrieval by script  
 
-    ```  
-    on error resume next  
+1. Open a script editor, such as Notepad or Windows PowerShell ISE.  
 
-    dim oCPAppletMgr 'Control Applet manager object.  
-    dim oClientAction 'Individual client action.  
-    dim oClientActions 'A collection of client actions.  
+2. Copy and insert the following sample PowerShell code<!-- SCCMDocs#1591 --> into the file:  
 
-    'Get the Control Panel manager object.  
-    set  oCPAppletMgr=CreateObject("CPApplet.CPAppletMgr")  
-    if err.number <> 0 then  
-        Wscript.echo "Couldn't create control panel application manager"  
-        WScript.Quit  
-    end if  
-
-    'Get a collection of actions.  
-    set oClientActions=oCPAppletMgr.GetClientActions  
-    if err.number<>0 then  
-        wscript.echo "Couldn't get the client actions"  
-        set oCPAppletMgr=nothing  
-        WScript.Quit  
-    end if  
-
-    'Display each client action name and perform it.  
-    For Each oClientAction In oClientActions  
-
-        if oClientAction.Name = "Request & Evaluate Machine Policy" then  
-            wscript.echo "Performing action " + oClientAction.Name   
-            oClientAction.PerformAction  
-        end if  
-    next  
-
-    set oClientActions=nothing  
-    set oCPAppletMgr=nothing  
+    ```PowerShell
+    $trigger = "{00000000-0000-0000-0000-000000000021}"
+    Invoke-WmiMethod -Namespace root\ccm -Class sms_client -Name TriggerSchedule $trigger
     ```  
 
-3.  Save the file with a .vbs extension.  
+    > [!TIP]
+    > For more information about the schedule IDs, see [Message IDs](/sccm/core/support/send-schedule-tool#bkmk_sendschedule-guids).
 
-4.  On the client computer, run the file using one of the following methods:  
+3. Save the file with a .ps1 extension.  
 
-    -   Navigate to the file by using Windows Explorer, and double-click the script file.  
-
-    -   Open a command prompt, and type: **cscript &lt;path\filename.vbs>**.  
-
-5.  Choose **OK** in the **Windows Script Host** dialog box.  
+4. Run the script on the client.

@@ -2,7 +2,7 @@
 title: "Install site system roles"
 titleSuffix: "Configuration Manager"
 description: "Wizards help you add site system roles to an existing or new site system server in the site."
-ms.date: 2/7/2017
+ms.date: 02/7/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -50,7 +50,7 @@ Just prior to installing the site system role, Configuration Manager checks the 
 7.  Complete the wizard.  
 
 > [!TIP]  
->  The Windows PowerShell cmdlet, New-CMSiteSystemServer, performs the same function as this procedure. For more information, see [New-CMSiteSystemServer](http://go.microsoft.com/fwlink/p/?LinkID=271414) in the System Center 2012 Configuration Manager SP1 Cmdlet Reference documentation.  
+>  The Windows PowerShell cmdlet, New-CMSiteSystemServer, performs the same function as this procedure. For more information, see [New-CMSiteSystemServer](https://go.microsoft.com/fwlink/p/?LinkID=271414) in the System Center 2012 Configuration Manager SP1 Cmdlet Reference documentation.  
 
 ## To install site system roles on a new site system server  
 
@@ -72,4 +72,4 @@ Just prior to installing the site system role, Configuration Manager checks the 
 7.  Complete the wizard.  
 
 > [!TIP]  
->  The Windows PowerShell cmdlet, New-CMSiteSystemServer, performs the same function as this procedure. For more information, see [New-CMSiteSystemServer](http://go.microsoft.com/fwlink/p/?LinkID=271414) in the System Center 2012 Configuration Manager SP1 Cmdlet Reference documentation.  
+>  The Windows PowerShell cmdlet, New-CMSiteSystemServer, performs the same function as this procedure. For more information, see [New-CMSiteSystemServer](https://go.microsoft.com/fwlink/p/?LinkID=271414) in the System Center 2012 Configuration Manager SP1 Cmdlet Reference documentation.  

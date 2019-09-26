@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 07/26/2019
+ms.date: 08/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -86,9 +86,10 @@ Enables [peer cache](/sccm/core/plan-design/hierarchy/client-peer-cache) for Con
 ### Minimum duration before cached content can be removed (minutes)
 
 <!--4485509-->
-Starting in version 1906, specify the minimum time for the Configuration Manager client to keep cached content. This client setting controls how long the client stores content in the cache before deleting it.
+Starting in version 1906, specify the minimum time for the Configuration Manager client to keep cached content. This client setting defines the minimum amount of time Configuration Manager agent should wait before it can remove content from the cache in case more space is needed.
 
 By default this value is 1,440 minutes (24 hours).
+The maximum value for this setting is 10,080 minutes (1 week).
 
 This setting gives you greater control over the client cache on different types of devices. You might reduce the value on clients that have small hard drives and don't need to keep existing content before another deployment runs.
 
@@ -319,13 +320,15 @@ The following settings must be shorter in duration than the shortest maintenance
 
 For more information about maintenance windows, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows).
 
-- **Specify the snooze duration for computer restart countdown notifications (hours)** (Starting in version 1906)<!--3976435-->
-  - The default value is 4 hours.
+- **Specify the snooze duration for computer restart countdown notifications (minutes)** (Starting in version 1906)<!--3976435-->
+  - The default value is 240 minutes.
   - Your snooze duration value should be less than the temporary notification value minus the value for the notification the user cant dismiss.
   - For more information, see [Device restart notifications](/sccm/core/clients/deploy/device-restart-notifications).
 
 **When a deployment requires a restart, show a dialog window to the user instead of a toast notification**<!--3555947-->: Starting in version 1902, configuring this setting to **Yes** changes the user experience to be more intrusive. This setting applies to all deployments of applications, task sequences, and software updates. For more information, see [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_impact).
 
+> [!IMPORTANT]
+> In Configuration Manager 1902, under certain circumstances, the dialog box won't replace toast notifications. To resolve this issue, install the [update rollup for Configuration Manager version 1902](https://support.microsoft.com/help/4500571/update-rollup-for-configuration-manager-current-branch-1902). <!--4404715-->
 
 
 ## Delivery Optimization
@@ -854,14 +857,25 @@ Use this setting to expedite installation for required software updates. This se
 
 Use this setting to specify the period of time for the previous setting. You can enter a value from 1 to 23 hours, and from 1 to 365 days. By default, this setting is configured for seven days.  
 
-### Enable installation of Express installation files on clients
+### Allow clients to download delta content when available
 
-Set this option to **Yes** to allow clients to use express installation files. For more information, see [Manage Express installation files for Windows 10 updates](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates).
+*(Introduced in version 1902)*
+
+Set this option to **Yes** to allow clients to use delta content files. This setting allows the Windows Update Agent on the device to determine what content is needed and selectively download it.
+
+> [!NOTE]
+> This client setting replaces **Enable installation of Express installation files on clients**. Set this option to **Yes** to allow clients to use express installation files. For more information, see [Manage Express installation files for Windows 10 updates](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates).
 
 
-### Port used to download content for Express installation files
+### Port that clients use to receive requests for delta content
 
-This setting configures the local port for the HTTP listener to download express content. It's set to 8005 by default. You don't need to open this port in the client firewall.
+*(Introduced in version 1902)*
+
+This setting configures the local port for the HTTP listener to download delta content. It's set to 8005 by default. You don't need to open this port in the client firewall. 
+
+> [!NOTE]
+>This client setting replaces **Port used to download content for Express installation files**.
+
 
 ### Enable management of the Office 365 Client Agent
 

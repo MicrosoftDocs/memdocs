@@ -2,7 +2,7 @@
 title: "Configure Asset Intelligence"
 titleSuffix: "Configuration Manager"
 description: "Set up Asset Intelligence in System Center Configuration Manager."
-ms.date: 2/22/2017
+ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -134,7 +134,7 @@ In addition to downloading new Asset Intelligence catalog information, the Asset
 4.  On the **Import** page, specify whether you are importing a Microsoft Volume Licensing (MVLS) file (.xml or .csv) or a General License Statement file (.csv). For more information about creating a General License Statement file, see [Create a general license statement information file for import](#BKMK_CreateGeneralLicenseStatement) later in this topic.  
 
     > [!WARNING]  
-    >  To download an MVLS file in .csv format that you can import to the Asset Intelligence catalog, see [Microsoft Volume Licensing Service Center](http://go.microsoft.com/fwlink/p/?LinkId=226547). To access this information, you must have a registered account on the website. You must contact your Microsoft account representative for information about how to get your MVLS file in .xml format.  
+    >  To download an MVLS file in .csv format that you can import to the Asset Intelligence catalog, see [Microsoft Volume Licensing Service Center](https://go.microsoft.com/fwlink/p/?LinkId=226547). To access this information, you must have a registered account on the website. You must contact your Microsoft account representative for information about how to get your MVLS file in .xml format.  
 
 5.  Enter the UNC path to the license statement file or choose **Browse** to select a network shared folder and file.  
 
