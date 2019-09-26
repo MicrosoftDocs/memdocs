@@ -1,8 +1,8 @@
 ---
-title: "Set up your lab"
-titleSuffix: "Configuration Manager"
-description: "Set up a lab for evaluating Configuration Manager with simulated real-life activities."
-ms.date: 09/21/2017
+title: Set up your lab
+titleSuffix: Configuration Manager
+description: Set up a lab for evaluating Configuration Manager with simulated real-life activities.
+ms.date: 09/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,11 +12,15 @@ manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
 ---
-# Set up your System Center Configuration Manager lab
+
+# Set up a Configuration Manager lab
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 Following the guidance in this topic will enable you to set up a lab for evaluating Configuration Manager with simulated real-life activities.  
+
+> [!NOTE]
+> Microsoft offers a pre-configured version of this lab using an evaluation version of Configuration Manager. For more information, see [Windows and Office deployment and management lab kit](https://docs.microsoft.com/microsoft-365/enterprise/modern-desktop-deployment-and-management-lab). 
 
 ##  <a name="BKMK_LabCore"></a> Core components  
  Setting up your environment for System Center Configuration Manager requires some core components to support the installation of Configuration Manager.    
