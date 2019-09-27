@@ -136,7 +136,7 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
         - Configuration Manager writes a text file called `MediaLabel.txt` to the root of the media. By default, the file includes a single line of text: `label=Configuration Manager`. If you customize the label for media, this line uses your custom label instead of the default value.  
 
-    - **Include autorun.inf file on media**<!-- 4090666 -->: Starting in version 1902, Configuration Manager doesn't add an autorun.inf file by default. This file is commonly blocked by antimalware products. For more information on the AutoRun feature of Windows, see [Creating an AutoRun-enabled CD-ROM Application](https://docs.microsoft.com/windows/desktop/shell/autoplay). If still necessary for your scenario, select this option to include the file.  
+    - **Include autorun.inf file on media**<!-- 4090666 -->: Starting in version 1906, Configuration Manager doesn't add an autorun.inf file by default. This file is commonly blocked by antimalware products. For more information on the AutoRun feature of Windows, see [Creating an AutoRun-enabled CD-ROM Application](https://docs.microsoft.com/windows/desktop/shell/autoplay). If still necessary for your scenario, select this option to include the file.  
 
 5. On the **Security** page, specify the following options:
 
