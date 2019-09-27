@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 09/26/2019
+ms.date: 09/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -122,16 +122,13 @@ The following features are available with the most recent Configuration Manager 
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID-->
 
-- [Update to redistributable files for SHA-2 code signing support](/sccm/core/get-started/2019/technical-preview-1909#bkmk_SHA2) <!--5308367-->
-- [Additional CMPivot Entities and Enhancements](/sccm/core/get-started/2019/technical-preview-1909#bkmk_CMPivot) <!--5410930-->
-- [Pilot recommendations for Office Readiness](/sccm/core/get-started/2019/technical-preview-1909#bkmk_Office-Pilot) <!--4488272-->
-- [Track health for add-ins, macros, and the Office ProPlus application](/sccm/core/get-started/2019/technical-preview-1909#bkmk_Office-Health) <!--4488301-->
 - [Orchestration Groups](/sccm/core/get-started/2019/technical-preview-1909#bkmk_OGs) <!--3098816-->
-- [SEDO lock improvements](/sccm/core/get-started/2019/technical-preview-1909#bkmk_SEDO) <!--4786915-->
-- [BitLocker management](/sccm/core/get-started/2019/technical-preview-1909#bkmk_bitlocker) <!--3601034-->
+- [Improvements to BitLocker management](/sccm/core/get-started/2019/technical-preview-1909#bkmk_bitlocker) <!--3601034-->
+- [Extend and migrate an on-premises site to Microsoft Azure](/sccm/core/get-started/2019/technical-preview-1909#bkmk_Azure-migration) <!--3556022-->
+- [Additional CMPivot entities and enhancements](/sccm/core/get-started/2019/technical-preview-1909#bkmk_CMPivot) <!--5410930-->
 - [Task sequence download on demand over the internet](/sccm/core/get-started/2019/technical-preview-1909#bkmk_dodcmg) <!--3601238-->
-- [Extend and migrate on-premises Configuration Manager environments to Microsoft Azure](/sccm/core/get-started/2019/technical-preview-1909#bkmk_Azure-migration) <!--3556022-->
-
+- [Support for Windows Insider](/sccm/core/get-started/2019/technical-preview-1909#bkmk_wifb) <!--3556023-->
+- [Improved language support in task sequence](/sccm/core/get-started/2019/technical-preview-1909#bkmk_osd) <!--5411057-->
 
 > [!Note]  
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.  
