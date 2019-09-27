@@ -2,7 +2,7 @@
 title: What's new in Desktop Analytics
 titleSuffix: Configuration Manager
 description: A summary of the new features in the latest monthly release of the Desktop Analytics cloud service.
-ms.date: 09/10/2019
+ms.date: 10/01/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -25,6 +25,11 @@ Learn what's new each month in Desktop Analytics.
 
 To get notified when this page is updated, copy and paste the following URL into your RSS feed reader: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## October 2019
+
+
+
 
 ## September 2019
 
