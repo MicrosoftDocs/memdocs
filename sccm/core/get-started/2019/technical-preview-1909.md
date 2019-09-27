@@ -25,6 +25,7 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/1903/1234567.md)] -->
 
+[!INCLUDE [Improve language support in Apply Windows Settings task sequence step](includes/1909/5411057.md)]
 [!INCLUDE [Update to redistributable files for SHA-2 code signing support](includes/1909/5308367.md)]
 [!INCLUDE [Additional CMPivot Entities and Enhancements](includes/1909/5410930.md)]
 [!INCLUDE [Pilot recommendations for Office Readiness](includes/1909/4488272.md)]
