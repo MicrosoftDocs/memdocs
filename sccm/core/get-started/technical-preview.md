@@ -73,11 +73,7 @@ The technical preview branch of Configuration Manager supports the following pro
     - SQL Server 2014 (with service pack 1 or later)
     - SQL Server 2012 (with service pack 3 or later)  
 
-- The site supports up to 10 clients, which must run one of the following versions of Windows:  
-
-    - Windows 10  
-    - Windows 8.1  
-    - Windows 7  
+- The site supports up to 10 clients, which can run any [supported client OS version](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices).<!-- SCCMDocs#1656 -->
 
 > [!Note]  
 > The inclusion of these products in this content doesn't imply an extension of support for a version that's beyond its support lifecycle. Configuration Manager doesn't support products that are beyond their support lifecycle. For more information, see [Microsoft Lifecycle Policy](https://go.microsoft.com/fwlink/p/?LinkId=208270).  
