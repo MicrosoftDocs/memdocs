@@ -15,9 +15,6 @@ ms.collection: M365-identity-device-management
 
 # How to deploy to production with Desktop Analytics
 
-> [!Note]  
-> This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
-
 After you've [deployed to pilot](/sccm/desktop-analytics/deploy-pilot) and have reviewed the status of your assets, you're ready to update the rest of your production environment.
 
 [!INCLUDE [Definition of pilot and production](includes/define-pilot-prod.md)]
