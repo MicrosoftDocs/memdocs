@@ -57,7 +57,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
     - To create a workspace for Desktop Analytics, select **Add workspace**.  
 
-        1. Enter a **Workspace name**.<!--do we have any guidance for this name?-->  
+        1. Enter a globally unique **Workspace name**.<!--do we have any guidance for this name?-->  
 
         2. Select the drop-down list to **Select the Azure subscription name for this workspace**, and choose the Azure subscription for this workspace.  
 
