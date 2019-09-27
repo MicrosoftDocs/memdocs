@@ -179,11 +179,14 @@ Once the CMG and site system roles are running, clients get the location of the 
 The Configuration Manager client automatically determines whether it’s on the intranet or the internet. If the client can contact a domain controller or an on-premises management point, it sets its connection type to **Currently intranet**. Otherwise, it switches to **Currently Internet**, and uses the location of the CMG service to communicate with the site.
 
 >[!NOTE]
-> You can force the client to always use the CMG regardless of whether it’s on the intranet or internet. This configuration is useful for testing purposes, or for clients at remote offices that you want to force to use the CMG. Set the following registry key on the client:
+> You can force the client to always use the CMG regardless of whether it’s on the intranet or internet. This configuration is useful for testing purposes, or for clients that you want to force to always use the CMG. Set the following registry key on the client:
 >
 > `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\Security, ClientAlwaysOnInternet = 1`
 >
 > You can also specify this setting during client installation using the [CCMALWAYSINF](/sccm/core/clients/deploy/about-client-installation-properties#ccmalwaysinf) property.
+>
+> This setting will always apply, even if the client roams into a location where boundary group configurations would otherwise leverage local resources.
+
 
 To verify that clients have the policy specifying the CMG, open a Windows PowerShell command prompt as an administrator on the client computer, and run the following command:
 `Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}`
