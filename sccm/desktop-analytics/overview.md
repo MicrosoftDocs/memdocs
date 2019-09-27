@@ -103,6 +103,11 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 - Network connectivity from devices to the Microsoft public cloud. For more information, see [How to enable data sharing](/sccm/desktop-analytics/enable-data-sharing)  
 
+> [!Important]   
+> Microsoft has a strong commitment to providing the tools and resources that put you in control of your privacy. As a result, Microsoft doesn't collect the following data from devices located in European countries (EEA and Switzerland):
+>
+> - Windows diagnostic data from Windows 8.1 devices
+> - App usage data for Windows 7
 
 ### Licensing and costs
 
