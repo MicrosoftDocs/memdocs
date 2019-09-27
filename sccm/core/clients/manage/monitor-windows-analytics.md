@@ -2,7 +2,7 @@
 title: Monitor clients with Windows Analytics
 titleSuffix: Configuration Manager
 description: Windows Analytics is a set of solutions that allow you do draw valuable insights into the current state of your environment.
-ms.date: 09/04/2018
+ms.date: 10/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -16,6 +16,13 @@ ms.collection: M365-identity-device-management
 # Use Windows Analytics with Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
+
+> [!Important]  
+> As of October 2019, Windows Analytics integration in Configuration Manager is a [deprecated feature](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). The Windows Analytics service will retire on January 31, 2020.
+>
+> [Desktop Analytics](/sccm/desktop-analytics/overview) is the evolution of Windows Analytics. Existing Windows Analytics customers can [migrate data to Desktop Analytics](/sccm/desktop-analytics/faq#existing-windows-analytics-customers).
+>
+> For more information, see the [Desktop Analytics blog post](https://techcommunity.microsoft.com/t5/Desktop-Analytics-Blog/Migrate-user-input-data-from-Windows-Analytics-Upgrade-Readiness/ba-p/841744).
 
 [Windows Analytics](https://docs.microsoft.com/windows/deployment/update/windows-analytics-overview) is a set of solutions that allow you to gain insight into the current state of your environment. Windows devices in your environment report data to Microsoft, which you can access and analyze through these solutions. For example, connect [Upgrade Readiness](/sccm/core/clients/manage/upgrade-readiness) to Configuration Manager to directly access the data in the **Monitoring** workspace of the Configuration Manager console.
 
