@@ -28,8 +28,11 @@ To get notified when this page is updated, copy and paste the following URL into
 
 ## October 2019
 
+### Migrate from Windows Analytics to existing tenant
 
+<!-- 5202803 -->
 
+You can now migrate inputs from an existing Windows Analytics workspace after onboarding to Desktop Analytics. For more information, see the FAQ for [Existing Windows Analytics customers](/sccm/desktop-analytics/faq#existing-windows-analytics-customers).
 
 ## September 2019
 
