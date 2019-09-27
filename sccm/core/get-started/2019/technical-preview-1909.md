@@ -34,6 +34,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [BitLocker management](includes/1909/3601034.md)]
 [!INCLUDE [Task sequence download on demand over the internet](includes/1909/3601238.md)]
 [!INCLUDE [Extend and migrate on-premises Configuration Manager environments to Microsoft Azure](includes/1909/3556022.md)]
+[!INCLUDE [Windows Insider](includes/1909/3556023.md)]
 
 
 
