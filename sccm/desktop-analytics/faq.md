@@ -17,7 +17,7 @@ ms.collection: M365-identity-device-management
 
 ## Prerequisites
 
-### Can I use Desktop Analytics with Intune-managed devices? 
+### <a name="bkmk_intune"></a> Can I use Desktop Analytics with Intune-managed devices? 
 
 The vast majority of customers that can benefit from the Desktop Analytics workflow use Configuration Manager to deploy Windows. We know Intune customers love the additional insights from Analytics data, and we're working on ways to share insights with them as well.
 
@@ -121,9 +121,40 @@ Yes. If you use [Update Compliance](https://docs.microsoft.com/windows/deploymen
 
 For more information, see the blog post: [Migrate user input data from "Windows Analytics: Upgrade Readiness" to Desktop Analytics](https://techcommunity.microsoft.com/t5/Desktop-Analytics-Blog/Migrate-user-input-data-from-Windows-Analytics-Upgrade-Readiness/ba-p/841744).
 
+### Are there any Windows Analytics features that aren't available in Desktop Analytics?
+
+<!-- 3616924 -->
+Yes, the following Windows Analytics features will either be retired or aren't yet available in Desktop Analytics:
+
+#### Upgrade Readiness
+
+- Support for scenarios that don't require Configuration Manager. For example, [Intune support](#bkmk_intune).
+- Licensing prerequisite of any valid Windows license versus E3, E5
+- Support for multiple workspaces per Azure AD tenant
+- Browser site discovery data
+- [Office add-in insights](#bkmk_office)
+- Feedback Hub
+- Data model documentation for custom reports
+
+#### Update Compliance
+
+- Support for Windows Update for Business
+- Delivery Optimization data
+- Support for Windows 10 long-term servicing channel (LTSC)
+- Windows Insider reports
+- Windows Defender status
+
+#### Device Health
+
+- App and driver health
+- Frequently crashing devices or driver-induced crashes
+- Windows sign-in health
+- Windows Information Protection
+- Support for Windows Server
+
 ## Other
 
-### Can I use Desktop Analytics for my Office 365 ProPlus upgrades?
+### <a name="bkmk_office"></a> Can I use Desktop Analytics for my Office 365 ProPlus upgrades?
 
 No, Desktop Analytics is focused on Windows. Microsoft developed Desktop Analytics in close collaboration with many customers. Customer feedback is about how Desktop Analytics improves their ability to confidently manage Windows deployments. They also told us they wanted [Office 365 ProPlus readiness](/sccm/sum/deploy-use/office-365-dashboard#bkmk_o365_readiness) more closely integrated with Office management tools in Configuration Manager and Intune. Microsoft continues to invest in those areas, while focusing on Windows scenarios in Desktop Analytics.
 
