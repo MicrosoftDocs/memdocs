@@ -367,6 +367,8 @@ This release includes the following improvements to OS deployment:
 
 - The task sequence sets a new read-only variable **_SMSTSLastContentDownloadLocation**. This variable contains the last location where the task sequence downloaded or attempted to download content. Inspect this variable instead of parsing the client logs.<!-- 2840337 -->
 
+- When you create task sequence media, Configuration Manager doesn't add an autorun.inf file. This file is commonly blocked by antimalware products. You can still include the file if necessary for your scenario.<!-- 4090666 -->
+
 
 ## <a name="bkmk_userxp"></a> Software Center
 
