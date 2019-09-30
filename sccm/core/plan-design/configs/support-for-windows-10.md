@@ -78,8 +78,8 @@ For more information on Windows lifecycle, see the [Windows lifecycle fact sheet
 ### <a name="bkmk_WIfB-support"></a> Support for Windows Insider 
 
 Starting in Configuration Manager version 1906, you can [update and service Windows Insider](/sccm/sum/get-started/configure-classifications-and-products#bkmk_WIfB) builds. This ability is provided as a convenience to our customers. While this functionality should work, the support for it is best effort. Configuration Manager might not issue a hotfix for this functionality if it ceases to function.  
-- For more information about support for Windows Insider preview builds, see [How to get support](https://insider.windows.com/how-to-overview/#how-to-get-support).
-- To provide feedback on Windows Insider, use the [Feedback Hub](https://insider.windows.com/how-to-feedback/).
+- For more information about support for Windows Insider preview builds, see [How to get support](https://insider.windows.com/en-us/how-to-overview/#how-to-get-support). <!--the direct page/anchor doesn't work without a locale :(-->
+- To provide feedback on Windows Insider, use the [Feedback Hub](https://insider.windows.com/en-us/how-to-feedback/). <!--the direct page link doesn't work without a locale :(-->
 
 ## Windows 10 ADK
 

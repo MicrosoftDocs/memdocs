@@ -2,7 +2,7 @@
 title: Technical preview 1909
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 1909.
-ms.date: 09/26/2019
+ms.date: 09/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -25,17 +25,13 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/1903/1234567.md)] -->
 
-[!INCLUDE [Update to redistributable files for SHA-2 code signing support](includes/1909/5308367.md)]
-[!INCLUDE [Additional CMPivot Entities and Enhancements](includes/1909/5410930.md)]
-[!INCLUDE [Pilot recommendations for Office Readiness](includes/1909/4488272.md)]
-[!INCLUDE [Track health for add-ins, macros, and the Office ProPlus application](includes/1909/4488301.md)]
 [!INCLUDE [Orchestration Groups](includes/1909/3098816.md)]
-[!INCLUDE [SEDO lock improvements](includes/1909/4786915.md)]
-[!INCLUDE [BitLocker management](includes/1909/3601034.md)]
+[!INCLUDE [Improvements to BitLocker management](includes/1909/3601034.md)]
+[!INCLUDE [Extend and migrate an on-premises site to Microsoft Azure](includes/1909/3556022.md)]
+[!INCLUDE [Additional CMPivot entities and enhancements](includes/1909/5410930.md)]
 [!INCLUDE [Task sequence download on demand over the internet](includes/1909/3601238.md)]
-[!INCLUDE [Extend and migrate on-premises Configuration Manager environments to Microsoft Azure](includes/1909/3556022.md)]
-
-
+[!INCLUDE [Support for Windows Insider](includes/1909/3556023.md)]
+[!INCLUDE [Improved language support in task sequence](includes/1909/5411057.md)]
 
 <!-- ## Known issues -->
 
