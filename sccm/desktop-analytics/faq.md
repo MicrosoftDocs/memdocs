@@ -126,27 +126,35 @@ For more information, see the blog post: [Migrate user input data from "Windows 
 <!-- 3616924 -->
 Yes, the following Windows Analytics features will either be retired or aren't yet available in Desktop Analytics:
 
-#### Upgrade Readiness
+#### General
 
 - Support for scenarios that don't require Configuration Manager. For example, [Intune support](#bkmk_intune).
 - Licensing prerequisite of any valid Windows license versus E3, E5
 - Support for multiple workspaces per Azure AD tenant
-- Browser site discovery data
-- [Office add-in insights](#bkmk_office)
-- Feedback Hub
+- Ability to run custom queries and export raw solution data
 - Data model documentation for custom reports
+
+#### Upgrade Readiness
+
+- Internet Explorer Site Discovery data
+- Office add-in insights (now [available in Configuration Manager](#bkmk_office))
+- Feedback Hub insights
 
 #### Update Compliance
 
 - Support for Windows Update for Business
-- Delivery Optimization data
+- Delivery Optimization insights
 - Support for Windows 10 long-term servicing channel (LTSC)
 - Windows Insider reports
 - Windows Defender status
 
+> [!Note]
+> All existing Update Compliance features, including those not available in Desktop Analytics, remain available in the [Update Compliance](/windows/deployment/update/update-compliance-get-started) solution in the Azure portal.
+
 #### Device Health
 
-- App and driver health
+- Driver health
+- App health (outside of a deployment plan)
 - Frequently crashing devices or driver-induced crashes
 - Windows sign-in health
 - Windows Information Protection
