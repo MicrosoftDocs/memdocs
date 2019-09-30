@@ -34,6 +34,9 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Improved language support in task sequence](includes/1909/5411057.md)]
 [!INCLUDE [Office 365 ProPlus health dashboard](includes/1909/4488301.md)]
 
+[!INCLUDE [Improvements to task sequence debugger](includes/1909/5012536.md)]
+<!-- 5012536, 5012509 -->
+
 <!-- ## Known issues -->
 
 <!-- [!INCLUDE [Client health dashboard](includes/1903/known-issue-health.md)] -->
