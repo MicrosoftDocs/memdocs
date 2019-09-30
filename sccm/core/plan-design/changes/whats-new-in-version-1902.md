@@ -227,11 +227,6 @@ In the **Create Task Sequence Media Wizard**, specify a location for the **Stagi
 
 You can now add a label to task sequence media. This label helps you better identify the media after you create it. In the **Create Task Sequence Media Wizard**, specify a **Media label**.
 
-#### Include autorun.inf file on media
-
-<!-- 4090666 -->
-when you create task sequence media, Configuration Manager doesn't add an autorun.inf file. This file is commonly blocked by antimalware products. You can still include the file if necessary for your scenario.
-
 ### Import a single index of an OS image
 
 <!--3719699-->
