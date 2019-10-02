@@ -121,7 +121,7 @@ If the issue persists, continue to the next step.
 
 #### Step 5: Manually install the definition updates  
 
-[Manually download the latest updates](https://www.microsoft.com/wdsi/defenderupdates).  
+[Manually download the latest updates](https://www.microsoft.com/en-us/wdsi/defenderupdates).  
 
 #### Step 6: Contact Microsoft support  
 
