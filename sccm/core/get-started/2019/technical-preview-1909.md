@@ -32,6 +32,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Task sequence download on demand over the internet](includes/1909/3601238.md)]
 [!INCLUDE [Support for Windows Insider](includes/1909/3556023.md)]
 [!INCLUDE [Improved language support in task sequence](includes/1909/5411057.md)]
+[!INCLUDE [Office 365 ProPlus health dashboard](includes/1909/4488301.md)]
 
 [!INCLUDE [Improvements to task sequence debugger](includes/1909/5012536.md)]
 <!-- 5012536, 5012509 -->
