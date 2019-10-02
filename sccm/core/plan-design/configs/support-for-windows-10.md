@@ -75,11 +75,11 @@ For more information on Windows lifecycle, see the [Windows lifecycle fact sheet
 > [!NOTE]  
 > Configuration Manager supports the client on Windows 10 ARM64 devices. Existing client management features should work with these new devices. For example, hardware and software inventory, software updates, and application management. OS deployment is currently not supported. <!-- 1353704 -->
 
-### <a name="bkmk_WIfB-support"></a> Support for Windows Insider 
+### <a name="bkmk_WIfB-support"></a> Support for Windows Insider
 
 Starting in Configuration Manager version 1906, you can [update and service Windows Insider](/sccm/sum/get-started/configure-classifications-and-products#bkmk_WIfB) builds. This ability is provided as a convenience to our customers. While this functionality should work, the support for it is best effort. Configuration Manager might not issue a hotfix for this functionality if it ceases to function.  
-- For more information about support for Windows Insider preview builds, see [How to get support](https://insider.windows.com/en-us/how-to-overview/#how-to-get-support). <!--the direct page/anchor doesn't work without a locale :(-->
-- To provide feedback on Windows Insider, use the [Feedback Hub](https://insider.windows.com/en-us/how-to-feedback/). <!--the direct page link doesn't work without a locale :(-->
+
+To provide feedback on Windows Insider, use the [Feedback Hub](https://docs.microsoft.com/windows-insider/at-work-pro/wip-4-biz-feedback).
 
 ## Windows 10 ADK
 
