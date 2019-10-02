@@ -2,7 +2,7 @@
 title: What's new in version 1906
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1906 of Configuration Manager current branch.
-ms.date: 08/23/2019
+ms.date: 10/01/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -613,13 +613,13 @@ As of this version, the following features are no longer pre-release:
 - [SMS Provider administration service](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service)
 - [Device Guard management](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)
 
- Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4514258).
+Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4514258).
 
-For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1906 release notes](https://docs.microsoft.com/powershell/sccm/1906-release-notes?view=sccm-ps).<!-- link is not live yet; will be published before this release branch -->
+For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1906 release notes](https://docs.microsoft.com/powershell/sccm/1906-release-notes?view=sccm-ps).
+
+The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
 
 <!--
-The following update rollup (4486457) is available in the console starting on 25 January 2019: [Update rollup for Configuration Manager current branch, version 1902](https://support.microsoft.com/help/4486457).
-
 ### Hotfixes
 
 The following additional hotfixes are available to address specific issues:

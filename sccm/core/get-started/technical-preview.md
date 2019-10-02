@@ -125,6 +125,7 @@ The following features are available with the most recent Configuration Manager 
 - [Task sequence download on demand over the internet](/sccm/core/get-started/2019/technical-preview-1909#bkmk_dodcmg) <!--3601238-->
 - [Support for Windows Insider](/sccm/core/get-started/2019/technical-preview-1909#bkmk_wifb) <!--3556023-->
 - [Improved language support in task sequence](/sccm/core/get-started/2019/technical-preview-1909#bkmk_osd) <!--5411057-->
+- [Office 365 ProPlus health dashboard](/sccm/core/get-started/2019/technical-preview-1909#bkmk_o365health) <!--4488301-->
 - [Improvements to task sequence debugger](/sccm/core/get-started/2019/technical-preview-1909#bkmk_tsdebug) <!-- 5012536, 5012509 -->
 
 > [!Note]  
