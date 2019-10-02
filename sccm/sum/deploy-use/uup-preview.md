@@ -2,7 +2,7 @@
 title: UUP preview
 titleSuffix: Configuration Manager
 description: Instructions for preview of UUP integration
-ms.date: 09/27/2019
+ms.date: 10/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -95,9 +95,9 @@ For UUP updates to install successfully, install both of the following updates:
 
 | Windows 10 version | Minimum compliance level | Additional catalog update |
 | ------------------ | ------------------------ | ------------------ |
-| **Windows 10, version 1709** | April 2019, [KB4493441](https://support.microsoft.com/help/4493441/windows-10-update-kb4493441) | [KB4512744](https://www.catalog.update.microsoft.com/search.aspx?q=4512744) |
-| **Windows 10, version 1803** | April 2019, [KB4493464](https://support.microsoft.com/help/4493464/windows-10-update-kb4493464) | [KB4512745](https://www.catalog.update.microsoft.com/search.aspx?q=4512745) |
 | **Windows 10, version 1809** | August 2019, [KB4511553](https://support.microsoft.com/help/4511553/windows-10-update-kb4511553) | [KB4514987](https://www.catalog.update.microsoft.com/search.aspx?q=4514987) |
+| **Windows 10, version 1803** | April 2019, [KB4493464](https://support.microsoft.com/help/4493464/windows-10-update-kb4493464) | [KB4512745](https://www.catalog.update.microsoft.com/search.aspx?q=4512745) |
+| **Windows 10, version 1709** | April 2019, [KB4493441](https://support.microsoft.com/help/4493441/windows-10-update-kb4493441) | [KB4512744](https://www.catalog.update.microsoft.com/search.aspx?q=4512744) |
 
 ### 4. Allow clients to download delta content when available
 
@@ -149,32 +149,22 @@ After you have synced UUP updates into your environment, find them in the Config
 
 ### Updates available during preview
 
-Below is a summary of the specific updates that are available for preview customers. For more information on all Windows 10 updates released by Microsoft, see [Windows 10 release information](https://docs.microsoft.com/windows/release-information/).
+For more information on all Windows 10 updates released by Microsoft, see [Windows 10 release information](https://docs.microsoft.com/windows/release-information/).
 
-#### Cumulative updates for Windows 10, version 1709
+#### Cumulative updates to test
 
-| **Description** | **OS build** | **Availability date** | **KB article** |
-| ----------------|-------------|-----------------------|--------------- |
-| August C Release for 1709 | 16299.1365 | 2019-08-16 | [KB 4512494](https://support.microsoft.com/?kbid=4512494) |
+While you might see multiple UUP-tagged updates available, start with the **September 2019** (2019-09) update or a later version. For example:
 
-#### Cumulative updates for Windows 10, version 1803
+- 2019-09 Cumulative Update for Windows 10 Version 1809 for x64-based Systems (KB4512578)
+- 2019-09 Cumulative Update for Windows 10 Version 1803 for x64-based Systems (KB4516058)
+- 2019-09 Cumulative Update for Windows 10 Version 1709 for x64-based Systems (KB4516066)
 
-| **Description** | **OS build** | **Availability date** | **KB article** |
-| ----------------|-------------|-----------------------|--------------- |
-| August C Release for 1803 | 17134.984 | 2019-08-19 | [KB 4512509](https://support.microsoft.com/?kbid=4512509) |
+#### Feature updates to test
 
-#### Cumulative updates for Windows 10, version 1809
+While you might see multiple UUP-tagged updates available, start with the **September 2019** (2019-09B) update or a later version. For example:
 
-| **Description** | **OS build** | **Availability date** | **KB article** |
-| ----------------|-------------|-----------------------|--------------- |
-| August C Release for 1809 | 17763.720 | 2019-08-17 | [KB 4512534](https://support.microsoft.com/?kbid=4512534) |
-
-#### Feature updates for Windows 10
-
-| **Description** | **Compliance Level** | **OS build** | **Availability date** | **KB article** |
-| ----------------|----------------------|-----------|-----------------------|--------------- |
-| Feature Update to version 1803 | August C Release | XXXXXX | XXXXXXX | XXXXXXX |
-| Feature Update to version 1809 | August C Release | XXXXXX | XXXXXXX | XXXXXXX |
+- Feature update to Windows 10, version 1809 x64 2019-09B
+- Feature update to Windows 10, version 1803 x64 2019-09B
 
 ### Scenarios to test
 
