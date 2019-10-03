@@ -127,10 +127,10 @@ Once you're ready to start syncing UUP updates, and Microsoft has approved your 
 
 4. In the ribbon, select **Configure Site Components**, and choose **Software Update Point**.
 
-5. Switch to the **Products** tab, and select the **Windows 10 UUP Preview** product.
+5. Switch to the **Products** tab, and select one or more of the following products: 
 
-    > [!NOTE]
-    > This product only applies to Windows 10 clients.
+    - **Windows 10 UUP Preview**
+    - **Windows Server UUP Preview**
 
 6. Switch to the **Classifications** tab, and select the following options:  
 
