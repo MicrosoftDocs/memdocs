@@ -90,7 +90,7 @@ For example, the following **Upgrade OS** step uses the English version:
 > The following WMI query is recommended for the English (United States) OS and 64-bit architecture:
 >
 > ```WMI
-> SELECT * FROM Win32_OperatingSystem WHERE OSArchitecture LIKE '%64%' AND OSLanguage=1033`
+> SELECT * FROM Win32_OperatingSystem WHERE OSArchitecture LIKE '%64%' AND OSLanguage='1033'
 > ```
 >
 > First add the language by selecting the **Operating System Language** condition. Then edit the WMI query to include the architecture clause.
