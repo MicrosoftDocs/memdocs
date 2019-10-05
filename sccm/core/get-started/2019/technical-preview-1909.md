@@ -37,7 +37,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Improvements to task sequence debugger](includes/1909/5012536.md)]
 <!-- 5012536, 5012509 -->
 
-## Known issues
+## General known issues
 
 [!INCLUDE [Hardware inventory reports](includes/1909/known-issue-hinv.md)]
 
