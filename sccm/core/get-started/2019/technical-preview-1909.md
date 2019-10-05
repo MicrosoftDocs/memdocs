@@ -2,7 +2,7 @@
 title: Technical preview 1909
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 1909.
-ms.date: 09/30/2019
+ms.date: 10/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -37,9 +37,9 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Improvements to task sequence debugger](includes/1909/5012536.md)]
 <!-- 5012536, 5012509 -->
 
-<!-- ## Known issues -->
+## General known issues
 
-<!-- [!INCLUDE [Client health dashboard](includes/1903/known-issue-health.md)] -->
+[!INCLUDE [Hardware inventory reports](includes/1909/known-issue-hinv.md)]
 
 ## Next steps
 
