@@ -1,8 +1,8 @@
 ---
-title: Troubleshooting CMPivot
+title: Troubleshoot CMPivot
 titleSuffix: Configuration Manager
 description: Learn how to troubleshoot CMPivot in Configuration Manager.
-ms.date: 09/19/2019
+ms.date: 10/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -13,26 +13,26 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ---
 
-# Troubleshooting CMPivot
+# Troubleshoot CMPivot
 
-CMPivot is a utility that provides access to real-time state of devices in your environment. CMPivot runs a query on all currently connected devices in the target collection and returns the results.
+CMPivot is a utility that provides access to a real-time state of the devices in your environment. CMPivot runs a query on all currently connected devices in the target collection and returns the results.
 
 Occasionally, you may need to troubleshoot CMPivot. For example, if a state message from a client to CMPivot gets corrupted, the site server can't process the message. This article helps you understand the flow of information for CMPivot.
 
-## <a name="bkmk_CMPivot-1902"></a> Troubleshooting CMPivot in version 1902 and later
+## <a name="bkmk_CMPivot-1902"></a> Troubleshoot CMPivot in version 1902 and later
 
 In Configuration Manager versions 1902 and later, you can run CMPivot from the central administration site (CAS) in a hierarchy. The primary site still handles the communication to the client.
 
 When you run CMPivot from CAS, it uses the high-speed message subscription channel to communicate with the primary site. CMPivot doesn't use standard SQL replication between sites. If your SQL Server or Provider is remote, or if you use SQL Always On, you'll have a "double hop scenario" for CMPivot. For information on how to define constrained delegation for a "double hop scenario", see [CMPivot starting in version 1902](/sccm/core/servers/manage/cmpivot#bkmk_cmpivot1902).
 
 >[!IMPORTANT]
-> When troubleshooting CMPivot, enable verbose logging on your MPs and the site server's SMS_MESSAGE_PROCESSING_ENGINE to get more information. If the client's output is larger than 80 KB, enable verbose logging on the MP and the site server's SMS_STATE_SYSTEM component. For information about how to enable verbose logging, see [Site server logging options](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_reg-site).
+> When troubleshooting CMPivot, enable verbose logging on your management points (MPs) and on the site server's SMS_MESSAGE_PROCESSING_ENGINE to get more information. Also, if the client's output is larger than 80 KB, enable verbose logging on the MP and the site server's SMS_STATE_SYSTEM component. For information about how to enable verbose logging, see [Site server logging options](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_reg-site).
 
 ### Get information from the site server
 
 By default, the site server log files are located in `C:\Program Files\Microsoft Configuration Manager\logs`. This location might be different if you specified a non-default installation directory or offloaded items like the SMS Provider to another server. If you run CMPivot from the CAS, the logs are on the primary site server.
 
-Check the `smsprov.log` for these lines:
+Look in `smsprov.log` for these lines:
 
 - Configuration Manager version 1906:
   <pre><code lang="Log">Auditing: User &ltusername> initiated client operation 145 to collection &ltCollectionId>. </code></pre>
@@ -53,7 +53,7 @@ Find the `TaskID` from the ClientAction table. The `TaskID` corresponds to the `
 select * from ClientAction where ClientOperationId=<id>
 ```
 
-In the `BgbServer.log`, look for the `TaskID` you gathered from SQL and note the `PushID`. The     `TaskID` is labeled `TaskGUID`. For example:
+In `BgbServer.log`, look for the `TaskID` you gathered from SQL and note the `PushID`. The     `TaskID` is labeled `TaskGUID`. For example:
 
 <pre><code lang="Log">Starting to send push task (<b>PushID: 9</b> TaskID: 12 <b>TaskGUID: 9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0</b> TaskType: 15 TaskParam: PFNjcmlwdENvbnRlbnQgU2NyaXB0R3VpZD0nN0RDNkI2RjEtRTdGNi00M0MxL (truncated log entry)
 Finished sending push task (<b>PushID: 9</b> TaskID: 12) to 2 clients
@@ -80,7 +80,7 @@ Result are sent for ScriptGuid: 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 and <b>Task
 
 ### Review messages on the site server
 
-When [verbose logging](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_reg-client) is enabled on the management point, you can see how incoming client messages are handled. In the  `MP_RelayMsgMgr.log`, look for the `TaskID`.
+When [verbose logging](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_reg-client) is enabled on the management point, you can see how incoming client messages are handled. In   `MP_RelayMsgMgr.log`, look for the `TaskID`.
 
 In the `MP_RelayMsgMgr.log` example, you can see the client's ID `(GUID:83F67728-2E6D-4E4F-8075-ED035C31B783)` and the `Task ID {9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0}`. A message ID gets assigned to the client's response before it's sent to the message processing engine:
 
@@ -104,7 +104,7 @@ Processed 2 messages with type Instant. Failed to process 0 messages. All messag
 > select * from MPE_RequestMessages_Instant where MessageID=<ID from SMS_MESSAGE_PROCESSING_ENGINE.log>
 > ```
 
-In the `BgbServer.log`, look for the `PushID` to see the number of clients that reported or failed.
+In `BgbServer.log`, look for the `PushID` to see the number of clients that reported or failed.
 
 <pre><code lang="Log">Generated BGB task status report c:\ConfigMgr\inboxes\bgb.box\Bgb5c1db.BTS at 09/16/2019 16:46:39. (<b>PushID: 9</b> ReportedClients: 2 FailedClients: 0)
 </code></pre>
@@ -115,9 +115,9 @@ Check the monitoring view for CMPivot from SQL using the `TaskID`.
 select * from vSMS_CMPivotStatus where TaskID='{9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0}'
 ```
 
-![CMPivot SQL queries for troubleshooting in version 1902](media/cmpivot-sql-queries-1902.png)
+[ ![CMPivot SQL queries for troubleshooting in version 1902](media/cmpivot-sql-queries-1902.png)](media/cmpivot-sql-queries-1902.png#lightbox)
 
-## <a name="bkmk_CMPivot-1810"></a> Troubleshooting CMPivot in 1810 and earlier
+## <a name="bkmk_CMPivot-1810"></a> Troubleshoot CMPivot in 1810 and earlier
 
 In Configuration Manager versions 1810 and earlier, your site server handles the communication to the client.
 
@@ -125,7 +125,7 @@ In Configuration Manager versions 1810 and earlier, your site server handles the
 
 By default, the site server log files are located in `C:\Program Files\Microsoft Configuration Manager\logs`. This location might be different if you specified a non-default installation directory or offloaded items like the SMS Provider to another server.
 
-Check the `smsprov.log` for this line:
+Look in `smsprov.log` for this line:
 
 <pre><code lang="Log">Auditing: User <username> initiated client operation 135 to collection &ltCollectionId>.
 </code></pre>
@@ -140,7 +140,7 @@ Find the `TaskID` from the ClientAction table. The `TaskID` corresponds to the `
 select * from ClientAction where ClientOperationId=<id>
 ```
 
-In the `BgbServer.log`, look for the `TaskID` you gathered from SQL. It's labeled `TaskGUID`. For example:
+In `BgbServer.log`, look for the `TaskID` you gathered from SQL. It's labeled `TaskGUID`. For example:
 
 <pre><code lang="Log">Starting to send push task (PushID: 260 TaskID: 258 TaskGUID: <b>F8C7C37F-B42B-4C0A-B050-2BB44DF1098A</b> TaskType: 15
 TaskParam: PFNjcmlwdEhhc2ggU2NyaXB0SGF...truncated...to 5 clients with throttling (strategy: 1 param: 42)
@@ -151,19 +151,19 @@ Finished sending push task (PushID: 260 TaskID: 258) to 5 clients
 
 After you have the information from the site server, check the client logs. By default, the client logs are located in `C:\Windows\CCM\Logs`.
 
-In `CcmNotificationAgent.log`, look for logs like the following entry:  
+In `CcmNotificationAgent.log`, look for logs that are similar to the following entry:  
 
 <pre><code lang="Log"><b>Error! Bookmark not defined.</b>+PFNjcmlwdEhhc2ggU2NyaXB0SGFzaEFsZz0nU0hBMjU2Jz42YzZmNDY0OGYzZjU3M2MyNTQyNWZiNT
 g2ZDVjYTIwNzRjNmViZmQ1NTg5MDZlMWI5NDRmYTEzNmFiMDE0ZGNjPC9TY3JpcHRIYXNoPjxTY3Jp (truncated log entry)
 </code></pre>
 
-Check `Scripts.log` for the `TaskID`. In the following example, we see `Task ID {F8C7C37F-B42B-4C0A-B050-2BB44DF1098A}`:
+Look in `Scripts.log` for the `TaskID`. In the following example, we see `Task ID {F8C7C37F-B42B-4C0A-B050-2BB44DF1098A}`:
 
 <pre><code lang="Log">Sending script state message: 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14
 State message: Task Id <b>{F8C7C37F-B42B-4C0A-B050-2BB44DF1098A}</b>
 </code></pre>
 
-Check the `StateMessage.log`. In the following example, you see that `TaskID` is near the bottom of the message next to `<Param>`:
+Look in `StateMessage.log`. In the following example, you see that `TaskID` is near the bottom of the message next to `<Param>`:
 
 ``` XML
 StateMessage body: <?xml version="1.0" encoding="UTF-16"?>
@@ -210,12 +210,12 @@ select * from vSMS_CMPivotStatus where TaskID='{F8C7C37F-B42B-4C0A-B050-2BB44DF1
 ```
 
 >[!NOTE]
->For clients that are using version 1810 or higher, state messaging isn't used unless the output is larger than 80 KB. When troubleshooting CMPivot in these cases, enable verbose logging on your MPs and the site server's SMS_MESSAGE_PROCESSING_ENGINE for more information. For information on how to enable verbose logging, see [Site server logging options](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_reg-site).
+>For clients that are using version 1810 or higher, state messaging isn't used unless the output is larger than 80 KB. When troubleshooting CMPivot in these cases, you can get more information when you enable verbose logging on your MPs and the site server's SMS_MESSAGE_PROCESSING_ENGINE. For information on how to enable verbose logging, see [Site server logging options](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_reg-site).
 >
 > To troubleshoot, refer to the following logs:
 >
-> - MP_Relay.log
-> - SMS_MESSAGE_PROCESSING_ENGINE.log
+> - `MP_Relay.log`
+> - `SMS_MESSAGE_PROCESSING_ENGINE.log`
 
 ## Next steps
 
