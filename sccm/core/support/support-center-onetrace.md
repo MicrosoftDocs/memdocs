@@ -44,7 +44,7 @@ OneTrace works with many types of log files, such as:
 
 OneTrace installs with Support Center. Find the Support Center installer on the site server at the following path: `cd.latest\SMSSETUP\Tools\SupportCenter\SupportCenterInstaller.msi`.
 
-OneTrace application can be found <InstallLocation>\CMPowerLogViewer.exe
+By default, the OneTrace application is installed at `"C:\Program Files (x86)\Configuration Manager Support Center\CMPowerLogViewer.exe`.
 
 > [!Note]  
 > Support Center and OneTrace use Windows Presentation Foundation (WPF). This component isn't available in Windows PE. Continue to use CMTrace in boot images with task sequence deployments.  
