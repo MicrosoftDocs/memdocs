@@ -119,7 +119,7 @@ Request a version 2 key provider type when you generate a CSR. Only version 2 ce
 > [!TIP]  
 > When we deploy the CMG, we will also install a cloud distribution point (CDP) at the same time. By default, when you deploy a CMG, the option **Allow CMG to function as a cloud distribution point and serve content from Azure storage** is selected. Co-locating the CDP on the server with the CMG removes the need for separate certificates and configurations to support the CDP. Even though the CDP isn’t required to use co-management, it is useful in most environments.  
 >
-> If you will use additional cloud distribution points for co-management, you’ll need to request separate certificates for each additional server. To request a pubic certificate for the CDP, use the same details as for the cloud management gateway CSR. You need only change the common name so that it is unique for each CDP.  
+> If you will use additional cloud distribution points for co-management, you’ll need to request separate certificates for each additional server. To request a public certificate for the CDP, use the same details as for the cloud management gateway CSR. You need only change the common name so that it is unique for each CDP.  
 
 #### Details for the cloud management gateway CSR
 

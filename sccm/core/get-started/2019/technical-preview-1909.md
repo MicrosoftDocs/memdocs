@@ -2,7 +2,7 @@
 title: Technical preview 1909
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 1909.
-ms.date: 09/27/2019
+ms.date: 10/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -32,10 +32,14 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Task sequence download on demand over the internet](includes/1909/3601238.md)]
 [!INCLUDE [Support for Windows Insider](includes/1909/3556023.md)]
 [!INCLUDE [Improved language support in task sequence](includes/1909/5411057.md)]
+[!INCLUDE [Office 365 ProPlus health dashboard](includes/1909/4488301.md)]
 
-<!-- ## Known issues -->
+[!INCLUDE [Improvements to task sequence debugger](includes/1909/5012536.md)]
+<!-- 5012536, 5012509 -->
 
-<!-- [!INCLUDE [Client health dashboard](includes/1903/known-issue-health.md)] -->
+## General known issues
+
+[!INCLUDE [Hardware inventory reports](includes/1909/known-issue-hinv.md)]
 
 ## Next steps
 

@@ -20,7 +20,7 @@ ms.collection: M365-identity-device-management
 Follow the high-level steps in this article to upgrade the client for Mac computers by using a Configuration Manager application. You can also download the Mac client installation file, copy it to a shared network location or a local folder on the Mac computer, and then instruct users to manually run the installation.  
 
 > [!NOTE]  
-> Before you do these steps, make sure that your Mac computer meets the prerequisites. See [Supported operating systems for Mac computers](/sccm/plan-design/configs/supported-operating-systems-for-clients-and-devices#mac-computers).  
+> Before you do these steps, make sure that your Mac computer meets the prerequisites. See [Supported operating systems for Mac computers](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#mac-computers).  
 
 ## Download the latest Mac client
 
