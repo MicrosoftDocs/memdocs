@@ -2,7 +2,7 @@
 title: FAQ for Desktop Analytics
 titleSuffix: Configuration Manager
 description: Frequently asked questions for Desktop Analytics.
-ms.date: 10/07/2019
+ms.date: 10/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
