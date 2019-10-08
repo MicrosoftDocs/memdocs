@@ -324,7 +324,7 @@ The Configuration Manager console uses internet access for the following actions
 |SQL over TCP|--|1433 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|  
 
 
-###  <a name="BKMK_PortsDist_MP"></a> Distribution point -- > Management point  
+###  <a name="BKMK_PortsDist_MP"></a> Distribution point, both standard and pull -- > Management point  
 A distribution point communicates to the management point in the following scenarios:  
 
 - To report the status of prestaged content  
@@ -333,7 +333,7 @@ A distribution point communicates to the management point in the following scena
 
 - To report content validation  
 
-- To report the status of package downloads (pull-distribution point)
+- To report the status of package downloads (pull-distribution point only)
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
