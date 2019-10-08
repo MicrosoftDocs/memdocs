@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 09/30/2019
+ms.date: 10/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -114,9 +114,34 @@ The following features are available with the most recent Configuration Manager 
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### Technical preview version 1909
+### Technical preview version 1910
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID-->
+
+- [5110009](/sccm/core/get-started/2019/technical-preview-1910#bkmk_5110009) <!--5110009-->
+- [5229962](/sccm/core/get-started/2019/technical-preview-1910#bkmk_5229962) <!--5229962-->
+- [4226618](/sccm/core/get-started/2019/technical-preview-1910#bkmk_4226618) <!--4226618-->
+- [4700982](/sccm/core/get-started/2019/technical-preview-1910#bkmk_4700982) <!--4700982-->
+- [4786915](/sccm/core/get-started/2019/technical-preview-1910#bkmk_4786915) <!--4786915-->
+- [3556011](/sccm/core/get-started/2019/technical-preview-1910#bkmk_3556011) <!--3556011-->
+- [3608345](/sccm/core/get-started/2019/technical-preview-1910#bkmk_3608345) <!--3608345-->
+- [4488272](/sccm/core/get-started/2019/technical-preview-1910#bkmk_4488272) <!--4488272-->
+- [4561024](/sccm/core/get-started/2019/technical-preview-1910#bkmk_4561024) <!--4561024-->
+- [4383213](/sccm/core/get-started/2019/technical-preview-1910#bkmk_4383213) <!--4383213-->
+- [4433455](/sccm/core/get-started/2019/technical-preview-1910#bkmk_4433455) <!--4433455-->
+- [4679060](/sccm/core/get-started/2019/technical-preview-1910#bkmk_4679060) <!--4679060-->
+- [3721603](/sccm/core/get-started/2019/technical-preview-1910#bkmk_3721603) <!--3721603-->
+- [3607758](/sccm/core/get-started/2019/technical-preview-1910#bkmk_3607758) <!--3607758-->
+
+> [!Note]  
+> Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.  
+
+
+## Features in recent technical previews
+
+The following features were released with previous versions of the Configuration Manager technical preview branch since current branch version 1906:
+
+### Technical preview version 1909
 
 - [Orchestration Groups](/sccm/core/get-started/2019/technical-preview-1909#bkmk_OGs) <!--3098816-->
 - [Improvements to BitLocker management](/sccm/core/get-started/2019/technical-preview-1909#bkmk_bitlocker) <!--3601034-->
@@ -127,14 +152,6 @@ The following features are available with the most recent Configuration Manager 
 - [Improved language support in task sequence](/sccm/core/get-started/2019/technical-preview-1909#bkmk_osd) <!--5411057-->
 - [Office 365 ProPlus health dashboard](/sccm/core/get-started/2019/technical-preview-1909#bkmk_o365health) <!--4488301-->
 - [Improvements to task sequence debugger](/sccm/core/get-started/2019/technical-preview-1909#bkmk_tsdebug) <!-- 5012536, 5012509 -->
-
-> [!Note]  
-> Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.  
-
-
-## Features in recent technical previews
-
-The following features were released with previous versions of the Configuration Manager technical preview branch since current branch version 1906:
 
 ### Technical preview version 1908.2
 
