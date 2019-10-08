@@ -85,3 +85,16 @@ You have two options for running Setup Downloader:
         -   Setup Downloader starts, and then you must specify the path to the download folder. Next, after you click **Verify**, Setup Downloader verifies the files in the download folder.  
 
 3.  To review the download results, open the **ConfigMgrSetup.log** file in the root directory of drive C.
+
+## Copy Setup Downloader files to another computer
+1. In Windows Explorer, go to one of the following locations:
+
+    **<Configuration Manager installation media>\SMSSETUP\BIN\X64**
+    **<Configuration Manager installation path>\BIN\X64**
+    
+2. Copy the following files to the same destination folder on the other computer:
+    setupdl.exe
+    .\00000409\setupdlres.dll
+    
+3. Use one of the above methods to launch the Setup Downloader.
+    
