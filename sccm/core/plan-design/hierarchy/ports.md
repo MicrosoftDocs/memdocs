@@ -162,14 +162,14 @@ For more information, see [CMG Ports and data flow](/sccm/core/clients/manage/cm
 |HTTPS|--|443 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|  
 
 
-###  <a name="BKMK_PortsClient-DP2"></a> Client -- > Distribution point configured for multicast  
+###  <a name="BKMK_PortsClient-DP2"></a> Client -- > Distribution point configured for multicast, both standard and pull  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
 |Server Message Block (SMB)|--|445|  
 |Multicast protocol|63000-64000|--|  
 
-###  <a name="BKMK_PortsClient-DP3"></a> Client -- > Distribution point configured for PXE  
+###  <a name="BKMK_PortsClient-DP3"></a> Client -- > Distribution point configured for PXE, both standard and pull  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
