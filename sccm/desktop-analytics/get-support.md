@@ -2,7 +2,7 @@
 title: Get support for Desktop Analytics
 titleSuffix: Configuration Manager
 description: Get online and telephone support for Desktop Analytics paid and trial subscriptions.
-ms.date: 10/01/2019
+ms.date: 10/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -24,13 +24,6 @@ Microsoft provides global technical, pre-sales, billing, and subscription suppor
 > - [Troubleshoot Desktop Analytics](/sccm/desktop-analytics/troubleshooting)
 > - [Frequently asked questions](/sccm/desktop-analytics/faq)
 
-For customers without a Microsoft support plan contract, use the **Help + Support** option in the Azure portal. This action files an online support ticket for Desktop Analytics. To create and manage a support incident, your account must have an Azure Active Directory (Azure AD) role that includes the action **microsoft.office365.supportTickets/tickets/manage**. For more information, see [administrator roles in Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).
+To request help for Desktop Analytics, use the **Help + Support** option in the Desktop Management portal. This action files an online support ticket for Desktop Analytics. To create and manage a support incident, your account must have an Azure Active Directory (Azure AD) role that includes the action **microsoft.office365.supportTickets/tickets/manage**. For more information, see [administrator roles in Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).
 
-If you have a Microsoft support plan contract, go to [Microsoft support](https://aka.ms/cmcbsupport) to open a new support request. Start with the following options:
-
-| Option | Value |
-|--------|-------|
-| Product family | Server Management Tools |
-| Product | System Center Configuration Manager |
-| Product version | version 1906 or later |
-| Category | Desktop Analytics |
+If the issue is more broadly for Configuration Manager than just analytics, go to [Microsoft support](https://aka.ms/cmcbsupport) to open a new support request. Use the **Desktop Analytics** category.
