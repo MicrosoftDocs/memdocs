@@ -1,6 +1,6 @@
 ---
-title: "Online Documentation"
-titleSuffix: "Configuration Manager"
+title: "Online Documentation
+titleSuffix: Configuration Manager
 ms.date: 10/06/2016
 ms.topic: conceptual
 ms.prod: configuration-manager
