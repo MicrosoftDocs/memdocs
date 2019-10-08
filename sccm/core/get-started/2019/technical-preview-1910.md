@@ -25,6 +25,9 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/1910/1234567.md)] -->
 
+[!INCLUDE [Test1](/sccm/core/get-started/2019/includes/1910/5110009.md)]
+[!INCLUDE [Test2](includes/1910/5110009.md)]
+
 [!INCLUDE [5110009](includes/1910/5110009.md)]
 [!INCLUDE [5229962](includes/1910/5229962.md)]
 [!INCLUDE [4226618](includes/1910/4226618.md)]
