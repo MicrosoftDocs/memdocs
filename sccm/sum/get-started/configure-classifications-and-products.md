@@ -5,7 +5,7 @@ description: Follow these steps to configure software update classifications and
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 09/25/2019
+ms.date: 10/08/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -71,14 +71,13 @@ Software updates metadata is retrieved during the synchronization process in Con
 <!--3556023-->
 Starting in September 2019, you can service and update devices running Windows Insider Preview builds with Configuration Manager. This change means you can manage these devices without changing your normal processes or enabling Windows Update for Business. You can download Feature Updates and Cumulative Updates for Windows Insider Preview builds into Configuration Manager just like any other Windows 10 update or upgrade. For more information, see the [Publishing pre-release Windows 10 Feature Updates to WSUS](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Publishing-pre-release-Windows-10-feature-updates-to-WSUS/ba-p/845054) blog post.
 
-For more information about support for Windows Insider in Configuration Manager, see [Support for Windows 10](/sccm/core/plan-design/configs/support-for-windows-10bkmk_WIfB-support).
+For more information about support for Windows Insider in Configuration Manager, see [Support for Windows 10](/sccm/core/plan-design/configs/support-for-windows-10#bkmk_WIfB-support).
 
 ### Prerequisites
 
 - Configuration Manager version 1906 or higher, configured for [software update management](/sccm/sum/plan-design/plan-for-software-updates).
-- Windows 10 devices running [Windows Insider Preview build](https://insider.windows.com/en-us/how-to-pc/).<!--the direct page link doesn't work without a locale :(-->
+- Windows 10 devices running [Windows Insider Preview build](https://docs.microsoft.com/windows-insider/at-work-pro/wip-4-biz-get-started).
 - A collection containing the Windows Insider devices.
-
 
 ### Enable Windows Insider upgrades and updates
 
@@ -117,6 +116,14 @@ For more information on how to deploy upgrades, see [Manage Windows as a service
 ### Keeping Insider devices up-to date
 
 Cumulative Updates for Windows Insider will be available for WSUS and by extension for Configuration Manager. These Cumulative Updates will be released at a frequency similar to Windows 10 version 1903 Cumulative Updates. The Windows Insider Cumulative updates are in the **Windows 10, version 1903 and later** product category and classified as either **Security Updates** or **Updates**. You can deploy the Cumulative Updates for Windows Insider using your regular software update process like using [automatic deployment rules](/sccm/sum/deploy-use/automatically-deploy-software-updates) or [phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
+
+## <a name="bkmk_ESU"></a> Extended Security Updates and Configuration Manager
+
+The [Extended Security Updates (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) program is a last resort option for customers who need to run certain legacy Microsoft products past the end of support. It includes Critical and/or Important security updates (as defined by the [Microsoft Security Response Center (MSRC)](https://www.microsoft.com/msrc)) for a maximum of three years after the product’s End of Extended Support date.
+
+Products that are beyond their support lifecycle aren't supported for use with Configuration Manager. This includes any products that are covered under the ESU program. Security updates released under the ESU program will be published to Windows Server Update Services (WSUS). These updates will appear in the Configuration Manager console. While products that are covered under the ESU program are no longer supported for use with Configuration Manager, the [latest released version of Configuration Manager current branch](/sccm/core/servers/manage/updates#version-details) can be used to deploy and install Windows security updates released under the program. The latest released version can also be used to deploy supported OSes via operating system deployment (OSD).
+
+Client management features not related to Windows software update management or OSD will no longer be tested on the operating systems covered under the ESU program and we don't guarantee that they'll continue to function. It's highly recommended to upgrade or migrate to a current version of the operating systems as soon as possible to receive client management support.
 
 
 ## Next steps
