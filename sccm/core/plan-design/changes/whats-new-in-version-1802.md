@@ -281,7 +281,7 @@ The **Windows 10 Servicing details for a specific collection** report displays g
 
 ### Improvements to Configuration Manager Policies for Windows Defender Exploit Guard
 <!-- 1356220 -->
-Additional policy settings for the [Attack Surface Reduction](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#bkmk_ASR) and [Controlled folder access](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#bkmk_CFA) components have been added in Configuration Manager for [Windows Defender Exploit Guard](https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/configure-attack-surface-reduction).
+Additional policy settings for the [Attack Surface Reduction](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#bkmk_ASR) and [Controlled folder access](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#bkmk_CFA) components have been added in Configuration Manager for [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-attack-surface-reduction).
 
 ### New host interaction settings for Windows Defender Application Guard
 <!-- 1356256 -->
