@@ -238,7 +238,7 @@ Class SMS_AzureService : SMS_BaseClass
 
  Type of Microsoft Azure service. Possible values below:  
 
-|Windows Asure Service|  
+|Windows Azure Service|  
 |---------------------------|  
 |CloudDistributionPoint|  
 
