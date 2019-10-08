@@ -36,7 +36,6 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [4561024](includes/1910/4561024.md)]
 [!INCLUDE [4383213](includes/1910/4383213.md)]
 [!INCLUDE [4433455](includes/1910/4433455.md)]
-[!INCLUDE [4572953](includes/1910/4572953.md)]
 [!INCLUDE [4679060](includes/1910/4679060.md)]
 [!INCLUDE [3721603](includes/1910/3721603.md)]
 [!INCLUDE [3607758](includes/1910/3607758.md)]

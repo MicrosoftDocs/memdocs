@@ -129,7 +129,6 @@ The following features are available with the most recent Configuration Manager 
 - [4561024](/sccm/core/get-started/2019/technical-preview-1910#bkmk_4561024) <!--4561024-->
 - [4383213](/sccm/core/get-started/2019/technical-preview-1910#bkmk_4383213) <!--4383213-->
 - [4433455](/sccm/core/get-started/2019/technical-preview-1910#bkmk_4433455) <!--4433455-->
-- [4572953](/sccm/core/get-started/2019/technical-preview-1910#bkmk_4572953) <!--4572953-->
 - [4679060](/sccm/core/get-started/2019/technical-preview-1910#bkmk_4679060) <!--4679060-->
 - [3721603](/sccm/core/get-started/2019/technical-preview-1910#bkmk_3721603) <!--3721603-->
 - [3607758](/sccm/core/get-started/2019/technical-preview-1910#bkmk_3607758) <!--3607758-->
