@@ -2,7 +2,7 @@
 title: Ports used for connections
 titleSuffix: Configuration Manager
 description: Learn about the required and customizable network ports that Configuration Manager uses for connections.
-ms.date: 04/11/2019
+ms.date: 10/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -154,7 +154,7 @@ For more information, see [Ports and data flow](/sccm/core/plan-design/hierarchy
 For more information, see [CMG Ports and data flow](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#ports-and-data-flow).
 
 
-###  <a name="BKMK_PortsClient-DP"></a> Client -- > Distribution point  
+###  <a name="BKMK_PortsClient-DP"></a> Client -- > Distribution point, both standard and pull  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -162,14 +162,14 @@ For more information, see [CMG Ports and data flow](/sccm/core/clients/manage/cm
 |HTTPS|--|443 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|  
 
 
-###  <a name="BKMK_PortsClient-DP2"></a> Client -- > Distribution point configured for multicast  
+###  <a name="BKMK_PortsClient-DP2"></a> Client -- > Distribution point configured for multicast, both standard and pull  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
 |Server Message Block (SMB)|--|445|  
 |Multicast protocol|63000-64000|--|  
 
-###  <a name="BKMK_PortsClient-DP3"></a> Client -- > Distribution point configured for PXE  
+###  <a name="BKMK_PortsClient-DP3"></a> Client -- > Distribution point configured for PXE, both standard and pull  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -324,7 +324,7 @@ The Configuration Manager console uses internet access for the following actions
 |SQL over TCP|--|1433 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|  
 
 
-###  <a name="BKMK_PortsDist_MP"></a> Distribution point -- > Management point  
+###  <a name="BKMK_PortsDist_MP"></a> Distribution point, both standard and pull -- > Management point  
 A distribution point communicates to the management point in the following scenarios:  
 
 - To report the status of prestaged content  
@@ -333,7 +333,7 @@ A distribution point communicates to the management point in the following scena
 
 - To report content validation  
 
-- To report the status of package downloads (pull-distribution point)
+- To report the status of package downloads (pull-distribution point only)
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -499,7 +499,7 @@ For more information, see [CMG Ports and data flow](/sccm/core/clients/manage/cm
 For more information, see [Ports and data flow](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_dataflow).
 
 
-###  <a name="BKMK_PortsSite-DP"></a> Site server -- > Distribution point  
+###  <a name="BKMK_PortsSite-DP"></a> Site server -- > Distribution point, both standard and pull  
  <sup>[Note 5](#bkmk_note5)</sup>  
 
 |Description|UDP|TCP|  
@@ -867,7 +867,7 @@ Application and package installations on distribution points require the followi
 Use IPsec to help secure the traffic between the site server and site systems. If you must restrict the dynamic ports that are used with RPC, you can use the Microsoft RPC configuration tool (rpccfg.exe) to configure a limited range of ports for these RPC packets. For more information about the RPC configuration tool, see [How to configure RPC to use certain ports and how to help secure those ports by using IPsec](https://support.microsoft.com/help/908472/how-to-configure-rpc-to-use-certain-ports-and-how-to-help-secure-those).  
 
 > [!IMPORTANT]  
->  Before you install these site systems, ensure that the remote registry service is running on the site system server and that you have specified a site system installation account if the site system is in a different Active Directory forest without a trust relationship.  
+>  Before you install these site systems, ensure that the remote registry service is running on the site system server and that you have specified a site system installation account if the site system is in a different Active Directory forest without a trust relationship. For example, the remote registry service is used on servers running site systems such as distribution points (both pull and standard), remote SQL servers, and the Application Catalog.
 
 
 ###  <a name="BKMK_PortsClientInstall"></a> Ports used by Configuration Manager client installation  
