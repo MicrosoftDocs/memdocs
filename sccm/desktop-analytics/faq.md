@@ -2,7 +2,7 @@
 title: FAQ for Desktop Analytics
 titleSuffix: Configuration Manager
 description: Frequently asked questions for Desktop Analytics.
-ms.date: 10/07/2019
+ms.date: 10/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -116,7 +116,7 @@ The migration process is transactional. You'll see either all inputs migrated wi
 
 ### I'm not ready yet, can I migrate after the initial onboarding?
 
-No, at this time you have to decide to migrate during [Initial onboarding](/sccm/desktop-analytics/set-up#initial-onboarding).
+Yes.<!-- 5202803 --> Existing Windows Analytics customers can now migrate data after initial onboarding. Go to **Connected services** in the Desktop Analytics portal, and select the option to migrate data from Windows Analytics.
 
 ### Can I use Update Compliance together with Desktop Analytics?
 
