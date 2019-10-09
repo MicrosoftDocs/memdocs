@@ -15,9 +15,6 @@ ms.collection: M365-identity-device-management
 
 # Assets in Desktop Analytics
 
-> [!Note]  
-> This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
-
 After devices report data to Desktop Analytics, it provides an inventory of the following assets:
 
 - Devices

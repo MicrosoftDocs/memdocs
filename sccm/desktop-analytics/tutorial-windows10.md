@@ -16,9 +16,6 @@ ms.collection: M365-identity-device-management
 
 # Tutorial: Deploy Windows 10 to pilot
 
-> [!Note]  
-> This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
-
 This tutorial uses Desktop Analytics and Configuration Manager to deploy Windows 10 to a pilot group. It highlights the integration of the cloud service to deliver insights to deploy Windows with the on-premises product. Use Desktop Analytics to determine the best devices to put in a pilot group. Then use Configuration Manager to get current with Windows.
 
 In this tutorial, you learn how to:  
