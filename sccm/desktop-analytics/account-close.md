@@ -87,6 +87,12 @@ The Desktop Analytics data ages out based on your data retention policy for the 
 
 1. Delete the Desktop Analytics service.
 
+## Delete collections for the pilot and production deployments 
+
+1. In the **Assets and Compliance** workspace, select **Device Collections** 
+
+1. Delete any collections you are no longer using.  By default they are located under the **Deployment Plans** folder  
+
 ## Reconfigure clients
 
 ### Unenroll devices
