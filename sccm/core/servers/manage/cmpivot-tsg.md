@@ -15,15 +15,15 @@ ms.collection: M365-identity-device-management
 
 # Troubleshoot CMPivot
 
-CMPivot is a utility that provides access to a real-time state of the devices in your environment. CMPivot runs a query on all currently connected devices in the target collection and returns the results.
+CMPivot is a tool that provides access to a real-time state of the devices in your environment. CMPivot runs a query on all currently connected devices in the target collection and returns the results.
 
-Occasionally, you may need to troubleshoot CMPivot. For example, if a state message from a client to CMPivot gets corrupted, the site server can't process the message. This article helps you understand the flow of information for CMPivot.
+Occasionally, you might need to troubleshoot CMPivot. For example, if a state message from a client to CMPivot gets corrupted, the site server can't process the message. This article helps you understand the flow of information for CMPivot.
 
 ## <a name="bkmk_CMPivot-1902"></a> Troubleshoot CMPivot in version 1902 and later
 
-In Configuration Manager versions 1902 and later, you can run CMPivot from the central administration site (CAS) in a hierarchy. The primary site still handles the communication to the client.
+In System Center Configuration Manager versions 1902 and later, you can run CMPivot from the central administration site (CAS) in a hierarchy. The primary site still handles the communication to the client.
 
-When you run CMPivot from CAS, it uses the high-speed message subscription channel to communicate with the primary site. CMPivot doesn't use standard SQL replication between sites. If your SQL Server or Provider is remote, or if you use SQL Always On, you'll have a "double hop scenario" for CMPivot. For information on how to define constrained delegation for a "double hop scenario", see [CMPivot starting in version 1902](/sccm/core/servers/manage/cmpivot#bkmk_cmpivot1902).
+When you run CMPivot from CAS, it uses the high-speed message subscription channel to communicate with the primary site. CMPivot doesn't use standard SQL replication between sites. If your SQL Server instance or your SQL provider is remote, or if you use SQL Server Always On, you'll have a "double hop scenario" for CMPivot. For information on how to define constrained delegation for a "double hop scenario", see [CMPivot starting in version 1902](/sccm/core/servers/manage/cmpivot#bkmk_cmpivot1902).
 
 >[!IMPORTANT]
 > When troubleshooting CMPivot, enable verbose logging on your management points (MPs) and on the site server's SMS_MESSAGE_PROCESSING_ENGINE to get more information. Also, if the client's output is larger than 80 KB, enable verbose logging on the MP and the site server's SMS_STATE_SYSTEM component. For information about how to enable verbose logging, see [Site server logging options](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_reg-site).
@@ -109,7 +109,7 @@ In `BgbServer.log`, look for the `PushID` to see the number of clients that repo
 <pre><code lang="Log">Generated BGB task status report c:\ConfigMgr\inboxes\bgb.box\Bgb5c1db.BTS at 09/16/2019 16:46:39. (<b>PushID: 9</b> ReportedClients: 2 FailedClients: 0)
 </code></pre>
 
-Check the monitoring view for CMPivot from SQL using the `TaskID`.
+Check the monitoring view for CMPivot from SQL by using the `TaskID`.
 
 ``` SQL
 select * from vSMS_CMPivotStatus where TaskID='{9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0}'
