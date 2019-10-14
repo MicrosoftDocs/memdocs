@@ -215,8 +215,38 @@ To approve application requests outside of the internal network, additional sett
     [ ![Azure portal showing redirect URI for the registered app](media/client-app-redirect-uri.png)](media/client-app-redirect-uri.png#lightbox)
   
    - **Manifest**: Set **oauth2AllowImplicitFlow** to **true**. For example: `"oauth2AllowImplicitFlow": true,`
-    [ ![Azure portal showing teh manifest for the registered app](media/client-app-manifest.png)](media/client-app-manifest.png#lightbox)
+    [ ![Azure portal showing the manifest for the registered app](media/client-app-manifest.png)](media/client-app-manifest.png#lightbox)
 
+### Test the email approval process
+
+Let’s walk through the end-to-end scenario:
+
+1. The administrator deploys an application as available to a user collection. On the **Deployment Settings** page they enable it for approval. Also, the admin enters a few email addresses to receive notification about application requests.
+[ ![Deployment creation with approving admin email addresses](media/approval-email-specify-admins.png)](media/approval-email-specify-admins.png#lightbox)
+1. The user sees the new application in Software Center and sends the request for it. The site sends the email notification within 5 minutes to the addresses specified in the application deployment.
+![Sample email to an approving admin](media/sample-approval-email.png)
+1. An email receiver chooses **Approve** or **Deny**. A success message is shown in the browser if the site successfully processed the application request.
+   - If an application request is approved or denied via email, the links expire and can't be used by anyone else.
+
+### Known issues
+
+1. A 404 error is shown after `Approve` or `Deny` links clicked.
+   - There isn't a certificate bound to the Admin Service. Check if the Configuration Manager-generated certificates feature is enabled. Otherwise, set up your own PKI certificates infrastructure.
+   - Check `SMS_REST_PROVIDER.log` for any errors.
+1. `There is a problem with this security certificate` warning after `Approve` or `Deny` links are clicked.
+   - Configuration Manager-generated certificate isn't trusted by the web browser on the client. It's recommended to set up PKI certificates infrastructure when links are used in the internal network.
+1. `Service is unavailable, HTTP Error 503` message.
+   - Check if the Admin Service is running. On a provider machine, go to **Task Manager** > **Details**. Make sure there is an active process called `sccmprovidergraph.exe`
+   - Open the Configuration Manager Console, **Administration** > **Site Configuration** > **Servers and Site Systems Roles** > **SMS Provider**.  Right click on **Properties**. Make sure that `Allow Configuration Manager cloud management gateway traffic.` is checked when email approval feature is intended to use with Cloud Management Gateway; and not checked when the feature is used to approve or deny requests in the internal network.
+1. Links to approve or deny request through Cloud Management Gateway don't work.
+   - Verify that Azure AD User Discovery is enabled.
+   - Make sure that e-mail address specified during application deployment belongs to your organization.
+1. Email isn't sent when a user requested an application.
+   - Verify the email address is correct.
+   - Make sure email notifications for alerts are configured.
+   - Check `NotiCtrl.log` for errors.
+1. Error in the **Create Application Deployment** wizard.
+   - Make sure the administrator has rights to create subscription because the subscription will be automatically created during application deployment.
 
 
 
