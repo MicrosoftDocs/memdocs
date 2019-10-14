@@ -76,7 +76,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
     - `https://oca.telemetry.microsoft.com`  
     - `https://login.live.com`  
     - `https://graph.windows.net` (on Configuration Manager server role only)
-    - `https://fef.msua06.manage.microsoft.com` (on Configuration Manager server role only)
+    - `https://*.manage.microsoft.com` (on Configuration Manager server role only)
 
     For more information, see [How to enable data sharing for Desktop Analytics](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
 
