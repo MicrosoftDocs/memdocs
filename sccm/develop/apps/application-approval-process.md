@@ -26,7 +26,7 @@ The user browses the list of applications in Software Center but can’t install
 > Configuration Manager doesn't enable this feature by default. Before using it, enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).
 
 
-Software Center requires the user to submit the request for the application from their device. The user sees this in Software Center:
+Software Center requires the user to submit the request for the application from their device. The user sees this message in Software Center:
 
 [ ![User requests application that needs approval from Software Center](media/user-requests-approval-software-center.png)](media/user-requests-approval-software-center.png#lightbox)
 
@@ -150,9 +150,9 @@ Setting the `autoInstall` parameter to `false` has no effect in Configuration Ma
 
 [ ![Console showing application approved for all users of specific device](media/approved-for-device-console.png)](media/approved-for-device-console.png#lightbox)
 
-## Scenario 5: Re-approve a previously denied application request
+## Scenario 5: Reapprove a previously denied application request
 
-You have the ability to re-approve and application request that was previously denied. Re-approval is available only through the SDK API. The following PowerShell sample script demonstrates approving a request after it has been denied:
+You have the ability to reapprove and application request that was previously denied. Reapproval is available only through the SDK API. The following PowerShell sample script demonstrates approving a request after it has been denied:
 
 ```powershell
 $machinename = $args[0]
@@ -181,14 +181,14 @@ Administrators can configure email notifications for application approval reques
 
 1. The server with the SMS Provider role must have .NET version 4.5.2 or higher installed.
 1. Enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).
-1. If PKI certificate infrastructure is not set up, Configuration Manager-generated certificates feature should be enabled. Select the primary site under **Administration** > **Site Configuration** > **Sites**. Open the properties dialog and choose the **Client Computer Communication** tab. Enable the **Use Configuration Manager-generated certificates for HTTP client systems** checkbox.
+1. If PKI certificate infrastructure isn't set up, Configuration Manager-generated certificates feature should be enabled. Select the primary site under **Administration** > **Site Configuration** > **Sites**. Open the properties dialog and choose the **Client Computer Communication** tab. Enable the **Use Configuration Manager-generated certificates for HTTP client systems** checkbox.
 
    > [!NOTE]
    > This checkbox is per primary site but if the checkbox is enabled on **any** of the primary sites, then Configuration Manager-generated certificates will be used on all providers, including the CAS and other primary sites.
 
 ### Configure email notifications
 
-1. In the Configuration Manager console go to **Administration** > **Site Configuration** -> **Sites**.
+1. In the Configuration Manager console, go to **Administration** > **Site Configuration** -> **Sites**.
 1. Select the top-level site in your hierarchy and select **Configure Site Components** in the ribbon.
 1. Select **Email Notification** to open the **Properties** dialog.
 1. Check **Enable email notification for alerts** and specify the port of your SMTP server. If you’re using Office 365, you can use the [Office 365 SMTP server](https://docs.microsoft.com/Exchange/mail-flow-best-practices/how-to-set-up-a-multifunction-device-or-application-to-send-email-using-office-3#option-3-configure-a-connector-to-send-mail-using-office-365-smtp-relay).
