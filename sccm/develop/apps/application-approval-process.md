@@ -28,23 +28,23 @@ The user browses the list of applications in Software Center but can’t install
 
 Software Center requires the user to submit the request for the application from their device. The user sees this in Software Center:
 
-:::image type="content" source="media/user-requests-approval-software-center.png" alt-text="User requests application that needs approval from Software Center":::
+[ ![User requests application that needs approval from Software Center](media/user-requests-approval-software-center.png)](media/user-requests-approval-software-center.png#lightbox)
 
 The user specifies why they want the application and submits the approval request:
 
-:::image type="content" source="media/user-request-submitted-software-center.png" alt-text="User notified that their approval request was submitted in Software Center":::
+[ ![User notified that their approval request was submitted in Software Center](media/user-request-submitted-software-center.png)](media/user-request-submitted-software-center.png#lightbox)
 
 Once the admin approves the request, the user can install the application on their device. If the user takes no action, the application is automatically installed for the user during non-business hours.
 
-:::image type="content" source="media/users-request-approved-software-center.png" alt-text="User installing approved application from Software Center":::
+[ ![User installing approved application from Software Center](media/users-request-approved-software-center.png)](media/users-request-approved-software-center.png#lightbox)
 
-## Scenario 2: Integrate an application approval system 
+## Scenario 2: Integrate an application approval system
 
 The Northwind Traders has an existing application approval system, and the admin wants to integrate the approval system with Configuration Manager.
 
 The admin deploys an application to all users and configures it to require approval. Then, the admin enables the Software Center client setting to **Hide unapproved applications in Software Center**.
 
-:::image type="content" source="media/admin-hides-unapproved-applications.png" alt-text="Hide unapproved applications Software Center option":::
+[ ![Hide unapproved applications Software Center option](media/admin-hides-unapproved-applications.png)](media/admin-hides-unapproved-applications.png#lightbox)
 
 With this option, the user doesn’t see the application in Software Center until the application request is approved for installation on the device. When approval is granted via the organization’s approval system, the orchestration system can make an approved request for the user and their device in Configuration Manager. The orchestration systems used the `CreateApprovedRequest` WMI method in Configuration Manager. This method then uses the existing Configuration Manager application deployment mechanism. It doesn’t modify collection memberships, and it takes effect immediately. The application is now available to the user in Software Center.
 
@@ -90,7 +90,7 @@ The following command line runs the sample script:
 
 The admin can still see the approved requests in the Configuration Manager console from **Software Library** > **Application Management** > **Approval Requests**.
 
-:::image type="content" source="media/approval-requests-console.png" alt-text="Application requests node in the Configuration Manager console":::
+[ ![Application requests node in the Configuration Manager console](media/approval-requests-console.png)](media/approval-requests-console.png#lightbox)
 
 ### Limitations
 
@@ -148,7 +148,7 @@ The following command line runs the sample script:
 
 Setting the `autoInstall` parameter to `false` has no effect in Configuration Manger for machine-based pre-approved request. As soon as the pre-approved request is created on the site, the device will attempt to install the application. You can deny the approval request to remove the application from the device.
 
-:::image type="content" source="media/approved-for-device-console.png" alt-text="Console showing application approved for all users of specific device":::
+[ ![Console showing application approved for all users of specific device](media/approved-for-device-console.png)](media/approved-for-device-console.png#lightbox)
 
 ## Scenario 5: Re-approve a previously denied application request
 
@@ -197,8 +197,27 @@ Administrators can configure email notifications for application approval reques
 1. Provide a username and password for the new account and click **OK**.
 1. Enter the **Sender address for email alerts**.
 1. Click **Apply**.
+1. You can test the SMTP server by sending an email sample. Select **Test SMTP Server** in the Email Notification Properties dialog. 
+   - Review errors in `NotiCtlr.log`.
+   - It's recommended to configure SSL with a PKI certificate on the SMS Provider to successfully approve or deny the request in the internal network when cloud management gateway isn’t set up. Otherwise, you’ll see the page containing the warning “There is a problem with this security certificate”.
 
-:::image type="content" source="media/email-notification-component-properties.png" alt-text="Email notification component properties in the Configuration Manager console":::
+[ ![Email notification component properties in the Configuration Manager console](media/email-notification-component-properties.png)](media/email-notification-component-properties.png#lightbox)
+
+### Aprove application requests outside of the internal network
+
+To approve application requests outside of the internal network, additional settings are required:
+
+1. Enable Allow Configuration Manager cloud management gateway traffic in **Administration** > **Site Configuration** > **Servers and Site Systems Roles** > **SMS Provider** > **Properties**.
+1. Configure the [Cloud Management Gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).
+1. Enable [Azure AD User Discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc).
+1. Configure the following settings for this native app (client app) in Azure AD. These settings should be configured manually in the [Azure portal](https://portal.azure.com/).
+   - **Redirect URI**: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`. Use the fully qualified domain name of the cloud management gateway (CMG) service, for example, GraniteFalls.Contoso.com.
+    [ ![Azure portal showing redirect URI for the registered app](media/client-app-redirect-uri.png)](media/client-app-redirect-uri.png#lightbox)
+  
+   - **Manifest**: Set **oauth2AllowImplicitFlow** to **true**. For example: `"oauth2AllowImplicitFlow": true,`
+    [ ![Azure portal showing teh manifest for the registered app](media/client-app-manifest.png)](media/client-app-manifest.png#lightbox)
+
+
 
 
 
