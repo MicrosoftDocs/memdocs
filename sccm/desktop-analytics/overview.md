@@ -111,13 +111,13 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 ### Licensing and costs
 
-Desktop Analytics requires one of the following license subscriptions:
+Devices enrolled in Desktop Analytics may only be used by licensed users of:
 
-- Windows 10 Enterprise E3 or E5; or Microsoft 365 F1, E3, or E5  
+- Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F1, E3, or E5)
 
-- Windows 10 Education A3 or A5; or Microsoft 365 A3 or A5  
+- Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
 
-- Windows VDA E3 or E5  
+- Windows Virtual Desktop Access E3 or E5  
 
 Beyond the cost of license subscriptions, there's no additional cost for using Desktop Analytics. Within Azure Log Analytics, Desktop Analytics is "zero-rated." This rating means it's excluded from data limits and costs, regardless of the Azure Log Analytics pricing tier you chose. For more information on Azure Log Analytics pricing tiers, see [Pricing - Log Analytics](https://azure.microsoft.com/pricing/details/monitor/).
 
