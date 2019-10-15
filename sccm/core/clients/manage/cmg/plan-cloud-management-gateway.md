@@ -134,19 +134,11 @@ As clients roam onto the internet, they communicate with the CMG in the East US 
 
 Fourth Coffee has a central administration site in an on-premises datacenter at their headquarters in Seattle. One primary site is in the same datacenter, and the other primary site is in their main European office in Paris.
 
-- On the central administration site, they create two CMG services:
-     - One CMG in the West US Azure region.
-     - One CMG in the West Europe Azure region.
+- On the central administration site, they create a CMG service in the West US Azure region.
 - On the Seattle-based primary site, they create a CMG connection point linked to the West US CMG.
-- On the Paris-based primary site, they create a CMG connection point linked to the West Europe CMG.
+- On the Paris-based primary site, they create a CMG connection point linked to the West US CMG.
 
-As Seattle-based clients roam onto the internet, they communicate with the CMG in the West US Azure region. The CMG forwards this communication to the Seattle-based CMG connection point.
-
-Similarly, as Paris-based clients roam onto the internet, they communicate with the CMG in the West Europe Azure region. The CMG forwards this communication to the Paris-based CMG connection point. When Paris-based users travel to the company headquarters in Seattle, their computers continue to communicate with the CMG in the West Europe Azure region.
-
-> [!Note]  
-> Fourth Coffee considered creating another CMG connection point on the Paris-based primary site linked to the West US CMG. Paris-based clients would then use both CMGs, regardless of their location. While this configuration helps load balance traffic and provide service redundancy, it can also cause delays when Paris-based clients communicate with the US-based CMG. Configuration Manager clients aren't currently aware of their geographical region, so don't prefer a CMG that's geographically closer. Clients randomly use an available CMG.
-
+As clients roam onto the internet, they communicate with the CMG in the West US Azure region. The CMG forwards this communication to the Seattle-based CMG connection point.
 
 ## Requirements
 
