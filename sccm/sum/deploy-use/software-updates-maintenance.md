@@ -145,9 +145,9 @@ Consider the following scenario:
 <!--5418148-->
 - You are using Configuration Manager version 1906
 - You have remote software update points using a Windows Internal Database
-- Under Software Update Point component properties, you have any of the following selected options:
-   - Remove obsolete updates from the WSUS database
+- In the **Software Update Point Component Properties**, you have any of the following selected options under the **WSUS Maintenance** tab:
    - Add non-clustered indexes to the WSUS database
+   - Remove obsolete updates from the WSUS database
 
 In this scenario, Configuration Manager is unable to perform the above WSUS Maintenance tasks for the remote Software Updates Points using a Windows Internal Database. This issue occurs because Windows Internal Database doesn't allow remote connections. You'll see the following errors in the `WSyncMgr.log` on the site server:
 
