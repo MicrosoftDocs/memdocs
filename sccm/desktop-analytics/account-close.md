@@ -15,9 +15,6 @@ ms.collection: M365-identity-device-management
 
 # How to close your account
 
-> [!Note]  
-> This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
-
 If you set up Desktop Analytics in your environment, and then decide you need to remove it, use this process to close your account.
 
 ## Prerequisites

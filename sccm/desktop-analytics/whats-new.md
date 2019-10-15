@@ -15,9 +15,6 @@ manager: dougeby
 
 # What's new in Desktop Analytics
 
-> [!Note]  
-> This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
-
 Learn what's new each month in Desktop Analytics.
 
 > [!Tip]

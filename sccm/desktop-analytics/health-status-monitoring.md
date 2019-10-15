@@ -15,9 +15,6 @@ ms.collection: M365-identity-device-management
 
 # Health status monitoring in Desktop Analytics
 
-> [!Note]  
-> This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
-
 As you [deploy an update to production](/sccm/desktop-analytics/deploy-prod), use Desktop Analytics to help monitor the health state of your devices. This article explains in detail how health monitoring works.
 
 For more information on how to use this feature, see [Monitor the health of updated devices](/sccm/desktop-analytics/deploy-prod#bkmk_monitor).

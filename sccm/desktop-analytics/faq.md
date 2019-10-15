@@ -15,9 +15,6 @@ ms.collection: M365-identity-device-management
 
 # Desktop Analytics FAQ
 
-> [!Note]  
-> This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
-
 ## Prerequisites
 
 ### <a name="bkmk_intune"></a> Can I use Desktop Analytics with Intune-managed devices? 
