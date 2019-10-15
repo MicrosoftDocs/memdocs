@@ -3,7 +3,7 @@ title: Software updates maintenance
 titleSuffix: "Configuration Manager"
 description: "To maintain updates in Configuration Manager, you can schedule the WSUS cleanup task, or you can run it manually."
 author: mestew
-ms.date: 07/30/2019
+ms.date: 10/17/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -138,6 +138,27 @@ When the WSUS database is on a remote SQL server, the site server's computer acc
 
 - The `db_datareader` and `db_datawriter` fixed database roles. For more information, see [Database-Level Roles](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-2017#fixed-database-roles).
 - The `CONNECT SQL` server permission must be granted to the site server's computer account. For more information, see [GRANT Server Permissions (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017).
+
+### Known issues for version 1906
+
+Consider the following scenario:
+<!--5418148-->
+- You are using Configuration Manager version 1906
+- You have remote software update points using a Windows Internal Database
+- In the **Software Update Point Component Properties**, you have any of the following selected options under the **WSUS Maintenance** tab:
+   - Add non-clustered indexes to the WSUS database
+   - Remove obsolete updates from the WSUS database
+
+In this scenario, Configuration Manager is unable to perform the above WSUS Maintenance tasks for the remote Software Updates Points using a Windows Internal Database. This issue occurs because Windows Internal Database doesn't allow remote connections. You'll see the following errors in the `WSyncMgr.log` on the site server:
+
+```text
+Indexing Failed. Could not connect to SUSDB.
+SqlException thrown while connect to SUSDB in Server: <SUP.CONTOSO.COM>. Error Message: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+...
+Could not Delete Obselete Updates because ConfigManager could not connect to SUSDB: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) UpdateServer: <SUP.CONTOSO.COM>
+```
+
+To work around the issue, you can automate the WSUS maintenance for the remote software update points using a Windows Internal Database. For more information and detailed steps, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://support.microsoft.com/help/4490644/complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maint).
 
 ## Updates cleanup log entries
 

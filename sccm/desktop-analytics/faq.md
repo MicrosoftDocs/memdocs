@@ -2,7 +2,7 @@
 title: FAQ for Desktop Analytics
 titleSuffix: Configuration Manager
 description: Frequently asked questions for Desktop Analytics.
-ms.date: 10/14/2019
+ms.date: 10/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -31,6 +31,17 @@ When you first set up Desktop Analytics, the reports in Configuration Manager an
 - Check devices that you've associated with your organization in the last seven days. In the [Desktop Analytics portal](https://aka.ms/desktopanalytics), go to the **Connected services** pane. Select **Enroll devices**, and **View recent data**
 
 If devices are properly configured, and you're still not seeing data in your workspace, [contact Microsoft support](https://support.microsoft.com/hub/4343728/support-for-business).
+
+## Connect Configuration Manager
+
+### Can I change the target or additional collections? 
+
+- In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Services** node. Open the properties for the entry associated with your Desktop Analytics service. 
+
+- On the **Desktop Analtyics Connection** tab, change the **Target Collection** or manage the additional collections.
+
+> [!IMPORTANT]  
+> Configuration Manager uses a settings policy to configure devices in the target collection. This policy includes the diagnostic data settings to enable devices to send data to Microsoft. Changing the target collection doesn't undo the settings policy on devices no longer in the target collection. If you don't want your devices to continue sending diagnostic data, [reconfigure the devices](/sccm/desktop-analytics/account-close#reconfigure-clients).
 
 ## Windows upgrade
 
@@ -119,7 +130,7 @@ Yes.<!-- 5202803 --> Existing Windows Analytics customers can now migrate data a
 
 Yes. If you use [Update Compliance](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started) in the Azure portal today, you can continue to do so now and beyond January 2020.
 
-For more information, see the blog post: [Migrate user input data from "Windows Analytics: Upgrade Readiness" to Desktop Analytics](https://techcommunity.microsoft.com/t5/Desktop-Analytics-Blog/Migrate-user-input-data-from-Windows-Analytics-Upgrade-Readiness/ba-p/841744).
+For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
 
 ### Are there any Windows Analytics features that aren't available in Desktop Analytics?
 
