@@ -15,9 +15,6 @@ ms.collection: M365-identity-device-management
 
 # About deployment plans in Desktop Analytics
 
-> [!Note]  
-> This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
-
 Desktop Analytics collects and analyzes device, application, and driver data in your organization. Based on this analysis and your input, you can use the service to create deployment plans for Windows 10. Deployment plans have the following features:  
 
 - Automatically recommend which devices to include in pilots  
