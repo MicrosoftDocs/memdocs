@@ -34,9 +34,11 @@ If devices are properly configured, and you're still not seeing data in your wor
 
 ## Connect Configuration Manager
 
-### Can I change the target or additional collections? 
+### Can I change the target or additional collections?
 
-- In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Services** node. Open the properties for the entry associated with your Desktop Analytics service. 
+Yes, use the following process:
+
+- In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Services** node. Open the properties for the entry associated with your Desktop Analytics service.
 
 - On the **Desktop Analtyics Connection** tab, change the **Target Collection** or manage the additional collections.
 

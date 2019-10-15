@@ -22,7 +22,7 @@ ms.collection: M365-identity-device-management
 >
 > [Desktop Analytics](/sccm/desktop-analytics/overview) is the evolution of Windows Analytics. Existing Windows Analytics customers can [migrate data to Desktop Analytics](/sccm/desktop-analytics/faq#existing-windows-analytics-customers).
 >
-> For more information, see the [Desktop Analytics blog post](https://techcommunity.microsoft.com/t5/Desktop-Analytics-Blog/Migrate-user-input-data-from-Windows-Analytics-Upgrade-Readiness/ba-p/841744).
+> For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
 
 Upgrade Readiness is a part of [Windows Analytics](https://docs.microsoft.com/windows/deployment/upgrade/manage-windows-upgrades-with-upgrade-readiness). It allows you to assess and analyze the readiness of devices in your environment for an upgrade to Windows 10. Integrate Upgrade Readiness with Configuration Manager to access client upgrade compatibility data in the Configuration Manager console. Then use this data to create collections, and target devices for upgrade or remediation.
 
