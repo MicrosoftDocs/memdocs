@@ -2,7 +2,7 @@
 title: Desktop Analytics data privacy
 titleSuffix: Configuration Manager
 description: Desktop Analytics is committed to customer data privacy
-ms.date: 06/13/2019
+ms.date: 10/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -25,7 +25,7 @@ Desktop Analytics is fully committed to customer data privacy, centering on thes
 
 - **Trust:** Desktop Analytics supports the Microsoft [Privacy Statement](https://privacy.microsoft.com/privacystatement) and [Online Service Terms](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).  
 
-
+For more information, see [Windows services where Microsoft is the processor under the GDPR](https://docs.microsoft.com/windows/privacy/gdpr-it-guidance#windows-services-where-microsoft-is-the-processor-under-the-gdpr).<!-- 5353168 -->
 
 ## Diagnostic data flow
 
@@ -52,8 +52,6 @@ The following illustration shows how diagnostic data flows from individual devic
 5. The snapshots are then copied to the appropriate Azure Log Analytics workspace.  
 
 6. Desktop Analytics stores your input in Azure Log Analytics storage. These configurations include deployment plans, and asset decisions for upgrade and importance.  
-
-
 
 ## Other resources
 

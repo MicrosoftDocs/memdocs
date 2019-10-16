@@ -2,7 +2,7 @@
 title: How to close your account
 titleSuffix: Configuration Manager
 description: How to remove Desktop Analytics from your Azure account
-ms.date: 09/10/2019
+ms.date: 10/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -14,9 +14,6 @@ ms.collection: M365-identity-device-management
 ---
 
 # How to close your account
-
-> [!Note]  
-> This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
 
 If you set up Desktop Analytics in your environment, and then decide you need to remove it, use this process to close your account.
 
@@ -86,6 +83,12 @@ The Desktop Analytics data ages out based on your data retention policy for the 
 1. Go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Services** node.
 
 1. Delete the Desktop Analytics service.
+
+### Delete collections for the pilot and production deployments
+
+1. In the Configuration Manager console, select **Device Collections** in the **Assets and Compliance** workspace.
+
+1. Delete any collections you're no longer using. By default, the collections are located under the **Deployment Plans** folder.  
 
 ## Reconfigure clients
 

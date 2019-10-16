@@ -15,9 +15,6 @@ ms.collection: M365-identity-device-management
 
 # How to create deployment plans in Desktop Analytics
 
-> [!Note]  
-> This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
-
 This article provides the steps for creating a deployment plan in Desktop Analytics. Before you start, first [learn about deployment plans](/sccm/desktop-analytics/about-deployment-plans).
 
 ## Create a plan for Windows 10
