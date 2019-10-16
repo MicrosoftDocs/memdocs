@@ -17,9 +17,6 @@ manager: dougeby
 
 <!-- 3733897 -->
 
-> [!Note]  
-> This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
-
 If you set up Desktop Analytics in your environment, but want to start over with onboarding and enrollment, use this process to reset your account.
 
 ## Prerequisites

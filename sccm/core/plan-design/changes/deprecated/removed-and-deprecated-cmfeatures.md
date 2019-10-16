@@ -2,7 +2,7 @@
 title: Deprecated features
 titleSuffix: Configuration Manager
 description: Learn about the features that Configuration Manager no longer supports.
-ms.date: 09/06/2019
+ms.date: 10/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -27,6 +27,7 @@ The following features are deprecated. You can still use them now, but Microsoft
 
 |Feature|Deprecation first announced|Support&nbsp;removed|  
 |-----------|---|--------------|  
+| [Windows Analytics](/sccm/core/clients/manage/monitor-windows-analytics) and [Upgrade Readiness](/sccm/core/clients/manage/upgrade-readiness) integration. For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement). | October 14, 2019 | January 31, 2020 |
 | Device health attestation assessment for conditional access compliance policies <!--1235616 aka 3608202--> For more information, see [Manage access to Office 365 services for PCs managed by Configuration Manager](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm#step-1-configure-compliance-policy).| July 3, 2019 | The first version released after November 1, 2019 |
 | The Configuration Manager Company Portal app | May 21, 2019 | The first version released after November 1, 2019|
 | The application catalog, including both site system roles: the application catalog website point and web service point. For more information, see [Remove the application catalog](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat). | May 21, 2019 | The first version released after November 1, 2019|

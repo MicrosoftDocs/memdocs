@@ -15,9 +15,6 @@ ms.collection: M365-identity-device-management
 
 # How to set up Desktop Analytics
 
-> [!Note]  
-> This information relates to a preview service which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
-
 Use this procedure to sign in to Desktop Analytics and configure it in your subscription. This procedure is a one-time process to set up Desktop Analytics for your organization.  
 
 
