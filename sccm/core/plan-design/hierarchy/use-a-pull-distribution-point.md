@@ -34,9 +34,6 @@ Pull-distribution points support the same configurations and functionality as ty
 - The same certificate options as other distribution points
 - Manage individually or as a member of a distribution point group  
 
-> [!IMPORTANT]  
-> Although a pull-distribution point supports communications over HTTP and HTTPS, when you use the Configuration Manager console, you can only specify source distribution points that are configured for HTTP. You can use the Configuration Manager SDK to specify a source distribution point that is configured for HTTPS.  
-
 Configure a pull-distribution point when you install the distribution point. After you create a distribution point, configure it as a pull-distribution point by editing the role properties. For more information on how to enable a distribution point as a pull-distribution point, see [Pull-distribution point](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pull).  
 
 Remove the configuration to be a pull-distribution point by editing the properties of the distribution point. When you remove the configuration as a pull-distribution point, it returns to normal operation. The site server manages future content transfers to the distribution point.  
