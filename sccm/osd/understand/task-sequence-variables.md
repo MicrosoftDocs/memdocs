@@ -2,7 +2,7 @@
 title: Task sequence variable reference
 titleSuffix: Configuration Manager
 description: Learn about the variables to control and customize a Configuration Manager task sequence.
-ms.date: 08/23/2019
+ms.date: 10/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -1523,24 +1523,6 @@ Indicates that a restart is requested after the current task sequence step is co
 ### <a name="SMSTSRetryRequested"></a> SMSTSRetryRequested
 
 Requests a retry after the current task sequence step is completed. If this task sequence variable is set, also set the [SMSTSRebootRequested](#SMSTSRebootRequested) variable to `true`. After the computer is restarted, the task sequence manager reruns the same task sequence step.
-
-### <a name="SMSTSRunCommandLineUserName"></a> SMSTSRunCommandLineUserName
-
-*Applies to the [Run Command Line](task-sequence-steps.md#BKMK_RunCommandLine) step.*
-
-(input)
-
-Specifies the account by which the command line is run. The value is a string of the form username or domain\username. Specify the account password with the [SMSTSRunCommandLinePassword](#SMSTSRunCommandLinePassword) variable.
-
-For more information on the task sequence run-as account, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#task-sequence-run-as-account).
-
-### <a name="SMSTSRunCommandLinePassword"></a> SMSTSRunCommandLinePassword
-
-*Applies to the [Run Command Line](task-sequence-steps.md#BKMK_RunCommandLine) step.*
-
-(input)
-
-Specifies the password for the account specified by the [SMSTSRunCommandLineUserName](#SMSTSRunCommandLineUserName) variable.
 
 ### <a name="SMSTSSoftwareUpdateScanTimeout"></a> SMSTSSoftwareUpdateScanTimeout
 
