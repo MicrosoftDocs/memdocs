@@ -118,16 +118,16 @@ The following features are available with the most recent Configuration Manager 
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID-->
 
-- [Deploy Microsoft Edge, version 77 and later](/sccm/core/get-started/2019/technical-preview-1910#bkmk_bkmk_Microsoft_Edge) <!--4561024-->
-- [Include custom configuration baselines as part of compliance policy assessment](/sccm/core/get-started/2019/technical-preview-1910#bkmk_bkmk_Cabaselines) <!--3608345-->
-- [Improvements to application groups](/sccm/core/get-started/2019/technical-preview-1910#bkmk_bkmk_appgrp) <!--4760058-->
-- [Reclaim SEDO lock](/sccm/core/get-started/2019/technical-preview-1910#bkmk_bkmk_sedo) <!--4786915-->
+- [Deploy Microsoft Edge, version 77 and later](/sccm/core/get-started/2019/technical-preview-1910#bkmk_Microsoft_Edge) <!--4561024-->
+- [Include custom configuration baselines as part of compliance policy assessment](/sccm/core/get-started/2019/technical-preview-1910#bkmk_Cabaselines) <!--3608345-->
+- [Improvements to application groups](/sccm/core/get-started/2019/technical-preview-1910#bkmk_appgrp) <!--4760058-->
+- [Reclaim SEDO lock](/sccm/core/get-started/2019/technical-preview-1910#bkmk_sedo) <!--4786915-->
 - [Attach files to feedback](/sccm/core/get-started/2019/technical-preview-1910#attach-files-to-feedback) <!--3556011-->
-- [Client diagnostic actions](/sccm/core/get-started/2019/technical-preview-1910#bkmk_bkmk_diag) <!--4433455-->
-- [Office 365 ProPlus pilot and health dashboard](/sccm/core/get-started/2019/technical-preview-1910#bkmk_office-365-proplus-pilot-and-health-dashboard) <!--4488272-->
-- [Improvements to console search](/sccm/core/get-started/2019/technical-preview-1910#bkmk_bkmk_search) <!--4640570-->
-- [New variable for Windows 10 in-place upgrade](/sccm/core/get-started/2019/technical-preview-1910#bkmk_bkmk_osdvar) <!--4680263-->
-- [Improvements to Windows Virtual Desktop support](/sccm/core/get-started/2019/technical-preview-1910#bkmk_bkmk_wvd) <!--4737447-->
+- [Client diagnostic actions](/sccm/core/get-started/2019/technical-preview-1910#bkmk_diag) <!--4433455-->
+- [Office 365 ProPlus pilot and health dashboard](/sccm/core/get-started/2019/technical-preview-1910#office-365-proplus-pilot-and-health-dashboard) <!--4488272-->
+- [Improvements to console search](/sccm/core/get-started/2019/technical-preview-1910#bkmk_search) <!--4640570-->
+- [New variable for Windows 10 in-place upgrade](/sccm/core/get-started/2019/technical-preview-1910#bkmk_osdvar) <!--4680263-->
+- [Improvements to Windows Virtual Desktop support](/sccm/core/get-started/2019/technical-preview-1910#bkmk_wvd) <!--4737447-->
 
 > [!Note]  
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.  
