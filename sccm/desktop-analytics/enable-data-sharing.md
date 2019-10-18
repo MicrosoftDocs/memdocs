@@ -24,7 +24,7 @@ To enroll devices to Desktop Analytics, they need to send diagnostic data to Mic
 
 When you integrate Configuration Manager with Desktop Analytics, you also use it to manage the diagnostic data level on devices. For the best experience, use Configuration Manager.
 
-The basic functionality of Desktop Analytics works at the **Basic** diagnostic data level. You won't get usage or health data for your updated devices without enabling the **Enhanced (Limited)** level. Microsoft recommends that you enable the **Enhanced (Limited)** diagnostic data level. For more information, see [Windows 10 enhanced diagnostic data events and fields used by Windows Analytics](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)).
+The basic functionality of Desktop Analytics works at the **Basic** [diagnostic data level](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels). You won't get usage or health data for your updated devices without enabling the **Enhanced** level. For devices running Windows 10 Version 1709 and higher, Microsoft recommends that you **Limit Enhanced diagnostic data to the minimum required by Windows Analytics**. For more information, see [Windows 10 enhanced diagnostic data events and fields used by Windows Analytics](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)).
 
 > [!Important]   
 > Microsoft has a strong commitment to providing the tools and resources that put you in control of your privacy. As a result, Microsoft doesn't collect the following data from devices located in European countries (EEA and Switzerland):
@@ -41,7 +41,7 @@ The following articles are also good resources for better understanding Windows 
 - [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
 
 > [!Note]  
-> At the Enhanced (Limited) level, when each client does the initial full scan, it sends approximately 2 MB of data to the Microsoft cloud. The daily delta varies between 250-400 KB per day.
+> Clients configured to Limit Enhanced diagnostic data will send approximately 2 MB of data to the Microsoft cloud on the initial full scan. The daily delta varies between 250-400 KB per day.
 >
 > The daily delta scan happens at 3:00 AM (device local time). Some events are sent at the first available time throughout the day. These times aren't configurable.
 >
