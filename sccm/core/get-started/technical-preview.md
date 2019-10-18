@@ -119,7 +119,7 @@ The following features are available with the most recent Configuration Manager 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID-->
 
 - [Deploy Microsoft Edge, version 77 and later](/sccm/core/get-started/2019/technical-preview-1910#bkmk_Microsoft_Edge) <!--4561024-->
-- [Include custom configuration baselines as part of compliance policy assessment](/sccm/core/get-started/2019/technical-preview-1910#bkmk_Cabaselines) <!--3608345-->
+- [Include custom configuration baselines as part of compliance policy assessment](/sccm/core/get-started/2019/technical-preview-1910#bkmk_CAbaselines) <!--3608345-->
 - [Improvements to application groups](/sccm/core/get-started/2019/technical-preview-1910#bkmk_appgrp) <!--4760058-->
 - [Reclaim SEDO lock](/sccm/core/get-started/2019/technical-preview-1910#bkmk_sedo) <!--4786915-->
 - [Attach files to feedback](/sccm/core/get-started/2019/technical-preview-1910#attach-files-to-feedback) <!--3556011-->
