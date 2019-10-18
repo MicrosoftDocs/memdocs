@@ -126,7 +126,7 @@ The migration process is transactional. You'll see either all inputs migrated wi
 
 ### How long do I have to migrate my data?
 
-Windows Analytics Upgrade Readiness solution is being [retired on January 31st, 2020](https://http://aka.ms/waretirement). After retirement, based on the Log Analytics workspace retention policy, data will go away over time. Customers that want to keep the data need to migrate or export before that occurs.
+Windows Analytics Upgrade Readiness solution is being [retired on January 31st, 2020](https://aka.ms/waretirement). After retirement, based on the Log Analytics workspace retention policy, data will go away over time. Customers that want to keep the data need to migrate or export before that occurs.
 
 ### Can I migrate after the initial onboarding?
 
