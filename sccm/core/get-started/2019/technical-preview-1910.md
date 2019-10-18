@@ -42,6 +42,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [4640570](includes/1910/4640570.md)]
 [!INCLUDE [4680263](includes/1910/4680263.md)]
 [!INCLUDE [4760058](includes/1910/4760058.md)]
+[!INCLUDE [4737447](includes/1910/4737447.md)]
 
 <!--
 ## General known issues
