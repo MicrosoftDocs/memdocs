@@ -44,11 +44,9 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [4760058](includes/1910/4760058.md)]
 [!INCLUDE [4737447](includes/1910/4737447.md)]
 
-<!--
 ## General known issues
 
-[!INCLUDE [Hardware inventory reports](includes/1909/known-issue-hinv.md)]
--->
+[!INCLUDE [Hardware inventory reports](includes/1910/known-issue-osd.md)]
 
 ## Next steps
 
