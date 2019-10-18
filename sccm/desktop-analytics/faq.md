@@ -2,7 +2,7 @@
 title: FAQ for Desktop Analytics
 titleSuffix: Configuration Manager
 description: Frequently asked questions for Desktop Analytics.
-ms.date: 10/15/2019
+ms.date: 10/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -126,11 +126,11 @@ The migration process is transactional. You'll see either all inputs migrated wi
 
 ### How long do I have to migrate my data?
 
-Windows Analytics Upgrade Readiness solution is being [retired on January 31st, 2020](https://http://aka.ms/waretirement). After that, based on the Log Analytics workspace retention policy, data will go away over time, so customers willing to keep data will need to migrate or export before that happens.
+Windows Analytics Upgrade Readiness solution is being [retired on January 31st, 2020](https://http://aka.ms/waretirement). After retirement, based on the Log Analytics workspace retention policy, data will go away over time. Customers that want to keep the data need to migrate or export before that occurs.
 
 ### Can I migrate after the initial onboarding?
 
-Yes.<!-- 5202803 -->  Existing Windows Analytics customers can now migrate data afteras long as they set an existing Widnows Analytics worksapce as Desktop Analytics worskspace during [Initial onboarding](/sccm/desktop-analytics/set-up#initial-onboarding). Go to **Connected services** in the Desktop Analytics portal, and select the option to migrate data from Windows Analytics.
+Yes.<!-- 5202803 --> As long as you set an existing Windows Analytics workspace as Desktop Analytics workspace during [Initial onboarding](/sccm/desktop-analytics/set-up#initial-onboarding), existing Windows Analytics customers can now migrate data after the initial onboarding. Go to **Connected services** in the Desktop Analytics portal, and select the option to migrate data from Windows Analytics.
 
 ### Can I use Update Compliance together with Desktop Analytics?
 
