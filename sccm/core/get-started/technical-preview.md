@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 10/17/2019
+ms.date: 10/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -118,23 +118,16 @@ The following features are available with the most recent Configuration Manager 
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID-->
 
-- [5110009](/sccm/core/get-started/2019/technical-preview-1910#bkmk_5110009) <!--5110009-->
-- [5229962](/sccm/core/get-started/2019/technical-preview-1910#bkmk_5229962) <!--5229962-->
-- [4226618](/sccm/core/get-started/2019/technical-preview-1910#bkmk_4226618) <!--4226618-->
-- [4700982](/sccm/core/get-started/2019/technical-preview-1910#bkmk_4700982) <!--4700982-->
-- [4786915](/sccm/core/get-started/2019/technical-preview-1910#bkmk_4786915) <!--4786915-->
-- [3556011](/sccm/core/get-started/2019/technical-preview-1910#bkmk_3556011) <!--3556011-->
-- [3608345](/sccm/core/get-started/2019/technical-preview-1910#bkmk_3608345) <!--3608345-->
-- [4488272](/sccm/core/get-started/2019/technical-preview-1910#bkmk_4488272) <!--4488272-->
-- [4561024](/sccm/core/get-started/2019/technical-preview-1910#bkmk_4561024) <!--4561024-->
-- [4383213](/sccm/core/get-started/2019/technical-preview-1910#bkmk_4383213) <!--4383213-->
-- [4433455](/sccm/core/get-started/2019/technical-preview-1910#bkmk_4433455) <!--4433455-->
-- [4679060](/sccm/core/get-started/2019/technical-preview-1910#bkmk_4679060) <!--4679060-->
-- [3721603](/sccm/core/get-started/2019/technical-preview-1910#bkmk_3721603) <!--3721603-->
-- [3607758](/sccm/core/get-started/2019/technical-preview-1910#bkmk_3607758) <!--3607758-->
-- [4640570](/sccm/core/get-started/2019/technical-preview-1910#bkmk_4640570) <!--4640570-->
-- [4680263](/sccm/core/get-started/2019/technical-preview-1910#bkmk_4680263) <!--4680263-->
-- [4760058](/sccm/core/get-started/2019/technical-preview-1910#bkmk_4760058) <!--4760058-->
+- [Deploy Microsoft Edge, version 77 and later](/sccm/core/get-started/2019/technical-preview-1910#bkmk_Microsoft_Edge) <!--4561024-->
+- [Include custom configuration baselines as part of compliance policy assessment](/sccm/core/get-started/2019/technical-preview-1910#bkmk_CAbaselines) <!--3608345-->
+- [Improvements to application groups](/sccm/core/get-started/2019/technical-preview-1910#bkmk_appgrp) <!--4760058-->
+- [Reclaim SEDO lock](/sccm/core/get-started/2019/technical-preview-1910#bkmk_sedo) <!--4786915-->
+- [Attach files to feedback](/sccm/core/get-started/2019/technical-preview-1910#attach-files-to-feedback) <!--3556011-->
+- [Client diagnostic actions](/sccm/core/get-started/2019/technical-preview-1910#bkmk_diag) <!--4433455-->
+- [Office 365 ProPlus pilot and health dashboard](/sccm/core/get-started/2019/technical-preview-1910#office-365-proplus-pilot-and-health-dashboard) <!--4488272-->
+- [Improvements to console search](/sccm/core/get-started/2019/technical-preview-1910#bkmk_search) <!--4640570-->
+- [New variable for Windows 10 in-place upgrade](/sccm/core/get-started/2019/technical-preview-1910#bkmk_osdvar) <!--4680263-->
+- [Improvements to Windows Virtual Desktop support](/sccm/core/get-started/2019/technical-preview-1910#bkmk_wvd) <!--4737447-->
 
 > [!Note]  
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.  

@@ -2,7 +2,7 @@
 title: Technical preview 1910
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 1910.
-ms.date: 10/17/2019
+ms.date: 10/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -25,24 +25,16 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/1910/1234567.md)] -->
 
-[!INCLUDE [5110009](includes/1910/5110009.md)]
-[!INCLUDE [5229962](includes/1910/5229962.md)]
-[!INCLUDE [4226618](includes/1910/4226618.md)]
-[!INCLUDE [4700982](includes/1910/4700982.md)]
-[!INCLUDE [4786915](includes/1910/4786915.md)]
-[!INCLUDE [3556011](includes/1910/3556011.md)]
-[!INCLUDE [3608345](includes/1910/3608345.md)]
-[!INCLUDE [4488272](includes/1910/4488272.md)]
-[!INCLUDE [4561024](includes/1910/4561024.md)]
-[!INCLUDE [4383213](includes/1910/4383213.md)]
-[!INCLUDE [4433455](includes/1910/4433455.md)]
-[!INCLUDE [4679060](includes/1910/4679060.md)]
-[!INCLUDE [3721603](includes/1910/3721603.md)]
-[!INCLUDE [3607758](includes/1910/3607758.md)]
-[!INCLUDE [4640570](includes/1910/4640570.md)]
-[!INCLUDE [4680263](includes/1910/4680263.md)]
-[!INCLUDE [4760058](includes/1910/4760058.md)]
-[!INCLUDE [4737447](includes/1910/4737447.md)]
+[!INCLUDE [Microsoft Edge](includes/1910/4561024.md)]
+[!INCLUDE [Compliance assessment baselines](includes/1910/3608345.md)]
+[!INCLUDE [App groups](includes/1910/4760058.md)]
+[!INCLUDE [SEDO](includes/1910/4786915.md)]
+[!INCLUDE [Attach files to feedback](includes/1910/3556011.md)]
+[!INCLUDE [Client diagnostics](includes/1910/4433455.md)]
+[!INCLUDE [O365 pilot health dashboard](includes/1910/4488272.md)]
+[!INCLUDE [Search](includes/1910/4640570.md)]
+[!INCLUDE [OSD variable](includes/1910/4680263.md)]
+[!INCLUDE [Windows Virtual Desktop](includes/1910/4737447.md)]
 
 ## General known issues
 
