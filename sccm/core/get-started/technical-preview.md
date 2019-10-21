@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 09/30/2019
+ms.date: 10/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -114,9 +114,30 @@ The following features are available with the most recent Configuration Manager 
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### Technical preview version 1909
+### Technical preview version 1910
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID-->
+
+- [Deploy Microsoft Edge, version 77 and later](/sccm/core/get-started/2019/technical-preview-1910#bkmk_Microsoft_Edge) <!--4561024-->
+- [Include custom configuration baselines as part of compliance policy assessment](/sccm/core/get-started/2019/technical-preview-1910#bkmk_CAbaselines) <!--3608345-->
+- [Improvements to application groups](/sccm/core/get-started/2019/technical-preview-1910#bkmk_appgrp) <!--4760058-->
+- [Reclaim SEDO lock](/sccm/core/get-started/2019/technical-preview-1910#bkmk_sedo) <!--4786915-->
+- [Attach files to feedback](/sccm/core/get-started/2019/technical-preview-1910#attach-files-to-feedback) <!--3556011-->
+- [Client diagnostic actions](/sccm/core/get-started/2019/technical-preview-1910#bkmk_diag) <!--4433455-->
+- [Office 365 ProPlus pilot and health dashboard](/sccm/core/get-started/2019/technical-preview-1910#office-365-proplus-pilot-and-health-dashboard) <!--4488272-->
+- [Improvements to console search](/sccm/core/get-started/2019/technical-preview-1910#bkmk_search) <!--4640570-->
+- [New variable for Windows 10 in-place upgrade](/sccm/core/get-started/2019/technical-preview-1910#bkmk_osdvar) <!--4680263-->
+- [Improvements to Windows Virtual Desktop support](/sccm/core/get-started/2019/technical-preview-1910#bkmk_wvd) <!--4737447-->
+
+> [!Note]  
+> Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.  
+
+
+## Features in recent technical previews
+
+The following features were released with previous versions of the Configuration Manager technical preview branch since current branch version 1906:
+
+### Technical preview version 1909
 
 - [Orchestration Groups](/sccm/core/get-started/2019/technical-preview-1909#bkmk_OGs) <!--3098816-->
 - [Improvements to BitLocker management](/sccm/core/get-started/2019/technical-preview-1909#bkmk_bitlocker) <!--3601034-->
@@ -127,14 +148,6 @@ The following features are available with the most recent Configuration Manager 
 - [Improved language support in task sequence](/sccm/core/get-started/2019/technical-preview-1909#bkmk_osd) <!--5411057-->
 - [Office 365 ProPlus health dashboard](/sccm/core/get-started/2019/technical-preview-1909#bkmk_o365health) <!--4488301-->
 - [Improvements to task sequence debugger](/sccm/core/get-started/2019/technical-preview-1909#bkmk_tsdebug) <!-- 5012536, 5012509 -->
-
-> [!Note]  
-> Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.  
-
-
-## Features in recent technical previews
-
-The following features were released with previous versions of the Configuration Manager technical preview branch since current branch version 1906:
 
 ### Technical preview version 1908.2
 
